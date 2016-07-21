@@ -1,60 +1,48 @@
 package com.estrongs.fs.impl.d;
 
-import com.estrongs.fs.a;
+import android.database.DatabaseUtils;
+import com.estrongs.android.util.bg;
 import com.estrongs.fs.h;
-import com.estrongs.fs.m;
+import com.estrongs.fs.impl.f.a;
+import com.estrongs.fs.impl.local.f;
+import com.estrongs.fs.impl.media.e;
 
-public abstract class d
-  extends a
+public class d
+  extends e
 {
-  private h a = null;
+  private static d a;
   
-  public d(h paramh)
+  public static d b()
   {
-    absolutePath = paramh.getAbsolutePath();
-    a = paramh;
-    name = paramh.getName();
-  }
-  
-  protected abstract String a();
-  
-  protected m doGetFileType()
-  {
-    if (a.getFileType().a()) {
-      return m.a;
+    if (a == null) {
+      a = new d();
     }
-    return m.b;
+    return a;
   }
   
-  public boolean exists()
+  protected h a(f paramf)
   {
-    return a.exists();
+    return new a(paramf);
   }
   
-  public String getPath()
+  protected String a()
   {
-    if (path == null) {
-      path = (a() + a.getAbsolutePath().substring(1, a.getAbsolutePath().length()));
+    Object localObject = bg.e();
+    if (localObject == null) {
+      return null;
     }
-    return super.getPath();
-  }
-  
-  public long lastModified()
-  {
-    return a.lastModified();
-  }
-  
-  public long length()
-  {
-    return a.length();
-  }
-  
-  public void setName(String paramString)
-  {
-    if (path == null) {
-      getPath();
+    localObject = ((String)localObject).split(";");
+    StringBuffer localStringBuffer = new StringBuffer();
+    int i = 0;
+    while (i < localObject.length)
+    {
+      if (i > 0) {
+        localStringBuffer.append(" or ");
+      }
+      localStringBuffer.append("_data").append(" like ").append(DatabaseUtils.sqlEscapeString("%" + localObject[i]));
+      i += 1;
     }
-    super.setName(paramString);
+    return localStringBuffer.toString();
   }
 }
 

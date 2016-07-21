@@ -1,92 +1,262 @@
 .class public Lcom/estrongs/fs/impl/k/a;
-.super Lcom/estrongs/fs/a;
+.super Ljava/lang/Object;
 
 
 # instance fields
-.field private a:Ljava/io/File;
+.field public a:Ljava/lang/String;
+
+.field public b:Ljava/lang/String;
+
+.field public c:Ljava/lang/String;
+
+.field public d:I
+
+.field public e:Ljava/util/Calendar;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 7
 
-    invoke-virtual {p1}, Ljava/io/File;->getPath()Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-string v0, ","
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
+
+    move-result v0
+
+    add-int/lit8 v1, v0, 0x1
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v6
+
+    const-string v1, ","
+
+    add-int/lit8 v2, v0, -0x1
+
+    invoke-virtual {p1, v1, v2}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;I)I
+
+    move-result v1
+
+    add-int/lit8 v2, v1, 0x1
+
+    invoke-virtual {p1, v2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/estrongs/fs/a;-><init>(Ljava/lang/String;)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/estrongs/fs/impl/k/a;->a:Ljava/io/File;
-
-    iput-object p1, p0, Lcom/estrongs/fs/impl/k/a;->a:Ljava/io/File;
-
-    invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/estrongs/fs/impl/k/a;->setName(Ljava/lang/String;)V
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    const-string v2, ","
+
+    add-int/lit8 v3, v1, -0x1
+
+    invoke-virtual {p1, v2, v3}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;I)I
+
+    move-result v2
+
+    add-int/lit8 v3, v2, 0x1
+
+    invoke-virtual {p1, v3, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/estrongs/fs/impl/k/a;->d:I
+
+    const-string v1, ","
+
+    add-int/lit8 v3, v2, -0x1
+
+    invoke-virtual {p1, v1, v3}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;I)I
+
+    move-result v1
+
+    add-int/lit8 v3, v1, 0x1
+
+    invoke-virtual {p1, v3, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcom/estrongs/fs/impl/k/a;->c:Ljava/lang/String;
+
+    const-string v2, ","
+
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    invoke-virtual {p1, v2, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;I)I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    invoke-virtual {p1, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/estrongs/fs/impl/k/a;->b:Ljava/lang/String;
+
+    iput-object p2, p0, Lcom/estrongs/fs/impl/k/a;->a:Ljava/lang/String;
+
+    shr-int/lit8 v1, v0, 0x9
+
+    and-int/lit8 v1, v1, 0x7f
+
+    add-int/lit16 v1, v1, 0x7bc
+
+    shr-int/lit8 v2, v0, 0x5
+
+    and-int/lit8 v2, v2, 0xe
+
+    and-int/lit8 v3, v0, 0x1f
+
+    shr-int/lit8 v0, v6, 0xb
+
+    and-int/lit8 v4, v0, 0x1f
+
+    shr-int/lit8 v0, v6, 0x5
+
+    and-int/lit8 v5, v0, 0x3f
+
+    and-int/lit8 v0, v6, 0x1f
+
+    mul-int/lit8 v6, v0, 0x2
+
+    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/fs/impl/k/a;->e:Ljava/util/Calendar;
+
+    iget-object v0, p0, Lcom/estrongs/fs/impl/k/a;->e:Ljava/util/Calendar;
+
+    invoke-virtual/range {v0 .. v6}, Ljava/util/Calendar;->set(IIIIII)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected doGetFileType()Lcom/estrongs/fs/m;
+.method public a()Z
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/fs/impl/k/a;->a:Ljava/io/File;
+    iget v0, p0, Lcom/estrongs/fs/impl/k/a;->d:I
 
-    invoke-virtual {v0}, Ljava/io/File;->isDirectory()Z
+    and-int/lit8 v0, v0, 0x10
 
-    move-result v0
+    if-lez v0, :cond_0
 
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lcom/estrongs/fs/m;->a:Lcom/estrongs/fs/m;
+    const/4 v0, 0x1
 
     :goto_0
-    return-object v0
+    return v0
 
     :cond_0
-    sget-object v0, Lcom/estrongs/fs/m;->b:Lcom/estrongs/fs/m;
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method public exists()Z
-    .locals 1
+.method public toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object v0, p0, Lcom/estrongs/fs/impl/k/a;->a:Ljava/io/File;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result v0
+    const-string v1, "DIR="
 
-    return v0
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public lastModified()J
-    .locals 2
+    move-result-object v0
 
-    iget-object v0, p0, Lcom/estrongs/fs/impl/k/a;->a:Ljava/io/File;
+    iget-object v1, p0, Lcom/estrongs/fs/impl/k/a;->a:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/io/File;->lastModified()J
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-wide v0
+    move-result-object v0
 
-    return-wide v0
-.end method
+    const-string v1, " FILENAME="
 
-.method public length()J
-    .locals 2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lcom/estrongs/fs/impl/k/a;->a:Ljava/io/File;
+    move-result-object v0
 
-    invoke-virtual {v0}, Ljava/io/File;->length()J
+    iget-object v1, p0, Lcom/estrongs/fs/impl/k/a;->b:Ljava/lang/String;
 
-    move-result-wide v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-wide v0
+    move-result-object v0
+
+    const-string v1, " SIZE="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/fs/impl/k/a;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " ATTRIBUTE="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget v1, p0, Lcom/estrongs/fs/impl/k/a;->d:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " DATE="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "yyyy-MM-dd kk:mm:ss"
+
+    iget-object v2, p0, Lcom/estrongs/fs/impl/k/a;->e:Ljava/util/Calendar;
+
+    invoke-static {v1, v2}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;Ljava/util/Calendar;)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

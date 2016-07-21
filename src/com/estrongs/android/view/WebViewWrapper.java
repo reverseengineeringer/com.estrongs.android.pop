@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
+import android.support.v7.widget.RecyclerView;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,17 +16,16 @@ import android.webkit.WebView;
 import android.widget.ProgressBar;
 import com.estrongs.android.pop.ac;
 import com.estrongs.android.pop.esclasses.ESWebView;
-import com.estrongs.android.pop.esclasses.g;
-import com.estrongs.android.pop.utils.cv;
-import com.estrongs.android.pop.utils.cx;
+import com.estrongs.android.pop.esclasses.k;
+import com.estrongs.android.pop.utils.de;
+import com.estrongs.android.pop.utils.dg;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.view.ag;
+import com.estrongs.android.ui.view.ak;
 import com.estrongs.android.util.TypedMap;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bd;
-import com.estrongs.android.util.bf;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bk;
+import com.estrongs.android.util.bn;
 import com.estrongs.android.widget.ESViewStub;
-import com.estrongs.android.widget.HeaderGridView;
 import com.estrongs.fs.h;
 import java.net.URI;
 import java.util.ArrayList;
@@ -35,115 +35,63 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 public class WebViewWrapper
-  extends aw
+  extends cr
 {
   private static String b = "?fr=ch_es&pa=1&da=1&bb=1&lr=1&vd=1&td=1&ta=1&mgd=0&bi=1&sl=1&dsa=1&tn=1&noad=1";
   private static String c = "fr=ch_es";
   protected VideoEnabledWebView a = null;
-  private ProgressBar ai;
-  private boolean aj = false;
-  private boolean ak = false;
-  private dt al = null;
-  private String am = null;
-  private String an = null;
-  private SparseArray<Integer> ao = new SparseArray();
-  private SparseArray<String> ap = new SparseArray();
-  private ValueCallback<Uri> aq;
-  private ValueCallback<Uri[]> ar;
+  private boolean al = false;
+  private boolean am = false;
+  private fy an = null;
+  private String ao = null;
+  private String ap = null;
+  private SparseArray<Integer> aq = new SparseArray();
+  private SparseArray<String> ar = new SparseArray();
+  private ValueCallback<Uri> as;
+  private ValueCallback<Uri[]> at;
   private WebView d = null;
+  private ProgressBar e;
   
   @SuppressLint({"NewApi"})
-  public WebViewWrapper(Activity paramActivity, cb paramcb)
+  public WebViewWrapper(Activity paramActivity, dw paramdw)
   {
-    super(paramActivity, null, paramcb);
-    g.setVisibility(8);
-    paramcb = (ESViewStub)k(2131362047);
-    paramcb.b(2130903082);
-    paramcb.a(2131362047);
-    paramcb.a(g.a(paramActivity));
-    paramcb = paramcb.a();
-    ai = ((ProgressBar)paramcb.findViewById(2131362055));
-    a = ((VideoEnabledWebView)paramcb.findViewById(2131362056));
+    super(paramActivity, null, paramdw);
+    h.setVisibility(8);
+    paramdw = (ESViewStub)b(2131624591);
+    paramdw.setLayoutResource(2130903157);
+    paramdw.setInflatedId(2131624591);
+    paramdw.setLayoutInflater(k.a(paramActivity));
+    paramdw = paramdw.a();
+    e = ((ProgressBar)paramdw.findViewById(2131624600));
+    a = ((VideoEnabledWebView)paramdw.findViewById(2131624601));
     d = new ESWebView(paramActivity);
-    ay();
-    paramcb = a.getSettings();
-    paramcb.setBuiltInZoomControls(false);
-    paramcb.setSupportZoom(false);
-    paramcb.setJavaScriptEnabled(true);
-    paramcb.setDatabaseEnabled(true);
-    paramcb.setUseWideViewPort(true);
+    aH();
+    paramdw = a.getSettings();
+    paramdw.setBuiltInZoomControls(false);
+    paramdw.setSupportZoom(false);
+    paramdw.setJavaScriptEnabled(true);
+    paramdw.setDatabaseEnabled(true);
+    paramdw.setUseWideViewPort(true);
     if (ac.a() >= 7) {
-      paramcb.setLoadWithOverviewMode(true);
+      paramdw.setLoadWithOverviewMode(true);
     }
-    paramcb.setDatabasePath("/data/data/" + paramActivity.getPackageName() + "/databases");
-    if (bd.b()) {
-      paramcb.setDomStorageEnabled(true);
+    paramdw.setDatabasePath("/data/data/" + paramActivity.getPackageName() + "/databases");
+    if (bk.b()) {
+      paramdw.setDomStorageEnabled(true);
     }
     a.setScrollBarStyle(33554432);
-    a.setWebViewClient(new ec(this));
-    al = new ee(this, ad.findViewById(2131362210), (ViewGroup)ad.findViewById(2131362211), ag.inflate(2130903230, null), a);
-    a.setWebChromeClient(al);
-    a.setDownloadListener(new ef(this));
+    a.setWebViewClient(new gh(this));
+    an = new gj(this, ag.findViewById(2131624800), (ViewGroup)ag.findViewById(2131624801), aj.inflate(2130903394, null), a);
+    a.setWebChromeClient(an);
+    a.setDownloadListener(new gk(this));
     a.addJavascriptInterface(new WebViewWrapper.BaiduMusicTitleHanlder(this), "bdmusic");
     a.addJavascriptInterface(new WebViewWrapper.JSVideoDetailHelper(this), "JSVideoDetailHelper");
-    a.setOnLongClickListener(new eg(this));
-    a.a(new ej(this));
+    a.setOnLongClickListener(new gl(this));
+    a.setOnWebViewScrollListener(new go(this));
     a.requestFocus();
   }
   
-  private String a(String paramString, boolean paramBoolean)
-  {
-    Object localObject;
-    if ((a == null) || (bd.a(a.getUrl()))) {
-      localObject = null;
-    }
-    int i;
-    do
-    {
-      String str;
-      do
-      {
-        return (String)localObject;
-        i = a.getUrl().hashCode();
-        str = (String)ap.get(i);
-        if (paramBoolean) {
-          break;
-        }
-        localObject = str;
-      } while (!bd.a(str));
-      localObject = str;
-    } while (!bd.b(paramString));
-    ap.put(i, paramString);
-    return paramString;
-  }
-  
-  private boolean a(String paramString)
-  {
-    if ((ac.a() == 16) || (ac.b().toLowerCase().startsWith("vsun"))) {}
-    try
-    {
-      URLEncodedUtils.parse(new URI(paramString), "UTF-8");
-      return true;
-    }
-    catch (IllegalArgumentException paramString)
-    {
-      String str;
-      do
-      {
-        str = paramString.getMessage();
-      } while ((!bd.b(str)) || (!str.contains("bad parameter")));
-      paramString.printStackTrace();
-      ag.a(ad, 2131428239, 0);
-      return false;
-    }
-    catch (Exception paramString)
-    {
-      paramString.printStackTrace();
-    }
-    return true;
-  }
-  
-  private void aw()
+  private void E()
   {
     String str = "javascript:" + "_jsget_html5_video = document.getElementsByTagName('video')[0];";
     str = str + "if (_jsget_html5_video !== undefined) {";
@@ -156,7 +104,33 @@ public class WebViewWrapper
     }
   }
   
-  private void ax()
+  private String a(String paramString, boolean paramBoolean)
+  {
+    Object localObject;
+    if ((a == null) || (bk.a(a.getUrl()))) {
+      localObject = null;
+    }
+    int i;
+    do
+    {
+      String str;
+      do
+      {
+        return (String)localObject;
+        i = a.getUrl().hashCode();
+        str = (String)ar.get(i);
+        if (paramBoolean) {
+          break;
+        }
+        localObject = str;
+      } while (!bk.a(str));
+      localObject = str;
+    } while (!bk.b(paramString));
+    ar.put(i, paramString);
+    return paramString;
+  }
+  
+  private void aG()
   {
     for (;;)
     {
@@ -238,20 +212,46 @@ public class WebViewWrapper
   }
   
   @SuppressLint({"NewApi"})
-  private void ay()
+  private void aH()
   {
     d.getSettings().setJavaScriptEnabled(true);
     d.getSettings().setDatabaseEnabled(true);
-    d.getSettings().setDatabasePath("/data/data/" + ad.getPackageName() + "/databases");
-    if (bd.b()) {
+    d.getSettings().setDatabasePath("/data/data/" + ag.getPackageName() + "/databases");
+    if (bk.b()) {
       d.getSettings().setDomStorageEnabled(true);
     }
-    d.setWebViewClient(new el(this));
+    d.setWebViewClient(new gq(this));
   }
   
-  private void o(String paramString)
+  private boolean b(String paramString)
   {
-    if (!a(paramString)) {}
+    if ((ac.a() == 16) || (ac.b().toLowerCase().startsWith("vsun"))) {}
+    try
+    {
+      URLEncodedUtils.parse(new URI(paramString), "UTF-8");
+      return true;
+    }
+    catch (IllegalArgumentException paramString)
+    {
+      String str;
+      do
+      {
+        str = paramString.getMessage();
+      } while ((!bk.b(str)) || (!str.contains("bad parameter")));
+      paramString.printStackTrace();
+      ak.a(ag, 2131232524, 0);
+      return false;
+    }
+    catch (Exception paramString)
+    {
+      paramString.printStackTrace();
+    }
+    return true;
+  }
+  
+  private void c(String paramString)
+  {
+    if (!b(paramString)) {}
     do
     {
       do
@@ -260,7 +260,7 @@ public class WebViewWrapper
         if ((paramString == null) || (!paramString.contains("baidu.com")) || (paramString.contains("word=" + Uri.encode("天气")))) {
           break;
         }
-        Object localObject = cv.a("baidu", "apk");
+        Object localObject = de.a("baidu", "apk");
         if (localObject == null) {
           break;
         }
@@ -278,7 +278,7 @@ public class WebViewWrapper
     a.loadUrl(paramString);
   }
   
-  private boolean p(String paramString)
+  private boolean d(String paramString)
   {
     return (paramString.contains("music.baidu.com")) && (!paramString.contains(c));
   }
@@ -296,22 +296,22 @@ public class WebViewWrapper
   
   private void r(String paramString)
   {
-    if (bd.a(paramString)) {}
+    if (bk.a(paramString)) {}
     for (;;)
     {
       return;
-      if (w != null) {}
+      if (D != null) {}
       try
       {
-        w.setName(paramString);
-        if ((y == null) || (!bd.b(paramString)) || (!(ad instanceof FileExplorerActivity))) {
+        D.setName(paramString);
+        if ((F == null) || (!bk.b(paramString)) || (!(ag instanceof FileExplorerActivity))) {
           continue;
         }
-        aw localaw = ((FileExplorerActivity)ad).y();
-        if ((localaw == null) || (localaw.hashCode() != hashCode())) {
+        cr localcr = ((FileExplorerActivity)ag).O();
+        if ((localcr == null) || (localcr.hashCode() != hashCode())) {
           continue;
         }
-        y.a("http://win-title/" + paramString, true);
+        F.a("http://win-title/" + paramString, true);
         return;
       }
       catch (Exception localException)
@@ -323,10 +323,10 @@ public class WebViewWrapper
   
   private void s(String paramString)
   {
-    if (!am.e(v, paramString))
+    if (!ap.e(C, paramString))
     {
-      w = new ds(paramString);
-      v = paramString;
+      D = new fx(paramString);
+      C = paramString;
     }
   }
   
@@ -386,27 +386,27 @@ public class WebViewWrapper
           }
         }
       }
-      if (bd.b(str3)) {
+      if (bk.b(str3)) {
         localIntent.setData(Uri.parse(str3 + localUri.getAuthority() + "?" + localUri.getQuery()));
       }
       try
       {
-        ((FileExplorerActivity)ad).a(localIntent);
+        ((FileExplorerActivity)ag).a(localIntent);
         return true;
       }
       catch (Exception paramString)
       {
         for (;;)
         {
-          if (bd.b(str2)) {
+          if (bk.b(str2)) {
             try
             {
               localIntent.setData(Uri.parse("market://search?q=" + str2));
-              ((FileExplorerActivity)ad).a(localIntent);
+              ((FileExplorerActivity)ag).a(localIntent);
             }
             catch (Exception paramString)
             {
-              ag.a(ad, 2131427782, 0);
+              ak.a(ag, 2131231030, 0);
             }
           }
         }
@@ -417,19 +417,19 @@ public class WebViewWrapper
     }
     for (;;)
     {
-      if (bd.b(paramString))
+      if (bk.b(paramString))
       {
         paramString = new Intent("android.intent.action.DIAL", Uri.parse(paramString));
         try
         {
-          ((FileExplorerActivity)ad).a(paramString);
+          ((FileExplorerActivity)ag).a(paramString);
           return true;
           if ((!paramString.startsWith("wtai://wp/mc")) && (!paramString.startsWith("WTAI://WP/MC"))) {
-            break label557;
+            break label614;
           }
           paramString = paramString.split(";");
-          if ((paramString == null) || (paramString.length <= 1) || (!bd.b(paramString[1]))) {
-            break label557;
+          if ((paramString == null) || (paramString.length <= 1) || (!bk.b(paramString[1]))) {
+            break label614;
           }
           paramString = "tel:" + paramString[1];
         }
@@ -437,66 +437,188 @@ public class WebViewWrapper
         {
           for (;;)
           {
-            ag.a(ad, 2131427782, 0);
+            ak.a(ag, 2131231030, 0);
+          }
+        }
+        if ("market".equalsIgnoreCase(str1)) {
+          try
+          {
+            paramString = new Intent("android.intent.action.VIEW");
+            paramString.setData(localUri);
+            ((FileExplorerActivity)ag).a(paramString);
+            return true;
+          }
+          catch (Exception paramString)
+          {
+            for (;;)
+            {
+              ak.a(ag, 2131231030, 0);
+            }
           }
         }
       }
-      else
-      {
-        return false;
-        label557:
-        paramString = null;
-      }
+      return false;
+      label614:
+      paramString = null;
     }
   }
   
   private int u(String paramString)
   {
     if (paramString.equalsIgnoreCase("apk")) {
-      return 2130837683;
+      return 2130837943;
     }
     if (paramString.equalsIgnoreCase("document")) {
-      return 2130837686;
+      return 2130837946;
     }
     if (paramString.equalsIgnoreCase("image")) {
-      return 2130837694;
+      return 2130837954;
     }
     if (paramString.equalsIgnoreCase("music")) {
-      return 2130837690;
+      return 2130837950;
     }
     if (paramString.equalsIgnoreCase("video")) {
-      return 2130837703;
+      return 2130837963;
     }
-    return 2130837682;
+    return 2130837942;
   }
   
-  public boolean O()
+  public boolean A()
   {
-    return !a.canGoBack();
+    if (an.a())
+    {
+      an.b();
+      return true;
+    }
+    return false;
+  }
+  
+  public String B()
+  {
+    String str2 = a(null, false);
+    String str1 = str2;
+    if (bk.a(str2))
+    {
+      str1 = str2;
+      if (a != null) {
+        str1 = a.getUrl();
+      }
+    }
+    return str1;
+  }
+  
+  public boolean C()
+  {
+    return (as != null) || (at != null);
   }
   
   public void a(View.OnTouchListener paramOnTouchListener)
   {
     super.a(paramOnTouchListener);
-    a.setOnTouchListener(new em(this, paramOnTouchListener));
+    a.setOnTouchListener(new gr(this, paramOnTouchListener));
   }
   
   public void a(String paramString, TypedMap paramTypedMap)
   {
-    v = paramString;
-    w = new ds(v);
+    C = paramString;
+    D = new fx(C);
     b(false);
   }
   
   public void a(String paramString1, String paramString2)
   {
-    am = paramString1;
-    an = paramString2;
+    ao = paramString1;
+    ap = paramString2;
   }
   
-  public void a_()
+  public boolean ae()
   {
-    super.a_();
+    return !a.canGoBack();
+  }
+  
+  public bn[] ay()
+  {
+    if ((ao == null) || (ap == null)) {
+      return super.ay();
+    }
+    ArrayList localArrayList = de.b(ao, ap);
+    if ((localArrayList != null) && (localArrayList.size() != 0))
+    {
+      bn[] arrayOfbn = new bn[localArrayList.size()];
+      int j = u(ap);
+      int i = 0;
+      while (i < localArrayList.size())
+      {
+        arrayOfbn[i] = new bn();
+        f = true;
+        a = getd;
+        i = geta;
+        j = j;
+        k = ao;
+        l = ap;
+        i += 1;
+      }
+      return arrayOfbn;
+    }
+    return super.ay();
+  }
+  
+  public void b(Intent paramIntent)
+  {
+    if ((paramIntent == null) || (paramIntent.getData() == null))
+    {
+      paramIntent = null;
+      if (as == null) {
+        break label49;
+      }
+      as.onReceiveValue(paramIntent);
+    }
+    label49:
+    while (at == null)
+    {
+      as = null;
+      at = null;
+      return;
+      paramIntent = paramIntent.getData();
+      break;
+    }
+    if (paramIntent == null) {}
+    for (paramIntent = null;; paramIntent = new Uri[] { paramIntent })
+    {
+      at.onReceiveValue(paramIntent);
+      break;
+    }
+  }
+  
+  public void b(boolean paramBoolean)
+  {
+    ag.runOnUiThread(new gp(this));
+  }
+  
+  public String c()
+  {
+    return C;
+  }
+  
+  public h f()
+  {
+    if (an.a())
+    {
+      an.b();
+      return D;
+    }
+    if (a.canGoBack())
+    {
+      a.stopLoading();
+      a.goBack();
+      return D;
+    }
+    return null;
+  }
+  
+  public void i_()
+  {
+    super.i_();
     if (a != null)
     {
       ViewGroup localViewGroup = (ViewGroup)a.getParent();
@@ -518,37 +640,42 @@ public class WebViewWrapper
       d.destroy();
       d = null;
     }
-    ao.clear();
+    aq.clear();
   }
   
-  public bf[] ak()
+  public void l()
   {
-    if ((am == null) || (an == null)) {
-      return super.ak();
-    }
-    ArrayList localArrayList = cv.b(am, an);
-    if ((localArrayList != null) && (localArrayList.size() != 0))
-    {
-      bf[] arrayOfbf = new bf[localArrayList.size()];
-      int j = u(an);
-      int i = 0;
-      while (i < localArrayList.size())
-      {
-        arrayOfbf[i] = new bf();
-        f = true;
-        a = getd;
-        i = geta;
-        j = j;
-        k = am;
-        l = an;
-        i += 1;
-      }
-      return arrayOfbf;
-    }
-    return super.ak();
+    super.l();
+    r(a(null, false));
   }
   
-  public boolean al()
+  public boolean p()
+  {
+    return al;
+  }
+  
+  public boolean s()
+  {
+    return a.canGoBack();
+  }
+  
+  public boolean t()
+  {
+    return a.canGoForward();
+  }
+  
+  public h u()
+  {
+    if (a.canGoForward())
+    {
+      a.stopLoading();
+      a.goForward();
+      return D;
+    }
+    return null;
+  }
+  
+  public boolean v()
   {
     try
     {
@@ -559,7 +686,7 @@ public class WebViewWrapper
     return true;
   }
   
-  public boolean am()
+  public boolean w()
   {
     try
     {
@@ -570,133 +697,19 @@ public class WebViewWrapper
     return true;
   }
   
-  public boolean an()
+  public boolean x()
   {
     return a.zoomIn();
   }
   
-  public boolean ao()
+  public boolean y()
   {
     return a.zoomOut();
   }
   
-  public boolean ap()
+  public boolean z()
   {
-    return ak;
-  }
-  
-  public boolean as()
-  {
-    if (al.a())
-    {
-      al.b();
-      return true;
-    }
-    return false;
-  }
-  
-  public String at()
-  {
-    String str2 = a(null, false);
-    String str1 = str2;
-    if (bd.a(str2))
-    {
-      str1 = str2;
-      if (a != null) {
-        str1 = a.getUrl();
-      }
-    }
-    return str1;
-  }
-  
-  public boolean au()
-  {
-    return (aq != null) || (ar != null);
-  }
-  
-  public void b(Intent paramIntent)
-  {
-    if ((paramIntent == null) || (paramIntent.getData() == null))
-    {
-      paramIntent = null;
-      if (aq == null) {
-        break label49;
-      }
-      aq.onReceiveValue(paramIntent);
-    }
-    label49:
-    while (ar == null)
-    {
-      aq = null;
-      ar = null;
-      return;
-      paramIntent = paramIntent.getData();
-      break;
-    }
-    if (paramIntent == null) {}
-    for (paramIntent = null;; paramIntent = new Uri[] { paramIntent })
-    {
-      ar.onReceiveValue(paramIntent);
-      break;
-    }
-  }
-  
-  public void b(boolean paramBoolean)
-  {
-    ad.runOnUiThread(new ek(this));
-  }
-  
-  public String c()
-  {
-    return v;
-  }
-  
-  public h f()
-  {
-    if (al.a())
-    {
-      al.b();
-      return w;
-    }
-    if (a.canGoBack())
-    {
-      a.stopLoading();
-      a.goBack();
-      return w;
-    }
-    return null;
-  }
-  
-  public void l()
-  {
-    super.l();
-    r(a(null, false));
-  }
-  
-  public boolean o()
-  {
-    return aj;
-  }
-  
-  public boolean p()
-  {
-    return a.canGoBack();
-  }
-  
-  public boolean q()
-  {
-    return a.canGoForward();
-  }
-  
-  public h r()
-  {
-    if (a.canGoForward())
-    {
-      a.stopLoading();
-      a.goForward();
-      return w;
-    }
-    return null;
+    return am;
   }
 }
 

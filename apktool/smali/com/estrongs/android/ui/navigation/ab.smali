@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
+.implements Lcom/estrongs/android/ui/navigation/q;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-.field final synthetic b:Lcom/estrongs/android/ui/navigation/s;
+.field final synthetic a:Lcom/estrongs/android/ui/navigation/aa;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/navigation/s;Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
+.method constructor <init>(Lcom/estrongs/android/ui/navigation/aa;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/navigation/ab;->b:Lcom/estrongs/android/ui/navigation/s;
-
-    iput-object p2, p0, Lcom/estrongs/android/ui/navigation/ab;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    iput-object p1, p0, Lcom/estrongs/android/ui/navigation/ab;->a:Lcom/estrongs/android/ui/navigation/aa;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,18 +22,14 @@
 
 
 # virtual methods
-.method public onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 2
+.method public a(Landroid/view/View;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/navigation/ab;->b:Lcom/estrongs/android/ui/navigation/s;
+    iget-object v0, p0, Lcom/estrongs/android/ui/navigation/ab;->a:Lcom/estrongs/android/ui/navigation/aa;
 
-    new-instance v1, Lcom/estrongs/android/ui/navigation/ac;
+    iget-object v0, v0, Lcom/estrongs/android/ui/navigation/aa;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/navigation/ac;-><init>(Lcom/estrongs/android/ui/navigation/ab;)V
+    invoke-static {v0}, Lcom/estrongs/android/ui/navigation/r;->a(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/navigation/s;->a(Lcom/estrongs/android/ui/navigation/r;)V
-
-    const/4 v0, 0x1
-
-    return v0
+    return-void
 .end method

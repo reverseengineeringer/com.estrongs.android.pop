@@ -1,6 +1,6 @@
 package org.apache.commons.net.ftp;
 
-import com.estrongs.android.util.f;
+import com.estrongs.android.util.e;
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -46,7 +46,7 @@ public class FTPListParseEngine
         int i = ((InputStream)localObject).read(paramInputStream);
         if (i > 0)
         {
-          paramInputStream = f.a(paramInputStream, i);
+          paramInputStream = e.a(paramInputStream, i);
           paramString = paramInputStream;
           if (!"UTF-8".equals(paramInputStream))
           {

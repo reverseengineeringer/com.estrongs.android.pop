@@ -44,7 +44,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/estrongs/android/util/bc;->h(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/estrongs/android/util/bg;->h(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -74,11 +74,11 @@
 
     const-string v0, "ChromecastUrl"
 
-    invoke-static {}, Lcom/estrongs/android/c/a;->a()I
+    invoke-static {}, Lcom/estrongs/android/g/a;->a()I
 
     move-result v3
 
-    invoke-static {v1, v3, v4, v4}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;IZZ)Ljava/lang/String;
+    invoke-static {v1, v3, v4, v4}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;IZZ)Ljava/lang/String;
 
     move-result-object v1
 
@@ -96,7 +96,7 @@
     return-void
 
     :cond_2
-    invoke-static {v1}, Lcom/estrongs/android/util/bc;->g(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/estrongs/android/util/bg;->g(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -107,7 +107,7 @@
     goto :goto_0
 
     :cond_3
-    invoke-static {v1}, Lcom/estrongs/android/util/bc;->c(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/estrongs/android/util/bg;->c(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -125,9 +125,9 @@
     goto :goto_1
 
     :cond_4
-    const v0, 0x7f0b02fd
+    const v0, 0x7f0804a1
 
-    invoke-static {p0, v0, v4}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {p0, v0, v4}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     goto :goto_1
 .end method

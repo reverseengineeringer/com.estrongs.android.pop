@@ -1,60 +1,45 @@
 package com.estrongs.android.ui.dialog;
 
 import android.app.Activity;
-import android.content.Context;
-import com.estrongs.android.ui.view.b;
-import com.estrongs.android.util.am;
+import android.widget.EditText;
+import com.estrongs.android.d.u;
+import com.estrongs.android.pop.ad;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bk;
 
-public class ey
+class ey
+  implements Runnable
 {
-  private cg a;
-  private Context b;
-  private boolean c;
+  ey(ev paramev, String paramString) {}
   
-  public ey(Context paramContext, String paramString1, String paramString2, boolean paramBoolean)
+  public void run()
   {
-    b = paramContext;
-    c = paramBoolean;
-    b(new b((Activity)paramContext, paramString1, paramString2));
-    a(am.by(paramString1));
-  }
-  
-  public ey(Context paramContext, String paramString, boolean paramBoolean)
-  {
-    b = paramContext;
-    c = paramBoolean;
-    b(new b((Activity)paramContext, paramString));
-    a(paramString);
-  }
-  
-  private void a(b paramb)
-  {
-    paramb.a(new ez(this));
-  }
-  
-  private void a(String paramString)
-  {
-    String str = paramString;
-    if ("ftpes".equalsIgnoreCase(paramString)) {
-      str = "ftps";
+    if (!ev.a(b, a))
+    {
+      ((Activity)ev.b(b)).runOnUiThread(new ez(this));
+      u.a();
+      return;
     }
-    str = str.toUpperCase();
-    paramString = b.getString(2131427822, new Object[] { str });
-    if (!c) {
-      paramString = b.getString(2131427823, new Object[] { str });
+    String str2 = ev.c(b).getText().toString().trim();
+    String str1 = str2;
+    if (str2.length() == 0) {
+      str1 = ap.c(a);
     }
-    a.setTitle(paramString);
-  }
-  
-  private void b(b paramb)
-  {
-    a(paramb);
-    a = new ct(b).a(paramb.aq()).b(2131427339, new fb(this, paramb)).c(2131427340, new fa(this)).b();
-  }
-  
-  public void a()
-  {
-    a.show();
+    if (!ev.d(b)) {
+      ad.a(ev.b(b)).a(a, str1);
+    }
+    for (;;)
+    {
+      u.a();
+      ((Activity)ev.b(b)).runOnUiThread(new fa(this));
+      return;
+      str2 = ad.a(ev.b(b)).d(ev.e(b));
+      ad.a(ev.b(b)).c(ev.e(b));
+      ad.a(ev.b(b)).a(a, str1, ad.a(ev.b(b)).g(ev.e(b)));
+      if (bk.b(str2)) {
+        ad.a(ev.b(b)).b(a, str2);
+      }
+    }
   }
 }
 

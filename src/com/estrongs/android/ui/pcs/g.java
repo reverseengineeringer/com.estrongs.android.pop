@@ -1,16 +1,16 @@
 package com.estrongs.android.ui.pcs;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 class g
-  implements DialogInterface.OnClickListener
+  implements View.OnClickListener
 {
-  g(d paramd) {}
+  g(f paramf) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void onClick(View paramView)
   {
-    d.a(a);
+    a.dismiss();
   }
 }
 

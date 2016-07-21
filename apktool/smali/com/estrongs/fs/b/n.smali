@@ -53,9 +53,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/fs/impl/b/c;
+    check-cast v0, Lcom/estrongs/fs/impl/b/d;
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/c;->getName()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/d;->getName()Ljava/lang/String;
 
     move-result-object v0
 
@@ -77,7 +77,7 @@
 
     check-cast v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->Q()Lcom/estrongs/android/pop/utils/c;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->ag()Lcom/estrongs/android/pop/utils/c;
 
     move-result-object v0
 

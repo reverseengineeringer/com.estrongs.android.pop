@@ -1,42 +1,25 @@
 package com.estrongs.android.view;
 
-import android.app.Activity;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.content.Intent;
-import android.net.Uri;
-import com.estrongs.android.pop.a;
-import com.estrongs.android.pop.app.DownloaderActivity;
-import com.estrongs.android.pop.utils.aj;
-import com.estrongs.android.pop.view.utils.AppRunner;
+import com.estrongs.android.ui.pcs.q;
+import com.estrongs.android.ui.pcs.u;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.impl.r.b;
 
 class eh
-  implements DialogInterface.OnClickListener
+  implements q
 {
-  eh(eg parameg, String paramString) {}
+  eh(eg parameg) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void a(boolean paramBoolean, String paramString1, String paramString2)
   {
-    Object localObject;
-    if (paramInt == 0)
+    if ((paramBoolean) && (paramString2 != null))
     {
-      localObject = new Intent(b.a.ad, DownloaderActivity.class);
-      ((Intent)localObject).setDataAndType(Uri.parse(a), "image/*");
-      b.a.ad.startActivity((Intent)localObject);
-    }
-    for (;;)
-    {
-      paramDialogInterface.dismiss();
-      return;
-      if (paramInt == 1)
-      {
-        aj.a(b.a.ad, a, "image/*");
-      }
-      else if (paramInt == 2)
-      {
-        localObject = a.d + "/WebImgSw_" + System.currentTimeMillis() + ".jpg";
-        AppRunner.a(b.a.ad, a, (String)localObject, new ei(this, (String)localObject), false);
-      }
+      paramString1 = "SP://" + u.a().e() + "@" + "pcs";
+      paramString2 = (b)a.a;
+      paramString2.setPath(paramString1);
+      paramString2.setAbsolutePath(paramString1);
+      paramString2.setDisplayName(ap.at(paramString1));
+      a.b.c.a.a(paramString2, null);
     }
   }
 }

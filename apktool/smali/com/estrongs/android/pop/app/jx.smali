@@ -1,8 +1,5 @@
 .class Lcom/estrongs/android/pop/app/jx;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Lcom/estrongs/android/ui/e/ju;
 
 
 # instance fields
@@ -10,34 +7,30 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/PopVideoPlayer;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/PopVideoPlayer;Landroid/content/Context;ZZ)V
     .locals 0
 
     iput-object p1, p0, Lcom/estrongs/android/pop/app/jx;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p3, p4}, Lcom/estrongs/android/ui/e/ju;-><init>(Landroid/content/Context;ZZ)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
+.method protected a()V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/jx;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+    invoke-super {p0}, Lcom/estrongs/android/ui/e/ju;->a()V
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->f(Lcom/estrongs/android/pop/app/PopVideoPlayer;)Landroid/os/Handler;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/jx;->b:Landroid/view/WindowManager$LayoutParams;
 
-    move-result-object v0
+    iget v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    const/4 v1, 0x5
+    or-int/lit16 v1, v1, 0x400
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
+    iput v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     return-void
 .end method

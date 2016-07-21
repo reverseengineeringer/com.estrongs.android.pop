@@ -60,12 +60,12 @@
     return-object v0
 .end method
 
-.method private a(Lcom/estrongs/android/ui/d/d;)Z
+.method private a(Lcom/estrongs/android/ui/d/h;)Z
     .locals 3
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1}, Lcom/estrongs/android/ui/d/d;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/estrongs/android/ui/d/h;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -76,32 +76,32 @@
     return v0
 
     :cond_1
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->ba(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->bl(Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_3
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->bg(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->br(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
     :cond_2
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->aB(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->aL(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->ai(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->as(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -118,11 +118,11 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/drag/DragWindowView;->a:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    const v1, 0x7f03004c
+    const v1, 0x7f0300a5
 
     const/4 v2, 0x0
 
@@ -132,7 +132,7 @@
 
     invoke-virtual {p0, v1}, Lcom/estrongs/android/ui/drag/DragWindowView;->addView(Landroid/view/View;)V
 
-    const v0, 0x7f0a018e
+    const v0, 0x7f0e0333
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -144,11 +144,11 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/drag/DragWindowView;->b:Landroid/widget/TextView;
 
-    const v2, 0x7f0b0014
+    const v2, 0x7f080076
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
-    const v0, 0x7f0a018f
+    const v0, 0x7f0e0334
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -158,7 +158,7 @@
 
     iput-object v0, p0, Lcom/estrongs/android/ui/drag/DragWindowView;->c:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a0190
+    const v0, 0x7f0e0335
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -176,7 +176,11 @@
 .method public a()V
     .locals 7
 
-    invoke-static {}, Lcom/estrongs/android/ui/d/e;->c()I
+    invoke-virtual {p0}, Lcom/estrongs/android/ui/drag/DragWindowView;->getWindowListManager()Lcom/estrongs/android/ui/d/i;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/d/i;->c()I
 
     move-result v0
 
@@ -188,9 +192,13 @@
     return-void
 
     :cond_0
-    iget v0, p0, Lcom/estrongs/android/ui/drag/DragWindowView;->f:I
+    invoke-virtual {p0}, Lcom/estrongs/android/ui/drag/DragWindowView;->getWindowListManager()Lcom/estrongs/android/ui/d/i;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/d/e;->c(I)Lcom/estrongs/android/ui/d/d;
+    move-result-object v0
+
+    iget v1, p0, Lcom/estrongs/android/ui/drag/DragWindowView;->f:I
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/d/i;->c(I)Lcom/estrongs/android/ui/d/h;
 
     move-result-object v0
 
@@ -257,7 +265,7 @@
 
     iget-object v2, p0, Lcom/estrongs/android/ui/drag/DragWindowView;->a:Landroid/content/Context;
 
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/d/d;->a(Landroid/content/Context;)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/d/h;->a(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -266,32 +274,20 @@
     goto :goto_0
 .end method
 
-.method public a(I)V
-    .locals 0
-
-    iput p1, p0, Lcom/estrongs/android/ui/drag/DragWindowView;->f:I
-
-    return-void
-.end method
-
-.method public a(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/ui/drag/DragWindowView;->e:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    return-void
-.end method
-
 .method public a(Lcom/estrongs/android/ui/drag/l;IIIILcom/estrongs/android/ui/drag/m;Ljava/lang/Object;)V
     .locals 7
 
     const/4 v3, 0x1
 
-    invoke-static {}, Lcom/estrongs/android/ui/d/e;->b()Lcom/estrongs/android/ui/d/d;
+    invoke-virtual {p0}, Lcom/estrongs/android/ui/drag/DragWindowView;->getWindowListManager()Lcom/estrongs/android/ui/d/i;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/d/d;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/d/i;->b()Lcom/estrongs/android/ui/d/h;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/d/h;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -302,17 +298,21 @@
     return-void
 
     :cond_1
-    iget v1, p0, Lcom/estrongs/android/ui/drag/DragWindowView;->f:I
-
-    invoke-static {v1}, Lcom/estrongs/android/ui/d/e;->c(I)Lcom/estrongs/android/ui/d/d;
+    invoke-virtual {p0}, Lcom/estrongs/android/ui/drag/DragWindowView;->getWindowListManager()Lcom/estrongs/android/ui/d/i;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/estrongs/android/ui/d/d;->b()Ljava/lang/String;
+    iget v2, p0, Lcom/estrongs/android/ui/drag/DragWindowView;->f:I
+
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/d/i;->c(I)Lcom/estrongs/android/ui/d/h;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/d/h;->a()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {v1}, Lcom/estrongs/android/ui/d/d;->b()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/d/h;->a()Ljava/lang/String;
 
     move-result-object v2
 
@@ -322,7 +322,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {v1}, Lcom/estrongs/android/ui/d/d;->b()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/d/h;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -334,7 +334,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/android/pop/esclasses/ESActivity;
+    check-cast v0, Landroid/app/Activity;
 
     move-object v1, p7
 
@@ -348,7 +348,7 @@
 
     move v6, v3
 
-    invoke-static/range {v0 .. v6}, Lcom/estrongs/android/pop/utils/aj;->a(Landroid/app/Activity;Ljava/util/List;Lcom/estrongs/fs/h;ZZLcom/estrongs/a/a/p;Z)V
+    invoke-static/range {v0 .. v6}, Lcom/estrongs/android/pop/utils/ao;->a(Landroid/app/Activity;Ljava/util/List;Lcom/estrongs/fs/h;ZZLcom/estrongs/a/a/p;Z)V
 
     goto :goto_0
 .end method
@@ -356,9 +356,13 @@
 .method public b(Lcom/estrongs/android/ui/drag/l;IIIILcom/estrongs/android/ui/drag/m;Ljava/lang/Object;)V
     .locals 7
 
-    iget v0, p0, Lcom/estrongs/android/ui/drag/DragWindowView;->f:I
+    invoke-virtual {p0}, Lcom/estrongs/android/ui/drag/DragWindowView;->getWindowListManager()Lcom/estrongs/android/ui/d/i;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/d/e;->c(I)Lcom/estrongs/android/ui/d/d;
+    move-result-object v0
+
+    iget v1, p0, Lcom/estrongs/android/ui/drag/DragWindowView;->f:I
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/d/i;->c(I)Lcom/estrongs/android/ui/d/h;
 
     move-result-object v0
 
@@ -386,7 +390,7 @@
 
     move-result v4
 
-    invoke-direct {p0, v0}, Lcom/estrongs/android/ui/drag/DragWindowView;->a(Lcom/estrongs/android/ui/d/d;)Z
+    invoke-direct {p0, v0}, Lcom/estrongs/android/ui/drag/DragWindowView;->a(Lcom/estrongs/android/ui/d/h;)Z
 
     move-result v5
 
@@ -394,7 +398,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/drag/DragWindowView;->c:Landroid/widget/ImageView;
 
-    const v5, 0x7f020074
+    const v5, 0x7f020165
 
     invoke-virtual {v0, v5}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
@@ -409,7 +413,7 @@
     :cond_1
     iget-object v5, p0, Lcom/estrongs/android/ui/drag/DragWindowView;->c:Landroid/widget/ImageView;
 
-    const v6, 0x7f020167
+    const v6, 0x7f020290
 
     invoke-virtual {v5, v6}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
@@ -417,17 +421,21 @@
 
     invoke-virtual {v5, v3, v1, v4, v2}, Landroid/widget/ImageView;->setPadding(IIII)V
 
-    invoke-static {}, Lcom/estrongs/android/ui/d/e;->b()Lcom/estrongs/android/ui/d/d;
+    invoke-virtual {p0}, Lcom/estrongs/android/ui/drag/DragWindowView;->getWindowListManager()Lcom/estrongs/android/ui/d/i;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/estrongs/android/ui/d/d;->b()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/d/i;->b()Lcom/estrongs/android/ui/d/h;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/d/h;->a()Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/d/d;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/d/h;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -499,17 +507,78 @@
 .end method
 
 .method public e(Lcom/estrongs/android/ui/drag/l;IIIILcom/estrongs/android/ui/drag/m;Ljava/lang/Object;)Z
-    .locals 1
+    .locals 2
 
-    iget v0, p0, Lcom/estrongs/android/ui/drag/DragWindowView;->f:I
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/d/e;->c(I)Lcom/estrongs/android/ui/d/d;
+    invoke-virtual {p0}, Lcom/estrongs/android/ui/drag/DragWindowView;->getWindowListManager()Lcom/estrongs/android/ui/d/i;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/estrongs/android/ui/drag/DragWindowView;->a(Lcom/estrongs/android/ui/d/d;)Z
+    iget v1, p0, Lcom/estrongs/android/ui/drag/DragWindowView;->f:I
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/d/i;->c(I)Lcom/estrongs/android/ui/d/h;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Lcom/estrongs/android/ui/drag/DragWindowView;->a(Lcom/estrongs/android/ui/d/h;)Z
 
     move-result v0
 
     return v0
+.end method
+
+.method public getWindowListManager()Lcom/estrongs/android/ui/d/i;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/drag/DragWindowView;->e:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/drag/DragWindowView;->e:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->au()Lcom/estrongs/android/ui/d/i;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/drag/DragWindowView;->a:Landroid/content/Context;
+
+    instance-of v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/drag/DragWindowView;->a:Landroid/content/Context;
+
+    check-cast v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->au()Lcom/estrongs/android/ui/d/i;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v0, Lcom/estrongs/android/ui/d/i;
+
+    invoke-direct {v0}, Lcom/estrongs/android/ui/d/i;-><init>()V
+
+    goto :goto_0
+.end method
+
+.method public setActivity(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/ui/drag/DragWindowView;->e:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    return-void
+.end method
+
+.method public setPosition(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/estrongs/android/ui/drag/DragWindowView;->f:I
+
+    return-void
 .end method

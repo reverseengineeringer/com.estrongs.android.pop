@@ -1,15 +1,15 @@
 package com.estrongs.android.pop.utils;
 
-import com.estrongs.android.util.bc;
-import java.io.File;
-import java.io.FilenameFilter;
+import com.estrongs.fs.impl.local.m;
 
-final class ar
-  implements FilenameFilter
+class ar
+  implements Runnable
 {
-  public boolean accept(File paramFile, String paramString)
+  ar(aq paramaq) {}
+  
+  public void run()
   {
-    return bc.c(paramString);
+    m.b(a.a.b);
   }
 }
 

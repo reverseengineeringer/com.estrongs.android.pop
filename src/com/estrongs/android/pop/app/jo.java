@@ -1,20 +1,18 @@
 package com.estrongs.android.pop.app;
 
-import com.estrongs.android.pop.m;
-import com.estrongs.fs.b.ab;
-import java.util.List;
-
 class jo
-  extends Thread
+  implements ai
 {
-  jo(jn paramjn, List paramList) {}
+  jo(PopVideoPlayer paramPopVideoPlayer) {}
   
-  public void run()
+  public void a()
   {
-    ab localab = new ab(PopVideoPlayer.E(b.c.a), a, false, b.b);
-    localab.setTaskDecisionListener(new m(b.c.a));
-    localab.execute(false);
-    b.c.a.runOnUiThread(new jp(this));
+    PopVideoPlayer.w(a);
+  }
+  
+  public void b()
+  {
+    PopVideoPlayer.z(a);
   }
 }
 

@@ -1,21 +1,35 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.a.a;
-import com.estrongs.a.a.p;
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.dialog.ProgressDialog;
-import com.estrongs.fs.b.w;
+import com.estrongs.android.view.a.b;
 
-final class dk
-  implements p
+class dk
+  implements b
 {
-  dk(FileExplorerActivity paramFileExplorerActivity, ProgressDialog paramProgressDialog, w paramw, boolean paramBoolean1, boolean paramBoolean2) {}
+  dk(cr paramcr) {}
   
-  public void a(a parama, int paramInt1, int paramInt2)
+  public boolean a(cp paramcp)
   {
-    if (paramInt2 == 4) {
-      a.runOnUiThread(new dl(this));
-    }
+    if (A) {}
+    do
+    {
+      return false;
+      if ((e) || (L) || (K) || (H) || (l)) {
+        return true;
+      }
+      if ((h) && (N == 1) && (O)) {
+        return true;
+      }
+      if (((f) || (y)) && (!d) && (O)) {
+        return true;
+      }
+      if ((n) || (B)) {
+        return true;
+      }
+      if ((i) || (j) || (k)) {
+        return true;
+      }
+    } while (((!q) && (!r)) || (!O));
+    return true;
   }
 }
 

@@ -1,120 +1,334 @@
 .class Landroid/support/v4/view/a/k;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/support/v4/view/a/o;
-
-
-# instance fields
-.field final synthetic a:Landroid/support/v4/view/a/h;
-
-.field final synthetic b:Landroid/support/v4/view/a/j;
+.super Landroid/support/v4/view/a/q;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/view/a/j;Landroid/support/v4/view/a/h;)V
+.method constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Landroid/support/v4/view/a/k;->b:Landroid/support/v4/view/a/j;
-
-    iput-object p2, p0, Landroid/support/v4/view/a/k;->a:Landroid/support/v4/view/a/h;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/support/v4/view/a/q;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(I)Ljava/lang/Object;
+.method public a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Landroid/support/v4/view/a/k;->a:Landroid/support/v4/view/a/h;
-
-    invoke-virtual {v0, p1}, Landroid/support/v4/view/a/h;->a(I)Landroid/support/v4/view/a/a;
+    invoke-static {p1}, Landroid/support/v4/view/a/u;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
     return-object v0
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/support/v4/view/a/a;->a()Ljava/lang/Object;
-
-    move-result-object v0
-
-    goto :goto_0
 .end method
 
-.method public a(Ljava/lang/String;I)Ljava/util/List;
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "I)",
-            "Ljava/util/List",
-            "<",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
+.method public a(Ljava/lang/Object;I)V
+    .locals 0
 
-    iget-object v0, p0, Landroid/support/v4/view/a/k;->a:Landroid/support/v4/view/a/h;
+    invoke-static {p1, p2}, Landroid/support/v4/view/a/u;->a(Ljava/lang/Object;I)V
 
-    invoke-virtual {v0, p1, p2}, Landroid/support/v4/view/a/h;->a(Ljava/lang/String;I)Ljava/util/List;
-
-    move-result-object v2
-
-    new-instance v3, Ljava/util/ArrayList;
-
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {v2}, Ljava/util/List;->size()I
-
-    move-result v4
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_0
-    if-ge v1, v4, :cond_0
-
-    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/support/v4/view/a/a;
-
-    invoke-virtual {v0}, Landroid/support/v4/view/a/a;->a()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v0, v1, 0x1
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    return-object v3
+    return-void
 .end method
 
-.method public a(IILandroid/os/Bundle;)Z
+.method public a(Ljava/lang/Object;Landroid/graphics/Rect;)V
+    .locals 0
+
+    invoke-static {p1, p2}, Landroid/support/v4/view/a/u;->a(Ljava/lang/Object;Landroid/graphics/Rect;)V
+
+    return-void
+.end method
+
+.method public a(Ljava/lang/Object;Landroid/view/View;)V
+    .locals 0
+
+    invoke-static {p1, p2}, Landroid/support/v4/view/a/u;->a(Ljava/lang/Object;Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public a(Ljava/lang/Object;Z)V
+    .locals 0
+
+    invoke-static {p1, p2}, Landroid/support/v4/view/a/u;->a(Ljava/lang/Object;Z)V
+
+    return-void
+.end method
+
+.method public b(Ljava/lang/Object;)I
     .locals 1
 
-    iget-object v0, p0, Landroid/support/v4/view/a/k;->a:Landroid/support/v4/view/a/h;
-
-    invoke-virtual {v0, p1, p2, p3}, Landroid/support/v4/view/a/h;->a(IILandroid/os/Bundle;)Z
+    invoke-static {p1}, Landroid/support/v4/view/a/u;->b(Ljava/lang/Object;)I
 
     move-result v0
 
     return v0
+.end method
+
+.method public b(Ljava/lang/Object;Landroid/graphics/Rect;)V
+    .locals 0
+
+    invoke-static {p1, p2}, Landroid/support/v4/view/a/u;->b(Ljava/lang/Object;Landroid/graphics/Rect;)V
+
+    return-void
+.end method
+
+.method public b(Ljava/lang/Object;Landroid/view/View;)V
+    .locals 0
+
+    invoke-static {p1, p2}, Landroid/support/v4/view/a/u;->b(Ljava/lang/Object;Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public b(Ljava/lang/Object;Ljava/lang/CharSequence;)V
+    .locals 0
+
+    invoke-static {p1, p2}, Landroid/support/v4/view/a/u;->a(Ljava/lang/Object;Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public b(Ljava/lang/Object;Z)V
+    .locals 0
+
+    invoke-static {p1, p2}, Landroid/support/v4/view/a/u;->b(Ljava/lang/Object;Z)V
+
+    return-void
+.end method
+
+.method public c(Ljava/lang/Object;)Ljava/lang/CharSequence;
+    .locals 1
+
+    invoke-static {p1}, Landroid/support/v4/view/a/u;->c(Ljava/lang/Object;)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public c(Ljava/lang/Object;Landroid/graphics/Rect;)V
+    .locals 0
+
+    invoke-static {p1, p2}, Landroid/support/v4/view/a/u;->c(Ljava/lang/Object;Landroid/graphics/Rect;)V
+
+    return-void
+.end method
+
+.method public c(Ljava/lang/Object;Landroid/view/View;)V
+    .locals 0
+
+    invoke-static {p1, p2}, Landroid/support/v4/view/a/u;->c(Ljava/lang/Object;Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public c(Ljava/lang/Object;Ljava/lang/CharSequence;)V
+    .locals 0
+
+    invoke-static {p1, p2}, Landroid/support/v4/view/a/u;->b(Ljava/lang/Object;Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public c(Ljava/lang/Object;Z)V
+    .locals 0
+
+    invoke-static {p1, p2}, Landroid/support/v4/view/a/u;->c(Ljava/lang/Object;Z)V
+
+    return-void
+.end method
+
+.method public d(Ljava/lang/Object;)Ljava/lang/CharSequence;
+    .locals 1
+
+    invoke-static {p1}, Landroid/support/v4/view/a/u;->d(Ljava/lang/Object;)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public d(Ljava/lang/Object;Landroid/graphics/Rect;)V
+    .locals 0
+
+    invoke-static {p1, p2}, Landroid/support/v4/view/a/u;->d(Ljava/lang/Object;Landroid/graphics/Rect;)V
+
+    return-void
+.end method
+
+.method public d(Ljava/lang/Object;Ljava/lang/CharSequence;)V
+    .locals 0
+
+    invoke-static {p1, p2}, Landroid/support/v4/view/a/u;->c(Ljava/lang/Object;Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public d(Ljava/lang/Object;Z)V
+    .locals 0
+
+    invoke-static {p1, p2}, Landroid/support/v4/view/a/u;->d(Ljava/lang/Object;Z)V
+
+    return-void
+.end method
+
+.method public e(Ljava/lang/Object;)Ljava/lang/CharSequence;
+    .locals 1
+
+    invoke-static {p1}, Landroid/support/v4/view/a/u;->e(Ljava/lang/Object;)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public e(Ljava/lang/Object;Ljava/lang/CharSequence;)V
+    .locals 0
+
+    invoke-static {p1, p2}, Landroid/support/v4/view/a/u;->d(Ljava/lang/Object;Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public e(Ljava/lang/Object;Z)V
+    .locals 0
+
+    invoke-static {p1, p2}, Landroid/support/v4/view/a/u;->e(Ljava/lang/Object;Z)V
+
+    return-void
+.end method
+
+.method public f(Ljava/lang/Object;)Ljava/lang/CharSequence;
+    .locals 1
+
+    invoke-static {p1}, Landroid/support/v4/view/a/u;->f(Ljava/lang/Object;)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public f(Ljava/lang/Object;Z)V
+    .locals 0
+
+    invoke-static {p1, p2}, Landroid/support/v4/view/a/u;->f(Ljava/lang/Object;Z)V
+
+    return-void
+.end method
+
+.method public g(Ljava/lang/Object;Z)V
+    .locals 0
+
+    invoke-static {p1, p2}, Landroid/support/v4/view/a/u;->g(Ljava/lang/Object;Z)V
+
+    return-void
+.end method
+
+.method public g(Ljava/lang/Object;)Z
+    .locals 1
+
+    invoke-static {p1}, Landroid/support/v4/view/a/u;->g(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public h(Ljava/lang/Object;)Z
+    .locals 1
+
+    invoke-static {p1}, Landroid/support/v4/view/a/u;->h(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public i(Ljava/lang/Object;)Z
+    .locals 1
+
+    invoke-static {p1}, Landroid/support/v4/view/a/u;->i(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public j(Ljava/lang/Object;)Z
+    .locals 1
+
+    invoke-static {p1}, Landroid/support/v4/view/a/u;->j(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public k(Ljava/lang/Object;)Z
+    .locals 1
+
+    invoke-static {p1}, Landroid/support/v4/view/a/u;->k(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public l(Ljava/lang/Object;)Z
+    .locals 1
+
+    invoke-static {p1}, Landroid/support/v4/view/a/u;->l(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public m(Ljava/lang/Object;)Z
+    .locals 1
+
+    invoke-static {p1}, Landroid/support/v4/view/a/u;->m(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public n(Ljava/lang/Object;)Z
+    .locals 1
+
+    invoke-static {p1}, Landroid/support/v4/view/a/u;->n(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public o(Ljava/lang/Object;)Z
+    .locals 1
+
+    invoke-static {p1}, Landroid/support/v4/view/a/u;->o(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public p(Ljava/lang/Object;)Z
+    .locals 1
+
+    invoke-static {p1}, Landroid/support/v4/view/a/u;->p(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public q(Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Landroid/support/v4/view/a/u;->q(Ljava/lang/Object;)V
+
+    return-void
 .end method

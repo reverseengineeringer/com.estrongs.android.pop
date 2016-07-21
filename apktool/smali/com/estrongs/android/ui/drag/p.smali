@@ -61,7 +61,7 @@
     iput-boolean v0, p0, Lcom/estrongs/android/ui/drag/p;->d:Z
 
     :try_start_0
-    invoke-direct {p0}, Lcom/estrongs/android/ui/drag/p;->b()V
+    invoke-direct {p0}, Lcom/estrongs/android/ui/drag/p;->c()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -94,17 +94,17 @@
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {p1, p2}, Lcom/estrongs/android/ui/drag/DragWindowView;->a(I)V
+    invoke-virtual {p1, p2}, Lcom/estrongs/android/ui/drag/DragWindowView;->setPosition(I)V
 
     goto :goto_0
 .end method
 
-.method private b()V
+.method private c()V
     .locals 7
 
-    const v6, 0x7f0a011f
+    const v6, 0x7f0e02c4
 
-    const v3, 0x7f0a011e
+    const v3, 0x7f0e02c3
 
     const/4 v5, 0x2
 
@@ -132,7 +132,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/drag/p;->a:Lcom/estrongs/android/ui/drag/DragLayer;
 
-    const v3, 0x7f0a0122
+    const v3, 0x7f0e02c7
 
     invoke-virtual {v0, v3}, Lcom/estrongs/android/ui/drag/DragLayer;->findViewById(I)Landroid/view/View;
 
@@ -144,7 +144,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/drag/p;->a:Lcom/estrongs/android/ui/drag/DragLayer;
 
-    const v3, 0x7f0a0123
+    const v3, 0x7f0e02c8
 
     invoke-virtual {v0, v3}, Lcom/estrongs/android/ui/drag/DragLayer;->findViewById(I)Landroid/view/View;
 
@@ -158,7 +158,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/drag/p;->a:Lcom/estrongs/android/ui/drag/DragLayer;
 
-    const v4, 0x7f0a018b
+    const v4, 0x7f0e0330
 
     invoke-virtual {v0, v4}, Lcom/estrongs/android/ui/drag/DragLayer;->findViewById(I)Landroid/view/View;
 
@@ -189,7 +189,7 @@
 
     aget-object v0, v2, v1
 
-    const v3, 0x7f0a0120
+    const v3, 0x7f0e02c5
 
     invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -205,7 +205,7 @@
 
     aget-object v0, v2, v1
 
-    const v3, 0x7f0a0121
+    const v3, 0x7f0e02c6
 
     invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -240,7 +240,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/drag/p;->a:Lcom/estrongs/android/ui/drag/DragLayer;
 
-    const v3, 0x7f0a0122
+    const v3, 0x7f0e02c7
 
     invoke-virtual {v0, v3}, Lcom/estrongs/android/ui/drag/DragLayer;->findViewById(I)Landroid/view/View;
 
@@ -271,7 +271,7 @@
 
     aget-object v0, v2, v1
 
-    const v3, 0x7f0a0120
+    const v3, 0x7f0e02c5
 
     invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -287,7 +287,7 @@
 
     aget-object v0, v2, v1
 
-    const v3, 0x7f0a0121
+    const v3, 0x7f0e02c6
 
     invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -303,7 +303,7 @@
 
     aget-object v0, v2, v1
 
-    const v3, 0x7f0a0128
+    const v3, 0x7f0e02cd
 
     invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -319,7 +319,7 @@
 
     aget-object v0, v2, v1
 
-    const v3, 0x7f0a018c
+    const v3, 0x7f0e0331
 
     invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -335,7 +335,7 @@
 
     aget-object v0, v2, v1
 
-    const v3, 0x7f0a018d
+    const v3, 0x7f0e0332
 
     invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -375,7 +375,7 @@
 
     iget-object v2, p0, Lcom/estrongs/android/ui/drag/p;->e:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/drag/DragWindowView;->a(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/drag/DragWindowView;->setActivity(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
 
     goto :goto_2
 
@@ -390,7 +390,11 @@
 
     const/4 v3, 0x0
 
-    invoke-static {}, Lcom/estrongs/android/ui/d/e;->c()I
+    invoke-virtual {p0}, Lcom/estrongs/android/ui/drag/p;->b()Lcom/estrongs/android/ui/d/i;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/d/i;->c()I
 
     move-result v1
 
@@ -451,4 +455,16 @@
 
     :cond_1
     return-void
+.end method
+
+.method public b()Lcom/estrongs/android/ui/d/i;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/drag/p;->e:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->au()Lcom/estrongs/android/ui/d/i;
+
+    move-result-object v0
+
+    return-object v0
 .end method

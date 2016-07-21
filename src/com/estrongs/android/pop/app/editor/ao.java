@@ -1,15 +1,8 @@
 package com.estrongs.android.pop.app.editor;
 
-public class ao
+public abstract interface ao
 {
-  int a = 0;
-  long b = 0L;
-  
-  public ao(an paraman, int paramInt, long paramLong)
-  {
-    a = paramInt;
-    b = paramLong;
-  }
+  public abstract void a(int paramInt);
 }
 
 /* Location:

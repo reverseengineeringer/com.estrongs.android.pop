@@ -1,73 +1,47 @@
 package com.estrongs.fs.impl.f;
 
-import com.estrongs.android.pop.netfs.utils.FastPipedInputStream;
-import com.estrongs.android.pop.netfs.utils.UploadOutputStream;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.StatusLine;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpPost;
+import android.database.DatabaseUtils;
+import com.estrongs.android.util.bg;
+import com.estrongs.fs.h;
+import com.estrongs.fs.impl.local.f;
+import com.estrongs.fs.impl.media.e;
 
-class d
-  extends Thread
+public class d
+  extends e
 {
-  d(c paramc, HttpClient paramHttpClient, HttpPost paramHttpPost, UploadOutputStream paramUploadOutputStream, FastPipedInputStream paramFastPipedInputStream) {}
+  private static d a;
   
-  public void run()
+  public static d b()
   {
-    for (;;)
-    {
-      try
-      {
-        Object localObject1 = a.execute(b);
-        if (((HttpResponse)localObject1).getStatusLine().getStatusCode() == 200)
-        {
-          c.setResult(true);
-          localObject1 = ((HttpResponse)localObject1).getEntity();
-          if (localObject1 != null) {
-            ((HttpEntity)localObject1).consumeContent();
-          }
-        }
-      }
-      catch (Exception localException1) {}finally
-      {
-        try
-        {
-          localException1.printStackTrace();
-          c.setResult(false);
-          try
-          {
-            d.close();
-            return;
-          }
-          catch (Exception localException2)
-          {
-            return;
-          }
-          localObject2 = finally;
-          try
-          {
-            d.close();
-            throw ((Throwable)localObject2);
-          }
-          catch (Exception localException5)
-          {
-            continue;
-          }
-        }
-        catch (Exception localException3)
-        {
-          continue;
-        }
-      }
-      try
-      {
-        d.close();
-        return;
-      }
-      catch (Exception localException4) {}
-      c.setResult(false);
+    if (a == null) {
+      a = new d();
     }
+    return a;
+  }
+  
+  protected h a(f paramf)
+  {
+    return new a(paramf);
+  }
+  
+  protected String a()
+  {
+    Object localObject = bg.c();
+    if (localObject == null) {
+      return null;
+    }
+    localObject = ((String)localObject).split(";");
+    StringBuffer localStringBuffer = new StringBuffer();
+    int i = 0;
+    while (i < localObject.length)
+    {
+      if (i > 0) {
+        localStringBuffer.append(" or ");
+      }
+      localStringBuffer.append("_data").append(" like ").append(DatabaseUtils.sqlEscapeString("%" + localObject[i]));
+      i += 1;
+    }
+    return localStringBuffer.toString();
   }
 }
 

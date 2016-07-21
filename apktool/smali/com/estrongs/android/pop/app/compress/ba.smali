@@ -1,55 +1,169 @@
-.class Lcom/estrongs/android/pop/app/compress/ba;
+.class public Lcom/estrongs/android/pop/app/compress/ba;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/compress/ay;
+.field public a:Ljava/lang/String;
+
+.field public b:Ljava/lang/String;
+
+.field public c:Ljava/lang/String;
+
+.field public d:Ljava/lang/String;
+
+.field public e:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public f:Z
+
+.field public g:I
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/compress/ay;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/compress/ba;->a:Lcom/estrongs/android/pop/app/compress/ay;
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/compress/ba;->b:Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/compress/ba;->f:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
+.method public toString()Ljava/lang/String;
     .locals 3
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/ba;->a:Lcom/estrongs/android/pop/app/compress/ay;
+    const/16 v2, 0x27
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/compress/ay;->a:Lcom/estrongs/android/pop/app/compress/aw;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/aw;->e(Lcom/estrongs/android/pop/app/compress/aw;)Lcom/estrongs/android/view/e;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "ExtractToBean{maArchiveFile=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/view/e;->q()Ljava/io/File;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/compress/ba;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/compress/ba;->a:Lcom/estrongs/android/pop/app/compress/ay;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget-object v1, v1, Lcom/estrongs/android/pop/app/compress/ay;->a:Lcom/estrongs/android/pop/app/compress/aw;
+    move-result-object v0
 
-    invoke-static {v1}, Lcom/estrongs/android/pop/app/compress/aw;->e(Lcom/estrongs/android/pop/app/compress/aw;)Lcom/estrongs/android/view/e;
+    const-string v1, ", mCharset=\'"
 
-    move-result-object v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v2, Lcom/estrongs/android/pop/app/compress/bb;
+    move-result-object v0
 
-    invoke-direct {v2, p0, v0}, Lcom/estrongs/android/pop/app/compress/bb;-><init>(Lcom/estrongs/android/pop/app/compress/ba;Ljava/io/File;)V
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/compress/ba;->b:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lcom/estrongs/android/view/e;->a(Lcom/estrongs/android/view/t;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", mOutputPath=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/compress/ba;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", mPassword=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/compress/ba;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", mFilesSelected="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/compress/ba;->e:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", isReload="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-boolean v1, p0, Lcom/estrongs/android/pop/app/compress/ba;->f:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", mOutputPathType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget v1, p0, Lcom/estrongs/android/pop/app/compress/ba;->g:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -2,22 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnDismissListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/esclasses/ESActivity;
+.field final synthetic a:Lcom/estrongs/android/view/cr;
 
-.field final synthetic b:Lcom/estrongs/android/pop/utils/bn;
+.field final synthetic b:Lcom/estrongs/android/pop/utils/bs;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/utils/bn;Lcom/estrongs/android/pop/esclasses/ESActivity;)V
+.method constructor <init>(Lcom/estrongs/android/pop/utils/bs;Lcom/estrongs/android/view/cr;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/utils/bt;->b:Lcom/estrongs/android/pop/utils/bn;
+    iput-object p1, p0, Lcom/estrongs/android/pop/utils/bt;->b:Lcom/estrongs/android/pop/utils/bs;
 
-    iput-object p2, p0, Lcom/estrongs/android/pop/utils/bt;->a:Lcom/estrongs/android/pop/esclasses/ESActivity;
+    iput-object p2, p0, Lcom/estrongs/android/pop/utils/bt;->a:Lcom/estrongs/android/view/cr;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,21 +26,12 @@
 
 
 # virtual methods
-.method public onDismiss(Landroid/content/DialogInterface;)V
+.method public run()V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/utils/bt;->a:Lcom/estrongs/android/pop/esclasses/ESActivity;
+    iget-object v0, p0, Lcom/estrongs/android/pop/utils/bt;->a:Lcom/estrongs/android/view/cr;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->b(Landroid/app/Activity;)Z
+    invoke-virtual {v0}, Lcom/estrongs/android/view/cr;->e()V
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/utils/bt;->a:Lcom/estrongs/android/pop/esclasses/ESActivity;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/esclasses/ESActivity;->finish()V
-
-    :cond_0
     return-void
 .end method

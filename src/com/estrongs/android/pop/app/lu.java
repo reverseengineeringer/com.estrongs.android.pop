@@ -1,21 +1,28 @@
 package com.estrongs.android.pop.app;
 
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
+import com.estrongs.android.pop.ftp.ESFtpShortcut;
+
 class lu
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  lu(lt paramlt) {}
+  lu(ShowDialogActivity paramShowDialogActivity) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    while ((StreamingMediaPlayer.d(a.a)) && (!StreamingMediaPlayer.b(a.a)) && (StreamingMediaPlayer.a(a.a) < 262144L)) {
-      try
-      {
-        Thread.sleep(200L);
-      }
-      catch (InterruptedException localInterruptedException) {}
+    try
+    {
+      Intent localIntent = new Intent(a, ESFtpShortcut.class);
+      localIntent.putExtra("mode", 2);
+      a.startActivity(localIntent);
+      paramDialogInterface.dismiss();
+      return;
     }
-    if (StreamingMediaPlayer.d(a.a)) {
-      StreamingMediaPlayer.a(a.a, false);
+    catch (Exception localException)
+    {
+      for (;;) {}
     }
   }
 }

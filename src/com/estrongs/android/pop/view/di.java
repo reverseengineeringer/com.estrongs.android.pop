@@ -1,40 +1,142 @@
 package com.estrongs.android.pop.view;
 
-import android.app.Activity;
-import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.ui.dialog.VerifyPasswordDialog;
-import com.estrongs.android.ui.dialog.VerifyPasswordDialog.DialogType;
-import com.estrongs.android.util.TypedMap;
-import com.estrongs.android.util.am;
-import com.estrongs.android.view.cb;
-import com.estrongs.fs.h;
+import com.estrongs.android.h.a.e;
+import com.estrongs.android.h.f;
+import com.estrongs.android.j.c;
+import com.estrongs.android.pop.ad;
+import com.estrongs.android.pop.view.utils.ac;
+import com.estrongs.android.ui.guesture.ESGesturePanel;
+import com.estrongs.android.ui.preference.q;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bc;
+import com.estrongs.android.view.cr;
+import java.util.Iterator;
+import java.util.List;
 
 class di
-  extends com.estrongs.android.ui.c.a
+  implements q
 {
-  di(FileExplorerActivity paramFileExplorerActivity, Activity paramActivity, com.estrongs.fs.util.a.a parama, cb paramcb)
-  {
-    super(paramActivity, parama, paramcb);
-  }
+  di(FileExplorerActivity paramFileExplorerActivity) {}
   
-  private void b(h paramh)
+  public void a(String arg1, Object paramObject)
   {
-    super.a(paramh);
-  }
-  
-  protected void a(h paramh, TypedMap paramTypedMap)
-  {
-    FexApplication localFexApplication = FexApplication.a();
-    if ((am.bb(paramh.getAbsolutePath())) && (!am.bg(paramh.getAbsolutePath()))) {}
-    for (int i = 1; (localFexApplication.h()) && (i != 0); i = 0)
+    if ("hidden_file".equals(???))
     {
-      paramTypedMap = VerifyPasswordDialog.DialogType.NETWORK;
-      paramTypedMap = VerifyPasswordDialog.a(a, paramTypedMap);
-      paramTypedMap.a(new dj(this, paramh));
-      paramTypedMap.b();
-      return;
+      FileExplorerActivity.d(a, a.k.q());
+      a.a(null);
     }
-    super.a(paramh, paramTypedMap);
+    do
+    {
+      Object localObject;
+      do
+      {
+        do
+        {
+          return;
+          if ("thumbnail".equals(???))
+          {
+            f.a(Boolean.valueOf(paramObject.toString()).booleanValue());
+            e.c();
+            a.a(null);
+            return;
+          }
+          if ("show_associate_app".equals(???))
+          {
+            a.f(false);
+            return;
+          }
+          if ("gesture_setting_enabled".equals(???)) {
+            try
+            {
+              if (Boolean.parseBoolean(paramObject.toString())) {
+                FileExplorerActivity.s(a).a("gesture_enabled");
+              }
+              a.A.postInvalidate();
+              return;
+            }
+            catch (Exception ???)
+            {
+              return;
+            }
+          }
+          if (("search_engine_default".equals(???)) || ("show_search_engine".equals(???)) || ("show_pcs_res".equals(???)))
+          {
+            bc.b();
+            return;
+          }
+          if (!"enable_recycle".equals(???)) {
+            break;
+          }
+        } while (Boolean.valueOf(paramObject.toString()).booleanValue());
+        a.an();
+        return;
+        if ("scroll_thumb".equals(???))
+        {
+          boolean bool = Boolean.valueOf(paramObject.toString()).booleanValue();
+          synchronized (a.w)
+          {
+            paramObject = a.w.iterator();
+            while (((Iterator)paramObject).hasNext())
+            {
+              localObject = (cr)((Iterator)paramObject).next();
+              if (localObject != null) {
+                ((cr)localObject).g(bool);
+              }
+            }
+          }
+          return;
+        }
+        if (!"sdcard_size".equals(???)) {
+          break;
+        }
+        FileExplorerActivity.e(a, Boolean.valueOf(paramObject.toString()).booleanValue());
+        paramObject = a.O();
+      } while (paramObject == null);
+      for (;;)
+      {
+        cr localcr;
+        synchronized (a.w)
+        {
+          localObject = a.w.iterator();
+          if (!((Iterator)localObject).hasNext()) {
+            break;
+          }
+          localcr = (cr)((Iterator)localObject).next();
+          if ((localcr == null) || ((!ap.bl(localcr.c())) && (!ap.L(localcr.c())) && (!ap.K(localcr.c())) && (!ap.r(localcr.c())))) {
+            continue;
+          }
+          if (paramObject == localcr) {
+            localcr.g();
+          }
+        }
+        localcr.i(true);
+      }
+      return;
+      if (???.equals("app_backup_path"))
+      {
+        ac.a(paramObject.toString());
+        a.f(false);
+        return;
+      }
+      if (???.equals("download_path"))
+      {
+        ac.b(paramObject.toString());
+        a.f(false);
+        return;
+      }
+      if (???.equals("use_xlarge_layout"))
+      {
+        ad.a(a).w(((Boolean)paramObject).booleanValue());
+        a.ah();
+        return;
+      }
+      if (???.endsWith("restoresettings"))
+      {
+        a.ah();
+        return;
+      }
+    } while (!"show_nomedia".equals(???));
+    a.a(null);
   }
 }
 

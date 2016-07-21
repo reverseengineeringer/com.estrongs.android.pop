@@ -4,5 +4,5 @@
     <item android:state_pressed="true" android:drawable="@drawable/listview_background_blue" />
     <item android:state_focused="true" android:drawable="@drawable/listview_background_blue" />
     <item android:state_selected="true" android:drawable="@drawable/listview_background_blue" />
-    <item android:drawable="@drawable/popupbox_content_bg" />
+    <item android:drawable="@color/transparent" />
 </selector>

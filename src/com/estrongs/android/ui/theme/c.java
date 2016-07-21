@@ -6,11 +6,14 @@ import android.content.DialogInterface.OnClickListener;
 class c
   implements DialogInterface.OnClickListener
 {
-  c(b paramb) {}
+  c(a parama, al paramal) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
     paramDialogInterface.dismiss();
+    if ((a.f(b.a)) && (ModifyThemeActivity.b(b.a) == ModifyThemeActivity.a(b.a).e())) {
+      b.a.setResult(-1);
+    }
   }
 }
 

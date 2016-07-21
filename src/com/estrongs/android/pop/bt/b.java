@@ -1,6 +1,6 @@
 package com.estrongs.android.pop.bt;
 
-import android.util.Log;
+import com.estrongs.android.util.l;
 
 class b
   implements k
@@ -9,22 +9,22 @@ class b
   
   public void a()
   {
-    Log.d("OBEXFtpServer", "setProgressDone");
+    l.b("OBEXFtpServer", "setProgressDone");
   }
   
   public void a(int paramInt)
   {
-    Log.d("OBEXFtpServer", "setProgressMaximum: " + paramInt);
+    l.b("OBEXFtpServer", "setProgressMaximum: " + paramInt);
   }
   
   public void a(String paramString)
   {
-    Log.d("OBEXFtpServer", " " + paramString);
+    l.b("OBEXFtpServer", " " + paramString);
   }
   
   public void b(int paramInt)
   {
-    Log.d("OBEXFtpServer", "setProgressValue: " + paramInt);
+    l.b("OBEXFtpServer", "setProgressValue: " + paramInt);
   }
 }
 

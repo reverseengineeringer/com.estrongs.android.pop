@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.dianxinos.lockscreen.ui.InfoCycleView android:id="@id/lock_screen_sd_card_info_cycle_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/lock_screen_sd_card_info_cycle_margin_left" android:layout_marginTop="@dimen/lock_screen_sd_card_info_cycle_margin_top" android:layout_marginRight="@dimen/lock_screen_sd_card_info_cycle_margin_right" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/lock_screen_sd_card_text_margin_top">
+        <TextView android:textSize="@dimen/lock_screen_sd_card_title_text_size" android:textColor="@android:color/white" android:id="@id/lock_screen_card_one_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignBottom="@id/lock_screen_sd_card_info_cycle_view" />
+        <TextView android:textSize="@dimen/lock_screen_sd_card_message_text_size" android:textColor="#9affffff" android:id="@id/lock_screen_card_one_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/lock_screen_sd_card_message_text_margin_top" />
+    </LinearLayout>
+</merge>

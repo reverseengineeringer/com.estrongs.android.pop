@@ -1,17 +1,18 @@
 package com.estrongs.android.ui.navigation;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.pop.view.FileExplorerActivity;
 
 class l
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
   l(k paramk) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void run()
   {
-    paramDialogInterface.dismiss();
-    a.a.a(new m(this));
+    while (a.a.a.d().c() > 1) {
+      h.c(a.a.a).g(1);
+    }
+    a.a.a.b();
   }
 }
 

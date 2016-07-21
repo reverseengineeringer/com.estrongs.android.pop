@@ -1,30 +1,34 @@
-.class public Lcom/estrongs/android/ui/e/cj;
-.super Lcom/estrongs/android/ui/e/a;
+.class Lcom/estrongs/android/ui/e/cj;
+.super Lcom/estrongs/android/ui/e/cq;
+
+
+# instance fields
+.field final synthetic k:Lcom/estrongs/android/ui/e/ch;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Z)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/ch;Landroid/app/Activity;ZLandroid/widget/LinearLayout;Z)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/estrongs/android/ui/e/a;-><init>(Landroid/content/Context;Z)V
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/cj;->k:Lcom/estrongs/android/ui/e/ch;
+
+    invoke-direct {p0, p2, p3, p4, p5}, Lcom/estrongs/android/ui/e/cq;-><init>(Landroid/app/Activity;ZLandroid/widget/LinearLayout;Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/view/View;)V
-    .locals 3
+.method public e()Z
+    .locals 1
 
-    const/4 v2, -0x1
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/cj;->k:Lcom/estrongs/android/ui/e/ch;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/cj;->c:Landroid/view/ViewGroup;
+    iget-object v0, v0, Lcom/estrongs/android/ui/e/ch;->l:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->B()V
 
-    invoke-direct {v1, v2, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, p1, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
+    return v0
 .end method

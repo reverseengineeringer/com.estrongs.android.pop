@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/ShowDialogActivity;
+.field final synthetic a:Lcom/estrongs/android/pop/app/lh;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/lh;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/li;->a:Lcom/estrongs/android/pop/app/ShowDialogActivity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/li;->a:Lcom/estrongs/android/pop/app/lh;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,11 +23,7 @@
 
 # virtual methods
 .method public onDismiss(Landroid/content/DialogInterface;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/li;->a:Lcom/estrongs/android/pop/app/ShowDialogActivity;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ShowDialogActivity;->finish()V
+    .locals 0
 
     return-void
 .end method

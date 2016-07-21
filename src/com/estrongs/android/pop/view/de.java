@@ -1,20 +1,13 @@
 package com.estrongs.android.pop.view;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.view.aw;
-
 class de
-  implements View.OnClickListener
+  implements Runnable
 {
   de(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void onClick(View paramView)
+  public void run()
   {
-    paramView = a.y();
-    if (paramView != null) {
-      paramView.c(-2);
-    }
+    a.f("#home_page#");
   }
 }
 

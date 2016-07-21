@@ -1,31 +1,16 @@
 package com.estrongs.android.view;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import java.lang.reflect.Field;
+import com.estrongs.a.a.m;
 
 class dm
-  extends BroadcastReceiver
+  implements Runnable
 {
-  dm(dj paramdj) {}
+  dm(dl paramdl, m paramm) {}
   
-  public void onReceive(Context paramContext, Intent paramIntent)
+  public void run()
   {
-    paramContext = paramIntent.getAction();
-    try
-    {
-      String str1 = (String)dj.d(a).getClass().getField("WIFI_AP_STATE_CHANGED_ACTION").get(dj.d(a));
-      String str2 = (String)dj.d(a).getClass().getField("EXTRA_WIFI_AP_STATE").get(dj.d(a));
-      int i = dj.d(a).getClass().getField("WIFI_AP_STATE_FAILED").getInt(dj.d(a));
-      if (str1.equals(paramContext)) {
-        dj.a(a, paramIntent.getIntExtra(str2, i));
-      }
-      return;
-    }
-    catch (Exception paramContext)
-    {
-      paramContext.printStackTrace();
+    if ((!b.a.al()) && (b.a.Y)) {
+      b.a.f(b.a.k(b.a.an()) + "(" + a.d + "/" + a.c + ")");
     }
   }
 }

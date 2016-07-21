@@ -1,38 +1,20 @@
 package com.estrongs.android.view;
 
-import com.estrongs.android.pop.app.compress.a;
-import com.estrongs.android.pop.app.compress.k;
-import java.io.File;
-import java.util.List;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.pop.app.compress.bs;
+import com.estrongs.android.pop.app.compress.cb;
 
 class q
-  implements com.estrongs.android.pop.app.compress.j
+  implements DialogInterface.OnClickListener
 {
-  q(e parame, String paramString, List paramList, boolean paramBoolean) {}
+  q(g paramg) {}
   
-  public void a(a parama, k paramk)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (paramk != null)
-    {
-      parama = new File(a);
-      e.a(d, c);
-      e.a(d, a);
-      if (3 != e.j(d)) {
-        break label79;
-      }
-      e.c(d, b);
-    }
-    for (;;)
-    {
-      e.a(d, b, c);
-      return;
-      label79:
-      if (1 == e.j(d)) {
-        e.c(d, parama.getParent());
-      } else {
-        e.c(d, parama.getParent() + "/" + com.estrongs.fs.util.j.a(a));
-      }
-    }
+    g.a(a).a(g.i(a).a());
+    g.a(a).show();
+    g.i(a).dismiss();
   }
 }
 

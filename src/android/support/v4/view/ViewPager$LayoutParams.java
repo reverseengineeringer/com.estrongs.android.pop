@@ -23,7 +23,7 @@ public class ViewPager$LayoutParams
   public ViewPager$LayoutParams(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, ViewPager.g());
+    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, ViewPager.access$400());
     b = paramContext.getInteger(0, 48);
     paramContext.recycle();
   }

@@ -27,7 +27,15 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bm;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->r(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)V
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->l(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)Lcom/estrongs/android/pop/app/ag;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ag;->q()V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bm;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->s(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bm;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 

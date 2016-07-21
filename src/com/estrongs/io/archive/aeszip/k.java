@@ -2,9 +2,9 @@ package com.estrongs.io.archive.aeszip;
 
 import com.estrongs.a.b.o;
 import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.util.bk;
+import com.estrongs.fs.h;
 import de.a.a.a.a.e;
-import de.a.a.a.a.j;
 import java.io.File;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -18,9 +18,9 @@ import java.util.zip.Deflater;
 import java.util.zip.DeflaterOutputStream;
 
 public class k
-  extends com.estrongs.io.archive.i
+  extends com.estrongs.io.archive.j
 {
-  protected j a;
+  protected de.a.a.a.a.j a;
   private de.a.a.a.a.d b = null;
   private String f;
   private int g = 0;
@@ -37,7 +37,7 @@ public class k
     paramString = (String)paramMap.get("compress_level");
     if ((paramString != null) && (paramString.length() > 0))
     {
-      g = bd.a(paramString);
+      g = bk.a(paramString);
       return;
     }
     g = -1;
@@ -61,7 +61,7 @@ public class k
   
   protected void a(File paramFile, String paramString)
   {
-    if (!com.estrongs.fs.impl.local.h.a(paramFile.getPath())) {
+    if (!com.estrongs.fs.impl.local.i.a(paramFile.getPath())) {
       break label10;
     }
     label10:
@@ -71,17 +71,17 @@ public class k
     if ((paramString == null) || (paramString.length() < 1)) {}
     for (paramString = paramFile.getName();; paramString = paramString + "/" + paramFile.getName())
     {
-      if (!com.estrongs.fs.impl.local.h.h(paramFile.getPath())) {
+      if (!com.estrongs.fs.impl.local.i.h(paramFile.getPath())) {
         break label184;
       }
       a.d(new de.a.a.a.a.i(paramString + "/"));
-      paramFile = com.estrongs.fs.impl.local.h.a(paramFile.getPath(), com.estrongs.fs.i.c, o.a).iterator();
+      paramFile = com.estrongs.fs.impl.local.i.a(paramFile.getPath(), com.estrongs.fs.i.c, o.a).iterator();
       for (;;)
       {
         if (!paramFile.hasNext()) {
           break label152;
         }
-        com.estrongs.fs.h localh = (com.estrongs.fs.h)paramFile.next();
+        h localh = (h)paramFile.next();
         if (d.b()) {
           break;
         }
@@ -91,7 +91,7 @@ public class k
       break label10;
     }
     label184:
-    d.a(paramFile.getName(), com.estrongs.fs.impl.local.h.e(paramFile.getPath()));
+    d.a(paramFile.getName(), com.estrongs.fs.impl.local.i.e(paramFile.getPath()));
     a(paramString, paramFile);
   }
   
@@ -105,7 +105,7 @@ public class k
       {
         locali.setMethod(0);
         locali.setCrc(0L);
-        l = com.estrongs.fs.impl.local.h.e(paramFile.getCanonicalPath());
+        l = com.estrongs.fs.impl.local.i.e(paramFile.getCanonicalPath());
         locali.setSize(l);
         locali.setCompressedSize(0L);
         locali.setTime(new Date().getTime());
@@ -119,7 +119,7 @@ public class k
           break label228;
         }
         paramString = locall;
-        paramFile = com.estrongs.fs.impl.local.h.a(FexApplication.a(), paramFile.getCanonicalPath());
+        paramFile = com.estrongs.fs.impl.local.i.a(FexApplication.a(), paramFile.getCanonicalPath());
         i = paramFile.read(arrayOfByte);
         if (i <= 0) {
           break label308;
@@ -182,7 +182,7 @@ public class k
     //   18: aload 5
     //   20: invokevirtual 278	java/io/File:getParentFile	()Ljava/io/File;
     //   23: invokevirtual 279	java/io/File:getAbsolutePath	()Ljava/lang/String;
-    //   26: invokestatic 71	com/estrongs/fs/impl/local/h:a	(Ljava/lang/String;)Z
+    //   26: invokestatic 71	com/estrongs/fs/impl/local/i:a	(Ljava/lang/String;)Z
     //   29: ifne +24 -> 53
     //   32: invokestatic 284	com/estrongs/fs/d:a	()Lcom/estrongs/fs/d;
     //   35: ifnull +74 -> 109
@@ -192,11 +192,11 @@ public class k
     //   46: invokevirtual 279	java/io/File:getAbsolutePath	()Ljava/lang/String;
     //   49: invokevirtual 286	com/estrongs/fs/d:g	(Ljava/lang/String;)Z
     //   52: pop
-    //   53: new 288	com/estrongs/io/archive/g
+    //   53: new 288	com/estrongs/io/archive/h
     //   56: dup
     //   57: aload_0
     //   58: getfield 75	com/estrongs/io/archive/aeszip/k:d	Lcom/estrongs/io/a/d;
-    //   61: invokespecial 291	com/estrongs/io/archive/g:<init>	(Lcom/estrongs/io/a/d;)V
+    //   61: invokespecial 291	com/estrongs/io/archive/h:<init>	(Lcom/estrongs/io/a/d;)V
     //   64: astore 5
     //   66: aload_1
     //   67: invokeinterface 130 1 0
@@ -211,12 +211,12 @@ public class k
     //   92: invokeinterface 139 1 0
     //   97: checkcast 39	java/lang/String
     //   100: invokespecial 145	java/io/File:<init>	(Ljava/lang/String;)V
-    //   103: invokevirtual 294	com/estrongs/io/archive/g:a	(Ljava/io/File;)V
+    //   103: invokevirtual 294	com/estrongs/io/archive/h:a	(Ljava/io/File;)V
     //   106: goto -32 -> 74
     //   109: aload 5
     //   111: invokevirtual 278	java/io/File:getParentFile	()Ljava/io/File;
     //   114: invokevirtual 279	java/io/File:getAbsolutePath	()Ljava/lang/String;
-    //   117: invokestatic 295	com/estrongs/fs/impl/local/h:g	(Ljava/lang/String;)Z
+    //   117: invokestatic 295	com/estrongs/fs/impl/local/i:g	(Ljava/lang/String;)Z
     //   120: pop
     //   121: goto -68 -> 53
     //   124: aload_0
@@ -235,16 +235,16 @@ public class k
     //   154: invokevirtual 83	java/io/File:getName	()Ljava/lang/String;
     //   157: astore 7
     //   159: aload 5
-    //   161: invokevirtual 298	com/estrongs/io/archive/g:a	()J
+    //   161: invokevirtual 298	com/estrongs/io/archive/h:a	()J
     //   164: lstore_3
     //   165: aload 5
-    //   167: invokevirtual 300	com/estrongs/io/archive/g:b	()I
+    //   167: invokevirtual 300	com/estrongs/io/archive/h:b	()I
     //   170: istore_2
     //   171: aload 6
     //   173: aload 7
     //   175: lload_3
     //   176: aload 5
-    //   178: invokevirtual 302	com/estrongs/io/archive/g:c	()I
+    //   178: invokevirtual 302	com/estrongs/io/archive/h:c	()I
     //   181: iload_2
     //   182: iadd
     //   183: invokeinterface 305 5 0
@@ -269,7 +269,7 @@ public class k
     //   229: new 309	java/io/BufferedOutputStream
     //   232: dup
     //   233: aload 6
-    //   235: invokestatic 312	com/estrongs/fs/impl/local/h:f	(Ljava/lang/String;)Ljava/io/OutputStream;
+    //   235: invokestatic 312	com/estrongs/fs/impl/local/i:f	(Ljava/lang/String;)Ljava/io/OutputStream;
     //   238: ldc_w 313
     //   241: invokespecial 316	java/io/BufferedOutputStream:<init>	(Ljava/io/OutputStream;I)V
     //   244: invokespecial 319	de/a/a/a/a/j:<init>	(Ljava/io/OutputStream;)V
@@ -316,7 +316,7 @@ public class k
     //   342: athrow
     //   343: aload_0
     //   344: getfield 297	com/estrongs/io/archive/aeszip/k:c	Ljava/lang/String;
-    //   347: invokestatic 71	com/estrongs/fs/impl/local/h:a	(Ljava/lang/String;)Z
+    //   347: invokestatic 71	com/estrongs/fs/impl/local/i:a	(Ljava/lang/String;)Z
     //   350: ifeq +17 -> 367
     //   353: invokestatic 284	com/estrongs/fs/d:a	()Lcom/estrongs/fs/d;
     //   356: aload_0

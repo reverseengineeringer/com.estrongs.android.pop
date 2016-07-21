@@ -1,52 +1,78 @@
 package com.estrongs.android.ui.dialog;
 
 import android.app.Activity;
-import android.text.InputFilter.LengthFilter;
-import android.text.Spanned;
-import com.estrongs.android.ui.view.ag;
+import android.app.Dialog;
+import android.content.res.Resources;
+import android.text.InputFilter;
+import android.view.View;
+import android.widget.EditText;
+import com.estrongs.android.ui.d.g;
+import com.estrongs.android.ui.theme.at;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.fs.util.j;
 
 class di
-  extends InputFilter.LengthFilter
 {
-  private long b = 0L;
+  Activity a;
+  Dialog b;
+  EditText c;
+  boolean d = true;
+  i e = null;
   
-  di(dg paramdg, int paramInt)
+  public di(Activity paramActivity, Dialog paramDialog)
   {
-    super(paramInt);
+    a = paramActivity;
+    b = paramDialog;
+    c = new EditText(paramActivity);
+    c.setTextSize(1, 18.0F);
+    c.setBackgroundResource(2130838299);
+    int i = g.a(paramActivity, 6.0F);
+    c.setPadding(i, 0, i, 0);
+    c.setTextColor(at.a(paramActivity).c(2131558661));
+    c.setSingleLine();
+    c.setHint(paramActivity.getResources().getString(2131231610));
+    c.setOnKeyListener(new dj(this));
+    paramActivity = new dk(this, 20);
+    c.setFilters(new InputFilter[] { paramActivity });
   }
   
-  public CharSequence filter(CharSequence paramCharSequence, int paramInt1, int paramInt2, Spanned paramSpanned, int paramInt3, int paramInt4)
+  public void a(i parami)
   {
-    paramInt3 = paramSpanned.subSequence(0, paramInt3).toString().getBytes().length;
-    int i = paramSpanned.subSequence(paramInt4, paramSpanned.length()).toString().getBytes().length + paramInt3;
-    paramInt4 = paramCharSequence.subSequence(paramInt1, paramInt2).toString().getBytes().length;
-    if (20 - i <= 0)
+    e = parami;
+  }
+  
+  public boolean a()
+  {
+    String str2 = c.getText().toString().trim().trim();
+    String str1 = str2;
+    if (str2.startsWith(".")) {
+      str1 = str2.substring(1);
+    }
+    if (str1.getBytes().length > 20)
     {
-      long l = System.currentTimeMillis();
-      if (l - b > 1000L)
-      {
-        ag.a(a.a, a.a.getString(2131428469), 0);
-        b = l;
-      }
-      return "";
+      ak.a(a, a.getString(2131231755), 0);
+      return false;
     }
-    if (20 - i >= paramInt4) {
-      return null;
-    }
-    paramInt3 = paramInt2;
-    if (paramInt2 <= paramInt1) {
-      return "";
-    }
-    do
+    if (str1.length() < 1)
     {
-      paramInt4 = paramCharSequence.subSequence(paramInt1, paramInt3).toString().getBytes().length;
-      if (paramInt4 + i <= 20) {
-        break;
-      }
-      paramInt3 -= 1;
-    } while (paramInt3 > paramInt1);
-    return "";
-    return paramCharSequence.subSequence(paramInt1, paramInt3);
+      ak.a(a, a.getString(2131231754), 0);
+      return false;
+    }
+    if ((d) && (!j.c(str1)))
+    {
+      ak.a(a, a.getString(2131231753), 0);
+      return false;
+    }
+    if (e != null) {
+      e.a(str1);
+    }
+    b.dismiss();
+    return true;
+  }
+  
+  public View b()
+  {
+    return c;
   }
 }
 

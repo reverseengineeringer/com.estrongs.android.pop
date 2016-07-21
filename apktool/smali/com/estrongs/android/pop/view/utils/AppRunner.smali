@@ -47,7 +47,132 @@
     return-void
 .end method
 
+.method public static a(Landroid/content/Context;Landroid/content/Intent;)Lcom/estrongs/android/pop/view/utils/u;
+    .locals 8
+
+    const/4 v2, 0x0
+
+    new-instance v0, Landroid/content/Intent;
+
+    invoke-direct {v0, p1}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
+
+    invoke-static {p0, v0}, Lcom/estrongs/android/pop/view/utils/n;->a(Landroid/content/Context;Landroid/content/Intent;)[Lcom/estrongs/android/pop/view/utils/t;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_6
+
+    array-length v5, v4
+
+    const/4 v0, 0x0
+
+    move v3, v0
+
+    move-object v1, v2
+
+    :goto_0
+    if-ge v3, v5, :cond_4
+
+    aget-object v0, v4, v3
+
+    iget-object v6, v0, Lcom/estrongs/android/pop/view/utils/t;->c:Ljava/lang/String;
+
+    const-string v7, "com.estrongs"
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_2
+
+    iget-object v6, v0, Lcom/estrongs/android/pop/view/utils/t;->e:Ljava/lang/String;
+
+    const-string v7, "android.intent.action.VIEW"
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_1
+
+    const-string v1, "com.estrongs.android.pop.app.PopChromecastPlayer"
+
+    iget-object v6, v0, Lcom/estrongs/android/pop/view/utils/t;->d:Ljava/lang/String;
+
+    invoke-virtual {v1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    :cond_0
+    :goto_1
+    add-int/lit8 v1, v3, 0x1
+
+    move v3, v1
+
+    move-object v1, v0
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v6, v0, Lcom/estrongs/android/pop/view/utils/t;->e:Ljava/lang/String;
+
+    const-string v7, "android.intent.action.EDIT"
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_0
+
+    :cond_2
+    move-object v0, v1
+
+    goto :goto_1
+
+    :cond_3
+    move-object v1, v0
+
+    :cond_4
+    :goto_2
+    if-eqz v1, :cond_5
+
+    new-instance v0, Lcom/estrongs/android/pop/view/utils/u;
+
+    iget-object v2, v1, Lcom/estrongs/android/pop/view/utils/t;->c:Ljava/lang/String;
+
+    iget-object v3, v1, Lcom/estrongs/android/pop/view/utils/t;->d:Ljava/lang/String;
+
+    iget-object v1, v1, Lcom/estrongs/android/pop/view/utils/t;->e:Ljava/lang/String;
+
+    invoke-direct {v0, v2, v3, v1}, Lcom/estrongs/android/pop/view/utils/u;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_3
+    return-object v0
+
+    :cond_5
+    move-object v0, v2
+
+    goto :goto_3
+
+    :cond_6
+    move-object v1, v2
+
+    goto :goto_2
+.end method
+
 .method public static a(Landroid/app/Activity;Landroid/content/Intent;Ljava/lang/String;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-static {p0, p1, p2, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->a(Landroid/app/Activity;Landroid/content/Intent;Ljava/lang/String;Z)V
+
+    return-void
+.end method
+
+.method public static a(Landroid/app/Activity;Landroid/content/Intent;Ljava/lang/String;Z)V
     .locals 6
 
     const/4 v1, 0x0
@@ -71,17 +196,17 @@
     move-result v1
 
     :cond_0
-    if-nez v1, :cond_6
+    if-nez v1, :cond_7
 
-    invoke-static {p2}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->bA(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->bR(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    if-eqz v3, :cond_8
+    if-eqz v3, :cond_9
 
     const-string v1, ""
 
@@ -89,13 +214,26 @@
 
     move-result v1
 
-    if-nez v1, :cond_8
+    if-nez v1, :cond_9
 
     invoke-static {p0, v3}, Lcom/estrongs/android/pop/view/utils/n;->a(Landroid/content/Context;Ljava/lang/String;)Lcom/estrongs/android/pop/view/utils/u;
 
     move-result-object v1
 
     :goto_0
+    if-eqz p3, :cond_1
+
+    if-nez v1, :cond_1
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getBaseContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, p1}, Lcom/estrongs/android/pop/view/utils/AppRunner;->a(Landroid/content/Context;Landroid/content/Intent;)Lcom/estrongs/android/pop/view/utils/u;
+
+    move-result-object v1
+
+    :cond_1
     if-eqz v1, :cond_5
 
     :try_start_0
@@ -107,26 +245,26 @@
 
     iget-object v4, v1, Lcom/estrongs/android/pop/view/utils/u;->c:Ljava/lang/String;
 
-    if-eqz v4, :cond_1
+    if-eqz v4, :cond_2
 
     iget-object v4, v1, Lcom/estrongs/android/pop/view/utils/u;->c:Ljava/lang/String;
 
     invoke-virtual {p1, v4}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    :cond_1
+    :cond_2
     iget-object v1, v1, Lcom/estrongs/android/pop/view/utils/u;->a:Ljava/lang/String;
 
     invoke-static {v1}, Lcom/estrongs/android/pop/view/utils/AppRunner;->d(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     const v1, 0x8000
 
     invoke-static {p1, v1}, Lcom/estrongs/android/pop/view/utils/AppRunner;->a(Landroid/content/Intent;I)V
 
-    :cond_2
+    :cond_3
     instance-of v1, p0, Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     if-eqz v1, :cond_4
@@ -139,8 +277,14 @@
 
     invoke-virtual {v1, p1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a(Landroid/content/Intent;)V
 
-    :cond_3
     :goto_1
+    invoke-static {}, Lcom/estrongs/android/scanner/l;->a()Lcom/estrongs/android/scanner/l;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p2}, Lcom/estrongs/android/scanner/l;->a(Ljava/lang/String;)V
+
+    :goto_2
     return-void
 
     :cond_4
@@ -163,14 +307,22 @@
     move-object v1, v2
 
     :cond_5
-    :goto_2
-    if-nez v1, :cond_3
+    :goto_3
+    if-nez v1, :cond_6
 
-    if-nez p2, :cond_7
+    if-nez p2, :cond_8
 
     invoke-virtual {p0, p1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    goto :goto_1
+    :cond_6
+    :goto_4
+    invoke-static {}, Lcom/estrongs/android/scanner/l;->a()Lcom/estrongs/android/scanner/l;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p2}, Lcom/estrongs/android/scanner/l;->a(Ljava/lang/String;)V
+
+    goto :goto_2
 
     :catch_1
     move-exception v1
@@ -179,12 +331,12 @@
 
     invoke-static {p0, v3, v2}, Lcom/estrongs/android/pop/view/utils/n;->a(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/android/pop/view/utils/u;)V
 
-    :cond_6
+    :cond_7
     move-object v1, v2
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_7
+    :cond_8
     sget-object v1, Lcom/estrongs/android/pop/view/utils/AppRunner;->c:Ljava/util/HashMap;
 
     invoke-virtual {v1, p2, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -208,25 +360,25 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 
-    goto :goto_1
+    goto :goto_4
 
     :catch_2
     move-exception v1
 
     invoke-virtual {p0, p1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    goto :goto_1
+    goto :goto_4
 
-    :cond_8
+    :cond_9
     move-object v1, v2
 
-    goto :goto_0
+    goto/16 :goto_0
 .end method
 
 .method public static a(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -275,30 +427,30 @@
     .locals 4
 
     :try_start_0
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    invoke-static {}, Lcom/estrongs/android/c/a;->b()Z
+    invoke-static {}, Lcom/estrongs/android/g/a;->b()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    const v0, 0x7f0b0251
+    const v0, 0x7f080676
 
     const/4 v1, 0x1
 
-    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     :cond_0
     :goto_0
     return-void
 
     :cond_1
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->G(Ljava/lang/String;)I
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->I(Ljava/lang/String;)I
 
     move-result v0
 
@@ -332,11 +484,17 @@
 
     invoke-virtual {v0, v1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    invoke-static {}, Lcom/estrongs/android/c/a;->a()I
+    const-string v1, "islocalopen"
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    invoke-static {}, Lcom/estrongs/android/g/a;->a()I
 
     move-result v1
 
-    invoke-static {p1, v1}, Lcom/estrongs/android/util/am;->b(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {p1, v1}, Lcom/estrongs/android/util/ap;->b(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -352,7 +510,7 @@
 
     if-nez v2, :cond_2
 
-    invoke-static {p1}, Lcom/estrongs/android/util/bc;->S(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/bg;->U(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -384,7 +542,7 @@
     goto :goto_0
 
     :cond_2
-    invoke-static {p2}, Lcom/estrongs/android/util/bc;->i(I)Ljava/lang/String;
+    invoke-static {p2}, Lcom/estrongs/android/util/bg;->i(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -449,6 +607,12 @@
 
     invoke-virtual {v1, v0, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
+    const-string v0, "islocalopen"
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -457,7 +621,7 @@
 
     move-result-object v2
 
-    invoke-static {p2}, Lcom/estrongs/android/util/bc;->i(I)Ljava/lang/String;
+    invoke-static {p2}, Lcom/estrongs/android/util/bg;->i(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -489,7 +653,7 @@
     goto/16 :goto_0
 .end method
 
-.method public static a(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/impl/b/f;)V
+.method public static a(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/impl/b/g;)V
     .locals 2
 
     new-instance v0, Ljava/util/ArrayList;
@@ -531,9 +695,9 @@
         }
     .end annotation
 
-    const v3, 0x7f0b01c6
+    const v3, 0x7f080136
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -559,6 +723,12 @@
 
     invoke-virtual {v1, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    const-string v0, "islocalopen"
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
     if-eqz p2, :cond_1
 
     invoke-virtual {v1, p0, p2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
@@ -566,11 +736,11 @@
     :cond_1
     const v0, 0x50038
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bc;->E(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/bg;->H(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p1}, Lcom/estrongs/android/util/bc;->n(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/bg;->n(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -578,7 +748,7 @@
 
     const v0, 0x50040
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bc;->E(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/bg;->H(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -609,7 +779,7 @@
     goto :goto_0
 
     :cond_3
-    invoke-static {p1}, Lcom/estrongs/android/util/bc;->l(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/bg;->l(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -617,14 +787,14 @@
 
     const v0, 0x50041
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bc;->E(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/bg;->H(I)Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_1
 
     :cond_4
-    invoke-static {p1}, Lcom/estrongs/android/util/bc;->m(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/bg;->m(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -632,7 +802,7 @@
 
     const v0, 0x50042
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bc;->E(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/bg;->H(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -657,7 +827,7 @@
     return-void
 
     :cond_1
-    invoke-static {p1}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -666,13 +836,13 @@
     move-object p1, p2
 
     :cond_2
-    invoke-static {p2}, Lcom/estrongs/android/util/bc;->j(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/estrongs/android/util/bg;->j(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    invoke-static {p2}, Lcom/estrongs/android/util/bc;->N(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/estrongs/android/util/bg;->N(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -695,7 +865,7 @@
 
     if-eqz v0, :cond_5
 
-    invoke-static {p2}, Lcom/estrongs/android/util/am;->ba(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/estrongs/android/util/ap;->bl(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -715,21 +885,21 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-static {p0, v0, v3}, Lcom/estrongs/android/pop/utils/aj;->a(Landroid/app/Activity;Ljava/util/List;Z)V
+    invoke-static {p0, v0, v3}, Lcom/estrongs/android/pop/utils/ao;->a(Landroid/app/Activity;Ljava/util/List;Z)V
 
     goto :goto_0
 
     :cond_4
-    const v0, 0x7f0b0484
+    const v0, 0x7f080496
 
     const/4 v1, 0x0
 
-    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     goto :goto_0
 
     :cond_5
-    invoke-static {p2}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -741,7 +911,7 @@
 
     if-nez v0, :cond_7
 
-    invoke-static {p2}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -763,13 +933,13 @@
 
     move-result-object v1
 
-    invoke-static {p0, v1}, Lcom/estrongs/android/pop/view/utils/AppRunner;->q(Landroid/app/Activity;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-static {p0, v1}, Lcom/estrongs/android/pop/view/utils/AppRunner;->r(Landroid/app/Activity;Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v1
 
     if-nez v1, :cond_6
 
-    invoke-static {p0, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->u(Landroid/app/Activity;Ljava/lang/String;)Lcom/estrongs/android/pop/view/utils/u;
+    invoke-static {p0, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->v(Landroid/app/Activity;Ljava/lang/String;)Lcom/estrongs/android/pop/view/utils/u;
 
     move-result-object v0
 
@@ -788,7 +958,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/estrongs/android/pop/a;->d:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/a;->f:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -827,7 +997,7 @@
 .method public static a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Lcom/estrongs/android/util/TypedMap;)V
     .locals 5
 
-    invoke-static {p1}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -836,7 +1006,7 @@
     move-object p1, p2
 
     :cond_0
-    invoke-static {p2}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {p2}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -845,7 +1015,7 @@
     move-object p2, p1
 
     :cond_1
-    invoke-static {}, Lcom/estrongs/android/util/bd;->c()Z
+    invoke-static {}, Lcom/estrongs/android/util/bk;->c()Z
 
     move-result v0
 
@@ -859,9 +1029,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {p2}, Lcom/estrongs/android/util/am;->bE(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
+    invoke-static {p2}, Lcom/estrongs/android/util/ap;->bV(Ljava/lang/String;)Ljava/lang/String;
 
     :cond_2
     const-string v0, "/sdcard/"
@@ -872,13 +1040,13 @@
 
     if-eqz v0, :cond_3
 
-    invoke-static {p2}, Lcom/estrongs/android/util/am;->bE(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2}, Lcom/estrongs/android/util/ap;->bV(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
     :cond_3
     :try_start_0
-    invoke-static {p2}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -892,7 +1060,7 @@
 
     const-string v1, "FILE_PATH"
 
-    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v1, "ABSOLUTE_FILE_PATH"
 
@@ -918,6 +1086,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
+    const-string v1, "islocalopen"
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
     invoke-virtual {p0, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     :goto_0
@@ -932,7 +1106,7 @@
 
     const-string v0, "FILE_PATH"
 
-    invoke-virtual {v1, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v1, v0, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v0, "image/*"
 
@@ -958,28 +1132,34 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
+    const-string v0, "islocalopen"
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
     const/4 v0, 0x0
 
-    invoke-static {p2}, Lcom/estrongs/android/util/bc;->e(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/estrongs/android/util/bg;->e(Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_5
 
-    invoke-static {p2}, Lcom/estrongs/android/util/bc;->d(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/estrongs/android/util/bg;->d(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_9
 
     :cond_5
-    invoke-static {}, Lcom/estrongs/android/util/bd;->a()Z
+    invoke-static {}, Lcom/estrongs/android/util/bk;->a()Z
 
     move-result v2
 
     if-nez v2, :cond_6
 
-    invoke-static {}, Lcom/estrongs/android/util/i;->a()Lcom/estrongs/android/util/i;
+    invoke-static {}, Lcom/estrongs/android/util/h;->a()Lcom/estrongs/android/util/h;
 
     move-result-object v0
 
@@ -987,13 +1167,13 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v2, p2}, Lcom/estrongs/android/util/i;->a(Landroid/content/ContentResolver;Ljava/lang/String;)Landroid/net/Uri;
+    invoke-virtual {v0, v2, p2}, Lcom/estrongs/android/util/h;->a(Landroid/content/ContentResolver;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     if-nez v0, :cond_6
 
-    invoke-static {}, Lcom/estrongs/android/util/i;->a()Lcom/estrongs/android/util/i;
+    invoke-static {}, Lcom/estrongs/android/util/h;->a()Lcom/estrongs/android/util/h;
 
     move-result-object v0
 
@@ -1009,14 +1189,14 @@
 
     aput-object p2, v3, v4
 
-    invoke-virtual {v0, v2, v3, p2}, Lcom/estrongs/android/util/i;->a(Landroid/content/ContentResolver;[Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
+    invoke-virtual {v0, v2, v3, p2}, Lcom/estrongs/android/util/h;->a(Landroid/content/ContentResolver;[Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     :cond_6
     if-nez v0, :cond_8
 
-    invoke-static {p2}, Lcom/estrongs/android/util/am;->ba(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/estrongs/android/util/ap;->bl(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1063,7 +1243,7 @@
     goto/16 :goto_0
 
     :cond_9
-    invoke-static {p2}, Lcom/estrongs/android/util/am;->ba(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/estrongs/android/util/ap;->bl(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1171,9 +1351,11 @@
 .end method
 
 .method public static a(Landroid/app/Activity;Ljava/lang/String;ZZ)V
-    .locals 3
+    .locals 4
 
-    invoke-static {p1}, Lcom/estrongs/android/util/bc;->S(Ljava/lang/String;)Ljava/lang/String;
+    const/4 v3, 0x1
+
+    invoke-static {p1}, Lcom/estrongs/android/util/bg;->U(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1197,7 +1379,7 @@
     const-string v0, "text/*"
 
     :cond_1
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -1215,11 +1397,15 @@
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
+    const-string v0, "islocalopen"
+
+    invoke-virtual {v1, v0, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
     const-string v0, "by_open_as"
 
     invoke-virtual {v1, v0, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->aV(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bg(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1262,6 +1448,10 @@
     const-string v2, "by_open_as"
 
     invoke-virtual {v1, v2, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    const-string v2, "islocalopen"
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     if-eqz p2, :cond_4
 
@@ -1307,7 +1497,7 @@
             ">;",
             "Ljava/util/List",
             "<",
-            "Lcom/estrongs/fs/impl/b/f;",
+            "Lcom/estrongs/fs/impl/b/g;",
             ">;)V"
         }
     .end annotation
@@ -1322,14 +1512,14 @@
 
     check-cast v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->C()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->R()Z
 
     move-result v0
 
     move v1, v0
 
     :goto_0
-    invoke-static {p0, v2}, Lcom/estrongs/fs/impl/local/l;->a(Landroid/content/Context;Z)Z
+    invoke-static {p0, v2}, Lcom/estrongs/fs/impl/local/m;->a(Landroid/content/Context;Z)Z
 
     move-result v3
 
@@ -1347,7 +1537,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/estrongs/android/pop/ad;->aa()Z
+    invoke-virtual {v4}, Lcom/estrongs/android/pop/ad;->ab()Z
 
     move-result v4
 
@@ -1384,11 +1574,11 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/estrongs/fs/impl/b/f;
+    check-cast v1, Lcom/estrongs/fs/impl/b/g;
 
     if-eqz v3, :cond_3
 
-    invoke-virtual {v1}, Lcom/estrongs/fs/impl/b/f;->b()Z
+    invoke-virtual {v1}, Lcom/estrongs/fs/impl/b/g;->b()Z
 
     move-result v5
 
@@ -1408,7 +1598,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    invoke-static {p0, v1}, Lcom/estrongs/android/pop/view/utils/AppRunner;->v(Landroid/app/Activity;Ljava/lang/String;)V
+    invoke-static {p0, v1}, Lcom/estrongs/android/pop/view/utils/AppRunner;->w(Landroid/app/Activity;Ljava/lang/String;)V
 
     goto :goto_3
 
@@ -1464,12 +1654,12 @@
 
     check-cast v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->D()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->S()Z
 
     move-result v0
 
     :goto_0
-    invoke-static {p0, v1}, Lcom/estrongs/fs/impl/local/l;->a(Landroid/content/Context;Z)Z
+    invoke-static {p0, v1}, Lcom/estrongs/fs/impl/local/m;->a(Landroid/content/Context;Z)Z
 
     move-result v3
 
@@ -1484,7 +1674,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/estrongs/android/pop/ad;->aa()Z
+    invoke-virtual {v3}, Lcom/estrongs/android/pop/ad;->ab()Z
 
     move-result v3
 
@@ -1591,7 +1781,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0b005f
+    const v3, 0x7f080199
 
     invoke-virtual {p0, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -1613,7 +1803,7 @@
 
     iput-wide v2, v1, Landroid/app/Notification;->when:J
 
-    const v2, 0x7f02000c
+    const v2, 0x7f020079
 
     iput v2, v1, Landroid/app/Notification;->icon:I
 
@@ -1682,25 +1872,25 @@
 .method public static a(Ljava/lang/String;)Z
     .locals 1
 
-    invoke-static {p0}, Lcom/estrongs/android/util/bc;->i(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/estrongs/android/util/bg;->i(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-static {p0}, Lcom/estrongs/android/util/bc;->c(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/estrongs/android/util/bg;->c(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-static {p0}, Lcom/estrongs/android/util/bc;->g(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/estrongs/android/util/bg;->g(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-static {p0}, Lcom/estrongs/android/util/bc;->h(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/estrongs/android/util/bg;->h(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1721,7 +1911,7 @@
 .method public static b(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1811,7 +2001,7 @@
 .method public static b(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1859,30 +2049,30 @@
 .method public static b(Landroid/app/Activity;Ljava/lang/String;IZ)V
     .locals 10
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_b
 
-    invoke-static {}, Lcom/estrongs/android/c/a;->b()Z
+    invoke-static {}, Lcom/estrongs/android/g/a;->b()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    const v0, 0x7f0b0251
+    const v0, 0x7f080676
 
     const/4 v1, 0x1
 
-    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     :cond_0
     :goto_0
     return-void
 
     :cond_1
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->H(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->J(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1913,19 +2103,19 @@
 
     move-result-object v1
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->y(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->A(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->A(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->C(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->j(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->l(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -1967,7 +2157,7 @@
 
     :cond_3
     :goto_1
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->aV(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bg(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1999,11 +2189,17 @@
 
     invoke-virtual {v0, v1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    invoke-static {}, Lcom/estrongs/android/c/a;->a()I
+    const-string v1, "islocalopen"
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    invoke-static {}, Lcom/estrongs/android/g/a;->a()I
 
     move-result v1
 
-    invoke-static {p1, v1}, Lcom/estrongs/android/util/am;->b(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {p1, v1}, Lcom/estrongs/android/util/ap;->b(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2013,7 +2209,7 @@
 
     move-result-object v1
 
-    invoke-static {p2}, Lcom/estrongs/android/util/bc;->h(I)Ljava/lang/String;
+    invoke-static {p2}, Lcom/estrongs/android/util/bg;->h(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2155,7 +2351,7 @@
 
     move-result-object v5
 
-    invoke-static {v0, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v5}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/16 v0, 0x8
 
@@ -2284,6 +2480,12 @@
 
     invoke-virtual {v2, v0, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
+    const-string v0, "islocalopen"
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v2, v0, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -2292,7 +2494,7 @@
 
     move-result-object v1
 
-    invoke-static {p1}, Lcom/estrongs/android/util/bc;->S(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/bg;->U(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2304,7 +2506,7 @@
 
     if-eqz v3, :cond_5
 
-    invoke-static {p2}, Lcom/estrongs/android/util/bc;->h(I)Ljava/lang/String;
+    invoke-static {p2}, Lcom/estrongs/android/util/bg;->h(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2418,6 +2620,12 @@
 
     invoke-virtual {v0, v1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
+    const-string v1, "islocalopen"
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
     invoke-virtual {p0, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     goto/16 :goto_0
@@ -2445,6 +2653,12 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
+    const-string v0, "islocalopen"
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
     const-string v0, "by_open_as"
 
     invoke-virtual {v1, v0, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
@@ -2457,7 +2671,7 @@
 
     move-result-object v2
 
-    invoke-static {p1}, Lcom/estrongs/android/util/bc;->S(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/bg;->U(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2469,7 +2683,7 @@
 
     if-eqz v3, :cond_c
 
-    invoke-static {p2}, Lcom/estrongs/android/util/bc;->h(I)Ljava/lang/String;
+    invoke-static {p2}, Lcom/estrongs/android/util/bg;->h(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2539,10 +2753,10 @@
     return-void
 .end method
 
-.method static synthetic b(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/impl/b/f;)Z
+.method static synthetic b(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/impl/b/g;)Z
     .locals 1
 
-    invoke-static {p0, p1, p2}, Lcom/estrongs/android/pop/view/utils/AppRunner;->c(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/impl/b/f;)Z
+    invoke-static {p0, p1, p2}, Lcom/estrongs/android/pop/view/utils/AppRunner;->c(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/impl/b/g;)Z
 
     move-result v0
 
@@ -2582,7 +2796,7 @@
 .method public static c(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -2630,7 +2844,7 @@
 .method public static c(Landroid/app/Activity;Ljava/lang/String;IZ)V
     .locals 3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -2689,15 +2903,15 @@
     return-void
 
     :cond_1
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bE(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bV(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {p2}, Lcom/estrongs/android/util/am;->bE(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2}, Lcom/estrongs/android/util/ap;->bV(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bc;->b(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/estrongs/android/util/bg;->b(Ljava/lang/String;)I
 
     move-result v2
 
@@ -2734,7 +2948,7 @@
     goto :goto_0
 
     :cond_4
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->a(I)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->a(I)Z
 
     move-result v3
 
@@ -2745,7 +2959,7 @@
     goto :goto_0
 
     :cond_5
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->e(I)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->e(I)Z
 
     move-result v3
 
@@ -2756,7 +2970,7 @@
     goto :goto_0
 
     :cond_6
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->g(I)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->g(I)Z
 
     move-result v3
 
@@ -2767,7 +2981,7 @@
     goto :goto_0
 
     :cond_7
-    invoke-static {v0}, Lcom/estrongs/android/util/bc;->i(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/bg;->i(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -2778,24 +2992,24 @@
     goto :goto_0
 
     :cond_8
-    invoke-static {v0}, Lcom/estrongs/android/util/bc;->j(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/bg;->j(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_9
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bc;->N(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/bg;->N(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_9
 
-    invoke-static {p0, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->p(Landroid/app/Activity;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->q(Landroid/app/Activity;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_9
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->l(I)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->l(I)Z
 
     move-result v3
 
@@ -2806,7 +3020,7 @@
     goto :goto_0
 
     :cond_a
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->m(I)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->m(I)Z
 
     move-result v3
 
@@ -2817,7 +3031,7 @@
     goto :goto_0
 
     :cond_b
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->n(I)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->n(I)Z
 
     move-result v3
 
@@ -2828,7 +3042,7 @@
     goto :goto_0
 
     :cond_c
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->o(I)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->o(I)Z
 
     move-result v3
 
@@ -2839,7 +3053,7 @@
     goto/16 :goto_0
 
     :cond_d
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->p(I)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->p(I)Z
 
     move-result v3
 
@@ -2850,62 +3064,62 @@
     goto/16 :goto_0
 
     :cond_e
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->u(I)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->x(I)Z
 
     move-result v3
 
     if-eqz v3, :cond_f
 
-    invoke-static {p0, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->k(Landroid/app/Activity;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->l(Landroid/app/Activity;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     :cond_f
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->v(I)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->y(I)Z
 
     move-result v3
 
     if-eqz v3, :cond_10
 
-    invoke-static {p0, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->l(Landroid/app/Activity;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->m(Landroid/app/Activity;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     :cond_10
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->y(I)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->B(I)Z
 
     move-result v3
 
     if-eqz v3, :cond_11
 
-    invoke-static {p0, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->m(Landroid/app/Activity;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->n(Landroid/app/Activity;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     :cond_11
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->w(I)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->z(I)Z
 
     move-result v3
 
     if-eqz v3, :cond_12
 
-    invoke-static {p0, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->n(Landroid/app/Activity;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->o(Landroid/app/Activity;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     :cond_12
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->x(I)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->A(I)Z
 
     move-result v3
 
     if-eqz v3, :cond_13
 
-    invoke-static {p0, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->o(Landroid/app/Activity;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->p(Landroid/app/Activity;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     :cond_13
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->n(I)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->n(I)Z
 
     move-result v3
 
@@ -2916,7 +3130,7 @@
     goto/16 :goto_0
 
     :cond_14
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->o(I)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->o(I)Z
 
     move-result v3
 
@@ -2927,7 +3141,7 @@
     goto/16 :goto_0
 
     :cond_15
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->p(I)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->p(I)Z
 
     move-result v3
 
@@ -2938,7 +3152,7 @@
     goto/16 :goto_0
 
     :cond_16
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->q(I)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->q(I)Z
 
     move-result v3
 
@@ -2949,7 +3163,7 @@
     goto/16 :goto_0
 
     :cond_17
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->r(I)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->r(I)Z
 
     move-result v3
 
@@ -2960,7 +3174,7 @@
     goto/16 :goto_0
 
     :cond_18
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->t(I)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->t(I)Z
 
     move-result v3
 
@@ -2971,7 +3185,7 @@
     goto/16 :goto_0
 
     :cond_19
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->s(I)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->s(I)Z
 
     move-result v3
 
@@ -2982,7 +3196,7 @@
     goto/16 :goto_0
 
     :cond_1a
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->A(I)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->D(I)Z
 
     move-result v3
 
@@ -2993,48 +3207,72 @@
     goto/16 :goto_0
 
     :cond_1b
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->C(I)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->F(I)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_1c
+    if-eqz v3, :cond_1c
 
-    invoke-static {p0, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->t(Landroid/app/Activity;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->u(Landroid/app/Activity;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     :cond_1c
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->u(I)Z
+
+    move-result v3
+
+    if-nez v3, :cond_1d
+
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->v(I)Z
+
+    move-result v3
+
+    if-nez v3, :cond_1d
+
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->w(I)Z
 
     move-result v2
 
-    if-eqz v2, :cond_1d
+    if-eqz v2, :cond_1e
 
-    const v0, 0x7f0b01c6
+    :cond_1d
+    invoke-static {p0, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->k(Landroid/app/Activity;Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    :cond_1e
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1f
+
+    const v0, 0x7f080136
 
     invoke-static {p0, v0}, Lcom/estrongs/android/pop/utils/a;->a(Landroid/app/Activity;I)V
 
     goto/16 :goto_0
 
-    :cond_1d
-    if-eqz v0, :cond_1e
+    :cond_1f
+    if-eqz v0, :cond_20
 
     :goto_1
-    invoke-static {p0, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->q(Landroid/app/Activity;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-static {p0, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->r(Landroid/app/Activity;Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v1
 
-    if-nez v1, :cond_20
+    if-nez v1, :cond_22
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {p0, v1}, Lcom/estrongs/android/pop/view/utils/AppRunner;->u(Landroid/app/Activity;Ljava/lang/String;)Lcom/estrongs/android/pop/view/utils/u;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    if-eqz v1, :cond_1f
+    invoke-static {p0, v1}, Lcom/estrongs/android/pop/view/utils/AppRunner;->v(Landroid/app/Activity;Ljava/lang/String;)Lcom/estrongs/android/pop/view/utils/u;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_21
 
     new-instance v1, Landroid/content/Intent;
 
@@ -3060,12 +3298,12 @@
 
     goto/16 :goto_0
 
-    :cond_1e
+    :cond_20
     move-object v0, v1
 
     goto :goto_1
 
-    :cond_1f
+    :cond_21
     new-instance v1, Lcom/estrongs/android/pop/view/utils/h;
 
     invoke-direct {v1, p0, v0}, Lcom/estrongs/android/pop/view/utils/h;-><init>(Landroid/app/Activity;Ljava/lang/String;)V
@@ -3074,13 +3312,13 @@
 
     goto/16 :goto_0
 
-    :cond_20
+    :cond_22
     invoke-static {p0, v1, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->a(Landroid/app/Activity;Landroid/content/Intent;Ljava/lang/String;)V
 
     goto/16 :goto_0
 .end method
 
-.method private static c(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/impl/b/f;)Z
+.method private static c(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/impl/b/g;)Z
     .locals 7
 
     const/4 v1, 0x0
@@ -3093,7 +3331,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lcom/estrongs/fs/impl/b/f;->getAbsolutePath()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/estrongs/fs/impl/b/g;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v3
 
@@ -3103,27 +3341,27 @@
 
     const-string v0, "/system/app/"
 
-    invoke-virtual {p2}, Lcom/estrongs/fs/impl/b/f;->e()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/estrongs/fs/impl/b/g;->e()Ljava/lang/String;
 
     move-result-object v4
 
     if-eqz v4, :cond_0
 
-    invoke-virtual {p2}, Lcom/estrongs/fs/impl/b/f;->e()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/estrongs/fs/impl/b/g;->e()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v4, "item_paste_name"
 
-    invoke-virtual {p2}, Lcom/estrongs/fs/impl/b/f;->e()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/estrongs/fs/impl/b/g;->e()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-static {v5}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v5}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -3132,7 +3370,7 @@
     :cond_0
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {p2}, Lcom/estrongs/fs/impl/b/f;->d()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/estrongs/fs/impl/b/g;->d()Ljava/lang/String;
 
     move-result-object v3
 
@@ -3142,7 +3380,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p2}, Lcom/estrongs/fs/impl/b/f;->d()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/estrongs/fs/impl/b/g;->d()Ljava/lang/String;
 
     move-result-object v4
 
@@ -3150,7 +3388,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p2}, Lcom/estrongs/fs/impl/b/f;->f()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/estrongs/fs/impl/b/g;->f()Ljava/lang/String;
 
     move-result-object v4
 
@@ -3158,11 +3396,11 @@
 
     const-string v4, "item_paste_name"
 
-    invoke-virtual {p2}, Lcom/estrongs/fs/impl/b/f;->f()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/estrongs/fs/impl/b/g;->f()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-static {v5}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v5}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -3176,7 +3414,7 @@
 
     const-string v4, "rw"
 
-    invoke-static {v3, v4}, Lcom/estrongs/fs/impl/local/l;->b(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
+    invoke-static {v3, v4}, Lcom/estrongs/fs/impl/local/m;->b(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v3
 
@@ -3254,7 +3492,7 @@
 .method public static d(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -3314,7 +3552,7 @@
 .method public static e(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -3371,7 +3609,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {}, Lcom/estrongs/android/util/bd;->g()Z
+    invoke-static {}, Lcom/estrongs/android/util/bk;->g()Z
 
     move-result v2
 
@@ -3421,7 +3659,7 @@
     :try_start_3
     const-string v3, "Exception trying to determine if the file is video."
 
-    invoke-static {v3, v0}, Lcom/estrongs/android/util/v;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v3, v0}, Lcom/estrongs/android/util/x;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
@@ -3490,7 +3728,7 @@
     :goto_5
     const-string v4, "Exception trying to determine if the file is video."
 
-    invoke-static {v4, v2}, Lcom/estrongs/android/util/v;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v4, v2}, Lcom/estrongs/android/util/x;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_4
 
@@ -3523,7 +3761,7 @@
 .method public static f(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -3571,7 +3809,7 @@
 .method public static g(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -3619,7 +3857,7 @@
 .method public static h(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -3667,7 +3905,7 @@
 .method public static i(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -3715,7 +3953,7 @@
 .method public static j(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -3763,7 +4001,57 @@
 .method public static k(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "android.intent.action.VIEW"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const/high16 v1, 0x10000000
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    new-instance v1, Ljava/io/File;
+
+    invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v1}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+
+    move-result-object v1
+
+    invoke-static {p1}, Lcom/estrongs/android/util/bg;->U(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
+
+    :try_start_0
+    invoke-static {p0, v0, p1}, Lcom/estrongs/android/pop/view/utils/AppRunner;->a(Landroid/app/Activity;Landroid/content/Intent;Ljava/lang/String;)V
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+.end method
+
+.method public static l(Landroid/app/Activity;Ljava/lang/String;)V
+    .locals 3
+
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -3834,10 +4122,10 @@
     goto :goto_1
 .end method
 
-.method public static l(Landroid/app/Activity;Ljava/lang/String;)V
+.method public static m(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -3908,10 +4196,10 @@
     goto :goto_1
 .end method
 
-.method public static m(Landroid/app/Activity;Ljava/lang/String;)V
+.method public static n(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -3982,10 +4270,10 @@
     goto :goto_1
 .end method
 
-.method public static n(Landroid/app/Activity;Ljava/lang/String;)V
+.method public static o(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -4030,16 +4318,16 @@
     goto :goto_0
 .end method
 
-.method public static o(Landroid/app/Activity;Ljava/lang/String;)V
+.method public static p(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0b01c6
+    const v0, 0x7f080136
 
     invoke-static {p0, v0}, Lcom/estrongs/android/pop/utils/a;->a(Landroid/content/Context;I)V
 
@@ -4078,7 +4366,7 @@
     goto :goto_0
 .end method
 
-.method public static p(Landroid/app/Activity;Ljava/lang/String;)V
+.method public static q(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -4088,7 +4376,7 @@
     return-void
 .end method
 
-.method public static q(Landroid/app/Activity;Ljava/lang/String;)Landroid/content/Intent;
+.method public static r(Landroid/app/Activity;Ljava/lang/String;)Landroid/content/Intent;
     .locals 4
 
     const/4 v0, 0x0
@@ -4115,7 +4403,7 @@
     return-object v0
 
     :cond_1
-    invoke-static {p1}, Lcom/estrongs/android/util/bc;->S(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/bg;->U(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -4177,17 +4465,17 @@
     goto :goto_0
 .end method
 
-.method public static r(Landroid/app/Activity;Ljava/lang/String;)V
+.method public static s(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 1
 
     const/4 v0, 0x0
 
-    invoke-static {p0, p1, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->a(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/impl/b/f;)V
+    invoke-static {p0, p1, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->a(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/impl/b/g;)V
 
     return-void
 .end method
 
-.method public static s(Landroid/app/Activity;Ljava/lang/String;)Lcom/estrongs/android/ui/dialog/cg;
+.method public static t(Landroid/app/Activity;Ljava/lang/String;)Lcom/estrongs/android/ui/dialog/ci;
     .locals 7
 
     const/4 v6, 0x4
@@ -4204,7 +4492,7 @@
 
     new-array v0, v0, [Ljava/lang/CharSequence;
 
-    const v1, 0x7f0b0066
+    const v1, 0x7f0806ea
 
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
 
@@ -4212,7 +4500,7 @@
 
     aput-object v1, v0, v5
 
-    const v1, 0x7f0b0067
+    const v1, 0x7f0806e8
 
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
 
@@ -4220,7 +4508,7 @@
 
     aput-object v1, v0, v2
 
-    const v1, 0x7f0b0068
+    const v1, 0x7f0806eb
 
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
 
@@ -4228,7 +4516,7 @@
 
     aput-object v1, v0, v3
 
-    const v1, 0x7f0b0069
+    const v1, 0x7f0806e9
 
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
 
@@ -4236,7 +4524,7 @@
 
     aput-object v1, v0, v4
 
-    const v1, 0x7f0b00f5
+    const v1, 0x7f0804f9
 
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
 
@@ -4244,7 +4532,7 @@
 
     aput-object v1, v0, v6
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -4252,7 +4540,7 @@
 
     new-array v0, v6, [Ljava/lang/CharSequence;
 
-    const v1, 0x7f0b0066
+    const v1, 0x7f0806ea
 
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
 
@@ -4260,7 +4548,7 @@
 
     aput-object v1, v0, v5
 
-    const v1, 0x7f0b0067
+    const v1, 0x7f0806e8
 
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
 
@@ -4268,7 +4556,7 @@
 
     aput-object v1, v0, v2
 
-    const v1, 0x7f0b0068
+    const v1, 0x7f0806eb
 
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
 
@@ -4276,7 +4564,7 @@
 
     aput-object v1, v0, v3
 
-    const v1, 0x7f0b0069
+    const v1, 0x7f0806e9
 
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
 
@@ -4285,35 +4573,35 @@
     aput-object v1, v0, v4
 
     :cond_0
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {p0, v1}, Lcom/estrongs/android/pop/view/utils/AppRunner;->u(Landroid/app/Activity;Ljava/lang/String;)Lcom/estrongs/android/pop/view/utils/u;
+    invoke-static {p0, v1}, Lcom/estrongs/android/pop/view/utils/AppRunner;->v(Landroid/app/Activity;Ljava/lang/String;)Lcom/estrongs/android/pop/view/utils/u;
 
     move-result-object v1
 
-    new-instance v2, Lcom/estrongs/android/ui/dialog/cg;
+    new-instance v2, Lcom/estrongs/android/ui/dialog/ci;
 
-    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/dialog/cg;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/dialog/ci;-><init>(Landroid/content/Context;)V
 
-    const v3, 0x7f0b0029
+    const v3, 0x7f080096
 
-    invoke-virtual {v2, v3}, Lcom/estrongs/android/ui/dialog/cg;->setTitle(I)V
+    invoke-virtual {v2, v3}, Lcom/estrongs/android/ui/dialog/ci;->setTitle(I)V
 
     const/4 v3, -0x1
 
     new-instance v4, Lcom/estrongs/android/pop/view/utils/m;
 
-    invoke-direct {v4, v2, p1, p0}, Lcom/estrongs/android/pop/view/utils/m;-><init>(Lcom/estrongs/android/ui/dialog/cg;Ljava/lang/String;Landroid/app/Activity;)V
+    invoke-direct {v4, v2, p1, p0}, Lcom/estrongs/android/pop/view/utils/m;-><init>(Lcom/estrongs/android/ui/dialog/ci;Ljava/lang/String;Landroid/app/Activity;)V
 
-    invoke-virtual {v2, v0, v3, v4}, Lcom/estrongs/android/ui/dialog/cg;->setItems([Ljava/lang/CharSequence;ILandroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v2, v0, v3, v4}, Lcom/estrongs/android/ui/dialog/ci;->setItems([Ljava/lang/CharSequence;ILandroid/content/DialogInterface$OnClickListener;)V
 
-    invoke-virtual {v2, v5}, Lcom/estrongs/android/ui/dialog/cg;->setSelectable(Z)V
+    invoke-virtual {v2, v5}, Lcom/estrongs/android/ui/dialog/ci;->setSelectable(Z)V
 
     if-eqz v1, :cond_1
 
-    const v0, 0x7f0b0287
+    const v0, 0x7f08051e
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -4323,7 +4611,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f02029c
+    const v3, 0x7f02040b
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -4333,15 +4621,15 @@
 
     invoke-direct {v3, p0, p1}, Lcom/estrongs/android/pop/view/utils/b;-><init>(Landroid/app/Activity;Ljava/lang/String;)V
 
-    invoke-virtual {v2, v0, v1, v3}, Lcom/estrongs/android/ui/dialog/cg;->setSingleButton(Ljava/lang/CharSequence;Landroid/graphics/drawable/Drawable;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v2, v0, v1, v3}, Lcom/estrongs/android/ui/dialog/ci;->setSingleButton(Ljava/lang/CharSequence;Landroid/graphics/drawable/Drawable;Landroid/content/DialogInterface$OnClickListener;)V
 
     :cond_1
-    invoke-virtual {v2}, Lcom/estrongs/android/ui/dialog/cg;->show()V
+    invoke-virtual {v2}, Lcom/estrongs/android/ui/dialog/ci;->show()V
 
     return-object v2
 .end method
 
-.method public static t(Landroid/app/Activity;Ljava/lang/String;)V
+.method public static u(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 3
 
     new-instance v0, Landroid/content/Intent;
@@ -4367,10 +4655,10 @@
     return-void
 .end method
 
-.method private static u(Landroid/app/Activity;Ljava/lang/String;)Lcom/estrongs/android/pop/view/utils/u;
+.method private static v(Landroid/app/Activity;Ljava/lang/String;)Lcom/estrongs/android/pop/view/utils/u;
     .locals 2
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bA(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bR(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -4397,10 +4685,10 @@
     goto :goto_0
 .end method
 
-.method private static v(Landroid/app/Activity;Ljava/lang/String;)V
+.method private static w(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 

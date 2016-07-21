@@ -6,13 +6,13 @@ import android.os.Bundle;
 import android.preference.ListPreference;
 import android.util.AttributeSet;
 import android.view.View;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.android.ui.dialog.ct;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.ui.dialog.cv;
 
 public class CustomListPreference
   extends ListPreference
 {
-  private cg a;
+  private ci a;
   private int b;
   
   public CustomListPreference(Context paramContext)
@@ -43,13 +43,13 @@ public class CustomListPreference
     return null;
   }
   
-  protected void a(ct paramct)
+  protected void a(cv paramcv)
   {
     if ((getEntries() == null) || (getEntries() == null)) {
       throw new IllegalStateException("ListPreference requires an entries array and an entryValues array.");
     }
     b = b();
-    paramct.a(getEntries(), b, new a(this));
+    paramcv.a(getEntries(), b, new a(this));
   }
   
   protected boolean a()
@@ -75,28 +75,28 @@ public class CustomListPreference
   
   protected void showDialog(Bundle paramBundle)
   {
-    Object localObject = new ct(getContext()).a(getDialogTitle());
+    Object localObject = new cv(getContext()).a(getDialogTitle());
     View localView = onCreateDialogView();
     if (localView != null)
     {
       onBindDialogView(localView);
-      ((ct)localObject).a(localView);
+      ((cv)localObject).a(localView);
     }
     for (;;)
     {
-      a((ct)localObject);
-      localObject = ((ct)localObject).b();
-      a = ((cg)localObject);
+      a((cv)localObject);
+      localObject = ((cv)localObject).b();
+      a = ((ci)localObject);
       if (paramBundle != null) {
-        ((cg)localObject).onRestoreInstanceState(paramBundle);
+        ((ci)localObject).onRestoreInstanceState(paramBundle);
       }
       if (a()) {
-        ((cg)localObject).requestInputMethod();
+        ((ci)localObject).requestInputMethod();
       }
-      ((cg)localObject).setOnDismissListener(this);
-      ((cg)localObject).show();
+      ((ci)localObject).setOnDismissListener(this);
+      ((ci)localObject).show();
       return;
-      ((ct)localObject).b(getDialogMessage());
+      ((cv)localObject).b(getDialogMessage());
     }
   }
 }

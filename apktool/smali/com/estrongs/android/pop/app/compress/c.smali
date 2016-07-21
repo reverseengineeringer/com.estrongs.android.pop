@@ -31,9 +31,9 @@
 
     const/4 v10, 0x0
 
-    const/4 v7, 0x1
-
     const/4 v8, 0x0
+
+    const/4 v7, 0x1
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/c;->b:Lcom/estrongs/android/pop/app/compress/a;
 
@@ -106,13 +106,13 @@
 
     move-result-object v1
 
-    const v2, 0x7f0b020e
+    const v2, 0x7f080419
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    invoke-static {v0, v1, v8}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    invoke-static {v0, v1, v8}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/c;->b:Lcom/estrongs/android/pop/app/compress/a;
 
@@ -148,7 +148,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/fs/impl/local/h;->a(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/fs/impl/local/i;->a(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -162,7 +162,7 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/estrongs/fs/impl/local/h;->a(Ljava/lang/String;Z)Z
+    invoke-static {v0, v1}, Lcom/estrongs/fs/impl/local/i;->a(Ljava/lang/String;Z)Z
     :try_end_0
     .catch Lcom/estrongs/fs/FileSystemException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -187,7 +187,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0b01b3
+    const v3, 0x7f0804ab
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -217,7 +217,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1, v8}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    invoke-static {v0, v1, v8}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
     goto :goto_1
 
@@ -266,7 +266,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0b0214
+    const v3, 0x7f08040f
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -286,7 +286,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0b0569
+    const v3, 0x7f08066b
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -300,7 +300,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1, v8}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    invoke-static {v0, v1, v8}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
     goto/16 :goto_1
 
@@ -311,7 +311,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/c;->b:Lcom/estrongs/android/pop/app/compress/a;
 
@@ -331,7 +331,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/c;->a:Landroid/view/View;
 
-    const v2, 0x7f0a0057
+    const v2, 0x7f0e01b9
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -377,21 +377,42 @@
 
     invoke-static {v0, v7}, Lcom/estrongs/android/pop/app/compress/a;->a(Lcom/estrongs/android/pop/app/compress/a;Z)Z
 
+    :cond_5
     :goto_3
+    :try_start_1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/c;->b:Lcom/estrongs/android/pop/app/compress/a;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/a;->d(Lcom/estrongs/android/pop/app/compress/a;)Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/estrongs/android/j/c;->a(Landroid/content/Context;)Lcom/estrongs/android/j/c;
+
+    move-result-object v0
+
+    const-string v1, "compress_lb"
+
+    const-string v2, "lp_unzip"
+
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/j/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    :goto_4
     iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/c;->b:Lcom/estrongs/android/pop/app/compress/a;
 
     invoke-virtual {v0}, Lcom/estrongs/android/pop/app/compress/a;->b()V
 
     goto/16 :goto_1
 
-    :cond_5
+    :cond_6
     iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/c;->b:Lcom/estrongs/android/pop/app/compress/a;
 
     invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/a;->g(Lcom/estrongs/android/pop/app/compress/a;)Landroid/widget/EditText;
 
     move-result-object v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_9
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/c;->b:Lcom/estrongs/android/pop/app/compress/a;
 
@@ -407,7 +428,15 @@
 
     move-result-object v5
 
-    :goto_4
+    :goto_5
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/c;->b:Lcom/estrongs/android/pop/app/compress/a;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/a;->h(Lcom/estrongs/android/pop/app/compress/a;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
     new-instance v0, Lcom/estrongs/android/pop/app/compress/l;
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/compress/c;->b:Lcom/estrongs/android/pop/app/compress/a;
@@ -418,13 +447,13 @@
 
     iget-object v2, p0, Lcom/estrongs/android/pop/app/compress/c;->b:Lcom/estrongs/android/pop/app/compress/a;
 
-    invoke-static {v2}, Lcom/estrongs/android/pop/app/compress/a;->h(Lcom/estrongs/android/pop/app/compress/a;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/estrongs/android/pop/app/compress/a;->i(Lcom/estrongs/android/pop/app/compress/a;)Ljava/lang/String;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/estrongs/android/pop/app/compress/c;->b:Lcom/estrongs/android/pop/app/compress/a;
 
-    invoke-static {v3}, Lcom/estrongs/android/pop/app/compress/a;->i(Lcom/estrongs/android/pop/app/compress/a;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/estrongs/android/pop/app/compress/a;->j(Lcom/estrongs/android/pop/app/compress/a;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -436,7 +465,7 @@
 
     iget-object v6, p0, Lcom/estrongs/android/pop/app/compress/c;->b:Lcom/estrongs/android/pop/app/compress/a;
 
-    invoke-static {v6}, Lcom/estrongs/android/pop/app/compress/a;->j(Lcom/estrongs/android/pop/app/compress/a;)Ljava/util/List;
+    invoke-static {v6}, Lcom/estrongs/android/pop/app/compress/a;->k(Lcom/estrongs/android/pop/app/compress/a;)Ljava/util/List;
 
     move-result-object v6
 
@@ -452,8 +481,118 @@
 
     goto :goto_3
 
-    :cond_6
+    :cond_7
+    new-instance v0, Lcom/estrongs/android/pop/app/compress/ba;
+
+    invoke-direct {v0}, Lcom/estrongs/android/pop/app/compress/ba;-><init>()V
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/compress/c;->b:Lcom/estrongs/android/pop/app/compress/a;
+
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/compress/a;->i(Lcom/estrongs/android/pop/app/compress/a;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/estrongs/android/pop/app/compress/ba;->a:Ljava/lang/String;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/compress/c;->b:Lcom/estrongs/android/pop/app/compress/a;
+
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/compress/a;->j(Lcom/estrongs/android/pop/app/compress/a;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/estrongs/android/pop/app/compress/ba;->b:Ljava/lang/String;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/compress/c;->b:Lcom/estrongs/android/pop/app/compress/a;
+
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/compress/a;->k(Lcom/estrongs/android/pop/app/compress/a;)Ljava/util/List;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/estrongs/android/pop/app/compress/ba;->e:Ljava/util/List;
+
+    iput-boolean v7, v0, Lcom/estrongs/android/pop/app/compress/ba;->f:Z
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/compress/c;->b:Lcom/estrongs/android/pop/app/compress/a;
+
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/compress/a;->c(Lcom/estrongs/android/pop/app/compress/a;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/estrongs/android/pop/app/compress/ba;->c:Ljava/lang/String;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/compress/c;->b:Lcom/estrongs/android/pop/app/compress/a;
+
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/compress/a;->a(Lcom/estrongs/android/pop/app/compress/a;)I
+
+    move-result v1
+
+    iput v1, v0, Lcom/estrongs/android/pop/app/compress/ba;->g:I
+
+    iput-object v5, v0, Lcom/estrongs/android/pop/app/compress/ba;->d:Ljava/lang/String;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/compress/c;->b:Lcom/estrongs/android/pop/app/compress/a;
+
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/compress/a;->l(Lcom/estrongs/android/pop/app/compress/a;)Lcom/estrongs/android/pop/app/compress/bb;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_8
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/compress/c;->b:Lcom/estrongs/android/pop/app/compress/a;
+
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/compress/a;->l(Lcom/estrongs/android/pop/app/compress/a;)Lcom/estrongs/android/pop/app/compress/bb;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/app/compress/bb;->a(Lcom/estrongs/android/pop/app/compress/ba;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/c;->b:Lcom/estrongs/android/pop/app/compress/a;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/a;->l(Lcom/estrongs/android/pop/app/compress/a;)Lcom/estrongs/android/pop/app/compress/bb;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/compress/bb;->b()V
+
+    :goto_6
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/c;->b:Lcom/estrongs/android/pop/app/compress/a;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/a;->d(Lcom/estrongs/android/pop/app/compress/a;)Landroid/content/Context;
+
+    move-result-object v0
+
+    instance-of v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    if-eqz v0, :cond_5
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/c;->b:Lcom/estrongs/android/pop/app/compress/a;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/a;->d(Lcom/estrongs/android/pop/app/compress/a;)Landroid/content/Context;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    const-string v1, "archive://"
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->f(Ljava/lang/String;)Lcom/estrongs/android/view/cr;
+
+    goto/16 :goto_3
+
+    :cond_8
+    invoke-static {v0}, Lcom/estrongs/android/view/ak;->a(Lcom/estrongs/android/pop/app/compress/ba;)V
+
+    goto :goto_6
+
+    :catch_1
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    goto/16 :goto_4
+
+    :cond_9
     move-object v5, v10
 
-    goto :goto_4
+    goto/16 :goto_5
 .end method

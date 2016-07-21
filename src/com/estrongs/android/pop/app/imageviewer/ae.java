@@ -20,10 +20,11 @@ import com.estrongs.android.pop.ad;
 import com.estrongs.android.pop.app.imageviewer.gallery.c;
 import com.estrongs.android.pop.app.imageviewer.gallery.e;
 import com.estrongs.android.pop.b;
-import com.estrongs.android.pop.esclasses.g;
-import com.estrongs.android.pop.utils.ci;
-import com.estrongs.android.ui.dialog.ct;
-import com.estrongs.android.util.am;
+import com.estrongs.android.pop.esclasses.k;
+import com.estrongs.android.pop.utils.cr;
+import com.estrongs.android.ui.dialog.cv;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.ap;
 import com.estrongs.fs.util.j;
 import java.io.IOException;
 import java.io.InputStream;
@@ -88,19 +89,19 @@ public class ae
     String str = null;
     if (paramInt == -1) {
       if (Environment.getExternalStorageState() == "checking") {
-        str = paramActivity.getString(2131427932);
+        str = paramActivity.getString(2131231850);
       }
     }
     for (;;)
     {
       if (str != null) {
-        com.estrongs.android.ui.view.ag.a(paramActivity, str, 5000);
+        ak.a(paramActivity, str, 5000);
       }
       return;
-      str = paramActivity.getString(2131427932);
+      str = paramActivity.getString(2131231850);
       continue;
       if (paramInt < 1) {
-        str = paramActivity.getString(2131427895);
+        str = paramActivity.getString(2131231780);
       }
     }
   }
@@ -120,24 +121,24 @@ public class ae
     if (parame == null) {
       return;
     }
-    ct localct = new ct(paramActivity);
-    View localView = g.a(paramActivity).inflate(2130903160, null);
-    if (am.aG(paramUri.toString())) {}
-    a = paramActivity.getResources().getString(2131427750);
-    ((ImageView)localView.findViewById(2131362390)).setImageBitmap(parame.h());
-    paramUri = paramActivity.getResources().getString(2131427442);
+    cv localcv = new cv(paramActivity);
+    View localView = k.a(paramActivity).inflate(2130903271, null);
+    if (ap.aQ(paramUri.toString())) {}
+    a = paramActivity.getResources().getString(2131231090);
+    ((ImageView)localView.findViewById(2131625001)).setImageBitmap(parame.h());
+    paramUri = paramActivity.getResources().getString(2131232182);
     if ((parame instanceof c))
     {
       parame = (c)parame;
-      ((TextView)localView.findViewById(2131362391)).setText(am.bL(parame.c()));
-      ((TextView)localView.findViewById(2131362393)).setText(paramUri);
-      ((TextView)localView.findViewById(2131362399)).setText(paramUri);
-      ((TextView)localView.findViewById(2131362396)).setText(paramUri);
-      ((TextView)localView.findViewById(2131362402)).setText(paramUri);
-      ((TextView)localView.findViewById(2131362405)).setText(paramUri);
+      ((TextView)localView.findViewById(2131625002)).setText(ap.cc(parame.c()));
+      ((TextView)localView.findViewById(2131625004)).setText(paramUri);
+      ((TextView)localView.findViewById(2131625010)).setText(paramUri);
+      ((TextView)localView.findViewById(2131625007)).setText(paramUri);
+      ((TextView)localView.findViewById(2131625013)).setText(paramUri);
+      ((TextView)localView.findViewById(2131625016)).setText(paramUri);
       new ag(parame, paramHandler, paramActivity, localView).start();
-      localct.a(2131427339, new ai());
-      paramHandler.post(new aj(localct, localView));
+      localcv.a(2131231270, new ai());
+      paramHandler.post(new aj(localcv, localView));
       return;
     }
     String str = parame.d();
@@ -145,8 +146,8 @@ public class ae
     if (l < 0L) {}
     for (paramUri = "";; paramUri = Formatter.formatFileSize(paramActivity, l))
     {
-      ((TextView)localView.findViewById(2131362391)).setText(str);
-      ((TextView)localView.findViewById(2131362393)).setText(paramUri);
+      ((TextView)localView.findViewById(2131625002)).setText(str);
+      ((TextView)localView.findViewById(2131625004)).setText(paramUri);
       b(localView, parame, paramActivity);
       break;
     }
@@ -169,10 +170,10 @@ public class ae
     } while (paramRunnable == null);
     paramRunnable.run();
     return;
-    paramBoolean = ad.a(paramActivity).aD();
+    paramBoolean = ad.a(paramActivity).aE();
     parame = parame.d();
     if (paramBoolean) {
-      if (ci.a(parame) == ci.c) {
+      if (cr.a(parame) == cr.c) {
         paramBoolean = true;
       }
     }
@@ -183,20 +184,20 @@ public class ae
       String str;
       if (paramBoolean)
       {
-        i = 2131428403;
+        i = 2131230878;
         str = paramActivity.getString(i);
         if (paramBoolean) {
           break label125;
         }
       }
       label125:
-      for (parame = MessageFormat.format(paramActivity.getString(2131427770), new Object[] { "" });; parame = MessageFormat.format(paramActivity.getString(2131428419), new Object[] { am.d(parame) }))
+      for (parame = MessageFormat.format(paramActivity.getString(2131231312), new Object[] { "" });; parame = MessageFormat.format(paramActivity.getString(2131232254), new Object[] { ap.d(parame) }))
       {
         a(paramActivity, str, parame, paramRunnable);
         return;
         paramBoolean = false;
         break;
-        i = 2131427347;
+        i = 2131230845;
         break label71;
       }
     }
@@ -207,7 +208,7 @@ public class ae
     paramRunnable = new af(paramRunnable);
     try
     {
-      new ct(paramContext).a(paramString1).b(paramString2).b(2131427339, paramRunnable).c(2131427340, paramRunnable).c();
+      new cv(paramContext).a(paramString1).b(paramString2).b(2131231270, paramRunnable).c(2131231265, paramRunnable).c();
       return;
     }
     catch (Exception paramContext)
@@ -218,9 +219,9 @@ public class ae
   
   private static void a(View paramView)
   {
-    a(paramView, 2131362397);
-    a(paramView, 2131362400);
-    a(paramView, 2131362403);
+    a(paramView, 2131625008);
+    a(paramView, 2131625011);
+    a(paramView, 2131625014);
   }
   
   private static void a(View paramView, int paramInt)
@@ -239,12 +240,12 @@ public class ae
     if (0 == 0) {}
     for (parame = a;; parame = null)
     {
-      a(paramView, parame, 2131362402);
+      a(paramView, parame, 2131625013);
       parame = paramActivity;
       if (0 == 0) {
         parame = a;
       }
-      a(paramView, parame, 2131362405);
+      a(paramView, parame, 2131625016);
       return;
     }
   }
@@ -261,7 +262,7 @@ public class ae
       if ((str1.equals("content")) && (str2.equals("media"))) {
         return true;
       }
-    } while ((!str1.equals("file")) || (!am.bl(paramUri.getPath())));
+    } while ((!str1.equals("file")) || (!ap.bC(paramUri.getPath())));
     return true;
   }
   
@@ -277,12 +278,12 @@ public class ae
     ImageManager.a(parame);
     try
     {
-      paramActivity.startActivity(Intent.createChooser(localIntent, paramActivity.getText(2131427389)));
+      paramActivity.startActivity(Intent.createChooser(localIntent, paramActivity.getText(2131230893)));
       return;
     }
     catch (ActivityNotFoundException paramUri)
     {
-      com.estrongs.android.ui.view.ag.a(paramActivity, 2131427910, 0);
+      ak.a(paramActivity, 2131231771, 0);
     }
   }
   
@@ -299,18 +300,18 @@ public class ae
     {
       Object localObject = a;
       if ((j > 0) && (i > 0)) {
-        localObject = String.format(paramActivity.getString(2131428712), new Object[] { Integer.valueOf(j), Integer.valueOf(i) });
+        localObject = String.format(paramActivity.getString(2131231330), new Object[] { Integer.valueOf(j), Integer.valueOf(i) });
       }
       for (;;)
       {
-        a(paramView, (String)localObject, 2131362399);
+        a(paramView, (String)localObject, 2131625010);
         localObject = a;
         if (parame.o() != 0L)
         {
           localObject = new Date(parame.o());
           localObject = new SimpleDateFormat().format((Date)localObject);
         }
-        a(paramView, (String)localObject, 2131362396);
+        a(paramView, (String)localObject, 2131625007);
         if ("image/jpeg".equals(parame.k()))
         {
           a(parame, paramView, paramActivity);

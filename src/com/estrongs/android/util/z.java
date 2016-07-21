@@ -1,14 +1,8 @@
 package com.estrongs.android.util;
 
-class z
-  extends Thread
+public abstract interface z<T>
 {
-  z(y paramy) {}
-  
-  public void run()
-  {
-    y.a(a);
-  }
+  public abstract boolean a(T paramT);
 }
 
 /* Location:

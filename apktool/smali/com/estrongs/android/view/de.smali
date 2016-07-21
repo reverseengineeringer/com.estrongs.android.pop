@@ -1,56 +1,41 @@
 .class Lcom/estrongs/android/view/de;
-.super Lcom/estrongs/android/view/aw;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/view/cq;
+.field final synthetic a:I
+
+.field final synthetic b:Lcom/estrongs/android/view/cr;
 
 
 # direct methods
-.method public constructor <init>(Lcom/estrongs/android/view/cq;Landroid/app/Activity;Lcom/estrongs/fs/util/a/a;Lcom/estrongs/android/view/cb;)V
+.method constructor <init>(Lcom/estrongs/android/view/cr;I)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/view/de;->a:Lcom/estrongs/android/view/cq;
+    iput-object p1, p0, Lcom/estrongs/android/view/de;->b:Lcom/estrongs/android/view/cr;
 
-    invoke-direct {p0, p2, p3, p4}, Lcom/estrongs/android/view/aw;-><init>(Landroid/app/Activity;Lcom/estrongs/fs/util/a/a;Lcom/estrongs/android/view/cb;)V
+    iput p2, p0, Lcom/estrongs/android/view/de;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public H()Z
-    .locals 1
+.method public run()V
+    .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/view/de;->a:Lcom/estrongs/android/view/cq;
+    iget-object v0, p0, Lcom/estrongs/android/view/de;->b:Lcom/estrongs/android/view/cr;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/view/cq;->H()Z
+    iget-object v0, v0, Lcom/estrongs/android/view/cr;->h:Landroid/support/v7/widget/RecyclerView;
 
-    move-result v0
+    iget v1, p0, Lcom/estrongs/android/view/de;->a:I
 
-    return v0
-.end method
-
-.method public b(Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public f(I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method protected n()V
-    .locals 1
-
-    invoke-super {p0}, Lcom/estrongs/android/view/aw;->n()V
-
-    const/4 v0, 0x0
-
-    invoke-super {p0, v0}, Lcom/estrongs/android/view/aw;->b(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/RecyclerView;->smoothScrollToPosition(I)V
 
     return-void
 .end method

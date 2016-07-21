@@ -1,35 +1,16 @@
 package com.estrongs.android.pop.app;
 
-import android.app.ProgressDialog;
+import android.preference.Preference.OnPreferenceChangeListener;
 
-final class ip
+class ip
   implements Runnable
 {
+  ip(io paramio) {}
+  
   public void run()
   {
-    try
-    {
-      if (io.b() != null)
-      {
-        io.b().dismiss();
-        io.a(null);
-        io.a(false);
-      }
-      io.a(false);
-      return;
-    }
-    catch (Exception localException)
-    {
-      localException = localException;
-      io.a(false);
-      return;
-    }
-    finally
-    {
-      localObject = finally;
-      io.a(false);
-      throw ((Throwable)localObject);
-    }
+    PopPreferenceActivity.c(a.c.a).onPreferenceChange(a.c.a.r, null);
+    a.c.a.finish();
   }
 }
 

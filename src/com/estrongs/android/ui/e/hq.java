@@ -1,27 +1,15 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.pop.app.PopAudioPlayer;
-import com.estrongs.android.pop.app.a.ao;
-import com.estrongs.android.ui.dialog.er;
-import com.estrongs.android.ui.view.ag;
-import java.util.List;
+import com.estrongs.android.view.a.b;
 
 class hq
-  implements er
+  implements b
 {
-  hq(hp paramhp, List paramList) {}
+  hq(cr paramcr) {}
   
-  public boolean a(String paramString)
+  public boolean a(cp paramcp)
   {
-    paramString = ao.a().a(paramString);
-    if (paramString == null) {
-      ag.a(hl.a(b.b.a), 2131428317, 0);
-    }
-    for (;;)
-    {
-      return true;
-      hl.a(b.b.a).a(a, paramString);
-    }
+    return E;
   }
 }
 

@@ -1,15 +1,17 @@
 package com.estrongs.android.pop.app;
 
-import com.estrongs.android.pop.FexApplication;
+import com.estrongs.fs.h;
+import com.estrongs.fs.i;
+import com.estrongs.fs.w;
 
 class ce
-  implements Runnable
+  implements i
 {
-  ce(FileChooserActivity paramFileChooserActivity) {}
+  ce(FileChooserActivity paramFileChooserActivity, boolean paramBoolean) {}
   
-  public void run()
+  public boolean a(h paramh)
   {
-    FexApplication.a().b(false);
+    return (paramh.getFileType().a()) && ((!paramh.getName().startsWith(".")) || (a));
   }
 }
 

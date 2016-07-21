@@ -1,7 +1,7 @@
 package com.estrongs.io.archive.a;
 
 import com.estrongs.android.pop.FexApplication;
-import com.estrongs.fs.impl.local.h;
+import com.estrongs.fs.impl.local.i;
 import java.io.InputStream;
 import java.util.zip.GZIPInputStream;
 
@@ -20,7 +20,7 @@ public class a
   
   public InputStream l()
   {
-    return new GZIPInputStream(h.a(FexApplication.a(), b));
+    return new GZIPInputStream(i.a(FexApplication.a(), b));
   }
 }
 

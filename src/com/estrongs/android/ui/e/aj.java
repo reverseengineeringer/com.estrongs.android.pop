@@ -1,36 +1,20 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.pop.view.utils.ac;
-import com.estrongs.android.ui.dialog.gx;
-import com.estrongs.android.ui.dialog.gz;
-import com.estrongs.android.util.am;
-import com.estrongs.android.view.aw;
-import com.estrongs.fs.util.a.a;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.ui.pcs.l;
 
 class aj
-  implements gx
+  implements MenuItem.OnMenuItemClickListener
 {
-  aj(ah paramah) {}
+  aj(m paramm) {}
   
-  public void a(int paramInt)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    aw localaw = a.a.k.y();
-    if (localaw != null)
-    {
-      ac.a(a.a.b, localaw.c(), paramInt % 4, paramInt / 4);
-      if ((!am.Y(localaw.c())) || (am.af(localaw.c()))) {
-        break label101;
-      }
-    }
-    label101:
-    for (a locala = a.a.k.m.A(localaw.c());; locala = a.a.k.m.z(localaw.c()))
-    {
-      localaw.b(locala);
-      w.j(a.a).dismiss();
-      return;
-    }
+    paramMenuItem = new l(m.a(a));
+    paramMenuItem.a(m.k(a));
+    paramMenuItem.a(true);
+    return false;
   }
 }
 

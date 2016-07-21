@@ -1,11 +1,12 @@
 package com.estrongs.io.archive.rar;
 
-import android.util.Log;
-import com.estrongs.android.util.bd;
-import com.estrongs.android.util.f;
+import com.estrongs.android.util.bk;
+import com.estrongs.android.util.l;
 import com.estrongs.io.archive.h;
+import com.estrongs.io.archive.i;
 import com.estrongs.io.model.ArchiveEntryFile;
 import de.innosystec.unrar.exception.RarException;
+import de.innosystec.unrar.rarfile.g;
 import de.innosystec.unrar.rarfile.k;
 import java.io.File;
 import java.io.IOException;
@@ -14,7 +15,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class a
-  extends h
+  extends i
 {
   private static String j = "RarInArchive";
   de.innosystec.unrar.a h = null;
@@ -23,10 +24,10 @@ public class a
   public a(String paramString1, String paramString2)
   {
     super(paramString1, paramString2);
-    if (paramString2.equalsIgnoreCase(f.a[0]))
+    if (paramString2.equalsIgnoreCase(com.estrongs.android.util.e.a[0]))
     {
       i = true;
-      c = f.a();
+      c = com.estrongs.android.util.e.a();
     }
   }
   
@@ -64,7 +65,7 @@ public class a
     //   55: areturn
     //   56: aload_3
     //   57: invokevirtual 90	java/io/File:getCanonicalPath	()Ljava/lang/String;
-    //   60: invokestatic 96	com/estrongs/fs/impl/local/h:f	(Ljava/lang/String;)Ljava/io/OutputStream;
+    //   60: invokestatic 96	com/estrongs/fs/impl/local/i:f	(Ljava/lang/String;)Ljava/io/OutputStream;
     //   63: astore_2
     //   64: aload_0
     //   65: getfield 23	com/estrongs/io/archive/rar/a:h	Lde/innosystec/unrar/a;
@@ -148,7 +149,7 @@ public class a
   public void a(com.estrongs.io.a.b paramb)
   {
     boolean bool2 = false;
-    Object localObject3 = new com.estrongs.io.archive.g();
+    Object localObject3 = new h();
     boolean bool1;
     try
     {
@@ -156,14 +157,14 @@ public class a
       if ((h.f().p()) && (!h.f().q()))
       {
         if (!h.f().v()) {
-          break label663;
+          break label656;
         }
         if (!h.g()) {
-          break label159;
+          break label158;
         }
-        break label663;
+        break label656;
         localObject1 = de.innosystec.unrar.e.b(b, bool1);
-        if ((!bd.a((CharSequence)localObject1)) && (new File((String)localObject1).exists()))
+        if ((!bk.a((CharSequence)localObject1)) && (new File((String)localObject1).exists()))
         {
           c();
           b = ((String)localObject1);
@@ -174,14 +175,14 @@ public class a
       for (;;)
       {
         if (!((Iterator)localObject1).hasNext()) {
-          break label228;
+          break label226;
         }
         if (paramb != null)
         {
           bool1 = paramb.b();
           if (bool1)
           {
-            Log.i(j, "Extraction is done.");
+            l.c(j, "Extraction is done.");
             try
             {
               c();
@@ -189,7 +190,7 @@ public class a
             }
             catch (IOException paramb)
             {
-              label159:
+              label158:
               paramb.printStackTrace();
               return;
             }
@@ -197,7 +198,7 @@ public class a
             break;
           }
         }
-        ((com.estrongs.io.archive.g)localObject3).a((ArchiveEntryFile)((Iterator)localObject1).next());
+        ((h)localObject3).a((ArchiveEntryFile)((Iterator)localObject1).next());
       }
       try
       {
@@ -211,14 +212,14 @@ public class a
             bool1 = bool2;
             if (!h.g())
             {
-              for (localObject2 = de.innosystec.unrar.e.a(b, bool1); (!bd.a((CharSequence)localObject2)) && (new File((String)localObject2).exists()); localObject2 = de.innosystec.unrar.e.a(b, bool1))
+              for (localObject2 = de.innosystec.unrar.e.a(b, bool1); (!bk.a((CharSequence)localObject2)) && (new File((String)localObject2).exists()); localObject2 = de.innosystec.unrar.e.a(b, bool1))
               {
                 if (paramb != null)
                 {
                   bool2 = paramb.b();
                   if (bool2)
                   {
-                    Log.i(j, "Extraction is done.");
+                    l.c(j, "Extraction is done.");
                     try
                     {
                       c();
@@ -242,7 +243,7 @@ public class a
                     bool2 = paramb.b();
                     if (bool2)
                     {
-                      Log.i(j, "Extraction is done.");
+                      l.c(j, "Extraction is done.");
                       try
                       {
                         c();
@@ -255,7 +256,7 @@ public class a
                       }
                     }
                   }
-                  ((com.estrongs.io.archive.g)localObject3).a((ArchiveEntryFile)((Iterator)localObject2).next());
+                  ((h)localObject3).a((ArchiveEntryFile)((Iterator)localObject2).next());
                 }
               }
               c();
@@ -266,11 +267,11 @@ public class a
         }
         else
         {
-          paramb.a(new File(b).getName(), ((com.estrongs.io.archive.g)localObject3).a(), ((com.estrongs.io.archive.g)localObject3).b() + ((com.estrongs.io.archive.g)localObject3).c());
+          paramb.a(new File(b).getName(), ((h)localObject3).a(), ((h)localObject3).b() + ((h)localObject3).c());
           localObject2 = i();
           h.h();
           h.a(paramb);
-          h.a(new b(this, paramb, paramb, (com.estrongs.io.archive.g)localObject3));
+          h.a(new b(this, paramb, paramb, (h)localObject3));
           while (((Iterator)localObject2).hasNext())
           {
             if (paramb != null)
@@ -278,7 +279,7 @@ public class a
               bool1 = paramb.b();
               if (bool1)
               {
-                Log.i(j, "Extraction is done.");
+                l.c(j, "Extraction is done.");
                 try
                 {
                   c();
@@ -296,7 +297,7 @@ public class a
               a((File)localObject3);
             }
           }
-          Log.i(j, "Extraction is done.");
+          l.c(j, "Extraction is done.");
           try
           {
             c();
@@ -307,7 +308,7 @@ public class a
             paramb.printStackTrace();
             return;
           }
-          Log.i(j, "Extraction is done.");
+          l.c(j, "Extraction is done.");
           try
           {
             c();
@@ -336,14 +337,14 @@ public class a
     }
     finally
     {
-      Log.i(j, "Extraction is done.");
+      l.c(j, "Extraction is done.");
     }
     for (;;)
     {
-      label228:
+      label226:
       String str;
       Object localObject2;
-      label663:
+      label656:
       bool1 = true;
       break;
       bool1 = true;

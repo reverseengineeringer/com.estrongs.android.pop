@@ -1,26 +1,16 @@
 package com.estrongs.android.pop.app;
 
-import android.app.Activity;
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.ui.pcs.j;
-import com.estrongs.android.ui.pcs.n;
-import com.estrongs.android.ui.pcs.r;
+import android.content.DialogInterface.OnDismissListener;
 
-final class az
-  implements DialogInterface.OnClickListener
+class az
+  implements DialogInterface.OnDismissListener
 {
-  az(Activity paramActivity, n paramn, DialogInterface.OnCancelListener paramOnCancelListener) {}
+  az(DownloaderActivity paramDownloaderActivity) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void onDismiss(DialogInterface paramDialogInterface)
   {
-    j localj = new j(a);
-    localj.a(b);
-    localj.setOnCancelListener(c);
-    localj.a(true);
-    r.a().a(localj);
-    paramDialogInterface.dismiss();
+    a.finish();
   }
 }
 

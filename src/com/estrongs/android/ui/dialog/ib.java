@@ -1,15 +1,17 @@
 package com.estrongs.android.ui.dialog;
 
-import com.estrongs.android.view.eb;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.ui.view.bd;
 
 class ib
-  implements eb
+  implements DialogInterface.OnClickListener
 {
-  ib(hn paramhn, cg paramcg) {}
+  ib(hq paramhq, bd parambd) {}
   
-  public void a(Object paramObject)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    a.dismiss();
+    a.d();
   }
 }
 

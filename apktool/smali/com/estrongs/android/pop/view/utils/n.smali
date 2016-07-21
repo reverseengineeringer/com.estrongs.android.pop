@@ -3,33 +3,9 @@
 
 
 # static fields
-.field public static final b:Ljava/lang/String;
+.field private static C:Lcom/estrongs/android/pop/view/utils/n;
 
-.field private static c:I
-
-.field private static d:Ljava/lang/String;
-
-.field private static final e:Ljava/lang/String;
-
-.field private static final f:Ljava/lang/String;
-
-.field private static final g:Ljava/lang/String;
-
-.field private static final h:Ljava/lang/String;
-
-.field private static final i:Ljava/lang/String;
-
-.field private static final j:Ljava/lang/String;
-
-.field private static n:I
-
-.field private static o:[Ljava/lang/String;
-
-.field private static q:[Lcom/estrongs/android/pop/view/utils/v;
-
-.field private static t:Lcom/estrongs/android/pop/view/utils/n;
-
-.field private static u:Ljava/util/HashMap;
+.field private static D:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap",
@@ -41,25 +17,67 @@
     .end annotation
 .end field
 
-.field private static v:Z
+.field private static E:Z
 
-.field private static w:Ljava/lang/String;
+.field private static F:Ljava/lang/String;
+
+.field public static final b:Ljava/lang/String;
+
+.field public static final c:Ljava/lang/String;
+
+.field private static d:I
+
+.field private static e:Ljava/lang/String;
+
+.field private static final f:Ljava/lang/String;
+
+.field private static final g:Ljava/lang/String;
+
+.field private static final h:Ljava/lang/String;
+
+.field private static final i:Ljava/lang/String;
+
+.field private static final j:Ljava/lang/String;
+
+.field private static final k:Ljava/lang/String;
+
+.field private static o:I
+
+.field private static p:[Ljava/lang/String;
+
+.field private static r:[Lcom/estrongs/android/pop/view/utils/v;
+
+.field private static s:Ljava/lang/Object;
 
 
 # instance fields
-.field a:J
+.field private A:Z
 
-.field private k:Ljava/lang/String;
+.field private B:Z
+
+.field a:J
 
 .field private l:Ljava/lang/String;
 
-.field private m:Z
+.field private m:Ljava/lang/String;
 
-.field private p:Z
+.field private n:Z
 
-.field private r:Ljava/lang/Object;
+.field private q:Z
 
-.field private s:Landroid/os/Handler;
+.field private t:Ljava/lang/Object;
+
+.field private u:Landroid/os/Handler;
+
+.field private v:I
+
+.field private w:I
+
+.field private x:I
+
+.field private y:I
+
+.field private z:J
 
 
 # direct methods
@@ -70,19 +88,19 @@
 
     const/4 v3, 0x0
 
-    sput v3, Lcom/estrongs/android/pop/view/utils/n;->c:I
+    sput v3, Lcom/estrongs/android/pop/view/utils/n;->d:I
 
-    sput-object v4, Lcom/estrongs/android/pop/view/utils/n;->d:Ljava/lang/String;
+    sput-object v4, Lcom/estrongs/android/pop/view/utils/n;->e:Ljava/lang/String;
 
-    sget-object v0, Lcom/estrongs/android/pop/a;->f:Ljava/lang/String;
+    sget-object v0, Lcom/estrongs/android/pop/a;->h:Ljava/lang/String;
 
-    sput-object v0, Lcom/estrongs/android/pop/view/utils/n;->e:Ljava/lang/String;
+    sput-object v0, Lcom/estrongs/android/pop/view/utils/n;->f:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->e:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->f:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -104,7 +122,29 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->e:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->f:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "/recomm_items_abroad"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/estrongs/android/pop/view/utils/n;->c:Ljava/lang/String;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->f:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -120,13 +160,13 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/estrongs/android/pop/view/utils/n;->f:Ljava/lang/String;
+    sput-object v0, Lcom/estrongs/android/pop/view/utils/n;->g:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->e:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->f:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -142,13 +182,13 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/estrongs/android/pop/view/utils/n;->g:Ljava/lang/String;
+    sput-object v0, Lcom/estrongs/android/pop/view/utils/n;->h:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->e:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->f:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -164,13 +204,13 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/estrongs/android/pop/view/utils/n;->h:Ljava/lang/String;
+    sput-object v0, Lcom/estrongs/android/pop/view/utils/n;->i:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->e:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->f:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -186,13 +226,13 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/estrongs/android/pop/view/utils/n;->i:Ljava/lang/String;
+    sput-object v0, Lcom/estrongs/android/pop/view/utils/n;->j:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->e:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->f:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -208,11 +248,11 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/estrongs/android/pop/view/utils/n;->j:Ljava/lang/String;
+    sput-object v0, Lcom/estrongs/android/pop/view/utils/n;->k:Ljava/lang/String;
 
     const/4 v0, -0x1
 
-    sput v0, Lcom/estrongs/android/pop/view/utils/n;->n:I
+    sput v0, Lcom/estrongs/android/pop/view/utils/n;->o:I
 
     const/4 v0, 0x3
 
@@ -246,23 +286,29 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/estrongs/android/pop/view/utils/n;->o:[Ljava/lang/String;
+    sput-object v0, Lcom/estrongs/android/pop/view/utils/n;->p:[Ljava/lang/String;
 
-    sput-object v4, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sput-object v4, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
-    sput-object v4, Lcom/estrongs/android/pop/view/utils/n;->t:Lcom/estrongs/android/pop/view/utils/n;
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcom/estrongs/android/pop/view/utils/n;->s:Ljava/lang/Object;
+
+    sput-object v4, Lcom/estrongs/android/pop/view/utils/n;->C:Lcom/estrongs/android/pop/view/utils/n;
 
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/estrongs/android/pop/view/utils/n;->u:Ljava/util/HashMap;
+    sput-object v0, Lcom/estrongs/android/pop/view/utils/n;->D:Ljava/util/HashMap;
 
-    sput-boolean v3, Lcom/estrongs/android/pop/view/utils/n;->v:Z
+    sput-boolean v3, Lcom/estrongs/android/pop/view/utils/n;->E:Z
 
     const-string v0, "PreferActivity"
 
-    sput-object v0, Lcom/estrongs/android/pop/view/utils/n;->w:Ljava/lang/String;
+    sput-object v0, Lcom/estrongs/android/pop/view/utils/n;->F:Ljava/lang/String;
 
     return-void
 .end method
@@ -280,21 +326,41 @@
 
     iput-wide v0, p0, Lcom/estrongs/android/pop/view/utils/n;->a:J
 
-    iput-object v2, p0, Lcom/estrongs/android/pop/view/utils/n;->k:Ljava/lang/String;
+    iput-object v3, p0, Lcom/estrongs/android/pop/view/utils/n;->l:Ljava/lang/String;
 
-    iput-object v2, p0, Lcom/estrongs/android/pop/view/utils/n;->l:Ljava/lang/String;
+    iput-object v3, p0, Lcom/estrongs/android/pop/view/utils/n;->m:Ljava/lang/String;
 
-    iput-boolean v3, p0, Lcom/estrongs/android/pop/view/utils/n;->m:Z
+    iput-boolean v2, p0, Lcom/estrongs/android/pop/view/utils/n;->n:Z
 
-    iput-boolean v3, p0, Lcom/estrongs/android/pop/view/utils/n;->p:Z
+    iput-boolean v2, p0, Lcom/estrongs/android/pop/view/utils/n;->q:Z
 
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/view/utils/n;->r:Ljava/lang/Object;
+    iput-object v0, p0, Lcom/estrongs/android/pop/view/utils/n;->t:Ljava/lang/Object;
 
-    iput-object v2, p0, Lcom/estrongs/android/pop/view/utils/n;->s:Landroid/os/Handler;
+    iput-object v3, p0, Lcom/estrongs/android/pop/view/utils/n;->u:Landroid/os/Handler;
+
+    iput v2, p0, Lcom/estrongs/android/pop/view/utils/n;->v:I
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lcom/estrongs/android/pop/view/utils/n;->w:I
+
+    const/16 v0, 0x14
+
+    iput v0, p0, Lcom/estrongs/android/pop/view/utils/n;->x:I
+
+    iput v2, p0, Lcom/estrongs/android/pop/view/utils/n;->y:I
+
+    const-wide/16 v0, -0x1
+
+    iput-wide v0, p0, Lcom/estrongs/android/pop/view/utils/n;->z:J
+
+    iput-boolean v2, p0, Lcom/estrongs/android/pop/view/utils/n;->A:Z
+
+    iput-boolean v2, p0, Lcom/estrongs/android/pop/view/utils/n;->B:Z
 
     return-void
 .end method
@@ -302,7 +368,7 @@
 .method static synthetic a(Lcom/estrongs/android/pop/view/utils/n;Ljava/lang/String;)I
     .locals 1
 
-    invoke-direct {p0, p1}, Lcom/estrongs/android/pop/view/utils/n;->c(Ljava/lang/String;)I
+    invoke-direct {p0, p1}, Lcom/estrongs/android/pop/view/utils/n;->d(Ljava/lang/String;)I
 
     move-result v0
 
@@ -312,7 +378,7 @@
 .method public static a(Landroid/content/Context;Ljava/lang/String;)Lcom/estrongs/android/pop/view/utils/u;
     .locals 3
 
-    sget-boolean v0, Lcom/estrongs/android/pop/view/utils/n;->v:Z
+    sget-boolean v0, Lcom/estrongs/android/pop/view/utils/n;->E:Z
 
     if-nez v0, :cond_0
 
@@ -324,7 +390,7 @@
 
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/estrongs/android/pop/view/utils/n;->v:Z
+    sput-boolean v0, Lcom/estrongs/android/pop/view/utils/n;->E:Z
 
     :cond_0
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
@@ -335,12 +401,12 @@
 
     move-result-object v1
 
-    sget-object v2, Lcom/estrongs/android/pop/view/utils/n;->u:Ljava/util/HashMap;
+    sget-object v2, Lcom/estrongs/android/pop/view/utils/n;->D:Ljava/util/HashMap;
 
     monitor-enter v2
 
     :try_start_0
-    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->u:Ljava/util/HashMap;
+    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->D:Ljava/util/HashMap;
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -391,7 +457,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->i:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->j:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -579,12 +645,12 @@
 .method public static a(Landroid/app/Activity;)V
     .locals 4
 
-    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->u:Ljava/util/HashMap;
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->D:Ljava/util/HashMap;
 
     monitor-enter v1
 
     :try_start_0
-    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->u:Ljava/util/HashMap;
+    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->D:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
@@ -620,7 +686,7 @@
 
     move-result-object v0
 
-    sget-object v3, Lcom/estrongs/android/pop/view/utils/n;->w:Ljava/lang/String;
+    sget-object v3, Lcom/estrongs/android/pop/view/utils/n;->F:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -658,14 +724,14 @@
 .method public static a(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/android/pop/view/utils/u;)V
     .locals 3
 
-    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->u:Ljava/util/HashMap;
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->D:Ljava/util/HashMap;
 
     monitor-enter v1
 
     if-nez p2, :cond_0
 
     :try_start_0
-    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->u:Ljava/util/HashMap;
+    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->D:Ljava/util/HashMap;
 
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
@@ -685,7 +751,7 @@
     return-void
 
     :cond_0
-    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->u:Ljava/util/HashMap;
+    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->D:Ljava/util/HashMap;
 
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
@@ -721,10 +787,10 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/estrongs/android/pop/view/utils/n;Lcom/estrongs/android/util/y;)V
+.method static synthetic a(Lcom/estrongs/android/pop/view/utils/n;Lcom/estrongs/android/util/aa;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/estrongs/android/pop/view/utils/n;->a(Lcom/estrongs/android/util/y;)V
+    invoke-direct {p0, p1}, Lcom/estrongs/android/pop/view/utils/n;->a(Lcom/estrongs/android/util/aa;)V
 
     return-void
 .end method
@@ -736,7 +802,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->f:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->g:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -770,64 +836,48 @@
 
     move-result v1
 
+    if-eqz v1, :cond_1
+
+    :try_start_0
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/v;->k:Landroid/graphics/Bitmap;
+
     if-eqz v1, :cond_0
 
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/v;->k:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_0
+    :goto_0
     invoke-static {v0}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/estrongs/android/pop/view/utils/v;->k:Landroid/graphics/Bitmap;
 
-    :cond_0
-    return-void
-.end method
-
-.method private a(Lcom/estrongs/android/util/y;)V
-    .locals 4
-
-    iget-object v0, p1, Lcom/estrongs/android/util/y;->d:Ljava/lang/Object;
-
-    check-cast v0, Lcom/estrongs/android/pop/view/utils/v;
-
-    check-cast v0, Lcom/estrongs/android/pop/view/utils/v;
-
-    iget-object v1, v0, Lcom/estrongs/android/pop/view/utils/v;->b:Ljava/lang/String;
-
-    if-nez v1, :cond_0
-
-    :goto_0
+    :cond_1
     return-void
 
-    :cond_0
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "http://www.estrongs.com/channel?aid="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v2, Lcom/estrongs/android/util/y;
-
-    invoke-direct {v2, v1}, Lcom/estrongs/android/util/y;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2}, Lcom/estrongs/android/util/y;->c()V
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Lcom/estrongs/android/pop/view/utils/v;->y:Z
+    :catch_0
+    move-exception v1
 
     goto :goto_0
+.end method
+
+.method private a(Lcom/estrongs/android/util/aa;)V
+    .locals 1
+
+    iget-object v0, p1, Lcom/estrongs/android/util/aa;->d:Ljava/lang/Object;
+
+    check-cast v0, Lcom/estrongs/android/pop/view/utils/v;
+
+    check-cast v0, Lcom/estrongs/android/pop/view/utils/v;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/view/utils/n;->d(Lcom/estrongs/android/pop/view/utils/v;)V
+
+    return-void
 .end method
 
 .method private declared-synchronized a([Lcom/estrongs/android/pop/view/utils/v;)V
@@ -838,7 +888,7 @@
     :try_start_0
     new-instance v0, Ljava/io/File;
 
-    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->j:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->k:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -1145,7 +1195,7 @@
 .method static synthetic a(Lcom/estrongs/android/pop/view/utils/n;Z)Z
     .locals 0
 
-    iput-boolean p1, p0, Lcom/estrongs/android/pop/view/utils/n;->m:Z
+    iput-boolean p1, p0, Lcom/estrongs/android/pop/view/utils/n;->n:Z
 
     return p1
 .end method
@@ -1304,7 +1354,7 @@
     :cond_3
     const/4 v1, 0x0
 
-    sget-object v6, Lcom/estrongs/android/pop/view/utils/n;->o:[Ljava/lang/String;
+    sget-object v6, Lcom/estrongs/android/pop/view/utils/n;->p:[Ljava/lang/String;
 
     array-length v7, v6
 
@@ -1441,7 +1491,7 @@
 
     :cond_7
     :try_start_1
-    invoke-virtual {v6}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-interface {v6}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -1463,25 +1513,25 @@
 
     :cond_a
     :try_start_2
-    invoke-static {p4}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {p4}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_c
 
-    invoke-static {}, Lcom/estrongs/android/pop/app/aa;->b()Z
+    invoke-static {}, Lcom/estrongs/android/pop/app/ag;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_c
 
-    invoke-static {p4}, Lcom/estrongs/android/util/bc;->f(Ljava/lang/String;)Z
+    invoke-static {p4}, Lcom/estrongs/android/util/bg;->f(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_b
 
-    invoke-static {p4}, Lcom/estrongs/android/util/bc;->c(Ljava/lang/String;)Z
+    invoke-static {p4}, Lcom/estrongs/android/util/bg;->c(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1510,7 +1560,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0200de
+    const v2, 0x7f0201e8
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1522,7 +1572,7 @@
 
     iput-object v1, v0, Lcom/estrongs/android/pop/view/utils/t;->e:Ljava/lang/String;
 
-    const v1, 0x7f0b04b5
+    const v1, 0x7f0802c1
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1585,7 +1635,7 @@
     monitor-enter v1
 
     :try_start_0
-    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->t:Lcom/estrongs/android/pop/view/utils/n;
+    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->C:Lcom/estrongs/android/pop/view/utils/n;
 
     if-nez v0, :cond_0
 
@@ -1593,10 +1643,10 @@
 
     invoke-direct {v0}, Lcom/estrongs/android/pop/view/utils/n;-><init>()V
 
-    sput-object v0, Lcom/estrongs/android/pop/view/utils/n;->t:Lcom/estrongs/android/pop/view/utils/n;
+    sput-object v0, Lcom/estrongs/android/pop/view/utils/n;->C:Lcom/estrongs/android/pop/view/utils/n;
 
     :cond_0
-    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->t:Lcom/estrongs/android/pop/view/utils/n;
+    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->C:Lcom/estrongs/android/pop/view/utils/n;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1610,58 +1660,6 @@
     monitor-exit v1
 
     throw v0
-.end method
-
-.method private static b(Ljava/lang/String;)Ljava/lang/String;
-    .locals 3
-
-    const/16 v0, 0x2e
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->lastIndexOf(I)I
-
-    move-result v0
-
-    const/4 v1, -0x1
-
-    if-ne v0, v1, :cond_0
-
-    :goto_0
-    return-object p0
-
-    :cond_0
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p0, v2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "_s"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    goto :goto_0
 .end method
 
 .method private static b(Landroid/app/Activity;)V
@@ -1697,7 +1695,7 @@
 
     move-result-object v0
 
-    sget-object v2, Lcom/estrongs/android/pop/view/utils/n;->w:Ljava/lang/String;
+    sget-object v2, Lcom/estrongs/android/pop/view/utils/n;->F:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1727,14 +1725,14 @@
 
     invoke-direct {v2, v0}, Ljava/io/BufferedWriter;-><init>(Ljava/io/Writer;)V
 
-    sget-object v3, Lcom/estrongs/android/pop/view/utils/n;->u:Ljava/util/HashMap;
+    sget-object v3, Lcom/estrongs/android/pop/view/utils/n;->D:Ljava/util/HashMap;
 
     monitor-enter v3
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :try_start_1
-    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->u:Ljava/util/HashMap;
+    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->D:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
@@ -1880,7 +1878,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->h:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->i:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1928,8 +1926,25 @@
 
     move-result v1
 
+    if-eqz v1, :cond_1
+
+    :try_start_0
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/v;->n:[Landroid/graphics/Bitmap;
+
+    aget-object v1, v1, p1
+
     if-eqz v1, :cond_0
 
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/v;->n:[Landroid/graphics/Bitmap;
+
+    aget-object v1, v1, p1
+
+    invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_0
+    :goto_0
     iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/v;->n:[Landroid/graphics/Bitmap;
 
     invoke-static {v0}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
@@ -1938,11 +1953,171 @@
 
     aput-object v0, v1, p1
 
-    :cond_0
+    :cond_1
     return-void
+
+    :catch_0
+    move-exception v1
+
+    goto :goto_0
 .end method
 
-.method private c(Ljava/lang/String;)I
+.method static synthetic b(Lcom/estrongs/android/pop/view/utils/n;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/estrongs/android/pop/view/utils/n;->B:Z
+
+    return p1
+.end method
+
+.method private static c(Ljava/lang/String;)Ljava/lang/String;
+    .locals 3
+
+    const/16 v0, 0x2e
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->lastIndexOf(I)I
+
+    move-result v0
+
+    const/4 v1, -0x1
+
+    if-ne v0, v1, :cond_0
+
+    :goto_0
+    return-object p0
+
+    :cond_0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0, v2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "_s"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    goto :goto_0
+.end method
+
+.method public static c(Lcom/estrongs/android/pop/view/utils/v;I)V
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->h:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "/"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/v;->f:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "/"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/v;->d:[Ljava/lang/String;
+
+    aget-object v1, v1, p1
+
+    invoke-static {v1}, Lcom/estrongs/android/pop/view/utils/n;->c(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/io/File;
+
+    invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    :try_start_0
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/v;->l:[Landroid/graphics/Bitmap;
+
+    aget-object v1, v1, p1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/v;->l:[Landroid/graphics/Bitmap;
+
+    aget-object v1, v1, p1
+
+    invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_0
+    :goto_0
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/v;->l:[Landroid/graphics/Bitmap;
+
+    invoke-static {v0}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    aput-object v0, v1, p1
+
+    :cond_1
+    return-void
+
+    :catch_0
+    move-exception v1
+
+    goto :goto_0
+.end method
+
+.method private d(Ljava/lang/String;)I
     .locals 13
 
     const/4 v6, 0x1
@@ -1980,6 +2155,13 @@
 
     move-result v2
 
+    if-nez v2, :cond_1
+
+    move v2, v4
+
+    goto :goto_0
+
+    :cond_1
     new-array v3, v2, [B
 
     new-instance v7, Ljava/io/RandomAccessFile;
@@ -2019,7 +2201,7 @@
 
     move-result v9
 
-    if-lez v9, :cond_1
+    if-lez v9, :cond_2
 
     const/4 v10, 0x0
 
@@ -2040,7 +2222,7 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     :try_start_1
     invoke-virtual {v7}, Ljava/util/zip/InflaterInputStream;->close()V
 
@@ -2076,7 +2258,7 @@
 
     check-cast v2, Ljava/lang/String;
 
-    iput-object v2, p0, Lcom/estrongs/android/pop/view/utils/n;->k:Ljava/lang/String;
+    iput-object v2, p0, Lcom/estrongs/android/pop/view/utils/n;->l:Ljava/lang/String;
 
     move-object v0, v3
 
@@ -2092,7 +2274,7 @@
 
     check-cast v2, Ljava/lang/String;
 
-    iput-object v2, p0, Lcom/estrongs/android/pop/view/utils/n;->l:Ljava/lang/String;
+    iput-object v2, p0, Lcom/estrongs/android/pop/view/utils/n;->m:Ljava/lang/String;
 
     move-object v0, v3
 
@@ -2108,28 +2290,28 @@
 
     check-cast v2, Ljava/lang/String;
 
-    sget-object v7, Lcom/estrongs/android/pop/view/utils/n;->d:Ljava/lang/String;
+    sget-object v7, Lcom/estrongs/android/pop/view/utils/n;->e:Ljava/lang/String;
 
-    if-eqz v7, :cond_2
+    if-eqz v7, :cond_3
 
-    sget-object v7, Lcom/estrongs/android/pop/view/utils/n;->d:Ljava/lang/String;
+    sget-object v7, Lcom/estrongs/android/pop/view/utils/n;->e:Ljava/lang/String;
 
     invoke-virtual {v7, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
 
-    if-eqz v7, :cond_2
+    if-eqz v7, :cond_3
 
-    sget-object v7, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v7, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
-    if-eqz v7, :cond_2
+    if-eqz v7, :cond_3
 
     move v2, v5
 
     goto/16 :goto_0
 
-    :cond_2
-    sput-object v2, Lcom/estrongs/android/pop/view/utils/n;->d:Ljava/lang/String;
+    :cond_3
+    sput-object v2, Lcom/estrongs/android/pop/view/utils/n;->e:Ljava/lang/String;
 
     check-cast v3, Ljava/util/Map;
 
@@ -2141,7 +2323,7 @@
 
     instance-of v2, v3, Lorg/json/simple/JSONArray;
 
-    if-eqz v2, :cond_11
+    if-eqz v2, :cond_14
 
     move-object v0, v3
 
@@ -2168,7 +2350,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_a
+    if-eqz v2, :cond_b
 
     invoke-interface {v10}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -2244,9 +2426,9 @@
 
     array-length v2, v2
 
-    new-array v2, v2, [Lcom/estrongs/android/util/y;
+    new-array v2, v2, [Lcom/estrongs/android/util/aa;
 
-    iput-object v2, v11, Lcom/estrongs/android/pop/view/utils/v;->m:[Lcom/estrongs/android/util/y;
+    iput-object v2, v11, Lcom/estrongs/android/pop/view/utils/v;->m:[Lcom/estrongs/android/util/aa;
 
     iget-object v2, v11, Lcom/estrongs/android/pop/view/utils/v;->d:[Ljava/lang/String;
 
@@ -2260,9 +2442,9 @@
 
     array-length v2, v2
 
-    new-array v2, v2, [Lcom/estrongs/android/util/y;
+    new-array v2, v2, [Lcom/estrongs/android/util/aa;
 
-    iput-object v2, v11, Lcom/estrongs/android/pop/view/utils/v;->o:[Lcom/estrongs/android/util/y;
+    iput-object v2, v11, Lcom/estrongs/android/pop/view/utils/v;->o:[Lcom/estrongs/android/util/aa;
 
     move-object v0, v3
 
@@ -2434,7 +2616,7 @@
 
     iget-object v2, v11, Lcom/estrongs/android/pop/view/utils/v;->j:Ljava/lang/String;
 
-    if-nez v2, :cond_4
+    if-nez v2, :cond_5
 
     iget-object v2, v11, Lcom/estrongs/android/pop/view/utils/v;->f:Ljava/lang/String;
 
@@ -2444,7 +2626,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_3
+    if-nez v2, :cond_4
 
     iget-object v2, v11, Lcom/estrongs/android/pop/view/utils/v;->f:Ljava/lang/String;
 
@@ -2454,14 +2636,14 @@
 
     move-result v2
 
-    if-eqz v2, :cond_6
+    if-eqz v2, :cond_7
 
-    :cond_3
+    :cond_4
     const-string v2, "text/plain;application/msexcel;application/ms-excel;application/vnd.ms-excel;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;application/vnd.openxmlformats-officedocument.spreadsheetml.template;application/mspowerpoint;application/ms-powerpoint;application/vnd.ms-powerpoint;application/vnd.openxmlformats-officedocument.presentationml.presentation;application/vnd.openxmlformats-officedocument.presentationml.template;application/vnd.openxmlformats-officedocument.presentationml.slideshow;application/msword;application/ms-word;application/vnd.ms-word;application/vnd.ms-works;application/vnd.openxmlformats-officedocument.wordprocessingml.document;application/vnd.openxmlformats-officedocument.wordprocessingml.template;application/octet-stream;application/log;application/kswps;application/kset;application/ksdps;application/wps;application/et;application/dps;application/dpt;application/wpt;application/ett"
 
     iput-object v2, v11, Lcom/estrongs/android/pop/view/utils/v;->j:Ljava/lang/String;
 
-    :cond_4
+    :cond_5
     :goto_3
     invoke-virtual {p0, v11}, Lcom/estrongs/android/pop/view/utils/n;->b(Lcom/estrongs/android/pop/view/utils/v;)I
 
@@ -2475,13 +2657,13 @@
 
     move-result v2
 
-    if-nez v2, :cond_8
+    if-nez v2, :cond_9
 
     const/4 v2, 0x0
 
     iput-boolean v2, v11, Lcom/estrongs/android/pop/view/utils/v;->w:Z
 
-    :cond_5
+    :cond_6
     :goto_4
     const-string v2, "vcode"
 
@@ -2497,7 +2679,7 @@
 
     move-result v2
 
-    if-ne v2, v6, :cond_9
+    if-ne v2, v6, :cond_a
 
     move v2, v6
 
@@ -2512,7 +2694,7 @@
 
     goto/16 :goto_2
 
-    :cond_6
+    :cond_7
     iget-object v2, v11, Lcom/estrongs/android/pop/view/utils/v;->f:Ljava/lang/String;
 
     const-string v12, "com.uc.browser"
@@ -2521,7 +2703,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_7
+    if-nez v2, :cond_8
 
     iget-object v2, v11, Lcom/estrongs/android/pop/view/utils/v;->f:Ljava/lang/String;
 
@@ -2531,7 +2713,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_7
+    if-nez v2, :cond_8
 
     iget-object v2, v11, Lcom/estrongs/android/pop/view/utils/v;->f:Ljava/lang/String;
 
@@ -2541,19 +2723,19 @@
 
     move-result v2
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_5
 
-    :cond_7
+    :cond_8
     const-string v2, "text/plain;text/html"
 
     iput-object v2, v11, Lcom/estrongs/android/pop/view/utils/v;->j:Ljava/lang/String;
 
     goto :goto_3
 
-    :cond_8
+    :cond_9
     iget-object v2, v11, Lcom/estrongs/android/pop/view/utils/v;->e:Ljava/lang/String;
 
-    if-nez v2, :cond_5
+    if-nez v2, :cond_6
 
     const/4 v2, 0x0
 
@@ -2561,33 +2743,37 @@
 
     goto :goto_4
 
-    :cond_9
+    :cond_a
     move v2, v5
 
     goto :goto_5
 
-    :cond_a
-    sget-object v2, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    :cond_b
+    sget-object v2, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
-    if-eqz v2, :cond_e
+    if-eqz v2, :cond_f
+
+    iget-boolean v2, p0, Lcom/estrongs/android/pop/view/utils/n;->B:Z
+
+    if-eqz v2, :cond_f
 
     move v3, v5
 
     :goto_6
     array-length v2, v9
 
-    if-ge v3, v2, :cond_f
+    if-ge v3, v2, :cond_10
 
     move v2, v5
 
     :goto_7
-    sget-object v7, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v7, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     array-length v7, v7
 
-    if-ge v2, v7, :cond_c
+    if-ge v2, v7, :cond_d
 
-    sget-object v7, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v7, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v7, v7, v2
 
@@ -2601,11 +2787,11 @@
 
     move-result v7
 
-    if-eqz v7, :cond_d
+    if-eqz v7, :cond_e
 
     aget-object v7, v9, v3
 
-    sget-object v10, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v10, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v10, v10, v2
 
@@ -2617,9 +2803,9 @@
 
     iget-object v7, v7, Lcom/estrongs/android/pop/view/utils/v;->d:[Ljava/lang/String;
 
-    sget-object v10, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v10, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
-    aget-object v10, v10, v3
+    aget-object v10, v10, v2
 
     iget-object v10, v10, Lcom/estrongs/android/pop/view/utils/v;->d:[Ljava/lang/String;
 
@@ -2627,11 +2813,11 @@
 
     move-result v7
 
-    if-eqz v7, :cond_b
+    if-eqz v7, :cond_c
 
     aget-object v7, v9, v3
 
-    sget-object v10, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v10, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v10, v10, v2
 
@@ -2641,17 +2827,17 @@
 
     aget-object v7, v9, v3
 
-    sget-object v10, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v10, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v10, v10, v2
 
-    iget-object v10, v10, Lcom/estrongs/android/pop/view/utils/v;->o:[Lcom/estrongs/android/util/y;
+    iget-object v10, v10, Lcom/estrongs/android/pop/view/utils/v;->o:[Lcom/estrongs/android/util/aa;
 
-    iput-object v10, v7, Lcom/estrongs/android/pop/view/utils/v;->o:[Lcom/estrongs/android/util/y;
+    iput-object v10, v7, Lcom/estrongs/android/pop/view/utils/v;->o:[Lcom/estrongs/android/util/aa;
 
     aget-object v7, v9, v3
 
-    sget-object v10, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v10, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v10, v10, v2
 
@@ -2661,18 +2847,18 @@
 
     aget-object v7, v9, v3
 
-    sget-object v10, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v10, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v10, v10, v2
 
-    iget-object v10, v10, Lcom/estrongs/android/pop/view/utils/v;->m:[Lcom/estrongs/android/util/y;
+    iget-object v10, v10, Lcom/estrongs/android/pop/view/utils/v;->m:[Lcom/estrongs/android/util/aa;
 
-    iput-object v10, v7, Lcom/estrongs/android/pop/view/utils/v;->m:[Lcom/estrongs/android/util/y;
+    iput-object v10, v7, Lcom/estrongs/android/pop/view/utils/v;->m:[Lcom/estrongs/android/util/aa;
 
-    :cond_b
+    :cond_c
     aget-object v7, v9, v3
 
-    sget-object v10, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v10, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v10, v10, v2
 
@@ -2682,7 +2868,7 @@
 
     aget-object v7, v9, v3
 
-    sget-object v10, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v10, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v10, v10, v2
 
@@ -2692,17 +2878,17 @@
 
     aget-object v7, v9, v3
 
-    sget-object v10, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v10, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v10, v10, v2
 
-    iget-object v10, v10, Lcom/estrongs/android/pop/view/utils/v;->r:Lcom/estrongs/android/util/y;
+    iget-object v10, v10, Lcom/estrongs/android/pop/view/utils/v;->r:Lcom/estrongs/android/util/aa;
 
-    iput-object v10, v7, Lcom/estrongs/android/pop/view/utils/v;->r:Lcom/estrongs/android/util/y;
+    iput-object v10, v7, Lcom/estrongs/android/pop/view/utils/v;->r:Lcom/estrongs/android/util/aa;
 
     aget-object v7, v9, v3
 
-    sget-object v10, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v10, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v10, v10, v2
 
@@ -2712,7 +2898,7 @@
 
     aget-object v7, v9, v3
 
-    sget-object v10, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v10, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v2, v10, v2
 
@@ -2720,89 +2906,152 @@
 
     iput-wide v10, v7, Lcom/estrongs/android/pop/view/utils/v;->u:J
 
-    :cond_c
+    :cond_d
     add-int/lit8 v2, v3, 0x1
 
     move v3, v2
 
     goto/16 :goto_6
 
-    :cond_d
+    :cond_e
     add-int/lit8 v2, v2, 0x1
 
     goto/16 :goto_7
 
-    :cond_e
+    :cond_f
     invoke-direct {p0, v9}, Lcom/estrongs/android/pop/view/utils/n;->a([Lcom/estrongs/android/pop/view/utils/v;)V
 
-    :cond_f
+    :cond_10
     array-length v2, v9
 
-    if-eqz v2, :cond_10
+    if-eqz v2, :cond_11
 
-    iget-boolean v2, p0, Lcom/estrongs/android/pop/view/utils/n;->p:Z
+    iget-boolean v2, p0, Lcom/estrongs/android/pop/view/utils/n;->q:Z
 
-    if-nez v2, :cond_10
+    if-nez v2, :cond_11
 
-    sput-object v9, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v3, Lcom/estrongs/android/pop/view/utils/n;->s:Ljava/lang/Object;
+
+    monitor-enter v3
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    :cond_10
+    :try_start_2
+    iget-boolean v2, p0, Lcom/estrongs/android/pop/view/utils/n;->B:Z
+
+    if-nez v2, :cond_12
+
+    sput-object v9, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
+
+    sget-object v2, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
+
+    array-length v2, v2
+
+    iput v2, p0, Lcom/estrongs/android/pop/view/utils/n;->v:I
+
+    :goto_8
+    monitor-exit v3
+
+    :cond_11
     move v2, v6
 
     goto/16 :goto_0
 
-    :cond_11
+    :cond_12
+    sget-object v2, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
+
+    if-nez v2, :cond_13
+
+    sput-object v9, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
+
+    goto :goto_8
+
+    :catchall_0
+    move-exception v2
+
+    monitor-exit v3
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :try_start_3
+    throw v2
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
+
+    :cond_13
+    :try_start_4
+    sget-object v2, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
+
+    array-length v2, v2
+
+    iget v5, p0, Lcom/estrongs/android/pop/view/utils/n;->v:I
+
+    sub-int/2addr v2, v5
+
+    array-length v5, v9
+
+    add-int/2addr v2, v5
+
+    new-array v2, v2, [Lcom/estrongs/android/pop/view/utils/v;
+
+    const/4 v5, 0x0
+
+    const/4 v7, 0x0
+
+    array-length v10, v9
+
+    invoke-static {v9, v5, v2, v7, v10}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    sget-object v5, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
+
+    iget v7, p0, Lcom/estrongs/android/pop/view/utils/n;->v:I
+
+    array-length v9, v9
+
+    sget-object v10, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
+
+    array-length v10, v10
+
+    iget v11, p0, Lcom/estrongs/android/pop/view/utils/n;->v:I
+
+    sub-int/2addr v10, v11
+
+    invoke-static {v5, v7, v2, v9, v10}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    sput-object v2, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    goto :goto_8
+
+    :cond_14
     move v2, v4
 
     goto/16 :goto_0
 .end method
 
-.method public static c(Lcom/estrongs/android/pop/view/utils/v;I)V
-    .locals 2
+.method public static d(Lcom/estrongs/android/pop/view/utils/v;)V
+    .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/utils/v;->b:Ljava/lang/String;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    if-nez v0, :cond_0
 
-    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->g:Ljava/lang/String;
+    :goto_0
+    return-void
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "/"
+    const-string v2, "http://www.estrongs.com/channel?aid="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/v;->f:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "/"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/v;->d:[Ljava/lang/String;
-
-    aget-object v1, v1, p1
-
-    invoke-static {v1}, Lcom/estrongs/android/pop/view/utils/n;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -2810,26 +3059,17 @@
 
     move-result-object v0
 
-    new-instance v1, Ljava/io/File;
+    new-instance v1, Lcom/estrongs/android/util/aa;
 
-    invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v0}, Lcom/estrongs/android/util/aa;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+    invoke-virtual {v1}, Lcom/estrongs/android/util/aa;->c()V
 
-    move-result v1
+    const/4 v0, 0x1
 
-    if-eqz v1, :cond_0
+    iput-boolean v0, p0, Lcom/estrongs/android/pop/view/utils/v;->y:Z
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/v;->l:[Landroid/graphics/Bitmap;
-
-    invoke-static {v0}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    aput-object v0, v1, p1
-
-    :cond_0
-    return-void
+    goto :goto_0
 .end method
 
 .method private static d(Landroid/content/Context;)Z
@@ -2872,7 +3112,7 @@
 
     move-result-object v2
 
-    sget-object v4, Lcom/estrongs/android/pop/view/utils/n;->w:Ljava/lang/String;
+    sget-object v4, Lcom/estrongs/android/pop/view/utils/n;->F:Ljava/lang/String;
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2911,14 +3151,14 @@
 
     invoke-direct {v2, v4}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    sget-object v4, Lcom/estrongs/android/pop/view/utils/n;->u:Ljava/util/HashMap;
+    sget-object v4, Lcom/estrongs/android/pop/view/utils/n;->D:Ljava/util/HashMap;
 
     monitor-enter v4
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :try_start_1
-    sget-object v5, Lcom/estrongs/android/pop/view/utils/n;->u:Ljava/util/HashMap;
+    sget-object v5, Lcom/estrongs/android/pop/view/utils/n;->D:Ljava/util/HashMap;
 
     invoke-virtual {v5}, Ljava/util/HashMap;->clear()V
 
@@ -2940,7 +3180,7 @@
 
     if-ne v12, v6, :cond_3
 
-    sget-object v6, Lcom/estrongs/android/pop/view/utils/n;->u:Ljava/util/HashMap;
+    sget-object v6, Lcom/estrongs/android/pop/view/utils/n;->D:Ljava/util/HashMap;
 
     const/4 v7, 0x0
 
@@ -2989,7 +3229,7 @@
 
     if-ne v6, v7, :cond_2
 
-    sget-object v6, Lcom/estrongs/android/pop/view/utils/n;->u:Ljava/util/HashMap;
+    sget-object v6, Lcom/estrongs/android/pop/view/utils/n;->D:Ljava/util/HashMap;
 
     const/4 v7, 0x0
 
@@ -3030,7 +3270,7 @@
     goto/16 :goto_0
 .end method
 
-.method private f(Lcom/estrongs/android/pop/view/utils/v;)Z
+.method private g(Lcom/estrongs/android/pop/view/utils/v;)Z
     .locals 4
 
     const/4 v0, 0x0
@@ -3097,7 +3337,7 @@
     goto :goto_0
 .end method
 
-.method private g(Lcom/estrongs/android/pop/view/utils/v;)V
+.method private h(Lcom/estrongs/android/pop/view/utils/v;)V
     .locals 7
 
     const/4 v6, 0x0
@@ -3229,11 +3469,11 @@
 
     const/4 v0, -0x1
 
-    sget v3, Lcom/estrongs/android/pop/view/utils/n;->n:I
+    sget v3, Lcom/estrongs/android/pop/view/utils/n;->o:I
 
     if-ne v0, v3, :cond_0
 
-    invoke-static {}, Lcom/estrongs/android/util/bd;->o()Z
+    invoke-static {}, Lcom/estrongs/android/util/bk;->o()Z
 
     move-result v0
 
@@ -3242,10 +3482,10 @@
     move v0, v1
 
     :goto_0
-    sput v0, Lcom/estrongs/android/pop/view/utils/n;->n:I
+    sput v0, Lcom/estrongs/android/pop/view/utils/n;->o:I
 
     :cond_0
-    sget v0, Lcom/estrongs/android/pop/view/utils/n;->n:I
+    sget v0, Lcom/estrongs/android/pop/view/utils/n;->o:I
 
     if-ne v1, v0, :cond_2
 
@@ -3269,7 +3509,7 @@
     monitor-enter p0
 
     :try_start_0
-    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -3284,7 +3524,7 @@
     :try_start_1
     new-instance v0, Ljava/io/File;
 
-    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->j:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->k:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -3306,13 +3546,13 @@
     move v1, v0
 
     :goto_1
-    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     array-length v0, v0
 
     if-ge v1, v0, :cond_2
 
-    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v0, v0, v1
 
@@ -3328,7 +3568,7 @@
 
     move-result-object v0
 
-    sget-object v4, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v4, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v4, v4, v1
 
@@ -3342,7 +3582,7 @@
 
     move-result-object v0
 
-    sget-object v4, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v4, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v4, v4, v1
 
@@ -3443,7 +3683,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->D()J
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->E()J
 
     move-result-wide v0
 
@@ -3469,14 +3709,14 @@
 .method public a(Landroid/os/Handler;)Landroid/os/Handler;
     .locals 2
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/n;->r:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/n;->t:Ljava/lang/Object;
 
     monitor-enter v1
 
     :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/utils/n;->s:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/utils/n;->u:Landroid/os/Handler;
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/view/utils/n;->s:Landroid/os/Handler;
+    iput-object p1, p0, Lcom/estrongs/android/pop/view/utils/n;->u:Landroid/os/Handler;
 
     monitor-exit v1
 
@@ -3511,12 +3751,12 @@
 .method public a(Landroid/os/Message;J)V
     .locals 4
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/n;->r:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/n;->t:Ljava/lang/Object;
 
     monitor-enter v1
 
     :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/utils/n;->s:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/utils/n;->u:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
 
@@ -3526,7 +3766,7 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/utils/n;->s:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/utils/n;->u:Landroid/os/Handler;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
@@ -3537,7 +3777,7 @@
     return-void
 
     :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/utils/n;->s:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/utils/n;->u:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
@@ -3556,7 +3796,7 @@
 .method public a(Lcom/estrongs/android/pop/view/utils/v;I)V
     .locals 2
 
-    iget-object v0, p1, Lcom/estrongs/android/pop/view/utils/v;->r:Lcom/estrongs/android/util/y;
+    iget-object v0, p1, Lcom/estrongs/android/pop/view/utils/v;->r:Lcom/estrongs/android/util/aa;
 
     if-eqz v0, :cond_2
 
@@ -3576,13 +3816,13 @@
     iput p2, p1, Lcom/estrongs/android/pop/view/utils/v;->q:I
 
     :cond_1
-    iget-object v0, p1, Lcom/estrongs/android/pop/view/utils/v;->r:Lcom/estrongs/android/util/y;
+    iget-object v0, p1, Lcom/estrongs/android/pop/view/utils/v;->r:Lcom/estrongs/android/util/aa;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/util/y;->b()V
+    invoke-virtual {v0}, Lcom/estrongs/android/util/aa;->b()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p1, Lcom/estrongs/android/pop/view/utils/v;->r:Lcom/estrongs/android/util/y;
+    iput-object v0, p1, Lcom/estrongs/android/pop/view/utils/v;->r:Lcom/estrongs/android/util/aa;
 
     :cond_2
     const-wide/16 v0, 0x0
@@ -3620,11 +3860,11 @@
     move-result-object v0
 
     :cond_0
-    sget-object v1, Lcom/estrongs/android/pop/esclasses/e;->a:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/esclasses/i;->a:Ljava/lang/String;
 
     if-eqz v1, :cond_2
 
-    sget-object v0, Lcom/estrongs/android/pop/esclasses/e;->a:Ljava/lang/String;
+    sget-object v0, Lcom/estrongs/android/pop/esclasses/i;->a:Ljava/lang/String;
 
     const-string v1, "CN"
 
@@ -3634,7 +3874,7 @@
 
     if-nez v0, :cond_1
 
-    sget-object v0, Lcom/estrongs/android/pop/esclasses/e;->a:Ljava/lang/String;
+    sget-object v0, Lcom/estrongs/android/pop/esclasses/i;->a:Ljava/lang/String;
 
     const-string v1, "TW"
 
@@ -3651,11 +3891,11 @@
     :goto_0
     const-string v1, "http://www.estrongs.com/channel?"
 
-    sget v2, Lcom/estrongs/android/pop/view/utils/n;->c:I
+    sget v2, Lcom/estrongs/android/pop/view/utils/n;->d:I
 
     if-nez v2, :cond_6
 
-    sget-object v2, Lcom/estrongs/android/pop/view/utils/n;->d:Ljava/lang/String;
+    sget-object v2, Lcom/estrongs/android/pop/view/utils/n;->e:Ljava/lang/String;
 
     if-nez v2, :cond_5
 
@@ -3703,17 +3943,43 @@
     move-result-object v0
 
     :cond_3
-    new-instance v1, Lcom/estrongs/android/util/y;
+    const/4 v1, 0x1
 
-    invoke-direct {v1, v0}, Lcom/estrongs/android/util/y;-><init>(Ljava/lang/String;)V
+    iput-boolean v1, p0, Lcom/estrongs/android/pop/view/utils/n;->n:Z
+
+    new-instance v1, Ljava/util/Date;
+
+    invoke-direct {v1}, Ljava/util/Date;-><init>()V
+
+    invoke-virtual {v1}, Ljava/util/Date;->getTime()J
+
+    move-result-wide v2
+
+    iput-wide v2, p0, Lcom/estrongs/android/pop/view/utils/n;->a:J
+
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+
+    move-result-object v1
+
+    iget-wide v2, p0, Lcom/estrongs/android/pop/view/utils/n;->a:J
+
+    invoke-virtual {v1, v2, v3}, Lcom/estrongs/android/pop/ad;->c(J)V
+
+    new-instance v1, Lcom/estrongs/android/util/aa;
+
+    invoke-direct {v1, v0}, Lcom/estrongs/android/util/aa;-><init>(Ljava/lang/String;)V
 
     new-instance v0, Lcom/estrongs/android/pop/view/utils/o;
 
     invoke-direct {v0, p0}, Lcom/estrongs/android/pop/view/utils/o;-><init>(Lcom/estrongs/android/pop/view/utils/n;)V
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/util/y;->a(Lcom/estrongs/android/util/ab;)V
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/util/aa;->a(Lcom/estrongs/android/util/af;)V
 
-    invoke-virtual {v1, v1}, Lcom/estrongs/android/util/y;->a(Ljava/lang/Object;)V
+    invoke-virtual {v1, v1}, Lcom/estrongs/android/util/aa;->a(Ljava/lang/Object;)V
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3735,35 +4001,9 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/util/y;->a(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/util/aa;->a(Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Lcom/estrongs/android/util/y;->c()V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/estrongs/android/pop/view/utils/n;->m:Z
-
-    new-instance v0, Ljava/util/Date;
-
-    invoke-direct {v0}, Ljava/util/Date;-><init>()V
-
-    invoke-virtual {v0}, Ljava/util/Date;->getTime()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lcom/estrongs/android/pop/view/utils/n;->a:J
-
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
-
-    move-result-object v0
-
-    iget-wide v2, p0, Lcom/estrongs/android/pop/view/utils/n;->a:J
-
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/pop/ad;->c(J)V
+    invoke-virtual {v1}, Lcom/estrongs/android/util/aa;->c()V
 
     return-void
 
@@ -3797,7 +4037,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->d:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->e:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3810,7 +4050,7 @@
     goto/16 :goto_1
 
     :cond_6
-    sget-object v2, Lcom/estrongs/android/pop/view/utils/n;->d:Ljava/lang/String;
+    sget-object v2, Lcom/estrongs/android/pop/view/utils/n;->e:Ljava/lang/String;
 
     if-nez v2, :cond_7
 
@@ -3828,7 +4068,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/estrongs/android/pop/view/utils/n;->c:I
+    sget v2, Lcom/estrongs/android/pop/view/utils/n;->d:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -3865,7 +4105,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/estrongs/android/pop/view/utils/n;->c:I
+    sget v2, Lcom/estrongs/android/pop/view/utils/n;->d:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -3887,7 +4127,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->d:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->e:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3918,7 +4158,7 @@
 
     aget-object v1, p1, v0
 
-    iget-object v2, v1, Lcom/estrongs/android/pop/view/utils/v;->r:Lcom/estrongs/android/util/y;
+    iget-object v2, v1, Lcom/estrongs/android/pop/view/utils/v;->r:Lcom/estrongs/android/util/aa;
 
     if-eqz v2, :cond_3
 
@@ -3938,13 +4178,13 @@
     iput p2, v1, Lcom/estrongs/android/pop/view/utils/v;->q:I
 
     :cond_2
-    iget-object v2, v1, Lcom/estrongs/android/pop/view/utils/v;->r:Lcom/estrongs/android/util/y;
+    iget-object v2, v1, Lcom/estrongs/android/pop/view/utils/v;->r:Lcom/estrongs/android/util/aa;
 
-    invoke-virtual {v2}, Lcom/estrongs/android/util/y;->b()V
+    invoke-virtual {v2}, Lcom/estrongs/android/util/aa;->b()V
 
     const/4 v2, 0x0
 
-    iput-object v2, v1, Lcom/estrongs/android/pop/view/utils/v;->r:Lcom/estrongs/android/util/y;
+    iput-object v2, v1, Lcom/estrongs/android/pop/view/utils/v;->r:Lcom/estrongs/android/util/aa;
 
     :cond_3
     const-wide/16 v2, 0x0
@@ -4036,6 +4276,128 @@
     goto :goto_0
 .end method
 
+.method public declared-synchronized b(Ljava/lang/String;)V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    monitor-enter p0
+
+    :try_start_0
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez v1, :cond_1
+
+    :cond_0
+    monitor-exit p0
+
+    return-void
+
+    :cond_1
+    :goto_0
+    :try_start_1
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
+
+    array-length v1, v1
+
+    if-ge v0, v1, :cond_0
+
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
+
+    aget-object v1, v1, v0
+
+    iget-boolean v1, v1, Lcom/estrongs/android/pop/view/utils/v;->y:Z
+
+    if-nez v1, :cond_2
+
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
+
+    aget-object v1, v1, v0
+
+    iget v1, v1, Lcom/estrongs/android/pop/view/utils/v;->q:I
+
+    const/4 v2, 0x3
+
+    if-eq v1, v2, :cond_2
+
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
+
+    aget-object v1, v1, v0
+
+    iget v1, v1, Lcom/estrongs/android/pop/view/utils/v;->q:I
+
+    const/4 v2, 0x7
+
+    if-ne v1, v2, :cond_3
+
+    :cond_2
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
+
+    aget-object v1, v1, v0
+
+    iget-object v1, v1, Lcom/estrongs/android/pop/view/utils/v;->f:Ljava/lang/String;
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
+
+    aget-object v1, v1, v0
+
+    const/4 v2, 0x0
+
+    iput-boolean v2, v1, Lcom/estrongs/android/pop/view/utils/v;->y:Z
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "http://www.estrongs.com/channel?iid="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    sget-object v2, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
+
+    aget-object v2, v2, v0
+
+    iget-object v2, v2, Lcom/estrongs/android/pop/view/utils/v;->b:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/estrongs/android/util/aa;
+
+    invoke-direct {v2, v1}, Lcom/estrongs/android/util/aa;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Lcom/estrongs/android/util/aa;->c()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :cond_3
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
 .method public b(Landroid/content/Context;)[Lcom/estrongs/android/pop/view/utils/v;
     .locals 4
 
@@ -4057,7 +4419,7 @@
     return-object v0
 
     :cond_0
-    invoke-static {}, Lcom/estrongs/android/util/ak;->b()Z
+    invoke-static {}, Lcom/estrongs/android/util/an;->b()Z
 
     move-result v0
 
@@ -4072,20 +4434,20 @@
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     if-eqz v0, :cond_3
 
     const/4 v0, 0x0
 
     :goto_1
-    sget-object v3, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v3, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     array-length v3, v3
 
     if-ge v0, v3, :cond_3
 
-    sget-object v3, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v3, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v3, v3, v0
 
@@ -4093,7 +4455,7 @@
 
     if-eqz v3, :cond_2
 
-    sget-object v3, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v3, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v3, v3, v0
 
@@ -4105,7 +4467,7 @@
 
     if-nez v3, :cond_2
 
-    sget-object v3, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v3, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v3, v3, v0
 
@@ -4144,6 +4506,8 @@
 
     const/4 v0, 0x0
 
+    iput-boolean v0, p0, Lcom/estrongs/android/pop/view/utils/n;->B:Z
+
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/view/utils/n;->a(Z)V
 
     return-void
@@ -4173,11 +4537,11 @@
     return v0
 
     :cond_1
-    new-instance v0, Lcom/estrongs/android/util/y;
+    new-instance v0, Lcom/estrongs/android/util/aa;
 
     iget-object v1, p1, Lcom/estrongs/android/pop/view/utils/v;->e:Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Lcom/estrongs/android/util/y;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/estrongs/android/util/aa;-><init>(Ljava/lang/String;)V
 
     iget-object v1, p1, Lcom/estrongs/android/pop/view/utils/v;->f:Ljava/lang/String;
 
@@ -4185,19 +4549,19 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/util/y;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/util/aa;->a(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v0}, Lcom/estrongs/android/util/y;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v0}, Lcom/estrongs/android/util/aa;->a(Ljava/lang/Object;)V
 
-    iput-object p1, v0, Lcom/estrongs/android/util/y;->d:Ljava/lang/Object;
+    iput-object p1, v0, Lcom/estrongs/android/util/aa;->d:Ljava/lang/Object;
 
     new-instance v1, Lcom/estrongs/android/pop/view/utils/p;
 
     invoke-direct {v1, p0}, Lcom/estrongs/android/pop/view/utils/p;-><init>(Lcom/estrongs/android/pop/view/utils/n;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/util/y;->a(Lcom/estrongs/android/util/ab;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/util/aa;->a(Lcom/estrongs/android/util/af;)V
 
-    iput-object v0, p1, Lcom/estrongs/android/pop/view/utils/v;->r:Lcom/estrongs/android/util/y;
+    iput-object v0, p1, Lcom/estrongs/android/pop/view/utils/v;->r:Lcom/estrongs/android/util/aa;
 
     iget v1, p1, Lcom/estrongs/android/pop/view/utils/v;->q:I
 
@@ -4205,7 +4569,7 @@
 
     if-ne v1, v2, :cond_2
 
-    invoke-virtual {v0}, Lcom/estrongs/android/util/y;->f()V
+    invoke-virtual {v0}, Lcom/estrongs/android/util/aa;->f()V
 
     :goto_1
     const/4 v0, 0x1
@@ -4213,7 +4577,7 @@
     goto :goto_0
 
     :cond_2
-    invoke-virtual {v0}, Lcom/estrongs/android/util/y;->c()V
+    invoke-virtual {v0}, Lcom/estrongs/android/util/aa;->c()V
 
     goto :goto_1
 .end method
@@ -4239,20 +4603,20 @@
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     if-eqz v0, :cond_2
 
     const/4 v0, 0x0
 
     :goto_0
-    sget-object v4, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v4, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     array-length v4, v4
 
     if-ge v0, v4, :cond_2
 
-    sget-object v4, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v4, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v4, v4, v0
 
@@ -4264,7 +4628,7 @@
 
     if-eqz v2, :cond_0
 
-    sget-object v4, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v4, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v4, v4, v0
 
@@ -4275,7 +4639,7 @@
     if-eqz v4, :cond_1
 
     :cond_0
-    sget-object v4, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v4, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v4, v4, v0
 
@@ -4313,47 +4677,6 @@
     move-object v0, v1
 
     goto :goto_1
-.end method
-
-.method public d(Lcom/estrongs/android/pop/view/utils/v;)Landroid/graphics/Bitmap;
-    .locals 2
-
-    iget-object v0, p1, Lcom/estrongs/android/pop/view/utils/v;->k:Landroid/graphics/Bitmap;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p1, Lcom/estrongs/android/pop/view/utils/v;->k:Landroid/graphics/Bitmap;
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    invoke-static {p1}, Lcom/estrongs/android/pop/view/utils/n;->a(Lcom/estrongs/android/pop/view/utils/v;)V
-
-    iget-object v0, p1, Lcom/estrongs/android/pop/view/utils/v;->k:Landroid/graphics/Bitmap;
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p1, Lcom/estrongs/android/pop/view/utils/v;->a:Ljava/lang/String;
-
-    const-string v1, "http://"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-static {}, Lcom/estrongs/android/pop/view/utils/n;->b()Lcom/estrongs/android/pop/view/utils/n;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lcom/estrongs/android/pop/view/utils/n;->e(Lcom/estrongs/android/pop/view/utils/v;)V
-
-    :cond_1
-    iget-object v0, p1, Lcom/estrongs/android/pop/view/utils/v;->k:Landroid/graphics/Bitmap;
-
-    goto :goto_0
 .end method
 
 .method public d(Lcom/estrongs/android/pop/view/utils/v;I)Landroid/graphics/Bitmap;
@@ -4402,20 +4725,20 @@
 
     const/4 v1, 0x0
 
-    sget-object v2, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v2, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     if-eqz v2, :cond_0
 
-    iget-boolean v2, p0, Lcom/estrongs/android/pop/view/utils/n;->p:Z
+    iget-boolean v2, p0, Lcom/estrongs/android/pop/view/utils/n;->q:Z
 
     if-eqz v2, :cond_3
 
     :cond_0
-    sput-object v0, Lcom/estrongs/android/pop/view/utils/n;->d:Ljava/lang/String;
+    sput-object v0, Lcom/estrongs/android/pop/view/utils/n;->e:Ljava/lang/String;
 
     sget-object v2, Lcom/estrongs/android/pop/view/utils/n;->b:Ljava/lang/String;
 
-    invoke-direct {p0, v2}, Lcom/estrongs/android/pop/view/utils/n;->c(Ljava/lang/String;)I
+    invoke-direct {p0, v2}, Lcom/estrongs/android/pop/view/utils/n;->d(Ljava/lang/String;)I
 
     move-result v2
 
@@ -4428,29 +4751,29 @@
     return-object v0
 
     :cond_2
-    sget-object v2, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v2, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     if-eqz v2, :cond_1
 
     :cond_3
-    iput-boolean v1, p0, Lcom/estrongs/android/pop/view/utils/n;->p:Z
+    iput-boolean v1, p0, Lcom/estrongs/android/pop/view/utils/n;->q:Z
 
     move v0, v1
 
     move v2, v1
 
     :goto_1
-    sget-object v3, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v3, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     array-length v3, v3
 
     if-ge v0, v3, :cond_5
 
-    sget-object v3, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v3, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v3, v3, v0
 
-    invoke-direct {p0, v3}, Lcom/estrongs/android/pop/view/utils/n;->f(Lcom/estrongs/android/pop/view/utils/v;)Z
+    invoke-direct {p0, v3}, Lcom/estrongs/android/pop/view/utils/n;->g(Lcom/estrongs/android/pop/view/utils/v;)Z
 
     move-result v3
 
@@ -4464,13 +4787,13 @@
     goto :goto_1
 
     :cond_5
-    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     array-length v0, v0
 
     if-ne v2, v0, :cond_6
 
-    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     goto :goto_0
 
@@ -4480,23 +4803,23 @@
     move v0, v1
 
     :goto_2
-    sget-object v3, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v3, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     array-length v3, v3
 
     if-ge v1, v3, :cond_8
 
-    sget-object v3, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v3, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v3, v3, v1
 
-    invoke-direct {p0, v3}, Lcom/estrongs/android/pop/view/utils/n;->f(Lcom/estrongs/android/pop/view/utils/v;)Z
+    invoke-direct {p0, v3}, Lcom/estrongs/android/pop/view/utils/n;->g(Lcom/estrongs/android/pop/view/utils/v;)Z
 
     move-result v3
 
     if-eqz v3, :cond_7
 
-    sget-object v3, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v3, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v3, v3, v1
 
@@ -4511,6 +4834,47 @@
 
     :cond_8
     move-object v0, v2
+
+    goto :goto_0
+.end method
+
+.method public e(Lcom/estrongs/android/pop/view/utils/v;)Landroid/graphics/Bitmap;
+    .locals 2
+
+    iget-object v0, p1, Lcom/estrongs/android/pop/view/utils/v;->k:Landroid/graphics/Bitmap;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p1, Lcom/estrongs/android/pop/view/utils/v;->k:Landroid/graphics/Bitmap;
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    invoke-static {p1}, Lcom/estrongs/android/pop/view/utils/n;->a(Lcom/estrongs/android/pop/view/utils/v;)V
+
+    iget-object v0, p1, Lcom/estrongs/android/pop/view/utils/v;->k:Landroid/graphics/Bitmap;
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p1, Lcom/estrongs/android/pop/view/utils/v;->a:Ljava/lang/String;
+
+    const-string v1, "http://"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-static {}, Lcom/estrongs/android/pop/view/utils/n;->b()Lcom/estrongs/android/pop/view/utils/n;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/estrongs/android/pop/view/utils/n;->f(Lcom/estrongs/android/pop/view/utils/v;)V
+
+    :cond_1
+    iget-object v0, p1, Lcom/estrongs/android/pop/view/utils/v;->k:Landroid/graphics/Bitmap;
 
     goto :goto_0
 .end method
@@ -4557,24 +4921,24 @@
 .method public e()V
     .locals 2
 
-    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
     :goto_0
-    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     array-length v1, v1
 
     if-ge v0, v1, :cond_0
 
-    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v1, v1, v0
 
-    invoke-direct {p0, v1}, Lcom/estrongs/android/pop/view/utils/n;->g(Lcom/estrongs/android/pop/view/utils/v;)V
+    invoke-direct {p0, v1}, Lcom/estrongs/android/pop/view/utils/n;->h(Lcom/estrongs/android/pop/view/utils/v;)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -4584,22 +4948,49 @@
     return-void
 .end method
 
-.method public e(Lcom/estrongs/android/pop/view/utils/v;)V
+.method public f()V
+    .locals 2
+
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/view/utils/n;->q:Z
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
+
+    const/4 v1, 0x4
+
+    invoke-virtual {p0, v0, v1}, Lcom/estrongs/android/pop/view/utils/n;->a([Lcom/estrongs/android/pop/view/utils/v;I)V
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/view/utils/n;->g()V
+
+    const/4 v0, 0x0
+
+    sput-object v0, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/estrongs/android/pop/view/utils/n;->q:Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public f(Lcom/estrongs/android/pop/view/utils/v;)V
     .locals 3
 
-    new-instance v0, Lcom/estrongs/android/util/y;
+    new-instance v0, Lcom/estrongs/android/util/aa;
 
     iget-object v1, p1, Lcom/estrongs/android/pop/view/utils/v;->a:Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Lcom/estrongs/android/util/y;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/estrongs/android/util/aa;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, v0, Lcom/estrongs/android/util/y;->d:Ljava/lang/Object;
+    iput-object p1, v0, Lcom/estrongs/android/util/aa;->d:Ljava/lang/Object;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v2, Lcom/estrongs/android/pop/view/utils/n;->f:Ljava/lang/String;
+    sget-object v2, Lcom/estrongs/android/pop/view/utils/n;->g:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4625,52 +5016,25 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/util/y;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/util/aa;->a(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v0}, Lcom/estrongs/android/util/y;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v0}, Lcom/estrongs/android/util/aa;->a(Ljava/lang/Object;)V
 
     new-instance v1, Lcom/estrongs/android/pop/view/utils/q;
 
     invoke-direct {v1, p0}, Lcom/estrongs/android/pop/view/utils/q;-><init>(Lcom/estrongs/android/pop/view/utils/n;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/util/y;->a(Lcom/estrongs/android/util/ab;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/util/aa;->a(Lcom/estrongs/android/util/af;)V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/util/y;->c()V
+    invoke-virtual {v0}, Lcom/estrongs/android/util/aa;->c()V
 
-    return-void
-.end method
-
-.method public f()V
-    .locals 2
-
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/view/utils/n;->p:Z
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
-
-    const/4 v1, 0x4
-
-    invoke-virtual {p0, v0, v1}, Lcom/estrongs/android/pop/view/utils/n;->a([Lcom/estrongs/android/pop/view/utils/v;I)V
-
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/view/utils/n;->g()V
-
-    const/4 v0, 0x0
-
-    sput-object v0, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/estrongs/android/pop/view/utils/n;->p:Z
-
-    :cond_0
     return-void
 .end method
 
 .method public f(Lcom/estrongs/android/pop/view/utils/v;I)V
     .locals 3
 
-    iget-object v0, p1, Lcom/estrongs/android/pop/view/utils/v;->o:[Lcom/estrongs/android/util/y;
+    iget-object v0, p1, Lcom/estrongs/android/pop/view/utils/v;->o:[Lcom/estrongs/android/util/aa;
 
     aget-object v0, v0, p2
 
@@ -4680,13 +5044,13 @@
     return-void
 
     :cond_0
-    new-instance v0, Lcom/estrongs/android/util/y;
+    new-instance v0, Lcom/estrongs/android/util/aa;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/view/utils/n;->l:Ljava/lang/String;
+    iget-object v2, p0, Lcom/estrongs/android/pop/view/utils/n;->m:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4704,21 +5068,21 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/estrongs/android/util/y;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/estrongs/android/util/aa;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, v0, Lcom/estrongs/android/util/y;->d:Ljava/lang/Object;
+    iput-object p1, v0, Lcom/estrongs/android/util/aa;->d:Ljava/lang/Object;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/estrongs/android/util/y;->e:Ljava/lang/Object;
+    iput-object v1, v0, Lcom/estrongs/android/util/aa;->e:Ljava/lang/Object;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v2, Lcom/estrongs/android/pop/view/utils/n;->h:Ljava/lang/String;
+    sget-object v2, Lcom/estrongs/android/pop/view/utils/n;->i:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4758,19 +5122,19 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/util/y;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/util/aa;->a(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v0}, Lcom/estrongs/android/util/y;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v0}, Lcom/estrongs/android/util/aa;->a(Ljava/lang/Object;)V
 
     new-instance v1, Lcom/estrongs/android/pop/view/utils/r;
 
     invoke-direct {v1, p0}, Lcom/estrongs/android/pop/view/utils/r;-><init>(Lcom/estrongs/android/pop/view/utils/n;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/util/y;->a(Lcom/estrongs/android/util/ab;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/util/aa;->a(Lcom/estrongs/android/util/af;)V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/util/y;->c()V
+    invoke-virtual {v0}, Lcom/estrongs/android/util/aa;->c()V
 
-    iget-object v1, p1, Lcom/estrongs/android/pop/view/utils/v;->o:[Lcom/estrongs/android/util/y;
+    iget-object v1, p1, Lcom/estrongs/android/pop/view/utils/v;->o:[Lcom/estrongs/android/util/aa;
 
     aput-object v0, v1, p2
 
@@ -4780,20 +5144,20 @@
 .method public g()V
     .locals 3
 
-    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v0, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     if-eqz v0, :cond_1
 
     const/4 v0, 0x0
 
     :goto_0
-    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     array-length v1, v1
 
     if-ge v0, v1, :cond_1
 
-    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v1, v1, v0
 
@@ -4801,7 +5165,7 @@
 
     if-eqz v1, :cond_0
 
-    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v1, v1, v0
 
@@ -4809,7 +5173,7 @@
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
 
-    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->q:[Lcom/estrongs/android/pop/view/utils/v;
+    sget-object v1, Lcom/estrongs/android/pop/view/utils/n;->r:[Lcom/estrongs/android/pop/view/utils/v;
 
     aget-object v1, v1, v0
 
@@ -4829,7 +5193,7 @@
 .method public g(Lcom/estrongs/android/pop/view/utils/v;I)V
     .locals 4
 
-    iget-object v0, p1, Lcom/estrongs/android/pop/view/utils/v;->m:[Lcom/estrongs/android/util/y;
+    iget-object v0, p1, Lcom/estrongs/android/pop/view/utils/v;->m:[Lcom/estrongs/android/util/aa;
 
     aget-object v0, v0, p2
 
@@ -4843,17 +5207,17 @@
 
     aget-object v0, v0, p2
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/view/utils/n;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/pop/view/utils/n;->c(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Lcom/estrongs/android/util/y;
+    new-instance v1, Lcom/estrongs/android/util/aa;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v3, p0, Lcom/estrongs/android/pop/view/utils/n;->l:Ljava/lang/String;
+    iget-object v3, p0, Lcom/estrongs/android/pop/view/utils/n;->m:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4867,21 +5231,21 @@
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcom/estrongs/android/util/y;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Lcom/estrongs/android/util/aa;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, v1, Lcom/estrongs/android/util/y;->d:Ljava/lang/Object;
+    iput-object p1, v1, Lcom/estrongs/android/util/aa;->d:Ljava/lang/Object;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    iput-object v2, v1, Lcom/estrongs/android/util/y;->e:Ljava/lang/Object;
+    iput-object v2, v1, Lcom/estrongs/android/util/aa;->e:Ljava/lang/Object;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v3, Lcom/estrongs/android/pop/view/utils/n;->g:Ljava/lang/String;
+    sget-object v3, Lcom/estrongs/android/pop/view/utils/n;->h:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4917,19 +5281,19 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/util/y;->a(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/util/aa;->a(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v1}, Lcom/estrongs/android/util/y;->a(Ljava/lang/Object;)V
+    invoke-virtual {v1, v1}, Lcom/estrongs/android/util/aa;->a(Ljava/lang/Object;)V
 
     new-instance v0, Lcom/estrongs/android/pop/view/utils/s;
 
     invoke-direct {v0, p0}, Lcom/estrongs/android/pop/view/utils/s;-><init>(Lcom/estrongs/android/pop/view/utils/n;)V
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/util/y;->a(Lcom/estrongs/android/util/ab;)V
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/util/aa;->a(Lcom/estrongs/android/util/af;)V
 
-    invoke-virtual {v1}, Lcom/estrongs/android/util/y;->c()V
+    invoke-virtual {v1}, Lcom/estrongs/android/util/aa;->c()V
 
-    iget-object v0, p1, Lcom/estrongs/android/pop/view/utils/v;->m:[Lcom/estrongs/android/util/y;
+    iget-object v0, p1, Lcom/estrongs/android/pop/view/utils/v;->m:[Lcom/estrongs/android/util/aa;
 
     aput-object v1, v0, p2
 
@@ -4939,7 +5303,7 @@
 .method public h()Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/view/utils/n;->m:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/view/utils/n;->n:Z
 
     return v0
 .end method

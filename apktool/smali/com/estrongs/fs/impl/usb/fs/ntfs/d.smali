@@ -50,15 +50,11 @@
 .end method
 
 .method static synthetic a(Lcom/estrongs/fs/impl/usb/fs/ntfs/d;I)I
-    .locals 1
+    .locals 0
 
-    iget v0, p0, Lcom/estrongs/fs/impl/usb/fs/ntfs/d;->b:I
+    iput p1, p0, Lcom/estrongs/fs/impl/usb/fs/ntfs/d;->b:I
 
-    add-int/2addr v0, p1
-
-    iput v0, p0, Lcom/estrongs/fs/impl/usb/fs/ntfs/d;->b:I
-
-    return v0
+    return p1
 .end method
 
 .method private a(IB)V

@@ -1,33 +1,29 @@
 package com.estrongs.android.pop.app;
 
 import android.os.Bundle;
-import com.estrongs.android.util.a;
+import com.estrongs.android.j.c;
 
 public class ESContentChooserActivity
   extends FileChooserActivity
 {
-  private a b = null;
+  private c b = null;
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    b = a.a(this, false, "ESContentChooser");
+    b = c.a(this);
+    b.d("act3");
+    b.a("act3", "es_open_content");
   }
   
   protected void onPause()
   {
     super.onPause();
-    if (b != null) {
-      b.c();
-    }
   }
   
   protected void onResume()
   {
     super.onResume();
-    if (b != null) {
-      b.b();
-    }
   }
 }
 

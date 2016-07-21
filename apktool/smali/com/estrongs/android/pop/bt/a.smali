@@ -100,7 +100,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->y()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->z()Ljava/lang/String;
 
     move-result-object v0
 
@@ -356,7 +356,7 @@
 .method private b(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -626,7 +626,7 @@
 
     const-string v5, "Accepting OBEX ftp connections"
 
-    invoke-static {v0, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v5}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/bt/a;->c:Lb/b/g;
 
@@ -653,7 +653,7 @@
 
     const-string v2, "Unable to create notifier"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     throw v0
 
@@ -674,7 +674,7 @@
 
     const-string v2, "OBEX Server finished!"
 
-    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iput-boolean v1, p0, Lcom/estrongs/android/pop/bt/a;->e:Z
 
@@ -714,7 +714,7 @@
 
     const-string v2, "OBEX Server finished!"
 
-    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iput-boolean v1, p0, Lcom/estrongs/android/pop/bt/a;->e:Z
 
@@ -728,7 +728,7 @@
 
     const-string v5, "acceptAndOpen "
 
-    invoke-static {v4, v5, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v4, v5, v0}, Lcom/estrongs/android/util/l;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
@@ -745,7 +745,7 @@
 
     const-string v3, "OBEX Server finished!"
 
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iput-boolean v1, p0, Lcom/estrongs/android/pop/bt/a;->e:Z
 
@@ -767,7 +767,7 @@
 
     const-string v1, "close"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -797,7 +797,7 @@
 
     const-string v1, "OBEX ServerConnection closed"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -811,7 +811,7 @@
 
     const-string v2, "OBEX Server stop error"
 
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v1, v2, v0}, Lcom/estrongs/android/util/l;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method

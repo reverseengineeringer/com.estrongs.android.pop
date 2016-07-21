@@ -69,7 +69,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->bs(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->bJ(Ljava/lang/String;)Z
 
     move-result v1
 

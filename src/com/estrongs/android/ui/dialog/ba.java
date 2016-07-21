@@ -1,81 +1,22 @@
 package com.estrongs.android.ui.dialog;
 
-import android.app.Activity;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.pop.b.a;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.RadioButton;
 
 class ba
-  implements DialogInterface.OnClickListener
+  implements CompoundButton.OnCheckedChangeListener
 {
-  ba(az paramaz) {}
+  ba(aw paramaw, ar paramar) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void onCheckedChanged(CompoundButton paramCompoundButton, boolean paramBoolean)
   {
-    String str = null;
-    int i = -1;
-    paramDialogInterface.dismiss();
-    if (paramInt == 0)
+    if (paramBoolean)
     {
-      paramInt = a.a("ftp");
-      if (paramInt != -1)
-      {
-        paramDialogInterface = null;
-        str = "ftp";
-      }
+      b.a.setChecked(false);
+      return;
     }
-    for (;;)
-    {
-      if (str != null)
-      {
-        a.a((Activity)az.a(a), str, paramInt, new bb(this, str));
-        return;
-        paramDialogInterface = new ey(az.a(a), "ftp", true);
-        continue;
-        if (paramInt == 1)
-        {
-          paramInt = a.a("sftp");
-          if (paramInt != -1)
-          {
-            paramDialogInterface = null;
-            str = "sftp";
-            continue;
-          }
-          paramDialogInterface = new ey(az.a(a), "sftp", true);
-          continue;
-        }
-        if (paramInt == 2)
-        {
-          paramInt = a.a("ftp");
-          if (paramInt != -1)
-          {
-            paramDialogInterface = null;
-            str = "ftps";
-            continue;
-          }
-          paramDialogInterface = new ey(az.a(a), "ftps", true);
-          continue;
-        }
-        if (paramInt == 3)
-        {
-          paramInt = a.a("webdav");
-          if (paramInt != -1)
-          {
-            paramDialogInterface = null;
-            str = "webdav";
-            continue;
-          }
-          paramDialogInterface = new ey(az.a(a), "webdav", true);
-        }
-      }
-      else
-      {
-        paramDialogInterface.a();
-        return;
-      }
-      paramDialogInterface = null;
-      paramInt = i;
-    }
+    b.a.setChecked(true);
   }
 }
 

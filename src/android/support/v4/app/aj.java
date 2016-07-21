@@ -1,14 +1,28 @@
 package android.support.v4.app;
 
-import android.app.Notification;
+import java.io.FileDescriptor;
+import java.io.PrintWriter;
+import java.util.List;
 
-class aj
-  implements ah
+public abstract class aj
 {
-  public Notification a(af paramaf)
-  {
-    return an.a(a, r, b, c, h, f, i, d, e, g);
-  }
+  public abstract Fragment a(int paramInt);
+  
+  public abstract Fragment a(String paramString);
+  
+  public abstract az a();
+  
+  public abstract void a(int paramInt1, int paramInt2);
+  
+  public abstract void a(String paramString, FileDescriptor paramFileDescriptor, PrintWriter paramPrintWriter, String[] paramArrayOfString);
+  
+  public abstract boolean b();
+  
+  public abstract boolean c();
+  
+  public abstract List<Fragment> d();
+  
+  public abstract boolean e();
 }
 
 /* Location:

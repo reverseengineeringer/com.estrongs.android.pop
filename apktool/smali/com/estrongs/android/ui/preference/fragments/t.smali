@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/preference/Preference$OnPreferenceClickListener;
+.implements Landroid/preference/Preference$OnPreferenceChangeListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/preference/fragments/CleanPreferenceFragment;
+.field final synthetic a:Lcom/estrongs/android/ui/preference/fragments/BackupPreferenceFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/preference/fragments/CleanPreferenceFragment;)V
+.method constructor <init>(Lcom/estrongs/android/ui/preference/fragments/BackupPreferenceFragment;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/preference/fragments/t;->a:Lcom/estrongs/android/ui/preference/fragments/CleanPreferenceFragment;
+    iput-object p1, p0, Lcom/estrongs/android/ui/preference/fragments/t;->a:Lcom/estrongs/android/ui/preference/fragments/BackupPreferenceFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,29 +22,26 @@
 
 
 # virtual methods
-.method public onPreferenceClick(Landroid/preference/Preference;)Z
-    .locals 3
+.method public onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/t;->a:Lcom/estrongs/android/ui/preference/fragments/CleanPreferenceFragment;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/preference/fragments/CleanPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/view/utils/n;->a(Landroid/app/Activity;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/t;->a:Lcom/estrongs/android/ui/preference/fragments/CleanPreferenceFragment;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/preference/fragments/CleanPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    const v1, 0x7f0b0288
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    const/4 v2, 0x0
+    move-result v0
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    if-nez v0, :cond_0
 
+    invoke-static {}, Lcom/estrongs/android/pop/view/utils/RemoteSynchronizer;->f()V
+
+    :cond_0
     const/4 v0, 0x1
 
     return v0

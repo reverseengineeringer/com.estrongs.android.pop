@@ -1,21 +1,23 @@
 package com.estrongs.android.pop.app.editor;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.a.a;
-import com.estrongs.android.pop.m;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnTouchListener;
+import android.widget.EditText;
 
 class r
-  implements DialogInterface.OnClickListener
+  implements View.OnTouchListener
 {
-  r(PopNoteEditor paramPopNoteEditor, boolean paramBoolean) {}
+  r(PopNoteEditor paramPopNoteEditor) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    s locals = new s(this);
-    locals.setTaskDecisionListener(new m(b));
-    locals.execute();
-    paramDialogInterface.dismiss();
+    if (paramMotionEvent.getY() > PopNoteEditor.c(a).getHeight())
+    {
+      paramMotionEvent.setLocation(PopNoteEditor.d(a).getWidth(), paramMotionEvent.getY());
+      PopNoteEditor.c(a).dispatchTouchEvent(paramMotionEvent);
+    }
+    return false;
   }
 }
 

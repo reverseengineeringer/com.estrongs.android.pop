@@ -1,16 +1,20 @@
-.class Lcom/estrongs/android/pop/view/ei;
+.class public Lcom/estrongs/android/pop/view/ei;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/estrongs/fs/impl/o/e;
 
 
 # instance fields
 .field final synthetic a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
+.field private b:Lcom/estrongs/android/view/cr;
+
+.field private c:Ljava/lang/String;
+
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
+.method public constructor <init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
     .locals 0
 
     iput-object p1, p0, Lcom/estrongs/android/pop/view/ei;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
@@ -20,82 +24,62 @@
     return-void
 .end method
 
+.method static synthetic a(Lcom/estrongs/android/pop/view/ei;)Lcom/estrongs/android/view/cr;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/ei;->b:Lcom/estrongs/android/view/cr;
+
+    return-object v0
+.end method
+
+.method static synthetic b(Lcom/estrongs/android/pop/view/ei;)Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/ei;->c:Ljava/lang/String;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public run()V
-    .locals 4
+.method public a(Lcom/estrongs/android/view/cr;Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/pop/view/ei;->b:Lcom/estrongs/android/view/cr;
+
+    iput-object p2, p0, Lcom/estrongs/android/pop/view/ei;->c:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public a(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 2
+
+    if-eqz p3, :cond_0
 
     iget-object v0, p0, Lcom/estrongs/android/pop/view/ei;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->N(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
+    const/4 v1, 0x0
 
-    invoke-static {}, Lcom/estrongs/android/ui/d/e;->a()I
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/view/ei;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-static {v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->d(Lcom/estrongs/android/pop/view/FileExplorerActivity;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, Lcom/estrongs/android/util/bd;->a(Ljava/util/List;I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/view/ei;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-static {v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->d(Lcom/estrongs/android/pop/view/FileExplorerActivity;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-interface {v1, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/android/util/o;
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/view/ei;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    const/4 v2, 0x1
-
-    invoke-static {v1, v0, v2}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a(Lcom/estrongs/android/pop/view/FileExplorerActivity;Lcom/estrongs/android/util/o;Z)V
+    invoke-static {v0, p3, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
     :cond_0
-    :try_start_0
-    invoke-static {}, Landroid/webkit/WebIconDatabase;->getInstance()Landroid/webkit/WebIconDatabase;
+    const/16 v0, 0x7941
 
-    move-result-object v0
+    if-lt p2, v0, :cond_1
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/view/ei;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    const/16 v0, 0x7946
 
-    const-string v2, "icons"
+    if-gt p2, v0, :cond_1
 
-    const/4 v3, 0x0
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/ei;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-virtual {v1, v2, v3}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->getDir(Ljava/lang/String;I)Ljava/io/File;
+    new-instance v1, Lcom/estrongs/android/pop/view/ej;
 
-    move-result-object v1
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/view/ej;-><init>(Lcom/estrongs/android/pop/view/ei;)V
 
-    invoke-virtual {v1}, Ljava/io/File;->getPath()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/webkit/WebIconDatabase;->open(Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
+    :cond_1
     return-void
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-
-    goto :goto_0
 .end method

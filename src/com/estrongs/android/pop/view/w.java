@@ -1,13 +1,15 @@
 package com.estrongs.android.pop.view;
 
+import com.estrongs.android.pop.app.analysis.a;
+
 class w
   implements Runnable
 {
-  w(FileExplorerActivity paramFileExplorerActivity) {}
+  w(FileExplorerActivity paramFileExplorerActivity, String paramString1, String paramString2) {}
   
   public void run()
   {
-    a.e("ftp://");
+    a.a().a("app://", a, b, null);
   }
 }
 

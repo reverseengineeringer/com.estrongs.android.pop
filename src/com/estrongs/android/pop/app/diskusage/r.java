@@ -1,7 +1,7 @@
 package com.estrongs.android.pop.app.diskusage;
 
-import android.widget.ListView;
-import com.estrongs.android.ui.a.k;
+import android.support.v7.widget.RecyclerView;
+import com.estrongs.android.ui.adapter.k;
 
 class r
   implements Runnable
@@ -10,10 +10,10 @@ class r
   
   public void run()
   {
-    if (h.m(a) != null)
+    if (h.n(a) != null)
     {
-      h.m(a).a(null);
-      h.n(a).setAdapter(h.m(a));
+      h.n(a).a(null);
+      h.p(a).setAdapter(h.n(a));
     }
   }
 }

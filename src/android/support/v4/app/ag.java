@@ -1,11 +1,12 @@
 package android.support.v4.app;
 
-import java.util.ArrayList;
+import android.view.View;
 
-public class ag
-  extends am
+public abstract class ag
 {
-  ArrayList<CharSequence> a = new ArrayList();
+  public abstract View a(int paramInt);
+  
+  public abstract boolean a();
 }
 
 /* Location:

@@ -1,30 +1,17 @@
 package android.support.v4.view;
 
-import android.graphics.Paint;
-import android.view.View;
+import android.view.ViewGroup.MarginLayoutParams;
 
 class aw
-  extends av
 {
-  long a()
+  public static int a(ViewGroup.MarginLayoutParams paramMarginLayoutParams)
   {
-    return bc.a();
+    return paramMarginLayoutParams.getMarginStart();
   }
   
-  public void a(View paramView, int paramInt, Paint paramPaint)
+  public static int b(ViewGroup.MarginLayoutParams paramMarginLayoutParams)
   {
-    bc.a(paramView, paramInt, paramPaint);
-  }
-  
-  public void a(View paramView, Paint paramPaint)
-  {
-    a(paramView, d(paramView), paramPaint);
-    paramView.invalidate();
-  }
-  
-  public int d(View paramView)
-  {
-    return bc.a(paramView);
+    return paramMarginLayoutParams.getMarginEnd();
   }
 }
 

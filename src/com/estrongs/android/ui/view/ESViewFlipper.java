@@ -9,7 +9,7 @@ public class ESViewFlipper
   extends ViewFlipper
 {
   public static final String a = ESViewFlipper.class.getSimpleName();
-  private at b;
+  private ax b;
   
   public ESViewFlipper(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -35,6 +35,11 @@ public class ESViewFlipper
     {
       stopFlipping();
     }
+  }
+  
+  public void setConfigListener(ax paramax)
+  {
+    b = paramax;
   }
 }
 

@@ -1,22 +1,16 @@
 package com.estrongs.android.pop.app;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.pop.app.a.ak;
-import com.estrongs.android.ui.view.ac;
-import java.util.List;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 
 class ep
-  implements View.OnClickListener
+  implements MenuItem.OnMenuItemClickListener
 {
   ep(PopAudioPlayer paramPopAudioPlayer) {}
   
-  public void onClick(View paramView)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramView = PopAudioPlayer.i(a).d();
-    if ((paramView != null) && (paramView.size() > 0)) {
-      PopAudioPlayer.a(a, (ak)PopAudioPlayer.i(a).d().get(0));
-    }
+    return a.h();
   }
 }
 

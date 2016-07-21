@@ -1,22 +1,26 @@
 package com.estrongs.android.view;
 
-import android.view.View;
-import android.widget.ProgressBar;
-import android.widget.TextView;
+import com.estrongs.android.pop.app.compress.ai;
+import com.estrongs.android.pop.app.compress.aw;
+import com.estrongs.android.pop.app.compress.ax;
+import com.estrongs.fs.impl.d.a;
+import com.estrongs.fs.impl.local.f;
+import java.io.File;
+import java.util.LinkedList;
+import java.util.Map;
 
 class ap
-  implements Runnable
+  implements aw
 {
-  ap(am paramam) {}
+  ap(ao paramao) {}
   
-  public void run()
+  public void a(ai paramai)
   {
-    ak.z(a.a).setVisibility(8);
-    ak.l(a.a).setVisibility(0);
-    ak.b(a.a).setVisibility(0);
-    ak.b(a.a).setIndeterminate(true);
-    ak.o(a.a).setVisibility(8);
-    ak.A(a.a).setText(2131428123);
+    a locala = new a(new f(new File(a)));
+    a.b.H.addFirst(locala);
+    ak.v().put(a, new ax(a.b.ag, paramai));
+    a.b.a_(a.b.H);
+    a.b.i.notifyDataSetChanged();
   }
 }
 

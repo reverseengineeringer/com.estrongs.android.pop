@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/fc;
+.field final synthetic a:Lcom/estrongs/android/pop/app/fa;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/fc;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/fa;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/fd;->a:Lcom/estrongs/android/pop/app/fc;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/fd;->a:Lcom/estrongs/android/pop/app/fa;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,14 +22,18 @@
 
 
 # virtual methods
-.method public run()V
+.method public onClick(Landroid/view/View;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/fd;->a:Lcom/estrongs/android/pop/app/fc;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/fd;->a:Lcom/estrongs/android/pop/app/fa;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/fc;->b:Lcom/estrongs/android/pop/app/PopAudioPlayer;
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/fa;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->g()V
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Lcom/estrongs/android/ui/view/ac;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/ac;->d()V
 
     return-void
 .end method

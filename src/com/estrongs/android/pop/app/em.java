@@ -1,17 +1,16 @@
 package com.estrongs.android.pop.app;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.ui.view.ac;
+import com.estrongs.android.widget.RealViewSwitcher;
 
 class em
-  implements View.OnClickListener
+  implements Runnable
 {
   em(PopAudioPlayer paramPopAudioPlayer) {}
   
-  public void onClick(View paramView)
+  public void run()
   {
-    PopAudioPlayer.i(a).e();
+    PopAudioPlayer.m(a).setCurrentScreen(0);
+    PopAudioPlayer.a(a, new gn(a));
   }
 }
 

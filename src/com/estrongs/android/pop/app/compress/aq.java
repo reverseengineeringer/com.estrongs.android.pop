@@ -1,17 +1,26 @@
 package com.estrongs.android.pop.app.compress;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.ui.dialog.ct;
+import android.text.Editable;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.EditText;
 
 class aq
-  implements View.OnClickListener
+  implements CompoundButton.OnCheckedChangeListener
 {
-  aq(ai paramai) {}
+  aq(aj paramaj, int paramInt) {}
   
-  public void onClick(View paramView)
+  public void onCheckedChanged(CompoundButton paramCompoundButton, boolean paramBoolean)
   {
-    new ct(ai.d(a)).a(2131427711).a(ai.m(a), ai.n(a), new at(this)).b(2131427339, new as(this)).c(2131427340, new ar(this)).c();
+    if (paramBoolean) {
+      aj.l(b).setInputType(144);
+    }
+    for (;;)
+    {
+      aj.l(b).setSelection(aj.l(b).getText().length());
+      return;
+      aj.l(b).setInputType(a);
+    }
   }
 }
 

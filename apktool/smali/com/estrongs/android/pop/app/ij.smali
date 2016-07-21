@@ -2,22 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/preference/Preference$OnPreferenceChangeListener;
+.implements Lcom/estrongs/fs/i;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/preference/CustomListPreference;
+.field final synthetic a:Z
 
-.field final synthetic b:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+.field final synthetic b:Lcom/estrongs/android/pop/app/ii;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;Lcom/estrongs/android/ui/preference/CustomListPreference;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/ii;Z)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/ij;->b:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/ij;->b:Lcom/estrongs/android/pop/app/ii;
 
-    iput-object p2, p0, Lcom/estrongs/android/pop/app/ij;->a:Lcom/estrongs/android/ui/preference/CustomListPreference;
+    iput-boolean p2, p0, Lcom/estrongs/android/pop/app/ij;->a:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,39 +26,32 @@
 
 
 # virtual methods
-.method public onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
+.method public a(Lcom/estrongs/fs/h;)Z
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ij;->a:Lcom/estrongs/android/ui/preference/CustomListPreference;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/preference/CustomListPreference;->a(Ljava/lang/String;)Ljava/lang/CharSequence;
+    invoke-interface {p1}, Lcom/estrongs/fs/h;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->b(Ljava/lang/CharSequence;)Z
+    const-string v1, "."
 
-    move-result v1
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    if-eqz v1, :cond_0
+    move-result v0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/ij;->a:Lcom/estrongs/android/ui/preference/CustomListPreference;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/preference/CustomListPreference;->setSummary(Ljava/lang/CharSequence;)V
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/ij;->a:Z
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
 
     :cond_0
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
-
-    move-result-object v0
-
-    const-string v1, "search_engine_default"
-
-    invoke-virtual {v0, v1, p2}, Lcom/estrongs/android/pop/FexApplication;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
     const/4 v0, 0x1
 
-    return v0
+    goto :goto_0
 .end method

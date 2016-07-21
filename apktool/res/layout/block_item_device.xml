@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.estrongs.android.ui.view.HomeSdcardProgressView android:id="@id/home_sdcard_progress" android:layout_width="@dimen/dp_60" android:layout_height="@dimen/dp_60" android:layout_marginLeft="@dimen/dp_8" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_5" android:layout_toRightOf="@id/home_sdcard_progress" android:layout_centerVertical="true">
+        <TextView android:textSize="@dimen/home_block_item_text_size" android:textColor="@color/main_content_text" android:id="@id/name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_4" android:singleLine="true" android:layout_alignParentTop="true" />
+        <LinearLayout android:orientation="horizontal" android:paddingBottom="@dimen/dp_4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_3" android:layout_below="@id/name" android:layout_alignLeft="@id/name">
+            <TextView android:textSize="@dimen/dp_9" android:textColor="@color/c_99000000" android:id="@id/available" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:singleLine="true" />
+            <TextView android:textSize="@dimen/dp_9" android:textColor="@color/c_99000000" android:id="@id/size_divider" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:text="/" />
+            <TextView android:textSize="@dimen/dp_9" android:textColor="@color/c_99000000" android:gravity="center|left" android:id="@id/total" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:text="0" android:singleLine="true" android:layout_weight="1.0" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

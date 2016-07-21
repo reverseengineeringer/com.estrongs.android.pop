@@ -164,7 +164,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bc;->S(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/bg;->U(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -413,7 +413,7 @@
     move-result-object v2
 
     :goto_1
-    invoke-static {v3}, Lcom/estrongs/android/util/bc;->S(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/estrongs/android/util/bg;->U(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 

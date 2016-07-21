@@ -5,12 +5,12 @@ import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.Preference;
-import com.estrongs.android.pop.esclasses.i;
+import com.estrongs.android.pop.esclasses.m;
 import com.estrongs.android.pop.view.FileExplorerActivity;
 
 @SuppressLint({"NewApi"})
 public class CleanPreferenceFragment
-  extends i
+  extends m
 {
   private Preference a;
   private ProgressDialog b;
@@ -18,17 +18,17 @@ public class CleanPreferenceFragment
   
   private void a()
   {
-    if (FileExplorerActivity.J() == null) {
+    if (FileExplorerActivity.X() == null) {
       return;
     }
     b();
-    FileExplorerActivity.J().a(true, new Handler(), new u(this));
+    FileExplorerActivity.X().a(true, new Handler(), new w(this));
   }
   
   private void b()
   {
     b = new ProgressDialog(getActivity());
-    b.setMessage(getText(2131427455));
+    b.setMessage(getText(2131232177));
     b.setIndeterminate(true);
     b.setCancelable(true);
     b.show();
@@ -39,10 +39,10 @@ public class CleanPreferenceFragment
     super.onCreate(paramBundle);
     addPreferencesFromResource(2131034122);
     a = findPreference("cache");
-    a.setOnPreferenceClickListener(new s(this));
+    a.setOnPreferenceClickListener(new u(this));
     c = findPreference("clean_prefer");
     if (c != null) {
-      c.setOnPreferenceClickListener(new t(this));
+      c.setOnPreferenceClickListener(new v(this));
     }
   }
 }

@@ -29,15 +29,9 @@
 
     iget-object v1, p0, Lcom/estrongs/android/ui/theme/j;->a:Lcom/estrongs/android/ui/theme/ModifyThemeActivity;
 
-    const-class v2, Lcom/estrongs/android/ui/theme/ThemeColorActivity;
+    const-class v2, Lcom/estrongs/android/ui/theme/ThemeFolderActivity;
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v1, "set_what_color"
-
-    const/4 v2, 0x2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const-string v1, "theme_data_index"
 
@@ -51,7 +45,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/ui/theme/j;->a:Lcom/estrongs/android/ui/theme/ModifyThemeActivity;
 
-    const v2, 0x10001022
+    const/16 v2, 0x1023
 
     invoke-virtual {v1, v0, v2}, Lcom/estrongs/android/ui/theme/ModifyThemeActivity;->startActivityForResult(Landroid/content/Intent;I)V
 

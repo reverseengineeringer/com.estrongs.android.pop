@@ -1,28 +1,15 @@
 package com.estrongs.android.pop.view;
 
-import android.content.Context;
-import com.estrongs.android.widget.ThumbContentViewSwitcher;
-import java.util.List;
+import com.estrongs.android.ui.guesture.ESGesturePanel;
 
 class bt
-  extends ThumbContentViewSwitcher
+  implements Runnable
 {
-  bt(FileExplorerActivity paramFileExplorerActivity, Context paramContext)
-  {
-    super(paramContext);
-  }
+  bt(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void a(int paramInt)
+  public void run()
   {
-    if (a.q) {
-      a.f(false);
-    }
-    super.a(paramInt);
-  }
-  
-  protected boolean a()
-  {
-    return (FileExplorerActivity.d(a) == null) || (FileExplorerActivity.d(a).size() <= 0);
+    a.A.c();
   }
 }
 

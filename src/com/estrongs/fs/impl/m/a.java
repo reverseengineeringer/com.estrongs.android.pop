@@ -1,141 +1,95 @@
 package com.estrongs.fs.impl.m;
 
-import android.content.Context;
-import android.content.res.Resources;
-import android.os.Looper;
-import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.spfs.CreateSiteFileObject;
-import com.estrongs.android.pop.utils.cc;
-import com.estrongs.android.ui.pcs.r;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bd;
-import com.estrongs.fs.h;
-import com.estrongs.fs.impl.f.c;
-import com.estrongs.fs.m;
-import java.util.ArrayList;
-import java.util.List;
+import android.net.Uri;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bk;
+import com.estrongs.fs.w;
+import java.sql.Date;
+import org.apache.http.Header;
+import org.apache.http.HttpResponse;
 
 public class a
+  extends com.estrongs.fs.a
 {
-  private static List<h> a(Context paramContext)
+  private long a = -1L;
+  private long b = -1L;
+  
+  public a(String paramString1, String paramString2)
   {
-    ArrayList localArrayList = new ArrayList();
-    ad.a(paramContext).a(localArrayList);
-    return localArrayList;
+    super(paramString2);
+    name = paramString1;
   }
   
-  public static List<h> a(Context paramContext, String paramString)
+  a(String paramString, HttpResponse paramHttpResponse)
   {
-    if (!am.bg(paramString)) {
-      throw new IllegalArgumentException(paramString);
+    super(paramString);
+    Header localHeader = paramHttpResponse.getFirstHeader("Content-Disposition");
+    String str = null;
+    if (localHeader != null) {
+      str = localHeader.getValue();
     }
-    if (am.H(paramString)) {
-      return a(paramContext);
-    }
-    if ((am.J(paramString)) || (am.p(paramString)) || (am.I(paramString)) || (am.n(paramString)) || (am.o(paramString))) {
-      return b(paramContext);
-    }
-    if (am.aZ(paramString)) {
-      return d(paramContext);
-    }
-    if (am.aw(paramString)) {
-      return e(paramContext);
-    }
-    if (am.aG(paramString)) {
-      return f(paramContext);
-    }
-    if (am.K(paramString)) {
-      return c(paramContext);
-    }
-    if ("scannedserver://".equalsIgnoreCase(paramString))
+    if (str != null)
     {
-      paramString = new ArrayList();
-      if (!c.a())
+      int i = str.indexOf("filename=");
+      if (i != -1) {
+        name = str.substring(i + 9);
+      }
+    }
+    try
+    {
+      name = new String(name.getBytes("iso-8859-1"));
+      if (name.charAt(0) == '"') {
+        name = name.substring(1, name.length() - 1);
+      }
+      if (name == null) {
+        name = ap.cq(paramString);
+      }
+      if (name == null)
       {
-        paramString.addAll(a(paramContext));
-        paramString.addAll(b(paramContext));
-        return paramString;
+        name = Uri.decode(ap.d(paramString));
+        if (name.indexOf('?') >= 0) {
+          name = name.substring(0, name.indexOf('?'));
+        }
+        paramString = paramHttpResponse.getFirstHeader("Content-Length");
+        if (paramString != null) {
+          a = bk.b(paramString.getValue());
+        }
+        paramString = paramHttpResponse.getFirstHeader("Last-Modified");
+        if (paramString != null) {
+          b = Date.parse(paramString.getValue());
+        }
+        return;
       }
-      b localb = new b("flashair://flashair/", m.N, "FlashAir");
-      localb.putExtra("item_is_scanned_server", Boolean.valueOf(true));
-      paramString.add(localb);
-      ad.a(paramContext).b("flashair://flashair/", "FlashAir", false);
-      return paramString;
     }
-    return null;
-  }
-  
-  private static List<h> b(Context paramContext)
-  {
-    ArrayList localArrayList = new ArrayList();
-    ad.a(paramContext).d(localArrayList);
-    return localArrayList;
-  }
-  
-  private static List<h> c(Context paramContext)
-  {
-    ArrayList localArrayList = new ArrayList();
-    ad.a(paramContext).e(localArrayList);
-    return localArrayList;
-  }
-  
-  private static List<h> d(Context paramContext)
-  {
-    ArrayList localArrayList = new ArrayList();
-    if (bd.a())
+    catch (Exception localException)
     {
-      if (Looper.myLooper() == null) {
-        Looper.prepare();
-      }
-      if (com.estrongs.android.pop.app.b.a.d) {
-        com.estrongs.fs.impl.c.a.a(paramContext, localArrayList);
+      for (;;)
+      {
+        localException.printStackTrace();
+        continue;
+        name = name;
       }
     }
-    else
-    {
-      return localArrayList;
-    }
-    return com.estrongs.fs.impl.c.a.c();
   }
   
-  private static List<h> e(Context paramContext)
+  protected w doGetFileType()
   {
-    ArrayList localArrayList = new ArrayList();
-    ad.a(paramContext).b(localArrayList);
-    return localArrayList;
+    return w.b;
   }
   
-  private static List<h> f(Context paramContext)
+  public long lastModified()
   {
-    ArrayList localArrayList = new ArrayList();
-    ad.a(paramContext).c(localArrayList);
-    String str2 = r.a().e();
-    Object localObject;
-    m localm;
-    if (cc.a())
-    {
-      localObject = new StringBuilder().append("SP://");
-      if (str2 != null) {
-        break label129;
-      }
-      str1 = ":";
-      localObject = str1 + "@" + "pcs";
-      localm = m.K;
-      if (str2 != null) {
-        break label134;
-      }
-    }
-    label129:
-    label134:
-    for (String str1 = FexApplication.a().getString(2131428551);; str1 = str2.split(":")[0])
-    {
-      localArrayList.add(new b((String)localObject, localm, str1));
-      localArrayList.add(new CreateSiteFileObject(paramContext.getResources().getString(2131428081)));
-      return localArrayList;
-      str1 = str2;
-      break;
-    }
+    return b;
+  }
+  
+  public long length()
+  {
+    return a;
+  }
+  
+  public void setName(String paramString)
+  {
+    name = paramString;
   }
 }
 

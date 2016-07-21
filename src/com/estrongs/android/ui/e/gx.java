@@ -1,15 +1,18 @@
 package com.estrongs.android.ui.e;
 
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 import com.estrongs.android.pop.view.FileExplorerActivity;
 
 class gx
-  implements Runnable
+  implements MenuItem.OnMenuItemClickListener
 {
-  gx(gw paramgw) {}
+  gx(cr paramcr) {}
   
-  public void run()
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    cp.a(a.a.a).V();
+    cr.b(a).b(cr.b(a).getString(2131230884), cr.a(a), true);
+    return true;
   }
 }
 

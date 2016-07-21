@@ -1,10 +1,14 @@
 package android.support.v4.app;
 
-public abstract class am
+class am
+  implements Runnable
 {
-  CharSequence d;
-  CharSequence e;
-  boolean f = false;
+  am(al paramal) {}
+  
+  public void run()
+  {
+    a.g();
+  }
 }
 
 /* Location:

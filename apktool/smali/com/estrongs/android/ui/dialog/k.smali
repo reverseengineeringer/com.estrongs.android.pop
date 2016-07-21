@@ -31,7 +31,7 @@
 
     iget-object v0, v0, Lcom/estrongs/android/ui/dialog/j;->a:Lcom/estrongs/fs/h;
 
-    instance-of v0, v0, Lcom/estrongs/fs/impl/b/f;
+    instance-of v0, v0, Lcom/estrongs/fs/impl/b/g;
 
     if-eqz v0, :cond_0
 
@@ -53,9 +53,9 @@
 
     iget-object v0, v0, Lcom/estrongs/android/ui/dialog/j;->a:Lcom/estrongs/fs/h;
 
-    check-cast v0, Lcom/estrongs/fs/impl/b/f;
+    check-cast v0, Lcom/estrongs/fs/impl/b/g;
 
-    invoke-static {v1, v2, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->a(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/impl/b/f;)V
+    invoke-static {v1, v2, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->a(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/impl/b/g;)V
 
     :goto_0
     return-void
@@ -75,7 +75,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/pop/view/utils/AppRunner;->r(Landroid/app/Activity;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/estrongs/android/pop/view/utils/AppRunner;->s(Landroid/app/Activity;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

@@ -1,12 +1,20 @@
 package android.support.v4.app;
 
-import android.app.PendingIntent;
+import android.os.Parcel;
+import android.os.Parcelable.Creator;
 
-public class ac
+final class ac
+  implements Parcelable.Creator<Fragment.SavedState>
 {
-  public int a;
-  public CharSequence b;
-  public PendingIntent c;
+  public Fragment.SavedState a(Parcel paramParcel)
+  {
+    return new Fragment.SavedState(paramParcel, null);
+  }
+  
+  public Fragment.SavedState[] a(int paramInt)
+  {
+    return new Fragment.SavedState[paramInt];
+  }
 }
 
 /* Location:

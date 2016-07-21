@@ -1,19 +1,18 @@
 package com.estrongs.android.ui.e;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.pop.app.PopAudioPlayer;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.view.FileExplorerActivity;
 
 class n
-  implements View.OnClickListener
+  implements MenuItem.OnMenuItemClickListener
 {
-  n(j paramj) {}
+  n(m paramm) {}
   
-  public void onClick(View paramView)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if (j.a(a) != null) {
-      j.a(a).a(0);
-    }
+    m.a(a).p();
+    return false;
   }
 }
 

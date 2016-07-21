@@ -1,13 +1,26 @@
 package com.estrongs.android.pop.view;
 
+import android.content.Context;
+import com.estrongs.android.widget.ThumbContentViewSwitcher;
+import java.util.List;
+
 class ao
-  implements Runnable
+  extends ThumbContentViewSwitcher
 {
-  ao(an paraman) {}
-  
-  public void run()
+  ao(FileExplorerActivity paramFileExplorerActivity, Context paramContext)
   {
-    a.a.a.a.a.g(true);
+    super(paramContext);
+  }
+  
+  protected boolean a()
+  {
+    return (FileExplorerActivity.c(a) == null) || (FileExplorerActivity.c(a).size() <= 0);
+  }
+  
+  public void setCurrentScreen(int paramInt)
+  {
+    a.ab();
+    super.setCurrentScreen(paramInt);
   }
 }
 

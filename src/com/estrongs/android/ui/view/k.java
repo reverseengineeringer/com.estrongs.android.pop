@@ -2,7 +2,6 @@ package com.estrongs.android.ui.view;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.estrongs.android.util.c;
 
 class k
   implements View.OnClickListener
@@ -11,7 +10,7 @@ class k
   
   public void onClick(View paramView)
   {
-    new c(b.h(a), b.i(a), new l(this)).a();
+    new com.estrongs.android.util.b(b.h(a), b.i(a), new l(this)).a();
   }
 }
 

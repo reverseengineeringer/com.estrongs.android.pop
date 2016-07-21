@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Lcom/estrongs/android/ui/pcs/q;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+.field final synthetic a:Lcom/estrongs/android/pop/view/ej;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
+.method constructor <init>(Lcom/estrongs/android/pop/view/ej;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/view/ek;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/view/ek;->a:Lcom/estrongs/android/pop/view/ej;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,24 +22,78 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+.method public a(ZLjava/lang/String;Ljava/lang/String;)V
+    .locals 3
 
-    new-instance v0, Landroid/content/Intent;
+    if-eqz p1, :cond_1
 
-    const-string v1, "android.settings.WIFI_SETTINGS"
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/ek;->a:Lcom/estrongs/android/pop/view/ej;
 
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    iget-object v0, v0, Lcom/estrongs/android/pop/view/ej;->a:Lcom/estrongs/android/pop/view/ei;
 
-    const/high16 v1, 0x10000000
+    iget-object v0, v0, Lcom/estrongs/android/pop/view/ei;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+    iget-object v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->w:Ljava/util/List;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/view/ek;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->startActivity(Landroid/content/Intent;)V
+    move-result-object v1
 
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    :cond_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/android/view/cr;
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/view/ek;->a:Lcom/estrongs/android/pop/view/ej;
+
+    iget-object v2, v2, Lcom/estrongs/android/pop/view/ej;->a:Lcom/estrongs/android/pop/view/ei;
+
+    invoke-static {v2}, Lcom/estrongs/android/pop/view/ei;->a(Lcom/estrongs/android/pop/view/ei;)Lcom/estrongs/android/view/cr;
+
+    move-result-object v2
+
+    if-ne v0, v2, :cond_0
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/view/ek;->a:Lcom/estrongs/android/pop/view/ej;
+
+    iget-object v2, v2, Lcom/estrongs/android/pop/view/ej;->a:Lcom/estrongs/android/pop/view/ei;
+
+    invoke-static {v2}, Lcom/estrongs/android/pop/view/ei;->a(Lcom/estrongs/android/pop/view/ei;)Lcom/estrongs/android/view/cr;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/view/cr;->V()Lcom/estrongs/android/util/TypedMap;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/view/ek;->a:Lcom/estrongs/android/pop/view/ej;
+
+    iget-object v2, v2, Lcom/estrongs/android/pop/view/ej;->a:Lcom/estrongs/android/pop/view/ei;
+
+    invoke-static {v2}, Lcom/estrongs/android/pop/view/ei;->b(Lcom/estrongs/android/pop/view/ei;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2, v1}, Lcom/estrongs/android/view/cr;->a(Ljava/lang/String;Lcom/estrongs/android/util/TypedMap;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/ek;->a:Lcom/estrongs/android/pop/view/ej;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/view/ej;->a:Lcom/estrongs/android/pop/view/ei;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/view/ei;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->T()V
+
+    :cond_1
     return-void
 .end method

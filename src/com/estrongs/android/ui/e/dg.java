@@ -1,35 +1,62 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.view.a.b;
+import android.content.Intent;
+import com.estrongs.android.pop.app.AudioPlayerService;
+import com.estrongs.android.pop.app.PopAudioPlayer;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.dialog.ProgressDialog;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.b.w;
+import java.util.List;
 
 class dg
-  implements b
+  implements Runnable
 {
-  dg(cp paramcp) {}
+  dg(df paramdf) {}
   
-  public boolean a(co paramco)
+  public void run()
   {
-    if (z) {}
-    do
+    a.b.dismiss();
+    List localList = a.c.a();
+    if ((localList != null) && (localList.size() > 0))
     {
-      return false;
-      if ((e) && (!P)) {
-        return true;
+      Intent localIntent = new Intent(a.a, PopAudioPlayer.class);
+      String[] arrayOfString = new String[localList.size()];
+      int i = 0;
+      if (i < localList.size())
+      {
+        if (ap.aJ((String)localList.get(i))) {
+          arrayOfString[i] = ap.cd((String)localList.get(i));
+        }
+        for (;;)
+        {
+          i += 1;
+          break;
+          arrayOfString[i] = ((String)localList.get(i));
+        }
       }
-      if ((h) && (F == 1) && (G)) {
-        return true;
+      localIntent.putExtra("hasplaylist", true);
+      PopAudioPlayer.b(arrayOfString);
+      localIntent.putExtra("isadd", a.d);
+      if (a.e) {
+        localIntent.putExtra("Chromecast", a.e);
       }
-      if (((f) || (x)) && (!d) && (F == 1) && (G)) {
-        return true;
+      if (a.d)
+      {
+        if (AudioPlayerService.b == null)
+        {
+          a.a.startActivity(localIntent);
+          return;
+        }
+        localIntent.setClass(a.a, AudioPlayerService.class);
+        a.a.startService(localIntent);
+        return;
       }
-      if ((m) || (A)) {
-        return true;
-      }
-      if ((i) || (j) || (k)) {
-        return true;
-      }
-    } while (((!p) && (!q)) || (!G));
-    return true;
+      a.a.startActivity(localIntent);
+      return;
+    }
+    ak.a(a.a, a.a.getText(2131231851), 0);
   }
 }
 

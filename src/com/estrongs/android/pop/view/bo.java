@@ -1,51 +1,47 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.pop.view.utils.RemoteSynchronizer;
-import com.estrongs.android.ui.d.e;
-import com.estrongs.android.util.be;
-import com.estrongs.android.widget.ThumbContentViewSwitcher;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.fs.h;
+import com.estrongs.fs.impl.usb.UsbFsException;
+import com.estrongs.fs.impl.usb.UsbFsException.ERROR_CODE;
+import com.estrongs.fs.impl.usb.g;
+import com.estrongs.fs.impl.usb.k;
 
 class bo
-  extends Thread
+  implements k
 {
-  bo(FileExplorerActivity paramFileExplorerActivity, boolean paramBoolean) {}
+  bo(bm parambm, g paramg, h paramh) {}
   
-  public void run()
+  public void a(boolean paramBoolean)
   {
-    if (!FileExplorerActivity.G(b))
+    if (paramBoolean)
     {
-      e.a(b);
-      e.d();
-      if (b.f != null) {
-        b.f.l();
-      }
-      if (!a) {
-        break label91;
-      }
-      be.c().f();
-      be.c().g();
-    }
-    for (;;)
-    {
-      be.c().d();
       try
       {
-        if (com.estrongs.fs.impl.c.a.a()) {
-          com.estrongs.fs.impl.c.a.b();
-        }
-        RemoteSynchronizer.e();
-        if (com.estrongs.a.a.isAllTaskFinished()) {
-          b.j();
-        }
+        a.c();
+        bm.a(c, b);
         return;
-        label91:
-        be.c().h();
       }
-      catch (Throwable localThrowable)
+      catch (UsbFsException localUsbFsException)
       {
-        for (;;) {}
+        str = bm.a(c, 2131231901);
+        if (errorCode != UsbFsException.ERROR_CODE.USB_ERROR_TYPE_NOT_SUPPORTE) {
+          break label77;
+        }
+      }
+      String str = bm.b(c, 2131232529);
+      for (;;)
+      {
+        ak.a(c.a, str, 1);
+        c.a.z();
+        return;
+        label77:
+        if (errorCode == UsbFsException.ERROR_CODE.USB_ERROR_IO_ERROR) {
+          str = bm.c(c, 2131231465);
+        }
       }
     }
+    c.a.z();
   }
 }
 

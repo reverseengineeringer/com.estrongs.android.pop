@@ -1,22 +1,13 @@
 package com.estrongs.android.pop.app;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-
 class o
-  extends BroadcastReceiver
+  extends Thread
 {
   o(AudioPlayerService paramAudioPlayerService) {}
   
-  public void onReceive(Context paramContext, Intent paramIntent)
+  public void run()
   {
-    try
-    {
-      a.o();
-      return;
-    }
-    catch (Exception paramContext) {}
+    a.s();
   }
 }
 

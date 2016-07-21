@@ -4,15 +4,16 @@ import android.app.Activity;
 import android.content.res.Resources;
 import com.estrongs.a.a.f;
 import com.estrongs.a.a.m;
-import com.estrongs.a.p;
 import com.estrongs.a.q;
 import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.pop.utils.cd;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.pop.utils.cm;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.dialog.jh;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bk;
 import com.estrongs.fs.h;
 import com.estrongs.fs.impl.media.MediaStoreInsertException;
-import com.estrongs.fs.util.c;
+import com.estrongs.fs.impl.media.e;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +22,7 @@ import java.util.Map;
 public class ag
   extends com.estrongs.a.a
 {
-  ai a = null;
+  ak a = null;
   private List<h> b;
   private Activity c;
   private List<String> d = new ArrayList();
@@ -63,9 +64,43 @@ public class ag
     }
   }
   
-  private boolean c()
+  public static void a(FileExplorerActivity paramFileExplorerActivity, List<h> paramList, com.estrongs.a.a.p paramp)
   {
-    a = new ai(b, com.estrongs.fs.d.a(c));
+    if (paramList.size() == 0) {
+      com.estrongs.android.ui.view.ak.a(paramFileExplorerActivity.getBaseContext(), 2131231551, 0);
+    }
+    for (;;)
+    {
+      return;
+      if (paramList.size() >= 1)
+      {
+        ag localag = new ag(paramFileExplorerActivity, paramList);
+        localag.setDescription(paramFileExplorerActivity.getString(2131230850));
+        new jh(paramFileExplorerActivity, paramFileExplorerActivity.getString(2131232180), localag).show();
+        localag.execute();
+        localag.addTaskStatusChangeListener(new ai(paramp, paramFileExplorerActivity, paramList));
+        paramFileExplorerActivity.B();
+        try
+        {
+          paramFileExplorerActivity = paramFileExplorerActivity.at();
+          if (paramFileExplorerActivity != null)
+          {
+            paramFileExplorerActivity.c("Edit_Encrypt_UV");
+            paramFileExplorerActivity.a("function", "encrypt_dialog_show");
+            return;
+          }
+        }
+        catch (Exception paramFileExplorerActivity)
+        {
+          paramFileExplorerActivity.printStackTrace();
+        }
+      }
+    }
+  }
+  
+  private boolean d()
+  {
+    a = new ak(b, com.estrongs.fs.d.a(c));
     a.addProgressListeners(getProgressListeners());
     a.execute(false);
     Object localObject;
@@ -77,7 +112,7 @@ public class ag
     }
     if (a.d.size() == 0)
     {
-      localObject = new Exception(FexApplication.a().getResources().getString(2131428490));
+      localObject = new Exception(FexApplication.a().getResources().getString(2131231846));
       setTaskResult(10000, new q(((Exception)localObject).getMessage(), (Exception)localObject));
       return false;
     }
@@ -90,27 +125,32 @@ public class ag
   {
     try
     {
-      if (bd.f())
+      if (bk.f())
       {
-        com.estrongs.fs.impl.media.d.b(g);
-        com.estrongs.fs.impl.media.d.a(h, null);
+        e.b(g);
+        e.a(h, null);
         return;
       }
-      com.estrongs.fs.impl.k.b.c().c(d);
-      com.estrongs.fs.impl.i.b.c().c(e);
-      com.estrongs.fs.impl.q.b.c().c(f);
+      com.estrongs.fs.impl.p.c.b().c(d);
+      com.estrongs.fs.impl.n.d.b().c(e);
+      com.estrongs.fs.impl.v.c.b().c(f);
       return;
     }
     catch (MediaStoreInsertException localMediaStoreInsertException)
     {
       localMediaStoreInsertException.printStackTrace();
-      cd.b();
+      cm.b();
     }
   }
   
   public List<h> b()
   {
     return b;
+  }
+  
+  public List<String> c()
+  {
+    return h;
   }
   
   public boolean canHide()
@@ -156,7 +196,7 @@ public class ag
     {
       try
       {
-        bool1 = c();
+        bool1 = d();
         if (!bool1) {
           return false;
         }
@@ -177,7 +217,7 @@ public class ag
           k = 0;
           if (k < a.d.size())
           {
-            com.estrongs.fs.util.a.a.remove(am.bE(((h)a.d.get(k)).getAbsolutePath()));
+            com.estrongs.fs.util.a.a.remove(ap.bV(((h)a.d.get(k)).getAbsolutePath()));
             k += 1;
             continue;
           }
@@ -198,7 +238,7 @@ public class ag
         {
           localObject3 = localObject4;
           if (((String)localObject4).contains("Invalid argument")) {
-            localObject3 = FexApplication.a().getResources().getString(2131428504);
+            localObject3 = FexApplication.a().getResources().getString(2131231485);
           }
         }
         setTaskResult(10000, new q((String)localObject3, localException1));
@@ -225,8 +265,8 @@ public class ag
           onProgress(processData);
           if (!a.a)
           {
-            localObject3 = new c((h)localObject4, a, b);
-            bool2 = ((c)localObject3).a();
+            localObject3 = new com.estrongs.fs.util.c((h)localObject4, a, b);
+            bool2 = ((com.estrongs.fs.util.c)localObject3).a();
             bool1 = bool2;
             if (!bool1)
             {
@@ -237,8 +277,8 @@ public class ag
           }
           else
           {
-            localObject3 = (com.estrongs.fs.util.b)a.c.get(am.bE(((h)localObject4).getAbsolutePath()));
-            localObject3 = new c((h)localObject4, a, b, c);
+            localObject3 = (com.estrongs.fs.util.b)a.c.get(ap.bV(((h)localObject4).getAbsolutePath()));
+            localObject3 = new com.estrongs.fs.util.c((h)localObject4, a, b, c);
             continue;
           }
         }
@@ -249,13 +289,13 @@ public class ag
       }
       try
       {
-        if (am.bl(((h)localObject4).getAbsolutePath()))
+        if (ap.bC(((h)localObject4).getAbsolutePath()))
         {
           int m = i;
-          i = (cd.a(new File(((h)localObject4).getAbsolutePath()), d, e, f, g) | m);
-          h.add(((c)localObject3).b());
+          i = (cm.a(new File(((h)localObject4).getAbsolutePath()), d, e, f, g) | m);
+          h.add(((com.estrongs.fs.util.c)localObject3).b());
         }
-        localArrayList.add(((c)localObject3).b());
+        localArrayList.add(((com.estrongs.fs.util.c)localObject3).b());
         processData.d = (k + 1);
         k += 1;
       }

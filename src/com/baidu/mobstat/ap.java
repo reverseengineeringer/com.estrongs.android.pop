@@ -1,13 +1,23 @@
 package com.baidu.mobstat;
 
-class ap
-  implements Runnable
+import android.content.Context;
+
+ enum ap
 {
-  ap(ao paramao) {}
-  
-  public void run()
+  ap(int paramInt1)
   {
-    af.a().d();
+    super(paramString, paramInt, paramInt1, null);
+  }
+  
+  public void a(Context paramContext)
+  {
+    Context localContext = paramContext.getApplicationContext();
+    paramContext = as.a(paramContext);
+    bc localbc = new bc();
+    a = false;
+    b = "M";
+    c = false;
+    paramContext.a(localContext, localbc.a());
   }
 }
 

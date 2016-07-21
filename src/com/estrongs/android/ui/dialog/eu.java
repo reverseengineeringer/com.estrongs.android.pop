@@ -1,17 +1,8 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-
-class eu
-  implements DialogInterface.OnClickListener
+public abstract interface eu
 {
-  eu(es parames) {}
-  
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
-  {
-    es.a(a);
-  }
+  public abstract boolean a(String paramString);
 }
 
 /* Location:

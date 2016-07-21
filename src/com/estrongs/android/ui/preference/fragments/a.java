@@ -4,7 +4,7 @@ import android.preference.EditTextPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import com.estrongs.android.pop.ad;
-import com.estrongs.fs.impl.local.h;
+import com.estrongs.fs.impl.local.i;
 
 class a
   implements Preference.OnPreferenceChangeListener
@@ -19,7 +19,7 @@ class a
       AppPreferenceFragment.a(a);
       return false;
     }
-    if ((h.h((String)paramObject)) && (h.a((String)paramObject))) {}
+    if ((i.h((String)paramObject)) && (i.a((String)paramObject))) {}
     for (int i = 1;; i = 0)
     {
       paramPreference = (Preference)paramObject;

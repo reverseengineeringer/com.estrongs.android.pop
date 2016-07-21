@@ -9,7 +9,7 @@
 
 .field final synthetic c:Lcom/estrongs/fs/h;
 
-.field final synthetic d:Lcom/estrongs/android/appinfo/u;
+.field final synthetic d:Lcom/estrongs/android/appinfo/v;
 
 .field final synthetic e:Landroid/content/Context;
 
@@ -19,7 +19,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/appinfo/AppFolderInfoManager;Ljava/lang/String;Ljava/lang/String;Lcom/estrongs/fs/h;Lcom/estrongs/android/appinfo/u;Landroid/content/Context;Z)V
+.method constructor <init>(Lcom/estrongs/android/appinfo/AppFolderInfoManager;Ljava/lang/String;Ljava/lang/String;Lcom/estrongs/fs/h;Lcom/estrongs/android/appinfo/v;Landroid/content/Context;Z)V
     .locals 0
 
     iput-object p1, p0, Lcom/estrongs/android/appinfo/i;->g:Lcom/estrongs/android/appinfo/AppFolderInfoManager;
@@ -30,7 +30,7 @@
 
     iput-object p4, p0, Lcom/estrongs/android/appinfo/i;->c:Lcom/estrongs/fs/h;
 
-    iput-object p5, p0, Lcom/estrongs/android/appinfo/i;->d:Lcom/estrongs/android/appinfo/u;
+    iput-object p5, p0, Lcom/estrongs/android/appinfo/i;->d:Lcom/estrongs/android/appinfo/v;
 
     iput-object p6, p0, Lcom/estrongs/android/appinfo/i;->e:Landroid/content/Context;
 
@@ -180,9 +180,9 @@
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/imageviewer/gallery/g;->b(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/i;->d:Lcom/estrongs/android/appinfo/u;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/i;->d:Lcom/estrongs/android/appinfo/v;
 
-    invoke-interface {v0}, Lcom/estrongs/android/appinfo/u;->a()V
+    invoke-interface {v0}, Lcom/estrongs/android/appinfo/v;->a()V
 
     const-string v0, "http://www.estrongs.com/console/service/app_folder/share.php?f=%s&a=%s&i=%s"
 
@@ -240,17 +240,17 @@
 
     if-eqz v1, :cond_3
 
-    new-instance v1, Lcom/estrongs/android/util/y;
+    new-instance v1, Lcom/estrongs/android/util/aa;
 
-    invoke-direct {v1, v0}, Lcom/estrongs/android/util/y;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v0}, Lcom/estrongs/android/util/aa;-><init>(Ljava/lang/String;)V
 
     new-instance v0, Lcom/estrongs/android/appinfo/j;
 
     invoke-direct {v0, p0}, Lcom/estrongs/android/appinfo/j;-><init>(Lcom/estrongs/android/appinfo/i;)V
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/util/y;->a(Lcom/estrongs/android/util/ab;)V
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/util/aa;->a(Lcom/estrongs/android/util/af;)V
 
-    invoke-virtual {v1}, Lcom/estrongs/android/util/y;->c()V
+    invoke-virtual {v1}, Lcom/estrongs/android/util/aa;->c()V
 
     :cond_3
     return-void

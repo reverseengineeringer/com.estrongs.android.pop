@@ -1,28 +1,67 @@
 package com.baidu.mobstat;
 
-import android.content.Context;
+import android.text.TextUtils;
+import org.json.JSONException;
 import org.json.JSONObject;
 
-public class j
-  extends h
+class j
 {
-  public j(Context paramContext, String paramString)
+  public String a;
+  public String b;
+  public int c = 2;
+  
+  public static j a(String paramString)
   {
-    super(paramContext, paramString);
-    c = getClass().getName();
+    if (TextUtils.isEmpty(paramString)) {}
+    for (;;)
+    {
+      return null;
+      try
+      {
+        Object localObject = new JSONObject(paramString);
+        paramString = ((JSONObject)localObject).getString("deviceid");
+        String str = ((JSONObject)localObject).getString("imei");
+        int i = ((JSONObject)localObject).getInt("ver");
+        if ((!TextUtils.isEmpty(paramString)) && (str != null))
+        {
+          localObject = new j();
+          a = paramString;
+          b = str;
+          c = i;
+          return (j)localObject;
+        }
+      }
+      catch (JSONException paramString)
+      {
+        g.a(paramString);
+      }
+    }
+    return null;
   }
   
-  protected void b()
+  public String a()
   {
     try
     {
-      d.put("logID", g.a(a).d());
-      return;
+      String str = new JSONObject().put("deviceid", a).put("imei", b).put("ver", c).toString();
+      return str;
     }
-    catch (Exception localException)
+    catch (JSONException localJSONException)
     {
-      localException.printStackTrace();
+      g.a(localJSONException);
     }
+    return null;
+  }
+  
+  public String b()
+  {
+    String str2 = b;
+    String str1 = str2;
+    if (TextUtils.isEmpty(str2)) {
+      str1 = "0";
+    }
+    str1 = new StringBuffer(str1).reverse().toString();
+    return a + "|" + str1;
   }
 }
 

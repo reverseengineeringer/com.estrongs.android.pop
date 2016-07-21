@@ -1,6 +1,6 @@
 package com.estrongs.android.ui.e;
 
-import android.view.KeyEvent;
+import android.content.Intent;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
 import com.estrongs.android.pop.view.FileExplorerActivity;
@@ -9,21 +9,19 @@ import com.estrongs.android.view.WebViewWrapper;
 class ba
   implements MenuItem.OnMenuItemClickListener
 {
-  ba(w paramw) {}
+  ba(m paramm) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = a.k.y();
-    if ((paramMenuItem instanceof WebViewWrapper))
+    paramMenuItem = m.a(a).O();
+    if ((paramMenuItem != null) && ((paramMenuItem instanceof WebViewWrapper)))
     {
-      if (((WebViewWrapper)paramMenuItem).p()) {
-        ((WebViewWrapper)paramMenuItem).f();
-      }
+      paramMenuItem = ((WebViewWrapper)paramMenuItem).c();
+      Intent localIntent = new Intent("android.intent.action.SEND");
+      localIntent.setType("text/plain");
+      localIntent.putExtra("android.intent.extra.TEXT", paramMenuItem);
+      m.a(a).startActivity(localIntent);
     }
-    else {
-      return false;
-    }
-    a.k.onKeyDown(4, new KeyEvent(0, 4));
     return false;
   }
 }

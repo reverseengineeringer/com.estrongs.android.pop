@@ -1,22 +1,13 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.ui.pcs.n;
-import com.estrongs.android.util.TypedMap;
-import com.estrongs.android.util.bd;
-import com.estrongs.fs.h;
-
 class dl
-  implements n
+  implements Runnable
 {
-  dl(dk paramdk, h paramh, TypedMap paramTypedMap) {}
+  dl(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void a(boolean paramBoolean, String paramString1, String paramString2)
+  public void run()
   {
-    if ((paramBoolean) && (bd.b(paramString2)))
-    {
-      c.a(a, b);
-      c.a.E();
-    }
+    a.q();
   }
 }
 

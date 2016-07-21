@@ -1,17 +1,20 @@
 package com.estrongs.fs.impl.d;
 
-import android.database.DatabaseUtils;
-import com.estrongs.android.util.bc;
+import com.estrongs.android.util.TypedMap;
 import com.estrongs.fs.h;
-import com.estrongs.fs.impl.local.f;
-import com.estrongs.fs.impl.media.d;
+import com.estrongs.fs.i;
+import com.estrongs.fs.util.j;
+import java.util.ArrayList;
+import java.util.List;
 
 public class c
-  extends d
+  extends com.estrongs.fs.impl.t.a
 {
   private static c a;
+  private static final String b = j.a + "/cache/archive.cache";
+  private static boolean c = true;
   
-  public static c b()
+  public static c a()
   {
     if (a == null) {
       a = new c();
@@ -19,29 +22,37 @@ public class c
     return a;
   }
   
-  protected h a(f paramf)
+  public List<h> a(h paramh, i parami, TypedMap paramTypedMap)
   {
-    return new a(paramf);
-  }
-  
-  protected String a()
-  {
-    Object localObject = bc.c();
-    if (localObject == null) {
-      return null;
-    }
-    localObject = ((String)localObject).split(";");
-    StringBuffer localStringBuffer = new StringBuffer();
+    ArrayList localArrayList = new ArrayList();
+    paramh = super.a(paramh, parami, paramTypedMap);
     int i = 0;
-    while (i < localObject.length)
+    while (i < paramh.size())
     {
-      if (i > 0) {
-        localStringBuffer.append(" or ");
-      }
-      localStringBuffer.append("_data").append(" like ").append(DatabaseUtils.sqlEscapeString("%" + localObject[i]));
+      localArrayList.add(new a((h)paramh.get(i)));
       i += 1;
     }
-    return localStringBuffer.toString();
+    return localArrayList;
+  }
+  
+  protected void a(boolean paramBoolean)
+  {
+    c = paramBoolean;
+  }
+  
+  protected String b()
+  {
+    return b;
+  }
+  
+  protected String c()
+  {
+    return "archive";
+  }
+  
+  protected boolean d()
+  {
+    return c;
   }
 }
 

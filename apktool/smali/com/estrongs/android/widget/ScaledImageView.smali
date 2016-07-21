@@ -9,7 +9,7 @@
 
 .field private c:Landroid/os/Handler;
 
-.field private d:Lcom/estrongs/android/widget/bf;
+.field private d:Lcom/estrongs/android/widget/bg;
 
 .field private e:Landroid/widget/ImageView;
 
@@ -91,16 +91,6 @@
     return-wide v0
 .end method
 
-.method private a(I)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/ScaledImageView;->e:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setAlpha(I)V
-
-    return-void
-.end method
-
 .method static synthetic b(Lcom/estrongs/android/widget/ScaledImageView;)I
     .locals 1
 
@@ -166,7 +156,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const v0, 0x7f020040
+    const v0, 0x7f0200bc
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/ScaledImageView;->setBackgroundResource(I)V
 
@@ -198,15 +188,15 @@
 .method private e()V
     .locals 1
 
-    new-instance v0, Lcom/estrongs/android/widget/bd;
-
-    invoke-direct {v0, p0}, Lcom/estrongs/android/widget/bd;-><init>(Lcom/estrongs/android/widget/ScaledImageView;)V
-
-    iput-object v0, p0, Lcom/estrongs/android/widget/ScaledImageView;->b:Landroid/os/Handler;
-
     new-instance v0, Lcom/estrongs/android/widget/be;
 
     invoke-direct {v0, p0}, Lcom/estrongs/android/widget/be;-><init>(Lcom/estrongs/android/widget/ScaledImageView;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/widget/ScaledImageView;->b:Landroid/os/Handler;
+
+    new-instance v0, Lcom/estrongs/android/widget/bf;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/widget/bf;-><init>(Lcom/estrongs/android/widget/ScaledImageView;)V
 
     iput-object v0, p0, Lcom/estrongs/android/widget/ScaledImageView;->c:Landroid/os/Handler;
 
@@ -282,7 +272,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/widget/ScaledImageView;->a:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/ScaledImageView;->a(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/ScaledImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     invoke-virtual {p0}, Lcom/estrongs/android/widget/ScaledImageView;->invalidate()V
 
@@ -358,6 +348,16 @@
     return-void
 .end method
 
+.method private setAlpha(I)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ScaledImageView;->e:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setAlpha(I)V
+
+    return-void
+.end method
+
 
 # virtual methods
 .method public a()V
@@ -405,34 +405,22 @@
     :cond_1
     const/16 v0, 0xff
 
-    invoke-direct {p0, v0}, Lcom/estrongs/android/widget/ScaledImageView;->a(I)V
+    invoke-direct {p0, v0}, Lcom/estrongs/android/widget/ScaledImageView;->setAlpha(I)V
 
     invoke-direct {p0}, Lcom/estrongs/android/widget/ScaledImageView;->f()V
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/ScaledImageView;->d:Lcom/estrongs/android/widget/bf;
+    iget-object v0, p0, Lcom/estrongs/android/widget/ScaledImageView;->d:Lcom/estrongs/android/widget/bg;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/ScaledImageView;->d:Lcom/estrongs/android/widget/bf;
+    iget-object v0, p0, Lcom/estrongs/android/widget/ScaledImageView;->d:Lcom/estrongs/android/widget/bg;
 
-    invoke-interface {v0}, Lcom/estrongs/android/widget/bf;->a()V
+    invoke-interface {v0}, Lcom/estrongs/android/widget/bg;->a()V
 
     :cond_2
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/estrongs/android/widget/ScaledImageView;->d:Lcom/estrongs/android/widget/bf;
-
-    return-void
-.end method
-
-.method public a(Landroid/graphics/drawable/Drawable;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/ScaledImageView;->e:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    iput-object p1, p0, Lcom/estrongs/android/widget/ScaledImageView;->a:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Lcom/estrongs/android/widget/ScaledImageView;->d:Lcom/estrongs/android/widget/bg;
 
     return-void
 .end method
@@ -482,22 +470,22 @@
     :cond_1
     const/16 v0, 0xff
 
-    invoke-direct {p0, v0}, Lcom/estrongs/android/widget/ScaledImageView;->a(I)V
+    invoke-direct {p0, v0}, Lcom/estrongs/android/widget/ScaledImageView;->setAlpha(I)V
 
     invoke-direct {p0}, Lcom/estrongs/android/widget/ScaledImageView;->f()V
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/ScaledImageView;->d:Lcom/estrongs/android/widget/bf;
+    iget-object v0, p0, Lcom/estrongs/android/widget/ScaledImageView;->d:Lcom/estrongs/android/widget/bg;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/ScaledImageView;->d:Lcom/estrongs/android/widget/bf;
+    iget-object v0, p0, Lcom/estrongs/android/widget/ScaledImageView;->d:Lcom/estrongs/android/widget/bg;
 
-    invoke-interface {v0}, Lcom/estrongs/android/widget/bf;->a()V
+    invoke-interface {v0}, Lcom/estrongs/android/widget/bg;->a()V
 
     :cond_2
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/estrongs/android/widget/ScaledImageView;->d:Lcom/estrongs/android/widget/bf;
+    iput-object v0, p0, Lcom/estrongs/android/widget/ScaledImageView;->d:Lcom/estrongs/android/widget/bg;
 
     return-void
 .end method
@@ -607,5 +595,83 @@
     goto :goto_2
 
     :cond_2
+    return-void
+.end method
+
+.method public getContainer()Landroid/widget/LinearLayout;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ScaledImageView;->f:Landroid/widget/LinearLayout;
+
+    return-object v0
+.end method
+
+.method public getImageView()Landroid/widget/ImageView;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ScaledImageView;->e:Landroid/widget/ImageView;
+
+    return-object v0
+.end method
+
+.method public setContainer(Landroid/widget/LinearLayout;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/widget/ScaledImageView;->f:Landroid/widget/LinearLayout;
+
+    return-void
+.end method
+
+.method public setDuration(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/estrongs/android/widget/ScaledImageView;->p:I
+
+    return-void
+.end method
+
+.method public setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ScaledImageView;->e:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    iput-object p1, p0, Lcom/estrongs/android/widget/ScaledImageView;->a:Landroid/graphics/drawable/Drawable;
+
+    return-void
+.end method
+
+.method public setImageResource(I)V
+    .locals 2
+
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/ScaledImageView;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/widget/ScaledImageView;->a:Landroid/graphics/drawable/Drawable;
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ScaledImageView;->e:Landroid/widget/ImageView;
+
+    iget-object v1, p0, Lcom/estrongs/android/widget/ScaledImageView;->a:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+.end method
+
+.method public setOnScaledListener(Lcom/estrongs/android/widget/bg;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/widget/ScaledImageView;->d:Lcom/estrongs/android/widget/bg;
+
     return-void
 .end method

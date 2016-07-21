@@ -1,40 +1,42 @@
 package com.estrongs.android.widget;
 
-import com.estrongs.fs.h;
-import java.util.ArrayList;
-import java.util.List;
+import android.app.Activity;
+import android.content.Context;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.view.dx;
+import com.estrongs.fs.i;
 
 public class ad
+  extends f
 {
-  protected ad(g paramg) {}
+  private Context a;
+  private dx i = null;
+  private DialogInterface.OnClickListener j = null;
   
-  public List<h> a(com.estrongs.android.pop.ad paramad, String paramString)
+  public ad(Activity paramActivity, String paramString, i parami, int paramInt)
   {
-    ArrayList localArrayList = new ArrayList();
-    a(paramad, paramString, localArrayList);
-    return localArrayList;
+    super(paramActivity, paramString, parami, paramInt);
+    a = paramActivity;
   }
   
-  void a(com.estrongs.android.pop.ad paramad, String paramString, List<h> paramList)
+  private void m()
   {
-    if ("smb".equalsIgnoreCase(paramString)) {
-      paramad.a(paramList);
-    }
-    do
+    a(new ae(this));
+    if (j == null)
     {
+      a(a.getString(2131231265), null);
       return;
-      if ("ftp".equalsIgnoreCase(paramString))
-      {
-        paramad.d(paramList);
-        return;
-      }
-      if (("dropbox".equalsIgnoreCase(paramString)) || ("kanbox".equalsIgnoreCase(paramString)))
-      {
-        paramad.b(paramList);
-        return;
-      }
-    } while (!"adb".equalsIgnoreCase(paramString));
-    paramad.e(paramList);
+    }
+    c(a.getString(2131231265), null);
+    b(a.getString(2131231270), j);
+  }
+  
+  public void a(dx paramdx, DialogInterface.OnClickListener paramOnClickListener, ab paramab)
+  {
+    i = paramdx;
+    j = paramOnClickListener;
+    a(paramab);
+    m();
   }
 }
 

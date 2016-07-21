@@ -1,43 +1,35 @@
 package com.estrongs.android.ui.e;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.app.PopAudioPlayer;
-import com.estrongs.android.pop.app.a.ak;
-import com.estrongs.android.ui.dialog.hc;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.am;
-import com.estrongs.fs.d;
-import java.util.List;
+import com.estrongs.android.pop.m;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.dialog.jh;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.widget.ab;
+import com.estrongs.android.widget.ad;
+import com.estrongs.fs.b.a;
+import com.estrongs.fs.h;
 
 class hx
-  implements MenuItem.OnMenuItemClickListener
+  implements ab
 {
-  hx(hl paramhl) {}
+  hx(hv paramhv, ad paramad) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public boolean a(h paramh)
   {
-    paramMenuItem = hl.a(a).v();
-    if (paramMenuItem.size() > 0)
-    {
-      String str = get0b;
-      paramMenuItem = str;
-      if (!am.ba(str)) {
-        paramMenuItem = am.bq(str);
-      }
-      paramMenuItem = d.a().j(paramMenuItem);
-      if (paramMenuItem != null) {
-        break label85;
-      }
-      ag.a(hl.a(a), 2131428302, 1);
+    FileExplorerActivity localFileExplorerActivity = FileExplorerActivity.X();
+    if (!ap.M(paramh.getAbsolutePath())) {
+      return false;
     }
-    for (;;)
-    {
-      hl.a(a).u();
-      return true;
-      label85:
-      new hc(hl.a(a), paramMenuItem).a();
-    }
+    a locala = new a(cr.a(b.a), paramh, false);
+    locala.setDescription(String.format(localFileExplorerActivity.getString(2131230907), new Object[] { ap.cc(paramh.getAbsolutePath()) }));
+    locala.setTaskDecisionListener(new m(localFileExplorerActivity));
+    paramh = new jh(localFileExplorerActivity, localFileExplorerActivity.getString(2131232173), locala);
+    paramh.a(false);
+    paramh.show();
+    locala.a(paramh);
+    locala.execute();
+    a.k();
+    return true;
   }
 }
 

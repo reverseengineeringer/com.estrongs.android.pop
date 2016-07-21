@@ -1,39 +1,20 @@
 package com.estrongs.android.ui.preference.fragments;
 
-import android.preference.EditTextPreference;
 import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
-import com.estrongs.android.pop.ad;
+import android.preference.Preference.OnPreferenceClickListener;
+import com.estrongs.android.pop.view.utils.n;
+import com.estrongs.android.ui.view.ak;
 
 class v
-  implements Preference.OnPreferenceChangeListener
+  implements Preference.OnPreferenceClickListener
 {
-  v(DirectoryPreferenceFragment paramDirectoryPreferenceFragment) {}
+  v(CleanPreferenceFragment paramCleanPreferenceFragment) {}
   
-  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
+  public boolean onPreferenceClick(Preference paramPreference)
   {
-    paramObject = paramObject.toString();
-    if (((String)paramObject).trim().equals(""))
-    {
-      DirectoryPreferenceFragment.a(a);
-      return false;
-    }
-    boolean bool = DirectoryPreferenceFragment.a(a, (String)paramObject);
-    paramPreference = (Preference)paramObject;
-    if (((String)paramObject).charAt(((String)paramObject).length() - 1) != '/') {
-      paramPreference = (String)paramObject + "/";
-    }
-    DirectoryPreferenceFragment.b(a, paramPreference);
-    DirectoryPreferenceFragment.a(a, 0);
-    if (bool)
-    {
-      DirectoryPreferenceFragment.b(a).setSummary(paramPreference);
-      DirectoryPreferenceFragment.b(a).setText(paramPreference);
-      DirectoryPreferenceFragment.c(a).i(paramPreference);
-      return true;
-    }
-    DirectoryPreferenceFragment.a(a);
-    return false;
+    n.a(a.getActivity());
+    ak.a(a.getActivity(), 2131231196, 0);
+    return true;
   }
 }
 

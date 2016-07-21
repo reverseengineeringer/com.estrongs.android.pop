@@ -1,26 +1,29 @@
 package com.estrongs.fs.b;
 
 import android.app.Activity;
-import com.estrongs.a.a.h;
-import com.estrongs.android.a.e;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
+import android.net.Uri;
 import com.estrongs.android.pop.esclasses.ESActivity;
+import com.estrongs.android.pop.view.FileExplorerActivity;
 
 class bh
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  bh(ba paramba) {}
+  bh(bd parambd) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (ESActivity.A() == null)
-    {
-      new Thread(new bi(this)).start();
+    paramDialogInterface.dismiss();
+    paramDialogInterface = ESActivity.H();
+    if (paramDialogInterface == null) {
       return;
     }
-    e locale = new e(ESActivity.A(), new bj(this), true);
-    locale.setTitle(ba.b(a).getString(2131427401));
-    locale.setMessage(ba.b(a).getString(2131427810) + "\n" + ea).a);
-    locale.show();
+    Intent localIntent = new Intent(paramDialogInterface, FileExplorerActivity.class);
+    localIntent.addFlags(603979776);
+    localIntent.setData(Uri.parse(Uri.encode(bc.d(a.a), "/")));
+    paramDialogInterface.startActivity(localIntent);
   }
 }
 

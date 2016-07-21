@@ -1,16 +1,31 @@
 package com.estrongs.android.ui.preference.fragments;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.pop.ad;
 
 class av
-  implements DialogInterface.OnClickListener
+  implements Preference.OnPreferenceChangeListener
 {
   av(PasswordPreferenceFragment paramPasswordPreferenceFragment) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
   {
-    paramDialogInterface.dismiss();
+    if (((Boolean)paramObject).booleanValue())
+    {
+      paramPreference = ad.a(a.getActivity()).H();
+      if ((paramPreference == null) || (paramPreference.length() == 0))
+      {
+        PasswordPreferenceFragment.a(a, 113);
+        return false;
+      }
+      PasswordPreferenceFragment.a(a).setEnabled(true);
+      FexApplication.a().e(((Boolean)paramObject).booleanValue());
+      return true;
+    }
+    PasswordPreferenceFragment.b(a, 114);
+    return false;
   }
 }
 

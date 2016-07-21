@@ -13,11 +13,11 @@
 # instance fields
 .field private a:Z
 
-.field private c:Lcom/estrongs/android/pop/app/aa;
+.field private c:Lcom/estrongs/android/pop/app/ag;
 
 .field private d:Landroid/content/Context;
 
-.field private e:Lcom/estrongs/android/ui/notification/c;
+.field private e:Lcom/estrongs/android/ui/notification/d;
 
 
 # direct methods
@@ -36,11 +36,11 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {}, Lcom/estrongs/android/pop/app/aa;->g()Lcom/estrongs/android/pop/app/aa;
+    invoke-static {}, Lcom/estrongs/android/pop/app/ag;->g()Lcom/estrongs/android/pop/app/ag;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->c:Lcom/estrongs/android/pop/app/aa;
+    iput-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->c:Lcom/estrongs/android/pop/app/ag;
 
     invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
 
@@ -50,19 +50,19 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/c;
+    iput-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/d;
 
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->a:Z
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->c:Lcom/estrongs/android/pop/app/aa;
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->c:Lcom/estrongs/android/pop/app/ag;
 
-    invoke-virtual {v0, p0}, Lcom/estrongs/android/pop/app/aa;->a(Lcom/estrongs/chromecast/RemoteMediaPlayerListener;)V
+    invoke-virtual {v0, p0}, Lcom/estrongs/android/pop/app/ag;->a(Lcom/estrongs/chromecast/RemoteMediaPlayerListener;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->c:Lcom/estrongs/android/pop/app/aa;
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->c:Lcom/estrongs/android/pop/app/ag;
 
-    invoke-virtual {v0, p0}, Lcom/estrongs/android/pop/app/aa;->a(Lcom/estrongs/chromecast/ChromeCastConnectionListener;)V
+    invoke-virtual {v0, p0}, Lcom/estrongs/android/pop/app/ag;->a(Lcom/estrongs/chromecast/ChromeCastConnectionListener;)V
 
     return-void
 .end method
@@ -94,10 +94,10 @@
     return-object p0
 .end method
 
-.method static synthetic b(Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;)Lcom/estrongs/android/ui/notification/c;
+.method static synthetic b(Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;)Lcom/estrongs/android/ui/notification/d;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/c;
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/d;
 
     return-object v0
 .end method
@@ -134,11 +134,11 @@
 .method public c()V
     .locals 10
 
-    const v9, 0x7f0a006e
+    const v9, 0x7f0e01cf
 
-    const v8, 0x7f0a006d
+    const v8, 0x7f0e01ce
 
-    const v7, 0x7f0a006f
+    const v7, 0x7f0e01d0
 
     const/16 v6, 0x8
 
@@ -152,13 +152,13 @@
 
     move-result-object v0
 
-    const v2, 0x7f030020
+    const v2, 0x7f030067
 
     invoke-direct {v1, v0, v2}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->c:Lcom/estrongs/android/pop/app/aa;
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->c:Lcom/estrongs/android/pop/app/ag;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/aa;->o()Lcom/estrongs/android/pop/app/ad;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ag;->o()Lcom/estrongs/android/pop/app/ah;
 
     move-result-object v2
 
@@ -169,11 +169,11 @@
     return-void
 
     :cond_1
-    iget-object v0, v2, Lcom/estrongs/android/pop/app/ad;->e:Landroid/graphics/Bitmap;
+    iget-object v0, v2, Lcom/estrongs/android/pop/app/ah;->e:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, v2, Lcom/estrongs/android/pop/app/ad;->e:Landroid/graphics/Bitmap;
+    iget-object v0, v2, Lcom/estrongs/android/pop/app/ah;->e:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
@@ -181,28 +181,28 @@
 
     if-nez v0, :cond_2
 
-    iget-object v0, v2, Lcom/estrongs/android/pop/app/ad;->e:Landroid/graphics/Bitmap;
+    iget-object v0, v2, Lcom/estrongs/android/pop/app/ah;->e:Landroid/graphics/Bitmap;
 
     iget-object v3, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->d:Landroid/content/Context;
 
     const/high16 v4, 0x42800000    # 64.0f
 
-    invoke-static {v3, v4}, Lcom/estrongs/android/ui/d/a;->a(Landroid/content/Context;F)I
+    invoke-static {v3, v4}, Lcom/estrongs/android/ui/d/g;->a(Landroid/content/Context;F)I
 
     move-result v3
 
-    invoke-static {v0, v3}, Lcom/estrongs/android/ui/d/a;->a(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
+    invoke-static {v0, v3}, Lcom/estrongs/android/ui/d/g;->a(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    const v3, 0x7f0a006a
+    const v3, 0x7f0e01cb
 
     invoke-virtual {v1, v3, v0}, Landroid/widget/RemoteViews;->setImageViewBitmap(ILandroid/graphics/Bitmap;)V
 
     :cond_2
-    iget-object v0, v2, Lcom/estrongs/android/pop/app/ad;->b:Ljava/lang/String;
+    iget-object v0, v2, Lcom/estrongs/android/pop/app/ah;->b:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bc;->c(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/bg;->c(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -212,16 +212,16 @@
 
     invoke-virtual {v1, v7, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
-    const v0, 0x7f0a0070
+    const v0, 0x7f0e01d1
 
     invoke-virtual {v1, v0, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     invoke-virtual {v1, v8, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     :cond_3
-    const v0, 0x7f0a006c
+    const v0, 0x7f0e01cd
 
-    iget-object v3, v2, Lcom/estrongs/android/pop/app/ad;->c:Ljava/lang/String;
+    iget-object v3, v2, Lcom/estrongs/android/pop/app/ah;->c:Ljava/lang/String;
 
     invoke-virtual {v1, v0, v3}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
@@ -237,7 +237,7 @@
 
     invoke-virtual {v1, v7, v0}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
 
-    const v0, 0x7f0a0070
+    const v0, 0x7f0e01d1
 
     invoke-virtual {p0}, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->f()Landroid/app/PendingIntent;
 
@@ -251,7 +251,7 @@
 
     invoke-virtual {v1, v8, v0}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
 
-    const v0, 0x7f0a00e0
+    const v0, 0x7f0e025c
 
     invoke-virtual {p0}, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->h()Landroid/app/PendingIntent;
 
@@ -259,9 +259,9 @@
 
     invoke-virtual {v1, v0, v3}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->c:Lcom/estrongs/android/pop/app/aa;
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->c:Lcom/estrongs/android/pop/app/ag;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/aa;->r()I
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ag;->r()I
 
     move-result v0
 
@@ -269,16 +269,16 @@
 
     if-ne v0, v3, :cond_8
 
-    const v0, 0x7f020015
+    const v0, 0x7f020081
 
     invoke-virtual {v1, v7, v0}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 
     :goto_1
     const/4 v0, 0x0
 
-    iget-object v3, v2, Lcom/estrongs/android/pop/app/ad;->b:Ljava/lang/String;
+    iget-object v3, v2, Lcom/estrongs/android/pop/app/ah;->b:Ljava/lang/String;
 
-    invoke-static {v3}, Lcom/estrongs/android/util/bc;->c(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/estrongs/android/util/bg;->c(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -296,37 +296,37 @@
     :goto_2
     if-eqz v0, :cond_0
 
-    iget-object v3, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/c;
+    iget-object v3, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/d;
 
     if-eqz v3, :cond_5
 
-    iget-object v3, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/c;
+    iget-object v3, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/d;
 
-    invoke-virtual {v3}, Lcom/estrongs/android/ui/notification/c;->h()Z
+    invoke-virtual {v3}, Lcom/estrongs/android/ui/notification/d;->h()Z
 
     move-result v3
 
     if-eqz v3, :cond_6
 
     :cond_5
-    new-instance v3, Lcom/estrongs/android/ui/notification/c;
+    new-instance v3, Lcom/estrongs/android/ui/notification/d;
 
     iget-object v4, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->d:Landroid/content/Context;
 
-    invoke-direct {v3, v4, v5}, Lcom/estrongs/android/ui/notification/c;-><init>(Landroid/content/Context;Z)V
+    invoke-direct {v3, v4, v5}, Lcom/estrongs/android/ui/notification/d;-><init>(Landroid/content/Context;Z)V
 
-    iput-object v3, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/c;
+    iput-object v3, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/d;
 
     :cond_6
-    iget-object v3, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/c;
+    iget-object v3, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/d;
 
-    invoke-virtual {v3, v1}, Lcom/estrongs/android/ui/notification/c;->a(Landroid/widget/RemoteViews;)V
+    invoke-virtual {v3, v1}, Lcom/estrongs/android/ui/notification/d;->a(Landroid/widget/RemoteViews;)V
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/c;
+    iget-object v1, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/d;
 
-    invoke-virtual {v1, v5}, Lcom/estrongs/android/ui/notification/c;->a(Z)V
+    invoke-virtual {v1, v5}, Lcom/estrongs/android/ui/notification/d;->a(Z)V
 
-    iget-object v1, v2, Lcom/estrongs/android/pop/app/ad;->a:Ljava/lang/String;
+    iget-object v1, v2, Lcom/estrongs/android/pop/app/ah;->a:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -342,49 +342,49 @@
 
     invoke-virtual {v0, v1, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/c;
+    iget-object v1, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/d;
 
-    invoke-virtual {v1, v0, v5}, Lcom/estrongs/android/ui/notification/c;->a(Landroid/content/Intent;Z)V
+    invoke-virtual {v1, v0, v5}, Lcom/estrongs/android/ui/notification/d;->a(Landroid/content/Intent;Z)V
 
-    iget-object v0, v2, Lcom/estrongs/android/pop/app/ad;->b:Ljava/lang/String;
+    iget-object v0, v2, Lcom/estrongs/android/pop/app/ah;->b:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bc;->g(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/bg;->g(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_b
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/c;
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/d;
 
-    const v1, 0x7f02018c
+    const v1, 0x7f0202c2
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/notification/c;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/notification/d;->a(I)V
 
     :cond_7
     :goto_3
-    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/c;
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/d;
 
-    iget-object v1, v2, Lcom/estrongs/android/pop/app/ad;->c:Ljava/lang/String;
+    iget-object v1, v2, Lcom/estrongs/android/pop/app/ah;->c:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/notification/c;->a(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/notification/d;->a(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/c;
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/d;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/c;->c()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/d;->c()V
 
     goto/16 :goto_0
 
     :cond_8
-    const v0, 0x7f020016
+    const v0, 0x7f020082
 
     invoke-virtual {v1, v7, v0}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 
     goto :goto_1
 
     :cond_9
-    iget-object v3, v2, Lcom/estrongs/android/pop/app/ad;->b:Ljava/lang/String;
+    iget-object v3, v2, Lcom/estrongs/android/pop/app/ah;->b:Ljava/lang/String;
 
-    invoke-static {v3}, Lcom/estrongs/android/util/bc;->h(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/estrongs/android/util/bg;->h(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -401,9 +401,9 @@
     goto :goto_2
 
     :cond_a
-    iget-object v3, v2, Lcom/estrongs/android/pop/app/ad;->b:Ljava/lang/String;
+    iget-object v3, v2, Lcom/estrongs/android/pop/app/ah;->b:Ljava/lang/String;
 
-    invoke-static {v3}, Lcom/estrongs/android/util/bc;->g(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/estrongs/android/util/bg;->g(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -420,19 +420,19 @@
     goto/16 :goto_2
 
     :cond_b
-    iget-object v0, v2, Lcom/estrongs/android/pop/app/ad;->b:Ljava/lang/String;
+    iget-object v0, v2, Lcom/estrongs/android/pop/app/ah;->b:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bc;->h(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/bg;->h(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/c;
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/d;
 
-    const v1, 0x7f020198
+    const v1, 0x7f0202d2
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/notification/c;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/notification/d;->a(I)V
 
     goto :goto_3
 .end method
@@ -552,15 +552,15 @@
 
     sget-object v0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->b:Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/c;
+    iget-object v0, v0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/d;
 
     if-eqz v0, :cond_0
 
     sget-object v0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->b:Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/c;
+    iget-object v0, v0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/d;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/c;->g()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/d;->g()Z
 
     move-result v0
 
@@ -578,15 +578,15 @@
 
     sget-object v0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->b:Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/c;
+    iget-object v0, v0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/d;
 
     if-eqz v0, :cond_0
 
     sget-object v0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->b:Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/c;
+    iget-object v0, v0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/d;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/c;->e()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/d;->e()V
 
     :cond_0
     return-void
@@ -615,15 +615,15 @@
 
     sget-object v0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->b:Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/c;
+    iget-object v0, v0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/d;
 
     if-eqz v0, :cond_0
 
     sget-object v0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->b:Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/c;
+    iget-object v0, v0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/d;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/c;->e()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/d;->e()V
 
     :cond_0
     return-void
@@ -634,13 +634,13 @@
 
     const/4 v1, 0x1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/c;
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/d;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/c;
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->e:Lcom/estrongs/android/ui/notification/d;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/c;->g()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/d;->g()Z
 
     move-result v0
 
@@ -651,17 +651,17 @@
     :cond_0
     if-ne p1, v1, :cond_1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->c:Lcom/estrongs/android/pop/app/aa;
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->c:Lcom/estrongs/android/pop/app/ag;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/aa;->z()I
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ag;->z()I
 
     move-result v0
 
     if-ne v0, v1, :cond_1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->c:Lcom/estrongs/android/pop/app/aa;
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ChromeCastPlayerNotificationHelper;->c:Lcom/estrongs/android/pop/app/ag;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/aa;->k()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ag;->k()V
 
     :cond_1
     return-void

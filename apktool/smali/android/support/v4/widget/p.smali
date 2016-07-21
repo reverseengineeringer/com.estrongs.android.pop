@@ -1,128 +1,56 @@
 .class Landroid/support/v4/widget/p;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field final synthetic a:Landroid/support/v4/widget/ContentLoadingProgressBar;
+
 
 # direct methods
-.method public static a(Landroid/content/Context;Landroid/view/animation/Interpolator;)Ljava/lang/Object;
-    .locals 1
-
-    if-eqz p1, :cond_0
-
-    new-instance v0, Landroid/widget/OverScroller;
-
-    invoke-direct {v0, p0, p1}, Landroid/widget/OverScroller;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    new-instance v0, Landroid/widget/OverScroller;
-
-    invoke-direct {v0, p0}, Landroid/widget/OverScroller;-><init>(Landroid/content/Context;)V
-
-    goto :goto_0
-.end method
-
-.method public static a(Ljava/lang/Object;IIIII)V
-    .locals 6
-
-    move-object v0, p0
-
-    check-cast v0, Landroid/widget/OverScroller;
-
-    move v1, p1
-
-    move v2, p2
-
-    move v3, p3
-
-    move v4, p4
-
-    move v5, p5
-
-    invoke-virtual/range {v0 .. v5}, Landroid/widget/OverScroller;->startScroll(IIIII)V
-
-    return-void
-.end method
-
-.method public static a(Ljava/lang/Object;)Z
-    .locals 1
-
-    check-cast p0, Landroid/widget/OverScroller;
-
-    invoke-virtual {p0}, Landroid/widget/OverScroller;->isFinished()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static b(Ljava/lang/Object;)I
-    .locals 1
-
-    check-cast p0, Landroid/widget/OverScroller;
-
-    invoke-virtual {p0}, Landroid/widget/OverScroller;->getCurrX()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static c(Ljava/lang/Object;)I
-    .locals 1
-
-    check-cast p0, Landroid/widget/OverScroller;
-
-    invoke-virtual {p0}, Landroid/widget/OverScroller;->getCurrY()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static d(Ljava/lang/Object;)Z
-    .locals 1
-
-    check-cast p0, Landroid/widget/OverScroller;
-
-    invoke-virtual {p0}, Landroid/widget/OverScroller;->computeScrollOffset()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static e(Ljava/lang/Object;)V
+.method constructor <init>(Landroid/support/v4/widget/ContentLoadingProgressBar;)V
     .locals 0
 
-    check-cast p0, Landroid/widget/OverScroller;
+    iput-object p1, p0, Landroid/support/v4/widget/p;->a:Landroid/support/v4/widget/ContentLoadingProgressBar;
 
-    invoke-virtual {p0}, Landroid/widget/OverScroller;->abortAnimation()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static f(Ljava/lang/Object;)I
-    .locals 1
 
-    check-cast p0, Landroid/widget/OverScroller;
+# virtual methods
+.method public run()V
+    .locals 4
 
-    invoke-virtual {p0}, Landroid/widget/OverScroller;->getFinalX()I
+    const/4 v1, 0x0
 
-    move-result v0
+    iget-object v0, p0, Landroid/support/v4/widget/p;->a:Landroid/support/v4/widget/ContentLoadingProgressBar;
 
-    return v0
-.end method
+    invoke-static {v0, v1}, Landroid/support/v4/widget/ContentLoadingProgressBar;->b(Landroid/support/v4/widget/ContentLoadingProgressBar;Z)Z
 
-.method public static g(Ljava/lang/Object;)I
-    .locals 1
+    iget-object v0, p0, Landroid/support/v4/widget/p;->a:Landroid/support/v4/widget/ContentLoadingProgressBar;
 
-    check-cast p0, Landroid/widget/OverScroller;
-
-    invoke-virtual {p0}, Landroid/widget/OverScroller;->getFinalY()I
+    invoke-static {v0}, Landroid/support/v4/widget/ContentLoadingProgressBar;->a(Landroid/support/v4/widget/ContentLoadingProgressBar;)Z
 
     move-result v0
 
-    return v0
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v4/widget/p;->a:Landroid/support/v4/widget/ContentLoadingProgressBar;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    invoke-static {v0, v2, v3}, Landroid/support/v4/widget/ContentLoadingProgressBar;->a(Landroid/support/v4/widget/ContentLoadingProgressBar;J)J
+
+    iget-object v0, p0, Landroid/support/v4/widget/p;->a:Landroid/support/v4/widget/ContentLoadingProgressBar;
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/widget/ContentLoadingProgressBar;->setVisibility(I)V
+
+    :cond_0
+    return-void
 .end method

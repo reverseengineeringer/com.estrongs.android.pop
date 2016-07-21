@@ -1,16 +1,16 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnPreparedListener;
 
 class me
-  implements DialogInterface.OnClickListener
+  implements MediaPlayer.OnPreparedListener
 {
   me(StreamingMediaPlayer paramStreamingMediaPlayer) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void onPrepared(MediaPlayer paramMediaPlayer)
   {
-    a.finish();
+    StreamingMediaPlayer.a(a, paramMediaPlayer);
   }
 }
 

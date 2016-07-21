@@ -2,7 +2,7 @@ package com.estrongs.android.pop;
 
 import android.os.Build;
 import android.os.Build.VERSION;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.util.bk;
 
 public class ac
 {
@@ -19,7 +19,7 @@ public class ac
   
   public static String b()
   {
-    if (bd.a(Build.MODEL)) {
+    if (bk.a(Build.MODEL)) {
       return "";
     }
     return Build.MODEL;

@@ -1,18 +1,22 @@
 package com.estrongs.android.pop.app;
 
+import android.content.Context;
+import android.support.v7.widget.Toolbar;
+import android.view.View.MeasureSpec;
+import android.widget.LinearLayout;
+import com.estrongs.android.pop.utils.cu;
+
 class fb
-  implements ae
+  extends LinearLayout
 {
-  fb(PopAudioPlayer paramPopAudioPlayer) {}
-  
-  public void a()
+  fb(fa paramfa, Context paramContext)
   {
-    a.d();
+    super(paramContext);
   }
   
-  public void b()
+  protected void onMeasure(int paramInt1, int paramInt2)
   {
-    PopAudioPlayer.e(a);
+    super.onMeasure(View.MeasureSpec.makeMeasureSpec(cu.e(a.a), View.MeasureSpec.getMode(paramInt1)), View.MeasureSpec.makeMeasureSpec(PopAudioPlayer.g(a.a).getMeasuredHeight(), View.MeasureSpec.getMode(paramInt1)));
   }
 }
 

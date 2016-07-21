@@ -9,7 +9,7 @@ class l
   
   public void run()
   {
-    CropImage.d(b).e();
+    CropImage.d(b).a();
     a.recycle();
   }
 }

@@ -3,12 +3,11 @@ package com.estrongs.android.ui.view;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.widget.Button;
-import com.estrongs.android.widget.g;
 
 class f
   implements DialogInterface.OnClickListener
 {
-  f(c paramc, g paramg) {}
+  f(c paramc, com.estrongs.android.widget.f paramf) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {

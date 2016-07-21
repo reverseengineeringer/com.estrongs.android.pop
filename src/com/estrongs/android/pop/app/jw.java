@@ -1,63 +1,35 @@
 package com.estrongs.android.pop.app;
 
-import android.content.Context;
-import android.view.KeyEvent;
-import android.view.View;
-import android.widget.MediaController;
+import com.estrongs.android.ui.notification.ChromeCastPlayerNotificationHelper;
+import com.estrongs.android.ui.view.ESVideoView;
 
 class jw
-  extends MediaController
+  implements Runnable
 {
-  jw(PopVideoPlayer paramPopVideoPlayer, Context paramContext)
-  {
-    super(paramContext);
-  }
+  jw(PopVideoPlayer paramPopVideoPlayer) {}
   
-  public boolean dispatchKeyEvent(KeyEvent paramKeyEvent)
+  public void run()
   {
-    int j = paramKeyEvent.getKeyCode();
-    if ((paramKeyEvent.getRepeatCount() == 0) && (paramKeyEvent.getAction() == 0)) {}
-    for (int i = 1;; i = 0)
+    if (!a.a())
     {
-      if (((j == 4) || (j == 82)) && (i != 0)) {
-        PopVideoPlayer.a(a, true);
+      if ((PopVideoPlayer.r(a).r() >= 0) && (PopVideoPlayer.D(a))) {
+        ChromeCastPlayerNotificationHelper.a().b();
       }
-      return super.dispatchKeyEvent(paramKeyEvent);
-    }
-  }
-  
-  public void hide()
-  {
-    if (PopVideoPlayer.o(a))
-    {
-      if (PopVideoPlayer.p(a))
-      {
-        PopVideoPlayer.a(a, false);
-        a.c();
-        return;
-      }
-      PopVideoPlayer.a(a, false);
       return;
     }
-    PopVideoPlayer.a(a, false);
     try
     {
-      if (a.a()) {
-        PopVideoPlayer.q(a).setVisibility(4);
+      if (PopVideoPlayer.a(a).isPlaying()) {
+        a.f = true;
       }
-      super.hide();
+      for (a.g = false;; a.g = true)
+      {
+        PopVideoPlayer.a(a).pause();
+        return;
+      }
       return;
     }
-    catch (Exception localException)
-    {
-      for (;;) {}
-    }
-  }
-  
-  public void show()
-  {
-    PopVideoPlayer.q(a).setVisibility(0);
-    super.show();
+    catch (Exception localException) {}
   }
 }
 

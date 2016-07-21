@@ -12,7 +12,7 @@ class f
   {
     Iterator localIterator = a.iterator();
     while (localIterator.hasNext()) {
-      ((o)localIterator.next()).b();
+      ((p)localIterator.next()).b();
     }
   }
 }

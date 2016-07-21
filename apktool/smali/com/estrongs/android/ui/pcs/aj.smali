@@ -1,117 +1,96 @@
-.class public Lcom/estrongs/android/ui/pcs/aj;
+.class Lcom/estrongs/android/ui/pcs/aj;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field final synthetic a:Lcom/estrongs/android/ui/pcs/ai;
 
 
 # direct methods
-.method public static a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
+.method constructor <init>(Lcom/estrongs/android/ui/pcs/ai;)V
+    .locals 0
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lcom/estrongs/android/ui/pcs/aj;->a:Lcom/estrongs/android/ui/pcs/ai;
 
-    const/4 v0, 0x0
-
-    invoke-static {p0, p1, v0, v1, v1}, Lcom/estrongs/android/ui/pcs/aj;->a(Landroid/content/Context;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static a(Landroid/content/Context;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 3
-
-    if-eqz p1, :cond_2
-
-    const-string v0, "pcs"
-
-    invoke-static {v0, p1}, Lcom/estrongs/fs/impl/j/b;->f(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    if-eqz p2, :cond_1
-
-    if-eqz p3, :cond_0
-
-    invoke-static {p0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, p3, v2}, Lcom/estrongs/android/pop/ad;->a(Ljava/lang/String;Z)V
-
-    :cond_0
-    invoke-static {p0, v0, p4}, Lcom/estrongs/android/ui/pcs/aj;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_1
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ":fake"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :cond_2
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method private static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 3
-
-    const-string v0, "pcs"
-
-    const-string v1, "fake"
-
-    const-string v2, "/files"
-
-    invoke-static {v0, p1, v1, v2}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-lez v1, :cond_0
-
-    move-object p1, p2
-
-    :cond_0
-    invoke-static {p0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0, p1}, Lcom/estrongs/android/pop/ad;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;)Z
-    .locals 1
 
-    invoke-static {}, Lcom/estrongs/android/pop/utils/cc;->a()Z
+# virtual methods
+.method public run()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/pcs/aj;->a:Lcom/estrongs/android/ui/pcs/ai;
+
+    iget-object v0, v0, Lcom/estrongs/android/ui/pcs/ai;->a:Lcom/estrongs/android/ui/pcs/z;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/pcs/z;->m(Lcom/estrongs/android/ui/pcs/z;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/pcs/aj;->a:Lcom/estrongs/android/ui/pcs/ai;
+
+    iget-object v0, v0, Lcom/estrongs/android/ui/pcs/ai;->a:Lcom/estrongs/android/ui/pcs/z;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/pcs/z;->h(Lcom/estrongs/android/ui/pcs/z;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/pcs/aj;->a:Lcom/estrongs/android/ui/pcs/ai;
+
+    iget-object v0, v0, Lcom/estrongs/android/ui/pcs/ai;->a:Lcom/estrongs/android/ui/pcs/z;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/pcs/z;->h(Lcom/estrongs/android/ui/pcs/z;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    return v0
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/pcs/aj;->a:Lcom/estrongs/android/ui/pcs/ai;
+
+    iget-object v0, v0, Lcom/estrongs/android/ui/pcs/ai;->a:Lcom/estrongs/android/ui/pcs/z;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/pcs/z;->d(Lcom/estrongs/android/ui/pcs/z;)Landroid/view/View;
+
+    move-result-object v0
+
+    const v1, 0x7f0e021d
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/EditText;
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/pcs/aj;->a:Lcom/estrongs/android/ui/pcs/ai;
+
+    iget-object v1, v1, Lcom/estrongs/android/ui/pcs/ai;->a:Lcom/estrongs/android/ui/pcs/z;
+
+    invoke-static {v1}, Lcom/estrongs/android/ui/pcs/z;->h(Lcom/estrongs/android/ui/pcs/z;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setVisibility(I)V
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/pcs/aj;->a:Lcom/estrongs/android/ui/pcs/ai;
+
+    iget-object v0, v0, Lcom/estrongs/android/ui/pcs/ai;->a:Lcom/estrongs/android/ui/pcs/z;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/pcs/z;->n(Lcom/estrongs/android/ui/pcs/z;)V
+
+    return-void
 .end method

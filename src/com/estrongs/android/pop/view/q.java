@@ -1,23 +1,13 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.ui.navigation.s;
-
 class q
   implements Runnable
 {
-  q(FileExplorerActivity paramFileExplorerActivity) {}
+  q(FileExplorerActivity paramFileExplorerActivity, String paramString) {}
   
   public void run()
   {
-    try
-    {
-      s.a(a);
-      return;
-    }
-    catch (Exception localException)
-    {
-      localException.printStackTrace();
-    }
+    b.o(a);
   }
 }
 

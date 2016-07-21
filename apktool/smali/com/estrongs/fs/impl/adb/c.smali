@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/fs/k;
+.implements Lcom/estrongs/fs/u;
 
 
 # static fields
@@ -224,7 +224,7 @@
 
     move-result-object v5
 
-    invoke-static {v0, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v5}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
     const-string v0, "Success"
@@ -344,7 +344,7 @@
 
     const-string v2, "installApk failed, get connection null"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     :goto_0
@@ -356,13 +356,13 @@
     move-result-object v3
 
     :try_start_0
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->O(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->Q(Ljava/lang/String;)Z
 
     move-result v4
 
     if-eqz v4, :cond_6
 
-    invoke-static {p0, p1}, Lcom/estrongs/android/util/am;->c(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {p0, p1}, Lcom/estrongs/android/util/ap;->c(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v4
 
@@ -565,7 +565,7 @@
 
     move-result-object v6
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -677,7 +677,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0b0174
+    const v5, 0x7f0800f9
 
     invoke-virtual {v4, v5}, Lcom/estrongs/android/pop/FexApplication;->getString(I)Ljava/lang/String;
 
@@ -708,7 +708,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0b0174
+    const v5, 0x7f0800f9
 
     invoke-virtual {v4, v5}, Lcom/estrongs/android/pop/FexApplication;->getString(I)Ljava/lang/String;
 
@@ -780,7 +780,7 @@
     return-object v0
 
     :pswitch_0
-    const v0, 0x7f0b0580
+    const v0, 0x7f0800f5
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -789,7 +789,7 @@
     goto :goto_0
 
     :pswitch_1
-    const v0, 0x7f0b0581
+    const v0, 0x7f0800f6
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -798,7 +798,7 @@
     goto :goto_0
 
     :pswitch_2
-    const v0, 0x7f0b0582
+    const v0, 0x7f0800f7
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -807,7 +807,7 @@
     goto :goto_0
 
     :pswitch_3
-    const v0, 0x7f0b0583
+    const v0, 0x7f0800f8
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -930,19 +930,19 @@
 
     const/16 v1, 0x13
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->z(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->B(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->A(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->C(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1024,7 +1024,7 @@
 
     if-eqz p0, :cond_0
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->K(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->M(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -1035,7 +1035,7 @@
     return-object v0
 
     :cond_1
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1216,7 +1216,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v2}, Lcom/estrongs/android/util/ac;->a(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/client/HttpClient;
+    invoke-static {v2}, Lcom/estrongs/android/util/ah;->a(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/client/HttpClient;
 
     move-result-object v2
 
@@ -1312,7 +1312,7 @@
 
     const-string v2, "installApk failed, get connection null"
 
-    invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     :goto_0
@@ -1329,7 +1329,7 @@
 
     move-result-object v2
 
-    invoke-static {}, Lcom/estrongs/android/util/ak;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/estrongs/android/util/an;->a()Ljava/lang/String;
 
     move-result-object v3
 
@@ -1400,7 +1400,7 @@
 
     move-result-object v5
 
-    invoke-static {v3, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v5}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
     const-string v3, "Error"
@@ -1478,7 +1478,7 @@
 
     const-string v5, "sendFile error fail to get file input stream"
 
-    invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, v5}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v4, 0x0
 
@@ -2002,7 +2002,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
     const-wide/16 v2, 0xc8
@@ -2046,7 +2046,7 @@
 
     const-string v2, "uninstallApk failed, get connection or package name null"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     :goto_0
@@ -2116,7 +2116,7 @@
 
     move-result-object v6
 
-    invoke-static {v4, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, v6}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_4
     const-string v4, "Success"
@@ -2241,7 +2241,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f0b017a
+    const v6, 0x7f0800ff
 
     invoke-virtual {v5, v6}, Lcom/estrongs/android/pop/FexApplication;->getString(I)Ljava/lang/String;
 
@@ -2259,7 +2259,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2480,7 +2480,7 @@
 .method public static b()Z
     .locals 1
 
-    invoke-static {}, Lcom/estrongs/android/util/bd;->p()Z
+    invoke-static {}, Lcom/estrongs/android/util/bk;->p()Z
 
     move-result v0
 
@@ -2537,7 +2537,7 @@
 
     new-instance v1, Ljava/io/File;
 
-    sget-object v2, Lcom/estrongs/android/pop/a;->q:Ljava/lang/String;
+    sget-object v2, Lcom/estrongs/android/pop/a;->t:Ljava/lang/String;
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -2556,7 +2556,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v3, Lcom/estrongs/android/pop/a;->q:Ljava/lang/String;
+    sget-object v3, Lcom/estrongs/android/pop/a;->t:Ljava/lang/String;
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2580,7 +2580,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v4, Lcom/estrongs/android/pop/a;->q:Ljava/lang/String;
+    sget-object v4, Lcom/estrongs/android/pop/a;->t:Ljava/lang/String;
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2726,7 +2726,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v2}, Lcom/estrongs/android/util/ac;->a(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/client/HttpClient;
+    invoke-static {v2}, Lcom/estrongs/android/util/ah;->a(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/client/HttpClient;
 
     move-result-object v2
 
@@ -2761,7 +2761,7 @@
 .method public static e(Ljava/lang/String;)Z
     .locals 2
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->O(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->Q(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -2805,7 +2805,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->M(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->O(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -2945,7 +2945,7 @@
 .method public static j(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->O(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->Q(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -2991,7 +2991,7 @@
 
     const-string v1, " fail to get file obj"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -3041,7 +3041,7 @@
 
     const/16 v0, 0x24
 
-    invoke-static {p0, v0}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {p0, v0}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -3053,7 +3053,7 @@
 
     const/16 v0, 0x24
 
-    invoke-static {p0, v0}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {p0, v0}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -3084,15 +3084,15 @@
     move-result-object v0
 
     :cond_1
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->y(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->A(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->A(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->C(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -3197,7 +3197,7 @@
 
     move-result-object v0
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -3229,7 +3229,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -3239,7 +3239,7 @@
 
     const-string v1, "getOrCreateConnection error"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v3
 
@@ -3322,7 +3322,7 @@
 
     const-string v1, "fail to getAdbCrypto()"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_0
     invoke-virtual {v4}, Ljava/net/Socket;->close()V
@@ -3424,7 +3424,7 @@
 
     const-wide/16 v2, 0x0
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->O(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->Q(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -3483,7 +3483,7 @@
 .method public a(Ljava/lang/String;Z)Ljava/io/OutputStream;
     .locals 2
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->O(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->Q(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -3552,7 +3552,7 @@
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -3657,7 +3657,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -3737,7 +3737,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Lcom/estrongs/android/pop/ad;->R(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v3}, Lcom/estrongs/android/pop/ad;->Q(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -3747,7 +3747,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b0451
+    const v1, 0x7f0806e7
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/FexApplication;->getString(I)Ljava/lang/String;
 
@@ -3762,7 +3762,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v4}, Lcom/estrongs/android/pop/ad;->R(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v4}, Lcom/estrongs/android/pop/ad;->Q(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -3772,24 +3772,24 @@
 
     move-result-object v1
 
-    const v5, 0x7f0b02ac
+    const v5, 0x7f0806ce
 
     invoke-virtual {v1, v5}, Lcom/estrongs/android/pop/FexApplication;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
     :cond_5
-    new-instance v5, Lcom/estrongs/fs/n;
+    new-instance v5, Lcom/estrongs/fs/x;
 
-    sget-object v6, Lcom/estrongs/fs/m;->P:Lcom/estrongs/fs/m;
+    sget-object v6, Lcom/estrongs/fs/w;->O:Lcom/estrongs/fs/w;
 
-    invoke-direct {v5, v3, v6, v0}, Lcom/estrongs/fs/n;-><init>(Ljava/lang/String;Lcom/estrongs/fs/m;Ljava/lang/String;)V
+    invoke-direct {v5, v3, v6, v0}, Lcom/estrongs/fs/x;-><init>(Ljava/lang/String;Lcom/estrongs/fs/w;Ljava/lang/String;)V
 
-    new-instance v0, Lcom/estrongs/fs/n;
+    new-instance v0, Lcom/estrongs/fs/x;
 
-    sget-object v3, Lcom/estrongs/fs/m;->P:Lcom/estrongs/fs/m;
+    sget-object v3, Lcom/estrongs/fs/w;->O:Lcom/estrongs/fs/w;
 
-    invoke-direct {v0, v4, v3, v1}, Lcom/estrongs/fs/n;-><init>(Ljava/lang/String;Lcom/estrongs/fs/m;Ljava/lang/String;)V
+    invoke-direct {v0, v4, v3, v1}, Lcom/estrongs/fs/x;-><init>(Ljava/lang/String;Lcom/estrongs/fs/w;Ljava/lang/String;)V
 
     invoke-virtual {v2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -3963,7 +3963,7 @@
     :cond_b
     iput v5, v6, Lcom/estrongs/fs/impl/adb/e;->f:I
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -4050,7 +4050,7 @@
 
     const-string v2, "Fail to get device info."
 
-    invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -4093,7 +4093,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -4228,17 +4228,17 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->N(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->P(Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->P(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->R(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -4261,7 +4261,7 @@
     return v0
 
     :cond_1
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->O(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->Q(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -4466,7 +4466,7 @@
 
     const-string v2, "getInputStream fail to get file obj"
 
-    invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -4552,7 +4552,7 @@
 
     const-string v1, "installApk failed, get connection null"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Ljava/io/IOException;
 
@@ -4647,7 +4647,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v3}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
     invoke-virtual {v2}, Lcom/a/a/g;->close()V

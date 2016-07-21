@@ -1,11 +1,11 @@
 package com.estrongs.android.ui.view;
 
 import android.app.Activity;
-import com.estrongs.android.widget.g;
+import com.estrongs.android.widget.f;
 import com.estrongs.fs.i;
 
 class d
-  extends g
+  extends f
 {
   d(c paramc, Activity paramActivity, String paramString, i parami, boolean paramBoolean)
   {

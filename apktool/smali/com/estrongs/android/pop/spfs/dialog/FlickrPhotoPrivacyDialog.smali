@@ -1,5 +1,5 @@
 .class public Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoPrivacyDialog;
-.super Lcom/estrongs/android/ui/dialog/cg;
+.super Lcom/estrongs/android/ui/dialog/ci;
 
 
 # static fields
@@ -117,7 +117,7 @@
 
     const/4 v3, 0x0
 
-    invoke-direct {p0, p1}, Lcom/estrongs/android/ui/dialog/cg;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/estrongs/android/ui/dialog/ci;-><init>(Landroid/content/Context;)V
 
     new-instance v0, Lcom/estrongs/android/util/TypedMap;
 
@@ -158,7 +158,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoPrivacyDialog;->destPath:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->aK(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->aU(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -175,7 +175,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b02da
+    const v1, 0x7f08059e
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -183,11 +183,11 @@
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoPrivacyDialog;->setTitle(Ljava/lang/CharSequence;)V
 
-    invoke-static {p1}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {p1}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    const v1, 0x7f03005c
+    const v1, 0x7f0300c5
 
     invoke-virtual {v0, v1, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -199,7 +199,7 @@
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoPrivacyDialog;->setContentView(Landroid/view/View;)V
 
-    const v0, 0x7f0a0208
+    const v0, 0x7f0e03d6
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoPrivacyDialog;->findViewById(I)Landroid/view/View;
 
@@ -207,7 +207,7 @@
 
     check-cast v0, Landroid/widget/ProgressBar;
 
-    const v1, 0x7f0a020f
+    const v1, 0x7f0e03dd
 
     invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoPrivacyDialog;->findViewById(I)Landroid/view/View;
 
@@ -215,7 +215,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoPrivacyDialog;->overwriteOptionView:Landroid/view/View;
 
-    const v5, 0x7f0a0021
+    const v5, 0x7f0e0077
 
     invoke-virtual {v1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -227,7 +227,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoPrivacyDialog;->overwriteOptionView:Landroid/view/View;
 
-    const v5, 0x7f0a009f
+    const v5, 0x7f0e0207
 
     invoke-virtual {v1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -239,7 +239,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoPrivacyDialog;->overwriteOptionView:Landroid/view/View;
 
-    const v5, 0x7f0a0213
+    const v5, 0x7f0e03e1
 
     invoke-virtual {v1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -251,7 +251,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoPrivacyDialog;->overwriteOptionView:Landroid/view/View;
 
-    const v5, 0x7f0a0215
+    const v5, 0x7f0e03e3
 
     invoke-virtual {v1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -275,7 +275,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoPrivacyDialog;->overwriteOptionView:Landroid/view/View;
 
-    const v5, 0x7f0a0217
+    const v5, 0x7f0e03e5
 
     invoke-virtual {v1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -287,7 +287,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoPrivacyDialog;->overwriteOptionView:Landroid/view/View;
 
-    const v5, 0x7f0a0218
+    const v5, 0x7f0e03e6
 
     invoke-virtual {v1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -299,7 +299,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoPrivacyDialog;->overwriteOptionView:Landroid/view/View;
 
-    const v5, 0x7f0a021b
+    const v5, 0x7f0e03e9
 
     invoke-virtual {v1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -311,7 +311,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoPrivacyDialog;->overwriteOptionView:Landroid/view/View;
 
-    const v5, 0x7f0a0219
+    const v5, 0x7f0e03e7
 
     invoke-virtual {v1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -323,7 +323,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoPrivacyDialog;->overwriteOptionView:Landroid/view/View;
 
-    const v5, 0x7f0a021a
+    const v5, 0x7f0e03e8
 
     invoke-virtual {v1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -343,7 +343,7 @@
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoPrivacyDialog;->adjustkUI()V
 
-    const v1, 0x7f0b000b
+    const v1, 0x7f080226
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -355,7 +355,7 @@
 
     invoke-virtual {p0, v1, v5}, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoPrivacyDialog;->setConfirmButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/widget/Button;
 
-    const v1, 0x7f0b000c
+    const v1, 0x7f080221
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -744,7 +744,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoPrivacyDialog;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f0b02df
+    const v2, 0x7f0800c8
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -760,15 +760,15 @@
 .method protected adjustkUI()V
     .locals 4
 
-    const v3, 0x7f0a0216
+    const v3, 0x7f0e03e4
 
-    const v2, 0x7f0a0211
+    const v2, 0x7f0e03df
 
     const/16 v1, 0x8
 
     iget-object v0, p0, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoPrivacyDialog;->destPath:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->ar(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->aB(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -780,7 +780,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f0a0210
+    const v0, 0x7f0e03de
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoPrivacyDialog;->findViewById(I)Landroid/view/View;
 
@@ -823,7 +823,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setVisibility(I)V
 
-    const v0, 0x7f0a0212
+    const v0, 0x7f0e03e0
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoPrivacyDialog;->findViewById(I)Landroid/view/View;
 
@@ -831,7 +831,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f0a0214
+    const v0, 0x7f0e03e2
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoPrivacyDialog;->findViewById(I)Landroid/view/View;
 

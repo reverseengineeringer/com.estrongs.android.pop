@@ -1,75 +1,23 @@
 package com.estrongs.fs.impl.o;
 
-import android.os.AsyncTask;
-import com.estrongs.android.view.aw;
-import com.estrongs.fs.FileSystemException;
-import com.estrongs.fs.h;
-import java.util.List;
-
-class f
-  extends AsyncTask<String, Integer, List<h>>
+public class f
 {
-  private aw b;
-  private List<h> c;
+  long a;
+  long b;
   
-  public f(aw paramaw, List<h> paramList)
+  public long a()
   {
-    b = paramList;
-    List localList;
-    c = localList;
+    return a;
   }
   
-  private boolean a(List<h> paramList1, List<h> paramList2)
+  public long b()
   {
-    if (paramList1.size() != paramList2.size()) {
-      return false;
-    }
-    int i = 0;
-    for (;;)
-    {
-      if (i >= paramList1.size()) {
-        break label72;
-      }
-      if (!((h)paramList1.get(i)).getAbsolutePath().equals(((h)paramList2.get(i)).getAbsolutePath())) {
-        break;
-      }
-      i += 1;
-    }
-    label72:
-    return true;
+    return b;
   }
   
-  protected List<h> a(String... paramVarArgs)
+  public long c()
   {
-    try
-    {
-      paramVarArgs = a.a(a);
-      try
-      {
-        if (a(c, paramVarArgs)) {
-          return null;
-        }
-        a.b(paramVarArgs);
-        return paramVarArgs;
-      }
-      catch (FileSystemException localFileSystemException1) {}
-    }
-    catch (FileSystemException localFileSystemException2)
-    {
-      for (;;)
-      {
-        paramVarArgs = null;
-      }
-    }
-    localFileSystemException1.printStackTrace();
-    return paramVarArgs;
-  }
-  
-  protected void a(List<h> paramList)
-  {
-    if ((paramList != null) && (b != null) && (!b.V())) {
-      b.b(true);
-    }
+    return a - b;
   }
 }
 

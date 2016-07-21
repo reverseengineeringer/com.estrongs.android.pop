@@ -17,7 +17,7 @@ import android.graphics.Paint.Style;
 import android.graphics.Path;
 import android.graphics.PointF;
 import android.graphics.RectF;
-import com.estrongs.android.util.am;
+import com.estrongs.android.util.ap;
 import java.util.ArrayList;
 
 public class d
@@ -71,19 +71,19 @@ public class d
     if (paramString.startsWith("open_folder"))
     {
       String str = paramString.substring("open_folder".length());
-      localObject = am.d(str);
+      localObject = ap.d(str);
       paramString = (String)localObject;
       if (localObject == null)
       {
         paramString = (String)localObject;
-        if (am.bd(str)) {
-          paramString = paramContext.getString(2131428245);
+        if (ap.bo(str)) {
+          paramString = paramContext.getString(2131231650);
         }
       }
-      return paramContext.getString(2131428385, new Object[] { paramString });
+      return paramContext.getString(2131231538, new Object[] { paramString });
     }
     if (paramString.startsWith("open_window")) {
-      return paramContext.getString(2131428383, new Object[] { b(paramContext, paramString) });
+      return paramContext.getString(2131231539, new Object[] { b(paramContext, paramString) });
     }
     if (paramString.startsWith("start_app"))
     {
@@ -91,44 +91,44 @@ public class d
       localObject = paramContext.getPackageManager();
       try
       {
-        paramString = paramContext.getString(2131428384, new Object[] { ((PackageManager)localObject).getActivityInfo(new ComponentName(paramString[0], paramString[1]), 1).loadLabel((PackageManager)localObject).toString() });
+        paramString = paramContext.getString(2131231546, new Object[] { ((PackageManager)localObject).getActivityInfo(new ComponentName(paramString[0], paramString[1]), 1).loadLabel((PackageManager)localObject).toString() });
         return paramString;
       }
       catch (PackageManager.NameNotFoundException paramString)
       {
         paramString.printStackTrace();
-        return paramContext.getString(2131427782);
+        return paramContext.getString(2131231030);
       }
     }
     if ("back".equals(paramString)) {
-      return paramContext.getString(2131427366);
+      return paramContext.getString(2131230827);
     }
     if ("close_current".equals(paramString)) {
-      return paramContext.getString(2131427374);
+      return paramContext.getString(2131230835);
     }
     if ("refresh".equals(paramString)) {
-      return paramContext.getString(2131427375);
+      return paramContext.getString(2131230880);
     }
     if ("open_lib_pic".equals(paramString)) {
-      return paramContext.getString(2131427368) + " " + paramContext.getString(2131427421);
+      return paramContext.getString(2131230868) + " " + paramContext.getString(2131231138);
     }
     if ("open_lib_music".equals(paramString)) {
-      return paramContext.getString(2131427368) + " " + paramContext.getString(2131427422);
+      return paramContext.getString(2131230868) + " " + paramContext.getString(2131231136);
     }
     if ("open_lib_video".equals(paramString)) {
-      return paramContext.getString(2131427368) + " " + paramContext.getString(2131427425);
+      return paramContext.getString(2131230868) + " " + paramContext.getString(2131231135);
     }
     if ("open_lib_text".equals(paramString)) {
-      return paramContext.getString(2131427368) + " " + paramContext.getString(2131427424);
+      return paramContext.getString(2131230868) + " " + paramContext.getString(2131231130);
     }
     if ("show_navi".equals(paramString)) {
-      return paramContext.getString(2131427368) + " " + paramContext.getString(2131427418);
+      return paramContext.getString(2131230868) + " " + paramContext.getString(2131231651);
     }
     if ("exit".equals(paramString)) {
-      return paramContext.getString(2131427363);
+      return paramContext.getString(2131230851);
     }
     if ("open_settings".equals(paramString)) {
-      return paramContext.getString(2131427439);
+      return paramContext.getString(2131231617);
     }
     return null;
   }
@@ -145,70 +145,70 @@ public class d
         str = paramString.substring("open_window".length());
       }
       if ("#home_page#".startsWith(str)) {
-        return paramContext.getString(2131428432);
+        return paramContext.getString(2131231657);
       }
       if ("#home#".startsWith(str)) {
-        return paramContext.getString(2131427408);
+        return paramContext.getString(2131231656);
       }
       if ("open_lib_pic".equals(str)) {
-        return paramContext.getString(2131427421);
+        return paramContext.getString(2131231138);
       }
       if ("open_lib_music".equals(str)) {
-        return paramContext.getString(2131427422);
+        return paramContext.getString(2131231136);
       }
       if ("open_lib_video".equals(str)) {
-        return paramContext.getString(2131427425);
+        return paramContext.getString(2131231135);
       }
       if ("open_lib_text".equals(str)) {
-        return paramContext.getString(2131427424);
+        return paramContext.getString(2131231130);
       }
       if ("smb://".equals(str)) {
-        return paramContext.getString(2131427410);
+        return paramContext.getString(2131231658);
       }
       if ("net://".equals(str)) {
-        return paramContext.getString(2131427412);
+        return paramContext.getString(2131231648);
       }
       if ("pcs://".equals(str)) {
-        return paramContext.getString(2131428551);
+        return paramContext.getString(2131231137);
       }
       if ("ftp://".equals(str)) {
-        return paramContext.getString(2131427411);
+        return paramContext.getString(2131231652);
       }
       if ("bt://".equals(str)) {
-        return paramContext.getString(2131427413);
+        return paramContext.getString(2131231649);
       }
       if ("app://user".equals(str)) {
-        return paramContext.getString(2131427423);
+        return paramContext.getString(2131231129);
       }
       if ("download://".equals(str)) {
-        return paramContext.getString(2131428223);
+        return paramContext.getString(2131230994);
       }
       if ("task_manager".equals(str)) {
-        return paramContext.getString(2131428037);
+        return paramContext.getString(2131231471);
       }
       if ("du://".equals(str)) {
-        return paramContext.getString(2131427638);
+        return paramContext.getString(2131231365);
       }
       if ("remote://".equals(str)) {
-        return paramContext.getString(2131428114);
+        return paramContext.getString(2131231470);
       }
       if ("net_manager".equals(str)) {
-        return paramContext.getString(2131427495);
+        return paramContext.getString(2131231023);
       }
       if ("clipboard".equals(str)) {
-        return paramContext.getString(2131427417);
+        return paramContext.getString(2131231647);
       }
       if ("hide_list".equals(str)) {
-        return paramContext.getString(2131427416);
+        return paramContext.getString(2131231654);
       }
       if ("root_explorer".equals(str)) {
-        return paramContext.getString(2131427814);
+        return paramContext.getString(2131232092);
       }
       if ("recycle://".equals(str)) {
-        return paramContext.getString(2131428402);
+        return paramContext.getString(2131232258);
       }
     } while (!"mynetwork://".equals(str));
-    return paramContext.getString(2131428505);
+    return paramContext.getString(2131231789);
   }
 }
 

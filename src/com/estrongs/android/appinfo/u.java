@@ -1,8 +1,14 @@
 package com.estrongs.android.appinfo;
 
-public abstract interface u
+abstract interface u
 {
-  public abstract void a();
+  public abstract int a();
+  
+  public abstract int a(String paramString);
+  
+  public abstract int b();
+  
+  public abstract void c();
 }
 
 /* Location:

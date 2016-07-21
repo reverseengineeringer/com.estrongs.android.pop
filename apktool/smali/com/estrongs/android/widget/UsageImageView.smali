@@ -121,7 +121,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f020067
+    const v1, 0x7f020157
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -135,7 +135,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f020068
+    const v1, 0x7f020158
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -174,16 +174,6 @@
 
 
 # virtual methods
-.method public a(F)V
-    .locals 0
-
-    iput p1, p0, Lcom/estrongs/android/widget/UsageImageView;->f:F
-
-    invoke-virtual {p0}, Lcom/estrongs/android/widget/UsageImageView;->invalidate()V
-
-    return-void
-.end method
-
 .method protected dispatchDraw(Landroid/graphics/Canvas;)V
     .locals 3
 
@@ -216,6 +206,16 @@
     invoke-virtual {v1, p1}, Landroid/widget/ImageView;->draw(Landroid/graphics/Canvas;)V
 
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
+
+    return-void
+.end method
+
+.method public setRate(F)V
+    .locals 0
+
+    iput p1, p0, Lcom/estrongs/android/widget/UsageImageView;->f:F
+
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/UsageImageView;->invalidate()V
 
     return-void
 .end method

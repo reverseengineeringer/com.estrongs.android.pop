@@ -1,24 +1,16 @@
 package com.estrongs.android.pop.view;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.ui.view.by;
-import com.estrongs.android.view.aw;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnDismissListener;
 
 class ce
-  implements View.OnClickListener
+  implements DialogInterface.OnDismissListener
 {
   ce(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void onClick(View paramView)
+  public void onDismiss(DialogInterface paramDialogInterface)
   {
-    if (a.i.a()) {}
-    do
-    {
-      return;
-      paramView = a.y();
-    } while (paramView == null);
-    paramView.j();
+    a.U();
   }
 }
 

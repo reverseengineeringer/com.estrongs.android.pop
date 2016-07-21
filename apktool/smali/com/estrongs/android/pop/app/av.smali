@@ -1,33 +1,28 @@
 .class Lcom/estrongs/android/pop/app/av;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/content/DialogInterface$OnDismissListener;
-
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/DownloaderActivity;
+.field a:Landroid/widget/ImageView;
+
+.field b:Landroid/widget/TextView;
+
+.field c:Landroid/widget/ImageView;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/DownloaderActivity;)V
+.method private constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/av;->a:Lcom/estrongs/android/pop/app/DownloaderActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method synthetic constructor <init>(Lcom/estrongs/android/pop/app/ap;)V
+    .locals 0
 
-# virtual methods
-.method public onDismiss(Landroid/content/DialogInterface;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/av;->a:Lcom/estrongs/android/pop/app/DownloaderActivity;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/DownloaderActivity;->finish()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/av;-><init>()V
 
     return-void
 .end method

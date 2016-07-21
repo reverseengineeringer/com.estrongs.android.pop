@@ -60,7 +60,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/c;->c:Landroid/app/Activity;
 
-    const v2, 0x7f0b02f7
+    const v2, 0x7f080486
 
     const/4 v3, 0x1
 
@@ -70,7 +70,7 @@
 
     iget-object v5, p0, Lcom/estrongs/android/pop/view/utils/c;->b:Ljava/lang/String;
 
-    invoke-static {v5}, Lcom/estrongs/android/util/am;->E(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v5}, Lcom/estrongs/android/util/ap;->G(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -94,7 +94,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->o()Z
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->p()Z
 
     move-result v1
 

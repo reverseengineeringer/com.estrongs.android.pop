@@ -1,15 +1,26 @@
 package com.estrongs.android.pop.app;
 
-import android.os.Binder;
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnErrorListener;
+import com.estrongs.android.pop.app.c.k;
 
-public class q
-  extends Binder
+class q
+  implements MediaPlayer.OnErrorListener
 {
-  public q(AudioPlayerService paramAudioPlayerService) {}
+  q(AudioPlayerService paramAudioPlayerService) {}
   
-  AudioPlayerService a()
+  public boolean onError(MediaPlayer paramMediaPlayer, int paramInt1, int paramInt2)
   {
-    return a;
+    paramInt1 = AudioPlayerService.b(a).f();
+    AudioPlayerService.b(a).a(paramInt1, false);
+    a.t();
+    if (AudioPlayerService.a(a) != null) {
+      AudioPlayerService.a(a).g(paramInt1);
+    }
+    while (AudioPlayerService.a(a, paramMediaPlayer)) {
+      return true;
+    }
+    return true;
   }
 }
 

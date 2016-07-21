@@ -1,26 +1,26 @@
 package com.estrongs.fs.b;
 
+import android.app.Activity;
+import com.estrongs.a.a.h;
+import com.estrongs.android.d.e;
+import com.estrongs.android.pop.esclasses.ESActivity;
+
 class bj
-  implements com.estrongs.android.a.h
+  implements Runnable
 {
-  bj(bh parambh) {}
+  bj(bc parambc) {}
   
-  public void a(boolean paramBoolean1, boolean paramBoolean2)
+  public void run()
   {
-    localh = ba.e(a.a);
-    if (paramBoolean1) {}
-    for (;;)
+    if (ESActivity.H() == null)
     {
-      try
-      {
-        ea.a).g = 1;
-        ea.a).f = paramBoolean2;
-        ba.e(a.a).notify();
-        return;
-      }
-      finally {}
-      ea.a).g = 2;
+      new Thread(new bk(this)).start();
+      return;
     }
+    e locale = new e(ESActivity.H(), new bl(this), true);
+    locale.setTitle(bc.b(a).getString(2131231721));
+    locale.setMessage(bc.b(a).getString(2131231340) + "\n" + ea).a);
+    locale.show();
   }
 }
 

@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/fs/i;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -22,36 +22,14 @@
 
 
 # virtual methods
-.method public a(Lcom/estrongs/fs/h;)Z
+.method public run()V
     .locals 2
-
-    invoke-interface {p1}, Lcom/estrongs/fs/h;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "."
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcom/estrongs/android/pop/view/eb;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->g(Lcom/estrongs/android/pop/view/FileExplorerActivity;)Z
+    const-string v1, "remote://"
 
-    move-result v0
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->f(Ljava/lang/String;)Lcom/estrongs/android/view/cr;
 
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    goto :goto_0
+    return-void
 .end method

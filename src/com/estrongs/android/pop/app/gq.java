@@ -1,32 +1,84 @@
 package com.estrongs.android.pop.app;
 
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
-import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.pop.ad;
+import android.graphics.Bitmap;
+import com.estrongs.android.pop.app.c.i;
+import com.estrongs.android.pop.app.c.j;
+import com.estrongs.android.pop.app.c.k;
+import java.util.List;
 
-class gq
-  implements Preference.OnPreferenceChangeListener
+public abstract class gq
 {
-  gq(PopPreferenceActivity paramPopPreferenceActivity) {}
+  public abstract k A();
   
-  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
-  {
-    if (((Boolean)paramObject).booleanValue())
-    {
-      paramPreference = ad.a(a).G();
-      if ((paramPreference == null) || (paramPreference.length() == 0))
-      {
-        a.showDialog(111);
-        return false;
-      }
-      a.r.setEnabled(true);
-      FexApplication.a().d(((Boolean)paramObject).booleanValue());
-      return true;
-    }
-    a.showDialog(112);
-    return false;
-  }
+  public abstract void a(long paramLong);
+  
+  public abstract void a(gp paramgp);
+  
+  public abstract void a(List<i> paramList);
+  
+  public abstract void a(boolean paramBoolean);
+  
+  public abstract boolean a();
+  
+  public abstract boolean a(int paramInt);
+  
+  public abstract boolean a(j paramj);
+  
+  public abstract void b(int paramInt);
+  
+  public abstract void b(List<String> paramList);
+  
+  public abstract long c();
+  
+  public abstract void c(int paramInt);
+  
+  public abstract boolean d();
+  
+  public abstract boolean d(int paramInt);
+  
+  public abstract boolean e();
+  
+  public abstract boolean f();
+  
+  public abstract String g();
+  
+  public abstract j h();
+  
+  public abstract int i();
+  
+  public abstract int j();
+  
+  public abstract int k();
+  
+  public abstract int l();
+  
+  public abstract long m();
+  
+  public abstract void n();
+  
+  public abstract void o();
+  
+  public abstract void p();
+  
+  public abstract void q();
+  
+  public abstract i r();
+  
+  public abstract String s();
+  
+  public abstract String t();
+  
+  public abstract int u();
+  
+  public abstract int v();
+  
+  public abstract void w();
+  
+  public abstract boolean x();
+  
+  public abstract Bitmap y();
+  
+  public abstract void z();
 }
 
 /* Location:

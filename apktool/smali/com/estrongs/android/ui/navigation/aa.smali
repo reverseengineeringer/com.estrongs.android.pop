@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/ui/navigation/r;
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/navigation/z;
+.field final synthetic a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+.field final synthetic b:Lcom/estrongs/android/ui/navigation/r;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/navigation/z;)V
+.method constructor <init>(Lcom/estrongs/android/ui/navigation/r;Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/navigation/aa;->a:Lcom/estrongs/android/ui/navigation/z;
+    iput-object p1, p0, Lcom/estrongs/android/ui/navigation/aa;->b:Lcom/estrongs/android/ui/navigation/r;
+
+    iput-object p2, p0, Lcom/estrongs/android/ui/navigation/aa;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,39 +26,18 @@
 
 
 # virtual methods
-.method public a(Landroid/view/View;)V
-    .locals 3
+.method public onMenuItemClick(Landroid/view/MenuItem;)Z
+    .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/navigation/aa;->a:Lcom/estrongs/android/ui/navigation/z;
+    iget-object v0, p0, Lcom/estrongs/android/ui/navigation/aa;->b:Lcom/estrongs/android/ui/navigation/r;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/navigation/z;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    new-instance v1, Lcom/estrongs/android/ui/navigation/ab;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->k()V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/navigation/ab;-><init>(Lcom/estrongs/android/ui/navigation/aa;)V
 
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->e()Z
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/navigation/r;->a(Lcom/estrongs/android/ui/navigation/q;)V
 
-    move-result v0
+    const/4 v0, 0x1
 
-    if-nez v0, :cond_0
-
-    new-instance v0, Landroid/content/Intent;
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/navigation/aa;->a:Lcom/estrongs/android/ui/navigation/z;
-
-    iget-object v1, v1, Lcom/estrongs/android/ui/navigation/z;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    const-class v2, Lcom/estrongs/android/ui/theme/ThemeActivity;
-
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/navigation/aa;->a:Lcom/estrongs/android/ui/navigation/z;
-
-    iget-object v1, v1, Lcom/estrongs/android/ui/navigation/z;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    const v2, 0x10001020
-
-    invoke-virtual {v1, v0, v2}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->startActivityForResult(Landroid/content/Intent;I)V
-
-    :cond_0
-    return-void
+    return v0
 .end method

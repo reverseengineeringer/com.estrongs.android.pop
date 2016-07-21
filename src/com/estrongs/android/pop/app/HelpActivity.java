@@ -6,7 +6,7 @@ import android.view.Window;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.pop.utils.cc;
+import com.estrongs.android.pop.utils.cl;
 
 public class HelpActivity
   extends ESActivity
@@ -29,15 +29,15 @@ public class HelpActivity
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    setTitle(2131428165);
+    setTitle(2131231557);
     getWindow().setBackgroundDrawable(null);
-    setContentView(2130903154);
-    c = ((WebView)findViewById(2131362365));
+    setContentView(2130903261);
+    c = ((WebView)findViewById(2131624972));
     c.setFocusableInTouchMode(true);
     c.getSettings().setJavaScriptEnabled(true);
-    c.setWebViewClient(new cs(this));
+    c.setWebViewClient(new cv(this));
     paramBundle = "http://www.estrongs.com/eshelp/en/ES_File_Explorer_User_Manual3.0.htm";
-    if (cc.b()) {
+    if (cl.b()) {
       paramBundle = "http://www.estrongs.com/eshelp/cn/ES_File_Explorer_User_Manual3.0.htm";
     }
     a(paramBundle);

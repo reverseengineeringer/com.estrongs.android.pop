@@ -1,23 +1,19 @@
-.class Lcom/estrongs/android/pop/app/a/q;
+.class final Lcom/estrongs/android/pop/app/a/q;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/ui/dialog/er;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/a/ak;
-
-.field final synthetic b:Lcom/estrongs/android/pop/app/a/p;
+.field final synthetic a:Landroid/app/Activity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/a/p;Lcom/estrongs/android/pop/app/a/ak;)V
+.method constructor <init>(Landroid/app/Activity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/a/q;->b:Lcom/estrongs/android/pop/app/a/p;
-
-    iput-object p2, p0, Lcom/estrongs/android/pop/app/a/q;->a:Lcom/estrongs/android/pop/app/a/ak;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/a/q;->a:Landroid/app/Activity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,50 +22,26 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/String;)Z
+.method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
 
-    invoke-static {}, Lcom/estrongs/android/pop/app/a/ao;->a()Lcom/estrongs/android/pop/app/a/ao;
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+
+    invoke-static {}, Lcom/estrongs/android/pop/app/unlock/s;->a()Lcom/estrongs/android/pop/app/unlock/s;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/estrongs/android/pop/app/a/ao;->a(Ljava/lang/String;)Lcom/estrongs/android/pop/app/a/al;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/a/q;->a:Landroid/app/Activity;
 
-    move-result-object v0
+    const-string v2, "lock_realtimemonitor"
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/pop/app/unlock/s;->a(Landroid/content/Context;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/a/q;->b:Lcom/estrongs/android/pop/app/a/p;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/a/q;->a:Landroid/app/Activity;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/a/p;->b:Lcom/estrongs/android/pop/app/a/o;
+    const/4 v1, 0x0
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/a/o;->a:Lcom/estrongs/android/pop/app/a/e;
+    invoke-static {v0, v1}, Lcom/estrongs/android/pop/app/a/n;->a(Landroid/app/Activity;Z)V
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/a/e;->a(Lcom/estrongs/android/pop/app/a/e;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
-
-    move-result-object v0
-
-    const v1, 0x7f0b03dd
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
-
-    :goto_0
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/a/q;->b:Lcom/estrongs/android/pop/app/a/p;
-
-    iget-object v1, v1, Lcom/estrongs/android/pop/app/a/p;->b:Lcom/estrongs/android/pop/app/a/o;
-
-    iget-object v1, v1, Lcom/estrongs/android/pop/app/a/o;->a:Lcom/estrongs/android/pop/app/a/e;
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/a/q;->a:Lcom/estrongs/android/pop/app/a/ak;
-
-    invoke-static {v1, v2, v0}, Lcom/estrongs/android/pop/app/a/e;->a(Lcom/estrongs/android/pop/app/a/e;Lcom/estrongs/android/pop/app/a/ak;Lcom/estrongs/android/pop/app/a/al;)V
-
-    goto :goto_0
+    return-void
 .end method

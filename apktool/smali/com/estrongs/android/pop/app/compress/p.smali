@@ -6,18 +6,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/io/archive/h;
+.field final synthetic a:Lcom/estrongs/io/archive/i;
 
 .field final synthetic b:Lcom/estrongs/android/pop/app/compress/o;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/compress/o;Lcom/estrongs/io/archive/h;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/compress/o;Lcom/estrongs/io/archive/i;)V
     .locals 0
 
     iput-object p1, p0, Lcom/estrongs/android/pop/app/compress/p;->b:Lcom/estrongs/android/pop/app/compress/o;
 
-    iput-object p2, p0, Lcom/estrongs/android/pop/app/compress/p;->a:Lcom/estrongs/io/archive/h;
+    iput-object p2, p0, Lcom/estrongs/android/pop/app/compress/p;->a:Lcom/estrongs/io/archive/i;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,7 +29,7 @@
 .method public run()V
     .locals 4
 
-    new-instance v0, Lcom/estrongs/android/pop/app/compress/be;
+    new-instance v0, Lcom/estrongs/android/pop/app/compress/cb;
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/compress/p;->b:Lcom/estrongs/android/pop/app/compress/o;
 
@@ -43,7 +43,7 @@
 
     const/4 v3, 0x1
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/estrongs/android/pop/app/compress/be;-><init>(Landroid/content/Context;ZZ)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/estrongs/android/pop/app/compress/cb;-><init>(Landroid/content/Context;ZZ)V
 
     const/4 v1, -0x1
 
@@ -55,7 +55,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0b000b
+    const v3, 0x7f080226
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -63,9 +63,9 @@
 
     new-instance v3, Lcom/estrongs/android/pop/app/compress/q;
 
-    invoke-direct {v3, p0, v0}, Lcom/estrongs/android/pop/app/compress/q;-><init>(Lcom/estrongs/android/pop/app/compress/p;Lcom/estrongs/android/pop/app/compress/be;)V
+    invoke-direct {v3, p0, v0}, Lcom/estrongs/android/pop/app/compress/q;-><init>(Lcom/estrongs/android/pop/app/compress/p;Lcom/estrongs/android/pop/app/compress/cb;)V
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/estrongs/android/pop/app/compress/be;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/estrongs/android/pop/app/compress/cb;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     const/4 v1, -0x2
 
@@ -77,7 +77,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0b000c
+    const v3, 0x7f080221
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -85,17 +85,17 @@
 
     new-instance v3, Lcom/estrongs/android/pop/app/compress/r;
 
-    invoke-direct {v3, p0, v0}, Lcom/estrongs/android/pop/app/compress/r;-><init>(Lcom/estrongs/android/pop/app/compress/p;Lcom/estrongs/android/pop/app/compress/be;)V
+    invoke-direct {v3, p0, v0}, Lcom/estrongs/android/pop/app/compress/r;-><init>(Lcom/estrongs/android/pop/app/compress/p;Lcom/estrongs/android/pop/app/compress/cb;)V
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/estrongs/android/pop/app/compress/be;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/estrongs/android/pop/app/compress/cb;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     new-instance v1, Lcom/estrongs/android/pop/app/compress/s;
 
     invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/compress/s;-><init>(Lcom/estrongs/android/pop/app/compress/p;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/compress/be;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/compress/cb;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/compress/be;->show()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/compress/cb;->show()V
 
     return-void
 .end method

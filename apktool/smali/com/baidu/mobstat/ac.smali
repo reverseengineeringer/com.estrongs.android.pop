@@ -1,24 +1,26 @@
-.class Lcom/baidu/mobstat/ac;
-.super Ljava/lang/Object;
-
-
-# instance fields
-.field a:Ljava/lang/String;
-
-.field b:Ljava/lang/String;
-
-.field c:J
-
-.field final synthetic d:Lcom/baidu/mobstat/x;
+.class final enum Lcom/baidu/mobstat/ac;
+.super Lcom/baidu/mobstat/x;
 
 
 # direct methods
-.method constructor <init>(Lcom/baidu/mobstat/x;)V
-    .locals 0
+.method constructor <init>(Ljava/lang/String;II)V
+    .locals 1
 
-    iput-object p1, p0, Lcom/baidu/mobstat/ac;->d:Lcom/baidu/mobstat/x;
+    const/4 v0, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2, p3, v0}, Lcom/baidu/mobstat/x;-><init>(Ljava/lang/String;IILcom/baidu/mobstat/y;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public a()Lcom/baidu/mobstat/w;
+    .locals 1
+
+    new-instance v0, Lcom/baidu/mobstat/ag;
+
+    invoke-direct {v0}, Lcom/baidu/mobstat/ag;-><init>()V
+
+    return-object v0
 .end method

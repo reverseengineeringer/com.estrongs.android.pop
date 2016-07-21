@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/image_item_listview_history" android:paddingRight="@dimen/dp_10" android:layout_width="@dimen/dp_30" android:layout_height="@dimen/dp_30" android:src="@drawable/history_listitem_file" android:scaleType="fitCenter" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:minHeight="@dimen/dp_50" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/dp_15" android:textColor="@color/c_cc000000" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/text_listview_history" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:textDirection="ltr" />
+        <TextView android:textSize="@dimen/dp_15" android:textColor="@color/c_cc000000" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/path_item_listview_history" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:textDirection="ltr" />
+    </LinearLayout>
+</LinearLayout>

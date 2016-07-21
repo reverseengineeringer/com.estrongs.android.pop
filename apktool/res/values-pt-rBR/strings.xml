@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_info_remaining_charging_time">Tempo restante:</string>
+    <string name="battery_info_remaining_discharging_time">Restante:</string>
+    <string name="charging_screen_ad_delete">Excluir</string>
+    <string name="charging_screen_ad_enter">Abrir</string>
+    <string name="charging_screen_charging_complete">Carregamento completo</string>
+    <string name="charging_screen_slide_to_enter">Deslizar para desbloquear</string>
+    <string name="common_time_hour">h</string>
+    <string name="common_time_minute">m</string>
+    <string name="duappd_ad_item_action_btn">GRATUITOS</string>
+    <string name="duapps_ad_data_empty">Volte depois.</string>
+    <string name="duapps_ad_empty_refresh_btn_check">Confira</string>
+    <string name="duapps_ad_empty_title">VAZIA</string>
+    <string name="duapps_ad_footer_end">Não há mais conteúdo</string>
+    <string name="duapps_ad_loading">Carregando …</string>
+    <string name="duapps_ad_loading_switch_google_play_des">alternando para Google Play…</string>
+    <string name="duapps_ad_no_apps_refresh_button_text">Refrescar</string>
+    <string name="duapps_ad_no_browser_play">Você precisa primeiro instalar o Google Play</string>
+    <string name="duapps_ad_nonetwork_message">Sem conexão com a rede. Verifique as configurações e tente novamente.</string>
+    <string name="duapps_ad_pull_refresh">Deslize para atualizar</string>
+    <string name="duscenerysdk_ad_no_browser_play">Você precisa primeiro instalar o Google Play</string>
+    <string name="lock_screen_setting">Configurações</string>
+    <string name="lock_screen_switch">Carga Inteligente</string>
+    <string name="lockscreen_charge_boost_time">Carregamento total acelerado por %1$d minutos</string>
+    <string name="scenery_card_antivirus_button">VERIFIC. SEG.</string>
+    <string name="scenery_card_antivirus_content">Seu telefone apresenta &lt;font color=#3080F0>%1$s&lt;/font> risco(s) de segurança</string>
+    <string name="scenery_card_antivirus_title">Risco de Segurança</string>
+    <string name="scenery_card_battery_button">ECON. ENER. AGORA</string>
+    <string name="scenery_card_battery_content">&lt;font color=#3080F0>%1$s&lt;/font> encont aplic que cons ener Usar DU Battery Saver para econ energ e aument esp&lt;font color=#3080F0>%2$s h %3$s m&lt;/font></string>
+    <string name="scenery_card_battery_title">Uso de energia</string>
+    <string name="scenery_card_booster_button">ACELERAR AGORA</string>
+    <string name="scenery_card_booster_content">&lt;font color=#3080F0>%1$s&lt;/font> aplicativos persistentes deixam o telefone lento</string>
+    <string name="scenery_card_booster_title">está lento</string>
+    <string name="scenery_card_cleaner_button">CORRIGIR AGORA</string>
+    <string name="scenery_card_cleaner_content">Há lixo &lt;font color=#3080F0>%1$s&lt;/font> no seu telefone</string>
+    <string name="scenery_card_cleaner_title">Limpeza Rápida</string>
+    <string name="scenery_card_es_button">LIMPAR AGORA</string>
+    <string name="scenery_card_es_content">Espaço interno remanescente reduzido &lt;font color=#3080F0>%1$s&lt;/font></string>
+    <string name="scenery_card_es_title">Limpeza de disco</string>
+    <string name="scenery_card_photowonder_button">EMBELEZE AGORA</string>
+    <string name="scenery_card_photowonder_content">Você tem &lt;font color=#3080F0>%1$s&lt;/font> fotos podem ficar mais bonitas!</string>
+    <string name="scenery_card_photowonder_title">Embelezar</string>
+    <string name="scenery_charge_dialog_button_text">ADQUIRA-O</string>
+    <string name="scenery_charge_dialog_content">Sobrecarregar %1$d min &lt;font color=#FF8132>danifica a bateria&lt;/font>. Proteja-a com o &lt;b>DU Battery Saver&lt;/b> .</string>
+    <string name="scenery_charge_dialog_title">Dicas de carreg. íntegro</string>
+    <string name="scenery_disk_usage_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_disk_usage_dialog_content">O armazenamento do telefone diminuiu &lt;font color=#FF8132>%1$s MB&lt;/font> nos últimos &lt;font color=#FF8132>%2$s dias&lt;/font> .</string>
+    <string name="scenery_disk_usage_dialog_title">Limpeza de disco</string>
+    <string name="scenery_take_photo_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_take_photo_dialog_content">Fotos não tão boas? &lt;font color=#2274E6>Os Filtros cinemáticos&lt;/font> do &lt;b>PhotoWonder&lt;/b> podem ajudar.</string>
+    <string name="scenery_take_photo_dialog_title">Edição de beleza</string>
+    <string name="scenery_uninstall_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_uninstall_dialog_content">%1$s deixou &lt;font color=#FF8132>arq. inúteis residuais&lt;/font>. Use o &lt;b>DU Speed Booster&lt;/b> para eliminá-los.</string>
+    <string name="scenery_uninstall_dialog_title">Arq. res. enc.</string>
+    <string name="screen_lock_charging_boosted_time">Carga acelerada por %1$d minutos</string>
+    <string name="toolbox_no_apps_refresh_button_text">Refrescar</string>
+    <string name="toolbox_nonetwork_tips">Clique para habilitar a rede para mais aplicativos gratuitos.</string>
+    <string name="toolbox_v2_btn_more">Mais</string>
+    <string name="toolbox_v2_coin_balance">Saldo:</string>
+    <string name="toolbox_v2_data_empty">Volte depois.</string>
+    <string name="toolbox_v2_list_item_btn_free">GRATUITOS</string>
+    <string name="v2_toolbox_empty_title">VAZIA</string>
+    <string name="toolbox_v2_network_mobile">Dados móveis</string>
+    <string name="toolbox_v2_network_wifi">Wi-Fi</string>
+    <string name="toolbox_v2_nomore_content">Não há mais conteúdo</string>
+    <string name="toolbox_v2_pull_refresh">Deslize para atualizar</string>
+</resources>

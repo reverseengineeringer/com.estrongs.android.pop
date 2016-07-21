@@ -90,7 +90,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/CropImageView;->f()F
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/CropImageView;->getScale()F
 
     move-result v0
 

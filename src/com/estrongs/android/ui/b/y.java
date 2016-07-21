@@ -1,15 +1,18 @@
 package com.estrongs.android.ui.b;
 
-import com.estrongs.android.ui.e.cp;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.view.ci;
+import com.estrongs.android.view.cp;
 
 class y
-  implements Runnable
+  implements View.OnClickListener
 {
-  y(x paramx) {}
+  y(v paramv, ci paramci, int paramInt) {}
   
-  public void run()
+  public void onClick(View paramView)
   {
-    cp.a(a.a);
+    u.i(c.a).a(u.h(c.a), a.itemView, b, true);
   }
 }
 

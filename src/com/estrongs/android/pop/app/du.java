@@ -1,41 +1,18 @@
 package com.estrongs.android.pop.app;
 
-import android.os.Handler;
-import android.os.Message;
-import android.widget.BaseAdapter;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-import com.estrongs.android.ui.e.cf;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.ui.dialog.cv;
 
 class du
-  extends Handler
+  implements View.OnClickListener
 {
-  du(LocalFileSharingActivity paramLocalFileSharingActivity) {}
+  du(LocalFileSharingActivity paramLocalFileSharingActivity, cv paramcv) {}
   
-  public void handleMessage(Message arg1)
+  public void onClick(View paramView)
   {
-    switch (what)
-    {
-    default: 
-      return;
-    case 0: 
-      LocalFileSharingActivity.a(a);
-      LocalFileSharingActivity.b(a).notifyDataSetChanged();
-      ??? = (String)obj;
-      return;
-    }
-    LocalFileSharingActivity.a(a);
-    LocalFileSharingActivity.b(a).notifyDataSetChanged();
-    synchronized (LocalFileSharingActivity.c(a))
-    {
-      if ((LocalFileSharingActivity.c(a).length == 0) && (LocalFileSharingActivity.g() != null)) {
-        a.f();
-      }
-      LocalFileSharingActivity.d(a).a(0, 2131427375, 2130838223);
-      LocalFileSharingActivity.e(a).setVisibility(8);
-      a.a.setText(2131427542);
-      return;
-    }
+    a.a.dismiss();
   }
 }
 

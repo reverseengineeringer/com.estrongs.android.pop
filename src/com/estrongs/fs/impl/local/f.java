@@ -3,7 +3,7 @@ package com.estrongs.fs.impl.local;
 import android.net.LocalSocket;
 import com.estrongs.android.nativetool.c;
 import com.estrongs.fs.a;
-import com.estrongs.fs.m;
+import com.estrongs.fs.w;
 import java.io.File;
 
 public class f
@@ -11,10 +11,16 @@ public class f
 {
   public f(LocalSocket paramLocalSocket, File paramFile, boolean paramBoolean)
   {
+    this(paramLocalSocket, paramFile, paramBoolean, -1L);
+  }
+  
+  public f(LocalSocket paramLocalSocket, File paramFile, boolean paramBoolean, long paramLong)
+  {
     super(paramFile.getPath());
     setName(paramFile.getName());
     size = paramFile.length();
     lastModified = paramFile.lastModified();
+    lastAccessed = paramLong;
     isLink = false;
     if (paramLocalSocket != null) {}
     try
@@ -22,17 +28,17 @@ public class f
       isLink = c.a(paramLocalSocket, paramFile.getAbsolutePath());
       if (paramFile.isDirectory())
       {
-        type = m.a;
+        type = w.a;
         if ((getExtra("child_count") == null) && (paramBoolean))
         {
-          paramLocalSocket = paramFile.listFiles();
+          paramLocalSocket = paramFile.listFiles(new g(this));
           if (paramLocalSocket != null) {
             putExtra("child_count", Integer.valueOf(paramLocalSocket.length));
           }
         }
         return;
       }
-      type = m.b;
+      type = w.b;
       return;
     }
     catch (Exception paramLocalSocket)
@@ -44,6 +50,11 @@ public class f
   public f(File paramFile)
   {
     this(null, paramFile, false);
+  }
+  
+  public f(File paramFile, long paramLong)
+  {
+    this(null, paramFile, false, paramLong);
   }
   
   public void a(long paramLong)

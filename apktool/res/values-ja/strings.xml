@@ -1,13 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_select">選択</string>
-    <string name="app_name">ES ファイルエクスプローラ</string>
-    <string name="app_media_player">ES メディアプレイヤー</string>
-    <string name="app_note_editor">ES テキストエディタ</string>
-    <string name="app_image_browser">ES 画像ブラウザ</string>
-    <string name="app_zip_viewer">ES Zipビューア</string>
     <string name="app_downloader">ESダウンローダ</string>
-    <string name="select_device_to_share">送信する端末を選んでください</string>
+    <string name="app_image_browser">ES 画像ブラウザ</string>
+    <string name="app_media_player">ES メディアプレイヤー</string>
+    <string name="app_name">ES ファイルエクスプローラ</string>
+    <string name="app_note_editor">ES テキストエディタ</string>
+    <string name="app_zip_viewer">ES Zipビューア</string>
+    <string name="battery_info_remaining_charging_time">充電時間予測:</string>
+    <string name="battery_info_remaining_discharging_time">稼働時間予測:</string>
+    <string name="charging_screen_ad_delete">削除</string>
+    <string name="charging_screen_ad_enter">開く</string>
+    <string name="charging_screen_charging_complete">充電が完了しました</string>
+    <string name="charging_screen_slide_to_enter">スライドしてロック解除</string>
+    <string name="common_time_hour">時</string>
+    <string name="common_time_minute">分</string>
+    <string name="duappd_ad_item_action_btn">無料</string>
+    <string name="duapps_ad_data_empty">後で再度アクセスしてください。</string>
+    <string name="duapps_ad_empty_refresh_btn_check">確認</string>
+    <string name="duapps_ad_empty_title">なし</string>
+    <string name="duapps_ad_footer_end">他のコンテンツはありません</string>
+    <string name="duapps_ad_loading">を読み込み中…</string>
+    <string name="duapps_ad_loading_switch_google_play_des">Google Playに切り替え中…</string>
+    <string name="duapps_ad_no_apps_refresh_button_text">リフレッシュ</string>
+    <string name="duapps_ad_no_browser_play">あなたが Google Playを最初にインストールする必要があります</string>
+    <string name="duapps_ad_nonetwork_message">ネットワーク接続がありません。設定を確認して再度お試しください。</string>
+    <string name="duapps_ad_pull_refresh">止めて更新</string>
+    <string name="duscenerysdk_ad_no_browser_play">あなたが Google Playを最初にインストールする必要があります</string>
     <string name="es_share_name_activity">LANより送信</string>
+    <string name="lock_screen_setting">設定</string>
+    <string name="lock_screen_switch">スマート充電</string>
+    <string name="lockscreen_charge_boost_time">合計充電時間を%1$d分短縮しました</string>
     <string name="save_to_es">ES保存</string>
+    <string name="scenery_card_antivirus_button">セキュリティスキャン</string>
+    <string name="scenery_card_antivirus_content">デバイスで &lt;font color=#3080F0>%1$s&lt;/font> 個のリスクを検出しました</string>
+    <string name="scenery_card_antivirus_title">セキュリティリスク</string>
+    <string name="scenery_card_battery_button">今すぐ電力を節約</string>
+    <string name="scenery_card_battery_content">&lt;font color=#3080F0>%1$s&lt;/font> 個の電力消費アプリを検出。DU Battery Saverで電力を節約し、待機時間を&lt;font color=#3080F0>%2$s時間%3$s分&lt;/font>延長できます</string>
+    <string name="scenery_card_battery_title">電力消費</string>
+    <string name="scenery_card_booster_button">今すぐ高速化</string>
+    <string name="scenery_card_booster_content">&lt;font color=#3080F0>%1$s&lt;/font> 個のアプリにより処理速度が低下しています</string>
+    <string name="scenery_card_booster_title">処理速度の低下</string>
+    <string name="scenery_card_cleaner_button">今すぐ解決</string>
+    <string name="scenery_card_cleaner_content">デバイスで &lt;font color=#3080F0>%1$s&lt;/font> のごみが見つかりました</string>
+    <string name="scenery_card_cleaner_title">クイック削除</string>
+    <string name="scenery_card_es_button">クリーニング</string>
+    <string name="scenery_card_es_content">内部の空き容量が残り &lt;font color=#3080F0>%1$s&lt;/font> になっています</string>
+    <string name="scenery_card_es_title">ディスククリーン</string>
+    <string name="scenery_card_photowonder_button">今すぐ画像編集</string>
+    <string name="scenery_card_photowonder_content">もっと美しくなる写真が &lt;font color=#3080F0>%1$s&lt;/font> 枚あります!</string>
+    <string name="scenery_card_photowonder_title">画像編集</string>
+    <string name="scenery_charge_dialog_button_text">入手する</string>
+    <string name="scenery_charge_dialog_content">%1$d分の過充電が &lt;font color=#FF8132>バッテリー寿命に影響しています&lt;/font>。&lt;b>DU Battery Saver&lt;/b>で過充電を防ぎましょう。</string>
+    <string name="scenery_charge_dialog_title">過充電防止のヒント</string>
+    <string name="scenery_disk_usage_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_disk_usage_dialog_content">デバイスのストレージ容量が 過去&lt;font color=#FF8132>%2$s日間&lt;/font>に&lt;font color=#FF8132>%1$sMB&lt;/font>減少しました。</string>
+    <string name="scenery_disk_usage_dialog_title">ﾃﾞｨｽｸｸﾘｰﾆﾝｸﾞ</string>
+    <string name="scenery_take_photo_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_take_photo_dialog_content">写真をもっと美しくしたいときは &lt;b>PhotoWonder&lt;/b>の&lt;font color=#2274E6>シネマティックフィルタ&lt;/font>が役立ちます!</string>
+    <string name="scenery_take_photo_dialog_title">画像編集</string>
+    <string name="scenery_uninstall_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_uninstall_dialog_content">%1$sの &lt;font color=#FF8132>ごみファイルが残っています&lt;/font>。&lt;b>DU Speed Booster&lt;/b>でごみを削除しましょう!</string>
+    <string name="scenery_uninstall_dialog_title">ごみを検出</string>
+    <string name="screen_lock_charging_boosted_time">充電スピードを%1$d分向上しました</string>
+    <string name="select_device_to_share">送信する端末を選んでください</string>
+    <string name="toolbox_no_apps_refresh_button_text">リフレッシュ</string>
+    <string name="toolbox_nonetwork_tips">クリックして、ネットワークを有効にし、他の無料アプリを取得します。</string>
+    <string name="toolbox_v2_btn_more">その他</string>
+    <string name="toolbox_v2_coin_balance">残高:</string>
+    <string name="toolbox_v2_data_empty">後で再度アクセスしてください。</string>
+    <string name="toolbox_v2_list_item_btn_free">無料</string>
+    <string name="v2_toolbox_empty_title">なし</string>
+    <string name="toolbox_v2_network_mobile">モバイルデータ</string>
+    <string name="toolbox_v2_network_wifi">Wi-Fi</string>
+    <string name="toolbox_v2_nomore_content">他のコンテンツはありません</string>
+    <string name="toolbox_v2_pull_refresh">止めて更新</string>
 </resources>

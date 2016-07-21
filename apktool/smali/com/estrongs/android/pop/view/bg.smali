@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/estrongs/android/ui/dialog/lc;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+.field final synthetic a:Lcom/estrongs/fs/h;
+
+.field final synthetic b:Lcom/estrongs/android/pop/view/bf;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
+.method constructor <init>(Lcom/estrongs/android/pop/view/bf;Lcom/estrongs/fs/h;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/view/bg;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/view/bg;->b:Lcom/estrongs/android/pop/view/bf;
+
+    iput-object p2, p0, Lcom/estrongs/android/pop/view/bg;->a:Lcom/estrongs/fs/h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,28 +26,16 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 1
+.method public a(Z)V
+    .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/bg;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    if-eqz p1, :cond_0
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->m:Lcom/estrongs/android/pop/ad;
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/bg;->b:Lcom/estrongs/android/pop/view/bf;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->O()Z
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/bg;->a:Lcom/estrongs/fs/h;
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/notification/i;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/notification/i;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/i;->b()V
+    invoke-static {v0, v1}, Lcom/estrongs/android/pop/view/bf;->a(Lcom/estrongs/android/pop/view/bf;Lcom/estrongs/fs/h;)V
 
     :cond_0
     return-void

@@ -1,21 +1,39 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.fs.impl.l.a;
+import android.app.Activity;
+import android.app.Dialog;
+import android.view.View;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.h;
+import java.util.List;
 
-class dx
-  implements DialogInterface.OnClickListener
+public class dx
 {
-  dx(du paramdu) {}
+  private ee a = null;
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public dx(Activity paramActivity, List<h> paramList, String paramString)
   {
-    paramDialogInterface.dismiss();
-    paramDialogInterface = FileExplorerActivity.J();
-    if (paramDialogInterface != null) {
-      a.a(paramDialogInterface, aa).a, new dy(this, paramDialogInterface));
+    a = new ee(paramActivity, paramList, paramString);
+  }
+  
+  public void a()
+  {
+    Object localObject = a.aE();
+    cv localcv = new cv(((View)localObject).getContext()).a(2131232219);
+    localcv.a((View)localObject);
+    if (!ap.cg(a.g)) {
+      localcv.a(2131231265, new dy(this));
+    }
+    for (;;)
+    {
+      localcv.a(new ed(this));
+      localObject = localcv.b();
+      a.h = ((Dialog)localObject);
+      ((ci)localObject).show();
+      a.c();
+      return;
+      localcv.c(2131231265, new dz(this));
+      localcv.b(2131230882, new ea(this));
     }
   }
 }

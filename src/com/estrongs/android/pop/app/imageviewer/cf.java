@@ -1,22 +1,55 @@
 package com.estrongs.android.pop.app.imageviewer;
 
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.chromecast.CastDeviceInfo;
+import com.estrongs.chromecast.CastDeviceListener;
+import com.estrongs.chromecast.ChromeCastConnectionListener;
+import com.estrongs.chromecast.RemoteMediaPlayerListener;
 
 class cf
-  implements AdapterView.OnItemSelectedListener
+  implements CastDeviceListener, ChromeCastConnectionListener, RemoteMediaPlayerListener
 {
   cf(ViewImage21 paramViewImage21) {}
   
-  public void onItemSelected(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
+  public void onConnected() {}
+  
+  public void onConnectionFailed() {}
+  
+  public void onConnectionSuspended() {}
+  
+  public void onDeviceAdded(CastDeviceInfo paramCastDeviceInfo) {}
+  
+  public void onDeviceRemoved(CastDeviceInfo paramCastDeviceInfo) {}
+  
+  public void onDeviceSelected(CastDeviceInfo paramCastDeviceInfo) {}
+  
+  public void onDeviceUnSelected(CastDeviceInfo paramCastDeviceInfo)
   {
-    if (a.c != paramInt) {
-      a.a(paramInt, ViewImage21.c(a));
+    if (!a.isFinishing()) {
+      ViewImage21.s(a);
     }
   }
   
-  public void onNothingSelected(AdapterView<?> paramAdapterView) {}
+  public void onDeviceVolumeChanged(CastDeviceInfo paramCastDeviceInfo) {}
+  
+  public void onDisconnected()
+  {
+    if (!a.isFinishing()) {
+      ViewImage21.s(a);
+    }
+  }
+  
+  public void onStatusUpdated(int paramInt)
+  {
+    if (paramInt == 64535) {
+      ak.a(FexApplication.a(), 2131232383, 1);
+    }
+    while (paramInt != 64536) {
+      return;
+    }
+    ak.a(FexApplication.a(), 2131231901, 1);
+  }
 }
 
 /* Location:

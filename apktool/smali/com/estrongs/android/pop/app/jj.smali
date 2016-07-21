@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/ui/e/ja;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -22,28 +22,12 @@
 
 
 # virtual methods
-.method public a()V
-    .locals 2
+.method public onClick(Landroid/view/View;)V
+    .locals 1
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/jj;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/PopVideoPlayer;->d:Landroid/view/View;
-
-    const v1, 0x7f0a003d
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    const v1, 0x7f0202bb
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/jj;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->g(Lcom/estrongs/android/pop/app/PopVideoPlayer;)V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->c()V
 
     return-void
 .end method

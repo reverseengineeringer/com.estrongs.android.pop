@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
@@ -22,72 +22,24 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
+.method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
 
-    const/16 v1, 0x8
+    new-instance v0, Landroid/content/Intent;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/ch;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    const-string v1, "android.settings.WIFI_SETTINGS"
 
-    iget-boolean v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->v:Z
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    if-eqz v0, :cond_1
+    const/high16 v1, 0x10000000
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/ch;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    iget-boolean v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->c:Z
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/ch;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    if-nez v0, :cond_1
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->startActivity(Landroid/content/Intent;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/ch;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->D:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
-
-    move-result v0
-
-    if-ne v0, v1, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/ch;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->D:Landroid/view/View;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :goto_0
     return-void
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/ch;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->D:Landroid/view/View;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/ch;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->o()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/ch;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->q()V
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/ch;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->l()V
-
-    goto :goto_0
 .end method

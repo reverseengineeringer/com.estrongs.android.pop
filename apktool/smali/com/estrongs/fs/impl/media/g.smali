@@ -1,27 +1,25 @@
-.class Lcom/estrongs/fs/impl/media/g;
+.class final Lcom/estrongs/fs/impl/media/g;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/fs/i;
+.implements Ljava/util/Comparator;
 
 
-# instance fields
-.field final synthetic a:[Lcom/estrongs/android/pop/utils/af;
-
-.field final synthetic b:[Ljava/lang/String;
-
-.field final synthetic d:Lcom/estrongs/fs/impl/media/d;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Lcom/estrongs/fs/h;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/fs/impl/media/d;[Lcom/estrongs/android/pop/utils/af;[Ljava/lang/String;)V
+.method constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/fs/impl/media/g;->d:Lcom/estrongs/fs/impl/media/d;
-
-    iput-object p2, p0, Lcom/estrongs/fs/impl/media/g;->a:[Lcom/estrongs/android/pop/utils/af;
-
-    iput-object p3, p0, Lcom/estrongs/fs/impl/media/g;->b:[Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -30,44 +28,32 @@
 
 
 # virtual methods
-.method public a(Lcom/estrongs/fs/h;)Z
-    .locals 4
+.method public a(Lcom/estrongs/fs/h;Lcom/estrongs/fs/h;)I
+    .locals 2
 
-    const/4 v1, 0x0
+    check-cast p2, Lcom/estrongs/fs/impl/s/a;
 
-    move v0, v1
+    iget v0, p2, Lcom/estrongs/fs/impl/s/a;->a:I
 
-    :goto_0
-    iget-object v2, p0, Lcom/estrongs/fs/impl/media/g;->a:[Lcom/estrongs/android/pop/utils/af;
+    check-cast p1, Lcom/estrongs/fs/impl/s/a;
 
-    array-length v2, v2
+    iget v1, p1, Lcom/estrongs/fs/impl/s/a;->a:I
 
-    if-ge v0, v2, :cond_1
+    sub-int/2addr v0, v1
 
-    invoke-interface {p1}, Lcom/estrongs/fs/h;->getPath()Ljava/lang/String;
+    return v0
+.end method
 
-    move-result-object v2
+.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 1
 
-    iget-object v3, p0, Lcom/estrongs/fs/impl/media/g;->b:[Ljava/lang/String;
+    check-cast p1, Lcom/estrongs/fs/h;
 
-    aget-object v3, v3, v0
+    check-cast p2, Lcom/estrongs/fs/h;
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1, p2}, Lcom/estrongs/fs/impl/media/g;->a(Lcom/estrongs/fs/h;Lcom/estrongs/fs/h;)I
 
-    move-result v2
+    move-result v0
 
-    if-eqz v2, :cond_0
-
-    :goto_1
-    return v1
-
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x1
-
-    goto :goto_1
+    return v0
 .end method

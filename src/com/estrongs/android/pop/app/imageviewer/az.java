@@ -1,35 +1,24 @@
 package com.estrongs.android.pop.app.imageviewer;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.pop.app.aa;
-import com.estrongs.android.pop.app.r;
+import com.estrongs.android.pop.app.imageviewer.gallery.e;
 
 class az
-  implements View.OnClickListener
+  extends Thread
 {
-  az(ViewImage21 paramViewImage21) {}
-  
-  public void onClick(View paramView)
+  az(ViewImage21 paramViewImage21, String paramString)
   {
-    if (ViewImage21.a(a, a.m)) {
-      ViewImage21.b(a, a.m);
-    }
-    if (ViewImage21.k(a).p())
+    super(paramString);
+  }
+  
+  public void run()
+  {
+    e locale = ViewImage21.q(a);
+    if (locale == null)
     {
-      if (ViewImage21.a(a))
-      {
-        ViewImage21.l(a);
-        return;
-      }
-      ViewImage21.m(a);
-      a.a(a.c, true);
+      a.runOnUiThread(new ba(this));
       return;
     }
-    if (ViewImage21.n(a) == null) {
-      ViewImage21.o(a);
-    }
-    ViewImage21.n(a).show();
+    a.runOnUiThread(new bb(this, locale));
   }
 }
 

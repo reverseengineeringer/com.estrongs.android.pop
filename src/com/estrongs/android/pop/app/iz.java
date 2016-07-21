@@ -1,18 +1,24 @@
 package com.estrongs.android.pop.app;
 
+import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.ui.preference.CustomListPreference;
+import com.estrongs.android.util.bk;
+
 class iz
-  implements ae
+  implements Preference.OnPreferenceChangeListener
 {
-  iz(PopVideoPlayer paramPopVideoPlayer) {}
+  iz(PopPreferenceActivity paramPopPreferenceActivity, CustomListPreference paramCustomListPreference) {}
   
-  public void a()
+  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
   {
-    PopVideoPlayer.w(a);
-  }
-  
-  public void b()
-  {
-    PopVideoPlayer.y(a);
+    paramPreference = a.a(paramObject.toString());
+    if (bk.b(paramPreference)) {
+      a.setSummary(paramPreference);
+    }
+    FexApplication.a().a("search_engine_default", paramObject);
+    return true;
   }
 }
 

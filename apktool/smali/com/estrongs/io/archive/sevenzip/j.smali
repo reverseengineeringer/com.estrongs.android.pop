@@ -68,7 +68,7 @@
 
     iget-object v2, v2, Lcom/estrongs/io/archive/sevenzip/h;->f:Ljava/lang/String;
 
-    sget-object v3, Lcom/estrongs/android/pop/a;->p:Ljava/lang/String;
+    sget-object v3, Lcom/estrongs/android/pop/a;->s:Ljava/lang/String;
 
     invoke-direct {v0, v1, v2, v3, v5}, Lcom/estrongs/fs/b/ad;-><init>(Lcom/estrongs/fs/d;Ljava/lang/String;Ljava/lang/String;Z)V
 
@@ -76,7 +76,7 @@
 
     new-instance v1, Ljava/io/File;
 
-    sget-object v2, Lcom/estrongs/android/pop/a;->p:Ljava/lang/String;
+    sget-object v2, Lcom/estrongs/android/pop/a;->s:Ljava/lang/String;
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -88,7 +88,7 @@
 
     new-instance v1, Ljava/io/File;
 
-    sget-object v2, Lcom/estrongs/android/pop/a;->p:Ljava/lang/String;
+    sget-object v2, Lcom/estrongs/android/pop/a;->s:Ljava/lang/String;
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -99,7 +99,7 @@
 
     iget-object v1, v1, Lcom/estrongs/io/archive/sevenzip/h;->b:Landroid/app/Activity;
 
-    const v2, 0x7f0b018e
+    const v2, 0x7f0802a1
 
     const/4 v3, 0x1
 

@@ -1,30 +1,35 @@
 .class Lcom/estrongs/android/ui/e/bt;
-.super Lcom/estrongs/android/ui/e/cp;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # instance fields
-.field final synthetic j:Lcom/estrongs/android/ui/e/w;
+.field final synthetic a:Lcom/estrongs/android/ui/e/m;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/w;Landroid/app/Activity;ZLandroid/widget/LinearLayout;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/m;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/bt;->j:Lcom/estrongs/android/ui/e/w;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/bt;->a:Lcom/estrongs/android/ui/e/m;
 
-    invoke-direct {p0, p2, p3, p4}, Lcom/estrongs/android/ui/e/cp;-><init>(Landroid/app/Activity;ZLandroid/widget/LinearLayout;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public e()Z
+.method public onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/bt;->j:Lcom/estrongs/android/ui/e/w;
+    invoke-static {}, Lcom/estrongs/android/pop/app/f/a;->a()Lcom/estrongs/android/pop/app/f/a;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/e/w;->m()V
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/f/a;->f()Z
 
     const/4 v0, 0x1
 

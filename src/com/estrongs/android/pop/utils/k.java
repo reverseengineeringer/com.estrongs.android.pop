@@ -2,8 +2,10 @@ package com.estrongs.android.pop.utils;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import com.estrongs.fs.impl.local.q;
-import com.estrongs.io.archive.h;
+import com.estrongs.fs.impl.local.m;
+import com.estrongs.fs.impl.local.r;
+import com.estrongs.io.archive.d;
+import com.estrongs.io.archive.i;
 import java.util.HashMap;
 
 class k
@@ -22,11 +24,11 @@ class k
         Thread.sleep(d);
       }
       paramVarArgs = new HashMap();
-      paramVarArgs.put("charset_name", com.estrongs.android.util.f.a[0]);
+      paramVarArgs.put("charset_name", com.estrongs.android.util.e.a[0]);
       paramVarArgs.put("password", "s!*123.estrongs");
-      paramVarArgs = com.estrongs.io.archive.c.b(e, paramVarArgs);
-      q localq = com.estrongs.fs.impl.local.l.f("/data/data/" + f);
-      if (localq != null) {
+      paramVarArgs = d.b(e, paramVarArgs);
+      r localr = m.f("/data/data/" + f);
+      if (localr != null) {
         b = new int[] { b, c };
       }
       paramVarArgs.a(new l(this));
@@ -46,13 +48,13 @@ class k
   protected void a(Void paramVoid)
   {
     if (a) {
-      a.a(c, 2131427693);
+      a.a(c, 2131231019);
     }
   }
   
   protected void onPreExecute()
   {
-    a.a(c, 2131428344);
+    a.a(c, 2131231028);
   }
 }
 

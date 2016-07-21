@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
@@ -22,18 +22,10 @@
 
 
 # virtual methods
-.method public onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 1
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/editor/j;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/editor/PopNoteEditor;->r(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/editor/j;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/editor/PopNoteEditor;->q(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;)V
-
-    const/4 v0, 0x1
-
-    return v0
+    return-void
 .end method

@@ -18,10 +18,10 @@ class m
     localIntent.putExtra("mode", 1);
     paramPreference = new Intent();
     paramPreference.putExtra("android.intent.extra.shortcut.INTENT", localIntent);
-    paramPreference.putExtra("android.intent.extra.shortcut.NAME", a.getText(2131427671));
+    paramPreference.putExtra("android.intent.extra.shortcut.NAME", a.getText(2131231530));
     try
     {
-      paramPreference.putExtra("android.intent.extra.shortcut.ICON", BitmapFactory.decodeResource(a.getResources(), 2130837673));
+      paramPreference.putExtra("android.intent.extra.shortcut.ICON", BitmapFactory.decodeResource(a.getResources(), 2130837933));
       paramPreference.putExtra("duplicate", true);
       paramPreference.setAction("com.android.launcher.action.INSTALL_SHORTCUT");
       a.sendBroadcast(paramPreference);

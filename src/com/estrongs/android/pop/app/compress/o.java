@@ -1,8 +1,8 @@
 package com.estrongs.android.pop.app.compress;
 
 import android.app.Activity;
-import com.estrongs.io.archive.c;
-import com.estrongs.io.archive.h;
+import com.estrongs.io.archive.d;
+import com.estrongs.io.archive.i;
 import java.io.IOException;
 
 class o
@@ -14,10 +14,10 @@ class o
   {
     try
     {
-      h localh = c.a(l.i(a), l.j(a), l.k(a));
-      if (localh.k())
+      i locali = d.a(l.i(a), l.j(a), l.k(a));
+      if (locali.k())
       {
-        ((Activity)l.d(a)).runOnUiThread(new p(this, localh));
+        ((Activity)l.d(a)).runOnUiThread(new p(this, locali));
         return;
       }
       l.m(a);

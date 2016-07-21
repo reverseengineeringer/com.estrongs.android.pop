@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/widget/ExpandableListView$OnGroupCollapseListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/view/cq;
+.field final synthetic a:Lcom/estrongs/android/view/cr;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/view/cq;)V
+.method constructor <init>(Lcom/estrongs/android/view/cr;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/view/cx;->a:Lcom/estrongs/android/view/cq;
+    iput-object p1, p0, Lcom/estrongs/android/view/cx;->a:Lcom/estrongs/android/view/cr;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,36 +22,12 @@
 
 
 # virtual methods
-.method public onGroupCollapse(I)V
-    .locals 3
+.method public run()V
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/view/cx;->a:Lcom/estrongs/android/view/cq;
+    iget-object v0, p0, Lcom/estrongs/android/view/cx;->a:Lcom/estrongs/android/view/cr;
 
-    invoke-static {v0}, Lcom/estrongs/android/view/cq;->e(Lcom/estrongs/android/view/cq;)Lcom/estrongs/android/pop/ad;
-
-    move-result-object v1
-
-    iget-object v0, p0, Lcom/estrongs/android/view/cx;->a:Lcom/estrongs/android/view/cq;
-
-    invoke-static {v0}, Lcom/estrongs/android/view/cq;->a(Lcom/estrongs/android/view/cq;)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/android/view/dd;
-
-    iget-object v0, v0, Lcom/estrongs/android/view/dd;->d:Lcom/estrongs/android/view/aw;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/view/aw;->c()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lcom/estrongs/android/pop/ad;->e(Ljava/lang/String;Z)V
+    invoke-virtual {v0}, Lcom/estrongs/android/view/cr;->ao()V
 
     return-void
 .end method

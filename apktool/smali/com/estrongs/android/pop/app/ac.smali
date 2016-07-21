@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/a/a/p;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/ab;
+.field final synthetic a:Ljava/util/List;
+
+.field final synthetic b:Lcom/estrongs/android/pop/app/x;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/ab;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/x;Ljava/util/List;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/ac;->a:Lcom/estrongs/android/pop/app/ab;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/ac;->b:Lcom/estrongs/android/pop/app/x;
+
+    iput-object p2, p0, Lcom/estrongs/android/pop/app/ac;->a:Ljava/util/List;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,38 +26,38 @@
 
 
 # virtual methods
-.method public a(Lcom/estrongs/a/a;II)V
+.method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
 
-    const/4 v0, 0x4
+    if-ltz p2, :cond_0
 
-    if-ne p3, v0, :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ac;->a:Ljava/util/List;
 
-    check-cast p1, Lcom/estrongs/fs/b/ad;
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    invoke-virtual {p1}, Lcom/estrongs/fs/b/ad;->c()Ljava/lang/String;
+    move-result v0
 
-    move-result-object v0
+    if-ge p2, v0, :cond_0
 
-    new-instance v1, Ljava/io/File;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ac;->b:Lcom/estrongs/android/pop/app/x;
 
-    invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/x;->a(Lcom/estrongs/android/pop/app/x;)Lcom/estrongs/android/pop/app/ag;
 
-    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+    move-result-object v1
 
-    move-result v1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ac;->a:Ljava/util/List;
 
-    if-eqz v1, :cond_0
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/b;->a(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/ac;->a:Lcom/estrongs/android/pop/app/ab;
+    check-cast v0, Lcom/estrongs/chromecast/CastDeviceInfo;
 
-    iget-object v1, v1, Lcom/estrongs/android/pop/app/ab;->a:Landroid/app/Activity;
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/app/ag;->a(Lcom/estrongs/chromecast/CastDeviceInfo;)V
 
-    invoke-virtual {v1, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ac;->b:Lcom/estrongs/android/pop/app/x;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/x;->g(Lcom/estrongs/android/pop/app/x;)V
 
     :cond_0
     return-void

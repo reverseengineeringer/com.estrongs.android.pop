@@ -1,624 +1,475 @@
 package com.estrongs.fs.b;
 
-import android.util.Log;
-import com.estrongs.a.a.l;
-import com.estrongs.a.q;
-import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.pop.utils.cd;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bd;
-import com.estrongs.fs.FileSystemException;
-import com.estrongs.fs.impl.media.MediaStoreInsertException;
-import com.estrongs.fs.o;
+import com.estrongs.a.a;
+import com.estrongs.a.a.m;
+import com.estrongs.a.p;
+import com.estrongs.android.util.bg;
+import com.estrongs.fs.d;
+import com.estrongs.fs.h;
+import com.estrongs.fs.impl.local.f;
 import com.estrongs.fs.util.j;
+import com.estrongs.fs.w;
 import java.io.File;
-import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Stack;
 
 public class ao
-  extends r
+  extends a
 {
-  protected List<com.estrongs.fs.h> A = new ArrayList();
-  protected ab B = null;
-  public List<String> C;
-  private String D = null;
-  private String E = null;
-  private List<String> F = new ArrayList();
-  private List<String> G = new ArrayList();
-  private List<String> H = new ArrayList();
-  private List<String> I = new ArrayList();
-  private List<String> J = new ArrayList();
-  private List<String> K = new ArrayList();
-  private int L = 1;
-  private boolean M = false;
-  private com.estrongs.a.a N;
-  private boolean O = true;
-  private boolean P = false;
-  boolean a = false;
-  boolean b = false;
+  public static int e = 1;
+  public static int f = 2;
+  private int a = e;
+  private boolean b = true;
+  private d c;
+  private boolean d = false;
+  volatile List<ap> g = new ArrayList();
+  Stack<ap> h = new Stack();
+  ap i;
+  boolean j;
+  boolean k = false;
+  private long l = 0L;
+  private boolean m = false;
   
-  public ao(com.estrongs.fs.d paramd, List<com.estrongs.fs.h> paramList, com.estrongs.fs.h paramh)
+  public ao(d paramd, List<u> paramList)
   {
-    super(paramd, paramList, paramh);
-    if (am.G(paramh.getAbsolutePath()) == 0) {
-      a = am.a(((com.estrongs.fs.h)x.get(0)).getAbsolutePath(), paramh.getAbsolutePath());
-    }
-    for (;;)
+    setPriority(4);
+    c = paramd;
+    processData.m = false;
+    if ((paramList != null) && (paramList.size() >= 1))
     {
-      canRestart = false;
-      task_type = 3;
-      recordSummary("task_type", Integer.valueOf(task_type));
-      return;
-      if ((am.bb(paramh.getAbsolutePath())) && (am.a(((com.estrongs.fs.h)x.get(0)).getAbsolutePath()).equals(am.a(paramh.getAbsolutePath()))) && (!am.u(paramh.getAbsolutePath()))) {
-        b = true;
+      paramd = processData;
+      if (com.estrongs.android.util.ap.aQ(get0a.getPath())) {
+        break label263;
       }
     }
-  }
-  
-  private void a(File paramFile, List<String> paramList1, List<String> paramList2, List<String> paramList3, List<String> paramList4)
-  {
-    if (paramFile.isDirectory())
+    label263:
+    for (boolean bool = true;; bool = false)
     {
-      paramFile = paramFile.listFiles();
-      if (paramFile != null)
+      l = bool;
+      sendMessage(10, new Object[] { Integer.valueOf(1) });
+      int n = 0;
+      for (;;)
       {
-        int j = paramFile.length;
-        int i = 0;
-        while (i < j)
+        if (n >= paramList.size()) {
+          break label277;
+        }
+        paramd = new ap();
+        try
         {
-          a(paramFile[i], paramList1, paramList2, paramList3, paramList4);
-          i += 1;
+          a = geta.getPath();
+          if (com.estrongs.android.util.ap.bw(a)) {
+            a = geta.getAbsolutePath();
+          }
+          b = geta;
+          g.add(paramd);
+          h.push(paramd);
         }
+        catch (Exception paramd)
+        {
+          for (;;)
+          {
+            paramd.printStackTrace();
+          }
+        }
+        n += 1;
       }
     }
-    else
+    label277:
+    task_type = 1;
+    canRestart = true;
+    if ((paramList.size() > 0) && (com.estrongs.android.util.ap.bl(get0a.getAbsolutePath())))
     {
-      L |= com.estrongs.fs.a.a.g(paramFile.getAbsolutePath());
-      if (!bd.f()) {
-        break label88;
-      }
-      paramList4.add(paramFile.getAbsolutePath());
-    }
-    label88:
-    do
-    {
-      return;
-      if (com.estrongs.fs.impl.media.a.a(paramFile.getAbsolutePath()))
-      {
-        paramList1.add(paramFile.getAbsolutePath());
-        return;
-      }
-      if (com.estrongs.fs.impl.media.a.b(paramFile.getAbsolutePath()))
-      {
-        paramList2.add(paramFile.getAbsolutePath());
-        return;
-      }
-    } while (!com.estrongs.fs.impl.media.a.c(paramFile.getAbsolutePath()));
-    paramList3.add(paramFile.getAbsolutePath());
-  }
-  
-  private void a(String paramString1, String paramString2)
-  {
-    if (am.bl(paramString1))
-    {
-      if (!new File(paramString2).isDirectory()) {
-        break label99;
-      }
-      String str = paramString1;
-      if (!paramString1.endsWith("/")) {
-        str = paramString1 + "/";
-      }
-      J.add(str);
-    }
-    for (;;)
-    {
-      if (am.bl(paramString2)) {
-        a(new File(paramString2), F, G, H, I);
-      }
-      return;
-      label99:
-      K.add(paramString1);
+      m = true;
+      l = j.l(get0a.getAbsolutePath());
     }
   }
   
-  private boolean a(File paramFile, String paramString1, String paramString2)
+  public ao(List<h> paramList, d paramd)
   {
-    if (!paramFile.isDirectory()) {}
-    File[] arrayOfFile;
-    int i;
-    File localFile;
-    do
+    this(paramList, paramd, false);
+  }
+  
+  public ao(List<h> paramList, d paramd, boolean paramBoolean)
+  {
+    setPriority(4);
+    d = paramBoolean;
+    c = paramd;
+    processData.m = false;
+    if ((paramList != null) && (paramList.size() >= 1))
     {
-      do
-      {
-        return false;
-        arrayOfFile = paramFile.listFiles();
-        if (arrayOfFile == null) {
-          break;
-        }
-        i = 0;
-        if (i >= arrayOfFile.length) {
-          break;
-        }
-      } while (taskStopped());
-      localFile = new File(paramString2 + arrayOfFile[i].getAbsolutePath().substring(paramString1.length()));
-      if (!arrayOfFile[i].isDirectory()) {
-        break label144;
+      paramd = processData;
+      if (com.estrongs.android.util.ap.aQ(((h)paramList.get(0)).getPath())) {
+        break label239;
       }
-      if (!localFile.exists()) {
+    }
+    label239:
+    for (paramBoolean = true;; paramBoolean = false)
+    {
+      l = paramBoolean;
+      sendMessage(10, new Object[] { Integer.valueOf(1) });
+      int n = 0;
+      for (;;)
+      {
+        if (n >= paramList.size()) {
+          break label252;
+        }
+        paramd = new ap();
+        try
+        {
+          a = ((h)paramList.get(n)).getPath();
+          b = ((h)paramList.get(n));
+          s = d;
+          g.add(paramd);
+          h.push(paramd);
+        }
+        catch (Exception paramd)
+        {
+          for (;;)
+          {
+            paramd.printStackTrace();
+          }
+        }
+        n += 1;
+      }
+    }
+    label252:
+    task_type = 1;
+    canRestart = true;
+    if ((paramList.size() > 0) && (com.estrongs.android.util.ap.bl(((h)paramList.get(0)).getAbsolutePath())))
+    {
+      m = true;
+      l = j.l(((h)paramList.get(0)).getAbsolutePath());
+    }
+  }
+  
+  private void a(ap paramap, int paramInt, long paramLong)
+  {
+    if (bg.F(paramInt))
+    {
+      m += paramLong;
+      n += 1L;
+      return;
+    }
+    if (bg.e(paramInt))
+    {
+      i += paramLong;
+      j += 1L;
+      return;
+    }
+    if (bg.g(paramInt))
+    {
+      k += paramLong;
+      l += 1L;
+      return;
+    }
+    if (bg.a(paramInt))
+    {
+      g += paramLong;
+      h += 1L;
+      return;
+    }
+    if ((bg.j(paramInt)) || (bg.x(paramInt)) || (bg.B(paramInt)) || (bg.y(paramInt)) || (bg.m(paramInt)))
+    {
+      o += paramLong;
+      p += 1L;
+      return;
+    }
+    q += paramLong;
+    r += 1L;
+  }
+  
+  public List<ap> a()
+  {
+    return g;
+  }
+  
+  public void a(int paramInt)
+  {
+    a = paramInt;
+  }
+  
+  void a(ap paramap, h paramh, boolean paramBoolean)
+  {
+    try
+    {
+      processData.a = paramh.getAbsolutePath();
+      if (paramh.getFileType().a())
+      {
+        f += 1;
+        localObject = processData;
+        d += 1L;
+        if (b)
+        {
+          localObject = new ap();
+          a = paramh.getAbsolutePath();
+          w = paramap;
+          b = paramh;
+          s = paramBoolean;
+          v.add(localObject);
+        }
+        a(paramap, true, 0L, 0);
+        onProgress(processData);
+        return;
+      }
+      if (!a(paramh)) {
+        if (getTaskResult() != null) {
+          break label287;
+        }
+      }
+      label287:
+      for (Object localObject = null;; localObject = getTaskResultb)
+      {
+        requestStop(localObject);
+        e += 1;
+        localObject = processData;
+        d += 1L;
+        long l1 = paramh.length();
+        c += l1;
+        if (m) {
+          d += j.b(l1, l);
+        }
+        int n = bg.b(paramh.getAbsolutePath());
+        if ((a & f) != 0) {
+          a(paramap, n, l1);
+        }
+        paramh = processData;
+        f += l1;
+        a(paramap, false, l1, n);
+        onProgress(processData);
+        return;
+      }
+      return;
+    }
+    catch (Exception paramap) {}
+  }
+  
+  void a(ap paramap, boolean paramBoolean, long paramLong, int paramInt)
+  {
+    paramap = w;
+    if (paramap != null)
+    {
+      if (paramBoolean) {
+        f += 1;
+      }
+      for (;;)
+      {
+        paramap = w;
         break;
+        e += 1;
+        c += paramLong;
+        if (m) {
+          d += j.b(paramLong, l);
+        }
+        if ((a & f) != 0) {
+          a(paramap, paramInt, paramLong);
+        }
       }
-    } while ((!localFile.isDirectory()) || (!a(arrayOfFile[i], paramString1, paramString2)));
-    label144:
-    label188:
-    do
-    {
-      do
-      {
-        do
-        {
-          i += 1;
-          break;
-        } while (arrayOfFile[i].renameTo(localFile));
-        return false;
-        if (!localFile.exists()) {
-          break label188;
-        }
-        if (localFile.isDirectory()) {
-          break;
-        }
-        com.estrongs.fs.impl.local.h.a(FexApplication.a(), localFile.getAbsolutePath(), null);
-      } while (arrayOfFile[i].renameTo(localFile));
-      return false;
-    } while (arrayOfFile[i].renameTo(localFile));
-    return false;
-    com.estrongs.fs.impl.local.h.a(FexApplication.a(), paramFile.getAbsolutePath(), null);
+    }
+  }
+  
+  public void a(boolean paramBoolean)
+  {
+    b = paramBoolean;
+  }
+  
+  protected boolean a(h paramh)
+  {
     return true;
   }
   
-  private boolean b(String paramString)
+  public ap b()
   {
-    if (am.aw(paramString)) {}
-    for (;;)
-    {
-      try
-      {
-        InputStream localInputStream = c.e(paramString);
-        if (localInputStream != null)
-        {
-          j.a(localInputStream);
-          return true;
-        }
-        j.a(localInputStream);
-      }
-      catch (FileSystemException localFileSystemException1)
-      {
-        Log.w("Move", "exist failed - " + am.E(paramString));
-        j.a(null);
-        continue;
-      }
-      finally
-      {
-        j.a(null);
-      }
-      return false;
-      try
-      {
-        boolean bool = c.b(paramString);
-        return bool;
-      }
-      catch (FileSystemException localFileSystemException2)
-      {
-        Log.w("Move", "exist failed - " + am.E(paramString));
-      }
+    if (g.size() == 0) {
+      return null;
     }
-  }
-  
-  public void a(com.estrongs.a.a parama)
-  {
-    N = parama;
-  }
-  
-  public void g(boolean paramBoolean)
-  {
-    O = paramBoolean;
+    if (g.size() == 1) {
+      return (ap)g.get(0);
+    }
+    ap localap1 = new ap();
+    int n = 0;
+    while (n < g.size())
+    {
+      ap localap2 = (ap)g.get(n);
+      n += n;
+      c += c;
+      if (m) {
+        d += d;
+      }
+      e += e;
+      f += f;
+      g += g;
+      h += h;
+      i += i;
+      j += j;
+      k += k;
+      l += l;
+      m += m;
+      n += n;
+      o += o;
+      p += p;
+      q += q;
+      r += r;
+      n += 1;
+    }
+    return localap1;
   }
   
   public void handleMessage(int paramInt, Object... paramVarArgs)
   {
-    if (paramInt == 13)
+    switch (paramInt)
     {
-      if (bd.a(D))
-      {
-        D = ((String)paramVarArgs[1]);
-        return;
-      }
-      E = ((String)paramVarArgs[1]);
-      return;
+    default: 
+      super.handleMessage(paramInt, paramVarArgs);
     }
-    super.handleMessage(paramInt, paramVarArgs);
-  }
-  
-  protected void i()
-  {
-    if (!O) {}
     do
     {
-      do
-      {
-        return;
-      } while (!M);
-      try
-      {
-        if (bd.f())
-        {
-          com.estrongs.fs.impl.media.d.a(J);
-          com.estrongs.fs.impl.media.d.b(K);
-          com.estrongs.fs.impl.media.d.a(I, null);
-          return;
-        }
-      }
-      catch (MediaStoreInsertException localMediaStoreInsertException)
-      {
-        localMediaStoreInsertException.printStackTrace();
-        cd.b();
-        return;
-      }
-      if (F.size() > 0)
-      {
-        com.estrongs.fs.impl.k.b.c().b(J);
-        com.estrongs.fs.impl.k.b.c().c(K);
-      }
-      if (G.size() > 0)
-      {
-        com.estrongs.fs.impl.i.b.c().b(J);
-        com.estrongs.fs.impl.i.b.c().c(K);
-      }
-      if (H.size() > 0)
-      {
-        com.estrongs.fs.impl.q.b.c().b(J);
-        com.estrongs.fs.impl.q.b.c().c(K);
-      }
-      if (F.size() > 0) {
-        com.estrongs.fs.impl.k.b.c().a(F);
-      }
-      if (G.size() > 0) {
-        com.estrongs.fs.impl.i.b.c().a(G);
-      }
-    } while (H.size() <= 0);
-    com.estrongs.fs.impl.q.b.c().a(H);
-  }
-  
-  public List<String> j()
-  {
-    return F;
-  }
-  
-  public List<String> k()
-  {
-    return G;
-  }
-  
-  public List<String> l()
-  {
-    return H;
-  }
-  
-  public List<String> m()
-  {
-    return I;
-  }
-  
-  public List<com.estrongs.fs.h> n()
-  {
-    return A;
-  }
-  
-  protected void postTask()
-  {
-    super.postTask();
-    if (!P) {
-      i();
-    }
-  }
-  
-  public void removeProgressListener(l paraml)
-  {
-    super.removeProgressListener(paraml);
-    if (B != null) {
-      B.removeProgressListener(paraml);
-    }
+      return;
+      processData.i = ((Integer)paramVarArgs[0]).intValue();
+      onProgress(processData);
+      return;
+      k = true;
+      paramVarArgs = (h)paramVarArgs[0];
+    } while ((i == null) || (paramVarArgs == null));
+    a(i, paramVarArgs, j);
   }
   
   public boolean task()
   {
-    boolean bool1;
-    if (o)
+    ArrayList localArrayList = new ArrayList();
+    localArrayList.addAll(com.estrongs.android.util.ap.a());
+    while (h.size() > 0)
     {
-      setTaskResult(14, new q("Error", null));
-      bool1 = false;
-      return bool1;
-    }
-    if (!l)
-    {
-      processData.l = false;
-      processData.m = false;
-      processData.o = false;
-    }
-    ArrayList localArrayList3;
-    ArrayList localArrayList1;
-    ArrayList localArrayList2;
-    int i;
-    if (a)
-    {
-      localArrayList3 = new ArrayList();
-      processData.c = f.size();
-      processData.m = false;
-      processData.l = false;
-      onProgress(processData);
-      P = am.aO(f.get(0)).a.getPath());
-      localArrayList1 = new ArrayList();
-      localArrayList2 = new ArrayList();
-      i = 0;
-    }
-    for (;;)
-    {
-      String str1;
-      String str2;
-      Object localObject3;
-      try
+      if (taskStopped()) {}
+      ap localap;
+      boolean bool2;
+      do
       {
-        if (i >= f.size()) {
-          break label1480;
-        }
-        bool1 = taskStopped();
-        if (bool1) {
-          return false;
-        }
-        str1 = f.get(i)).a.getAbsolutePath();
-        str2 = f.get(i)).b;
-        if (am.e(str1, str2))
-        {
-          sendMessage(1, new Object[] { Long.valueOf(1L), str1 });
-          onProgress(processData);
-          break label1874;
-        }
-        if (!bd.i()) {
-          continue;
-        }
-        localObject3 = new File(am.bE(str1));
-        localFile1 = new File(am.bE(str2));
-      }
-      catch (Exception localException1)
-      {
-        File localFile1;
-        if (!P) {
-          continue;
-        }
-        i();
-        com.estrongs.fs.a.b.a().b(localArrayList2, L);
-        com.estrongs.fs.a.b.a().c(localArrayList1, L);
-        if (localArrayList3.size() != 0) {
-          break label1518;
-        }
-        return true;
-        localObject3 = new File(str1);
-        File localFile2 = new File(str2);
-        continue;
-        localObject4 = N;
-        continue;
-        if (g != 1) {
-          break label1356;
-        }
-        if (!(bool1 ^ bool2)) {
-          continue;
-        }
-        setTaskResult(16, new q((String)FexApplication.a().getText(2131427817), null));
         return false;
-        if (!localFile2.isDirectory()) {
-          break label1095;
-        }
-        if (!a((File)localObject3, ((File)localObject3).getAbsolutePath(), localFile2.getAbsolutePath())) {
-          break label820;
-        }
-        localArrayList1.add(f.get(i)).a);
-        localArrayList2.add(new o(n, f.get(i)).a.getName()));
-        sendMessage(1, new Object[] { Long.valueOf(1L), str1 });
-        onProgress(processData);
-        a(str1, str2);
-        M = true;
-      }
-      finally
-      {
-        if (!P) {
-          continue;
-        }
-        i();
-        com.estrongs.fs.a.b.a().b(localArrayList2, L);
-        com.estrongs.fs.a.b.a().c(localArrayList1, L);
-      }
-      Object localObject4 = localFile1;
-      com.estrongs.a.a.h localh;
-      if (com.estrongs.fs.impl.local.h.a(localFile1.getAbsolutePath()))
-      {
-        localObject4 = localFile1;
-        if (com.estrongs.fs.impl.local.h.a(((File)localObject3).getAbsolutePath()))
+        localap = (ap)h.peek();
+        if (t)
         {
-          bool1 = com.estrongs.fs.impl.local.h.h(((File)localObject3).getAbsolutePath());
-          bool2 = com.estrongs.fs.impl.local.h.h(localFile1.getAbsolutePath());
-          if (N == null)
-          {
-            localObject4 = this;
-            localh = (com.estrongs.a.a.h)((com.estrongs.a.a)localObject4).getDecision(com.estrongs.a.a.h.class, new Object[] { str2, Boolean.valueOf(false), f.get(i)).a, c.j(str2) });
-            if (g != 2) {
-              continue;
-            }
-            sendMessage(1, new Object[] { Long.valueOf(1L), str1 });
-            onProgress(processData);
-            break label1874;
-          }
-          label820:
-          if (taskStopped())
-          {
-            localObject3 = com.estrongs.fs.a.b.a();
-            if (f.get(i)).a.getAbsolutePath().endsWith("/"))
-            {
-              localObject2 = f.get(i)).a.getAbsolutePath() + "*";
-              ((com.estrongs.fs.a.b)localObject3).a((String)localObject2);
-              localObject3 = com.estrongs.fs.a.b.a();
-              if (!n.getAbsolutePath().endsWith("/")) {
-                break label1045;
-              }
-            }
-            label1045:
-            for (localObject2 = n.getAbsolutePath() + "*";; localObject2 = n.getAbsolutePath() + "/*")
-            {
-              ((com.estrongs.fs.a.b)localObject3).a((String)localObject2);
-              if (P) {
-                i();
-              }
-              com.estrongs.fs.a.b.a().b(localArrayList2, L);
-              com.estrongs.fs.a.b.a().c(localArrayList1, L);
-              return false;
-              localObject2 = f.get(i)).a.getAbsolutePath() + "/*";
-              break;
-            }
-          }
-          localArrayList3.add(f.get(i));
-          break label1874;
-          label1095:
-          com.estrongs.fs.impl.local.h.a(FexApplication.a(), ((File)localObject2).getAbsolutePath(), null);
-          localObject4 = localObject2;
-        }
-      }
-      if (com.estrongs.fs.impl.local.h.a(((File)localObject3).getAbsolutePath()))
-      {
-        bool2 = com.estrongs.fs.impl.local.h.a(((File)localObject3).getAbsolutePath(), ((File)localObject4).getAbsolutePath());
-        bool1 = bool2;
-        if (!bool2)
-        {
-          localObject2 = am.bk(((File)localObject4).getAbsolutePath());
-          bool1 = bool2;
-          if (localObject2 != null)
-          {
-            bool1 = bool2;
-            if (!com.estrongs.fs.impl.local.h.a((String)localObject2))
-            {
-              bool1 = bool2;
-              if (com.estrongs.fs.impl.local.h.g((String)localObject2))
-              {
-                localObject2 = com.estrongs.fs.a.b.a().g((String)localObject2);
-                if (localObject2 != null) {
-                  com.estrongs.fs.a.b.a().a((String)localObject2);
-                }
-                bool1 = com.estrongs.fs.impl.local.h.a(((File)localObject3).getAbsolutePath(), ((File)localObject4).getAbsolutePath());
-              }
-            }
-          }
-        }
-        if (!bool1) {
-          break label1463;
-        }
-        A.add(f.get(i)).a);
-        a(str1, str2);
-        M = true;
-        localArrayList1.add(f.get(i)).a);
-        localArrayList2.add(new o(n, f.get(i)).a.getName()));
-      }
-      for (;;)
-      {
-        sendMessage(1, new Object[] { Long.valueOf(1L), str1 });
-        onProgress(processData);
-        break label1874;
-        label1356:
-        int j = g;
-        if (j == 3)
-        {
-          if (P) {
-            i();
-          }
-          com.estrongs.fs.a.b.a().b(localArrayList2, L);
-          com.estrongs.fs.a.b.a().c(localArrayList1, L);
-          return false;
-        }
-        localObject4 = localObject2;
-        if (g != 5) {
+          u = true;
+          h.pop();
           break;
         }
-        localObject4 = new File(j.m(str2));
-        sendMessage(1, new Object[] { Long.valueOf(1L), str1 });
-        onProgress(processData);
-        break;
-        label1463:
-        localArrayList3.add(f.get(i));
+        bool2 = s;
+        if (b.getFileType().a()) {
+          break label272;
+        }
+      } while (!a(b));
+      t = true;
+      e += 1;
+      Object localObject = processData;
+      d += 1L;
+      long l1 = b.length();
+      c += l1;
+      if (m) {
+        d += j.b(l1, l);
       }
-      label1480:
-      if (P) {
-        i();
+      localObject = processData;
+      f += l1;
+      int n = bg.b(b.getAbsolutePath());
+      if ((a & f) != 0) {
+        a(localap, n, l1);
       }
-      com.estrongs.fs.a.b.a().b(localArrayList2, L);
-      com.estrongs.fs.a.b.a().c(localArrayList1, L);
+      a(localap, false, l1, n);
+      onProgress(processData);
       continue;
-      label1518:
-      f = localArrayList3;
-      a();
-      Object localObject2 = new ArrayList();
-      i = 0;
-      label1539:
-      if (i < f.size())
+      label272:
+      boolean bool1 = bool2;
+      if (bool2)
       {
-        if (am.e(f.get(i)).a.getAbsolutePath(), f.get(i)).b)) {}
-        for (;;)
+        localObject = com.estrongs.android.util.ap.ca(b.getAbsolutePath());
+        if (localObject == null) {
+          break label523;
+        }
+        n = 0;
+        label300:
+        if ((n >= localArrayList.size()) || (((String)localObject).equals(localArrayList.get(n))))
         {
-          i += 1;
-          break label1539;
-          if (!b) {
-            break;
+          if (n >= localArrayList.size()) {
+            break label512;
           }
-          try
-          {
-            bool1 = c.a(x, n);
-            return bool1;
-          }
-          catch (Exception localException2)
-          {
-            localException2.printStackTrace();
-            return false;
-          }
-          localException2.add(f.get(i)).a);
+          localArrayList.remove(n);
+          bool1 = false;
         }
       }
-      boolean bool2 = super.task();
-      bool1 = bool2;
-      if (!bool2) {
-        break;
-      }
-      bool1 = bool2;
-      if (localException2.size() <= 0) {
-        break;
-      }
-      if (((bd.b(D)) && (!b(D))) || ((bd.b(E)) && (!b(E))))
+      else
       {
-        setTaskResult(10000, new q("", null));
-        return false;
+        label349:
+        f += 1;
+        a(localap, true, 0L, 0);
+        onProgress(processData);
       }
-      if ((C == null) || (C.size() == 0) || (d == 0))
+      label512:
+      label523:
+      label546:
+      List localList;
+      for (;;)
       {
-        B = new ab(c, localException2, false);
-        B.j = C;
-        B.processData.i = 3;
-        B.processData.k = true;
-        B.addProgressListeners(getProgressListeners());
-        B.setTaskDecisionListener(getTaskDecisionListener());
-        B.setParentTask(this);
-        B.execute(false);
-        A.addAll(B.c);
+        try
+        {
+          i = localap;
+          j = bool1;
+          k = false;
+          if (!(b instanceof com.estrongs.android.pop.app.b.i)) {
+            break label546;
+          }
+          localObject = new f(new File(b.getAbsolutePath()));
+          localObject = c.a((h)localObject, true, com.estrongs.fs.i.c);
+          if (k) {
+            break label567;
+          }
+          Iterator localIterator = ((List)localObject).iterator();
+          if (!localIterator.hasNext()) {
+            break label567;
+          }
+          h localh = (h)localIterator.next();
+          a(i, localh, j);
+          continue;
+          n += 1;
+        }
+        catch (Exception localException)
+        {
+          return false;
+        }
+        break label300;
+        h.pop();
+        break;
+        bool1 = bool2;
+        if (com.estrongs.android.util.ap.bU(b.getAbsolutePath()) == null) {
+          break label349;
+        }
+        bool1 = false;
+        break label349;
+        localList = c.a(b, true, com.estrongs.fs.i.c);
       }
-      return true;
-      label1874:
-      i += 1;
+      label567:
+      i = null;
+      if (localList == null)
+      {
+        t = true;
+      }
+      else
+      {
+        if (taskStopped())
+        {
+          onProgress(processData);
+          return false;
+        }
+        n = 0;
+        while (n < v.size())
+        {
+          h.push(v.get(n));
+          n += 1;
+        }
+        t = true;
+      }
     }
+    setTaskResult(0, null);
+    return true;
   }
 }
 

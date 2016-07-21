@@ -1,19 +1,13 @@
 package com.estrongs.android.ui.dialog;
 
-import com.estrongs.android.pop.a.j;
-
 class gq
-  implements j
+  implements Runnable
 {
-  gq(gk paramgk) {}
+  gq(gp paramgp) {}
   
-  public void a(boolean paramBoolean)
+  public void run()
   {
-    if (a.a != null) {
-      a.a.dismiss();
-    }
-    gk.a(a, paramBoolean);
-    gk.h(a);
+    gn.a(a.a).notifyDataSetChanged();
   }
 }
 

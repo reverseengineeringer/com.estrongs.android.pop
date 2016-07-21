@@ -1,10 +1,10 @@
 package com.estrongs.android.pop.bt;
 
-import android.util.Log;
 import b.a.a.a;
 import b.b.c;
 import b.b.d;
 import b.b.f;
+import com.estrongs.android.util.l;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -66,7 +66,7 @@ class i
         String str;
         Object localObject2;
         InputStream localInputStream;
-        Log.d("OBEXOppServer", "OBEX Server onPut error", paramd);
+        l.a("OBEXOppServer", "OBEX Server onPut error", paramd);
         return 211;
         ((FileOutputStream)localObject1).write(j);
         int j = i + 1;
@@ -106,7 +106,7 @@ class i
   void a()
   {
     if (!b) {
-      Log.d("OBEXOppServer", "OBEX connection timeout");
+      l.b("OBEXOppServer", "OBEX connection timeout");
     }
     try
     {
@@ -133,7 +133,7 @@ class i
   
   public void a(byte[] paramArrayOfByte)
   {
-    Log.d("OBEXOppServer", "OBEX AuthFailure " + new String(paramArrayOfByte));
+    l.b("OBEXOppServer", "OBEX AuthFailure " + new String(paramArrayOfByte));
   }
   
   public int b(d paramd)
@@ -155,7 +155,7 @@ class i
     catch (IOException paramd)
     {
       paramd = paramd;
-      Log.d("OBEXOppServer", "OBEX Server onGet error", paramd);
+      l.a("OBEXOppServer", "OBEX Server onGet error", paramd);
       return 211;
     }
     finally {}

@@ -1,44 +1,92 @@
 package com.estrongs.android.ui.dialog;
 
 import android.content.Context;
-import android.os.AsyncTask;
+import android.graphics.drawable.Drawable;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.TextView;
-import com.estrongs.fs.util.g;
-import com.estrongs.fs.util.j;
-import java.io.File;
-import java.util.List;
+import com.estrongs.android.pop.esclasses.k;
+import com.estrongs.android.ui.theme.at;
 
 class cw
-  extends AsyncTask<List<File>, String, Void>
+  extends BaseAdapter
 {
-  g a;
+  private Context b;
+  private CharSequence[] c;
+  private Drawable[] d;
+  private int e;
   
-  cw(cv paramcv, Context paramContext, TextView paramTextView) {}
-  
-  protected Void a(List<File>... paramVarArgs)
+  public cw(ci paramci, Context paramContext, Drawable[] paramArrayOfDrawable, CharSequence[] paramArrayOfCharSequence, int paramInt)
   {
-    a = new g(new cx(this));
-    a.a(paramVarArgs[0]);
-    publishProgress(new String[] { "" + a.c(), j.c(a.b()), "over" });
+    b = paramContext;
+    d = paramArrayOfDrawable;
+    c = paramArrayOfCharSequence;
+    e = paramInt;
+  }
+  
+  public void a(int paramInt)
+  {
+    e = paramInt;
+  }
+  
+  public int getCount()
+  {
+    if (c == null) {
+      return 0;
+    }
+    return c.length;
+  }
+  
+  public Object getItem(int paramInt)
+  {
     return null;
   }
   
-  protected void a(Void paramVoid)
+  public long getItemId(int paramInt)
   {
-    publishProgress(new String[] { "" + a.c(), j.c(a.b()) });
+    return 0L;
   }
   
-  protected void a(String... paramVarArgs)
+  public View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
-    String str = b.getString(2131428122, new Object[] { paramVarArgs[1] });
-    c.setText(b.getString(2131428121, new Object[] { paramVarArgs[0], str }));
-  }
-  
-  protected void onCancelled()
-  {
-    if (a != null) {
-      a.a();
+    boolean bool = false;
+    paramViewGroup = paramView;
+    if (paramView == null) {
+      paramViewGroup = k.a(b).inflate(2130903280, null);
     }
+    paramView = (ImageView)paramViewGroup.findViewById(2131625045);
+    if (d == null) {
+      paramView.setVisibility(8);
+    }
+    TextView localTextView;
+    for (;;)
+    {
+      localTextView = (TextView)paramViewGroup.findViewById(2131625046);
+      localTextView.setText(c[paramInt]);
+      RadioButton localRadioButton = (RadioButton)paramViewGroup.findViewById(2131625047);
+      if (!ci.access$500(a)) {
+        localRadioButton.setVisibility(8);
+      }
+      if (e == paramInt) {
+        bool = true;
+      }
+      localRadioButton.setChecked(bool);
+      if (!a.itemsEnable) {
+        break;
+      }
+      paramView.setAlpha(255);
+      localTextView.setTextColor(at.a(a.mContext).c(2131558661));
+      return paramViewGroup;
+      paramView.setVisibility(0);
+      paramView.setImageDrawable(d[paramInt]);
+    }
+    paramView.setAlpha(128);
+    localTextView.setTextColor(-7829368);
+    return paramViewGroup;
   }
 }
 

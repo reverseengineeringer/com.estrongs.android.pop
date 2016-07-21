@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:background="@drawable/cleaner_card_bg_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_10" android:layout_marginRight="@dimen/dp_10" android:layout_marginBottom="@dimen/dp_10"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+        <ImageView android:id="@id/icon" android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/card_icon_default" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip">
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:textSize="18.0dip" android:textColor="@color/cleaner_item_title_text" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="title" />
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="15.0dip" android:textColor="@color/cleaner_item_message_text" android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="subtitle" />
+            <ImageView android:id="@id/image" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="150.0dip" android:layout_marginTop="10.0dip" android:src="@drawable/card_functionimg_default" android:scaleType="fitXY" />
+            <TextView android:textSize="16.0dip" android:textColor="@color/es_blue" android:gravity="bottom|center|right" android:layout_gravity="bottom|center|right" android:id="@id/btn" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="11.0dip" android:minWidth="90.0dip" android:text="button" android:textAllCaps="true" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,21 +1,26 @@
 package com.estrongs.android.pop.app.imageviewer;
 
-import com.estrongs.android.pop.app.ae;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.app.imageviewer.gallery.f;
 
 class bd
-  implements ae
+  implements MenuItem.OnMenuItemClickListener
 {
   bd(ViewImage21 paramViewImage21) {}
   
-  public void a()
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    ViewImage21.m(a);
-    a.a(a.c, true);
-  }
-  
-  public void b()
-  {
-    ViewImage21.r(a);
+    a.b.removeCallbacks(ViewImage21.h(a));
+    ViewImage21.e(a);
+    a.a();
+    paramMenuItem = a.e.a(a.c);
+    if (paramMenuItem != null)
+    {
+      ae.a(a, a.l, paramMenuItem);
+      ViewImage21.b(a, a.m);
+    }
+    return true;
   }
 }
 

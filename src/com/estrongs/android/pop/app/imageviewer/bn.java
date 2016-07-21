@@ -1,21 +1,18 @@
 package com.estrongs.android.pop.app.imageviewer;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.app.aa;
+import android.view.animation.Animation;
+import android.view.animation.Animation.AnimationListener;
 
 class bn
-  implements MenuItem.OnMenuItemClickListener
+  implements Animation.AnimationListener
 {
   bn(ViewImage21 paramViewImage21) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
-  {
-    ViewImage21.k(a).q();
-    ViewImage21.r(a);
-    ViewImage21.b(a, a.n);
-    return true;
-  }
+  public void onAnimationEnd(Animation paramAnimation) {}
+  
+  public void onAnimationRepeat(Animation paramAnimation) {}
+  
+  public void onAnimationStart(Animation paramAnimation) {}
 }
 
 /* Location:

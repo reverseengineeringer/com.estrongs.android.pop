@@ -1,25 +1,17 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
-import com.estrongs.fs.b.r;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 class bz
-  implements DialogInterface.OnDismissListener
 {
-  bz(by paramby, DialogInterface.OnDismissListener paramOnDismissListener) {}
-  
-  public void onDismiss(DialogInterface paramDialogInterface)
-  {
-    if ((b.b != null) && (b.b.getTaskStatus() == 2))
-    {
-      by.a(b, true);
-      b.b.requestStop();
-    }
-    if (a != null) {
-      a.onDismiss(paramDialogInterface);
-    }
-  }
+  TextView a;
+  TextView b;
+  ImageView c;
+  View d;
+  int e;
+  int f;
 }
 
 /* Location:

@@ -2,15 +2,39 @@ package com.estrongs.android.pop.app;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
+import android.net.Uri;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.util.ap;
 
 class lo
   implements DialogInterface.OnClickListener
 {
-  lo(StreamingMediaPlayer paramStreamingMediaPlayer) {}
+  lo(ShowDialogActivity paramShowDialogActivity, String paramString, boolean paramBoolean) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    a.finish();
+    Object localObject2 = a;
+    Object localObject1 = localObject2;
+    if (b)
+    {
+      localObject1 = localObject2;
+      if (ap.bm(a)) {
+        localObject1 = ap.bB(a);
+      }
+    }
+    localObject2 = new Intent(c, FileExplorerActivity.class);
+    ((Intent)localObject2).addFlags(603979776);
+    if (((String)localObject1).endsWith("/")) {}
+    for (;;)
+    {
+      ((Intent)localObject2).setData(Uri.parse(Uri.encode((String)localObject1, "/")));
+      c.startActivity((Intent)localObject2);
+      paramDialogInterface.dismiss();
+      c.finish();
+      return;
+      localObject1 = (String)localObject1 + "/";
+    }
   }
 }
 

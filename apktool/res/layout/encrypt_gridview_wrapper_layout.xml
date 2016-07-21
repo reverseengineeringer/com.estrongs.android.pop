@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.design.widget.CoordinatorLayout android:orientation="vertical" android:id="@id/coordinator_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/scan_net_layout">
+            <android.support.design.widget.AppBarLayout android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+                <include android:id="@id/encrypt_wrapper_top_rl" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="scroll" layout="@layout/encrypt_gridview_wrapper_top_view" />
+                <include android:id="@id/address_layout" layout="@layout/window_addressbar" />
+                <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/mtd_content_empty_view_layout" />
+            </android.support.design.widget.AppBarLayout>
+            <com.estrongs.android.ui.view.FlingChangeRecyclerView android:id="@id/grid_view" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </android.support.design.widget.CoordinatorLayout>
+        <com.estrongs.android.ui.fastscroller.vertical.VerticalRecyclerViewFastScroller android:id="@id/fast_scroller" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" app:rfs_handleBackground="@drawable/icon_handle" />
+        <LinearLayout android:gravity="center" android:id="@id/grid_footer_below_grid" android:background="#64000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <ProgressBar android:id="@id/grid_footer_progressbar" android:layout_width="@dimen/dp_16" android:layout_height="@dimen/dp_16" style="@style/ProgressBar" />
+            <TextView android:textSize="@dimen/dp_16" android:gravity="center" android:id="@id/grid_footer_text" android:background="@drawable/background_globle_buttons" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/loading_more_msg" />
+        </LinearLayout>
+        <com.estrongs.android.widget.ESViewStub android:id="@id/web_view_stub" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/grid_footer_below_grid" android:layout_alignParentTop="true" />
+        <LinearLayout android:gravity="center" android:id="@id/grid_footer" android:background="#64000000" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBottom="@id/coordinator_layout">
+            <ProgressBar android:id="@id/grid_footer_progressbar2" android:layout_width="@dimen/dp_16" android:layout_height="@dimen/dp_16" style="@style/ProgressBar" />
+            <TextView android:textSize="@dimen/dp_16" android:gravity="center" android:id="@id/grid_footer_text2" android:background="@drawable/background_globle_buttons" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/loading_more_msg" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/scan_net_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <Button android:textSize="@dimen/dp_18" android:layout_gravity="center_horizontal" android:id="@id/btn_network_scan" android:layout_width="fill_parent" android:layout_height="@dimen/dp_48" android:layout_marginLeft="@dimen/dp_10" android:layout_marginRight="@dimen/dp_10" android:layout_marginBottom="@dimen/dp_10" android:text="@string/action_scan" />
+            <ProgressBar android:layout_gravity="center|right" android:id="@id/net_scan_progress" android:visibility="invisible" android:layout_width="@dimen/dp_20" android:layout_height="@dimen/dp_20" android:layout_marginRight="@dimen/dp_50" android:layout_marginBottom="@dimen/dp_5" style="@style/ProgressBar" />
+        </FrameLayout>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/progressView" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ProgressBar" />
+        <TextView android:textColor="@color/main_content_detail_text" android:id="@id/progressMessage" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

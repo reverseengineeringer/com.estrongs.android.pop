@@ -1,9 +1,14 @@
 package android.support.v4.content;
 
-class f<Data>
+import android.os.AsyncTask;
+import java.util.concurrent.Executor;
+
+class f
 {
-  final ModernAsyncTask a;
-  final Data[] b;
+  public static Executor a()
+  {
+    return AsyncTask.THREAD_POOL_EXECUTOR;
+  }
 }
 
 /* Location:

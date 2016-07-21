@@ -1,27 +1,16 @@
 package com.estrongs.android.pop.esclasses;
 
-import android.os.Handler;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.View.OnTouchListener;
+import android.annotation.SuppressLint;
+import android.preference.PreferenceFragment;
 
-class m
-  implements View.OnTouchListener
+@SuppressLint({"NewApi"})
+public class m
+  extends PreferenceFragment
 {
-  m(ESScrollView paramESScrollView) {}
-  
-  public boolean onTouch(View paramView, MotionEvent paramMotionEvent)
+  public void addPreferencesFromResource(int paramInt)
   {
-    switch (paramMotionEvent.getAction())
-    {
-    }
-    for (;;)
-    {
-      return false;
-      if ((ESScrollView.a(a) != null) && (ESScrollView.b(a) != null)) {
-        ESScrollView.c(a).sendMessageDelayed(ESScrollView.c(a).obtainMessage(1), 200L);
-      }
-    }
+    super.addPreferencesFromResource(paramInt);
+    new n(getActivity()).a(paramInt, getPreferenceScreen());
   }
 }
 

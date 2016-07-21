@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/ui/e/ja;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+.field final synthetic a:Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/PopVideoPlayer;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/jc;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/jc;->a:Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,22 +22,14 @@
 
 
 # virtual methods
-.method public a()V
-    .locals 2
+.method public run()V
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/jc;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/jc;->a:Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->f(Lcom/estrongs/android/pop/app/PopVideoPlayer;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->h(Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;)V
 
-    move-result-object v0
-
-    const/4 v1, 0x5
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
+    invoke-static {}, Lcom/estrongs/android/pop/app/je;->a()V
 
     return-void
 .end method

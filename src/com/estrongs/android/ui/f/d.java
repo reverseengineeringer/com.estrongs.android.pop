@@ -1,22 +1,26 @@
 package com.estrongs.android.ui.f;
 
+import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.estrongs.android.ui.a.cx;
-import com.estrongs.android.util.be;
 
 class d
   implements View.OnClickListener
 {
-  d(c paramc) {}
+  d(a parama, com.estrongs.android.view.a.a parama1) {}
   
   public void onClick(View paramView)
   {
-    be.c().f();
-    be.c().g();
-    be.c().d();
-    c.a(a).notifyDataSetChanged();
-    a.g();
+    try
+    {
+      a.c().onMenuItemClick(a);
+      a.a(b);
+      return;
+    }
+    catch (Exception paramView)
+    {
+      paramView.printStackTrace();
+    }
   }
 }
 

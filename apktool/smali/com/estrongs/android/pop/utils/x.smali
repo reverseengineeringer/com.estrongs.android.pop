@@ -37,7 +37,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/estrongs/android/pop/a;->d:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/a;->f:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -135,7 +135,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/utils/x;->b:Landroid/content/Context;
 
-    const v2, 0x7f0b0202
+    const v2, 0x7f0803ca
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -143,7 +143,7 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
     goto :goto_0
 
@@ -156,7 +156,7 @@
 
     check-cast v0, Landroid/app/Activity;
 
-    sget-object v1, Lcom/estrongs/android/pop/a;->d:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/a;->f:Ljava/lang/String;
 
     iget-object v2, p0, Lcom/estrongs/android/pop/utils/x;->a:Lcom/estrongs/android/pop/view/utils/v;
 
@@ -166,7 +166,7 @@
 
     move v6, v4
 
-    invoke-static/range {v0 .. v6}, Lcom/estrongs/android/pop/app/DownloaderActivity;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Lcom/estrongs/a/a/p;ZLjava/lang/String;Z)Lcom/estrongs/android/ui/dialog/cg;
+    invoke-static/range {v0 .. v6}, Lcom/estrongs/android/pop/app/DownloaderActivity;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Lcom/estrongs/a/a/p;ZLjava/lang/String;Z)Lcom/estrongs/android/ui/dialog/ci;
 
     goto :goto_0
 .end method

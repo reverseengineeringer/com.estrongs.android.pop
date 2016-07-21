@@ -1,5 +1,5 @@
 .class public Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;
-.super Lcom/estrongs/android/pop/esclasses/i;
+.super Lcom/estrongs/android/pop/esclasses/m;
 
 
 # annotations
@@ -28,7 +28,7 @@
 .method public constructor <init>()V
     .locals 1
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/i;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/m;-><init>()V
 
     const/4 v0, 0x0
 
@@ -52,47 +52,47 @@
 .method private a()V
     .locals 3
 
-    new-instance v0, Lcom/estrongs/android/ui/dialog/ct;
+    new-instance v0, Lcom/estrongs/android/ui/dialog/cv;
 
     invoke-virtual {p0}, Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0b0047
+    const v1, 0x7f0803e7
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->a(I)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    const v1, 0x7f0b01b2
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->b(I)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->a(I)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    const v1, 0x7f0b000d
+    const v1, 0x7f0804ac
 
-    new-instance v2, Lcom/estrongs/android/ui/preference/fragments/z;
-
-    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/preference/fragments/z;-><init>(Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;)V
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->b(I)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    const v1, 0x7f0b000e
+    const v1, 0x7f080229
 
-    new-instance v2, Lcom/estrongs/android/ui/preference/fragments/y;
+    new-instance v2, Lcom/estrongs/android/ui/preference/fragments/ab;
 
-    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/preference/fragments/y;-><init>(Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;)V
+    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/preference/fragments/ab;-><init>(Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ct;->c()Lcom/estrongs/android/ui/dialog/cg;
+    const v1, 0x7f080225
+
+    new-instance v2, Lcom/estrongs/android/ui/preference/fragments/aa;
+
+    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/preference/fragments/aa;-><init>(Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;)V
+
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cv;->c()Lcom/estrongs/android/ui/dialog/ci;
 
     return-void
 .end method
@@ -217,6 +217,12 @@
 
     if-nez v0, :cond_3
 
+    sget-object v0, Lcom/estrongs/android/pop/view/a;->a:Ljava/lang/String;
+
+    const-string v1, "TianYu"
+
+    if-eq v0, v1, :cond_1
+
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;->b:Landroid/preference/EditTextPreference;
 
     iget-object v1, p0, Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;->e:Ljava/lang/String;
@@ -306,11 +312,11 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b01b3
+    const v1, 0x7f0804ab
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     goto :goto_0
 .end method
@@ -350,9 +356,9 @@
 
 # virtual methods
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 2
+    .locals 3
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/i;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/m;->onCreate(Landroid/os/Bundle;)V
 
     const v0, 0x7f05000b
 
@@ -370,11 +376,17 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;->a:Lcom/estrongs/android/pop/ad;
 
-    const-string v1, "Market"
+    sget-object v1, Lcom/estrongs/android/pop/view/a;->a:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/ad;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
+
+    sget-object v0, Lcom/estrongs/android/pop/view/a;->a:Ljava/lang/String;
+
+    const-string v2, "TianYu"
+
+    if-eq v0, v2, :cond_0
 
     const-string v0, "root_dir"
 
@@ -396,15 +408,16 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;->b:Landroid/preference/EditTextPreference;
 
-    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/v;
+    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/x;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/v;-><init>(Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/x;-><init>(Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/EditTextPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
+    :cond_0
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;->a:Lcom/estrongs/android/pop/ad;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->y()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->z()Ljava/lang/String;
 
     move-result-object v1
 
@@ -420,11 +433,11 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;->c:Landroid/preference/EditTextPreference;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     sget-boolean v0, Lcom/estrongs/android/pop/z;->e:Z
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;->c:Landroid/preference/EditTextPreference;
 
@@ -436,17 +449,17 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;->c:Landroid/preference/EditTextPreference;
 
-    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/w;
+    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/y;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/w;-><init>(Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/y;-><init>(Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/EditTextPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
-    :cond_0
+    :cond_1
     :goto_0
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;->a:Lcom/estrongs/android/pop/ad;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->z()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->A()Ljava/lang/String;
 
     move-result-object v1
 
@@ -462,7 +475,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;->d:Landroid/preference/EditTextPreference;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;->d:Landroid/preference/EditTextPreference;
 
@@ -474,21 +487,21 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;->d:Landroid/preference/EditTextPreference;
 
-    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/x;
+    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/z;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/x;-><init>(Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/z;-><init>(Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/EditTextPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
-    :cond_1
+    :cond_2
     return-void
 
-    :cond_2
+    :cond_3
     invoke-virtual {p0}, Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     iget-object v1, p0, Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;->c:Landroid/preference/EditTextPreference;
 

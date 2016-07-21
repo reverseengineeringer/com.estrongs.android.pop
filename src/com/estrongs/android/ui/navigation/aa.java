@@ -1,24 +1,18 @@
 package com.estrongs.android.ui.navigation;
 
-import android.content.Intent;
-import android.view.View;
-import com.estrongs.android.pop.FexApplication;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.theme.ThemeActivity;
 
 class aa
-  implements r
+  implements MenuItem.OnMenuItemClickListener
 {
-  aa(z paramz) {}
+  aa(r paramr, FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void a(View paramView)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    a.a.k();
-    if (!FexApplication.e())
-    {
-      paramView = new Intent(a.a, ThemeActivity.class);
-      a.a.startActivityForResult(paramView, 268439584);
-    }
+    b.a(new ab(this));
+    return true;
   }
 }
 

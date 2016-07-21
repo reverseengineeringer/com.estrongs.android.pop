@@ -1,31 +1,22 @@
 package com.estrongs.android.ui.dialog;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.util.o;
-import java.util.Iterator;
-import java.util.List;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.widget.f;
+import com.estrongs.fs.h;
 
 class de
-  implements View.OnClickListener
+  implements DialogInterface.OnClickListener
 {
-  de(dd paramdd, int paramInt) {}
+  de(dc paramdc, f paramf) {}
   
-  public void onClick(View paramView)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (dd.a(b) != null)
+    String str = a.e().getAbsolutePath();
+    if (b.a.a(str))
     {
-      paramView = dd.a.iterator();
-      while (paramView.hasNext())
-      {
-        o localo = (o)paramView.next();
-        if (((Integer)a).intValue() == a)
-        {
-          ad.a(b.getContext()).d(((Integer)b).intValue());
-          dd.a(b).a(((Integer)b).intValue());
-        }
-      }
+      paramDialogInterface.dismiss();
+      b.a.b();
     }
   }
 }

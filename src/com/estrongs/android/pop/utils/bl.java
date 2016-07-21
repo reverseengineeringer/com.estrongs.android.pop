@@ -1,15 +1,20 @@
 package com.estrongs.android.pop.utils;
 
-import com.estrongs.android.util.bc;
-import com.estrongs.fs.h;
-import com.estrongs.fs.i;
+import android.app.Activity;
+import com.estrongs.android.ui.pcs.q;
+import com.estrongs.android.ui.pcs.u;
+import java.util.List;
 
 final class bl
-  implements i
+  implements q
 {
-  public boolean a(h paramh)
+  bl(Activity paramActivity, u paramu, List paramList) {}
+  
+  public void a(boolean paramBoolean, String paramString1, String paramString2)
   {
-    return bc.b(paramh);
+    if (paramBoolean) {
+      ao.a(a, b, c);
+    }
   }
 }
 

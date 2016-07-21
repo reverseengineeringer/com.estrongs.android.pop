@@ -1,17 +1,17 @@
 package com.estrongs.android.ui.view;
 
 import android.widget.Button;
-import com.estrongs.android.util.e;
+import com.estrongs.android.util.d;
 
 class l
-  implements e
+  implements d
 {
   l(k paramk) {}
   
   public void a(String paramString1, String paramString2, int paramInt)
   {
     b.d(a.a, paramInt);
-    b.j(a.a).setText(com.estrongs.android.util.f.a[b.i(a.a)]);
+    b.j(a.a).setText(com.estrongs.android.util.e.a[b.i(a.a)]);
   }
 }
 

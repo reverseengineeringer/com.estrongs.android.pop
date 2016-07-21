@@ -1,17 +1,17 @@
 package com.estrongs.android.ui.navigation;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.widget.RealViewSwitcher;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.dialog.gj;
 
 class d
-  implements View.OnClickListener
+  implements gj
 {
-  d(a parama) {}
+  d(c paramc) {}
   
-  public void onClick(View paramView)
+  public void a(int paramInt, String paramString)
   {
-    a.c(a).b(1);
+    FileExplorerActivity.X().d(paramString);
+    a.a.finish();
   }
 }
 

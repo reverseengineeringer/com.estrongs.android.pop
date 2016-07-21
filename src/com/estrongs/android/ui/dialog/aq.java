@@ -1,17 +1,14 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 class aq
-  implements DialogInterface.OnClickListener
 {
-  aq(ap paramap) {}
-  
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
-  {
-    ap.a(a, paramDialogInterface);
-  }
+  ImageView a;
+  TextView b;
+  TextView c;
+  ImageView d;
 }
 
 /* Location:

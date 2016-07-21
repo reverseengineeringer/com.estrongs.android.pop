@@ -1,21 +1,55 @@
 package com.estrongs.android.pop.utils;
 
 import android.app.Activity;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.a.a.p;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.l;
+import com.estrongs.fs.FileExistException;
+import com.estrongs.fs.FileSystemException;
+import com.estrongs.fs.d;
 import com.estrongs.fs.h;
-import java.util.List;
 
 final class be
-  implements DialogInterface.OnClickListener
+  extends Thread
 {
-  be(Activity paramActivity, List paramList, h paramh, boolean paramBoolean1, boolean paramBoolean2, p paramp) {}
+  be(Activity paramActivity, h paramh, String paramString1, String paramString2, boolean[] paramArrayOfBoolean, boolean paramBoolean) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void run()
   {
-    paramDialogInterface.dismiss();
-    aj.a(a, b, c, d, e, f);
+    d locald = d.a(a);
+    boolean bool;
+    Activity localActivity;
+    StringBuilder localStringBuilder;
+    try
+    {
+      bool = locald.b(b, c);
+      e[0] = bool;
+      if ((bool) && (f)) {
+        a.a(a, a.getText(2131232276));
+      }
+      return;
+    }
+    catch (FileExistException localFileExistException)
+    {
+      for (;;)
+      {
+        a.a(a, a.getText(2131231900));
+        bool = false;
+      }
+    }
+    catch (FileSystemException localFileSystemException)
+    {
+      str = localFileSystemException.getMessage();
+      l.c("FileOperateUtils", "Failed to renameFile : " + ap.F(d), localFileSystemException);
+      localActivity = a;
+      localStringBuilder = new StringBuilder().append(a.getText(2131231901));
+      if (str != null) {}
+    }
+    for (String str = "";; str = ":" + str)
+    {
+      a.a(localActivity, str);
+      bool = false;
+      break;
+    }
   }
 }
 

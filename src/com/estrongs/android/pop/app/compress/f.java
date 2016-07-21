@@ -15,11 +15,11 @@ class f
   
   public void onClick(View paramView)
   {
-    paramView = new g(this, ad.a(a.d(a)).p());
-    paramView = new com.estrongs.android.widget.g((Activity)a.d(a), a.b(a).getText().toString(), paramView, true, false);
-    paramView.c(a.d(a).getString(2131427340), (DialogInterface.OnClickListener)null);
-    paramView.a(a.d(a).getString(2131427848));
-    paramView.b(a.d(a).getString(2131427339), new h(this, paramView));
+    paramView = new g(this, ad.a(a.d(a)).q());
+    paramView = new com.estrongs.android.widget.f((Activity)a.d(a), a.b(a).getText().toString(), paramView, true, false);
+    paramView.c(a.d(a).getString(2131231265), (DialogInterface.OnClickListener)null);
+    paramView.a(a.d(a).getString(2131232548));
+    paramView.b(a.d(a).getString(2131231270), new h(this, paramView));
     paramView.j();
   }
 }

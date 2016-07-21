@@ -1,29 +1,17 @@
 package com.estrongs.android.pop.view;
 
-import android.view.KeyEvent;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.TextView.OnEditorActionListener;
-import com.estrongs.android.view.aw;
+import com.estrongs.fs.h;
+import com.estrongs.fs.i;
 
 class bc
-  implements TextView.OnEditorActionListener
+  implements i
 {
   bc(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public boolean onEditorAction(TextView paramTextView, int paramInt, KeyEvent paramKeyEvent)
+  public boolean a(h paramh)
   {
-    if (paramInt == 3)
-    {
-      if (FileExplorerActivity.B(a) == null) {
-        return false;
-      }
-      if (a.y() == null) {
-        return false;
-      }
-      FileExplorerActivity.a(a, "externalstorage://", a.y().ab());
-      ((InputMethodManager)a.getSystemService("input_method")).hideSoftInputFromWindow(FileExplorerActivity.B(a).getWindowToken(), 0);
+    if (FileExplorerActivity.e(a)) {}
+    while ((paramh.getName() == null) || (!paramh.getName().startsWith("."))) {
       return true;
     }
     return false;

@@ -1,14 +1,20 @@
 package android.support.v4.widget;
 
-import android.support.v4.view.at;
+import android.support.v4.view.a;
+import android.support.v4.view.a.g;
 import android.view.View;
 
-class x
-  implements w
+final class x
+  extends a
 {
-  public void a(SlidingPaneLayout paramSlidingPaneLayout, View paramView)
+  x(DrawerLayout paramDrawerLayout) {}
+  
+  public void onInitializeAccessibilityNodeInfo(View paramView, g paramg)
   {
-    at.a(paramSlidingPaneLayout, paramView.getLeft(), paramView.getTop(), paramView.getRight(), paramView.getBottom());
+    super.onInitializeAccessibilityNodeInfo(paramView, paramg);
+    if (!DrawerLayout.l(paramView)) {
+      paramg.c(null);
+    }
   }
 }
 

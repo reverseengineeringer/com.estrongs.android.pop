@@ -1,116 +1,48 @@
-.class Lcom/baidu/mobstat/v;
-.super Landroid/os/Handler;
+.class public Lcom/baidu/mobstat/v;
+.super Ljava/lang/Object;
 
 
 # instance fields
-.field final synthetic a:Lcom/baidu/mobstat/Download;
+.field private a:J
+
+.field private b:Ljava/lang/String;
+
+.field private c:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/baidu/mobstat/Download;)V
-    .locals 0
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;)V
+    .locals 3
 
-    iput-object p1, p0, Lcom/baidu/mobstat/v;->a:Lcom/baidu/mobstat/Download;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    const-wide/16 v0, -0x1
+
+    iput-wide v0, p0, Lcom/baidu/mobstat/v;->a:J
+
+    iput-wide p1, p0, Lcom/baidu/mobstat/v;->a:J
+
+    iput-object p3, p0, Lcom/baidu/mobstat/v;->b:Ljava/lang/String;
+
+    iput-object p4, p0, Lcom/baidu/mobstat/v;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 3
+.method public a()J
+    .locals 2
 
-    const/4 v2, 0x0
+    iget-wide v0, p0, Lcom/baidu/mobstat/v;->a:J
 
-    sget v0, Lcom/baidu/mobstat/Download;->a:I
+    return-wide v0
+.end method
 
-    iget v1, p1, Landroid/os/Message;->what:I
+.method public b()Ljava/lang/String;
+    .locals 1
 
-    if-ne v0, v1, :cond_1
+    iget-object v0, p0, Lcom/baidu/mobstat/v;->c:Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/baidu/mobstat/v;->a:Lcom/baidu/mobstat/Download;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcom/baidu/mobstat/Download;->a(Lcom/baidu/mobstat/Download;Z)Z
-
-    iget-object v0, p0, Lcom/baidu/mobstat/v;->a:Lcom/baidu/mobstat/Download;
-
-    invoke-static {v0, v2}, Lcom/baidu/mobstat/Download;->b(Lcom/baidu/mobstat/Download;Z)Z
-
-    invoke-static {}, Lcom/baidu/mobstat/Download;->b()Landroid/os/Handler;
-
-    move-result-object v0
-
-    sget v1, Lcom/baidu/mobstat/Download;->a:I
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
-
-    const-string v0, "UpdateVersionService"
-
-    const-string v1, "down file succ"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :cond_1
-    sget v0, Lcom/baidu/mobstat/Download;->b:I
-
-    iget v1, p1, Landroid/os/Message;->what:I
-
-    if-ne v0, v1, :cond_2
-
-    const-string v0, "UpdateVersionService"
-
-    const-string v1, "down file fail"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object v0, p0, Lcom/baidu/mobstat/v;->a:Lcom/baidu/mobstat/Download;
-
-    invoke-static {v0, v2}, Lcom/baidu/mobstat/Download;->a(Lcom/baidu/mobstat/Download;Z)Z
-
-    iget-object v0, p0, Lcom/baidu/mobstat/v;->a:Lcom/baidu/mobstat/Download;
-
-    invoke-static {v0, v2}, Lcom/baidu/mobstat/Download;->b(Lcom/baidu/mobstat/Download;Z)Z
-
-    invoke-static {}, Lcom/baidu/mobstat/Download;->b()Landroid/os/Handler;
-
-    move-result-object v0
-
-    sget v1, Lcom/baidu/mobstat/Download;->b:I
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
-
-    goto :goto_0
-
-    :cond_2
-    sget v0, Lcom/baidu/mobstat/Download;->c:I
-
-    iget v1, p1, Landroid/os/Message;->what:I
-
-    if-ne v0, v1, :cond_0
-
-    iget-object v0, p0, Lcom/baidu/mobstat/v;->a:Lcom/baidu/mobstat/Download;
-
-    invoke-static {v0, v2}, Lcom/baidu/mobstat/Download;->a(Lcom/baidu/mobstat/Download;Z)Z
-
-    iget-object v0, p0, Lcom/baidu/mobstat/v;->a:Lcom/baidu/mobstat/Download;
-
-    invoke-static {v0, v2}, Lcom/baidu/mobstat/Download;->b(Lcom/baidu/mobstat/Download;Z)Z
-
-    invoke-static {}, Lcom/baidu/mobstat/Download;->b()Landroid/os/Handler;
-
-    move-result-object v0
-
-    sget v1, Lcom/baidu/mobstat/Download;->c:I
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
-
-    goto :goto_0
+    return-object v0
 .end method

@@ -45,23 +45,23 @@
 
     iget-object v1, p0, Lcom/estrongs/android/ui/view/c;->a:Lcom/estrongs/android/ui/view/b;
 
-    const v2, 0x7f0b002a
+    const/high16 v2, 0x7f080000
 
     invoke-static {v1, v2}, Lcom/estrongs/android/ui/view/b;->a(Lcom/estrongs/android/ui/view/b;I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/g;->a(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/f;->a(Ljava/lang/CharSequence;)V
 
     new-instance v1, Lcom/estrongs/android/ui/view/e;
 
-    invoke-direct {v1, p0, v0}, Lcom/estrongs/android/ui/view/e;-><init>(Lcom/estrongs/android/ui/view/c;Lcom/estrongs/android/widget/g;)V
+    invoke-direct {v1, p0, v0}, Lcom/estrongs/android/ui/view/e;-><init>(Lcom/estrongs/android/ui/view/c;Lcom/estrongs/android/widget/f;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/g;->a(Lcom/estrongs/android/view/cc;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/f;->a(Lcom/estrongs/android/view/dx;)V
 
     iget-object v1, p0, Lcom/estrongs/android/ui/view/c;->a:Lcom/estrongs/android/ui/view/b;
 
-    const v2, 0x7f0b0030
+    const v2, 0x7f080071
 
     invoke-static {v1, v2}, Lcom/estrongs/android/ui/view/b;->b(Lcom/estrongs/android/ui/view/b;I)Ljava/lang/String;
 
@@ -69,13 +69,13 @@
 
     new-instance v2, Lcom/estrongs/android/ui/view/f;
 
-    invoke-direct {v2, p0, v0}, Lcom/estrongs/android/ui/view/f;-><init>(Lcom/estrongs/android/ui/view/c;Lcom/estrongs/android/widget/g;)V
+    invoke-direct {v2, p0, v0}, Lcom/estrongs/android/ui/view/f;-><init>(Lcom/estrongs/android/ui/view/c;Lcom/estrongs/android/widget/f;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/widget/g;->b(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/widget/f;->b(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     iget-object v1, p0, Lcom/estrongs/android/ui/view/c;->a:Lcom/estrongs/android/ui/view/b;
 
-    const v2, 0x7f0b000c
+    const v2, 0x7f080221
 
     invoke-static {v1, v2}, Lcom/estrongs/android/ui/view/b;->c(Lcom/estrongs/android/ui/view/b;I)Ljava/lang/String;
 
@@ -83,11 +83,11 @@
 
     new-instance v2, Lcom/estrongs/android/ui/view/g;
 
-    invoke-direct {v2, p0, v0}, Lcom/estrongs/android/ui/view/g;-><init>(Lcom/estrongs/android/ui/view/c;Lcom/estrongs/android/widget/g;)V
+    invoke-direct {v2, p0, v0}, Lcom/estrongs/android/ui/view/g;-><init>(Lcom/estrongs/android/ui/view/c;Lcom/estrongs/android/widget/f;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/widget/g;->c(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/widget/f;->c(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/g;->j()V
+    invoke-virtual {v0}, Lcom/estrongs/android/widget/f;->j()V
 
     return-void
 .end method

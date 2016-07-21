@@ -1,77 +1,72 @@
 package com.estrongs.fs.impl.p;
 
-import java.io.InputStream;
-import jcifs.smb.SmbRandomAccessFile;
+import android.content.ContentResolver;
+import android.content.ContentValues;
+import android.database.DatabaseUtils;
+import android.provider.MediaStore.Images.Media;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.h;
+import java.io.File;
 
 public class c
-  extends InputStream
+  extends com.estrongs.fs.impl.media.c
 {
-  private SmbRandomAccessFile a = null;
-  private long b = 0L;
-  private long c = 0L;
-  private long d = 0L;
+  private static c g;
   
-  public c(SmbRandomAccessFile paramSmbRandomAccessFile, long paramLong)
+  private c()
   {
-    a = paramSmbRandomAccessFile;
-    c = paramLong;
+    c = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
+    d = "_data";
+    e = "bucket_display_name";
   }
   
-  public void close()
+  public static c b()
   {
-    a.close();
-    super.close();
-  }
-  
-  public int read()
-  {
-    int i;
-    if (c - d == 0L) {
-      i = -1;
+    if (g == null) {
+      g = new c();
     }
-    int j;
-    do
-    {
-      return i;
-      j = a.read();
-      i = j;
-    } while (j < 0);
-    d += 1L;
-    return j;
+    return g;
   }
   
-  public int read(byte[] paramArrayOfByte)
+  public static boolean e(String paramString)
   {
-    return read(paramArrayOfByte, 0, paramArrayOfByte.length);
-  }
-  
-  public int read(byte[] paramArrayOfByte, int paramInt1, int paramInt2)
-  {
-    if (c == 0L)
+    if (paramString.equals("pic://")) {}
+    for (paramString = ap.g();; paramString = paramString.substring("pic://".length()))
     {
-      paramInt1 = a.read(paramArrayOfByte, paramInt1, paramInt2);
-      paramInt2 = paramInt1;
-      if (paramInt1 >= 0)
-      {
-        d += paramInt1;
-        paramInt2 = paramInt1;
-      }
-      return paramInt2;
-    }
-    long l = c - d;
-    if (l == 0L) {
-      return -1;
-    }
-    if (paramInt2 < l) {}
-    for (paramInt1 = a.read(paramArrayOfByte, paramInt1, paramInt2);; paramInt1 = a.read(paramArrayOfByte, paramInt1, (int)l))
-    {
-      paramInt2 = paramInt1;
-      if (paramInt1 < 0) {
+      return new File(paramString).exists();
+      if (!paramString.startsWith("pic://")) {
         break;
       }
-      d += paramInt1;
-      return paramInt1;
     }
+    return false;
+  }
+  
+  public int a(String paramString1, String paramString2)
+  {
+    try
+    {
+      ContentValues localContentValues = new ContentValues();
+      localContentValues.put(d, paramString2);
+      paramString1 = d + "=" + DatabaseUtils.sqlEscapeString(paramString1);
+      int i = FexApplication.a().getContentResolver().update(c, localContentValues, paramString1, null);
+      return i;
+    }
+    catch (Exception paramString1)
+    {
+      paramString1.printStackTrace();
+    }
+    return 0;
+  }
+  
+  protected h a(File paramFile)
+  {
+    return new a(paramFile);
+  }
+  
+  protected String a()
+  {
+    return null;
   }
 }
 

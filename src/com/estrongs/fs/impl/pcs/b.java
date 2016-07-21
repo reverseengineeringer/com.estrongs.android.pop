@@ -1,18 +1,18 @@
 package com.estrongs.fs.impl.pcs;
 
 import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.util.am;
-import com.estrongs.fs.m;
-import com.estrongs.fs.n;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.w;
+import com.estrongs.fs.x;
 
 public class b
-  extends n
+  extends x
 {
   private static b a;
   
   private b()
   {
-    super(null, m.R, FexApplication.a().getString(2131428653));
+    super(null, w.Q, FexApplication.a().getString(2131231943));
     b();
     lastModified = System.currentTimeMillis();
   }
@@ -28,7 +28,7 @@ public class b
   
   public String b()
   {
-    path = (am.k() + "/files/");
+    path = (ap.k() + "/files/");
     absolutePath = path;
     return path;
   }

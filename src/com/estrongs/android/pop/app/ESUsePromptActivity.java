@@ -7,24 +7,22 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.pop.ad;
+import com.estrongs.android.j.c;
 import com.estrongs.android.pop.b;
-import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.pop.esclasses.g;
+import com.estrongs.android.pop.esclasses.ESResourceActivity;
+import com.estrongs.android.pop.esclasses.k;
 import com.estrongs.android.pop.z;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.android.ui.dialog.ct;
-import com.estrongs.android.util.a;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.ui.dialog.cv;
 import com.estrongs.fs.util.j;
 
 public class ESUsePromptActivity
-  extends ESActivity
+  extends ESResourceActivity
 {
-  a a = null;
-  cg b = null;
+  c a = null;
+  ci b = null;
   
-  private cg a()
+  private ci a()
   {
     for (;;)
     {
@@ -35,14 +33,14 @@ public class ESUsePromptActivity
       long l2;
       try
       {
-        Object localObject1 = g.a(this).inflate(2130903120, null);
-        Object localObject3 = (ImageView)((View)localObject1).findViewById(2131361853);
-        Object localObject2 = (TextView)((View)localObject1).findViewById(2131361808);
-        localProgressBar = (ProgressBar)((View)localObject1).findViewById(2131361935);
-        localTextView1 = (TextView)((View)localObject1).findViewById(2131361981);
-        localTextView2 = (TextView)((View)localObject1).findViewById(2131361982);
-        ((ImageView)localObject3).setImageResource(2130837869);
-        ((View)localObject1).findViewById(2131361980).setClickable(false);
+        Object localObject1 = k.a(this).inflate(2130903217, null);
+        Object localObject3 = (ImageView)((View)localObject1).findViewById(2131624054);
+        Object localObject2 = (TextView)((View)localObject1).findViewById(2131624135);
+        localProgressBar = (ProgressBar)((View)localObject1).findViewById(2131624429);
+        localTextView1 = (TextView)((View)localObject1).findViewById(2131624494);
+        localTextView2 = (TextView)((View)localObject1).findViewById(2131624496);
+        ((ImageView)localObject3).setImageResource(2130838169);
+        ((View)localObject1).findViewById(2131623976).setClickable(false);
         localObject3 = b.b();
         ((TextView)localObject2).setText(z.b((String)localObject3));
         localObject2 = j.k((String)localObject3);
@@ -57,11 +55,11 @@ public class ESUsePromptActivity
           localProgressBar.setMax(100);
           localProgressBar.setProgress(0);
           label185:
-          localObject1 = new ct(this).a(2131427488).a((View)localObject1).b(false);
-          ((ct)localObject1).b(2131427339, new bu(this));
-          ((ct)localObject1).c(2131427340, new bv(this));
-          ((ct)localObject1).a(new bw(this));
-          return ((ct)localObject1).b();
+          localObject1 = new cv(this).a(2131230724).a((View)localObject1).b(false);
+          ((cv)localObject1).b(2131231270, new by(this));
+          ((cv)localObject1).c(2131231265, new bz(this));
+          ((cv)localObject1).a(new ca(this));
+          return ((cv)localObject1).b();
         }
         else if (l2 > 2147483647L)
         {
@@ -104,9 +102,7 @@ public class ESUsePromptActivity
   protected void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    requestWindowFeature(1);
-    ad.a(FexApplication.a()).j(System.currentTimeMillis());
-    a = a.a(this, false, "Shadow");
+    a = c.a(this);
     b = a();
     if (b == null) {
       finish();
@@ -125,17 +121,11 @@ public class ESUsePromptActivity
   public void onPause()
   {
     super.onPause();
-    if (a != null) {
-      a.c();
-    }
   }
   
   public void onResume()
   {
     super.onResume();
-    if (a != null) {
-      a.b();
-    }
   }
 }
 

@@ -39,7 +39,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->b(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/bk;->b(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -69,7 +69,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/ui/b/p;->a:Landroid/app/Activity;
 
-    const v2, 0x7f0b0223
+    const v2, 0x7f080414
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -77,7 +77,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
     :cond_0
     :goto_0
@@ -130,7 +130,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v0, v2, v3}, Lcom/estrongs/android/pop/app/DownloaderActivity;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/estrongs/android/ui/dialog/cg;
+    invoke-static {v1, v0, v2, v3}, Lcom/estrongs/android/pop/app/DownloaderActivity;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/estrongs/android/ui/dialog/ci;
 
     goto :goto_0
 .end method

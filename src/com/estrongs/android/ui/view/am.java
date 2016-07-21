@@ -1,27 +1,16 @@
 package com.estrongs.android.ui.view;
 
 import android.media.MediaPlayer;
-import android.media.MediaPlayer.OnSeekCompleteListener;
-import android.widget.MediaController;
 
 class am
-  implements MediaPlayer.OnSeekCompleteListener
+  implements Runnable
 {
-  am(ESVideoView paramESVideoView) {}
+  am(ESVideoView paramESVideoView, MediaPlayer paramMediaPlayer) {}
   
-  public void onSeekComplete(MediaPlayer paramMediaPlayer)
+  public void run()
   {
-    ESVideoView.d(a, false);
-    if (ESVideoView.k(a) != null) {
-      ESVideoView.k(a).b();
-    }
-    if ((ESVideoView.i(a) == 3) && (!a.isPlaying()))
-    {
-      a.start();
-      if (ESVideoView.e(a) != null) {
-        ESVideoView.e(a).show();
-      }
-    }
+    a.reset();
+    a.release();
   }
 }
 

@@ -1,195 +1,134 @@
 .class Lcom/estrongs/android/ui/pcs/k;
-.super Lcom/baidu/sapi2/shell/listener/AuthorizationListener;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/pcs/j;
+.field final synthetic a:Lcom/estrongs/android/ui/pcs/f;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/pcs/j;)V
+.method constructor <init>(Lcom/estrongs/android/ui/pcs/f;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/pcs/k;->a:Lcom/estrongs/android/ui/pcs/j;
+    iput-object p1, p0, Lcom/estrongs/android/ui/pcs/k;->a:Lcom/estrongs/android/ui/pcs/f;
 
-    invoke-direct {p0}, Lcom/baidu/sapi2/shell/listener/AuthorizationListener;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFailed(ILjava/lang/String;)V
-    .locals 0
+.method public onClick(Landroid/view/View;)V
+    .locals 4
 
-    return-void
-.end method
+    const/4 v3, 0x1
 
-.method public onSuccess()V
-    .locals 5
+    iget-object v0, p0, Lcom/estrongs/android/ui/pcs/k;->a:Lcom/estrongs/android/ui/pcs/f;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/pcs/k;->a:Lcom/estrongs/android/ui/pcs/j;
+    invoke-static {v0}, Lcom/estrongs/android/ui/pcs/f;->b(Lcom/estrongs/android/ui/pcs/f;)Lcom/estrongs/android/ui/pcs/y;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/pcs/j;->a(Lcom/estrongs/android/ui/pcs/j;)Z
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/y;->dismiss()V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/pcs/k;->a:Lcom/estrongs/android/ui/pcs/f;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/f;->dismiss()V
+
+    invoke-static {}, Lcom/estrongs/android/ui/pcs/u;->a()Lcom/estrongs/android/ui/pcs/u;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/u;->b()Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_1
 
+    iget-object v0, p0, Lcom/estrongs/android/ui/pcs/k;->a:Lcom/estrongs/android/ui/pcs/f;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/pcs/f;->c(Lcom/estrongs/android/ui/pcs/f;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/pcs/k;->a:Lcom/estrongs/android/ui/pcs/f;
+
+    iget-object v0, v0, Lcom/estrongs/android/ui/pcs/f;->b:Lcom/estrongs/android/ui/pcs/q;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/pcs/k;->a:Lcom/estrongs/android/ui/pcs/f;
+
+    iget-object v0, v0, Lcom/estrongs/android/ui/pcs/f;->b:Lcom/estrongs/android/ui/pcs/q;
+
+    const-string v1, "pcs_temp_mode"
+
+    invoke-static {}, Lcom/estrongs/android/ui/pcs/u;->a()Lcom/estrongs/android/ui/pcs/u;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/estrongs/android/ui/pcs/u;->e()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, v3, v1, v2}, Lcom/estrongs/android/ui/pcs/q;->a(ZLjava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
     :goto_0
     return-void
 
-    :cond_0
-    invoke-static {}, Lcom/baidu/sapi2/SapiAccountManager;->getInstance()Lcom/baidu/sapi2/SapiAccountManager;
+    :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/ui/pcs/k;->a:Lcom/estrongs/android/ui/pcs/f;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/pcs/f;->b(Lcom/estrongs/android/ui/pcs/f;)Lcom/estrongs/android/ui/pcs/y;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/baidu/sapi2/SapiAccountManager;->getSession()Lcom/baidu/sapi2/SapiAccount;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/y;->d()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    new-instance v0, Lcom/estrongs/android/ui/pcs/c;
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/pcs/k;->a:Lcom/estrongs/android/ui/pcs/f;
+
+    invoke-static {v1}, Lcom/estrongs/android/ui/pcs/f;->d(Lcom/estrongs/android/ui/pcs/f;)Landroid/content/Context;
 
     move-result-object v1
 
-    iget-object v0, v1, Lcom/baidu/sapi2/SapiAccount;->username:Ljava/lang/String;
+    const/4 v2, 0x0
 
-    if-eqz v0, :cond_1
+    invoke-direct {v0, v1, v2, v3}, Lcom/estrongs/android/ui/pcs/c;-><init>(Landroid/content/Context;ZZ)V
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    :goto_1
+    iget-object v1, p0, Lcom/estrongs/android/ui/pcs/k;->a:Lcom/estrongs/android/ui/pcs/f;
 
-    move-result v2
+    iget-object v1, v1, Lcom/estrongs/android/ui/pcs/f;->b:Lcom/estrongs/android/ui/pcs/q;
 
-    if-nez v2, :cond_2
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/pcs/c;->a(Lcom/estrongs/android/ui/pcs/q;)V
 
-    :cond_1
-    iget-object v0, v1, Lcom/baidu/sapi2/SapiAccount;->email:Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/c;->a()V
+
+    goto :goto_0
 
     :cond_2
-    if-eqz v0, :cond_3
+    new-instance v0, Lcom/estrongs/android/ui/pcs/c;
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    iget-object v1, p0, Lcom/estrongs/android/ui/pcs/k;->a:Lcom/estrongs/android/ui/pcs/f;
 
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    :cond_3
-    iget-object v0, v1, Lcom/baidu/sapi2/SapiAccount;->uid:Ljava/lang/String;
-
-    :cond_4
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v1, v1, Lcom/baidu/sapi2/SapiAccount;->bduss:Ljava/lang/String;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Lcom/estrongs/android/ui/pcs/f;->d(Lcom/estrongs/android/ui/pcs/f;)Landroid/content/Context;
 
     move-result-object v1
 
-    const-string v2, "\n"
+    invoke-direct {v0, v1}, Lcom/estrongs/android/ui/pcs/c;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "login:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->c(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/pcs/k;->a:Lcom/estrongs/android/ui/pcs/j;
-
-    invoke-static {v1}, Lcom/estrongs/android/ui/pcs/j;->b(Lcom/estrongs/android/ui/pcs/j;)Landroid/content/Context;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/estrongs/android/ui/pcs/k;->a:Lcom/estrongs/android/ui/pcs/j;
-
-    invoke-static {v2}, Lcom/estrongs/android/ui/pcs/j;->c(Lcom/estrongs/android/ui/pcs/j;)Z
-
-    move-result v2
-
-    iget-object v3, p0, Lcom/estrongs/android/ui/pcs/k;->a:Lcom/estrongs/android/ui/pcs/j;
-
-    invoke-static {v3}, Lcom/estrongs/android/ui/pcs/j;->d(Lcom/estrongs/android/ui/pcs/j;)Ljava/lang/String;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/estrongs/android/ui/pcs/k;->a:Lcom/estrongs/android/ui/pcs/j;
-
-    invoke-static {v4}, Lcom/estrongs/android/ui/pcs/j;->e(Lcom/estrongs/android/ui/pcs/j;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v1, v0, v2, v3, v4}, Lcom/estrongs/android/ui/pcs/aj;->a(Landroid/content/Context;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/pcs/k;->a:Lcom/estrongs/android/ui/pcs/j;
-
-    invoke-static {v1}, Lcom/estrongs/android/ui/pcs/j;->c(Lcom/estrongs/android/ui/pcs/j;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/pcs/k;->a:Lcom/estrongs/android/ui/pcs/j;
-
-    invoke-static {v1}, Lcom/estrongs/android/ui/pcs/j;->f(Lcom/estrongs/android/ui/pcs/j;)Lcom/estrongs/android/ui/pcs/r;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_5
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/pcs/k;->a:Lcom/estrongs/android/ui/pcs/j;
-
-    invoke-static {v1}, Lcom/estrongs/android/ui/pcs/j;->f(Lcom/estrongs/android/ui/pcs/j;)Lcom/estrongs/android/ui/pcs/r;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/pcs/r;->a(I)V
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/pcs/k;->a:Lcom/estrongs/android/ui/pcs/j;
-
-    invoke-static {v1}, Lcom/estrongs/android/ui/pcs/j;->f(Lcom/estrongs/android/ui/pcs/j;)Lcom/estrongs/android/ui/pcs/r;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/pcs/r;->a(Ljava/lang/String;)V
-
-    :cond_5
-    iget-object v1, p0, Lcom/estrongs/android/ui/pcs/k;->a:Lcom/estrongs/android/ui/pcs/j;
-
-    invoke-static {v1, v0}, Lcom/estrongs/android/ui/pcs/j;->a(Lcom/estrongs/android/ui/pcs/j;Ljava/lang/String;)Ljava/lang/String;
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/pcs/k;->a:Lcom/estrongs/android/ui/pcs/j;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/j;->dismiss()V
-
-    goto/16 :goto_0
+    goto :goto_1
 .end method

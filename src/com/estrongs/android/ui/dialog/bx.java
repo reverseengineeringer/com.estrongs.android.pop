@@ -1,17 +1,17 @@
 package com.estrongs.android.ui.dialog;
 
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.view.View.OnClickListener;
 
 class bx
+  implements View.OnClickListener
 {
-  TextView a;
-  TextView b;
-  ImageView c;
-  View d;
-  int e;
-  int f;
+  bx(bv parambv) {}
+  
+  public void onClick(View paramView)
+  {
+    paramView.postDelayed(new by(this, paramView), 100L);
+  }
 }
 
 /* Location:

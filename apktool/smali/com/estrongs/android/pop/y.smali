@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/a/p;
+.implements Lcom/estrongs/android/d/p;
 
 
 # instance fields
@@ -37,7 +37,7 @@
 
     const/4 v2, 0x1
 
-    sget v0, Lcom/estrongs/android/a/i;->a:I
+    sget v0, Lcom/estrongs/android/d/i;->b:I
 
     if-ne p1, v0, :cond_0
 
@@ -65,7 +65,7 @@
     return-void
 
     :cond_0
-    sget v0, Lcom/estrongs/android/a/i;->d:I
+    sget v0, Lcom/estrongs/android/d/i;->e:I
 
     if-ne p1, v0, :cond_1
 
@@ -78,7 +78,7 @@
     goto :goto_0
 
     :cond_1
-    sget v0, Lcom/estrongs/android/a/i;->b:I
+    sget v0, Lcom/estrongs/android/d/i;->c:I
 
     if-ne p1, v0, :cond_2
 
@@ -91,6 +91,19 @@
     goto :goto_0
 
     :cond_2
+    sget v0, Lcom/estrongs/android/d/i;->a:I
+
+    if-ne p1, v0, :cond_3
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/y;->a:Lcom/estrongs/a/a/h;
+
+    const/4 v1, 0x3
+
+    iput v1, v0, Lcom/estrongs/a/a/h;->g:I
+
+    goto :goto_0
+
+    :cond_3
     iget-object v0, p0, Lcom/estrongs/android/pop/y;->a:Lcom/estrongs/a/a/h;
 
     iput v4, v0, Lcom/estrongs/a/a/h;->g:I

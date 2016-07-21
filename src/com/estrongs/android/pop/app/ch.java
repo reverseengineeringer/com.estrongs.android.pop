@@ -1,28 +1,16 @@
 package com.estrongs.android.pop.app;
 
-import android.content.Intent;
-import com.estrongs.fs.b.r;
-import com.estrongs.fs.d;
-import com.estrongs.fs.h;
-import com.estrongs.fs.impl.local.f;
-import java.io.File;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnDismissListener;
 
 class ch
-  implements Runnable
+  implements DialogInterface.OnDismissListener
 {
-  ch(FileChooserActivity paramFileChooserActivity, String paramString, h paramh, Intent paramIntent) {}
+  ch(FileChooserActivity paramFileChooserActivity) {}
   
-  public void run()
+  public void onDismiss(DialogInterface paramDialogInterface)
   {
-    String str = com.estrongs.android.pop.a.d;
-    Object localObject = new File(str);
-    if (!((File)localObject).exists()) {
-      ((File)localObject).mkdirs();
-    }
-    localObject = new r(d.a(d), d.a(d).j(a), new f(new File(str)));
-    ((com.estrongs.a.a)localObject).execute(false);
-    str = str + "/" + b.getName();
-    d.runOnUiThread(new ci(this, (com.estrongs.a.a)localObject, str));
+    a.finish();
   }
 }
 

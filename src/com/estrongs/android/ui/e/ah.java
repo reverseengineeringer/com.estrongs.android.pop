@@ -1,29 +1,16 @@
 package com.estrongs.android.ui.e;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.dialog.gz;
-import com.estrongs.android.ui.view.by;
+import com.estrongs.android.pop.ad;
+import com.estrongs.android.ui.dialog.do;
 
 class ah
-  implements MenuItem.OnMenuItemClickListener
+  implements do
 {
-  ah(w paramw) {}
+  ah(ag paramag) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void a(String paramString, boolean paramBoolean)
   {
-    if (w.b(a).a()) {}
-    do
-    {
-      return true;
-      a.k.k();
-    } while ((w.j(a) != null) && (w.j(a).isShowing()));
-    w.a(a, new gz(a.k));
-    w.j(a).a(new ai(this));
-    w.j(a).a(new aj(this));
-    w.j(a).show();
-    return true;
+    ad.a(m.a(a.a)).F(paramString);
   }
 }
 

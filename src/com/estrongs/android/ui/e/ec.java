@@ -2,28 +2,29 @@ package com.estrongs.android.ui.e;
 
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.app.LocalFileSharingActivity;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.view.ag;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.fs.h;
 import java.util.List;
 
 class ec
   implements MenuItem.OnMenuItemClickListener
 {
-  ec(cp paramcp) {}
+  ec(cr paramcr) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = cp.b(a);
+    paramMenuItem = cr.a(a);
     if (paramMenuItem.size() == 0) {
-      ag.a(cp.a(a).getBaseContext(), 2131427774, 0);
+      ak.a(cr.b(a).getBaseContext(), 2131231551, 0);
     }
-    for (;;)
-    {
-      cp.a(a).s();
+    while (paramMenuItem.size() < 1) {
       return true;
-      LocalFileSharingActivity.a(cp.a(a), paramMenuItem, true);
     }
+    paramMenuItem = (h)paramMenuItem.get(0);
+    ib.a(cr.b(a), paramMenuItem.getAbsolutePath(), paramMenuItem.getName(), paramMenuItem);
+    cr.b(a).B();
+    return true;
   }
 }
 

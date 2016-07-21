@@ -1,19 +1,15 @@
 package android.support.v4.app;
 
-import android.os.Parcel;
-import android.os.Parcelable.Creator;
+import android.view.View;
 
-final class r
-  implements Parcelable.Creator<FragmentState>
+class r
+  implements bg
 {
-  public FragmentState a(Parcel paramParcel)
-  {
-    return new FragmentState(paramParcel);
-  }
+  r(q paramq, Fragment paramFragment) {}
   
-  public FragmentState[] a(int paramInt)
+  public View a()
   {
-    return new FragmentState[paramInt];
+    return a.getView();
   }
 }
 

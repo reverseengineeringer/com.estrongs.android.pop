@@ -1,24 +1,41 @@
-.class public Lcom/estrongs/android/pop/app/ad;
+.class Lcom/estrongs/android/pop/app/ad;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field public a:Ljava/lang/String;
-
-.field public b:Ljava/lang/String;
-
-.field public c:Ljava/lang/String;
-
-.field public d:Ljava/lang/String;
-
-.field public e:Landroid/graphics/Bitmap;
+.field final synthetic a:Lcom/estrongs/android/pop/app/x;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcom/estrongs/android/pop/app/x;)V
     .locals 0
 
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/ad;->a:Lcom/estrongs/android/pop/app/x;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ad;->a:Lcom/estrongs/android/pop/app/x;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/x;->c(Lcom/estrongs/android/pop/app/x;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ad;->a:Lcom/estrongs/android/pop/app/x;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/x;->a(Lcom/estrongs/android/pop/app/x;)Lcom/estrongs/android/pop/app/ag;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ag;->q()V
 
     return-void
 .end method

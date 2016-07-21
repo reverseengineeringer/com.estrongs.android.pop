@@ -1,15 +1,20 @@
 package com.estrongs.android.ui.e;
 
+import com.estrongs.android.pop.z;
 import com.estrongs.android.view.a.b;
 
 class dm
   implements b
 {
-  dm(cp paramcp) {}
+  dm(cr paramcr) {}
   
-  public boolean a(co paramco)
+  public boolean a(cp paramcp)
   {
-    return (e) && (!W);
+    if (z.u) {}
+    while ((!e) && (!L) && (!K) && (!l)) {
+      return false;
+    }
+    return true;
   }
 }
 

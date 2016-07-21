@@ -91,7 +91,7 @@
     const-string v1, "UsbStorage"
 
     :try_start_0
-    invoke-virtual {p0}, Lcom/estrongs/fs/impl/usb/fs/ntfs/y;->d()Lcom/estrongs/fs/impl/usb/fs/ntfs/i;
+    invoke-virtual {p0}, Lcom/estrongs/fs/impl/usb/fs/ntfs/y;->e()Lcom/estrongs/fs/impl/usb/fs/ntfs/i;
 
     move-result-object v0
 
@@ -287,7 +287,7 @@
 
     mul-long/2addr v0, v2
 
-    invoke-virtual {p0}, Lcom/estrongs/fs/impl/usb/fs/ntfs/y;->e()J
+    invoke-virtual {p0}, Lcom/estrongs/fs/impl/usb/fs/ntfs/y;->d()J
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -308,15 +308,7 @@
     goto :goto_2
 .end method
 
-.method public d()Lcom/estrongs/fs/impl/usb/fs/ntfs/i;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/fs/impl/usb/fs/ntfs/y;->c:Lcom/estrongs/fs/impl/usb/fs/ntfs/i;
-
-    return-object v0
-.end method
-
-.method public e()J
+.method public d()J
     .locals 4
 
     :try_start_0
@@ -367,4 +359,12 @@
     const-wide/16 v0, -0x1
 
     goto :goto_0
+.end method
+
+.method public e()Lcom/estrongs/fs/impl/usb/fs/ntfs/i;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/fs/impl/usb/fs/ntfs/y;->c:Lcom/estrongs/fs/impl/usb/fs/ntfs/i;
+
+    return-object v0
 .end method

@@ -1,5 +1,5 @@
 .class Lcom/estrongs/android/appinfo/e;
-.super Lcom/estrongs/android/pop/utils/cq;
+.super Lcom/estrongs/android/pop/utils/cz;
 
 
 # instance fields
@@ -20,14 +20,14 @@
 
     iput-object p3, p0, Lcom/estrongs/android/appinfo/e;->b:Landroid/os/ConditionVariable;
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/utils/cq;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/utils/cz;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/estrongs/android/pop/utils/cr;)V
+.method public a(Lcom/estrongs/android/pop/utils/da;)V
     .locals 6
 
     const/4 v0, 0x1
@@ -111,7 +111,7 @@
     :try_start_1
     iget-object v1, p0, Lcom/estrongs/android/appinfo/e;->c:Lcom/estrongs/android/appinfo/AppFolderInfoManager;
 
-    iget-object v1, v1, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->f:Landroid/support/v4/b/c;
+    iget-object v1, v1, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->f:Landroid/support/v4/e/g;
 
     iget-object v2, p0, Lcom/estrongs/android/appinfo/e;->a:Lcom/estrongs/fs/h;
 
@@ -119,7 +119,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2, v0}, Landroid/support/v4/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v2, v0}, Landroid/support/v4/e/g;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -144,14 +144,14 @@
     :cond_0
     iget-object v0, p0, Lcom/estrongs/android/appinfo/e;->c:Lcom/estrongs/android/appinfo/AppFolderInfoManager;
 
-    iget-object v2, v0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->p:Ljava/util/HashMap;
+    iget-object v2, v0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->q:Ljava/util/HashMap;
 
     monitor-enter v2
 
     :try_start_2
     iget-object v0, p0, Lcom/estrongs/android/appinfo/e;->c:Lcom/estrongs/android/appinfo/AppFolderInfoManager;
 
-    iget-object v0, v0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->p:Ljava/util/HashMap;
+    iget-object v0, v0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->q:Ljava/util/HashMap;
 
     iget-object v3, p0, Lcom/estrongs/android/appinfo/e;->a:Lcom/estrongs/fs/h;
 
@@ -177,7 +177,7 @@
 
     invoke-direct {v1, p0, v0}, Lcom/estrongs/android/appinfo/f;-><init>(Lcom/estrongs/android/appinfo/e;Ljava/util/List;)V
 
-    invoke-static {v1}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/Runnable;)V
+    invoke-static {v1}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/Runnable;)V
 
     :cond_1
     iget-object v0, p0, Lcom/estrongs/android/appinfo/e;->b:Landroid/os/ConditionVariable;

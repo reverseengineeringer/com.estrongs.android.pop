@@ -5,6 +5,7 @@ public class f
 {
   public String a = null;
   public boolean b = false;
+  public String c;
   
   public f()
   {
@@ -13,13 +14,16 @@ public class f
   
   public void a(Object... paramVarArgs)
   {
-    if ((paramVarArgs != null) && (paramVarArgs.length >= 2))
+    if ((paramVarArgs != null) && (paramVarArgs.length >= 3))
     {
       if ((paramVarArgs[0] instanceof String)) {
         a = ((String)paramVarArgs[0]);
       }
       if ((paramVarArgs[1] instanceof Boolean)) {
         b = ((Boolean)paramVarArgs[1]).booleanValue();
+      }
+      if ((paramVarArgs[2] instanceof String)) {
+        c = ((String)paramVarArgs[3]);
       }
     }
   }

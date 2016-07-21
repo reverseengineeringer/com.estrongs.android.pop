@@ -132,7 +132,7 @@
 .method public static a(Landroid/app/Activity;I)V
     .locals 3
 
-    const v2, 0x7f0b025c
+    const v2, 0x7f08046a
 
     const/4 v0, 0x0
 
@@ -158,7 +158,7 @@
 
     const/16 v1, 0x1388
 
-    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
     :cond_1
     return-void
@@ -175,7 +175,7 @@
 
     if-ge p1, v1, :cond_0
 
-    const v0, 0x7f0b0237
+    const v0, 0x7f080424
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -212,9 +212,9 @@
 .method public static a(Landroid/app/Activity;Landroid/net/Uri;Lcom/estrongs/android/pop/app/imageviewer/gallery/e;Landroid/os/Handler;)V
     .locals 10
 
-    const v9, 0x7f0a0259
+    const v9, 0x7f0e042c
 
-    const v8, 0x7f0a0257
+    const v8, 0x7f0e042a
 
     if-nez p2, :cond_0
 
@@ -222,15 +222,15 @@
     return-void
 
     :cond_0
-    new-instance v2, Lcom/estrongs/android/ui/dialog/ct;
+    new-instance v2, Lcom/estrongs/android/ui/dialog/cv;
 
-    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/dialog/ct;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
 
-    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    const v1, 0x7f030078
+    const v1, 0x7f0300e7
 
     const/4 v3, 0x0
 
@@ -242,7 +242,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->aG(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->aQ(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -253,7 +253,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b01a6
+    const v1, 0x7f080172
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -261,7 +261,7 @@
 
     sput-object v0, Lcom/estrongs/android/pop/app/imageviewer/ae;->a:Ljava/lang/String;
 
-    const v0, 0x7f0a0256
+    const v0, 0x7f0e0429
 
     invoke-virtual {v3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -281,7 +281,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b0072
+    const v1, 0x7f0805b6
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -303,7 +303,7 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->bL(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/estrongs/android/util/ap;->cc(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -317,7 +317,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a025f
+    const v0, 0x7f0e0432
 
     invoke-virtual {v3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -327,7 +327,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a025c
+    const v0, 0x7f0e042f
 
     invoke-virtual {v3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -337,7 +337,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a0262
+    const v0, 0x7f0e0435
 
     invoke-virtual {v3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -347,7 +347,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a0265
+    const v0, 0x7f0e0438
 
     invoke-virtual {v3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -364,17 +364,17 @@
     invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/ag;->start()V
 
     :goto_1
-    const v0, 0x7f0b000b
+    const v0, 0x7f080226
 
     new-instance v1, Lcom/estrongs/android/pop/app/imageviewer/ai;
 
     invoke-direct {v1}, Lcom/estrongs/android/pop/app/imageviewer/ai;-><init>()V
 
-    invoke-virtual {v2, v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->a(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v2, v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->a(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     new-instance v0, Lcom/estrongs/android/pop/app/imageviewer/aj;
 
-    invoke-direct {v0, v2, v3}, Lcom/estrongs/android/pop/app/imageviewer/aj;-><init>(Lcom/estrongs/android/ui/dialog/ct;Landroid/view/View;)V
+    invoke-direct {v0, v2, v3}, Lcom/estrongs/android/pop/app/imageviewer/aj;-><init>(Lcom/estrongs/android/ui/dialog/cv;Landroid/view/View;)V
 
     invoke-virtual {p3, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -477,7 +477,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->aD()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->aE()Z
 
     move-result v0
 
@@ -487,11 +487,11 @@
 
     if-eqz v0, :cond_6
 
-    invoke-static {v4}, Lcom/estrongs/android/pop/utils/ci;->a(Ljava/lang/String;)I
+    invoke-static {v4}, Lcom/estrongs/android/pop/utils/cr;->a(Ljava/lang/String;)I
 
     move-result v0
 
-    sget v3, Lcom/estrongs/android/pop/utils/ci;->c:I
+    sget v3, Lcom/estrongs/android/pop/utils/cr;->c:I
 
     if-ne v0, v3, :cond_3
 
@@ -503,7 +503,7 @@
     :goto_2
     if-eqz v3, :cond_4
 
-    const v0, 0x7f0b0433
+    const v0, 0x7f08009e
 
     :goto_3
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -512,7 +512,7 @@
 
     if-nez v3, :cond_5
 
-    const v0, 0x7f0b01ba
+    const v0, 0x7f080250
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -539,12 +539,12 @@
     goto :goto_1
 
     :cond_4
-    const v0, 0x7f0b0013
+    const v0, 0x7f08007d
 
     goto :goto_3
 
     :cond_5
-    const v0, 0x7f0b0443
+    const v0, 0x7f0805fe
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -552,7 +552,7 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -578,31 +578,31 @@
     invoke-direct {v0, p3}, Lcom/estrongs/android/pop/app/imageviewer/af;-><init>(Ljava/lang/Runnable;)V
 
     :try_start_0
-    new-instance v1, Lcom/estrongs/android/ui/dialog/ct;
+    new-instance v1, Lcom/estrongs/android/ui/dialog/cv;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/dialog/ct;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v1, p1}, Lcom/estrongs/android/ui/dialog/ct;->a(Ljava/lang/CharSequence;)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Lcom/estrongs/android/ui/dialog/ct;->b(Ljava/lang/CharSequence;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v1, p1}, Lcom/estrongs/android/ui/dialog/cv;->a(Ljava/lang/CharSequence;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v1
 
-    const v2, 0x7f0b000b
-
-    invoke-virtual {v1, v2, v0}, Lcom/estrongs/android/ui/dialog/ct;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v1, p2}, Lcom/estrongs/android/ui/dialog/cv;->b(Ljava/lang/CharSequence;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v1
 
-    const v2, 0x7f0b000c
+    const v2, 0x7f080226
 
-    invoke-virtual {v1, v2, v0}, Lcom/estrongs/android/ui/dialog/ct;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v1, v2, v0}, Lcom/estrongs/android/ui/dialog/cv;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
+
+    move-result-object v1
+
+    const v2, 0x7f080221
+
+    invoke-virtual {v1, v2, v0}, Lcom/estrongs/android/ui/dialog/cv;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ct;->c()Lcom/estrongs/android/ui/dialog/cg;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cv;->c()Lcom/estrongs/android/ui/dialog/ci;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -620,15 +620,15 @@
 .method private static a(Landroid/view/View;)V
     .locals 1
 
-    const v0, 0x7f0a025d
+    const v0, 0x7f0e0430
 
     invoke-static {p0, v0}, Lcom/estrongs/android/pop/app/imageviewer/ae;->a(Landroid/view/View;I)V
 
-    const v0, 0x7f0a0260
+    const v0, 0x7f0e0433
 
     invoke-static {p0, v0}, Lcom/estrongs/android/pop/app/imageviewer/ae;->a(Landroid/view/View;I)V
 
-    const v0, 0x7f0a0263
+    const v0, 0x7f0e0436
 
     invoke-static {p0, v0}, Lcom/estrongs/android/pop/app/imageviewer/ae;->a(Landroid/view/View;I)V
 
@@ -681,7 +681,7 @@
     sget-object v0, Lcom/estrongs/android/pop/app/imageviewer/ae;->a:Ljava/lang/String;
 
     :goto_0
-    const v2, 0x7f0a0262
+    const v2, 0x7f0e0435
 
     invoke-static {p1, v0, v2}, Lcom/estrongs/android/pop/app/imageviewer/ae;->a(Landroid/view/View;Ljava/lang/String;I)V
 
@@ -690,7 +690,7 @@
     sget-object v1, Lcom/estrongs/android/pop/app/imageviewer/ae;->a:Ljava/lang/String;
 
     :cond_0
-    const v0, 0x7f0a0265
+    const v0, 0x7f0e0438
 
     invoke-static {p1, v1, v0}, Lcom/estrongs/android/pop/app/imageviewer/ae;->a(Landroid/view/View;Ljava/lang/String;I)V
 
@@ -757,7 +757,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/am;->bl(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/ap;->bC(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -797,7 +797,7 @@
 
     invoke-static {p2}, Lcom/estrongs/android/pop/app/imageviewer/ImageManager;->a(Lcom/estrongs/android/pop/app/imageviewer/gallery/e;)Z
 
-    const v1, 0x7f0b003d
+    const v1, 0x7f0800ad
 
     :try_start_0
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
@@ -817,11 +817,11 @@
     :catch_0
     move-exception v0
 
-    const v0, 0x7f0b0246
+    const v0, 0x7f08041b
 
     const/4 v1, 0x0
 
-    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     goto :goto_0
 .end method
@@ -852,7 +852,7 @@
 
     if-lez v0, :cond_2
 
-    const v3, 0x7f0b0568
+    const v3, 0x7f080262
 
     invoke-virtual {p2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -881,7 +881,7 @@
     move-result-object v0
 
     :goto_1
-    const v1, 0x7f0a025f
+    const v1, 0x7f0e0432
 
     invoke-static {p0, v0, v1}, Lcom/estrongs/android/pop/app/imageviewer/ae;->a(Landroid/view/View;Ljava/lang/String;I)V
 
@@ -914,7 +914,7 @@
     move-result-object v0
 
     :cond_0
-    const v1, 0x7f0a025c
+    const v1, 0x7f0e042f
 
     invoke-static {p0, v0, v1}, Lcom/estrongs/android/pop/app/imageviewer/ae;->a(Landroid/view/View;Ljava/lang/String;I)V
 

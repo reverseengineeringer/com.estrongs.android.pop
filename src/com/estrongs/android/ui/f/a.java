@@ -1,129 +1,168 @@
 package com.estrongs.android.ui.f;
 
-import android.content.Context;
+import android.app.Activity;
+import android.content.res.ColorStateList;
+import android.content.res.Resources;
+import android.graphics.Color;
 import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v4.view.cn;
+import android.support.v4.view.ex;
+import android.support.v7.view.ViewPropertyAnimatorCompatSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup.LayoutParams;
+import android.view.WindowManager;
+import android.view.WindowManager.LayoutParams;
+import android.view.animation.OvershootInterpolator;
+import android.widget.FrameLayout;
 import android.widget.FrameLayout.LayoutParams;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-import com.estrongs.android.pop.esclasses.g;
-import com.estrongs.android.pop.utils.cl;
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.pop.view.fg;
-import com.estrongs.android.ui.a.cx;
-import com.estrongs.android.ui.theme.al;
-import com.estrongs.android.util.am;
-import com.estrongs.android.view.aw;
-import com.estrongs.android.widget.bb;
+import com.estrongs.android.ui.theme.at;
+import com.estrongs.android.util.l;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
 
 public class a
-  extends bb
 {
-  private static a g = null;
-  private cx h;
-  private al i;
-  private LinearLayout j;
-  private ListView k;
+  private Activity a;
+  private View b;
+  private WindowManager c;
+  private WindowManager.LayoutParams d;
+  private FrameLayout e;
+  private Rect f = new Rect();
+  private float g;
+  private ArrayList<View> h = new ArrayList();
+  private List<com.estrongs.android.view.a.a> i;
+  private View j;
+  private boolean k = false;
   
-  public a(Context paramContext, View paramView, String paramString, int paramInt, Rect paramRect, boolean paramBoolean)
+  public a(Activity paramActivity, View paramView, List<com.estrongs.android.view.a.a> paramList)
   {
-    super(paramContext, paramView, paramString, paramInt, paramRect, paramBoolean);
+    b = paramView;
+    a = paramActivity;
+    i = paramList;
+    c();
   }
   
-  public static a a(View paramView, String paramString, int paramInt, Rect paramRect, boolean paramBoolean)
+  private ex a(View paramView, int paramInt1, int paramInt2)
   {
-    if (g == null) {
-      g = new a(paramView.getContext(), paramView, paramString, paramInt, paramRect, paramBoolean);
-    }
-    if ((g.k() != paramInt) || (paramView.getContext() != g.a()))
+    cn.c(paramView, 0.3F);
+    cn.h(paramView, 0.1F);
+    cn.i(paramView, 0.3F);
+    cn.j(paramView, paramView.getWidth() / 2);
+    cn.k(paramView, paramView.getHeight() / 2);
+    paramView = cn.s(paramView);
+    paramView.a(1.0F).b(paramInt1 - f.centerX()).c(paramInt2 - f.centerY()).e(1.0F).f(1.0F);
+    return paramView;
+  }
+  
+  private void c()
+  {
+    c = a.getWindowManager();
+    e = new b(this, a);
+    e.setBackgroundColor(Color.argb(70, 0, 0, 0));
+    d = new WindowManager.LayoutParams(-1, -1, 0, 0, 1000, 0, -3);
+    Object localObject = d;
+    flags |= 0x100;
+    e.setOnClickListener(new c(this));
+    localObject = new int[2];
+    b.getLocationOnScreen((int[])localObject);
+    f.set(localObject[0], localObject[1], localObject[0] + b.getWidth(), localObject[1] + b.getHeight());
+    d();
+  }
+  
+  private void d()
+  {
+    int m = 0;
+    while (m < i.size() + 1)
     {
-      g.i();
-      g = new a(paramView.getContext(), paramView, paramString, paramInt, paramRect, paramBoolean);
+      View localView = LayoutInflater.from(a).inflate(2130903238, e, false);
+      h.add(localView);
+      if (m < i.size())
+      {
+        localObject = (com.estrongs.android.view.a.a)i.get(m);
+        FloatingActionButton localFloatingActionButton = (FloatingActionButton)localView.findViewById(2131624938);
+        Drawable localDrawable = a.getResources().getDrawable(((com.estrongs.android.view.a.a)localObject).b());
+        localDrawable.mutate();
+        localDrawable = android.support.v4.b.a.a.f(localDrawable);
+        android.support.v4.b.a.a.a(localDrawable, at.a(a).c(2131558713));
+        localFloatingActionButton.setImageDrawable(localDrawable);
+        localFloatingActionButton.setOnClickListener(new d(this, (com.estrongs.android.view.a.a)localObject));
+      }
+      Object localObject = new FrameLayout.LayoutParams(-2, -2);
+      gravity = 85;
+      e.addView(localView, (ViewGroup.LayoutParams)localObject);
+      m += 1;
     }
-    return g;
   }
   
-  public static void d()
+  private void e()
   {
-    if (g != null) {
-      g.i();
-    }
-    g = null;
+    int n = f.centerX();
+    int m = f.centerY();
+    int i1 = f.width() / 2;
+    l.e("test", "anchorRangeRadius : " + i1);
+    l.e("test", "anchorWidth : " + f.width());
+    i1 *= 3;
+    ViewPropertyAnimatorCompatSet localViewPropertyAnimatorCompatSet = new ViewPropertyAnimatorCompatSet().play(a((View)h.get(0), (int)(n - Math.cos(0.2617993877991494D) * i1), (int)(m - Math.sin(0.2617993877991494D) * i1)));
+    View localView = (View)h.get(1);
+    n = (int)(n - Math.cos(1.3089969389957472D) * i1);
+    double d1 = m;
+    double d2 = Math.sin(1.3089969389957472D);
+    localViewPropertyAnimatorCompatSet.play(a(localView, n, (int)(d1 - i1 * d2))).setDuration(300L).setInterpolator(new OvershootInterpolator()).setListener(new e(this)).start();
   }
   
-  public Context a()
+  private void f()
   {
-    return e;
+    Object localObject = (View)h.get(2);
+    j = ((View)localObject);
+    localObject = (FloatingActionButton)((View)localObject).findViewById(2131624938);
+    ((FloatingActionButton)localObject).setBackgroundTintList(new ColorStateList((int[][])Array.newInstance(Integer.TYPE, new int[] { 1, 1 }), new int[] { at.a(a).c(2131558589) }));
+    ((FloatingActionButton)localObject).setImageResource(2130837893);
+    ((FloatingActionButton)localObject).setOnClickListener(new f(this));
   }
   
-  public void a(fg paramfg)
+  private void g()
   {
     try
     {
-      h.a(paramfg);
+      k = true;
+      b.setVisibility(0);
+      c.removeView(e);
+      cn.l(b, g);
       return;
     }
-    catch (NullPointerException paramfg) {}
-  }
-  
-  protected void b()
-  {
-    i = al.a(e);
-    if (cl.a(e)) {}
-    for (int m = 2130903224;; m = 2130903270)
+    catch (Exception localException)
     {
-      View localView = g.a(e).inflate(m, null);
-      j = ((LinearLayout)localView.findViewById(2131362795));
-      j.setFocusable(true);
-      j.setOnClickListener(new b(this));
-      k = ((ListView)localView.findViewById(2131362794));
-      h = new cx(e, true);
-      k.setAdapter(h);
-      k.setOnItemClickListener(h);
-      ((TextView)l().findViewById(2131362638)).setText(2131427415);
-      a(localView, new FrameLayout.LayoutParams(-1, -1));
-      return;
+      for (;;)
+      {
+        localException.printStackTrace();
+      }
     }
   }
   
-  public void c()
+  public void a()
   {
-    label91:
-    for (;;)
+    try
     {
-      try
-      {
-        super.c();
-        if ((e instanceof FileExplorerActivity))
-        {
-          aw localaw = ((FileExplorerActivity)e).y();
-          if (localaw == null) {
-            break label91;
-          }
-          h.a(localaw.ak());
-          if (am.ba(localaw.c())) {
-            h.a(true);
-          }
-        }
-        else
-        {
-          h.notifyDataSetChanged();
-          k.setSelection(0);
-          return;
-        }
-        h.a(false);
-        continue;
-        h.a(null);
-      }
-      catch (NullPointerException localNullPointerException)
-      {
-        localNullPointerException.printStackTrace();
-        return;
-      }
+      c.addView(e, d);
+      e();
+      f();
+      g = cn.w(b);
+      cn.l(b, 0.0F);
+      return;
     }
+    catch (Exception localException)
+    {
+      localException.printStackTrace();
+    }
+  }
+  
+  public void b()
+  {
+    g();
   }
 }
 

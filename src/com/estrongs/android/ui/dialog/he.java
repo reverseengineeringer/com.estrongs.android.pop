@@ -1,14 +1,17 @@
 package com.estrongs.android.ui.dialog;
 
+import android.view.View;
+import android.view.View.OnClickListener;
+
 class he
-  implements Runnable
+  implements View.OnClickListener
 {
-  he(hd paramhd) {}
+  he(hc paramhc, int paramInt) {}
   
-  public void run()
+  public void onClick(View paramView)
   {
-    if (a.a.isShowing()) {
-      a.a.dismiss();
+    if (b.b != null) {
+      b.b.a(a);
     }
   }
 }

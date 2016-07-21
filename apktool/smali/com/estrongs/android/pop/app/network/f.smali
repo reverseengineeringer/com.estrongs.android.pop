@@ -24,11 +24,11 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/network/f;->a:Lcom/estrongs/android/pop/app/network/EsNetworkActivity;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/network/EsNetworkActivity;->b(Lcom/estrongs/android/pop/app/network/EsNetworkActivity;)Lcom/estrongs/android/e/h;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/network/EsNetworkActivity;->b(Lcom/estrongs/android/pop/app/network/EsNetworkActivity;)Lcom/estrongs/android/l/k;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/e/h;->e()I
+    invoke-virtual {v0}, Lcom/estrongs/android/l/k;->e()I
 
     move-result v0
 
@@ -74,11 +74,11 @@
 
     iget-object v2, p0, Lcom/estrongs/android/pop/app/network/f;->a:Lcom/estrongs/android/pop/app/network/EsNetworkActivity;
 
-    invoke-static {v2}, Lcom/estrongs/android/pop/app/network/EsNetworkActivity;->b(Lcom/estrongs/android/pop/app/network/EsNetworkActivity;)Lcom/estrongs/android/e/h;
+    invoke-static {v2}, Lcom/estrongs/android/pop/app/network/EsNetworkActivity;->b(Lcom/estrongs/android/pop/app/network/EsNetworkActivity;)Lcom/estrongs/android/l/k;
 
     move-result-object v2
 
-    invoke-virtual {v2, p1}, Lcom/estrongs/android/e/h;->a(I)[Ljava/lang/String;
+    invoke-virtual {v2, p1}, Lcom/estrongs/android/l/k;->a(I)[Ljava/lang/String;
 
     move-result-object v2
 
@@ -102,7 +102,7 @@
 
     iget-object v3, p0, Lcom/estrongs/android/pop/app/network/f;->a:Lcom/estrongs/android/pop/app/network/EsNetworkActivity;
 
-    const v4, 0x7f0b008d
+    const v4, 0x7f0805a9
 
     invoke-virtual {v3, v4}, Lcom/estrongs/android/pop/app/network/EsNetworkActivity;->getString(I)Ljava/lang/String;
 
@@ -118,7 +118,7 @@
 
     iget-object v2, v0, Lcom/estrongs/android/pop/app/network/i;->a:Landroid/widget/ImageView;
 
-    const v3, 0x7f020085
+    const v3, 0x7f02017b
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
@@ -126,15 +126,15 @@
     :goto_0
     iget-object v2, p0, Lcom/estrongs/android/pop/app/network/f;->a:Lcom/estrongs/android/pop/app/network/EsNetworkActivity;
 
-    invoke-static {v2}, Lcom/estrongs/android/pop/app/network/EsNetworkActivity;->b(Lcom/estrongs/android/pop/app/network/EsNetworkActivity;)Lcom/estrongs/android/e/h;
+    invoke-static {v2}, Lcom/estrongs/android/pop/app/network/EsNetworkActivity;->b(Lcom/estrongs/android/pop/app/network/EsNetworkActivity;)Lcom/estrongs/android/l/k;
 
     move-result-object v2
 
-    invoke-virtual {v2, p1}, Lcom/estrongs/android/e/h;->b(I)Lcom/estrongs/android/e/j;
+    invoke-virtual {v2, p1}, Lcom/estrongs/android/l/k;->b(I)Lcom/estrongs/android/l/m;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/estrongs/android/e/j;->e()I
+    invoke-virtual {v2}, Lcom/estrongs/android/l/m;->e()I
 
     move-result v3
 
@@ -142,7 +142,7 @@
 
     iget-object v0, v0, Lcom/estrongs/android/pop/app/network/i;->a:Landroid/widget/ImageView;
 
-    const v2, 0x7f020080
+    const v2, 0x7f020176
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
@@ -152,14 +152,14 @@
     :cond_1
     iget-object v2, v0, Lcom/estrongs/android/pop/app/network/i;->a:Landroid/widget/ImageView;
 
-    const v3, 0x7f020084
+    const v3, 0x7f02017a
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
     goto :goto_0
 
     :cond_2
-    invoke-virtual {v2}, Lcom/estrongs/android/e/j;->e()I
+    invoke-virtual {v2}, Lcom/estrongs/android/l/m;->e()I
 
     move-result v3
 
@@ -169,14 +169,14 @@
 
     iget-object v0, v0, Lcom/estrongs/android/pop/app/network/i;->a:Landroid/widget/ImageView;
 
-    const v2, 0x7f020081
+    const v2, 0x7f020177
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
     goto :goto_1
 
     :cond_3
-    invoke-virtual {v2}, Lcom/estrongs/android/e/j;->e()I
+    invoke-virtual {v2}, Lcom/estrongs/android/l/m;->e()I
 
     move-result v2
 
@@ -186,7 +186,7 @@
 
     iget-object v0, v0, Lcom/estrongs/android/pop/app/network/i;->a:Landroid/widget/ImageView;
 
-    const v2, 0x7f020082
+    const v2, 0x7f020178
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
@@ -195,7 +195,7 @@
     :cond_4
     iget-object v0, v0, Lcom/estrongs/android/pop/app/network/i;->a:Landroid/widget/ImageView;
 
-    const v2, 0x7f02007f
+    const v2, 0x7f020175
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 

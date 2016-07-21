@@ -1,32 +1,22 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.ui.pcs.n;
-import com.estrongs.android.ui.pcs.r;
-import com.estrongs.fs.impl.pcs.b;
-import com.estrongs.fs.m;
+import android.content.Intent;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.navigation.MultiWindowActivity;
 
 class ao
-  implements n
+  implements MenuItem.OnMenuItemClickListener
 {
-  ao(an paraman) {}
+  ao(m paramm) {}
   
-  public void a(boolean paramBoolean, String paramString1, String paramString2)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramString1 = r.a();
-    if (paramString1.i() != null)
-    {
-      if (paramString2 != null)
-      {
-        paramString1.i().a(true, null, paramString2);
-        b.a().setFileType(m.Q);
-        ad.a(a.a.b).e(System.currentTimeMillis());
-      }
+    if (FileExplorerActivity.X() != null) {
+      m.a(a).startActivity(new Intent(m.a(a), MultiWindowActivity.class));
     }
-    else {
-      return;
-    }
-    paramString1.i().a(false, null, null);
+    return false;
   }
 }
 

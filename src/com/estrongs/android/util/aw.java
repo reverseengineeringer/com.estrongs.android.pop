@@ -1,19 +1,55 @@
 package com.estrongs.android.util;
 
-import com.estrongs.io.a.a.a;
-import com.estrongs.io.archive.d;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.TimeZone;
 
-class aw
-  extends a
+public class aw
 {
-  aw(at paramat, d paramd, String paramString)
+  private DateFormat a;
+  private String[] b;
+  
+  public aw(DateFormat paramDateFormat, String[] paramArrayOfString)
   {
-    super(paramd, paramString);
+    Object localObject = paramDateFormat;
+    if (paramDateFormat == null) {
+      localObject = new SimpleDateFormat("yyyy-MM-dd");
+    }
+    a = ((DateFormat)localObject);
+    a.setTimeZone(TimeZone.getDefault());
+    b = paramArrayOfString;
   }
   
-  public String a()
+  public String a(Date paramDate)
   {
-    return null;
+    long l1 = 0L;
+    long l2 = Calendar.getInstance(TimeZone.getTimeZone("GMT+00:00")).getTime().getTime() - paramDate.getTime();
+    if (l2 < 0L) {}
+    for (;;)
+    {
+      if (l1 < 60000L) {
+        return l1 / 1000L + " " + b[0];
+      }
+      if (l1 < 3600000L) {
+        return l1 / 60000L + " " + b[1];
+      }
+      if (l1 < 86400000L) {
+        return l1 / 3600000L + " " + b[2];
+      }
+      if (l1 < 604800000L) {
+        return l1 / 86400000L + " " + b[3];
+      }
+      if (l1 < 2592000000L) {
+        return l1 / 604800000L + " " + b[4];
+      }
+      if (l1 < 31536000000L) {
+        return l1 / 2592000000L + " " + b[5];
+      }
+      return a.format(paramDate);
+      l1 = l2;
+    }
   }
 }
 

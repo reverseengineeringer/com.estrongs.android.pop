@@ -1,28 +1,16 @@
 package com.estrongs.android.pop.utils;
 
-import android.widget.TextView;
-import com.estrongs.a.a;
-import com.estrongs.a.a.l;
-import com.estrongs.a.a.m;
-import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.fs.util.j;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class bw
-  implements l
+  implements DialogInterface.OnClickListener
 {
-  private long f = -1L;
+  bw(bv parambv) {}
   
-  bw(bn parambn, StringBuilder paramStringBuilder, String paramString, ESActivity paramESActivity, TextView paramTextView) {}
-  
-  public void a(a parama, m paramm)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ((f == -1L) || (System.currentTimeMillis() - f > 300L))
-    {
-      f = System.currentTimeMillis();
-      a.delete(0, a.length());
-      a.append(b).append("\n\n").append(c.getString(2131427581)).append(d).append(" ").append(c.getString(2131427428)).append(", ").append(c.getString(2131427580)).append(j.c(f));
-      c.runOnUiThread(new bx(this));
-    }
+    paramDialogInterface.dismiss();
   }
 }
 

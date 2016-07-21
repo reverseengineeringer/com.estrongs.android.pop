@@ -1,27 +1,30 @@
 package com.estrongs.android.pop.app.service;
 
-import com.estrongs.android.pop.view.utils.v;
-import com.estrongs.android.util.ab;
-import java.util.Map;
+import android.os.Handler;
+import com.estrongs.android.pop.utils.cl;
+import com.estrongs.android.util.an;
 
 class f
-  implements ab
+  extends i
 {
-  f(PerformanceAccelerateService paramPerformanceAccelerateService, v paramv) {}
-  
-  public void a(Object paramObject) {}
-  
-  public void a(Object paramObject, long paramLong1, long paramLong2) {}
-  
-  public void a(Object paramObject, Throwable paramThrowable)
+  public f(PerformanceAccelerateService paramPerformanceAccelerateService, Handler paramHandler)
   {
-    PerformanceAccelerateService.i(b).remove(a.e);
-    PerformanceAccelerateService.e(b).a(60000L);
+    super(paramHandler);
   }
   
-  public void b(Object paramObject)
+  public void a()
   {
-    PerformanceAccelerateService.i(b).remove(a.e);
+    PerformanceAccelerateService.i(a);
+  }
+  
+  public boolean b()
+  {
+    return (an.b()) && (cl.a());
+  }
+  
+  protected int c()
+  {
+    return -1;
   }
 }
 

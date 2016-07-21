@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:persistent="true" android:layout="@layout/tablet_preference" android:title="@string/close_notification" android:key="close_notification" android:summary="@string/close_notification_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="false" />
+    <CheckBoxPreference android:persistent="true" android:layout="@layout/tablet_preference" android:title="@string/open_app_permission_notification_title" android:key="open_app_permission_notification" android:summary="@string/open_app_permission_notification_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="true" />
+</PreferenceScreen>

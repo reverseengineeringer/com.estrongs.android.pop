@@ -29,7 +29,7 @@
 
     iget-object v0, v0, Lcom/estrongs/android/pop/app/dg;->b:Lcom/estrongs/android/pop/app/ImageCommentActivity;
 
-    const v1, 0x7f0b0308
+    const v1, 0x7f080467
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->d(I)V
 
@@ -37,11 +37,11 @@
 
     iget-object v0, v0, Lcom/estrongs/android/pop/app/dg;->b:Lcom/estrongs/android/pop/app/ImageCommentActivity;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->j(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Landroid/view/View;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->h(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Landroid/view/View;
 
     move-result-object v0
 
-    const v1, 0x7f0a008f
+    const v1, 0x7f0e01ed
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

@@ -33,17 +33,17 @@
 
 .field public l:[Landroid/graphics/Bitmap;
 
-.field public m:[Lcom/estrongs/android/util/y;
+.field public m:[Lcom/estrongs/android/util/aa;
 
 .field public n:[Landroid/graphics/Bitmap;
 
-.field public o:[Lcom/estrongs/android/util/y;
+.field public o:[Lcom/estrongs/android/util/aa;
 
 .field public p:Z
 
 .field public q:I
 
-.field public r:Lcom/estrongs/android/util/y;
+.field public r:Lcom/estrongs/android/util/aa;
 
 .field public s:Ljava/lang/String;
 
@@ -78,17 +78,17 @@
 
     iput-object v0, p0, Lcom/estrongs/android/pop/view/utils/v;->l:[Landroid/graphics/Bitmap;
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/view/utils/v;->m:[Lcom/estrongs/android/util/y;
+    iput-object v0, p0, Lcom/estrongs/android/pop/view/utils/v;->m:[Lcom/estrongs/android/util/aa;
 
     iput-object v0, p0, Lcom/estrongs/android/pop/view/utils/v;->n:[Landroid/graphics/Bitmap;
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/view/utils/v;->o:[Lcom/estrongs/android/util/y;
+    iput-object v0, p0, Lcom/estrongs/android/pop/view/utils/v;->o:[Lcom/estrongs/android/util/aa;
 
     iput-boolean v1, p0, Lcom/estrongs/android/pop/view/utils/v;->p:Z
 
     iput v1, p0, Lcom/estrongs/android/pop/view/utils/v;->q:I
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/view/utils/v;->r:Lcom/estrongs/android/util/y;
+    iput-object v0, p0, Lcom/estrongs/android/pop/view/utils/v;->r:Lcom/estrongs/android/util/aa;
 
     iput-wide v2, p0, Lcom/estrongs/android/pop/view/utils/v;->t:J
 
@@ -156,51 +156,48 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/view/utils/v;->e:Ljava/lang/String;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     iget-object v0, p0, Lcom/estrongs/android/pop/view/utils/v;->e:Ljava/lang/String;
 
-    const-string v1, "market://"
+    const-string v1, "https://play.google.com/store/apps/details"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/utils/v;->e:Ljava/lang/String;
+
+    const-string v1, "market://details"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
     iget-object v0, p0, Lcom/estrongs/android/pop/view/utils/v;->e:Ljava/lang/String;
 
     :goto_0
     return-object v0
 
-    :cond_0
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+    :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/utils/v;->C:Ljava/lang/String;
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/FexApplication;->m()Z
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/utils/v;->C:Ljava/lang/String;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/utils/v;->C:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-lez v0, :cond_1
+    if-nez v0, :cond_2
 
     iget-object v0, p0, Lcom/estrongs/android/pop/view/utils/v;->C:Ljava/lang/String;
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     const/4 v0, 0x0
 
     goto :goto_0

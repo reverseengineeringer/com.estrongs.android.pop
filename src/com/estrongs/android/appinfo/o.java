@@ -1,13 +1,18 @@
 package com.estrongs.android.appinfo;
 
-public abstract class o
+public class o
 {
-  protected boolean a()
-  {
-    return false;
-  }
+  public String a;
   
-  protected abstract void b();
+  public o(AppFolderInfoManager paramAppFolderInfoManager) {}
+  
+  public boolean equals(Object paramObject)
+  {
+    if ((a == null) || (paramObject == null)) {
+      return super.equals(paramObject);
+    }
+    return a.toLowerCase().equals(a.toLowerCase());
+  }
 }
 
 /* Location:

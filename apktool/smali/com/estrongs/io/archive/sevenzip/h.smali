@@ -87,7 +87,7 @@
 
     iget-object v0, p0, Lcom/estrongs/io/archive/sevenzip/h;->b:Landroid/app/Activity;
 
-    const v2, 0x7f0b0191
+    const v2, 0x7f080703
 
     new-array v3, v6, [Ljava/lang/Object;
 
@@ -103,7 +103,7 @@
 
     iget-object v0, p0, Lcom/estrongs/io/archive/sevenzip/h;->b:Landroid/app/Activity;
 
-    const v2, 0x7f0b0192
+    const v2, 0x7f08042c
 
     new-array v3, v6, [Ljava/lang/Object;
 
@@ -116,50 +116,50 @@
     move-result-object v0
 
     :goto_0
-    new-instance v2, Lcom/estrongs/android/ui/dialog/ct;
+    new-instance v2, Lcom/estrongs/android/ui/dialog/cv;
 
     iget-object v3, p0, Lcom/estrongs/io/archive/sevenzip/h;->b:Landroid/app/Activity;
 
-    invoke-direct {v2, v3}, Lcom/estrongs/android/ui/dialog/ct;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, v3}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
 
     aget-object v3, v1, v5
 
-    invoke-virtual {v2, v3}, Lcom/estrongs/android/ui/dialog/ct;->a(Ljava/lang/CharSequence;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v2, v3}, Lcom/estrongs/android/ui/dialog/cv;->a(Ljava/lang/CharSequence;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v2
 
-    invoke-virtual {v2, v0}, Lcom/estrongs/android/ui/dialog/ct;->b(Ljava/lang/CharSequence;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v2, v0}, Lcom/estrongs/android/ui/dialog/cv;->b(Ljava/lang/CharSequence;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    const v2, 0x7f0b000b
+    const v2, 0x7f080226
 
     new-instance v3, Lcom/estrongs/io/archive/sevenzip/j;
 
     invoke-direct {v3, p0, v1}, Lcom/estrongs/io/archive/sevenzip/j;-><init>(Lcom/estrongs/io/archive/sevenzip/h;[Ljava/lang/String;)V
 
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/ui/dialog/ct;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/ui/dialog/cv;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    const v1, 0x7f0b000c
+    const v1, 0x7f080221
 
     new-instance v2, Lcom/estrongs/io/archive/sevenzip/i;
 
     invoke-direct {v2, p0}, Lcom/estrongs/io/archive/sevenzip/i;-><init>(Lcom/estrongs/io/archive/sevenzip/h;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ct;->c()Lcom/estrongs/android/ui/dialog/cg;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cv;->c()Lcom/estrongs/android/ui/dialog/ci;
 
     return-void
 
     :cond_0
     iget-object v0, p0, Lcom/estrongs/io/archive/sevenzip/h;->b:Landroid/app/Activity;
 
-    const v2, 0x7f0b018c
+    const v2, 0x7f0802a2
 
     new-array v3, v6, [Ljava/lang/Object;
 
@@ -175,7 +175,7 @@
 
     iget-object v0, p0, Lcom/estrongs/io/archive/sevenzip/h;->b:Landroid/app/Activity;
 
-    const v2, 0x7f0b018d
+    const v2, 0x7f08029d
 
     new-array v3, v6, [Ljava/lang/Object;
 

@@ -1,16 +1,16 @@
 package com.estrongs.android.pop.app.editor;
 
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+
 class y
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
   y(PopNoteEditor paramPopNoteEditor) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (PopNoteEditor.O(a)) {
-      return;
-    }
-    PopNoteEditor.n(a);
+    paramDialogInterface.dismiss();
   }
 }
 

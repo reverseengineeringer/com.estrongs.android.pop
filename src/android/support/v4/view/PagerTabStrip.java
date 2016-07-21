@@ -45,29 +45,15 @@ public class PagerTabStrip
     j = ((int)(f1 * 32.0F + 0.5F));
     u = ViewConfiguration.get(paramContext).getScaledTouchSlop();
     setPadding(getPaddingLeft(), getPaddingTop(), getPaddingRight(), getPaddingBottom());
-    a(b());
+    setTextSpacing(getTextSpacing());
     setWillNotDraw(false);
     b.setFocusable(true);
-    b.setOnClickListener(new af(this));
+    b.setOnClickListener(new bx(this));
     d.setFocusable(true);
-    d.setOnClickListener(new ag(this));
+    d.setOnClickListener(new by(this));
     if (getBackground() == null) {
       o = true;
     }
-  }
-  
-  int a()
-  {
-    return Math.max(super.a(), j);
-  }
-  
-  public void a(int paramInt)
-  {
-    int i1 = paramInt;
-    if (paramInt < i) {
-      i1 = i;
-    }
-    super.a(i1);
   }
   
   void a(int paramInt, float paramFloat, boolean paramBoolean)
@@ -84,6 +70,21 @@ public class PagerTabStrip
     n = ((int)(Math.abs(paramFloat - 0.5F) * 2.0F * 255.0F));
     localRect.union(c.getLeft() - k, i6, c.getRight() + k, i1);
     invalidate(localRect);
+  }
+  
+  public boolean getDrawFullUnderline()
+  {
+    return o;
+  }
+  
+  int getMinHeight()
+  {
+    return Math.max(super.getMinHeight(), j);
+  }
+  
+  public int getTabIndicatorColor()
+  {
+    return f;
   }
   
   protected void onDraw(Canvas paramCanvas)
@@ -127,9 +128,9 @@ public class PagerTabStrip
         r = true;
         continue;
         if (f1 < c.getLeft() - k) {
-          a.a(a.c() - 1);
+          a.setCurrentItem(a.getCurrentItem() - 1);
         } else if (f1 > c.getRight() + k) {
-          a.a(a.c() + 1);
+          a.setCurrentItem(a.getCurrentItem() + 1);
         }
       }
     }
@@ -183,6 +184,13 @@ public class PagerTabStrip
     }
   }
   
+  public void setDrawFullUnderline(boolean paramBoolean)
+  {
+    o = paramBoolean;
+    p = true;
+    invalidate();
+  }
+  
   public void setPadding(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     int i1 = paramInt4;
@@ -190,6 +198,27 @@ public class PagerTabStrip
       i1 = h;
     }
     super.setPadding(paramInt1, paramInt2, paramInt3, i1);
+  }
+  
+  public void setTabIndicatorColor(int paramInt)
+  {
+    f = paramInt;
+    l.setColor(f);
+    invalidate();
+  }
+  
+  public void setTabIndicatorColorResource(int paramInt)
+  {
+    setTabIndicatorColor(getContext().getResources().getColor(paramInt));
+  }
+  
+  public void setTextSpacing(int paramInt)
+  {
+    int i1 = paramInt;
+    if (paramInt < i) {
+      i1 = i;
+    }
+    super.setTextSpacing(i1);
   }
 }
 

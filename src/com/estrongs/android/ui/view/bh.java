@@ -1,17 +1,15 @@
 package com.estrongs.android.ui.view;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.ImageView;
+import com.estrongs.a.b.b;
 
 class bh
-  implements View.OnClickListener
+  implements b
 {
-  bh(PcsThirdPartOAuth paramPcsThirdPartOAuth) {}
+  bh(bg parambg) {}
   
-  public void onClick(View paramView)
+  public boolean a()
   {
-    PcsThirdPartOAuth.a(a).setVisibility(4);
+    return a.d.e;
   }
 }
 

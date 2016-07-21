@@ -96,7 +96,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->b(Ljava/lang/Object;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/bk;->b(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -120,7 +120,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p2}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/Object;Z)Z
+    invoke-static {v0, p2}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/Object;Z)Z
 
     move-result p2
 
@@ -200,7 +200,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p2, p3}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/String;J)J
+    invoke-static {v0, p2, p3}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/String;J)J
 
     move-result-wide p2
 

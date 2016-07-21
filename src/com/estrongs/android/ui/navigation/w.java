@@ -1,23 +1,31 @@
 package com.estrongs.android.ui.navigation;
 
-import android.view.View;
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.a.a;
-import com.estrongs.android.util.am;
+import android.content.Context;
+import com.estrongs.android.ui.e.km;
 
 class w
-  implements r
+  extends km
 {
-  w(t paramt, a parama) {}
-  
-  public void a(View paramView)
+  w(r paramr, Context paramContext, boolean paramBoolean)
   {
-    paramView = a.b();
-    if ("#home#".equals(a.b())) {
-      paramView = ad.a(s.a(b.c)).j("Market");
+    super(paramContext, paramBoolean);
+  }
+  
+  protected boolean b()
+  {
+    return true;
+  }
+  
+  protected void c()
+  {
+    if (h.a()) {
+      h.c();
     }
-    b.b.b(am.C(paramView));
+  }
+  
+  protected void d()
+  {
+    super.d();
   }
 }
 

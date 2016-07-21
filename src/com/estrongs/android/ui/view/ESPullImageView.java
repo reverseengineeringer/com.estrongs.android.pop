@@ -8,7 +8,7 @@ import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
-import com.estrongs.android.ui.theme.al;
+import com.estrongs.android.ui.theme.at;
 
 public class ESPullImageView
   extends ImageView
@@ -48,16 +48,16 @@ public class ESPullImageView
     }
     a = d1;
     if (d == null) {
-      d = al.a(getContext()).a(2130837990);
+      d = at.a(getContext()).a(2130838324);
     }
     if (f == null) {
-      f = al.a(getContext()).a(2130837991);
+      f = at.a(getContext()).a(2130838325);
     }
     if (e == null) {
-      e = BitmapFactory.decodeResource(getContext().getResources(), 2130837990);
+      e = BitmapFactory.decodeResource(getContext().getResources(), 2130838324);
     }
     if (g == null) {
-      g = BitmapFactory.decodeResource(getContext().getResources(), 2130837991);
+      g = BitmapFactory.decodeResource(getContext().getResources(), 2130838325);
     }
     postInvalidate();
   }

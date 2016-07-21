@@ -74,7 +74,7 @@
     return v0
 .end method
 
-.method protected doGetFileType()Lcom/estrongs/fs/m;
+.method protected doGetFileType()Lcom/estrongs/fs/w;
     .locals 1
 
     iget-object v0, p0, Lcom/estrongs/old/fs/impl/a/a;->a:Lorg/apache/commons/net/ftp/FTPFile;
@@ -85,13 +85,13 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/estrongs/fs/m;->a:Lcom/estrongs/fs/m;
+    sget-object v0, Lcom/estrongs/fs/w;->a:Lcom/estrongs/fs/w;
 
     :goto_0
     return-object v0
 
     :cond_0
-    sget-object v0, Lcom/estrongs/fs/m;->b:Lcom/estrongs/fs/m;
+    sget-object v0, Lcom/estrongs/fs/w;->b:Lcom/estrongs/fs/w;
 
     goto :goto_0
 .end method

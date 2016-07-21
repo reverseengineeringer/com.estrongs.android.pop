@@ -11,15 +11,15 @@ import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.esclasses.i;
+import com.estrongs.android.pop.esclasses.m;
 import com.estrongs.android.pop.utils.w;
-import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.pop.view.a;
 import com.estrongs.android.pop.z;
-import com.estrongs.android.util.n;
+import com.estrongs.android.util.p;
 
 @SuppressLint({"NewApi"})
 public class AboutPreferenceFragment
-  extends i
+  extends m
 {
   private ad a;
   
@@ -30,31 +30,31 @@ public class AboutPreferenceFragment
     if (localObject1 == null) {
       localObject2 = "1.x";
     }
-    Object localObject3 = "Market";
+    Object localObject3 = a.a;
     int i;
-    if ("Market".equalsIgnoreCase("oem"))
+    if (((String)localObject3).equalsIgnoreCase("oem"))
     {
       localObject1 = localObject3;
       if (z.b != null) {
         localObject1 = z.b;
       }
-      if ("工信部".equalsIgnoreCase(FileExplorerActivity.e)) {
+      if ("工信部".equalsIgnoreCase(a.b)) {
         localObject1 = "ES";
       }
       localObject3 = localObject1;
       if (((String)localObject1).length() > 0) {
         localObject3 = " (" + (String)localObject1 + ")";
       }
-      findPreference("preference_version").setSummary(getResources().getText(2131427343) + " " + (String)localObject2 + (String)localObject3);
+      findPreference("preference_version").setSummary(getResources().getText(2131232542) + " " + (String)localObject2 + (String)localObject3);
       localObject1 = findPreference("preference_special_thanks_to_translators");
-      localObject2 = getString(2131428379);
+      localObject2 = getString(2131232365);
       if (z.b == null) {
-        break label269;
+        break label270;
       }
       i = 1;
-      label158:
+      label159:
       if ((i == 0) && (!((String)localObject2).equals("none"))) {
-        break label274;
+        break label275;
       }
       ((PreferenceScreen)findPreference("preference_about")).removePreference((Preference)localObject1);
     }
@@ -68,28 +68,28 @@ public class AboutPreferenceFragment
       }
       catch (Exception localException) {}
       localObject1 = localObject3;
-      if (!"Market".equals("Market")) {
+      if (!((String)localObject3).equals("Market")) {
         break;
       }
       localObject1 = localObject3;
-      if (FileExplorerActivity.e == null) {
+      if (a.b == null) {
         break;
       }
       localObject1 = localObject3;
-      if (FileExplorerActivity.e.length() <= 0) {
+      if (a.b.length() <= 0) {
         break;
       }
-      if (!FileExplorerActivity.e.equals("百度"))
+      if (!a.b.equals("Baidu"))
       {
-        localObject1 = FileExplorerActivity.e;
+        localObject1 = a.b;
         break;
       }
       localObject1 = "ES";
       break;
-      label269:
+      label270:
       i = 0;
-      break label158;
-      label274:
+      break label159;
+      label275:
       ((Preference)localObject1).setSummary(((String)localObject2).replaceAll(",", "\n"));
     }
   }
@@ -131,7 +131,7 @@ public class AboutPreferenceFragment
     {
       try
       {
-        paramPreference = getString(2131428711);
+        paramPreference = getString(2131232523);
         paramPreferenceScreen = paramPreference;
         if (!paramPreference.startsWith("http://"))
         {
@@ -150,7 +150,7 @@ public class AboutPreferenceFragment
         return bool;
       }
     } while (!paramPreference.getKey().equals("preference_feedback"));
-    n.a(getActivity());
+    p.a(getActivity());
     return bool;
     return bool;
   }

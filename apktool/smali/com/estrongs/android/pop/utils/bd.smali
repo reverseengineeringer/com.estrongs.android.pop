@@ -1,48 +1,30 @@
 .class final Lcom/estrongs/android/pop/utils/bd;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/estrongs/android/ui/pcs/n;
-
-
-# instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/esclasses/ESActivity;
-
-.field final synthetic b:Lcom/estrongs/android/ui/pcs/r;
-
-.field final synthetic c:Ljava/util/List;
+.super Lcom/estrongs/android/ui/dialog/jh;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/esclasses/ESActivity;Lcom/estrongs/android/ui/pcs/r;Ljava/util/List;)V
+.method constructor <init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/a/a;Z)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/utils/bd;->a:Lcom/estrongs/android/pop/esclasses/ESActivity;
-
-    iput-object p2, p0, Lcom/estrongs/android/pop/utils/bd;->b:Lcom/estrongs/android/ui/pcs/r;
-
-    iput-object p3, p0, Lcom/estrongs/android/pop/utils/bd;->c:Ljava/util/List;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/estrongs/android/ui/dialog/jh;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/a/a;Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(ZLjava/lang/String;Ljava/lang/String;)V
-    .locals 3
+.method protected a()Ljava/lang/String;
+    .locals 1
 
-    if-eqz p1, :cond_0
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/utils/bd;->a:Lcom/estrongs/android/pop/esclasses/ESActivity;
+    return-object v0
+.end method
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/utils/bd;->b:Lcom/estrongs/android/ui/pcs/r;
+.method protected b()Ljava/lang/String;
+    .locals 1
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/utils/bd;->c:Ljava/util/List;
+    const/4 v0, 0x0
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/pop/utils/aj;->a(Lcom/estrongs/android/pop/esclasses/ESActivity;Lcom/estrongs/android/ui/pcs/r;Ljava/util/List;)V
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

@@ -23,7 +23,23 @@
 
 # virtual methods
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
-    .locals 0
+    .locals 2
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bo;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->h:Landroid/view/View;
+
+    const v1, 0x7f0e0076
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    const v1, 0x7f020425
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     return-void
 .end method

@@ -14,7 +14,7 @@ class b
   
   public boolean onInterceptTouchEvent(MotionEvent paramMotionEvent)
   {
-    label80:
+    label70:
     do
     {
       do
@@ -26,10 +26,10 @@ class b
             if (!a.a(a)) {
               return true;
             }
-            if ((a.b()) && (a.d))
+            if (a.b())
             {
               if (paramMotionEvent.getAction() != 0) {
-                break label80;
+                break label70;
               }
               a.a(a, (int)paramMotionEvent.getX());
               a.b(a, (int)paramMotionEvent.getY());

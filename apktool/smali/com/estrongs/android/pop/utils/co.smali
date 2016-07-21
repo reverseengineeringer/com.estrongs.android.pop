@@ -1,19 +1,22 @@
-.class Lcom/estrongs/android/pop/utils/co;
+.class public Lcom/estrongs/android/pop/utils/co;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "NewApi"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/utils/cm;
+.field private a:Landroid/os/StrictMode$ThreadPolicy;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/utils/cm;)V
+.method public constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/pop/utils/co;->a:Lcom/estrongs/android/pop/utils/cm;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,12 +25,56 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 1
+.method public a()V
+    .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/utils/co;->a:Lcom/estrongs/android/pop/utils/cm;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/utils/cm;->a(Lcom/estrongs/android/pop/utils/cm;)V
+    const/16 v1, 0x9
 
+    if-le v0, v1, :cond_0
+
+    new-instance v0, Landroid/os/StrictMode$ThreadPolicy$Builder;
+
+    invoke-direct {v0}, Landroid/os/StrictMode$ThreadPolicy$Builder;-><init>()V
+
+    invoke-virtual {v0}, Landroid/os/StrictMode$ThreadPolicy$Builder;->permitAll()Landroid/os/StrictMode$ThreadPolicy$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/StrictMode$ThreadPolicy$Builder;->build()Landroid/os/StrictMode$ThreadPolicy;
+
+    move-result-object v0
+
+    invoke-static {}, Landroid/os/StrictMode;->getThreadPolicy()Landroid/os/StrictMode$ThreadPolicy;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/estrongs/android/pop/utils/co;->a:Landroid/os/StrictMode$ThreadPolicy;
+
+    invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public b()V
+    .locals 2
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x9
+
+    if-le v0, v1, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/utils/co;->a:Landroid/os/StrictMode$ThreadPolicy;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/utils/co;->a:Landroid/os/StrictMode$ThreadPolicy;
+
+    invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
+
+    :cond_0
     return-void
 .end method

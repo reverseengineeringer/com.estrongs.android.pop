@@ -1,26 +1,16 @@
 package com.estrongs.android.pop.app;
 
-import android.content.ComponentName;
-import android.content.pm.PackageManager;
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class gx
-  implements Preference.OnPreferenceChangeListener
+  implements DialogInterface.OnClickListener
 {
-  gx(PopPreferenceActivity paramPopPreferenceActivity) {}
+  gx(gw paramgw) {}
   
-  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    paramPreference = a.getPackageManager();
-    ComponentName localComponentName = new ComponentName(a, UsbMonitorActivity.class);
-    if (((Boolean)paramObject).booleanValue())
-    {
-      paramPreference.setComponentEnabledSetting(localComponentName, 1, 1);
-      return true;
-    }
-    paramPreference.setComponentEnabledSetting(localComponentName, 2, 1);
-    return true;
+    paramDialogInterface.dismiss();
   }
 }
 

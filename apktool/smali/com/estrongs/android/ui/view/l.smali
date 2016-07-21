@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/util/e;
+.implements Lcom/estrongs/android/util/d;
 
 
 # instance fields
@@ -39,7 +39,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/estrongs/android/util/f;->a:[Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/util/e;->a:[Ljava/lang/String;
 
     iget-object v2, p0, Lcom/estrongs/android/ui/view/l;->a:Lcom/estrongs/android/ui/view/k;
 

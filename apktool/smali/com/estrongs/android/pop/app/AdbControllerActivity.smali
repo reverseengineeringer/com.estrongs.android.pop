@@ -1,22 +1,22 @@
 .class public Lcom/estrongs/android/pop/app/AdbControllerActivity;
-.super Lcom/estrongs/android/pop/esclasses/ESActivity;
+.super Lcom/estrongs/android/pop/esclasses/ESResourceActivity;
 
 
 # instance fields
 .field a:Z
 
-.field private b:Lcom/estrongs/android/util/a;
+.field private b:Lcom/estrongs/android/j/c;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;-><init>()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/AdbControllerActivity;->b:Lcom/estrongs/android/util/a;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/AdbControllerActivity;->b:Lcom/estrongs/android/j/c;
 
     const/4 v0, 0x0
 
@@ -30,7 +30,7 @@
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 0
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     return-void
 .end method
@@ -38,7 +38,7 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 5
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;->onCreate(Landroid/os/Bundle;)V
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/AdbControllerActivity;->getIntent()Landroid/content/Intent;
 
@@ -49,6 +49,12 @@
     move-result-object v0
 
     if-eqz v0, :cond_1
+
+    invoke-static {}, Lcom/estrongs/android/util/bk;->p()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
 
     const-string v1, "adbRemoteIp"
 
@@ -66,9 +72,9 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {v1}, Lcom/estrongs/android/c/h;->c(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/estrongs/android/g/f;->c(Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/estrongs/android/c/a;->b()Z
+    invoke-static {}, Lcom/estrongs/android/g/a;->b()Z
 
     :try_start_0
     new-instance v2, Landroid/content/Intent;
@@ -119,7 +125,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v1}, Lcom/estrongs/android/c/h;->d(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/estrongs/android/g/f;->d(Ljava/lang/String;)V
 
     invoke-static {}, Lcom/estrongs/android/ftp/a;->e()Lcom/estrongs/android/ftp/a;
 
@@ -152,42 +158,24 @@
 .end method
 
 .method protected onPause()V
-    .locals 1
+    .locals 0
 
-    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onPause()V
+    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;->onPause()V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AdbControllerActivity;->b:Lcom/estrongs/android/util/a;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AdbControllerActivity;->b:Lcom/estrongs/android/util/a;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/util/a;->c()Z
-
-    :cond_0
     return-void
 .end method
 
 .method protected onResume()V
     .locals 1
 
-    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onResume()V
+    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;->onResume()V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AdbControllerActivity;->b:Lcom/estrongs/android/util/a;
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/AdbControllerActivity;->a:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AdbControllerActivity;->b:Lcom/estrongs/android/util/a;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/util/a;->b()Z
-
-    :cond_0
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/AdbControllerActivity;->a:Z
-
-    if-eqz v0, :cond_1
-
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/AdbControllerActivity;->finish()V
 
-    :cond_1
+    :cond_0
     return-void
 .end method

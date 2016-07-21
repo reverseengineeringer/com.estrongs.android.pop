@@ -1,250 +1,142 @@
 .class public Lcom/estrongs/fs/impl/j/a;
-.super Lcom/estrongs/fs/a;
+.super Ljava/lang/Object;
 
-
-# instance fields
-.field private a:Lcom/estrongs/android/pop/netfs/NetFileInfo;
+# interfaces
+.implements Lcom/estrongs/fs/u;
 
 
 # direct methods
-.method public constructor <init>(Lcom/estrongs/android/pop/netfs/NetFileInfo;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
-    iget-object v0, p1, Lcom/estrongs/android/pop/netfs/NetFileInfo;->path:Ljava/lang/String;
-
-    invoke-direct {p0, v0}, Lcom/estrongs/fs/a;-><init>(Ljava/lang/String;)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/estrongs/fs/impl/j/a;->a:Lcom/estrongs/android/pop/netfs/NetFileInfo;
-
-    iput-object p1, p0, Lcom/estrongs/fs/impl/j/a;->a:Lcom/estrongs/android/pop/netfs/NetFileInfo;
-
-    iget-object v0, p1, Lcom/estrongs/android/pop/netfs/NetFileInfo;->name:Ljava/lang/String;
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/fs/impl/j/a;->setName(Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/fs/a;->path:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public b(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/fs/a;->absolutePath:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method protected canDelete()Z
-    .locals 2
-
-    iget-object v0, p0, Lcom/estrongs/fs/impl/j/a;->a:Lcom/estrongs/android/pop/netfs/NetFileInfo;
-
-    iget-boolean v0, v0, Lcom/estrongs/android/pop/netfs/NetFileInfo;->isDirectory:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/fs/impl/j/a;->a:Lcom/estrongs/android/pop/netfs/NetFileInfo;
-
-    iget v0, v0, Lcom/estrongs/android/pop/netfs/NetFileInfo;->folder_type:I
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/fs/impl/j/a;->a:Lcom/estrongs/android/pop/netfs/NetFileInfo;
-
-    iget v0, v0, Lcom/estrongs/android/pop/netfs/NetFileInfo;->folder_type:I
-
-    const/16 v1, 0x40
-
-    if-eq v0, v1, :cond_0
+.method public a(Ljava/lang/String;)Lcom/estrongs/fs/h;
+    .locals 1
 
     const/4 v0, 0x0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    goto :goto_0
-.end method
-
-.method protected canRead()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method protected canWrite()Z
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/estrongs/fs/impl/j/a;->canDelete()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public createdTime()J
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method protected doGetFileType()Lcom/estrongs/fs/m;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/fs/impl/j/a;->a:Lcom/estrongs/android/pop/netfs/NetFileInfo;
-
-    iget-boolean v0, v0, Lcom/estrongs/android/pop/netfs/NetFileInfo;->isDirectory:Z
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lcom/estrongs/fs/m;->a:Lcom/estrongs/fs/m;
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    sget-object v0, Lcom/estrongs/fs/m;->b:Lcom/estrongs/fs/m;
-
-    goto :goto_0
-.end method
-
-.method public exists()Z
-    .locals 2
-
-    :try_start_0
-    iget-object v0, p0, Lcom/estrongs/fs/impl/j/a;->a:Lcom/estrongs/android/pop/netfs/NetFileInfo;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/netfs/NetFileInfo;->path:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/estrongs/fs/impl/j/b;->e(Ljava/lang/String;)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result v0
-
-    return v0
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Lcom/estrongs/fs/FileSystemException;
-
-    invoke-direct {v1, v0}, Lcom/estrongs/fs/FileSystemException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-.end method
-
-.method public getFileType()Lcom/estrongs/fs/m;
-    .locals 2
-
-    iget-object v0, p0, Lcom/estrongs/fs/impl/j/a;->type:Lcom/estrongs/fs/m;
-
-    sget-object v1, Lcom/estrongs/fs/m;->M:Lcom/estrongs/fs/m;
-
-    if-ne v0, v1, :cond_0
-
-    invoke-virtual {p0}, Lcom/estrongs/fs/impl/j/a;->doGetFileType()Lcom/estrongs/fs/m;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/fs/impl/j/a;->type:Lcom/estrongs/fs/m;
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/fs/impl/j/a;->type:Lcom/estrongs/fs/m;
 
     return-object v0
 .end method
 
-.method public hasPermission(I)Z
+.method public a(Ljava/lang/String;Lcom/estrongs/android/util/TypedMap;)Ljava/io/OutputStream;
     .locals 1
-
-    packed-switch p1, :pswitch_data_0
 
     const/4 v0, 0x0
 
-    :goto_0
-    return v0
-
-    :pswitch_0
-    invoke-virtual {p0}, Lcom/estrongs/fs/impl/j/a;->canRead()Z
-
-    move-result v0
-
-    goto :goto_0
-
-    :pswitch_1
-    invoke-virtual {p0}, Lcom/estrongs/fs/impl/j/a;->canWrite()Z
-
-    move-result v0
-
-    goto :goto_0
-
-    :pswitch_2
-    invoke-virtual {p0}, Lcom/estrongs/fs/impl/j/a;->canDelete()Z
-
-    move-result v0
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-    .end packed-switch
+    return-object v0
 .end method
 
-.method public lastAccessed()J
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public lastModified()J
-    .locals 2
-
-    iget-object v0, p0, Lcom/estrongs/fs/impl/j/a;->a:Lcom/estrongs/android/pop/netfs/NetFileInfo;
-
-    iget-wide v0, v0, Lcom/estrongs/android/pop/netfs/NetFileInfo;->lastModifiedTime:J
-
-    return-wide v0
-.end method
-
-.method public length()J
-    .locals 2
-
-    iget-object v0, p0, Lcom/estrongs/fs/impl/j/a;->a:Lcom/estrongs/android/pop/netfs/NetFileInfo;
-
-    iget-wide v0, v0, Lcom/estrongs/android/pop/netfs/NetFileInfo;->size:J
-
-    return-wide v0
-.end method
-
-.method public toString()Ljava/lang/String;
+.method public a(Ljava/lang/String;Z)Ljava/io/OutputStream;
     .locals 1
 
-    invoke-virtual {p0}, Lcom/estrongs/fs/impl/j/a;->getAbsolutePath()Ljava/lang/String;
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public a(Lcom/estrongs/fs/h;Lcom/estrongs/fs/i;Lcom/estrongs/android/util/TypedMap;)Ljava/util/List;
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/estrongs/fs/h;",
+            "Lcom/estrongs/fs/i;",
+            "Lcom/estrongs/android/util/TypedMap;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Lcom/estrongs/fs/h;",
+            ">;"
+        }
+    .end annotation
+
+    invoke-static {}, Lcom/estrongs/android/pop/app/finder/a;->a()Lcom/estrongs/android/pop/app/finder/a;
 
     move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/finder/a;->h()Lcom/estrongs/android/pop/app/finder/c;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-direct {v2}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/finder/c;->a()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    new-instance v4, Lcom/estrongs/android/pop/app/finder/data/d;
+
+    invoke-direct {v4, v0}, Lcom/estrongs/android/pop/app/finder/data/d;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/finder/c;->b()Z
+
+    move-result v0
+
+    invoke-virtual {v4, v0}, Lcom/estrongs/android/pop/app/finder/data/d;->a(Z)V
+
+    invoke-static {}, Lcom/estrongs/fs/d;->a()Lcom/estrongs/fs/d;
+
+    move-result-object v0
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v0, v4, v5, v1}, Lcom/estrongs/fs/d;->a(Lcom/estrongs/fs/h;ZLcom/estrongs/fs/i;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v2, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    goto :goto_0
+
+    :cond_0
+    return-object v2
+.end method
+
+.method public b(Ljava/lang/String;)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public c(Ljava/lang/String;)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public d(Ljava/lang/String;)Ljava/io/InputStream;
+    .locals 1
+
+    const/4 v0, 0x0
 
     return-object v0
 .end method

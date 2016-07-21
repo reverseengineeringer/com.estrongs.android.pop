@@ -1,12 +1,16 @@
 package com.estrongs.android.pop.app.service;
 
 import android.os.Handler;
-import com.estrongs.android.pop.utils.cc;
-import com.estrongs.android.util.ak;
+import com.estrongs.android.pop.app.f.c;
+import com.estrongs.android.pop.app.f.f;
+import com.estrongs.android.util.an;
+import java.util.ArrayList;
 
 class g
-  extends j
+  extends i
 {
+  private ArrayList<f> b = null;
+  
   public g(PerformanceAccelerateService paramPerformanceAccelerateService, Handler paramHandler)
   {
     super(paramHandler);
@@ -14,12 +18,19 @@ class g
   
   public void a()
   {
-    PerformanceAccelerateService.j(a);
+    if (b != null) {
+      c.a().a(PerformanceAccelerateService.a(a), PerformanceAccelerateService.b(a), b, false);
+    }
+  }
+  
+  public void a(ArrayList<f> paramArrayList)
+  {
+    b = paramArrayList;
   }
   
   public boolean b()
   {
-    return (ak.b()) && (cc.a());
+    return an.b();
   }
   
   protected int c()

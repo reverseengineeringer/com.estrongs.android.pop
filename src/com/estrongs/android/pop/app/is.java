@@ -1,26 +1,20 @@
 package com.estrongs.android.pop.app;
 
-import android.os.Handler;
-import android.view.View;
-import com.estrongs.android.ui.view.ar;
+import android.widget.EditText;
+import com.estrongs.android.view.dx;
+import com.estrongs.android.widget.f;
+import com.estrongs.fs.h;
 
 class is
-  implements ar
+  implements dx
 {
-  is(PopVideoPlayer paramPopVideoPlayer) {}
+  is(iq paramiq, f paramf) {}
   
-  public void a()
+  public void a(h paramh)
   {
-    PopVideoPlayer.f(a).removeMessages(7);
-    PopVideoPlayer.f(a).sendMessageDelayed(PopVideoPlayer.f(a).obtainMessage(7), 2000L);
-    PopVideoPlayer.d(a, false);
-  }
-  
-  public void b()
-  {
-    PopVideoPlayer.d(a, true);
-    PopVideoPlayer.f(a).removeMessages(7);
-    a.b.setVisibility(8);
+    paramh = paramh.getPath();
+    b.a.setText(paramh);
+    a.k();
   }
 }
 

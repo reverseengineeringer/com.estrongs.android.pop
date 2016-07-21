@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/e/w;
+.field final synthetic a:Lcom/estrongs/android/ui/e/cb;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/w;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/cb;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/ce;->a:Lcom/estrongs/android/ui/e/w;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/ce;->a:Lcom/estrongs/android/ui/e/cb;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,32 +22,26 @@
 
 
 # virtual methods
-.method public onMenuItemClick(Landroid/view/MenuItem;)Z
+.method public onClick(Landroid/view/View;)V
     .locals 2
 
-    const/4 v1, 0x1
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/ce;->a:Lcom/estrongs/android/ui/e/cb;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/ce;->a:Lcom/estrongs/android/ui/e/w;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/w;->b(Lcom/estrongs/android/ui/e/w;)Lcom/estrongs/android/ui/view/by;
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/cb;->a(Lcom/estrongs/android/ui/e/cb;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/by;->a()Z
+    iget-object v1, p0, Lcom/estrongs/android/ui/e/ce;->a:Lcom/estrongs/android/ui/e/cb;
 
-    move-result v0
+    invoke-static {v1}, Lcom/estrongs/android/ui/e/cb;->a(Lcom/estrongs/android/ui/e/cb;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
-    if-eqz v0, :cond_0
+    move-result-object v1
 
-    :goto_0
-    return v1
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->B()Lcom/estrongs/android/pop/app/c/i;
 
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/ce;->a:Lcom/estrongs/android/ui/e/w;
+    move-result-object v1
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/w;->k:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->b(Lcom/estrongs/android/pop/app/c/i;)V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->x()V
-
-    goto :goto_0
+    return-void
 .end method

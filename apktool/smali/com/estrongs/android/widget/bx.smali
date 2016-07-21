@@ -1,21 +1,34 @@
-.class Lcom/estrongs/android/widget/bx;
+.class public Lcom/estrongs/android/widget/bx;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/estrongs/android/widget/ah;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/widget/bw;
+.field protected b:I
+
+.field protected c:Lcom/estrongs/android/widget/ag;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/widget/bw;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/widget/bx;->a:Lcom/estrongs/android/widget/bw;
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/estrongs/android/widget/bx;->b:I
+
+    new-instance v0, Lcom/estrongs/android/widget/by;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/widget/by;-><init>(Lcom/estrongs/android/widget/bx;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/widget/bx;->c:Lcom/estrongs/android/widget/ag;
+
+    new-instance v0, Lcom/estrongs/android/widget/bz;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/widget/bz;-><init>(Lcom/estrongs/android/widget/bx;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/widget/bx;->c:Lcom/estrongs/android/widget/ag;
 
     return-void
 .end method

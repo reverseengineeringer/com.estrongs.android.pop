@@ -2,7 +2,9 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemSelectedListener;
+.implements Lcom/estrongs/chromecast/CastDeviceListener;
+.implements Lcom/estrongs/chromecast/ChromeCastConnectionListener;
+.implements Lcom/estrongs/chromecast/RemoteMediaPlayerListener;
 
 
 # instance fields
@@ -22,47 +24,119 @@
 
 
 # virtual methods
-.method public onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public onConnected()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onConnectionFailed()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onConnectionSuspended()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onDeviceAdded(Lcom/estrongs/chromecast/CastDeviceInfo;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onDeviceRemoved(Lcom/estrongs/chromecast/CastDeviceInfo;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onDeviceSelected(Lcom/estrongs/chromecast/CastDeviceInfo;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onDeviceUnSelected(Lcom/estrongs/chromecast/CastDeviceInfo;)V
+    .locals 1
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/cf;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
-    iget v0, v0, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->c:I
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->isFinishing()Z
 
-    if-eq v0, p3, :cond_0
+    move-result v0
+
+    if-nez v0, :cond_0
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/cf;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/cf;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
-
-    invoke-static {v1}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->c(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)Z
-
-    move-result v1
-
-    invoke-virtual {v0, p3, v1}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->a(IZ)V
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->s(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)V
 
     :cond_0
     return-void
 .end method
 
-.method public onNothingSelected(Landroid/widget/AdapterView;)V
+.method public onDeviceVolumeChanged(Lcom/estrongs/chromecast/CastDeviceInfo;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;)V"
-        }
-    .end annotation
 
     return-void
+.end method
+
+.method public onDisconnected()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/cf;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->isFinishing()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/cf;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->s(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public onStatusUpdated(I)V
+    .locals 3
+
+    const/4 v2, 0x1
+
+    const/16 v0, -0x3e9
+
+    if-ne p1, v0, :cond_1
+
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+
+    move-result-object v0
+
+    const v1, 0x7f08067f
+
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    const/16 v0, -0x3e8
+
+    if-ne p1, v0, :cond_0
+
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+
+    move-result-object v0
+
+    const v1, 0x7f08049d
+
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
+
+    goto :goto_0
 .end method

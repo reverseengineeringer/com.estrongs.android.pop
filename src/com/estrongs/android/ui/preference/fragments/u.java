@@ -1,24 +1,17 @@
 package com.estrongs.android.ui.preference.fragments;
 
-import android.app.ProgressDialog;
 import android.preference.Preference;
-import com.estrongs.android.ui.view.ag;
+import android.preference.Preference.OnPreferenceClickListener;
 
 class u
-  implements Runnable
+  implements Preference.OnPreferenceClickListener
 {
   u(CleanPreferenceFragment paramCleanPreferenceFragment) {}
   
-  public void run()
+  public boolean onPreferenceClick(Preference paramPreference)
   {
-    CleanPreferenceFragment.b(a).setEnabled(false);
-    try
-    {
-      CleanPreferenceFragment.c(a).dismiss();
-      ag.a(a.getActivity(), 2131427830, 0);
-      return;
-    }
-    catch (IllegalArgumentException localIllegalArgumentException) {}
+    CleanPreferenceFragment.a(a);
+    return true;
   }
 }
 

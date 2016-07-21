@@ -1,132 +1,34 @@
 package com.baidu.mobstat;
 
-import android.content.Context;
-import com.baidu.kirin.KirinConfig;
-import org.json.JSONException;
-import org.json.JSONObject;
+import java.util.Comparator;
 
-public class h
+class h
+  implements Comparator<i>
 {
-  protected Context a;
-  protected String b;
-  protected String c;
-  protected JSONObject d;
-  protected JSONObject e;
-  protected boolean f;
-  private int g = -1;
+  h(g paramg) {}
   
-  h(Context paramContext, String paramString)
+  public int a(i parami1, i parami2)
   {
-    a = paramContext;
-    b = (KirinConfig.PREURL + paramString);
-    n.a("PostUrl: " + b);
-    d = new JSONObject();
-    try
+    int j = b - b;
+    int i = j;
+    if (j == 0)
     {
-      d.put("appkey", f.b(a));
-      d.put("version_code", f.d(a));
-      d.put("version_name", f.c(a));
-      d.put("deviceid", f.h(paramContext));
-      d.put("channel", f.a(paramContext));
-      d.put("sdk_version", GetReverse.getCooperService(paramContext).getMTJSDKVersion());
-      d.put("sdk_tag", "mtj");
-      b();
-      return;
-    }
-    catch (JSONException paramContext)
-    {
-      for (;;)
-      {
-        paramContext.printStackTrace();
+      if ((!d) || (!d)) {
+        break label37;
       }
+      i = 0;
     }
-  }
-  
-  public JSONObject a()
-  {
-    return d;
-  }
-  
-  public void a(String paramString, Object paramObject)
-  {
-    try
+    label37:
+    do
     {
-      d.put(paramString, paramObject);
-      return;
-    }
-    catch (JSONException paramString)
-    {
-      paramString.printStackTrace();
-    }
-  }
-  
-  protected void b() {}
-  
-  public JSONObject c()
-  {
-    if (f.p(a)) {}
-    for (;;)
-    {
-      try
-      {
-        n.a(c + " send Content is:" + d.toString());
-        localObject = k.a(d.toString());
-        localObject = p.a(b, (String)localObject);
-        try
-        {
-          g = ((o)localObject).a();
-          if (!((o)localObject).b())
-          {
-            n.c(c + " : " + ((o)localObject).c());
-            f = false;
-            if (!f) {
-              continue;
-            }
-            e = ((o)localObject).d();
-            e();
-            return e;
-          }
-          if (g != 0) {
-            continue;
-          }
-          n.a(c + " : " + ((o)localObject).c());
-          f = true;
-          continue;
-          localException1.printStackTrace();
-        }
-        catch (Exception localException1) {}
+      return i;
+      if (d) {
+        return -1;
       }
-      catch (Exception localException2)
-      {
-        JSONObject localJSONObject;
-        Object localObject = null;
-        continue;
-      }
-      n.c("Fuck, " + c + " post Exception!");
-      f = false;
-      continue;
-      n.c(c + "Backend return Code is not zeror, is : " + g);
-      f = false;
-      e = ((o)localObject).d();
-      f();
-      localJSONObject = e;
-      return localJSONObject;
-      f = false;
-      n.a("network has sth wrong!");
-      localObject = null;
-    }
-    f();
-    return null;
+      i = j;
+    } while (!d);
+    return 1;
   }
-  
-  public int d()
-  {
-    return g;
-  }
-  
-  protected void e() {}
-  
-  protected void f() {}
 }
 
 /* Location:

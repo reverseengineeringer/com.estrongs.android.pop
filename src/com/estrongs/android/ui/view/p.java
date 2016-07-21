@@ -1,6 +1,6 @@
 package com.estrongs.android.ui.view;
 
-import com.estrongs.android.util.am;
+import com.estrongs.android.util.ap;
 import java.text.MessageFormat;
 
 class p
@@ -11,9 +11,9 @@ class p
   public void run()
   {
     if (b.m(a.a).equals("sftp")) {}
-    for (String str = MessageFormat.format(b.e(a.a, 2131427893), new Object[] { "SFTP(" + am.a(b.k(a.a)) + ")" });; str = MessageFormat.format(b.f(a.a, 2131427893), new Object[] { "FTP(" + am.a(b.k(a.a)) + ")" }))
+    for (String str = MessageFormat.format(b.e(a.a, 2131232327), new Object[] { "SFTP(" + ap.a(b.k(a.a)) + ")" });; str = MessageFormat.format(b.f(a.a, 2131232327), new Object[] { "FTP(" + ap.a(b.k(a.a)) + ")" }))
     {
-      ag.a(b.n(a.a), str, 1);
+      ak.a(b.n(a.a), str, 1);
       return;
     }
   }

@@ -1,25 +1,16 @@
 package com.estrongs.android.ui.preference.fragments;
 
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
-import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.ui.preference.CustomListPreference;
-import com.estrongs.android.util.bd;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class bb
-  implements Preference.OnPreferenceChangeListener
+  implements DialogInterface.OnClickListener
 {
-  bb(SearchEnginePreferenceFragment paramSearchEnginePreferenceFragment, CustomListPreference paramCustomListPreference) {}
+  bb(PasswordPreferenceFragment paramPasswordPreferenceFragment) {}
   
-  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    CharSequence localCharSequence = a.a(paramObject.toString());
-    if (bd.b(localCharSequence)) {
-      a.setSummary(localCharSequence);
-    }
-    paramPreference = paramPreference.getKey();
-    FexApplication.a().a(paramPreference, paramObject);
-    return true;
+    paramDialogInterface.dismiss();
   }
 }
 

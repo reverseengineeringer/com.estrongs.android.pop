@@ -2,10 +2,10 @@ package com.estrongs.android.pop.view.utils;
 
 import android.app.Activity;
 import android.app.NotificationManager;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.am;
-import com.estrongs.fs.impl.b.f;
-import com.estrongs.fs.impl.local.l;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.impl.b.g;
+import com.estrongs.fs.impl.local.m;
 import java.util.List;
 
 final class i
@@ -36,8 +36,8 @@ final class i
       {
         if (k < a.size())
         {
-          ??? = am.d((String)a.get(k));
-          AppRunner.a(b, b.getText(2131427698) + "...", (String)???, n, true);
+          ??? = ap.d((String)a.get(k));
+          AppRunner.a(b, b.getText(2131230974) + "...", (String)???, n, true);
           ??? = (String)a.get(k);
           if (??? == null) {
             break label611;
@@ -46,10 +46,10 @@ final class i
           boolean bool;
           if (c != null)
           {
-            localObject3 = (f)c.get(k);
-            if (((f)localObject3).b())
+            localObject3 = (g)c.get(k);
+            if (((g)localObject3).b())
             {
-              bool = AppRunner.b(b, (String)???, (f)localObject3);
+              bool = AppRunner.b(b, (String)???, (g)localObject3);
               if (bool)
               {
                 m = i + 1;
@@ -67,13 +67,13 @@ final class i
             }
             else
             {
-              bool = l.b((String)???, true);
+              bool = m.b((String)???, true);
               continue;
             }
           }
           else
           {
-            bool = l.b((String)???, true);
+            bool = m.b((String)???, true);
             continue;
           }
           m = j + 1;
@@ -97,24 +97,24 @@ final class i
       {
         if (i == 1)
         {
-          ??? = am.d((String)a.get(0)) + " " + b.getText(2131427699);
-          ag.a(b, (CharSequence)???, 1);
+          ??? = ap.d((String)a.get(0)) + " " + b.getText(2131230973);
+          ak.a(b, (CharSequence)???, 1);
           return;
         }
-        str = am.d((String)a.get(0)) + " " + b.getText(2131427700);
+        str = ap.d((String)a.get(0)) + " " + b.getText(2131230969);
         continue;
       }
       if (i > 0)
       {
         if (j == 0) {
-          str = "" + i + " " + b.getText(2131427702);
+          str = "" + i + " " + b.getText(2131230972);
         } else {
-          str = "" + i + " " + b.getText(2131427702) + ", " + j + " " + b.getText(2131427703);
+          str = "" + i + " " + b.getText(2131230972) + ", " + j + " " + b.getText(2131230971);
         }
       }
       else
       {
-        str = "" + j + " " + b.getText(2131427703);
+        str = "" + j + " " + b.getText(2131230971);
         continue;
         label611:
         m = i;

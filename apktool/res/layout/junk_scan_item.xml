@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:id="@id/junk_scan_item" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_20" android:layout_marginRight="@dimen/dp_20"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/junk_scan_fram_icon" android:layout_width="@dimen/dp_36" android:layout_height="@dimen/dp_36" android:layout_marginTop="@dimen/dp_8" android:layout_marginRight="@dimen/dp_10" android:layout_marginBottom="@dimen/dp_8" android:src="@drawable/ic_launcher" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/dp_15" android:textColor="@color/c_cc000000" android:ellipsize="end" android:id="@id/junk_scan_item_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ItemName" android:singleLine="true" android:layout_toLeftOf="@id/junk_scan_item_size" android:layout_toRightOf="@id/junk_scan_fram_icon" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/dp_15" android:textColor="@color/c_66000000" android:id="@id/junk_scan_item_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:singleLine="true" android:layout_toLeftOf="@id/junk_scan_item_ok_fl" android:layout_centerVertical="true" />
+    <FrameLayout android:id="@id/junk_scan_item_ok_fl" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_15" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <ProgressBar android:layout_gravity="center" android:id="@id/junk_scan_item_progressbar" android:visibility="visible" android:layout_width="@dimen/dp_20" android:layout_height="@dimen/dp_20" android:indeterminateDrawable="@drawable/junk_scan_progress_small" android:indeterminateDuration="700" />
+        <ImageView android:layout_gravity="center" android:id="@id/junk_scan_item_ok" android:visibility="invisible" android:layout_width="@dimen/dp_20" android:layout_height="@dimen/dp_20" android:src="@drawable/home_junk_icon_scan_ok" />
+    </FrameLayout>
+</RelativeLayout>

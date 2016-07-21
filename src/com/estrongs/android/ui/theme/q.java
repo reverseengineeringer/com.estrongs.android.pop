@@ -1,28 +1,21 @@
 package com.estrongs.android.ui.theme;
 
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.View.OnTouchListener;
+import android.content.Intent;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.ui.adapter.dr;
 
 class q
-  implements View.OnTouchListener
+  implements MenuItem.OnMenuItemClickListener
 {
-  q(ThemeActivity paramThemeActivity, int paramInt) {}
+  q(ThemeActivity paramThemeActivity) {}
   
-  public boolean onTouch(View paramView, MotionEvent paramMotionEvent)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    switch (paramMotionEvent.getAction())
-    {
-    }
-    for (;;)
-    {
-      return false;
-      paramView.setBackgroundResource(2130837770);
-      paramView.setPadding(a * 2, a, a * 2, a);
-      continue;
-      paramView.setBackgroundResource(2130838146);
-      paramView.setPadding(a * 2, a, a * 2, a);
-    }
+    paramMenuItem = new Intent(a, ModifyThemeActivity.class);
+    paramMenuItem.putExtra("theme_data_index", ThemeActivity.c(a).a());
+    a.startActivityForResult(paramMenuItem, 4132);
+    return true;
   }
 }
 

@@ -1,33 +1,21 @@
 package com.estrongs.android.view;
 
-import android.widget.ProgressBar;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.ui.pcs.c;
+import com.estrongs.fs.h;
 
 class ek
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  ek(WebViewWrapper paramWebViewWrapper) {}
+  ek(ef paramef, h paramh) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    WebViewWrapper.e(a).setVisibility(0);
-    StringBuilder localStringBuilder;
-    WebViewWrapper localWebViewWrapper;
-    if (WebViewWrapper.c(a, a.v))
-    {
-      if (!a.v.contains("?")) {
-        break label99;
-      }
-      localStringBuilder = new StringBuilder();
-      localWebViewWrapper = a;
-    }
-    for (v += WebViewWrapper.av().replace("?", "&");; v += WebViewWrapper.av())
-    {
-      WebViewWrapper.f(a, a.v);
-      return;
-      label99:
-      localStringBuilder = new StringBuilder();
-      localWebViewWrapper = a;
-    }
+    c localc = new c(b.c.a.ag);
+    localc.a();
+    localc.a(new el(this));
+    paramDialogInterface.dismiss();
   }
 }
 

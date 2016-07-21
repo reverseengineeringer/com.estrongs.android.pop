@@ -8,7 +8,7 @@ import com.estrongs.fs.h;
 public class j
 {
   protected h a = null;
-  ct b;
+  cv b;
   private n c = null;
   private Activity d;
   private String e;
@@ -18,12 +18,12 @@ public class j
     d = paramActivity;
     a = paramh;
     c = new n(this, d);
-    paramActivity = c.aq();
-    b = new ct(paramActivity.getContext()).a(2131427577);
+    paramActivity = c.aE();
+    b = new cv(paramActivity.getContext()).a(2131232219);
     b.a(paramActivity);
-    b.f(2131427612, new k(this));
-    b.e(2131427608, new l(this));
-    b.d(2131427340, new m(this));
+    b.f(2131231096, new k(this));
+    b.e(2131232247, new l(this));
+    b.d(2131231265, new m(this));
   }
   
   public j a(DialogInterface.OnDismissListener paramOnDismissListener)

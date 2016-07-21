@@ -9,8 +9,8 @@ class dh
   
   public void run()
   {
-    a.b.d(2131428104);
-    ImageCommentActivity.j(a.b).findViewById(2131361935).setVisibility(8);
+    a.b.d(2131231847);
+    ImageCommentActivity.h(a.b).findViewById(2131624429).setVisibility(8);
   }
 }
 

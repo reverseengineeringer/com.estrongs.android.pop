@@ -8,7 +8,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/estrongs/android/pop/app/b/f;",
+            "Lcom/estrongs/android/pop/app/f/f;",
             ">;"
         }
     .end annotation
@@ -18,15 +18,15 @@
 
 .field private c:Z
 
-.field private d:Lcom/estrongs/android/pop/app/service/i;
+.field private d:Lcom/estrongs/android/pop/app/service/h;
 
 .field private e:Landroid/content/BroadcastReceiver;
 
 .field private f:Landroid/os/Handler;
 
-.field private g:Lcom/estrongs/android/pop/app/service/h;
+.field private g:Lcom/estrongs/android/pop/app/service/g;
 
-.field private h:Lcom/estrongs/android/pop/app/service/g;
+.field private h:Lcom/estrongs/android/pop/app/service/f;
 
 .field private i:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
@@ -34,7 +34,7 @@
             "Ljava/util/Map",
             "<",
             "Ljava/lang/String;",
-            "Lcom/estrongs/android/util/y;",
+            "Lcom/estrongs/android/util/aa;",
             ">;"
         }
     .end annotation
@@ -61,7 +61,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->d:Lcom/estrongs/android/pop/app/service/i;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->d:Lcom/estrongs/android/pop/app/service/h;
 
     return-void
 .end method
@@ -77,7 +77,7 @@
 .method static synthetic a(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)Ljava/lang/String;
     .locals 1
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->e()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->d()Ljava/lang/String;
 
     move-result-object v0
 
@@ -96,16 +96,16 @@
     .locals 4
 
     :try_start_0
-    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/e;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/i;->a(Landroid/content/Context;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_0
-    new-instance v0, Lcom/estrongs/android/pop/app/service/i;
+    new-instance v0, Lcom/estrongs/android/pop/app/service/h;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/service/i;-><init>(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/service/h;-><init>(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->d:Lcom/estrongs/android/pop/app/service/i;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->d:Lcom/estrongs/android/pop/app/service/h;
 
     new-instance v0, Landroid/os/Handler;
 
@@ -113,15 +113,7 @@
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->f:Landroid/os/Handler;
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->c()V
-
-    new-instance v0, Lcom/estrongs/android/pop/app/service/h;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->f:Landroid/os/Handler;
-
-    invoke-direct {v0, p0, v1}, Lcom/estrongs/android/pop/app/service/h;-><init>(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;Landroid/os/Handler;)V
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->g:Lcom/estrongs/android/pop/app/service/h;
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->b()V
 
     new-instance v0, Lcom/estrongs/android/pop/app/service/g;
 
@@ -129,7 +121,15 @@
 
     invoke-direct {v0, p0, v1}, Lcom/estrongs/android/pop/app/service/g;-><init>(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->h:Lcom/estrongs/android/pop/app/service/g;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->g:Lcom/estrongs/android/pop/app/service/g;
+
+    new-instance v0, Lcom/estrongs/android/pop/app/service/f;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->f:Landroid/os/Handler;
+
+    invoke-direct {v0, p0, v1}, Lcom/estrongs/android/pop/app/service/f;-><init>(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;Landroid/os/Handler;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->h:Lcom/estrongs/android/pop/app/service/f;
 
     sget-boolean v0, Lcom/estrongs/android/pop/z;->w:Z
 
@@ -149,29 +149,29 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/estrongs/android/pop/app/service/d;
+    new-instance v1, Lcom/estrongs/android/pop/app/service/c;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/service/d;-><init>(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/service/c;-><init>(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/FexApplication;->a(Lcom/estrongs/android/pop/g;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/FexApplication;->a(Lcom/estrongs/android/pop/h;)V
 
     :goto_1
     iget-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->a:Ljava/util/ArrayList;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/b/k;
+    new-instance v1, Lcom/estrongs/android/pop/app/f/k;
 
-    invoke-direct {v1}, Lcom/estrongs/android/pop/app/b/k;-><init>()V
+    invoke-direct {v1}, Lcom/estrongs/android/pop/app/f/k;-><init>()V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->h:Lcom/estrongs/android/pop/app/service/g;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->h:Lcom/estrongs/android/pop/app/service/f;
 
     const-wide/32 v2, 0xea60
 
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/pop/app/service/g;->a(J)V
+    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/pop/app/service/f;->a(J)V
 
     goto :goto_1
 
@@ -188,7 +188,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/estrongs/android/pop/a;->d:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/a;->f:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -274,15 +274,15 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/android/util/y;
+    check-cast v0, Lcom/estrongs/android/util/aa;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcom/estrongs/android/util/y;
+    new-instance v0, Lcom/estrongs/android/util/aa;
 
     iget-object v2, p1, Lcom/estrongs/android/pop/view/utils/v;->e:Ljava/lang/String;
 
-    invoke-direct {v0, v2}, Lcom/estrongs/android/util/y;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v2}, Lcom/estrongs/android/util/aa;-><init>(Ljava/lang/String;)V
 
     iget-object v2, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->i:Ljava/util/Map;
 
@@ -290,15 +290,15 @@
 
     invoke-interface {v2, v3, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/util/y;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/util/aa;->a(Ljava/lang/String;)V
 
-    new-instance v1, Lcom/estrongs/android/pop/app/service/f;
+    new-instance v1, Lcom/estrongs/android/pop/app/service/e;
 
-    invoke-direct {v1, p0, p1}, Lcom/estrongs/android/pop/app/service/f;-><init>(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;Lcom/estrongs/android/pop/view/utils/v;)V
+    invoke-direct {v1, p0, p1}, Lcom/estrongs/android/pop/app/service/e;-><init>(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;Lcom/estrongs/android/pop/view/utils/v;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/util/y;->a(Lcom/estrongs/android/util/ab;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/util/aa;->a(Lcom/estrongs/android/util/af;)V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/util/y;->c()V
+    invoke-virtual {v0}, Lcom/estrongs/android/util/aa;->c()V
 
     goto :goto_0
 .end method
@@ -401,79 +401,6 @@
 .end method
 
 .method private b()V
-    .locals 4
-
-    invoke-static {}, Lcom/estrongs/android/pop/utils/cc;->d()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/ad;->ar()J
-
-    move-result-wide v2
-
-    sub-long/2addr v0, v2
-
-    const-wide/32 v2, 0x19bfcc00
-
-    cmp-long v0, v0, v2
-
-    if-lez v0, :cond_0
-
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->aS()I
-
-    move-result v0
-
-    const/4 v1, 0x2
-
-    if-ge v0, v1, :cond_0
-
-    new-instance v0, Landroid/content/Intent;
-
-    const-class v1, Lcom/estrongs/android/pop/app/ESStatisticsActivity;
-
-    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const/high16 v1, 0x14800000
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->startActivity(Landroid/content/Intent;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method static synthetic c(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)Lcom/estrongs/android/pop/app/service/h;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->g:Lcom/estrongs/android/pop/app/service/h;
-
-    return-object v0
-.end method
-
-.method private c()V
     .locals 2
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->e:Landroid/content/BroadcastReceiver;
@@ -484,9 +411,9 @@
     return-void
 
     :cond_0
-    new-instance v0, Lcom/estrongs/android/pop/app/service/e;
+    new-instance v0, Lcom/estrongs/android/pop/app/service/d;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/service/e;-><init>(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/service/d;-><init>(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)V
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->e:Landroid/content/BroadcastReceiver;
 
@@ -509,7 +436,15 @@
     goto :goto_0
 .end method
 
-.method private d()V
+.method static synthetic c(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)Lcom/estrongs/android/pop/app/service/g;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->g:Lcom/estrongs/android/pop/app/service/g;
+
+    return-object v0
+.end method
+
+.method private c()V
     .locals 1
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->e:Landroid/content/BroadcastReceiver;
@@ -524,26 +459,18 @@
     return-void
 .end method
 
-.method static synthetic d(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->b()V
-
-    return-void
-.end method
-
-.method static synthetic e(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)Lcom/estrongs/android/pop/app/service/g;
+.method static synthetic d(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)Lcom/estrongs/android/pop/app/service/f;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->h:Lcom/estrongs/android/pop/app/service/g;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->h:Lcom/estrongs/android/pop/app/service/f;
 
     return-object v0
 .end method
 
-.method private e()Ljava/lang/String;
+.method private d()Ljava/lang/String;
     .locals 1
 
-    invoke-static {}, Lcom/estrongs/android/util/ak;->c()Ljava/lang/String;
+    invoke-static {}, Lcom/estrongs/android/util/an;->c()Ljava/lang/String;
 
     move-result-object v0
 
@@ -554,7 +481,7 @@
     return-object v0
 .end method
 
-.method static synthetic f(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)Ljava/lang/String;
+.method static synthetic e(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->b:Ljava/lang/String;
@@ -562,7 +489,7 @@
     return-object v0
 .end method
 
-.method private f()V
+.method private e()V
     .locals 5
 
     invoke-static {}, Lcom/estrongs/android/pop/view/utils/n;->b()Lcom/estrongs/android/pop/view/utils/n;
@@ -622,19 +549,21 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/utils/n;->c()V
+    const/4 v1, 0x1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->h:Lcom/estrongs/android/pop/app/service/g;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/utils/n;->a(Z)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->h:Lcom/estrongs/android/pop/app/service/f;
 
     const-wide/32 v2, 0xea60
 
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/pop/app/service/g;->a(J)V
+    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/pop/app/service/f;->a(J)V
 
     :cond_2
     return-void
 .end method
 
-.method static synthetic g(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)Z
+.method static synthetic f(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)Z
     .locals 1
 
     iget-boolean v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->c:Z
@@ -642,7 +571,7 @@
     return v0
 .end method
 
-.method static synthetic h(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)Ljava/util/ArrayList;
+.method static synthetic g(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)Ljava/util/ArrayList;
     .locals 1
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->a:Ljava/util/ArrayList;
@@ -650,7 +579,7 @@
     return-object v0
 .end method
 
-.method static synthetic i(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)Ljava/util/Map;
+.method static synthetic h(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)Ljava/util/Map;
     .locals 1
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->i:Ljava/util/Map;
@@ -658,10 +587,10 @@
     return-object v0
 .end method
 
-.method static synthetic j(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)V
+.method static synthetic i(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->f()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->e()V
 
     return-void
 .end method
@@ -671,52 +600,22 @@
 .method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->d:Lcom/estrongs/android/pop/app/service/i;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->d:Lcom/estrongs/android/pop/app/service/h;
 
     if-nez v0, :cond_0
 
     invoke-direct {p0}, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->a()V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->g:Lcom/estrongs/android/pop/app/service/h;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->g:Lcom/estrongs/android/pop/app/service/g;
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/service/h;->a(Ljava/util/ArrayList;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/service/g;->a(Ljava/util/ArrayList;)V
 
     :cond_0
-    sget-boolean v0, Lcom/estrongs/android/pop/z;->w:Z
-
-    if-eqz v0, :cond_1
-
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/FexApplication;->g()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/estrongs/android/pop/app/service/c;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/service/c;-><init>(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)V
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/FexApplication;->a(Lcom/estrongs/android/pop/g;)V
-
-    :goto_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->d:Lcom/estrongs/android/pop/app/service/i;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->d:Lcom/estrongs/android/pop/app/service/h;
 
     return-object v0
-
-    :cond_1
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->b()V
-
-    goto :goto_0
 .end method
 
 .method public onCreate()V
@@ -732,7 +631,7 @@
 
     invoke-super {p0}, Landroid/app/Service;->onDestroy()V
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->d()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->c()V
 
     new-instance v0, Landroid/content/Intent;
 
@@ -748,37 +647,19 @@
 .method public onStartCommand(Landroid/content/Intent;II)I
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->d:Lcom/estrongs/android/pop/app/service/i;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->d:Lcom/estrongs/android/pop/app/service/h;
 
     if-nez v0, :cond_0
 
     invoke-direct {p0}, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->a()V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->g:Lcom/estrongs/android/pop/app/service/h;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->g:Lcom/estrongs/android/pop/app/service/g;
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/service/h;->a(Ljava/util/ArrayList;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/service/g;->a(Ljava/util/ArrayList;)V
 
     :cond_0
-    sget-boolean v0, Lcom/estrongs/android/pop/z;->w:Z
-
-    if-eqz v0, :cond_1
-
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/FexApplication;->g()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    :cond_1
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->b()V
-
-    :cond_2
     const/4 v0, 0x1
 
     return v0
@@ -789,17 +670,17 @@
 
     const/4 v1, 0x0
 
-    invoke-static {}, Lcom/estrongs/android/pop/app/b/c;->a()Lcom/estrongs/android/pop/app/b/c;
+    invoke-static {}, Lcom/estrongs/android/pop/app/f/c;->a()Lcom/estrongs/android/pop/app/f/c;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/estrongs/android/pop/app/b/c;->a()Lcom/estrongs/android/pop/app/b/c;
+    invoke-static {}, Lcom/estrongs/android/pop/app/f/c;->a()Lcom/estrongs/android/pop/app/f/c;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/b/c;->a(Lcom/estrongs/android/pop/app/service/a;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/f/c;->a(Lcom/estrongs/android/pop/app/service/a;)V
 
     :cond_0
     iput-object v1, p0, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->j:Lcom/estrongs/android/pop/app/service/a;

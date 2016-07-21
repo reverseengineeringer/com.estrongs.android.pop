@@ -1,8 +1,8 @@
 package com.estrongs.old.fs.impl.sftp;
 
-import com.estrongs.android.util.am;
+import com.estrongs.android.util.ap;
 import com.estrongs.fs.a;
-import com.estrongs.fs.m;
+import com.estrongs.fs.w;
 import com.jcraft.jsch.SftpATTRS;
 
 public class e
@@ -14,7 +14,7 @@ public class e
   {
     super(paramString1);
     a = paramSftpATTRS;
-    setName(am.d(paramString1));
+    setName(ap.d(paramString1));
     if (paramString2 != null)
     {
       isLink = true;
@@ -37,12 +37,12 @@ public class e
     return a.a().indexOf(2) == 119;
   }
   
-  protected m doGetFileType()
+  protected w doGetFileType()
   {
     if (a.d()) {
-      return m.a;
+      return w.a;
     }
-    return m.b;
+    return w.b;
   }
   
   public boolean exists()

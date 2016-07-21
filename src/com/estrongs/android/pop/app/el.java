@@ -1,18 +1,22 @@
 package com.estrongs.android.pop.app;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.ui.view.by;
+import android.net.LocalSocket;
+import com.estrongs.android.nativetool.c;
 
 class el
-  implements View.OnClickListener
+  implements Runnable
 {
-  el(PopAudioPlayer paramPopAudioPlayer) {}
+  el(ek paramek) {}
   
-  public void onClick(View paramView)
+  public void run()
   {
-    PopAudioPlayer.h(a).a(true);
-    a.u();
+    PopAudioPlayer.l(a.a.a);
+    try
+    {
+      c.a().close();
+      return;
+    }
+    catch (Exception localException) {}
   }
 }
 

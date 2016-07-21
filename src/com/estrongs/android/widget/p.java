@@ -1,17 +1,23 @@
 package com.estrongs.android.widget;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
-import com.estrongs.android.view.dp;
+import com.estrongs.android.view.cr;
+import com.estrongs.android.view.dw;
+import com.estrongs.android.view.fv;
 
 class p
-  implements DialogInterface.OnDismissListener
+  implements dw
 {
-  p(g paramg) {}
+  p(f paramf) {}
   
-  public void onDismiss(DialogInterface paramDialogInterface)
+  public void a() {}
+  
+  public void a(cr paramcr, boolean paramBoolean)
   {
-    g.b(a).a_();
+    if (a.b != null)
+    {
+      f.b(a).i(a.b);
+      a.b = null;
+    }
   }
 }
 

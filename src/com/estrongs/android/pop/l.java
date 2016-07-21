@@ -1,31 +1,18 @@
 package com.estrongs.android.pop;
 
-import android.app.Activity;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.content.Intent;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.util.TypedMap;
 
 class l
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
-  l(h paramh, String paramString) {}
+  l(k paramk) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void run()
   {
-    paramDialogInterface = new Intent("android.intent.action.SEND");
-    paramDialogInterface.putExtra("android.intent.extra.EMAIL", new String[] { "contact@estrongs.com" });
-    paramDialogInterface.putExtra("android.intent.extra.SUBJECT", "Bug report - Net Access");
-    paramDialogInterface.putExtra("android.intent.extra.TEXT", a);
-    paramDialogInterface.setType("message/rfc822");
-    try
-    {
-      b.a.startActivity(paramDialogInterface);
-      return;
-    }
-    catch (Exception paramDialogInterface)
-    {
-      paramDialogInterface.printStackTrace();
-    }
+    TypedMap localTypedMap = new TypedMap();
+    localTypedMap.put("refresh", Boolean.valueOf(true));
+    ((FileExplorerActivity)a.b.a).c(a.a, localTypedMap);
   }
 }
 

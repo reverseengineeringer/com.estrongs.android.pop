@@ -3,7 +3,7 @@
 
 
 # instance fields
-.field private a:Lcom/estrongs/android/ui/theme/al;
+.field private a:Lcom/estrongs/android/ui/theme/at;
 
 .field private b:Landroid/app/NotificationManager;
 
@@ -32,15 +32,11 @@
 
     invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;->requestWindowFeature(I)Z
-
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    const v1, 0x7f020040
+    const v1, 0x7f0200bc
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setBackgroundDrawableResource(I)V
 
@@ -54,17 +50,17 @@
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;->b:Landroid/app/NotificationManager;
 
-    invoke-static {p0}, Lcom/estrongs/android/ui/theme/al;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
+    invoke-static {p0}, Lcom/estrongs/android/ui/theme/at;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;->a:Lcom/estrongs/android/ui/theme/al;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;->a:Lcom/estrongs/android/ui/theme/at;
 
-    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    const v1, 0x7f030058
+    const v1, 0x7f0300bb
 
     const/4 v2, 0x0
 
@@ -72,7 +68,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f0a01f8
+    const v0, 0x7f0e03b8
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -107,19 +103,9 @@
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;->a:Lcom/estrongs/android/ui/theme/al;
-
-    const v2, 0x7f0201af
-
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/theme/al;->a(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
     invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;->setContentView(Landroid/view/View;)V
 
-    const v0, 0x7f0a01f9
+    const v0, 0x7f0e03b9
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;->findViewById(I)Landroid/view/View;
 
@@ -127,13 +113,13 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/ck;
+    new-instance v1, Lcom/estrongs/android/pop/app/co;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ck;-><init>(Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/co;-><init>(Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a01fa
+    const v0, 0x7f0e03ba
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;->findViewById(I)Landroid/view/View;
 
@@ -141,9 +127,9 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/cl;
+    new-instance v1, Lcom/estrongs/android/pop/app/cp;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/cl;-><init>(Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/cp;-><init>(Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

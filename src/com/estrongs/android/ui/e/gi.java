@@ -1,15 +1,26 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.view.a.b;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.a.a;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.b.d;
+import com.estrongs.fs.h;
+import java.util.List;
 
 class gi
-  implements b
+  implements MenuItem.OnMenuItemClickListener
 {
-  gi(cp paramcp) {}
+  gi(cr paramcr) {}
   
-  public boolean a(co paramco)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    return (q) && (!r) && (F == 1) && (!t) && (!s);
+    paramMenuItem = cr.a(a);
+    if ((paramMenuItem.size() == 1) && ((((h)paramMenuItem.get(0)).getExtra("task") instanceof a))) {
+      new d(cr.b(a), (h)paramMenuItem.get(0)).a();
+    }
+    cr.b(a).B();
+    return false;
   }
 }
 

@@ -1,17 +1,18 @@
 package com.estrongs.android.view;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
+import android.os.Handler;
+import com.estrongs.a.a;
+import com.estrongs.a.a.l;
+import com.estrongs.a.a.m;
 
 class dl
-  extends BroadcastReceiver
+  implements l
 {
-  dl(dj paramdj) {}
+  dl(cr paramcr) {}
   
-  public void onReceive(Context paramContext, Intent paramIntent)
+  public void a(a parama, m paramm)
   {
-    dj.a(a, paramIntent);
+    a.W.post(new dm(this, paramm));
   }
 }
 

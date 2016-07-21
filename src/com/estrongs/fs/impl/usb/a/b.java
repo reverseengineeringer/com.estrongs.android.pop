@@ -1,6 +1,6 @@
 package com.estrongs.fs.impl.usb.a;
 
-import android.util.Log;
+import com.estrongs.android.util.l;
 import java.nio.ByteBuffer;
 
 public class b
@@ -32,7 +32,7 @@ public class b
     if (paramLong % e != 0L)
     {
       if (b) {
-        Log.w(a, "device offset not a multiple of block size");
+        l.d(a, "device offset not a multiple of block size");
       }
       ByteBuffer localByteBuffer = ByteBuffer.allocate(e);
       c.a(l2, localByteBuffer);
@@ -58,7 +58,7 @@ public class b
     if (paramLong % e != 0L)
     {
       if (b) {
-        Log.w(a, "device offset not a multiple of block size");
+        l.d(a, "device offset not a multiple of block size");
       }
       ByteBuffer localByteBuffer = ByteBuffer.allocate(e);
       c.a(l2, localByteBuffer);
@@ -92,6 +92,14 @@ public class b
       return 0L;
     }
     return f.c();
+  }
+  
+  public long f()
+  {
+    if (f == null) {
+      return 0L;
+    }
+    return f.d();
   }
 }
 

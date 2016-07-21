@@ -1,11 +1,11 @@
 .class public Lcom/estrongs/android/pop/app/ESUsePromptActivity;
-.super Lcom/estrongs/android/pop/esclasses/ESActivity;
+.super Lcom/estrongs/android/pop/esclasses/ESResourceActivity;
 
 
 # instance fields
-.field a:Lcom/estrongs/android/util/a;
+.field a:Lcom/estrongs/android/j/c;
 
-.field b:Lcom/estrongs/android/ui/dialog/cg;
+.field b:Lcom/estrongs/android/ui/dialog/ci;
 
 
 # direct methods
@@ -14,16 +14,16 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;-><init>()V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/ESUsePromptActivity;->a:Lcom/estrongs/android/util/a;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/ESUsePromptActivity;->a:Lcom/estrongs/android/j/c;
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/ESUsePromptActivity;->b:Lcom/estrongs/android/ui/dialog/cg;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/ESUsePromptActivity;->b:Lcom/estrongs/android/ui/dialog/ci;
 
     return-void
 .end method
 
-.method private a()Lcom/estrongs/android/ui/dialog/cg;
+.method private a()Lcom/estrongs/android/ui/dialog/ci;
     .locals 14
 
     const/4 v5, 0x0
@@ -31,11 +31,11 @@
     const-wide/16 v12, 0x0
 
     :try_start_0
-    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    const v1, 0x7f030050
+    const v1, 0x7f0300b1
 
     const/4 v2, 0x0
 
@@ -43,7 +43,7 @@
 
     move-result-object v6
 
-    const v0, 0x7f0a003d
+    const v0, 0x7f0e0076
 
     invoke-virtual {v6, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -51,7 +51,7 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    const v1, 0x7f0a0010
+    const v1, 0x7f0e00c7
 
     invoke-virtual {v6, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -59,7 +59,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f0a008f
+    const v2, 0x7f0e01ed
 
     invoke-virtual {v6, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -67,7 +67,7 @@
 
     check-cast v2, Landroid/widget/ProgressBar;
 
-    const v3, 0x7f0a00bd
+    const v3, 0x7f0e022e
 
     invoke-virtual {v6, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -75,7 +75,7 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    const v4, 0x7f0a00be
+    const v4, 0x7f0e0230
 
     invoke-virtual {v6, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -83,11 +83,11 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    const v7, 0x7f02016d
+    const v7, 0x7f020299
 
     invoke-virtual {v0, v7}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    const v0, 0x7f0a00bc
+    const v0, 0x7f0e0028
 
     invoke-virtual {v6, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -173,49 +173,49 @@
     invoke-virtual {v2, v0}, Landroid/widget/ProgressBar;->setProgress(I)V
 
     :goto_1
-    new-instance v0, Lcom/estrongs/android/ui/dialog/ct;
+    new-instance v0, Lcom/estrongs/android/ui/dialog/cv;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/dialog/ct;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0b00a0
+    const v1, 0x7f080004
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->a(I)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->a(I)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    invoke-virtual {v0, v6}, Lcom/estrongs/android/ui/dialog/ct;->a(Landroid/view/View;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v6}, Lcom/estrongs/android/ui/dialog/cv;->a(Landroid/view/View;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->b(Z)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->b(Z)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    const v1, 0x7f0b000b
+    const v1, 0x7f080226
 
-    new-instance v2, Lcom/estrongs/android/pop/app/bu;
+    new-instance v2, Lcom/estrongs/android/pop/app/by;
 
-    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/bu;-><init>(Lcom/estrongs/android/pop/app/ESUsePromptActivity;)V
+    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/by;-><init>(Lcom/estrongs/android/pop/app/ESUsePromptActivity;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
-    const v1, 0x7f0b000c
+    const v1, 0x7f080221
 
-    new-instance v2, Lcom/estrongs/android/pop/app/bv;
+    new-instance v2, Lcom/estrongs/android/pop/app/bz;
 
-    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/bv;-><init>(Lcom/estrongs/android/pop/app/ESUsePromptActivity;)V
+    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/bz;-><init>(Lcom/estrongs/android/pop/app/ESUsePromptActivity;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/bw;
+    new-instance v1, Lcom/estrongs/android/pop/app/ca;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/bw;-><init>(Lcom/estrongs/android/pop/app/ESUsePromptActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ca;-><init>(Lcom/estrongs/android/pop/app/ESUsePromptActivity;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/estrongs/android/ui/dialog/cv;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ct;->b()Lcom/estrongs/android/ui/dialog/cg;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cv;->b()Lcom/estrongs/android/ui/dialog/ci;
 
     move-result-object v0
 
@@ -314,60 +314,38 @@
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 0
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     return-void
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .locals 4
+    .locals 1
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/ESUsePromptActivity;->requestWindowFeature(I)Z
-
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+    invoke-static {p0}, Lcom/estrongs/android/j/c;->a(Landroid/content/Context;)Lcom/estrongs/android/j/c;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/ESUsePromptActivity;->a:Lcom/estrongs/android/j/c;
+
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/ESUsePromptActivity;->a()Lcom/estrongs/android/ui/dialog/ci;
 
     move-result-object v0
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/ESUsePromptActivity;->b:Lcom/estrongs/android/ui/dialog/ci;
 
-    move-result-wide v2
-
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/pop/ad;->j(J)V
-
-    const/4 v0, 0x0
-
-    const-string v1, "Shadow"
-
-    invoke-static {p0, v0, v1}, Lcom/estrongs/android/util/a;->a(Landroid/content/Context;ZLjava/lang/String;)Lcom/estrongs/android/util/a;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/ESUsePromptActivity;->a:Lcom/estrongs/android/util/a;
-
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/ESUsePromptActivity;->a()Lcom/estrongs/android/ui/dialog/cg;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/ESUsePromptActivity;->b:Lcom/estrongs/android/ui/dialog/cg;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ESUsePromptActivity;->b:Lcom/estrongs/android/ui/dialog/cg;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ESUsePromptActivity;->b:Lcom/estrongs/android/ui/dialog/ci;
 
     if-nez v0, :cond_0
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/ESUsePromptActivity;->finish()V
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ESUsePromptActivity;->b:Lcom/estrongs/android/ui/dialog/cg;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ESUsePromptActivity;->b:Lcom/estrongs/android/ui/dialog/ci;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->show()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ci;->show()V
 
     return-void
 .end method
@@ -375,58 +353,40 @@
 .method public onDestroy()V
     .locals 1
 
-    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onDestroy()V
+    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;->onDestroy()V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ESUsePromptActivity;->b:Lcom/estrongs/android/ui/dialog/cg;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ESUsePromptActivity;->b:Lcom/estrongs/android/ui/dialog/ci;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ESUsePromptActivity;->b:Lcom/estrongs/android/ui/dialog/cg;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ESUsePromptActivity;->b:Lcom/estrongs/android/ui/dialog/ci;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->isShowing()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ci;->isShowing()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ESUsePromptActivity;->b:Lcom/estrongs/android/ui/dialog/cg;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ESUsePromptActivity;->b:Lcom/estrongs/android/ui/dialog/ci;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->dismiss()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ci;->dismiss()V
 
     :cond_0
     return-void
 .end method
 
 .method public onPause()V
-    .locals 1
+    .locals 0
 
-    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onPause()V
+    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;->onPause()V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ESUsePromptActivity;->a:Lcom/estrongs/android/util/a;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ESUsePromptActivity;->a:Lcom/estrongs/android/util/a;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/util/a;->c()Z
-
-    :cond_0
     return-void
 .end method
 
 .method public onResume()V
-    .locals 1
+    .locals 0
 
-    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onResume()V
+    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;->onResume()V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ESUsePromptActivity;->a:Lcom/estrongs/android/util/a;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ESUsePromptActivity;->a:Lcom/estrongs/android/util/a;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/util/a;->b()Z
-
-    :cond_0
     return-void
 .end method

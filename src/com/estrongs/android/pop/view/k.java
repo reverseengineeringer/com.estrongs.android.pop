@@ -1,13 +1,15 @@
 package com.estrongs.android.pop.view;
 
+import com.estrongs.android.appinfo.v;
+
 class k
-  implements Runnable
+  implements v
 {
-  k(FileExplorerActivity paramFileExplorerActivity) {}
+  k(j paramj) {}
   
-  public void run()
+  public void a()
   {
-    a.e("gallery://local/buckets/");
+    a.a.a.a.runOnUiThread(new l(this));
   }
 }
 

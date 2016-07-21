@@ -23,9 +23,29 @@
 .end method
 
 .method public checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
-    .locals 0
+    .locals 2
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    aget-object v0, p1, v0
+
+    invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->checkValidity()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
+
+    :catch_0
+    move-exception v0
+
+    new-instance v0, Ljava/security/cert/CertificateException;
+
+    const-string v1, "Certificate not valid or trusted."
+
+    invoke-direct {v0, v1}, Ljava/security/cert/CertificateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
 .method public getAcceptedIssuers()[Ljava/security/cert/X509Certificate;

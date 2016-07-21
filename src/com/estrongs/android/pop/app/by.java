@@ -3,28 +3,20 @@ package com.estrongs.android.pop.app;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
-import android.net.Uri;
+import com.estrongs.android.pop.view.FileExplorerActivity;
 
 class by
   implements DialogInterface.OnClickListener
 {
-  by(FileChooserActivity paramFileChooserActivity, Intent paramIntent, String paramString, Uri paramUri) {}
+  by(ESUsePromptActivity paramESUsePromptActivity) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
+    Intent localIntent = new Intent(a, FileExplorerActivity.class);
+    localIntent.setFlags(335544320);
+    localIntent.setAction("com.estrongs.android.SHOW_DISK_USAGE");
+    a.startActivity(localIntent);
     paramDialogInterface.dismiss();
-    if (paramInt == 0)
-    {
-      a.setData(FileChooserActivity.a(d, b));
-      d.setResult(-1, a);
-      d.finish();
-    }
-    while (paramInt != 1) {
-      return;
-    }
-    a.setData(c);
-    d.setResult(-1, a);
-    d.finish();
   }
 }
 

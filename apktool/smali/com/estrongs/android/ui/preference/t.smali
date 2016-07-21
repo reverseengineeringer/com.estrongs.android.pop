@@ -43,11 +43,11 @@
 
     iget-object v1, p0, Lcom/estrongs/android/ui/preference/t;->a:Lcom/estrongs/android/ui/preference/TabletSettingsActivity;
 
-    invoke-static {v1}, Lcom/estrongs/android/ui/preference/TabletSettingsActivity;->a(Lcom/estrongs/android/ui/preference/TabletSettingsActivity;)Lcom/estrongs/android/ui/preference/fragments/am;
+    invoke-static {v1}, Lcom/estrongs/android/ui/preference/TabletSettingsActivity;->a(Lcom/estrongs/android/ui/preference/TabletSettingsActivity;)Lcom/estrongs/android/ui/preference/fragments/ao;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/preference/fragments/am;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/preference/fragments/ao;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
@@ -55,7 +55,7 @@
 
     iget-object v2, p0, Lcom/estrongs/android/ui/preference/t;->a:Lcom/estrongs/android/ui/preference/TabletSettingsActivity;
 
-    invoke-static {v2}, Lcom/estrongs/android/ui/preference/TabletSettingsActivity;->a(Lcom/estrongs/android/ui/preference/TabletSettingsActivity;)Lcom/estrongs/android/ui/preference/fragments/am;
+    invoke-static {v2}, Lcom/estrongs/android/ui/preference/TabletSettingsActivity;->a(Lcom/estrongs/android/ui/preference/TabletSettingsActivity;)Lcom/estrongs/android/ui/preference/fragments/ao;
 
     move-result-object v2
 

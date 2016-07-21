@@ -36,11 +36,11 @@ public class q
   {
     d = paramContext;
     e = paramf;
-    paramf = paramContext.obtainStyledAttributes(ah.b);
+    paramf = paramContext.obtainStyledAttributes(ah.Gallery);
     f = paramf.getResourceId(0, 0);
     paramf.recycle();
-    g = paramContext.getResources().getDrawable(2130837659);
-    h = BitmapFactory.decodeResource(paramContext.getResources(), 2130837660);
+    g = paramContext.getResources().getDrawable(2130837912);
+    h = BitmapFactory.decodeResource(paramContext.getResources(), 2130837913);
   }
   
   private void a(int paramInt, e parame, ImageView paramImageView)
@@ -135,11 +135,18 @@ public class q
     paramViewGroup.setDrawingCacheEnabled(true);
     paramViewGroup.setLayoutParams(new Gallery.LayoutParams(c, c));
     paramViewGroup.setScaleType(ImageView.ScaleType.FIT_CENTER);
-    paramViewGroup.setBackgroundResource(f);
-    paramViewGroup.setImageDrawable(g);
-    j.a(paramView, paramViewGroup);
-    paramViewGroup.setFocusable(true);
-    return paramViewGroup;
+    try
+    {
+      paramViewGroup.setBackgroundResource(f);
+      paramViewGroup.setImageDrawable(g);
+      j.a(paramView, paramViewGroup);
+      paramViewGroup.setFocusable(true);
+      return paramViewGroup;
+    }
+    catch (Exception localException)
+    {
+      for (;;) {}
+    }
   }
 }
 

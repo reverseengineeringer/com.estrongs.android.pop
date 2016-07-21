@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/dp_13" android:textColor="@color/c_66000000" android:id="@id/finder_popview_item_title_tv" android:paddingLeft="@dimen/dp_5" android:paddingTop="@dimen/dp_20" android:paddingRight="@dimen/dp_5" android:paddingBottom="@dimen/dp_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/finder_additional_title" android:singleLine="true"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <LinearLayout android:orientation="vertical" android:id="@id/finder_popview_content_root_ll" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

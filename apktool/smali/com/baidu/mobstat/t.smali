@@ -1,62 +1,228 @@
-.class Lcom/baidu/mobstat/t;
-.super Ljava/lang/Object;
+.class public final enum Lcom/baidu/mobstat/t;
+.super Ljava/lang/Enum;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/baidu/mobstat/t;",
+        ">;"
+    }
+.end annotation
 
 
 # static fields
-.field public static final a:Ljava/lang/String;
+.field public static final enum a:Lcom/baidu/mobstat/t;
 
-.field public static final b:I
+.field public static final enum b:Lcom/baidu/mobstat/t;
 
-.field static final c:Z
+.field public static final enum c:Lcom/baidu/mobstat/t;
 
-.field static final d:[Ljava/lang/String;
+.field public static final enum d:Lcom/baidu/mobstat/t;
 
-.field static final e:Ljava/lang/String;
+.field public static final enum e:Lcom/baidu/mobstat/t;
+
+.field public static final enum f:Lcom/baidu/mobstat/t;
+
+.field public static final enum g:Lcom/baidu/mobstat/t;
+
+.field public static final enum h:Lcom/baidu/mobstat/t;
+
+.field public static final enum i:Lcom/baidu/mobstat/t;
+
+.field private static final synthetic k:[Lcom/baidu/mobstat/t;
+
+
+# instance fields
+.field public j:J
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 8
 
-    sget-object v0, Lcom/baidu/mobstat/Build;->a:Ljava/lang/String;
+    const/4 v7, 0x4
 
-    sput-object v0, Lcom/baidu/mobstat/t;->a:Ljava/lang/String;
+    const/4 v6, 0x3
 
-    sget v0, Lcom/baidu/mobstat/Build;->b:I
+    const/4 v5, 0x2
 
-    sput v0, Lcom/baidu/mobstat/t;->b:I
+    const/4 v4, 0x1
 
-    sget-boolean v0, Lcom/baidu/mobstat/Build;->c:Z
+    const/4 v3, 0x0
 
-    sput-boolean v0, Lcom/baidu/mobstat/t;->c:Z
+    new-instance v0, Lcom/baidu/mobstat/t;
 
-    const/4 v0, 0x2
+    const-string v1, "AP_LIST"
 
-    new-array v0, v0, [Ljava/lang/String;
+    invoke-direct {v0, v1, v3}, Lcom/baidu/mobstat/t;-><init>(Ljava/lang/String;I)V
 
-    const/4 v1, 0x0
+    sput-object v0, Lcom/baidu/mobstat/t;->a:Lcom/baidu/mobstat/t;
 
-    const-string v2, "h9YLQoINGWyOBYYk"
+    new-instance v0, Lcom/baidu/mobstat/t;
+
+    const-string v1, "APP_USER_LIST"
+
+    invoke-direct {v0, v1, v4}, Lcom/baidu/mobstat/t;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/baidu/mobstat/t;->b:Lcom/baidu/mobstat/t;
+
+    new-instance v0, Lcom/baidu/mobstat/t;
+
+    const-string v1, "APP_SYS_LIST"
+
+    invoke-direct {v0, v1, v5}, Lcom/baidu/mobstat/t;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/baidu/mobstat/t;->c:Lcom/baidu/mobstat/t;
+
+    new-instance v0, Lcom/baidu/mobstat/t;
+
+    const-string v1, "APP_TRACE_CURRENT"
+
+    invoke-direct {v0, v1, v6}, Lcom/baidu/mobstat/t;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/baidu/mobstat/t;->d:Lcom/baidu/mobstat/t;
+
+    new-instance v0, Lcom/baidu/mobstat/t;
+
+    const-string v1, "APP_TRACE_HIS"
+
+    invoke-direct {v0, v1, v7}, Lcom/baidu/mobstat/t;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/baidu/mobstat/t;->e:Lcom/baidu/mobstat/t;
+
+    new-instance v0, Lcom/baidu/mobstat/t;
+
+    const-string v1, "APP_CHANGE"
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v1, v2}, Lcom/baidu/mobstat/t;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/baidu/mobstat/t;->f:Lcom/baidu/mobstat/t;
+
+    new-instance v0, Lcom/baidu/mobstat/t;
+
+    const-string v1, "APP_APK"
+
+    const/4 v2, 0x6
+
+    invoke-direct {v0, v1, v2}, Lcom/baidu/mobstat/t;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/baidu/mobstat/t;->g:Lcom/baidu/mobstat/t;
+
+    new-instance v0, Lcom/baidu/mobstat/t;
+
+    const-string v1, "LAST_SEND"
+
+    const/4 v2, 0x7
+
+    invoke-direct {v0, v1, v2}, Lcom/baidu/mobstat/t;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/baidu/mobstat/t;->h:Lcom/baidu/mobstat/t;
+
+    new-instance v0, Lcom/baidu/mobstat/t;
+
+    const-string v1, "LAST_UPDATE"
+
+    const/16 v2, 0x8
+
+    invoke-direct {v0, v1, v2}, Lcom/baidu/mobstat/t;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/baidu/mobstat/t;->i:Lcom/baidu/mobstat/t;
+
+    const/16 v0, 0x9
+
+    new-array v0, v0, [Lcom/baidu/mobstat/t;
+
+    sget-object v1, Lcom/baidu/mobstat/t;->a:Lcom/baidu/mobstat/t;
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcom/baidu/mobstat/t;->b:Lcom/baidu/mobstat/t;
+
+    aput-object v1, v0, v4
+
+    sget-object v1, Lcom/baidu/mobstat/t;->c:Lcom/baidu/mobstat/t;
+
+    aput-object v1, v0, v5
+
+    sget-object v1, Lcom/baidu/mobstat/t;->d:Lcom/baidu/mobstat/t;
+
+    aput-object v1, v0, v6
+
+    sget-object v1, Lcom/baidu/mobstat/t;->e:Lcom/baidu/mobstat/t;
+
+    aput-object v1, v0, v7
+
+    const/4 v1, 0x5
+
+    sget-object v2, Lcom/baidu/mobstat/t;->f:Lcom/baidu/mobstat/t;
 
     aput-object v2, v0, v1
 
-    const/4 v1, 0x1
+    const/4 v1, 0x6
 
-    const-string v2, "30212102dicudiab"
+    sget-object v2, Lcom/baidu/mobstat/t;->g:Lcom/baidu/mobstat/t;
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/baidu/mobstat/t;->d:[Ljava/lang/String;
+    const/4 v1, 0x7
 
-    sget-object v0, Lcom/baidu/mobstat/t;->d:[Ljava/lang/String;
+    sget-object v2, Lcom/baidu/mobstat/t;->h:Lcom/baidu/mobstat/t;
 
-    sget v1, Lcom/baidu/mobstat/t;->b:I
+    aput-object v2, v0, v1
 
-    add-int/lit8 v1, v1, -0x1
+    const/16 v1, 0x8
 
-    aget-object v0, v0, v1
+    sget-object v2, Lcom/baidu/mobstat/t;->i:Lcom/baidu/mobstat/t;
 
-    sput-object v0, Lcom/baidu/mobstat/t;->e:Ljava/lang/String;
+    aput-object v2, v0, v1
+
+    sput-object v0, Lcom/baidu/mobstat/t;->k:[Lcom/baidu/mobstat/t;
 
     return-void
+.end method
+
+.method private constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lcom/baidu/mobstat/t;
+    .locals 1
+
+    const-class v0, Lcom/baidu/mobstat/t;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/baidu/mobstat/t;
+
+    return-object v0
+.end method
+
+.method public static values()[Lcom/baidu/mobstat/t;
+    .locals 1
+
+    sget-object v0, Lcom/baidu/mobstat/t;->k:[Lcom/baidu/mobstat/t;
+
+    invoke-virtual {v0}, [Lcom/baidu/mobstat/t;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcom/baidu/mobstat/t;
+
+    return-object v0
 .end method

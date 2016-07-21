@@ -94,7 +94,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/estrongs/android/util/am;->j()Ljava/lang/String;
+    invoke-static {}, Lcom/estrongs/android/util/ap;->j()Ljava/lang/String;
 
     move-result-object v3
 
@@ -223,7 +223,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/estrongs/android/util/am;->j()Ljava/lang/String;
+    invoke-static {}, Lcom/estrongs/android/util/ap;->j()Ljava/lang/String;
 
     move-result-object v3
 
@@ -302,29 +302,29 @@
 
     invoke-virtual {p0}, Lcom/estrongs/io/archive/sevenzip/b;->b()V
 
-    iget-object v1, p0, Lcom/estrongs/io/archive/sevenzip/b;->c:Lcom/estrongs/fs/impl/local/r;
+    iget-object v1, p0, Lcom/estrongs/io/archive/sevenzip/b;->c:Lcom/estrongs/fs/impl/local/s;
 
-    iget-object v1, v1, Lcom/estrongs/fs/impl/local/r;->b:Ljava/io/BufferedWriter;
+    iget-object v1, v1, Lcom/estrongs/fs/impl/local/s;->b:Ljava/io/BufferedWriter;
 
     invoke-virtual {v1, v0}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/estrongs/io/archive/sevenzip/b;->c:Lcom/estrongs/fs/impl/local/r;
+    iget-object v0, p0, Lcom/estrongs/io/archive/sevenzip/b;->c:Lcom/estrongs/fs/impl/local/s;
 
-    iget-object v0, v0, Lcom/estrongs/fs/impl/local/r;->b:Ljava/io/BufferedWriter;
+    iget-object v0, v0, Lcom/estrongs/fs/impl/local/s;->b:Ljava/io/BufferedWriter;
 
     invoke-virtual {v0}, Ljava/io/BufferedWriter;->flush()V
 
-    iget-object v0, p0, Lcom/estrongs/io/archive/sevenzip/b;->c:Lcom/estrongs/fs/impl/local/r;
+    iget-object v0, p0, Lcom/estrongs/io/archive/sevenzip/b;->c:Lcom/estrongs/fs/impl/local/s;
 
-    iget-object v0, v0, Lcom/estrongs/fs/impl/local/r;->b:Ljava/io/BufferedWriter;
+    iget-object v0, v0, Lcom/estrongs/fs/impl/local/s;->b:Ljava/io/BufferedWriter;
 
     const-string v1, "exit\n"
 
     invoke-virtual {v0, v1}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/estrongs/io/archive/sevenzip/b;->c:Lcom/estrongs/fs/impl/local/r;
+    iget-object v0, p0, Lcom/estrongs/io/archive/sevenzip/b;->c:Lcom/estrongs/fs/impl/local/s;
 
-    iget-object v0, v0, Lcom/estrongs/fs/impl/local/r;->b:Ljava/io/BufferedWriter;
+    iget-object v0, v0, Lcom/estrongs/fs/impl/local/s;->b:Ljava/io/BufferedWriter;
 
     invoke-virtual {v0}, Ljava/io/BufferedWriter;->flush()V
 
@@ -346,9 +346,9 @@
 
     if-nez v0, :cond_7
 
-    iget-object v0, p0, Lcom/estrongs/io/archive/sevenzip/b;->c:Lcom/estrongs/fs/impl/local/r;
+    iget-object v0, p0, Lcom/estrongs/io/archive/sevenzip/b;->c:Lcom/estrongs/fs/impl/local/s;
 
-    iget-object v0, v0, Lcom/estrongs/fs/impl/local/r;->c:Ljava/io/BufferedReader;
+    iget-object v0, v0, Lcom/estrongs/fs/impl/local/s;->c:Ljava/io/BufferedReader;
 
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 

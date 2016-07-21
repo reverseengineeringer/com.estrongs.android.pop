@@ -134,7 +134,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->d:I
+    sget v2, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->e:I
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
@@ -176,7 +176,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/view/x;->a:Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;
 
-    const v2, 0x7f0b024c
+    const v2, 0x7f080453
 
     invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->getString(I)Ljava/lang/String;
 

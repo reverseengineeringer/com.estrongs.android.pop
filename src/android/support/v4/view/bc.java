@@ -1,25 +1,25 @@
 package android.support.v4.view;
 
-import android.animation.ValueAnimator;
-import android.graphics.Paint;
+import android.view.MenuItem;
 import android.view.View;
 
-class bc
+abstract interface bc
 {
-  public static int a(View paramView)
-  {
-    return paramView.getLayerType();
-  }
+  public abstract MenuItem a(MenuItem paramMenuItem, bd parambd);
   
-  static long a()
-  {
-    return ValueAnimator.getFrameDelay();
-  }
+  public abstract MenuItem a(MenuItem paramMenuItem, View paramView);
   
-  public static void a(View paramView, int paramInt, Paint paramPaint)
-  {
-    paramView.setLayerType(paramInt, paramPaint);
-  }
+  public abstract View a(MenuItem paramMenuItem);
+  
+  public abstract void a(MenuItem paramMenuItem, int paramInt);
+  
+  public abstract MenuItem b(MenuItem paramMenuItem, int paramInt);
+  
+  public abstract boolean b(MenuItem paramMenuItem);
+  
+  public abstract boolean c(MenuItem paramMenuItem);
+  
+  public abstract boolean d(MenuItem paramMenuItem);
 }
 
 /* Location:

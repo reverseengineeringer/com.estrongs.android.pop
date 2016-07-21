@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -22,16 +22,18 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 3
+.method public onClick(Landroid/view/View;)V
+    .locals 2
 
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/eb;->a:Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
+    const-string v1, "android.settings.WIFI_SETTINGS"
 
-    const-class v2, Lcom/estrongs/android/pop/app/network/EsNetworkActivity;
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    const/high16 v1, 0x10000000
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/eb;->a:Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
 

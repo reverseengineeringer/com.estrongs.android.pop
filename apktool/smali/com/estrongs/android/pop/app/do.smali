@@ -41,7 +41,7 @@
 
     iget-object v2, v2, Lcom/estrongs/android/pop/app/dj;->a:Lcom/estrongs/android/pop/app/ImageCommentActivity;
 
-    invoke-static {v2}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->c(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->b(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Ljava/lang/String;
 
     move-result-object v2
 

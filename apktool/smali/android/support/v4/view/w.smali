@@ -3,11 +3,8 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/view/KeyEvent;)V
+.method public abstract a(II)I
 .end method
 
-.method public abstract a(II)Z
-.end method
-
-.method public abstract b(I)Z
+.method public abstract a(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
 .end method

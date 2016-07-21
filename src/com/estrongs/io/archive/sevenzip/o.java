@@ -4,8 +4,8 @@ import android.app.Activity;
 import android.os.ConditionVariable;
 import com.estrongs.a.a;
 import com.estrongs.android.pop.ac;
-import com.estrongs.android.util.al;
-import com.estrongs.fs.impl.local.l;
+import com.estrongs.android.util.ao;
+import com.estrongs.fs.impl.local.m;
 import java.io.File;
 
 final class o
@@ -24,7 +24,7 @@ final class o
         if (ac.a() < 9) {
           break label157;
         }
-        parama = new al(parama);
+        parama = new ao(parama);
         parama.a("setExecutable", new Class[] { Boolean.TYPE, Boolean.TYPE }, new Object[] { Boolean.valueOf(true), Boolean.valueOf(false) });
         parama.a("setReadable", new Class[] { Boolean.TYPE, Boolean.TYPE }, new Object[] { Boolean.valueOf(true), Boolean.valueOf(false) });
         if (!bool)
@@ -52,7 +52,7 @@ final class o
     while (!paramBoolean)
     {
       return;
-      bool = l.a(a.getPath(), "777", false);
+      bool = m.a(a.getPath(), "777", false);
       break;
       b[0] = false;
       f.a(c, d);

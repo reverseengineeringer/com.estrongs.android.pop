@@ -2,24 +2,32 @@ package com.estrongs.android.ui.e;
 
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.ui.d.e;
-import com.estrongs.android.ui.dialog.ga;
-import com.estrongs.android.ui.view.ag;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.view.g;
+import com.estrongs.io.archive.rar.a;
+import com.estrongs.io.model.ArchiveEntryFile;
+import java.util.ArrayList;
 
 class by
   implements MenuItem.OnMenuItemClickListener
 {
-  by(w paramw) {}
+  by(m paramm) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if (e.c() >= 12)
+    if ((m.a(a).O() == null) || (!(m.a(a).O() instanceof g))) {}
+    do
     {
-      ag.a(a.k, 2131428177, 0);
-      return false;
+      return true;
+      paramMenuItem = (g)m.a(a).O();
+    } while ((paramMenuItem == null) || (paramMenuItem.p()));
+    if (((paramMenuItem.r() instanceof ArchiveEntryFile)) && (((ArchiveEntryFile)paramMenuItem.r()).isRoot()) && ((paramMenuItem.s() instanceof a)) && (((a)paramMenuItem.s()).l()))
+    {
+      paramMenuItem.a(new ArrayList(), true);
+      return true;
     }
-    new ga(a.k).a(new bz(this)).a();
-    return false;
+    paramMenuItem.a(paramMenuItem.h(), false);
+    return true;
   }
 }
 

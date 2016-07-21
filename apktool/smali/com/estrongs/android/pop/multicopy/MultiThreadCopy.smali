@@ -24,7 +24,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/estrongs/android/pop/a;->d:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/a;->f:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -125,7 +125,7 @@
 .method public static a(Ljava/lang/String;)Ljava/io/File;
     .locals 3
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->ba(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->bl(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -464,7 +464,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v1
 

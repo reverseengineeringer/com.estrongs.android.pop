@@ -54,7 +54,7 @@
 
     iput-object v0, p0, Lcom/estrongs/fs/impl/usb/fs/a/a;->e:[Ljava/lang/Long;
 
-    invoke-virtual {p5}, Lcom/estrongs/fs/impl/usb/fs/a/c;->i()I
+    invoke-virtual {p5}, Lcom/estrongs/fs/impl/usb/fs/a/c;->j()I
 
     move-result v0
 
@@ -62,7 +62,7 @@
 
     iput-wide v0, p0, Lcom/estrongs/fs/impl/usb/fs/a/a;->f:J
 
-    invoke-virtual {p5}, Lcom/estrongs/fs/impl/usb/fs/a/c;->k()J
+    invoke-virtual {p5}, Lcom/estrongs/fs/impl/usb/fs/a/c;->l()J
 
     move-result-wide v0
 
@@ -128,7 +128,7 @@
 
     const-string v2, "grow chain"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     iget-object v1, p0, Lcom/estrongs/fs/impl/usb/fs/a/a;->d:Lcom/estrongs/fs/impl/usb/fs/a/b;
@@ -154,7 +154,7 @@
 
     const-string v2, "shrink chain"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
     iget-object v1, p0, Lcom/estrongs/fs/impl/usb/fs/a/a;->d:Lcom/estrongs/fs/impl/usb/fs/a/b;

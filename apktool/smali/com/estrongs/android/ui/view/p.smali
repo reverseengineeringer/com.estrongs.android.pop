@@ -25,7 +25,7 @@
 .method public run()V
     .locals 6
 
-    const v2, 0x7f0b0235
+    const v2, 0x7f080647
 
     const/4 v5, 0x0
 
@@ -75,7 +75,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -108,7 +108,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v0, v4}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    invoke-static {v1, v0, v4}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
     return-void
 
@@ -141,7 +141,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 

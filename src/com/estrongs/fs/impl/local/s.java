@@ -1,44 +1,16 @@
 package com.estrongs.fs.impl.local;
 
-import android.net.LocalSocket;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 
-class s
-  extends InputStream
+public class s
 {
-  private LocalSocket a = null;
-  private InputStream b = null;
-  private OutputStream c = null;
-  
-  public s(LocalSocket paramLocalSocket, InputStream paramInputStream, OutputStream paramOutputStream)
-  {
-    a = paramLocalSocket;
-    b = paramInputStream;
-    c = paramOutputStream;
-  }
-  
-  public void close()
-  {
-    b.close();
-    c.close();
-    a.close();
-  }
-  
-  public int read()
-  {
-    return b.read();
-  }
-  
-  public int read(byte[] paramArrayOfByte)
-  {
-    return b.read(paramArrayOfByte);
-  }
-  
-  public int read(byte[] paramArrayOfByte, int paramInt1, int paramInt2)
-  {
-    return b.read(paramArrayOfByte, paramInt1, paramInt2);
-  }
+  public Process a = null;
+  public BufferedWriter b = null;
+  public BufferedReader c = null;
+  public boolean d = false;
+  public boolean e = false;
+  public int f = 0;
 }
 
 /* Location:

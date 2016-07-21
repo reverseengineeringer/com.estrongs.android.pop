@@ -1,10 +1,36 @@
 package android.support.v4.view.a;
 
 class m
+  extends k
 {
-  public static Object a(o paramo)
+  public void b(Object paramObject, int paramInt)
   {
-    return new n(paramo);
+    v.a(paramObject, paramInt);
+  }
+  
+  public void h(Object paramObject, boolean paramBoolean)
+  {
+    v.a(paramObject, paramBoolean);
+  }
+  
+  public void i(Object paramObject, boolean paramBoolean)
+  {
+    v.b(paramObject, paramBoolean);
+  }
+  
+  public int r(Object paramObject)
+  {
+    return v.b(paramObject);
+  }
+  
+  public boolean s(Object paramObject)
+  {
+    return v.a(paramObject);
+  }
+  
+  public boolean t(Object paramObject)
+  {
+    return v.c(paramObject);
   }
 }
 

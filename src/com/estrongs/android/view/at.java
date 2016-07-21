@@ -1,25 +1,39 @@
 package com.estrongs.android.view;
 
-import com.estrongs.android.ui.drag.d;
-import com.estrongs.android.widget.f;
+import com.estrongs.android.pop.app.compress.a;
+import com.estrongs.android.pop.app.compress.k;
+import java.io.File;
+import java.util.List;
 
 class at
-  implements f
+  implements com.estrongs.android.pop.app.compress.j
 {
-  at(as paramas) {}
+  at(ak paramak, String paramString, List paramList, boolean paramBoolean) {}
   
-  public void a()
+  public void a(a parama, k paramk)
   {
-    if ((a.o != null) && (!a.o.f()))
+    if (paramk != null)
     {
-      a.o.c();
-      if (a.z()) {
-        a.e(false);
+      parama = new File(a);
+      ak.a(d, c);
+      ak.a(d, a);
+      if (3 != ak.k(d)) {
+        break label79;
+      }
+      ak.c(d, b);
+    }
+    for (;;)
+    {
+      ak.a(d, b, c);
+      return;
+      label79:
+      if (1 == ak.k(d)) {
+        ak.c(d, parama.getParent());
+      } else {
+        ak.c(d, parama.getParent() + "/" + com.estrongs.fs.util.j.a(a));
       }
     }
   }
-  
-  public void b() {}
 }
 
 /* Location:

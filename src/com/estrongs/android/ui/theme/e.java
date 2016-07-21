@@ -1,8 +1,9 @@
 package com.estrongs.android.ui.theme;
 
-import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import com.estrongs.android.pop.ad;
+import com.estrongs.android.pop.b;
 
 class e
   implements View.OnClickListener
@@ -11,10 +12,13 @@ class e
   
   public void onClick(View paramView)
   {
-    paramView = new Intent(a, ThemeColorActivity.class);
-    paramView.putExtra("set_what_color", 1);
-    paramView.putExtra("theme_data_index", ModifyThemeActivity.b(a));
-    a.startActivityForResult(paramView, 268439586);
+    paramView = new f(this, ad.a(a).q());
+    paramView = new com.estrongs.android.widget.f(a, b.b(), paramView);
+    paramView.a(a.getText(2131230720));
+    paramView.a(a.getString(2131231265), new g(this));
+    paramView.a(new h(this));
+    paramView.j();
+    ModifyThemeActivity.a(a, paramView);
   }
 }
 

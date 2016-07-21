@@ -1,29 +1,28 @@
 package android.support.v4.view;
 
 import android.content.Context;
-import android.content.res.Configuration;
-import android.content.res.Resources;
-import android.text.method.SingleLineTransformationMethod;
+import android.util.AttributeSet;
+import android.view.LayoutInflater.Factory;
 import android.view.View;
-import java.util.Locale;
 
 class an
-  extends SingleLineTransformationMethod
+  implements LayoutInflater.Factory
 {
-  private Locale a;
+  final ar a;
   
-  public an(Context paramContext)
+  an(ar paramar)
   {
-    a = getResourcesgetConfigurationlocale;
+    a = paramar;
   }
   
-  public CharSequence getTransformation(CharSequence paramCharSequence, View paramView)
+  public View onCreateView(String paramString, Context paramContext, AttributeSet paramAttributeSet)
   {
-    paramCharSequence = super.getTransformation(paramCharSequence, paramView);
-    if (paramCharSequence != null) {
-      return paramCharSequence.toString().toUpperCase(a);
-    }
-    return null;
+    return a.onCreateView(null, paramString, paramContext, paramAttributeSet);
+  }
+  
+  public String toString()
+  {
+    return getClass().getName() + "{" + a + "}";
   }
 }
 

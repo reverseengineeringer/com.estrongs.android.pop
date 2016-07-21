@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/fs/b/bb;
+.field final synthetic a:Lcom/estrongs/fs/b/bd;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/fs/b/bb;)V
+.method constructor <init>(Lcom/estrongs/fs/b/bd;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/fs/b/bf;->a:Lcom/estrongs/fs/b/bb;
+    iput-object p1, p0, Lcom/estrongs/fs/b/bf;->a:Lcom/estrongs/fs/b/bd;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,47 +27,49 @@
 
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    invoke-static {}, Lcom/estrongs/android/pop/esclasses/ESActivity;->A()Landroid/app/Activity;
+    iget-object v0, p0, Lcom/estrongs/fs/b/bf;->a:Lcom/estrongs/fs/b/bd;
+
+    iget-object v0, v0, Lcom/estrongs/fs/b/bd;->a:Lcom/estrongs/fs/b/bc;
+
+    invoke-static {v0}, Lcom/estrongs/fs/b/bc;->b(Lcom/estrongs/fs/b/bc;)Landroid/app/Activity;
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    const/4 v1, 0x0
 
-    :goto_0
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v3, p0, Lcom/estrongs/fs/b/bf;->a:Lcom/estrongs/fs/b/bd;
+
+    iget-object v3, v3, Lcom/estrongs/fs/b/bd;->a:Lcom/estrongs/fs/b/bc;
+
+    invoke-static {v3}, Lcom/estrongs/fs/b/bc;->d(Lcom/estrongs/fs/b/bc;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/estrongs/fs/b/bf;->a:Lcom/estrongs/fs/b/bd;
+
+    iget-object v3, v3, Lcom/estrongs/fs/b/bd;->a:Lcom/estrongs/fs/b/bc;
+
+    invoke-static {v3}, Lcom/estrongs/fs/b/bc;->c(Lcom/estrongs/fs/b/bc;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/pop/view/utils/AppRunner;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V
+
     return-void
-
-    :cond_0
-    new-instance v1, Landroid/content/Intent;
-
-    const-class v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-direct {v1, v0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const/high16 v2, 0x24000000
-
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    iget-object v2, p0, Lcom/estrongs/fs/b/bf;->a:Lcom/estrongs/fs/b/bb;
-
-    iget-object v2, v2, Lcom/estrongs/fs/b/bb;->a:Lcom/estrongs/fs/b/ba;
-
-    invoke-static {v2}, Lcom/estrongs/fs/b/ba;->d(Lcom/estrongs/fs/b/ba;)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "/"
-
-    invoke-static {v2, v3}, Landroid/net/Uri;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
-
-    invoke-virtual {v0, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
-
-    goto :goto_0
 .end method

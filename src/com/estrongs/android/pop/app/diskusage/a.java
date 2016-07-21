@@ -7,19 +7,19 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import com.estrongs.android.pop.esclasses.g;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.android.util.bd;
-import com.estrongs.fs.b.an;
+import com.estrongs.android.pop.esclasses.k;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.util.bk;
+import com.estrongs.fs.b.ap;
 import com.estrongs.fs.util.j;
 
 public class a
-  extends cg
+  extends ci
 {
   String a = "";
   int[] b = { 39936, -13524051, -3908929, -6684159, -8210621, -196864 };
-  int[] c = { 2131362129, 2131362131, 2131362133, 2131362135, 2131362137, 2131362139 };
-  int[] d = { 2131362130, 2131362132, 2131362134, 2131362136, 2131362138, 2131362140 };
+  int[] c = { 2131624697, 2131624699, 2131624701, 2131624703, 2131624705, 2131624707 };
+  int[] d = { 2131624698, 2131624700, 2131624702, 2131624704, 2131624706, 2131624708 };
   long[] e = new long[7];
   long[] f = new long[7];
   LinearLayout g = null;
@@ -32,37 +32,37 @@ public class a
   {
     super(paramContext);
     k = paramh;
-    setTitle(2131428013);
-    a = mContext.getText(2131427590).toString();
+    setTitle(2131232460);
+    a = mContext.getText(2131232204).toString();
     a(null);
   }
   
-  public a(Context paramContext, an paraman)
+  public a(Context paramContext, ap paramap)
   {
     super(paramContext);
     k = null;
-    setTitle(2131428013);
-    a = mContext.getText(2131427590).toString();
-    a(paraman);
+    setTitle(2131232460);
+    a = mContext.getText(2131232204).toString();
+    a(paramap);
   }
   
   private void c()
   {
     int m = 0;
     if (i == null) {
-      i = new String[] { (String)mContext.getText(2131427629), (String)mContext.getText(2131427630), (String)mContext.getText(2131427631), (String)mContext.getText(2131427632), (String)mContext.getText(2131427633), (String)mContext.getText(2131427634) };
+      i = new String[] { (String)mContext.getText(2131231372), (String)mContext.getText(2131231368), (String)mContext.getText(2131231373), (String)mContext.getText(2131231369), (String)mContext.getText(2131231367), (String)mContext.getText(2131231371) };
     }
     h.a(e, b);
-    String str = mContext.getString(2131428719);
+    String str = mContext.getString(2131232497);
     while (m < i.length)
     {
       ((TextView)g.findViewById(d[m])).setText(i[m] + j.c(e[m]) + " (" + f[m] + str + ")");
       m += 1;
     }
-    ((TextView)g.findViewById(2131362125)).setText(mContext.getText(2131427580) + j.c(e[(e.length - 1)]) + " (" + j.d(e[(e.length - 1)]) + " " + a + ")");
+    ((TextView)g.findViewById(2131624693)).setText(mContext.getText(2131232218) + j.c(e[(e.length - 1)]) + " (" + j.d(e[(e.length - 1)]) + " " + a + ")");
   }
   
-  private void c(an paraman)
+  private void c(ap paramap)
   {
     e[0] = g;
     e[1] = i;
@@ -83,39 +83,39 @@ public class a
   public void a()
   {
     if (j != null) {
-      bd.a(new c(this));
+      bk.a(new c(this));
     }
   }
   
-  protected void a(an paraman)
+  protected void a(ap paramap)
   {
     int n = 0;
-    g = ((LinearLayout)g.a(mContext).inflate(2130903109, null));
+    g = ((LinearLayout)k.a(mContext).inflate(2130903198, null));
     int m = 0;
     while (m < b.length)
     {
       ((GradientDrawable)g.findViewById(c[m]).getBackground()).setColor(b[m]);
       m += 1;
     }
-    h = ((DiskUsageGraphView)g.findViewById(2131362128));
-    j = ((ProgressBar)g.findViewById(2131362126));
-    if (paraman == null)
+    h = ((DiskUsageGraphView)g.findViewById(2131624696));
+    j = ((ProgressBar)g.findViewById(2131624694));
+    if (paramap == null)
     {
       if (k != null)
       {
-        paraman = k.d(false);
+        paramap = k.d(false);
         long[] arrayOfLong = k.c(false);
         m = n;
         while (m < 7)
         {
-          e[m] = paraman[m];
+          e[m] = paramap[m];
           f[m] = arrayOfLong[m];
           m += 1;
         }
       }
     }
     else {
-      c(paraman);
+      c(paramap);
     }
     c();
     setContentView(g);
@@ -124,17 +124,17 @@ public class a
   public void b()
   {
     if (j != null) {
-      bd.a(new d(this));
+      bk.a(new d(this));
     }
   }
   
-  public void b(an paraman)
+  public void b(ap paramap)
   {
-    if (paraman == null) {
+    if (paramap == null) {
       return;
     }
-    c(paraman);
-    bd.a(new b(this));
+    c(paramap);
+    bk.a(new b(this));
   }
 }
 

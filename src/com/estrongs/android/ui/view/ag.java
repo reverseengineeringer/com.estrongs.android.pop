@@ -1,55 +1,23 @@
 package com.estrongs.android.ui.view;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
-import android.widget.Toast;
-import com.estrongs.android.pop.FexApplication;
+import android.view.View;
+import android.view.View.OnLongClickListener;
 
-public class ag
+class ag
+  implements View.OnLongClickListener
 {
-  private static Toast a;
+  ag(ac paramac) {}
   
-  @SuppressLint({"ShowToast"})
-  public static void a()
+  public boolean onLongClick(View paramView)
   {
-    try
+    if (a.b())
     {
-      a = Toast.makeText(FexApplication.a(), "", 0);
-      return;
+      paramView.performClick();
+      return true;
     }
-    catch (Throwable localThrowable) {}
-  }
-  
-  public static void a(Context paramContext, int paramInt1, int paramInt2)
-  {
-    try
-    {
-      a(paramContext, FexApplication.a().getText(paramInt1), paramInt2);
-      return;
-    }
-    catch (Exception paramContext) {}
-  }
-  
-  public static void a(Context paramContext, CharSequence paramCharSequence, int paramInt)
-  {
-    try
-    {
-      a.setText(paramCharSequence);
-      a.setDuration(paramInt);
-      a.show();
-      return;
-    }
-    catch (Exception paramContext) {}
-  }
-  
-  public static void b()
-  {
-    try
-    {
-      a.cancel();
-      return;
-    }
-    catch (Exception localException) {}
+    a.a(true);
+    paramView.performClick();
+    return true;
   }
 }
 

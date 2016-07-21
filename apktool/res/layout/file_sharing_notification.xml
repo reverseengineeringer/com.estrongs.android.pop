@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:orientation="vertical" android:paddingLeft="18.0dip" android:paddingTop="19.0dip" android:paddingRight="18.0dip" android:paddingBottom="18.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/popupbox_bg" android:paddingTop="19.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
         <TextView android:textSize="20.0dip" android:textColor="@color/popupbox_title_text" android:gravity="center" android:id="@id/archive_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginTop="6.0dip" android:text="@string/action_share" />
         <FrameLayout android:orientation="vertical" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/archive_edit_panel" android:paddingTop="5.0dip" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minWidth="300.0dip">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/archive_edit_panel" android:paddingTop="5.0dip" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
                 <LinearLayout android:orientation="vertical" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
                     <LinearLayout android:orientation="horizontal" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginRight="3.0dip" android:layout_marginBottom="10.0dip">
                         <TextView android:textSize="16.0dip" android:textColor="#ff000000" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginTop="6.0dip" android:text="@string/action_share" />
                         <TextView android:textSize="16.0dip" android:textColor="#ff2878e6" android:ellipsize="end" android:id="@id/file_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:singleLine="true" android:layout_weight="1.0" />
                     </LinearLayout>
                 </LinearLayout>
-                <LinearLayout android:orientation="horizontal" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="3.3299866dip" android:layout_marginRight="3.3299866dip" android:layout_marginBottom="3.3299866dip">
-                    <Button android:textSize="@dimen/dp_20" android:textColor="@color/black" android:id="@id/filename_ok" android:background="@drawable/popupbox_button_confirm_window_left" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:text="@string/confirm_cancel" android:layout_weight="0.5" />
-                    <Button android:textSize="@dimen/dp_20" android:textColor="@color/black" android:id="@id/filename_cancel" android:background="@drawable/popupbox_button_cancel_window_right" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:text="@string/action_hide" android:layout_weight="0.5" />
+                <LinearLayout android:orientation="vertical" android:id="@id/group_common_dialog_2" android:layout_width="fill_parent" android:layout_height="@dimen/dp_46" android:layout_marginTop="@dimen/dp_12">
+                    <View android:background="@color/c_d9d9d9" android:layout_width="fill_parent" android:layout_height="@dimen/dp_0.5" />
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <Button android:textSize="@dimen/dp_18" android:textColor="@color/c_2274e6" android:id="@id/filename_ok" android:background="@drawable/popupbox_button_cancel_left_selector" android:focusable="true" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:text="@string/confirm_cancel" android:singleLine="true" android:layout_weight="0.5" />
+                        <View android:background="@color/c_d9d9d9" android:layout_width="@dimen/dp_0.5" android:layout_height="fill_parent" />
+                        <Button android:textSize="@dimen/dp_18" android:textColor="@color/c_2274e6" android:id="@id/filename_cancel" android:background="@drawable/popupbox_button_confirm_right_selector" android:focusable="true" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:text="@string/action_hide" android:singleLine="true" android:layout_weight="0.5" />
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </FrameLayout>

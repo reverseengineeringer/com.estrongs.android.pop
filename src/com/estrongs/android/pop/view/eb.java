@@ -1,16 +1,13 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.fs.h;
-import com.estrongs.fs.i;
-
 class eb
-  implements i
+  implements Runnable
 {
   eb(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public boolean a(h paramh)
+  public void run()
   {
-    return (!paramh.getName().startsWith(".")) || (FileExplorerActivity.g(a));
+    a.f("remote://");
   }
 }
 

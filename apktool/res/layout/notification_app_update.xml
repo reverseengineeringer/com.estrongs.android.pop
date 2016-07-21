@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingTop="@dimen/dp_5" android:paddingRight="@dimen/dp_5" android:paddingBottom="@dimen/dp_5" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/notification_app_update_img_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_10" android:src="@drawable/fex" android:scaleType="centerInside" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/notification_app_update_img_icon" android:layout_centerVertical="true">
+        <TextView android:textSize="@dimen/dp_14" android:id="@id/notification_app_update_txt_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" style="@style/NotificationTitle" />
+        <LinearLayout android:id="@id/notification_app_update_lin_prg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_5" android:layout_below="@id/notification_app_update_txt_title">
+            <ProgressBar android:id="@id/notification_app_update_prg" android:layout_width="fill_parent" android:layout_height="@dimen/dp_5" android:max="100" style="@style/HorizontalProgressBar" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/dp_12" android:id="@id/notification_app_update_txt_percent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_2" android:text="0%" android:layout_below="@id/notification_app_update_lin_prg" android:layout_alignRight="@id/notification_app_update_lin_prg" style="@style/NotificationContent" />
+        <TextView android:textSize="@dimen/dp_12" android:id="@id/notification_app_update_txt_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_2" android:text="0" android:layout_below="@id/notification_app_update_lin_prg" android:layout_alignLeft="@id/notification_app_update_lin_prg" style="@style/NotificationContent" />
+        <TextView android:textSize="@dimen/dp_12" android:id="@id/notification_app_update_txt_install" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10" android:text="@string/button_install" android:layout_below="@id/notification_app_update_txt_title" style="@style/NotificationContent" />
+    </RelativeLayout>
+</RelativeLayout>

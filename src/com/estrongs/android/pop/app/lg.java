@@ -1,21 +1,19 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.a.a.c;
-import java.util.Map;
+import android.content.Context;
+import android.widget.LinearLayout;
 
 class lg
-  implements DialogInterface.OnClickListener
+  extends LinearLayout
 {
-  lg(ShowDialogActivity paramShowDialogActivity, c paramc, com.estrongs.a.a parama) {}
-  
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  lg(SaveDataService paramSaveDataService, Context paramContext)
   {
-    com.estrongs.android.a.a.a.remove(Long.valueOf(ShowDialogActivity.a(c)));
-    a.d = true;
-    b.sendMessage(5, new Object[] { a });
-    paramDialogInterface.dismiss();
+    super(paramContext);
+  }
+  
+  public boolean isAttachedToWindow()
+  {
+    return true;
   }
 }
 

@@ -2,32 +2,31 @@ package com.estrongs.android.ui.e;
 
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.a.a;
+import com.estrongs.android.pop.utils.c;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.util.am;
-import com.estrongs.fs.h;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.fs.impl.b.d;
 import java.util.List;
-import org.json.JSONObject;
 
 class fv
   implements MenuItem.OnMenuItemClickListener
 {
-  fv(cp paramcp) {}
+  fv(cr paramcr) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = cp.b(a);
-    if (paramMenuItem.size() > 0)
+    paramMenuItem = cr.a(a);
+    if (paramMenuItem.size() == 0) {
+      ak.a(cr.b(a).getBaseContext(), 2131231551, 0);
+    }
+    for (;;)
     {
-      paramMenuItem = ((h)paramMenuItem.get(0)).getExtra("task");
-      if ((paramMenuItem instanceof a))
-      {
-        paramMenuItem = am.bk(((a)paramMenuItem).summary().optString("target"));
-        cp.a(a).e(paramMenuItem);
+      cr.b(a).B();
+      return true;
+      if ((paramMenuItem.size() >= 1) && ((paramMenuItem.get(0) instanceof d))) {
+        cr.b(a).ag().b(cr.b(a), paramMenuItem);
       }
     }
-    cp.a(a).s();
-    return false;
   }
 }
 

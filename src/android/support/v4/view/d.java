@@ -1,14 +1,15 @@
 package android.support.v4.view;
 
 import android.os.Bundle;
-import android.support.v4.view.a.h;
+import android.support.v4.view.a.g;
+import android.support.v4.view.a.z;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.accessibility.AccessibilityEvent;
 
 abstract interface d
 {
-  public abstract h a(Object paramObject, View paramView);
+  public abstract z a(Object paramObject, View paramView);
   
   public abstract Object a();
   
@@ -16,7 +17,7 @@ abstract interface d
   
   public abstract void a(Object paramObject, View paramView, int paramInt);
   
-  public abstract void a(Object paramObject, View paramView, android.support.v4.view.a.a parama);
+  public abstract void a(Object paramObject, View paramView, g paramg);
   
   public abstract boolean a(Object paramObject, View paramView, int paramInt, Bundle paramBundle);
   

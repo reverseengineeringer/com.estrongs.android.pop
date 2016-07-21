@@ -1,29 +1,15 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.a.a;
+import com.estrongs.android.view.bo;
 
 class jp
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
-  jp(ix paramix) {}
+  jp(jo paramjo) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void run()
   {
-    if (ix.a(a).canPause())
-    {
-      ix.a(a).requsestPause();
-      if (ix.a(a).canHide()) {
-        a.setRightButton(a.mContext.getString(2131428010), ix.b(a));
-      }
-    }
-    else
-    {
-      return;
-    }
-    a.setConfirmButton(a.mContext.getString(2131428010), ix.b(a));
+    jh.f(a.c.a).b();
   }
 }
 

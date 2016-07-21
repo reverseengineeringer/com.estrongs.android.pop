@@ -2,26 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemLongClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/view/aw;
-
-.field final synthetic b:Landroid/widget/AdapterView$OnItemLongClickListener;
-
-.field final synthetic c:Lcom/estrongs/android/view/cq;
+.field final synthetic a:Lcom/estrongs/android/view/cr;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/view/cq;Lcom/estrongs/android/view/aw;Landroid/widget/AdapterView$OnItemLongClickListener;)V
+.method constructor <init>(Lcom/estrongs/android/view/cr;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/view/da;->c:Lcom/estrongs/android/view/cq;
-
-    iput-object p2, p0, Lcom/estrongs/android/view/da;->a:Lcom/estrongs/android/view/aw;
-
-    iput-object p3, p0, Lcom/estrongs/android/view/da;->b:Landroid/widget/AdapterView$OnItemLongClickListener;
+    iput-object p1, p0, Lcom/estrongs/android/view/da;->a:Lcom/estrongs/android/view/cr;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -30,37 +22,25 @@
 
 
 # virtual methods
-.method public onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)Z"
-        }
-    .end annotation
+.method public run()V
+    .locals 3
 
-    iget-object v0, p0, Lcom/estrongs/android/view/da;->c:Lcom/estrongs/android/view/cq;
+    iget-object v0, p0, Lcom/estrongs/android/view/da;->a:Lcom/estrongs/android/view/cr;
 
-    iget-object v1, p0, Lcom/estrongs/android/view/da;->a:Lcom/estrongs/android/view/aw;
+    iget-object v0, v0, Lcom/estrongs/android/view/cr;->O:Lcom/estrongs/android/view/dw;
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/view/cq;->a(Lcom/estrongs/android/view/cq;Lcom/estrongs/android/view/aw;)Lcom/estrongs/android/view/aw;
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/view/da;->b:Landroid/widget/AdapterView$OnItemLongClickListener;
+    iget-object v0, p0, Lcom/estrongs/android/view/da;->a:Lcom/estrongs/android/view/cr;
 
-    move-object v1, p1
+    iget-object v0, v0, Lcom/estrongs/android/view/cr;->O:Lcom/estrongs/android/view/dw;
 
-    move-object v2, p2
+    iget-object v1, p0, Lcom/estrongs/android/view/da;->a:Lcom/estrongs/android/view/cr;
 
-    move v3, p3
+    const/4 v2, 0x1
 
-    move-wide v4, p4
+    invoke-interface {v0, v1, v2}, Lcom/estrongs/android/view/dw;->a(Lcom/estrongs/android/view/cr;Z)V
 
-    invoke-interface/range {v0 .. v5}, Landroid/widget/AdapterView$OnItemLongClickListener;->onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
-
-    const/4 v0, 0x1
-
-    return v0
+    :cond_0
+    return-void
 .end method

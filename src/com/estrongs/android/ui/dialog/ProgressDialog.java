@@ -6,10 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import com.estrongs.android.pop.esclasses.g;
+import com.estrongs.android.pop.esclasses.k;
 
 public class ProgressDialog
-  extends cg
+  extends ci
 {
   private ProgressBar a;
   private TextView b;
@@ -42,7 +42,7 @@ public class ProgressDialog
   
   private void a()
   {
-    d = g.a(mContext).inflate(2130903105, null);
+    d = k.a(mContext).inflate(2130903193, null);
     e = ProgressDialog.ProgressStyle.horizontal;
     b();
     setContentView(d);
@@ -53,20 +53,20 @@ public class ProgressDialog
     View localView;
     if (e == ProgressDialog.ProgressStyle.roll)
     {
-      localView = d.findViewById(2131362114);
-      d.findViewById(2131362113).setVisibility(4);
+      localView = d.findViewById(2131624678);
+      d.findViewById(2131624677).setVisibility(4);
     }
     for (;;)
     {
       localView.setVisibility(0);
-      b = ((TextView)localView.findViewById(2131361822));
-      a = ((ProgressBar)localView.findViewById(2131361935));
+      b = ((TextView)localView.findViewById(2131624200));
+      a = ((ProgressBar)localView.findViewById(2131624429));
       if (e == ProgressDialog.ProgressStyle.horizontal) {
         a.setIndeterminate(c);
       }
       return;
-      localView = d.findViewById(2131362113);
-      d.findViewById(2131362114).setVisibility(4);
+      localView = d.findViewById(2131624677);
+      d.findViewById(2131624678).setVisibility(4);
     }
   }
   

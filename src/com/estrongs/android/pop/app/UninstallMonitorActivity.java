@@ -4,19 +4,19 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import com.estrongs.android.j.c;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.esclasses.ESActivity;
+import com.estrongs.android.pop.esclasses.ESResourceActivity;
 import com.estrongs.android.pop.view.FileExplorerActivity;
 import com.estrongs.android.pop.z;
-import com.estrongs.android.ui.dialog.bj;
-import com.estrongs.android.util.a;
+import com.estrongs.android.ui.dialog.bl;
 
 public class UninstallMonitorActivity
-  extends ESActivity
+  extends ESResourceActivity
 {
-  static bj a;
-  boolean b = false;
-  private a c = null;
+  static bl a;
+  boolean b = true;
+  private c d = null;
   
   public static void a(Context paramContext, String paramString)
   {
@@ -49,7 +49,7 @@ public class UninstallMonitorActivity
   
   private void a(String paramString)
   {
-    new mg(this, paramString).start();
+    new mx(this, paramString).start();
   }
   
   public void onConfigurationChanged(Configuration paramConfiguration)
@@ -60,27 +60,39 @@ public class UninstallMonitorActivity
   protected void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    c = a.a(this, false, "Shadow");
-    if (!z.ap) {
-      a(getIntent());
+    if (com.estrongs.android.i.a.a("uninstall_stat", 1) == 1) {
+      d = c.a(this);
     }
-    FileExplorerActivity.h(true);
+    try
+    {
+      d.d("act4");
+      d.a("act4", "uninstall");
+      if (!z.ap)
+      {
+        b = false;
+        a(getIntent());
+      }
+      FileExplorerActivity.g(true);
+      return;
+    }
+    catch (Exception paramBundle)
+    {
+      for (;;)
+      {
+        paramBundle.printStackTrace();
+      }
+    }
   }
   
   protected void onPause()
   {
     super.onPause();
-    if (c != null) {
-      c.c();
-    }
   }
   
   protected void onResume()
   {
     super.onResume();
-    if (c != null) {
-      c.b();
-    }
+    com.estrongs.android.pop.app.ad.a.a().a("uninstall");
     if (b) {
       finish();
     }

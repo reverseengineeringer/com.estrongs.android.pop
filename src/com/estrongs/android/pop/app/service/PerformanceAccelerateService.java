@@ -7,16 +7,14 @@ import android.content.IntentFilter;
 import android.os.Handler;
 import android.os.IBinder;
 import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.app.ESStatisticsActivity;
-import com.estrongs.android.pop.app.b.k;
-import com.estrongs.android.pop.utils.cc;
+import com.estrongs.android.pop.app.f.k;
+import com.estrongs.android.pop.esclasses.i;
 import com.estrongs.android.pop.utils.w;
 import com.estrongs.android.pop.view.utils.n;
 import com.estrongs.android.pop.view.utils.v;
 import com.estrongs.android.pop.z;
-import com.estrongs.android.util.ak;
-import com.estrongs.android.util.y;
+import com.estrongs.android.util.aa;
+import com.estrongs.android.util.an;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -27,29 +25,29 @@ import java.util.Map;
 public class PerformanceAccelerateService
   extends Service
 {
-  private ArrayList<com.estrongs.android.pop.app.b.f> a = new ArrayList();
+  private ArrayList<com.estrongs.android.pop.app.f.f> a = new ArrayList();
   private String b;
   private boolean c = false;
-  private i d = null;
+  private h d = null;
   private BroadcastReceiver e;
   private Handler f;
-  private h g;
-  private g h;
-  private Map<String, y> i;
+  private g g;
+  private f h;
+  private Map<String, aa> i;
   private a j;
   
   private void a()
   {
     try
     {
-      com.estrongs.android.pop.esclasses.e.a(this);
-      d = new i(this);
+      i.a(this);
+      d = new h(this);
       f = new Handler();
-      c();
-      g = new h(this, f);
-      h = new g(this, f);
+      b();
+      g = new g(this, f);
+      h = new f(this, f);
       if ((z.w) && (!FexApplication.a().g())) {
-        FexApplication.a().a(new d(this));
+        FexApplication.a().a(new c(this));
       }
       for (;;)
       {
@@ -66,7 +64,7 @@ public class PerformanceAccelerateService
   
   private void a(v paramv)
   {
-    String str = com.estrongs.android.pop.a.d + "/";
+    String str = com.estrongs.android.pop.a.f + "/";
     str = str + e.hashCode() + ".apk";
     if (new File(str).exists()) {}
     do
@@ -78,12 +76,12 @@ public class PerformanceAccelerateService
       if (i == null) {
         i = new HashMap();
       }
-    } while ((y)i.get(e) != null);
-    y localy = new y(e);
-    i.put(e, localy);
-    localy.a(str);
-    localy.a(new f(this, paramv));
-    localy.c();
+    } while ((aa)i.get(e) != null);
+    aa localaa = new aa(e);
+    i.put(e, localaa);
+    localaa.a(str);
+    localaa.a(new e(this, paramv));
+    localaa.c();
   }
   
   private boolean a(long paramLong)
@@ -109,40 +107,30 @@ public class PerformanceAccelerateService
   
   private void b()
   {
-    if ((cc.d()) && (System.currentTimeMillis() - ad.a(FexApplication.a()).ar() > 432000000L) && (ad.a(FexApplication.a()).aS() < 2))
-    {
-      Intent localIntent = new Intent(this, ESStatisticsActivity.class);
-      localIntent.setFlags(343932928);
-      startActivity(localIntent);
-    }
-  }
-  
-  private void c()
-  {
     if (e != null) {
       return;
     }
-    e = new e(this);
+    e = new d(this);
     IntentFilter localIntentFilter = new IntentFilter();
     localIntentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
     localIntentFilter.addAction("android.net.wifi.STATE_CHANGE");
     registerReceiver(e, localIntentFilter);
   }
   
-  private void d()
+  private void c()
   {
     if (e != null) {
       unregisterReceiver(e);
     }
   }
   
-  private String e()
+  private String d()
   {
-    b = ak.c();
+    b = an.c();
     return b;
   }
   
-  private void f()
+  private void e()
   {
     v[] arrayOfv = n.b().c(this);
     if (arrayOfv != null)
@@ -160,7 +148,7 @@ public class PerformanceAccelerateService
     }
     if (n.b().a(this) > 86400000L)
     {
-      n.b().c();
+      n.b().a(true);
       h.a(60000L);
     }
   }
@@ -172,14 +160,7 @@ public class PerformanceAccelerateService
       a();
       g.a(a);
     }
-    if ((z.w) && (!FexApplication.a().g())) {
-      FexApplication.a().a(new c(this));
-    }
-    for (;;)
-    {
-      return d;
-      b();
-    }
+    return d;
   }
   
   public void onCreate()
@@ -190,7 +171,7 @@ public class PerformanceAccelerateService
   public void onDestroy()
   {
     super.onDestroy();
-    d();
+    c();
     startService(new Intent(this, PerformanceAccelerateService.class));
   }
   
@@ -201,16 +182,13 @@ public class PerformanceAccelerateService
       a();
       g.a(a);
     }
-    if ((!z.w) || (FexApplication.a().g())) {
-      b();
-    }
     return 1;
   }
   
   public boolean onUnbind(Intent paramIntent)
   {
-    if (com.estrongs.android.pop.app.b.c.a() != null) {
-      com.estrongs.android.pop.app.b.c.a().a(null);
+    if (com.estrongs.android.pop.app.f.c.a() != null) {
+      com.estrongs.android.pop.app.f.c.a().a(null);
     }
     j = null;
     return super.onUnbind(paramIntent);

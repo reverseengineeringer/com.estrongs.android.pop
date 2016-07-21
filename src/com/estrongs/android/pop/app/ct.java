@@ -1,56 +1,17 @@
 package com.estrongs.android.pop.app;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.ListView;
-import com.estrongs.android.pop.utils.aa;
-import com.estrongs.android.pop.utils.af;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnDismissListener;
+import com.estrongs.android.ui.adapter.y;
 
 class ct
-  implements View.OnClickListener
+  implements DialogInterface.OnDismissListener
 {
-  ct(HideListActivity paramHideListActivity) {}
+  ct(cs paramcs) {}
   
-  public void onClick(View paramView)
+  public void onDismiss(DialogInterface paramDialogInterface)
   {
-    int i = ((Integer)paramView.getTag()).intValue();
-    if (i == -1) {
-      return;
-    }
-    paramView = HideListActivity.a(a).onSaveInstanceState();
-    af localaf = HideListActivity.b(a)[i];
-    HideListActivity.a(a, true);
-    aa.c(b);
-    HideListActivity.a(a, aa.f());
-    if ((HideListActivity.b(a) == null) || (HideListActivity.b(a).length == 0))
-    {
-      localaf = new af(null, false, null);
-      HideListActivity.a(a, new cx(a, a, 2130903155, new af[] { localaf }));
-    }
-    for (;;)
-    {
-      HideListActivity.a(a).setAdapter(HideListActivity.c(a));
-      HideListActivity.c(a).notifyDataSetChanged();
-      try
-      {
-        HideListActivity.a(a).onRestoreInstanceState(paramView);
-        try
-        {
-          aa.b();
-          aa.e = false;
-          return;
-        }
-        catch (Exception paramView)
-        {
-          return;
-        }
-        HideListActivity.a(a, new cx(a, a, 2130903155, HideListActivity.b(a)));
-      }
-      catch (Exception paramView)
-      {
-        for (;;) {}
-      }
-    }
+    GestureManageActivity.d(a.b.a).notifyDataSetChanged();
   }
 }
 

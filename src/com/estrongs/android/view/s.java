@@ -1,17 +1,37 @@
 package com.estrongs.android.view;
 
+import com.estrongs.android.pop.app.compress.a;
+import com.estrongs.android.pop.app.compress.k;
+import java.io.File;
+import java.util.List;
+
 class s
-  implements Runnable
+  implements com.estrongs.android.pop.app.compress.j
 {
-  s(r paramr) {}
+  s(g paramg, String paramString, List paramList, boolean paramBoolean) {}
   
-  public void run()
+  public void a(a parama, k paramk)
   {
-    if (e.h(a.b) != null) {
-      e.h(a.b).a(a.b);
+    if (paramk != null)
+    {
+      parama = new File(a);
+      g.a(d, c);
+      g.a(d, a);
+      if (3 != g.j(d)) {
+        break label79;
+      }
+      g.c(d, b);
     }
-    if (a.b.H != null) {
-      a.b.H.a(a.b, true);
+    for (;;)
+    {
+      g.a(d, b, c);
+      return;
+      label79:
+      if (1 == g.j(d)) {
+        g.c(d, parama.getParent());
+      } else {
+        g.c(d, parama.getParent() + "/" + com.estrongs.fs.util.j.a(a));
+      }
     }
   }
 }

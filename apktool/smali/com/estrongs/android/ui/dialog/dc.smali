@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/widget/ExpandableListView$OnGroupClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/widget/g;
-
-.field final synthetic b:Lcom/estrongs/android/ui/dialog/da;
+.field final synthetic a:Lcom/estrongs/android/ui/dialog/da;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/da;Lcom/estrongs/android/widget/g;)V
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/da;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/dc;->b:Lcom/estrongs/android/ui/dialog/da;
-
-    iput-object p2, p0, Lcom/estrongs/android/ui/dialog/dc;->a:Lcom/estrongs/android/widget/g;
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/dc;->a:Lcom/estrongs/android/ui/dialog/da;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,37 +22,123 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+.method public onGroupClick(Landroid/widget/ExpandableListView;Landroid/view/View;IJ)Z
+    .locals 6
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/dc;->a:Lcom/estrongs/android/widget/g;
+    const/4 v5, 0x0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/g;->e()Lcom/estrongs/fs/h;
+    if-nez p3, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/dc;->a:Lcom/estrongs/android/ui/dialog/da;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/da;->a(Lcom/estrongs/android/ui/dialog/da;)Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/dc;->b:Lcom/estrongs/android/ui/dialog/da;
-
-    iget-object v1, v1, Lcom/estrongs/android/ui/dialog/da;->a:Lcom/estrongs/android/ui/dialog/cy;
-
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/dialog/cy;->a(Ljava/lang/String;)Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->q()Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    new-instance v2, Lcom/estrongs/android/ui/dialog/dd;
 
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    invoke-direct {v2, p0, v0}, Lcom/estrongs/android/ui/dialog/dd;-><init>(Lcom/estrongs/android/ui/dialog/dc;Z)V
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/dc;->b:Lcom/estrongs/android/ui/dialog/da;
+    const/4 v0, -0x1
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/da;->a:Lcom/estrongs/android/ui/dialog/cy;
+    sget-boolean v1, Lcom/estrongs/android/pop/z;->n:Z
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cy;->b()V
+    if-eqz v1, :cond_1
+
+    const/4 v0, -0x2
+
+    move v1, v0
+
+    :goto_0
+    new-instance v3, Lcom/estrongs/android/widget/f;
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/dc;->a:Lcom/estrongs/android/ui/dialog/da;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/da;->a(Lcom/estrongs/android/ui/dialog/da;)Landroid/content/Context;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/Activity;
+
+    invoke-static {}, Lcom/estrongs/android/pop/b;->b()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-direct {v3, v0, v4, v2, v1}, Lcom/estrongs/android/widget/f;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/i;I)V
+
+    invoke-virtual {v3, v5}, Lcom/estrongs/android/widget/f;->a(Z)V
+
+    const/4 v0, 0x1
+
+    invoke-virtual {v3, v0}, Lcom/estrongs/android/widget/f;->b(Z)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/dc;->a:Lcom/estrongs/android/ui/dialog/da;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/da;->a(Lcom/estrongs/android/ui/dialog/da;)Landroid/content/Context;
+
+    move-result-object v0
+
+    const v2, 0x7f080221
+
+    invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v0, 0x0
+
+    check-cast v0, Landroid/content/DialogInterface$OnClickListener;
+
+    invoke-virtual {v3, v2, v0}, Lcom/estrongs/android/widget/f;->c(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+
+    invoke-virtual {v3, v1}, Lcom/estrongs/android/widget/f;->a(I)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/dc;->a:Lcom/estrongs/android/ui/dialog/da;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/da;->a(Lcom/estrongs/android/ui/dialog/da;)Landroid/content/Context;
+
+    move-result-object v0
+
+    const v1, 0x7f080268
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Lcom/estrongs/android/widget/f;->a(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/dc;->a:Lcom/estrongs/android/ui/dialog/da;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/da;->a(Lcom/estrongs/android/ui/dialog/da;)Landroid/content/Context;
+
+    move-result-object v0
+
+    const v1, 0x7f080226
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/estrongs/android/ui/dialog/de;
+
+    invoke-direct {v1, p0, v3}, Lcom/estrongs/android/ui/dialog/de;-><init>(Lcom/estrongs/android/ui/dialog/dc;Lcom/estrongs/android/widget/f;)V
+
+    invoke-virtual {v3, v0, v1}, Lcom/estrongs/android/widget/f;->b(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+
+    invoke-virtual {v3}, Lcom/estrongs/android/widget/f;->j()V
 
     :cond_0
-    return-void
+    return v5
+
+    :cond_1
+    move v1, v0
+
+    goto :goto_0
 .end method

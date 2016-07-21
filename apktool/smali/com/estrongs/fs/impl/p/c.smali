@@ -1,191 +1,192 @@
 .class public Lcom/estrongs/fs/impl/p/c;
-.super Ljava/io/InputStream;
+.super Lcom/estrongs/fs/impl/media/c;
 
 
-# instance fields
-.field private a:Ljcifs/smb/SmbRandomAccessFile;
-
-.field private b:J
-
-.field private c:J
-
-.field private d:J
+# static fields
+.field private static g:Lcom/estrongs/fs/impl/p/c;
 
 
 # direct methods
-.method public constructor <init>(Ljcifs/smb/SmbRandomAccessFile;J)V
-    .locals 4
-
-    const-wide/16 v2, 0x0
-
-    invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/estrongs/fs/impl/p/c;->a:Ljcifs/smb/SmbRandomAccessFile;
-
-    iput-wide v2, p0, Lcom/estrongs/fs/impl/p/c;->b:J
-
-    iput-wide v2, p0, Lcom/estrongs/fs/impl/p/c;->c:J
-
-    iput-wide v2, p0, Lcom/estrongs/fs/impl/p/c;->d:J
-
-    iput-object p1, p0, Lcom/estrongs/fs/impl/p/c;->a:Ljcifs/smb/SmbRandomAccessFile;
-
-    iput-wide p2, p0, Lcom/estrongs/fs/impl/p/c;->c:J
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public close()V
+.method private constructor <init>()V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/fs/impl/p/c;->a:Ljcifs/smb/SmbRandomAccessFile;
+    invoke-direct {p0}, Lcom/estrongs/fs/impl/media/c;-><init>()V
 
-    invoke-virtual {v0}, Ljcifs/smb/SmbRandomAccessFile;->close()V
+    sget-object v0, Landroid/provider/MediaStore$Images$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    invoke-super {p0}, Ljava/io/InputStream;->close()V
+    iput-object v0, p0, Lcom/estrongs/fs/impl/p/c;->c:Landroid/net/Uri;
+
+    const-string v0, "_data"
+
+    iput-object v0, p0, Lcom/estrongs/fs/impl/p/c;->d:Ljava/lang/String;
+
+    const-string v0, "bucket_display_name"
+
+    iput-object v0, p0, Lcom/estrongs/fs/impl/p/c;->e:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public read()I
-    .locals 6
+.method public static b()Lcom/estrongs/fs/impl/p/c;
+    .locals 1
 
-    iget-wide v0, p0, Lcom/estrongs/fs/impl/p/c;->c:J
+    sget-object v0, Lcom/estrongs/fs/impl/p/c;->g:Lcom/estrongs/fs/impl/p/c;
 
-    iget-wide v2, p0, Lcom/estrongs/fs/impl/p/c;->d:J
+    if-nez v0, :cond_0
 
-    sub-long/2addr v0, v2
+    new-instance v0, Lcom/estrongs/fs/impl/p/c;
 
-    const-wide/16 v2, 0x0
+    invoke-direct {v0}, Lcom/estrongs/fs/impl/p/c;-><init>()V
 
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_1
-
-    const/4 v0, -0x1
+    sput-object v0, Lcom/estrongs/fs/impl/p/c;->g:Lcom/estrongs/fs/impl/p/c;
 
     :cond_0
-    :goto_0
-    return v0
+    sget-object v0, Lcom/estrongs/fs/impl/p/c;->g:Lcom/estrongs/fs/impl/p/c;
 
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/fs/impl/p/c;->a:Ljcifs/smb/SmbRandomAccessFile;
-
-    invoke-virtual {v0}, Ljcifs/smb/SmbRandomAccessFile;->read()I
-
-    move-result v0
-
-    if-ltz v0, :cond_0
-
-    iget-wide v2, p0, Lcom/estrongs/fs/impl/p/c;->d:J
-
-    const-wide/16 v4, 0x1
-
-    add-long/2addr v2, v4
-
-    iput-wide v2, p0, Lcom/estrongs/fs/impl/p/c;->d:J
-
-    goto :goto_0
+    return-object v0
 .end method
 
-.method public read([B)I
+.method public static e(Ljava/lang/String;)Z
     .locals 2
 
-    const/4 v0, 0x0
+    const-string v0, "pic://"
 
-    array-length v1, p1
-
-    invoke-virtual {p0, p1, v0, v1}, Lcom/estrongs/fs/impl/p/c;->read([BII)I
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    return v0
-.end method
+    if-eqz v0, :cond_0
 
-.method public read([BII)I
-    .locals 6
+    invoke-static {}, Lcom/estrongs/android/util/ap;->g()Ljava/lang/String;
 
-    const-wide/16 v4, 0x0
+    move-result-object v0
 
-    iget-wide v0, p0, Lcom/estrongs/fs/impl/p/c;->c:J
-
-    cmp-long v0, v0, v4
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/fs/impl/p/c;->a:Ljcifs/smb/SmbRandomAccessFile;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljcifs/smb/SmbRandomAccessFile;->read([BII)I
-
-    move-result v0
-
-    if-ltz v0, :cond_0
-
-    iget-wide v2, p0, Lcom/estrongs/fs/impl/p/c;->d:J
-
-    int-to-long v4, v0
-
-    add-long/2addr v2, v4
-
-    iput-wide v2, p0, Lcom/estrongs/fs/impl/p/c;->d:J
-
-    :cond_0
     :goto_0
-    return v0
+    new-instance v1, Ljava/io/File;
 
-    :cond_1
-    iget-wide v0, p0, Lcom/estrongs/fs/impl/p/c;->c:J
+    invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    iget-wide v2, p0, Lcom/estrongs/fs/impl/p/c;->d:J
-
-    sub-long/2addr v0, v2
-
-    cmp-long v2, v0, v4
-
-    if-nez v2, :cond_2
-
-    const/4 v0, -0x1
-
-    goto :goto_0
-
-    :cond_2
-    int-to-long v2, p3
-
-    cmp-long v2, v2, v0
-
-    if-gez v2, :cond_3
-
-    iget-object v0, p0, Lcom/estrongs/fs/impl/p/c;->a:Ljcifs/smb/SmbRandomAccessFile;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljcifs/smb/SmbRandomAccessFile;->read([BII)I
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     :goto_1
-    if-ltz v0, :cond_0
+    return v0
 
-    iget-wide v2, p0, Lcom/estrongs/fs/impl/p/c;->d:J
+    :cond_0
+    const-string v0, "pic://"
 
-    int-to-long v4, v0
-
-    add-long/2addr v2, v4
-
-    iput-wide v2, p0, Lcom/estrongs/fs/impl/p/c;->d:J
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v2, p0, Lcom/estrongs/fs/impl/p/c;->a:Ljcifs/smb/SmbRandomAccessFile;
-
-    long-to-int v0, v0
-
-    invoke-virtual {v2, p1, p2, v0}, Ljcifs/smb/SmbRandomAccessFile;->read([BII)I
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
 
+    if-eqz v0, :cond_1
+
+    const-string v0, "pic://"
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
     goto :goto_1
+.end method
+
+
+# virtual methods
+.method public a(Ljava/lang/String;Ljava/lang/String;)I
+    .locals 5
+
+    :try_start_0
+    new-instance v0, Landroid/content/ContentValues;
+
+    invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
+
+    iget-object v1, p0, Lcom/estrongs/fs/impl/p/c;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v2, p0, Lcom/estrongs/fs/impl/p/c;->d:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-static {p1}, Landroid/database/DatabaseUtils;->sqlEscapeString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/FexApplication;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/estrongs/fs/impl/p/c;->c:Landroid/net/Uri;
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v2, v3, v0, v1, v4}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method protected a(Ljava/io/File;)Lcom/estrongs/fs/h;
+    .locals 1
+
+    new-instance v0, Lcom/estrongs/fs/impl/p/a;
+
+    invoke-direct {v0, p1}, Lcom/estrongs/fs/impl/p/a;-><init>(Ljava/io/File;)V
+
+    return-object v0
+.end method
+
+.method protected a()Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
 .end method

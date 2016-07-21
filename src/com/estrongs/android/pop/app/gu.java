@@ -1,23 +1,31 @@
 package com.estrongs.android.pop.app;
 
-import android.preference.EditTextPreference;
+import android.content.Intent;
 import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.util.am;
-import com.estrongs.fs.a.b;
+import android.preference.Preference.OnPreferenceClickListener;
+import com.estrongs.android.ui.dialog.cv;
+import com.estrongs.android.util.an;
 
 class gu
-  implements Preference.OnPreferenceChangeListener
+  implements Preference.OnPreferenceClickListener
 {
   gu(PopPreferenceActivity paramPopPreferenceActivity) {}
   
-  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
+  public boolean onPreferenceClick(Preference paramPreference)
   {
-    a.b.c(Boolean.valueOf(paramObject.toString()).booleanValue());
-    paramPreference = am.bF(a.c.getText()) + "*";
-    b.a().a(paramPreference);
-    return true;
+    if (an.d())
+    {
+      paramPreference = new Intent();
+      paramPreference.setClassName(a.getPackageName(), HelpActivity.class.getName());
+      a.startActivity(paramPreference);
+    }
+    for (;;)
+    {
+      return true;
+      paramPreference = new cv(a);
+      paramPreference.a(a.getText(2131231714)).b(a.getText(2131232382)).a(2131231270, new gv(this));
+      paramPreference.c();
+    }
   }
 }
 

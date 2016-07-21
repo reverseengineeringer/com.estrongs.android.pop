@@ -1,20 +1,17 @@
 package com.estrongs.android.ui.e;
 
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.ui.dialog.cg;
-import java.io.File;
+import com.estrongs.android.ui.dialog.ci;
 
 final class if
   implements DialogInterface.OnClickListener
 {
-  if(Context paramContext, File paramFile1, File paramFile2, cg paramcg) {}
+  if(ci paramci) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    ie.a(a, b, c);
-    d.dismiss();
+    a.dismiss();
   }
 }
 

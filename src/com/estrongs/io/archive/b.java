@@ -38,10 +38,10 @@ final class b
       while (localIterator2.hasNext())
       {
         str = (String)localIterator2.next();
-        h localh = (h)a.a.get(str);
-        if (localh != null)
+        i locali = (i)a.a.get(str);
+        if (locali != null)
         {
-          localh.g();
+          locali.g();
           a.a.remove(str);
           a.b.remove(str);
         }

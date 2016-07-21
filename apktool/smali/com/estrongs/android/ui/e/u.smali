@@ -1,34 +1,49 @@
-.class public Lcom/estrongs/android/ui/e/u;
-.super Lcom/estrongs/android/ui/e/jk;
+.class Lcom/estrongs/android/ui/e/u;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcom/estrongs/android/ui/dialog/hb;
+
+
+# instance fields
+.field final synthetic a:Lcom/estrongs/android/ui/e/t;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Z)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/t;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/estrongs/android/ui/e/jk;-><init>(Landroid/content/Context;Z)V
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/u;->a:Lcom/estrongs/android/ui/e/t;
 
-    invoke-direct {p0}, Lcom/estrongs/android/ui/e/u;->h()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method private h()V
-    .locals 3
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/u;->b:Landroid/content/Context;
+# virtual methods
+.method public a(I)V
+    .locals 1
 
-    check-cast v0, Lcom/estrongs/android/pop/app/network/EsNetworkActivity;
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/u;->a:Lcom/estrongs/android/ui/e/t;
 
-    const v0, 0x7f0b006f
+    iget-object v0, v0, Lcom/estrongs/android/ui/e/t;->a:Lcom/estrongs/android/ui/e/m;
 
-    const v1, 0x7f0202d9
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/m;->a(Lcom/estrongs/android/ui/e/m;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    new-instance v2, Lcom/estrongs/android/ui/e/v;
+    move-result-object v0
 
-    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/e/v;-><init>(Lcom/estrongs/android/ui/e/u;)V
+    invoke-virtual {v0, p1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->b(I)V
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/estrongs/android/ui/e/u;->a(IILandroid/view/MenuItem$OnMenuItemClickListener;)Lcom/estrongs/android/view/a/a;
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/u;->a:Lcom/estrongs/android/ui/e/t;
+
+    iget-object v0, v0, Lcom/estrongs/android/ui/e/t;->a:Lcom/estrongs/android/ui/e/m;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/m;->h(Lcom/estrongs/android/ui/e/m;)Lcom/estrongs/android/ui/dialog/gx;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/gx;->dismiss()V
 
     return-void
 .end method

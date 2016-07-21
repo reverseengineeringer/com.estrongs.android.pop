@@ -1,6 +1,6 @@
 package com.estrongs.io.archive.sevenzip;
 
-import com.estrongs.fs.impl.local.h;
+import com.estrongs.fs.impl.local.i;
 import com.estrongs.io.a.d;
 import java.io.File;
 
@@ -16,7 +16,7 @@ class y
   
   public void a(a parama, String paramString)
   {
-    x.a(a).a(new File(paramString).getName(), h.e(paramString));
+    x.a(a).a(new File(paramString).getName(), i.e(paramString));
   }
 }
 

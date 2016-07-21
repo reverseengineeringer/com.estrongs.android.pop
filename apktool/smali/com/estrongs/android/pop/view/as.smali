@@ -2,26 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Lcom/estrongs/android/ui/pcs/q;
 
 
 # instance fields
-.field final synthetic a:Landroid/widget/CheckBox;
-
-.field final synthetic b:Ljava/lang/Thread;
-
-.field final synthetic c:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+.field final synthetic a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;Landroid/widget/CheckBox;Ljava/lang/Thread;)V
+.method constructor <init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/view/as;->c:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    iput-object p2, p0, Lcom/estrongs/android/pop/view/as;->a:Landroid/widget/CheckBox;
-
-    iput-object p3, p0, Lcom/estrongs/android/pop/view/as;->b:Ljava/lang/Thread;
+    iput-object p1, p0, Lcom/estrongs/android/pop/view/as;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -30,41 +22,31 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+.method public a(ZLjava/lang/String;Ljava/lang/String;)V
+    .locals 4
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/as;->a:Landroid/widget/CheckBox;
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v0}, Landroid/widget/CheckBox;->isChecked()Z
+    invoke-static {p3}, Lcom/estrongs/android/util/bk;->b(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/as;->c:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/as;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+    iget-object v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->k:Lcom/estrongs/android/pop/ad;
 
-    move-result-object v0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    const/4 v1, 0x0
+    move-result-wide v2
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/ad;->p(Z)V
+    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/pop/ad;->e(J)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/as;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->O()Lcom/estrongs/android/view/cr;
 
     :cond_0
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
-
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/FexApplication;->a(Z)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/as;->b:Ljava/lang/Thread;
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
-
     return-void
 .end method

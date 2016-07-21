@@ -1,16 +1,14 @@
 package com.estrongs.android.util;
 
-import java.util.HashMap;
+import com.estrongs.fs.util.j;
+import java.io.File;
 
 public class w
+  extends u
 {
-  private static String a = null;
-  private static w b = null;
-  private static HashMap<String, Integer> c = new HashMap();
-  
-  public static void a(String paramString)
+  protected String a(File paramFile)
   {
-    a = paramString + "/";
+    return j.b(paramFile.getName());
   }
 }
 

@@ -1,20 +1,24 @@
 package com.estrongs.android.pop.view;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.pop.FexApplication;
+import android.view.animation.Animation;
+import android.view.animation.Animation.AnimationListener;
+import com.estrongs.android.ui.drag.DragLayer;
 
 class ax
-  implements DialogInterface.OnClickListener
+  implements Animation.AnimationListener
 {
   ax(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void onAnimationEnd(Animation paramAnimation)
   {
-    paramDialogInterface.dismiss();
-    FexApplication.a().a(false);
-    a.finish();
+    if (FileExplorerActivity.g(a) != null) {
+      FileExplorerActivity.g(a).setVisibility(8);
+    }
   }
+  
+  public void onAnimationRepeat(Animation paramAnimation) {}
+  
+  public void onAnimationStart(Animation paramAnimation) {}
 }
 
 /* Location:

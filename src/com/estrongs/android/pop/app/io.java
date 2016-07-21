@@ -1,31 +1,41 @@
 package com.estrongs.android.pop.app;
 
-import android.app.ProgressDialog;
-import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.os.Handler;
+import android.widget.EditText;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.ax;
+import com.estrongs.fs.a.b;
 
-public class io
+class io
+  implements DialogInterface.OnClickListener
 {
-  private static ProgressDialog a = null;
-  private static boolean b = false;
-  private static Handler c = new Handler();
+  io(im paramim, EditText paramEditText1, EditText paramEditText2) {}
   
-  public static final void a()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (!b) {
-      return;
+    String str1 = a.getText().toString();
+    String str2 = b.getText().toString();
+    switch (new ax().b(c.a, str1, str2))
+    {
+    default: 
+      ak.a(c.a, 2131232111, 1);
     }
-    c.post(new ip());
-  }
-  
-  public static final void a(Context paramContext)
-  {
-    b = true;
-    a = new ProgressDialog(paramContext);
-    a.setMessage(paramContext.getText(2131427442));
-    a.setIndeterminate(true);
-    a.setCancelable(true);
-    a.show();
+    for (;;)
+    {
+      paramDialogInterface.dismiss();
+      return;
+      b.a().a("net://*");
+      ak.a(c.a, 2131232112, 1);
+      PopPreferenceActivity.b(c.a).post(new ip(this));
+      continue;
+      ak.a(c.a, 2131232111, 1);
+      continue;
+      ak.a(c.a, 2131232109, 1);
+      continue;
+      ak.a(c.a, 2131232108, 1);
+    }
   }
 }
 

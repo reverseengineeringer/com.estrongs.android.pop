@@ -1,17 +1,60 @@
 package com.estrongs.android.a;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.util.l;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
 
 class r
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
-  r(q paramq) {}
+  r(q paramq, ArrayList paramArrayList, String paramString) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void run()
   {
-    a.c = 3;
-    a.dismiss();
+    Iterator localIterator = a.iterator();
+    int i = 0;
+    int j = 0;
+    for (;;)
+    {
+      if (localIterator.hasNext())
+      {
+        Object localObject = (Future)localIterator.next();
+        int k = j;
+        int m = j;
+        try
+        {
+          localObject = (t)((Future)localObject).get();
+          k = j;
+          m = j;
+          j += b;
+          long l1 = i;
+          k = j;
+          m = j;
+          long l2 = a;
+          i = (int)(l2 + l1);
+        }
+        catch (InterruptedException localInterruptedException)
+        {
+          for (;;)
+          {
+            localInterruptedException.printStackTrace();
+            j = k;
+          }
+        }
+        catch (ExecutionException localExecutionException)
+        {
+          for (;;)
+          {
+            localExecutionException.printStackTrace();
+            j = m;
+          }
+        }
+      }
+    }
+    l.c(q.c(), "analyze finish");
+    q.a(c).a(b);
   }
 }
 

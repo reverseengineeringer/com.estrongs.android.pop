@@ -1,16 +1,47 @@
 package com.estrongs.android.pop.app;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import com.estrongs.android.pop.spfs.PhotoInfoException;
+import com.estrongs.android.pop.spfs.PhotoInfoManager;
+import com.estrongs.android.util.m;
 
 class dr
-  implements View.OnClickListener
+  extends m
 {
-  dr(ImageCommentPostActivity paramImageCommentPostActivity) {}
-  
-  public void onClick(View paramView)
+  dr(ImageCommentPostActivity paramImageCommentPostActivity, String paramString1, String paramString2)
   {
-    a.finish();
+    super(paramString1);
+  }
+  
+  public void run()
+  {
+    Object localObject = null;
+    String str;
+    try
+    {
+      PhotoInfoManager.addComment(ImageCommentPostActivity.b(b), a);
+      if (g) {
+        return;
+      }
+    }
+    catch (PhotoInfoException localPhotoInfoException)
+    {
+      for (;;)
+      {
+        localPhotoInfoException.printStackTrace();
+        str = b.getString(2131231225) + ": " + localPhotoInfoException.getMessage();
+      }
+    }
+    boolean bool;
+    if (str != null) {
+      bool = false;
+    }
+    for (;;)
+    {
+      b.a(new ds(this, bool, str));
+      return;
+      bool = true;
+      str = b.getString(2131231226);
+    }
   }
 }
 

@@ -1,13 +1,24 @@
 package com.estrongs.android.pop.app;
 
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.pop.ad;
+import java.util.ArrayList;
 
 class ak
+  implements View.OnClickListener
 {
-  ImageView a;
-  TextView b;
-  ImageView c;
+  ak(DefaultWindowSetting paramDefaultWindowSetting) {}
+  
+  public void onClick(View paramView)
+  {
+    if (ad.a(a).N().size() >= 12)
+    {
+      com.estrongs.android.ui.view.ak.a(a, 2131232453, 1);
+      return;
+    }
+    a.a(a);
+  }
 }
 
 /* Location:

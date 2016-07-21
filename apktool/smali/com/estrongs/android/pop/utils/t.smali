@@ -29,7 +29,7 @@
 
     iget-object v0, v0, Lcom/estrongs/android/pop/utils/s;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->N()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->ac()V
 
     return-void
 .end method

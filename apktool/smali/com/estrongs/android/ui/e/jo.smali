@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/view/a/e;
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/e/jk;
+.field final synthetic a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+.field final synthetic b:Lcom/estrongs/android/ui/e/jm;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/jk;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/jm;Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/jo;->a:Lcom/estrongs/android/ui/e/jk;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/jo;->b:Lcom/estrongs/android/ui/e/jm;
+
+    iput-object p2, p0, Lcom/estrongs/android/ui/e/jo;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,20 +26,20 @@
 
 
 # virtual methods
-.method public a(Lcom/estrongs/android/view/a/a;)V
+.method public onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 3
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jo;->a:Lcom/estrongs/android/ui/e/jk;
+    const/4 v2, 0x1
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/jk;->b:Landroid/content/Context;
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/jo;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-virtual {p1}, Lcom/estrongs/android/view/a/a;->getTitle()Ljava/lang/CharSequence;
+    iget-object v1, p0, Lcom/estrongs/android/ui/e/jo;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->P()Ljava/lang/String;
 
     move-result-object v1
 
-    const/4 v2, 0x0
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a(Ljava/lang/String;Z)V
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
-
-    return-void
+    return v2
 .end method

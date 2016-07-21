@@ -2,9 +2,9 @@ package com.estrongs.a.b;
 
 import android.app.Activity;
 import com.estrongs.android.pop.ac;
-import com.estrongs.android.util.am;
-import com.estrongs.fs.b.au;
-import com.estrongs.fs.b.bl;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.b.aw;
+import com.estrongs.fs.b.bn;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.InputStream;
@@ -69,7 +69,7 @@ class e
               }
               str1 = new DataInputStream(d.a(a).getInputStream()).readLine();
               a.a(d.c(a), 200, d.b);
-              au.a(d.a(a).getInetAddress().getAddress(), str1);
+              aw.a(d.a(a).getInetAddress().getAddress(), str1);
               d.c().runOnUiThread(new f(this));
               try
               {
@@ -155,7 +155,7 @@ class e
               if (!localProperties.getProperty("content-type").equals("media/realtime")) {
                 continue;
               }
-              localObject2 = new bl(str3 + String.format(d.c().getString(2131427551), new Object[] { am.d(str4) }), am.d(str4), (String)localObject2, d.a(a), l);
+              localObject2 = new bn(str3 + String.format(d.c().getString(2131231477), new Object[] { ap.d(str4) }), ap.d(str4), (String)localObject2, d.a(a), l);
               a = ("http://" + localProperties.getProperty("host"));
               if (!str4.startsWith("/"))
               {
@@ -163,7 +163,7 @@ class e
                 g = str3;
                 c = j;
                 d = k;
-                d.c().runOnUiThread(new g(this, (bl)localObject2));
+                d.c().runOnUiThread(new g(this, (bn)localObject2));
                 d.a(a, null);
               }
             }
@@ -176,20 +176,20 @@ class e
             continue;
             if (localProperties.getProperty("content-type").equals("application/folder"))
             {
-              localObject2 = new bl(str3 + String.format(d.c().getString(2131427552), new Object[] { localObject3 }), str4, (String)localObject2, d.a(a), l);
+              localObject2 = new bn(str3 + String.format(d.c().getString(2131231478), new Object[] { localObject3 }), str4, (String)localObject2, d.a(a), l);
               b = 2;
               continue;
             }
             if (localProperties.getProperty("content-type").equals("application/files"))
             {
-              localObject2 = new bl(str3 + String.format(d.c().getString(2131427553), new Object[] { localObject3 }), str4, (String)localObject2, d.a(a), l);
+              localObject2 = new bn(str3 + String.format(d.c().getString(2131231479), new Object[] { localObject3 }), str4, (String)localObject2, d.a(a), l);
               b = 3;
               continue;
             }
             String str5 = localProperties.getProperty("append-data");
             if ((str5 != null) && (str5.toLowerCase().equals("thumbnail-image")))
             {
-              localObject3 = new bl(str3 + String.format(d.c().getString(2131427554), new Object[] { localObject3 }), str4, (String)localObject2, d.a(a), l);
+              localObject3 = new bn(str3 + String.format(d.c().getString(2131231480), new Object[] { localObject3 }), str4, (String)localObject2, d.a(a), l);
               m = Integer.parseInt(localProperties.getProperty("image-width"));
               n = Integer.parseInt(localProperties.getProperty("image-height"));
               l = new byte[m * n * 4];
@@ -215,7 +215,7 @@ class e
             }
             else
             {
-              localObject2 = new bl(str3 + String.format(d.c().getString(2131427553), new Object[] { localObject3 }), str4, (String)localObject2, d.a(a), l);
+              localObject2 = new bn(str3 + String.format(d.c().getString(2131231479), new Object[] { localObject3 }), str4, (String)localObject2, d.a(a), l);
             }
             b = 1;
             continue;

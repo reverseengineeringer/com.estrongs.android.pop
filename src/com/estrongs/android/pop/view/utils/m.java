@@ -3,18 +3,18 @@ package com.estrongs.android.pop.view.utils;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.android.util.be;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.util.bm;
 
 final class m
   implements DialogInterface.OnClickListener
 {
-  m(cg paramcg, String paramString, Activity paramActivity) {}
+  m(ci paramci, String paramString, Activity paramActivity) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
     a.dismiss();
-    be.c().a(b, false);
+    bm.c().a(b, false);
     if (paramInt == 0) {
       AppRunner.a(c, b, false, true);
     }

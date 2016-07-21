@@ -1,15 +1,17 @@
 package com.estrongs.android.ui.pcs;
 
-import com.baidu.sapi2.SapiWebView.OnFinishCallback;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.baidu.sapi2.SapiWebView;
 
-class ap
-  implements SapiWebView.OnFinishCallback
+final class ap
+  implements View.OnClickListener
 {
-  ap(SocialLoginActivity paramSocialLoginActivity) {}
+  ap(SapiWebView paramSapiWebView, View paramView) {}
   
-  public void onFinish()
+  public void onClick(View paramView)
   {
-    a.finish();
+    a.post(new aq(this));
   }
 }
 

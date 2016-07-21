@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/ui/pcs/n;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
@@ -22,8 +22,10 @@
 
 
 # virtual methods
-.method public a(ZLjava/lang/String;Ljava/lang/String;)V
+.method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
+
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     return-void
 .end method

@@ -11,7 +11,6 @@ import android.media.MediaPlayer.OnSeekCompleteListener;
 import android.media.MediaPlayer.OnVideoSizeChangedListener;
 import android.net.Uri;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
@@ -20,6 +19,7 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.widget.MediaController;
 import android.widget.MediaController.MediaPlayerControl;
+import com.estrongs.android.util.l;
 import java.io.IOException;
 import java.util.Map;
 
@@ -27,16 +27,16 @@ public class ESVideoView
   extends SurfaceView
   implements MediaController.MediaPlayerControl
 {
-  private ar A = null;
-  private aq B = null;
-  private MediaPlayer.OnCompletionListener C = new al(this);
-  private MediaPlayer.OnSeekCompleteListener D = new am(this);
-  private MediaPlayer.OnErrorListener E = new an(this);
-  private MediaPlayer.OnBufferingUpdateListener F = new ao(this);
+  private av A = null;
+  private au B = null;
+  private MediaPlayer.OnCompletionListener C = new ap(this);
+  private MediaPlayer.OnSeekCompleteListener D = new aq(this);
+  private MediaPlayer.OnErrorListener E = new ar(this);
+  private MediaPlayer.OnBufferingUpdateListener F = new as(this);
   protected Uri a;
-  MediaPlayer.OnVideoSizeChangedListener b = new aj(this);
-  MediaPlayer.OnPreparedListener c = new ak(this);
-  SurfaceHolder.Callback d = new ap(this);
+  MediaPlayer.OnVideoSizeChangedListener b = new an(this);
+  MediaPlayer.OnPreparedListener c = new ao(this);
+  SurfaceHolder.Callback d = new at(this);
   private String e = "VideoView";
   private int f;
   private int g = 0;
@@ -58,7 +58,7 @@ public class ESVideoView
   private boolean w;
   private Context x;
   private boolean y = false;
-  private as z = null;
+  private aw z = null;
   
   public ESVideoView(Context paramContext)
   {
@@ -98,7 +98,7 @@ public class ESVideoView
   {
     if (z == null)
     {
-      z = new as(this);
+      z = new aw(this);
       z.start();
     }
   }
@@ -136,7 +136,7 @@ public class ESVideoView
     }
     catch (IOException localIOException)
     {
-      Log.w(e, "Unable to open content: " + a, localIOException);
+      l.b(e, "Unable to open content: " + a, localIOException);
       g = -1;
       h = -1;
       E.onError(j, 1, 0);
@@ -145,7 +145,7 @@ public class ESVideoView
     }
     catch (IllegalArgumentException localIllegalArgumentException)
     {
-      Log.w(e, "Unable to open content: " + a, localIllegalArgumentException);
+      l.b(e, "Unable to open content: " + a, localIllegalArgumentException);
       g = -1;
       h = -1;
       E.onError(j, 1, 0);
@@ -187,7 +187,7 @@ public class ESVideoView
     {
       MediaPlayer localMediaPlayer = j;
       j = null;
-      new Thread(new ah(this, localMediaPlayer)).start();
+      new Thread(new al(this, localMediaPlayer)).start();
       g = 0;
       h = 0;
       y = false;
@@ -208,26 +208,6 @@ public class ESVideoView
     t = paramInt;
   }
   
-  public void a(MediaPlayer.OnCompletionListener paramOnCompletionListener)
-  {
-    p = paramOnCompletionListener;
-  }
-  
-  public void a(MediaPlayer.OnErrorListener paramOnErrorListener)
-  {
-    s = paramOnErrorListener;
-  }
-  
-  public void a(MediaPlayer.OnPreparedListener paramOnPreparedListener)
-  {
-    q = paramOnPreparedListener;
-  }
-  
-  public void a(Uri paramUri)
-  {
-    a(paramUri, null);
-  }
-  
   public void a(Uri paramUri, Map<String, String> paramMap)
   {
     if ((a != null) && (!a.equals(paramUri)))
@@ -239,25 +219,6 @@ public class ESVideoView
     g();
     requestLayout();
     invalidate();
-  }
-  
-  public void a(MediaController paramMediaController)
-  {
-    if (o != null) {
-      o.hide();
-    }
-    o = paramMediaController;
-    h();
-  }
-  
-  public void a(ar paramar)
-  {
-    A = paramar;
-  }
-  
-  public void a(String paramString)
-  {
-    a(Uri.parse(paramString));
   }
   
   public void a(boolean paramBoolean)
@@ -275,7 +236,7 @@ public class ESVideoView
       if (!paramBoolean2) {
         break label60;
       }
-      new Thread(new ai(this, localMediaPlayer)).start();
+      new Thread(new am(this, localMediaPlayer)).start();
     }
     for (;;)
     {
@@ -496,6 +457,50 @@ public class ESVideoView
     if (z != null) {
       z.a(i1);
     }
+  }
+  
+  public void setMediaController(MediaController paramMediaController)
+  {
+    if (o != null) {
+      o.hide();
+    }
+    o = paramMediaController;
+    h();
+  }
+  
+  public void setOnCompletionListener(MediaPlayer.OnCompletionListener paramOnCompletionListener)
+  {
+    p = paramOnCompletionListener;
+  }
+  
+  public void setOnDrawListener(au paramau)
+  {
+    B = paramau;
+  }
+  
+  public void setOnErrorListener(MediaPlayer.OnErrorListener paramOnErrorListener)
+  {
+    s = paramOnErrorListener;
+  }
+  
+  public void setOnPreparedListener(MediaPlayer.OnPreparedListener paramOnPreparedListener)
+  {
+    q = paramOnPreparedListener;
+  }
+  
+  public void setSeekListener(av paramav)
+  {
+    A = paramav;
+  }
+  
+  public void setVideoPath(String paramString)
+  {
+    setVideoURI(Uri.parse(paramString));
+  }
+  
+  public void setVideoURI(Uri paramUri)
+  {
+    a(paramUri, null);
   }
   
   public void start()

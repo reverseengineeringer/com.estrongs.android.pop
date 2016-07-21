@@ -1,153 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="view_item_names">
-        <item>Large Icon</item>
-        <item>Medium Icon</item>
-        <item>Small Icon</item>
-        <item>Large List</item>
-        <item>Medium List</item>
-        <item>Small List</item>
-        <item>Large Detail</item>
-        <item>Medium Detail</item>
-        <item>Small Detail</item>
-    </string-array>
-    <string-array name="wifi_signal">
-        <item>Poor</item>
-        <item>Fair</item>
-        <item>Good</item>
-        <item>Excellent</item>
-    </string-array>
-    <string-array name="wifi_statuses">
-        <item></item>
-        <item>Scanning…</item>
-        <item>Connecting…</item>
-        <item>Authenticating…</item>
-        <item>Obtaining IP address…</item>
-        <item>Connected</item>
-        <item>Suspended</item>
-        <item>Disconnecting…</item>
-        <item>Disconnected</item>
-        <item>Unsuccessful</item>
-    </string-array>
-    <string-array name="wifi_status_with_ssid">
-        <item></item>
-        <item>Scanning…</item>
-        <item>Connecting to %1$s…</item>
-        <item>Authenticating with %1$s…</item>
-        <item>Obtaining IP address from %1$s…</item>
-        <item>Connected to %1$s</item>
-        <item>Suspended</item>
-        <item>Disconnecting from %1$s…</item>
-        <item>Disconnected</item>
-        <item>Unsuccessful</item>
-    </string-array>
-    <string-array name="new_navi_groups">
-        <item>Favorite</item>
-        <item>Local</item>
-        <item>Library</item>
-        <item>Network</item>
-        <item>Tools</item>
-    </string-array>
-    <string-array name="theme_folders">
-        <item>Default</item>
-        <item>Yellow</item>
-        <item>Green</item>
-        <item>Red</item>
-        <item>Pink</item>
-        <item>Black</item>
-    </string-array>
-    <string-array name="netdisk_names">
-        <item>Box</item>
-        <item>SugarSync</item>
-        <item>DropBox</item>
-        <item>OneDrive</item>
-        <item>Gdrive</item>
-        <item>S3</item>
-        <item>Yandex</item>
-        <item>KuaiPan</item>
-        <item>KanBox</item>
-        <item>Sina VDisk</item>
-        <item>Baidu NetDisk</item>
-        <item>MediaFire</item>
-    </string-array>
-    <string-array name="search_condition_size">
-        <item>All</item>
-        <item>0 – 100 KB</item>
-        <item>100KB - 1 MB</item>
-        <item>1 MB - 16 MB</item>
-        <item>16 MB - 128 MB</item>
-        <item>> 128 MB</item>
-        <item>Input</item>
-    </string-array>
-    <string-array name="search_condition_date">
-        <item>All</item>
-        <item>Today</item>
-        <item>Yesterday</item>
-        <item>This week</item>
-        <item>This month</item>
-        <item>This year</item>
-        <item>> 1 year</item>
-        <item>Input</item>
-    </string-array>
-    <string-array name="zip_levels">
-        <item>Store</item>
-        <item>Fast</item>
-        <item>Standard</item>
-        <item>Best</item>
-    </string-array>
-    <string-array name="image_slide_interval">
-        <item>1 s</item>
-        <item>3 s</item>
-        <item>5 s</item>
-        <item>10 s</item>
-        <item>15 s</item>
-    </string-array>
-    <string-array name="pick_and_return_file_entries">
-        <item>"Normal Android Way
-(For MMS,Gmail,…)"</item>
-        <item>"File Way
-(Try this if above fails)"</item>
-    </string-array>
     <string-array name="diskusage_sort_entries">
         <item>Name</item>
         <item>Type</item>
         <item>Size</item>
-    </string-array>
-    <string-array name="line_terminator_entries">
-        <item>DOS Terminators - CR/LF</item>
-        <item>UNIX Terminators - LF</item>
-        <item>MAC Terminators - CR</item>
-    </string-array>
-    <string-array name="search_engine_entries">
-        <item>Auto</item>
-        <item>Baidu</item>
-        <item>Google</item>
-        <item>Yahoo</item>
-        <item>Yandex</item>
-        <item>Naver</item>
-        <item>Amazon</item>
-    </string-array>
-    <string-array name="image_slide_interval_values">
-        <item>1000</item>
-        <item>3000</item>
-        <item>5000</item>
-        <item>10000</item>
-        <item>15000</item>
-    </string-array>
-    <string-array name="line_terminator_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-    </string-array>
-    <string-array name="wifi_security">
-        <item>Open</item>
-        <item>WEP</item>
-        <item>WPA/WPA2 PSK</item>
-        <item>802.1x EAP</item>
-    </string-array>
-    <string-array name="wifi_ap_security">
-        <item>Open</item>
-        <item>WPA2 PSK</item>
     </string-array>
     <string-array name="ftp_codepage_entries">
         <item>Auto</item>
@@ -179,6 +35,67 @@
         <item>ANSI(ASCII)</item>
         <item>Unicode(UTF-16LE)</item>
         <item>Unicode(UTF-16BE)</item>
+    </string-array>
+    <string-array name="image_slide_interval">
+        <item>1 s</item>
+        <item>3 s</item>
+        <item>5 s</item>
+        <item>10 s</item>
+        <item>15 s</item>
+    </string-array>
+    <string-array name="image_slide_interval_values">
+        <item>1000</item>
+        <item>3000</item>
+        <item>5000</item>
+        <item>10000</item>
+        <item>15000</item>
+    </string-array>
+    <string-array name="line_terminator_entries">
+        <item>DOS Terminators - CR/LF</item>
+        <item>UNIX Terminators - LF</item>
+        <item>MAC Terminators - CR</item>
+    </string-array>
+    <string-array name="line_terminator_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="netdisk_names">
+        <item>Box</item>
+        <item>SugarSync</item>
+        <item>DropBox</item>
+        <item>OneDrive</item>
+        <item>Gdrive</item>
+        <item>S3</item>
+        <item>Yandex</item>
+        <item>MegaCloud</item>
+        <item>KuaiPan</item>
+        <item>Sina VDisk</item>
+        <item>Baidu NetDisk</item>
+        <item>MediaFire</item>
+    </string-array>
+    <string-array name="new_navi_groups">
+        <item>Favorite</item>
+        <item>Local</item>
+        <item>Library</item>
+        <item>Network</item>
+        <item>Tools</item>
+    </string-array>
+    <string-array name="pcs_category">
+        <item>All Files</item>
+        <item>Image</item>
+        <item>Document</item>
+        <item>Music</item>
+        <item>Video</item>
+        <item>Application</item>
+        <item>Others</item>
+        <item>My Download</item>
+    </string-array>
+    <string-array name="pick_and_return_file_entries">
+        <item>"Normal Android Way
+(For MMS,Gmail,…)"</item>
+        <item>"File Way
+(Try this if above fails)"</item>
     </string-array>
     <string-array name="preference_language_setting_entries">
         <item>Auto</item>
@@ -218,6 +135,7 @@
         <item>中文(繁體)</item>
         <item>日本語</item>
         <item>ಕನ್ನಡ</item>
+        <item>Azərbaycan</item>
     </string-array>
     <string-array name="preference_language_setting_values">
         <item>-1</item>
@@ -257,16 +175,36 @@
         <item>tw</item>
         <item>ja</item>
         <item>kn</item>
+        <item>az</item>
     </string-array>
-    <string-array name="pcs_category">
-        <item>All Files</item>
-        <item>Image</item>
-        <item>Document</item>
-        <item>Music</item>
-        <item>Video</item>
-        <item>Application</item>
-        <item>Others</item>
-        <item>My Download</item>
+    <string-array name="search_condition_date">
+        <item>All</item>
+        <item>Today</item>
+        <item>Yesterday</item>
+        <item>This week</item>
+        <item>This month</item>
+        <item>This year</item>
+        <item>> 1 year</item>
+        <item>Input</item>
+    </string-array>
+    <string-array name="search_condition_size">
+        <item>All</item>
+        <item>0 – 100 KB</item>
+        <item>100KB - 1 MB</item>
+        <item>1 MB - 16 MB</item>
+        <item>16 MB - 128 MB</item>
+        <item>> 128 MB</item>
+        <item>Input</item>
+    </string-array>
+    <string-array name="search_engine_entries">
+        <item>Auto</item>
+        <item>Baidu</item>
+        <item>Google</item>
+        <item>Yahoo</item>
+        <item>Yandex</item>
+        <item>Naver</item>
+        <item>Amazon</item>
+        <item>MySearch</item>
     </string-array>
     <string-array name="search_engine_values">
         <item>auto</item>
@@ -276,5 +214,71 @@
         <item>yandex</item>
         <item>naver</item>
         <item>amazon</item>
+        <item>mysearch</item>
+    </string-array>
+    <string-array name="theme_folders">
+        <item>Default</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Red</item>
+        <item>Pink</item>
+        <item>Black</item>
+    </string-array>
+    <string-array name="view_item_names">
+        <item>Large Icon</item>
+        <item>Medium Icon</item>
+        <item>Small Icon</item>
+        <item>Large List</item>
+        <item>Medium List</item>
+        <item>Small List</item>
+        <item>Large Detail</item>
+        <item>Medium Detail</item>
+        <item>Small Detail</item>
+    </string-array>
+    <string-array name="wifi_ap_security">
+        <item>Open</item>
+        <item>WPA2 PSK</item>
+    </string-array>
+    <string-array name="wifi_security">
+        <item>Open</item>
+        <item>WEP</item>
+        <item>WPA/WPA2 PSK</item>
+        <item>802.1x EAP</item>
+    </string-array>
+    <string-array name="wifi_signal">
+        <item>Poor</item>
+        <item>Fair</item>
+        <item>Good</item>
+        <item>Excellent</item>
+    </string-array>
+    <string-array name="wifi_status_with_ssid">
+        <item></item>
+        <item>Scanning…</item>
+        <item>Connecting to %1$s…</item>
+        <item>Authenticating with %1$s…</item>
+        <item>Obtaining IP address from %1$s…</item>
+        <item>Connected to %1$s</item>
+        <item>Suspended</item>
+        <item>Disconnecting from %1$s…</item>
+        <item>Disconnected</item>
+        <item>Unsuccessful</item>
+    </string-array>
+    <string-array name="wifi_statuses">
+        <item></item>
+        <item>Scanning…</item>
+        <item>Connecting…</item>
+        <item>Authenticating…</item>
+        <item>Obtaining IP address…</item>
+        <item>Connected</item>
+        <item>Suspended</item>
+        <item>Disconnecting…</item>
+        <item>Disconnected</item>
+        <item>Unsuccessful</item>
+    </string-array>
+    <string-array name="zip_levels">
+        <item>Store</item>
+        <item>Fast</item>
+        <item>Standard</item>
+        <item>Best</item>
     </string-array>
 </resources>

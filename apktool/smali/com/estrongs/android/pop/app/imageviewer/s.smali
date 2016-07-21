@@ -86,7 +86,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/utils/cd;->c(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/estrongs/android/pop/utils/cm;->c(Ljava/lang/String;)I
 
     move-result v0
 

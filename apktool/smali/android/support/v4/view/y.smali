@@ -1,34 +1,35 @@
 .class Landroid/support/v4/view/y;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Landroid/support/v4/view/w;
+
 
 # direct methods
-.method public static a(I)I
+.method constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(II)I
     .locals 1
 
-    invoke-static {p0}, Landroid/view/KeyEvent;->normalizeMetaState(I)I
+    invoke-static {p1, p2}, Landroid/support/v4/view/z;->a(II)I
 
     move-result v0
 
     return v0
 .end method
 
-.method public static a(II)Z
-    .locals 1
+.method public a(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
+    .locals 0
 
-    invoke-static {p0, p1}, Landroid/view/KeyEvent;->metaStateHasModifiers(II)Z
+    invoke-static/range {p1 .. p6}, Landroid/support/v4/view/z;->a(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
 
-    move-result v0
-
-    return v0
-.end method
-
-.method public static b(I)Z
-    .locals 1
-
-    invoke-static {p0}, Landroid/view/KeyEvent;->metaStateHasNoModifiers(I)Z
-
-    move-result v0
-
-    return v0
+    return-void
 .end method

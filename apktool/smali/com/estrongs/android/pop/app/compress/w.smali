@@ -1,5 +1,5 @@
 .class Lcom/estrongs/android/pop/app/compress/w;
-.super Lcom/estrongs/io/archive/d;
+.super Lcom/estrongs/io/archive/e;
 
 
 # instance fields
@@ -12,7 +12,7 @@
 
     iput-object p1, p0, Lcom/estrongs/android/pop/app/compress/w;->a:Lcom/estrongs/android/pop/app/compress/l;
 
-    invoke-direct {p0, p2, p3, p4}, Lcom/estrongs/io/archive/d;-><init>(Landroid/content/Context;Lcom/estrongs/android/pop/app/compress/l;Ljava/lang/String;)V
+    invoke-direct {p0, p2, p3, p4}, Lcom/estrongs/io/archive/e;-><init>(Landroid/content/Context;Lcom/estrongs/android/pop/app/compress/l;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -28,11 +28,11 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/w;->a:Lcom/estrongs/android/pop/app/compress/l;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/l;->c(Lcom/estrongs/android/pop/app/compress/l;)Lcom/estrongs/android/ui/dialog/cg;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/l;->c(Lcom/estrongs/android/pop/app/compress/l;)Lcom/estrongs/android/ui/dialog/ci;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->show()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ci;->show()V
 
     return-void
 .end method

@@ -1,11 +1,33 @@
 package android.support.v4.view;
 
-class q
-  implements o
+import android.content.Context;
+import android.os.Build.VERSION;
+import android.os.Handler;
+import android.view.GestureDetector.OnGestureListener;
+import android.view.MotionEvent;
+
+public final class q
 {
-  public int a(int paramInt1, int paramInt2)
+  private final r a;
+  
+  public q(Context paramContext, GestureDetector.OnGestureListener paramOnGestureListener)
   {
-    return r.a(paramInt1, paramInt2);
+    this(paramContext, paramOnGestureListener, null);
+  }
+  
+  public q(Context paramContext, GestureDetector.OnGestureListener paramOnGestureListener, Handler paramHandler)
+  {
+    if (Build.VERSION.SDK_INT > 17)
+    {
+      a = new u(paramContext, paramOnGestureListener, paramHandler);
+      return;
+    }
+    a = new s(paramContext, paramOnGestureListener, paramHandler);
+  }
+  
+  public boolean a(MotionEvent paramMotionEvent)
+  {
+    return a.a(paramMotionEvent);
   }
 }
 

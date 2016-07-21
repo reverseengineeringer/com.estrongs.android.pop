@@ -1,22 +1,16 @@
 package com.estrongs.android.ui.dialog;
 
-import android.os.Handler;
-import android.os.Message;
-import com.estrongs.android.ui.view.NaviListView;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class iq
-  extends Handler
+  implements DialogInterface.OnClickListener
 {
-  iq(ip paramip, NaviListView paramNaviListView) {}
+  iq(ip paramip) {}
   
-  public void handleMessage(Message paramMessage)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    super.handleMessage(paramMessage);
-    int i = what;
-    int j = arg1;
-    if ((i == 1) && (arg2 == 0)) {
-      a.a();
-    }
+    paramDialogInterface.dismiss();
   }
 }
 

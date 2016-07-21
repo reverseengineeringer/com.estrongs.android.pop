@@ -4,7 +4,7 @@ import android.content.ContentResolver;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.BitmapFactory.Options;
-import android.util.Log;
+import com.estrongs.android.util.l;
 import java.io.FileDescriptor;
 import java.util.WeakHashMap;
 
@@ -64,7 +64,7 @@ public class BitmapManager
     Thread localThread = Thread.currentThread();
     if (!b(localThread))
     {
-      Log.d("BitmapManager", "Thread " + localThread + " is not allowed to decode.");
+      l.b("BitmapManager", "Thread " + localThread + " is not allowed to decode.");
       return null;
     }
     a(localThread, paramOptions);
@@ -123,9 +123,9 @@ public class BitmapManager
     //   22: iload_2
     //   23: ireturn
     //   24: aload_1
-    //   25: getfield 107	com/estrongs/android/pop/app/imageviewer/d:a	Lcom/estrongs/android/pop/app/imageviewer/BitmapManager$State;
+    //   25: getfield 106	com/estrongs/android/pop/app/imageviewer/d:a	Lcom/estrongs/android/pop/app/imageviewer/BitmapManager$State;
     //   28: astore_1
-    //   29: getstatic 105	com/estrongs/android/pop/app/imageviewer/BitmapManager$State:CANCEL	Lcom/estrongs/android/pop/app/imageviewer/BitmapManager$State;
+    //   29: getstatic 104	com/estrongs/android/pop/app/imageviewer/BitmapManager$State:CANCEL	Lcom/estrongs/android/pop/app/imageviewer/BitmapManager$State;
     //   32: astore_3
     //   33: aload_1
     //   34: aload_3

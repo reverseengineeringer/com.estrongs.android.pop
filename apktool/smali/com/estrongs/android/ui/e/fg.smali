@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
+.implements Lcom/estrongs/android/view/a/b;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/e/cp;
+.field final synthetic a:Lcom/estrongs/android/ui/e/cr;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/cp;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/cr;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/fg;->a:Lcom/estrongs/android/ui/e/cp;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/fg;->a:Lcom/estrongs/android/ui/e/cr;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,102 +22,86 @@
 
 
 # virtual methods
-.method public onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 6
+.method public a(Lcom/estrongs/android/ui/e/cp;)Z
+    .locals 2
 
-    const/4 v5, 0x1
+    const/4 v0, 0x1
 
-    const/4 v4, 0x0
+    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/cp;->e:Z
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/fg;->a:Lcom/estrongs/android/ui/e/cp;
+    if-nez v1, :cond_1
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/cp;->b(Lcom/estrongs/android/ui/e/cp;)Ljava/util/List;
+    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/cp;->L:Z
 
-    move-result-object v0
+    if-nez v1, :cond_1
 
-    new-instance v1, Ljava/util/LinkedList;
+    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/cp;->I:Z
 
-    invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
+    if-nez v1, :cond_1
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/cp;->J:Z
 
-    move-result-object v2
+    if-nez v1, :cond_1
+
+    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/cp;->K:Z
+
+    if-nez v1, :cond_1
+
+    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/cp;->H:Z
+
+    if-nez v1, :cond_1
+
+    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/cp;->l:Z
+
+    if-nez v1, :cond_1
+
+    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/cp;->h:Z
+
+    if-nez v1, :cond_1
+
+    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/cp;->f:Z
+
+    if-nez v1, :cond_0
+
+    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/cp;->y:Z
+
+    if-nez v1, :cond_0
+
+    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/cp;->g:Z
+
+    if-eqz v1, :cond_2
 
     :cond_0
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/cp;->d:Z
 
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/fs/h;
-
-    invoke-interface {v0}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/m;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcom/estrongs/fs/m;->a()Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
+    if-nez v1, :cond_2
 
     :cond_1
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-ne v0, v5, :cond_3
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/fg;->a:Lcom/estrongs/android/ui/e/cp;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/cp;->a(Lcom/estrongs/android/ui/e/cp;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    move-result-object v2
-
-    invoke-interface {v1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/fs/h;
-
-    invoke-interface {v0}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0}, Lcom/estrongs/android/pop/utils/aj;->a(Landroid/app/Activity;Ljava/lang/String;)V
+    :goto_0
+    return v0
 
     :cond_2
-    :goto_1
-    return v4
+    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/cp;->B:Z
 
-    :cond_3
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    if-nez v1, :cond_1
 
-    move-result v0
+    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/cp;->n:Z
 
-    if-le v0, v5, :cond_2
+    if-nez v1, :cond_1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/fg;->a:Lcom/estrongs/android/ui/e/cp;
+    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/cp;->i:Z
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/cp;->a(Lcom/estrongs/android/ui/e/cp;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    if-nez v1, :cond_1
 
-    move-result-object v0
+    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/cp;->j:Z
 
-    invoke-static {v1}, Lcom/estrongs/android/util/bd;->a(Ljava/util/List;)Ljava/util/List;
+    if-nez v1, :cond_1
 
-    move-result-object v1
+    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/cp;->k:Z
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/pop/utils/aj;->b(Landroid/app/Activity;Ljava/util/List;)V
+    if-nez v1, :cond_1
 
-    goto :goto_1
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

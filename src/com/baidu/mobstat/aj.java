@@ -1,22 +1,65 @@
 package com.baidu.mobstat;
 
-import android.content.Context;
-import com.baidu.mobstat.util.e;
-import java.util.TimerTask;
+import android.content.ContentValues;
+import android.database.Cursor;
+import java.util.ArrayList;
 
 class aj
-  extends TimerTask
+  extends w
 {
-  aj(ag paramag, Context paramContext, String paramString1, String paramString2) {}
-  
-  public void run()
+  public aj()
   {
-    e.a("samelog", "timer");
-    if (!DataCore.getInstance().isPartEmpty())
+    super("app_trace2", "Create table if not exists app_trace2(_id Integer primary key AUTOINCREMENT,time VARCHAR(50),content TEXT);");
+  }
+  
+  private ArrayList<v> a(Cursor paramCursor)
+  {
+    ArrayList localArrayList = new ArrayList();
+    if (paramCursor == null) {}
+    for (;;)
     {
-      e.a("samelog", "timer send");
-      d.a(a, ag.d(d), b, c);
+      return localArrayList;
+      if (paramCursor.getCount() != 0)
+      {
+        int i = paramCursor.getColumnIndex("_id");
+        int j = paramCursor.getColumnIndex("time");
+        int k = paramCursor.getColumnIndex("content");
+        while (paramCursor.moveToNext()) {
+          localArrayList.add(new v(paramCursor.getLong(i), paramCursor.getString(j), paramCursor.getString(k)));
+        }
+      }
     }
+  }
+  
+  public long a(String paramString1, String paramString2)
+  {
+    Object localObject = a("content", paramString2, "time", 1);
+    ArrayList localArrayList = a((Cursor)localObject);
+    if (localObject != null) {
+      ((Cursor)localObject).close();
+    }
+    if (localArrayList.size() != 0) {
+      return ((v)localArrayList.get(0)).a();
+    }
+    localObject = new ContentValues();
+    ((ContentValues)localObject).put("time", paramString1);
+    ((ContentValues)localObject).put("content", paramString2);
+    return a((ContentValues)localObject);
+  }
+  
+  public ArrayList<v> a(int paramInt1, int paramInt2)
+  {
+    Cursor localCursor = a("time", paramInt1, paramInt2);
+    ArrayList localArrayList = a(localCursor);
+    if (localCursor != null) {
+      localCursor.close();
+    }
+    return localArrayList;
+  }
+  
+  public boolean b(long paramLong)
+  {
+    return a(paramLong);
   }
 }
 

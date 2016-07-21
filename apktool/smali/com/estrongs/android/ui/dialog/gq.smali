@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/pop/a/j;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/dialog/gk;
+.field final synthetic a:Lcom/estrongs/android/ui/dialog/gp;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/gk;)V
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/gp;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/gq;->a:Lcom/estrongs/android/ui/dialog/gk;
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/gq;->a:Lcom/estrongs/android/ui/dialog/gp;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,29 +22,18 @@
 
 
 # virtual methods
-.method public a(Z)V
+.method public run()V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/gq;->a:Lcom/estrongs/android/ui/dialog/gk;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/gq;->a:Lcom/estrongs/android/ui/dialog/gp;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/gk;->a:Lcom/estrongs/android/ui/dialog/ProgressDialog;
+    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/gp;->a:Lcom/estrongs/android/ui/dialog/gn;
 
-    if-eqz v0, :cond_0
+    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/gn;->a(Lcom/estrongs/android/ui/dialog/gn;)Lcom/estrongs/android/ui/dialog/gu;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/gq;->a:Lcom/estrongs/android/ui/dialog/gk;
+    move-result-object v0
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/gk;->a:Lcom/estrongs/android/ui/dialog/ProgressDialog;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ProgressDialog;->dismiss()V
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/gq;->a:Lcom/estrongs/android/ui/dialog/gk;
-
-    invoke-static {v0, p1}, Lcom/estrongs/android/ui/dialog/gk;->a(Lcom/estrongs/android/ui/dialog/gk;Z)Z
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/gq;->a:Lcom/estrongs/android/ui/dialog/gk;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/gk;->h(Lcom/estrongs/android/ui/dialog/gk;)V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/gu;->notifyDataSetChanged()V
 
     return-void
 .end method

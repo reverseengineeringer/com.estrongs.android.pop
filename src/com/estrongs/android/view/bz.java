@@ -1,20 +1,16 @@
 package com.estrongs.android.view;
 
-import android.os.FileObserver;
+import com.estrongs.fs.h;
+import com.estrongs.fs.i;
 
 class bz
-  extends FileObserver
+  implements i
 {
-  bz(aw paramaw, String paramString)
-  {
-    super(paramString, 960);
-  }
+  bz(bx parambx, boolean paramBoolean) {}
   
-  public void onEvent(int paramInt, String paramString)
+  public boolean a(h paramh)
   {
-    if (a.X) {
-      a.a(true, true);
-    }
+    return (!paramh.getName().startsWith(".")) || (a);
   }
 }
 

@@ -17,14 +17,6 @@
 
 
 # virtual methods
-.method public a(Lcom/estrongs/android/ui/drag/d;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/ui/drag/DragLayer;->a:Lcom/estrongs/android/ui/drag/d;
-
-    return-void
-.end method
-
 .method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
     .locals 2
 
@@ -143,4 +135,12 @@
     move-result v0
 
     goto :goto_0
+.end method
+
+.method public setDragController(Lcom/estrongs/android/ui/drag/d;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/ui/drag/DragLayer;->a:Lcom/estrongs/android/ui/drag/d;
+
+    return-void
 .end method

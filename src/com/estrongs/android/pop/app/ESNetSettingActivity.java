@@ -16,9 +16,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import com.estrongs.android.pop.ad;
 import com.estrongs.android.pop.esclasses.ESPreferenceActivity;
-import com.estrongs.android.pop.utils.cl;
-import com.estrongs.android.ui.theme.al;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.pop.utils.cu;
+import com.estrongs.android.ui.theme.at;
+import com.estrongs.android.util.bk;
 
 public final class ESNetSettingActivity
   extends ESPreferenceActivity
@@ -29,7 +29,7 @@ public final class ESNetSettingActivity
   View d;
   EditText e;
   EditText f;
-  private al g;
+  private at g;
   
   public void onContentChanged()
   {
@@ -43,36 +43,36 @@ public final class ESNetSettingActivity
     if (str2 != null) {
       str1 = str2.toLowerCase();
     }
-    if ((!bd.f()) && ((str1 == null) || ((!str1.contains("vland")) && (!str1.contains("nj820")))))
+    if ((!bk.f()) && ((str1 == null) || ((!str1.contains("vland")) && (!str1.contains("nj820")))))
     {
-      setTheme(2131492887);
+      setTheme(2131296641);
       requestWindowFeature(7);
     }
     super.onCreate(paramBundle);
-    g = al.a(this);
-    paramBundle = g.a(2130838042);
+    g = at.a(this);
+    paramBundle = g.a(2130838413);
     getListView().setDivider(paramBundle);
     getListView().setDividerHeight(paramBundle.getIntrinsicHeight());
     getListView().setCacheColorHint(0);
     getListView().setPadding(0, 0, 0, 0);
-    getWindow().setBackgroundDrawableResource(2130838040);
-    setTitle(getResources().getString(2131427439));
+    getWindow().setBackgroundDrawableResource(2130838411);
+    setTitle(getResources().getString(2131231617));
     a = ad.a(this);
     boolean bool2;
-    if (cl.a(this))
+    if (cu.a(this))
     {
       addPreferencesFromResource(2131034113);
-      if ((!bd.f()) && ((str1 == null) || ((!str1.contains("vland")) && (!str1.contains("nj820")))))
+      if ((!bk.f()) && ((str1 == null) || ((!str1.contains("vland")) && (!str1.contains("nj820")))))
       {
-        getWindow().setFeatureInt(7, 2130903264);
-        ((ImageView)findViewById(2131361853)).setImageDrawable(g.a(2130838077));
-        ((TextView)findViewById(2131361825)).setText(2131428252);
+        getWindow().setFeatureInt(7, 2130903447);
+        ((ImageView)findViewById(2131624054)).setImageDrawable(g.a(2130838455));
+        ((TextView)findViewById(2131624055)).setText(2131231426);
       }
       b = ((CheckBoxPreference)findPreference("random_ap"));
-      b.setOnPreferenceChangeListener(new bp(this));
+      b.setOnPreferenceChangeListener(new bt(this));
       c = ((CheckBoxPreference)findPreference("customized_ap"));
-      c.setOnPreferenceChangeListener(new bq(this));
-      bool2 = ad.a(this).aj();
+      c.setOnPreferenceChangeListener(new bu(this));
+      bool2 = ad.a(this).ak();
       paramBundle = b;
       if (bool2) {
         break label344;
@@ -106,7 +106,7 @@ public final class ESNetSettingActivity
       PreferenceScreen localPreferenceScreen = (PreferenceScreen)paramPreference;
       Dialog localDialog = localPreferenceScreen.getDialog();
       ListView localListView = new ListView(localPreferenceScreen.getContext());
-      Drawable localDrawable = getResources().getDrawable(2130838042);
+      Drawable localDrawable = getResources().getDrawable(2130838413);
       localListView.setDivider(localDrawable);
       localListView.setDividerHeight(localDrawable.getIntrinsicHeight());
       localListView.setCacheColorHint(0);

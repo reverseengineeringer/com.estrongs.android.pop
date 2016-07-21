@@ -1,5 +1,5 @@
 .class public Lcom/estrongs/android/pop/app/ImageCommentActivity;
-.super Lcom/estrongs/android/pop/esclasses/ESActivity;
+.super Lcom/estrongs/android/ui/base/HomeAsBackActivity;
 
 
 # instance fields
@@ -38,11 +38,9 @@
 
 .field private m:Landroid/view/View;
 
-.field private n:Landroid/view/View;
+.field private n:Lcom/estrongs/android/ui/theme/at;
 
-.field private o:Lcom/estrongs/android/ui/theme/al;
-
-.field private p:Ljava/util/Comparator;
+.field private o:Ljava/util/Comparator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Comparator",
@@ -60,7 +58,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;-><init>()V
 
     new-instance v0, Ljava/util/LinkedList;
 
@@ -90,11 +88,11 @@
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->l:Lcom/estrongs/android/util/TypedMap;
 
-    new-instance v0, Lcom/estrongs/android/pop/app/cy;
+    new-instance v0, Lcom/estrongs/android/pop/app/da;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/cy;-><init>(Lcom/estrongs/android/pop/app/ImageCommentActivity;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/da;-><init>(Lcom/estrongs/android/pop/app/ImageCommentActivity;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->p:Ljava/util/Comparator;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->o:Ljava/util/Comparator;
 
     return-void
 .end method
@@ -229,184 +227,6 @@
     return-object p1
 .end method
 
-.method private a()V
-    .locals 3
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->c:Landroid/view/LayoutInflater;
-
-    const v1, 0x7f030097
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->i:Landroid/view/View;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->i:Landroid/view/View;
-
-    new-instance v1, Lcom/estrongs/android/pop/app/cz;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/cz;-><init>(Lcom/estrongs/android/pop/app/ImageCommentActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v0, 0x7f0a032c
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->o:Lcom/estrongs/android/ui/theme/al;
-
-    invoke-virtual {v1}, Lcom/estrongs/android/ui/theme/al;->h()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    const v0, 0x7f0a033a
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ListView;
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->j:Landroid/widget/ListView;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->j:Landroid/widget/ListView;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setCacheColorHint(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->j:Landroid/widget/ListView;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setFastScrollEnabled(Z)V
-
-    const v0, 0x7f0a00e5
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    const v1, 0x7f0a0021
-
-    invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/TextView;
-
-    const v2, 0x7f0b02f5
-
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const v2, 0x7f0b005d
-
-    invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ">"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->h:Ljava/lang/String;
-
-    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/net/Uri;->getHost()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    const v0, 0x7f0a0331
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/estrongs/android/pop/app/da;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/da;-><init>(Lcom/estrongs/android/pop/app/ImageCommentActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v0, 0x7f0a0338
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->m:Landroid/view/View;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->m:Landroid/view/View;
-
-    new-instance v1, Lcom/estrongs/android/pop/app/db;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/db;-><init>(Lcom/estrongs/android/pop/app/ImageCommentActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v0, 0x7f0a0339
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->n:Landroid/view/View;
-
-    const v0, 0x7f0a033f
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    invoke-virtual {v0}, Landroid/widget/ImageView;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    new-instance v1, Lcom/estrongs/android/pop/app/dc;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/dc;-><init>(Lcom/estrongs/android/pop/app/ImageCommentActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    return-void
-.end method
-
 .method static synthetic a(Lcom/estrongs/android/pop/app/ImageCommentActivity;Z)V
     .locals 0
 
@@ -436,7 +256,7 @@
     :cond_0
     iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->i:Landroid/view/View;
 
-    const v1, 0x7f0a008f
+    const v1, 0x7f0e01ed
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -469,7 +289,163 @@
     return-object p1
 .end method
 
-.method private b()V
+.method static synthetic b(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->h:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic c(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Lcom/estrongs/android/util/TypedMap;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->l:Lcom/estrongs/android/util/TypedMap;
+
+    return-object v0
+.end method
+
+.method static synthetic c(Lcom/estrongs/android/pop/app/ImageCommentActivity;Lcom/estrongs/android/util/m;)Lcom/estrongs/android/util/m;
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->f:Lcom/estrongs/android/util/m;
+
+    return-object p1
+.end method
+
+.method static synthetic d(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Landroid/view/View;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->m:Landroid/view/View;
+
+    return-object v0
+.end method
+
+.method private d()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->c:Landroid/view/LayoutInflater;
+
+    const v1, 0x7f030128
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->i:Landroid/view/View;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->i:Landroid/view/View;
+
+    new-instance v1, Lcom/estrongs/android/pop/app/db;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/db;-><init>(Lcom/estrongs/android/pop/app/ImageCommentActivity;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    const v0, 0x7f0e0594
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ListView;
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->j:Landroid/widget/ListView;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->j:Landroid/widget/ListView;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setCacheColorHint(I)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->j:Landroid/widget/ListView;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setFastScrollEnabled(Z)V
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const v1, 0x7f0801a2
+
+    invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ">"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->h:Ljava/lang/String;
+
+    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/net/Uri;->getHost()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->setTitle(Ljava/lang/CharSequence;)V
+
+    const v0, 0x7f0e059a
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->m:Landroid/view/View;
+
+    const v0, 0x7f0e0599
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View;
+
+    new-instance v1, Lcom/estrongs/android/pop/app/dc;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/dc;-><init>(Lcom/estrongs/android/pop/app/ImageCommentActivity;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    return-void
+.end method
+
+.method static synthetic e(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Ljava/util/LinkedList;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->b:Ljava/util/LinkedList;
+
+    return-object v0
+.end method
+
+.method private e()V
     .locals 2
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->g:Lcom/estrongs/android/util/m;
@@ -490,12 +466,6 @@
     :cond_0
     iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->m:Landroid/view/View;
 
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->n:Landroid/view/View;
-
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
@@ -515,38 +485,22 @@
     goto :goto_0
 .end method
 
-.method static synthetic b(Lcom/estrongs/android/pop/app/ImageCommentActivity;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->b()V
-
-    return-void
-.end method
-
-.method static synthetic c(Lcom/estrongs/android/pop/app/ImageCommentActivity;Lcom/estrongs/android/util/m;)Lcom/estrongs/android/util/m;
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->f:Lcom/estrongs/android/util/m;
-
-    return-object p1
-.end method
-
-.method static synthetic c(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Ljava/lang/String;
+.method static synthetic f(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->h:Ljava/lang/String;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->d:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method private c()Z
+.method private f()Z
     .locals 2
 
     const-string v0, "Facebook"
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->h:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->ao(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->ay(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -557,18 +511,28 @@
     return v0
 .end method
 
-.method static synthetic d(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Lcom/estrongs/android/util/TypedMap;
+.method static synthetic g(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Z
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->l:Lcom/estrongs/android/util/TypedMap;
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->f()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method static synthetic h(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Landroid/view/View;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->i:Landroid/view/View;
 
     return-object v0
 .end method
 
-.method private d()[Ljava/lang/String;
+.method private h()[Ljava/lang/String;
     .locals 5
 
-    const v0, 0x7f0b019a
+    const v0, 0x7f0806b0
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->getString(I)Ljava/lang/String;
 
@@ -584,7 +548,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v4, 0x7f0b0194
+    const v4, 0x7f0806b7
 
     invoke-virtual {p0, v4}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->getString(I)Ljava/lang/String;
 
@@ -616,7 +580,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v4, 0x7f0b0195
+    const v4, 0x7f0806b3
 
     invoke-virtual {p0, v4}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->getString(I)Ljava/lang/String;
 
@@ -648,7 +612,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v4, 0x7f0b0196
+    const v4, 0x7f0806b2
 
     invoke-virtual {p0, v4}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->getString(I)Ljava/lang/String;
 
@@ -680,7 +644,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v4, 0x7f0b0197
+    const v4, 0x7f0806b1
 
     invoke-virtual {p0, v4}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->getString(I)Ljava/lang/String;
 
@@ -712,7 +676,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v4, 0x7f0b0198
+    const v4, 0x7f0806b8
 
     invoke-virtual {p0, v4}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->getString(I)Ljava/lang/String;
 
@@ -744,7 +708,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v4, 0x7f0b0199
+    const v4, 0x7f0806b4
 
     invoke-virtual {p0, v4}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->getString(I)Ljava/lang/String;
 
@@ -773,15 +737,7 @@
     return-object v1
 .end method
 
-.method static synthetic e(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Landroid/view/View;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->m:Landroid/view/View;
-
-    return-object v0
-.end method
-
-.method private e()Landroid/widget/BaseAdapter;
+.method private i()Landroid/widget/BaseAdapter;
     .locals 1
 
     new-instance v0, Lcom/estrongs/android/pop/app/dj;
@@ -791,49 +747,7 @@
     return-object v0
 .end method
 
-.method static synthetic f(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Landroid/view/View;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->n:Landroid/view/View;
-
-    return-object v0
-.end method
-
-.method static synthetic g(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Ljava/util/LinkedList;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->b:Ljava/util/LinkedList;
-
-    return-object v0
-.end method
-
-.method static synthetic h(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->d:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method static synthetic i(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Z
-    .locals 1
-
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->c()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method static synthetic j(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Landroid/view/View;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->i:Landroid/view/View;
-
-    return-object v0
-.end method
-
-.method static synthetic k(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Landroid/widget/BaseAdapter;
+.method static synthetic i(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Landroid/widget/BaseAdapter;
     .locals 1
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->k:Landroid/widget/BaseAdapter;
@@ -841,17 +755,17 @@
     return-object v0
 .end method
 
-.method static synthetic l(Lcom/estrongs/android/pop/app/ImageCommentActivity;)[Ljava/lang/String;
+.method static synthetic j(Lcom/estrongs/android/pop/app/ImageCommentActivity;)[Ljava/lang/String;
     .locals 1
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->d()[Ljava/lang/String;
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->h()[Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic m(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Landroid/view/LayoutInflater;
+.method static synthetic k(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Landroid/view/LayoutInflater;
     .locals 1
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->c:Landroid/view/LayoutInflater;
@@ -859,7 +773,7 @@
     return-object v0
 .end method
 
-.method static synthetic n(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Lcom/estrongs/android/util/m;
+.method static synthetic l(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Lcom/estrongs/android/util/m;
     .locals 1
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->f:Lcom/estrongs/android/util/m;
@@ -874,7 +788,7 @@
 
     const/4 v1, 0x0
 
-    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;->finish()V
+    invoke-super {p0}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;->finish()V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->e:Lcom/estrongs/android/util/m;
 
@@ -934,39 +848,17 @@
 
     const/4 v3, 0x0
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->requestWindowFeature(I)Z
-
-    invoke-static {p0}, Lcom/estrongs/android/ui/theme/al;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->J()Lcom/estrongs/android/ui/theme/at;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->o:Lcom/estrongs/android/ui/theme/al;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->n:Lcom/estrongs/android/ui/theme/at;
 
-    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    const v0, 0x7f030151
 
-    move-result-object v0
-
-    const v1, 0x7f0300b0
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->o:Lcom/estrongs/android/ui/theme/al;
-
-    invoke-virtual {v1}, Lcom/estrongs/android/ui/theme/al;->h()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->setContentView(Landroid/view/View;)V
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->setContentView(I)V
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->getIntent()Landroid/content/Intent;
 
@@ -980,13 +872,13 @@
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->h:Ljava/lang/String;
 
-    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->c:Landroid/view/LayoutInflater;
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->a()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->d()V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/ImageCommentActivity;->b:Ljava/util/LinkedList;
 
@@ -994,7 +886,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->e()Landroid/widget/BaseAdapter;
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->i()Landroid/widget/BaseAdapter;
 
     move-result-object v0
 
@@ -1039,4 +931,58 @@
     invoke-direct {p0, v3}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->a(Z)V
 
     return-void
+.end method
+
+.method public onCreateOptionsMenu(Landroid/view/Menu;)Z
+    .locals 2
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->getMenuInflater()Landroid/view/MenuInflater;
+
+    move-result-object v0
+
+    const v1, 0x7f100002
+
+    invoke-virtual {v0, v1, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
+
+    const v0, 0x7f0e06bf
+
+    invoke-interface {p1, v0}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    const v1, 0x7f0800a0
+
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setTitle(I)Landroid/view/MenuItem;
+
+    invoke-super {p0, p1}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    .locals 2
+
+    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
+
+    move-result v0
+
+    const v1, 0x7f0e06bf
+
+    if-ne v0, v1, :cond_0
+
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->e()V
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    invoke-super {p0, p1}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+
+    move-result v0
+
+    goto :goto_0
 .end method

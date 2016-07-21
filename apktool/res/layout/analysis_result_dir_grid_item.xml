@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.estrongs.android.ui.drag.DragGrid android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:paddingLeft="@dimen/dp_15" android:layout_width="fill_parent" android:layout_height="@dimen/dp_56">
+        <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/analysis_result_dir_grid_item_icon_iv" android:layout_width="@dimen/dp_36" android:layout_height="@dimen/dp_36" android:src="@drawable/format_unkown" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <android.support.v7.widget.AppCompatCheckBox android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/analysis_result_dir_grid_item_checkbox" android:paddingRight="@dimen/dp_15" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:button="@drawable/checkbox_grid_file_drawable" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <com.estrongs.android.widget.UsageImageView android:id="@id/analysis_result_dir_grid_item_usage_iv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/dp_5" android:layout_marginTop="2.0dip" android:layout_marginRight="@dimen/dp_10" android:layout_marginBottom="2.0dip" android:layout_toLeftOf="@id/analysis_result_dir_grid_item_checkbox" android:layout_toRightOf="@id/analysis_result_dir_grid_item_icon_iv" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_10" android:layout_marginRight="@dimen/dp_10" android:layout_toLeftOf="@id/analysis_result_dir_grid_item_checkbox" android:layout_toRightOf="@id/analysis_result_dir_grid_item_icon_iv" android:layout_centerVertical="true">
+            <TextView android:textSize="@dimen/dp_15" android:textColor="@color/analysis_result_detail_file_name_color" android:ellipsize="end" android:id="@id/analysis_result_dir_grid_item_message_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_5">
+                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/main_content_detail_text" android:gravity="left" android:id="@id/analysis_result_dir_grid_item_size_tv" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/main_content_detail_text" android:gravity="center_horizontal" android:id="@id/analysis_result_dir_grid_item_rate_tv" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/main_content_detail_text" android:gravity="right" android:id="@id/analysis_result_dir_grid_item_num_tv" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_5" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</com.estrongs.android.ui.drag.DragGrid>

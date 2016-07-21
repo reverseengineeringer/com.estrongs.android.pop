@@ -1,24 +1,20 @@
 package com.estrongs.android.pop.app.a;
 
-import com.estrongs.android.ui.dialog.er;
-import com.estrongs.android.ui.view.ag;
+import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.pop.app.unlock.s;
 
-class q
-  implements er
+final class q
+  implements DialogInterface.OnClickListener
 {
-  q(p paramp, ak paramak) {}
+  q(Activity paramActivity) {}
   
-  public boolean a(String paramString)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    paramString = ao.a().a(paramString);
-    if (paramString == null) {
-      ag.a(e.a(b.b.a), 2131428317, 0);
-    }
-    for (;;)
-    {
-      return true;
-      e.a(b.b.a, a, paramString);
-    }
+    paramDialogInterface.dismiss();
+    s.a().a(a, "lock_realtimemonitor");
+    n.a(a, false);
   }
 }
 

@@ -1,17 +1,29 @@
 package android.support.v4.view;
 
-import android.view.VelocityTracker;
+import android.os.Build.VERSION;
+import android.view.ViewGroup.MarginLayoutParams;
 
-class as
+public final class as
 {
-  public static float a(VelocityTracker paramVelocityTracker, int paramInt)
+  static final at a = new au();
+  
+  static
   {
-    return paramVelocityTracker.getXVelocity(paramInt);
+    if (Build.VERSION.SDK_INT >= 17)
+    {
+      a = new av();
+      return;
+    }
   }
   
-  public static float b(VelocityTracker paramVelocityTracker, int paramInt)
+  public static int a(ViewGroup.MarginLayoutParams paramMarginLayoutParams)
   {
-    return paramVelocityTracker.getYVelocity(paramInt);
+    return a.a(paramMarginLayoutParams);
+  }
+  
+  public static int b(ViewGroup.MarginLayoutParams paramMarginLayoutParams)
+  {
+    return a.b(paramMarginLayoutParams);
   }
 }
 

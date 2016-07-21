@@ -1,12 +1,14 @@
 package com.estrongs.android.util;
 
-public class ar
+import java.util.Comparator;
+
+final class ar
+  implements Comparator<av>
 {
-  public String a;
-  public String b;
-  public String c;
-  public String d;
-  public String e;
+  public int a(av paramav1, av paramav2)
+  {
+    return b.length() - b.length();
+  }
 }
 
 /* Location:

@@ -1,20 +1,16 @@
 package com.estrongs.android.pop.utils;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import com.estrongs.a.a;
+import android.widget.TextView;
 
-final class ce
-  extends BroadcastReceiver
+class ce
+  implements Runnable
 {
-  ce(a parama) {}
+  ce(cd paramcd) {}
   
-  public void onReceive(Context paramContext, Intent paramIntent)
+  public void run()
   {
-    if (paramIntent.getAction().equals("android.intent.action.MEDIA_SCANNER_FINISHED")) {
-      a.forceResume();
-    }
+    a.c.setText(a.a.toString());
+    a.c.setVisibility(0);
   }
 }
 

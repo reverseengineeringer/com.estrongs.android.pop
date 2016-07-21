@@ -1,15 +1,15 @@
 package com.estrongs.android.pop.app.service;
 
-import com.estrongs.android.pop.g;
+import com.estrongs.android.pop.h;
 
 class c
-  implements g
+  implements h
 {
   c(PerformanceAccelerateService paramPerformanceAccelerateService) {}
   
   public void a()
   {
-    PerformanceAccelerateService.d(a);
+    PerformanceAccelerateService.d(a).a(60000L);
   }
 }
 

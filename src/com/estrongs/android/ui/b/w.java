@@ -1,36 +1,20 @@
 package com.estrongs.android.ui.b;
 
 import android.view.View;
-import android.view.ViewGroup;
-import com.estrongs.a.a;
-import com.estrongs.android.widget.c;
-import com.estrongs.fs.h;
-import java.util.List;
+import android.view.View.OnClickListener;
 
 class w
-  extends c<h>
+  implements View.OnClickListener
 {
-  w(u paramu) {}
+  w(v paramv, f paramf, int paramInt) {}
   
-  public View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
+  public void onClick(View paramView)
   {
-    paramViewGroup = (a)((h)a.e(paramInt)).getExtra("task");
-    if (paramView == null)
+    if (u.d(c.a))
     {
-      paramView = new f(u.f(a), paramViewGroup);
-      paramView.b().setTag(paramView);
-      u.g(a).add(paramView);
-    }
-    for (;;)
-    {
-      paramView.b(u.h(a));
-      if (u.i(a)) {
-        paramView.a(a.h(paramInt));
-      }
-      return paramView.b();
-      paramView = (f)paramView.getTag();
-      paramView.c();
-      paramView.a(paramViewGroup);
+      a.a(false);
+      c.a.c(b);
+      a.a(c.a.h(b));
     }
   }
 }

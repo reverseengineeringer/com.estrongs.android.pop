@@ -1,20 +1,15 @@
 package com.estrongs.android.util;
 
-import java.security.cert.X509Certificate;
-import javax.net.ssl.X509TrustManager;
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.SSLSession;
 
 class ag
-  implements X509TrustManager
+  implements HostnameVerifier
 {
-  ag(af paramaf) {}
-  
-  public void checkClientTrusted(X509Certificate[] paramArrayOfX509Certificate, String paramString) {}
-  
-  public void checkServerTrusted(X509Certificate[] paramArrayOfX509Certificate, String paramString) {}
-  
-  public X509Certificate[] getAcceptedIssuers()
+  public boolean verify(String paramString, SSLSession paramSSLSession)
   {
-    return null;
+    l.c("HttpDownloader", "Approving certificate for " + paramString);
+    return true;
   }
 }
 

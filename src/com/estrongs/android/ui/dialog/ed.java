@@ -1,24 +1,16 @@
 package com.estrongs.android.ui.dialog;
 
-import android.widget.ProgressBar;
-import com.estrongs.android.pop.app.diskusage.a;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnDismissListener;
 
 class ed
-  implements Runnable
+  implements DialogInterface.OnDismissListener
 {
-  ed(eb parameb) {}
+  ed(dx paramdx) {}
   
-  public void run()
+  public void onDismiss(DialogInterface paramDialogInterface)
   {
-    try
-    {
-      a.j.setVisibility(0);
-      if (a.l != null) {
-        a.l.a();
-      }
-      return;
-    }
-    catch (Exception localException) {}
+    dx.a(a).b();
   }
 }
 

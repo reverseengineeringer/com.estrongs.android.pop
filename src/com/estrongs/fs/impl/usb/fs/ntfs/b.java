@@ -1,6 +1,6 @@
 package com.estrongs.fs.impl.usb.fs.ntfs;
 
-import android.util.Log;
+import com.estrongs.android.util.l;
 import java.io.IOException;
 
 public final class b
@@ -23,7 +23,7 @@ public final class b
     int j = 2;
     int i3 = i & 0xFFF;
     if (b) {
-      Log.d(a, "ntfs_uncompblock: block length: " + i3 + " + 3, 0x" + Integer.toHexString(i3) + ",0x" + Integer.toHexString(i));
+      l.b(a, "ntfs_uncompblock: block length: " + i3 + " + 3, 0x" + Integer.toHexString(i3) + ",0x" + Integer.toHexString(i));
     }
     if (i == 0) {
       return 0;
@@ -31,7 +31,7 @@ public final class b
     if ((i & 0x8000) == 0)
     {
       if ((i3 + 1 != 4096) && (b)) {
-        Log.d(a, "ntfs_uncompblock: len: " + i3 + " instead of 0xfff");
+        l.b(a, "ntfs_uncompblock: len: " + i3 + " instead of 0xfff");
       }
       d.a(paramd2, paramd1, 3, 0, i3 + 1);
       d.a(paramd2, i3 + 1, 4095 - i3);
@@ -44,13 +44,13 @@ public final class b
         int m = d.c(paramd1, j);
         int k = 0;
         j += 1;
-        label193:
+        label191:
         int i1;
         int n;
         if ((k < 8) && (i < 4096))
         {
           if ((m & 0x1) == 0) {
-            break label322;
+            break label320;
           }
           int i2 = i - 1;
           i1 = 4095;
@@ -71,9 +71,9 @@ public final class b
         {
           m = (byte)(m >> 1);
           k += 1;
-          break label193;
+          break label191;
           break;
-          label322:
+          label320:
           n = i + 1;
           i1 = j + 1;
           d.a(paramd2, i, d.c(paramd1, j));
@@ -105,8 +105,8 @@ public final class b
       {
         return;
       }
-      d.a(paramArrayOfByte1, j);
-      d.a(locald, 4096);
+      d.a(paramArrayOfByte1, j + d.a(paramArrayOfByte1));
+      d.a(locald, d.a(locald) + 4096);
       i += 1;
     }
   }
@@ -122,7 +122,7 @@ public final class b
     long l2 = c();
     long l3 = paramInt2 + paramLong - 1L;
     if (b) {
-      Log.d(a, "me:" + l1 + "-" + l2 + ", req:" + paramLong + "-" + l3);
+      l.b(a, "me:" + l1 + "-" + l2 + ", req:" + paramLong + "-" + l3);
     }
     if ((paramLong > l2) || (l1 > l3)) {
       return 0;

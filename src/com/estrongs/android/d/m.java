@@ -1,24 +1,18 @@
 package com.estrongs.android.d;
 
-import android.graphics.drawable.Drawable;
-import android.widget.ImageView;
-import com.estrongs.fs.h;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
-public class m
+class m
+  implements DialogInterface.OnClickListener
 {
-  public boolean a;
-  public int b;
-  public h c;
-  public h d;
-  public Drawable e;
-  public ImageView f;
-  public boolean g = true;
+  m(i parami) {}
   
-  m(int paramInt, h paramh, ImageView paramImageView)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    b = paramInt;
-    c = paramh;
-    f = paramImageView;
+    i.a(a, i.c);
+    i.a(a, true);
+    a.dismiss();
   }
 }
 

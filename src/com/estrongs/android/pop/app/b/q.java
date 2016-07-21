@@ -1,199 +1,44 @@
 package com.estrongs.android.pop.app.b;
 
-import android.net.Uri;
-import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.util.bc;
-import com.estrongs.fs.i;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import android.content.Context;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.res.Resources;
+import com.estrongs.android.scanner.g;
 
-public class q
+class q
+  implements g
 {
-  public static String a(String paramString1, String paramString2)
-  {
-    return (String)b(paramString2).get(paramString1);
-  }
+  q(k paramk) {}
   
-  public static List<String> a(String paramString)
+  public String a(String paramString)
   {
-    int i = 0;
-    int j = 0;
-    ArrayList localArrayList = new ArrayList();
-    paramString = (paramString + " ").split("\"");
-    if (paramString.length % 2 != 0)
-    {
-      i = j;
-      if (i < paramString.length)
-      {
-        if (i % 2 != 0) {
-          if (paramString[i].length() > 0) {
-            localArrayList.add(paramString[i]);
-          }
-        }
-        for (;;)
-        {
-          i += 1;
-          break;
-          a(paramString[i], localArrayList);
-        }
-      }
+    if ("DCIM".equals(paramString)) {
+      return k.h(a).getResources().getString(2131231679);
     }
-    else
-    {
-      if (i < paramString.length - 2)
-      {
-        if (i % 2 != 0) {
-          if (paramString[i].length() > 0) {
-            localArrayList.add(paramString[i]);
-          }
-        }
-        for (;;)
-        {
-          i += 1;
-          break;
-          a(paramString[i], localArrayList);
-        }
-      }
-      if (paramString.length >= 2) {
-        a(paramString[(paramString.length - 2)] + "\"" + paramString[(paramString.length - 1)], localArrayList);
-      }
+    if ("Screenshots".equals(paramString)) {
+      return k.h(a).getResources().getString(2131231684);
     }
-    return localArrayList;
-  }
-  
-  public static List<i> a(Map<String, String> paramMap, boolean paramBoolean)
-  {
-    ArrayList localArrayList = new ArrayList();
-    if (paramMap.containsKey("keyword")) {
-      localArrayList.add(new v(Uri.decode((String)paramMap.get("keyword")), paramBoolean));
+    if ("Download".equals(paramString)) {
+      return k.h(a).getResources().getString(2131231680);
     }
-    if (paramMap.containsKey("category"))
-    {
-      String str = c((String)paramMap.get("category"));
-      if ((str != null) || ((str == null) && ("document".equals(paramMap.get("category"))))) {
-        localArrayList.add(new t(str));
-      }
+    if ("Backups".equals(paramString)) {
+      return k.h(a).getResources().getString(2131231678);
+    }
+    if ("SDCards".equals(paramString)) {
+      return k.h(a).getResources().getString(2131231683);
     }
     try
     {
-      l1 = Long.parseLong((String)paramMap.get("minSize"));
+      String str = ha).getPackageManager().getPackageInfo(paramString, 0).applicationInfo.loadLabel(k.h(a).getPackageManager()).toString();
+      return str;
     }
-    catch (Exception localException3)
+    catch (Exception localException)
     {
-      try
-      {
-        l2 = Long.parseLong((String)paramMap.get("maxSize"));
-        if ((l1 > -1L) || (l2 > -1L)) {
-          localArrayList.add(new w(l1, l2));
-        }
-      }
-      catch (Exception localException3)
-      {
-        try
-        {
-          l1 = Long.parseLong((String)paramMap.get("minDate"));
-        }
-        catch (Exception localException3)
-        {
-          try
-          {
-            for (;;)
-            {
-              l2 = Long.parseLong((String)paramMap.get("maxDate"));
-              if ((l1 > -1L) || (l2 > -1L)) {
-                localArrayList.add(new s(l1, l2));
-              }
-              return localArrayList;
-              localException1 = localException1;
-              long l1 = -1L;
-              continue;
-              localException2 = localException2;
-              l2 = -1L;
-              continue;
-              localException3 = localException3;
-              l1 = -1L;
-            }
-          }
-          catch (Exception paramMap)
-          {
-            for (;;)
-            {
-              long l2 = -1L;
-            }
-          }
-        }
-      }
+      localException.printStackTrace();
     }
-  }
-  
-  private static void a(String paramString, List<String> paramList)
-  {
-    if (paramString.length() == 0) {}
-    for (;;)
-    {
-      return;
-      paramString = paramString.split(" ");
-      int i = 0;
-      while (i < paramString.length)
-      {
-        if (paramString[i].length() > 0) {
-          paramList.add(paramString[i]);
-        }
-        i += 1;
-      }
-    }
-  }
-  
-  public static Map<String, String> b(String paramString)
-  {
-    HashMap localHashMap = new HashMap();
-    paramString = paramString.split("&&");
-    int j = paramString.length;
-    int i = 0;
-    while (i < j)
-    {
-      String[] arrayOfString = paramString[i];
-      if (arrayOfString != null)
-      {
-        arrayOfString = arrayOfString.split("=");
-        if ((arrayOfString != null) && (arrayOfString.length == 2)) {
-          localHashMap.put(arrayOfString[0], arrayOfString[1]);
-        }
-      }
-      i += 1;
-    }
-    return localHashMap;
-  }
-  
-  private static void b(List<i> paramList)
-  {
-    if ((!ad.a(FexApplication.a()).p()) && (FileExplorerActivity.J() != null)) {
-      paramList.add(JK);
-    }
-  }
-  
-  private static String c(String paramString)
-  {
-    if ("image".equals(paramString)) {
-      return bc.e();
-    }
-    if ("music".equals(paramString)) {
-      return bc.a();
-    }
-    if ("video".equals(paramString)) {
-      return bc.b();
-    }
-    if ("apk".equals(paramString)) {
-      return bc.f();
-    }
-    if ("document".equals(paramString)) {
-      return bc.c();
-    }
-    return null;
+    return paramString;
   }
 }
 

@@ -1,58 +1,81 @@
 .class Landroid/support/v4/view/an;
-.super Landroid/text/method/SingleLineTransformationMethod;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/view/LayoutInflater$Factory;
 
 
 # instance fields
-.field private a:Ljava/util/Locale;
+.field final a:Landroid/support/v4/view/ar;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+.method constructor <init>(Landroid/support/v4/view/ar;)V
+    .locals 0
 
-    invoke-direct {p0}, Landroid/text/method/SingleLineTransformationMethod;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v0
-
-    iget-object v0, v0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
-
-    iput-object v0, p0, Landroid/support/v4/view/an;->a:Ljava/util/Locale;
+    iput-object p1, p0, Landroid/support/v4/view/an;->a:Landroid/support/v4/view/ar;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
+.method public onCreateView(Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
     .locals 2
 
-    invoke-super {p0, p1, p2}, Landroid/text/method/SingleLineTransformationMethod;->getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroid/support/v4/view/an;->a:Landroid/support/v4/view/ar;
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, v1, p1, p2, p3}, Landroid/support/v4/view/ar;->onCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Landroid/support/v4/view/an;->a:Ljava/util/Locale;
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_0
     return-object v0
+.end method
 
-    :cond_0
-    const/4 v0, 0x0
+.method public toString()Ljava/lang/String;
+    .locals 2
 
-    goto :goto_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "{"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Landroid/support/v4/view/an;->a:Landroid/support/v4/view/ar;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -11,12 +11,12 @@ class FlickrPhotoPrivacyDialog$3
   
   public void onCheckedChanged(RadioGroup paramRadioGroup, int paramInt)
   {
-    if (paramRadioGroup.getCheckedRadioButtonId() == 2131362328)
+    if (paramRadioGroup.getCheckedRadioButtonId() == 2131624934)
     {
       FlickrPhotoPrivacyDialog.access$800(this$0).setEnabled(true);
       FlickrPhotoPrivacyDialog.access$900(this$0).setEnabled(true);
     }
-    while (paramRadioGroup.getCheckedRadioButtonId() != 2131362331) {
+    while (paramRadioGroup.getCheckedRadioButtonId() != 2131624937) {
       return;
     }
     FlickrPhotoPrivacyDialog.access$800(this$0).setEnabled(false);

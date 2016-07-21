@@ -2,6 +2,7 @@ package com.estrongs.android.pop.app.imageviewer;
 
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.app.ag;
 
 class bm
   implements MenuItem.OnMenuItemClickListener
@@ -10,7 +11,8 @@ class bm
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    ViewImage21.r(a);
+    ViewImage21.l(a).q();
+    ViewImage21.s(a);
     ViewImage21.b(a, a.n);
     return true;
   }

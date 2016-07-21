@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/view/e;
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Lcom/estrongs/android/view/g;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/view/e;)V
+.method constructor <init>(Lcom/estrongs/android/view/g;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/view/p;->a:Lcom/estrongs/android/view/e;
+    iput-object p1, p0, Lcom/estrongs/android/view/p;->b:Lcom/estrongs/android/view/g;
+
+    iput-object p2, p0, Lcom/estrongs/android/view/p;->a:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,16 +26,40 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 1
+.method public run()V
+    .locals 3
 
-    iget-object v0, p0, Lcom/estrongs/android/view/p;->a:Lcom/estrongs/android/view/e;
+    iget-object v0, p0, Lcom/estrongs/android/view/p;->b:Lcom/estrongs/android/view/g;
 
-    invoke-static {v0}, Lcom/estrongs/android/view/e;->i(Lcom/estrongs/android/view/e;)Lcom/estrongs/android/pop/app/compress/be;
+    iget-object v1, p0, Lcom/estrongs/android/view/p;->a:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/view/g;->b(Lcom/estrongs/android/view/g;Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/view/p;->b:Lcom/estrongs/android/view/g;
+
+    new-instance v1, Lcom/estrongs/android/view/t;
+
+    iget-object v2, p0, Lcom/estrongs/android/view/p;->b:Lcom/estrongs/android/view/g;
+
+    invoke-direct {v1, v2}, Lcom/estrongs/android/view/t;-><init>(Lcom/estrongs/android/view/g;)V
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/view/g;->a(Lcom/estrongs/android/view/g;Lcom/estrongs/android/view/t;)Lcom/estrongs/android/view/t;
+
+    iget-object v0, p0, Lcom/estrongs/android/view/p;->b:Lcom/estrongs/android/view/g;
+
+    invoke-static {v0}, Lcom/estrongs/android/view/g;->d(Lcom/estrongs/android/view/g;)Lcom/estrongs/android/view/t;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/compress/be;->dismiss()V
+    invoke-virtual {v0}, Lcom/estrongs/android/view/t;->start()V
 
-    return-void
+    goto :goto_0
 .end method

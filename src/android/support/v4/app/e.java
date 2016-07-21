@@ -1,18 +1,48 @@
 package android.support.v4.app;
 
-import android.view.View;
+import android.app.Activity;
+import android.app.SharedElementCallback;
+import android.media.session.MediaController;
 
 class e
-  implements k
 {
-  e(Fragment paramFragment) {}
-  
-  public View a(int paramInt)
+  private static SharedElementCallback a(f paramf)
   {
-    if (a.I == null) {
-      throw new IllegalStateException("Fragment does not have a view");
+    g localg = null;
+    if (paramf != null) {
+      localg = new g(paramf);
     }
-    return a.I.findViewById(paramInt);
+    return localg;
+  }
+  
+  public static void a(Activity paramActivity)
+  {
+    paramActivity.finishAfterTransition();
+  }
+  
+  public static void a(Activity paramActivity, f paramf)
+  {
+    paramActivity.setEnterSharedElementCallback(a(paramf));
+  }
+  
+  public static void a(Activity paramActivity, Object paramObject)
+  {
+    paramActivity.setMediaController((MediaController)paramObject);
+  }
+  
+  public static void b(Activity paramActivity)
+  {
+    paramActivity.postponeEnterTransition();
+  }
+  
+  public static void b(Activity paramActivity, f paramf)
+  {
+    paramActivity.setExitSharedElementCallback(a(paramf));
+  }
+  
+  public static void c(Activity paramActivity)
+  {
+    paramActivity.startPostponedEnterTransition();
   }
 }
 

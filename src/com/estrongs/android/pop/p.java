@@ -2,7 +2,7 @@ package com.estrongs.android.pop;
 
 import com.estrongs.a.a;
 import com.estrongs.a.a.k;
-import com.estrongs.android.a.t;
+import com.estrongs.android.d.t;
 
 class p
   implements t

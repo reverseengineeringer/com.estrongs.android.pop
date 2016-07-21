@@ -473,7 +473,7 @@
 
     const-string v1, "IN Server, stop inst is null"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -561,7 +561,7 @@
 
     :cond_0
     :try_start_0
-    invoke-static {}, Lcom/estrongs/android/util/ak;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/estrongs/android/util/an;->a()Ljava/lang/String;
 
     move-result-object v1
 

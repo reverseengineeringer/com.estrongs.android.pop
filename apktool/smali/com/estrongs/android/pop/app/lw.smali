@@ -2,22 +2,26 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/estrongs/android/d/d;
 
 
 # instance fields
-.field final synthetic a:I
+.field final synthetic a:Lcom/estrongs/a/a/c;
 
-.field final synthetic b:Lcom/estrongs/android/pop/app/lv;
+.field final synthetic b:Lcom/estrongs/a/a;
+
+.field final synthetic c:Lcom/estrongs/android/pop/app/ShowDialogActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/lv;I)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;Lcom/estrongs/a/a/c;Lcom/estrongs/a/a;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/lw;->b:Lcom/estrongs/android/pop/app/lv;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/lw;->c:Lcom/estrongs/android/pop/app/ShowDialogActivity;
 
-    iput p2, p0, Lcom/estrongs/android/pop/app/lw;->a:I
+    iput-object p2, p0, Lcom/estrongs/android/pop/app/lw;->a:Lcom/estrongs/a/a/c;
+
+    iput-object p3, p0, Lcom/estrongs/android/pop/app/lw;->b:Lcom/estrongs/a/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,110 +30,51 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 4
+.method public a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
+    .locals 5
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/lw;->b:Lcom/estrongs/android/pop/app/lv;
+    sget-object v0, Lcom/estrongs/android/d/a;->a:Ljava/util/Map;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/lv;->a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/lw;->c:Lcom/estrongs/android/pop/app/ShowDialogActivity;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->e(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)Z
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/ShowDialogActivity;->a(Lcom/estrongs/android/pop/app/ShowDialogActivity;)J
 
-    move-result v0
+    move-result-wide v2
 
-    if-eqz v0, :cond_2
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget v0, p0, Lcom/estrongs/android/pop/app/lw;->a:I
+    move-result-object v1
 
-    const/16 v1, -0xf
+    invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-ne v0, v1, :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/lw;->a:Lcom/estrongs/a/a/c;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/lw;->b:Lcom/estrongs/android/pop/app/lv;
+    iput-object p1, v0, Lcom/estrongs/a/a/c;->b:Ljava/lang/String;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/lv;->a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/lw;->a:Lcom/estrongs/a/a/c;
 
-    const/4 v1, 0x4
+    if-nez p2, :cond_0
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->a(I)V
+    const-string p2, ""
 
     :cond_0
-    :goto_0
-    return-void
+    iput-object p2, v0, Lcom/estrongs/a/a/c;->c:Ljava/lang/String;
 
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/lw;->b:Lcom/estrongs/android/pop/app/lv;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/lv;->a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->b(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;Z)Z
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/lw;->b:Lcom/estrongs/android/pop/app/lv;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/lv;->a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/lw;->b:Lcom/estrongs/a/a;
 
     const/4 v1, 0x5
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->a(I)V
+    const/4 v2, 0x1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/lw;->b:Lcom/estrongs/android/pop/app/lv;
+    new-array v2, v2, [Ljava/lang/Object;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/lv;->a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
+    const/4 v3, 0x0
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->f(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)Landroid/app/ProgressDialog;
+    iget-object v4, p0, Lcom/estrongs/android/pop/app/lw;->a:Lcom/estrongs/a/a/c;
 
-    move-result-object v0
+    aput-object v4, v2, v3
 
-    invoke-virtual {v0}, Landroid/app/ProgressDialog;->getProgress()I
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/a/a;->sendMessage(I[Ljava/lang/Object;)V
 
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/lw;->b:Lcom/estrongs/android/pop/app/lv;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/lv;->a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->f(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)Landroid/app/ProgressDialog;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/lw;->b:Lcom/estrongs/android/pop/app/lv;
-
-    iget-object v1, v1, Lcom/estrongs/android/pop/app/lv;->a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
-
-    invoke-static {v1}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->g(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)J
-
-    move-result-wide v2
-
-    long-to-int v1, v2
-
-    invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMax(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/lw;->b:Lcom/estrongs/android/pop/app/lv;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/lv;->a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->f(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)Landroid/app/ProgressDialog;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/lw;->b:Lcom/estrongs/android/pop/app/lv;
-
-    iget-object v1, v1, Lcom/estrongs/android/pop/app/lv;->a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
-
-    invoke-static {v1}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->h(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)J
-
-    move-result-wide v2
-
-    long-to-int v1, v2
-
-    invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->incrementProgressBy(I)V
-
-    goto :goto_0
+    return-void
 .end method

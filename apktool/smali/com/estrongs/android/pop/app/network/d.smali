@@ -43,7 +43,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->aj()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->ak()Z
 
     move-result v1
 
@@ -53,7 +53,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->ah()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->ai()Ljava/lang/String;
 
     move-result-object v2
 
@@ -63,7 +63,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->ai()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->aj()Ljava/lang/String;
 
     move-result-object v3
 
@@ -157,7 +157,7 @@
     :goto_1
     iget-object v0, p0, Lcom/estrongs/android/pop/app/network/d;->a:Lcom/estrongs/android/pop/app/network/EsNetworkActivity;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/network/EsNetworkActivity;->a(Lcom/estrongs/android/pop/app/network/EsNetworkActivity;)Lcom/estrongs/android/e/a;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/network/EsNetworkActivity;->a(Lcom/estrongs/android/pop/app/network/EsNetworkActivity;)Lcom/estrongs/android/l/a;
 
     move-result-object v0
 
@@ -165,7 +165,7 @@
 
     iget-object v1, v1, Lcom/estrongs/android/pop/app/network/EsNetworkActivity;->a:Landroid/net/wifi/WifiConfiguration;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/e/a;->a(Landroid/net/wifi/WifiConfiguration;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/l/a;->a(Landroid/net/wifi/WifiConfiguration;)V
 
     :cond_2
     return-void
@@ -179,7 +179,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v7, Lcom/estrongs/android/e/h;->a:Ljava/lang/String;
+    sget-object v7, Lcom/estrongs/android/l/k;->a:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

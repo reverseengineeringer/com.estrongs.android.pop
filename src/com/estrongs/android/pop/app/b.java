@@ -5,56 +5,56 @@ import android.content.Intent;
 import android.net.Uri;
 import android.net.Uri.Builder;
 import com.estrongs.android.pop.app.editor.PopNoteEditor;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bc;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bg;
 import java.io.File;
 
 public class b
 {
   public static Intent a(Context paramContext, String paramString)
   {
-    if (bc.h(paramString)) {
+    if (bg.h(paramString)) {
       return d(paramContext, paramString);
     }
-    if (bc.g(paramString)) {
+    if (bg.g(paramString)) {
       return c(paramContext, paramString);
     }
-    if (bc.F(paramString)) {
+    if (bg.F(paramString)) {
       return k(paramContext, paramString);
     }
-    if (bc.i(paramString)) {
+    if (bg.i(paramString)) {
       return a(paramContext, paramString, true);
     }
-    if (bc.c(paramString)) {
+    if (bg.c(paramString)) {
       return b(paramContext, paramString);
     }
-    if (bc.C(paramString)) {
+    if (bg.C(paramString)) {
       return f(paramContext, paramString);
     }
-    if (bc.D(paramString)) {
+    if (bg.D(paramString)) {
       return g(paramContext, paramString);
     }
-    if (bc.G(paramString)) {
+    if (bg.G(paramString)) {
       return h(paramContext, paramString);
     }
-    if (bc.E(paramString)) {
+    if (bg.E(paramString)) {
       return i(paramContext, paramString);
     }
-    if (bc.q(paramString)) {
+    if (bg.q(paramString)) {
       return e(paramContext, paramString);
     }
-    if (bc.j(paramString)) {
+    if (bg.j(paramString)) {
       return l(paramContext, paramString);
     }
-    if (bc.K(paramString)) {
+    if (bg.K(paramString)) {
       return a(paramString);
     }
-    if (bc.k(paramString)) {
+    if (bg.k(paramString)) {
       return j(paramContext, paramString);
     }
     paramContext = new Intent("android.intent.action.VIEW");
     paramContext.addFlags(268435456);
-    String str = bc.S(paramString);
+    String str = bg.U(paramString);
     if ((str != null) && (!str.equals("*/*")))
     {
       paramContext.setDataAndType(Uri.fromFile(new File(paramString)), str);
@@ -66,12 +66,12 @@ public class b
   
   public static Intent a(Context paramContext, String paramString, boolean paramBoolean)
   {
-    if (am.bb(paramString))
+    if (ap.bm(paramString))
     {
       Intent localIntent = new Intent("android.intent.action.VIEW");
       localIntent.addFlags(67108864);
       localIntent.setType("text/plain");
-      if (am.aV(paramString)) {
+      if (ap.bg(paramString)) {
         localIntent.setClass(paramContext, BTPopNoteEditor.class);
       }
       for (;;)
@@ -105,7 +105,7 @@ public class b
   
   public static Intent c(Context paramContext, String paramString)
   {
-    if (am.bb(paramString))
+    if (ap.bm(paramString))
     {
       Intent localIntent = new Intent(paramContext, StreamingMediaPlayer.class);
       localIntent.addFlags(67108864);

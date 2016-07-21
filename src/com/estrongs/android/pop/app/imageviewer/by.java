@@ -1,23 +1,24 @@
 package com.estrongs.android.pop.app.imageviewer;
 
-import com.estrongs.android.pop.app.imageviewer.gallery.e;
 import com.estrongs.android.pop.app.imageviewer.gallery.f;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.am;
 
 class by
-  extends Thread
+  implements Runnable
 {
-  by(bx parambx, e parame) {}
+  by(bx parambx) {}
   
   public void run()
   {
-    if (b.a.e.b(b.a.c))
+    if (a.b.a.g != null) {
+      a.b.a.g.a();
+    }
+    if (a.b.a.e.b() == 0)
     {
-      b.a.runOnUiThread(new bz(this));
+      a.b.a.finish();
       return;
     }
-    ag.a(b.a, am.d(a.d()) + " " + b.a.getString(2131427769), 1);
+    a.b.a.a(a.b.a.c, ViewImage21.c(a.b.a));
+    ViewImage21.g(a.b.a).notifyDataSetChanged();
   }
 }
 

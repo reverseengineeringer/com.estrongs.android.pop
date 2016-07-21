@@ -1,55 +1,27 @@
 package com.estrongs.android.pop.view;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.content.Intent;
-import com.estrongs.android.ui.navigation.n;
-import com.estrongs.android.util.am;
-import com.estrongs.android.view.aw;
-import com.estrongs.fs.impl.usb.g;
-import java.util.List;
+import com.estrongs.android.pop.ad;
+import com.estrongs.android.ui.pcs.c;
+import com.estrongs.android.ui.pcs.l;
+import com.estrongs.android.ui.pcs.q;
 
 class bk
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
-  bk(FileExplorerActivity paramFileExplorerActivity, g paramg, String paramString) {}
+  bk(bh parambh, q paramq) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void run()
   {
-    Object localObject;
-    if (a != null)
+    if (b.a.k.a(0L) != null)
     {
-      localObject = c.O();
-      if (localObject != null) {
-        ((n)localObject).b(b);
-      }
-      a.f();
-      a.e();
-      localObject = c.x;
-      paramInt = 0;
-      if (paramInt < ((List)localObject).size())
-      {
-        aw localaw = (aw)((List)localObject).get(paramInt);
-        if ((localaw == null) || (localaw.c() == null) || (!localaw.c().startsWith(b))) {
-          break label117;
-        }
-        c.b(localaw);
-      }
-    }
-    for (;;)
-    {
-      paramDialogInterface.dismiss();
+      localObject = new c(bh.a(b));
+      ((c)localObject).a(a);
+      ((c)localObject).a();
       return;
-      label117:
-      paramInt += 1;
-      break;
-      if (am.bu(b))
-      {
-        localObject = new Intent("android.settings.INTERNAL_STORAGE_SETTINGS");
-        ((Intent)localObject).setFlags(268435456);
-        c.startActivity((Intent)localObject);
-      }
     }
+    Object localObject = new l(b.a);
+    ((l)localObject).a(a);
+    ((l)localObject).a(true);
   }
 }
 

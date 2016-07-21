@@ -1,17 +1,17 @@
 package android.support.v4.view;
 
 import android.os.Bundle;
-import android.support.v4.view.a.h;
+import android.support.v4.view.a.z;
 import android.view.View;
 
 class e
   extends b
 {
-  public h a(Object paramObject, View paramView)
+  public z a(Object paramObject, View paramView)
   {
     paramObject = k.a(paramObject, paramView);
     if (paramObject != null) {
-      return new h(paramObject);
+      return new z(paramObject);
     }
     return null;
   }

@@ -1,302 +1,238 @@
-.class Landroid/support/v4/view/bw;
-.super Landroid/support/v4/view/a;
+.class public abstract Landroid/support/v4/view/bw;
+.super Ljava/lang/Object;
+
+
+# static fields
+.field public static final POSITION_NONE:I = -0x2
+
+.field public static final POSITION_UNCHANGED:I = -0x1
 
 
 # instance fields
-.field final synthetic b:Landroid/support/v4/view/ViewPager;
+.field private final mObservable:Landroid/database/DataSetObservable;
+
+.field private mViewPagerObserver:Landroid/database/DataSetObserver;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/view/ViewPager;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Landroid/support/v4/view/bw;->b:Landroid/support/v4/view/ViewPager;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Landroid/support/v4/view/a;-><init>()V
+    new-instance v0, Landroid/database/DataSetObservable;
+
+    invoke-direct {v0}, Landroid/database/DataSetObservable;-><init>()V
+
+    iput-object v0, p0, Landroid/support/v4/view/bw;->mObservable:Landroid/database/DataSetObservable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/view/View;Landroid/support/v4/view/a/a;)V
+.method public destroyItem(Landroid/view/View;ILjava/lang/Object;)V
     .locals 2
 
-    const/4 v0, 0x1
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    invoke-super {p0, p1, p2}, Landroid/support/v4/view/a;->a(Landroid/view/View;Landroid/support/v4/view/a/a;)V
+    const-string v1, "Required method destroyItem was not overridden"
 
-    const-class v1, Landroid/support/v4/view/ViewPager;
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    throw v0
+.end method
 
-    move-result-object v1
+.method public destroyItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
+    .locals 0
 
-    invoke-virtual {p2, v1}, Landroid/support/v4/view/a/a;->b(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, p1, p2, p3}, Landroid/support/v4/view/bw;->destroyItem(Landroid/view/View;ILjava/lang/Object;)V
 
-    iget-object v1, p0, Landroid/support/v4/view/bw;->b:Landroid/support/v4/view/ViewPager;
+    return-void
+.end method
 
-    invoke-static {v1}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ViewPager;)Landroid/support/v4/view/ae;
+.method public finishUpdate(Landroid/view/View;)V
+    .locals 0
 
-    move-result-object v1
+    return-void
+.end method
 
-    if-eqz v1, :cond_2
+.method public finishUpdate(Landroid/view/ViewGroup;)V
+    .locals 0
 
-    iget-object v1, p0, Landroid/support/v4/view/bw;->b:Landroid/support/v4/view/ViewPager;
+    invoke-virtual {p0, p1}, Landroid/support/v4/view/bw;->finishUpdate(Landroid/view/View;)V
 
-    invoke-static {v1}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ViewPager;)Landroid/support/v4/view/ae;
+    return-void
+.end method
 
-    move-result-object v1
+.method public abstract getCount()I
+.end method
 
-    invoke-virtual {v1}, Landroid/support/v4/view/ae;->a()I
+.method public getItemPosition(Ljava/lang/Object;)I
+    .locals 1
 
-    move-result v1
+    const/4 v0, -0x1
 
-    if-le v1, v0, :cond_2
+    return v0
+.end method
 
-    :goto_0
-    invoke-virtual {p2, v0}, Landroid/support/v4/view/a/a;->i(Z)V
+.method public getPageTitle(I)Ljava/lang/CharSequence;
+    .locals 1
 
-    iget-object v0, p0, Landroid/support/v4/view/bw;->b:Landroid/support/v4/view/ViewPager;
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ViewPager;)Landroid/support/v4/view/ae;
+    return-object v0
+.end method
+
+.method public getPageWidth(I)F
+    .locals 1
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    return v0
+.end method
+
+.method public instantiateItem(Landroid/view/View;I)Ljava/lang/Object;
+    .locals 2
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Required method instantiateItem was not overridden"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public instantiateItem(Landroid/view/ViewGroup;I)Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1, p2}, Landroid/support/v4/view/bw;->instantiateItem(Landroid/view/View;I)Ljava/lang/Object;
 
     move-result-object v0
+
+    return-object v0
+.end method
+
+.method public abstract isViewFromObject(Landroid/view/View;Ljava/lang/Object;)Z
+.end method
+
+.method public notifyDataSetChanged()V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Landroid/support/v4/view/bw;->mViewPagerObserver:Landroid/database/DataSetObserver;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v4/view/bw;->b:Landroid/support/v4/view/ViewPager;
+    iget-object v0, p0, Landroid/support/v4/view/bw;->mViewPagerObserver:Landroid/database/DataSetObserver;
 
-    invoke-static {v0}, Landroid/support/v4/view/ViewPager;->b(Landroid/support/v4/view/ViewPager;)I
-
-    move-result v0
-
-    if-ltz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v4/view/bw;->b:Landroid/support/v4/view/ViewPager;
-
-    invoke-static {v0}, Landroid/support/v4/view/ViewPager;->b(Landroid/support/v4/view/ViewPager;)I
-
-    move-result v0
-
-    iget-object v1, p0, Landroid/support/v4/view/bw;->b:Landroid/support/v4/view/ViewPager;
-
-    invoke-static {v1}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ViewPager;)Landroid/support/v4/view/ae;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/support/v4/view/ae;->a()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x1
-
-    if-ge v0, v1, :cond_0
-
-    const/16 v0, 0x1000
-
-    invoke-virtual {p2, v0}, Landroid/support/v4/view/a/a;->a(I)V
+    invoke-virtual {v0}, Landroid/database/DataSetObserver;->onChanged()V
 
     :cond_0
-    iget-object v0, p0, Landroid/support/v4/view/bw;->b:Landroid/support/v4/view/ViewPager;
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {v0}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ViewPager;)Landroid/support/v4/view/ae;
+    iget-object v0, p0, Landroid/support/v4/view/bw;->mObservable:Landroid/database/DataSetObservable;
 
-    move-result-object v0
+    invoke-virtual {v0}, Landroid/database/DataSetObservable;->notifyChanged()V
 
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Landroid/support/v4/view/bw;->b:Landroid/support/v4/view/ViewPager;
-
-    invoke-static {v0}, Landroid/support/v4/view/ViewPager;->b(Landroid/support/v4/view/ViewPager;)I
-
-    move-result v0
-
-    if-lez v0, :cond_1
-
-    iget-object v0, p0, Landroid/support/v4/view/bw;->b:Landroid/support/v4/view/ViewPager;
-
-    invoke-static {v0}, Landroid/support/v4/view/ViewPager;->b(Landroid/support/v4/view/ViewPager;)I
-
-    move-result v0
-
-    iget-object v1, p0, Landroid/support/v4/view/bw;->b:Landroid/support/v4/view/ViewPager;
-
-    invoke-static {v1}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ViewPager;)Landroid/support/v4/view/ae;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/support/v4/view/ae;->a()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_1
-
-    const/16 v0, 0x2000
-
-    invoke-virtual {p2, v0}, Landroid/support/v4/view/a/a;->a(I)V
-
-    :cond_1
     return-void
 
-    :cond_2
-    const/4 v0, 0x0
+    :catchall_0
+    move-exception v0
 
-    goto :goto_0
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
 .end method
 
-.method public a(Landroid/view/View;ILandroid/os/Bundle;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    invoke-super {p0, p1, p2, p3}, Landroid/support/v4/view/a;->a(Landroid/view/View;ILandroid/os/Bundle;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    sparse-switch p2, :sswitch_data_0
-
-    move v0, v1
-
-    goto :goto_0
-
-    :sswitch_0
-    iget-object v2, p0, Landroid/support/v4/view/bw;->b:Landroid/support/v4/view/ViewPager;
-
-    invoke-static {v2}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ViewPager;)Landroid/support/v4/view/ae;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_1
-
-    iget-object v2, p0, Landroid/support/v4/view/bw;->b:Landroid/support/v4/view/ViewPager;
-
-    invoke-static {v2}, Landroid/support/v4/view/ViewPager;->b(Landroid/support/v4/view/ViewPager;)I
-
-    move-result v2
-
-    if-ltz v2, :cond_1
-
-    iget-object v2, p0, Landroid/support/v4/view/bw;->b:Landroid/support/v4/view/ViewPager;
-
-    invoke-static {v2}, Landroid/support/v4/view/ViewPager;->b(Landroid/support/v4/view/ViewPager;)I
-
-    move-result v2
-
-    iget-object v3, p0, Landroid/support/v4/view/bw;->b:Landroid/support/v4/view/ViewPager;
-
-    invoke-static {v3}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ViewPager;)Landroid/support/v4/view/ae;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/support/v4/view/ae;->a()I
-
-    move-result v3
-
-    add-int/lit8 v3, v3, -0x1
-
-    if-ge v2, v3, :cond_1
-
-    iget-object v1, p0, Landroid/support/v4/view/bw;->b:Landroid/support/v4/view/ViewPager;
-
-    iget-object v2, p0, Landroid/support/v4/view/bw;->b:Landroid/support/v4/view/ViewPager;
-
-    invoke-static {v2}, Landroid/support/v4/view/ViewPager;->b(Landroid/support/v4/view/ViewPager;)I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, 0x1
-
-    invoke-virtual {v1, v2}, Landroid/support/v4/view/ViewPager;->a(I)V
-
-    goto :goto_0
-
-    :cond_1
-    move v0, v1
-
-    goto :goto_0
-
-    :sswitch_1
-    iget-object v2, p0, Landroid/support/v4/view/bw;->b:Landroid/support/v4/view/ViewPager;
-
-    invoke-static {v2}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ViewPager;)Landroid/support/v4/view/ae;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Landroid/support/v4/view/bw;->b:Landroid/support/v4/view/ViewPager;
-
-    invoke-static {v2}, Landroid/support/v4/view/ViewPager;->b(Landroid/support/v4/view/ViewPager;)I
-
-    move-result v2
-
-    if-lez v2, :cond_2
-
-    iget-object v2, p0, Landroid/support/v4/view/bw;->b:Landroid/support/v4/view/ViewPager;
-
-    invoke-static {v2}, Landroid/support/v4/view/ViewPager;->b(Landroid/support/v4/view/ViewPager;)I
-
-    move-result v2
-
-    iget-object v3, p0, Landroid/support/v4/view/bw;->b:Landroid/support/v4/view/ViewPager;
-
-    invoke-static {v3}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ViewPager;)Landroid/support/v4/view/ae;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/support/v4/view/ae;->a()I
-
-    move-result v3
-
-    if-ge v2, v3, :cond_2
-
-    iget-object v1, p0, Landroid/support/v4/view/bw;->b:Landroid/support/v4/view/ViewPager;
-
-    iget-object v2, p0, Landroid/support/v4/view/bw;->b:Landroid/support/v4/view/ViewPager;
-
-    invoke-static {v2}, Landroid/support/v4/view/ViewPager;->b(Landroid/support/v4/view/ViewPager;)I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, -0x1
-
-    invoke-virtual {v1, v2}, Landroid/support/v4/view/ViewPager;->a(I)V
-
-    goto :goto_0
-
-    :cond_2
-    move v0, v1
-
-    goto :goto_0
-
-    :sswitch_data_0
-    .sparse-switch
-        0x1000 -> :sswitch_0
-        0x2000 -> :sswitch_1
-    .end sparse-switch
-.end method
-
-.method public d(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+.method public registerDataSetObserver(Landroid/database/DataSetObserver;)V
     .locals 1
 
-    invoke-super {p0, p1, p2}, Landroid/support/v4/view/a;->d(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+    iget-object v0, p0, Landroid/support/v4/view/bw;->mObservable:Landroid/database/DataSetObservable;
 
-    const-class v0, Landroid/support/v4/view/ViewPager;
+    invoke-virtual {v0, p1}, Landroid/database/DataSetObservable;->registerObserver(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    return-void
+.end method
 
-    move-result-object v0
+.method public restoreState(Landroid/os/Parcelable;Ljava/lang/ClassLoader;)V
+    .locals 0
 
-    invoke-virtual {p2, v0}, Landroid/view/accessibility/AccessibilityEvent;->setClassName(Ljava/lang/CharSequence;)V
+    return-void
+.end method
+
+.method public saveState()Landroid/os/Parcelable;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public setPrimaryItem(Landroid/view/View;ILjava/lang/Object;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public setPrimaryItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2, p3}, Landroid/support/v4/view/bw;->setPrimaryItem(Landroid/view/View;ILjava/lang/Object;)V
+
+    return-void
+.end method
+
+.method setViewPagerObserver(Landroid/database/DataSetObserver;)V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iput-object p1, p0, Landroid/support/v4/view/bw;->mViewPagerObserver:Landroid/database/DataSetObserver;
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+.end method
+
+.method public startUpdate(Landroid/view/View;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public startUpdate(Landroid/view/ViewGroup;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/support/v4/view/bw;->startUpdate(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v4/view/bw;->mObservable:Landroid/database/DataSetObservable;
+
+    invoke-virtual {v0, p1}, Landroid/database/DataSetObservable;->unregisterObserver(Ljava/lang/Object;)V
 
     return-void
 .end method

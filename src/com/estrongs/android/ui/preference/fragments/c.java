@@ -10,7 +10,6 @@ class c
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    AppPreferenceFragment.d(a);
     paramDialogInterface.dismiss();
   }
 }

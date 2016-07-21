@@ -1,32 +1,20 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.util.am;
-import com.estrongs.android.view.aw;
+import com.estrongs.android.util.q;
 import java.util.List;
 
 class ar
   implements Runnable
 {
-  ar(FileExplorerActivity paramFileExplorerActivity) {}
+  ar(aq paramaq) {}
   
   public void run()
   {
-    List localList = a.x;
-    int i = 0;
-    for (;;)
-    {
-      if (i < localList.size())
-      {
-        aw localaw = (aw)localList.get(i);
-        if ((localaw != null) && (am.bP(localaw.c()))) {
-          a.b(localaw);
-        }
-      }
-      else
-      {
-        return;
-      }
-      i += 1;
+    while (FileExplorerActivity.c(a.a).size() > 0) {
+      FileExplorerActivity.a(a.a, (q)FileExplorerActivity.c(a.a).remove(0), false);
+    }
+    if (FileExplorerActivity.d(a.a) == null) {
+      a.a.ae();
     }
   }
 }

@@ -1,52 +1,30 @@
 package com.estrongs.android.ui.dialog;
 
-import android.app.Activity;
-import android.text.InputFilter.LengthFilter;
-import android.text.Spanned;
-import com.estrongs.android.ui.view.ag;
+import android.widget.TextView;
+import com.estrongs.android.pop.app.diskusage.a;
+import com.estrongs.fs.b.ao;
 
 class em
-  extends InputFilter.LengthFilter
+  implements Runnable
 {
-  private long b = 0L;
+  em(ee paramee) {}
   
-  em(ek paramek, int paramInt)
+  public void run()
   {
-    super(paramInt);
-  }
-  
-  public CharSequence filter(CharSequence paramCharSequence, int paramInt1, int paramInt2, Spanned paramSpanned, int paramInt3, int paramInt4)
-  {
-    paramInt3 = paramSpanned.subSequence(0, paramInt3).toString().getBytes().length;
-    int i = paramSpanned.subSequence(paramInt4, paramSpanned.length()).toString().getBytes().length + paramInt3;
-    paramInt4 = paramCharSequence.subSequence(paramInt1, paramInt2).toString().getBytes().length;
-    if (255 - i <= 0)
+    com.estrongs.fs.b.ap localap = ee.d(a).b();
+    a.c.setText(e + " " + a.d + ", " + f + " " + a.e);
+    ee.a(a, a.b, c);
+    if (com.estrongs.android.util.ap.bl(ee.f(a))) {
+      ee.a(a, ee.j(a), d);
+    }
+    try
     {
-      long l = System.currentTimeMillis();
-      if (l - b > 1000L)
-      {
-        ag.a(a.a, a.a.getString(2131427919), 0);
-        b = l;
+      if ((ee.d(a) != null) && (a.l != null)) {
+        a.l.b(ee.d(a).b());
       }
-      return "";
+      return;
     }
-    if (255 - i >= paramInt4) {
-      return null;
-    }
-    paramInt3 = paramInt2;
-    if (paramInt2 <= paramInt1) {
-      return "";
-    }
-    do
-    {
-      paramInt4 = paramCharSequence.subSequence(paramInt1, paramInt3).toString().getBytes().length;
-      if (paramInt4 + i <= 255) {
-        break;
-      }
-      paramInt3 -= 1;
-    } while (paramInt3 > paramInt1);
-    return "";
-    return paramCharSequence.subSequence(paramInt1, paramInt3);
+    catch (Exception localException) {}
   }
 }
 

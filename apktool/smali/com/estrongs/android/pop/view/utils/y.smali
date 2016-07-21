@@ -316,7 +316,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bA(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bR(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -328,7 +328,7 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v5}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -410,7 +410,7 @@
 
     iget-object v8, v8, Lcom/estrongs/android/pop/view/utils/RemoteSynchronizer$RemoteFile;->tmpPath:Ljava/lang/String;
 
-    invoke-static {v8}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v8}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -422,7 +422,7 @@
 
     iget-object v8, v8, Lcom/estrongs/android/pop/view/utils/RemoteSynchronizer$RemoteFile;->tmpPath:Ljava/lang/String;
 
-    invoke-static {v8}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v8}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 

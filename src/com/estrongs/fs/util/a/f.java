@@ -1,6 +1,6 @@
 package com.estrongs.fs.util.a;
 
-import com.estrongs.android.util.am;
+import com.estrongs.android.util.ap;
 import com.estrongs.fs.h;
 
 public class f
@@ -27,15 +27,15 @@ public class f
       if (str2 == null) {
         break label202;
       }
-      bool1 = am.bb(str3);
-      bool2 = am.bb(str4);
+      bool1 = ap.bm(str3);
+      bool2 = ap.bm(str4);
       if ((!bool1) || (!bool2)) {
         break label222;
       }
-      i = am.G(str3);
-      j = am.G(str4);
-      String str5 = am.a(str3, i);
-      String str6 = am.a(str4, j);
+      i = ap.I(str3);
+      j = ap.I(str4);
+      String str5 = ap.a(str3, i);
+      String str6 = ap.a(str4, j);
       if ((str5 == null) || (str6 == null) || (!str5.equals("/")) || (!str6.equals("/"))) {
         break label222;
       }
@@ -52,7 +52,7 @@ public class f
     label222:
     label393:
     label398:
-    for (int j = a(am.an(str3), am.an(str4));; j = -1)
+    for (int j = a(ap.ax(str3), ap.ax(str4));; j = -1)
     {
       if (i == 4)
       {
@@ -61,7 +61,7 @@ public class f
           break label182;
         }
       }
-      for (i = a(am.c(str3), am.c(str4));; i = (i - j) * c)
+      for (i = a(ap.c(str3), ap.c(str4));; i = (i - j) * c)
       {
         j = i;
         if (i == 0) {

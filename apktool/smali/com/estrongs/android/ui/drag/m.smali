@@ -271,7 +271,7 @@
     goto :goto_0
 .end method
 
-.method d()Landroid/graphics/Bitmap;
+.method getBitmap()Landroid/graphics/Bitmap;
     .locals 1
 
     iget-object v0, p0, Lcom/estrongs/android/ui/drag/m;->b:Landroid/graphics/Bitmap;
@@ -279,7 +279,7 @@
     return-object v0
 .end method
 
-.method e()I
+.method getRegistrationX()I
     .locals 1
 
     iget v0, p0, Lcom/estrongs/android/ui/drag/m;->d:I
@@ -289,7 +289,7 @@
     return v0
 .end method
 
-.method f()I
+.method getRegistrationY()I
     .locals 1
 
     iget v0, p0, Lcom/estrongs/android/ui/drag/m;->e:I
@@ -396,6 +396,16 @@
     move-result v1
 
     invoke-virtual {p0, v0, v1}, Lcom/estrongs/android/ui/drag/m;->setMeasuredDimension(II)V
+
+    return-void
+.end method
+
+.method public setPaint(Landroid/graphics/Paint;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/ui/drag/m;->c:Landroid/graphics/Paint;
+
+    invoke-virtual {p0}, Lcom/estrongs/android/ui/drag/m;->invalidate()V
 
     return-void
 .end method

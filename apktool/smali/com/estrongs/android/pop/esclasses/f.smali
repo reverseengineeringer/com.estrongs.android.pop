@@ -1,37 +1,45 @@
 .class Lcom/estrongs/android/pop/esclasses/f;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public a:[[Ljava/lang/String;
+.field final synthetic a:Ljava/lang/String;
 
-.field public b:Landroid/util/SparseArray;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/util/SparseArray",
-            "<",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field final synthetic b:I
+
+.field final synthetic c:Lcom/estrongs/android/pop/esclasses/ESActivity;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method constructor <init>(Lcom/estrongs/android/pop/esclasses/ESActivity;Ljava/lang/String;I)V
+    .locals 0
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lcom/estrongs/android/pop/esclasses/f;->c:Lcom/estrongs/android/pop/esclasses/ESActivity;
+
+    iput-object p2, p0, Lcom/estrongs/android/pop/esclasses/f;->a:Ljava/lang/String;
+
+    iput p3, p0, Lcom/estrongs/android/pop/esclasses/f;->b:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object v0, v1
+    return-void
+.end method
 
-    check-cast v0, [[Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/esclasses/f;->a:[[Ljava/lang/String;
+# virtual methods
+.method public run()V
+    .locals 3
 
-    iput-object v1, p0, Lcom/estrongs/android/pop/esclasses/f;->b:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcom/estrongs/android/pop/esclasses/f;->c:Lcom/estrongs/android/pop/esclasses/ESActivity;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/esclasses/f;->a:Ljava/lang/String;
+
+    iget v2, p0, Lcom/estrongs/android/pop/esclasses/f;->b:I
+
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
     return-void
 .end method

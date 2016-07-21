@@ -1,20 +1,19 @@
-.class public Lcom/estrongs/android/ui/e/i;
+.class Lcom/estrongs/android/ui/e/i;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field a:Landroid/view/View;
-
-.field b:Landroid/widget/Button;
-
-.field final synthetic c:Lcom/estrongs/android/ui/e/c;
+.field final synthetic a:Lcom/estrongs/android/ui/e/f;
 
 
 # direct methods
-.method public constructor <init>(Lcom/estrongs/android/ui/e/c;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/f;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/i;->c:Lcom/estrongs/android/ui/e/c;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/i;->a:Lcom/estrongs/android/ui/e/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,36 +22,37 @@
 
 
 # virtual methods
-.method public a()V
+.method public onClick(Landroid/view/View;)V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/i;->a:Landroid/view/View;
+    :try_start_0
+    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    check-cast v0, Ljava/lang/Integer;
 
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/e/i;->a:Lcom/estrongs/android/ui/e/f;
+
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/e/f;->a(I)Lcom/estrongs/android/view/a/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/view/a/a;->f()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
     return-void
-.end method
 
-.method public a(Z)V
-    .locals 1
+    :catch_0
+    move-exception v0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/i;->a:Landroid/view/View;
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setEnabled(Z)V
-
-    return-void
-.end method
-
-.method public b()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/i;->a:Landroid/view/View;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    return-void
+    goto :goto_0
 .end method

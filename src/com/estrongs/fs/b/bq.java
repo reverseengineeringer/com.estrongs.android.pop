@@ -2,19 +2,49 @@ package com.estrongs.fs.b;
 
 import android.app.Activity;
 import com.estrongs.a.a;
-import com.estrongs.android.ui.dialog.iw;
+import com.estrongs.android.util.bk;
 
 class bq
-  implements Runnable
+  implements com.estrongs.a.a.p
 {
-  bq(bo parambo, a parama) {}
+  bq(bo parambo) {}
   
-  public void run()
+  public void a(a parama, int paramInt1, int paramInt2)
   {
-    Object localObject = (Long[])b.a.b(a.getTaskResult());
-    localObject = new iw(b.a.a, localObject[0].longValue(), localObject[1].longValue());
-    ((iw)localObject).setSingleButton(b.a.a.getString(2131427339), null);
-    ((iw)localObject).show();
+    if (paramInt2 == 4) {}
+    String str;
+    for (;;)
+    {
+      try
+      {
+        parama = a.b();
+        if (!bk.a(parama)) {
+          a.a.runOnUiThread(new br(this, parama));
+        }
+        return;
+      }
+      catch (Exception parama)
+      {
+        parama.printStackTrace();
+        return;
+      }
+      if (paramInt2 == 5)
+      {
+        str = a.a(parama.getTaskResult());
+        if (str != null) {}
+        while (!bk.a(str))
+        {
+          if (getTaskResulta != 12) {
+            break label121;
+          }
+          a.a.runOnUiThread(new bs(this, parama));
+          return;
+          str = a.c();
+        }
+      }
+    }
+    label121:
+    a.a.runOnUiThread(new bt(this, str));
   }
 }
 

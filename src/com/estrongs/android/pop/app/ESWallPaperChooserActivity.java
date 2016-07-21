@@ -1,22 +1,22 @@
 package com.estrongs.android.pop.app;
 
 import android.os.Bundle;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.a;
-import com.estrongs.android.util.bc;
+import com.estrongs.android.j.c;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.bg;
 import com.estrongs.fs.h;
 
 public class ESWallPaperChooserActivity
   extends FileChooserActivity
 {
-  private a b = null;
+  private c b = null;
   
   protected boolean a(h paramh)
   {
     boolean bool = true;
-    if (!bc.a(bc.b(paramh.getAbsolutePath())))
+    if (!bg.a(bg.b(paramh.getAbsolutePath())))
     {
-      ag.a(this, 2131428335, 1);
+      ak.a(this, 2131232323, 1);
       bool = false;
     }
     return bool;
@@ -25,23 +25,27 @@ public class ESWallPaperChooserActivity
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    b = a.a(this, false, "ESWallPaperChooser");
+    b = c.a(this);
+    try
+    {
+      b.d("act3");
+      b.a("act3", "es_wall_paper_choose");
+      return;
+    }
+    catch (Exception paramBundle)
+    {
+      paramBundle.printStackTrace();
+    }
   }
   
   protected void onPause()
   {
     super.onPause();
-    if (b != null) {
-      b.c();
-    }
   }
   
   protected void onResume()
   {
     super.onResume();
-    if (b != null) {
-      b.b();
-    }
   }
 }
 

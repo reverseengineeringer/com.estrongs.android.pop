@@ -1,8 +1,8 @@
 package com.estrongs.android.pop.app.editor;
 
 import android.content.Context;
-import com.estrongs.android.util.am;
-import com.estrongs.fs.impl.local.l;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.impl.local.m;
 import java.io.File;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -19,20 +19,20 @@ public abstract class a
     if (paramFile == null) {
       return null;
     }
-    if ((am.bl(paramFile.getAbsolutePath())) || (!l.a(paramContext, false))) {
+    if ((ap.bC(paramFile.getAbsolutePath())) || (!m.a(paramContext, false))) {
       return new d(paramFile, paramString);
     }
-    return new ar(paramFile);
+    return new aj(paramFile);
   }
   
   public static boolean a(String paramString)
   {
     boolean bool2 = false;
     boolean bool1 = bool2;
-    if (am.ba(paramString))
+    if (ap.bl(paramString))
     {
       bool1 = bool2;
-      if (!am.bl(paramString)) {
+      if (!ap.bC(paramString)) {
         bool1 = true;
       }
     }

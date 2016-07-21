@@ -3,16 +3,17 @@ package com.estrongs.android.widget;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Rect;
+import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.AbsListView;
-import com.estrongs.android.ui.d.a;
-import com.estrongs.android.ui.d.e;
+import com.estrongs.android.pop.app.a;
+import com.estrongs.android.ui.d.g;
+import com.estrongs.android.ui.d.i;
 import com.estrongs.android.ui.drag.d;
 import com.estrongs.android.ui.drag.k;
 import com.estrongs.android.ui.drag.l;
-import com.estrongs.android.view.aw;
+import com.estrongs.android.view.cr;
 import com.estrongs.fs.h;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,54 +23,34 @@ public class ContentViewSwitcher
   implements k, l
 {
   private d a;
-  protected List<aw> b = new ArrayList();
+  protected List<cr> b = new ArrayList();
   private int j;
   private boolean k = false;
+  private long l = 0L;
   
   public ContentViewSwitcher(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    j = a.a(paramContext, 10.0F);
+    j = g.a(paramContext, 10.0F);
   }
   
   public void a(int paramInt)
   {
+    if (getChildCount() == 0) {
+      return;
+    }
+    getWindowListManager().a((getChildCount() + paramInt) % getChildCount());
     super.a(paramInt);
-    e.a(e);
   }
   
   public void a(View paramView, boolean paramBoolean) {}
   
-  public void a(d paramd)
+  public void a(h paramh, cr paramcr, boolean paramBoolean)
   {
-    a = paramd;
-  }
-  
-  public void a(h paramh, aw paramaw, boolean paramBoolean)
-  {
-    a.a(paramh, paramaw, this, d.a, paramBoolean);
-  }
-  
-  public void a(List<aw> paramList)
-  {
-    b = paramList;
-  }
-  
-  public void a(boolean paramBoolean)
-  {
-    k = paramBoolean;
+    a.a(paramh, paramcr, this, d.a, paramBoolean);
   }
   
   public void b() {}
-  
-  public void b(int paramInt)
-  {
-    if (getChildCount() == 0) {
-      return;
-    }
-    e.a((getChildCount() + paramInt) % getChildCount());
-    super.b(paramInt);
-  }
   
   @TargetApi(8)
   public void c()
@@ -77,16 +58,14 @@ public class ContentViewSwitcher
     if ((b == null) || (b.isEmpty())) {
       return;
     }
-    AbsListView localAbsListView = ((aw)b.get(e)).C();
+    RecyclerView localRecyclerView = ((cr)b.get(e)).Q();
     try
     {
-      localAbsListView.smoothScrollBy(-j, 50);
+      localRecyclerView.smoothScrollBy(0, -j);
       return;
     }
     catch (Throwable localThrowable) {}
   }
-  
-  public void c_() {}
   
   @TargetApi(8)
   public void d()
@@ -94,26 +73,28 @@ public class ContentViewSwitcher
     if ((b == null) || (b.isEmpty())) {
       return;
     }
-    AbsListView localAbsListView = ((aw)b.get(e)).C();
+    RecyclerView localRecyclerView = ((cr)b.get(e)).Q();
     try
     {
-      localAbsListView.smoothScrollBy(j, 50);
+      localRecyclerView.smoothScrollBy(0, j);
       return;
     }
     catch (Throwable localThrowable) {}
   }
   
-  public Rect e()
+  public boolean e()
+  {
+    return k;
+  }
+  
+  public Rect getScrollViewRect()
   {
     int[] arrayOfInt = new int[2];
     getLocationOnScreen(arrayOfInt);
     return new Rect(arrayOfInt[0], arrayOfInt[1], arrayOfInt[0] + getMeasuredWidth(), arrayOfInt[1] + getMeasuredHeight());
   }
   
-  public boolean f()
-  {
-    return k;
-  }
+  public void k_() {}
   
   public boolean onInterceptTouchEvent(MotionEvent paramMotionEvent)
   {
@@ -136,7 +117,7 @@ public class ContentViewSwitcher
       if (getChildCount() == 1) {
         i = 0;
       }
-      a(i);
+      setCurrentScreen(i);
       return;
     }
     catch (Exception localException)
@@ -146,6 +127,29 @@ public class ContentViewSwitcher
         localException.printStackTrace();
       }
     }
+  }
+  
+  public void setCurrentScreen(int paramInt)
+  {
+    super.setCurrentScreen(paramInt);
+    getWindowListManager().a(e);
+  }
+  
+  public void setDragController(d paramd)
+  {
+    a = paramd;
+  }
+  
+  public void setGestureListener(a parama) {}
+  
+  public void setGridViewWrappers(List<cr> paramList)
+  {
+    b = paramList;
+  }
+  
+  public void setPageLocked(boolean paramBoolean)
+  {
+    k = paramBoolean;
   }
 }
 

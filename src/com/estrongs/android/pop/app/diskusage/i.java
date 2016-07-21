@@ -1,6 +1,6 @@
 package com.estrongs.android.pop.app.diskusage;
 
-import com.estrongs.android.widget.bg;
+import com.estrongs.android.widget.bh;
 import java.io.File;
 
 class i
@@ -15,13 +15,13 @@ class i
     if (l2 % h.a(a) != 0L) {
       l1 = (l2 / h.a(a) + 1L) * h.a(a);
     }
-    h.a(a, l1);
+    h.a(a, l1 + h.b(a));
     try
     {
-      if (h.b(a) != null)
+      if (h.c(a) != null)
       {
-        h.b(a).setMessage(paramFile.getAbsolutePath());
-        h.b(a).b(h.c(a));
+        h.c(a).setMessage(paramFile.getAbsolutePath());
+        h.c(a).b(h.b(a));
       }
       return;
     }

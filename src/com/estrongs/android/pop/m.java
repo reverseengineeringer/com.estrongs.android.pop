@@ -2,11 +2,12 @@ package com.estrongs.android.pop;
 
 import android.app.Activity;
 import com.estrongs.a.a.d;
-import com.estrongs.android.a.e;
-import com.estrongs.android.a.i;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.android.util.am;
+import com.estrongs.android.d.e;
+import com.estrongs.android.d.i;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.util.ap;
 import com.estrongs.fs.b.r;
+import com.estrongs.fs.w;
 
 public class m
   implements com.estrongs.a.a.a
@@ -18,14 +19,17 @@ public class m
     a(paramActivity);
   }
   
-  private cg a(com.estrongs.a.a parama, com.estrongs.a.a.h paramh)
+  private ci a(com.estrongs.a.a parama, com.estrongs.a.a.h paramh)
   {
-    if ((c.getFileType().a()) || ((am.bb(d.getPath())) && (!am.H(d.getPath())))) {
+    if ((c.getFileType().a()) || ((ap.bm(d.getPath())) && (!ap.J(d.getPath())))) {
       return new e(a, new x(this, paramh, parama), true);
     }
     if ((parama instanceof r)) {}
-    for (boolean bool = ((r)parama).e();; bool = true) {
-      return new i(a, c, d, new y(this, paramh, parama), true, bool, b);
+    for (boolean bool = ((r)parama).e();; bool = true)
+    {
+      parama = new i(a, c, d, new y(this, paramh, parama), true, bool, b);
+      parama.setCancelable(true);
+      return parama;
     }
   }
   

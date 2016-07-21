@@ -1,13 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_select">Zaznacz</string>
-    <string name="app_name">ES Eksplorator plików</string>
-    <string name="app_media_player">ES Odtwarzacz multimedialny</string>
-    <string name="app_note_editor">ES Edytor notatek</string>
-    <string name="app_image_browser">ES Przeglądarka zdjęć</string>
-    <string name="app_zip_viewer">ES Przeglądarka ZIP</string>
     <string name="app_downloader">ES Pobieranie</string>
-    <string name="select_device_to_share">Wybierz urządzenie do wysyłania</string>
+    <string name="app_image_browser">ES Przeglądarka zdjęć</string>
+    <string name="app_media_player">ES Odtwarzacz multimedialny</string>
+    <string name="app_name">ES Eksplorator plików</string>
+    <string name="app_note_editor">ES Edytor notatek</string>
+    <string name="app_zip_viewer">ES Przeglądarka ZIP</string>
+    <string name="battery_info_remaining_charging_time">"Pozostały czas ładowania: "</string>
+    <string name="battery_info_remaining_discharging_time">"Czas do końca: "</string>
+    <string name="charging_screen_ad_delete">Usuń</string>
+    <string name="charging_screen_ad_enter">Otwórz</string>
+    <string name="charging_screen_charging_complete">Ładowanie zakończone</string>
+    <string name="charging_screen_slide_to_enter">Przesuń, aby odblokować</string>
+    <string name="common_time_hour">g</string>
+    <string name="common_time_minute">m</string>
+    <string name="duscenerysdk_ad_no_browser_play">Nie zainstalowano żadnej przeglądarki ani Google Play</string>
     <string name="es_share_name_activity">Wyślij przez LAN</string>
+    <string name="lock_screen_setting">Ustawienia</string>
+    <string name="lock_screen_switch">Inteligentne ładowanie</string>
+    <string name="lockscreen_charge_boost_time">Ładowanie przyspieszone łącznie o %1$d min</string>
     <string name="save_to_es">ES Zapisz do</string>
+    <string name="scenery_card_antivirus_button">SKANUJ ZAGROŻENIA</string>
+    <string name="scenery_card_antivirus_content">W Twoim telefonie wykryto &lt;font color=#3080F0>%1$s&lt;/font> zagrożenia dla bezpieczeństwa</string>
+    <string name="scenery_card_antivirus_title">Zagrożenie</string>
+    <string name="scenery_card_battery_button">WŁ. OSZCZĘDZ.</string>
+    <string name="scenery_card_battery_content">&lt;font color=#3080F0>%1$s&lt;/font> typy zachowań wpływających na pobór mocy</string>
+    <string name="scenery_card_battery_title">Pobór mocy</string>
+    <string name="scenery_card_booster_button">PRZYSPIESZ TERAZ</string>
+    <string name="scenery_card_booster_content">&lt;font color=#3080F0>%1$s&lt;/font> aplikacje w tle spowalniają telefon</string>
+    <string name="scenery_card_booster_title">Wolna praca</string>
+    <string name="scenery_card_cleaner_button">NAPRAW TERAZ</string>
+    <string name="scenery_card_cleaner_content">Znaleziono śmieci &lt;font color=#3080F0>%1$s&lt;/font> w Twoim telefonie</string>
+    <string name="scenery_card_cleaner_title">Szybkie czysz.</string>
+    <string name="scenery_card_es_button">WYCZYŚĆ TERAZ</string>
+    <string name="scenery_card_es_content">Mniejsza ilość pamięci wewnętrznej &lt;font color=#3080F0>%1$s&lt;/font></string>
+    <string name="scenery_card_es_title">Sprzątanie dysku</string>
+    <string name="scenery_card_photowonder_button">UPIĘKSZ TERAZ</string>
+    <string name="scenery_card_photowonder_content">Twoje zdjęcia &lt;font color=#3080F0>%1$s&lt;/font> mogą być jeszcze piękniejsze!</string>
+    <string name="scenery_card_photowonder_title">Piękno</string>
+    <string name="scenery_charge_dialog_button_text">POBIERZ</string>
+    <string name="scenery_charge_dialog_content">Przeładowanie przez %1$d min &lt;font color=#FF8132>jest szkodliwe dla baterii&lt;/font>. Chroń ją z aplikacją &lt;b>DU Battery Saver&lt;/b>.</string>
+    <string name="scenery_charge_dialog_title">Porady dotyczące ładowania</string>
+    <string name="scenery_disk_usage_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_disk_usage_dialog_content">Wolne miejsce spadło o &lt;font color=#FF8132>%1$sMB&lt;/font> w ciągu ostatnich &lt;font color=#FF8132>%2$s dni&lt;/font>.</string>
+    <string name="scenery_disk_usage_dialog_title">Sprzątanie dysku</string>
+    <string name="scenery_take_photo_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_take_photo_dialog_content">Twoim zdjęciom czegoś brakuje? &lt;b>PhotoWonder&lt;/b> &lt;font color=#2274E6>Cinematic Filters&lt;/font> to idealne rozwiązanie!</string>
+    <string name="scenery_take_photo_dialog_title">Edytor zdjęć</string>
+    <string name="scenery_uninstall_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_uninstall_dialog_content">Po %1$s &lt;font color=#FF8132>pozostały śmieci&lt;/font>, użyj &lt;b>DU Speed Booster&lt;/b> i pozbądź się ich!</string>
+    <string name="scenery_uninstall_dialog_title">Znaleziono pozostałości</string>
+    <string name="screen_lock_charging_boosted_time">Przyspieszenie ładowania na %1$d min</string>
+    <string name="select_device_to_share">Wybierz urządzenie do wysyłania</string>
 </resources>

@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/widget/ExpandableListView$OnChildClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/dialog/jc;
+.field final synthetic a:Lcom/estrongs/android/ui/adapter/s;
+
+.field final synthetic b:Lcom/estrongs/android/ui/dialog/iy;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/jc;)V
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/iy;Lcom/estrongs/android/ui/adapter/s;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/jd;->a:Lcom/estrongs/android/ui/dialog/jc;
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/jd;->b:Lcom/estrongs/android/ui/dialog/iy;
+
+    iput-object p2, p0, Lcom/estrongs/android/ui/dialog/jd;->a:Lcom/estrongs/android/ui/adapter/s;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,41 +26,26 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 3
+.method public onChildClick(Landroid/widget/ExpandableListView;Landroid/view/View;IIJ)Z
+    .locals 2
 
-    const-string v0, "http://0.esfileexplorer.duapp.com/notify/1t"
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/jd;->a:Lcom/estrongs/android/ui/adapter/s;
 
-    new-instance v1, Landroid/content/Intent;
-
-    const-string v2, "android.intent.action.VIEW"
-
-    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-virtual {v0, p3, p4}, Lcom/estrongs/android/ui/adapter/s;->a(II)Lcom/estrongs/android/ui/adapter/w;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
+    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/jd;->b:Lcom/estrongs/android/ui/dialog/iy;
 
-    :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/jd;->a:Lcom/estrongs/android/ui/dialog/jc;
+    iget-object v0, v0, Lcom/estrongs/android/ui/adapter/w;->c:Ljava/lang/String;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/jc;->a:Lcom/estrongs/android/ui/dialog/ja;
+    invoke-static {v1, v0}, Lcom/estrongs/android/ui/dialog/iy;->a(Lcom/estrongs/android/ui/dialog/iy;Ljava/lang/String;)Ljava/lang/String;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/ja;->a:Lcom/estrongs/android/ui/dialog/ix;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/jd;->b:Lcom/estrongs/android/ui/dialog/iy;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/ix;->mContext:Landroid/content/Context;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/iy;->c()V
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v0, 0x0
 
-    :goto_0
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_0
+    return v0
 .end method

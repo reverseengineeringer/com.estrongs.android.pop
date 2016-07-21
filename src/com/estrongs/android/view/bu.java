@@ -1,18 +1,23 @@
 package com.estrongs.android.view;
 
-import android.os.ConditionVariable;
-import com.estrongs.fs.b.aj;
-import java.util.List;
+import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 class bu
+  implements Runnable
 {
-  public aj a;
-  public ConditionVariable b;
-  public Runnable c;
-  public Runnable d;
-  public List<Runnable> e;
+  bu(br parambr) {}
   
-  bu(aw paramaw) {}
+  public void run()
+  {
+    bo.z(a.a).setVisibility(8);
+    bo.l(a.a).setVisibility(0);
+    bo.b(a.a).setVisibility(0);
+    bo.b(a.a).setIndeterminate(true);
+    bo.o(a.a).setVisibility(8);
+    bo.A(a.a).setText(2131232406);
+  }
 }
 
 /* Location:

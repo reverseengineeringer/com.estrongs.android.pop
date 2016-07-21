@@ -1,27 +1,24 @@
 package android.support.v4.widget;
 
-import android.support.v4.view.at;
-import android.view.View;
-import java.util.ArrayList;
+import android.database.ContentObserver;
+import android.os.Handler;
 
 class s
-  implements Runnable
+  extends ContentObserver
 {
-  final View a;
-  
-  s(SlidingPaneLayout paramSlidingPaneLayout, View paramView)
+  public s(q paramq)
   {
-    a = paramView;
+    super(new Handler());
   }
   
-  public void run()
+  public boolean deliverSelfNotifications()
   {
-    if (a.getParent() == b)
-    {
-      at.a(a, 0, null);
-      SlidingPaneLayout.a(b, a);
-    }
-    SlidingPaneLayout.f(b).remove(this);
+    return true;
+  }
+  
+  public void onChange(boolean paramBoolean)
+  {
+    a.onContentChanged();
   }
 }
 

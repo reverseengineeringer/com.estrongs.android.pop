@@ -4,7 +4,7 @@ import android.app.Activity;
 import com.estrongs.android.pop.FexApplication;
 import com.estrongs.android.pop.ad;
 import com.estrongs.android.pop.utils.a;
-import com.estrongs.android.util.am;
+import com.estrongs.android.util.ap;
 import com.estrongs.fs.h;
 import java.io.File;
 
@@ -21,10 +21,10 @@ final class c
     h localh = a.j(b);
     if (localh == null)
     {
-      a.a(c, c.getString(2131428087, new Object[] { am.E(b) }));
+      a.a(c, c.getString(2131231878, new Object[] { ap.G(b) }));
       return;
     }
-    boolean bool = ad.a(FexApplication.a()).o();
+    boolean bool = ad.a(FexApplication.a()).p();
     a.a(c, new d(this, bool, localh));
   }
 }

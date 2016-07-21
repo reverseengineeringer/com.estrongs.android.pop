@@ -2,152 +2,399 @@
 .super Ljava/lang/Object;
 
 
-# static fields
-.field private static a:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<",
-            "Landroid/content/pm/ResolveInfo;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static a(Ljava/lang/String;)Ljava/lang/String;
+    .locals 6
 
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/estrongs/android/util/ah;->a:Ljava/util/List;
-
-    return-void
-.end method
-
-.method public static a(Ljava/lang/String;Landroid/content/pm/PackageManager;)Landroid/content/Intent;
-    .locals 3
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0}, Lcom/estrongs/android/util/ah;->a(Landroid/content/pm/PackageManager;Z)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    :try_start_0
+    invoke-static {}, Lcom/estrongs/android/pop/netfs/utils/HttpUtils;->getClient()Lorg/apache/http/client/HttpClient;
 
     move-result-object v1
 
-    :cond_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    new-instance v2, Lorg/apache/http/client/methods/HttpGet;
 
-    move-result v0
+    invoke-direct {v2, p0}, Lorg/apache/http/client/methods/HttpGet;-><init>(Ljava/lang/String;)V
 
-    if-eqz v0, :cond_1
+    new-instance v3, Lorg/apache/http/params/BasicHttpParams;
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-direct {v3}, Lorg/apache/http/params/BasicHttpParams;-><init>()V
 
-    move-result-object v0
+    const-string v4, "http.protocol.handle-redirects"
 
-    check-cast v0, Landroid/content/pm/ResolveInfo;
+    sget-object v5, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    iget-object v2, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+    invoke-interface {v3, v4, v5}, Lorg/apache/http/params/HttpParams;->setParameter(Ljava/lang/String;Ljava/lang/Object;)Lorg/apache/http/params/HttpParams;
 
-    iget-object v2, v2, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+    invoke-virtual {v2, v3}, Lorg/apache/http/client/methods/HttpGet;->setParams(Lorg/apache/http/params/HttpParams;)V
 
-    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-interface {v1, v2}, Lorg/apache/http/client/HttpClient;->execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lorg/apache/http/HttpResponse;->getStatusLine()Lorg/apache/http/StatusLine;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Lorg/apache/http/StatusLine;->getStatusCode()I
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    const/16 v3, 0x12c
 
-    new-instance v1, Landroid/content/Intent;
+    if-lt v2, v3, :cond_0
 
-    const-string v2, "android.intent.action.MAIN"
+    const/16 v3, 0x190
 
-    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    if-ge v2, v3, :cond_0
 
-    const-string v2, "android.intent.category.LAUNCHER"
+    const-string v2, "Location"
 
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-interface {v1, v2}, Lorg/apache/http/HttpResponse;->getFirstHeader(Ljava/lang/String;)Lorg/apache/http/Header;
 
-    iget-object v0, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+    move-result-object v1
 
-    iget-object v0, v0, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v1, p0, v0}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    move-object v0, v1
-
-    :goto_0
-    return-object v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public static declared-synchronized a(Landroid/content/pm/PackageManager;Z)Ljava/util/List;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/content/pm/PackageManager;",
-            "Z)",
-            "Ljava/util/List",
-            "<",
-            "Landroid/content/pm/ResolveInfo;",
-            ">;"
-        }
-    .end annotation
-
-    const-class v1, Lcom/estrongs/android/util/ah;
-
-    monitor-enter v1
-
-    :try_start_0
-    sget-object v0, Lcom/estrongs/android/util/ah;->a:Ljava/util/List;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_1
-
-    :cond_0
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v2, "android.intent.action.MAIN"
-
-    invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    const-string v2, "android.intent.category.LAUNCHER"
-
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p0, v0, v2}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
+    invoke-interface {v1}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
-    sput-object v0, Lcom/estrongs/android/util/ah;->a:Ljava/util/List;
-
-    :cond_1
-    sget-object v0, Lcom/estrongs/android/util/ah;->a:Ljava/util/List;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v1
-
+    :cond_0
+    :goto_0
     return-object v0
+
+    :catch_0
+    move-exception v1
+
+    :try_start_1
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_0
 
     :catchall_0
     move-exception v0
 
-    monitor-exit v1
-
     throw v0
+.end method
+
+.method public static a(Lorg/apache/http/HttpResponse;)Ljava/lang/String;
+    .locals 3
+
+    invoke-interface {p0}, Lorg/apache/http/HttpResponse;->getEntity()Lorg/apache/http/HttpEntity;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lorg/apache/http/util/EntityUtils;->toByteArray(Lorg/apache/http/HttpEntity;)[B
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    new-instance v0, Ljava/lang/String;
+
+    const-string v2, "utf-8"
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const-string v0, ""
+
+    goto :goto_0
+.end method
+
+.method public static a(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/client/HttpClient;
+    .locals 7
+
+    :try_start_0
+    invoke-static {}, Ljava/security/KeyStore;->getDefaultType()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/security/KeyStore;->getInstance(Ljava/lang/String;)Ljava/security/KeyStore;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Ljava/security/KeyStore;->load(Ljava/io/InputStream;[C)V
+
+    new-instance v2, Lcom/estrongs/android/util/n;
+
+    invoke-direct {v2, v0}, Lcom/estrongs/android/util/n;-><init>(Ljava/security/KeyStore;)V
+
+    sget-object v0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->ALLOW_ALL_HOSTNAME_VERIFIER:Lorg/apache/http/conn/ssl/X509HostnameVerifier;
+
+    invoke-virtual {v2, v0}, Lorg/apache/http/conn/ssl/SSLSocketFactory;->setHostnameVerifier(Lorg/apache/http/conn/ssl/X509HostnameVerifier;)V
+
+    if-nez p0, :cond_2
+
+    new-instance v0, Lorg/apache/http/params/BasicHttpParams;
+
+    invoke-direct {v0}, Lorg/apache/http/params/BasicHttpParams;-><init>()V
+
+    move-object v1, v0
+
+    :goto_0
+    sget-object v0, Lorg/apache/http/HttpVersion;->HTTP_1_1:Lorg/apache/http/HttpVersion;
+
+    invoke-static {v1, v0}, Lorg/apache/http/params/HttpProtocolParams;->setVersion(Lorg/apache/http/params/HttpParams;Lorg/apache/http/ProtocolVersion;)V
+
+    const-string v0, "UTF-8"
+
+    invoke-static {v1, v0}, Lorg/apache/http/params/HttpProtocolParams;->setContentCharset(Lorg/apache/http/params/HttpParams;Ljava/lang/String;)V
+
+    new-instance v0, Lorg/apache/http/conn/scheme/SchemeRegistry;
+
+    invoke-direct {v0}, Lorg/apache/http/conn/scheme/SchemeRegistry;-><init>()V
+
+    new-instance v3, Lorg/apache/http/conn/scheme/Scheme;
+
+    const-string v4, "http"
+
+    invoke-static {}, Lorg/apache/http/conn/scheme/PlainSocketFactory;->getSocketFactory()Lorg/apache/http/conn/scheme/PlainSocketFactory;
+
+    move-result-object v5
+
+    const/16 v6, 0x50
+
+    invoke-direct {v3, v4, v5, v6}, Lorg/apache/http/conn/scheme/Scheme;-><init>(Ljava/lang/String;Lorg/apache/http/conn/scheme/SocketFactory;I)V
+
+    invoke-virtual {v0, v3}, Lorg/apache/http/conn/scheme/SchemeRegistry;->register(Lorg/apache/http/conn/scheme/Scheme;)Lorg/apache/http/conn/scheme/Scheme;
+
+    new-instance v3, Lorg/apache/http/conn/scheme/Scheme;
+
+    const-string v4, "https"
+
+    const/16 v5, 0x1bb
+
+    invoke-direct {v3, v4, v2, v5}, Lorg/apache/http/conn/scheme/Scheme;-><init>(Ljava/lang/String;Lorg/apache/http/conn/scheme/SocketFactory;I)V
+
+    invoke-virtual {v0, v3}, Lorg/apache/http/conn/scheme/SchemeRegistry;->register(Lorg/apache/http/conn/scheme/Scheme;)Lorg/apache/http/conn/scheme/Scheme;
+
+    new-instance v2, Lorg/apache/http/impl/conn/tsccm/ThreadSafeClientConnManager;
+
+    invoke-direct {v2, v1, v0}, Lorg/apache/http/impl/conn/tsccm/ThreadSafeClientConnManager;-><init>(Lorg/apache/http/params/HttpParams;Lorg/apache/http/conn/scheme/SchemeRegistry;)V
+
+    invoke-static {v1}, Lorg/apache/http/params/HttpConnectionParams;->getConnectionTimeout(Lorg/apache/http/params/HttpParams;)I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/16 v0, 0x7530
+
+    invoke-static {v1, v0}, Lorg/apache/http/params/HttpConnectionParams;->setConnectionTimeout(Lorg/apache/http/params/HttpParams;I)V
+
+    :cond_0
+    invoke-static {v1}, Lorg/apache/http/params/HttpConnectionParams;->getSoTimeout(Lorg/apache/http/params/HttpParams;)I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const/16 v0, 0x7530
+
+    invoke-static {v1, v0}, Lorg/apache/http/params/HttpConnectionParams;->setSoTimeout(Lorg/apache/http/params/HttpParams;I)V
+
+    :cond_1
+    new-instance v0, Lorg/apache/http/impl/client/DefaultHttpClient;
+
+    invoke-direct {v0, v2, v1}, Lorg/apache/http/impl/client/DefaultHttpClient;-><init>(Lorg/apache/http/conn/ClientConnectionManager;Lorg/apache/http/params/HttpParams;)V
+
+    :goto_1
+    return-object v0
+
+    :cond_2
+    invoke-interface {p0}, Lorg/apache/http/params/HttpParams;->copy()Lorg/apache/http/params/HttpParams;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v0, Lorg/apache/http/impl/client/DefaultHttpClient;
+
+    invoke-direct {v0}, Lorg/apache/http/impl/client/DefaultHttpClient;-><init>()V
+
+    goto :goto_1
+.end method
+
+.method public static a(Landroid/content/Context;Landroid/webkit/WebView;Landroid/webkit/SslErrorHandler;Landroid/net/http/SslError;)V
+    .locals 6
+    .annotation build Landroid/annotation/TargetApi;
+        value = 0x8
+    .end annotation
+
+    const/4 v5, 0x0
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x8
+
+    if-ge v0, v1, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    new-instance v0, Lcom/estrongs/android/ui/dialog/cv;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cv;->b()Lcom/estrongs/android/ui/dialog/ci;
+
+    move-result-object v1
+
+    const v0, 0x7f0806f2
+
+    if-eqz p3, :cond_1
+
+    invoke-virtual {p3}, Landroid/net/http/SslError;->getPrimaryError()I
+
+    move-result v2
+
+    packed-switch v2, :pswitch_data_0
+
+    :cond_1
+    :goto_1
+    const-string v2, "%s %s"
+
+    const/4 v3, 0x2
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v3, v5
+
+    const/4 v0, 0x1
+
+    const v4, 0x7f080712
+
+    invoke-virtual {p0, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v3, v0
+
+    invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const v2, 0x7f080385
+
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/dialog/ci;->setTitle(I)V
+
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/dialog/ci;->setMessage(Ljava/lang/CharSequence;)V
+
+    const v0, 0x7f080226
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v2, Lcom/estrongs/android/util/ai;
+
+    invoke-direct {v2, p2}, Lcom/estrongs/android/util/ai;-><init>(Landroid/webkit/SslErrorHandler;)V
+
+    invoke-virtual {v1, v0, v2}, Lcom/estrongs/android/ui/dialog/ci;->setConfirmButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/widget/Button;
+
+    const v0, 0x7f080221
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v2, Lcom/estrongs/android/util/aj;
+
+    invoke-direct {v2, p2}, Lcom/estrongs/android/util/aj;-><init>(Landroid/webkit/SslErrorHandler;)V
+
+    invoke-virtual {v1, v0, v2}, Lcom/estrongs/android/ui/dialog/ci;->setCancelButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/widget/Button;
+
+    invoke-virtual {v1, v5}, Lcom/estrongs/android/ui/dialog/ci;->setCanceledOnTouchOutside(Z)V
+
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/dialog/ci;->show()V
+
+    goto :goto_0
+
+    :pswitch_0
+    const v0, 0x7f080674
+
+    goto :goto_1
+
+    :pswitch_1
+    const v0, 0x7f080670
+
+    goto :goto_1
+
+    :pswitch_2
+    const v0, 0x7f080671
+
+    goto :goto_1
+
+    :pswitch_3
+    const v0, 0x7f080673
+
+    goto :goto_1
+
+    :pswitch_4
+    const v0, 0x7f080672
+
+    goto :goto_1
+
+    :pswitch_5
+    const v0, 0x7f08066f
+
+    goto :goto_1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_1
+        :pswitch_2
+        :pswitch_0
+        :pswitch_5
+        :pswitch_4
+    .end packed-switch
+.end method
+
+.method public static a(Lorg/apache/http/client/HttpClient;)V
+    .locals 1
+
+    if-eqz p0, :cond_0
+
+    invoke-interface {p0}, Lorg/apache/http/client/HttpClient;->getConnectionManager()Lorg/apache/http/conn/ClientConnectionManager;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p0}, Lorg/apache/http/client/HttpClient;->getConnectionManager()Lorg/apache/http/conn/ClientConnectionManager;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lorg/apache/http/conn/ClientConnectionManager;->shutdown()V
+
+    :cond_0
+    return-void
 .end method

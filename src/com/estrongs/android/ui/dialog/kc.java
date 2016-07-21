@@ -1,15 +1,18 @@
 package com.estrongs.android.ui.dialog;
 
-import com.estrongs.android.ui.view.ag;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.fs.impl.local.m;
 
 class kc
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  kc(kb paramkb, String paramString) {}
+  kc(jh paramjh) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    ag.a(b.a.getContext(), a, 1);
+    a.dismiss();
+    m.b(a.mContext);
   }
 }
 

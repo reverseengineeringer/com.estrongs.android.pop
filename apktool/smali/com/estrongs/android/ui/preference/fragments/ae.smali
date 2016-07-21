@@ -23,21 +23,68 @@
 
 # virtual methods
 .method public onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
-    .locals 2
+    .locals 3
 
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/ae;->a:Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->b(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)Lcom/estrongs/android/pop/ad;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->K:Lcom/estrongs/fs/i;
+    move-result-object v1
 
-    const/4 v1, 0x0
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Ljava/lang/String;)Ljava/lang/Boolean;
 
-    invoke-interface {v0, v1}, Lcom/estrongs/fs/i;->a(Lcom/estrongs/fs/h;)Z
+    move-result-object v1
 
-    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/ad;->b(Z)V
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/preference/fragments/ae;->a:Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;
+
+    invoke-static {v1}, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->b(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)Lcom/estrongs/android/pop/ad;
+
+    move-result-object v1
+
+    sget-object v2, Lcom/estrongs/android/pop/view/a;->a:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/pop/ad;->j(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->bW(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "*"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/estrongs/fs/a/b;->a()Lcom/estrongs/fs/a/b;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/estrongs/fs/a/b;->a(Ljava/lang/String;)V
+
     const/4 v0, 0x1
 
     return v0

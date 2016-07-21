@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -22,27 +22,14 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
+.method public run()V
     .locals 2
 
     iget-object v0, p0, Lcom/estrongs/android/pop/view/dg;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->y()Lcom/estrongs/android/view/aw;
+    const-string v1, "pic://"
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->g(Ljava/lang/String;)Lcom/estrongs/android/view/cr;
 
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/view/dg;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-static {v1, v0}, Lcom/estrongs/android/ui/dialog/ks;->a(Lcom/estrongs/android/pop/view/FileExplorerActivity;Lcom/estrongs/android/view/aw;)Lcom/estrongs/android/ui/dialog/ks;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ks;->show()V
-
-    :cond_0
     return-void
 .end method

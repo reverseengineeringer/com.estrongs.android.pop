@@ -3,8 +3,8 @@ package com.estrongs.android.pop.b;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.bk;
 
 final class c
   implements DialogInterface.OnClickListener
@@ -14,9 +14,9 @@ final class c
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
     paramDialogInterface.dismiss();
-    if (bd.a(a.b()))
+    if (bk.a(a.b()))
     {
-      ag.a(a, a.getString(2131427727, new Object[] { b }), 1);
+      ak.a(a, a.getString(2131231392, new Object[] { b }), 1);
       return;
     }
     a.a(a, b, c);

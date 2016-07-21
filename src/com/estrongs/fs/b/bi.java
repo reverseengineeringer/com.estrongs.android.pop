@@ -1,27 +1,16 @@
 package com.estrongs.fs.b;
 
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+
 class bi
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  bi(bh parambh) {}
+  bi(bd parambd) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    try
-    {
-      Thread.sleep(500L);
-      synchronized (ba.e(a.a))
-      {
-        ea.a).g = 1;
-        ea.a).f = true;
-        ba.e(a.a).notify();
-        return;
-      }
-    }
-    catch (InterruptedException localInterruptedException)
-    {
-      for (;;) {}
-    }
+    paramDialogInterface.dismiss();
   }
 }
 

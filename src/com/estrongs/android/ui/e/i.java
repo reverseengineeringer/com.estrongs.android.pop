@@ -1,28 +1,26 @@
 package com.estrongs.android.ui.e;
 
 import android.view.View;
-import android.widget.Button;
+import android.view.View.OnClickListener;
+import com.estrongs.android.view.a.a;
 
-public class i
+class i
+  implements View.OnClickListener
 {
-  View a;
-  Button b;
+  i(f paramf) {}
   
-  public i(c paramc) {}
-  
-  public void a()
+  public void onClick(View paramView)
   {
-    a.setVisibility(0);
-  }
-  
-  public void a(boolean paramBoolean)
-  {
-    a.setEnabled(paramBoolean);
-  }
-  
-  public void b()
-  {
-    a.setVisibility(8);
+    try
+    {
+      int i = ((Integer)paramView.getTag()).intValue();
+      a.a(i).f();
+      return;
+    }
+    catch (Exception paramView)
+    {
+      paramView.printStackTrace();
+    }
   }
 }
 

@@ -49,7 +49,7 @@
 
     invoke-direct {v2, p0, v0}, Lcom/estrongs/android/pop/a/g;-><init>(Lcom/estrongs/android/pop/a/f;Z)V
 
-    invoke-static {v2}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/Runnable;)V
+    invoke-static {v2}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/Runnable;)V
 
     :goto_0
     return-void
@@ -105,7 +105,7 @@
 
     invoke-direct {v2, p0, v0}, Lcom/estrongs/android/pop/a/h;-><init>(Lcom/estrongs/android/pop/a/f;Z)V
 
-    invoke-static {v2}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/Runnable;)V
+    invoke-static {v2}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/Runnable;)V
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
 

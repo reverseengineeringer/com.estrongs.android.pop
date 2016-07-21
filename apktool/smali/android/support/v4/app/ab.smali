@@ -1,74 +1,69 @@
-.class public Landroid/support/v4/app/ab;
-.super Ljava/lang/Object;
+.class Landroid/support/v4/app/ab;
+.super Landroid/support/v4/app/ag;
 
 
-# static fields
-.field private static final a:Landroid/support/v4/app/ah;
+# instance fields
+.field final synthetic a:Landroid/support/v4/app/Fragment;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method constructor <init>(Landroid/support/v4/app/Fragment;)V
+    .locals 0
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    iput-object p1, p0, Landroid/support/v4/app/ab;->a:Landroid/support/v4/app/Fragment;
 
-    const/16 v1, 0x10
+    invoke-direct {p0}, Landroid/support/v4/app/ag;-><init>()V
 
-    if-lt v0, v1, :cond_0
-
-    new-instance v0, Landroid/support/v4/app/al;
-
-    invoke-direct {v0}, Landroid/support/v4/app/al;-><init>()V
-
-    sput-object v0, Landroid/support/v4/app/ab;->a:Landroid/support/v4/app/ah;
-
-    :goto_0
     return-void
-
-    :cond_0
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0xe
-
-    if-lt v0, v1, :cond_1
-
-    new-instance v0, Landroid/support/v4/app/ak;
-
-    invoke-direct {v0}, Landroid/support/v4/app/ak;-><init>()V
-
-    sput-object v0, Landroid/support/v4/app/ab;->a:Landroid/support/v4/app/ah;
-
-    goto :goto_0
-
-    :cond_1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0xb
-
-    if-lt v0, v1, :cond_2
-
-    new-instance v0, Landroid/support/v4/app/aj;
-
-    invoke-direct {v0}, Landroid/support/v4/app/aj;-><init>()V
-
-    sput-object v0, Landroid/support/v4/app/ab;->a:Landroid/support/v4/app/ah;
-
-    goto :goto_0
-
-    :cond_2
-    new-instance v0, Landroid/support/v4/app/ai;
-
-    invoke-direct {v0}, Landroid/support/v4/app/ai;-><init>()V
-
-    sput-object v0, Landroid/support/v4/app/ab;->a:Landroid/support/v4/app/ah;
-
-    goto :goto_0
 .end method
 
-.method static synthetic a()Landroid/support/v4/app/ah;
-    .locals 1
 
-    sget-object v0, Landroid/support/v4/app/ab;->a:Landroid/support/v4/app/ah;
+# virtual methods
+.method public a(I)Landroid/view/View;
+    .locals 2
+
+    iget-object v0, p0, Landroid/support/v4/app/ab;->a:Landroid/support/v4/app/Fragment;
+
+    iget-object v0, v0, Landroid/support/v4/app/Fragment;->mView:Landroid/view/View;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Fragment does not have a view"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
+    iget-object v0, p0, Landroid/support/v4/app/ab;->a:Landroid/support/v4/app/Fragment;
+
+    iget-object v0, v0, Landroid/support/v4/app/Fragment;->mView:Landroid/view/View;
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
 
     return-object v0
+.end method
+
+.method public a()Z
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v4/app/ab;->a:Landroid/support/v4/app/Fragment;
+
+    iget-object v0, v0, Landroid/support/v4/app/Fragment;->mView:Landroid/view/View;
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

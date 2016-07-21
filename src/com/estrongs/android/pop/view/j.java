@@ -1,16 +1,24 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.pop.ad;
+import com.estrongs.android.appinfo.AppFolderInfoManager;
 
 class j
-  implements Runnable
+  extends Thread
 {
-  j(FileExplorerActivity paramFileExplorerActivity) {}
+  j(h paramh) {}
   
   public void run()
   {
-    String str = a.m.j("Market");
-    a.e(str);
+    try
+    {
+      Thread.sleep(3000L);
+      AppFolderInfoManager.d().a(new k(this));
+      return;
+    }
+    catch (InterruptedException localInterruptedException)
+    {
+      for (;;) {}
+    }
   }
 }
 

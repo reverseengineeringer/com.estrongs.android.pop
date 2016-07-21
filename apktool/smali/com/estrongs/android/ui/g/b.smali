@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/util/ab;
+.implements Lcom/estrongs/android/util/af;
 
 
 # instance fields
@@ -26,49 +26,7 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public a(Ljava/lang/Object;JJ)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public a(Ljava/lang/Object;Ljava/lang/Throwable;)V
-    .locals 2
-
-    :try_start_0
-    new-instance v0, Ljava/io/File;
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/g/b;->a:Ljava/lang/String;
-
-    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Ljava/io/File;->delete()Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_0
-.end method
-
-.method public b(Ljava/lang/Object;)V
+.method public downloadCompleted(Ljava/lang/Object;)V
     .locals 6
 
     new-instance v0, Ljava/io/File;
@@ -140,4 +98,46 @@
     move-exception v0
 
     goto :goto_0
+.end method
+
+.method public downloadError(Ljava/lang/Object;Ljava/lang/Throwable;)V
+    .locals 2
+
+    :try_start_0
+    new-instance v0, Ljava/io/File;
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/g/b;->a:Ljava/lang/String;
+
+    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/io/File;->delete()Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+.end method
+
+.method public downloadProgress(Ljava/lang/Object;JJ)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public downloadStarted(Ljava/lang/Object;)V
+    .locals 0
+
+    return-void
 .end method

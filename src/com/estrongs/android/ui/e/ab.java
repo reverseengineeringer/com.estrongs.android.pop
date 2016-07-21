@@ -1,17 +1,29 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.ui.dialog.dd;
-import com.estrongs.android.ui.dialog.df;
+import com.estrongs.android.pop.ad;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.pcs.q;
+import com.estrongs.android.util.bk;
+import com.estrongs.android.view.cr;
+import com.estrongs.fs.impl.pcs.b;
+import com.estrongs.fs.w;
 
 class ab
-  implements df
+  implements q
 {
   ab(aa paramaa) {}
   
-  public void a(int paramInt)
+  public void a(boolean paramBoolean, String paramString1, String paramString2)
   {
-    w.g(a.a).dismiss();
-    new ac(this, paramInt).start();
+    if ((paramBoolean) && (bk.b(paramString2)))
+    {
+      paramString1 = m.a(a.a).O();
+      if (paramString1 != null) {
+        paramString1.b(true);
+      }
+      b.a().setFileType(w.P);
+      ad.a(m.a(a.a)).e(System.currentTimeMillis());
+    }
   }
 }
 

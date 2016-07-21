@@ -1,14 +1,14 @@
 package com.estrongs.android.pop.app.compress;
 
 import com.estrongs.io.a.a.a;
-import com.estrongs.io.archive.d;
+import com.estrongs.io.archive.e;
 
 class x
   extends a
 {
-  x(l paraml, d paramd, String paramString)
+  x(l paraml, e parame, String paramString)
   {
-    super(paramd, paramString);
+    super(parame, paramString);
   }
   
   public String a()

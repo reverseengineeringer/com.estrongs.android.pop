@@ -65,7 +65,7 @@
 
     iget-object v0, p0, Lcom/estrongs/fs/impl/usb/fs/a/d;->a:Lcom/estrongs/fs/impl/usb/fs/a/c;
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/impl/usb/fs/a/c;->f()I
+    invoke-virtual {v0}, Lcom/estrongs/fs/impl/usb/fs/a/c;->g()I
 
     move-result v0
 
@@ -155,7 +155,7 @@
 
     iget-object v0, p0, Lcom/estrongs/fs/impl/usb/fs/a/d;->a:Lcom/estrongs/fs/impl/usb/fs/a/c;
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/impl/usb/fs/a/c;->l()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/fs/impl/usb/fs/a/c;->m()Ljava/lang/String;
 
     move-result-object v0
 
@@ -174,7 +174,29 @@
 
     iget-object v2, p0, Lcom/estrongs/fs/impl/usb/fs/a/d;->a:Lcom/estrongs/fs/impl/usb/fs/a/c;
 
-    invoke-virtual {v2}, Lcom/estrongs/fs/impl/usb/fs/a/c;->i()I
+    invoke-virtual {v2}, Lcom/estrongs/fs/impl/usb/fs/a/c;->j()I
+
+    move-result v2
+
+    int-to-long v2, v2
+
+    mul-long/2addr v0, v2
+
+    return-wide v0
+.end method
+
+.method public d()J
+    .locals 4
+
+    iget-object v0, p0, Lcom/estrongs/fs/impl/usb/fs/a/d;->a:Lcom/estrongs/fs/impl/usb/fs/a/c;
+
+    invoke-virtual {v0}, Lcom/estrongs/fs/impl/usb/fs/a/c;->d()J
+
+    move-result-wide v0
+
+    iget-object v2, p0, Lcom/estrongs/fs/impl/usb/fs/a/d;->a:Lcom/estrongs/fs/impl/usb/fs/a/c;
+
+    invoke-virtual {v2}, Lcom/estrongs/fs/impl/usb/fs/a/c;->a()I
 
     move-result v2
 

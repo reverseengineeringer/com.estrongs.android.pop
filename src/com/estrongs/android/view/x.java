@@ -1,24 +1,40 @@
 package com.estrongs.android.view;
 
-import android.widget.BaseAdapter;
-import java.util.List;
-
 class x
-  extends ac
+  implements Runnable
 {
-  x(u paramu1, u paramu2, List paramList1, boolean paramBoolean1, List paramList2, boolean paramBoolean2)
+  x(w paramw) {}
+  
+  protected Object clone()
   {
-    super(paramu2, paramList1, paramBoolean1);
+    return super.clone();
   }
   
-  private void g()
+  public void run()
   {
-    e.b(this);
-  }
-  
-  protected BaseAdapter b()
-  {
-    return new y(this);
+    w.a(a).e();
+    w.a(a).f();
+    try
+    {
+      w.b(a).a("Card_Show");
+      w.b(a).c("Card_Show_UV");
+      if (w.c(a)) {
+        w.b(a).a("Snackbar_clean_cardshow");
+      }
+      while (w.e(a))
+      {
+        w.b(a).a("cn_card_show");
+        return;
+        if (w.d(a)) {
+          w.b(a).a("Notify_click_cardshow");
+        }
+      }
+      return;
+    }
+    catch (Exception localException)
+    {
+      localException.printStackTrace();
+    }
   }
 }
 

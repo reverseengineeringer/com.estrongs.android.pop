@@ -93,8 +93,8 @@ class CropImageView
     float f2 = ((Rect)localObject).height();
     float f3 = getWidth();
     float f4 = getHeight();
-    f1 = Math.max(1.0F, Math.min(f3 / f1 * 0.6F, f4 / f2 * 0.6F) * f());
-    if (Math.abs(f1 - f()) / f1 > 0.1D)
+    f1 = Math.max(1.0F, Math.min(f3 / f1 * 0.6F, f4 / f2 * 0.6F) * getScale());
+    if (Math.abs(f1 - getScale()) / f1 > 0.1D)
     {
       localObject = new float[2];
       localObject[0] = f.centerX();
@@ -264,7 +264,7 @@ class CropImageView
       break;
       a(true, true);
       continue;
-      if (f() == 1.0F) {
+      if (getScale() == 1.0F) {
         a(true, true);
       }
     }

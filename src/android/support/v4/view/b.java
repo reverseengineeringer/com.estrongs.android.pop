@@ -22,9 +22,9 @@ class b
     h.a(paramObject, paramView, paramInt);
   }
   
-  public void a(Object paramObject, View paramView, android.support.v4.view.a.a parama)
+  public void a(Object paramObject, View paramView, android.support.v4.view.a.g paramg)
   {
-    h.a(paramObject, paramView, parama.a());
+    h.a(paramObject, paramView, paramg.a());
   }
   
   public boolean a(Object paramObject, View paramView, AccessibilityEvent paramAccessibilityEvent)

@@ -1,16 +1,17 @@
 package com.estrongs.android.widget;
 
-import com.estrongs.android.ui.dialog.er;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnDismissListener;
+import com.estrongs.android.view.fv;
 
 class o
-  implements er
+  implements DialogInterface.OnDismissListener
 {
-  o(n paramn) {}
+  o(f paramf) {}
   
-  public boolean a(String paramString)
+  public void onDismiss(DialogInterface paramDialogInterface)
   {
-    g.b(a.a, paramString);
-    return true;
+    f.b(a).i_();
   }
 }
 

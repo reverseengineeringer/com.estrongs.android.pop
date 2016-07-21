@@ -1,19 +1,20 @@
-.class Lcom/estrongs/android/ui/e/l;
+.class public Lcom/estrongs/android/ui/e/l;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/e/j;
+.field a:Landroid/view/View;
+
+.field b:Landroid/widget/Button;
+
+.field final synthetic c:Lcom/estrongs/android/ui/e/f;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/j;)V
+.method public constructor <init>(Lcom/estrongs/android/ui/e/f;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/l;->a:Lcom/estrongs/android/ui/e/j;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/l;->c:Lcom/estrongs/android/ui/e/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,16 +23,36 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
+.method public a()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/l;->a:Landroid/view/View;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    return-void
+.end method
+
+.method public a(Z)V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/l;->a:Lcom/estrongs/android/ui/e/j;
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/l;->a:Landroid/view/View;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/j;->a(Lcom/estrongs/android/ui/e/j;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
+    invoke-virtual {v0, p1}, Landroid/view/View;->setEnabled(Z)V
 
-    move-result-object v0
+    return-void
+.end method
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->m()V
+.method public b()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/l;->a:Landroid/view/View;
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     return-void
 .end method

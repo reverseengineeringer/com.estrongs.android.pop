@@ -4,10 +4,10 @@
     <TableLayout android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stretchColumns="1">
         <TableRow android:id="@id/bk_settings_file_row" android:layout_height="@dimen/dp_36" android:layout_marginBottom="3.0dip">
             <TextView android:textColor="@color/popupbox_content_text" android:gravity="center|right" android:layout_gravity="center" android:id="@id/bk_settings_file" android:layout_height="fill_parent" android:text="@string/bk_settings_save_dir" />
-            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
-                <EditText android:textColor="@color/popupbox_content_text" android:id="@id/bk_settings_dir" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:text="/sdcard/" android:layout_weight="1.0" style="@style/editInputText" />
-                <Button android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_button_text" android:gravity="center" android:id="@id/bk_select_button" android:background="@drawable/popupbox_button_action_selector" android:layout_width="@dimen/dp_36" android:layout_height="fill_parent" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" android:text="..." />
-            </LinearLayout>
+            <RelativeLayout android:orientation="horizontal" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <Button android:textSize="@dimen/dp_14" android:textColor="@color/popupbox_content_button_text" android:gravity="center" android:id="@id/bk_select_button" android:background="@drawable/popupbox_button_action_selector" android:layout_width="@dimen/dp_36" android:layout_height="fill_parent" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" android:text="..." android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+                <EditText android:textColor="@color/popupbox_content_text" android:id="@id/bk_settings_dir" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="/sdcard/" android:layout_toLeftOf="@id/bk_select_button" style="@style/editInputText" />
+            </RelativeLayout>
         </TableRow>
         <TableRow android:id="@id/bk_settings_passwd_row" android:layout_height="@dimen/dp_36" android:layout_marginTop="3.0dip">
             <TextView android:textColor="@color/popupbox_content_text" android:gravity="center|right" android:id="@id/bk_settings_passwd_title" android:layout_height="fill_parent" android:text="@string/input_password" />

@@ -62,7 +62,7 @@
 
     iput-object p2, p0, Lcom/estrongs/android/pop/app/imageviewer/q;->e:Lcom/estrongs/android/pop/app/imageviewer/gallery/f;
 
-    sget-object v0, Lcom/estrongs/android/pop/ah;->b:[I
+    sget-object v0, Lcom/estrongs/android/pop/ah;->Gallery:[I
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
 
@@ -80,7 +80,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f02009b
+    const v1, 0x7f020198
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -92,7 +92,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f02009c
+    const v1, 0x7f020199
 
     invoke-static {v0, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -377,10 +377,14 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
+    :try_start_0
     iget v2, p0, Lcom/estrongs/android/pop/app/imageviewer/q;->f:I
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setBackgroundResource(I)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    :goto_1
     iget-object v2, p0, Lcom/estrongs/android/pop/app/imageviewer/q;->g:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
@@ -392,4 +396,9 @@
     invoke-virtual {v0, v5}, Landroid/widget/ImageView;->setFocusable(Z)V
 
     goto :goto_0
+
+    :catch_0
+    move-exception v2
+
+    goto :goto_1
 .end method

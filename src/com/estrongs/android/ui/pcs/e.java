@@ -1,16 +1,17 @@
 package com.estrongs.android.ui.pcs;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnDismissListener;
 
 class e
-  implements View.OnClickListener
+  implements DialogInterface.OnDismissListener
 {
-  e(d paramd) {}
+  e(c paramc) {}
   
-  public void onClick(View paramView)
+  public void onDismiss(DialogInterface paramDialogInterface)
   {
-    a.dismiss();
+    c.a(a, false);
+    c.b(a, c.e(a));
   }
 }
 

@@ -1,13 +1,13 @@
 package com.estrongs.io.archive.aeszip;
 
-import com.estrongs.android.util.f;
+import com.estrongs.android.util.e;
 import com.estrongs.io.model.ArchiveEntryFile;
 import java.io.File;
 import java.io.InputStream;
 import java.util.Iterator;
 
 public class h
-  extends com.estrongs.io.archive.h
+  extends com.estrongs.io.archive.i
 {
   a h = null;
   boolean i = false;
@@ -15,10 +15,10 @@ public class h
   public h(String paramString1, String paramString2)
   {
     super(paramString1, paramString2);
-    if (paramString2.equalsIgnoreCase(f.a[0]))
+    if (paramString2.equalsIgnoreCase(e.a[0]))
     {
       i = true;
-      c = f.a();
+      c = e.a();
     }
   }
   
@@ -126,7 +126,7 @@ public class h
     //   148: ifne +166 -> 314
     //   151: aload 9
     //   153: invokevirtual 104	java/io/File:getAbsolutePath	()Ljava/lang/String;
-    //   156: invokestatic 110	com/estrongs/fs/impl/local/h:f	(Ljava/lang/String;)Ljava/io/OutputStream;
+    //   156: invokestatic 110	com/estrongs/fs/impl/local/i:f	(Ljava/lang/String;)Ljava/io/OutputStream;
     //   159: astore 7
     //   161: aload 6
     //   163: invokevirtual 114	de/a/a/a/a/i:getSize	()J

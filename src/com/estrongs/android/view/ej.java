@@ -1,17 +1,25 @@
 package com.estrongs.android.view;
 
-import android.util.SparseArray;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.ui.pcs.q;
+import com.estrongs.android.ui.pcs.u;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.impl.r.b;
 
 class ej
-  implements dz
+  implements q
 {
-  ej(WebViewWrapper paramWebViewWrapper) {}
+  ej(ei paramei) {}
   
-  public void a(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+  public void a(boolean paramBoolean, String paramString1, String paramString2)
   {
-    if (bd.b(a.v)) {
-      WebViewWrapper.a(a).put(a.v.hashCode(), Integer.valueOf(paramInt2));
+    if (paramString2 != null)
+    {
+      paramString1 = "SP://" + u.a().e() + "@" + "pcs";
+      paramString2 = (b)a.a;
+      paramString2.setPath(paramString1);
+      paramString2.setAbsolutePath(paramString1);
+      paramString2.setDisplayName(ap.at(paramString1));
+      a.b.c.a.a(paramString2, null);
     }
   }
 }

@@ -1,19 +1,19 @@
 package com.estrongs.android.ui.b;
 
+import android.app.Activity;
 import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.estrongs.a.a;
-import com.estrongs.android.d.f;
+import com.estrongs.android.h.f;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.esclasses.ESActivity;
 import com.estrongs.android.pop.netfs.utils.TypeUtils;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.android.util.am;
-import com.estrongs.android.view.ea;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.view.gf;
 import com.estrongs.fs.h;
 import com.estrongs.fs.util.j;
 import java.text.DateFormat;
@@ -22,20 +22,20 @@ import java.util.Date;
 import org.json.JSONObject;
 
 class q
-  extends ea
+  extends gf
 {
-  public cg a;
+  public ci a;
   protected h b = null;
   String c = "";
   String d = "";
   private String e = null;
   
-  public q(ESActivity paramESActivity, h paramh)
+  public q(Activity paramActivity, h paramh)
   {
-    super(paramESActivity);
+    super(paramActivity);
     b = paramh;
-    c = m(2131427428).toString();
-    d = m(2131427429).toString();
+    c = k(2131231132).toString();
+    d = k(2131231134).toString();
     paramh = paramh.getExtra("task");
     JSONObject localJSONObject;
     String str;
@@ -43,15 +43,15 @@ class q
     if ((paramh != null) && ((paramh instanceof a)))
     {
       localJSONObject = ((a)paramh).summary();
-      a(2131362171, c);
-      ((ImageView)k(2131361829)).setImageDrawable(f.a(String.valueOf(TypeUtils.getFileType(localJSONObject.optString("title")))));
-      str = am.bk(localJSONObject.optString("target"));
-      a(2131361830, localJSONObject.optString("title"));
-      a(2131362173, str);
+      a(2131624736, c);
+      ((ImageView)b(2131624328)).setImageDrawable(f.a(String.valueOf(TypeUtils.getFileType(localJSONObject.optString("title")))));
+      str = ap.bB(localJSONObject.optString("target"));
+      a(2131624329, localJSONObject.optString("title"));
+      a(2131624738, str);
       long l = localJSONObject.optLong("size");
-      a(2131361839, j.c(l) + " (" + j.d(l) + " " + m(2131427590) + ")");
-      localDateFormat = ad.a(ad).F();
-      if (!FileExplorerActivity.G) {
+      a(2131624338, j.c(l) + " (" + j.d(l) + " " + k(2131232204) + ")");
+      localDateFormat = ad.a(ag).G();
+      if (!FileExplorerActivity.C) {
         break label417;
       }
     }
@@ -59,21 +59,21 @@ class q
     for (paramh = new SimpleDateFormat(" HH:mm:ss");; paramh = new SimpleDateFormat(" hh:mm:ss a"))
     {
       Date localDate = new Date(localJSONObject.optLong("start_time"));
-      a(2131362176, localDateFormat.format(localDate) + paramh.format(localDate));
-      a(2131362178, localJSONObject.optString("source"));
-      paramh = (TextView)k(2131362173);
+      a(2131624741, localDateFormat.format(localDate) + paramh.format(localDate));
+      a(2131624743, localJSONObject.optString("source"));
+      paramh = (TextView)b(2131624738);
       paramh.setText(Html.fromHtml("<a href=\"ss\">" + str + "</a>"));
       paramh.setClickable(true);
       paramh.setOnClickListener(new r(this, str));
-      ((Button)k(2131362174)).setOnClickListener(new s(this, str));
-      ((Button)k(2131362179)).setOnClickListener(new t(this, paramESActivity));
+      ((Button)b(2131624739)).setOnClickListener(new s(this, str));
+      ((Button)b(2131624744)).setOnClickListener(new t(this, paramActivity));
       return;
     }
   }
   
   private void a(int paramInt, String paramString)
   {
-    View localView = k(paramInt);
+    View localView = b(paramInt);
     if ((localView != null) && ((localView instanceof TextView))) {
       ((TextView)localView).setText(paramString);
     }
@@ -86,7 +86,7 @@ class q
       if (a != null) {
         a.dismiss();
       }
-      FileExplorerActivity.J().e(paramString);
+      FileExplorerActivity.X().g(paramString);
       return;
     }
     catch (Exception paramString) {}
@@ -94,7 +94,7 @@ class q
   
   protected int a()
   {
-    return 2130903113;
+    return 2130903202;
   }
 }
 

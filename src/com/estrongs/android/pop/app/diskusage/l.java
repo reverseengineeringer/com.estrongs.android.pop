@@ -1,6 +1,6 @@
 package com.estrongs.android.pop.app.diskusage;
 
-import com.estrongs.android.view.aj;
+import com.estrongs.android.view.bn;
 import com.estrongs.fs.impl.local.f;
 import java.io.File;
 import java.io.FileFilter;
@@ -10,7 +10,7 @@ import java.util.List;
 class l
   implements FileFilter
 {
-  l(k paramk, aj paramaj) {}
+  l(k paramk, bn parambn) {}
   
   public boolean accept(File paramFile)
   {

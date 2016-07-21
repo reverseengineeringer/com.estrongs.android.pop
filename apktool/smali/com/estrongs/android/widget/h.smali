@@ -1,47 +1,40 @@
 .class Lcom/estrongs/android/widget/h;
-.super Lcom/estrongs/fs/l;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/widget/g;
+.field final synthetic a:Lcom/estrongs/android/widget/f;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/widget/g;)V
+.method constructor <init>(Lcom/estrongs/android/widget/f;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/widget/h;->a:Lcom/estrongs/android/widget/g;
+    iput-object p1, p0, Lcom/estrongs/android/widget/h;->a:Lcom/estrongs/android/widget/f;
 
-    invoke-direct {p0}, Lcom/estrongs/fs/l;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/estrongs/fs/h;Lcom/estrongs/fs/i;Lcom/estrongs/android/util/TypedMap;)Ljava/util/List;
+.method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/estrongs/fs/h;",
-            "Lcom/estrongs/fs/i;",
-            "Lcom/estrongs/android/util/TypedMap;",
-            ")",
-            "Ljava/util/List",
-            "<",
-            "Lcom/estrongs/fs/h;",
-            ">;"
-        }
-    .end annotation
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/h;->a:Lcom/estrongs/android/widget/g;
+    :try_start_0
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-static {v0}, Lcom/estrongs/android/widget/g;->a(Lcom/estrongs/android/widget/g;)V
+    :goto_0
+    return-void
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/h;->a:Lcom/estrongs/android/widget/g;
+    :catch_0
+    move-exception v0
 
-    iget-object v0, v0, Lcom/estrongs/android/widget/g;->c:Ljava/util/List;
-
-    return-object v0
+    goto :goto_0
 .end method

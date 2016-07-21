@@ -2,22 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/view/cc;
+.implements Lcom/estrongs/android/view/dx;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/widget/g;
+.field final synthetic a:Lcom/estrongs/android/widget/f;
 
 .field final synthetic b:Lcom/estrongs/android/ui/view/c;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/view/c;Lcom/estrongs/android/widget/g;)V
+.method constructor <init>(Lcom/estrongs/android/ui/view/c;Lcom/estrongs/android/widget/f;)V
     .locals 0
 
     iput-object p1, p0, Lcom/estrongs/android/ui/view/e;->b:Lcom/estrongs/android/ui/view/c;
 
-    iput-object p2, p0, Lcom/estrongs/android/ui/view/e;->a:Lcom/estrongs/android/widget/g;
+    iput-object p2, p0, Lcom/estrongs/android/ui/view/e;->a:Lcom/estrongs/android/widget/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -55,15 +55,15 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/e;->a:Lcom/estrongs/android/widget/g;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/e;->a:Lcom/estrongs/android/widget/f;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/g;->k()V
+    invoke-virtual {v0}, Lcom/estrongs/android/widget/f;->k()V
 
     return-void
 .end method

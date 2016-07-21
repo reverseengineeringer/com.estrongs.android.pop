@@ -1,8 +1,28 @@
 package com.estrongs.android.a;
 
-public abstract interface h
+import java.util.concurrent.CountDownLatch;
+
+class h
+  implements Runnable
 {
-  public abstract void a(boolean paramBoolean1, boolean paramBoolean2);
+  h(b paramb) {}
+  
+  public void run()
+  {
+    try
+    {
+      b.h(a).await();
+      b.i(a);
+      return;
+    }
+    catch (InterruptedException localInterruptedException)
+    {
+      for (;;)
+      {
+        localInterruptedException.printStackTrace();
+      }
+    }
+  }
 }
 
 /* Location:

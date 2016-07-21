@@ -1,20 +1,19 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.widget.EditText;
-import com.estrongs.android.widget.g;
+import android.content.Intent;
+import android.preference.Preference;
+import android.preference.Preference.OnPreferenceClickListener;
 
 class hu
-  implements DialogInterface.OnClickListener
+  implements Preference.OnPreferenceClickListener
 {
-  hu(hs paramhs, g paramg) {}
+  hu(PopPreferenceActivity paramPopPreferenceActivity) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public boolean onPreferenceClick(Preference paramPreference)
   {
-    a.k();
-    paramDialogInterface = a.f();
-    b.b.setText(paramDialogInterface);
+    paramPreference = new Intent(a, AppCheckUpdateList.class);
+    a.startActivity(paramPreference);
+    return true;
   }
 }
 

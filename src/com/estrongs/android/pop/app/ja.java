@@ -1,17 +1,26 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 class ja
-  implements DialogInterface.OnCancelListener
+  implements View.OnClickListener
 {
-  ja(PopVideoPlayer paramPopVideoPlayer) {}
+  ja(PopRemoteImageBrowser paramPopRemoteImageBrowser) {}
   
-  public void onCancel(DialogInterface paramDialogInterface)
+  public void onClick(View paramView)
   {
-    if (PopVideoPlayer.b(a)) {
-      a.finish();
+    if ((PopRemoteImageBrowser.a(a) == null) || (PopRemoteImageBrowser.a(a).length == 0)) {
+      return;
+    }
+    if (paramView == PopRemoteImageBrowser.b(a)) {
+      PopRemoteImageBrowser.a(a, (PopRemoteImageBrowser.c(a) - 1 + PopRemoteImageBrowser.a(a).length) % PopRemoteImageBrowser.a(a).length);
+    }
+    for (;;)
+    {
+      PopRemoteImageBrowser.d(a);
+      return;
+      PopRemoteImageBrowser.a(a, (PopRemoteImageBrowser.c(a) + 1) % PopRemoteImageBrowser.a(a).length);
     }
   }
 }

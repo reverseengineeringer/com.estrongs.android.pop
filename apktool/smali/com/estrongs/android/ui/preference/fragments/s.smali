@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/preference/Preference$OnPreferenceClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/preference/fragments/CleanPreferenceFragment;
+.field final synthetic a:Lcom/estrongs/android/widget/f;
+
+.field final synthetic b:Lcom/estrongs/android/ui/preference/fragments/p;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/preference/fragments/CleanPreferenceFragment;)V
+.method constructor <init>(Lcom/estrongs/android/ui/preference/fragments/p;Lcom/estrongs/android/widget/f;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/preference/fragments/s;->a:Lcom/estrongs/android/ui/preference/fragments/CleanPreferenceFragment;
+    iput-object p1, p0, Lcom/estrongs/android/ui/preference/fragments/s;->b:Lcom/estrongs/android/ui/preference/fragments/p;
+
+    iput-object p2, p0, Lcom/estrongs/android/ui/preference/fragments/s;->a:Lcom/estrongs/android/widget/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,14 +26,12 @@
 
 
 # virtual methods
-.method public onPreferenceClick(Landroid/preference/Preference;)Z
+.method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/s;->a:Lcom/estrongs/android/ui/preference/fragments/CleanPreferenceFragment;
+    iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/s;->a:Lcom/estrongs/android/widget/f;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/preference/fragments/CleanPreferenceFragment;->a(Lcom/estrongs/android/ui/preference/fragments/CleanPreferenceFragment;)V
+    invoke-virtual {v0}, Lcom/estrongs/android/widget/f;->k()V
 
-    const/4 v0, 0x1
-
-    return v0
+    return-void
 .end method

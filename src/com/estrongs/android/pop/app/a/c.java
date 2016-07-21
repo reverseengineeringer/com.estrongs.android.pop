@@ -1,21 +1,13 @@
 package com.estrongs.android.pop.app.a;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.app.ae;
-
 class c
-  implements MenuItem.OnMenuItemClickListener
+  implements Runnable
 {
-  c(a parama) {}
+  c(b paramb, String paramString) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void run()
   {
-    if (a.a(a) != null) {
-      a.a(a).b();
-    }
-    a.c();
-    return true;
+    a.b(a);
   }
 }
 

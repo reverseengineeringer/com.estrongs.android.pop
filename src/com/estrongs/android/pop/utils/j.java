@@ -3,14 +3,14 @@ package com.estrongs.android.pop.utils;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import com.estrongs.android.pop.view.utils.AppRunner;
-import com.estrongs.fs.impl.b.f;
+import com.estrongs.fs.impl.b.g;
 import java.util.HashMap;
 import java.util.Map;
 
 class j
   implements DialogInterface.OnClickListener
 {
-  j(c paramc, f paramf, String paramString1, String paramString2) {}
+  j(c paramc, g paramg, String paramString1, String paramString2) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
@@ -27,7 +27,7 @@ class j
         AppRunner.a(d.a, a.getAbsolutePath(), a);
         return;
       }
-      AppRunner.r(d.a, a.getAbsolutePath());
+      AppRunner.s(d.a, a.getAbsolutePath());
       return;
     }
     if (2 == paramInt)
@@ -45,7 +45,7 @@ class j
       AppRunner.a(d.a, a.getAbsolutePath(), a);
       return;
     }
-    AppRunner.r(d.a, a.getAbsolutePath());
+    AppRunner.s(d.a, a.getAbsolutePath());
   }
 }
 

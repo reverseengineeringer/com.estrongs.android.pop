@@ -1,19 +1,15 @@
 package com.estrongs.android.ui.e;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.widget.CheckBox;
-import java.util.List;
+import com.estrongs.android.view.a.b;
 
 class fy
-  implements DialogInterface.OnClickListener
+  implements b
 {
-  fy(fx paramfx, List paramList, CheckBox paramCheckBox) {}
+  fy(cr paramcr) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public boolean a(cp paramcp)
   {
-    paramDialogInterface.dismiss();
-    cp.a(c.a, a, b.isChecked());
+    return C;
   }
 }
 

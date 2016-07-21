@@ -1,16 +1,20 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
+import com.estrongs.android.pop.m;
+import com.estrongs.fs.b.ab;
+import java.util.List;
 
 class kd
-  implements DialogInterface.OnCancelListener
+  extends Thread
 {
-  kd(jz paramjz) {}
+  kd(kc paramkc, List paramList) {}
   
-  public void onCancel(DialogInterface paramDialogInterface)
+  public void run()
   {
-    a.a.finish();
+    ab localab = new ab(PopVideoPlayer.F(b.c.a), a, false, b.b);
+    localab.setTaskDecisionListener(new m(b.c.a));
+    localab.execute(false);
+    b.c.a.runOnUiThread(new ke(this));
   }
 }
 

@@ -1,18 +1,17 @@
 package com.estrongs.android.ui.dialog;
 
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.ui.view.au;
+import android.content.DialogInterface.OnCancelListener;
+import com.estrongs.android.ui.view.bd;
 
 class ia
-  implements DialogInterface.OnClickListener
+  implements DialogInterface.OnCancelListener
 {
-  ia(hn paramhn, au paramau) {}
+  ia(hq paramhq, bd parambd) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void onCancel(DialogInterface paramDialogInterface)
   {
-    a.c();
-    hn.a(b, true);
+    a.e();
   }
 }
 

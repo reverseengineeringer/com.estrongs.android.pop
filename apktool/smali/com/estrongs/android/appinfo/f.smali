@@ -46,9 +46,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/android/appinfo/o;
+    check-cast v0, Lcom/estrongs/android/appinfo/p;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/appinfo/o;->b()V
+    invoke-virtual {v0}, Lcom/estrongs/android/appinfo/p;->b()V
 
     goto :goto_0
 

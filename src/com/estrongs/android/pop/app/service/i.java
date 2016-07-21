@@ -1,45 +1,53 @@
 package com.estrongs.android.pop.app.service;
 
-import android.os.Binder;
-import com.estrongs.android.pop.app.b.c;
-import com.estrongs.android.pop.app.b.f;
-import java.util.ArrayList;
-import java.util.Map;
+import android.os.Handler;
 
-public class i
-  extends Binder
-  implements b
+public abstract class i
+  implements Runnable
 {
-  public i(PerformanceAccelerateService paramPerformanceAccelerateService) {}
+  private Handler a;
+  private long b;
   
-  public void a()
+  public i(Handler paramHandler)
   {
-    c.a().f();
+    a = paramHandler;
   }
   
-  public void a(a parama)
+  public abstract void a();
+  
+  public void a(long paramLong)
   {
-    PerformanceAccelerateService.a(a, parama);
-    if (c.a() != null) {
-      c.a().a(PerformanceAccelerateService.b(a));
+    a.removeCallbacks(this);
+    if (paramLong != -1L) {
+      a.postDelayed(this, paramLong);
     }
-    parama = c.a().b(PerformanceAccelerateService.a(a));
-    if ((parama != null) && (!parama.isEmpty())) {
-      PerformanceAccelerateService.b(a).a(null, null);
+  }
+  
+  public boolean b()
+  {
+    return true;
+  }
+  
+  protected int c()
+  {
+    return 1800000;
+  }
+  
+  public void d()
+  {
+    a.removeCallbacks(this);
+    a.post(this);
+  }
+  
+  public void run()
+  {
+    if (b()) {
+      a();
     }
-    PerformanceAccelerateService.b(a).a(null, parama);
-  }
-  
-  public void a(ArrayList<f> paramArrayList)
-  {
-    c.a().a(PerformanceAccelerateService.a(a), PerformanceAccelerateService.b(a), paramArrayList, true);
-    PerformanceAccelerateService.c(a).a(paramArrayList);
-    PerformanceAccelerateService.c(a).a(PerformanceAccelerateService.c(a).c());
-  }
-  
-  public boolean b(ArrayList<f> paramArrayList)
-  {
-    return c.a().a(paramArrayList);
+    b = System.currentTimeMillis();
+    if (c() != -1) {
+      a.postDelayed(this, c());
+    }
   }
 }
 

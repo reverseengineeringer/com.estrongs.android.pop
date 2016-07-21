@@ -1,53 +1,46 @@
 package com.estrongs.android.pop.app;
 
-import android.content.Intent;
+import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import com.estrongs.android.pop.view.utils.AppRunner;
-import com.estrongs.android.pop.view.utils.n;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+import com.estrongs.android.pop.esclasses.k;
 import com.estrongs.android.pop.view.utils.t;
-import com.estrongs.android.pop.view.utils.u;
-import com.estrongs.android.util.am;
 
 class eh
-  implements AdapterView.OnItemClickListener
+  extends ArrayAdapter<t>
 {
-  eh(OpenRecomm paramOpenRecomm) {}
+  private t[] b;
   
-  public void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
+  public eh(OpenRecomm paramOpenRecomm, Context paramContext, int paramInt, t[] paramArrayOft)
   {
-    try
+    super(paramContext, paramInt, paramArrayOft);
+    b = paramArrayOft;
+  }
+  
+  public View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
+  {
+    paramViewGroup = paramView;
+    if (paramView == null) {
+      paramViewGroup = k.a(a).inflate(2130903368, null);
+    }
+    paramView = b[paramInt];
+    if (paramView != null)
     {
-      paramAdapterView = (t)paramView.getTag();
-      if (paramAdapterView != null)
-      {
-        if (OpenRecomm.a(a) == null) {
-          return;
-        }
-        OpenRecomm.a(a).setClassName(c, d);
-        if (e != null) {
-          OpenRecomm.a(a).setAction(e);
-        }
-        if (AppRunner.d(c)) {
-          AppRunner.a(OpenRecomm.a(a), 268435456);
-        }
-        if (OpenRecomm.b(a))
-        {
-          paramView = am.bA(am.d(OpenRecomm.c(a)));
-          if ((paramView != null) && (!"".equals(paramView))) {
-            n.a(a, paramView, new u(c, d, e));
-          }
-        }
-        a.startActivity(OpenRecomm.a(a));
-        a.finish();
-        return;
+      ImageView localImageView = (ImageView)paramViewGroup.findViewById(2131625337);
+      TextView localTextView = (TextView)paramViewGroup.findViewById(2131625338);
+      if (localImageView != null) {
+        localImageView.setImageDrawable(a);
+      }
+      if (localTextView != null) {
+        localTextView.setText(b);
       }
     }
-    catch (Exception paramAdapterView)
-    {
-      paramAdapterView.printStackTrace();
-    }
+    paramViewGroup.setTag(paramView);
+    return paramViewGroup;
   }
 }
 

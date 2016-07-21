@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -22,190 +22,124 @@
 
 
 # virtual methods
-.method public onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 8
-
-    const/4 v2, 0x0
-
-    const/4 v1, 0x1
+.method public onClick(Landroid/view/View;)V
+    .locals 4
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/jl;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->getIntent()Landroid/content/Intent;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->x(Lcom/estrongs/android/pop/app/PopVideoPlayer;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/Intent;->getData()Landroid/net/Uri;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v3, p0, Lcom/estrongs/android/pop/app/jl;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+    if-eqz v0, :cond_1
 
-    invoke-static {v3, v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->a(Lcom/estrongs/android/pop/app/PopVideoPlayer;Landroid/net/Uri;)Ljava/lang/String;
+    :try_start_0
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/jl;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
-    move-result-object v5
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->y(Lcom/estrongs/android/pop/app/PopVideoPlayer;)Lcom/estrongs/android/j/c;
 
-    if-nez v5, :cond_0
+    move-result-object v1
 
-    :goto_0
-    return v1
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/jl;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->y(Lcom/estrongs/android/pop/app/PopVideoPlayer;)Lcom/estrongs/android/j/c;
+
+    move-result-object v1
+
+    const-string v2, "Search_Wan"
+
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/j/c;->a(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/jl;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->y(Lcom/estrongs/android/pop/app/PopVideoPlayer;)Lcom/estrongs/android/j/c;
+
+    move-result-object v1
+
+    const-string v2, "Search_Wan_UV"
+
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/j/c;->c(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     :cond_0
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+    :goto_0
+    :try_start_1
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/jl;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+
+    const-string v2, "video"
+
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bS(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+    invoke-static {v1, v2, v0}, Lcom/estrongs/android/pop/utils/de;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/estrongs/android/pop/utils/dh;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->aD()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    invoke-static {v5}, Lcom/estrongs/android/pop/utils/ci;->a(Ljava/lang/String;)I
-
-    move-result v0
-
-    sget v3, Lcom/estrongs/android/pop/utils/ci;->c:I
-
-    if-ne v0, v3, :cond_1
-
-    move v0, v1
-
-    :goto_1
-    move v4, v0
-
-    :goto_2
-    if-eqz v4, :cond_2
-
-    const v0, 0x7f0b0433
-
-    move v3, v0
-
-    :goto_3
-    if-eqz v4, :cond_3
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/jl;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
-
-    const v6, 0x7f0b0443
-
-    invoke-virtual {v0, v6}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-array v6, v1, [Ljava/lang/Object;
-
-    invoke-static {v5}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v7
-
-    aput-object v7, v6, v2
-
-    invoke-static {v0, v6}, Ljava/text/MessageFormat;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_4
-    new-instance v2, Lcom/estrongs/android/ui/dialog/ct;
-
-    iget-object v6, p0, Lcom/estrongs/android/pop/app/jl;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
-
-    invoke-direct {v2, v6}, Lcom/estrongs/android/ui/dialog/ct;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {v2, v3}, Lcom/estrongs/android/ui/dialog/ct;->a(I)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Lcom/estrongs/android/ui/dialog/ct;->b(Ljava/lang/CharSequence;)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    const v2, 0x7f0b000d
-
-    new-instance v3, Lcom/estrongs/android/pop/app/jn;
-
-    invoke-direct {v3, p0, v5, v4}, Lcom/estrongs/android/pop/app/jn;-><init>(Lcom/estrongs/android/pop/app/jl;Ljava/lang/String;Z)V
-
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/ui/dialog/ct;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    const v2, 0x7f0b000e
-
-    new-instance v3, Lcom/estrongs/android/pop/app/jm;
-
-    invoke-direct {v3, p0}, Lcom/estrongs/android/pop/app/jm;-><init>(Lcom/estrongs/android/pop/app/jl;)V
-
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/ui/dialog/ct;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ct;->c()Lcom/estrongs/android/ui/dialog/cg;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/jl;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->D(Lcom/estrongs/android/pop/app/PopVideoPlayer;)Lcom/estrongs/android/ui/e/iw;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/e/iw;->d()V
-
-    goto :goto_0
+    if-nez v0, :cond_2
 
     :cond_1
-    move v0, v2
+    :goto_1
+    return-void
+
+    :cond_2
+    iget-object v1, v0, Lcom/estrongs/android/pop/utils/dh;->b:Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/estrongs/android/pop/utils/de;->a(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/jl;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->finish()V
 
     goto :goto_1
 
-    :cond_2
-    const v0, 0x7f0b0013
+    :catch_0
+    move-exception v0
 
-    move v3, v0
-
-    goto :goto_3
+    goto :goto_1
 
     :cond_3
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    new-instance v1, Landroid/content/Intent;
 
     iget-object v2, p0, Lcom/estrongs/android/pop/app/jl;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
-    const v6, 0x7f0b021f
+    const-class v3, Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-virtual {v2, v6}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->getText(I)Ljava/lang/CharSequence;
+    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    move-result-object v2
+    const/high16 v2, 0x24000000
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    move-result-object v0
+    iget-object v0, v0, Lcom/estrongs/android/pop/utils/dh;->a:Ljava/lang/String;
 
-    const-string v2, " "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    invoke-static {v5}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    move-result-object v2
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/jl;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->startActivity(Landroid/content/Intent;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    move-result-object v0
+    goto :goto_1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :catch_1
+    move-exception v1
 
-    move-result-object v0
-
-    goto :goto_4
-
-    :cond_4
-    move v4, v0
-
-    goto :goto_2
+    goto :goto_0
 .end method

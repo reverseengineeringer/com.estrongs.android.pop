@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/duapps_ad_container" android:background="#ff348af8" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/duapps_ad_empty" layout="@layout/toolbox_empty" />
+        <ListView android:scrollbarThumbVertical="@drawable/offerwall_scrollbar_bg" android:scrollbarStyle="outsideOverlay" android:id="@id/duapps_ad_offer_wall_lv" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:divider="@android:color/transparent" />
+    </LinearLayout>
+</LinearLayout>

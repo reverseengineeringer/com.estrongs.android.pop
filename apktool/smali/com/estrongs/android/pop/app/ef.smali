@@ -1,66 +1,33 @@
-.class public Lcom/estrongs/android/pop/app/ef;
+.class Lcom/estrongs/android/pop/app/ef;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
-.field public a:Ljava/lang/String;
-
-.field public b:Ljava/lang/String;
-
-.field public c:Z
+.field final synthetic a:Lcom/estrongs/android/pop/app/OpenRecomm;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method constructor <init>(Lcom/estrongs/android/pop/app/OpenRecomm;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/ef;->a:Lcom/estrongs/android/pop/app/OpenRecomm;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-string v0, ""
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/ef;->a:Ljava/lang/String;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/ef;->b:Ljava/lang/String;
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/ef;->c:Z
 
     return-void
 .end method
 
-.method static a([Ljava/lang/String;)[Lcom/estrongs/android/pop/app/ef;
-    .locals 4
 
-    array-length v0, p0
+# virtual methods
+.method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 1
 
-    new-array v1, v0, [Lcom/estrongs/android/pop/app/ef;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ef;->a:Lcom/estrongs/android/pop/app/OpenRecomm;
 
-    const/4 v0, 0x0
+    invoke-static {v0, p2}, Lcom/estrongs/android/pop/app/OpenRecomm;->a(Lcom/estrongs/android/pop/app/OpenRecomm;Z)Z
 
-    :goto_0
-    array-length v2, p0
-
-    if-ge v0, v2, :cond_0
-
-    new-instance v2, Lcom/estrongs/android/pop/app/ef;
-
-    invoke-direct {v2}, Lcom/estrongs/android/pop/app/ef;-><init>()V
-
-    aput-object v2, v1, v0
-
-    aget-object v2, v1, v0
-
-    aget-object v3, p0, v0
-
-    iput-object v3, v2, Lcom/estrongs/android/pop/app/ef;->b:Ljava/lang/String;
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-object v1
+    return-void
 .end method

@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/util/e;
+.implements Lcom/estrongs/android/util/d;
 
 
 # instance fields
@@ -29,7 +29,7 @@
 
     iget-object v0, v0, Lcom/estrongs/android/pop/app/compress/d;->b:Lcom/estrongs/android/pop/app/compress/a;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/a;->i(Lcom/estrongs/android/pop/app/compress/a;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/a;->j(Lcom/estrongs/android/pop/app/compress/a;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -49,7 +49,7 @@
 
     iget-object v0, v0, Lcom/estrongs/android/pop/app/compress/d;->a:Landroid/view/View;
 
-    const v1, 0x7f0a0056
+    const v1, 0x7f0e01b8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

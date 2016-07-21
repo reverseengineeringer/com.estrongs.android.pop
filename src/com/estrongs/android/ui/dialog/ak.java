@@ -1,59 +1,18 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.Context;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
-import android.os.Handler;
-import com.estrongs.android.appinfo.AppFolderInfoManager;
-import com.estrongs.android.appinfo.m;
-import com.estrongs.android.appinfo.r;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 
 class ak
-  implements Runnable
+  implements AdapterView.OnItemClickListener
 {
-  ak(ae paramae) {}
+  ak(ag paramag) {}
   
-  public void run()
+  public void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    Object localObject = AppFolderInfoManager.d().a(a.f);
-    if (localObject != null) {}
-    for (localObject = a;; localObject = null)
-    {
-      r localr = AppFolderInfoManager.d().b(a.f);
-      ArrayList localArrayList = new ArrayList();
-      an.a = (String)localObject;
-      if (localr == null) {}
-      for (localObject = null;; localObject = a)
-      {
-        an.b = (String)localObject;
-        localArrayList.add(null);
-        localObject = a.d.getPackageManager();
-        Iterator localIterator = ((PackageManager)localObject).getInstalledApplications(8192).iterator();
-        while (localIterator.hasNext()) {
-          localArrayList.add(an.a((PackageManager)localObject, (ApplicationInfo)localIterator.next()));
-        }
-      }
-      Collections.sort(localArrayList);
-      int j = localArrayList.size();
-      int i = 0;
-      if (i < j)
-      {
-        localObject = (an)localArrayList.get(i);
-        if ((localObject == null) || (!e)) {}
-      }
-      for (;;)
-      {
-        a.a.post(new al(this, localArrayList, localr, i));
-        return;
-        i += 1;
-        break;
-        i = 0;
-      }
-    }
+    a.b.a(paramInt);
+    a.a(paramInt);
   }
 }
 

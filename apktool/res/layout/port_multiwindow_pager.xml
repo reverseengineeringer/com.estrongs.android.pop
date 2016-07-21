@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/multi_window_page" android:background="@color/multi_window_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/tab_container" android:background="@color/multi_window_tab_bg" android:layout_width="fill_parent" android:layout_height="@dimen/dp_50">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false">
+            <TextView android:textSize="@dimen/dp_16" android:textColor="@color/multi_window_tab_text_normal" android:gravity="center" android:id="@id/action_multi_window" android:background="@drawable/background_globle_buttons" android:focusable="true" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:text="@string/tool_multi_window" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/dp_16" android:textColor="@color/multi_window_tab_text_normal" android:gravity="center" android:id="@id/action_clipboard" android:background="@drawable/background_globle_buttons" android:focusable="true" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:text="@string/location_clipboard" android:layout_weight="1.0" />
+        </LinearLayout>
+        <com.estrongs.android.ui.navigation.TabIndicatorView android:id="@id/indicatorView" android:layout_width="fill_parent" android:layout_height="@dimen/dp_4" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <View android:background="#ff31afde" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/dp_1" />
+    <com.estrongs.android.widget.RealViewSwitcher android:id="@id/switcher" android:layout_width="fill_parent" android:layout_height="@dimen/dp_0" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/container_buttons" android:background="@drawable/window_toolbar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/dp_54" />
+</LinearLayout>

@@ -1,28 +1,56 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.Context;
-import android.content.res.Resources;
-import android.view.LayoutInflater;
-import android.widget.GridView;
-import android.widget.LinearLayout;
-import com.estrongs.android.pop.esclasses.g;
-import com.estrongs.android.ui.a.d;
+import android.os.Handler;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.pop.ad;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.impl.o.b;
 
-public class fq
-  extends cg
+class fq
+  implements Runnable
 {
-  private static fq a = null;
-  private LinearLayout b;
+  fq(fk paramfk, String paramString1, String paramString2, String paramString3, boolean paramBoolean, String paramString4) {}
   
-  public fq(Context paramContext)
+  public void run()
   {
-    super(paramContext);
-    setTitle(mContext.getResources().getString(2131427361));
-    b = ((LinearLayout)g.a(mContext).inflate(2130903274, null));
-    setContentView(b);
-    paramContext = (GridView)b.findViewById(2131362817);
-    paramContext.setAdapter(new d(mContext));
-    paramContext.setOnItemClickListener(new fr(this));
+    String str = null;
+    if (!fk.a(f, a, b, c))
+    {
+      fk.f(f).post(new fr(this));
+      return;
+    }
+    Object localObject1;
+    if (d)
+    {
+      localObject1 = b.f("s3", null);
+      str = ap.a("s3", (String)localObject1, "fake", ap.aq(a));
+    }
+    for (;;)
+    {
+      Object localObject2 = e;
+      if (e.length() == 0) {
+        if (!d) {}
+      }
+      for (;;)
+      {
+        if ((fk.g(f)) && (fk.h(f) != null)) {
+          ad.a(FexApplication.a()).a(fk.h(f), false);
+        }
+        localObject2 = ad.a(fk.d(f));
+        if (d) {}
+        for (;;)
+        {
+          ((ad)localObject2).a(str, (String)localObject1);
+          fk.f(f).post(new fs(this));
+          return;
+          localObject1 = b;
+          break;
+          str = a;
+        }
+        localObject1 = localObject2;
+      }
+      localObject1 = null;
+    }
   }
 }
 

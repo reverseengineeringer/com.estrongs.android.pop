@@ -1,32 +1,15 @@
 package com.estrongs.android.ui.pcs;
 
-import android.content.Context;
-import android.os.Handler;
+import com.baidu.sapi2.SapiWebView.OnFinishCallback;
 
-public class t
+class t
+  implements SapiWebView.OnFinishCallback
 {
-  private static Object c = new Object();
-  private Context a;
-  private Handler b;
+  t(r paramr) {}
   
-  public t(Context paramContext)
+  public void onFinish()
   {
-    a = paramContext;
-  }
-  
-  public void a()
-  {
-    a(true);
-  }
-  
-  public void a(Handler paramHandler)
-  {
-    b = paramHandler;
-  }
-  
-  public void a(boolean paramBoolean)
-  {
-    new Thread(new u(this, paramBoolean)).start();
+    r.h(a);
   }
 }
 

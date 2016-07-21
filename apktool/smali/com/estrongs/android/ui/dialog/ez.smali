@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/view/eb;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -22,33 +22,52 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;)V
-    .locals 1
+.method public run()V
+    .locals 7
+
+    const/4 v6, 0x1
 
     iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ez;->a:Lcom/estrongs/android/ui/dialog/ey;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/ey;->a(Lcom/estrongs/android/ui/dialog/ey;)Lcom/estrongs/android/ui/dialog/cg;
+    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/ey;->b:Lcom/estrongs/android/ui/dialog/ev;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/ev;->b(Lcom/estrongs/android/ui/dialog/ev;)Landroid/content/Context;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/ez;->a:Lcom/estrongs/android/ui/dialog/ey;
 
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    iget-object v1, v1, Lcom/estrongs/android/ui/dialog/ey;->b:Lcom/estrongs/android/ui/dialog/ev;
 
-    invoke-virtual {v0, p1}, Ljava/lang/Boolean;->equals(Ljava/lang/Object;)Z
+    invoke-static {v1}, Lcom/estrongs/android/ui/dialog/ev;->b(Lcom/estrongs/android/ui/dialog/ev;)Landroid/content/Context;
 
-    move-result v0
+    move-result-object v1
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ez;->a:Lcom/estrongs/android/ui/dialog/ey;
+    move-result-object v1
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/ey;->a(Lcom/estrongs/android/ui/dialog/ey;)Lcom/estrongs/android/ui/dialog/cg;
+    const v2, 0x7f0800be
 
-    move-result-object v0
+    new-array v3, v6, [Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->dismiss()V
+    const/4 v4, 0x0
 
-    :cond_0
+    iget-object v5, p0, Lcom/estrongs/android/ui/dialog/ez;->a:Lcom/estrongs/android/ui/dialog/ey;
+
+    iget-object v5, v5, Lcom/estrongs/android/ui/dialog/ey;->a:Ljava/lang/String;
+
+    invoke-static {v5}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    aput-object v5, v3, v4
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1, v6}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+
     return-void
 .end method

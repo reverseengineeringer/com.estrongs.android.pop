@@ -29,13 +29,13 @@
 
     iget-object v0, v0, Lcom/estrongs/android/ui/view/o;->a:Lcom/estrongs/android/ui/view/b;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/b;->x(Lcom/estrongs/android/ui/view/b;)Lcom/estrongs/android/view/eb;
+    invoke-static {v0}, Lcom/estrongs/android/ui/view/b;->x(Lcom/estrongs/android/ui/view/b;)Lcom/estrongs/android/view/gg;
 
     move-result-object v0
 
     sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    invoke-interface {v0, v1}, Lcom/estrongs/android/view/eb;->a(Ljava/lang/Object;)V
+    invoke-interface {v0, v1}, Lcom/estrongs/android/view/gg;->a(Ljava/lang/Object;)V
 
     return-void
 .end method

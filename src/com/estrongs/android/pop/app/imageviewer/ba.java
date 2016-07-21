@@ -1,24 +1,22 @@
 package com.estrongs.android.pop.app.imageviewer;
 
-import com.estrongs.android.pop.app.imageviewer.gallery.e;
+import android.net.Uri;
+import com.estrongs.android.ui.view.ak;
 
 class ba
-  extends Thread
+  implements Runnable
 {
-  ba(ViewImage21 paramViewImage21, String paramString)
-  {
-    super(paramString);
-  }
+  ba(az paramaz) {}
   
   public void run()
   {
-    e locale = ViewImage21.p(a);
-    if (locale == null)
-    {
-      a.runOnUiThread(new bb(this));
-      return;
+    String str2 = a.a.getString(2131231777);
+    String str1 = str2;
+    if (!ViewImage21.a(a.a, ViewImage21.r(a.a))) {
+      str1 = str2 + ": " + ViewImage21.r(a.a).getPath();
     }
-    a.runOnUiThread(new bc(this, locale));
+    ak.a(a.a, str1, 1);
+    a.a.finish();
   }
 }
 

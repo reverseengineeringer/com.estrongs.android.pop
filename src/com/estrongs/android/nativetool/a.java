@@ -33,12 +33,12 @@ public class a
     //   16: astore 5
     //   18: aload 5
     //   20: sipush 255
-    //   23: invokestatic 52	com/estrongs/fs/impl/local/l:a	(Ljava/io/OutputStream;I)V
+    //   23: invokestatic 52	com/estrongs/fs/impl/local/m:a	(Ljava/io/OutputStream;I)V
     //   26: aload 4
-    //   28: invokestatic 55	com/estrongs/fs/impl/local/l:c	(Ljava/io/InputStream;)I
+    //   28: invokestatic 55	com/estrongs/fs/impl/local/m:c	(Ljava/io/InputStream;)I
     //   31: istore_2
     //   32: iload_2
-    //   33: ifeq +64 -> 97
+    //   33: ifeq +63 -> 96
     //   36: ldc 57
     //   38: new 59	java/lang/StringBuilder
     //   41: dup
@@ -48,250 +48,248 @@ public class a
     //   50: iload_2
     //   51: invokevirtual 69	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
     //   54: invokevirtual 73	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   57: invokestatic 78	android/util/Log:e	(Ljava/lang/String;Ljava/lang/String;)I
-    //   60: pop
-    //   61: aload 4
-    //   63: ifnull +8 -> 71
-    //   66: aload 4
-    //   68: invokevirtual 83	java/io/InputStream:close	()V
-    //   71: aload 5
-    //   73: ifnull +8 -> 81
-    //   76: aload 5
-    //   78: invokevirtual 86	java/io/OutputStream:close	()V
-    //   81: aload_0
-    //   82: getfield 21	com/estrongs/android/nativetool/a:e	Landroid/net/LocalSocket;
-    //   85: invokevirtual 87	android/net/LocalSocket:close	()V
-    //   88: aconst_null
-    //   89: areturn
-    //   90: astore_1
-    //   91: aload_1
-    //   92: invokevirtual 90	java/io/IOException:printStackTrace	()V
-    //   95: aconst_null
-    //   96: areturn
-    //   97: new 92	com/estrongs/android/nativetool/b
-    //   100: dup
-    //   101: invokespecial 93	com/estrongs/android/nativetool/b:<init>	()V
-    //   104: astore 6
-    //   106: aload 6
-    //   108: aload 4
-    //   110: invokestatic 55	com/estrongs/fs/impl/local/l:c	(Ljava/io/InputStream;)I
-    //   113: bipush 10
-    //   115: imul
-    //   116: putfield 94	com/estrongs/android/nativetool/b:b	I
-    //   119: aload 6
-    //   121: getfield 94	com/estrongs/android/nativetool/b:b	I
-    //   124: ifne +10 -> 134
-    //   127: aload 6
-    //   129: bipush 100
-    //   131: putfield 94	com/estrongs/android/nativetool/b:b	I
-    //   134: aload 6
-    //   136: aconst_null
-    //   137: putfield 97	com/estrongs/android/nativetool/b:a	Landroid/graphics/Bitmap;
-    //   140: iconst_0
-    //   141: istore_2
-    //   142: iload_2
-    //   143: aload_0
-    //   144: getfield 31	com/estrongs/android/nativetool/a:f	[B
-    //   147: arraylength
-    //   148: if_icmpge +77 -> 225
-    //   151: aload 4
-    //   153: aload_0
-    //   154: getfield 31	com/estrongs/android/nativetool/a:f	[B
-    //   157: iload_2
-    //   158: aload_0
-    //   159: getfield 31	com/estrongs/android/nativetool/a:f	[B
-    //   162: arraylength
-    //   163: iload_2
-    //   164: isub
-    //   165: invokevirtual 101	java/io/InputStream:read	([BII)I
-    //   168: istore_3
-    //   169: iload_3
-    //   170: iconst_m1
-    //   171: if_icmpne +47 -> 218
-    //   174: ldc 57
-    //   176: ldc 103
-    //   178: invokestatic 78	android/util/Log:e	(Ljava/lang/String;Ljava/lang/String;)I
-    //   181: pop
-    //   182: aload 4
-    //   184: ifnull +8 -> 192
-    //   187: aload 4
-    //   189: invokevirtual 83	java/io/InputStream:close	()V
-    //   192: aload 5
-    //   194: ifnull +8 -> 202
-    //   197: aload 5
-    //   199: invokevirtual 86	java/io/OutputStream:close	()V
-    //   202: aload_0
-    //   203: getfield 21	com/estrongs/android/nativetool/a:e	Landroid/net/LocalSocket;
-    //   206: invokevirtual 87	android/net/LocalSocket:close	()V
-    //   209: aconst_null
-    //   210: areturn
-    //   211: astore_1
-    //   212: aload_1
-    //   213: invokevirtual 90	java/io/IOException:printStackTrace	()V
-    //   216: aconst_null
-    //   217: areturn
-    //   218: iload_2
-    //   219: iload_3
-    //   220: iadd
-    //   221: istore_2
-    //   222: goto -80 -> 142
-    //   225: aload_0
-    //   226: getfield 31	com/estrongs/android/nativetool/a:f	[B
-    //   229: invokestatic 109	java/nio/ByteBuffer:wrap	([B)Ljava/nio/ByteBuffer;
-    //   232: astore 7
-    //   234: aload_1
-    //   235: ifnull +18 -> 253
-    //   238: aload_1
-    //   239: aload 7
-    //   241: invokevirtual 115	android/graphics/Bitmap:copyPixelsFromBuffer	(Ljava/nio/Buffer;)V
-    //   244: aload 6
-    //   246: aload_1
-    //   247: putfield 97	com/estrongs/android/nativetool/b:a	Landroid/graphics/Bitmap;
-    //   250: goto +173 -> 423
-    //   253: aload 6
-    //   255: aload_0
-    //   256: getfield 25	com/estrongs/android/nativetool/a:b	I
-    //   259: aload_0
-    //   260: getfield 27	com/estrongs/android/nativetool/a:c	I
-    //   263: getstatic 121	android/graphics/Bitmap$Config:ARGB_8888	Landroid/graphics/Bitmap$Config;
-    //   266: invokestatic 125	android/graphics/Bitmap:createBitmap	(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
-    //   269: putfield 97	com/estrongs/android/nativetool/b:a	Landroid/graphics/Bitmap;
-    //   272: aload 6
-    //   274: getfield 97	com/estrongs/android/nativetool/b:a	Landroid/graphics/Bitmap;
-    //   277: aload 7
-    //   279: invokevirtual 115	android/graphics/Bitmap:copyPixelsFromBuffer	(Ljava/nio/Buffer;)V
-    //   282: goto +141 -> 423
-    //   285: astore_1
-    //   286: aload_1
-    //   287: invokevirtual 126	java/lang/Exception:printStackTrace	()V
-    //   290: goto +133 -> 423
-    //   293: astore 6
-    //   295: aload 5
-    //   297: astore_1
-    //   298: aload 6
-    //   300: astore 5
-    //   302: aload 5
-    //   304: invokevirtual 90	java/io/IOException:printStackTrace	()V
-    //   307: aload 4
-    //   309: ifnull +8 -> 317
-    //   312: aload 4
-    //   314: invokevirtual 83	java/io/InputStream:close	()V
-    //   317: aload_1
-    //   318: ifnull +7 -> 325
-    //   321: aload_1
-    //   322: invokevirtual 86	java/io/OutputStream:close	()V
-    //   325: aload_0
-    //   326: getfield 21	com/estrongs/android/nativetool/a:e	Landroid/net/LocalSocket;
-    //   329: invokevirtual 87	android/net/LocalSocket:close	()V
-    //   332: aconst_null
-    //   333: areturn
-    //   334: astore_1
-    //   335: aload_1
-    //   336: invokevirtual 90	java/io/IOException:printStackTrace	()V
-    //   339: aconst_null
-    //   340: areturn
-    //   341: astore_1
-    //   342: aconst_null
-    //   343: astore 5
-    //   345: aconst_null
-    //   346: astore 4
-    //   348: aload 4
-    //   350: ifnull +8 -> 358
-    //   353: aload 4
-    //   355: invokevirtual 83	java/io/InputStream:close	()V
-    //   358: aload 5
-    //   360: ifnull +8 -> 368
-    //   363: aload 5
-    //   365: invokevirtual 86	java/io/OutputStream:close	()V
-    //   368: aload_0
-    //   369: getfield 21	com/estrongs/android/nativetool/a:e	Landroid/net/LocalSocket;
-    //   372: invokevirtual 87	android/net/LocalSocket:close	()V
-    //   375: aload_1
-    //   376: athrow
-    //   377: astore_1
-    //   378: aload_1
-    //   379: invokevirtual 90	java/io/IOException:printStackTrace	()V
-    //   382: aconst_null
-    //   383: areturn
-    //   384: astore_1
-    //   385: aconst_null
-    //   386: astore 5
-    //   388: goto -40 -> 348
-    //   391: astore_1
-    //   392: goto -44 -> 348
-    //   395: astore 6
-    //   397: aload_1
-    //   398: astore 5
-    //   400: aload 6
-    //   402: astore_1
-    //   403: goto -55 -> 348
-    //   406: astore 5
+    //   57: invokestatic 78	com/estrongs/android/util/l:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   60: aload 4
+    //   62: ifnull +8 -> 70
+    //   65: aload 4
+    //   67: invokevirtual 83	java/io/InputStream:close	()V
+    //   70: aload 5
+    //   72: ifnull +8 -> 80
+    //   75: aload 5
+    //   77: invokevirtual 86	java/io/OutputStream:close	()V
+    //   80: aload_0
+    //   81: getfield 21	com/estrongs/android/nativetool/a:e	Landroid/net/LocalSocket;
+    //   84: invokevirtual 87	android/net/LocalSocket:close	()V
+    //   87: aconst_null
+    //   88: areturn
+    //   89: astore_1
+    //   90: aload_1
+    //   91: invokevirtual 90	java/io/IOException:printStackTrace	()V
+    //   94: aconst_null
+    //   95: areturn
+    //   96: new 92	com/estrongs/android/nativetool/b
+    //   99: dup
+    //   100: invokespecial 93	com/estrongs/android/nativetool/b:<init>	()V
+    //   103: astore 6
+    //   105: aload 6
+    //   107: aload 4
+    //   109: invokestatic 55	com/estrongs/fs/impl/local/m:c	(Ljava/io/InputStream;)I
+    //   112: bipush 10
+    //   114: imul
+    //   115: putfield 94	com/estrongs/android/nativetool/b:b	I
+    //   118: aload 6
+    //   120: getfield 94	com/estrongs/android/nativetool/b:b	I
+    //   123: ifne +10 -> 133
+    //   126: aload 6
+    //   128: bipush 100
+    //   130: putfield 94	com/estrongs/android/nativetool/b:b	I
+    //   133: aload 6
+    //   135: aconst_null
+    //   136: putfield 97	com/estrongs/android/nativetool/b:a	Landroid/graphics/Bitmap;
+    //   139: iconst_0
+    //   140: istore_2
+    //   141: iload_2
+    //   142: aload_0
+    //   143: getfield 31	com/estrongs/android/nativetool/a:f	[B
+    //   146: arraylength
+    //   147: if_icmpge +76 -> 223
+    //   150: aload 4
+    //   152: aload_0
+    //   153: getfield 31	com/estrongs/android/nativetool/a:f	[B
+    //   156: iload_2
+    //   157: aload_0
+    //   158: getfield 31	com/estrongs/android/nativetool/a:f	[B
+    //   161: arraylength
+    //   162: iload_2
+    //   163: isub
+    //   164: invokevirtual 101	java/io/InputStream:read	([BII)I
+    //   167: istore_3
+    //   168: iload_3
+    //   169: iconst_m1
+    //   170: if_icmpne +46 -> 216
+    //   173: ldc 57
+    //   175: ldc 103
+    //   177: invokestatic 78	com/estrongs/android/util/l:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   180: aload 4
+    //   182: ifnull +8 -> 190
+    //   185: aload 4
+    //   187: invokevirtual 83	java/io/InputStream:close	()V
+    //   190: aload 5
+    //   192: ifnull +8 -> 200
+    //   195: aload 5
+    //   197: invokevirtual 86	java/io/OutputStream:close	()V
+    //   200: aload_0
+    //   201: getfield 21	com/estrongs/android/nativetool/a:e	Landroid/net/LocalSocket;
+    //   204: invokevirtual 87	android/net/LocalSocket:close	()V
+    //   207: aconst_null
+    //   208: areturn
+    //   209: astore_1
+    //   210: aload_1
+    //   211: invokevirtual 90	java/io/IOException:printStackTrace	()V
+    //   214: aconst_null
+    //   215: areturn
+    //   216: iload_2
+    //   217: iload_3
+    //   218: iadd
+    //   219: istore_2
+    //   220: goto -79 -> 141
+    //   223: aload_0
+    //   224: getfield 31	com/estrongs/android/nativetool/a:f	[B
+    //   227: invokestatic 109	java/nio/ByteBuffer:wrap	([B)Ljava/nio/ByteBuffer;
+    //   230: astore 7
+    //   232: aload_1
+    //   233: ifnull +18 -> 251
+    //   236: aload_1
+    //   237: aload 7
+    //   239: invokevirtual 115	android/graphics/Bitmap:copyPixelsFromBuffer	(Ljava/nio/Buffer;)V
+    //   242: aload 6
+    //   244: aload_1
+    //   245: putfield 97	com/estrongs/android/nativetool/b:a	Landroid/graphics/Bitmap;
+    //   248: goto +173 -> 421
+    //   251: aload 6
+    //   253: aload_0
+    //   254: getfield 25	com/estrongs/android/nativetool/a:b	I
+    //   257: aload_0
+    //   258: getfield 27	com/estrongs/android/nativetool/a:c	I
+    //   261: getstatic 121	android/graphics/Bitmap$Config:ARGB_8888	Landroid/graphics/Bitmap$Config;
+    //   264: invokestatic 125	android/graphics/Bitmap:createBitmap	(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+    //   267: putfield 97	com/estrongs/android/nativetool/b:a	Landroid/graphics/Bitmap;
+    //   270: aload 6
+    //   272: getfield 97	com/estrongs/android/nativetool/b:a	Landroid/graphics/Bitmap;
+    //   275: aload 7
+    //   277: invokevirtual 115	android/graphics/Bitmap:copyPixelsFromBuffer	(Ljava/nio/Buffer;)V
+    //   280: goto +141 -> 421
+    //   283: astore_1
+    //   284: aload_1
+    //   285: invokevirtual 126	java/lang/Exception:printStackTrace	()V
+    //   288: goto +133 -> 421
+    //   291: astore 6
+    //   293: aload 5
+    //   295: astore_1
+    //   296: aload 6
+    //   298: astore 5
+    //   300: aload 5
+    //   302: invokevirtual 90	java/io/IOException:printStackTrace	()V
+    //   305: aload 4
+    //   307: ifnull +8 -> 315
+    //   310: aload 4
+    //   312: invokevirtual 83	java/io/InputStream:close	()V
+    //   315: aload_1
+    //   316: ifnull +7 -> 323
+    //   319: aload_1
+    //   320: invokevirtual 86	java/io/OutputStream:close	()V
+    //   323: aload_0
+    //   324: getfield 21	com/estrongs/android/nativetool/a:e	Landroid/net/LocalSocket;
+    //   327: invokevirtual 87	android/net/LocalSocket:close	()V
+    //   330: aconst_null
+    //   331: areturn
+    //   332: astore_1
+    //   333: aload_1
+    //   334: invokevirtual 90	java/io/IOException:printStackTrace	()V
+    //   337: aconst_null
+    //   338: areturn
+    //   339: astore_1
+    //   340: aconst_null
+    //   341: astore 5
+    //   343: aconst_null
+    //   344: astore 4
+    //   346: aload 4
+    //   348: ifnull +8 -> 356
+    //   351: aload 4
+    //   353: invokevirtual 83	java/io/InputStream:close	()V
+    //   356: aload 5
+    //   358: ifnull +8 -> 366
+    //   361: aload 5
+    //   363: invokevirtual 86	java/io/OutputStream:close	()V
+    //   366: aload_0
+    //   367: getfield 21	com/estrongs/android/nativetool/a:e	Landroid/net/LocalSocket;
+    //   370: invokevirtual 87	android/net/LocalSocket:close	()V
+    //   373: aload_1
+    //   374: athrow
+    //   375: astore_1
+    //   376: aload_1
+    //   377: invokevirtual 90	java/io/IOException:printStackTrace	()V
+    //   380: aconst_null
+    //   381: areturn
+    //   382: astore_1
+    //   383: aconst_null
+    //   384: astore 5
+    //   386: goto -40 -> 346
+    //   389: astore_1
+    //   390: goto -44 -> 346
+    //   393: astore 6
+    //   395: aload_1
+    //   396: astore 5
+    //   398: aload 6
+    //   400: astore_1
+    //   401: goto -55 -> 346
+    //   404: astore 5
+    //   406: aconst_null
+    //   407: astore_1
     //   408: aconst_null
-    //   409: astore_1
-    //   410: aconst_null
-    //   411: astore 4
-    //   413: goto -111 -> 302
-    //   416: astore 5
-    //   418: aconst_null
-    //   419: astore_1
-    //   420: goto -118 -> 302
-    //   423: aload 6
-    //   425: areturn
+    //   409: astore 4
+    //   411: goto -111 -> 300
+    //   414: astore 5
+    //   416: aconst_null
+    //   417: astore_1
+    //   418: goto -118 -> 300
+    //   421: aload 6
+    //   423: areturn
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	426	0	this	a
-    //   0	426	1	paramBitmap	android.graphics.Bitmap
-    //   31	191	2	i	int
-    //   168	53	3	j	int
-    //   7	405	4	localInputStream	java.io.InputStream
-    //   16	383	5	localObject	Object
-    //   406	1	5	localIOException1	java.io.IOException
-    //   416	1	5	localIOException2	java.io.IOException
-    //   104	169	6	localb1	b
-    //   293	6	6	localIOException3	java.io.IOException
-    //   395	29	6	localb2	b
-    //   232	46	7	localByteBuffer	java.nio.ByteBuffer
+    //   0	424	0	this	a
+    //   0	424	1	paramBitmap	android.graphics.Bitmap
+    //   31	189	2	i	int
+    //   167	52	3	j	int
+    //   7	403	4	localInputStream	java.io.InputStream
+    //   16	381	5	localObject	Object
+    //   404	1	5	localIOException1	java.io.IOException
+    //   414	1	5	localIOException2	java.io.IOException
+    //   103	168	6	localb1	b
+    //   291	6	6	localIOException3	java.io.IOException
+    //   393	29	6	localb2	b
+    //   230	46	7	localByteBuffer	java.nio.ByteBuffer
     // Exception table:
     //   from	to	target	type
-    //   66	71	90	java/io/IOException
-    //   76	81	90	java/io/IOException
-    //   81	88	90	java/io/IOException
-    //   187	192	211	java/io/IOException
-    //   197	202	211	java/io/IOException
-    //   202	209	211	java/io/IOException
-    //   238	250	285	java/lang/Exception
-    //   253	282	285	java/lang/Exception
-    //   18	32	293	java/io/IOException
-    //   36	61	293	java/io/IOException
-    //   97	134	293	java/io/IOException
-    //   134	140	293	java/io/IOException
-    //   142	169	293	java/io/IOException
-    //   174	182	293	java/io/IOException
-    //   225	234	293	java/io/IOException
-    //   238	250	293	java/io/IOException
-    //   253	282	293	java/io/IOException
-    //   286	290	293	java/io/IOException
-    //   312	317	334	java/io/IOException
-    //   321	325	334	java/io/IOException
-    //   325	332	334	java/io/IOException
-    //   0	9	341	finally
-    //   353	358	377	java/io/IOException
-    //   363	368	377	java/io/IOException
-    //   368	375	377	java/io/IOException
-    //   9	18	384	finally
-    //   18	32	391	finally
-    //   36	61	391	finally
-    //   97	134	391	finally
-    //   134	140	391	finally
-    //   142	169	391	finally
-    //   174	182	391	finally
-    //   225	234	391	finally
-    //   238	250	391	finally
-    //   253	282	391	finally
-    //   286	290	391	finally
-    //   302	307	395	finally
-    //   0	9	406	java/io/IOException
-    //   9	18	416	java/io/IOException
+    //   65	70	89	java/io/IOException
+    //   75	80	89	java/io/IOException
+    //   80	87	89	java/io/IOException
+    //   185	190	209	java/io/IOException
+    //   195	200	209	java/io/IOException
+    //   200	207	209	java/io/IOException
+    //   236	248	283	java/lang/Exception
+    //   251	280	283	java/lang/Exception
+    //   18	32	291	java/io/IOException
+    //   36	60	291	java/io/IOException
+    //   96	133	291	java/io/IOException
+    //   133	139	291	java/io/IOException
+    //   141	168	291	java/io/IOException
+    //   173	180	291	java/io/IOException
+    //   223	232	291	java/io/IOException
+    //   236	248	291	java/io/IOException
+    //   251	280	291	java/io/IOException
+    //   284	288	291	java/io/IOException
+    //   310	315	332	java/io/IOException
+    //   319	323	332	java/io/IOException
+    //   323	330	332	java/io/IOException
+    //   0	9	339	finally
+    //   351	356	375	java/io/IOException
+    //   361	366	375	java/io/IOException
+    //   366	373	375	java/io/IOException
+    //   9	18	382	finally
+    //   18	32	389	finally
+    //   36	60	389	finally
+    //   96	133	389	finally
+    //   133	139	389	finally
+    //   141	168	389	finally
+    //   173	180	389	finally
+    //   223	232	389	finally
+    //   236	248	389	finally
+    //   251	280	389	finally
+    //   284	288	389	finally
+    //   300	305	393	finally
+    //   0	9	404	java/io/IOException
+    //   9	18	414	java/io/IOException
   }
   
   public void a()

@@ -2,11 +2,11 @@ package com.estrongs.android.pop.b;
 
 import android.app.Activity;
 import com.estrongs.a.p;
-import com.estrongs.android.ui.dialog.jw;
+import com.estrongs.android.ui.dialog.kh;
 import java.io.File;
 
 final class d
-  extends jw
+  extends kh
 {
   File a = new File(b);
   
@@ -23,7 +23,7 @@ final class d
   protected String a(p paramp)
   {
     if ((paramp != null) && (b != null)) {
-      return e.getString(2131427728, new Object[] { c.toUpperCase() });
+      return e.getString(2131231390, new Object[] { c.toUpperCase() });
     }
     return null;
   }

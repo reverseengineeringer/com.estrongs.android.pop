@@ -1,16 +1,15 @@
 package com.estrongs.android.pop.view;
 
 import android.os.Handler;
-import com.estrongs.android.ui.addressbar.AdvancedAddressBar;
-import com.estrongs.android.ui.d.e;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bd;
-import com.estrongs.android.view.aw;
-import com.estrongs.android.view.ca;
-import java.util.ArrayList;
+import com.estrongs.android.ui.controller.a;
+import com.estrongs.android.ui.d.i;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bk;
+import com.estrongs.android.view.cr;
+import com.estrongs.android.view.dv;
 
 class c
-  implements ca
+  implements dv
 {
   Runnable a = null;
   
@@ -23,47 +22,42 @@ class c
   
   public void a(String paramString, boolean paramBoolean1, boolean paramBoolean2)
   {
-    int i = e.a();
-    aw localaw = b.y();
+    int i = b.au().a();
+    cr localcr = b.O();
     if (paramString == null) {
-      if (localaw != null)
+      if (localcr != null)
       {
-        str = localaw.c();
-        paramString = str;
-        if (str == null) {
-          paramString = u;
+        str1 = localcr.c();
+        paramString = str1;
+        if (str1 == null) {
+          paramString = B;
         }
-        str = paramString;
+        str1 = paramString;
         if (paramString != null) {}
       }
     }
-    for (String str = "New";; str = paramString)
+    for (String str1 = "New";; str1 = paramString)
     {
-      if ((localaw != null) && (!str.startsWith("http://win-title/")))
+      if ((localcr != null) && (!str1.startsWith("http://win-title/")))
       {
-        localObject = localaw.c();
-        paramString = (String)localObject;
-        if (bd.a((CharSequence)localObject)) {
-          paramString = u;
+        String str2 = localcr.c();
+        paramString = str2;
+        if (bk.a(str2)) {
+          paramString = B;
         }
-        if (!am.e(paramString, str)) {
+        if (!ap.e(paramString, str1)) {
           return;
         }
       }
-      if (b.u) {
-        FileExplorerActivity.a(b).a(str);
-      }
+      FileExplorerActivity.a(b).a(str1);
       FileExplorerActivity.a(b, false);
-      Object localObject = new String[2];
-      FileExplorerActivity.a(b, b.y(), e.b(), str, (String[])localObject);
-      paramString = localObject[0];
-      localObject = localObject[1];
-      ArrayList localArrayList = new ArrayList();
+      paramString = new String[2];
+      b.a(b.O(), b.au().b(), str1, paramString);
       if (a != null) {
-        b.h.removeCallbacks(a);
+        b.i.removeCallbacks(a);
       }
-      a = new d(this, paramString, str, localArrayList, (String)localObject, i, localaw, paramBoolean1, paramBoolean2);
-      b.h.post(a);
+      a = new d(this, localcr, str1, paramString, i, paramBoolean1, paramBoolean2);
+      b.i.post(a);
       return;
       break;
     }

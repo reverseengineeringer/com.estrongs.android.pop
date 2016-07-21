@@ -1,15 +1,31 @@
 package com.estrongs.android.ui.dialog;
 
-import com.estrongs.android.pop.view.FileExplorerActivity;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageView;
 
-final class ku
-  implements kv
+class ku
+  implements View.OnClickListener
 {
-  ku(FileExplorerActivity paramFileExplorerActivity) {}
+  ku(kq paramkq) {}
   
-  public void a(String paramString1, String paramString2)
+  public void onClick(View paramView)
   {
-    a.b(paramString1, paramString2);
+    if (kq.h(a)) {
+      return;
+    }
+    paramView = a;
+    if (!kq.i(a)) {}
+    for (boolean bool = true;; bool = false)
+    {
+      kq.a(paramView, bool);
+      if (!kq.i(a)) {
+        break;
+      }
+      kq.j(a).setImageResource(2130838293);
+      return;
+    }
+    kq.j(a).setImageResource(2130838296);
   }
 }
 

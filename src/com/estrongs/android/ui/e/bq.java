@@ -1,23 +1,18 @@
 package com.estrongs.android.ui.e;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 import com.estrongs.android.pop.view.FileExplorerActivity;
 
 class bq
-  implements DialogInterface.OnClickListener
+  implements MenuItem.OnMenuItemClickListener
 {
-  bq(bo parambo) {}
+  bq(m paramm) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramDialogInterface.dismiss();
-    if (paramInt == 0)
-    {
-      a.a.k.a(a.a.k.z(), false);
-      return;
-    }
-    a.a.k.a(a.a.k.z(), true);
+    m.a(a).a(m.a(a).findViewById(2131625169), false);
+    return true;
   }
 }
 

@@ -1,72 +1,30 @@
 package com.estrongs.fs.impl.k;
 
-import android.content.ContentResolver;
-import android.content.ContentValues;
-import android.database.DatabaseUtils;
-import android.provider.MediaStore.Images.Media;
-import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.util.am;
-import com.estrongs.fs.h;
-import java.io.File;
+import com.estrongs.android.util.bk;
+import com.estrongs.fs.w;
+import java.util.Calendar;
 
 public class b
-  extends com.estrongs.fs.impl.media.b
+  extends com.estrongs.fs.a
 {
-  private static b g;
-  
-  private b()
+  public b(a parama)
   {
-    c = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
-    d = "_data";
-    e = "bucket_display_name";
-  }
-  
-  public static b c()
-  {
-    if (g == null) {
-      g = new b();
-    }
-    return g;
-  }
-  
-  public static boolean d(String paramString)
-  {
-    if (paramString.equals("pic://")) {}
-    for (paramString = am.g();; paramString = paramString.substring("pic://".length()))
+    StringBuilder localStringBuilder = new StringBuilder().append("flashair://flashair");
+    if (a.endsWith("/")) {}
+    for (String str = a;; str = a + "/")
     {
-      return new File(paramString).exists();
-      if (!paramString.startsWith("pic://")) {
+      path = (str + b);
+      absolutePath = path;
+      name = b;
+      size = bk.b(c);
+      lastModified = (e.getTimeInMillis() / 1000L * 1000L);
+      if (!parama.a()) {
         break;
       }
+      type = w.a;
+      return;
     }
-    return false;
-  }
-  
-  public int a(String paramString1, String paramString2)
-  {
-    try
-    {
-      ContentValues localContentValues = new ContentValues();
-      localContentValues.put(d, paramString2);
-      paramString1 = d + "=" + DatabaseUtils.sqlEscapeString(paramString1);
-      int i = FexApplication.a().getContentResolver().update(c, localContentValues, paramString1, null);
-      return i;
-    }
-    catch (Exception paramString1)
-    {
-      paramString1.printStackTrace();
-    }
-    return 0;
-  }
-  
-  protected h a(File paramFile)
-  {
-    return new a(paramFile);
-  }
-  
-  protected String a()
-  {
-    return null;
+    type = w.b;
   }
 }
 

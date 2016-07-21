@@ -1,16 +1,26 @@
 package com.estrongs.android.pop.app.a;
 
-import com.estrongs.android.ui.e.ja;
+import com.dianxinos.lockscreen.g;
+import com.estrongs.android.j.c;
+import com.estrongs.android.pop.FexApplication;
 
-class f
-  implements ja
+final class f
+  implements g
 {
-  f(e parame) {}
-  
   public void a()
   {
-    a.a();
+    try
+    {
+      c.a(FexApplication.a()).a("charge", "charge_screen_on");
+      return;
+    }
+    catch (Exception localException)
+    {
+      localException.printStackTrace();
+    }
   }
+  
+  public void b() {}
 }
 
 /* Location:

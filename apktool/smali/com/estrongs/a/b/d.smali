@@ -465,7 +465,7 @@
     goto :goto_1
 .end method
 
-.method private a(Landroid/app/Activity;ILjava/lang/String;Lcom/estrongs/fs/b/bl;)V
+.method private a(Landroid/app/Activity;ILjava/lang/String;Lcom/estrongs/fs/b/bn;)V
     .locals 6
 
     new-instance v0, Lcom/estrongs/a/b/m;
@@ -482,11 +482,11 @@
 
     move-object v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/estrongs/a/b/m;-><init>(Lcom/estrongs/a/b/d;Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/i;Lcom/estrongs/fs/b/bl;)V
+    invoke-direct/range {v0 .. v5}, Lcom/estrongs/a/b/m;-><init>(Lcom/estrongs/a/b/d;Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/i;Lcom/estrongs/fs/b/bn;)V
 
     invoke-virtual {v0, p3}, Lcom/estrongs/a/b/m;->a(Ljava/lang/CharSequence;)V
 
-    const v1, 0x7f0b000c
+    const v1, 0x7f080221
 
     invoke-virtual {p1, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -496,7 +496,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/estrongs/a/b/m;->c(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    const v1, 0x7f0b000b
+    const v1, 0x7f080226
 
     invoke-virtual {p1, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -511,10 +511,10 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/estrongs/a/b/d;Landroid/app/Activity;ILjava/lang/String;Lcom/estrongs/fs/b/bl;)V
+.method static synthetic a(Lcom/estrongs/a/b/d;Landroid/app/Activity;ILjava/lang/String;Lcom/estrongs/fs/b/bn;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/estrongs/a/b/d;->a(Landroid/app/Activity;ILjava/lang/String;Lcom/estrongs/fs/b/bl;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/estrongs/a/b/d;->a(Landroid/app/Activity;ILjava/lang/String;Lcom/estrongs/fs/b/bn;)V
 
     return-void
 .end method
@@ -530,16 +530,16 @@
 .method private a(Ljava/lang/Object;)V
     .locals 3
 
-    check-cast p1, Lcom/estrongs/fs/b/bl;
+    check-cast p1, Lcom/estrongs/fs/b/bn;
 
-    invoke-static {}, Lcom/estrongs/android/pop/esclasses/ESActivity;->A()Landroid/app/Activity;
+    invoke-static {}, Lcom/estrongs/android/pop/esclasses/ESActivity;->H()Landroid/app/Activity;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
     :try_start_0
-    iget-object v0, p1, Lcom/estrongs/fs/b/bl;->j:Ljava/net/Socket;
+    iget-object v0, p1, Lcom/estrongs/fs/b/bn;->j:Ljava/net/Socket;
 
     invoke-virtual {v0}, Ljava/net/Socket;->getOutputStream()Ljava/io/OutputStream;
 
@@ -555,7 +555,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :try_start_1
-    iget-object v0, p1, Lcom/estrongs/fs/b/bl;->j:Ljava/net/Socket;
+    iget-object v0, p1, Lcom/estrongs/fs/b/bn;->j:Ljava/net/Socket;
 
     invoke-virtual {v0}, Ljava/net/Socket;->close()V
     :try_end_1
@@ -568,7 +568,7 @@
     move-exception v0
 
     :try_start_2
-    iget-object v0, p1, Lcom/estrongs/fs/b/bl;->j:Ljava/net/Socket;
+    iget-object v0, p1, Lcom/estrongs/fs/b/bn;->j:Ljava/net/Socket;
 
     invoke-virtual {v0}, Ljava/net/Socket;->close()V
     :try_end_2
@@ -585,7 +585,7 @@
     move-exception v0
 
     :try_start_3
-    iget-object v1, p1, Lcom/estrongs/fs/b/bl;->j:Ljava/net/Socket;
+    iget-object v1, p1, Lcom/estrongs/fs/b/bn;->j:Ljava/net/Socket;
 
     invoke-virtual {v1}, Ljava/net/Socket;->close()V
     :try_end_3
@@ -597,13 +597,13 @@
     :cond_0
     new-instance v0, Lcom/estrongs/a/b/l;
 
-    invoke-static {}, Lcom/estrongs/android/pop/esclasses/ESActivity;->A()Landroid/app/Activity;
+    invoke-static {}, Lcom/estrongs/android/pop/esclasses/ESActivity;->H()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1, p1}, Lcom/estrongs/a/b/l;-><init>(Lcom/estrongs/a/b/d;Landroid/content/Context;Lcom/estrongs/fs/b/bl;)V
+    invoke-direct {v0, p0, v1, p1}, Lcom/estrongs/a/b/l;-><init>(Lcom/estrongs/a/b/d;Landroid/content/Context;Lcom/estrongs/fs/b/bn;)V
 
-    const v1, 0x7f0b0048
+    const v1, 0x7f0803e3
 
     invoke-virtual {v0, v1}, Lcom/estrongs/a/b/l;->setTitle(I)V
 
@@ -613,7 +613,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0b000b
+    const v2, 0x7f080226
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -627,7 +627,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0b000c
+    const v2, 0x7f080221
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

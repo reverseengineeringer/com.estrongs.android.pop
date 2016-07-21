@@ -53,13 +53,13 @@
     return v2
 
     :cond_0
-    invoke-static {v3}, Lcom/estrongs/fs/impl/local/h;->h(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/estrongs/fs/impl/local/i;->h(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    invoke-static {v3}, Lcom/estrongs/fs/impl/local/h;->a(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/estrongs/fs/impl/local/i;->a(Ljava/lang/String;)Z
 
     move-result v0
 

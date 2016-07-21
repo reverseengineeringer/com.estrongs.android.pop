@@ -3,57 +3,51 @@ package com.baidu.mobstat;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class o
+class o
 {
-  public boolean a;
-  public int b;
-  public String c;
-  public JSONObject d = null;
+  private String a;
+  private String b;
+  private String c;
+  private String d;
   
-  public int a()
+  public o(String paramString1, String paramString2, String paramString3, String paramString4)
   {
-    return b;
+    String str = paramString1;
+    if (paramString1 == null) {
+      str = "";
+    }
+    paramString1 = paramString2;
+    if (paramString2 == null) {
+      paramString1 = "";
+    }
+    paramString2 = paramString3;
+    if (paramString3 == null) {
+      paramString2 = "";
+    }
+    paramString3 = paramString4;
+    if (paramString4 == null) {
+      paramString3 = "";
+    }
+    a = str;
+    b = paramString1;
+    c = paramString2;
+    d = paramString3;
   }
   
-  public void a(int paramInt)
+  public JSONObject a()
   {
-    b = paramInt;
-  }
-  
-  public void a(String paramString)
-  {
-    c = paramString;
+    JSONObject localJSONObject = new JSONObject();
     try
     {
-      d = new JSONObject(c);
-      return;
+      localJSONObject.put("n", a);
+      localJSONObject.put("v", b);
+      localJSONObject.put("c", c);
+      localJSONObject.put("a", d);
+      return localJSONObject;
     }
-    catch (JSONException paramString)
+    catch (JSONException localJSONException)
     {
-      n.c("message to JSONObject error!! msg[" + c + "]");
-      paramString.printStackTrace();
-    }
-  }
-  
-  public void a(boolean paramBoolean)
-  {
-    a = paramBoolean;
-  }
-  
-  public boolean b()
-  {
-    return a;
-  }
-  
-  public String c()
-  {
-    return c;
-  }
-  
-  public JSONObject d()
-  {
-    if (d != null) {
-      return d;
+      bb.b(localJSONException);
     }
     return null;
   }

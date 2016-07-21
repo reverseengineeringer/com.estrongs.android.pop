@@ -1,23 +1,14 @@
 .class Landroid/support/v4/view/bp;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/support/v4/view/bo;
-
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method public static a(Landroid/view/MotionEvent;)I
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Landroid/view/MotionEvent;->getSource()I
 
-    return-void
-.end method
+    move-result v0
 
-
-# virtual methods
-.method public a(Landroid/view/ViewGroup;Z)V
-    .locals 0
-
-    return-void
+    return v0
 .end method

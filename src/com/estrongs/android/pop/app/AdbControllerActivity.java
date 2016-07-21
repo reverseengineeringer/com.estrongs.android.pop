@@ -3,15 +3,17 @@ package com.estrongs.android.pop.app;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import com.estrongs.android.c.h;
-import com.estrongs.android.pop.esclasses.ESActivity;
+import com.estrongs.android.g.f;
+import com.estrongs.android.j.c;
+import com.estrongs.android.pop.esclasses.ESResourceActivity;
 import com.estrongs.android.pop.ftp.ESFtpShortcut;
+import com.estrongs.android.util.bk;
 
 public class AdbControllerActivity
-  extends ESActivity
+  extends ESResourceActivity
 {
   boolean a = false;
-  private com.estrongs.android.util.a b = null;
+  private c b = null;
   
   public void onConfigurationChanged(Configuration paramConfiguration)
   {
@@ -22,14 +24,14 @@ public class AdbControllerActivity
   {
     super.onCreate(paramBundle);
     Object localObject = getIntent().getExtras();
-    if (localObject != null)
+    if ((localObject != null) && (bk.p()))
     {
       paramBundle = ((Bundle)localObject).getString("adbRemoteIp");
       localObject = ((Bundle)localObject).getString("adbControlMode");
       if ((paramBundle != null) && (localObject != null))
       {
-        h.c(paramBundle);
-        com.estrongs.android.c.a.b();
+        f.c(paramBundle);
+        com.estrongs.android.g.a.b();
       }
     }
     for (;;)
@@ -53,7 +55,7 @@ public class AdbControllerActivity
       return;
       if (((String)localObject).equals("stop"))
       {
-        h.d(paramBundle);
+        f.d(paramBundle);
         if ((com.estrongs.android.ftp.a.e() != null) && (ek)) {
           localIntent.putExtra("mode", 2);
         }
@@ -64,17 +66,11 @@ public class AdbControllerActivity
   protected void onPause()
   {
     super.onPause();
-    if (b != null) {
-      b.c();
-    }
   }
   
   protected void onResume()
   {
     super.onResume();
-    if (b != null) {
-      b.b();
-    }
     if (a) {
       finish();
     }

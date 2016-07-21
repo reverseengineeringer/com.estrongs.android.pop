@@ -1,21 +1,18 @@
 package com.estrongs.android.ui.e;
 
-import android.content.Context;
-import com.estrongs.android.pop.app.network.EsNetworkActivity;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.dialog.gx;
+import com.estrongs.android.ui.dialog.hb;
 
-public class u
-  extends jk
+class u
+  implements hb
 {
-  public u(Context paramContext, boolean paramBoolean)
-  {
-    super(paramContext, paramBoolean);
-    h();
-  }
+  u(t paramt) {}
   
-  private void h()
+  public void a(int paramInt)
   {
-    EsNetworkActivity localEsNetworkActivity = (EsNetworkActivity)b;
-    a(2131427439, 2130838233, new v(this));
+    m.a(a.a).b(paramInt);
+    m.h(a.a).dismiss();
   }
 }
 

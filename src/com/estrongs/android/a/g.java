@@ -1,18 +1,30 @@
 package com.estrongs.android.a;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.a.b.a;
+import com.estrongs.android.util.l;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 class g
-  implements DialogInterface.OnClickListener
+  implements j
 {
-  g(e parame) {}
+  g(b paramb) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void a(String paramString)
   {
-    e.a(a, false);
-    a.dismiss();
+    l.e(b.h(), "AppAnalyzer finish!!");
+    b.d(a, true);
+    paramString = b.d(a).iterator();
+    while (paramString.hasNext()) {
+      ((j)paramString.next()).a(b.b(a));
+    }
+    if (b.c(a) != null) {
+      b.c(a).a();
+    }
   }
+  
+  public void a(String paramString, Map<String, a> paramMap) {}
 }
 
 /* Location:

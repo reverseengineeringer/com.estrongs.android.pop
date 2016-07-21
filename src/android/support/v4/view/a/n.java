@@ -1,28 +1,13 @@
 package android.support.v4.view.a;
 
-import android.os.Bundle;
-import android.view.accessibility.AccessibilityNodeInfo;
-import android.view.accessibility.AccessibilityNodeProvider;
-import java.util.List;
+import android.view.View;
 
-final class n
-  extends AccessibilityNodeProvider
+class n
+  extends m
 {
-  n(o paramo) {}
-  
-  public AccessibilityNodeInfo createAccessibilityNodeInfo(int paramInt)
+  public void d(Object paramObject, View paramView)
   {
-    return (AccessibilityNodeInfo)a.a(paramInt);
-  }
-  
-  public List<AccessibilityNodeInfo> findAccessibilityNodeInfosByText(String paramString, int paramInt)
-  {
-    return a.a(paramString, paramInt);
-  }
-  
-  public boolean performAction(int paramInt1, int paramInt2, Bundle paramBundle)
-  {
-    return a.a(paramInt1, paramInt2, paramBundle);
+    w.a(paramObject, paramView);
   }
 }
 

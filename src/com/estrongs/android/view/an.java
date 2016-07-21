@@ -1,28 +1,20 @@
 package com.estrongs.android.view;
 
-import android.view.View;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-import com.estrongs.a.a.m;
+import android.app.Activity;
+import com.estrongs.android.widget.f;
+import com.estrongs.fs.i;
 
 class an
-  implements Runnable
+  extends f
 {
-  an(am paramam, m paramm) {}
-  
-  public void run()
+  an(ak paramak, Activity paramActivity, String paramString, i parami)
   {
-    ak.l(b.a).setVisibility(0);
-    ak.o(b.a).setVisibility(8);
-    ak.b(b.a).setIndeterminate(true);
-    ak.a(b.a).setIndeterminate(true);
-    if ((a.l) && (a.m) && (a.n))
-    {
-      ak.w(b.a).setText(ak.a(b.a, 0L, 0));
-      ak.x(b.a).setVisibility(0);
-      return;
-    }
-    ak.x(b.a).setVisibility(8);
+    super(paramActivity, paramString, parami);
+  }
+  
+  protected boolean a()
+  {
+    return false;
   }
 }
 

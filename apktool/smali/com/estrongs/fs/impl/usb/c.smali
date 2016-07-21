@@ -71,9 +71,9 @@
 
     if-eqz v1, :cond_1
 
-    sget-object v1, Lcom/estrongs/fs/m;->a:Lcom/estrongs/fs/m;
+    sget-object v1, Lcom/estrongs/fs/w;->a:Lcom/estrongs/fs/w;
 
-    iput-object v1, p0, Lcom/estrongs/fs/impl/usb/c;->type:Lcom/estrongs/fs/m;
+    iput-object v1, p0, Lcom/estrongs/fs/impl/usb/c;->type:Lcom/estrongs/fs/w;
 
     :goto_0
     invoke-interface {p1}, Lcom/estrongs/fs/impl/usb/fs/c;->i()J
@@ -87,9 +87,9 @@
     return-void
 
     :cond_1
-    sget-object v1, Lcom/estrongs/fs/m;->b:Lcom/estrongs/fs/m;
+    sget-object v1, Lcom/estrongs/fs/w;->b:Lcom/estrongs/fs/w;
 
-    iput-object v1, p0, Lcom/estrongs/fs/impl/usb/c;->type:Lcom/estrongs/fs/m;
+    iput-object v1, p0, Lcom/estrongs/fs/impl/usb/c;->type:Lcom/estrongs/fs/w;
 
     goto :goto_0
 .end method
@@ -146,11 +146,11 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p0}, Lcom/estrongs/fs/impl/usb/c;->getFileType()Lcom/estrongs/fs/m;
+    invoke-virtual {p0}, Lcom/estrongs/fs/impl/usb/c;->getFileType()Lcom/estrongs/fs/w;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/m;->a()Z
+    invoke-virtual {v0}, Lcom/estrongs/fs/w;->a()Z
 
     move-result v0
 

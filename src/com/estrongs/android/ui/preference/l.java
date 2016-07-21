@@ -2,12 +2,12 @@ package com.estrongs.android.ui.preference;
 
 import android.preference.Preference;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.e;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.d;
 import java.nio.charset.Charset;
 
 class l
-  implements e
+  implements d
 {
   l(k paramk, String paramString) {}
   
@@ -29,13 +29,13 @@ class l
       {
         paramInt = 0;
       }
-      ag.a(b.a, 2131427668, 0);
+      ak.a(b.a, 2131232054, 0);
     }
     if (paramInt != 0)
     {
       ad.a(b.a).E(paramString1);
       com.estrongs.android.ftp.a.f = paramString1;
-      b.a.d.setSummary(b.a.getText(2131427666) + paramString1);
+      b.a.d.setSummary(b.a.getText(2131232052) + paramString1);
       return;
     }
   }

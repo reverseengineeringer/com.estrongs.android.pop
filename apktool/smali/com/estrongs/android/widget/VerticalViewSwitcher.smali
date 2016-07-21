@@ -37,7 +37,7 @@
 
 .field private q:Z
 
-.field private r:Lcom/estrongs/android/widget/bv;
+.field private r:Lcom/estrongs/android/widget/bw;
 
 
 # direct methods
@@ -82,7 +82,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->r:Lcom/estrongs/android/widget/bv;
+    iput-object v0, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->r:Lcom/estrongs/android/widget/bw;
 
     invoke-direct {p0}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->a()V
 
@@ -119,69 +119,7 @@
     return-void
 .end method
 
-.method private b()V
-    .locals 6
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    :goto_0
-    return-void
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/view/View;->getLeft()I
-
-    move-result v1
-
-    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
-
-    move-result v2
-
-    iget v3, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->l:I
-
-    add-int/lit8 v3, v3, -0x1
-
-    invoke-direct {p0, v3}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->c(I)I
-
-    move-result v3
-
-    add-int/2addr v2, v3
-
-    invoke-virtual {v0}, Landroid/view/View;->getRight()I
-
-    move-result v3
-
-    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
-
-    move-result v4
-
-    mul-int/lit8 v4, v4, 0x2
-
-    iget v5, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->l:I
-
-    add-int/lit8 v5, v5, -0x1
-
-    invoke-direct {p0, v5}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->c(I)I
-
-    move-result v5
-
-    add-int/2addr v4, v5
-
-    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/view/View;->layout(IIII)V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->p:Z
-
-    goto :goto_0
-.end method
-
-.method private c(I)I
+.method private b(I)I
     .locals 3
 
     const/4 v0, 0x0
@@ -217,6 +155,68 @@
 
     :cond_2
     add-int/2addr v0, v1
+
+    goto :goto_0
+.end method
+
+.method private b()V
+    .locals 6
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/view/View;->getLeft()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+
+    move-result v2
+
+    iget v3, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->l:I
+
+    add-int/lit8 v3, v3, -0x1
+
+    invoke-direct {p0, v3}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->b(I)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    invoke-virtual {v0}, Landroid/view/View;->getRight()I
+
+    move-result v3
+
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+
+    move-result v4
+
+    mul-int/lit8 v4, v4, 0x2
+
+    iget v5, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->l:I
+
+    add-int/lit8 v5, v5, -0x1
+
+    invoke-direct {p0, v5}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->b(I)I
+
+    move-result v5
+
+    add-int/2addr v4, v5
+
+    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/view/View;->layout(IIII)V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->p:Z
 
     goto :goto_0
 .end method
@@ -320,7 +320,7 @@
 
     add-int/lit8 v2, v2, -0x1
 
-    invoke-direct {p0, v2}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->c(I)I
+    invoke-direct {p0, v2}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->b(I)I
 
     move-result v2
 
@@ -336,7 +336,7 @@
 
     add-int/lit8 v5, v5, -0x1
 
-    invoke-direct {p0, v5}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->c(I)I
+    invoke-direct {p0, v5}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->b(I)I
 
     move-result v5
 
@@ -436,7 +436,7 @@
     :cond_0
     iput p1, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->d:I
 
-    invoke-direct {p0, p1}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->c(I)I
+    invoke-direct {p0, p1}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->b(I)I
 
     move-result v0
 
@@ -485,34 +485,6 @@
     invoke-virtual {p0}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->requestLayout()V
 
     return-void
-.end method
-
-.method public b(I)V
-    .locals 2
-
-    const/4 v0, -0x1
-
-    if-ne p1, v0, :cond_0
-
-    :goto_0
-    return-void
-
-    :cond_0
-    iput p1, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->c:I
-
-    const/4 v0, 0x0
-
-    iget v1, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->c:I
-
-    invoke-direct {p0, v1}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->c(I)I
-
-    move-result v1
-
-    invoke-virtual {p0, v0, v1}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->scrollTo(II)V
-
-    invoke-virtual {p0}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->invalidate()V
-
-    goto :goto_0
 .end method
 
 .method public computeScroll()V
@@ -590,18 +562,18 @@
     :cond_3
     if-eqz v1, :cond_4
 
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->b(I)V
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->setCurrentScreen(I)V
 
     :cond_4
-    iget-object v0, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->r:Lcom/estrongs/android/widget/bv;
+    iget-object v0, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->r:Lcom/estrongs/android/widget/bw;
 
     if-eqz v0, :cond_5
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->r:Lcom/estrongs/android/widget/bv;
+    iget-object v0, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->r:Lcom/estrongs/android/widget/bw;
 
     iget v1, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->c:I
 
-    invoke-interface {v0, v1}, Lcom/estrongs/android/widget/bv;->a(I)V
+    invoke-interface {v0, v1}, Lcom/estrongs/android/widget/bw;->a(I)V
 
     :cond_5
     iput v5, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->d:I
@@ -627,6 +599,24 @@
     move v0, v6
 
     goto :goto_1
+.end method
+
+.method public getCurrentChildIndex()I
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->getCurrentScreen()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getCurrentScreen()I
+    .locals 1
+
+    iget v0, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->c:I
+
+    return v0
 .end method
 
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
@@ -914,7 +904,7 @@
     :cond_4
     iget v0, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->c:I
 
-    invoke-direct {p0, v0}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->c(I)I
+    invoke-direct {p0, v0}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->b(I)I
 
     move-result v0
 
@@ -936,13 +926,13 @@
 
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;->onScrollChanged(IIII)V
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->r:Lcom/estrongs/android/widget/bv;
+    iget-object v0, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->r:Lcom/estrongs/android/widget/bw;
 
     if-eqz v0, :cond_0
 
     iget v0, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->c:I
 
-    invoke-direct {p0, v0}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->c(I)I
+    invoke-direct {p0, v0}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->b(I)I
 
     move-result v0
 
@@ -958,11 +948,11 @@
 
     div-float/2addr v0, v1
 
-    iget-object v1, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->r:Lcom/estrongs/android/widget/bv;
+    iget-object v1, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->r:Lcom/estrongs/android/widget/bw;
 
     iget v2, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->c:I
 
-    invoke-interface {v1, v2, v0}, Lcom/estrongs/android/widget/bv;->a(IF)V
+    invoke-interface {v1, v2, v0}, Lcom/estrongs/android/widget/bw;->a(IF)V
 
     :cond_0
     return-void
@@ -1060,7 +1050,7 @@
 
     add-int v0, v3, v4
 
-    invoke-direct {p0, v1}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->c(I)I
+    invoke-direct {p0, v1}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->b(I)I
 
     move-result v5
 
@@ -1084,7 +1074,7 @@
 
     :cond_4
     :goto_3
-    iget-object v0, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->r:Lcom/estrongs/android/widget/bv;
+    iget-object v0, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->r:Lcom/estrongs/android/widget/bw;
 
     if-eqz v0, :cond_1
 
@@ -1136,7 +1126,7 @@
     goto :goto_1
 
     :cond_7
-    invoke-direct {p0, v2}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->c(I)I
+    invoke-direct {p0, v2}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->b(I)I
 
     move-result v5
 
@@ -1163,7 +1153,7 @@
 
     add-int/lit8 v5, v5, -0x1
 
-    invoke-direct {p0, v5}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->c(I)I
+    invoke-direct {p0, v5}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->b(I)I
 
     move-result v5
 
@@ -1218,7 +1208,7 @@
 
     add-int/lit8 v5, v5, -0x1
 
-    invoke-direct {p0, v5}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->c(I)I
+    invoke-direct {p0, v5}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->b(I)I
 
     move-result v5
 
@@ -1246,7 +1236,7 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    invoke-direct {p0, v0}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->c(I)I
+    invoke-direct {p0, v0}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->b(I)I
 
     move-result v0
 
@@ -1455,6 +1445,42 @@
     invoke-direct {p0}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->g()V
 
     invoke-virtual {p0}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->requestLayout()V
+
+    return-void
+.end method
+
+.method public setCurrentScreen(I)V
+    .locals 2
+
+    const/4 v0, -0x1
+
+    if-ne p1, v0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    iput p1, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->c:I
+
+    const/4 v0, 0x0
+
+    iget v1, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->c:I
+
+    invoke-direct {p0, v1}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->b(I)I
+
+    move-result v1
+
+    invoke-virtual {p0, v0, v1}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->scrollTo(II)V
+
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/VerticalViewSwitcher;->invalidate()V
+
+    goto :goto_0
+.end method
+
+.method public setOnScreenSwitchListener(Lcom/estrongs/android/widget/bw;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/widget/VerticalViewSwitcher;->r:Lcom/estrongs/android/widget/bw;
 
     return-void
 .end method

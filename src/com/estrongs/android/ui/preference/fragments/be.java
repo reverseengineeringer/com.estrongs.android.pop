@@ -1,17 +1,18 @@
 package com.estrongs.android.ui.preference.fragments;
 
-import android.content.Intent;
 import android.preference.Preference;
-import android.preference.Preference.OnPreferenceClickListener;
+import android.preference.Preference.OnPreferenceChangeListener;
+import com.estrongs.android.pop.FexApplication;
 
 class be
-  implements Preference.OnPreferenceClickListener
+  implements Preference.OnPreferenceChangeListener
 {
-  be(WindowPreferenceFragment paramWindowPreferenceFragment) {}
+  be(SearchEnginePreferenceFragment paramSearchEnginePreferenceFragment) {}
   
-  public boolean onPreferenceClick(Preference paramPreference)
+  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
   {
-    a.startActivity(new Intent("com.estrongs.action.DEFAULT_OPEN_WINDOW_LIST"));
+    paramPreference = paramPreference.getKey();
+    FexApplication.a().a(paramPreference, paramObject);
     return true;
   }
 }

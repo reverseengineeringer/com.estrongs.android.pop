@@ -45,12 +45,6 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/e/b;->a:Lcom/estrongs/android/ui/e/a;
-
-    iget-boolean v1, v1, Lcom/estrongs/android/ui/e/a;->d:Z
-
-    if-eqz v1, :cond_1
-
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v1

@@ -1,36 +1,60 @@
 package com.estrongs.android.ui.e;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
+import android.app.Activity;
+import android.widget.LinearLayout;
 import com.estrongs.android.pop.app.PopAudioPlayer;
-import com.estrongs.android.pop.app.a.ak;
-import com.estrongs.android.pop.utils.aj;
-import com.estrongs.android.util.am;
-import com.estrongs.fs.d;
-import java.util.ArrayList;
-import java.util.List;
+import com.estrongs.android.view.a.a;
+import java.util.Map;
 
-class hy
-  implements MenuItem.OnMenuItemClickListener
+public class hy
+  extends f
 {
-  hy(hl paramhl) {}
+  private PopAudioPlayer k;
+  private iq l;
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public hy(Activity paramActivity, boolean paramBoolean, LinearLayout paramLinearLayout)
   {
-    paramMenuItem = hl.a(a).v();
-    if (paramMenuItem.size() > 0)
+    super(paramActivity, paramBoolean);
+    k();
+  }
+  
+  private void m()
+  {
+    l.d();
+  }
+  
+  public void f(int paramInt)
+  {
+    l.a(paramInt);
+    l();
+  }
+  
+  protected void h()
+  {
+    if ((b instanceof PopAudioPlayer))
     {
-      Object localObject = get0b;
-      paramMenuItem = (MenuItem)localObject;
-      if (!am.ba((String)localObject)) {
-        paramMenuItem = am.bq((String)localObject);
-      }
-      localObject = new ArrayList();
-      ((List)localObject).add(d.a().j(paramMenuItem));
-      aj.b(hl.a(a), (List)localObject);
+      k = ((PopAudioPlayer)b);
+      l = new iq(k);
+      l.e();
+      return;
     }
-    hl.a(a).u();
-    return true;
+    throw new IllegalArgumentException("Need PopAudioPlayer as the first argument");
+  }
+  
+  protected Map<String, a> i()
+  {
+    return l.c();
+  }
+  
+  protected void k()
+  {
+    m();
+    e(2131558745);
+  }
+  
+  public void l()
+  {
+    a(l.a());
   }
 }
 

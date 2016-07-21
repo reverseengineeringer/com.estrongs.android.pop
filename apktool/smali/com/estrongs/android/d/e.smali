@@ -1,126 +1,125 @@
 .class public Lcom/estrongs/android/d/e;
-.super Ljava/lang/Object;
+.super Lcom/estrongs/android/ui/dialog/ci;
 
 
-# static fields
-.field private static a:Ljava/util/HashMap;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/HashMap",
-            "<",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
+# instance fields
+.field private a:Landroid/view/View;
+
+.field private b:Z
+
+.field private c:Lcom/estrongs/android/d/h;
+
+.field private d:Landroid/widget/CheckBox;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroid/content/Context;Lcom/estrongs/android/d/h;Z)V
+    .locals 4
 
-    new-instance v0, Ljava/util/HashMap;
+    const/4 v3, 0x0
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    const/4 v2, 0x0
 
-    sput-object v0, Lcom/estrongs/android/d/e;->a:Ljava/util/HashMap;
+    invoke-direct {p0, p1}, Lcom/estrongs/android/ui/dialog/ci;-><init>(Landroid/content/Context;)V
 
-    sget-object v0, Lcom/estrongs/android/d/e;->a:Ljava/util/HashMap;
+    iput-boolean v2, p0, Lcom/estrongs/android/d/e;->b:Z
 
-    const-string v1, "tsb-wadp"
+    iput-object v3, p0, Lcom/estrongs/android/d/e;->c:Lcom/estrongs/android/d/h;
 
-    const-string v2, "net_wirelessadapter"
+    iput-object p2, p0, Lcom/estrongs/android/d/e;->c:Lcom/estrongs/android/d/h;
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
-    sget-object v0, Lcom/estrongs/android/d/e;->a:Ljava/util/HashMap;
+    move-result-object v0
 
-    const-string v1, "wirelessssd"
+    const v1, 0x7f0300b6
 
-    const-string v2, "net_wireless_ssd"
+    invoke-virtual {v0, v1, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/d/e;->a:Landroid/view/View;
+
+    iget-object v0, p0, Lcom/estrongs/android/d/e;->a:Landroid/view/View;
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/d/e;->setContentView(Landroid/view/View;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/d/e;->a:Landroid/view/View;
+
+    const v1, 0x7f0e0376
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/CheckBox;
+
+    iput-object v0, p0, Lcom/estrongs/android/d/e;->d:Landroid/widget/CheckBox;
+
+    if-nez p3, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/d/e;->d:Landroid/widget/CheckBox;
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setVisibility(I)V
+
+    :cond_0
+    const v0, 0x7f0803e9
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/estrongs/android/d/f;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/d/f;-><init>(Lcom/estrongs/android/d/e;)V
+
+    invoke-virtual {p0, v0, v1}, Lcom/estrongs/android/d/e;->setConfirmButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/widget/Button;
+
+    const v0, 0x7f080228
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/estrongs/android/d/g;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/d/g;-><init>(Lcom/estrongs/android/d/e;)V
+
+    invoke-virtual {p0, v0, v1}, Lcom/estrongs/android/d/e;->setCancelButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/widget/Button;
+
+    invoke-virtual {p0, v2}, Lcom/estrongs/android/d/e;->setCancelable(Z)V
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;)Z
-    .locals 2
+.method static synthetic a(Lcom/estrongs/android/d/e;Z)Z
+    .locals 0
 
-    invoke-static {p0}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    iput-boolean p1, p0, Lcom/estrongs/android/d/e;->b:Z
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const-string v0, "tsb-wadp"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const-string p0, "tsb-wadp"
-
-    :cond_1
-    sget-object v0, Lcom/estrongs/android/d/e;->a:Ljava/util/HashMap;
-
-    invoke-virtual {p0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    goto :goto_0
+    return p1
 .end method
 
-.method public static b(Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
 
-    invoke-static {p0}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+# virtual methods
+.method public dismiss()V
+    .locals 3
 
-    move-result v0
+    invoke-super {p0}, Lcom/estrongs/android/ui/dialog/ci;->dismiss()V
 
-    if-eqz v0, :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/d/e;->c:Lcom/estrongs/android/d/h;
 
-    const/4 v0, 0x0
+    iget-boolean v1, p0, Lcom/estrongs/android/d/e;->b:Z
 
-    :goto_0
-    return-object v0
+    iget-object v2, p0, Lcom/estrongs/android/d/e;->d:Landroid/widget/CheckBox;
 
-    :cond_0
-    const-string v0, "tsb-wadp"
+    invoke-virtual {v2}, Landroid/widget/CheckBox;->isChecked()Z
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    move-result v2
 
-    move-result v0
+    invoke-interface {v0, v1, v2}, Lcom/estrongs/android/d/h;->a(ZZ)V
 
-    if-eqz v0, :cond_1
-
-    const-string p0, "tsb-wadp"
-
-    :cond_1
-    sget-object v0, Lcom/estrongs/android/d/e;->a:Ljava/util/HashMap;
-
-    invoke-virtual {p0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    goto :goto_0
+    return-void
 .end method

@@ -1,16 +1,23 @@
 package com.estrongs.android.ui.pcs;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class ab
-  implements View.OnClickListener
+  implements DialogInterface.OnClickListener
 {
-  ab(w paramw) {}
+  ab(z paramz) {}
   
-  public void onClick(View paramView)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    w.b(a);
+    paramDialogInterface = a.c();
+    if (paramDialogInterface.equals(z.d(a))) {
+      z.e(a);
+    }
+    while ((!paramDialogInterface.equals(z.f(a))) || (!z.g(a))) {
+      return;
+    }
+    z.e(a);
   }
 }
 

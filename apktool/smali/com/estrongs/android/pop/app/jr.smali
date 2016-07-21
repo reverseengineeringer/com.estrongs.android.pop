@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
+.implements Lcom/estrongs/android/ui/e/jy;
 
 
 # instance fields
@@ -22,22 +22,22 @@
 
 
 # virtual methods
-.method public onMenuItemClick(Landroid/view/MenuItem;)Z
+.method public a()V
     .locals 2
 
-    const/4 v1, 0x1
-
     iget-object v0, p0, Lcom/estrongs/android/pop/app/jr;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->c(Lcom/estrongs/android/pop/app/PopVideoPlayer;Z)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/jr;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->D(Lcom/estrongs/android/pop/app/PopVideoPlayer;)Lcom/estrongs/android/ui/e/iw;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->f(Lcom/estrongs/android/pop/app/PopVideoPlayer;)Landroid/os/Handler;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/e/iw;->d()V
+    const/4 v1, 0x5
 
-    return v1
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
+
+    return-void
 .end method

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_select">Избери</string>
-    <string name="app_name">ES File Explorer</string>
-    <string name="app_media_player">ES Media Player</string>
-    <string name="app_note_editor">ES текстов редактор</string>
-    <string name="app_image_browser">ES разглеждане на изображения</string>
-    <string name="app_zip_viewer">ES Архиватор</string>
     <string name="app_downloader">ES изтегляне</string>
-    <string name="select_device_to_share">Изберете устройство за изпращане</string>
+    <string name="app_image_browser">ES разглеждане на изображения</string>
+    <string name="app_media_player">ES Media Player</string>
+    <string name="app_name">ES File Explorer</string>
+    <string name="app_note_editor">ES текстов редактор</string>
+    <string name="app_zip_viewer">ES Архиватор</string>
     <string name="es_share_name_activity">Изпрати по LAN</string>
     <string name="save_to_es">ES Запази в</string>
+    <string name="select_device_to_share">Изберете устройство за изпращане</string>
 </resources>

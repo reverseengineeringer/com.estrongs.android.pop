@@ -27,9 +27,9 @@
 
     iget-object v0, p0, Lcom/estrongs/fs/b/s;->a:Lcom/estrongs/fs/b/r;
 
-    iget-object v0, v0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/am;
+    iget-object v0, v0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/ao;
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/b/am;->getTaskStatus()I
+    invoke-virtual {v0}, Lcom/estrongs/fs/b/ao;->getTaskStatus()I
 
     move-result v0
 

@@ -1,12 +1,16 @@
 package com.estrongs.android.pop.esclasses;
 
-public abstract interface o
+import com.estrongs.android.ui.view.ak;
+
+class o
+  implements Runnable
 {
-  public abstract void a();
+  o(ESResourceActivity paramESResourceActivity, String paramString, int paramInt) {}
   
-  public abstract void b();
-  
-  public abstract void c();
+  public void run()
+  {
+    ak.a(c, a, b);
+  }
 }
 
 /* Location:

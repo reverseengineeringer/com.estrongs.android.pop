@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_select">Seç</string>
+    <string name="app_downloader">ES Yükləyici</string>
+    <string name="app_image_browser">ES Şəkil Göstərici</string>
+    <string name="app_media_player">ES Medya Oynadıcı</string>
+    <string name="app_name">ES Fayl Meneceri</string>
+    <string name="app_note_editor">ES Mətn Redaktoru</string>
+    <string name="app_zip_viewer">ES Zip Göstərici</string>
+    <string name="select_device_to_share">Göndərmək üçün bir cihaz seçin</string>
+    <string name="es_share_name">Yerli Şəbəkə ilə göndər</string>
+</resources>

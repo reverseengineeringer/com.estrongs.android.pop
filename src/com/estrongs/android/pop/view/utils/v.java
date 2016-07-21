@@ -1,8 +1,8 @@
 package com.estrongs.android.pop.view.utils;
 
 import android.graphics.Bitmap;
-import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.util.y;
+import android.text.TextUtils;
+import com.estrongs.android.util.aa;
 
 public class v
 {
@@ -21,12 +21,12 @@ public class v
   public String j;
   public Bitmap k = null;
   public Bitmap[] l = null;
-  public y[] m = null;
+  public aa[] m = null;
   public Bitmap[] n = null;
-  public y[] o = null;
+  public aa[] o = null;
   public boolean p = false;
   public int q = 0;
-  public y r = null;
+  public aa r = null;
   public String s;
   public long t = 0L;
   public long u = 0L;
@@ -48,10 +48,10 @@ public class v
   
   public String c()
   {
-    if ((e != null) && (e.startsWith("market://"))) {
+    if ((e != null) && ((e.startsWith("https://play.google.com/store/apps/details")) || (e.startsWith("market://details")))) {
       return e;
     }
-    if ((FexApplication.a().m()) && (C != null) && (C.length() > 0)) {
+    if (!TextUtils.isEmpty(C)) {
       return C;
     }
     return null;

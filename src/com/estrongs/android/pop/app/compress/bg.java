@@ -1,26 +1,18 @@
 package com.estrongs.android.pop.app.compress;
 
-import android.text.Editable;
-import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
-import android.widget.EditText;
-
 class bg
-  implements CompoundButton.OnCheckedChangeListener
+  implements Runnable
 {
-  bg(be parambe, int paramInt) {}
+  bg(bf parambf) {}
   
-  public void onCheckedChanged(CompoundButton paramCompoundButton, boolean paramBoolean)
+  public void run()
   {
-    if (paramBoolean) {
-      be.a(b).setInputType(144);
-    }
-    for (;;)
+    try
     {
-      be.a(b).setSelection(be.a(b).getText().length());
+      bb.e(a.a);
       return;
-      be.a(b).setInputType(a);
     }
+    catch (Exception localException) {}
   }
 }
 

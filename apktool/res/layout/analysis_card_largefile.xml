@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/analysis_filelayout" android:background="@drawable/analysis_card_bg_selector" android:paddingBottom="@dimen/dp_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_10" android:layout_marginRight="@dimen/dp_10" android:layout_marginBottom="@dimen/dp_10"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+        <TextView android:textSize="15.0dip" android:textStyle="bold" android:textColor="#ff333333" android:id="@id/file_card_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:text="" />
+        <TextView android:textSize="15.0dip" android:textStyle="bold" android:textColor="#fff24f18" android:id="@id/tv_title_number" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:text="" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/card_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="horizontal" android:id="@id/card_description_layout" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+            <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/iv_description_icon" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" />
+            <TextView android:textSize="14.0dip" android:textColor="#ff999999" android:ellipsize="end" android:id="@id/tv_card_dec" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:text="" android:maxLines="3" android:includeFontPadding="false" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/card_content_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                <com.estrongs.android.pop.esclasses.ESImageView android:gravity="center_vertical" android:id="@id/iv_largefile_first" android:layout_width="26.0dip" android:layout_height="26.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" />
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_weight="1.0">
+                    <TextView android:textSize="12.0dip" android:textColor="#ff666666" android:ellipsize="middle" android:gravity="center_vertical" android:id="@id/largefile_name_first" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:includeFontPadding="false" />
+                    <TextView android:textSize="12.0dip" android:textColor="#ffcccccc" android:ellipsize="end" android:id="@id/largefile_dir_first" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:includeFontPadding="false" />
+                </LinearLayout>
+                <TextView android:textSize="12.0dip" android:textColor="#ff666666" android:id="@id/largefile_size_first" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:text="" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_second_container" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <com.estrongs.android.pop.esclasses.ESImageView android:gravity="center_vertical" android:id="@id/iv_largefile_second" android:layout_width="26.0dip" android:layout_height="26.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_weight="1.0">
+                    <TextView android:textSize="12.0dip" android:textColor="#ff666666" android:ellipsize="middle" android:gravity="center_vertical" android:id="@id/largefile_name_second" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:includeFontPadding="false" />
+                    <TextView android:textSize="12.0dip" android:textColor="#ffcccccc" android:ellipsize="end" android:id="@id/largefile_dir_second" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:includeFontPadding="false" />
+                </LinearLayout>
+                <TextView android:textSize="12.0dip" android:textColor="#ff666666" android:id="@id/largefile_size_second" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:text="" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/try_new_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="15.0dip">
+            <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="15.0dip" android:textStyle="bold" android:textColor="@color/analysisi_btn_color" android:id="@id/action" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/analysis_card_action_detail" />
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_btn_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/arrow_blue" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/process_result_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:layout_marginBottom="15.0dip">
+        <ImageView android:gravity="center_vertical" android:id="@id/iv_complete" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="30.0dip" android:src="@drawable/complete" />
+        <TextView android:textSize="15.0dip" android:textColor="#ff666666" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/process_str" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="" android:singleLine="true" />
+    </LinearLayout>
+</LinearLayout>

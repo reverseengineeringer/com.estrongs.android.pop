@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="FloatingActionButton" parent="@style/Widget.Design.FloatingActionButton">
+        <item name="fabSize">normal</item>
+        <item name="backgroundTint">@color/float_action_button</item>
+    </style>
+</resources>

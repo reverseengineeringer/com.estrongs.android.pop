@@ -9,7 +9,7 @@
             "Ljava/util/Map",
             "<",
             "Ljava/lang/String;",
-            "Lcom/estrongs/io/archive/h;",
+            "Lcom/estrongs/io/archive/i;",
             ">;"
         }
     .end annotation
@@ -75,7 +75,7 @@
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;)Lcom/estrongs/io/archive/h;
+.method public static a(Ljava/lang/String;)Lcom/estrongs/io/archive/i;
     .locals 4
 
     sget-object v0, Lcom/estrongs/io/archive/a;->b:Ljava/util/Map;
@@ -96,12 +96,12 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/io/archive/h;
+    check-cast v0, Lcom/estrongs/io/archive/i;
 
     return-object v0
 .end method
 
-.method public static a(Ljava/lang/String;Lcom/estrongs/io/archive/h;)V
+.method public static a(Ljava/lang/String;Lcom/estrongs/io/archive/i;)V
     .locals 4
 
     sget-object v0, Lcom/estrongs/io/archive/a;->a:Ljava/util/Map;

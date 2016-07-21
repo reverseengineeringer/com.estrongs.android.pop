@@ -1,19 +1,19 @@
 package com.estrongs.android.pop.utils;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.fs.b.am;
+import android.app.Activity;
+import com.estrongs.android.ui.pcs.q;
+import com.estrongs.fs.h;
+import java.util.List;
 
-class br
-  implements DialogInterface.OnClickListener
+final class br
+  implements q
 {
-  br(bn parambn) {}
+  br(Activity paramActivity, List paramList, h paramh, boolean paramBoolean) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void a(boolean paramBoolean, String paramString1, String paramString2)
   {
-    paramDialogInterface.dismiss();
-    if ((a.a != null) && (a.a.getTaskStatus() != 4)) {
-      a.a.requestStop();
+    if (paramBoolean) {
+      ao.b(a, b, c, d);
     }
   }
 }

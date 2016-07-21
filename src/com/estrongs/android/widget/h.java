@@ -1,19 +1,21 @@
 package com.estrongs.android.widget;
 
-import com.estrongs.android.util.TypedMap;
-import com.estrongs.fs.i;
-import com.estrongs.fs.l;
-import java.util.List;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class h
-  extends l
+  implements DialogInterface.OnClickListener
 {
-  h(g paramg) {}
+  h(f paramf) {}
   
-  public List<com.estrongs.fs.h> a(com.estrongs.fs.h paramh, i parami, TypedMap paramTypedMap)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    g.a(a);
-    return a.c;
+    try
+    {
+      paramDialogInterface.dismiss();
+      return;
+    }
+    catch (Exception paramDialogInterface) {}
   }
 }
 

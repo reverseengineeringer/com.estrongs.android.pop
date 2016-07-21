@@ -273,7 +273,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b02f0
+    const v1, 0x7f080313
 
     invoke-static {v0, v1}, Lcom/estrongs/android/pop/utils/a;->a(Landroid/content/Context;I)V
 

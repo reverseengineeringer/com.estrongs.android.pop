@@ -3,7 +3,7 @@ package com.estrongs.android.pop.app.compress;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
-import com.estrongs.android.util.c;
+import com.estrongs.android.util.b;
 import com.estrongs.fs.util.j;
 import java.io.File;
 
@@ -14,7 +14,7 @@ class d
   
   public void onClick(View paramView)
   {
-    if (paramView.getId() == 2131361875)
+    if (paramView.getId() == 2131624373)
     {
       a.a(b, null);
       a.b(b).setVisibility(0);
@@ -22,19 +22,19 @@ class d
     }
     for (;;)
     {
-      if (paramView.getId() == 2131361878) {
-        new c(a.d(b), a.i(b), new e(this)).a();
+      if (paramView.getId() == 2131624376) {
+        new b(a.d(b), a.j(b), new e(this)).a();
       }
       return;
-      if (paramView.getId() == 2131361874)
+      if (paramView.getId() == 2131624372)
       {
-        a.a(b, a.k(b).getAbsoluteFile().getParentFile().getPath());
+        a.a(b, a.m(b).getAbsoluteFile().getParentFile().getPath());
         a.b(b).setVisibility(8);
         a.a(b, 1);
       }
-      else if (paramView.getId() == 2131361873)
+      else if (paramView.getId() == 2131624371)
       {
-        a.a(b, a.k(b).getAbsoluteFile().getParentFile().getPath() + "/" + j.a(a.b(b, a.k(b).getName())));
+        a.a(b, a.m(b).getAbsoluteFile().getParentFile().getPath() + "/" + j.a(a.b(b, a.m(b).getName())));
         a.b(b).setVisibility(8);
         a.a(b, 2);
       }

@@ -1,19 +1,27 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.appinfo.AppFolderInfoManager;
-import com.estrongs.android.pop.z;
-import com.estrongs.android.view.a.b;
-import com.estrongs.fs.h;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.view.ak;
 import java.util.List;
 
 class gy
-  implements b
+  implements MenuItem.OnMenuItemClickListener
 {
-  gy(cp paramcp) {}
+  gy(cr paramcr) {}
   
-  public boolean a(co paramco)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    return (!z.ap) && (e) && (F == 1) && (H) && (AppFolderInfoManager.d().c((h)b.get(0)));
+    paramMenuItem = cr.a(a);
+    if (paramMenuItem.size() == 0) {
+      ak.a(cr.b(a).getBaseContext(), 2131231551, 0);
+    }
+    for (;;)
+    {
+      return true;
+      cr.b(a).a(paramMenuItem);
+    }
   }
 }
 

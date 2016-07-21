@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/media/MediaPlayer$OnErrorListener;
+.implements Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
 
 
 # instance fields
@@ -22,105 +22,72 @@
 
 
 # virtual methods
-.method public onError(Landroid/media/MediaPlayer;II)Z
-    .locals 4
+.method public onVideoSizeChanged(Landroid/media/MediaPlayer;II)V
+    .locals 3
 
-    const/4 v3, -0x1
+    :try_start_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/an;->a:Lcom/estrongs/android/ui/view/ESVideoView;
+
+    invoke-virtual {p1}, Landroid/media/MediaPlayer;->getVideoWidth()I
+
+    move-result v1
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/ui/view/ESVideoView;->a(Lcom/estrongs/android/ui/view/ESVideoView;I)I
 
     iget-object v0, p0, Lcom/estrongs/android/ui/view/an;->a:Lcom/estrongs/android/ui/view/ESVideoView;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/ESVideoView;->l(Lcom/estrongs/android/ui/view/ESVideoView;)Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/media/MediaPlayer;->getVideoHeight()I
 
-    move-result-object v0
+    move-result v1
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Error: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ","
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/ui/view/ESVideoView;->b(Lcom/estrongs/android/ui/view/ESVideoView;I)I
 
     iget-object v0, p0, Lcom/estrongs/android/ui/view/an;->a:Lcom/estrongs/android/ui/view/ESVideoView;
 
-    invoke-static {v0, v3}, Lcom/estrongs/android/ui/view/ESVideoView;->c(Lcom/estrongs/android/ui/view/ESVideoView;I)I
+    invoke-static {v0}, Lcom/estrongs/android/ui/view/ESVideoView;->a(Lcom/estrongs/android/ui/view/ESVideoView;)I
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/an;->a:Lcom/estrongs/android/ui/view/ESVideoView;
-
-    invoke-static {v0, v3}, Lcom/estrongs/android/ui/view/ESVideoView;->d(Lcom/estrongs/android/ui/view/ESVideoView;I)I
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/an;->a:Lcom/estrongs/android/ui/view/ESVideoView;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/ESVideoView;->e(Lcom/estrongs/android/ui/view/ESVideoView;)Landroid/widget/MediaController;
-
-    move-result-object v0
+    move-result v0
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcom/estrongs/android/ui/view/an;->a:Lcom/estrongs/android/ui/view/ESVideoView;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/ESVideoView;->e(Lcom/estrongs/android/ui/view/ESVideoView;)Landroid/widget/MediaController;
+    invoke-static {v0}, Lcom/estrongs/android/ui/view/ESVideoView;->b(Lcom/estrongs/android/ui/view/ESVideoView;)I
 
-    move-result-object v0
+    move-result v0
 
-    invoke-virtual {v0}, Landroid/widget/MediaController;->hide()V
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/an;->a:Lcom/estrongs/android/ui/view/ESVideoView;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/ESVideoView;->m(Lcom/estrongs/android/ui/view/ESVideoView;)Landroid/media/MediaPlayer$OnErrorListener;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcom/estrongs/android/ui/view/an;->a:Lcom/estrongs/android/ui/view/ESVideoView;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/ESVideoView;->m(Lcom/estrongs/android/ui/view/ESVideoView;)Landroid/media/MediaPlayer$OnErrorListener;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/ESVideoView;->getHolder()Landroid/view/SurfaceHolder;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/estrongs/android/ui/view/an;->a:Lcom/estrongs/android/ui/view/ESVideoView;
 
-    invoke-static {v1}, Lcom/estrongs/android/ui/view/ESVideoView;->d(Lcom/estrongs/android/ui/view/ESVideoView;)Landroid/media/MediaPlayer;
+    invoke-static {v1}, Lcom/estrongs/android/ui/view/ESVideoView;->a(Lcom/estrongs/android/ui/view/ESVideoView;)I
 
-    move-result-object v1
+    move-result v1
 
-    invoke-interface {v0, v1, p2, p3}, Landroid/media/MediaPlayer$OnErrorListener;->onError(Landroid/media/MediaPlayer;II)Z
+    iget-object v2, p0, Lcom/estrongs/android/ui/view/an;->a:Lcom/estrongs/android/ui/view/ESVideoView;
 
-    move-result v0
+    invoke-static {v2}, Lcom/estrongs/android/ui/view/ESVideoView;->b(Lcom/estrongs/android/ui/view/ESVideoView;)I
 
-    if-eqz v0, :cond_1
+    move-result v2
 
-    const/4 v0, 0x1
+    invoke-interface {v0, v1, v2}, Landroid/view/SurfaceHolder;->setFixedSize(II)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    :cond_0
     :goto_0
-    return v0
+    return-void
 
-    :cond_1
-    const/4 v0, 0x0
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 .end method

@@ -72,62 +72,6 @@
 
 
 # virtual methods
-.method public a(I)V
-    .locals 0
-
-    iput p1, p0, Lcom/estrongs/android/ui/drag/DragActionZone;->b:I
-
-    return-void
-.end method
-
-.method public a(Landroid/graphics/drawable/Drawable;)V
-    .locals 4
-
-    const v0, 0x7f0a0186
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/drag/DragActionZone;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    invoke-virtual {p0}, Lcom/estrongs/android/ui/drag/DragActionZone;->isEnabled()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Landroid/graphics/LightingColorFilter;
-
-    const/4 v2, 0x1
-
-    const v3, -0x777778
-
-    invoke-direct {v1, v2, v3}, Landroid/graphics/LightingColorFilter;-><init>(II)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
-
-    :goto_0
-    return-void
-
-    :cond_0
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
-
-    goto :goto_0
-.end method
-
-.method public a(Lcom/estrongs/android/ui/drag/c;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/ui/drag/DragActionZone;->a:Lcom/estrongs/android/ui/drag/c;
-
-    return-void
-.end method
-
 .method public a(Lcom/estrongs/android/ui/drag/l;IIIILcom/estrongs/android/ui/drag/m;Ljava/lang/Object;)V
     .locals 1
 
@@ -427,7 +371,7 @@
 
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->setEnabled(Z)V
 
-    const v0, 0x7f0a0186
+    const v0, 0x7f0e032b
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/drag/DragActionZone;->findViewById(I)Landroid/view/View;
 
@@ -456,4 +400,60 @@
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
     goto :goto_0
+.end method
+
+.method public setImage(Landroid/graphics/drawable/Drawable;)V
+    .locals 4
+
+    const v0, 0x7f0e032b
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/drag/DragActionZone;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    invoke-virtual {p0}, Lcom/estrongs/android/ui/drag/DragActionZone;->isEnabled()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Landroid/graphics/LightingColorFilter;
+
+    const/4 v2, 0x1
+
+    const v3, -0x777778
+
+    invoke-direct {v1, v2, v3}, Landroid/graphics/LightingColorFilter;-><init>(II)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    :goto_0
+    return-void
+
+    :cond_0
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    goto :goto_0
+.end method
+
+.method public setOnDropListener(Lcom/estrongs/android/ui/drag/c;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/ui/drag/DragActionZone;->a:Lcom/estrongs/android/ui/drag/c;
+
+    return-void
+.end method
+
+.method public setPosition(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/estrongs/android/ui/drag/DragActionZone;->b:I
+
+    return-void
 .end method

@@ -1,17 +1,14 @@
 package com.estrongs.android.pop.app;
 
-import android.os.Handler;
-import android.os.Message;
-import com.estrongs.android.ui.e.ja;
-
 class jc
-  implements ja
+  implements Runnable
 {
-  jc(PopVideoPlayer paramPopVideoPlayer) {}
+  jc(PopRemoteImageBrowser paramPopRemoteImageBrowser) {}
   
-  public void a()
+  public void run()
   {
-    PopVideoPlayer.f(a).obtainMessage(5).sendToTarget();
+    PopRemoteImageBrowser.h(a);
+    je.a();
   }
 }
 

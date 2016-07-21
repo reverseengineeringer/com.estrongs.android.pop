@@ -1,30 +1,29 @@
 package com.estrongs.fs.impl.f;
 
-import com.estrongs.android.util.bd;
-import com.estrongs.fs.m;
-import java.util.Calendar;
+import com.estrongs.fs.h;
+import com.estrongs.fs.impl.local.f;
 
 public class b
-  extends com.estrongs.fs.a
+  extends com.estrongs.fs.impl.i.a
 {
-  public b(a parama)
+  private static b a;
+  
+  private b()
   {
-    StringBuilder localStringBuilder = new StringBuilder().append("flashair://flashair");
-    if (a.endsWith("/")) {}
-    for (String str = a;; str = a + "/")
-    {
-      path = (str + b);
-      absolutePath = path;
-      name = b;
-      size = bd.b(c);
-      lastModified = (e.getTimeInMillis() / 1000L * 1000L);
-      if (!parama.a()) {
-        break;
-      }
-      type = m.a;
-      return;
+    super(4);
+  }
+  
+  public static b a()
+  {
+    if (a == null) {
+      a = new b();
     }
-    type = m.b;
+    return a;
+  }
+  
+  protected h a(f paramf)
+  {
+    return new a(paramf);
   }
 }
 

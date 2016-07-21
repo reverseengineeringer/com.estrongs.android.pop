@@ -1,84 +1,60 @@
-.class final Lcom/estrongs/fs/impl/c/c;
-.super Landroid/content/BroadcastReceiver;
+.class Lcom/estrongs/fs/impl/c/c;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/io/FilenameFilter;
+
+
+# instance fields
+.field final synthetic a:Lcom/estrongs/fs/impl/c/b;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Lcom/estrongs/fs/impl/c/b;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    iput-object p1, p0, Lcom/estrongs/fs/impl/c/c;->a:Lcom/estrongs/fs/impl/c/b;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+.method public accept(Ljava/io/File;Ljava/lang/String;)Z
     .locals 2
-
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "android.bluetooth.adapter.action.STATE_CHANGED"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const-string v0, "android.bluetooth.adapter.extra.STATE"
-
-    const/16 v1, 0xa
-
-    invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v0
-
-    const/16 v1, 0xc
-
-    if-ne v0, v1, :cond_1
 
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/estrongs/android/pop/app/b/a;->a:Z
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
 
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    move-result-object v1
 
-    move-result-object v0
+    invoke-static {v1}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
 
-    if-eqz v0, :cond_0
+    move-result-object v1
 
-    invoke-static {}, Lcom/estrongs/android/pop/app/b/a;->a()Lcom/estrongs/android/pop/app/b/a;
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->q()Z
 
-    move-result-object v0
+    move-result v1
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/b/a;->e()V
+    if-eqz v1, :cond_1
 
     :cond_0
-    invoke-static {}, Lcom/estrongs/fs/impl/c/a;->f()V
+    :goto_0
+    return v0
 
-    sget-boolean v0, Lcom/estrongs/android/pop/app/b/a;->c:Z
+    :cond_1
+    const-string v1, "."
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p2, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
 
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/estrongs/android/pop/app/b/a;->c:Z
-
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->L()Z
-
-    :cond_1
-    return-void
+    goto :goto_0
 .end method

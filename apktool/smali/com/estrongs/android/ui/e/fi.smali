@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/view/a/b;
+.implements Lcom/estrongs/android/ui/pcs/q;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/e/cp;
+.field final synthetic a:Lcom/estrongs/android/ui/e/fh;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/cp;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/fh;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/fi;->a:Lcom/estrongs/android/ui/e/cp;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/fi;->a:Lcom/estrongs/android/ui/e/fh;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,20 +22,8 @@
 
 
 # virtual methods
-.method public a(Lcom/estrongs/android/ui/e/co;)Z
-    .locals 1
+.method public a(ZLjava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    iget-boolean v0, p1, Lcom/estrongs/android/ui/e/co;->l:Z
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-void
 .end method

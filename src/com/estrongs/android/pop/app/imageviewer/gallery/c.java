@@ -7,13 +7,13 @@ import android.net.Uri;
 import android.os.ParcelFileDescriptor;
 import com.estrongs.a.p;
 import com.estrongs.android.pop.a;
-import com.estrongs.android.util.am;
+import com.estrongs.android.util.ap;
 import com.estrongs.fs.FileSystemException;
 import com.estrongs.fs.b.r;
 import com.estrongs.fs.d;
 import com.estrongs.fs.h;
-import com.estrongs.fs.o;
 import com.estrongs.fs.util.j;
+import com.estrongs.fs.z;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -39,7 +39,7 @@ public class c
   {
     b = paramf;
     c = paramd;
-    if ((am.ba(paramString)) && (!paramString.startsWith("file://")))
+    if ((ap.bl(paramString)) && (!paramString.startsWith("file://")))
     {
       a = Uri.fromFile(new File(paramString));
       return;
@@ -96,10 +96,10 @@ public class c
   {
     try
     {
-      if (am.ba(a.toString())) {
+      if (ap.bl(a.toString())) {
         return ParcelFileDescriptor.open(new File(a.getPath()), 268435456);
       }
-      if (am.bb(a.toString()))
+      if (ap.bm(a.toString()))
       {
         Object localObject = e();
         if (localObject != null)
@@ -146,7 +146,7 @@ public class c
     //   6: invokespecial 150	com/estrongs/android/pop/app/imageviewer/gallery/c:q	()Landroid/os/ParcelFileDescriptor;
     //   9: astore 7
     //   11: aload 7
-    //   13: ifnull +99 -> 112
+    //   13: ifnull +95 -> 108
     //   16: iload_1
     //   17: iload_2
     //   18: aload 7
@@ -163,164 +163,160 @@ public class c
     //   41: ldc -96
     //   43: ldc -94
     //   45: aload 6
-    //   47: invokestatic 167	android/util/Log:e	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-    //   50: pop
-    //   51: aload 5
-    //   53: areturn
-    //   54: astore 5
-    //   56: ldc -96
-    //   58: ldc -87
-    //   60: aload 5
-    //   62: invokestatic 167	android/util/Log:e	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-    //   65: pop
-    //   66: aload 7
-    //   68: invokevirtual 158	android/os/ParcelFileDescriptor:close	()V
-    //   71: aconst_null
-    //   72: areturn
-    //   73: astore 5
-    //   75: ldc -96
-    //   77: ldc -94
-    //   79: aload 5
-    //   81: invokestatic 167	android/util/Log:e	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-    //   84: pop
-    //   85: aconst_null
-    //   86: areturn
-    //   87: astore 5
-    //   89: aload 7
-    //   91: invokevirtual 158	android/os/ParcelFileDescriptor:close	()V
-    //   94: aload 5
-    //   96: athrow
-    //   97: astore 6
-    //   99: ldc -96
-    //   101: ldc -94
-    //   103: aload 6
-    //   105: invokestatic 167	android/util/Log:e	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-    //   108: pop
-    //   109: goto -15 -> 94
+    //   47: invokestatic 167	com/estrongs/android/util/l:c	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    //   50: aload 5
+    //   52: areturn
+    //   53: astore 5
+    //   55: ldc -96
+    //   57: ldc -87
+    //   59: aload 5
+    //   61: invokestatic 167	com/estrongs/android/util/l:c	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    //   64: aload 7
+    //   66: invokevirtual 158	android/os/ParcelFileDescriptor:close	()V
+    //   69: aconst_null
+    //   70: areturn
+    //   71: astore 5
+    //   73: ldc -96
+    //   75: ldc -94
+    //   77: aload 5
+    //   79: invokestatic 167	com/estrongs/android/util/l:c	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    //   82: aconst_null
+    //   83: areturn
+    //   84: astore 5
+    //   86: aload 7
+    //   88: invokevirtual 158	android/os/ParcelFileDescriptor:close	()V
+    //   91: aload 5
+    //   93: athrow
+    //   94: astore 6
+    //   96: ldc -96
+    //   98: ldc -94
+    //   100: aload 6
+    //   102: invokestatic 167	com/estrongs/android/util/l:c	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    //   105: goto -14 -> 91
+    //   108: aload_0
+    //   109: getfield 43	com/estrongs/android/pop/app/imageviewer/gallery/c:c	Lcom/estrongs/fs/d;
     //   112: aload_0
-    //   113: getfield 43	com/estrongs/android/pop/app/imageviewer/gallery/c:c	Lcom/estrongs/fs/d;
-    //   116: aload_0
-    //   117: invokevirtual 127	com/estrongs/android/pop/app/imageviewer/gallery/c:d	()Ljava/lang/String;
-    //   120: invokevirtual 172	com/estrongs/fs/d:e	(Ljava/lang/String;)Ljava/io/InputStream;
-    //   123: astore 5
-    //   125: aload 5
-    //   127: ifnull -91 -> 36
-    //   130: aload 5
-    //   132: astore 6
-    //   134: aload_0
-    //   135: getfield 174	com/estrongs/android/pop/app/imageviewer/gallery/c:e	Landroid/graphics/BitmapFactory$Options;
-    //   138: ifnonnull +31 -> 169
-    //   141: aload_0
-    //   142: aload_0
-    //   143: aload 5
-    //   145: invokespecial 176	com/estrongs/android/pop/app/imageviewer/gallery/c:a	(Ljava/io/InputStream;)Landroid/graphics/BitmapFactory$Options;
-    //   148: putfield 174	com/estrongs/android/pop/app/imageviewer/gallery/c:e	Landroid/graphics/BitmapFactory$Options;
-    //   151: aload 5
-    //   153: invokestatic 181	com/estrongs/fs/util/j:a	(Ljava/io/InputStream;)V
+    //   113: invokevirtual 127	com/estrongs/android/pop/app/imageviewer/gallery/c:d	()Ljava/lang/String;
+    //   116: invokevirtual 172	com/estrongs/fs/d:e	(Ljava/lang/String;)Ljava/io/InputStream;
+    //   119: astore 5
+    //   121: aload 5
+    //   123: ifnull -87 -> 36
+    //   126: aload 5
+    //   128: astore 6
+    //   130: aload_0
+    //   131: getfield 174	com/estrongs/android/pop/app/imageviewer/gallery/c:e	Landroid/graphics/BitmapFactory$Options;
+    //   134: ifnonnull +31 -> 165
+    //   137: aload_0
+    //   138: aload_0
+    //   139: aload 5
+    //   141: invokespecial 176	com/estrongs/android/pop/app/imageviewer/gallery/c:a	(Ljava/io/InputStream;)Landroid/graphics/BitmapFactory$Options;
+    //   144: putfield 174	com/estrongs/android/pop/app/imageviewer/gallery/c:e	Landroid/graphics/BitmapFactory$Options;
+    //   147: aload 5
+    //   149: invokestatic 181	com/estrongs/fs/util/j:a	(Ljava/io/InputStream;)V
+    //   152: aload_0
+    //   153: getfield 43	com/estrongs/android/pop/app/imageviewer/gallery/c:c	Lcom/estrongs/fs/d;
     //   156: aload_0
-    //   157: getfield 43	com/estrongs/android/pop/app/imageviewer/gallery/c:c	Lcom/estrongs/fs/d;
-    //   160: aload_0
-    //   161: invokevirtual 127	com/estrongs/android/pop/app/imageviewer/gallery/c:d	()Ljava/lang/String;
-    //   164: invokevirtual 172	com/estrongs/fs/d:e	(Ljava/lang/String;)Ljava/io/InputStream;
-    //   167: astore 6
-    //   169: aload_0
-    //   170: invokevirtual 127	com/estrongs/android/pop/app/imageviewer/gallery/c:d	()Ljava/lang/String;
-    //   173: invokestatic 184	com/estrongs/android/util/am:J	(Ljava/lang/String;)Z
-    //   176: pop
-    //   177: aload_0
-    //   178: invokevirtual 127	com/estrongs/android/pop/app/imageviewer/gallery/c:d	()Ljava/lang/String;
-    //   181: invokestatic 187	com/estrongs/android/util/am:aV	(Ljava/lang/String;)Z
-    //   184: pop
+    //   157: invokevirtual 127	com/estrongs/android/pop/app/imageviewer/gallery/c:d	()Ljava/lang/String;
+    //   160: invokevirtual 172	com/estrongs/fs/d:e	(Ljava/lang/String;)Ljava/io/InputStream;
+    //   163: astore 6
+    //   165: aload_0
+    //   166: invokevirtual 127	com/estrongs/android/pop/app/imageviewer/gallery/c:d	()Ljava/lang/String;
+    //   169: invokestatic 184	com/estrongs/android/util/ap:L	(Ljava/lang/String;)Z
+    //   172: pop
+    //   173: aload_0
+    //   174: invokevirtual 127	com/estrongs/android/pop/app/imageviewer/gallery/c:d	()Ljava/lang/String;
+    //   177: invokestatic 187	com/estrongs/android/util/ap:bg	(Ljava/lang/String;)Z
+    //   180: pop
+    //   181: aload_0
+    //   182: getfield 174	com/estrongs/android/pop/app/imageviewer/gallery/c:e	Landroid/graphics/BitmapFactory$Options;
     //   185: aload_0
     //   186: getfield 174	com/estrongs/android/pop/app/imageviewer/gallery/c:e	Landroid/graphics/BitmapFactory$Options;
-    //   189: aload_0
-    //   190: getfield 174	com/estrongs/android/pop/app/imageviewer/gallery/c:e	Landroid/graphics/BitmapFactory$Options;
-    //   193: sipush 800
-    //   196: invokestatic 189	com/estrongs/android/pop/app/imageviewer/gallery/c:a	(Landroid/graphics/BitmapFactory$Options;I)I
-    //   199: putfield 192	android/graphics/BitmapFactory$Options:inSampleSize	I
-    //   202: aload_0
-    //   203: getfield 174	com/estrongs/android/pop/app/imageviewer/gallery/c:e	Landroid/graphics/BitmapFactory$Options;
-    //   206: iconst_0
-    //   207: putfield 94	android/graphics/BitmapFactory$Options:inJustDecodeBounds	Z
-    //   210: aload_0
-    //   211: getfield 174	com/estrongs/android/pop/app/imageviewer/gallery/c:e	Landroid/graphics/BitmapFactory$Options;
-    //   214: astore 5
-    //   216: getstatic 197	com/estrongs/android/pop/z:x	Z
-    //   219: ifne +5 -> 224
-    //   222: iconst_1
-    //   223: istore_3
-    //   224: aload 5
-    //   226: iload_3
-    //   227: putfield 200	android/graphics/BitmapFactory$Options:inPurgeable	Z
-    //   230: aload 6
-    //   232: aconst_null
-    //   233: aload_0
-    //   234: getfield 174	com/estrongs/android/pop/app/imageviewer/gallery/c:e	Landroid/graphics/BitmapFactory$Options;
-    //   237: invokestatic 100	android/graphics/BitmapFactory:decodeStream	(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-    //   240: astore 5
-    //   242: aload 6
-    //   244: invokestatic 181	com/estrongs/fs/util/j:a	(Ljava/io/InputStream;)V
-    //   247: aload 5
-    //   249: areturn
-    //   250: astore 5
-    //   252: aload 5
-    //   254: invokevirtual 203	com/estrongs/fs/FileSystemException:printStackTrace	()V
-    //   257: aconst_null
-    //   258: astore 5
-    //   260: goto -135 -> 125
-    //   263: astore 6
-    //   265: aload 6
-    //   267: invokevirtual 203	com/estrongs/fs/FileSystemException:printStackTrace	()V
-    //   270: aload 5
-    //   272: astore 6
-    //   274: goto -105 -> 169
-    //   277: astore 5
-    //   279: aload 6
-    //   281: invokestatic 181	com/estrongs/fs/util/j:a	(Ljava/io/InputStream;)V
-    //   284: aconst_null
-    //   285: astore 5
-    //   287: goto -40 -> 247
-    //   290: astore 5
-    //   292: aload 6
-    //   294: invokestatic 181	com/estrongs/fs/util/j:a	(Ljava/io/InputStream;)V
-    //   297: aload 5
-    //   299: athrow
+    //   189: sipush 800
+    //   192: invokestatic 189	com/estrongs/android/pop/app/imageviewer/gallery/c:a	(Landroid/graphics/BitmapFactory$Options;I)I
+    //   195: putfield 192	android/graphics/BitmapFactory$Options:inSampleSize	I
+    //   198: aload_0
+    //   199: getfield 174	com/estrongs/android/pop/app/imageviewer/gallery/c:e	Landroid/graphics/BitmapFactory$Options;
+    //   202: iconst_0
+    //   203: putfield 94	android/graphics/BitmapFactory$Options:inJustDecodeBounds	Z
+    //   206: aload_0
+    //   207: getfield 174	com/estrongs/android/pop/app/imageviewer/gallery/c:e	Landroid/graphics/BitmapFactory$Options;
+    //   210: astore 5
+    //   212: getstatic 197	com/estrongs/android/pop/z:x	Z
+    //   215: ifne +5 -> 220
+    //   218: iconst_1
+    //   219: istore_3
+    //   220: aload 5
+    //   222: iload_3
+    //   223: putfield 200	android/graphics/BitmapFactory$Options:inPurgeable	Z
+    //   226: aload 6
+    //   228: aconst_null
+    //   229: aload_0
+    //   230: getfield 174	com/estrongs/android/pop/app/imageviewer/gallery/c:e	Landroid/graphics/BitmapFactory$Options;
+    //   233: invokestatic 100	android/graphics/BitmapFactory:decodeStream	(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    //   236: astore 5
+    //   238: aload 6
+    //   240: invokestatic 181	com/estrongs/fs/util/j:a	(Ljava/io/InputStream;)V
+    //   243: aload 5
+    //   245: areturn
+    //   246: astore 5
+    //   248: aload 5
+    //   250: invokevirtual 203	com/estrongs/fs/FileSystemException:printStackTrace	()V
+    //   253: aconst_null
+    //   254: astore 5
+    //   256: goto -135 -> 121
+    //   259: astore 6
+    //   261: aload 6
+    //   263: invokevirtual 203	com/estrongs/fs/FileSystemException:printStackTrace	()V
+    //   266: aload 5
+    //   268: astore 6
+    //   270: goto -105 -> 165
+    //   273: astore 5
+    //   275: aload 6
+    //   277: invokestatic 181	com/estrongs/fs/util/j:a	(Ljava/io/InputStream;)V
+    //   280: aconst_null
+    //   281: astore 5
+    //   283: goto -40 -> 243
+    //   286: astore 5
+    //   288: aload 6
+    //   290: invokestatic 181	com/estrongs/fs/util/j:a	(Ljava/io/InputStream;)V
+    //   293: aload 5
+    //   295: athrow
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	300	0	this	c
-    //   0	300	1	paramInt1	int
-    //   0	300	2	paramInt2	int
-    //   0	300	3	paramBoolean1	boolean
-    //   0	300	4	paramBoolean2	boolean
-    //   25	27	5	localBitmap	Bitmap
-    //   54	7	5	localException	Exception
-    //   73	7	5	localIOException1	java.io.IOException
-    //   87	8	5	localObject1	Object
-    //   123	125	5	localObject2	Object
-    //   250	3	5	localFileSystemException1	FileSystemException
-    //   258	13	5	localObject3	Object
-    //   277	1	5	localOutOfMemoryError	OutOfMemoryError
-    //   285	1	5	localObject4	Object
-    //   290	8	5	localObject5	Object
+    //   0	296	0	this	c
+    //   0	296	1	paramInt1	int
+    //   0	296	2	paramInt2	int
+    //   0	296	3	paramBoolean1	boolean
+    //   0	296	4	paramBoolean2	boolean
+    //   25	26	5	localBitmap	Bitmap
+    //   53	7	5	localException	Exception
+    //   71	7	5	localIOException1	java.io.IOException
+    //   84	8	5	localObject1	Object
+    //   119	125	5	localObject2	Object
+    //   246	3	5	localFileSystemException1	FileSystemException
+    //   254	13	5	localObject3	Object
+    //   273	1	5	localOutOfMemoryError	OutOfMemoryError
+    //   281	1	5	localObject4	Object
+    //   286	8	5	localObject5	Object
     //   3	34	6	localObject6	Object
     //   39	7	6	localIOException2	java.io.IOException
-    //   97	7	6	localIOException3	java.io.IOException
-    //   132	111	6	localObject7	Object
-    //   263	3	6	localFileSystemException2	FileSystemException
-    //   272	21	6	localObject8	Object
-    //   9	81	7	localParcelFileDescriptor	ParcelFileDescriptor
+    //   94	7	6	localIOException3	java.io.IOException
+    //   128	111	6	localObject7	Object
+    //   259	3	6	localFileSystemException2	FileSystemException
+    //   268	21	6	localObject8	Object
+    //   9	78	7	localParcelFileDescriptor	ParcelFileDescriptor
     // Exception table:
     //   from	to	target	type
     //   27	32	39	java/io/IOException
-    //   16	27	54	java/lang/Exception
-    //   66	71	73	java/io/IOException
-    //   16	27	87	finally
-    //   56	66	87	finally
-    //   89	94	97	java/io/IOException
-    //   112	125	250	com/estrongs/fs/FileSystemException
-    //   156	169	263	com/estrongs/fs/FileSystemException
-    //   230	242	277	java/lang/OutOfMemoryError
-    //   230	242	290	finally
+    //   16	27	53	java/lang/Exception
+    //   64	69	71	java/io/IOException
+    //   16	27	84	finally
+    //   55	64	84	finally
+    //   86	91	94	java/io/IOException
+    //   108	121	246	com/estrongs/fs/FileSystemException
+    //   152	165	259	com/estrongs/fs/FileSystemException
+    //   226	238	273	java/lang/OutOfMemoryError
+    //   226	238	286	finally
   }
   
   public Bitmap a(boolean paramBoolean)
@@ -348,7 +344,7 @@ public class c
   
   public String c()
   {
-    return am.E(d());
+    return ap.G(d());
   }
   
   public String d()
@@ -361,14 +357,14 @@ public class c
   
   public File e()
   {
-    File localFile = new File(a.d + "/remoteimg");
+    File localFile = new File(a.f + "/remoteimg");
     if (!localFile.exists()) {
       localFile.mkdirs();
     }
     localFile = new File(localFile, d().hashCode() + "-" + r() + "." + j.b(d()));
     if (!localFile.exists())
     {
-      r localr = new r(c, new o(d()), new o(localFile.getParentFile().getAbsolutePath()), localFile.getName());
+      r localr = new r(c, new z(d()), new z(localFile.getParentFile().getAbsolutePath()), localFile.getName());
       localr.execute(false);
       if (getTaskResulta != 0) {
         localFile.delete();

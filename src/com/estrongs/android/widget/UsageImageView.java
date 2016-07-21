@@ -57,18 +57,12 @@ public class UsageImageView
     RelativeLayout.LayoutParams localLayoutParams = new RelativeLayout.LayoutParams(-1, -1);
     addView(a, localLayoutParams);
     addView(b, localLayoutParams);
-    c = e.getResources().getDrawable(2130837607);
-    d = e.getResources().getDrawable(2130837608);
+    c = e.getResources().getDrawable(2130837847);
+    d = e.getResources().getDrawable(2130837848);
     g = (d.getIntrinsicWidth() / 2);
     a.setBackgroundDrawable(c);
     b.setBackgroundDrawable(d);
     f = 0.0F;
-  }
-  
-  public void a(float paramFloat)
-  {
-    f = paramFloat;
-    invalidate();
   }
   
   protected void dispatchDraw(Canvas paramCanvas)
@@ -79,6 +73,12 @@ public class UsageImageView
     paramCanvas.clipRect(a(paramCanvas.getClipBounds()), Region.Op.INTERSECT);
     b.draw(paramCanvas);
     paramCanvas.restoreToCount(i);
+  }
+  
+  public void setRate(float paramFloat)
+  {
+    f = paramFloat;
+    invalidate();
   }
 }
 

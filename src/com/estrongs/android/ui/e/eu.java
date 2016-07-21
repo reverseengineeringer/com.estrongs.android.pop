@@ -1,20 +1,19 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.pop.z;
 import com.estrongs.android.view.a.b;
 
 class eu
   implements b
 {
-  eu(cp paramcp) {}
+  eu(cr paramcr) {}
   
-  public boolean a(co paramco)
+  public boolean a(cp paramcp)
   {
-    if (z.Z) {}
-    while ((!e) && ((!f) || (d))) {
-      return false;
+    if (((e) || (L) || (I) || (J) || (K) || (H) || (l)) && (N == 1) && ((Q) || (R))) {}
+    while (((n) || (B)) && (N == 1)) {
+      return true;
     }
-    return true;
+    return false;
   }
 }
 

@@ -1,27 +1,17 @@
 package com.estrongs.android.ui.preference.fragments;
 
-import com.estrongs.android.util.bc;
-import com.estrongs.fs.h;
-import com.estrongs.fs.i;
-import com.estrongs.fs.m;
+import android.app.Activity;
+import com.estrongs.android.pop.FexApplication;
 
 class o
-  implements i
+  implements Runnable
 {
-  o(n paramn, boolean paramBoolean) {}
+  o(n paramn) {}
   
-  public boolean a(h paramh)
+  public void run()
   {
-    if (paramh.getFileType().a()) {
-      if ((!paramh.getName().startsWith(".")) || (a)) {}
-    }
-    do
-    {
-      return false;
-      return true;
-      paramh = paramh.getName();
-    } while (paramh == null);
-    return bc.j(paramh);
+    FexApplication.a().a("restoresettings", null);
+    a.c.a.getActivity().finish();
   }
 }
 

@@ -1,19 +1,18 @@
 package com.estrongs.android.pop.app.editor;
 
-import com.estrongs.a.a;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnTouchListener;
 
 class s
-  extends a
+  implements View.OnTouchListener
 {
-  s(r paramr) {}
+  s(PopNoteEditor paramPopNoteEditor) {}
   
-  public boolean task()
+  public boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    PopNoteEditor.w(a.b);
-    PopNoteEditor.v(a.b).a(a.a);
-    PopNoteEditor.a(a.b, null);
-    a.b.finish();
-    return true;
+    a.d();
+    return false;
   }
 }
 

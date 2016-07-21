@@ -23,21 +23,83 @@
 
 # virtual methods
 .method public onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
-    .locals 1
+    .locals 3
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    move-object v0, p2
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/hc;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->c(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)Landroid/preference/Preference$OnPreferenceChangeListener;
+    invoke-static {v0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Landroid/preference/Preference$OnPreferenceChangeListener;->onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->H()Ljava/lang/String;
 
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    :cond_0
     iget-object v0, p0, Lcom/estrongs/android/pop/app/hc;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->finish()V
+    const/16 v1, 0x6c
 
-    const/4 v0, 0x1
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->showDialog(I)V
 
+    move v0, v2
+
+    :goto_0
     return v0
+
+    :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/hc;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->p:Landroid/preference/Preference;
+
+    invoke-virtual {v0, v1}, Landroid/preference/Preference;->setEnabled(Z)V
+
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+
+    move-result-object v0
+
+    check-cast p2, Ljava/lang/Boolean;
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/pop/FexApplication;->c(Z)V
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/hc;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+
+    const/16 v1, 0x6d
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->showDialog(I)V
+
+    move v0, v2
+
+    goto :goto_0
 .end method

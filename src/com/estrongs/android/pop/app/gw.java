@@ -1,16 +1,31 @@
 package com.estrongs.android.pop.app;
 
-import com.estrongs.android.util.be;
+import android.content.Intent;
+import android.preference.Preference;
+import android.preference.Preference.OnPreferenceClickListener;
+import com.estrongs.android.ui.dialog.cv;
+import com.estrongs.android.util.an;
 
 class gw
-  implements Runnable
+  implements Preference.OnPreferenceClickListener
 {
-  gw(gv paramgv) {}
+  gw(PopPreferenceActivity paramPopPreferenceActivity) {}
   
-  public void run()
+  public boolean onPreferenceClick(Preference paramPreference)
   {
-    be.c().h();
-    be.c().i();
+    if (an.d())
+    {
+      paramPreference = new Intent();
+      paramPreference.setClassName(a.getPackageName(), PrivacyActivity.class.getName());
+      a.startActivity(paramPreference);
+    }
+    for (;;)
+    {
+      return true;
+      paramPreference = new cv(a);
+      paramPreference.a(a.getText(2131231714)).b(a.getText(2131232382)).a(2131231270, new gx(this));
+      paramPreference.c();
+    }
   }
 }
 

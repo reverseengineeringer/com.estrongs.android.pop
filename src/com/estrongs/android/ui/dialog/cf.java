@@ -1,19 +1,18 @@
 package com.estrongs.android.ui.dialog;
 
-import android.app.Activity;
-import com.estrongs.a.a;
-import com.estrongs.a.a.l;
-import com.estrongs.a.a.m;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.view.cr;
 
 class cf
-  implements l
+  implements Runnable
 {
-  cf(by paramby) {}
+  cf(ce paramce, FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void a(a parama, m paramm)
+  public void run()
   {
-    if ((e > 0L) && (g > 0L)) {
-      by.a(a, by.d(a).getString(2131428611) + String.valueOf((int)by.a(a, h, e)) + "%", false);
+    cr localcr = a.O();
+    if ((localcr != null) && (!localcr.p())) {
+      localcr.b(true);
     }
   }
 }

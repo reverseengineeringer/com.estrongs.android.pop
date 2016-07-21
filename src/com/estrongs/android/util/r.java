@@ -1,14 +1,29 @@
 package com.estrongs.android.util;
 
-import java.io.File;
-import java.util.Comparator;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.fs.util.j;
 
-final class r
-  implements Comparator<File>
+public class r
 {
-  public int a(File paramFile1, File paramFile2)
+  public static final boolean a(boolean paramBoolean, String paramString1, String paramString2)
   {
-    return q.a(paramFile1.getName(), paramFile1.isDirectory(), true).compareToIgnoreCase(q.a(paramFile2.getName(), paramFile2.isDirectory(), true));
+    if ((ap.aG(paramString1)) && (ap.d(paramString1, "mediafire"))) {
+      if (paramBoolean)
+      {
+        if (paramString2.length() < 3)
+        {
+          ak.a(FexApplication.a(), FexApplication.a().getString(2131231695), 0);
+          return false;
+        }
+      }
+      else if (!j.b(paramString1).equals(j.b(paramString2)))
+      {
+        ak.a(FexApplication.a(), FexApplication.a().getString(2131231694), 0);
+        return false;
+      }
+    }
+    return true;
   }
 }
 

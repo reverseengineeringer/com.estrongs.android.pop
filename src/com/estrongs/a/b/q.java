@@ -3,7 +3,7 @@ package com.estrongs.a.b;
 import com.estrongs.fs.FileSystemException;
 import com.estrongs.fs.d;
 import com.estrongs.fs.h;
-import com.estrongs.fs.m;
+import com.estrongs.fs.w;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +18,7 @@ class q
     ArrayList localArrayList = new ArrayList();
     localArrayList.add(paramh);
     a = new r(localArrayList);
-    if (((h)a.a.get(0)).getFileType() == m.a)
+    if (((h)a.a.get(0)).getFileType() == w.a)
     {
       b = a(a);
       return;
@@ -72,7 +72,7 @@ class q
       }
       else
       {
-        if ((!b.b) && (((h)b.a.get(i)).getFileType() == m.a))
+        if ((!b.b) && (((h)b.a.get(i)).getFileType() == w.a))
         {
           localh = (h)b.a.get(i);
           b.b = true;

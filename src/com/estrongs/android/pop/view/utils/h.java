@@ -9,7 +9,7 @@ final class h
   
   public void run()
   {
-    AppRunner.s(a, b);
+    AppRunner.t(a, b);
   }
 }
 

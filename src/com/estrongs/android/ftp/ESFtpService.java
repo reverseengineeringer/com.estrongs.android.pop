@@ -8,9 +8,11 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Handler;
 import android.os.IBinder;
+import com.estrongs.android.j.c;
 import com.estrongs.android.pop.ad;
 import com.estrongs.android.pop.app.ShowDialogActivity;
-import com.estrongs.android.util.l;
+import com.estrongs.android.pop.esclasses.i;
+import com.estrongs.android.util.k;
 import java.net.InetAddress;
 
 public class ESFtpService
@@ -20,12 +22,13 @@ public class ESFtpService
   Handler a = new e(this);
   d b = new f(this);
   private final IBinder c = new g(this);
-  private int e = 0;
+  private c e = null;
+  private int f = 0;
   
   private String a(int paramInt)
   {
     Resources localResources = getResources();
-    String str2 = com.estrongs.android.pop.esclasses.e.b(paramInt);
+    String str2 = i.b(paramInt);
     String str1 = str2;
     if (str2 == null) {
       str1 = (String)localResources.getText(paramInt);
@@ -68,30 +71,43 @@ public class ESFtpService
         if ((a.e() == null) || (d))
         {
           localNotificationManager.cancel(37219999);
-          e = 0;
+          f = 0;
           return;
         }
         Notification localNotification = new Notification();
-        tickerText = a(2131427655);
+        tickerText = a(2131231863);
         when = System.currentTimeMillis();
         if (paramInt == 0) {
-          icon = 2130837669;
+          icon = 2130837929;
         }
         for (;;)
         {
           flags |= 0x2;
-          String str = a(2131427655);
-          Intent localIntent = new Intent(this, ShowDialogActivity.class);
-          localIntent.putExtra("stop_ftp_server", true);
-          localNotification.setLatestEventInfo(this, str, paramString, PendingIntent.getActivity(this, 0, localIntent, 268435456));
-          localNotificationManager.notify(37219999, localNotification);
-          return;
-          if (paramInt == 1) {
-            icon = 2130837668;
-          } else if (paramInt == 2) {
-            icon = 2130837670;
-          } else if (paramInt == 3) {
-            icon = 2130837671;
+          String str = a(2131231863);
+          e = c.a(this);
+          try
+          {
+            e.d("act3");
+            e.a("act3", "remote_manager");
+            Intent localIntent = new Intent(this, ShowDialogActivity.class);
+            localIntent.putExtra("stop_ftp_server", true);
+            localNotification.setLatestEventInfo(this, str, paramString, PendingIntent.getActivity(this, 0, localIntent, 268435456));
+            localNotificationManager.notify(37219999, localNotification);
+            return;
+            if (paramInt == 1) {
+              icon = 2130837928;
+            } else if (paramInt == 2) {
+              icon = 2130837930;
+            } else if (paramInt == 3) {
+              icon = 2130837931;
+            }
+          }
+          catch (Exception localException)
+          {
+            for (;;)
+            {
+              localException.printStackTrace();
+            }
           }
         }
       }
@@ -120,7 +136,7 @@ public class ESFtpService
   {
     a.j();
     d();
-    l.b();
+    k.b();
   }
   
   public int c()
@@ -128,7 +144,7 @@ public class ESFtpService
     if (a.e() == null) {
       return 1;
     }
-    a.f = ad.a(this).W();
+    a.f = ad.a(this).X();
     int i = a.e().a(this);
     if (i == 0) {}
     for (;;)
@@ -141,10 +157,10 @@ public class ESFtpService
         if (locala == null) {
           continue;
         }
-        String str = com.estrongs.android.pop.esclasses.e.b(2131427645);
+        String str = i.b(2131232064);
         localObject = str;
         if (str == null) {
-          localObject = (String)getText(2131427645);
+          localObject = (String)getText(2131232064);
         }
         localObject = (String)localObject + "ftp:/" + locala.g().toString() + ":" + locala.h() + "/";
       }
@@ -159,10 +175,10 @@ public class ESFtpService
         continue;
       }
       a(0, (String)localObject);
-      e = 0;
-      l.a();
+      f = 0;
+      k.a();
       return i;
-      localObject = a(2131427657) + "...";
+      localObject = a(2131231865) + "...";
     }
   }
   
@@ -171,7 +187,7 @@ public class ESFtpService
     try
     {
       ((NotificationManager)getSystemService("notification")).cancel(37219999);
-      e = 0;
+      f = 0;
       return;
     }
     catch (Exception localException)
@@ -205,7 +221,7 @@ public class ESFtpService
     d = false;
     try
     {
-      com.estrongs.android.pop.esclasses.e.a(this);
+      i.a(this);
       return;
     }
     catch (Exception localException) {}

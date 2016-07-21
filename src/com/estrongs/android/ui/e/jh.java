@@ -1,19 +1,18 @@
 package com.estrongs.android.ui.e;
 
-import android.content.Context;
-import com.estrongs.android.view.a.a;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.app.PopAudioPlayer;
 
 class jh
-  extends ck
+  implements MenuItem.OnMenuItemClickListener
 {
-  jh(jc paramjc, Context paramContext, int paramInt)
-  {
-    super(paramContext, paramInt);
-  }
+  jh(iq paramiq) {}
   
-  public void a(int paramInt, a parama)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    b.d();
+    iq.a(a).F();
+    return true;
   }
 }
 

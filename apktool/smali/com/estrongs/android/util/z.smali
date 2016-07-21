@@ -1,30 +1,23 @@
-.class Lcom/estrongs/android/util/z;
-.super Ljava/lang/Thread;
+.class public interface abstract Lcom/estrongs/android/util/z;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field final synthetic a:Lcom/estrongs/android/util/y;
-
-
-# direct methods
-.method constructor <init>(Lcom/estrongs/android/util/y;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/util/z;->a:Lcom/estrongs/android/util/y;
-
-    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
-
-    return-void
-.end method
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
 
 
 # virtual methods
-.method public run()V
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/util/z;->a:Lcom/estrongs/android/util/y;
-
-    invoke-static {v0}, Lcom/estrongs/android/util/y;->a(Lcom/estrongs/android/util/y;)V
-
-    return-void
+.method public abstract a(Ljava/lang/Object;)Z
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)Z"
+        }
+    .end annotation
 .end method

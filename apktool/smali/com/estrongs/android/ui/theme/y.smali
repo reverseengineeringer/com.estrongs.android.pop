@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/ui/view/a;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -22,14 +22,18 @@
 
 
 # virtual methods
-.method public a(I)V
+.method public onClick(Landroid/view/View;)V
     .locals 2
 
     iget-object v0, p0, Lcom/estrongs/android/ui/theme/y;->a:Lcom/estrongs/android/ui/theme/ThemeColorActivity;
 
-    const/4 v1, 0x1
+    invoke-static {v0}, Lcom/estrongs/android/ui/theme/ThemeColorActivity;->a(Lcom/estrongs/android/ui/theme/ThemeColorActivity;)Lcom/estrongs/android/ui/view/ColorPickerView;
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/ui/theme/ThemeColorActivity;->a(Lcom/estrongs/android/ui/theme/ThemeColorActivity;Z)Z
+    move-result-object v0
+
+    const/high16 v1, -0x1000000
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/ColorPickerView;->setColor(I)V
 
     return-void
 .end method

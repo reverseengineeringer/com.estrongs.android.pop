@@ -1,23 +1,27 @@
 package android.support.v4.widget;
 
-import android.content.Context;
-import android.graphics.Canvas;
+import android.content.res.ColorStateList;
+import android.graphics.PorterDuff.Mode;
+import android.graphics.drawable.Drawable;
+import android.widget.CompoundButton;
 
-abstract interface i
+class i
+  implements j
 {
-  public abstract Object a(Context paramContext);
+  public Drawable a(CompoundButton paramCompoundButton)
+  {
+    return m.a(paramCompoundButton);
+  }
   
-  public abstract void a(Object paramObject, int paramInt1, int paramInt2);
+  public void a(CompoundButton paramCompoundButton, ColorStateList paramColorStateList)
+  {
+    m.a(paramCompoundButton, paramColorStateList);
+  }
   
-  public abstract boolean a(Object paramObject);
-  
-  public abstract boolean a(Object paramObject, float paramFloat);
-  
-  public abstract boolean a(Object paramObject, Canvas paramCanvas);
-  
-  public abstract void b(Object paramObject);
-  
-  public abstract boolean c(Object paramObject);
+  public void a(CompoundButton paramCompoundButton, PorterDuff.Mode paramMode)
+  {
+    m.a(paramCompoundButton, paramMode);
+  }
 }
 
 /* Location:

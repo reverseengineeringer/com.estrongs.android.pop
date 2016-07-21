@@ -13,7 +13,7 @@ class do
   public void onClick(View paramView)
   {
     paramView = a.a.getIntent();
-    AppRunner.a(a.a, ImageCommentActivity.c(a.a), paramView.getStringExtra("pic_abs_path"), false);
+    AppRunner.a(a.a, ImageCommentActivity.b(a.a), paramView.getStringExtra("pic_abs_path"), false);
   }
 }
 

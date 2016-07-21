@@ -1,12 +1,12 @@
 .class public Lcom/estrongs/android/pop/app/compress/CompressionProxyActivity;
-.super Lcom/estrongs/android/pop/esclasses/ESActivity;
+.super Lcom/estrongs/android/pop/esclasses/ESResourceActivity;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;-><init>()V
 
     return-void
 .end method
@@ -16,7 +16,7 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 3
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;->onCreate(Landroid/os/Bundle;)V
 
     sget-boolean v0, Lcom/estrongs/android/pop/z;->t:Z
 

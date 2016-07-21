@@ -1,45 +1,27 @@
 package com.baidu.mobstat;
 
 import android.content.Context;
-import com.baidu.mobstat.util.b;
-import com.baidu.mobstat.util.e;
-import java.io.File;
 
 class al
-  extends Thread
+  implements Runnable
 {
-  private Context a;
-  private File b;
-  
-  public al(Context paramContext, File paramFile)
-  {
-    a = paramContext;
-    b = paramFile;
-  }
+  al(ak paramak, String paramString, Context paramContext) {}
   
   public void run()
   {
-    for (int i = 3;; i = 10)
+    try
     {
-      try
-      {
-        if (!b.b) {
-          continue;
-        }
-        e.a(new Object[] { "start version check in ", Integer.valueOf(i), "s" });
-        sleep(i * 1000);
-        ak.a(a, b);
+      ak.a(c, a);
+      if (b == null) {
+        return;
       }
-      catch (Exception localException)
-      {
-        for (;;)
-        {
-          e.a(localException);
-        }
-      }
-      ak.a(a, false);
-      ak.a(a, System.currentTimeMillis());
+      Context localContext = b.getApplicationContext();
+      ak.a(c, localContext);
       return;
+    }
+    catch (Throwable localThrowable)
+    {
+      bb.b(localThrowable);
     }
   }
 }

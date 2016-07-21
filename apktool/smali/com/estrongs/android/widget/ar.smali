@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/DialogInterface$OnDismissListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/widget/ao;
+.field final synthetic a:Lcom/estrongs/android/widget/ap;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/widget/ao;)V
+.method constructor <init>(Lcom/estrongs/android/widget/ap;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/widget/ar;->a:Lcom/estrongs/android/widget/ao;
+    iput-object p1, p0, Lcom/estrongs/android/widget/ar;->a:Lcom/estrongs/android/widget/ap;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,16 +22,14 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
+.method public onDismiss(Landroid/content/DialogInterface;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/ar;->a:Lcom/estrongs/android/widget/ao;
+    iget-object v0, p0, Lcom/estrongs/android/widget/ar;->a:Lcom/estrongs/android/widget/ap;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/ao;->b()Lcom/estrongs/android/view/cd;
+    iget-object v0, v0, Lcom/estrongs/android/widget/ap;->e:Lcom/estrongs/android/view/eb;
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/view/cd;->j()Lcom/estrongs/fs/h;
+    invoke-virtual {v0}, Lcom/estrongs/android/view/eb;->i_()V
 
     return-void
 .end method

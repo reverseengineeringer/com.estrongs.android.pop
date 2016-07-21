@@ -1,5 +1,8 @@
 package com.estrongs.android.pop.app.imageviewer;
 
+import com.estrongs.android.pop.app.imageviewer.gallery.e;
+import com.estrongs.android.pop.app.imageviewer.gallery.f;
+
 class bw
   implements Runnable
 {
@@ -7,7 +10,9 @@ class bw
   
   public void run()
   {
-    ViewImage21.s(a);
+    e locale = a.e.a(a.c);
+    ViewImage21.f(a).b(locale);
+    new bx(this, locale).start();
   }
 }
 

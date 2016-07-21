@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/io/archive/e;
+.implements Lcom/estrongs/io/archive/f;
 
 
 # instance fields
@@ -27,7 +27,7 @@
 
     new-instance v1, Ljava/io/BufferedOutputStream;
 
-    invoke-static {p1}, Lcom/estrongs/fs/impl/local/h;->f(Ljava/lang/String;)Ljava/io/OutputStream;
+    invoke-static {p1}, Lcom/estrongs/fs/impl/local/i;->f(Ljava/lang/String;)Ljava/io/OutputStream;
 
     move-result-object v2
 

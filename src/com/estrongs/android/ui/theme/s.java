@@ -1,24 +1,26 @@
 package com.estrongs.android.ui.theme;
 
-import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.Intent;
-import com.estrongs.android.ui.a.db;
+import android.os.Handler;
+import com.estrongs.android.j.c;
+import com.estrongs.android.ui.dialog.ip;
 
 class s
-  extends BroadcastReceiver
+  extends al
 {
-  private String b;
+  s(ThemeActivity paramThemeActivity) {}
   
-  public void onReceive(Context paramContext, Intent paramIntent)
+  public void a(Context paramContext, Handler paramHandler)
   {
-    paramContext = paramIntent.getAction();
-    if ((paramContext.equals("android.intent.action.PACKAGE_ADDED")) || (paramContext.equals("android.intent.action.INSTALL_PACKAGE")))
+    new ip(paramContext).a();
+    try
     {
-      paramContext = paramIntent.getDataString().substring("package:".length());
-      if (b.equals(paramContext)) {
-        ThemeActivity.c(a).a(b);
-      }
+      c.a(a).a("theme_pro");
+      return;
+    }
+    catch (Exception paramContext)
+    {
+      paramContext.printStackTrace();
     }
   }
 }

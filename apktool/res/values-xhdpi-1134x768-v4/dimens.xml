@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="charge_remain_time_margin_top">44.0dip</dimen>
+    <dimen name="lock_screen_battery_margin_bottom">250.0dip</dimen>
+    <dimen name="lock_screen_battery_margin_top">40.0dip</dimen>
+    <item type="dimen" name="lock_screen_info_area_sd_card_ratio_value">73</item>
+    <dimen name="lock_screen_remain_time_width_for_arabic">132.0dip</dimen>
+    <dimen name="lock_screen_charge_content_margin_bottom">17.0dip</dimen>
+    <dimen name="lock_screen_ads_area_cover">53.0dip</dimen>
+    <dimen name="lock_screen_ads_area_margin_bottom_max">108.0dip</dimen>
+    <dimen name="lock_screen_ads_area_shade">12.0dip</dimen>
+</resources>

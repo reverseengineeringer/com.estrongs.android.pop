@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/e/w;
+.field final synthetic a:Lcom/estrongs/android/ui/e/m;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/w;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/m;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/bc;->a:Lcom/estrongs/android/ui/e/w;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/bc;->a:Lcom/estrongs/android/ui/e/m;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,42 +23,29 @@
 
 # virtual methods
 .method public onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 5
+    .locals 3
 
-    const/4 v4, 0x0
+    new-instance v0, Landroid/content/Intent;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/bc;->a:Lcom/estrongs/android/ui/e/w;
+    iget-object v1, p0, Lcom/estrongs/android/ui/e/bc;->a:Lcom/estrongs/android/ui/e/m;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/w;->k:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-static {v1}, Lcom/estrongs/android/ui/e/m;->a(Lcom/estrongs/android/ui/e/m;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->y()Lcom/estrongs/android/view/aw;
+    move-result-object v1
 
-    move-result-object v0
+    const-class v2, Lcom/estrongs/android/ui/preference/RecyclePreference;
 
-    instance-of v1, v0, Lcom/estrongs/android/view/WebViewWrapper;
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    if-eqz v1, :cond_0
+    iget-object v1, p0, Lcom/estrongs/android/ui/e/bc;->a:Lcom/estrongs/android/ui/e/m;
 
-    check-cast v0, Lcom/estrongs/android/view/WebViewWrapper;
+    invoke-static {v1}, Lcom/estrongs/android/ui/e/m;->a(Lcom/estrongs/android/ui/e/m;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    new-instance v1, Lcom/estrongs/android/ui/dialog/fc;
+    move-result-object v1
 
-    iget-object v2, p0, Lcom/estrongs/android/ui/e/bc;->a:Lcom/estrongs/android/ui/e/w;
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->startActivity(Landroid/content/Intent;)V
 
-    iget-object v2, v2, Lcom/estrongs/android/ui/e/w;->k:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/view/WebViewWrapper;->at()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v0}, Lcom/estrongs/android/view/WebViewWrapper;->c()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v2, v4, v3, v0}, Lcom/estrongs/android/ui/dialog/fc;-><init>(Landroid/content/Context;ZLjava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Lcom/estrongs/android/ui/dialog/fc;->a()V
-
-    :cond_0
-    return v4
+    return v0
 .end method

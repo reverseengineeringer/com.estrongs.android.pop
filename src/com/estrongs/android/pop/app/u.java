@@ -1,20 +1,15 @@
 package com.estrongs.android.pop.app;
 
-class u
-  implements Runnable
+import android.os.Binder;
+
+public class u
+  extends Binder
 {
-  u(t paramt) {}
+  public u(AudioPlayerService paramAudioPlayerService) {}
   
-  public void run()
+  public AudioPlayerService a()
   {
-    if (!r.a(a.a).f()) {
-      a.a.dismiss();
-    }
-    while (a.a.isDismissed()) {
-      return;
-    }
-    r.e(a.a);
-    r.f(a.a);
+    return a;
   }
 }
 

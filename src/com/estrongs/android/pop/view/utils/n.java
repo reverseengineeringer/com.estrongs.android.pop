@@ -21,16 +21,16 @@ import com.estrongs.android.pop.ad;
 import com.estrongs.android.pop.app.BrowserDownloaderActivity;
 import com.estrongs.android.pop.app.DownloaderActivity;
 import com.estrongs.android.pop.app.PopChromecastPlayer;
-import com.estrongs.android.pop.app.aa;
-import com.estrongs.android.pop.esclasses.e;
+import com.estrongs.android.pop.app.ag;
+import com.estrongs.android.pop.esclasses.i;
 import com.estrongs.android.pop.netfs.utils.HttpUtils;
 import com.estrongs.android.pop.utils.w;
 import com.estrongs.android.pop.view.FileExplorerActivity;
 import com.estrongs.android.pop.z;
-import com.estrongs.android.util.ak;
-import com.estrongs.android.util.bc;
-import com.estrongs.android.util.bd;
-import com.estrongs.android.util.y;
+import com.estrongs.android.util.aa;
+import com.estrongs.android.util.an;
+import com.estrongs.android.util.bg;
+import com.estrongs.android.util.bk;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.ByteArrayInputStream;
@@ -60,39 +60,63 @@ import org.json.simple.parser.JSONParser;
 
 public class n
 {
-  public static final String b = e + "/recomm_items";
-  private static int c = 0;
-  private static String d = null;
-  private static final String e = a.f;
-  private static final String f = e + "/icons";
-  private static final String g = e + "/thumbnail_pics";
-  private static final String h = e + "/pics";
-  private static final String i = e + "/apks";
-  private static final String j = e + "/recomm_items_download_status";
-  private static int n = -1;
-  private static String[] o = { DownloaderActivity.class.getName(), BrowserDownloaderActivity.class.getName(), FileExplorerActivity.class.getName() };
-  private static v[] q = null;
-  private static n t = null;
-  private static HashMap<String, u> u = new HashMap();
-  private static boolean v = false;
-  private static String w = "PreferActivity";
+  private static n C = null;
+  private static HashMap<String, u> D = new HashMap();
+  private static boolean E = false;
+  private static String F = "PreferActivity";
+  public static final String b;
+  public static final String c;
+  private static int d = 0;
+  private static String e = null;
+  private static final String f = a.h;
+  private static final String g;
+  private static final String h;
+  private static final String i;
+  private static final String j;
+  private static final String k;
+  private static int o;
+  private static String[] p;
+  private static v[] r;
+  private static Object s;
+  private boolean A = false;
+  private boolean B = false;
   long a = 0L;
-  private String k = null;
   private String l = null;
-  private boolean m = false;
-  private boolean p = false;
-  private Object r = new Object();
-  private Handler s = null;
+  private String m = null;
+  private boolean n = false;
+  private boolean q = false;
+  private Object t = new Object();
+  private Handler u = null;
+  private int v = 0;
+  private int w = 1;
+  private int x = 20;
+  private int y = 0;
+  private long z = -1L;
+  
+  static
+  {
+    b = f + "/recomm_items";
+    c = f + "/recomm_items_abroad";
+    g = f + "/icons";
+    h = f + "/thumbnail_pics";
+    i = f + "/pics";
+    j = f + "/apks";
+    k = f + "/recomm_items_download_status";
+    o = -1;
+    p = new String[] { DownloaderActivity.class.getName(), BrowserDownloaderActivity.class.getName(), FileExplorerActivity.class.getName() };
+    r = null;
+    s = new Object();
+  }
   
   public static u a(Context arg0, String paramString)
   {
-    if ((!v) && (d(???))) {
-      v = true;
+    if ((!E) && (d(???))) {
+      E = true;
     }
     String str = paramString.toLowerCase(Locale.getDefault());
-    synchronized (u)
+    synchronized (D)
     {
-      paramString = (u)u.get(str);
+      paramString = (u)D.get(str);
       ??? = paramString;
       if (paramString == null)
       {
@@ -111,7 +135,7 @@ public class n
   
   public static String a(String paramString)
   {
-    return i + "/" + paramString + ".apk";
+    return j + "/" + paramString + ".apk";
   }
   
   private static List<ResolveInfo> a(PackageManager paramPackageManager, String paramString)
@@ -155,14 +179,14 @@ public class n
   
   public static void a(Activity paramActivity)
   {
-    synchronized (u)
+    synchronized (D)
     {
-      u.clear();
+      D.clear();
       paramActivity = paramActivity.getFilesDir();
       if (paramActivity == null) {
         return;
       }
-      paramActivity = new File(paramActivity.getAbsolutePath() + '/' + w);
+      paramActivity = new File(paramActivity.getAbsolutePath() + '/' + F);
       if (paramActivity.exists()) {
         paramActivity.delete();
       }
@@ -172,38 +196,42 @@ public class n
   
   public static void a(Activity paramActivity, String paramString, u paramu)
   {
-    localHashMap = u;
+    localHashMap = D;
     if (paramu == null) {}
     for (;;)
     {
       try
       {
-        u.remove(paramString.toLowerCase(Locale.getDefault()));
+        D.remove(paramString.toLowerCase(Locale.getDefault()));
         b(paramActivity);
         return;
       }
       finally {}
-      paramString = (u)u.put(paramString.toLowerCase(Locale.getDefault()), paramu);
+      paramString = (u)D.put(paramString.toLowerCase(Locale.getDefault()), paramu);
     }
   }
   
   public static void a(v paramv)
   {
-    String str = f + "/icon_" + f.hashCode();
-    if (new File(str).exists()) {
+    String str = g + "/icon_" + f.hashCode();
+    if (new File(str).exists()) {}
+    try
+    {
+      if (k != null) {
+        k.recycle();
+      }
       k = BitmapFactory.decodeFile(str);
+      return;
+    }
+    catch (Exception localException)
+    {
+      for (;;) {}
     }
   }
   
-  private void a(y paramy)
+  private void a(aa paramaa)
   {
-    paramy = (v)d;
-    String str = b;
-    if (str == null) {
-      return;
-    }
-    new y("http://www.estrongs.com/channel?aid=" + str).c();
-    y = true;
+    d((v)d);
   }
   
   private void a(v[] paramArrayOfv)
@@ -217,7 +245,7 @@ public class n
       Object localObject3;
       try
       {
-        localObject1 = new File(j);
+        localObject1 = new File(k);
         localHashMap1 = new HashMap();
         localHashMap2 = new HashMap();
         try
@@ -339,7 +367,7 @@ public class n
           i3 += 1;
           break;
           int i4 = 0;
-          Object localObject1 = o;
+          Object localObject1 = p;
           int i6 = localObject1.length;
           int i1 = 0;
           int i2 = i4;
@@ -393,7 +421,7 @@ public class n
       for (;;)
       {
         if (i2 >= i4) {
-          break label491;
+          break label493;
         }
         if (((t)localArrayList.get(i2)).a(localt) == 0)
         {
@@ -407,7 +435,7 @@ public class n
           i1 += 1;
           break label91;
           label321:
-          localObject2 = localObject2.toString();
+          localObject2 = ((CharSequence)localObject2).toString();
           localObject1 = localObject2;
           break label145;
           localObject2 = "android.intent.action.VIEW";
@@ -418,14 +446,14 @@ public class n
     }
     try
     {
-      if ((!bd.a(paramString)) && (aa.b()) && ((bc.f(paramString)) || (bc.c(paramString))))
+      if ((!bk.a(paramString)) && (ag.b()) && ((bg.f(paramString)) || (bg.c(paramString))))
       {
         paramPackageManager = new t();
         c = paramContext.getPackageName();
         d = PopChromecastPlayer.class.getName();
-        a = paramContext.getResources().getDrawable(2130837726);
+        a = paramContext.getResources().getDrawable(2130837992);
         e = "android.intent.action.VIEW";
-        b = paramContext.getString(2131428533);
+        b = paramContext.getString(2131231425);
         localArrayList.add(paramPackageManager);
       }
     }
@@ -448,22 +476,13 @@ public class n
   {
     try
     {
-      if (t == null) {
-        t = new n();
+      if (C == null) {
+        C = new n();
       }
-      n localn = t;
+      n localn = C;
       return localn;
     }
     finally {}
-  }
-  
-  private static String b(String paramString)
-  {
-    int i1 = paramString.lastIndexOf('.');
-    if (i1 == -1) {
-      return paramString;
-    }
-    return paramString.substring(0, i1) + "_s" + paramString.substring(i1);
   }
   
   private static void b(Activity arg0)
@@ -472,16 +491,16 @@ public class n
     if (??? == null) {
       return;
     }
-    ??? = new File(???.getAbsolutePath() + '/' + w);
+    ??? = new File(???.getAbsolutePath() + '/' + F);
     if (???.exists()) {
       ???.delete();
     }
     try
     {
       BufferedWriter localBufferedWriter = new BufferedWriter(new FileWriter(???));
-      synchronized (u)
+      synchronized (D)
       {
-        Iterator localIterator = u.entrySet().iterator();
+        Iterator localIterator = D.entrySet().iterator();
         if (localIterator.hasNext())
         {
           Object localObject2 = (Map.Entry)localIterator.next();
@@ -505,39 +524,79 @@ public class n
   
   public static void b(v paramv, int paramInt)
   {
-    String str = h + "/" + f.hashCode() + "/" + d[paramInt];
-    if (new File(str).exists()) {
+    String str = i + "/" + f.hashCode() + "/" + d[paramInt];
+    if (new File(str).exists()) {}
+    try
+    {
+      if (n[paramInt] != null) {
+        n[paramInt].recycle();
+      }
       n[paramInt] = BitmapFactory.decodeFile(str);
+      return;
+    }
+    catch (Exception localException)
+    {
+      for (;;) {}
     }
   }
   
-  private int c(String paramString)
+  private static String c(String paramString)
+  {
+    int i1 = paramString.lastIndexOf('.');
+    if (i1 == -1) {
+      return paramString;
+    }
+    return paramString.substring(0, i1) + "_s" + paramString.substring(i1);
+  }
+  
+  public static void c(v paramv, int paramInt)
+  {
+    String str = h + "/" + f.hashCode() + "/" + c(d[paramInt]);
+    if (new File(str).exists()) {}
+    try
+    {
+      if (l[paramInt] != null) {
+        l[paramInt].recycle();
+      }
+      l[paramInt] = BitmapFactory.decodeFile(str);
+      return;
+    }
+    catch (Exception localException)
+    {
+      for (;;) {}
+    }
+  }
+  
+  private int d(String paramString)
   {
     paramString = new File(paramString);
     int i1;
-    Object localObject4;
+    Object localObject5;
     try
     {
       if (!paramString.exists()) {
         return -1;
       }
       i1 = Long.valueOf(paramString.length()).intValue();
-      localObject3 = new byte[i1];
+      if (i1 == 0) {
+        return -1;
+      }
+      ??? = new byte[i1];
       Object localObject1 = new RandomAccessFile(paramString, "r");
-      ((RandomAccessFile)localObject1).read((byte[])localObject3, 0, i1);
+      ((RandomAccessFile)localObject1).read((byte[])???, 0, i1);
       ((RandomAccessFile)localObject1).close();
       localObject1 = new ByteArrayOutputStream();
-      localObject3 = new InflaterInputStream(new ByteArrayInputStream((byte[])localObject3));
-      localObject4 = new byte['Ѐ'];
+      ??? = new InflaterInputStream(new ByteArrayInputStream((byte[])???));
+      localObject5 = new byte['Ѐ'];
       for (;;)
       {
-        i1 = ((InflaterInputStream)localObject3).read((byte[])localObject4, 0, 1024);
+        i1 = ((InflaterInputStream)???).read((byte[])localObject5, 0, 1024);
         if (i1 <= 0) {
           break;
         }
-        ((ByteArrayOutputStream)localObject1).write((byte[])localObject4, 0, i1);
+        ((ByteArrayOutputStream)localObject1).write((byte[])localObject5, 0, i1);
       }
-      ((InflaterInputStream)localObject3).close();
+      ((InflaterInputStream)???).close();
     }
     catch (Exception localException)
     {
@@ -545,49 +604,49 @@ public class n
       paramString.delete();
       return -1;
     }
-    Object localObject3 = new String(localException.toByteArray());
+    ??? = new String(localException.toByteArray());
     localException.close();
-    Object localObject2 = new JSONParser().parse((String)localObject3);
-    k = ((String)((Map)localObject2).get("channel_title"));
-    l = ((String)((Map)localObject2).get("pic_url"));
-    localObject3 = (String)((Map)localObject2).get("hash_code");
-    if ((d != null) && (d.equals(localObject3)) && (q != null)) {
+    Object localObject2 = new JSONParser().parse((String)???);
+    l = ((String)((Map)localObject2).get("channel_title"));
+    m = ((String)((Map)localObject2).get("pic_url"));
+    ??? = (String)((Map)localObject2).get("hash_code");
+    if ((e != null) && (e.equals(???)) && (r != null)) {
       return 0;
     }
-    d = (String)localObject3;
-    localObject3 = ((Map)localObject2).get("content");
-    label732:
+    e = (String)???;
+    ??? = ((Map)localObject2).get("content");
+    label738:
     boolean bool;
-    label861:
-    label886:
+    label867:
+    label899:
     int i2;
-    if ((localObject3 instanceof JSONArray))
+    if ((??? instanceof JSONArray))
     {
-      localObject2 = new v[((JSONArray)localObject3).size()];
-      localObject3 = ((JSONArray)localObject3).iterator();
+      localObject2 = new v[((JSONArray)???).size()];
+      ??? = ((JSONArray)???).iterator();
       i1 = 0;
-      if (((Iterator)localObject3).hasNext())
+      if (((Iterator)???).hasNext())
       {
-        localObject4 = ((Iterator)localObject3).next();
+        localObject5 = ((Iterator)???).next();
         v localv = new v();
-        a = ((String)((Map)localObject4).get("icon"));
-        c = ((String)((Map)localObject4).get("title"));
-        d = ((String)((Map)localObject4).get("pic")).split(",");
+        a = ((String)((Map)localObject5).get("icon"));
+        c = ((String)((Map)localObject5).get("title"));
+        d = ((String)((Map)localObject5).get("pic")).split(",");
         l = new Bitmap[d.length];
-        m = new y[d.length];
+        m = new aa[d.length];
         n = new Bitmap[d.length];
-        o = new y[d.length];
-        s = ((String)((Map)localObject4).get("size"));
-        b = ((String)((Map)localObject4).get("aid"));
-        f = ((String)((Map)localObject4).get("package"));
-        e = ((String)((Map)localObject4).get("url"));
-        g = ((String)((Map)localObject4).get("shortDesc"));
-        h = ((String)((Map)localObject4).get("longDesc"));
-        i = ((String)((Map)localObject4).get("version"));
-        j = ((String)((Map)localObject4).get("types"));
-        A = HttpUtils.getInt(localObject4, "flags");
-        C = ((String)((Map)localObject4).get("market_url"));
-        B = ((String)((Map)localObject4).get("alias_name"));
+        o = new aa[d.length];
+        s = ((String)((Map)localObject5).get("size"));
+        b = ((String)((Map)localObject5).get("aid"));
+        f = ((String)((Map)localObject5).get("package"));
+        e = ((String)((Map)localObject5).get("url"));
+        g = ((String)((Map)localObject5).get("shortDesc"));
+        h = ((String)((Map)localObject5).get("longDesc"));
+        i = ((String)((Map)localObject5).get("version"));
+        j = ((String)((Map)localObject5).get("types"));
+        A = HttpUtils.getInt(localObject5, "flags");
+        C = ((String)((Map)localObject5).get("market_url"));
+        B = ((String)((Map)localObject5).get("alias_name"));
         if (j == null)
         {
           if ((f.equalsIgnoreCase("cn.wps.moffice_eng")) || (f.equalsIgnoreCase("cn.wps.moffice"))) {
@@ -597,16 +656,16 @@ public class n
         else
         {
           v = b(localv);
-          if (HttpUtils.getInt(localObject4, "show") != 0) {
-            break label861;
+          if (HttpUtils.getInt(localObject5, "show") != 0) {
+            break label867;
           }
           w = false;
         }
         for (;;)
         {
-          x = HttpUtils.getInt(localObject4, "vcode");
-          if (HttpUtils.getInt(localObject4, "root_recomm") != 1) {
-            break label1126;
+          x = HttpUtils.getInt(localObject5, "vcode");
+          if (HttpUtils.getInt(localObject5, "root_recomm") != 1) {
+            break label1250;
           }
           bool = true;
           z = bool;
@@ -614,70 +673,92 @@ public class n
           i1 += 1;
           break;
           if ((!f.equalsIgnoreCase("com.uc.browser")) && (!f.equalsIgnoreCase("com.uc.browser.hd")) && (!f.equalsIgnoreCase("com.uc.browser.en"))) {
-            break label732;
+            break label738;
           }
           j = "text/plain;text/html";
-          break label732;
+          break label738;
           if (e == null) {
             w = false;
           }
         }
       }
-      if (q != null)
+      if ((r != null) && (B))
       {
         i1 = 0;
         if (i1 >= localObject2.length) {
-          break label1104;
+          break label1117;
         }
         i2 = 0;
       }
     }
     for (;;)
     {
-      if (i2 < q.length)
+      if (i2 < r.length)
       {
-        if (!qf.equals(f)) {
-          break label1139;
+        if (!rf.equals(f)) {
+          break label1263;
         }
-        k = qk;
-        if (Arrays.equals(d, qd))
+        k = rk;
+        if (Arrays.equals(d, rd))
         {
-          n = qn;
-          o = qo;
-          l = ql;
-          m = qm;
+          n = rn;
+          o = ro;
+          l = rl;
+          m = rm;
         }
-        p = qp;
-        q = qq;
-        r = qr;
-        t = qt;
-        u = qu;
-        break label1132;
+        p = rp;
+        q = rq;
+        r = rr;
+        t = rt;
+        u = ru;
+        break label1256;
         a((v[])localObject2);
-        label1104:
-        if ((localObject2.length != 0) && (!p)) {
-          q = (v[])localObject2;
+        label1117:
+        if ((localObject2.length == 0) || (q)) {
+          break label1270;
         }
-        return 1;
+        for (;;)
+        {
+          synchronized (s)
+          {
+            if (!B)
+            {
+              r = (v[])localObject2;
+              v = r.length;
+              break;
+            }
+            if (r == null) {
+              r = (v[])localObject2;
+            }
+          }
+          localObject5 = new v[r.length - v + localObject3.length];
+          System.arraycopy(localObject3, 0, localObject5, 0, localObject3.length);
+          System.arraycopy(r, v, localObject5, localObject3.length, r.length - v);
+          r = (v[])localObject5;
+        }
         return -1;
-        label1126:
+        label1250:
         bool = false;
         break;
       }
-      label1132:
+      label1256:
       i1 += 1;
-      break label886;
-      label1139:
+      break label899;
+      label1263:
       i2 += 1;
     }
+    label1270:
+    return 1;
   }
   
-  public static void c(v paramv, int paramInt)
+  public static void d(v paramv)
   {
-    String str = g + "/" + f.hashCode() + "/" + b(d[paramInt]);
-    if (new File(str).exists()) {
-      l[paramInt] = BitmapFactory.decodeFile(str);
+    String str = b;
+    if (str == null) {
+      return;
     }
+    new aa("http://www.estrongs.com/channel?aid=" + str).c();
+    y = true;
   }
   
   private static boolean d(Context arg0)
@@ -691,22 +772,22 @@ public class n
         if (??? == null) {
           return false;
         }
-        ??? = new File(???.getAbsolutePath() + '/' + w);
+        ??? = new File(???.getAbsolutePath() + '/' + F);
         if (!???.exists()) {
           return true;
         }
         DataInputStream localDataInputStream = new DataInputStream(new FileInputStream(???));
         BufferedReader localBufferedReader = new BufferedReader(new InputStreamReader(localDataInputStream));
-        synchronized (u)
+        synchronized (D)
         {
-          u.clear();
+          D.clear();
           localObject2 = localBufferedReader.readLine();
           if (localObject2 == null) {
             break;
           }
           localObject2 = ((String)localObject2).split("######");
           if (3 == localObject2.length) {
-            u.put(localObject2[0], new u(localObject2[1], localObject2[2], null));
+            D.put(localObject2[0], new u(localObject2[1], localObject2[2], null));
           }
         }
         if (4 != localObject2.length) {
@@ -717,13 +798,13 @@ public class n
       {
         return false;
       }
-      u.put(localObject2[0], new u(localObject2[1], localObject2[2], localObject2[3]));
+      D.put(localObject2[0], new u(localObject2[1], localObject2[2], localObject2[3]));
     }
     ((DataInputStream)localObject1).close();
     return true;
   }
   
-  private boolean f(v paramv)
+  private boolean g(v paramv)
   {
     if (!w) {}
     do
@@ -739,7 +820,7 @@ public class n
     return true;
   }
   
-  private void g(v paramv)
+  private void h(v paramv)
   {
     File localFile = new File(a(f));
     switch (q)
@@ -777,16 +858,16 @@ public class n
   
   private static boolean i()
   {
-    if (-1 == n) {
-      if (!bd.o()) {
+    if (-1 == o) {
+      if (!bk.o()) {
         break label28;
       }
     }
     label28:
     for (int i1 = 1;; i1 = 0)
     {
-      n = i1;
-      if (1 != n) {
+      o = i1;
+      if (1 != o) {
         break;
       }
       return true;
@@ -800,90 +881,90 @@ public class n
     // Byte code:
     //   0: aload_0
     //   1: monitorenter
-    //   2: getstatic 105	com/estrongs/android/pop/view/utils/n:q	[Lcom/estrongs/android/pop/view/utils/v;
+    //   2: getstatic 118	com/estrongs/android/pop/view/utils/n:r	[Lcom/estrongs/android/pop/view/utils/v;
     //   5: astore 4
     //   7: aload 4
     //   9: ifnonnull +6 -> 15
     //   12: aload_0
     //   13: monitorexit
     //   14: return
-    //   15: new 255	java/io/File
+    //   15: new 286	java/io/File
     //   18: dup
-    //   19: getstatic 86	com/estrongs/android/pop/view/utils/n:j	Ljava/lang/String;
-    //   22: invokespecial 264	java/io/File:<init>	(Ljava/lang/String;)V
+    //   19: getstatic 99	com/estrongs/android/pop/view/utils/n:k	Ljava/lang/String;
+    //   22: invokespecial 295	java/io/File:<init>	(Ljava/lang/String;)V
     //   25: astore 4
     //   27: aload 4
-    //   29: invokevirtual 270	java/io/File:delete	()Z
+    //   29: invokevirtual 301	java/io/File:delete	()Z
     //   32: pop
-    //   33: new 546	java/io/BufferedWriter
+    //   33: new 565	java/io/BufferedWriter
     //   36: dup
-    //   37: new 548	java/io/FileWriter
+    //   37: new 567	java/io/FileWriter
     //   40: dup
     //   41: aload 4
-    //   43: invokespecial 549	java/io/FileWriter:<init>	(Ljava/io/File;)V
-    //   46: invokespecial 552	java/io/BufferedWriter:<init>	(Ljava/io/Writer;)V
+    //   43: invokespecial 568	java/io/FileWriter:<init>	(Ljava/io/File;)V
+    //   46: invokespecial 571	java/io/BufferedWriter:<init>	(Ljava/io/Writer;)V
     //   49: astore 5
     //   51: iconst_0
     //   52: istore_1
     //   53: iload_1
-    //   54: getstatic 105	com/estrongs/android/pop/view/utils/n:q	[Lcom/estrongs/android/pop/view/utils/v;
+    //   54: getstatic 118	com/estrongs/android/pop/view/utils/n:r	[Lcom/estrongs/android/pop/view/utils/v;
     //   57: arraylength
     //   58: if_icmpge +116 -> 174
-    //   61: getstatic 105	com/estrongs/android/pop/view/utils/n:q	[Lcom/estrongs/android/pop/view/utils/v;
+    //   61: getstatic 118	com/estrongs/android/pop/view/utils/n:r	[Lcom/estrongs/android/pop/view/utils/v;
     //   64: iload_1
     //   65: aaload
-    //   66: getfield 293	com/estrongs/android/pop/view/utils/v:f	Ljava/lang/String;
+    //   66: getfield 326	com/estrongs/android/pop/view/utils/v:f	Ljava/lang/String;
     //   69: astore 6
-    //   71: new 52	java/lang/StringBuilder
+    //   71: new 61	java/lang/StringBuilder
     //   74: dup
-    //   75: invokespecial 55	java/lang/StringBuilder:<init>	()V
-    //   78: ldc_w 407
-    //   81: invokevirtual 59	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   84: getstatic 105	com/estrongs/android/pop/view/utils/n:q	[Lcom/estrongs/android/pop/view/utils/v;
+    //   75: invokespecial 64	java/lang/StringBuilder:<init>	()V
+    //   78: ldc_w 436
+    //   81: invokevirtual 68	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   84: getstatic 118	com/estrongs/android/pop/view/utils/n:r	[Lcom/estrongs/android/pop/view/utils/v;
     //   87: iload_1
     //   88: aaload
-    //   89: getfield 374	com/estrongs/android/pop/view/utils/v:q	I
-    //   92: invokevirtual 299	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   95: invokevirtual 65	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   89: getfield 403	com/estrongs/android/pop/view/utils/v:q	I
+    //   92: invokevirtual 332	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
+    //   95: invokevirtual 74	java/lang/StringBuilder:toString	()Ljava/lang/String;
     //   98: astore 4
-    //   100: getstatic 105	com/estrongs/android/pop/view/utils/n:q	[Lcom/estrongs/android/pop/view/utils/v;
+    //   100: getstatic 118	com/estrongs/android/pop/view/utils/n:r	[Lcom/estrongs/android/pop/view/utils/v;
     //   103: iload_1
     //   104: aaload
-    //   105: getfield 376	com/estrongs/android/pop/view/utils/v:t	J
+    //   105: getfield 405	com/estrongs/android/pop/view/utils/v:t	J
     //   108: lstore_2
     //   109: lload_2
     //   110: lconst_0
     //   111: lcmp
     //   112: ifgt +8 -> 120
-    //   115: ldc_w 774
+    //   115: ldc_w 811
     //   118: astore 4
     //   120: aload 5
-    //   122: new 52	java/lang/StringBuilder
+    //   122: new 61	java/lang/StringBuilder
     //   125: dup
-    //   126: invokespecial 55	java/lang/StringBuilder:<init>	()V
+    //   126: invokespecial 64	java/lang/StringBuilder:<init>	()V
     //   129: aload 6
-    //   131: invokevirtual 59	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   134: ldc_w 347
-    //   137: invokevirtual 59	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   131: invokevirtual 68	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   134: ldc_w 376
+    //   137: invokevirtual 68	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   140: aload 4
-    //   142: invokevirtual 59	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   145: ldc_w 347
-    //   148: invokevirtual 59	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   142: invokevirtual 68	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   145: ldc_w 376
+    //   148: invokevirtual 68	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   151: lload_2
-    //   152: invokevirtual 777	java/lang/StringBuilder:append	(J)Ljava/lang/StringBuilder;
-    //   155: ldc_w 576
-    //   158: invokevirtual 59	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   161: invokevirtual 65	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   164: invokevirtual 573	java/io/BufferedWriter:write	(Ljava/lang/String;)V
+    //   152: invokevirtual 814	java/lang/StringBuilder:append	(J)Ljava/lang/StringBuilder;
+    //   155: ldc_w 595
+    //   158: invokevirtual 68	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   161: invokevirtual 74	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   164: invokevirtual 592	java/io/BufferedWriter:write	(Ljava/lang/String;)V
     //   167: iload_1
     //   168: iconst_1
     //   169: iadd
     //   170: istore_1
     //   171: goto -118 -> 53
     //   174: aload 5
-    //   176: invokevirtual 579	java/io/BufferedWriter:flush	()V
+    //   176: invokevirtual 598	java/io/BufferedWriter:flush	()V
     //   179: aload 5
-    //   181: invokevirtual 580	java/io/BufferedWriter:close	()V
+    //   181: invokevirtual 599	java/io/BufferedWriter:close	()V
     //   184: goto -172 -> 12
     //   187: astore 4
     //   189: goto -177 -> 12
@@ -919,17 +1000,17 @@ public class n
   public long a(Context paramContext)
   {
     if (a == 0L) {}
-    for (long l1 = ad.a(paramContext).D();; l1 = a) {
+    for (long l1 = ad.a(paramContext).E();; l1 = a) {
       return new Date().getTime() - l1;
     }
   }
   
   public Handler a(Handler paramHandler)
   {
-    synchronized (r)
+    synchronized (t)
     {
-      Handler localHandler = s;
-      s = paramHandler;
+      Handler localHandler = u;
+      u = paramHandler;
       return localHandler;
     }
   }
@@ -942,18 +1023,18 @@ public class n
   
   public void a(Message paramMessage, long paramLong)
   {
-    synchronized (r)
+    synchronized (t)
     {
-      if (s != null)
+      if (u != null)
       {
         if (paramLong != 0L) {
-          s.sendMessageDelayed(paramMessage, paramLong);
+          u.sendMessageDelayed(paramMessage, paramLong);
         }
       }
       else {
         return;
       }
-      s.sendMessage(paramMessage);
+      u.sendMessage(paramMessage);
     }
   }
   
@@ -979,18 +1060,18 @@ public class n
     if (i1 > 0) {
       localObject1 = ((String)localObject2).substring(0, i1);
     }
-    if (e.a != null)
+    if (i.a != null)
     {
-      if ((e.a.equalsIgnoreCase("CN")) || (e.a.equalsIgnoreCase("TW"))) {
+      if ((i.a.equalsIgnoreCase("CN")) || (i.a.equalsIgnoreCase("TW"))) {
         localObject1 = "zh";
       }
     }
     else
     {
-      if (c != 0) {
+      if (d != 0) {
         break label272;
       }
-      if (d != null) {
+      if (e != null) {
         break label230;
       }
       localObject1 = "http://www.estrongs.com/channel?" + "l=" + (String)localObject1;
@@ -1001,25 +1082,25 @@ public class n
       if (paramBoolean) {
         localObject2 = (String)localObject1 + "&s=1";
       }
-      localObject1 = new y((String)localObject2);
-      ((y)localObject1).a(new o(this));
-      ((y)localObject1).a(localObject1);
-      ((y)localObject1).a(b + ".tmp");
-      ((y)localObject1).c();
-      m = true;
+      n = true;
       a = new Date().getTime();
       ad.a(FexApplication.a()).c(a);
+      localObject1 = new aa((String)localObject2);
+      ((aa)localObject1).a(new o(this));
+      ((aa)localObject1).a(localObject1);
+      ((aa)localObject1).a(b + ".tmp");
+      ((aa)localObject1).c();
       return;
       localObject1 = "en";
       break;
       label230:
-      localObject1 = "http://www.estrongs.com/channel?" + "l=" + (String)localObject1 + "&v=" + d;
+      localObject1 = "http://www.estrongs.com/channel?" + "l=" + (String)localObject1 + "&v=" + e;
       continue;
       label272:
-      if (d == null) {
-        localObject1 = "http://www.estrongs.com/channel?" + "id=" + c + "&l=" + (String)localObject1;
+      if (e == null) {
+        localObject1 = "http://www.estrongs.com/channel?" + "id=" + d + "&l=" + (String)localObject1;
       } else {
-        localObject1 = "http://www.estrongs.com/channel?" + "id=" + c + "&l=" + (String)localObject1 + "&v=" + d;
+        localObject1 = "http://www.estrongs.com/channel?" + "id=" + d + "&l=" + (String)localObject1 + "&v=" + e;
       }
     }
   }
@@ -1073,22 +1154,108 @@ public class n
     return 1;
   }
   
+  /* Error */
+  public void b(String paramString)
+  {
+    // Byte code:
+    //   0: iconst_0
+    //   1: istore_2
+    //   2: aload_0
+    //   3: monitorenter
+    //   4: getstatic 118	com/estrongs/android/pop/view/utils/n:r	[Lcom/estrongs/android/pop/view/utils/v;
+    //   7: astore_3
+    //   8: aload_3
+    //   9: ifnonnull +6 -> 15
+    //   12: aload_0
+    //   13: monitorexit
+    //   14: return
+    //   15: iload_2
+    //   16: getstatic 118	com/estrongs/android/pop/view/utils/n:r	[Lcom/estrongs/android/pop/view/utils/v;
+    //   19: arraylength
+    //   20: if_icmpge -8 -> 12
+    //   23: getstatic 118	com/estrongs/android/pop/view/utils/n:r	[Lcom/estrongs/android/pop/view/utils/v;
+    //   26: iload_2
+    //   27: aaload
+    //   28: getfield 788	com/estrongs/android/pop/view/utils/v:y	Z
+    //   31: ifne +28 -> 59
+    //   34: getstatic 118	com/estrongs/android/pop/view/utils/n:r	[Lcom/estrongs/android/pop/view/utils/v;
+    //   37: iload_2
+    //   38: aaload
+    //   39: getfield 403	com/estrongs/android/pop/view/utils/v:q	I
+    //   42: iconst_3
+    //   43: if_icmpeq +16 -> 59
+    //   46: getstatic 118	com/estrongs/android/pop/view/utils/n:r	[Lcom/estrongs/android/pop/view/utils/v;
+    //   49: iload_2
+    //   50: aaload
+    //   51: getfield 403	com/estrongs/android/pop/view/utils/v:q	I
+    //   54: bipush 7
+    //   56: if_icmpne +64 -> 120
+    //   59: getstatic 118	com/estrongs/android/pop/view/utils/n:r	[Lcom/estrongs/android/pop/view/utils/v;
+    //   62: iload_2
+    //   63: aaload
+    //   64: getfield 326	com/estrongs/android/pop/view/utils/v:f	Ljava/lang/String;
+    //   67: aload_1
+    //   68: invokevirtual 446	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   71: ifeq +49 -> 120
+    //   74: getstatic 118	com/estrongs/android/pop/view/utils/n:r	[Lcom/estrongs/android/pop/view/utils/v;
+    //   77: iload_2
+    //   78: aaload
+    //   79: iconst_0
+    //   80: putfield 788	com/estrongs/android/pop/view/utils/v:y	Z
+    //   83: new 348	com/estrongs/android/util/aa
+    //   86: dup
+    //   87: new 61	java/lang/StringBuilder
+    //   90: dup
+    //   91: invokespecial 64	java/lang/StringBuilder:<init>	()V
+    //   94: ldc_w 909
+    //   97: invokevirtual 68	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   100: getstatic 118	com/estrongs/android/pop/view/utils/n:r	[Lcom/estrongs/android/pop/view/utils/v;
+    //   103: iload_2
+    //   104: aaload
+    //   105: getfield 699	com/estrongs/android/pop/view/utils/v:b	Ljava/lang/String;
+    //   108: invokevirtual 68	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   111: invokevirtual 74	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   114: invokespecial 784	com/estrongs/android/util/aa:<init>	(Ljava/lang/String;)V
+    //   117: invokevirtual 786	com/estrongs/android/util/aa:c	()V
+    //   120: iload_2
+    //   121: iconst_1
+    //   122: iadd
+    //   123: istore_2
+    //   124: goto -109 -> 15
+    //   127: astore_1
+    //   128: aload_0
+    //   129: monitorexit
+    //   130: aload_1
+    //   131: athrow
+    // Local variable table:
+    //   start	length	slot	name	signature
+    //   0	132	0	this	n
+    //   0	132	1	paramString	String
+    //   1	123	2	i1	int
+    //   7	2	3	arrayOfv	v[]
+    // Exception table:
+    //   from	to	target	type
+    //   4	8	127	finally
+    //   15	59	127	finally
+    //   59	120	127	finally
+  }
+  
   public v[] b(Context paramContext)
   {
     if (FexApplication.a().m()) {
       return null;
     }
-    if (!ak.b()) {
+    if (!an.b()) {
       return null;
     }
     paramContext = new ArrayList();
-    if (q != null)
+    if (r != null)
     {
       int i1 = 0;
-      while (i1 < q.length)
+      while (i1 < r.length)
       {
-        if ((qz) && (!w.a(qf))) {
-          paramContext.add(q[i1]);
+        if ((rz) && (!w.a(rf))) {
+          paramContext.add(r[i1]);
         }
         i1 += 1;
       }
@@ -1103,6 +1270,7 @@ public class n
   
   public void c()
   {
+    B = false;
     a(false);
   }
   
@@ -1111,19 +1279,19 @@ public class n
     if ((e == null) || (!e.startsWith("http"))) {
       return false;
     }
-    y localy = new y(e);
-    localy.a(a(f));
-    localy.a(localy);
+    aa localaa = new aa(e);
+    localaa.a(a(f));
+    localaa.a(localaa);
     d = paramv;
-    localy.a(new p(this));
-    r = localy;
+    localaa.a(new p(this));
+    r = localaa;
     if (q == 4) {
-      localy.f();
+      localaa.f();
     }
     for (;;)
     {
       return true;
-      localy.c();
+      localaa.c();
     }
   }
   
@@ -1133,13 +1301,13 @@ public class n
     {
       boolean bool = FexApplication.a().m();
       paramContext = new ArrayList();
-      if (q != null)
+      if (r != null)
       {
         int i1 = 0;
-        while (i1 < q.length)
+        while (i1 < r.length)
         {
-          if ((q[i1].a()) && ((!bool) || (q[i1].c() != null))) {
-            paramContext.add(q[i1]);
+          if ((r[i1].a()) && ((!bool) || (r[i1].c() != null))) {
+            paramContext.add(r[i1]);
           }
           i1 += 1;
         }
@@ -1152,18 +1320,6 @@ public class n
       return arrayOfv;
     }
     return null;
-  }
-  
-  public Bitmap d(v paramv)
-  {
-    if (k != null) {
-      return k;
-    }
-    a(paramv);
-    if ((k == null) && (a.startsWith("http://"))) {
-      b().e(paramv);
-    }
-    return k;
   }
   
   public Bitmap d(v paramv, int paramInt)
@@ -1182,45 +1338,57 @@ public class n
   {
     v[] arrayOfv = null;
     int i4 = 0;
-    if ((q == null) || (p))
+    if ((r == null) || (q))
     {
-      d = null;
-      if (c(b) < 0) {
+      e = null;
+      if (d(b) < 0) {
         arrayOfv = new v[0];
       }
-      while (q == null) {
+      while (r == null) {
         return arrayOfv;
       }
     }
-    p = false;
+    q = false;
     int i1 = 0;
     int i3;
-    for (int i2 = 0; i1 < q.length; i2 = i3)
+    for (int i2 = 0; i1 < r.length; i2 = i3)
     {
       i3 = i2;
-      if (f(q[i1])) {
+      if (g(r[i1])) {
         i3 = i2 + 1;
       }
       i1 += 1;
     }
-    if (i2 == q.length) {
-      return q;
+    if (i2 == r.length) {
+      return r;
     }
     arrayOfv = new v[i2];
     i2 = 0;
     i1 = i4;
-    while (i1 < q.length)
+    while (i1 < r.length)
     {
       i3 = i2;
-      if (f(q[i1]))
+      if (g(r[i1]))
       {
-        arrayOfv[i2] = q[i1];
+        arrayOfv[i2] = r[i1];
         i3 = i2 + 1;
       }
       i1 += 1;
       i2 = i3;
     }
     return arrayOfv;
+  }
+  
+  public Bitmap e(v paramv)
+  {
+    if (k != null) {
+      return k;
+    }
+    a(paramv);
+    if ((k == null) && (a.startsWith("http://"))) {
+      b().f(paramv);
+    }
+    return k;
   }
   
   public Bitmap e(v paramv, int paramInt)
@@ -1237,36 +1405,36 @@ public class n
   
   public void e()
   {
-    if (q != null)
+    if (r != null)
     {
       int i1 = 0;
-      while (i1 < q.length)
+      while (i1 < r.length)
       {
-        g(q[i1]);
+        h(r[i1]);
         i1 += 1;
       }
     }
   }
   
-  public void e(v paramv)
-  {
-    y localy = new y(a);
-    d = paramv;
-    localy.a(f + "/icon_" + f.hashCode());
-    localy.a(localy);
-    localy.a(new q(this));
-    localy.c();
-  }
-  
   public void f()
   {
-    if (p)
+    if (q)
     {
-      a(q, 4);
+      a(r, 4);
       g();
-      q = null;
-      p = false;
+      r = null;
+      q = false;
     }
+  }
+  
+  public void f(v paramv)
+  {
+    aa localaa = new aa(a);
+    d = paramv;
+    localaa.a(g + "/icon_" + f.hashCode());
+    localaa.a(localaa);
+    localaa.a(new q(this));
+    localaa.c();
   }
   
   public void f(v paramv, int paramInt)
@@ -1274,27 +1442,27 @@ public class n
     if (o[paramInt] != null) {
       return;
     }
-    y localy = new y(l + d[paramInt]);
+    aa localaa = new aa(m + d[paramInt]);
     d = paramv;
     e = Integer.valueOf(paramInt);
-    localy.a(h + "/" + f.hashCode() + "/" + d[paramInt]);
-    localy.a(localy);
-    localy.a(new r(this));
-    localy.c();
-    o[paramInt] = localy;
+    localaa.a(i + "/" + f.hashCode() + "/" + d[paramInt]);
+    localaa.a(localaa);
+    localaa.a(new r(this));
+    localaa.c();
+    o[paramInt] = localaa;
   }
   
   public void g()
   {
-    if (q != null)
+    if (r != null)
     {
       int i1 = 0;
-      while (i1 < q.length)
+      while (i1 < r.length)
       {
-        if (qk != null)
+        if (rk != null)
         {
-          qk.recycle();
-          qk = null;
+          rk.recycle();
+          rk = null;
         }
         i1 += 1;
       }
@@ -1306,20 +1474,20 @@ public class n
     if (m[paramInt] != null) {
       return;
     }
-    String str = b(d[paramInt]);
-    y localy = new y(l + str);
+    String str = c(d[paramInt]);
+    aa localaa = new aa(m + str);
     d = paramv;
     e = Integer.valueOf(paramInt);
-    localy.a(g + "/" + f.hashCode() + "/" + str);
-    localy.a(localy);
-    localy.a(new s(this));
-    localy.c();
-    m[paramInt] = localy;
+    localaa.a(h + "/" + f.hashCode() + "/" + str);
+    localaa.a(localaa);
+    localaa.a(new s(this));
+    localaa.c();
+    m[paramInt] = localaa;
   }
   
   public boolean h()
   {
-    return m;
+    return n;
   }
 }
 

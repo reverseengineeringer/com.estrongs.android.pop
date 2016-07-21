@@ -64,11 +64,11 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b01b6
+    const v1, 0x7f08049d
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     goto :goto_0
 

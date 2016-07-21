@@ -1,19 +1,19 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
-import com.estrongs.android.pop.app.network.EsNetworkActivity;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 class eb
-  implements DialogInterface.OnClickListener
+  implements View.OnClickListener
 {
   eb(LocalFileSharingActivity paramLocalFileSharingActivity) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void onClick(View paramView)
   {
-    paramDialogInterface = new Intent(a, EsNetworkActivity.class);
-    a.startActivity(paramDialogInterface);
+    paramView = new Intent("android.settings.WIFI_SETTINGS");
+    paramView.setFlags(268435456);
+    a.startActivity(paramView);
   }
 }
 

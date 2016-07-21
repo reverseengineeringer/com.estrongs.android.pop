@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/estrongs/android/pop/esclasses/t;
 
 
 # instance fields
@@ -22,34 +22,109 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public a()V
+    .locals 2
 
     iget-object v0, p0, Lcom/estrongs/android/ui/e/ia;->a:Lcom/estrongs/android/ui/e/hz;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/hz;->c:Lcom/estrongs/android/ui/e/hl;
+    iget-boolean v0, v0, Lcom/estrongs/android/ui/e/hz;->a:Z
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/hl;->a(Lcom/estrongs/android/ui/e/hl;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/ia;->a:Lcom/estrongs/android/ui/e/hz;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/hz;->a(Lcom/estrongs/android/ui/e/hz;)Landroid/view/View;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/e/ia;->a:Lcom/estrongs/android/ui/e/hz;
+    const/4 v1, 0x0
 
-    iget-object v1, v1, Lcom/estrongs/android/ui/e/hz;->c:Lcom/estrongs/android/ui/e/hl;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-static {v1}, Lcom/estrongs/android/ui/e/hl;->a(Lcom/estrongs/android/ui/e/hl;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/ia;->a:Lcom/estrongs/android/ui/e/hz;
 
-    move-result-object v1
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/hz;->b(Lcom/estrongs/android/ui/e/hz;)Landroid/view/View;
 
-    const v2, 0x7f0b0266
+    move-result-object v0
 
-    invoke-virtual {v1, v2}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getText(I)Ljava/lang/CharSequence;
+    const/4 v1, 0x4
 
-    move-result-object v1
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public b()V
+    .locals 3
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/ia;->a:Lcom/estrongs/android/ui/e/hz;
 
+    iget-boolean v0, v0, Lcom/estrongs/android/ui/e/hz;->a:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/ia;->a:Lcom/estrongs/android/ui/e/hz;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/hz;->a(Lcom/estrongs/android/ui/e/hz;)Landroid/view/View;
+
+    move-result-object v0
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/ia;->a:Lcom/estrongs/android/ui/e/hz;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/hz;->b(Lcom/estrongs/android/ui/e/hz;)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/ia;->a:Lcom/estrongs/android/ui/e/hz;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/hz;->c(Lcom/estrongs/android/ui/e/hz;)Lcom/estrongs/android/pop/esclasses/ESScrollView;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v2, v1}, Lcom/estrongs/android/pop/esclasses/ESScrollView;->scrollTo(II)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public c()V
+    .locals 2
+
+    const/4 v1, 0x0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/ia;->a:Lcom/estrongs/android/ui/e/hz;
+
+    iget-boolean v0, v0, Lcom/estrongs/android/ui/e/hz;->a:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/ia;->a:Lcom/estrongs/android/ui/e/hz;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/hz;->a(Lcom/estrongs/android/ui/e/hz;)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/ia;->a:Lcom/estrongs/android/ui/e/hz;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/hz;->b(Lcom/estrongs/android/ui/e/hz;)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_0
     return-void
 .end method

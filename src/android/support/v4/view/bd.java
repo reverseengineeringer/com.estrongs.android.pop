@@ -1,19 +1,12 @@
 package android.support.v4.view;
 
-import android.view.View;
-import android.view.View.AccessibilityDelegate;
+import android.view.MenuItem;
 
-class bd
+public abstract interface bd
 {
-  public static void a(View paramView, Object paramObject)
-  {
-    paramView.setAccessibilityDelegate((View.AccessibilityDelegate)paramObject);
-  }
+  public abstract boolean a(MenuItem paramMenuItem);
   
-  public static boolean a(View paramView, int paramInt)
-  {
-    return paramView.canScrollHorizontally(paramInt);
-  }
+  public abstract boolean b(MenuItem paramMenuItem);
 }
 
 /* Location:

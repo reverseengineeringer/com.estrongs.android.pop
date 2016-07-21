@@ -1,15 +1,17 @@
 package com.estrongs.android.ui.theme;
 
-import com.estrongs.android.ui.view.a;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.ui.view.ColorPickerView;
 
 class y
-  implements a
+  implements View.OnClickListener
 {
   y(ThemeColorActivity paramThemeColorActivity) {}
   
-  public void a(int paramInt)
+  public void onClick(View paramView)
   {
-    ThemeColorActivity.a(a, true);
+    ThemeColorActivity.a(a).setColor(-16777216);
   }
 }
 

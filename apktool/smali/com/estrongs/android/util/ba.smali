@@ -1,86 +1,28 @@
-.class final Lcom/estrongs/android/util/ba;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/util/Comparator;
+.class Lcom/estrongs/android/util/ba;
+.super Lcom/estrongs/io/a/a/a;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
-        "<",
-        "Ljava/io/File;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field final synthetic a:Lcom/estrongs/android/util/ax;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Lcom/estrongs/android/util/ax;Lcom/estrongs/io/archive/e;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcom/estrongs/android/util/ba;->a:Lcom/estrongs/android/util/ax;
+
+    invoke-direct {p0, p2, p3}, Lcom/estrongs/io/a/a/a;-><init>(Lcom/estrongs/io/archive/e;Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/io/File;Ljava/io/File;)I
-    .locals 4
-
-    invoke-virtual {p1}, Ljava/io/File;->lastModified()J
-
-    move-result-wide v0
-
-    invoke-virtual {p2}, Ljava/io/File;->lastModified()J
-
-    move-result-wide v2
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_0
+.method public a()Ljava/lang/String;
+    .locals 1
 
     const/4 v0, 0x0
 
-    :goto_0
-    return v0
-
-    :cond_0
-    invoke-virtual {p1}, Ljava/io/File;->lastModified()J
-
-    move-result-wide v0
-
-    invoke-virtual {p2}, Ljava/io/File;->lastModified()J
-
-    move-result-wide v2
-
-    cmp-long v0, v0, v2
-
-    if-gez v0, :cond_1
-
-    const/4 v0, -0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x1
-
-    goto :goto_0
-.end method
-
-.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 1
-
-    check-cast p1, Ljava/io/File;
-
-    check-cast p2, Ljava/io/File;
-
-    invoke-virtual {p0, p1, p2}, Lcom/estrongs/android/util/ba;->a(Ljava/io/File;Ljava/io/File;)I
-
-    move-result v0
-
-    return v0
+    return-object v0
 .end method

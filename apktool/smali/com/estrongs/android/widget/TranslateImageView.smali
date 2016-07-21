@@ -17,9 +17,9 @@
 
 .field private g:J
 
-.field private h:Lcom/estrongs/android/widget/bu;
+.field private h:Lcom/estrongs/android/widget/bv;
 
-.field private i:Lcom/estrongs/android/widget/bt;
+.field private i:Lcom/estrongs/android/widget/bu;
 
 .field private j:Landroid/graphics/Rect;
 
@@ -33,11 +33,9 @@
 
 .field private o:Landroid/graphics/Paint;
 
-.field private r:Landroid/graphics/ColorMatrixColorFilter;
+.field private s:Landroid/graphics/ColorMatrixColorFilter;
 
-.field private s:Landroid/graphics/ColorMatrix;
-
-.field private t:I
+.field private t:Landroid/graphics/ColorMatrix;
 
 .field private u:I
 
@@ -47,7 +45,9 @@
 
 .field private x:I
 
-.field private y:Landroid/view/VelocityTracker;
+.field private y:I
+
+.field private z:Landroid/view/VelocityTracker;
 
 
 # direct methods
@@ -127,10 +127,10 @@
     return p1
 .end method
 
-.method static synthetic a(Lcom/estrongs/android/widget/TranslateImageView;Lcom/estrongs/android/widget/bu;)Lcom/estrongs/android/widget/bu;
+.method static synthetic a(Lcom/estrongs/android/widget/TranslateImageView;Lcom/estrongs/android/widget/bv;)Lcom/estrongs/android/widget/bv;
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/widget/TranslateImageView;->h:Lcom/estrongs/android/widget/bu;
+    iput-object p1, p0, Lcom/estrongs/android/widget/TranslateImageView;->h:Lcom/estrongs/android/widget/bv;
 
     return-object p1
 .end method
@@ -160,17 +160,17 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/estrongs/android/widget/TranslateImageView;->w:I
+    iput v1, p0, Lcom/estrongs/android/widget/TranslateImageView;->x:I
 
     invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledMinimumFlingVelocity()I
 
     move-result v0
 
-    iput v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->x:I
+    iput v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->y:I
 
-    new-instance v0, Lcom/estrongs/android/widget/bs;
+    new-instance v0, Lcom/estrongs/android/widget/bt;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/widget/bs;-><init>(Lcom/estrongs/android/widget/TranslateImageView;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/widget/bt;-><init>(Lcom/estrongs/android/widget/TranslateImageView;)V
 
     iput-object v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->l:Ljava/lang/Runnable;
 
@@ -182,7 +182,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f020131
+    const v1, 0x7f020281
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -198,7 +198,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f020130
+    const v1, 0x7f020280
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -216,19 +216,19 @@
 
     invoke-direct {v0}, Landroid/graphics/ColorMatrix;-><init>()V
 
-    iput-object v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->s:Landroid/graphics/ColorMatrix;
+    iput-object v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->t:Landroid/graphics/ColorMatrix;
 
     new-instance v0, Landroid/graphics/ColorMatrixColorFilter;
 
-    iget-object v1, p0, Lcom/estrongs/android/widget/TranslateImageView;->s:Landroid/graphics/ColorMatrix;
+    iget-object v1, p0, Lcom/estrongs/android/widget/TranslateImageView;->t:Landroid/graphics/ColorMatrix;
 
     invoke-direct {v0, v1}, Landroid/graphics/ColorMatrixColorFilter;-><init>(Landroid/graphics/ColorMatrix;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->r:Landroid/graphics/ColorMatrixColorFilter;
+    iput-object v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->s:Landroid/graphics/ColorMatrixColorFilter;
 
     iget-object v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->o:Landroid/graphics/Paint;
 
-    iget-object v1, p0, Lcom/estrongs/android/widget/TranslateImageView;->r:Landroid/graphics/ColorMatrixColorFilter;
+    iget-object v1, p0, Lcom/estrongs/android/widget/TranslateImageView;->s:Landroid/graphics/ColorMatrixColorFilter;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
@@ -304,7 +304,23 @@
     goto :goto_0
 .end method
 
-.method private c()Landroid/graphics/Rect;
+.method static synthetic c(Lcom/estrongs/android/widget/TranslateImageView;)Lcom/estrongs/android/widget/bv;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->h:Lcom/estrongs/android/widget/bv;
+
+    return-object v0
+.end method
+
+.method static synthetic d(Lcom/estrongs/android/widget/TranslateImageView;)Lcom/estrongs/android/widget/bu;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->i:Lcom/estrongs/android/widget/bu;
+
+    return-object v0
+.end method
+
+.method private getImageRect()Landroid/graphics/Rect;
     .locals 5
 
     const/4 v4, 0x0
@@ -369,22 +385,6 @@
     invoke-virtual {v0, v4, v4, v1, v2}, Landroid/graphics/Rect;->set(IIII)V
 
     goto :goto_0
-.end method
-
-.method static synthetic c(Lcom/estrongs/android/widget/TranslateImageView;)Lcom/estrongs/android/widget/bu;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->h:Lcom/estrongs/android/widget/bu;
-
-    return-object v0
-.end method
-
-.method static synthetic d(Lcom/estrongs/android/widget/TranslateImageView;)Lcom/estrongs/android/widget/bt;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->i:Lcom/estrongs/android/widget/bt;
-
-    return-object v0
 .end method
 
 
@@ -480,7 +480,7 @@
 
     rsub-int/lit8 v2, v2, 0x0
 
-    iget-object v3, p0, Lcom/estrongs/android/widget/TranslateImageView;->s:Landroid/graphics/ColorMatrix;
+    iget-object v3, p0, Lcom/estrongs/android/widget/TranslateImageView;->t:Landroid/graphics/ColorMatrix;
 
     invoke-virtual {v3}, Landroid/graphics/ColorMatrix;->getArray()[F
 
@@ -500,21 +500,21 @@
 
     aput v2, v3, v4
 
-    iget-object v2, p0, Lcom/estrongs/android/widget/TranslateImageView;->s:Landroid/graphics/ColorMatrix;
+    iget-object v2, p0, Lcom/estrongs/android/widget/TranslateImageView;->t:Landroid/graphics/ColorMatrix;
 
     invoke-virtual {v2, v3}, Landroid/graphics/ColorMatrix;->set([F)V
 
     new-instance v2, Landroid/graphics/ColorMatrixColorFilter;
 
-    iget-object v3, p0, Lcom/estrongs/android/widget/TranslateImageView;->s:Landroid/graphics/ColorMatrix;
+    iget-object v3, p0, Lcom/estrongs/android/widget/TranslateImageView;->t:Landroid/graphics/ColorMatrix;
 
     invoke-direct {v2, v3}, Landroid/graphics/ColorMatrixColorFilter;-><init>(Landroid/graphics/ColorMatrix;)V
 
-    iput-object v2, p0, Lcom/estrongs/android/widget/TranslateImageView;->r:Landroid/graphics/ColorMatrixColorFilter;
+    iput-object v2, p0, Lcom/estrongs/android/widget/TranslateImageView;->s:Landroid/graphics/ColorMatrixColorFilter;
 
     iget-object v2, p0, Lcom/estrongs/android/widget/TranslateImageView;->o:Landroid/graphics/Paint;
 
-    iget-object v3, p0, Lcom/estrongs/android/widget/TranslateImageView;->r:Landroid/graphics/ColorMatrixColorFilter;
+    iget-object v3, p0, Lcom/estrongs/android/widget/TranslateImageView;->s:Landroid/graphics/ColorMatrixColorFilter;
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
@@ -688,6 +688,14 @@
     goto :goto_1
 .end method
 
+.method public getOnHideListener()Lcom/estrongs/android/widget/bu;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->i:Lcom/estrongs/android/widget/bu;
+
+    return-object v0
+.end method
+
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 7
 
@@ -725,7 +733,7 @@
     return v0
 
     :pswitch_0
-    invoke-direct {p0}, Lcom/estrongs/android/widget/TranslateImageView;->c()Landroid/graphics/Rect;
+    invoke-direct {p0}, Lcom/estrongs/android/widget/TranslateImageView;->getImageRect()Landroid/graphics/Rect;
 
     move-result-object v3
 
@@ -735,42 +743,42 @@
 
     if-eqz v3, :cond_1
 
-    iput v1, p0, Lcom/estrongs/android/widget/TranslateImageView;->u:I
+    iput v1, p0, Lcom/estrongs/android/widget/TranslateImageView;->v:I
 
-    iput v2, p0, Lcom/estrongs/android/widget/TranslateImageView;->v:I
+    iput v2, p0, Lcom/estrongs/android/widget/TranslateImageView;->w:I
 
     invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->y:Landroid/view/VelocityTracker;
+    iput-object v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->z:Landroid/view/VelocityTracker;
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->y:Landroid/view/VelocityTracker;
+    iget-object v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->z:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
     goto :goto_0
 
     :pswitch_1
-    iget v3, p0, Lcom/estrongs/android/widget/TranslateImageView;->t:I
+    iget v3, p0, Lcom/estrongs/android/widget/TranslateImageView;->u:I
 
     if-ne v3, v6, :cond_4
 
-    iget v3, p0, Lcom/estrongs/android/widget/TranslateImageView;->u:I
+    iget v3, p0, Lcom/estrongs/android/widget/TranslateImageView;->v:I
 
     sub-int v3, v1, v3
 
-    iget v4, p0, Lcom/estrongs/android/widget/TranslateImageView;->u:I
+    iget v4, p0, Lcom/estrongs/android/widget/TranslateImageView;->v:I
 
     sub-int v4, v1, v4
 
     mul-int/2addr v3, v4
 
-    iget v4, p0, Lcom/estrongs/android/widget/TranslateImageView;->v:I
+    iget v4, p0, Lcom/estrongs/android/widget/TranslateImageView;->w:I
 
     sub-int v4, v2, v4
 
-    iget v5, p0, Lcom/estrongs/android/widget/TranslateImageView;->v:I
+    iget v5, p0, Lcom/estrongs/android/widget/TranslateImageView;->w:I
 
     sub-int/2addr v2, v5
 
@@ -786,23 +794,23 @@
 
     double-to-int v2, v2
 
-    iget v3, p0, Lcom/estrongs/android/widget/TranslateImageView;->w:I
+    iget v3, p0, Lcom/estrongs/android/widget/TranslateImageView;->x:I
 
     if-le v2, v3, :cond_2
 
-    iput v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->t:I
+    iput v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->u:I
 
     :cond_2
     :goto_1
-    iget v2, p0, Lcom/estrongs/android/widget/TranslateImageView;->t:I
+    iget v2, p0, Lcom/estrongs/android/widget/TranslateImageView;->u:I
 
     if-nez v2, :cond_0
 
-    iget v2, p0, Lcom/estrongs/android/widget/TranslateImageView;->u:I
+    iget v2, p0, Lcom/estrongs/android/widget/TranslateImageView;->v:I
 
     sub-int/2addr v1, v2
 
-    iget v2, p0, Lcom/estrongs/android/widget/TranslateImageView;->t:I
+    iget v2, p0, Lcom/estrongs/android/widget/TranslateImageView;->u:I
 
     if-nez v2, :cond_0
 
@@ -829,7 +837,7 @@
     goto :goto_0
 
     :cond_4
-    iget-object v2, p0, Lcom/estrongs/android/widget/TranslateImageView;->y:Landroid/view/VelocityTracker;
+    iget-object v2, p0, Lcom/estrongs/android/widget/TranslateImageView;->z:Landroid/view/VelocityTracker;
 
     invoke-virtual {v2, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
@@ -875,25 +883,25 @@
     goto :goto_2
 
     :pswitch_2
-    iget v3, p0, Lcom/estrongs/android/widget/TranslateImageView;->t:I
+    iget v3, p0, Lcom/estrongs/android/widget/TranslateImageView;->u:I
 
     if-ne v3, v6, :cond_8
 
-    iget v3, p0, Lcom/estrongs/android/widget/TranslateImageView;->u:I
+    iget v3, p0, Lcom/estrongs/android/widget/TranslateImageView;->v:I
 
     sub-int v3, v1, v3
 
-    iget v4, p0, Lcom/estrongs/android/widget/TranslateImageView;->u:I
+    iget v4, p0, Lcom/estrongs/android/widget/TranslateImageView;->v:I
 
     sub-int/2addr v1, v4
 
     mul-int/2addr v1, v3
 
-    iget v3, p0, Lcom/estrongs/android/widget/TranslateImageView;->v:I
+    iget v3, p0, Lcom/estrongs/android/widget/TranslateImageView;->w:I
 
     sub-int v3, v2, v3
 
-    iget v4, p0, Lcom/estrongs/android/widget/TranslateImageView;->v:I
+    iget v4, p0, Lcom/estrongs/android/widget/TranslateImageView;->w:I
 
     sub-int/2addr v2, v4
 
@@ -909,24 +917,24 @@
 
     double-to-int v1, v2
 
-    iget v2, p0, Lcom/estrongs/android/widget/TranslateImageView;->w:I
+    iget v2, p0, Lcom/estrongs/android/widget/TranslateImageView;->x:I
 
     if-le v1, v2, :cond_8
 
-    iput v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->t:I
+    iput v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->u:I
 
     :cond_8
-    iget v1, p0, Lcom/estrongs/android/widget/TranslateImageView;->t:I
+    iget v1, p0, Lcom/estrongs/android/widget/TranslateImageView;->u:I
 
     if-nez v1, :cond_10
 
-    iget-object v1, p0, Lcom/estrongs/android/widget/TranslateImageView;->y:Landroid/view/VelocityTracker;
+    iget-object v1, p0, Lcom/estrongs/android/widget/TranslateImageView;->z:Landroid/view/VelocityTracker;
 
     const/16 v2, 0x64
 
     invoke-virtual {v1, v2}, Landroid/view/VelocityTracker;->computeCurrentVelocity(I)V
 
-    iget-object v1, p0, Lcom/estrongs/android/widget/TranslateImageView;->y:Landroid/view/VelocityTracker;
+    iget-object v1, p0, Lcom/estrongs/android/widget/TranslateImageView;->z:Landroid/view/VelocityTracker;
 
     invoke-virtual {v1}, Landroid/view/VelocityTracker;->getXVelocity()F
 
@@ -944,7 +952,7 @@
 
     if-lt v2, v3, :cond_b
 
-    iput-object v5, p0, Lcom/estrongs/android/widget/TranslateImageView;->h:Lcom/estrongs/android/widget/bu;
+    iput-object v5, p0, Lcom/estrongs/android/widget/TranslateImageView;->h:Lcom/estrongs/android/widget/bv;
 
     iget v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->d:I
 
@@ -968,11 +976,11 @@
 
     :cond_9
     :goto_3
-    iput v6, p0, Lcom/estrongs/android/widget/TranslateImageView;->t:I
+    iput v6, p0, Lcom/estrongs/android/widget/TranslateImageView;->u:I
 
     :cond_a
     :goto_4
-    iget-object v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->y:Landroid/view/VelocityTracker;
+    iget-object v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->z:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->recycle()V
 
@@ -981,11 +989,11 @@
     :cond_b
     if-lez v1, :cond_c
 
-    iget v2, p0, Lcom/estrongs/android/widget/TranslateImageView;->x:I
+    iget v2, p0, Lcom/estrongs/android/widget/TranslateImageView;->y:I
 
     if-le v1, v2, :cond_c
 
-    iput-object v5, p0, Lcom/estrongs/android/widget/TranslateImageView;->h:Lcom/estrongs/android/widget/bu;
+    iput-object v5, p0, Lcom/estrongs/android/widget/TranslateImageView;->h:Lcom/estrongs/android/widget/bv;
 
     iget v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->e:I
 
@@ -1010,7 +1018,7 @@
     goto :goto_3
 
     :cond_c
-    iput-object v5, p0, Lcom/estrongs/android/widget/TranslateImageView;->h:Lcom/estrongs/android/widget/bu;
+    iput-object v5, p0, Lcom/estrongs/android/widget/TranslateImageView;->h:Lcom/estrongs/android/widget/bv;
 
     iget v1, p0, Lcom/estrongs/android/widget/TranslateImageView;->d:I
 
@@ -1043,13 +1051,13 @@
 
     if-gez v1, :cond_e
 
-    iget v2, p0, Lcom/estrongs/android/widget/TranslateImageView;->x:I
+    iget v2, p0, Lcom/estrongs/android/widget/TranslateImageView;->y:I
 
     rsub-int/lit8 v2, v2, 0x0
 
     if-ge v1, v2, :cond_e
 
-    iput-object v5, p0, Lcom/estrongs/android/widget/TranslateImageView;->h:Lcom/estrongs/android/widget/bu;
+    iput-object v5, p0, Lcom/estrongs/android/widget/TranslateImageView;->h:Lcom/estrongs/android/widget/bv;
 
     iget v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->e:I
 
@@ -1074,7 +1082,7 @@
     goto :goto_3
 
     :cond_e
-    iput-object v5, p0, Lcom/estrongs/android/widget/TranslateImageView;->h:Lcom/estrongs/android/widget/bu;
+    iput-object v5, p0, Lcom/estrongs/android/widget/TranslateImageView;->h:Lcom/estrongs/android/widget/bv;
 
     iget v1, p0, Lcom/estrongs/android/widget/TranslateImageView;->d:I
 
@@ -1095,7 +1103,7 @@
     goto :goto_3
 
     :cond_f
-    iput-object v5, p0, Lcom/estrongs/android/widget/TranslateImageView;->h:Lcom/estrongs/android/widget/bu;
+    iput-object v5, p0, Lcom/estrongs/android/widget/TranslateImageView;->h:Lcom/estrongs/android/widget/bv;
 
     iget v0, p0, Lcom/estrongs/android/widget/TranslateImageView;->d:I
 
@@ -1120,7 +1128,7 @@
     goto/16 :goto_3
 
     :cond_10
-    iget v1, p0, Lcom/estrongs/android/widget/TranslateImageView;->t:I
+    iget v1, p0, Lcom/estrongs/android/widget/TranslateImageView;->u:I
 
     if-ne v1, v6, :cond_a
 
@@ -1139,4 +1147,46 @@
         :pswitch_1
         :pswitch_2
     .end packed-switch
+.end method
+
+.method public setOnHideListener(Lcom/estrongs/android/widget/bu;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/widget/TranslateImageView;->i:Lcom/estrongs/android/widget/bu;
+
+    return-void
+.end method
+
+.method public setOnTranslateListener(Lcom/estrongs/android/widget/bv;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/widget/TranslateImageView;->h:Lcom/estrongs/android/widget/bv;
+
+    return-void
+.end method
+
+.method public setTranslateBitmap(Landroid/graphics/Bitmap;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/widget/TranslateImageView;->b:Landroid/graphics/Bitmap;
+
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/TranslateImageView;->postInvalidate()V
+
+    return-void
+.end method
+
+.method public setmDestPosition(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/estrongs/android/widget/TranslateImageView;->e:I
+
+    return-void
+.end method
+
+.method public setmDuration(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/estrongs/android/widget/TranslateImageView;->f:I
+
+    return-void
 .end method

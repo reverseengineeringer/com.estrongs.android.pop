@@ -1,20 +1,23 @@
 package com.estrongs.android.pop.view;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.pop.utils.aj;
-import com.estrongs.android.widget.g;
+import com.estrongs.android.ui.adapter.ListAdapter_NewNavi;
 
 class ee
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
   ee(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void run()
   {
-    a.s();
-    aj.a(a, a.y, a.P.e(), a.p);
-    a.P.k();
+    try
+    {
+      ListAdapter_NewNavi.a(a);
+      return;
+    }
+    catch (Exception localException)
+    {
+      localException.printStackTrace();
+    }
   }
 }
 

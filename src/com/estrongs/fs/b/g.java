@@ -1,10 +1,10 @@
 package com.estrongs.fs.b;
 
-import android.util.Log;
 import com.estrongs.a.a.m;
 import com.estrongs.a.q;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bc;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bg;
+import com.estrongs.android.util.l;
 import com.estrongs.fs.a.b;
 import com.estrongs.fs.impl.adb.c;
 import java.util.ArrayList;
@@ -39,7 +39,7 @@ public class g
       localObject = ((com.estrongs.fs.h)localLinkedList.get(j)).getName();
       paramList = (List<com.estrongs.fs.h>)localObject;
       if (localObject == null) {
-        paramList = am.d(((com.estrongs.fs.h)localLinkedList.get(j)).getAbsolutePath());
+        paramList = ap.d(((com.estrongs.fs.h)localLinkedList.get(j)).getAbsolutePath());
       }
       localStringBuilder.append(paramList);
       if (j + 1 != k)
@@ -95,9 +95,9 @@ public class g
     recordSummary("start_time", Long.valueOf(startTime));
     recordSummary("task_type", Integer.valueOf(task_type));
     recordSummary("restartable", Boolean.valueOf(false));
-    recordSummary("file_type", Integer.valueOf(bc.b(localh.getName())));
+    recordSummary("file_type", Integer.valueOf(bg.b(localh.getName())));
     recordSummary("items_selected_count", Integer.valueOf(f.size()));
-    recordSummary("source", am.D(am.bk(localh.getPath())));
+    recordSummary("source", ap.F(ap.bB(localh.getPath())));
     recordSummary("status", Integer.valueOf(1));
   }
   
@@ -176,7 +176,7 @@ public class g
       }
       finally {}
       if (f.size() <= 0) {
-        break label246;
+        break label245;
       }
       if (taskStopped()) {
         return false;
@@ -185,10 +185,10 @@ public class g
       if ((localh instanceof com.estrongs.fs.impl.adb.a)) {
         continue;
       }
-      Log.e(h, "task error invalid  AdbAppFileObject");
+      l.e(h, "task error invalid  AdbAppFileObject");
       sendMessage(8, new Object[0]);
     }
-    label246:
+    label245:
     if (processData.c > 0L) {
       processData.d = processData.c;
     }

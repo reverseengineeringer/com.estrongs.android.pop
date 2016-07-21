@@ -1,50 +1,31 @@
 .class Landroid/support/v4/view/a/d;
-.super Landroid/support/v4/view/a/b;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/support/v4/view/a/e;
 
 
 # direct methods
 .method constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Landroid/support/v4/view/a/b;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public h(Ljava/lang/Object;Z)V
-    .locals 0
-
-    invoke-static {p1, p2}, Landroid/support/v4/view/a/g;->a(Ljava/lang/Object;Z)V
-
-    return-void
-.end method
-
-.method public i(Ljava/lang/Object;Z)V
-    .locals 0
-
-    invoke-static {p1, p2}, Landroid/support/v4/view/a/g;->b(Ljava/lang/Object;Z)V
-
-    return-void
-.end method
-
-.method public m(Ljava/lang/Object;)Z
+.method public a(Landroid/view/accessibility/AccessibilityEvent;)I
     .locals 1
 
-    invoke-static {p1}, Landroid/support/v4/view/a/g;->a(Ljava/lang/Object;)Z
-
-    move-result v0
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public n(Ljava/lang/Object;)Z
-    .locals 1
+.method public a(Landroid/view/accessibility/AccessibilityEvent;I)V
+    .locals 0
 
-    invoke-static {p1}, Landroid/support/v4/view/a/g;->b(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    return v0
+    return-void
 .end method

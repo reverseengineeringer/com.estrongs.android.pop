@@ -10,18 +10,18 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import com.estrongs.android.pop.esclasses.g;
+import com.estrongs.android.pop.esclasses.k;
 import com.estrongs.android.pop.spfs.Album;
 import com.estrongs.android.pop.spfs.SPFileInfo;
 import com.estrongs.android.pop.spfs.SPFileObject;
-import com.estrongs.android.ui.dialog.cg;
+import com.estrongs.android.ui.dialog.ci;
 import com.estrongs.android.util.TypedMap;
-import com.estrongs.android.util.am;
+import com.estrongs.android.util.ap;
 import java.util.Iterator;
 import java.util.List;
 
 public class FlickrPhotoPrivacyDialog
-  extends cg
+  extends ci
 {
   private static final String ALBUM_DIV = ",";
   private static final String TAG_DIV = " ";
@@ -61,30 +61,30 @@ public class FlickrPhotoPrivacyDialog
       destPath = paramSPFileObject.getPath();
     }
     boolean bool;
-    if ((paramString == null) && (am.aK(destPath)))
+    if ((paramString == null) && (ap.aU(destPath)))
     {
       bool = true;
       isAlbumEdit = bool;
-      setTitle(mContext.getResources().getString(2131428058));
-      overwriteOptionView = g.a(paramContext).inflate(2130903132, null);
+      setTitle(mContext.getResources().getString(2131232158));
+      overwriteOptionView = k.a(paramContext).inflate(2130903237, null);
       setContentView(overwriteOptionView);
-      paramPrivacyOptionCallback = (ProgressBar)findViewById(2131362312);
-      paramString = findViewById(2131362319);
-      title = ((EditText)overwriteOptionView.findViewById(2131361825));
-      description = ((EditText)overwriteOptionView.findViewById(2131361951));
-      tag = ((EditText)overwriteOptionView.findViewById(2131362323));
-      btn_pic_name = ((Button)overwriteOptionView.findViewById(2131362325));
+      paramPrivacyOptionCallback = (ProgressBar)findViewById(2131624918);
+      paramString = findViewById(2131624925);
+      title = ((EditText)overwriteOptionView.findViewById(2131624055));
+      description = ((EditText)overwriteOptionView.findViewById(2131624455));
+      tag = ((EditText)overwriteOptionView.findViewById(2131624929));
+      btn_pic_name = ((Button)overwriteOptionView.findViewById(2131624931));
       FlickrPhotoPrivacyDialog.1 local1 = new FlickrPhotoPrivacyDialog.1(this);
       btn_pic_name.setOnClickListener(new FlickrPhotoPrivacyDialog.2(this, local1));
-      radioGroup = ((RadioGroup)overwriteOptionView.findViewById(2131362327));
-      radioOnlyYou = ((RadioButton)overwriteOptionView.findViewById(2131362328));
-      radioAnyone = ((RadioButton)overwriteOptionView.findViewById(2131362331));
-      cbxFriend = ((CheckBox)overwriteOptionView.findViewById(2131362329));
-      cbxFamiliy = ((CheckBox)overwriteOptionView.findViewById(2131362330));
+      radioGroup = ((RadioGroup)overwriteOptionView.findViewById(2131624933));
+      radioOnlyYou = ((RadioButton)overwriteOptionView.findViewById(2131624934));
+      radioAnyone = ((RadioButton)overwriteOptionView.findViewById(2131624937));
+      cbxFriend = ((CheckBox)overwriteOptionView.findViewById(2131624935));
+      cbxFamiliy = ((CheckBox)overwriteOptionView.findViewById(2131624936));
       radioGroup.setOnCheckedChangeListener(new FlickrPhotoPrivacyDialog.3(this));
       adjustkUI();
-      setConfirmButton(paramContext.getText(2131427339), new FlickrPhotoPrivacyDialog.4(this, paramPrivacyOptionCallback, paramSPFileObject));
-      setCancelButton(paramContext.getText(2131427340), new FlickrPhotoPrivacyDialog.5(this));
+      setConfirmButton(paramContext.getText(2131231270), new FlickrPhotoPrivacyDialog.4(this, paramPrivacyOptionCallback, paramSPFileObject));
+      setCancelButton(paramContext.getText(2131231265), new FlickrPhotoPrivacyDialog.5(this));
       if (paramSPFileObject != null)
       {
         title.setText(paramSPFileObject.getName());
@@ -134,26 +134,26 @@ public class FlickrPhotoPrivacyDialog
       btn_pic_name.setText(localStringBuilder.toString());
       return;
     }
-    btn_pic_name.setText(mContext.getText(2131428063));
+    btn_pic_name.setText(mContext.getText(2131230920));
   }
   
   protected void adjustkUI()
   {
-    if (am.ar(destPath))
+    if (ap.aB(destPath))
     {
-      findViewById(2131362326).setVisibility(8);
-      findViewById(2131362320).setVisibility(8);
-      findViewById(2131362321).setVisibility(8);
+      findViewById(2131624932).setVisibility(8);
+      findViewById(2131624926).setVisibility(8);
+      findViewById(2131624927).setVisibility(8);
       description.setVisibility(8);
       tag.setVisibility(8);
     }
     if (isAlbumEdit)
     {
-      findViewById(2131362326).setVisibility(8);
-      findViewById(2131362321).setVisibility(8);
+      findViewById(2131624932).setVisibility(8);
+      findViewById(2131624927).setVisibility(8);
       tag.setVisibility(8);
-      findViewById(2131362322).setVisibility(8);
-      findViewById(2131362324).setVisibility(8);
+      findViewById(2131624928).setVisibility(8);
+      findViewById(2131624930).setVisibility(8);
     }
   }
   

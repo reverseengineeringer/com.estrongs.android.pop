@@ -1,23 +1,33 @@
 package com.estrongs.android.ui.dialog;
 
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.j.c;
+import com.estrongs.android.util.p;
+
 class io
+  implements DialogInterface.OnClickListener
 {
-  String a = "";
-  String b = "";
-  String c = "";
-  private String e = "";
+  io(im paramim) {}
   
-  io(ij paramij, String paramString1, String paramString2, String paramString3)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    a = paramString1;
-    b = paramString2;
-    c = paramString3;
-    e = paramString3;
-  }
-  
-  boolean a()
-  {
-    return !e.equals(c);
+    try
+    {
+      p.a(im.a(a));
+      c localc = c.a(im.a(a));
+      if (localc != null) {
+        localc.a("Go_feedback");
+      }
+    }
+    catch (Exception localException)
+    {
+      for (;;)
+      {
+        localException.printStackTrace();
+      }
+    }
+    paramDialogInterface.dismiss();
   }
 }
 

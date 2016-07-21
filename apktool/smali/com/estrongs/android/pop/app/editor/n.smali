@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
@@ -22,47 +22,26 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 4
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 2
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/editor/n;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/editor/PopNoteEditor;->v(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;)Lcom/estrongs/android/pop/app/editor/c;
+    const/4 v1, 0x1
 
-    move-result-object v0
+    invoke-static {v0, v1}, Lcom/estrongs/android/pop/app/editor/PopNoteEditor;->a(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;Z)V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/editor/c;->a()Ljava/lang/String;
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    move-result-object v0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/editor/n;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
 
-    if-eqz v0, :cond_0
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/editor/n;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
 
-    new-instance v1, Ljava/util/ArrayList;
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/editor/PopNoteEditor;->q(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;)I
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+    move-result v1
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bB(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/estrongs/android/pop/app/editor/PopNoteEditor;->c(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;I)I
 
-    move-result-object v0
-
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v0, Lcom/estrongs/android/ui/dialog/ks;
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/editor/n;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
-
-    const-string v3, "document"
-
-    invoke-direct {v0, v2, v3, v1}, Lcom/estrongs/android/ui/dialog/ks;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;)V
-
-    new-instance v1, Lcom/estrongs/android/pop/app/editor/o;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/editor/o;-><init>(Lcom/estrongs/android/pop/app/editor/n;)V
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ks;->a(Lcom/estrongs/android/ui/dialog/kv;)V
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ks;->show()V
-
-    :cond_0
     return-void
 .end method

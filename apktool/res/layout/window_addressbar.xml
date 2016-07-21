@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/address_layout" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="@dimen/addressbar_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.estrongs.android.pop.esclasses.ESHorizontalScrollView android:id="@id/scrollView" android:scrollbars="none" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.estrongs.android.ui.addressbar.AdvancedAddressBar android:id="@id/address_bar" android:layout_width="wrap_content" android:layout_height="@dimen/addressbar_height" android:layout_marginLeft="@dimen/addressbar_margin_horizontal" android:layout_marginRight="@dimen/addressbar_margin_horizontal" />
+    </com.estrongs.android.pop.esclasses.ESHorizontalScrollView>
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_app_catgory" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_app_catgory_content" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/dp_15" android:textColor="@color/app_category_text_color" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/tv_app_catgory" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:maxWidth="200.0dip" android:singleLine="true" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_icon_down_arrow" android:layout_width="@dimen/dp_15" android:layout_height="@dimen/dp_15" android:layout_marginLeft="@dimen/dp_10" android:src="@drawable/icon_downarrow30" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:id="@id/addressbar_analyse" style="@style/address_bar_analysis_btn_style" />
+</LinearLayout>

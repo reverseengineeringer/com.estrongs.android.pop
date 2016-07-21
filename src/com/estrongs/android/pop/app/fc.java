@@ -1,26 +1,16 @@
 package com.estrongs.android.pop.app;
 
-import com.estrongs.android.pop.app.a.ak;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 class fc
-  implements Runnable
+  implements View.OnClickListener
 {
-  fc(PopAudioPlayer paramPopAudioPlayer, ak paramak) {}
+  fc(fa paramfa) {}
   
-  public void run()
+  public void onClick(View paramView)
   {
-    try
-    {
-      a.d();
-      if ((a == PopAudioPlayer.a(b).r()) && (a.c())) {
-        b.runOnUiThread(new fd(this));
-      }
-      return;
-    }
-    catch (Exception localException)
-    {
-      localException.printStackTrace();
-    }
+    a.a.z();
   }
 }
 

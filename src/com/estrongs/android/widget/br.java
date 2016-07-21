@@ -1,22 +1,10 @@
 package com.estrongs.android.widget;
 
-import android.os.Handler;
-import android.os.Message;
-
-class br
-  extends Handler
+public abstract interface br
 {
-  private br(SlidingDrawer paramSlidingDrawer) {}
+  public abstract void a();
   
-  public void handleMessage(Message paramMessage)
-  {
-    switch (what)
-    {
-    default: 
-      return;
-    }
-    SlidingDrawer.c(a);
-  }
+  public abstract void b();
 }
 
 /* Location:

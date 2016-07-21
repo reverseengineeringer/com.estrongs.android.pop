@@ -1,51 +1,13 @@
 package com.estrongs.android.ui.dialog;
 
-import com.estrongs.android.appinfo.AppFolderInfoManager.RemnantFolder;
-import com.estrongs.fs.b.am;
-import com.estrongs.fs.b.an;
-import com.estrongs.fs.util.j;
-import java.util.ArrayList;
-import java.util.Iterator;
-
 class bs
+  implements Runnable
 {
-  String a;
-  String b;
-  ArrayList<AppFolderInfoManager.RemnantFolder> c;
+  bs(br parambr) {}
   
-  bs(String paramString1, String paramString2, ArrayList<AppFolderInfoManager.RemnantFolder> paramArrayList)
+  public void run()
   {
-    a = paramString1;
-    b = paramString2;
-    c = paramArrayList;
-  }
-  
-  String a()
-  {
-    if (a != null) {
-      return a;
-    }
-    return b;
-  }
-  
-  String b()
-  {
-    Iterator localIterator = c.iterator();
-    long l = 0L;
-    if (localIterator.hasNext())
-    {
-      am localam = (am)((AppFolderInfoManager.RemnantFolder)localIterator.next()).a();
-      if (localam == null) {
-        break label60;
-      }
-      l = bc + l;
-    }
-    label60:
-    for (;;)
-    {
-      break;
-      return j.c(l);
-    }
+    a.c.c.notifyDataSetChanged();
   }
 }
 

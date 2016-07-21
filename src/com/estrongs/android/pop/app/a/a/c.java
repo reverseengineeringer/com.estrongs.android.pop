@@ -1,59 +1,22 @@
 package com.estrongs.android.pop.app.a.a;
 
-public abstract class c
+import com.estrongs.android.pop.app.a.k;
+
+class c
+  implements k
 {
-  protected int a = 0;
-  protected int b = -1;
-  protected int c = 0;
+  c(a parama) {}
   
-  protected abstract int a(int paramInt);
-  
-  protected abstract void a();
-  
-  protected abstract void b();
-  
-  public void b(int paramInt)
+  public void a(boolean paramBoolean)
   {
-    if (a != paramInt) {}
-    for (int i = 1;; i = 0)
+    if (paramBoolean)
     {
-      a = paramInt;
-      if (i != 0) {
-        a();
+      com.estrongs.android.pop.app.a.a.b(this);
+      if (a.a(a) != null) {
+        a.a(a).a();
       }
-      return;
     }
   }
-  
-  public abstract void c();
-  
-  public void c(int paramInt)
-  {
-    b = paramInt;
-    b();
-  }
-  
-  public abstract int d();
-  
-  public void d(int paramInt)
-  {
-    c = paramInt;
-  }
-  
-  public abstract int e();
-  
-  public int e(int paramInt)
-  {
-    if (a == 0) {
-      return -1;
-    }
-    if (c == 1) {
-      return b % a;
-    }
-    return a(paramInt);
-  }
-  
-  public abstract int f();
 }
 
 /* Location:

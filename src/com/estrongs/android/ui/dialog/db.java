@@ -1,17 +1,34 @@
 package com.estrongs.android.ui.dialog;
 
-import com.estrongs.fs.h;
-import com.estrongs.fs.i;
-import com.estrongs.fs.m;
+import android.os.Handler;
+import android.os.Message;
+import com.estrongs.android.ui.adapter.g;
+import com.estrongs.android.ui.view.NaviListView;
 
 class db
-  implements i
+  extends Handler
 {
-  db(da paramda, boolean paramBoolean) {}
+  db(da paramda, NaviListView paramNaviListView) {}
   
-  public boolean a(h paramh)
+  public void handleMessage(Message paramMessage)
   {
-    return ((!paramh.getName().startsWith(".")) || (a)) && (paramh.getFileType().a());
+    super.handleMessage(paramMessage);
+    int i = what;
+    int j = arg1;
+    if (i == 1) {
+      if (arg2 == 0) {
+        a.a();
+      }
+    }
+    do
+    {
+      do
+      {
+        return;
+      } while (i != 2);
+      paramMessage = (String)obj;
+    } while (!b.a(paramMessage));
+    b.a.a();
   }
 }
 

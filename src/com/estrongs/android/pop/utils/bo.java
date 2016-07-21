@@ -1,16 +1,32 @@
 package com.estrongs.android.pop.utils;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.app.Activity;
+import com.estrongs.a.a;
+import com.estrongs.a.a.p;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.view.cr;
+import com.estrongs.fs.h;
 
-class bo
-  implements DialogInterface.OnClickListener
+final class bo
+  implements p
 {
-  bo(bn parambn) {}
+  bo(cr paramcr, h paramh, Activity paramActivity) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void a(a parama, int paramInt1, int paramInt2)
   {
-    paramDialogInterface.dismiss();
+    if (((paramInt2 == 5) || (paramInt2 == 4)) && (a != null))
+    {
+      if (!ap.aY(b.getPath())) {
+        break label56;
+      }
+      ao.b(b);
+      c.runOnUiThread(new bp(this));
+    }
+    label56:
+    while ((!ap.bl(b.getPath())) || (b.getExtra("child_count") == null)) {
+      return;
+    }
+    ao.a(b);
   }
 }
 

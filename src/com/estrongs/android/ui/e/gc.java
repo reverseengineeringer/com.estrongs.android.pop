@@ -3,21 +3,17 @@ package com.estrongs.android.ui.e;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.view.e;
 
 class gc
   implements MenuItem.OnMenuItemClickListener
 {
-  gc(cp paramcp) {}
+  gc(cr paramcr) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = (e)cp.a(a).y();
-    if (paramMenuItem != null) {
-      paramMenuItem.a(cp.b(a), false);
-    }
-    cp.a(a).s();
-    return true;
+    cr.a(cr.a(a));
+    cr.b(a).B();
+    return false;
   }
 }
 

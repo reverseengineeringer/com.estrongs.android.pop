@@ -1,16 +1,13 @@
 package com.estrongs.android.ui.dialog;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-
 class cm
-  implements View.OnClickListener
+  implements Runnable
 {
-  cm(cg paramcg) {}
+  cm(ci paramci) {}
   
-  public void onClick(View paramView)
+  public void run()
   {
-    a.dismiss();
+    ci.access$400(a);
   }
 }
 

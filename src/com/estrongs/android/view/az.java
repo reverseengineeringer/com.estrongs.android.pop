@@ -1,13 +1,17 @@
 package com.estrongs.android.view;
 
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import com.estrongs.fs.h;
+
 class az
-  implements Runnable
+  implements co
 {
-  az(ax paramax) {}
+  az(ak paramak) {}
   
-  public void run()
+  public void a(RecyclerView paramRecyclerView, View paramView, int paramInt)
   {
-    a.a.g();
+    a.a((h)a.e(paramInt), paramView, paramInt);
   }
 }
 

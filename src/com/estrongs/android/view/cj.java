@@ -1,21 +1,43 @@
 package com.estrongs.android.view;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.ui.pcs.a;
-import com.estrongs.fs.h;
+import android.content.Context;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView.Recycler;
+import android.support.v7.widget.RecyclerView.State;
 
 class cj
-  implements DialogInterface.OnClickListener
+  extends GridLayoutManager
 {
-  cj(ce paramce, h paramh) {}
-  
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public cj(cg paramcg, Context paramContext, int paramInt)
   {
-    a locala = new a(b.a.ad);
-    locala.a();
-    locala.a(new ck(this));
-    paramDialogInterface.dismiss();
+    super(paramContext, paramInt);
+  }
+  
+  public void onLayoutChildren(RecyclerView.Recycler paramRecycler, RecyclerView.State paramState)
+  {
+    try
+    {
+      super.onLayoutChildren(paramRecycler, paramState);
+      return;
+    }
+    catch (IndexOutOfBoundsException paramRecycler)
+    {
+      paramRecycler.printStackTrace();
+    }
+  }
+  
+  public int scrollVerticallyBy(int paramInt, RecyclerView.Recycler paramRecycler, RecyclerView.State paramState)
+  {
+    try
+    {
+      paramInt = super.scrollVerticallyBy(paramInt, paramRecycler, paramState);
+      return paramInt;
+    }
+    catch (IndexOutOfBoundsException paramRecycler)
+    {
+      paramRecycler.printStackTrace();
+    }
+    return 0;
   }
 }
 

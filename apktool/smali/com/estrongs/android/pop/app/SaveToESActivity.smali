@@ -2,11 +2,19 @@
 .super Lcom/estrongs/android/pop/app/FileChooserActivity;
 
 
+# instance fields
+.field private b:Lcom/estrongs/android/j/c;
+
+
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Lcom/estrongs/android/pop/app/FileChooserActivity;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/SaveToESActivity;->b:Lcom/estrongs/android/j/c;
 
     return-void
 .end method
@@ -156,11 +164,11 @@
 
     if-nez v0, :cond_4
 
-    const v0, 0x7f0b02fd
+    const v0, 0x7f0804a1
 
     const/4 v1, 0x1
 
-    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/SaveToESActivity;->finish()V
     :try_end_0
@@ -279,7 +287,7 @@
 
     invoke-direct {v0, v1, v8, v2}, Lcom/estrongs/fs/b/r;-><init>(Lcom/estrongs/fs/d;Ljava/util/List;Lcom/estrongs/fs/h;)V
 
-    const v1, 0x7f0b02bf
+    const v1, 0x7f080236
 
     invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/SaveToESActivity;->getString(I)Ljava/lang/String;
 
@@ -291,7 +299,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bL(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->cc(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -313,23 +321,23 @@
 
     invoke-virtual {v0, v1}, Lcom/estrongs/fs/b/r;->a(Z)V
 
-    new-instance v1, Lcom/estrongs/android/ui/dialog/ix;
+    new-instance v1, Lcom/estrongs/android/ui/dialog/jh;
 
-    const v2, 0x7f0b0084
+    const v2, 0x7f0805ad
 
     invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/SaveToESActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-direct {v1, p0, v2, v0}, Lcom/estrongs/android/ui/dialog/ix;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/a/a;)V
+    invoke-direct {v1, p0, v2, v0}, Lcom/estrongs/android/ui/dialog/jh;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/a/a;)V
 
-    new-instance v2, Lcom/estrongs/android/pop/app/ks;
+    new-instance v2, Lcom/estrongs/android/pop/app/lj;
 
-    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/ks;-><init>(Lcom/estrongs/android/pop/app/SaveToESActivity;)V
+    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/lj;-><init>(Lcom/estrongs/android/pop/app/SaveToESActivity;)V
 
-    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/dialog/ix;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/dialog/jh;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    invoke-virtual {v1}, Lcom/estrongs/android/ui/dialog/ix;->show()V
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/dialog/jh;->show()V
 
     invoke-virtual {v0}, Lcom/estrongs/fs/b/r;->execute()V
     :try_end_5
@@ -455,11 +463,11 @@
 
     if-nez v0, :cond_b
 
-    const v0, 0x7f0b02fd
+    const v0, 0x7f0804a1
 
     const/4 v1, 0x1
 
-    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/SaveToESActivity;->finish()V
     :try_end_7
@@ -635,7 +643,7 @@
 
     invoke-super {p0, p1}, Lcom/estrongs/android/pop/app/FileChooserActivity;->onCreate(Landroid/os/Bundle;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/SaveToESActivity;->a:Lcom/estrongs/android/widget/g;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/SaveToESActivity;->a:Lcom/estrongs/android/widget/f;
 
     if-nez v0, :cond_0
 
@@ -643,29 +651,53 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/SaveToESActivity;->a:Lcom/estrongs/android/widget/g;
+    invoke-static {p0}, Lcom/estrongs/android/j/c;->a(Landroid/content/Context;)Lcom/estrongs/android/j/c;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/SaveToESActivity;->b:Lcom/estrongs/android/j/c;
+
+    :try_start_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/SaveToESActivity;->b:Lcom/estrongs/android/j/c;
+
+    const-string v1, "act3"
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/j/c;->d(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/SaveToESActivity;->b:Lcom/estrongs/android/j/c;
+
+    const-string v1, "act3"
+
+    const-string v2, "save_to_es"
+
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/j/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/SaveToESActivity;->a:Lcom/estrongs/android/widget/f;
 
     const/4 v1, -0x1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/g;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/f;->a(I)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/SaveToESActivity;->a:Lcom/estrongs/android/widget/g;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/SaveToESActivity;->a:Lcom/estrongs/android/widget/f;
 
-    const v1, 0x7f0b002a
+    const/high16 v1, 0x7f080000
 
     invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/SaveToESActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    new-instance v2, Lcom/estrongs/android/pop/app/kq;
+    new-instance v2, Lcom/estrongs/android/pop/app/lh;
 
-    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/kq;-><init>(Lcom/estrongs/android/pop/app/SaveToESActivity;)V
+    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/lh;-><init>(Lcom/estrongs/android/pop/app/SaveToESActivity;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/widget/g;->b(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/widget/f;->b(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/SaveToESActivity;->a:Lcom/estrongs/android/widget/g;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/SaveToESActivity;->a:Lcom/estrongs/android/widget/f;
 
-    const v1, 0x7f0b000c
+    const v1, 0x7f080221
 
     invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/SaveToESActivity;->getString(I)Ljava/lang/String;
 
@@ -673,7 +705,14 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/widget/g;->c(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/widget/f;->c(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    goto :goto_1
 .end method

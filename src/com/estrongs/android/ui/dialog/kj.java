@@ -1,31 +1,21 @@
 package com.estrongs.android.ui.dialog;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.ImageView;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.a.a;
 
 class kj
-  implements View.OnClickListener
+  implements DialogInterface.OnClickListener
 {
-  kj(kf paramkf) {}
+  kj(kh paramkh, a parama) {}
   
-  public void onClick(View paramView)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (kf.k(a)) {
-      return;
-    }
-    paramView = a;
-    if (!kf.l(a)) {}
-    for (boolean bool = true;; bool = false)
+    if (a.canCancel())
     {
-      kf.a(paramView, bool);
-      if (!kf.l(a)) {
-        break;
-      }
-      kf.m(a).setImageResource(2130837966);
-      return;
+      b.dismiss();
+      a.requestStop();
     }
-    kf.m(a).setImageResource(2130837969);
   }
 }
 

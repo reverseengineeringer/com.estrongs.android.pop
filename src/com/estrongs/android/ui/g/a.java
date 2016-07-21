@@ -2,11 +2,11 @@ package com.estrongs.android.ui.g;
 
 import android.content.Context;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.esclasses.e;
-import com.estrongs.android.ui.pcs.r;
-import com.estrongs.android.util.ak;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.y;
+import com.estrongs.android.pop.esclasses.i;
+import com.estrongs.android.ui.pcs.u;
+import com.estrongs.android.util.aa;
+import com.estrongs.android.util.an;
+import com.estrongs.android.util.ap;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -39,14 +39,14 @@ public class a
   
   private boolean b(boolean paramBoolean)
   {
-    long l = ad.a(b).aI();
+    long l = ad.a(b).aJ();
     if (System.currentTimeMillis() - l < 86400000L) {
       return false;
     }
     if (paramBoolean) {
-      return ak.b();
+      return an.b();
     }
-    return ak.d();
+    return an.d();
   }
   
   public static void c()
@@ -76,7 +76,7 @@ public class a
   
   private void d()
   {
-    c = c.b(am.b(b) + "pushInfo.dat");
+    c = c.a(ap.b(b) + "pushInfo.dat");
   }
   
   private void e()
@@ -85,7 +85,7 @@ public class a
     for (;;)
     {
       return;
-      if (ak.b())
+      if (an.b())
       {
         Iterator localIterator = c.iterator();
         while (localIterator.hasNext())
@@ -107,8 +107,8 @@ public class a
     if (i > 0) {
       localObject1 = ((String)localObject2).substring(0, i);
     }
-    if (e.a != null) {
-      if ((!e.a.equalsIgnoreCase("CN")) && (!e.a.equalsIgnoreCase("TW"))) {
+    if (i.a != null) {
+      if ((!i.a.equalsIgnoreCase("CN")) && (!i.a.equalsIgnoreCase("TW"))) {
         break label163;
       }
     }
@@ -116,23 +116,23 @@ public class a
     for (localObject1 = "cn";; localObject1 = "en")
     {
       localObject2 = "http://www.estrongs.com/console/service/0918/?" + "lang=" + (String)localObject1;
-      localObject1 = am.b(b) + "pushInfo.dat";
-      localObject2 = new y((String)localObject2);
+      localObject1 = ap.b(b) + "pushInfo.dat";
+      localObject2 = new aa((String)localObject2);
       b localb = new b(this, (String)localObject1);
-      ((y)localObject2).a((String)localObject1 + ".tmp");
-      ((y)localObject2).a(localb);
-      ((y)localObject2).c();
+      ((aa)localObject2).a((String)localObject1 + ".tmp");
+      ((aa)localObject2).a(localb);
+      ((aa)localObject2).c();
       return;
     }
   }
   
   private void g()
   {
-    ad.a(b).aH();
-    String str = am.b(b) + "pushInfo.dat";
+    ad.a(b).aI();
+    String str = ap.b(b) + "pushInfo.dat";
     synchronized (d)
     {
-      c = c.b(str);
+      c = c.a(str);
       if (!a()) {
         e();
       }
@@ -164,7 +164,7 @@ public class a
         }
         if ("action_recomm_pcs".equals(localc.b()))
         {
-          if ((!r.a().c()) && (r.a().b())) {
+          if ((!u.a().c()) && (u.a().b())) {
             continue;
           }
           localLinkedList.add(localc);

@@ -1,31 +1,16 @@
 package com.estrongs.android.ui.pcs;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class i
-  implements View.OnClickListener
+  implements DialogInterface.OnClickListener
 {
-  i(d paramd) {}
+  i(f paramf) {}
   
-  public void onClick(View paramView)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    d.b(a).dismiss();
-    a.dismiss();
-    if (r.a().b())
-    {
-      if ((d.c(a)) && (a.b != null)) {
-        a.b.a(true, "pcs_temp_mode", r.a().e());
-      }
-      return;
-    }
-    if (!d.b(a).d()) {}
-    for (paramView = new a(d.d(a), false, true);; paramView = new a(d.d(a)))
-    {
-      paramView.a(a.b);
-      paramView.a();
-      return;
-    }
+    f.a(a);
   }
 }
 

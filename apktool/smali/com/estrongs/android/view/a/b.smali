@@ -3,5 +3,5 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/estrongs/android/ui/e/co;)Z
+.method public abstract a(Lcom/estrongs/android/ui/e/cp;)Z
 .end method

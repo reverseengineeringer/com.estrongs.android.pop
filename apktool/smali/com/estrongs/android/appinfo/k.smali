@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/appinfo/q;
+.implements Lcom/estrongs/android/appinfo/r;
 
 
 # instance fields
@@ -60,7 +60,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, p1, v2}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a(Landroid/content/Context;Lcom/estrongs/fs/h;Lcom/estrongs/android/appinfo/o;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0, v1, p1, v2}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a(Landroid/content/Context;Lcom/estrongs/fs/h;Lcom/estrongs/android/appinfo/p;)Landroid/graphics/drawable/Drawable;
 
     iget v0, p0, Lcom/estrongs/android/appinfo/k;->a:I
 

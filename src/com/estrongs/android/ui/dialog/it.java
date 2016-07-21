@@ -1,21 +1,37 @@
 package com.estrongs.android.ui.dialog;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.widget.g;
-import com.estrongs.fs.h;
+import com.estrongs.android.pop.ad;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.impl.local.m;
 
 class it
   implements DialogInterface.OnClickListener
 {
-  it(ir paramir, g paramg) {}
+  it(is paramis, Context paramContext) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    String str = a.e().getAbsolutePath();
-    ip.a(b.a, "open_folder" + str);
-    paramDialogInterface.dismiss();
-    b.a.c();
+    paramDialogInterface = is.a(b).b();
+    if (paramDialogInterface.length > 0) {
+      ad.a(a).I(m.a(is.a(b).a()));
+    }
+    try
+    {
+      m.b(paramDialogInterface);
+      ap.a(true);
+      b.dismiss();
+      return;
+    }
+    catch (Exception paramDialogInterface)
+    {
+      for (;;)
+      {
+        paramDialogInterface.printStackTrace();
+      }
+    }
   }
 }
 

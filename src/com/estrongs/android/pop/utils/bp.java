@@ -1,21 +1,15 @@
 package com.estrongs.android.pop.utils;
 
-import com.estrongs.a.a;
-import com.estrongs.a.a.p;
-import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.view.aw;
-import java.util.List;
+import com.estrongs.android.view.cr;
 
 class bp
-  implements p
+  implements Runnable
 {
-  bp(bn parambn, aw paramaw, ESActivity paramESActivity, List paramList, String paramString) {}
+  bp(bo parambo) {}
   
-  public void a(a parama, int paramInt1, int paramInt2)
+  public void run()
   {
-    if ((paramInt2 == 4) && (a != null)) {
-      b.a(new bq(this));
-    }
+    a.a.e();
   }
 }
 

@@ -88,7 +88,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f020060
+    const v1, 0x7f02014c
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -96,7 +96,7 @@
 
     iput-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/HighlightView;->m:Landroid/graphics/drawable/Drawable;
 
-    const v1, 0x7f02005f
+    const v1, 0x7f02014b
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -104,7 +104,7 @@
 
     iput-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/HighlightView;->n:Landroid/graphics/drawable/Drawable;
 
-    const v1, 0x7f02005e
+    const v1, 0x7f02014a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

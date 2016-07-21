@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:I
-
-.field final synthetic b:Lcom/estrongs/android/view/dp;
+.field final synthetic a:Lcom/estrongs/android/view/dq;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/view/dp;I)V
+.method constructor <init>(Lcom/estrongs/android/view/dq;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/view/dr;->b:Lcom/estrongs/android/view/dp;
-
-    iput p2, p0, Lcom/estrongs/android/view/dr;->a:I
+    iput-object p1, p0, Lcom/estrongs/android/view/dr;->a:Lcom/estrongs/android/view/dq;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,20 +22,14 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 2
+.method public run()V
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/view/dr;->b:Lcom/estrongs/android/view/dp;
+    iget-object v0, p0, Lcom/estrongs/android/view/dr;->a:Lcom/estrongs/android/view/dq;
 
-    iget v1, p0, Lcom/estrongs/android/view/dr;->a:I
+    iget-object v0, v0, Lcom/estrongs/android/view/dq;->e:Lcom/estrongs/android/view/cr;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/dp;->c(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/view/dr;->b:Lcom/estrongs/android/view/dp;
-
-    iget-object v0, v0, Lcom/estrongs/android/view/dp;->f:Lcom/estrongs/android/widget/c;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/c;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lcom/estrongs/android/view/cr;->e()V
 
     return-void
 .end method

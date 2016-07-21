@@ -165,14 +165,6 @@
     goto :goto_0
 .end method
 
-.method public a(Lcom/estrongs/android/ui/drag/d;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/ui/drag/DragGrid;->a:Lcom/estrongs/android/ui/drag/d;
-
-    return-void
-.end method
-
 .method public a(Lcom/estrongs/android/ui/drag/l;IIIILcom/estrongs/android/ui/drag/m;Ljava/lang/Object;)V
     .locals 8
 
@@ -195,7 +187,7 @@
     :cond_0
     move-object v0, v7
 
-    check-cast v0, Lcom/estrongs/android/pop/esclasses/ESActivity;
+    check-cast v0, Landroid/app/Activity;
 
     move-object v1, p7
 
@@ -207,7 +199,7 @@
 
     move v6, v4
 
-    invoke-static/range {v0 .. v6}, Lcom/estrongs/android/pop/utils/aj;->a(Landroid/app/Activity;Ljava/util/List;Lcom/estrongs/fs/h;ZZLcom/estrongs/a/a/p;Z)V
+    invoke-static/range {v0 .. v6}, Lcom/estrongs/android/pop/utils/ao;->a(Landroid/app/Activity;Ljava/util/List;Lcom/estrongs/fs/h;ZZLcom/estrongs/a/a/p;Z)V
 
     instance-of v0, v7, Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
@@ -215,108 +207,10 @@
 
     check-cast v7, Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-virtual {v7}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->s()V
+    invoke-virtual {v7}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->B()V
 
     :cond_1
     return-void
-.end method
-
-.method public a(Lcom/estrongs/fs/h;)V
-    .locals 3
-
-    const/4 v2, 0x0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/drag/DragGrid;->i:Landroid/widget/ImageView;
-
-    if-nez v0, :cond_0
-
-    const v0, 0x7f0a011d
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/drag/DragGrid;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/drag/DragGrid;->i:Landroid/widget/ImageView;
-
-    :cond_0
-    if-nez p1, :cond_1
-
-    :goto_0
-    return-void
-
-    :cond_1
-    iput-object p1, p0, Lcom/estrongs/android/ui/drag/DragGrid;->c:Lcom/estrongs/fs/h;
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/drag/DragGrid;->c:Lcom/estrongs/fs/h;
-
-    invoke-interface {v0}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/drag/DragGrid;->d:Ljava/lang/String;
-
-    iput-boolean v2, p0, Lcom/estrongs/android/ui/drag/DragGrid;->f:Z
-
-    invoke-interface {p1}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/m;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/fs/m;->a()Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lcom/estrongs/android/ui/drag/DragGrid;->g:Z
-
-    invoke-interface {p1}, Lcom/estrongs/fs/h;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "."
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    const-string v0, "item_is_scanned_server"
-
-    invoke-interface {p1, v0}, Lcom/estrongs/fs/h;->getExtra(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_3
-
-    const-string v0, "item_is_scanned_server"
-
-    invoke-interface {p1, v0}, Lcom/estrongs/fs/h;->getExtra(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    :cond_2
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/estrongs/android/ui/drag/DragGrid;->h:Z
-
-    :goto_1
-    invoke-virtual {p0}, Lcom/estrongs/android/ui/drag/DragGrid;->a()V
-
-    goto :goto_0
-
-    :cond_3
-    iput-boolean v2, p0, Lcom/estrongs/android/ui/drag/DragGrid;->h:Z
-
-    goto :goto_1
 .end method
 
 .method public b(Lcom/estrongs/android/ui/drag/l;IIIILcom/estrongs/android/ui/drag/m;Ljava/lang/Object;)V
@@ -394,7 +288,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/esclasses/ESImageView;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/esclasses/ESImageView;->setTranslucent(Z)V
 
     iget-object v0, p0, Lcom/estrongs/android/ui/drag/DragGrid;->i:Landroid/widget/ImageView;
 
@@ -419,11 +313,11 @@
 
     if-eqz v1, :cond_1
 
-    invoke-static {}, Lcom/estrongs/android/ui/pcs/r;->a()Lcom/estrongs/android/ui/pcs/r;
+    invoke-static {}, Lcom/estrongs/android/ui/pcs/u;->a()Lcom/estrongs/android/ui/pcs/u;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/r;->b()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/u;->b()Z
 
     move-result v0
 
@@ -470,7 +364,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/esclasses/ESImageView;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/esclasses/ESImageView;->setTranslucent(Z)V
 
     iget-object v0, p0, Lcom/estrongs/android/ui/drag/DragGrid;->i:Landroid/widget/ImageView;
 
@@ -506,11 +400,11 @@
 
     if-eqz v1, :cond_0
 
-    invoke-static {}, Lcom/estrongs/android/ui/pcs/r;->a()Lcom/estrongs/android/ui/pcs/r;
+    invoke-static {}, Lcom/estrongs/android/ui/pcs/u;->a()Lcom/estrongs/android/ui/pcs/u;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/r;->b()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/u;->b()Z
 
     move-result v0
 
@@ -532,4 +426,126 @@
     const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method public getFileObject()Lcom/estrongs/fs/h;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/estrongs/android/ui/drag/DragGrid;->getTag()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/android/view/do;
+
+    iget-object v0, v0, Lcom/estrongs/android/view/do;->m:Ljava/lang/Object;
+
+    check-cast v0, Lcom/estrongs/fs/h;
+
+    return-object v0
+.end method
+
+.method public setDragController(Lcom/estrongs/android/ui/drag/d;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/ui/drag/DragGrid;->a:Lcom/estrongs/android/ui/drag/d;
+
+    return-void
+.end method
+
+.method public setFileObject(Lcom/estrongs/fs/h;)V
+    .locals 3
+
+    const/4 v2, 0x0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/drag/DragGrid;->i:Landroid/widget/ImageView;
+
+    if-nez v0, :cond_0
+
+    const v0, 0x7f0e0107
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/drag/DragGrid;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/drag/DragGrid;->i:Landroid/widget/ImageView;
+
+    :cond_0
+    if-nez p1, :cond_1
+
+    :goto_0
+    return-void
+
+    :cond_1
+    iput-object p1, p0, Lcom/estrongs/android/ui/drag/DragGrid;->c:Lcom/estrongs/fs/h;
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/drag/DragGrid;->c:Lcom/estrongs/fs/h;
+
+    invoke-interface {v0}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/drag/DragGrid;->d:Ljava/lang/String;
+
+    iput-boolean v2, p0, Lcom/estrongs/android/ui/drag/DragGrid;->f:Z
+
+    invoke-interface {p1}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/w;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/fs/w;->a()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/estrongs/android/ui/drag/DragGrid;->g:Z
+
+    invoke-interface {p1}, Lcom/estrongs/fs/h;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "."
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const-string v0, "item_is_scanned_server"
+
+    invoke-interface {p1, v0}, Lcom/estrongs/fs/h;->getExtra(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    const-string v0, "item_is_scanned_server"
+
+    invoke-interface {p1, v0}, Lcom/estrongs/fs/h;->getExtra(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    :cond_2
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/estrongs/android/ui/drag/DragGrid;->h:Z
+
+    :goto_1
+    invoke-virtual {p0}, Lcom/estrongs/android/ui/drag/DragGrid;->a()V
+
+    goto :goto_0
+
+    :cond_3
+    iput-boolean v2, p0, Lcom/estrongs/android/ui/drag/DragGrid;->h:Z
+
+    goto :goto_1
 .end method

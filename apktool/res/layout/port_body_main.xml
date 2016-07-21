@@ -2,16 +2,12 @@
 <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <RelativeLayout android:id="@id/container_top" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <LinearLayout android:gravity="center" android:id="@id/textbar_top" android:background="@drawable/main_titlebar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/dp_17">
-            <LinearLayout android:gravity="center" android:id="@id/container_indicators" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-        </LinearLayout>
-        <include android:id="@id/toolbar_container_top" android:layout_width="fill_parent" android:layout_height="@dimen/dp_43" android:layout_below="@id/textbar_top" layout="@layout/port_tools_top_file" />
+        <include android:id="@id/toolbar_container_top" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_height" layout="@layout/port_tools_top_file" />
     </RelativeLayout>
     <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/dp_0" android:layout_weight="1.0">
-        <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/app_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
         <com.estrongs.android.ui.drag.DragLayer android:id="@id/container_switcher" android:layout_width="fill_parent" android:layout_height="fill_parent" />
         <com.estrongs.android.widget.ESViewStub android:id="@id/extra_edit_bottom_stub_image" android:layout="@layout/extra_edit_bottom" android:inflatedId="@id/extra_edit_bottom_image" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-        <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/shadow_content_up" android:background="@drawable/shadow_tools_top" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/shadow_content_up" android:background="@drawable/shadow_tools_top" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
         <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/shadow_content_down" android:background="@drawable/shadow_tools_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
         <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/full_screen_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_display" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
     </RelativeLayout>

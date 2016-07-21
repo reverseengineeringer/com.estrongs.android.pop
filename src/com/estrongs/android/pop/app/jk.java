@@ -1,26 +1,29 @@
 package com.estrongs.android.pop.app;
 
-import android.content.Intent;
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.ui.e.iw;
-import com.estrongs.android.ui.view.ESVideoView;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 class jk
-  implements MenuItem.OnMenuItemClickListener
+  implements View.OnClickListener
 {
   jk(PopVideoPlayer paramPopVideoPlayer) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void onClick(View paramView)
   {
-    if (PopVideoPlayer.d(a))
+    if (PopVideoPlayer.r(a).p())
     {
-      PopVideoPlayer.d(a, false);
-      PopVideoPlayer.a(a).a(a.getIntent().getData());
-      PopVideoPlayer.c(a);
+      if (PopVideoPlayer.v(a) == 1)
+      {
+        a.b();
+        return;
+      }
+      PopVideoPlayer.w(a);
+      return;
     }
-    PopVideoPlayer.D(a).d();
-    return true;
+    if (PopVideoPlayer.t(a) == null) {
+      PopVideoPlayer.u(a);
+    }
+    PopVideoPlayer.t(a).show();
   }
 }
 

@@ -1,67 +1,16 @@
 package com.estrongs.android.ui.view;
 
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnBufferingUpdateListener;
+
 class as
-  extends Thread
+  implements MediaPlayer.OnBufferingUpdateListener
 {
-  public int a = -1;
-  public int b = 0;
-  private boolean c = false;
-  private Object d = new Object();
-  private ESVideoView e = null;
+  as(ESVideoView paramESVideoView) {}
   
-  public as(ESVideoView paramESVideoView)
+  public void onBufferingUpdate(MediaPlayer paramMediaPlayer, int paramInt)
   {
-    e = paramESVideoView;
-  }
-  
-  public void a(int paramInt)
-  {
-    synchronized (d)
-    {
-      a = paramInt;
-      b = a;
-      d.notify();
-      return;
-    }
-  }
-  
-  public void destroy()
-  {
-    c = true;
-    synchronized (d)
-    {
-      d.notify();
-      return;
-    }
-  }
-  
-  public void run()
-  {
-    while (!c)
-    {
-      if (a < 0) {
-        try
-        {
-          synchronized (d)
-          {
-            d.wait();
-          }
-        }
-        catch (InterruptedException localInterruptedException)
-        {
-          for (;;)
-          {
-            localInterruptedException.printStackTrace();
-          }
-        }
-      }
-      synchronized (d)
-      {
-        int i = a;
-        a = -1;
-        e.a(i);
-      }
-    }
+    ESVideoView.e(a, paramInt);
   }
 }
 

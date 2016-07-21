@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/dialog/cg;
+.field final synthetic a:Lcom/estrongs/android/ui/dialog/ci;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/cg;)V
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/ci;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/cn;->a:Lcom/estrongs/android/ui/dialog/cg;
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/cn;->a:Lcom/estrongs/android/ui/dialog/ci;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,14 +25,14 @@
 .method public onClick(Landroid/view/View;)V
     .locals 3
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/cn;->a:Lcom/estrongs/android/ui/dialog/cg;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/cn;->a:Lcom/estrongs/android/ui/dialog/ci;
 
-    # getter for: Lcom/estrongs/android/ui/dialog/cg;->mButtonListener0:Landroid/content/DialogInterface$OnClickListener;
-    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/cg;->access$000(Lcom/estrongs/android/ui/dialog/cg;)Landroid/content/DialogInterface$OnClickListener;
+    # getter for: Lcom/estrongs/android/ui/dialog/ci;->mButtonListener0:Landroid/content/DialogInterface$OnClickListener;
+    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/ci;->access$000(Lcom/estrongs/android/ui/dialog/ci;)Landroid/content/DialogInterface$OnClickListener;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/cn;->a:Lcom/estrongs/android/ui/dialog/cg;
+    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/cn;->a:Lcom/estrongs/android/ui/dialog/ci;
 
     const/4 v2, -0x1
 

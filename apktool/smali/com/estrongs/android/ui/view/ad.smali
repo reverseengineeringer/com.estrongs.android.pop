@@ -1,5 +1,5 @@
 .class Lcom/estrongs/android/ui/view/ad;
-.super Lcom/estrongs/android/pop/app/a/ag;
+.super Lcom/estrongs/android/pop/app/c/e;
 
 
 # instance fields
@@ -12,23 +12,23 @@
 
     iput-object p1, p0, Lcom/estrongs/android/ui/view/ad;->b:Lcom/estrongs/android/ui/view/ac;
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/a/ag;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/c/e;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected a(Lcom/estrongs/android/pop/app/a/ai;)Z
+.method protected a(Lcom/estrongs/android/pop/app/c/g;)Z
     .locals 1
 
-    iget-object v0, p1, Lcom/estrongs/android/pop/app/a/ai;->b:Lcom/estrongs/android/pop/app/a/ak;
+    iget-object v0, p1, Lcom/estrongs/android/pop/app/c/g;->b:Lcom/estrongs/android/pop/app/c/i;
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcom/estrongs/android/ui/view/ad;->b:Lcom/estrongs/android/ui/view/ac;
 
-    invoke-virtual {v0, p1}, Lcom/estrongs/android/ui/view/ac;->a(Lcom/estrongs/android/pop/app/a/ai;)Z
+    invoke-virtual {v0, p1}, Lcom/estrongs/android/ui/view/ac;->a(Lcom/estrongs/android/pop/app/c/g;)Z
 
     move-result v0
 
@@ -45,10 +45,10 @@
     goto :goto_0
 .end method
 
-.method protected b(Lcom/estrongs/android/pop/app/a/ai;)Z
+.method protected b(Lcom/estrongs/android/pop/app/c/g;)Z
     .locals 2
 
-    invoke-virtual {p0, p1}, Lcom/estrongs/android/ui/view/ad;->a(Lcom/estrongs/android/pop/app/a/ai;)Z
+    invoke-virtual {p0, p1}, Lcom/estrongs/android/ui/view/ad;->a(Lcom/estrongs/android/pop/app/c/g;)Z
 
     move-result v0
 
@@ -62,7 +62,7 @@
 
     new-instance v1, Lcom/estrongs/android/ui/view/ae;
 
-    invoke-direct {v1, p0, p1}, Lcom/estrongs/android/ui/view/ae;-><init>(Lcom/estrongs/android/ui/view/ad;Lcom/estrongs/android/pop/app/a/ai;)V
+    invoke-direct {v1, p0, p1}, Lcom/estrongs/android/ui/view/ae;-><init>(Lcom/estrongs/android/ui/view/ad;Lcom/estrongs/android/pop/app/c/g;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

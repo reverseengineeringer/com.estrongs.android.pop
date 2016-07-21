@@ -146,7 +146,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->ba(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->bl(Ljava/lang/String;)Z
 
     move-result v4
 
@@ -288,7 +288,7 @@
 
     invoke-virtual {v0, v5, p1, v4, v6}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
     :try_end_2
-    .catch Ljava/lang/OutOfMemoryError; {:try_start_2 .. :try_end_2} :catch_3
+    .catch Ljava/lang/OutOfMemoryError; {:try_start_2 .. :try_end_2} :catch_4
 
     :cond_5
     :goto_4
@@ -333,7 +333,7 @@
 
     invoke-virtual {v0, v4, v2}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;Landroid/graphics/Region$Op;)Z
     :try_end_3
-    .catch Ljava/lang/UnsupportedOperationException; {:try_start_3 .. :try_end_3} :catch_2
+    .catch Ljava/lang/UnsupportedOperationException; {:try_start_3 .. :try_end_3} :catch_3
 
     :goto_5
     const/4 v2, 0x0
@@ -351,6 +351,7 @@
 
     if-eqz v0, :cond_1
 
+    :try_start_4
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
@@ -364,6 +365,8 @@
     move v3, p3
 
     invoke-static/range {v0 .. v5}, Lcom/estrongs/android/pop/app/imageviewer/ao;->a(Landroid/graphics/Matrix;Landroid/graphics/Bitmap;IIZZ)Landroid/graphics/Bitmap;
+    :try_end_4
+    .catch Ljava/lang/OutOfMemoryError; {:try_start_4 .. :try_end_4} :catch_2
 
     move-result-object v1
 
@@ -372,14 +375,14 @@
     :catch_0
     move-exception v5
 
-    :try_start_4
+    :try_start_5
     iget v5, v4, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
     mul-int/lit8 v5, v5, 0x2
 
     iput v5, v4, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
-    :try_end_4
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
+    :try_end_5
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
 
     goto :goto_1
 
@@ -394,19 +397,26 @@
     goto :goto_2
 
     :cond_8
-    :try_start_5
+    :try_start_6
     sget-object v0, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
-    :try_end_5
-    .catch Ljava/lang/OutOfMemoryError; {:try_start_5 .. :try_end_5} :catch_3
+    :try_end_6
+    .catch Ljava/lang/OutOfMemoryError; {:try_start_6 .. :try_end_6} :catch_4
 
     goto :goto_3
 
     :catch_2
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/OutOfMemoryError;->printStackTrace()V
+
+    goto/16 :goto_0
+
+    :catch_3
     move-exception v2
 
     goto :goto_5
 
-    :catch_3
+    :catch_4
     move-exception v0
 
     goto :goto_4
@@ -457,7 +467,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0b01c7
+    const v2, 0x7f080728
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -570,7 +580,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v2, v3, v0}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -608,7 +618,7 @@
 
     const-string v3, "Failed to set wallpaper."
 
-    invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v2, v3, v1}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/imageviewer/CropImage;->setResult(I)V
 
@@ -812,7 +822,7 @@
 
     const-string v2, "store image fail, continue anyway"
 
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v1, v2, v0}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto/16 :goto_1
 
@@ -963,7 +973,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/CropImage;->t:Lcom/estrongs/android/pop/app/imageviewer/CropImageView;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/imageviewer/CropImageView;->e()V
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/imageviewer/CropImageView;->a()V
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/CropImage;->v:Landroid/graphics/Bitmap;
 
@@ -976,7 +986,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/CropImage;->t:Lcom/estrongs/android/pop/app/imageviewer/CropImageView;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/imageviewer/CropImageView;->e()V
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/imageviewer/CropImageView;->a()V
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/CropImage;->v:Landroid/graphics/Bitmap;
 
@@ -1079,17 +1089,17 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b01b6
+    const v1, 0x7f08049d
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p0, v0, v8}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    invoke-static {p0, v0, v8}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/CropImage;->t:Lcom/estrongs/android/pop/app/imageviewer/CropImageView;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/CropImageView;->e()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/CropImageView;->a()V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/CropImage;->v:Landroid/graphics/Bitmap;
 
@@ -1157,7 +1167,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0b0571
+    const v3, 0x7f08023f
 
     invoke-virtual {p0, v3}, Lcom/estrongs/android/pop/app/imageviewer/CropImage;->getString(I)Ljava/lang/String;
 
@@ -1182,7 +1192,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0b0245
+    const v2, 0x7f080426
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1208,7 +1218,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0b0011
+    const v3, 0x7f0800a3
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1330,13 +1340,11 @@
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/CropImage;->u:Landroid/content/ContentResolver;
 
-    invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/imageviewer/CropImage;->requestWindowFeature(I)Z
-
-    const v0, 0x7f030077
+    const v0, 0x7f0300e6
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/imageviewer/CropImage;->setContentView(I)V
 
-    const v0, 0x7f0a012c
+    const v0, 0x7f0e0073
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/imageviewer/CropImage;->findViewById(I)Landroid/view/View;
 
@@ -1541,7 +1549,7 @@
 
     if-eqz v4, :cond_2
 
-    const v0, 0x7f0a0021
+    const v0, 0x7f0e0077
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/imageviewer/CropImage;->findViewById(I)Landroid/view/View;
 
@@ -1647,7 +1655,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->addFlags(I)V
 
-    const v0, 0x7f0a0254
+    const v0, 0x7f0e0427
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/imageviewer/CropImage;->findViewById(I)Landroid/view/View;
 
@@ -1659,7 +1667,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a0253
+    const v0, 0x7f0e0426
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/imageviewer/CropImage;->findViewById(I)Landroid/view/View;
 

@@ -1,125 +1,102 @@
-.class public Lcom/estrongs/android/a/e;
-.super Lcom/estrongs/android/ui/dialog/cg;
+.class Lcom/estrongs/android/a/e;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcom/estrongs/android/a/j;
 
 
 # instance fields
-.field private a:Landroid/view/View;
-
-.field private b:Z
-
-.field private c:Lcom/estrongs/android/a/h;
-
-.field private d:Landroid/widget/CheckBox;
+.field final synthetic a:Lcom/estrongs/android/a/b;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/estrongs/android/a/h;Z)V
-    .locals 4
+.method constructor <init>(Lcom/estrongs/android/a/b;)V
+    .locals 0
 
-    const/4 v3, 0x0
+    iput-object p1, p0, Lcom/estrongs/android/a/e;->a:Lcom/estrongs/android/a/b;
 
-    const/4 v2, 0x0
-
-    invoke-direct {p0, p1}, Lcom/estrongs/android/ui/dialog/cg;-><init>(Landroid/content/Context;)V
-
-    iput-boolean v2, p0, Lcom/estrongs/android/a/e;->b:Z
-
-    iput-object v3, p0, Lcom/estrongs/android/a/e;->c:Lcom/estrongs/android/a/h;
-
-    iput-object p2, p0, Lcom/estrongs/android/a/e;->c:Lcom/estrongs/android/a/h;
-
-    invoke-static {p1}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v0
-
-    const v1, 0x7f030053
-
-    invoke-virtual {v0, v1, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/android/a/e;->a:Landroid/view/View;
-
-    iget-object v0, p0, Lcom/estrongs/android/a/e;->a:Landroid/view/View;
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/a/e;->setContentView(Landroid/view/View;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/a/e;->a:Landroid/view/View;
-
-    const v1, 0x7f0a01b5
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/CheckBox;
-
-    iput-object v0, p0, Lcom/estrongs/android/a/e;->d:Landroid/widget/CheckBox;
-
-    if-nez p3, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/a/e;->d:Landroid/widget/CheckBox;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setVisibility(I)V
-
-    :cond_0
-    const v0, 0x7f0b0049
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/estrongs/android/a/f;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/a/f;-><init>(Lcom/estrongs/android/a/e;)V
-
-    invoke-virtual {p0, v0, v1}, Lcom/estrongs/android/a/e;->setConfirmButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/widget/Button;
-
-    const v0, 0x7f0b03ac
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/estrongs/android/a/g;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/a/g;-><init>(Lcom/estrongs/android/a/e;)V
-
-    invoke-virtual {p0, v0, v1}, Lcom/estrongs/android/a/e;->setCancelButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/widget/Button;
-
-    invoke-virtual {p0, v2}, Lcom/estrongs/android/a/e;->setCancelable(Z)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/estrongs/android/a/e;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/estrongs/android/a/e;->b:Z
-
-    return p1
-.end method
-
 
 # virtual methods
-.method public dismiss()V
+.method public a(Ljava/lang/String;)V
     .locals 3
 
-    invoke-super {p0}, Lcom/estrongs/android/ui/dialog/cg;->dismiss()V
+    invoke-static {}, Lcom/estrongs/android/a/b;->h()Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/estrongs/android/a/e;->c:Lcom/estrongs/android/a/h;
+    move-result-object v0
 
-    iget-boolean v1, p0, Lcom/estrongs/android/a/e;->b:Z
+    const-string v1, "MediaAnalyzer finish!!"
 
-    iget-object v2, p0, Lcom/estrongs/android/a/e;->d:Landroid/widget/CheckBox;
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v2}, Landroid/widget/CheckBox;->isChecked()Z
+    iget-object v0, p0, Lcom/estrongs/android/a/e;->a:Lcom/estrongs/android/a/b;
 
-    move-result v2
+    const/4 v1, 0x1
 
-    invoke-interface {v0, v1, v2}, Lcom/estrongs/android/a/h;->a(ZZ)V
+    invoke-static {v0, v1}, Lcom/estrongs/android/a/b;->c(Lcom/estrongs/android/a/b;Z)Z
+
+    iget-object v0, p0, Lcom/estrongs/android/a/e;->a:Lcom/estrongs/android/a/b;
+
+    invoke-static {v0}, Lcom/estrongs/android/a/b;->d(Lcom/estrongs/android/a/b;)Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/android/a/j;
+
+    iget-object v2, p0, Lcom/estrongs/android/a/e;->a:Lcom/estrongs/android/a/b;
+
+    invoke-static {v2}, Lcom/estrongs/android/a/b;->b(Lcom/estrongs/android/a/b;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, v2}, Lcom/estrongs/android/a/j;->a(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/a/e;->a:Lcom/estrongs/android/a/b;
+
+    invoke-static {v0}, Lcom/estrongs/android/a/b;->g(Lcom/estrongs/android/a/b;)Lcom/estrongs/android/a/ab;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/a/ab;->a()V
+
+    return-void
+.end method
+
+.method public a(Ljava/lang/String;Ljava/util/Map;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/estrongs/android/a/b/a;",
+            ">;)V"
+        }
+    .end annotation
 
     return-void
 .end method

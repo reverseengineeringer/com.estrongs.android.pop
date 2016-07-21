@@ -1,54 +1,9 @@
 package com.estrongs.android.pop.utils;
 
-import com.estrongs.android.util.bd;
-
 class cs
-  implements Runnable
 {
-  cs(cm paramcm) {}
-  
-  public void run()
-  {
-    Thread.currentThread().setName("TaskQueue");
-    for (;;)
-    {
-      try
-      {
-        if (!cm.b(a))
-        {
-          localcq = cm.c(a);
-          if (localcq != null) {
-            continue;
-          }
-        }
-      }
-      catch (Exception localException)
-      {
-        cq localcq;
-        ct localct;
-        localException.printStackTrace();
-        continue;
-      }
-      catch (Error localError)
-      {
-        localError.printStackTrace();
-        continue;
-      }
-      cm.a(a, this);
-      return;
-      localcq.a(cm.d(a));
-      if (localcq.c())
-      {
-        localct = cm.e(a);
-        if (localct != null)
-        {
-          a = localcq;
-          bd.a(localct);
-        }
-      }
-      localcq.a();
-    }
-  }
+  String a;
+  int b;
 }
 
 /* Location:

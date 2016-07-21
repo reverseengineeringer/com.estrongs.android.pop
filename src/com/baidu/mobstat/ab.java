@@ -1,37 +1,15 @@
 package com.baidu.mobstat;
 
-import android.content.Context;
-import com.baidu.mobstat.util.e;
-
-class ab
-  implements Runnable
+ enum ab
 {
-  ab(x paramx, long paramLong, String paramString1, String paramString2, Context paramContext) {}
-  
-  public void run()
+  ab(int paramInt1)
   {
-    if (!af.a().c()) {}
-    synchronized (af.a())
-    {
-      try
-      {
-        af.a().wait();
-        if (a <= 0L)
-        {
-          e.a("sdkstat", "EventStat: Wrong Case, Duration must be positive");
-          return;
-        }
-      }
-      catch (InterruptedException localInterruptedException)
-      {
-        for (;;)
-        {
-          e.a("sdkstat", localInterruptedException);
-        }
-      }
-    }
-    DataCore.getInstance().putEvent(b, c, 1, System.currentTimeMillis(), a);
-    DataCore.getInstance().flush(d);
+    super(paramString, paramInt, paramInt1, null);
+  }
+  
+  public w a()
+  {
+    return new ah();
   }
 }
 

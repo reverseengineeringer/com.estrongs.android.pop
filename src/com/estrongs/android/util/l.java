@@ -1,169 +1,81 @@
 package com.estrongs.android.util;
 
-import android.net.wifi.WifiManager;
-import android.net.wifi.WifiManager.WifiLock;
-import android.os.PowerManager;
-import android.os.PowerManager.WakeLock;
-import android.util.Log;
-import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.pop.ac;
-
 public class l
 {
-  private static PowerManager a = null;
-  private static WifiManager b = null;
-  private static PowerManager.WakeLock c = null;
-  private static WifiManager.WifiLock d = null;
-  private static Integer e = Integer.valueOf(0);
-  private static Integer f = Integer.valueOf(0);
-  private static Object g = new Object();
+  private static String a = "ES_FileExplorer";
   
-  public static void a()
+  private static void a(int paramInt1, String paramString1, String paramString2, Throwable paramThrowable, int paramInt2) {}
+  
+  public static void a(String paramString)
   {
-    a(true, true);
+    a(3, a, paramString, null, 5);
   }
   
-  public static void a(boolean paramBoolean1, boolean paramBoolean2)
+  public static void a(String paramString1, String paramString2)
   {
-    Object localObject1 = g;
-    if (paramBoolean1) {}
-    try
-    {
-      Integer localInteger = f;
-      f = Integer.valueOf(f.intValue() + 1);
-      if (f.intValue() == 1) {
-        c(true, false);
-      }
-      if (paramBoolean2)
-      {
-        localInteger = e;
-        e = Integer.valueOf(e.intValue() + 1);
-        if (e.intValue() == 1) {
-          c(false, true);
-        }
-      }
-      return;
-    }
-    finally {}
+    a(2, paramString1, paramString2, null, 5);
   }
   
-  public static void b()
+  public static void a(String paramString1, String paramString2, Throwable paramThrowable)
   {
-    b(true, true);
+    a(3, paramString1, paramString2, paramThrowable, 5);
   }
   
-  public static void b(boolean paramBoolean1, boolean paramBoolean2)
+  public static void a(String paramString, Throwable paramThrowable)
   {
-    Object localObject1 = g;
-    if (paramBoolean1) {}
-    try
-    {
-      Integer localInteger = f;
-      f = Integer.valueOf(f.intValue() - 1);
-      if (f.intValue() == 0) {
-        d(true, false);
-      }
-      if (paramBoolean2)
-      {
-        localInteger = e;
-        e = Integer.valueOf(e.intValue() - 1);
-        if (e.intValue() == 0) {
-          d(false, true);
-        }
-      }
-      return;
-    }
-    finally {}
+    a(5, paramString, "", paramThrowable, 5);
   }
   
-  private static void c(boolean paramBoolean1, boolean paramBoolean2)
+  public static void b(String paramString)
   {
-    FexApplication localFexApplication = FexApplication.a();
-    if (localFexApplication == null) {
-      return;
-    }
-    if ((a == null) && (paramBoolean1)) {
-      a = (PowerManager)localFexApplication.getSystemService("power");
-    }
-    if ((b == null) && (paramBoolean2)) {
-      b = (WifiManager)localFexApplication.getSystemService("wifi");
-    }
-    if ((!paramBoolean1) || ((c != null) && (c.isHeld()))) {}
-    for (int i = 0;; i = 1)
-    {
-      if ((!paramBoolean2) || ((d != null) && (d.isHeld()))) {}
-      for (int j = 0;; j = 1)
-      {
-        if ((i != 0) && (a != null))
-        {
-          c = a.newWakeLock(1, "ES Wake Lock");
-          c.acquire();
-        }
-        if ((j == 0) || (b == null)) {
-          break;
-        }
-        i = ac.a();
-        if (i >= 10) {}
-        for (;;)
-        {
-          try
-          {
-            d = b.createWifiLock(3, "ES Wifi Lock");
-            if (d == null) {
-              d = b.createWifiLock(1, "ES Wifi Lock");
-            }
-            try
-            {
-              d.acquire();
-              return;
-            }
-            catch (Exception localException1) {}
-            if ((i < 10) || (i >= 12)) {
-              break;
-            }
-            try
-            {
-              d = b.createWifiLock(1, "ES Wifi Lock");
-              d.acquire();
-              return;
-            }
-            catch (Exception localException2)
-            {
-              d = null;
-              return;
-            }
-          }
-          catch (Exception localException3)
-          {
-            Log.e("Error", "change to acquire WIFI_MODE_FULL lock");
-            d = b.createWifiLock(1, "ES Wifi Lock");
-            continue;
-          }
-          d = b.createWifiLock(1, "ES Wifi Lock");
-        }
-      }
-    }
+    a(5, a, paramString, null, 5);
   }
   
-  private static void d(boolean paramBoolean1, boolean paramBoolean2)
+  public static void b(String paramString1, String paramString2)
   {
-    if (paramBoolean2) {}
-    try
-    {
-      if ((d != null) && (d.isHeld()))
-      {
-        d.release();
-        d = null;
-      }
-      if ((paramBoolean1) && (c != null) && (c.isHeld()))
-      {
-        c.release();
-        c = null;
-      }
-      return;
-    }
-    catch (Exception localException) {}
+    a(3, paramString1, paramString2, null, 5);
   }
+  
+  public static void b(String paramString1, String paramString2, Throwable paramThrowable)
+  {
+    a(5, paramString1, paramString2, paramThrowable, 5);
+  }
+  
+  public static void c(String paramString)
+  {
+    a(6, a, paramString, null, 5);
+  }
+  
+  public static void c(String paramString1, String paramString2)
+  {
+    a(4, paramString1, paramString2, null, 5);
+  }
+  
+  public static void c(String paramString1, String paramString2, Throwable paramThrowable)
+  {
+    a(6, paramString1, paramString2, paramThrowable, 5);
+  }
+  
+  public static void d(String paramString) {}
+  
+  public static void d(String paramString1, String paramString2)
+  {
+    a(5, paramString1, paramString2, null, 5);
+  }
+  
+  public static void e(String paramString) {}
+  
+  public static void e(String paramString1, String paramString2)
+  {
+    a(6, paramString1, paramString2, null, 5);
+  }
+  
+  public static void f(String paramString)
+  {
+    g(paramString);
+  }
+  
+  private static void g(String paramString) {}
 }
 
 /* Location:

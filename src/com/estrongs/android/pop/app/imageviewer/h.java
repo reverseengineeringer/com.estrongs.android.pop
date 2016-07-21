@@ -16,7 +16,7 @@ class h
       CropImage.c(c.a).recycle();
       CropImage.a(c.a, a);
     }
-    if (CropImage.d(c.a).f() == 1.0F) {
+    if (CropImage.d(c.a).getScale() == 1.0F) {
       CropImage.d(c.a).a(true, true);
     }
     b.countDown();

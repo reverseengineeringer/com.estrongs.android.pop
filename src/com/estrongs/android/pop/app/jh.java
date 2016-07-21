@@ -1,35 +1,25 @@
 package com.estrongs.android.pop.app;
 
-import com.estrongs.android.ui.notification.ChromeCastPlayerNotificationHelper;
-import com.estrongs.android.ui.view.ESVideoView;
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnPreparedListener;
+import android.view.View;
+import android.widget.MediaController;
 
 class jh
-  implements Runnable
+  implements MediaPlayer.OnPreparedListener
 {
   jh(PopVideoPlayer paramPopVideoPlayer) {}
   
-  public void run()
+  public void onPrepared(MediaPlayer paramMediaPlayer)
   {
-    if (!a.a())
-    {
-      if ((PopVideoPlayer.r(a).r() >= 0) && (PopVideoPlayer.C(a))) {
-        ChromeCastPlayerNotificationHelper.a().b();
-      }
-      return;
-    }
+    a.b.setVisibility(8);
+    PopVideoPlayer.d(a, true);
     try
     {
-      if (PopVideoPlayer.a(a).isPlaying()) {
-        a.f = true;
-      }
-      for (a.g = false;; a.g = true)
-      {
-        PopVideoPlayer.a(a).pause();
-        return;
-      }
+      PopVideoPlayer.e(a).setEnabled(true);
       return;
     }
-    catch (Exception localException) {}
+    catch (Exception paramMediaPlayer) {}
   }
 }
 

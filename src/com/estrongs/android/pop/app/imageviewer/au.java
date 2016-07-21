@@ -1,10 +1,10 @@
 package com.estrongs.android.pop.app.imageviewer;
 
 import com.estrongs.android.pop.app.imageviewer.gallery.f;
-import com.estrongs.android.widget.bc;
+import com.estrongs.android.widget.bd;
 
 class au
-  implements bc
+  implements bd
 {
   private int b = 2;
   

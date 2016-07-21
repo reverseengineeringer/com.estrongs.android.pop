@@ -1,38 +1,26 @@
 package com.baidu.mobstat;
 
-import android.os.Handler;
-import android.os.Message;
-import android.util.Log;
-
-class v
-  extends Handler
+public class v
 {
-  v(Download paramDownload) {}
+  private long a = -1L;
+  private String b;
+  private String c;
   
-  public void handleMessage(Message paramMessage)
+  public v(long paramLong, String paramString1, String paramString2)
   {
-    if (Download.a == what)
-    {
-      Download.a(a, true);
-      Download.b(a, false);
-      Download.b().sendEmptyMessage(Download.a);
-      Log.d("UpdateVersionService", "down file succ");
-    }
-    do
-    {
-      return;
-      if (Download.b == what)
-      {
-        Log.d("UpdateVersionService", "down file fail");
-        Download.a(a, false);
-        Download.b(a, false);
-        Download.b().sendEmptyMessage(Download.b);
-        return;
-      }
-    } while (Download.c != what);
-    Download.a(a, false);
-    Download.b(a, false);
-    Download.b().sendEmptyMessage(Download.c);
+    a = paramLong;
+    b = paramString1;
+    c = paramString2;
+  }
+  
+  public long a()
+  {
+    return a;
+  }
+  
+  public String b()
+  {
+    return c;
   }
 }
 

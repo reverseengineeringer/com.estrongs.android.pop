@@ -1,18 +1,16 @@
 package com.estrongs.android.ui.preference.fragments;
 
-import android.os.Handler;
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
+import com.estrongs.android.util.bm;
 
 class ai
-  implements Preference.OnPreferenceChangeListener
+  implements Runnable
 {
-  ai(DisplayPreferenceFragment paramDisplayPreferenceFragment) {}
+  ai(ah paramah) {}
   
-  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
+  public void run()
   {
-    DisplayPreferenceFragment.c(a).post(new aj(this));
-    return true;
+    bm.c().h();
+    bm.c().i();
   }
 }
 

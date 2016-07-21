@@ -4,7 +4,7 @@ import com.estrongs.a.a;
 import com.estrongs.a.a.m;
 import com.estrongs.a.q;
 import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.util.bc;
+import com.estrongs.android.util.bg;
 import com.estrongs.fs.h;
 import com.estrongs.fs.impl.adb.c;
 
@@ -30,7 +30,7 @@ public class f
     recordSummary("start_time", Long.valueOf(startTime));
     recordSummary("task_type", Integer.valueOf(task_type));
     recordSummary("restartable", Boolean.valueOf(false));
-    recordSummary("file_type", Integer.valueOf(bc.b(b.getName())));
+    recordSummary("file_type", Integer.valueOf(bg.b(b.getName())));
     recordSummary("status", Integer.valueOf(1));
   }
   
@@ -61,7 +61,7 @@ public class f
   {
     boolean bool = c.a(b);
     if (!bool) {
-      setTaskResult(10000, new q(FexApplication.a().getString(2131427766), null));
+      setTaskResult(10000, new q(FexApplication.a().getString(2131231901), null));
     }
     return bool;
   }

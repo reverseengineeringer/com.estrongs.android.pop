@@ -1,17 +1,33 @@
 package com.estrongs.android.ui.e;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
-import com.estrongs.android.pop.app.PopAudioPlayer;
+import com.estrongs.android.pop.app.ag;
+import com.estrongs.android.view.a.b;
 
 class ho
-  implements DialogInterface.OnDismissListener
+  implements b
 {
-  ho(hn paramhn) {}
+  ho(cr paramcr) {}
   
-  public void onDismiss(DialogInterface paramDialogInterface)
+  public boolean a(cp paramcp)
   {
-    hl.a(a.a).u();
+    if (!ag.a()) {}
+    do
+    {
+      return false;
+      if ((h) && ((Y) || (ac))) {
+        return true;
+      }
+      if (((e) || (K) || (((f) || (y)) && (!d))) && ((Y) || (ac))) {
+        return true;
+      }
+      if (i) {
+        return true;
+      }
+      if (T) {
+        return true;
+      }
+    } while ((!U) || (N != 1));
+    return true;
   }
 }
 

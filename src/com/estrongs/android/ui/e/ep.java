@@ -1,30 +1,20 @@
 package com.estrongs.android.ui.e;
 
-import android.content.Intent;
-import android.net.Uri;
-import com.estrongs.android.pop.app.imageviewer.CropImage;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.d.a;
-import java.io.File;
+import com.estrongs.android.util.bk;
 
 class ep
-  implements Runnable
+  implements MenuItem.OnMenuItemClickListener
 {
-  ep(eo parameo, String paramString1, String paramString2) {}
+  ep(cr paramcr) {}
   
-  public void run()
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    Intent localIntent = new Intent(cp.a(c.a), CropImage.class);
-    localIntent.setData(Uri.fromFile(new File(a)));
-    int i = Math.max(a.d, a.e);
-    localIntent.putExtra("outputX", i);
-    localIntent.putExtra("outputY", i);
-    localIntent.putExtra("aspectX", i);
-    localIntent.putExtra("aspectY", i);
-    localIntent.putExtra("scale", true);
-    localIntent.putExtra("noFaceDetection", true);
-    localIntent.putExtra("customSave", b);
-    cp.a(c.a).startActivityForResult(localIntent, 268439577);
+    cr.a(cr.b(a), true, bk.a(cr.a(a)));
+    cr.b(a).B();
+    return true;
   }
 }
 

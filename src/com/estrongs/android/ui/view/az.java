@@ -1,21 +1,13 @@
 package com.estrongs.android.ui.view;
 
-import com.estrongs.fs.util.k;
+import android.view.View;
+import android.view.ViewGroup;
 
-class az
-  implements k
+public abstract interface az
 {
-  az(ax paramax) {}
+  public abstract View a(int paramInt, ViewGroup paramViewGroup);
   
-  public void a(byte[] paramArrayOfByte, int paramInt1, int paramInt2)
-  {
-    if (a.a != null) {
-      a.a.a(paramArrayOfByte, paramInt1, paramInt2);
-    }
-    if (a.b != null) {
-      a.b.a(paramArrayOfByte, paramInt1, paramInt2);
-    }
-  }
+  public abstract void a();
 }
 
 /* Location:

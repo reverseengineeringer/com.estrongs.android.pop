@@ -1,18 +1,36 @@
 package com.estrongs.android.ui.theme;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.ui.view.ColorPickerView;
+import com.estrongs.android.util.af;
+import com.estrongs.android.util.l;
+import java.io.File;
 
 class v
-  implements View.OnClickListener
+  implements af
 {
-  v(ThemeColorActivity paramThemeColorActivity) {}
+  v(ThemeActivity paramThemeActivity, String paramString) {}
   
-  public void onClick(View paramView)
+  public void downloadCompleted(Object paramObject)
   {
-    ThemeColorActivity.b(a).a(-1);
+    paramObject = new File(a + ".tmp");
+    if ((((File)paramObject).exists()) && (((File)paramObject).length() > 0L))
+    {
+      File localFile = new File(a);
+      localFile.delete();
+      ((File)paramObject).renameTo(localFile);
+      ThemeActivity.h(b);
+      return;
+    }
+    ((File)paramObject).delete();
   }
+  
+  public void downloadError(Object paramObject, Throwable paramThrowable)
+  {
+    l.e("Alert", "request theme info failed !");
+  }
+  
+  public void downloadProgress(Object paramObject, long paramLong1, long paramLong2) {}
+  
+  public void downloadStarted(Object paramObject) {}
 }
 
 /* Location:

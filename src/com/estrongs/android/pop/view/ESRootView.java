@@ -4,12 +4,11 @@ import android.content.Context;
 import android.gesture.Gesture;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import com.estrongs.android.ui.guesture.ESGestureCtrl;
-import com.estrongs.android.ui.navigation.s;
-import com.estrongs.android.ui.view.by;
+import com.estrongs.android.ui.navigation.r;
+import com.estrongs.android.util.l;
 import com.estrongs.android.widget.ThumbContentViewSwitcher;
 
 public class ESRootView
@@ -36,17 +35,17 @@ public class ESRootView
     {
       try
       {
-        FileExplorerActivity localFileExplorerActivity = FileExplorerActivity.J();
+        FileExplorerActivity localFileExplorerActivity = FileExplorerActivity.X();
         if ((localFileExplorerActivity != null) && (paramView1 != null))
         {
           if (localFileExplorerActivity.a(paramView1))
           {
             if (paramInt == 17)
             {
-              if ((!v) || (c) || (C == null) || (D.getVisibility() != 0)) {
-                break label321;
+              if ((!u) || (c) || (y == null) || (z.getVisibility() != 0)) {
+                break label318;
               }
-              paramView1 = C.d();
+              paramView1 = y.d();
               if ((paramView1 != null) && (paramView1.hasFocusable())) {
                 return paramView1;
               }
@@ -55,37 +54,37 @@ public class ESRootView
             {
               if (paramInt == 33)
               {
-                if ((f != null) && (localFileExplorerActivity.Z()))
+                if ((h != null) && (localFileExplorerActivity.ap()))
                 {
-                  paramInt = f.i();
-                  paramView1 = f.getChildAt(paramInt);
+                  paramInt = h.getCurrentChildIndex();
+                  paramView1 = h.getChildAt(paramInt);
                   continue;
                 }
-                if (g == null) {
-                  break label321;
+                if (localFileExplorerActivity.a() == null) {
+                  break label318;
                 }
-                paramView1 = g;
+                paramView1 = localFileExplorerActivity.a();
                 continue;
               }
               if (paramInt == 130)
               {
-                if ((f != null) && (localFileExplorerActivity.Z()))
+                if ((h != null) && (localFileExplorerActivity.ap()))
                 {
-                  paramInt = f.i();
-                  paramView1 = f.getChildAt(paramInt);
+                  paramInt = h.getCurrentChildIndex();
+                  paramView1 = h.getChildAt(paramInt);
                   continue;
                 }
-                if (i == null) {
-                  break label321;
+                if (localFileExplorerActivity.b() == null) {
+                  break label318;
                 }
-                paramView1 = i.f();
+                paramView1 = localFileExplorerActivity.b();
                 continue;
               }
-              if ((paramInt != 66) || (f == null)) {
-                break label321;
+              if ((paramInt != 66) || (h == null)) {
+                break label318;
               }
-              paramInt = f.i();
-              paramView1 = f.getChildAt(paramInt);
+              paramInt = h.getCurrentChildIndex();
+              paramView1 = h.getChildAt(paramInt);
               continue;
             }
             if (paramView2 != null) {
@@ -94,21 +93,21 @@ public class ESRootView
             return localFileExplorerActivity.getCurrentFocus();
           }
         }
-        else if ((v) && (!c))
+        else if ((u) && (!c))
         {
-          if ((C != null) && (D.getVisibility() == 0)) {
-            return C.d();
+          if ((y != null) && (z.getVisibility() == 0)) {
+            return y.d();
           }
         }
-        else if (g != null)
+        else if (localFileExplorerActivity.a() != null)
         {
-          paramView1 = g;
+          paramView1 = localFileExplorerActivity.a();
           return paramView1;
         }
       }
       catch (Exception paramView1) {}
       return null;
-      label321:
+      label318:
       paramView1 = null;
     }
     return paramView2;
@@ -116,8 +115,8 @@ public class ESRootView
   
   public void a(Gesture paramGesture)
   {
-    if (FileExplorerActivity.J() != null) {
-      FileExplorerActivity.J().a(paramGesture);
+    if (FileExplorerActivity.X() != null) {
+      FileExplorerActivity.X().a(paramGesture);
     }
   }
   
@@ -137,8 +136,8 @@ public class ESRootView
     try
     {
       super.draw(paramCanvas);
-      if (FileExplorerActivity.J() != null) {
-        FileExplorerActivity.J().U();
+      if (FileExplorerActivity.X() != null) {
+        FileExplorerActivity.X().ak();
       }
       setBackgroundDrawable(null);
       return;
@@ -148,7 +147,7 @@ public class ESRootView
       for (;;)
       {
         paramCanvas.printStackTrace();
-        Log.w("ESRootView", "ESRootView.draw() catchs " + paramCanvas.getMessage());
+        l.d("ESRootView", "ESRootView.draw() catchs " + paramCanvas.getMessage());
       }
     }
   }

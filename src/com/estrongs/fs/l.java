@@ -1,46 +1,20 @@
 package com.estrongs.fs;
 
-import com.estrongs.android.util.TypedMap;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.List;
+import com.estrongs.android.scanner.f;
+import com.estrongs.android.util.ap;
 
 public class l
-  implements k
+  extends k
 {
-  public h a(String paramString)
+  public Boolean a(f paramf)
   {
-    return null;
+    paramf.b("DCIM");
+    return Boolean.valueOf(true);
   }
   
-  public OutputStream a(String paramString, TypedMap paramTypedMap)
+  public boolean a(h paramh)
   {
-    return null;
-  }
-  
-  public OutputStream a(String paramString, boolean paramBoolean)
-  {
-    return null;
-  }
-  
-  public List<h> a(h paramh, i parami, TypedMap paramTypedMap)
-  {
-    return null;
-  }
-  
-  public boolean b(String paramString)
-  {
-    return false;
-  }
-  
-  public boolean c(String paramString)
-  {
-    return true;
-  }
-  
-  public InputStream d(String paramString)
-  {
-    return null;
+    return ap.bV(paramh.getPath()).toLowerCase().contains("/dcim/");
   }
 }
 

@@ -6,7 +6,7 @@ import com.estrongs.android.pop.netfs.NetFileInfo;
 import com.estrongs.android.pop.spfs.ISPFileSystem;
 import com.estrongs.android.pop.spfs.SPFileInfo;
 import com.estrongs.android.util.TypedMap;
-import com.estrongs.fs.impl.j.b;
+import com.estrongs.fs.impl.o.b;
 import com.estrongs.fs.impl.pcs.PcsFileSystem;
 import com.gmail.yuyang226.flickr.a;
 import java.io.InputStream;

@@ -1,20 +1,26 @@
 package android.support.v4.app;
 
-import android.os.Parcel;
-import android.os.Parcelable.Creator;
+import android.content.Context;
+import android.graphics.Matrix;
+import android.graphics.RectF;
+import android.os.Parcelable;
+import android.view.View;
+import java.util.List;
+import java.util.Map;
 
-final class f
-  implements Parcelable.Creator<Fragment.SavedState>
+public abstract class f
 {
-  public Fragment.SavedState a(Parcel paramParcel)
-  {
-    return new Fragment.SavedState(paramParcel, null);
-  }
+  public abstract Parcelable a(View paramView, Matrix paramMatrix, RectF paramRectF);
   
-  public Fragment.SavedState[] a(int paramInt)
-  {
-    return new Fragment.SavedState[paramInt];
-  }
+  public abstract View a(Context paramContext, Parcelable paramParcelable);
+  
+  public abstract void a(List<View> paramList);
+  
+  public abstract void a(List<String> paramList, List<View> paramList1, List<View> paramList2);
+  
+  public abstract void a(List<String> paramList, Map<String, View> paramMap);
+  
+  public abstract void b(List<String> paramList, List<View> paramList1, List<View> paramList2);
 }
 
 /* Location:

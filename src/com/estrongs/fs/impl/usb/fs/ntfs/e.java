@@ -1,6 +1,6 @@
 package com.estrongs.fs.impl.usb.fs.ntfs;
 
-import android.util.Log;
+import com.estrongs.android.util.l;
 import com.estrongs.fs.impl.usb.fs.ntfs.a.i;
 import java.util.Arrays;
 
@@ -79,7 +79,7 @@ public final class e
     long l2 = f();
     long l3 = paramInt2 + paramLong - 1L;
     if (b) {
-      Log.d(a, "me:" + l1 + "-" + l2 + ", req:" + paramLong + "-" + l3);
+      l.b(a, "me:" + l1 + "-" + l2 + ", req:" + paramLong + "-" + l3);
     }
     if ((paramLong > l2) || (l1 > l3)) {
       return 0;
@@ -95,10 +95,10 @@ public final class e
     for (;;)
     {
       if (b) {
-        Log.d(a, "cluster=" + c + ", length=" + d + ", dstOffset=" + paramInt1);
+        l.b(a, "cluster=" + c + ", length=" + d + ", dstOffset=" + paramInt1);
       }
       if (b) {
-        Log.d(a, "cnt=" + i + ", actclu=" + paramLong + ", actdstoff=" + paramInt2);
+        l.b(a, "cnt=" + i + ", actclu=" + paramLong + ", actdstoff=" + paramInt2);
       }
       if (!a()) {
         break;

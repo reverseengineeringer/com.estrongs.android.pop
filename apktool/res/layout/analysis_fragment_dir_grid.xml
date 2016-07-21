@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/c_es_base_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/address_layout" layout="@layout/window_addressbar" />
+    <android.support.design.widget.CoordinatorLayout android:orientation="vertical" android:id="@id/coordinator_layout" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/analysis_action_btn" android:layout_below="@id/address_layout">
+        <com.estrongs.android.widget.ControllableAppBarLayout android:orientation="vertical" android:id="@id/app_bar_layout" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/infobar_top" android:background="#ffffffff" android:paddingLeft="@dimen/dp_10" android:paddingRight="@dimen/dp_10" android:layout_width="fill_parent" android:layout_height="@dimen/dp_16">
+                <View android:id="@id/infobar_top_left_view" android:layout_width="@dimen/dp_45" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/dp_5" android:layout_marginRight="@dimen/dp_10" android:layout_alignParentLeft="true" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toRightOf="@id/infobar_top_left_view">
+                    <TextView android:textSize="@dimen/dp_12" android:textColor="@color/main_content_detail_text" android:gravity="left" android:id="@id/info1" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/diskusage_column_size" android:layout_weight="1.0" />
+                    <TextView android:textSize="@dimen/dp_12" android:textColor="@color/main_content_detail_text" android:gravity="center" android:id="@id/info2" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/diskusage_column_file_sd" android:layout_weight="1.0" />
+                    <TextView android:textSize="@dimen/dp_12" android:textColor="@color/main_content_detail_text" android:gravity="right" android:id="@id/info3" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/diskusage_column_num" android:layout_weight="1.0" />
+                </LinearLayout>
+            </RelativeLayout>
+        </com.estrongs.android.widget.ControllableAppBarLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <android.support.v7.widget.RecyclerView android:id="@id/recyclerview" android:background="@android:color/transparent" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.estrongs.android.ui.fastscroller.vertical.VerticalRecyclerViewFastScroller android:id="@id/fast_scroller" android:layout_width="24.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true" app:rfs_handleBackground="@drawable/icon_handle" />
+        </RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/analysis_fragment_dir_grid_footer" android:background="@drawable/disk_content_statistics_bg" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/dp_16" android:layout_alignParentBottom="true">
+        <TextView android:textSize="@dimen/dp_12" android:textColor="@color/disk_content_statistics_totalsize_text" android:ellipsize="end" android:id="@id/analysis_fragment_dir_grid_footer_total_tv" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/diskusage_total_size" android:singleLine="true" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/dp_12" android:textColor="@color/disk_content_statistics_usedsize_text" android:ellipsize="end" android:gravity="center" android:id="@id/analysis_fragment_dir_grid_footer_used_tv" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/diskusage_used" android:singleLine="true" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/dp_12" android:textColor="@color/disk_content_statistics_availsize_text" android:ellipsize="end" android:gravity="right" android:id="@id/analysis_fragment_dir_grid_footer_avail_tv" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/diskusage_avail" android:singleLine="true" android:layout_weight="1.0" />
+    </LinearLayout>
+    <Button android:textSize="@dimen/dp_18" android:textColor="@color/action_button_highlight_text" android:id="@id/analysis_action_btn" android:background="@drawable/action_button_blue_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/dp_50" android:layout_marginLeft="@dimen/dp_10" android:layout_marginTop="@dimen/dp_12" android:layout_marginRight="@dimen/dp_10" android:layout_marginBottom="@dimen/dp_5" android:text="@string/disk_analysis_detail_action_btn_text" android:layout_above="@id/analysis_fragment_dir_grid_footer" />
+    <RelativeLayout android:gravity="center" android:id="@id/analysis_progress_view" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/dp_45">
+        <ProgressBar android:id="@id/analysis_progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ProgressBar" />
+        <TextView android:textColor="@color/main_content_detail_text" android:id="@id/analysis_progress_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/progress_loading" android:layout_below="@id/analysis_progress_bar" />
+    </RelativeLayout>
+</RelativeLayout>

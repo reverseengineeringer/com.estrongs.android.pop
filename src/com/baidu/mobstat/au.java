@@ -1,172 +1,116 @@
 package com.baidu.mobstat;
 
-import android.app.Activity;
-import android.content.ComponentName;
 import android.content.Context;
-import android.support.v4.app.Fragment;
-import com.baidu.mobstat.util.e;
-import java.lang.ref.WeakReference;
+import java.lang.reflect.Method;
+import org.json.JSONObject;
 
 class au
-  implements Runnable
+  implements k
 {
-  private long b;
-  private WeakReference<Context> c;
-  private WeakReference<Fragment> d;
-  private WeakReference<Object> e;
-  private long f;
-  private WeakReference<Context> g;
-  private WeakReference<Fragment> h;
-  private WeakReference<Object> i;
-  private int j;
-  private String k = null;
+  private ay a = ay.a;
+  private Object b;
+  private Class<?> c;
   
-  public au(ao paramao, long paramLong1, Context paramContext1, Fragment paramFragment1, long paramLong2, Context paramContext2, Fragment paramFragment2, int paramInt, String paramString, Object paramObject1, Object paramObject2)
+  public au(Object paramObject)
   {
-    b = paramLong1;
-    if (paramContext1 != null) {
-      c = new WeakReference(paramContext1);
+    if (paramObject == null) {
+      throw new IllegalArgumentException("proxy is null.");
     }
-    f = paramLong2;
-    if (paramContext2 != null) {
-      g = new WeakReference(paramContext2);
+    if (!"com.baidu.bottom.remote.BPStretegyController2".equals(paramObject.getClass().getName())) {
+      throw new IllegalArgumentException("class isn't com.baidu.bottom.remote.BPStretegyController2");
     }
-    if (paramFragment1 != null) {
-      d = new WeakReference(paramFragment1);
-    }
-    if (paramFragment2 != null) {
-      h = new WeakReference(paramFragment2);
-    }
-    if (paramObject1 != null) {
-      i = new WeakReference(paramObject1);
-    }
-    if (paramObject2 != null) {
-      e = new WeakReference(paramObject2);
-    }
-    j = paramInt;
-    k = paramString;
+    b = paramObject;
+    c = paramObject.getClass();
   }
   
-  public void run()
+  private <T> T a(Object[] paramArrayOfObject, String paramString, Class<?>[] paramArrayOfClass)
   {
-    if (j == 1)
+    return (T)c.getMethod(paramString, paramArrayOfClass).invoke(b, paramArrayOfObject);
+  }
+  
+  public void a(Context paramContext, long paramLong)
+  {
+    Class localClass = Long.TYPE;
+    try
     {
-      localObject1 = (Context)c.get();
-      localObject2 = (Context)g.get();
-      if ((localObject1 == null) || (localObject2 == null)) {
-        e.c(new Object[] { "sdkstat", "onPause, WeakReference is already been released" });
-      }
-    }
-    label441:
-    do
-    {
-      return;
-      if (localObject1 != localObject2)
-      {
-        if (k != null)
-        {
-          e.b(new Object[] { "sdkstat", "onPageStart() or onPageEnd() install error." });
-          return;
-        }
-        e.b(new Object[] { "sdkstat", "onPause() or onResume() install error." });
-        return;
-      }
-      l1 = b - f;
-      localObject2 = new StringBuilder();
-      long l2;
-      if (k != null)
-      {
-        ((StringBuilder)localObject2).append(k);
-        localObject3 = a.b(k);
-        if (localObject3 != null)
-        {
-          l2 = d - c;
-          e.c(new Object[] { "sdkstat", "page time = " + a + "; time = " + l2 });
-          l1 = l2;
-          if (l2 < 20L)
-          {
-            e.c(new Object[] { "sdkstat", "page time little than 20 mills." });
-            return;
-          }
-        }
-        l2 = l1;
-      }
-      for (;;)
-      {
-        e.a("sdkstat", "new page view, page name = " + ((StringBuilder)localObject2).toString() + ", stay time = " + l2 + "(ms)");
-        ao.a(a).a(((StringBuilder)localObject2).toString(), l2, f);
-        if (k == null) {
-          break label441;
-        }
-        localObject2 = a.b(k);
-        if (localObject2 == null) {
-          break;
-        }
-        ao.a(a, (Context)localObject1, d);
-        a.c(k);
-        return;
-        if (!(localObject1 instanceof Activity))
-        {
-          e.c(new Object[] { "sdkstat", "onPause, pause is not a Activity" });
-          return;
-        }
-        ((StringBuilder)localObject2).append(((Activity)localObject1).getComponentName().getShortClassName());
-        l2 = l1;
-        if (((StringBuilder)localObject2).charAt(0) == '.')
-        {
-          ((StringBuilder)localObject2).deleteCharAt(0);
-          l2 = l1;
-        }
-      }
-      ao.a(a, (Context)localObject1, b);
-      return;
-      if (j == 2)
-      {
-        localObject1 = (Fragment)d.get();
-        localObject2 = (Fragment)h.get();
-        if ((localObject1 == null) || (localObject2 == null))
-        {
-          e.c(new Object[] { "sdkstat", "onPause, WeakReference is already been released" });
-          return;
-        }
-        if (localObject1 != localObject2)
-        {
-          e.c(new Object[] { "sdkstat", "onPause() or onResume() install error." });
-          return;
-        }
-        l1 = b - f;
-        localObject2 = localObject1.getClass().getName();
-        localObject3 = ((String)localObject2).substring(((String)localObject2).lastIndexOf(".") + 1);
-        e.a("sdkstat", "Fragment new page view, page name = " + ((String)localObject2).toString() + ", stay time = " + l1 + "(ms)");
-        ao.a(a).a((String)localObject3, l1, f);
-        ao.a(a, ((Fragment)localObject1).b(), b);
-        return;
-      }
-    } while (j != 3);
-    Object localObject2 = e.get();
-    Object localObject1 = i.get();
-    if ((localObject2 == null) || (localObject1 == null))
-    {
-      e.c(new Object[] { "sdkstat", "onPause, WeakReference is already been released" });
+      a(new Object[] { paramContext, Long.valueOf(paramLong) }, "setLastUpdateTime", new Class[] { Context.class, localClass });
       return;
     }
-    if (localObject2 != localObject1)
+    catch (Exception localException)
     {
-      e.c(new Object[] { "sdkstat", "onPause() or onResume() install error." });
+      bb.b(localException);
+      a.a(paramContext, paramLong);
+    }
+  }
+  
+  public void a(Context paramContext, String paramString)
+  {
+    try
+    {
+      a(new Object[] { paramContext, paramString }, "saveRemoteConfig2", new Class[] { Context.class, String.class });
       return;
     }
-    long l1 = b - f;
-    localObject1 = ao.a(localObject2);
-    if (localObject1 == null)
+    catch (Exception localException)
     {
-      e.c("getContxtFromReverse faild.");
+      bb.b(localException);
+      a.a(paramContext, paramString);
+    }
+  }
+  
+  public void a(Context paramContext, JSONObject paramJSONObject)
+  {
+    try
+    {
+      a(new Object[] { paramContext, paramJSONObject }, "startDataAnynalyze", new Class[] { Context.class, JSONObject.class });
       return;
     }
-    localObject2 = localObject2.getClass().getName();
-    Object localObject3 = ((String)localObject2).substring(((String)localObject2).lastIndexOf(".") + 1);
-    e.a("sdkstat", "android.app.Fragment new page view, page name = " + ((String)localObject2).toString() + "; stay time = " + l1 + "(ms)");
-    ao.a(a).a((String)localObject3, l1, f);
-    ao.a(a, (Context)localObject1, b);
+    catch (Exception localException)
+    {
+      bb.b(localException);
+      a.a(paramContext, paramJSONObject);
+    }
+  }
+  
+  public boolean a(Context paramContext)
+  {
+    try
+    {
+      boolean bool = ((Boolean)a(new Object[] { paramContext }, "needUpdate", new Class[] { Context.class })).booleanValue();
+      return bool;
+    }
+    catch (Exception localException)
+    {
+      bb.b(localException);
+    }
+    return a.a(paramContext);
+  }
+  
+  public void b(Context paramContext, String paramString)
+  {
+    try
+    {
+      a(new Object[] { paramContext, paramString }, "saveRemoteSign", new Class[] { Context.class, String.class });
+      return;
+    }
+    catch (Exception localException)
+    {
+      bb.b(localException);
+      a.b(paramContext, paramString);
+    }
+  }
+  
+  public boolean b(Context paramContext)
+  {
+    try
+    {
+      boolean bool = ((Boolean)a(new Object[] { paramContext }, "canStartService", new Class[] { Context.class })).booleanValue();
+      return bool;
+    }
+    catch (Exception localException)
+    {
+      bb.b(localException);
+    }
+    return a.b(paramContext);
   }
 }
 

@@ -1,47 +1,37 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.util.am;
-import com.estrongs.android.view.aw;
+import android.os.Handler;
+import com.estrongs.android.ui.d.i;
+import com.estrongs.android.ui.e.ik;
+import com.estrongs.android.view.cr;
+import com.estrongs.android.view.dw;
 import java.util.List;
 
 class aq
-  implements Runnable
+  implements dw
 {
   aq(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void run()
+  public void a()
   {
-    for (;;)
+    FileExplorerActivity.b(a);
+  }
+  
+  public void a(cr paramcr, boolean paramBoolean)
+  {
+    FileExplorerActivity.b(a);
+    if ((a.e == 4) || (a.e == 2) || (a.e == 1) || (a.e == 3) || (a.e == 28))
     {
-      int i;
-      try
+      cr localcr = a.O();
+      if ((localcr != null) && (localcr.h() != null) && (localcr.h().isEmpty()))
       {
-        synchronized (a.x)
-        {
-          List localList2 = a.x;
-          i = 0;
-          if (i < localList2.size())
-          {
-            aw localaw = (aw)localList2.get(i);
-            if ((localaw == null) || (!am.X(localaw.c()))) {
-              break label102;
-            }
-            if (localaw == a.y()) {
-              localaw.g();
-            } else {
-              localaw.a(true, true);
-            }
-          }
-        }
+        int i = a.au().a();
+        FileExplorerActivity.a(a, ik.a(a.e), i);
       }
-      catch (Exception localException)
-      {
-        localException.printStackTrace();
-        return;
-      }
-      return;
-      label102:
-      i += 1;
+    }
+    a.i.postDelayed(new ar(this), 1000L);
+    if ((paramBoolean) && (paramcr != null)) {
+      FileExplorerActivity.a(a, paramcr);
     }
   }
 }

@@ -1,18 +1,14 @@
 package com.estrongs.android.pop.utils;
 
-import android.app.Activity;
-import com.estrongs.a.a;
-
-class al
-  implements com.estrongs.a.a.p
+public class al
 {
-  al(ak paramak) {}
+  public String a;
+  public int b;
   
-  public void a(a parama, int paramInt1, int paramInt2)
+  public al(String paramString, int paramInt)
   {
-    if ((paramInt2 == 5) && (getTaskResulta == 17)) {
-      a.b.runOnUiThread(new am(this));
-    }
+    a = paramString;
+    b = paramInt;
   }
 }
 

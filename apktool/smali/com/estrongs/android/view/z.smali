@@ -1,78 +1,56 @@
 .class Lcom/estrongs/android/view/z;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Lcom/estrongs/android/view/af;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/view/y;
+.field final synthetic a:Ljava/util/List;
+
+.field final synthetic b:Z
+
+.field final synthetic c:Lcom/estrongs/android/view/y;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/view/y;)V
+.method constructor <init>(Lcom/estrongs/android/view/y;Lcom/estrongs/android/view/y;Ljava/util/List;ZLjava/util/List;Z)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/view/z;->a:Lcom/estrongs/android/view/y;
+    iput-object p1, p0, Lcom/estrongs/android/view/z;->c:Lcom/estrongs/android/view/y;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p5, p0, Lcom/estrongs/android/view/z;->a:Ljava/util/List;
+
+    iput-boolean p6, p0, Lcom/estrongs/android/view/z;->b:Z
+
+    invoke-direct {p0, p2, p3, p4}, Lcom/estrongs/android/view/af;-><init>(Lcom/estrongs/android/view/y;Ljava/util/List;Z)V
+
+    return-void
+.end method
+
+.method static synthetic a(Lcom/estrongs/android/view/z;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/estrongs/android/view/z;->g()V
+
+    return-void
+.end method
+
+.method private g()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/view/z;->e:Lcom/estrongs/android/view/y;
+
+    invoke-virtual {v0, p0}, Lcom/estrongs/android/view/y;->b(Lcom/estrongs/android/view/af;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 2
+.method protected b()Landroid/widget/BaseAdapter;
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/view/z;->a:Lcom/estrongs/android/view/y;
+    new-instance v0, Lcom/estrongs/android/view/aa;
 
-    iget-object v0, v0, Lcom/estrongs/android/view/y;->a:Lcom/estrongs/android/view/x;
+    invoke-direct {v0, p0}, Lcom/estrongs/android/view/aa;-><init>(Lcom/estrongs/android/view/z;)V
 
-    iget-object v0, v0, Lcom/estrongs/android/view/x;->ad:Landroid/app/Activity;
-
-    check-cast v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->H()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const v1, 0x7f0b02fa
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->d(I)V
-
-    :goto_0
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/view/z;->a:Lcom/estrongs/android/view/y;
-
-    iget-object v0, v0, Lcom/estrongs/android/view/y;->a:Lcom/estrongs/android/view/x;
-
-    iget-boolean v0, v0, Lcom/estrongs/android/view/x;->b:Z
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/view/z;->a:Lcom/estrongs/android/view/y;
-
-    iget-object v0, v0, Lcom/estrongs/android/view/y;->a:Lcom/estrongs/android/view/x;
-
-    invoke-static {v0}, Lcom/estrongs/android/view/x;->a(Lcom/estrongs/android/view/x;)V
-
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/view/z;->a:Lcom/estrongs/android/view/y;
-
-    iget-object v0, v0, Lcom/estrongs/android/view/y;->a:Lcom/estrongs/android/view/x;
-
-    iget-object v1, p0, Lcom/estrongs/android/view/z;->a:Lcom/estrongs/android/view/y;
-
-    iget-object v1, v1, Lcom/estrongs/android/view/y;->a:Lcom/estrongs/android/view/x;
-
-    iget-object v1, v1, Lcom/estrongs/android/view/x;->d:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/x;->a(Ljava/util/List;)V
-
-    goto :goto_0
+    return-object v0
 .end method

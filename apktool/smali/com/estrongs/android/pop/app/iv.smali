@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/preference/Preference$OnPreferenceClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+.field final synthetic a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/PopVideoPlayer;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/iv;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/iv;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,47 +22,60 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 4
+.method public onPreferenceClick(Landroid/preference/Preference;)Z
+    .locals 5
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/iv;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+    const/4 v4, 0x1
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->x(Lcom/estrongs/android/pop/app/PopVideoPlayer;)Ljava/lang/String;
+    new-instance v0, Lcom/estrongs/android/ui/dialog/kq;
 
-    move-result-object v0
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/iv;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-eqz v0, :cond_0
+    const-string v3, "http://update.estrongs.com/up?id=1&l="
 
-    new-instance v1, Ljava/util/ArrayList;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+    move-result-object v2
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bB(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
-    move-result-object v0
+    move-result-object v3
 
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v3}, Ljava/util/Locale;->toString()Ljava/lang/String;
 
-    new-instance v0, Lcom/estrongs/android/ui/dialog/ks;
+    move-result-object v3
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/iv;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+    invoke-virtual {v3}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
-    const-string v3, "video"
+    move-result-object v3
 
-    invoke-direct {v0, v2, v3, v1}, Lcom/estrongs/android/ui/dialog/ks;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/iw;
+    move-result-object v2
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/iw;-><init>(Lcom/estrongs/android/pop/app/iv;)V
+    const-string v3, "&channel="
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ks;->a(Lcom/estrongs/android/ui/dialog/kv;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ks;->show()V
+    move-result-object v2
 
-    :cond_0
-    return-void
+    sget-object v3, Lcom/estrongs/android/pop/view/a;->b:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v4, v2}, Lcom/estrongs/android/ui/dialog/kq;-><init>(Landroid/content/Context;ILjava/lang/String;)V
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/kq;->b()V
+
+    return v4
 .end method

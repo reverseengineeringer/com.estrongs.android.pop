@@ -1,21 +1,27 @@
 package com.estrongs.fs.b;
 
-import android.app.Activity;
-import com.estrongs.a.a;
-import com.estrongs.android.ui.dialog.ix;
-
 class bk
-  extends ix
+  implements Runnable
 {
-  public bk(ba paramba, Activity paramActivity, String paramString, a parama)
-  {
-    super(paramActivity, paramString, parama);
-  }
+  bk(bj parambj) {}
   
-  public void onAttachedToWindow()
+  public void run()
   {
-    super.onAttachedToWindow();
-    ba.a(a, true);
+    try
+    {
+      Thread.sleep(500L);
+      synchronized (bc.e(a.a))
+      {
+        ea.a).g = 1;
+        ea.a).f = true;
+        bc.e(a.a).notify();
+        return;
+      }
+    }
+    catch (InterruptedException localInterruptedException)
+    {
+      for (;;) {}
+    }
   }
 }
 

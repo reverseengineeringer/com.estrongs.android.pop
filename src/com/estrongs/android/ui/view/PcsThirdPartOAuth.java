@@ -17,31 +17,31 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.pop.utils.cc;
+import com.estrongs.android.pop.esclasses.ESResourceActivity;
+import com.estrongs.android.pop.utils.cl;
 
 public class PcsThirdPartOAuth
-  extends ESActivity
+  extends ESResourceActivity
 {
   private static PcsThirdPartOAuth b = null;
   String a = null;
-  private String c = null;
   private String d = null;
   private String e = null;
-  private boolean f = false;
-  private String g = null;
+  private String f = null;
+  private boolean g = false;
   private String h = null;
-  private WebView i = null;
-  private bm j = new bm(this, null);
-  private ProgressBar k = null;
-  private TextView l = null;
-  private ScrollView m = null;
-  private String n = null;
+  private String i = null;
+  private WebView j = null;
+  private bv k = new bv(this, null);
+  private ProgressBar l = null;
+  private TextView m = null;
+  private ScrollView n = null;
   private String o = null;
-  private boolean p = false;
-  private Button q;
-  private ImageView r;
-  private Handler t = new bj(this);
+  private String p = null;
+  private boolean q = false;
+  private Button r;
+  private ImageView s;
+  private Handler t = new bs(this);
   
   private String a(String paramString1, String paramString2)
   {
@@ -86,25 +86,25 @@ public class PcsThirdPartOAuth
   {
     super.onCreate(paramBundle);
     requestWindowFeature(1);
-    super.setContentView(2130903211);
-    i = ((WebView)findViewById(2131362543));
-    i.getSettings().setJavaScriptEnabled(true);
-    i.addJavascriptInterface(new PcsThirdPartOAuth.MyHandler(t), "handler");
-    i.setWebViewClient(j);
-    Object localObject = i.getSettings();
+    super.setContentView(2130903372);
+    j = ((WebView)findViewById(2131625280));
+    j.getSettings().setJavaScriptEnabled(true);
+    j.addJavascriptInterface(new PcsThirdPartOAuth.MyHandler(t), "handler");
+    j.setWebViewClient(k);
+    Object localObject = j.getSettings();
     ((WebSettings)localObject).setSavePassword(false);
     ((WebSettings)localObject).setSaveFormData(true);
     CookieSyncManager.createInstance(this);
     CookieSyncManager.getInstance().startSync();
     paramBundle = CookieManager.getInstance();
     ((WebSettings)localObject).setDefaultTextEncodingName("utf-8");
-    l = ((TextView)findViewById(2131362545));
-    k = ((ProgressBar)findViewById(2131362544));
-    m = ((ScrollView)findViewById(2131362542));
-    q = ((Button)findViewById(2131362593));
-    q.setOnClickListener(new bg(this));
-    r = ((ImageView)findViewById(2131362092));
-    r.setOnClickListener(new bh(this));
+    m = ((TextView)findViewById(2131625282));
+    l = ((ProgressBar)findViewById(2131625281));
+    n = ((ScrollView)findViewById(2131625279));
+    r = ((Button)findViewById(2131625344));
+    r.setOnClickListener(new bp(this));
+    s = ((ImageView)findViewById(2131624051));
+    s.setOnClickListener(new bq(this));
     localObject = getIntent().getExtras();
     if (localObject == null)
     {
@@ -112,21 +112,21 @@ public class PcsThirdPartOAuth
       finish();
       return;
     }
-    c = ((Bundle)localObject).getString("nettype");
-    d = ((Bundle)localObject).getString("ostype");
-    e = ((Bundle)localObject).getString("login");
-    if (d == null) {
-      d = "sinaweibo";
+    d = ((Bundle)localObject).getString("nettype");
+    e = ((Bundle)localObject).getString("ostype");
+    f = ((Bundle)localObject).getString("login");
+    if (e == null) {
+      e = "sinaweibo";
     }
-    f = ((Bundle)localObject).getBoolean("editServer", false);
-    g = ((Bundle)localObject).getString("originalPath");
-    h = ((Bundle)localObject).getString("displayName");
-    localObject = cc.e();
-    if ((d.equals("qq")) && (!cc.b()) && (!"TW".equalsIgnoreCase((String)localObject)) && (!"HK".equalsIgnoreCase((String)localObject))) {}
+    g = ((Bundle)localObject).getBoolean("editServer", false);
+    h = ((Bundle)localObject).getString("originalPath");
+    i = ((Bundle)localObject).getString("displayName");
+    localObject = cl.c();
+    if ((e.equals("qq")) && (!cl.b()) && (!"TW".equalsIgnoreCase((String)localObject)) && (!"HK".equalsIgnoreCase((String)localObject))) {}
     for (boolean bool = true;; bool = false)
     {
-      p = bool;
-      new bi(this).start();
+      q = bool;
+      new br(this).start();
       paramBundle.removeAllCookie();
       b = this;
       return;

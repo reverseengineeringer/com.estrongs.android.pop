@@ -1,15 +1,19 @@
 package com.estrongs.android.pop.view;
 
-import android.widget.EditText;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.pop.ad;
 
 class be
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  be(bd parambd) {}
+  be(FileExplorerActivity paramFileExplorerActivity, ad paramad) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    FileExplorerActivity.B(a.a).requestFocus();
+    paramDialogInterface.dismiss();
+    a.s(true);
+    b.f("recycle://");
   }
 }
 

@@ -1,41 +1,39 @@
-.class Landroid/support/v4/widget/x;
-.super Ljava/lang/Object;
+.class final Landroid/support/v4/widget/x;
+.super Landroid/support/v4/view/a;
 
-# interfaces
-.implements Landroid/support/v4/widget/w;
+
+# instance fields
+.field final synthetic a:Landroid/support/v4/widget/DrawerLayout;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Landroid/support/v4/widget/DrawerLayout;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Landroid/support/v4/widget/x;->a:Landroid/support/v4/widget/DrawerLayout;
+
+    invoke-direct {p0}, Landroid/support/v4/view/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/support/v4/widget/SlidingPaneLayout;Landroid/view/View;)V
-    .locals 4
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/support/v4/view/a/g;)V
+    .locals 1
 
-    invoke-virtual {p2}, Landroid/view/View;->getLeft()I
+    invoke-super {p0, p1, p2}, Landroid/support/v4/view/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/support/v4/view/a/g;)V
+
+    invoke-static {p1}, Landroid/support/v4/widget/DrawerLayout;->l(Landroid/view/View;)Z
 
     move-result v0
 
-    invoke-virtual {p2}, Landroid/view/View;->getTop()I
+    if-nez v0, :cond_0
 
-    move-result v1
+    const/4 v0, 0x0
 
-    invoke-virtual {p2}, Landroid/view/View;->getRight()I
+    invoke-virtual {p2, v0}, Landroid/support/v4/view/a/g;->c(Landroid/view/View;)V
 
-    move-result v2
-
-    invoke-virtual {p2}, Landroid/view/View;->getBottom()I
-
-    move-result v3
-
-    invoke-static {p1, v0, v1, v2, v3}, Landroid/support/v4/view/at;->a(Landroid/view/View;IIII)V
-
+    :cond_0
     return-void
 .end method

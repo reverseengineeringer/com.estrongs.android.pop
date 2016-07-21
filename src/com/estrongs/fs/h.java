@@ -12,7 +12,7 @@ public abstract interface h
   
   public abstract Object getExtra(String paramString);
   
-  public abstract m getFileType();
+  public abstract w getFileType();
   
   public abstract String getName();
   
@@ -32,7 +32,7 @@ public abstract interface h
   
   public abstract void setESFileType(int paramInt);
   
-  public abstract void setFileType(m paramm);
+  public abstract void setFileType(w paramw);
   
   public abstract void setName(String paramString);
   

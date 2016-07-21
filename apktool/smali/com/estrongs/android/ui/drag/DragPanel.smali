@@ -9,7 +9,7 @@
 # instance fields
 .field a:Lcom/estrongs/android/ui/drag/d;
 
-.field protected b:Lcom/estrongs/android/view/aw;
+.field protected b:Lcom/estrongs/android/view/cr;
 
 .field private c:I
 
@@ -22,7 +22,7 @@
 
     const/high16 v0, 0x41200000    # 10.0f
 
-    invoke-static {p1, v0}, Lcom/estrongs/android/ui/d/a;->a(Landroid/content/Context;F)I
+    invoke-static {p1, v0}, Lcom/estrongs/android/ui/d/g;->a(Landroid/content/Context;F)I
 
     move-result v0
 
@@ -43,7 +43,7 @@
 
     const/high16 v0, 0x41200000    # 10.0f
 
-    invoke-static {p1, v0}, Lcom/estrongs/android/ui/d/a;->a(Landroid/content/Context;F)I
+    invoke-static {p1, v0}, Lcom/estrongs/android/ui/d/g;->a(Landroid/content/Context;F)I
 
     move-result v0
 
@@ -72,9 +72,9 @@
         value = 0x8
     .end annotation
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/drag/DragPanel;->b:Lcom/estrongs/android/view/aw;
+    iget-object v0, p0, Lcom/estrongs/android/ui/drag/DragPanel;->b:Lcom/estrongs/android/view/cr;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/view/aw;->C()Landroid/widget/AbsListView;
+    invoke-virtual {v0}, Lcom/estrongs/android/view/cr;->Q()Landroid/support/v7/widget/RecyclerView;
 
     move-result-object v0
 
@@ -84,13 +84,7 @@
 
     const/16 v2, 0x32
 
-    invoke-virtual {v0, v1, v2}, Landroid/widget/AbsListView;->smoothScrollBy(II)V
-
-    return-void
-.end method
-
-.method public c_()V
-    .locals 0
+    invoke-virtual {v0, v1, v2}, Landroid/support/v7/widget/RecyclerView;->smoothScrollBy(II)V
 
     return-void
 .end method
@@ -101,9 +95,9 @@
         value = 0x8
     .end annotation
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/drag/DragPanel;->b:Lcom/estrongs/android/view/aw;
+    iget-object v0, p0, Lcom/estrongs/android/ui/drag/DragPanel;->b:Lcom/estrongs/android/view/cr;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/view/aw;->C()Landroid/widget/AbsListView;
+    invoke-virtual {v0}, Lcom/estrongs/android/view/cr;->Q()Landroid/support/v7/widget/RecyclerView;
 
     move-result-object v0
 
@@ -111,7 +105,7 @@
 
     const/16 v2, 0x32
 
-    invoke-virtual {v0, v1, v2}, Landroid/widget/AbsListView;->smoothScrollBy(II)V
+    invoke-virtual {v0, v1, v2}, Landroid/support/v7/widget/RecyclerView;->smoothScrollBy(II)V
 
     return-void
 .end method
@@ -180,7 +174,7 @@
     goto :goto_0
 .end method
 
-.method public e()Landroid/graphics/Rect;
+.method public getScrollViewRect()Landroid/graphics/Rect;
     .locals 7
 
     const/4 v6, 0x1
@@ -218,6 +212,12 @@
     invoke-direct {v1, v2, v3, v4, v0}, Landroid/graphics/Rect;-><init>(IIII)V
 
     return-object v1
+.end method
+
+.method public k_()V
+    .locals 0
+
+    return-void
 .end method
 
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
@@ -266,4 +266,12 @@
     move-result v0
 
     goto :goto_0
+.end method
+
+.method public setDragController(Lcom/estrongs/android/ui/drag/d;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/ui/drag/DragPanel;->a:Lcom/estrongs/android/ui/drag/d;
+
+    return-void
 .end method

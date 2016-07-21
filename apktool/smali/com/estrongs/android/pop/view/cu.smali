@@ -1,77 +1,47 @@
 .class Lcom/estrongs/android/pop/view/cu;
-.super Lcom/estrongs/android/widget/a;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Landroid/view/View;
-
-.field final synthetic b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+.field final synthetic a:Lcom/estrongs/android/pop/view/ct;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;Landroid/view/View;)V
+.method constructor <init>(Lcom/estrongs/android/pop/view/ct;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/view/cu;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/view/cu;->a:Lcom/estrongs/android/pop/view/ct;
 
-    iput-object p2, p0, Lcom/estrongs/android/pop/view/cu;->a:Landroid/view/View;
-
-    invoke-direct {p0}, Lcom/estrongs/android/widget/a;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/view/animation/Animation;)V
-    .locals 3
+.method public run()V
+    .locals 2
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/widget/a;->onAnimationEnd(Landroid/view/animation/Animation;)V
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/cu;->a:Lcom/estrongs/android/pop/view/ct;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/cu;->a:Landroid/view/View;
+    iget-object v0, v0, Lcom/estrongs/android/pop/view/ct;->b:Lcom/estrongs/android/pop/view/cr;
 
-    const v1, 0x7f0a00c4
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/cu;->a:Lcom/estrongs/android/pop/view/ct;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    iget-object v1, v1, Lcom/estrongs/android/pop/view/ct;->a:Ljava/lang/String;
 
-    move-result-object v0
+    invoke-static {v0, v1}, Lcom/estrongs/android/pop/view/cr;->a(Lcom/estrongs/android/pop/view/cr;Ljava/lang/String;)V
 
-    check-cast v0, Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/cu;->a:Lcom/estrongs/android/pop/view/ct;
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/cu;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->B(Lcom/estrongs/android/pop/view/FileExplorerActivity;)Landroid/widget/EditText;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/cu;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->B(Lcom/estrongs/android/pop/view/FileExplorerActivity;)Landroid/widget/EditText;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/EditText;->performClick()Z
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/cu;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    const-string v1, "input_method"
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
+    iget-object v0, v0, Lcom/estrongs/android/pop/view/ct;->b:Lcom/estrongs/android/pop/view/cr;
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x2
-
-    invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->toggleSoftInput(II)V
+    iput-boolean v1, v0, Lcom/estrongs/android/pop/view/cr;->a:Z
 
     return-void
 .end method

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/dp_162">
+            <TextView android:textSize="@dimen/dp_12" android:textColor="@color/black" android:gravity="center" android:id="@id/theme_modify_sample_title" android:layout_width="wrap_content" android:layout_height="@dimen/dp_28" android:text="@string/theme_default" />
+            <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/theme_modify_sample" android:layout_width="@dimen/dp_300" android:layout_height="@dimen/dp_130" />
+        </LinearLayout>
+        <com.estrongs.android.pop.esclasses.ESImageView android:background="@drawable/toolbar_search_sp" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ListView android:id="@id/theme_folder_list" android:background="@drawable/blank" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/background_theme_item" android:cacheColorHint="@color/transparent" android:divider="@drawable/toolbar_search_sp" android:footerDividersEnabled="true" />
+    <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/shadow_content_up" android:background="@drawable/shadow_tools_top" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/shadow_content_down" android:background="@drawable/shadow_tools_bottom" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+</RelativeLayout>

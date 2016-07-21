@@ -3,7 +3,7 @@ package com.estrongs.android.ui.preference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.util.c;
+import com.estrongs.android.util.b;
 
 class k
   implements Preference.OnPreferenceClickListener
@@ -12,8 +12,8 @@ class k
   
   public boolean onPreferenceClick(Preference paramPreference)
   {
-    paramPreference = ad.a(a).W();
-    paramPreference = new c(a, paramPreference, new l(this, paramPreference));
+    paramPreference = ad.a(a).X();
+    paramPreference = new b(a, paramPreference, new l(this, paramPreference));
     a = false;
     paramPreference.a();
     return true;

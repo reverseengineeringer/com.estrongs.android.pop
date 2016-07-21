@@ -22,7 +22,7 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 5
 
-    const v4, 0x7f0b0402
+    const v4, 0x7f080444
 
     const/16 v2, 0x8
 
@@ -44,13 +44,13 @@
 
     iget-object v1, p0, Lcom/estrongs/android/ui/view/z;->a:Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;
 
-    const v2, 0x7f0b027c
+    const v2, 0x7f0802bf
 
     invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    invoke-static {v0, v1, v3}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    invoke-static {v0, v1, v3}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
     :cond_0
     :goto_0
@@ -121,7 +121,7 @@
     :cond_4
     iget v0, p1, Landroid/os/Message;->what:I
 
-    sget v1, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->c:I
+    sget v1, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->d:I
 
     if-ne v0, v1, :cond_5
 
@@ -166,7 +166,7 @@
     :cond_5
     iget v0, p1, Landroid/os/Message;->what:I
 
-    sget v1, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->d:I
+    sget v1, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->e:I
 
     if-ne v0, v1, :cond_8
 
@@ -183,7 +183,7 @@
     move-result-object v0
 
     :cond_6
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
@@ -200,14 +200,14 @@
     :cond_7
     iget-object v1, p0, Lcom/estrongs/android/ui/view/z;->a:Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;
 
-    invoke-static {v1, v0, v3}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    invoke-static {v1, v0, v3}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
     goto/16 :goto_0
 
     :cond_8
     iget v0, p1, Landroid/os/Message;->what:I
 
-    sget v1, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->e:I
+    sget v1, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->f:I
 
     if-ne v0, v1, :cond_0
 
@@ -223,7 +223,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/view/z;->a:Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;
 
-    invoke-static {v0, v4, v3}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {v0, v4, v3}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     goto/16 :goto_0
 .end method

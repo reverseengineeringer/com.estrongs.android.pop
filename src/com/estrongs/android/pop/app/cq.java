@@ -4,27 +4,29 @@ import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.TextView;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.ui.a.w;
+import com.estrongs.android.ui.adapter.y;
 import com.estrongs.android.view.a.a;
 
 class cq
   implements CompoundButton.OnCheckedChangeListener
 {
-  cq(GestureManageActivity paramGestureManageActivity, a parama1, a parama2) {}
+  cq(GestureManageActivity paramGestureManageActivity) {}
   
   public void onCheckedChanged(CompoundButton paramCompoundButton, boolean paramBoolean)
   {
     if (paramBoolean) {
-      GestureManageActivity.b(c).setText(2131428353);
+      GestureManageActivity.a(a).setText(2131231536);
     }
     for (;;)
     {
-      a.d(paramBoolean);
-      b.d(paramBoolean);
-      GestureManageActivity.a(c).a(paramBoolean);
-      GestureManageActivity.c(c).m(paramBoolean);
+      GestureManageActivity.b(a).d(paramBoolean);
+      GestureManageActivity.c(a).d(paramBoolean);
+      GestureManageActivity.d(a).a(paramBoolean);
+      GestureManageActivity.e(a).l(paramBoolean);
+      com.estrongs.android.ui.guesture.b.b = paramBoolean;
+      a.invalidateOptionsMenu();
       return;
-      GestureManageActivity.b(c).setText(2131428367);
+      GestureManageActivity.a(a).setText(2131231535);
     }
   }
 }

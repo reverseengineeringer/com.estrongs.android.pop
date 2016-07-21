@@ -1,28 +1,14 @@
 package com.estrongs.android.util;
 
-import java.io.File;
-import java.util.Comparator;
-
-public class q
+public class q<K, V>
 {
-  public static final t a = new t();
-  public static final u b = new u();
-  public static final Comparator<File> c = new r();
+  public K a;
+  public V b;
   
-  private static String b(String paramString, boolean paramBoolean)
+  public q(K paramK, V paramV)
   {
-    if (paramBoolean) {
-      return "0" + paramString.toLowerCase();
-    }
-    return "1" + paramString.toLowerCase();
-  }
-  
-  private static String b(String paramString, boolean paramBoolean1, boolean paramBoolean2)
-  {
-    if (paramBoolean1) {
-      return "0" + paramString;
-    }
-    return "1" + paramString;
+    a = paramK;
+    b = paramV;
   }
 }
 

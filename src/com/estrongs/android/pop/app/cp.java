@@ -1,18 +1,16 @@
 package com.estrongs.android.pop.app;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 class cp
-  implements MenuItem.OnMenuItemClickListener
+  implements View.OnClickListener
 {
-  cp(GestureManageActivity paramGestureManageActivity) {}
+  cp(FileSharingNotificationActivity paramFileSharingNotificationActivity) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void onClick(View paramView)
   {
-    a.setResult(-1);
     a.finish();
-    return false;
   }
 }
 

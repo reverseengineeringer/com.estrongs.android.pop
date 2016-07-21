@@ -1,16 +1,16 @@
 package com.estrongs.android.ui.dialog;
 
-import android.widget.Button;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class ge
-  implements gj
+  implements DialogInterface.OnClickListener
 {
   ge(gd paramgd) {}
   
-  public void a(int paramInt, String paramString)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    gd.a(a, paramInt);
-    a.a.setText(paramString);
+    paramDialogInterface.dismiss();
   }
 }
 

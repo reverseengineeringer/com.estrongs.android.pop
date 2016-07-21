@@ -1,5 +1,5 @@
 .class public Lcom/estrongs/android/ui/preference/fragments/UpgradePreferenceFragment;
-.super Lcom/estrongs/android/pop/esclasses/i;
+.super Lcom/estrongs/android/pop/esclasses/m;
 
 
 # instance fields
@@ -14,7 +14,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/i;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/m;-><init>()V
 
     return-void
 .end method
@@ -29,9 +29,9 @@
         }
     .end annotation
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/i;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/m;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f050012
+    const v0, 0x7f050013
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/preference/fragments/UpgradePreferenceFragment;->addPreferencesFromResource(I)V
 
@@ -45,9 +45,9 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/UpgradePreferenceFragment;->b:Landroid/preference/Preference;
 
-    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/bd;
+    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/bf;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/bd;-><init>(Lcom/estrongs/android/ui/preference/fragments/UpgradePreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/bf;-><init>(Lcom/estrongs/android/ui/preference/fragments/UpgradePreferenceFragment;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
@@ -100,7 +100,7 @@
 
     const-string v0, "CN"
 
-    sget-object v1, Lcom/estrongs/android/pop/esclasses/e;->a:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/esclasses/i;->a:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 

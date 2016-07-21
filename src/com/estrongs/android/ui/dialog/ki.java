@@ -2,19 +2,15 @@ package com.estrongs.android.ui.dialog;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.util.y;
 
 class ki
   implements DialogInterface.OnClickListener
 {
-  ki(kf paramkf) {}
+  ki(kh paramkh) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ((kf.g(a) == 3) && (kf.c(a) != null)) {
-      kf.c(a).b();
-    }
-    a.c();
+    a.dismiss();
   }
 }
 

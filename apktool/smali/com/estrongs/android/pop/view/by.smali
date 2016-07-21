@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/ui/drag/c;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+.field final synthetic a:Lcom/estrongs/android/pop/view/bw;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
+.method constructor <init>(Lcom/estrongs/android/pop/view/bw;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/view/by;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/view/by;->a:Lcom/estrongs/android/pop/view/bw;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,20 +22,14 @@
 
 
 # virtual methods
-.method public a(Lcom/estrongs/android/ui/drag/l;Ljava/lang/Object;)V
+.method public run()V
     .locals 1
 
-    check-cast p2, Ljava/util/List;
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/by;->a:Lcom/estrongs/android/pop/view/bw;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/by;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    iget-object v0, v0, Lcom/estrongs/android/pop/view/bw;->e:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-static {v0, p2}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->a(Lcom/estrongs/android/pop/esclasses/ESActivity;Ljava/util/List;)V
-
-    return-void
-.end method
-
-.method public b(Lcom/estrongs/android/ui/drag/l;Ljava/lang/Object;)V
-    .locals 0
+    invoke-static {v0}, Lcom/estrongs/fs/impl/local/m;->b(Landroid/content/Context;)V
 
     return-void
 .end method

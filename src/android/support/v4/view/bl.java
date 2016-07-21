@@ -1,30 +1,13 @@
 package android.support.v4.view;
 
-import android.os.Build.VERSION;
-import android.view.ViewGroup;
+import android.view.MotionEvent;
 
-public class bl
+class bl
+  extends bk
 {
-  static final bo a = new bp();
-  
-  static
+  public int b(MotionEvent paramMotionEvent)
   {
-    int i = Build.VERSION.SDK_INT;
-    if (i >= 14)
-    {
-      a = new bn();
-      return;
-    }
-    if (i >= 11)
-    {
-      a = new bm();
-      return;
-    }
-  }
-  
-  public static void a(ViewGroup paramViewGroup, boolean paramBoolean)
-  {
-    a.a(paramViewGroup, paramBoolean);
+    return bp.a(paramMotionEvent);
   }
 }
 

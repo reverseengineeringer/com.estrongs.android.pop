@@ -8,7 +8,7 @@
 # instance fields
 .field private a:Landroid/widget/LinearLayout;
 
-.field private b:Lcom/estrongs/android/ui/a/aa;
+.field private b:Lcom/estrongs/android/ui/adapter/ListAdapter_NewNavi;
 
 .field private c:I
 
@@ -73,7 +73,7 @@
 .method private a(I)Landroid/view/View;
     .locals 1
 
-    invoke-direct {p0}, Lcom/estrongs/android/ui/view/NaviListView;->e()Landroid/util/SparseArray;
+    invoke-direct {p0}, Lcom/estrongs/android/ui/view/NaviListView;->getVisibleGroupViewMap()Landroid/util/SparseArray;
 
     move-result-object v0
 
@@ -87,9 +87,15 @@
 .end method
 
 .method private c()V
-    .locals 2
+    .locals 3
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
+
+    const-string v0, "list"
+
+    const-string v1, "requestRefreshStaticBoard start"
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->a:Landroid/widget/LinearLayout;
 
@@ -103,28 +109,34 @@
 
     if-nez v0, :cond_1
 
-    new-instance v0, Lcom/estrongs/android/ui/view/bf;
+    new-instance v0, Lcom/estrongs/android/ui/view/bo;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/bf;-><init>(Lcom/estrongs/android/ui/view/NaviListView;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/bo;-><init>(Lcom/estrongs/android/ui/view/NaviListView;)V
 
     iput-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->f:Landroid/os/Handler;
 
     :cond_1
     iget-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->f:Landroid/os/Handler;
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
+    invoke-virtual {v0, v2}, Landroid/os/Handler;->removeMessages(I)V
 
     iget-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->f:Landroid/os/Handler;
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+    invoke-virtual {v0, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    const-string v0, "list"
+
+    const-string v1, "requestRefreshStaticBoard end"
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method private d()I
+.method private getFirstVisibleGroupPosition()I
     .locals 6
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->b:Lcom/estrongs/android/ui/a/aa;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->b:Lcom/estrongs/android/ui/adapter/ListAdapter_NewNavi;
 
     if-nez v0, :cond_0
 
@@ -132,18 +144,18 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/android/ui/a/aa;
+    check-cast v0, Lcom/estrongs/android/ui/adapter/ListAdapter_NewNavi;
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->b:Lcom/estrongs/android/ui/a/aa;
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->b:Lcom/estrongs/android/ui/adapter/ListAdapter_NewNavi;
 
     :cond_0
     invoke-virtual {p0}, Lcom/estrongs/android/ui/view/NaviListView;->getFirstVisiblePosition()I
 
     move-result v2
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->b:Lcom/estrongs/android/ui/a/aa;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->b:Lcom/estrongs/android/ui/adapter/ListAdapter_NewNavi;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/a/aa;->getGroupCount()I
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/adapter/ListAdapter_NewNavi;->getGroupCount()I
 
     move-result v1
 
@@ -176,7 +188,7 @@
     goto :goto_1
 .end method
 
-.method private e()Landroid/util/SparseArray;
+.method private getVisibleGroupViewMap()Landroid/util/SparseArray;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -245,6 +257,12 @@
 .method public a()V
     .locals 5
 
+    const-string v0, "list"
+
+    const-string v1, "RefreshStaticBoardContent start"
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->a(Ljava/lang/String;Ljava/lang/String;)V
+
     iget-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->a:Landroid/widget/LinearLayout;
 
     if-nez v0, :cond_0
@@ -253,7 +271,7 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->b:Lcom/estrongs/android/ui/a/aa;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->b:Lcom/estrongs/android/ui/adapter/ListAdapter_NewNavi;
 
     if-nez v0, :cond_1
 
@@ -261,9 +279,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/android/ui/a/aa;
+    check-cast v0, Lcom/estrongs/android/ui/adapter/ListAdapter_NewNavi;
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->b:Lcom/estrongs/android/ui/a/aa;
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->b:Lcom/estrongs/android/ui/adapter/ListAdapter_NewNavi;
 
     :cond_1
     const/4 v0, 0x0
@@ -282,7 +300,7 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/NaviListView;->b:Lcom/estrongs/android/ui/a/aa;
+    iget-object v1, p0, Lcom/estrongs/android/ui/view/NaviListView;->b:Lcom/estrongs/android/ui/adapter/ListAdapter_NewNavi;
 
     iget v2, p0, Lcom/estrongs/android/ui/view/NaviListView;->d:I
 
@@ -290,13 +308,19 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {v1, v2, v0, v3, v4}, Lcom/estrongs/android/ui/a/aa;->getGroupView(IZLandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    invoke-virtual {v1, v2, v0, v3, v4}, Lcom/estrongs/android/ui/adapter/ListAdapter_NewNavi;->getGroupView(IZLandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/LinearLayout;
 
     iput-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->a:Landroid/widget/LinearLayout;
+
+    const-string v0, "list"
+
+    const-string v1, "RefreshStaticBoardContent end"
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -308,35 +332,34 @@
 
     const/4 v7, 0x0
 
-    const-string v0, "test"
+    const-string v0, "list"
 
-    const-string v1, "checkStaticBoard!"
+    const-string v1, "checkStaticBoard start!"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->a:Landroid/widget/LinearLayout;
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_0
 
-    :cond_0
     :goto_0
     return-void
 
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->b:Lcom/estrongs/android/ui/a/aa;
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->b:Lcom/estrongs/android/ui/adapter/ListAdapter_NewNavi;
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_1
 
     invoke-virtual {p0}, Lcom/estrongs/android/ui/view/NaviListView;->getExpandableListAdapter()Landroid/widget/ExpandableListAdapter;
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/android/ui/a/aa;
+    check-cast v0, Lcom/estrongs/android/ui/adapter/ListAdapter_NewNavi;
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->b:Lcom/estrongs/android/ui/a/aa;
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->b:Lcom/estrongs/android/ui/adapter/ListAdapter_NewNavi;
 
-    :cond_2
-    invoke-direct {p0}, Lcom/estrongs/android/ui/view/NaviListView;->d()I
+    :cond_1
+    invoke-direct {p0}, Lcom/estrongs/android/ui/view/NaviListView;->getFirstVisibleGroupPosition()I
 
     move-result v1
 
@@ -360,41 +383,41 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     if-nez v1, :cond_5
 
     iget v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->c:I
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     iput v7, p0, Lcom/estrongs/android/ui/view/NaviListView;->c:I
 
     invoke-virtual {p0}, Lcom/estrongs/android/ui/view/NaviListView;->a()V
 
-    :cond_3
+    :cond_2
     :goto_1
     invoke-direct {p0, v1}, Lcom/estrongs/android/ui/view/NaviListView;->a(I)Landroid/view/View;
 
     move-result-object v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_3
 
     invoke-virtual {v0}, Landroid/view/View;->getTop()I
 
     move-result v2
 
-    if-gez v2, :cond_4
+    if-gez v2, :cond_3
 
     add-int/lit8 v2, v1, 0x1
 
-    iget-object v3, p0, Lcom/estrongs/android/ui/view/NaviListView;->b:Lcom/estrongs/android/ui/a/aa;
+    iget-object v3, p0, Lcom/estrongs/android/ui/view/NaviListView;->b:Lcom/estrongs/android/ui/adapter/ListAdapter_NewNavi;
 
-    invoke-virtual {v3}, Lcom/estrongs/android/ui/a/aa;->getGroupCount()I
+    invoke-virtual {v3}, Lcom/estrongs/android/ui/adapter/ListAdapter_NewNavi;->getGroupCount()I
 
     move-result v3
 
-    if-ge v2, v3, :cond_4
+    if-ge v2, v3, :cond_3
 
     add-int/lit8 v0, v1, 0x1
 
@@ -402,7 +425,7 @@
 
     move-result-object v0
 
-    :cond_4
+    :cond_3
     iget-object v1, p0, Lcom/estrongs/android/ui/view/NaviListView;->a:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->getMeasuredHeight()I
@@ -456,7 +479,7 @@
 
     move-result-object v0
 
-    invoke-static {v4, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, v0}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->a:Landroid/widget/LinearLayout;
 
@@ -468,11 +491,19 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_4
 
     iget-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->e:Landroid/view/View;
 
     invoke-virtual {v0, v8}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_4
+    :goto_3
+    const-string v0, "list"
+
+    const-string v1, "checkStaticBoard end!"
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -496,13 +527,13 @@
     :cond_6
     iget v2, p0, Lcom/estrongs/android/ui/view/NaviListView;->c:I
 
-    if-eq v0, v2, :cond_3
+    if-eq v0, v2, :cond_2
 
     iput v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->c:I
 
     invoke-virtual {p0}, Lcom/estrongs/android/ui/view/NaviListView;->a()V
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :cond_7
     invoke-virtual {v0}, Landroid/view/View;->getTop()I
@@ -544,7 +575,7 @@
 
     move-result-object v0
 
-    invoke-static {v4, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, v0}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->a:Landroid/widget/LinearLayout;
 
@@ -558,16 +589,16 @@
 
     move-result v0
 
-    if-ne v0, v8, :cond_0
+    if-ne v0, v8, :cond_4
 
     iget-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->e:Landroid/view/View;
 
     invoke-virtual {v0, v7}, Landroid/view/View;->setVisibility(I)V
 
-    goto/16 :goto_0
+    goto :goto_3
 
     :cond_9
-    if-lt v3, v1, :cond_0
+    if-lt v3, v1, :cond_4
 
     const-string v4, "test"
 
@@ -599,7 +630,7 @@
 
     move-result-object v0
 
-    invoke-static {v4, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, v0}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->a:Landroid/widget/LinearLayout;
 
@@ -611,17 +642,31 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_4
 
     iget-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->e:Landroid/view/View;
 
     invoke-virtual {v0, v8}, Landroid/view/View;->setVisibility(I)V
 
-    goto/16 :goto_0
+    goto/16 :goto_3
+.end method
+
+.method public getStaticBoard()Landroid/view/View;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/NaviListView;->a:Landroid/widget/LinearLayout;
+
+    return-object v0
 .end method
 
 .method protected onLayout(ZIIII)V
-    .locals 0
+    .locals 2
+
+    const-string v0, "list"
+
+    const-string v1, "onLayout"
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-super/range {p0 .. p5}, Landroid/widget/ExpandableListView;->onLayout(ZIIII)V
 
@@ -631,17 +676,61 @@
 .end method
 
 .method public onScroll(Landroid/widget/AbsListView;III)V
-    .locals 0
+    .locals 3
+
+    const-string v0, "list"
+
+    const-string v1, "onScorll"
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/estrongs/android/ui/view/NaviListView;->b()V
+
+    const-string v0, "test"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "first group : "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-direct {p0}, Lcom/estrongs/android/ui/view/NaviListView;->getFirstVisibleGroupPosition()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
 
 .method protected onScrollChanged(IIII)V
-    .locals 0
+    .locals 2
 
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/ExpandableListView;->onScrollChanged(IIII)V
+
+    const-string v0, "list"
+
+    const-string v1, "onScrollChanged"
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "test"
+
+    const-string v1, "onScrollChanged!"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
@@ -653,7 +742,13 @@
 
     const-string v1, "onScrollStateChanged!"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "list"
+
+    const-string v1, "onScrollStateChanged"
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/estrongs/android/ui/view/NaviListView;->b()V
 

@@ -1,10 +1,20 @@
 package android.support.v4.app;
 
-import android.view.View;
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
 
-abstract interface k
+class k
 {
-  public abstract View a(int paramInt);
+  public static void a(Activity paramActivity)
+  {
+    paramActivity.finishAffinity();
+  }
+  
+  public static void a(Activity paramActivity, Intent paramIntent, int paramInt, Bundle paramBundle)
+  {
+    paramActivity.startActivityForResult(paramIntent, paramInt, paramBundle);
+  }
 }
 
 /* Location:

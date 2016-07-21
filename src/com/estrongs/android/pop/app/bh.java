@@ -1,20 +1,26 @@
 package com.estrongs.android.pop.app;
 
-import com.estrongs.android.pop.zeroconf.w;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.pop.ad;
+import com.estrongs.fs.impl.adb.c;
+import java.net.Inet4Address;
 
-class bh
+public class bh
   implements Runnable
 {
-  bh(be parambe, w paramw) {}
+  private bm b = null;
+  
+  public bh(bg parambg, bm parambm)
+  {
+    b = parambm;
+  }
   
   public void run()
   {
-    synchronized (be.c(b))
+    if (c.b(b.a.getHostAddress(), 5555))
     {
-      if (a != null) {
-        a.b();
-      }
-      return;
+      String str = "adb://" + b.a.getHostAddress() + "/";
+      ad.a(FexApplication.a()).b(str, b.b, false);
     }
   }
 }

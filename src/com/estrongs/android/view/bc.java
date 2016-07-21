@@ -1,18 +1,27 @@
 package com.estrongs.android.view;
 
-import android.os.Handler;
-import com.estrongs.a.a;
-import com.estrongs.a.a.l;
-import com.estrongs.a.a.m;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.pop.app.compress.cb;
+import com.estrongs.io.archive.i;
 
 class bc
-  implements l
+  implements DialogInterface.OnClickListener
 {
-  bc(aw paramaw) {}
+  bc(bb parambb, cb paramcb) {}
   
-  public void a(a parama, m paramm)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    a.T.post(new bd(this, paramm));
+    paramDialogInterface = a.a();
+    if (b.a.e(paramDialogInterface))
+    {
+      b.b.c = paramDialogInterface;
+      a.dismiss();
+      ak.a(b.b, new bg(b.b));
+      ak.d(b.b).start();
+      return;
+    }
+    com.estrongs.android.ui.view.ak.a(b.b.ah, 2131231784, 1);
   }
 }
 

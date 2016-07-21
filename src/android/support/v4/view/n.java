@@ -1,23 +1,88 @@
 package android.support.v4.view;
 
-import android.os.Build.VERSION;
+import android.content.Context;
+import android.util.Log;
+import android.view.MenuItem;
+import android.view.SubMenu;
+import android.view.View;
 
-public class n
+public abstract class n
 {
-  static final o a = new p();
+  private static final String TAG = "ActionProvider(support)";
+  private final Context mContext;
+  private o mSubUiVisibilityListener;
+  private p mVisibilityListener;
   
-  static
+  public n(Context paramContext)
   {
-    if (Build.VERSION.SDK_INT >= 17)
-    {
-      a = new q();
-      return;
+    mContext = paramContext;
+  }
+  
+  public Context getContext()
+  {
+    return mContext;
+  }
+  
+  public boolean hasSubMenu()
+  {
+    return false;
+  }
+  
+  public boolean isVisible()
+  {
+    return true;
+  }
+  
+  public abstract View onCreateActionView();
+  
+  public View onCreateActionView(MenuItem paramMenuItem)
+  {
+    return onCreateActionView();
+  }
+  
+  public boolean onPerformDefaultAction()
+  {
+    return false;
+  }
+  
+  public void onPrepareSubMenu(SubMenu paramSubMenu) {}
+  
+  public boolean overridesItemVisibility()
+  {
+    return false;
+  }
+  
+  public void refreshVisibility()
+  {
+    if ((mVisibilityListener != null) && (overridesItemVisibility())) {
+      mVisibilityListener.a(isVisible());
     }
   }
   
-  public static int a(int paramInt1, int paramInt2)
+  public void reset()
   {
-    return a.a(paramInt1, paramInt2);
+    mVisibilityListener = null;
+    mSubUiVisibilityListener = null;
+  }
+  
+  public void setSubUiVisibilityListener(o paramo)
+  {
+    mSubUiVisibilityListener = paramo;
+  }
+  
+  public void setVisibilityListener(p paramp)
+  {
+    if ((mVisibilityListener != null) && (paramp != null)) {
+      Log.w("ActionProvider(support)", "setVisibilityListener: Setting a new ActionProvider.VisibilityListener when one is already set. Are you reusing this " + getClass().getSimpleName() + " instance while it is still in use somewhere else?");
+    }
+    mVisibilityListener = paramp;
+  }
+  
+  public void subUiVisibilityChanged(boolean paramBoolean)
+  {
+    if (mSubUiVisibilityListener != null) {
+      mSubUiVisibilityListener.onSubUiVisibilityChanged(paramBoolean);
+    }
   }
 }
 

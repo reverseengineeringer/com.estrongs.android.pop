@@ -1,24 +1,7 @@
-.class Landroid/support/v4/view/bv;
+.class public interface abstract Landroid/support/v4/view/bv;
 .super Ljava/lang/Object;
 
 
-# instance fields
-.field a:Ljava/lang/Object;
-
-.field b:I
-
-.field c:Z
-
-.field d:F
-
-.field e:F
-
-
-# direct methods
-.method constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+# virtual methods
+.method public abstract onApplyWindowInsets(Landroid/view/View;Landroid/support/v4/view/fr;)Landroid/support/v4/view/fr;
 .end method

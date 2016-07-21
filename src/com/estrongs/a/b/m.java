@@ -6,25 +6,25 @@ import android.content.DialogInterface.OnClickListener;
 import android.content.DialogInterface.OnDismissListener;
 import android.os.StatFs;
 import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.ui.dialog.iw;
-import com.estrongs.android.util.am;
-import com.estrongs.android.widget.g;
-import com.estrongs.fs.b.ba;
-import com.estrongs.fs.b.bl;
+import com.estrongs.android.ui.dialog.jf;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.widget.f;
+import com.estrongs.fs.b.bc;
+import com.estrongs.fs.b.bn;
 import com.estrongs.fs.i;
 import com.estrongs.fs.impl.usb.e;
 
 class m
-  extends g
+  extends f
   implements DialogInterface.OnClickListener, DialogInterface.OnDismissListener
 {
-  bl a;
+  bn a;
   boolean i = false;
   
-  public m(d paramd, Activity paramActivity, String paramString, i parami, bl parambl)
+  public m(d paramd, Activity paramActivity, String paramString, i parami, bn parambn)
   {
     super(paramActivity, paramString, parami);
-    a = parambl;
+    a = parambn;
     a(7);
   }
   
@@ -32,19 +32,16 @@ class m
   {
     long l1 = 0L;
     d.a(j, d());
-    if (am.ax(d.e(j))) {}
+    if (ap.aH(d.e(j))) {}
     for (l1 = e.k(d.e(j)); a.e > l1; l1 = l2 * l1)
     {
       long l2;
-      if (ESActivity.A() != null)
+      if (ESActivity.H() != null)
       {
-        paramDialogInterface = ESActivity.A();
+        paramDialogInterface = ESActivity.H();
         l2 = a.e;
         d locald = j;
-        paramDialogInterface = new iw(paramDialogInterface, l2, l1, "Error!", d.c().getString(2131428049));
-        locald = j;
-        paramDialogInterface.setSingleButton(d.c().getString(2131427339), null);
-        paramDialogInterface.show();
+        new jf(paramDialogInterface, l2, l1, "Error!", d.c().getString(2131231845)).show();
       }
       k();
       return;
@@ -58,7 +55,7 @@ class m
       {
         for (;;)
         {
-          label157:
+          label136:
           l2 = 0L;
         }
       }
@@ -69,15 +66,15 @@ class m
       }
       catch (Exception paramDialogInterface)
       {
-        break label157;
+        break label136;
       }
     }
     if (!d.e(j).endsWith("/")) {
       a.i = (d.e(j) + "/");
     }
-    if (ESActivity.A() != null)
+    if (ESActivity.H() != null)
     {
-      ba.a(ESActivity.A(), a, true);
+      bc.a(ESActivity.H(), a, true);
       i = true;
     }
     k();
@@ -93,34 +90,34 @@ class m
     //   7: aload_0
     //   8: getfield 18	com/estrongs/a/b/m:j	Lcom/estrongs/a/b/d;
     //   11: aload_0
-    //   12: getfield 25	com/estrongs/a/b/m:a	Lcom/estrongs/fs/b/bl;
-    //   15: getfield 140	com/estrongs/fs/b/bl:j	Ljava/net/Socket;
-    //   18: invokevirtual 146	java/net/Socket:getOutputStream	()Ljava/io/OutputStream;
+    //   12: getfield 25	com/estrongs/a/b/m:a	Lcom/estrongs/fs/b/bn;
+    //   15: getfield 135	com/estrongs/fs/b/bn:j	Ljava/net/Socket;
+    //   18: invokevirtual 141	java/net/Socket:getOutputStream	()Ljava/io/OutputStream;
     //   21: sipush 404
-    //   24: ldc -108
-    //   26: invokevirtual 151	com/estrongs/a/b/d:a	(Ljava/io/OutputStream;ILjava/lang/String;)V
+    //   24: ldc -113
+    //   26: invokevirtual 146	com/estrongs/a/b/d:a	(Ljava/io/OutputStream;ILjava/lang/String;)V
     //   29: aload_0
-    //   30: getfield 25	com/estrongs/a/b/m:a	Lcom/estrongs/fs/b/bl;
-    //   33: getfield 140	com/estrongs/fs/b/bl:j	Ljava/net/Socket;
-    //   36: invokevirtual 154	java/net/Socket:close	()V
+    //   30: getfield 25	com/estrongs/a/b/m:a	Lcom/estrongs/fs/b/bn;
+    //   33: getfield 135	com/estrongs/fs/b/bn:j	Ljava/net/Socket;
+    //   36: invokevirtual 149	java/net/Socket:close	()V
     //   39: aload_0
-    //   40: invokespecial 155	com/estrongs/android/widget/g:k	()V
+    //   40: invokespecial 150	com/estrongs/android/widget/f:k	()V
     //   43: return
     //   44: aload_0
     //   45: getfield 18	com/estrongs/a/b/m:j	Lcom/estrongs/a/b/d;
     //   48: aload_0
-    //   49: getfield 25	com/estrongs/a/b/m:a	Lcom/estrongs/fs/b/bl;
-    //   52: getfield 140	com/estrongs/fs/b/bl:j	Ljava/net/Socket;
-    //   55: invokevirtual 146	java/net/Socket:getOutputStream	()Ljava/io/OutputStream;
+    //   49: getfield 25	com/estrongs/a/b/m:a	Lcom/estrongs/fs/b/bn;
+    //   52: getfield 135	com/estrongs/fs/b/bn:j	Ljava/net/Socket;
+    //   55: invokevirtual 141	java/net/Socket:getOutputStream	()Ljava/io/OutputStream;
     //   58: sipush 200
-    //   61: ldc -99
-    //   63: invokevirtual 151	com/estrongs/a/b/d:a	(Ljava/io/OutputStream;ILjava/lang/String;)V
+    //   61: ldc -104
+    //   63: invokevirtual 146	com/estrongs/a/b/d:a	(Ljava/io/OutputStream;ILjava/lang/String;)V
     //   66: goto -27 -> 39
     //   69: astore_1
     //   70: aload_0
-    //   71: getfield 25	com/estrongs/a/b/m:a	Lcom/estrongs/fs/b/bl;
-    //   74: getfield 140	com/estrongs/fs/b/bl:j	Ljava/net/Socket;
-    //   77: invokevirtual 154	java/net/Socket:close	()V
+    //   71: getfield 25	com/estrongs/a/b/m:a	Lcom/estrongs/fs/b/bn;
+    //   74: getfield 135	com/estrongs/fs/b/bn:j	Ljava/net/Socket;
+    //   77: invokevirtual 149	java/net/Socket:close	()V
     //   80: goto -41 -> 39
     //   83: astore_1
     //   84: goto -45 -> 39

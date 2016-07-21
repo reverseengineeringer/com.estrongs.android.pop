@@ -1,8 +1,15 @@
 package com.estrongs.android.util;
 
-public abstract interface bb
+class bb
 {
-  public abstract void a();
+  public String a;
+  public int b;
+  
+  public bb(String paramString, int paramInt)
+  {
+    a = paramString;
+    b = paramInt;
+  }
 }
 
 /* Location:

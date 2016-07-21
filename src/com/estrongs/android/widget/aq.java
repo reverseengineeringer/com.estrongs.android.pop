@@ -1,17 +1,34 @@
 package com.estrongs.android.widget;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
-import com.estrongs.android.view.cd;
+import android.view.View;
+import com.estrongs.android.view.dv;
+import com.estrongs.android.view.eb;
 
 class aq
-  implements DialogInterface.OnDismissListener
+  implements dv
 {
-  aq(ao paramao) {}
+  aq(ap paramap) {}
   
-  public void onDismiss(DialogInterface paramDialogInterface)
+  public void a(String paramString, boolean paramBoolean)
   {
-    a.i.a_();
+    a(paramString, paramBoolean, true);
+  }
+  
+  public void a(String paramString, boolean paramBoolean1, boolean paramBoolean2)
+  {
+    if (a.i != null)
+    {
+      if (a.b().s())
+      {
+        a.i.setVisibility(8);
+        a.b().a(false);
+      }
+    }
+    else {
+      return;
+    }
+    a.i.setVisibility(0);
+    a.b().a(true);
   }
 }
 

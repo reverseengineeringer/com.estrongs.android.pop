@@ -1,15 +1,15 @@
 package com.estrongs.fs.a;
 
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.pcs.r;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bc;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.ui.pcs.u;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bg;
+import com.estrongs.android.util.bk;
 import com.estrongs.fs.h;
 import com.estrongs.fs.impl.pcs.PcsFileSystem;
-import com.estrongs.fs.m;
-import com.estrongs.fs.n;
-import com.estrongs.fs.o;
+import com.estrongs.fs.w;
+import com.estrongs.fs.x;
+import com.estrongs.fs.z;
 import java.io.File;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -61,7 +61,7 @@ public class b
     int j = 0;
     while (paramList.hasNext())
     {
-      if (am.e(paramString, ((h)paramList.next()).getPath())) {
+      if (ap.e(paramString, ((h)paramList.next()).getPath())) {
         return j;
       }
       j += 1;
@@ -189,13 +189,13 @@ public class b
   
   private void b(h paramh, String paramString, int paramInt)
   {
-    if (((am.aB(paramh.getPath())) || (am.az(paramh.getPath()))) && (paramh.getFileType().b()))
+    if (((ap.aL(paramh.getPath())) || (ap.aJ(paramh.getPath()))) && (paramh.getFileType().b()))
     {
       ArrayList localArrayList = new ArrayList();
       String str;
       synchronized (h)
       {
-        str = PcsFileSystem.a(am.ag(am.bM(paramh.getAbsolutePath())));
+        str = PcsFileSystem.a(ap.aq(ap.cd(paramh.getAbsolutePath())));
         localObject1 = (List)h.get(str);
         if (localObject1 == null) {
           break label240;
@@ -252,12 +252,12 @@ public class b
       a(a.a((String)paramList1.get(0)), j, paramList1, paramList2);
       String str1;
       String str2;
-      if ((am.aB((String)paramList1.get(0))) || (am.az((String)paramList1.get(0))))
+      if ((ap.aL((String)paramList1.get(0))) || (ap.aJ((String)paramList1.get(0))))
       {
-        if (!am.aB((String)paramList1.get(0))) {
+        if (!ap.aL((String)paramList1.get(0))) {
           break label368;
         }
-        str1 = am.ag((String)paramList1.get(0));
+        str1 = ap.aq((String)paramList1.get(0));
         str2 = ((String)paramList1.get(0)).substring(0, ((String)paramList1.get(0)).indexOf(str1));
         if (str1.indexOf("/files") != 0) {
           break label650;
@@ -271,10 +271,10 @@ public class b
       }
       for (;;)
       {
-        if ((!am.as((String)paramList1.get(0))) || (!am.aM((String)paramList1.get(0)))) {
+        if ((!ap.aC((String)paramList1.get(0))) || (!ap.aW((String)paramList1.get(0)))) {
           break label758;
         }
-        str1 = am.ah((String)paramList1.get(0));
+        str1 = ap.ar((String)paramList1.get(0));
         paramList1 = ((String)paramList1.get(0)).substring(0, ((String)paramList1.get(0)).indexOf(str1)).replaceFirst("SP://", "pcs://");
         str1 = paramList1 + "/pictures";
         i(str1);
@@ -284,7 +284,7 @@ public class b
         a(paramList1, j, null, paramList2);
         return;
         label368:
-        str1 = ((String)paramList1.get(0)).substring(am.k().length());
+        str1 = ((String)paramList1.get(0)).substring(ap.k().length());
         break;
         label392:
         if ((j & 0x2) == 2)
@@ -336,11 +336,11 @@ public class b
   {
     Object localObject = paramh.getPath();
     paramh = paramh.getAbsolutePath();
-    String str2 = am.bE((String)localObject);
-    String str3 = am.bE(paramh);
+    String str2 = ap.bV((String)localObject);
+    String str3 = ap.bV(paramh);
     localObject = a.b(paramString);
     String str1 = a.a(str3) + "/" + (String)localObject;
-    if (am.aX(a.a(str2)))
+    if (ap.bi(a.a(str2)))
     {
       paramh = a.b(str2);
       paramh = paramh.substring(0, paramh.lastIndexOf("#") + 1) + (String)localObject;
@@ -349,21 +349,21 @@ public class b
     for (;;)
     {
       paramh = a.a(str2) + "/" + paramh;
-      if (am.ba(paramString))
+      if (ap.bl(paramString))
       {
         localObject = new File(paramString);
-        if ((!((File)localObject).isDirectory()) && (bc.P(paramString)))
+        if ((!((File)localObject).isDirectory()) && (bg.P(paramString)))
         {
           a("book://" + str3.substring(1, str3.length()), "book://" + paramString.substring(1, paramString.length()), paramInt);
-          if (!bd.f()) {
-            com.estrongs.fs.impl.d.b.a().a(str3, paramString);
+          if (!bk.f()) {
+            com.estrongs.fs.impl.f.c.a().a(str3, paramString);
           }
         }
-        if ((!((File)localObject).isDirectory()) && (bc.K(paramString)))
+        if ((!((File)localObject).isDirectory()) && (bg.K(paramString)))
         {
           a("apk://" + str3.substring(1, str3.length()), "apk://" + paramString.substring(1, paramString.length()), paramInt);
-          if (!bd.f()) {
-            com.estrongs.fs.impl.a.b.a().a(str3, paramString);
+          if (!bk.f()) {
+            com.estrongs.fs.impl.a.d.a().a(str3, paramString);
           }
         }
       }
@@ -374,11 +374,11 @@ public class b
       return;
       paramString = str1;
       paramh = (h)localObject;
-      if (am.as(str2))
+      if (ap.aC(str2))
       {
         paramString = str1;
         paramh = (h)localObject;
-        if (!am.ah(str2).startsWith("/files"))
+        if (!ap.ar(str2).startsWith("/files"))
         {
           paramh = a.b(str2);
           paramh = paramh.substring(0, paramh.lastIndexOf(">") + 1) + (String)localObject;
@@ -459,7 +459,7 @@ public class b
     Object localObject7;
     Object localObject8;
     Object localObject2;
-    if ((am.aG(((h)paramList.get(0)).getPath())) && (((h)paramList.get(0)).getFileType().b()))
+    if ((ap.aQ(((h)paramList.get(0)).getPath())) && (((h)paramList.get(0)).getFileType().b()))
     {
       ??? = new HashMap();
       synchronized (g)
@@ -498,7 +498,7 @@ public class b
     }
     label398:
     Object localObject9;
-    if ((am.aB(((h)paramList.get(0)).getPath())) || (am.az(((h)paramList.get(0)).getPath())))
+    if ((ap.aL(((h)paramList.get(0)).getPath())) || (ap.aJ(((h)paramList.get(0)).getPath())))
     {
       localObject5 = new HashMap();
       synchronized (h)
@@ -510,7 +510,7 @@ public class b
           localObject7 = (h)((Iterator)localObject6).next();
           if (((h)localObject7).getFileType().b())
           {
-            localObject2 = PcsFileSystem.a(am.ag(am.bM(((h)localObject7).getAbsolutePath())));
+            localObject2 = PcsFileSystem.a(ap.aq(ap.cd(((h)localObject7).getAbsolutePath())));
             localObject2 = (List)h.remove(localObject2);
             if (localObject2 != null)
             {
@@ -544,7 +544,7 @@ public class b
       while (((Iterator)localObject8).hasNext())
       {
         localObject2 = (Map.Entry)((Iterator)localObject8).next();
-        if (((String)((Map.Entry)localObject2).getKey()).indexOf(PcsFileSystem.a(am.ag(am.bM(((h)localObject7).getAbsolutePath())))) == 0)
+        if (((String)((Map.Entry)localObject2).getKey()).indexOf(PcsFileSystem.a(ap.aq(ap.cd(((h)localObject7).getAbsolutePath())))) == 0)
         {
           localObject2 = (List)((Map.Entry)localObject2).getValue();
           if (localObject2 != null)
@@ -574,22 +574,22 @@ public class b
       }
       for (;;)
       {
-        if (am.aB(((h)localObject7).getPath()))
+        if (ap.aL(((h)localObject7).getPath()))
         {
-          localObject2 = a.d(am.k());
-          ??? = a.d(r.a().g());
+          localObject2 = a.d(ap.k());
+          ??? = a.d(u.a().g());
           if (??? == null) {
             return;
           }
           ((List)localObject1).add(((h)localObject7).getAbsolutePath().replaceFirst((String)???, (String)localObject2));
           break label614;
         }
-        if (!am.az(((h)localObject7).getPath())) {
+        if (!ap.aJ(((h)localObject7).getPath())) {
           break label1657;
         }
         new ArrayList(paramList.size());
-        localObject2 = a.d(am.k());
-        ??? = a.d(r.a().g());
+        localObject2 = a.d(ap.k());
+        ??? = a.d(u.a().g());
         if (??? == null) {
           return;
         }
@@ -618,11 +618,11 @@ public class b
           for (;;)
           {
             break;
-            ((List)localObject1).add(am.bE(((h)???).getPath()));
-            ((List)localObject2).add(am.bE(((h)???).getAbsolutePath()));
+            ((List)localObject1).add(ap.bV(((h)???).getPath()));
+            ((List)localObject2).add(ap.bV(((h)???).getAbsolutePath()));
           }
         }
-        if ((((List)localObject2).size() > 0) && (am.ba((String)((List)localObject2).get(0))))
+        if ((((List)localObject2).size() > 0) && (ap.bl((String)((List)localObject2).get(0))))
         {
           ??? = new ArrayList();
           ??? = new ArrayList();
@@ -631,12 +631,12 @@ public class b
           int k = 0;
           while (k < ((List)localObject2).size())
           {
-            if ((!((h)paramList.get(k)).getFileType().a()) && (am.ba((String)((List)localObject2).get(k))) && (bc.P((String)((List)localObject2).get(k))))
+            if ((!((h)paramList.get(k)).getFileType().a()) && (ap.bl((String)((List)localObject2).get(k))) && (bg.P((String)((List)localObject2).get(k))))
             {
               ((List)???).add("book://" + ((String)((List)localObject2).get(k)).substring(1));
               ((List)???).add(((List)localObject2).get(k));
             }
-            if ((!((h)paramList.get(k)).getFileType().a()) && (am.ba((String)((List)localObject2).get(k))) && (bc.K((String)((List)localObject2).get(k))))
+            if ((!((h)paramList.get(k)).getFileType().a()) && (ap.bl((String)((List)localObject2).get(k))) && (bg.K((String)((List)localObject2).get(k))))
             {
               ((List)localObject5).add("apk://" + ((String)((List)localObject2).get(k)).substring(1));
               ((List)localObject6).add(((List)localObject2).get(k));
@@ -646,15 +646,15 @@ public class b
           if (((List)???).size() > 0)
           {
             a((List)???, null, paramInt);
-            if (!bd.f()) {
-              com.estrongs.fs.impl.d.b.a().d((List)???);
+            if (!bk.f()) {
+              com.estrongs.fs.impl.f.c.a().d((List)???);
             }
           }
           if (((List)localObject5).size() > 0)
           {
             a((List)localObject5, null, paramInt);
-            if (!bd.f()) {
-              com.estrongs.fs.impl.a.b.a().d((List)localObject6);
+            if (!bk.f()) {
+              com.estrongs.fs.impl.a.d.a().d((List)localObject6);
             }
           }
         }
@@ -690,7 +690,7 @@ public class b
         if (localh.getFileType().a()) {
           break label219;
         }
-        localObject2 = PcsFileSystem.a(am.ag(am.bM(localh.getAbsolutePath())));
+        localObject2 = PcsFileSystem.a(ap.aq(ap.cd(localh.getAbsolutePath())));
         if (h.get(localObject2) == null)
         {
           localObject1 = new ArrayList();
@@ -740,7 +740,7 @@ public class b
   
   private boolean k(String paramString)
   {
-    return (am.G(paramString) == 16) || (am.G(paramString) == 17);
+    return (ap.I(paramString) == 16) || (ap.I(paramString) == 17) || (ap.I(paramString) == 39);
   }
   
   public void a(e parame)
@@ -762,32 +762,32 @@ public class b
   
   public void a(h paramh, String paramString, int paramInt)
   {
-    if ((am.as(paramh.getPath())) && (paramh.getFileType().b())) {
-      b(new o(paramh.getPath().replaceFirst("SP://", "pcs://"), true), paramString, paramInt);
+    if ((ap.aC(paramh.getPath())) && (paramh.getFileType().b())) {
+      b(new z(paramh.getPath().replaceFirst("SP://", "pcs://"), true), paramString, paramInt);
     }
     String str1;
     String str2;
-    if ((am.aB(paramh.getPath())) && (paramh.getFileType().a()))
+    if ((ap.aL(paramh.getPath())) && (paramh.getFileType().a()))
     {
-      str1 = a.d(am.k());
-      str2 = a.d(r.a().g());
+      str1 = a.d(ap.k());
+      str2 = a.d(u.a().g());
       if (str2 == null) {
         return;
       }
-      b(new o(paramh.getAbsolutePath().replaceFirst(str2, str1), false), paramString, paramInt);
+      b(new z(paramh.getAbsolutePath().replaceFirst(str2, str1), false), paramString, paramInt);
     }
     for (;;)
     {
       b(paramh, paramString, paramInt);
       return;
-      if ((am.az(paramh.getPath())) && (paramh.getFileType().a()))
+      if ((ap.aJ(paramh.getPath())) && (paramh.getFileType().a()))
       {
-        str1 = a.d(am.k());
-        str2 = a.d(r.a().g());
+        str1 = a.d(ap.k());
+        str2 = a.d(u.a().g());
         if (str2 == null) {
           break;
         }
-        b(new o(paramh.getAbsolutePath().replaceFirst(str1, str2), false), paramString, paramInt);
+        b(new z(paramh.getAbsolutePath().replaceFirst(str1, str2), false), paramString, paramInt);
       }
     }
   }
@@ -840,8 +840,8 @@ public class b
   
   public void a(String paramString1, String paramString2, String paramString3, int paramInt)
   {
-    paramString1 = am.bE(paramString1);
-    paramString2 = am.bE(paramString2);
+    paramString1 = ap.bV(paramString1);
+    paramString2 = ap.bV(paramString2);
     Object localObject = j(paramString1);
     if (localObject != null)
     {
@@ -851,8 +851,8 @@ public class b
       {
         localObject = (h)((d)localObject).a().get(j);
         ((h)localObject).setName(a.b(paramString2));
-        if (((localObject instanceof n)) && (paramString3 != null)) {
-          ((n)localObject).setDisplayName(paramString3);
+        if (((localObject instanceof x)) && (paramString3 != null)) {
+          ((x)localObject).setDisplayName(paramString3);
         }
       }
     }
@@ -868,10 +868,10 @@ public class b
   
   public void a(String arg1, List<h> paramList, boolean paramBoolean)
   {
-    if ((!am.bO(???)) || (paramList == null)) {
+    if ((!ap.cf(???)) || (paramList == null)) {
       return;
     }
-    String str = am.bE(???);
+    String str = ap.bV(???);
     for (;;)
     {
       d locald1;
@@ -886,10 +886,10 @@ public class b
         {
           locald1.a().addAll(paramList);
           f += paramList.size();
-          if ((paramList.size() > 0) && (am.aG(((h)paramList.get(0)).getPath())) && (((h)paramList.get(0)).getFileType().b())) {
+          if ((paramList.size() > 0) && (ap.aQ(((h)paramList.get(0)).getPath())) && (((h)paramList.get(0)).getFileType().b())) {
             e(paramList);
           }
-          if ((paramList.size() > 0) && ((am.aB(((h)paramList.get(0)).getPath())) || (am.az(((h)paramList.get(0)).getPath())))) {
+          if ((paramList.size() > 0) && ((ap.aL(((h)paramList.get(0)).getPath())) || (ap.aJ(((h)paramList.get(0)).getPath())))) {
             f(paramList);
           }
           if (d.contains(a.d(str))) {
@@ -991,38 +991,59 @@ public class b
   
   public void a(List<String> paramList1, List<String> paramList2, int paramInt)
   {
-    int j = 0;
     for (;;)
     {
+      int j;
       try
       {
         paramList1 = a.a(paramList1);
-        if ((paramList1.size() > 0) && (am.ba((String)paramList1.get(0))))
+        if ((paramList1.size() > 0) && (ap.bl((String)paramList1.get(0))))
         {
           ArrayList localArrayList1 = new ArrayList();
           ArrayList localArrayList2 = new ArrayList();
           ArrayList localArrayList3 = new ArrayList();
           ArrayList localArrayList4 = new ArrayList();
+          ArrayList localArrayList5 = new ArrayList();
+          ArrayList localArrayList6 = new ArrayList();
+          ArrayList localArrayList7 = new ArrayList();
+          ArrayList localArrayList8 = new ArrayList();
+          j = 0;
           if (j < paramList1.size())
           {
             File localFile = new File((String)paramList1.get(j));
-            if ((!localFile.isDirectory()) && (am.ba((String)paramList1.get(j))) && (bc.P((String)paramList1.get(j))))
+            if ((!localFile.isDirectory()) && (ap.bl((String)paramList1.get(j))) && (bg.P((String)paramList1.get(j))))
             {
               localArrayList1.add("book://" + ((String)paramList1.get(j)).substring(1));
               localArrayList2.add(paramList1.get(j));
             }
-            if ((localFile.isDirectory()) || (!am.ba((String)paramList1.get(j))) || (!bc.K((String)paramList1.get(j)))) {
-              break label361;
+            if ((!localFile.isDirectory()) && (ap.bl((String)paramList1.get(j))) && (bg.K((String)paramList1.get(j))))
+            {
+              localArrayList3.add("apk://" + ((String)paramList1.get(j)).substring(1));
+              localArrayList4.add(paramList1.get(j));
             }
-            localArrayList3.add("apk://" + ((String)paramList1.get(j)).substring(1));
-            localArrayList4.add(paramList1.get(j));
-            break label361;
+            if ((!localFile.isDirectory()) && (ap.bl((String)paramList1.get(j))) && (bg.Q((String)paramList1.get(j))))
+            {
+              localArrayList3.add("archive://" + ((String)paramList1.get(j)).substring(1));
+              localArrayList4.add(paramList1.get(j));
+            }
+            if ((localFile.isDirectory()) || (!ap.bl((String)paramList1.get(j))) || (!bg.S((String)paramList1.get(j)))) {
+              break label645;
+            }
+            localArrayList7.add("encrypt://" + ((String)paramList1.get(j)).substring(1));
+            localArrayList8.add(paramList1.get(j));
+            break label645;
           }
-          if ((localArrayList1.size() > 0) && (!bd.f())) {
-            com.estrongs.fs.impl.d.b.a().e(localArrayList2);
+          if ((localArrayList1.size() > 0) && (!bk.f())) {
+            com.estrongs.fs.impl.f.c.a().e(localArrayList2);
           }
-          if ((localArrayList3.size() > 0) && (!bd.f())) {
-            com.estrongs.fs.impl.a.b.a().e(localArrayList4);
+          if ((localArrayList3.size() > 0) && (!bk.f())) {
+            com.estrongs.fs.impl.a.d.a().e(localArrayList4);
+          }
+          if ((localArrayList5.size() > 0) && (!bk.f())) {
+            com.estrongs.fs.impl.d.c.a().e(localArrayList6);
+          }
+          if ((localArrayList7.size() > 0) && (!bk.f())) {
+            com.estrongs.fs.impl.d.c.a().e(localArrayList8);
           }
         }
         b(paramList1, paramList2, paramInt);
@@ -1032,7 +1053,7 @@ public class b
       {
         return;
       }
-      label361:
+      label645:
       j += 1;
     }
   }
@@ -1063,7 +1084,7 @@ public class b
   {
     try
     {
-      paramString = a.a(am.bE(paramString));
+      paramString = a.a(ap.bV(paramString));
       i(paramString);
       a(paramString, 0, null, null);
       return;
@@ -1076,8 +1097,8 @@ public class b
     ArrayList localArrayList = new ArrayList();
     localArrayList.add(paramString1);
     a(localArrayList, paramString2, -1);
-    if (FileExplorerActivity.J() != null) {
-      FileExplorerActivity.J().b(localArrayList);
+    if (FileExplorerActivity.X() != null) {
+      FileExplorerActivity.X().b(localArrayList);
     }
   }
   
@@ -1101,31 +1122,31 @@ public class b
         {
           return;
           d(paramList, paramInt);
-          if (!am.aB(((h)paramList.get(0)).getPath())) {
+          if (!ap.aL(((h)paramList.get(0)).getPath())) {
             break;
           }
           localArrayList = new ArrayList(paramList.size());
-          str1 = a.d(am.k());
-          str2 = a.d(r.a().g());
+          str1 = a.d(ap.k());
+          str2 = a.d(u.a().g());
         } while (str2 == null);
         paramList = paramList.iterator();
         while (paramList.hasNext())
         {
           localh = (h)paramList.next();
-          localArrayList.add(new o(localh.getAbsolutePath().replaceFirst(str2, str1), localh.getFileType().b()));
+          localArrayList.add(new z(localh.getAbsolutePath().replaceFirst(str2, str1), localh.getFileType().b()));
         }
         d(localArrayList, paramInt);
         return;
-      } while (!am.az(((h)paramList.get(0)).getPath()));
+      } while (!ap.aJ(((h)paramList.get(0)).getPath()));
       localArrayList = new ArrayList(paramList.size());
-      str1 = a.d(am.k());
-      str2 = a.d(r.a().g());
+      str1 = a.d(ap.k());
+      str2 = a.d(u.a().g());
     } while (str2 == null);
     paramList = paramList.iterator();
     while (paramList.hasNext())
     {
       localh = (h)paramList.next();
-      localArrayList.add(new o(localh.getAbsolutePath().replaceFirst(str1, str2), localh.getFileType().b()));
+      localArrayList.add(new z(localh.getAbsolutePath().replaceFirst(str1, str2), localh.getFileType().b()));
     }
     d(localArrayList, paramInt);
   }
@@ -1151,7 +1172,7 @@ public class b
   {
     try
     {
-      paramString = am.bE(paramString);
+      paramString = ap.bV(paramString);
       i(paramString);
       a(paramString, 0, null, null);
       return;
@@ -1168,7 +1189,7 @@ public class b
       return;
       e(paramList, paramInt);
       Object localObject;
-      if ((am.as(((h)paramList.get(0)).getPath())) && (am.aM(((h)paramList.get(0)).getPath())))
+      if ((ap.aC(((h)paramList.get(0)).getPath())) && (ap.aW(((h)paramList.get(0)).getPath())))
       {
         localArrayList = new ArrayList();
         localObject = paramList.iterator();
@@ -1176,7 +1197,7 @@ public class b
         {
           h localh = (h)((Iterator)localObject).next();
           if (localh.getPath() != null) {
-            localArrayList.add(new o(localh.getPath().replaceFirst("SP://", "pcs://")));
+            localArrayList.add(new z(localh.getPath().replaceFirst("SP://", "pcs://")));
           }
         }
         e(localArrayList, paramInt);
@@ -1190,8 +1211,8 @@ public class b
           localArrayList.add(((h)localObject).getPath());
         }
       }
-    } while (FileExplorerActivity.J() == null);
-    FileExplorerActivity.J().b(localArrayList);
+    } while (FileExplorerActivity.X() == null);
+    FileExplorerActivity.X().b(localArrayList);
   }
   
   public void d()
@@ -1201,7 +1222,7 @@ public class b
   
   public void d(String paramString)
   {
-    i(am.bE(paramString));
+    i(ap.bV(paramString));
   }
   
   public void d(List<h> paramList)
@@ -1219,13 +1240,13 @@ public class b
   
   public boolean e(String paramString)
   {
-    paramString = am.bE(paramString);
+    paramString = ap.bV(paramString);
     return !d.contains(a.d(paramString));
   }
   
   public d f(String paramString)
   {
-    paramString = am.bE(paramString);
+    paramString = ap.bV(paramString);
     List localList = a.c(paramString);
     if (localList.size() == 0) {
       return null;
@@ -1259,7 +1280,7 @@ public class b
   
   public String g(String paramString)
   {
-    String str = am.bE(paramString);
+    String str = ap.bV(paramString);
     List localList = a.c(str);
     if (localList.size() == 0) {
       return str;
@@ -1296,7 +1317,7 @@ public class b
   
   public h h(String paramString)
   {
-    if ((paramString == null) || (!am.bO(paramString))) {}
+    if ((paramString == null) || (!ap.cf(paramString))) {}
     d locald;
     int j;
     do
@@ -1304,7 +1325,7 @@ public class b
       do
       {
         return null;
-        paramString = am.bE(paramString);
+        paramString = ap.bV(paramString);
         locald = f(a.a(paramString));
       } while (locald == null);
       j = a(locald.a(), paramString);

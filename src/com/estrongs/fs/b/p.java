@@ -2,14 +2,15 @@ package com.estrongs.fs.b;
 
 import android.app.Activity;
 import com.estrongs.a.q;
-import com.estrongs.android.pop.utils.aj;
-import com.estrongs.android.pop.utils.cd;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.pop.utils.ao;
+import com.estrongs.android.pop.utils.cm;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bk;
 import com.estrongs.fs.h;
 import com.estrongs.fs.impl.media.MediaStoreInsertException;
-import com.estrongs.fs.impl.media.d;
-import com.estrongs.fs.m;
+import com.estrongs.fs.impl.media.e;
+import com.estrongs.fs.impl.n.d;
+import com.estrongs.fs.w;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -84,7 +85,7 @@ public class p
     else
     {
       k |= com.estrongs.fs.a.a.g(paramFile.getAbsolutePath());
-      if (!bd.f()) {
+      if (!bk.f()) {
         break label88;
       }
       paramList4.add(paramFile.getAbsolutePath());
@@ -93,17 +94,17 @@ public class p
     do
     {
       return;
-      if (com.estrongs.fs.impl.media.a.a(paramFile.getAbsolutePath()))
+      if (com.estrongs.fs.impl.media.b.a(paramFile.getAbsolutePath()))
       {
         paramList1.add(paramFile.getAbsolutePath());
         return;
       }
-      if (com.estrongs.fs.impl.media.a.b(paramFile.getAbsolutePath()))
+      if (com.estrongs.fs.impl.media.b.b(paramFile.getAbsolutePath()))
       {
         paramList2.add(paramFile.getAbsolutePath());
         return;
       }
-    } while (!com.estrongs.fs.impl.media.a.c(paramFile.getAbsolutePath()));
+    } while (!com.estrongs.fs.impl.media.b.c(paramFile.getAbsolutePath()));
     paramList3.add(paramFile.getAbsolutePath());
   }
   
@@ -120,54 +121,54 @@ public class p
   protected void postTask()
   {
     super.postTask();
-    if ((d != null) && (d.size() >= 1) && (am.bl(((h)d.get(0)).getAbsolutePath()))) {
+    if ((d != null) && (d.size() >= 1) && (ap.bC(((h)d.get(0)).getAbsolutePath()))) {
       try
       {
-        if (bd.f())
+        if (bk.f())
         {
           if (i.size() > 0) {
-            d.b(i);
+            e.b(i);
           }
           if (j.size() > 0) {
-            d.a(j);
+            e.a(j);
           }
-          d.a(h, null);
+          e.a(h, null);
           return;
         }
         if (i.size() > 0) {
-          com.estrongs.fs.impl.k.b.c().c(i);
+          com.estrongs.fs.impl.p.c.b().c(i);
         }
         if (j.size() > 0) {
-          com.estrongs.fs.impl.k.b.c().b(j);
+          com.estrongs.fs.impl.p.c.b().b(j);
         }
         if (i.size() > 0) {
-          com.estrongs.fs.impl.i.b.c().c(i);
+          d.b().c(i);
         }
         if (j.size() > 0) {
-          com.estrongs.fs.impl.i.b.c().b(j);
+          d.b().b(j);
         }
         if (i.size() > 0) {
-          com.estrongs.fs.impl.q.b.c().c(i);
+          com.estrongs.fs.impl.v.c.b().c(i);
         }
         if (j.size() > 0) {
-          com.estrongs.fs.impl.q.b.c().b(j);
+          com.estrongs.fs.impl.v.c.b().b(j);
         }
         if (e.size() > 0) {
-          com.estrongs.fs.impl.k.b.c().a(e);
+          com.estrongs.fs.impl.p.c.b().a(e);
         }
         if (f.size() > 0) {
-          com.estrongs.fs.impl.i.b.c().a(f);
+          d.b().a(f);
         }
         if (g.size() > 0)
         {
-          com.estrongs.fs.impl.q.b.c().a(g);
+          com.estrongs.fs.impl.v.c.b().a(g);
           return;
         }
       }
       catch (MediaStoreInsertException localMediaStoreInsertException)
       {
         localMediaStoreInsertException.printStackTrace();
-        cd.b();
+        cm.b();
       }
     }
   }
@@ -187,7 +188,7 @@ public class p
         {
           if ((d != null) && (d.size() >= 1))
           {
-            if (am.bl(((h)d.get(0)).getAbsolutePath()))
+            if (ap.bC(((h)d.get(0)).getAbsolutePath()))
             {
               e = new ArrayList();
               f = new ArrayList();
@@ -200,7 +201,7 @@ public class p
               {
                 localObject3 = (h)localIterator.next();
                 str2 = ((h)localObject3).getAbsolutePath();
-                localObject4 = am.e(str2) + "/" + ((h)localObject3).getExtra("item_rename_new_name");
+                localObject4 = ap.e(str2) + "/" + ((h)localObject3).getExtra("item_rename_new_name");
                 localObject1 = str2;
                 if (new File((String)localObject4).isDirectory())
                 {
@@ -247,7 +248,7 @@ public class p
             if ((d == null) || (d.size() < 1)) {
               continue;
             }
-            if (am.bl(((h)d.get(0)).getAbsolutePath()))
+            if (ap.bC(((h)d.get(0)).getAbsolutePath()))
             {
               e = new ArrayList();
               f = new ArrayList();
@@ -260,7 +261,7 @@ public class p
               {
                 localObject3 = (h)localIterator.next();
                 str2 = ((h)localObject3).getAbsolutePath();
-                localObject4 = am.e(str2) + "/" + ((h)localObject3).getExtra("item_rename_new_name");
+                localObject4 = ap.e(str2) + "/" + ((h)localObject3).getExtra("item_rename_new_name");
                 localObject1 = str2;
                 if (new File((String)localObject4).isDirectory())
                 {
@@ -292,13 +293,13 @@ public class p
           localObject1 = (h)a.get(m);
           processData.a = ((h)localObject1).getName();
           onProgress(processData);
-          bool = aj.a(c, (h)localObject1, (String)((h)localObject1).getExtra("item_rename_new_name"), b, false, false);
+          bool = ao.a(c, (h)localObject1, (String)((h)localObject1).getExtra("item_rename_new_name"), b, false, false);
           if (!bool)
           {
             if ((d == null) || (d.size() < 1)) {
               continue;
             }
-            if (am.bl(((h)d.get(0)).getAbsolutePath()))
+            if (ap.bC(((h)d.get(0)).getAbsolutePath()))
             {
               e = new ArrayList();
               f = new ArrayList();
@@ -311,7 +312,7 @@ public class p
               {
                 localObject3 = (h)localIterator.next();
                 str2 = ((h)localObject3).getAbsolutePath();
-                localObject4 = am.e(str2) + "/" + ((h)localObject3).getExtra("item_rename_new_name");
+                localObject4 = ap.e(str2) + "/" + ((h)localObject3).getExtra("item_rename_new_name");
                 localObject1 = str2;
                 if (new File((String)localObject4).isDirectory())
                 {
@@ -351,7 +352,7 @@ public class p
         if ((d == null) || (d.size() < 1)) {
           break label2649;
         }
-        if (am.bl(((h)d.get(0)).getAbsolutePath()))
+        if (ap.bC(((h)d.get(0)).getAbsolutePath()))
         {
           e = new ArrayList();
           f = new ArrayList();
@@ -364,7 +365,7 @@ public class p
           {
             localObject3 = (h)localIterator.next();
             str2 = ((h)localObject3).getAbsolutePath();
-            localObject4 = am.e(str2) + "/" + ((h)localObject3).getExtra("item_rename_new_name");
+            localObject4 = ap.e(str2) + "/" + ((h)localObject3).getExtra("item_rename_new_name");
             localObject1 = str2;
             if (new File((String)localObject4).isDirectory())
             {
@@ -399,7 +400,7 @@ public class p
         if ((d == null) || (d.size() < 1)) {
           break label2644;
         }
-        if (!am.bl(((h)d.get(0)).getAbsolutePath())) {
+        if (!ap.bC(((h)d.get(0)).getAbsolutePath())) {
           continue;
         }
         e = new ArrayList();
@@ -414,7 +415,7 @@ public class p
         }
         localObject3 = (h)localIterator.next();
         str2 = ((h)localObject3).getAbsolutePath();
-        localObject4 = am.e(str2) + "/" + ((h)localObject3).getExtra("item_rename_new_name");
+        localObject4 = ap.e(str2) + "/" + ((h)localObject3).getExtra("item_rename_new_name");
         str1 = str2;
         if (!new File((String)localObject4).isDirectory()) {
           continue;
@@ -448,7 +449,7 @@ public class p
         if ((d == null) || (d.size() < 1)) {
           continue;
         }
-        if (!am.bl(((h)d.get(0)).getAbsolutePath())) {
+        if (!ap.bC(((h)d.get(0)).getAbsolutePath())) {
           continue;
         }
         e = new ArrayList();
@@ -463,7 +464,7 @@ public class p
         }
         Object localObject4 = (h)((Iterator)localObject3).next();
         String str2 = ((h)localObject4).getAbsolutePath();
-        String str3 = am.e(str2) + "/" + ((h)localObject4).getExtra("item_rename_new_name");
+        String str3 = ap.e(str2) + "/" + ((h)localObject4).getExtra("item_rename_new_name");
         str1 = str2;
         if (!new File(str3).isDirectory()) {
           continue;

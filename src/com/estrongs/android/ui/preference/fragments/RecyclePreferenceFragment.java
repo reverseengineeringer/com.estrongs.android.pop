@@ -4,24 +4,24 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.esclasses.i;
+import com.estrongs.android.pop.esclasses.m;
 
 public class RecyclePreferenceFragment
-  extends i
+  extends m
 {
   @SuppressLint({"NewApi"})
   private void a()
   {
     CheckBoxPreference localCheckBoxPreference = (CheckBoxPreference)findPreference("enable_recycle");
-    localCheckBoxPreference.setChecked(ad.a(getActivity()).aD());
-    localCheckBoxPreference.setOnPreferenceChangeListener(new ba(this));
+    localCheckBoxPreference.setChecked(ad.a(getActivity()).aE());
+    localCheckBoxPreference.setOnPreferenceChangeListener(new bc(this));
   }
   
   @SuppressLint({"NewApi"})
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    addPreferencesFromResource(2131034132);
+    addPreferencesFromResource(2131034133);
     a();
   }
 }

@@ -39,7 +39,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->b(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/bk;->b(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -69,7 +69,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/ui/b/n;->a:Landroid/app/Activity;
 
-    const v2, 0x7f0b0223
+    const v2, 0x7f080414
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -77,7 +77,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
     :cond_0
     :goto_0
@@ -118,11 +118,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->ae()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->af()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v1}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
@@ -136,12 +136,12 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/pop/app/DownloaderActivity;->a(Landroid/app/Activity;Lcom/estrongs/android/ui/pcs/n;Landroid/content/DialogInterface$OnCancelListener;)V
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/pop/app/DownloaderActivity;->a(Landroid/app/Activity;Lcom/estrongs/android/ui/pcs/q;Landroid/content/DialogInterface$OnCancelListener;)V
 
     goto :goto_0
 
     :cond_2
-    new-instance v2, Lcom/estrongs/fs/b/ap;
+    new-instance v2, Lcom/estrongs/fs/b/ar;
 
     iget-object v3, p0, Lcom/estrongs/android/ui/b/n;->a:Landroid/app/Activity;
 
@@ -163,9 +163,9 @@
 
     move-result-object v4
 
-    invoke-direct {v2, v3, v1, v0, v4}, Lcom/estrongs/fs/b/ap;-><init>(Lcom/estrongs/fs/d;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v1, v0, v4}, Lcom/estrongs/fs/b/ar;-><init>(Lcom/estrongs/fs/d;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v2}, Lcom/estrongs/fs/b/ap;->execute()V
+    invoke-virtual {v2}, Lcom/estrongs/fs/b/ar;->execute()V
 
     goto :goto_0
 .end method

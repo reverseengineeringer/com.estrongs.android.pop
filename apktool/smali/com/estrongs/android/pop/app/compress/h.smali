@@ -6,18 +6,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/widget/g;
+.field final synthetic a:Lcom/estrongs/android/widget/f;
 
 .field final synthetic b:Lcom/estrongs/android/pop/app/compress/f;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/compress/f;Lcom/estrongs/android/widget/g;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/compress/f;Lcom/estrongs/android/widget/f;)V
     .locals 0
 
     iput-object p1, p0, Lcom/estrongs/android/pop/app/compress/h;->b:Lcom/estrongs/android/pop/app/compress/f;
 
-    iput-object p2, p0, Lcom/estrongs/android/pop/app/compress/h;->a:Lcom/estrongs/android/widget/g;
+    iput-object p2, p0, Lcom/estrongs/android/pop/app/compress/h;->a:Lcom/estrongs/android/widget/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,9 +37,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/compress/h;->a:Lcom/estrongs/android/widget/g;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/compress/h;->a:Lcom/estrongs/android/widget/f;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/widget/g;->e()Lcom/estrongs/fs/h;
+    invoke-virtual {v1}, Lcom/estrongs/android/widget/f;->e()Lcom/estrongs/fs/h;
 
     move-result-object v1
 
@@ -49,9 +49,9 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/h;->a:Lcom/estrongs/android/widget/g;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/h;->a:Lcom/estrongs/android/widget/f;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/g;->k()V
+    invoke-virtual {v0}, Lcom/estrongs/android/widget/f;->k()V
 
     return-void
 .end method

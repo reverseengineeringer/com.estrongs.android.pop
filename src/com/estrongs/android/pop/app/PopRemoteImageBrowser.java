@@ -19,14 +19,14 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import com.estrongs.android.j.c;
 import com.estrongs.android.pop.ac;
 import com.estrongs.android.pop.app.imageviewer.ViewImage;
 import com.estrongs.android.pop.app.imageviewer.ViewImage21;
 import com.estrongs.android.pop.app.imageviewer.ao;
 import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.a;
-import com.estrongs.android.util.am;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.ap;
 import com.estrongs.fs.FileSystemException;
 import com.estrongs.fs.d;
 import java.io.IOException;
@@ -47,8 +47,8 @@ public class PopRemoteImageBrowser
   private ImageView j;
   private DisplayMetrics k = new DisplayMetrics();
   private float l;
-  private a m = null;
-  private View.OnClickListener n = new ik(this);
+  private c m = null;
+  private View.OnClickListener n = new ja(this);
   private final Handler o = new Handler();
   private BitmapDrawable p = null;
   private BitmapDrawable q = null;
@@ -106,14 +106,14 @@ public class PopRemoteImageBrowser
   
   private void b()
   {
-    io.a(this);
-    new Thread(new il(this)).start();
+    je.a(this);
+    new Thread(new jb(this)).start();
   }
   
   private void c()
   {
-    io.a(this);
-    new Thread(new im(this)).start();
+    je.a(this);
+    new Thread(new jc(this)).start();
   }
   
   private void d()
@@ -125,7 +125,7 @@ public class PopRemoteImageBrowser
     localObject = new BitmapDrawable(getResources(), (Bitmap)localObject);
     p = q;
     q = ((BitmapDrawable)localObject);
-    o.post(new in(this));
+    o.post(new jd(this));
   }
   
   public Bitmap a()
@@ -142,8 +142,8 @@ public class PopRemoteImageBrowser
     inJustDecodeBounds = true;
     BitmapFactory.decodeStream(localInputStream, null, (BitmapFactory.Options)localObject);
     boolean bool1 = localInputStream.markSupported();
-    boolean bool2 = am.J(c[i1]);
-    boolean bool3 = am.aV(c[i1]);
+    boolean bool2 = ap.L(c[i1]);
+    boolean bool3 = ap.bg(c[i1]);
     if ((bool1) && (!bool2) && (!bool3)) {
       localInputStream.mark(0);
     }
@@ -212,77 +212,79 @@ public class PopRemoteImageBrowser
   {
     super.onCreate(paramBundle);
     a = d.a(this);
-    requestWindowFeature(1);
     getWindowManager().getDefaultDisplay().getMetrics(k);
     l = k.density;
-    m = a.a(this, false, "PopRemoteImageBrowser");
+    m = c.a(this);
     getWindow().setFlags(2000, 1024);
-    setContentView(2130903238);
-    f = ((ImageView)findViewById(2131361911));
-    Object localObject1 = getIntent().getData();
-    Object localObject2;
-    if (localObject1 == null)
-    {
-      localObject2 = getIntent().getExtras();
-      paramBundle = (Bundle)localObject1;
-      if (localObject2 != null)
-      {
-        d = ((Bundle)localObject2).getString("FILE_PATH");
-        paramBundle = (Bundle)localObject1;
-        if (d != null) {
-          paramBundle = Uri.parse(d);
-        }
-      }
-      if (paramBundle != null) {
-        break label577;
-      }
-      paramBundle = Uri.parse("pic://");
-    }
-    label169:
-    label284:
-    label296:
-    label577:
+    setContentView(2130903405);
+    m = c.a(this);
+    if (!getIntent().getBooleanExtra("islocalopen", false)) {}
+    label621:
     for (;;)
     {
-      localObject1 = paramBundle.getScheme();
-      if (localObject1 == null)
+      try
       {
-        localObject1 = "";
-        if ((!am.bb(paramBundle.toString())) && (!((String)localObject1).equals("file")) && (!am.bl(paramBundle.toString())) && (!((String)localObject1).equals("pic")) && (!((String)localObject1).equals("search"))) {
-          break label296;
+        m.d("act3");
+        m.a("act3", "image_browser");
+        f = ((ImageView)findViewById(2131624404));
+        localObject1 = getIntent().getData();
+        if (localObject1 == null)
+        {
+          localObject2 = getIntent().getExtras();
+          paramBundle = (Bundle)localObject1;
+          if (localObject2 != null)
+          {
+            d = ((Bundle)localObject2).getString("FILE_PATH");
+            paramBundle = (Bundle)localObject1;
+            if (d != null) {
+              paramBundle = Uri.parse(d);
+            }
+          }
+          if (paramBundle != null) {
+            break label621;
+          }
+          paramBundle = Uri.parse("pic://");
+          localObject1 = paramBundle.getScheme();
+          if (localObject1 != null) {
+            continue;
+          }
+          localObject1 = "";
+          if ((!ap.bm(paramBundle.toString())) && (!((String)localObject1).equals("file")) && (!ap.bC(paramBundle.toString())) && (!((String)localObject1).equals("pic")) && (!((String)localObject1).equals("search"))) {
+            continue;
+          }
+          localObject1 = getIntent();
+          ((Intent)localObject1).setFlags(0);
+          if (ac.a() >= 8) {
+            continue;
+          }
+          ((Intent)localObject1).setClass(this, ViewImage21.class);
+          ((Intent)localObject1).setData(paramBundle);
+          startActivity((Intent)localObject1);
+          finish();
         }
-        localObject1 = getIntent();
-        ((Intent)localObject1).setFlags(0);
-        if (ac.a() >= 8) {
-          break label284;
-        }
-        ((Intent)localObject1).setClass(this, ViewImage21.class);
       }
-      for (;;)
+      catch (Exception paramBundle)
       {
-        ((Intent)localObject1).setData(paramBundle);
-        startActivity((Intent)localObject1);
-        finish();
-        return;
+        paramBundle.printStackTrace();
+        continue;
         d = ((Uri)localObject1).toString();
         paramBundle = (Bundle)localObject1;
-        break;
-        localObject1 = ((String)localObject1).toLowerCase();
-        break label169;
+        continue;
+        Object localObject1 = ((String)localObject1).toLowerCase();
+        continue;
         ((Intent)localObject1).setClass(this, ViewImage.class);
-      }
-      i = ((ImageView)findViewById(2131362420));
-      j = ((ImageView)findViewById(2131362421));
-      i.setOnClickListener(n);
-      j.setOnClickListener(n);
-      localObject2 = new DisplayMetrics();
-      getWindowManager().getDefaultDisplay().getMetrics((DisplayMetrics)localObject2);
-      g = widthPixels;
-      h = (heightPixels - 80);
-      b = (am.e(d) + "/");
-      registerForContextMenu(f);
-      if (((String)localObject1).equals("content")) {
-        for (;;)
+        continue;
+        i = ((ImageView)findViewById(2131625032));
+        j = ((ImageView)findViewById(2131625033));
+        i.setOnClickListener(n);
+        j.setOnClickListener(n);
+        Object localObject2 = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics((DisplayMetrics)localObject2);
+        g = widthPixels;
+        h = (heightPixels - 80);
+        b = (ap.e(d) + "/");
+        registerForContextMenu(f);
+        if (((String)localObject1).equals("content"))
         {
           try
           {
@@ -295,25 +297,27 @@ public class PopRemoteImageBrowser
           }
           catch (Throwable paramBundle)
           {
-            ag.a(this, getString(2131427888) + " (" + paramBundle.getMessage() + ")", 1);
+            ak.a(this, getString(2131231758) + " (" + paramBundle.getMessage() + ")", 1);
             continue;
           }
-          findViewById(2131362694).setVisibility(8);
+          findViewById(2131625463).setVisibility(8);
           return;
           f.setImageURI(paramBundle);
-          if (f.getDrawable() == null) {
-            ag.a(this, getString(2131427888), 1);
+          if (f.getDrawable() != null) {
+            continue;
           }
+          ak.a(this, getString(2131231758), 1);
+          continue;
         }
+        b();
+        return;
       }
-      b();
-      return;
     }
   }
   
   public void onCreateContextMenu(ContextMenu paramContextMenu, View paramView, ContextMenu.ContextMenuInfo paramContextMenuInfo)
   {
-    paramContextMenu.add(getString(2131427889));
+    paramContextMenu.add(getString(2131232334));
   }
   
   public void onDestroy()
@@ -324,13 +328,11 @@ public class PopRemoteImageBrowser
   protected void onPause()
   {
     super.onPause();
-    m.c();
   }
   
   protected void onResume()
   {
     super.onResume();
-    m.b();
   }
 }
 

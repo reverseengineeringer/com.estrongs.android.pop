@@ -42,7 +42,7 @@
 
     iget-object v0, v0, Lcom/estrongs/fs/b/w;->b:Ljava/text/Collator;
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -50,7 +50,7 @@
 
     move-result-object v1
 
-    invoke-static {p2}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 

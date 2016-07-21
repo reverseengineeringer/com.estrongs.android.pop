@@ -59,7 +59,7 @@
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/estrongs/android/ui/drag/k;->c_()V
+    invoke-interface {v0}, Lcom/estrongs/android/ui/drag/k;->k_()V
 
     iget-object v0, p0, Lcom/estrongs/android/ui/drag/i;->a:Lcom/estrongs/android/ui/drag/d;
 

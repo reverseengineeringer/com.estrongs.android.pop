@@ -1,43 +1,88 @@
 package com.estrongs.android.ui.dialog;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.DialogInterface.OnClickListener;
+import android.content.DialogInterface.OnDismissListener;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ExpandableListView;
-import android.widget.ExpandableListView.OnGroupClickListener;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.b;
-import com.estrongs.android.pop.z;
-import com.estrongs.android.widget.g;
+import com.estrongs.android.pop.esclasses.k;
+import com.estrongs.android.ui.adapter.g;
+import com.estrongs.android.ui.view.NaviListView;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.ap;
+import java.util.List;
+import java.util.Map;
 
-class da
-  implements ExpandableListView.OnGroupClickListener
+public class da
 {
-  da(cy paramcy) {}
+  g a;
+  private ci b;
+  private Context c;
   
-  public boolean onGroupClick(ExpandableListView paramExpandableListView, View paramView, int paramInt, long paramLong)
+  public da(Context paramContext, Map<String, String> paramMap, Map<String, Integer> paramMap1)
   {
-    if (paramInt == 0)
-    {
-      paramExpandableListView = new db(this, ad.a(cy.a(a)).p());
-      if (!z.n) {
-        break label140;
-      }
-    }
-    label140:
-    for (paramInt = -2;; paramInt = -1)
-    {
-      paramExpandableListView = new g((Activity)cy.a(a), b.b(), paramExpandableListView, paramInt);
-      paramExpandableListView.a(false);
-      paramExpandableListView.b(true);
-      paramExpandableListView.c(cy.a(a).getString(2131427340), (DialogInterface.OnClickListener)null);
-      paramExpandableListView.a(paramInt);
-      paramExpandableListView.a(cy.a(a).getString(2131427715));
-      paramExpandableListView.b(cy.a(a).getString(2131427339), new dc(this, paramExpandableListView));
-      paramExpandableListView.j();
+    c = paramContext;
+    a(paramMap, paramMap1);
+  }
+  
+  private void a(Map<String, String> paramMap, Map<String, Integer> paramMap1)
+  {
+    View localView = k.a(c).inflate(2130903186, null);
+    NaviListView localNaviListView = (NaviListView)localView.findViewById(2131624232);
+    db localdb = new db(this, localNaviListView);
+    a = new g(c, localdb, paramMap, paramMap1);
+    localNaviListView.setAdapter(a);
+    localNaviListView.setItemsCanFocus(true);
+    localNaviListView.setOnGroupClickListener(new dc(this));
+    b = new cv(c).a(localView).a(2131231310).b();
+  }
+  
+  public void a()
+  {
+    b.show();
+  }
+  
+  public void a(DialogInterface.OnDismissListener paramOnDismissListener)
+  {
+    b.setOnDismissListener(paramOnDismissListener);
+  }
+  
+  public boolean a(String paramString)
+  {
+    if (paramString == null) {
       return false;
     }
+    String str = paramString;
+    if (!ap.v(paramString))
+    {
+      str = paramString;
+      if (!paramString.endsWith("/"))
+      {
+        str = paramString;
+        if (!paramString.endsWith("#")) {
+          str = paramString + "/";
+        }
+      }
+    }
+    paramString = ad.a(c).N();
+    if (paramString.size() >= 12)
+    {
+      ak.a(c, 2131232453, 1);
+      return false;
+    }
+    if (paramString.contains(str))
+    {
+      ak.a(c, 2131231783, 1);
+      return false;
+    }
+    paramString.add(str);
+    ad.a(c).f(paramString);
+    return true;
+  }
+  
+  public void b()
+  {
+    b.dismiss();
   }
 }
 

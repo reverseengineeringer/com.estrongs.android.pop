@@ -1,11 +1,12 @@
 package com.estrongs.android.appinfo;
 
-public class r
+import com.estrongs.fs.h;
+
+public abstract interface r
 {
-  public String a;
-  public int b;
+  public abstract void a();
   
-  public r(AppFolderInfoManager paramAppFolderInfoManager) {}
+  public abstract void a(h paramh);
 }
 
 /* Location:

@@ -5,9 +5,9 @@
 # instance fields
 .field private a:I
 
-.field private b:Lcom/estrongs/android/pop/app/editor/aq;
+.field private b:Lcom/estrongs/android/pop/app/editor/ai;
 
-.field private c:Lcom/estrongs/android/pop/app/editor/ap;
+.field private c:Lcom/estrongs/android/pop/app/editor/ah;
 
 .field private d:F
 
@@ -28,9 +28,9 @@
 
     iput v0, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->a:I
 
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->b:Lcom/estrongs/android/pop/app/editor/aq;
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->b:Lcom/estrongs/android/pop/app/editor/ai;
 
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->c:Lcom/estrongs/android/pop/app/editor/ap;
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->c:Lcom/estrongs/android/pop/app/editor/ah;
 
     const/high16 v0, 0x3f800000    # 1.0f
 
@@ -58,9 +58,9 @@
 
     iput v0, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->a:I
 
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->b:Lcom/estrongs/android/pop/app/editor/aq;
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->b:Lcom/estrongs/android/pop/app/editor/ai;
 
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->c:Lcom/estrongs/android/pop/app/editor/ap;
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->c:Lcom/estrongs/android/pop/app/editor/ah;
 
     const/high16 v0, 0x3f800000    # 1.0f
 
@@ -88,9 +88,9 @@
 
     iput v0, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->a:I
 
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->b:Lcom/estrongs/android/pop/app/editor/aq;
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->b:Lcom/estrongs/android/pop/app/editor/ai;
 
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->c:Lcom/estrongs/android/pop/app/editor/ap;
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->c:Lcom/estrongs/android/pop/app/editor/ah;
 
     const/high16 v0, 0x3f800000    # 1.0f
 
@@ -119,15 +119,15 @@
     return-void
 .end method
 
-.method public a(Lcom/estrongs/android/pop/app/editor/ap;)V
-    .locals 0
+.method public getIncludeFontPadding()Z
+    .locals 1
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->c:Lcom/estrongs/android/pop/app/editor/ap;
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->f:Z
 
-    return-void
+    return v0
 .end method
 
-.method public b()F
+.method public getLineSpacingAdd()F
     .locals 1
 
     iget v0, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->e:F
@@ -135,18 +135,10 @@
     return v0
 .end method
 
-.method public c()F
+.method public getLineSpacingMult()F
     .locals 1
 
     iget v0, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->d:F
-
-    return v0
-.end method
-
-.method public getIncludeFontPadding()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->f:Z
 
     return v0
 .end method
@@ -168,15 +160,15 @@
 
     iput v0, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->a:I
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->c:Lcom/estrongs/android/pop/app/editor/ap;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->c:Lcom/estrongs/android/pop/app/editor/ah;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->c:Lcom/estrongs/android/pop/app/editor/ap;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->c:Lcom/estrongs/android/pop/app/editor/ah;
 
     iget v1, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->a:I
 
-    invoke-interface {v0, v1}, Lcom/estrongs/android/pop/app/editor/ap;->a(I)V
+    invoke-interface {v0, v1}, Lcom/estrongs/android/pop/app/editor/ah;->a(I)V
 
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/TextView;->onDraw(Landroid/graphics/Canvas;)V
@@ -202,6 +194,22 @@
     iput p2, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->d:F
 
     invoke-super {p0, p1, p2}, Landroid/widget/TextView;->setLineSpacing(FF)V
+
+    return-void
+.end method
+
+.method public setOnPreDrawListener(Lcom/estrongs/android/pop/app/editor/ah;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->c:Lcom/estrongs/android/pop/app/editor/ah;
+
+    return-void
+.end method
+
+.method public setOnTextChangedListener(Lcom/estrongs/android/pop/app/editor/ai;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->b:Lcom/estrongs/android/pop/app/editor/ai;
 
     return-void
 .end method

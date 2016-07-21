@@ -1,70 +1,93 @@
 package com.estrongs.fs.impl.b;
 
+import com.estrongs.fs.impl.local.f;
+import java.io.File;
+
 public class g
+  extends f
 {
-  private boolean a = false;
+  private String a;
   private String b;
   private String c;
-  private String d;
-  private String e;
-  private long f;
-  private long g;
-  private String h;
-  private boolean i = false;
+  private boolean d = false;
+  private String e = null;
+  private String f = null;
+  private String g = null;
+  private String h = null;
   
-  public g(String paramString1, String paramString2, String paramString3, String paramString4, String paramString5, long paramLong1, long paramLong2, String paramString6, boolean paramBoolean)
+  public g(File paramFile)
   {
-    b = paramString1;
-    c = paramString3;
-    d = paramString4;
-    e = paramString5;
-    f = paramLong1;
-    g = paramLong2;
-    h = paramString6;
-    i = paramBoolean;
+    super(paramFile);
   }
   
   public String a()
   {
-    return b;
+    return c;
   }
   
-  public String b()
+  public void a(String paramString)
   {
-    return c;
+    b = paramString;
+  }
+  
+  public void a(boolean paramBoolean)
+  {
+    d = paramBoolean;
+  }
+  
+  public void b(String paramString)
+  {
+    c = paramString;
+  }
+  
+  public boolean b()
+  {
+    return d;
   }
   
   public String c()
   {
-    if ((d != null) && (!"".equals(d))) {
-      return c + " (" + d + ")";
-    }
-    return b();
+    return e;
+  }
+  
+  public void c(String paramString)
+  {
+    a = paramString;
   }
   
   public String d()
   {
-    return e;
-  }
-  
-  public long e()
-  {
     return f;
   }
   
-  public long f()
+  public void d(String paramString)
+  {
+    e = paramString;
+  }
+  
+  public String e()
   {
     return g;
   }
   
-  public String g()
+  public void e(String paramString)
+  {
+    f = paramString;
+  }
+  
+  public String f()
   {
     return h;
   }
   
-  public boolean h()
+  public void f(String paramString)
   {
-    return i;
+    g = paramString;
+  }
+  
+  public void g(String paramString)
+  {
+    h = paramString;
   }
 }
 

@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/ui/pcs/n;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/at;
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Lcom/estrongs/android/pop/app/at;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/at;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/at;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/au;->a:Lcom/estrongs/android/pop/app/at;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/au;->b:Lcom/estrongs/android/pop/app/at;
+
+    iput-object p2, p0, Lcom/estrongs/android/pop/app/au;->a:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,33 +26,46 @@
 
 
 # virtual methods
-.method public a(ZLjava/lang/String;Ljava/lang/String;)V
-    .locals 3
+.method public onClick(Landroid/view/View;)V
+    .locals 2
 
-    if-eqz p1, :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/au;->b:Lcom/estrongs/android/pop/app/at;
 
-    invoke-static {p3}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/at;->a:Lcom/estrongs/android/pop/app/DocumentExtModifyList;
 
-    move-result v0
+    invoke-static {v0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
 
-    if-nez v0, :cond_0
+    move-result-object v0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/au;->a:Lcom/estrongs/android/pop/app/at;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/au;->a:Ljava/lang/String;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/at;->b:Lcom/estrongs/android/pop/app/DownloaderActivity;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/ad;->N(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/au;->a:Lcom/estrongs/android/pop/app/at;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/au;->b:Lcom/estrongs/android/pop/app/at;
 
-    iget-object v1, v1, Lcom/estrongs/android/pop/app/at;->b:Lcom/estrongs/android/pop/app/DownloaderActivity;
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/at;->a:Lcom/estrongs/android/pop/app/DocumentExtModifyList;
 
-    invoke-static {v1}, Lcom/estrongs/android/pop/app/DownloaderActivity;->a(Lcom/estrongs/android/pop/app/DownloaderActivity;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->a(Lcom/estrongs/android/pop/app/DocumentExtModifyList;)Lcom/estrongs/android/pop/app/at;
 
-    move-result-object v1
+    move-result-object v0
 
-    const/4 v2, 0x1
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/at;->a()Ljava/util/List;
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/pop/app/DownloaderActivity;->a(Landroid/app/Activity;Ljava/lang/String;Z)V
+    move-result-object v0
 
-    :cond_0
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/au;->a:Ljava/lang/String;
+
+    invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/au;->b:Lcom/estrongs/android/pop/app/at;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/at;->a:Lcom/estrongs/android/pop/app/DocumentExtModifyList;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->a(Lcom/estrongs/android/pop/app/DocumentExtModifyList;)Lcom/estrongs/android/pop/app/at;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/at;->notifyDataSetChanged()V
+
     return-void
 .end method

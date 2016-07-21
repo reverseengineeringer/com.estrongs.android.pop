@@ -8,13 +8,21 @@ import java.util.List;
 class aj
   implements View.OnClickListener
 {
-  aj(ai paramai, String paramString) {}
+  aj(DefaultWindowSetting paramDefaultWindowSetting) {}
   
   public void onClick(View paramView)
   {
-    ai.a(b).remove(a);
-    ad.a(b.a).f(ai.a(b));
-    DefaultWindowSetting.a(b.a).notifyDataSetChanged();
+    paramView = DefaultWindowSetting.a(a).a();
+    int i = 0;
+    while (i < paramView.size()) {
+      if ((((String)paramView.get(i)).equals("#home_page#")) || (((String)paramView.get(i)).equals("#home#"))) {
+        i += 1;
+      } else {
+        paramView.remove(i);
+      }
+    }
+    ad.a(a).f(DefaultWindowSetting.a(a).a());
+    DefaultWindowSetting.a(a).notifyDataSetChanged();
   }
 }
 

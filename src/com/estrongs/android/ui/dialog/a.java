@@ -6,7 +6,7 @@ import android.view.View;
 public class a
 {
   protected com.estrongs.fs.impl.adb.a a = null;
-  ct b;
+  cv b;
   private e c = null;
   private Activity d;
   
@@ -15,12 +15,12 @@ public class a
     d = paramActivity;
     a = parama;
     c = new e(this, d);
-    paramActivity = c.aq();
-    b = new ct(paramActivity.getContext()).a(2131427577);
+    paramActivity = c.aE();
+    b = new cv(paramActivity.getContext()).a(2131232219);
     b.a(paramActivity);
-    b.f(2131428733, new b(this));
-    b.e(2131427608, new c(this));
-    b.d(2131427340, new d(this));
+    b.f(2131230861, new b(this));
+    b.e(2131232247, new c(this));
+    b.d(2131231265, new d(this));
   }
   
   public void a()

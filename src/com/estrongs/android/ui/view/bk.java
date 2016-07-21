@@ -1,36 +1,17 @@
 package com.estrongs.android.ui.view;
 
-import android.os.Handler;
-import android.os.Message;
-import com.estrongs.android.ui.pcs.aj;
-import com.estrongs.android.util.bd;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 class bk
-  extends Thread
+  implements View.OnClickListener
 {
-  bk(bj parambj, String paramString) {}
+  bk(IndicatorView paramIndicatorView) {}
   
-  public void run()
+  public void onClick(View paramView)
   {
-    PcsThirdPartOAuth.a(b.a, "auth_code:" + bd.c(a));
-    Object localObject = b.a;
-    String str = aj.a(b.a, PcsThirdPartOAuth.e(b.a), PcsThirdPartOAuth.f(b.a), PcsThirdPartOAuth.g(b.a), PcsThirdPartOAuth.h(b.a));
-    a = str;
-    int i;
-    if (str != null)
-    {
-      i = 1;
-      if (i != 0) {
-        break label146;
-      }
-    }
-    label146:
-    for (localObject = PcsThirdPartOAuth.d(b.a).obtainMessage(4);; localObject = PcsThirdPartOAuth.d(b.a).obtainMessage(6))
-    {
-      PcsThirdPartOAuth.d(b.a).sendMessage((Message)localObject);
-      return;
-      i = 0;
-      break;
+    if (a.isFocused()) {
+      a.c(IndicatorView.e(a));
     }
   }
 }

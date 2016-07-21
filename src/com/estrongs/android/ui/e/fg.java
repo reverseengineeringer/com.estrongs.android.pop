@@ -1,39 +1,18 @@
 package com.estrongs.android.ui.e;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.utils.aj;
-import com.estrongs.android.util.bd;
-import com.estrongs.fs.h;
-import com.estrongs.fs.m;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import com.estrongs.android.view.a.b;
 
 class fg
-  implements MenuItem.OnMenuItemClickListener
+  implements b
 {
-  fg(cp paramcp) {}
+  fg(cr paramcr) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public boolean a(cp paramcp)
   {
-    Object localObject = cp.b(a);
-    paramMenuItem = new LinkedList();
-    localObject = ((List)localObject).iterator();
-    while (((Iterator)localObject).hasNext())
-    {
-      h localh = (h)((Iterator)localObject).next();
-      if (!localh.getFileType().a()) {
-        paramMenuItem.add(localh);
-      }
+    if ((e) || (L) || (I) || (J) || (K) || (H) || (l) || (h) || (((f) || (y) || (g)) && (!d))) {}
+    while ((B) || (n) || (i) || (j) || (k)) {
+      return true;
     }
-    if (paramMenuItem.size() == 1) {
-      aj.a(cp.a(a), ((h)paramMenuItem.get(0)).getAbsolutePath());
-    }
-    while (paramMenuItem.size() <= 1) {
-      return false;
-    }
-    aj.b(cp.a(a), bd.a(paramMenuItem));
     return false;
   }
 }

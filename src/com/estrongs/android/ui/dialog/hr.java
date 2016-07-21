@@ -1,16 +1,32 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.content.Context;
+import android.text.ClipboardManager;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.TextView;
+import com.estrongs.android.ui.view.ak;
 
 class hr
-  implements DialogInterface.OnClickListener
+  implements View.OnClickListener
 {
-  hr(hn paramhn) {}
+  hr(hq paramhq, Context paramContext) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void onClick(View paramView)
   {
-    paramDialogInterface.dismiss();
+    paramView = (TextView)hq.a(b, 2131624738);
+    if (paramView != null)
+    {
+      paramView = paramView.getText().toString();
+      Object localObject = a;
+      Context localContext = a;
+      localObject = (ClipboardManager)((Context)localObject).getSystemService("clipboard");
+      if (localObject != null)
+      {
+        ((ClipboardManager)localObject).setText(paramView);
+        ak.a(a, 2131231282, 0);
+      }
+    }
   }
 }
 

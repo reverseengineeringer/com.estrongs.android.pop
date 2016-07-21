@@ -1,13 +1,8 @@
 package android.support.v4.view.a;
 
 class j
-  extends l
-{
-  public Object a(h paramh)
-  {
-    return m.a(new k(this, paramh));
-  }
-}
+  extends i
+{}
 
 /* Location:
  * Qualified Name:     android.support.v4.view.a.j

@@ -1,26 +1,22 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.content.Intent;
-import android.net.Uri;
+import android.view.View;
+import android.widget.ExpandableListView;
+import android.widget.ExpandableListView.OnChildClickListener;
+import com.estrongs.android.ui.adapter.s;
+import com.estrongs.android.ui.adapter.w;
 
 class jd
-  implements DialogInterface.OnClickListener
+  implements ExpandableListView.OnChildClickListener
 {
-  jd(jc paramjc) {}
+  jd(iy paramiy, s params) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public boolean onChildClick(ExpandableListView paramExpandableListView, View paramView, int paramInt1, int paramInt2, long paramLong)
   {
-    paramDialogInterface = new Intent("android.intent.action.VIEW");
-    paramDialogInterface.setData(Uri.parse("http://0.esfileexplorer.duapp.com/notify/1t"));
-    try
-    {
-      a.a.a.mContext.startActivity(paramDialogInterface);
-      return;
-    }
-    catch (Exception paramDialogInterface) {}
+    paramExpandableListView = a.a(paramInt1, paramInt2);
+    iy.a(b, c);
+    b.c();
+    return false;
   }
 }
 

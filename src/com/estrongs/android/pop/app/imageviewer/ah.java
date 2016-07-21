@@ -16,7 +16,7 @@ class ah
     if (l < 0L) {}
     for (String str = "";; str = Formatter.formatFileSize(a.c, l))
     {
-      ((TextView)a.d.findViewById(2131362393)).setText(str);
+      ((TextView)a.d.findViewById(2131625004)).setText(str);
       ae.a(a.d, a.a, a.c);
       return;
     }

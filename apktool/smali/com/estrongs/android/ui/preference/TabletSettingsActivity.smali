@@ -26,7 +26,7 @@
 
 .field private d:Landroid/os/Handler;
 
-.field private e:Lcom/estrongs/android/ui/preference/fragments/am;
+.field private e:Lcom/estrongs/android/ui/preference/fragments/ao;
 
 
 # direct methods
@@ -50,10 +50,10 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/estrongs/android/ui/preference/TabletSettingsActivity;)Lcom/estrongs/android/ui/preference/fragments/am;
+.method static synthetic a(Lcom/estrongs/android/ui/preference/TabletSettingsActivity;)Lcom/estrongs/android/ui/preference/fragments/ao;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/preference/TabletSettingsActivity;->e:Lcom/estrongs/android/ui/preference/fragments/am;
+    iget-object v0, p0, Lcom/estrongs/android/ui/preference/TabletSettingsActivity;->e:Lcom/estrongs/android/ui/preference/fragments/ao;
 
     return-object v0
 .end method
@@ -71,11 +71,11 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    new-instance v0, Lcom/estrongs/android/ui/preference/fragments/am;
+    new-instance v0, Lcom/estrongs/android/ui/preference/fragments/ao;
 
-    invoke-direct {v0}, Lcom/estrongs/android/ui/preference/fragments/am;-><init>()V
+    invoke-direct {v0}, Lcom/estrongs/android/ui/preference/fragments/ao;-><init>()V
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/preference/TabletSettingsActivity;->e:Lcom/estrongs/android/ui/preference/fragments/am;
+    iput-object v0, p0, Lcom/estrongs/android/ui/preference/TabletSettingsActivity;->e:Lcom/estrongs/android/ui/preference/fragments/ao;
 
     invoke-virtual {p0}, Lcom/estrongs/android/ui/preference/TabletSettingsActivity;->getFragmentManager()Landroid/app/FragmentManager;
 
@@ -85,9 +85,9 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a035e
+    const v1, 0x7f0e05cb
 
-    iget-object v2, p0, Lcom/estrongs/android/ui/preference/TabletSettingsActivity;->e:Lcom/estrongs/android/ui/preference/fragments/am;
+    iget-object v2, p0, Lcom/estrongs/android/ui/preference/TabletSettingsActivity;->e:Lcom/estrongs/android/ui/preference/fragments/ao;
 
     invoke-virtual {v0, v1, v2}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
 
@@ -120,11 +120,11 @@
 
     invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f0300ba
+    const v0, 0x7f03015f
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/preference/TabletSettingsActivity;->setContentView(I)V
 
-    const v0, 0x7f0a035e
+    const v0, 0x7f0e05cb
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/preference/TabletSettingsActivity;->findViewById(I)Landroid/view/View;
 
@@ -134,7 +134,7 @@
 
     iput-object v0, p0, Lcom/estrongs/android/ui/preference/TabletSettingsActivity;->a:Landroid/view/ViewGroup;
 
-    const v0, 0x7f0a035f
+    const v0, 0x7f0e05cc
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/preference/TabletSettingsActivity;->findViewById(I)Landroid/view/View;
 
@@ -146,7 +146,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/TabletSettingsActivity;->b:Landroid/view/ViewGroup;
 
-    const v1, 0x7f0a0360
+    const v1, 0x7f0e05cd
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -164,7 +164,7 @@
 
     invoke-direct {p0}, Lcom/estrongs/android/ui/preference/TabletSettingsActivity;->a()V
 
-    invoke-static {p0}, Lcom/estrongs/android/pop/utils/cl;->b(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/estrongs/android/pop/utils/cu;->b(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -263,7 +263,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a0361
+    const v2, 0x7f0e05ce
 
     invoke-virtual {v1, v2, v0}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
 

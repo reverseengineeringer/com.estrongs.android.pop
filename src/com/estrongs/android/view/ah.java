@@ -1,42 +1,23 @@
 package com.estrongs.android.view;
 
-import android.app.Activity;
-import android.widget.BaseAdapter;
-import com.estrongs.android.d.f;
-import com.estrongs.android.d.k;
-import com.estrongs.android.d.m;
+import android.view.View;
+import android.view.View.OnClickListener;
+import java.util.List;
 
 class ah
-  extends k
+  implements View.OnClickListener
 {
-  int d = 0;
+  ah(af paramaf) {}
   
-  ah(ac paramac, String paramString)
+  public void onClick(View paramView)
   {
-    super(paramString);
-  }
-  
-  protected boolean a(m paramm)
-  {
-    return true;
-  }
-  
-  public boolean b(m paramm)
-  {
-    if (a(paramm))
+    try
     {
-      d += 1;
-      e.ad.runOnUiThread(new ai(this, paramm));
+      a.d.clear();
+      a.e.b(a);
+      return;
     }
-    if (a) {
-      f.a(f.f(c), e, false);
-    }
-    if (d == e.i.getCount())
-    {
-      c();
-      e.f = null;
-    }
-    return false;
+    catch (IndexOutOfBoundsException paramView) {}
   }
 }
 

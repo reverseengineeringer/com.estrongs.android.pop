@@ -1,94 +1,86 @@
 .class public Lcom/estrongs/fs/n;
-.super Lcom/estrongs/fs/a;
-
-
-# instance fields
-.field protected displayName:Ljava/lang/String;
+.super Lcom/estrongs/fs/k;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
-
-    sget-object v0, Lcom/estrongs/fs/m;->a:Lcom/estrongs/fs/m;
-
-    invoke-direct {p0, p1, v0}, Lcom/estrongs/fs/a;-><init>(Ljava/lang/String;Lcom/estrongs/fs/m;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Lcom/estrongs/fs/m;)V
+.method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/estrongs/fs/a;-><init>(Ljava/lang/String;Lcom/estrongs/fs/m;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Lcom/estrongs/fs/m;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/estrongs/fs/a;-><init>(Ljava/lang/String;Lcom/estrongs/fs/m;)V
-
-    iput-object p3, p0, Lcom/estrongs/fs/n;->displayName:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Lcom/estrongs/fs/m;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2, p3}, Lcom/estrongs/fs/a;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/estrongs/fs/m;)V
-
-    iput-object p4, p0, Lcom/estrongs/fs/n;->displayName:Ljava/lang/String;
+    invoke-direct {p0}, Lcom/estrongs/fs/k;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected doGetFileType()Lcom/estrongs/fs/m;
+.method public a(Lcom/estrongs/android/scanner/f;)Ljava/lang/Boolean;
     .locals 1
 
-    sget-object v0, Lcom/estrongs/fs/m;->a:Lcom/estrongs/fs/m;
+    const/4 v0, 0x2
 
-    return-object v0
-.end method
-
-.method public exists()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public getName()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/fs/n;->displayName:Ljava/lang/String;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/fs/n;->displayName:Ljava/lang/String;
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/fs/n;->path:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    goto :goto_0
+    invoke-virtual {p1, v0}, Lcom/estrongs/android/scanner/f;->a(Ljava/lang/Integer;)V
+
+    const/4 v0, 0x1
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public setDisplayName(Ljava/lang/String;)V
-    .locals 0
+.method public a(Lcom/estrongs/fs/h;)Z
+    .locals 2
 
-    iput-object p1, p0, Lcom/estrongs/fs/n;->displayName:Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-void
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "."
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-interface {p1}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/estrongs/fs/util/j;->b(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/estrongs/android/scanner/b/e;->a(Ljava/lang/String;)I
+
+    move-result v0
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

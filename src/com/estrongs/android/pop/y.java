@@ -2,8 +2,8 @@ package com.estrongs.android.pop;
 
 import com.estrongs.a.a;
 import com.estrongs.a.a.h;
-import com.estrongs.android.a.i;
-import com.estrongs.android.a.p;
+import com.estrongs.android.d.i;
+import com.estrongs.android.d.p;
 
 class y
   implements p
@@ -12,7 +12,7 @@ class y
   
   public void a(int paramInt, boolean paramBoolean)
   {
-    if (paramInt == i.a) {
+    if (paramInt == i.b) {
       a.g = 1;
     }
     for (;;)
@@ -20,10 +20,12 @@ class y
       a.f = paramBoolean;
       b.sendMessage(5, new Object[] { a });
       return;
-      if (paramInt == i.d) {
+      if (paramInt == i.e) {
         a.g = 4;
-      } else if (paramInt == i.b) {
+      } else if (paramInt == i.c) {
         a.g = 2;
+      } else if (paramInt == i.a) {
+        a.g = 3;
       } else {
         a.g = 5;
       }

@@ -1,16 +1,36 @@
 package com.estrongs.android.ui.e;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.app.compress.a.d;
+import com.estrongs.android.pop.app.compress.a.e;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.fs.h;
+import java.util.List;
 
 class dc
-  implements DialogInterface.OnClickListener
+  implements MenuItem.OnMenuItemClickListener
 {
-  dc(db paramdb) {}
+  dc(cr paramcr) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramDialogInterface.dismiss();
+    paramMenuItem = cr.a(a);
+    if (paramMenuItem.size() == 0) {
+      ak.a(cr.b(a).getBaseContext(), 2131231551, 0);
+    }
+    do
+    {
+      do
+      {
+        return true;
+      } while (paramMenuItem.size() != 1);
+      paramMenuItem = d.a(((h)paramMenuItem.get(0)).getAbsolutePath());
+    } while ((paramMenuItem == null) || (!d));
+    paramMenuItem = c;
+    cr.b(a).d(paramMenuItem);
+    return true;
   }
 }
 

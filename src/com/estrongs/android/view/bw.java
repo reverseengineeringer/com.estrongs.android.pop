@@ -1,15 +1,33 @@
 package com.estrongs.android.view;
 
-import com.estrongs.android.widget.c;
+import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import com.estrongs.a.a.m;
+import com.estrongs.fs.util.j;
 
 class bw
   implements Runnable
 {
-  bw(bv parambv) {}
+  bw(br parambr, m paramm) {}
   
   public void run()
   {
-    a.e.f.notifyDataSetChanged();
+    bo.l(b.a).setVisibility(0);
+    bo.b(b.a).setVisibility(0);
+    bo.b(b.a).setIndeterminate(false);
+    bo.o(b.a).setVisibility(0);
+    if (!a.m)
+    {
+      bo.o(b.a).setVisibility(8);
+      bo.b(b.a).setIndeterminate(true);
+    }
+    if ((a.l) && (a.m) && (a.n))
+    {
+      bo.w(b.a).setText(bo.a(b.a, bo.c(b.a) - a.f, a.b));
+      bo.x(b.a).setVisibility(0);
+      bo.B(b.a).setText(j.c(a.b) + "/s");
+    }
   }
 }
 

@@ -1,17 +1,46 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.Button;
+import android.widget.EditText;
+import com.estrongs.android.ui.theme.at;
 
 class eq
-  implements DialogInterface.OnClickListener
+  implements TextWatcher
 {
-  eq(eo parameo) {}
+  eq(en paramen) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void afterTextChanged(Editable paramEditable)
   {
-    paramDialogInterface.dismiss();
+    boolean bool;
+    if (a.b).c)
+    {
+      if (a.c.getText().toString().equals(a.g)) {
+        break label103;
+      }
+      bool = true;
+      a.b).b.setEnabled(bool);
+      paramEditable = at.a(a.a);
+      if (!bool) {
+        break label108;
+      }
+    }
+    label103:
+    label108:
+    for (int i = 2131558657;; i = 2131558659)
+    {
+      i = paramEditable.c(i);
+      a.b).b.setTextColor(i);
+      return;
+      bool = false;
+      break;
+    }
   }
+  
+  public void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}
+  
+  public void onTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}
 }
 
 /* Location:

@@ -1,14 +1,15 @@
 package com.estrongs.android.ui.addressbar;
 
-class b
-  implements Runnable
+import android.graphics.drawable.Drawable;
+
+public class b
 {
-  b(AdvancedAddressBar paramAdvancedAddressBar) {}
-  
-  public void run()
-  {
-    AdvancedAddressBar.a(a);
-  }
+  public Drawable a;
+  public Drawable b;
+  public int c;
+  public boolean d = true;
+  public int e = 0;
+  public Drawable f;
 }
 
 /* Location:

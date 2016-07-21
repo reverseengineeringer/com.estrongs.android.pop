@@ -47,7 +47,7 @@
 
 .field k:Ljava/lang/Long;
 
-.field private m:Lcom/estrongs/android/ui/dialog/cg;
+.field private m:Lcom/estrongs/android/ui/dialog/ci;
 
 .field private n:[B
 
@@ -103,7 +103,7 @@
 
     iput-boolean v6, p0, Lcom/estrongs/fs/b/a;->e:Z
 
-    iput-object v1, p0, Lcom/estrongs/fs/b/a;->m:Lcom/estrongs/android/ui/dialog/cg;
+    iput-object v1, p0, Lcom/estrongs/fs/b/a;->m:Lcom/estrongs/android/ui/dialog/ci;
 
     new-instance v0, Lcom/estrongs/fs/b/e;
 
@@ -198,7 +198,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -414,7 +414,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->b(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->b(Ljava/lang/String;)I
 
     move-result v2
 
@@ -444,11 +444,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->D(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->F(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -462,7 +462,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->D(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->F(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -539,20 +539,20 @@
     return v0
 .end method
 
-.method static synthetic c(Lcom/estrongs/fs/b/a;)Lcom/estrongs/android/ui/dialog/cg;
+.method static synthetic c(Lcom/estrongs/fs/b/a;)Lcom/estrongs/android/ui/dialog/ci;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/fs/b/a;->m:Lcom/estrongs/android/ui/dialog/cg;
+    iget-object v0, p0, Lcom/estrongs/fs/b/a;->m:Lcom/estrongs/android/ui/dialog/ci;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public a(Lcom/estrongs/android/ui/dialog/cg;)V
+.method public a(Lcom/estrongs/android/ui/dialog/ci;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/fs/b/a;->m:Lcom/estrongs/android/ui/dialog/cg;
+    iput-object p1, p0, Lcom/estrongs/fs/b/a;->m:Lcom/estrongs/android/ui/dialog/ci;
 
     return-void
 .end method
@@ -679,7 +679,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/estrongs/fs/b/a;->processData:Lcom/estrongs/a/a/m;
 
@@ -693,11 +693,11 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/fs/b/a;->m:Lcom/estrongs/android/ui/dialog/cg;
+    iget-object v0, p0, Lcom/estrongs/fs/b/a;->m:Lcom/estrongs/android/ui/dialog/ci;
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
@@ -870,11 +870,11 @@
 
     if-lez v0, :cond_6
 
-    iget-object v0, p0, Lcom/estrongs/fs/b/a;->m:Lcom/estrongs/android/ui/dialog/cg;
+    iget-object v0, p0, Lcom/estrongs/fs/b/a;->m:Lcom/estrongs/android/ui/dialog/ci;
 
     if-eqz v0, :cond_2
 
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
@@ -923,7 +923,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/estrongs/android/util/am;->e(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v3, v4}, Lcom/estrongs/android/util/ap;->e(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v3
 
@@ -1046,11 +1046,11 @@
     :try_start_3
     new-instance v3, Lcom/estrongs/a/q;
 
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v4
 
-    const v5, 0x7f0b0174
+    const v5, 0x7f0800f9
 
     invoke-virtual {v4, v5}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->getString(I)Ljava/lang/String;
 

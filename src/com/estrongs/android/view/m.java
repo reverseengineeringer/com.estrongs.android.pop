@@ -1,17 +1,28 @@
 package com.estrongs.android.view;
 
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.pop.app.compress.cb;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.io.archive.i;
+
 class m
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  m(e parame, String paramString) {}
+  m(l paraml, cb paramcb) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (e.b(b, a)) {
+    paramDialogInterface = a.a();
+    if (b.a.e(paramDialogInterface))
+    {
+      b.b.d = paramDialogInterface;
+      a.dismiss();
+      g.a(b.b, new t(b.b));
+      g.d(b.b).start();
       return;
     }
-    e.a(b, new r(b));
-    e.d(b).start();
+    ak.a(b.b.ah, 2131231784, 1);
   }
 }
 

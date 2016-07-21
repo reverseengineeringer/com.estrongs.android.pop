@@ -1,17 +1,14 @@
 package com.estrongs.android.a;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-
 class m
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
-  m(i parami) {}
+  m(l paraml) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void run()
   {
-    i.a(a, i.b);
-    a.dismiss();
+    a.d();
+    l.a(a);
   }
 }
 

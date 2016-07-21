@@ -70,7 +70,7 @@
 
     const-string v3, "OBEX onConnect"
 
-    invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v3}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     if-nez p1, :cond_0
 
@@ -160,7 +160,7 @@
 
     const-string v3, "OBEX onSetPath"
 
-    invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v3}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/estrongs/android/pop/bt/c;->c:Z
 
@@ -373,7 +373,7 @@
 
     const-string v3, "OBEX onPut"
 
-    invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v3}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/estrongs/android/pop/bt/c;->c:Z
 
@@ -417,7 +417,7 @@
 
     const-string v2, "OBEX onPut ends"
 
-    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/bt/c;->a:Lcom/estrongs/android/pop/bt/a;
 
@@ -463,7 +463,7 @@
 
     move-result-object v5
 
-    invoke-static {v3, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v5}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v3, p0, Lcom/estrongs/android/pop/bt/c;->a:Lcom/estrongs/android/pop/bt/a;
 
@@ -520,7 +520,7 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, v5}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v4, p0, Lcom/estrongs/android/pop/bt/c;->a:Lcom/estrongs/android/pop/bt/a;
 
@@ -610,7 +610,7 @@
 
     const-string v2, "EOS received"
 
-    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_5
     invoke-virtual {v5}, Ljava/io/BufferedOutputStream;->flush()V
@@ -643,7 +643,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/bt/c;->a:Lcom/estrongs/android/pop/bt/a;
 
@@ -682,7 +682,7 @@
 
     const-string v2, "OBEX onPut ends"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/estrongs/android/pop/bt/c;->a:Lcom/estrongs/android/pop/bt/a;
 
@@ -762,7 +762,7 @@
 
     const-string v3, "OBEX Server onPut error"
 
-    invoke-static {v2, v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v2, v3, v0}, Lcom/estrongs/android/util/l;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
@@ -770,7 +770,7 @@
 
     const-string v2, "OBEX onPut ends"
 
-    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/bt/c;->a:Lcom/estrongs/android/pop/bt/a;
 
@@ -791,7 +791,7 @@
 
     const-string v2, "OBEX onPut ends"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/estrongs/android/pop/bt/c;->a:Lcom/estrongs/android/pop/bt/a;
 
@@ -811,7 +811,7 @@
 
     const-string v1, "OBEX notConnectedClose"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/estrongs/android/pop/bt/c;->c:Z
 
@@ -821,7 +821,7 @@
 
     const-string v1, "OBEX connection timeout"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_0
     iget-object v0, p0, Lcom/estrongs/android/pop/bt/c;->e:Lb/a/a/a;
@@ -857,7 +857,7 @@
 
     const-string v1, "Received OBEX connection"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/bt/c;->a:Lcom/estrongs/android/pop/bt/a;
 
@@ -894,7 +894,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->y()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->z()Ljava/lang/String;
 
     move-result-object v0
 
@@ -930,7 +930,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -944,7 +944,7 @@
 
     const-string v1, "OBEX onGet"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/estrongs/android/pop/bt/c;->c:Z
 
@@ -972,7 +972,7 @@
 
     const-string v2, "OBEX onGet ends"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1023,7 +1023,7 @@
 
     const-string v2, "OBEX onGet ends"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1118,7 +1118,7 @@
 
     const-string v1, "OBEX onGet ends"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v3
 
@@ -1151,7 +1151,7 @@
 
     const-string v1, "OBEX onGet ends"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v3
 
@@ -1219,7 +1219,7 @@
 
     const-string v2, "OBEX Server onGet error"
 
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v1, v2, v0}, Lcom/estrongs/android/util/l;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
@@ -1229,7 +1229,7 @@
 
     const-string v2, "OBEX onGet ends"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -1250,7 +1250,7 @@
 
     const-string v1, "OBEX onGet ends"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v3
 
@@ -1263,7 +1263,7 @@
 
     const-string v2, "OBEX onGet ends"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -1275,7 +1275,7 @@
 
     const-string v1, "OBEX onDisconnect"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/estrongs/android/pop/bt/c;->d:Z
 
@@ -1302,7 +1302,7 @@
 
     const-string v1, "OBEX onDelete"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/estrongs/android/pop/bt/c;->c:Z
 

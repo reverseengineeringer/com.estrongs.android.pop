@@ -17,13 +17,7 @@ public class OBEXElement
   private String i = "";
   private String j = "RWD";
   private String k = "";
-  private final String[][] l;
-  
-  public OBEXElement()
-  {
-    String[] arrayOfString = { "&lt;", "&gt;", "&amp;", "&apos;", "&quot;" };
-    l = new String[][] { { "<", ">", "&", "'", "\"" }, arrayOfString };
-  }
+  private final String[][] l = { { "<", ">", "&", "'", "\"" }, { "&lt;", "&gt;", "&amp;", "&apos;", "&quot;" } };
   
   private String d(String paramString)
   {

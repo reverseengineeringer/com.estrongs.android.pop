@@ -1,7 +1,8 @@
 package com.estrongs.fs.a;
 
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bc;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bg;
+import com.estrongs.fs.impl.media.b;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -53,7 +54,7 @@ public class a
     ArrayList localArrayList = new ArrayList();
     paramList = paramList.iterator();
     while (paramList.hasNext()) {
-      localArrayList.add(am.bE((String)paramList.next()));
+      localArrayList.add(ap.bV((String)paramList.next()));
     }
     return localArrayList;
   }
@@ -177,11 +178,14 @@ public class a
   
   public static String b(String paramString)
   {
-    if ("/".equals(paramString)) {
+    if ("/".equals(paramString)) {}
+    List localList;
+    do
+    {
       return paramString;
-    }
-    paramString = c(paramString);
-    return (String)paramString.get(paramString.size() - 1);
+      localList = c(paramString);
+    } while (localList.size() == 0);
+    return (String)localList.get(localList.size() - 1);
   }
   
   public static List<String> c(String paramString)
@@ -262,23 +266,23 @@ public class a
   
   public static int g(String paramString)
   {
-    if (!am.bl(paramString)) {}
+    if (!ap.bC(paramString)) {}
     do
     {
       return 1;
-      if (com.estrongs.fs.impl.media.a.a(paramString)) {
+      if (b.a(paramString)) {
         return 4;
       }
-      if (com.estrongs.fs.impl.media.a.b(paramString)) {
+      if (b.b(paramString)) {
         return 2;
       }
-      if (com.estrongs.fs.impl.media.a.c(paramString)) {
+      if (b.c(paramString)) {
         return 8;
       }
-      if (bc.P(paramString)) {
+      if ((bg.P(paramString)) || (bg.i(paramString))) {
         return 16;
       }
-      if (bc.K(paramString)) {
+      if (bg.K(paramString)) {
         return 32;
       }
     } while (paramString.endsWith("/"));

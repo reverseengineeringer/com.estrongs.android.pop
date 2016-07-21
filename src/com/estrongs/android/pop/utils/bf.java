@@ -1,14 +1,30 @@
 package com.estrongs.android.pop.utils;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.app.Activity;
+import com.estrongs.android.pop.ad;
+import com.estrongs.android.ui.dialog.do;
+import com.estrongs.android.ui.pcs.u;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.a.b;
+import com.estrongs.fs.d;
+import com.estrongs.fs.z;
+import java.util.List;
 
 final class bf
-  implements DialogInterface.OnClickListener
+  implements do
 {
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  bf(Activity paramActivity, u paramu, List paramList) {}
+  
+  public void a(String paramString, boolean paramBoolean)
   {
-    paramDialogInterface.dismiss();
+    if (paramBoolean) {
+      ad.a(a).F(paramString);
+    }
+    paramString = b.g() + "/files" + "/" + paramString;
+    ao.a(a, c, d.m(paramString), true);
+    if ((b.a().h(paramString) == null) && (b.a().h(ap.ce(paramString)) == null)) {
+      b.a().a(new z(paramString, false));
+    }
   }
 }
 

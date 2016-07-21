@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@drawable/scenery_dialog_corner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="left" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/scenery_dialog_ad" />
+    <ImageView android:layout_gravity="right" android:id="@id/dialog_close" android:paddingLeft="@dimen/dialog_cross_button_padding_left" android:paddingTop="@dimen/dialog_cross_button_padding_top" android:paddingRight="@dimen/dialog_cross_button_padding_right" android:paddingBottom="@dimen/dialog_cross_button_padding_bottom" android:layout_width="44.0dip" android:layout_height="46.0dip" android:src="@drawable/scenery_dialog_cross_button" />
+    <LinearLayout android:orientation="vertical" android:paddingTop="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.baidu.scenery.dispatcher.commondialog.CommonTextView android:textSize="18.0sp" android:textColor="#ff323232" android:ellipsize="end" android:paddingLeft="30.0dip" android:paddingRight="44.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/scenery_uninstall_dialog_title" android:singleLine="true" custom:fontFamily="sans-serif" />
+        <View android:background="#fff3f3f3" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="12.0dip" />
+        <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+            <ImageView android:layout_width="51.0dip" android:layout_height="51.0dip" android:layout_marginLeft="20.0dip" android:src="@drawable/scenery_uninstall_dialog_left" />
+            <com.baidu.scenery.dispatcher.commondialog.CommonTextView android:textSize="14.0sp" android:textColor="#ff8c8c8c" android:ellipsize="end" android:id="@id/dialog_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginRight="20.0dip" android:text="@string/scenery_uninstall_dialog_content" android:lineSpacingMultiplier="1.2" custom:fontFamily="sans-serif-light" custom:maxLines="3" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/jump_to_google_play" android:background="@drawable/scenery_uninstall_corner_button" android:clickable="true" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="30.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="20.0dip">
+            <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/scenery_dialog_booster_icon" />
+            <com.baidu.scenery.dispatcher.commondialog.CommonTextView android:textSize="16.0sp" android:textColor="#ffffffff" android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/scenery_uninstall_dialog_button_text" android:maxLines="1" custom:fontFamily="sans-serif" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

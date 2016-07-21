@@ -1,26 +1,44 @@
 package com.estrongs.android.pop.app.a;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.app.PopAudioPlayer;
-import com.estrongs.android.util.am;
-import com.estrongs.fs.d;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.TextView;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.view.ak;
 
-class h
-  implements MenuItem.OnMenuItemClickListener
+final class h
+  implements View.OnClickListener
 {
-  h(e parame) {}
+  h(View paramView, TextView paramTextView, View.OnClickListener paramOnClickListener) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void onClick(View paramView)
   {
-    String str = aa).w().b;
-    paramMenuItem = str;
-    if (!am.ba(str)) {
-      paramMenuItem = am.bq(str);
+    a.a(true, (String)a.getTag());
+    ak.a(FexApplication.a(), dd, 0);
+    b.setText(de);
+    try
+    {
+      FileExplorerActivity.X().ae().d();
+      if (c == null) {}
     }
-    e.a(a, d.a().j(paramMenuItem));
-    a.d();
-    return false;
+    catch (Exception paramView)
+    {
+      for (;;)
+      {
+        try
+        {
+          c.onClick(a);
+          return;
+        }
+        catch (Exception paramView)
+        {
+          paramView.printStackTrace();
+        }
+        paramView = paramView;
+        paramView.printStackTrace();
+      }
+    }
   }
 }
 

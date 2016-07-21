@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/preference/Preference$OnPreferenceClickListener;
 
 
 # instance fields
@@ -22,10 +22,30 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 0
+.method public onPreferenceClick(Landroid/preference/Preference;)Z
+    .locals 3
 
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    new-instance v0, Landroid/content/Intent;
 
-    return-void
+    iget-object v1, p0, Lcom/estrongs/android/ui/preference/fragments/b;->a:Lcom/estrongs/android/ui/preference/fragments/AppPreferenceFragment;
+
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/preference/fragments/AppPreferenceFragment;->getActivity()Landroid/app/Activity;
+
+    move-result-object v1
+
+    const-class v2, Lcom/estrongs/android/pop/app/AppCheckUpdateList;
+
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/preference/fragments/b;->a:Lcom/estrongs/android/ui/preference/fragments/AppPreferenceFragment;
+
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/preference/fragments/AppPreferenceFragment;->getActivity()Landroid/app/Activity;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

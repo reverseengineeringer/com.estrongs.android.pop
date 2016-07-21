@@ -1,12 +1,12 @@
 .class Lcom/estrongs/a/b/l;
-.super Lcom/estrongs/android/ui/dialog/cg;
+.super Lcom/estrongs/android/ui/dialog/ci;
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field a:Lcom/estrongs/fs/b/bl;
+.field a:Lcom/estrongs/fs/b/bn;
 
 .field b:Z
 
@@ -24,28 +24,28 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/estrongs/a/b/d;Landroid/content/Context;Lcom/estrongs/fs/b/bl;)V
+.method public constructor <init>(Lcom/estrongs/a/b/d;Landroid/content/Context;Lcom/estrongs/fs/b/bn;)V
     .locals 5
 
     const/4 v1, 0x0
 
     iput-object p1, p0, Lcom/estrongs/a/b/l;->h:Lcom/estrongs/a/b/d;
 
-    invoke-direct {p0, p2}, Lcom/estrongs/android/ui/dialog/cg;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p2}, Lcom/estrongs/android/ui/dialog/ci;-><init>(Landroid/content/Context;)V
 
     iput-boolean v1, p0, Lcom/estrongs/a/b/l;->b:Z
 
-    iput-object p3, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iput-object p3, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
     invoke-static {}, Lcom/estrongs/a/b/d;->c()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    const v2, 0x7f030037
+    const v2, 0x7f03008e
 
     const/4 v3, 0x0
 
@@ -55,7 +55,7 @@
 
     invoke-virtual {p0, v2}, Lcom/estrongs/a/b/l;->setContentView(Landroid/view/View;)V
 
-    const v0, 0x7f0a001e
+    const v0, 0x7f0e0108
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -65,7 +65,7 @@
 
     iput-object v0, p0, Lcom/estrongs/a/b/l;->e:Landroid/widget/TextView;
 
-    const v0, 0x7f0a0010
+    const v0, 0x7f0e00c7
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -75,7 +75,7 @@
 
     iput-object v0, p0, Lcom/estrongs/a/b/l;->f:Landroid/widget/TextView;
 
-    const v0, 0x7f0a009e
+    const v0, 0x7f0e0209
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -85,7 +85,7 @@
 
     iput-object v0, p0, Lcom/estrongs/a/b/l;->g:Landroid/widget/TextView;
 
-    const v0, 0x7f0a003d
+    const v0, 0x7f0e0076
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -95,7 +95,7 @@
 
     iput-object v0, p0, Lcom/estrongs/a/b/l;->c:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a0116
+    const v0, 0x7f0e02b2
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -107,15 +107,15 @@
 
     iget-object v0, p0, Lcom/estrongs/a/b/l;->e:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v2, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-object v2, v2, Lcom/estrongs/fs/b/bl;->f:Ljava/lang/String;
+    iget-object v2, v2, Lcom/estrongs/fs/b/bn;->f:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v0, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget v0, v0, Lcom/estrongs/fs/b/bl;->c:I
+    iget v0, v0, Lcom/estrongs/fs/b/bn;->c:I
 
     const/4 v2, 0x1
 
@@ -127,9 +127,9 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v3, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v3, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-object v3, v3, Lcom/estrongs/fs/b/bl;->h:Ljava/lang/String;
+    iget-object v3, v3, Lcom/estrongs/fs/b/bn;->h:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -150,9 +150,9 @@
     :goto_0
     iget-object v0, p0, Lcom/estrongs/a/b/l;->g:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v2, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-wide v2, v2, Lcom/estrongs/fs/b/bl;->e:J
+    iget-wide v2, v2, Lcom/estrongs/fs/b/bn;->e:J
 
     invoke-static {v2, v3}, Lcom/estrongs/fs/util/j;->c(J)Ljava/lang/String;
 
@@ -160,19 +160,19 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v0, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-object v0, v0, Lcom/estrongs/fs/b/bl;->l:[B
+    iget-object v0, v0, Lcom/estrongs/fs/b/bn;->l:[B
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v0, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget v0, v0, Lcom/estrongs/fs/b/bl;->m:I
+    iget v0, v0, Lcom/estrongs/fs/b/bn;->m:I
 
-    iget-object v2, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v2, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget v2, v2, Lcom/estrongs/fs/b/bl;->n:I
+    iget v2, v2, Lcom/estrongs/fs/b/bn;->n:I
 
     mul-int/2addr v0, v2
 
@@ -185,9 +185,9 @@
 
     if-ge v0, v1, :cond_1
 
-    iget-object v1, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v1, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-object v1, v1, Lcom/estrongs/fs/b/bl;->l:[B
+    iget-object v1, v1, Lcom/estrongs/fs/b/bn;->l:[B
 
     mul-int/lit8 v3, v0, 0x4
 
@@ -195,9 +195,9 @@
 
     shl-int/lit8 v1, v1, 0x18
 
-    iget-object v3, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v3, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-object v3, v3, Lcom/estrongs/fs/b/bl;->l:[B
+    iget-object v3, v3, Lcom/estrongs/fs/b/bn;->l:[B
 
     mul-int/lit8 v4, v0, 0x4
 
@@ -209,9 +209,9 @@
 
     or-int/2addr v1, v3
 
-    iget-object v3, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v3, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-object v3, v3, Lcom/estrongs/fs/b/bl;->l:[B
+    iget-object v3, v3, Lcom/estrongs/fs/b/bn;->l:[B
 
     mul-int/lit8 v4, v0, 0x4
 
@@ -223,9 +223,9 @@
 
     or-int/2addr v1, v3
 
-    iget-object v3, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v3, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-object v3, v3, Lcom/estrongs/fs/b/bl;->l:[B
+    iget-object v3, v3, Lcom/estrongs/fs/b/bn;->l:[B
 
     mul-int/lit8 v4, v0, 0x4
 
@@ -244,22 +244,22 @@
     :cond_0
     iget-object v0, p0, Lcom/estrongs/a/b/l;->f:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v2, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-object v2, v2, Lcom/estrongs/fs/b/bl;->h:Ljava/lang/String;
+    iget-object v2, v2, Lcom/estrongs/fs/b/bn;->h:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v0, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget v0, v0, Lcom/estrongs/fs/b/bl;->m:I
+    iget v0, v0, Lcom/estrongs/fs/b/bn;->m:I
 
-    iget-object v1, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v1, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget v1, v1, Lcom/estrongs/fs/b/bl;->n:I
+    iget v1, v1, Lcom/estrongs/fs/b/bn;->n:I
 
     sget-object v3, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
@@ -281,9 +281,9 @@
     return-void
 
     :cond_2
-    iget-object v0, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v0, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget v0, v0, Lcom/estrongs/fs/b/bl;->b:I
+    iget v0, v0, Lcom/estrongs/fs/b/bn;->b:I
 
     const/4 v1, 0x2
 
@@ -291,16 +291,16 @@
 
     iget-object v0, p0, Lcom/estrongs/a/b/l;->c:Landroid/widget/ImageView;
 
-    const v1, 0x7f020095
+    const v1, 0x7f020190
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto :goto_2
 
     :cond_3
-    iget-object v0, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v0, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget v0, v0, Lcom/estrongs/fs/b/bl;->b:I
+    iget v0, v0, Lcom/estrongs/fs/b/bn;->b:I
 
     const/4 v1, 0x3
 
@@ -308,7 +308,7 @@
 
     iget-object v0, p0, Lcom/estrongs/a/b/l;->c:Landroid/widget/ImageView;
 
-    const v1, 0x7f020165
+    const v1, 0x7f02028e
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -317,11 +317,11 @@
     :cond_4
     iget-object v0, p0, Lcom/estrongs/a/b/l;->c:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v1, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-object v1, v1, Lcom/estrongs/fs/b/bl;->h:Ljava/lang/String;
+    iget-object v1, v1, Lcom/estrongs/fs/b/bn;->h:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/estrongs/android/util/bc;->b(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/estrongs/android/util/bg;->b(Ljava/lang/String;)I
 
     move-result v1
 
@@ -329,7 +329,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/estrongs/android/d/f;->a(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v1}, Lcom/estrongs/android/h/f;->a(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -350,9 +350,9 @@
 
     iget-object v0, p0, Lcom/estrongs/a/b/l;->h:Lcom/estrongs/a/b/d;
 
-    iget-object v1, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v1, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-object v1, v1, Lcom/estrongs/fs/b/bl;->j:Ljava/net/Socket;
+    iget-object v1, v1, Lcom/estrongs/fs/b/bn;->j:Ljava/net/Socket;
 
     invoke-virtual {v1}, Ljava/net/Socket;->getOutputStream()Ljava/io/OutputStream;
 
@@ -367,9 +367,9 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :try_start_1
-    iget-object v0, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v0, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-object v0, v0, Lcom/estrongs/fs/b/bl;->j:Ljava/net/Socket;
+    iget-object v0, v0, Lcom/estrongs/fs/b/bn;->j:Ljava/net/Socket;
 
     invoke-virtual {v0}, Ljava/net/Socket;->close()V
     :try_end_1
@@ -377,7 +377,7 @@
 
     :cond_0
     :goto_0
-    invoke-super {p0}, Lcom/estrongs/android/ui/dialog/cg;->dismiss()V
+    invoke-super {p0}, Lcom/estrongs/android/ui/dialog/ci;->dismiss()V
 
     return-void
 
@@ -385,9 +385,9 @@
     move-exception v0
 
     :try_start_2
-    iget-object v0, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v0, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-object v0, v0, Lcom/estrongs/fs/b/bl;->j:Ljava/net/Socket;
+    iget-object v0, v0, Lcom/estrongs/fs/b/bn;->j:Ljava/net/Socket;
 
     invoke-virtual {v0}, Ljava/net/Socket;->close()V
     :try_end_2
@@ -417,27 +417,27 @@
 
     if-ne p2, v2, :cond_2
 
-    iget-object v2, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v2, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-object v2, v2, Lcom/estrongs/fs/b/bl;->a:Ljava/lang/String;
+    iget-object v2, v2, Lcom/estrongs/fs/b/bn;->a:Ljava/lang/String;
 
     if-eqz v2, :cond_3
 
-    iget-object v2, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v2, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-object v2, v2, Lcom/estrongs/fs/b/bl;->h:Ljava/lang/String;
+    iget-object v2, v2, Lcom/estrongs/fs/b/bn;->h:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->g(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->g(Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    iget-object v2, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v2, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-object v2, v2, Lcom/estrongs/fs/b/bl;->h:Ljava/lang/String;
+    iget-object v2, v2, Lcom/estrongs/fs/b/bn;->h:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->h(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->h(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -462,23 +462,23 @@
 
     invoke-virtual {v2, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    iget-object v0, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v0, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-object v0, v0, Lcom/estrongs/fs/b/bl;->a:Ljava/lang/String;
+    iget-object v0, v0, Lcom/estrongs/fs/b/bn;->a:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    iget-object v3, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v3, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-object v3, v3, Lcom/estrongs/fs/b/bl;->h:Ljava/lang/String;
+    iget-object v3, v3, Lcom/estrongs/fs/b/bn;->h:Ljava/lang/String;
 
-    invoke-static {v3}, Lcom/estrongs/android/util/bc;->b(Ljava/lang/String;)I
+    invoke-static {v3}, Lcom/estrongs/android/util/bg;->b(Ljava/lang/String;)I
 
     move-result v3
 
-    invoke-static {v3}, Lcom/estrongs/android/util/bc;->h(I)Ljava/lang/String;
+    invoke-static {v3}, Lcom/estrongs/android/util/bg;->h(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -491,9 +491,9 @@
 
     move-result-object v0
 
-    iget-object v3, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v3, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-object v3, v3, Lcom/estrongs/fs/b/bl;->a:Ljava/lang/String;
+    iget-object v3, v3, Lcom/estrongs/fs/b/bn;->a:Ljava/lang/String;
 
     invoke-static {v0, v2, v3}, Lcom/estrongs/android/pop/view/utils/AppRunner;->a(Landroid/app/Activity;Landroid/content/Intent;Ljava/lang/String;)V
     :try_end_0
@@ -506,9 +506,9 @@
     :try_start_1
     iget-object v0, p0, Lcom/estrongs/a/b/l;->h:Lcom/estrongs/a/b/d;
 
-    iget-object v1, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v1, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-object v1, v1, Lcom/estrongs/fs/b/bl;->j:Ljava/net/Socket;
+    iget-object v1, v1, Lcom/estrongs/fs/b/bn;->j:Ljava/net/Socket;
 
     invoke-virtual {v1}, Ljava/net/Socket;->getOutputStream()Ljava/io/OutputStream;
 
@@ -523,9 +523,9 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     :try_start_2
-    iget-object v0, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v0, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-object v0, v0, Lcom/estrongs/fs/b/bl;->j:Ljava/net/Socket;
+    iget-object v0, v0, Lcom/estrongs/fs/b/bn;->j:Ljava/net/Socket;
 
     invoke-virtual {v0}, Ljava/net/Socket;->close()V
     :try_end_2
@@ -545,7 +545,7 @@
     goto :goto_0
 
     :cond_3
-    iget-object v2, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v2, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
     iget-object v3, p0, Lcom/estrongs/a/b/l;->d:Landroid/widget/CheckBox;
 
@@ -566,9 +566,9 @@
     move v0, v1
 
     :cond_4
-    iput-boolean v0, v2, Lcom/estrongs/fs/b/bl;->k:Z
+    iput-boolean v0, v2, Lcom/estrongs/fs/b/bn;->k:Z
 
-    invoke-static {}, Lcom/estrongs/android/pop/esclasses/ESActivity;->A()Landroid/app/Activity;
+    invoke-static {}, Lcom/estrongs/android/pop/esclasses/ESActivity;->H()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -576,11 +576,11 @@
 
     iget-object v0, p0, Lcom/estrongs/a/b/l;->h:Lcom/estrongs/a/b/d;
 
-    invoke-static {}, Lcom/estrongs/android/pop/esclasses/ESActivity;->A()Landroid/app/Activity;
+    invoke-static {}, Lcom/estrongs/android/pop/esclasses/ESActivity;->H()Landroid/app/Activity;
 
     move-result-object v2
 
-    const v3, 0x7f020163
+    const v3, 0x7f020284
 
     iget-object v4, p0, Lcom/estrongs/a/b/l;->h:Lcom/estrongs/a/b/d;
 
@@ -588,15 +588,15 @@
 
     move-result-object v4
 
-    const v5, 0x7f0b0015
+    const v5, 0x7f080078
 
     invoke-virtual {v4, v5}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v5, p0, Lcom/estrongs/a/b/l;->a:Lcom/estrongs/fs/b/bn;
 
-    invoke-static {v0, v2, v3, v4, v5}, Lcom/estrongs/a/b/d;->a(Lcom/estrongs/a/b/d;Landroid/app/Activity;ILjava/lang/String;Lcom/estrongs/fs/b/bl;)V
+    invoke-static {v0, v2, v3, v4, v5}, Lcom/estrongs/a/b/d;->a(Lcom/estrongs/a/b/d;Landroid/app/Activity;ILjava/lang/String;Lcom/estrongs/fs/b/bn;)V
 
     iput-boolean v1, p0, Lcom/estrongs/a/b/l;->b:Z
 

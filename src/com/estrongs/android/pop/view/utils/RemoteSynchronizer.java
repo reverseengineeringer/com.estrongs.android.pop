@@ -3,7 +3,7 @@ package com.estrongs.android.pop.view.utils;
 import com.estrongs.a.a.o;
 import com.estrongs.android.pop.FexApplication;
 import com.estrongs.android.pop.a;
-import com.estrongs.android.util.am;
+import com.estrongs.android.util.ap;
 import java.io.File;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -11,8 +11,8 @@ import java.util.Map;
 
 public class RemoteSynchronizer
 {
-  public static final String a = a.d + "/synFiles";
-  public static final String b = a.d + "/synMapFiles";
+  public static final String a = a.f + "/synFiles";
+  public static final String b = a.f + "/synMapFiles";
   public static Map<String, RemoteSynchronizer.RemoteFile> c = new HashMap();
   public static Map<String, RemoteSynchronizer.RemoteFile> d = new LinkedHashMap();
   public static aa e;
@@ -74,8 +74,8 @@ public class RemoteSynchronizer
   private static y b(RemoteSynchronizer.RemoteFile paramRemoteFile, ab paramab)
   {
     paramab = new y(paramRemoteFile, paramab);
-    paramRemoteFile = am.bL(am.bk(path));
-    paramab.setDescription(String.format(FexApplication.a().getString(2131428398), new Object[] { paramRemoteFile }));
+    paramRemoteFile = ap.cc(ap.bB(path));
+    paramab.setDescription(String.format(FexApplication.a().getString(2131232393), new Object[] { paramRemoteFile }));
     paramab.addPostListener(i);
     return paramab;
   }
@@ -347,7 +347,7 @@ public class RemoteSynchronizer
     //   31: return
     //   32: invokestatic 158	com/estrongs/android/pop/FexApplication:a	()Lcom/estrongs/android/pop/FexApplication;
     //   35: invokestatic 229	com/estrongs/android/pop/ad:a	(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
-    //   38: invokevirtual 232	com/estrongs/android/pop/ad:o	()Z
+    //   38: invokevirtual 232	com/estrongs/android/pop/ad:p	()Z
     //   41: ifne +27 -> 68
     //   44: new 234	java/io/File
     //   47: dup

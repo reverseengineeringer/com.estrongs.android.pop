@@ -1,26 +1,26 @@
 package com.estrongs.android.ui.e;
 
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.app.diskusage.a;
+import com.estrongs.android.pop.app.diskusage.h;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.dialog.gy;
-import com.estrongs.android.ui.dialog.gz;
-import com.estrongs.android.view.aw;
 
 class ai
-  implements gy
+  implements MenuItem.OnMenuItemClickListener
 {
-  ai(ah paramah) {}
+  ai(m paramm) {}
   
-  public void a(int paramInt)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if (paramInt == 0) {
-      a.a.k.y().g("gallery://local/buckets/");
-    }
-    for (;;)
+    if ((m.a(a).O() == null) || (!(m.a(a).O() instanceof h))) {}
+    do
     {
-      w.j(a.a).dismiss();
-      return;
-      a.a.k.y().g("pic://");
-    }
+      return true;
+      paramMenuItem = m.a(a).O();
+    } while (paramMenuItem == null);
+    new a(m.a(a), (h)paramMenuItem).show();
+    return true;
   }
 }
 

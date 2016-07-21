@@ -53,7 +53,7 @@
 
     move-result-object v1
 
-    invoke-static {p2}, Lcom/estrongs/fs/impl/local/h;->e(Ljava/lang/String;)J
+    invoke-static {p2}, Lcom/estrongs/fs/impl/local/i;->e(Ljava/lang/String;)J
 
     move-result-wide v2
 

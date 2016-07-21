@@ -1,20 +1,16 @@
 package com.estrongs.android.pop.app.a;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.app.ae;
+import android.text.TextUtils;
+import com.estrongs.android.pop.app.messagebox.n;
 
-class b
-  implements MenuItem.OnMenuItemClickListener
+final class b
+  implements com.dianxinos.library.notify.e
 {
-  b(a parama) {}
-  
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void onDataArrive(String paramString1, String paramString2)
   {
-    if (a.a(a) != null) {
-      a.a(a).a();
+    if ((n.d.equals(paramString1)) && (!TextUtils.isEmpty(paramString2))) {
+      com.estrongs.android.pop.app.messagebox.e.a().a(new c(this, paramString2));
     }
-    return true;
   }
 }
 

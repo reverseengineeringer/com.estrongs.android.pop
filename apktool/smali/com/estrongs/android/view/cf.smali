@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Lcom/estrongs/a/a/p;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/fs/h;
-
-.field final synthetic b:Lcom/estrongs/android/view/ce;
+.field final synthetic a:Lcom/estrongs/android/view/bx;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/view/ce;Lcom/estrongs/fs/h;)V
+.method constructor <init>(Lcom/estrongs/android/view/bx;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/view/cf;->b:Lcom/estrongs/android/view/ce;
-
-    iput-object p2, p0, Lcom/estrongs/android/view/cf;->a:Lcom/estrongs/fs/h;
+    iput-object p1, p0, Lcom/estrongs/android/view/cf;->a:Lcom/estrongs/android/view/bx;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,28 +22,21 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+.method public a(Lcom/estrongs/a/a;II)V
+    .locals 1
 
-    new-instance v0, Lcom/estrongs/android/ui/pcs/j;
+    const/4 v0, 0x4
 
-    iget-object v1, p0, Lcom/estrongs/android/view/cf;->b:Lcom/estrongs/android/view/ce;
+    if-ne p3, v0, :cond_0
 
-    iget-object v1, v1, Lcom/estrongs/android/view/ce;->a:Lcom/estrongs/android/view/cd;
+    iget-object v0, p0, Lcom/estrongs/android/view/cf;->a:Lcom/estrongs/android/view/bx;
 
-    iget-object v1, v1, Lcom/estrongs/android/view/cd;->ad:Landroid/app/Activity;
+    invoke-static {v0, p1}, Lcom/estrongs/android/view/bx;->a(Lcom/estrongs/android/view/bx;Lcom/estrongs/a/a;)V
 
-    invoke-direct {v0, v1}, Lcom/estrongs/android/ui/pcs/j;-><init>(Landroid/content/Context;)V
+    iget-object v0, p0, Lcom/estrongs/android/view/cf;->a:Lcom/estrongs/android/view/bx;
 
-    new-instance v1, Lcom/estrongs/android/view/cg;
+    invoke-static {v0}, Lcom/estrongs/android/view/bx;->a(Lcom/estrongs/android/view/bx;)V
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/view/cg;-><init>(Lcom/estrongs/android/view/cf;)V
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/pcs/j;->a(Lcom/estrongs/android/ui/pcs/n;)V
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/j;->show()V
-
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
-
+    :cond_0
     return-void
 .end method

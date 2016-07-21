@@ -90,17 +90,17 @@ public class m
     }
   }
   
-  Bitmap d()
+  Bitmap getBitmap()
   {
     return b;
   }
   
-  int e()
+  int getRegistrationX()
   {
     return d - 20;
   }
   
-  int f()
+  int getRegistrationY()
   {
     return e - 20;
   }
@@ -133,6 +133,12 @@ public class m
   protected void onMeasure(int paramInt1, int paramInt2)
   {
     setMeasuredDimension(b.getWidth(), b.getHeight());
+  }
+  
+  public void setPaint(Paint paramPaint)
+  {
+    c = paramPaint;
+    invalidate();
   }
 }
 

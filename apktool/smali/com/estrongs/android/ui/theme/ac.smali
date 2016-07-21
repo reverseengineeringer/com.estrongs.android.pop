@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
+.implements Lcom/estrongs/android/ui/view/a;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/theme/ThemeFolderActivity;
+.field final synthetic a:Lcom/estrongs/android/ui/theme/ThemeColorActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/theme/ThemeFolderActivity;)V
+.method constructor <init>(Lcom/estrongs/android/ui/theme/ThemeColorActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/theme/ac;->a:Lcom/estrongs/android/ui/theme/ThemeFolderActivity;
+    iput-object p1, p0, Lcom/estrongs/android/ui/theme/ac;->a:Lcom/estrongs/android/ui/theme/ThemeColorActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,24 +22,14 @@
 
 
 # virtual methods
-.method public onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 3
+.method public a(I)V
+    .locals 2
 
-    const/4 v2, 0x0
+    iget-object v0, p0, Lcom/estrongs/android/ui/theme/ac;->a:Lcom/estrongs/android/ui/theme/ThemeColorActivity;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/theme/ac;->a:Lcom/estrongs/android/ui/theme/ThemeFolderActivity;
+    const/4 v1, 0x1
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/theme/ThemeFolderActivity;->b(Lcom/estrongs/android/ui/theme/ThemeFolderActivity;)V
+    invoke-static {v0, v1}, Lcom/estrongs/android/ui/theme/ThemeColorActivity;->a(Lcom/estrongs/android/ui/theme/ThemeColorActivity;Z)Z
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/theme/ac;->a:Lcom/estrongs/android/ui/theme/ThemeFolderActivity;
-
-    const v1, 0x7f0b01ea
-
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/theme/ac;->a:Lcom/estrongs/android/ui/theme/ThemeFolderActivity;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/theme/ThemeFolderActivity;->finish()V
-
-    return v2
+    return-void
 .end method

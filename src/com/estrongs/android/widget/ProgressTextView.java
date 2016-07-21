@@ -1,6 +1,7 @@
 package com.estrongs.android.widget;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
@@ -8,7 +9,7 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
 import android.util.AttributeSet;
 import android.widget.TextView;
-import com.estrongs.android.ui.theme.al;
+import com.estrongs.android.ui.theme.at;
 
 public class ProgressTextView
   extends TextView
@@ -37,9 +38,9 @@ public class ProgressTextView
     super(paramContext, paramAttributeSet, paramInt);
   }
   
-  private int a()
+  private int getProgressColor()
   {
-    return al.a(a).d(2131230730);
+    return at.a(a).c(2131558676);
   }
   
   public void a(int paramInt)
@@ -50,11 +51,16 @@ public class ProgressTextView
   
   public void a(boolean paramBoolean)
   {
+    if (b == paramBoolean)
+    {
+      invalidate();
+      return;
+    }
     b = paramBoolean;
     if (paramBoolean)
     {
       f = getBackground();
-      g = new ColorDrawable(a());
+      g = new ColorDrawable(getProgressColor());
       h = new LayerDrawable(new Drawable[] { f, g });
       setBackgroundDrawable(h);
     }
@@ -62,10 +68,13 @@ public class ProgressTextView
     {
       invalidate();
       return;
-      if (f != null) {
-        setBackgroundDrawable(f);
-      }
+      setBackgroundColor(getContext().getResources().getColor(2131558555));
     }
+  }
+  
+  public int getProgress()
+  {
+    return c;
   }
   
   protected void onDraw(Canvas paramCanvas)

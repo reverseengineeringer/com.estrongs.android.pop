@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/e/cp;
+.field final synthetic a:Lcom/estrongs/android/ui/e/cr;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/cp;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/cr;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/ff;->a:Lcom/estrongs/android/ui/e/cp;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/ff;->a:Lcom/estrongs/android/ui/e/cr;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,10 +22,10 @@
 
 
 # virtual methods
-.method public a(Lcom/estrongs/android/ui/e/co;)Z
+.method public a(Lcom/estrongs/android/ui/e/cp;)Z
     .locals 1
 
-    iget-boolean v0, p1, Lcom/estrongs/android/ui/e/co;->l:Z
+    iget-boolean v0, p1, Lcom/estrongs/android/ui/e/cp;->d:Z
 
     if-eqz v0, :cond_0
 

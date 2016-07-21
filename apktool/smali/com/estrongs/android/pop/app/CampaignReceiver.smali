@@ -32,11 +32,33 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 10
-
-    const/4 v9, 0x1
+    .locals 9
 
     const/4 v1, 0x0
+
+    sget-object v0, Lcom/estrongs/android/pop/app/CampaignReceiver;->a:Ljava/lang/String;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "onReceive intent = "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {p1}, Lcom/estrongs/android/c/a/a;->b(Landroid/content/Context;)V
 
     const-string v0, "referrer"
 
@@ -51,74 +73,52 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object v0
-
-    const-string v2, "&"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
     move-result-object v2
 
-    array-length v3, v2
+    const-string v0, "&"
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v3
+
+    array-length v4, v3
 
     move v0, v1
 
     :goto_0
-    if-ge v0, v3, :cond_1
+    if-ge v0, v4, :cond_2
 
-    aget-object v4, v2, v0
+    aget-object v5, v3, v0
 
-    const-string v5, "="
+    const-string v6, "="
 
-    invoke-virtual {v4, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    invoke-virtual {v5, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
-    move-result-object v4
-
-    if-eqz v4, :cond_0
-
-    array-length v5, v4
-
-    const/4 v6, 0x2
-
-    if-ne v5, v6, :cond_0
-
-    aget-object v5, v4, v1
-
-    const-string v6, "utm_source"
-
-    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
+    move-result-object v5
 
     if-eqz v5, :cond_0
 
+    array-length v6, v5
+
+    const/4 v7, 0x2
+
+    if-ne v6, v7, :cond_0
+
+    aget-object v6, v5, v1
+
+    const-string v7, "utm_source"
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_0
+
     invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
 
-    move-result-object v5
-
-    const-string v6, "Shadow"
-
-    invoke-static {v5, v1, v6}, Lcom/estrongs/android/util/a;->a(Landroid/content/Context;ZLjava/lang/String;)Lcom/estrongs/android/util/a;
-
-    move-result-object v5
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v7, "campaign_"
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     move-result-object v6
 
-    aget-object v7, v4, v9
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v6}, Lcom/estrongs/android/j/c;->a(Landroid/content/Context;)Lcom/estrongs/android/j/c;
 
     move-result-object v6
 
@@ -132,17 +132,19 @@
 
     move-result-object v7
 
-    aget-object v4, v4, v9
+    const/4 v8, 0x1
 
-    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    aget-object v5, v5, v8
 
-    move-result-object v4
+    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v5
 
-    move-result-object v4
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v5, v6, v4}, Lcom/estrongs/android/util/a;->d(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v5
+
+    invoke-virtual {v6, v5}, Lcom/estrongs/android/j/c;->b(Ljava/lang/String;)V
 
     :cond_0
     add-int/lit8 v0, v0, 0x1
@@ -155,5 +157,39 @@
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_1
+    :goto_1
     return-void
+
+    :cond_2
+    sget-object v0, Lcom/estrongs/android/pop/app/CampaignReceiver;->a:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "referrer = "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-static {p1, v2}, Lcom/estrongs/android/c/c/a;->a(Landroid/content/Context;Ljava/lang/String;)V
+
+    goto :goto_1
 .end method

@@ -1,17 +1,45 @@
 package com.estrongs.android.pop.app.imageviewer;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.util.DisplayMetrics;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnTouchListener;
+import com.estrongs.android.widget.RealViewSwitcher;
 
 class bq
-  implements DialogInterface.OnClickListener
+  implements View.OnTouchListener
 {
-  bq(ViewImage21 paramViewImage21) {}
+  boolean a = false;
+  am b = null;
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  bq(ViewImage21 paramViewImage21, View.OnTouchListener paramOnTouchListener) {}
+  
+  public boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    a.d();
-    paramDialogInterface.dismiss();
+    c.onTouch(paramView, paramMotionEvent);
+    if (paramMotionEvent.getPointerCount() > 1)
+    {
+      d.a(paramMotionEvent);
+      return true;
+    }
+    if ((d.g == null) || (d.g.getScale() <= d.g.getDefaultScale()) || ((d.g.getScaledWidth() <= d.k.widthPixels) && (d.g.getScaledHeight() <= d.k.heightPixels)) || (a)) {
+      d.i.onTouchEvent(paramMotionEvent);
+    }
+    for (;;)
+    {
+      if ((a) && (paramMotionEvent.getAction() == 1))
+      {
+        d.i.f();
+        a = false;
+      }
+      d.f.onTouchEvent(paramMotionEvent);
+      return true;
+      if (b == null) {
+        b = new br(this, paramMotionEvent);
+      }
+      d.g.setOnImageEdgeDetector(b);
+    }
   }
 }
 

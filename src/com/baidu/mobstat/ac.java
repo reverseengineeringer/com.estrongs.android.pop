@@ -1,12 +1,16 @@
 package com.baidu.mobstat;
 
-class ac
+ enum ac
 {
-  String a;
-  String b;
-  long c;
+  ac(int paramInt1)
+  {
+    super(paramString, paramInt, paramInt1, null);
+  }
   
-  ac(x paramx) {}
+  public w a()
+  {
+    return new ag();
+  }
 }
 
 /* Location:

@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/e/cp;
+.field final synthetic a:Lcom/estrongs/android/ui/e/cr;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/cp;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/cr;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/do;->a:Lcom/estrongs/android/ui/e/cp;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/do;->a:Lcom/estrongs/android/ui/e/cr;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,22 +22,30 @@
 
 
 # virtual methods
-.method public a(Lcom/estrongs/android/ui/e/co;)Z
+.method public a(Lcom/estrongs/android/ui/e/cp;)Z
     .locals 1
 
-    iget-boolean v0, p1, Lcom/estrongs/android/ui/e/co;->e:Z
-
-    if-eqz v0, :cond_1
-
-    iget-boolean v0, p1, Lcom/estrongs/android/ui/e/co;->N:Z
+    iget-boolean v0, p1, Lcom/estrongs/android/ui/e/cp;->e:Z
 
     if-nez v0, :cond_0
 
-    iget-boolean v0, p1, Lcom/estrongs/android/ui/e/co;->P:Z
+    iget-boolean v0, p1, Lcom/estrongs/android/ui/e/cp;->L:Z
+
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p1, Lcom/estrongs/android/ui/e/cp;->K:Z
+
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p1, Lcom/estrongs/android/ui/e/cp;->l:Z
 
     if-eqz v0, :cond_1
 
     :cond_0
+    iget-boolean v0, p1, Lcom/estrongs/android/ui/e/cp;->af:Z
+
+    if-nez v0, :cond_1
+
     const/4 v0, 0x1
 
     :goto_0

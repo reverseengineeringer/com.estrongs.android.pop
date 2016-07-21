@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background" android:paddingTop="0.0dip" android:paddingBottom="0.0dip">
+        <shape>
+            <gradient android:startColor="@color/c_7fffffff" android:endColor="@color/c_7fffffff" android:centerColor="@color/c_7fffffff" />
+        </shape>
+    </item>
+    <item android:id="@android:id/progress" android:paddingTop="0.0dip" android:paddingBottom="0.0dip">
+        <clip>
+            <shape>
+                <gradient android:startColor="@color/music_play_progress_color" android:endColor="@color/music_play_progress_color" android:angle="0.0" android:centerY="0.45" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

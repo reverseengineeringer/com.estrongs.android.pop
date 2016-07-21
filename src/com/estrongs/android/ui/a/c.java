@@ -1,16 +1,68 @@
 package com.estrongs.android.ui.a;
 
+import android.content.Context;
+import android.graphics.PointF;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.LinearSmoothScroller;
+import android.view.View;
+import com.estrongs.android.util.l;
+
 class c
+  extends LinearSmoothScroller
 {
-  private String b;
-  private int c;
-  private String d;
+  private static final String a = c.class.getSimpleName();
+  private LinearLayoutManager b;
+  private float c = 0.0F;
   
-  c(b paramb, String paramString1, int paramInt, String paramString2)
+  public c(Context paramContext, LinearLayoutManager paramLinearLayoutManager)
   {
-    b = paramString1;
-    c = paramInt;
-    d = paramString2;
+    super(paramContext);
+    b = paramLinearLayoutManager;
+  }
+  
+  public float a()
+  {
+    return c;
+  }
+  
+  public void a(float paramFloat)
+  {
+    c = paramFloat;
+  }
+  
+  protected int calculateTimeForDeceleration(int paramInt)
+  {
+    int i = calculateTimeForScrolling(paramInt);
+    paramInt = i;
+    if (0.0F == c) {
+      paramInt = (int)Math.ceil(i / 0.3356D);
+    }
+    return paramInt;
+  }
+  
+  protected int calculateTimeForScrolling(int paramInt)
+  {
+    if (0.0F == c) {
+      return super.calculateTimeForScrolling(paramInt);
+    }
+    return (int)Math.ceil(Math.abs(paramInt) / c);
+  }
+  
+  public PointF computeScrollVectorForPosition(int paramInt)
+  {
+    int i = b.findFirstVisibleItemPosition();
+    if (-1 == i)
+    {
+      l.d(a, "computeScrollVectorForPosition(" + paramInt + ") no child");
+      return null;
+    }
+    View localView = b.findViewByPosition(i);
+    return new PointF(0.0F, (paramInt - i) * b.getDecoratedMeasuredHeight(localView));
+  }
+  
+  protected int getVerticalSnapPreference()
+  {
+    return -1;
   }
 }
 

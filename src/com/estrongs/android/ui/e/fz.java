@@ -1,16 +1,40 @@
 package com.estrongs.android.ui.e;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.utils.c;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.fs.impl.b.d;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 class fz
-  implements DialogInterface.OnClickListener
+  implements MenuItem.OnMenuItemClickListener
 {
-  fz(fx paramfx) {}
+  fz(cr paramcr) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramDialogInterface.dismiss();
+    Object localObject = cr.a(a);
+    if (((List)localObject).size() == 0) {
+      ak.a(cr.b(a).getBaseContext(), 2131231551, 0);
+    }
+    for (;;)
+    {
+      cr.b(a).B();
+      return true;
+      if ((((List)localObject).size() >= 1) && ((((List)localObject).get(0) instanceof d)))
+      {
+        paramMenuItem = new ArrayList();
+        localObject = ((List)localObject).iterator();
+        while (((Iterator)localObject).hasNext()) {
+          paramMenuItem.add((d)((Iterator)localObject).next());
+        }
+        cr.b(a).ag().c(cr.b(a), paramMenuItem);
+      }
+    }
   }
 }
 

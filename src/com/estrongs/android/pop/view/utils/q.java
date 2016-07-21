@@ -1,36 +1,20 @@
 package com.estrongs.android.pop.view.utils;
 
 import android.os.Message;
-import com.estrongs.android.util.ab;
-import com.estrongs.android.util.y;
+import com.estrongs.android.util.aa;
+import com.estrongs.android.util.af;
 import java.io.File;
 
 class q
-  implements ab
+  implements af
 {
   private int b = 0;
   
   q(n paramn) {}
   
-  public void a(Object paramObject) {}
-  
-  public void a(Object paramObject, long paramLong1, long paramLong2) {}
-  
-  public void a(Object paramObject, Throwable paramThrowable)
+  public void downloadCompleted(Object paramObject)
   {
-    b += 1;
-    paramObject = (y)paramObject;
-    if ((((y)paramObject).g() > 0L) && (((y)paramObject).a() > 0L) && (b < 3))
-    {
-      ((y)paramObject).f();
-      return;
-    }
-    new File(((y)paramObject).e()).delete();
-  }
-  
-  public void b(Object paramObject)
-  {
-    paramObject = (y)paramObject;
+    paramObject = (aa)paramObject;
     Message localMessage = new Message();
     v localv = (v)d;
     arg1 = 123460;
@@ -40,6 +24,22 @@ class q
       a.a(localMessage, 0L);
     }
   }
+  
+  public void downloadError(Object paramObject, Throwable paramThrowable)
+  {
+    b += 1;
+    paramObject = (aa)paramObject;
+    if ((((aa)paramObject).g() > 0L) && (((aa)paramObject).a() > 0L) && (b < 3))
+    {
+      ((aa)paramObject).f();
+      return;
+    }
+    new File(((aa)paramObject).e()).delete();
+  }
+  
+  public void downloadProgress(Object paramObject, long paramLong1, long paramLong2) {}
+  
+  public void downloadStarted(Object paramObject) {}
 }
 
 /* Location:

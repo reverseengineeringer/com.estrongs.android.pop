@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;
+.field final synthetic a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/PopVideoPlayer;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/ki;->a:Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/ki;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,16 +22,22 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
+.method public onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ki;->a:Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ki;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b(Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;)V
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->w(Lcom/estrongs/android/pop/app/PopVideoPlayer;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ki;->a:Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ki;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->finish()V
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->E(Lcom/estrongs/android/pop/app/PopVideoPlayer;)Lcom/estrongs/android/ui/e/ju;
 
-    return-void
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/e/ju;->d()V
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

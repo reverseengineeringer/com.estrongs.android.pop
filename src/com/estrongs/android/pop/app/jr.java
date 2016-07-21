@@ -1,19 +1,17 @@
 package com.estrongs.android.pop.app;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.ui.e.iw;
+import android.os.Handler;
+import android.os.Message;
+import com.estrongs.android.ui.e.jy;
 
 class jr
-  implements MenuItem.OnMenuItemClickListener
+  implements jy
 {
   jr(PopVideoPlayer paramPopVideoPlayer) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void a()
   {
-    PopVideoPlayer.c(a, true);
-    PopVideoPlayer.D(a).d();
-    return true;
+    PopVideoPlayer.f(a).obtainMessage(5).sendToTarget();
   }
 }
 

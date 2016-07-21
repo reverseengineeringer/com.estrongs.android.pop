@@ -2,28 +2,20 @@ package com.estrongs.android.ui.e;
 
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.dialog.gu;
-import com.estrongs.android.ui.view.by;
+import com.estrongs.android.ui.pcs.c;
+import com.estrongs.android.ui.pcs.u;
 
 class ae
   implements MenuItem.OnMenuItemClickListener
 {
-  ae(w paramw) {}
+  ae(m paramm) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if (w.b(a).a()) {}
-    do
-    {
-      return true;
-      a.k.k();
-    } while ((w.i(a) != null) && (w.i(a).isShowing()));
-    w.a(a, new gu(a.b));
-    w.i(a).a(new af(this));
-    w.i(a).a(new ag(this));
-    w.i(a).show();
-    return true;
+    paramMenuItem = new c(m.a(a));
+    paramMenuItem.a(u.a().i());
+    paramMenuItem.a();
+    return false;
   }
 }
 

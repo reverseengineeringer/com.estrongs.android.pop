@@ -2,12 +2,12 @@ package com.estrongs.android.pop.app.compress;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import com.estrongs.io.archive.d;
+import com.estrongs.io.archive.e;
 
 class r
   implements DialogInterface.OnClickListener
 {
-  r(p paramp, be parambe) {}
+  r(p paramp, cb paramcb) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {

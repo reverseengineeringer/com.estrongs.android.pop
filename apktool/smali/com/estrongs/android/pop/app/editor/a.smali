@@ -38,7 +38,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bl(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bC(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -46,7 +46,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p0, v0}, Lcom/estrongs/fs/impl/local/l;->a(Landroid/content/Context;Z)Z
+    invoke-static {p0, v0}, Lcom/estrongs/fs/impl/local/m;->a(Landroid/content/Context;Z)Z
 
     move-result v0
 
@@ -60,9 +60,9 @@
     goto :goto_0
 
     :cond_2
-    new-instance v0, Lcom/estrongs/android/pop/app/editor/ar;
+    new-instance v0, Lcom/estrongs/android/pop/app/editor/aj;
 
-    invoke-direct {v0, p1}, Lcom/estrongs/android/pop/app/editor/ar;-><init>(Ljava/io/File;)V
+    invoke-direct {v0, p1}, Lcom/estrongs/android/pop/app/editor/aj;-><init>(Ljava/io/File;)V
 
     goto :goto_0
 .end method
@@ -72,13 +72,13 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->ba(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->bl(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->bl(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->bC(Ljava/lang/String;)Z
 
     move-result v1
 

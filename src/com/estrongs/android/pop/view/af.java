@@ -1,5 +1,7 @@
 package com.estrongs.android.pop.view;
 
+import com.estrongs.android.ui.guesture.ESGesturePanel;
+
 class af
   implements Runnable
 {
@@ -7,7 +9,12 @@ class af
   
   public void run()
   {
-    a.e(1);
+    try
+    {
+      a.A.c();
+      return;
+    }
+    catch (Exception localException) {}
   }
 }
 

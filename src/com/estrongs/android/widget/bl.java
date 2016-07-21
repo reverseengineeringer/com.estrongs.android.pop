@@ -3,20 +3,11 @@ package com.estrongs.android.widget;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-public class bl
-  implements bk
+public abstract interface bl
 {
-  public void a(ProgressBar paramProgressBar, TextView paramTextView, long paramLong)
-  {
-    paramProgressBar.setMax((int)paramLong);
-    paramTextView.setText(String.valueOf(paramLong));
-  }
+  public abstract void a(ProgressBar paramProgressBar, TextView paramTextView, long paramLong);
   
-  public void b(ProgressBar paramProgressBar, TextView paramTextView, long paramLong)
-  {
-    paramProgressBar.setProgress((int)paramLong);
-    paramTextView.setText(String.valueOf(paramLong));
-  }
+  public abstract void b(ProgressBar paramProgressBar, TextView paramTextView, long paramLong);
 }
 
 /* Location:

@@ -1,7 +1,7 @@
 package com.estrongs.android.pop.view.utils;
 
 import android.app.Activity;
-import com.estrongs.android.ui.view.ag;
+import com.estrongs.android.ui.view.ak;
 
 final class f
   implements Runnable
@@ -10,7 +10,7 @@ final class f
   
   public void run()
   {
-    ag.a(a, 2131427782, 1);
+    ak.a(a, 2131231030, 1);
   }
 }
 

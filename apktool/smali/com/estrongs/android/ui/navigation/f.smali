@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/ui/navigation/r;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Landroid/os/Message;
-
-.field final synthetic b:Lcom/estrongs/android/ui/navigation/e;
+.field final synthetic a:Lcom/estrongs/android/ui/navigation/e;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/navigation/e;Landroid/os/Message;)V
+.method constructor <init>(Lcom/estrongs/android/ui/navigation/e;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/navigation/f;->b:Lcom/estrongs/android/ui/navigation/e;
-
-    iput-object p2, p0, Lcom/estrongs/android/ui/navigation/f;->a:Landroid/os/Message;
+    iput-object p1, p0, Lcom/estrongs/android/ui/navigation/f;->a:Lcom/estrongs/android/ui/navigation/e;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,20 +22,36 @@
 
 
 # virtual methods
-.method public a(Landroid/view/View;)V
+.method public run()V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/navigation/f;->b:Lcom/estrongs/android/ui/navigation/e;
+    const/4 v1, 0x1
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/navigation/e;->a:Lcom/estrongs/android/ui/navigation/a;
+    :goto_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/navigation/f;->a:Lcom/estrongs/android/ui/navigation/e;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/navigation/a;->d(Lcom/estrongs/android/ui/navigation/a;)Landroid/os/Handler;
+    iget-object v0, v0, Lcom/estrongs/android/ui/navigation/e;->a:Lcom/estrongs/android/ui/navigation/c;
+
+    iget-object v0, v0, Lcom/estrongs/android/ui/navigation/c;->a:Lcom/estrongs/android/ui/navigation/MultiWindowActivity;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/navigation/MultiWindowActivity;->e()Lcom/estrongs/android/ui/d/i;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/navigation/f;->a:Landroid/os/Message;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/d/i;->c()I
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+    move-result v0
 
+    if-le v0, v1, :cond_0
+
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->g(I)V
+
+    goto :goto_0
+
+    :cond_0
     return-void
 .end method

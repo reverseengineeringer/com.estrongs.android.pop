@@ -1,45 +1,29 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.fs.FileSystemException;
-import com.estrongs.fs.d;
-import java.util.LinkedList;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.utils.ao;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.view.ak;
+import java.util.List;
 
 class dw
-  extends Thread
+  implements MenuItem.OnMenuItemClickListener
 {
-  dw(cp paramcp, String paramString, LinkedList paramLinkedList1, LinkedList paramLinkedList2)
-  {
-    super(paramString);
-  }
+  dw(cr paramcr) {}
   
-  public void run()
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    try
-    {
-      d.a(cp.a(c)).a(a);
+    paramMenuItem = cr.a(a);
+    if (paramMenuItem.size() == 0) {
+      ak.a(cr.b(a).getBaseContext(), 2131231551, 0);
     }
-    catch (FileSystemException localFileSystemException1)
-    {
-      try
-      {
-        for (;;)
-        {
-          d.a(cp.a(c)).a(b);
-          a.clear();
-          b.clear();
-          return;
-          localFileSystemException1 = localFileSystemException1;
-          localFileSystemException1.printStackTrace();
-        }
-      }
-      catch (FileSystemException localFileSystemException2)
-      {
-        for (;;)
-        {
-          localFileSystemException2.printStackTrace();
-        }
-      }
+    while (paramMenuItem.size() < 1) {
+      return true;
     }
+    ao.a(cr.b(a), paramMenuItem, false);
+    cr.b(a).B();
+    return true;
   }
 }
 

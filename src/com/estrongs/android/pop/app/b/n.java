@@ -1,35 +1,24 @@
 package com.estrongs.android.pop.app.b;
 
-import java.util.concurrent.atomic.AtomicInteger;
+import com.estrongs.fs.h;
+import com.estrongs.fs.impl.r.b;
+import java.util.Comparator;
 
-public class n
-  extends Thread
+class n
+  implements Comparator<h>
 {
-  public Runnable a;
+  n(k paramk) {}
   
-  public n(m paramm, Runnable paramRunnable)
+  public int a(h paramh1, h paramh2)
   {
-    m.a(paramm).incrementAndGet();
-    a = paramRunnable;
-  }
-  
-  public void run()
-  {
-    try
-    {
-      if (a != null) {
-        a.run();
-      }
-      m.a(b).decrementAndGet();
-      return;
+    long l = timeForLog - timeForLog;
+    if (l == 0L) {
+      return 0;
     }
-    catch (Exception localException)
-    {
-      for (;;)
-      {
-        localException.printStackTrace();
-      }
+    if (l < 0L) {
+      return -1;
     }
+    return 1;
   }
 }
 

@@ -1,28 +1,16 @@
 package com.estrongs.android.ui.e;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.pop.z;
-import com.estrongs.android.widget.ae;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class cv
-  implements MenuItem.OnMenuItemClickListener
+  implements DialogInterface.OnClickListener
 {
-  cv(cp paramcp) {}
+  cv(ct paramct) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    int i = -1;
-    if (z.n) {
-      i = -2;
-    }
-    paramMenuItem = new ae(FileExplorerActivity.J(), "adb://", null, i);
-    new cw(this, paramMenuItem);
-    paramMenuItem.a(null, null, new cx(this, paramMenuItem));
-    paramMenuItem.b(true);
-    paramMenuItem.j();
-    return true;
+    paramDialogInterface.dismiss();
   }
 }
 

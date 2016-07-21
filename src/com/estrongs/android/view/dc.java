@@ -1,15 +1,23 @@
 package com.estrongs.android.view;
 
-import android.widget.ExpandableListView;
+import com.estrongs.android.pop.utils.a;
+import com.estrongs.android.util.ap;
 
 class dc
-  implements Runnable
+  implements com.estrongs.android.d.d
 {
-  dc(cq paramcq, int paramInt) {}
+  dc(cr paramcr) {}
   
-  public void run()
+  public void a(String paramString1, String paramString2, Object paramObject)
   {
-    cq.f(b).expandGroup(a);
+    paramString1 = ap.a(ap.F(paramObject.toString()), paramString1, paramString2);
+    paramString1 = a.G.j(paramString1);
+    if (paramString1 == null)
+    {
+      a.a(a.ag, 2131231051);
+      return;
+    }
+    a.c(paramString1);
   }
 }
 

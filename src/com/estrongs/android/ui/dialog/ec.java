@@ -1,32 +1,15 @@
 package com.estrongs.android.ui.dialog;
 
-import android.app.Activity;
-import android.text.ClipboardManager;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.TextView;
-import com.estrongs.android.ui.view.ag;
+import com.estrongs.android.pop.view.FileExplorerActivity;
 
 class ec
-  implements View.OnClickListener
+  implements Runnable
 {
-  ec(eb parameb, Activity paramActivity) {}
+  ec(eb parameb) {}
   
-  public void onClick(View paramView)
+  public void run()
   {
-    paramView = (TextView)eb.a(b, 2131362173);
-    if (paramView != null)
-    {
-      paramView = paramView.getText().toString();
-      Object localObject = a;
-      Activity localActivity = a;
-      localObject = (ClipboardManager)((Activity)localObject).getSystemService("clipboard");
-      if (localObject != null)
-      {
-        ((ClipboardManager)localObject).setText(paramView);
-        ag.a(a, 2131428216, 0);
-      }
-    }
+    a.a.al();
   }
 }
 

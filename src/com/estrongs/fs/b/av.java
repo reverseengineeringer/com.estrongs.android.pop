@@ -1,27 +1,22 @@
 package com.estrongs.fs.b;
 
-import com.estrongs.android.pop.app.LocalFileSharingActivity;
-import com.estrongs.android.pop.zeroconf.u;
-import com.estrongs.android.pop.zeroconf.v;
-import java.net.Inet4Address;
-import java.util.ArrayList;
+import com.estrongs.a.a;
+import com.estrongs.a.a.l;
+import com.estrongs.a.a.m;
 
 class av
-  implements v
+  implements l
 {
   av(au paramau) {}
   
-  public void a(u paramu)
+  public void a(a parama, m paramm)
   {
-    if ((paramu.a()) && (f != null) && ((au.c(a) instanceof LocalFileSharingActivity)))
+    if (a.g != d)
     {
-      au.a(f.getAddress(), b);
-      au.a(a).add(f.getHostAddress());
-      ((LocalFileSharingActivity)au.c(a)).runOnUiThread(new aw(this));
+      a.sendMessage(1, new Object[] { Long.valueOf(d - a.g), a });
+      a.g = d;
     }
   }
-  
-  public void b(u paramu) {}
 }
 
 /* Location:

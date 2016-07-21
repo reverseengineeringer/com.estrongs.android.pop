@@ -1,17 +1,19 @@
 package com.estrongs.android.d;
 
-import android.graphics.drawable.Drawable;
-import com.estrongs.fs.h;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
-public abstract interface j
+class j
+  implements DialogInterface.OnClickListener
 {
-  public abstract Drawable a(h paramh);
+  j(i parami) {}
   
-  public abstract Drawable a(h paramh, String paramString);
-  
-  public abstract String[] d();
-  
-  public abstract boolean h(h paramh);
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  {
+    i.a(a, i.b);
+    i.a(a, true);
+    a.dismiss();
+  }
 }
 
 /* Location:

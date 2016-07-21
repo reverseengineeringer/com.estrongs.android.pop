@@ -5,7 +5,7 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import com.estrongs.android.pop.m;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.util.am;
+import com.estrongs.android.util.ap;
 import com.estrongs.fs.b.f;
 
 class b
@@ -16,11 +16,11 @@ class b
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
     paramDialogInterface.dismiss();
-    paramDialogInterface = FileExplorerActivity.J();
+    paramDialogInterface = FileExplorerActivity.X();
     f localf = new f(a.a);
-    localf.setDescription(String.format(a.a(a).getString(2131428731), new Object[] { am.bL(a.a.getAbsolutePath()) }));
+    localf.setDescription(String.format(a.a(a).getString(2131230908), new Object[] { ap.cc(a.a.getAbsolutePath()) }));
     localf.setTaskDecisionListener(new m(paramDialogInterface));
-    new jw(paramDialogInterface, paramDialogInterface.getString(2131428733), localf).show();
+    new kh(paramDialogInterface, paramDialogInterface.getString(2131230861), localf).show();
     localf.execute();
   }
 }

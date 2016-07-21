@@ -1,16 +1,36 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.text.Editable;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.EditText;
 
 class dq
-  implements DialogInterface.OnClickListener
+  implements CompoundButton.OnCheckedChangeListener
 {
-  dq(dn paramdn) {}
+  dq(dp paramdp, int paramInt) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void onCheckedChanged(CompoundButton paramCompoundButton, boolean paramBoolean)
   {
-    a.b();
+    if (paramBoolean)
+    {
+      dp.a(b).setInputType(144);
+      if (dp.b(b)) {
+        dp.c(b).setInputType(144);
+      }
+    }
+    for (;;)
+    {
+      dp.a(b).setSelection(dp.a(b).getText().length());
+      if (dp.b(b)) {
+        dp.c(b).setSelection(dp.c(b).getText().length());
+      }
+      return;
+      dp.a(b).setInputType(a);
+      if (dp.b(b)) {
+        dp.c(b).setInputType(a);
+      }
+    }
   }
 }
 

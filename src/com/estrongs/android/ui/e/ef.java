@@ -1,27 +1,19 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.pop.z;
 import com.estrongs.android.view.a.b;
 
 class ef
   implements b
 {
-  ef(cp paramcp) {}
+  ef(cr paramcr) {}
   
-  public boolean a(co paramco)
+  public boolean a(cp paramcp)
   {
-    if (z.r) {}
-    do
-    {
-      return false;
-      if ((h) && ((P) || (T))) {
-        return true;
-      }
-      if (((e) || (((f) || (x) || (g)) && (!d))) && ((P) || (T))) {
-        return true;
-      }
-    } while (!i);
-    return true;
+    if ((e) || (L) || (I) || (J) || (K) || (H) || (l)) {}
+    while (((h) && (N == 1) && (O)) || (((f) || (y)) && (((!d) && (N == 1) && (O)) || (n) || (B) || (i) || (j) || (k) || ((q) && (O)) || (m)))) {
+      return true;
+    }
+    return false;
   }
 }
 

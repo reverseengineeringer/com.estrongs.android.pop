@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_pressed="true" android:drawable="@drawable/main_addressbar_access_click" />
-    <item android:state_focused="true" android:drawable="@drawable/main_addressbar_access_click" />
-    <item android:drawable="@drawable/main_addressbar_access" />
+    <item android:state_pressed="true" android:drawable="@drawable/toolbar_menu" />
+    <item android:state_focused="true" android:drawable="@drawable/toolbar_menu" />
+    <item android:drawable="@drawable/toolbar_menu" />
 </selector>

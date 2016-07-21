@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:scrollbarThumbVertical="@drawable/offerwall_scrollbar_bg" android:scrollbarStyle="outsideOverlay" android:id="@id/listView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:divider="@android:color/transparent" />
+    <include android:id="@id/duapps_ad_empty" android:visibility="gone" layout="@layout/toolbox_empty" />
+</RelativeLayout>

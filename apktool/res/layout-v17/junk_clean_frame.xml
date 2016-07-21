@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/dp_54"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:paddingLeft="@dimen/dp_10" android:paddingRight="@dimen/dp_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/junk_total_size" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:paddingStart="@dimen/dp_10" android:paddingEnd="@dimen/dp_10" android:layout_alignParentStart="true">
+        <TextView android:textSize="@dimen/dp_15" android:textColor="@color/c_99000000" android:id="@id/junk_clean_fram_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Memory boost" android:singleLine="true" android:drawableRight="@drawable/icon_uparrow" android:drawablePadding="@dimen/dp_10" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/dp_13" android:textColor="@color/c_66000000" android:gravity="center|right" android:id="@id/junk_total_size" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxWidth="@dimen/dp_100" android:text="354MB" android:singleLine="true" android:layout_toLeftOf="@id/junk_clean_item_checkbox_wrap" />
+    <LinearLayout android:gravity="center_vertical" android:id="@id/junk_clean_item_checkbox_wrap" android:paddingLeft="@dimen/dp_20" android:paddingRight="@dimen/dp_20" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:layout_alignParentEnd="true">
+        <com.estrongs.android.ui.view.TripleStateCheckBox android:id="@id/junk_clean_item_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_checkbox_other" />
+    </LinearLayout>
+    <View android:id="@id/divider" android:background="@color/c_d7d7d9" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+</RelativeLayout>

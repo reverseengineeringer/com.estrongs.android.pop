@@ -34,7 +34,7 @@
     if-ne p3, v0, :cond_2
 
     :cond_0
-    instance-of v0, p1, Lcom/estrongs/fs/b/ap;
+    instance-of v0, p1, Lcom/estrongs/fs/b/ar;
 
     if-nez v0, :cond_1
 

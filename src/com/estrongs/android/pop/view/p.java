@@ -1,5 +1,9 @@
 package com.estrongs.android.pop.view;
 
+import com.estrongs.android.util.ap;
+import com.estrongs.android.view.cr;
+import java.util.List;
+
 class p
   implements Runnable
 {
@@ -7,7 +11,23 @@ class p
   
   public void run()
   {
-    a.finish();
+    List localList = a.w;
+    int i = 0;
+    for (;;)
+    {
+      if (i < localList.size())
+      {
+        cr localcr = (cr)localList.get(i);
+        if ((localcr != null) && (ap.cg(localcr.c()))) {
+          a.b(localcr);
+        }
+      }
+      else
+      {
+        return;
+      }
+      i += 1;
+    }
   }
 }
 

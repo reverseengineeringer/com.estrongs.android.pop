@@ -1,21 +1,30 @@
 package com.estrongs.fs.impl.a;
 
-import android.database.DatabaseUtils;
 import com.estrongs.fs.h;
+import com.estrongs.fs.impl.i.a;
 import com.estrongs.fs.impl.local.f;
-import com.estrongs.fs.impl.media.d;
 
 public class c
-  extends d
+  extends a
 {
-  protected h a(f paramf)
+  private static c a;
+  
+  private c()
   {
-    return new a(paramf);
+    super(6);
   }
   
-  protected String a()
+  public static c a()
   {
-    return "_data like " + DatabaseUtils.sqlEscapeString("%.apk");
+    if (a == null) {
+      a = new c();
+    }
+    return a;
+  }
+  
+  protected h a(f paramf)
+  {
+    return new b(paramf);
   }
 }
 

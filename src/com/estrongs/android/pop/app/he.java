@@ -1,8 +1,8 @@
 package com.estrongs.android.pop.app;
 
-import android.preference.EditTextPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
+import com.estrongs.android.pop.FexApplication;
 import com.estrongs.android.pop.ad;
 
 class he
@@ -12,27 +12,19 @@ class he
   
   public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
   {
-    paramObject = paramObject.toString();
-    if (((String)paramObject).trim().equals(""))
+    if (((Boolean)paramObject).booleanValue())
     {
-      a.showDialog(105);
-      return false;
-    }
-    boolean bool = PopPreferenceActivity.a(a, (String)paramObject);
-    paramPreference = (Preference)paramObject;
-    if (((String)paramObject).charAt(((String)paramObject).length() - 1) != '/') {
-      paramPreference = (String)paramObject + "/";
-    }
-    PopPreferenceActivity.b(a, paramPreference);
-    PopPreferenceActivity.a(a, 1);
-    if (bool)
-    {
-      PopPreferenceActivity.d(a).setSummary(paramPreference);
-      PopPreferenceActivity.d(a).setText(paramPreference);
-      a.b.s(paramPreference);
+      paramPreference = ad.a(a).H();
+      if ((paramPreference == null) || (paramPreference.length() == 0))
+      {
+        a.showDialog(113);
+        return false;
+      }
+      a.p.setEnabled(true);
+      FexApplication.a().e(((Boolean)paramObject).booleanValue());
       return true;
     }
-    a.showDialog(105);
+    a.showDialog(114);
     return false;
   }
 }

@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/preference/fragments/DownloadPreferenceFragment;
+.field final synthetic a:Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/preference/fragments/DownloadPreferenceFragment;)V
+.method constructor <init>(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/preference/fragments/ak;->a:Lcom/estrongs/android/ui/preference/fragments/DownloadPreferenceFragment;
+    iput-object p1, p0, Lcom/estrongs/android/ui/preference/fragments/ak;->a:Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,49 +23,21 @@
 
 # virtual methods
 .method public onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
-    .locals 5
+    .locals 2
 
-    const/4 v4, 0x1
+    iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/ak;->a:Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/ak;->a:Lcom/estrongs/android/ui/preference/fragments/DownloadPreferenceFragment;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/preference/fragments/DownloadPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-static {v0}, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->c(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)Landroid/os/Handler;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/app/Activity;->getPackageManager()Landroid/content/pm/PackageManager;
+    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/al;
 
-    move-result-object v0
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/al;-><init>(Lcom/estrongs/android/ui/preference/fragments/ak;)V
 
-    new-instance v1, Landroid/content/ComponentName;
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    iget-object v2, p0, Lcom/estrongs/android/ui/preference/fragments/ak;->a:Lcom/estrongs/android/ui/preference/fragments/DownloadPreferenceFragment;
+    const/4 v0, 0x1
 
-    invoke-virtual {v2}, Lcom/estrongs/android/ui/preference/fragments/DownloadPreferenceFragment;->getActivity()Landroid/app/Activity;
-
-    move-result-object v2
-
-    const-class v3, Lcom/estrongs/android/pop/app/BrowserDownloaderActivity;
-
-    invoke-direct {v1, v2, v3}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    check-cast p2, Ljava/lang/Boolean;
-
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    const/4 v2, 0x2
-
-    invoke-virtual {v0, v1, v2, v4}, Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName;II)V
-
-    :goto_0
-    return v4
-
-    :cond_0
-    invoke-virtual {v0, v1, v4, v4}, Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName;II)V
-
-    goto :goto_0
+    return v0
 .end method

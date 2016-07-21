@@ -1,54 +1,19 @@
 package android.support.v4.widget;
 
-import android.content.Context;
-import android.view.animation.Interpolator;
+import android.content.res.ColorStateList;
+import android.graphics.PorterDuff.Mode;
+import android.widget.CompoundButton;
 
 class n
-  implements l
 {
-  public Object a(Context paramContext, Interpolator paramInterpolator)
+  static void a(CompoundButton paramCompoundButton, ColorStateList paramColorStateList)
   {
-    return p.a(paramContext, paramInterpolator);
+    paramCompoundButton.setButtonTintList(paramColorStateList);
   }
   
-  public void a(Object paramObject, int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5)
+  static void a(CompoundButton paramCompoundButton, PorterDuff.Mode paramMode)
   {
-    p.a(paramObject, paramInt1, paramInt2, paramInt3, paramInt4, paramInt5);
-  }
-  
-  public boolean a(Object paramObject)
-  {
-    return p.a(paramObject);
-  }
-  
-  public int b(Object paramObject)
-  {
-    return p.b(paramObject);
-  }
-  
-  public int c(Object paramObject)
-  {
-    return p.c(paramObject);
-  }
-  
-  public boolean d(Object paramObject)
-  {
-    return p.d(paramObject);
-  }
-  
-  public void e(Object paramObject)
-  {
-    p.e(paramObject);
-  }
-  
-  public int f(Object paramObject)
-  {
-    return p.f(paramObject);
-  }
-  
-  public int g(Object paramObject)
-  {
-    return p.g(paramObject);
+    paramCompoundButton.setButtonTintMode(paramMode);
   }
 }
 

@@ -1,6 +1,6 @@
 package com.estrongs.fs.impl.usb.fs.ntfs;
 
-import android.util.Log;
+import com.estrongs.android.util.l;
 import com.estrongs.fs.impl.usb.fs.ntfs.a.a;
 import com.estrongs.fs.impl.usb.fs.ntfs.a.h;
 import com.estrongs.fs.impl.usb.fs.ntfs.a.i;
@@ -44,7 +44,7 @@ public class n
               continue;
             }
             if (d) {
-              Log.d(c, "All attributes stored");
+              l.b(c, "All attributes stored");
             }
             q localq = l();
             h localh = localq.a();
@@ -57,14 +57,14 @@ public class n
           }
           catch (Exception localException)
           {
-            Log.e(c, "Error getting attributes for entry: " + this, localException);
+            l.c(c, "Error getting attributes for entry: " + this, localException);
           }
         }
         return (List<h>)localObject1;
       }
       finally {}
       if (d) {
-        Log.d(c, "Attributes in attribute list");
+        l.b(c, "Attributes in attribute list");
       }
       Object localObject1 = new r(this, null);
     }
@@ -103,7 +103,7 @@ public class n
   public q a(int paramInt, String paramString)
   {
     if (d) {
-      Log.d(c, "findAttributesByTypeAndName(0x" + e.a(paramInt, 4) + "," + paramString + ")");
+      l.b(c, "findAttributesByTypeAndName(0x" + e.a(paramInt, 4) + "," + paramString + ")");
     }
     return new p(this, n().iterator(), paramInt, paramString);
   }
@@ -113,7 +113,7 @@ public class n
     if (o() != 1162627398)
     {
       if (d) {
-        Log.d(c, "Invalid magic number found for FILE record: " + o() + " -- dumping buffer");
+        l.b(c, "Invalid magic number found for FILE record: " + o() + " -- dumping buffer");
       }
       int i = 0;
       while (i < s().length)
@@ -127,7 +127,7 @@ public class n
           j += 1;
         }
         if (d) {
-          Log.d(c, localStringBuilder.toString());
+          l.b(c, localStringBuilder.toString());
         }
         i += 32;
       }
@@ -147,7 +147,7 @@ public class n
   public void a(String paramString, long paramLong, byte[] paramArrayOfByte, int paramInt1, int paramInt2)
   {
     if (d) {
-      Log.d(c, "readData: offset " + paramLong + " stream: " + paramString + " length " + paramInt2 + ", file record = " + this);
+      l.b(c, "readData: offset " + paramLong + " stream: " + paramString + " length " + paramInt2 + ", file record = " + this);
     }
     if (paramInt2 == 0) {}
     q localq;
@@ -172,7 +172,7 @@ public class n
       }
       paramString.a(paramString.l() + (int)paramLong, paramArrayOfByte, paramInt1, paramInt2);
     } while (!d);
-    Log.d(c, "readData: read from resident data");
+    l.b(c, "readData: read from resident data");
     return;
     int k = r().b();
     long l = paramLong / k;
@@ -188,10 +188,10 @@ public class n
     for (;;)
     {
       if (d) {
-        Log.d(c, "readData: read " + j + " from non-resident attributes");
+        l.b(c, "readData: read " + j + " from non-resident attributes");
       }
       if (j == m) {
-        break label495;
+        break label492;
       }
       throw new IOException("Requested " + m + " clusters but only read " + j + ", offset = " + paramInt1 + ", file record = " + this);
       l -= paramString.p();
@@ -202,7 +202,7 @@ public class n
         break;
       }
     }
-    label495:
+    label492:
     System.arraycopy(arrayOfByte, (int)paramLong % k, paramArrayOfByte, paramInt1, paramInt2);
   }
   
@@ -230,7 +230,7 @@ public class n
   public h b(int paramInt)
   {
     if (d) {
-      Log.d(c, "findAttributeByType(0x" + e.a(paramInt, 4) + ")");
+      l.b(c, "findAttributeByType(0x" + e.a(paramInt, 4) + ")");
     }
     Iterator localIterator = n().iterator();
     while (localIterator.hasNext())
@@ -239,13 +239,13 @@ public class n
       if (localh.e() == paramInt)
       {
         if (d) {
-          Log.d(c, "findAttributeByType(0x" + e.a(paramInt, 4) + ") found");
+          l.b(c, "findAttributeByType(0x" + e.a(paramInt, 4) + ") found");
         }
         return localh;
       }
     }
     if (d) {
-      Log.d(c, "findAttributeByType(0x" + e.a(paramInt, 4) + ") not found");
+      l.b(c, "findAttributeByType(0x" + e.a(paramInt, 4) + ") not found");
     }
     return null;
   }
@@ -258,7 +258,7 @@ public class n
   public q c(int paramInt)
   {
     if (d) {
-      Log.d(c, "findAttributesByType(0x" + e.a(paramInt, 4) + ")");
+      l.b(c, "findAttributesByType(0x" + e.a(paramInt, 4) + ")");
     }
     return new o(this, n().iterator(), paramInt);
   }

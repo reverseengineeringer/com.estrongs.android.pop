@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="@dimen/dp_15" android:paddingRight="@dimen/dp_15" android:layout_width="fill_parent" android:layout_height="@dimen/dp_38"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/analysis_loading_popview_item_progressbar" android:layout_width="@dimen/dp_18" android:layout_height="@dimen/dp_18" android:indeterminateDrawable="@drawable/analysis_loading_progress" android:indeterminateDuration="1000" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/analysis_loading_popview_item_img_finished" android:visibility="gone" android:layout_width="@dimen/dp_18" android:layout_height="@dimen/dp_18" android:src="@drawable/home_junk_icon_scan_ok" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_button_text_disabled" android:gravity="center_vertical" android:id="@id/analysis_loading_popview_item_txt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_15" android:singleLine="true" android:layout_toRightOf="@id/analysis_loading_popview_item_progressbar" android:layout_centerVertical="true" />
+</RelativeLayout>

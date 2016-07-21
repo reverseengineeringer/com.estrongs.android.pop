@@ -1,23 +1,23 @@
-.class final Lcom/estrongs/android/pop/utils/as;
+.class Lcom/estrongs/android/pop/utils/as;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/a/a/p;
+.implements Lcom/estrongs/a/a/o;
 
 
 # instance fields
-.field final synthetic a:Landroid/app/Activity;
+.field final synthetic a:Ljava/lang/String;
 
-.field final synthetic b:Ljava/util/List;
+.field final synthetic b:Lcom/estrongs/android/pop/utils/ap;
 
 
 # direct methods
-.method constructor <init>(Landroid/app/Activity;Ljava/util/List;)V
+.method constructor <init>(Lcom/estrongs/android/pop/utils/ap;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/utils/as;->a:Landroid/app/Activity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/utils/as;->b:Lcom/estrongs/android/pop/utils/ap;
 
-    iput-object p2, p0, Lcom/estrongs/android/pop/utils/as;->b:Ljava/util/List;
+    iput-object p2, p0, Lcom/estrongs/android/pop/utils/as;->a:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,27 +26,56 @@
 
 
 # virtual methods
-.method public a(Lcom/estrongs/a/a;II)V
-    .locals 2
+.method public a(Lcom/estrongs/a/a;Z)V
+    .locals 3
 
-    const/4 v0, 0x4
+    if-eqz p2, :cond_1
 
-    if-ne p3, v0, :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/pop/utils/as;->a:Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/utils/as;->a:Landroid/app/Activity;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bl(Ljava/lang/String;)Z
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/utils/as;->b:Ljava/util/List;
+    move-result v0
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/pop/utils/aj;->b(Landroid/app/Activity;Ljava/util/List;)V
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/utils/as;->b:Lcom/estrongs/android/pop/utils/ap;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/utils/ap;->b:Landroid/app/Activity;
+
+    instance-of v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/utils/as;->b:Lcom/estrongs/android/pop/utils/ap;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/utils/ap;->b:Landroid/app/Activity;
+
+    check-cast v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->O()Lcom/estrongs/android/view/cr;
+
+    move-result-object v0
+
+    instance-of v1, v0, Lcom/estrongs/android/ui/c/e;
+
+    if-nez v1, :cond_0
+
+    instance-of v1, v0, Lcom/estrongs/android/view/er;
+
+    if-eqz v1, :cond_1
 
     :cond_0
-    :goto_0
-    return-void
+    iget-object v1, p0, Lcom/estrongs/android/pop/utils/as;->b:Lcom/estrongs/android/pop/utils/ap;
+
+    iget-object v1, v1, Lcom/estrongs/android/pop/utils/ap;->b:Landroid/app/Activity;
+
+    new-instance v2, Lcom/estrongs/android/pop/utils/at;
+
+    invoke-direct {v2, p0, v0}, Lcom/estrongs/android/pop/utils/at;-><init>(Lcom/estrongs/android/pop/utils/as;Lcom/estrongs/android/view/cr;)V
+
+    invoke-virtual {v1, v2}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     :cond_1
-    const/4 v0, 0x5
-
-    if-ne p3, v0, :cond_0
-
-    goto :goto_0
+    return-void
 .end method

@@ -1,26 +1,31 @@
 package com.estrongs.android.pop.app;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.ui.e.iw;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.os.Handler;
 
-class je
-  implements MenuItem.OnMenuItemClickListener
+public class je
 {
-  je(PopVideoPlayer paramPopVideoPlayer) {}
+  private static ProgressDialog a = null;
+  private static boolean b = false;
+  private static Handler c = new Handler();
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public static final void a()
   {
-    PopVideoPlayer.y(a);
-    PopVideoPlayer.z(a).d();
-    if (a.f) {
-      PopVideoPlayer.A(a);
+    if (!b) {
+      return;
     }
-    for (;;)
-    {
-      return true;
-      PopVideoPlayer.B(a);
-    }
+    c.post(new jf());
+  }
+  
+  public static final void a(Context paramContext)
+  {
+    b = true;
+    a = new ProgressDialog(paramContext);
+    a.setMessage(paramContext.getText(2131232182));
+    a.setIndeterminate(true);
+    a.setCancelable(true);
+    a.show();
   }
 }
 

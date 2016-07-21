@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:id="@id/lock_screen_info_cycle" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.dianxinos.lockscreen.ui.InfoProgressView android:layout_gravity="center" android:id="@id/lock_screen_info_cycle_progress" android:layout_width="@dimen/lock_screen_info_cycle_width" android:layout_height="@dimen/lock_screen_info_cycle_width" />
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/lock_screen_info_cycle_text_size" android:textColor="@android:color/white" android:id="@id/lock_screen_info_cycle_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/lock_screen_info_cycle_half_text_size" android:textColor="@android:color/white" android:id="@id/lock_screen_info_cycle_percent_sign" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lock_screen_percent_sign" />
+    </LinearLayout>
+</merge>

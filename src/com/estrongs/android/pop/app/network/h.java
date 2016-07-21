@@ -1,16 +1,21 @@
 package com.estrongs.android.pop.app.network;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.content.Intent;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.app.ESNetSettingActivity;
 
 class h
-  implements View.OnClickListener
+  implements MenuItem.OnMenuItemClickListener
 {
   h(EsNetworkActivity paramEsNetworkActivity) {}
   
-  public void onClick(View paramView)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    a.finish();
+    paramMenuItem = new Intent(a, ESNetSettingActivity.class);
+    paramMenuItem.setFlags(268435456);
+    a.startActivity(paramMenuItem);
+    return false;
   }
 }
 

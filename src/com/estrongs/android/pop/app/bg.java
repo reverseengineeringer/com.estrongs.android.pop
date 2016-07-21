@@ -1,85 +1,105 @@
 package com.estrongs.android.pop.app;
 
-class bg
-  implements Runnable
+import com.estrongs.android.util.an;
+import java.net.Inet4Address;
+import java.util.ArrayList;
+import java.util.concurrent.ExecutorService;
+
+public class bg
+  implements bn
 {
-  bg(be parambe) {}
+  private static final String a = bg.class.getSimpleName();
+  private static bg b = null;
+  private ArrayList<bm> c = new ArrayList();
+  private boolean d = false;
+  private ExecutorService e;
+  
+  public static bg a()
+  {
+    if (b == null) {
+      b = new bg();
+    }
+    return b;
+  }
+  
+  public void a(bm parambm)
+  {
+    if ((!d) || (c.contains(parambm)) || ((an.a() != null) && (an.a().equals(a.getHostAddress())))) {
+      return;
+    }
+    c.add(parambm);
+    e.execute(new bh(this, parambm));
+  }
   
   /* Error */
-  public void run()
+  public void b()
   {
     // Byte code:
     //   0: aload_0
-    //   1: getfield 12	com/estrongs/android/pop/app/bg:a	Lcom/estrongs/android/pop/app/be;
-    //   4: invokestatic 25	com/estrongs/android/pop/app/be:c	(Lcom/estrongs/android/pop/app/be;)Ljava/lang/Object;
-    //   7: astore_1
-    //   8: aload_1
-    //   9: monitorenter
-    //   10: aload_0
-    //   11: getfield 12	com/estrongs/android/pop/app/bg:a	Lcom/estrongs/android/pop/app/be;
-    //   14: invokestatic 29	com/estrongs/android/pop/app/be:d	(Lcom/estrongs/android/pop/app/be;)Lcom/estrongs/android/pop/zeroconf/w;
-    //   17: astore_2
-    //   18: aload_2
-    //   19: ifnull +6 -> 25
-    //   22: aload_1
-    //   23: monitorexit
-    //   24: return
-    //   25: aload_0
-    //   26: getfield 12	com/estrongs/android/pop/app/bg:a	Lcom/estrongs/android/pop/app/be;
-    //   29: new 31	com/estrongs/android/pop/zeroconf/w
-    //   32: dup
-    //   33: invokestatic 36	com/estrongs/android/pop/FexApplication:a	()Lcom/estrongs/android/pop/FexApplication;
-    //   36: iconst_2
-    //   37: invokespecial 39	com/estrongs/android/pop/zeroconf/w:<init>	(Landroid/content/Context;I)V
-    //   40: invokestatic 42	com/estrongs/android/pop/app/be:a	(Lcom/estrongs/android/pop/app/be;Lcom/estrongs/android/pop/zeroconf/w;)Lcom/estrongs/android/pop/zeroconf/w;
-    //   43: pop
-    //   44: aload_0
-    //   45: getfield 12	com/estrongs/android/pop/app/bg:a	Lcom/estrongs/android/pop/app/be;
-    //   48: invokestatic 29	com/estrongs/android/pop/app/be:d	(Lcom/estrongs/android/pop/app/be;)Lcom/estrongs/android/pop/zeroconf/w;
-    //   51: getstatic 46	com/estrongs/android/pop/zeroconf/w:b	Ljava/lang/String;
-    //   54: getstatic 47	com/estrongs/android/pop/app/be:b	Ljava/lang/String;
-    //   57: getstatic 50	com/estrongs/android/pop/app/be:a	I
-    //   60: invokevirtual 53	com/estrongs/android/pop/zeroconf/w:a	(Ljava/lang/String;Ljava/lang/String;I)Z
-    //   63: pop
-    //   64: aload_0
-    //   65: getfield 12	com/estrongs/android/pop/app/bg:a	Lcom/estrongs/android/pop/app/be;
-    //   68: invokestatic 29	com/estrongs/android/pop/app/be:d	(Lcom/estrongs/android/pop/app/be;)Lcom/estrongs/android/pop/zeroconf/w;
-    //   71: aload_0
-    //   72: getfield 12	com/estrongs/android/pop/app/bg:a	Lcom/estrongs/android/pop/app/be;
-    //   75: invokevirtual 56	com/estrongs/android/pop/zeroconf/w:a	(Lcom/estrongs/android/pop/zeroconf/v;)V
-    //   78: aload_1
-    //   79: monitorexit
-    //   80: return
-    //   81: astore_2
-    //   82: aload_1
-    //   83: monitorexit
-    //   84: aload_2
-    //   85: athrow
-    //   86: astore_2
-    //   87: aload_0
-    //   88: getfield 12	com/estrongs/android/pop/app/bg:a	Lcom/estrongs/android/pop/app/be;
-    //   91: aconst_null
-    //   92: invokestatic 42	com/estrongs/android/pop/app/be:a	(Lcom/estrongs/android/pop/app/be;Lcom/estrongs/android/pop/zeroconf/w;)Lcom/estrongs/android/pop/zeroconf/w;
-    //   95: pop
-    //   96: aload_2
-    //   97: invokevirtual 59	java/lang/Exception:printStackTrace	()V
-    //   100: goto -22 -> 78
+    //   1: monitorenter
+    //   2: aload_0
+    //   3: getfield 40	com/estrongs/android/pop/app/bg:d	Z
+    //   6: istore_1
+    //   7: iload_1
+    //   8: ifeq +6 -> 14
+    //   11: aload_0
+    //   12: monitorexit
+    //   13: return
+    //   14: aload_0
+    //   15: iconst_3
+    //   16: invokestatic 88	java/util/concurrent/Executors:newFixedThreadPool	(I)Ljava/util/concurrent/ExecutorService;
+    //   19: putfield 71	com/estrongs/android/pop/app/bg:e	Ljava/util/concurrent/ExecutorService;
+    //   22: aload_0
+    //   23: getfield 38	com/estrongs/android/pop/app/bg:c	Ljava/util/ArrayList;
+    //   26: invokevirtual 91	java/util/ArrayList:clear	()V
+    //   29: aload_0
+    //   30: iconst_1
+    //   31: putfield 40	com/estrongs/android/pop/app/bg:d	Z
+    //   34: invokestatic 96	com/estrongs/android/pop/app/bi:a	()Lcom/estrongs/android/pop/app/bi;
+    //   37: aload_0
+    //   38: invokevirtual 99	com/estrongs/android/pop/app/bi:a	(Lcom/estrongs/android/pop/app/bn;)V
+    //   41: invokestatic 96	com/estrongs/android/pop/app/bi:a	()Lcom/estrongs/android/pop/app/bi;
+    //   44: invokevirtual 101	com/estrongs/android/pop/app/bi:c	()V
+    //   47: goto -36 -> 11
+    //   50: astore_2
+    //   51: aload_0
+    //   52: monitorexit
+    //   53: aload_2
+    //   54: athrow
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	103	0	this	bg
-    //   17	2	2	localw	com.estrongs.android.pop.zeroconf.w
-    //   81	4	2	localObject2	Object
-    //   86	11	2	localException	Exception
+    //   0	55	0	this	bg
+    //   6	2	1	bool	boolean
+    //   50	4	2	localObject	Object
     // Exception table:
     //   from	to	target	type
-    //   10	18	81	finally
-    //   22	24	81	finally
-    //   25	78	81	finally
-    //   78	80	81	finally
-    //   82	84	81	finally
-    //   87	100	81	finally
-    //   10	18	86	java/lang/Exception
-    //   25	78	86	java/lang/Exception
+    //   2	7	50	finally
+    //   14	47	50	finally
+  }
+  
+  public void b(bm parambm)
+  {
+    if (d) {
+      c.remove(parambm);
+    }
+  }
+  
+  public void c()
+  {
+    try
+    {
+      if (d)
+      {
+        bi.a().b(this);
+        c.clear();
+        if (e != null) {
+          e.shutdownNow();
+        }
+        d = false;
+      }
+      return;
+    }
+    finally {}
   }
 }
 

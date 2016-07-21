@@ -4,8 +4,8 @@ import android.net.wifi.WifiConfiguration;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
-import com.estrongs.android.e.a;
-import com.estrongs.android.e.h;
+import com.estrongs.android.l.a;
+import com.estrongs.android.l.k;
 import com.estrongs.android.pop.ad;
 import java.util.BitSet;
 import java.util.Random;
@@ -21,9 +21,9 @@ class d
     int i;
     if (EsNetworkActivity.c(a).isEnabled())
     {
-      boolean bool = ad.a(a).aj();
-      paramView = ad.a(a).ah();
-      str = ad.a(a).ai();
+      boolean bool = ad.a(a).ak();
+      paramView = ad.a(a).ai();
+      str = ad.a(a).aj();
       Random localRandom = new Random(System.currentTimeMillis());
       int j = localRandom.nextInt(10000);
       i = j;
@@ -52,7 +52,7 @@ class d
     {
       EsNetworkActivity.a(a).a(a.a);
       return;
-      a.a.SSID = (h.a + i);
+      a.a.SSID = (k.a + i);
       break;
     }
   }

@@ -1,82 +1,18 @@
 .class public Lcom/estrongs/fs/impl/b/a;
-.super Lcom/estrongs/fs/impl/b/b;
+.super Lcom/estrongs/fs/a;
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x8
-.end annotation
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/estrongs/fs/impl/b/b;-><init>()V
-
-    return-void
-.end method
+# instance fields
+.field private a:Lcom/estrongs/android/recommand/m;
 
 
 # virtual methods
-.method public a(Lcom/estrongs/fs/h;)Z
-    .locals 5
+.method public a()Landroid/graphics/drawable/Drawable;
+    .locals 1
 
-    const/high16 v4, 0x40000
+    iget-object v0, p0, Lcom/estrongs/fs/impl/b/a;->a:Lcom/estrongs/android/recommand/m;
 
-    const/4 v1, 0x1
+    iget-object v0, v0, Lcom/estrongs/android/recommand/m;->e:Landroid/graphics/drawable/Drawable;
 
-    invoke-super {p0, p1}, Lcom/estrongs/fs/impl/b/b;->a(Lcom/estrongs/fs/h;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    check-cast p1, Lcom/estrongs/fs/impl/b/c;
-
-    invoke-virtual {p1}, Lcom/estrongs/fs/impl/b/c;->c()Landroid/content/pm/ApplicationInfo;
-
-    move-result-object v0
-
-    iget v2, p0, Lcom/estrongs/fs/impl/b/a;->a:I
-
-    const/4 v3, 0x3
-
-    if-ne v2, v3, :cond_1
-
-    iget v0, v0, Landroid/content/pm/ApplicationInfo;->flags:I
-
-    and-int/2addr v0, v4
-
-    if-nez v0, :cond_2
-
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_1
-    iget v2, p0, Lcom/estrongs/fs/impl/b/a;->a:I
-
-    const/4 v3, 0x4
-
-    if-ne v2, v3, :cond_2
-
-    iget v0, v0, Landroid/content/pm/ApplicationInfo;->flags:I
-
-    and-int/2addr v0, v4
-
-    if-eqz v0, :cond_2
-
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-object v0
 .end method

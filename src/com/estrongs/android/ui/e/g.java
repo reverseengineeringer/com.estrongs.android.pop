@@ -1,34 +1,23 @@
 package com.estrongs.android.ui.e;
 
-import android.content.Context;
-import android.view.View;
-import android.view.View.OnLongClickListener;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.view.a.a;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import java.util.List;
 
 class g
-  implements View.OnLongClickListener
+  implements MenuItem.OnMenuItemClickListener
 {
-  g(c paramc) {}
+  g(f paramf) {}
   
-  public boolean onLongClick(View paramView)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    int i = ((Integer)paramView.getTag()).intValue();
-    a locala = a.a(i);
-    if (locala.d() == null)
-    {
-      CharSequence localCharSequence = locala.getTitle();
-      paramView = localCharSequence;
-      if (localCharSequence == null) {
-        paramView = a.b.getString(locala.a());
-      }
-      ag.a(a.b, paramView, 0);
+    if (f.a(a) == null) {
+      f.b(a);
     }
-    for (;;)
-    {
-      return true;
-      locala.e();
-    }
+    paramMenuItem = a.a.subList(5, a.a.size());
+    f.a(a).a(paramMenuItem);
+    f.a(a, true);
+    return true;
   }
 }
 

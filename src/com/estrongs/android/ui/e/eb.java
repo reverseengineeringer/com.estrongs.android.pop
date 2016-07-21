@@ -5,13 +5,16 @@ import com.estrongs.android.view.a.b;
 class eb
   implements b
 {
-  eb(cp paramcp) {}
+  eb(cr paramcr) {}
   
-  public boolean a(co paramco)
+  public boolean a(cp paramcp)
   {
-    if ((e) && (F == 1) && ((K) || (M))) {}
-    while (((i) || (j)) && (F == 1)) {
-      return true;
+    if (N == 1)
+    {
+      if ((e) || (L) || (I) || (J) || (K) || (H) || (l)) {}
+      while (((h) && (P)) || (d) || ((f) && (P)) || (n) || (i) || (j) || (k) || ((q) && (O))) {
+        return true;
+      }
     }
     return false;
   }

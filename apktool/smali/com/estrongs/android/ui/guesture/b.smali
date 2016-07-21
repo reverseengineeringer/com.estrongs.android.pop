@@ -40,9 +40,11 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
-    sput-boolean v2, Lcom/estrongs/android/ui/guesture/b;->a:Z
+    const/4 v0, 0x1
+
+    sput-boolean v0, Lcom/estrongs/android/ui/guesture/b;->a:Z
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -80,9 +82,7 @@
 
     sput-boolean v2, Lcom/estrongs/android/ui/guesture/b;->b:Z
 
-    const/4 v0, 0x0
-
-    sput-boolean v0, Lcom/estrongs/android/ui/guesture/b;->f:Z
+    sput-boolean v2, Lcom/estrongs/android/ui/guesture/b;->f:Z
 
     return-void
 .end method
@@ -294,32 +294,32 @@
 .method public static b()V
     .locals 5
 
-    const/4 v0, 0x0
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
 
-    sget-boolean v1, Lcom/estrongs/android/ui/guesture/b;->f:Z
+    move-result-object v0
 
-    if-eqz v1, :cond_1
+    invoke-static {v0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->am()Z
+
+    move-result v0
+
+    sput-boolean v0, Lcom/estrongs/android/ui/guesture/b;->b:Z
+
+    sget-boolean v0, Lcom/estrongs/android/ui/guesture/b;->f:Z
+
+    if-eqz v0, :cond_1
 
     :cond_0
     :goto_0
     return-void
 
     :cond_1
+    const/4 v0, 0x0
+
     :try_start_0
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->al()Z
-
-    move-result v1
-
-    sput-boolean v1, Lcom/estrongs/android/ui/guesture/b;->b:Z
-
     sget-object v1, Lcom/estrongs/android/ui/guesture/b;->e:Ljava/util/HashSet;
 
     invoke-virtual {v1}, Ljava/util/HashSet;->clear()V
@@ -330,7 +330,7 @@
 
     sget-object v1, Lcom/estrongs/android/ui/guesture/b;->c:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/estrongs/fs/impl/local/h;->a(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/estrongs/fs/impl/local/i;->a(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -342,7 +342,7 @@
 
     sget-object v3, Lcom/estrongs/android/ui/guesture/b;->c:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lcom/estrongs/fs/impl/local/h;->a(Landroid/content/Context;Ljava/lang/String;)Ljava/io/InputStream;
+    invoke-static {v1, v3}, Lcom/estrongs/fs/impl/local/i;->a(Landroid/content/Context;Ljava/lang/String;)Ljava/io/InputStream;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_4
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -622,7 +622,7 @@
     :try_start_0
     sget-object v0, Lcom/estrongs/android/ui/guesture/b;->c:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/fs/impl/local/h;->f(Ljava/lang/String;)Ljava/io/OutputStream;
+    invoke-static {v0}, Lcom/estrongs/fs/impl/local/i;->f(Ljava/lang/String;)Ljava/io/OutputStream;
 
     move-result-object v2
 

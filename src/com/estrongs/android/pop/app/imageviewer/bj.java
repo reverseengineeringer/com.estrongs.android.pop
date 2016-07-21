@@ -1,10 +1,9 @@
 package com.estrongs.android.pop.app.imageviewer;
 
-import android.net.Uri;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.app.imageviewer.gallery.e;
-import com.estrongs.android.pop.app.imageviewer.gallery.f;
+import com.estrongs.android.pop.app.ag;
+import com.estrongs.android.pop.app.x;
 
 class bj
   implements MenuItem.OnMenuItemClickListener
@@ -13,14 +12,20 @@ class bj
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = a.e.a(a.c);
-    if (paramMenuItem != null)
+    if (ViewImage21.l(a).p())
     {
-      Uri localUri = paramMenuItem.f();
-      ae.b(a, localUri, paramMenuItem);
-      ViewImage21.b(a, a.m);
+      ViewImage21.n(a);
+      a.a(a.c, true);
     }
-    return true;
+    for (;;)
+    {
+      ViewImage21.b(a, a.m);
+      return true;
+      if (ViewImage21.o(a) == null) {
+        ViewImage21.p(a);
+      }
+      ViewImage21.o(a).show();
+    }
   }
 }
 

@@ -1,19 +1,16 @@
 package com.estrongs.android.pop.app;
 
-import android.media.MediaPlayer;
-import android.media.MediaPlayer.OnErrorListener;
-import android.os.Handler;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnDismissListener;
 
 class lv
-  implements MediaPlayer.OnErrorListener
+  implements DialogInterface.OnDismissListener
 {
-  lv(StreamingMediaPlayer paramStreamingMediaPlayer) {}
+  lv(ShowDialogActivity paramShowDialogActivity) {}
   
-  public boolean onError(MediaPlayer paramMediaPlayer, int paramInt1, int paramInt2)
+  public void onDismiss(DialogInterface paramDialogInterface)
   {
-    StreamingMediaPlayer.b(a, true);
-    StreamingMediaPlayer.i(a).post(new lw(this, paramInt2));
-    return true;
+    a.finish();
   }
 }
 

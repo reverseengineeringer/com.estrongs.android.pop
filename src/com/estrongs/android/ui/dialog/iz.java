@@ -1,26 +1,22 @@
 package com.estrongs.android.ui.dialog;
 
-import android.app.Activity;
-import com.estrongs.a.a;
-import com.estrongs.android.ui.notification.e;
-import java.util.Map;
+import android.os.Handler;
+import android.os.Message;
+import com.estrongs.android.ui.view.NaviListView;
 
 class iz
-  extends e
+  extends Handler
 {
-  iz(ix paramix, Activity paramActivity, CharSequence paramCharSequence, a parama)
-  {
-    super(paramActivity, paramCharSequence, parama);
-  }
+  iz(iy paramiy, NaviListView paramNaviListView) {}
   
-  protected void a(a parama)
+  public void handleMessage(Message paramMessage)
   {
-    ix.e.remove(Long.valueOf(parama.getTaskId()));
-  }
-  
-  protected void b(a parama)
-  {
-    ix.e.remove(Long.valueOf(parama.getTaskId()));
+    super.handleMessage(paramMessage);
+    int i = what;
+    int j = arg1;
+    if ((i == 1) && (arg2 == 0)) {
+      a.a();
+    }
   }
 }
 

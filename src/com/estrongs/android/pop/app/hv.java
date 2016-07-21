@@ -1,17 +1,23 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.widget.g;
+import android.preference.Preference;
+import com.estrongs.android.ui.view.ak;
 
 class hv
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
-  hv(hs paramhs, g paramg) {}
+  hv(PopPreferenceActivity paramPopPreferenceActivity) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void run()
   {
-    a.k();
+    a.m.setEnabled(false);
+    try
+    {
+      a.dismissDialog(102);
+      ak.a(a, 2131231319, 0);
+      return;
+    }
+    catch (IllegalArgumentException localIllegalArgumentException) {}
   }
 }
 

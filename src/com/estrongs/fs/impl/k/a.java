@@ -1,41 +1,40 @@
 package com.estrongs.fs.impl.k;
 
-import com.estrongs.fs.m;
-import java.io.File;
+import android.text.format.DateFormat;
+import java.util.Calendar;
 
 public class a
-  extends com.estrongs.fs.a
 {
-  private File a = null;
+  public String a;
+  public String b;
+  public String c;
+  public int d;
+  public Calendar e;
   
-  public a(File paramFile)
+  public a(String paramString1, String paramString2)
   {
-    super(paramFile.getPath());
-    a = paramFile;
-    setName(paramFile.getName());
+    int k = paramString1.lastIndexOf(",");
+    int i = Integer.parseInt(paramString1.substring(k + 1).trim());
+    int j = paramString1.lastIndexOf(",", k - 1);
+    k = Integer.parseInt(paramString1.substring(j + 1, k).trim());
+    int m = paramString1.lastIndexOf(",", j - 1);
+    d = Integer.parseInt(paramString1.substring(m + 1, j).trim());
+    j = paramString1.lastIndexOf(",", m - 1);
+    c = paramString1.substring(j + 1, m);
+    b = paramString1.substring(paramString1.indexOf(",", paramString2.length()) + 1, j);
+    a = paramString2;
+    e = Calendar.getInstance();
+    e.set((k >> 9 & 0x7F) + 1980, k >> 5 & 0xE, k & 0x1F, i >> 11 & 0x1F, i >> 5 & 0x3F, (i & 0x1F) * 2);
   }
   
-  protected m doGetFileType()
+  public boolean a()
   {
-    if (a.isDirectory()) {
-      return m.a;
-    }
-    return m.b;
+    return (d & 0x10) > 0;
   }
   
-  public boolean exists()
+  public String toString()
   {
-    return a.exists();
-  }
-  
-  public long lastModified()
-  {
-    return a.lastModified();
-  }
-  
-  public long length()
-  {
-    return a.length();
+    return "DIR=" + a + " FILENAME=" + b + " SIZE=" + c + " ATTRIBUTE=" + d + " DATE=" + DateFormat.format("yyyy-MM-dd kk:mm:ss", e);
   }
 }
 

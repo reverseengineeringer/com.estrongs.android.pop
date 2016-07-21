@@ -1,137 +1,57 @@
 package com.baidu.mobstat;
 
-import android.content.Context;
-import android.os.Process;
-import com.baidu.mobstat.util.e;
+import android.content.ContentValues;
+import android.database.Cursor;
+import java.util.ArrayList;
 
 class af
-  extends Thread
+  extends w
 {
-  private static final af a = new af();
-  private Context b;
-  private volatile boolean c = false;
-  private volatile boolean d = false;
-  
-  public static af a()
+  public af()
   {
-    return a;
+    super("ap_list", "Create table if not exists ap_list(_id Integer primary key AUTOINCREMENT,time VARCHAR(50),content TEXT);");
   }
   
-  private void e()
+  private ArrayList<v> a(Cursor paramCursor)
   {
-    c = true;
-  }
-  
-  private void f()
-  {
-    d = true;
-  }
-  
-  /* Error */
-  public void a(Context paramContext)
-  {
-    // Byte code:
-    //   0: aload_0
-    //   1: monitorenter
-    //   2: aload_1
-    //   3: ifnull +12 -> 15
-    //   6: aload_0
-    //   7: invokevirtual 31	com/baidu/mobstat/af:b	()Z
-    //   10: istore_2
-    //   11: iload_2
-    //   12: ifeq +6 -> 18
-    //   15: aload_0
-    //   16: monitorexit
-    //   17: return
-    //   18: aload_0
-    //   19: aload_1
-    //   20: invokevirtual 37	android/content/Context:getApplicationContext	()Landroid/content/Context;
-    //   23: putfield 39	com/baidu/mobstat/af:b	Landroid/content/Context;
-    //   26: aload_0
-    //   27: invokespecial 41	com/baidu/mobstat/af:e	()V
-    //   30: aload_0
-    //   31: invokevirtual 44	com/baidu/mobstat/af:start	()V
-    //   34: ldc 46
-    //   36: invokestatic 51	com/baidu/mobstat/util/e:a	(Ljava/lang/String;)I
-    //   39: pop
-    //   40: goto -25 -> 15
-    //   43: astore_1
-    //   44: aload_0
-    //   45: monitorexit
-    //   46: aload_1
-    //   47: athrow
-    // Local variable table:
-    //   start	length	slot	name	signature
-    //   0	48	0	this	af
-    //   0	48	1	paramContext	Context
-    //   10	2	2	bool	boolean
-    // Exception table:
-    //   from	to	target	type
-    //   6	11	43	finally
-    //   18	40	43	finally
-  }
-  
-  public boolean b()
-  {
-    return c;
-  }
-  
-  public boolean c()
-  {
-    return d;
-  }
-  
-  public void d()
-  {
-    if (!c()) {
-      try
-      {
-        boolean bool = c();
-        if (!bool) {}
-        try
-        {
-          wait();
-          return;
-        }
-        catch (InterruptedException localInterruptedException)
-        {
-          for (;;)
-          {
-            e.b(new Object[] { "sdkstat", localInterruptedException.getMessage() });
-          }
-        }
-        return;
-      }
-      finally {}
-    }
-  }
-  
-  public void run()
-  {
-    Process.setThreadPriority(19);
-    while (!d)
+    ArrayList localArrayList = new ArrayList();
+    if (paramCursor == null) {}
+    for (;;)
     {
-      ag.a().a(b);
-      DataCore.getInstance().loadWifiData(b);
-      DataCore.getInstance().loadStatData(b);
-      DataCore.getInstance().loadLastSession(b);
-      f();
-      try
+      return localArrayList;
+      if (paramCursor.getCount() != 0)
       {
-        notifyAll();
-        DataCore.getInstance().installHeader(b);
-        ag.a().a(b, "loadcache");
-        e.a("**************load caceh**end********");
-      }
-      catch (IllegalMonitorStateException localIllegalMonitorStateException)
-      {
-        for (;;)
-        {
-          e.b("sdkstat", localIllegalMonitorStateException);
+        int i = paramCursor.getColumnIndex("_id");
+        int j = paramCursor.getColumnIndex("time");
+        int k = paramCursor.getColumnIndex("content");
+        while (paramCursor.moveToNext()) {
+          localArrayList.add(new v(paramCursor.getLong(i), paramCursor.getString(j), paramCursor.getString(k)));
         }
       }
-      finally {}
     }
+  }
+  
+  public long a(String paramString1, String paramString2)
+  {
+    ContentValues localContentValues = new ContentValues();
+    localContentValues.put("time", paramString1);
+    localContentValues.put("content", paramString2);
+    return a(localContentValues);
+  }
+  
+  public ArrayList<v> a(int paramInt1, int paramInt2)
+  {
+    Cursor localCursor = a("time", paramInt1, paramInt2);
+    ArrayList localArrayList = a(localCursor);
+    if (localCursor != null) {
+      localCursor.close();
+    }
+    return localArrayList;
+  }
+  
+  public boolean b(long paramLong)
+  {
+    return a(paramLong);
   }
 }
 

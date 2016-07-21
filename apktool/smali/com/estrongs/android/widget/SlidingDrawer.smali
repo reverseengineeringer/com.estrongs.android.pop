@@ -53,11 +53,11 @@
 
 .field private p:I
 
-.field private q:Lcom/estrongs/android/widget/bp;
+.field private q:Lcom/estrongs/android/widget/bq;
 
-.field private r:Lcom/estrongs/android/widget/bo;
+.field private r:Lcom/estrongs/android/widget/bp;
 
-.field private s:Lcom/estrongs/android/widget/bq;
+.field private s:Lcom/estrongs/android/widget/br;
 
 .field private final t:Landroid/os/Handler;
 
@@ -110,15 +110,15 @@
 
     iput-object v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->f:Landroid/graphics/Rect;
 
-    new-instance v0, Lcom/estrongs/android/widget/br;
+    new-instance v0, Lcom/estrongs/android/widget/bs;
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, p0, v3}, Lcom/estrongs/android/widget/br;-><init>(Lcom/estrongs/android/widget/SlidingDrawer;Lcom/estrongs/android/widget/bm;)V
+    invoke-direct {v0, p0, v3}, Lcom/estrongs/android/widget/bs;-><init>(Lcom/estrongs/android/widget/SlidingDrawer;Lcom/estrongs/android/widget/bn;)V
 
     iput-object v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->t:Landroid/os/Handler;
 
-    sget-object v0, Lcom/estrongs/android/pop/ah;->d:[I
+    sget-object v0, Lcom/estrongs/android/pop/ah;->SlidingDrawer:[I
 
     invoke-virtual {p1, p2, v0, p3, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -503,7 +503,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendMessageAtTime(Landroid/os/Message;J)Z
 
-    invoke-direct {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->g()V
+    invoke-direct {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->f()V
 
     return-void
 
@@ -1060,7 +1060,7 @@
 .method static synthetic c(Lcom/estrongs/android/widget/SlidingDrawer;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->h()V
+    invoke-direct {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->g()V
 
     return-void
 .end method
@@ -1556,7 +1556,7 @@
     goto :goto_3
 .end method
 
-.method private f()V
+.method private e()V
     .locals 8
 
     const/4 v1, 0x0
@@ -1759,7 +1759,7 @@
     goto :goto_2
 .end method
 
-.method private g()V
+.method private f()V
     .locals 2
 
     const/4 v1, 0x0
@@ -1774,13 +1774,13 @@
 
     iput-boolean v1, p0, Lcom/estrongs/android/widget/SlidingDrawer;->g:Z
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->s:Lcom/estrongs/android/widget/bq;
+    iget-object v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->s:Lcom/estrongs/android/widget/br;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->s:Lcom/estrongs/android/widget/bq;
+    iget-object v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->s:Lcom/estrongs/android/widget/br;
 
-    invoke-interface {v0}, Lcom/estrongs/android/widget/bq;->b()V
+    invoke-interface {v0}, Lcom/estrongs/android/widget/br;->b()V
 
     :cond_0
     iget-object v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->i:Landroid/view/VelocityTracker;
@@ -1799,7 +1799,7 @@
     return-void
 .end method
 
-.method private h()V
+.method private g()V
     .locals 8
 
     const-wide/16 v6, 0x10
@@ -1820,7 +1820,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-direct {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->i()V
+    invoke-direct {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->h()V
 
     iget v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->k:I
 
@@ -1860,7 +1860,7 @@
 
     iput-boolean v4, p0, Lcom/estrongs/android/widget/SlidingDrawer;->A:Z
 
-    invoke-direct {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->j()V
+    invoke-direct {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->i()V
 
     :cond_1
     :goto_1
@@ -1886,7 +1886,7 @@
 
     iput-boolean v4, p0, Lcom/estrongs/android/widget/SlidingDrawer;->A:Z
 
-    invoke-direct {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->k()V
+    invoke-direct {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->j()V
 
     goto :goto_1
 
@@ -1943,7 +1943,7 @@
 
     iput-boolean v4, p0, Lcom/estrongs/android/widget/SlidingDrawer;->A:Z
 
-    invoke-direct {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->k()V
+    invoke-direct {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->j()V
 
     goto :goto_1
 
@@ -1967,7 +1967,7 @@
 
     iput-boolean v4, p0, Lcom/estrongs/android/widget/SlidingDrawer;->A:Z
 
-    invoke-direct {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->j()V
+    invoke-direct {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->i()V
 
     goto :goto_1
 
@@ -1999,7 +1999,7 @@
     goto :goto_1
 .end method
 
-.method private i()V
+.method private h()V
     .locals 10
 
     const-string v0, "incrementAnimation"
@@ -2069,7 +2069,7 @@
     return-void
 .end method
 
-.method private j()V
+.method private i()V
     .locals 2
 
     const-string v0, "closeDrawer"
@@ -2103,18 +2103,18 @@
 
     iput-boolean v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->l:Z
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->r:Lcom/estrongs/android/widget/bo;
+    iget-object v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->r:Lcom/estrongs/android/widget/bp;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->r:Lcom/estrongs/android/widget/bo;
+    iget-object v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->r:Lcom/estrongs/android/widget/bp;
 
-    invoke-interface {v0}, Lcom/estrongs/android/widget/bo;->a()V
+    invoke-interface {v0}, Lcom/estrongs/android/widget/bp;->a()V
 
     goto :goto_0
 .end method
 
-.method private k()V
+.method private j()V
     .locals 2
 
     const-string v0, "openDrawer"
@@ -2144,13 +2144,13 @@
 
     iput-boolean v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->l:Z
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->q:Lcom/estrongs/android/widget/bp;
+    iget-object v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->q:Lcom/estrongs/android/widget/bq;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->q:Lcom/estrongs/android/widget/bp;
+    iget-object v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->q:Lcom/estrongs/android/widget/bq;
 
-    invoke-interface {v0}, Lcom/estrongs/android/widget/bp;->a()V
+    invoke-interface {v0}, Lcom/estrongs/android/widget/bq;->a()V
 
     goto :goto_0
 .end method
@@ -2164,7 +2164,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-direct {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->k()V
+    invoke-direct {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->j()V
 
     :goto_0
     invoke-virtual {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->invalidate()V
@@ -2174,7 +2174,7 @@
     return-void
 
     :cond_0
-    invoke-direct {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->j()V
+    invoke-direct {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->i()V
 
     goto :goto_0
 .end method
@@ -2204,13 +2204,13 @@
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/widget/SlidingDrawer;->a(Ljava/lang/String;)V
 
-    invoke-direct {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->f()V
+    invoke-direct {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->e()V
 
-    iget-object v1, p0, Lcom/estrongs/android/widget/SlidingDrawer;->s:Lcom/estrongs/android/widget/bq;
+    iget-object v1, p0, Lcom/estrongs/android/widget/SlidingDrawer;->s:Lcom/estrongs/android/widget/br;
 
     if-eqz v1, :cond_0
 
-    invoke-interface {v1}, Lcom/estrongs/android/widget/bq;->a()V
+    invoke-interface {v1}, Lcom/estrongs/android/widget/br;->a()V
 
     :cond_0
     iget-boolean v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->j:Z
@@ -2234,7 +2234,7 @@
 
     if-eqz v1, :cond_1
 
-    invoke-interface {v1}, Lcom/estrongs/android/widget/bq;->b()V
+    invoke-interface {v1}, Lcom/estrongs/android/widget/br;->b()V
 
     :cond_1
     return-void
@@ -2278,13 +2278,13 @@
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/widget/SlidingDrawer;->a(Ljava/lang/String;)V
 
-    invoke-direct {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->f()V
+    invoke-direct {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->e()V
 
-    iget-object v1, p0, Lcom/estrongs/android/widget/SlidingDrawer;->s:Lcom/estrongs/android/widget/bq;
+    iget-object v1, p0, Lcom/estrongs/android/widget/SlidingDrawer;->s:Lcom/estrongs/android/widget/br;
 
     if-eqz v1, :cond_0
 
-    invoke-interface {v1}, Lcom/estrongs/android/widget/bq;->a()V
+    invoke-interface {v1}, Lcom/estrongs/android/widget/br;->a()V
 
     :cond_0
     iget-boolean v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->j:Z
@@ -2302,7 +2302,7 @@
 
     if-eqz v1, :cond_1
 
-    invoke-interface {v1}, Lcom/estrongs/android/widget/bq;->b()V
+    invoke-interface {v1}, Lcom/estrongs/android/widget/br;->b()V
 
     :cond_1
     return-void
@@ -2525,10 +2525,18 @@
     goto :goto_1
 .end method
 
-.method public e()Landroid/view/View;
+.method public getContent()Landroid/view/View;
     .locals 1
 
     iget-object v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->d:Landroid/view/View;
+
+    return-object v0
+.end method
+
+.method public getHandle()Landroid/view/View;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->c:Landroid/view/View;
 
     return-object v0
 .end method
@@ -2559,11 +2567,11 @@
     :cond_0
     iget-object v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->c:Landroid/view/View;
 
-    new-instance v1, Lcom/estrongs/android/widget/bn;
+    new-instance v1, Lcom/estrongs/android/widget/bo;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, v2}, Lcom/estrongs/android/widget/bn;-><init>(Lcom/estrongs/android/widget/SlidingDrawer;Lcom/estrongs/android/widget/bm;)V
+    invoke-direct {v1, p0, v2}, Lcom/estrongs/android/widget/bo;-><init>(Lcom/estrongs/android/widget/SlidingDrawer;Lcom/estrongs/android/widget/bn;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -2577,9 +2585,9 @@
 
     iget-object v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->d:Landroid/view/View;
 
-    new-instance v1, Lcom/estrongs/android/widget/bm;
+    new-instance v1, Lcom/estrongs/android/widget/bn;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/widget/bm;-><init>(Lcom/estrongs/android/widget/SlidingDrawer;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/widget/bn;-><init>(Lcom/estrongs/android/widget/SlidingDrawer;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -2660,15 +2668,15 @@
 
     invoke-virtual {v6, v1}, Landroid/view/View;->setPressed(Z)V
 
-    invoke-direct {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->f()V
+    invoke-direct {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->e()V
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->s:Lcom/estrongs/android/widget/bq;
+    iget-object v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->s:Lcom/estrongs/android/widget/br;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->s:Lcom/estrongs/android/widget/bq;
+    iget-object v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->s:Lcom/estrongs/android/widget/br;
 
-    invoke-interface {v0}, Lcom/estrongs/android/widget/bq;->a()V
+    invoke-interface {v0}, Lcom/estrongs/android/widget/br;->a()V
 
     :cond_3
     iget-boolean v0, p0, Lcom/estrongs/android/widget/SlidingDrawer;->j:Z
@@ -3073,7 +3081,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->e()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->getContent()Landroid/view/View;
 
     move-result-object v2
 
@@ -3091,7 +3099,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->e()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/SlidingDrawer;->getContent()Landroid/view/View;
 
     move-result-object v2
 
@@ -3577,4 +3585,28 @@
         :pswitch_0
         :pswitch_1
     .end packed-switch
+.end method
+
+.method public setOnDrawerCloseListener(Lcom/estrongs/android/widget/bp;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/widget/SlidingDrawer;->r:Lcom/estrongs/android/widget/bp;
+
+    return-void
+.end method
+
+.method public setOnDrawerOpenListener(Lcom/estrongs/android/widget/bq;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/widget/SlidingDrawer;->q:Lcom/estrongs/android/widget/bq;
+
+    return-void
+.end method
+
+.method public setOnDrawerScrollListener(Lcom/estrongs/android/widget/br;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/widget/SlidingDrawer;->s:Lcom/estrongs/android/widget/br;
+
+    return-void
 .end method

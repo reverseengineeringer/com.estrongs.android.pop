@@ -4,8 +4,8 @@ import com.estrongs.android.pop.netfs.utils.FastPipedInputStream;
 import com.estrongs.android.pop.netfs.utils.UploadOutputStream;
 import com.estrongs.android.pop.spfs.Album;
 import com.estrongs.android.util.TypedMap;
-import com.estrongs.android.util.am;
-import com.estrongs.fs.o;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.z;
 import java.util.List;
 
 class FlickrFileSystem$2
@@ -36,7 +36,7 @@ class FlickrFileSystem$2
             {
               FlickrFileSystem.access$100(this$0, val$username, getid, localb.e());
               if (getpath != null) {
-                com.estrongs.fs.a.b.a().a(new o(getpath + "/" + localb.e()));
+                com.estrongs.fs.a.b.a().a(new z(getpath + "/" + localb.e()));
               }
             }
             else
@@ -46,7 +46,7 @@ class FlickrFileSystem$2
               getpath = path;
               getname = name;
               getdescription = description;
-              com.estrongs.fs.a.b.a().a(new o(am.b("Flickr", val$username, val$passwd, "/album/" + getid)));
+              com.estrongs.fs.a.b.a().a(new z(ap.b("Flickr", val$username, val$passwd, "/album/" + getid)));
             }
           }
         }

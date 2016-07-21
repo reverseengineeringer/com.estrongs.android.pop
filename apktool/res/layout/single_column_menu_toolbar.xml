@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/extra_edit_bottom" android:fadingEdge="none" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:background="@drawable/toolbar_edit_more_bg" android:fadingEdge="none" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fillViewport="true" android:overScrollMode="never">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/extra_edit_panel" android:layout_width="@dimen/dp_190" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

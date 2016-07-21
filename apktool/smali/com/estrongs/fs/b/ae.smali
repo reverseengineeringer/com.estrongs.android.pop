@@ -121,7 +121,7 @@
 
     iget-object v0, p0, Lcom/estrongs/fs/b/ae;->e:Lcom/estrongs/fs/b/ad;
 
-    iget-object v0, v0, Lcom/estrongs/fs/b/ad;->h:Ljava/lang/Long;
+    iget-object v0, v0, Lcom/estrongs/fs/b/ad;->i:Ljava/lang/Long;
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
@@ -157,7 +157,7 @@
 
     move-result-object v2
 
-    iput-object v2, v0, Lcom/estrongs/fs/b/ad;->h:Ljava/lang/Long;
+    iput-object v2, v0, Lcom/estrongs/fs/b/ad;->i:Ljava/lang/Long;
 
     move v0, v1
 

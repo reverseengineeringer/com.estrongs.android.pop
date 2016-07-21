@@ -204,14 +204,6 @@
     throw v0
 .end method
 
-.method public a(Lcom/estrongs/android/pop/app/editor/f;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/editor/ObservableScrollView;->a:Lcom/estrongs/android/pop/app/editor/f;
-
-    return-void
-.end method
-
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
@@ -279,4 +271,12 @@
     const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method public setScrollViewListener(Lcom/estrongs/android/pop/app/editor/f;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/editor/ObservableScrollView;->a:Lcom/estrongs/android/pop/app/editor/f;
+
+    return-void
 .end method

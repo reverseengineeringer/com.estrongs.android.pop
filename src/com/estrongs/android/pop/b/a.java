@@ -1,9 +1,9 @@
 package com.estrongs.android.pop.b;
 
 import android.app.Activity;
-import com.estrongs.android.ui.dialog.ct;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.h;
+import com.estrongs.android.ui.dialog.cv;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.g;
 import com.estrongs.fs.b.ad;
 import java.io.File;
 import java.util.HashMap;
@@ -39,9 +39,9 @@ public class a
     Object localObject = "";
     if (paramInt == 1)
     {
-      localObject = paramActivity.getString(2131427724, new Object[] { paramString.toUpperCase() });
-      str = paramActivity.getString(2131427725, new Object[] { paramString.toUpperCase() });
-      localObject = new ct(paramActivity).a((CharSequence)localObject).b(str).b(2131427339, new c(paramActivity, paramString, paramRunnable));
+      localObject = paramActivity.getString(2131231394, new Object[] { paramString.toUpperCase() });
+      str = paramActivity.getString(2131231389, new Object[] { paramString.toUpperCase() });
+      localObject = new cv(paramActivity).a((CharSequence)localObject).b(str).b(2131231270, new c(paramActivity, paramString, paramRunnable));
       if (paramInt == 3) {
         break label198;
       }
@@ -49,19 +49,19 @@ public class a
     label198:
     for (paramActivity = null;; paramActivity = new b(paramString, paramRunnable, paramActivity))
     {
-      ((ct)localObject).c(2131427340, paramActivity).c();
+      ((cv)localObject).c(2131231265, paramActivity).c();
       return;
       if (paramInt == 2)
       {
-        localObject = paramActivity.getString(2131427729, new Object[] { paramString.toUpperCase() });
-        str = paramActivity.getString(2131427730, new Object[] { paramString.toUpperCase() });
+        localObject = paramActivity.getString(2131232515, new Object[] { paramString.toUpperCase() });
+        str = paramActivity.getString(2131231788, new Object[] { paramString.toUpperCase() });
         break;
       }
       if (paramInt != 3) {
         break;
       }
-      localObject = paramActivity.getString(2131427729, new Object[] { paramString.toUpperCase() });
-      str = paramActivity.getString(2131427731, new Object[] { paramString.toUpperCase() });
+      localObject = paramActivity.getString(2131232515, new Object[] { paramString.toUpperCase() });
+      str = paramActivity.getString(2131231691, new Object[] { paramString.toUpperCase() });
       break;
     }
   }
@@ -83,10 +83,10 @@ public class a
       }
     }
     label148:
-    for (String str1 = a + am.d(str1);; str1 = a + File.separator + am.d(str1))
+    for (String str1 = a + ap.d(str1);; str1 = a + File.separator + ap.d(str1))
     {
-      String str2 = paramActivity.getString(2131427724, new Object[] { paramString.toUpperCase() });
-      String str3 = paramActivity.getString(2131427726, new Object[] { paramString.toUpperCase() });
+      String str2 = paramActivity.getString(2131231394, new Object[] { paramString.toUpperCase() });
+      String str3 = paramActivity.getString(2131231393, new Object[] { paramString.toUpperCase() });
       localad.setDescription(str2);
       new d(paramActivity, str2, str3, localad, str1, paramString, paramRunnable, paramActivity).show();
       localad.execute();

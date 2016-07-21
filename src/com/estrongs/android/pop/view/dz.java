@@ -1,22 +1,19 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.a.a;
-import com.estrongs.fs.d;
+import com.estrongs.android.j.c;
+import com.estrongs.android.pop.utils.w;
 
 class dz
-  extends a
+  implements Runnable
 {
-  dz(dy paramdy) {}
+  dz(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public boolean task()
+  public void run()
   {
-    try
-    {
-      boolean bool = a.a.b(a.b, a.c);
-      return bool;
+    w.a(a);
+    if (FileExplorerActivity.s(a) != null) {
+      FileExplorerActivity.s(a).a("TaskManager_Show");
     }
-    catch (Exception localException) {}
-    return false;
   }
 }
 

@@ -1,20 +1,19 @@
 package com.estrongs.android.util;
 
-import java.io.File;
-import java.util.Comparator;
+import com.estrongs.io.a.a.a;
+import com.estrongs.io.archive.e;
 
-final class ba
-  implements Comparator<File>
+class ba
+  extends a
 {
-  public int a(File paramFile1, File paramFile2)
+  ba(ax paramax, e parame, String paramString)
   {
-    if (paramFile1.lastModified() == paramFile2.lastModified()) {
-      return 0;
-    }
-    if (paramFile1.lastModified() < paramFile2.lastModified()) {
-      return -1;
-    }
-    return 1;
+    super(parame, paramString);
+  }
+  
+  public String a()
+  {
+    return null;
   }
 }
 

@@ -1,6 +1,6 @@
 package com.estrongs.fs.impl.usb.fs.ntfs;
 
-import android.util.Log;
+import com.estrongs.android.util.l;
 import com.estrongs.fs.impl.usb.fs.ntfs.a.h;
 import com.estrongs.fs.impl.usb.fs.ntfs.utils.e;
 import java.util.Iterator;
@@ -26,7 +26,7 @@ class p
         while (b.equals(paramh))
         {
           if (n.a(c)) {
-            Log.d(n.m(), "findAttributesByTypeAndName(0x" + e.a(a, 4) + "," + b + ") found");
+            l.b(n.m(), "findAttributesByTypeAndName(0x" + e.a(a, 4) + "," + b + ") found");
           }
           return true;
         }

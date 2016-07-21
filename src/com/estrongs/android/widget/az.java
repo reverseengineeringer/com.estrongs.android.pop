@@ -1,8 +1,28 @@
 package com.estrongs.android.widget;
 
-public abstract interface az
+import android.view.animation.Animation;
+import android.view.animation.Animation.AnimationListener;
+
+class az
+  implements Animation.AnimationListener
 {
-  public abstract void a();
+  az(ax paramax) {}
+  
+  public void onAnimationEnd(Animation paramAnimation)
+  {
+    ax.a(a, false);
+    a.g();
+  }
+  
+  public void onAnimationRepeat(Animation paramAnimation)
+  {
+    ax.a(a, true);
+  }
+  
+  public void onAnimationStart(Animation paramAnimation)
+  {
+    ax.a(a, true);
+  }
 }
 
 /* Location:

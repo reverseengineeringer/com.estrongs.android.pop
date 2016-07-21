@@ -1,24 +1,21 @@
 package com.estrongs.android.view;
 
-import com.estrongs.android.pop.ad;
-import java.util.ArrayList;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.fs.h;
 
 class cz
-  implements Runnable
+  implements View.OnClickListener
 {
-  cz(cq paramcq) {}
+  cz(cr paramcr, h paramh, ci paramci, int paramInt) {}
   
-  public void run()
+  public void onClick(View paramView)
   {
-    int i = 0;
-    while (i < cq.a(a).size())
-    {
-      aw localaw = aa).get(i)).d;
-      if ((cq.e(a).Q(localaw.c())) && (localaw.d() > 0)) {
-        cq.a(a, i);
-      }
-      i += 1;
+    if (ak.a(a)) {}
+    while (d.k == null) {
+      return;
     }
+    d.k.a(d.h, b.itemView, c, true);
   }
 }
 

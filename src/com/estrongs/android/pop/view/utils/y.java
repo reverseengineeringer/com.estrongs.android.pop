@@ -3,7 +3,7 @@ package com.estrongs.android.pop.view.utils;
 import com.estrongs.a.a;
 import com.estrongs.a.a.l;
 import com.estrongs.a.p;
-import com.estrongs.android.util.am;
+import com.estrongs.android.util.ap;
 import com.estrongs.fs.FileSystemException;
 import com.estrongs.fs.b.r;
 import com.estrongs.fs.d;
@@ -94,8 +94,8 @@ public class y
     if ((localh.lastModified() != e) || (localh.length() != f)) {
       return false;
     }
-    String str = am.bA(localh.getName());
-    StringBuilder localStringBuilder = new StringBuilder().append(am.bk(localh.getPath())).append(localh.getName()).append(".new");
+    String str = ap.bR(localh.getName());
+    StringBuilder localStringBuilder = new StringBuilder().append(ap.bB(localh.getPath())).append(localh.getName()).append(".new");
     if (str == null) {
       ??? = "";
     }
@@ -106,7 +106,7 @@ public class y
       synchronized (RemoteSynchronizer.g())
       {
         RemoteSynchronizer.b();
-        b = new r(d.a(), new f(new File(a.cachePath)), d.a().j(am.bk(a.tmpPath)), am.d(a.tmpPath));
+        b = new r(d.a(), new f(new File(a.cachePath)), d.a().j(ap.bB(a.tmpPath)), ap.d(a.tmpPath));
         b.d(false);
         b.e(true);
         b.addProgressListeners(getProgressListeners());

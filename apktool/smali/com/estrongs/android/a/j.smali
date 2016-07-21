@@ -1,39 +1,21 @@
-.class Lcom/estrongs/android/a/j;
+.class public interface abstract Lcom/estrongs/android/a/j;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
-
-
-# instance fields
-.field final synthetic a:Lcom/estrongs/android/a/i;
-
-
-# direct methods
-.method constructor <init>(Lcom/estrongs/android/a/i;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/a/j;->a:Lcom/estrongs/android/a/i;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+.method public abstract a(Ljava/lang/String;)V
+.end method
 
-    iget-object v0, p0, Lcom/estrongs/android/a/j;->a:Lcom/estrongs/android/a/i;
-
-    sget v1, Lcom/estrongs/android/a/i;->a:I
-
-    invoke-static {v0, v1}, Lcom/estrongs/android/a/i;->a(Lcom/estrongs/android/a/i;I)I
-
-    iget-object v0, p0, Lcom/estrongs/android/a/j;->a:Lcom/estrongs/android/a/i;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/a/i;->dismiss()V
-
-    return-void
+.method public abstract a(Ljava/lang/String;Ljava/util/Map;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/estrongs/android/a/b/a;",
+            ">;)V"
+        }
+    .end annotation
 .end method

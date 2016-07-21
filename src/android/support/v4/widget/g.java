@@ -1,38 +1,43 @@
 package android.support.v4.widget;
 
-import android.content.Context;
-import android.graphics.Canvas;
+import android.content.res.ColorStateList;
+import android.graphics.PorterDuff.Mode;
+import android.graphics.drawable.Drawable;
+import android.os.Build.VERSION;
+import android.widget.CompoundButton;
 
-class g
-  implements i
+public final class g
 {
-  public Object a(Context paramContext)
+  private static final j a = new i();
+  
+  static
   {
-    return null;
+    int i = Build.VERSION.SDK_INT;
+    if (i >= 23)
+    {
+      a = new h();
+      return;
+    }
+    if (i >= 21)
+    {
+      a = new k();
+      return;
+    }
   }
   
-  public void a(Object paramObject, int paramInt1, int paramInt2) {}
-  
-  public boolean a(Object paramObject)
+  public static Drawable a(CompoundButton paramCompoundButton)
   {
-    return true;
+    return a.a(paramCompoundButton);
   }
   
-  public boolean a(Object paramObject, float paramFloat)
+  public static void a(CompoundButton paramCompoundButton, ColorStateList paramColorStateList)
   {
-    return false;
+    a.a(paramCompoundButton, paramColorStateList);
   }
   
-  public boolean a(Object paramObject, Canvas paramCanvas)
+  public static void a(CompoundButton paramCompoundButton, PorterDuff.Mode paramMode)
   {
-    return false;
-  }
-  
-  public void b(Object paramObject) {}
-  
-  public boolean c(Object paramObject)
-  {
-    return false;
+    a.a(paramCompoundButton, paramMode);
   }
 }
 

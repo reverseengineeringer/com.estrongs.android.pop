@@ -1,46 +1,84 @@
 package com.estrongs.android.ui.dialog;
 
 import android.app.Activity;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.EditText;
-import com.estrongs.android.view.ea;
+import android.content.Context;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.pop.ad;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.h;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
-class gd
-  extends ea
+public class gd
 {
-  Button a;
-  gh b;
-  private int d = 1;
-  private View.OnClickListener e = new gf(this);
+  gj a;
+  private ci b;
+  private Context c;
   
-  public gd(ga paramga, Activity paramActivity)
+  public gd(Context paramContext)
   {
-    super(paramActivity);
-    a(paramActivity);
+    c = paramContext;
+    a(new gg(this, (Activity)paramContext));
   }
   
-  protected int a()
+  private String a(String paramString)
   {
-    return 2130903204;
+    try
+    {
+      String str2 = ap.C(paramString);
+      String str1 = ap.a(paramString);
+      Object localObject1 = ap.A(paramString);
+      if ((str2 != null) && (paramString.length() > 0) && (localObject1 != null) && (((String)localObject1).length() > 0)) {
+        return paramString;
+      }
+      str2 = ap.a(paramString, 1);
+      String str3;
+      if ((localObject1 != null) && (((String)localObject1).length() > 0))
+      {
+        str3 = ad.a(FexApplication.a()).a((String)localObject1, str1, 1, null);
+        if ((str3 != null) && (str3.length() > 0)) {
+          return "smb://" + (String)localObject1 + ":" + str3 + "@" + str1 + str2;
+        }
+      }
+      localObject1 = new ArrayList();
+      ad.a(c).a((List)localObject1);
+      if (((ArrayList)localObject1).size() > 0)
+      {
+        localObject1 = ((ArrayList)localObject1).iterator();
+        while (((Iterator)localObject1).hasNext())
+        {
+          Object localObject2 = (h)((Iterator)localObject1).next();
+          str3 = ap.C(((h)localObject2).getAbsolutePath());
+          String str4 = ap.a(((h)localObject2).getAbsolutePath());
+          localObject2 = ap.A(((h)localObject2).getAbsolutePath());
+          if (str4.equalsIgnoreCase(str1))
+          {
+            str1 = "smb://" + (String)localObject2 + ":" + str3 + "@" + str1 + str2;
+            return str1;
+          }
+        }
+      }
+    }
+    catch (Exception localException) {}
+    return paramString;
   }
   
-  public void a(Activity paramActivity)
+  private void a(gg paramgg)
   {
-    b = new gh(ad, d, new ge(this));
-    a = ((Button)k(2131362557));
-    a.setText(b.b(d));
-    a.setOnClickListener(e);
+    b = new cv(c).a(paramgg.aE()).b(2131231270, new gf(this, paramgg)).c(2131231265, new ge(this)).b();
+    b.setTitle(2131230867);
   }
   
-  protected String b()
+  public gd a(gj paramgj)
   {
-    return ((EditText)k(2131362558)).getText().toString();
+    a = paramgj;
+    return this;
   }
   
-  protected int c()
+  public void a()
   {
-    return d;
+    b.show();
   }
 }
 

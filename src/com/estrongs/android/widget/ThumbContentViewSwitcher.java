@@ -5,8 +5,8 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
-import com.estrongs.android.ui.d.a;
-import com.estrongs.android.ui.theme.al;
+import com.estrongs.android.ui.d.g;
+import com.estrongs.android.ui.theme.at;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,13 +23,6 @@ public class ThumbContentViewSwitcher
   public ThumbContentViewSwitcher(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-  }
-  
-  public void a(int paramInt)
-  {
-    c(e);
-    c(paramInt);
-    super.a(paramInt);
   }
   
   protected boolean a()
@@ -57,12 +50,12 @@ public class ThumbContentViewSwitcher
       }
       Object localObject1 = getChildAt(paramInt);
       Object localObject2 = ((View)localObject1).getBackground();
-      ((View)localObject1).setBackgroundDrawable(al.a(getContext()).h());
-      Bitmap localBitmap2 = a.a((View)localObject1);
+      ((View)localObject1).setBackgroundDrawable(at.a(getContext()).h());
+      Bitmap localBitmap2 = g.a((View)localObject1);
       ((View)localObject1).setBackgroundDrawable((Drawable)localObject2);
       if (localBitmap2 != null)
       {
-        localObject2 = a.a(localBitmap2, paramBoolean);
+        localObject2 = g.a(localBitmap2, paramBoolean);
         localObject1 = localObject2;
         if (!a()) {
           return ???;
@@ -79,7 +72,7 @@ public class ThumbContentViewSwitcher
     }
   }
   
-  public void c(int paramInt)
+  public void b(int paramInt)
   {
     try
     {
@@ -93,12 +86,12 @@ public class ThumbContentViewSwitcher
     catch (Exception localException) {}
   }
   
-  public void l()
+  public void i()
   {
     int i = 0;
     while (i < a.size())
     {
-      c(i);
+      b(i);
       i += 1;
     }
   }
@@ -113,6 +106,13 @@ public class ThumbContentViewSwitcher
         localBitmap.recycle();
       }
     }
+  }
+  
+  public void setCurrentScreen(int paramInt)
+  {
+    b(e);
+    b(paramInt);
+    super.setCurrentScreen(paramInt);
   }
 }
 

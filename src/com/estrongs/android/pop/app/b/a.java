@@ -1,339 +1,158 @@
 package com.estrongs.android.pop.app.b;
 
-import android.app.Activity;
-import android.content.Intent;
-import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.pop.aj;
-import com.estrongs.android.pop.bt.OBEXFtpServerService;
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.dialog.jw;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.bd;
-import com.estrongs.android.view.aw;
-import com.estrongs.fs.b.q;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.util.Timer;
+import android.util.Pair;
+import com.estrongs.android.scanner.g;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.h;
+import com.estrongs.fs.w;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class a
 {
-  public static boolean a = false;
-  public static boolean b = false;
-  public static boolean c = false;
-  public static boolean d = true;
-  private static a h;
-  private boolean e = false;
-  private q f;
-  private Timer g = new Timer();
-  private Object i = null;
-  private Method j = null;
-  private Method k = null;
-  private Method l = null;
-  private boolean m = false;
-  
-  public static a a()
+  private static int a(String paramString)
   {
-    if (h == null) {
-      h = new a();
-    }
-    return h;
+    return com.estrongs.android.scanner.b.a.a(paramString, ap.bR(paramString));
   }
   
-  private boolean k()
+  private static long a(long paramLong)
   {
-    if (i != null) {
+    int i = (int)Math.floor(paramLong / 86400000L);
+    int j = (int)Math.floor((paramLong - i * 86400000L) / 3600000L);
+    int k = (int)Math.floor((paramLong - i * 86400000L - j * 3600000L) / 60000L);
+    if (i > 0) {
+      return i * 86400000L;
+    }
+    if (j > 0) {
+      return j * 3600000L;
+    }
+    return k * 60000L;
+  }
+  
+  public static Pair a(h paramh, long paramLong, g paramg)
+  {
+    paramg = a(paramh, paramg);
+    if (paramg == null) {
+      return null;
+    }
+    paramLong = a(paramLong - paramh.lastModified());
+    paramh = new ArrayList();
+    paramh.add(paramg);
+    return new Pair(Long.valueOf(paramLong), paramh);
+  }
+  
+  public static b a(h paramh, g paramg)
+  {
+    b localb = new b();
+    String str = paramh.getAbsolutePath();
+    int i = a(str);
+    if (i == 100) {}
+    do
+    {
+      return null;
+      paramg = a(str, paramg);
+    } while (paramg == null);
+    c = i;
+    e = ap.bB(str);
+    d = paramg;
+    i.add(new i(str, paramh.getName(), paramh.length(), paramg, paramh.lastModified()));
+    j = i.size();
+    return localb;
+  }
+  
+  private static b a(List<b> paramList, h paramh, g paramg)
+  {
+    Iterator localIterator = paramList.iterator();
+    while (localIterator.hasNext())
+    {
+      b localb = (b)localIterator.next();
+      if (a(localb, paramh, paramg)) {
+        return localb;
+      }
+    }
+    paramh = a(paramh, paramg);
+    if (paramh != null)
+    {
+      paramList.add(paramh);
+      return paramh;
+    }
+    return null;
+  }
+  
+  private static String a(String paramString, g paramg)
+  {
+    String str2 = com.estrongs.android.scanner.b.b.a().b(paramString);
+    String str1 = str2;
+    if (str2 == null) {
+      str1 = com.estrongs.android.scanner.b.b.a().d(paramString);
+    }
+    paramString = str1;
+    if (paramg != null)
+    {
+      paramString = str1;
+      if (str1 != null) {
+        paramString = paramg.a(str1);
+      }
+    }
+    return paramString;
+  }
+  
+  private static boolean a(long paramLong1, long paramLong2)
+  {
+    int i = (int)Math.floor(paramLong2 / 86400000L);
+    int j = (int)Math.floor((paramLong2 - i * 86400000L) / 3600000L);
+    int k = (int)Math.floor((paramLong2 - i * 86400000L - j * 3600000L) / 60000L);
+    if (i > 0) {
+      return (paramLong1 < (i + 1) * 86400000L) && (paramLong1 >= i * 86400000L);
+    }
+    if (j > 0) {
+      return (paramLong1 < (j + 1) * 3600000L) && (paramLong1 >= j * 3600000L);
+    }
+    return (paramLong1 < (k + 1) * 60000L) && (paramLong1 >= k * 60000L);
+  }
+  
+  public static boolean a(Pair<Long, List<b>> paramPair, h paramh, long paramLong, g paramg)
+  {
+    if (paramh.getFileType().a()) {}
+    while ((paramh.lastModified() > paramLong) || (paramLong - paramh.lastModified() > 2505600000L)) {
       return true;
     }
-    try
-    {
-      Class localClass = Class.forName("android.bluetooth.BluetoothAdapter");
-      i = localClass.getMethod("getDefaultAdapter", new Class[0]).invoke(null, new Object[0]);
-      if (i == null)
-      {
-        ag.a(FexApplication.a(), 2131427757, 1);
-        return false;
-      }
-      j = localClass.getMethod("isEnabled", new Class[0]);
-      k = localClass.getMethod("disable", new Class[0]);
-      l = localClass.getMethod("getScanMode", new Class[0]);
+    if (paramPair == null) {
+      return false;
+    }
+    return a(paramh, paramPair, paramLong, paramg);
+  }
+  
+  private static boolean a(b paramb, h paramh, g paramg)
+  {
+    String str1 = paramh.getAbsolutePath();
+    String str2 = ap.bB(str1);
+    int i = a(str1);
+    paramg = a(str1, paramg);
+    if (paramg == null) {
       return true;
     }
-    catch (ClassNotFoundException localClassNotFoundException)
+    if ((i == c) && (str2.equals(e)) && (paramg.equals(d)))
     {
-      return false;
+      paramb.i.add(new i(str1, paramh.getName(), paramh.length(), paramg, paramh.lastModified()));
+      j = paramb.i.size();
+      return true;
     }
-    catch (IllegalAccessException localIllegalAccessException)
-    {
-      for (;;) {}
-    }
-    catch (InvocationTargetException localInvocationTargetException)
-    {
-      for (;;) {}
-    }
-    catch (NoSuchMethodException localNoSuchMethodException)
-    {
-      for (;;) {}
-    }
-  }
-  
-  private boolean l()
-  {
-    try
-    {
-      if ((i == null) && (!k())) {
-        return false;
-      }
-      boolean bool = ((Boolean)j.invoke(i, new Object[0])).booleanValue();
-      return bool;
-    }
-    catch (IllegalAccessException localIllegalAccessException)
-    {
-      return false;
-    }
-    catch (InvocationTargetException localInvocationTargetException)
-    {
-      for (;;) {}
-    }
-  }
-  
-  private boolean m()
-  {
-    try
-    {
-      if ((i == null) && (!k())) {
-        return false;
-      }
-      boolean bool = ((Boolean)k.invoke(i, new Object[0])).booleanValue();
-      return bool;
-    }
-    catch (IllegalAccessException localIllegalAccessException)
-    {
-      return false;
-    }
-    catch (InvocationTargetException localInvocationTargetException)
-    {
-      for (;;) {}
-    }
-  }
-  
-  private boolean n()
-  {
-    try
-    {
-      if ((i == null) && (!k())) {
-        return false;
-      }
-      int n = ((Integer)l.invoke(i, new Object[0])).intValue();
-      if (n == 23) {}
-      for (boolean bool = true;; bool = false) {
-        return bool;
-      }
-      return false;
-    }
-    catch (IllegalAccessException localIllegalAccessException)
-    {
-      return false;
-    }
-    catch (InvocationTargetException localInvocationTargetException) {}
-  }
-  
-  private void o()
-  {
-    if (!e) {
-      return;
-    }
-    if (h() != null)
-    {
-      com.estrongs.fs.impl.c.a.c(h());
-      h().stopService(new Intent().setClassName(h(), OBEXFtpServerService.class.getName()));
-    }
-    e = false;
-  }
-  
-  public boolean a(boolean paramBoolean)
-  {
-    if (bd.a()) {
-      if (!l()) {
-        if (paramBoolean) {
-          ag.a(FexApplication.a(), 2131427739, 1);
-        }
-      }
-    }
-    while (!paramBoolean)
-    {
-      return false;
-      if (!n()) {
-        if (h() != null)
-        {
-          Intent localIntent = new Intent("android.bluetooth.adapter.action.REQUEST_DISCOVERABLE");
-          localIntent.putExtra("android.bluetooth.adapter.extra.DISCOVERABLE_DURATION", 300);
-          localIntent.putExtra("android.bluetooth.adapter.extra.SCAN_MODE", 23);
-          h().startActivityForResult(localIntent, 268439562);
-        }
-      }
-      for (;;)
-      {
-        return true;
-        ag.a(FexApplication.a(), 2131428473, 1);
-      }
-    }
-    ag.a(FexApplication.a(), 2131427929, 1);
     return false;
   }
   
-  public boolean b()
+  private static boolean a(h paramh, Pair<Long, List<b>> paramPair, long paramLong, g paramg)
   {
-    if (bd.a())
-    {
-      if (!l())
-      {
-        c = true;
-        c();
-      }
-      do
-      {
-        do
-        {
-          return true;
-          if (!com.estrongs.fs.impl.c.a.a()) {
-            break;
-          }
-          ag.a(FexApplication.a(), 2131427845, 1);
-        } while (h() == null);
-        new jw(h(), FexApplication.a().getString(2131427442), f).show();
-        return true;
-      } while (h() == null);
-      f = new q();
-      f.setDescription(FexApplication.a().getString(2131427740));
-      f.addTaskStatusChangeListener(new aj());
-      new jw(h(), FexApplication.a().getString(2131427442), f).show();
-      f.execute();
-      d = false;
-      return true;
+    long l = ((Long)first).longValue();
+    paramPair = (List)second;
+    if (!a(paramLong - paramh.lastModified(), l)) {
+      return false;
     }
-    ag.a(FexApplication.a(), 2131427929, 1);
-    return false;
-  }
-  
-  public void c()
-  {
-    if (bd.a())
-    {
-      if (!l()) {}
-      while (e) {
-        try
-        {
-          com.estrongs.fs.impl.c.a.e();
-          if (h() != null)
-          {
-            Intent localIntent = new Intent("android.bluetooth.adapter.action.REQUEST_ENABLE");
-            h().startActivity(localIntent);
-          }
-          return;
-        }
-        catch (Exception localException)
-        {
-          ag.a(FexApplication.a(), 2131427739, 1);
-          return;
-        }
-      }
-      e();
-      return;
+    if (a(paramPair, paramh, paramg) != null) {}
+    for (boolean bool = true;; bool = false) {
+      return bool;
     }
-    ag.a(FexApplication.a(), 2131427929, 1);
-  }
-  
-  public void d()
-  {
-    if (bd.a())
-    {
-      if (l())
-      {
-        if (e) {
-          o();
-        }
-        m();
-      }
-      return;
-    }
-    ag.a(FexApplication.a(), 2131427929, 1);
-  }
-  
-  public void e()
-  {
-    if ((e) || (m)) {
-      return;
-    }
-    m = true;
-    if (h() != null)
-    {
-      com.estrongs.fs.impl.c.a.b(h());
-      h().startService(new Intent().setClassName(h(), OBEXFtpServerService.class.getName()));
-    }
-    e = true;
-    Object localObject = FileExplorerActivity.J();
-    if (localObject != null)
-    {
-      localObject = ((FileExplorerActivity)localObject).y();
-      if (localObject != null) {
-        ((aw)localObject).b(true);
-      }
-    }
-    f();
-    m = false;
-  }
-  
-  public boolean f()
-  {
-    return a(true);
-  }
-  
-  public void g()
-  {
-    try
-    {
-      if ((h() != null) && (e))
-      {
-        com.estrongs.fs.impl.c.a.c(h());
-        h().stopService(new Intent().setClassName(h(), OBEXFtpServerService.class.getName()));
-        e = false;
-      }
-      if (b) {
-        com.estrongs.fs.impl.c.a.f();
-      }
-      return;
-    }
-    catch (Exception localException)
-    {
-      localException.printStackTrace();
-    }
-  }
-  
-  public Activity h()
-  {
-    return FileExplorerActivity.I();
-  }
-  
-  public void i()
-  {
-    if (g == null) {
-      g = new Timer();
-    }
-    g.schedule(new b(this), 302000L);
-  }
-  
-  public void j()
-  {
-    if (g == null) {
-      return;
-    }
-    try
-    {
-      g.cancel();
-      g = null;
-      return;
-    }
-    catch (IllegalStateException localIllegalStateException) {}
   }
 }
 

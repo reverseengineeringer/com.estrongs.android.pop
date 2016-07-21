@@ -1,19 +1,21 @@
 package com.estrongs.android.ui.drag;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import com.estrongs.android.pop.esclasses.ESActivity;
 import com.estrongs.android.pop.esclasses.ESImageView;
-import com.estrongs.android.pop.utils.aj;
+import com.estrongs.android.pop.utils.ao;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.pcs.r;
+import com.estrongs.android.ui.pcs.u;
+import com.estrongs.android.view.do;
 import com.estrongs.fs.h;
 import com.estrongs.fs.impl.pcs.b;
+import com.estrongs.fs.w;
 import java.util.Iterator;
 import java.util.List;
 
@@ -78,11 +80,6 @@ public class DragGrid
     setVisibility(4);
   }
   
-  public void a(d paramd)
-  {
-    a = paramd;
-  }
-  
   public void a(l paraml, int paramInt1, int paramInt2, int paramInt3, int paramInt4, m paramm, Object paramObject)
   {
     paraml = getContext();
@@ -90,29 +87,9 @@ public class DragGrid
     if ((c instanceof b)) {
       bool = true;
     }
-    aj.a((ESActivity)paraml, (List)paramObject, c, bool, true, null, true);
+    ao.a((Activity)paraml, (List)paramObject, c, bool, true, null, true);
     if ((paraml instanceof FileExplorerActivity)) {
-      ((FileExplorerActivity)paraml).s();
-    }
-  }
-  
-  public void a(h paramh)
-  {
-    if (i == null) {
-      i = ((ImageView)findViewById(2131362077));
-    }
-    if (paramh == null) {
-      return;
-    }
-    c = paramh;
-    d = c.getAbsolutePath();
-    f = false;
-    g = paramh.getFileType().a();
-    if ((paramh.getName().startsWith(".")) || ((paramh.getExtra("item_is_scanned_server") != null) && (((Boolean)paramh.getExtra("item_is_scanned_server")).booleanValue()))) {}
-    for (h = true;; h = false)
-    {
-      a();
-      return;
+      ((FileExplorerActivity)paraml).B();
     }
   }
   
@@ -148,7 +125,7 @@ public class DragGrid
         }
         if ((i != null) && ((i instanceof ESImageView)))
         {
-          ((ESImageView)i).a(true);
+          ((ESImageView)i).setTranslucent(true);
           i.invalidate();
         }
         super.dispatchDraw(paramCanvas);
@@ -165,7 +142,7 @@ public class DragGrid
       {
         bool = g;
         if ((c instanceof b)) {
-          bool = r.a().b();
+          bool = u.a().b();
         }
         if (!bool) {
           continue;
@@ -178,7 +155,7 @@ public class DragGrid
       return;
       if ((i != null) && ((i instanceof ESImageView)))
       {
-        ((ESImageView)i).a(false);
+        ((ESImageView)i).setTranslucent(false);
         i.invalidate();
       }
     }
@@ -188,9 +165,39 @@ public class DragGrid
   {
     boolean bool = g;
     if ((c instanceof b)) {
-      bool = r.a().b();
+      bool = u.a().b();
     }
     return (getVisibility() == 0) && (bool);
+  }
+  
+  public h getFileObject()
+  {
+    return (h)getTagm;
+  }
+  
+  public void setDragController(d paramd)
+  {
+    a = paramd;
+  }
+  
+  public void setFileObject(h paramh)
+  {
+    if (i == null) {
+      i = ((ImageView)findViewById(2131624199));
+    }
+    if (paramh == null) {
+      return;
+    }
+    c = paramh;
+    d = c.getAbsolutePath();
+    f = false;
+    g = paramh.getFileType().a();
+    if ((paramh.getName().startsWith(".")) || ((paramh.getExtra("item_is_scanned_server") != null) && (((Boolean)paramh.getExtra("item_is_scanned_server")).booleanValue()))) {}
+    for (h = true;; h = false)
+    {
+      a();
+      return;
+    }
   }
 }
 

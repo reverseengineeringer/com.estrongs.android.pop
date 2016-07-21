@@ -1,6 +1,6 @@
 package com.estrongs.fs.impl.usb.fs;
 
-import com.estrongs.android.util.v;
+import com.estrongs.android.util.x;
 import com.estrongs.fs.impl.usb.UsbFsException;
 import com.estrongs.fs.impl.usb.UsbFsException.ERROR_CODE;
 import com.estrongs.fs.impl.usb.fs.ntfs.y;
@@ -18,7 +18,7 @@ public class b
     if (y.a(localByteBuffer.array())) {
       return new y(paramString, parama, localByteBuffer);
     }
-    v.a("createFileSystem unsupported partition type " + paramd.a());
+    x.a("createFileSystem unsupported partition type " + paramd.a());
     throw new UsbFsException("unsupported partition type", UsbFsException.ERROR_CODE.USB_ERROR_TYPE_NOT_SUPPORTE);
   }
 }

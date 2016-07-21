@@ -13,18 +13,18 @@ public class SocialLoginActivity
   
   protected void a()
   {
-    SapiWebView localSapiWebView = (SapiWebView)findViewById(2131362469);
-    ak.a(this, localSapiWebView);
-    localSapiWebView.setOnBackCallback(new ao(this, localSapiWebView));
-    localSapiWebView.setOnFinishCallback(new ap(this));
-    localSapiWebView.setAuthorizationListener(new aq(this));
+    SapiWebView localSapiWebView = (SapiWebView)findViewById(2131625108);
+    an.a(this, localSapiWebView);
+    localSapiWebView.setOnBackCallback(new ar(this, localSapiWebView));
+    localSapiWebView.setOnFinishCallback(new as(this));
+    localSapiWebView.setAuthorizationListener(new at(this));
     localSapiWebView.loadSocialLogin(a, true);
   }
   
   protected void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    setContentView(2130903185);
+    setContentView(2130903302);
     a = ((SocialType)getIntent().getSerializableExtra("social_type"));
     if (a == null) {
       finish();

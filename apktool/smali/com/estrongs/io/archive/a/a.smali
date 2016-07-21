@@ -32,7 +32,7 @@
 
     iget-object v2, p0, Lcom/estrongs/io/archive/a/a;->b:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lcom/estrongs/fs/impl/local/h;->a(Landroid/content/Context;Ljava/lang/String;)Ljava/io/InputStream;
+    invoke-static {v1, v2}, Lcom/estrongs/fs/impl/local/i;->a(Landroid/content/Context;Ljava/lang/String;)Ljava/io/InputStream;
 
     move-result-object v1
 

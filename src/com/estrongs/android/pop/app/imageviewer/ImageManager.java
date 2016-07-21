@@ -141,72 +141,70 @@ public class ImageManager
     //   250: astore 5
     //   252: ldc -73
     //   254: aload_0
-    //   255: invokestatic 189	android/util/Log:w	(Ljava/lang/String;Ljava/lang/Throwable;)I
-    //   258: pop
-    //   259: aload 10
-    //   261: invokestatic 106	com/estrongs/fs/util/j:a	(Ljava/io/OutputStream;)V
-    //   264: aconst_null
-    //   265: areturn
-    //   266: astore_0
-    //   267: aconst_null
-    //   268: astore 10
-    //   270: aload 10
-    //   272: astore 5
-    //   274: ldc -73
-    //   276: aload_0
-    //   277: invokestatic 189	android/util/Log:w	(Ljava/lang/String;Ljava/lang/Throwable;)I
-    //   280: pop
-    //   281: aload 10
-    //   283: invokestatic 106	com/estrongs/fs/util/j:a	(Ljava/io/OutputStream;)V
-    //   286: aconst_null
-    //   287: areturn
-    //   288: astore_0
-    //   289: aconst_null
-    //   290: astore 5
-    //   292: aload 5
-    //   294: invokestatic 106	com/estrongs/fs/util/j:a	(Ljava/io/OutputStream;)V
-    //   297: aload_0
-    //   298: athrow
-    //   299: astore_0
-    //   300: goto -8 -> 292
-    //   303: astore_0
-    //   304: goto -34 -> 270
-    //   307: astore_0
-    //   308: aconst_null
-    //   309: astore 10
-    //   311: goto -63 -> 248
+    //   255: invokestatic 188	com/estrongs/android/util/l:a	(Ljava/lang/String;Ljava/lang/Throwable;)V
+    //   258: aload 10
+    //   260: invokestatic 106	com/estrongs/fs/util/j:a	(Ljava/io/OutputStream;)V
+    //   263: aconst_null
+    //   264: areturn
+    //   265: astore_0
+    //   266: aconst_null
+    //   267: astore 10
+    //   269: aload 10
+    //   271: astore 5
+    //   273: ldc -73
+    //   275: aload_0
+    //   276: invokestatic 188	com/estrongs/android/util/l:a	(Ljava/lang/String;Ljava/lang/Throwable;)V
+    //   279: aload 10
+    //   281: invokestatic 106	com/estrongs/fs/util/j:a	(Ljava/io/OutputStream;)V
+    //   284: aconst_null
+    //   285: areturn
+    //   286: astore_0
+    //   287: aconst_null
+    //   288: astore 5
+    //   290: aload 5
+    //   292: invokestatic 106	com/estrongs/fs/util/j:a	(Ljava/io/OutputStream;)V
+    //   295: aload_0
+    //   296: athrow
+    //   297: astore_0
+    //   298: goto -8 -> 290
+    //   301: astore_0
+    //   302: goto -33 -> 269
+    //   305: astore_0
+    //   306: aconst_null
+    //   307: astore 10
+    //   309: goto -61 -> 248
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	314	0	paramContentResolver	ContentResolver
-    //   0	314	1	paramString1	String
-    //   0	314	2	paramLong	long
-    //   0	314	4	paramLocation	android.location.Location
-    //   0	314	5	paramString2	String
-    //   0	314	6	paramString3	String
-    //   0	314	7	paramBitmap	android.graphics.Bitmap
-    //   0	314	8	paramArrayOfByte	byte[]
-    //   0	314	9	paramArrayOfInt	int[]
-    //   36	274	10	localObject	Object
+    //   0	312	0	paramContentResolver	ContentResolver
+    //   0	312	1	paramString1	String
+    //   0	312	2	paramLong	long
+    //   0	312	4	paramLocation	android.location.Location
+    //   0	312	5	paramString2	String
+    //   0	312	6	paramString3	String
+    //   0	312	7	paramBitmap	android.graphics.Bitmap
+    //   0	312	8	paramArrayOfByte	byte[]
+    //   0	312	9	paramArrayOfInt	int[]
+    //   36	272	10	localObject	Object
     //   25	214	11	str	String
     // Exception table:
     //   from	to	target	type
     //   81	94	247	java/io/FileNotFoundException
     //   224	231	247	java/io/FileNotFoundException
     //   235	244	247	java/io/FileNotFoundException
-    //   27	52	266	java/io/IOException
-    //   52	72	266	java/io/IOException
-    //   27	52	288	finally
-    //   52	72	288	finally
-    //   81	94	299	finally
-    //   224	231	299	finally
-    //   235	244	299	finally
-    //   252	259	299	finally
-    //   274	281	299	finally
-    //   81	94	303	java/io/IOException
-    //   224	231	303	java/io/IOException
-    //   235	244	303	java/io/IOException
-    //   27	52	307	java/io/FileNotFoundException
-    //   52	72	307	java/io/FileNotFoundException
+    //   27	52	265	java/io/IOException
+    //   52	72	265	java/io/IOException
+    //   27	52	286	finally
+    //   52	72	286	finally
+    //   81	94	297	finally
+    //   224	231	297	finally
+    //   235	244	297	finally
+    //   252	258	297	finally
+    //   273	279	297	finally
+    //   81	94	301	java/io/IOException
+    //   224	231	301	java/io/IOException
+    //   235	244	301	java/io/IOException
+    //   27	52	305	java/io/FileNotFoundException
+    //   52	72	305	java/io/FileNotFoundException
   }
   
   public static f a(ContentResolver paramContentResolver, Uri paramUri, int paramInt)

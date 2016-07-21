@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/compress/ai;
+.field final synthetic a:Lcom/estrongs/android/pop/app/compress/ar;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/compress/ai;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/compress/ar;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/compress/au;->a:Lcom/estrongs/android/pop/app/compress/ai;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/compress/au;->a:Lcom/estrongs/android/pop/app/compress/ar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,34 +25,11 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/au;->a:Lcom/estrongs/android/pop/app/compress/ai;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/au;->a:Lcom/estrongs/android/pop/app/compress/ar;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/ai;->a(Lcom/estrongs/android/pop/app/compress/ai;)Lcom/estrongs/io/a/a/b;
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/compress/ar;->a:Lcom/estrongs/android/pop/app/compress/aj;
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/io/a/a/b;->e()V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/au;->a:Lcom/estrongs/android/pop/app/compress/ai;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/compress/ai;->b:Lcom/estrongs/io/archive/i;
-
-    instance-of v0, v0, Lcom/estrongs/io/archive/sevenzip/x;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/au;->a:Lcom/estrongs/android/pop/app/compress/ai;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/compress/ai;->b:Lcom/estrongs/io/archive/i;
-
-    check-cast v0, Lcom/estrongs/io/archive/sevenzip/x;
-
-    invoke-virtual {v0}, Lcom/estrongs/io/archive/sevenzip/x;->b()V
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/au;->a:Lcom/estrongs/android/pop/app/compress/ai;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/compress/ai;->a()V
+    invoke-static {v0, p2}, Lcom/estrongs/android/pop/app/compress/aj;->a(Lcom/estrongs/android/pop/app/compress/aj;I)I
 
     return-void
 .end method

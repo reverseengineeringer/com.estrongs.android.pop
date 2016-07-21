@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.estrongs.android.pop.esclasses.ESDrawerLayout android:id="@id/drawer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:id="@id/container_top" android:background="@color/c_es_actionbar_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <android.support.v7.widget.Toolbar android:id="@id/toolbar_top" android:layout_width="fill_parent" android:layout_height="@dimen/dp_55" app:popupTheme="@style/ThemeOverlay.AppCompat.Light.Custom" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/window_rect" android:layout_width="fill_parent" android:layout_height="@dimen/dp_0" android:layout_weight="1.0">
+            <com.estrongs.android.ui.drag.DragLayer android:id="@id/container_switcher" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.estrongs.android.ui.controller.widget.ESFloatingActionButton android:id="@id/floating_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_20" android:layout_marginBottom="@dimen/dp_30" android:src="@drawable/toolbar_new" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" style="@style/FloatingActionButton" />
+            <ProgressBar android:id="@id/progress" android:layout_width="fill_parent" android:layout_height="4.0dip" style="@style/Widget.AppCompat.ProgressBar.Horizontal" />
+            <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/full_screen_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_display" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/container_tools_bottom" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/dp_50">
+            <RelativeLayout android:gravity="center" android:id="@id/switcher_tools_bottom" android:background="@color/c_333840" android:layout_width="fill_parent" android:layout_height="@dimen/bottom_menu_basic_height" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <com.estrongs.android.pop.esclasses.ESDrawerFrameLayout android:layout_gravity="start" android:id="@id/start_drawer" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.estrongs.android.pop.esclasses.ESDrawerFrameLayout android:layout_gravity="end" android:id="@id/end_drawer" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.estrongs.android.pop.esclasses.ESDrawerLayout>

@@ -32,7 +32,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lcom/estrongs/android/util/ak;->b()Z
+    invoke-static {}, Lcom/estrongs/android/util/an;->b()Z
 
     move-result v0
 

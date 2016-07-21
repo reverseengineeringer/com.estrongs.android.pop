@@ -1,19 +1,15 @@
 package com.estrongs.android.pop;
 
-import android.app.Activity;
-import com.estrongs.a.a;
-import com.estrongs.a.a.p;
+import com.estrongs.android.pop.view.FileExplorerActivity;
 
 class j
-  implements p
+  implements Runnable
 {
-  j(h paramh, String paramString) {}
+  j(i parami, String paramString) {}
   
-  public void a(a parama, int paramInt1, int paramInt2)
+  public void run()
   {
-    if (4 == paramInt2) {
-      b.a.runOnUiThread(new k(this));
-    }
+    ((FileExplorerActivity)b.a).g(a);
   }
 }
 

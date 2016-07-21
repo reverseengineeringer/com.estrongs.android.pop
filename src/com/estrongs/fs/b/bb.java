@@ -1,51 +1,22 @@
 package com.estrongs.fs.b;
 
-import android.app.Activity;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.TextView;
-import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.pop.esclasses.g;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.fs.util.j;
+import com.estrongs.a.a;
+import com.estrongs.a.a.p;
+import com.estrongs.android.util.an;
 
-class bb
-  implements Runnable
+final class bb
+  implements p
 {
-  bb(ba paramba) {}
-  
-  public void run()
+  public void a(a parama, int paramInt1, int paramInt2)
   {
-    if (ESActivity.A() == null) {
+    parama = ((ba)parama).a();
+    if ((paramInt1 == 1) && (paramInt2 == 2) && (parama != null)) {
+      an.a(parama, true);
+    }
+    while ((paramInt1 != 2) || ((paramInt2 != 4) && (paramInt2 != 5)) || (parama == null)) {
       return;
     }
-    cg localcg = new cg(ESActivity.A());
-    View localView = g.a(ESActivity.A()).inflate(2130903107, null);
-    localcg.setContentView(localView);
-    localcg.setTitle(2131427555);
-    TextView localTextView = (TextView)localView.findViewById(2131361822);
-    if (aa).c == 1)
-    {
-      localTextView.setText(String.format(ba.b(a).getString(2131427556), new Object[] { ba.c(a), j.c(aa).e) }));
-      ((TextView)localView.findViewById(2131362121)).setText("" + aa).g);
-      ((TextView)localView.findViewById(2131362021)).setText(ba.d(a));
-      if ((aa).c != 1) || (aa).b == 2)) {
-        break label350;
-      }
-      localcg.setLeftButton(ba.b(a).getString(2131427340), new bc(this));
-      localcg.setMiddleButton(ba.b(a).getString(2131427368), new bd(this));
-      localcg.setRightButton(ba.b(a).getString(2131427385), new be(this));
-    }
-    for (;;)
-    {
-      localcg.show();
-      return;
-      localTextView.setText(String.format(ba.b(a).getString(2131427557), new Object[] { ba.c(a), Integer.valueOf(aa).c), j.c(aa).e) }));
-      break;
-      label350:
-      localcg.setConfirmButton(ba.b(a).getString(2131427385), new bf(this));
-      localcg.setCancelButton(ba.b(a).getString(2131427340), new bg(this));
-    }
+    an.a(parama, false);
   }
 }
 

@@ -1,25 +1,16 @@
 package com.estrongs.android.pop.view;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.EditText;
-import com.estrongs.android.util.a;
-import com.estrongs.android.view.aw;
+import java.io.File;
+import java.io.FileFilter;
 
 class cw
-  implements View.OnClickListener
+  implements FileFilter
 {
-  cw(FileExplorerActivity paramFileExplorerActivity) {}
+  cw(cv paramcv) {}
   
-  public void onClick(View paramView)
+  public boolean accept(File paramFile)
   {
-    if (FileExplorerActivity.B(a) == null) {}
-    while (a.y() == null) {
-      return;
-    }
-    a.b(a.y().ab(), FileExplorerActivity.B(a).getText().toString());
-    a.a("Home_Search_Wan", "Home_Search_Wan");
-    a.b("Home_Search_Wan_UV", "Home_Search_Wan_UV");
+    return (paramFile.isFile()) && (paramFile.getName().endsWith(".apk"));
   }
 }
 

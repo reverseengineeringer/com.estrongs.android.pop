@@ -1,28 +1,27 @@
 package com.estrongs.android.ui.c.a;
 
 import android.view.View;
-import android.view.View.OnLongClickListener;
-import android.view.ViewGroup;
+import android.view.View.OnClickListener;
+import com.estrongs.android.j.d;
+import com.estrongs.android.pop.ai;
+import com.estrongs.android.pop.view.FileExplorerActivity;
 
 class c
-  implements View.OnLongClickListener
+  implements View.OnClickListener
 {
   c(b paramb) {}
   
-  public boolean onLongClick(View paramView)
+  public void onClick(View paramView)
   {
-    try
+    ai.b(a.a).f(System.currentTimeMillis());
+    b.a(a.a, b.a(a));
+    paramView = a.a.at();
+    if (paramView != null)
     {
-      ((ViewGroup)paramView).requestDisallowInterceptTouchEvent(true);
-      if (b.a(a) != null) {
-        b.a(a).onLongClick(paramView);
-      }
-      return false;
+      paramView.a("Homepage_A");
+      paramView.c("analysis", "Homepage_A");
     }
-    catch (Exception localException)
-    {
-      for (;;) {}
-    }
+    d.a(a.a);
   }
 }
 

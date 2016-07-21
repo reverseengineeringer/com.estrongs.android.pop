@@ -1,6 +1,6 @@
 package com.estrongs.fs.impl.usb.fs.ntfs;
 
-import android.util.Log;
+import com.estrongs.android.util.l;
 import com.estrongs.fs.impl.usb.fs.c;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
@@ -110,7 +110,7 @@ public class v
   public i d(String paramString)
   {
     if (b) {
-      Log.d(a, "getEntry(" + paramString + ")");
+      l.b(a, "getEntry(" + paramString + ")");
     }
     Iterator localIterator = m();
     while (localIterator.hasNext())

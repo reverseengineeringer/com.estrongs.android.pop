@@ -1,54 +1,18 @@
 package com.estrongs.android.view;
 
-import android.app.Activity;
-import android.view.View;
-import android.widget.CheckBox;
-import com.estrongs.android.util.TypedMap;
-import com.estrongs.android.widget.HeaderGridView;
-import com.estrongs.android.widget.e;
-import com.estrongs.fs.h;
-import com.estrongs.fs.util.a.a;
+import android.os.ConditionVariable;
+import com.estrongs.fs.b.al;
+import java.util.List;
 
-public class dp
-  extends aw
+class dp
 {
-  boolean a = false;
+  public al a;
+  public ConditionVariable b;
+  public Runnable c;
+  public Runnable d;
+  public List<Runnable> e;
   
-  public dp(Activity paramActivity, a parama, cb paramcb)
-  {
-    super(paramActivity, parama, paramcb);
-    paramActivity = g.getOnItemClickListener();
-    g.setOnItemClickListener(new dq(this, paramActivity));
-  }
-  
-  protected void a(e parame, int paramInt)
-  {
-    if ((a) && (3 == B()) && (z()))
-    {
-      d.setBackgroundDrawable(null);
-      ((View)g.getParent()).setOnClickListener(new dr(this, paramInt));
-    }
-  }
-  
-  protected void a(h paramh, TypedMap paramTypedMap)
-  {
-    v();
-    super.a(paramh, paramTypedMap);
-  }
-  
-  public void c(boolean paramBoolean)
-  {
-    if (paramBoolean)
-    {
-      a = true;
-      a(true);
-    }
-  }
-  
-  public boolean p()
-  {
-    return a;
-  }
+  dp(cr paramcr) {}
 }
 
 /* Location:

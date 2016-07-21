@@ -98,15 +98,13 @@
 
     iget-object v3, p0, Lcom/estrongs/android/ui/preference/fragments/x;->a:Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;
 
-    const/4 v4, 0x3
-
-    invoke-static {v3, v4}, Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;->a(Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;I)I
+    invoke-static {v3, v1}, Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;->a(Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;I)I
 
     if-eqz v2, :cond_2
 
     iget-object v1, p0, Lcom/estrongs/android/ui/preference/fragments/x;->a:Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;
 
-    invoke-static {v1}, Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;->e(Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;)Landroid/preference/EditTextPreference;
+    invoke-static {v1}, Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;->b(Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;)Landroid/preference/EditTextPreference;
 
     move-result-object v1
 
@@ -114,7 +112,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/ui/preference/fragments/x;->a:Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;
 
-    invoke-static {v1}, Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;->e(Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;)Landroid/preference/EditTextPreference;
+    invoke-static {v1}, Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;->b(Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;)Landroid/preference/EditTextPreference;
 
     move-result-object v1
 
@@ -126,7 +124,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/ad;->u(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/ad;->i(Ljava/lang/String;)V
 
     const/4 v0, 0x1
 

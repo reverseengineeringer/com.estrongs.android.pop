@@ -1,16 +1,23 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.app.Activity;
+import com.estrongs.android.pop.utils.ao;
+import com.estrongs.android.ui.pcs.q;
 
 class br
-  implements DialogInterface.OnClickListener
+  implements q
 {
-  br(bq parambq) {}
+  br(ESFileSharingActivity paramESFileSharingActivity, Activity paramActivity, String paramString) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void a(boolean paramBoolean, String paramString1, String paramString2)
   {
-    paramDialogInterface.dismiss();
+    if ((paramBoolean) && (paramString2 != null))
+    {
+      ao.a(a, b, new bs(this));
+      ESFileSharingActivity.a(c, false);
+      return;
+    }
+    c.finish();
   }
 }
 

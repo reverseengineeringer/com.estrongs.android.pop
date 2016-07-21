@@ -1,6 +1,6 @@
 package com.estrongs.fs.impl.usb.fs.a;
 
-import android.util.Log;
+import com.estrongs.android.util.l;
 import java.nio.ByteBuffer;
 
 public class a
@@ -18,8 +18,8 @@ public class a
     d = paramb;
     c = parama;
     e = paramb.a(paramLong);
-    f = paramc.i();
-    g = paramc.k();
+    f = paramc.j();
+    g = paramc.l();
   }
   
   private long a(long paramLong, int paramInt)
@@ -41,13 +41,13 @@ public class a
     if (paramInt > i)
     {
       if (b) {
-        Log.d(a, "grow chain");
+        l.b(a, "grow chain");
       }
       e = d.a(e, paramInt - i);
       return;
     }
     if (b) {
-      Log.d(a, "shrink chain");
+      l.b(a, "shrink chain");
     }
     e = d.b(e, i - paramInt);
   }

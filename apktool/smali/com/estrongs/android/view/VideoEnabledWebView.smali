@@ -3,11 +3,11 @@
 
 
 # instance fields
-.field private a:Lcom/estrongs/android/view/dt;
+.field private a:Lcom/estrongs/android/view/fy;
 
 .field private b:Z
 
-.field private c:Lcom/estrongs/android/view/dz;
+.field private c:Lcom/estrongs/android/view/ge;
 
 
 # direct methods
@@ -18,7 +18,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/estrongs/android/view/VideoEnabledWebView;->c:Lcom/estrongs/android/view/dz;
+    iput-object v0, p0, Lcom/estrongs/android/view/VideoEnabledWebView;->c:Lcom/estrongs/android/view/ge;
 
     const/4 v0, 0x0
 
@@ -34,7 +34,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/estrongs/android/view/VideoEnabledWebView;->c:Lcom/estrongs/android/view/dz;
+    iput-object v0, p0, Lcom/estrongs/android/view/VideoEnabledWebView;->c:Lcom/estrongs/android/view/ge;
 
     const/4 v0, 0x0
 
@@ -50,7 +50,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/estrongs/android/view/VideoEnabledWebView;->c:Lcom/estrongs/android/view/dz;
+    iput-object v0, p0, Lcom/estrongs/android/view/VideoEnabledWebView;->c:Lcom/estrongs/android/view/ge;
 
     const/4 v0, 0x0
 
@@ -59,10 +59,10 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/estrongs/android/view/VideoEnabledWebView;)Lcom/estrongs/android/view/dt;
+.method static synthetic a(Lcom/estrongs/android/view/VideoEnabledWebView;)Lcom/estrongs/android/view/fy;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/view/VideoEnabledWebView;->a:Lcom/estrongs/android/view/dt;
+    iget-object v0, p0, Lcom/estrongs/android/view/VideoEnabledWebView;->a:Lcom/estrongs/android/view/fy;
 
     return-object v0
 .end method
@@ -79,9 +79,9 @@
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcom/estrongs/android/view/dy;
+    new-instance v0, Lcom/estrongs/android/view/gd;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/view/dy;-><init>(Lcom/estrongs/android/view/VideoEnabledWebView;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/view/gd;-><init>(Lcom/estrongs/android/view/VideoEnabledWebView;)V
 
     const-string v1, "_VideoEnabledWebView"
 
@@ -105,14 +105,6 @@
 
 
 # virtual methods
-.method public a(Lcom/estrongs/android/view/dz;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/view/VideoEnabledWebView;->c:Lcom/estrongs/android/view/dz;
-
-    return-void
-.end method
-
 .method public loadData(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
@@ -146,16 +138,24 @@
 .method public onScrollChanged(IIII)V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/view/VideoEnabledWebView;->c:Lcom/estrongs/android/view/dz;
+    iget-object v0, p0, Lcom/estrongs/android/view/VideoEnabledWebView;->c:Lcom/estrongs/android/view/ge;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/view/VideoEnabledWebView;->c:Lcom/estrongs/android/view/dz;
+    iget-object v0, p0, Lcom/estrongs/android/view/VideoEnabledWebView;->c:Lcom/estrongs/android/view/ge;
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lcom/estrongs/android/view/dz;->a(IIII)V
+    invoke-interface {v0, p1, p2, p3, p4}, Lcom/estrongs/android/view/ge;->a(IIII)V
 
     :cond_0
     invoke-super {p0, p1, p2, p3, p4}, Lcom/estrongs/android/pop/esclasses/ESWebView;->onScrollChanged(IIII)V
+
+    return-void
+.end method
+
+.method public setOnWebViewScrollListener(Lcom/estrongs/android/view/ge;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/view/VideoEnabledWebView;->c:Lcom/estrongs/android/view/ge;
 
     return-void
 .end method
@@ -176,15 +176,15 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
-    instance-of v0, p1, Lcom/estrongs/android/view/dt;
+    instance-of v0, p1, Lcom/estrongs/android/view/fy;
 
     if-eqz v0, :cond_0
 
     move-object v0, p1
 
-    check-cast v0, Lcom/estrongs/android/view/dt;
+    check-cast v0, Lcom/estrongs/android/view/fy;
 
-    iput-object v0, p0, Lcom/estrongs/android/view/VideoEnabledWebView;->a:Lcom/estrongs/android/view/dt;
+    iput-object v0, p0, Lcom/estrongs/android/view/VideoEnabledWebView;->a:Lcom/estrongs/android/view/fy;
 
     :cond_0
     invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESWebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V

@@ -1,20 +1,16 @@
 package com.estrongs.android.pop.view;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.view.aw;
+import com.estrongs.android.pop.ad;
 
 class df
-  implements View.OnClickListener
+  implements Runnable
 {
   df(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void onClick(View paramView)
+  public void run()
   {
-    paramView = a.y();
-    if (paramView != null) {
-      paramView.c(-4);
-    }
+    String str = a.k.j(a.a);
+    a.g(str);
   }
 }
 

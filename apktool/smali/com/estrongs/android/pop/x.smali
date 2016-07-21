@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/a/h;
+.implements Lcom/estrongs/android/d/h;
 
 
 # instance fields

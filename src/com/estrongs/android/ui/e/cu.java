@@ -1,26 +1,16 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.view.a.b;
-import com.estrongs.fs.impl.adb.c;
-import java.util.ArrayList;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class cu
-  implements b
+  implements DialogInterface.OnClickListener
 {
-  cu(cp paramcp) {}
+  cu(ct paramct) {}
   
-  public boolean a(co paramco)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ((I) && (!D) && (c.b()))
-    {
-      paramco = new ArrayList();
-      ad.a(a.b).e(paramco);
-      if (!paramco.isEmpty()) {
-        return true;
-      }
-    }
-    return false;
+    paramDialogInterface.dismiss();
   }
 }
 

@@ -1,12 +1,12 @@
 .class public Lcom/estrongs/android/pop/ftp/ESFtpShortcut;
-.super Lcom/estrongs/android/pop/esclasses/ESActivity;
+.super Lcom/estrongs/android/pop/esclasses/ESResourceActivity;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;-><init>()V
 
     return-void
 .end method
@@ -20,7 +20,7 @@
 
     const/4 v1, 0x0
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;->onCreate(Landroid/os/Bundle;)V
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/ftp/ESFtpShortcut;->getIntent()Landroid/content/Intent;
 

@@ -1,32 +1,41 @@
 package com.estrongs.android.ui.e;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.app.PopAudioPlayer;
-import com.estrongs.android.pop.app.a.ak;
-import com.estrongs.android.pop.utils.aj;
-import com.estrongs.android.util.am;
-import java.util.List;
+import android.app.Activity;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.pop.m;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.ui.dialog.jh;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.widget.ad;
+import com.estrongs.fs.b.a;
+import com.estrongs.fs.h;
 
 class hw
-  implements MenuItem.OnMenuItemClickListener
+  implements DialogInterface.OnClickListener
 {
-  hw(hl paramhl) {}
+  hw(hv paramhv, ad paramad) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    paramMenuItem = hl.a(a).v();
-    if (paramMenuItem.size() > 0)
+    Object localObject = FileExplorerActivity.X();
+    h localh = a.e();
+    if (!ap.M(localh.getAbsolutePath()))
     {
-      String str = get0b;
-      paramMenuItem = str;
-      if (!am.ba(str)) {
-        paramMenuItem = am.bq(str);
-      }
-      aj.a(hl.a(a), paramMenuItem);
+      ak.a((Context)localObject, 2131231719, 1);
+      return;
     }
-    hl.a(a).u();
-    return true;
+    paramDialogInterface = new a(cr.a(b.a), localh, false);
+    paramDialogInterface.setDescription(String.format(((FileExplorerActivity)localObject).getString(2131230907), new Object[] { ap.cc(localh.getAbsolutePath()) }));
+    paramDialogInterface.setTaskDecisionListener(new m((Activity)localObject));
+    localObject = new jh((Activity)localObject, ((FileExplorerActivity)localObject).getString(2131232173), paramDialogInterface);
+    ((jh)localObject).show();
+    paramDialogInterface.a((ci)localObject);
+    paramDialogInterface.execute();
+    a.k();
   }
 }
 

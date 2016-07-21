@@ -1,23 +1,23 @@
 package com.estrongs.android.appinfo;
 
-import android.util.Log;
-import com.estrongs.android.util.ab;
+import com.estrongs.android.util.af;
+import com.estrongs.android.util.l;
 
 class j
-  implements ab
+  implements af
 {
   j(i parami) {}
   
-  public void a(Object paramObject) {}
+  public void downloadCompleted(Object paramObject) {}
   
-  public void a(Object paramObject, long paramLong1, long paramLong2) {}
-  
-  public void a(Object paramObject, Throwable paramThrowable)
+  public void downloadError(Object paramObject, Throwable paramThrowable)
   {
-    Log.d("AppFolder", "request app_folder_map update info failed !");
+    l.b("AppFolder", "request app_folder_map update info failed !");
   }
   
-  public void b(Object paramObject) {}
+  public void downloadProgress(Object paramObject, long paramLong1, long paramLong2) {}
+  
+  public void downloadStarted(Object paramObject) {}
 }
 
 /* Location:

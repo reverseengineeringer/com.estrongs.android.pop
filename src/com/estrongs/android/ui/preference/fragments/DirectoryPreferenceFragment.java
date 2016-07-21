@@ -5,16 +5,17 @@ import android.os.Bundle;
 import android.preference.EditTextPreference;
 import android.preference.PreferenceScreen;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.esclasses.i;
-import com.estrongs.android.ui.dialog.ct;
-import com.estrongs.android.ui.view.ag;
+import com.estrongs.android.pop.esclasses.m;
+import com.estrongs.android.pop.view.a;
+import com.estrongs.android.ui.dialog.cv;
+import com.estrongs.android.ui.view.ak;
 import com.estrongs.fs.FileSystemException;
 import com.estrongs.fs.d;
 import java.io.File;
 
 @SuppressLint({"NewApi"})
 public class DirectoryPreferenceFragment
-  extends i
+  extends m
 {
   private ad a;
   private EditTextPreference b;
@@ -25,7 +26,7 @@ public class DirectoryPreferenceFragment
   
   private void a()
   {
-    new ct(getActivity()).a(2131427399).b(2131427762).b(2131427341, new z(this)).c(2131427342, new y(this)).c();
+    new cv(getActivity()).a(2131231719).b(2131231916).b(2131231273, new ab(this)).c(2131231269, new aa(this)).c();
   }
   
   private boolean a(String paramString)
@@ -52,17 +53,20 @@ public class DirectoryPreferenceFragment
     }
     do
     {
-      return;
-      if (!new File(e).mkdirs()) {
-        break;
-      }
-      if (f == 0)
+      do
       {
-        b.setSummary(e);
-        b.setText(e);
-        a.i(e);
         return;
-      }
+        if (!new File(e).mkdirs()) {
+          break label193;
+        }
+        if (f != 0) {
+          break;
+        }
+      } while (a.a == "TianYu");
+      b.setSummary(e);
+      b.setText(e);
+      a.i(e);
+      return;
       if (f == 2)
       {
         if (c != null)
@@ -81,7 +85,8 @@ public class DirectoryPreferenceFragment
     }
     a.t(e);
     return;
-    ag.a(getActivity(), 2131427763, 1);
+    label193:
+    ak.a(getActivity(), 2131231915, 1);
   }
   
   public void onCreate(Bundle paramBundle)
@@ -89,34 +94,37 @@ public class DirectoryPreferenceFragment
     super.onCreate(paramBundle);
     addPreferencesFromResource(2131034123);
     a = ad.a(getActivity());
-    paramBundle = a.j("Market");
-    b = ((EditTextPreference)findPreference("root_dir"));
-    b.setSummary(paramBundle);
-    b.setText(paramBundle);
-    b.setOnPreferenceChangeListener(new v(this));
-    paramBundle = a.y();
+    paramBundle = a.j(a.a);
+    if (a.a != "TianYu")
+    {
+      b = ((EditTextPreference)findPreference("root_dir"));
+      b.setSummary(paramBundle);
+      b.setText(paramBundle);
+      b.setOnPreferenceChangeListener(new x(this));
+    }
+    paramBundle = a.z();
     c = ((EditTextPreference)findPreference("bt_dir"));
     if (c != null)
     {
       if (!com.estrongs.android.pop.z.e) {
-        break label201;
+        break label210;
       }
       c.setSummary(paramBundle);
       c.setText(paramBundle);
-      c.setOnPreferenceChangeListener(new w(this));
+      c.setOnPreferenceChangeListener(new y(this));
     }
     for (;;)
     {
-      paramBundle = a.z();
+      paramBundle = a.A();
       d = ((EditTextPreference)findPreference("download_dir"));
       if (d != null)
       {
         d.setSummary(paramBundle);
         d.setText(paramBundle);
-        d.setOnPreferenceChangeListener(new x(this));
+        d.setOnPreferenceChangeListener(new z(this));
       }
       return;
-      label201:
+      label210:
       paramBundle = getPreferenceScreen();
       if (paramBundle != null) {
         paramBundle.removePreference(c);

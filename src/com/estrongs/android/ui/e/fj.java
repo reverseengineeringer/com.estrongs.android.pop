@@ -1,29 +1,15 @@
 package com.estrongs.android.ui.e;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import java.util.ArrayList;
-import java.util.List;
+import com.estrongs.android.view.a.b;
 
 class fj
-  implements MenuItem.OnMenuItemClickListener
+  implements b
 {
-  fj(cp paramcp) {}
+  fj(cr paramcr) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public boolean a(cp paramcp)
   {
-    paramMenuItem = cp.b(a);
-    ArrayList localArrayList = new ArrayList(paramMenuItem.size());
-    int i = 0;
-    while (i < paramMenuItem.size())
-    {
-      localArrayList.add((com.estrongs.fs.impl.b.c)paramMenuItem.get(i));
-      i += 1;
-    }
-    cp.a(a).Q().b(localArrayList);
-    cp.a(a).s();
-    return false;
+    return (m) || (G);
   }
 }
 

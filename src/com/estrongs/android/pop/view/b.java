@@ -14,7 +14,7 @@ final class b
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
     if (a.isChecked()) {
-      ad.a(b).r(true);
+      ad.a(b).q(true);
     }
     paramDialogInterface.dismiss();
   }

@@ -1,30 +1,34 @@
 package com.estrongs.android.ui.e;
 
+import android.content.Context;
 import android.view.View;
-import android.widget.Button;
+import android.view.View.OnLongClickListener;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.view.a.a;
 
-public class cn
+class cn
+  implements View.OnLongClickListener
 {
-  private View b;
-  private Button c;
+  cn(cl paramcl) {}
   
-  public cn(ck paramck) {}
-  
-  public void a()
+  public boolean onLongClick(View paramView)
   {
-    b.setVisibility(0);
-    c.setCompoundDrawables(null, null, null, null);
-    c.setText(null);
-  }
-  
-  public void b()
-  {
-    b.setVisibility(0);
-  }
-  
-  public void c()
-  {
-    b.setVisibility(8);
+    int i = ((Integer)paramView.getTag()).intValue();
+    a locala = a.b(i);
+    if (locala.d() == null)
+    {
+      CharSequence localCharSequence = locala.getTitle();
+      paramView = localCharSequence;
+      if (localCharSequence == null) {
+        paramView = cl.b(a).getString(locala.a());
+      }
+      ak.a(cl.b(a), paramView, 0);
+    }
+    for (;;)
+    {
+      return true;
+      locala.e();
+    }
   }
 }
 

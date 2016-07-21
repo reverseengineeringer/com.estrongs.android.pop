@@ -1,30 +1,20 @@
 package com.estrongs.android.ui.e;
 
-import android.content.Context;
-import android.os.Build;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.ad;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.dialog.dj;
+import com.estrongs.android.widget.ContentViewSwitcher;
 
 class as
   implements MenuItem.OnMenuItemClickListener
 {
-  as(w paramw) {}
+  as(m paramm) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    a.k.k();
-    String str = ad.a(a.b).ac();
-    paramMenuItem = str;
-    if (str == null) {
-      paramMenuItem = a.b.getString(2131428609, new Object[] { Build.MODEL });
-    }
-    paramMenuItem = new dj(a.b, a.b.getString(2131428597), paramMenuItem, false);
-    paramMenuItem.a(new at(this));
-    paramMenuItem.a();
-    return true;
+    aa).h.setPageLocked(true);
+    m.a(a).h();
+    return false;
   }
 }
 

@@ -4,22 +4,29 @@ import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
 import com.estrongs.a.a;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.b.d;
+import com.estrongs.android.util.ap;
 import com.estrongs.fs.h;
 import java.util.List;
+import org.json.JSONObject;
 
 class gb
   implements MenuItem.OnMenuItemClickListener
 {
-  gb(cp paramcp) {}
+  gb(cr paramcr) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = cp.b(a);
-    if ((paramMenuItem.size() == 1) && ((((h)paramMenuItem.get(0)).getExtra("task") instanceof a))) {
-      new d(cp.a(a), (h)paramMenuItem.get(0)).a();
+    paramMenuItem = cr.a(a);
+    if (paramMenuItem.size() > 0)
+    {
+      paramMenuItem = ((h)paramMenuItem.get(0)).getExtra("task");
+      if ((paramMenuItem instanceof a))
+      {
+        paramMenuItem = ap.bB(((a)paramMenuItem).summary().optString("target"));
+        cr.b(a).g(paramMenuItem);
+      }
     }
-    cp.a(a).s();
+    cr.b(a).B();
     return false;
   }
 }

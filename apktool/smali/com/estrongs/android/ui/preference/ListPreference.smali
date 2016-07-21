@@ -182,7 +182,7 @@
 
     aget-object v0, v0, v1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -328,23 +328,23 @@
 
     iput v0, p0, Lcom/estrongs/android/ui/preference/ListPreference;->e:I
 
-    new-instance v0, Lcom/estrongs/android/ui/dialog/cg;
+    new-instance v0, Lcom/estrongs/android/ui/dialog/ci;
 
     invoke-virtual {p0}, Lcom/estrongs/android/ui/preference/ListPreference;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/estrongs/android/ui/dialog/cg;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/estrongs/android/ui/dialog/ci;-><init>(Landroid/content/Context;)V
 
     invoke-virtual {p0}, Lcom/estrongs/android/ui/preference/ListPreference;->getDialogTitle()Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cg;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ci;->setTitle(Ljava/lang/CharSequence;)V
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cg;->setSelectable(Z)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ci;->setSelectable(Z)V
 
     iget-object v1, p0, Lcom/estrongs/android/ui/preference/ListPreference;->b:[Ljava/lang/CharSequence;
 
@@ -354,11 +354,11 @@
 
     invoke-direct {v3, p0}, Lcom/estrongs/android/ui/preference/r;-><init>(Lcom/estrongs/android/ui/preference/ListPreference;)V
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/estrongs/android/ui/dialog/cg;->setItems([Ljava/lang/CharSequence;ILandroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/estrongs/android/ui/dialog/ci;->setItems([Ljava/lang/CharSequence;ILandroid/content/DialogInterface$OnClickListener;)V
 
-    invoke-virtual {v0, p0}, Lcom/estrongs/android/ui/dialog/cg;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-virtual {v0, p0}, Lcom/estrongs/android/ui/dialog/ci;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->show()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ci;->show()V
 
     return-void
 .end method

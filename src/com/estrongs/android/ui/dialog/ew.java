@@ -1,18 +1,16 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.Context;
-import android.content.res.Resources;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.am;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class ew
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
   ew(ev paramev) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    ag.a(es.b(a.b), es.b(a.b).getResources().getString(2131428724, new Object[] { am.a(a.a) }), 1);
+    paramDialogInterface.dismiss();
   }
 }
 

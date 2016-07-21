@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:paddingLeft="@dimen/dp_20" android:paddingTop="@dimen/dp_10" android:paddingRight="@dimen/dp_20" android:paddingBottom="@dimen/dp_20" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" layout="@layout/theme_toolbar_activity_include" />
+    </RelativeLayout>
+</RelativeLayout>

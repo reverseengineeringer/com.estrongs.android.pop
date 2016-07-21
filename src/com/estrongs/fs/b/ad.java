@@ -8,10 +8,12 @@ import com.estrongs.a.l;
 import com.estrongs.a.q;
 import com.estrongs.android.pop.multicopy.MultiThreadCopy;
 import com.estrongs.android.util.TypedMap;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bc;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bg;
+import com.estrongs.android.util.bk;
 import com.estrongs.fs.FileSystemException;
+import com.estrongs.fs.h;
+import com.estrongs.fs.impl.local.i;
 import com.estrongs.fs.impl.pcs.PcsFileSystem;
 import com.estrongs.fs.util.j;
 import java.io.File;
@@ -34,15 +36,16 @@ public class ad
   af d = new af();
   public String e;
   public boolean f = true;
-  Long g = Long.valueOf(0L);
+  public boolean g = false;
   Long h = Long.valueOf(0L);
-  private String i;
+  Long i = Long.valueOf(0L);
   private String j;
-  private boolean k = true;
-  private boolean l = false;
-  private String m;
-  private String n = null;
+  private String k;
+  private boolean l = true;
+  private boolean m = false;
+  private String n;
   private String o = null;
+  private String p = null;
   
   public ad(com.estrongs.fs.d paramd, String paramString1, String paramString2)
   {
@@ -57,13 +60,13 @@ public class ad
   public ad(com.estrongs.fs.d paramd, String paramString1, String paramString2, boolean paramBoolean, String paramString3)
   {
     a = paramd;
-    i = paramString1;
-    n = paramString3;
+    j = paramString1;
+    o = paramString3;
     paramd = paramString2;
     if (!paramString2.endsWith(File.separator)) {
       paramd = paramString2 + File.separator;
     }
-    j = paramd;
+    k = paramd;
     paramd = new File(paramd);
     if (!paramd.exists()) {
       paramd.mkdirs();
@@ -78,28 +81,28 @@ public class ad
   {
     super(paramJSONObject);
     a = paramd;
-    i = paramJSONObject.optString("source");
+    j = paramJSONObject.optString("source");
     e = paramJSONObject.optString("target");
-    j = am.bk(e);
-    if (!j.endsWith(File.separator)) {
-      j += File.separator;
+    k = ap.bB(e);
+    if (!k.endsWith(File.separator)) {
+      k += File.separator;
     }
-    n = paramJSONObject.optString("mime_type");
+    o = paramJSONObject.optString("mime_type");
     paramd = MultiThreadCopy.a(e);
     if (paramd.exists())
     {
       processData.f = MultiThreadCopy.a(paramd, e);
       processData.e = paramJSONObject.optLong("size");
       if (processData.f <= 0L) {
-        break label299;
+        break label304;
       }
       if (processData.f >= processData.e) {
-        break label275;
+        break label280;
       }
       processData.i = 2;
       setTaskStatus(5);
     }
-    label275:
+    label280:
     while (processData.f != processData.e)
     {
       return;
@@ -108,7 +111,7 @@ public class ad
     }
     setTaskStatus(4);
     return;
-    label299:
+    label304:
     if (paramJSONObject.optInt("status") == 4)
     {
       setTaskStatus(4);
@@ -122,7 +125,7 @@ public class ad
     String str = paramString2;
     int i2;
     int i1;
-    if (bd.b(paramString1))
+    if (bk.b(paramString1))
     {
       paramString1 = paramString1.split(";");
       i2 = paramString1.length;
@@ -134,7 +137,7 @@ public class ad
       if (i1 < i2)
       {
         str = paramString1[i1];
-        if ((!bd.b(str)) || (!i.contains(str))) {}
+        if ((!bk.b(str)) || (!j.contains(str))) {}
       }
       else
       {
@@ -154,10 +157,10 @@ public class ad
     recordSummary("task_type", Integer.valueOf(6));
     recordSummary("restartable", Boolean.valueOf(true));
     recordSummary("items_ori_count", Integer.valueOf(1));
-    recordSummary("source", i);
-    recordSummary("file_type", Integer.valueOf(bc.b(i)));
+    recordSummary("source", j);
+    recordSummary("file_type", Integer.valueOf(bg.b(j)));
     recordSummary("status", Integer.valueOf(1));
-    recordSummary("mime_type", n);
+    recordSummary("mime_type", o);
   }
   
   protected boolean a()
@@ -170,7 +173,7 @@ public class ad
     int i1;
     int i2;
     Object localObject4;
-    if ((i.toLowerCase().startsWith("http")) || (i.toLowerCase().startsWith("https")))
+    if ((j.toLowerCase().startsWith("http")) || (j.toLowerCase().startsWith("https")))
     {
       localObject5 = new TypedMap();
       i1 = 0;
@@ -195,7 +198,7 @@ public class ad
         }
         try
         {
-          localObject4 = (c)getDecision(c.class, new Object[] { i, Long.valueOf(getTaskId()) });
+          localObject4 = (c)getDecision(c.class, new Object[] { j, Long.valueOf(getTaskId()) });
           try
           {
             if (!d) {
@@ -229,58 +232,58 @@ public class ad
       break;
       ((TypedMap)localObject5).put("NEW_USERNAME", b);
       ((TypedMap)localObject5).put("NEW_PASSWORD", c);
-      localObject3 = new com.estrongs.fs.impl.h.b().b(i, (TypedMap)localObject5);
+      localObject3 = new com.estrongs.fs.impl.m.b().b(j, (TypedMap)localObject5);
       localObject1 = localObject4;
       for (;;)
       {
         break;
-        localObject3 = new com.estrongs.fs.impl.h.b().a(i);
+        localObject3 = new com.estrongs.fs.impl.m.b().a(j);
       }
-      localObject4 = a.j(i);
+      localObject4 = a.j(j);
     }
-    processData.j = ((com.estrongs.fs.h)localObject4).getName();
+    processData.j = ((h)localObject4).getName();
     processData.c = 1L;
-    processData.e = ((com.estrongs.fs.h)localObject4).length();
+    processData.e = ((h)localObject4).length();
     localObject3 = summary().optString("title");
     localObject1 = localObject3;
-    if (bd.a((CharSequence)localObject3)) {
-      if (!i.startsWith("http://"))
+    if (bk.a((CharSequence)localObject3)) {
+      if (!j.startsWith("http://"))
       {
         localObject1 = localObject3;
-        if (!i.startsWith("https://")) {}
+        if (!j.startsWith("https://")) {}
       }
       else
       {
-        localObject1 = ((com.estrongs.fs.h)localObject4).getName();
+        localObject1 = ((h)localObject4).getName();
       }
     }
     localObject3 = localObject1;
     if (localObject1 == null) {
-      localObject3 = am.d(i);
+      localObject3 = ap.d(j);
     }
     localObject5 = ((String)localObject3).replace(':', '_');
-    localObject3 = am.bA(((com.estrongs.fs.h)localObject4).getName());
+    localObject3 = ap.bR(((h)localObject4).getName());
     localObject1 = localObject3;
-    if (bc.b((String)localObject5) == -1)
+    if (bg.b((String)localObject5) == -1)
     {
       localObject1 = localObject3;
-      if (n != null)
+      if (o != null)
       {
-        localObject3 = MimeTypeMap.getSingleton().getExtensionFromMimeType(n);
+        localObject3 = MimeTypeMap.getSingleton().getExtensionFromMimeType(o);
         localObject1 = localObject3;
-        if (bd.a((CharSequence)localObject3))
+        if (bk.a((CharSequence)localObject3))
         {
           localObject1 = localObject3;
-          if (n.startsWith("image")) {
-            localObject1 = a(bc.b(), ".jpg");
+          if (o.startsWith("image")) {
+            localObject1 = a(bg.b(), ".jpg");
           }
-          if (n.startsWith("video")) {
-            localObject1 = a(bc.b(), ".mp4");
+          if (o.startsWith("video")) {
+            localObject1 = a(bg.b(), ".mp4");
           }
         }
       }
     }
-    if (bd.b((CharSequence)localObject1))
+    if (bk.b((CharSequence)localObject1))
     {
       localObject3 = localObject1;
       if (!((String)localObject1).startsWith(".")) {
@@ -289,18 +292,18 @@ public class ad
       if (!((String)localObject5).endsWith((String)localObject3))
       {
         localObject1 = (String)localObject5 + (String)localObject3;
-        m = (j + (String)localObject1);
-        e = (j + getTaskId() + "_" + (String)localObject1);
+        n = (k + (String)localObject1);
+        e = (k + getTaskId() + "_" + (String)localObject1);
         b.clear();
-        b.add(new u((com.estrongs.fs.h)localObject4, e, processData.f, false));
-        l = m.startsWith(i);
+        b.add(new u((h)localObject4, e, processData.f, false));
+        m = n.startsWith(j);
         canRestart = true;
         task_type = 6;
         recordSummary("title", localObject1);
         recordSummary("target", e);
-        recordSummary("file_type", Integer.valueOf(bc.b((String)localObject1)));
+        recordSummary("file_type", Integer.valueOf(bg.b((String)localObject1)));
         recordSummary("items_selected_count", Long.valueOf(processData.c));
-        recordSummary("size", Long.valueOf(((com.estrongs.fs.h)localObject4).length()));
+        recordSummary("size", Long.valueOf(((h)localObject4).length()));
         l.a().b(this);
         return true;
       }
@@ -314,7 +317,7 @@ public class ad
   
   public String c()
   {
-    return m;
+    return n;
   }
   
   protected void executeHelper()
@@ -330,7 +333,7 @@ public class ad
     if (paramClass.getName().equals(c.class.getName())) {
       return super.getDecision(paramClass, paramVarArgs);
     }
-    if ((paramVarArgs != null) && (paramVarArgs.length == 2) && (bd.b(paramVarArgs[1]))) {
+    if ((paramVarArgs != null) && (paramVarArgs.length == 2) && (bk.b(paramVarArgs[1]))) {
       return null;
     }
     return super.getDecisionData(paramClass);
@@ -363,7 +366,7 @@ public class ad
         if ((paramVarArgs.length == 3) && (("RBT".equals(paramVarArgs[2])) || ("reset".equals(paramVarArgs[2]))))
         {
           processData.f = ((Long)paramVarArgs[0]).longValue();
-          h = Long.valueOf(processData.f);
+          i = Long.valueOf(processData.f);
         }
         for (;;)
         {
@@ -390,8 +393,8 @@ public class ad
   
   protected void postTask()
   {
-    if (bd.b(o)) {
-      com.estrongs.fs.impl.local.h.j(o);
+    if (bk.b(p)) {
+      i.j(p);
     }
   }
   
@@ -399,11 +402,11 @@ public class ad
   {
     long l1 = processData.f;
     super.reset();
-    if (k) {
+    if (l) {
       processData.f = l1;
     }
     c = false;
-    l = false;
+    m = false;
   }
   
   public boolean task()
@@ -413,7 +416,7 @@ public class ad
       Object localObject4;
       try
       {
-        localObject4 = i;
+        localObject4 = j;
         localObject1 = localObject4;
         if (((String)localObject4).startsWith("http://t.cn/"))
         {
@@ -428,9 +431,9 @@ public class ad
         int i1;
         setTaskResult(10000, new q(localException1.toString(), localException1));
         return false;
-        recordSummary("title", am.d(e));
+        recordSummary("title", ap.d(e));
         recordSummary("target", e);
-        o = e;
+        p = e;
         com.estrongs.fs.a.b.a().a(e);
         continue;
       }
@@ -462,7 +465,7 @@ public class ad
       }
       catch (Exception localException2)
       {
-        label632:
+        label684:
         Object localObject3 = localObject4;
         continue;
         continue;
@@ -476,7 +479,7 @@ public class ad
       {
         localObject1 = localObject4;
         if (((String)localObject4).startsWith("http://www.estrongs.com/esshare?s=")) {
-          localObject1 = bd.b(((String)localObject4).substring("http://www.estrongs.com/esshare?s=".length()).replace('_', ' ').replace('-', '/'), false);
+          localObject1 = bk.b(((String)localObject4).substring("http://www.estrongs.com/esshare?s=".length()).replace('_', ' ').replace('-', '/'), false);
         }
         if (((String)localObject1).startsWith("http://dwz.cn"))
         {
@@ -484,9 +487,9 @@ public class ad
           if (localObject4 != null)
           {
             localObject1 = localObject4;
-            i = ((String)localObject1);
+            j = ((String)localObject1);
             d.a = false;
-            if (l)
+            if (m)
             {
               setTaskResult(13, new q("Error", null));
               c = true;
@@ -494,10 +497,21 @@ public class ad
             }
             if (!a())
             {
-              setTaskResult(10000, new q("Failed to get FileObject for " + i, null));
+              setTaskResult(10000, new q("Failed to get FileObject for " + j, null));
               processData.i = -1;
               c = true;
               return false;
+            }
+            if (g)
+            {
+              localObject1 = new File(n);
+              if (((File)localObject1).exists())
+              {
+                recordSummary("target", ((File)localObject1).getAbsoluteFile());
+                setTaskResult(0, d);
+                c = true;
+                return true;
+              }
             }
             new ae(this).start();
             if (b.size() > 0)
@@ -511,7 +525,7 @@ public class ad
             for (;;)
             {
               if (b.size() <= 0) {
-                break label632;
+                break label684;
               }
               boolean bool = taskStopped();
               if (bool)
@@ -526,14 +540,14 @@ public class ad
                 c = true;
                 return false;
               }
-              localObject1 = j.a(e, m);
+              localObject1 = j.a(e, n);
               if (localObject1 == null) {
                 break;
               }
               recordSummary("title", ((File)localObject1).getName());
               localObject4 = ((File)localObject1).getAbsolutePath();
               recordSummary("target", localObject4);
-              o = ((String)localObject4);
+              p = ((String)localObject4);
               com.estrongs.fs.a.b.a().a((String)localObject4);
               if (summary().optLong("size") < 0L) {
                 recordSummary("size", Long.valueOf(((File)localObject1).length()));

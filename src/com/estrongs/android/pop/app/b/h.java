@@ -1,13 +1,6 @@
 package com.estrongs.android.pop.app.b;
 
-public class h
-  extends f
-{
-  public h()
-  {
-    super(3, new int[] { 990 });
-  }
-}
+public abstract interface h {}
 
 /* Location:
  * Qualified Name:     com.estrongs.android.pop.app.b.h

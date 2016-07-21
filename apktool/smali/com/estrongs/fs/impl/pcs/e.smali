@@ -1,76 +1,80 @@
 .class public Lcom/estrongs/fs/impl/pcs/e;
-.super Lorg/apache/http/conn/ssl/SSLSocketFactory;
+.super Ljava/lang/Object;
 
 
 # instance fields
-.field a:Ljavax/net/ssl/SSLContext;
+.field public a:I
+
+.field public b:Ljava/lang/String;
+
+.field public c:Ljava/lang/String;
+
+.field public d:I
+
+.field public e:I
+
+.field public f:Ljava/lang/String;
+
+.field public g:I
+
+.field public h:Ljava/lang/String;
+
+.field public i:I
+
+.field public j:J
+
+.field public k:I
+
+.field public l:I
+
+.field public m:I
+
+.field public n:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/security/KeyStore;)V
-    .locals 5
+.method public constructor <init>()V
+    .locals 3
 
-    const/4 v4, 0x0
+    const/4 v2, 0x0
 
-    invoke-direct {p0, p1}, Lorg/apache/http/conn/ssl/SSLSocketFactory;-><init>(Ljava/security/KeyStore;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "TLS"
+    iput v2, p0, Lcom/estrongs/fs/impl/pcs/e;->a:I
 
-    invoke-static {v0}, Ljavax/net/ssl/SSLContext;->getInstance(Ljava/lang/String;)Ljavax/net/ssl/SSLContext;
+    const-string v0, ""
 
-    move-result-object v0
+    iput-object v0, p0, Lcom/estrongs/fs/impl/pcs/e;->b:Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/estrongs/fs/impl/pcs/e;->a:Ljavax/net/ssl/SSLContext;
+    const-string v0, ""
 
-    new-instance v0, Lcom/estrongs/fs/impl/pcs/f;
+    iput-object v0, p0, Lcom/estrongs/fs/impl/pcs/e;->c:Ljava/lang/String;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/fs/impl/pcs/f;-><init>(Lcom/estrongs/fs/impl/pcs/e;)V
+    iput v2, p0, Lcom/estrongs/fs/impl/pcs/e;->d:I
 
-    iget-object v1, p0, Lcom/estrongs/fs/impl/pcs/e;->a:Ljavax/net/ssl/SSLContext;
+    iput v2, p0, Lcom/estrongs/fs/impl/pcs/e;->e:I
 
-    const/4 v2, 0x1
+    const/4 v0, 0x0
 
-    new-array v2, v2, [Ljavax/net/ssl/TrustManager;
+    iput-object v0, p0, Lcom/estrongs/fs/impl/pcs/e;->f:Ljava/lang/String;
 
-    const/4 v3, 0x0
+    iput v2, p0, Lcom/estrongs/fs/impl/pcs/e;->g:I
 
-    aput-object v0, v2, v3
+    const-string v0, ""
 
-    invoke-virtual {v1, v4, v2, v4}, Ljavax/net/ssl/SSLContext;->init([Ljavax/net/ssl/KeyManager;[Ljavax/net/ssl/TrustManager;Ljava/security/SecureRandom;)V
+    iput-object v0, p0, Lcom/estrongs/fs/impl/pcs/e;->h:Ljava/lang/String;
+
+    iput v2, p0, Lcom/estrongs/fs/impl/pcs/e;->i:I
+
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lcom/estrongs/fs/impl/pcs/e;->j:J
+
+    iput v2, p0, Lcom/estrongs/fs/impl/pcs/e;->k:I
+
+    iput v2, p0, Lcom/estrongs/fs/impl/pcs/e;->l:I
+
+    iput v2, p0, Lcom/estrongs/fs/impl/pcs/e;->m:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public createSocket()Ljava/net/Socket;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/fs/impl/pcs/e;->a:Ljavax/net/ssl/SSLContext;
-
-    invoke-virtual {v0}, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljavax/net/ssl/SSLSocketFactory;->createSocket()Ljava/net/Socket;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public createSocket(Ljava/net/Socket;Ljava/lang/String;IZ)Ljava/net/Socket;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/fs/impl/pcs/e;->a:Ljavax/net/ssl/SSLContext;
-
-    invoke-virtual {v0}, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Ljavax/net/ssl/SSLSocketFactory;->createSocket(Ljava/net/Socket;Ljava/lang/String;IZ)Ljava/net/Socket;
-
-    move-result-object v0
-
-    return-object v0
 .end method

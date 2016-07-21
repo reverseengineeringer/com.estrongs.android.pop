@@ -5,20 +5,20 @@
 # instance fields
 .field final synthetic a:Ljava/util/List;
 
-.field final synthetic b:Lcom/estrongs/android/appinfo/q;
+.field final synthetic b:Lcom/estrongs/android/appinfo/r;
 
 .field final synthetic c:Lcom/estrongs/android/appinfo/AppFolderInfoManager;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/appinfo/AppFolderInfoManager;Ljava/util/List;Lcom/estrongs/android/appinfo/q;)V
+.method constructor <init>(Lcom/estrongs/android/appinfo/AppFolderInfoManager;Ljava/util/List;Lcom/estrongs/android/appinfo/r;)V
     .locals 0
 
     iput-object p1, p0, Lcom/estrongs/android/appinfo/d;->c:Lcom/estrongs/android/appinfo/AppFolderInfoManager;
 
     iput-object p2, p0, Lcom/estrongs/android/appinfo/d;->a:Ljava/util/List;
 
-    iput-object p3, p0, Lcom/estrongs/android/appinfo/d;->b:Lcom/estrongs/android/appinfo/q;
+    iput-object p3, p0, Lcom/estrongs/android/appinfo/d;->b:Lcom/estrongs/android/appinfo/r;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
@@ -75,16 +75,16 @@
 
     if-eqz v2, :cond_1
 
-    iget-object v2, p0, Lcom/estrongs/android/appinfo/d;->b:Lcom/estrongs/android/appinfo/q;
+    iget-object v2, p0, Lcom/estrongs/android/appinfo/d;->b:Lcom/estrongs/android/appinfo/r;
 
-    invoke-interface {v2, v0}, Lcom/estrongs/android/appinfo/q;->a(Lcom/estrongs/fs/h;)V
+    invoke-interface {v2, v0}, Lcom/estrongs/android/appinfo/r;->a(Lcom/estrongs/fs/h;)V
 
     goto :goto_0
 
     :cond_2
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/d;->b:Lcom/estrongs/android/appinfo/q;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/d;->b:Lcom/estrongs/android/appinfo/r;
 
-    invoke-interface {v0}, Lcom/estrongs/android/appinfo/q;->a()V
+    invoke-interface {v0}, Lcom/estrongs/android/appinfo/r;->a()V
 
     return-void
 .end method

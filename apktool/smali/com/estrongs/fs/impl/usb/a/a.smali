@@ -99,7 +99,7 @@
 
     const-string v1, "not a valid mbr partition table!"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     const/4 v0, 0x0
@@ -121,7 +121,7 @@
 
     const-string v2, "FAT32 no mbr"
 
-    invoke-static {v2}, Lcom/estrongs/android/util/v;->a(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/estrongs/android/util/x;->a(Ljava/lang/String;)V
 
     new-instance v2, Lcom/estrongs/fs/impl/usb/a/d;
 
@@ -148,7 +148,7 @@
 
     const-string v2, "NTFS no mbr"
 
-    invoke-static {v2}, Lcom/estrongs/android/util/v;->a(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/estrongs/android/util/x;->a(Ljava/lang/String;)V
 
     new-instance v2, Lcom/estrongs/fs/impl/usb/a/d;
 
@@ -204,7 +204,7 @@
 
     const-string v3, "extended partitions are currently unsupported!"
 
-    invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Lcom/estrongs/android/util/l;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 

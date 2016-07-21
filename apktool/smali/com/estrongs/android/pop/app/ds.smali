@@ -1,22 +1,29 @@
 .class Lcom/estrongs/android/pop/app/ds;
-.super Lcom/estrongs/android/util/m;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
+.field final synthetic a:Z
 
-.field final synthetic b:Lcom/estrongs/android/pop/app/ImageCommentPostActivity;
+.field final synthetic b:Ljava/lang/String;
+
+.field final synthetic c:Lcom/estrongs/android/pop/app/dr;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/ImageCommentPostActivity;Ljava/lang/String;Ljava/lang/String;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/dr;ZLjava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/ds;->b:Lcom/estrongs/android/pop/app/ImageCommentPostActivity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/ds;->c:Lcom/estrongs/android/pop/app/dr;
 
-    iput-object p3, p0, Lcom/estrongs/android/pop/app/ds;->a:Ljava/lang/String;
+    iput-boolean p2, p0, Lcom/estrongs/android/pop/app/ds;->a:Z
 
-    invoke-direct {p0, p2}, Lcom/estrongs/android/util/m;-><init>(Ljava/lang/String;)V
+    iput-object p3, p0, Lcom/estrongs/android/pop/app/ds;->b:Ljava/lang/String;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -24,104 +31,103 @@
 
 # virtual methods
 .method public run()V
-    .locals 5
+    .locals 3
 
-    const/4 v0, 0x0
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/ds;->a:Z
 
-    :try_start_0
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/ds;->b:Lcom/estrongs/android/pop/app/ImageCommentPostActivity;
+    if-eqz v0, :cond_1
 
-    invoke-static {v1}, Lcom/estrongs/android/pop/app/ImageCommentPostActivity;->b(Lcom/estrongs/android/pop/app/ImageCommentPostActivity;)Ljava/lang/String;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ds;->c:Lcom/estrongs/android/pop/app/dr;
 
-    move-result-object v1
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/dr;->b:Lcom/estrongs/android/pop/app/ImageCommentPostActivity;
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/ds;->a:Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/ImageCommentPostActivity;->c(Lcom/estrongs/android/pop/app/ImageCommentPostActivity;)Z
 
-    invoke-static {v1, v2}, Lcom/estrongs/android/pop/spfs/PhotoInfoManager;->addComment(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    :try_end_0
-    .catch Lcom/estrongs/android/pop/spfs/PhotoInfoException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ds;->c:Lcom/estrongs/android/pop/app/dr;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/dr;->b:Lcom/estrongs/android/pop/app/ImageCommentPostActivity;
+
+    const/4 v1, -0x1
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/ImageCommentPostActivity;->setResult(I)V
 
     :goto_0
-    iget-boolean v1, p0, Lcom/estrongs/android/pop/app/ds;->g:Z
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ds;->c:Lcom/estrongs/android/pop/app/dr;
 
-    if-eqz v1, :cond_0
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/dr;->b:Lcom/estrongs/android/pop/app/ImageCommentPostActivity;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ImageCommentPostActivity;->finish()V
 
     :goto_1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ds;->c:Lcom/estrongs/android/pop/app/dr;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/dr;->b:Lcom/estrongs/android/pop/app/ImageCommentPostActivity;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/ds;->b:Ljava/lang/String;
+
+    const/4 v2, 0x1
+
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+
     return-void
 
-    :catch_0
-    move-exception v0
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ds;->c:Lcom/estrongs/android/pop/app/dr;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/spfs/PhotoInfoException;->printStackTrace()V
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/dr;->b:Lcom/estrongs/android/pop/app/ImageCommentPostActivity;
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/ds;->b:Lcom/estrongs/android/pop/app/ImageCommentPostActivity;
-
-    const v3, 0x7f0b02ff
-
-    invoke-virtual {v2, v3}, Lcom/estrongs/android/pop/app/ImageCommentPostActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ": "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/spfs/PhotoInfoException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ImageCommentPostActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/ds;->c:Lcom/estrongs/android/pop/app/dr;
 
-    move-result-object v0
+    iget-object v1, v1, Lcom/estrongs/android/pop/app/dr;->b:Lcom/estrongs/android/pop/app/ImageCommentPostActivity;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-class v2, Lcom/estrongs/android/pop/app/ImageCommentActivity;
 
-    move-result-object v0
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/ds;->c:Lcom/estrongs/android/pop/app/dr;
+
+    iget-object v1, v1, Lcom/estrongs/android/pop/app/dr;->b:Lcom/estrongs/android/pop/app/ImageCommentPostActivity;
+
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/app/ImageCommentPostActivity;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0
 
-    :cond_0
-    if-eqz v0, :cond_1
+    :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ds;->c:Lcom/estrongs/android/pop/app/dr;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/dr;->b:Lcom/estrongs/android/pop/app/ImageCommentPostActivity;
+
+    const v1, 0x7f0e0593
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/ImageCommentPostActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ds;->c:Lcom/estrongs/android/pop/app/dr;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/dr;->b:Lcom/estrongs/android/pop/app/ImageCommentPostActivity;
+
+    const v1, 0x7f0e058f
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/ImageCommentPostActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
 
     const/4 v1, 0x0
 
-    move v4, v1
-
-    move-object v1, v0
-
-    move v0, v4
-
-    :goto_2
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/ds;->b:Lcom/estrongs/android/pop/app/ImageCommentPostActivity;
-
-    new-instance v3, Lcom/estrongs/android/pop/app/dt;
-
-    invoke-direct {v3, p0, v0, v1}, Lcom/estrongs/android/pop/app/dt;-><init>(Lcom/estrongs/android/pop/app/ds;ZLjava/lang/String;)V
-
-    invoke-virtual {v2, v3}, Lcom/estrongs/android/pop/app/ImageCommentPostActivity;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_1
-
-    :cond_1
-    const/4 v0, 0x1
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/ds;->b:Lcom/estrongs/android/pop/app/ImageCommentPostActivity;
-
-    const v2, 0x7f0b02fe
-
-    invoke-virtual {v1, v2}, Lcom/estrongs/android/pop/app/ImageCommentPostActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    goto :goto_2
 .end method

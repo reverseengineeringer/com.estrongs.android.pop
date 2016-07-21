@@ -1,18 +1,17 @@
 package com.estrongs.android.pop.app;
 
-import com.estrongs.android.pop.esclasses.ESActivity;
-import java.util.ArrayList;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 
-final class dx
-  implements Runnable
+class dx
+  implements MenuItem.OnMenuItemClickListener
 {
-  dx(ArrayList paramArrayList, String paramString, ESActivity paramESActivity, boolean paramBoolean) {}
+  dx(LocalFileSharingActivity paramLocalFileSharingActivity) {}
   
-  public void run()
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    a.clear();
-    a.add(b);
-    LocalFileSharingActivity.a(c, a, d);
+    a.h_();
+    return false;
   }
 }
 

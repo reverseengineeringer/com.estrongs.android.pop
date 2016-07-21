@@ -2,14 +2,14 @@ package com.estrongs.android.pop.app.compress;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.io.archive.h;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.io.archive.i;
 
 class q
   implements DialogInterface.OnClickListener
 {
-  q(p paramp, be parambe) {}
+  q(p paramp, cb paramcb) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
@@ -22,7 +22,7 @@ class q
       l.m(b.b.a);
       return;
     }
-    ag.a(l.d(b.b.a), 2131427897, 1);
+    ak.a(l.d(b.b.a), 2131231784, 1);
   }
 }
 

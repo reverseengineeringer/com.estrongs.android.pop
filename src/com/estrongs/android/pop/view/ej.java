@@ -1,13 +1,18 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.pop.view.utils.RemoteSynchronizer;
+import com.estrongs.android.ui.pcs.l;
 
 class ej
   implements Runnable
 {
-  ej(FileExplorerActivity paramFileExplorerActivity) {}
+  ej(ei paramei) {}
   
-  public void run() {}
+  public void run()
+  {
+    l locall = new l(a.a);
+    locall.a(new ek(this));
+    locall.show();
+  }
 }
 
 /* Location:

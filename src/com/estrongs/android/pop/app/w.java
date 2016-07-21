@@ -1,22 +1,17 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.chromecast.CastDeviceInfo;
-import java.util.List;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 
 class w
-  implements DialogInterface.OnClickListener
+  implements MenuItem.OnMenuItemClickListener
 {
-  w(r paramr, List paramList) {}
+  w(BaseWebViewActivity paramBaseWebViewActivity) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if ((paramInt >= 0) && (paramInt < a.size()))
-    {
-      r.a(b).a((CastDeviceInfo)a.get(paramInt));
-      r.h(b);
-    }
+    BaseWebViewActivity.a(a, BaseWebViewActivity.d(a));
+    return false;
   }
 }
 

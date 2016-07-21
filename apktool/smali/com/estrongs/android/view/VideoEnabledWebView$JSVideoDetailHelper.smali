@@ -26,7 +26,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/view/VideoEnabledWebView$JSVideoDetailHelper;->a:Lcom/estrongs/android/view/VideoEnabledWebView;
 
-    invoke-static {v0}, Lcom/estrongs/android/view/VideoEnabledWebView;->a(Lcom/estrongs/android/view/VideoEnabledWebView;)Lcom/estrongs/android/view/dt;
+    invoke-static {v0}, Lcom/estrongs/android/view/VideoEnabledWebView;->a(Lcom/estrongs/android/view/VideoEnabledWebView;)Lcom/estrongs/android/view/fy;
 
     move-result-object v0
 
@@ -34,11 +34,11 @@
 
     iget-object v0, p0, Lcom/estrongs/android/view/VideoEnabledWebView$JSVideoDetailHelper;->a:Lcom/estrongs/android/view/VideoEnabledWebView;
 
-    invoke-static {v0}, Lcom/estrongs/android/view/VideoEnabledWebView;->a(Lcom/estrongs/android/view/VideoEnabledWebView;)Lcom/estrongs/android/view/dt;
+    invoke-static {v0}, Lcom/estrongs/android/view/VideoEnabledWebView;->a(Lcom/estrongs/android/view/VideoEnabledWebView;)Lcom/estrongs/android/view/fy;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/estrongs/android/view/dt;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/estrongs/android/view/fy;->a(Ljava/lang/String;)V
 
     :cond_0
     return-void

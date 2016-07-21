@@ -1,27 +1,16 @@
 package android.support.v4.view.a;
 
+import android.view.accessibility.AccessibilityEvent;
+
 class d
-  extends b
+  implements e
 {
-  public void h(Object paramObject, boolean paramBoolean)
+  public int a(AccessibilityEvent paramAccessibilityEvent)
   {
-    g.a(paramObject, paramBoolean);
+    return 0;
   }
   
-  public void i(Object paramObject, boolean paramBoolean)
-  {
-    g.b(paramObject, paramBoolean);
-  }
-  
-  public boolean m(Object paramObject)
-  {
-    return g.a(paramObject);
-  }
-  
-  public boolean n(Object paramObject)
-  {
-    return g.b(paramObject);
-  }
+  public void a(AccessibilityEvent paramAccessibilityEvent, int paramInt) {}
 }
 
 /* Location:

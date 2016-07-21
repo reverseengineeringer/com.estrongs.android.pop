@@ -1,92 +1,42 @@
 package com.estrongs.android.ui.view;
 
-import android.annotation.SuppressLint;
-import android.graphics.Bitmap;
-import android.net.http.SslError;
-import android.os.Handler;
-import android.os.Message;
-import android.webkit.SslErrorHandler;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import com.estrongs.android.util.ac;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.View.OnKeyListener;
+import java.util.List;
 
 class bm
-  extends WebViewClient
+  implements View.OnKeyListener
 {
-  private bm(PcsThirdPartOAuth paramPcsThirdPartOAuth) {}
+  bm(IndicatorView paramIndicatorView) {}
   
-  public void onPageFinished(WebView paramWebView, String paramString)
+  public boolean onKey(View paramView, int paramInt, KeyEvent paramKeyEvent)
   {
-    Message localMessage = PcsThirdPartOAuth.d(a).obtainMessage(7);
-    PcsThirdPartOAuth.d(a).sendMessageDelayed(localMessage, 200L);
-    if (paramString.startsWith("http://passport.baidu.com/phoenix/account/afterauth"))
+    if ((a.isFocused()) && (paramKeyEvent.getAction() == 0))
     {
-      paramWebView.stopLoading();
-      paramWebView.loadUrl("javascript:window.handler.show(document.body.innerHTML);");
-    }
-    int i = paramString.indexOf("://");
-    paramWebView = paramString;
-    if (i > 0) {
-      paramWebView = paramString.substring(i + 3);
-    }
-    if ((!paramWebView.startsWith("www.estrongs.com")) && (!paramWebView.startsWith("localhost")) && (PcsThirdPartOAuth.b() != null)) {
-      PcsThirdPartOAuth.b().a();
-    }
-  }
-  
-  public void onPageStarted(WebView paramWebView, String paramString, Bitmap paramBitmap)
-  {
-    paramBitmap = paramWebView.getLayoutParams();
-    int i = paramWebView.getHeight();
-    if (i == 0)
-    {
-      height = 300;
-      paramWebView.setLayoutParams(paramBitmap);
-      if (paramString.startsWith("http://www.estrongs.com"))
+      if (paramInt == 21)
       {
-        paramString = PcsThirdPartOAuth.a(a, paramString, "code");
-        if (paramString == null) {
-          break label95;
+        paramInt = IndicatorView.e(a) - 1;
+        if ((paramInt >= 0) && (paramInt < IndicatorView.d(a).size()))
+        {
+          IndicatorView.c(a, paramInt);
+          a.invalidate();
+          return true;
         }
-        paramBitmap = PcsThirdPartOAuth.d(a).obtainMessage(1);
-        obj = paramString;
-        PcsThirdPartOAuth.d(a).sendMessage(paramBitmap);
+        return false;
+      }
+      if (paramInt == 22)
+      {
+        paramInt = IndicatorView.e(a) + 1;
+        if ((paramInt >= 0) && (paramInt < IndicatorView.d(a).size()))
+        {
+          IndicatorView.c(a, paramInt);
+          a.invalidate();
+          return true;
+        }
+        return false;
       }
     }
-    for (;;)
-    {
-      paramWebView.stopLoading();
-      return;
-      height = i;
-      break;
-      label95:
-      paramString = PcsThirdPartOAuth.d(a).obtainMessage(4);
-      PcsThirdPartOAuth.d(a).sendMessage(paramString);
-    }
-  }
-  
-  public void onReceivedError(WebView paramWebView, int paramInt, String paramString1, String paramString2)
-  {
-    paramInt = paramString2.indexOf("://");
-    paramWebView = paramString2;
-    if (paramInt > 0) {
-      paramWebView = paramString2.substring(paramInt + 3);
-    }
-    if (paramWebView.equalsIgnoreCase(PcsThirdPartOAuth.n(a)))
-    {
-      paramWebView = PcsThirdPartOAuth.d(a).obtainMessage(4);
-      PcsThirdPartOAuth.d(a).sendMessage(paramWebView);
-    }
-  }
-  
-  @SuppressLint({"NewApi"})
-  public void onReceivedSslError(WebView paramWebView, SslErrorHandler paramSslErrorHandler, SslError paramSslError)
-  {
-    ac.a(a, paramWebView, paramSslErrorHandler, paramSslError);
-  }
-  
-  public boolean shouldOverrideUrlLoading(WebView paramWebView, String paramString)
-  {
     return false;
   }
 }

@@ -2,6 +2,8 @@ package com.estrongs.android.ui.dialog;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.pop.utils.c;
+import com.estrongs.fs.impl.b.d;
 
 class q
   implements DialogInterface.OnClickListener
@@ -11,7 +13,7 @@ class q
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
     paramDialogInterface.dismiss();
-    com.estrongs.android.pop.utils.c.a(o.a(a), a.a.c());
+    c.b(o.a(a), a.a.h());
   }
 }
 

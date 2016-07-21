@@ -27,7 +27,7 @@
 
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
@@ -45,7 +45,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0b057b
+    const v3, 0x7f0800bc
 
     invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -65,7 +65,7 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lcom/estrongs/android/util/am;->bL(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v5}, Lcom/estrongs/android/util/ap;->cc(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -83,17 +83,17 @@
 
     invoke-virtual {v1, v2}, Lcom/estrongs/fs/b/f;->setTaskDecisionListener(Lcom/estrongs/a/a/a;)V
 
-    new-instance v2, Lcom/estrongs/android/ui/dialog/jw;
+    new-instance v2, Lcom/estrongs/android/ui/dialog/kh;
 
-    const v3, 0x7f0b057d
+    const v3, 0x7f08008d
 
     invoke-virtual {v0, v3}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-direct {v2, v0, v3, v1}, Lcom/estrongs/android/ui/dialog/jw;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/a/a;)V
+    invoke-direct {v2, v0, v3, v1}, Lcom/estrongs/android/ui/dialog/kh;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/a/a;)V
 
-    invoke-virtual {v2}, Lcom/estrongs/android/ui/dialog/jw;->show()V
+    invoke-virtual {v2}, Lcom/estrongs/android/ui/dialog/kh;->show()V
 
     invoke-virtual {v1}, Lcom/estrongs/fs/b/f;->execute()V
 

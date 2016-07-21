@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/bn;
+.field final synthetic a:Lcom/estrongs/android/pop/app/ESFileSharingActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/bn;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/ESFileSharingActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/bo;->a:Lcom/estrongs/android/pop/app/bn;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/bo;->a:Lcom/estrongs/android/pop/app/ESFileSharingActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,11 +25,18 @@
 .method public onDismiss(Landroid/content/DialogInterface;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/bo;->a:Lcom/estrongs/android/pop/app/bn;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/bo;->a:Lcom/estrongs/android/pop/app/ESFileSharingActivity;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/bn;->c:Lcom/estrongs/android/pop/app/ESFileSharingActivity;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/ESFileSharingActivity;->a(Lcom/estrongs/android/pop/app/ESFileSharingActivity;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/bo;->a:Lcom/estrongs/android/pop/app/ESFileSharingActivity;
 
     invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ESFileSharingActivity;->finish()V
 
+    :cond_0
     return-void
 .end method

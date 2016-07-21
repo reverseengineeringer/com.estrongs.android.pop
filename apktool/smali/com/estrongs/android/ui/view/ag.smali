@@ -1,113 +1,51 @@
-.class public Lcom/estrongs/android/ui/view/ag;
+.class Lcom/estrongs/android/ui/view/ag;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Landroid/view/View$OnLongClickListener;
 
-# static fields
-.field private static a:Landroid/widget/Toast;
+
+# instance fields
+.field final synthetic a:Lcom/estrongs/android/ui/view/ac;
 
 
 # direct methods
-.method public static a()V
-    .locals 3
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "ShowToast"
-        }
-    .end annotation
+.method constructor <init>(Lcom/estrongs/android/ui/view/ac;)V
+    .locals 0
 
-    :try_start_0
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+    iput-object p1, p0, Lcom/estrongs/android/ui/view/ag;->a:Lcom/estrongs/android/ui/view/ac;
 
-    move-result-object v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, ""
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/estrongs/android/ui/view/ag;->a:Landroid/widget/Toast;
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
     return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_0
 .end method
 
-.method public static a(Landroid/content/Context;II)V
-    .locals 1
 
-    :try_start_0
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+# virtual methods
+.method public onLongClick(Landroid/view/View;)Z
+    .locals 2
 
-    move-result-object v0
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, p1}, Lcom/estrongs/android/pop/FexApplication;->getText(I)Ljava/lang/CharSequence;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ag;->a:Lcom/estrongs/android/ui/view/ac;
 
-    move-result-object v0
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/ac;->b()Z
 
-    invoke-static {p0, v0, p2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    move-result v0
 
-    :goto_0
-    return-void
+    if-eqz v0, :cond_0
 
-    :catch_0
-    move-exception v0
-
-    goto :goto_0
-.end method
-
-.method public static a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
-    .locals 1
-
-    :try_start_0
-    sget-object v0, Lcom/estrongs/android/ui/view/ag;->a:Landroid/widget/Toast;
-
-    invoke-virtual {v0, p1}, Landroid/widget/Toast;->setText(Ljava/lang/CharSequence;)V
-
-    sget-object v0, Lcom/estrongs/android/ui/view/ag;->a:Landroid/widget/Toast;
-
-    invoke-virtual {v0, p2}, Landroid/widget/Toast;->setDuration(I)V
-
-    sget-object v0, Lcom/estrongs/android/ui/view/ag;->a:Landroid/widget/Toast;
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {p1}, Landroid/view/View;->performClick()Z
 
     :goto_0
-    return-void
+    return v1
 
-    :catch_0
-    move-exception v0
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ag;->a:Lcom/estrongs/android/ui/view/ac;
 
-    goto :goto_0
-.end method
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/ac;->a(Z)V
 
-.method public static b()V
-    .locals 1
-
-    :try_start_0
-    sget-object v0, Lcom/estrongs/android/ui/view/ag;->a:Landroid/widget/Toast;
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->cancel()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
-    return-void
-
-    :catch_0
-    move-exception v0
+    invoke-virtual {p1}, Landroid/view/View;->performClick()Z
 
     goto :goto_0
 .end method

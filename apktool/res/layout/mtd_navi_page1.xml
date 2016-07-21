@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/access_titlebar_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/access_content_container" android:background="@drawable/access_content_icon_bg" android:layout_width="fill_parent" android:layout_height="@dimen/dp_0" android:layout_weight="1.0">
+        <com.estrongs.android.ui.view.NaviListView android:id="@id/listview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/access_content_icon_bg_selector" android:cacheColorHint="@color/transparent" android:groupIndicator="@drawable/blank" android:childIndicator="@drawable/blank" android:divider="@drawable/access_content_sp" />
+    </FrameLayout>
+</LinearLayout>

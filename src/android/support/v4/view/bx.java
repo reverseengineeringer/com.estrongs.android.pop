@@ -1,6 +1,18 @@
 package android.support.v4.view;
 
-abstract interface bx {}
+import android.view.View;
+import android.view.View.OnClickListener;
+
+class bx
+  implements View.OnClickListener
+{
+  bx(PagerTabStrip paramPagerTabStrip) {}
+  
+  public void onClick(View paramView)
+  {
+    a.a.setCurrentItem(a.a.getCurrentItem() - 1);
+  }
+}
 
 /* Location:
  * Qualified Name:     android.support.v4.view.bx

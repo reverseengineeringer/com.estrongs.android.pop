@@ -1,12 +1,12 @@
 .class final Lcom/estrongs/fs/f;
-.super Lcom/estrongs/fs/n;
+.super Lcom/estrongs/fs/x;
 
 
 # direct methods
 .method constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/estrongs/fs/n;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/estrongs/fs/x;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method

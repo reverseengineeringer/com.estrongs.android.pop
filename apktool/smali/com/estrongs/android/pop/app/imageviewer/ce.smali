@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/pop/app/imageviewer/o;
+.implements Landroid/widget/AdapterView$OnItemSelectedListener;
 
 
 # instance fields
@@ -22,25 +22,47 @@
 
 
 # virtual methods
-.method public a(I)V
+.method public onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 2
-
-    const/4 v0, 0x2
-
-    if-ne p1, v0, :cond_0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/ce;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->b:Lcom/estrongs/android/pop/app/imageviewer/p;
+    iget v0, v0, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->c:I
+
+    if-eq v0, p3, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/ce;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/ce;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
-    invoke-static {v1}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->h(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)Ljava/lang/Runnable;
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->c(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)Z
 
-    move-result-object v1
+    move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/imageviewer/p;->removeCallbacks(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, p3, v1}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->a(IZ)V
 
     :cond_0
+    return-void
+.end method
+
+.method public onNothingSelected(Landroid/widget/AdapterView;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;)V"
+        }
+    .end annotation
+
     return-void
 .end method

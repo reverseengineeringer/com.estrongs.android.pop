@@ -1,30 +1,27 @@
 package com.estrongs.android.pop.utils;
 
-import android.annotation.SuppressLint;
-import android.os.Build.VERSION;
-import android.os.StrictMode;
-import android.os.StrictMode.ThreadPolicy;
-import android.os.StrictMode.ThreadPolicy.Builder;
+import android.app.Activity;
+import android.widget.TextView;
+import com.estrongs.a.a;
+import com.estrongs.a.a.l;
+import com.estrongs.a.a.m;
+import com.estrongs.fs.util.j;
 
-@SuppressLint({"NewApi"})
-public class cf
+class cf
+  implements l
 {
-  private StrictMode.ThreadPolicy a;
+  private long e = -1L;
   
-  public void a()
+  cf(bv parambv, StringBuilder paramStringBuilder, Activity paramActivity, TextView paramTextView) {}
+  
+  public void a(a parama, m paramm)
   {
-    if (Build.VERSION.SDK_INT > 9)
+    if ((e == -1L) || (System.currentTimeMillis() - e > 300L))
     {
-      StrictMode.ThreadPolicy localThreadPolicy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-      a = StrictMode.getThreadPolicy();
-      StrictMode.setThreadPolicy(localThreadPolicy);
-    }
-  }
-  
-  public void b()
-  {
-    if ((Build.VERSION.SDK_INT > 9) && (a != null)) {
-      StrictMode.setThreadPolicy(a);
+      e = System.currentTimeMillis();
+      a.delete(0, a.length());
+      a.append(b.getString(2131232206)).append(d).append(" ").append(b.getString(2131231132)).append(", ").append(b.getString(2131232218)).append(j.c(f));
+      b.runOnUiThread(new cg(this));
     }
   }
 }

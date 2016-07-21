@@ -5,18 +5,11 @@ import com.estrongs.android.view.a.b;
 class du
   implements b
 {
-  du(cp paramcp) {}
+  du(cr paramcr) {}
   
-  public boolean a(co paramco)
+  public boolean a(cp paramcp)
   {
-    if (F == 1)
-    {
-      if (e) {}
-      while (((h) && (H)) || (d) || ((f) && (H)) || (m) || (i) || (j) || (k) || ((p) && (G))) {
-        return true;
-      }
-    }
-    return false;
+    return ((e) || (L) || (K) || (l)) && ((V) || (Y));
   }
 }
 

@@ -1,12 +1,12 @@
 .class public Lcom/estrongs/android/pop/app/TransitActivity;
-.super Lcom/estrongs/android/pop/esclasses/ESActivity;
+.super Lcom/estrongs/android/pop/esclasses/ESResourceActivity;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;-><init>()V
 
     return-void
 .end method
@@ -18,7 +18,7 @@
 
     const/high16 v3, 0x24000000
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;->onCreate(Landroid/os/Bundle;)V
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/TransitActivity;->getIntent()Landroid/content/Intent;
 

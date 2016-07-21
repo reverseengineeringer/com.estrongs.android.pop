@@ -1,13 +1,22 @@
 package com.estrongs.android.pop.view;
 
+import com.estrongs.android.ui.pcs.q;
+import com.estrongs.android.util.TypedMap;
+import com.estrongs.android.util.bk;
+import com.estrongs.fs.h;
+
 class bi
-  implements Runnable
+  implements q
 {
-  bi(FileExplorerActivity paramFileExplorerActivity) {}
+  bi(bh parambh, h paramh, TypedMap paramTypedMap) {}
   
-  public void run()
+  public void a(boolean paramBoolean, String paramString1, String paramString2)
   {
-    FileExplorerActivity.D(a);
+    if ((paramBoolean) && (bk.b(paramString2)))
+    {
+      c.a(a, b);
+      c.a.T();
+    }
   }
 }
 

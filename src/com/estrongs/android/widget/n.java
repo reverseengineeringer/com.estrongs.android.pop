@@ -1,21 +1,16 @@
 package com.estrongs.android.widget;
 
-import android.app.Activity;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.ui.dialog.eo;
+import com.estrongs.android.ui.dialog.eu;
 
 class n
-  implements DialogInterface.OnClickListener
+  implements eu
 {
-  n(g paramg) {}
+  n(m paramm) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public boolean a(String paramString)
   {
-    paramDialogInterface = new eo(g.d(a), g.d(a).getString(2131427361), g.d(a).getString(2131427427));
-    a.b = g.d(a).getString(2131427427);
-    paramDialogInterface.a(new o(this));
-    paramDialogInterface.show();
+    f.b(a.a, paramString);
+    return true;
   }
 }
 

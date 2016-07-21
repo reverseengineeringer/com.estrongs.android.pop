@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnLongClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -22,46 +22,61 @@
 
 
 # virtual methods
-.method public onLongClick(Landroid/view/View;)Z
-    .locals 3
+.method public onClick(Landroid/view/View;)V
+    .locals 4
 
-    :try_start_0
-    move-object v0, p1
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/c;->a:Lcom/estrongs/android/ui/c/a/b;
 
-    check-cast v0, Landroid/view/ViewGroup;
+    iget-object v0, v0, Lcom/estrongs/android/ui/c/a/b;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    move-object v1, v0
+    invoke-static {v0}, Lcom/estrongs/android/pop/ai;->b(Landroid/content/Context;)Lcom/estrongs/android/pop/ai;
 
-    const/4 v2, 0x1
+    move-result-object v0
 
-    invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->requestDisallowInterceptTouchEvent(Z)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    :goto_0
-    iget-object v1, p0, Lcom/estrongs/android/ui/c/a/c;->a:Lcom/estrongs/android/ui/c/a/b;
+    move-result-wide v2
 
-    invoke-static {v1}, Lcom/estrongs/android/ui/c/a/b;->a(Lcom/estrongs/android/ui/c/a/b;)Landroid/view/View$OnLongClickListener;
+    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/pop/ai;->f(J)V
 
-    move-result-object v1
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/c;->a:Lcom/estrongs/android/ui/c/a/b;
 
-    if-eqz v1, :cond_0
+    iget-object v0, v0, Lcom/estrongs/android/ui/c/a/b;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     iget-object v1, p0, Lcom/estrongs/android/ui/c/a/c;->a:Lcom/estrongs/android/ui/c/a/b;
 
-    invoke-static {v1}, Lcom/estrongs/android/ui/c/a/b;->a(Lcom/estrongs/android/ui/c/a/b;)Landroid/view/View$OnLongClickListener;
+    invoke-static {v1}, Lcom/estrongs/android/ui/c/a/b;->a(Lcom/estrongs/android/ui/c/a/b;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-interface {v1, p1}, Landroid/view/View$OnLongClickListener;->onLongClick(Landroid/view/View;)Z
+    invoke-static {v0, v1}, Lcom/estrongs/android/ui/c/a/b;->a(Landroid/content/Context;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/c;->a:Lcom/estrongs/android/ui/c/a/b;
+
+    iget-object v0, v0, Lcom/estrongs/android/ui/c/a/b;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->at()Lcom/estrongs/android/j/c;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const-string v1, "Homepage_A"
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/j/c;->a(Ljava/lang/String;)V
+
+    const-string v1, "analysis"
+
+    const-string v2, "Homepage_A"
+
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/j/c;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
-    const/4 v1, 0x0
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/c;->a:Lcom/estrongs/android/ui/c/a/b;
 
-    return v1
+    iget-object v0, v0, Lcom/estrongs/android/ui/c/a/b;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    :catch_0
-    move-exception v1
+    invoke-static {v0}, Lcom/estrongs/android/j/d;->a(Landroid/content/Context;)V
 
-    goto :goto_0
+    return-void
 .end method

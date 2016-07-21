@@ -1,0 +1,4 @@
+com.estrongs.android.pop
+com.estrongs.android.taskmanager
+com.estrongs.android.pop.pro
+com.estrongs.locker

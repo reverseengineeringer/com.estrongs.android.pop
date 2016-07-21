@@ -1,16 +1,22 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.DialogInterface;
+import android.app.AlertDialog.Builder;
 import android.content.DialogInterface.OnClickListener;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 class fm
-  implements DialogInterface.OnClickListener
+  implements View.OnClickListener
 {
-  fm(fh paramfh) {}
+  fm(fk paramfk, DialogInterface.OnClickListener paramOnClickListener) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void onClick(View paramView)
   {
-    fh.e(a);
+    paramView = new AlertDialog.Builder(fk.d(b));
+    paramView.setItems((CharSequence[])fk.a(b), a);
+    paramView.setNegativeButton(2131231265, new fn(this));
+    paramView.setTitle(2131232284);
+    paramView.show();
   }
 }
 

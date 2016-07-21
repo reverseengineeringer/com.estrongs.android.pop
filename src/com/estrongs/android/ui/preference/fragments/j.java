@@ -2,15 +2,19 @@ package com.estrongs.android.ui.preference.fragments;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
+import android.widget.EditText;
+import com.estrongs.android.widget.f;
 
 class j
   implements DialogInterface.OnClickListener
 {
-  j(g paramg, com.estrongs.android.widget.g paramg1) {}
+  j(h paramh, f paramf) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
     a.k();
+    paramDialogInterface = a.f();
+    b.b.setText(paramDialogInterface);
   }
 }
 

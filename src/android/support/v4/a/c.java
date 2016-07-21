@@ -1,12 +1,12 @@
 package android.support.v4.a;
 
-import android.os.Parcel;
+import android.view.View;
 
-public abstract interface c<T>
+abstract interface c
 {
-  public abstract T a(Parcel paramParcel, ClassLoader paramClassLoader);
+  public abstract l a();
   
-  public abstract T[] a(int paramInt);
+  public abstract void a(View paramView);
 }
 
 /* Location:

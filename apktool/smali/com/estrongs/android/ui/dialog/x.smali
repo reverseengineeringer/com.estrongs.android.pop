@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Lcom/estrongs/android/ui/dialog/t;
+.field final synthetic a:Lcom/estrongs/android/ui/dialog/u;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/t;Ljava/lang/String;)V
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/u;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/x;->b:Lcom/estrongs/android/ui/dialog/t;
-
-    iput-object p2, p0, Lcom/estrongs/android/ui/dialog/x;->a:Ljava/lang/String;
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/x;->a:Lcom/estrongs/android/ui/dialog/u;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,20 +22,16 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/x;->b:Lcom/estrongs/android/ui/dialog/t;
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/t;->b(Lcom/estrongs/android/ui/dialog/t;)Landroid/app/Activity;
+    new-instance v0, Lcom/estrongs/android/ui/dialog/y;
 
-    move-result-object v0
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/dialog/y;-><init>(Lcom/estrongs/android/ui/dialog/x;)V
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/x;->a:Ljava/lang/String;
-
-    const-string v2, "application/*"
-
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/pop/app/DownloaderActivity;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)Lcom/estrongs/android/ui/dialog/cg;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/y;->start()V
 
     return-void
 .end method

@@ -5,11 +5,11 @@ import com.estrongs.android.view.a.b;
 class go
   implements b
 {
-  go(cp paramcp) {}
+  go(cr paramcr) {}
   
-  public boolean a(co paramco)
+  public boolean a(cp paramcp)
   {
-    return q;
+    return (r) && (!s) && (N == 1) && (!u) && (!t);
   }
 }
 

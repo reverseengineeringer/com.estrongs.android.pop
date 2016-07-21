@@ -3,198 +3,222 @@
 
 
 # instance fields
-.field private a:Landroid/content/Context;
+.field final synthetic a:Lcom/estrongs/android/ui/dialog/is;
 
-.field private b:I
+.field private b:Landroid/content/Context;
 
-.field private c:[Landroid/graphics/drawable/Drawable;
-
-.field private d:Lcom/estrongs/android/ui/theme/al;
-
-.field private e:I
+.field private c:[Lcom/estrongs/android/ui/dialog/ix;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 4
+.method public constructor <init>(Lcom/estrongs/android/ui/dialog/is;Landroid/content/Context;[Lcom/estrongs/android/ui/dialog/ix;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/iv;->a:Lcom/estrongs/android/ui/dialog/is;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    const/16 v0, 0x8
+    iput-object p2, p0, Lcom/estrongs/android/ui/dialog/iv;->b:Landroid/content/Context;
 
-    iput v0, p0, Lcom/estrongs/android/ui/dialog/iv;->b:I
-
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/iv;->a:Landroid/content/Context;
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/iv;->a:Landroid/content/Context;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/theme/al;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/dialog/iv;->d:Lcom/estrongs/android/ui/theme/al;
-
-    invoke-virtual {p0}, Lcom/estrongs/android/ui/dialog/iv;->getCount()I
-
-    move-result v0
-
-    new-array v0, v0, [Landroid/graphics/drawable/Drawable;
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/dialog/iv;->c:[Landroid/graphics/drawable/Drawable;
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/iv;->c:[Landroid/graphics/drawable/Drawable;
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/iv;->d:Lcom/estrongs/android/ui/theme/al;
-
-    const v3, 0x7f0202dd
-
-    invoke-virtual {v2, v3}, Lcom/estrongs/android/ui/theme/al;->a(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v2
-
-    aput-object v2, v0, v1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/iv;->c:[Landroid/graphics/drawable/Drawable;
-
-    const/4 v1, 0x1
-
-    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/iv;->d:Lcom/estrongs/android/ui/theme/al;
-
-    const v3, 0x7f0202e3
-
-    invoke-virtual {v2, v3}, Lcom/estrongs/android/ui/theme/al;->a(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v2
-
-    aput-object v2, v0, v1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/iv;->c:[Landroid/graphics/drawable/Drawable;
-
-    const/4 v1, 0x2
-
-    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/iv;->d:Lcom/estrongs/android/ui/theme/al;
-
-    const v3, 0x7f0202df
-
-    invoke-virtual {v2, v3}, Lcom/estrongs/android/ui/theme/al;->a(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v2
-
-    aput-object v2, v0, v1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/iv;->c:[Landroid/graphics/drawable/Drawable;
-
-    const/4 v1, 0x3
-
-    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/iv;->d:Lcom/estrongs/android/ui/theme/al;
-
-    const v3, 0x7f0202de
-
-    invoke-virtual {v2, v3}, Lcom/estrongs/android/ui/theme/al;->a(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v2
-
-    aput-object v2, v0, v1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/iv;->c:[Landroid/graphics/drawable/Drawable;
-
-    const/4 v1, 0x4
-
-    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/iv;->d:Lcom/estrongs/android/ui/theme/al;
-
-    const v3, 0x7f0202e4
-
-    invoke-virtual {v2, v3}, Lcom/estrongs/android/ui/theme/al;->a(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v2
-
-    aput-object v2, v0, v1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/iv;->c:[Landroid/graphics/drawable/Drawable;
-
-    const/4 v1, 0x5
-
-    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/iv;->d:Lcom/estrongs/android/ui/theme/al;
-
-    const v3, 0x7f0202e0
-
-    invoke-virtual {v2, v3}, Lcom/estrongs/android/ui/theme/al;->a(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v2
-
-    aput-object v2, v0, v1
-
-    invoke-virtual {p0}, Lcom/estrongs/android/ui/dialog/iv;->a()V
+    iput-object p3, p0, Lcom/estrongs/android/ui/dialog/iv;->c:[Lcom/estrongs/android/ui/dialog/ix;
 
     return-void
 .end method
 
+.method static synthetic a(Lcom/estrongs/android/ui/dialog/iv;)[Lcom/estrongs/android/ui/dialog/ix;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/iv;->c:[Lcom/estrongs/android/ui/dialog/ix;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public a()V
+.method public a()[Ljava/lang/String;
     .locals 4
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/iv;->a:Landroid/content/Context;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/iv;->c:[Lcom/estrongs/android/ui/dialog/ix;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+    array-length v0, v0
 
-    move-result-object v0
+    mul-int/lit8 v0, v0, 0x3
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->aV()I
+    new-array v1, v0, [Ljava/lang/String;
 
-    move-result v2
+    const/4 v0, 0x0
 
-    sget-object v0, Lcom/estrongs/android/ui/dialog/dd;->a:Ljava/util/List;
+    :goto_0
+    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/iv;->c:[Lcom/estrongs/android/ui/dialog/ix;
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    array-length v2, v2
 
-    move-result-object v3
+    if-ge v0, v2, :cond_0
+
+    mul-int/lit8 v2, v0, 0x3
+
+    iget-object v3, p0, Lcom/estrongs/android/ui/dialog/iv;->c:[Lcom/estrongs/android/ui/dialog/ix;
+
+    aget-object v3, v3, v0
+
+    iget-object v3, v3, Lcom/estrongs/android/ui/dialog/ix;->a:Ljava/lang/String;
+
+    aput-object v3, v1, v2
+
+    mul-int/lit8 v2, v0, 0x3
+
+    add-int/lit8 v2, v2, 0x1
+
+    iget-object v3, p0, Lcom/estrongs/android/ui/dialog/iv;->c:[Lcom/estrongs/android/ui/dialog/ix;
+
+    aget-object v3, v3, v0
+
+    iget-object v3, v3, Lcom/estrongs/android/ui/dialog/ix;->b:Ljava/lang/String;
+
+    aput-object v3, v1, v2
+
+    mul-int/lit8 v2, v0, 0x3
+
+    add-int/lit8 v2, v2, 0x2
+
+    iget-object v3, p0, Lcom/estrongs/android/ui/dialog/iv;->c:[Lcom/estrongs/android/ui/dialog/ix;
+
+    aget-object v3, v3, v0
+
+    iget-object v3, v3, Lcom/estrongs/android/ui/dialog/ix;->c:Ljava/lang/String;
+
+    aput-object v3, v1, v2
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
 
     :cond_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    return-object v1
+.end method
 
-    move-result v0
+.method public b()[Ljava/lang/String;
+    .locals 6
 
-    if-eqz v0, :cond_1
+    const/4 v1, 0x0
 
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move v0, v1
 
-    move-result-object v0
+    move v2, v1
 
-    check-cast v0, Lcom/estrongs/android/util/o;
+    :goto_0
+    iget-object v3, p0, Lcom/estrongs/android/ui/dialog/iv;->c:[Lcom/estrongs/android/ui/dialog/ix;
 
-    iget-object v1, v0, Lcom/estrongs/android/util/o;->b:Ljava/lang/Object;
+    array-length v3, v3
 
-    check-cast v1, Ljava/lang/Integer;
+    if-ge v0, v3, :cond_1
 
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+    iget-object v3, p0, Lcom/estrongs/android/ui/dialog/iv;->c:[Lcom/estrongs/android/ui/dialog/ix;
 
-    move-result v1
+    aget-object v3, v3, v0
 
-    if-ne v1, v2, :cond_0
+    invoke-virtual {v3}, Lcom/estrongs/android/ui/dialog/ix;->a()Z
 
-    iget-object v0, v0, Lcom/estrongs/android/util/o;->a:Ljava/lang/Object;
+    move-result v3
 
-    check-cast v0, Ljava/lang/Integer;
+    if-eqz v3, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    add-int/lit8 v2, v2, 0x1
 
-    move-result v0
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/estrongs/android/ui/dialog/iv;->e:I
+    goto :goto_0
 
     :cond_1
-    return-void
+    mul-int/lit8 v0, v2, 0x3
+
+    new-array v3, v0, [Ljava/lang/String;
+
+    move v0, v1
+
+    :goto_1
+    if-ge v0, v2, :cond_3
+
+    iget-object v4, p0, Lcom/estrongs/android/ui/dialog/iv;->c:[Lcom/estrongs/android/ui/dialog/ix;
+
+    array-length v4, v4
+
+    if-ge v1, v4, :cond_3
+
+    iget-object v4, p0, Lcom/estrongs/android/ui/dialog/iv;->c:[Lcom/estrongs/android/ui/dialog/ix;
+
+    aget-object v4, v4, v1
+
+    invoke-virtual {v4}, Lcom/estrongs/android/ui/dialog/ix;->a()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    mul-int/lit8 v4, v0, 0x3
+
+    iget-object v5, p0, Lcom/estrongs/android/ui/dialog/iv;->c:[Lcom/estrongs/android/ui/dialog/ix;
+
+    aget-object v5, v5, v1
+
+    iget-object v5, v5, Lcom/estrongs/android/ui/dialog/ix;->a:Ljava/lang/String;
+
+    aput-object v5, v3, v4
+
+    mul-int/lit8 v4, v0, 0x3
+
+    add-int/lit8 v4, v4, 0x1
+
+    iget-object v5, p0, Lcom/estrongs/android/ui/dialog/iv;->c:[Lcom/estrongs/android/ui/dialog/ix;
+
+    aget-object v5, v5, v1
+
+    iget-object v5, v5, Lcom/estrongs/android/ui/dialog/ix;->b:Ljava/lang/String;
+
+    aput-object v5, v3, v4
+
+    mul-int/lit8 v4, v0, 0x3
+
+    add-int/lit8 v4, v4, 0x2
+
+    iget-object v5, p0, Lcom/estrongs/android/ui/dialog/iv;->c:[Lcom/estrongs/android/ui/dialog/ix;
+
+    aget-object v5, v5, v1
+
+    iget-object v5, v5, Lcom/estrongs/android/ui/dialog/ix;->c:Ljava/lang/String;
+
+    aput-object v5, v3, v4
+
+    add-int/lit8 v0, v0, 0x1
+
+    :cond_2
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    return-object v3
 .end method
 
 .method public getCount()I
     .locals 1
 
-    iget v0, p0, Lcom/estrongs/android/ui/dialog/iv;->b:I
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/iv;->c:[Lcom/estrongs/android/ui/dialog/ix;
 
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
     return v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/iv;->c:[Lcom/estrongs/android/ui/dialog/ix;
+
+    array-length v0, v0
+
+    goto :goto_0
 .end method
 
 .method public getItem(I)Ljava/lang/Object;
@@ -214,21 +238,17 @@
 .end method
 
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 5
-
-    const/4 v4, 0x0
-
-    const/high16 v3, 0x41200000    # 10.0f
+    .locals 3
 
     if-nez p2, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/iv;->a:Landroid/content/Context;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/iv;->b:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    const v1, 0x7f030083
+    const v1, 0x7f03016f
 
     const/4 v2, 0x0
 
@@ -237,35 +257,7 @@
     move-result-object p2
 
     :cond_0
-    const v0, 0x7f0a003d
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/iv;->c:[Landroid/graphics/drawable/Drawable;
-
-    aget-object v1, v1, p1
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/iv;->a:Landroid/content/Context;
-
-    invoke-static {v1, v3}, Lcom/estrongs/android/ui/d/a;->a(Landroid/content/Context;F)I
-
-    move-result v1
-
-    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/iv;->a:Landroid/content/Context;
-
-    invoke-static {v2, v3}, Lcom/estrongs/android/ui/d/a;->a(Landroid/content/Context;F)I
-
-    move-result v2
-
-    invoke-virtual {v0, v4, v1, v4, v2}, Landroid/widget/ImageView;->setPadding(IIII)V
-
-    const v0, 0x7f0a00cd
+    const v0, 0x7f0e05f8
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -273,25 +265,59 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const/16 v1, 0x8
+    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/iv;->c:[Lcom/estrongs/android/ui/dialog/ix;
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+    aget-object v1, v1, p1
 
-    iget v0, p0, Lcom/estrongs/android/ui/dialog/iv;->e:I
+    iget-object v1, v1, Lcom/estrongs/android/ui/dialog/ix;->a:Ljava/lang/String;
 
-    if-ne p1, v0, :cond_1
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0201d3
+    const v0, 0x7f0e05fa
 
-    invoke-virtual {p2, v0}, Landroid/view/View;->setBackgroundResource(I)V
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RadioGroup;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/RadioGroup;->setTag(Ljava/lang/Object;)V
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/iv;->c:[Lcom/estrongs/android/ui/dialog/ix;
+
+    aget-object v1, v1, p1
+
+    iget-object v1, v1, Lcom/estrongs/android/ui/dialog/ix;->c:Ljava/lang/String;
+
+    const-string v2, "ro"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const v1, 0x7f0e05fb
+
+    invoke-virtual {v0, v1}, Landroid/widget/RadioGroup;->check(I)V
 
     :goto_0
+    new-instance v1, Lcom/estrongs/android/ui/dialog/iw;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/dialog/iw;-><init>(Lcom/estrongs/android/ui/dialog/iv;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/RadioGroup;->setOnCheckedChangeListener(Landroid/widget/RadioGroup$OnCheckedChangeListener;)V
+
     return-object p2
 
     :cond_1
-    const v0, 0x7f0201d6
+    const v1, 0x7f0e05fc
 
-    invoke-virtual {p2, v0}, Landroid/view/View;->setBackgroundResource(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/RadioGroup;->check(I)V
 
     goto :goto_0
 .end method

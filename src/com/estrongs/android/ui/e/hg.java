@@ -1,33 +1,19 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.pop.app.aa;
+import com.estrongs.android.appinfo.AppFolderInfoManager;
+import com.estrongs.android.pop.z;
 import com.estrongs.android.view.a.b;
+import com.estrongs.fs.h;
+import java.util.List;
 
 class hg
   implements b
 {
-  hg(cp paramcp) {}
+  hg(cr paramcr) {}
   
-  public boolean a(co paramco)
+  public boolean a(cp paramcp)
   {
-    if (!aa.a()) {}
-    do
-    {
-      return false;
-      if ((h) && ((P) || (T))) {
-        return true;
-      }
-      if (((e) || (((f) || (x)) && (!d))) && ((P) || (T))) {
-        return true;
-      }
-      if (i) {
-        return true;
-      }
-      if (L) {
-        return true;
-      }
-    } while ((!M) || (F != 1));
-    return true;
+    return (!z.ap) && ((e) || (K)) && (N == 1) && (P) && (AppFolderInfoManager.d().c((h)b.get(0)));
   }
 }
 

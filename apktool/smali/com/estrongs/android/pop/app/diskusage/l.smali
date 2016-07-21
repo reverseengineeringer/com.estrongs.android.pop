@@ -6,18 +6,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/view/aj;
+.field final synthetic a:Lcom/estrongs/android/view/bn;
 
 .field final synthetic b:Lcom/estrongs/android/pop/app/diskusage/k;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/diskusage/k;Lcom/estrongs/android/view/aj;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/diskusage/k;Lcom/estrongs/android/view/bn;)V
     .locals 0
 
     iput-object p1, p0, Lcom/estrongs/android/pop/app/diskusage/l;->b:Lcom/estrongs/android/pop/app/diskusage/k;
 
-    iput-object p2, p0, Lcom/estrongs/android/pop/app/diskusage/l;->a:Lcom/estrongs/android/view/aj;
+    iput-object p2, p0, Lcom/estrongs/android/pop/app/diskusage/l;->a:Lcom/estrongs/android/view/bn;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -158,7 +158,7 @@
     goto :goto_0
 
     :cond_3
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/l;->a:Lcom/estrongs/android/view/aj;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/l;->a:Lcom/estrongs/android/view/bn;
 
     new-instance v2, Lcom/estrongs/fs/impl/local/f;
 
@@ -166,7 +166,7 @@
 
     invoke-direct {v2, v3, p1, v1}, Lcom/estrongs/fs/impl/local/f;-><init>(Landroid/net/LocalSocket;Ljava/io/File;Z)V
 
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/view/aj;->a(Lcom/estrongs/fs/h;)Z
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/view/bn;->a(Lcom/estrongs/fs/h;)Z
 
     move-result v0
 

@@ -7,11 +7,11 @@
 
 .field public static b:Ljava/lang/String;
 
-.field public static final c:Ljava/lang/String;
+.field public static c:Ljava/lang/String;
 
 .field public static d:Ljava/lang/String;
 
-.field public static e:Ljava/lang/String;
+.field public static final e:Ljava/lang/String;
 
 .field public static f:Ljava/lang/String;
 
@@ -39,7 +39,13 @@
 
 .field public static r:Ljava/lang/String;
 
-.field public static final s:I
+.field public static s:Ljava/lang/String;
+
+.field public static t:Ljava/lang/String;
+
+.field public static u:Ljava/lang/String;
+
+.field public static final v:I
 
 
 # direct methods
@@ -101,6 +107,38 @@
     move-result-object v0
 
     sput-object v0, Lcom/estrongs/android/pop/a;->b:Ljava/lang/String;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "/.estrongs/.dontedit_v1"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/estrongs/android/pop/a;->c:Ljava/lang/String;
+
+    const-string v0, "content://com.estrongs.locker/appLocked"
+
+    sput-object v0, Lcom/estrongs/android/pop/a;->d:Ljava/lang/String;
 
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
@@ -240,7 +278,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/estrongs/android/pop/a;->c:Ljava/lang/String;
+    sput-object v0, Lcom/estrongs/android/pop/a;->e:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -262,7 +300,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/estrongs/android/pop/a;->d:Ljava/lang/String;
+    sput-object v0, Lcom/estrongs/android/pop/a;->f:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -284,7 +322,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/estrongs/android/pop/a;->e:Ljava/lang/String;
+    sput-object v0, Lcom/estrongs/android/pop/a;->g:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -306,7 +344,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/estrongs/android/pop/a;->f:Ljava/lang/String;
+    sput-object v0, Lcom/estrongs/android/pop/a;->h:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -328,7 +366,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/estrongs/android/pop/a;->g:Ljava/lang/String;
+    sput-object v0, Lcom/estrongs/android/pop/a;->i:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -350,13 +388,13 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/estrongs/android/pop/a;->h:Ljava/lang/String;
+    sput-object v0, Lcom/estrongs/android/pop/a;->j:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/estrongs/android/pop/a;->d:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/a;->f:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -372,13 +410,13 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/estrongs/android/pop/a;->i:Ljava/lang/String;
+    sput-object v0, Lcom/estrongs/android/pop/a;->k:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/estrongs/android/pop/a;->d:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/a;->f:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -394,63 +432,19 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/estrongs/android/pop/a;->j:Ljava/lang/String;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget-object v1, Lcom/estrongs/android/pop/a;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "/bookmark"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/estrongs/android/pop/a;->k:Ljava/lang/String;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget-object v1, Lcom/estrongs/android/pop/a;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "/bookmark1"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
     sput-object v0, Lcom/estrongs/android/pop/a;->l:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/estrongs/android/pop/a;->b:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/a;->f:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-string v1, "/data"
+    const-string v1, "/appLocker"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -472,7 +466,7 @@
 
     move-result-object v0
 
-    const-string v1, "/playlist"
+    const-string v1, "/bookmark"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -494,7 +488,7 @@
 
     move-result-object v0
 
-    const-string v1, "/theme"
+    const-string v1, "/bookmark1"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -516,7 +510,7 @@
 
     move-result-object v0
 
-    const-string v1, "/plugin"
+    const-string v1, "/data"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -538,7 +532,7 @@
 
     move-result-object v0
 
-    const-string v1, "/adbKeys"
+    const-string v1, "/playlist"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -560,7 +554,7 @@
 
     move-result-object v0
 
-    const-string v1, "/searchEngines"
+    const-string v1, "/theme"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -572,13 +566,79 @@
 
     sput-object v0, Lcom/estrongs/android/pop/a;->r:Ljava/lang/String;
 
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v1, Lcom/estrongs/android/pop/a;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "/plugin"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/estrongs/android/pop/a;->s:Ljava/lang/String;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v1, Lcom/estrongs/android/pop/a;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "/adbKeys"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/estrongs/android/pop/a;->t:Ljava/lang/String;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v1, Lcom/estrongs/android/pop/a;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "/searchEngines"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/estrongs/android/pop/a;->u:Ljava/lang/String;
+
     const-string v0, "ES"
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    sput v0, Lcom/estrongs/android/pop/a;->s:I
+    sput v0, Lcom/estrongs/android/pop/a;->v:I
 
     return-void
 
@@ -589,28 +649,22 @@
 .end method
 
 .method public static final a()I
-    .locals 2
+    .locals 1
 
-    invoke-static {}, Lcom/estrongs/android/pop/ac;->a()I
+    const/16 v0, 0x13
 
-    move-result v0
-
-    const/16 v1, 0x16
-
-    if-lt v0, v1, :cond_0
-
-    const/16 v0, 0xf
-
-    :goto_0
     return v0
-
-    :cond_0
-    const/16 v0, 0xe
-
-    goto :goto_0
 .end method
 
-.method public static b()V
+.method public static final b()I
+    .locals 1
+
+    const/4 v0, 0x3
+
+    return v0
+.end method
+
+.method public static c()V
     .locals 3
 
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
@@ -745,7 +799,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/estrongs/android/pop/a;->d:Ljava/lang/String;
+    sput-object v0, Lcom/estrongs/android/pop/a;->f:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -767,7 +821,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/estrongs/android/pop/a;->e:Ljava/lang/String;
+    sput-object v0, Lcom/estrongs/android/pop/a;->g:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -789,7 +843,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/estrongs/android/pop/a;->f:Ljava/lang/String;
+    sput-object v0, Lcom/estrongs/android/pop/a;->h:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -811,41 +865,19 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/estrongs/android/pop/a;->g:Ljava/lang/String;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget-object v1, Lcom/estrongs/android/pop/a;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "/share"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
     sput-object v0, Lcom/estrongs/android/pop/a;->i:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/estrongs/android/pop/a;->b:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/a;->f:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-string v1, "/bookmark"
+    const-string v1, "/share"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -867,51 +899,7 @@
 
     move-result-object v0
 
-    const-string v1, "/bookmark1"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/estrongs/android/pop/a;->l:Ljava/lang/String;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget-object v1, Lcom/estrongs/android/pop/a;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "/data"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/estrongs/android/pop/a;->m:Ljava/lang/String;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget-object v1, Lcom/estrongs/android/pop/a;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "/playlist"
+    const-string v1, "/bookmark"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -933,7 +921,7 @@
 
     move-result-object v0
 
-    const-string v1, "/theme"
+    const-string v1, "/bookmark1"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -955,7 +943,7 @@
 
     move-result-object v0
 
-    const-string v1, "/plugin"
+    const-string v1, "/data"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -977,7 +965,7 @@
 
     move-result-object v0
 
-    const-string v1, "/adbKeys"
+    const-string v1, "/playlist"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -999,7 +987,7 @@
 
     move-result-object v0
 
-    const-string v1, "/searchEngines"
+    const-string v1, "/theme"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1010,6 +998,72 @@
     move-result-object v0
 
     sput-object v0, Lcom/estrongs/android/pop/a;->r:Ljava/lang/String;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v1, Lcom/estrongs/android/pop/a;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "/plugin"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/estrongs/android/pop/a;->s:Ljava/lang/String;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v1, Lcom/estrongs/android/pop/a;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "/adbKeys"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/estrongs/android/pop/a;->t:Ljava/lang/String;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v1, Lcom/estrongs/android/pop/a;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "/searchEngines"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/estrongs/android/pop/a;->u:Ljava/lang/String;
 
     return-void
 

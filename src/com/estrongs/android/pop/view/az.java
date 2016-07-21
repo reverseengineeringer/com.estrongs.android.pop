@@ -1,43 +1,19 @@
 package com.estrongs.android.pop.view;
 
-import android.os.Handler;
-import com.estrongs.a.a;
-import com.estrongs.a.o;
-import com.estrongs.android.view.aw;
-import java.util.Iterator;
-import java.util.List;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.view.cr;
 
 class az
-  implements o
+  implements View.OnClickListener
 {
-  az(FileExplorerActivity paramFileExplorerActivity) {}
+  az(FileExplorerActivity paramFileExplorerActivity, cr paramcr, ci paramci) {}
   
-  private void a()
+  public void onClick(View paramView)
   {
-    synchronized (a.x)
-    {
-      Iterator localIterator = a.x.iterator();
-      while (localIterator.hasNext())
-      {
-        aw localaw = (aw)localIterator.next();
-        if ((localaw != null) && ("download://".equals(localaw.c())))
-        {
-          a.h.post(new ba(this, localaw));
-          return;
-        }
-      }
-      return;
-    }
-  }
-  
-  public void a(a parama)
-  {
-    a();
-  }
-  
-  public void b(a parama)
-  {
-    a();
+    a.b(true);
+    b.dismiss();
   }
 }
 

@@ -1,13 +1,17 @@
 package com.estrongs.android.pop.app;
 
-import android.widget.ImageView;
-import android.widget.TextView;
+import com.estrongs.android.pop.ad;
+import com.estrongs.android.ui.dialog.i;
 
 class ar
+  implements i
 {
-  ImageView a;
-  TextView b;
-  ImageView c;
+  ar(DocumentExtModifyList paramDocumentExtModifyList) {}
+  
+  public void a(String paramString)
+  {
+    ad.a(a).M(paramString);
+  }
 }
 
 /* Location:

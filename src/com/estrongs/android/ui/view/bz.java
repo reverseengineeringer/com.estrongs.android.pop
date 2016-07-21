@@ -1,37 +1,32 @@
 package com.estrongs.android.ui.view;
 
-import android.view.animation.Animation;
-import java.util.Map;
+import android.graphics.ColorMatrix;
+import android.graphics.ColorMatrixColorFilter;
+import android.view.View;
+import android.view.View.OnFocusChangeListener;
+import android.widget.ImageView;
 
 class bz
-  extends com.estrongs.android.widget.a
+  implements View.OnFocusChangeListener
 {
-  bz(by paramby, String paramString) {}
+  bz(PopMultiWindowGrid paramPopMultiWindowGrid) {}
   
-  public void onAnimationEnd(Animation paramAnimation)
+  public void onFocusChange(View paramView, boolean paramBoolean)
   {
-    if (by.a(b) != null) {
-      by.a(b).b();
-    }
-    if (a.equals(by.b(b))) {
-      if (!by.c(b)) {}
-    }
-    for (;;)
+    if (paramBoolean)
     {
-      by.a(b, false);
+      paramView = new ColorMatrix();
+      paramView.setSaturation(0.2F);
+      float[] arrayOfFloat = paramView.getArray();
+      float f = -77;
+      arrayOfFloat[14] = f;
+      arrayOfFloat[9] = f;
+      arrayOfFloat[4] = f;
+      paramView.set(arrayOfFloat);
+      PopMultiWindowGrid.a(a).setColorFilter(new ColorMatrixColorFilter(paramView));
       return;
-      by.a(b, false);
-      continue;
-      by.a(b, ((com.estrongs.android.ui.e.a)by.d(b).get(by.b(b))).a());
     }
-  }
-  
-  public void onAnimationStart(Animation paramAnimation)
-  {
-    by.a(b, true);
-    if (by.a(b) != null) {
-      by.a(b).a();
-    }
+    PopMultiWindowGrid.a(a).clearColorFilter();
   }
 }
 

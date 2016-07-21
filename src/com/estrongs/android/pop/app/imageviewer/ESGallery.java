@@ -25,17 +25,17 @@ public class ESGallery
     super(paramContext, paramAttributeSet, paramInt);
   }
   
-  public void a(o paramo)
-  {
-    a = paramo;
-  }
-  
   public boolean onFling(MotionEvent paramMotionEvent1, MotionEvent paramMotionEvent2, float paramFloat1, float paramFloat2)
   {
     if (a != null) {
       a.a(2);
     }
     return super.onFling(paramMotionEvent1, paramMotionEvent2, paramFloat1, paramFloat2);
+  }
+  
+  public void setOnScrollListener(o paramo)
+  {
+    a = paramo;
   }
 }
 

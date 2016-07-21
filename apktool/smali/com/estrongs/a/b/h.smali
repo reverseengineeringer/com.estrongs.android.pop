@@ -28,7 +28,7 @@
 
     if-eqz v1, :cond_2
 
-    invoke-static {}, Lcom/estrongs/android/util/ak;->b()Z
+    invoke-static {}, Lcom/estrongs/android/util/an;->b()Z
 
     move-result v0
 
@@ -67,7 +67,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/estrongs/android/util/ak;->b()Z
+    invoke-static {}, Lcom/estrongs/android/util/an;->b()Z
 
     move-result v0
 

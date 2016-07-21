@@ -1,7 +1,7 @@
 package com.estrongs.android.pop.esclasses;
 
 import android.content.Context;
-import android.support.v4.view.z;
+import android.support.v4.view.bi;
 import android.support.v4.widget.DrawerLayout;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
@@ -10,9 +10,9 @@ import android.view.ViewConfiguration;
 public class ESDrawerLayout
   extends DrawerLayout
 {
-  private int a;
-  private float b;
+  private int b;
   private float c;
+  private float d;
   
   public ESDrawerLayout(Context paramContext)
   {
@@ -27,18 +27,19 @@ public class ESDrawerLayout
   public ESDrawerLayout(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    e();
+    f();
   }
   
-  private void e()
+  private void f()
   {
-    a = ViewConfiguration.get(getContext()).getScaledTouchSlop();
+    b = ViewConfiguration.get(getContext()).getScaledTouchSlop();
   }
   
   public boolean onInterceptTouchEvent(MotionEvent paramMotionEvent)
   {
     int i = 1;
-    int j = z.a(paramMotionEvent);
+    boolean bool = false;
+    int j = bi.a(paramMotionEvent);
     float f1 = paramMotionEvent.getX();
     float f2 = paramMotionEvent.getY();
     switch (j)
@@ -46,25 +47,36 @@ public class ESDrawerLayout
     }
     for (;;)
     {
-      return super.onInterceptTouchEvent(paramMotionEvent);
-      b = f1;
-      c = f2;
-      continue;
-      if ((d(8388613)) && (paramMotionEvent.getPointerCount() <= 1))
+      bool = super.onInterceptTouchEvent(paramMotionEvent);
+      int k;
+      do
       {
-        j = (int)Math.abs(f1 - b);
-        int k = (int)Math.abs(f2 - c);
-        if ((j > a) && (j >= k)) {}
+        return bool;
+        c = f1;
+        d = f2;
+        break;
+        if (paramMotionEvent.getPointerCount() > 1) {
+          break label163;
+        }
+        j = (int)Math.abs(f1 - c);
+        k = (int)Math.abs(f2 - d);
+      } while ((j > 0) && (k > 0) && (j * j + k * k > b * b) && (Math.toDegrees(Math.atan(j / k)) < 60.0D));
+      label163:
+      if ((g(8388613)) && (paramMotionEvent.getPointerCount() <= 1))
+      {
+        j = (int)Math.abs(f1 - c);
+        k = (int)Math.abs(f2 - d);
+        if ((j > b) && (j >= k)) {}
         while (i != 0)
         {
-          if (f1 >= b) {
-            break label158;
+          if (f1 >= c) {
+            break label250;
           }
           b(2, 8388613);
           break;
           i = 0;
         }
-        label158:
+        label250:
         if (2 == a(8388613))
         {
           b(0, 8388613);

@@ -1,16 +1,17 @@
 package com.estrongs.android.pop.app;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.widget.f;
 
 class it
-  implements View.OnClickListener
+  implements DialogInterface.OnClickListener
 {
-  it(PopVideoPlayer paramPopVideoPlayer) {}
+  it(iq paramiq, f paramf) {}
   
-  public void onClick(View paramView)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    a.c();
+    a.k();
   }
 }
 

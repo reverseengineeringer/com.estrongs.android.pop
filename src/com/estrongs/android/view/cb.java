@@ -1,10 +1,39 @@
 package com.estrongs.android.view;
 
-public abstract interface cb
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.j.c;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.widget.f;
+import java.util.List;
+
+class cb
+  implements DialogInterface.OnClickListener
 {
-  public abstract void a();
+  cb(bx parambx, f paramf) {}
   
-  public abstract void a(aw paramaw, boolean paramBoolean);
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  {
+    paramDialogInterface = a.i();
+    if (paramDialogInterface.size() == 0) {
+      ak.a(b.ag, 2131231551, 0);
+    }
+    for (;;)
+    {
+      try
+      {
+        c.a(b.ag).a("encrypt_lb", "lp_encrypt");
+        return;
+      }
+      catch (Exception paramDialogInterface)
+      {
+        paramDialogInterface.printStackTrace();
+      }
+      a.k();
+      bx.a(b, (FileExplorerActivity)b.ag, paramDialogInterface);
+    }
+  }
 }
 
 /* Location:

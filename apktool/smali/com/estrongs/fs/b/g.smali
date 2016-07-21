@@ -149,7 +149,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -386,7 +386,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->b(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->b(Ljava/lang/String;)I
 
     move-result v2
 
@@ -416,11 +416,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->D(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->F(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -700,7 +700,7 @@
 
     const-string v2, "task error invalid  AdbAppFileObject"
 
-    invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/16 v0, 0x8
 

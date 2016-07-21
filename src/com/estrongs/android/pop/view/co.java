@@ -1,20 +1,23 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.fs.h;
-import com.estrongs.fs.i;
+import com.estrongs.android.ui.dialog.ProgressDialog;
+import com.estrongs.fs.impl.k.c;
 
 class co
-  implements i
+  extends Thread
 {
-  co(FileExplorerActivity paramFileExplorerActivity) {}
+  co(FileExplorerActivity paramFileExplorerActivity, com.estrongs.android.pop.app.service.b paramb) {}
   
-  public boolean a(h paramh)
+  public void run()
   {
-    if (FileExplorerActivity.g(a)) {}
-    while ((paramh.getName() == null) || (!paramh.getName().startsWith("."))) {
-      return true;
+    if (c.a())
+    {
+      a.a();
+      if (FileExplorerActivity.y(b).isShowing()) {
+        FileExplorerActivity.y(b).dismiss();
+      }
+      com.estrongs.fs.a.b.a().c("scannedserver://");
     }
-    return false;
   }
 }
 

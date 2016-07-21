@@ -1,111 +1,25 @@
 package com.estrongs.android.pop.app;
 
-import android.content.Context;
-import android.os.Handler;
-import android.view.KeyEvent;
-import android.view.View;
-import android.widget.MediaController;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.ui.e.ju;
 
 class jv
-  extends MediaController
+  implements MenuItem.OnMenuItemClickListener
 {
-  jv(PopVideoPlayer paramPopVideoPlayer, Context paramContext)
-  {
-    super(paramContext);
-  }
+  jv(PopVideoPlayer paramPopVideoPlayer) {}
   
-  public boolean dispatchKeyEvent(KeyEvent paramKeyEvent)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    int j = paramKeyEvent.getKeyCode();
-    int i;
-    if ((paramKeyEvent.getRepeatCount() == 0) && (paramKeyEvent.getAction() == 0))
-    {
-      i = 1;
-      if ((j != 4) && (j != 82)) {
-        break label56;
-      }
-      if (i != 0) {
-        PopVideoPlayer.a(a, true);
-      }
-    }
-    label56:
-    do
-    {
-      return super.dispatchKeyEvent(paramKeyEvent);
-      i = 0;
-      break;
-      if ((j == 24) && (!a.a()))
-      {
-        PopVideoPlayer.r(a).v();
-        return true;
-      }
-    } while ((j != 25) || (a.a()));
-    PopVideoPlayer.r(a).w();
-    return true;
-  }
-  
-  public void hide()
-  {
-    if ((!a.a()) && ((PopVideoPlayer.n(a)) || (PopVideoPlayer.o(a))))
-    {
-      if (PopVideoPlayer.p(a))
-      {
-        PopVideoPlayer.a(a, false);
-        if (PopVideoPlayer.n(a)) {
-          a.b();
-        }
-        if (PopVideoPlayer.o(a)) {
-          a.c();
-        }
-        return;
-      }
-      PopVideoPlayer.a(a, false);
-      return;
-    }
-    if (!a.a())
-    {
-      super.hide();
+    PopVideoPlayer.r(a).q();
+    if (PopVideoPlayer.b(a)) {
       a.finish();
-      return;
     }
-    PopVideoPlayer.a(a, false);
-    try
+    for (;;)
     {
-      PopVideoPlayer.q(a).setVisibility(4);
-      super.hide();
-      return;
-    }
-    catch (Exception localException)
-    {
-      for (;;) {}
-    }
-  }
-  
-  public void show()
-  {
-    PopVideoPlayer.q(a).setVisibility(0);
-    try
-    {
-      super.show(0);
-      return;
-    }
-    catch (Exception localException)
-    {
-      PopVideoPlayer.f(a).sendMessageDelayed(PopVideoPlayer.f(a).obtainMessage(5), 1000L);
-    }
-  }
-  
-  public void show(int paramInt)
-  {
-    PopVideoPlayer.q(a).setVisibility(0);
-    try
-    {
-      super.show(0);
-      return;
-    }
-    catch (Exception localException)
-    {
-      PopVideoPlayer.f(a).sendMessageDelayed(PopVideoPlayer.f(a).obtainMessage(5), 1000L);
+      return true;
+      PopVideoPlayer.z(a);
+      PopVideoPlayer.A(a).d();
     }
   }
 }

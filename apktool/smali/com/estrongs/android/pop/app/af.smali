@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/DefaultWindowSetting;
+.field final synthetic a:Lcom/estrongs/android/pop/app/x;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/DefaultWindowSetting;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/x;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/af;->a:Lcom/estrongs/android/pop/app/DefaultWindowSetting;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/af;->a:Lcom/estrongs/android/pop/app/x;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,46 +22,29 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 2
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/af;->a:Lcom/estrongs/android/pop/app/DefaultWindowSetting;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/af;->a:Lcom/estrongs/android/pop/app/x;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/DefaultWindowSetting;->a(Lcom/estrongs/android/pop/app/DefaultWindowSetting;)Lcom/estrongs/android/pop/app/ai;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/x;->dismiss()V
 
-    move-result-object v0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/af;->a:Lcom/estrongs/android/pop/app/x;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ai;->a()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->clear()V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/af;->a:Lcom/estrongs/android/pop/app/DefaultWindowSetting;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/x;->h(Lcom/estrongs/android/pop/app/x;)Lcom/estrongs/android/pop/app/ai;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/af;->a:Lcom/estrongs/android/pop/app/DefaultWindowSetting;
+    if-eqz v0, :cond_0
 
-    invoke-static {v1}, Lcom/estrongs/android/pop/app/DefaultWindowSetting;->a(Lcom/estrongs/android/pop/app/DefaultWindowSetting;)Lcom/estrongs/android/pop/app/ai;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/af;->a:Lcom/estrongs/android/pop/app/x;
 
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/ai;->a()Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/ad;->f(Ljava/util/List;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/af;->a:Lcom/estrongs/android/pop/app/DefaultWindowSetting;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/DefaultWindowSetting;->a(Lcom/estrongs/android/pop/app/DefaultWindowSetting;)Lcom/estrongs/android/pop/app/ai;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/x;->h(Lcom/estrongs/android/pop/app/x;)Lcom/estrongs/android/pop/app/ai;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ai;->notifyDataSetChanged()V
+    invoke-interface {v0}, Lcom/estrongs/android/pop/app/ai;->b()V
 
+    :cond_0
     return-void
 .end method

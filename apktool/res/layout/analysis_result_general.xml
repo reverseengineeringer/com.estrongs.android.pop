@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_10"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/analysis_result_general_lin_left" android:paddingLeft="@dimen/dp_20" android:paddingRight="@dimen/dp_20" android:paddingBottom="@dimen/dp_10" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true">
+        <com.estrongs.android.pop.app.analysis.viewholders.AnalysisResultGeneralPieView android:layout_gravity="center_vertical" android:id="@id/analysis_result_general_view_pie" android:layout_width="@dimen/dp_82" android:layout_height="@dimen/dp_82" />
+        <Button android:textSize="@dimen/dp_9" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/analysis_result_general_btn_scan" android:background="@drawable/analysis_btn_scan_again_selector" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/disk_analysis_general_btn_text" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/analysis_result_general_lin_right" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/analysis_result_general_lin_left" android:layout_centerVertical="true">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_8" android:layout_weight="1.0">
+                <View android:id="@id/analysis_result_general_view_pic" android:background="@drawable/analysis_result_general_round" android:layout_width="@dimen/dp_10" android:layout_height="@dimen/dp_10" android:layout_marginRight="@dimen/dp_5" />
+                <TextView android:textSize="@dimen/dp_10" android:textColor="@color/analysis_result_general_txt_color" android:id="@id/analysis_result_general_txt_pic" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textSize="@dimen/dp_10" android:textColor="@color/analysis_result_general_txt_color" android:id="@id/analysis_result_general_txt_pic_size" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_8" android:layout_weight="1.0">
+                <View android:id="@id/analysis_result_general_view_doc" android:background="@drawable/analysis_result_general_round" android:layout_width="@dimen/dp_10" android:layout_height="@dimen/dp_10" android:layout_marginRight="@dimen/dp_5" />
+                <TextView android:textSize="@dimen/dp_10" android:textColor="@color/analysis_result_general_txt_color" android:ellipsize="end" android:id="@id/analysis_result_general_txt_doc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textSize="@dimen/dp_10" android:textColor="@color/analysis_result_general_txt_color" android:id="@id/analysis_result_general_txt_doc_size" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_8" android:layout_weight="1.0">
+                <View android:id="@id/analysis_result_general_view_music" android:background="@drawable/analysis_result_general_round" android:layout_width="@dimen/dp_10" android:layout_height="@dimen/dp_10" android:layout_marginRight="@dimen/dp_5" />
+                <TextView android:textSize="@dimen/dp_10" android:textColor="@color/analysis_result_general_txt_color" android:ellipsize="end" android:id="@id/analysis_result_general_txt_music" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textSize="@dimen/dp_10" android:textColor="@color/analysis_result_general_txt_color" android:id="@id/analysis_result_general_txt_music_size" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_8" android:layout_weight="1.0">
+                <View android:id="@id/analysis_result_general_view_app" android:background="@drawable/analysis_result_general_round" android:layout_width="@dimen/dp_10" android:layout_height="@dimen/dp_10" android:layout_marginRight="@dimen/dp_5" />
+                <TextView android:textSize="@dimen/dp_10" android:textColor="@color/analysis_result_general_txt_color" android:ellipsize="end" android:id="@id/analysis_result_general_txt_app" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textSize="@dimen/dp_10" android:textColor="@color/analysis_result_general_txt_color" android:id="@id/analysis_result_general_txt_app_size" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_10">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_8" android:layout_weight="1.0">
+                <View android:id="@id/analysis_result_general_view_video" android:background="@drawable/analysis_result_general_round" android:layout_width="@dimen/dp_10" android:layout_height="@dimen/dp_10" android:layout_marginRight="@dimen/dp_5" />
+                <TextView android:textSize="@dimen/dp_10" android:textColor="@color/analysis_result_general_txt_color" android:ellipsize="end" android:id="@id/analysis_result_general_txt_video" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textSize="@dimen/dp_10" android:textColor="@color/analysis_result_general_txt_color" android:id="@id/analysis_result_general_txt_video_size" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_8" android:layout_weight="1.0">
+                <View android:id="@id/analysis_result_general_view_other" android:background="@drawable/analysis_result_general_round" android:layout_width="@dimen/dp_10" android:layout_height="@dimen/dp_10" android:layout_marginRight="@dimen/dp_5" />
+                <TextView android:textSize="@dimen/dp_10" android:textColor="@color/analysis_result_general_txt_color" android:ellipsize="end" android:id="@id/analysis_result_general_txt_other" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                <TextView android:textSize="@dimen/dp_10" android:textColor="@color/analysis_result_general_txt_color" android:id="@id/analysis_result_general_txt_other_size" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <ProgressBar android:id="@id/analysis_result_general_prg_loading" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+</RelativeLayout>

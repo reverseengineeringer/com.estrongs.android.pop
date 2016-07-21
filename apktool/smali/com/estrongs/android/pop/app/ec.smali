@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
+.field final synthetic a:Lcom/estrongs/android/ui/dialog/cv;
+
+.field final synthetic b:Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;Lcom/estrongs/android/ui/dialog/cv;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/ec;->a:Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/ec;->b:Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
+
+    iput-object p2, p0, Lcom/estrongs/android/pop/app/ec;->a:Lcom/estrongs/android/ui/dialog/cv;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,14 +26,18 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
+.method public onClick(Landroid/view/View;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ec;->a:Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ec;->b:Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->c()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->f()V
 
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ec;->a:Lcom/estrongs/android/ui/dialog/cv;
+
+    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/cv;->a:Lcom/estrongs/android/ui/dialog/ci;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ci;->dismiss()V
 
     return-void
 .end method

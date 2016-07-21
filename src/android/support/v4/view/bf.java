@@ -1,18 +1,27 @@
 package android.support.v4.view;
 
-import android.graphics.Paint;
-import android.view.View;
+import android.view.MenuItem;
 
 class bf
 {
-  public static int a(View paramView)
+  public static MenuItem a(MenuItem paramMenuItem, bh parambh)
   {
-    return paramView.getLayoutDirection();
+    return paramMenuItem.setOnActionExpandListener(new bg(parambh));
   }
   
-  public static void a(View paramView, Paint paramPaint)
+  public static boolean a(MenuItem paramMenuItem)
   {
-    paramView.setLayerPaint(paramPaint);
+    return paramMenuItem.expandActionView();
+  }
+  
+  public static boolean b(MenuItem paramMenuItem)
+  {
+    return paramMenuItem.collapseActionView();
+  }
+  
+  public static boolean c(MenuItem paramMenuItem)
+  {
+    return paramMenuItem.isActionViewExpanded();
   }
 }
 

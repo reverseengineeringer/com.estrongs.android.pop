@@ -237,7 +237,7 @@
 
     iget-object v0, p0, Lcom/estrongs/io/model/ArchiveEntryFile;->children:Ljava/util/List;
 
-    sget-object v1, Lcom/estrongs/android/util/q;->c:Ljava/util/Comparator;
+    sget-object v1, Lcom/estrongs/android/util/s;->c:Ljava/util/Comparator;
 
     invoke-static {v0, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 

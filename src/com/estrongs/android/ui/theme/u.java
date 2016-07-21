@@ -1,17 +1,27 @@
 package com.estrongs.android.ui.theme;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.ui.view.ColorPickerView;
+import android.content.Context;
+import android.os.Handler;
+import com.estrongs.android.j.c;
+import com.estrongs.android.ui.dialog.ip;
 
 class u
-  implements View.OnClickListener
+  extends al
 {
-  u(ThemeColorActivity paramThemeColorActivity) {}
+  u(ThemeActivity paramThemeActivity) {}
   
-  public void onClick(View paramView)
+  public void a(Context paramContext, Handler paramHandler)
   {
-    ThemeColorActivity.b(a).a(-16777216);
+    new ip(paramContext).a();
+    try
+    {
+      c.a(a).a("theme_pro");
+      return;
+    }
+    catch (Exception paramContext)
+    {
+      paramContext.printStackTrace();
+    }
   }
 }
 

@@ -3,15 +3,17 @@ package com.estrongs.android.pop.app.imageviewer.gallery;
 import android.net.Uri;
 import com.estrongs.android.pop.FexApplication;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.utils.cd;
-import com.estrongs.android.pop.utils.ci;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bc;
+import com.estrongs.android.pop.m;
+import com.estrongs.android.pop.utils.cm;
+import com.estrongs.android.pop.utils.cr;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bg;
 import com.estrongs.fs.b.ab;
 import com.estrongs.fs.h;
 import com.estrongs.fs.i;
-import com.estrongs.fs.n;
 import com.estrongs.fs.util.a.a;
+import com.estrongs.fs.w;
+import com.estrongs.fs.x;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -23,9 +25,9 @@ public class d
 {
   private List<e> a = new LinkedList();
   private com.estrongs.fs.d b;
-  private com.estrongs.android.pop.m c = null;
+  private m c = null;
   
-  public d(com.estrongs.fs.d paramd, String paramString1, String paramString2, i parami, a parama, com.estrongs.android.pop.m paramm)
+  public d(com.estrongs.fs.d paramd, String paramString1, String paramString2, i parami, a parama, m paramm)
   {
     b = paramd;
     c = paramm;
@@ -41,11 +43,11 @@ public class d
     {
       try
       {
-        String str = am.e(paramString1);
+        String str = ap.e(paramString1);
         if (!str.endsWith("/"))
         {
           str = str + "/";
-          Object localObject = am.e(paramString2);
+          Object localObject = ap.e(paramString2);
           paramString2 = (String)localObject;
           if (!((String)localObject).endsWith("/")) {
             paramString2 = (String)localObject + "/";
@@ -53,7 +55,7 @@ public class d
           if (parami == null)
           {
             paramString2 = com.estrongs.fs.d.a(null);
-            if ((am.bb(str)) || (am.aW(str))) {
+            if ((ap.bm(str)) || (ap.bh(str))) {
               break label321;
             }
             label115:
@@ -61,12 +63,12 @@ public class d
             break label327;
           }
           localObject = com.estrongs.fs.d.a(null);
-          paramString2 = new n(str, paramString2, com.estrongs.fs.m.a, null);
-          if (am.bb(str)) {
+          paramString2 = new x(str, paramString2, w.a, null);
+          if (ap.bm(str)) {
             break label332;
           }
           bool1 = bool2;
-          if (am.aW(str)) {
+          if (ap.bh(str)) {
             break label332;
           }
           paramString2 = ((com.estrongs.fs.d)localObject).a(paramString2, bool1, parami);
@@ -96,10 +98,10 @@ public class d
             if ((parama == null) || (!parama.a()))
             {
               parama = parami.getAbsolutePath();
-              if ((bc.b(parami)) || (am.e(parama, paramString1)))
+              if ((bg.b(parami)) || (ap.e(parama, paramString1)))
               {
                 parami = new c(this, b, parami);
-                parami.a(cd.c(parama));
+                parami.a(cm.c(parama));
                 a.add(parami);
               }
             }
@@ -145,7 +147,7 @@ public class d
       {
         str1 = paramUri.getPath();
         label89:
-        if (am.e(str2, str1)) {
+        if (ap.e(str2, str1)) {
           return locale;
         }
       }
@@ -191,11 +193,11 @@ public class d
     if (((c)localObject2).a() == null)
     {
       ((List)localObject1).add(b.j(((c)localObject2).d()));
-      boolean bool2 = ad.a(FexApplication.a()).aD();
+      boolean bool2 = ad.a(FexApplication.a()).aE();
       localObject2 = parame.d();
       bool1 = bool2;
       if (bool2) {
-        if (ci.a((String)localObject2) != ci.c) {
+        if (cr.a((String)localObject2) != cr.c) {
           break label158;
         }
       }

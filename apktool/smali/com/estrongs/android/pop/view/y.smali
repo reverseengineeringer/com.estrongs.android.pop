@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
@@ -22,14 +22,22 @@
 
 
 # virtual methods
-.method public run()V
+.method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
+
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/FexApplication;->a(Z)V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/view/y;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    const-string v1, "app://user"
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->d(Ljava/lang/String;)Lcom/estrongs/android/view/aw;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->finish()V
 
     return-void
 .end method

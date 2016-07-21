@@ -1,38 +1,16 @@
 package com.estrongs.android.pop.app;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import android.widget.ListView;
-import com.estrongs.android.pop.utils.aa;
-import com.estrongs.android.ui.view.ag;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 class cv
-  implements MenuItem.OnMenuItemClickListener
+  extends WebViewClient
 {
-  cv(HideListActivity paramHideListActivity) {}
+  cv(HelpActivity paramHelpActivity) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public boolean shouldOverrideUrlLoading(WebView paramWebView, String paramString)
   {
-    if ((HideListActivity.b(a) != null) && (HideListActivity.b(a).length > 0))
-    {
-      HideListActivity.a(a, true);
-      aa.e();
-    }
-    try
-    {
-      aa.b();
-      aa.e = false;
-      HideListActivity.a(a, aa.f());
-      HideListActivity.a(a, new cx(a, a, 2130903155, HideListActivity.b(a)));
-      HideListActivity.a(a).setAdapter(HideListActivity.c(a));
-      HideListActivity.c(a).notifyDataSetChanged();
-      ag.a(a, 2131428156, 1);
-      return false;
-    }
-    catch (Exception paramMenuItem)
-    {
-      for (;;) {}
-    }
+    return super.shouldOverrideUrlLoading(paramWebView, paramString);
   }
 }
 

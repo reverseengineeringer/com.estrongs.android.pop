@@ -1,87 +1,44 @@
 package com.estrongs.android.ui.dialog;
 
 import android.content.Context;
-import android.content.DialogInterface.OnDismissListener;
-import android.graphics.drawable.Drawable;
-import android.view.LayoutInflater;
-import android.view.View;
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.ui.view.NaviListView;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.am;
+import android.os.AsyncTask;
+import android.widget.TextView;
+import com.estrongs.fs.util.g;
+import com.estrongs.fs.util.j;
+import java.io.File;
 import java.util.List;
-import java.util.Map;
 
-public class cy
+class cy
+  extends AsyncTask<List<File>, String, Void>
 {
-  com.estrongs.android.ui.a.g a;
-  private cg b;
-  private Context c;
+  g a;
   
-  public cy(Context paramContext, Map<String, String> paramMap, Map<String, Drawable> paramMap1)
+  cy(cx paramcx, Context paramContext, TextView paramTextView) {}
+  
+  protected Void a(List<File>... paramVarArgs)
   {
-    c = paramContext;
-    a(paramMap, paramMap1);
+    a = new g(new cz(this));
+    a.a(paramVarArgs[0]);
+    publishProgress(new String[] { "" + a.c(), j.c(a.b()), "over" });
+    return null;
   }
   
-  private void a(Map<String, String> paramMap, Map<String, Drawable> paramMap1)
+  protected void a(Void paramVoid)
   {
-    View localView = com.estrongs.android.pop.esclasses.g.a(c).inflate(2130903098, null);
-    NaviListView localNaviListView = (NaviListView)localView.findViewById(2131362074);
-    cz localcz = new cz(this, localNaviListView);
-    a = new com.estrongs.android.ui.a.g(c, localcz, paramMap, paramMap1);
-    localNaviListView.setAdapter(a);
-    localNaviListView.setItemsCanFocus(true);
-    localNaviListView.setOnGroupClickListener(new da(this));
-    b = new ct(c).a(localView).a(2131428452).b();
+    publishProgress(new String[] { "" + a.c(), j.c(a.b()) });
   }
   
-  public void a()
+  protected void a(String... paramVarArgs)
   {
-    b.show();
+    String str = b.getString(2131232404, new Object[] { paramVarArgs[1] });
+    c.setText(b.getString(2131232403, new Object[] { paramVarArgs[0], str }));
   }
   
-  public void a(DialogInterface.OnDismissListener paramOnDismissListener)
+  protected void onCancelled()
   {
-    b.setOnDismissListener(paramOnDismissListener);
-  }
-  
-  public boolean a(String paramString)
-  {
-    if (paramString == null) {
-      return false;
+    if (a != null) {
+      a.a();
     }
-    String str = paramString;
-    if (!am.t(paramString))
-    {
-      str = paramString;
-      if (!paramString.endsWith("/"))
-      {
-        str = paramString;
-        if (!paramString.endsWith("#")) {
-          str = paramString + "/";
-        }
-      }
-    }
-    paramString = ad.a(c).M();
-    if (paramString.size() >= 12)
-    {
-      ag.a(c, 2131428176, 1);
-      return false;
-    }
-    if (paramString.contains(str))
-    {
-      ag.a(c, 2131428454, 1);
-      return false;
-    }
-    paramString.add(str);
-    ad.a(c).f(paramString);
-    return true;
-  }
-  
-  public void b()
-  {
-    b.dismiss();
   }
 }
 

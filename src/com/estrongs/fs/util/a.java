@@ -711,8 +711,8 @@ public class a
     //   738: aload_0
     //   739: getfield 305	com/estrongs/fs/util/a:r	Ljava/io/File;
     //   742: invokevirtual 320	java/io/File:getAbsolutePath	()Ljava/lang/String;
-    //   745: invokestatic 326	com/estrongs/android/util/am:bE	(Ljava/lang/String;)Ljava/lang/String;
-    //   748: astore 16
+    //   745: invokestatic 326	com/estrongs/android/util/ap:bV	(Ljava/lang/String;)Ljava/lang/String;
+    //   748: astore 17
     //   750: aload 11
     //   752: astore 9
     //   754: aload 12
@@ -722,7 +722,7 @@ public class a
     //   762: aload_0
     //   763: getfield 52	com/estrongs/fs/util/a:b	[B
     //   766: invokespecial 201	java/lang/String:<init>	([B)V
-    //   769: astore 17
+    //   769: astore 16
     //   771: iload_2
     //   772: ifeq +131 -> 903
     //   775: aload 11
@@ -737,11 +737,11 @@ public class a
     //   794: aload 12
     //   796: astore 8
     //   798: aload 18
-    //   800: aload 16
+    //   800: aload 17
     //   802: new 328	com/estrongs/fs/util/b
     //   805: dup
     //   806: aload_0
-    //   807: aload 17
+    //   807: aload 16
     //   809: iload_2
     //   810: aload 10
     //   812: invokespecial 331	com/estrongs/fs/util/b:<init>	(Lcom/estrongs/fs/util/a;Ljava/lang/String;ZLjava/lang/String;)V
@@ -837,7 +837,7 @@ public class a
     //   1002: ifeq +1139 -> 2141
     //   1005: aload 13
     //   1007: invokevirtual 320	java/io/File:getAbsolutePath	()Ljava/lang/String;
-    //   1010: invokestatic 361	com/estrongs/android/util/am:bl	(Ljava/lang/String;)Z
+    //   1010: invokestatic 361	com/estrongs/android/util/ap:bC	(Ljava/lang/String;)Z
     //   1013: ifeq +404 -> 1417
     //   1016: new 363	android/os/StatFs
     //   1019: dup
@@ -848,15 +848,15 @@ public class a
     //   1030: aload 8
     //   1032: invokevirtual 367	android/os/StatFs:getBlockSize	()I
     //   1035: i2l
-    //   1036: lstore 6
+    //   1036: lstore 4
     //   1038: aload 8
     //   1040: invokevirtual 370	android/os/StatFs:getAvailableBlocks	()I
     //   1043: i2l
-    //   1044: lstore 4
+    //   1044: lstore 6
     //   1046: aload 13
     //   1048: invokevirtual 371	java/io/File:length	()J
-    //   1051: lload 4
-    //   1053: lload 6
+    //   1051: lload 6
+    //   1053: lload 4
     //   1055: lmul
     //   1056: lcmp
     //   1057: ifle +360 -> 1417
@@ -877,8 +877,8 @@ public class a
     //   1090: aastore
     //   1091: dup
     //   1092: iconst_1
-    //   1093: lload 4
-    //   1095: lload 6
+    //   1093: lload 6
+    //   1095: lload 4
     //   1097: lmul
     //   1098: invokestatic 261	java/lang/Long:valueOf	(J)Ljava/lang/Long;
     //   1101: aastore
@@ -926,29 +926,29 @@ public class a
     //   1199: iconst_1
     //   1200: istore_2
     //   1201: getstatic 34	com/estrongs/fs/util/a:a	Ljava/util/Map;
-    //   1204: astore 11
+    //   1204: astore 10
     //   1206: aload_0
     //   1207: getfield 305	com/estrongs/fs/util/a:r	Ljava/io/File;
     //   1210: invokevirtual 320	java/io/File:getAbsolutePath	()Ljava/lang/String;
-    //   1213: invokestatic 326	com/estrongs/android/util/am:bE	(Ljava/lang/String;)Ljava/lang/String;
-    //   1216: astore 10
+    //   1213: invokestatic 326	com/estrongs/android/util/ap:bV	(Ljava/lang/String;)Ljava/lang/String;
+    //   1216: astore 9
     //   1218: new 45	java/lang/String
     //   1221: dup
     //   1222: aload_0
     //   1223: getfield 52	com/estrongs/fs/util/a:b	[B
     //   1226: invokespecial 201	java/lang/String:<init>	([B)V
-    //   1229: astore 9
+    //   1229: astore 11
     //   1231: iload_2
     //   1232: ifeq +949 -> 2181
     //   1235: aload 13
     //   1237: invokevirtual 287	java/io/File:getName	()Ljava/lang/String;
     //   1240: astore 8
-    //   1242: aload 11
-    //   1244: aload 10
+    //   1242: aload 10
+    //   1244: aload 9
     //   1246: new 328	com/estrongs/fs/util/b
     //   1249: dup
     //   1250: aload_0
-    //   1251: aload 9
+    //   1251: aload 11
     //   1253: iload_2
     //   1254: aload 8
     //   1256: invokespecial 331	com/estrongs/fs/util/b:<init>	(Lcom/estrongs/fs/util/a;Ljava/lang/String;ZLjava/lang/String;)V
@@ -994,7 +994,7 @@ public class a
     //   1332: astore 8
     //   1334: aload 8
     //   1336: athrow
-    //   1337: astore 8
+    //   1337: astore 9
     //   1339: aload_0
     //   1340: getfield 305	com/estrongs/fs/util/a:r	Ljava/io/File;
     //   1343: aload 13
@@ -1018,13 +1018,13 @@ public class a
     //   1386: aload 13
     //   1388: ldc_w 307
     //   1391: invokespecial 276	java/io/RandomAccessFile:<init>	(Ljava/io/File;Ljava/lang/String;)V
-    //   1394: astore 9
+    //   1394: astore 8
     //   1396: aload_0
-    //   1397: aload 9
+    //   1397: aload 8
     //   1399: invokespecial 408	com/estrongs/fs/util/a:c	(Ljava/io/RandomAccessFile;)V
-    //   1402: aload 9
+    //   1402: aload 8
     //   1404: invokevirtual 115	java/io/RandomAccessFile:close	()V
-    //   1407: aload 8
+    //   1407: aload 9
     //   1409: athrow
     //   1410: astore 8
     //   1412: aload 8
@@ -1277,76 +1277,76 @@ public class a
     //   1904: aload 10
     //   1906: invokevirtual 115	java/io/RandomAccessFile:close	()V
     //   1909: aconst_null
-    //   1910: astore 11
+    //   1910: astore 12
     //   1912: aconst_null
-    //   1913: astore 12
-    //   1915: aload 12
+    //   1913: astore 11
+    //   1915: aload 11
     //   1917: astore 9
-    //   1919: aload 11
+    //   1919: aload 12
     //   1921: astore 8
     //   1923: aload 13
     //   1925: invokevirtual 126	java/io/File:delete	()Z
     //   1928: pop
-    //   1929: aload 12
+    //   1929: aload 11
     //   1931: astore 9
-    //   1933: aload 11
+    //   1933: aload 12
     //   1935: astore 8
     //   1937: aload_0
     //   1938: getfield 54	com/estrongs/fs/util/a:p	Z
     //   1941: ifeq +124 -> 2065
-    //   1944: aload 12
+    //   1944: aload 11
     //   1946: astore 9
-    //   1948: aload 11
+    //   1948: aload 12
     //   1950: astore 8
     //   1952: aload_0
     //   1953: getfield 203	com/estrongs/fs/util/a:o	Ljava/lang/String;
     //   1956: ifnull +144 -> 2100
     //   1959: iconst_1
     //   1960: istore_2
-    //   1961: aload 12
+    //   1961: aload 11
     //   1963: astore 9
-    //   1965: aload 11
+    //   1965: aload 12
     //   1967: astore 8
     //   1969: getstatic 34	com/estrongs/fs/util/a:a	Ljava/util/Map;
-    //   1972: astore 17
-    //   1974: aload 12
+    //   1972: astore 16
+    //   1974: aload 11
     //   1976: astore 9
-    //   1978: aload 11
+    //   1978: aload 12
     //   1980: astore 8
     //   1982: aload_0
     //   1983: getfield 305	com/estrongs/fs/util/a:r	Ljava/io/File;
     //   1986: invokevirtual 320	java/io/File:getAbsolutePath	()Ljava/lang/String;
-    //   1989: invokestatic 326	com/estrongs/android/util/am:bE	(Ljava/lang/String;)Ljava/lang/String;
-    //   1992: astore 14
-    //   1994: aload 12
+    //   1989: invokestatic 326	com/estrongs/android/util/ap:bV	(Ljava/lang/String;)Ljava/lang/String;
+    //   1992: astore 17
+    //   1994: aload 11
     //   1996: astore 9
-    //   1998: aload 11
+    //   1998: aload 12
     //   2000: astore 8
     //   2002: new 45	java/lang/String
     //   2005: dup
     //   2006: aload_0
     //   2007: getfield 52	com/estrongs/fs/util/a:b	[B
     //   2010: invokespecial 201	java/lang/String:<init>	([B)V
-    //   2013: astore 16
+    //   2013: astore 14
     //   2015: iload_2
     //   2016: ifeq +89 -> 2105
-    //   2019: aload 12
+    //   2019: aload 11
     //   2021: astore 9
-    //   2023: aload 11
+    //   2023: aload 12
     //   2025: astore 8
     //   2027: aload 13
     //   2029: invokevirtual 287	java/io/File:getName	()Ljava/lang/String;
     //   2032: astore 10
-    //   2034: aload 12
+    //   2034: aload 11
     //   2036: astore 9
-    //   2038: aload 11
+    //   2038: aload 12
     //   2040: astore 8
-    //   2042: aload 17
-    //   2044: aload 14
+    //   2042: aload 16
+    //   2044: aload 17
     //   2046: new 328	com/estrongs/fs/util/b
     //   2049: dup
     //   2050: aload_0
-    //   2051: aload 16
+    //   2051: aload 14
     //   2053: iload_2
     //   2054: aload 10
     //   2056: invokespecial 331	com/estrongs/fs/util/b:<init>	(Lcom/estrongs/fs/util/a;Ljava/lang/String;ZLjava/lang/String;)V
@@ -1430,41 +1430,43 @@ public class a
     //   964	3	8	localException5	Exception
     //   976	279	8	localObject3	Object
     //   1332	3	8	localException6	Exception
-    //   1337	71	8	localException7	Exception
-    //   1410	3	8	localException8	Exception
+    //   1394	9	8	localRandomAccessFile1	RandomAccessFile
+    //   1410	3	8	localException7	Exception
     //   1453	130	8	localObject4	Object
-    //   1616	3	8	localException9	Exception
-    //   1625	3	8	localException10	Exception
+    //   1616	3	8	localException8	Exception
+    //   1625	3	8	localException9	Exception
     //   1648	393	8	localObject5	Object
-    //   2091	3	8	localException11	Exception
-    //   2111	3	8	localException12	Exception
+    //   2091	3	8	localException10	Exception
+    //   2111	3	8	localException11	Exception
     //   2144	1	8	localObject6	Object
     //   2160	1	8	localObject7	Object
     //   2182	1	8	localObject8	Object
     //   116	713	9	localObject9	Object
-    //   919	3	9	localException13	Exception
-    //   929	3	9	localException14	Exception
-    //   969	3	9	localException15	Exception
-    //   1229	808	9	localObject10	Object
+    //   919	3	9	localException12	Exception
+    //   929	3	9	localException13	Exception
+    //   969	3	9	localException14	Exception
+    //   1216	29	9	str1	String
+    //   1337	71	9	localException15	Exception
+    //   1449	588	9	localObject10	Object
     //   2121	3	9	localException16	Exception
     //   2131	11	9	localException17	Exception
     //   2147	25	9	localObject11	Object
-    //   188	247	10	localRandomAccessFile1	RandomAccessFile
+    //   188	247	10	localRandomAccessFile2	RandomAccessFile
     //   449	44	10	localException18	Exception
     //   495	166	10	localObject12	Object
     //   788	942	10	localObject13	Object
     //   1772	44	10	localException19	Exception
-    //   1818	87	10	localRandomAccessFile2	RandomAccessFile
-    //   2032	75	10	str1	String
+    //   1818	87	10	localRandomAccessFile3	RandomAccessFile
+    //   2032	75	10	str2	String
     //   2152	1	10	localException20	Exception
     //   2168	1	10	localException21	Exception
-    //   220	1819	11	localObject14	Object
-    //   666	1369	12	localObject15	Object
+    //   220	1815	11	localObject14	Object
+    //   666	1373	12	localObject15	Object
     //   54	1974	13	localFile	File
-    //   3	2042	14	localObject16	Object
-    //   68	2017	15	localRandomAccessFile3	RandomAccessFile
-    //   748	1304	16	str2	String
-    //   769	1274	17	localObject17	Object
+    //   3	2049	14	localObject16	Object
+    //   68	2017	15	localRandomAccessFile4	RandomAccessFile
+    //   769	1274	16	localObject17	Object
+    //   748	1297	17	str3	String
     //   728	71	18	localMap	Map
     // Exception table:
     //   from	to	target	type

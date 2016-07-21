@@ -11,13 +11,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.estrongs.a.a.l;
 import com.estrongs.a.a.p;
+import com.estrongs.android.pop.esclasses.k;
 import com.estrongs.android.pop.netfs.utils.TypeUtils;
-import com.estrongs.android.ui.dialog.ix;
-import com.estrongs.android.ui.notification.e;
-import com.estrongs.android.ui.theme.al;
-import com.estrongs.android.util.am;
+import com.estrongs.android.ui.dialog.jh;
+import com.estrongs.android.ui.theme.at;
+import com.estrongs.android.util.ap;
 import com.estrongs.fs.b.ad;
-import com.estrongs.fs.b.ap;
+import com.estrongs.fs.b.ar;
 import com.estrongs.fs.util.j;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -27,67 +27,71 @@ import org.json.JSONObject;
 
 public class f
 {
-  public static final DateFormat a = new SimpleDateFormat();
-  private Context b;
-  private View c;
-  private ImageView d;
-  private ImageView e;
-  private CheckBox f;
-  private ViewGroup g;
-  private ViewGroup h;
-  private a i;
-  private com.estrongs.a.a j;
-  private al k;
-  private Object l = new Object();
-  private e m = null;
-  private com.estrongs.android.pop.m n = null;
-  private p o = new i(this);
+  public static final DateFormat c = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+  public View a;
+  public ImageView b;
+  private Context d;
+  private View e;
+  private ImageView f;
+  private ImageView g;
+  private TextView h;
+  private CheckBox i;
+  private ViewGroup j;
+  private ViewGroup k;
+  private a l;
+  private com.estrongs.a.a m;
+  private at n;
+  private Object o = new Object();
+  private com.estrongs.android.ui.notification.f p = null;
+  private com.estrongs.android.pop.m q = null;
+  private boolean r = false;
+  private p s = new i(this);
   
   public f(Context paramContext, com.estrongs.a.a parama)
   {
-    b = paramContext;
-    k = al.a(b);
-    c = com.estrongs.android.pop.esclasses.g.a(b).inflate(2130903257, null);
-    d = ((ImageView)c.findViewById(2131362743));
-    h = ((ViewGroup)c.findViewById(2131362744));
-    g = ((ViewGroup)c.findViewById(2131362745));
-    e = ((ImageView)g.findViewById(2131362746));
-    f = ((CheckBox)c.findViewById(2131361954));
-    ((TextView)c.findViewById(2131361822)).setTextColor(al.a(b).i());
-    n = new com.estrongs.android.pop.m((Activity)b);
-    i = new g(this, (Activity)b, g);
-    if (i.f != null) {
-      i.f.setTextColor(k.d(2131230762));
+    d = paramContext;
+    n = at.a(d);
+    e = k.a(d).inflate(2130903437, null);
+    f = ((ImageView)e.findViewById(2131625530));
+    k = ((ViewGroup)e.findViewById(2131625532));
+    j = ((ViewGroup)e.findViewById(2131625533));
+    a = e.findViewById(2131625531);
+    h = ((TextView)e.findViewById(2131625540));
+    g = ((ImageView)e.findViewById(2131625539));
+    i = ((CheckBox)e.findViewById(2131624070));
+    ((TextView)e.findViewById(2131624200)).setTextColor(at.a(d).i());
+    b = ((ImageView)e.findViewById(2131624581));
+    q = new com.estrongs.android.pop.m((Activity)d);
+    l = new g(this, (Activity)d, j);
+    if (l.f != null) {
+      l.f.setTextColor(n.c(2131558621));
     }
-    if (i.d != null) {
-      i.d.setTextColor(al.a(b).i());
+    if (l.d != null) {
+      l.d.setTextColor(at.a(d).i());
     }
-    if (i.e != null) {
-      i.e.setTextColor(k.d(2131230762));
+    if (l.e != null) {
+      l.e.setTextColor(n.c(2131558621));
     }
-    if (i.h != null) {
-      i.h.setTextColor(k.d(2131230762));
-    }
-    if (i.g != null) {
-      i.g.setTextColor(k.d(2131230762));
+    if (l.g != null) {
+      l.g.setTextColor(n.c(2131558621));
     }
     a(parama);
   }
   
   public com.estrongs.a.a a()
   {
-    return j;
+    return m;
   }
   
   protected void a(int paramInt)
   {
-    i.d();
-    d.setImageDrawable(com.estrongs.android.d.f.a(String.valueOf(TypeUtils.getFileType(j.summary().optString("title")))));
-    if ((j instanceof ap))
+    l.d();
+    f.setImageDrawable(com.estrongs.android.h.f.a(String.valueOf(TypeUtils.getFileType(m.summary().optString("title")))));
+    if ((m instanceof ar))
     {
-      i.c(b.getString(2131428549));
-      i.e.setText(b.getString(2131428549));
-      e.setImageDrawable(null);
+      l.c(d.getString(2131231387));
+      l.e.setText(d.getString(2131231387));
+      a.setVisibility(4);
       switch (paramInt)
       {
       }
@@ -101,74 +105,90 @@ public class f
           do
           {
             return;
-            i.c(null);
-            break;
-            h.setVisibility(0);
-            g.setVisibility(8);
-            TextView localTextView1 = (TextView)h.findViewById(2131361822);
-            TextView localTextView2 = (TextView)h.findViewById(2131361950);
-            TextView localTextView3 = (TextView)h.findViewById(2131362607);
-            localTextView1.setText(j.summary().optString("title"));
-            String str = j.summary().optString("target");
-            if ((am.ba(str)) && (!com.estrongs.fs.impl.local.h.a(str)))
+            Object localObject = a;
+            if (r) {}
+            for (int i1 = 4;; i1 = 0)
             {
-              localTextView1.setTextColor(k.d(2131230756));
-              localTextView1.setText(localTextView1.getText() + "  (" + b.getString(2131428280, new Object[] { "" }).replaceAll("\"", "").trim() + ")");
+              ((View)localObject).setVisibility(i1);
+              l.c(null);
+              break;
+            }
+            k.setVisibility(0);
+            j.setVisibility(8);
+            localObject = (TextView)k.findViewById(2131624200);
+            TextView localTextView1 = (TextView)k.findViewById(2131624457);
+            TextView localTextView2 = (TextView)k.findViewById(2131625357);
+            ((TextView)localObject).setText(m.summary().optString("title"));
+            String str = m.summary().optString("target");
+            if ((ap.bl(str)) && (!com.estrongs.fs.impl.local.i.a(str)))
+            {
+              ((TextView)localObject).setTextColor(n.c(2131558458));
+              ((TextView)localObject).setText(((TextView)localObject).getText() + "  (" + d.getString(2131231316, new Object[] { "" }).replaceAll("\"", "").trim() + ")");
             }
             for (;;)
             {
-              localTextView2.setText(j.c(j.summary().optLong("size")));
-              localTextView3.setText(a.format(new Date(j.summary().optLong("end_time"))));
+              localTextView1.setText(j.c(m.summary().optLong("size")));
+              localTextView2.setText(c.format(new Date(m.summary().optLong("end_time"))));
+              g.setImageResource(2130838574);
+              h.setText(d.getString(2131230868));
+              if (!r) {
+                break;
+              }
+              a.setVisibility(4);
               return;
-              localTextView1.setTextColor(k.i());
+              ((TextView)localObject).setTextColor(n.i());
             }
-            h.setVisibility(8);
-            g.setVisibility(0);
-          } while (!(j instanceof ad));
-          e.setImageResource(2130837532);
+            a.setVisibility(0);
+            return;
+            k.setVisibility(8);
+            j.setVisibility(0);
+          } while (!(m instanceof ad));
+          g.setImageResource(2130838578);
+          h.setText(d.getString(2131230896));
         } while (paramInt != 5);
-        i.c.a(j, j.processData);
-        i.c(b.getString(2131427613));
-        i.e(j.processData.e);
-        i.f(j.processData.f);
-      } while (j.processData.f != 0L);
-      i.e();
-      i.b(j.summary().optString("title"));
+        l.c.a(m, m.processData);
+        l.c(d.getString(2131232245));
+        l.e(m.processData.e);
+        l.f(m.processData.f);
+      } while (m.processData.f != 0L);
+      l.e();
+      l.b(m.summary().optString("title"));
       return;
-      h.setVisibility(8);
-      g.setVisibility(0);
-      i.b(j.summary().optString("title"));
-    } while (!(j instanceof ad));
-    i.c(null);
-    e.setImageResource(2130837531);
+      k.setVisibility(8);
+      j.setVisibility(0);
+      l.b(m.summary().optString("title"));
+    } while (!(m instanceof ad));
+    l.c(null);
+    g.setImageResource(2130838577);
+    h.setText(d.getString(2131230873));
   }
   
   public void a(com.estrongs.a.a parama)
   {
-    com.estrongs.a.a locala = j;
+    com.estrongs.a.a locala = m;
     if (locala != null)
     {
-      locala.removeTaskStatusChangeListener(o);
-      locala.removeProgressListener(i.c);
+      locala.removeTaskStatusChangeListener(s);
+      locala.removeProgressListener(l.c);
     }
-    i.b(parama.summary().optString("title"));
+    l.b(parama.summary().optString("title"));
     int i1;
     if ((parama.getTaskStatus() != 4) && (processData != null))
     {
       if (processData.e > 0L)
       {
-        i.e(processData.e);
-        i.f(processData.f);
+        l.e(processData.e);
+        l.f(processData.f);
       }
     }
     else
     {
-      parama.addProgressListener(i.c);
-      parama.addTaskStatusChangeListener(o);
+      parama.addProgressListener(l.c);
+      parama.addTaskStatusChangeListener(s);
       if ((parama instanceof ad)) {
-        parama.setTaskDecisionListener(n);
+        parama.setTaskDecisionListener(q);
       }
-      if ((parama instanceof ap))
+      if ((parama instanceof ar))
       {
         i1 = parama.getTaskStatus();
         if (i1 != 1) {
@@ -179,23 +199,23 @@ public class f
     }
     for (;;)
     {
-      d.setImageDrawable(com.estrongs.android.d.f.a(String.valueOf(TypeUtils.getFileType(parama.summary().optString("title")))));
-      j = parama;
+      f.setImageDrawable(com.estrongs.android.h.f.a(String.valueOf(TypeUtils.getFileType(parama.summary().optString("title")))));
+      m = parama;
       a(parama.getTaskStatus());
       if ((parama.getTaskStatus() == 2) || (parama.getTaskStatus() == 3))
       {
-        m = ((e)ix.e.get(Long.valueOf(parama.getTaskId())));
-        if (m == null)
+        p = ((com.estrongs.android.ui.notification.f)jh.e.get(Long.valueOf(parama.getTaskId())));
+        if (p == null)
         {
           if (notificationId > 0) {
-            ((NotificationManager)b.getSystemService("notification")).cancel(notificationId);
+            ((NotificationManager)d.getSystemService("notification")).cancel(notificationId);
           }
-          m = new h(this, (Activity)b, b.getString(2131427359), parama);
-          ix.e.put(Long.valueOf(parama.getTaskId()), m);
+          p = new h(this, (Activity)d, d.getString(2131230847), parama);
+          jh.e.put(Long.valueOf(parama.getTaskId()), p);
         }
       }
       return;
-      i.c();
+      l.c();
       break;
       label325:
       if (i1 == 3) {
@@ -206,42 +226,46 @@ public class f
   
   public void a(boolean paramBoolean)
   {
-    f.setChecked(paramBoolean);
+    i.setChecked(paramBoolean);
     if (paramBoolean)
     {
-      c.setBackgroundDrawable(al.a(b).a(2130837806));
+      e.setBackgroundDrawable(at.a(d).a(2130838143));
       return;
     }
-    c.setBackgroundDrawable(null);
+    e.setBackgroundDrawable(null);
   }
   
   public View b()
   {
-    return c;
+    return e;
   }
   
   public void b(boolean paramBoolean)
   {
-    if (paramBoolean)
+    r = paramBoolean;
+    if (r)
     {
-      f.setVisibility(0);
+      i.setVisibility(0);
+      b.setVisibility(8);
+      a.setVisibility(4);
       return;
     }
-    f.setVisibility(4);
+    i.setVisibility(4);
+    b.setVisibility(0);
   }
   
   public void c()
   {
-    i.f();
+    l.f();
     a(false);
     b(false);
-    synchronized (l)
+    synchronized (o)
     {
-      if (j != null)
+      if (m != null)
       {
-        j.removeProgressListener(i.c);
-        j.removeTaskStatusChangeListener(o);
-        j = null;
+        m.removeProgressListener(l.c);
+        m.removeTaskStatusChangeListener(s);
+        m = null;
       }
       return;
     }

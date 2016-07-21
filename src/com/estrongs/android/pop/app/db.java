@@ -2,6 +2,7 @@ package com.estrongs.android.pop.app;
 
 import android.view.View;
 import android.view.View.OnClickListener;
+import com.estrongs.android.util.m;
 
 class db
   implements View.OnClickListener
@@ -10,7 +11,9 @@ class db
   
   public void onClick(View paramView)
   {
-    ImageCommentActivity.b(a);
+    if ((ImageCommentActivity.a(a) == null) || (!ImageCommentActivity.a(a).isAlive())) {
+      ImageCommentActivity.a(a, true);
+    }
   }
 }
 

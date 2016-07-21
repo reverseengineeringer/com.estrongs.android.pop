@@ -2,11 +2,12 @@ package com.estrongs.android.ui.view;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.widget.f;
 
 class g
   implements DialogInterface.OnClickListener
 {
-  g(c paramc, com.estrongs.android.widget.g paramg) {}
+  g(c paramc, f paramf) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {

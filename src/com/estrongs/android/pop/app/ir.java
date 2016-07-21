@@ -1,25 +1,33 @@
 package com.estrongs.android.pop.app;
 
-import android.media.MediaPlayer;
-import android.media.MediaPlayer.OnPreparedListener;
-import android.view.View;
-import android.widget.MediaController;
+import com.estrongs.android.util.bg;
+import com.estrongs.fs.h;
+import com.estrongs.fs.i;
+import com.estrongs.fs.w;
 
 class ir
-  implements MediaPlayer.OnPreparedListener
+  implements i
 {
-  ir(PopVideoPlayer paramPopVideoPlayer) {}
+  ir(iq paramiq, boolean paramBoolean) {}
   
-  public void onPrepared(MediaPlayer paramMediaPlayer)
+  public boolean a(h paramh)
   {
-    a.b.setVisibility(8);
-    PopVideoPlayer.d(a, true);
-    try
-    {
-      PopVideoPlayer.e(a).setEnabled(true);
-      return;
+    boolean bool = true;
+    if (paramh.getFileType().a()) {
+      if ((!paramh.getName().startsWith(".")) || (a)) {}
     }
-    catch (Exception paramMediaPlayer) {}
+    do
+    {
+      return false;
+      return true;
+      paramh = paramh.getName();
+    } while (paramh == null);
+    if ((bg.j(paramh)) && (paramh.contains("ESSettings"))) {}
+    for (;;)
+    {
+      return bool;
+      bool = false;
+    }
   }
 }
 

@@ -1,24 +1,24 @@
 package com.estrongs.android.ui.view;
 
 import android.os.Handler;
-import com.estrongs.android.pop.app.a.ag;
-import com.estrongs.android.pop.app.a.ai;
+import com.estrongs.android.pop.app.c.e;
+import com.estrongs.android.pop.app.c.g;
 
 class ad
-  extends ag
+  extends e
 {
   ad(ac paramac) {}
   
-  protected boolean a(ai paramai)
+  protected boolean a(g paramg)
   {
-    return (b != null) && (b.a(paramai));
+    return (b != null) && (b.a(paramg));
   }
   
-  protected boolean b(ai paramai)
+  protected boolean b(g paramg)
   {
-    if (a(paramai))
+    if (a(paramg))
     {
-      ac.a(b).post(new ae(this, paramai));
+      ac.a(b).post(new ae(this, paramg));
       return true;
     }
     return false;

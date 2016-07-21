@@ -1,19 +1,42 @@
 package com.estrongs.android.view;
 
-import com.estrongs.android.pop.app.compress.be;
-import com.estrongs.io.archive.h;
+import android.os.Handler;
+import android.os.Message;
+import com.estrongs.android.pop.app.compress.bs;
+import com.estrongs.android.ui.view.ak;
+import java.io.File;
+import java.util.Map;
 
 class j
-  implements Runnable
+  extends Handler
 {
-  j(e parame, h paramh) {}
+  j(g paramg) {}
   
-  public void run()
+  public void handleMessage(Message paramMessage)
   {
-    be localbe = new be(b.ad, false, true);
-    localbe.setButton(-1, b.l(2131427339), new k(this, localbe));
-    localbe.setButton(-2, b.l(2131427340), new l(this, localbe));
-    localbe.show();
+    try
+    {
+      if (1 == what)
+      {
+        if (g.a(a) != null) {
+          g.a(a).dismiss();
+        }
+        g.c(a).put(g.b(a), new File(obj.toString()));
+        g.a(a, obj.toString());
+        return;
+      }
+      if (2 == what)
+      {
+        ak.a(a.ag, obj.toString(), 0);
+        a.J();
+        return;
+      }
+      if (what == 0) {
+        a.g();
+      }
+      return;
+    }
+    catch (NullPointerException paramMessage) {}
   }
 }
 

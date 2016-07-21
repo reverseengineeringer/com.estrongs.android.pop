@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/compress/ai;
+.field final synthetic a:I
+
+.field final synthetic b:Lcom/estrongs/android/pop/app/compress/aj;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/compress/ai;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/compress/aj;I)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/compress/aq;->a:Lcom/estrongs/android/pop/app/compress/ai;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/compress/aq;->b:Lcom/estrongs/android/pop/app/compress/aj;
+
+    iput p2, p0, Lcom/estrongs/android/pop/app/compress/aq;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,66 +26,56 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 4
+.method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 2
 
-    new-instance v0, Lcom/estrongs/android/ui/dialog/ct;
+    if-eqz p2, :cond_0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/compress/aq;->a:Lcom/estrongs/android/pop/app/compress/ai;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/aq;->b:Lcom/estrongs/android/pop/app/compress/aj;
 
-    invoke-static {v1}, Lcom/estrongs/android/pop/app/compress/ai;->d(Lcom/estrongs/android/pop/app/compress/ai;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/aj;->l(Lcom/estrongs/android/pop/app/compress/aj;)Landroid/widget/EditText;
+
+    move-result-object v0
+
+    const/16 v1, 0x90
+
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setInputType(I)V
+
+    :goto_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/aq;->b:Lcom/estrongs/android/pop/app/compress/aj;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/aj;->l(Lcom/estrongs/android/pop/app/compress/aj;)Landroid/widget/EditText;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/compress/aq;->b:Lcom/estrongs/android/pop/app/compress/aj;
+
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/compress/aj;->l(Lcom/estrongs/android/pop/app/compress/aj;)Landroid/widget/EditText;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;-><init>(Landroid/content/Context;)V
-
-    const v1, 0x7f0b017f
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->a(I)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/compress/aq;->a:Lcom/estrongs/android/pop/app/compress/ai;
-
-    invoke-static {v1}, Lcom/estrongs/android/pop/app/compress/ai;->m(Lcom/estrongs/android/pop/app/compress/ai;)[Ljava/lang/String;
+    invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/compress/aq;->a:Lcom/estrongs/android/pop/app/compress/ai;
+    invoke-interface {v1}, Landroid/text/Editable;->length()I
 
-    invoke-static {v2}, Lcom/estrongs/android/pop/app/compress/ai;->n(Lcom/estrongs/android/pop/app/compress/ai;)I
+    move-result v1
 
-    move-result v2
-
-    new-instance v3, Lcom/estrongs/android/pop/app/compress/at;
-
-    invoke-direct {v3, p0}, Lcom/estrongs/android/pop/app/compress/at;-><init>(Lcom/estrongs/android/pop/app/compress/aq;)V
-
-    invoke-virtual {v0, v1, v2, v3}, Lcom/estrongs/android/ui/dialog/ct;->a([Ljava/lang/CharSequence;ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    const v1, 0x7f0b000b
-
-    new-instance v2, Lcom/estrongs/android/pop/app/compress/as;
-
-    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/compress/as;-><init>(Lcom/estrongs/android/pop/app/compress/aq;)V
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    const v1, 0x7f0b000c
-
-    new-instance v2, Lcom/estrongs/android/pop/app/compress/ar;
-
-    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/compress/ar;-><init>(Lcom/estrongs/android/pop/app/compress/aq;)V
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ct;->c()Lcom/estrongs/android/ui/dialog/cg;
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setSelection(I)V
 
     return-void
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/aq;->b:Lcom/estrongs/android/pop/app/compress/aj;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/aj;->l(Lcom/estrongs/android/pop/app/compress/aj;)Landroid/widget/EditText;
+
+    move-result-object v0
+
+    iget v1, p0, Lcom/estrongs/android/pop/app/compress/aq;->a:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setInputType(I)V
+
+    goto :goto_0
 .end method

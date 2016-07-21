@@ -1,8 +1,19 @@
 package com.estrongs.android.ui.e;
 
-public abstract interface ja
+import com.estrongs.android.pop.app.PopAudioPlayer;
+import com.estrongs.android.pop.utils.ck;
+import com.estrongs.fs.h;
+import java.util.List;
+
+class ja
+  implements ck
 {
-  public abstract void a();
+  ja(iz paramiz, List paramList) {}
+  
+  public void a(List<h> paramList)
+  {
+    iq.a(b.a).c(a);
+  }
 }
 
 /* Location:

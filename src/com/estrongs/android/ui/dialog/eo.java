@@ -1,58 +1,22 @@
 package com.estrongs.android.ui.dialog;
 
-import android.app.Activity;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.LinearLayout.LayoutParams;
-import com.estrongs.android.ui.d.a;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.View.OnKeyListener;
 
-public class eo
-  extends cg
+class eo
+  implements View.OnKeyListener
 {
-  ek a = null;
-  Button b;
-  boolean c = false;
+  eo(en paramen) {}
   
-  public eo(Activity paramActivity, String paramString1, String paramString2)
+  public boolean onKey(View paramView, int paramInt, KeyEvent paramKeyEvent)
   {
-    super(paramActivity);
-    a = new ek(paramActivity, this, paramString2);
-    setTitle(paramString1);
-    paramString1 = new LinearLayout(mContext);
-    paramString1.setFocusable(false);
-    int i = a.a(mContext, 20.0F);
-    paramString1.setPadding(i, i / 2, i, i / 2);
-    paramString1.addView(a.b(), new LinearLayout.LayoutParams(-1, -2));
-    setContentView(paramString1);
-    b = setConfirmButton(paramActivity.getText(2131427339), new ep(this));
-    setCancelButton(paramActivity.getText(2131427340), new eq(this));
-    requestInputMethod();
-  }
-  
-  public void a(er paramer)
-  {
-    a.a(paramer);
-  }
-  
-  public void a(boolean paramBoolean)
-  {
-    c = paramBoolean;
-  }
-  
-  public void b(boolean paramBoolean)
-  {
-    a.a(paramBoolean);
-  }
-  
-  public void c(boolean paramBoolean)
-  {
-    a.b(paramBoolean);
-  }
-  
-  public void show()
-  {
-    a.c();
-    super.show();
+    if ((paramKeyEvent.getAction() == 0) && (paramKeyEvent.getKeyCode() == 66))
+    {
+      a.a();
+      return true;
+    }
+    return false;
   }
 }
 

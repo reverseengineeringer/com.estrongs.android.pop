@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/ui/pcs/n;
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/e/al;
+.field final synthetic a:Lcom/estrongs/android/ui/e/m;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/al;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/m;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/am;->a:Lcom/estrongs/android/ui/e/al;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/am;->a:Lcom/estrongs/android/ui/e/m;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,58 +22,41 @@
 
 
 # virtual methods
-.method public a(ZLjava/lang/String;Ljava/lang/String;)V
-    .locals 4
+.method public onMenuItemClick(Landroid/view/MenuItem;)Z
+    .locals 3
 
-    if-eqz p1, :cond_1
+    const-string v0, "http://wappass.baidu.com/passport/?getpass"
 
-    invoke-static {p3}, Lcom/estrongs/android/util/bd;->b(Ljava/lang/CharSequence;)Z
+    new-instance v1, Landroid/content/Intent;
 
-    move-result v0
+    const-string v2, "android.intent.action.VIEW"
 
-    if-eqz v0, :cond_1
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/am;->a:Lcom/estrongs/android/ui/e/al;
-
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/al;->a:Lcom/estrongs/android/ui/e/w;
-
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/w;->k:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->y()Lcom/estrongs/android/view/aw;
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v1, v0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    const/4 v1, 0x1
+    :try_start_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/am;->a:Lcom/estrongs/android/ui/e/m;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/aw;->b(Z)V
-
-    :cond_0
-    invoke-static {}, Lcom/estrongs/fs/impl/pcs/b;->a()Lcom/estrongs/fs/impl/pcs/b;
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/m;->a(Lcom/estrongs/android/ui/e/m;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
-    sget-object v1, Lcom/estrongs/fs/m;->Q:Lcom/estrongs/fs/m;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->startActivity(Landroid/content/Intent;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/fs/impl/pcs/b;->setFileType(Lcom/estrongs/fs/m;)V
+    :goto_0
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/am;->a:Lcom/estrongs/android/ui/e/al;
+    return v0
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/al;->a:Lcom/estrongs/android/ui/e/w;
+    :catch_0
+    move-exception v0
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/w;->b:Landroid/content/Context;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
-
-    move-result-object v0
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/pop/ad;->e(J)V
-
-    :cond_1
-    return-void
+    goto :goto_0
 .end method

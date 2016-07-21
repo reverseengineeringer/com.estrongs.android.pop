@@ -25,7 +25,7 @@ public class d
       throw new UsbFsException("unsupported partition type", UsbFsException.ERROR_CODE.USB_ERROR_TYPE_NOT_SUPPORTE);
     }
     a = c.a(localByteBuffer);
-    c = i.a(parama, a.f() * a.a());
+    c = i.a(parama, a.g() * a.a());
     b = new b(parama, a, c);
     d = e.a(parama, b, a);
     d.f(paramString);
@@ -47,14 +47,19 @@ public class d
     String str2 = d.n();
     String str1 = str2;
     if (str2 == null) {
-      str1 = a.l();
+      str1 = a.m();
     }
     return str1;
   }
   
   public long c()
   {
-    return c.a() * a.i();
+    return c.a() * a.j();
+  }
+  
+  public long d()
+  {
+    return a.d() * a.a();
   }
 }
 

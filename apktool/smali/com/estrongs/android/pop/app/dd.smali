@@ -31,7 +31,7 @@
 
     iget-object v2, p0, Lcom/estrongs/android/pop/app/dd;->a:Lcom/estrongs/android/pop/app/ImageCommentActivity;
 
-    invoke-static {v2}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->d(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Lcom/estrongs/android/util/TypedMap;
+    invoke-static {v2}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->c(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Lcom/estrongs/android/util/TypedMap;
 
     move-result-object v2
 
@@ -55,7 +55,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/dd;->a:Lcom/estrongs/android/pop/app/ImageCommentActivity;
 
-    invoke-static {v1}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->c(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->b(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -87,7 +87,7 @@
 
     iget-object v2, p0, Lcom/estrongs/android/pop/app/dd;->a:Lcom/estrongs/android/pop/app/ImageCommentActivity;
 
-    invoke-static {v2}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->d(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Lcom/estrongs/android/util/TypedMap;
+    invoke-static {v2}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->c(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Lcom/estrongs/android/util/TypedMap;
 
     move-result-object v2
 

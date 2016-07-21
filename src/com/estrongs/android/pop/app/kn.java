@@ -1,56 +1,20 @@
 package com.estrongs.android.pop.app;
 
-import android.content.Context;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.Gallery.LayoutParams;
-import android.widget.ImageView;
-import android.widget.ImageView.ScaleType;
-import com.estrongs.android.pop.ah;
-import com.estrongs.android.pop.esclasses.ESImageView;
-import com.estrongs.android.pop.view.utils.n;
-import com.estrongs.android.pop.view.utils.v;
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnCompletionListener;
+import com.estrongs.android.pop.view.a;
 
-public class kn
-  extends BaseAdapter
+class kn
+  implements MediaPlayer.OnCompletionListener
 {
-  private Context b;
+  kn(PopVideoPlayer paramPopVideoPlayer) {}
   
-  public kn(RecommItemDetailAcitivity paramRecommItemDetailAcitivity, Context paramContext)
+  public void onCompletion(MediaPlayer paramMediaPlayer)
   {
-    b = paramContext;
-    paramRecommItemDetailAcitivity.obtainStyledAttributes(ah.b);
-  }
-  
-  public int getCount()
-  {
-    return aa).l.length;
-  }
-  
-  public Object getItem(int paramInt)
-  {
-    return Integer.valueOf(paramInt);
-  }
-  
-  public long getItemId(int paramInt)
-  {
-    return paramInt;
-  }
-  
-  public View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
-  {
-    paramView = new ESImageView(b);
-    paramViewGroup = n.b().e(RecommItemDetailAcitivity.a(a), paramInt);
-    if (paramViewGroup == null) {
-      paramView.setImageResource(2130837998);
-    }
-    for (;;)
+    if (!a.a.equals("Spreadtrum_cmcc"))
     {
-      paramView.setScaleType(ImageView.ScaleType.FIT_CENTER);
-      paramView.setLayoutParams(new Gallery.LayoutParams(150, 274));
-      return paramView;
-      paramView.setImageBitmap(paramViewGroup);
+      PopVideoPlayer.m(a);
+      a.finish();
     }
   }
 }

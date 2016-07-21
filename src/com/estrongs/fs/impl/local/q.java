@@ -1,23 +1,29 @@
 package com.estrongs.fs.impl.local;
 
-public class q
+import android.net.LocalSocket;
+
+class q
 {
-  public int a = -1;
-  public int b = -1;
-  public int c = -1;
-  private String d = "";
-  private boolean e = false;
+  private String a = "";
+  private LocalSocket b = null;
+  private boolean c = false;
+  private boolean d = false;
+  private int e = 0;
+  private byte[] f = null;
+  private int g = 0;
+  private int h = -1;
+  private long i = 0L;
+  private int j = 0;
+  private long k = -1L;
   
-  private q(String paramString)
+  q(String paramString)
   {
-    d = paramString;
+    a = paramString;
   }
   
-  private void a(int paramInt1, int paramInt2, int paramInt3)
+  void a(int paramInt)
   {
-    a = paramInt1;
-    b = paramInt2;
-    c = paramInt3;
+    h = paramInt;
     try
     {
       notify();
@@ -26,9 +32,20 @@ public class q
     finally {}
   }
   
-  private void a(boolean paramBoolean)
+  void a(long paramLong)
   {
-    e = paramBoolean;
+    k = paramLong;
+    try
+    {
+      notify();
+      return;
+    }
+    finally {}
+  }
+  
+  void a(boolean paramBoolean)
+  {
+    d = paramBoolean;
     try
     {
       notify();

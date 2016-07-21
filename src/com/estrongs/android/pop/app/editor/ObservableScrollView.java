@@ -45,11 +45,6 @@ public class ObservableScrollView
     }
   }
   
-  public void a(f paramf)
-  {
-    a = paramf;
-  }
-  
   public boolean onInterceptTouchEvent(MotionEvent paramMotionEvent)
   {
     try
@@ -78,6 +73,11 @@ public class ObservableScrollView
     }
     catch (IllegalArgumentException paramMotionEvent) {}
     return false;
+  }
+  
+  public void setScrollViewListener(f paramf)
+  {
+    a = paramf;
   }
 }
 

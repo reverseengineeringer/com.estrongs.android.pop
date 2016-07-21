@@ -1,65 +1,27 @@
 package com.baidu.mobstat;
 
 import android.content.Context;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import org.json.JSONException;
-import org.json.JSONObject;
+import android.text.TextUtils;
 
-public class l
+class l
 {
-  public static JSONObject a(Context paramContext, String paramString)
+  static l a = new l();
+  
+  public void a(Context paramContext)
   {
-    StringBuffer localStringBuffer;
     try
     {
-      paramContext = paramContext.openFileInput(paramString);
-      if (paramContext == null)
-      {
-        n.c("Invalid jsonobject file " + paramString);
-        return null;
+      paramContext = cu.k(paramContext);
+      if (!TextUtils.isEmpty(paramContext)) {
+        x.a.a(System.currentTimeMillis(), paramContext);
       }
-      localStringBuffer = new StringBuffer();
-      byte[] arrayOfByte = new byte['က'];
-      for (;;)
-      {
-        i = paramContext.read(arrayOfByte);
-        if (i == -1) {
-          break;
-        }
-        localStringBuffer.append(new String(arrayOfByte, 0, i));
-      }
-      paramContext.close();
+      return;
     }
-    catch (Exception paramContext)
+    finally
     {
-      paramContext.printStackTrace();
-      return null;
+      paramContext = finally;
+      throw paramContext;
     }
-    int i = localStringBuffer.length();
-    if (i != 0) {
-      try
-      {
-        paramContext = new JSONObject(localStringBuffer.toString());
-        return paramContext;
-      }
-      catch (JSONException paramContext)
-      {
-        paramContext.printStackTrace();
-        return null;
-      }
-    }
-    n.a(paramString + " is empty! return null!");
-    return null;
-  }
-  
-  public static void a(Context paramContext, String paramString, JSONObject paramJSONObject)
-  {
-    n.a("File is: " + paramString + "; Content is: " + paramJSONObject.toString());
-    paramContext = paramContext.openFileOutput(paramString, 0);
-    paramContext.write(paramJSONObject.toString().getBytes());
-    paramContext.flush();
-    paramContext.close();
   }
 }
 

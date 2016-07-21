@@ -1,55 +1,63 @@
 package com.estrongs.android.ui.e;
 
-import android.view.LayoutInflater;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import android.view.View;
-import android.widget.CheckBox;
-import android.widget.TextView;
-import com.estrongs.a.a;
-import com.estrongs.android.pop.esclasses.g;
+import com.estrongs.android.pop.ad;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.android.ui.dialog.ct;
-import com.estrongs.fs.h;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.fs.impl.b.d;
 import java.util.Iterator;
 import java.util.List;
 
 class fx
   implements MenuItem.OnMenuItemClickListener
 {
-  fx(cp paramcp) {}
+  fx(cr paramcr) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = cp.b(a);
-    int j = paramMenuItem.size();
-    Object localObject1 = paramMenuItem.iterator();
-    int i = 0;
-    Object localObject2;
-    if (((Iterator)localObject1).hasNext())
-    {
-      localObject2 = cp.a((h)((Iterator)localObject1).next());
-      if ((localObject2 == null) || (((a)localObject2).getTaskStatus() != 2)) {
-        break label225;
-      }
-      i += 1;
+    paramMenuItem = cr.a(a);
+    if (paramMenuItem.size() == 0) {
+      ak.a(cr.b(a).getBaseContext(), 2131231551, 0);
     }
-    label225:
     for (;;)
     {
-      break;
-      localObject2 = cp.a(a).getString(2131428240, new Object[] { Integer.valueOf(j), Integer.valueOf(i) });
-      localObject1 = g.a(cp.a(a)).inflate(2130903256, null);
-      ((TextView)((View)localObject1).findViewById(2131361822)).setText((CharSequence)localObject2);
-      localObject2 = (CheckBox)((View)localObject1).findViewById(2131362742);
-      ct localct = new ct(cp.a(a));
-      localct.a(2131428242);
-      localct.a((View)localObject1);
-      localct.b(2131427339, new fy(this, paramMenuItem, (CheckBox)localObject2));
-      localct.c(2131427340, new fz(this));
-      localct.b().show();
-      return false;
+      cr.b(a).B();
+      return true;
+      if (paramMenuItem.size() >= 1)
+      {
+        if ((paramMenuItem.get(0) instanceof d))
+        {
+          PackageManager localPackageManager = cr.b(a).getPackageManager();
+          Iterator localIterator = paramMenuItem.iterator();
+          for (;;)
+          {
+            if (!localIterator.hasNext()) {
+              break label167;
+            }
+            ApplicationInfo localApplicationInfo = ((d)localIterator.next()).h();
+            paramMenuItem = "";
+            try
+            {
+              String str = localPackageManager.getApplicationLabel(localPackageManager.getApplicationInfo(packageName, 0)).toString();
+              paramMenuItem = str;
+            }
+            catch (PackageManager.NameNotFoundException localNameNotFoundException)
+            {
+              for (;;)
+              {
+                localNameNotFoundException.printStackTrace();
+              }
+            }
+            ad.a(cr.b(a), packageName, paramMenuItem);
+          }
+        }
+        label167:
+        ak.a(cr.b(a).getBaseContext(), 2131232336, 0);
+      }
     }
   }
 }

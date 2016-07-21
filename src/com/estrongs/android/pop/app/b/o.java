@@ -1,23 +1,23 @@
 package com.estrongs.android.pop.app.b;
 
-public class o
+import java.util.Comparator;
+
+class o
+  implements Comparator<b>
 {
-  public String a;
-  public String b;
-  public int c;
-  public int d;
-  public f e;
-  private int f = 0;
-  private int g = 0;
-  private int h = 0;
+  o(k paramk) {}
   
-  public o(String paramString1, String paramString2, f paramf, int paramInt1, int paramInt2)
+  public int a(b paramb1, b paramb2)
   {
-    a = paramString2;
-    b = paramString2;
-    d = paramInt2;
-    c = paramInt1;
-    e = paramf;
+    long l = b;
+    l = b - l;
+    if (l == 0L) {
+      return 0;
+    }
+    if (l < 0L) {
+      return -1;
+    }
+    return 1;
   }
 }
 

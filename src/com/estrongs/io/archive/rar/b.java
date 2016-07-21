@@ -1,13 +1,13 @@
 package com.estrongs.io.archive.rar;
 
 import com.estrongs.io.a.d;
-import com.estrongs.io.archive.g;
+import com.estrongs.io.archive.h;
 import java.io.File;
 
 class b
   extends e
 {
-  b(a parama, d paramd, com.estrongs.io.a.b paramb, g paramg)
+  b(a parama, d paramd, com.estrongs.io.a.b paramb, h paramh)
   {
     super(paramd);
   }

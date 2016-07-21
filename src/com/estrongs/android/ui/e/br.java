@@ -1,29 +1,56 @@
 package com.estrongs.android.ui.e;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.b;
+import com.estrongs.android.pop.ad;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.pop.z;
-import com.estrongs.android.widget.ae;
+import com.estrongs.android.ui.pcs.q;
+import com.estrongs.android.ui.pcs.u;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bk;
+import com.estrongs.android.view.cr;
+import com.estrongs.fs.w;
 
 class br
-  implements MenuItem.OnMenuItemClickListener
+  implements q
 {
-  br(w paramw) {}
+  br(m paramm) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void a(boolean paramBoolean, String paramString1, String paramString2)
   {
-    int i = -1;
-    if (z.n) {
-      i = -2;
+    if ((paramBoolean) && (bk.b(paramString2)))
+    {
+      paramString1 = com.estrongs.fs.impl.pcs.b.a().getPath();
+      paramString2 = m.a(a).O();
+      if (paramString2 != null)
+      {
+        if (!ap.e(paramString1, paramString2.c())) {
+          break label188;
+        }
+        if ((ap.aJ(paramString1)) && (bk.b(u.a().f())) && (!u.a().f().equals(u.a().e()))) {
+          m.a(a, u.a().h());
+        }
+        paramString2.b(true);
+      }
     }
-    paramMenuItem = b.b();
-    paramMenuItem = new ae(FileExplorerActivity.J(), paramMenuItem, null, i);
-    paramMenuItem.a(new bs(this, paramMenuItem), null, null);
-    paramMenuItem.b(true);
-    paramMenuItem.j();
-    return true;
+    for (;;)
+    {
+      com.estrongs.fs.a.b.a().b(ap.k(), null);
+      if ((bk.b(u.a().f())) && (!u.a().f().equals(u.a().e()))) {
+        com.estrongs.fs.a.b.a().b(u.a().h(), null);
+      }
+      m.a(a).T();
+      com.estrongs.fs.impl.pcs.b.a().setFileType(w.P);
+      ad.a(m.a(a)).e(System.currentTimeMillis());
+      return;
+      label188:
+      if ((bk.b(u.a().f())) && (!u.a().f().equals(u.a().e()))) {
+        m.a(a, u.a().h());
+      }
+      if (ap.aJ(paramString2.c())) {
+        paramString2.j(paramString1);
+      } else {
+        paramString2.j("pcs://");
+      }
+    }
   }
 }
 

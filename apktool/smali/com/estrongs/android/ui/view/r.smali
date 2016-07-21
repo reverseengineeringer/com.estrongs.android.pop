@@ -28,7 +28,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/fs/impl/j/b;->n(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/fs/impl/o/b;->n(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -38,6 +38,12 @@
 
 .field private o:I
 
+.field private p:I
+
+.field private q:Z
+
+.field private r:Z
+
 
 # direct methods
 .method static constructor <clinit>()V
@@ -53,25 +59,33 @@
 .end method
 
 .method public constructor <init>(II)V
-    .locals 2
+    .locals 3
 
-    const/16 v1, 0xe8
+    const/4 v2, 0x1
+
+    const/4 v1, 0x0
+
+    const/16 v0, 0xe8
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x1
+    iput-boolean v2, p0, Lcom/estrongs/android/view/a/a;->n:Z
 
-    iput-boolean v0, p0, Lcom/estrongs/android/view/a/a;->n:Z
-
-    invoke-static {v1, v1, v1}, Landroid/graphics/Color;->rgb(III)I
+    invoke-static {v0, v0, v0}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v0
 
     iput v0, p0, Lcom/estrongs/android/view/a/a;->o:I
 
+    iput v1, p0, Lcom/estrongs/android/view/a/a;->p:I
+
     sget-object v0, Lcom/estrongs/android/view/a/a;->b:Lcom/estrongs/android/view/a/c;
 
     iput-object v0, p0, Lcom/estrongs/android/view/a/a;->a:Lcom/estrongs/android/view/a/c;
+
+    iput-boolean v2, p0, Lcom/estrongs/android/view/a/a;->q:Z
+
+    iput-boolean v1, p0, Lcom/estrongs/android/view/a/a;->r:Z
 
     iput p1, p0, Lcom/estrongs/android/view/a/a;->d:I
 
@@ -81,25 +95,33 @@
 .end method
 
 .method public constructor <init>(ILjava/lang/String;)V
-    .locals 2
+    .locals 3
 
-    const/16 v1, 0xe8
+    const/4 v2, 0x1
+
+    const/4 v1, 0x0
+
+    const/16 v0, 0xe8
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x1
+    iput-boolean v2, p0, Lcom/estrongs/android/view/a/a;->n:Z
 
-    iput-boolean v0, p0, Lcom/estrongs/android/view/a/a;->n:Z
-
-    invoke-static {v1, v1, v1}, Landroid/graphics/Color;->rgb(III)I
+    invoke-static {v0, v0, v0}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v0
 
     iput v0, p0, Lcom/estrongs/android/view/a/a;->o:I
 
+    iput v1, p0, Lcom/estrongs/android/view/a/a;->p:I
+
     sget-object v0, Lcom/estrongs/android/view/a/a;->b:Lcom/estrongs/android/view/a/c;
 
     iput-object v0, p0, Lcom/estrongs/android/view/a/a;->a:Lcom/estrongs/android/view/a/c;
+
+    iput-boolean v2, p0, Lcom/estrongs/android/view/a/a;->q:Z
+
+    iput-boolean v1, p0, Lcom/estrongs/android/view/a/a;->r:Z
 
     iput p1, p0, Lcom/estrongs/android/view/a/a;->d:I
 
@@ -109,25 +131,33 @@
 .end method
 
 .method public constructor <init>(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V
-    .locals 2
+    .locals 3
 
-    const/16 v1, 0xe8
+    const/4 v2, 0x1
+
+    const/4 v1, 0x0
+
+    const/16 v0, 0xe8
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x1
+    iput-boolean v2, p0, Lcom/estrongs/android/view/a/a;->n:Z
 
-    iput-boolean v0, p0, Lcom/estrongs/android/view/a/a;->n:Z
-
-    invoke-static {v1, v1, v1}, Landroid/graphics/Color;->rgb(III)I
+    invoke-static {v0, v0, v0}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v0
 
     iput v0, p0, Lcom/estrongs/android/view/a/a;->o:I
 
+    iput v1, p0, Lcom/estrongs/android/view/a/a;->p:I
+
     sget-object v0, Lcom/estrongs/android/view/a/a;->b:Lcom/estrongs/android/view/a/c;
 
     iput-object v0, p0, Lcom/estrongs/android/view/a/a;->a:Lcom/estrongs/android/view/a/c;
+
+    iput-boolean v2, p0, Lcom/estrongs/android/view/a/a;->q:Z
+
+    iput-boolean v1, p0, Lcom/estrongs/android/view/a/a;->r:Z
 
     iput-object p1, p0, Lcom/estrongs/android/view/a/a;->f:Landroid/graphics/drawable/Drawable;
 
@@ -208,13 +238,17 @@
     :try_start_0
     iget-object v0, p0, Lcom/estrongs/android/view/a/a;->m:Landroid/view/View;
 
-    const v1, 0x7f0a02a8
+    const v1, 0x7f0e04d6
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/Button;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setCompoundDrawablePadding(I)V
 
     iget-object v1, p0, Lcom/estrongs/android/view/a/a;->m:Landroid/view/View;
 
@@ -226,7 +260,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->as()Z
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->at()Z
 
     move-result v1
 
@@ -305,13 +339,13 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->as()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->at()Z
 
     move-result v1
 
     iget-object v0, p0, Lcom/estrongs/android/view/a/a;->m:Landroid/view/View;
 
-    const v2, 0x7f0a02a8
+    const v2, 0x7f0e04d6
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -400,7 +434,7 @@
     return-void
 .end method
 
-.method public a(Lcom/estrongs/android/ui/e/co;)Z
+.method public a(Lcom/estrongs/android/ui/e/cp;)Z
     .locals 1
 
     iget-object v0, p0, Lcom/estrongs/android/view/a/a;->l:Lcom/estrongs/android/view/a/b;
@@ -415,7 +449,7 @@
     :cond_0
     iget-object v0, p0, Lcom/estrongs/android/view/a/a;->l:Lcom/estrongs/android/view/a/b;
 
-    invoke-interface {v0, p1}, Lcom/estrongs/android/view/a/b;->a(Lcom/estrongs/android/ui/e/co;)Z
+    invoke-interface {v0, p1}, Lcom/estrongs/android/view/a/b;->a(Lcom/estrongs/android/ui/e/cp;)Z
 
     move-result v0
 
@@ -478,7 +512,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/estrongs/android/view/a/a;->m:Landroid/view/View;
 
-    const v1, 0x7f0a02a8
+    const v1, 0x7f0e04d6
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -530,7 +564,7 @@
     return-object p0
 
     :cond_1
-    const/4 v0, 0x4
+    const/16 v0, 0x8
 
     goto :goto_0
 .end method
@@ -544,14 +578,20 @@
 .end method
 
 .method public d(Z)Lcom/estrongs/android/view/a/a;
-    .locals 3
+    .locals 2
+
+    iput-boolean p1, p0, Lcom/estrongs/android/view/a/a;->q:Z
+
+    iget-object v0, p0, Lcom/estrongs/android/view/a/a;->m:Landroid/view/View;
+
+    if-eqz v0, :cond_1
 
     :try_start_0
     iget-object v0, p0, Lcom/estrongs/android/view/a/a;->m:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setEnabled(Z)V
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
     iget-object v0, p0, Lcom/estrongs/android/view/a/a;->f:Landroid/graphics/drawable/Drawable;
 
@@ -559,14 +599,14 @@
 
     iget-object v0, p0, Lcom/estrongs/android/view/a/a;->f:Landroid/graphics/drawable/Drawable;
 
-    const/4 v1, 0x0
+    const/16 v1, 0xff
 
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
     :cond_0
     iget-object v0, p0, Lcom/estrongs/android/view/a/a;->m:Landroid/view/View;
 
-    const v1, 0x7f0a02a8
+    const v1, 0x7f0e04d6
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -578,30 +618,25 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setTextColor(I)V
 
+    :cond_1
     :goto_0
     return-object p0
 
-    :cond_1
-    new-instance v0, Landroid/graphics/LightingColorFilter;
-
-    const/4 v1, 0x1
-
-    const v2, -0x777778
-
-    invoke-direct {v0, v1, v2}, Landroid/graphics/LightingColorFilter;-><init>(II)V
-
-    iget-object v1, p0, Lcom/estrongs/android/view/a/a;->f:Landroid/graphics/drawable/Drawable;
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lcom/estrongs/android/view/a/a;->f:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
-
     :cond_2
+    iget-object v0, p0, Lcom/estrongs/android/view/a/a;->f:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lcom/estrongs/android/view/a/a;->f:Landroid/graphics/drawable/Drawable;
+
+    const/16 v1, 0x78
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
+
+    :cond_3
     iget-object v0, p0, Lcom/estrongs/android/view/a/a;->m:Landroid/view/View;
 
-    const v1, 0x7f0a02a8
+    const v1, 0x7f0e04d6
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -631,6 +666,14 @@
     return-object v0
 .end method
 
+.method public d(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/estrongs/android/view/a/a;->p:I
+
+    return-void
+.end method
+
 .method public e()V
     .locals 1
 
@@ -643,6 +686,14 @@
     invoke-interface {v0, p0}, Lcom/estrongs/android/view/a/e;->a(Lcom/estrongs/android/view/a/a;)V
 
     :cond_0
+    return-void
+.end method
+
+.method public e(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/estrongs/android/view/a/a;->r:Z
+
     return-void
 .end method
 
@@ -784,10 +835,26 @@
     return-object v0
 .end method
 
+.method public h()I
+    .locals 1
+
+    iget v0, p0, Lcom/estrongs/android/view/a/a;->p:I
+
+    return v0
+.end method
+
 .method public hasSubMenu()Z
     .locals 1
 
     const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public i()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/estrongs/android/view/a/a;->r:Z
 
     return v0
 .end method
@@ -819,11 +886,7 @@
 .method public isEnabled()Z
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/view/a/a;->m:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->isEnabled()Z
-
-    move-result v0
+    iget-boolean v0, p0, Lcom/estrongs/android/view/a/a;->q:Z
 
     return v0
 .end method

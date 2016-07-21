@@ -1,21 +1,20 @@
 package com.estrongs.android.view;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.ui.pcs.j;
-import com.estrongs.fs.h;
+import com.estrongs.a.a;
+import com.estrongs.a.a.p;
 
 class cf
-  implements DialogInterface.OnClickListener
+  implements p
 {
-  cf(ce paramce, h paramh) {}
+  cf(bx parambx) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void a(a parama, int paramInt1, int paramInt2)
   {
-    j localj = new j(b.a.ad);
-    localj.a(new cg(this));
-    localj.show();
-    paramDialogInterface.dismiss();
+    if (paramInt2 == 4)
+    {
+      bx.a(a, parama);
+      bx.a(a);
+    }
   }
 }
 

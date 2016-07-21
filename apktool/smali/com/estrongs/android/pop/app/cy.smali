@@ -2,30 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/util/Comparator;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
-        "<",
-        "Lcom/gmail/yuyang226/flickr/a/a/a;",
-        ">;"
-    }
-.end annotation
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/ImageCommentActivity;
+.field final synthetic a:Lcom/estrongs/android/pop/app/HideListActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/ImageCommentActivity;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/HideListActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/cy;->a:Lcom/estrongs/android/pop/app/ImageCommentActivity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/cy;->a:Lcom/estrongs/android/pop/app/HideListActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,59 +22,108 @@
 
 
 # virtual methods
-.method public a(Lcom/gmail/yuyang226/flickr/a/a/a;Lcom/gmail/yuyang226/flickr/a/a/a;)I
-    .locals 5
+.method public onMenuItemClick(Landroid/view/MenuItem;)Z
+    .locals 8
 
-    invoke-virtual {p1}, Lcom/gmail/yuyang226/flickr/a/a/a;->b()Ljava/util/Date;
+    const/4 v7, 0x1
+
+    const/4 v6, 0x0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/cy;->a:Lcom/estrongs/android/pop/app/HideListActivity;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/HideListActivity;->b(Lcom/estrongs/android/pop/app/HideListActivity;)[Lcom/estrongs/android/pop/utils/aj;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/util/Date;->getTime()J
+    if-eqz v0, :cond_0
 
-    move-result-wide v0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/cy;->a:Lcom/estrongs/android/pop/app/HideListActivity;
 
-    invoke-virtual {p2}, Lcom/gmail/yuyang226/flickr/a/a/a;->b()Ljava/util/Date;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/HideListActivity;->b(Lcom/estrongs/android/pop/app/HideListActivity;)[Lcom/estrongs/android/pop/utils/aj;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v2}, Ljava/util/Date;->getTime()J
+    array-length v0, v0
 
-    move-result-wide v2
+    if-lez v0, :cond_0
 
-    cmp-long v4, v0, v2
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/cy;->a:Lcom/estrongs/android/pop/app/HideListActivity;
 
-    if-nez v4, :cond_0
+    invoke-static {v0, v7}, Lcom/estrongs/android/pop/app/HideListActivity;->a(Lcom/estrongs/android/pop/app/HideListActivity;Z)Z
+
+    invoke-static {}, Lcom/estrongs/android/pop/utils/ad;->e()V
+
+    :try_start_0
+    invoke-static {}, Lcom/estrongs/android/pop/utils/ad;->b()V
 
     const/4 v0, 0x0
 
+    sput-boolean v0, Lcom/estrongs/android/pop/utils/ad;->e:Z
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/cy;->a:Lcom/estrongs/android/pop/app/HideListActivity;
+
+    invoke-static {}, Lcom/estrongs/android/pop/utils/ad;->f()[Lcom/estrongs/android/pop/utils/aj;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/pop/app/HideListActivity;->a(Lcom/estrongs/android/pop/app/HideListActivity;[Lcom/estrongs/android/pop/utils/aj;)[Lcom/estrongs/android/pop/utils/aj;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/cy;->a:Lcom/estrongs/android/pop/app/HideListActivity;
+
+    new-instance v1, Lcom/estrongs/android/pop/app/cz;
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/cy;->a:Lcom/estrongs/android/pop/app/HideListActivity;
+
+    iget-object v3, p0, Lcom/estrongs/android/pop/app/cy;->a:Lcom/estrongs/android/pop/app/HideListActivity;
+
+    const v4, 0x7f0300de
+
+    iget-object v5, p0, Lcom/estrongs/android/pop/app/cy;->a:Lcom/estrongs/android/pop/app/HideListActivity;
+
+    invoke-static {v5}, Lcom/estrongs/android/pop/app/HideListActivity;->b(Lcom/estrongs/android/pop/app/HideListActivity;)[Lcom/estrongs/android/pop/utils/aj;
+
+    move-result-object v5
+
+    invoke-direct {v1, v2, v3, v4, v5}, Lcom/estrongs/android/pop/app/cz;-><init>(Lcom/estrongs/android/pop/app/HideListActivity;Landroid/content/Context;I[Lcom/estrongs/android/pop/utils/aj;)V
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/pop/app/HideListActivity;->a(Lcom/estrongs/android/pop/app/HideListActivity;Lcom/estrongs/android/pop/app/cz;)Lcom/estrongs/android/pop/app/cz;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/cy;->a:Lcom/estrongs/android/pop/app/HideListActivity;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/HideListActivity;->a(Lcom/estrongs/android/pop/app/HideListActivity;)Landroid/widget/ListView;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/cy;->a:Lcom/estrongs/android/pop/app/HideListActivity;
+
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/HideListActivity;->c(Lcom/estrongs/android/pop/app/HideListActivity;)Lcom/estrongs/android/pop/app/cz;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/cy;->a:Lcom/estrongs/android/pop/app/HideListActivity;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/HideListActivity;->c(Lcom/estrongs/android/pop/app/HideListActivity;)Lcom/estrongs/android/pop/app/cz;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/cz;->notifyDataSetChanged()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
     :goto_0
-    return v0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/cy;->a:Lcom/estrongs/android/pop/app/HideListActivity;
+
+    const v1, 0x7f080349
+
+    invoke-static {v0, v1, v7}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     :cond_0
-    cmp-long v0, v0, v2
+    return v6
 
-    if-lez v0, :cond_1
-
-    const/4 v0, -0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x1
+    :catch_0
+    move-exception v0
 
     goto :goto_0
-.end method
-
-.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 1
-
-    check-cast p1, Lcom/gmail/yuyang226/flickr/a/a/a;
-
-    check-cast p2, Lcom/gmail/yuyang226/flickr/a/a/a;
-
-    invoke-virtual {p0, p1, p2}, Lcom/estrongs/android/pop/app/cy;->a(Lcom/gmail/yuyang226/flickr/a/a/a;Lcom/gmail/yuyang226/flickr/a/a/a;)I
-
-    move-result v0
-
-    return v0
 .end method

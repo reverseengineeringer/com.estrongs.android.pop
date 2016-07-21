@@ -3,13 +3,13 @@ package com.estrongs.android.ui.notification;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import com.estrongs.android.pop.app.aa;
-import com.estrongs.android.pop.app.ad;
+import com.estrongs.android.pop.app.ag;
+import com.estrongs.android.pop.app.ah;
 
 public class ChromeCastPlayerNotificationHelper$ChromeCastEventReceiver
   extends BroadcastReceiver
 {
-  aa a = aa.g();
+  ag a = ag.g();
   
   public void onReceive(Context paramContext, Intent paramIntent)
   {

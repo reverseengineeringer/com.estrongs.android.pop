@@ -1,8 +1,5 @@
 .class Lcom/estrongs/android/ui/f/b;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Landroid/widget/FrameLayout;
 
 
 # instance fields
@@ -10,50 +7,42 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/f/a;)V
+.method constructor <init>(Lcom/estrongs/android/ui/f/a;Landroid/content/Context;)V
     .locals 0
 
     iput-object p1, p0, Lcom/estrongs/android/ui/f/b;->a:Lcom/estrongs/android/ui/f/a;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 1
+.method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
+    .locals 2
 
-    invoke-static {}, Lcom/estrongs/android/util/be;->c()Lcom/estrongs/android/util/be;
+    invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
-    move-result-object v0
+    move-result v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/util/be;->f()V
+    const/4 v1, 0x4
 
-    invoke-static {}, Lcom/estrongs/android/util/be;->c()Lcom/estrongs/android/util/be;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/util/be;->g()V
-
-    invoke-static {}, Lcom/estrongs/android/util/be;->c()Lcom/estrongs/android/util/be;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/util/be;->d()V
+    if-ne v0, v1, :cond_0
 
     iget-object v0, p0, Lcom/estrongs/android/ui/f/b;->a:Lcom/estrongs/android/ui/f/a;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/f/a;->a(Lcom/estrongs/android/ui/f/a;)Lcom/estrongs/android/ui/a/cx;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/f/a;->b()V
 
-    move-result-object v0
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/a/cx;->notifyDataSetChanged()V
+    :goto_0
+    return v0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/f/b;->a:Lcom/estrongs/android/ui/f/a;
+    :cond_0
+    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/f/a;->g()V
+    move-result v0
 
-    return-void
+    goto :goto_0
 .end method

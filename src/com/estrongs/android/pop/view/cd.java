@@ -1,27 +1,17 @@
 package com.estrongs.android.pop.view;
 
-import android.view.View;
-import com.estrongs.android.ui.addressbar.f;
-import com.estrongs.android.ui.view.ag;
+import com.estrongs.fs.h;
+import com.estrongs.fs.i;
+import com.estrongs.fs.w;
 
 class cd
-  implements f
+  implements i
 {
-  cd(FileExplorerActivity paramFileExplorerActivity) {}
+  cd(FileExplorerActivity paramFileExplorerActivity, boolean paramBoolean) {}
   
-  public void a(View paramView, int paramInt1, int paramInt2)
+  public boolean a(h paramh)
   {
-    if (paramInt2 == 1)
-    {
-      ag.a(a, 2131427415, 0);
-      return;
-    }
-    if (paramInt1 == paramInt2 - 1)
-    {
-      ag.a(a, 2131427415, 0);
-      return;
-    }
-    ag.a(a, 2131428111, 0);
+    return (paramh.getFileType().a()) && ((!paramh.getName().startsWith(".")) || (a));
   }
 }
 

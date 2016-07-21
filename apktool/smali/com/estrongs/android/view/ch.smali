@@ -1,55 +1,56 @@
 .class Lcom/estrongs/android/view/ch;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.super Landroid/support/v7/widget/RecyclerView$AdapterDataObserver;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/fs/h;
-
-.field final synthetic b:Lcom/estrongs/android/view/ce;
+.field final synthetic a:Lcom/estrongs/android/view/cg;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/view/ce;Lcom/estrongs/fs/h;)V
+.method constructor <init>(Lcom/estrongs/android/view/cg;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/view/ch;->b:Lcom/estrongs/android/view/ce;
+    iput-object p1, p0, Lcom/estrongs/android/view/ch;->a:Lcom/estrongs/android/view/cg;
 
-    iput-object p2, p0, Lcom/estrongs/android/view/ch;->a:Lcom/estrongs/fs/h;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/support/v7/widget/RecyclerView$AdapterDataObserver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+.method public onChanged()V
+    .locals 1
 
-    new-instance v0, Lcom/estrongs/android/ui/pcs/o;
+    invoke-super {p0}, Landroid/support/v7/widget/RecyclerView$AdapterDataObserver;->onChanged()V
 
-    iget-object v1, p0, Lcom/estrongs/android/view/ch;->b:Lcom/estrongs/android/view/ce;
+    iget-object v0, p0, Lcom/estrongs/android/view/ch;->a:Lcom/estrongs/android/view/cg;
 
-    iget-object v1, v1, Lcom/estrongs/android/view/ce;->a:Lcom/estrongs/android/view/cd;
+    iget-object v0, v0, Lcom/estrongs/android/view/cg;->i:Lcom/estrongs/android/view/ck;
 
-    iget-object v1, v1, Lcom/estrongs/android/view/cd;->ad:Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/estrongs/android/view/ck;->getItemCount()I
 
-    invoke-direct {v0, v1}, Lcom/estrongs/android/ui/pcs/o;-><init>(Landroid/content/Context;)V
+    move-result v0
 
-    new-instance v1, Lcom/estrongs/android/view/ci;
+    if-nez v0, :cond_0
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/view/ci;-><init>(Lcom/estrongs/android/view/ch;)V
+    iget-object v0, p0, Lcom/estrongs/android/view/ch;->a:Lcom/estrongs/android/view/cg;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/pcs/o;->a(Lcom/estrongs/android/ui/pcs/n;)V
+    iget-boolean v0, v0, Lcom/estrongs/android/view/cg;->x:Z
 
-    const/4 v1, 0x1
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/pcs/o;->a(Z)V
+    iget-object v0, p0, Lcom/estrongs/android/view/ch;->a:Lcom/estrongs/android/view/cg;
 
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    invoke-virtual {v0}, Lcom/estrongs/android/view/cg;->n_()V
 
+    :goto_0
     return-void
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/view/ch;->a:Lcom/estrongs/android/view/cg;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/view/cg;->U()V
+
+    goto :goto_0
 .end method

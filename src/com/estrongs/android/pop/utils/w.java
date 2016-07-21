@@ -11,10 +11,10 @@ import android.content.pm.Signature;
 import android.net.Uri;
 import android.os.Build;
 import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.pop.view.a;
 import com.estrongs.android.pop.view.utils.v;
-import com.estrongs.android.ui.dialog.ct;
-import com.estrongs.android.ui.view.ag;
+import com.estrongs.android.ui.dialog.cv;
+import com.estrongs.android.ui.view.ak;
 import java.security.MessageDigest;
 import java.util.List;
 
@@ -64,7 +64,7 @@ public class w
       }
       catch (ActivityNotFoundException localActivityNotFoundException)
       {
-        ag.a(paramContext, 2131427839, 0);
+        ak.a(paramContext, 2131232373, 0);
         return;
       }
     }
@@ -73,31 +73,54 @@ public class w
   
   public static void a(Context paramContext, v paramv)
   {
-    String str = paramContext.getText(2131427876) + "\n\n" + g;
-    new ct(paramContext).a(2131427398).b(str).b(2131427341, new x(paramv, paramContext)).c(2131427342, null).c();
+    String str = paramContext.getText(2131231727) + "\n\n" + g;
+    new cv(paramContext).a(2131231714).b(str).b(2131231273, new x(paramv, paramContext)).c(2131231269, null).c();
+  }
+  
+  public static void a(Context paramContext, String paramString)
+  {
+    paramString = new Intent("android.intent.action.VIEW", Uri.parse(paramString));
+    try
+    {
+      paramContext.startActivity(paramString);
+      return;
+    }
+    catch (ActivityNotFoundException paramString)
+    {
+      ak.a(paramContext, 2131231690, 1);
+    }
   }
   
   public static void a(Context paramContext, String paramString1, String paramString2)
   {
-    if ("Market".equals("Web"))
+    a(paramContext, paramString1, paramString2, null, "http://www.estrongs.com/download.html", true);
+  }
+  
+  public static void a(Context paramContext, String paramString1, String paramString2, String paramString3, String paramString4, boolean paramBoolean)
+  {
+    if (a.a.equals("Web"))
     {
-      if (FileExplorerActivity.e.equals("Amazon"))
+      if (a.b.equals("Amazon"))
       {
-        f(paramContext);
+        e(paramContext);
         return;
       }
-      e(paramContext);
+      a(paramContext, paramString4);
       return;
     }
     PackageManager localPackageManager = paramContext.getPackageManager();
     Intent localIntent = new Intent("android.intent.action.VIEW");
-    localIntent.setData(Uri.parse("market://search?q=" + paramString2 + ":" + paramString1));
-    if (localPackageManager.queryIntentActivities(localIntent, 0).size() != 0)
+    if (paramString3 != null) {}
+    for (paramString3 = "&referrer=" + paramString3; !paramBoolean; paramString3 = "")
     {
+      localIntent.setData(Uri.parse("market://search?q=" + paramString2 + ":" + paramString1 + paramString3));
+      if (localPackageManager.queryIntentActivities(localIntent, 0).size() == 0) {
+        break;
+      }
       paramContext.startActivity(localIntent);
       return;
     }
-    localIntent.setData(Uri.parse("market://details?id=" + paramString1));
+    localIntent.setData(Uri.parse("market://details?id=" + paramString1 + paramString3));
     if (localPackageManager.queryIntentActivities(localIntent, 0).size() != 0)
     {
       paramContext.startActivity(localIntent);
@@ -112,7 +135,7 @@ public class w
         return;
       }
     }
-    e(paramContext);
+    a(paramContext, paramString4);
   }
   
   public static boolean a(String paramString)
@@ -127,9 +150,21 @@ public class w
     return false;
   }
   
-  public static String b(PackageManager paramPackageManager, String paramString)
+  public static ApplicationInfo b(PackageManager paramPackageManager, String paramString)
   {
-    return b(d(paramPackageManager, paramString));
+    try
+    {
+      paramPackageManager = paramPackageManager.getApplicationInfo(paramString, 8192);
+      return paramPackageManager;
+    }
+    catch (PackageManager.NameNotFoundException paramPackageManager)
+    {
+      return null;
+    }
+    catch (NullPointerException paramPackageManager)
+    {
+      for (;;) {}
+    }
   }
   
   private static String b(String paramString)
@@ -189,7 +224,7 @@ public class w
       }
       catch (ActivityNotFoundException localActivityNotFoundException)
       {
-        ag.a(paramContext, 2131427839, 0);
+        ak.a(paramContext, 2131232373, 0);
         return;
       }
     }
@@ -228,17 +263,9 @@ public class w
     }
   }
   
-  public static PackageInfo c(PackageManager paramPackageManager, String paramString)
+  public static String c(PackageManager paramPackageManager, String paramString)
   {
-    if ((paramPackageManager != null) && (paramString != null)) {
-      try
-      {
-        paramPackageManager = paramPackageManager.getPackageArchiveInfo(paramString, 1);
-        return paramPackageManager;
-      }
-      catch (Exception paramPackageManager) {}
-    }
-    return null;
+    return b(f(paramPackageManager, paramString));
   }
   
   public static boolean c(Context paramContext)
@@ -256,7 +283,57 @@ public class w
     return false;
   }
   
-  private static String d(PackageManager paramPackageManager, String paramString)
+  public static PackageInfo d(PackageManager paramPackageManager, String paramString)
+  {
+    if ((paramPackageManager != null) && (paramString != null)) {
+      try
+      {
+        paramPackageManager = paramPackageManager.getPackageArchiveInfo(paramString, 1);
+        return paramPackageManager;
+      }
+      catch (Exception paramPackageManager) {}
+    }
+    return null;
+  }
+  
+  public static void d(Context paramContext)
+  {
+    new cv(paramContext).a(2131231714).b(2131231268).b(2131231273, new z(paramContext)).c(2131231269, null).c();
+  }
+  
+  public static void e(Context paramContext)
+  {
+    Intent localIntent = new Intent("android.intent.action.VIEW", Uri.parse(b));
+    try
+    {
+      paramContext.startActivity(localIntent);
+      return;
+    }
+    catch (ActivityNotFoundException localActivityNotFoundException)
+    {
+      ak.a(paramContext, 2131231690, 1);
+    }
+  }
+  
+  public static String[] e(PackageManager paramPackageManager, String paramString)
+  {
+    Object localObject = new String[0];
+    try
+    {
+      paramPackageManager = getPackageInfo4096requestedPermissions;
+      paramString = paramPackageManager;
+      if (paramPackageManager == null)
+      {
+        localObject = paramPackageManager;
+        paramString = new String[0];
+      }
+      return paramString;
+    }
+    catch (PackageManager.NameNotFoundException paramPackageManager) {}
+    return (String[])localObject;
+  }
+  
+  private static String f(PackageManager paramPackageManager, String paramString)
   {
     int i = 0;
     try
@@ -318,39 +395,6 @@ public class w
     }
     catch (Exception paramPackageManager) {}
     return null;
-  }
-  
-  public static void d(Context paramContext)
-  {
-    new ct(paramContext).a(2131427398).b(2131427841).b(2131427341, new z(paramContext)).c(2131427342, null).c();
-  }
-  
-  public static void e(Context paramContext)
-  {
-    Intent localIntent = new Intent("android.intent.action.VIEW", Uri.parse("http://www.estrongs.com/download.html"));
-    try
-    {
-      paramContext.startActivity(localIntent);
-      return;
-    }
-    catch (ActivityNotFoundException localActivityNotFoundException)
-    {
-      ag.a(paramContext, 2131427842, 1);
-    }
-  }
-  
-  public static void f(Context paramContext)
-  {
-    Intent localIntent = new Intent("android.intent.action.VIEW", Uri.parse(b));
-    try
-    {
-      paramContext.startActivity(localIntent);
-      return;
-    }
-    catch (ActivityNotFoundException localActivityNotFoundException)
-    {
-      ag.a(paramContext, 2131427842, 1);
-    }
   }
 }
 

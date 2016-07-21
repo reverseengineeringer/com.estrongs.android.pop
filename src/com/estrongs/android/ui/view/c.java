@@ -11,10 +11,10 @@ class c
   public void onClick(View paramView)
   {
     paramView = new d(this, b.a(a), "/sdcard", null, true);
-    paramView.a(b.a(a, 2131427370));
+    paramView.a(b.a(a, 2131230720));
     paramView.a(new e(this, paramView));
-    paramView.b(b.b(a, 2131427376), new f(this, paramView));
-    paramView.c(b.c(a, 2131427340), new g(this, paramView));
+    paramView.b(b.b(a, 2131230833), new f(this, paramView));
+    paramView.c(b.c(a, 2131231265), new g(this, paramView));
     paramView.j();
   }
 }

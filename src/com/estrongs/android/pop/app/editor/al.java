@@ -1,26 +1,18 @@
 package com.estrongs.android.pop.app.editor;
 
-import android.os.AsyncTask;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class al
-  extends AsyncTask<Object, Object, Object>
+  implements DialogInterface.OnClickListener
 {
-  private al(PopNoteEditor paramPopNoteEditor) {}
+  al(ak paramak) {}
   
-  protected Object doInBackground(Object... paramVarArgs)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    try
-    {
-      PopNoteEditor.z(a);
-      return null;
-    }
-    catch (Exception paramVarArgs)
-    {
-      for (;;) {}
-    }
+    ak.a(a, ak.a(a));
+    paramDialogInterface.dismiss();
   }
-  
-  protected void onPostExecute(Object paramObject) {}
 }
 
 /* Location:

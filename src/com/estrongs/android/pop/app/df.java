@@ -12,15 +12,15 @@ class df
   
   public void run()
   {
-    ImageCommentActivity.g(b.a).clear();
-    ImageCommentActivity.g(b.a).add(ImageCommentActivity.h(b.a));
-    ImageCommentActivity.g(b.a).addAll(a);
-    if (ImageCommentActivity.i(b.a))
+    ImageCommentActivity.e(b.a).clear();
+    ImageCommentActivity.e(b.a).add(ImageCommentActivity.f(b.a));
+    ImageCommentActivity.e(b.a).addAll(a);
+    if (ImageCommentActivity.g(b.a))
     {
-      ImageCommentActivity.g(b.a).add(ImageCommentActivity.j(b.a));
-      ImageCommentActivity.j(b.a).findViewById(2131361935).setVisibility(8);
+      ImageCommentActivity.e(b.a).add(ImageCommentActivity.h(b.a));
+      ImageCommentActivity.h(b.a).findViewById(2131624429).setVisibility(8);
     }
-    ImageCommentActivity.k(b.a).notifyDataSetChanged();
+    ImageCommentActivity.i(b.a).notifyDataSetChanged();
   }
 }
 

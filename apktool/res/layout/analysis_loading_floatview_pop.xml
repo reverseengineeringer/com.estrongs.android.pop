@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@drawable/analysis_loading_floatview_pop_bg" android:padding="@dimen/dp_8" android:layout_width="fill_parent" android:layout_height="@dimen/dp_25"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/dp_10" android:textColor="@color/white" android:id="@id/loading_floatview_pop_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/analysis_loading_floatview_pop_txt" />
+</LinearLayout>

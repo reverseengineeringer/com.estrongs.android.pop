@@ -1,6 +1,6 @@
 package com.estrongs.fs.impl.usb.fs.ntfs;
 
-import android.util.Log;
+import com.estrongs.android.util.l;
 import com.estrongs.fs.impl.usb.fs.ntfs.a.h;
 
 class t
@@ -23,14 +23,14 @@ class t
       return null;
       localh = h.a(a, i);
       if (n.a(a)) {
-        Log.d(n.m(), "Attribute: " + localh);
+        l.b(n.m(), "Attribute: " + localh);
       }
       i = a.h(i + 4);
       if (i > 0) {
         break;
       }
     } while (!n.a(a));
-    Log.d(n.m(), "Non-positive offset, preventing infinite loop.  Data on disk may be corrupt.  referenceNumber = " + n.b(a));
+    l.b(n.m(), "Non-positive offset, preventing infinite loop.  Data on disk may be corrupt.  referenceNumber = " + n.b(a));
     return null;
     b += i;
     return localh;

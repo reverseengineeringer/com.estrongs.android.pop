@@ -33,18 +33,13 @@ abstract class ImageViewTouchBase
   public ImageViewTouchBase(Context paramContext)
   {
     super(paramContext);
-    a();
+    c();
   }
   
   public ImageViewTouchBase(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    a();
-  }
-  
-  private void a()
-  {
-    setScaleType(ImageView.ScaleType.MATRIX);
+    c();
   }
   
   private void a(Bitmap paramBitmap, int paramInt)
@@ -80,6 +75,11 @@ abstract class ImageViewTouchBase
     paramMatrix.postTranslate((f1 - f3 * f5) / 2.0F, (f2 - f4 * f5) / 2.0F);
   }
   
+  private void c()
+  {
+    setScaleType(ImageView.ScaleType.MATRIX);
+  }
+  
   protected float a(Matrix paramMatrix)
   {
     return a(paramMatrix, 0);
@@ -89,6 +89,11 @@ abstract class ImageViewTouchBase
   {
     paramMatrix.getValues(b);
     return b[paramInt];
+  }
+  
+  public void a()
+  {
+    a(null, true);
   }
   
   protected void a(float paramFloat)
@@ -107,16 +112,16 @@ abstract class ImageViewTouchBase
     if (paramFloat1 > k) {
       f1 = k;
     }
-    paramFloat1 = f1 / f();
+    paramFloat1 = f1 / getScale();
     g.postScale(paramFloat1, paramFloat1, paramFloat2, paramFloat3);
-    setImageMatrix(g());
+    setImageMatrix(getImageViewMatrix());
     a(true, true);
   }
   
   protected void a(float paramFloat1, float paramFloat2, float paramFloat3, float paramFloat4)
   {
-    paramFloat1 = (paramFloat1 - f()) / paramFloat4;
-    float f1 = f();
+    paramFloat1 = (paramFloat1 - getScale()) / paramFloat4;
+    float f1 = getScale();
     long l1 = System.currentTimeMillis();
     o.post(new ac(this, paramFloat4, l1, f1, paramFloat1, paramFloat2, paramFloat3));
   }
@@ -154,12 +159,12 @@ abstract class ImageViewTouchBase
       if (paramBoolean) {
         g.reset();
       }
-      setImageMatrix(g());
-      k = h();
+      setImageMatrix(getImageViewMatrix());
+      k = b();
       if (l >= 0.0F) {
         break;
       }
-      l = f();
+      l = getScale();
       return;
       f.reset();
       setImageBitmap(null);
@@ -172,7 +177,7 @@ abstract class ImageViewTouchBase
     if (h.b() == null) {
       return;
     }
-    Matrix localMatrix = g();
+    Matrix localMatrix = getImageViewMatrix();
     RectF localRectF = new RectF(0.0F, 0.0F, h.b().getWidth(), h.b().getHeight());
     localMatrix.mapRect(localRectF);
     float f1 = localRectF.height();
@@ -201,7 +206,7 @@ abstract class ImageViewTouchBase
       for (;;)
       {
         a(f2, f1);
-        setImageMatrix(g());
+        setImageMatrix(getImageViewMatrix());
         return;
         if (top > 0.0F)
         {
@@ -231,9 +236,12 @@ abstract class ImageViewTouchBase
     }
   }
   
-  public float b()
+  protected float b()
   {
-    return l;
+    if (h.b() == null) {
+      return 1.0F;
+    }
+    return Math.max(h.f() / i, h.e() / j) * 4.0F;
   }
   
   protected void b(float paramFloat1, float paramFloat2, float paramFloat3)
@@ -244,45 +252,53 @@ abstract class ImageViewTouchBase
     a(paramFloat1, f1, f2);
   }
   
-  public int c()
-  {
-    return n;
-  }
-  
   protected void c(float paramFloat1, float paramFloat2)
   {
     a(paramFloat1, paramFloat2);
-    setImageMatrix(g());
+    setImageMatrix(getImageViewMatrix());
   }
   
-  public int d()
+  public int getBitmapHeight()
   {
-    return m;
+    if (h.b() == null) {
+      return -1;
+    }
+    return h.b().getHeight();
   }
   
-  public void e()
+  public int getBitmapWidth()
   {
-    a(null, true);
+    if (h.b() == null) {
+      return -1;
+    }
+    return h.b().getWidth();
   }
   
-  protected float f()
+  public float getDefaultScale()
   {
-    return a(g);
+    return l;
   }
   
-  protected Matrix g()
+  protected Matrix getImageViewMatrix()
   {
     a.set(f);
     a.postConcat(g);
     return a;
   }
   
-  protected float h()
+  protected float getScale()
   {
-    if (h.b() == null) {
-      return 1.0F;
-    }
-    return Math.max(h.f() / i, h.e() / j) * 4.0F;
+    return a(g);
+  }
+  
+  public int getScaledHeight()
+  {
+    return n;
+  }
+  
+  public int getScaledWidth()
+  {
+    return m;
   }
   
   public boolean onKeyDown(int paramInt, KeyEvent paramKeyEvent)
@@ -300,7 +316,7 @@ abstract class ImageViewTouchBase
   
   public boolean onKeyUp(int paramInt, KeyEvent paramKeyEvent)
   {
-    if ((paramInt == 4) && (f() > 1.0F))
+    if ((paramInt == 4) && (getScale() > 1.0F))
     {
       a(1.0F);
       return true;
@@ -322,13 +338,18 @@ abstract class ImageViewTouchBase
     if (h.b() != null)
     {
       a(h, f);
-      setImageMatrix(g());
+      setImageMatrix(getImageViewMatrix());
     }
   }
   
   public void setImageBitmap(Bitmap paramBitmap)
   {
     a(paramBitmap, 0);
+  }
+  
+  public void setRecycler(ad paramad)
+  {
+    c = paramad;
   }
 }
 

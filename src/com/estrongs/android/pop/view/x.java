@@ -1,13 +1,24 @@
 package com.estrongs.android.pop.view;
 
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.widget.CheckBox;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.pop.ad;
+
 class x
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  x(FileExplorerActivity paramFileExplorerActivity) {}
+  x(FileExplorerActivity paramFileExplorerActivity, CheckBox paramCheckBox, Thread paramThread) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    a.e("bt://");
+    if (a.isChecked()) {
+      ad.a(c).o(false);
+    }
+    paramDialogInterface.dismiss();
+    FexApplication.a().a(true);
+    b.start();
   }
 }
 

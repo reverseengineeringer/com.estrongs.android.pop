@@ -1,104 +1,43 @@
 package com.estrongs.android.ui.dialog;
 
+import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Handler;
-import com.estrongs.a.a.m;
-import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.pop.app.ShowDialogActivity;
-import com.estrongs.android.ui.notification.e;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bd;
-import com.estrongs.fs.b.ab;
-import com.estrongs.fs.b.ad;
-import com.estrongs.fs.b.ag;
-import com.estrongs.fs.b.ba;
-import com.estrongs.fs.b.bm;
-import com.estrongs.fs.b.i;
-import com.estrongs.fs.b.r;
-import com.estrongs.fs.b.y;
+import android.content.DialogInterface.OnClickListener;
+import android.view.View;
+import android.widget.ExpandableListView;
+import android.widget.ExpandableListView.OnGroupClickListener;
+import com.estrongs.android.pop.ad;
+import com.estrongs.android.pop.b;
+import com.estrongs.android.pop.z;
+import com.estrongs.android.widget.f;
 
 class ja
-  implements com.estrongs.a.a.p
+  implements ExpandableListView.OnGroupClickListener
 {
-  ja(ix paramix) {}
+  ja(iy paramiy) {}
   
-  public void a(com.estrongs.a.a parama, int paramInt1, int paramInt2)
+  public boolean onGroupClick(ExpandableListView paramExpandableListView, View paramView, int paramInt, long paramLong)
   {
-    if (paramInt2 == 4)
+    if (paramInt == 0)
     {
-      ix.a(a, false);
-      if ((!(parama instanceof ad)) && (getTaskResulta != 3))
-      {
-        localObject = a.a();
-        if (!bd.a((CharSequence)localObject)) {
-          ix.a(a, (String)localObject);
-        }
-      }
-      ix.h(a);
-      a.b(parama);
-      if ((parama instanceof ad))
-      {
-        if (ix.i(a) != null) {
-          ix.i(a).a();
-        }
-        if (f)
-        {
-          parama = ((ad)parama).b();
-          localObject = new Intent(a.mContext, ShowDialogActivity.class);
-          str = a.mContext.getString(2131427723, new Object[] { "" }) + "!\n" + a.mContext.getString(2131428108) + am.bL(parama);
-          ((Intent)localObject).setData(Uri.parse(parama));
-          ((Intent)localObject).putExtra("title", a.mContext.getString(2131427359));
-          ((Intent)localObject).putExtra("message", str);
-          ((Intent)localObject).putExtra("openfileOrFolder", true);
-          ((Intent)localObject).putExtra("pathIsDir", false);
-          a.mContext.startActivity((Intent)localObject);
-        }
+      paramExpandableListView = new jb(this, ad.a(iy.a(a)).q());
+      if (!z.n) {
+        break label140;
       }
     }
-    while (paramInt2 != 5)
+    label140:
+    for (paramInt = -2;; paramInt = -1)
     {
-      do
-      {
-        return;
-      } while ((ix.i(a) == null) || (((!(ix.a(a) instanceof r)) || (((r)ix.a(a)).d())) && (((!(ix.a(a) instanceof ab)) && (!(ix.a(a) instanceof bm)) && (!(ix.a(a) instanceof ba)) && (!(ix.a(a) instanceof i)) && (!(ix.a(a) instanceof com.estrongs.fs.b.p)) && (!(ix.a(a) instanceof ag)) && (!(ix.a(a) instanceof y)) && (!(ix.a(a) instanceof com.estrongs.fs.b.a))) || (!FexApplication.a().b()))));
-      ix.i(a).a();
-      return;
+      paramExpandableListView = new f((Activity)iy.a(a), b.b(), paramExpandableListView, paramInt);
+      paramExpandableListView.a(false);
+      paramExpandableListView.b(true);
+      paramExpandableListView.c(iy.a(a).getString(2131231265), (DialogInterface.OnClickListener)null);
+      paramExpandableListView.a(paramInt);
+      paramExpandableListView.a(iy.a(a).getString(2131231887));
+      paramExpandableListView.b(iy.a(a).getString(2131231270), new jc(this, paramExpandableListView));
+      paramExpandableListView.j();
+      return false;
     }
-    ix.k(a).post(new jb(this, parama));
-    if ((!(parama instanceof r)) && (!(parama instanceof ab)) && (!(parama instanceof bm)) && (!(parama instanceof com.estrongs.fs.b.p)) && (!(parama instanceof ad)) && (!(parama instanceof ag)) && (!(parama instanceof y))) {
-      ix.a(a, false);
-    }
-    com.estrongs.a.p localp = parama.getTaskResult();
-    String str = a.a(localp);
-    Object localObject = str;
-    if (a != 1)
-    {
-      if (a != 15) {
-        break label692;
-      }
-      ix.k(a).post(new jc(this));
-      localObject = str;
-    }
-    while (!bd.a((CharSequence)localObject)) {
-      if ((a != 16) && (ix.l(a)) && (aa).processData != null) && ((aa).processData.d > 0L) || (aa).processData.f > 0L) || ((ix.a(a) instanceof r))))
-      {
-        ix.k(a).post(new je(this, parama, (String)localObject));
-        return;
-        label692:
-        a.c(parama);
-        localObject = str;
-        if (str == null) {
-          localObject = a.getString(2131428117);
-        }
-      }
-      else
-      {
-        ix.a(a, (String)localObject);
-      }
-    }
-    ix.h(a);
   }
 }
 

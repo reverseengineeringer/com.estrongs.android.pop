@@ -1,27 +1,8 @@
 package com.estrongs.fs.impl.o;
 
-import java.util.List;
-
-class e
-  implements Runnable
+public abstract interface e
 {
-  e(a parama, String paramString1, String paramString2) {}
-  
-  public void run()
-  {
-    synchronized (a.b(c))
-    {
-      List localList = c.g();
-      int i = localList.indexOf(a);
-      if (i >= 0)
-      {
-        localList.remove(i);
-        localList.add(i, b);
-        c.c(localList);
-      }
-      return;
-    }
-  }
+  public abstract void a(String paramString1, int paramInt, String paramString2);
 }
 
 /* Location:

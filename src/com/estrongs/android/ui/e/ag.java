@@ -1,45 +1,29 @@
 package com.estrongs.android.ui.e;
 
+import android.os.Build;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 import com.estrongs.android.pop.ad;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.pop.view.utils.ac;
-import com.estrongs.android.ui.dialog.gu;
-import com.estrongs.android.ui.dialog.gx;
-import com.estrongs.android.util.am;
-import com.estrongs.android.view.aw;
-import com.estrongs.fs.util.a.a;
+import com.estrongs.android.ui.dialog.dl;
 
 class ag
-  implements gx
+  implements MenuItem.OnMenuItemClickListener
 {
-  ag(ae paramae) {}
+  ag(m paramm) {}
   
-  public void a(int paramInt)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    aw localaw = a.a.k.y();
-    a locala;
-    if (localaw != null)
-    {
-      ac.a(a.a.b, localaw.c(), paramInt % 4, paramInt / 4);
-      if ((!am.Y(localaw.c())) || (am.af(localaw.c()))) {
-        break label111;
-      }
-      locala = a.a.k.m.A(localaw.c());
-      if (!ac.c(localaw.c())) {
-        break label135;
-      }
-      localaw.a(locala);
+    m.a(a).o();
+    String str = ad.a(m.a(a)).ad();
+    paramMenuItem = str;
+    if (str == null) {
+      paramMenuItem = m.a(a).getString(2131231917, new Object[] { Build.MODEL });
     }
-    for (;;)
-    {
-      w.i(a.a).dismiss();
-      return;
-      label111:
-      locala = a.a.k.m.z(localaw.c());
-      break;
-      label135:
-      localaw.b(locala);
-    }
+    paramMenuItem = new dl(m.a(a), m.a(a).getString(2131231918), paramMenuItem, false);
+    paramMenuItem.a(new ah(this));
+    paramMenuItem.a();
+    return true;
   }
 }
 

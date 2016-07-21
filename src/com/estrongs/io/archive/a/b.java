@@ -1,13 +1,13 @@
 package com.estrongs.io.archive.a;
 
-import com.estrongs.fs.impl.local.h;
-import com.estrongs.io.archive.e;
+import com.estrongs.fs.impl.local.i;
+import com.estrongs.io.archive.f;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.util.zip.GZIPOutputStream;
 
 public class b
-  implements e
+  implements f
 {
   GZIPOutputStream a;
   File b;
@@ -15,7 +15,7 @@ public class b
   public b(String paramString)
   {
     b = new File(paramString);
-    a = new GZIPOutputStream(new BufferedOutputStream(h.f(paramString)));
+    a = new GZIPOutputStream(new BufferedOutputStream(i.f(paramString)));
   }
   
   public void a() {}

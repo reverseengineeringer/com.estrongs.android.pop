@@ -1,35 +1,25 @@
 package com.estrongs.android.ui.theme;
 
-import android.util.Log;
-import com.estrongs.android.util.ab;
-import java.io.File;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.ui.adapter.dr;
 
 class p
-  implements ab
+  implements MenuItem.OnMenuItemClickListener
 {
-  p(ThemeActivity paramThemeActivity, String paramString) {}
+  p(ThemeActivity paramThemeActivity) {}
   
-  public void a(Object paramObject) {}
-  
-  public void a(Object paramObject, long paramLong1, long paramLong2) {}
-  
-  public void a(Object paramObject, Throwable paramThrowable)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    Log.e("Alert", "request theme info failed !");
-  }
-  
-  public void b(Object paramObject)
-  {
-    paramObject = new File(a + ".tmp");
-    if ((((File)paramObject).exists()) && (((File)paramObject).length() > 0L))
+    int i = ThemeActivity.c(a).a();
+    al localal = ThemeActivity.c(a).b(i);
+    if (a.getPackageName().equals(c))
     {
-      File localFile = new File(a);
-      localFile.delete();
-      ((File)paramObject).renameTo(localFile);
-      ThemeActivity.h(b);
-      return;
+      paramMenuItem.setEnabled(false);
+      return false;
     }
-    ((File)paramObject).delete();
+    localal.d(a);
+    return false;
   }
 }
 

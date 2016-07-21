@@ -1,12 +1,20 @@
 package android.support.v4.view;
 
-import android.view.View;
+import android.view.MenuItem;
 
 class bb
+  implements bh
 {
-  public static int a(View paramView)
+  bb(ba paramba, bd parambd) {}
+  
+  public boolean a(MenuItem paramMenuItem)
   {
-    return paramView.getOverScrollMode();
+    return a.a(paramMenuItem);
+  }
+  
+  public boolean b(MenuItem paramMenuItem)
+  {
+    return a.b(paramMenuItem);
   }
 }
 

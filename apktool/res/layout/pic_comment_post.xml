@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout android:orientation="vertical" android:paddingTop="3.0dip" android:paddingBottom="3.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:gravity="center_vertical" android:id="@id/title_bar" android:background="@drawable/toolbar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/dp_43">
-        <ImageButton android:id="@id/btn_return" android:background="@drawable/background_globle_buttons" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="@dimen/dp_62" android:layout_height="fill_parent" android:layout_marginRight="8.0dip" android:src="@drawable/toolbar_return" />
-        <TextView android:textSize="@dimen/dp_20" android:textColor="@color/main_addressbar_text" android:ellipsize="end" android:gravity="center" android:id="@id/title" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:text="@string/post_comment_title" android:singleLine="true" android:layout_weight="1.0" />
-        <View android:layout_width="@dimen/dp_62" android:layout_height="fill_parent" />
-    </LinearLayout>
     <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/editor_panel" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/dp_0" android:layout_weight="1.0">
         <EditText android:textColor="@color/black" android:gravity="top" android:id="@id/message" android:background="@drawable/popupbox_input_bg" android:layout_width="fill_parent" android:layout_height="@dimen/dp_0" android:hint="@string/post_comment_hint" android:layout_weight="1.0" android:inputType="textMultiLine" />
         <LinearLayout android:gravity="center" android:id="@id/tool_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">

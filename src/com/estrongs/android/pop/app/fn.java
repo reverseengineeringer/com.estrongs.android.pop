@@ -1,29 +1,20 @@
 package com.estrongs.android.pop.app;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.ui.e.ka;
+import java.util.List;
 
 class fn
-  extends BroadcastReceiver
+  implements MenuItem.OnMenuItemClickListener
 {
-  fn(PopAudioPlayer paramPopAudioPlayer) {}
+  fn(PopAudioPlayer paramPopAudioPlayer, List paramList) {}
   
-  public void onReceive(Context paramContext, Intent paramIntent)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    try
-    {
-      if ((!"Market".equalsIgnoreCase("Market")) && (a.a()))
-      {
-        if ((a.b != -1) && (a.a != -1) && (PopAudioPlayer.a(a) != null)) {
-          PopAudioPlayer.b(a, a.b, a.a);
-        }
-        a.b = -1;
-        a.a = -1;
-      }
-      return;
-    }
-    catch (Exception paramContext) {}
+    PopAudioPlayer.a(b, new fo(this, b, PopAudioPlayer.n(b)));
+    PopAudioPlayer.o(b).a(a);
+    return true;
   }
 }
 

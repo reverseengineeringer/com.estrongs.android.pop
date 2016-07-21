@@ -1,13 +1,10 @@
 package com.estrongs.android.widget;
 
-import android.content.Context;
-
-public class bw
+public abstract interface bw
 {
-  protected int b = 0;
-  protected ah c = new bx(this);
+  public abstract void a(int paramInt);
   
-  public bw(Context paramContext) {}
+  public abstract void a(int paramInt, float paramFloat);
 }
 
 /* Location:

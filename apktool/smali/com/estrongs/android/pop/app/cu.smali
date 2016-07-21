@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/HideListActivity;
+.field final synthetic a:Lcom/estrongs/android/pop/app/GestureManageActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/HideListActivity;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/GestureManageActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/cu;->a:Lcom/estrongs/android/pop/app/HideListActivity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/cu;->a:Lcom/estrongs/android/pop/app/GestureManageActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,87 +22,20 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 5
+.method public onMenuItemClick(Landroid/view/MenuItem;)Z
+    .locals 2
 
-    const/4 v4, -0x1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/cu;->a:Lcom/estrongs/android/pop/app/GestureManageActivity;
 
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    const/4 v1, -0x1
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/GestureManageActivity;->setResult(I)V
 
-    check-cast v0, Ljava/lang/Integer;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/cu;->a:Lcom/estrongs/android/pop/app/GestureManageActivity;
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/GestureManageActivity;->finish()V
 
-    move-result v0
+    const/4 v0, 0x0
 
-    if-ne v0, v4, :cond_0
-
-    :goto_0
-    return-void
-
-    :cond_0
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/cu;->a:Lcom/estrongs/android/pop/app/HideListActivity;
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/cu;->a:Lcom/estrongs/android/pop/app/HideListActivity;
-
-    invoke-static {v2}, Lcom/estrongs/android/pop/app/HideListActivity;->b(Lcom/estrongs/android/pop/app/HideListActivity;)[Lcom/estrongs/android/pop/utils/af;
-
-    move-result-object v2
-
-    aget-object v0, v2, v0
-
-    invoke-static {v1, v0}, Lcom/estrongs/android/pop/app/HideListActivity;->a(Lcom/estrongs/android/pop/app/HideListActivity;Lcom/estrongs/android/pop/utils/af;)Lcom/estrongs/android/pop/utils/af;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/cu;->a:Lcom/estrongs/android/pop/app/HideListActivity;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/HideListActivity;->d(Lcom/estrongs/android/pop/app/HideListActivity;)Lcom/estrongs/android/pop/utils/af;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/utils/af;->b:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/utils/aa;->d(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    new-instance v1, Landroid/content/Intent;
-
-    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
-
-    new-instance v2, Landroid/os/Bundle;
-
-    invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
-
-    const-string v3, "path"
-
-    invoke-virtual {v2, v3, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v0, "isDir"
-
-    iget-object v3, p0, Lcom/estrongs/android/pop/app/cu;->a:Lcom/estrongs/android/pop/app/HideListActivity;
-
-    invoke-static {v3}, Lcom/estrongs/android/pop/app/HideListActivity;->d(Lcom/estrongs/android/pop/app/HideListActivity;)Lcom/estrongs/android/pop/utils/af;
-
-    move-result-object v3
-
-    iget-boolean v3, v3, Lcom/estrongs/android/pop/utils/af;->a:Z
-
-    invoke-virtual {v2, v0, v3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
-
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/cu;->a:Lcom/estrongs/android/pop/app/HideListActivity;
-
-    invoke-virtual {v0, v4, v1}, Lcom/estrongs/android/pop/app/HideListActivity;->setResult(ILandroid/content/Intent;)V
-
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/cu;->a:Lcom/estrongs/android/pop/app/HideListActivity;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/HideListActivity;->finish()V
-
-    goto :goto_0
+    return v0
 .end method

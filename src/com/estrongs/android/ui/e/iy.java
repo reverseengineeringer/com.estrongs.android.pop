@@ -1,16 +1,27 @@
 package com.estrongs.android.ui.e;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import com.estrongs.android.pop.app.PopAudioPlayer;
+import com.estrongs.android.pop.app.c.m;
+import com.estrongs.android.ui.dialog.eu;
+import com.estrongs.android.ui.view.ak;
+import java.util.List;
 
 class iy
-  implements View.OnClickListener
+  implements eu
 {
-  iy(iw paramiw) {}
+  iy(ix paramix, List paramList) {}
   
-  public void onClick(View paramView)
+  public boolean a(String paramString)
   {
-    a.d();
+    paramString = m.a().a(paramString);
+    if (paramString == null) {
+      ak.a(iq.a(b.b.a), 2131231424, 0);
+    }
+    for (;;)
+    {
+      return true;
+      iq.a(b.b.a).a(a, paramString);
+    }
   }
 }
 

@@ -5,8 +5,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.estrongs.android.e.h;
-import com.estrongs.android.e.j;
+import com.estrongs.android.l.k;
+import com.estrongs.android.l.m;
 
 class f
   extends BaseAdapter
@@ -37,33 +37,33 @@ class f
     if (localObject[1] != null)
     {
       c.setText(localObject[1]);
-      if (!a.getString(2131427469).equals(localObject[1])) {
+      if (!a.getString(2131232169).equals(localObject[1])) {
         break label126;
       }
-      a.setBackgroundResource(2130837637);
+      a.setBackgroundResource(2130837883);
     }
     for (;;)
     {
       localObject = EsNetworkActivity.b(a).b(paramInt);
-      if (((j)localObject).e() != 1) {
+      if (((m)localObject).e() != 1) {
         break;
       }
-      a.setBackgroundResource(2130837632);
+      a.setBackgroundResource(2130837878);
       return paramView;
       label126:
-      a.setBackgroundResource(2130837636);
+      a.setBackgroundResource(2130837882);
     }
-    if (((j)localObject).e() == 2)
+    if (((m)localObject).e() == 2)
     {
-      a.setBackgroundResource(2130837633);
+      a.setBackgroundResource(2130837879);
       return paramView;
     }
-    if (((j)localObject).e() == 3)
+    if (((m)localObject).e() == 3)
     {
-      a.setBackgroundResource(2130837634);
+      a.setBackgroundResource(2130837880);
       return paramView;
     }
-    a.setBackgroundResource(2130837631);
+    a.setBackgroundResource(2130837877);
     return paramView;
   }
 }

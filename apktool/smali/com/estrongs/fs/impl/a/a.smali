@@ -1,22 +1,51 @@
-.class public Lcom/estrongs/fs/impl/a/a;
-.super Lcom/estrongs/fs/impl/d/d;
+.class Lcom/estrongs/fs/impl/a/a;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/io/FileFilter;
+
+
+# instance fields
+.field a:Ljava/util/regex/Pattern;
 
 
 # direct methods
-.method public constructor <init>(Lcom/estrongs/fs/h;)V
-    .locals 0
+.method constructor <init>()V
+    .locals 2
 
-    invoke-direct {p0, p1}, Lcom/estrongs/fs/impl/d/d;-><init>(Lcom/estrongs/fs/h;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-string v0, ".+\\.apk$"
+
+    const/4 v1, 0x2
+
+    invoke-static {v0, v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/fs/impl/a/a;->a:Ljava/util/regex/Pattern;
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected a()Ljava/lang/String;
-    .locals 1
+.method public accept(Ljava/io/File;)Z
+    .locals 2
 
-    const-string v0, "apk://"
+    iget-object v0, p0, Lcom/estrongs/fs/impl/a/a;->a:Ljava/util/regex/Pattern;
 
-    return-object v0
+    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
+
+    move-result v0
+
+    return v0
 .end method

@@ -31,7 +31,7 @@ public class ColorPickerView
   public ColorPickerView(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    b();
+    a();
   }
   
   public ColorPickerView(Context paramContext, a parama, int paramInt)
@@ -39,7 +39,7 @@ public class ColorPickerView
     super(paramContext);
     e = parama;
     c.setColor(paramInt);
-    b();
+    a();
   }
   
   private int a(int paramInt1, int paramInt2, float paramFloat)
@@ -63,7 +63,7 @@ public class ColorPickerView
     return Color.argb(a(Color.alpha(m), Color.alpha(n), paramFloat), a(Color.red(m), Color.red(n), paramFloat), a(Color.green(m), Color.green(n), paramFloat), a(Color.blue(m), Color.blue(n), paramFloat));
   }
   
-  private void b()
+  private void a()
   {
     SweepGradient localSweepGradient = new SweepGradient(0.0F, 0.0F, d, null);
     b = new Paint(1);
@@ -73,24 +73,9 @@ public class ColorPickerView
     c.setStrokeWidth(5.0F);
   }
   
-  public int a()
+  public int getCurrentColor()
   {
     return f;
-  }
-  
-  public void a(int paramInt)
-  {
-    c.setColor(paramInt);
-    f = paramInt;
-    if (e != null) {
-      e.a(paramInt);
-    }
-    invalidate();
-  }
-  
-  public void a(a parama)
-  {
-    e = parama;
   }
   
   protected void onDraw(Canvas paramCanvas)
@@ -180,6 +165,26 @@ public class ColorPickerView
     h = false;
     invalidate();
     return true;
+  }
+  
+  public void setColor(int paramInt)
+  {
+    c.setColor(paramInt);
+    f = paramInt;
+    if (e != null) {
+      e.a(paramInt);
+    }
+    invalidate();
+  }
+  
+  public void setOnColorChangeListener(a parama)
+  {
+    e = parama;
+  }
+  
+  public void setScale(float paramFloat)
+  {
+    a = paramFloat;
   }
 }
 

@@ -1,64 +1,88 @@
-.class public Lcom/estrongs/android/pop/app/b/n;
-.super Ljava/lang/Thread;
+.class Lcom/estrongs/android/pop/app/b/n;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/util/Comparator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Lcom/estrongs/fs/h;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field public a:Ljava/lang/Runnable;
-
-.field final synthetic b:Lcom/estrongs/android/pop/app/b/m;
+.field final synthetic a:Lcom/estrongs/android/pop/app/b/k;
 
 
 # direct methods
-.method public constructor <init>(Lcom/estrongs/android/pop/app/b/m;Ljava/lang/Runnable;)V
-    .locals 1
+.method constructor <init>(Lcom/estrongs/android/pop/app/b/k;)V
+    .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/b/n;->b:Lcom/estrongs/android/pop/app/b/m;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/b/n;->a:Lcom/estrongs/android/pop/app/b/k;
 
-    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
-
-    invoke-static {p1}, Lcom/estrongs/android/pop/app/b/m;->a(Lcom/estrongs/android/pop/app/b/m;)Ljava/util/concurrent/atomic/AtomicInteger;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
-
-    iput-object p2, p0, Lcom/estrongs/android/pop/app/b/n;->a:Ljava/lang/Runnable;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 1
+.method public a(Lcom/estrongs/fs/h;Lcom/estrongs/fs/h;)I
+    .locals 6
 
-    :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/b/n;->a:Ljava/lang/Runnable;
+    const-wide/16 v4, 0x0
 
-    if-eqz v0, :cond_0
+    check-cast p2, Lcom/estrongs/fs/impl/r/b;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/b/n;->a:Ljava/lang/Runnable;
+    iget-wide v0, p2, Lcom/estrongs/fs/impl/r/b;->timeForLog:J
 
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    check-cast p1, Lcom/estrongs/fs/impl/r/b;
+
+    iget-wide v2, p1, Lcom/estrongs/fs/impl/r/b;->timeForLog:J
+
+    sub-long/2addr v0, v2
+
+    cmp-long v2, v0, v4
+
+    if-nez v2, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
 
     :cond_0
-    :goto_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/b/n;->b:Lcom/estrongs/android/pop/app/b/m;
+    cmp-long v0, v0, v4
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/b/m;->a(Lcom/estrongs/android/pop/app/b/m;)Ljava/util/concurrent/atomic/AtomicInteger;
+    if-gez v0, :cond_1
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+    const/4 v0, -0x1
 
     goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x1
+
+    goto :goto_0
+.end method
+
+.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 1
+
+    check-cast p1, Lcom/estrongs/fs/h;
+
+    check-cast p2, Lcom/estrongs/fs/h;
+
+    invoke-virtual {p0, p1, p2}, Lcom/estrongs/android/pop/app/b/n;->a(Lcom/estrongs/fs/h;Lcom/estrongs/fs/h;)I
+
+    move-result v0
+
+    return v0
 .end method

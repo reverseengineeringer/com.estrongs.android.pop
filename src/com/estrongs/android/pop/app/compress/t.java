@@ -1,6 +1,6 @@
 package com.estrongs.android.pop.app.compress;
 
-import com.estrongs.android.ui.dialog.cg;
+import com.estrongs.android.ui.dialog.ci;
 
 class t
   implements Runnable

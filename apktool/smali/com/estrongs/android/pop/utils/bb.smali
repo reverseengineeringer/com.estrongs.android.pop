@@ -2,26 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Lcom/estrongs/android/ui/pcs/q;
 
 
 # instance fields
 .field final synthetic a:Landroid/app/Activity;
 
-.field final synthetic b:Lcom/estrongs/android/ui/pcs/n;
-
-.field final synthetic c:[Ljava/lang/Boolean;
+.field final synthetic b:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Landroid/app/Activity;Lcom/estrongs/android/ui/pcs/n;[Ljava/lang/Boolean;)V
+.method constructor <init>(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 0
 
     iput-object p1, p0, Lcom/estrongs/android/pop/utils/bb;->a:Landroid/app/Activity;
 
-    iput-object p2, p0, Lcom/estrongs/android/pop/utils/bb;->b:Lcom/estrongs/android/ui/pcs/n;
-
-    iput-object p3, p0, Lcom/estrongs/android/pop/utils/bb;->c:[Ljava/lang/Boolean;
+    iput-object p2, p0, Lcom/estrongs/android/pop/utils/bb;->b:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -30,32 +26,23 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 3
+.method public a(ZLjava/lang/String;Ljava/lang/String;)V
+    .locals 2
 
-    const/4 v2, 0x0
+    if-eqz p1, :cond_0
 
-    new-instance v0, Lcom/estrongs/android/ui/pcs/a;
+    invoke-static {p3}, Lcom/estrongs/android/util/bk;->b(Ljava/lang/CharSequence;)Z
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/utils/bb;->a:Landroid/app/Activity;
+    move-result v0
 
-    invoke-direct {v0, v1}, Lcom/estrongs/android/ui/pcs/a;-><init>(Landroid/content/Context;)V
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/a;->a()V
+    iget-object v0, p0, Lcom/estrongs/android/pop/utils/bb;->a:Landroid/app/Activity;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/utils/bb;->b:Lcom/estrongs/android/ui/pcs/n;
+    iget-object v1, p0, Lcom/estrongs/android/pop/utils/bb;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/pcs/a;->a(Lcom/estrongs/android/ui/pcs/n;)V
+    invoke-static {v0, v1}, Lcom/estrongs/android/pop/utils/ao;->b(Landroid/app/Activity;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/utils/bb;->c:[Ljava/lang/Boolean;
-
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    aput-object v1, v0, v2
-
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
-
+    :cond_0
     return-void
 .end method

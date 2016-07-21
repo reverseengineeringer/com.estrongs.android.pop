@@ -1,19 +1,16 @@
 package com.estrongs.android.ui.preference.fragments;
 
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
-import com.estrongs.android.pop.FexApplication;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class aa
-  implements Preference.OnPreferenceChangeListener
+  implements DialogInterface.OnClickListener
 {
-  aa(DisplayPreferenceFragment paramDisplayPreferenceFragment) {}
+  aa(DirectoryPreferenceFragment paramDirectoryPreferenceFragment) {}
   
-  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    paramPreference = paramPreference.getKey();
-    FexApplication.a().a(paramPreference, paramObject);
-    return true;
+    paramDialogInterface.dismiss();
   }
 }
 

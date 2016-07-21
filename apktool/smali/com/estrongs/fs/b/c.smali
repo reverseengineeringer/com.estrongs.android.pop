@@ -27,21 +27,21 @@
 
     iget-object v0, p0, Lcom/estrongs/fs/b/c;->a:Lcom/estrongs/fs/b/a;
 
-    invoke-static {v0}, Lcom/estrongs/fs/b/a;->c(Lcom/estrongs/fs/b/a;)Lcom/estrongs/android/ui/dialog/cg;
+    invoke-static {v0}, Lcom/estrongs/fs/b/a;->c(Lcom/estrongs/fs/b/a;)Lcom/estrongs/android/ui/dialog/ci;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v1
 
-    const v2, 0x7f0b0084
+    const v2, 0x7f0805ad
 
     invoke-virtual {v1, v2}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cg;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ci;->setTitle(Ljava/lang/CharSequence;)V
 
     return-void
 .end method

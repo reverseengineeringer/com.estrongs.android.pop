@@ -1,18 +1,16 @@
 package com.estrongs.android.ui.e;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.pop.app.PopAudioPlayer;
+import com.estrongs.android.ui.view.ak;
 
 class iu
-  implements MenuItem.OnMenuItemClickListener
+  implements Runnable
 {
-  iu(is paramis, FileExplorerActivity paramFileExplorerActivity) {}
+  iu(is paramis) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void run()
   {
-    a.a(a.z(), true);
-    return true;
+    ak.a(a.a, a.a.getText(2131232459), 0);
   }
 }
 

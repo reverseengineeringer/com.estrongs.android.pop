@@ -1,23 +1,8 @@
 package com.estrongs.android.ui.dialog;
 
-import android.view.KeyEvent;
-import android.view.View;
-import android.view.View.OnKeyListener;
-
-class dh
-  implements View.OnKeyListener
+public abstract interface dh
 {
-  dh(dg paramdg) {}
-  
-  public boolean onKey(View paramView, int paramInt, KeyEvent paramKeyEvent)
-  {
-    if ((paramKeyEvent.getAction() == 0) && (paramKeyEvent.getKeyCode() == 66))
-    {
-      a.a();
-      return true;
-    }
-    return false;
-  }
+  public abstract void a(int paramInt);
 }
 
 /* Location:

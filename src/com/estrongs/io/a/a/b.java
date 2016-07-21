@@ -1,22 +1,24 @@
 package com.estrongs.io.a.a;
 
 import android.os.Bundle;
+import com.estrongs.io.a.d;
+import com.estrongs.io.archive.e;
 
 public class b
-  implements com.estrongs.io.a.d
+  implements d
 {
   int c = 0;
   Bundle d = new Bundle();
-  protected com.estrongs.io.archive.d e;
+  protected e e;
   boolean f = false;
   boolean g = false;
   boolean h = false;
   Object i = new Object();
   int j = 0;
   
-  public b(com.estrongs.io.archive.d paramd)
+  public b(e parame)
   {
-    e = paramd;
+    e = parame;
   }
   
   public void a(long paramLong)

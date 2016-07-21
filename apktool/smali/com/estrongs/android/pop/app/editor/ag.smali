@@ -1,72 +1,34 @@
-.class Lcom/estrongs/android/pop/app/editor/ag;
+.class public Lcom/estrongs/android/pop/app/editor/ag;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
+.field a:I
+
+.field b:J
+
+.field final synthetic c:Lcom/estrongs/android/pop/app/editor/af;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;)V
-    .locals 0
+.method public constructor <init>(Lcom/estrongs/android/pop/app/editor/af;IJ)V
+    .locals 3
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/editor/ag;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/editor/ag;->c:Lcom/estrongs/android/pop/app/editor/af;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 2
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-eq v0, v1, :cond_0
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/editor/ag;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/editor/PopNoteEditor;->b(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;)Lcom/estrongs/android/pop/app/editor/ObservableScrollView;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/editor/ObservableScrollView;->a()V
-
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/editor/ag;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/editor/PopNoteEditor;->p(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;)Lcom/estrongs/android/pop/esclasses/ESScrollMenuView;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/esclasses/ESScrollMenuView;->getVisibility()I
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/editor/ag;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/editor/PopNoteEditor;->q(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;)V
-
-    :cond_2
     const/4 v0, 0x0
 
-    return v0
+    iput v0, p0, Lcom/estrongs/android/pop/app/editor/ag;->a:I
+
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lcom/estrongs/android/pop/app/editor/ag;->b:J
+
+    iput p2, p0, Lcom/estrongs/android/pop/app/editor/ag;->a:I
+
+    iput-wide p3, p0, Lcom/estrongs/android/pop/app/editor/ag;->b:J
+
+    return-void
 .end method

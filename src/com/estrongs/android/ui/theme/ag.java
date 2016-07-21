@@ -1,16 +1,17 @@
 package com.estrongs.android.ui.theme;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class ag
-  implements View.OnClickListener
+  implements DialogInterface.OnClickListener
 {
-  ag(af paramaf, int paramInt) {}
+  ag(ThemeFolderActivity paramThemeFolderActivity) {}
   
-  public void onClick(View paramView)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    b.c(a);
+    paramDialogInterface.dismiss();
+    a.finish();
   }
 }
 

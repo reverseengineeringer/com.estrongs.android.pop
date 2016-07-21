@@ -34,9 +34,9 @@
 .method public run()V
     .locals 14
 
-    const v13, 0x7f0b017d
+    const v13, 0x7f080102
 
-    const v12, 0x7f0b017c
+    const v12, 0x7f080101
 
     const/4 v11, 0x1
 
@@ -115,7 +115,7 @@
 
     iget-object v9, p0, Lcom/estrongs/android/pop/view/utils/k;->a:Landroid/app/Activity;
 
-    const v10, 0x7f0b0178
+    const v10, 0x7f080104
 
     invoke-virtual {v9, v10}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
 
@@ -165,7 +165,7 @@
 
     move-result-object v8
 
-    invoke-static {v8}, Lcom/estrongs/fs/impl/local/l;->l(Ljava/lang/String;)Z
+    invoke-static {v8}, Lcom/estrongs/fs/impl/local/m;->l(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -218,7 +218,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/fs/impl/local/h;->a(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/estrongs/fs/impl/local/i;->a(Ljava/lang/String;)Z
 
     move-result v8
 
@@ -232,7 +232,7 @@
 
     move-result-object v9
 
-    invoke-static {v2}, Lcom/estrongs/fs/impl/local/h;->b(Ljava/lang/String;)Lcom/estrongs/fs/impl/local/f;
+    invoke-static {v2}, Lcom/estrongs/fs/impl/local/i;->b(Ljava/lang/String;)Lcom/estrongs/fs/impl/local/f;
 
     move-result-object v2
 
@@ -322,7 +322,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/k;->a:Landroid/app/Activity;
 
-    const v2, 0x7f0b0179
+    const v2, 0x7f080103
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
 
@@ -391,7 +391,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/k;->a:Landroid/app/Activity;
 
-    const v2, 0x7f0b017a
+    const v2, 0x7f0800ff
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
 
@@ -434,7 +434,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/k;->a:Landroid/app/Activity;
 
-    invoke-virtual {v1, v12}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v13}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -471,7 +471,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/k;->a:Landroid/app/Activity;
 
-    invoke-virtual {v1, v12}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v13}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -497,7 +497,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/k;->a:Landroid/app/Activity;
 
-    invoke-virtual {v1, v13}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v12}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -534,7 +534,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/k;->a:Landroid/app/Activity;
 
-    invoke-virtual {v1, v13}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v12}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v1
 

@@ -1,17 +1,41 @@
 package com.estrongs.android.view;
 
-import android.widget.ExpandableListView.OnGroupExpandListener;
-import com.estrongs.android.pop.ad;
-import java.util.ArrayList;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.j.c;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.util.TypedMap;
 
 class cy
-  implements ExpandableListView.OnGroupExpandListener
+  implements View.OnClickListener
 {
-  cy(cq paramcq) {}
+  cy(cr paramcr) {}
   
-  public void onGroupExpand(int paramInt)
+  public void onClick(View paramView)
   {
-    cq.e(a).e(aa).get(paramInt)).d.c(), true);
+    try
+    {
+      if ((a.ag instanceof FileExplorerActivity))
+      {
+        paramView = ((FileExplorerActivity)a.ag).at();
+        if (paramView != null)
+        {
+          paramView.a("Search_Deeper");
+          paramView.c("Search_Deeper_UV");
+        }
+      }
+    }
+    catch (Exception paramView)
+    {
+      for (;;)
+      {
+        paramView.printStackTrace();
+      }
+    }
+    paramView = new TypedMap();
+    paramView.putAll(a.X);
+    paramView.put("fileSystemSearch", Boolean.valueOf(true));
+    a.a(a.c(), paramView);
   }
 }
 

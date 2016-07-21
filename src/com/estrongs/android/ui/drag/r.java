@@ -1,9 +1,9 @@
 package com.estrongs.android.ui.drag;
 
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.d.e;
-import com.estrongs.android.util.am;
-import com.estrongs.android.view.aw;
+import com.estrongs.android.ui.d.i;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.view.cr;
 import java.util.List;
 
 class r
@@ -18,25 +18,25 @@ class r
       int i;
       try
       {
-        synchronized (aa.b).x)
+        synchronized (aa.b).w)
         {
-          List localList2 = aa.b).x;
+          List localList2 = aa.b).w;
           i = 0;
           if (i < localList2.size())
           {
-            aw localaw = (aw)localList2.get(i);
-            if (!a.a.equals(localaw.c())) {
-              break label127;
+            cr localcr = (cr)localList2.get(i);
+            if (!a.a.equals(localcr.c())) {
+              break label137;
             }
-            if (i == e.a()) {
-              localaw.g();
+            if (i == a.b.getWindowListManager().a()) {
+              localcr.g();
             } else {
-              localaw.i(true);
+              localcr.i(true);
             }
           }
         }
-        if (!am.ba(a.a)) {
-          break label124;
+        if (!ap.bl(a.a)) {
+          break label134;
         }
       }
       catch (Exception localException)
@@ -44,10 +44,10 @@ class r
         localException.printStackTrace();
         return;
       }
-      FileExplorerActivity.h(true);
-      label124:
+      FileExplorerActivity.g(true);
+      label134:
       return;
-      label127:
+      label137:
       i += 1;
     }
   }

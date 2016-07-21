@@ -1,8 +1,8 @@
 package com.estrongs.android.pop.app;
 
-import android.preference.EditTextPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
+import com.estrongs.android.pop.FexApplication;
 import com.estrongs.android.pop.ad;
 
 class gt
@@ -12,28 +12,12 @@ class gt
   
   public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
   {
-    paramObject = paramObject.toString();
-    if (((String)paramObject).trim().equals(""))
-    {
-      a.showDialog(105);
-      return false;
+    paramPreference = paramPreference.getKey();
+    FexApplication.a().a(paramPreference, paramObject);
+    if ("hidden_file".equals(paramPreference)) {
+      ad.a(a).a(((Boolean)paramObject).booleanValue(), false);
     }
-    boolean bool = PopPreferenceActivity.a(a, (String)paramObject);
-    paramPreference = (Preference)paramObject;
-    if (((String)paramObject).charAt(((String)paramObject).length() - 1) != '/') {
-      paramPreference = (String)paramObject + "/";
-    }
-    PopPreferenceActivity.b(a, paramPreference);
-    PopPreferenceActivity.a(a, 0);
-    if (bool)
-    {
-      a.c.setSummary(paramPreference);
-      a.c.setText(paramPreference);
-      a.b.i(paramPreference);
-      return true;
-    }
-    a.showDialog(105);
-    return false;
+    return true;
   }
 }
 

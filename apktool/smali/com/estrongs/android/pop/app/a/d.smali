@@ -1,19 +1,13 @@
-.class Lcom/estrongs/android/pop/app/a/d;
+.class final Lcom/estrongs/android/pop/app/a/d;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
-
-
-# instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/a/a;
+.implements Lcom/dianxinos/lockscreen/f;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/a/a;)V
+.method constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/a/d;->a:Lcom/estrongs/android/pop/app/a/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,39 +16,38 @@
 
 
 # virtual methods
-.method public onMenuItemClick(Landroid/view/MenuItem;)Z
+.method public a()Lcom/dianxinos/lockscreen/v;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/a/d;->a:Lcom/estrongs/android/pop/app/a/a;
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/a/a;->b(Lcom/estrongs/android/pop/app/a/a;)Lcom/estrongs/android/pop/app/aa;
+    return-object v0
+.end method
 
-    move-result-object v0
+.method public b()I
+    .locals 1
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/aa;->q()V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/a/d;->a:Lcom/estrongs/android/pop/app/a/a;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/a/a;->a(Lcom/estrongs/android/pop/app/a/a;)Lcom/estrongs/android/pop/app/ae;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/a/d;->a:Lcom/estrongs/android/pop/app/a/a;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/a/a;->a(Lcom/estrongs/android/pop/app/a/a;)Lcom/estrongs/android/pop/app/ae;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/estrongs/android/pop/app/ae;->b()V
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/a/d;->a:Lcom/estrongs/android/pop/app/a/a;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/a;->c()V
-
-    const/4 v0, 0x1
+    const/16 v0, 0x2a5d
 
     return v0
+.end method
+
+.method public c()Lcom/dianxinos/lockscreen/a/c;
+    .locals 1
+
+    new-instance v0, Lcom/estrongs/android/pop/app/e/a;
+
+    invoke-direct {v0}, Lcom/estrongs/android/pop/app/e/a;-><init>()V
+
+    return-object v0
+.end method
+
+.method public d()Lcom/dianxinos/lockscreen/a/b;
+    .locals 1
+
+    new-instance v0, Lcom/estrongs/android/pop/app/e/h;
+
+    invoke-direct {v0}, Lcom/estrongs/android/pop/app/e/h;-><init>()V
+
+    return-object v0
 .end method

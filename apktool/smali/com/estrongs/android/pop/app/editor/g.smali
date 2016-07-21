@@ -36,7 +36,7 @@
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    check-cast v0, Lcom/estrongs/android/pop/app/editor/am;
+    check-cast v0, Lcom/estrongs/android/pop/app/editor/ae;
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/editor/g;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
 
@@ -44,7 +44,7 @@
 
     move-result-object v1
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/editor/am;->a:Ljava/lang/String;
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/editor/ae;->a:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -53,7 +53,7 @@
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    check-cast v0, Lcom/estrongs/android/pop/app/editor/am;
+    check-cast v0, Lcom/estrongs/android/pop/app/editor/ae;
 
     iget-object v2, p0, Lcom/estrongs/android/pop/app/editor/g;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
 
@@ -61,7 +61,7 @@
 
     move-result-object v2
 
-    iget-object v3, v0, Lcom/estrongs/android/pop/app/editor/am;->a:Ljava/lang/String;
+    iget-object v3, v0, Lcom/estrongs/android/pop/app/editor/ae;->a:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -71,7 +71,7 @@
 
     move-result-object v2
 
-    iget v0, v0, Lcom/estrongs/android/pop/app/editor/am;->b:I
+    iget v0, v0, Lcom/estrongs/android/pop/app/editor/ae;->b:I
 
     invoke-virtual {v2, v1, v0}, Lcom/estrongs/android/pop/app/editor/ObservableScrollView;->scrollTo(II)V
 
@@ -80,9 +80,9 @@
     :pswitch_2
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    check-cast v0, Lcom/estrongs/android/pop/app/editor/am;
+    check-cast v0, Lcom/estrongs/android/pop/app/editor/ae;
 
-    iget v2, v0, Lcom/estrongs/android/pop/app/editor/am;->b:I
+    iget v2, v0, Lcom/estrongs/android/pop/app/editor/ae;->b:I
 
     iget-object v3, p0, Lcom/estrongs/android/pop/app/editor/g;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
 
@@ -98,7 +98,7 @@
 
     move-result-object v1
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/editor/am;->a:Ljava/lang/String;
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/editor/ae;->a:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/app/editor/ReaderTextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -119,7 +119,7 @@
     :pswitch_3
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    check-cast v0, Lcom/estrongs/android/pop/app/editor/am;
+    check-cast v0, Lcom/estrongs/android/pop/app/editor/ae;
 
     iget-object v2, p0, Lcom/estrongs/android/pop/app/editor/g;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
 
@@ -127,7 +127,7 @@
 
     move-result-object v2
 
-    iget-object v3, v0, Lcom/estrongs/android/pop/app/editor/am;->a:Ljava/lang/String;
+    iget-object v3, v0, Lcom/estrongs/android/pop/app/editor/ae;->a:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
@@ -139,11 +139,11 @@
 
     invoke-virtual {v2}, Landroid/widget/EditText;->requestFocus()Z
 
-    iget-object v2, v0, Lcom/estrongs/android/pop/app/editor/am;->a:Ljava/lang/String;
+    iget-object v2, v0, Lcom/estrongs/android/pop/app/editor/ae;->a:Ljava/lang/String;
 
     if-eqz v2, :cond_0
 
-    iget-object v2, v0, Lcom/estrongs/android/pop/app/editor/am;->a:Ljava/lang/String;
+    iget-object v2, v0, Lcom/estrongs/android/pop/app/editor/ae;->a:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
@@ -154,11 +154,11 @@
     if-gt v2, v3, :cond_2
 
     :cond_0
-    iget-object v2, v0, Lcom/estrongs/android/pop/app/editor/am;->a:Ljava/lang/String;
+    iget-object v2, v0, Lcom/estrongs/android/pop/app/editor/ae;->a:Ljava/lang/String;
 
     if-eqz v2, :cond_1
 
-    iget-object v1, v0, Lcom/estrongs/android/pop/app/editor/am;->a:Ljava/lang/String;
+    iget-object v1, v0, Lcom/estrongs/android/pop/app/editor/ae;->a:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -170,7 +170,7 @@
     invoke-static {v2, v1}, Lcom/estrongs/android/pop/app/editor/PopNoteEditor;->a(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;I)V
 
     :cond_2
-    iget v0, v0, Lcom/estrongs/android/pop/app/editor/am;->b:I
+    iget v0, v0, Lcom/estrongs/android/pop/app/editor/ae;->b:I
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/editor/g;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
 

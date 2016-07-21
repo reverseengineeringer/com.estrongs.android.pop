@@ -16,6 +16,8 @@
 
 .field protected isShouldTryLoadThumbnail:Z
 
+.field protected lastAccessed:J
+
 .field protected lastModified:J
 
 .field protected linkTarget:Ljava/lang/String;
@@ -26,26 +28,28 @@
 
 .field protected size:J
 
-.field protected type:Lcom/estrongs/fs/m;
+.field protected type:Lcom/estrongs/fs/w;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 4
 
-    const-wide/16 v2, -0x1
-
     const/4 v1, 0x0
+
+    const-wide/16 v2, -0x1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lcom/estrongs/fs/m;->M:Lcom/estrongs/fs/m;
+    sget-object v0, Lcom/estrongs/fs/w;->L:Lcom/estrongs/fs/w;
 
-    iput-object v0, p0, Lcom/estrongs/fs/a;->type:Lcom/estrongs/fs/m;
+    iput-object v0, p0, Lcom/estrongs/fs/a;->type:Lcom/estrongs/fs/w;
 
     iput-wide v2, p0, Lcom/estrongs/fs/a;->size:J
 
     iput-wide v2, p0, Lcom/estrongs/fs/a;->lastModified:J
+
+    iput-wide v2, p0, Lcom/estrongs/fs/a;->lastAccessed:J
 
     iput-object v1, p0, Lcom/estrongs/fs/a;->extras:Lcom/estrongs/android/util/TypedMap;
 
@@ -69,19 +73,21 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 4
 
-    const-wide/16 v2, -0x1
-
     const/4 v1, 0x0
+
+    const-wide/16 v2, -0x1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lcom/estrongs/fs/m;->M:Lcom/estrongs/fs/m;
+    sget-object v0, Lcom/estrongs/fs/w;->L:Lcom/estrongs/fs/w;
 
-    iput-object v0, p0, Lcom/estrongs/fs/a;->type:Lcom/estrongs/fs/m;
+    iput-object v0, p0, Lcom/estrongs/fs/a;->type:Lcom/estrongs/fs/w;
 
     iput-wide v2, p0, Lcom/estrongs/fs/a;->size:J
 
     iput-wide v2, p0, Lcom/estrongs/fs/a;->lastModified:J
+
+    iput-wide v2, p0, Lcom/estrongs/fs/a;->lastAccessed:J
 
     iput-object v1, p0, Lcom/estrongs/fs/a;->extras:Lcom/estrongs/android/util/TypedMap;
 
@@ -106,12 +112,12 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Lcom/estrongs/fs/m;)V
+.method public constructor <init>(Ljava/lang/String;Lcom/estrongs/fs/w;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/estrongs/fs/a;-><init>(Ljava/lang/String;)V
 
-    iput-object p2, p0, Lcom/estrongs/fs/a;->type:Lcom/estrongs/fs/m;
+    iput-object p2, p0, Lcom/estrongs/fs/a;->type:Lcom/estrongs/fs/w;
 
     return-void
 .end method
@@ -119,19 +125,21 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
 
-    const-wide/16 v2, -0x1
-
     const/4 v1, 0x0
+
+    const-wide/16 v2, -0x1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lcom/estrongs/fs/m;->M:Lcom/estrongs/fs/m;
+    sget-object v0, Lcom/estrongs/fs/w;->L:Lcom/estrongs/fs/w;
 
-    iput-object v0, p0, Lcom/estrongs/fs/a;->type:Lcom/estrongs/fs/m;
+    iput-object v0, p0, Lcom/estrongs/fs/a;->type:Lcom/estrongs/fs/w;
 
     iput-wide v2, p0, Lcom/estrongs/fs/a;->size:J
 
     iput-wide v2, p0, Lcom/estrongs/fs/a;->lastModified:J
+
+    iput-wide v2, p0, Lcom/estrongs/fs/a;->lastAccessed:J
 
     iput-object v1, p0, Lcom/estrongs/fs/a;->extras:Lcom/estrongs/android/util/TypedMap;
 
@@ -156,12 +164,12 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Lcom/estrongs/fs/m;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Lcom/estrongs/fs/w;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/estrongs/fs/a;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-object p3, p0, Lcom/estrongs/fs/a;->type:Lcom/estrongs/fs/m;
+    iput-object p3, p0, Lcom/estrongs/fs/a;->type:Lcom/estrongs/fs/w;
 
     return-void
 .end method
@@ -202,10 +210,10 @@
     return-wide v0
 .end method
 
-.method protected doGetFileType()Lcom/estrongs/fs/m;
+.method protected doGetFileType()Lcom/estrongs/fs/w;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/fs/a;->type:Lcom/estrongs/fs/m;
+    iget-object v0, p0, Lcom/estrongs/fs/a;->type:Lcom/estrongs/fs/w;
 
     return-object v0
 .end method
@@ -297,23 +305,23 @@
     goto :goto_0
 .end method
 
-.method public getFileType()Lcom/estrongs/fs/m;
+.method public getFileType()Lcom/estrongs/fs/w;
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/fs/a;->type:Lcom/estrongs/fs/m;
+    iget-object v0, p0, Lcom/estrongs/fs/a;->type:Lcom/estrongs/fs/w;
 
-    sget-object v1, Lcom/estrongs/fs/m;->M:Lcom/estrongs/fs/m;
+    sget-object v1, Lcom/estrongs/fs/w;->L:Lcom/estrongs/fs/w;
 
     if-ne v0, v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/estrongs/fs/a;->doGetFileType()Lcom/estrongs/fs/m;
+    invoke-virtual {p0}, Lcom/estrongs/fs/a;->doGetFileType()Lcom/estrongs/fs/w;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/fs/a;->type:Lcom/estrongs/fs/m;
+    iput-object v0, p0, Lcom/estrongs/fs/a;->type:Lcom/estrongs/fs/w;
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/fs/a;->type:Lcom/estrongs/fs/m;
+    iget-object v0, p0, Lcom/estrongs/fs/a;->type:Lcom/estrongs/fs/w;
 
     return-object v0
 .end method
@@ -335,7 +343,7 @@
 
     iget-object v0, p0, Lcom/estrongs/fs/a;->absolutePath:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -361,7 +369,7 @@
 
     iget-object v0, p0, Lcom/estrongs/fs/a;->path:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bx(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bO(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -416,11 +424,24 @@
 .end method
 
 .method public lastAccessed()J
-    .locals 2
+    .locals 4
+
+    iget-wide v0, p0, Lcom/estrongs/fs/a;->lastAccessed:J
+
+    const-wide/16 v2, -0x1
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_0
 
     invoke-virtual {p0}, Lcom/estrongs/fs/a;->lastModified()J
 
     move-result-wide v0
+
+    iput-wide v0, p0, Lcom/estrongs/fs/a;->lastAccessed:J
+
+    :cond_0
+    iget-wide v0, p0, Lcom/estrongs/fs/a;->lastAccessed:J
 
     return-wide v0
 .end method
@@ -472,10 +493,10 @@
     return-void
 .end method
 
-.method public setFileType(Lcom/estrongs/fs/m;)V
+.method public setFileType(Lcom/estrongs/fs/w;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/fs/a;->type:Lcom/estrongs/fs/m;
+    iput-object p1, p0, Lcom/estrongs/fs/a;->type:Lcom/estrongs/fs/w;
 
     return-void
 .end method

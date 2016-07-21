@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Lcom/estrongs/android/appinfo/v;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/dialog/ae;
+.field final synthetic a:Lcom/estrongs/android/ui/dialog/ah;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/ae;)V
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/ah;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/ai;->a:Lcom/estrongs/android/ui/dialog/ae;
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/ai;->a:Lcom/estrongs/android/ui/dialog/ah;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,27 +22,21 @@
 
 
 # virtual methods
-.method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public a()V
+    .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ai;->a:Lcom/estrongs/android/ui/dialog/ae;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/ae;->b:Lcom/estrongs/android/ui/dialog/am;
+    move-result-object v0
 
-    invoke-virtual {v0, p3}, Lcom/estrongs/android/ui/dialog/am;->a(I)V
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ai;->a:Lcom/estrongs/android/ui/dialog/ae;
+    new-instance v1, Lcom/estrongs/android/ui/dialog/aj;
 
-    invoke-virtual {v0, p3}, Lcom/estrongs/android/ui/dialog/ae;->a(I)V
+    invoke-direct {v1, p0, v0}, Lcom/estrongs/android/ui/dialog/aj;-><init>(Lcom/estrongs/android/ui/dialog/ai;Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
 
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->runOnUiThread(Ljava/lang/Runnable;)V
+
+    :cond_0
     return-void
 .end method

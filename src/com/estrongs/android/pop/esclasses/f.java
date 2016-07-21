@@ -1,11 +1,16 @@
 package com.estrongs.android.pop.esclasses;
 
-import android.util.SparseArray;
+import com.estrongs.android.ui.view.ak;
 
 class f
+  implements Runnable
 {
-  public String[][] a = (String[][])null;
-  public SparseArray<Object> b = null;
+  f(ESActivity paramESActivity, String paramString, int paramInt) {}
+  
+  public void run()
+  {
+    ak.a(c, a, b);
+  }
 }
 
 /* Location:

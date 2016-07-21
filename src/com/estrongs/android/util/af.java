@@ -1,31 +1,14 @@
 package com.estrongs.android.util;
 
-import java.net.Socket;
-import java.security.KeyStore;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.TrustManager;
-
-public class af
-  extends org.apache.http.conn.ssl.SSLSocketFactory
+public abstract interface af
 {
-  private SSLContext a = SSLContext.getInstance("TLS");
+  public abstract void downloadCompleted(Object paramObject);
   
-  public af(KeyStore paramKeyStore)
-  {
-    super(paramKeyStore);
-    paramKeyStore = new ag(this);
-    a.init(null, new TrustManager[] { paramKeyStore }, null);
-  }
+  public abstract void downloadError(Object paramObject, Throwable paramThrowable);
   
-  public Socket createSocket()
-  {
-    return a.getSocketFactory().createSocket();
-  }
+  public abstract void downloadProgress(Object paramObject, long paramLong1, long paramLong2);
   
-  public Socket createSocket(Socket paramSocket, String paramString, int paramInt, boolean paramBoolean)
-  {
-    return a.getSocketFactory().createSocket(paramSocket, paramString, paramInt, paramBoolean);
-  }
+  public abstract void downloadStarted(Object paramObject);
 }
 
 /* Location:

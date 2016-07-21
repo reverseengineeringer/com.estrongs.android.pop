@@ -1,37 +1,24 @@
 .class Landroid/support/v4/view/aq;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/support/v4/view/ar;
-
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method static a(Landroid/view/LayoutInflater;Landroid/support/v4/view/ar;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-eqz p1, :cond_0
+
+    new-instance v0, Landroid/support/v4/view/ap;
+
+    invoke-direct {v0, p1}, Landroid/support/v4/view/ap;-><init>(Landroid/support/v4/view/ar;)V
+
+    :goto_0
+    invoke-virtual {p0, v0}, Landroid/view/LayoutInflater;->setFactory2(Landroid/view/LayoutInflater$Factory2;)V
 
     return-void
-.end method
 
+    :cond_0
+    const/4 v0, 0x0
 
-# virtual methods
-.method public a(Landroid/view/VelocityTracker;I)F
-    .locals 1
-
-    invoke-static {p1, p2}, Landroid/support/v4/view/as;->a(Landroid/view/VelocityTracker;I)F
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public b(Landroid/view/VelocityTracker;I)F
-    .locals 1
-
-    invoke-static {p1, p2}, Landroid/support/v4/view/as;->b(Landroid/view/VelocityTracker;I)F
-
-    move-result v0
-
-    return v0
+    goto :goto_0
 .end method

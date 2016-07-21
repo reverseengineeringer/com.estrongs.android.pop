@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/dialog/es;
+.field final synthetic a:Lcom/estrongs/android/ui/dialog/er;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/es;)V
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/er;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/et;->a:Lcom/estrongs/android/ui/dialog/es;
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/et;->a:Lcom/estrongs/android/ui/dialog/er;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

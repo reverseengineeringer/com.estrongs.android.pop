@@ -1,406 +1,307 @@
-.class public Lcom/estrongs/android/d/c;
-.super Lcom/estrongs/android/d/a;
+.class Lcom/estrongs/android/d/c;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
-# static fields
-.field private static b:Landroid/graphics/Bitmap;
+# instance fields
+.field final synthetic a:Lcom/estrongs/android/d/a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    sput-object v0, Lcom/estrongs/android/d/c;->b:Landroid/graphics/Bitmap;
-
-    return-void
-.end method
-
-.method constructor <init>(Landroid/content/Context;)V
+.method constructor <init>(Lcom/estrongs/android/d/a;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/estrongs/android/d/a;-><init>(Landroid/content/Context;)V
+    iput-object p1, p0, Lcom/estrongs/android/d/c;->a:Lcom/estrongs/android/d/a;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected a()Ljava/lang/String;
-    .locals 3
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 9
 
-    invoke-virtual {p0}, Lcom/estrongs/android/d/c;->b()Ljava/io/File;
+    iget-object v0, p0, Lcom/estrongs/android/d/c;->a:Lcom/estrongs/android/d/a;
+
+    invoke-static {v0}, Lcom/estrongs/android/d/a;->b(Lcom/estrongs/android/d/a;)Landroid/widget/EditText;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
     move-result-object v0
 
-    const-string v1, ".albumart"
-
-    const/4 v2, 0x1
-
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/util/am;->a(Ljava/io/File;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
+
+    invoke-static {v0}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/d/c;->a:Lcom/estrongs/android/d/a;
+
+    invoke-static {v0}, Lcom/estrongs/android/d/a;->a(Lcom/estrongs/android/d/a;)Landroid/widget/CheckBox;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/CheckBox;->isChecked()Z
+
+    move-result v0
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/d/c;->a:Landroid/content/Context;
+    iget-object v0, p0, Lcom/estrongs/android/d/c;->a:Lcom/estrongs/android/d/a;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
+    iget-object v0, v0, Lcom/estrongs/android/d/a;->d:Landroid/app/Activity;
 
-    move-result-object v0
+    iget-object v1, p0, Lcom/estrongs/android/d/c;->a:Lcom/estrongs/android/d/a;
 
-    const-string v1, ".albumart"
+    iget-object v1, v1, Lcom/estrongs/android/d/a;->d:Landroid/app/Activity;
 
-    const/4 v2, 0x0
+    const v2, 0x7f080715
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/util/am;->a(Ljava/io/File;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
 
-    move-result-object v0
+    move-result-object v1
 
-    :cond_0
-    return-object v0
-.end method
+    const/4 v2, 0x1
 
-.method protected c(Lcom/estrongs/fs/h;)Landroid/graphics/Bitmap;
-    .locals 12
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
-    const/4 v8, 0x2
-
-    const/high16 v11, 0x40000000    # 2.0f
-
-    const/4 v6, 0x0
-
-    const/4 v10, 0x1
-
-    const/4 v9, 0x0
-
-    invoke-interface {p1}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "/"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const-string v1, "/"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x1
-
-    invoke-virtual {v0, v9, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v0
+    :goto_0
+    return-void
 
     :cond_0
-    const-string v1, "file://"
+    iget-object v0, p0, Lcom/estrongs/android/d/c;->a:Lcom/estrongs/android/d/a;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/d/a;->b(Lcom/estrongs/android/d/a;)Landroid/widget/EditText;
 
-    move-result v1
+    move-result-object v0
 
-    if-eqz v1, :cond_1
+    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
-    const-string v1, "file://"
+    move-result-object v0
 
-    const-string v2, ""
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v0, p0, Lcom/estrongs/android/d/c;->a:Lcom/estrongs/android/d/a;
+
+    invoke-static {v0}, Lcom/estrongs/android/d/a;->c(Lcom/estrongs/android/d/a;)Landroid/widget/EditText;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v1, :cond_a
+
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->bz(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    move-object v7, v1
+
+    :goto_1
+    if-eqz v0, :cond_1
+
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bz(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     :cond_1
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->ba(Ljava/lang/String;)Z
+    iget-object v1, p0, Lcom/estrongs/android/d/c;->a:Lcom/estrongs/android/d/a;
+
+    iget-object v5, v1, Lcom/estrongs/android/d/a;->c:Ljava/lang/String;
+
+    invoke-static {v5}, Lcom/estrongs/android/util/ap;->F(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    if-eqz v7, :cond_9
+
+    invoke-virtual {v7}, Ljava/lang/String;->length()I
 
     move-result v1
 
     if-eqz v1, :cond_9
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bE(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    move-object v5, v0
-
-    :goto_0
-    const/4 v7, 0x0
-
-    iget-object v0, p0, Lcom/estrongs/android/d/c;->a:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    sget-object v1, Landroid/provider/MediaStore$Audio$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
-
-    const/4 v2, 0x3
-
-    new-array v2, v2, [Ljava/lang/String;
-
-    const-string v3, "_id"
-
-    aput-object v3, v2, v9
-
-    const-string v3, "album_id"
-
-    aput-object v3, v2, v10
-
-    const-string v3, "album_key"
-
-    aput-object v3, v2, v8
-
-    const-string v3, "_data=?"
-
-    new-array v4, v10, [Ljava/lang/String;
-
-    aput-object v5, v4, v9
-
-    const/4 v5, 0x0
-
-    invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-static {v2, v7, v0}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
+    :goto_2
+    iget-object v3, p0, Lcom/estrongs/android/d/c;->a:Lcom/estrongs/android/d/a;
 
-    move-result v0
-
-    if-eqz v0, :cond_8
-
-    invoke-interface {v1, v9}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v2
-
-    invoke-interface {v1, v10}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v4
-
-    invoke-interface {v1, v8}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_8
-
-    iget-object v0, p0, Lcom/estrongs/android/d/c;->a:Landroid/content/Context;
-
-    invoke-static {v0, v2, v3, v4, v5}, Lcom/estrongs/android/util/aj;->a(Landroid/content/Context;JJ)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    invoke-static {}, Lcom/estrongs/android/d/f;->e()I
-
-    move-result v2
-
-    if-eqz v0, :cond_4
-
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v3
-
-    if-ne v3, v2, :cond_2
-
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v3
-
-    if-eq v3, v2, :cond_4
-
-    :cond_2
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v4
-
-    int-to-float v4, v4
-
-    int-to-float v5, v2
-
-    int-to-float v2, v2
-
-    div-float v7, v3, v5
-
-    div-float v8, v4, v2
-
-    invoke-static {v7, v8}, Ljava/lang/Math;->min(FF)F
-
-    move-result v7
-
-    div-float/2addr v3, v7
-
-    float-to-int v3, v3
-
-    div-float/2addr v4, v7
-
-    float-to-int v4, v4
-
-    invoke-static {v0, v3, v4, v10}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
+    invoke-static {v3}, Lcom/estrongs/android/d/a;->d(Lcom/estrongs/android/d/a;)Landroid/widget/CheckBox;
 
     move-result-object v3
 
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
+    invoke-virtual {v3}, Landroid/widget/CheckBox;->isChecked()Z
 
-    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getWidth()I
+    move-result v3
 
-    move-result v0
+    if-nez v3, :cond_2
 
-    int-to-float v0, v0
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->J(Ljava/lang/String;)Z
 
-    cmpl-float v0, v0, v5
+    move-result v3
 
-    if-ltz v0, :cond_7
+    if-nez v3, :cond_2
 
-    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getWidth()I
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->L(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result v3
 
-    int-to-float v0, v0
+    if-nez v3, :cond_2
 
-    sub-float/2addr v0, v5
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->r(Ljava/lang/String;)Z
 
-    div-float/2addr v0, v11
+    move-result v3
 
-    :goto_1
-    float-to-int v0, v0
+    if-nez v3, :cond_2
 
-    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->K(Ljava/lang/String;)Z
 
-    move-result v4
+    move-result v3
 
-    int-to-float v4, v4
+    if-nez v3, :cond_2
 
-    cmpl-float v4, v4, v2
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->o(Ljava/lang/String;)Z
 
-    if-ltz v4, :cond_3
+    move-result v3
 
-    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
+    if-nez v3, :cond_2
 
-    move-result v4
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->Q(Ljava/lang/String;)Z
 
-    int-to-float v4, v4
+    move-result v3
 
-    sub-float/2addr v4, v2
+    if-eqz v3, :cond_4
 
-    div-float v6, v4, v11
+    :cond_2
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->Q(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_8
+
+    invoke-static {v5}, Lcom/estrongs/fs/impl/adb/c;->j(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v1}, Lcom/estrongs/fs/impl/adb/c;->j(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2}, Lcom/estrongs/fs/impl/adb/c;->j(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    :goto_3
+    iget-object v6, p0, Lcom/estrongs/android/d/c;->a:Lcom/estrongs/android/d/a;
+
+    iget-object v6, v6, Lcom/estrongs/android/d/a;->d:Landroid/app/Activity;
+
+    invoke-static {v6}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v4}, Lcom/estrongs/android/pop/ad;->h(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    if-nez v6, :cond_3
+
+    invoke-static {v3}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
 
     :cond_3
-    float-to-int v4, v6
+    invoke-virtual {v8, v4}, Lcom/estrongs/android/pop/ad;->c(Ljava/lang/String;)V
 
-    float-to-int v5, v5
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->Q(Ljava/lang/String;)Z
 
-    float-to-int v2, v2
+    move-result v1
 
-    invoke-static {v3, v0, v4, v5, v2}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIII)Landroid/graphics/Bitmap;
+    if-eqz v1, :cond_6
 
-    move-result-object v0
-
-    invoke-virtual {v3}, Landroid/graphics/Bitmap;->recycle()V
+    invoke-virtual {v8, v3, v6}, Lcom/estrongs/android/pop/ad;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_4
-    :goto_2
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+    :goto_4
+    iget-object v1, p0, Lcom/estrongs/android/d/c;->a:Lcom/estrongs/android/d/a;
 
-    if-eqz v0, :cond_6
+    iget-object v1, v1, Lcom/estrongs/android/d/a;->f:Lcom/estrongs/android/d/d;
 
-    sget-object v1, Lcom/estrongs/android/d/c;->b:Landroid/graphics/Bitmap;
+    if-eqz v1, :cond_5
 
-    if-nez v1, :cond_5
+    iget-object v1, p0, Lcom/estrongs/android/d/c;->a:Lcom/estrongs/android/d/a;
 
-    new-instance v1, Landroid/graphics/BitmapFactory$Options;
+    iget-object v1, v1, Lcom/estrongs/android/d/a;->f:Lcom/estrongs/android/d/d;
 
-    invoke-direct {v1}, Landroid/graphics/BitmapFactory$Options;-><init>()V
-
-    iput-boolean v9, v1, Landroid/graphics/BitmapFactory$Options;->inScaled:Z
-
-    iget-object v2, p0, Lcom/estrongs/android/d/c;->a:Landroid/content/Context;
-
-    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    const v3, 0x7f02016a
-
-    invoke-static {v2, v3, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-
-    move-result-object v1
-
-    sput-object v1, Lcom/estrongs/android/d/c;->b:Landroid/graphics/Bitmap;
-
-    sget-object v1, Lcom/estrongs/android/d/c;->b:Landroid/graphics/Bitmap;
-
-    iget-object v2, p0, Lcom/estrongs/android/d/c;->a:Landroid/content/Context;
-
-    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->densityDpi:I
-
-    invoke-virtual {v1, v2}, Landroid/graphics/Bitmap;->setDensity(I)V
+    invoke-interface {v1, v7, v0, v5}, Lcom/estrongs/android/d/d;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
 
     :cond_5
-    sget-object v1, Lcom/estrongs/android/d/c;->b:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/estrongs/android/d/c;->a:Lcom/estrongs/android/d/a;
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/d/c;->a(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    invoke-virtual {v0}, Lcom/estrongs/android/d/a;->dismiss()V
+
+    goto/16 :goto_0
+
+    :cond_6
+    iget-object v1, p0, Lcom/estrongs/android/d/c;->a:Lcom/estrongs/android/d/a;
+
+    invoke-static {v1}, Lcom/estrongs/android/d/a;->d(Lcom/estrongs/android/d/a;)Landroid/widget/CheckBox;
 
     move-result-object v1
 
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
+    invoke-virtual {v1}, Landroid/widget/CheckBox;->isChecked()Z
 
-    move-object v0, v1
+    move-result v1
 
-    :cond_6
-    return-object v0
+    if-eqz v1, :cond_7
+
+    invoke-virtual {v8, v3, v6}, Lcom/estrongs/android/pop/ad;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_4
 
     :cond_7
-    move v0, v6
+    invoke-virtual {v8, v2, v6}, Lcom/estrongs/android/pop/ad;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_1
+    goto :goto_4
 
     :cond_8
-    move-object v0, v7
+    move-object v3, v1
 
-    goto :goto_2
+    move-object v4, v5
+
+    goto :goto_3
 
     :cond_9
-    move-object v5, v0
+    move-object v1, v2
 
-    goto/16 :goto_0
-.end method
+    goto/16 :goto_2
 
-.method public d()[Ljava/lang/String;
-    .locals 3
+    :cond_a
+    move-object v7, v1
 
-    const/4 v0, 0x1
-
-    new-array v0, v0, [Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    const-string v2, "131104"
-
-    aput-object v2, v0, v1
-
-    return-object v0
+    goto/16 :goto_1
 .end method

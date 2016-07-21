@@ -1,23 +1,17 @@
 package com.estrongs.android.ui.e;
 
-import android.content.Context;
-import com.estrongs.android.pop.app.LocalFileSharingActivity;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.pop.app.PopAudioPlayer;
 
-public class cf
-  extends jk
+class cf
+  implements View.OnClickListener
 {
-  public cf(Context paramContext, boolean paramBoolean)
-  {
-    super(paramContext, paramBoolean);
-    h();
-  }
+  cf(cb paramcb) {}
   
-  private void h()
+  public void onClick(View paramView)
   {
-    LocalFileSharingActivity localLocalFileSharingActivity = (LocalFileSharingActivity)b;
-    a(2131427375, 2130838223, new cg(this, localLocalFileSharingActivity));
-    a(2131427371, 2130838184, new ch(this, localLocalFileSharingActivity));
-    a(2131427362, 2130838187, new ci(this, localLocalFileSharingActivity));
+    cb.a(a).h();
   }
 }
 

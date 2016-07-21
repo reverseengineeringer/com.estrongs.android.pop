@@ -1,14 +1,36 @@
 package android.support.v4.widget;
 
-import android.support.v4.view.at;
+import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.view.View;
+import android.view.ViewGroup.MarginLayoutParams;
 
 class z
-  extends x
+  implements y
 {
-  public void a(SlidingPaneLayout paramSlidingPaneLayout, View paramView)
+  public int a(Object paramObject)
   {
-    at.a(paramView, getLayoutParamsd);
+    return af.a(paramObject);
+  }
+  
+  public Drawable a(Context paramContext)
+  {
+    return af.a(paramContext);
+  }
+  
+  public void a(View paramView)
+  {
+    af.a(paramView);
+  }
+  
+  public void a(View paramView, Object paramObject, int paramInt)
+  {
+    af.a(paramView, paramObject, paramInt);
+  }
+  
+  public void a(ViewGroup.MarginLayoutParams paramMarginLayoutParams, Object paramObject, int paramInt)
+  {
+    af.a(paramMarginLayoutParams, paramObject, paramInt);
   }
 }
 

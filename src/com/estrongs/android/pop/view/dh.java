@@ -7,7 +7,7 @@ class dh
   
   public void run()
   {
-    FileExplorerActivity.a(a, false);
+    a.g("music://");
   }
 }
 

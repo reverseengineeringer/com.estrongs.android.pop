@@ -1,19 +1,20 @@
 package com.estrongs.android.ui.e;
 
+import android.content.Intent;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.ui.pcs.o;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.preference.FtpServerPreference;
 
 class an
   implements MenuItem.OnMenuItemClickListener
 {
-  an(w paramw) {}
+  an(m paramm) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = new o(a.b);
-    paramMenuItem.a(new ao(this));
-    paramMenuItem.a(true);
+    paramMenuItem = new Intent(m.a(a), FtpServerPreference.class);
+    m.a(a).startActivity(paramMenuItem);
     return false;
   }
 }

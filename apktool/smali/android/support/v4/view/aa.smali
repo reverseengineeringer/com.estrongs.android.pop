@@ -1,102 +1,78 @@
-.class Landroid/support/v4/view/aa;
+.class public final Landroid/support/v4/view/aa;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/support/v4/view/ac;
+
+# static fields
+.field static final a:Landroid/support/v4/view/ae;
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    return-void
-.end method
+    const/16 v1, 0xb
 
+    if-lt v0, v1, :cond_0
 
-# virtual methods
-.method public a(Landroid/view/MotionEvent;)I
-    .locals 1
+    new-instance v0, Landroid/support/v4/view/ad;
 
-    const/4 v0, 0x1
+    invoke-direct {v0}, Landroid/support/v4/view/ad;-><init>()V
 
-    return v0
-.end method
-
-.method public a(Landroid/view/MotionEvent;I)I
-    .locals 1
-
-    if-nez p2, :cond_0
-
-    const/4 v0, 0x0
+    sput-object v0, Landroid/support/v4/view/aa;->a:Landroid/support/v4/view/ae;
 
     :goto_0
-    return v0
+    return-void
 
     :cond_0
-    const/4 v0, -0x1
+    new-instance v0, Landroid/support/v4/view/ab;
+
+    invoke-direct {v0}, Landroid/support/v4/view/ab;-><init>()V
+
+    sput-object v0, Landroid/support/v4/view/aa;->a:Landroid/support/v4/view/ae;
 
     goto :goto_0
 .end method
 
-.method public b(Landroid/view/MotionEvent;I)I
+.method public static a(Landroid/view/KeyEvent;)Z
     .locals 2
 
-    if-nez p2, :cond_0
+    sget-object v0, Landroid/support/v4/view/aa;->a:Landroid/support/v4/view/ae;
 
-    const/4 v0, 0x0
+    invoke-virtual {p0}, Landroid/view/KeyEvent;->getMetaState()I
 
-    return v0
+    move-result v1
 
-    :cond_0
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string v1, "Pre-Eclair does not support multiple pointers"
-
-    invoke-direct {v0, v1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public c(Landroid/view/MotionEvent;I)F
-    .locals 2
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+    invoke-interface {v0, v1}, Landroid/support/v4/view/ae;->b(I)Z
 
     move-result v0
 
     return v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string v1, "Pre-Eclair does not support multiple pointers"
-
-    invoke-direct {v0, v1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method
 
-.method public d(Landroid/view/MotionEvent;I)F
+.method public static a(Landroid/view/KeyEvent;I)Z
     .locals 2
 
-    if-nez p2, :cond_0
+    sget-object v0, Landroid/support/v4/view/aa;->a:Landroid/support/v4/view/ae;
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+    invoke-virtual {p0}, Landroid/view/KeyEvent;->getMetaState()I
+
+    move-result v1
+
+    invoke-interface {v0, v1, p1}, Landroid/support/v4/view/ae;->a(II)Z
 
     move-result v0
 
     return v0
+.end method
 
-    :cond_0
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+.method public static b(Landroid/view/KeyEvent;)V
+    .locals 1
 
-    const-string v1, "Pre-Eclair does not support multiple pointers"
+    sget-object v0, Landroid/support/v4/view/aa;->a:Landroid/support/v4/view/ae;
 
-    invoke-direct {v0, v1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+    invoke-interface {v0, p0}, Landroid/support/v4/view/ae;->a(Landroid/view/KeyEvent;)V
 
-    throw v0
+    return-void
 .end method

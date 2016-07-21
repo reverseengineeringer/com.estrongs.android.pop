@@ -121,7 +121,7 @@
 
     const-string v3, "device offset not a multiple of block size"
 
-    invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Lcom/estrongs/android/util/l;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     iget v2, p0, Lcom/estrongs/fs/impl/usb/a/b;->e:I
@@ -214,7 +214,7 @@
 
     const-string v3, "device offset not a multiple of block size"
 
-    invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Lcom/estrongs/android/util/l;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     iget v2, p0, Lcom/estrongs/fs/impl/usb/a/b;->e:I
@@ -330,6 +330,28 @@
     iget-object v0, p0, Lcom/estrongs/fs/impl/usb/a/b;->f:Lcom/estrongs/fs/impl/usb/fs/a;
 
     invoke-interface {v0}, Lcom/estrongs/fs/impl/usb/fs/a;->c()J
+
+    move-result-wide v0
+
+    goto :goto_0
+.end method
+
+.method public f()J
+    .locals 2
+
+    iget-object v0, p0, Lcom/estrongs/fs/impl/usb/a/b;->f:Lcom/estrongs/fs/impl/usb/fs/a;
+
+    if-nez v0, :cond_0
+
+    const-wide/16 v0, 0x0
+
+    :goto_0
+    return-wide v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/fs/impl/usb/a/b;->f:Lcom/estrongs/fs/impl/usb/fs/a;
+
+    invoke-interface {v0}, Lcom/estrongs/fs/impl/usb/fs/a;->d()J
 
     move-result-wide v0
 

@@ -1,12 +1,12 @@
 package com.estrongs.io.archive.compressor;
 
-import com.estrongs.io.archive.h;
+import com.estrongs.io.archive.i;
 import com.estrongs.io.model.ArchiveEntryFile;
 import java.io.InputStream;
 import java.util.Iterator;
 
 public abstract class a
-  extends h
+  extends i
 {
   private InputStream h;
   

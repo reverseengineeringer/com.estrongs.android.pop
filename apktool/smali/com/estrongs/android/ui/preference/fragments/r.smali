@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/preference/Preference$OnPreferenceChangeListener;
+.implements Lcom/estrongs/android/view/dx;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/preference/fragments/BackupPreferenceFragment;
+.field final synthetic a:Lcom/estrongs/android/widget/f;
+
+.field final synthetic b:Lcom/estrongs/android/ui/preference/fragments/p;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/preference/fragments/BackupPreferenceFragment;)V
+.method constructor <init>(Lcom/estrongs/android/ui/preference/fragments/p;Lcom/estrongs/android/widget/f;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/preference/fragments/r;->a:Lcom/estrongs/android/ui/preference/fragments/BackupPreferenceFragment;
+    iput-object p1, p0, Lcom/estrongs/android/ui/preference/fragments/r;->b:Lcom/estrongs/android/ui/preference/fragments/p;
+
+    iput-object p2, p0, Lcom/estrongs/android/ui/preference/fragments/r;->a:Lcom/estrongs/android/widget/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,27 +26,22 @@
 
 
 # virtual methods
-.method public onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
-    .locals 1
+.method public a(Lcom/estrongs/fs/h;)V
+    .locals 2
 
-    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-interface {p1}, Lcom/estrongs/fs/h;->getPath()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    iget-object v1, p0, Lcom/estrongs/android/ui/preference/fragments/r;->b:Lcom/estrongs/android/ui/preference/fragments/p;
 
-    move-result v0
+    iget-object v1, v1, Lcom/estrongs/android/ui/preference/fragments/p;->a:Landroid/widget/EditText;
 
-    if-nez v0, :cond_0
+    invoke-virtual {v1, v0}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-static {}, Lcom/estrongs/android/pop/view/utils/RemoteSynchronizer;->f()V
+    iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/r;->a:Lcom/estrongs/android/widget/f;
 
-    :cond_0
-    const/4 v0, 0x1
+    invoke-virtual {v0}, Lcom/estrongs/android/widget/f;->k()V
 
-    return v0
+    return-void
 .end method

@@ -1,6 +1,6 @@
 package com.estrongs.fs.impl.usb.fs.ntfs.b;
 
-import android.util.Log;
+import com.estrongs.android.util.l;
 import com.estrongs.fs.impl.usb.fs.ntfs.n;
 import java.io.IOException;
 import java.util.Iterator;
@@ -27,7 +27,7 @@ public final class h
     {
       d = ((g)c.b(144));
       if (b) {
-        Log.d(a, "getIndexRootAttribute: " + d);
+        l.b(a, "getIndexRootAttribute: " + d);
       }
     }
     return d;
@@ -44,7 +44,7 @@ public final class h
   public Iterator<c> c()
   {
     if (b) {
-      Log.d(a, "iterator");
+      l.b(a, "iterator");
     }
     return new i(this);
   }

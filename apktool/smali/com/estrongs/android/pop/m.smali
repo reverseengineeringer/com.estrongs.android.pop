@@ -28,18 +28,18 @@
     return-object v0
 .end method
 
-.method private a(Lcom/estrongs/a/a;Lcom/estrongs/a/a/h;)Lcom/estrongs/android/ui/dialog/cg;
+.method private a(Lcom/estrongs/a/a;Lcom/estrongs/a/a/h;)Lcom/estrongs/android/ui/dialog/ci;
     .locals 8
 
     const/4 v5, 0x1
 
     iget-object v0, p2, Lcom/estrongs/a/a/h;->c:Lcom/estrongs/fs/h;
 
-    invoke-interface {v0}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/m;
+    invoke-interface {v0}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/w;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/m;->a()Z
+    invoke-virtual {v0}, Lcom/estrongs/fs/w;->a()Z
 
     move-result v0
 
@@ -51,7 +51,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -63,14 +63,14 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->H(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->J(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     :cond_0
-    new-instance v0, Lcom/estrongs/android/a/e;
+    new-instance v0, Lcom/estrongs/android/d/e;
 
     iget-object v1, p0, Lcom/estrongs/android/pop/m;->a:Landroid/app/Activity;
 
@@ -78,7 +78,7 @@
 
     invoke-direct {v2, p0, p2, p1}, Lcom/estrongs/android/pop/x;-><init>(Lcom/estrongs/android/pop/m;Lcom/estrongs/a/a/h;Lcom/estrongs/a/a;)V
 
-    invoke-direct {v0, v1, v2, v5}, Lcom/estrongs/android/a/e;-><init>(Landroid/content/Context;Lcom/estrongs/android/a/h;Z)V
+    invoke-direct {v0, v1, v2, v5}, Lcom/estrongs/android/d/e;-><init>(Landroid/content/Context;Lcom/estrongs/android/d/h;Z)V
 
     :goto_0
     return-object v0
@@ -97,7 +97,7 @@
     move-result v6
 
     :goto_1
-    new-instance v0, Lcom/estrongs/android/a/i;
+    new-instance v0, Lcom/estrongs/android/d/i;
 
     iget-object v1, p0, Lcom/estrongs/android/pop/m;->a:Landroid/app/Activity;
 
@@ -111,7 +111,9 @@
 
     iget-boolean v7, p2, Lcom/estrongs/a/a/h;->b:Z
 
-    invoke-direct/range {v0 .. v7}, Lcom/estrongs/android/a/i;-><init>(Landroid/content/Context;Lcom/estrongs/fs/h;Lcom/estrongs/fs/h;Lcom/estrongs/android/a/p;ZZZ)V
+    invoke-direct/range {v0 .. v7}, Lcom/estrongs/android/d/i;-><init>(Landroid/content/Context;Lcom/estrongs/fs/h;Lcom/estrongs/fs/h;Lcom/estrongs/android/d/p;ZZZ)V
+
+    invoke-virtual {v0, v5}, Lcom/estrongs/android/d/i;->setCancelable(Z)V
 
     goto :goto_0
 
@@ -121,10 +123,10 @@
     goto :goto_1
 .end method
 
-.method static synthetic a(Lcom/estrongs/android/pop/m;Lcom/estrongs/a/a;Lcom/estrongs/a/a/h;)Lcom/estrongs/android/ui/dialog/cg;
+.method static synthetic a(Lcom/estrongs/android/pop/m;Lcom/estrongs/a/a;Lcom/estrongs/a/a/h;)Lcom/estrongs/android/ui/dialog/ci;
     .locals 1
 
-    invoke-direct {p0, p1, p2}, Lcom/estrongs/android/pop/m;->a(Lcom/estrongs/a/a;Lcom/estrongs/a/a/h;)Lcom/estrongs/android/ui/dialog/cg;
+    invoke-direct {p0, p1, p2}, Lcom/estrongs/android/pop/m;->a(Lcom/estrongs/a/a;Lcom/estrongs/a/a/h;)Lcom/estrongs/android/ui/dialog/ci;
 
     move-result-object v0
 

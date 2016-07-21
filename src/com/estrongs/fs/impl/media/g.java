@@ -1,25 +1,15 @@
 package com.estrongs.fs.impl.media;
 
-import com.estrongs.android.pop.utils.af;
 import com.estrongs.fs.h;
-import com.estrongs.fs.i;
+import com.estrongs.fs.impl.s.a;
+import java.util.Comparator;
 
-class g
-  implements i
+final class g
+  implements Comparator<h>
 {
-  g(d paramd, af[] paramArrayOfaf, String[] paramArrayOfString) {}
-  
-  public boolean a(h paramh)
+  public int a(h paramh1, h paramh2)
   {
-    int i = 0;
-    while (i < a.length)
-    {
-      if (paramh.getPath().startsWith(b[i])) {
-        return false;
-      }
-      i += 1;
-    }
-    return true;
+    return a - a;
   }
 }
 

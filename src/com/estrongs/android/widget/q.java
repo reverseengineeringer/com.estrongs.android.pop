@@ -1,23 +1,50 @@
 package com.estrongs.android.widget;
 
-import com.estrongs.android.view.aw;
-import com.estrongs.android.view.cb;
-import com.estrongs.android.view.dp;
+import android.app.Activity;
+import android.os.Handler;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.util.TypedMap;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.view.dw;
+import com.estrongs.android.view.fv;
+import com.estrongs.fs.h;
+import com.estrongs.fs.util.a.a;
 
 class q
-  implements cb
+  extends fv
 {
-  q(g paramg) {}
-  
-  public void a() {}
-  
-  public void a(aw paramaw, boolean paramBoolean)
+  q(f paramf, Activity paramActivity, a parama, dw paramdw)
   {
-    if (a.b != null)
-    {
-      g.b(a).f(a.b);
-      a.b = null;
+    super(paramActivity, parama, paramdw);
+  }
+  
+  private void a(h paramh)
+  {
+    super.c(paramh);
+  }
+  
+  public boolean Y()
+  {
+    return !al();
+  }
+  
+  protected int a()
+  {
+    return 2130903224;
+  }
+  
+  protected void a(h paramh, TypedMap paramTypedMap)
+  {
+    if ((f.c(b) != null) && (f.c(b).a(paramh))) {
+      return;
     }
+    if ((ap.bm(paramh.getAbsolutePath())) && (!ap.br(paramh.getAbsolutePath()))) {}
+    for (int i = 1; (FexApplication.a().h()) && (i != 0); i = 0)
+    {
+      new Handler().postDelayed(new r(this, paramh), 50L);
+      return;
+    }
+    super.a(paramh, paramTypedMap);
   }
 }
 

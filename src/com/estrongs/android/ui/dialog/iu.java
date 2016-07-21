@@ -1,22 +1,16 @@
 package com.estrongs.android.ui.dialog;
 
-import android.view.View;
-import android.widget.ExpandableListView;
-import android.widget.ExpandableListView.OnChildClickListener;
-import com.estrongs.android.ui.a.q;
-import com.estrongs.android.ui.a.u;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class iu
-  implements ExpandableListView.OnChildClickListener
+  implements DialogInterface.OnClickListener
 {
-  iu(ip paramip, q paramq) {}
+  iu(is paramis) {}
   
-  public boolean onChildClick(ExpandableListView paramExpandableListView, View paramView, int paramInt1, int paramInt2, long paramLong)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    paramExpandableListView = a.a(paramInt1, paramInt2);
-    ip.a(b, c);
-    b.c();
-    return false;
+    a.dismiss();
   }
 }
 

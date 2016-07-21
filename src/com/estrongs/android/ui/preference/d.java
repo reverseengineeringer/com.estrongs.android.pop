@@ -31,7 +31,7 @@ class d
     FtpServerPreference.b(a, paramPreference);
     if (bool)
     {
-      a.a.setSummary(a.getText(2131427790) + paramPreference);
+      a.a.setSummary(a.getText(2131231299) + paramPreference);
       a.a.setText(paramPreference);
       FtpServerPreference.a(a).D(paramPreference);
     }

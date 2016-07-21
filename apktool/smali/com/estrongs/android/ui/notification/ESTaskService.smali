@@ -3,7 +3,7 @@
 
 
 # instance fields
-.field private a:Lcom/estrongs/android/ui/notification/b;
+.field private a:Lcom/estrongs/android/ui/notification/c;
 
 .field private b:Z
 
@@ -16,11 +16,11 @@
 
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    new-instance v0, Lcom/estrongs/android/ui/notification/b;
+    new-instance v0, Lcom/estrongs/android/ui/notification/c;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/notification/b;-><init>(Lcom/estrongs/android/ui/notification/ESTaskService;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/notification/c;-><init>(Lcom/estrongs/android/ui/notification/ESTaskService;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/notification/ESTaskService;->a:Lcom/estrongs/android/ui/notification/b;
+    iput-object v0, p0, Lcom/estrongs/android/ui/notification/ESTaskService;->a:Lcom/estrongs/android/ui/notification/c;
 
     const/4 v0, 0x0
 
@@ -102,7 +102,7 @@
 
     invoke-direct {p0}, Lcom/estrongs/android/ui/notification/ESTaskService;->a()V
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ESTaskService;->a:Lcom/estrongs/android/ui/notification/b;
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/ESTaskService;->a:Lcom/estrongs/android/ui/notification/c;
 
     return-object v0
 .end method

@@ -1,17 +1,19 @@
 package com.estrongs.android.view;
 
-import com.estrongs.a.a.m;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.pop.app.compress.cb;
+import com.estrongs.android.pop.view.FileExplorerActivity;
 
 class bd
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  bd(bc parambc, m paramm) {}
+  bd(bb parambb, cb paramcb) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ((!b.a.V()) && (b.a.V)) {
-      b.a.c(b.a.m(b.a.X()) + "(" + a.d + "/" + a.c + ")");
-    }
+    a.dismiss();
+    FileExplorerActivity.X().b(b.b);
   }
 }
 

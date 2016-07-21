@@ -1,10 +1,17 @@
 package com.estrongs.android.ui.view;
 
-public abstract interface ca
+import android.view.View;
+import android.view.View.OnClickListener;
+
+class ca
+  implements View.OnClickListener
 {
-  public abstract void a();
+  ca(PopMultiWindowGrid paramPopMultiWindowGrid) {}
   
-  public abstract void b();
+  public void onClick(View paramView)
+  {
+    PopMultiWindowGrid.a(a, 1, PopMultiWindowGrid.b(a));
+  }
 }
 
 /* Location:

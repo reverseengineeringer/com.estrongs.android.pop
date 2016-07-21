@@ -1,16 +1,45 @@
-.class public interface abstract Lcom/estrongs/android/d/j;
+.class Lcom/estrongs/android/d/j;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
+
+
+# instance fields
+.field final synthetic a:Lcom/estrongs/android/d/i;
+
+
+# direct methods
+.method constructor <init>(Lcom/estrongs/android/d/i;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/d/j;->a:Lcom/estrongs/android/d/i;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a(Lcom/estrongs/fs/h;)Landroid/graphics/drawable/Drawable;
-.end method
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 2
 
-.method public abstract a(Lcom/estrongs/fs/h;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
-.end method
+    iget-object v0, p0, Lcom/estrongs/android/d/j;->a:Lcom/estrongs/android/d/i;
 
-.method public abstract d()[Ljava/lang/String;
-.end method
+    sget v1, Lcom/estrongs/android/d/i;->b:I
 
-.method public abstract h(Lcom/estrongs/fs/h;)Z
+    invoke-static {v0, v1}, Lcom/estrongs/android/d/i;->a(Lcom/estrongs/android/d/i;I)I
+
+    iget-object v0, p0, Lcom/estrongs/android/d/j;->a:Lcom/estrongs/android/d/i;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/d/i;->a(Lcom/estrongs/android/d/i;Z)Z
+
+    iget-object v0, p0, Lcom/estrongs/android/d/j;->a:Lcom/estrongs/android/d/i;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/d/i;->dismiss()V
+
+    return-void
 .end method

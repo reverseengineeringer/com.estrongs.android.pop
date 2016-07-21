@@ -10,7 +10,24 @@ class SSLSocketFactoryEx$1
   
   public void checkClientTrusted(X509Certificate[] paramArrayOfX509Certificate, String paramString) {}
   
-  public void checkServerTrusted(X509Certificate[] paramArrayOfX509Certificate, String paramString) {}
+  public void checkServerTrusted(X509Certificate[] paramArrayOfX509Certificate, String paramString)
+  {
+    int j;
+    int i;
+    if (paramArrayOfX509Certificate != null)
+    {
+      j = paramArrayOfX509Certificate.length;
+      i = 0;
+    }
+    for (;;)
+    {
+      if (i >= j) {
+        return;
+      }
+      paramArrayOfX509Certificate[i].checkValidity();
+      i += 1;
+    }
+  }
   
   public X509Certificate[] getAcceptedIssuers()
   {

@@ -1,16 +1,30 @@
 package com.estrongs.android.pop.app;
 
-import com.estrongs.android.view.cc;
-import com.estrongs.fs.h;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
+import android.net.Uri;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.widget.f;
+import java.io.File;
 
 class cg
-  implements cc
+  implements DialogInterface.OnClickListener
 {
-  cg(FileChooserActivity paramFileChooserActivity) {}
+  cg(cf paramcf, ci paramci) {}
   
-  public void a(h paramh)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    FileChooserActivity.a(a, paramh);
+    paramDialogInterface = b.a.a.d();
+    a.dismiss();
+    if (ap.bl(paramDialogInterface)) {}
+    for (paramDialogInterface = new Intent(null, Uri.fromFile(new File(paramDialogInterface)));; paramDialogInterface = new Intent(null, Uri.parse(paramDialogInterface)))
+    {
+      b.a.setResult(-1, paramDialogInterface);
+      b.a.finish();
+      return;
+    }
   }
 }
 

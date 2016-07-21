@@ -1,24 +1,13 @@
 package com.estrongs.android.pop.view;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.ui.dialog.ks;
-
 class dg
-  implements View.OnClickListener
+  implements Runnable
 {
   dg(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void onClick(View paramView)
+  public void run()
   {
-    paramView = a.y();
-    if (paramView != null)
-    {
-      paramView = ks.a(a, paramView);
-      if (paramView != null) {
-        paramView.show();
-      }
-    }
+    a.g("pic://");
   }
 }
 

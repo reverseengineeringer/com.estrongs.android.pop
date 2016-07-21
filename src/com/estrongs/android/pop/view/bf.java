@@ -1,26 +1,42 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.ui.e.w;
-import com.estrongs.android.view.av;
-import com.estrongs.android.view.aw;
+import android.app.Activity;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.ui.c.e;
+import com.estrongs.android.ui.dialog.VerifyPasswordDialog;
+import com.estrongs.android.ui.dialog.VerifyPasswordDialog.DialogType;
+import com.estrongs.android.util.TypedMap;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.view.dw;
 import com.estrongs.fs.h;
-import java.util.List;
+import com.estrongs.fs.util.a.a;
 
 class bf
-  implements av<h>
+  extends e
 {
-  bf(FileExplorerActivity paramFileExplorerActivity) {}
-  
-  public void a(List<h> paramList)
+  bf(FileExplorerActivity paramFileExplorerActivity, Activity paramActivity, a parama, dw paramdw)
   {
-    String str = a.z();
-    aw localaw = a.y();
-    if (localaw == null) {
+    super(paramActivity, parama, paramdw);
+  }
+  
+  private void a(h paramh)
+  {
+    super.c(paramh);
+  }
+  
+  protected void a(h paramh, TypedMap paramTypedMap)
+  {
+    FexApplication localFexApplication = FexApplication.a();
+    if ((ap.bm(paramh.getAbsolutePath())) && (!ap.br(paramh.getAbsolutePath()))) {}
+    for (int i = 1; (localFexApplication.h()) && (i != 0); i = 0)
+    {
+      paramTypedMap = VerifyPasswordDialog.DialogType.NETWORK;
+      paramTypedMap = VerifyPasswordDialog.a(a, paramTypedMap);
+      paramTypedMap.a(new bg(this, paramh));
+      paramTypedMap.b();
       return;
     }
-    int i = localaw.d();
-    a.k.a(str, paramList);
-    a.a(paramList.size(), i);
+    super.a(paramh, paramTypedMap);
   }
 }
 

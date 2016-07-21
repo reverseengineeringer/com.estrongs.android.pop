@@ -1,18 +1,23 @@
 package com.estrongs.android.pop.utils;
 
 import android.app.Activity;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
+import com.estrongs.a.a;
+import com.estrongs.a.a.p;
+import com.estrongs.fs.h;
+import java.io.File;
 
 final class bc
-  implements DialogInterface.OnDismissListener
+  implements p
 {
-  bc(Boolean[] paramArrayOfBoolean, Activity paramActivity) {}
+  bc(Activity paramActivity, h paramh1, h paramh2) {}
   
-  public void onDismiss(DialogInterface paramDialogInterface)
+  public void a(a parama, int paramInt1, int paramInt2)
   {
-    if (a[0].booleanValue()) {
-      b.finish();
+    if (paramInt2 == 4) {
+      ao.a(a, new File(b.getAbsolutePath(), (String)c.getExtra("item_paste_name")).getAbsolutePath());
+    }
+    while (paramInt2 != 5) {
+      return;
     }
   }
 }

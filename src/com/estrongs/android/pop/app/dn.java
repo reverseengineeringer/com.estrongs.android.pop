@@ -12,7 +12,7 @@ class dn
   {
     if (dj.b(a.f) == null)
     {
-      ((ImageView)a.e.findViewById(2131362092)).setImageResource(2130837660);
+      ((ImageView)a.e.findViewById(2131624051)).setImageResource(2130837913);
       return;
     }
     dj.a(a.f, a.e, dj.b(a.f));

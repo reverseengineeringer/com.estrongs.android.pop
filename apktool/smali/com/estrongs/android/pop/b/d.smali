@@ -1,5 +1,5 @@
 .class final Lcom/estrongs/android/pop/b/d;
-.super Lcom/estrongs/android/ui/dialog/jw;
+.super Lcom/estrongs/android/ui/dialog/kh;
 
 
 # instance fields
@@ -26,7 +26,7 @@
 
     iput-object p8, p0, Lcom/estrongs/android/pop/b/d;->e:Landroid/app/Activity;
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/estrongs/android/ui/dialog/jw;-><init>(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Lcom/estrongs/a/a;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/estrongs/android/ui/dialog/kh;-><init>(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Lcom/estrongs/a/a;)V
 
     new-instance v0, Ljava/io/File;
 
@@ -60,7 +60,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/b/d;->e:Landroid/app/Activity;
 
-    const v1, 0x7f0b0190
+    const v1, 0x7f08029e
 
     const/4 v2, 0x1
 

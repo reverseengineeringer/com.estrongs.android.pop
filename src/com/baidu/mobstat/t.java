@@ -1,12 +1,10 @@
 package com.baidu.mobstat;
 
-class t
+public enum t
 {
-  public static final String a = Build.a;
-  public static final int b = Build.b;
-  static final boolean c = Build.c;
-  static final String[] d = { "h9YLQoINGWyOBYYk", "30212102dicudiab" };
-  static final String e = d[(b - 1)];
+  public long j;
+  
+  private t() {}
 }
 
 /* Location:

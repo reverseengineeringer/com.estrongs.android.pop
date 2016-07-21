@@ -195,7 +195,7 @@
 
     iget-object v0, p0, Lcom/estrongs/fs/impl/pcs/a;->a:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->b(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/bk;->b(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -317,7 +317,7 @@
     :cond_0
     iget-object v0, p0, Lcom/estrongs/fs/impl/pcs/a;->name:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -325,7 +325,7 @@
 
     iget-object v0, p0, Lcom/estrongs/fs/impl/pcs/a;->b:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

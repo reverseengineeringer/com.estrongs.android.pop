@@ -1,20 +1,67 @@
 package com.estrongs.android.ui.view;
 
-import android.text.ClipboardManager;
-import android.view.View;
-import android.view.View.OnClickListener;
-import java.text.MessageFormat;
-
 class aw
-  implements View.OnClickListener
+  extends Thread
 {
-  aw(au paramau, ClipboardManager paramClipboardManager) {}
+  public int a = -1;
+  public int b = 0;
+  private boolean c = false;
+  private Object d = new Object();
+  private ESVideoView e = null;
   
-  public void onClick(View paramView)
+  public aw(ESVideoView paramESVideoView)
   {
-    a.setText(b.i);
-    paramView = au.b(b, 2131427962);
-    ag.a(b.ar(), MessageFormat.format(paramView, new Object[] { "SHA-1" }), 1);
+    e = paramESVideoView;
+  }
+  
+  public void a(int paramInt)
+  {
+    synchronized (d)
+    {
+      a = paramInt;
+      b = a;
+      d.notify();
+      return;
+    }
+  }
+  
+  public void destroy()
+  {
+    c = true;
+    synchronized (d)
+    {
+      d.notify();
+      return;
+    }
+  }
+  
+  public void run()
+  {
+    while (!c)
+    {
+      if (a < 0) {
+        try
+        {
+          synchronized (d)
+          {
+            d.wait();
+          }
+        }
+        catch (InterruptedException localInterruptedException)
+        {
+          for (;;)
+          {
+            localInterruptedException.printStackTrace();
+          }
+        }
+      }
+      synchronized (d)
+      {
+        int i = a;
+        a = -1;
+        e.a(i);
+      }
+    }
   }
 }
 

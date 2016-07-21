@@ -3,26 +3,39 @@ package com.estrongs.android.pop.app.imageviewer;
 import android.graphics.Bitmap;
 import com.estrongs.android.pop.app.imageviewer.gallery.e;
 import com.estrongs.android.pop.app.imageviewer.gallery.f;
-import java.lang.ref.SoftReference;
 
 class cc
-  implements v
+  implements Runnable
 {
-  cc(ViewImage21 paramViewImage21, int paramInt, ch paramch, Runnable paramRunnable) {}
+  cc(cb paramcb, e parame, Bitmap paramBitmap, an paraman) {}
   
-  public void a(e parame, Bitmap paramBitmap)
+  public void run()
   {
-    an localan;
-    if (paramBitmap == null) {
-      localan = null;
-    }
-    while ((d.a) || (!parame.equals(d.e.a(a))) || (b == null))
+    if ((d.d.a) || (!a.equals(d.d.e.a(d.a)))) {}
+    for (;;)
     {
       return;
-      localan = new an(paramBitmap, parame.b());
-      ViewImage21.f(d).a(parame, new SoftReference(localan));
+      if (Math.abs(d.d.c - d.a) < 2)
+      {
+        if (b != null) {
+          break label155;
+        }
+        d.b.b(a);
+        if (d.d.c == d.a) {
+          d.d.g = null;
+        }
+      }
+      while (d.c != null)
+      {
+        d.d.b.post(d.c);
+        return;
+        label155:
+        d.b.a(a, c);
+        if (d.d.c == d.a) {
+          d.d.g = d.b.a;
+        }
+      }
     }
-    d.b.a(new cd(this, parame, paramBitmap, localan));
   }
 }
 

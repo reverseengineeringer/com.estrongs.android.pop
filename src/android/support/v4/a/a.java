@@ -1,16 +1,29 @@
 package android.support.v4.a;
 
 import android.os.Build.VERSION;
-import android.os.Parcelable.Creator;
+import android.view.View;
 
-public class a
+public final class a
 {
-  public static <T> Parcelable.Creator<T> a(c<T> paramc)
+  private static final c a = new e();
+  
+  static
   {
-    if (Build.VERSION.SDK_INT >= 13) {
-      e.a(paramc);
+    if (Build.VERSION.SDK_INT >= 12)
+    {
+      a = new h();
+      return;
     }
-    return new b(paramc);
+  }
+  
+  public static l a()
+  {
+    return a.a();
+  }
+  
+  public static void a(View paramView)
+  {
+    a.a(paramView);
   }
 }
 

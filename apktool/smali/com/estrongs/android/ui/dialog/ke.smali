@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Lcom/estrongs/android/ui/dialog/jw;
+.field final synthetic a:Lcom/estrongs/android/ui/dialog/jh;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/jw;Ljava/lang/String;)V
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/jh;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/ke;->b:Lcom/estrongs/android/ui/dialog/jw;
-
-    iput-object p2, p0, Lcom/estrongs/android/ui/dialog/ke;->a:Ljava/lang/String;
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/ke;->a:Lcom/estrongs/android/ui/dialog/jh;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,20 +22,28 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ke;->b:Lcom/estrongs/android/ui/dialog/jw;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ke;->a:Lcom/estrongs/android/ui/dialog/jh;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/jw;->getContext()Landroid/content/Context;
+    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/jh;->a(Lcom/estrongs/android/ui/dialog/jh;)Lcom/estrongs/a/a;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/ke;->a:Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/a/a;->getTaskId()J
 
-    const/4 v2, 0x1
+    move-result-wide v0
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    invoke-static {v0, v1}, Lcom/estrongs/android/ui/notification/f;->b(J)Lcom/estrongs/a/a;
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ke;->a:Lcom/estrongs/android/ui/dialog/jh;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/jh;->dismiss()V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ke;->a:Lcom/estrongs/android/ui/dialog/jh;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/jh;->g(Lcom/estrongs/android/ui/dialog/jh;)V
 
     return-void
 .end method

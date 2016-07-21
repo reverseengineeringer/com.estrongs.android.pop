@@ -590,6 +590,8 @@
     const-string v0, ""
 
     :goto_0
+    check-cast v0, Ljava/lang/CharSequence;
+
     invoke-virtual {v1, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuffer;
 
     move-result-object v0

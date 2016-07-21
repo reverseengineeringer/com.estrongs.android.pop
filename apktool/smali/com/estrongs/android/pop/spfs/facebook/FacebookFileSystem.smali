@@ -908,7 +908,7 @@
 
     const-string v2, "can\'t get the token"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-object v0
@@ -976,7 +976,7 @@
 
     const-string v2, "can\'t get the token"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-object v0
@@ -1040,7 +1040,7 @@
 
     const-string v2, "can\'t get the token"
 
-    invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -1798,7 +1798,7 @@
 
     sget-object v1, Lcom/estrongs/android/pop/spfs/facebook/FacebookFileSystem;->dateFormater:Ljava/text/SimpleDateFormat;
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/String;Ljava/text/DateFormat;)Ljava/util/Date;
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/String;Ljava/text/DateFormat;)Ljava/util/Date;
 
     move-result-object v0
 
@@ -2461,7 +2461,7 @@
 
     const-string v3, "can\'t get cache entry for delete"
 
-    invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-object v1
@@ -2477,7 +2477,7 @@
 
     const-string v3, "delete, can\'t get the token"
 
-    invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -3066,7 +3066,7 @@
 
     const-string v2, "createAlbum, can\'t get the token"
 
-    invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -3088,7 +3088,7 @@
 
     const-string v2, "createAlbum, can\'t get the user"
 
-    invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -3300,7 +3300,7 @@
 
     const-string v2, "can\'t get cache entry for delete"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return v0
@@ -3316,7 +3316,7 @@
 
     const-string v2, "delete, can\'t get the token"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -3732,7 +3732,7 @@
 
     const-string v2, "can\'t get the token"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-object v0
@@ -3783,7 +3783,7 @@
 
     const-string v1, "delete, can\'t get the token"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -4087,7 +4087,7 @@
 
     const-string v2, "can\'t get cache entry for InputStream"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     :goto_0
@@ -4104,7 +4104,7 @@
 
     iget-object v1, v2, Lcom/estrongs/android/pop/spfs/facebook/FacebookFileSystemCache$FacebookFileCacheEntry;->thumbnail_url:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v1}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
@@ -4137,7 +4137,7 @@
     move-result-object v1
 
     :cond_2
-    invoke-static {v1}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v1}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
@@ -4280,7 +4280,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -4358,7 +4358,7 @@
 
     const-string v0, "me"
 
-    invoke-static {v2}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
@@ -4421,7 +4421,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
@@ -4435,7 +4435,7 @@
 
     iget-object v3, v2, Lcom/estrongs/android/pop/spfs/Album;->id:Ljava/lang/String;
 
-    invoke-static {v3}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v3}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
@@ -4505,9 +4505,9 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/security/KeyStore;->load(Ljava/io/InputStream;[C)V
 
-    new-instance v1, Lcom/estrongs/android/pop/spfs/facebook/FacebookFileSystem$MySSLSocketFactory;
+    new-instance v1, Lcom/estrongs/android/util/n;
 
-    invoke-direct {v1, p0, v0}, Lcom/estrongs/android/pop/spfs/facebook/FacebookFileSystem$MySSLSocketFactory;-><init>(Lcom/estrongs/android/pop/spfs/facebook/FacebookFileSystem;Ljava/security/KeyStore;)V
+    invoke-direct {v1, v0}, Lcom/estrongs/android/util/n;-><init>(Ljava/security/KeyStore;)V
 
     sget-object v0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->ALLOW_ALL_HOSTNAME_VERIFIER:Lorg/apache/http/conn/ssl/X509HostnameVerifier;
 
@@ -4623,7 +4623,7 @@
 
     const-string v1, "can\'t get cache entry for get photo extension"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -4675,7 +4675,7 @@
 
     const-string v1, "delete, can\'t get the token"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -4807,7 +4807,7 @@
 
     const-string v2, "can\'t get cache entry for InputStream"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     :goto_0
@@ -4838,7 +4838,7 @@
 
     const-string v2, "can\'t get token download"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -4909,7 +4909,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -5735,7 +5735,7 @@
 
     const-string v1, "can\'t get cache entry for delete"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     :goto_0
@@ -5752,7 +5752,7 @@
 
     const-string v1, "delete, can\'t get the token"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -5792,7 +5792,7 @@
 
     const-string v1, "delete, can\'t get the token"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void

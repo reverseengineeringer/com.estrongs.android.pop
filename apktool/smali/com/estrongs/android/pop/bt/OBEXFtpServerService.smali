@@ -86,11 +86,11 @@
     invoke-virtual {v0}, Lcom/estrongs/android/pop/bt/e;->start()V
 
     :cond_2
-    const v0, 0x7f0b01a8
+    const v0, 0x7f080483
 
     const/4 v1, 0x1
 
-    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -150,11 +150,11 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    const v0, 0x7f0b01a9
+    const v0, 0x7f080484
 
     const/4 v1, 0x1
 
-    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -184,7 +184,7 @@
     invoke-super {p0}, Landroid/app/Service;->onCreate()V
 
     :try_start_0
-    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/e;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/i;->a(Landroid/content/Context;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -214,7 +214,7 @@
 
     invoke-super {p0, p1, p2}, Landroid/app/Service;->onStart(Landroid/content/Intent;I)V
 
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 

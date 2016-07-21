@@ -1,17 +1,17 @@
 package com.estrongs.android.pop.app;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.ImageView;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 
 class dy
-  implements View.OnClickListener
+  implements MenuItem.OnMenuItemClickListener
 {
-  dy(LocalFileSharingActivity paramLocalFileSharingActivity, ImageView paramImageView) {}
+  dy(LocalFileSharingActivity paramLocalFileSharingActivity) {}
   
-  public void onClick(View paramView)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    a.performClick();
+    a.h();
+    return false;
   }
 }
 

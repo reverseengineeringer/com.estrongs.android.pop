@@ -1,31 +1,21 @@
 package com.estrongs.fs.impl.pcs;
 
-import java.net.Socket;
-import java.security.KeyStore;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.TrustManager;
-
 public class e
-  extends org.apache.http.conn.ssl.SSLSocketFactory
 {
-  SSLContext a = SSLContext.getInstance("TLS");
-  
-  public e(KeyStore paramKeyStore)
-  {
-    super(paramKeyStore);
-    paramKeyStore = new f(this);
-    a.init(null, new TrustManager[] { paramKeyStore }, null);
-  }
-  
-  public Socket createSocket()
-  {
-    return a.getSocketFactory().createSocket();
-  }
-  
-  public Socket createSocket(Socket paramSocket, String paramString, int paramInt, boolean paramBoolean)
-  {
-    return a.getSocketFactory().createSocket(paramSocket, paramString, paramInt, paramBoolean);
-  }
+  public int a = 0;
+  public String b = "";
+  public String c = "";
+  public int d = 0;
+  public int e = 0;
+  public String f = null;
+  public int g = 0;
+  public String h = "";
+  public int i = 0;
+  public long j = 0L;
+  public int k = 0;
+  public int l = 0;
+  public int m = 0;
+  public String n;
 }
 
 /* Location:

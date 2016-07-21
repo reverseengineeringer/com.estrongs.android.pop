@@ -1,20 +1,25 @@
 package com.estrongs.android.pop.utils;
 
-import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.ui.pcs.n;
-import com.estrongs.android.ui.pcs.r;
-import java.util.List;
+import android.app.Activity;
+import com.estrongs.a.a;
+import com.estrongs.android.ui.dialog.jh;
 
 final class bd
-  implements n
+  extends jh
 {
-  bd(ESActivity paramESActivity, r paramr, List paramList) {}
-  
-  public void a(boolean paramBoolean, String paramString1, String paramString2)
+  bd(Activity paramActivity, String paramString, a parama, boolean paramBoolean)
   {
-    if (paramBoolean) {
-      aj.a(a, b, c);
-    }
+    super(paramActivity, paramString, parama, paramBoolean);
+  }
+  
+  protected String a()
+  {
+    return null;
+  }
+  
+  protected String b()
+  {
+    return null;
   }
 }
 

@@ -1,16 +1,18 @@
 package com.estrongs.android.util;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import com.estrongs.fs.h;
+import com.estrongs.fs.i;
 
-class au
-  implements DialogInterface.OnClickListener
+final class au
+  implements i
 {
-  au(at paramat) {}
-  
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public boolean a(h paramh)
   {
-    paramDialogInterface.dismiss();
+    if (paramh == null) {}
+    while (!ap.a(paramh)) {
+      return true;
+    }
+    return false;
   }
 }
 

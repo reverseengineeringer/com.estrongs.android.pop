@@ -3,8 +3,8 @@
 
 
 # virtual methods
-.method public abstract a()V
+.method public abstract a(Lcom/estrongs/android/pop/app/editor/ObservableScrollView;IIII)V
 .end method
 
-.method public abstract a(Lcom/estrongs/android/pop/app/editor/ObservableScrollView;IIII)V
+.method public abstract g_()V
 .end method

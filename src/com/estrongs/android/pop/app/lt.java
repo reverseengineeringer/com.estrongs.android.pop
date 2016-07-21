@@ -1,27 +1,16 @@
 package com.estrongs.android.pop.app;
 
-import android.media.MediaPlayer;
-import android.media.MediaPlayer.OnCompletionListener;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class lt
-  implements MediaPlayer.OnCompletionListener
+  implements DialogInterface.OnClickListener
 {
-  lt(StreamingMediaPlayer paramStreamingMediaPlayer) {}
+  lt(ShowDialogActivity paramShowDialogActivity) {}
   
-  public void onCompletion(MediaPlayer paramMediaPlayer)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (StreamingMediaPlayer.a(a) == 0L) {
-      return;
-    }
-    if ((StreamingMediaPlayer.a(a) >= 262144L) || ((StreamingMediaPlayer.a(a) > 0L) && (StreamingMediaPlayer.b(a))))
-    {
-      StreamingMediaPlayer.a(a, false);
-      return;
-    }
-    if (!StreamingMediaPlayer.c(a)) {
-      a.a(6);
-    }
-    new Thread(new lu(this)).start();
+    paramDialogInterface.dismiss();
   }
 }
 

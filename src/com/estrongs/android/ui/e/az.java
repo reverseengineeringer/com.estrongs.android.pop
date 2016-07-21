@@ -3,16 +3,20 @@ package com.estrongs.android.ui.e;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
 import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.view.WebViewWrapper;
 
 class az
   implements MenuItem.OnMenuItemClickListener
 {
-  az(w paramw) {}
+  az(m paramm) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if (FileExplorerActivity.J() != null) {
-      FileExplorerActivity.J().e(0);
+    paramMenuItem = m.a(a).O();
+    if ((paramMenuItem != null) && ((paramMenuItem instanceof WebViewWrapper)))
+    {
+      ((WebViewWrapper)paramMenuItem).y();
+      m.a(a).h();
     }
     return false;
   }

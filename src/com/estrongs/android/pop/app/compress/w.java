@@ -1,11 +1,11 @@
 package com.estrongs.android.pop.app.compress;
 
 import android.content.Context;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.io.archive.d;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.io.archive.e;
 
 class w
-  extends d
+  extends e
 {
   w(l paraml1, Context paramContext, l paraml2, String paramString)
   {

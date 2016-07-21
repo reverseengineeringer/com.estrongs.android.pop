@@ -1,13 +1,18 @@
 package android.support.v4.app;
 
-import android.os.Bundle;
+import java.util.ArrayList;
 
 final class u
 {
-  private final String a;
-  private final Class<?> b;
-  private final Bundle c;
-  private Fragment d;
+  u a;
+  u b;
+  int c;
+  Fragment d;
+  int e;
+  int f;
+  int g;
+  int h;
+  ArrayList<Fragment> i;
 }
 
 /* Location:

@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/widget/g;
-
-.field final synthetic b:Lcom/estrongs/android/pop/app/hs;
+.field final synthetic a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/hs;Lcom/estrongs/android/widget/g;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/hv;->b:Lcom/estrongs/android/pop/app/hs;
-
-    iput-object p2, p0, Lcom/estrongs/android/pop/app/hv;->a:Lcom/estrongs/android/widget/g;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/hv;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,12 +22,39 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 1
+.method public run()V
+    .locals 3
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/hv;->a:Lcom/estrongs/android/widget/g;
+    const/4 v1, 0x0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/g;->k()V
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/hv;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
 
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->m:Landroid/preference/Preference;
+
+    invoke-virtual {v0, v1}, Landroid/preference/Preference;->setEnabled(Z)V
+
+    :try_start_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/hv;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+
+    const/16 v1, 0x66
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->dismissDialog(I)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/hv;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+
+    const v1, 0x7f080257
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
     return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
 .end method

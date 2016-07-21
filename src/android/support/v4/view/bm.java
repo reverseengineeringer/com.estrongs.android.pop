@@ -1,13 +1,13 @@
 package android.support.v4.view;
 
-import android.view.ViewGroup;
+import android.view.MotionEvent;
 
 class bm
-  extends bp
+  extends bl
 {
-  public void a(ViewGroup paramViewGroup, boolean paramBoolean)
+  public float e(MotionEvent paramMotionEvent, int paramInt)
   {
-    bq.a(paramViewGroup, paramBoolean);
+    return bq.a(paramMotionEvent, paramInt);
   }
 }
 

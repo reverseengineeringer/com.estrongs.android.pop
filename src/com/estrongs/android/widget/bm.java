@@ -1,14 +1,22 @@
 package com.estrongs.android.widget;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
-class bm
-  implements View.OnClickListener
+public class bm
+  implements bl
 {
-  bm(SlidingDrawer paramSlidingDrawer) {}
+  public void a(ProgressBar paramProgressBar, TextView paramTextView, long paramLong)
+  {
+    paramProgressBar.setMax((int)paramLong);
+    paramTextView.setText(String.valueOf(paramLong));
+  }
   
-  public void onClick(View paramView) {}
+  public void b(ProgressBar paramProgressBar, TextView paramTextView, long paramLong)
+  {
+    paramProgressBar.setProgress((int)paramLong);
+    paramTextView.setText(String.valueOf(paramLong));
+  }
 }
 
 /* Location:

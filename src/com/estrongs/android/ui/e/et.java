@@ -1,51 +1,36 @@
 package com.estrongs.android.ui.e;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.app.compress.a;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.pop.view.utils.AppRunner;
-import com.estrongs.android.util.am;
 import com.estrongs.fs.h;
-import com.estrongs.fs.impl.b.f;
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 class et
-  implements DialogInterface.OnClickListener
+  implements MenuItem.OnMenuItemClickListener
 {
-  et(er paramer, List paramList) {}
+  et(cr paramcr) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramDialogInterface.dismiss();
-    ArrayList localArrayList = new ArrayList();
-    paramDialogInterface = null;
-    Iterator localIterator = a.iterator();
-    while (localIterator.hasNext())
-    {
-      h localh = (h)localIterator.next();
-      if (am.bb(localh.getPath()))
-      {
-        cp.a(b.a).a(localh.getPath(), localh.getAbsolutePath());
-      }
-      else
-      {
-        localArrayList.add(localh.getAbsolutePath());
-        if ((localh instanceof f))
-        {
-          Object localObject = paramDialogInterface;
-          if (paramDialogInterface == null) {
-            localObject = new ArrayList();
-          }
-          ((List)localObject).add((f)localh);
-          paramDialogInterface = (DialogInterface)localObject;
-        }
-      }
+    if (cr.a(a).size() == 0) {
+      com.estrongs.android.ui.view.ak.a(cr.b(a).getBaseContext(), 2131231551, 0);
     }
-    if (localArrayList.size() > 0) {
-      AppRunner.a(cp.a(b.a), localArrayList, paramDialogInterface);
+    while (cr.a(a).size() != 1) {
+      return true;
     }
+    paramMenuItem = ((h)cr.a(a).get(0)).getAbsolutePath();
+    a locala = new a(cr.b(a), false, paramMenuItem, null, null, null);
+    if (paramMenuItem.toLowerCase().endsWith(".apk")) {
+      locala.a(true);
+    }
+    if (!(cr.b(a).O() instanceof com.estrongs.android.view.ak)) {
+      locala.a(true);
+    }
+    locala.a();
+    cr.b(a).B();
+    return true;
   }
 }
 

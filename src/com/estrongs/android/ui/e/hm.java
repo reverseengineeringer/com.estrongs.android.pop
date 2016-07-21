@@ -2,18 +2,28 @@ package com.estrongs.android.ui.e;
 
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.app.PopAudioPlayer;
+import com.estrongs.android.pop.utils.ao;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.view.ak;
+import java.util.List;
 
 class hm
   implements MenuItem.OnMenuItemClickListener
 {
-  hm(hl paramhl) {}
+  hm(cr paramcr) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    hl.a(a).a(hl.a(a).v());
-    hl.a(a).u();
-    return true;
+    paramMenuItem = cr.a(a);
+    if (paramMenuItem.size() == 0) {
+      ak.a(cr.b(a).getBaseContext(), 2131231551, 0);
+    }
+    for (;;)
+    {
+      cr.b(a).B();
+      return true;
+      ao.c(cr.b(a), paramMenuItem);
+    }
   }
 }
 

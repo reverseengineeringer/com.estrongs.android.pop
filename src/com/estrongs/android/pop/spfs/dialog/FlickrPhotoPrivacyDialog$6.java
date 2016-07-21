@@ -10,7 +10,7 @@ import com.estrongs.android.pop.spfs.PhotoInfoException;
 import com.estrongs.android.pop.spfs.PhotoInfoManager;
 import com.estrongs.android.pop.spfs.SPFileInfo;
 import com.estrongs.android.pop.spfs.SPFileObject;
-import com.estrongs.android.util.am;
+import com.estrongs.android.util.ap;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -38,7 +38,7 @@ class FlickrPhotoPrivacyDialog$6
       {
         result = true;
         break label209;
-        if ((!FlickrPhotoPrivacyDialog.access$1400(this$0)) && (am.aI(FlickrPhotoPrivacyDialog.access$500(this$0))) && (!am.aJ(FlickrPhotoPrivacyDialog.access$500(this$0))))
+        if ((!FlickrPhotoPrivacyDialog.access$1400(this$0)) && (ap.aS(FlickrPhotoPrivacyDialog.access$500(this$0))) && (!ap.aT(FlickrPhotoPrivacyDialog.access$500(this$0))))
         {
           FlickrPhotoPrivacyDialog.access$702(this$0, PhotoInfoManager.getAllAlbums(FlickrPhotoPrivacyDialog.access$500(this$0)));
           paramVarArgs = FlickrPhotoPrivacyDialog.access$700(this$0).iterator();
@@ -114,7 +114,7 @@ class FlickrPhotoPrivacyDialog$6
         return;
       }
     }
-    com.estrongs.android.pop.utils.a.a(FlickrPhotoPrivacyDialog.access$1700(this$0), 2131428079);
+    com.estrongs.android.pop.utils.a.a(FlickrPhotoPrivacyDialog.access$1700(this$0), 2131231509);
   }
 }
 

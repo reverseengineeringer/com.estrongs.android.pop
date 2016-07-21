@@ -1,5 +1,5 @@
 .class public Lcom/estrongs/android/ui/preference/fragments/WindowPreferenceFragment;
-.super Lcom/estrongs/android/pop/esclasses/i;
+.super Lcom/estrongs/android/pop/esclasses/m;
 
 
 # instance fields
@@ -10,7 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/i;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/m;-><init>()V
 
     return-void
 .end method
@@ -25,9 +25,9 @@
         }
     .end annotation
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/i;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/m;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f050013
+    const v0, 0x7f050014
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/preference/fragments/WindowPreferenceFragment;->addPreferencesFromResource(I)V
 
@@ -41,9 +41,9 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/WindowPreferenceFragment;->a:Landroid/preference/Preference;
 
-    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/be;
+    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/bg;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/be;-><init>(Lcom/estrongs/android/ui/preference/fragments/WindowPreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/bg;-><init>(Lcom/estrongs/android/ui/preference/fragments/WindowPreferenceFragment;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 

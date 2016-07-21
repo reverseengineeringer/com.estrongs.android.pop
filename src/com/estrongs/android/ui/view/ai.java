@@ -1,16 +1,22 @@
 package com.estrongs.android.ui.view;
 
-import android.media.MediaPlayer;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 class ai
-  implements Runnable
+  implements View.OnClickListener
 {
-  ai(ESVideoView paramESVideoView, MediaPlayer paramMediaPlayer) {}
+  ai(ac paramac, aj paramaj) {}
   
-  public void run()
+  public void onClick(View paramView)
   {
-    a.reset();
-    a.release();
+    if (b.b())
+    {
+      a.itemView.performClick();
+      return;
+    }
+    b.a(true);
+    a.itemView.performClick();
   }
 }
 

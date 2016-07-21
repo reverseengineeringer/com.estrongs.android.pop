@@ -1,16 +1,19 @@
 package com.estrongs.android.ui.e;
 
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.content.DialogInterface.OnCancelListener;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.fs.b.w;
 
-class dd
-  implements DialogInterface.OnClickListener
+final class dd
+  implements DialogInterface.OnCancelListener
 {
-  dd(db paramdb) {}
+  dd(w paramw, FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void onCancel(DialogInterface paramDialogInterface)
   {
-    paramDialogInterface.dismiss();
+    a.requestStop();
+    b.runOnUiThread(new de(this));
   }
 }
 

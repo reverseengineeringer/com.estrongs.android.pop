@@ -193,6 +193,16 @@
     goto :goto_0
 .end method
 
+.method protected onMeasure(II)V
+    .locals 0
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/esclasses/ESWebView;->invalidate()V
+
+    invoke-super {p0, p1, p2}, Landroid/webkit/WebView;->onMeasure(II)V
+
+    return-void
+.end method
+
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 

@@ -2,71 +2,40 @@ package com.estrongs.android.ui.e;
 
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.ad;
+import com.estrongs.android.pop.b;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.pop.view.utils.AppRunner;
-import com.estrongs.android.ui.dialog.ct;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.am;
-import com.estrongs.fs.h;
-import com.estrongs.fs.impl.b.f;
-import com.estrongs.fs.impl.local.l;
-import java.util.ArrayList;
-import java.util.Iterator;
+import com.estrongs.android.pop.z;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.ap;
 import java.util.List;
 
 class er
   implements MenuItem.OnMenuItemClickListener
 {
-  er(cp paramcp) {}
+  er(cr paramcr) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    Object localObject = cp.b(a);
-    if (((List)localObject).size() == 0) {
-      ag.a(cp.a(a).getBaseContext(), 2131427774, 0);
-    }
-    while (((List)localObject).size() < 1) {
+    paramMenuItem = cr.a(a);
+    if (paramMenuItem.size() == 0)
+    {
+      ak.a(cr.b(a).getBaseContext(), 2131231551, 0);
       return true;
     }
-    if ((l.a(cp.a(a), false)) && (ad.a(cp.a(a)).aa()))
+    String str = cr.c(a);
+    if ((ap.aQ(str)) || (ap.aY(str)))
     {
-      paramMenuItem = new ct(cp.a(a));
-      paramMenuItem.a(cp.a(a).getText(2131427400)).b(cp.a(a).getText(2131428203)).b(2131427339, new et(this, (List)localObject)).c(2131427340, new es(this));
-      paramMenuItem.c();
-    }
-    for (;;)
-    {
-      cp.a(a).s();
+      cr.b(a).a(cr.b(a).getString(2131230840), paramMenuItem, true);
       return true;
-      ArrayList localArrayList = new ArrayList();
-      paramMenuItem = null;
-      Iterator localIterator = ((List)localObject).iterator();
-      while (localIterator.hasNext())
-      {
-        h localh = (h)localIterator.next();
-        if (am.bb(localh.getPath()))
-        {
-          cp.a(a).a(localh.getPath(), localh.getAbsolutePath());
-        }
-        else
-        {
-          localArrayList.add(localh.getAbsolutePath());
-          if ((localh instanceof f))
-          {
-            localObject = paramMenuItem;
-            if (paramMenuItem == null) {
-              localObject = new ArrayList();
-            }
-            ((List)localObject).add((f)localh);
-            paramMenuItem = (MenuItem)localObject;
-          }
-        }
-      }
-      if (localArrayList.size() > 0) {
-        AppRunner.a(cp.a(a), localArrayList, paramMenuItem);
-      }
     }
+    paramMenuItem = new es(this, paramMenuItem);
+    int i = -1;
+    if (z.n) {
+      i = -2;
+    }
+    str = b.b();
+    cr.b(a).a(2130838148, cr.b(a).getString(2131230840), paramMenuItem, i, str);
+    return true;
   }
 }
 

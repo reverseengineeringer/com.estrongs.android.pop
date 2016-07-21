@@ -2,9 +2,8 @@ package com.estrongs.android.ui.preference.fragments;
 
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
+import com.estrongs.android.pop.FexApplication;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.util.am;
-import com.estrongs.fs.a.b;
 
 class ac
   implements Preference.OnPreferenceChangeListener
@@ -13,9 +12,11 @@ class ac
   
   public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
   {
-    DisplayPreferenceFragment.b(a).c(Boolean.valueOf(paramObject.toString()).booleanValue());
-    paramPreference = am.bF(DisplayPreferenceFragment.b(a).j("Market")) + "*";
-    b.a().a(paramPreference);
+    paramPreference = paramPreference.getKey();
+    FexApplication.a().a(paramPreference, paramObject);
+    if ("hidden_file".equals(paramPreference)) {
+      ad.a(a.getActivity()).a(((Boolean)paramObject).booleanValue(), false);
+    }
     return true;
   }
 }

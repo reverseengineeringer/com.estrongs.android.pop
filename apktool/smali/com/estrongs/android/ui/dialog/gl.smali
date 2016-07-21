@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
@@ -22,98 +22,65 @@
 
 
 # virtual methods
-.method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 4
 
     iget-object v0, p0, Lcom/estrongs/android/ui/dialog/gl;->a:Lcom/estrongs/android/ui/dialog/gk;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/gk;->a(Lcom/estrongs/android/ui/dialog/gk;)Lcom/estrongs/android/ui/dialog/gr;
+    invoke-static {v0, p2}, Lcom/estrongs/android/ui/dialog/gk;->a(Lcom/estrongs/android/ui/dialog/gk;I)I
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/gl;->a:Lcom/estrongs/android/ui/dialog/gk;
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/gl;->a:Lcom/estrongs/android/ui/dialog/gk;
+
+    iget-object v1, v1, Lcom/estrongs/android/ui/dialog/gk;->b:[I
+
+    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/gl;->a:Lcom/estrongs/android/ui/dialog/gk;
+
+    invoke-static {v2}, Lcom/estrongs/android/ui/dialog/gk;->a(Lcom/estrongs/android/ui/dialog/gk;)I
+
+    move-result v2
+
+    aget v1, v1, v2
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/ui/dialog/gk;->b(Lcom/estrongs/android/ui/dialog/gk;I)I
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/gl;->a:Lcom/estrongs/android/ui/dialog/gk;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/gk;->b(Lcom/estrongs/android/ui/dialog/gk;)Lcom/estrongs/android/ui/dialog/gm;
 
     move-result-object v0
 
-    invoke-virtual {v0, p3}, Lcom/estrongs/android/ui/dialog/gr;->a(I)Lorg/json/JSONObject;
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/gl;->a:Lcom/estrongs/android/ui/dialog/gk;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/gk;->b(Lcom/estrongs/android/ui/dialog/gk;)Lcom/estrongs/android/ui/dialog/gm;
 
     move-result-object v0
 
-    const-string v1, "key"
+    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/gl;->a:Lcom/estrongs/android/ui/dialog/gk;
 
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/estrongs/android/ui/dialog/gk;->c(Lcom/estrongs/android/ui/dialog/gk;)I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/gl;->a:Lcom/estrongs/android/ui/dialog/gk;
 
-    :try_start_0
-    const-string v1, "key"
+    iget-object v2, v2, Lcom/estrongs/android/ui/dialog/gk;->c:[Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    iget-object v3, p0, Lcom/estrongs/android/ui/dialog/gl;->a:Lcom/estrongs/android/ui/dialog/gk;
 
-    move-result-object v1
+    invoke-static {v3}, Lcom/estrongs/android/ui/dialog/gk;->a(Lcom/estrongs/android/ui/dialog/gk;)I
 
-    const-string v2, "disable"
+    move-result v3
 
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+    aget-object v2, v2, v3
 
-    move-result v0
-
-    const/4 v2, 0x1
-
-    if-ne v0, v2, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/gl;->a:Lcom/estrongs/android/ui/dialog/gk;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/gk;->b(Lcom/estrongs/android/ui/dialog/gk;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0, v1}, Lcom/estrongs/android/pop/a/a;->b(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
-
-    :goto_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/gl;->a:Lcom/estrongs/android/ui/dialog/gk;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/gk;->c(Lcom/estrongs/android/ui/dialog/gk;)V
+    invoke-interface {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/gm;->a(ILjava/lang/String;)V
 
     :cond_0
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+
     return-void
-
-    :cond_1
-    :try_start_1
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/gl;->a:Lcom/estrongs/android/ui/dialog/gk;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/gk;->b(Lcom/estrongs/android/ui/dialog/gk;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0, v1}, Lcom/estrongs/android/pop/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
-
-    goto :goto_0
-
-    :catch_1
-    move-exception v0
-
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
-
-    goto :goto_0
 .end method

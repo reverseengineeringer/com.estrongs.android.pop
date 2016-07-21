@@ -122,7 +122,7 @@
 
     invoke-virtual {p3, v2}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-static {p3}, Lcom/estrongs/android/ui/d/a;->a(Landroid/view/View;)Landroid/graphics/Bitmap;
+    invoke-static {p3}, Lcom/estrongs/android/ui/d/g;->a(Landroid/view/View;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 

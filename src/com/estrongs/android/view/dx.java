@@ -1,8 +1,10 @@
 package com.estrongs.android.view;
 
+import com.estrongs.fs.h;
+
 public abstract interface dx
 {
-  public abstract void a(boolean paramBoolean);
+  public abstract void a(h paramh);
 }
 
 /* Location:

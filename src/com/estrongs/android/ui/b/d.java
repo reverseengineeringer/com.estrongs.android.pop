@@ -1,29 +1,29 @@
 package com.estrongs.android.ui.b;
 
+import android.app.Activity;
 import android.view.View;
-import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.android.ui.dialog.ct;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.ui.dialog.cv;
 import com.estrongs.fs.h;
 
 public class d
 {
   private q a = null;
   
-  public d(ESActivity paramESActivity, h paramh)
+  public d(Activity paramActivity, h paramh)
   {
-    a = new q(paramESActivity, paramh);
+    a = new q(paramActivity, paramh);
   }
   
   public void a()
   {
-    Object localObject = a.aq();
-    ct localct = new ct(((View)localObject).getContext()).a(2131427577);
-    localct.a((View)localObject);
-    localct.a(2131427340, new e(this));
-    localObject = localct.b();
-    a.a = ((cg)localObject);
-    ((cg)localObject).show();
+    Object localObject = a.aE();
+    cv localcv = new cv(((View)localObject).getContext()).a(2131232219);
+    localcv.a((View)localObject);
+    localcv.a(2131231265, new e(this));
+    localObject = localcv.b();
+    a.a = ((ci)localObject);
+    ((ci)localObject).show();
   }
 }
 

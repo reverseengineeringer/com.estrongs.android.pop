@@ -1,8 +1,28 @@
 package com.estrongs.android.widget;
 
-public abstract interface bt
+class bt
+  implements Runnable
 {
-  public abstract void a();
+  bt(TranslateImageView paramTranslateImageView) {}
+  
+  public void run()
+  {
+    if ((a.isShown()) && (TranslateImageView.a(a) != TranslateImageView.b(a))) {
+      a.postInvalidate();
+    }
+    do
+    {
+      return;
+      TranslateImageView.a(a, TranslateImageView.a(a));
+      TranslateImageView.a(a, false);
+      if (TranslateImageView.c(a) != null)
+      {
+        TranslateImageView.c(a).a();
+        TranslateImageView.a(a, null);
+      }
+    } while ((TranslateImageView.b(a) != 0) || (TranslateImageView.d(a) == null));
+    TranslateImageView.d(a).a();
+  }
 }
 
 /* Location:

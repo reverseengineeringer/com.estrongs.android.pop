@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_select">ಆರಿಸು</string>
-    <string name="app_name">ES File Explorer</string>
-    <string name="app_media_player">ES ಮೀಡಿಯಾ ಪ್ಲೇಯರ್</string>
-    <string name="app_note_editor">ES Note ಸಂಪಾದಕ</string>
-    <string name="app_image_browser">ES ಚಿತ್ರ ಬ್ರೌಸರ್</string>
-    <string name="app_zip_viewer">ES Zip ವೀಕ್ಷಕ</string>
     <string name="app_downloader">ES ಡೌನ್‍ಲೋಡರ್</string>
+    <string name="app_image_browser">ES ಚಿತ್ರ ಬ್ರೌಸರ್</string>
+    <string name="app_media_player">ES ಮೀಡಿಯಾ ಪ್ಲೇಯರ್</string>
+    <string name="app_name">ES File Explorer</string>
+    <string name="app_note_editor">ES Note ಸಂಪಾದಕ</string>
+    <string name="app_zip_viewer">ES Zip ವೀಕ್ಷಕ</string>
     <string name="select_device_to_share">ಕಳುಹಿಸಲು ಒಂದು ಸಾಧನವನ್ನು ಆರಿಸಿ</string>
     <string name="es_share_name">LANನಿಂದ ಕಳುಹಿಸು</string>
 </resources>

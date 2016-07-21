@@ -1,28 +1,25 @@
 package com.estrongs.android.pop.app;
 
-import android.app.ProgressDialog;
+import com.estrongs.a.a.c;
+import com.estrongs.android.d.d;
+import java.util.Map;
 
 class lw
-  implements Runnable
+  implements d
 {
-  lw(lv paramlv, int paramInt) {}
+  lw(ShowDialogActivity paramShowDialogActivity, c paramc, com.estrongs.a.a parama) {}
   
-  public void run()
+  public void a(String paramString1, String paramString2, Object paramObject)
   {
-    if (StreamingMediaPlayer.e(b.a)) {
-      if (a == -15) {
-        b.a.a(4);
-      }
+    com.estrongs.android.d.a.a.remove(Long.valueOf(ShowDialogActivity.a(c)));
+    a.b = paramString1;
+    paramObject = a;
+    paramString1 = paramString2;
+    if (paramString2 == null) {
+      paramString1 = "";
     }
-    do
-    {
-      return;
-      StreamingMediaPlayer.b(b.a, false);
-      return;
-      b.a.a(5);
-    } while (StreamingMediaPlayer.f(b.a).getProgress() != 0);
-    StreamingMediaPlayer.f(b.a).setMax((int)StreamingMediaPlayer.g(b.a));
-    StreamingMediaPlayer.f(b.a).incrementProgressBy((int)StreamingMediaPlayer.h(b.a));
+    c = paramString1;
+    b.sendMessage(5, new Object[] { a });
   }
 }
 

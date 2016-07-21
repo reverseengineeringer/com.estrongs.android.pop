@@ -41,7 +41,7 @@
 
 .field private t:I
 
-.field private u:Lcom/estrongs/android/ui/theme/al;
+.field private u:Lcom/estrongs/android/ui/theme/at;
 
 .field private v:Lcom/estrongs/android/ui/view/MaxWidthLinearLayout;
 
@@ -96,7 +96,7 @@
 
     const/high16 v9, 0x3f000000    # 0.5f
 
-    const v0, 0x7f0a030f
+    const v0, 0x7f0e056e
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/OpenRecomm;->findViewById(I)Landroid/view/View;
 
@@ -148,7 +148,7 @@
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f0a0310
+    const v0, 0x7f0e056f
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/OpenRecomm;->findViewById(I)Landroid/view/View;
 
@@ -160,7 +160,7 @@
 
     iget v4, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    const v0, 0x7f0a0318
+    const v0, 0x7f0e0577
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/OpenRecomm;->findViewById(I)Landroid/view/View;
 
@@ -227,7 +227,7 @@
 
     iput v0, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->q:I
 
-    const/high16 v0, 0x41e00000    # 28.0f
+    const/high16 v0, 0x42c80000    # 100.0f
 
     mul-float/2addr v0, v1
 
@@ -323,27 +323,27 @@
 
     invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onCreate(Landroid/os/Bundle;)V
 
-    invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/OpenRecomm;->requestWindowFeature(I)Z
+    invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/OpenRecomm;->supportRequestWindowFeature(I)Z
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/OpenRecomm;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    const v3, 0x7f020040
+    const v3, 0x7f0200bc
 
     invoke-virtual {v0, v3}, Landroid/view/Window;->setBackgroundDrawableResource(I)V
 
-    invoke-static {p0}, Lcom/estrongs/android/ui/theme/al;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
+    invoke-static {p0}, Lcom/estrongs/android/ui/theme/at;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->u:Lcom/estrongs/android/ui/theme/al;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->u:Lcom/estrongs/android/ui/theme/at;
 
-    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    const v3, 0x7f0300a6
+    const v3, 0x7f030147
 
     const/4 v4, 0x0
 
@@ -363,7 +363,7 @@
 
     move-result-object v3
 
-    invoke-static {p0}, Lcom/estrongs/android/pop/utils/cl;->a(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/estrongs/android/pop/utils/cu;->a(Landroid/content/Context;)Z
 
     move-result v4
 
@@ -406,7 +406,7 @@
 
     iget v2, v2, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/view/MaxWidthLinearLayout;->a(I)V
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/view/MaxWidthLinearLayout;->setMaxWidth(I)V
 
     :cond_0
     :goto_1
@@ -414,7 +414,7 @@
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/OpenRecomm;->setContentView(Landroid/view/View;)V
 
-    const v0, 0x7f0a0311
+    const v0, 0x7f0e0570
 
     :try_start_0
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/OpenRecomm;->findViewById(I)Landroid/view/View;
@@ -425,7 +425,7 @@
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->a:Landroid/widget/TextView;
 
-    const v0, 0x7f0a0313
+    const v0, 0x7f0e0572
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/OpenRecomm;->findViewById(I)Landroid/view/View;
 
@@ -435,7 +435,7 @@
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->g:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0a0314
+    const v0, 0x7f0e0573
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/OpenRecomm;->findViewById(I)Landroid/view/View;
 
@@ -445,7 +445,7 @@
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->d:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a0312
+    const v0, 0x7f0e0571
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/OpenRecomm;->findViewById(I)Landroid/view/View;
 
@@ -455,7 +455,7 @@
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->e:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a0316
+    const v0, 0x7f0e0575
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/OpenRecomm;->findViewById(I)Landroid/view/View;
 
@@ -465,7 +465,7 @@
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->b:Landroid/widget/ListView;
 
-    const v0, 0x7f0a0317
+    const v0, 0x7f0e0576
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/OpenRecomm;->findViewById(I)Landroid/view/View;
 
@@ -479,9 +479,9 @@
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/view/RecommendListView;->a(Z)V
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/view/RecommendListView;->setDialogStyle(Z)V
 
-    const v0, 0x7f0a0319
+    const v0, 0x7f0e0578
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/OpenRecomm;->findViewById(I)Landroid/view/View;
 
@@ -493,9 +493,9 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->h:Landroid/widget/CheckBox;
 
-    new-instance v2, Lcom/estrongs/android/pop/app/eg;
+    new-instance v2, Lcom/estrongs/android/pop/app/ef;
 
-    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/eg;-><init>(Lcom/estrongs/android/pop/app/OpenRecomm;)V
+    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/ef;-><init>(Lcom/estrongs/android/pop/app/OpenRecomm;)V
 
     invoke-virtual {v0, v2}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
@@ -507,11 +507,11 @@
 
     move-result-object v0
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_5
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/OpenRecomm;->finish()V
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     :goto_2
     return-void
@@ -523,6 +523,29 @@
 
     :cond_2
     if-eqz v4, :cond_3
+
+    if-nez v0, :cond_3
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->v:Lcom/estrongs/android/ui/view/MaxWidthLinearLayout;
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/OpenRecomm;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->heightPixels:I
+
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/view/MaxWidthLinearLayout;->setMaxWidth(I)V
+
+    goto/16 :goto_1
+
+    :cond_3
+    if-eqz v4, :cond_4
+
+    if-eqz v0, :cond_4
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->v:Lcom/estrongs/android/ui/view/MaxWidthLinearLayout;
 
@@ -536,20 +559,20 @@
 
     iget v2, v2, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/view/MaxWidthLinearLayout;->a(I)V
-
-    goto/16 :goto_1
-
-    :cond_3
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->v:Lcom/estrongs/android/ui/view/MaxWidthLinearLayout;
-
-    iget v2, v3, Landroid/util/DisplayMetrics;->widthPixels:I
-
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/view/MaxWidthLinearLayout;->a(I)V
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/view/MaxWidthLinearLayout;->setMaxWidth(I)V
 
     goto/16 :goto_1
 
     :cond_4
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->v:Lcom/estrongs/android/ui/view/MaxWidthLinearLayout;
+
+    iget v2, v3, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/view/MaxWidthLinearLayout;->setMaxWidth(I)V
+
+    goto/16 :goto_1
+
+    :cond_5
     :try_start_1
     const-string v2, "filepath"
 
@@ -569,7 +592,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->l:Landroid/content/Intent;
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_6
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/OpenRecomm;->getIntent()Landroid/content/Intent;
 
@@ -585,7 +608,7 @@
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->l:Landroid/content/Intent;
 
-    :cond_5
+    :cond_6
     iget-object v0, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->l:Landroid/content/Intent;
 
     invoke-virtual {v0}, Landroid/content/Intent;->getType()Ljava/lang/String;
@@ -604,11 +627,11 @@
 
     iput-boolean v2, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->m:Z
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     array-length v2, v0
 
-    if-lez v2, :cond_6
+    if-lez v2, :cond_7
 
     array-length v2, v0
 
@@ -616,11 +639,11 @@
 
     iget-object v2, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->b:Landroid/widget/ListView;
 
-    new-instance v3, Lcom/estrongs/android/pop/app/ei;
+    new-instance v3, Lcom/estrongs/android/pop/app/eh;
 
-    const v4, 0x7f0300a7
+    const v4, 0x7f030148
 
-    invoke-direct {v3, p0, p0, v4, v0}, Lcom/estrongs/android/pop/app/ei;-><init>(Lcom/estrongs/android/pop/app/OpenRecomm;Landroid/content/Context;I[Lcom/estrongs/android/pop/view/utils/t;)V
+    invoke-direct {v3, p0, p0, v4, v0}, Lcom/estrongs/android/pop/app/eh;-><init>(Lcom/estrongs/android/pop/app/OpenRecomm;Landroid/content/Context;I[Lcom/estrongs/android/pop/view/utils/t;)V
 
     invoke-virtual {v2, v3}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
@@ -628,24 +651,12 @@
 
     iput-boolean v2, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->m:Z
 
-    :cond_6
+    :cond_7
     invoke-static {}, Lcom/estrongs/android/pop/view/utils/n;->b()Lcom/estrongs/android/pop/view/utils/n;
 
     move-result-object v2
 
     invoke-virtual {v2, p0}, Lcom/estrongs/android/pop/view/utils/n;->a(Landroid/content/Context;)J
-
-    move-result-wide v2
-
-    const-wide/16 v4, 0x3e8
-
-    div-long/2addr v2, v4
-
-    iget-wide v4, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->p:J
-
-    cmp-long v2, v2, v4
-
-    if-lez v2, :cond_7
 
     invoke-static {}, Lcom/estrongs/android/pop/view/utils/n;->b()Lcom/estrongs/android/pop/view/utils/n;
 
@@ -655,10 +666,9 @@
 
     invoke-virtual {v2, v3}, Lcom/estrongs/android/pop/view/utils/n;->a(Z)V
 
-    :cond_7
     iget-boolean v2, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->m:Z
 
-    if-eqz v2, :cond_c
+    if-eqz v2, :cond_b
 
     array-length v2, v0
 
@@ -727,7 +737,7 @@
     :cond_a
     iget-object v0, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->a:Landroid/widget/TextView;
 
-    const v1, 0x7f0b002a
+    const/high16 v1, 0x7f080000
 
     invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/OpenRecomm;->getString(I)Ljava/lang/String;
 
@@ -741,9 +751,9 @@
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/RecommendListView;->setVisibility(I)V
 
-    new-instance v0, Lcom/estrongs/android/pop/app/eh;
+    new-instance v0, Lcom/estrongs/android/pop/app/eg;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/eh;-><init>(Lcom/estrongs/android/pop/app/OpenRecomm;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/eg;-><init>(Lcom/estrongs/android/pop/app/OpenRecomm;)V
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->b:Landroid/widget/ListView;
 
@@ -751,7 +761,25 @@
 
     invoke-direct {p0}, Lcom/estrongs/android/pop/app/OpenRecomm;->a()V
     :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    :goto_3
+    :try_start_2
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->j:Ljava/lang/String;
+
+    if-nez v0, :cond_d
+
+    invoke-static {p0}, Lcom/estrongs/android/j/c;->a(Landroid/content/Context;)Lcom/estrongs/android/j/c;
+
+    move-result-object v0
+
+    const-string v1, "open_recommend"
+
+    const-string v2, ""
+
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/j/c;->c(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
     goto/16 :goto_2
 
@@ -760,25 +788,10 @@
 
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    :try_start_2
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->l:Landroid/content/Intent;
-
-    if-eqz v0, :cond_b
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->l:Landroid/content/Intent;
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/OpenRecomm;->startActivity(Landroid/content/Intent;)V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :cond_b
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/OpenRecomm;->finish()V
-
     goto/16 :goto_2
 
-    :cond_c
-    const v0, 0x7f0b01c6
+    :cond_b
+    const v0, 0x7f080136
 
     :try_start_3
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/OpenRecomm;->getString(I)Ljava/lang/String;
@@ -787,24 +800,56 @@
 
     const/4 v1, 0x1
 
-    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
 
-    :goto_3
+    :goto_4
     :try_start_4
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/OpenRecomm;->finish()V
     :try_end_4
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
 
     goto/16 :goto_2
 
     :catch_1
     move-exception v0
 
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    :try_start_5
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->l:Landroid/content/Intent;
+
+    if-eqz v0, :cond_c
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->l:Landroid/content/Intent;
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/OpenRecomm;->startActivity(Landroid/content/Intent;)V
+    :try_end_5
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_3
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    :cond_c
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/OpenRecomm;->finish()V
 
-    goto/16 :goto_2
+    goto :goto_3
+
+    :catch_2
+    move-exception v0
+
+    :try_start_6
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+    :try_end_6
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_1
+
+    goto :goto_4
+
+    :catch_3
+    move-exception v0
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/OpenRecomm;->finish()V
+
+    goto :goto_3
 
     :catchall_0
     move-exception v0
@@ -813,10 +858,21 @@
 
     throw v0
 
-    :catch_2
-    move-exception v0
+    :cond_d
+    :try_start_7
+    invoke-static {p0}, Lcom/estrongs/android/j/c;->a(Landroid/content/Context;)Lcom/estrongs/android/j/c;
 
-    goto :goto_3
+    move-result-object v0
+
+    const-string v1, "open_recommend"
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/OpenRecomm;->j:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/j/c;->c(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_7
+    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_0
+
+    goto/16 :goto_2
 .end method
 
 .method public onDestroy()V

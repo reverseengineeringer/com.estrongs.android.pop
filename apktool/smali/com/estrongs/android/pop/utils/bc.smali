@@ -2,22 +2,26 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnDismissListener;
+.implements Lcom/estrongs/a/a/p;
 
 
 # instance fields
-.field final synthetic a:[Ljava/lang/Boolean;
+.field final synthetic a:Landroid/app/Activity;
 
-.field final synthetic b:Landroid/app/Activity;
+.field final synthetic b:Lcom/estrongs/fs/h;
+
+.field final synthetic c:Lcom/estrongs/fs/h;
 
 
 # direct methods
-.method constructor <init>([Ljava/lang/Boolean;Landroid/app/Activity;)V
+.method constructor <init>(Landroid/app/Activity;Lcom/estrongs/fs/h;Lcom/estrongs/fs/h;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/utils/bc;->a:[Ljava/lang/Boolean;
+    iput-object p1, p0, Lcom/estrongs/android/pop/utils/bc;->a:Landroid/app/Activity;
 
-    iput-object p2, p0, Lcom/estrongs/android/pop/utils/bc;->b:Landroid/app/Activity;
+    iput-object p2, p0, Lcom/estrongs/android/pop/utils/bc;->b:Lcom/estrongs/fs/h;
+
+    iput-object p3, p0, Lcom/estrongs/android/pop/utils/bc;->c:Lcom/estrongs/fs/h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,25 +30,49 @@
 
 
 # virtual methods
-.method public onDismiss(Landroid/content/DialogInterface;)V
-    .locals 2
+.method public a(Lcom/estrongs/a/a;II)V
+    .locals 5
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/utils/bc;->a:[Ljava/lang/Boolean;
+    const/4 v0, 0x4
 
-    const/4 v1, 0x0
+    if-ne p3, v0, :cond_1
 
-    aget-object v0, v0, v1
+    iget-object v1, p0, Lcom/estrongs/android/pop/utils/bc;->a:Landroid/app/Activity;
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    new-instance v2, Ljava/io/File;
 
-    move-result v0
+    iget-object v0, p0, Lcom/estrongs/android/pop/utils/bc;->b:Lcom/estrongs/fs/h;
 
-    if-eqz v0, :cond_0
+    invoke-interface {v0}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/utils/bc;->b:Landroid/app/Activity;
+    move-result-object v3
 
-    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
+    iget-object v0, p0, Lcom/estrongs/android/pop/utils/bc;->c:Lcom/estrongs/fs/h;
+
+    const-string v4, "item_paste_name"
+
+    invoke-interface {v0, v4}, Lcom/estrongs/fs/h;->getExtra(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-direct {v2, v3, v0}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcom/estrongs/android/pop/utils/ao;->a(Landroid/app/Activity;Ljava/lang/String;)V
 
     :cond_0
+    :goto_0
     return-void
+
+    :cond_1
+    const/4 v0, 0x5
+
+    if-ne p3, v0, :cond_0
+
+    goto :goto_0
 .end method

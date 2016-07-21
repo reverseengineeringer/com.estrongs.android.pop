@@ -1,19 +1,15 @@
 package com.estrongs.android.pop.utils;
 
-import android.app.Activity;
-import com.estrongs.android.ui.pcs.n;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.view.cr;
 
-final class at
-  implements n
+class at
+  implements Runnable
 {
-  at(Activity paramActivity, String paramString) {}
+  at(as paramas, cr paramcr) {}
   
-  public void a(boolean paramBoolean, String paramString1, String paramString2)
+  public void run()
   {
-    if ((paramBoolean) && (bd.b(paramString2))) {
-      aj.b(a, b);
-    }
+    a.b(true);
   }
 }
 

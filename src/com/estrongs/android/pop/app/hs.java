@@ -1,31 +1,39 @@
 package com.estrongs.android.pop.app;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.EditText;
+import android.preference.EditTextPreference;
+import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.b;
-import com.estrongs.android.widget.g;
 
 class hs
-  implements View.OnClickListener
+  implements Preference.OnPreferenceChangeListener
 {
-  hs(hp paramhp, String paramString, EditText paramEditText) {}
+  hs(PopPreferenceActivity paramPopPreferenceActivity) {}
   
-  public void onClick(View paramView)
+  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
   {
-    ht localht = new ht(this, ad.a(c.a).p());
-    PopPreferenceActivity localPopPreferenceActivity = c.a;
-    if (a == null) {}
-    for (paramView = b.b();; paramView = a)
+    paramObject = paramObject.toString();
+    if (((String)paramObject).trim().equals(""))
     {
-      paramView = new g(localPopPreferenceActivity, paramView, localht, true);
-      paramView.a(c.a.getText(2131427370));
-      paramView.b(c.a.getString(2131427339), new hu(this, paramView));
-      paramView.c(c.a.getString(2131427340), new hv(this, paramView));
-      paramView.j();
-      return;
+      a.showDialog(105);
+      return false;
     }
+    boolean bool = PopPreferenceActivity.a(a, (String)paramObject);
+    paramPreference = (Preference)paramObject;
+    if (((String)paramObject).charAt(((String)paramObject).length() - 1) != '/') {
+      paramPreference = (String)paramObject + "/";
+    }
+    PopPreferenceActivity.b(a, paramPreference);
+    PopPreferenceActivity.a(a, 1);
+    if (bool)
+    {
+      PopPreferenceActivity.d(a).setSummary(paramPreference);
+      PopPreferenceActivity.d(a).setText(paramPreference);
+      a.b.s(paramPreference);
+      return true;
+    }
+    a.showDialog(105);
+    return false;
   }
 }
 

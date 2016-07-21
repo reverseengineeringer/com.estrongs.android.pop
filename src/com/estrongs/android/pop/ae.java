@@ -1,7 +1,7 @@
 package com.estrongs.android.pop;
 
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bk;
 import java.util.Comparator;
 
 final class ae
@@ -9,10 +9,10 @@ final class ae
 {
   public int a(String paramString1, String paramString2)
   {
-    paramString1 = am.h(paramString1);
-    paramString2 = am.h(paramString2);
-    if ((bd.b(paramString1)) && (bd.b(paramString2))) {
-      return am.E(paramString1).compareTo(am.E(paramString2));
+    paramString1 = ap.i(paramString1);
+    paramString2 = ap.i(paramString2);
+    if ((bk.b(paramString1)) && (bk.b(paramString2))) {
+      return ap.G(paramString1).compareTo(ap.G(paramString2));
     }
     return -1;
   }

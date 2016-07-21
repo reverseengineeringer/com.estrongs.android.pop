@@ -1,13 +1,16 @@
 package com.estrongs.android.pop.app;
 
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnDismissListener;
+
 class ly
-  implements Runnable
+  implements DialogInterface.OnDismissListener
 {
-  ly(lx paramlx) {}
+  ly(ShowDialogActivity paramShowDialogActivity) {}
   
-  public void run()
+  public void onDismiss(DialogInterface paramDialogInterface)
   {
-    a.a.a(1);
+    a.finish();
   }
 }
 

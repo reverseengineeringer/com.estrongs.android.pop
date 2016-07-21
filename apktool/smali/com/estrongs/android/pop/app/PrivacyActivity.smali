@@ -44,7 +44,7 @@
 
     invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f0b0407
+    const v0, 0x7f08059f
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PrivacyActivity;->setTitle(I)V
 
@@ -56,11 +56,11 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const v0, 0x7f0300bc
+    const v0, 0x7f030160
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PrivacyActivity;->setContentView(I)V
 
-    const v0, 0x7f0a0362
+    const v0, 0x7f0e05cf
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PrivacyActivity;->findViewById(I)Landroid/view/View;
 
@@ -84,15 +84,15 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/PrivacyActivity;->a:Landroid/webkit/WebView;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/kf;
+    new-instance v1, Lcom/estrongs/android/pop/app/ku;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/kf;-><init>(Lcom/estrongs/android/pop/app/PrivacyActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ku;-><init>(Lcom/estrongs/android/pop/app/PrivacyActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
     const-string v0, "http://www.estrongs.com/privacyStatement/en/index.htm"
 
-    invoke-static {}, Lcom/estrongs/android/pop/utils/cc;->b()Z
+    invoke-static {}, Lcom/estrongs/android/pop/utils/cl;->b()Z
 
     move-result v1
 
@@ -107,7 +107,7 @@
     return-void
 
     :cond_1
-    invoke-static {}, Lcom/estrongs/android/pop/utils/cc;->g()Z
+    invoke-static {}, Lcom/estrongs/android/pop/utils/cl;->d()Z
 
     move-result v1
 

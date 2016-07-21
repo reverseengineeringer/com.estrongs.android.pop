@@ -2,7 +2,7 @@ package com.estrongs.android.pop.app;
 
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.ui.e.iw;
+import com.estrongs.android.ui.e.ju;
 
 class jt
   implements MenuItem.OnMenuItemClickListener
@@ -11,9 +11,16 @@ class jt
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    PopVideoPlayer.w(a);
-    PopVideoPlayer.D(a).d();
-    return true;
+    PopVideoPlayer.z(a);
+    PopVideoPlayer.A(a).d();
+    if (a.f) {
+      PopVideoPlayer.B(a);
+    }
+    for (;;)
+    {
+      return true;
+      PopVideoPlayer.C(a);
+    }
   }
 }
 

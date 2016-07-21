@@ -68,9 +68,9 @@
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemImageViewer;->b:Landroid/view/ViewGroup$LayoutParams;
 
-    new-instance v0, Lcom/estrongs/android/pop/app/kp;
+    new-instance v0, Lcom/estrongs/android/pop/app/le;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/kp;-><init>(Lcom/estrongs/android/pop/app/RecommItemImageViewer;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/le;-><init>(Lcom/estrongs/android/pop/app/RecommItemImageViewer;)V
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemImageViewer;->j:Landroid/os/Handler;
 
@@ -153,9 +153,9 @@
 .method public a(Ljava/lang/Object;)V
     .locals 5
 
-    check-cast p1, Lcom/estrongs/android/util/y;
+    check-cast p1, Lcom/estrongs/android/util/aa;
 
-    iget-object v0, p1, Lcom/estrongs/android/util/y;->e:Ljava/lang/Object;
+    iget-object v0, p1, Lcom/estrongs/android/util/aa;->e:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
 
@@ -189,7 +189,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemImageViewer;->c:Lcom/estrongs/android/pop/view/utils/v;
 
-    iget-object v1, v1, Lcom/estrongs/android/pop/view/utils/v;->o:[Lcom/estrongs/android/util/y;
+    iget-object v1, v1, Lcom/estrongs/android/pop/view/utils/v;->o:[Lcom/estrongs/android/util/aa;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -223,15 +223,13 @@
 
     const/16 v7, 0xf
 
+    const/4 v6, 0x1
+
     const/4 v2, 0x0
 
     const/4 v3, -0x1
 
-    const/4 v6, 0x1
-
     invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onCreate(Landroid/os/Bundle;)V
-
-    invoke-virtual {p0, v6}, Lcom/estrongs/android/pop/app/RecommItemImageViewer;->requestWindowFeature(I)Z
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/RecommItemImageViewer;->getIntent()Landroid/content/Intent;
 
@@ -275,7 +273,7 @@
 
     iput v0, p0, Lcom/estrongs/android/pop/app/RecommItemImageViewer;->i:I
 
-    const v0, 0x7f0300c3
+    const v0, 0x7f030169
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemImageViewer;->setContentView(I)V
 
@@ -291,7 +289,7 @@
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemImageViewer;->f:Landroid/os/Handler;
 
-    const v0, 0x7f0a0384
+    const v0, 0x7f0e05f4
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemImageViewer;->findViewById(I)Landroid/view/View;
 
@@ -331,7 +329,7 @@
 
     if-ne v1, v4, :cond_1
 
-    const v4, 0x7f02006c
+    const v4, 0x7f02015d
 
     invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -347,14 +345,14 @@
     goto :goto_0
 
     :cond_1
-    const v4, 0x7f02006d
+    const v4, 0x7f02015e
 
     invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto :goto_1
 
     :cond_2
-    const v0, 0x7f0a026c
+    const v0, 0x7f0e0440
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemImageViewer;->findViewById(I)Landroid/view/View;
 
@@ -366,15 +364,15 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemImageViewer;->a:Lcom/estrongs/android/widget/RealViewSwitcher;
 
-    invoke-virtual {v0, v6}, Lcom/estrongs/android/widget/RealViewSwitcher;->c(Z)V
+    invoke-virtual {v0, v6}, Lcom/estrongs/android/widget/RealViewSwitcher;->a(Z)V
 
-    new-instance v0, Lcom/estrongs/android/pop/app/ko;
+    new-instance v0, Lcom/estrongs/android/pop/app/ld;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/ko;-><init>(Lcom/estrongs/android/pop/app/RecommItemImageViewer;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/ld;-><init>(Lcom/estrongs/android/pop/app/RecommItemImageViewer;)V
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemImageViewer;->a:Lcom/estrongs/android/widget/RealViewSwitcher;
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/widget/RealViewSwitcher;->a(Lcom/estrongs/android/widget/bc;)V
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/widget/RealViewSwitcher;->setOnScreenSwitchListener(Lcom/estrongs/android/widget/bd;)V
 
     :goto_2
     iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemImageViewer;->c:Lcom/estrongs/android/pop/view/utils/v;
@@ -405,7 +403,7 @@
 
     if-nez v0, :cond_3
 
-    const v0, 0x7f0201ee
+    const v0, 0x7f02033f
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -432,7 +430,7 @@
 
     iget v1, p0, Lcom/estrongs/android/pop/app/RecommItemImageViewer;->i:I
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/RealViewSwitcher;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/RealViewSwitcher;->setCurrentScreen(I)V
 
     return-void
 .end method
@@ -481,7 +479,7 @@
 
     add-int/lit8 v1, v1, -0x1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/RealViewSwitcher;->b(I)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/RealViewSwitcher;->a(I)V
 
     goto :goto_0
 
@@ -508,7 +506,7 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/RealViewSwitcher;->b(I)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/RealViewSwitcher;->a(I)V
 
     goto :goto_0
 .end method

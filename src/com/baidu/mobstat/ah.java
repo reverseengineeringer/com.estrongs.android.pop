@@ -1,39 +1,57 @@
 package com.baidu.mobstat;
 
-import android.content.Context;
-import android.os.Handler;
-import java.util.Timer;
+import android.content.ContentValues;
+import android.database.Cursor;
+import java.util.ArrayList;
 
 class ah
-  implements Runnable
+  extends w
 {
-  ah(ag paramag, Context paramContext, String paramString) {}
-  
-  public void run()
+  public ah()
   {
-    ag.a(c, r.a().a(a));
-    if (ag.a(c)) {
-      ad.a().b(a);
-    }
-    if (ag.b(c) != null)
-    {
-      ag.b(c).cancel();
-      ag.a(c, null);
-    }
-    ag.a(c, SendStrategyEnum.values()[r.a().b(a)]);
-    ag.a(c, r.a().c(a));
-    ag.b(c, r.a().d(a));
-    if (ag.c(c).equals(SendStrategyEnum.SET_TIME_INTERVAL)) {
-      c.a(a, b, "internal");
-    }
+    super("app_change", "Create table if not exists app_change(_id Integer primary key AUTOINCREMENT,time VARCHAR(50),content TEXT);");
+  }
+  
+  private ArrayList<v> a(Cursor paramCursor)
+  {
+    ArrayList localArrayList = new ArrayList();
+    if (paramCursor == null) {}
     for (;;)
     {
-      ag.b().postDelayed(new ai(this), ag.e(c) * 1000);
-      return;
-      if (ag.c(c).equals(SendStrategyEnum.ONCE_A_DAY)) {
-        c.a(a, b, "onceaday");
+      return localArrayList;
+      if (paramCursor.getCount() != 0)
+      {
+        int i = paramCursor.getColumnIndex("_id");
+        int j = paramCursor.getColumnIndex("time");
+        int k = paramCursor.getColumnIndex("content");
+        while (paramCursor.moveToNext()) {
+          localArrayList.add(new v(paramCursor.getLong(i), paramCursor.getString(j), paramCursor.getString(k)));
+        }
       }
     }
+  }
+  
+  public long a(String paramString1, String paramString2)
+  {
+    ContentValues localContentValues = new ContentValues();
+    localContentValues.put("time", paramString1);
+    localContentValues.put("content", paramString2);
+    return a(localContentValues);
+  }
+  
+  public ArrayList<v> a(int paramInt1, int paramInt2)
+  {
+    Cursor localCursor = a("time", paramInt1, paramInt2);
+    ArrayList localArrayList = a(localCursor);
+    if (localCursor != null) {
+      localCursor.close();
+    }
+    return localArrayList;
+  }
+  
+  public boolean b(long paramLong)
+  {
+    return a(paramLong);
   }
 }
 

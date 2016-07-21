@@ -1,17 +1,22 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.ui.dialog.ProgressDialog;
+import com.estrongs.android.ui.adapter.ListAdapter_NewNavi;
 
 class f
   implements Runnable
 {
-  f(e parame, boolean paramBoolean) {}
+  f(FileExplorerActivity paramFileExplorerActivity) {}
   
   public void run()
   {
-    FileExplorerActivity.b(b.a);
-    if ((!a) && (FileExplorerActivity.A(b.a) != null) && (FileExplorerActivity.A(b.a).isShowing())) {
-      FileExplorerActivity.A(b.a).dismiss();
+    try
+    {
+      ListAdapter_NewNavi.c(a);
+      return;
+    }
+    catch (Exception localException)
+    {
+      localException.printStackTrace();
     }
   }
 }

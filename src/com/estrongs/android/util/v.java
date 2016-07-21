@@ -1,14 +1,14 @@
 package com.estrongs.android.util;
 
-import java.io.PrintWriter;
+import java.io.File;
 
 public class v
+  extends u
 {
-  static PrintWriter a = null;
-  
-  public static void a(String paramString) {}
-  
-  public static void a(String paramString, Throwable paramThrowable) {}
+  protected String a(File paramFile)
+  {
+    return paramFile.getName();
+  }
 }
 
 /* Location:

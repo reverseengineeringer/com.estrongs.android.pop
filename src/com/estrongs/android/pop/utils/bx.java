@@ -1,15 +1,20 @@
 package com.estrongs.android.pop.utils;
 
-import android.widget.TextView;
+import android.app.Activity;
+import com.estrongs.a.a.p;
+import com.estrongs.android.view.cr;
+import java.util.List;
 
 class bx
-  implements Runnable
+  implements p
 {
-  bx(bw parambw) {}
+  bx(bv parambv, cr paramcr, com.estrongs.android.pop.app.d.a parama, List paramList, String paramString, Activity paramActivity) {}
   
-  public void run()
+  public void a(com.estrongs.a.a parama, int paramInt1, int paramInt2)
   {
-    a.d.setText(a.a.toString());
+    if ((paramInt2 == 4) && (a != null)) {
+      b.a(new by(this));
+    }
   }
 }
 

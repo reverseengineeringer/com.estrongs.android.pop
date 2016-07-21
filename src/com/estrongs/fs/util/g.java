@@ -2,10 +2,9 @@ package com.estrongs.fs.util;
 
 import com.estrongs.a.b.o;
 import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bc;
-import com.estrongs.fs.i;
-import com.estrongs.fs.impl.local.l;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bg;
+import com.estrongs.fs.impl.local.m;
 import java.io.File;
 import java.util.Iterator;
 import java.util.List;
@@ -60,12 +59,12 @@ public class g
       label134:
       label237:
       long l1;
-      if ((!am.bl(paramFile.getPath())) && (l.a(FexApplication.a(), false)))
+      if ((!ap.bC(paramFile.getPath())) && (m.a(FexApplication.a(), false)))
       {
         Object localObject;
         if ("/".equals(paramFile.getPath()))
         {
-          localObject = com.estrongs.fs.impl.local.h.a(paramFile.getPath(), i.c, o.a).iterator();
+          localObject = com.estrongs.fs.impl.local.i.a(paramFile.getPath(), com.estrongs.fs.i.c, o.a).iterator();
           for (;;)
           {
             if (!((Iterator)localObject).hasNext()) {
@@ -82,10 +81,10 @@ public class g
             catch (StackOverflowError localStackOverflowError3) {}
           }
         }
-        if ((com.estrongs.fs.impl.local.h.h(paramFile.getPath())) && (paramFile.getName().trim().length() > 0))
+        if ((com.estrongs.fs.impl.local.i.h(paramFile.getPath())) && (paramFile.getName().trim().length() > 0))
         {
           c += 1;
-          paramFile = com.estrongs.fs.impl.local.h.a(paramFile.getPath(), i.c, o.a).iterator();
+          paramFile = com.estrongs.fs.impl.local.i.a(paramFile.getPath(), com.estrongs.fs.i.c, o.a).iterator();
           for (;;)
           {
             if (!paramFile.hasNext()) {
@@ -104,7 +103,7 @@ public class g
           continue;
         }
         b += 1;
-        l1 = com.estrongs.fs.impl.local.h.e(paramFile.getPath());
+        l1 = com.estrongs.fs.impl.local.i.e(paramFile.getPath());
         a(paramFile.getName(), l1);
         a = (l1 + a);
         return;
@@ -182,32 +181,32 @@ public class g
   
   public void a(String paramString, long paramLong)
   {
-    int i1 = bc.b(paramString);
-    if (bc.C(i1))
+    int i1 = bg.b(paramString);
+    if (bg.F(i1))
     {
       j += paramLong;
       k += 1L;
       return;
     }
-    if (bc.e(i1))
+    if (bg.e(i1))
     {
       f += paramLong;
       g += 1L;
       return;
     }
-    if (bc.g(i1))
+    if (bg.g(i1))
     {
       h += paramLong;
       i += 1L;
       return;
     }
-    if (bc.a(i1))
+    if (bg.a(i1))
     {
       d += paramLong;
       e += 1L;
       return;
     }
-    if ((bc.j(i1)) || (bc.u(i1)) || (bc.y(i1)) || (bc.v(i1)) || (bc.m(i1)))
+    if ((bg.j(i1)) || (bg.x(i1)) || (bg.B(i1)) || (bg.y(i1)) || (bg.m(i1)))
     {
       l += paramLong;
       m += 1L;

@@ -1,71 +1,94 @@
 package com.estrongs.android.pop.app.compress;
 
-import android.os.Handler;
-import com.estrongs.io.archive.h;
+import com.estrongs.fs.FileSystemException;
+import com.estrongs.io.archive.aeszip.k;
+import com.estrongs.io.archive.c;
+import com.estrongs.io.archive.j;
 import com.estrongs.io.archive.sevenzip.f;
-import java.io.File;
+import com.estrongs.io.archive.sevenzip.x;
+import java.io.IOException;
 
 class ay
   extends Thread
 {
-  ay(aw paramaw) {}
+  ay(ax paramax, String paramString)
+  {
+    super(paramString);
+  }
   
   public void run()
   {
-    a.a = false;
+    Object localObject1 = null;
     try
     {
-      localFile = aw.a(a).d(aw.b(a), new az(this));
-      if (!a.a) {
-        break label77;
+      if (("7z".equalsIgnoreCase(aa).d)) && (!f.a(null, f.a)))
+      {
+        ax.b(a).sendMessage(ax.b(a).obtainMessage(1, 10, 0, null));
+        ax.a(a, false);
+        return;
       }
-      if ((localFile != null) && (localFile.exists())) {
-        localFile.delete();
+      str2 = aa).a;
+      ax.b(a).b(str2);
+      str1 = aa).b;
+      if (!"zip".equalsIgnoreCase(aa).d)) {
+        break label299;
+      }
+      if (str1.length() > 0) {
+        a.a = new k(str2, ax.c(a), aa).e);
       }
     }
-    catch (Exception localException)
+    catch (IOException localIOException)
     {
       for (;;)
       {
-        File localFile;
-        localException.printStackTrace();
-        if (!a.a)
+        ax.b(a).sendMessage(ax.b(a).obtainMessage(2, localIOException.getMessage()));
+        localIOException.printStackTrace();
+        return;
+        if ("7z".equalsIgnoreCase(aa).d))
         {
-          str = localException.getMessage();
-          if ((localException.getMessage() == null) || (!localException.getMessage().contains("WRONG PASSWORD"))) {
+          ax localax = a;
+          com.estrongs.io.a.a.b localb = ax.c(a);
+          if (str1.length() != 0) {
             break;
           }
-          aw.a(a, true);
-          aw.d(a).post(new bd(this, localException));
+          a = new x(str2, localb, localIOException);
         }
-        return;
-        aw.d(a).sendMessage(aw.d(a).obtainMessage(1, localException.getAbsolutePath()));
       }
     }
-    finally
+    catch (NullPointerException localNullPointerException)
     {
-      a.dismiss();
-    }
-    aw.a(a, false);
-    a.dismiss();
-    return;
-    label77:
-    if (localFile == null) {
-      throw new Exception("");
-    }
-    String str;
-    while ((str == null) || (!str.contains("rarEncryptedException"))) {}
-    boolean[] arrayOfBoolean = new boolean[1];
-    arrayOfBoolean[0] = false;
-    if ((f.a(null, f.b, arrayOfBoolean)) && (arrayOfBoolean[0] == 0)) {
-      aw.d(a).post(new ba(this));
-    }
-    for (;;)
-    {
-      a.dismiss();
+      String str2;
+      for (;;)
+      {
+        String str1;
+        ax.a(a, false);
+        ax.b(a).sendMessage(ax.b(a).obtainMessage(2, localNullPointerException.getMessage()));
+        localNullPointerException.printStackTrace();
+        return;
+        Object localObject2 = str1;
+      }
+      ax.a(a, false);
+      ax.b(a).sendMessage(ax.b(a).obtainMessage(1, 10, 0, str2));
+      com.estrongs.fs.a.b.a().a(str2);
       return;
-      aw.d(a).post(new bc(this));
     }
+    catch (FileSystemException localFileSystemException)
+    {
+      ax.a(a, false);
+      ax.b(a).sendMessage(ax.b(a).obtainMessage(2, localFileSystemException.getMessage()));
+      localFileSystemException.printStackTrace();
+    }
+    if (a.a == null) {
+      a.a = new j(str2, ax.c(a), aa).e);
+    }
+    a.a.a(aa).c);
+    if (ax.c(a).b())
+    {
+      ax.a(a, false);
+      ax.b(a).sendMessage(ax.b(a).obtainMessage(1, 10, 0, null));
+      return;
+    }
+    label299:
   }
 }
 

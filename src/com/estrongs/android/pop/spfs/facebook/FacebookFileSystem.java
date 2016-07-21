@@ -1,6 +1,5 @@
 package com.estrongs.android.pop.spfs.facebook;
 
-import android.util.Log;
 import com.estrongs.android.pop.netfs.NetFsException;
 import com.estrongs.android.pop.netfs.NetFsException.ERROR_CODE;
 import com.estrongs.android.pop.netfs.utils.HttpUtils;
@@ -12,7 +11,9 @@ import com.estrongs.android.pop.spfs.PhotoInfoException;
 import com.estrongs.android.pop.spfs.SPFileInfo;
 import com.estrongs.android.pop.spfs.note.IPhotoInfo;
 import com.estrongs.android.util.TypedMap;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.util.bk;
+import com.estrongs.android.util.l;
+import com.estrongs.android.util.n;
 import com.gmail.yuyang226.flickr.b;
 import com.gmail.yuyang226.flickr.c;
 import com.gmail.yuyang226.flickr.d.d;
@@ -288,7 +289,7 @@ public class FacebookFileSystem
     paramString1 = getToken(paramString1, null);
     if (paramString1 == null)
     {
-      Log.e("Facebook", "can't get the token");
+      l.e("Facebook", "can't get the token");
       return null;
     }
     paramString1 = new HttpGet(appendAcessParams(apiUri + paramString2 + "/photos", paramString1, paramInt1, paramInt2));
@@ -300,7 +301,7 @@ public class FacebookFileSystem
     paramString = getToken(paramString, null);
     if (paramString == null)
     {
-      Log.e("Facebook", "can't get the token");
+      l.e("Facebook", "can't get the token");
       return null;
     }
     paramString = new HttpGet(appendAcessParams(apiUri + "me/photos", paramString, paramInt1, paramInt2));
@@ -312,7 +313,7 @@ public class FacebookFileSystem
     String str = getToken(paramString, null);
     if (str == null)
     {
-      Log.e("Facebook", "can't get the token");
+      l.e("Facebook", "can't get the token");
       return null;
     }
     paramString = (FacebookFileSystem.User)access_tokens.get(paramString);
@@ -469,7 +470,7 @@ public class FacebookFileSystem
   
   private Date parseDate(String paramString)
   {
-    return bd.a(paramString.replaceAll("T", " "), dateFormater);
+    return bk.a(paramString.replaceAll("T", " "), dateFormater);
   }
   
   private void parsePhotos(String paramString, JSONObject paramJSONObject, HashMap<String, FacebookFileSystemCache.FacebookFileCacheEntry> paramHashMap)
@@ -616,13 +617,13 @@ public class FacebookFileSystem
     {
       if (getCacheEntry(paramString1, paramString3) == null)
       {
-        Log.e("Facebook", "can't get cache entry for delete");
+        l.e("Facebook", "can't get cache entry for delete");
         return null;
       }
       paramString1 = getToken(paramString1, paramString2);
       if (paramString1 == null)
       {
-        Log.e("Facebook", "delete, can't get the token");
+        l.e("Facebook", "delete, can't get the token");
         return null;
       }
     }
@@ -744,13 +745,13 @@ public class FacebookFileSystem
     paramString3 = getToken(paramString1, null);
     if (paramString3 == null)
     {
-      Log.e("Facebook", "createAlbum, can't get the token");
+      l.e("Facebook", "createAlbum, can't get the token");
       return null;
     }
     paramString1 = (FacebookFileSystem.User)access_tokens.get(paramString1);
     if (paramString1 == null)
     {
-      Log.e("Facebook", "createAlbum, can't get the user");
+      l.e("Facebook", "createAlbum, can't get the user");
       return null;
     }
     paramString1 = new HttpPost(String.format(apiUri + "%s/albums?access_token=%s", new Object[] { id, paramString3 }));
@@ -798,13 +799,13 @@ public class FacebookFileSystem
       localFacebookFileCacheEntry = getCacheEntry(paramString1, paramString3);
       if (localFacebookFileCacheEntry == null)
       {
-        Log.e("Facebook", "can't get cache entry for delete");
+        l.e("Facebook", "can't get cache entry for delete");
         return false;
       }
       paramString1 = getToken(paramString1, paramString2);
       if (paramString1 == null)
       {
-        Log.e("Facebook", "delete, can't get the token");
+        l.e("Facebook", "delete, can't get the token");
         return false;
       }
     }
@@ -904,7 +905,7 @@ public class FacebookFileSystem
     String str = apiUri + "%s/picture";
     if (getToken(paramString1, null) == null)
     {
-      Log.e("Facebook", "can't get the token");
+      l.e("Facebook", "can't get the token");
       return null;
     }
     return String.format(str, new Object[] { paramString2 });
@@ -918,7 +919,7 @@ public class FacebookFileSystem
       paramString1 = getToken(paramString1, paramString2);
       if (paramString1 == null)
       {
-        Log.e("Facebook", "delete, can't get the token");
+        l.e("Facebook", "delete, can't get the token");
         return null;
       }
       int j = paramTypedMap.getInt("limit", 10L);
@@ -970,32 +971,32 @@ public class FacebookFileSystem
     //   12: aload_0
     //   13: aload_1
     //   14: aload_3
-    //   15: invokespecial 636	com/estrongs/android/pop/spfs/facebook/FacebookFileSystem:getCacheEntry	(Ljava/lang/String;Ljava/lang/String;)Lcom/estrongs/android/pop/spfs/facebook/FacebookFileSystemCache$FacebookFileCacheEntry;
+    //   15: invokespecial 635	com/estrongs/android/pop/spfs/facebook/FacebookFileSystem:getCacheEntry	(Ljava/lang/String;Ljava/lang/String;)Lcom/estrongs/android/pop/spfs/facebook/FacebookFileSystemCache$FacebookFileCacheEntry;
     //   18: astore_2
     //   19: aload_2
     //   20: ifnull -10 -> 10
     //   23: aload_0
     //   24: aload_2
-    //   25: invokevirtual 919	com/estrongs/android/pop/spfs/facebook/FacebookFileSystem:convertToFileInfo	(Lcom/estrongs/android/pop/spfs/facebook/FacebookFileSystemCache$FacebookFileCacheEntry;)Lcom/estrongs/android/pop/spfs/SPFileInfo;
+    //   25: invokevirtual 918	com/estrongs/android/pop/spfs/facebook/FacebookFileSystem:convertToFileInfo	(Lcom/estrongs/android/pop/spfs/facebook/FacebookFileSystemCache$FacebookFileCacheEntry;)Lcom/estrongs/android/pop/spfs/SPFileInfo;
     //   28: astore_1
     //   29: aload_1
-    //   30: getfield 693	com/estrongs/android/pop/spfs/SPFileInfo:size	J
+    //   30: getfield 692	com/estrongs/android/pop/spfs/SPFileInfo:size	J
     //   33: lstore 4
     //   35: lload 4
-    //   37: ldc2_w 920
+    //   37: ldc2_w 919
     //   40: lcmp
     //   41: ifne +15 -> 56
     //   44: aload_1
     //   45: aload_2
     //   46: getfield 245	com/estrongs/android/pop/spfs/facebook/FacebookFileSystemCache$FacebookFileCacheEntry:url	Ljava/lang/String;
-    //   49: invokestatic 926	com/estrongs/android/pop/spfs/ESURLUtil:getLength	(Ljava/lang/String;)I
+    //   49: invokestatic 925	com/estrongs/android/pop/spfs/ESURLUtil:getLength	(Ljava/lang/String;)I
     //   52: i2l
-    //   53: putfield 693	com/estrongs/android/pop/spfs/SPFileInfo:size	J
+    //   53: putfield 692	com/estrongs/android/pop/spfs/SPFileInfo:size	J
     //   56: aload_1
     //   57: areturn
     //   58: astore_2
     //   59: aload_2
-    //   60: invokevirtual 854	java/net/MalformedURLException:printStackTrace	()V
+    //   60: invokevirtual 853	java/net/MalformedURLException:printStackTrace	()V
     //   63: new 186	com/estrongs/android/pop/netfs/NetFsException
     //   66: dup
     //   67: aload_2
@@ -1009,7 +1010,7 @@ public class FacebookFileSystem
     //   81: areturn
     //   82: astore_2
     //   83: aload_2
-    //   84: invokevirtual 927	java/io/IOException:printStackTrace	()V
+    //   84: invokevirtual 926	java/io/IOException:printStackTrace	()V
     //   87: new 186	com/estrongs/android/pop/netfs/NetFsException
     //   90: dup
     //   91: aload_2
@@ -1042,7 +1043,7 @@ public class FacebookFileSystem
       FacebookFileSystemCache.FacebookFileCacheEntry localFacebookFileCacheEntry = getCacheEntry(paramString1, paramString3);
       if (localFacebookFileCacheEntry == null)
       {
-        Log.e("Facebook", "can't get cache entry for InputStream");
+        l.e("Facebook", "can't get cache entry for InputStream");
         return null;
       }
       paramString3 = url;
@@ -1050,13 +1051,13 @@ public class FacebookFileSystem
       {
         localObject1 = thumbnail_url;
         paramString3 = (String)localObject1;
-        if (bd.a((CharSequence)localObject1)) {
+        if (bk.a((CharSequence)localObject1)) {
           paramString3 = apiUri + url_id + "/picture";
         }
       }
       localObject1 = localObject2;
-      if (bd.a(paramString3)) {
-        break label311;
+      if (bk.a(paramString3)) {
+        break label309;
       }
       paramString1 = new HttpGet(paramString3 + "?access_token=" + getToken(paramString1, paramString2));
       if (paramLong != 0L) {
@@ -1065,7 +1066,7 @@ public class FacebookFileSystem
       paramString1 = getNewHttpClient().execute(paramString1);
       if ((paramString1.getStatusLine().getStatusCode() != 200) && (paramString1.getStatusLine().getStatusCode() != 206) && (paramString1.getStatusLine().getStatusCode() != 203))
       {
-        Log.e("Facebook", "getInputStream ret:" + paramString1.getStatusLine().getStatusCode());
+        l.e("Facebook", "getInputStream ret:" + paramString1.getStatusLine().getStatusCode());
         return null;
       }
     }
@@ -1079,7 +1080,7 @@ public class FacebookFileSystem
     if (paramString1 != null) {
       localObject1 = paramString1.getContent();
     }
-    label311:
+    label309:
     return (InputStream)localObject1;
   }
   
@@ -1097,11 +1098,11 @@ public class FacebookFileSystem
   {
     // Byte code:
     //   0: aload 6
-    //   2: ldc_w 657
+    //   2: ldc_w 656
     //   5: aload 6
-    //   7: ldc_w 982
+    //   7: ldc_w 981
     //   10: invokevirtual 161	com/estrongs/android/util/TypedMap:get	(Ljava/lang/Object;)Ljava/lang/Object;
-    //   13: invokevirtual 472	com/estrongs/android/util/TypedMap:put	(Ljava/lang/String;Ljava/lang/Object;)Lcom/estrongs/android/util/TypedMap;
+    //   13: invokevirtual 471	com/estrongs/android/util/TypedMap:put	(Ljava/lang/String;Ljava/lang/Object;)Lcom/estrongs/android/util/TypedMap;
     //   16: pop
     //   17: aload_0
     //   18: aload_1
@@ -1109,16 +1110,16 @@ public class FacebookFileSystem
     //   20: invokespecial 339	com/estrongs/android/pop/spfs/facebook/FacebookFileSystem:getToken	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     //   23: astore 7
     //   25: aload 6
-    //   27: ldc_w 984
+    //   27: ldc_w 983
     //   30: invokevirtual 182	com/estrongs/android/util/TypedMap:getString	(Ljava/lang/String;)Ljava/lang/String;
     //   33: astore_2
-    //   34: ldc_w 986
+    //   34: ldc_w 985
     //   37: astore_3
     //   38: aload_2
-    //   39: invokestatic 933	com/estrongs/android/util/bd:a	(Ljava/lang/CharSequence;)Z
+    //   39: invokestatic 932	com/estrongs/android/util/bk:a	(Ljava/lang/CharSequence;)Z
     //   42: ifne +65 -> 107
     //   45: aload_2
-    //   46: invokestatic 648	com/estrongs/fs/a/a:b	(Ljava/lang/String;)Ljava/lang/String;
+    //   46: invokestatic 647	com/estrongs/fs/a/a:b	(Ljava/lang/String;)Ljava/lang/String;
     //   49: astore_2
     //   50: new 102	java/lang/StringBuilder
     //   53: dup
@@ -1128,50 +1129,50 @@ public class FacebookFileSystem
     //   61: invokevirtual 107	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   64: aload_2
     //   65: invokevirtual 107	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   68: ldc_w 988
+    //   68: ldc_w 987
     //   71: invokevirtual 107	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   74: aload 7
     //   76: invokevirtual 107	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   79: invokevirtual 111	java/lang/StringBuilder:toString	()Ljava/lang/String;
     //   82: astore_1
     //   83: aload 6
-    //   85: ldc_w 989
+    //   85: ldc_w 988
     //   88: lload 4
-    //   90: invokestatic 994	java/lang/Long:valueOf	(J)Ljava/lang/Long;
-    //   93: invokevirtual 472	com/estrongs/android/util/TypedMap:put	(Ljava/lang/String;Ljava/lang/Object;)Lcom/estrongs/android/util/TypedMap;
+    //   90: invokestatic 993	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+    //   93: invokevirtual 471	com/estrongs/android/util/TypedMap:put	(Ljava/lang/String;Ljava/lang/Object;)Lcom/estrongs/android/util/TypedMap;
     //   96: pop
     //   97: aload_1
-    //   98: ldc_w 474
+    //   98: ldc_w 473
     //   101: aload 6
-    //   103: invokestatic 996	com/estrongs/android/pop/spfs/facebook/FacebookFileSystem:openHttpOutputStream	(Ljava/lang/String;Ljava/lang/String;Lcom/estrongs/android/util/TypedMap;)Ljava/io/OutputStream;
+    //   103: invokestatic 995	com/estrongs/android/pop/spfs/facebook/FacebookFileSystem:openHttpOutputStream	(Ljava/lang/String;Ljava/lang/String;Lcom/estrongs/android/util/TypedMap;)Ljava/io/OutputStream;
     //   106: areturn
     //   107: aload 6
-    //   109: ldc_w 998
+    //   109: ldc_w 997
     //   112: invokevirtual 182	com/estrongs/android/util/TypedMap:getString	(Ljava/lang/String;)Ljava/lang/String;
     //   115: astore 8
     //   117: aload_3
     //   118: astore_2
     //   119: aload 8
-    //   121: invokestatic 933	com/estrongs/android/util/bd:a	(Ljava/lang/CharSequence;)Z
+    //   121: invokestatic 932	com/estrongs/android/util/bk:a	(Ljava/lang/CharSequence;)Z
     //   124: ifne -74 -> 50
     //   127: aload_0
     //   128: aload_1
     //   129: aload 8
     //   131: aload 8
     //   133: aconst_null
-    //   134: invokevirtual 1000	com/estrongs/android/pop/spfs/facebook/FacebookFileSystem:createAlbum	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/estrongs/android/pop/spfs/Album;
+    //   134: invokevirtual 999	com/estrongs/android/pop/spfs/facebook/FacebookFileSystem:createAlbum	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/estrongs/android/pop/spfs/Album;
     //   137: astore_1
     //   138: aload_3
     //   139: astore_2
     //   140: aload_1
-    //   141: getfield 1001	com/estrongs/android/pop/spfs/Album:id	Ljava/lang/String;
-    //   144: invokestatic 933	com/estrongs/android/util/bd:a	(Ljava/lang/CharSequence;)Z
+    //   141: getfield 1000	com/estrongs/android/pop/spfs/Album:id	Ljava/lang/String;
+    //   144: invokestatic 932	com/estrongs/android/util/bk:a	(Ljava/lang/CharSequence;)Z
     //   147: ifne -97 -> 50
     //   150: aload_1
-    //   151: getfield 1001	com/estrongs/android/pop/spfs/Album:id	Ljava/lang/String;
+    //   151: getfield 1000	com/estrongs/android/pop/spfs/Album:id	Ljava/lang/String;
     //   154: astore_2
     //   155: aload 6
-    //   157: ldc_w 984
+    //   157: ldc_w 983
     //   160: new 102	java/lang/StringBuilder
     //   163: dup
     //   164: invokespecial 103	java/lang/StringBuilder:<init>	()V
@@ -1181,7 +1182,7 @@ public class FacebookFileSystem
     //   174: aload_2
     //   175: invokevirtual 107	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   178: invokevirtual 111	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   181: invokevirtual 472	com/estrongs/android/util/TypedMap:put	(Ljava/lang/String;Ljava/lang/Object;)Lcom/estrongs/android/util/TypedMap;
+    //   181: invokevirtual 471	com/estrongs/android/util/TypedMap:put	(Ljava/lang/String;Ljava/lang/Object;)Lcom/estrongs/android/util/TypedMap;
     //   184: pop
     //   185: goto -135 -> 50
     //   188: astore_1
@@ -1221,7 +1222,7 @@ public class FacebookFileSystem
     {
       Object localObject1 = KeyStore.getInstance(KeyStore.getDefaultType());
       ((KeyStore)localObject1).load(null, null);
-      Object localObject2 = new FacebookFileSystem.MySSLSocketFactory(this, (KeyStore)localObject1);
+      Object localObject2 = new n((KeyStore)localObject1);
       ((SSLSocketFactory)localObject2).setHostnameVerifier(SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
       localObject1 = new BasicHttpParams();
       HttpProtocolParams.setVersion((HttpParams)localObject1, HttpVersion.HTTP_1_1);
@@ -1256,7 +1257,7 @@ public class FacebookFileSystem
       paramString1 = getCacheEntry(paramString1, paramString3);
       if ((paramString1 == null) || (isDir != 0) || (url == null))
       {
-        Log.e("Facebook", "can't get cache entry for get photo extension");
+        l.e("Facebook", "can't get cache entry for get photo extension");
         return null;
       }
       paramString1 = url.substring(url.lastIndexOf('.'));
@@ -1275,7 +1276,7 @@ public class FacebookFileSystem
       paramString1 = getToken(paramString1, paramString2);
       if (paramString1 == null)
       {
-        Log.e("Facebook", "delete, can't get the token");
+        l.e("Facebook", "delete, can't get the token");
         return null;
       }
       paramString1 = new HttpGet(String.format("https://graph.facebook.com/%s?access_token=%s", new Object[] { com.estrongs.fs.a.a.b(paramString3), paramString1 }));
@@ -1316,7 +1317,7 @@ public class FacebookFileSystem
       localObject2 = getCacheEntry(paramString1, paramString3);
       if ((localObject2 == null) || (isDir != 0) || (url == null))
       {
-        Log.e("Facebook", "can't get cache entry for InputStream");
+        l.e("Facebook", "can't get cache entry for InputStream");
         return null;
       }
       paramString3 = (String)localObject1;
@@ -1327,7 +1328,7 @@ public class FacebookFileSystem
       localObject2 = getNewHttpClient();
       if (getToken(paramString1, paramString2) == null)
       {
-        Log.e("Facebook", "can't get token download");
+        l.e("Facebook", "can't get token download");
         return null;
       }
     }
@@ -1339,7 +1340,7 @@ public class FacebookFileSystem
     paramString1 = ((HttpClient)localObject2).execute(paramString3);
     if ((paramString1.getStatusLine().getStatusCode() != 200) && (paramString1.getStatusLine().getStatusCode() != 203))
     {
-      Log.e("Facebook", "getInputStream ret:" + paramString1.getStatusLine().getStatusCode());
+      l.e("Facebook", "getInputStream ret:" + paramString1.getStatusLine().getStatusCode());
       return null;
     }
     paramString1 = paramString1.getEntity();
@@ -1391,7 +1392,7 @@ public class FacebookFileSystem
     //   6: aload_0
     //   7: aload_1
     //   8: aload_3
-    //   9: invokespecial 636	com/estrongs/android/pop/spfs/facebook/FacebookFileSystem:getCacheEntry	(Ljava/lang/String;Ljava/lang/String;)Lcom/estrongs/android/pop/spfs/facebook/FacebookFileSystemCache$FacebookFileCacheEntry;
+    //   9: invokespecial 635	com/estrongs/android/pop/spfs/facebook/FacebookFileSystem:getCacheEntry	(Ljava/lang/String;Ljava/lang/String;)Lcom/estrongs/android/pop/spfs/facebook/FacebookFileSystemCache$FacebookFileCacheEntry;
     //   12: astore 5
     //   14: iload 4
     //   16: ifne +24 -> 40
@@ -1401,23 +1402,23 @@ public class FacebookFileSystem
     //   26: getfield 232	com/estrongs/android/pop/spfs/facebook/FacebookFileSystemCache$FacebookFileCacheEntry:isDir	I
     //   29: ifeq +11 -> 40
     //   32: aload 5
-    //   34: getfield 1129	com/estrongs/android/pop/spfs/facebook/FacebookFileSystemCache$FacebookFileCacheEntry:checktime	I
+    //   34: getfield 1128	com/estrongs/android/pop/spfs/facebook/FacebookFileSystemCache$FacebookFileCacheEntry:checktime	I
     //   37: ifne -33 -> 4
     //   40: aload_0
     //   41: aload_1
     //   42: aload_2
     //   43: aload_3
     //   44: aload 6
-    //   46: invokevirtual 1133	com/estrongs/android/pop/spfs/facebook/FacebookFileSystem:listFilesInternal	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/estrongs/android/util/TypedMap;)Ljava/util/HashMap;
+    //   46: invokevirtual 1132	com/estrongs/android/pop/spfs/facebook/FacebookFileSystem:listFilesInternal	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/estrongs/android/util/TypedMap;)Ljava/util/HashMap;
     //   49: astore_1
     //   50: aload_1
     //   51: ifnull -47 -> 4
-    //   54: new 867	java/util/LinkedHashMap
+    //   54: new 866	java/util/LinkedHashMap
     //   57: dup
-    //   58: invokespecial 868	java/util/LinkedHashMap:<init>	()V
+    //   58: invokespecial 867	java/util/LinkedHashMap:<init>	()V
     //   61: astore_2
     //   62: aload_1
-    //   63: invokeinterface 1136 1 0
+    //   63: invokeinterface 1135 1 0
     //   68: invokeinterface 147 1 0
     //   73: astore_3
     //   74: aload_3
@@ -1430,9 +1431,9 @@ public class FacebookFileSystem
     //   94: aload_0
     //   95: aload_1
     //   96: aload 5
-    //   98: invokeinterface 1137 2 0
+    //   98: invokeinterface 1136 2 0
     //   103: checkcast 228	com/estrongs/android/pop/spfs/facebook/FacebookFileSystemCache$FacebookFileCacheEntry
-    //   106: invokevirtual 919	com/estrongs/android/pop/spfs/facebook/FacebookFileSystem:convertToFileInfo	(Lcom/estrongs/android/pop/spfs/facebook/FacebookFileSystemCache$FacebookFileCacheEntry;)Lcom/estrongs/android/pop/spfs/SPFileInfo;
+    //   106: invokevirtual 918	com/estrongs/android/pop/spfs/facebook/FacebookFileSystem:convertToFileInfo	(Lcom/estrongs/android/pop/spfs/facebook/FacebookFileSystemCache$FacebookFileCacheEntry;)Lcom/estrongs/android/pop/spfs/SPFileInfo;
     //   109: astore 6
     //   111: aload 6
     //   113: ifnull -39 -> 74
@@ -1654,12 +1655,12 @@ public class FacebookFileSystem
     {
       if (getCacheEntry(paramString1, paramString3) == null)
       {
-        Log.e("Facebook", "can't get cache entry for delete");
+        l.e("Facebook", "can't get cache entry for delete");
         return;
       }
       if (getToken(paramString1, paramString2) == null)
       {
-        Log.e("Facebook", "delete, can't get the token");
+        l.e("Facebook", "delete, can't get the token");
         return;
       }
     }
@@ -1679,7 +1680,7 @@ public class FacebookFileSystem
       paramString1 = getToken(paramString1, paramString2);
       if (paramString1 == null)
       {
-        Log.e("Facebook", "delete, can't get the token");
+        l.e("Facebook", "delete, can't get the token");
         return;
       }
       paramString1 = new HttpPost(String.format(apiUri + "%s/tags?access_token=%s", new Object[] { paramString3, paramString1 }));

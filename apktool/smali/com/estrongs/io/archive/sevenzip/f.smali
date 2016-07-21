@@ -37,7 +37,7 @@
     const-string v0, "_pie"
 
     :cond_0
-    invoke-static {}, Lcom/estrongs/fs/impl/local/l;->b()I
+    invoke-static {}, Lcom/estrongs/fs/impl/local/m;->b()I
 
     move-result v1
 
@@ -193,7 +193,7 @@
     monitor-enter v22
 
     :try_start_0
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -282,7 +282,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v2, Lcom/estrongs/android/pop/a;->p:Ljava/lang/String;
+    sget-object v2, Lcom/estrongs/android/pop/a;->s:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -294,7 +294,7 @@
 
     move-result-object v1
 
-    invoke-static {v7}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v7}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -527,7 +527,7 @@
 
     const/4 v3, 0x1
 
-    const v0, 0x7f0b0190
+    const v0, 0x7f08029e
 
     new-array v1, v3, [Ljava/lang/Object;
 
@@ -539,7 +539,7 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0, v3}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    invoke-static {p0, v0, v3}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
     return-void
 .end method

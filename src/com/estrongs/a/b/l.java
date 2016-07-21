@@ -9,18 +9,18 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.estrongs.android.d.f;
-import com.estrongs.android.pop.esclasses.g;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.android.util.bc;
-import com.estrongs.fs.b.bl;
+import com.estrongs.android.h.f;
+import com.estrongs.android.pop.esclasses.k;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.util.bg;
+import com.estrongs.fs.b.bn;
 import com.estrongs.fs.util.j;
 
 class l
-  extends cg
+  extends ci
   implements DialogInterface.OnClickListener
 {
-  bl a;
+  bn a;
   boolean b = false;
   ImageView c;
   CheckBox d;
@@ -28,17 +28,17 @@ class l
   TextView f;
   TextView g;
   
-  public l(d paramd, Context paramContext, bl parambl)
+  public l(d paramd, Context paramContext, bn parambn)
   {
     super(paramContext);
-    a = parambl;
-    paramd = g.a(d.c()).inflate(2130903095, null);
+    a = parambn;
+    paramd = k.a(d.c()).inflate(2130903182, null);
     setContentView(paramd);
-    e = ((TextView)paramd.findViewById(2131361822));
-    f = ((TextView)paramd.findViewById(2131361808));
-    g = ((TextView)paramd.findViewById(2131361950));
-    c = ((ImageView)paramd.findViewById(2131361853));
-    d = ((CheckBox)paramd.findViewById(2131362070));
+    e = ((TextView)paramd.findViewById(2131624200));
+    f = ((TextView)paramd.findViewById(2131624135));
+    g = ((TextView)paramd.findViewById(2131624457));
+    c = ((ImageView)paramd.findViewById(2131624054));
+    d = ((CheckBox)paramd.findViewById(2131624626));
     e.setText(a.f);
     if (a.c > 1) {
       f.setText(a.h + "...");
@@ -66,11 +66,11 @@ class l
       return;
       label351:
       if (a.b == 2) {
-        c.setImageResource(2130837653);
+        c.setImageResource(2130837904);
       } else if (a.b == 3) {
-        c.setImageResource(2130837861);
+        c.setImageResource(2130838158);
       } else {
-        c.setImageDrawable(f.a(String.valueOf(bc.b(a.h))));
+        c.setImageDrawable(f.a(String.valueOf(bg.b(a.h))));
       }
     }
   }
@@ -85,23 +85,23 @@ class l
     //   7: aload_0
     //   8: getfield 24	com/estrongs/a/b/l:h	Lcom/estrongs/a/b/d;
     //   11: aload_0
-    //   12: getfield 31	com/estrongs/a/b/l:a	Lcom/estrongs/fs/b/bl;
-    //   15: getfield 181	com/estrongs/fs/b/bl:j	Ljava/net/Socket;
+    //   12: getfield 31	com/estrongs/a/b/l:a	Lcom/estrongs/fs/b/bn;
+    //   15: getfield 181	com/estrongs/fs/b/bn:j	Ljava/net/Socket;
     //   18: invokevirtual 187	java/net/Socket:getOutputStream	()Ljava/io/OutputStream;
     //   21: sipush 404
     //   24: ldc -67
     //   26: invokevirtual 192	com/estrongs/a/b/d:a	(Ljava/io/OutputStream;ILjava/lang/String;)V
     //   29: aload_0
-    //   30: getfield 31	com/estrongs/a/b/l:a	Lcom/estrongs/fs/b/bl;
-    //   33: getfield 181	com/estrongs/fs/b/bl:j	Ljava/net/Socket;
+    //   30: getfield 31	com/estrongs/a/b/l:a	Lcom/estrongs/fs/b/bn;
+    //   33: getfield 181	com/estrongs/fs/b/bn:j	Ljava/net/Socket;
     //   36: invokevirtual 195	java/net/Socket:close	()V
     //   39: aload_0
-    //   40: invokespecial 197	com/estrongs/android/ui/dialog/cg:dismiss	()V
+    //   40: invokespecial 197	com/estrongs/android/ui/dialog/ci:dismiss	()V
     //   43: return
     //   44: astore_1
     //   45: aload_0
-    //   46: getfield 31	com/estrongs/a/b/l:a	Lcom/estrongs/fs/b/bl;
-    //   49: getfield 181	com/estrongs/fs/b/bl:j	Ljava/net/Socket;
+    //   46: getfield 31	com/estrongs/a/b/l:a	Lcom/estrongs/fs/b/bn;
+    //   49: getfield 181	com/estrongs/fs/b/bn:j	Ljava/net/Socket;
     //   52: invokevirtual 195	java/net/Socket:close	()V
     //   55: goto -16 -> 39
     //   58: astore_1
@@ -131,18 +131,18 @@ class l
     //   4: iconst_m1
     //   5: if_icmpne +163 -> 168
     //   8: aload_0
-    //   9: getfield 31	com/estrongs/a/b/l:a	Lcom/estrongs/fs/b/bl;
-    //   12: getfield 203	com/estrongs/fs/b/bl:a	Ljava/lang/String;
+    //   9: getfield 31	com/estrongs/a/b/l:a	Lcom/estrongs/fs/b/bn;
+    //   12: getfield 203	com/estrongs/fs/b/bn:a	Ljava/lang/String;
     //   15: ifnull +170 -> 185
     //   18: aload_0
-    //   19: getfield 31	com/estrongs/a/b/l:a	Lcom/estrongs/fs/b/bl;
-    //   22: getfield 98	com/estrongs/fs/b/bl:h	Ljava/lang/String;
-    //   25: invokestatic 206	com/estrongs/android/util/bc:g	(Ljava/lang/String;)Z
+    //   19: getfield 31	com/estrongs/a/b/l:a	Lcom/estrongs/fs/b/bn;
+    //   22: getfield 98	com/estrongs/fs/b/bn:h	Ljava/lang/String;
+    //   25: invokestatic 206	com/estrongs/android/util/bg:g	(Ljava/lang/String;)Z
     //   28: ifne +16 -> 44
     //   31: aload_0
-    //   32: getfield 31	com/estrongs/a/b/l:a	Lcom/estrongs/fs/b/bl;
-    //   35: getfield 98	com/estrongs/fs/b/bl:h	Ljava/lang/String;
-    //   38: invokestatic 208	com/estrongs/android/util/bc:h	(Ljava/lang/String;)Z
+    //   32: getfield 31	com/estrongs/a/b/l:a	Lcom/estrongs/fs/b/bn;
+    //   35: getfield 98	com/estrongs/fs/b/bn:h	Ljava/lang/String;
+    //   38: invokestatic 208	com/estrongs/android/util/bg:h	(Ljava/lang/String;)Z
     //   41: ifeq +90 -> 131
     //   44: new 210	android/content/Intent
     //   47: dup
@@ -165,14 +165,14 @@ class l
     //   80: pop
     //   81: aload 5
     //   83: aload_0
-    //   84: getfield 31	com/estrongs/a/b/l:a	Lcom/estrongs/fs/b/bl;
-    //   87: getfield 203	com/estrongs/fs/b/bl:a	Ljava/lang/String;
+    //   84: getfield 31	com/estrongs/a/b/l:a	Lcom/estrongs/fs/b/bn;
+    //   87: getfield 203	com/estrongs/fs/b/bn:a	Ljava/lang/String;
     //   90: invokestatic 234	android/net/Uri:parse	(Ljava/lang/String;)Landroid/net/Uri;
     //   93: aload_0
-    //   94: getfield 31	com/estrongs/a/b/l:a	Lcom/estrongs/fs/b/bl;
-    //   97: getfield 98	com/estrongs/fs/b/bl:h	Ljava/lang/String;
-    //   100: invokestatic 158	com/estrongs/android/util/bc:b	(Ljava/lang/String;)I
-    //   103: invokestatic 236	com/estrongs/android/util/bc:h	(I)Ljava/lang/String;
+    //   94: getfield 31	com/estrongs/a/b/l:a	Lcom/estrongs/fs/b/bn;
+    //   97: getfield 98	com/estrongs/fs/b/bn:h	Ljava/lang/String;
+    //   100: invokestatic 158	com/estrongs/android/util/bg:b	(Ljava/lang/String;)I
+    //   103: invokestatic 236	com/estrongs/android/util/bg:h	(I)Ljava/lang/String;
     //   106: invokevirtual 240	android/content/Intent:setDataAndType	(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
     //   109: pop
     //   110: aload_0
@@ -181,8 +181,8 @@ class l
     //   116: invokestatic 36	com/estrongs/a/b/d:c	()Landroid/app/Activity;
     //   119: aload 5
     //   121: aload_0
-    //   122: getfield 31	com/estrongs/a/b/l:a	Lcom/estrongs/fs/b/bl;
-    //   125: getfield 203	com/estrongs/fs/b/bl:a	Ljava/lang/String;
+    //   122: getfield 31	com/estrongs/a/b/l:a	Lcom/estrongs/fs/b/bn;
+    //   125: getfield 203	com/estrongs/fs/b/bn:a	Ljava/lang/String;
     //   128: invokestatic 245	com/estrongs/android/pop/view/utils/AppRunner:a	(Landroid/app/Activity;Landroid/content/Intent;Ljava/lang/String;)V
     //   131: aload_0
     //   132: iconst_1
@@ -190,15 +190,15 @@ class l
     //   136: aload_0
     //   137: getfield 24	com/estrongs/a/b/l:h	Lcom/estrongs/a/b/d;
     //   140: aload_0
-    //   141: getfield 31	com/estrongs/a/b/l:a	Lcom/estrongs/fs/b/bl;
-    //   144: getfield 181	com/estrongs/fs/b/bl:j	Ljava/net/Socket;
+    //   141: getfield 31	com/estrongs/a/b/l:a	Lcom/estrongs/fs/b/bn;
+    //   144: getfield 181	com/estrongs/fs/b/bn:j	Ljava/net/Socket;
     //   147: invokevirtual 187	java/net/Socket:getOutputStream	()Ljava/io/OutputStream;
     //   150: sipush 200
     //   153: ldc -9
     //   155: invokevirtual 192	com/estrongs/a/b/d:a	(Ljava/io/OutputStream;ILjava/lang/String;)V
     //   158: aload_0
-    //   159: getfield 31	com/estrongs/a/b/l:a	Lcom/estrongs/fs/b/bl;
-    //   162: getfield 181	com/estrongs/fs/b/bl:j	Ljava/net/Socket;
+    //   159: getfield 31	com/estrongs/a/b/l:a	Lcom/estrongs/fs/b/bn;
+    //   162: getfield 181	com/estrongs/fs/b/bn:j	Ljava/net/Socket;
     //   165: invokevirtual 195	java/net/Socket:close	()V
     //   168: aload_1
     //   169: invokeinterface 250 1 0
@@ -208,7 +208,7 @@ class l
     //   179: invokevirtual 253	android/content/ActivityNotFoundException:printStackTrace	()V
     //   182: goto -51 -> 131
     //   185: aload_0
-    //   186: getfield 31	com/estrongs/a/b/l:a	Lcom/estrongs/fs/b/bl;
+    //   186: getfield 31	com/estrongs/a/b/l:a	Lcom/estrongs/fs/b/bn;
     //   189: astore 5
     //   191: iload 4
     //   193: istore_3
@@ -226,13 +226,13 @@ class l
     //   218: istore_3
     //   219: aload 5
     //   221: iload_3
-    //   222: putfield 263	com/estrongs/fs/b/bl:k	Z
-    //   225: invokestatic 268	com/estrongs/android/pop/esclasses/ESActivity:A	()Landroid/app/Activity;
+    //   222: putfield 263	com/estrongs/fs/b/bn:k	Z
+    //   225: invokestatic 268	com/estrongs/android/pop/esclasses/ESActivity:H	()Landroid/app/Activity;
     //   228: ifnull -60 -> 168
     //   231: aload_0
     //   232: getfield 24	com/estrongs/a/b/l:h	Lcom/estrongs/a/b/d;
     //   235: astore 5
-    //   237: invokestatic 268	com/estrongs/android/pop/esclasses/ESActivity:A	()Landroid/app/Activity;
+    //   237: invokestatic 268	com/estrongs/android/pop/esclasses/ESActivity:H	()Landroid/app/Activity;
     //   240: astore 6
     //   242: aload_0
     //   243: getfield 24	com/estrongs/a/b/l:h	Lcom/estrongs/a/b/d;
@@ -244,8 +244,8 @@ class l
     //   258: ldc_w 270
     //   261: invokevirtual 275	android/app/Activity:getString	(I)Ljava/lang/String;
     //   264: aload_0
-    //   265: getfield 31	com/estrongs/a/b/l:a	Lcom/estrongs/fs/b/bl;
-    //   268: invokestatic 278	com/estrongs/a/b/d:a	(Lcom/estrongs/a/b/d;Landroid/app/Activity;ILjava/lang/String;Lcom/estrongs/fs/b/bl;)V
+    //   265: getfield 31	com/estrongs/a/b/l:a	Lcom/estrongs/fs/b/bn;
+    //   268: invokestatic 278	com/estrongs/a/b/d:a	(Lcom/estrongs/a/b/d;Landroid/app/Activity;ILjava/lang/String;Lcom/estrongs/fs/b/bn;)V
     //   271: aload_0
     //   272: iconst_1
     //   273: putfield 29	com/estrongs/a/b/l:b	Z

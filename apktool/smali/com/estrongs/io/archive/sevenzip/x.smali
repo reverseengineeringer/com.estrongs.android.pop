@@ -1,5 +1,5 @@
 .class public Lcom/estrongs/io/archive/sevenzip/x;
-.super Lcom/estrongs/io/archive/i;
+.super Lcom/estrongs/io/archive/j;
 
 
 # instance fields
@@ -16,7 +16,7 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/estrongs/io/archive/i;-><init>(Ljava/lang/String;Lcom/estrongs/io/a/d;Ljava/util/Map;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/estrongs/io/archive/j;-><init>(Ljava/lang/String;Lcom/estrongs/io/a/d;Ljava/util/Map;)V
 
     iput-object p3, p0, Lcom/estrongs/io/archive/sevenzip/x;->a:Ljava/lang/String;
 
@@ -73,7 +73,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/estrongs/fs/impl/local/h;->a(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/estrongs/fs/impl/local/i;->a(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -101,11 +101,11 @@
 
     :cond_0
     :goto_0
-    new-instance v1, Lcom/estrongs/io/archive/g;
+    new-instance v1, Lcom/estrongs/io/archive/h;
 
     iget-object v0, p0, Lcom/estrongs/io/archive/sevenzip/x;->d:Lcom/estrongs/io/a/d;
 
-    invoke-direct {v1, v0}, Lcom/estrongs/io/archive/g;-><init>(Lcom/estrongs/io/a/d;)V
+    invoke-direct {v1, v0}, Lcom/estrongs/io/archive/h;-><init>(Lcom/estrongs/io/a/d;)V
 
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -128,7 +128,7 @@
 
     invoke-direct {v3, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v3}, Lcom/estrongs/io/archive/g;->a(Ljava/io/File;)V
+    invoke-virtual {v1, v3}, Lcom/estrongs/io/archive/h;->a(Ljava/io/File;)V
 
     goto :goto_1
 
@@ -141,7 +141,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/fs/impl/local/h;->g(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/fs/impl/local/i;->g(Ljava/lang/String;)Z
 
     goto :goto_0
 
@@ -171,11 +171,11 @@
 
     move-result-object v2
 
-    invoke-virtual {v1}, Lcom/estrongs/io/archive/g;->a()J
+    invoke-virtual {v1}, Lcom/estrongs/io/archive/h;->a()J
 
     move-result-wide v4
 
-    invoke-virtual {v1}, Lcom/estrongs/io/archive/g;->b()I
+    invoke-virtual {v1}, Lcom/estrongs/io/archive/h;->b()I
 
     move-result v1
 
@@ -232,7 +232,7 @@
 
     iget-object v0, p0, Lcom/estrongs/io/archive/sevenzip/x;->c:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/fs/impl/local/h;->a(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/fs/impl/local/i;->a(Ljava/lang/String;)Z
 
     move-result v0
 

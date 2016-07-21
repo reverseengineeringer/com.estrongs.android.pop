@@ -5,19 +5,21 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
-import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.pop.esclasses.g;
+import com.estrongs.android.pop.esclasses.k;
 import com.estrongs.android.pop.spfs.PhotoInfoException;
 import com.estrongs.android.pop.spfs.PhotoInfoManager;
 import com.estrongs.android.pop.spfs.SPFileInfo;
-import com.estrongs.android.ui.theme.al;
+import com.estrongs.android.ui.base.HomeAsBackActivity;
+import com.estrongs.android.ui.theme.at;
 import com.estrongs.android.util.TypedMap;
-import com.estrongs.android.util.am;
+import com.estrongs.android.util.ap;
 import com.estrongs.android.util.m;
 import com.gmail.yuyang226.flickr.a.a.a;
 import java.util.Comparator;
@@ -25,7 +27,7 @@ import java.util.Date;
 import java.util.LinkedList;
 
 public class ImageCommentActivity
-  extends ESActivity
+  extends HomeAsBackActivity
 {
   SPFileInfo a;
   private LinkedList<Object> b = new LinkedList();
@@ -40,9 +42,8 @@ public class ImageCommentActivity
   private BaseAdapter k = null;
   private TypedMap l = new TypedMap();
   private View m;
-  private View n;
-  private al o;
-  private Comparator<a> p = new cy(this);
+  private at n;
+  private Comparator<a> o = new da(this);
   
   private SPFileInfo a(String paramString)
   {
@@ -74,57 +75,50 @@ public class ImageCommentActivity
     return localSPFileInfo;
   }
   
-  private void a()
-  {
-    i = c.inflate(2130903191, null);
-    i.setOnClickListener(new cz(this));
-    findViewById(2131362604).setBackgroundDrawable(o.h());
-    j = ((ListView)findViewById(2131362618));
-    j.setCacheColorHint(0);
-    j.setFastScrollEnabled(true);
-    TextView localTextView = (TextView)findViewById(2131362021);
-    ((TextView)findViewById(2131361825)).setText(2131428085);
-    localTextView.setText(getString(2131427421) + ">" + Uri.parse(h).getHost());
-    findViewById(2131362609).setOnClickListener(new da(this));
-    m = findViewById(2131362616);
-    m.setOnClickListener(new db(this));
-    n = findViewById(2131362617);
-    ((View)((ImageView)findViewById(2131362623)).getParent()).setOnClickListener(new dc(this));
-  }
-  
   private void a(boolean paramBoolean)
   {
     if ((e != null) && (e.isAlive())) {
       return;
     }
-    i.findViewById(2131361935).setVisibility(0);
+    i.findViewById(2131624429).setVisibility(0);
     e = new dg(this, "Comment Loader", paramBoolean);
     e.start();
   }
   
-  private void b()
+  private void d()
+  {
+    i = c.inflate(2130903336, null);
+    i.setOnClickListener(new db(this));
+    j = ((ListView)findViewById(2131625364));
+    j.setCacheColorHint(0);
+    j.setFastScrollEnabled(true);
+    setTitle(getString(2131231138) + ">" + Uri.parse(h).getHost());
+    m = findViewById(2131625370);
+    ((View)((ImageView)findViewById(2131625369)).getParent()).setOnClickListener(new dc(this));
+  }
+  
+  private void e()
   {
     if ((g != null) && (g.isAlive())) {
       return;
     }
-    m.setVisibility(8);
-    n.setVisibility(0);
+    m.setVisibility(0);
     g = new dd(this, "Comment Refresher");
     g.start();
   }
   
-  private boolean c()
+  private boolean f()
   {
-    return "Facebook".equals(am.ao(h));
+    return "Facebook".equals(ap.ay(h));
   }
   
-  private String[] d()
+  private String[] h()
   {
-    String str = getString(2131427738);
-    return new String[] { getString(2131427732) + " " + str, getString(2131427733) + " " + str, getString(2131427734) + " " + str, getString(2131427735) + " " + str, getString(2131427736) + " " + str, getString(2131427737) + " " + str };
+    String str = getString(2131232432);
+    return new String[] { getString(2131232439) + " " + str, getString(2131232435) + " " + str, getString(2131232434) + " " + str, getString(2131232433) + " " + str, getString(2131232440) + " " + str, getString(2131232436) + " " + str };
   }
   
-  private BaseAdapter e()
+  private BaseAdapter i()
   {
     return new dj(this);
   }
@@ -159,21 +153,35 @@ public class ImageCommentActivity
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    requestWindowFeature(1);
-    o = al.a(this);
-    paramBundle = g.a(this).inflate(2130903216, null);
-    paramBundle.setBackgroundDrawable(o.h());
-    setContentView(paramBundle);
+    n = J();
+    setContentView(2130903377);
     h = getIntent().getStringExtra("pic_path");
-    c = g.a(this);
-    a();
+    c = k.a(this);
+    d();
     b.add(d);
-    k = e();
+    k = i();
     j.setAdapter(k);
     j.setSelector(new ColorDrawable(0));
     l.put("limit", Integer.valueOf(10));
     l.put("offset", Integer.valueOf(0));
     a(false);
+  }
+  
+  public boolean onCreateOptionsMenu(Menu paramMenu)
+  {
+    getMenuInflater().inflate(2131755010, paramMenu);
+    paramMenu.findItem(2131625663).setTitle(2131230880);
+    return super.onCreateOptionsMenu(paramMenu);
+  }
+  
+  public boolean onOptionsItemSelected(MenuItem paramMenuItem)
+  {
+    if (paramMenuItem.getItemId() == 2131625663)
+    {
+      e();
+      return true;
+    }
+    return super.onOptionsItemSelected(paramMenuItem);
   }
 }
 

@@ -119,11 +119,11 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/estrongs/io/archive/h;
+    check-cast v1, Lcom/estrongs/io/archive/i;
 
     if-eqz v1, :cond_3
 
-    invoke-virtual {v1}, Lcom/estrongs/io/archive/h;->g()V
+    invoke-virtual {v1}, Lcom/estrongs/io/archive/i;->g()V
 
     sget-object v1, Lcom/estrongs/io/archive/a;->a:Ljava/util/Map;
 

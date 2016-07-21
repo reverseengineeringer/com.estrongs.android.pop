@@ -1,5 +1,5 @@
 .class public Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoAlbumDialog;
-.super Lcom/estrongs/android/ui/dialog/cg;
+.super Lcom/estrongs/android/ui/dialog/ci;
 
 
 # instance fields
@@ -71,7 +71,7 @@
 
     const/4 v7, 0x0
 
-    invoke-direct {p0, p1}, Lcom/estrongs/android/ui/dialog/cg;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/estrongs/android/ui/dialog/ci;-><init>(Landroid/content/Context;)V
 
     iput-object v8, p0, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoAlbumDialog;->mAocb:Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoAlbumDialog$AlbumOptionCallback;
 
@@ -87,7 +87,7 @@
 
     iput-object p2, p0, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoAlbumDialog;->mAocb:Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoAlbumDialog$AlbumOptionCallback;
 
-    const v0, 0x7f0b02df
+    const v0, 0x7f0800c8
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoAlbumDialog;->setTitle(I)V
 
@@ -95,7 +95,7 @@
 
     iput-object p5, p0, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoAlbumDialog;->allAlbumList:Ljava/util/List;
 
-    invoke-static {p1}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {p1}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
@@ -103,7 +103,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoAlbumDialog;->factory:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f03005b
+    const v1, 0x7f0300c4
 
     invoke-virtual {v0, v1, v8}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -111,7 +111,7 @@
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoAlbumDialog;->setContentView(Landroid/view/View;)V
 
-    const v0, 0x7f0a020a
+    const v0, 0x7f0e03d8
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoAlbumDialog;->findViewById(I)Landroid/view/View;
 
@@ -119,7 +119,7 @@
 
     check-cast v4, Landroid/widget/ListView;
 
-    const v0, 0x7f0a0208
+    const v0, 0x7f0e03d6
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoAlbumDialog;->findViewById(I)Landroid/view/View;
 
@@ -127,7 +127,7 @@
 
     check-cast v2, Landroid/widget/ProgressBar;
 
-    const v0, 0x7f0a0209
+    const v0, 0x7f0e03d7
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoAlbumDialog;->findViewById(I)Landroid/view/View;
 
@@ -143,7 +143,7 @@
 
     invoke-direct {v5, p0}, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoAlbumDialog$AlbumAdapter;-><init>(Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoAlbumDialog;)V
 
-    invoke-static {p3}, Lcom/estrongs/android/util/am;->ar(Ljava/lang/String;)Z
+    invoke-static {p3}, Lcom/estrongs/android/util/ap;->aB(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -166,7 +166,7 @@
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoAlbumDialog$1;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    const v0, 0x7f0a020d
+    const v0, 0x7f0e03db
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoAlbumDialog;->findViewById(I)Landroid/view/View;
 
@@ -174,7 +174,7 @@
 
     check-cast v3, Landroid/widget/CheckBox;
 
-    const v0, 0x7f0a020e
+    const v0, 0x7f0e03dc
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoAlbumDialog;->findViewById(I)Landroid/view/View;
 
@@ -184,7 +184,7 @@
 
     iput-object v0, p0, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoAlbumDialog;->new_album_radio:Landroid/widget/RadioButton;
 
-    const v0, 0x7f0a020c
+    const v0, 0x7f0e03da
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoAlbumDialog;->findViewById(I)Landroid/view/View;
 
@@ -213,7 +213,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/RadioButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    const v0, 0x7f0b000b
+    const v0, 0x7f080226
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoAlbumDialog;->getString(I)Ljava/lang/String;
 
@@ -229,7 +229,7 @@
 
     invoke-virtual {p0, v6, v0}, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoAlbumDialog;->setConfirmButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/widget/Button;
 
-    const v0, 0x7f0b000c
+    const v0, 0x7f080221
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoAlbumDialog;->getString(I)Ljava/lang/String;
 

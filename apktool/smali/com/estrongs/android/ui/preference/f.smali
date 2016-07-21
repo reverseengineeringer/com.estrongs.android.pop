@@ -25,15 +25,15 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 6
 
-    const v5, 0x7f0b0144
+    const v5, 0x7f08053a
 
     move-object v0, p1
 
-    check-cast v0, Lcom/estrongs/android/ui/dialog/cg;
+    check-cast v0, Lcom/estrongs/android/ui/dialog/ci;
 
-    const v1, 0x7f0a02bd
+    const v1, 0x7f0e050e
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cg;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ci;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -47,9 +47,9 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a02be
+    const v2, 0x7f0e050f
 
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/dialog/cg;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/dialog/ci;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -116,7 +116,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/f;->a:Lcom/estrongs/android/ui/preference/FtpServerPreference;
 
-    const v3, 0x7f0b006c
+    const v3, 0x7f080379
 
     invoke-virtual {v0, v3}, Lcom/estrongs/android/ui/preference/FtpServerPreference;->getText(I)Ljava/lang/CharSequence;
 

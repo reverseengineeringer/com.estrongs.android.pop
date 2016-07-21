@@ -1,23 +1,25 @@
 package com.estrongs.android.pop.app.imageviewer;
 
-import android.view.MotionEvent;
-import com.estrongs.android.pop.app.imageviewer.gallery.f;
-import com.estrongs.android.widget.RealViewSwitcher;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import com.estrongs.android.util.bk;
 
 class bs
-  implements am
+  implements DialogInterface.OnClickListener
 {
-  bs(br parambr, MotionEvent paramMotionEvent) {}
+  bs(ViewImage21 paramViewImage21, CharSequence[] paramArrayOfCharSequence) {}
   
-  public void a(int paramInt, float paramFloat)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (((paramInt == 0) && (paramFloat > 10.0F)) || ((paramInt == 1) && (paramFloat < -10.0F)))
+    long l = bk.a(a[paramInt]);
+    if ((l > 0L) && (b.q != l))
     {
-      b.d.i.onTouchEvent(a);
-      b.a = true;
-    }
-    if (((b.d.c == 0) && (paramInt == 0)) || ((b.d.c == b.d.e.b() - 1) && (paramInt == 1))) {
-      b.a = false;
+      b.q = l;
+      paramDialogInterface = ViewImage21.u(b).edit();
+      paramDialogInterface.putLong("slide_setting_interval", b.q);
+      paramDialogInterface.commit();
     }
   }
 }

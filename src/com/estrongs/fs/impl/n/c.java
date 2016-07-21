@@ -1,16 +1,30 @@
 package com.estrongs.fs.impl.n;
 
+import com.estrongs.android.util.ap;
 import com.estrongs.fs.h;
-import java.util.Comparator;
+import java.util.Iterator;
+import java.util.List;
 
 class c
-  implements Comparator<h>
+  implements com.estrongs.fs.i
 {
-  c(b paramb) {}
+  private List<com.estrongs.android.pop.app.c.i> b;
   
-  public int a(h paramh1, h paramh2)
+  public c(List<com.estrongs.android.pop.app.c.i> paramList)
   {
-    return a - a;
+    List localList;
+    b = localList;
+  }
+  
+  public boolean a(h paramh)
+  {
+    Iterator localIterator = b.iterator();
+    while (localIterator.hasNext()) {
+      if (ap.e(nextb, paramh.getAbsolutePath())) {
+        return true;
+      }
+    }
+    return false;
   }
 }
 

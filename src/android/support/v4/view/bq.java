@@ -1,12 +1,12 @@
 package android.support.v4.view;
 
-import android.view.ViewGroup;
+import android.view.MotionEvent;
 
 class bq
 {
-  public static void a(ViewGroup paramViewGroup, boolean paramBoolean)
+  static float a(MotionEvent paramMotionEvent, int paramInt)
   {
-    paramViewGroup.setMotionEventSplittingEnabled(paramBoolean);
+    return paramMotionEvent.getAxisValue(paramInt);
   }
 }
 

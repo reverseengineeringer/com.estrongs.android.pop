@@ -2,120 +2,99 @@ package com.estrongs.android.ui.pcs;
 
 import android.content.Context;
 import android.os.Handler;
-import android.view.View;
-import android.widget.TextView;
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.util.a;
-import com.estrongs.fs.impl.j.b;
+import com.estrongs.fs.impl.o.b;
+import java.util.Map;
 
 class ah
+  implements Runnable
 {
-  private int b = 0;
-  private Handler c = new ai(this);
+  ah(z paramz, String paramString1, String paramString2, String paramString3) {}
   
-  ah(w paramw) {}
-  
-  private void a()
+  public void run()
   {
-    TextView localTextView = (TextView)w.f(a).findViewById(2131362589);
-    c.removeMessages(3);
-    if (b > 0)
+    Object localObject = (Map)b.a(z.l(d), a, b, c);
+    if (localObject != null)
     {
-      w.u(a);
-      Handler localHandler1 = c;
-      Handler localHandler2 = c;
-      int i = b - 1;
-      b = i;
-      localHandler1.sendMessageDelayed(localHandler2.obtainMessage(3, 0, i), 1000L);
-      if (localTextView != null) {
-        localTextView.setText(w.a(a).getString(2131428649) + " ( " + b + " " + w.a(a).getString(2131427732) + " )");
-      }
-    }
-    do
-    {
-      return;
-      w.v(a);
-    } while (localTextView == null);
-    localTextView.setText(w.a(a).getString(2131428650));
-  }
-  
-  private void a(int paramInt, Object paramObject)
-  {
-    switch (paramInt)
-    {
-    case 1: 
-    default: 
-      String str = null;
-      if ((paramObject instanceof String)) {
-        str = (String)paramObject;
-      }
-      paramObject = str;
-      if (str == null) {
-        paramObject = w.c(a, 2131428585);
-      }
-      w.g(a, (String)paramObject);
-      return;
-    case 0: 
-      w.g(a, w.a(a, 2131428592));
-      if (a.c().equals(w.d(a)))
+      if (((Map)localObject).containsKey("result")) {}
+      int i;
+      for (;;)
       {
-        a.setContentView(w.f(a));
-        w.q(a);
+        try
+        {
+          i = Integer.parseInt(((Map)localObject).get("result") + "");
+          if (i != 0) {
+            break;
+          }
+          localObject = ak.a(d.e);
+          localHandler2 = ak.a(d.e);
+          localak = d.e;
+          ((Handler)localObject).sendMessage(localHandler2.obtainMessage(1, 0, 0, null));
+          return;
+        }
+        catch (Exception localException)
+        {
+          localException.printStackTrace();
+        }
+        i = -1;
       }
-      b = 30;
-      a();
-      w.r(a).g(System.currentTimeMillis());
-      w.r(a).L(w.h(a) + ":" + w.s(a));
-      w.r(a).c(w.r(a).aC() + 1);
-      if (w.r(a).aC() >= 3) {
-        w.r(a).L("");
-      }
-      w.t(a);
-      return;
-    }
-    w.a(a, true);
-    w.t(a);
-    w.g(a, w.b(a, 2131428586));
-  }
-  
-  private void b(int paramInt, Object paramObject)
-  {
-    String str = null;
-    switch (paramInt)
-    {
-    default: 
-      if ((paramObject instanceof String)) {
-        str = (String)paramObject;
-      }
-      paramObject = str;
-      if (str == null) {
-        paramObject = w.d(a, 2131428585);
-      }
-      w.g(a, (String)paramObject);
-    }
-    do
-    {
-      return;
-      b.m(w.l(a));
-      w.r(a).b();
-      paramObject = r.a();
-      if (paramObject != null)
+      if (i == 2)
       {
-        ((r)paramObject).a(0);
-        ((r)paramObject).a(null);
+        localHandler1 = ak.a(d.e);
+        localHandler2 = ak.a(d.e);
+        localak = d.e;
+        localHandler1.sendMessage(localHandler2.obtainMessage(1, 0, 6, z.a(d).getString(2131232540)));
+        return;
       }
-      w.r(a).h(null, null);
-      w.r(a).g(0L);
-      w.r(a).L("");
-      w.r(a).c(0);
-      a.dismiss();
-      if (a.d != null) {
-        a.d.dismiss();
+      if (i == 3)
+      {
+        localHandler1 = ak.a(d.e);
+        localHandler2 = ak.a(d.e);
+        localak = d.e;
+        localHandler1.sendMessage(localHandler2.obtainMessage(1, 0, 1, z.a(d).getString(2131231939)));
+        return;
       }
-      w.a(a, w.h(a), w.s(a), a.b);
-      paramObject = a.a();
-    } while (paramObject == null);
-    ((a)paramObject).e("PCS_Upgrade_UV", "PCS_Upgrade_UV");
+      if (i == 4)
+      {
+        localHandler1 = ak.a(d.e);
+        localHandler2 = ak.a(d.e);
+        localak = d.e;
+        localHandler1.sendMessage(localHandler2.obtainMessage(1, 0, 2, z.a(d).getString(2131231963)));
+        return;
+      }
+      if (i == 6)
+      {
+        localHandler1 = ak.a(d.e);
+        localHandler2 = ak.a(d.e);
+        localak = d.e;
+        localHandler1.sendMessage(localHandler2.obtainMessage(1, 0, 7, z.a(d).getString(2131231784)));
+        return;
+      }
+      if (i == 7)
+      {
+        localHandler1 = ak.a(d.e);
+        localHandler2 = ak.a(d.e);
+        localak = d.e;
+        localHandler1.sendMessage(localHandler2.obtainMessage(1, 0, 3, z.a(d).getString(2131231997)));
+        return;
+      }
+      if (i == 500010)
+      {
+        localHandler1 = ak.a(d.e);
+        localHandler2 = ak.a(d.e);
+        localak = d.e;
+        localHandler1.sendMessage(localHandler2.obtainMessage(1, 0, 4, z.a(d).getString(2131231975)));
+        return;
+      }
+      localHandler1 = ak.a(d.e);
+      localHandler2 = ak.a(d.e);
+      localak = d.e;
+      localHandler1.sendMessage(localHandler2.obtainMessage(1, 0, 5, z.a(d).getString(2131231938)));
+      return;
+    }
+    Handler localHandler1 = ak.a(d.e);
+    Handler localHandler2 = ak.a(d.e);
+    ak localak = d.e;
+    localHandler1.sendMessage(localHandler2.obtainMessage(1, 0, 8, null));
   }
 }
 

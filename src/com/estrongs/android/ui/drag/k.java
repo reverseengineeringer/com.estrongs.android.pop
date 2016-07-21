@@ -8,11 +8,11 @@ public abstract interface k
   
   public abstract void c();
   
-  public abstract void c_();
-  
   public abstract void d();
   
-  public abstract Rect e();
+  public abstract Rect getScrollViewRect();
+  
+  public abstract void k_();
 }
 
 /* Location:

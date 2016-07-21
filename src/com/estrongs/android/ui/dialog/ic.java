@@ -1,24 +1,38 @@
 package com.estrongs.android.ui.dialog;
 
-import android.widget.ProgressBar;
-import com.estrongs.android.pop.app.diskusage.a;
+import android.content.Context;
+import android.text.ClipboardManager;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.ap;
 
 class ic
-  implements Runnable
+  implements View.OnClickListener
 {
-  ic(hn paramhn) {}
+  ic(hq paramhq, Context paramContext) {}
   
-  public void run()
+  public void onClick(View paramView)
   {
-    try
+    paramView = hq.a(b);
+    if (!ap.bl(hq.a(b))) {
+      paramView = ap.G(paramView);
+    }
+    for (;;)
     {
-      a.k.setVisibility(0);
-      if (a.l != null) {
-        a.l.a();
+      if (paramView != null)
+      {
+        Object localObject = a;
+        Context localContext = a;
+        localObject = (ClipboardManager)((Context)localObject).getSystemService("clipboard");
+        if (localObject != null)
+        {
+          ((ClipboardManager)localObject).setText(paramView);
+          ak.a(a, 2131231282, 0);
+        }
       }
       return;
     }
-    catch (Exception localException) {}
   }
 }
 

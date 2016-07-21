@@ -8,18 +8,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import com.estrongs.android.pop.esclasses.g;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.android.ui.dialog.ct;
-import com.estrongs.android.ui.theme.al;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.ui.dialog.cv;
+import com.estrongs.android.ui.theme.at;
 import java.io.File;
 import java.util.List;
 
 public class a
 {
   private Context a;
-  private cg b;
-  private al c;
+  private ci b;
+  private at c;
   private File d;
   private EditText e;
   private EditText f;
@@ -33,11 +32,13 @@ public class a
   private List<String> n;
   private boolean o;
   private k p;
+  private bb q;
+  private boolean r = false;
   
   public a(Context paramContext, boolean paramBoolean, String paramString1, String paramString2, List<String> paramList, j paramj)
   {
     a = paramContext;
-    c = al.a(a);
+    c = at.a(a);
     l = paramBoolean;
     m = paramString1;
     i = paramString2;
@@ -63,27 +64,27 @@ public class a
   
   private void c()
   {
-    Object localObject = g.a(a).inflate(2130903049, null);
-    b = new ct(a).a(2131427862).a((View)localObject).b(2131427339, new c(this, (View)localObject)).c(2131427340, new b(this)).b();
+    Object localObject = com.estrongs.android.pop.esclasses.k.a(a).inflate(2130903111, null);
+    b = new cv(a).a(2131231339).a((View)localObject).b(2131231270, new c(this, (View)localObject)).c(2131231265, new b(this)).b();
     j = new d(this, (View)localObject);
     d = new File(m);
-    RadioButton localRadioButton = (RadioButton)((View)localObject).findViewById(2131361873);
+    RadioButton localRadioButton = (RadioButton)((View)localObject).findViewById(2131624371);
     String str = a(a(d.getName()));
     localRadioButton.setText(com.estrongs.fs.util.j.a(str) + "/");
     localRadioButton.setOnClickListener(j);
-    ((RadioButton)((View)localObject).findViewById(2131361874)).setOnClickListener(j);
-    ((RadioButton)((View)localObject).findViewById(2131361875)).setOnClickListener(j);
-    ((RadioGroup)((View)localObject).findViewById(2131361872)).setOnClickListener(j);
-    e = ((EditText)((View)localObject).findViewById(2131361857));
+    ((RadioButton)((View)localObject).findViewById(2131624372)).setOnClickListener(j);
+    ((RadioButton)((View)localObject).findViewById(2131624373)).setOnClickListener(j);
+    ((RadioGroup)((View)localObject).findViewById(2131624370)).setOnClickListener(j);
+    e = ((EditText)((View)localObject).findViewById(2131624355));
     e.setText("/sdcard/");
     e.setVisibility(8);
     e.setOnClickListener(new f(this));
     if (i == null) {
-      i = com.estrongs.android.util.f.a[0];
+      i = com.estrongs.android.util.e.a[0];
     }
-    localObject = (Button)((View)localObject).findViewById(2131361878);
+    localObject = (Button)((View)localObject).findViewById(2131624376);
     ((Button)localObject).setOnClickListener(j);
-    ((Button)localObject).setText(com.estrongs.android.util.c.a(a, com.estrongs.android.util.c.a(i)));
+    ((Button)localObject).setText(com.estrongs.android.util.b.a(a, com.estrongs.android.util.b.a(i)));
     g = 2;
     h = (d.getAbsoluteFile().getParentFile().getPath() + "/" + com.estrongs.fs.util.j.a(str));
   }
@@ -91,6 +92,16 @@ public class a
   public void a()
   {
     b.show();
+  }
+  
+  public void a(bb parambb)
+  {
+    q = parambb;
+  }
+  
+  public void a(boolean paramBoolean)
+  {
+    r = paramBoolean;
   }
   
   public void b()

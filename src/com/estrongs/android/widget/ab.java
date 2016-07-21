@@ -1,22 +1,10 @@
 package com.estrongs.android.widget;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import com.estrongs.fs.h;
 
-class ab
-  implements DialogInterface.OnClickListener
+public abstract interface ab
 {
-  ab(g paramg) {}
-  
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
-  {
-    try
-    {
-      paramDialogInterface.dismiss();
-      return;
-    }
-    catch (Exception paramDialogInterface) {}
-  }
+  public abstract boolean a(h paramh);
 }
 
 /* Location:

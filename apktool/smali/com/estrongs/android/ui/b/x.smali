@@ -2,87 +2,56 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/a/a/o;
+.implements Landroid/view/View$OnLongClickListener;
 
 
 # instance fields
-.field a:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/estrongs/fs/h;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field final synthetic a:I
 
-.field final synthetic b:Lcom/estrongs/android/ui/b/u;
+.field final synthetic b:Lcom/estrongs/android/ui/b/v;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/b/u;)V
-    .locals 1
+.method constructor <init>(Lcom/estrongs/android/ui/b/v;I)V
+    .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/b/x;->b:Lcom/estrongs/android/ui/b/u;
+    iput-object p1, p0, Lcom/estrongs/android/ui/b/x;->b:Lcom/estrongs/android/ui/b/v;
+
+    iput p2, p0, Lcom/estrongs/android/ui/b/x;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/b/x;->a:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/estrongs/a/a;Z)V
-    .locals 2
+.method public onLongClick(Landroid/view/View;)Z
+    .locals 4
 
-    invoke-virtual {p1}, Lcom/estrongs/a/a;->summary()Lorg/json/JSONObject;
+    iget-object v0, p0, Lcom/estrongs/android/ui/b/x;->b:Lcom/estrongs/android/ui/b/v;
 
-    move-result-object v0
+    iget-object v0, v0, Lcom/estrongs/android/ui/b/v;->a:Lcom/estrongs/android/ui/b/u;
 
-    const-string v1, "need_reload"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/b/x;->b:Lcom/estrongs/android/ui/b/u;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/b/u;->j(Lcom/estrongs/android/ui/b/u;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/estrongs/android/ui/b/u;->g(Lcom/estrongs/android/ui/b/u;)Lcom/estrongs/android/view/cp;
 
     move-result-object v0
 
-    new-instance v1, Lcom/estrongs/android/ui/b/y;
+    iget-object v1, p0, Lcom/estrongs/android/ui/b/x;->b:Lcom/estrongs/android/ui/b/v;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/b/y;-><init>(Lcom/estrongs/android/ui/b/x;)V
+    iget-object v1, v1, Lcom/estrongs/android/ui/b/v;->a:Lcom/estrongs/android/ui/b/u;
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-static {v1}, Lcom/estrongs/android/ui/b/u;->f(Lcom/estrongs/android/ui/b/u;)Landroid/support/v7/widget/RecyclerView;
 
-    :cond_0
-    return-void
-.end method
+    move-result-object v1
 
-.method public a(Lcom/estrongs/fs/h;)V
-    .locals 1
+    iget v2, p0, Lcom/estrongs/android/ui/b/x;->a:I
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/b/x;->a:Ljava/util/ArrayList;
+    const/4 v3, 0x0
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+    invoke-interface {v0, v1, p1, v2, v3}, Lcom/estrongs/android/view/cp;->a(Landroid/support/v7/widget/RecyclerView;Landroid/view/View;IZ)Z
 
-    if-eqz p1, :cond_0
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/b/x;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    return-void
+    return v0
 .end method

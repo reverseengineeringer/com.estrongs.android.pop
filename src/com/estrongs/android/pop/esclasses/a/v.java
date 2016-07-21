@@ -2,248 +2,1001 @@ package com.estrongs.android.pop.esclasses.a;
 
 import android.util.SparseArray;
 
-public class v
+class v
 {
-  public static SparseArray<Object> a(String paramString)
+  public static SparseArray<Object> a()
   {
-    if (paramString.equals("th")) {
-      return af.a();
-    }
-    if (paramString.equals("cn")) {
-      return e.a();
-    }
-    if (paramString.equals("uk")) {
-      return aj.a();
-    }
-    if (paramString.equals("ja")) {
-      return r.a();
-    }
-    if (paramString.equals("cs")) {
-      return f.a();
-    }
-    if (paramString.equals("tr")) {
-      return ag.a();
-    }
-    if (paramString.equals("hu")) {
-      return n.a();
-    }
-    if (paramString.equals("ca")) {
-      return d.a();
-    }
-    if (paramString.equals("ko")) {
-      return t.a();
-    }
-    if (paramString.equals("ta")) {
-      return ae.a();
-    }
-    if (paramString.equals("kn")) {
-      return s.a();
-    }
-    if (paramString.equals("fa")) {
-      return k.a();
-    }
-    if (paramString.equals("fr")) {
-      return m.a();
-    }
-    if (paramString.equals("es")) {
-      return j.a();
-    }
-    if (paramString.equals("it")) {
-      return p.a();
-    }
-    if (paramString.equals("pt_pt")) {
-      return z.a();
-    }
-    if (paramString.equals("nl")) {
-      return w.a();
-    }
-    if (paramString.equals("sk")) {
-      return ac.a();
-    }
-    if (paramString.equals("ar")) {
-      return a.a();
-    }
-    if (paramString.equals("en")) {
-      return i.a();
-    }
-    if (paramString.equals("ug")) {
-      return ai.a();
-    }
-    if (paramString.equals("vi")) {
-      return ak.a();
-    }
-    if (paramString.equals("lt")) {
-      return u.a();
-    }
-    if (paramString.equals("bn")) {
-      return c.a();
-    }
-    if (paramString.equals("tw")) {
-      return ah.a();
-    }
-    if (paramString.equals("el")) {
-      return h.a();
-    }
-    if (paramString.equals("pl")) {
-      return x.a();
-    }
-    if (paramString.equals("ru")) {
-      return ab.a();
-    }
-    if (paramString.equals("pt")) {
-      return y.a();
-    }
-    if (paramString.equals("iw")) {
-      return q.a();
-    }
-    if (paramString.equals("fi")) {
-      return l.a();
-    }
-    if (paramString.equals("ro")) {
-      return aa.a();
-    }
-    if (paramString.equals("sv")) {
-      return ad.a();
-    }
-    if (paramString.equals("in")) {
-      return o.a();
-    }
-    if (paramString.equals("bg")) {
-      return b.a();
-    }
-    if (paramString.equals("de")) {
-      return g.a();
-    }
-    return null;
+    SparseArray localSparseArray = new SparseArray(984);
+    localSparseArray.put(2131231360, Integer.valueOf(0));
+    localSparseArray.put(2131231390, Integer.valueOf(1));
+    localSparseArray.put(2131231713, Integer.valueOf(2));
+    localSparseArray.put(2131231900, Integer.valueOf(3));
+    localSparseArray.put(2131231761, Integer.valueOf(4));
+    localSparseArray.put(2131231790, Integer.valueOf(5));
+    localSparseArray.put(2131232076, Integer.valueOf(6));
+    localSparseArray.put(2131232135, Integer.valueOf(7));
+    localSparseArray.put(2131231817, Integer.valueOf(8));
+    localSparseArray.put(2131232578, Integer.valueOf(9));
+    localSparseArray.put(2131231788, Integer.valueOf(10));
+    localSparseArray.put(2131231225, Integer.valueOf(11));
+    localSparseArray.put(2131232201, Integer.valueOf(12));
+    localSparseArray.put(2131231365, Integer.valueOf(13));
+    localSparseArray.put(2131231104, Integer.valueOf(14));
+    localSparseArray.put(2131231133, Integer.valueOf(15));
+    localSparseArray.put(2131232515, Integer.valueOf(16));
+    localSparseArray.put(2131232025, Integer.valueOf(17));
+    localSparseArray.put(2131232542, Integer.valueOf(18));
+    localSparseArray.put(2131231405, Integer.valueOf(19));
+    localSparseArray.put(2131232182, Integer.valueOf(20));
+    localSparseArray.put(2131492877, new String[] { "Visi", "0 – 100 KB", "100KB - 1 MB", "1 MB - 16 MB", "16 MB - 128 MB", "> 128 MB", "Įvedimas" });
+    localSparseArray.put(2131231839, Integer.valueOf(22));
+    localSparseArray.put(2131231440, Integer.valueOf(23));
+    localSparseArray.put(2131232148, Integer.valueOf(24));
+    localSparseArray.put(2131232192, Integer.valueOf(25));
+    localSparseArray.put(2131232019, Integer.valueOf(26));
+    localSparseArray.put(2131232102, Integer.valueOf(27));
+    localSparseArray.put(2131232546, Integer.valueOf(28));
+    localSparseArray.put(2131232093, Integer.valueOf(29));
+    localSparseArray.put(2131232552, Integer.valueOf(30));
+    localSparseArray.put(2131232141, Integer.valueOf(31));
+    localSparseArray.put(2131231520, Integer.valueOf(32));
+    localSparseArray.put(2131232263, Integer.valueOf(33));
+    localSparseArray.put(2131231640, Integer.valueOf(34));
+    localSparseArray.put(2131231808, Integer.valueOf(35));
+    localSparseArray.put(2131231826, Integer.valueOf(36));
+    localSparseArray.put(2131232028, Integer.valueOf(37));
+    localSparseArray.put(2131231383, Integer.valueOf(38));
+    localSparseArray.put(2131231328, Integer.valueOf(39));
+    localSparseArray.put(2131231427, Integer.valueOf(40));
+    localSparseArray.put(2131232261, Integer.valueOf(41));
+    localSparseArray.put(2131232315, Integer.valueOf(42));
+    localSparseArray.put(2131232088, Integer.valueOf(43));
+    localSparseArray.put(2131231279, Integer.valueOf(44));
+    localSparseArray.put(2131231802, Integer.valueOf(45));
+    localSparseArray.put(2131230724, Integer.valueOf(46));
+    localSparseArray.put(2131492873, new String[] { "\"Standartinis\n(dėl MMS,Gmail ir kt.)\"", "\"Pagal failus\n(jei nepavyko pirmas)\"" });
+    localSparseArray.put(2131232155, Integer.valueOf(48));
+    localSparseArray.put(2131231730, Integer.valueOf(49));
+    localSparseArray.put(2131232267, Integer.valueOf(50));
+    localSparseArray.put(2131230898, Integer.valueOf(51));
+    localSparseArray.put(2131232532, Integer.valueOf(52));
+    localSparseArray.put(2131232404, Integer.valueOf(53));
+    localSparseArray.put(2131231512, Integer.valueOf(54));
+    localSparseArray.put(2131231789, Integer.valueOf(55));
+    localSparseArray.put(2131232592, Integer.valueOf(56));
+    localSparseArray.put(2131232511, Integer.valueOf(57));
+    localSparseArray.put(2131231630, Integer.valueOf(58));
+    localSparseArray.put(2131231707, Integer.valueOf(59));
+    localSparseArray.put(2131231556, Integer.valueOf(60));
+    localSparseArray.put(2131231649, Integer.valueOf(61));
+    localSparseArray.put(2131230879, Integer.valueOf(62));
+    localSparseArray.put(2131232432, Integer.valueOf(63));
+    localSparseArray.put(2131232359, Integer.valueOf(64));
+    localSparseArray.put(2131230914, Integer.valueOf(65));
+    localSparseArray.put(2131232096, Integer.valueOf(66));
+    localSparseArray.put(2131492868, new String[] { "DOS Terminators - CR/LF", "UNIX Terminators - LF", "MAC Terminators - CR" });
+    localSparseArray.put(2131232197, Integer.valueOf(68));
+    localSparseArray.put(2131230873, Integer.valueOf(69));
+    localSparseArray.put(2131231700, Integer.valueOf(70));
+    localSparseArray.put(2131232556, Integer.valueOf(71));
+    localSparseArray.put(2131232330, Integer.valueOf(72));
+    localSparseArray.put(2131232167, Integer.valueOf(73));
+    localSparseArray.put(2131232479, Integer.valueOf(74));
+    localSparseArray.put(2131231907, Integer.valueOf(75));
+    localSparseArray.put(2131492864, new String[] { "Vardą", "Tipą", "Dydį" });
+    localSparseArray.put(2131231284, Integer.valueOf(77));
+    localSparseArray.put(2131232086, Integer.valueOf(78));
+    localSparseArray.put(2131231599, Integer.valueOf(79));
+    localSparseArray.put(2131231644, Integer.valueOf(80));
+    localSparseArray.put(2131231431, Integer.valueOf(81));
+    localSparseArray.put(2131231055, Integer.valueOf(82));
+    localSparseArray.put(2131232245, Integer.valueOf(83));
+    localSparseArray.put(2131231756, Integer.valueOf(84));
+    localSparseArray.put(2131232169, Integer.valueOf(85));
+    localSparseArray.put(2131232057, Integer.valueOf(86));
+    localSparseArray.put(2131231526, Integer.valueOf(87));
+    localSparseArray.put(2131231068, Integer.valueOf(88));
+    localSparseArray.put(2131232453, Integer.valueOf(89));
+    localSparseArray.put(2131231101, Integer.valueOf(90));
+    localSparseArray.put(2131232178, Integer.valueOf(91));
+    localSparseArray.put(2131232316, Integer.valueOf(92));
+    localSparseArray.put(2131232299, Integer.valueOf(93));
+    localSparseArray.put(2131232136, Integer.valueOf(94));
+    localSparseArray.put(2131231662, Integer.valueOf(95));
+    localSparseArray.put(2131231561, Integer.valueOf(96));
+    localSparseArray.put(2131231718, Integer.valueOf(97));
+    localSparseArray.put(2131232309, Integer.valueOf(98));
+    localSparseArray.put(2131232125, Integer.valueOf(99));
+    localSparseArray.put(2131231728, Integer.valueOf(100));
+    localSparseArray.put(2131231070, Integer.valueOf(101));
+    localSparseArray.put(2131231468, Integer.valueOf(102));
+    localSparseArray.put(2131232579, Integer.valueOf(103));
+    localSparseArray.put(2131232006, Integer.valueOf(104));
+    localSparseArray.put(2131231381, Integer.valueOf(105));
+    localSparseArray.put(2131231868, Integer.valueOf(106));
+    localSparseArray.put(2131231051, Integer.valueOf(107));
+    localSparseArray.put(2131231721, Integer.valueOf(108));
+    localSparseArray.put(2131231873, Integer.valueOf(109));
+    localSparseArray.put(2131231985, Integer.valueOf(110));
+    localSparseArray.put(2131230964, Integer.valueOf(111));
+    localSparseArray.put(2131232438, Integer.valueOf(112));
+    localSparseArray.put(2131232449, Integer.valueOf(113));
+    localSparseArray.put(2131231898, Integer.valueOf(114));
+    localSparseArray.put(2131232516, Integer.valueOf(115));
+    localSparseArray.put(2131231447, Integer.valueOf(116));
+    localSparseArray.put(2131231266, Integer.valueOf(117));
+    localSparseArray.put(2131230886, Integer.valueOf(118));
+    localSparseArray.put(2131232510, Integer.valueOf(119));
+    localSparseArray.put(2131232143, Integer.valueOf(120));
+    localSparseArray.put(2131232104, Integer.valueOf(121));
+    localSparseArray.put(2131232437, Integer.valueOf(122));
+    localSparseArray.put(2131231807, Integer.valueOf(123));
+    localSparseArray.put(2131231704, Integer.valueOf(124));
+    localSparseArray.put(2131230847, Integer.valueOf(125));
+    localSparseArray.put(2131231443, Integer.valueOf(126));
+    localSparseArray.put(2131232208, Integer.valueOf(127));
+    localSparseArray.put(2131231746, Integer.valueOf(128));
+    localSparseArray.put(2131232074, Integer.valueOf(129));
+    localSparseArray.put(2131231326, Integer.valueOf(130));
+    localSparseArray.put(2131232137, Integer.valueOf(131));
+    localSparseArray.put(2131232265, Integer.valueOf(132));
+    localSparseArray.put(2131231008, Integer.valueOf(133));
+    localSparseArray.put(2131231785, Integer.valueOf(134));
+    localSparseArray.put(2131230893, Integer.valueOf(135));
+    localSparseArray.put(2131231069, Integer.valueOf(136));
+    localSparseArray.put(2131231097, Integer.valueOf(137));
+    localSparseArray.put(2131232583, Integer.valueOf(138));
+    localSparseArray.put(2131232111, Integer.valueOf(139));
+    localSparseArray.put(2131232020, Integer.valueOf(140));
+    localSparseArray.put(2131230919, Integer.valueOf(141));
+    localSparseArray.put(2131230871, Integer.valueOf(142));
+    localSparseArray.put(2131231530, Integer.valueOf(143));
+    localSparseArray.put(2131230853, Integer.valueOf(144));
+    localSparseArray.put(2131230979, Integer.valueOf(145));
+    localSparseArray.put(2131492887, new String[] { "Nespausti", "Greitas", "Normalus", "Maksimalus" });
+    localSparseArray.put(2131231994, Integer.valueOf(147));
+    localSparseArray.put(2131230970, Integer.valueOf(148));
+    localSparseArray.put(2131232050, Integer.valueOf(149));
+    localSparseArray.put(2131230837, Integer.valueOf(150));
+    localSparseArray.put(2131232172, Integer.valueOf(151));
+    localSparseArray.put(2131232445, Integer.valueOf(152));
+    localSparseArray.put(2131230902, Integer.valueOf(153));
+    localSparseArray.put(2131232064, Integer.valueOf(154));
+    localSparseArray.put(2131231135, Integer.valueOf(155));
+    localSparseArray.put(2131231869, Integer.valueOf(156));
+    localSparseArray.put(2131231555, Integer.valueOf(157));
+    localSparseArray.put(2131231867, Integer.valueOf(158));
+    localSparseArray.put(2131231913, Integer.valueOf(159));
+    localSparseArray.put(2131231019, Integer.valueOf(160));
+    localSparseArray.put(2131232090, Integer.valueOf(161));
+    localSparseArray.put(2131231084, Integer.valueOf(162));
+    localSparseArray.put(2131231851, Integer.valueOf(163));
+    localSparseArray.put(2131232150, Integer.valueOf(164));
+    localSparseArray.put(2131232085, Integer.valueOf(165));
+    localSparseArray.put(2131232021, Integer.valueOf(166));
+    localSparseArray.put(2131231821, Integer.valueOf(167));
+    localSparseArray.put(2131231659, Integer.valueOf(168));
+    localSparseArray.put(2131232271, Integer.valueOf(169));
+    localSparseArray.put(2131231270, Integer.valueOf(170));
+    localSparseArray.put(2131232485, Integer.valueOf(171));
+    localSparseArray.put(2131231445, Integer.valueOf(172));
+    localSparseArray.put(2131232191, Integer.valueOf(173));
+    localSparseArray.put(2131232414, Integer.valueOf(174));
+    localSparseArray.put(2131231269, Integer.valueOf(175));
+    localSparseArray.put(2131232298, Integer.valueOf(176));
+    localSparseArray.put(2131231712, Integer.valueOf(177));
+    localSparseArray.put(2131232561, Integer.valueOf(178));
+    localSparseArray.put(2131230969, Integer.valueOf(179));
+    localSparseArray.put(2131232005, Integer.valueOf(180));
+    localSparseArray.put(2131231130, Integer.valueOf(181));
+    localSparseArray.put(2131492884, new String[] { "Blogas", "Vidutinis", "Geras", "Puikus" });
+    localSparseArray.put(2131231513, Integer.valueOf(183));
+    localSparseArray.put(2131232046, Integer.valueOf(184));
+    localSparseArray.put(2131232373, Integer.valueOf(185));
+    localSparseArray.put(2131232460, Integer.valueOf(186));
+    localSparseArray.put(2131232190, Integer.valueOf(187));
+    localSparseArray.put(2131231827, Integer.valueOf(188));
+    localSparseArray.put(2131231784, Integer.valueOf(189));
+    localSparseArray.put(2131232030, Integer.valueOf(190));
+    localSparseArray.put(2131231750, Integer.valueOf(191));
+    localSparseArray.put(2131231742, Integer.valueOf(192));
+    localSparseArray.put(2131231514, Integer.valueOf(193));
+    localSparseArray.put(2131232054, Integer.valueOf(194));
+    localSparseArray.put(2131232138, Integer.valueOf(195));
+    localSparseArray.put(2131231875, Integer.valueOf(196));
+    localSparseArray.put(2131232075, Integer.valueOf(197));
+    localSparseArray.put(2131231882, Integer.valueOf(198));
+    localSparseArray.put(2131231733, Integer.valueOf(199));
+    localSparseArray.put(2131232273, Integer.valueOf(200));
+    localSparseArray.put(2131232401, Integer.valueOf(201));
+    localSparseArray.put(2131232580, Integer.valueOf(202));
+    localSparseArray.put(2131231862, Integer.valueOf(203));
+    localSparseArray.put(2131231885, Integer.valueOf(204));
+    localSparseArray.put(2131232427, Integer.valueOf(205));
+    localSparseArray.put(2131230720, Integer.valueOf(206));
+    localSparseArray.put(2131231720, Integer.valueOf(207));
+    localSparseArray.put(2131232045, Integer.valueOf(208));
+    localSparseArray.put(2131232047, Integer.valueOf(209));
+    localSparseArray.put(2131230988, Integer.valueOf(210));
+    localSparseArray.put(2131231510, Integer.valueOf(211));
+    localSparseArray.put(2131231727, Integer.valueOf(212));
+    localSparseArray.put(2131232566, Integer.valueOf(213));
+    localSparseArray.put(2131232100, Integer.valueOf(214));
+    localSparseArray.put(2131231072, Integer.valueOf(215));
+    localSparseArray.put(2131232587, Integer.valueOf(216));
+    localSparseArray.put(2131231341, Integer.valueOf(217));
+    localSparseArray.put(2131231015, Integer.valueOf(218));
+    localSparseArray.put(2131232016, Integer.valueOf(219));
+    localSparseArray.put(2131231611, Integer.valueOf(220));
+    localSparseArray.put(2131232407, Integer.valueOf(221));
+    localSparseArray.put(2131232413, Integer.valueOf(222));
+    localSparseArray.put(2131231342, Integer.valueOf(223));
+    localSparseArray.put(2131232565, Integer.valueOf(224));
+    localSparseArray.put(2131231600, Integer.valueOf(225));
+    localSparseArray.put(2131231506, Integer.valueOf(226));
+    localSparseArray.put(2131230874, Integer.valueOf(227));
+    localSparseArray.put(2131231701, Integer.valueOf(228));
+    localSparseArray.put(2131231013, Integer.valueOf(229));
+    localSparseArray.put(2131231344, Integer.valueOf(230));
+    localSparseArray.put(2131232551, Integer.valueOf(231));
+    localSparseArray.put(2131231063, Integer.valueOf(232));
+    localSparseArray.put(2131231795, Integer.valueOf(233));
+    localSparseArray.put(2131492886, new String[] { "", "Ieškau…", "Prisijungimas…", "Prisistatymas…", "Gaunu IP adresą…", "Prisijungiau", "Sustabdyta", "Atsijungiu…", "Atsijungta", "Klaida prisijungiant" });
+    localSparseArray.put(2131231840, Integer.valueOf(235));
+    localSparseArray.put(2131492866, new String[] { "1 с", "3 с", "5 с", "10 с", "15 с" });
+    localSparseArray.put(2131230897, Integer.valueOf(237));
+    localSparseArray.put(2131231872, Integer.valueOf(238));
+    localSparseArray.put(2131232457, Integer.valueOf(239));
+    localSparseArray.put(2131232589, Integer.valueOf(240));
+    localSparseArray.put(2131230869, Integer.valueOf(241));
+    localSparseArray.put(2131231525, Integer.valueOf(242));
+    localSparseArray.put(2131232456, Integer.valueOf(243));
+    localSparseArray.put(2131231012, Integer.valueOf(244));
+    localSparseArray.put(2131231613, Integer.valueOf(245));
+    localSparseArray.put(2131231908, Integer.valueOf(246));
+    localSparseArray.put(2131231223, Integer.valueOf(247));
+    localSparseArray.put(2131231861, Integer.valueOf(248));
+    localSparseArray.put(2131231762, Integer.valueOf(249));
+    localSparseArray.put(2131231138, Integer.valueOf(250));
+    localSparseArray.put(2131231088, Integer.valueOf(251));
+    localSparseArray.put(2131231696, Integer.valueOf(252));
+    localSparseArray.put(2131231067, Integer.valueOf(253));
+    localSparseArray.put(2131230875, Integer.valueOf(254));
+    localSparseArray.put(2131230722, Integer.valueOf(255));
+    localSparseArray.put(2131232577, Integer.valueOf(256));
+    localSparseArray.put(2131231087, Integer.valueOf(257));
+    localSparseArray.put(2131232098, Integer.valueOf(258));
+    localSparseArray.put(2131232452, Integer.valueOf(259));
+    localSparseArray.put(2131231434, Integer.valueOf(260));
+    localSparseArray.put(2131232112, Integer.valueOf(261));
+    localSparseArray.put(2131231340, Integer.valueOf(262));
+    localSparseArray.put(2131231465, Integer.valueOf(263));
+    localSparseArray.put(2131232459, Integer.valueOf(264));
+    localSparseArray.put(2131231518, Integer.valueOf(265));
+    localSparseArray.put(2131231435, Integer.valueOf(266));
+    localSparseArray.put(2131231483, Integer.valueOf(267));
+    localSparseArray.put(2131231064, Integer.valueOf(268));
+    localSparseArray.put(2131232106, Integer.valueOf(269));
+    localSparseArray.put(2131231333, Integer.valueOf(270));
+    localSparseArray.put(2131231648, Integer.valueOf(271));
+    localSparseArray.put(2131232195, Integer.valueOf(272));
+    localSparseArray.put(2131231693, Integer.valueOf(273));
+    localSparseArray.put(2131231281, Integer.valueOf(274));
+    localSparseArray.put(2131232573, Integer.valueOf(275));
+    localSparseArray.put(2131231892, Integer.valueOf(276));
+    localSparseArray.put(2131231316, Integer.valueOf(277));
+    localSparseArray.put(2131231654, Integer.valueOf(278));
+    localSparseArray.put(2131232518, Integer.valueOf(279));
+    localSparseArray.put(2131232472, Integer.valueOf(280));
+    localSparseArray.put(2131232062, Integer.valueOf(281));
+    localSparseArray.put(2131232134, Integer.valueOf(282));
+    localSparseArray.put(2131232443, Integer.valueOf(283));
+    localSparseArray.put(2131232091, Integer.valueOf(284));
+    localSparseArray.put(2131230833, Integer.valueOf(285));
+    localSparseArray.put(2131230867, Integer.valueOf(286));
+    localSparseArray.put(2131231275, Integer.valueOf(287));
+    localSparseArray.put(2131231046, Integer.valueOf(288));
+    localSparseArray.put(2131231878, Integer.valueOf(289));
+    localSparseArray.put(2131231294, Integer.valueOf(290));
+    localSparseArray.put(2131232458, Integer.valueOf(291));
+    localSparseArray.put(2131231408, Integer.valueOf(292));
+    localSparseArray.put(2131231312, Integer.valueOf(293));
+    localSparseArray.put(2131231601, Integer.valueOf(294));
+    localSparseArray.put(2131231860, Integer.valueOf(295));
+    localSparseArray.put(2131231184, Integer.valueOf(296));
+    localSparseArray.put(2131232466, Integer.valueOf(297));
+    localSparseArray.put(2131232397, Integer.valueOf(298));
+    localSparseArray.put(2131231658, Integer.valueOf(299));
+    localSparseArray.put(2131230845, Integer.valueOf(300));
+    localSparseArray.put(2131231772, Integer.valueOf(301));
+    localSparseArray.put(2131232416, Integer.valueOf(302));
+    localSparseArray.put(2131231638, Integer.valueOf(303));
+    localSparseArray.put(2131231866, Integer.valueOf(304));
+    localSparseArray.put(2131232123, Integer.valueOf(305));
+    localSparseArray.put(2131492880, new String[] { "Standartinė", "Geltoni", "Žali", "Raudoni", "Rožiniai", "Juodi" });
+    localSparseArray.put(2131232388, Integer.valueOf(307));
+    localSparseArray.put(2131231691, Integer.valueOf(308));
+    localSparseArray.put(2131230783, Integer.valueOf(309));
+    localSparseArray.put(2131232210, Integer.valueOf(310));
+    localSparseArray.put(2131232144, Integer.valueOf(311));
+    localSparseArray.put(2131231524, Integer.valueOf(312));
+    localSparseArray.put(2131231020, Integer.valueOf(313));
+    localSparseArray.put(2131230870, Integer.valueOf(314));
+    localSparseArray.put(2131231272, Integer.valueOf(315));
+    localSparseArray.put(2131231824, Integer.valueOf(316));
+    localSparseArray.put(2131231433, Integer.valueOf(317));
+    localSparseArray.put(2131232480, Integer.valueOf(318));
+    localSparseArray.put(2131231226, Integer.valueOf(319));
+    localSparseArray.put(2131231647, Integer.valueOf(320));
+    localSparseArray.put(2131231622, Integer.valueOf(321));
+    localSparseArray.put(2131231132, Integer.valueOf(322));
+    localSparseArray.put(2131232531, Integer.valueOf(323));
+    localSparseArray.put(2131231079, Integer.valueOf(324));
+    localSparseArray.put(2131231407, Integer.valueOf(325));
+    localSparseArray.put(2131231521, Integer.valueOf(326));
+    localSparseArray.put(2131231887, Integer.valueOf(327));
+    localSparseArray.put(2131230915, Integer.valueOf(328));
+    localSparseArray.put(2131232384, Integer.valueOf(329));
+    localSparseArray.put(2131232313, Integer.valueOf(330));
+    localSparseArray.put(2131231430, Integer.valueOf(331));
+    localSparseArray.put(2131232341, Integer.valueOf(332));
+    localSparseArray.put(2131232260, Integer.valueOf(333));
+    localSparseArray.put(2131230974, Integer.valueOf(334));
+    localSparseArray.put(2131232576, Integer.valueOf(335));
+    localSparseArray.put(2131231522, Integer.valueOf(336));
+    localSparseArray.put(2131231637, Integer.valueOf(337));
+    localSparseArray.put(2131231650, Integer.valueOf(338));
+    localSparseArray.put(2131231911, Integer.valueOf(339));
+    localSparseArray.put(2131231552, Integer.valueOf(340));
+    localSparseArray.put(2131231486, Integer.valueOf(341));
+    localSparseArray.put(2131231367, Integer.valueOf(342));
+    localSparseArray.put(2131230976, Integer.valueOf(343));
+    localSparseArray.put(2131232116, Integer.valueOf(344));
+    localSparseArray.put(2131231274, Integer.valueOf(345));
+    localSparseArray.put(2131231299, Integer.valueOf(346));
+    localSparseArray.put(2131232073, Integer.valueOf(347));
+    localSparseArray.put(2131231403, Integer.valueOf(348));
+    localSparseArray.put(2131231529, Integer.valueOf(349));
+    localSparseArray.put(2131230842, Integer.valueOf(350));
+    localSparseArray.put(2131231083, Integer.valueOf(351));
+    localSparseArray.put(2131231615, Integer.valueOf(352));
+    localSparseArray.put(2131231557, Integer.valueOf(353));
+    localSparseArray.put(2131232422, Integer.valueOf(354));
+    localSparseArray.put(2131231562, Integer.valueOf(355));
+    localSparseArray.put(2131231092, Integer.valueOf(356));
+    localSparseArray.put(2131231639, Integer.valueOf(357));
+    localSparseArray.put(2131231516, Integer.valueOf(358));
+    localSparseArray.put(2131231829, Integer.valueOf(359));
+    localSparseArray.put(2131232198, Integer.valueOf(360));
+    localSparseArray.put(2131232403, Integer.valueOf(361));
+    localSparseArray.put(2131231856, Integer.valueOf(362));
+    localSparseArray.put(2131230972, Integer.valueOf(363));
+    localSparseArray.put(2131231642, Integer.valueOf(364));
+    localSparseArray.put(2131231775, Integer.valueOf(365));
+    localSparseArray.put(2131232280, Integer.valueOf(366));
+    localSparseArray.put(2131232175, Integer.valueOf(367));
+    localSparseArray.put(2131232444, Integer.valueOf(368));
+    localSparseArray.put(2131232218, Integer.valueOf(369));
+    localSparseArray.put(2131232346, Integer.valueOf(370));
+    localSparseArray.put(2131232418, Integer.valueOf(371));
+    localSparseArray.put(2131232219, Integer.valueOf(372));
+    localSparseArray.put(2131232184, Integer.valueOf(373));
+    localSparseArray.put(2131231800, Integer.valueOf(374));
+    localSparseArray.put(2131231379, Integer.valueOf(375));
+    localSparseArray.put(2131232203, Integer.valueOf(376));
+    localSparseArray.put(2131492871, new String[] { "Nuorodos", "Įrenginyje", "Bibliotekos", "Tinklas", "Priemonės" });
+    localSparseArray.put(2131231992, Integer.valueOf(378));
+    localSparseArray.put(2131231899, Integer.valueOf(379));
+    localSparseArray.put(2131232554, Integer.valueOf(380));
+    localSparseArray.put(2131231993, Integer.valueOf(381));
+    localSparseArray.put(2131231864, Integer.valueOf(382));
+    localSparseArray.put(2131231017, Integer.valueOf(383));
+    localSparseArray.put(2131232321, Integer.valueOf(384));
+    localSparseArray.put(2131231912, Integer.valueOf(385));
+    localSparseArray.put(2131232327, Integer.valueOf(386));
+    localSparseArray.put(2131232168, Integer.valueOf(387));
+    localSparseArray.put(2131231889, Integer.valueOf(388));
+    localSparseArray.put(2131231372, Integer.valueOf(389));
+    localSparseArray.put(2131231320, Integer.valueOf(390));
+    localSparseArray.put(2131230920, Integer.valueOf(391));
+    localSparseArray.put(2131232400, Integer.valueOf(392));
+    localSparseArray.put(2131230896, Integer.valueOf(393));
+    localSparseArray.put(2131231319, Integer.valueOf(394));
+    localSparseArray.put(2131231345, Integer.valueOf(395));
+    localSparseArray.put(2131231528, Integer.valueOf(396));
+    localSparseArray.put(2131231757, Integer.valueOf(397));
+    localSparseArray.put(2131231327, Integer.valueOf(398));
+    localSparseArray.put(2131231517, Integer.valueOf(399));
+    localSparseArray.put(2131232406, Integer.valueOf(400));
+    localSparseArray.put(2131231086, Integer.valueOf(401));
+    localSparseArray.put(2131231636, Integer.valueOf(402));
+    localSparseArray.put(2131231849, Integer.valueOf(403));
+    localSparseArray.put(2131232037, Integer.valueOf(404));
+    localSparseArray.put(2131231308, Integer.valueOf(405));
+    localSparseArray.put(2131231832, Integer.valueOf(406));
+    localSparseArray.put(2131232361, Integer.valueOf(407));
+    localSparseArray.put(2131231469, Integer.valueOf(408));
+    localSparseArray.put(2131230876, Integer.valueOf(409));
+    localSparseArray.put(2131232495, Integer.valueOf(410));
+    localSparseArray.put(2131232033, Integer.valueOf(411));
+    localSparseArray.put(2131231304, Integer.valueOf(412));
+    localSparseArray.put(2131230825, Integer.valueOf(413));
+    localSparseArray.put(2131230852, Integer.valueOf(414));
+    localSparseArray.put(2131232383, Integer.valueOf(415));
+    localSparseArray.put(2131232428, Integer.valueOf(416));
+    localSparseArray.put(2131230883, Integer.valueOf(417));
+    localSparseArray.put(2131231432, Integer.valueOf(418));
+    localSparseArray.put(2131231339, Integer.valueOf(419));
+    localSparseArray.put(2131231325, Integer.valueOf(420));
+    localSparseArray.put(2131231515, Integer.valueOf(421));
+    localSparseArray.put(2131231813, Integer.valueOf(422));
+    localSparseArray.put(2131232246, Integer.valueOf(423));
+    localSparseArray.put(2131230751, Integer.valueOf(424));
+    localSparseArray.put(2131231110, Integer.valueOf(425));
+    localSparseArray.put(2131231409, Integer.valueOf(426));
+    localSparseArray.put(2131231090, Integer.valueOf(427));
+    localSparseArray.put(2131232297, Integer.valueOf(428));
+    localSparseArray.put(2131232586, Integer.valueOf(429));
+    localSparseArray.put(2131231291, Integer.valueOf(430));
+    localSparseArray.put(2131231446, Integer.valueOf(431));
+    localSparseArray.put(2131232326, Integer.valueOf(432));
+    localSparseArray.put(2131232493, Integer.valueOf(433));
+    localSparseArray.put(2131231263, Integer.valueOf(434));
+    localSparseArray.put(2131231632, Integer.valueOf(435));
+    localSparseArray.put(2131231311, Integer.valueOf(436));
+    localSparseArray.put(2131232412, Integer.valueOf(437));
+    localSparseArray.put(2131231368, Integer.valueOf(438));
+    localSparseArray.put(2131231781, Integer.valueOf(439));
+    localSparseArray.put(2131232494, Integer.valueOf(440));
+    localSparseArray.put(2131230836, Integer.valueOf(441));
+    localSparseArray.put(2131230835, Integer.valueOf(442));
+    localSparseArray.put(2131231837, Integer.valueOf(443));
+    localSparseArray.put(2131231056, Integer.valueOf(444));
+    localSparseArray.put(2131232089, Integer.valueOf(445));
+    localSparseArray.put(2131231874, Integer.valueOf(446));
+    localSparseArray.put(2131231277, Integer.valueOf(447));
+    localSparseArray.put(2131231991, Integer.valueOf(448));
+    localSparseArray.put(2131232314, Integer.valueOf(449));
+    localSparseArray.put(2131231656, Integer.valueOf(450));
+    localSparseArray.put(2131231476, Integer.valueOf(451));
+    localSparseArray.put(2131230977, Integer.valueOf(452));
+    localSparseArray.put(2131230795, Integer.valueOf(453));
+    localSparseArray.put(2131230822, Integer.valueOf(454));
+    localSparseArray.put(2131230851, Integer.valueOf(455));
+    localSparseArray.put(2131231690, Integer.valueOf(456));
+    localSparseArray.put(2131231324, Integer.valueOf(457));
+    localSparseArray.put(2131232563, Integer.valueOf(458));
+    localSparseArray.put(2131231773, Integer.valueOf(459));
+    localSparseArray.put(2131232052, Integer.valueOf(460));
+    localSparseArray.put(2131232555, Integer.valueOf(461));
+    localSparseArray.put(2131231395, Integer.valueOf(462));
+    localSparseArray.put(2131231023, Integer.valueOf(463));
+    localSparseArray.put(2131231527, Integer.valueOf(464));
+    localSparseArray.put(2131231909, Integer.valueOf(465));
+    localSparseArray.put(2131231628, Integer.valueOf(466));
+    localSparseArray.put(2131232105, Integer.valueOf(467));
+    localSparseArray.put(2131231904, Integer.valueOf(468));
+    localSparseArray.put(2131231833, Integer.valueOf(469));
+    localSparseArray.put(2131231723, Integer.valueOf(470));
+    localSparseArray.put(2131231007, Integer.valueOf(471));
+    localSparseArray.put(2131231764, Integer.valueOf(472));
+    localSparseArray.put(2131230747, Integer.valueOf(473));
+    localSparseArray.put(2131231441, Integer.valueOf(474));
+    localSparseArray.put(2131232164, Integer.valueOf(475));
+    localSparseArray.put(2131232434, Integer.valueOf(476));
+    localSparseArray.put(2131232029, Integer.valueOf(477));
+    localSparseArray.put(2131232320, Integer.valueOf(478));
+    localSparseArray.put(2131231847, Integer.valueOf(479));
+    localSparseArray.put(2131232207, Integer.valueOf(480));
+    localSparseArray.put(2131232319, Integer.valueOf(481));
+    localSparseArray.put(2131231404, Integer.valueOf(482));
+    localSparseArray.put(2131231745, Integer.valueOf(483));
+    localSparseArray.put(2131232036, Integer.valueOf(484));
+    localSparseArray.put(2131232411, Integer.valueOf(485));
+    localSparseArray.put(2131230881, Integer.valueOf(486));
+    localSparseArray.put(2131231396, Integer.valueOf(487));
+    localSparseArray.put(2131232157, Integer.valueOf(488));
+    localSparseArray.put(2131232492, Integer.valueOf(489));
+    localSparseArray.put(2131232519, Integer.valueOf(490));
+    localSparseArray.put(2131230848, Integer.valueOf(491));
+    localSparseArray.put(2131231763, Integer.valueOf(492));
+    localSparseArray.put(2131232391, Integer.valueOf(493));
+    localSparseArray.put(2131231131, Integer.valueOf(494));
+    localSparseArray.put(2131232488, Integer.valueOf(495));
+    localSparseArray.put(2131232035, Integer.valueOf(496));
+    localSparseArray.put(2131232463, Integer.valueOf(497));
+    localSparseArray.put(2131231358, Integer.valueOf(498));
+    localSparseArray.put(2131232547, Integer.valueOf(499));
+    localSparseArray.put(2131231091, Integer.valueOf(500));
+    localSparseArray.put(2131232165, Integer.valueOf(501));
+    localSparseArray.put(2131231734, Integer.valueOf(502));
+    localSparseArray.put(2131232214, Integer.valueOf(503));
+    localSparseArray.put(2131231743, Integer.valueOf(504));
+    localSparseArray.put(2131231065, Integer.valueOf(505));
+    localSparseArray.put(2131231626, Integer.valueOf(506));
+    localSparseArray.put(2131232072, Integer.valueOf(507));
+    localSparseArray.put(2131231776, Integer.valueOf(508));
+    localSparseArray.put(2131232252, Integer.valueOf(509));
+    localSparseArray.put(2131232220, Integer.valueOf(510));
+    localSparseArray.put(2131232521, Integer.valueOf(511));
+    localSparseArray.put(2131231774, Integer.valueOf(512));
+    localSparseArray.put(2131232524, Integer.valueOf(513));
+    localSparseArray.put(2131492881, new String[] { "Dideli, ženklai", "Vidutiniai, ženklai", "Smulkūs, ženklai", "Dideli, sąrašas", "Vidutiniai, sąrašas", "Smulkūs, sąrašas", "Dideli, detaliai", "Vidutiniai, detaliai", "Smulkūs, detaliai" });
+    localSparseArray.put(2131232206, Integer.valueOf(515));
+    localSparseArray.put(2131230895, Integer.valueOf(516));
+    localSparseArray.put(2131231480, Integer.valueOf(517));
+    localSparseArray.put(2131231273, Integer.valueOf(518));
+    localSparseArray.put(2131231478, Integer.valueOf(519));
+    localSparseArray.put(2131231479, Integer.valueOf(520));
+    localSparseArray.put(2131232023, Integer.valueOf(521));
+    localSparseArray.put(2131230723, Integer.valueOf(522));
+    localSparseArray.put(2131232549, Integer.valueOf(523));
+    localSparseArray.put(2131232464, Integer.valueOf(524));
+    localSparseArray.put(2131232177, Integer.valueOf(525));
+    localSparseArray.put(2131231298, Integer.valueOf(526));
+    localSparseArray.put(2131231660, Integer.valueOf(527));
+    localSparseArray.put(2131232366, Integer.valueOf(528));
+    localSparseArray.put(2131231822, Integer.valueOf(529));
+    localSparseArray.put(2131231834, Integer.valueOf(530));
+    localSparseArray.put(2131230973, Integer.valueOf(531));
+    localSparseArray.put(2131231901, Integer.valueOf(532));
+    localSparseArray.put(2131232395, Integer.valueOf(533));
+    localSparseArray.put(2131231711, Integer.valueOf(534));
+    localSparseArray.put(2131231280, Integer.valueOf(535));
+    localSparseArray.put(2131232122, Integer.valueOf(536));
+    localSparseArray.put(2131231825, Integer.valueOf(537));
+    localSparseArray.put(2131232433, Integer.valueOf(538));
+    localSparseArray.put(2131231282, Integer.valueOf(539));
+    localSparseArray.put(2131231736, Integer.valueOf(540));
+    localSparseArray.put(2131231651, Integer.valueOf(541));
+    localSparseArray.put(2131232387, Integer.valueOf(542));
+    localSparseArray.put(2131230891, Integer.valueOf(543));
+    localSparseArray.put(2131232244, Integer.valueOf(544));
+    localSparseArray.put(2131232335, Integer.valueOf(545));
+    localSparseArray.put(2131230999, Integer.valueOf(546));
+    localSparseArray.put(2131231265, Integer.valueOf(547));
+    localSparseArray.put(2131232117, Integer.valueOf(548));
+    localSparseArray.put(2131232181, Integer.valueOf(549));
+    localSparseArray.put(2131231005, Integer.valueOf(550));
+    localSparseArray.put(2131232187, Integer.valueOf(551));
+    localSparseArray.put(2131231386, Integer.valueOf(552));
+    localSparseArray.put(2131232171, Integer.valueOf(553));
+    localSparseArray.put(2131232188, Integer.valueOf(554));
+    localSparseArray.put(2131232396, Integer.valueOf(555));
+    localSparseArray.put(2131232454, Integer.valueOf(556));
+    localSparseArray.put(2131231292, Integer.valueOf(557));
+    localSparseArray.put(2131232358, Integer.valueOf(558));
+    localSparseArray.put(2131231081, Integer.valueOf(559));
+    localSparseArray.put(2131230868, Integer.valueOf(560));
+    localSparseArray.put(2131231796, Integer.valueOf(561));
+    localSparseArray.put(2131231791, Integer.valueOf(562));
+    localSparseArray.put(2131232481, Integer.valueOf(563));
+    localSparseArray.put(2131231633, Integer.valueOf(564));
+    localSparseArray.put(2131232560, Integer.valueOf(565));
+    localSparseArray.put(2131231426, Integer.valueOf(566));
+    localSparseArray.put(2131230840, Integer.valueOf(567));
+    localSparseArray.put(2131231760, Integer.valueOf(568));
+    localSparseArray.put(2131231382, Integer.valueOf(569));
+    localSparseArray.put(2131230844, Integer.valueOf(570));
+    localSparseArray.put(2131231806, Integer.valueOf(571));
+    localSparseArray.put(2131232031, Integer.valueOf(572));
+    localSparseArray.put(2131230980, Integer.valueOf(573));
+    localSparseArray.put(2131230725, Integer.valueOf(574));
+    localSparseArray.put(2131232193, Integer.valueOf(575));
+    localSparseArray.put(2131231692, Integer.valueOf(576));
+    localSparseArray.put(2131231765, Integer.valueOf(577));
+    localSparseArray.put(2131231370, Integer.valueOf(578));
+    localSparseArray.put(2131232440, Integer.valueOf(579));
+    localSparseArray.put(2131232061, Integer.valueOf(580));
+    localSparseArray.put(2131232160, Integer.valueOf(581));
+    localSparseArray.put(2131232060, Integer.valueOf(582));
+    localSparseArray.put(2131232491, Integer.valueOf(583));
+    localSparseArray.put(2131231618, Integer.valueOf(584));
+    localSparseArray.put(2131231747, Integer.valueOf(585));
+    localSparseArray.put(2131231830, Integer.valueOf(586));
+    localSparseArray.put(2131231428, Integer.valueOf(587));
+    localSparseArray.put(2131231836, Integer.valueOf(588));
+    localSparseArray.put(2131231429, Integer.valueOf(589));
+    localSparseArray.put(2131232202, Integer.valueOf(590));
+    localSparseArray.put(2131232217, Integer.valueOf(591));
+    localSparseArray.put(2131232194, Integer.valueOf(592));
+    localSparseArray.put(2131230997, Integer.valueOf(593));
+    localSparseArray.put(2131232357, Integer.valueOf(594));
+    localSparseArray.put(2131231886, Integer.valueOf(595));
+    localSparseArray.put(2131231702, Integer.valueOf(596));
+    localSparseArray.put(2131231716, Integer.valueOf(597));
+    localSparseArray.put(2131231717, Integer.valueOf(598));
+    localSparseArray.put(2131232381, Integer.valueOf(599));
+    localSparseArray.put(2131232360, Integer.valueOf(600));
+    localSparseArray.put(2131232156, Integer.valueOf(601));
+    localSparseArray.put(2131232283, Integer.valueOf(602));
+    localSparseArray.put(2131231362, Integer.valueOf(603));
+    localSparseArray.put(2131231986, Integer.valueOf(604));
+    localSparseArray.put(2131231077, Integer.valueOf(605));
+    localSparseArray.put(2131232058, Integer.valueOf(606));
+    localSparseArray.put(2131232145, Integer.valueOf(607));
+    localSparseArray.put(2131232049, Integer.valueOf(608));
+    localSparseArray.put(2131231804, Integer.valueOf(609));
+    localSparseArray.put(2131231782, Integer.valueOf(610));
+    localSparseArray.put(2131492885, new String[] { "", "Ieškau…", "Prisijungimas prie %1$s…", "Prisistatymas %1$s…", "Gaunu IP аdresą iš %1$s…", "Prisijungiau prie %1$s", "Sustabdyta", "Atsijungiame nuo %1$s…", "Atsijungta", "Klaida prisijungiant" });
+    localSparseArray.put(2131232183, Integer.valueOf(612));
+    localSparseArray.put(2131232002, Integer.valueOf(613));
+    localSparseArray.put(2131231828, Integer.valueOf(614));
+    localSparseArray.put(2131231801, Integer.valueOf(615));
+    localSparseArray.put(2131232213, Integer.valueOf(616));
+    localSparseArray.put(2131231374, Integer.valueOf(617));
+    localSparseArray.put(2131232588, Integer.valueOf(618));
+    localSparseArray.put(2131231471, Integer.valueOf(619));
+    localSparseArray.put(2131231896, Integer.valueOf(620));
+    localSparseArray.put(2131231217, Integer.valueOf(621));
+    localSparseArray.put(2131231634, Integer.valueOf(622));
+    localSparseArray.put(2131231731, Integer.valueOf(623));
+    localSparseArray.put(2131231317, Integer.valueOf(624));
+    localSparseArray.put(2131232004, Integer.valueOf(625));
+    localSparseArray.put(2131232084, Integer.valueOf(626));
+    localSparseArray.put(2131231481, Integer.valueOf(627));
+    localSparseArray.put(2131231482, Integer.valueOf(628));
+    localSparseArray.put(2131231331, Integer.valueOf(629));
+    localSparseArray.put(2131231329, Integer.valueOf(630));
+    localSparseArray.put(2131232582, Integer.valueOf(631));
+    localSparseArray.put(2131231286, Integer.valueOf(632));
+    localSparseArray.put(2131231652, Integer.valueOf(633));
+    localSparseArray.put(2131230889, Integer.valueOf(634));
+    localSparseArray.put(2131232107, Integer.valueOf(635));
+    localSparseArray.put(2131230913, Integer.valueOf(636));
+    localSparseArray.put(2131231276, Integer.valueOf(637));
+    localSparseArray.put(2131232461, Integer.valueOf(638));
+    localSparseArray.put(2131232408, Integer.valueOf(639));
+    localSparseArray.put(2131231337, Integer.valueOf(640));
+    localSparseArray.put(2131231523, Integer.valueOf(641));
+    localSparseArray.put(2131232034, Integer.valueOf(642));
+    localSparseArray.put(2131231437, Integer.valueOf(643));
+    localSparseArray.put(2131232568, Integer.valueOf(644));
+    localSparseArray.put(2131231845, Integer.valueOf(645));
+    localSparseArray.put(2131232394, Integer.valueOf(646));
+    localSparseArray.put(2131232415, Integer.valueOf(647));
+    localSparseArray.put(2131231010, Integer.valueOf(648));
+    localSparseArray.put(2131231996, Integer.valueOf(649));
+    localSparseArray.put(2131231373, Integer.valueOf(650));
+    localSparseArray.put(2131231062, Integer.valueOf(651));
+    localSparseArray.put(2131231653, Integer.valueOf(652));
+    localSparseArray.put(2131232300, Integer.valueOf(653));
+    localSparseArray.put(2131231463, Integer.valueOf(654));
+    localSparseArray.put(2131231085, Integer.valueOf(655));
+    localSparseArray.put(2131232322, Integer.valueOf(656));
+    localSparseArray.put(2131231655, Integer.valueOf(657));
+    localSparseArray.put(2131231891, Integer.valueOf(658));
+    localSparseArray.put(2131231778, Integer.valueOf(659));
+    localSparseArray.put(2131232594, Integer.valueOf(660));
+    localSparseArray.put(2131230838, Integer.valueOf(661));
+    localSparseArray.put(2131232574, Integer.valueOf(662));
+    localSparseArray.put(2131232131, Integer.valueOf(663));
+    localSparseArray.put(2131231814, Integer.valueOf(664));
+    localSparseArray.put(2131232071, Integer.valueOf(665));
+    localSparseArray.put(2131232439, Integer.valueOf(666));
+    localSparseArray.put(2131230817, Integer.valueOf(667));
+    localSparseArray.put(2131232301, Integer.valueOf(668));
+    localSparseArray.put(2131232053, Integer.valueOf(669));
+    localSparseArray.put(2131231641, Integer.valueOf(670));
+    localSparseArray.put(2131232571, Integer.valueOf(671));
+    localSparseArray.put(2131232442, Integer.valueOf(672));
+    localSparseArray.put(2131231732, Integer.valueOf(673));
+    localSparseArray.put(2131232533, Integer.valueOf(674));
+    localSparseArray.put(2131230890, Integer.valueOf(675));
+    localSparseArray.put(2131231905, Integer.valueOf(676));
+    localSparseArray.put(2131231484, Integer.valueOf(677));
+    localSparseArray.put(2131231709, Integer.valueOf(678));
+    localSparseArray.put(2131232264, Integer.valueOf(679));
+    localSparseArray.put(2131232063, Integer.valueOf(680));
+    localSparseArray.put(2131232237, Integer.valueOf(681));
+    localSparseArray.put(2131231766, Integer.valueOf(682));
+    localSparseArray.put(2131231216, Integer.valueOf(683));
+    localSparseArray.put(2131232581, Integer.valueOf(684));
+    localSparseArray.put(2131232352, Integer.valueOf(685));
+    localSparseArray.put(2131231714, Integer.valueOf(686));
+    localSparseArray.put(2131232465, Integer.valueOf(687));
+    localSparseArray.put(2131231099, Integer.valueOf(688));
+    localSparseArray.put(2131232051, Integer.valueOf(689));
+    localSparseArray.put(2131231815, Integer.valueOf(690));
+    localSparseArray.put(2131231394, Integer.valueOf(691));
+    localSparseArray.put(2131231134, Integer.valueOf(692));
+    localSparseArray.put(2131232110, Integer.valueOf(693));
+    localSparseArray.put(2131232238, Integer.valueOf(694));
+    localSparseArray.put(2131230834, Integer.valueOf(695));
+    localSparseArray.put(2131230863, Integer.valueOf(696));
+    localSparseArray.put(2131231102, Integer.valueOf(697));
+    localSparseArray.put(2131232113, Integer.valueOf(698));
+    localSparseArray.put(2131231212, Integer.valueOf(699));
+    localSparseArray.put(2131232262, Integer.valueOf(700));
+    localSparseArray.put(2131231283, Integer.valueOf(701));
+    localSparseArray.put(2131230982, Integer.valueOf(702));
+    localSparseArray.put(2131231268, Integer.valueOf(703));
+    localSparseArray.put(2131232022, Integer.valueOf(704));
+    localSparseArray.put(2131232174, Integer.valueOf(705));
+    localSparseArray.put(2131232240, Integer.valueOf(706));
+    localSparseArray.put(2131232514, Integer.valueOf(707));
+    localSparseArray.put(2131231735, Integer.valueOf(708));
+    localSparseArray.put(2131232173, Integer.valueOf(709));
+    localSparseArray.put(2131232490, Integer.valueOf(710));
+    localSparseArray.put(2131232402, Integer.valueOf(711));
+    localSparseArray.put(2131231551, Integer.valueOf(712));
+    localSparseArray.put(2131231843, Integer.valueOf(713));
+    localSparseArray.put(2131232153, Integer.valueOf(714));
+    localSparseArray.put(2131232429, Integer.valueOf(715));
+    localSparseArray.put(2131231876, Integer.valueOf(716));
+    localSparseArray.put(2131232103, Integer.valueOf(717));
+    localSparseArray.put(2131232435, Integer.valueOf(718));
+    localSparseArray.put(2131231729, Integer.valueOf(719));
+    localSparseArray.put(2131231609, Integer.valueOf(720));
+    localSparseArray.put(2131232317, Integer.valueOf(721));
+    localSparseArray.put(2131231470, Integer.valueOf(722));
+    localSparseArray.put(2131231799, Integer.valueOf(723));
+    localSparseArray.put(2131230884, Integer.valueOf(724));
+    localSparseArray.put(2131231744, Integer.valueOf(725));
+    localSparseArray.put(2131232124, Integer.valueOf(726));
+    localSparseArray.put(2131230818, Integer.valueOf(727));
+    localSparseArray.put(2131230815, Integer.valueOf(728));
+    localSparseArray.put(2131231863, Integer.valueOf(729));
+    localSparseArray.put(2131231619, Integer.valueOf(730));
+    localSparseArray.put(2131230985, Integer.valueOf(731));
+    localSparseArray.put(2131231914, Integer.valueOf(732));
+    localSparseArray.put(2131231290, Integer.valueOf(733));
+    localSparseArray.put(2131232385, Integer.valueOf(734));
+    localSparseArray.put(2131231770, Integer.valueOf(735));
+    localSparseArray.put(2131231009, Integer.valueOf(736));
+    localSparseArray.put(2131231612, Integer.valueOf(737));
+    localSparseArray.put(2131231511, Integer.valueOf(738));
+    localSparseArray.put(2131231406, Integer.valueOf(739));
+    localSparseArray.put(2131232130, Integer.valueOf(740));
+    localSparseArray.put(2131231100, Integer.valueOf(741));
+    localSparseArray.put(2131232042, Integer.valueOf(742));
+    localSparseArray.put(2131232099, Integer.valueOf(743));
+    localSparseArray.put(2131232163, Integer.valueOf(744));
+    localSparseArray.put(2131232221, Integer.valueOf(745));
+    localSparseArray.put(2131231444, Integer.valueOf(746));
+    localSparseArray.put(2131232338, Integer.valueOf(747));
+    localSparseArray.put(2131231809, Integer.valueOf(748));
+    localSparseArray.put(2131232290, Integer.valueOf(749));
+    localSparseArray.put(2131231769, Integer.valueOf(750));
+    localSparseArray.put(2131231559, Integer.valueOf(751));
+    localSparseArray.put(2131231823, Integer.valueOf(752));
+    localSparseArray.put(2131232158, Integer.valueOf(753));
+    localSparseArray.put(2131232441, Integer.valueOf(754));
+    localSparseArray.put(2131231073, Integer.valueOf(755));
+    localSparseArray.put(2131232382, Integer.valueOf(756));
+    localSparseArray.put(2131231699, Integer.valueOf(757));
+    localSparseArray.put(2131231129, Integer.valueOf(758));
+    localSparseArray.put(2131232146, Integer.valueOf(759));
+    localSparseArray.put(2131231749, Integer.valueOf(760));
+    localSparseArray.put(2131231371, Integer.valueOf(761));
+    localSparseArray.put(2131231335, Integer.valueOf(762));
+    localSparseArray.put(2131231089, Integer.valueOf(763));
+    localSparseArray.put(2131231293, Integer.valueOf(764));
+    localSparseArray.put(2131231442, Integer.valueOf(765));
+    localSparseArray.put(2131230894, Integer.valueOf(766));
+    localSparseArray.put(2131232139, Integer.valueOf(767));
+    localSparseArray.put(2131232249, Integer.valueOf(768));
+    localSparseArray.put(2131232509, Integer.valueOf(769));
+    localSparseArray.put(2131231509, Integer.valueOf(770));
+    localSparseArray.put(2131231631, Integer.valueOf(771));
+    localSparseArray.put(2131231519, Integer.valueOf(772));
+    localSparseArray.put(2131232405, Integer.valueOf(773));
+    localSparseArray.put(2131232179, Integer.valueOf(774));
+    localSparseArray.put(2131231338, Integer.valueOf(775));
+    localSparseArray.put(2131232024, Integer.valueOf(776));
+    localSparseArray.put(2131230865, Integer.valueOf(777));
+    localSparseArray.put(2131231264, Integer.valueOf(778));
+    localSparseArray.put(2131230971, Integer.valueOf(779));
+    localSparseArray.put(2131230828, Integer.valueOf(780));
+    localSparseArray.put(2131232185, Integer.valueOf(781));
+    localSparseArray.put(2131231136, Integer.valueOf(782));
+    localSparseArray.put(2131231798, Integer.valueOf(783));
+    localSparseArray.put(2131230872, Integer.valueOf(784));
+    localSparseArray.put(2131231816, Integer.valueOf(785));
+    localSparseArray.put(2131231030, Integer.valueOf(786));
+    localSparseArray.put(2131230721, Integer.valueOf(787));
+    localSparseArray.put(2131231380, Integer.valueOf(788));
+    localSparseArray.put(2131231850, Integer.valueOf(789));
+    localSparseArray.put(2131230975, Integer.valueOf(790));
+    localSparseArray.put(2131231066, Integer.valueOf(791));
+    localSparseArray.put(2131230726, Integer.valueOf(792));
+    localSparseArray.put(2131232149, Integer.valueOf(793));
+    localSparseArray.put(2131232355, Integer.valueOf(794));
+    localSparseArray.put(2131231831, Integer.valueOf(795));
+    localSparseArray.put(2131231278, Integer.valueOf(796));
+    localSparseArray.put(2131231366, Integer.valueOf(797));
+    localSparseArray.put(2131231916, Integer.valueOf(798));
+    localSparseArray.put(2131231016, Integer.valueOf(799));
+    localSparseArray.put(2131231903, Integer.valueOf(800));
+    localSparseArray.put(2131232140, Integer.valueOf(801));
+    localSparseArray.put(2131232585, Integer.valueOf(802));
+    localSparseArray.put(2131232154, Integer.valueOf(803));
+    localSparseArray.put(2131231361, Integer.valueOf(804));
+    localSparseArray.put(2131232015, Integer.valueOf(805));
+    localSparseArray.put(2131232380, Integer.valueOf(806));
+    localSparseArray.put(2131231838, Integer.valueOf(807));
+    localSparseArray.put(2131231635, Integer.valueOf(808));
+    localSparseArray.put(2131231719, Integer.valueOf(809));
+    localSparseArray.put(2131231627, Integer.valueOf(810));
+    localSparseArray.put(2131232275, Integer.valueOf(811));
+    localSparseArray.put(2131232068, Integer.valueOf(812));
+    localSparseArray.put(2131231858, Integer.valueOf(813));
+    localSparseArray.put(2131230882, Integer.valueOf(814));
+    localSparseArray.put(2131231508, Integer.valueOf(815));
+    localSparseArray.put(2131231075, Integer.valueOf(816));
+    localSparseArray.put(2131231614, Integer.valueOf(817));
+    localSparseArray.put(2131231218, Integer.valueOf(818));
+    localSparseArray.put(2131231890, Integer.valueOf(819));
+    localSparseArray.put(2131231111, Integer.valueOf(820));
+    localSparseArray.put(2131232390, Integer.valueOf(821));
+    localSparseArray.put(2131232242, Integer.valueOf(822));
+    localSparseArray.put(2131232209, Integer.valueOf(823));
+    localSparseArray.put(2131230892, Integer.valueOf(824));
+    localSparseArray.put(2131232334, Integer.valueOf(825));
+    localSparseArray.put(2131232570, Integer.valueOf(826));
+    localSparseArray.put(2131231359, Integer.valueOf(827));
+    localSparseArray.put(2131231096, Integer.valueOf(828));
+    localSparseArray.put(2131231389, Integer.valueOf(829));
+    localSparseArray.put(2131232008, Integer.valueOf(830));
+    localSparseArray.put(2131231780, Integer.valueOf(831));
+    localSparseArray.put(2131232284, Integer.valueOf(832));
+    localSparseArray.put(2131232055, Integer.valueOf(833));
+    localSparseArray.put(2131232147, Integer.valueOf(834));
+    localSparseArray.put(2131231855, Integer.valueOf(835));
+    localSparseArray.put(2131232591, Integer.valueOf(836));
+    localSparseArray.put(2131232239, Integer.valueOf(837));
+    localSparseArray.put(2131231893, Integer.valueOf(838));
+    localSparseArray.put(2131231393, Integer.valueOf(839));
+    localSparseArray.put(2131232250, Integer.valueOf(840));
+    localSparseArray.put(2131232048, Integer.valueOf(841));
+    localSparseArray.put(2131232204, Integer.valueOf(842));
+    localSparseArray.put(2131231336, Integer.valueOf(843));
+    localSparseArray.put(2131231820, Integer.valueOf(844));
+    localSparseArray.put(2131232276, Integer.valueOf(845));
+    localSparseArray.put(2131232129, Integer.valueOf(846));
+    localSparseArray.put(2131231507, Integer.valueOf(847));
+    localSparseArray.put(2131232398, Integer.valueOf(848));
+    localSparseArray.put(2131231664, Integer.valueOf(849));
+    localSparseArray.put(2131231865, Integer.valueOf(850));
+    localSparseArray.put(2131231095, Integer.valueOf(851));
+    localSparseArray.put(2131230827, Integer.valueOf(852));
+    localSparseArray.put(2131231011, Integer.valueOf(853));
+    localSparseArray.put(2131231777, Integer.valueOf(854));
+    localSparseArray.put(2131232374, Integer.valueOf(855));
+    localSparseArray.put(2131232277, Integer.valueOf(856));
+    localSparseArray.put(2131232590, Integer.valueOf(857));
+    localSparseArray.put(2131232489, Integer.valueOf(858));
+    localSparseArray.put(2131232343, Integer.valueOf(859));
+    localSparseArray.put(2131232205, Integer.valueOf(860));
+    localSparseArray.put(2131231708, Integer.valueOf(861));
+    localSparseArray.put(2131232564, Integer.valueOf(862));
+    localSparseArray.put(2131231643, Integer.valueOf(863));
+    localSparseArray.put(2131231705, Integer.valueOf(864));
+    localSparseArray.put(2131231385, Integer.valueOf(865));
+    localSparseArray.put(2131232017, Integer.valueOf(866));
+    localSparseArray.put(2131231105, Integer.valueOf(867));
+    localSparseArray.put(2131231881, Integer.valueOf(868));
+    localSparseArray.put(2131232312, Integer.valueOf(869));
+    localSparseArray.put(2131231915, Integer.valueOf(870));
+    localSparseArray.put(2131231436, Integer.valueOf(871));
+    localSparseArray.put(2131232039, Integer.valueOf(872));
+    localSparseArray.put(2131232142, Integer.valueOf(873));
+    localSparseArray.put(2131230961, Integer.valueOf(874));
+    localSparseArray.put(2131231797, Integer.valueOf(875));
+    localSparseArray.put(2131232450, Integer.valueOf(876));
+    localSparseArray.put(2131232517, Integer.valueOf(877));
+    localSparseArray.put(2131231196, Integer.valueOf(878));
+    localSparseArray.put(2131231554, Integer.valueOf(879));
+    localSparseArray.put(2131231818, Integer.valueOf(880));
+    localSparseArray.put(2131232001, Integer.valueOf(881));
+    localSparseArray.put(2131230866, Integer.valueOf(882));
+    localSparseArray.put(2131230978, Integer.valueOf(883));
+    localSparseArray.put(2131232170, Integer.valueOf(884));
+    localSparseArray.put(2131230880, Integer.valueOf(885));
+    localSparseArray.put(2131230921, Integer.valueOf(886));
+    localSparseArray.put(2131232003, Integer.valueOf(887));
+    localSparseArray.put(2131232543, Integer.valueOf(888));
+    localSparseArray.put(2131232248, Integer.valueOf(889));
+    localSparseArray.put(2131232593, Integer.valueOf(890));
+    localSparseArray.put(2131231477, Integer.valueOf(891));
+    localSparseArray.put(2131232094, Integer.valueOf(892));
+    localSparseArray.put(2131231663, Integer.valueOf(893));
+    localSparseArray.put(2131231363, Integer.valueOf(894));
+    localSparseArray.put(2131232166, Integer.valueOf(895));
+    localSparseArray.put(2131231995, Integer.valueOf(896));
+    localSparseArray.put(2131232399, Integer.valueOf(897));
+    localSparseArray.put(2131232431, Integer.valueOf(898));
+    localSparseArray.put(2131232059, Integer.valueOf(899));
+    localSparseArray.put(2131232455, Integer.valueOf(900));
+    localSparseArray.put(2131231224, Integer.valueOf(901));
+    localSparseArray.put(2131231462, Integer.valueOf(902));
+    localSparseArray.put(2131232572, Integer.valueOf(903));
+    localSparseArray.put(2131231438, Integer.valueOf(904));
+    localSparseArray.put(2131232339, Integer.valueOf(905));
+    localSparseArray.put(2131230994, Integer.valueOf(906));
+    localSparseArray.put(2131231303, Integer.valueOf(907));
+    localSparseArray.put(2131231074, Integer.valueOf(908));
+    localSparseArray.put(2131231877, Integer.valueOf(909));
+    localSparseArray.put(2131231859, Integer.valueOf(910));
+    localSparseArray.put(2131232027, Integer.valueOf(911));
+    localSparseArray.put(2131231617, Integer.valueOf(912));
+    localSparseArray.put(2131232347, Integer.valueOf(913));
+    localSparseArray.put(2131232161, Integer.valueOf(914));
+    localSparseArray.put(2131230841, Integer.valueOf(915));
+    localSparseArray.put(2131232095, Integer.valueOf(916));
+    localSparseArray.put(2131232386, Integer.valueOf(917));
+    localSparseArray.put(2131232553, Integer.valueOf(918));
+    localSparseArray.put(2131231715, Integer.valueOf(919));
+    localSparseArray.put(2131232186, Integer.valueOf(920));
+    localSparseArray.put(2131232067, Integer.valueOf(921));
+    localSparseArray.put(2131232056, Integer.valueOf(922));
+    localSparseArray.put(2131231810, Integer.valueOf(923));
+    localSparseArray.put(2131231598, Integer.valueOf(924));
+    localSparseArray.put(2131230877, Integer.valueOf(925));
+    localSparseArray.put(2131231109, Integer.valueOf(926));
+    localSparseArray.put(2131231558, Integer.valueOf(927));
+    localSparseArray.put(2131232462, Integer.valueOf(928));
+    localSparseArray.put(2131232584, Integer.valueOf(929));
+    localSparseArray.put(2131231423, Integer.valueOf(930));
+    localSparseArray.put(2131231006, Integer.valueOf(931));
+    localSparseArray.put(2131231805, Integer.valueOf(932));
+    localSparseArray.put(2131232077, Integer.valueOf(933));
+    localSparseArray.put(2131231857, Integer.valueOf(934));
+    localSparseArray.put(2131231710, Integer.valueOf(935));
+    localSparseArray.put(2131231098, Integer.valueOf(936));
+    localSparseArray.put(2131232069, Integer.valueOf(937));
+    localSparseArray.put(2131231698, Integer.valueOf(938));
+    localSparseArray.put(2131231094, Integer.valueOf(939));
+    localSparseArray.put(2131232026, Integer.valueOf(940));
+    localSparseArray.put(2131232356, Integer.valueOf(941));
+    localSparseArray.put(2131232018, Integer.valueOf(942));
+    localSparseArray.put(2131231895, Integer.valueOf(943));
+    localSparseArray.put(2131232199, Integer.valueOf(944));
+    localSparseArray.put(2131231768, Integer.valueOf(945));
+    localSparseArray.put(2131231439, Integer.valueOf(946));
+    localSparseArray.put(2131231384, Integer.valueOf(947));
+    localSparseArray.put(2131231392, Integer.valueOf(948));
+    localSparseArray.put(2131231697, Integer.valueOf(949));
+    localSparseArray.put(2131232211, Integer.valueOf(950));
+    localSparseArray.put(2131231332, Integer.valueOf(951));
+    localSparseArray.put(2131231397, Integer.valueOf(952));
+    localSparseArray.put(2131232092, Integer.valueOf(953));
+    localSparseArray.put(2131231748, Integer.valueOf(954));
+    localSparseArray.put(2131232545, Integer.valueOf(955));
+    localSparseArray.put(2131231767, Integer.valueOf(956));
+    localSparseArray.put(2131231758, Integer.valueOf(957));
+    localSparseArray.put(2131230857, Integer.valueOf(958));
+    localSparseArray.put(2131231902, Integer.valueOf(959));
+    localSparseArray.put(2131231076, Integer.valueOf(960));
+    localSparseArray.put(2131232007, Integer.valueOf(961));
+    localSparseArray.put(2131231018, Integer.valueOf(962));
+    localSparseArray.put(2131232389, Integer.valueOf(963));
+    localSparseArray.put(2131232575, Integer.valueOf(964));
+    localSparseArray.put(2131232247, Integer.valueOf(965));
+    localSparseArray.put(2131231759, Integer.valueOf(966));
+    localSparseArray.put(2131231082, Integer.valueOf(967));
+    localSparseArray.put(2131232078, Integer.valueOf(968));
+    localSparseArray.put(2131232436, Integer.valueOf(969));
+    localSparseArray.put(2131231645, Integer.valueOf(970));
+    localSparseArray.put(2131232548, Integer.valueOf(971));
+    localSparseArray.put(2131232569, Integer.valueOf(972));
+    localSparseArray.put(2131231343, Integer.valueOf(973));
+    localSparseArray.put(2131232097, Integer.valueOf(974));
+    localSparseArray.put(2131231285, Integer.valueOf(975));
+    localSparseArray.put(2131231369, Integer.valueOf(976));
+    localSparseArray.put(2131492876, new String[] { "Visi", "Šiandien", "Vakar", "Savaitė", "Mėnuo", "Metai", "Daugiau nei metai", "Nurodyti" });
+    localSparseArray.put(2131230839, Integer.valueOf(978));
+    localSparseArray.put(2131232522, Integer.valueOf(979));
+    localSparseArray.put(2131231771, Integer.valueOf(980));
+    localSparseArray.put(2131230887, Integer.valueOf(981));
+    localSparseArray.put(2131231803, Integer.valueOf(982));
+    localSparseArray.put(2131232567, Integer.valueOf(983));
+    return localSparseArray;
   }
   
-  public static String[] a(String paramString, int paramInt)
+  public static String a(int paramInt)
   {
-    if (paramString.equals("th")) {
-      return af.a(paramInt).split("___");
-    }
-    if (paramString.equals("cn")) {
-      return e.a(paramInt).split("___");
-    }
-    if (paramString.equals("uk")) {
-      return aj.a(paramInt).split("___");
-    }
-    if (paramString.equals("ja")) {
-      return r.a(paramInt).split("___");
-    }
-    if (paramString.equals("cs")) {
-      return f.a(paramInt).split("___");
-    }
-    if (paramString.equals("tr")) {
-      return ag.a(paramInt).split("___");
-    }
-    if (paramString.equals("hu")) {
-      return n.a(paramInt).split("___");
-    }
-    if (paramString.equals("ca")) {
-      return d.a(paramInt).split("___");
-    }
-    if (paramString.equals("ko")) {
-      return t.a(paramInt).split("___");
-    }
-    if (paramString.equals("ta")) {
-      return ae.a(paramInt).split("___");
-    }
-    if (paramString.equals("kn")) {
-      return s.a(paramInt).split("___");
-    }
-    if (paramString.equals("fa")) {
-      return k.a(paramInt).split("___");
-    }
-    if (paramString.equals("fr")) {
-      return m.a(paramInt).split("___");
-    }
-    if (paramString.equals("es")) {
-      return j.a(paramInt).split("___");
-    }
-    if (paramString.equals("it")) {
-      return p.a(paramInt).split("___");
-    }
-    if (paramString.equals("pt_pt")) {
-      return z.a(paramInt).split("___");
-    }
-    if (paramString.equals("nl")) {
-      return w.a(paramInt).split("___");
-    }
-    if (paramString.equals("sk")) {
-      return ac.a(paramInt).split("___");
-    }
-    if (paramString.equals("ar")) {
-      return a.a(paramInt).split("___");
-    }
-    if (paramString.equals("en")) {
-      return i.a(paramInt).split("___");
-    }
-    if (paramString.equals("ug")) {
-      return ai.a(paramInt).split("___");
-    }
-    if (paramString.equals("vi")) {
-      return ak.a(paramInt).split("___");
-    }
-    if (paramString.equals("lt")) {
-      return u.a(paramInt).split("___");
-    }
-    if (paramString.equals("bn")) {
-      return c.a(paramInt).split("___");
-    }
-    if (paramString.equals("tw")) {
-      return ah.a(paramInt).split("___");
-    }
-    if (paramString.equals("el")) {
-      return h.a(paramInt).split("___");
-    }
-    if (paramString.equals("pl")) {
-      return x.a(paramInt).split("___");
-    }
-    if (paramString.equals("ru")) {
-      return ab.a(paramInt).split("___");
-    }
-    if (paramString.equals("pt")) {
-      return y.a(paramInt).split("___");
-    }
-    if (paramString.equals("iw")) {
-      return q.a(paramInt).split("___");
-    }
-    if (paramString.equals("fi")) {
-      return l.a(paramInt).split("___");
-    }
-    if (paramString.equals("ro")) {
-      return aa.a(paramInt).split("___");
-    }
-    if (paramString.equals("sv")) {
-      return ad.a(paramInt).split("___");
-    }
-    if (paramString.equals("in")) {
-      return o.a(paramInt).split("___");
-    }
-    if (paramString.equals("bg")) {
-      return b.a(paramInt).split("___");
-    }
-    if (paramString.equals("de")) {
-      return g.a(paramInt).split("___");
-    }
-    return null;
-  }
-  
-  public static int b(String paramString)
-  {
-    if (paramString.equals("th")) {}
-    do
-    {
-      do
-      {
-        return 2;
-      } while ((paramString.equals("cn")) || (paramString.equals("uk")) || (paramString.equals("ja")) || (paramString.equals("cs")) || (paramString.equals("tr")) || (paramString.equals("hu")) || (paramString.equals("ca")) || (paramString.equals("ko")) || (paramString.equals("ta")) || (paramString.equals("kn")) || (paramString.equals("fa")) || (paramString.equals("fr")) || (paramString.equals("es")) || (paramString.equals("it")) || (paramString.equals("pt_pt")) || (paramString.equals("nl")) || (paramString.equals("sk")) || (paramString.equals("ar")));
-      if (paramString.equals("en")) {
-        return 1;
-      }
-    } while ((paramString.equals("ug")) || (paramString.equals("vi")) || (paramString.equals("lt")) || (paramString.equals("bn")) || (paramString.equals("tw")) || (paramString.equals("el")) || (paramString.equals("pl")) || (paramString.equals("ru")) || (paramString.equals("pt")) || (paramString.equals("iw")) || (paramString.equals("fi")) || (paramString.equals("ro")) || (paramString.equals("sv")) || (paramString.equals("in")) || (paramString.equals("bg")) || (paramString.equals("de")));
-    return 0;
+    return new String[] { "failų/aplankų___Klaida parsiunčiant įskiepį %s___Tema___Klaida! Pasirinkite kitą pavadinimą___Failo {0} tipas nepalaikomas!___Atlikta %s užduočių___Nustatyti slaptažodį, kad apsaugoti tinklą___Rodyti lango mygtuką įrankių juostoje___Domeno vardas arba palik tuščią___Ptikrinkite ar su WLAN tinklu viskas gerai!___Yra įskiepio %s atnaujinimas, parsisiųsti?___Klaida skelbiant komentarą___Tikrinu tinklą…___SDCard analizatorius___Skaitymui ir rašymui___Aplankas___Įskiepio %s atnaujinimas___Išjungimo nuostatos___Versija___Dar___Dirbu, dirbu…___ ___Serveris___Sisteminiai prisijungimo nustatymai___Patikrinti dabar___Siunčiu…___Aplikacijas (Iš)Instaliuoti automatiškai___Saugumo nustatymai___Dar kartą___Tvarkyti failą: hosts___Palaukite kol failas bus įkeltas___Aplikacijų nustatymai___FTP serveris___Atmesti___Eilutės perkėlimas___Senas slaptažodis:___Įsiminti slaptažodį___Išeinant istoriją išvalyti___Parsiuntimo klaida %s___Sukūrimo laikas:___Pasirinkite reikiamą tinklą___Tai gali užtrukti (priklauso nuo įrenginio)___Įrašykite dydį___Pasiekti įrenginį per FTP serverį___Operacija___- neįjungto WLAN___ES failų naršyklė___ ___Sugalvokite aprašymą___Perkelti?___Registracija___Išinstaliuoti___Įjungti dainos perjungimą krestelėjimu___，visas dydis: %s___Iš kur:___Tinklas___Lukterkite, kol prisijungsiu___Nutraukite įrenginio, kurį norite pašalinti, suporavimą___Skaičiuoti___Naudoti kaip žadintuvą___Mastelis___Bluetooth___Pakartoti siuntimą___metų___Mažėjant___Serveris___Greitas instaliavimas___ ___Perduodu___Pauzė___Detaliai___Palaukite…___Aplankas \"%s\" nustatyta kaip standartinė___Spaudžiu…___Išsiųsta \"%1$s\"___Gaila, bet trūksta vietos___ ___Neįmanoma kopijuoti į nurodytą aplanką___Paslėptų failų sąrašo apsauga___Nauji___Dar vis įkeliama…___Sukurti tinklą, kad kiti galėtų prisijungti___Yra:___Įkėlimas nepavyko___Nepavyksta gauti failų pavadinimų___Prisijungiau___Dabartinis portas:___Stabdyti___Slaptažodis:___Galite pasirinkti nedaugiau kaip 12 elementus___Nepavyko apskaičiuoti___Baigti___Dydis___Išplėstinis___Rūšiuoti pagal___Sdcard___Paslėptūjų sąrašas išvalytas___Patarti___Įskaitant aplankus viduje___Rodyti persukėją, kai daug failų___Nepavyksta prijungti___Kopijų aplankas:___Šeimai___Tinklą matau, bet prisijungti negaliu: peržiūrėkite sisteminiuose nustatymuose___Įrašykite komentarą___Pašalinti parsisiuntimus___Iš___Klaida prisijungiant - gal neteisingai įrašėte vardą ar slaptažodį___Perrašyti___Skaičius___Nepavyko pakeisti leidimų___Instaliuoti pasirinktas aplikacijas?___Likęs laikas:___Į kur:___Nepavyko pašalinti!___Atjungti autoatnaujinimą___Naudoti atsitiktinį pavadinimą prisijungimui___Atšaukti dabartinę užduotį?___Ieškoti___Sisteminis aplankas prijungtas tačiau tik skaitymui___Sistemos nustatymai___Slaptažodžio nustatymas___O, yra nauja programos versija, siūlau atnaujinti.___Slaptažodis nepatvirtintas___Saugumas___Atsisiuntimai___Įrašykite slaptažodį___Failas:___Skaičiuojama…___Pakeisti slaptažodį___elementų___Reikalingas slaptažodis, kad paleisti ES naršyklę___Prisiregistruota sėkmingai___Be kopijų___Keletą failų___Siųsti per___Nustatymų kopija:___Nuorodos___Prašome pasirinkti tinklą___Nu nepavyko atkūrimas, gal dar pabandyk___Darant aplikacijos kopiją padaryti ir jos duomenų kopiją___Tvarkyti albumą___Įdėti___ESFTP___Išarchyvuoti į___Išinstaliuota___ ___Skaitymui___Įdiegimas baigtas___Sąskaitos valdymas___Prisijungimas___Nukopijuota___Negalima įkrauti į Instagram per šią aplikaciją!___Išdėstymas___Aplankyta:___Video___Sustabdyti ES FTP serverį?___Prasukti___Parsiuntimas___Raidės ir skaičiai___Atmintinės duomenys atstatyti___Standartinė vieta___Sveikata___Muzika nerasta___Langų nustatymai___Nustatyti slaptažodį, kad apsaugoti paslėptų failų sąrašą___Kopijuoti duomenis___Spustelk ir pataisyk, gali likti tuščia___Vidinė___Serverio pašalinimas___OK___Dešinėn___SSID pavadinimas turi būti iki 32 simbolių___Ieškau…___Temos nustatymai___Ne___Išplėstiniai parametrai___Rodyti viską___Webdav server host___Instaliavimo klaida___Palaukite…___Knygos___ ___Sustelk pataisymui___FTP serveris___Neįmanoma paleisti aplikacijos___Aplanko analyzė___Skanuoju…___Tokio tinklo nėra___Slaptažodis neteisingas___Nustatymų pašalinimas___Pašalinti {0} … ({1} elementai)?___Nepavyksta atverti ZIP archyvuotų failų___Koduotė___Hi hi - pasirinkta koduotė jūsų įrenginyje neveikia, rikites kitą___Apsaugos aktyvavimas___OBEX FTP servisas aktyvuotas. Dabar galite keistis failais su kitais įrenginiais___Keisti slaptažodį___Tiktai sau___Perkeliama į \"%1$s\"___Ar tikrai norite pašalinti kitus langus?___Ką___Neįmanoma naudoti sukurto tinklo___Klaida, failas perdidelis___Įjungti standartinius langų nustatymus___Atkurti standartines reikšmes___Pasirinkti___Klaida identifikuojant___Pasirinkite aplanką___Nuotolinis valdymas___Aplankas aplikacijų kopijoms:___Aplankas tuščias___Kai kurie moduliai nerasti, bet jums jų reikia jei norite atlikti visas funkcijas. Ar norite surasti ir instaliuoti trūkstamus modulius?___Tinklas sukurtas___Sisteminių aplikacijų šalinimas___Klientas užimtas todėl neatsako, pabandykite vėliau.___Tinklo SSIDas___Aha, nu pasitikrinkite WLAN ar veikia, jei reikia sukurkite savo prieigos tašką (tinklą) ir pakvieskit draugus prisijungti___Vartotojo įdiegtos aplikacijos___Nuostatos___Įrašykite parsisiuntimo adresą___Visa eiga___Nustatyti fono paveikslėlį___Suspaudimo lygis:___Nustatyti WLAN prisijungimą___Mano___Flickr___Groti___Pasiekiamumas___Sisteminės aplikacijos___Naujas archyvas___Peržiūrėti nustatymus operacinėje sistemoje___Įrašykite kitą pavadinimą___Tai galėjo atsitikti dėl:___ ___Naujas SFTP___ ___Stop___Grojama___Grojaraštis įrašytas___Jungiuosi prie tinklo___Atverti aplanką___Įjungti WLAN___Klaida įrašant grojaraštį___Instaliavimas į SD kortą___Operacijos___Ar tęsti?___Juodai___Įrašyta sėkmingai!___Operacija nepalaikoma___Nuotraukos___Periferija___Pridėti į eilę___Pakeisti įskiepio pavadinimą___Groti per___ES nuotraukų peržiūra___Prisijungėme prie tinklo su SSIDu ___Tinklas___Kelias___Įrašykite grojaraščio pavadinimą___Valio, prisijungėm, dabar galite keistis duomenimis___Nustaymus atkūriau sėkmingai, o dabar perkrauk aplikaciją iš naujo___Ar norite perrašyti?___Aplanko atidaryti neįmanoma___Nustatyta___Pasyvus___Prisijungėme prie ID:___Gauta___Pradinis skaičius___Nustatyti foną___Rezoliucija:___Debesyse___Sėkmingai___Mediaserveris stabdo___Kopijuoti?___IP adresas___Atverti su___Pašalinta \"%1$s\"___Paslėptieji___Parsiuntimas baigtas___Valdymas___Nustatyti startinį aplanką___Rodyti lango mygtuką___Negalima ištrinti iš Instagram per šią aplikaciją!___Admino teisės___Išvalyti___Sukurti___Susijungimas baigtas___Pridėtos dainos___%s nerastas___Slaptažodį turi sudaryti nemažiau kaip 8 simboliai___Nenustatyta___Keisti tinklą___Ar tikrai norite pašalinti {0}?___Tinklas___Klaida įrašant. Nu negaliu išsaugoti.___Išvalyti istoriją___Peržiūra___Pašalinti užduotį?___LAN___Ištrinti___Šifravimo algoritmas nepalaikomas___Aplankų stilius___Skaidrės___Siuntimas___Greitas prasukimas___ ___Received Shares___Yra naujas įskiepis %s, parsisiųsti?___Pasirinkite kur siųsti___Vieta:___Atnaujinti iki naujausios___Įvyko klaida paleidžiant serverį, gal pakeiskite portą___Atstatyti atmintinės duomenis?___Atidaryti su___Praleisti___Nurodyk IP arba IP/aplankas adresą___Dirbam, kuriam, palaukite…___Ups, siuntimas nepavyko dėl kažkokios klaidos arba gavėjas pats atmetė.___Komentaras paskelbtas___Atmintinė___%s elementų___Failai___Krestelėjimas___Nuorodos___Keisti %s___Kompiuteryje įrašykite šį adresą:___Atverti aplanką___Aplankas \"%s\" pridėtas į serverių sąrašą___Įvyko klaida įkeliant media failus___Ieškokite failų specialiu keliu iki serverio___Sukurti savo tinklą___Negaliu išsiųsti failų per Bluetooth___Tik atnaujinti___Įdiegiama___Prisijungta prie___Sujungimo nėra, pažiūrėkite ar įjungtas WLAN___Kontrolinė suma___Įrenginys___Slaptažodis ištrintas, apsauga pašalinta___Laikyti ir tempti___Naujesni___Programos:___Pašalinimas baigtas___Rodyti SD kortelės talpą___SD kortelė tuščia, neprijungta arba neįdėta___Dabartinė standartinė vieta:___Kalba___Pridėti į___Netikslus___Iškirpti___Kompiuteris___Įrašykite slaptažodį___Pagalba___Pakeisti temą___Nuorodos___Bluetooth dalinimosi vieta:___Liko:___Rėžimas___Naujas serveris %s___Išjungiu…___Viso: %s elementų %s___Norite įrašyti?___Aplikacijos įdiegtos___pridėjimui spauskite Pridėti___Rasta išimtis!___Reikia:___Išpakavimas___Negalima redaguoti paveikslėlių Instagram per šią aplikaciją!___Dydis:___Įveskite pavadinimą___Parsisiųsti temas___Nustatymai___Perkeliu___- nes SMB yra ne tame tinkle___\"Pašalinti užduotis？\nViso %1$s elementų, %2$s įkėlimų\"___Žiūrėtas:___ ___Grupė___Pašalinta sėkmingai!___Ieškau aktyvių įrenginių…___Kita___Par___Pašalinti keletą failų?___Pasirinkite įrenginį___Neteisingas slaptažodžio ilgis (6 – 34)___Neįmanoma surasti {0} serverį___Suspaudimas___Atidaryti dabartiniam lange___Nuotraukos:___Naikinti pirminius failus…___Pasirinkti albumą___Užduoties klaidos___Start___Laikinoji atmintis išvalyta___zip___Tikslus___Negalima suspausti: {0}. Neleidžia sistema.___Detaliai___Aktyvus___Ką___Kita___Įvesti slaptažodį___Šiam aplankui nėra nustatyta jokių leidimų___Išvaizdos nustatymai___Failo neradau? Pabandykite išplėstinę paiešką___Išskleisti viską___Šaltinis___Rekomenduojama___Siųsti___Išinstaliuoti sisteminę aplikaciją?___Datos formatas___Savaičių___Pritaikyti visiems___Išarchyvuoti___Nepalaikomas failo tipas___Ar tikrai norite atkurti %s nustatymus?___Įrašyti___Kuriamas tinklas___Išpakuoti į ___elemento___Pasirinkti koduotę___Paskyra___Paleisti___ES Įrašyti į___Išjungti___Pakeista!___Nežinomas___SD kortelė atjungta___Greitis___Nu kas čia dabar - negaliu sukurti nuorodos!___Naudoti bet kurį pavadinimą___Siuntėjas kapituliavo___Negaliu prijungti sisteminio aplanko kaip perrašomo, todėl išinstaliavimas nepavyks___Suspaudimo lygis___Apkarpyti paveikslėlį___Ar šalinti visas užduotis?___Nustatyti fono spalvą___Audio:___Kurinių paieška…___Tarp pasirinktų aplikacijų yra sisteminių,- nuostatose įjunkite admin (root) rėžimą.___Suspausti___Uždaryti___Serveris___Aplikacijų kopijos___Nuotoliniai prisijungimo nustatymai___Įkeliamas autorizacijos puslapis…___Pereiti į___Vykdyti___Sisteminėje atmintyje paieška negalima___Pradžia___failas %s jau yra, ar perrašyti?___Išinstaliavimo klaida___Pasiekti per LAN___Šiuo metu prieigos nėra___Išeiti___Google Play neįdiegtas___Failas___Čia kažkoks keistas tinklas ir negaliu prie jo prisijungti___Šifravimo algoritmo stiprumas nepalaikomas___Koduotė: ___Laukiu susijungiant su___Šaltinis:___Tinklo pasirinkimas___Šifravimas___Tęsti___Tikrinu…___Pasirinkite paveiksliuką fonui___Veiksmas su keliais failais baigtas___Langai___Kartoti___Atsarginių kopijų kategorija___Failo pavadinime negali būti simbolių * \\ / \" : ? | < >___Pasiekti per LAN___Naudoti sisteminius prisijungimo nustatymus___Kopija padaryta___valandų___Standartiniai nustatymai___Kategorijos pasirinkimas___Komentarų nėra___Sukūrė:___Detalės___Keisti serverį___Suspaudimas {0}.{1}___Išvaizdos nustatymai___Įrašyti pakeitimus___Pervardinti___Šaltinio kelias nukopijuotas___Leidimai___Radau seną versija, ar išmesti ją lauk, kad galėčiau instaliuoti nauja?___Yra nauja versija ar atnaujinti?___Keisti___Šis pavadinimas jau yra___Dėmesio!!! Sisteminį aplanką reikia prijungti kaip įrašomą, bet turėkite omenyje, kad failų perrašymas sisteminiuose aplankuose yra pavojingas užsiėmimas!___Failas___Audio___Aplankų nustatymai___Vieta___Laisva:___parinkti kelią___Dėvimas___Darau kopiją…___Nuoroda {0} sukurta.___Skaitomas:___{0} nukopijuota.___Originalus pavadinimas___Tai gi nėra prisijungimo per WLAN, sukurkite pats kokį nors jei ką!___Pasirinkite kalbą___Klaida analizuojant paketą___Gavimas atšauktas___Tipas:___Atnaujinimų nėra.___Prašome pasirinkti bent vieną {0}.___Neteisingas Url___ ___Turinys:___Rūšiavimas___ bando siųsti jums nuotrauką %1$s___Taip___ siunčia jums %1$s___ bando jums siųsti %1$s___Nuostatų išsaugijimas___ES mediagrotuvas___Daugiau neklausti___Langai___Trinu…___Dabartinis aplankas: ___Vidinė___Nežinomas___Pavyzdžiui___Naujas tinklas___Įdiegta___Rrrrr.. kažkas nepavyko, pabandykit dar kartą___Vykdoma___Pridėti į darbalaukį___Pridėti į nuorodas___didelis efektyvumas, greitas prasukimas___Klaida, nenurodytas kelias iki serverio___dienų___Kelias nukopijuotas___neimanoma sukurti {0} nuorodos.___Greitas pasiekimas___Mobile Photos___Įvardinti___Tęsti___WLAN nustatymai___Instaliuota___Atšaukti___Rodyti SD kortelės talpą istorijoje___Gaunu IP…___Su atsarginėmis kopijomis___Gaunu…___Parsiųsti dabar___prisijungiu prie___Keičiu pavadinimą...___Užduočių tvarkyklė___Galite atverti iki 12 langų___Nuoroda sukurta___Tipą___Išjungti parsisiuntimų tvarkyklę___Atidaryti___- ugniasienės užblokavimo___Aktyvuota %s užduočių___Siunčiama į___Kategorija___Šifravimas(https)___Prisijungimo nustatymai___Kopijuoti į___Nurodoma vieta turi prasidėti: /sdcard/___Parsisiuntimo duomenys:___Standart___Naujas slaptažodis:___Valymo nustatymai___Išinstaliavimas___ES teksto tvarkyklė___Išsiųsta___Video neįmanoma atkurti___Failas turi kažkaip vadintis___Laisva:___savaičių___Nustayti portą(1025 – 65534)___Žyma___Portas gali būti tarp (1025 – 65534)___Video___Vartotojas___Prašome palaukti, kol bus paskaičiuoti failų dydžiai___Kitus uždaryti___Pasirinkti tinklą___Naujas FTP___Jungiames, palaukite…___Klausti___Leidimai:___Sustabdyta___ES FTP-serveris___Dydį___Atverti failą___Tvarkyti serverį___Klaida___Tikrai išeini?___Vyksta užkrovimas___Didėjant___Įrašykite pavadinimą___Dirbti fone___Katalogo dydis:___Leidimai pakeisti___Bluetooth nuostatos___Dabartinis vartotojas:___Tikrinti atnaujinimus___Pasiekti savo įrenginį per FTP serverį___Slaptažodis pakeistas___Dažau sienas, palaukite…:)___ ___Perkelta___Atsijungimas___Portas___- išjungto SMB serviso___Nuotraukos:___Užimta:___Jungtis prie tinklo___Užduočių tvarkyklė___Aktyvuoti Root naršyklę___Uždaryti pranešimą atlikus užduotį___Kontrolinė suma___Neįmanoma perkelti į nurodytą aplanką___Failų pašalinimas___Grojaraštis___Suasmeninti___Sėkmingai gauta %1$s , kurio dydis %1$s___Sėkmingai gauti failai %1$s , viso %2$d , bendras dydis %3$s___Autorius:___Įkėlimo laikas:___Saugumas___Kopijuojama į \"%1$s\"___FTP___Nesirinkti___Vajetau, kažkas nepavyko! Bandyk dar___Palaukite…___Invertuoti___Koduotė___Atlikta___Dabartinė vieta___Aktyvuoti___Langai, kurie bus atveriami paleidus programą___Nu neradau nieko, gal atnaujinkite sąrašą___Tinklo slaptažodis:___Vaje, o vietos tai nepakanka!___Atlikta___Standartinė tema___Visos aplikacijos___Įrašymui___Video:___Standartiškai___Pagalba___Įrašykite datą___Neįmanoma nukopijuoti failo {0}.___Grafika___Pasirinkite saugyklą___Istorija___Standartiškai___Grojaraštis atšaukiamas___Nagi, įrašyk tikrą el.adresą___Kopijuoti___Jungtis prie tinklo___Rodyti nustatymus___Prašome užpildyti visus laukus___Auto___sekundžių___Dar___Data___Pakeisti koduotę___DOS/UNIX/MAC___Atsijungiu nuo tinklo___Negalima ištrinti iš Facebook per šią aplikaciją!___Perkelta į \"%1$s\"___Pavadinimo vieta negali būti tuščia!___Siųsti___Ši operacija nepalaikoma___Limitavimui failas perdidelis___Naudoti kaip skambutį___Klaida registruojantis___Apriboti priėjimą prie aplanko___Video failai, galiu atkurti iš karto___Na ir ilgis to pavadinimo, - naudokite trumpesnį.___Uždaryti___Kito tinklo slaptažodis:___Klaida, neradau serverio___Dėmesio___Grotuvas___Aukštyn___Išeinant uždaryti___Prisijungimas___Įskiepio %s parsiuntimas___Aplankai___Nuostatų kopija padaryta___Gauta į \"%1$s\"___Išvalyti viską___Prisijungimas___Neįmanoma išsiųsti aplanko___Atkurti nustatymus___Valyti atmintį išeinant___Pranešti apie failų pakeitimus___Klaida kopijuojant failą___Pašalinti parinktas aplikacijas?___Nerandu ES užduočių tvarkyklės. Ji skirta sustabdyti/pašalinti/ aplikacijas. Norite surasti ir instaliuoti?___Pagalba išsaugojant ir atkuriant nustatymus___Išpakuoju…___Aprašymas:___Pranešti apie failų pakeitimus,Tai gali užtrukti (priklauso nuo įrenginio)___Tokia nuoroda {0} yra, ar perrašyti?___Kopijuoju___Tekstas___Ką: %s___Niekas nepasirinkta___Atsisunčiamų failų nėra.___Albumo pavadinimas negali būti tuščias!___Temos nustatymų atkūrimas___OBEX FTP išjungtas___Nustatyti slaptažodį resursams pasiekti___minučių___Sisteminis aplankas prijungtas___Anonimas___Failų paieška___Nuotolinė prieiga___- kad nera atitinkamų teisių___Įrašyti į___Kontrolinė suma {0} įrašyta į {1}.___Rodyti persukėją___Eiti į Google Play___Apie___ES FTP serveris aktyvuotas___Instagram___Aplikacijų tvarkyklė___Šioje aplikacijoje įdėti neįmanoma___Klaida, failas nesukurtas___Įrenginys___Nuotraukos nerastos___Kategorijos___Meniu___Draugams___Redagavimo klaida!___Valdymo skydelyje rodyti pasirinkimo mygtuką___Apskaičiuojamas dydis…___Aplankų nustatymai___Paleidimo nustatymai___Analizuoju___Įrašomas:___Įrašykite SSID___Krestelėjimo jautrumo nustatymas___Nustatyti slaptažodį___Po galais, neįrašiau___Irašykite failo pavadinimą___Sąrašas tuščias___192.168.1.100/Mano dokumentai___Saugos nustatymai___Neteisingas sistemos laikas, nustatykite___Jūsų įrenginys neturi/nepalaiko Bluetooth___Tinklo klaida, pabandykite vėliau___Pašalinti grojaraštį___APPsai___Automatinis tikrinimas___Pašalinti aplanką: {0}?___Kita:___Pasirinkti koduotę___Žaislas___Nauja sąskaita___SSID ir slaptažodis negali likti tušti___Parodyti slaptažodį___Įrankių juostoje rodyti pavadinimą___Gal būt norėtumėt___Atjungti kaip tai nepavyksta___Įkėlimo klaida!___Suspaudimo lygis:___Aktyvavę šį servisą savo įrenginį galite pasiekti iš kompiuterio___Dydis: %s___Siunčiuosi…___Išarchyvuoti į___Bluetooth dalinimosi vieta___Perkelti___Archyvų tvarkyklė___Įdiegimo klaida___Rezervuoti___Pauzė___Muzika___- neteisingo IP___Įdėti viską___Domenas___Nėra tam tinkamų aplikacijų___ES parsisiuntimai___Taip pat pašalinti šaltinius___Nėra SD kortelės___išinstaliavimo klaida___Grupinis pavadinimo keitimas___ES archyvatorius___Atnaujinimo nustatymai___Atnaujinimą___Viską nuleisti___Nustatymai___Viso:___Nurodytos vietos nėra, ar norite ją sukurti?___Pašalinti?", "Adresas nerastas, gal vieta blogai nurodyta, bandykite dar kartą___Įrankių juostoje rodyti pavadinimą___Signalo stiprumas___Aprašymas___Dydis___Kopijų aplankas___Šio failo atkurti srautiniu būdu negalima, atkūrimas prasidės, kai bus užkrautas visas failas___Domenas___Failo pavadinimas___Neteisinga nuoroda___patikrinkite belaidį ryšį!___%1$s asinchroniškai bus pervadintas į %2$s___Rodyti paslėptus failus___Kadangi tai ZIP archyvas - tekstas nebus įrašytas___Atstatyti___Nuorodos___Pavadinimo keitimas negalimas - tai Bluetooth protokolo apribojimai___Slaptažodis___Root (admin) ES naršyklė aktyvuota___Atidaryti naujam lange___Įjungti___Klaida. Patikrinau ir matau, kad admino teisių nėra tad įvykdyti negaliu___Versija:___Paslėptas:___Siųsti___Nustatyti foną___Atsijungti nuo tinklo___Užima___Instaliuoti___Parsiųsti %s įskiepį?___Siųsti…___SD kortelėje mažai vietos___S3 vieta___Sukurti darbalaukyje FTP serverio nuorodą___Rankinis atnaujinimų patikrinimas___Ar tikrai norite pašalinti?___Dabar esate kitame tinkle, jo SSIDas yra ___Gavėjas atmetė___Rekomenduojama___Įskiepio %s… parsiuntimas___Rekomendacijos___Valdyti įrenginį iš kompiuterio___Bitai___Parinkti vietą___Rodyti kaip___Pervadinta sėkmingai___Rodyti pasirinkimo mygtuką___Įkėlimo klaida!___Vieta:___Priemonės___Laukimas___Pranešti___Atgal___Instaliavimas į įrenginį___Paveikslėlių neradau___Neįmanoma paleisti srautinio transliavimo serverio___Pervadintas \"%1$s\"___Statusas___Nuotrauka___Kai kurių failų dalinti negalima___Keisti___Naudoti kaip prašimą___Atšaukti___Spauskite Ieškoti, kad rasti arti esančius aktyvius įrenginius___Pašalinti iš sąrašo___Nėra URL___Prieš išmetant pasidaryti kopiją___Failo {0} atidarymas atšauktas.___Тik skaitymui___Nėra sąlygų___Klaida sukuriant vietą___Prisijungti prie tinklo sukurto anksčiau___Parsisiuntimų vieta___Aplikacijų tvarkyklės nustatymai___Visiems___- išjungto FTP serverio___Negaliu nustatyti kaip skambučio, pabandykite per sisteminius nustatymus___Tikrinu…___Standartiniai nustatymai atlikti___Laikyti___Šifruotas protokolas___Atsijungti nuo pasirinktų sąskaitų?___Perkelti į___Aplikacijos pašalintos___Prisijungiu…___Atnaujinti___Visa muzika___Atverti failą kaip___Youtube Video___Atnaujinti___Paieškos rezultatai___ dalinasi failu %1$s___Prijungti R/W___Serveris___*Bendrai___Atšaukta___Vartotojas___Užduoties detalės___Nustatyti teksto spalvą___Naujam portui aktyvuoti perkraukite serverį___Grojaraštis tokiu pavadinimu jau yra___Baltai___Facebook___Dabar galite bendrauti su vartotojais šiame tinkle___Laukiam___Krestelėjimo jautrumas___Parsiuntimų tvarkyklė___Dienų___Bluetooth palaikymo šioje Android 1.6 versijoje nėra, naudokite kitą ES Explorer (skirtą Cupcake).___%s bus sukurta asinchroniškai___Klaida įkeliant failą:___Išvalyti atmintį___Nustatymai___Nuoroda___Pavadinimas___Sukurti___Kopijuoti aplikacijas ir jų duomenis___Magic Briefcase___Failas laikinai įrašytas SD kortelėje ir atidarytas tik skaitymui___Patvirtinti___Groju…___Rodyti failus prasidedančius tašku___Sukurti nuorodą___Netinkamas patikrinimo kodas___Albumas___Priimti___Tai gi nieko neradau___Nerodyti kopijavimo eigos lentelės___Diskai___Man nustatyti nepavyko. Prašome pabandyti sisteminiuose nustatymuose___Tinklo klaida. Autorizacijos puslapio įkelti nepavyko. Pabandykite vėliau.___Seni___Pakartoti slaptažodį:___Įjungti tinklo apsaugą___Atšaukti___Pasirinkti foną___Kelių langų rėžimas___Valdyti slepiamus failus___Komentaras___Neįjungtas Bluetooth___Spauskite, kad išvalyti laikiną atmintį (laikini failai, peržiūros ir pan.)___Vardą___Idiegti/pašalinti aplikacijas automatiškai___Įjungti administratoriaus teises jei įrenginys tokias turi___Įjungiu…___Toks pavadinimas negalimas, pakeiskite___Sukurkite savo ar prisijunkite prie kito tinklo___Kelias:___Klaida parsiunčiant įskiepį %s, neteisingai nurodyta vieta___Pridėti prie serverių sąrašo___Taisytas:___Modelis:___Parsiųsta %s___Root naršyklė___Sukurti grojaraštį___Norite video pašalinti?___Sėkmingai įrašyta kaip: {0}___Neįmanoma įkelti nuotraukos___Slėpti___\"{0}\" sukurtas.___Jūsų įrenginyje yra senos versijos operacinė sistema, kad gauti failus, ko gero, reikės administratoriaus teisių (kitu atveju neveiks). Ar bandysime vistiek?___Komentuoti___{0} bus perinstaliuota. Jau instaliuota:{1} Dabartinė versija:{2}  Tęsti?___Web Archive___Prisijungti prie kito tinklo___Google Play___Vietos adrese negali būti simbolių *  : / ? | < >___Audio/Video___Tvarkyti slaptažodį dėl prisijungimo per tinklą___mėnesių___AP tinklas aktyvuotas___Dabartinis kelias___Kuriamas tinklas___Slaptažodis:___Greitas išinstaliavimas___Nukopijuota į \"%1$s\"___Dokumentai:___ ___Nukopijuoti adresą___Kokia tai prisijungimo klaida, pabandykite vėliau.___Nėra aplikacijų nuotraukoms padalinti___Pasirinkti viską___Slaptažodis negali likti tuščias___Tinklas sukurtas, ID:" }[paramInt];
   }
 }
 

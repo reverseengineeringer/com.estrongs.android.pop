@@ -1,28 +1,26 @@
 package com.estrongs.android.view;
 
-import android.graphics.Bitmap;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+import com.estrongs.android.ui.pcs.q;
+import com.estrongs.android.ui.pcs.u;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.impl.r.b;
 
 class el
-  extends WebViewClient
+  implements q
 {
-  el(WebViewWrapper paramWebViewWrapper) {}
+  el(ek paramek) {}
   
-  public void onLoadResource(WebView paramWebView, String paramString) {}
-  
-  public void onPageFinished(WebView paramWebView, String paramString) {}
-  
-  public void onPageStarted(WebView paramWebView, String paramString, Bitmap paramBitmap)
+  public void a(boolean paramBoolean, String paramString1, String paramString2)
   {
-    if ((WebViewWrapper.g(a) != null) && (a.a != null) && (WebViewWrapper.g(a).equals(paramWebView))) {
-      a.a.loadUrl(paramString);
+    if ((paramBoolean) && (paramString2 != null))
+    {
+      paramString1 = "SP://" + u.a().e() + "@" + "pcs";
+      paramString2 = (b)a.a;
+      paramString2.setPath(paramString1);
+      paramString2.setAbsolutePath(paramString1);
+      paramString2.setDisplayName(ap.at(paramString1));
+      a.b.c.a.a(paramString2, null);
     }
-  }
-  
-  public boolean shouldOverrideUrlLoading(WebView paramWebView, String paramString)
-  {
-    return false;
   }
 }
 

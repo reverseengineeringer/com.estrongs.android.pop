@@ -1,16 +1,22 @@
 package com.estrongs.android.ui.dialog;
 
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.fs.impl.q.a;
 
 class ea
-  implements DialogInterface.OnDismissListener
+  implements DialogInterface.OnClickListener
 {
-  ea(du paramdu) {}
+  ea(dx paramdx) {}
   
-  public void onDismiss(DialogInterface paramDialogInterface)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    du.a(a).b();
+    paramDialogInterface.dismiss();
+    paramDialogInterface = FileExplorerActivity.X();
+    if (paramDialogInterface != null) {
+      a.a(paramDialogInterface, aa).a, new eb(this, paramDialogInterface));
+    }
   }
 }
 

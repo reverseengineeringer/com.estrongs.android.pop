@@ -1,33 +1,22 @@
 package com.estrongs.android.ui.e;
 
-import android.content.Context;
 import android.view.View;
-import android.view.View.OnLongClickListener;
-import com.estrongs.android.ui.view.ag;
+import android.view.View.OnClickListener;
 import com.estrongs.android.view.a.a;
 
 class cm
-  implements View.OnLongClickListener
+  implements View.OnClickListener
 {
-  cm(ck paramck) {}
+  cm(cl paramcl) {}
   
-  public boolean onLongClick(View paramView)
+  public void onClick(View paramView)
   {
     int i = ((Integer)paramView.getTag()).intValue();
-    a locala = a.b(i);
-    if (locala.d() == null)
+    paramView = a.b(i);
+    if (paramView != null)
     {
-      CharSequence localCharSequence = locala.getTitle();
-      paramView = localCharSequence;
-      if (localCharSequence == null) {
-        paramView = ck.b(a).getString(locala.a());
-      }
-      ag.a(ck.b(a), paramView, 0);
-    }
-    for (;;)
-    {
-      return true;
-      locala.e();
+      paramView.f();
+      a.a(i + cl.a(a), paramView);
     }
   }
 }

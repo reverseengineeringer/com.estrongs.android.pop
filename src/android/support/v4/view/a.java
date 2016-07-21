@@ -2,82 +2,82 @@ package android.support.v4.view;
 
 import android.os.Build.VERSION;
 import android.os.Bundle;
-import android.support.v4.view.a.h;
+import android.support.v4.view.a.z;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.accessibility.AccessibilityEvent;
 
 public class a
 {
-  private static final d b;
-  private static final Object c;
-  final Object a = b.a(this);
+  private static final Object DEFAULT_DELEGATE;
+  private static final d IMPL;
+  final Object mBridge = IMPL.a(this);
   
   static
   {
     if (Build.VERSION.SDK_INT >= 16) {
-      b = new e();
+      IMPL = new e();
     }
     for (;;)
     {
-      c = b.a();
+      DEFAULT_DELEGATE = IMPL.a();
       return;
       if (Build.VERSION.SDK_INT >= 14) {
-        b = new b();
+        IMPL = new b();
       } else {
-        b = new g();
+        IMPL = new g();
       }
     }
   }
   
-  public h a(View paramView)
+  public boolean dispatchPopulateAccessibilityEvent(View paramView, AccessibilityEvent paramAccessibilityEvent)
   {
-    return b.a(c, paramView);
+    return IMPL.a(DEFAULT_DELEGATE, paramView, paramAccessibilityEvent);
   }
   
-  Object a()
+  public z getAccessibilityNodeProvider(View paramView)
   {
-    return a;
+    return IMPL.a(DEFAULT_DELEGATE, paramView);
   }
   
-  public void a(View paramView, int paramInt)
+  Object getBridge()
   {
-    b.a(c, paramView, paramInt);
+    return mBridge;
   }
   
-  public void a(View paramView, android.support.v4.view.a.a parama)
+  public void onInitializeAccessibilityEvent(View paramView, AccessibilityEvent paramAccessibilityEvent)
   {
-    b.a(c, paramView, parama);
+    IMPL.b(DEFAULT_DELEGATE, paramView, paramAccessibilityEvent);
   }
   
-  public void a(View paramView, AccessibilityEvent paramAccessibilityEvent)
+  public void onInitializeAccessibilityNodeInfo(View paramView, android.support.v4.view.a.g paramg)
   {
-    b.d(c, paramView, paramAccessibilityEvent);
+    IMPL.a(DEFAULT_DELEGATE, paramView, paramg);
   }
   
-  public boolean a(View paramView, int paramInt, Bundle paramBundle)
+  public void onPopulateAccessibilityEvent(View paramView, AccessibilityEvent paramAccessibilityEvent)
   {
-    return b.a(c, paramView, paramInt, paramBundle);
+    IMPL.c(DEFAULT_DELEGATE, paramView, paramAccessibilityEvent);
   }
   
-  public boolean a(ViewGroup paramViewGroup, View paramView, AccessibilityEvent paramAccessibilityEvent)
+  public boolean onRequestSendAccessibilityEvent(ViewGroup paramViewGroup, View paramView, AccessibilityEvent paramAccessibilityEvent)
   {
-    return b.a(c, paramViewGroup, paramView, paramAccessibilityEvent);
+    return IMPL.a(DEFAULT_DELEGATE, paramViewGroup, paramView, paramAccessibilityEvent);
   }
   
-  public boolean b(View paramView, AccessibilityEvent paramAccessibilityEvent)
+  public boolean performAccessibilityAction(View paramView, int paramInt, Bundle paramBundle)
   {
-    return b.a(c, paramView, paramAccessibilityEvent);
+    return IMPL.a(DEFAULT_DELEGATE, paramView, paramInt, paramBundle);
   }
   
-  public void c(View paramView, AccessibilityEvent paramAccessibilityEvent)
+  public void sendAccessibilityEvent(View paramView, int paramInt)
   {
-    b.c(c, paramView, paramAccessibilityEvent);
+    IMPL.a(DEFAULT_DELEGATE, paramView, paramInt);
   }
   
-  public void d(View paramView, AccessibilityEvent paramAccessibilityEvent)
+  public void sendAccessibilityEventUnchecked(View paramView, AccessibilityEvent paramAccessibilityEvent)
   {
-    b.b(c, paramView, paramAccessibilityEvent);
+    IMPL.d(DEFAULT_DELEGATE, paramView, paramAccessibilityEvent);
   }
 }
 

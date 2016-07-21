@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+.field final synthetic a:Lcom/estrongs/android/pop/view/h;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
+.method constructor <init>(Lcom/estrongs/android/pop/view/h;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/view/i;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/view/i;->a:Lcom/estrongs/android/pop/view/h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,13 +23,15 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/i;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/i;->a:Lcom/estrongs/android/pop/view/h;
 
-    const-string v1, "#home_page#"
+    iget-object v0, v0, Lcom/estrongs/android/pop/view/h;->a:Lcom/estrongs/android/pop/view/g;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->d(Ljava/lang/String;)Lcom/estrongs/android/view/aw;
+    iget-object v0, v0, Lcom/estrongs/android/pop/view/g;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/view/a;->c(Landroid/content/Context;)V
 
     return-void
 .end method

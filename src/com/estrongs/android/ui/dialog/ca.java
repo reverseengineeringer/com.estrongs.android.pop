@@ -1,82 +1,118 @@
 package com.estrongs.android.ui.dialog;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
-import com.estrongs.android.util.am;
+import android.graphics.drawable.Drawable;
+import com.estrongs.a.a.l;
+import com.estrongs.android.ui.pcs.u;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.b.r;
+import com.estrongs.fs.impl.o.b;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-class ca
-  implements DialogInterface.OnClickListener
+public class ca
 {
-  ca(by paramby, List paramList, Intent paramIntent) {}
+  protected com.estrongs.fs.impl.b.d a = null;
+  r b;
+  private Activity c;
+  private ci d;
+  private String e;
+  private String f;
+  private String g = null;
+  private String h = null;
+  private String i = null;
+  private String j = "/ES云分享";
+  private boolean k;
   
-  @SuppressLint({"StringFormatMatches"})
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public ca(Activity paramActivity, String paramString, DialogInterface.OnDismissListener paramOnDismissListener)
   {
-    ActivityInfo localActivityInfo = a.get(paramInt)).activityInfo;
-    paramInt = 2131428593;
-    if (!am.aB(by.a(c))) {
-      paramInt = 2131428313;
-    }
-    Object localObject3 = am.ai(by.a(c));
-    Object localObject1 = localObject3;
-    Object localObject4;
-    if (localObject3 != null)
+    c = paramActivity;
+    e = paramString;
+    paramActivity = new Intent("android.intent.action.SEND");
+    paramActivity.setType("text/plain");
+    paramString = c.getPackageManager();
+    List localList = paramString.queryIntentActivities(paramActivity, 0);
+    Object localObject1 = new ArrayList();
+    int m = 0;
+    while (m < localList.size())
     {
-      localObject4 = ((String)localObject3).split("-");
-      localObject1 = localObject3;
-      if (localObject4 != null) {
-        localObject1 = localObject4[0];
+      localObject2 = getactivityInfo.applicationInfo.packageName;
+      if ((localObject2 != null) && (((String)localObject2).equals(c.getPackageName()))) {
+        ((List)localObject1).add(localList.get(m));
       }
+      m += 1;
     }
-    if (packageName.equalsIgnoreCase("com.sina.weibo"))
-    {
-      localObject4 = by.b(c);
-      localObject3 = localObject4;
-      if (localObject4 == null) {
-        localObject3 = by.c(c);
-      }
-      localObject4 = by.d(c).getString(2131428623, new Object[] { "3.0.5" });
-      localObject4 = by.d(c).getString(paramInt, new Object[] { localObject1, localObject4, localObject3 });
-      if (paramInt != 2131428313) {
-        break label354;
-      }
+    localObject1 = ((List)localObject1).iterator();
+    while (((Iterator)localObject1).hasNext()) {
+      localList.remove((ResolveInfo)((Iterator)localObject1).next());
     }
-    Object localObject2;
-    label354:
-    for (localObject1 = by.d(c).getString(paramInt, new Object[] { localObject1, localObject3 });; localObject2 = localObject4)
+    localObject1 = new Drawable[localList.size()];
+    Object localObject2 = new String[localList.size()];
+    m = 0;
+    while (m < localList.size())
     {
-      b.putExtra("android.intent.extra.TEXT", (String)localObject1);
-      for (;;)
+      localObject1[m] = ((ResolveInfo)localList.get(m)).loadIcon(paramString);
+      localObject2[m] = ((ResolveInfo)localList.get(m)).loadLabel(paramString);
+      m += 1;
+    }
+    d = new cv(c).a(2131231221).a((Drawable[])localObject1, (CharSequence[])localObject2, 0, new cc(this, localList, paramActivity)).d(false).a(new cb(this, paramOnDismissListener)).a(false).b();
+  }
+  
+  private double a(long paramLong1, long paramLong2)
+  {
+    if (paramLong2 == 0L) {
+      return 1.0D;
+    }
+    return new BigDecimal((float)paramLong1 / (float)paramLong2 * 100.0F).setScale(2, 4).doubleValue();
+  }
+  
+  private void a(String paramString)
+  {
+    new Thread(new ce(this, paramString)).start();
+  }
+  
+  private void a(String paramString, boolean paramBoolean)
+  {
+    c.runOnUiThread(new cd(this, paramString, paramBoolean));
+  }
+  
+  public void a()
+  {
+    try
+    {
+      d.show();
+      if (b.o(e))
       {
-        b.setClassName(packageName, name);
-        try
-        {
-          by.d(c).startActivity(b);
-          paramDialogInterface.dismiss();
-          return;
-          localObject3 = by.d(c).getString(paramInt, new Object[] { localObject1, "", by.e(c) });
-          if (paramInt == 2131428313)
-          {
-            localObject1 = by.d(c).getString(paramInt, new Object[] { localObject1, by.e(c) });
-            b.putExtra("android.intent.extra.TEXT", (String)localObject1);
-          }
-        }
-        catch (Exception localException)
-        {
-          for (;;)
-          {
-            localException.printStackTrace();
-            continue;
-            localObject2 = localObject3;
-          }
-        }
+        a(e);
+        return;
       }
+    }
+    catch (Exception localException)
+    {
+      do
+      {
+        for (;;)
+        {
+          localException.printStackTrace();
+        }
+      } while (!ap.bl(e));
+      Object localObject = u.a().g() + "/files" + j;
+      b = new r(com.estrongs.fs.d.a(c), com.estrongs.fs.d.a(c).j(e), com.estrongs.fs.d.m((String)localObject));
+      b.b(false);
+      b.setDescription(String.format(c.getString(2131231286), new Object[] { ap.cc((String)localObject) }));
+      b.a(true);
+      b.addTaskStatusChangeListener(new cg(this, (String)localObject));
+      localObject = new ch(this);
+      b.addProgressListener((l)localObject);
+      b.execute();
     }
   }
 }

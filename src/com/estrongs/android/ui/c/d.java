@@ -1,19 +1,18 @@
 package com.estrongs.android.ui.c;
 
-import com.estrongs.android.ui.c.b.f;
-import com.estrongs.android.view.cb;
+import java.util.List;
 
 class d
-  implements Runnable
+  implements com.estrongs.android.pop.app.a.a.d
 {
-  d(a parama) {}
+  d(a parama, int paramInt) {}
   
-  public void run()
+  public void a()
   {
-    a.c(a).m();
-    a.a(a, true);
-    if (a.d(a) != null) {
-      a.e(a).a(a, true);
+    if (a != -1)
+    {
+      a.b(b).remove(a);
+      b.notifyItemRemoved(a);
     }
   }
 }

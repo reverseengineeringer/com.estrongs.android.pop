@@ -42,17 +42,17 @@
     :try_start_0
     invoke-static {}, Lcom/estrongs/android/pop/b;->a()V
 
-    invoke-static {}, Lcom/estrongs/android/view/aw;->ae()V
+    invoke-static {}, Lcom/estrongs/android/view/cr;->at()V
 
-    invoke-static {}, Lcom/estrongs/android/util/am;->e()V
+    invoke-static {}, Lcom/estrongs/android/util/ap;->e()V
 
-    invoke-static {}, Lcom/estrongs/android/util/am;->h()V
+    invoke-static {}, Lcom/estrongs/android/util/ap;->h()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     :goto_0
     :try_start_1
-    invoke-static {}, Lcom/estrongs/android/util/bd;->l()Z
+    invoke-static {}, Lcom/estrongs/android/util/bk;->l()Z
 
     move-result v1
 
@@ -91,12 +91,20 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/ad;->T(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/ad;->S(Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
     :cond_2
     :goto_1
+    invoke-static {}, Lcom/estrongs/android/pop/app/ad/a;->a()Lcom/estrongs/android/pop/app/ad/a;
+
+    move-result-object v0
+
+    const-string v1, "oemconfig"
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/ad/a;->a(Ljava/lang/String;)V
+
     return-void
 
     :catch_0

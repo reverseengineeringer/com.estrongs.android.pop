@@ -2,17 +2,35 @@ package com.estrongs.android.ui.e;
 
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.app.b.a;
+import com.estrongs.android.pop.app.f.f;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.util.ap;
 
 class ca
   implements MenuItem.OnMenuItemClickListener
 {
-  ca(w paramw) {}
+  ca(m paramm) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    a.a().f();
-    return true;
+    paramMenuItem = m.a(a).P();
+    if (ap.br(paramMenuItem))
+    {
+      if (!ap.bg(paramMenuItem)) {
+        break label38;
+      }
+      m.a(a).Z();
+    }
+    for (;;)
+    {
+      return true;
+      label38:
+      if ((ap.J(paramMenuItem)) || (ap.S(paramMenuItem)) || (ap.cj(paramMenuItem)) || (ap.M(paramMenuItem))) {
+        m.a(a).a(f.a(paramMenuItem));
+      } else {
+        m.a(a).a(2131232313);
+      }
+    }
   }
 }
 

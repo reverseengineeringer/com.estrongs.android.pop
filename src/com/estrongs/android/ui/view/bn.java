@@ -1,111 +1,75 @@
 package com.estrongs.android.ui.view;
 
-import android.app.Activity;
-import android.content.Context;
-import android.graphics.Color;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.WindowManager;
-import android.view.WindowManager.LayoutParams;
-import android.widget.LinearLayout;
-import android.widget.LinearLayout.LayoutParams;
-import com.estrongs.android.pop.esclasses.g;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.NinePatchDrawable;
 
-public class bn
+class bn
 {
-  private WindowManager a;
-  private WindowManager.LayoutParams b;
-  private View c;
-  private LinearLayout d;
-  private View e;
-  private View f;
-  private boolean g;
+  private Drawable b;
+  private String c;
+  private int d;
+  private int e;
+  private int f;
+  private int g;
+  private int h;
+  private NinePatchDrawable i;
+  private float j;
+  private boolean k;
   
-  public bn(Context paramContext, boolean paramBoolean1, boolean paramBoolean2, boolean paramBoolean3)
+  private NinePatchDrawable g()
   {
-    a = ((Activity)paramContext).getWindowManager();
-    d = new bo(this, paramContext);
-    paramContext = g.a(paramContext);
-    if ((paramBoolean1) || (paramBoolean2)) {}
-    for (int i = 2130903152;; i = 2130903153)
+    if (i == null)
     {
-      c = paramContext.inflate(i, null);
-      if (paramBoolean2)
-      {
-        paramContext = c.findViewById(2131362356);
-        if (paramContext != null) {
-          paramContext.setVisibility(0);
-        }
-        paramContext = c.findViewById(2131362358);
-        if (paramContext != null) {
-          paramContext.setVisibility(0);
-        }
-      }
-      c.setOnClickListener(new bp(this));
-      c.setBackgroundColor(Color.argb(128, 0, 0, 0));
-      paramContext = new LinearLayout.LayoutParams(-1, -1);
-      d.addView(c, paramContext);
-      b = new WindowManager.LayoutParams();
-      b.width = -1;
-      b.height = -1;
-      b.format = -2;
-      e = c.findViewById(2131362361);
-      if (e != null) {
-        e.setVisibility(4);
-      }
-      f = c.findViewById(2131362363);
-      if (f != null) {
-        f.setVisibility(4);
-      }
-      if (!paramBoolean3)
-      {
-        c.findViewById(2131362357).setVisibility(4);
-        e.setVisibility(0);
-      }
-      return;
+      i = ((NinePatchDrawable)a.getResources().getDrawable(2130837688));
+      i.mutate();
     }
+    return i;
   }
   
-  public boolean a()
+  public int a()
+  {
+    if (IndicatorView.a(a)) {
+      return (int)(h + f * j + 0.5F);
+    }
+    return (int)(h + (f + e) * j + 0.5F);
+  }
+  
+  public void a(float paramFloat)
+  {
+    j = paramFloat;
+  }
+  
+  public int b()
   {
     return g;
   }
   
-  public void b()
+  public int c()
   {
-    if ((e != null) && (e.getVisibility() != 0))
-    {
-      e.setVisibility(0);
-      return;
-    }
-    if ((f != null) && (f.getVisibility() != 0))
-    {
-      f.setVisibility(0);
-      return;
-    }
-    d();
+    return f;
   }
   
-  public void c()
+  public Drawable d()
   {
-    try
-    {
-      a.addView(d, b);
-      g = true;
-      return;
+    if (j > 0.0F) {
+      b.setState(IndicatorView.a());
     }
-    catch (Exception localException) {}
+    for (;;)
+    {
+      return b;
+      b.setState(IndicatorView.b());
+    }
   }
   
-  public void d()
+  public boolean e()
   {
-    try
-    {
-      a.removeView(d);
-      g = false;
-      return;
-    }
-    catch (Exception localException) {}
+    return ((j > 0.0F) || (k)) && (!IndicatorView.a(a));
+  }
+  
+  public boolean f()
+  {
+    return (j > 0.0F) && (!IndicatorView.a(a));
   }
 }
 

@@ -3,12 +3,11 @@ package com.estrongs.android.pop.app.compress;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.widget.EditText;
-import com.estrongs.android.widget.g;
 
 class h
   implements DialogInterface.OnClickListener
 {
-  h(f paramf, g paramg) {}
+  h(f paramf, com.estrongs.android.widget.f paramf1) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {

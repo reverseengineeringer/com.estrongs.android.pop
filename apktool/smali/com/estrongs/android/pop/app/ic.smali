@@ -6,18 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/widget/g;
-
-.field final synthetic b:Lcom/estrongs/android/pop/app/hz;
+.field final synthetic a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/hz;Lcom/estrongs/android/widget/g;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/ic;->b:Lcom/estrongs/android/pop/app/hz;
-
-    iput-object p2, p0, Lcom/estrongs/android/pop/app/ic;->a:Lcom/estrongs/android/widget/g;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/ic;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,11 +23,9 @@
 
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ic;->a:Lcom/estrongs/android/widget/g;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/g;->k()V
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     return-void
 .end method

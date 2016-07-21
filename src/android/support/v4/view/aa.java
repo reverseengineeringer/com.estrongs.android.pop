@@ -1,45 +1,34 @@
 package android.support.v4.view;
 
-import android.view.MotionEvent;
+import android.os.Build.VERSION;
+import android.view.KeyEvent;
 
-class aa
-  implements ac
+public final class aa
 {
-  public int a(MotionEvent paramMotionEvent)
+  static final ae a = new ab();
+  
+  static
   {
-    return 1;
+    if (Build.VERSION.SDK_INT >= 11)
+    {
+      a = new ad();
+      return;
+    }
   }
   
-  public int a(MotionEvent paramMotionEvent, int paramInt)
+  public static boolean a(KeyEvent paramKeyEvent)
   {
-    if (paramInt == 0) {
-      return 0;
-    }
-    return -1;
+    return a.b(paramKeyEvent.getMetaState());
   }
   
-  public int b(MotionEvent paramMotionEvent, int paramInt)
+  public static boolean a(KeyEvent paramKeyEvent, int paramInt)
   {
-    if (paramInt == 0) {
-      return 0;
-    }
-    throw new IndexOutOfBoundsException("Pre-Eclair does not support multiple pointers");
+    return a.a(paramKeyEvent.getMetaState(), paramInt);
   }
   
-  public float c(MotionEvent paramMotionEvent, int paramInt)
+  public static void b(KeyEvent paramKeyEvent)
   {
-    if (paramInt == 0) {
-      return paramMotionEvent.getX();
-    }
-    throw new IndexOutOfBoundsException("Pre-Eclair does not support multiple pointers");
-  }
-  
-  public float d(MotionEvent paramMotionEvent, int paramInt)
-  {
-    if (paramInt == 0) {
-      return paramMotionEvent.getY();
-    }
-    throw new IndexOutOfBoundsException("Pre-Eclair does not support multiple pointers");
+    a.a(paramKeyEvent);
   }
 }
 

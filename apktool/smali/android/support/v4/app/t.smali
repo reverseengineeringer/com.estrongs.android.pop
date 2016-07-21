@@ -1,25 +1,35 @@
-.class final Landroid/support/v4/app/t;
+.class Landroid/support/v4/app/t;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/os/Parcelable$Creator;
+.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/os/Parcelable$Creator",
-        "<",
-        "Landroid/support/v4/app/FragmentTabHost$SavedState;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field final synthetic a:Landroid/view/View;
+
+.field final synthetic b:Landroid/support/v4/app/v;
+
+.field final synthetic c:I
+
+.field final synthetic d:Ljava/lang/Object;
+
+.field final synthetic e:Landroid/support/v4/app/q;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Landroid/support/v4/app/q;Landroid/view/View;Landroid/support/v4/app/v;ILjava/lang/Object;)V
     .locals 0
+
+    iput-object p1, p0, Landroid/support/v4/app/t;->e:Landroid/support/v4/app/q;
+
+    iput-object p2, p0, Landroid/support/v4/app/t;->a:Landroid/view/View;
+
+    iput-object p3, p0, Landroid/support/v4/app/t;->b:Landroid/support/v4/app/v;
+
+    iput p4, p0, Landroid/support/v4/app/t;->c:I
+
+    iput-object p5, p0, Landroid/support/v4/app/t;->d:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,42 +38,28 @@
 
 
 # virtual methods
-.method public a(Landroid/os/Parcel;)Landroid/support/v4/app/FragmentTabHost$SavedState;
-    .locals 2
+.method public onPreDraw()Z
+    .locals 4
 
-    new-instance v0, Landroid/support/v4/app/FragmentTabHost$SavedState;
+    iget-object v0, p0, Landroid/support/v4/app/t;->a:Landroid/view/View;
 
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Landroid/support/v4/app/FragmentTabHost$SavedState;-><init>(Landroid/os/Parcel;Landroid/support/v4/app/s;)V
-
-    return-object v0
-.end method
-
-.method public a(I)[Landroid/support/v4/app/FragmentTabHost$SavedState;
-    .locals 1
-
-    new-array v0, p1, [Landroid/support/v4/app/FragmentTabHost$SavedState;
-
-    return-object v0
-.end method
-
-.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0, p1}, Landroid/support/v4/app/t;->a(Landroid/os/Parcel;)Landroid/support/v4/app/FragmentTabHost$SavedState;
+    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-.method public synthetic newArray(I)[Ljava/lang/Object;
-    .locals 1
+    iget-object v0, p0, Landroid/support/v4/app/t;->e:Landroid/support/v4/app/q;
 
-    invoke-virtual {p0, p1}, Landroid/support/v4/app/t;->a(I)[Landroid/support/v4/app/FragmentTabHost$SavedState;
+    iget-object v1, p0, Landroid/support/v4/app/t;->b:Landroid/support/v4/app/v;
 
-    move-result-object v0
+    iget v2, p0, Landroid/support/v4/app/t;->c:I
 
-    return-object v0
+    iget-object v3, p0, Landroid/support/v4/app/t;->d:Ljava/lang/Object;
+
+    invoke-static {v0, v1, v2, v3}, Landroid/support/v4/app/q;->a(Landroid/support/v4/app/q;Landroid/support/v4/app/v;ILjava/lang/Object;)V
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

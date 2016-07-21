@@ -1,21 +1,19 @@
 package com.estrongs.android.pop.utils;
 
-import android.app.Activity;
-import com.estrongs.a.a;
-import com.estrongs.a.a.p;
-import com.estrongs.android.pop.view.utils.AppRunner;
-import com.estrongs.fs.b.y;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.ui.pcs.r;
 
 final class ay
-  implements p
+  implements DialogInterface.OnClickListener
 {
-  ay(Activity paramActivity, y paramy) {}
+  ay(Context paramContext) {}
   
-  public void a(a parama, int paramInt1, int paramInt2)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (paramInt2 == 4) {
-      AppRunner.a(a, b.b(), b.b());
-    }
+    paramDialogInterface.dismiss();
+    new r(a, false).show();
   }
 }
 

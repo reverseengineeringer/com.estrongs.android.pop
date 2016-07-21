@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Lcom/estrongs/android/pop/app/editor/ao;
 
 
 # instance fields
@@ -22,44 +22,12 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 4
+.method public a(I)V
+    .locals 1
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/editor/v;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/editor/aj;
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/editor/v;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, v2, v3}, Lcom/estrongs/android/pop/app/editor/aj;-><init>(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;Lcom/estrongs/android/pop/app/editor/g;)V
-
-    invoke-static {v0, v1}, Lcom/estrongs/android/pop/app/editor/PopNoteEditor;->a(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;Lcom/estrongs/android/pop/app/editor/aj;)Lcom/estrongs/android/pop/app/editor/aj;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/editor/v;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/editor/PopNoteEditor;->y(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;)Lcom/estrongs/android/pop/app/editor/aj;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/estrongs/android/pop/m;
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/editor/v;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
-
-    invoke-direct {v1, v2}, Lcom/estrongs/android/pop/m;-><init>(Landroid/app/Activity;)V
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/editor/aj;->setTaskDecisionListener(Lcom/estrongs/a/a/a;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/editor/v;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/editor/PopNoteEditor;->y(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;)Lcom/estrongs/android/pop/app/editor/aj;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/editor/aj;->execute()V
-
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    invoke-static {v0, p1}, Lcom/estrongs/android/pop/app/editor/PopNoteEditor;->c(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;I)I
 
     return-void
 .end method

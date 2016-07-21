@@ -1,6 +1,6 @@
 package com.estrongs.android.pop.multicopy;
 
-import com.estrongs.android.util.am;
+import com.estrongs.android.util.ap;
 import com.estrongs.fs.FileSystemException;
 import com.estrongs.fs.b.ab;
 import com.estrongs.fs.d;
@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 public class MultiThreadCopy
 {
-  public static final String a = com.estrongs.android.pop.a.d + "/copy/";
+  public static final String a = com.estrongs.android.pop.a.f + "/copy/";
   public static int b = 10;
   private MultiThreadCopy.SegmentInfos c;
   private File d;
@@ -47,7 +47,7 @@ public class MultiThreadCopy
   
   public static File a(String paramString)
   {
-    if (am.ba(paramString)) {
+    if (ap.bl(paramString)) {
       return new File(paramString + ".escopy");
     }
     if (!new File(a).exists()) {
@@ -62,18 +62,18 @@ public class MultiThreadCopy
     // Byte code:
     //   0: aconst_null
     //   1: astore_3
-    //   2: new 108	java/io/ObjectInputStream
+    //   2: new 109	java/io/ObjectInputStream
     //   5: dup
-    //   6: new 110	java/io/FileInputStream
+    //   6: new 111	java/io/FileInputStream
     //   9: dup
     //   10: aload_0
-    //   11: invokespecial 113	java/io/FileInputStream:<init>	(Ljava/io/File;)V
-    //   14: invokespecial 116	java/io/ObjectInputStream:<init>	(Ljava/io/InputStream;)V
+    //   11: invokespecial 114	java/io/FileInputStream:<init>	(Ljava/io/File;)V
+    //   14: invokespecial 117	java/io/ObjectInputStream:<init>	(Ljava/io/InputStream;)V
     //   17: astore_1
     //   18: aload_1
     //   19: astore_0
     //   20: aload_1
-    //   21: invokevirtual 120	java/io/ObjectInputStream:readObject	()Ljava/lang/Object;
+    //   21: invokevirtual 121	java/io/ObjectInputStream:readObject	()Ljava/lang/Object;
     //   24: astore_2
     //   25: aload_2
     //   26: astore_0
@@ -82,7 +82,7 @@ public class MultiThreadCopy
     //   29: aload_1
     //   30: ifnull +9 -> 39
     //   33: aload_1
-    //   34: invokevirtual 123	java/io/ObjectInputStream:close	()V
+    //   34: invokevirtual 124	java/io/ObjectInputStream:close	()V
     //   37: aload_0
     //   38: astore_2
     //   39: aload_2
@@ -93,13 +93,13 @@ public class MultiThreadCopy
     //   44: aload_1
     //   45: astore_0
     //   46: aload_2
-    //   47: invokevirtual 126	java/lang/Exception:printStackTrace	()V
+    //   47: invokevirtual 127	java/lang/Exception:printStackTrace	()V
     //   50: aload_3
     //   51: astore_2
     //   52: aload_1
     //   53: ifnull -14 -> 39
     //   56: aload_1
-    //   57: invokevirtual 123	java/io/ObjectInputStream:close	()V
+    //   57: invokevirtual 124	java/io/ObjectInputStream:close	()V
     //   60: aconst_null
     //   61: areturn
     //   62: astore_0
@@ -111,7 +111,7 @@ public class MultiThreadCopy
     //   68: aload_0
     //   69: ifnull +7 -> 76
     //   72: aload_0
-    //   73: invokevirtual 123	java/io/ObjectInputStream:close	()V
+    //   73: invokevirtual 124	java/io/ObjectInputStream:close	()V
     //   76: aload_1
     //   77: athrow
     //   78: astore_1
@@ -155,29 +155,29 @@ public class MultiThreadCopy
     //   1: astore_2
     //   2: aconst_null
     //   3: astore_3
-    //   4: new 130	java/io/ObjectOutputStream
+    //   4: new 131	java/io/ObjectOutputStream
     //   7: dup
-    //   8: new 132	java/io/FileOutputStream
+    //   8: new 133	java/io/FileOutputStream
     //   11: dup
     //   12: aload_0
-    //   13: invokespecial 135	com/estrongs/android/pop/multicopy/MultiThreadCopy:b	()Ljava/io/File;
-    //   16: invokespecial 136	java/io/FileOutputStream:<init>	(Ljava/io/File;)V
-    //   19: invokespecial 139	java/io/ObjectOutputStream:<init>	(Ljava/io/OutputStream;)V
+    //   13: invokespecial 136	com/estrongs/android/pop/multicopy/MultiThreadCopy:b	()Ljava/io/File;
+    //   16: invokespecial 137	java/io/FileOutputStream:<init>	(Ljava/io/File;)V
+    //   19: invokespecial 140	java/io/ObjectOutputStream:<init>	(Ljava/io/OutputStream;)V
     //   22: astore_1
     //   23: aload_1
     //   24: astore_2
     //   25: aload_1
     //   26: aload_0
-    //   27: getfield 72	com/estrongs/android/pop/multicopy/MultiThreadCopy:c	Lcom/estrongs/android/pop/multicopy/MultiThreadCopy$SegmentInfos;
-    //   30: invokevirtual 143	java/io/ObjectOutputStream:writeObject	(Ljava/lang/Object;)V
+    //   27: getfield 73	com/estrongs/android/pop/multicopy/MultiThreadCopy:c	Lcom/estrongs/android/pop/multicopy/MultiThreadCopy$SegmentInfos;
+    //   30: invokevirtual 144	java/io/ObjectOutputStream:writeObject	(Ljava/lang/Object;)V
     //   33: aload_1
     //   34: astore_2
     //   35: aload_1
-    //   36: invokevirtual 146	java/io/ObjectOutputStream:flush	()V
+    //   36: invokevirtual 147	java/io/ObjectOutputStream:flush	()V
     //   39: aload_1
     //   40: ifnull +7 -> 47
     //   43: aload_1
-    //   44: invokevirtual 147	java/io/ObjectOutputStream:close	()V
+    //   44: invokevirtual 148	java/io/ObjectOutputStream:close	()V
     //   47: return
     //   48: astore_3
     //   49: aconst_null
@@ -185,11 +185,11 @@ public class MultiThreadCopy
     //   51: aload_1
     //   52: astore_2
     //   53: aload_3
-    //   54: invokevirtual 148	java/io/FileNotFoundException:printStackTrace	()V
+    //   54: invokevirtual 149	java/io/FileNotFoundException:printStackTrace	()V
     //   57: aload_1
     //   58: ifnull -11 -> 47
     //   61: aload_1
-    //   62: invokevirtual 147	java/io/ObjectOutputStream:close	()V
+    //   62: invokevirtual 148	java/io/ObjectOutputStream:close	()V
     //   65: return
     //   66: astore_1
     //   67: return
@@ -201,11 +201,11 @@ public class MultiThreadCopy
     //   73: aload_1
     //   74: astore_2
     //   75: aload_3
-    //   76: invokevirtual 149	java/io/IOException:printStackTrace	()V
+    //   76: invokevirtual 150	java/io/IOException:printStackTrace	()V
     //   79: aload_1
     //   80: ifnull -33 -> 47
     //   83: aload_1
-    //   84: invokevirtual 147	java/io/ObjectOutputStream:close	()V
+    //   84: invokevirtual 148	java/io/ObjectOutputStream:close	()V
     //   87: return
     //   88: astore_1
     //   89: return
@@ -213,7 +213,7 @@ public class MultiThreadCopy
     //   91: aload_2
     //   92: ifnull +7 -> 99
     //   95: aload_2
-    //   96: invokevirtual 147	java/io/ObjectOutputStream:close	()V
+    //   96: invokevirtual 148	java/io/ObjectOutputStream:close	()V
     //   99: aload_1
     //   100: athrow
     //   101: astore_1
@@ -267,7 +267,7 @@ public class MultiThreadCopy
   private static MultiThreadCopy.SegmentInfos b(File paramFile, String paramString)
   {
     paramFile = (MultiThreadCopy.SegmentInfos)a(paramFile);
-    if ((paramFile != null) && (am.bb(paramString)))
+    if ((paramFile != null) && (ap.bm(paramString)))
     {
       int i = 0;
       while (i < segs.size())

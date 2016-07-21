@@ -1,17 +1,17 @@
 package com.estrongs.android.view;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.pop.app.compress.be;
-
 class p
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
-  p(e parame) {}
+  p(g paramg, String paramString) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void run()
   {
-    e.i(a).dismiss();
+    if (g.b(b, a)) {
+      return;
+    }
+    g.a(b, new t(b));
+    g.d(b).start();
   }
 }
 

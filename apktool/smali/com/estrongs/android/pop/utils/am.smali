@@ -1,37 +1,26 @@
-.class Lcom/estrongs/android/pop/utils/am;
+.class public Lcom/estrongs/android/pop/utils/am;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/utils/al;
+.field public a:Z
+
+.field public b:I
+
+.field final synthetic c:Lcom/estrongs/android/pop/utils/ad;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/utils/al;)V
+.method public constructor <init>(Lcom/estrongs/android/pop/utils/ad;ZI)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/utils/am;->a:Lcom/estrongs/android/pop/utils/al;
+    iput-object p1, p0, Lcom/estrongs/android/pop/utils/am;->c:Lcom/estrongs/android/pop/utils/ad;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-boolean p2, p0, Lcom/estrongs/android/pop/utils/am;->a:Z
 
-
-# virtual methods
-.method public run()V
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/utils/am;->a:Lcom/estrongs/android/pop/utils/al;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/utils/al;->a:Lcom/estrongs/android/pop/utils/ak;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/utils/ak;->b:Landroid/app/Activity;
-
-    invoke-static {v0}, Lcom/estrongs/fs/impl/local/l;->b(Landroid/content/Context;)V
+    iput p3, p0, Lcom/estrongs/android/pop/utils/am;->b:I
 
     return-void
 .end method

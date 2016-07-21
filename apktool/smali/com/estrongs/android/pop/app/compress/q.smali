@@ -6,18 +6,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/compress/be;
+.field final synthetic a:Lcom/estrongs/android/pop/app/compress/cb;
 
 .field final synthetic b:Lcom/estrongs/android/pop/app/compress/p;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/compress/p;Lcom/estrongs/android/pop/app/compress/be;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/compress/p;Lcom/estrongs/android/pop/app/compress/cb;)V
     .locals 0
 
     iput-object p1, p0, Lcom/estrongs/android/pop/app/compress/q;->b:Lcom/estrongs/android/pop/app/compress/p;
 
-    iput-object p2, p0, Lcom/estrongs/android/pop/app/compress/q;->a:Lcom/estrongs/android/pop/app/compress/be;
+    iput-object p2, p0, Lcom/estrongs/android/pop/app/compress/q;->a:Lcom/estrongs/android/pop/app/compress/cb;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,17 +29,17 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/q;->a:Lcom/estrongs/android/pop/app/compress/be;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/q;->a:Lcom/estrongs/android/pop/app/compress/cb;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/compress/be;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/compress/cb;->a()Ljava/lang/String;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/compress/q;->b:Lcom/estrongs/android/pop/app/compress/p;
 
-    iget-object v1, v1, Lcom/estrongs/android/pop/app/compress/p;->a:Lcom/estrongs/io/archive/h;
+    iget-object v1, v1, Lcom/estrongs/android/pop/app/compress/p;->a:Lcom/estrongs/io/archive/i;
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/io/archive/h;->e(Ljava/lang/String;)Z
+    invoke-virtual {v1, v0}, Lcom/estrongs/io/archive/i;->e(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -53,9 +53,9 @@
 
     iput-object v0, v1, Lcom/estrongs/android/pop/app/compress/l;->c:Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/q;->a:Lcom/estrongs/android/pop/app/compress/be;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/q;->a:Lcom/estrongs/android/pop/app/compress/cb;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/compress/be;->dismiss()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/compress/cb;->dismiss()V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/q;->b:Lcom/estrongs/android/pop/app/compress/p;
 
@@ -63,11 +63,11 @@
 
     iget-object v0, v0, Lcom/estrongs/android/pop/app/compress/o;->a:Lcom/estrongs/android/pop/app/compress/l;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/l;->l(Lcom/estrongs/android/pop/app/compress/l;)Lcom/estrongs/android/ui/dialog/cg;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/l;->l(Lcom/estrongs/android/pop/app/compress/l;)Lcom/estrongs/android/ui/dialog/ci;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->show()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ci;->show()V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/q;->b:Lcom/estrongs/android/pop/app/compress/p;
 
@@ -91,11 +91,11 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b0239
+    const v1, 0x7f080428
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     goto :goto_0
 .end method

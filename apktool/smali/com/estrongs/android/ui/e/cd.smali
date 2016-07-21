@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/e/w;
+.field final synthetic a:Lcom/estrongs/android/ui/e/cb;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/w;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/cb;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/cd;->a:Lcom/estrongs/android/ui/e/w;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/cd;->a:Lcom/estrongs/android/ui/e/cb;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,112 +22,16 @@
 
 
 # virtual methods
-.method public onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 4
+.method public onClick(Landroid/view/View;)V
+    .locals 1
 
-    const/4 v3, 0x1
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/cd;->a:Lcom/estrongs/android/ui/e/cb;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/cd;->a:Lcom/estrongs/android/ui/e/w;
-
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/w;->k:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->y()Lcom/estrongs/android/view/aw;
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/cb;->a(Lcom/estrongs/android/ui/e/cb;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->q()V
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/cd;->a:Lcom/estrongs/android/ui/e/w;
-
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/w;->k:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->y()Lcom/estrongs/android/view/aw;
-
-    move-result-object v0
-
-    instance-of v0, v0, Lcom/estrongs/android/view/e;
-
-    if-nez v0, :cond_1
-
-    :cond_0
-    :goto_0
-    return v3
-
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/cd;->a:Lcom/estrongs/android/ui/e/w;
-
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/w;->k:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->y()Lcom/estrongs/android/view/aw;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/android/view/e;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/view/e;->o()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/view/e;->q()Ljava/io/File;
-
-    move-result-object v1
-
-    instance-of v1, v1, Lcom/estrongs/io/model/ArchiveEntryFile;
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v0}, Lcom/estrongs/android/view/e;->q()Ljava/io/File;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/estrongs/io/model/ArchiveEntryFile;
-
-    invoke-virtual {v1}, Lcom/estrongs/io/model/ArchiveEntryFile;->isRoot()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v0}, Lcom/estrongs/android/view/e;->r()Lcom/estrongs/io/archive/h;
-
-    move-result-object v1
-
-    instance-of v1, v1, Lcom/estrongs/io/archive/rar/a;
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v0}, Lcom/estrongs/android/view/e;->r()Lcom/estrongs/io/archive/h;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/estrongs/io/archive/rar/a;
-
-    invoke-virtual {v1}, Lcom/estrongs/io/archive/rar/a;->l()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {v0, v1, v3}, Lcom/estrongs/android/view/e;->a(Ljava/util/List;Z)V
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {v0}, Lcom/estrongs/android/view/e;->h()Ljava/util/List;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/view/e;->a(Ljava/util/List;Z)V
-
-    goto :goto_0
+    return-void
 .end method

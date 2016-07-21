@@ -1,126 +1,85 @@
 package com.estrongs.android.d;
 
-import android.content.ContentResolver;
-import android.content.Context;
-import android.content.res.Resources;
-import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.BitmapFactory.Options;
-import android.provider.MediaStore.Audio.Media;
-import android.util.DisplayMetrics;
-import com.estrongs.android.util.aj;
-import com.estrongs.android.util.am;
-import com.estrongs.fs.h;
+import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import com.estrongs.android.pop.ad;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bk;
 
-public class c
-  extends a
+class c
+  implements DialogInterface.OnClickListener
 {
-  private static Bitmap b = null;
+  c(a parama) {}
   
-  c(Context paramContext)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    super(paramContext);
-  }
-  
-  protected String a()
-  {
-    String str2 = am.a(b(), ".albumart", true);
-    String str1 = str2;
-    if (str2 == null) {
-      str1 = am.a(a.getCacheDir(), ".albumart", false);
-    }
-    return str1;
-  }
-  
-  protected Bitmap c(h paramh)
-  {
-    float f2 = 0.0F;
-    Object localObject = paramh.getAbsolutePath();
-    paramh = (h)localObject;
-    if (((String)localObject).endsWith("/"))
+    if ((bk.a(a.b(a).getText().toString())) && (!a.a(a).isChecked()))
     {
-      paramh = (h)localObject;
-      if (!((String)localObject).equals("/")) {
-        paramh = ((String)localObject).substring(0, ((String)localObject).length() - 1);
+      ak.a(a.d, a.d.getText(2131232533), 1);
+      return;
+    }
+    String str1 = a.b(a).getText().toString().trim();
+    paramDialogInterface = a.c(a).getText().toString();
+    if (str1 != null) {
+      str1 = ap.bz(str1);
+    }
+    for (;;)
+    {
+      Object localObject1 = paramDialogInterface;
+      if (paramDialogInterface != null) {
+        localObject1 = ap.bz(paramDialogInterface);
       }
-    }
-    localObject = paramh;
-    if (paramh.startsWith("file://")) {
-      localObject = paramh.replaceAll("file://", "");
-    }
-    if (am.ba((String)localObject)) {}
-    for (paramh = am.bE((String)localObject);; paramh = (h)localObject)
-    {
-      Cursor localCursor = a.getContentResolver().query(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, new String[] { "_id", "album_id", "album_key" }, "_data=?", new String[] { paramh }, null);
-      float f1;
-      if (localCursor.moveToFirst())
+      String str5 = a.c;
+      String str2 = ap.F(str5);
+      if ((str1 != null) && (str1.length() != 0)) {}
+      for (paramDialogInterface = ap.a(str2, str1, (String)localObject1);; paramDialogInterface = str2)
       {
-        long l1 = localCursor.getLong(0);
-        long l2 = localCursor.getLong(1);
-        if (localCursor.getString(2) != null)
+        String str3;
+        Object localObject2;
+        if ((a.d(a).isChecked()) || (ap.J(paramDialogInterface)) || (ap.L(paramDialogInterface)) || (ap.r(paramDialogInterface)) || (ap.K(paramDialogInterface)) || (ap.o(paramDialogInterface)) || (ap.Q(paramDialogInterface)))
         {
-          localObject = aj.a(a, l1, l2);
-          int i = f.e();
-          paramh = (h)localObject;
-          if (localObject != null) {
-            if (((Bitmap)localObject).getWidth() == i)
-            {
-              paramh = (h)localObject;
-              if (((Bitmap)localObject).getHeight() == i) {}
-            }
-            else
-            {
-              f1 = ((Bitmap)localObject).getWidth();
-              float f5 = ((Bitmap)localObject).getHeight();
-              float f3 = i;
-              float f4 = i;
-              float f6 = Math.min(f1 / f3, f5 / f4);
-              Bitmap localBitmap = Bitmap.createScaledBitmap((Bitmap)localObject, (int)(f1 / f6), (int)(f5 / f6), true);
-              ((Bitmap)localObject).recycle();
-              if (localBitmap.getWidth() < f3) {
-                break label446;
-              }
-              f1 = (localBitmap.getWidth() - f3) / 2.0F;
-              i = (int)f1;
-              f1 = f2;
-              if (localBitmap.getHeight() >= f4) {
-                f1 = (localBitmap.getHeight() - f4) / 2.0F;
-              }
-              paramh = Bitmap.createBitmap(localBitmap, i, (int)f1, (int)f3, (int)f4);
-              localBitmap.recycle();
-            }
+          if (!ap.Q(paramDialogInterface)) {
+            break label359;
           }
+          str3 = com.estrongs.fs.impl.adb.c.j(str5);
+          localObject2 = com.estrongs.fs.impl.adb.c.j(paramDialogInterface);
+          str2 = com.estrongs.fs.impl.adb.c.j(str2);
         }
-      }
-      for (;;)
-      {
-        localCursor.close();
-        localObject = paramh;
-        if (paramh != null)
+        for (;;)
         {
-          if (b == null)
+          ad localad = ad.a(a.d);
+          String str6 = localad.h(str3);
+          String str4 = str6;
+          if (str6 == null) {
+            str4 = ap.a((String)localObject2);
+          }
+          localad.c(str3);
+          if (ap.Q(paramDialogInterface)) {
+            localad.a((String)localObject2, str4);
+          }
+          for (;;)
           {
-            localObject = new BitmapFactory.Options();
-            inScaled = false;
-            b = BitmapFactory.decodeResource(a.getResources(), 2130837866, (BitmapFactory.Options)localObject);
-            b.setDensity(a.getResources().getDisplayMetrics().densityDpi);
+            if (a.f != null) {
+              a.f.a(str1, (String)localObject1, str5);
+            }
+            a.dismiss();
+            return;
+            if (a.d(a).isChecked()) {
+              localad.a((String)localObject2, str4);
+            } else {
+              localad.a(str2, str4);
+            }
           }
-          localObject = a(paramh, b);
-          paramh.recycle();
+          label359:
+          localObject2 = paramDialogInterface;
+          str3 = str5;
         }
-        return (Bitmap)localObject;
-        label446:
-        f1 = 0.0F;
-        break;
-        paramh = null;
       }
     }
-  }
-  
-  public String[] d()
-  {
-    return new String[] { "131104" };
   }
 }
 

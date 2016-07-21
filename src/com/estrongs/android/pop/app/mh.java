@@ -1,27 +1,17 @@
 package com.estrongs.android.pop.app;
 
-import com.estrongs.android.ui.dialog.bj;
-import java.util.ArrayList;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class mh
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  mh(mg parammg, ArrayList paramArrayList, String paramString) {}
+  mh(StreamingMediaPlayer paramStreamingMediaPlayer) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ((a == null) || (a.isEmpty()))
-    {
-      c.b.finish();
-      return;
-    }
-    if (UninstallMonitorActivity.a == null)
-    {
-      UninstallMonitorActivity.a = new bj(c.b, b, c.a, a, new mi(this));
-      return;
-    }
-    UninstallMonitorActivity.a.a(b, c.a, a);
-    c.b.finish();
+    StreamingMediaPlayer.n(a);
+    a.finish();
   }
 }
 

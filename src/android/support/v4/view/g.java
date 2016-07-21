@@ -1,7 +1,7 @@
 package android.support.v4.view;
 
 import android.os.Bundle;
-import android.support.v4.view.a.h;
+import android.support.v4.view.a.z;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.accessibility.AccessibilityEvent;
@@ -9,7 +9,7 @@ import android.view.accessibility.AccessibilityEvent;
 class g
   implements d
 {
-  public h a(Object paramObject, View paramView)
+  public z a(Object paramObject, View paramView)
   {
     return null;
   }
@@ -26,7 +26,7 @@ class g
   
   public void a(Object paramObject, View paramView, int paramInt) {}
   
-  public void a(Object paramObject, View paramView, android.support.v4.view.a.a parama) {}
+  public void a(Object paramObject, View paramView, android.support.v4.view.a.g paramg) {}
   
   public boolean a(Object paramObject, View paramView, int paramInt, Bundle paramBundle)
   {

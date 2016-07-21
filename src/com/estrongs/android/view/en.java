@@ -3,11 +3,11 @@ package com.estrongs.android.view;
 class en
   implements Runnable
 {
-  en(WebViewWrapper.JSVideoDetailHelper paramJSVideoDetailHelper, String paramString) {}
+  en(em paramem) {}
   
   public void run()
   {
-    dt.a(b.a.ad, a);
+    a.c.e();
   }
 }
 

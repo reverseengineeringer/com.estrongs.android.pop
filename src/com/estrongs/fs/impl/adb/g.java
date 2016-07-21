@@ -1,6 +1,6 @@
 package com.estrongs.fs.impl.adb;
 
-import com.estrongs.fs.m;
+import com.estrongs.fs.w;
 
 public class g
   extends com.estrongs.fs.a
@@ -12,8 +12,8 @@ public class g
     super(c.a(parama));
     a = parama;
     setName(parama.getName());
-    if (a.getFileType().equals(m.a)) {
-      setFileType(m.P);
+    if (a.getFileType().equals(w.a)) {
+      setFileType(w.O);
     }
   }
   
@@ -22,7 +22,7 @@ public class g
     return a.createdTime();
   }
   
-  protected m doGetFileType()
+  protected w doGetFileType()
   {
     return a.getFileType();
   }
@@ -32,7 +32,7 @@ public class g
     return a.exists();
   }
   
-  public m getFileType()
+  public w getFileType()
   {
     return super.getFileType();
   }

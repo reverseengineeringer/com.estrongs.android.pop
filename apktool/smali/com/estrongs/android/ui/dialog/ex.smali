@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
@@ -22,18 +22,12 @@
 
 
 # virtual methods
-.method public run()V
+.method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
 
     iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ex;->a:Lcom/estrongs/android/ui/dialog/ev;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/ev;->b:Lcom/estrongs/android/ui/dialog/es;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/es;->f(Lcom/estrongs/android/ui/dialog/es;)Lcom/estrongs/android/ui/dialog/cg;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->dismiss()V
+    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/ev;->a(Lcom/estrongs/android/ui/dialog/ev;)V
 
     return-void
 .end method

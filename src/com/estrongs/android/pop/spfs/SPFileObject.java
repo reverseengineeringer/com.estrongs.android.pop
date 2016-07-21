@@ -1,8 +1,8 @@
 package com.estrongs.android.pop.spfs;
 
-import com.estrongs.android.util.am;
+import com.estrongs.android.util.ap;
 import com.estrongs.fs.FileSystemException;
-import com.estrongs.fs.m;
+import com.estrongs.fs.w;
 import java.util.List;
 
 public class SPFileObject
@@ -33,12 +33,12 @@ public class SPFileObject
     ownerUsername = ownerUsername;
   }
   
-  protected m doGetFileType()
+  protected w doGetFileType()
   {
     if (isDirectory) {
-      return m.a;
+      return w.a;
     }
-    return m.b;
+    return w.b;
   }
   
   public boolean exists()
@@ -106,13 +106,13 @@ public class SPFileObject
   
   public void setName(String paramString)
   {
-    if (am.as(path))
+    if (ap.aC(path))
     {
       String str = paramString;
       if (name != null)
       {
         str = paramString;
-        if (!am.ah(path).startsWith("/files")) {
+        if (!ap.ar(path).startsWith("/files")) {
           str = paramString.substring(paramString.lastIndexOf(">") + 1);
         }
       }

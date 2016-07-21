@@ -1,20 +1,93 @@
 package com.estrongs.android.pop.app;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.ui.dialog.ip;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import com.estrongs.a.a;
+import com.estrongs.a.p;
+import com.estrongs.android.d.u;
+import com.estrongs.android.h.h;
+import com.estrongs.android.pop.app.imageviewer.CropImage;
+import com.estrongs.android.pop.z;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.ui.dialog.cv;
+import com.estrongs.android.util.bg;
+import java.io.File;
 
 class cm
-  implements MenuItem.OnMenuItemClickListener
+  implements Runnable
 {
-  cm(GestureManageActivity paramGestureManageActivity) {}
+  cm(cl paramcl, a parama, String paramString) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void run()
   {
-    paramMenuItem = new ip(a);
-    paramMenuItem.b();
-    paramMenuItem.a(new cn(this, paramMenuItem));
-    return false;
+    
+    if (a.getTaskResult().a != 0)
+    {
+      c.d.a(2131231283);
+      c.d.setResult(0, c.c);
+      c.d.finish();
+      return;
+    }
+    Uri localUri = Uri.fromFile(new File(b));
+    if (bg.c(b))
+    {
+      if (FileChooserActivity.a(c.d))
+      {
+        localObject1 = new Bundle();
+        ((Bundle)localObject1).putBoolean("setWallpaper", true);
+        localObject2 = new Intent();
+        ((Intent)localObject2).setData(localUri);
+        ((Intent)localObject2).setClass(c.d, CropImage.class);
+        ((Intent)localObject2).putExtras((Bundle)localObject1);
+        c.d.startActivityForResult((Intent)localObject2, 4121);
+        return;
+      }
+      Object localObject2 = c.d.getIntent().getExtras();
+      if (localObject2 != null) {}
+      for (Object localObject1 = ((Bundle)localObject2).getString("crop"); localObject1 != null; localObject1 = null)
+      {
+        Bundle localBundle = new Bundle();
+        if (((String)localObject1).equals("circle")) {
+          localBundle.putString("circleCrop", "true");
+        }
+        localObject1 = new Intent();
+        ((Intent)localObject1).setData(localUri);
+        ((Intent)localObject1).setClass(c.d, CropImage.class);
+        ((Intent)localObject1).putExtras(localBundle);
+        ((Intent)localObject1).putExtras((Bundle)localObject2);
+        c.d.startActivityForResult((Intent)localObject1, 4121);
+        return;
+      }
+      if ((localObject2 != null) && (((Bundle)localObject2).getBoolean("return-data")))
+      {
+        localObject1 = h.a(c.d);
+        int i = c.d.getIntent().getIntExtra("outputX", 64);
+        c.c.putExtra("data", ((h)localObject1).a(i, b, null));
+      }
+      for (;;)
+      {
+        c.d.setResult(-1, c.c);
+        c.d.finish();
+        return;
+        c.c.setData(Uri.fromFile(new File(b)));
+      }
+    }
+    if ((bg.g(b)) || ((bg.h(b)) && (!bg.k(b))))
+    {
+      c.c.setData(FileContentProvider.a(b));
+      c.d.setResult(-1, c.c);
+      c.d.finish();
+      return;
+    }
+    if (z.as)
+    {
+      c.c.setData(FileContentProvider.a(b));
+      c.d.setResult(-1, c.c);
+      c.d.finish();
+      return;
+    }
+    new cv(c.d).a(2131232003).a(2131492873, -1, new cn(this)).a(2131231265, null).b().show();
   }
 }
 

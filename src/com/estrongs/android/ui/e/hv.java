@@ -1,31 +1,28 @@
 package com.estrongs.android.ui.e;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.pop.app.a.ak;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.pop.z;
+import com.estrongs.android.widget.ad;
 
 class hv
-  implements DialogInterface.OnClickListener
+  implements MenuItem.OnMenuItemClickListener
 {
-  hv(hu paramhu, ak paramak) {}
+  hv(cr paramcr) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    int i = 1;
-    if (paramInt == 0) {
-      paramInt = i;
+    int i = -1;
+    if (z.n) {
+      i = -2;
     }
-    for (;;)
-    {
-      hl.a(b.a, a.b, paramInt);
-      paramDialogInterface.dismiss();
-      return;
-      if (paramInt == 1) {
-        paramInt = 2;
-      } else {
-        paramInt = 4;
-      }
-    }
+    paramMenuItem = new ad(FileExplorerActivity.X(), "adb://", null, i);
+    new hw(this, paramMenuItem);
+    paramMenuItem.a(null, null, new hx(this, paramMenuItem));
+    paramMenuItem.b(true);
+    paramMenuItem.j();
+    return true;
   }
 }
 

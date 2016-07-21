@@ -70,7 +70,7 @@ class c
   
   long a(int paramInt)
   {
-    return a() * (b() + paramInt * d());
+    return a() * (b() + paramInt * e());
   }
   
   int b()
@@ -85,45 +85,50 @@ class c
   
   long d()
   {
-    return f;
+    return e;
   }
   
   long e()
   {
+    return f;
+  }
+  
+  long f()
+  {
     return g;
   }
   
-  int f()
+  int g()
   {
     return h;
   }
   
-  boolean g()
+  boolean h()
   {
     return i;
   }
   
-  int h()
+  int i()
   {
     return j;
   }
   
-  int i()
+  int j()
   {
     return b * a;
   }
   
-  long j()
-  {
-    return a() * d();
-  }
-  
   long k()
   {
-    return a(0) + c() * d() * a();
+    return a() * e();
   }
   
-  String l()
+  long l()
+  {
+    return a(0) + c() * e() * a();
+  }
+  
+  String m()
   {
     return k;
   }

@@ -1,21 +1,57 @@
 .class public Lcom/estrongs/fs/impl/d/c;
-.super Lcom/estrongs/fs/impl/media/d;
+.super Lcom/estrongs/fs/impl/t/a;
 
 
 # static fields
 .field private static a:Lcom/estrongs/fs/impl/d/c;
 
+.field private static final b:Ljava/lang/String;
+
+.field private static c:Z
+
 
 # direct methods
-.method private constructor <init>()V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Lcom/estrongs/fs/impl/media/d;-><init>()V
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v1, Lcom/estrongs/fs/util/j;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "/cache/archive.cache"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/estrongs/fs/impl/d/c;->b:Ljava/lang/String;
+
+    const/4 v0, 0x1
+
+    sput-boolean v0, Lcom/estrongs/fs/impl/d/c;->c:Z
 
     return-void
 .end method
 
-.method public static b()Lcom/estrongs/fs/impl/d/c;
+.method private constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/estrongs/fs/impl/t/a;-><init>()V
+
+    return-void
+.end method
+
+.method public static a()Lcom/estrongs/fs/impl/d/c;
     .locals 1
 
     sget-object v0, Lcom/estrongs/fs/impl/d/c;->a:Lcom/estrongs/fs/impl/d/c;
@@ -36,101 +72,91 @@
 
 
 # virtual methods
-.method protected a(Lcom/estrongs/fs/impl/local/f;)Lcom/estrongs/fs/h;
+.method public a(Lcom/estrongs/fs/h;Lcom/estrongs/fs/i;Lcom/estrongs/android/util/TypedMap;)Ljava/util/List;
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/estrongs/fs/h;",
+            "Lcom/estrongs/fs/i;",
+            "Lcom/estrongs/android/util/TypedMap;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Lcom/estrongs/fs/h;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-super {p0, p1, p2, p3}, Lcom/estrongs/fs/impl/t/a;->a(Lcom/estrongs/fs/h;Lcom/estrongs/fs/i;Lcom/estrongs/android/util/TypedMap;)Ljava/util/List;
+
+    move-result-object v3
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_0
+    invoke-interface {v3}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-ge v1, v0, :cond_0
+
+    new-instance v4, Lcom/estrongs/fs/impl/d/a;
+
+    invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/fs/h;
+
+    invoke-direct {v4, v0}, Lcom/estrongs/fs/impl/d/a;-><init>(Lcom/estrongs/fs/h;)V
+
+    invoke-interface {v2, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    return-object v2
+.end method
+
+.method protected a(Z)V
+    .locals 0
+
+    sput-boolean p1, Lcom/estrongs/fs/impl/d/c;->c:Z
+
+    return-void
+.end method
+
+.method protected b()Ljava/lang/String;
     .locals 1
 
-    new-instance v0, Lcom/estrongs/fs/impl/d/a;
-
-    invoke-direct {v0, p1}, Lcom/estrongs/fs/impl/d/a;-><init>(Lcom/estrongs/fs/h;)V
+    sget-object v0, Lcom/estrongs/fs/impl/d/c;->b:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method protected a()Ljava/lang/String;
-    .locals 6
+.method protected c()Ljava/lang/String;
+    .locals 1
 
-    invoke-static {}, Lcom/estrongs/android/util/bc;->c()Ljava/lang/String;
+    const-string v0, "archive"
 
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
     return-object v0
+.end method
 
-    :cond_0
-    const-string v1, ";"
+.method protected d()Z
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    sget-boolean v0, Lcom/estrongs/fs/impl/d/c;->c:Z
 
-    move-result-object v1
-
-    new-instance v2, Ljava/lang/StringBuffer;
-
-    invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
-
-    const/4 v0, 0x0
-
-    :goto_1
-    array-length v3, v1
-
-    if-ge v0, v3, :cond_2
-
-    if-lez v0, :cond_1
-
-    const-string v3, " or "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    :cond_1
-    const-string v3, "_data"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    move-result-object v3
-
-    const-string v4, " like "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    move-result-object v3
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "%"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    aget-object v5, v1, v0
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v4}, Landroid/database/DatabaseUtils;->sqlEscapeString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {v2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
+    return v0
 .end method

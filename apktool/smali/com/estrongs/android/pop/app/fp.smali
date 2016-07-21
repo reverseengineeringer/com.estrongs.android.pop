@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/pop/app/a/ap;
+.implements Lcom/estrongs/android/pop/app/ai;
 
 
 # instance fields
@@ -23,21 +23,21 @@
 
 # virtual methods
 .method public a()V
-    .locals 4
+    .locals 1
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/fp;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->d(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Landroid/os/Handler;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->i()V
 
-    move-result-object v0
+    return-void
+.end method
 
-    new-instance v1, Lcom/estrongs/android/pop/app/fq;
+.method public b()V
+    .locals 1
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/fq;-><init>(Lcom/estrongs/android/pop/app/fp;)V
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/fp;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
-    const-wide/16 v2, 0x1f4
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->k(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
 
     return-void
 .end method

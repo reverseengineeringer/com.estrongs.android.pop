@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
+.field final synthetic a:Lcom/estrongs/android/pop/app/ej;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/ej;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/ek;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/ek;->a:Lcom/estrongs/android/pop/app/ej;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,27 +23,17 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ek;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
+    new-instance v0, Ljava/lang/Thread;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->g(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Lcom/estrongs/android/widget/RealViewSwitcher;
+    new-instance v1, Lcom/estrongs/android/pop/app/el;
 
-    move-result-object v0
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/el;-><init>(Lcom/estrongs/android/pop/app/ek;)V
 
-    const/4 v1, 0x0
+    invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/RealViewSwitcher;->a(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ek;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
-
-    new-instance v1, Lcom/estrongs/android/pop/app/ga;
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/ek;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
-
-    invoke-direct {v1, v2}, Lcom/estrongs/android/pop/app/ga;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
-
-    invoke-static {v0, v1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Lcom/estrongs/android/pop/app/PopAudioPlayer;Lcom/estrongs/android/pop/app/ga;)Lcom/estrongs/android/pop/app/ga;
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     return-void
 .end method

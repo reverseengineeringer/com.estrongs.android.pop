@@ -1,14 +1,22 @@
 package com.estrongs.android.pop.utils;
 
-public class cy
+import java.util.concurrent.ThreadFactory;
+
+final class cy
+  implements ThreadFactory
 {
-  public String a;
-  public String b;
+  int a;
   
-  public cy(String paramString1, String paramString2)
+  cy(int paramInt)
   {
-    a = paramString1;
-    b = paramString2;
+    a = paramInt;
+  }
+  
+  public Thread newThread(Runnable paramRunnable)
+  {
+    paramRunnable = new Thread(paramRunnable);
+    paramRunnable.setPriority(a);
+    return paramRunnable;
   }
 }
 

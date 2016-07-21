@@ -1,25 +1,20 @@
 package com.estrongs.android.pop.app;
 
-import android.media.MediaPlayer;
-import android.media.MediaPlayer.OnCompletionListener;
-import com.estrongs.android.pop.app.a.am;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
 
-class l
-  implements MediaPlayer.OnCompletionListener
+final class l
+  implements DialogInterface.OnClickListener
 {
-  l(AudioPlayerService paramAudioPlayerService) {}
+  l(Context paramContext) {}
   
-  public void onCompletion(MediaPlayer paramMediaPlayer)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (AudioPlayerService.a(a) != null) {
-      AudioPlayerService.a(a).f(AudioPlayerService.b(a).f());
-    }
-    if (!AudioPlayerService.a(a, paramMediaPlayer))
-    {
-      int i = AudioPlayerService.c(a);
-      AudioPlayerService.b(a).d(i);
-      a.d(i);
-    }
+    Intent localIntent = new Intent("android.settings.USAGE_ACCESS_SETTINGS");
+    a.startActivity(localIntent);
+    paramDialogInterface.dismiss();
   }
 }
 

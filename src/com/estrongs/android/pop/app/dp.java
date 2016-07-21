@@ -3,7 +3,7 @@ package com.estrongs.android.pop.app;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.util.bk;
 
 class dp
   implements View.OnClickListener
@@ -13,7 +13,7 @@ class dp
   public void onClick(View paramView)
   {
     paramView = ImageCommentPostActivity.a(a).getText().toString();
-    if (!bd.a(paramView)) {
+    if (!bk.a(paramView)) {
       ImageCommentPostActivity.a(a, paramView);
     }
   }

@@ -1,85 +1,48 @@
 package com.estrongs.android.a;
 
-import android.app.Activity;
-import android.content.DialogInterface.OnClickListener;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.CheckBox;
-import android.widget.CompoundButton.OnCheckedChangeListener;
-import android.widget.EditText;
-import android.widget.TextView;
-import com.estrongs.android.pop.esclasses.g;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.android.util.am;
-import java.util.HashMap;
-import java.util.Map;
+import com.estrongs.android.a.b.k;
+import com.estrongs.android.a.b.l;
 
-public class a
-  extends cg
+public final class a
 {
-  public static final Map<Long, a> a = new HashMap();
-  String b;
-  String c;
-  Activity d;
-  DialogInterface.OnClickListener e = new c(this);
-  protected d f;
-  private String g = null;
-  private TextView h = null;
-  private EditText i = null;
-  private EditText j = null;
-  private CheckBox k = null;
-  private CheckBox l = null;
-  private CompoundButton.OnCheckedChangeListener m = new b(this);
+  private final String a;
+  private final l[] b;
+  private final k[] c;
+  private final long d;
+  private final long e;
   
-  public a(Activity paramActivity, String paramString)
+  public a(String paramString, l[] paramArrayOfl, k[] paramArrayOfk, long paramLong1, long paramLong2)
   {
-    this(paramActivity, paramString, paramString);
+    a = paramString;
+    b = paramArrayOfl;
+    c = paramArrayOfk;
+    d = paramLong1;
+    e = paramLong2;
   }
   
-  public a(Activity paramActivity, String paramString1, String paramString2)
+  public final String a()
   {
-    super(paramActivity);
-    d = paramActivity;
-    c = paramString1;
-    b = paramString2;
-    setTitle(paramActivity.getText(2131427448) + " " + am.D(paramString2));
-    paramString1 = g.a(paramActivity).inflate(2130903203, null);
-    setContentView(paramString1);
-    i = ((EditText)paramString1.findViewById(2131362518));
-    j = ((EditText)paramString1.findViewById(2131362072));
-    k = ((CheckBox)paramString1.findViewById(2131362522));
-    l = ((CheckBox)paramString1.findViewById(2131362555));
-    h = ((TextView)paramString1.findViewById(2131361951));
-    i.setSingleLine();
-    k.setOnCheckedChangeListener(m);
-    setConfirmButton(paramActivity.getString(2131427339), e);
-    setCancelButton(paramActivity.getString(2131427340), null);
+    return a;
   }
   
-  public void a(int paramInt)
+  public final l[] b()
   {
-    View localView1 = findViewById(2131361964);
-    View localView2 = findViewById(2131361972);
-    if (localView1 != null) {
-      localView1.setVisibility(paramInt);
-    }
-    if (localView2 != null) {
-      localView2.setVisibility(paramInt);
-    }
+    return b;
   }
   
-  public void a(d paramd)
+  public final k[] c()
   {
-    f = paramd;
+    return c;
   }
   
-  public void a(String paramString)
+  public final long d()
   {
-    if (paramString != null)
-    {
-      h.setVisibility(0);
-      h.setText(paramString);
-    }
+    return d;
+  }
+  
+  public boolean e()
+  {
+    return (b.length == 0) && (c.length == 0);
   }
 }
 

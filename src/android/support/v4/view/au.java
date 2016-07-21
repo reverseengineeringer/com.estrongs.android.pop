@@ -1,68 +1,18 @@
 package android.support.v4.view;
 
-import android.graphics.Paint;
-import android.view.View;
-import android.view.ViewParent;
+import android.view.ViewGroup.MarginLayoutParams;
 
 class au
-  implements ba
+  implements at
 {
-  public int a(View paramView)
+  public int a(ViewGroup.MarginLayoutParams paramMarginLayoutParams)
   {
-    return 2;
+    return leftMargin;
   }
   
-  long a()
+  public int b(ViewGroup.MarginLayoutParams paramMarginLayoutParams)
   {
-    return 10L;
-  }
-  
-  public void a(View paramView, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
-  {
-    paramView.postInvalidateDelayed(a(), paramInt1, paramInt2, paramInt3, paramInt4);
-  }
-  
-  public void a(View paramView, int paramInt, Paint paramPaint) {}
-  
-  public void a(View paramView, Paint paramPaint) {}
-  
-  public void a(View paramView, a parama) {}
-  
-  public void a(View paramView, Runnable paramRunnable)
-  {
-    paramView.postDelayed(paramRunnable, a());
-  }
-  
-  public boolean a(View paramView, int paramInt)
-  {
-    return false;
-  }
-  
-  public void b(View paramView)
-  {
-    paramView.postInvalidateDelayed(a());
-  }
-  
-  public void b(View paramView, int paramInt) {}
-  
-  public int c(View paramView)
-  {
-    return 0;
-  }
-  
-  public int d(View paramView)
-  {
-    return 0;
-  }
-  
-  public int e(View paramView)
-  {
-    return 0;
-  }
-  
-  public ViewParent f(View paramView)
-  {
-    return paramView.getParent();
+    return rightMargin;
   }
 }
 

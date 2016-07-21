@@ -58,7 +58,7 @@
 
     const/4 v3, 0x1
 
-    invoke-static {}, Lcom/estrongs/android/util/h;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/estrongs/android/util/g;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -170,7 +170,7 @@
 .method public static a(Landroid/app/Activity;Ljava/lang/String;ILjava/lang/Runnable;)V
     .locals 7
 
-    const v6, 0x7f0b0191
+    const v6, 0x7f080703
 
     const/4 v5, 0x3
 
@@ -184,7 +184,7 @@
 
     if-ne p2, v3, :cond_1
 
-    const v0, 0x7f0b018c
+    const v0, 0x7f0802a2
 
     new-array v1, v3, [Ljava/lang/Object;
 
@@ -198,7 +198,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b018d
+    const v1, 0x7f08029d
 
     new-array v2, v3, [Ljava/lang/Object;
 
@@ -214,40 +214,40 @@
 
     :cond_0
     :goto_0
-    new-instance v2, Lcom/estrongs/android/ui/dialog/ct;
+    new-instance v2, Lcom/estrongs/android/ui/dialog/cv;
 
-    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/dialog/ct;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v2, v0}, Lcom/estrongs/android/ui/dialog/ct;->a(Ljava/lang/CharSequence;)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->b(Ljava/lang/CharSequence;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v2, v0}, Lcom/estrongs/android/ui/dialog/cv;->a(Ljava/lang/CharSequence;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    const v1, 0x7f0b000b
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->b(Ljava/lang/CharSequence;)Lcom/estrongs/android/ui/dialog/cv;
+
+    move-result-object v0
+
+    const v1, 0x7f080226
 
     new-instance v2, Lcom/estrongs/android/pop/b/c;
 
     invoke-direct {v2, p0, p1, p3}, Lcom/estrongs/android/pop/b/c;-><init>(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/Runnable;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v1
 
-    const v2, 0x7f0b000c
+    const v2, 0x7f080221
 
     if-eq p2, v5, :cond_3
 
     const/4 v0, 0x0
 
     :goto_1
-    invoke-virtual {v1, v2, v0}, Lcom/estrongs/android/ui/dialog/ct;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v1, v2, v0}, Lcom/estrongs/android/ui/dialog/cv;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ct;->c()Lcom/estrongs/android/ui/dialog/cg;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cv;->c()Lcom/estrongs/android/ui/dialog/ci;
 
     return-void
 
@@ -268,7 +268,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b0192
+    const v1, 0x7f08042c
 
     new-array v2, v3, [Ljava/lang/Object;
 
@@ -299,7 +299,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b0193
+    const v1, 0x7f0803cb
 
     new-array v2, v3, [Ljava/lang/Object;
 
@@ -421,7 +421,7 @@
 
     move-result-object v1
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -434,7 +434,7 @@
     move-result-object v5
 
     :goto_1
-    const v0, 0x7f0b018c
+    const v0, 0x7f0802a2
 
     new-array v1, v3, [Ljava/lang/Object;
 
@@ -448,7 +448,7 @@
 
     move-result-object v2
 
-    const v0, 0x7f0b018e
+    const v0, 0x7f0802a1
 
     new-array v1, v3, [Ljava/lang/Object;
 
@@ -506,7 +506,7 @@
 
     move-result-object v1
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

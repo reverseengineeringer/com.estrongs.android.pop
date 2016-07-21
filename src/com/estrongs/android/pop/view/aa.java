@@ -1,19 +1,43 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.pop.utils.w;
-import com.estrongs.android.util.a;
+import android.os.Handler;
+import com.estrongs.a.a;
+import com.estrongs.a.o;
+import com.estrongs.android.view.cr;
+import java.util.Iterator;
+import java.util.List;
 
 class aa
-  implements Runnable
+  implements o
 {
   aa(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void run()
+  private void a()
   {
-    w.a(a);
-    if (FileExplorerActivity.O(a) != null) {
-      FileExplorerActivity.O(a).c("TaskManager_Show", "TaskManager_Show");
+    synchronized (a.w)
+    {
+      Iterator localIterator = a.w.iterator();
+      while (localIterator.hasNext())
+      {
+        cr localcr = (cr)localIterator.next();
+        if ((localcr != null) && ("download://".equals(localcr.c())))
+        {
+          a.i.post(new ab(this, localcr));
+          return;
+        }
+      }
+      return;
     }
+  }
+  
+  public void a(a parama)
+  {
+    a();
+  }
+  
+  public void b(a parama)
+  {
+    a();
   }
 }
 

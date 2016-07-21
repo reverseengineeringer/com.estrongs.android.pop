@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/content/DialogInterface$OnDismissListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/dialog/bn;
+.field final synthetic a:Landroid/content/DialogInterface$OnDismissListener;
+
+.field final synthetic b:Lcom/estrongs/android/ui/dialog/bl;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/bn;)V
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/bl;Landroid/content/DialogInterface$OnDismissListener;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/bo;->a:Lcom/estrongs/android/ui/dialog/bn;
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/bo;->b:Lcom/estrongs/android/ui/dialog/bl;
+
+    iput-object p2, p0, Lcom/estrongs/android/ui/dialog/bo;->a:Landroid/content/DialogInterface$OnDismissListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,16 +26,23 @@
 
 
 # virtual methods
-.method public run()V
+.method public onDismiss(Landroid/content/DialogInterface;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/bo;->a:Lcom/estrongs/android/ui/dialog/bn;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/bo;->a:Landroid/content/DialogInterface$OnDismissListener;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/bn;->b:Lcom/estrongs/android/ui/dialog/bj;
+    if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/bj;->c:Lcom/estrongs/android/ui/dialog/bt;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/bo;->a:Landroid/content/DialogInterface$OnDismissListener;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/bt;->notifyDataSetChanged()V
+    invoke-interface {v0, p1}, Landroid/content/DialogInterface$OnDismissListener;->onDismiss(Landroid/content/DialogInterface;)V
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/bo;->b:Lcom/estrongs/android/ui/dialog/bl;
+
+    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/bl;->a:Landroid/app/Activity;
+
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
     return-void
 .end method

@@ -38,7 +38,7 @@
 
     iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/ViewImage;->g:Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouch;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouch;->a()F
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouch;->getMaxZoom()F
 
     move-result v1
 
@@ -64,7 +64,7 @@
 
     iget v1, p0, Lcom/estrongs/android/pop/app/imageviewer/ar;->a:F
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouch;->b()F
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouch;->getDefaultScale()F
 
     move-result v2
 
@@ -74,7 +74,7 @@
 
     if-gez v1, :cond_1
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouch;->b()F
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouch;->getDefaultScale()F
 
     move-result v1
 
@@ -106,7 +106,7 @@
 
     iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/ViewImage;->g:Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouch;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouch;->f()F
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouch;->getScale()F
 
     move-result v0
 

@@ -39,12 +39,12 @@
 
 
 # virtual methods
-.method public a()F
-    .locals 1
+.method public bridge synthetic a()V
+    .locals 0
 
-    iget v0, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouch;->k:F
+    invoke-super {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->a()V
 
-    return v0
+    return-void
 .end method
 
 .method public bridge synthetic a(I)V
@@ -63,30 +63,12 @@
     return-void
 .end method
 
-.method public a(Lcom/estrongs/android/pop/app/imageviewer/am;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouch;->c:Lcom/estrongs/android/pop/app/imageviewer/am;
-
-    return-void
-.end method
-
 .method public bridge synthetic a(Lcom/estrongs/android/pop/app/imageviewer/an;Z)V
     .locals 0
 
     invoke-super {p0, p1, p2}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->a(Lcom/estrongs/android/pop/app/imageviewer/an;Z)V
 
     return-void
-.end method
-
-.method public bridge synthetic b()F
-    .locals 1
-
-    invoke-super {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->b()F
-
-    move-result v0
-
-    return v0
 .end method
 
 .method protected b(FF)V
@@ -130,7 +112,7 @@
 
     invoke-direct {v0, v4, v4, v1, v2}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouch;->g()Landroid/graphics/Matrix;
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouch;->getImageViewMatrix()Landroid/graphics/Matrix;
 
     move-result-object v1
 
@@ -187,32 +169,62 @@
     return-void
 .end method
 
-.method public bridge synthetic c()I
+.method public bridge synthetic getBitmapHeight()I
     .locals 1
 
-    invoke-super {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->c()I
+    invoke-super {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->getBitmapHeight()I
 
     move-result v0
 
     return v0
 .end method
 
-.method public bridge synthetic d()I
+.method public bridge synthetic getBitmapWidth()I
     .locals 1
 
-    invoke-super {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->d()I
+    invoke-super {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->getBitmapWidth()I
 
     move-result v0
 
     return v0
 .end method
 
-.method public bridge synthetic e()V
-    .locals 0
+.method public bridge synthetic getDefaultScale()F
+    .locals 1
 
-    invoke-super {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->e()V
+    invoke-super {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->getDefaultScale()F
 
-    return-void
+    move-result v0
+
+    return v0
+.end method
+
+.method public getMaxZoom()F
+    .locals 1
+
+    iget v0, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouch;->k:F
+
+    return v0
+.end method
+
+.method public bridge synthetic getScaledHeight()I
+    .locals 1
+
+    invoke-super {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->getScaledHeight()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public bridge synthetic getScaledWidth()I
+    .locals 1
+
+    invoke-super {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->getScaledWidth()I
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
@@ -360,7 +372,7 @@
 
     :sswitch_1
     :try_start_2
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouch;->f()F
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouch;->getScale()F
 
     move-result v3
 
@@ -476,7 +488,7 @@
 
     :sswitch_2
     :try_start_7
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouch;->f()F
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouch;->getScale()F
 
     move-result v3
 
@@ -693,10 +705,34 @@
     return v0
 .end method
 
+.method public setEnableTrackballScroll(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouch;->b:Z
+
+    return-void
+.end method
+
 .method public bridge synthetic setImageBitmap(Landroid/graphics/Bitmap;)V
     .locals 0
 
     invoke-super {p0, p1}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->setImageBitmap(Landroid/graphics/Bitmap;)V
+
+    return-void
+.end method
+
+.method public setOnImageEdgeDetector(Lcom/estrongs/android/pop/app/imageviewer/am;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouch;->c:Lcom/estrongs/android/pop/app/imageviewer/am;
+
+    return-void
+.end method
+
+.method public bridge synthetic setRecycler(Lcom/estrongs/android/pop/app/imageviewer/ad;)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->setRecycler(Lcom/estrongs/android/pop/app/imageviewer/ad;)V
 
     return-void
 .end method

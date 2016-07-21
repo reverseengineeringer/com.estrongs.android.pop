@@ -1,15 +1,17 @@
 package com.estrongs.android.ui.dialog;
 
-import com.estrongs.android.pop.app.DownloaderActivity;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class x
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  x(t paramt, String paramString) {}
+  x(u paramu) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    DownloaderActivity.a(t.b(b), a, "application/*");
+    paramDialogInterface.dismiss();
+    new y(this).start();
   }
 }
 

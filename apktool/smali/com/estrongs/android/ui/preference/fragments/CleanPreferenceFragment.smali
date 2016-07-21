@@ -1,5 +1,5 @@
 .class public Lcom/estrongs/android/ui/preference/fragments/CleanPreferenceFragment;
-.super Lcom/estrongs/android/pop/esclasses/i;
+.super Lcom/estrongs/android/pop/esclasses/m;
 
 
 # annotations
@@ -22,7 +22,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/i;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/m;-><init>()V
 
     return-void
 .end method
@@ -30,7 +30,7 @@
 .method private a()V
     .locals 4
 
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
@@ -42,7 +42,7 @@
     :cond_0
     invoke-direct {p0}, Lcom/estrongs/android/ui/preference/fragments/CleanPreferenceFragment;->b()V
 
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
@@ -52,9 +52,9 @@
 
     invoke-direct {v2}, Landroid/os/Handler;-><init>()V
 
-    new-instance v3, Lcom/estrongs/android/ui/preference/fragments/u;
+    new-instance v3, Lcom/estrongs/android/ui/preference/fragments/w;
 
-    invoke-direct {v3, p0}, Lcom/estrongs/android/ui/preference/fragments/u;-><init>(Lcom/estrongs/android/ui/preference/fragments/CleanPreferenceFragment;)V
+    invoke-direct {v3, p0}, Lcom/estrongs/android/ui/preference/fragments/w;-><init>(Lcom/estrongs/android/ui/preference/fragments/CleanPreferenceFragment;)V
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a(ZLandroid/os/Handler;Ljava/lang/Runnable;)V
 
@@ -94,7 +94,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/CleanPreferenceFragment;->b:Landroid/app/ProgressDialog;
 
-    const v1, 0x7f0b007f
+    const v1, 0x7f0805b1
 
     invoke-virtual {p0, v1}, Lcom/estrongs/android/ui/preference/fragments/CleanPreferenceFragment;->getText(I)Ljava/lang/CharSequence;
 
@@ -130,7 +130,7 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 2
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/i;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/m;->onCreate(Landroid/os/Bundle;)V
 
     const v0, 0x7f05000a
 
@@ -146,9 +146,9 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/CleanPreferenceFragment;->a:Landroid/preference/Preference;
 
-    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/s;
+    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/u;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/s;-><init>(Lcom/estrongs/android/ui/preference/fragments/CleanPreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/u;-><init>(Lcom/estrongs/android/ui/preference/fragments/CleanPreferenceFragment;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
@@ -166,9 +166,9 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/CleanPreferenceFragment;->c:Landroid/preference/Preference;
 
-    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/t;
+    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/v;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/t;-><init>(Lcom/estrongs/android/ui/preference/fragments/CleanPreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/v;-><init>(Lcom/estrongs/android/ui/preference/fragments/CleanPreferenceFragment;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 

@@ -1,28 +1,14 @@
 package com.estrongs.android.view;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.pop.app.compress.be;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.io.archive.h;
+import android.content.Context;
+import com.estrongs.android.widget.bx;
 
 class k
-  implements DialogInterface.OnClickListener
+  extends bx
 {
-  k(j paramj, be parambe) {}
-  
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  k(g paramg, Context paramContext)
   {
-    paramDialogInterface = a.a();
-    if (b.a.e(paramDialogInterface))
-    {
-      b.b.d = paramDialogInterface;
-      a.dismiss();
-      e.a(b.b, new r(b.b));
-      e.d(b.b).start();
-      return;
-    }
-    ag.a(b.b.ae, 2131427897, 1);
+    super(paramContext);
   }
 }
 

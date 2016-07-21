@@ -33,7 +33,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/h;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/pop/view/utils/AppRunner;->s(Landroid/app/Activity;Ljava/lang/String;)Lcom/estrongs/android/ui/dialog/cg;
+    invoke-static {v0, v1}, Lcom/estrongs/android/pop/view/utils/AppRunner;->t(Landroid/app/Activity;Ljava/lang/String;)Lcom/estrongs/android/ui/dialog/ci;
 
     return-void
 .end method

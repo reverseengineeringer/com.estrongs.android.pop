@@ -1,20 +1,18 @@
 package com.estrongs.android.pop.app;
 
-import android.widget.AbsListView;
-import android.widget.AbsListView.OnScrollListener;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.ui.view.ac;
 
 class ff
-  implements AbsListView.OnScrollListener
+  implements View.OnClickListener
 {
-  ff(PopAudioPlayer paramPopAudioPlayer) {}
+  ff(fa paramfa) {}
   
-  public void onScroll(AbsListView paramAbsListView, int paramInt1, int paramInt2, int paramInt3)
+  public void onClick(View paramView)
   {
-    a.c = paramInt1;
-    a.d = (paramInt1 + paramInt2);
+    PopAudioPlayer.h(a.a).f();
   }
-  
-  public void onScrollStateChanged(AbsListView paramAbsListView, int paramInt) {}
 }
 
 /* Location:

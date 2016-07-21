@@ -31,7 +31,7 @@ public class TypedMap
   
   public boolean getBoolean(String paramString)
   {
-    return bd.b(get(paramString));
+    return bk.b(get(paramString));
   }
   
   public boolean getBoolean(String paramString, boolean paramBoolean)
@@ -40,7 +40,7 @@ public class TypedMap
     if (paramString == null) {
       return paramBoolean;
     }
-    return bd.a(paramString.toString(), paramBoolean);
+    return bk.a(paramString.toString(), paramBoolean);
   }
   
   public Date getDate(String paramString)
@@ -73,7 +73,7 @@ public class TypedMap
     if (paramString == null) {
       return paramLong;
     }
-    return bd.a(paramString.toString(), paramLong);
+    return bk.a(paramString.toString(), paramLong);
   }
   
   public String getString(String paramString)

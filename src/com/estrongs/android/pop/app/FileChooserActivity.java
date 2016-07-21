@@ -3,38 +3,38 @@ package com.estrongs.android.pop.app;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import com.estrongs.android.a.u;
-import com.estrongs.android.d.d;
-import com.estrongs.android.d.f;
+import com.estrongs.android.d.u;
+import com.estrongs.android.h.d;
 import com.estrongs.android.pop.FexApplication;
 import com.estrongs.android.pop.ad;
 import com.estrongs.android.pop.app.imageviewer.CropImage;
 import com.estrongs.android.pop.b;
-import com.estrongs.android.pop.esclasses.ESActivity;
+import com.estrongs.android.pop.esclasses.ESResourceActivity;
 import com.estrongs.android.pop.z;
 import com.estrongs.android.ui.dialog.VerifyPasswordDialog;
 import com.estrongs.android.ui.dialog.VerifyPasswordDialog.DialogType;
-import com.estrongs.android.ui.dialog.ct;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.aj;
+import com.estrongs.android.ui.dialog.cv;
+import com.estrongs.android.ui.view.ak;
 import com.estrongs.android.util.am;
-import com.estrongs.android.util.ay;
+import com.estrongs.android.util.ap;
 import com.estrongs.android.util.bc;
-import com.estrongs.android.util.bd;
-import com.estrongs.android.view.cc;
-import com.estrongs.android.widget.g;
-import com.estrongs.fs.m;
+import com.estrongs.android.util.bg;
+import com.estrongs.android.util.bk;
+import com.estrongs.android.view.dx;
+import com.estrongs.fs.i;
+import com.estrongs.fs.impl.media.c;
+import com.estrongs.fs.w;
 import java.io.File;
 
 public class FileChooserActivity
-  extends ESActivity
+  extends ESResourceActivity
 {
-  g a;
+  com.estrongs.android.widget.f a;
   private boolean b = false;
-  private boolean c = false;
-  private Runnable d;
-  private ad e;
-  private final cc f = new cg(this);
+  private boolean d = false;
+  private Runnable e;
+  private ad f;
+  private final dx g = new ck(this);
   
   private boolean a()
   {
@@ -46,37 +46,37 @@ public class FileChooserActivity
   {
     int k = getIntent().getIntExtra("android.intent.extra.ringtone.TYPE", 0);
     Uri localUri = b(paramString);
-    int m = bc.b(paramString);
+    int m = bg.b(paramString);
     int i;
     int j;
-    if ((bc.g(paramString)) && (131110 != m))
+    if ((bg.g(paramString)) && ((z.av) || (131110 != m)))
     {
       i = 1;
       j = i;
       if (i == 0)
       {
         if ((m != 196650) && (!a(paramString))) {
-          break label100;
+          break label106;
         }
         j = 1;
       }
-      label66:
+      label72:
       if (j == 0) {
-        break label131;
+        break label137;
       }
     }
-    label100:
-    label131:
-    for (paramString = aj.a(getContentResolver(), paramString, k);; paramString = localUri)
+    label106:
+    label137:
+    for (paramString = am.a(getContentResolver(), paramString, k);; paramString = localUri)
     {
       if (paramString == null)
       {
-        ag.a(this, 2131428335, 1);
+        ak.a(this, 2131232323, 1);
         return false;
         i = 0;
         break;
         j = 0;
-        break label66;
+        break label72;
       }
       paramIntent.putExtra("android.intent.extra.ringtone.TYPE", k);
       paramIntent.putExtra("android.intent.extra.ringtone.PICKED_URI", paramString);
@@ -92,9 +92,9 @@ public class FileChooserActivity
   
   private void b(com.estrongs.fs.h paramh)
   {
-    if (c) {
-      if ((am.bb(paramh.getAbsolutePath())) && (paramh.getFileType().b())) {
-        ag.a(this, 2131428512, 0);
+    if (d) {
+      if ((ap.bm(paramh.getAbsolutePath())) && (paramh.getFileType().b())) {
+        ak.a(this, 2131232274, 0);
       }
     }
     Object localObject2;
@@ -102,21 +102,21 @@ public class FileChooserActivity
     do
     {
       return;
-      setResult(-1, ay.b(this, paramh));
+      setResult(-1, bc.b(this, paramh));
       finish();
       return;
       localObject2 = paramh.getAbsolutePath();
-      localObject1 = am.bk((String)localObject2);
-      e.K((String)localObject1);
+      localObject1 = ap.bB((String)localObject2);
+      f.K((String)localObject1);
     } while (!a(paramh));
     Intent localIntent = new Intent();
-    if (am.bb((String)localObject2))
+    if (ap.bm((String)localObject2))
     {
-      u.a(this, getString(2131427442), getString(2131427869) + "\n" + getString(2131427870));
-      new Thread(new ch(this, (String)localObject2, paramh, localIntent)).start();
+      u.a(this, getString(2131232182), getString(2131232005) + "\n" + getString(2131232553));
+      new Thread(new cl(this, (String)localObject2, paramh, localIntent)).start();
       return;
     }
-    if (am.ba((String)localObject2)) {}
+    if (ap.bl((String)localObject2)) {}
     for (paramh = Uri.fromFile(new File((String)localObject2));; paramh = Uri.parse((String)localObject2))
     {
       if (!"android.intent.action.RINGTONE_PICKER".equals(getIntent().getAction())) {
@@ -130,7 +130,7 @@ public class FileChooserActivity
       return;
     }
     label228:
-    if (bc.c((String)localObject2))
+    if (bg.c((String)localObject2))
     {
       if (b)
       {
@@ -140,7 +140,7 @@ public class FileChooserActivity
         ((Intent)localObject2).setData(paramh);
         ((Intent)localObject2).setClass(this, CropImage.class);
         ((Intent)localObject2).putExtras((Bundle)localObject1);
-        startActivityForResult((Intent)localObject2, 268439577);
+        startActivityForResult((Intent)localObject2, 4121);
         return;
       }
       Bundle localBundle = getIntent().getExtras();
@@ -156,18 +156,18 @@ public class FileChooserActivity
         ((Intent)localObject1).setClass(this, CropImage.class);
         ((Intent)localObject1).putExtras((Bundle)localObject2);
         ((Intent)localObject1).putExtras(localBundle);
-        startActivityForResult((Intent)localObject1, 268439577);
+        startActivityForResult((Intent)localObject1, 4121);
         return;
       }
       if ((localBundle != null) && (localBundle.getBoolean("return-data"))) {
-        localIntent.putExtra("data", com.estrongs.android.d.h.a(this).a(getIntent().getIntExtra("outputX", 64), (String)localObject2, null));
+        localIntent.putExtra("data", com.estrongs.android.h.h.a(this).a(getIntent().getIntExtra("outputX", 64), (String)localObject2, null));
       }
       for (;;)
       {
         setResult(-1, localIntent);
         finish();
         return;
-        paramh = com.estrongs.android.util.i.a().b(getContentResolver(), (String)localObject2);
+        paramh = com.estrongs.android.util.h.a().b(getContentResolver(), (String)localObject2);
         if (paramh != null) {
           localIntent.setData(paramh);
         } else {
@@ -175,7 +175,14 @@ public class FileChooserActivity
         }
       }
     }
-    if ((bc.g((String)localObject2)) || (bc.h((String)localObject2)))
+    if (bg.g((String)localObject2))
+    {
+      localIntent.setData(c.d((String)localObject2));
+      setResult(-1, localIntent);
+      finish();
+      return;
+    }
+    if (bg.h((String)localObject2))
     {
       localIntent.setData(b((String)localObject2));
       setResult(-1, localIntent);
@@ -189,12 +196,12 @@ public class FileChooserActivity
       finish();
       return;
     }
-    new ct(this).a(2131427955).a(2131165195, -1, new by(this, localIntent, (String)localObject2, paramh)).a(2131427340, null).b().show();
+    new cv(this).a(2131232003).a(2131492873, -1, new cc(this, localIntent, (String)localObject2, paramh)).a(2131231265, null).b().show();
   }
   
   public void a(int paramInt)
   {
-    ag.a(this, getText(paramInt), 0);
+    ak.a(this, getText(paramInt), 0);
   }
   
   protected boolean a(com.estrongs.fs.h paramh)
@@ -216,10 +223,10 @@ public class FileChooserActivity
     if ((a != null) && (a.l().isShowing())) {
       a.k();
     }
-    if (d != null)
+    if (e != null)
     {
-      d.run();
-      d = null;
+      e.run();
+      e = null;
     }
     VerifyPasswordDialog.a();
     super.finish();
@@ -227,7 +234,7 @@ public class FileChooserActivity
   
   protected void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
   {
-    if ((paramInt1 == 268439577) && (paramInt2 == -1))
+    if ((paramInt1 == 4121) && (paramInt2 == -1))
     {
       setResult(paramInt2, paramIntent);
       finish();
@@ -238,20 +245,19 @@ public class FileChooserActivity
   protected void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    requestWindowFeature(1);
     paramBundle = getIntent().getType();
-    if ((!bd.a(paramBundle)) && (paramBundle.startsWith("vnd.android.cursor.item")))
+    if ((!bk.a(paramBundle)) && (paramBundle.startsWith("vnd.android.cursor.item")))
     {
-      ag.a(this, 2131428093, 0);
+      ak.a(this, 2131231905, 0);
       finish();
       return;
     }
-    e = ad.a(this);
-    boolean bool = e.p();
+    f = ad.a(this);
+    boolean bool = f.q();
     Object localObject = getIntent().getDataString();
-    if ((bd.a((CharSequence)localObject)) || (!am.ba((String)localObject)))
+    if ((bk.a((CharSequence)localObject)) || (!ap.bl((String)localObject)))
     {
-      localObject = e.av();
+      localObject = f.aw();
       if (localObject != null)
       {
         paramBundle = (Bundle)localObject;
@@ -262,34 +268,34 @@ public class FileChooserActivity
         paramBundle = b.b();
       }
       b = "android.intent.action.SET_WALLPAPER".equals(getIntent().getAction());
-      c = "android.intent.action.CREATE_SHORTCUT".equals(getIntent().getAction());
-      if ((!a()) && (!b) && (!c)) {
-        break label392;
+      d = "android.intent.action.CREATE_SHORTCUT".equals(getIntent().getAction());
+      if ((!a()) && (!b) && (!d)) {
+        break label386;
       }
-      if (!f.b("65536")) {
-        f.a(new d(this));
+      if (!com.estrongs.android.h.f.b("65536")) {
+        com.estrongs.android.h.f.a(new d(this));
       }
-      localObject = new bx(this, bool);
+      localObject = new cb(this, bool);
       bool = this instanceof ESRingtoneChooserActivity;
       if (z.S) {
         bool = true;
       }
-      a = new g(this, paramBundle, (com.estrongs.fs.i)localObject, false, bool);
-      a.a(f);
-      if (c) {
-        break label333;
+      a = new com.estrongs.android.widget.f(this, paramBundle, (i)localObject, false, bool);
+      a.a(g);
+      if (d) {
+        break label327;
       }
-      a.a(getString(2131427340), null);
+      a.a(getString(2131231265), null);
     }
     for (;;)
     {
       localObject = getIntent().getStringExtra("com.estrongs.intent.extra.TITLE");
       paramBundle = (Bundle)localObject;
       if (localObject == null) {
-        paramBundle = getString(2131427849);
+        paramBundle = getString(2131232547);
       }
       a.a(paramBundle);
-      a.a(new cd(this));
+      a.a(new ch(this));
       return;
       paramBundle = (Bundle)localObject;
       if (!((String)localObject).toLowerCase().startsWith("file:///")) {
@@ -297,17 +303,17 @@ public class FileChooserActivity
       }
       paramBundle = ((String)localObject).substring(7);
       break;
-      label333:
-      a.c(getString(2131427340), null);
+      label327:
+      a.c(getString(2131231265), null);
       localObject = getIntent().getStringExtra("com.estrongs.intent.extra.BUTTON_TITLE");
       paramBundle = (Bundle)localObject;
       if (localObject == null) {
-        paramBundle = getString(2131427370);
+        paramBundle = getString(2131230720);
       }
-      a.b(paramBundle, new bz(this));
+      a.b(paramBundle, new cd(this));
       continue;
-      label392:
-      a = new g(this, paramBundle, new ca(this, bool), true, true);
+      label386:
+      a = new com.estrongs.android.widget.f(this, paramBundle, new ce(this, bool), true, true);
       localObject = getIntent().getStringExtra("com.estrongs.intent.extra.BUTTON_TITLE");
       if (localObject != null)
       {
@@ -316,10 +322,10 @@ public class FileChooserActivity
       }
       else
       {
-        paramBundle = getString(2131427370);
+        paramBundle = getString(2131230720);
       }
-      a.b(paramBundle, new cb(this));
-      a.c(getString(2131427340), null);
+      a.b(paramBundle, new cf(this));
+      a.c(getString(2131231265), null);
     }
   }
   
@@ -333,9 +339,9 @@ public class FileChooserActivity
     {
       if (FexApplication.a().i())
       {
-        d = new ce(this);
+        e = new ci(this);
         VerifyPasswordDialog localVerifyPasswordDialog = VerifyPasswordDialog.a(this, VerifyPasswordDialog.DialogType.START);
-        localVerifyPasswordDialog.a(new cf(this));
+        localVerifyPasswordDialog.a(new cj(this));
         localVerifyPasswordDialog.b();
       }
       return;

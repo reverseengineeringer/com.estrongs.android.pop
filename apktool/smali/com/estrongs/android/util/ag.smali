@@ -2,42 +2,54 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljavax/net/ssl/X509TrustManager;
-
-
-# instance fields
-.field final synthetic a:Lcom/estrongs/android/util/af;
+.implements Ljavax/net/ssl/HostnameVerifier;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/util/af;)V
+.method private constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/util/ag;->a:Lcom/estrongs/android/util/af;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method synthetic constructor <init>(Lcom/estrongs/android/util/ab;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/estrongs/android/util/ag;-><init>()V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public checkClientTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
-    .locals 0
+.method public verify(Ljava/lang/String;Ljavax/net/ssl/SSLSession;)Z
+    .locals 3
 
-    return-void
-.end method
+    const-string v0, "HttpDownloader"
 
-.method public checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
-    .locals 0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-.method public getAcceptedIssuers()[Ljava/security/cert/X509Certificate;
-    .locals 1
+    const-string v2, "Approving certificate for "
 
-    const/4 v0, 0x0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object v0
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

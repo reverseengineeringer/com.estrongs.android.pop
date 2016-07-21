@@ -7,7 +7,9 @@ class n
   
   public void run()
   {
-    a.e("book://");
+    a.A();
+    int i = FileExplorerActivity.b(a, a.P());
+    FileExplorerActivity.a(a, i, 0);
   }
 }
 

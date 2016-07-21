@@ -26,7 +26,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->aD()Z
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->aE()Z
 
     move-result v1
 
@@ -53,7 +53,7 @@
     move-result-object v0
 
     :cond_0
-    invoke-static {}, Lcom/estrongs/android/util/bd;->f()Z
+    invoke-static {}, Lcom/estrongs/android/util/bk;->f()Z
 
     move-result v1
 
@@ -78,7 +78,7 @@
     if-nez v1, :cond_2
 
     :cond_1
-    const v1, 0x7f0c0017
+    const v1, 0x7f090181
 
     invoke-virtual {p0, v1}, Lcom/estrongs/android/ui/preference/RecyclePreference;->setTheme(I)V
 
@@ -91,7 +91,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f02021a
+    const v2, 0x7f02038d
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -129,7 +129,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f020218
+    const v2, 0x7f02038b
 
     invoke-virtual {v1, v2}, Landroid/view/Window;->setBackgroundDrawableResource(I)V
 
@@ -137,7 +137,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0b006f
+    const v2, 0x7f080381
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -145,11 +145,11 @@
 
     invoke-virtual {p0, v1}, Lcom/estrongs/android/ui/preference/RecyclePreference;->setTitle(Ljava/lang/CharSequence;)V
 
-    const v1, 0x7f050014
+    const v1, 0x7f050015
 
     invoke-virtual {p0, v1}, Lcom/estrongs/android/ui/preference/RecyclePreference;->addPreferencesFromResource(I)V
 
-    invoke-static {}, Lcom/estrongs/android/util/bd;->f()Z
+    invoke-static {}, Lcom/estrongs/android/util/bk;->f()Z
 
     move-result v1
 
@@ -178,11 +178,11 @@
 
     move-result-object v0
 
-    const v1, 0x7f0300e0
+    const v1, 0x7f030197
 
     invoke-virtual {v0, v4, v1}, Landroid/view/Window;->setFeatureInt(II)V
 
-    const v0, 0x7f0a003d
+    const v0, 0x7f0e0076
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/preference/RecyclePreference;->findViewById(I)Landroid/view/View;
 
@@ -190,19 +190,19 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    invoke-static {p0}, Lcom/estrongs/android/ui/theme/al;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
+    invoke-static {p0}, Lcom/estrongs/android/ui/theme/at;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
 
     move-result-object v1
 
-    const v2, 0x7f0201ef
+    const v2, 0x7f020340
 
-    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/theme/al;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/theme/at;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const v0, 0x7f0a0021
+    const v0, 0x7f0e0077
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/preference/RecyclePreference;->findViewById(I)Landroid/view/View;
 
@@ -210,7 +210,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f0b0438
+    const v1, 0x7f080557
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -247,7 +247,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f02021a
+    const v4, 0x7f02038d
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -277,7 +277,7 @@
 
     move-result-object v0
 
-    const v3, 0x7f080008
+    const v3, 0x7f0d010a
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getColor(I)I
 

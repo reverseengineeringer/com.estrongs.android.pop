@@ -1,13 +1,23 @@
-.class final Lcom/estrongs/android/ui/dialog/kl;
+.class Lcom/estrongs/android/ui/dialog/kl;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/util/ab;
+.implements Landroid/content/DialogInterface$OnClickListener;
+
+
+# instance fields
+.field final synthetic a:Lcom/estrongs/a/a;
+
+.field final synthetic b:Lcom/estrongs/android/ui/dialog/kh;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/kh;Lcom/estrongs/a/a;)V
     .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/kl;->b:Lcom/estrongs/android/ui/dialog/kh;
+
+    iput-object p2, p0, Lcom/estrongs/android/ui/dialog/kl;->a:Lcom/estrongs/a/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -16,82 +26,39 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public a(Ljava/lang/Object;JJ)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public a(Ljava/lang/Object;Ljava/lang/Throwable;)V
+.method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
 
-    check-cast p1, Lcom/estrongs/android/util/y;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/kl;->a:Lcom/estrongs/a/a;
 
-    iget-object v0, p1, Lcom/estrongs/android/util/y;->d:Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/estrongs/a/a;->canPause()Z
 
-    check-cast v0, Landroid/os/Handler;
+    move-result v0
 
-    const/4 v1, 0x6
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lcom/estrongs/android/util/y;->i()Z
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/kl;->a:Lcom/estrongs/a/a;
 
-    move-result v2
+    invoke-virtual {v0}, Lcom/estrongs/a/a;->resume()V
 
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/kl;->b:Lcom/estrongs/android/ui/dialog/kh;
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/kl;->b:Lcom/estrongs/android/ui/dialog/kh;
+
+    const v2, 0x7f080099
+
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/dialog/kh;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/kl;->b:Lcom/estrongs/android/ui/dialog/kh;
+
+    invoke-static {v2}, Lcom/estrongs/android/ui/dialog/kh;->b(Lcom/estrongs/android/ui/dialog/kh;)Landroid/content/DialogInterface$OnClickListener;
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    return-void
-.end method
-
-.method public b(Ljava/lang/Object;)V
-    .locals 3
-
-    check-cast p1, Lcom/estrongs/android/util/y;
-
-    invoke-virtual {p1}, Lcom/estrongs/android/util/y;->d()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v0, 0x0
-
-    if-eqz v1, :cond_0
-
-    invoke-static {v1}, Lcom/estrongs/android/ui/dialog/kf;->a(Ljava/lang/String;)Lcom/estrongs/android/ui/dialog/km;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    :goto_0
-    iget-object v0, p1, Lcom/estrongs/android/util/y;->d:Ljava/lang/Object;
-
-    check-cast v0, Landroid/os/Handler;
-
-    const/4 v2, 0x7
-
-    invoke-virtual {v0, v2, v1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    return-void
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/kh;->setMiddleButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/widget/Button;
 
     :cond_0
-    move-object v1, v0
-
-    goto :goto_0
+    return-void
 .end method

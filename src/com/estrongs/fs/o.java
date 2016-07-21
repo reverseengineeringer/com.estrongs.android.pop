@@ -1,60 +1,20 @@
 package com.estrongs.fs;
 
-import com.estrongs.android.util.am;
+import com.estrongs.android.scanner.f;
+import com.estrongs.android.util.ap;
 
 public class o
-  extends a
+  extends k
 {
-  public o(h paramh, String paramString)
+  public Boolean a(f paramf)
   {
-    if (paramh.getPath().equals(paramh.getAbsolutePath()))
-    {
-      if (paramh.getPath().endsWith("/")) {}
-      for (paramh = paramh.getPath() + paramString;; paramh = paramh.getPath() + "/" + paramString)
-      {
-        absolutePath = paramh;
-        path = paramh;
-        return;
-      }
-    }
-    String str;
-    if (paramh.getPath().endsWith("/"))
-    {
-      str = paramh.getPath() + paramString;
-      path = str;
-      if (!paramh.getAbsolutePath().endsWith("/")) {
-        break label222;
-      }
-    }
-    label222:
-    for (paramh = paramh.getAbsolutePath() + paramString;; paramh = paramh.getAbsolutePath() + "/" + paramString)
-    {
-      absolutePath = paramh;
-      return;
-      str = paramh.getPath() + "/" + paramString;
-      break;
-    }
+    paramf.b("Pictures");
+    return Boolean.valueOf(true);
   }
   
-  public o(String paramString)
+  public boolean a(h paramh)
   {
-    super(paramString);
-    name = am.d(paramString);
-    if (paramString.endsWith("/")) {
-      type = m.c(paramString);
-    }
-  }
-  
-  public o(String paramString, boolean paramBoolean)
-  {
-    super(paramString);
-    name = am.d(paramString);
-    if (paramBoolean)
-    {
-      type = m.b;
-      return;
-    }
-    type = m.a;
+    return ap.bV(paramh.getPath()).toLowerCase().contains("/pictures/");
   }
 }
 

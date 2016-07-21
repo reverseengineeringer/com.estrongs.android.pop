@@ -3,11 +3,11 @@ package com.estrongs.android.pop.view;
 class i
   implements Runnable
 {
-  i(FileExplorerActivity paramFileExplorerActivity) {}
+  i(h paramh) {}
   
   public void run()
   {
-    a.d("#home_page#");
+    a.c(a.a.a);
   }
 }
 

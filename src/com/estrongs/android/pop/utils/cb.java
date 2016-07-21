@@ -1,11 +1,21 @@
 package com.estrongs.android.pop.utils;
 
-import com.estrongs.fs.h;
-import java.util.List;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.fs.b.ao;
 
-public abstract interface cb
+class cb
+  implements DialogInterface.OnClickListener
 {
-  public abstract void a(List<h> paramList);
+  cb(bv parambv) {}
+  
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  {
+    paramDialogInterface.dismiss();
+    if ((a.a != null) && (a.a.getTaskStatus() != 4)) {
+      a.a.requestStop();
+    }
+  }
 }
 
 /* Location:

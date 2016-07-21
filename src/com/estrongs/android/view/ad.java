@@ -1,29 +1,43 @@
 package com.estrongs.android.view;
 
 import android.view.View;
-import android.view.View.OnClickListener;
+import com.estrongs.android.pop.utils.ao;
 import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.navigation.q;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.h;
+import java.util.List;
 
 class ad
-  implements View.OnClickListener
+  implements q
 {
-  ad(ac paramac) {}
+  ad(y paramy, List paramList1, List paramList2) {}
   
-  public void onClick(View paramView)
+  public void a(View paramView)
   {
-    try
+    paramView = (FileExplorerActivity)y.a(c);
+    String str = ap.cc(paramView.P());
+    int i = 0;
+    List localList;
+    boolean bool;
+    if (i < a.size())
     {
-      paramView = (FileExplorerActivity)a.ad;
-      if (!paramView.H())
-      {
-        paramView.d(2131428090);
-        return;
+      localList = (List)a.get(i);
+      bool = ((Boolean)b.get(i)).booleanValue();
+      if ((ap.ci(str)) || ((ap.ci(((h)localList.get(0)).getAbsolutePath())) && (!ap.aL(str)))) {
+        ak.a(y.a(c), 2131231914, 0);
       }
-      a.c();
-      paramView.s();
-      return;
     }
-    catch (IndexOutOfBoundsException paramView) {}
+    do
+    {
+      return;
+      ao.a(paramView, localList, paramView.Q(), bool);
+      i += 1;
+      break;
+      paramView = (FileExplorerActivity)y.a(c);
+    } while (!paramView.j());
+    paramView.i();
   }
 }
 

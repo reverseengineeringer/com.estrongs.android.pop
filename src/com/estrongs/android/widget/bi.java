@@ -1,29 +1,34 @@
 package com.estrongs.android.widget;
 
-import android.widget.ProgressBar;
+import android.os.Handler;
+import android.os.Message;
 import android.widget.TextView;
-import com.estrongs.fs.util.j;
+import java.text.NumberFormat;
 
-public class bi
-  implements bk
+class bi
+  extends Handler
 {
-  private int a;
-  private int b = 1;
+  bi(bh parambh) {}
   
-  public void a(ProgressBar paramProgressBar, TextView paramTextView, long paramLong)
+  public void handleMessage(Message paramMessage)
   {
-    paramTextView.setText(j.c(paramLong).trim());
-    if (paramLong > 2147483647L) {
-      b = 1000;
+    super.handleMessage(paramMessage);
+    bh.a(a);
+    if (1 == what) {
+      a.c.setText(a.j);
     }
-    a = ((int)(paramLong / b));
-    paramProgressBar.setMax(a);
-  }
-  
-  public void b(ProgressBar paramProgressBar, TextView paramTextView, long paramLong)
-  {
-    paramProgressBar.setProgress((int)(paramLong / b));
-    paramTextView.setText(j.c(paramLong).trim());
+    do
+    {
+      return;
+      if (3 == what)
+      {
+        bh.b(a).a(a.b, a.g, a.h);
+        return;
+      }
+    } while (2 != what);
+    bh.b(a).b(a.b, a.d, a.i);
+    double d = a.i / a.h;
+    a.e.setText(a.f.format(d));
   }
 }
 

@@ -33,9 +33,9 @@ class ae
           i += 1;
         }
         long l1 = e.processData.f;
-        long l2 = e.h.longValue();
+        long l2 = e.i.longValue();
         c[(b - 1)] = Long.valueOf(l1 - l2).longValue();
-        e.h = Long.valueOf(e.processData.f);
+        e.i = Long.valueOf(e.processData.f);
         i = 0;
         int j = 0;
         while (i < b)

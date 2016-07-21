@@ -32,29 +32,27 @@ public class ESGesturePanel
 {
   public boolean a = true;
   public boolean b = false;
-  public boolean c = false;
-  private boolean d = false;
-  private LinkedList<PointF> e = new LinkedList();
+  private boolean c = false;
+  private LinkedList<PointF> d = new LinkedList();
+  private Paint e = null;
   private Paint f = null;
-  private Paint g = null;
-  private Bitmap h = null;
-  private int i = 32;
-  private Bitmap j = null;
-  private int k = 32;
-  private ArrayList<GesturePoint> l = null;
-  private Gesture m = null;
-  private int n = 1493211874;
+  private Bitmap g = null;
+  private int h = 32;
+  private Bitmap i = null;
+  private int j = 32;
+  private ArrayList<GesturePoint> k = null;
+  private Gesture l = null;
+  private int m = 1493211874;
+  private int n = -1;
   private int o = -1;
-  private int p = -1;
+  private int p = 0;
   private int q = 0;
-  private int r = 0;
+  private int r;
   private int s;
   private int t;
-  private int u;
-  private Paint v = new Paint();
-  private Path w = new Path();
-  private c x;
-  private Bitmap y = null;
+  private Paint u = new Paint();
+  private Path v = new Path();
+  private c w;
   
   public ESGesturePanel(Context paramContext)
   {
@@ -73,65 +71,42 @@ public class ESGesturePanel
   
   public void a()
   {
-    d = true;
-    if (o == -1)
+    c = true;
+    if (n == -1)
     {
       DisplayMetrics localDisplayMetrics = getContext().getResources().getDisplayMetrics();
       int i1 = Math.min(widthPixels, heightPixels);
-      o = (i1 / 36);
-      p = (i1 / 24);
+      n = (i1 / 36);
+      o = (i1 / 24);
     }
     invalidate();
   }
   
   public void a(float paramFloat1, float paramFloat2)
   {
-    synchronized (e)
+    synchronized (d)
     {
-      e.add(new PointF(paramFloat1, paramFloat2));
+      d.add(new PointF(paramFloat1, paramFloat2));
       return;
     }
   }
   
   public void a(int paramInt1, int paramInt2)
   {
-    t = paramInt1;
-    u = paramInt2;
+    s = paramInt1;
+    t = paramInt2;
     invalidate();
-  }
-  
-  public void a(c paramc)
-  {
-    x = paramc;
   }
   
   public void b()
   {
-    d = false;
-    synchronized (e)
+    c = false;
+    synchronized (d)
     {
-      e.clear();
+      d.clear();
       invalidate();
       return;
     }
-  }
-  
-  public boolean b(float paramFloat1, float paramFloat2)
-  {
-    try
-    {
-      if (!b) {
-        return false;
-      }
-      DisplayMetrics localDisplayMetrics = getContext().getResources().getDisplayMetrics();
-      int i1 = widthPixels;
-      int i2 = heightPixels;
-      if ((paramFloat1 >= i1 - 100 - 18) && (paramFloat1 <= i1 - 100 + 36 + 18) && (paramFloat2 >= 32.0F) && (paramFloat2 <= 104.0F)) {
-        return true;
-      }
-    }
-    catch (Exception localException) {}
-    return false;
   }
   
   public void c()
@@ -141,7 +116,7 @@ public class ESGesturePanel
     Point localPoint;
     for (;;)
     {
-      localPoint = ad.a(getContext()).s(bool);
+      localPoint = ad.a(getContext()).r(bool);
       if (localPoint != null) {
         break;
       }
@@ -152,14 +127,19 @@ public class ESGesturePanel
     a(x, y);
   }
   
-  public int d()
+  public Gesture getGesture()
   {
-    return t;
+    return l;
   }
   
-  public int e()
+  public int getGestureStartX()
   {
-    return u;
+    return s;
+  }
+  
+  public int getGestureStartY()
+  {
+    return t;
   }
   
   public void onDraw(Canvas paramCanvas)
@@ -167,76 +147,69 @@ public class ESGesturePanel
     int i1 = 1;
     super.onDraw(paramCanvas);
     ??? = getContext().getResources().getDisplayMetrics();
-    if (b)
-    {
-      if (y == null) {
-        y = BitmapFactory.decodeResource(getResources(), 2130838075);
-      }
-      paramCanvas.drawBitmap(y, widthPixels - 100, 50.0F, v);
-    }
     if (a)
     {
-      s = (densityDpi / 160 * r);
-      if (!d) {
-        break label508;
+      r = (densityDpi / 160 * q);
+      if (!c) {
+        break label459;
       }
-      synchronized (e)
+      synchronized (d)
       {
-        arrayOfPointF = new PointF[e.size()];
-        e.toArray(arrayOfPointF);
+        arrayOfPointF = new PointF[d.size()];
+        d.toArray(arrayOfPointF);
         if ((arrayOfPointF == null) || (arrayOfPointF.length <= 1)) {
-          break label383;
+          break label334;
         }
-        if (f == null)
+        if (e == null)
         {
+          e = new Paint();
+          e.setStrokeWidth(n);
+          e.setColor(m);
+          e.setAntiAlias(true);
+          e.setDither(true);
+          e.setStrokeCap(Paint.Cap.ROUND);
+          e.setStrokeJoin(Paint.Join.ROUND);
+          e.setStyle(Paint.Style.STROKE);
           f = new Paint();
-          f.setStrokeWidth(o);
-          f.setColor(n);
           f.setAntiAlias(true);
           f.setDither(true);
-          f.setStrokeCap(Paint.Cap.ROUND);
-          f.setStrokeJoin(Paint.Join.ROUND);
-          f.setStyle(Paint.Style.STROKE);
-          g = new Paint();
-          g.setAntiAlias(true);
-          g.setDither(true);
-          g.setStyle(Paint.Style.FILL);
-          g.setColor(n);
+          f.setStyle(Paint.Style.FILL);
+          f.setColor(m);
         }
         ??? = arrayOfPointF[0];
-        if (c) {
-          paramCanvas.drawCircle(x, y, p, g);
+        if (b) {
+          paramCanvas.drawCircle(x, y, o, f);
         }
-        w.reset();
-        w.moveTo(x, y);
+        v.reset();
+        v.moveTo(x, y);
         if (i1 < arrayOfPointF.length)
         {
-          w.lineTo(x, y);
+          v.lineTo(x, y);
           i1 += 1;
         }
       }
-      paramCanvas.drawPath(w, f);
-      label383:
-      if (c) {}
+      paramCanvas.drawPath(v, e);
+      label334:
+      if (b) {}
     }
-    label508:
-    while ((c) || (!b.d()) || (!b.b)) {
+    label459:
+    while ((b) || (!b.d()) || (!b.b)) {
       try
       {
         PointF[] arrayOfPointF;
-        if (j == null)
+        if (i == null)
         {
-          j = BitmapFactory.decodeResource(getResources(), 2130837676);
-          k = (j.getWidth() / 2);
+          i = BitmapFactory.decodeResource(getResources(), 2130837936);
+          j = (i.getWidth() / 2);
           c();
         }
+        if (s == -1) {
+          s = (getWidth() / 2);
+        }
         if (t == -1) {
-          t = (getWidth() / 2);
+          t = (getHeight() / 2 + r);
         }
-        if (u == -1) {
-          u = (getHeight() / 2 + s);
-        }
-        paramCanvas.drawBitmap(j, t - k, u - k, v);
+        paramCanvas.drawBitmap(i, s - j, t - j, u);
         return;
       }
       catch (Exception paramCanvas)
@@ -247,20 +220,20 @@ public class ESGesturePanel
     }
     try
     {
-      if (h == null)
+      if (g == null)
       {
-        h = BitmapFactory.decodeResource(getResources(), 2130837675);
-        i = (h.getWidth() / 2);
-        ESGestureCtrl.b = i;
+        g = BitmapFactory.decodeResource(getResources(), 2130837935);
+        h = (g.getWidth() / 2);
+        ESGestureCtrl.h = h;
         c();
       }
+      if (s == -1) {
+        s = (getWidth() / 2);
+      }
       if (t == -1) {
-        t = (getWidth() / 2);
+        t = (getHeight() / 2 + r);
       }
-      if (u == -1) {
-        u = (getHeight() / 2 + s);
-      }
-      paramCanvas.drawBitmap(h, t - i, u - i, v);
+      paramCanvas.drawBitmap(g, s - h, t - h, u);
       return;
     }
     catch (Exception paramCanvas)
@@ -273,7 +246,7 @@ public class ESGesturePanel
   {
     int i2;
     int i1;
-    if (c)
+    if (b)
     {
       i2 = 0;
       i1 = i2;
@@ -291,32 +264,32 @@ public class ESGesturePanel
       for (;;)
       {
         return true;
-        if (l != null) {
-          l.clear();
+        if (k != null) {
+          k.clear();
         }
         for (;;)
         {
           b();
-          m = null;
+          l = null;
           a(paramMotionEvent.getX(), paramMotionEvent.getY());
-          l.add(new GesturePoint(paramMotionEvent.getX(), paramMotionEvent.getY(), System.currentTimeMillis()));
+          k.add(new GesturePoint(paramMotionEvent.getX(), paramMotionEvent.getY(), System.currentTimeMillis()));
           break;
-          l = new ArrayList();
+          k = new ArrayList();
         }
         a(paramMotionEvent.getX(), paramMotionEvent.getY());
         a();
-        l.add(new GesturePoint(paramMotionEvent.getX(), paramMotionEvent.getY(), System.currentTimeMillis()));
+        k.add(new GesturePoint(paramMotionEvent.getX(), paramMotionEvent.getY(), System.currentTimeMillis()));
         continue;
-        l.add(new GesturePoint(paramMotionEvent.getX(), paramMotionEvent.getY(), System.currentTimeMillis()));
-        m = new Gesture();
-        m.addStroke(new GestureStroke(l));
-        if (x != null)
+        k.add(new GesturePoint(paramMotionEvent.getX(), paramMotionEvent.getY(), System.currentTimeMillis()));
+        l = new Gesture();
+        l.addStroke(new GestureStroke(k));
+        if (w != null)
         {
-          x.a(m);
+          w.a(l);
           continue;
           b();
-          l.clear();
-          m = null;
+          k.clear();
+          l = null;
         }
       }
       return super.onTouchEvent(paramMotionEvent);
@@ -328,6 +301,45 @@ public class ESGesturePanel
         i1 = i2;
       }
     }
+  }
+  
+  public void setForegroundColor(int paramInt)
+  {
+    m = paramInt;
+  }
+  
+  public void setGesture(Gesture arg1)
+  {
+    int i1 = 0;
+    if (??? == null) {
+      return;
+    }
+    try
+    {
+      l = ???;
+      GestureStroke localGestureStroke = (GestureStroke)l.getStrokes().get(0);
+      synchronized (d)
+      {
+        d.clear();
+        if (i1 < points.length)
+        {
+          a(points[i1], points[(i1 + 1)]);
+          i1 += 2;
+        }
+      }
+      c = true;
+    }
+    catch (Exception ???)
+    {
+      l = null;
+      k = null;
+      return;
+    }
+  }
+  
+  public void setOnGestureCompleteListener(c paramc)
+  {
+    w = paramc;
   }
 }
 

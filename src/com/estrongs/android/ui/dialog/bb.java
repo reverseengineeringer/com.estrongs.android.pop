@@ -1,15 +1,35 @@
 package com.estrongs.android.ui.dialog;
 
-import android.app.Activity;
+import android.content.Context;
 
-class bb
-  implements Runnable
+public class bb
 {
-  bb(ba paramba, String paramString) {}
+  private ci a;
+  private Context b;
   
-  public void run()
+  public bb(Context paramContext)
   {
-    new ey((Activity)az.a(b.a), a, true).a();
+    b = paramContext;
+    c();
+  }
+  
+  private void c()
+  {
+    cv localcv = new cv(b);
+    bc localbc = new bc(this);
+    a = localcv.a(new String[] { "ftp", "sftp", "ftps", "webdav" }, -1, localbc).a(2131230867).d(false).b();
+  }
+  
+  public boolean a()
+  {
+    return (a != null) && (a.isShowing());
+  }
+  
+  public void b()
+  {
+    if (a != null) {
+      a.show();
+    }
   }
 }
 

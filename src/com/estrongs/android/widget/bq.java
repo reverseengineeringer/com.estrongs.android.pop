@@ -3,8 +3,6 @@ package com.estrongs.android.widget;
 public abstract interface bq
 {
   public abstract void a();
-  
-  public abstract void b();
 }
 
 /* Location:

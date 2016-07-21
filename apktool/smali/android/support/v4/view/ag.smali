@@ -1,45 +1,34 @@
 .class Landroid/support/v4/view/ag;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
-
-
-# instance fields
-.field final synthetic a:Landroid/support/v4/view/PagerTabStrip;
-
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/view/PagerTabStrip;)V
-    .locals 0
+.method public static a(I)I
+    .locals 1
 
-    iput-object p1, p0, Landroid/support/v4/view/ag;->a:Landroid/support/v4/view/PagerTabStrip;
+    invoke-static {p0}, Landroid/view/KeyEvent;->normalizeMetaState(I)I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result v0
 
-    return-void
+    return v0
 .end method
 
+.method public static a(II)Z
+    .locals 1
 
-# virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 2
+    invoke-static {p0, p1}, Landroid/view/KeyEvent;->metaStateHasModifiers(II)Z
 
-    iget-object v0, p0, Landroid/support/v4/view/ag;->a:Landroid/support/v4/view/PagerTabStrip;
+    move-result v0
 
-    iget-object v0, v0, Landroid/support/v4/view/PagerTabStrip;->a:Landroid/support/v4/view/ViewPager;
+    return v0
+.end method
 
-    iget-object v1, p0, Landroid/support/v4/view/ag;->a:Landroid/support/v4/view/PagerTabStrip;
+.method public static b(I)Z
+    .locals 1
 
-    iget-object v1, v1, Landroid/support/v4/view/PagerTabStrip;->a:Landroid/support/v4/view/ViewPager;
+    invoke-static {p0}, Landroid/view/KeyEvent;->metaStateHasNoModifiers(I)Z
 
-    invoke-virtual {v1}, Landroid/support/v4/view/ViewPager;->c()I
+    move-result v0
 
-    move-result v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->a(I)V
-
-    return-void
+    return v0
 .end method

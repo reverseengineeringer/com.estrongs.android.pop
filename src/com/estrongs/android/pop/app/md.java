@@ -1,13 +1,16 @@
 package com.estrongs.android.pop.app;
 
+import com.estrongs.android.nativetool.c;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+
 class md
   implements Runnable
 {
-  md(StreamingMediaPlayer paramStreamingMediaPlayer) {}
+  md(StartServiceReceiver paramStartServiceReceiver) {}
   
   public void run()
   {
-    a.a(2);
+    c.a(FileExplorerActivity.aj());
   }
 }
 

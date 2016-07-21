@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:[Ljava/lang/CharSequence;
-
-.field final synthetic b:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+.field final synthetic a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;[Ljava/lang/CharSequence;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/imageviewer/bt;->b:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
-
-    iput-object p2, p0, Lcom/estrongs/android/pop/app/imageviewer/bt;->a:[Ljava/lang/CharSequence;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/imageviewer/bt;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,57 +22,52 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 4
+.method public run()V
+    .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bt;->a:[Ljava/lang/CharSequence;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bt;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
-    aget-object v0, v0, p2
+    iget v0, v0, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->c:I
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/Object;)I
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/bt;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
-    move-result v0
+    iget-object v1, v1, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->e:Lcom/estrongs/android/pop/app/imageviewer/gallery/f;
 
-    int-to-long v0, v0
+    invoke-interface {v1}, Lcom/estrongs/android/pop/app/imageviewer/gallery/f;->b()I
 
-    const-wide/16 v2, 0x0
+    move-result v1
 
-    cmp-long v2, v0, v2
+    add-int/lit8 v1, v1, -0x1
 
-    if-lez v2, :cond_0
+    if-ge v0, v1, :cond_0
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/imageviewer/bt;->b:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bt;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
-    iget-wide v2, v2, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->q:J
-
-    cmp-long v2, v2, v0
-
-    if-eqz v2, :cond_0
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/imageviewer/bt;->b:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
-
-    iput-wide v0, v2, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->q:J
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bt;->b:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->t(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)Landroid/content/SharedPreferences;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->i(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)Lcom/estrongs/android/pop/app/imageviewer/ESGallery;
 
     move-result-object v0
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/bt;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
-    move-result-object v0
+    iget v1, v1, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->c:I
 
-    const-string v1, "slide_setting_interval"
+    add-int/lit8 v1, v1, 0x1
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/imageviewer/bt;->b:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/imageviewer/ESGallery;->setSelection(I)V
 
-    iget-wide v2, v2, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->q:J
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bt;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
-    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+    const/4 v1, 0x1
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->a(Z)V
+
+    :goto_0
+    return-void
 
     :cond_0
-    return-void
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bt;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->e()V
+
+    goto :goto_0
 .end method

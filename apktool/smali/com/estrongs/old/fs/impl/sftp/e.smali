@@ -14,7 +14,7 @@
 
     iput-object p1, p0, Lcom/estrongs/old/fs/impl/sftp/e;->a:Lcom/jcraft/jsch/SftpATTRS;
 
-    invoke-static {p2}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -102,7 +102,7 @@
     goto :goto_0
 .end method
 
-.method protected doGetFileType()Lcom/estrongs/fs/m;
+.method protected doGetFileType()Lcom/estrongs/fs/w;
     .locals 1
 
     iget-object v0, p0, Lcom/estrongs/old/fs/impl/sftp/e;->a:Lcom/jcraft/jsch/SftpATTRS;
@@ -113,13 +113,13 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/estrongs/fs/m;->a:Lcom/estrongs/fs/m;
+    sget-object v0, Lcom/estrongs/fs/w;->a:Lcom/estrongs/fs/w;
 
     :goto_0
     return-object v0
 
     :cond_0
-    sget-object v0, Lcom/estrongs/fs/m;->b:Lcom/estrongs/fs/m;
+    sget-object v0, Lcom/estrongs/fs/w;->b:Lcom/estrongs/fs/w;
 
     goto :goto_0
 .end method

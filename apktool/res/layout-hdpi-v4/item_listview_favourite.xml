@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/popupbox_listview_selector" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/image_listview_favourite" android:visibility="invisible" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="20.0dip" android:src="@drawable/history_listitem_file" android:scaleType="fitCenter" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/dp_15" android:layout_width="@dimen/dp_0" android:layout_height="@dimen/dp_50" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/dp_15" android:textColor="@color/c_99000000" android:gravity="center_vertical" android:id="@id/text_listview_favourite" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/dp_14" android:textColor="@color/c_99000000" android:gravity="center_vertical" android:id="@id/path_listview_favourite" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

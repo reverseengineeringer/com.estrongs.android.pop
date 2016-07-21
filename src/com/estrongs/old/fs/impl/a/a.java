@@ -1,6 +1,6 @@
 package com.estrongs.old.fs.impl.a;
 
-import com.estrongs.fs.m;
+import com.estrongs.fs.w;
 import java.util.Calendar;
 import org.apache.commons.net.ftp.FTPFile;
 
@@ -36,12 +36,12 @@ public class a
     return a.hasPermission(0, 1);
   }
   
-  protected m doGetFileType()
+  protected w doGetFileType()
   {
     if (a.isDirectory()) {
-      return m.a;
+      return w.a;
     }
-    return m.b;
+    return w.b;
   }
   
   public boolean exists()

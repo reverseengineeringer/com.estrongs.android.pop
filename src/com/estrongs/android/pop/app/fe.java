@@ -2,15 +2,16 @@ package com.estrongs.android.pop.app;
 
 import android.view.View;
 import android.view.View.OnClickListener;
+import com.estrongs.android.ui.view.ac;
 
 class fe
   implements View.OnClickListener
 {
-  fe(PopAudioPlayer paramPopAudioPlayer) {}
+  fe(fa paramfa) {}
   
   public void onClick(View paramView)
   {
-    PopAudioPlayer.a(a, a.w());
+    PopAudioPlayer.h(a.a).e();
   }
 }
 

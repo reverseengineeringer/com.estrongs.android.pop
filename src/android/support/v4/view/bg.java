@@ -1,24 +1,26 @@
 package android.support.v4.view;
 
-import android.os.Build.VERSION;
-import android.view.ViewConfiguration;
+import android.view.MenuItem;
+import android.view.MenuItem.OnActionExpandListener;
 
-public class bg
+class bg
+  implements MenuItem.OnActionExpandListener
 {
-  static final bj a = new bh();
+  private bh a;
   
-  static
+  public bg(bh parambh)
   {
-    if (Build.VERSION.SDK_INT >= 11)
-    {
-      a = new bi();
-      return;
-    }
+    a = parambh;
   }
   
-  public static int a(ViewConfiguration paramViewConfiguration)
+  public boolean onMenuItemActionCollapse(MenuItem paramMenuItem)
   {
-    return a.a(paramViewConfiguration);
+    return a.b(paramMenuItem);
+  }
+  
+  public boolean onMenuItemActionExpand(MenuItem paramMenuItem)
+  {
+    return a.a(paramMenuItem);
   }
 }
 

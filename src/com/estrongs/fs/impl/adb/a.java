@@ -1,7 +1,7 @@
 package com.estrongs.fs.impl.adb;
 
 import com.estrongs.fs.FileSystemException;
-import com.estrongs.fs.m;
+import com.estrongs.fs.w;
 
 public class a
   extends com.estrongs.fs.a
@@ -50,9 +50,9 @@ public class a
     return 0L;
   }
   
-  protected m doGetFileType()
+  protected w doGetFileType()
   {
-    return m.b;
+    return w.b;
   }
   
   public boolean exists()
@@ -68,9 +68,9 @@ public class a
     }
   }
   
-  public m getFileType()
+  public w getFileType()
   {
-    return m.b;
+    return w.b;
   }
   
   public boolean hasPermission(int paramInt)

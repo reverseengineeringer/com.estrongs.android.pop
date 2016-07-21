@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/widget/RadioGroup$OnCheckedChangeListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
@@ -22,50 +22,56 @@
 
 
 # virtual methods
-.method public onCheckedChanged(Landroid/widget/RadioGroup;I)V
-    .locals 2
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 3
 
-    invoke-virtual {p1}, Landroid/widget/RadioGroup;->getTag()Ljava/lang/Object;
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+
+    :try_start_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/in;->a:Lcom/estrongs/android/ui/dialog/im;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/im;->a(Lcom/estrongs/android/ui/dialog/im;)Landroid/content/Context;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Integer;
+    invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    const v1, 0x7f0a038a
-
-    if-ne p2, v1, :cond_0
+    move-result-object v0
 
     iget-object v1, p0, Lcom/estrongs/android/ui/dialog/in;->a:Lcom/estrongs/android/ui/dialog/im;
 
-    invoke-static {v1}, Lcom/estrongs/android/ui/dialog/im;->a(Lcom/estrongs/android/ui/dialog/im;)[Lcom/estrongs/android/ui/dialog/io;
+    invoke-static {v1}, Lcom/estrongs/android/ui/dialog/im;->a(Lcom/estrongs/android/ui/dialog/im;)Landroid/content/Context;
 
     move-result-object v1
 
-    aget-object v0, v1, v0
+    const-string v2, "pname"
 
-    const-string v1, "ro"
+    invoke-static {v1, v0, v2}, Lcom/estrongs/android/pop/utils/w;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-object v1, v0, Lcom/estrongs/android/ui/dialog/io;->c:Ljava/lang/String;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/in;->a:Lcom/estrongs/android/ui/dialog/im;
 
+    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/im;->a(Lcom/estrongs/android/ui/dialog/im;)Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/estrongs/android/j/c;->a(Landroid/content/Context;)Lcom/estrongs/android/j/c;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const-string v1, "Go_Rating"
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/j/c;->a(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_0
     :goto_0
     return-void
 
-    :cond_0
-    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/in;->a:Lcom/estrongs/android/ui/dialog/im;
-
-    invoke-static {v1}, Lcom/estrongs/android/ui/dialog/im;->a(Lcom/estrongs/android/ui/dialog/im;)[Lcom/estrongs/android/ui/dialog/io;
-
-    move-result-object v1
-
-    aget-object v0, v1, v0
-
-    const-string v1, "rw"
-
-    iput-object v1, v0, Lcom/estrongs/android/ui/dialog/io;->c:Ljava/lang/String;
+    :catch_0
+    move-exception v0
 
     goto :goto_0
 .end method

@@ -15,18 +15,18 @@ class g
   
   protected int a()
   {
-    return 2131362745;
+    return 2131625533;
   }
   
   protected String a(m arg1)
   {
-    synchronized (f.a(i))
+    synchronized (f.a(h))
     {
-      Object localObject1 = f.b(i);
+      Object localObject1 = f.b(h);
       if (localObject1 != null) {
         try
         {
-          localObject1 = f.b(i).summary().optString("title");
+          localObject1 = f.b(h).summary().optString("title");
           return (String)localObject1;
         }
         catch (Exception localException)

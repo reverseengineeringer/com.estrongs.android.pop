@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/estrongs/android/ui/dialog/lc;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/fs/h;
-
-.field final synthetic b:Lcom/estrongs/android/widget/r;
+.field final synthetic a:Lcom/estrongs/android/widget/r;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/widget/r;Lcom/estrongs/fs/h;)V
+.method constructor <init>(Lcom/estrongs/android/widget/r;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/widget/s;->b:Lcom/estrongs/android/widget/r;
-
-    iput-object p2, p0, Lcom/estrongs/android/widget/s;->a:Lcom/estrongs/fs/h;
+    iput-object p1, p0, Lcom/estrongs/android/widget/s;->a:Lcom/estrongs/android/widget/r;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,36 +22,21 @@
 
 
 # virtual methods
-.method public run()V
+.method public a(Z)V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/s;->b:Lcom/estrongs/android/widget/r;
+    if-eqz p1, :cond_0
 
-    iget-object v0, v0, Lcom/estrongs/android/widget/r;->b:Lcom/estrongs/android/widget/g;
+    iget-object v0, p0, Lcom/estrongs/android/widget/s;->a:Lcom/estrongs/android/widget/r;
 
-    invoke-static {v0}, Lcom/estrongs/android/widget/g;->d(Lcom/estrongs/android/widget/g;)Landroid/app/Activity;
+    iget-object v0, v0, Lcom/estrongs/android/widget/r;->b:Lcom/estrongs/android/widget/q;
 
-    move-result-object v0
+    iget-object v1, p0, Lcom/estrongs/android/widget/s;->a:Lcom/estrongs/android/widget/r;
 
-    sget-object v1, Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog$DialogType;->NETWORK:Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog$DialogType;
+    iget-object v1, v1, Lcom/estrongs/android/widget/r;->a:Lcom/estrongs/fs/h;
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog;->a(Landroid/content/Context;Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog$DialogType;)Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog;
+    invoke-static {v0, v1}, Lcom/estrongs/android/widget/q;->a(Lcom/estrongs/android/widget/q;Lcom/estrongs/fs/h;)V
 
-    move-result-object v0
-
-    new-instance v1, Lcom/estrongs/android/widget/t;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/widget/t;-><init>(Lcom/estrongs/android/widget/s;)V
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog;->a(Lcom/estrongs/android/ui/dialog/kr;)V
-
-    new-instance v1, Lcom/estrongs/android/widget/u;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/widget/u;-><init>(Lcom/estrongs/android/widget/s;)V
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog;->a(Landroid/content/DialogInterface$OnDismissListener;)V
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog;->b()V
-
+    :cond_0
     return-void
 .end method

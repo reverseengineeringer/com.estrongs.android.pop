@@ -1,28 +1,28 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.pop.ad;
+import android.content.Intent;
+import android.net.Uri;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.pcs.n;
-import com.estrongs.android.util.bd;
-import com.estrongs.android.view.aw;
-import com.estrongs.fs.impl.pcs.b;
-import com.estrongs.fs.m;
 
 class am
-  implements n
+  implements MenuItem.OnMenuItemClickListener
 {
-  am(al paramal) {}
+  am(m paramm) {}
   
-  public void a(boolean paramBoolean, String paramString1, String paramString2)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if ((paramBoolean) && (bd.b(paramString2)))
+    paramMenuItem = new Intent("android.intent.action.VIEW");
+    paramMenuItem.setData(Uri.parse("http://wappass.baidu.com/passport/?getpass"));
+    try
     {
-      paramString1 = a.a.k.y();
-      if (paramString1 != null) {
-        paramString1.b(true);
-      }
-      b.a().setFileType(m.Q);
-      ad.a(a.a.b).e(System.currentTimeMillis());
+      m.a(a).startActivity(paramMenuItem);
+      return false;
+    }
+    catch (Exception paramMenuItem)
+    {
+      for (;;) {}
     }
   }
 }

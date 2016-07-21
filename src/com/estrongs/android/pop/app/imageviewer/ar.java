@@ -13,12 +13,12 @@ public class ar
   public boolean onScale(ScaleGestureDetector paramScaleGestureDetector)
   {
     ImageViewTouch localImageViewTouch = b.g;
-    if (localImageViewTouch.a() < 1.0F) {
+    if (localImageViewTouch.getMaxZoom() < 1.0F) {
       return true;
     }
     a *= paramScaleGestureDetector.getScaleFactor();
-    if (a - localImageViewTouch.b() < 0.0F) {
-      a = localImageViewTouch.b();
+    if (a - localImageViewTouch.getDefaultScale() < 0.0F) {
+      a = localImageViewTouch.getDefaultScale();
     }
     if (a - 3.0F > 0.0F) {
       a = 3.0F;
@@ -29,7 +29,7 @@ public class ar
   
   public boolean onScaleBegin(ScaleGestureDetector paramScaleGestureDetector)
   {
-    a = b.g.f();
+    a = b.g.getScale();
     return true;
   }
 }

@@ -1,19 +1,51 @@
 package android.support.v4.app;
 
-import android.os.Parcel;
-import android.os.Parcelable.Creator;
+import android.content.Context;
+import android.graphics.Matrix;
+import android.graphics.RectF;
+import android.os.Parcelable;
+import android.view.View;
+import java.util.List;
+import java.util.Map;
 
-final class d
-  implements Parcelable.Creator<BackStackState>
+class d
+  extends f
 {
-  public BackStackState a(Parcel paramParcel)
+  private ch a;
+  
+  public d(ch paramch)
   {
-    return new BackStackState(paramParcel);
+    a = paramch;
   }
   
-  public BackStackState[] a(int paramInt)
+  public Parcelable a(View paramView, Matrix paramMatrix, RectF paramRectF)
   {
-    return new BackStackState[paramInt];
+    return a.a(paramView, paramMatrix, paramRectF);
+  }
+  
+  public View a(Context paramContext, Parcelable paramParcelable)
+  {
+    return a.a(paramContext, paramParcelable);
+  }
+  
+  public void a(List<View> paramList)
+  {
+    a.a(paramList);
+  }
+  
+  public void a(List<String> paramList, List<View> paramList1, List<View> paramList2)
+  {
+    a.a(paramList, paramList1, paramList2);
+  }
+  
+  public void a(List<String> paramList, Map<String, View> paramMap)
+  {
+    a.a(paramList, paramMap);
+  }
+  
+  public void b(List<String> paramList, List<View> paramList1, List<View> paramList2)
+  {
+    a.b(paramList, paramList1, paramList2);
   }
 }
 

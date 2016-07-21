@@ -60,7 +60,7 @@
 
     iget-object v2, p0, Lcom/estrongs/android/widget/be;->a:Lcom/estrongs/android/widget/ScaledImageView;
 
-    invoke-static {v2}, Lcom/estrongs/android/widget/ScaledImageView;->d(Lcom/estrongs/android/widget/ScaledImageView;)I
+    invoke-static {v2}, Lcom/estrongs/android/widget/ScaledImageView;->c(Lcom/estrongs/android/widget/ScaledImageView;)I
 
     move-result v2
 
@@ -84,7 +84,7 @@
 
     mul-float/2addr v3, v0
 
-    sub-float/2addr v2, v3
+    add-float/2addr v2, v3
 
     float-to-int v2, v2
 
@@ -94,7 +94,7 @@
 
     iget-object v2, p0, Lcom/estrongs/android/widget/be;->a:Lcom/estrongs/android/widget/ScaledImageView;
 
-    invoke-static {v2}, Lcom/estrongs/android/widget/ScaledImageView;->f(Lcom/estrongs/android/widget/ScaledImageView;)I
+    invoke-static {v2}, Lcom/estrongs/android/widget/ScaledImageView;->e(Lcom/estrongs/android/widget/ScaledImageView;)I
 
     move-result v2
 
@@ -118,7 +118,7 @@
 
     mul-float/2addr v0, v3
 
-    sub-float v0, v2, v0
+    add-float/2addr v0, v2
 
     float-to-int v0, v0
 
@@ -134,7 +134,7 @@
     :cond_0
     iget-object v0, p0, Lcom/estrongs/android/widget/be;->a:Lcom/estrongs/android/widget/ScaledImageView;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/ScaledImageView;->b()V
+    invoke-virtual {v0}, Lcom/estrongs/android/widget/ScaledImageView;->a()V
 
     goto :goto_0
 .end method

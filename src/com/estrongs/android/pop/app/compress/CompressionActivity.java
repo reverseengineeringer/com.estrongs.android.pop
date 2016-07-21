@@ -1,58 +1,60 @@
 package com.estrongs.android.pop.app.compress;
 
-import com.estrongs.android.pop.esclasses.ESActivity;
+import com.estrongs.android.j.c;
+import com.estrongs.android.pop.esclasses.ESResourceActivity;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
 public class CompressionActivity
-  extends ESActivity
+  extends ESResourceActivity
 {
   private Map<String, File> a = new HashMap(10);
+  private c b = null;
   
   /* Error */
   private String a(android.net.Uri paramUri)
   {
     // Byte code:
     //   0: aload_0
-    //   1: invokevirtual 26	com/estrongs/android/pop/app/compress/CompressionActivity:getContentResolver	()Landroid/content/ContentResolver;
+    //   1: invokevirtual 30	com/estrongs/android/pop/app/compress/CompressionActivity:getContentResolver	()Landroid/content/ContentResolver;
     //   4: aload_1
     //   5: aconst_null
     //   6: aconst_null
     //   7: aconst_null
     //   8: aconst_null
-    //   9: invokevirtual 32	android/content/ContentResolver:query	(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    //   9: invokevirtual 36	android/content/ContentResolver:query	(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     //   12: astore_1
     //   13: aload_1
     //   14: astore_3
     //   15: aload_1
-    //   16: invokeinterface 38 1 0
+    //   16: invokeinterface 42 1 0
     //   21: pop
     //   22: aload_1
     //   23: astore_3
     //   24: aload_1
-    //   25: ldc 40
-    //   27: invokeinterface 44 2 0
+    //   25: ldc 44
+    //   27: invokeinterface 48 2 0
     //   32: istore_2
     //   33: iload_2
     //   34: iflt +87 -> 121
     //   37: aload_1
     //   38: astore_3
     //   39: aload_1
-    //   40: invokeinterface 48 1 0
+    //   40: invokeinterface 52 1 0
     //   45: pop
     //   46: aload_1
     //   47: astore_3
     //   48: aload_1
     //   49: iload_2
-    //   50: invokeinterface 52 2 0
+    //   50: invokeinterface 56 2 0
     //   55: astore 4
     //   57: aload 4
     //   59: astore_3
     //   60: aload_1
     //   61: ifnull +9 -> 70
     //   64: aload_1
-    //   65: invokeinterface 55 1 0
+    //   65: invokeinterface 59 1 0
     //   70: aload_3
     //   71: areturn
     //   72: astore 4
@@ -61,11 +63,11 @@ public class CompressionActivity
     //   76: aload_1
     //   77: astore_3
     //   78: aload 4
-    //   80: invokevirtual 58	java/lang/Exception:printStackTrace	()V
+    //   80: invokevirtual 62	java/lang/Exception:printStackTrace	()V
     //   83: aload_1
     //   84: ifnull +35 -> 119
     //   87: aload_1
-    //   88: invokeinterface 55 1 0
+    //   88: invokeinterface 59 1 0
     //   93: aconst_null
     //   94: areturn
     //   95: astore_1
@@ -74,7 +76,7 @@ public class CompressionActivity
     //   98: aload_3
     //   99: ifnull +9 -> 108
     //   102: aload_3
-    //   103: invokeinterface 55 1 0
+    //   103: invokeinterface 59 1 0
     //   108: aload_1
     //   109: athrow
     //   110: astore_1
@@ -116,216 +118,240 @@ public class CompressionActivity
     // Byte code:
     //   0: aload_0
     //   1: aload_1
-    //   2: invokespecial 70	com/estrongs/android/pop/esclasses/ESActivity:onCreate	(Landroid/os/Bundle;)V
+    //   2: invokespecial 74	com/estrongs/android/pop/esclasses/ESResourceActivity:onCreate	(Landroid/os/Bundle;)V
     //   5: aload_0
-    //   6: invokevirtual 74	com/estrongs/android/pop/app/compress/CompressionActivity:getIntent	()Landroid/content/Intent;
-    //   9: ldc 76
-    //   11: invokevirtual 82	android/content/Intent:getStringExtra	(Ljava/lang/String;)Ljava/lang/String;
-    //   14: astore_2
-    //   15: aload_2
-    //   16: astore_1
-    //   17: aload_2
-    //   18: ifnonnull +187 -> 205
-    //   21: aload_0
-    //   22: invokevirtual 74	com/estrongs/android/pop/app/compress/CompressionActivity:getIntent	()Landroid/content/Intent;
-    //   25: invokevirtual 86	android/content/Intent:getData	()Landroid/net/Uri;
-    //   28: astore_3
-    //   29: aload_3
-    //   30: ifnonnull +15 -> 45
-    //   33: aload_0
-    //   34: ldc 87
-    //   36: iconst_0
-    //   37: invokestatic 92	com/estrongs/android/ui/view/ag:a	(Landroid/content/Context;II)V
-    //   40: aload_0
-    //   41: invokevirtual 95	com/estrongs/android/pop/app/compress/CompressionActivity:finish	()V
-    //   44: return
-    //   45: aload_3
-    //   46: invokevirtual 101	android/net/Uri:toString	()Ljava/lang/String;
-    //   49: invokestatic 104	android/net/Uri:decode	(Ljava/lang/String;)Ljava/lang/String;
-    //   52: astore_2
-    //   53: aload_2
-    //   54: ldc 106
-    //   56: invokevirtual 112	java/lang/String:startsWith	(Ljava/lang/String;)Z
-    //   59: ifeq +226 -> 285
+    //   6: aload_0
+    //   7: invokestatic 79	com/estrongs/android/j/c:a	(Landroid/content/Context;)Lcom/estrongs/android/j/c;
+    //   10: putfield 22	com/estrongs/android/pop/app/compress/CompressionActivity:b	Lcom/estrongs/android/j/c;
+    //   13: aload_0
+    //   14: invokevirtual 83	com/estrongs/android/pop/app/compress/CompressionActivity:getIntent	()Landroid/content/Intent;
+    //   17: ldc 85
+    //   19: iconst_0
+    //   20: invokevirtual 91	android/content/Intent:getBooleanExtra	(Ljava/lang/String;Z)Z
+    //   23: ifne +23 -> 46
+    //   26: aload_0
+    //   27: getfield 22	com/estrongs/android/pop/app/compress/CompressionActivity:b	Lcom/estrongs/android/j/c;
+    //   30: ldc 93
+    //   32: invokevirtual 97	com/estrongs/android/j/c:d	(Ljava/lang/String;)V
+    //   35: aload_0
+    //   36: getfield 22	com/estrongs/android/pop/app/compress/CompressionActivity:b	Lcom/estrongs/android/j/c;
+    //   39: ldc 93
+    //   41: ldc 99
+    //   43: invokevirtual 102	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   46: aload_0
+    //   47: invokevirtual 83	com/estrongs/android/pop/app/compress/CompressionActivity:getIntent	()Landroid/content/Intent;
+    //   50: ldc 104
+    //   52: invokevirtual 108	android/content/Intent:getStringExtra	(Ljava/lang/String;)Ljava/lang/String;
+    //   55: astore_2
+    //   56: aload_2
+    //   57: astore_1
+    //   58: aload_2
+    //   59: ifnonnull +195 -> 254
     //   62: aload_0
-    //   63: getfield 18	com/estrongs/android/pop/app/compress/CompressionActivity:a	Ljava/util/Map;
-    //   66: aload_3
-    //   67: invokevirtual 101	android/net/Uri:toString	()Ljava/lang/String;
-    //   70: invokeinterface 118 2 0
-    //   75: checkcast 120	java/io/File
-    //   78: astore_2
-    //   79: aload_2
-    //   80: astore_1
-    //   81: aload_2
-    //   82: ifnonnull +118 -> 200
-    //   85: aconst_null
+    //   63: invokevirtual 83	com/estrongs/android/pop/app/compress/CompressionActivity:getIntent	()Landroid/content/Intent;
+    //   66: invokevirtual 112	android/content/Intent:getData	()Landroid/net/Uri;
+    //   69: astore_3
+    //   70: aload_3
+    //   71: ifnonnull +23 -> 94
+    //   74: aload_0
+    //   75: ldc 113
+    //   77: iconst_0
+    //   78: invokestatic 118	com/estrongs/android/ui/view/ak:a	(Landroid/content/Context;II)V
+    //   81: aload_0
+    //   82: invokevirtual 121	com/estrongs/android/pop/app/compress/CompressionActivity:finish	()V
+    //   85: return
     //   86: astore_1
-    //   87: ldc 122
-    //   89: aload_0
-    //   90: invokevirtual 74	com/estrongs/android/pop/app/compress/CompressionActivity:getIntent	()Landroid/content/Intent;
-    //   93: invokevirtual 125	android/content/Intent:getType	()Ljava/lang/String;
-    //   96: invokevirtual 128	java/lang/String:equalsIgnoreCase	(Ljava/lang/String;)Z
-    //   99: ifeq +9 -> 108
-    //   102: aload_0
-    //   103: aload_3
-    //   104: invokespecial 130	com/estrongs/android/pop/app/compress/CompressionActivity:a	(Landroid/net/Uri;)Ljava/lang/String;
-    //   107: astore_1
-    //   108: aload_1
-    //   109: astore_2
-    //   110: aload_1
-    //   111: ifnonnull +35 -> 146
-    //   114: aload_0
-    //   115: invokevirtual 74	com/estrongs/android/pop/app/compress/CompressionActivity:getIntent	()Landroid/content/Intent;
-    //   118: invokevirtual 125	android/content/Intent:getType	()Ljava/lang/String;
-    //   121: invokestatic 135	com/estrongs/android/util/bc:R	(Ljava/lang/String;)Ljava/lang/String;
-    //   124: astore_1
-    //   125: new 137	java/lang/StringBuilder
-    //   128: dup
-    //   129: invokespecial 138	java/lang/StringBuilder:<init>	()V
-    //   132: invokestatic 142	com/estrongs/fs/util/j:a	()Ljava/lang/String;
-    //   135: invokevirtual 146	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   138: aload_1
-    //   139: invokevirtual 146	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   142: invokevirtual 147	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   145: astore_2
-    //   146: aload_0
-    //   147: invokevirtual 26	com/estrongs/android/pop/app/compress/CompressionActivity:getContentResolver	()Landroid/content/ContentResolver;
-    //   150: aload_3
-    //   151: invokevirtual 151	android/content/ContentResolver:openInputStream	(Landroid/net/Uri;)Ljava/io/InputStream;
-    //   154: astore 4
-    //   156: new 137	java/lang/StringBuilder
-    //   159: dup
-    //   160: invokespecial 138	java/lang/StringBuilder:<init>	()V
-    //   163: ldc -103
-    //   165: invokevirtual 146	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   168: aload_2
-    //   169: invokevirtual 146	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   172: invokevirtual 147	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   175: invokestatic 157	com/estrongs/fs/util/j:h	(Ljava/lang/String;)Ljava/io/File;
-    //   178: astore_1
-    //   179: aload 4
-    //   181: aload_1
-    //   182: invokestatic 160	com/estrongs/fs/util/j:a	(Ljava/io/InputStream;Ljava/io/File;)V
-    //   185: aload_0
-    //   186: getfield 18	com/estrongs/android/pop/app/compress/CompressionActivity:a	Ljava/util/Map;
-    //   189: aload_3
-    //   190: invokevirtual 101	android/net/Uri:toString	()Ljava/lang/String;
-    //   193: aload_1
-    //   194: invokeinterface 164 3 0
-    //   199: pop
-    //   200: aload_1
-    //   201: invokevirtual 167	java/io/File:getAbsolutePath	()Ljava/lang/String;
-    //   204: astore_1
-    //   205: aload_1
-    //   206: invokestatic 170	com/estrongs/android/util/bc:N	(Ljava/lang/String;)Z
-    //   209: ifne +114 -> 323
-    //   212: aload_0
-    //   213: aload_0
-    //   214: invokevirtual 174	com/estrongs/android/pop/app/compress/CompressionActivity:getResources	()Landroid/content/res/Resources;
-    //   217: ldc -81
-    //   219: invokevirtual 178	android/content/res/Resources:getString	(I)Ljava/lang/String;
-    //   222: iconst_1
-    //   223: anewarray 180	java/lang/Object
-    //   226: dup
-    //   227: iconst_0
-    //   228: aload_1
-    //   229: invokestatic 185	com/estrongs/android/util/am:d	(Ljava/lang/String;)Ljava/lang/String;
-    //   232: aastore
-    //   233: invokestatic 191	java/text/MessageFormat:format	(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-    //   236: iconst_0
-    //   237: invokestatic 194	com/estrongs/android/ui/view/ag:a	(Landroid/content/Context;Ljava/lang/CharSequence;I)V
-    //   240: ldc2_w 195
-    //   243: invokestatic 202	java/lang/Thread:sleep	(J)V
-    //   246: aload_0
-    //   247: invokevirtual 95	com/estrongs/android/pop/app/compress/CompressionActivity:finish	()V
-    //   250: return
-    //   251: astore_1
-    //   252: aload_1
-    //   253: invokevirtual 203	java/io/IOException:printStackTrace	()V
-    //   256: aload_0
-    //   257: ldc -52
-    //   259: iconst_0
-    //   260: invokestatic 92	com/estrongs/android/ui/view/ag:a	(Landroid/content/Context;II)V
-    //   263: aload_0
-    //   264: invokevirtual 95	com/estrongs/android/pop/app/compress/CompressionActivity:finish	()V
-    //   267: return
-    //   268: astore_1
-    //   269: aload_1
-    //   270: invokevirtual 205	java/lang/SecurityException:printStackTrace	()V
-    //   273: aload_0
-    //   274: ldc -50
+    //   87: aload_1
+    //   88: invokevirtual 62	java/lang/Exception:printStackTrace	()V
+    //   91: goto -45 -> 46
+    //   94: aload_3
+    //   95: invokevirtual 127	android/net/Uri:toString	()Ljava/lang/String;
+    //   98: invokestatic 130	android/net/Uri:decode	(Ljava/lang/String;)Ljava/lang/String;
+    //   101: astore_2
+    //   102: aload_2
+    //   103: ldc -124
+    //   105: invokevirtual 138	java/lang/String:startsWith	(Ljava/lang/String;)Z
+    //   108: ifeq +226 -> 334
+    //   111: aload_0
+    //   112: getfield 20	com/estrongs/android/pop/app/compress/CompressionActivity:a	Ljava/util/Map;
+    //   115: aload_3
+    //   116: invokevirtual 127	android/net/Uri:toString	()Ljava/lang/String;
+    //   119: invokeinterface 144 2 0
+    //   124: checkcast 146	java/io/File
+    //   127: astore_2
+    //   128: aload_2
+    //   129: astore_1
+    //   130: aload_2
+    //   131: ifnonnull +118 -> 249
+    //   134: aconst_null
+    //   135: astore_1
+    //   136: ldc -108
+    //   138: aload_0
+    //   139: invokevirtual 83	com/estrongs/android/pop/app/compress/CompressionActivity:getIntent	()Landroid/content/Intent;
+    //   142: invokevirtual 151	android/content/Intent:getType	()Ljava/lang/String;
+    //   145: invokevirtual 154	java/lang/String:equalsIgnoreCase	(Ljava/lang/String;)Z
+    //   148: ifeq +9 -> 157
+    //   151: aload_0
+    //   152: aload_3
+    //   153: invokespecial 156	com/estrongs/android/pop/app/compress/CompressionActivity:a	(Landroid/net/Uri;)Ljava/lang/String;
+    //   156: astore_1
+    //   157: aload_1
+    //   158: astore_2
+    //   159: aload_1
+    //   160: ifnonnull +35 -> 195
+    //   163: aload_0
+    //   164: invokevirtual 83	com/estrongs/android/pop/app/compress/CompressionActivity:getIntent	()Landroid/content/Intent;
+    //   167: invokevirtual 151	android/content/Intent:getType	()Ljava/lang/String;
+    //   170: invokestatic 161	com/estrongs/android/util/bg:T	(Ljava/lang/String;)Ljava/lang/String;
+    //   173: astore_1
+    //   174: new 163	java/lang/StringBuilder
+    //   177: dup
+    //   178: invokespecial 164	java/lang/StringBuilder:<init>	()V
+    //   181: invokestatic 168	com/estrongs/fs/util/j:a	()Ljava/lang/String;
+    //   184: invokevirtual 172	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   187: aload_1
+    //   188: invokevirtual 172	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   191: invokevirtual 173	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   194: astore_2
+    //   195: aload_0
+    //   196: invokevirtual 30	com/estrongs/android/pop/app/compress/CompressionActivity:getContentResolver	()Landroid/content/ContentResolver;
+    //   199: aload_3
+    //   200: invokevirtual 177	android/content/ContentResolver:openInputStream	(Landroid/net/Uri;)Ljava/io/InputStream;
+    //   203: astore 4
+    //   205: new 163	java/lang/StringBuilder
+    //   208: dup
+    //   209: invokespecial 164	java/lang/StringBuilder:<init>	()V
+    //   212: ldc -77
+    //   214: invokevirtual 172	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   217: aload_2
+    //   218: invokevirtual 172	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   221: invokevirtual 173	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   224: invokestatic 183	com/estrongs/fs/util/j:h	(Ljava/lang/String;)Ljava/io/File;
+    //   227: astore_1
+    //   228: aload 4
+    //   230: aload_1
+    //   231: invokestatic 186	com/estrongs/fs/util/j:a	(Ljava/io/InputStream;Ljava/io/File;)V
+    //   234: aload_0
+    //   235: getfield 20	com/estrongs/android/pop/app/compress/CompressionActivity:a	Ljava/util/Map;
+    //   238: aload_3
+    //   239: invokevirtual 127	android/net/Uri:toString	()Ljava/lang/String;
+    //   242: aload_1
+    //   243: invokeinterface 190 3 0
+    //   248: pop
+    //   249: aload_1
+    //   250: invokevirtual 193	java/io/File:getAbsolutePath	()Ljava/lang/String;
+    //   253: astore_1
+    //   254: aload_1
+    //   255: invokestatic 196	com/estrongs/android/util/bg:N	(Ljava/lang/String;)Z
+    //   258: ifne +114 -> 372
+    //   261: aload_0
+    //   262: aload_0
+    //   263: invokevirtual 200	com/estrongs/android/pop/app/compress/CompressionActivity:getResources	()Landroid/content/res/Resources;
+    //   266: ldc -55
+    //   268: invokevirtual 204	android/content/res/Resources:getString	(I)Ljava/lang/String;
+    //   271: iconst_1
+    //   272: anewarray 206	java/lang/Object
+    //   275: dup
     //   276: iconst_0
-    //   277: invokestatic 92	com/estrongs/android/ui/view/ag:a	(Landroid/content/Context;II)V
-    //   280: aload_0
-    //   281: invokevirtual 95	com/estrongs/android/pop/app/compress/CompressionActivity:finish	()V
-    //   284: return
-    //   285: aload_2
-    //   286: ldc -48
-    //   288: invokevirtual 112	java/lang/String:startsWith	(Ljava/lang/String;)Z
-    //   291: ifne +14 -> 305
-    //   294: aload_2
-    //   295: astore_1
-    //   296: aload_2
-    //   297: ldc -46
-    //   299: invokevirtual 112	java/lang/String:startsWith	(Ljava/lang/String;)Z
-    //   302: ifeq -97 -> 205
-    //   305: aload_2
-    //   306: bipush 7
-    //   308: invokevirtual 213	java/lang/String:substring	(I)Ljava/lang/String;
-    //   311: astore_1
-    //   312: goto -107 -> 205
-    //   315: astore_1
-    //   316: aload_1
-    //   317: invokevirtual 214	java/lang/InterruptedException:printStackTrace	()V
-    //   320: goto -74 -> 246
-    //   323: new 78	android/content/Intent
-    //   326: dup
-    //   327: aload_0
-    //   328: ldc -40
-    //   330: invokespecial 219	android/content/Intent:<init>	(Landroid/content/Context;Ljava/lang/Class;)V
-    //   333: astore_2
+    //   277: aload_1
+    //   278: invokestatic 210	com/estrongs/android/util/ap:d	(Ljava/lang/String;)Ljava/lang/String;
+    //   281: aastore
+    //   282: invokestatic 216	java/text/MessageFormat:format	(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    //   285: iconst_0
+    //   286: invokestatic 219	com/estrongs/android/ui/view/ak:a	(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    //   289: ldc2_w 220
+    //   292: invokestatic 227	java/lang/Thread:sleep	(J)V
+    //   295: aload_0
+    //   296: invokevirtual 121	com/estrongs/android/pop/app/compress/CompressionActivity:finish	()V
+    //   299: return
+    //   300: astore_1
+    //   301: aload_1
+    //   302: invokevirtual 228	java/io/IOException:printStackTrace	()V
+    //   305: aload_0
+    //   306: ldc -27
+    //   308: iconst_0
+    //   309: invokestatic 118	com/estrongs/android/ui/view/ak:a	(Landroid/content/Context;II)V
+    //   312: aload_0
+    //   313: invokevirtual 121	com/estrongs/android/pop/app/compress/CompressionActivity:finish	()V
+    //   316: return
+    //   317: astore_1
+    //   318: aload_1
+    //   319: invokevirtual 230	java/lang/SecurityException:printStackTrace	()V
+    //   322: aload_0
+    //   323: ldc -25
+    //   325: iconst_0
+    //   326: invokestatic 118	com/estrongs/android/ui/view/ak:a	(Landroid/content/Context;II)V
+    //   329: aload_0
+    //   330: invokevirtual 121	com/estrongs/android/pop/app/compress/CompressionActivity:finish	()V
+    //   333: return
     //   334: aload_2
-    //   335: ldc -36
-    //   337: invokevirtual 224	android/content/Intent:addFlags	(I)Landroid/content/Intent;
-    //   340: pop
-    //   341: aload_2
-    //   342: ldc 76
-    //   344: aload_1
-    //   345: invokevirtual 228	android/content/Intent:putExtra	(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-    //   348: pop
-    //   349: aload_0
-    //   350: aload_2
-    //   351: invokevirtual 232	com/estrongs/android/pop/app/compress/CompressionActivity:startActivity	(Landroid/content/Intent;)V
-    //   354: aload_0
-    //   355: invokevirtual 95	com/estrongs/android/pop/app/compress/CompressionActivity:finish	()V
-    //   358: return
-    //   359: astore_1
-    //   360: aload_0
-    //   361: ldc -23
-    //   363: iconst_0
-    //   364: invokestatic 92	com/estrongs/android/ui/view/ag:a	(Landroid/content/Context;II)V
-    //   367: goto -13 -> 354
+    //   335: ldc -23
+    //   337: invokevirtual 138	java/lang/String:startsWith	(Ljava/lang/String;)Z
+    //   340: ifne +14 -> 354
+    //   343: aload_2
+    //   344: astore_1
+    //   345: aload_2
+    //   346: ldc -21
+    //   348: invokevirtual 138	java/lang/String:startsWith	(Ljava/lang/String;)Z
+    //   351: ifeq -97 -> 254
+    //   354: aload_2
+    //   355: bipush 7
+    //   357: invokevirtual 238	java/lang/String:substring	(I)Ljava/lang/String;
+    //   360: astore_1
+    //   361: goto -107 -> 254
+    //   364: astore_1
+    //   365: aload_1
+    //   366: invokevirtual 239	java/lang/InterruptedException:printStackTrace	()V
+    //   369: goto -74 -> 295
+    //   372: new 87	android/content/Intent
+    //   375: dup
+    //   376: aload_0
+    //   377: ldc -15
+    //   379: invokespecial 244	android/content/Intent:<init>	(Landroid/content/Context;Ljava/lang/Class;)V
+    //   382: astore_2
+    //   383: aload_2
+    //   384: ldc -11
+    //   386: invokevirtual 249	android/content/Intent:addFlags	(I)Landroid/content/Intent;
+    //   389: pop
+    //   390: aload_2
+    //   391: ldc 104
+    //   393: aload_1
+    //   394: invokevirtual 253	android/content/Intent:putExtra	(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    //   397: pop
+    //   398: aload_0
+    //   399: aload_2
+    //   400: invokevirtual 257	com/estrongs/android/pop/app/compress/CompressionActivity:startActivity	(Landroid/content/Intent;)V
+    //   403: aload_0
+    //   404: invokevirtual 121	com/estrongs/android/pop/app/compress/CompressionActivity:finish	()V
+    //   407: return
+    //   408: astore_1
+    //   409: aload_0
+    //   410: ldc_w 258
+    //   413: iconst_0
+    //   414: invokestatic 118	com/estrongs/android/ui/view/ak:a	(Landroid/content/Context;II)V
+    //   417: goto -14 -> 403
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	370	0	this	CompressionActivity
-    //   0	370	1	paramBundle	android.os.Bundle
-    //   14	337	2	localObject	Object
-    //   28	162	3	localUri	android.net.Uri
-    //   154	26	4	localInputStream	java.io.InputStream
+    //   0	420	0	this	CompressionActivity
+    //   0	420	1	paramBundle	android.os.Bundle
+    //   55	345	2	localObject	Object
+    //   69	170	3	localUri	android.net.Uri
+    //   203	26	4	localInputStream	java.io.InputStream
     // Exception table:
     //   from	to	target	type
-    //   62	79	251	java/io/IOException
-    //   87	108	251	java/io/IOException
-    //   114	146	251	java/io/IOException
-    //   146	200	251	java/io/IOException
-    //   200	205	251	java/io/IOException
-    //   62	79	268	java/lang/SecurityException
-    //   87	108	268	java/lang/SecurityException
-    //   114	146	268	java/lang/SecurityException
-    //   146	200	268	java/lang/SecurityException
-    //   200	205	268	java/lang/SecurityException
-    //   240	246	315	java/lang/InterruptedException
-    //   349	354	359	android/content/ActivityNotFoundException
+    //   26	46	86	java/lang/Exception
+    //   111	128	300	java/io/IOException
+    //   136	157	300	java/io/IOException
+    //   163	195	300	java/io/IOException
+    //   195	249	300	java/io/IOException
+    //   249	254	300	java/io/IOException
+    //   111	128	317	java/lang/SecurityException
+    //   136	157	317	java/lang/SecurityException
+    //   163	195	317	java/lang/SecurityException
+    //   195	249	317	java/lang/SecurityException
+    //   249	254	317	java/lang/SecurityException
+    //   289	295	364	java/lang/InterruptedException
+    //   398	403	408	android/content/ActivityNotFoundException
   }
 }
 

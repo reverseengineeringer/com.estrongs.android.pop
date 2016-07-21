@@ -1,29 +1,15 @@
 package com.estrongs.android.ui.navigation;
 
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.widget.bc;
-
 class b
-  implements bc
+  implements Runnable
 {
-  b(a parama) {}
+  b(MultiWindowActivity paramMultiWindowActivity) {}
   
-  public void a(int paramInt) {}
-  
-  public void a(int paramInt, float paramFloat)
+  public void run()
   {
-    a.a(a).a(paramInt, paramFloat);
+    MultiWindowActivity.a(a);
+    a.d();
   }
-  
-  public void b(int paramInt) {}
-  
-  public void c(int paramInt)
-  {
-    a.a(a, paramInt);
-    ad.a(a.b(a)).e(paramInt);
-  }
-  
-  public void d(int paramInt) {}
 }
 
 /* Location:

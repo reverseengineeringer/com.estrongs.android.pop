@@ -1,13 +1,19 @@
 package com.estrongs.android.pop.view;
 
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.pop.FexApplication;
+
 class y
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
   y(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    a.d("app://user");
+    paramDialogInterface.dismiss();
+    FexApplication.a().a(false);
+    a.finish();
   }
 }
 

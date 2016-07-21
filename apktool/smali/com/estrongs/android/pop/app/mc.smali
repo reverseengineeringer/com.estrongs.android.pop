@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/content/DialogInterface$OnDismissListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
+.field final synthetic a:Lcom/estrongs/android/pop/app/ShowDialogActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/mc;->a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/mc;->a:Lcom/estrongs/android/pop/app/ShowDialogActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,27 +22,12 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public onDismiss(Landroid/content/DialogInterface;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/mc;->a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/mc;->a:Lcom/estrongs/android/pop/app/ShowDialogActivity;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ShowDialogActivity;->finish()V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/mc;->a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->m(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/mc;->a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->a(I)V
-
-    :cond_0
     return-void
 .end method

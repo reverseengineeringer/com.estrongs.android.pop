@@ -3,59 +3,39 @@
 
 
 # instance fields
-.field private final a:Ljava/lang/String;
+.field a:Landroid/support/v4/app/u;
 
-.field private final b:Ljava/lang/Class;
+.field b:Landroid/support/v4/app/u;
+
+.field c:I
+
+.field d:Landroid/support/v4/app/Fragment;
+
+.field e:I
+
+.field f:I
+
+.field g:I
+
+.field h:I
+
+.field i:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/lang/Class",
-            "<*>;"
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/support/v4/app/Fragment;",
+            ">;"
         }
     .end annotation
 .end field
 
-.field private final c:Landroid/os/Bundle;
-
-.field private d:Landroid/support/v4/app/Fragment;
-
 
 # direct methods
-.method static synthetic a(Landroid/support/v4/app/u;)Landroid/support/v4/app/Fragment;
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/app/u;->d:Landroid/support/v4/app/Fragment;
-
-    return-object v0
-.end method
-
-.method static synthetic a(Landroid/support/v4/app/u;Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/Fragment;
+.method constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Landroid/support/v4/app/u;->d:Landroid/support/v4/app/Fragment;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-object p1
-.end method
-
-.method static synthetic b(Landroid/support/v4/app/u;)Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/app/u;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic c(Landroid/support/v4/app/u;)Ljava/lang/Class;
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/app/u;->b:Ljava/lang/Class;
-
-    return-object v0
-.end method
-
-.method static synthetic d(Landroid/support/v4/app/u;)Landroid/os/Bundle;
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/app/u;->c:Landroid/os/Bundle;
-
-    return-object v0
+    return-void
 .end method

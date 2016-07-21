@@ -3,10 +3,10 @@ package com.estrongs.android.pop;
 import android.content.Context;
 import com.estrongs.a.a;
 import com.estrongs.a.a.e;
-import com.estrongs.android.ui.dialog.dn;
+import com.estrongs.android.ui.dialog.dp;
 
 class r
-  extends dn
+  extends dp
 {
   r(n paramn, Context paramContext, boolean paramBoolean, e parame)
   {

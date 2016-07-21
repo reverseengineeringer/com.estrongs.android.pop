@@ -5,12 +5,12 @@ import com.estrongs.android.view.a.b;
 class ei
   implements b
 {
-  ei(cp paramcp) {}
+  ei(cr paramcr) {}
   
-  public boolean a(co paramco)
+  public boolean a(cp paramcp)
   {
-    if (((e) || (h) || (((f) || (x) || (g)) && (!d))) && ((P) || (T))) {}
-    while (i) {
+    if (((e) || (L) || (I) || (J) || (K) || (H)) && (N == 1) && ((S) || (U))) {}
+    while (((i) || (j)) && (N == 1)) {
       return true;
     }
     return false;

@@ -1,18 +1,19 @@
 package com.estrongs.android.ui.dialog;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import com.estrongs.android.pop.a.j;
 
 class gt
-  implements View.OnClickListener
+  implements j
 {
-  gt(gs paramgs, int paramInt) {}
+  gt(gn paramgn) {}
   
-  public void onClick(View paramView)
+  public void a(boolean paramBoolean)
   {
-    if (gs.a(b) != null) {
-      gs.a(b).a(a);
+    if (a.a != null) {
+      a.a.dismiss();
     }
+    gn.a(a, paramBoolean);
+    gn.h(a);
   }
 }
 

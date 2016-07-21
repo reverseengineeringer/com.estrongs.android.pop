@@ -1,52 +1,50 @@
 .class public Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;
-.super Lcom/estrongs/android/pop/esclasses/ESActivity;
+.super Lcom/estrongs/android/ui/base/HomeAsBackActivity;
 
 
 # instance fields
 .field private a:Landroid/widget/ProgressBar;
 
-.field private b:Lcom/estrongs/android/ui/theme/al;
+.field private b:Lcom/estrongs/android/ui/theme/at;
 
-.field private c:Landroid/view/View;
+.field private c:Lcom/estrongs/android/pop/view/utils/v;
 
-.field private d:Lcom/estrongs/android/pop/view/utils/v;
+.field private d:Lcom/estrongs/android/pop/app/lc;
 
-.field private e:Lcom/estrongs/android/pop/app/kn;
+.field private e:I
 
-.field private f:I
+.field private f:Z
 
-.field private g:Z
+.field private g:Landroid/os/Handler;
 
-.field private h:Landroid/os/Handler;
+.field private h:Landroid/widget/Gallery;
 
-.field private i:Landroid/widget/Gallery;
+.field private i:Landroid/view/View$OnClickListener;
 
-.field private j:Landroid/view/View$OnClickListener;
-
-.field private k:Landroid/os/Handler;
+.field private j:Landroid/os/Handler;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;-><init>()V
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->g:Z
+    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->f:Z
 
-    new-instance v0, Lcom/estrongs/android/pop/app/kl;
+    new-instance v0, Lcom/estrongs/android/pop/app/ky;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/kl;-><init>(Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/ky;-><init>(Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->j:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->i:Landroid/view/View$OnClickListener;
 
-    new-instance v0, Lcom/estrongs/android/pop/app/km;
+    new-instance v0, Lcom/estrongs/android/pop/app/lb;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/km;-><init>(Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/lb;-><init>(Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->k:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->j:Landroid/os/Handler;
 
     return-void
 .end method
@@ -54,56 +52,9 @@
 .method static synthetic a(Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;)Lcom/estrongs/android/pop/view/utils/v;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     return-object v0
-.end method
-
-.method private a()V
-    .locals 3
-
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
-
-    iget-object v1, v1, Lcom/estrongs/android/pop/view/utils/v;->l:[Landroid/graphics/Bitmap;
-
-    array-length v1, v1
-
-    if-ge v0, v1, :cond_1
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
-
-    iget-object v1, v1, Lcom/estrongs/android/pop/view/utils/v;->l:[Landroid/graphics/Bitmap;
-
-    aget-object v1, v1, v0
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
-
-    iget-object v1, v1, Lcom/estrongs/android/pop/view/utils/v;->l:[Landroid/graphics/Bitmap;
-
-    aget-object v1, v1, v0
-
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
-
-    iget-object v1, v1, Lcom/estrongs/android/pop/view/utils/v;->l:[Landroid/graphics/Bitmap;
-
-    const/4 v2, 0x0
-
-    aput-object v2, v1, v0
-
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return-void
 .end method
 
 .method private a(Landroid/widget/Gallery;)V
@@ -127,13 +78,13 @@
 
     const/high16 v1, 0x42c80000    # 100.0f
 
-    invoke-static {p0, v1}, Lcom/estrongs/android/ui/d/a;->a(Landroid/content/Context;F)I
+    invoke-static {p0, v1}, Lcom/estrongs/android/ui/d/g;->a(Landroid/content/Context;F)I
 
     move-result v1
 
     const/high16 v2, 0x40c00000    # 6.0f
 
-    invoke-static {p0, v2}, Lcom/estrongs/android/ui/d/a;->a(Landroid/content/Context;F)I
+    invoke-static {p0, v2}, Lcom/estrongs/android/ui/d/g;->a(Landroid/content/Context;F)I
 
     move-result v2
 
@@ -188,10 +139,247 @@
     return-void
 .end method
 
-.method private b()V
+.method static synthetic a(Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method private a(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 7
+
+    const/4 v6, 0x6
+
+    const/4 v5, 0x0
+
+    const-string v0, "market://"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    if-nez p2, :cond_1
+
+    :cond_0
+    move-object p2, p1
+
+    :cond_1
+    new-instance v1, Landroid/content/Intent;
+
+    const-string v0, "android.intent.action.VIEW"
+
+    invoke-direct {v1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
+
+    const-string v0, "market://"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1, v5}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_2
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/pm/ResolveInfo;
+
+    const-string v3, "com.android.vending"
+
+    iget-object v4, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object v4, v4, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    iget-object v4, v4, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    iget-object v2, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object v2, v2, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    iget-object v2, v2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    iget-object v0, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object v0, v0, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
+
+    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    :cond_3
+    :try_start_0
+    invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->startActivity(Landroid/content/Intent;)V
+
+    invoke-static {}, Lcom/estrongs/android/pop/view/utils/n;->b()Lcom/estrongs/android/pop/view/utils/n;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/view/utils/n;->d(Lcom/estrongs/android/pop/view/utils/v;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
+
+    iget v0, v0, Lcom/estrongs/android/pop/view/utils/v;->q:I
+
+    if-ne v0, v6, :cond_4
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
+
+    const/4 v1, 0x7
+
+    iput v1, v0, Lcom/estrongs/android/pop/view/utils/v;->q:I
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_4
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    const v0, 0x7f0803ca
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
+
+    iget v0, v0, Lcom/estrongs/android/pop/view/utils/v;->q:I
+
+    if-ne v0, v6, :cond_4
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
+
+    iput v5, v0, Lcom/estrongs/android/pop/view/utils/v;->q:I
+
+    goto :goto_0
+.end method
+
+.method static synthetic b(Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;)I
+    .locals 1
+
+    iget v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->e:I
+
+    return v0
+.end method
+
+.method private b(I)V
+    .locals 2
+
+    new-instance v0, Landroid/os/Message;
+
+    invoke-direct {v0}, Landroid/os/Message;-><init>()V
+
+    const v1, 0x1e249
+
+    iput v1, v0, Landroid/os/Message;->arg1:I
+
+    iput p1, v0, Landroid/os/Message;->arg2:I
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->j:Landroid/os/Handler;
+
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    return-void
+.end method
+
+.method static synthetic c(Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->e()V
+
+    return-void
+.end method
+
+.method private d()V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
+
+    iget-object v1, v1, Lcom/estrongs/android/pop/view/utils/v;->l:[Landroid/graphics/Bitmap;
+
+    array-length v1, v1
+
+    if-ge v0, v1, :cond_1
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
+
+    iget-object v1, v1, Lcom/estrongs/android/pop/view/utils/v;->l:[Landroid/graphics/Bitmap;
+
+    aget-object v1, v1, v0
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
+
+    iget-object v1, v1, Lcom/estrongs/android/pop/view/utils/v;->l:[Landroid/graphics/Bitmap;
+
+    aget-object v1, v1, v0
+
+    invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
+
+    iget-object v1, v1, Lcom/estrongs/android/pop/view/utils/v;->l:[Landroid/graphics/Bitmap;
+
+    const/4 v2, 0x0
+
+    aput-object v2, v1, v0
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+.end method
+
+.method private e()V
     .locals 10
 
-    const v0, 0x7f0a0376
+    const v0, 0x7f0e05e6
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->findViewById(I)Landroid/view/View;
 
@@ -199,7 +387,7 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    const v1, 0x7f0a0378
+    const v1, 0x7f0e05e8
 
     invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->findViewById(I)Landroid/view/View;
 
@@ -207,7 +395,7 @@
 
     check-cast v1, Landroid/widget/LinearLayout;
 
-    const v2, 0x7f0a0379
+    const v2, 0x7f0e05e9
 
     invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->findViewById(I)Landroid/view/View;
 
@@ -215,15 +403,15 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    iget-object v3, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b:Lcom/estrongs/android/ui/theme/al;
+    iget-object v3, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b:Lcom/estrongs/android/ui/theme/at;
 
-    invoke-virtual {v3}, Lcom/estrongs/android/ui/theme/al;->i()I
+    invoke-virtual {v3}, Lcom/estrongs/android/ui/theme/at;->i()I
 
     move-result v3
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    const v3, 0x7f0a037a
+    const v3, 0x7f0e05ea
 
     invoke-virtual {p0, v3}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->findViewById(I)Landroid/view/View;
 
@@ -231,15 +419,15 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    iget-object v4, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b:Lcom/estrongs/android/ui/theme/al;
+    iget-object v4, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b:Lcom/estrongs/android/ui/theme/at;
 
-    invoke-virtual {v4}, Lcom/estrongs/android/ui/theme/al;->i()I
+    invoke-virtual {v4}, Lcom/estrongs/android/ui/theme/at;->i()I
 
     move-result v4
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setTextColor(I)V
 
-    const v4, 0x7f0a037b
+    const v4, 0x7f0e05eb
 
     invoke-virtual {p0, v4}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->findViewById(I)Landroid/view/View;
 
@@ -247,7 +435,7 @@
 
     check-cast v4, Landroid/widget/ProgressBar;
 
-    const v5, 0x7f0a037c
+    const v5, 0x7f0e05ec
 
     invoke-virtual {p0, v5}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->findViewById(I)Landroid/view/View;
 
@@ -255,7 +443,7 @@
 
     check-cast v5, Landroid/widget/Button;
 
-    const v6, 0x7f0a0377
+    const v6, 0x7f0e05e7
 
     invoke-virtual {p0, v6}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->findViewById(I)Landroid/view/View;
 
@@ -263,13 +451,19 @@
 
     check-cast v6, Landroid/widget/TextView;
 
-    iget-object v7, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b:Lcom/estrongs/android/ui/theme/al;
+    iget-object v7, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b:Lcom/estrongs/android/ui/theme/at;
 
-    invoke-virtual {v7}, Lcom/estrongs/android/ui/theme/al;->i()I
+    invoke-virtual {v7}, Lcom/estrongs/android/ui/theme/at;->i()I
 
     move-result v7
 
     invoke-virtual {v6, v7}, Landroid/widget/TextView;->setTextColor(I)V
+
+    iget-object v7, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
+
+    iget-object v7, v7, Lcom/estrongs/android/pop/view/utils/v;->c:Ljava/lang/String;
+
+    invoke-virtual {v6, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     const/4 v7, 0x0
 
@@ -279,7 +473,7 @@
 
     invoke-virtual {v0, v7}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    iget-object v7, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v7, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     iget v7, v7, Lcom/estrongs/android/pop/view/utils/v;->q:I
 
@@ -287,7 +481,7 @@
 
     if-ne v7, v8, :cond_2
 
-    const v0, 0x7f0b001e
+    const v0, 0x7f0800b1
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -295,11 +489,11 @@
 
     invoke-virtual {v5, v0}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     iget-wide v0, v0, Lcom/estrongs/android/pop/view/utils/v;->t:J
 
-    iget-object v5, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v5, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     iget-wide v6, v5, Lcom/estrongs/android/pop/view/utils/v;->u:J
 
@@ -388,13 +582,13 @@
     goto :goto_0
 
     :cond_2
-    iget-object v7, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v7, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     iget v7, v7, Lcom/estrongs/android/pop/view/utils/v;->q:I
 
     if-nez v7, :cond_9
 
-    const v7, 0x7f0b0077
+    const v7, 0x7f0805aa
 
     invoke-virtual {p0, v7}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -414,19 +608,19 @@
 
     invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     iget v2, v2, Lcom/estrongs/android/pop/view/utils/v;->v:I
 
     if-nez v2, :cond_3
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     invoke-static {}, Lcom/estrongs/android/pop/view/utils/n;->b()Lcom/estrongs/android/pop/view/utils/n;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v4, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     invoke-virtual {v3, v4}, Lcom/estrongs/android/pop/view/utils/n;->b(Lcom/estrongs/android/pop/view/utils/v;)I
 
@@ -435,13 +629,13 @@
     iput v3, v2, Lcom/estrongs/android/pop/view/utils/v;->v:I
 
     :cond_3
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     iget v2, v2, Lcom/estrongs/android/pop/view/utils/v;->v:I
 
     if-eqz v2, :cond_4
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     iget v2, v2, Lcom/estrongs/android/pop/view/utils/v;->v:I
 
@@ -450,7 +644,7 @@
     if-ne v2, v3, :cond_7
 
     :cond_4
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     invoke-virtual {v2}, Lcom/estrongs/android/pop/view/utils/v;->c()Ljava/lang/String;
 
@@ -458,7 +652,7 @@
 
     if-eqz v2, :cond_6
 
-    const v2, 0x7f0b0118
+    const v2, 0x7f0805f7
 
     invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -467,7 +661,7 @@
     invoke-virtual {v5, v2}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
     :goto_2
-    const v2, 0x7f020055
+    const v2, 0x7f020140
 
     invoke-virtual {v5, v2}, Landroid/widget/Button;->setBackgroundResource(I)V
 
@@ -481,7 +675,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     iget-object v0, v0, Lcom/estrongs/android/pop/view/utils/v;->c:Ljava/lang/String;
 
@@ -490,7 +684,7 @@
     goto :goto_1
 
     :cond_6
-    const v2, 0x7f0b001f
+    const v2, 0x7f08007f
 
     invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -501,7 +695,7 @@
     goto :goto_2
 
     :cond_7
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     iget v2, v2, Lcom/estrongs/android/pop/view/utils/v;->v:I
 
@@ -509,7 +703,7 @@
 
     if-ne v2, v3, :cond_8
 
-    const v2, 0x7f0b0119
+    const v2, 0x7f0805f8
 
     invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -517,14 +711,14 @@
 
     invoke-virtual {v5, v2}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    const v2, 0x7f020055
+    const v2, 0x7f020140
 
     invoke-virtual {v5, v2}, Landroid/widget/Button;->setBackgroundResource(I)V
 
     goto :goto_3
 
     :cond_8
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     iget v2, v2, Lcom/estrongs/android/pop/view/utils/v;->v:I
 
@@ -532,7 +726,7 @@
 
     if-ne v2, v3, :cond_5
 
-    const v2, 0x7f0b011a
+    const v2, 0x7f0805f6
 
     invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -540,22 +734,22 @@
 
     invoke-virtual {v5, v2}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    const v2, 0x7f020057
+    const v2, 0x7f020142
 
     invoke-virtual {v5, v2}, Landroid/widget/Button;->setBackgroundResource(I)V
 
     goto :goto_3
 
     :cond_9
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v6, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
-    iget v0, v0, Lcom/estrongs/android/pop/view/utils/v;->q:I
+    iget v6, v6, Lcom/estrongs/android/pop/view/utils/v;->q:I
 
-    const/4 v1, 0x2
+    const/4 v7, 0x2
 
-    if-ne v0, v1, :cond_b
+    if-ne v6, v7, :cond_b
 
-    const v0, 0x7f0b011d
+    const v0, 0x7f0805f5
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -563,11 +757,11 @@
 
     invoke-virtual {v2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     iget-wide v0, v0, Lcom/estrongs/android/pop/view/utils/v;->t:J
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     iget-wide v6, v2, Lcom/estrongs/android/pop/view/utils/v;->u:J
 
@@ -608,7 +802,7 @@
 
     invoke-virtual {v3, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0b0045
+    const v0, 0x7f0803eb
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -616,7 +810,7 @@
 
     invoke-virtual {v5, v0}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f020055
+    const v0, 0x7f020140
 
     invoke-virtual {v5, v0}, Landroid/widget/Button;->setBackgroundResource(I)V
 
@@ -634,15 +828,15 @@
     goto :goto_4
 
     :cond_b
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v6, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
-    iget v0, v0, Lcom/estrongs/android/pop/view/utils/v;->q:I
+    iget v6, v6, Lcom/estrongs/android/pop/view/utils/v;->q:I
 
-    const/4 v1, 0x3
+    const/4 v7, 0x3
 
-    if-ne v0, v1, :cond_c
+    if-ne v6, v7, :cond_c
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     iget-wide v0, v0, Lcom/estrongs/android/pop/view/utils/v;->t:J
 
@@ -686,7 +880,7 @@
 
     invoke-virtual {v3, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0b011c
+    const v0, 0x7f080178
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -694,22 +888,22 @@
 
     invoke-virtual {v5, v0}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f020055
+    const v0, 0x7f020140
 
     invoke-virtual {v5, v0}, Landroid/widget/Button;->setBackgroundResource(I)V
 
     goto/16 :goto_1
 
     :cond_c
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v6, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
-    iget v0, v0, Lcom/estrongs/android/pop/view/utils/v;->q:I
+    iget v6, v6, Lcom/estrongs/android/pop/view/utils/v;->q:I
 
-    const/4 v1, 0x5
+    const/4 v7, 0x5
 
-    if-ne v0, v1, :cond_d
+    if-ne v6, v7, :cond_d
 
-    const v0, 0x7f0b0077
+    const v0, 0x7f0805aa
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -717,7 +911,7 @@
 
     invoke-virtual {v2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0b001e
+    const v0, 0x7f0800b1
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -725,26 +919,26 @@
 
     invoke-virtual {v5, v0}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f020056
+    const v0, 0x7f020141
 
     invoke-virtual {v5, v0}, Landroid/widget/Button;->setBackgroundResource(I)V
 
     goto/16 :goto_1
 
     :cond_d
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v6, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
-    iget v0, v0, Lcom/estrongs/android/pop/view/utils/v;->q:I
+    iget v6, v6, Lcom/estrongs/android/pop/view/utils/v;->q:I
 
-    const/4 v1, 0x4
+    const/4 v7, 0x4
 
-    if-ne v0, v1, :cond_0
+    if-ne v6, v7, :cond_f
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     iget-wide v6, v1, Lcom/estrongs/android/pop/view/utils/v;->u:J
 
@@ -762,7 +956,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     iget-wide v6, v1, Lcom/estrongs/android/pop/view/utils/v;->t:J
 
@@ -780,7 +974,7 @@
 
     invoke-virtual {v2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     iget-wide v0, v0, Lcom/estrongs/android/pop/view/utils/v;->t:J
 
@@ -821,7 +1015,7 @@
 
     invoke-virtual {v3, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0b011b
+    const v0, 0x7f0805f4
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -832,7 +1026,7 @@
     goto/16 :goto_1
 
     :cond_e
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     iget-wide v0, v0, Lcom/estrongs/android/pop/view/utils/v;->u:J
 
@@ -840,7 +1034,7 @@
 
     mul-long/2addr v0, v6
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     iget-wide v6, v2, Lcom/estrongs/android/pop/view/utils/v;->t:J
 
@@ -849,50 +1043,81 @@
     long-to-int v0, v0
 
     goto :goto_5
-.end method
 
-.method private b(I)V
-    .locals 2
+    :cond_f
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
-    new-instance v0, Landroid/os/Message;
+    iget v2, v2, Lcom/estrongs/android/pop/view/utils/v;->q:I
 
-    invoke-direct {v0}, Landroid/os/Message;-><init>()V
+    const/4 v3, 0x7
 
-    const v1, 0x1e249
+    if-eq v2, v3, :cond_10
 
-    iput v1, v0, Landroid/os/Message;->arg1:I
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
-    iput p1, v0, Landroid/os/Message;->arg2:I
+    iget v2, v2, Lcom/estrongs/android/pop/view/utils/v;->q:I
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->k:Landroid/os/Handler;
+    const/4 v3, 0x6
 
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+    if-ne v2, v3, :cond_0
 
-    return-void
-.end method
+    :cond_10
+    const/16 v2, 0x8
 
-.method static synthetic b(Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;)V
-    .locals 0
+    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->a()V
+    const/4 v1, 0x0
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-.method static synthetic c(Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;)I
-    .locals 1
+    const v0, 0x7f0805f7
 
-    iget v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->f:I
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->getText(I)Ljava/lang/CharSequence;
 
-    return v0
-.end method
+    move-result-object v0
 
-.method static synthetic d(Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;)V
-    .locals 0
+    invoke-virtual {v5, v0}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b()V
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
-    return-void
+    iget v0, v0, Lcom/estrongs/android/pop/view/utils/v;->q:I
+
+    const/4 v1, 0x6
+
+    if-ne v0, v1, :cond_11
+
+    const/16 v0, 0x8
+
+    invoke-virtual {v5, v0}, Landroid/widget/Button;->setVisibility(I)V
+
+    const v0, 0x7f0e01c7
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    goto/16 :goto_1
+
+    :cond_11
+    const/4 v0, 0x0
+
+    invoke-virtual {v5, v0}, Landroid/widget/Button;->setVisibility(I)V
+
+    const v0, 0x7f0e01c7
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    goto/16 :goto_1
 .end method
 
 
@@ -904,13 +1129,13 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/pop/view/utils/n;->a(Lcom/estrongs/android/pop/view/utils/v;I)V
 
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->g:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->f:Z
 
     if-eqz v0, :cond_0
 
@@ -918,7 +1143,7 @@
     return-void
 
     :cond_0
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->e()V
 
     goto :goto_0
 .end method
@@ -926,7 +1151,7 @@
 .method public a(Ljava/lang/Object;)V
     .locals 2
 
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->g:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->f:Z
 
     if-eqz v0, :cond_1
 
@@ -935,15 +1160,15 @@
     return-void
 
     :cond_1
-    check-cast p1, Lcom/estrongs/android/util/y;
+    check-cast p1, Lcom/estrongs/android/util/aa;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     iget-object v0, v0, Lcom/estrongs/android/pop/view/utils/v;->k:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0a0375
+    const v0, 0x7f0e05e5
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->findViewById(I)Landroid/view/View;
 
@@ -951,7 +1176,7 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     iget-object v1, v1, Lcom/estrongs/android/pop/view/utils/v;->k:Landroid/graphics/Bitmap;
 
@@ -963,9 +1188,9 @@
 .method public b(Ljava/lang/Object;)V
     .locals 1
 
-    check-cast p1, Lcom/estrongs/android/util/y;
+    check-cast p1, Lcom/estrongs/android/util/aa;
 
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->g:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->f:Z
 
     if-eqz v0, :cond_0
 
@@ -973,7 +1198,7 @@
     return-void
 
     :cond_0
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->e()V
 
     goto :goto_0
 .end method
@@ -981,9 +1206,9 @@
 .method public c(Ljava/lang/Object;)V
     .locals 1
 
-    check-cast p1, Lcom/estrongs/android/util/y;
+    check-cast p1, Lcom/estrongs/android/util/aa;
 
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->g:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->f:Z
 
     if-eqz v0, :cond_0
 
@@ -991,7 +1216,7 @@
     return-void
 
     :cond_0
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->e()V
 
     goto :goto_0
 .end method
@@ -999,9 +1224,9 @@
 .method public d(Ljava/lang/Object;)V
     .locals 1
 
-    check-cast p1, Lcom/estrongs/android/util/y;
+    check-cast p1, Lcom/estrongs/android/util/aa;
 
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->g:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->f:Z
 
     if-eqz v0, :cond_0
 
@@ -1009,7 +1234,7 @@
     return-void
 
     :cond_0
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->e()V
 
     goto :goto_0
 .end method
@@ -1017,9 +1242,9 @@
 .method public e(Ljava/lang/Object;)V
     .locals 1
 
-    check-cast p1, Lcom/estrongs/android/util/y;
+    check-cast p1, Lcom/estrongs/android/util/aa;
 
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->g:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->f:Z
 
     if-eqz v0, :cond_0
 
@@ -1027,9 +1252,9 @@
     return-void
 
     :cond_0
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->e()V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     iget-object v0, v0, Lcom/estrongs/android/pop/view/utils/v;->f:Ljava/lang/String;
 
@@ -1049,33 +1274,33 @@
 .method public f(Ljava/lang/Object;)V
     .locals 3
 
-    check-cast p1, Lcom/estrongs/android/util/y;
+    check-cast p1, Lcom/estrongs/android/util/aa;
 
-    iget-object v0, p1, Lcom/estrongs/android/util/y;->e:Ljava/lang/Object;
+    iget-object v0, p1, Lcom/estrongs/android/util/aa;->e:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->e:Lcom/estrongs/android/pop/app/kn;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/app/lc;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/kn;->notifyDataSetChanged()V
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/lc;->notifyDataSetChanged()V
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
-    iget-object v1, v1, Lcom/estrongs/android/pop/view/utils/v;->m:[Lcom/estrongs/android/util/y;
+    iget-object v1, v1, Lcom/estrongs/android/pop/view/utils/v;->m:[Lcom/estrongs/android/util/aa;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
 
-    invoke-static {v1, v2}, Lcom/estrongs/android/util/bd;->a([Ljava/lang/Object;I)Z
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/bk;->a([Ljava/lang/Object;I)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
-    iget-object v1, v1, Lcom/estrongs/android/pop/view/utils/v;->m:[Lcom/estrongs/android/util/y;
+    iget-object v1, v1, Lcom/estrongs/android/pop/view/utils/v;->m:[Lcom/estrongs/android/util/aa;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -1092,13 +1317,13 @@
 .method public finish()V
     .locals 2
 
-    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;->finish()V
+    invoke-super {p0}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;->finish()V
 
     invoke-static {}, Lcom/estrongs/android/pop/view/utils/n;->b()Lcom/estrongs/android/pop/view/utils/n;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->h:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->g:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/utils/n;->a(Landroid/os/Handler;)Landroid/os/Handler;
 
@@ -1110,11 +1335,7 @@
 
     const/4 v3, -0x1
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onCreate(Landroid/os/Bundle;)V
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->requestWindowFeature(I)Z
+    invoke-super {p0, p1}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;->onCreate(Landroid/os/Bundle;)V
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->getIntent()Landroid/content/Intent;
 
@@ -1126,7 +1347,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->f:I
+    iput v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->e:I
 
     invoke-static {}, Lcom/estrongs/android/pop/view/utils/n;->b()Lcom/estrongs/android/pop/view/utils/n;
 
@@ -1138,25 +1359,25 @@
 
     array-length v1, v0
 
-    iget v2, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->f:I
+    iget v2, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->e:I
 
-    if-le v1, v2, :cond_1
+    if-le v1, v2, :cond_0
 
-    iget v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->f:I
+    iget v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->e:I
 
     aget-object v0, v0, v1
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
-    const v0, 0x7f0300c2
+    const v0, 0x7f030168
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->setContentView(I)V
 
-    invoke-static {p0}, Lcom/estrongs/android/ui/theme/al;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->J()Lcom/estrongs/android/ui/theme/at;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b:Lcom/estrongs/android/ui/theme/al;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b:Lcom/estrongs/android/ui/theme/at;
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->getIntent()Landroid/content/Intent;
 
@@ -1166,44 +1387,14 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    move-result v1
+    move-result v0
 
-    if-eq v1, v3, :cond_0
+    if-eq v0, v3, :cond_1
 
-    const v0, 0x7f0a0370
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->setTitle(I)V
 
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
-
-    :cond_0
-    const v0, 0x7f0a036e
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Landroid/view/View;
-
-    const v0, 0x7f0a036f
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    new-instance v1, Lcom/estrongs/android/pop/app/ki;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ki;-><init>(Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v0, 0x7f0a0371
+    :goto_0
+    const v0, 0x7f0e05df
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->findViewById(I)Landroid/view/View;
 
@@ -1213,7 +1404,7 @@
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->a:Landroid/widget/ProgressBar;
 
-    const v0, 0x7f0a0276
+    const v0, 0x7f0e044a
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->findViewById(I)Landroid/view/View;
 
@@ -1221,39 +1412,39 @@
 
     check-cast v0, Landroid/widget/Gallery;
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->i:Landroid/widget/Gallery;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->h:Landroid/widget/Gallery;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->i:Landroid/widget/Gallery;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->h:Landroid/widget/Gallery;
 
     const/4 v1, 0x6
 
     invoke-virtual {v0, v1}, Landroid/widget/Gallery;->setSpacing(I)V
 
-    new-instance v0, Lcom/estrongs/android/pop/app/kn;
+    new-instance v0, Lcom/estrongs/android/pop/app/lc;
 
-    invoke-direct {v0, p0, p0}, Lcom/estrongs/android/pop/app/kn;-><init>(Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;Landroid/content/Context;)V
+    invoke-direct {v0, p0, p0}, Lcom/estrongs/android/pop/app/lc;-><init>(Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->e:Lcom/estrongs/android/pop/app/kn;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/app/lc;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->i:Landroid/widget/Gallery;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->h:Landroid/widget/Gallery;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->e:Lcom/estrongs/android/pop/app/kn;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/app/lc;
 
     invoke-virtual {v0, v1}, Landroid/widget/Gallery;->setAdapter(Landroid/widget/SpinnerAdapter;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->i:Landroid/widget/Gallery;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->h:Landroid/widget/Gallery;
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->a(Landroid/widget/Gallery;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->i:Landroid/widget/Gallery;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->h:Landroid/widget/Gallery;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/kj;
+    new-instance v1, Lcom/estrongs/android/pop/app/kw;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/kj;-><init>(Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/kw;-><init>(Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Gallery;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    const v0, 0x7f0a0377
+    const v0, 0x7f0e05e7
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->findViewById(I)Landroid/view/View;
 
@@ -1261,15 +1452,15 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b:Lcom/estrongs/android/ui/theme/al;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b:Lcom/estrongs/android/ui/theme/at;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/ui/theme/al;->i()I
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/theme/at;->i()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    const v1, 0x7f0a0375
+    const v1, 0x7f0e05e5
 
     invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->findViewById(I)Landroid/view/View;
 
@@ -1277,7 +1468,7 @@
 
     check-cast v1, Landroid/widget/ImageView;
 
-    const v2, 0x7f0a037f
+    const v2, 0x7f0e05ef
 
     invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->findViewById(I)Landroid/view/View;
 
@@ -1285,15 +1476,15 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    iget-object v3, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b:Lcom/estrongs/android/ui/theme/al;
+    iget-object v3, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b:Lcom/estrongs/android/ui/theme/at;
 
-    invoke-virtual {v3}, Lcom/estrongs/android/ui/theme/al;->i()I
+    invoke-virtual {v3}, Lcom/estrongs/android/ui/theme/at;->i()I
 
     move-result v3
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    const v3, 0x7f0a0382
+    const v3, 0x7f0e05f2
 
     invoke-virtual {p0, v3}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->findViewById(I)Landroid/view/View;
 
@@ -1301,15 +1492,15 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    iget-object v4, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b:Lcom/estrongs/android/ui/theme/al;
+    iget-object v4, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b:Lcom/estrongs/android/ui/theme/at;
 
-    invoke-virtual {v4}, Lcom/estrongs/android/ui/theme/al;->i()I
+    invoke-virtual {v4}, Lcom/estrongs/android/ui/theme/at;->i()I
 
     move-result v4
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setTextColor(I)V
 
-    const v4, 0x7f0a037e
+    const v4, 0x7f0e05ee
 
     invoke-virtual {p0, v4}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->findViewById(I)Landroid/view/View;
 
@@ -1317,7 +1508,7 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    const v5, 0x7f0a0380
+    const v5, 0x7f0e05f0
 
     invoke-virtual {p0, v5}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->findViewById(I)Landroid/view/View;
 
@@ -1325,7 +1516,7 @@
 
     check-cast v5, Landroid/widget/TextView;
 
-    const v6, 0x7f0a0381
+    const v6, 0x7f0e05f1
 
     invoke-virtual {p0, v6}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->findViewById(I)Landroid/view/View;
 
@@ -1333,49 +1524,49 @@
 
     check-cast v6, Landroid/widget/TextView;
 
-    iget-object v7, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b:Lcom/estrongs/android/ui/theme/al;
+    iget-object v7, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b:Lcom/estrongs/android/ui/theme/at;
 
-    invoke-virtual {v7}, Lcom/estrongs/android/ui/theme/al;->i()I
+    invoke-virtual {v7}, Lcom/estrongs/android/ui/theme/at;->i()I
 
     move-result v7
 
     invoke-virtual {v4, v7}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-object v4, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b:Lcom/estrongs/android/ui/theme/al;
+    iget-object v4, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b:Lcom/estrongs/android/ui/theme/at;
 
-    invoke-virtual {v4}, Lcom/estrongs/android/ui/theme/al;->i()I
+    invoke-virtual {v4}, Lcom/estrongs/android/ui/theme/at;->i()I
 
     move-result v4
 
     invoke-virtual {v5, v4}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-object v4, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b:Lcom/estrongs/android/ui/theme/al;
+    iget-object v4, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b:Lcom/estrongs/android/ui/theme/at;
 
-    invoke-virtual {v4}, Lcom/estrongs/android/ui/theme/al;->i()I
+    invoke-virtual {v4}, Lcom/estrongs/android/ui/theme/at;->i()I
 
     move-result v4
 
     invoke-virtual {v6, v4}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-object v4, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v4, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     iget-object v4, v4, Lcom/estrongs/android/pop/view/utils/v;->c:Ljava/lang/String;
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     iget-object v0, v0, Lcom/estrongs/android/pop/view/utils/v;->i:Ljava/lang/String;
 
     invoke-virtual {v2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     iget-object v0, v0, Lcom/estrongs/android/pop/view/utils/v;->s:Ljava/lang/String;
 
     invoke-virtual {v5, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
     iget-object v0, v0, Lcom/estrongs/android/pop/view/utils/v;->h:Ljava/lang/String;
 
@@ -1385,20 +1576,20 @@
 
     move-result-object v0
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d:Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c:Lcom/estrongs/android/pop/view/utils/v;
 
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/pop/view/utils/n;->d(Lcom/estrongs/android/pop/view/utils/v;)Landroid/graphics/Bitmap;
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/pop/view/utils/n;->e(Lcom/estrongs/android/pop/view/utils/v;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     if-nez v0, :cond_2
 
-    const v0, 0x7f02008f
+    const v0, 0x7f020187
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    :goto_0
-    const v0, 0x7f0a037c
+    :goto_1
+    const v0, 0x7f0e05ec
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->findViewById(I)Landroid/view/View;
 
@@ -1406,15 +1597,15 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b:Lcom/estrongs/android/ui/theme/al;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b:Lcom/estrongs/android/ui/theme/at;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/ui/theme/al;->i()I
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/theme/at;->i()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->j:Landroid/view/View$OnClickListener;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->i:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -1422,28 +1613,35 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->k:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->j:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/utils/n;->a(Landroid/os/Handler;)Landroid/os/Handler;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->h:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->g:Landroid/os/Handler;
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->e()V
 
-    :goto_1
+    :goto_2
     return-void
 
-    :cond_1
+    :cond_0
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->finish()V
 
-    goto :goto_1
+    goto :goto_2
+
+    :cond_1
+    const v0, 0x7f0805fa
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->setTitle(I)V
+
+    goto/16 :goto_0
 
     :cond_2
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    goto :goto_0
+    goto :goto_1
 .end method
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
@@ -1453,13 +1651,13 @@
 
     if-ne p1, v0, :cond_0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->a()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->d()V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->i:Landroid/widget/Gallery;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->h:Landroid/widget/Gallery;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/kk;
+    new-instance v1, Lcom/estrongs/android/pop/app/kx;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/kk;-><init>(Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/kx;-><init>(Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Gallery;->setAdapter(Landroid/widget/SpinnerAdapter;)V
 
@@ -1467,12 +1665,12 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->h:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->g:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/utils/n;->a(Landroid/os/Handler;)Landroid/os/Handler;
 
     :cond_0
-    invoke-super {p0, p1, p2}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
+    invoke-super {p0, p1, p2}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result v0
 
@@ -1482,7 +1680,7 @@
 .method protected onResume()V
     .locals 0
 
-    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onResume()V
+    invoke-super {p0}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;->onResume()V
 
     return-void
 .end method
@@ -1491,7 +1689,7 @@
     .locals 1
 
     :try_start_0
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-super {p0, p1}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 

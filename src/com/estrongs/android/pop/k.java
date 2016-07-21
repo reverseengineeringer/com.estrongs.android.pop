@@ -1,18 +1,19 @@
 package com.estrongs.android.pop;
 
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.util.TypedMap;
+import android.app.Activity;
+import com.estrongs.a.a;
+import com.estrongs.a.a.p;
 
 class k
-  implements Runnable
+  implements p
 {
-  k(j paramj) {}
+  k(i parami, String paramString) {}
   
-  public void run()
+  public void a(a parama, int paramInt1, int paramInt2)
   {
-    TypedMap localTypedMap = new TypedMap();
-    localTypedMap.put("refresh", Boolean.valueOf(true));
-    ((FileExplorerActivity)a.b.a).c(a.a, localTypedMap);
+    if (4 == paramInt2) {
+      b.a.runOnUiThread(new l(this));
+    }
   }
 }
 

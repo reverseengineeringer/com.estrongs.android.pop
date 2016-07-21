@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/ESUsePromptActivity;
+.field final synthetic a:Lcom/estrongs/android/pop/app/bu;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/ESUsePromptActivity;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/bu;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/bv;->a:Lcom/estrongs/android/pop/app/ESUsePromptActivity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/bv;->a:Lcom/estrongs/android/pop/app/bu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

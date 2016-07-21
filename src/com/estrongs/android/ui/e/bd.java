@@ -1,26 +1,28 @@
 package com.estrongs.android.ui.e;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.app.diskusage.a;
-import com.estrongs.android.pop.app.diskusage.h;
 import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.view.WebViewWrapper;
 
 class bd
   implements MenuItem.OnMenuItemClickListener
 {
-  bd(w paramw) {}
+  bd(m paramm) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if ((a.k.y() == null) || (!(a.k.y() instanceof h))) {}
-    do
+    paramMenuItem = m.a(a).O();
+    if ((paramMenuItem != null) && ((paramMenuItem instanceof WebViewWrapper)))
     {
-      return true;
-      paramMenuItem = a.k.y();
-    } while (paramMenuItem == null);
-    new a(a.k, (h)paramMenuItem).show();
-    return true;
+      paramMenuItem = ((WebViewWrapper)paramMenuItem).c();
+      Intent localIntent = new Intent("android.intent.action.VIEW");
+      localIntent.setData(Uri.parse(paramMenuItem));
+      m.a(a).startActivity(localIntent);
+    }
+    return false;
   }
 }
 

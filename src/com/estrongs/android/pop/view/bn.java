@@ -1,20 +1,18 @@
 package com.estrongs.android.pop.view;
 
-import android.content.Context;
-import android.widget.LinearLayout;
-import com.estrongs.android.ui.d.b;
+import com.estrongs.android.ui.dialog.lc;
+import com.estrongs.fs.h;
 
 class bn
-  extends b
+  implements lc
 {
-  bn(FileExplorerActivity paramFileExplorerActivity, LinearLayout paramLinearLayout, Context paramContext)
-  {
-    super(paramLinearLayout, paramContext);
-  }
+  bn(bm parambm, h paramh) {}
   
-  public void a(int paramInt)
+  public void a(boolean paramBoolean)
   {
-    a.f(paramInt);
+    if (paramBoolean) {
+      bm.a(b, a);
+    }
   }
 }
 

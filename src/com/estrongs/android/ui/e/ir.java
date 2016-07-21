@@ -1,17 +1,19 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.view.a.a;
-import com.estrongs.android.view.a.e;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.app.PopAudioPlayer;
 
 class ir
-  implements e
+  implements MenuItem.OnMenuItemClickListener
 {
-  ir(io paramio) {}
+  ir(iq paramiq) {}
   
-  public void a(a parama)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    ag.a(a.b, parama.getTitle(), 0);
+    iq.a(a).b(iq.a(a).A());
+    iq.a(a).z();
+    return true;
   }
 }
 

@@ -1,15 +1,13 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.fs.impl.local.l;
-
 class ea
   implements Runnable
 {
-  ea(dy paramdy) {}
+  ea(FileExplorerActivity paramFileExplorerActivity) {}
   
   public void run()
   {
-    l.b(a.e);
+    a.f("du://");
   }
 }
 

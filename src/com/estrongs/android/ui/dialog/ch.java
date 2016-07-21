@@ -1,16 +1,20 @@
 package com.estrongs.android.ui.dialog;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.app.Activity;
+import com.estrongs.a.a;
+import com.estrongs.a.a.l;
+import com.estrongs.a.a.m;
 
 class ch
-  implements View.OnClickListener
+  implements l
 {
-  ch(cg paramcg) {}
+  ch(ca paramca) {}
   
-  public void onClick(View paramView)
+  public void a(a parama, m paramm)
   {
-    a.dismiss();
+    if ((e > 0L) && (g > 0L)) {
+      ca.a(a, ca.d(a).getString(2131231961) + String.valueOf((int)ca.a(a, h, e)) + "%", false);
+    }
   }
 }
 

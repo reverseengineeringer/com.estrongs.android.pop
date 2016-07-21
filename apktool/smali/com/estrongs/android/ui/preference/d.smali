@@ -137,7 +137,7 @@
 
     iget-object v3, p0, Lcom/estrongs/android/ui/preference/d;->a:Lcom/estrongs/android/ui/preference/FtpServerPreference;
 
-    const v4, 0x7f0b01ce
+    const v4, 0x7f080243
 
     invoke-virtual {v3, v4}, Lcom/estrongs/android/ui/preference/FtpServerPreference;->getText(I)Ljava/lang/CharSequence;
 

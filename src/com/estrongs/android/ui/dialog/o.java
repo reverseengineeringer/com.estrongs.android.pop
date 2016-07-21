@@ -1,37 +1,52 @@
 package com.estrongs.android.ui.dialog;
 
+import android.app.Activity;
 import android.view.View;
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.fs.impl.b.c;
+import com.estrongs.fs.impl.b.d;
 
 public class o
 {
-  protected c a = null;
-  private t b = null;
-  private FileExplorerActivity c;
+  protected d a = null;
+  private u b = null;
+  private Activity c;
+  private ci d;
   
-  public o(FileExplorerActivity paramFileExplorerActivity, c paramc)
+  public o(Activity paramActivity, d paramd)
   {
-    c = paramFileExplorerActivity;
-    a = paramc;
-    b = new t(this, paramFileExplorerActivity);
+    c = paramActivity;
+    a = paramd;
+    b = new u(this, paramActivity);
   }
   
   public void a()
   {
-    View localView = b.aq();
-    ct localct = new ct(localView.getContext()).a(2131427577);
-    localct.a(localView);
-    if (a.e()) {
-      localct.f(2131428624, new p(this));
+    View localView = b.aE();
+    cv localcv = new cv(localView.getContext()).a(2131232219);
+    localcv.a(localView);
+    if (a.j())
+    {
+      localcv.f(2131231941, new p(this));
+      if (!a.f()) {
+        break label123;
+      }
+      localcv.e(2131230899, new r(this));
     }
     for (;;)
     {
-      localct.e(2131427608, new r(this));
-      localct.d(2131427340, new s(this));
-      localct.c();
+      localcv.d(2131231265, new t(this));
+      d = localcv.c();
       return;
-      localct.f(2131427368, new q(this));
+      localcv.f(2131230868, new q(this));
+      break;
+      label123:
+      localcv.e(2131230862, new s(this));
+    }
+  }
+  
+  public void b()
+  {
+    if (d != null) {
+      d.dismiss();
     }
   }
 }

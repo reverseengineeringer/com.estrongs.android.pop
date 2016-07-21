@@ -1,37 +1,39 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.Context;
-import android.text.ClipboardManager;
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.am;
+import android.widget.TextView;
+import com.estrongs.android.pop.app.diskusage.a;
+import com.estrongs.fs.b.ao;
+import com.estrongs.fs.h;
 
 class hz
-  implements View.OnClickListener
+  implements Runnable
 {
-  hz(hn paramhn, Context paramContext) {}
+  hz(hq paramhq) {}
   
-  public void onClick(View paramView)
+  public void run()
   {
-    paramView = hn.a(b);
-    if (!am.ba(hn.a(b))) {
-      paramView = am.E(paramView);
+    com.estrongs.fs.b.ap localap = hq.e(a).b();
+    if (com.estrongs.android.util.ap.aY(a.c.getPath()))
+    {
+      hq.k(a).setText(2131232213);
+      hq.l(a).setText(String.valueOf(e));
     }
     for (;;)
     {
-      if (paramView != null)
-      {
-        Object localObject = a;
-        Context localContext = a;
-        localObject = (ClipboardManager)((Context)localObject).getSystemService("clipboard");
-        if (localObject != null)
-        {
-          ((ClipboardManager)localObject).setText(paramView);
-          ag.a(a, 2131428216, 0);
-        }
+      hq.a(a, hq.m(a), c);
+      if (com.estrongs.android.util.ap.bl(hq.a(a))) {
+        hq.a(a, hq.n(a), d);
       }
-      return;
+      try
+      {
+        if ((hq.e(a) != null) && (a.l != null)) {
+          a.l.b(hq.e(a).b());
+        }
+        return;
+      }
+      catch (Exception localException) {}
+      String str = e + " " + a.d + ", " + f + " " + a.e;
+      hq.l(a).setText(str);
     }
   }
 }

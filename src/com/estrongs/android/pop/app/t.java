@@ -1,24 +1,41 @@
 package com.estrongs.android.pop.app;
 
-import android.os.Handler;
-import com.estrongs.android.ui.view.ag;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.telephony.TelephonyManager;
 
 class t
-  implements Runnable
+  extends BroadcastReceiver
 {
-  t(r paramr) {}
+  t(AudioPlayerService paramAudioPlayerService) {}
   
-  public void run()
+  public void onReceive(Context paramContext, Intent paramIntent)
   {
-    r.a(a, true);
-    if (!r.a(a).e())
-    {
-      ag.a(r.d(a), 2131428517, 1);
-      r.a(a, false);
-      return;
+    paramContext = paramIntent.getExtras().getString("state");
+    if (paramContext.equals(TelephonyManager.EXTRA_STATE_RINGING)) {
+      if ((AudioPlayerService.d(a)) && (!AudioPlayerService.e(a)))
+      {
+        a.a = true;
+        a.u();
+      }
     }
-    r.g(a).post(new u(this));
-    r.a(a, false);
+    do
+    {
+      do
+      {
+        return;
+        if (!paramContext.equals(TelephonyManager.EXTRA_STATE_OFFHOOK)) {
+          break;
+        }
+      } while ((!AudioPlayerService.d(a)) || (AudioPlayerService.e(a)));
+      a.a = true;
+      a.u();
+      return;
+    } while ((!paramContext.equals(TelephonyManager.EXTRA_STATE_IDLE)) || (!AudioPlayerService.d(a)) || (!AudioPlayerService.e(a)) || (!a.a));
+    a.a = false;
+    a.F();
   }
 }
 

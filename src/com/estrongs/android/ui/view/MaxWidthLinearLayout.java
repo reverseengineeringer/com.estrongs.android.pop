@@ -5,7 +5,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View.MeasureSpec;
 import android.widget.LinearLayout;
-import com.estrongs.android.pop.esclasses.e;
+import com.estrongs.android.pop.esclasses.i;
 
 public class MaxWidthLinearLayout
   extends LinearLayout
@@ -29,15 +29,20 @@ public class MaxWidthLinearLayout
     super(paramContext, paramAttributeSet, paramInt);
   }
   
-  public void a(int paramInt)
+  public int getMaxHeight()
   {
-    a = paramInt;
+    return b;
+  }
+  
+  public int getMaxWidth()
+  {
+    return a;
   }
   
   protected void onMeasure(int paramInt1, int paramInt2)
   {
     super.onMeasure(paramInt1, paramInt2);
-    if (!e.b()) {
+    if (!i.b()) {
       if ((a <= 0) && (b <= 0)) {
         break label103;
       }
@@ -63,6 +68,16 @@ public class MaxWidthLinearLayout
       }
       return;
     }
+  }
+  
+  public void setMaxHeight(int paramInt)
+  {
+    b = paramInt;
+  }
+  
+  public void setMaxWidth(int paramInt)
+  {
+    a = paramInt;
   }
 }
 

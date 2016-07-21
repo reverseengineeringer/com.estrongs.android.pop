@@ -1,55 +1,21 @@
 package com.estrongs.fs;
 
-import com.estrongs.android.util.am;
+import com.estrongs.android.scanner.b.e;
+import com.estrongs.android.scanner.f;
+import com.estrongs.fs.util.j;
 
 public class n
-  extends a
+  extends k
 {
-  protected String displayName;
-  
-  public n(String paramString)
+  public Boolean a(f paramf)
   {
-    super(paramString, m.a);
+    paramf.a(Integer.valueOf(2));
+    return Boolean.valueOf(true);
   }
   
-  public n(String paramString, m paramm)
+  public boolean a(h paramh)
   {
-    super(paramString, paramm);
-  }
-  
-  public n(String paramString1, m paramm, String paramString2)
-  {
-    super(paramString1, paramm);
-    displayName = paramString2;
-  }
-  
-  public n(String paramString1, String paramString2, m paramm, String paramString3)
-  {
-    super(paramString1, paramString2, paramm);
-    displayName = paramString3;
-  }
-  
-  protected m doGetFileType()
-  {
-    return m.a;
-  }
-  
-  public boolean exists()
-  {
-    return false;
-  }
-  
-  public String getName()
-  {
-    if (displayName != null) {
-      return displayName;
-    }
-    return am.d(path);
-  }
-  
-  public void setDisplayName(String paramString)
-  {
-    displayName = paramString;
+    return e.a("." + j.b(paramh.getAbsolutePath().toLowerCase())) == 2;
   }
 }
 

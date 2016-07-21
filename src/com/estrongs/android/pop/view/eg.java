@@ -1,17 +1,77 @@
 package com.estrongs.android.pop.view;
 
+import com.estrongs.android.pop.app.f.s;
+import com.estrongs.android.pop.app.f.w;
+import com.estrongs.android.util.bk;
 import com.estrongs.fs.h;
 import com.estrongs.fs.i;
-import com.estrongs.fs.m;
 
-class eg
+public class eg
   implements i
 {
-  eg(FileExplorerActivity paramFileExplorerActivity, boolean paramBoolean) {}
+  private String b;
+  private String d;
+  private w e = null;
+  private s f = null;
+  private boolean g = true;
+  
+  public eg(FileExplorerActivity paramFileExplorerActivity) {}
+  
+  public void a()
+  {
+    g = true;
+    b = null;
+    d = null;
+    e = null;
+    f = null;
+  }
+  
+  public void a(long paramLong1, long paramLong2)
+  {
+    if ((paramLong1 < 0L) && (paramLong2 < 0L))
+    {
+      e = null;
+      return;
+    }
+    e = new w(paramLong1, paramLong2);
+    g = false;
+  }
+  
+  public void a(String paramString)
+  {
+    if (bk.b(paramString))
+    {
+      b = paramString;
+      d = paramString.trim().toLowerCase();
+      g = false;
+    }
+  }
   
   public boolean a(h paramh)
   {
-    return (paramh.getFileType().a()) && ((!paramh.getName().startsWith(".")) || (a));
+    if (g) {}
+    do
+    {
+      return true;
+      if ((d != null) && (!"".equals(d)) && (paramh.getName().toLowerCase().indexOf(d) < 0)) {
+        return false;
+      }
+      if ((e != null) && (!e.a(paramh))) {
+        return false;
+      }
+    } while ((f == null) || (f.a(paramh)));
+    return false;
+  }
+  
+  public void b(long paramLong1, long paramLong2)
+  {
+    if ((paramLong1 < 0L) && (paramLong2 < 0L))
+    {
+      f = null;
+      return;
+    }
+    f = new s(paramLong1, paramLong2);
+    g = false;
   }
 }
 

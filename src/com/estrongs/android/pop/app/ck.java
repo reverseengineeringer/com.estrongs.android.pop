@@ -1,20 +1,16 @@
 package com.estrongs.android.pop.app;
 
-import android.app.NotificationManager;
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.fs.b.ay;
+import com.estrongs.android.view.dx;
+import com.estrongs.fs.h;
 
 class ck
-  implements View.OnClickListener
+  implements dx
 {
-  ck(FileSharingNotificationActivity paramFileSharingNotificationActivity) {}
+  ck(FileChooserActivity paramFileChooserActivity) {}
   
-  public void onClick(View paramView)
+  public void a(h paramh)
   {
-    ay.b();
-    FileSharingNotificationActivity.a(a).cancel(1);
-    a.finish();
+    FileChooserActivity.a(a, paramh);
   }
 }
 

@@ -1,34 +1,24 @@
 package com.estrongs.android.ui.dialog;
 
-import android.os.Handler;
-import android.os.Message;
-import com.estrongs.android.ui.a.g;
-import com.estrongs.android.ui.view.NaviListView;
+import com.estrongs.fs.util.g;
+import com.estrongs.fs.util.h;
+import com.estrongs.fs.util.j;
+import java.io.File;
 
 class cz
-  extends Handler
+  implements h
 {
-  cz(cy paramcy, NaviListView paramNaviListView) {}
+  private long b = -1L;
   
-  public void handleMessage(Message paramMessage)
+  cz(cy paramcy) {}
+  
+  public void a(File paramFile)
   {
-    super.handleMessage(paramMessage);
-    int i = what;
-    int j = arg1;
-    if (i == 1) {
-      if (arg2 == 0) {
-        a.a();
-      }
-    }
-    do
+    if ((b == -1L) || (System.currentTimeMillis() - b > 300L))
     {
-      do
-      {
-        return;
-      } while (i != 2);
-      paramMessage = (String)obj;
-    } while (!b.a(paramMessage));
-    b.a.a();
+      b = System.currentTimeMillis();
+      cy.a(a, new String[] { "" + a.a.c(), j.c(a.a.b()) });
+    }
   }
 }
 

@@ -24,12 +24,12 @@ class x
       paramPreference = (String)paramObject + "/";
     }
     DirectoryPreferenceFragment.b(a, paramPreference);
-    DirectoryPreferenceFragment.a(a, 3);
+    DirectoryPreferenceFragment.a(a, 0);
     if (bool)
     {
-      DirectoryPreferenceFragment.e(a).setSummary(paramPreference);
-      DirectoryPreferenceFragment.e(a).setText(paramPreference);
-      DirectoryPreferenceFragment.c(a).u(paramPreference);
+      DirectoryPreferenceFragment.b(a).setSummary(paramPreference);
+      DirectoryPreferenceFragment.b(a).setText(paramPreference);
+      DirectoryPreferenceFragment.c(a).i(paramPreference);
       return true;
     }
     DirectoryPreferenceFragment.a(a);

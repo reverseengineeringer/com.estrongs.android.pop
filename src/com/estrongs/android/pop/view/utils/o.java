@@ -1,43 +1,28 @@
 package com.estrongs.android.pop.view.utils;
 
 import android.os.Message;
-import com.estrongs.android.util.ab;
-import com.estrongs.android.util.y;
+import com.estrongs.android.util.aa;
+import com.estrongs.android.util.af;
 import java.io.File;
 
 class o
-  implements ab
+  implements af
 {
   o(n paramn) {}
   
-  public void a(Object paramObject) {}
-  
-  public void a(Object paramObject, long paramLong1, long paramLong2) {}
-  
-  public void a(Object paramObject, Throwable paramThrowable)
+  public void downloadCompleted(Object paramObject)
   {
     n.a(a, false);
-    paramObject = new File(((y)paramObject).e());
-    if (((File)paramObject).exists()) {
-      ((File)paramObject).delete();
-    }
-    paramObject = new Message();
-    arg1 = 123458;
-    a.a((Message)paramObject, 1000L);
-  }
-  
-  public void b(Object paramObject)
-  {
-    n.a(a, false);
-    paramObject = (y)paramObject;
-    int i = n.a(a, ((y)paramObject).e());
+    paramObject = (aa)paramObject;
+    int i = n.a(a, ((aa)paramObject).e());
     if (i >= 0)
     {
-      paramObject = new File(((y)paramObject).e());
+      paramObject = new File(((aa)paramObject).e());
       File localFile = new File(n.b);
       localFile.delete();
       ((File)paramObject).renameTo(localFile);
     }
+    n.b(a, true);
     if (i > 0)
     {
       paramObject = new Message();
@@ -49,6 +34,23 @@ class o
     arg1 = 123458;
     a.a((Message)paramObject, 0L);
   }
+  
+  public void downloadError(Object paramObject, Throwable paramThrowable)
+  {
+    n.a(a, false);
+    paramObject = new File(((aa)paramObject).e());
+    if (((File)paramObject).exists()) {
+      ((File)paramObject).delete();
+    }
+    n.b(a, true);
+    paramObject = new Message();
+    arg1 = 123458;
+    a.a((Message)paramObject, 1000L);
+  }
+  
+  public void downloadProgress(Object paramObject, long paramLong1, long paramLong2) {}
+  
+  public void downloadStarted(Object paramObject) {}
 }
 
 /* Location:

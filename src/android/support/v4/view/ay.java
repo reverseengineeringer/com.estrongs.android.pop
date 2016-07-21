@@ -1,39 +1,46 @@
 package android.support.v4.view;
 
+import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewParent;
 
 class ay
-  extends ax
+  implements bc
 {
-  public void a(View paramView, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+  public MenuItem a(MenuItem paramMenuItem, bd parambd)
   {
-    be.a(paramView, paramInt1, paramInt2, paramInt3, paramInt4);
+    return paramMenuItem;
   }
   
-  public void a(View paramView, Runnable paramRunnable)
+  public MenuItem a(MenuItem paramMenuItem, View paramView)
   {
-    be.a(paramView, paramRunnable);
+    return paramMenuItem;
   }
   
-  public void b(View paramView)
+  public View a(MenuItem paramMenuItem)
   {
-    be.a(paramView);
+    return null;
   }
   
-  public void b(View paramView, int paramInt)
+  public void a(MenuItem paramMenuItem, int paramInt) {}
+  
+  public MenuItem b(MenuItem paramMenuItem, int paramInt)
   {
-    be.a(paramView, paramInt);
+    return paramMenuItem;
   }
   
-  public int c(View paramView)
+  public boolean b(MenuItem paramMenuItem)
   {
-    return be.b(paramView);
+    return false;
   }
   
-  public ViewParent f(View paramView)
+  public boolean c(MenuItem paramMenuItem)
   {
-    return be.c(paramView);
+    return false;
+  }
+  
+  public boolean d(MenuItem paramMenuItem)
+  {
+    return false;
   }
 }
 

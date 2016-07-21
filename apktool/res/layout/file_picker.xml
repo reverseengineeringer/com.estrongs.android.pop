@@ -16,7 +16,13 @@
     </LinearLayout>
     <View android:background="@drawable/toolbar_search_sp" android:layout_width="fill_parent" android:layout_height="@dimen/dp_1" />
     <FrameLayout android:id="@id/contentPanel" android:layout_width="fill_parent" android:layout_height="@dimen/dp_0" android:layout_weight="1.0">
-        <include android:id="@id/content_grid" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/content_grid" />
-        <ProgressBar android:layout_gravity="center" android:id="@id/load_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ProgressBar" />
+        <FrameLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textColor="@color/main_content_detail_text" android:gravity="center" android:layout_gravity="center" android:id="@android:id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/folder_empty" />
+            <android.support.v7.widget.RecyclerView android:id="@id/grid_view" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/progressView" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ProgressBar" />
+                <TextView android:textColor="@color/main_content_detail_text" android:id="@id/progressMessage" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </FrameLayout>
     </FrameLayout>
 </LinearLayout>

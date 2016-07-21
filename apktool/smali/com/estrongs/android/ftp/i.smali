@@ -84,7 +84,7 @@
 .method public run()V
     .locals 12
 
-    const/4 v5, 0x6
+    const/4 v6, 0x6
 
     const/4 v7, 0x4
 
@@ -139,7 +139,7 @@
     :try_start_1
     iget-object v0, p0, Lcom/estrongs/android/ftp/i;->a:Ljava/net/ServerSocket;
 
-    if-eqz v0, :cond_2f
+    if-eqz v0, :cond_30
 
     iget-object v0, p0, Lcom/estrongs/android/ftp/i;->a:Ljava/net/ServerSocket;
 
@@ -912,15 +912,23 @@
 
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
-    move-result v1
+    move-result v5
 
-    if-eqz v1, :cond_19
+    if-eqz v5, :cond_19
 
     invoke-virtual {v3}, Ljava/io/File;->isDirectory()Z
 
+    move-result v5
+
+    if-nez v5, :cond_19
+
+    iget-object v5, p0, Lcom/estrongs/android/ftp/i;->h:Lcom/estrongs/android/ftp/h;
+
+    invoke-static {v5, v1}, Lcom/estrongs/android/ftp/h;->b(Lcom/estrongs/android/ftp/h;Ljava/lang/String;)Z
+
     move-result v1
 
-    if-eqz v1, :cond_1c
+    if-nez v1, :cond_1c
 
     :cond_19
     iget-object v0, p0, Lcom/estrongs/android/ftp/i;->h:Lcom/estrongs/android/ftp/h;
@@ -1219,7 +1227,7 @@
     :try_start_2b
     iget v0, p0, Lcom/estrongs/android/ftp/i;->d:I
 
-    if-eq v0, v5, :cond_24
+    if-eq v0, v6, :cond_24
 
     iget v0, p0, Lcom/estrongs/android/ftp/i;->d:I
 
@@ -1240,10 +1248,19 @@
 
     invoke-virtual {v3}, Ljava/io/File;->isDirectory()Z
 
+    move-result v5
+
+    if-nez v5, :cond_25
+
+    iget-object v5, p0, Lcom/estrongs/android/ftp/i;->h:Lcom/estrongs/android/ftp/h;
+
+    invoke-static {v5, v1}, Lcom/estrongs/android/ftp/h;->b(Lcom/estrongs/android/ftp/h;Ljava/lang/String;)Z
+
     move-result v1
 
-    if-eqz v1, :cond_27
+    if-nez v1, :cond_28
 
+    :cond_25
     iget-object v0, p0, Lcom/estrongs/android/ftp/i;->h:Lcom/estrongs/android/ftp/h;
 
     const-string v1, "501 target is directory.\r\n"
@@ -1253,14 +1270,14 @@
     .catch Ljava/lang/Exception; {:try_start_2b .. :try_end_2b} :catch_f
     .catchall {:try_start_2b .. :try_end_2b} :catchall_b
 
-    if-eqz v4, :cond_25
+    if-eqz v4, :cond_26
 
     :try_start_2c
     invoke-virtual {v4}, Ljava/net/Socket;->close()V
     :try_end_2c
     .catch Ljava/lang/Exception; {:try_start_2c .. :try_end_2c} :catch_a
 
-    :cond_25
+    :cond_26
     :goto_10
     iget-object v0, p0, Lcom/estrongs/android/ftp/i;->h:Lcom/estrongs/android/ftp/h;
 
@@ -1285,7 +1302,7 @@
 
     move-result v2
 
-    if-ne v0, v2, :cond_26
+    if-ne v0, v2, :cond_27
 
     iget-object v0, p0, Lcom/estrongs/android/ftp/i;->h:Lcom/estrongs/android/ftp/h;
 
@@ -1303,7 +1320,7 @@
 
     invoke-static {v0, v2}, Lcom/estrongs/android/ftp/h;->a(Lcom/estrongs/android/ftp/h;Lcom/estrongs/android/ftp/i;)Lcom/estrongs/android/ftp/i;
 
-    :cond_26
+    :cond_27
     monitor-exit v1
     :try_end_2d
     .catchall {:try_start_2d .. :try_end_2d} :catchall_9
@@ -1330,17 +1347,17 @@
 
     throw v0
 
-    :cond_27
+    :cond_28
     :try_start_2f
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
     move-result v1
 
-    if-eqz v1, :cond_28
+    if-eqz v1, :cond_29
 
     iget v1, p0, Lcom/estrongs/android/ftp/i;->d:I
 
-    if-ne v1, v5, :cond_28
+    if-ne v1, v6, :cond_29
 
     iget-wide v6, v0, Lcom/estrongs/android/ftp/j;->a:J
 
@@ -1348,7 +1365,7 @@
 
     cmp-long v1, v6, v10
 
-    if-nez v1, :cond_28
+    if-nez v1, :cond_29
 
     invoke-static {}, Lcom/estrongs/fs/d;->a()Lcom/estrongs/fs/d;
 
@@ -1362,7 +1379,7 @@
 
     invoke-virtual {v1, v5, v6}, Lcom/estrongs/fs/d;->a(Ljava/lang/String;Lcom/estrongs/a/b/s;)Z
 
-    :cond_28
+    :cond_29
     iget-object v1, p0, Lcom/estrongs/android/ftp/i;->h:Lcom/estrongs/android/ftp/h;
 
     const-string v5, "150 Opening data connection for file.\r\n"
@@ -1378,16 +1395,16 @@
     .catch Ljava/lang/Exception; {:try_start_30 .. :try_end_30} :catch_4
     .catchall {:try_start_30 .. :try_end_30} :catchall_b
 
-    if-eqz v1, :cond_2b
+    if-eqz v1, :cond_2c
 
-    if-eqz v4, :cond_29
+    if-eqz v4, :cond_2a
 
     :try_start_31
     invoke-virtual {v4}, Ljava/net/Socket;->close()V
     :try_end_31
     .catch Ljava/lang/Exception; {:try_start_31 .. :try_end_31} :catch_b
 
-    :cond_29
+    :cond_2a
     :goto_11
     iget-object v0, p0, Lcom/estrongs/android/ftp/i;->h:Lcom/estrongs/android/ftp/h;
 
@@ -1412,7 +1429,7 @@
 
     move-result v2
 
-    if-ne v0, v2, :cond_2a
+    if-ne v0, v2, :cond_2b
 
     iget-object v0, p0, Lcom/estrongs/android/ftp/i;->h:Lcom/estrongs/android/ftp/h;
 
@@ -1430,7 +1447,7 @@
 
     invoke-static {v0, v2}, Lcom/estrongs/android/ftp/h;->a(Lcom/estrongs/android/ftp/h;Lcom/estrongs/android/ftp/i;)Lcom/estrongs/android/ftp/i;
 
-    :cond_2a
+    :cond_2b
     monitor-exit v1
     :try_end_32
     .catchall {:try_start_32 .. :try_end_32} :catchall_a
@@ -1457,7 +1474,7 @@
 
     throw v0
 
-    :cond_2b
+    :cond_2c
     :try_start_34
     iget-object v1, p0, Lcom/estrongs/android/ftp/i;->h:Lcom/estrongs/android/ftp/h;
 
@@ -1483,14 +1500,14 @@
     :catchall_b
     move-exception v0
 
-    if-eqz v4, :cond_2c
+    if-eqz v4, :cond_2d
 
     :try_start_35
     invoke-virtual {v4}, Ljava/net/Socket;->close()V
     :try_end_35
     .catch Ljava/lang/Exception; {:try_start_35 .. :try_end_35} :catch_e
 
-    :cond_2c
+    :cond_2d
     :goto_12
     iget-object v1, p0, Lcom/estrongs/android/ftp/i;->h:Lcom/estrongs/android/ftp/h;
 
@@ -1515,7 +1532,7 @@
 
     move-result v3
 
-    if-ne v2, v3, :cond_2d
+    if-ne v2, v3, :cond_2e
 
     iget-object v2, p0, Lcom/estrongs/android/ftp/i;->h:Lcom/estrongs/android/ftp/h;
 
@@ -1533,14 +1550,14 @@
 
     invoke-static {v2, v3}, Lcom/estrongs/android/ftp/h;->a(Lcom/estrongs/android/ftp/h;Lcom/estrongs/android/ftp/i;)Lcom/estrongs/android/ftp/i;
 
-    :cond_2d
+    :cond_2e
     monitor-exit v1
     :try_end_36
     .catchall {:try_start_36 .. :try_end_36} :catchall_e
 
     iget-boolean v1, p0, Lcom/estrongs/android/ftp/i;->f:Z
 
-    if-eqz v1, :cond_2e
+    if-eqz v1, :cond_2f
 
     iget-object v1, p0, Lcom/estrongs/android/ftp/i;->h:Lcom/estrongs/android/ftp/h;
 
@@ -1548,7 +1565,7 @@
 
     invoke-static {v1, v2}, Lcom/estrongs/android/ftp/h;->a(Lcom/estrongs/android/ftp/h;Ljava/lang/String;)V
 
-    :cond_2e
+    :cond_2f
     throw v0
 
     :catchall_c
@@ -1648,7 +1665,7 @@
 
     goto/16 :goto_1
 
-    :cond_2f
+    :cond_30
     move-object v0, v4
 
     goto/16 :goto_0

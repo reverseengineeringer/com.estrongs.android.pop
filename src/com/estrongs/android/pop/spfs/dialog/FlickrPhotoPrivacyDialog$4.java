@@ -10,7 +10,7 @@ import com.estrongs.android.pop.spfs.Album;
 import com.estrongs.android.pop.spfs.SPFileInfo;
 import com.estrongs.android.pop.spfs.SPFileObject;
 import com.estrongs.android.util.TypedMap;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.util.bk;
 import java.util.List;
 
 class FlickrPhotoPrivacyDialog$4
@@ -40,18 +40,18 @@ class FlickrPhotoPrivacyDialog$4
         FlickrPhotoPrivacyDialog.access$1300(this$0).put("sets_delete", FlickrPhotoPrivacyDialog.access$100(this$0));
       }
       if ((FlickrPhotoPrivacyDialog.access$1400(this$0)) || (FlickrPhotoPrivacyDialog.access$200(this$0) == null) || (FlickrPhotoPrivacyDialog.access$200(this$0).size() <= 0)) {
-        break label639;
+        break label641;
       }
       paramDialogInterface = (Album)FlickrPhotoPrivacyDialog.access$200(this$0).get(0);
-      if (bd.a(path)) {
-        break label594;
+      if (bk.a(path)) {
+        break label596;
       }
       FlickrPhotoPrivacyDialog.access$1300(this$0).put("albums_selected", access$200this$0).get(0)).path);
-      label396:
+      label398:
       if (!FlickrPhotoPrivacyDialog.access$1400(this$0))
       {
         if (!FlickrPhotoPrivacyDialog.access$1600(this$0).isChecked()) {
-          break label699;
+          break label701;
         }
         FlickrPhotoPrivacyDialog.access$1300(this$0).put("is_public", Boolean.valueOf(false));
         FlickrPhotoPrivacyDialog.access$1300(this$0).put("is_friend", Boolean.valueOf(FlickrPhotoPrivacyDialog.access$800(this$0).isChecked()));
@@ -68,19 +68,19 @@ class FlickrPhotoPrivacyDialog$4
       FlickrPhotoPrivacyDialog.access$1300(this$0).put("title", FlickrPhotoPrivacyDialog.access$1000(this$0).getText().toString());
       FlickrPhotoPrivacyDialog.access$1300(this$0).put("description", FlickrPhotoPrivacyDialog.access$1200(this$0).getText().toString());
       break;
-      label594:
-      if (bd.a(name)) {
-        break label396;
+      label596:
+      if (bk.a(name)) {
+        break label398;
       }
       FlickrPhotoPrivacyDialog.access$1300(this$0).put("albums_new", access$200this$0).get(0)).name);
-      break label396;
-      label639:
+      break label398;
+      label641:
       if ((FlickrPhotoPrivacyDialog.access$600(this$0) == null) || (FlickrPhotoPrivacyDialog.access$600(this$0).size() <= 0)) {
-        break label396;
+        break label398;
       }
       FlickrPhotoPrivacyDialog.access$1300(this$0).put("albums_selected", access$600this$0).get(0)).path);
-      break label396;
-      label699:
+      break label398;
+      label701:
       FlickrPhotoPrivacyDialog.access$1300(this$0).put("is_public", Boolean.valueOf(true));
       FlickrPhotoPrivacyDialog.access$1300(this$0).put("is_friend", Boolean.valueOf(false));
       FlickrPhotoPrivacyDialog.access$1300(this$0).put("is_family", Boolean.valueOf(false));

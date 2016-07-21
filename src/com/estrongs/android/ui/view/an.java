@@ -1,24 +1,29 @@
 package com.estrongs.android.ui.view;
 
 import android.media.MediaPlayer;
-import android.media.MediaPlayer.OnErrorListener;
-import android.util.Log;
-import android.widget.MediaController;
+import android.media.MediaPlayer.OnVideoSizeChangedListener;
+import android.view.SurfaceHolder;
 
 class an
-  implements MediaPlayer.OnErrorListener
+  implements MediaPlayer.OnVideoSizeChangedListener
 {
   an(ESVideoView paramESVideoView) {}
   
-  public boolean onError(MediaPlayer paramMediaPlayer, int paramInt1, int paramInt2)
+  public void onVideoSizeChanged(MediaPlayer paramMediaPlayer, int paramInt1, int paramInt2)
   {
-    Log.d(ESVideoView.l(a), "Error: " + paramInt1 + "," + paramInt2);
-    ESVideoView.c(a, -1);
-    ESVideoView.d(a, -1);
-    if (ESVideoView.e(a) != null) {
-      ESVideoView.e(a).hide();
+    try
+    {
+      ESVideoView.a(a, paramMediaPlayer.getVideoWidth());
+      ESVideoView.b(a, paramMediaPlayer.getVideoHeight());
+      if ((ESVideoView.a(a) != 0) && (ESVideoView.b(a) != 0)) {
+        a.getHolder().setFixedSize(ESVideoView.a(a), ESVideoView.b(a));
+      }
+      return;
     }
-    return (ESVideoView.m(a) != null) && (ESVideoView.m(a).onError(ESVideoView.d(a), paramInt1, paramInt2));
+    catch (Exception paramMediaPlayer)
+    {
+      paramMediaPlayer.printStackTrace();
+    }
   }
 }
 

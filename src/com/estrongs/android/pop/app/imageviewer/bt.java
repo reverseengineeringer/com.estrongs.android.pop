@@ -1,26 +1,21 @@
 package com.estrongs.android.pop.app.imageviewer;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.pop.app.imageviewer.gallery.f;
 
 class bt
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
-  bt(ViewImage21 paramViewImage21, CharSequence[] paramArrayOfCharSequence) {}
+  bt(ViewImage21 paramViewImage21) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void run()
   {
-    long l = bd.a(a[paramInt]);
-    if ((l > 0L) && (b.q != l))
+    if (a.c < a.e.b() - 1)
     {
-      b.q = l;
-      paramDialogInterface = ViewImage21.t(b).edit();
-      paramDialogInterface.putLong("slide_setting_interval", b.q);
-      paramDialogInterface.commit();
+      ViewImage21.i(a).setSelection(a.c + 1);
+      a.a(true);
+      return;
     }
+    a.e();
   }
 }
 

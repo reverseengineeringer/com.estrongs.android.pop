@@ -3,14 +3,14 @@
 
 
 # instance fields
-.field final synthetic i:Lcom/estrongs/android/ui/b/f;
+.field final synthetic h:Lcom/estrongs/android/ui/b/f;
 
 
 # direct methods
 .method constructor <init>(Lcom/estrongs/android/ui/b/f;Landroid/app/Activity;Landroid/view/ViewGroup;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/b/g;->i:Lcom/estrongs/android/ui/b/f;
+    iput-object p1, p0, Lcom/estrongs/android/ui/b/g;->h:Lcom/estrongs/android/ui/b/f;
 
     invoke-direct {p0, p2, p3}, Lcom/estrongs/android/ui/b/a;-><init>(Landroid/app/Activity;Landroid/view/ViewGroup;)V
 
@@ -22,7 +22,7 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f0a03b9
+    const v0, 0x7f0e063d
 
     return v0
 .end method
@@ -30,7 +30,7 @@
 .method protected a(Lcom/estrongs/a/a/m;)Ljava/lang/String;
     .locals 3
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/b/g;->i:Lcom/estrongs/android/ui/b/f;
+    iget-object v0, p0, Lcom/estrongs/android/ui/b/g;->h:Lcom/estrongs/android/ui/b/f;
 
     invoke-static {v0}, Lcom/estrongs/android/ui/b/f;->a(Lcom/estrongs/android/ui/b/f;)Ljava/lang/Object;
 
@@ -39,7 +39,7 @@
     monitor-enter v1
 
     :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/b/g;->i:Lcom/estrongs/android/ui/b/f;
+    iget-object v0, p0, Lcom/estrongs/android/ui/b/g;->h:Lcom/estrongs/android/ui/b/f;
 
     invoke-static {v0}, Lcom/estrongs/android/ui/b/f;->b(Lcom/estrongs/android/ui/b/f;)Lcom/estrongs/a/a;
     :try_end_0
@@ -50,7 +50,7 @@
     if-eqz v0, :cond_0
 
     :try_start_1
-    iget-object v0, p0, Lcom/estrongs/android/ui/b/g;->i:Lcom/estrongs/android/ui/b/f;
+    iget-object v0, p0, Lcom/estrongs/android/ui/b/g;->h:Lcom/estrongs/android/ui/b/f;
 
     invoke-static {v0}, Lcom/estrongs/android/ui/b/f;->b(Lcom/estrongs/android/ui/b/f;)Lcom/estrongs/a/a;
 

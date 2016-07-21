@@ -1,25 +1,15 @@
 package com.estrongs.android.pop.utils;
 
-import android.widget.TextView;
-import com.estrongs.a.a;
-import com.estrongs.a.a.m;
-import com.estrongs.a.a.p;
-import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.fs.util.j;
+import com.estrongs.android.util.bg;
+import com.estrongs.fs.h;
+import com.estrongs.fs.i;
 
-class bu
-  implements p
+final class bu
+  implements i
 {
-  bu(bn parambn, StringBuilder paramStringBuilder, String paramString, ESActivity paramESActivity, TextView paramTextView) {}
-  
-  public void a(a parama, int paramInt1, int paramInt2)
+  public boolean a(h paramh)
   {
-    if ((paramInt2 == 5) || (paramInt2 == 4))
-    {
-      a.delete(0, a.length());
-      a.append(b).append("\n\n").append(c.getString(2131427581)).append(processData.d).append(" ").append(c.getString(2131427428)).append(", ").append(c.getString(2131427580)).append(j.c(processData.f));
-      c.runOnUiThread(new bv(this));
-    }
+    return bg.b(paramh);
   }
 }
 

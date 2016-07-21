@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<devices>
+    <default_device>
+        <item plug="ac" screen="on" time="3967350" count="50" />
+        <item plug="ac" screen="off" time="3383250" count="50" />
+        <item plug="usb" screen="on" time="8088400" count="50" />
+        <item plug="usb" screen="off" time="5766600" count="50" />
+    </default_device>
+</devices>
+

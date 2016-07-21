@@ -7,7 +7,7 @@ import android.database.MatrixCursor;
 import android.database.MatrixCursor.RowBuilder;
 import android.net.Uri;
 import android.os.ParcelFileDescriptor;
-import com.estrongs.android.util.bc;
+import com.estrongs.android.util.bg;
 import java.io.File;
 import java.io.FileNotFoundException;
 
@@ -51,7 +51,7 @@ public class FileContentProvider
   
   public String getType(Uri paramUri)
   {
-    return bc.S(a(paramUri));
+    return bg.U(a(paramUri));
   }
   
   public Uri insert(Uri paramUri, ContentValues paramContentValues)
@@ -122,7 +122,7 @@ public class FileContentProvider
     if (i > 0)
     {
       paramArrayOfString1 = paramString1.substring(i);
-      str = bc.S(paramString1);
+      str = bg.U(paramString1);
       l1 = localFile.length();
       l2 = localFile.lastModified();
       int j = paramUri.length;

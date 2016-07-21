@@ -2,7 +2,7 @@ package com.estrongs.io.archive.sevenzip;
 
 import android.app.Activity;
 import android.os.ConditionVariable;
-import com.estrongs.android.ui.dialog.ct;
+import com.estrongs.android.ui.dialog.cv;
 import java.io.File;
 
 final class h
@@ -15,13 +15,13 @@ final class h
     String[] arrayOfString = new String[1];
     arrayOfString[0] = null;
     if (a[0] != 0) {
-      arrayOfString[0] = b.getString(2131427729, new Object[] { c });
+      arrayOfString[0] = b.getString(2131232515, new Object[] { c });
     }
-    for (String str = b.getString(2131427730, new Object[] { c });; str = b.getString(2131427725, new Object[] { c }))
+    for (String str = b.getString(2131231788, new Object[] { c });; str = b.getString(2131231389, new Object[] { c }))
     {
-      new ct(b).a(arrayOfString[0]).b(str).b(2131427339, new j(this, arrayOfString)).c(2131427340, new i(this)).c();
+      new cv(b).a(arrayOfString[0]).b(str).b(2131231270, new j(this, arrayOfString)).c(2131231265, new i(this)).c();
       return;
-      arrayOfString[0] = b.getString(2131427724, new Object[] { c });
+      arrayOfString[0] = b.getString(2131231394, new Object[] { c });
     }
   }
 }

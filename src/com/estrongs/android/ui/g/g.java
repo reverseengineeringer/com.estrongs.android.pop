@@ -1,6 +1,6 @@
 package com.estrongs.android.ui.g;
 
-import com.estrongs.android.util.y;
+import com.estrongs.android.util.aa;
 import java.io.IOException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
@@ -17,7 +17,7 @@ class g
     {
       if (c.a(a.a))
       {
-        new y("http://www.estrongs.com/channel?iid=" + c.b(a.a)).c();
+        new aa("http://www.estrongs.com/channel?iid=" + c.b(a.a)).c();
         return;
       }
       HttpGet localHttpGet = new HttpGet("http://www.estrongs.com/console/service/0918/?iid=" + c.c(a.a));

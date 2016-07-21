@@ -3,11 +3,11 @@ package com.estrongs.android.pop.view;
 class v
   implements Runnable
 {
-  v(FileExplorerActivity paramFileExplorerActivity) {}
+  v(FileExplorerActivity paramFileExplorerActivity, String paramString) {}
   
   public void run()
   {
-    a.e("pcs://");
+    b.f("archive://" + a);
   }
 }
 

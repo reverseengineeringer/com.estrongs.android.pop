@@ -1,69 +1,68 @@
 package com.estrongs.android.ui.a;
 
-import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
-import com.estrongs.android.pop.esclasses.g;
+import android.graphics.Camera;
+import android.graphics.Matrix;
+import android.view.animation.Animation;
+import android.view.animation.Transformation;
 
 public class d
-  extends BaseAdapter
+  extends Animation
 {
-  private Context a;
-  private String[] b;
-  private int[] c;
-  private String[] d;
+  private final float a;
+  private final float b;
+  private final float c;
+  private final float d;
+  private final float e;
+  private final boolean f;
+  private Camera g;
+  private final boolean h;
   
-  public d(Context paramContext)
+  public d(float paramFloat1, float paramFloat2, float paramFloat3, float paramFloat4, float paramFloat5, boolean paramBoolean1, boolean paramBoolean2)
   {
-    a = paramContext;
-    b = new String[] { "Flickr", "Instagram", "Facebook" };
-    c = new int[] { 2130837549, 2130837550, 2130837548 };
-    d = new String[] { "Flickr", "Instagram", "Facebook" };
+    a = paramFloat1;
+    b = paramFloat2;
+    c = paramFloat3;
+    d = paramFloat4;
+    e = paramFloat5;
+    f = paramBoolean1;
+    h = paramBoolean2;
   }
   
-  public String a(int paramInt)
+  protected void applyTransformation(float paramFloat, Transformation paramTransformation)
   {
-    return b[paramInt];
-  }
-  
-  public int b(int paramInt)
-  {
-    return c[paramInt];
-  }
-  
-  public String c(int paramInt)
-  {
-    return d[paramInt];
-  }
-  
-  public int getCount()
-  {
-    return b.length;
-  }
-  
-  public Object getItem(int paramInt)
-  {
-    return null;
-  }
-  
-  public long getItemId(int paramInt)
-  {
-    return 0L;
-  }
-  
-  public View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
-  {
-    paramViewGroup = paramView;
-    if (paramView == null) {
-      paramViewGroup = g.a(a).inflate(2130903139, null);
+    float f1 = a;
+    f1 += (b - f1) * paramFloat;
+    float f2 = c;
+    float f3 = d;
+    Camera localCamera = g;
+    paramTransformation = paramTransformation.getMatrix();
+    localCamera.save();
+    if (f)
+    {
+      localCamera.translate(0.0F, 0.0F, e * paramFloat);
+      if (!h) {
+        break label127;
+      }
+      localCamera.rotateX(f1);
     }
-    ((ImageView)paramViewGroup.findViewById(2131362351)).setImageResource(c[paramInt]);
-    ((TextView)paramViewGroup.findViewById(2131362352)).setText(b[paramInt]);
-    return paramViewGroup;
+    for (;;)
+    {
+      localCamera.getMatrix(paramTransformation);
+      localCamera.restore();
+      paramTransformation.preTranslate(-f2, -f3);
+      paramTransformation.postTranslate(f2, f3);
+      return;
+      localCamera.translate(0.0F, 0.0F, e * (1.0F - paramFloat));
+      break;
+      label127:
+      localCamera.rotateY(f1);
+    }
+  }
+  
+  public void initialize(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+  {
+    super.initialize(paramInt1, paramInt2, paramInt3, paramInt4);
+    g = new Camera();
   }
 }
 

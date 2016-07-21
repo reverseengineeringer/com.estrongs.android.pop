@@ -1,73 +1,29 @@
 package com.estrongs.android.ui.dialog;
 
 import android.content.Context;
-import android.os.Handler;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import com.estrongs.a.a;
-import com.estrongs.android.util.bd;
 
 class kb
-  implements com.estrongs.a.a.p
+  implements DialogInterface.OnClickListener
 {
-  kb(jw paramjw) {}
+  kb(jh paramjh) {}
   
-  public void a(a parama, int paramInt1, int paramInt2)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (paramInt2 == 4) {}
-    while (paramInt2 != 5) {
-      try
-      {
-        String str1 = a.a();
-        if (!bd.a(str1)) {
-          jw.c(a).post(new kc(this, str1));
-        }
-        if (!jw.d(a)) {
-          a.dismiss();
-        }
-        a.a(parama);
-        return;
-      }
-      catch (Exception localException)
-      {
-        for (;;)
-        {
-          localException.printStackTrace();
-        }
-      }
-    }
-    String str2 = a.a(parama.getTaskResult());
-    if (str2 != null) {
-      a.b(parama);
-    }
-    for (;;)
+    if (jh.a(a).canPause())
     {
-      if (!bd.a(str2))
-      {
-        if (getTaskResulta != 12) {
-          break;
-        }
-        jw.c(a).post(new kd(this, parama));
+      jh.a(a).resume();
+      if (jh.a(a).canHide()) {
+        a.setRightButton(a.mContext.getString(2131230873), jh.c(a));
       }
-      label150:
-      if (jw.d(a)) {
-        break label216;
-      }
-      a.dismiss();
+    }
+    else
+    {
       return;
-      str2 = a.b();
     }
-    if (getTaskResulta == 13) {
-      str2 = a.getContext().getString(2131428047);
-    }
-    for (;;)
-    {
-      jw.a(a, str2);
-      break label150;
-      label216:
-      break;
-      if (getTaskResulta == 14) {
-        str2 = a.getContext().getString(2131428048);
-      }
-    }
+    a.setConfirmButton(a.mContext.getString(2131230873), jh.c(a));
   }
 }
 

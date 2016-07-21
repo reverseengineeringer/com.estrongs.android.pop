@@ -2,9 +2,9 @@ package com.estrongs.io.archive.sevenzip;
 
 import android.content.res.Resources;
 import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.util.am;
-import com.estrongs.fs.impl.local.l;
-import com.estrongs.fs.impl.local.r;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.impl.local.m;
+import com.estrongs.fs.impl.local.s;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -61,7 +61,7 @@ public class q
         paramString = " -p" + a(paramString) + " ";
         if ((d != null) && (d.length() != 0))
         {
-          paramString = am.j() + "/p7za l " + " -charset " + d + paramString + a(f);
+          paramString = ap.j() + "/p7za l " + " -charset " + d + paramString + a(f);
           paramString = paramString + "\n";
           c.b.write(paramString);
           c.b.flush();
@@ -86,11 +86,11 @@ public class q
         }
         else
         {
-          paramString = am.j() + "/p7za l " + paramString + a(f);
+          paramString = ap.j() + "/p7za l " + paramString + a(f);
           continue;
         }
         if (str.contains("Wrong password?")) {
-          throw new IOException(FexApplication.a().getResources().getString(2131427897));
+          throw new IOException(FexApplication.a().getResources().getString(2131231784));
         }
       }
       if (m == 1)
@@ -176,7 +176,7 @@ public class q
         str1 = str1.trim();
         if (d != null)
         {
-          paramString1 = am.j() + "/p7za rarx " + " -charset " + d + " ";
+          paramString1 = ap.j() + "/p7za rarx " + " -charset " + d + " ";
           if (paramString2 != null)
           {
             paramString1 = paramString1 + "-o" + " -p" + a(paramString2) + " -y " + a(str3);
@@ -192,7 +192,7 @@ public class q
         }
         else
         {
-          paramString1 = am.j() + "/p7za rarx ";
+          paramString1 = ap.j() + "/p7za rarx ";
           continue;
         }
         paramString1 = paramString1 + "-o" + " -y " + a(str3);
@@ -219,7 +219,7 @@ public class q
               if (!paramList.contains("Wrong password?")) {
                 break label698;
               }
-              paramString1 = FexApplication.a().getResources().getString(2131427897);
+              paramString1 = FexApplication.a().getResources().getString(2131231784);
               break label713;
             }
             if (paramList.startsWith("&&&&"))
@@ -242,7 +242,7 @@ public class q
             if ((n == 0) || (!paramList.startsWith("Total errors"))) {
               continue;
             }
-            paramString1 = FexApplication.a().getResources().getString(2131427897);
+            paramString1 = FexApplication.a().getResources().getString(2131231784);
             continue;
           }
         }
@@ -304,9 +304,9 @@ public class q
     {
       try
       {
-        r localr = l.e();
+        s locals = m.e();
         String str = f;
-        str = am.j() + "/p7za t " + a(str);
+        str = ap.j() + "/p7za t " + a(str);
         str = str + "\n";
         b.write(str);
         b.flush();
@@ -316,7 +316,7 @@ public class q
         b.flush();
         m = 0;
         str = c.readLine();
-        if ((str != null) && (m < 20))
+        if ((str != null) && (m < 40))
         {
           if (!str.startsWith("Enter password (will not be echoed)")) {
             continue;
@@ -346,9 +346,9 @@ public class q
     {
       try
       {
-        r localr = l.e();
+        s locals = m.e();
         String str = f;
-        str = am.j() + "/p7za l " + a(str);
+        str = ap.j() + "/p7za l " + a(str);
         str = str + "\n";
         b.write(str);
         b.flush();
@@ -358,7 +358,7 @@ public class q
         b.flush();
         m = 0;
         str = c.readLine();
-        if ((str != null) && (m < 10))
+        if ((str != null) && (m < 40))
         {
           if (!str.startsWith("Enter password (will not be echoed)")) {
             continue;

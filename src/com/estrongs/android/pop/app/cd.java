@@ -1,15 +1,19 @@
 package com.estrongs.android.pop.app;
 
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.util.bc;
+import com.estrongs.android.widget.f;
 
 class cd
-  implements DialogInterface.OnDismissListener
+  implements DialogInterface.OnClickListener
 {
   cd(FileChooserActivity paramFileChooserActivity) {}
   
-  public void onDismiss(DialogInterface paramDialogInterface)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
+    paramDialogInterface = bc.b(a, a.a.e());
+    a.setResult(-1, paramDialogInterface);
     a.finish();
   }
 }

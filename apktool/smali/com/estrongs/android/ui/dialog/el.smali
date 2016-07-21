@@ -2,54 +2,68 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnKeyListener;
+.implements Lcom/estrongs/a/a/l;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/dialog/ek;
+.field a:J
+
+.field final synthetic b:Lcom/estrongs/android/ui/dialog/ee;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/ek;)V
-    .locals 0
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/ee;)V
+    .locals 2
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/el;->a:Lcom/estrongs/android/ui/dialog/ek;
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/el;->b:Lcom/estrongs/android/ui/dialog/ee;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-wide/16 v0, -0x1
+
+    iput-wide v0, p0, Lcom/estrongs/android/ui/dialog/el;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
-    .locals 2
+.method public a(Lcom/estrongs/a/a;Lcom/estrongs/a/a/m;)V
+    .locals 4
 
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
+    iget-wide v0, p0, Lcom/estrongs/android/ui/dialog/el;->a:J
 
-    move-result v0
+    const-wide/16 v2, -0x1
 
-    if-nez v0, :cond_0
+    cmp-long v0, v0, v2
 
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getKeyCode()I
+    if-eqz v0, :cond_0
 
-    move-result v0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    const/16 v1, 0x42
+    move-result-wide v0
 
-    if-ne v0, v1, :cond_0
+    iget-wide v2, p0, Lcom/estrongs/android/ui/dialog/el;->a:J
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/el;->a:Lcom/estrongs/android/ui/dialog/ek;
+    sub-long/2addr v0, v2
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ek;->a()Z
+    const-wide/16 v2, 0xc8
 
-    const/4 v0, 0x1
+    cmp-long v0, v0, v2
 
-    :goto_0
-    return v0
+    if-lez v0, :cond_1
 
     :cond_0
-    const/4 v0, 0x0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    goto :goto_0
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/estrongs/android/ui/dialog/el;->a:J
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/el;->b:Lcom/estrongs/android/ui/dialog/ee;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/ee;->h(Lcom/estrongs/android/ui/dialog/ee;)V
+
+    :cond_1
+    return-void
 .end method

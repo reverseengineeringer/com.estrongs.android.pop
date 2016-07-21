@@ -23,11 +23,33 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bw;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->s(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)V
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->e:Lcom/estrongs/android/pop/app/imageviewer/gallery/f;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/bw;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+
+    iget v1, v1, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->c:I
+
+    invoke-interface {v0, v1}, Lcom/estrongs/android/pop/app/imageviewer/gallery/f;->a(I)Lcom/estrongs/android/pop/app/imageviewer/gallery/e;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/bw;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->f(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)Lcom/estrongs/android/pop/app/imageviewer/a;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/app/imageviewer/a;->b(Lcom/estrongs/android/pop/app/imageviewer/gallery/e;)V
+
+    new-instance v1, Lcom/estrongs/android/pop/app/imageviewer/bx;
+
+    invoke-direct {v1, p0, v0}, Lcom/estrongs/android/pop/app/imageviewer/bx;-><init>(Lcom/estrongs/android/pop/app/imageviewer/bw;Lcom/estrongs/android/pop/app/imageviewer/gallery/e;)V
+
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/imageviewer/bx;->start()V
 
     return-void
 .end method

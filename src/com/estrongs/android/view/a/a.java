@@ -3,7 +3,6 @@ package com.estrongs.android.view.a;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.LightingColorFilter;
 import android.graphics.drawable.Drawable;
 import android.view.ActionProvider;
 import android.view.ContextMenu.ContextMenuInfo;
@@ -14,7 +13,7 @@ import android.view.SubMenu;
 import android.view.View;
 import android.widget.Button;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.ui.e.co;
+import com.estrongs.android.ui.e.cp;
 
 public class a
   implements MenuItem
@@ -34,6 +33,9 @@ public class a
   private View m;
   private boolean n = true;
   private int o = Color.rgb(232, 232, 232);
+  private int p = 0;
+  private boolean q = true;
+  private boolean r = false;
   
   public a(int paramInt1, int paramInt2)
   {
@@ -91,8 +93,9 @@ public class a
     if (m != null) {
       try
       {
-        paramDrawable = (Button)m.findViewById(2131362472);
-        if (ad.a(m.getContext()).as())
+        paramDrawable = (Button)m.findViewById(2131625174);
+        paramDrawable.setCompoundDrawablePadding(0);
+        if (ad.a(m.getContext()).at())
         {
           paramDrawable.setCompoundDrawables(null, f, null, null);
           return this;
@@ -126,8 +129,8 @@ public class a
     if (m != null) {
       try
       {
-        boolean bool = ad.a(m.getContext()).as();
-        Button localButton = (Button)m.findViewById(2131362472);
+        boolean bool = ad.a(m.getContext()).at();
+        Button localButton = (Button)m.findViewById(2131625174);
         if (bool) {}
         for (paramCharSequence = g;; paramCharSequence = "")
         {
@@ -176,12 +179,12 @@ public class a
     k = parame;
   }
   
-  public boolean a(co paramco)
+  public boolean a(cp paramcp)
   {
     if (l == null) {
       return true;
     }
-    return l.a(paramco);
+    return l.a(paramcp);
   }
   
   public int b()
@@ -219,7 +222,7 @@ public class a
     o = paramInt;
     try
     {
-      Button localButton = (Button)m.findViewById(2131362472);
+      Button localButton = (Button)m.findViewById(2131625174);
       if (o != -1) {
         localButton.setTextColor(o);
       }
@@ -241,7 +244,7 @@ public class a
       }
     }
     label30:
-    for (int i1 = 0;; i1 = 4)
+    for (int i1 = 0;; i1 = 8)
     {
       localView.setVisibility(i1);
       return this;
@@ -255,25 +258,27 @@ public class a
   
   public a d(boolean paramBoolean)
   {
-    try
-    {
-      m.setEnabled(paramBoolean);
-      if (paramBoolean)
+    q = paramBoolean;
+    if (m != null) {
+      try
       {
-        if (f != null) {
-          f.setColorFilter(null);
+        m.setEnabled(paramBoolean);
+        if (paramBoolean)
+        {
+          if (f != null) {
+            f.setAlpha(255);
+          }
+          ((Button)m.findViewById(2131625174)).setTextColor(o);
+          return this;
         }
-        ((Button)m.findViewById(2131362472)).setTextColor(o);
+        if (f != null) {
+          f.setAlpha(120);
+        }
+        ((Button)m.findViewById(2131625174)).setTextColor(-7829368);
         return this;
       }
-      LightingColorFilter localLightingColorFilter = new LightingColorFilter(1, -7829368);
-      if (f != null) {
-        f.setColorFilter(localLightingColorFilter);
-      }
-      ((Button)m.findViewById(2131362472)).setTextColor(-7829368);
-      return this;
+      catch (Exception localException) {}
     }
-    catch (Exception localException) {}
     return this;
   }
   
@@ -282,11 +287,21 @@ public class a
     return k;
   }
   
+  public void d(int paramInt)
+  {
+    p = paramInt;
+  }
+  
   public void e()
   {
     if (k != null) {
       k.a(this);
     }
+  }
+  
+  public void e(boolean paramBoolean)
+  {
+    r = paramBoolean;
   }
   
   public boolean expandActionView()
@@ -372,9 +387,19 @@ public class a
     return null;
   }
   
+  public int h()
+  {
+    return p;
+  }
+  
   public boolean hasSubMenu()
   {
     return false;
+  }
+  
+  public boolean i()
+  {
+    return r;
   }
   
   public boolean isActionViewExpanded()
@@ -394,7 +419,7 @@ public class a
   
   public boolean isEnabled()
   {
-    return m.isEnabled();
+    return q;
   }
   
   public boolean isVisible()

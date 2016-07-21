@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.preference.Preference;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +12,7 @@ import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
+import com.estrongs.android.util.l;
 
 public class SeekBarPreference
   extends Preference
@@ -73,7 +73,7 @@ public class SeekBarPreference
     }
     catch (Exception paramAttributeSet)
     {
-      Log.e(a, "Invalid interval value", paramAttributeSet);
+      l.c(a, "Invalid interval value", paramAttributeSet);
     }
   }
   
@@ -82,17 +82,17 @@ public class SeekBarPreference
     try
     {
       paramView = (RelativeLayout)paramView;
-      i = ((TextView)paramView.findViewById(2131362735));
+      i = ((TextView)paramView.findViewById(2131625509));
       i.setText(String.valueOf(e));
       i.setMinimumWidth(30);
       h.setProgress(e - c);
-      ((TextView)paramView.findViewById(2131362734)).setText(g);
-      ((TextView)paramView.findViewById(2131362736)).setText(f);
+      ((TextView)paramView.findViewById(2131625508)).setText(g);
+      ((TextView)paramView.findViewById(2131625510)).setText(f);
       return;
     }
     catch (Exception paramView)
     {
-      Log.e(a, "Error updating seek bar preference", paramView);
+      l.c(a, "Error updating seek bar preference", paramView);
     }
   }
   
@@ -102,7 +102,7 @@ public class SeekBarPreference
     try
     {
       ViewParent localViewParent = h.getParent();
-      ViewGroup localViewGroup = (ViewGroup)paramView.findViewById(2131362737);
+      ViewGroup localViewGroup = (ViewGroup)paramView.findViewById(2131625511);
       if (localViewParent != localViewGroup)
       {
         if (localViewParent != null) {
@@ -116,7 +116,7 @@ public class SeekBarPreference
     {
       for (;;)
       {
-        Log.e(a, "Error binding view: " + localException.toString());
+        l.e(a, "Error binding view: " + localException.toString());
       }
     }
     a(paramView);
@@ -126,12 +126,12 @@ public class SeekBarPreference
   {
     try
     {
-      paramViewGroup = (RelativeLayout)((LayoutInflater)getContext().getSystemService("layout_inflater")).inflate(2130903247, paramViewGroup, false);
+      paramViewGroup = (RelativeLayout)((LayoutInflater)getContext().getSystemService("layout_inflater")).inflate(2130903418, paramViewGroup, false);
       return paramViewGroup;
     }
     catch (Exception paramViewGroup)
     {
-      Log.e(a, "Error creating seek bar preference", paramViewGroup);
+      l.c(a, "Error creating seek bar preference", paramViewGroup);
     }
     return null;
   }
@@ -190,7 +190,7 @@ public class SeekBarPreference
     {
       for (;;)
       {
-        Log.e(a, "Invalid default value: " + paramObject.toString());
+        l.e(a, "Invalid default value: " + paramObject.toString());
         int j = 0;
       }
     }

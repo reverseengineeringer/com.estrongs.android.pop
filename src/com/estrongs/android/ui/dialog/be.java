@@ -1,15 +1,40 @@
 package com.estrongs.android.ui.dialog;
 
-import android.app.Activity;
+import android.content.Context;
+import com.estrongs.fs.impl.adb.c;
+import java.util.ArrayList;
 
-class be
-  implements Runnable
+public class be
 {
-  be(bd parambd, String paramString) {}
+  private ci a;
+  private Context b;
   
-  public void run()
+  public be(Context paramContext)
   {
-    new ey((Activity)bc.a(b.a), a, true).a();
+    b = paramContext;
+    b();
+  }
+  
+  private void b()
+  {
+    Object localObject = new ArrayList();
+    ((ArrayList)localObject).add("ftp");
+    ((ArrayList)localObject).add("sftp");
+    ((ArrayList)localObject).add("ftps");
+    ((ArrayList)localObject).add("webdav");
+    ((ArrayList)localObject).add(b.getString(2131231658));
+    if (c.b()) {
+      ((ArrayList)localObject).add(b.getString(2131231646));
+    }
+    localObject = (String[])((ArrayList)localObject).toArray(new String[((ArrayList)localObject).size()]);
+    a = new cv(b).a((CharSequence[])localObject, -1, new bf(this)).a(2131230867).d(false).b();
+  }
+  
+  public void a()
+  {
+    if (a != null) {
+      a.show();
+    }
   }
 }
 

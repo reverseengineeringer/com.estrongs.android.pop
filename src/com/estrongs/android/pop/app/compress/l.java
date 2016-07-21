@@ -8,31 +8,31 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import com.estrongs.android.pop.esclasses.g;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.android.ui.dialog.ct;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bc;
+import com.estrongs.android.pop.esclasses.k;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.ui.dialog.cv;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bg;
+import com.estrongs.android.view.g;
 import com.estrongs.io.a.a.a;
-import com.estrongs.io.archive.d;
-import com.estrongs.io.archive.h;
+import com.estrongs.io.archive.i;
 import java.io.File;
 import java.util.List;
 
 public class l
 {
   public static boolean a = false;
-  private h A = null;
+  private i A = null;
   private String B;
   private DialogInterface.OnDismissListener C;
-  private av D;
-  private com.estrongs.android.view.e E;
+  private az D;
+  private g E;
   boolean b = false;
   protected String c;
   private Context d;
-  private cg e;
-  private d f;
+  private ci e;
+  private com.estrongs.io.archive.e f;
   private ProgressBar g = null;
   private TextView h;
   private TextView i;
@@ -42,8 +42,8 @@ public class l
   private TextView m;
   private View n;
   private a o;
-  private cg p = null;
-  private be q = null;
+  private ci p = null;
+  private cb q = null;
   private HandlerThread r = null;
   private boolean s = false;
   private boolean t = false;
@@ -59,9 +59,9 @@ public class l
     this(null, paramContext, paramString1, paramString2, paramString3, paramString4, paramList, paramBoolean1, paramBoolean2, paramInt, paramOnDismissListener);
   }
   
-  public l(com.estrongs.android.view.e parame, Context paramContext, String paramString1, String paramString2, String paramString3, String paramString4, List<String> paramList, boolean paramBoolean1, boolean paramBoolean2, int paramInt, DialogInterface.OnDismissListener paramOnDismissListener)
+  public l(g paramg, Context paramContext, String paramString1, String paramString2, String paramString3, String paramString4, List<String> paramList, boolean paramBoolean1, boolean paramBoolean2, int paramInt, DialogInterface.OnDismissListener paramOnDismissListener)
   {
-    E = parame;
+    E = paramg;
     d = paramContext;
     v = paramString1;
     w = paramString2;
@@ -77,35 +77,35 @@ public class l
   
   private void d()
   {
-    n = g.a(d).inflate(2130903050, null);
-    e = new ct(d).a(2131427454).a(n).a(2131427340, new u(this)).a(new m(this)).b();
+    n = k.a(d).inflate(2130903112, null);
+    e = new cv(d).a(2131232174).a(n).a(2131231265, new u(this)).a(new m(this)).b();
     e.setOnKeyListener(new v(this));
     if (C != null) {
       e.setOnDismissListener(C);
     }
-    ((TextView)n.findViewById(2131361822)).setText(d.getString(2131428119, new Object[] { am.d(v) }));
-    ((TextView)n.findViewById(2131361884)).setText(d.getString(2131428244));
-    h = ((TextView)n.findViewById(2131361885));
-    i = ((TextView)n.findViewById(2131361882));
-    j = ((TextView)n.findViewById(2131361883));
-    k = ((TextView)n.findViewById(2131361886));
-    l = ((TextView)n.findViewById(2131361887));
-    g = ((ProgressBar)n.findViewById(2131361889));
-    m = ((TextView)n.findViewById(2131361888));
+    ((TextView)n.findViewById(2131624200)).setText(d.getString(2131232402, new Object[] { ap.d(v) }));
+    ((TextView)n.findViewById(2131624382)).setText(d.getString(2131232175));
+    h = ((TextView)n.findViewById(2131624383));
+    i = ((TextView)n.findViewById(2131624380));
+    j = ((TextView)n.findViewById(2131624381));
+    k = ((TextView)n.findViewById(2131624384));
+    l = ((TextView)n.findViewById(2131624385));
+    g = ((ProgressBar)n.findViewById(2131624387));
+    m = ((TextView)n.findViewById(2131624386));
     if (new File(v).isDirectory())
     {
-      ag.a(d, v + " " + d.getResources().getString(2131427396), 0);
+      ak.a(d, v + " " + d.getResources().getString(2131231716), 0);
       c();
       return;
     }
-    f = new w(this, d, this, d.getResources().getText(2131427861).toString());
-    f.b(i);
-    f.c(j);
-    f.a(h);
+    f = new w(this, d, this, d.getResources().getText(2131231775).toString());
+    f.f(i);
+    f.g(j);
+    f.e(h);
     f.a(g);
-    f.d(m);
-    f.e(k);
-    f.f(l);
+    f.b(m);
+    f.h(k);
+    f.i(l);
     f.b(x);
     f.c(v);
     o = new x(this, f, x);
@@ -130,32 +130,32 @@ public class l
   {
     if (q == null)
     {
-      q = new be(d, true, false);
-      q.setButton(-1, d.getResources().getString(2131427339), new ac(this));
-      q.setButton(-2, d.getResources().getString(2131427340), new ad(this));
+      q = new cb(d, true, false);
+      q.setButton(-1, d.getResources().getString(2131231270), new ac(this));
+      q.setButton(-2, d.getResources().getString(2131231265), new ad(this));
       q.setOnCancelListener(new n(this));
     }
   }
   
-  public void a(av paramav)
+  public void a(az paramaz)
   {
-    D = paramav;
+    D = paramaz;
   }
   
   protected void a(String paramString)
   {
     if (p == null)
     {
-      p = new com.estrongs.android.a.e(d, new aa(this), true);
-      p.setTitle(d.getResources().getString(2131427401));
+      p = new com.estrongs.android.d.e(d, new aa(this), true);
+      p.setTitle(d.getResources().getString(2131231721));
       p.setOnKeyListener(new ab(this));
     }
-    p.setMessage(d.getResources().getString(2131427810) + "\n" + paramString);
+    p.setMessage(d.getResources().getString(2131231340) + "\n" + paramString);
   }
   
   public void b()
   {
-    if ((B == null) && (bc.m(v)))
+    if ((B == null) && (bg.m(v)))
     {
       new Thread(new o(this)).start();
       return;

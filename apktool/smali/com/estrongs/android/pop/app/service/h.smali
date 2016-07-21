@@ -1,33 +1,21 @@
-.class Lcom/estrongs/android/pop/app/service/h;
-.super Lcom/estrongs/android/pop/app/service/j;
+.class public Lcom/estrongs/android/pop/app/service/h;
+.super Landroid/os/Binder;
+
+# interfaces
+.implements Lcom/estrongs/android/pop/app/service/b;
 
 
 # instance fields
 .field final synthetic a:Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;
 
-.field private b:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/estrongs/android/pop/app/b/f;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 
 # direct methods
-.method public constructor <init>(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;Landroid/os/Handler;)V
-    .locals 1
+.method public constructor <init>(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)V
+    .locals 0
 
     iput-object p1, p0, Lcom/estrongs/android/pop/app/service/h;->a:Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;
 
-    invoke-direct {p0, p2}, Lcom/estrongs/android/pop/app/service/j;-><init>(Landroid/os/Handler;)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/service/h;->b:Ljava/util/ArrayList;
+    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
     return-void
 .end method
@@ -35,13 +23,100 @@
 
 # virtual methods
 .method public a()V
-    .locals 5
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/service/h;->b:Ljava/util/ArrayList;
+    invoke-static {}, Lcom/estrongs/android/pop/app/f/c;->a()Lcom/estrongs/android/pop/app/f/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/f/c;->f()V
+
+    return-void
+.end method
+
+.method public a(Lcom/estrongs/android/pop/app/service/a;)V
+    .locals 3
+
+    const/4 v2, 0x0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/service/h;->a:Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;
+
+    invoke-static {v0, p1}, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->a(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;Lcom/estrongs/android/pop/app/service/a;)Lcom/estrongs/android/pop/app/service/a;
+
+    invoke-static {}, Lcom/estrongs/android/pop/app/f/c;->a()Lcom/estrongs/android/pop/app/f/c;
+
+    move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/estrongs/android/pop/app/b/c;->a()Lcom/estrongs/android/pop/app/b/c;
+    invoke-static {}, Lcom/estrongs/android/pop/app/f/c;->a()Lcom/estrongs/android/pop/app/f/c;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/service/h;->a:Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;
+
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->b(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)Lcom/estrongs/android/pop/app/service/a;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/f/c;->a(Lcom/estrongs/android/pop/app/service/a;)V
+
+    :cond_0
+    invoke-static {}, Lcom/estrongs/android/pop/app/f/c;->a()Lcom/estrongs/android/pop/app/f/c;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/service/h;->a:Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;
+
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->a(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/f/c;->b(Ljava/lang/String;)Ljava/util/Map;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/service/h;->a:Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;
+
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->b(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)Lcom/estrongs/android/pop/app/service/a;
+
+    move-result-object v1
+
+    invoke-interface {v1, v2, v2}, Lcom/estrongs/android/pop/app/service/a;->a(Ljava/util/ArrayList;Ljava/util/Map;)V
+
+    :cond_1
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/service/h;->a:Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;
+
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->b(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)Lcom/estrongs/android/pop/app/service/a;
+
+    move-result-object v1
+
+    invoke-interface {v1, v2, v0}, Lcom/estrongs/android/pop/app/service/a;->a(Ljava/util/ArrayList;Ljava/util/Map;)V
+
+    return-void
+.end method
+
+.method public a(Ljava/util/ArrayList;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/estrongs/android/pop/app/f/f;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-static {}, Lcom/estrongs/android/pop/app/f/c;->a()Lcom/estrongs/android/pop/app/f/c;
 
     move-result-object v0
 
@@ -57,47 +132,60 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/estrongs/android/pop/app/service/h;->b:Ljava/util/ArrayList;
+    const/4 v3, 0x1
 
-    const/4 v4, 0x0
+    invoke-virtual {v0, v1, v2, p1, v3}, Lcom/estrongs/android/pop/app/f/c;->a(Ljava/lang/String;Lcom/estrongs/android/pop/app/service/a;Ljava/util/ArrayList;Z)V
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/estrongs/android/pop/app/b/c;->a(Ljava/lang/String;Lcom/estrongs/android/pop/app/service/a;Ljava/util/ArrayList;Z)V
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/service/h;->a:Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;
 
-    :cond_0
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->c(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)Lcom/estrongs/android/pop/app/service/g;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/estrongs/android/pop/app/service/g;->a(Ljava/util/ArrayList;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/service/h;->a:Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->c(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)Lcom/estrongs/android/pop/app/service/g;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/service/h;->a:Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;
+
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->c(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)Lcom/estrongs/android/pop/app/service/g;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/service/g;->c()I
+
+    move-result v1
+
+    int-to-long v2, v1
+
+    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/pop/app/service/g;->a(J)V
+
     return-void
 .end method
 
-.method public a(Ljava/util/ArrayList;)V
-    .locals 0
+.method public b(Ljava/util/ArrayList;)Z
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/estrongs/android/pop/app/b/f;",
-            ">;)V"
+            "Lcom/estrongs/android/pop/app/f/f;",
+            ">;)Z"
         }
     .end annotation
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/service/h;->b:Ljava/util/ArrayList;
+    invoke-static {}, Lcom/estrongs/android/pop/app/f/c;->a()Lcom/estrongs/android/pop/app/f/c;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public b()Z
-    .locals 1
-
-    invoke-static {}, Lcom/estrongs/android/util/ak;->b()Z
+    invoke-virtual {v0, p1}, Lcom/estrongs/android/pop/app/f/c;->a(Ljava/util/ArrayList;)Z
 
     move-result v0
-
-    return v0
-.end method
-
-.method protected c()I
-    .locals 1
-
-    const/4 v0, -0x1
 
     return v0
 .end method

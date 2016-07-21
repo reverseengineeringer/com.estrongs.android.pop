@@ -1,17 +1,44 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.graphics.Bitmap;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 class v
-  implements DialogInterface.OnClickListener
+  extends WebViewClient
 {
-  v(r paramr) {}
+  private boolean b = false;
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  v(BaseWebViewActivity paramBaseWebViewActivity) {}
+  
+  public void onPageFinished(WebView paramWebView, String paramString)
   {
-    r.f(a);
-    r.a(a).h();
+    super.onPageFinished(paramWebView, paramString);
+    if (!b)
+    {
+      a.setTitle(paramWebView.getTitle());
+      BaseWebViewActivity.b(a);
+    }
+  }
+  
+  public void onPageStarted(WebView paramWebView, String paramString, Bitmap paramBitmap)
+  {
+    super.onPageStarted(paramWebView, paramString, paramBitmap);
+    b = false;
+    BaseWebViewActivity.a(a);
+  }
+  
+  public void onReceivedError(WebView paramWebView, int paramInt, String paramString1, String paramString2)
+  {
+    super.onReceivedError(paramWebView, paramInt, paramString1, paramString2);
+    b = true;
+    BaseWebViewActivity.c(a);
+  }
+  
+  public boolean shouldOverrideUrlLoading(WebView paramWebView, String paramString)
+  {
+    paramWebView.loadUrl(paramString);
+    return true;
   }
 }
 

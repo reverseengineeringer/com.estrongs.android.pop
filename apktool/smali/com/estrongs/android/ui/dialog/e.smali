@@ -1,5 +1,5 @@
 .class Lcom/estrongs/android/ui/dialog/e;
-.super Lcom/estrongs/android/view/ea;
+.super Lcom/estrongs/android/view/gf;
 
 
 # instance fields
@@ -8,47 +8,47 @@
 
 # direct methods
 .method public constructor <init>(Lcom/estrongs/android/ui/dialog/a;Landroid/app/Activity;)V
-    .locals 6
+    .locals 7
 
     iput-object p1, p0, Lcom/estrongs/android/ui/dialog/e;->a:Lcom/estrongs/android/ui/dialog/a;
 
-    invoke-direct {p0, p2}, Lcom/estrongs/android/view/ea;-><init>(Landroid/app/Activity;)V
+    invoke-direct {p0, p2}, Lcom/estrongs/android/view/gf;-><init>(Landroid/app/Activity;)V
 
-    const v0, 0x7f0a0025
+    const v0, 0x7f0e0188
 
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/dialog/e;->k(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/dialog/e;->b(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/ImageView;
 
-    const v1, 0x7f0a0026
+    const v1, 0x7f0e0189
 
-    invoke-virtual {p0, v1}, Lcom/estrongs/android/ui/dialog/e;->k(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/estrongs/android/ui/dialog/e;->b(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f0a002b
+    const v2, 0x7f0e018e
 
-    invoke-virtual {p0, v2}, Lcom/estrongs/android/ui/dialog/e;->k(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/estrongs/android/ui/dialog/e;->b(I)Landroid/view/View;
 
     move-result-object v2
 
     check-cast v2, Landroid/widget/TextView;
 
-    const v3, 0x7f0a0030
+    const v3, 0x7f0e0193
 
-    invoke-virtual {p0, v3}, Lcom/estrongs/android/ui/dialog/e;->k(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/estrongs/android/ui/dialog/e;->b(I)Landroid/view/View;
 
     move-result-object v3
 
     check-cast v3, Landroid/widget/TextView;
 
-    const v4, 0x7f0a0032
+    const v4, 0x7f0e0195
 
-    invoke-virtual {p0, v4}, Lcom/estrongs/android/ui/dialog/e;->k(I)Landroid/view/View;
+    invoke-virtual {p0, v4}, Lcom/estrongs/android/ui/dialog/e;->b(I)Landroid/view/View;
 
     move-result-object v4
 
@@ -56,11 +56,13 @@
 
     iget-object v5, p1, Lcom/estrongs/android/ui/dialog/a;->a:Lcom/estrongs/fs/impl/adb/a;
 
-    invoke-static {v5}, Lcom/estrongs/android/d/f;->e(Lcom/estrongs/fs/h;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v5}, Lcom/estrongs/fs/impl/adb/a;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-virtual {v0, v5}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    iget-object v6, p1, Lcom/estrongs/android/ui/dialog/a;->a:Lcom/estrongs/fs/impl/adb/a;
+
+    invoke-static {v5, v0, v6}, Lcom/estrongs/android/h/a/e;->a(Ljava/lang/String;Landroid/widget/ImageView;Lcom/estrongs/fs/h;)V
 
     iget-object v0, p1, Lcom/estrongs/android/ui/dialog/a;->a:Lcom/estrongs/fs/impl/adb/a;
 
@@ -140,7 +142,7 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f030004
+    const v0, 0x7f030042
 
     return v0
 .end method

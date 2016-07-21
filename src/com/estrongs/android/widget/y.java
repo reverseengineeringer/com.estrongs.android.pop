@@ -1,16 +1,20 @@
 package com.estrongs.android.widget;
 
-import com.estrongs.android.ui.dialog.er;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.pop.ad;
+import com.estrongs.android.ui.dialog.gv;
 
 class y
-  implements er
+  implements View.OnClickListener
 {
-  y(x paramx) {}
+  y(f paramf) {}
   
-  public boolean a(String paramString)
+  public void onClick(View paramView)
   {
-    g.b(a.a, paramString);
-    return true;
+    paramView = new gv(f.d(a), ad.a(f.d(a)).M());
+    paramView.a(new z(this, paramView));
+    paramView.show();
   }
 }
 

@@ -1,18 +1,16 @@
 package com.estrongs.android.pop.app;
 
 import android.view.View;
-import android.widget.ImageView;
-import com.estrongs.android.ui.e.ja;
+import android.view.View.OnClickListener;
 
 class jj
-  implements ja
+  implements View.OnClickListener
 {
   jj(PopVideoPlayer paramPopVideoPlayer) {}
   
-  public void a()
+  public void onClick(View paramView)
   {
-    ((ImageView)a.d.findViewById(2131361853)).setImageResource(2130838203);
-    PopVideoPlayer.g(a);
+    a.c();
   }
 }
 

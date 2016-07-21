@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/view/a/e;
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/e/io;
+.field final synthetic a:Lcom/estrongs/android/ui/e/iq;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/io;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/iq;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/ir;->a:Lcom/estrongs/android/ui/e/io;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/ir;->a:Lcom/estrongs/android/ui/e/iq;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,20 +22,36 @@
 
 
 # virtual methods
-.method public a(Lcom/estrongs/android/view/a/a;)V
-    .locals 3
+.method public onMenuItemClick(Landroid/view/MenuItem;)Z
+    .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/ir;->a:Lcom/estrongs/android/ui/e/io;
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/ir;->a:Lcom/estrongs/android/ui/e/iq;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/io;->b:Landroid/content/Context;
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/iq;->a(Lcom/estrongs/android/ui/e/iq;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
-    invoke-virtual {p1}, Lcom/estrongs/android/view/a/a;->getTitle()Ljava/lang/CharSequence;
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/e/ir;->a:Lcom/estrongs/android/ui/e/iq;
+
+    invoke-static {v1}, Lcom/estrongs/android/ui/e/iq;->a(Lcom/estrongs/android/ui/e/iq;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
     move-result-object v1
 
-    const/4 v2, 0x0
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->A()Ljava/util/List;
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    move-result-object v1
 
-    return-void
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->b(Ljava/util/List;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/ir;->a:Lcom/estrongs/android/ui/e/iq;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/iq;->a(Lcom/estrongs/android/ui/e/iq;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->z()V
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

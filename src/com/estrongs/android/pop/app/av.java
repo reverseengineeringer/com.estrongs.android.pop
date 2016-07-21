@@ -1,17 +1,13 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 class av
-  implements DialogInterface.OnDismissListener
 {
-  av(DownloaderActivity paramDownloaderActivity) {}
-  
-  public void onDismiss(DialogInterface paramDialogInterface)
-  {
-    a.finish();
-  }
+  ImageView a;
+  TextView b;
+  ImageView c;
 }
 
 /* Location:

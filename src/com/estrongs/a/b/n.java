@@ -1,15 +1,15 @@
 package com.estrongs.a.b;
 
-import com.estrongs.fs.b.bl;
+import com.estrongs.fs.b.bn;
 
 class n
   implements Runnable
 {
-  bl b;
+  bn b;
   
-  n(d paramd, bl parambl)
+  n(d paramd, bn parambn)
   {
-    b = parambl;
+    b = parambn;
   }
   
   public void run() {}

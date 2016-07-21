@@ -1,18 +1,22 @@
 package com.estrongs.android.pop.view;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
-import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.ui.adapter.ListAdapter_NewNavi;
 
 class ef
-  implements DialogInterface.OnDismissListener
+  implements Runnable
 {
   ef(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void onDismiss(DialogInterface paramDialogInterface)
+  public void run()
   {
-    if (FexApplication.a().i()) {
-      a.finish();
+    try
+    {
+      ListAdapter_NewNavi.b(a);
+      return;
+    }
+    catch (Exception localException)
+    {
+      localException.printStackTrace();
     }
   }
 }

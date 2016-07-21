@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # instance fields
@@ -22,12 +22,24 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 1
+.method public onMenuItemClick(Landroid/view/MenuItem;)Z
+    .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/cr;->a:Lcom/estrongs/android/pop/app/GestureManageActivity;
+    new-instance v0, Lcom/estrongs/android/ui/dialog/iy;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/GestureManageActivity;->finish()V
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/cr;->a:Lcom/estrongs/android/pop/app/GestureManageActivity;
 
-    return-void
+    invoke-direct {v0, v1}, Lcom/estrongs/android/ui/dialog/iy;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/iy;->b()V
+
+    new-instance v1, Lcom/estrongs/android/pop/app/cs;
+
+    invoke-direct {v1, p0, v0}, Lcom/estrongs/android/pop/app/cs;-><init>(Lcom/estrongs/android/pop/app/cr;Lcom/estrongs/android/ui/dialog/iy;)V
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/iy;->a(Landroid/content/DialogInterface$OnDismissListener;)V
+
+    const/4 v0, 0x0
+
+    return v0
 .end method

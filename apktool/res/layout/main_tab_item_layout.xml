@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/main_tab_item_root_rl" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="@dimen/dp_36"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/main_tab_item_icon_iv" android:src="@drawable/icon_home_tab_home" style="@style/main_tab_item_icon_iv_style" />
+    <TextView android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/main_tab_item_title_tv" android:visibility="gone" style="@style/main_tab_item_title_tv_style" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/main_tab_item_close_iv" android:visibility="gone" style="@style/main_tab_item_close_iv_style" />
+</LinearLayout>

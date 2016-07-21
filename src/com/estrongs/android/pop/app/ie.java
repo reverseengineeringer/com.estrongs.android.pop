@@ -1,19 +1,16 @@
 package com.estrongs.android.pop.app;
 
 import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
-import com.estrongs.android.pop.view.utils.RemoteSynchronizer;
+import android.preference.Preference.OnPreferenceClickListener;
 
 class ie
-  implements Preference.OnPreferenceChangeListener
+  implements Preference.OnPreferenceClickListener
 {
   ie(PopPreferenceActivity paramPopPreferenceActivity) {}
   
-  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
+  public boolean onPreferenceClick(Preference paramPreference)
   {
-    if (!Boolean.valueOf(paramObject.toString()).booleanValue()) {
-      RemoteSynchronizer.f();
-    }
+    PopPreferenceActivity.a(a);
     return true;
   }
 }

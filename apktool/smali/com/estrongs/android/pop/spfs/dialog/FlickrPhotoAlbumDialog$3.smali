@@ -100,7 +100,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoAlbumDialog$3;->val$context:Landroid/content/Context;
 
-    const v1, 0x7f0b02e7
+    const v1, 0x7f080599
 
     invoke-static {v0, v1}, Lcom/estrongs/android/pop/utils/a;->a(Landroid/content/Context;I)V
 

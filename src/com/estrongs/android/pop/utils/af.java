@@ -1,16 +1,48 @@
 package com.estrongs.android.pop.utils;
 
-public class af
+import com.estrongs.android.util.ap;
+import java.io.File;
+import java.util.List;
+
+final class af
+  implements Runnable
 {
-  public boolean a;
-  public String b;
-  public String c;
+  af(List paramList) {}
   
-  public af(String paramString1, boolean paramBoolean, String paramString2)
+  public void run()
   {
-    b = paramString1;
-    a = paramBoolean;
-    c = paramString2;
+    int i = 0;
+    if (i < a.size())
+    {
+      String str1 = (String)a.get(i);
+      String str2;
+      if (ap.bC(str1))
+      {
+        str2 = str1.substring(0, str1.length() - 1) + "_" + System.currentTimeMillis();
+        if (new File(str1).renameTo(new File(str2)))
+        {
+          ad.f.a(str2, true, null, false);
+          boolean bool1 = ad.a(ad.f, str2);
+          if (bool1) {
+            ad.e(str1);
+          }
+          boolean bool2 = new File(str2).renameTo(new File(str1));
+          if ((bool1) || (bool2)) {
+            break label190;
+          }
+        }
+      }
+      label190:
+      for (int j = 1;; j = 0)
+      {
+        if (j != 0) {
+          cm.a(str1);
+        }
+        ad.f.a(str2, null, false);
+        i += 1;
+        break;
+      }
+    }
   }
 }
 

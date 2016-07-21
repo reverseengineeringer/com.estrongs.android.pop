@@ -2,29 +2,28 @@ package com.estrongs.android.ui.e;
 
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.app.compress.a;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.view.ag;
+import com.estrongs.android.pop.view.utils.AppRunner;
+import com.estrongs.android.ui.view.ak;
 import com.estrongs.fs.h;
 import java.util.List;
 
 class el
   implements MenuItem.OnMenuItemClickListener
 {
-  el(cp paramcp) {}
+  el(cr paramcr) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if (cp.b(a).size() == 0) {
-      ag.a(cp.a(a).getBaseContext(), 2131427774, 0);
+    if (cr.a(a).size() == 0) {
+      ak.a(cr.b(a).getBaseContext(), 2131231551, 0);
     }
-    while (cp.b(a).size() != 1) {
+    for (;;)
+    {
       return true;
+      AppRunner.t(cr.b(a), ((h)cr.a(a).get(0)).getAbsolutePath());
+      cr.b(a).B();
     }
-    paramMenuItem = ((h)cp.b(a).get(0)).getAbsolutePath();
-    new a(cp.a(a), false, paramMenuItem, null, null, null).a();
-    cp.a(a).s();
-    return true;
   }
 }
 

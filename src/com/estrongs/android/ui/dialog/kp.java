@@ -1,20 +1,15 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnKeyListener;
-import android.view.KeyEvent;
+import com.estrongs.android.ui.view.ak;
 
 class kp
-  implements DialogInterface.OnKeyListener
+  implements Runnable
 {
-  kp(VerifyPasswordDialog paramVerifyPasswordDialog) {}
+  kp(kh paramkh, String paramString) {}
   
-  public boolean onKey(DialogInterface paramDialogInterface, int paramInt, KeyEvent paramKeyEvent)
+  public void run()
   {
-    if (paramInt == 4) {
-      paramDialogInterface.dismiss();
-    }
-    return false;
+    ak.a(b.getContext(), a, 1);
   }
 }
 

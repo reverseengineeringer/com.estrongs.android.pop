@@ -1,33 +1,58 @@
 package com.estrongs.fs.impl.h;
 
-import android.util.Log;
-import java.io.BufferedInputStream;
-import java.io.InputStream;
-import org.apache.http.client.methods.HttpGet;
+import com.estrongs.android.util.TypedMap;
+import com.estrongs.fs.h;
+import com.estrongs.fs.i;
+import com.estrongs.fs.util.j;
+import java.util.ArrayList;
+import java.util.List;
 
-class c
-  extends BufferedInputStream
+public class c
+  extends com.estrongs.fs.impl.t.a
 {
-  c(b paramb, InputStream paramInputStream, HttpGet paramHttpGet)
+  private static c a;
+  private static final String b = j.a + "/cache/encrypt.cache";
+  private static boolean c = true;
+  
+  public static c a()
   {
-    super(paramInputStream);
+    if (a == null) {
+      a = new c();
+    }
+    return a;
   }
   
-  public void close()
+  public List<h> a(h paramh, i parami, TypedMap paramTypedMap)
   {
-    try
+    ArrayList localArrayList = new ArrayList();
+    paramh = super.a(paramh, parami, paramTypedMap);
+    int i = 0;
+    while (i < paramh.size())
     {
-      a.abort();
-      super.close();
-      return;
+      localArrayList.add(new a((h)paramh.get(i)));
+      i += 1;
     }
-    catch (Exception localException)
-    {
-      for (;;)
-      {
-        Log.e("HttpFileSystem", "Error when HttpGet.abort()" + localException);
-      }
-    }
+    return localArrayList;
+  }
+  
+  protected void a(boolean paramBoolean)
+  {
+    c = paramBoolean;
+  }
+  
+  protected String b()
+  {
+    return b;
+  }
+  
+  protected String c()
+  {
+    return "encrypt";
+  }
+  
+  protected boolean d()
+  {
+    return c;
   }
 }
 

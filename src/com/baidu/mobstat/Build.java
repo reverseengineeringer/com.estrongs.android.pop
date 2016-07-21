@@ -2,10 +2,14 @@ package com.baidu.mobstat;
 
 public class Build
 {
-  static String a = "3.6.6.1";
-  static int b = 2;
-  static boolean c = false;
-  static String d = "internal";
+  public static final int SDK_CHANNEL_VALUE = 2;
+  public static final boolean SDK_FOR_BROSWER = false;
+  public static final boolean SDK_FOR_MB_DEV = false;
+  public static final boolean SDK_INTERNAL = true;
+  public static final boolean SDK_RELEASE = true;
+  public static final int SDK_TAG_VALUE = 2;
+  public static final String SDK_VERSION = "3.7.3.8";
+  public static final int SDK_WITH_BPLUS = 2;
 }
 
 /* Location:

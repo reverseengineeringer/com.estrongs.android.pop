@@ -58,9 +58,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/fs/impl/b/c;
+    check-cast v0, Lcom/estrongs/fs/impl/b/d;
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/c;->c()Landroid/content/pm/ApplicationInfo;
+    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/d;->h()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
 
@@ -68,7 +68,7 @@
 
     iget-object v2, v2, Lcom/estrongs/android/pop/utils/c;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-static {v2, v0}, Lcom/estrongs/android/util/ay;->a(Landroid/content/Context;Landroid/content/pm/ApplicationInfo;)Z
+    invoke-static {v2, v0}, Lcom/estrongs/android/util/bc;->a(Landroid/content/Context;Landroid/content/pm/ApplicationInfo;)Z
 
     add-int/lit8 v0, v1, 0x1
 
@@ -93,7 +93,7 @@
 
     iget-object v1, v1, Lcom/estrongs/android/pop/utils/c;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    const v2, 0x7f0b01d3
+    const v2, 0x7f0804a0
 
     invoke-virtual {v1, v2}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->getString(I)Ljava/lang/String;
 
@@ -101,7 +101,7 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
     return-void
 .end method

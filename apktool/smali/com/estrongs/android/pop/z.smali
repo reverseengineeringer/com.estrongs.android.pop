@@ -115,6 +115,10 @@
 
 .field public static at:Z
 
+.field public static au:Z
+
+.field public static av:Z
+
 .field public static b:Ljava/lang/String;
 
 .field public static c:Ljava/lang/String;
@@ -362,6 +366,10 @@
 
     sput-boolean v1, Lcom/estrongs/android/pop/z;->at:Z
 
+    sput-boolean v1, Lcom/estrongs/android/pop/z;->au:Z
+
+    sput-boolean v1, Lcom/estrongs/android/pop/z;->av:Z
+
     return-void
 .end method
 
@@ -438,7 +446,7 @@
 
     if-eqz v1, :cond_5
 
-    const-string v0, "gallery://local/buckets/"
+    const-string v0, "pic://"
 
     goto :goto_0
 
@@ -825,7 +833,7 @@
     sput-boolean v2, Lcom/estrongs/android/pop/z;->x:Z
 
     :cond_0
-    sget-object v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e:Ljava/lang/String;
+    sget-object v0, Lcom/estrongs/android/pop/view/a;->b:Ljava/lang/String;
 
     const-string v1, "Amazon"
 
@@ -840,7 +848,7 @@
     sput-boolean v2, Lcom/estrongs/android/pop/z;->P:Z
 
     :cond_1
-    sget-object v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e:Ljava/lang/String;
+    sget-object v0, Lcom/estrongs/android/pop/view/a;->b:Ljava/lang/String;
 
     const-string v1, "\u5de5\u4fe1\u90e8"
 
@@ -857,9 +865,9 @@
     :cond_2
     sput-boolean v3, Lcom/estrongs/android/pop/z;->W:Z
 
-    sget-object v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e:Ljava/lang/String;
+    sget-object v0, Lcom/estrongs/android/pop/view/a;->b:Ljava/lang/String;
 
-    const-string v1, "\u5b89\u667a"
+    const-string v1, "Anzhi"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -867,9 +875,9 @@
 
     if-nez v0, :cond_3
 
-    sget-object v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e:Ljava/lang/String;
+    sget-object v0, Lcom/estrongs/android/pop/view/a;->b:Ljava/lang/String;
 
-    const-string v1, "\u667a\u6c47\u4e91"
+    const-string v1, "Zhihuiyun"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -881,9 +889,9 @@
     sput-boolean v3, Lcom/estrongs/android/pop/z;->f:Z
 
     :cond_4
-    sget-object v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e:Ljava/lang/String;
+    sget-object v0, Lcom/estrongs/android/pop/view/a;->b:Ljava/lang/String;
 
-    const-string v1, "\u5929\u732b\u9b54\u76d2"
+    const-string v1, "TmallBox"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -891,7 +899,7 @@
 
     if-nez v0, :cond_5
 
-    sget-object v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e:Ljava/lang/String;
+    sget-object v0, Lcom/estrongs/android/pop/view/a;->b:Ljava/lang/String;
 
     const-string v1, "Shafa"
 
@@ -915,7 +923,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/utils/cl;->d(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/estrongs/android/pop/utils/cu;->d(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -936,7 +944,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -992,9 +1000,9 @@
 
     if-nez v1, :cond_2
 
-    const-string v1, "\u5f71\u68d2"
+    const-string v1, "Yingbang"
 
-    sget-object v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e:Ljava/lang/String;
+    sget-object v2, Lcom/estrongs/android/pop/view/a;->b:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1489,7 +1497,7 @@
 
     const-string v1, "OEC Config file not found"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
@@ -2777,6 +2785,52 @@
     sput-boolean v1, Lcom/estrongs/android/pop/z;->at:Z
 
     :cond_4b
+    const-string v1, "enable_share_audios_by_audiotype"
+
+    invoke-virtual {v0, v1}, Lorg/json/simple/JSONObject;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4c
+
+    const-string v1, "enable_share_audios_by_audiotype"
+
+    invoke-virtual {v0, v1}, Lorg/json/simple/JSONObject;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Boolean;
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    sput-boolean v1, Lcom/estrongs/android/pop/z;->au:Z
+
+    :cond_4c
+    const-string v1, "enable_use_wma_as_ringtone"
+
+    invoke-virtual {v0, v1}, Lorg/json/simple/JSONObject;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4d
+
+    const-string v1, "enable_use_wma_as_ringtone"
+
+    invoke-virtual {v0, v1}, Lorg/json/simple/JSONObject;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Boolean;
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    sput-boolean v1, Lcom/estrongs/android/pop/z;->av:Z
+
+    :cond_4d
     invoke-virtual {v0}, Lorg/json/simple/JSONObject;->clear()V
 
     invoke-virtual {v4}, Ljava/io/FileReader;->close()V
@@ -2799,7 +2853,7 @@
 
     sget-boolean v2, Lcom/estrongs/android/pop/z;->r:Z
 
-    if-eqz v2, :cond_4c
+    if-eqz v2, :cond_4e
 
     new-instance v2, Landroid/content/ComponentName;
 
@@ -2820,7 +2874,7 @@
     :goto_4
     sget-boolean v2, Lcom/estrongs/android/pop/z;->s:Z
 
-    if-eqz v2, :cond_4d
+    if-eqz v2, :cond_4f
 
     new-instance v2, Landroid/content/ComponentName;
 
@@ -2841,7 +2895,7 @@
     :goto_5
     sget-boolean v2, Lcom/estrongs/android/pop/z;->t:Z
 
-    if-eqz v2, :cond_4e
+    if-eqz v2, :cond_50
 
     new-instance v2, Landroid/content/ComponentName;
 
@@ -2862,7 +2916,7 @@
     :goto_6
     sget-boolean v2, Lcom/estrongs/android/pop/z;->E:Z
 
-    if-eqz v2, :cond_4f
+    if-eqz v2, :cond_51
 
     new-instance v2, Landroid/content/ComponentName;
 
@@ -2883,7 +2937,7 @@
     :goto_7
     sget-boolean v2, Lcom/estrongs/android/pop/z;->F:Z
 
-    if-eqz v2, :cond_50
+    if-eqz v2, :cond_52
 
     new-instance v2, Landroid/content/ComponentName;
 
@@ -2904,7 +2958,7 @@
     :goto_8
     sget-boolean v2, Lcom/estrongs/android/pop/z;->G:Z
 
-    if-eqz v2, :cond_51
+    if-eqz v2, :cond_53
 
     new-instance v2, Landroid/content/ComponentName;
 
@@ -2925,7 +2979,7 @@
     :goto_9
     sget-boolean v2, Lcom/estrongs/android/pop/z;->H:Z
 
-    if-eqz v2, :cond_52
+    if-eqz v2, :cond_54
 
     new-instance v2, Landroid/content/ComponentName;
 
@@ -2946,7 +3000,7 @@
     :goto_a
     sget-boolean v2, Lcom/estrongs/android/pop/z;->J:Z
 
-    if-eqz v2, :cond_53
+    if-eqz v2, :cond_55
 
     new-instance v2, Landroid/content/ComponentName;
 
@@ -2967,7 +3021,7 @@
     :goto_b
     sget-boolean v2, Lcom/estrongs/android/pop/z;->T:Z
 
-    if-eqz v2, :cond_54
+    if-eqz v2, :cond_56
 
     new-instance v2, Landroid/content/ComponentName;
 
@@ -2988,7 +3042,7 @@
     :goto_c
     sget-boolean v2, Lcom/estrongs/android/pop/z;->ar:Z
 
-    if-eqz v2, :cond_55
+    if-eqz v2, :cond_57
 
     new-instance v2, Landroid/content/ComponentName;
 
@@ -3018,7 +3072,7 @@
 
     goto/16 :goto_1
 
-    :cond_4c
+    :cond_4e
     :try_start_4
     new-instance v2, Landroid/content/ComponentName;
 
@@ -3038,7 +3092,7 @@
 
     goto/16 :goto_4
 
-    :cond_4d
+    :cond_4f
     new-instance v2, Landroid/content/ComponentName;
 
     const-class v3, Lcom/estrongs/android/pop/app/PopVideoPlayerProxyActivity;
@@ -3057,7 +3111,7 @@
 
     goto/16 :goto_5
 
-    :cond_4e
+    :cond_50
     new-instance v2, Landroid/content/ComponentName;
 
     const-class v3, Lcom/estrongs/android/pop/app/compress/CompressionProxyActivity;
@@ -3076,7 +3130,7 @@
 
     goto/16 :goto_6
 
-    :cond_4f
+    :cond_51
     new-instance v2, Landroid/content/ComponentName;
 
     const-class v3, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;
@@ -3095,7 +3149,7 @@
 
     goto/16 :goto_7
 
-    :cond_50
+    :cond_52
     new-instance v2, Landroid/content/ComponentName;
 
     const-class v3, Lcom/estrongs/android/pop/app/ESContentChooserActivity;
@@ -3114,7 +3168,7 @@
 
     goto/16 :goto_8
 
-    :cond_51
+    :cond_53
     new-instance v2, Landroid/content/ComponentName;
 
     const-class v3, Lcom/estrongs/android/pop/app/ESWallPaperChooserActivity;
@@ -3133,7 +3187,7 @@
 
     goto/16 :goto_9
 
-    :cond_52
+    :cond_54
     new-instance v2, Landroid/content/ComponentName;
 
     const-class v3, Lcom/estrongs/android/pop/app/ESRingtoneChooserActivity;
@@ -3152,7 +3206,7 @@
 
     goto/16 :goto_a
 
-    :cond_53
+    :cond_55
     new-instance v2, Landroid/content/ComponentName;
 
     const-class v3, Lcom/estrongs/android/pop/app/ESFileSharingActivity;
@@ -3171,7 +3225,7 @@
 
     goto/16 :goto_b
 
-    :cond_54
+    :cond_56
     new-instance v2, Landroid/content/ComponentName;
 
     const-class v3, Lcom/estrongs/android/pop/app/BrowserDownloaderActivity;
@@ -3190,7 +3244,7 @@
 
     goto/16 :goto_c
 
-    :cond_55
+    :cond_57
     new-instance v2, Landroid/content/ComponentName;
 
     const-class v3, Lcom/estrongs/android/pop/app/SaveToESActivity;
@@ -3271,7 +3325,7 @@
 
     iget-object v3, v0, Lcom/estrongs/android/pop/ab;->c:Ljava/lang/String;
 
-    sget-object v4, Lcom/estrongs/android/pop/esclasses/e;->a:Ljava/lang/String;
+    sget-object v4, Lcom/estrongs/android/pop/esclasses/i;->a:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

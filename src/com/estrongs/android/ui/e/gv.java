@@ -1,29 +1,26 @@
 package com.estrongs.android.ui.e;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.fs.impl.l.a;
+import com.estrongs.android.util.bm;
+import com.estrongs.android.widget.f;
 import java.util.List;
 
 class gv
-  implements MenuItem.OnMenuItemClickListener
+  implements DialogInterface.OnClickListener
 {
-  gv(cp paramcp) {}
+  gv(gu paramgu, List paramList) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    paramMenuItem = cp.b(a);
-    if (paramMenuItem.size() == 0) {
-      ag.a(cp.a(a).getBaseContext(), 2131427774, 0);
-    }
-    for (;;)
-    {
-      cp.a(a).s();
-      return false;
-      a.a(cp.a(a), paramMenuItem, new gw(this));
-    }
+    bm.c().a(bb.a).K.d(), true);
+    bb.a).n = false;
+    bb.a).x.clear();
+    bb.a).x.addAll(a);
+    cr.b(b.a).B();
+    cr.b(b.a).a(bb.a).K.e(), true);
+    bb.a).K.k();
   }
 }
 

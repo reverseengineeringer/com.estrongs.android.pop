@@ -1,64 +1,70 @@
 .class Lcom/estrongs/android/pop/view/co;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/estrongs/fs/i;
+.super Ljava/lang/Thread;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+.field final synthetic a:Lcom/estrongs/android/pop/app/service/b;
+
+.field final synthetic b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
+.method constructor <init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;Lcom/estrongs/android/pop/app/service/b;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/view/co;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/view/co;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lcom/estrongs/android/pop/view/co;->a:Lcom/estrongs/android/pop/app/service/b;
+
+    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/estrongs/fs/h;)Z
-    .locals 3
+.method public run()V
+    .locals 2
 
-    const/4 v0, 0x1
+    invoke-static {}, Lcom/estrongs/fs/impl/k/c;->a()Z
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/view/co;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    move-result v0
 
-    invoke-static {v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->g(Lcom/estrongs/android/pop/view/FileExplorerActivity;)Z
+    if-eqz v0, :cond_1
 
-    move-result v1
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/co;->a:Lcom/estrongs/android/pop/app/service/b;
 
-    if-eqz v1, :cond_1
+    invoke-interface {v0}, Lcom/estrongs/android/pop/app/service/b;->a()V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/co;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->y(Lcom/estrongs/android/pop/view/FileExplorerActivity;)Lcom/estrongs/android/ui/dialog/ProgressDialog;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ProgressDialog;->isShowing()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/co;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->y(Lcom/estrongs/android/pop/view/FileExplorerActivity;)Lcom/estrongs/android/ui/dialog/ProgressDialog;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ProgressDialog;->dismiss()V
 
     :cond_0
-    :goto_0
-    return v0
+    invoke-static {}, Lcom/estrongs/fs/a/b;->a()Lcom/estrongs/fs/a/b;
+
+    move-result-object v0
+
+    const-string v1, "scannedserver://"
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/fs/a/b;->c(Ljava/lang/String;)V
 
     :cond_1
-    invoke-interface {p1}, Lcom/estrongs/fs/h;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {p1}, Lcom/estrongs/fs/h;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "."
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-void
 .end method

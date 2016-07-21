@@ -50,7 +50,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/estrongs/android/pop/utils/m;->a:Landroid/content/Context;
 
-    invoke-static {v1, v0}, Lcom/estrongs/fs/impl/b/d;->a(Landroid/content/Context;Ljava/util/List;)Ljava/util/List;
+    invoke-static {v1, v0}, Lcom/estrongs/fs/impl/b/e;->a(Landroid/content/Context;Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
@@ -62,19 +62,19 @@
 
     if-lt v1, v2, :cond_0
 
-    new-instance v1, Lcom/estrongs/android/ui/notification/c;
+    new-instance v1, Lcom/estrongs/android/ui/notification/d;
 
     iget-object v2, p0, Lcom/estrongs/android/pop/utils/m;->a:Landroid/content/Context;
 
-    invoke-direct {v1, v2}, Lcom/estrongs/android/ui/notification/c;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v2}, Lcom/estrongs/android/ui/notification/d;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f020197
+    const v2, 0x7f0202d1
 
-    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/notification/c;->a(I)V
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/notification/d;->a(I)V
 
     iget-object v2, p0, Lcom/estrongs/android/pop/utils/m;->a:Landroid/content/Context;
 
-    const v3, 0x7f0b053f
+    const v3, 0x7f08047e
 
     const/4 v4, 0x1
 
@@ -96,11 +96,11 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/notification/c;->b(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/notification/d;->b(Ljava/lang/CharSequence;)V
 
     iget-object v2, p0, Lcom/estrongs/android/pop/utils/m;->a:Landroid/content/Context;
 
-    const v3, 0x7f0b053f
+    const v3, 0x7f08047e
 
     const/4 v4, 0x1
 
@@ -122,25 +122,25 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/notification/c;->a(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/notification/d;->a(Ljava/lang/CharSequence;)V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/utils/m;->a:Landroid/content/Context;
 
-    const v2, 0x7f0b030b
+    const v2, 0x7f08063f
 
     invoke-virtual {v0, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/notification/c;->c(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/notification/d;->c(Ljava/lang/CharSequence;)V
 
     const/4 v0, 0x0
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/notification/c;->a(Z)V
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/notification/d;->a(Z)V
 
     const/4 v0, 0x1
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/notification/c;->b(Z)V
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/notification/d;->b(Z)V
 
     new-instance v0, Landroid/content/Intent;
 
@@ -158,9 +158,9 @@
 
     const/4 v2, 0x1
 
-    invoke-virtual {v1, v0, v2}, Lcom/estrongs/android/ui/notification/c;->a(Landroid/content/Intent;Z)V
+    invoke-virtual {v1, v0, v2}, Lcom/estrongs/android/ui/notification/d;->a(Landroid/content/Intent;Z)V
 
-    invoke-virtual {v1}, Lcom/estrongs/android/ui/notification/c;->c()V
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/notification/d;->c()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

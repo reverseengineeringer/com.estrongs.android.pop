@@ -4,6 +4,24 @@
 
 # direct methods
 .method public constructor <init>(Landroid/net/LocalSocket;Ljava/io/File;Z)V
+    .locals 6
+
+    const-wide/16 v4, -0x1
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move v3, p3
+
+    invoke-direct/range {v0 .. v5}, Lcom/estrongs/fs/impl/local/f;-><init>(Landroid/net/LocalSocket;Ljava/io/File;ZJ)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/net/LocalSocket;Ljava/io/File;ZJ)V
     .locals 2
 
     invoke-virtual {p2}, Ljava/io/File;->getPath()Ljava/lang/String;
@@ -29,6 +47,8 @@
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/estrongs/fs/impl/local/f;->lastModified:J
+
+    iput-wide p4, p0, Lcom/estrongs/fs/impl/local/f;->lastAccessed:J
 
     const/4 v0, 0x0
 
@@ -57,9 +77,9 @@
 
     if-eqz v0, :cond_2
 
-    sget-object v0, Lcom/estrongs/fs/m;->a:Lcom/estrongs/fs/m;
+    sget-object v0, Lcom/estrongs/fs/w;->a:Lcom/estrongs/fs/w;
 
-    iput-object v0, p0, Lcom/estrongs/fs/impl/local/f;->type:Lcom/estrongs/fs/m;
+    iput-object v0, p0, Lcom/estrongs/fs/impl/local/f;->type:Lcom/estrongs/fs/w;
 
     const-string v0, "child_count"
 
@@ -71,7 +91,11 @@
 
     if-eqz p3, :cond_1
 
-    invoke-virtual {p2}, Ljava/io/File;->listFiles()[Ljava/io/File;
+    new-instance v0, Lcom/estrongs/fs/impl/local/g;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/fs/impl/local/g;-><init>(Lcom/estrongs/fs/impl/local/f;)V
+
+    invoke-virtual {p2, v0}, Ljava/io/File;->listFiles(Ljava/io/FilenameFilter;)[Ljava/io/File;
 
     move-result-object v0
 
@@ -92,9 +116,9 @@
     return-void
 
     :cond_2
-    sget-object v0, Lcom/estrongs/fs/m;->b:Lcom/estrongs/fs/m;
+    sget-object v0, Lcom/estrongs/fs/w;->b:Lcom/estrongs/fs/w;
 
-    iput-object v0, p0, Lcom/estrongs/fs/impl/local/f;->type:Lcom/estrongs/fs/m;
+    iput-object v0, p0, Lcom/estrongs/fs/impl/local/f;->type:Lcom/estrongs/fs/w;
 
     goto :goto_1
 
@@ -112,6 +136,24 @@
     const/4 v1, 0x0
 
     invoke-direct {p0, v0, p1, v1}, Lcom/estrongs/fs/impl/local/f;-><init>(Landroid/net/LocalSocket;Ljava/io/File;Z)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/io/File;J)V
+    .locals 6
+
+    const/4 v1, 0x0
+
+    const/4 v3, 0x0
+
+    move-object v0, p0
+
+    move-object v2, p1
+
+    move-wide v4, p2
+
+    invoke-direct/range {v0 .. v5}, Lcom/estrongs/fs/impl/local/f;-><init>(Landroid/net/LocalSocket;Ljava/io/File;ZJ)V
 
     return-void
 .end method

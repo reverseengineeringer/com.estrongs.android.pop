@@ -1,13 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_select">Выбор</string>
-    <string name="app_name">ES Проводник</string>
-    <string name="app_media_player">ES Медиаплеер</string>
-    <string name="app_note_editor">ES Редактор</string>
-    <string name="app_image_browser">Просмотр изображения</string>
-    <string name="app_zip_viewer">ES Архиватор</string>
     <string name="app_downloader">ES Загрузчик</string>
-    <string name="select_device_to_share">Выбрать устройство для отправки</string>
+    <string name="app_image_browser">Просмотр изображения</string>
+    <string name="app_media_player">ES Медиаплеер</string>
+    <string name="app_name">ES Проводник</string>
+    <string name="app_note_editor">ES Редактор</string>
+    <string name="app_zip_viewer">ES Архиватор</string>
+    <string name="battery_info_remaining_charging_time">До оконч. заряд.:</string>
+    <string name="battery_info_remaining_discharging_time">"Осталось: "</string>
+    <string name="charging_screen_ad_delete">Удалить</string>
+    <string name="charging_screen_ad_enter">Открыть</string>
+    <string name="charging_screen_charging_complete">Заряжено</string>
+    <string name="charging_screen_slide_to_enter">Проведите для разблок.</string>
+    <string name="common_time_hour">ч</string>
+    <string name="common_time_minute">м</string>
+    <string name="duappd_ad_item_action_btn">БЕСПЛАТНО</string>
+    <string name="duapps_ad_data_empty">Вернитесь позже.</string>
+    <string name="duapps_ad_empty_refresh_btn_check">Дата</string>
+    <string name="duapps_ad_empty_title"> ПУСТО</string>
+    <string name="duapps_ad_footer_end">Больше контента нет</string>
+    <string name="duapps_ad_loading">Загрузка …</string>
+    <string name="duapps_ad_loading_switch_google_play_des">Переход в Google Play…</string>
+    <string name="duapps_ad_no_apps_refresh_button_text">Обновить</string>
+    <string name="duapps_ad_no_browser_play">Браузер или Google Play не установлен</string>
+    <string name="duapps_ad_nonetwork_message">Нет подключения к сети. Проверьте настройки и повторите попытку.</string>
+    <string name="duapps_ad_pull_refresh">Обновить</string>
+    <string name="duscenerysdk_ad_no_browser_play">Браузер или Google Play не установлен</string>
     <string name="es_share_name_activity">Доступ через LAN</string>
+    <string name="lock_screen_setting">Настройки</string>
+    <string name="lock_screen_switch">Умная зарядка</string>
+    <string name="lockscreen_charge_boost_time">Всего зарядка ускорена на %1$d мин.</string>
     <string name="save_to_es">ES Сохранить в</string>
+    <string name="scenery_card_antivirus_button">СКАНИРОВАТЬ</string>
+    <string name="scenery_card_antivirus_content">Обнаружено опасностей: &lt;font color=#3080F0>%1$s&lt;/font></string>
+    <string name="scenery_card_antivirus_title">Опасность</string>
+    <string name="scenery_card_battery_button">ВКЛ. ЭНЕРГОСБЕРЕЖЕНИЕ</string>
+    <string name="scenery_card_battery_content">Найдено потребляющих энергию приложений: &lt;font color=#3080F0>%1$s&lt;/font> . Используйте DU Battery Saver, чтобы не тратить заряд и продлить работу на&lt;font color=#3080F0>%2$s ч. %3$s мин.&lt;/font></string>
+    <string name="scenery_card_battery_title">Энергопотребление</string>
+    <string name="scenery_card_booster_button">УСКОРИТЬ</string>
+    <string name="scenery_card_booster_content">&lt;font color=#3080F0>%1$s&lt;/font> прил. замедл. работу телефона</string>
+    <string name="scenery_card_booster_title">Замедление</string>
+    <string name="scenery_card_cleaner_button">ИСПРАВИТЬ</string>
+    <string name="scenery_card_cleaner_content">Найден мусор &lt;font color=#3080F0>%1$s&lt;/font> в телефоне</string>
+    <string name="scenery_card_cleaner_title">Быстрая очистка</string>
+    <string name="scenery_card_es_button">ОЧИСТИТЬ</string>
+    <string name="scenery_card_es_content">Осталось свободного места: &lt;font color=#3080F0>%1$s&lt;/font></string>
+    <string name="scenery_card_es_title">Очистка диска</string>
+    <string name="scenery_card_photowonder_button">УКРАСИТЬ</string>
+    <string name="scenery_card_photowonder_content">У вас &lt;font color=#3080F0>%1$s&lt;/font> фото. А фото можно сделать красивее!</string>
+    <string name="scenery_card_photowonder_title">Украшение</string>
+    <string name="scenery_charge_dialog_button_text">УСТАНОВИТЬ</string>
+    <string name="scenery_charge_dialog_content">%1$d мин. чрезмерной зарядки &lt;font color=#FF8132>вредны батарее&lt;/font>! Защитите ее с &lt;b>DU Battery Saver&lt;/b> .</string>
+    <string name="scenery_charge_dialog_title">Советы по зарядке</string>
+    <string name="scenery_disk_usage_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_disk_usage_dialog_content">Свободного места на телефоне стало меньше на &lt;font color=#FF8132>%1$s МБ&lt;/font> за последние &lt;font color=#FF8132>%2$s дн.&lt;/font> .</string>
+    <string name="scenery_disk_usage_dialog_title">Очистка диска</string>
+    <string name="scenery_take_photo_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_take_photo_dialog_content">Фото недостаточно красивые? &lt;font color=#2274E6>Кинематографические фильтры&lt;/font> &lt;b>PhotoWonder&lt;/b> помогут вам!</string>
+    <string name="scenery_take_photo_dialog_title">Украшение</string>
+    <string name="scenery_uninstall_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_uninstall_dialog_content">%1$s оставило &lt;font color=#FF8132>мусорных файлов&lt;/font>, воспользуйтесь &lt;b>DU Speed Booster&lt;/b> для очистки!</string>
+    <string name="scenery_uninstall_dialog_title">Найдены остат. файлы</string>
+    <string name="screen_lock_charging_boosted_time">Зарядка ускорена на %1$d мин.</string>
+    <string name="select_device_to_share">Выбрать устройство для отправки</string>
+    <string name="toolbox_no_apps_refresh_button_text">Обновить</string>
+    <string name="toolbox_nonetwork_tips">Нажмите, чтобы подключиться к сети и посмотреть другие бесплатные приложения.</string>
+    <string name="toolbox_v2_btn_more">Ещё</string>
+    <string name="toolbox_v2_coin_balance">Баланс:</string>
+    <string name="toolbox_v2_data_empty">Вернитесь позже.</string>
+    <string name="toolbox_v2_list_item_btn_free">БЕСПЛАТНО</string>
+    <string name="v2_toolbox_empty_title"> ПУСТО</string>
+    <string name="toolbox_v2_network_mobile">Мобильный интернет</string>
+    <string name="toolbox_v2_network_wifi">Wi-Fi</string>
+    <string name="toolbox_v2_nomore_content">Больше контента нет</string>
+    <string name="toolbox_v2_pull_refresh">Обновить</string>
 </resources>

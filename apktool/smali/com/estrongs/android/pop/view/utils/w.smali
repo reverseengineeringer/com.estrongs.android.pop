@@ -140,9 +140,9 @@
 
     iput-object v1, v0, Lcom/estrongs/android/pop/view/utils/ab;->b:Lcom/estrongs/android/pop/view/utils/y;
 
-    new-instance v1, Lcom/estrongs/android/ui/notification/e;
+    new-instance v1, Lcom/estrongs/android/ui/notification/f;
 
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v6
 
@@ -150,7 +150,7 @@
 
     move-result-object v7
 
-    const v8, 0x7f0b042f
+    const v8, 0x7f0805c4
 
     invoke-virtual {v7, v8}, Lcom/estrongs/android/pop/FexApplication;->getString(I)Ljava/lang/String;
 
@@ -158,7 +158,7 @@
 
     iget-object v8, v0, Lcom/estrongs/android/pop/view/utils/ab;->b:Lcom/estrongs/android/pop/view/utils/y;
 
-    invoke-direct {v1, v6, v7, v8}, Lcom/estrongs/android/ui/notification/e;-><init>(Landroid/app/Activity;Ljava/lang/CharSequence;Lcom/estrongs/a/a;)V
+    invoke-direct {v1, v6, v7, v8}, Lcom/estrongs/android/ui/notification/f;-><init>(Landroid/app/Activity;Ljava/lang/CharSequence;Lcom/estrongs/a/a;)V
 
     iget-object v0, v0, Lcom/estrongs/android/pop/view/utils/ab;->b:Lcom/estrongs/android/pop/view/utils/y;
 

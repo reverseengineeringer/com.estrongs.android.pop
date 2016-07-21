@@ -6,9 +6,9 @@ import android.content.DialogInterface.OnClickListener;
 import android.widget.EditText;
 import com.estrongs.android.pop.ad;
 import com.estrongs.android.pop.app.DownloaderActivity;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.bd;
-import com.estrongs.fs.b.ap;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.bk;
+import com.estrongs.fs.b.ar;
 import com.estrongs.fs.d;
 import com.estrongs.fs.util.j;
 
@@ -19,8 +19,8 @@ class n
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ((bd.b(l.b(b).getText())) && (!j.c(l.b(b).getText().toString()))) {
-      ag.a(a, a.getString(2131427875), 0);
+    if ((bk.b(l.b(b).getText())) && (!j.c(l.b(b).getText().toString()))) {
+      ak.a(a, a.getString(2131231764), 0);
     }
     String str;
     do
@@ -29,14 +29,14 @@ class n
       str = l.a(b).getText().toString().trim();
     } while (!l.a(b, str));
     paramDialogInterface.dismiss();
-    paramDialogInterface = ad.a(a).ae();
-    if (bd.a(paramDialogInterface))
+    paramDialogInterface = ad.a(a).af();
+    if (bk.a(paramDialogInterface))
     {
       paramDialogInterface = new o(this, str);
       DownloaderActivity.a(a, paramDialogInterface, null);
       return;
     }
-    new ap(d.a(a), paramDialogInterface, str, l.b(b).getText().toString()).execute();
+    new ar(d.a(a), paramDialogInterface, str, l.b(b).getText().toString()).execute();
   }
 }
 

@@ -1,30 +1,28 @@
 package com.estrongs.android.pop.app.imageviewer;
 
 import android.graphics.Bitmap;
-import com.estrongs.android.b.a;
+import com.estrongs.android.pop.app.imageviewer.gallery.e;
 import com.estrongs.android.pop.app.imageviewer.gallery.f;
+import java.lang.ref.SoftReference;
 
 class cb
-  extends a
+  implements v
 {
-  cb(ViewImage21 paramViewImage21, String paramString, ch paramch, int paramInt)
-  {
-    super(paramString);
-  }
+  cb(ViewImage21 paramViewImage21, int paramInt, cg paramcg, Runnable paramRunnable) {}
   
-  public void a(a parama, Bitmap paramBitmap)
+  public void a(e parame, Bitmap paramBitmap)
   {
-    try
+    an localan;
+    if (paramBitmap == null) {
+      localan = null;
+    }
+    while ((d.a) || (!parame.equals(d.e.a(a))) || (b == null))
     {
-      int i = c.g.h.a();
-      a.a(c.e.a(b), new an(paramBitmap, i));
       return;
+      localan = new an(paramBitmap, parame.b());
+      ViewImage21.f(d).a(parame, new SoftReference(localan));
     }
-    catch (Exception paramBitmap)
-    {
-      paramBitmap.printStackTrace();
-      parama.stop();
-    }
+    d.b.a(new cc(this, parame, paramBitmap, localan));
   }
 }
 

@@ -3,9 +3,9 @@ package com.estrongs.android.ui.view;
 import android.app.Activity;
 import android.os.Handler;
 import android.widget.EditText;
-import com.estrongs.android.a.u;
+import com.estrongs.android.d.u;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.util.am;
+import com.estrongs.android.util.ap;
 
 class o
   implements Runnable
@@ -25,7 +25,7 @@ class o
       String str2 = b.p(a).getText().toString().trim();
       String str1 = str2;
       if (str2.length() == 0) {
-        str1 = am.c(b.k(a));
+        str1 = ap.c(b.k(a));
       }
       b.c(a, b.k(a));
       if (!b.q(a)) {

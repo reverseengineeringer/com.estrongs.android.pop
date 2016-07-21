@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.pm.ApplicationInfo;
 import com.estrongs.android.pop.view.utils.AppRunner;
+import com.estrongs.fs.impl.b.d;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,14 +20,14 @@ class q
     paramInt = 0;
     if (paramInt < a.size())
     {
-      ApplicationInfo localApplicationInfo = ((com.estrongs.fs.impl.b.c)a.get(paramInt)).c();
+      ApplicationInfo localApplicationInfo = ((d)a.get(paramInt)).h();
       if (localApplicationInfo == null) {}
       for (;;)
       {
         paramInt += 1;
         break;
         localArrayList1.add(packageName);
-        localArrayList2.add(((com.estrongs.fs.impl.b.c)a.get(paramInt)).getName());
+        localArrayList2.add(((d)a.get(paramInt)).getName());
       }
     }
     AppRunner.b(b.a, localArrayList1, localArrayList2);

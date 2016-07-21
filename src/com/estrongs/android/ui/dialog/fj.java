@@ -1,22 +1,34 @@
 package com.estrongs.android.ui.dialog;
 
-import android.app.AlertDialog.Builder;
-import android.content.DialogInterface.OnClickListener;
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.content.Context;
+import android.gesture.Gesture;
+import com.estrongs.android.ui.guesture.ESGesturePanel;
+import com.estrongs.android.ui.guesture.b;
+import com.estrongs.android.ui.guesture.c;
+import com.estrongs.android.ui.view.ak;
 
 class fj
-  implements View.OnClickListener
+  implements c
 {
-  fj(fh paramfh, DialogInterface.OnClickListener paramOnClickListener) {}
+  fj(fi paramfi) {}
   
-  public void onClick(View paramView)
+  public void a(Gesture paramGesture)
   {
-    paramView = new AlertDialog.Builder(fh.d(b));
-    paramView.setItems((CharSequence[])fh.a(b), a);
-    paramView.setNegativeButton(2131427340, new fk(this));
-    paramView.setTitle(2131428006);
-    paramView.show();
+    if (paramGesture != null)
+    {
+      if (b.a(paramGesture) != null)
+      {
+        fi.a(a).b();
+        ak.a(fi.b(a), 2131231548, 0);
+      }
+    }
+    else {
+      return;
+    }
+    if (!b.a(fi.c(a), paramGesture)) {
+      ak.a(fi.b(a), fi.b(a).getString(2131232451), 0);
+    }
+    a.b();
   }
 }
 

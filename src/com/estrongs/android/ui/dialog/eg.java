@@ -1,26 +1,24 @@
 package com.estrongs.android.ui.dialog;
 
-import android.app.Dialog;
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.pop.view.FileExplorerActivity;
+import android.widget.ProgressBar;
+import com.estrongs.android.pop.app.diskusage.a;
 
 class eg
-  implements View.OnClickListener
+  implements Runnable
 {
-  eg(eb parameb) {}
+  eg(ee paramee) {}
   
-  public void onClick(View paramView)
+  public void run()
   {
     try
     {
-      if (a.h != null) {
-        a.h.dismiss();
+      a.j.setVisibility(0);
+      if (a.l != null) {
+        a.l.a();
       }
-      FileExplorerActivity.J().e(eb.c(a));
       return;
     }
-    catch (Exception paramView) {}
+    catch (Exception localException) {}
   }
 }
 

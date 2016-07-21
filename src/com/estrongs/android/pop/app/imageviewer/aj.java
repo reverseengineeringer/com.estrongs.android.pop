@@ -1,16 +1,16 @@
 package com.estrongs.android.pop.app.imageviewer;
 
 import android.view.View;
-import com.estrongs.android.ui.dialog.ct;
+import com.estrongs.android.ui.dialog.cv;
 
 final class aj
   implements Runnable
 {
-  aj(ct paramct, View paramView) {}
+  aj(cv paramcv, View paramView) {}
   
   public void run()
   {
-    a.a(2131427577).a(b).c();
+    a.a(2131232219).a(b).c();
   }
 }
 

@@ -1,24 +1,24 @@
-.class interface abstract Landroid/support/v4/view/a/o;
-.super Ljava/lang/Object;
+.class Landroid/support/v4/view/a/o;
+.super Landroid/support/v4/view/a/n;
+
+
+# direct methods
+.method constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Landroid/support/v4/view/a/n;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a(I)Ljava/lang/Object;
-.end method
+.method public u(Ljava/lang/Object;)Ljava/lang/String;
+    .locals 1
 
-.method public abstract a(Ljava/lang/String;I)Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "I)",
-            "Ljava/util/List",
-            "<",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-.end method
+    invoke-static {p1}, Landroid/support/v4/view/a/x;->a(Ljava/lang/Object;)Ljava/lang/String;
 
-.method public abstract a(IILandroid/os/Bundle;)Z
+    move-result-object v0
+
+    return-object v0
 .end method

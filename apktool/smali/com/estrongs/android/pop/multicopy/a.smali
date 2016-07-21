@@ -225,7 +225,7 @@
 
     iget-object v8, v0, Lcom/estrongs/android/pop/multicopy/a;->a:Ljava/lang/String;
 
-    invoke-static {v8}, Lcom/estrongs/android/util/am;->t(Ljava/lang/String;)Z
+    invoke-static {v8}, Lcom/estrongs/android/util/ap;->v(Ljava/lang/String;)Z
 
     move-result v8
 
@@ -235,7 +235,7 @@
 
     iget-object v8, v0, Lcom/estrongs/android/pop/multicopy/a;->a:Ljava/lang/String;
 
-    invoke-static {v8}, Lcom/estrongs/android/util/am;->m(Ljava/lang/String;)Z
+    invoke-static {v8}, Lcom/estrongs/android/util/ap;->o(Ljava/lang/String;)Z
 
     move-result v8
 
@@ -252,7 +252,7 @@
 
     iget-object v8, v0, Lcom/estrongs/android/pop/multicopy/a;->a:Ljava/lang/String;
 
-    invoke-static {v8}, Lcom/estrongs/android/util/am;->m(Ljava/lang/String;)Z
+    invoke-static {v8}, Lcom/estrongs/android/util/ap;->o(Ljava/lang/String;)Z
 
     move-result v8
 

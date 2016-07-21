@@ -1,10 +1,19 @@
 package android.support.v4.app;
 
-public abstract class w
+import android.os.Parcel;
+import android.os.Parcelable.Creator;
+
+final class w
+  implements Parcelable.Creator<BackStackState>
 {
-  public boolean a()
+  public BackStackState a(Parcel paramParcel)
   {
-    return false;
+    return new BackStackState(paramParcel);
+  }
+  
+  public BackStackState[] a(int paramInt)
+  {
+    return new BackStackState[paramInt];
   }
 }
 

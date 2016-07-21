@@ -1,37 +1,20 @@
 package com.estrongs.android.pop.app.editor;
 
-import android.content.Intent;
-import android.net.Uri;
-import com.estrongs.android.pop.utils.cv;
-import com.estrongs.android.pop.utils.cy;
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.dialog.kv;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.pop.m;
 
 class o
-  implements kv
+  implements DialogInterface.OnClickListener
 {
-  o(n paramn) {}
+  o(PopNoteEditor paramPopNoteEditor) {}
   
-  public void a(String paramString1, String paramString2)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    try
-    {
-      paramString1 = cv.a(a.a, paramString1, paramString2);
-      if (paramString1 == null) {
-        return;
-      }
-      if (cv.a(b))
-      {
-        a.a.finish();
-        return;
-      }
-      paramString2 = new Intent(a.a, FileExplorerActivity.class);
-      paramString2.setFlags(603979776);
-      paramString2.setData(Uri.parse(a));
-      a.a.startActivity(paramString2);
-      return;
-    }
-    catch (Exception paramString1) {}
+    PopNoteEditor.a(a, new ab(a, null));
+    PopNoteEditor.r(a).setTaskDecisionListener(new m(a));
+    PopNoteEditor.r(a).execute();
+    paramDialogInterface.dismiss();
   }
 }
 

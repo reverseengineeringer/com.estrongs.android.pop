@@ -1,23 +1,18 @@
 package com.estrongs.android.pop.app;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 
 class ju
-  extends BroadcastReceiver
+  implements MenuItem.OnMenuItemClickListener
 {
   ju(PopVideoPlayer paramPopVideoPlayer) {}
   
-  public void onReceive(Context paramContext, Intent paramIntent)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    try
-    {
-      PopVideoPlayer.m(a);
-      a.finish();
-      return;
-    }
-    catch (Exception paramContext) {}
+    PopVideoPlayer.w(a);
+    PopVideoPlayer.A(a).d();
+    return true;
   }
 }
 

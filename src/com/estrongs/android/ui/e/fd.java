@@ -1,15 +1,43 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.view.a.b;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.j.c;
+import com.estrongs.android.pop.utils.ad;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.fs.a.b;
+import java.util.List;
 
 class fd
-  implements b
+  implements MenuItem.OnMenuItemClickListener
 {
-  fd(cp paramcp) {}
+  fd(cr paramcr) {}
   
-  public boolean a(co paramco)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    return l;
+    paramMenuItem = cr.a(a);
+    if (paramMenuItem.size() == 0) {
+      ak.a(cr.b(a).getBaseContext(), 2131231551, 0);
+    }
+    for (;;)
+    {
+      cr.b(a).B();
+      return true;
+      ad.a(paramMenuItem);
+      b.a().d(paramMenuItem);
+      try
+      {
+        paramMenuItem = cr.b(a).at();
+        if (paramMenuItem != null) {
+          paramMenuItem.c("Edit_Hide_UV");
+        }
+      }
+      catch (Exception paramMenuItem)
+      {
+        paramMenuItem.printStackTrace();
+      }
+    }
   }
 }
 

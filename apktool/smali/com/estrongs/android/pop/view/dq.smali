@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/ui/dialog/kr;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/fs/h;
-
-.field final synthetic b:Lcom/estrongs/android/pop/view/dp;
+.field final synthetic a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/view/dp;Lcom/estrongs/fs/h;)V
+.method constructor <init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/view/dq;->b:Lcom/estrongs/android/pop/view/dp;
-
-    iput-object p2, p0, Lcom/estrongs/android/pop/view/dq;->a:Lcom/estrongs/fs/h;
+    iput-object p1, p0, Lcom/estrongs/android/pop/view/dq;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,17 +22,14 @@
 
 
 # virtual methods
-.method public a(Z)V
+.method public run()V
     .locals 2
 
-    if-eqz p1, :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/dq;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/dq;->b:Lcom/estrongs/android/pop/view/dp;
+    const-string v1, "net://"
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/view/dq;->a:Lcom/estrongs/fs/h;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->g(Ljava/lang/String;)Lcom/estrongs/android/view/cr;
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/pop/view/dp;->a(Lcom/estrongs/android/pop/view/dp;Lcom/estrongs/fs/h;)V
-
-    :cond_0
     return-void
 .end method

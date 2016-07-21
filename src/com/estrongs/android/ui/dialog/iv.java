@@ -1,60 +1,77 @@
 package com.estrongs.android.ui.dialog;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
+import android.widget.RadioGroup;
 import android.widget.TextView;
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.esclasses.g;
-import com.estrongs.android.ui.d.a;
-import com.estrongs.android.ui.theme.al;
-import com.estrongs.android.util.o;
-import java.util.Iterator;
-import java.util.List;
+import com.estrongs.android.pop.esclasses.k;
 
 class iv
   extends BaseAdapter
 {
-  private Context a;
-  private int b = 8;
-  private Drawable[] c;
-  private al d;
-  private int e;
+  private Context b;
+  private ix[] c;
   
-  public iv(Context paramContext)
+  public iv(is paramis, Context paramContext, ix[] paramArrayOfix)
   {
-    a = paramContext;
-    d = al.a(a);
-    c = new Drawable[getCount()];
-    c[0] = d.a(2130838237);
-    c[1] = d.a(2130838243);
-    c[2] = d.a(2130838239);
-    c[3] = d.a(2130838238);
-    c[4] = d.a(2130838244);
-    c[5] = d.a(2130838240);
-    a();
+    b = paramContext;
+    c = paramArrayOfix;
   }
   
-  public void a()
+  public String[] a()
   {
-    int i = ad.a(a).aV();
-    Iterator localIterator = dd.a.iterator();
-    while (localIterator.hasNext())
+    String[] arrayOfString = new String[c.length * 3];
+    int i = 0;
+    while (i < c.length)
     {
-      o localo = (o)localIterator.next();
-      if (((Integer)b).intValue() == i) {
-        e = ((Integer)a).intValue();
-      }
+      arrayOfString[(i * 3)] = c[i].a;
+      arrayOfString[(i * 3 + 1)] = c[i].b;
+      arrayOfString[(i * 3 + 2)] = c[i].c;
+      i += 1;
     }
+    return arrayOfString;
+  }
+  
+  public String[] b()
+  {
+    int m = 0;
+    int j = 0;
+    for (int i = 0; j < c.length; i = k)
+    {
+      k = i;
+      if (c[j].a()) {
+        k = i + 1;
+      }
+      j += 1;
+    }
+    String[] arrayOfString = new String[i * 3];
+    int k = 0;
+    j = m;
+    while ((k < i) && (j < c.length))
+    {
+      m = k;
+      if (c[j].a())
+      {
+        arrayOfString[(k * 3)] = c[j].a;
+        arrayOfString[(k * 3 + 1)] = c[j].b;
+        arrayOfString[(k * 3 + 2)] = c[j].c;
+        m = k + 1;
+      }
+      j += 1;
+      k = m;
+    }
+    return arrayOfString;
   }
   
   public int getCount()
   {
-    return b;
+    if (c == null) {
+      return 0;
+    }
+    return c.length;
   }
   
   public Object getItem(int paramInt)
@@ -71,19 +88,20 @@ class iv
   {
     paramViewGroup = paramView;
     if (paramView == null) {
-      paramViewGroup = g.a(a).inflate(2130903171, null);
+      paramViewGroup = k.a(b).inflate(2130903407, null);
     }
-    paramView = (ImageView)paramViewGroup.findViewById(2131361853);
-    paramView.setImageDrawable(c[paramInt]);
-    paramView.setPadding(0, a.a(a, 10.0F), 0, a.a(a, 10.0F));
-    ((TextView)paramViewGroup.findViewById(2131361997)).setVisibility(8);
-    if (paramInt == e)
+    ((TextView)paramViewGroup.findViewById(2131625464)).setText(c[paramInt].a);
+    paramView = (RadioGroup)paramViewGroup.findViewById(2131625466);
+    paramView.setTag(Integer.valueOf(paramInt));
+    if (c[paramInt].c.equals("ro")) {
+      paramView.check(2131625467);
+    }
+    for (;;)
     {
-      paramViewGroup.setBackgroundResource(2130837971);
+      paramView.setOnCheckedChangeListener(new iw(this));
       return paramViewGroup;
+      paramView.check(2131625468);
     }
-    paramViewGroup.setBackgroundResource(2130837974);
-    return paramViewGroup;
   }
 }
 

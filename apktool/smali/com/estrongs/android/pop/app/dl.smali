@@ -79,7 +79,7 @@
 
     iget-object v3, v3, Lcom/estrongs/android/pop/app/dk;->f:Lcom/estrongs/android/pop/app/dj;
 
-    invoke-static {v3}, Lcom/estrongs/android/pop/app/dj;->a(Lcom/estrongs/android/pop/app/dj;)Lcom/estrongs/android/util/as;
+    invoke-static {v3}, Lcom/estrongs/android/pop/app/dj;->a(Lcom/estrongs/android/pop/app/dj;)Lcom/estrongs/android/util/aw;
 
     move-result-object v3
 
@@ -87,7 +87,7 @@
 
     invoke-direct {v4, v0, v1}, Ljava/util/Date;-><init>(J)V
 
-    invoke-virtual {v3, v4}, Lcom/estrongs/android/util/as;->a(Ljava/util/Date;)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Lcom/estrongs/android/util/aw;->a(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -101,7 +101,7 @@
 
     iget-object v0, v0, Lcom/estrongs/android/pop/app/dj;->a:Lcom/estrongs/android/pop/app/ImageCommentActivity;
 
-    const v1, 0x7f0a02d6
+    const v1, 0x7f0e0527
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->findViewById(I)Landroid/view/View;
 

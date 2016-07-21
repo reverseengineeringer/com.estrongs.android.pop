@@ -1,5 +1,5 @@
 .class public Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;
-.super Lcom/estrongs/android/pop/esclasses/i;
+.super Lcom/estrongs/android/pop/esclasses/m;
 
 
 # annotations
@@ -26,7 +26,7 @@
 .method public constructor <init>()V
     .locals 1
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/i;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/m;-><init>()V
 
     new-instance v0, Landroid/os/Handler;
 
@@ -83,7 +83,7 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 7
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/i;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/m;->onCreate(Landroid/os/Bundle;)V
 
     const v0, 0x7f05000c
 
@@ -101,15 +101,15 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->a:Lcom/estrongs/android/pop/ad;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->am()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->an()Z
 
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->a:Lcom/estrongs/android/pop/ad;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->ak()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->al()Z
 
-    new-instance v0, Lcom/estrongs/android/ui/preference/fragments/aa;
+    new-instance v0, Lcom/estrongs/android/ui/preference/fragments/ac;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/preference/fragments/aa;-><init>(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/preference/fragments/ac;-><init>(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)V
 
     iput-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->e:Landroid/preference/Preference$OnPreferenceChangeListener;
 
@@ -123,7 +123,7 @@
 
     if-eqz v0, :cond_0
 
-    sget-boolean v1, Lcom/estrongs/android/pop/esclasses/k;->a:Z
+    sget-boolean v1, Lcom/estrongs/android/pop/esclasses/p;->a:Z
 
     if-eqz v1, :cond_b
 
@@ -133,15 +133,15 @@
 
     iget-object v1, p0, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->a:Lcom/estrongs/android/pop/ad;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->aZ()Z
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->aY()Z
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
 
-    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/ab;
+    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/ad;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/ab;-><init>(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/ad;-><init>(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -157,7 +157,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lcom/estrongs/android/pop/utils/cc;->a()Z
+    invoke-static {}, Lcom/estrongs/android/pop/utils/cl;->a()Z
 
     move-result v1
 
@@ -167,9 +167,9 @@
 
     if-eqz v1, :cond_c
 
-    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/ac;
+    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/ae;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/ac;-><init>(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/ae;-><init>(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -185,9 +185,9 @@
 
     if-eqz v1, :cond_2
 
-    new-instance v2, Lcom/estrongs/android/ui/preference/fragments/ad;
+    new-instance v2, Lcom/estrongs/android/ui/preference/fragments/af;
 
-    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/preference/fragments/ad;-><init>(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)V
+    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/preference/fragments/af;-><init>(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)V
 
     invoke-virtual {v1, v2}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -202,9 +202,9 @@
 
     if-eqz v1, :cond_3
 
-    new-instance v2, Lcom/estrongs/android/ui/preference/fragments/ae;
+    new-instance v2, Lcom/estrongs/android/ui/preference/fragments/ag;
 
-    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/preference/fragments/ae;-><init>(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)V
+    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/preference/fragments/ag;-><init>(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)V
 
     invoke-virtual {v1, v2}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -227,7 +227,7 @@
 
     iget-object v2, p0, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->a:Lcom/estrongs/android/pop/ad;
 
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/ad;->ak()Z
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/ad;->al()Z
 
     move-result v2
 
@@ -252,7 +252,7 @@
 
     iget-object v2, p0, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->a:Lcom/estrongs/android/pop/ad;
 
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/ad;->am()Z
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/ad;->an()Z
 
     move-result v2
 
@@ -271,7 +271,7 @@
 
     iget-object v2, p0, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->a:Lcom/estrongs/android/pop/ad;
 
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/ad;->N()Z
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/ad;->O()Z
 
     move-result v2
 
@@ -288,9 +288,9 @@
 
     if-eqz v1, :cond_7
 
-    new-instance v2, Lcom/estrongs/android/ui/preference/fragments/af;
+    new-instance v2, Lcom/estrongs/android/ui/preference/fragments/ah;
 
-    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/preference/fragments/af;-><init>(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)V
+    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/preference/fragments/ah;-><init>(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)V
 
     invoke-virtual {v1, v2}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -307,7 +307,7 @@
 
     iget-object v2, p0, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->a:Lcom/estrongs/android/pop/ad;
 
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/ad;->P()Z
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/ad;->Q()Z
 
     move-result v2
 
@@ -326,15 +326,15 @@
 
     iget-object v3, p0, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->a:Lcom/estrongs/android/pop/ad;
 
-    invoke-virtual {v3}, Lcom/estrongs/android/pop/ad;->Q()Z
+    invoke-virtual {v3}, Lcom/estrongs/android/pop/ad;->R()Z
 
     move-result v3
 
     invoke-virtual {v2, v3}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
 
-    new-instance v3, Lcom/estrongs/android/ui/preference/fragments/ah;
+    new-instance v3, Lcom/estrongs/android/ui/preference/fragments/aj;
 
-    invoke-direct {v3, p0}, Lcom/estrongs/android/ui/preference/fragments/ah;-><init>(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)V
+    invoke-direct {v3, p0}, Lcom/estrongs/android/ui/preference/fragments/aj;-><init>(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)V
 
     invoke-virtual {v2, v3}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -374,7 +374,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f070014
+    const v4, 0x7f0c000a
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -386,7 +386,7 @@
 
     const/4 v3, 0x0
 
-    const v6, 0x7f0b0294
+    const v6, 0x7f080547
 
     invoke-virtual {p0, v6}, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->getString(I)Ljava/lang/String;
 
@@ -454,7 +454,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f070015
+    const v4, 0x7f0c000b
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -472,7 +472,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/estrongs/android/pop/ad;->B()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/estrongs/android/pop/ad;->C()Ljava/lang/String;
 
     move-result-object v4
 
@@ -487,9 +487,9 @@
     invoke-virtual {v2, v3}, Lcom/estrongs/android/ui/preference/ListPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     :cond_e
-    new-instance v3, Lcom/estrongs/android/ui/preference/fragments/ai;
+    new-instance v3, Lcom/estrongs/android/ui/preference/fragments/ak;
 
-    invoke-direct {v3, p0}, Lcom/estrongs/android/ui/preference/fragments/ai;-><init>(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)V
+    invoke-direct {v3, p0}, Lcom/estrongs/android/ui/preference/fragments/ak;-><init>(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)V
 
     invoke-virtual {v2, v3}, Lcom/estrongs/android/ui/preference/ListPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -538,6 +538,22 @@
 
     :cond_11
     :goto_6
+    const-string v0, "scroll_thumb"
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+
+    move-result-object v1
+
+    const-string v0, "others"
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/preference/PreferenceCategory;
+
+    invoke-virtual {v0, v1}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
+
     const-string v0, "thumbnail"
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->a(Ljava/lang/String;)V
@@ -563,6 +579,10 @@
     invoke-direct {p0, v0}, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->a(Ljava/lang/String;)V
 
     const-string v0, "sdcard_size"
+
+    invoke-direct {p0, v0}, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->a(Ljava/lang/String;)V
+
+    const-string v0, "show_homepage_message"
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->a(Ljava/lang/String;)V
 

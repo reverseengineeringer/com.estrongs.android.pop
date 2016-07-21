@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/view/a/b;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/e/cp;
+.field final synthetic a:Lcom/estrongs/android/ui/e/dd;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/cp;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/dd;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/de;->a:Lcom/estrongs/android/ui/e/cp;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/de;->a:Lcom/estrongs/android/ui/e/dd;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,71 +22,26 @@
 
 
 # virtual methods
-.method public a(Lcom/estrongs/android/ui/e/co;)Z
-    .locals 2
+.method public run()V
+    .locals 3
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/de;->a:Lcom/estrongs/android/ui/e/dd;
 
-    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/co;->e:Z
+    iget-object v0, v0, Lcom/estrongs/android/ui/e/dd;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    if-nez v1, :cond_0
+    iget-object v1, p0, Lcom/estrongs/android/ui/e/de;->a:Lcom/estrongs/android/ui/e/dd;
 
-    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/co;->h:Z
+    iget-object v1, v1, Lcom/estrongs/android/ui/e/dd;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    if-nez v1, :cond_0
+    const v2, 0x7f080422
 
-    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/co;->f:Z
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->getString(I)Ljava/lang/String;
 
-    if-nez v1, :cond_0
+    move-result-object v1
 
-    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/co;->x:Z
+    const/4 v2, 0x0
 
-    if-nez v1, :cond_0
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
-    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/co;->g:Z
-
-    if-eqz v1, :cond_1
-
-    :cond_0
-    :goto_0
-    return v0
-
-    :cond_1
-    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/co;->A:Z
-
-    if-nez v1, :cond_0
-
-    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/co;->m:Z
-
-    if-nez v1, :cond_0
-
-    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/co;->i:Z
-
-    if-nez v1, :cond_0
-
-    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/co;->j:Z
-
-    if-nez v1, :cond_0
-
-    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/co;->k:Z
-
-    if-nez v1, :cond_0
-
-    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/co;->p:Z
-
-    if-nez v1, :cond_2
-
-    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/co;->r:Z
-
-    if-eqz v1, :cond_3
-
-    :cond_2
-    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/co;->G:Z
-
-    if-nez v1, :cond_0
-
-    :cond_3
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-void
 .end method

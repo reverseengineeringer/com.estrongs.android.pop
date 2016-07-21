@@ -1,14 +1,22 @@
 package com.estrongs.android.pop.view;
 
+import com.estrongs.android.pop.app.LocalFileSharingActivity;
+import com.estrongs.android.ui.drag.c;
+import com.estrongs.android.ui.drag.l;
+import java.util.List;
+
 class av
-  implements Runnable
+  implements c
 {
-  av(FileExplorerActivity paramFileExplorerActivity, boolean paramBoolean) {}
+  av(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void run()
+  public void a(l paraml, Object paramObject)
   {
-    b.g(a);
+    paraml = (List)paramObject;
+    LocalFileSharingActivity.a(a, paraml);
   }
+  
+  public void b(l paraml, Object paramObject) {}
 }
 
 /* Location:

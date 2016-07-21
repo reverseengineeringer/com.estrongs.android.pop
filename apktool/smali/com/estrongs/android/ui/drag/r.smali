@@ -34,7 +34,7 @@
 
     move-result-object v0
 
-    iget-object v2, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->x:Ljava/util/List;
+    iget-object v2, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->w:Ljava/util/List;
 
     monitor-enter v2
     :try_end_0
@@ -49,7 +49,7 @@
 
     move-result-object v0
 
-    iget-object v3, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->x:Ljava/util/List;
+    iget-object v3, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->w:Ljava/util/List;
 
     const/4 v0, 0x0
 
@@ -66,13 +66,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/android/view/aw;
+    check-cast v0, Lcom/estrongs/android/view/cr;
 
     iget-object v4, p0, Lcom/estrongs/android/ui/drag/r;->a:Lcom/estrongs/android/ui/drag/q;
 
     iget-object v4, v4, Lcom/estrongs/android/ui/drag/q;->a:Ljava/lang/String;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/view/aw;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/view/cr;->c()Ljava/lang/String;
 
     move-result-object v5
 
@@ -82,13 +82,21 @@
 
     if-eqz v4, :cond_0
 
-    invoke-static {}, Lcom/estrongs/android/ui/d/e;->a()I
+    iget-object v4, p0, Lcom/estrongs/android/ui/drag/r;->a:Lcom/estrongs/android/ui/drag/q;
+
+    iget-object v4, v4, Lcom/estrongs/android/ui/drag/q;->b:Lcom/estrongs/android/ui/drag/DragWindowView;
+
+    invoke-virtual {v4}, Lcom/estrongs/android/ui/drag/DragWindowView;->getWindowListManager()Lcom/estrongs/android/ui/d/i;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcom/estrongs/android/ui/d/i;->a()I
 
     move-result v4
 
     if-ne v1, v4, :cond_1
 
-    invoke-virtual {v0}, Lcom/estrongs/android/view/aw;->g()V
+    invoke-virtual {v0}, Lcom/estrongs/android/view/cr;->g()V
 
     :cond_0
     :goto_1
@@ -101,7 +109,7 @@
     :cond_1
     const/4 v4, 0x1
 
-    invoke-virtual {v0, v4}, Lcom/estrongs/android/view/aw;->i(Z)V
+    invoke-virtual {v0, v4}, Lcom/estrongs/android/view/cr;->i(Z)V
 
     goto :goto_1
 
@@ -131,7 +139,7 @@
 
     iget-object v0, v0, Lcom/estrongs/android/ui/drag/q;->a:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->ba(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bl(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -139,7 +147,7 @@
 
     const/4 v0, 0x1
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->h(Z)V
+    invoke-static {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->g(Z)V
 
     :cond_3
     monitor-exit v2

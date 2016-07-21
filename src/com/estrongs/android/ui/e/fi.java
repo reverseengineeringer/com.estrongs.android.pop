@@ -1,16 +1,13 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.view.a.b;
+import com.estrongs.android.ui.pcs.q;
 
 class fi
-  implements b
+  implements q
 {
-  fi(cp paramcp) {}
+  fi(fh paramfh) {}
   
-  public boolean a(co paramco)
-  {
-    return l;
-  }
+  public void a(boolean paramBoolean, String paramString1, String paramString2) {}
 }
 
 /* Location:

@@ -1,31 +1,37 @@
 package com.estrongs.android.pop.app.a;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.app.PopAudioPlayer;
-import com.estrongs.android.pop.utils.aj;
-import com.estrongs.android.util.am;
-import com.estrongs.fs.d;
-import java.util.ArrayList;
-import java.util.List;
+import com.dianxinos.lockscreen.h;
+import com.estrongs.android.j.c;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.navigation.m;
+import org.json.JSONObject;
 
-class g
-  implements MenuItem.OnMenuItemClickListener
+final class g
+  implements h
 {
-  g(e parame) {}
-  
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void a(Boolean paramBoolean)
   {
-    Object localObject = aa).w().b;
-    paramMenuItem = (MenuItem)localObject;
-    if (!am.ba((String)localObject)) {
-      paramMenuItem = am.bq((String)localObject);
+    if (!paramBoolean.booleanValue()) {}
+    try
+    {
+      paramBoolean = new JSONObject();
+      paramBoolean.put("event", "close_charge");
+      paramBoolean.put("positon", "sdk");
+      c.a(FexApplication.a()).a("charge", "close_charge", paramBoolean);
+      paramBoolean = FileExplorerActivity.X();
+      if (paramBoolean != null) {
+        paramBoolean.ae().d();
+      }
+      return;
     }
-    localObject = new ArrayList();
-    ((List)localObject).add(d.a().j(paramMenuItem));
-    aj.b(e.a(a), (List)localObject);
-    a.d();
-    return false;
+    catch (Exception paramBoolean)
+    {
+      for (;;)
+      {
+        paramBoolean.printStackTrace();
+      }
+    }
   }
 }
 

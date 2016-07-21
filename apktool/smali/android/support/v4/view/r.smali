@@ -1,14 +1,7 @@
-.class Landroid/support/v4/view/r;
+.class interface abstract Landroid/support/v4/view/r;
 .super Ljava/lang/Object;
 
 
-# direct methods
-.method public static a(II)I
-    .locals 1
-
-    invoke-static {p0, p1}, Landroid/view/Gravity;->getAbsoluteGravity(II)I
-
-    move-result v0
-
-    return v0
+# virtual methods
+.method public abstract a(Landroid/view/MotionEvent;)Z
 .end method

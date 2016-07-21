@@ -1,16 +1,20 @@
 package com.estrongs.android.pop.app;
 
+import android.view.View;
+import android.view.View.OnClickListener;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.ui.dialog.i;
+import java.util.List;
 
 class an
-  implements i
+  implements View.OnClickListener
 {
-  an(DocumentExtModifyList paramDocumentExtModifyList) {}
+  an(am paramam, String paramString) {}
   
-  public void a(String paramString)
+  public void onClick(View paramView)
   {
-    ad.a(a).M(paramString);
+    am.a(b).remove(a);
+    ad.a(b.a).f(am.a(b));
+    DefaultWindowSetting.a(b.a).notifyDataSetChanged();
   }
 }
 

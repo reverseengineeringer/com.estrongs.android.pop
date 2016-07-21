@@ -1,56 +1,36 @@
 package android.support.v4.widget;
 
-import android.content.Context;
 import android.graphics.Canvas;
-import android.os.Build.VERSION;
+import android.graphics.Paint;
+import android.graphics.RadialGradient;
+import android.graphics.Shader.TileMode;
+import android.graphics.drawable.shapes.OvalShape;
 
-public class f
+class f
+  extends OvalShape
 {
-  private static final i b = new g();
-  private Object a;
+  private RadialGradient b;
+  private Paint c = new Paint();
+  private int d;
   
-  static
+  public f(e parame, int paramInt1, int paramInt2)
   {
-    if (Build.VERSION.SDK_INT >= 14)
-    {
-      b = new h();
-      return;
-    }
+    e.a(parame, paramInt1);
+    d = paramInt2;
+    float f1 = d / 2;
+    float f2 = d / 2;
+    float f3 = e.a(parame);
+    parame = Shader.TileMode.CLAMP;
+    b = new RadialGradient(f1, f2, f3, new int[] { 1023410176, 0 }, null, parame);
+    c.setShader(b);
   }
   
-  public f(Context paramContext)
+  public void draw(Canvas paramCanvas, Paint paramPaint)
   {
-    a = b.a(paramContext);
-  }
-  
-  public void a(int paramInt1, int paramInt2)
-  {
-    b.a(a, paramInt1, paramInt2);
-  }
-  
-  public boolean a()
-  {
-    return b.a(a);
-  }
-  
-  public boolean a(float paramFloat)
-  {
-    return b.a(a, paramFloat);
-  }
-  
-  public boolean a(Canvas paramCanvas)
-  {
-    return b.a(a, paramCanvas);
-  }
-  
-  public void b()
-  {
-    b.b(a);
-  }
-  
-  public boolean c()
-  {
-    return b.c(a);
+    int i = a.getWidth();
+    int j = a.getHeight();
+    paramCanvas.drawCircle(i / 2, j / 2, d / 2 + e.a(a), c);
+    paramCanvas.drawCircle(i / 2, j / 2, d / 2, paramPaint);
   }
 }
 

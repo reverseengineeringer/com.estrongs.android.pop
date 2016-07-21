@@ -2,8 +2,8 @@ package com.estrongs.android.pop.app.diskusage;
 
 import android.os.Handler;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.view.aj;
+import com.estrongs.android.pop.app.d.b;
+import com.estrongs.android.view.bn;
 import java.io.File;
 import java.util.HashMap;
 import java.util.List;
@@ -19,42 +19,42 @@ class k
   
   public void run()
   {
-    ??? = new aj(h.o(b).getAbsolutePath(), hashCode());
-    File[] arrayOfFile = h.o(b).listFiles(new l(this, (aj)???));
+    ??? = new bn(h.q(b).getAbsolutePath(), hashCode());
+    File[] arrayOfFile = h.q(b).listFiles(new l(this, (bn)???));
     if (arrayOfFile != null) {
       for (;;)
       {
         try
         {
-          synchronized (h.p(b))
+          synchronized (h.r(b))
           {
-            h.a(b, new e(h.q(b)));
-            rb).i.putAll(kb).i);
-            h.r(b).a(b.a);
-            h.r(b).a(h.s(b));
-            h.r(b).b(h.a(b));
-            if (!h.r(b).a(arrayOfFile))
+            h.a(b, new e(h.s(b)));
+            tb).i.putAll(kb).i);
+            h.t(b).a(b.a);
+            h.t(b).a(h.u(b));
+            h.t(b).b(h.a(b));
+            if (!h.t(b).a(arrayOfFile))
             {
-              if (b.b.equals(h.o(b).getAbsolutePath())) {
-                h.t(b).remove(b.b);
+              if (b.b.equals(h.q(b).getAbsolutePath())) {
+                h.v(b).remove(b.b);
               }
               h.g(b).sendEmptyMessage(2);
               return;
             }
           }
-          h.r(b).a(ad.a(h.u(b)).aV());
+          h.t(b).a(ad.a(h.w(b)).aV());
         }
         catch (OutOfMemoryError localOutOfMemoryError)
         {
-          ((ESActivity)h.y(b)).a(new m(this));
+          ((b)h.A(b)).a(new m(this));
           return;
         }
-        if (h.v(b)) {
-          h.w(b);
+        if (h.x(b)) {
+          h.y(b);
         }
       }
     }
-    ((ESActivity)h.A(b)).a(new n(this));
+    ((b)h.C(b)).a(new n(this));
   }
 }
 

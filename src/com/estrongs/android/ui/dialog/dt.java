@@ -1,32 +1,17 @@
 package com.estrongs.android.ui.dialog;
 
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.widget.Button;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
 
 class dt
-  implements TextWatcher
+  implements DialogInterface.OnCancelListener
 {
-  dt(dn paramdn) {}
+  dt(dp paramdp) {}
   
-  public void afterTextChanged(Editable paramEditable)
+  public void onCancel(DialogInterface paramDialogInterface)
   {
-    if (a.d().length() == 0)
-    {
-      a.button_ok.setEnabled(false);
-      return;
-    }
-    if (!a.c().equals(a.d()))
-    {
-      a.button_ok.setEnabled(false);
-      return;
-    }
-    a.button_ok.setEnabled(true);
+    a.b();
   }
-  
-  public void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}
-  
-  public void onTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}
 }
 
 /* Location:

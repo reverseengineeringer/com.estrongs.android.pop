@@ -7,7 +7,7 @@ import java.util.List;
 class d
   extends Thread
 {
-  d(AppFolderInfoManager paramAppFolderInfoManager, List paramList, q paramq) {}
+  d(AppFolderInfoManager paramAppFolderInfoManager, List paramList, r paramr) {}
   
   public void run()
   {

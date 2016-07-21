@@ -1,284 +1,583 @@
 .class Lcom/baidu/mobstat/av;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field private static volatile a:Ldalvik/system/DexClassLoader;
 
-# instance fields
-.field final synthetic a:Lcom/baidu/mobstat/ao;
-
-.field private b:J
-
-.field private c:J
-
-.field private d:Ljava/lang/ref/WeakReference;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/ref/WeakReference",
-            "<",
-            "Landroid/content/Context;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private e:Ljava/lang/ref/WeakReference;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/ref/WeakReference",
-            "<",
-            "Landroid/support/v4/app/Fragment;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private f:Ljava/lang/ref/WeakReference;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/ref/WeakReference",
-            "<",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private g:I
+.field private static volatile b:Z
 
 
 # direct methods
-.method public constructor <init>(Lcom/baidu/mobstat/ao;JJLandroid/content/Context;Landroid/support/v4/app/Fragment;Ljava/lang/Object;I)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lcom/baidu/mobstat/av;->a:Lcom/baidu/mobstat/ao;
+    const/4 v0, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lcom/baidu/mobstat/av;->g:I
-
-    iput-wide p2, p0, Lcom/baidu/mobstat/av;->b:J
-
-    iput-wide p4, p0, Lcom/baidu/mobstat/av;->c:J
-
-    new-instance v0, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v0, p6}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lcom/baidu/mobstat/av;->d:Ljava/lang/ref/WeakReference;
-
-    new-instance v0, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v0, p7}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lcom/baidu/mobstat/av;->e:Ljava/lang/ref/WeakReference;
-
-    new-instance v0, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v0, p8}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lcom/baidu/mobstat/av;->f:Ljava/lang/ref/WeakReference;
-
-    iput p9, p0, Lcom/baidu/mobstat/av;->g:I
+    sput-boolean v0, Lcom/baidu/mobstat/av;->b:Z
 
     return-void
 .end method
 
+.method private static declared-synchronized a(Landroid/content/Context;)Ldalvik/system/DexClassLoader;
+    .locals 6
 
-# virtual methods
-.method public run()V
-    .locals 7
+    const/4 v0, 0x0
 
-    iget-wide v0, p0, Lcom/baidu/mobstat/av;->c:J
+    const-class v1, Lcom/baidu/mobstat/av;
 
-    iget-wide v2, p0, Lcom/baidu/mobstat/av;->b:J
+    monitor-enter v1
 
-    sub-long/2addr v0, v2
+    :try_start_0
+    sget-object v2, Lcom/baidu/mobstat/av;->a:Ldalvik/system/DexClassLoader;
 
-    iget-object v2, p0, Lcom/baidu/mobstat/av;->a:Lcom/baidu/mobstat/ao;
+    if-eqz v2, :cond_1
 
-    invoke-virtual {v2}, Lcom/baidu/mobstat/ao;->b()I
+    sget-object v0, Lcom/baidu/mobstat/av;->a:Ldalvik/system/DexClassLoader;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result v2
+    :cond_0
+    :goto_0
+    monitor-exit v1
 
-    int-to-long v2, v2
+    return-object v0
 
-    cmp-long v0, v0, v2
+    :cond_1
+    :try_start_1
+    const-string v2, ".remote.jar"
 
-    if-ltz v0, :cond_1
+    invoke-virtual {p0, v2}, Landroid/content/Context;->getFileStreamPath(Ljava/lang/String;)Ljava/io/File;
 
-    iget-wide v0, p0, Lcom/baidu/mobstat/av;->b:J
+    move-result-object v2
 
-    const-wide/16 v2, 0x0
+    if-eqz v2, :cond_2
 
-    cmp-long v0, v0, v2
+    invoke-virtual {v2}, Ljava/io/File;->isFile()Z
 
-    if-lez v0, :cond_1
+    move-result v3
 
-    iget-object v0, p0, Lcom/baidu/mobstat/av;->d:Ljava/lang/ref/WeakReference;
+    if-eqz v3, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/content/Context;
-
-    iget-object v1, p0, Lcom/baidu/mobstat/av;->e:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/support/v4/app/Fragment;
-
-    iget-object v2, p0, Lcom/baidu/mobstat/av;->f:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    :cond_2
+    invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v3
 
-    if-nez v0, :cond_0
+    invoke-static {p0, v3}, Lcom/baidu/mobstat/av;->b(Landroid/content/Context;Ljava/lang/String;)Z
 
-    if-nez v1, :cond_0
+    move-result v3
 
-    if-eqz v3, :cond_1
+    if-nez v3, :cond_3
 
-    :cond_0
-    iget-object v2, p0, Lcom/baidu/mobstat/av;->a:Lcom/baidu/mobstat/ao;
+    const-string v3, "remote jar version lower than min limit, need delete"
 
-    invoke-static {v2}, Lcom/baidu/mobstat/ao;->a(Lcom/baidu/mobstat/ao;)Lcom/baidu/mobstat/am;
+    invoke-static {v3}, Lcom/baidu/mobstat/bb;->a(Ljava/lang/String;)V
 
-    move-result-object v2
+    invoke-virtual {v2}, Ljava/io/File;->isFile()Z
 
-    iget-wide v4, p0, Lcom/baidu/mobstat/av;->b:J
+    move-result v3
 
-    invoke-virtual {v2, v4, v5}, Lcom/baidu/mobstat/am;->b(J)V
+    if-eqz v3, :cond_0
 
-    iget-object v2, p0, Lcom/baidu/mobstat/av;->a:Lcom/baidu/mobstat/ao;
-
-    invoke-static {v2}, Lcom/baidu/mobstat/ao;->a(Lcom/baidu/mobstat/ao;)Lcom/baidu/mobstat/am;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/baidu/mobstat/am;->c()Lorg/json/JSONObject;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v4, "sdkstat"
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "new session:"
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v4, v5}, Lcom/baidu/mobstat/util/e;->a(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-static {}, Lcom/baidu/mobstat/DataCore;->getInstance()Lcom/baidu/mobstat/DataCore;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v2}, Lcom/baidu/mobstat/DataCore;->putSession(Ljava/lang/String;)V
-
-    const/4 v2, 0x0
-
-    iget v4, p0, Lcom/baidu/mobstat/av;->g:I
-
-    const/4 v5, 0x1
-
-    if-ne v4, v5, :cond_2
-
-    invoke-static {}, Lcom/baidu/mobstat/DataCore;->getInstance()Lcom/baidu/mobstat/DataCore;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/baidu/mobstat/DataCore;->flush(Landroid/content/Context;)V
-
-    :goto_0
-    iget-object v1, p0, Lcom/baidu/mobstat/av;->a:Lcom/baidu/mobstat/ao;
-
-    invoke-static {v1}, Lcom/baidu/mobstat/ao;->a(Lcom/baidu/mobstat/ao;)Lcom/baidu/mobstat/am;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/baidu/mobstat/am;->b()V
-
-    iget-object v1, p0, Lcom/baidu/mobstat/av;->a:Lcom/baidu/mobstat/ao;
-
-    invoke-static {v1, v0}, Lcom/baidu/mobstat/ao;->a(Lcom/baidu/mobstat/ao;Landroid/content/Context;)V
-
-    if-eqz v0, :cond_1
-
-    invoke-static {}, Lcom/baidu/mobstat/ag;->a()Lcom/baidu/mobstat/ag;
-
-    move-result-object v1
-
-    const-string v2, "onresume"
-
-    invoke-virtual {v1, v0, v2}, Lcom/baidu/mobstat/ag;->a(Landroid/content/Context;Ljava/lang/String;)V
-
-    :cond_1
-    return-void
-
-    :cond_2
-    iget v0, p0, Lcom/baidu/mobstat/av;->g:I
-
-    const/4 v4, 0x2
-
-    if-ne v0, v4, :cond_3
-
-    invoke-virtual {v1}, Landroid/support/v4/app/Fragment;->b()Landroid/support/v4/app/FragmentActivity;
-
-    move-result-object v0
-
-    invoke-static {}, Lcom/baidu/mobstat/DataCore;->getInstance()Lcom/baidu/mobstat/DataCore;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/baidu/mobstat/DataCore;->flush(Landroid/content/Context;)V
+    invoke-virtual {v2}, Ljava/io/File;->delete()Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+
+    throw v0
+
     :cond_3
-    iget v0, p0, Lcom/baidu/mobstat/av;->g:I
+    :try_start_2
+    invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-    const/4 v1, 0x3
+    move-result-object v3
 
-    if-ne v0, v1, :cond_4
+    invoke-static {p0, v3}, Lcom/baidu/mobstat/av;->c(Landroid/content/Context;Ljava/lang/String;)Z
 
-    invoke-static {v3}, Lcom/baidu/mobstat/ao;->a(Ljava/lang/Object;)Landroid/content/Context;
+    move-result v3
 
-    move-result-object v0
+    if-nez v3, :cond_4
 
-    invoke-static {}, Lcom/baidu/mobstat/DataCore;->getInstance()Lcom/baidu/mobstat/DataCore;
+    const-string v3, "remote jar md5 is not right, need delete"
 
-    move-result-object v1
+    invoke-static {v3}, Lcom/baidu/mobstat/bb;->a(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v0}, Lcom/baidu/mobstat/DataCore;->flush(Landroid/content/Context;)V
+    invoke-virtual {v2}, Ljava/io/File;->isFile()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
     goto :goto_0
 
     :cond_4
-    move-object v0, v2
+    const-string v0, "outdex"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p0, v0, v3}, Landroid/content/Context;->getDir(Ljava/lang/String;I)Ljava/io/File;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    move-result-object v0
+
+    :try_start_3
+    new-instance v3, Ldalvik/system/DexClassLoader;
+
+    invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v4, 0x0
+
+    invoke-virtual {p0}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object v5
+
+    invoke-direct {v3, v2, v0, v4, v5}, Ldalvik/system/DexClassLoader;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/ClassLoader;)V
+
+    sput-object v3, Lcom/baidu/mobstat/av;->a:Ldalvik/system/DexClassLoader;
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :goto_1
+    :try_start_4
+    sget-object v0, Lcom/baidu/mobstat/av;->a:Ldalvik/system/DexClassLoader;
 
     goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-static {v0}, Lcom/baidu/mobstat/bb;->a(Ljava/lang/Throwable;)V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    goto :goto_1
+.end method
+
+.method static synthetic a(Ldalvik/system/DexClassLoader;)Ldalvik/system/DexClassLoader;
+    .locals 0
+
+    sput-object p0, Lcom/baidu/mobstat/av;->a:Ldalvik/system/DexClassLoader;
+
+    return-object p0
+.end method
+
+.method public static a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/Class;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/lang/Class",
+            "<*>;"
+        }
+    .end annotation
+
+    invoke-static {p0}, Lcom/baidu/mobstat/av;->a(Landroid/content/Context;)Ldalvik/system/DexClassLoader;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    invoke-virtual {v0, p1}, Ldalvik/system/DexClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method static synthetic a(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    invoke-static {p0}, Lcom/baidu/mobstat/av;->b(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static declared-synchronized a(Landroid/content/Context;Lcom/baidu/mobstat/k;)V
+    .locals 2
+
+    const-class v1, Lcom/baidu/mobstat/av;
+
+    monitor-enter v1
+
+    :try_start_0
+    sget-boolean v0, Lcom/baidu/mobstat/av;->b:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v0, :cond_0
+
+    :goto_0
+    monitor-exit v1
+
+    return-void
+
+    :cond_0
+    :try_start_1
+    invoke-static {p0}, Lcom/baidu/mobstat/cu;->m(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "isWifiAvailable = false, will not to update"
+
+    invoke-static {v0}, Lcom/baidu/mobstat/bb;->a(Ljava/lang/String;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+
+    throw v0
+
+    :cond_1
+    :try_start_2
+    invoke-interface {p1, p0}, Lcom/baidu/mobstat/k;->a(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const-string v0, "check time, will not to update"
+
+    invoke-static {v0}, Lcom/baidu/mobstat/bb;->a(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_2
+    const-string v0, "can start update config"
+
+    invoke-static {v0}, Lcom/baidu/mobstat/bb;->a(Ljava/lang/String;)V
+
+    new-instance v0, Lcom/baidu/mobstat/aw;
+
+    invoke-direct {v0, p0, p1}, Lcom/baidu/mobstat/aw;-><init>(Landroid/content/Context;Lcom/baidu/mobstat/k;)V
+
+    invoke-virtual {v0}, Lcom/baidu/mobstat/aw;->start()V
+
+    const/4 v0, 0x1
+
+    sput-boolean v0, Lcom/baidu/mobstat/av;->b:Z
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_0
+.end method
+
+.method static synthetic a(Z)Z
+    .locals 0
+
+    sput-boolean p0, Lcom/baidu/mobstat/av;->b:Z
+
+    return p0
+.end method
+
+.method private static b(Ljava/lang/String;)Ljava/lang/String;
+    .locals 4
+
+    :try_start_0
+    new-instance v0, Ljava/io/File;
+
+    invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "file size: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Ljava/io/File;->length()J
+
+    move-result-wide v2
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/baidu/mobstat/bb;->b(Ljava/lang/String;)V
+
+    :cond_0
+    new-instance v0, Ljava/util/jar/JarFile;
+
+    invoke-direct {v0, p0}, Ljava/util/jar/JarFile;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/util/jar/JarFile;->getManifest()Ljava/util/jar/Manifest;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/jar/Manifest;->getMainAttributes()Ljava/util/jar/Attributes;
+
+    move-result-object v0
+
+    const-string v1, "Plugin-Version"
+
+    invoke-virtual {v0, v1}, Ljava/util/jar/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    invoke-static {v0}, Lcom/baidu/mobstat/bb;->a(Ljava/lang/Throwable;)V
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "baidu remote sdk is not ready"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/baidu/mobstat/bb;->a(Ljava/lang/String;)V
+
+    const-string v0, ""
+
+    goto :goto_0
+.end method
+
+.method private static b(Landroid/content/Context;Ljava/lang/String;)Z
+    .locals 3
+
+    const/4 v0, 0x0
+
+    invoke-static {p1}, Lcom/baidu/mobstat/av;->b(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    :try_start_0
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v1
+
+    :goto_1
+    const/4 v2, 0x4
+
+    if-lt v1, v2, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    invoke-static {v1}, Lcom/baidu/mobstat/bb;->b(Ljava/lang/Throwable;)V
+
+    move v1, v0
+
+    goto :goto_1
+.end method
+
+.method private static c(Landroid/content/Context;Ljava/lang/String;)Z
+    .locals 5
+
+    const/4 v0, 0x0
+
+    new-instance v1, Ljava/io/File;
+
+    invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v1}, Lcom/baidu/mobstat/cp;->a(Ljava/io/File;)Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "remote.jar local file digest value digest = "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/baidu/mobstat/bb;->a(Ljava/lang/String;)V
+
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const-string v1, "remote.jar local file digest value fail"
+
+    invoke-static {v1}, Lcom/baidu/mobstat/bb;->a(Ljava/lang/String;)V
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    invoke-static {p1}, Lcom/baidu/mobstat/av;->b(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "remote.jar local file digest value version = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lcom/baidu/mobstat/bb;->a(Ljava/lang/String;)V
+
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    invoke-static {p0, v2}, Lcom/baidu/mobstat/av;->d(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "remote.jar config digest value remoteJarMd5 = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lcom/baidu/mobstat/bb;->a(Ljava/lang/String;)V
+
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    const-string v1, "remote.jar config digest value lost"
+
+    invoke-static {v1}, Lcom/baidu/mobstat/bb;->a(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+.method private static d(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    invoke-static {p0}, Lcom/baidu/mobstat/ax;->a(Landroid/content/Context;)Lcom/baidu/mobstat/ax;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/baidu/mobstat/ax;->c(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

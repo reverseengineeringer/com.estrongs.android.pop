@@ -1,25 +1,25 @@
 package com.estrongs.android.pop.app;
 
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemLongClickListener;
-import com.estrongs.android.ui.view.ac;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.app.c.i;
+import com.estrongs.android.pop.utils.ao;
+import com.estrongs.android.util.ap;
 
 class fh
-  implements AdapterView.OnItemLongClickListener
+  implements MenuItem.OnMenuItemClickListener
 {
   fh(PopAudioPlayer paramPopAudioPlayer) {}
   
-  public boolean onItemLongClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if (PopAudioPlayer.i(a).b())
-    {
-      paramAdapterView.performItemClick(paramView, paramInt, paramLong);
-      return true;
+    String str = a.B().b;
+    paramMenuItem = str;
+    if (!ap.bl(str)) {
+      paramMenuItem = ap.bH(str);
     }
-    PopAudioPlayer.i(a).a(true);
-    paramAdapterView.performItemClick(paramView, paramInt, paramLong);
-    return true;
+    ao.a(a, paramMenuItem);
+    return false;
   }
 }
 

@@ -1,58 +1,69 @@
 .class Lcom/estrongs/android/pop/app/y;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.super Landroid/os/Handler;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/r;
+.field final synthetic a:Lcom/estrongs/android/pop/app/x;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/r;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/x;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/y;->a:Lcom/estrongs/android/pop/app/r;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/y;->a:Lcom/estrongs/android/pop/app/x;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
+.method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/y;->a:Lcom/estrongs/android/pop/app/r;
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/r;->a(Lcom/estrongs/android/pop/app/r;)Lcom/estrongs/android/pop/app/aa;
+    packed-switch v0, :pswitch_data_0
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/y;->a:Lcom/estrongs/android/pop/app/x;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/x;->a(Lcom/estrongs/android/pop/app/x;)Lcom/estrongs/android/pop/app/ag;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/aa;->q()V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/y;->a:Lcom/estrongs/android/pop/app/r;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/r;->dismiss()V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/y;->a:Lcom/estrongs/android/pop/app/r;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/r;->i(Lcom/estrongs/android/pop/app/r;)Lcom/estrongs/android/pop/app/ae;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ag;->x()Ljava/util/List;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/y;->a:Lcom/estrongs/android/pop/app/r;
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/r;->i(Lcom/estrongs/android/pop/app/r;)Lcom/estrongs/android/pop/app/ae;
+    move-result v0
 
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/estrongs/android/pop/app/ae;->b()V
+    if-nez v0, :cond_1
 
     :cond_0
-    return-void
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/y;->a:Lcom/estrongs/android/pop/app/x;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/x;->b(Lcom/estrongs/android/pop/app/x;)V
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/y;->a:Lcom/estrongs/android/pop/app/x;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/x;->c(Lcom/estrongs/android/pop/app/x;)V
+
+    goto :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

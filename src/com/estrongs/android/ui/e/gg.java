@@ -1,19 +1,16 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.view.a.b;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class gg
-  implements b
+  implements DialogInterface.OnClickListener
 {
-  gg(cp paramcp) {}
+  gg(ge paramge) {}
   
-  public boolean a(co paramco)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ((e) || (h) || (((f) || (x) || (g)) && (!d))) {}
-    while ((A) || (m) || (i) || (j) || (k)) {
-      return true;
-    }
-    return false;
+    paramDialogInterface.dismiss();
   }
 }
 

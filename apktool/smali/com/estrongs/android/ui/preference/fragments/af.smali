@@ -23,21 +23,47 @@
 
 # virtual methods
 .method public onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
-    .locals 2
+    .locals 1
+
+    check-cast p2, Ljava/lang/Boolean;
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/af;->a:Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->c(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)Landroid/os/Handler;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/ag;
+    invoke-static {v0}, Lcom/estrongs/android/ui/notification/j;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/notification/j;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/ag;-><init>(Lcom/estrongs/android/ui/preference/fragments/af;)V
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/j;->b()V
 
+    :goto_0
     const/4 v0, 0x1
 
     return v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/af;->a:Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/notification/j;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/notification/j;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/j;->c()V
+
+    invoke-static {}, Lcom/estrongs/android/ui/notification/j;->a()V
+
+    goto :goto_0
 .end method

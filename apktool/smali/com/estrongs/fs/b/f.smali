@@ -117,7 +117,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/estrongs/android/util/bc;->b(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/estrongs/android/util/bg;->b(Ljava/lang/String;)I
 
     move-result v1
 
@@ -246,7 +246,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0b01b6
+    const v4, 0x7f08049d
 
     invoke-virtual {v3, v4}, Lcom/estrongs/android/pop/FexApplication;->getString(I)Ljava/lang/String;
 

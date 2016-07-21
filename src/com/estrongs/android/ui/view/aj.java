@@ -1,29 +1,25 @@
 package com.estrongs.android.ui.view;
 
-import android.media.MediaPlayer;
-import android.media.MediaPlayer.OnVideoSizeChangedListener;
-import android.view.SurfaceHolder;
+import android.support.v7.widget.RecyclerView.ViewHolder;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
-class aj
-  implements MediaPlayer.OnVideoSizeChangedListener
+public class aj
+  extends RecyclerView.ViewHolder
 {
-  aj(ESVideoView paramESVideoView) {}
+  TextView a;
+  TextView b;
+  TextView c;
+  ProgressBar d;
+  CheckBox e;
+  ImageView f;
   
-  public void onVideoSizeChanged(MediaPlayer paramMediaPlayer, int paramInt1, int paramInt2)
+  public aj(View paramView)
   {
-    try
-    {
-      ESVideoView.a(a, paramMediaPlayer.getVideoWidth());
-      ESVideoView.b(a, paramMediaPlayer.getVideoHeight());
-      if ((ESVideoView.a(a) != 0) && (ESVideoView.b(a) != 0)) {
-        a.getHolder().setFixedSize(ESVideoView.a(a), ESVideoView.b(a));
-      }
-      return;
-    }
-    catch (Exception paramMediaPlayer)
-    {
-      paramMediaPlayer.printStackTrace();
-    }
+    super(paramView);
   }
 }
 

@@ -78,7 +78,7 @@
 
 .field private n:Ljava/lang/String;
 
-.field private o:Lcom/estrongs/fs/impl/j/e;
+.field private o:Lcom/estrongs/fs/impl/o/e;
 
 
 # direct methods
@@ -320,7 +320,7 @@
     return v1
 .end method
 
-.method private a(Lcom/estrongs/fs/impl/pcs/g;)Lcom/estrongs/android/pop/netfs/NetFileInfo;
+.method private a(Lcom/estrongs/fs/impl/pcs/e;)Lcom/estrongs/android/pop/netfs/NetFileInfo;
     .locals 6
 
     const/4 v0, 0x1
@@ -337,15 +337,15 @@
 
     invoke-direct {v1}, Lcom/estrongs/android/pop/netfs/NetFileInfo;-><init>()V
 
-    iget-object v2, p1, Lcom/estrongs/fs/impl/pcs/g;->f:Ljava/lang/String;
+    iget-object v2, p1, Lcom/estrongs/fs/impl/pcs/e;->f:Ljava/lang/String;
 
     iput-object v2, v1, Lcom/estrongs/android/pop/netfs/NetFileInfo;->path:Ljava/lang/String;
 
-    iget-object v2, p1, Lcom/estrongs/fs/impl/pcs/g;->n:Ljava/lang/String;
+    iget-object v2, p1, Lcom/estrongs/fs/impl/pcs/e;->n:Ljava/lang/String;
 
     iput-object v2, v1, Lcom/estrongs/android/pop/netfs/NetFileInfo;->name:Ljava/lang/String;
 
-    iget v2, p1, Lcom/estrongs/fs/impl/pcs/g;->i:I
+    iget v2, p1, Lcom/estrongs/fs/impl/pcs/e;->i:I
 
     int-to-long v2, v2
 
@@ -373,18 +373,18 @@
 
     iput-boolean v2, v1, Lcom/estrongs/android/pop/netfs/NetFileInfo;->hidden:Z
 
-    iget v2, p1, Lcom/estrongs/fs/impl/pcs/g;->g:I
+    iget v2, p1, Lcom/estrongs/fs/impl/pcs/e;->g:I
 
     if-ne v2, v0, :cond_1
 
     :goto_1
     iput-boolean v0, v1, Lcom/estrongs/android/pop/netfs/NetFileInfo;->isDirectory:Z
 
-    iget-wide v2, p1, Lcom/estrongs/fs/impl/pcs/g;->j:J
+    iget-wide v2, p1, Lcom/estrongs/fs/impl/pcs/e;->j:J
 
     iput-wide v2, v1, Lcom/estrongs/android/pop/netfs/NetFileInfo;->size:J
 
-    iget v0, p1, Lcom/estrongs/fs/impl/pcs/g;->l:I
+    iget v0, p1, Lcom/estrongs/fs/impl/pcs/e;->l:I
 
     iput v0, v1, Lcom/estrongs/android/pop/netfs/NetFileInfo;->folder_type:I
 
@@ -392,7 +392,7 @@
 
     iput v0, v1, Lcom/estrongs/android/pop/netfs/NetFileInfo;->md5_block_size:I
 
-    iget-object v0, p1, Lcom/estrongs/fs/impl/pcs/g;->h:Ljava/lang/String;
+    iget-object v0, p1, Lcom/estrongs/fs/impl/pcs/e;->h:Ljava/lang/String;
 
     iput-object v0, v1, Lcom/estrongs/android/pop/netfs/NetFileInfo;->md5s:Ljava/lang/String;
 
@@ -406,15 +406,15 @@
     goto :goto_1
 .end method
 
-.method private a(Ljava/lang/Object;Ljava/lang/String;)Lcom/estrongs/fs/impl/pcs/g;
+.method private a(Ljava/lang/Object;Ljava/lang/String;)Lcom/estrongs/fs/impl/pcs/e;
     .locals 4
 
     :try_start_0
     check-cast p1, Ljava/util/Map;
 
-    new-instance v1, Lcom/estrongs/fs/impl/pcs/g;
+    new-instance v1, Lcom/estrongs/fs/impl/pcs/e;
 
-    invoke-direct {v1}, Lcom/estrongs/fs/impl/pcs/g;-><init>()V
+    invoke-direct {v1}, Lcom/estrongs/fs/impl/pcs/e;-><init>()V
 
     const-string v0, "path"
 
@@ -424,17 +424,17 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, v1, Lcom/estrongs/fs/impl/pcs/g;->n:Ljava/lang/String;
+    iput-object v2, v1, Lcom/estrongs/fs/impl/pcs/e;->n:Ljava/lang/String;
 
     invoke-direct {p0, v0, p2}, Lcom/estrongs/fs/impl/pcs/PcsFileSystem;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, v1, Lcom/estrongs/fs/impl/pcs/g;->f:Ljava/lang/String;
+    iput-object v0, v1, Lcom/estrongs/fs/impl/pcs/e;->f:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -460,7 +460,7 @@
 
     move-result-object v0
 
-    iput-object v0, v1, Lcom/estrongs/fs/impl/pcs/g;->c:Ljava/lang/String;
+    iput-object v0, v1, Lcom/estrongs/fs/impl/pcs/e;->c:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -490,7 +490,7 @@
 
     move-result-wide v2
 
-    iput-wide v2, v1, Lcom/estrongs/fs/impl/pcs/g;->j:J
+    iput-wide v2, v1, Lcom/estrongs/fs/impl/pcs/e;->j:J
 
     const-string v0, "isdir"
 
@@ -498,7 +498,7 @@
 
     move-result v0
 
-    iput v0, v1, Lcom/estrongs/fs/impl/pcs/g;->g:I
+    iput v0, v1, Lcom/estrongs/fs/impl/pcs/e;->g:I
 
     const-string v0, "mtime"
 
@@ -542,7 +542,7 @@
 
     move-result v0
 
-    iput v0, v1, Lcom/estrongs/fs/impl/pcs/g;->i:I
+    iput v0, v1, Lcom/estrongs/fs/impl/pcs/e;->i:I
 
     const-string v0, "md5"
 
@@ -552,15 +552,15 @@
 
     check-cast v0, Ljava/lang/String;
 
-    iput-object v0, v1, Lcom/estrongs/fs/impl/pcs/g;->h:Ljava/lang/String;
+    iput-object v0, v1, Lcom/estrongs/fs/impl/pcs/e;->h:Ljava/lang/String;
 
-    iget-object v0, v1, Lcom/estrongs/fs/impl/pcs/g;->h:Ljava/lang/String;
+    iget-object v0, v1, Lcom/estrongs/fs/impl/pcs/e;->h:Ljava/lang/String;
 
     if-nez v0, :cond_2
 
     const-string v0, ""
 
-    iput-object v0, v1, Lcom/estrongs/fs/impl/pcs/g;->h:Ljava/lang/String;
+    iput-object v0, v1, Lcom/estrongs/fs/impl/pcs/e;->h:Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1844,7 +1844,7 @@
 
     const-string v2, "commit failed"
 
-    invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -1878,7 +1878,7 @@
 
     const-string v2, "commit data"
 
-    invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -1957,7 +1957,7 @@
             "Ljava/util/HashMap",
             "<",
             "Ljava/lang/String;",
-            "Lcom/estrongs/fs/impl/pcs/g;",
+            "Lcom/estrongs/fs/impl/pcs/e;",
             ">;"
         }
     .end annotation
@@ -1982,32 +1982,20 @@
 
     const/4 v3, 0x0
 
-    invoke-static {}, Lcom/estrongs/android/util/a;->a()Lcom/estrongs/android/util/a;
+    const/4 v4, 0x0
 
-    move-result-object v8
+    invoke-static {v4}, Lcom/estrongs/android/j/c;->a(Landroid/content/Context;)Lcom/estrongs/android/j/c;
 
-    if-eqz v8, :cond_1
+    move-result-object v4
+
+    if-eqz v4, :cond_0
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v5}, Lcom/estrongs/fs/impl/pcs/PcsFileSystem;->h(Ljava/lang/String;)I
 
-    move-result v9
-
-    const/4 v4, 0x0
-
-    if-nez v9, :cond_8
-
-    const-string v4, "Baidu_Active"
-
     :cond_0
-    :goto_0
-    if-eqz v4, :cond_1
-
-    invoke-virtual {v8, v4, v4}, Lcom/estrongs/android/util/a;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_1
-    if-eqz p5, :cond_21
+    if-eqz p5, :cond_1c
 
     const-string v4, "limit"
 
@@ -2017,7 +2005,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_21
+    if-eqz v4, :cond_1c
 
     const-string v4, "offset"
 
@@ -2027,7 +2015,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_21
+    if-eqz v4, :cond_1c
 
     const-string v2, "limit"
 
@@ -2057,7 +2045,7 @@
 
     move-result v4
 
-    if-lez v7, :cond_20
+    if-lez v7, :cond_1b
 
     const-string v2, "total_entries"
 
@@ -2067,7 +2055,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_2
+    if-nez v2, :cond_1
 
     new-instance v2, Ljava/util/HashMap;
 
@@ -2079,7 +2067,7 @@
 
     invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_2
+    :cond_1
     const-string v2, "total_entries"
 
     move-object/from16 v0, p5
@@ -2098,7 +2086,7 @@
 
     move-result v3
 
-    if-nez v3, :cond_3
+    if-nez v3, :cond_2
 
     const-string v3, "page_num"
 
@@ -2112,7 +2100,7 @@
 
     invoke-virtual {v0, v3, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_3
+    :cond_2
     const-string v3, "page_num"
 
     move-object/from16 v0, p5
@@ -2147,7 +2135,7 @@
 
     move v2, v4
 
-    :goto_1
+    :goto_0
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
@@ -2158,7 +2146,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_11
+    if-eqz v4, :cond_c
 
     new-instance v3, Lorg/json/simple/JSONArray;
 
@@ -2172,7 +2160,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_c
+    if-eqz v4, :cond_7
 
     const-string v4, "2"
 
@@ -2192,17 +2180,17 @@
 
     invoke-direct {v0, v2, v7}, Lcom/estrongs/fs/impl/pcs/PcsFileSystem;->a(Lorg/json/simple/JSONArray;I)I
 
-    :goto_2
+    :goto_1
     move-object v2, v3
 
-    :cond_4
+    :cond_3
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
     instance-of v4, v2, Lorg/json/simple/JSONArray;
 
-    if-eqz v4, :cond_1b
+    if-eqz v4, :cond_16
 
     check-cast v2, Lorg/json/simple/JSONArray;
 
@@ -2210,13 +2198,13 @@
 
     move-result-object v9
 
-    :cond_5
-    :goto_3
+    :cond_4
+    :goto_2
     invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    if-eqz v2, :cond_1b
+    if-eqz v2, :cond_16
 
     invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -2226,24 +2214,24 @@
 
     move-object/from16 v1, v16
 
-    invoke-direct {v0, v2, v1}, Lcom/estrongs/fs/impl/pcs/PcsFileSystem;->a(Ljava/lang/Object;Ljava/lang/String;)Lcom/estrongs/fs/impl/pcs/g;
+    invoke-direct {v0, v2, v1}, Lcom/estrongs/fs/impl/pcs/PcsFileSystem;->a(Ljava/lang/Object;Ljava/lang/String;)Lcom/estrongs/fs/impl/pcs/e;
 
     move-result-object v10
 
-    if-eqz v10, :cond_5
+    if-eqz v10, :cond_4
 
-    iget-object v2, v10, Lcom/estrongs/fs/impl/pcs/g;->f:Ljava/lang/String;
+    iget-object v2, v10, Lcom/estrongs/fs/impl/pcs/e;->f:Ljava/lang/String;
 
     invoke-virtual {v3, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz v14, :cond_6
+    if-eqz v14, :cond_5
 
-    iget-object v2, v10, Lcom/estrongs/fs/impl/pcs/g;->f:Ljava/lang/String;
+    iget-object v2, v10, Lcom/estrongs/fs/impl/pcs/e;->f:Ljava/lang/String;
 
     invoke-virtual {v15, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_6
-    iget-object v2, v10, Lcom/estrongs/fs/impl/pcs/g;->f:Ljava/lang/String;
+    :cond_5
+    iget-object v2, v10, Lcom/estrongs/fs/impl/pcs/e;->f:Ljava/lang/String;
 
     invoke-static {v2}, Lcom/estrongs/fs/impl/pcs/PcsFileSystem;->a(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2302,7 +2290,7 @@
 
     move-result v5
 
-    if-eqz v5, :cond_1e
+    if-eqz v5, :cond_19
 
     new-instance v12, Ljava/io/FileInputStream;
 
@@ -2327,14 +2315,14 @@
 
     move-object v6, v8
 
-    :cond_7
-    :goto_4
+    :cond_6
+    :goto_3
     :try_start_2
     invoke-virtual {v4}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v8
 
-    if-eqz v8, :cond_14
+    if-eqz v8, :cond_f
 
     const-string v12, "link:"
 
@@ -2342,7 +2330,7 @@
 
     move-result v12
 
-    if-eqz v12, :cond_13
+    if-eqz v12, :cond_e
 
     const-string v12, "link:"
 
@@ -2357,45 +2345,9 @@
 
     move-result-object v6
 
-    goto :goto_4
+    goto :goto_3
 
-    :cond_8
-    const/4 v10, 0x1
-
-    if-ne v9, v10, :cond_9
-
-    const-string v4, "Direct_Active"
-
-    goto/16 :goto_0
-
-    :cond_9
-    const/4 v10, 0x2
-
-    if-ne v9, v10, :cond_a
-
-    const-string v4, "RenRen_Active"
-
-    goto/16 :goto_0
-
-    :cond_a
-    const/4 v10, 0x3
-
-    if-ne v9, v10, :cond_b
-
-    const-string v4, "Sina_Active"
-
-    goto/16 :goto_0
-
-    :cond_b
-    const/4 v10, 0x4
-
-    if-ne v9, v10, :cond_0
-
-    const-string v4, "QQ_Active"
-
-    goto/16 :goto_0
-
-    :cond_c
+    :cond_7
     const-string v4, "/videos"
 
     move-object/from16 v0, v16
@@ -2404,7 +2356,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_d
+    if-eqz v4, :cond_8
 
     const-string v4, "1"
 
@@ -2424,9 +2376,9 @@
 
     invoke-direct {v0, v2, v7}, Lcom/estrongs/fs/impl/pcs/PcsFileSystem;->a(Lorg/json/simple/JSONArray;I)I
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
-    :cond_d
+    :cond_8
     const-string v4, "/pictures"
 
     move-object/from16 v0, v16
@@ -2435,7 +2387,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_e
+    if-eqz v4, :cond_9
 
     const-string v4, "3"
 
@@ -2455,9 +2407,9 @@
 
     invoke-direct {v0, v2, v7}, Lcom/estrongs/fs/impl/pcs/PcsFileSystem;->a(Lorg/json/simple/JSONArray;I)I
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
-    :cond_e
+    :cond_9
     const-string v4, "/documents"
 
     move-object/from16 v0, v16
@@ -2466,7 +2418,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_f
+    if-eqz v4, :cond_a
 
     const-string v4, "4"
 
@@ -2486,9 +2438,9 @@
 
     invoke-direct {v0, v2, v7}, Lcom/estrongs/fs/impl/pcs/PcsFileSystem;->a(Lorg/json/simple/JSONArray;I)I
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
-    :cond_f
+    :cond_a
     const-string v4, "/apps"
 
     move-object/from16 v0, v16
@@ -2497,7 +2449,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_10
+    if-eqz v4, :cond_b
 
     const-string v4, "5"
 
@@ -2517,9 +2469,9 @@
 
     invoke-direct {v0, v2, v7}, Lcom/estrongs/fs/impl/pcs/PcsFileSystem;->a(Lorg/json/simple/JSONArray;I)I
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
-    :cond_10
+    :cond_b
     const-string v4, "6"
 
     div-int v6, v2, v7
@@ -2538,9 +2490,9 @@
 
     invoke-direct {v0, v2, v7}, Lcom/estrongs/fs/impl/pcs/PcsFileSystem;->a(Lorg/json/simple/JSONArray;I)I
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
-    :cond_11
+    :cond_c
     const-string v4, "/"
 
     move-object/from16 v0, v16
@@ -2549,7 +2501,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_12
+    if-eqz v4, :cond_d
 
     move-object/from16 v0, p0
 
@@ -2557,21 +2509,21 @@
 
     move-result-object v2
 
-    :goto_5
-    if-nez v2, :cond_4
+    :goto_4
+    if-nez v2, :cond_3
 
     const-string v2, "Pcs"
 
     const-string v3, "list no data"
 
-    invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
-    :goto_6
+    :goto_5
     return-object v2
 
-    :cond_12
+    :cond_d
     invoke-static/range {v16 .. v16}, Lcom/estrongs/fs/impl/pcs/PcsFileSystem;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -2633,8 +2585,8 @@
 
     move-result-object v2
 
-    :goto_7
-    if-eqz v2, :cond_1f
+    :goto_6
+    if-eqz v2, :cond_1a
 
     move-object/from16 v0, p0
 
@@ -2646,7 +2598,7 @@
 
     move-result-object v2
 
-    goto :goto_5
+    goto :goto_4
 
     :catch_0
     move-exception v4
@@ -2655,11 +2607,11 @@
 
     const-string v6, "listFilesInternal()"
 
-    invoke-static {v5, v6, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v5, v6, v4}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    goto :goto_7
+    goto :goto_6
 
-    :cond_13
+    :cond_e
     :try_start_4
     const-string v12, ":"
 
@@ -2667,13 +2619,13 @@
 
     move-result-object v8
 
-    if-eqz v8, :cond_7
+    if-eqz v8, :cond_6
 
     array-length v12, v8
 
     const/4 v13, 0x2
 
-    if-ne v12, v13, :cond_7
+    if-ne v12, v13, :cond_6
 
     const/4 v12, 0x0
 
@@ -2685,7 +2637,7 @@
 
     move-result v12
 
-    if-eqz v12, :cond_7
+    if-eqz v12, :cond_6
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -2724,51 +2676,51 @@
 
     cmp-long v8, v12, v18
 
-    if-gez v8, :cond_7
+    if-gez v8, :cond_6
 
     const-wide/16 v18, 0x0
 
     cmp-long v8, v12, v18
 
-    if-ltz v8, :cond_7
+    if-ltz v8, :cond_6
 
     const/4 v2, 0x1
 
-    goto/16 :goto_4
+    goto/16 :goto_3
 
-    :cond_14
+    :cond_f
     move-object/from16 v20, v5
 
     move v5, v2
 
     move-object/from16 v2, v20
 
-    :goto_8
-    if-eqz v2, :cond_15
+    :goto_7
+    if-eqz v2, :cond_10
 
     :try_start_5
     invoke-virtual {v2}, Ljava/io/InputStreamReader;->close()V
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_3
 
-    :cond_15
-    :goto_9
-    if-eqz v4, :cond_16
+    :cond_10
+    :goto_8
+    if-eqz v4, :cond_11
 
     :try_start_6
     invoke-virtual {v4}, Ljava/io/BufferedReader;->close()V
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_4
 
-    :cond_16
-    :goto_a
-    if-eqz v5, :cond_1a
+    :cond_11
+    :goto_9
+    if-eqz v5, :cond_15
 
-    if-eqz v6, :cond_1a
+    if-eqz v6, :cond_15
 
-    iput-object v6, v10, Lcom/estrongs/fs/impl/pcs/g;->b:Ljava/lang/String;
+    iput-object v6, v10, Lcom/estrongs/fs/impl/pcs/e;->b:Ljava/lang/String;
 
-    goto/16 :goto_3
+    goto/16 :goto_2
 
     :catch_1
     move-exception v5
@@ -2777,29 +2729,29 @@
 
     move-object v6, v8
 
-    :goto_b
-    if-eqz v4, :cond_17
+    :goto_a
+    if-eqz v4, :cond_12
 
     :try_start_7
     invoke-virtual {v4}, Ljava/io/InputStreamReader;->close()V
     :try_end_7
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_5
 
-    :cond_17
-    :goto_c
-    if-eqz v2, :cond_16
+    :cond_12
+    :goto_b
+    if-eqz v2, :cond_11
 
     :try_start_8
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_8
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_2
 
-    goto :goto_a
+    goto :goto_9
 
     :catch_2
     move-exception v2
 
-    goto :goto_a
+    goto :goto_9
 
     :catchall_0
     move-exception v3
@@ -2810,52 +2762,52 @@
 
     move-object v2, v3
 
-    :goto_d
-    if-eqz v5, :cond_18
+    :goto_c
+    if-eqz v5, :cond_13
 
     :try_start_9
     invoke-virtual {v5}, Ljava/io/InputStreamReader;->close()V
     :try_end_9
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_6
 
-    :cond_18
-    :goto_e
-    if-eqz v4, :cond_19
+    :cond_13
+    :goto_d
+    if-eqz v4, :cond_14
 
     :try_start_a
     invoke-virtual {v4}, Ljava/io/BufferedReader;->close()V
     :try_end_a
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_7
 
-    :cond_19
-    :goto_f
+    :cond_14
+    :goto_e
     throw v2
 
-    :cond_1a
+    :cond_15
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v11}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    goto/16 :goto_3
+    goto/16 :goto_2
 
-    :cond_1b
-    if-eqz v14, :cond_1d
-
-    invoke-virtual {v3}, Ljava/util/HashMap;->size()I
-
-    move-result v2
-
-    if-eqz v2, :cond_1c
+    :cond_16
+    if-eqz v14, :cond_18
 
     invoke-virtual {v3}, Ljava/util/HashMap;->size()I
 
     move-result v2
 
-    if-ge v2, v7, :cond_1d
+    if-eqz v2, :cond_17
 
-    :cond_1c
+    invoke-virtual {v3}, Ljava/util/HashMap;->size()I
+
+    move-result v2
+
+    if-ge v2, v7, :cond_18
+
+    :cond_17
     invoke-virtual {v15}, Ljava/util/HashMap;->clear()V
 
     const-string v2, "total_entries"
@@ -2882,35 +2834,35 @@
 
     invoke-virtual {v0, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_1d
+    :cond_18
     move-object v2, v3
 
-    goto/16 :goto_6
+    goto/16 :goto_5
 
     :catch_3
     move-exception v2
 
-    goto :goto_9
+    goto :goto_8
 
     :catch_4
     move-exception v2
 
-    goto :goto_a
+    goto :goto_9
 
     :catch_5
     move-exception v4
 
-    goto :goto_c
+    goto :goto_b
 
     :catch_6
     move-exception v3
 
-    goto :goto_e
+    goto :goto_d
 
     :catch_7
     move-exception v3
 
-    goto :goto_f
+    goto :goto_e
 
     :catchall_1
     move-exception v3
@@ -2919,12 +2871,12 @@
 
     move-object v2, v3
 
-    goto :goto_d
+    goto :goto_c
 
     :catchall_2
     move-exception v2
 
-    goto :goto_d
+    goto :goto_c
 
     :catch_8
     move-exception v4
@@ -2935,7 +2887,7 @@
 
     move-object v6, v8
 
-    goto :goto_b
+    goto :goto_a
 
     :catch_9
     move-exception v8
@@ -2948,9 +2900,9 @@
 
     move-object/from16 v2, v20
 
-    goto :goto_b
+    goto :goto_a
 
-    :cond_1e
+    :cond_19
     move v5, v6
 
     move-object v6, v8
@@ -2961,28 +2913,28 @@
 
     move-object/from16 v4, v20
 
-    goto/16 :goto_8
+    goto/16 :goto_7
 
-    :cond_1f
+    :cond_1a
     move-object v2, v3
 
-    goto/16 :goto_5
+    goto/16 :goto_4
 
-    :cond_20
+    :cond_1b
     move v14, v3
 
     move v2, v4
 
     move-object v15, v6
 
-    goto/16 :goto_1
+    goto/16 :goto_0
 
-    :cond_21
+    :cond_1c
     move v14, v3
 
     move-object v15, v6
 
-    goto/16 :goto_1
+    goto/16 :goto_0
 .end method
 
 .method private a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/HashMap;)Ljava/util/HashMap;
@@ -3001,7 +2953,7 @@
             "Ljava/util/HashMap",
             "<",
             "Ljava/lang/String;",
-            "Lcom/estrongs/fs/impl/pcs/g;",
+            "Lcom/estrongs/fs/impl/pcs/e;",
             ">;"
         }
     .end annotation
@@ -3281,9 +3233,9 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/security/KeyStore;->load(Ljava/io/InputStream;[C)V
 
-    new-instance v1, Lcom/estrongs/fs/impl/pcs/e;
+    new-instance v1, Lcom/estrongs/android/util/n;
 
-    invoke-direct {v1, v0}, Lcom/estrongs/fs/impl/pcs/e;-><init>(Ljava/security/KeyStore;)V
+    invoke-direct {v1, v0}, Lcom/estrongs/android/util/n;-><init>(Ljava/security/KeyStore;)V
 
     sget-object v0, Lorg/apache/http/conn/ssl/SSLSocketFactory;->ALLOW_ALL_HOSTNAME_VERIFIER:Lorg/apache/http/conn/ssl/X509HostnameVerifier;
 
@@ -3573,7 +3525,7 @@
 
     new-instance v1, Lcom/estrongs/fs/impl/pcs/PcsFileSystem$PcsFileSystemException;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/Object;)I
+    invoke-static {v0}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/Object;)I
 
     move-result v0
 
@@ -3682,7 +3634,7 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lcom/estrongs/android/util/am;->bQ(Ljava/lang/String;)Z
+    invoke-static {v5}, Lcom/estrongs/android/util/ap;->ci(Ljava/lang/String;)Z
 
     move-result v5
 
@@ -3863,7 +3815,7 @@
 
     const-string v2, "move failed"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -4012,7 +3964,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-static {v1}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/Object;)I
+    invoke-static {v1}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/Object;)I
 
     move-result v1
 
@@ -4056,15 +4008,15 @@
 
     iput-object v0, p0, Lcom/estrongs/fs/impl/pcs/PcsFileSystem;->n:Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/estrongs/fs/impl/pcs/PcsFileSystem;->o:Lcom/estrongs/fs/impl/j/e;
+    iget-object v0, p0, Lcom/estrongs/fs/impl/pcs/PcsFileSystem;->o:Lcom/estrongs/fs/impl/o/e;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/fs/impl/pcs/PcsFileSystem;->o:Lcom/estrongs/fs/impl/j/e;
+    iget-object v0, p0, Lcom/estrongs/fs/impl/pcs/PcsFileSystem;->o:Lcom/estrongs/fs/impl/o/e;
 
     iget-object v2, p0, Lcom/estrongs/fs/impl/pcs/PcsFileSystem;->n:Ljava/lang/String;
 
-    invoke-interface {v0, p2, v1, v2}, Lcom/estrongs/fs/impl/j/e;->a(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-interface {v0, p2, v1, v2}, Lcom/estrongs/fs/impl/o/e;->a(Ljava/lang/String;ILjava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -4581,7 +4533,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Lorg/json/simple/parser/JSONParser;
 
@@ -4621,7 +4573,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/Object;)I
+    invoke-static {v0}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/Object;)I
 
     move-result v0
 
@@ -4655,7 +4607,7 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/util/am;->a(Ljava/io/File;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/util/ap;->a(Ljava/io/File;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v0
 
@@ -4673,7 +4625,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/util/am;->a(Ljava/io/File;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/util/ap;->a(Ljava/io/File;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v0
 
@@ -5093,7 +5045,7 @@
 
     const-string v2, "move failed"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -5611,7 +5563,7 @@
 
     const-string v2, "copy failed"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_1
     return v0
@@ -5874,7 +5826,7 @@
 
     const-string v1, "get token return error"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v3
 
@@ -5895,7 +5847,7 @@
 
     const-string v1, "can\'t get the token"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v3
 
@@ -6036,7 +5988,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/bk;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -6071,7 +6023,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/bk;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -6111,7 +6063,7 @@
 
     move-result-object v0
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -6189,7 +6141,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/estrongs/android/util/bd;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/estrongs/android/util/bk;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -6423,7 +6375,7 @@
 
     const-string v2, "mkdir failed"
 
-    invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -6473,7 +6425,7 @@
 
     const-string v2, "mkdir no data"
 
-    invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -6664,7 +6616,7 @@
 
     const-string v2, "delete failed"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_1
     return v0
@@ -7287,7 +7239,7 @@
 
     const-string v1, "getThumbnail, can\'t get the token"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v6
 
@@ -7418,7 +7370,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/bd;->b(Ljava/lang/CharSequence;)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bk;->b(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
@@ -7445,7 +7397,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/bd;->b(Ljava/lang/CharSequence;)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bk;->b(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
@@ -7472,7 +7424,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/bd;->b(Ljava/lang/CharSequence;)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bk;->b(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
@@ -7499,7 +7451,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/bd;->b(Ljava/lang/CharSequence;)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bk;->b(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
@@ -7526,7 +7478,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/bd;->b(Ljava/lang/CharSequence;)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bk;->b(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
@@ -7553,7 +7505,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/bd;->b(Ljava/lang/CharSequence;)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bk;->b(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
@@ -7580,7 +7532,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/bd;->b(Ljava/lang/CharSequence;)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bk;->b(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
@@ -7735,7 +7687,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Lcom/estrongs/fs/impl/pcs/PcsFileSystem$PcsFileSystemException;
 
@@ -7825,7 +7777,7 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v5}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -7839,7 +7791,7 @@
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v6}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -7988,15 +7940,15 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/estrongs/fs/impl/pcs/g;
+    check-cast v1, Lcom/estrongs/fs/impl/pcs/e;
 
-    invoke-direct {p0, v1}, Lcom/estrongs/fs/impl/pcs/PcsFileSystem;->a(Lcom/estrongs/fs/impl/pcs/g;)Lcom/estrongs/android/pop/netfs/NetFileInfo;
+    invoke-direct {p0, v1}, Lcom/estrongs/fs/impl/pcs/PcsFileSystem;->a(Lcom/estrongs/fs/impl/pcs/e;)Lcom/estrongs/android/pop/netfs/NetFileInfo;
 
     move-result-object v5
 
     const-string v6, "public_share_link"
 
-    iget-object v1, v1, Lcom/estrongs/fs/impl/pcs/g;->b:Ljava/lang/String;
+    iget-object v1, v1, Lcom/estrongs/fs/impl/pcs/e;->b:Ljava/lang/String;
 
     invoke-virtual {v5, v6, v1}, Lcom/estrongs/android/pop/netfs/NetFileInfo;->putExtra(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -8007,15 +7959,30 @@
     goto :goto_1
 
     :cond_4
+    const-wide/16 v0, 0xbb8
+
+    :try_start_0
+    invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_2
     move-object v0, v2
 
     goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
+
+    goto :goto_2
 .end method
 
-.method public a(Lcom/estrongs/fs/impl/j/e;)V
+.method public a(Lcom/estrongs/fs/impl/o/e;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/fs/impl/pcs/PcsFileSystem;->o:Lcom/estrongs/fs/impl/j/e;
+    iput-object p1, p0, Lcom/estrongs/fs/impl/pcs/PcsFileSystem;->o:Lcom/estrongs/fs/impl/o/e;
 
     return-void
 .end method
@@ -8220,7 +8187,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Lcom/estrongs/fs/impl/pcs/PcsFileSystem$PcsFileSystemException;
 
@@ -8309,7 +8276,7 @@
 
     const-string v2, "name"
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -8340,7 +8307,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v6, v7}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/Object;J)J
+    invoke-static {v0, v6, v7}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/Object;J)J
 
     move-result-wide v2
 
@@ -8352,7 +8319,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v6, v7}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/Object;J)J
+    invoke-static {v0, v6, v7}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/Object;J)J
 
     move-result-wide v2
 
@@ -8364,7 +8331,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v6, v7}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/Object;J)J
+    invoke-static {v0, v6, v7}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/Object;J)J
 
     move-result-wide v2
 
@@ -8401,7 +8368,7 @@
 
     const-string v2, "can\'t get token for rename"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     :goto_0
@@ -8489,7 +8456,7 @@
 
     const-string v2, "move failed"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -8787,7 +8754,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Lcom/estrongs/fs/impl/pcs/PcsFileSystem$PcsFileSystemException;
 
@@ -9281,7 +9248,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Lcom/estrongs/fs/impl/pcs/PcsFileSystem$PcsFileSystemException;
 
@@ -9354,7 +9321,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -9395,7 +9362,7 @@
 
     const-string v2, "can\'t get token for rename"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     :goto_0
@@ -9453,7 +9420,7 @@
 
     const-string v1, "can\'t get token createfile"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v6, v7
 
@@ -9555,7 +9522,7 @@
 
     const-string v3, "can\'t get token createfile"
 
-    invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v3, v4
 
@@ -10116,7 +10083,7 @@
 
     const-string v2, "delete, can\'t get the token"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     :goto_0
@@ -10131,7 +10098,7 @@
 
     if-eqz v4, :cond_3
 
-    invoke-static {v2}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -10155,7 +10122,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/bd;->b(Ljava/lang/CharSequence;)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bk;->b(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
@@ -10334,7 +10301,7 @@
 
     const-string v1, "getFileInfo, can\'t get the token"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v2
 
@@ -10622,7 +10589,7 @@
 .end method
 
 .method public getFileInputStream(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)Ljava/io/InputStream;
-    .locals 6
+    .locals 4
 
     const/4 v1, 0x0
 
@@ -10653,26 +10620,14 @@
     if-eqz v0, :cond_2
 
     invoke-direct {p0, v2}, Lcom/estrongs/fs/impl/pcs/PcsFileSystem;->h(Ljava/lang/String;)I
-
-    move-result v2
-
-    const/4 v3, 0x1
-
-    if-ne v2, v3, :cond_1
-
-    invoke-static {}, Lcom/estrongs/android/util/a;->a()Lcom/estrongs/android/util/a;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_1
-
-    const-string v3, "PCS_Download_UV"
-
-    const-string v4, "PCS_Download_UV"
-
-    invoke-virtual {v2, v3, v4}, Lcom/estrongs/android/util/a;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_1
 
     :cond_1
     :goto_0
@@ -10791,7 +10746,7 @@
 
     const-string v7, "getFileOutputStream, can\'t get the token"
 
-    invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v7}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v14, 0x0
 
@@ -10819,7 +10774,7 @@
 
     const-string v7, "getFileOutputStream, can\'t get upload url"
 
-    invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v7}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v14, 0x0
 
@@ -10840,13 +10795,13 @@
 
     invoke-direct {v10}, Lcom/estrongs/android/pop/netfs/utils/FastPipedInputStream;-><init>()V
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     :try_start_1
     invoke-virtual {v10, v14}, Lcom/estrongs/android/pop/netfs/utils/FastPipedInputStream;->connect(Lcom/estrongs/android/pop/netfs/utils/FastPipedOutputStream;)V
     :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     :try_start_2
     new-instance v6, Lcom/estrongs/fs/impl/pcs/d;
@@ -10888,22 +10843,18 @@
 
     if-ne v6, v7, :cond_1
 
-    invoke-static {}, Lcom/estrongs/android/util/a;->a()Lcom/estrongs/android/util/a;
-
-    move-result-object v6
-
-    if-eqz v6, :cond_1
-
-    const-string v7, "PCS_Upload_UV"
-
-    const-string v8, "PCS_Upload_UV"
-
-    invoke-virtual {v6, v7, v8}, Lcom/estrongs/android/util/a;->e(Ljava/lang/String;Ljava/lang/String;)V
-
     goto :goto_1
 
     :catch_0
     move-exception v6
+
+    const-string v6, "Pcs"
+
+    const-string v7, "Can\'t create pipe stream"
+
+    invoke-static {v6, v7}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
     const/4 v14, 0x0
 
@@ -10911,14 +10862,6 @@
 
     :catch_1
     move-exception v6
-
-    const-string v6, "Pcs"
-
-    const-string v7, "Can\'t create pipe stream"
-
-    invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
     const/4 v14, 0x0
 
@@ -10982,7 +10925,7 @@
 
     const-string v3, "move failed"
 
-    invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -11141,7 +11084,7 @@
 
     const-string v1, "getThumbnail, can\'t get the token"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v6
 
@@ -11225,7 +11168,7 @@
     :try_start_0
     aget-object v2, v3, v2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/bd;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/estrongs/android/util/bk;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -11580,7 +11523,7 @@
 
     move-result-object v3
 
-    invoke-static {v1}, Lcom/estrongs/android/util/bd;->c(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/estrongs/android/util/bk;->c(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -11633,7 +11576,7 @@
 
     aget-object v0, v3, v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/bk;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -11688,7 +11631,7 @@
 
     aget-object v0, v3, v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/bk;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -11741,7 +11684,7 @@
 
     aget-object v2, v3, v2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/bd;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/estrongs/android/util/bk;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -11843,7 +11786,7 @@
 
     aget-object v2, v3, v2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/bd;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/estrongs/android/util/bk;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -11996,7 +11939,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v0}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -12017,7 +11960,7 @@
 
     const-string v2, "get null token"
 
-    invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -12260,7 +12203,7 @@
 
     const-string v2, "can\'t get token for rename"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     :goto_0
@@ -12297,7 +12240,7 @@
 
     move-result-object v2
 
-    invoke-static {p4}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p4}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 

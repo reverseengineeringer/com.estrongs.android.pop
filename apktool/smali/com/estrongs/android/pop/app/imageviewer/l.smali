@@ -35,7 +35,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/CropImageView;->e()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/CropImageView;->a()V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/l;->a:Landroid/graphics/Bitmap;
 

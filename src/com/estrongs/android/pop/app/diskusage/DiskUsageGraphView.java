@@ -184,7 +184,7 @@ public class DiskUsageGraphView
         for (;;)
         {
           if (j == null) {
-            j = getContext().getResources().getDrawable(2130837769);
+            j = getContext().getResources().getDrawable(2130838059);
           }
           paramCanvas.getClipBounds(l);
           j.setBounds(l);

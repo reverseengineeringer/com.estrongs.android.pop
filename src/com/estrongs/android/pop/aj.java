@@ -1,26 +1,28 @@
 package com.estrongs.android.pop;
 
-import com.estrongs.a.a;
-import com.estrongs.a.a.p;
+import com.estrongs.android.pop.app.f.m;
+import com.estrongs.android.pop.app.f.o;
 import com.estrongs.android.pop.view.FileExplorerActivity;
+import java.util.Observable;
+import java.util.Observer;
 
 public class aj
-  implements p
+  implements Observer
 {
-  public void a(a parama, int paramInt1, int paramInt2)
+  public void update(Observable paramObservable, Object paramObject)
   {
-    parama = FileExplorerActivity.J();
-    if ((parama != null) && (!"bt://".equalsIgnoreCase(FileExplorerActivity.J().z()))) {}
-    do
-    {
-      return;
-      if ((4 == paramInt2) || (5 == paramInt2))
-      {
-        parama.d(false);
-        return;
+    FileExplorerActivity localFileExplorerActivity = FileExplorerActivity.X();
+    if ((localFileExplorerActivity != null) && ((paramObservable instanceof m)) && ("smb://".equalsIgnoreCase(localFileExplorerActivity.P()))) {
+      if ((paramObject == null) || (!(paramObject instanceof o))) {
+        break label50;
       }
-    } while (2 != paramInt2);
-    parama.d(true);
+    }
+    label50:
+    for (boolean bool = true;; bool = false)
+    {
+      localFileExplorerActivity.d(bool);
+      return;
+    }
   }
 }
 

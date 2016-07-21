@@ -2,18 +2,26 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/e/cp;
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Ljava/lang/String;
+
+.field final synthetic c:Lcom/estrongs/android/ui/e/ew;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/cp;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/ew;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/ex;->a:Lcom/estrongs/android/ui/e/cp;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/ex;->c:Lcom/estrongs/android/ui/e/ew;
+
+    iput-object p2, p0, Lcom/estrongs/android/ui/e/ex;->a:Ljava/lang/String;
+
+    iput-object p3, p0, Lcom/estrongs/android/ui/e/ex;->b:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,60 +30,86 @@
 
 
 # virtual methods
-.method public onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 2
+.method public run()V
+    .locals 4
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/ex;->a:Lcom/estrongs/android/ui/e/cp;
+    const/4 v3, 0x1
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/cp;->a(Lcom/estrongs/android/ui/e/cp;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    new-instance v0, Landroid/content/Intent;
 
-    move-result-object v0
+    iget-object v1, p0, Lcom/estrongs/android/ui/e/ex;->c:Lcom/estrongs/android/ui/e/ew;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->H()Z
+    iget-object v1, v1, Lcom/estrongs/android/ui/e/ew;->a:Lcom/estrongs/android/ui/e/cr;
 
-    move-result v0
+    invoke-static {v1}, Lcom/estrongs/android/ui/e/cr;->b(Lcom/estrongs/android/ui/e/cr;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    if-nez v0, :cond_0
+    move-result-object v1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/ex;->a:Lcom/estrongs/android/ui/e/cp;
+    const-class v2, Lcom/estrongs/android/pop/app/imageviewer/CropImage;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/cp;->a(Lcom/estrongs/android/ui/e/cp;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    move-result-object v0
+    new-instance v1, Ljava/io/File;
 
-    const v1, 0x7f0b02fa
+    iget-object v2, p0, Lcom/estrongs/android/ui/e/ex;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->d(I)V
+    invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    :goto_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/ex;->a:Lcom/estrongs/android/ui/e/cp;
+    invoke-static {v1}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/cp;->a(Lcom/estrongs/android/ui/e/cp;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    move-result-object v1
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->s()V
+    sget v1, Lcom/estrongs/android/ui/d/g;->d:I
 
-    const/4 v0, 0x1
+    sget v2, Lcom/estrongs/android/ui/d/g;->e:I
 
-    return v0
+    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
 
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/ex;->a:Lcom/estrongs/android/ui/e/cp;
+    move-result v1
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/cp;->a(Lcom/estrongs/android/ui/e/cp;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    const-string v2, "outputX"
 
-    move-result-object v0
+    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    invoke-static {v0}, Lcom/estrongs/android/view/u;->a(Landroid/app/Activity;)Lcom/estrongs/android/view/u;
+    const-string v2, "outputY"
 
-    move-result-object v0
+    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/view/u;->e()Lcom/estrongs/android/view/ac;
+    const-string v2, "aspectX"
 
-    move-result-object v0
+    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/view/ac;->c()V
+    const-string v2, "aspectY"
 
-    goto :goto_0
+    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    const-string v1, "scale"
+
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    const-string v1, "noFaceDetection"
+
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    const-string v1, "customSave"
+
+    iget-object v2, p0, Lcom/estrongs/android/ui/e/ex;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/e/ex;->c:Lcom/estrongs/android/ui/e/ew;
+
+    iget-object v1, v1, Lcom/estrongs/android/ui/e/ew;->a:Lcom/estrongs/android/ui/e/cr;
+
+    invoke-static {v1}, Lcom/estrongs/android/ui/e/cr;->b(Lcom/estrongs/android/ui/e/cr;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    move-result-object v1
+
+    const/16 v2, 0x1019
+
+    invoke-virtual {v1, v0, v2}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    return-void
 .end method

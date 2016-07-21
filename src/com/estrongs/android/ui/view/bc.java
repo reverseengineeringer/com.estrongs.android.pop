@@ -1,52 +1,64 @@
 package com.estrongs.android.ui.view;
 
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.View.OnTouchListener;
-import java.util.List;
+import android.content.Context;
+import android.os.Handler;
+import android.os.Message;
+import android.support.v4.view.ViewPager;
+import java.lang.ref.WeakReference;
 
 class bc
-  implements View.OnTouchListener
+  extends Handler
 {
-  bc(IndicatorView paramIndicatorView) {}
+  private WeakReference<Context> b;
+  private int c = 0;
   
-  public boolean onTouch(View paramView, MotionEvent paramMotionEvent)
+  protected bc(WeakReference<Context> paramWeakReference)
   {
+    WeakReference localWeakReference;
+    b = localWeakReference;
+  }
+  
+  public void handleMessage(Message paramMessage)
+  {
+    super.handleMessage(paramMessage);
     try
     {
-      if (paramMotionEvent.getAction() == 0)
-      {
-        IndicatorView.a(a, IndicatorView.b(a, (int)paramMotionEvent.getX()));
-        if (IndicatorView.f(a) >= 0)
-        {
-          be.a((be)IndicatorView.d(a).get(IndicatorView.f(a)), true);
-          a.invalidate();
-          return false;
-        }
+      if ((Context)b.get() == null) {
+        return;
       }
-      else if ((paramMotionEvent.getAction() == 1) || (paramMotionEvent.getAction() == 3))
+      switch (what)
       {
-        if (IndicatorView.f(a) >= 0)
-        {
-          int i = (int)paramMotionEvent.getY();
-          be.a((be)IndicatorView.d(a).get(IndicatorView.f(a)), false);
-          if ((i < 0) || (i > a.getHeight())) {
-            break label172;
-          }
-          a.a(IndicatorView.f(a));
+      case 1: 
+        if (ba.b(a).hasMessages(1)) {
+          ba.b(a).removeMessages(1);
         }
-        for (;;)
+        if (ba.a(a).getCount() != 0)
         {
-          IndicatorView.a(a, -1);
-          return false;
-          label172:
-          a.invalidate();
+          c += 1;
+          c %= ba.a(a).getCount();
+          ba.e(a).setCurrentItem(c);
         }
+        ba.b(a).sendEmptyMessageDelayed(1, 6000L);
+        return;
       }
-      return false;
     }
-    catch (Exception paramView) {}
-    return false;
+    catch (Exception paramMessage)
+    {
+      paramMessage.printStackTrace();
+      return;
+    }
+    if (ba.b(a).hasMessages(1))
+    {
+      ba.b(a).removeMessages(1);
+      return;
+      if (ba.b(a).hasMessages(1)) {
+        ba.b(a).removeMessages(1);
+      }
+      ba.b(a).sendEmptyMessageDelayed(1, 6000L);
+      return;
+      c = arg1;
+    }
+    return;
   }
 }
 

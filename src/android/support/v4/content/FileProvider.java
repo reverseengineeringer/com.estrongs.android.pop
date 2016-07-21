@@ -22,8 +22,8 @@ public class FileProvider
 {
   private static final String[] a = { "_display_name", "_size" };
   private static final File b = new File("/");
-  private static HashMap<String, a> c = new HashMap();
-  private a d;
+  private static HashMap<String, g> c = new HashMap();
+  private g d;
   
   private static int a(String paramString)
   {
@@ -45,20 +45,20 @@ public class FileProvider
     throw new IllegalArgumentException("Invalid mode: " + paramString);
   }
   
-  private static a a(Context paramContext, String paramString)
+  private static g a(Context paramContext, String paramString)
   {
-    a locala1;
+    g localg1;
     synchronized (c)
     {
-      a locala2 = (a)c.get(paramString);
-      locala1 = locala2;
-      if (locala2 != null) {}
+      g localg2 = (g)c.get(paramString);
+      localg1 = localg2;
+      if (localg2 != null) {}
     }
     try
     {
-      locala1 = b(paramContext, paramString);
-      c.put(paramString, locala1);
-      return locala1;
+      localg1 = b(paramContext, paramString);
+      c.put(paramString, localg1);
+      return localg1;
     }
     catch (IOException paramContext)
     {
@@ -107,9 +107,9 @@ public class FileProvider
     return arrayOfString;
   }
   
-  private static a b(Context paramContext, String paramString)
+  private static g b(Context paramContext, String paramString)
   {
-    b localb = new b(paramString);
+    h localh = new h(paramString);
     XmlResourceParser localXmlResourceParser = paramContext.getPackageManager().resolveContentProvider(paramString, 128).loadXmlMetaData(paramContext.getPackageManager(), "android.support.FILE_PROVIDER_PATHS");
     if (localXmlResourceParser == null) {
       throw new IllegalArgumentException("Missing android.support.FILE_PROVIDER_PATHS meta-data");
@@ -137,7 +137,7 @@ public class FileProvider
         if (paramString == null) {
           break label226;
         }
-        localb.a(str1, paramString);
+        localh.a(str1, paramString);
         break;
         if ("files-path".equals(paramString))
         {
@@ -151,7 +151,7 @@ public class FileProvider
         {
           paramString = a(Environment.getExternalStorageDirectory(), new String[] { str2 });
           continue;
-          return localb;
+          return localh;
         }
         else
         {

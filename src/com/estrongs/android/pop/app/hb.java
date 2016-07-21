@@ -1,17 +1,17 @@
 package com.estrongs.android.pop.app;
 
 import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
-import com.estrongs.fs.d;
+import android.preference.Preference.OnPreferenceClickListener;
+import com.estrongs.android.util.p;
 
 class hb
-  implements Preference.OnPreferenceChangeListener
+  implements Preference.OnPreferenceClickListener
 {
   hb(PopPreferenceActivity paramPopPreferenceActivity) {}
   
-  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
+  public boolean onPreferenceClick(Preference paramPreference)
   {
-    d.a().a(Boolean.valueOf(paramObject.toString()));
+    p.a(a);
     return true;
   }
 }

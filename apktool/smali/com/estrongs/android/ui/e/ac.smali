@@ -1,57 +1,51 @@
 .class Lcom/estrongs/android/ui/e/ac;
-.super Ljava/lang/Thread;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # instance fields
-.field final synthetic a:I
-
-.field final synthetic b:Lcom/estrongs/android/ui/e/ab;
+.field final synthetic a:Lcom/estrongs/android/ui/e/m;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/ab;I)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/m;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/ac;->b:Lcom/estrongs/android/ui/e/ab;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/ac;->a:Lcom/estrongs/android/ui/e/m;
 
-    iput p2, p0, Lcom/estrongs/android/ui/e/ac;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
+.method public onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 2
 
-    :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/ac;->b:Lcom/estrongs/android/ui/e/ab;
+    new-instance v0, Lcom/estrongs/android/ui/pcs/r;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/ab;->a:Lcom/estrongs/android/ui/e/aa;
+    iget-object v1, p0, Lcom/estrongs/android/ui/e/ac;->a:Lcom/estrongs/android/ui/e/m;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/aa;->a:Lcom/estrongs/android/ui/e/w;
+    invoke-static {v1}, Lcom/estrongs/android/ui/e/m;->a(Lcom/estrongs/android/ui/e/m;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/w;->k:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    move-result-object v1
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->y()Lcom/estrongs/android/view/aw;
+    invoke-direct {v0, v1}, Lcom/estrongs/android/ui/pcs/r;-><init>(Landroid/content/Context;)V
 
-    move-result-object v0
+    new-instance v1, Lcom/estrongs/android/ui/e/ad;
 
-    check-cast v0, Lcom/estrongs/android/pop/app/diskusage/h;
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/e/ad;-><init>(Lcom/estrongs/android/ui/e/ac;)V
 
-    iget v1, p0, Lcom/estrongs/android/ui/e/ac;->a:I
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/pcs/r;->a(Lcom/estrongs/android/ui/pcs/q;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/diskusage/h;->d(I)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v1, 0x1
 
-    :goto_0
-    return-void
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/pcs/r;->a(Z)V
 
-    :catch_0
-    move-exception v0
+    const/4 v0, 0x0
 
-    goto :goto_0
+    return v0
 .end method

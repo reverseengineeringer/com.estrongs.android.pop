@@ -1,20 +1,20 @@
 package com.estrongs.android.ui.preference.fragments;
 
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
-import com.estrongs.android.pop.view.utils.RemoteSynchronizer;
+import android.widget.EditText;
+import com.estrongs.android.view.dx;
+import com.estrongs.android.widget.f;
+import com.estrongs.fs.h;
 
 class r
-  implements Preference.OnPreferenceChangeListener
+  implements dx
 {
-  r(BackupPreferenceFragment paramBackupPreferenceFragment) {}
+  r(p paramp, f paramf) {}
   
-  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
+  public void a(h paramh)
   {
-    if (!Boolean.valueOf(paramObject.toString()).booleanValue()) {
-      RemoteSynchronizer.f();
-    }
-    return true;
+    paramh = paramh.getPath();
+    b.a.setText(paramh);
+    a.k();
   }
 }
 

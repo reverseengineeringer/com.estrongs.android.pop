@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnTouchListener;
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # instance fields
@@ -22,14 +22,41 @@
 
 
 # virtual methods
-.method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 1
+.method public onMenuItemClick(Landroid/view/MenuItem;)Z
+    .locals 3
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bg;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->a()V
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->e:Lcom/estrongs/android/pop/app/imageviewer/gallery/f;
 
-    const/4 v0, 0x0
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/bg;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+
+    iget v1, v1, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->c:I
+
+    invoke-interface {v0, v1}, Lcom/estrongs/android/pop/app/imageviewer/gallery/f;->a(I)Lcom/estrongs/android/pop/app/imageviewer/gallery/e;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lcom/estrongs/android/pop/app/imageviewer/gallery/e;->f()Landroid/net/Uri;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/imageviewer/bg;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+
+    invoke-static {v2, v1, v0}, Lcom/estrongs/android/pop/app/imageviewer/ae;->a(Landroid/app/Activity;Landroid/net/Uri;Lcom/estrongs/android/pop/app/imageviewer/gallery/e;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bg;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/bg;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+
+    iget-object v1, v1, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->m:Lcom/estrongs/android/pop/esclasses/ESScrollMenuView;
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->b(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;Lcom/estrongs/android/pop/esclasses/ESScrollMenuView;)V
+
+    :cond_0
+    const/4 v0, 0x1
 
     return v0
 .end method

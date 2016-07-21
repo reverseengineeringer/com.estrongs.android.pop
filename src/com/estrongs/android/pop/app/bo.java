@@ -6,11 +6,13 @@ import android.content.DialogInterface.OnDismissListener;
 class bo
   implements DialogInterface.OnDismissListener
 {
-  bo(bn parambn) {}
+  bo(ESFileSharingActivity paramESFileSharingActivity) {}
   
   public void onDismiss(DialogInterface paramDialogInterface)
   {
-    a.c.finish();
+    if (ESFileSharingActivity.a(a)) {
+      a.finish();
+    }
   }
 }
 

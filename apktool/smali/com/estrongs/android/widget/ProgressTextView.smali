@@ -93,18 +93,18 @@
     return-void
 .end method
 
-.method private a()I
+.method private getProgressColor()I
     .locals 2
 
     iget-object v0, p0, Lcom/estrongs/android/widget/ProgressTextView;->a:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/theme/al;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
+    invoke-static {v0}, Lcom/estrongs/android/ui/theme/at;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
 
     move-result-object v0
 
-    const v1, 0x7f08000a
+    const v1, 0x7f0d0114
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/theme/al;->d(I)I
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/theme/at;->c(I)I
 
     move-result v0
 
@@ -126,6 +126,16 @@
 .method public a(Z)V
     .locals 4
 
+    iget-boolean v0, p0, Lcom/estrongs/android/widget/ProgressTextView;->b:Z
+
+    if-ne v0, p1, :cond_0
+
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/ProgressTextView;->invalidate()V
+
+    :goto_0
+    return-void
+
+    :cond_0
     iput-boolean p1, p0, Lcom/estrongs/android/widget/ProgressTextView;->b:Z
 
     if-eqz p1, :cond_1
@@ -138,7 +148,7 @@
 
     new-instance v0, Landroid/graphics/drawable/ColorDrawable;
 
-    invoke-direct {p0}, Lcom/estrongs/android/widget/ProgressTextView;->a()I
+    invoke-direct {p0}, Lcom/estrongs/android/widget/ProgressTextView;->getProgressColor()I
 
     move-result v1
 
@@ -172,22 +182,37 @@
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/ProgressTextView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    :cond_0
-    :goto_0
+    :goto_1
     invoke-virtual {p0}, Lcom/estrongs/android/widget/ProgressTextView;->invalidate()V
 
-    return-void
+    goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/widget/ProgressTextView;->f:Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/ProgressTextView;->getContext()Landroid/content/Context;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/ProgressTextView;->f:Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/ProgressTextView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    move-result-object v0
 
-    goto :goto_0
+    const v1, 0x7f0d009b
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/ProgressTextView;->setBackgroundColor(I)V
+
+    goto :goto_1
+.end method
+
+.method public getProgress()I
+    .locals 1
+
+    iget v0, p0, Lcom/estrongs/android/widget/ProgressTextView;->c:I
+
+    return v0
 .end method
 
 .method protected onDraw(Landroid/graphics/Canvas;)V

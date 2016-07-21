@@ -35,15 +35,15 @@
 
     iget-object v0, v0, Lcom/estrongs/android/pop/app/diskusage/k;->b:Lcom/estrongs/android/pop/app/diskusage/h;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/diskusage/h;->x(Lcom/estrongs/android/pop/app/diskusage/h;)Landroid/app/Activity;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/diskusage/h;->z(Lcom/estrongs/android/pop/app/diskusage/h;)Landroid/app/Activity;
 
     move-result-object v0
 
-    const v1, 0x7f0b0225
+    const v1, 0x7f0804a3
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/m;->a:Lcom/estrongs/android/pop/app/diskusage/k;
 

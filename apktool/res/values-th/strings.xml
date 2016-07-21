@@ -1,13 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_select">เลือก</string>
-    <string name="app_name">ES ไฟล์ เอ็กซ์พอเลอร์</string>
-    <string name="app_media_player">ES มีเดียเพลย์เยอร์</string>
-    <string name="app_note_editor">ES แก้ไขบันทึก</string>
-    <string name="app_image_browser">ES เบราว์เซอร์ภาพ</string>
-    <string name="app_zip_viewer">ES Zip วิลเวอร์</string>
     <string name="app_downloader">ES ดาวน์โหลด</string>
-    <string name="select_device_to_share">กรุณาเลือกอุปกรณ์ที่จะส่ง</string>
+    <string name="app_image_browser">ES เบราว์เซอร์ภาพ</string>
+    <string name="app_media_player">ES มีเดียเพลย์เยอร์</string>
+    <string name="app_name">ES ไฟล์ เอ็กซ์พอเลอร์</string>
+    <string name="app_note_editor">ES แก้ไขบันทึก</string>
+    <string name="app_zip_viewer">ES Zip วิลเวอร์</string>
+    <string name="battery_info_remaining_charging_time">เวลาที่เหลือในการชาร์จ:</string>
+    <string name="battery_info_remaining_discharging_time">เวลาที่เหลือ:</string>
+    <string name="charging_screen_ad_delete">ลบ</string>
+    <string name="charging_screen_ad_enter">เปิด</string>
+    <string name="charging_screen_charging_complete">ชาร์จเสร็จสมบูรณ์</string>
+    <string name="charging_screen_slide_to_enter">เลื่อนเพื่อปลดล็อก</string>
+    <string name="common_time_hour">ชั่วโมง</string>
+    <string name="common_time_minute">นาที</string>
+    <string name="duappd_ad_item_action_btn">ฟรี</string>
+    <string name="duapps_ad_data_empty">โปรดกลับมาในภายหลัง.</string>
+    <string name="duapps_ad_empty_refresh_btn_check">ตรวจสอบ</string>
+    <string name="duapps_ad_empty_title">ว่าง</string>
+    <string name="duapps_ad_footer_end">ไม่มีเนื้อหาเพิ่มเติมอีก</string>
+    <string name="duapps_ad_loading">กำลังโหลด …</string>
+    <string name="duapps_ad_loading_switch_google_play_des">สลับไปที่ Google Play…</string>
+    <string name="duapps_ad_no_apps_refresh_button_text">รีเฟรช</string>
+    <string name="duapps_ad_no_browser_play">เบราว์เซอร์หรือ Google Play ติดตั้ง</string>
+    <string name="duapps_ad_nonetwork_message">ไม่มีการเชื่อมต่อเครือข่าย ตรวจสอบการตั้งค่าแล้วลองอีกครั้ง</string>
+    <string name="duapps_ad_pull_refresh">ดึงเพื่อรีเฟรช</string>
+    <string name="duscenerysdk_ad_no_browser_play">เบราว์เซอร์หรือ Google Play ติดตั้ง</string>
     <string name="es_share_name_activity">ส่งโดย LAN</string>
+    <string name="lock_screen_setting">การตั้งค่า</string>
+    <string name="lock_screen_switch">การชาร์จอัจฉริยะ</string>
+    <string name="lockscreen_charge_boost_time">ความเร็วในการชาร์จเพิ่มขึ้นทั้งหมด %1$d นาที</string>
     <string name="save_to_es">ES บันทึกไปที่</string>
+    <string name="scenery_card_antivirus_button">สแกนความปลอดภัย</string>
+    <string name="scenery_card_antivirus_content">ในโทรศัพท์ของคุณมี &lt;font color=#3080F0>%1$s&lt;/font> ความเสี่ยงด้านความปลอดภัย</string>
+    <string name="scenery_card_antivirus_title">เสี่ยงต่อความปลอดภัย</string>
+    <string name="scenery_card_battery_button">ประหยัดพลังงานทันที</string>
+    <string name="scenery_card_battery_content">&lt;font color=#3080F0>%1$s&lt;/font> พบแอพที่ใช้พลังงาน ใช้ DU Battery Saver เพื่อประหยัดพลังงานและยืดเวลาสแตนด์บาย&lt;font color=#3080F0>%2$s ชั่วโมง %3$s นาที&lt;/font></string>
+    <string name="scenery_card_battery_title">พลังงานที่ใช้</string>
+    <string name="scenery_card_booster_button">เพิ่มความเร็วเลย</string>
+    <string name="scenery_card_booster_content">&lt;font color=#3080F0>%1$s&lt;/font> แอพที่จัดการยากกำลังทำให้โทรศัพท์ของคุณทำงานช้า</string>
+    <string name="scenery_card_booster_title">ทำงานช้าลง</string>
+    <string name="scenery_card_cleaner_button">แก้ไขเลย</string>
+    <string name="scenery_card_cleaner_content">พบไฟล์ขยะ &lt;font color=#3080F0>%1$s&lt;/font> ในโทรศัพท์ของคุณ</string>
+    <string name="scenery_card_cleaner_title">การล้างแบบเร่งด่วน</string>
+    <string name="scenery_card_es_button">ล้างเลย</string>
+    <string name="scenery_card_es_content">พื้นที่หน่วยความจำภายในที่เหลือลดลง &lt;font color=#3080F0>%1$s&lt;/font></string>
+    <string name="scenery_card_es_title">ล้างไฟล์ขยะในดิสก์</string>
+    <string name="scenery_card_photowonder_button">เพิ่มความสวยงามเลย</string>
+    <string name="scenery_card_photowonder_content">คุณมี &lt;font color=#3080F0>%1$s&lt;/font> ภาพถ่ายที่สามารถปรับให้สวยงามได้</string>
+    <string name="scenery_card_photowonder_title">เพิ่มความสวยงาม</string>
+    <string name="scenery_charge_dialog_button_text">ดาวน์โหลดเลย</string>
+    <string name="scenery_charge_dialog_content">ชาร์จไฟเกิน %1$d นาที &lt;font color=#FF8132>ทำให้แบตเตอรี่เสียหาย&lt;/font> ปกป้องแบตเตอรี่ด้วย &lt;b>DU Battery Saver&lt;/b>.</string>
+    <string name="scenery_charge_dialog_title">เคล็ดลับการชาร์จไฟ</string>
+    <string name="scenery_disk_usage_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_disk_usage_dialog_content">หน่วยความจำโทรศัพท์ของคุณลดลง &lt;font color=#FF8132>%1$sMB&lt;/font> ใน &lt;font color=#FF8132>%2$s วันที่ผ่านมา&lt;/font>.</string>
+    <string name="scenery_disk_usage_dialog_title">ล้างไฟล์ขยะในดิสก์</string>
+    <string name="scenery_take_photo_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_take_photo_dialog_content">ภาพถ่ายยังสวยไม่พอใช่หรือไม่ &lt;font color=#2274E6>ฟิลเตอร์แต่งภาพให้เหมือนภาพยนตร์&lt;/font> จาก &lt;b>PhotoWonder&lt;/b> สามารถช่วยคุณได้</string>
+    <string name="scenery_take_photo_dialog_title">แก้ไขเพื่อความงาม</string>
+    <string name="scenery_uninstall_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_uninstall_dialog_content">เหลือไฟล์ขยะตกค้างอยู่ %1$s &lt;font color=#FF8132>ไฟล์&lt;/font> ใช้ &lt;b>DU Speed Booster&lt;/b> เพื่อกำจัดให้หมด</string>
+    <string name="scenery_uninstall_dialog_title">พบไฟล์ตกค้าง</string>
+    <string name="screen_lock_charging_boosted_time">เพิ่มความเร็วในการชาร์จ %1$d นาที</string>
+    <string name="select_device_to_share">กรุณาเลือกอุปกรณ์ที่จะส่ง</string>
+    <string name="toolbox_no_apps_refresh_button_text">รีเฟรช</string>
+    <string name="toolbox_nonetwork_tips">คลิกเพื่อเปิดใช้งานเครือข่ายเพื่อดาวน์โหลดแอพพลิเคชั่นฟรีอีกเพียบ</string>
+    <string name="toolbox_v2_btn_more">เพิ่มเติม</string>
+    <string name="toolbox_v2_coin_balance">ยอด:</string>
+    <string name="toolbox_v2_data_empty">โปรดกลับมาในภายหลัง.</string>
+    <string name="toolbox_v2_list_item_btn_free">ฟรี</string>
+    <string name="v2_toolbox_empty_title">ว่าง</string>
+    <string name="toolbox_v2_network_mobile">ข้อมูลมือถือ</string>
+    <string name="toolbox_v2_network_wifi">Wi-Fi</string>
+    <string name="toolbox_v2_nomore_content">ไม่มีเนื้อหาเพิ่มเติมอีก</string>
+    <string name="toolbox_v2_pull_refresh">ดึงเพื่อรีเฟรช</string>
 </resources>

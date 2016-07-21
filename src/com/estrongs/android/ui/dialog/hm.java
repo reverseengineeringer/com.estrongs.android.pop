@@ -1,29 +1,27 @@
 package com.estrongs.android.ui.dialog;
 
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
+import android.content.DialogInterface.OnClickListener;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.view.aw;
+import com.estrongs.fs.impl.q.a;
+import java.util.LinkedList;
+import java.util.List;
 
 class hm
-  implements DialogInterface.OnDismissListener
+  implements DialogInterface.OnClickListener
 {
-  hm(hc paramhc) {}
+  hm(hf paramhf) {}
   
-  public void onDismiss(DialogInterface paramDialogInterface)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (hc.c(a).e())
+    paramDialogInterface.dismiss();
+    paramDialogInterface = FileExplorerActivity.X();
+    if (paramDialogInterface != null)
     {
-      paramDialogInterface = FileExplorerActivity.J();
-      if (paramDialogInterface != null)
-      {
-        paramDialogInterface = paramDialogInterface.y();
-        if (paramDialogInterface != null) {
-          paramDialogInterface.b(true);
-        }
-      }
+      LinkedList localLinkedList = new LinkedList();
+      localLinkedList.add(ca).c);
+      a.a(paramDialogInterface, localLinkedList, new hn(this, paramDialogInterface));
     }
-    hc.c(a).b();
   }
 }
 

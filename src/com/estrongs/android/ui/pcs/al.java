@@ -1,20 +1,32 @@
 package com.estrongs.android.ui.pcs;
 
-import android.content.Context;
-import android.content.Intent;
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.os.Handler;
+import android.os.Message;
+import android.widget.ProgressBar;
 
-final class al
-  implements View.OnClickListener
+class al
+  extends Handler
 {
-  al(Context paramContext) {}
+  al(ak paramak) {}
   
-  public void onClick(View paramView)
+  public void handleMessage(Message paramMessage)
   {
-    paramView = new Intent("android.settings.SETTINGS");
-    paramView.setFlags(270532608);
-    a.startActivity(paramView);
+    switch (what)
+    {
+    }
+    do
+    {
+      return;
+      ak.a(a, arg2, obj);
+      z.a(a.a, z.j(a.a), true);
+      z.k(a.a).setVisibility(4);
+      return;
+      ak.b(a);
+      return;
+      ak.b(a, arg2, obj);
+      z.a(a.a, z.o(a.a), true);
+    } while (ak.c(a) > 0);
+    z.a(a.a, z.p(a.a), true);
   }
 }
 

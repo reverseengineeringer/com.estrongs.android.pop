@@ -1,13 +1,18 @@
 package com.estrongs.android.pop.app;
 
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
+
 class jp
-  implements Runnable
+  implements DialogInterface.OnCancelListener
 {
-  jp(jo paramjo) {}
+  jp(PopVideoPlayer paramPopVideoPlayer) {}
   
-  public void run()
+  public void onCancel(DialogInterface paramDialogInterface)
   {
-    a.b.c.a.finish();
+    if (PopVideoPlayer.b(a)) {
+      a.finish();
+    }
   }
 }
 

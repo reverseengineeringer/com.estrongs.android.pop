@@ -5,8 +5,8 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.widget.EditText;
 import com.estrongs.android.pop.app.DownloaderActivity;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.bk;
 import com.estrongs.fs.util.j;
 
 class p
@@ -16,8 +16,8 @@ class p
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ((bd.b(l.b(b).getText())) && (!j.c(l.b(b).getText().toString()))) {
-      ag.a(a, a.getString(2131427875), 0);
+    if ((bk.b(l.b(b).getText())) && (!j.c(l.b(b).getText().toString()))) {
+      ak.a(a, a.getString(2131231764), 0);
     }
     String str;
     do

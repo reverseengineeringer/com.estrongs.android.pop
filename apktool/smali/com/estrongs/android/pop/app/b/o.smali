@@ -1,48 +1,84 @@
-.class public Lcom/estrongs/android/pop/app/b/o;
+.class Lcom/estrongs/android/pop/app/b/o;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/util/Comparator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Lcom/estrongs/android/pop/app/b/b;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field public a:Ljava/lang/String;
-
-.field public b:Ljava/lang/String;
-
-.field public c:I
-
-.field public d:I
-
-.field public e:Lcom/estrongs/android/pop/app/b/f;
-
-.field private f:I
-
-.field private g:I
-
-.field private h:I
+.field final synthetic a:Lcom/estrongs/android/pop/app/b/k;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Lcom/estrongs/android/pop/app/b/f;II)V
-    .locals 1
+.method constructor <init>(Lcom/estrongs/android/pop/app/b/k;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/b/o;->a:Lcom/estrongs/android/pop/app/b/k;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lcom/estrongs/android/pop/app/b/o;->f:I
-
-    iput v0, p0, Lcom/estrongs/android/pop/app/b/o;->g:I
-
-    iput v0, p0, Lcom/estrongs/android/pop/app/b/o;->h:I
-
-    iput-object p2, p0, Lcom/estrongs/android/pop/app/b/o;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Lcom/estrongs/android/pop/app/b/o;->b:Ljava/lang/String;
-
-    iput p5, p0, Lcom/estrongs/android/pop/app/b/o;->d:I
-
-    iput p4, p0, Lcom/estrongs/android/pop/app/b/o;->c:I
-
-    iput-object p3, p0, Lcom/estrongs/android/pop/app/b/o;->e:Lcom/estrongs/android/pop/app/b/f;
-
     return-void
+.end method
+
+
+# virtual methods
+.method public a(Lcom/estrongs/android/pop/app/b/b;Lcom/estrongs/android/pop/app/b/b;)I
+    .locals 6
+
+    const-wide/16 v4, 0x0
+
+    iget-wide v0, p1, Lcom/estrongs/android/pop/app/b/b;->b:J
+
+    iget-wide v2, p2, Lcom/estrongs/android/pop/app/b/b;->b:J
+
+    sub-long v0, v2, v0
+
+    cmp-long v2, v0, v4
+
+    if-nez v2, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    cmp-long v0, v0, v4
+
+    if-gez v0, :cond_1
+
+    const/4 v0, -0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x1
+
+    goto :goto_0
+.end method
+
+.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 1
+
+    check-cast p1, Lcom/estrongs/android/pop/app/b/b;
+
+    check-cast p2, Lcom/estrongs/android/pop/app/b/b;
+
+    invoke-virtual {p0, p1, p2}, Lcom/estrongs/android/pop/app/b/o;->a(Lcom/estrongs/android/pop/app/b/b;Lcom/estrongs/android/pop/app/b/b;)I
+
+    move-result v0
+
+    return v0
 .end method

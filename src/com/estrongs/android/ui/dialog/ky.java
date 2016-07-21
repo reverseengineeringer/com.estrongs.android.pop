@@ -6,11 +6,11 @@ import android.content.DialogInterface.OnClickListener;
 class ky
   implements DialogInterface.OnClickListener
 {
-  ky(kw paramkw) {}
+  ky(VerifyPasswordDialog paramVerifyPasswordDialog) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    a.dismiss();
+    paramDialogInterface.dismiss();
   }
 }
 

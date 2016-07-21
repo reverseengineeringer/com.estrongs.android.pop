@@ -1,5 +1,6 @@
 package com.estrongs.android.ftp;
 
+import com.estrongs.android.util.ap;
 import com.estrongs.fs.FileSystemException;
 import com.estrongs.fs.a.b;
 import com.estrongs.fs.d;
@@ -18,6 +19,8 @@ import java.net.UnknownHostException;
 import java.nio.charset.Charset;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.locks.Lock;
 
@@ -224,7 +227,7 @@ public class h
       if (paramBoolean)
       {
         b.a().a(paramFile.getAbsolutePath());
-        com.estrongs.fs.impl.local.h.j(paramFile.getAbsolutePath());
+        com.estrongs.fs.impl.local.i.j(paramFile.getAbsolutePath());
       }
       if (paramBoolean)
       {
@@ -364,8 +367,8 @@ public class h
       b("500 Command unrecognized.\r\n");
     }
     String str2;
-    label428:
-    label516:
+    label455:
+    label543:
     do
     {
       return;
@@ -374,8 +377,9 @@ public class h
       {
         if (str2.equals("RNTO"))
         {
-          paramString = new File(c(paramString.substring(5)));
-          if (paramString.exists()) {
+          paramString = c(paramString.substring(5));
+          localObject1 = new File(paramString);
+          if ((((File)localObject1).exists()) || (!g(paramString)) || (!g(o.getAbsolutePath()))) {
             b("550 Target exist.\r\n");
           }
         }
@@ -386,7 +390,7 @@ public class h
           return;
           try
           {
-            bool1 = d.a().b(d.a().j(o.getAbsolutePath()), paramString.getName());
+            bool1 = d.a().b(d.a().j(o.getAbsolutePath()), ((File)localObject1).getName());
             if (bool1) {
               b("250 RNTO command successful.\r\n");
             }
@@ -419,14 +423,14 @@ public class h
           h = "";
           System.out.println("anonymous:" + c.g + ",user:" + c.a + ",pass:" + c.b + ",recv user:" + g + "recv_pass:" + h);
           if (!c.g) {
-            break label428;
+            break label455;
           }
         }
         for (f = true;; f = true) {
           do
           {
             if (!f) {
-              break label516;
+              break label543;
             }
             b("230 User logged in, proceed.\r\n");
             return;
@@ -538,7 +542,7 @@ public class h
       {
         paramString = c(paramString.substring(4));
         localObject1 = new File(paramString);
-        if ((((File)localObject1).exists()) && (((File)localObject1).isDirectory()))
+        if ((((File)localObject1).exists()) && (((File)localObject1).isDirectory()) && (g(paramString)))
         {
           b("250 Directory successfully changed.\r\n");
           j = paramString.substring(c.h.length());
@@ -636,8 +640,9 @@ public class h
       {
         try
         {
-          paramString = new File(c(paramString.substring(5)));
-          if (!paramString.exists())
+          paramString = c(paramString.substring(5));
+          localObject1 = new File(paramString);
+          if ((!((File)localObject1).exists()) || (!g(paramString)))
           {
             b("550 File not exist.\r\n");
             return;
@@ -648,7 +653,7 @@ public class h
           b("450 DELE fail.\r\n");
           return;
         }
-        if (paramString.isDirectory())
+        if (((File)localObject1).isDirectory())
         {
           b("550 Target is dir.\r\n");
           return;
@@ -656,7 +661,7 @@ public class h
       }
       try
       {
-        bool2 = d.a().a(d.a().j(paramString.getAbsolutePath()));
+        bool2 = d.a().a(d.a().j(((File)localObject1).getAbsolutePath()));
         bool1 = bool2;
       }
       catch (SecurityException paramString)
@@ -674,8 +679,9 @@ public class h
       {
         try
         {
-          paramString = new File(c(paramString.substring(4)));
-          if (!paramString.exists())
+          paramString = c(paramString.substring(4));
+          localObject1 = new File(paramString);
+          if ((!((File)localObject1).exists()) || (!g(paramString)))
           {
             b("550 Directory not exist.\r\n");
             return;
@@ -686,7 +692,7 @@ public class h
           b("450 RMD fail.\r\n");
           return;
         }
-        if (!paramString.isDirectory())
+        if (!((File)localObject1).isDirectory())
         {
           b("550 Target is not a dir.\r\n");
           return;
@@ -694,7 +700,7 @@ public class h
       }
       try
       {
-        bool1 = d.a().a(d.a().j(paramString.getAbsolutePath()));
+        bool1 = d.a().a(d.a().j(((File)localObject1).getAbsolutePath()));
         if (bool1)
         {
           b("250 RMD command successful.\r\n");
@@ -706,7 +712,7 @@ public class h
           try
           {
             paramString = c(paramString.substring(4));
-            if (new File(paramString).exists())
+            if ((new File(paramString).exists()) || (!g(paramString)))
             {
               b("550 Target exist.\r\n");
               return;
@@ -778,14 +784,14 @@ public class h
             }
             paramString = paramString.split(",");
             if (paramString.length == 6) {
-              break label2386;
+              break label2457;
             }
             b("501 PORT invalid format.\r\n");
             return;
             if (i1 < paramString.length)
             {
               if ((paramString[i1].matches("[0-9]+")) && (paramString[i1].length() <= 3)) {
-                break label2391;
+                break label2462;
               }
               b("501 PORT invalid format.\r\n");
               return;
@@ -904,14 +910,58 @@ public class h
     }
   }
   
+  private String f(String paramString)
+  {
+    int i1 = paramString.indexOf("/..");
+    if (i1 <= 0) {
+      return paramString;
+    }
+    int i2 = paramString.lastIndexOf("/", i1 - 1);
+    if (i1 < paramString.length() - 3) {}
+    for (paramString = paramString.substring(0, i2 + 1) + paramString.substring(i1 + 3);; paramString = paramString.substring(0, i2 + 1)) {
+      return f(paramString.replace("//", "/"));
+    }
+  }
+  
+  private boolean g(String paramString)
+  {
+    try
+    {
+      paramString = ap.bV(f(paramString));
+      Iterator localIterator = ap.a().iterator();
+      while (localIterator.hasNext())
+      {
+        String str = (String)localIterator.next();
+        if (!ap.i(str, paramString))
+        {
+          boolean bool = ap.e(str, paramString);
+          if (!bool) {
+            break;
+          }
+        }
+        else
+        {
+          return true;
+        }
+      }
+      return false;
+    }
+    catch (Exception paramString) {}
+    return false;
+  }
+  
   public String a(int paramInt, File paramFile)
   {
-    StringBuilder localStringBuilder = new StringBuilder();
-    if (!paramFile.exists()) {}
+    if (!g(paramFile.getAbsolutePath())) {}
+    StringBuilder localStringBuilder;
     String str;
     do
     {
-      return null;
+      do
+      {
+        return null;
+        localStringBuilder = new StringBuilder();
+      } while (!paramFile.exists());
       str = paramFile.getName();
     } while ((str.contains("*")) || (str.contains("/")));
     Object localObject;

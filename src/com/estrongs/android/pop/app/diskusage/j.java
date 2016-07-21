@@ -2,8 +2,8 @@ package com.estrongs.android.pop.app.diskusage;
 
 import android.os.Handler;
 import android.os.Message;
-import android.widget.ListView;
-import com.estrongs.android.ui.a.k;
+import android.support.v7.widget.RecyclerView;
+import com.estrongs.android.ui.adapter.k;
 import com.estrongs.fs.util.i;
 import java.io.File;
 import java.util.Iterator;
@@ -66,7 +66,9 @@ class j
           }
         }
         h.a(a, new k(h.l(a), h.k(a)));
-        h.n(a).setAdapter(h.m(a));
+        h.n(a).a(h.m(a));
+        h.n(a).a(h.o(a));
+        h.p(a).setAdapter(h.n(a));
         h.a(a, false);
         a.d(false);
         return;

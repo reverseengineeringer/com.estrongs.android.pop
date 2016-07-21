@@ -2,80 +2,76 @@ package com.estrongs.android.ui.theme;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Configuration;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.KeyEvent;
-import android.widget.LinearLayout;
-import android.widget.LinearLayout.LayoutParams;
+import android.view.MenuItem;
 import android.widget.ListView;
-import android.widget.TextView;
-import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.ui.dialog.ct;
-import com.estrongs.android.ui.e.jk;
+import com.estrongs.android.ui.base.HomeAsBackActivity;
+import com.estrongs.android.ui.dialog.cv;
+import com.estrongs.android.view.a.a;
 import java.util.List;
 
 public class ThemeFolderActivity
-  extends ESActivity
+  extends HomeAsBackActivity
 {
-  private al a;
-  private af b;
+  private at a;
+  private ai b;
   private boolean c;
   private final int d = 6;
   private int e;
   private Context f;
-  private ai g;
+  private al g;
   
-  private void a()
+  private void d()
   {
-    ((LinearLayout)findViewById(2131362758)).setOnClickListener(new ab(this));
-    ((TextView)findViewById(2131362760)).setText(2131428153);
-    if (getResourcesgetConfigurationorientation == 1) {}
-    for (boolean bool = true;; bool = false)
-    {
-      jk localjk = new jk(this, bool);
-      localjk.a(2131427345, 2130838226, new ac(this));
-      ((LinearLayout)findViewById(2131362761)).addView(localjk.a(), new LinearLayout.LayoutParams(-1, -1));
-      return;
-    }
-  }
-  
-  private void b()
-  {
-    ListView localListView = (ListView)findViewById(2131362767);
-    b = new af(this, this);
+    ListView localListView = (ListView)findViewById(2131625556);
+    b = new ai(this, this);
     localListView.setAdapter(b);
   }
   
-  private void c()
+  private void e()
   {
     int i = b.a();
     if (e == a.e())
     {
-      a.f(i);
-      if (c) {
-        setResult(-1);
+      if (!a.e(i)) {
+        d(2131232430);
       }
+      while (!c) {
+        return;
+      }
+      setResult(-1);
       return;
     }
-    String str = a.e(i);
+    String str = a.d(i);
     g.a(this, str, false);
   }
   
-  private void d()
+  private void f()
   {
     if (c)
     {
-      new ct(this).a(2131428100).b(2131428082).b(2131427339, new ae(this)).c(2131427340, new ad(this)).c();
+      new cv(this).a(2131232414).b(2131232411).b(2131231270, new ah(this)).c(2131231265, new ag(this)).c();
       return;
     }
     finish();
   }
   
+  protected void a(List<a> paramList)
+  {
+    paramList.add(new a(2130838595, 2131230883).a(new af(this)));
+  }
+  
+  protected boolean c()
+  {
+    return false;
+  }
+  
   protected void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    setContentView(2130903260);
+    setTitle(2131232416);
+    setContentView(2130903440);
     int i = getIntent().getIntExtra("theme_data_index", -1);
     if (i == -1)
     {
@@ -83,28 +79,37 @@ public class ThemeFolderActivity
       return;
     }
     e = i;
-    a = al.a(this);
+    a = at.a(this);
     paramBundle = a.g();
     if (paramBundle == null)
     {
       finish();
       return;
     }
-    g = ((ai)paramBundle.get(e));
+    g = ((al)paramBundle.get(e));
     f = g.a(this);
     c = false;
-    a();
-    b();
+    d();
   }
   
   public boolean onKeyDown(int paramInt, KeyEvent paramKeyEvent)
   {
     if (paramInt == 4)
     {
-      d();
+      f();
       return true;
     }
     return super.onKeyDown(paramInt, paramKeyEvent);
+  }
+  
+  public boolean onOptionsItemSelected(MenuItem paramMenuItem)
+  {
+    if (paramMenuItem.getItemId() == 16908332)
+    {
+      f();
+      return true;
+    }
+    return super.onOptionsItemSelected(paramMenuItem);
   }
 }
 

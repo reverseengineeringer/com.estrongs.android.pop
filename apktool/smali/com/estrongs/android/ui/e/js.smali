@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/pop/esclasses/o;
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/e/jp;
+.field final synthetic a:Lcom/estrongs/android/ui/e/jq;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/jp;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/jq;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/js;->a:Lcom/estrongs/android/ui/e/jp;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/js;->a:Lcom/estrongs/android/ui/e/jq;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,109 +22,28 @@
 
 
 # virtual methods
-.method public a()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/js;->a:Lcom/estrongs/android/ui/e/jp;
-
-    iget-boolean v0, v0, Lcom/estrongs/android/ui/e/jp;->c:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/js;->a:Lcom/estrongs/android/ui/e/jp;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/jp;->c(Lcom/estrongs/android/ui/e/jp;)Landroid/view/View;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/js;->a:Lcom/estrongs/android/ui/e/jp;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/jp;->d(Lcom/estrongs/android/ui/e/jp;)Landroid/view/View;
-
-    move-result-object v0
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public b()V
+.method public onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 3
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/js;->a:Lcom/estrongs/android/ui/e/jp;
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/js;->a:Lcom/estrongs/android/ui/e/jq;
 
-    iget-boolean v0, v0, Lcom/estrongs/android/ui/e/jp;->c:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/js;->a:Lcom/estrongs/android/ui/e/jp;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/jp;->c(Lcom/estrongs/android/ui/e/jp;)Landroid/view/View;
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/jq;->a(Lcom/estrongs/android/ui/e/jq;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
-    const/4 v1, 0x4
+    iget-object v1, p0, Lcom/estrongs/android/ui/e/js;->a:Lcom/estrongs/android/ui/e/jq;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-static {v1}, Lcom/estrongs/android/ui/e/jq;->a(Lcom/estrongs/android/ui/e/jq;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/js;->a:Lcom/estrongs/android/ui/e/jp;
+    move-result-object v1
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/jp;->d(Lcom/estrongs/android/ui/e/jp;)Landroid/view/View;
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->P()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a(Ljava/lang/String;Z)V
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/js;->a:Lcom/estrongs/android/ui/e/jp;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/jp;->e(Lcom/estrongs/android/ui/e/jp;)Lcom/estrongs/android/pop/esclasses/ESScrollView;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v2, v1}, Lcom/estrongs/android/pop/esclasses/ESScrollView;->scrollTo(II)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public c()V
-    .locals 2
-
-    const/4 v1, 0x0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/js;->a:Lcom/estrongs/android/ui/e/jp;
-
-    iget-boolean v0, v0, Lcom/estrongs/android/ui/e/jp;->c:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/js;->a:Lcom/estrongs/android/ui/e/jp;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/jp;->c(Lcom/estrongs/android/ui/e/jp;)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/js;->a:Lcom/estrongs/android/ui/e/jp;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/jp;->d(Lcom/estrongs/android/ui/e/jp;)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_0
-    return-void
+    return v2
 .end method

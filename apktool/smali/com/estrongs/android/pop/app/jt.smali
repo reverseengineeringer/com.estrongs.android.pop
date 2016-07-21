@@ -27,17 +27,35 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/jt;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->w(Lcom/estrongs/android/pop/app/PopVideoPlayer;)V
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->z(Lcom/estrongs/android/pop/app/PopVideoPlayer;)V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/jt;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->D(Lcom/estrongs/android/pop/app/PopVideoPlayer;)Lcom/estrongs/android/ui/e/iw;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->A(Lcom/estrongs/android/pop/app/PopVideoPlayer;)Lcom/estrongs/android/ui/e/ju;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/e/iw;->d()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/e/ju;->d()V
 
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/jt;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+
+    iget-boolean v0, v0, Lcom/estrongs/android/pop/app/PopVideoPlayer;->f:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/jt;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->B(Lcom/estrongs/android/pop/app/PopVideoPlayer;)V
+
+    :goto_0
     const/4 v0, 0x1
 
     return v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/jt;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->C(Lcom/estrongs/android/pop/app/PopVideoPlayer;)V
+
+    goto :goto_0
 .end method

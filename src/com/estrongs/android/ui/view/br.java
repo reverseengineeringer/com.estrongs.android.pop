@@ -1,16 +1,34 @@
 package com.estrongs.android.ui.view;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.os.Handler;
+import android.os.Message;
+import com.estrongs.fs.impl.pcs.PcsFileSystem;
 
 class br
-  implements View.OnClickListener
+  extends Thread
 {
-  br(PopMultiWindowGrid paramPopMultiWindowGrid) {}
+  br(PcsThirdPartOAuth paramPcsThirdPartOAuth) {}
   
-  public void onClick(View paramView)
+  public void run()
   {
-    PopMultiWindowGrid.a(a, 1, PopMultiWindowGrid.b(a));
+    Object localObject2 = PcsFileSystem.b("os_type=" + PcsThirdPartOAuth.b(a));
+    Object localObject1 = localObject2;
+    if (PcsThirdPartOAuth.c(a) != null)
+    {
+      localObject1 = localObject2;
+      if (PcsThirdPartOAuth.c(a).equals("normal")) {
+        localObject1 = PcsFileSystem.b();
+      }
+    }
+    if (localObject1 == null)
+    {
+      localObject1 = PcsThirdPartOAuth.d(a).obtainMessage(4);
+      PcsThirdPartOAuth.d(a).sendMessage((Message)localObject1);
+      return;
+    }
+    localObject2 = PcsThirdPartOAuth.d(a).obtainMessage(2);
+    obj = localObject1;
+    PcsThirdPartOAuth.d(a).sendMessage((Message)localObject2);
   }
 }
 

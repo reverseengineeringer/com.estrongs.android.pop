@@ -1,70 +1,145 @@
 package com.estrongs.android.widget;
 
 import android.app.Activity;
-import android.content.res.Configuration;
-import android.content.res.Resources;
-import com.estrongs.android.pop.spfs.CreateSiteFileObject;
-import com.estrongs.android.ui.pcs.r;
-import com.estrongs.android.util.am;
-import com.estrongs.android.view.cb;
-import com.estrongs.android.view.cd;
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+import com.estrongs.android.ui.navigation.TabIndicatorView;
+import com.estrongs.android.ui.theme.at;
+import com.estrongs.android.view.co;
+import com.estrongs.android.view.eb;
 import com.estrongs.fs.h;
-import com.estrongs.fs.util.a.a;
-import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
-class aj
-  extends cd
+public class aj
+  extends ap
 {
-  aj(ai paramai, Activity paramActivity, a parama, cb paramcb)
-  {
-    super(paramActivity, parama, paramcb);
-  }
+  protected List<h> a = new LinkedList();
+  protected boolean b;
+  View c;
+  View d;
+  private eb l;
+  private View m;
+  private RealViewSwitcher n;
+  private View o;
+  private boolean p = true;
+  private TabIndicatorView q;
+  private co r = new al(this);
   
-  public void a(int paramInt)
+  public aj(Activity paramActivity, av paramav, boolean paramBoolean)
   {
-    int i = 1;
-    k = paramInt;
-    if (ad.getResources().getConfiguration().orientation == 1) {}
-    for (paramInt = i; paramInt != 0; paramInt = 0)
-    {
-      g.setNumColumns(3);
-      return;
+    super(paramActivity, paramav);
+    p = paramBoolean;
+    o = findViewById(2131625017);
+    o.setBackgroundDrawable(themeManager.a(2130837845));
+    if (paramBoolean) {
+      d();
     }
-    g.setNumColumns(4);
-  }
-  
-  protected int an()
-  {
-    return 2130903164;
-  }
-  
-  protected int ao()
-  {
-    return 2130903163;
-  }
-  
-  public void b(List paramList)
-  {
-    ArrayList localArrayList = new ArrayList();
-    Iterator localIterator = paramList.iterator();
-    while (localIterator.hasNext())
+    for (;;)
     {
-      h localh = (h)localIterator.next();
-      if ((localh instanceof CreateSiteFileObject)) {
-        localArrayList.add(localh);
-      } else if ((am.aL(localh.getPath())) && (am.aq(localh.getPath()))) {
-        localArrayList.add(localh);
-      } else if ((am.au(localh.getPath())) && (!r.a().b())) {
-        localArrayList.add(localh);
+      e.a(r);
+      paramActivity = e.aA();
+      if (paramActivity != null) {
+        paramActivity.setVisibility(8);
+      }
+      setSingleButton(getString(2131231265), null);
+      return;
+      o.setVisibility(8);
+      n.removeViewAt(1);
+    }
+  }
+  
+  private void d()
+  {
+    if (l == null)
+    {
+      l = new ak(this, f, null, null);
+      ((ViewGroup)m).addView(l.aE());
+      l.i(at.a(mContext).c(2131558661));
+      l.a(11);
+      l.a(r);
+      l.a(k);
+      l.j("SP://");
+      View localView = l.aA();
+      if (localView != null) {
+        localView.setVisibility(8);
       }
     }
-    paramList.removeAll(localArrayList);
-    if (o != null) {
-      f.a(o);
+  }
+  
+  private void e()
+  {
+    c = findViewById(2131625018);
+    c.setOnClickListener(new an(this));
+  }
+  
+  private void f()
+  {
+    d = findViewById(2131625019);
+    d.setOnClickListener(new ao(this));
+  }
+  
+  protected int a()
+  {
+    return 2130903273;
+  }
+  
+  protected void a(Context paramContext)
+  {
+    super.a(paramContext);
+    m = ((ViewGroup)findViewById(2131625022));
+    n = ((RealViewSwitcher)findViewById(2131625021));
+    n.a(false);
+    q = ((TabIndicatorView)findViewById(2131625020));
+    n.setOnScreenSwitchListener(new am(this));
+    e();
+    f();
+    q.a(0, 0.0F);
+  }
+  
+  public void a(boolean paramBoolean)
+  {
+    b = paramBoolean;
+  }
+  
+  protected eb b()
+  {
+    if (n.getCurrentScreen() == 0) {
+      return e;
     }
-    f.a(paramList);
+    return l;
+  }
+  
+  public void b(boolean paramBoolean)
+  {
+    super.b(paramBoolean);
+    if (p)
+    {
+      l.a(11);
+      l.b(false);
+    }
+  }
+  
+  public void dismiss()
+  {
+    super.dismiss();
+    if (l != null) {
+      l.i_();
+    }
+  }
+  
+  public void show()
+  {
+    super.show();
+    if (b)
+    {
+      e.g();
+      if (p) {
+        l.g();
+      }
+      b = false;
+    }
   }
 }
 

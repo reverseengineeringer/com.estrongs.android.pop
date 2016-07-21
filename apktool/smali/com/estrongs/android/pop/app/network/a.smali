@@ -27,11 +27,11 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/network/a;->a:Lcom/estrongs/android/pop/app/network/EsNetworkActivity;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/network/EsNetworkActivity;->a(Lcom/estrongs/android/pop/app/network/EsNetworkActivity;)Lcom/estrongs/android/e/a;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/network/EsNetworkActivity;->a(Lcom/estrongs/android/pop/app/network/EsNetworkActivity;)Lcom/estrongs/android/l/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/e/a;->c()V
+    invoke-virtual {v0}, Lcom/estrongs/android/l/a;->c()V
 
     return-void
 .end method

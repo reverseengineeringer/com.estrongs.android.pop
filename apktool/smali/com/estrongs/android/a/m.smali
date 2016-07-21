@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/a/i;
+.field final synthetic a:Lcom/estrongs/android/a/l;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/a/i;)V
+.method constructor <init>(Lcom/estrongs/android/a/l;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/a/m;->a:Lcom/estrongs/android/a/i;
+    iput-object p1, p0, Lcom/estrongs/android/a/m;->a:Lcom/estrongs/android/a/l;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,18 +22,16 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+.method public run()V
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/a/m;->a:Lcom/estrongs/android/a/i;
+    iget-object v0, p0, Lcom/estrongs/android/a/m;->a:Lcom/estrongs/android/a/l;
 
-    sget v1, Lcom/estrongs/android/a/i;->b:I
+    invoke-virtual {v0}, Lcom/estrongs/android/a/l;->d()V
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/a/i;->a(Lcom/estrongs/android/a/i;I)I
+    iget-object v0, p0, Lcom/estrongs/android/a/m;->a:Lcom/estrongs/android/a/l;
 
-    iget-object v0, p0, Lcom/estrongs/android/a/m;->a:Lcom/estrongs/android/a/i;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/a/i;->dismiss()V
+    invoke-static {v0}, Lcom/estrongs/android/a/l;->a(Lcom/estrongs/android/a/l;)V
 
     return-void
 .end method

@@ -1,21 +1,18 @@
 package com.estrongs.android.widget;
 
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.content.DialogInterface.OnDismissListener;
+import com.estrongs.android.view.fv;
 
 class j
-  implements DialogInterface.OnClickListener
+  implements DialogInterface.OnDismissListener
 {
-  j(g paramg) {}
+  j(f paramf, DialogInterface.OnDismissListener paramOnDismissListener) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void onDismiss(DialogInterface paramDialogInterface)
   {
-    try
-    {
-      paramDialogInterface.dismiss();
-      return;
-    }
-    catch (Exception paramDialogInterface) {}
+    f.b(b).i_();
+    a.onDismiss(paramDialogInterface);
   }
 }
 

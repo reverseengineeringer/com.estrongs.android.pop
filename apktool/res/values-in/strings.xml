@@ -1,13 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_select">Pilih</string>
-    <string name="app_name">ES Penjelajah File</string>
-    <string name="app_media_player">ES Pemutar Media</string>
-    <string name="app_note_editor">ES Editor Catatan</string>
-    <string name="app_image_browser">ES Browser Gambar</string>
-    <string name="app_zip_viewer">ES Pembuka Zip</string>
     <string name="app_downloader">ES Pengunduh</string>
-    <string name="select_device_to_share">Pilih perangkat untuk mengirim</string>
+    <string name="app_image_browser">ES Browser Gambar</string>
+    <string name="app_media_player">ES Pemutar Media</string>
+    <string name="app_name">ES Penjelajah File</string>
+    <string name="app_note_editor">ES Editor Catatan</string>
+    <string name="app_zip_viewer">ES Pembuka Zip</string>
+    <string name="battery_info_remaining_charging_time">"pengisian waktu: "</string>
+    <string name="battery_info_remaining_discharging_time">"Sisa waktu: "</string>
+    <string name="charging_screen_ad_delete">Hapus</string>
+    <string name="charging_screen_ad_enter">Buka</string>
+    <string name="charging_screen_charging_complete">Pengisian Sehat</string>
+    <string name="charging_screen_slide_to_enter">Geser untuk buka kunci</string>
+    <string name="common_time_hour">j</string>
+    <string name="common_time_minute">m</string>
+    <string name="duappd_ad_item_action_btn">GRATIS</string>
+    <string name="duapps_ad_data_empty">Harap kembali lagi nanti.</string>
+    <string name="duapps_ad_empty_refresh_btn_check">Periksa</string>
+    <string name="duapps_ad_empty_title">KOSONG</string>
+    <string name="duapps_ad_footer_end">Tidak ada konten lagi</string>
+    <string name="duapps_ad_loading">Memuat …</string>
+    <string name="duapps_ad_loading_switch_google_play_des">Beralih ke Google Play…</string>
+    <string name="duapps_ad_no_apps_refresh_button_text">Menyegarkan</string>
+    <string name="duapps_ad_no_browser_play">Anda harus terlebih dahulu menginstal Google Play</string>
+    <string name="duapps_ad_nonetwork_message">Tidak ada koneksi jaringan. Periksa setelan dan coba lagi.</string>
+    <string name="duapps_ad_pull_refresh">Tarik untuk segarkan</string>
+    <string name="duscenerysdk_ad_no_browser_play">Anda harus terlebih dahulu menginstal Google Play</string>
     <string name="es_share_name_activity">Kirim dengan LAN</string>
+    <string name="lock_screen_setting">Pengaturan</string>
+    <string name="lock_screen_switch">Pengisian Pintar</string>
+    <string name="lockscreen_charge_boost_time">Total pengisian dipercepat hingga %1$d menit</string>
     <string name="save_to_es">ES Simpan Ke</string>
+    <string name="scenery_card_antivirus_button">SCAN KEAMANAN</string>
+    <string name="scenery_card_antivirus_content">Ponsel Anda memiliki &lt;font color=#3080F0>%1$s&lt;/font> risiko keamanan</string>
+    <string name="scenery_card_antivirus_title">Risiko Keamanan</string>
+    <string name="scenery_card_battery_button">HEMAT DAYA</string>
+    <string name="scenery_card_battery_content">&lt;font color=#3080F0>%1$s&lt;/font> apl pemakan daya ditemukan. Gunakan DU Battery Saver untuk menghemat daya dan memperpanjang siaga &lt;font color=#3080F0>%2$s j %3$s m&lt;/font></string>
+    <string name="scenery_card_battery_title">Konsumsi Daya</string>
+    <string name="scenery_card_booster_button">BOOST SEKARANG</string>
+    <string name="scenery_card_booster_content">&lt;font color=#3080F0>%1$s&lt;/font> aplikasi bandel memperlambat ponsel Anda</string>
+    <string name="scenery_card_booster_title">Berjalan Lambat</string>
+    <string name="scenery_card_cleaner_button">PERBAIKI SEKARANG</string>
+    <string name="scenery_card_cleaner_content">Sampah ditemukan &lt;font color=#3080F0>%1$s&lt;/font> di ponsel Anda</string>
+    <string name="scenery_card_cleaner_title">Pembersihan Cepat</string>
+    <string name="scenery_card_es_button">BERSIHKAN SEKARANG</string>
+    <string name="scenery_card_es_content">Sisa ruang internal berkurang &lt;font color=#3080F0>%1$s&lt;/font></string>
+    <string name="scenery_card_es_title">Pembersihan Disk</string>
+    <string name="scenery_card_photowonder_button">PERCANTIK SEKARANG</string>
+    <string name="scenery_card_photowonder_content">Anda memiliki &lt;font color=#3080F0>%1$s&lt;/font> foto yang bisa dipercantik!</string>
+    <string name="scenery_card_photowonder_title">Percantik</string>
+    <string name="scenery_charge_dialog_button_text">DAPATKAN</string>
+    <string name="scenery_charge_dialog_content">Mengisi berlebihan %1$d mnt &lt;font color=#FF8132>merusak baterai&lt;/font>. Lindungi dengan &lt;b>DU Battery Saver&lt;/b>.</string>
+    <string name="scenery_charge_dialog_title">Kiat Pengisian Sehat</string>
+    <string name="scenery_disk_usage_dialog_button_text">DAPATKAN</string>
+    <string name="scenery_disk_usage_dialog_content">Penyimpanan ponsel Anda berkurang &lt;font color=#FF8132>%1$sMB&lt;/font> dalam &lt;font color=#FF8132>%2$s hari terakhir&lt;/font>.</string>
+    <string name="scenery_disk_usage_dialog_title">Pembersihan Disk</string>
+    <string name="scenery_take_photo_dialog_button_text">DAPATKAN</string>
+    <string name="scenery_take_photo_dialog_content">Foto tidak cukup cantik? &lt;font color=#2274E6>Filter Sinematik&lt;/font> dari &lt;b>PhotoWonder&lt;/b> bisa membantu!</string>
+    <string name="scenery_take_photo_dialog_title">Edit Percantik</string>
+    <string name="scenery_uninstall_dialog_button_text">DAPATKAN</string>
+    <string name="scenery_uninstall_dialog_content">%1$s menyisakan &lt;font color=#FF8132>File sampah&lt;/font>, singkirkan dengan &lt;b>DU Speed Booster&lt;/b>!</string>
+    <string name="scenery_uninstall_dialog_title">Ditemukan Sisa File</string>
+    <string name="screen_lock_charging_boosted_time">Mengisi akselerator selama %1$d menit</string>
+    <string name="select_device_to_share">Pilih perangkat untuk mengirim</string>
+    <string name="toolbox_no_apps_refresh_button_text">Menyegarkan</string>
+    <string name="toolbox_nonetwork_tips">Klik untuk mengaktifkan jaringan untuk aplikasi gratis lebih banyak.</string>
+    <string name="toolbox_v2_btn_more">Lainnya</string>
+    <string name="toolbox_v2_coin_balance">Saldo:</string>
+    <string name="toolbox_v2_data_empty">Harap kembali lagi nanti.</string>
+    <string name="toolbox_v2_list_item_btn_free">GRATIS</string>
+    <string name="v2_toolbox_empty_title">KOSONG</string>
+    <string name="toolbox_v2_network_mobile">Data seluler</string>
+    <string name="toolbox_v2_network_wifi">Wi-Fi</string>
+    <string name="toolbox_v2_nomore_content">Tidak ada konten lagi</string>
+    <string name="toolbox_v2_pull_refresh">Tarik untuk segarkan</string>
 </resources>

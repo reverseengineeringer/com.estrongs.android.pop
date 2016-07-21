@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/preference/Preference$OnPreferenceClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+.field final synthetic a:Lcom/estrongs/android/pop/app/if;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/if;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/ig;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/ig;->a:Lcom/estrongs/android/pop/app/if;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,22 +22,10 @@
 
 
 # virtual methods
-.method public onPreferenceClick(Landroid/preference/Preference;)Z
-    .locals 3
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ig;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/view/utils/n;->a(Landroid/app/Activity;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ig;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
-
-    const v1, 0x7f0b0288
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
-
-    const/4 v0, 0x1
-
-    return v0
+    return-void
 .end method

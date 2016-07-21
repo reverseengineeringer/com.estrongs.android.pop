@@ -1,20 +1,15 @@
 package com.estrongs.android.pop.utils;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
-import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.view.cr;
 
 class bt
-  implements DialogInterface.OnDismissListener
+  implements Runnable
 {
-  bt(bn parambn, ESActivity paramESActivity) {}
+  bt(bs parambs, cr paramcr) {}
   
-  public void onDismiss(DialogInterface paramDialogInterface)
+  public void run()
   {
-    if (bd.b(a)) {
-      a.finish();
-    }
+    a.e();
   }
 }
 

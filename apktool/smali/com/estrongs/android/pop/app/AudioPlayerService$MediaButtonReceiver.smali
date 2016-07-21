@@ -93,7 +93,7 @@
 
     sget-object v0, Lcom/estrongs/android/pop/app/AudioPlayerService;->b:Lcom/estrongs/android/pop/app/AudioPlayerService;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->E()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->F()V
 
     :cond_3
     :goto_1
@@ -113,7 +113,7 @@
 
     sget-object v0, Lcom/estrongs/android/pop/app/AudioPlayerService;->b:Lcom/estrongs/android/pop/app/AudioPlayerService;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->E()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->F()V
 
     :cond_4
     :goto_2
@@ -157,7 +157,7 @@
 
     sget-object v0, Lcom/estrongs/android/pop/app/AudioPlayerService;->b:Lcom/estrongs/android/pop/app/AudioPlayerService;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->E()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->F()V
 
     :cond_7
     :goto_3

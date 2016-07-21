@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.estrongs.android.pop.esclasses.k;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -23,7 +24,7 @@ public final class f
   
   public f(Context paramContext, ArrayList<String> paramArrayList)
   {
-    b = com.estrongs.android.pop.esclasses.g.a(paramArrayList);
+    b = k.a(paramArrayList);
     ArrayList localArrayList;
     c = localArrayList;
     d = paramArrayList.getPackageManager();
@@ -53,12 +54,12 @@ public final class f
   {
     if (paramView == null)
     {
-      paramView = b.inflate(2130903047, null);
+      paramView = b.inflate(2130903109, null);
       paramViewGroup = new h(null);
-      a = ((ImageView)paramView.findViewById(2131361853));
-      b = ((TextView)paramView.findViewById(2131361854));
-      c = ((ImageView)paramView.findViewById(2131361855));
-      c.setImageDrawable(a.getResources().getDrawable(2130838039));
+      a = ((ImageView)paramView.findViewById(2131624054));
+      b = ((TextView)paramView.findViewById(2131624352));
+      c = ((ImageView)paramView.findViewById(2131624353));
+      c.setImageDrawable(a.getResources().getDrawable(2130838410));
       c.setFocusable(true);
       paramView.setTag(paramViewGroup);
     }

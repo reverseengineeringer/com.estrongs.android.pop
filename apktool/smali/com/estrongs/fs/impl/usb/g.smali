@@ -299,7 +299,7 @@
 
     const-string v4, "inteface endpoint count != 2"
 
-    invoke-static {v0, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v4}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
     move v6, v7
@@ -347,7 +347,7 @@
 
     const-string v3, "Not all needed endpoints found!"
 
-    invoke-static {v0, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v3}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -478,7 +478,7 @@
 
     const-string v1, "deviceConnetion is null!"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -498,7 +498,7 @@
 
     const-string v1, "could not claim interface!"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -736,7 +736,7 @@
 
     const-string v2, "could not release interface!"
 
-    invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     iget-object v0, p0, Lcom/estrongs/fs/impl/usb/g;->e:Landroid/hardware/usb/UsbDeviceConnection;

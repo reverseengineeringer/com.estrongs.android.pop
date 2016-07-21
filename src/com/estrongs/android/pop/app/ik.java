@@ -1,27 +1,20 @@
 package com.estrongs.android.pop.app;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.widget.EditText;
+import com.estrongs.android.widget.f;
 
 class ik
-  implements View.OnClickListener
+  implements DialogInterface.OnClickListener
 {
-  ik(PopRemoteImageBrowser paramPopRemoteImageBrowser) {}
+  ik(ii paramii, f paramf) {}
   
-  public void onClick(View paramView)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ((PopRemoteImageBrowser.a(a) == null) || (PopRemoteImageBrowser.a(a).length == 0)) {
-      return;
-    }
-    if (paramView == PopRemoteImageBrowser.b(a)) {
-      PopRemoteImageBrowser.a(a, (PopRemoteImageBrowser.c(a) - 1 + PopRemoteImageBrowser.a(a).length) % PopRemoteImageBrowser.a(a).length);
-    }
-    for (;;)
-    {
-      PopRemoteImageBrowser.d(a);
-      return;
-      PopRemoteImageBrowser.a(a, (PopRemoteImageBrowser.c(a) + 1) % PopRemoteImageBrowser.a(a).length);
-    }
+    a.k();
+    paramDialogInterface = a.f();
+    b.b.setText(paramDialogInterface);
   }
 }
 

@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/view/e;
+.field final synthetic a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/view/e;)V
+.method constructor <init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/view/g;->a:Lcom/estrongs/android/pop/view/e;
+    iput-object p1, p0, Lcom/estrongs/android/pop/view/g;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,131 +23,23 @@
 
 # virtual methods
 .method public run()V
-    .locals 5
+    .locals 2
 
-    const/4 v4, 0x1
+    new-instance v0, Ljava/lang/Thread;
 
-    const-string v0, "smb://"
+    new-instance v1, Lcom/estrongs/android/pop/view/h;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/view/g;->a:Lcom/estrongs/android/pop/view/e;
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/view/h;-><init>(Lcom/estrongs/android/pop/view/g;)V
 
-    iget-object v1, v1, Lcom/estrongs/android/pop/view/e;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->z()Ljava/lang/String;
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/g;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    move-result-object v1
+    invoke-static {v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->H(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/g;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    move-result v0
+    invoke-static {v1, v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a(Lcom/estrongs/android/pop/view/FileExplorerActivity;Ljava/lang/Thread;)V
 
-    if-nez v0, :cond_0
-
-    const-string v0, "ftp://"
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/view/g;->a:Lcom/estrongs/android/pop/view/e;
-
-    iget-object v1, v1, Lcom/estrongs/android/pop/view/e;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->z()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, "adb://"
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/view/g;->a:Lcom/estrongs/android/pop/view/e;
-
-    iget-object v1, v1, Lcom/estrongs/android/pop/view/e;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->z()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/g;->a:Lcom/estrongs/android/pop/view/e;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/view/e;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->r()V
-
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/g;->a:Lcom/estrongs/android/pop/view/e;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/view/e;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->x:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_2
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/android/view/aw;
-
-    const-string v2, "smb://"
-
-    invoke-virtual {v0}, Lcom/estrongs/android/view/aw;->c()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_3
-
-    const-string v2, "ftp://"
-
-    invoke-virtual {v0}, Lcom/estrongs/android/view/aw;->c()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_3
-
-    const-string v2, "adb://"
-
-    invoke-virtual {v0}, Lcom/estrongs/android/view/aw;->c()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    :cond_3
-    invoke-virtual {v0, v4, v4}, Lcom/estrongs/android/view/aw;->a(ZZ)V
-
-    goto :goto_0
-
-    :cond_4
     return-void
 .end method

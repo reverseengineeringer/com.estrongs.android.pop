@@ -1,18 +1,8 @@
 package com.estrongs.android.a;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-
-class k
-  implements DialogInterface.OnClickListener
+public abstract interface k
 {
-  k(i parami) {}
-  
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
-  {
-    i.a(a, i.d);
-    a.dismiss();
-  }
+  public abstract void a();
 }
 
 /* Location:

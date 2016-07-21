@@ -10,8 +10,14 @@ import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import com.estrongs.android.appinfo.AppFolderInfoManager;
-import com.estrongs.android.pop.utils.cc;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.pop.app.ad.DuSpeedBoosterController;
+import com.estrongs.android.pop.app.analysis.p;
+import com.estrongs.android.pop.app.unlock.s;
+import com.estrongs.android.pop.utils.cl;
+import com.estrongs.android.pop.view.utils.n;
 import com.estrongs.android.pop.z;
+import com.estrongs.android.util.l;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -47,6 +53,11 @@ public class InstallMonitorReceiver
     return a;
   }
   
+  private void a(Context paramContext, String paramString)
+  {
+    p.a().a(paramContext, paramString);
+  }
+  
   private boolean b(Context paramContext)
   {
     try
@@ -63,7 +74,7 @@ public class InstallMonitorReceiver
         }
         for (;;)
         {
-          if (cc.a())
+          if (cl.a())
           {
             if ((str.contains("video")) || (str.contains("camera")) || (str.contains("gallery")) || (str.contains("youtube")) || (str.contains("com.lenovo.scg")) || (str.contains("qqlive")) || (str.contains("youku")) || (str.contains("letv")) || (str.contains("com.storm.")) || (str.contains("com.tudou."))) {
               break label235;
@@ -94,14 +105,18 @@ public class InstallMonitorReceiver
   {
     try
     {
-      if (b(paramContext)) {
-        return;
-      }
       String str1 = paramIntent.getAction();
       if ("android.intent.action.PACKAGE_ADDED".equals(str1))
       {
         String str2 = paramIntent.getDataString().split(":")[1];
-        if (!z.an)
+        if (!paramIntent.getBooleanExtra("android.intent.extra.REPLACING", false)) {
+          a(paramContext, str2);
+        }
+        s.a().a(str2);
+        if (b(paramContext)) {
+          return;
+        }
+        if ((!z.an) && (com.estrongs.android.i.a.a("install_stat", 1) == 1))
         {
           Intent localIntent = new Intent(paramContext, InstallMonitorActivity.class);
           localIntent.addFlags(276824064);
@@ -111,11 +126,18 @@ public class InstallMonitorReceiver
         if (!z.ap) {
           AppFolderInfoManager.d().g(str2);
         }
+        n.b().b(str2);
+        DuSpeedBoosterController.a(str2);
       }
-      if (("android.intent.action.PACKAGE_REMOVED".equals(str1)) && (!paramIntent.getBooleanExtra("android.intent.extra.REPLACING", false)))
+      if ((!b(paramContext)) && ("android.intent.action.PACKAGE_REMOVED".equals(str1)) && (!paramIntent.getBooleanExtra("android.intent.extra.REPLACING", false)))
       {
-        UninstallMonitorActivity.a(paramContext, paramIntent.getDataString().split(":")[1]);
-        return;
+        boolean bool = com.estrongs.android.c.b.a.b(FexApplication.a());
+        l.e("InstallMonitorReceiver", "isDisplayDialog = " + bool);
+        if (bool)
+        {
+          UninstallMonitorActivity.a(paramContext, paramIntent.getDataString().split(":")[1]);
+          return;
+        }
       }
     }
     catch (Exception paramContext)

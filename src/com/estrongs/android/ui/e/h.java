@@ -1,18 +1,20 @@
 package com.estrongs.android.ui.e;
 
-import android.content.Context;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 
 class h
-  extends jc
+  implements MenuItem.OnMenuItemClickListener
 {
-  h(c paramc, Context paramContext, boolean paramBoolean)
-  {
-    super(paramContext, paramBoolean);
-  }
+  h(f paramf) {}
   
-  public void a()
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    c.a(a, false);
+    if (f.a(a).c()) {
+      f.a(a).d();
+    }
+    f.a(a, false);
+    return true;
   }
 }
 

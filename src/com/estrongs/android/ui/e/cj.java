@@ -1,21 +1,21 @@
 package com.estrongs.android.ui.e;
 
-import android.content.Context;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.ViewGroup.LayoutParams;
+import android.app.Activity;
+import android.widget.LinearLayout;
+import com.estrongs.android.pop.view.FileExplorerActivity;
 
-public class cj
-  extends a
+class cj
+  extends cq
 {
-  public cj(Context paramContext, boolean paramBoolean)
+  cj(ch paramch, Activity paramActivity, boolean paramBoolean1, LinearLayout paramLinearLayout, boolean paramBoolean2)
   {
-    super(paramContext, paramBoolean);
+    super(paramActivity, paramBoolean1, paramLinearLayout, paramBoolean2);
   }
   
-  public void a(View paramView)
+  public boolean e()
   {
-    c.addView(paramView, new ViewGroup.LayoutParams(-1, -1));
+    k.l.B();
+    return true;
   }
 }
 

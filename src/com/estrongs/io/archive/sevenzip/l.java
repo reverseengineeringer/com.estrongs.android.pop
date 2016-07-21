@@ -3,10 +3,10 @@ package com.estrongs.io.archive.sevenzip;
 import android.app.Activity;
 import com.estrongs.a.a;
 import com.estrongs.a.p;
-import com.estrongs.android.ui.dialog.ix;
+import com.estrongs.android.ui.dialog.jh;
 
 class l
-  extends ix
+  extends jh
 {
   l(k paramk, Activity paramActivity, String paramString, a parama)
   {
@@ -21,7 +21,7 @@ class l
   protected String a(p paramp)
   {
     if ((paramp != null) && (b != null)) {
-      return a.b.b.b.getString(2131427728, new Object[] { a.b.b.c });
+      return a.b.b.b.getString(2131231390, new Object[] { a.b.b.c });
     }
     return null;
   }

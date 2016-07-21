@@ -1,10 +1,23 @@
 package com.estrongs.android.pop.app.compress;
 
-public abstract interface av
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.io.a.a.b;
+import com.estrongs.io.archive.sevenzip.x;
+
+class av
+  implements DialogInterface.OnClickListener
 {
-  public abstract void a();
+  av(aj paramaj) {}
   
-  public abstract void b();
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  {
+    aj.a(a).e();
+    if ((a.b instanceof x)) {
+      ((x)a.b).b();
+    }
+    a.a();
+  }
 }
 
 /* Location:

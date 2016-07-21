@@ -1,22 +1,42 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.DialogInterface;
+import android.app.Activity;
+import android.content.Context;
 import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.widget.g;
-import com.estrongs.fs.h;
+import android.view.View;
+import android.widget.ExpandableListView;
+import android.widget.ExpandableListView.OnGroupClickListener;
+import com.estrongs.android.pop.ad;
+import com.estrongs.android.pop.b;
+import com.estrongs.android.pop.z;
+import com.estrongs.android.widget.f;
 
 class dc
-  implements DialogInterface.OnClickListener
+  implements ExpandableListView.OnGroupClickListener
 {
-  dc(da paramda, g paramg) {}
+  dc(da paramda) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public boolean onGroupClick(ExpandableListView paramExpandableListView, View paramView, int paramInt, long paramLong)
   {
-    String str = a.e().getAbsolutePath();
-    if (b.a.a(str))
+    if (paramInt == 0)
     {
-      paramDialogInterface.dismiss();
-      b.a.b();
+      paramExpandableListView = new dd(this, ad.a(da.a(a)).q());
+      if (!z.n) {
+        break label140;
+      }
+    }
+    label140:
+    for (paramInt = -2;; paramInt = -1)
+    {
+      paramExpandableListView = new f((Activity)da.a(a), b.b(), paramExpandableListView, paramInt);
+      paramExpandableListView.a(false);
+      paramExpandableListView.b(true);
+      paramExpandableListView.c(da.a(a).getString(2131231265), (DialogInterface.OnClickListener)null);
+      paramExpandableListView.a(paramInt);
+      paramExpandableListView.a(da.a(a).getString(2131231336));
+      paramExpandableListView.b(da.a(a).getString(2131231270), new de(this, paramExpandableListView));
+      paramExpandableListView.j();
+      return false;
     }
   }
 }

@@ -2,7 +2,6 @@ package com.estrongs.android.pop.app.imageviewer;
 
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.app.imageviewer.gallery.f;
 
 class be
   implements MenuItem.OnMenuItemClickListener
@@ -14,12 +13,10 @@ class be
     a.b.removeCallbacks(ViewImage21.h(a));
     ViewImage21.e(a);
     a.a();
-    paramMenuItem = a.e.a(a.c);
-    if (paramMenuItem != null)
-    {
-      ae.a(a, a.l, paramMenuItem);
-      ViewImage21.b(a, a.m);
+    if (a.g != null) {
+      a.g.a(90);
     }
+    ViewImage21.b(a, a.m);
     return true;
   }
 }

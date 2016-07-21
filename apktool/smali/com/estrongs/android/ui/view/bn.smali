@@ -1,317 +1,290 @@
-.class public Lcom/estrongs/android/ui/view/bn;
+.class Lcom/estrongs/android/ui/view/bn;
 .super Ljava/lang/Object;
 
 
 # instance fields
-.field private a:Landroid/view/WindowManager;
+.field final synthetic a:Lcom/estrongs/android/ui/view/IndicatorView;
 
-.field private b:Landroid/view/WindowManager$LayoutParams;
+.field private b:Landroid/graphics/drawable/Drawable;
 
-.field private c:Landroid/view/View;
+.field private c:Ljava/lang/String;
 
-.field private d:Landroid/widget/LinearLayout;
+.field private d:I
 
-.field private e:Landroid/view/View;
+.field private e:I
 
-.field private f:Landroid/view/View;
+.field private f:I
 
-.field private g:Z
+.field private g:I
+
+.field private h:I
+
+.field private i:Landroid/graphics/drawable/NinePatchDrawable;
+
+.field private j:F
+
+.field private k:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;ZZZ)V
-    .locals 6
-
-    const/4 v5, 0x4
-
-    const/4 v4, -0x1
-
-    const/4 v3, 0x0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    move-object v0, p1
-
-    check-cast v0, Landroid/app/Activity;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->getWindowManager()Landroid/view/WindowManager;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/bn;->a:Landroid/view/WindowManager;
-
-    new-instance v0, Lcom/estrongs/android/ui/view/bo;
-
-    invoke-direct {v0, p0, p1}, Lcom/estrongs/android/ui/view/bo;-><init>(Lcom/estrongs/android/ui/view/bn;Landroid/content/Context;)V
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/bn;->d:Landroid/widget/LinearLayout;
-
-    invoke-static {p1}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v1
-
-    if-nez p2, :cond_0
-
-    if-eqz p3, :cond_6
-
-    :cond_0
-    const v0, 0x7f030070
-
-    :goto_0
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/bn;->c:Landroid/view/View;
-
-    if-eqz p3, :cond_2
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->c:Landroid/view/View;
-
-    const v1, 0x7f0a0234
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->c:Landroid/view/View;
-
-    const v1, 0x7f0a0236
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_2
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->c:Landroid/view/View;
-
-    new-instance v1, Lcom/estrongs/android/ui/view/bp;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/view/bp;-><init>(Lcom/estrongs/android/ui/view/bn;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->c:Landroid/view/View;
-
-    const/16 v1, 0x80
-
-    invoke-static {v1, v3, v3, v3}, Landroid/graphics/Color;->argb(IIII)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
-
-    new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
-
-    invoke-direct {v0, v4, v4}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/bn;->d:Landroid/widget/LinearLayout;
-
-    iget-object v2, p0, Lcom/estrongs/android/ui/view/bn;->c:Landroid/view/View;
-
-    invoke-virtual {v1, v2, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    new-instance v0, Landroid/view/WindowManager$LayoutParams;
-
-    invoke-direct {v0}, Landroid/view/WindowManager$LayoutParams;-><init>()V
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/bn;->b:Landroid/view/WindowManager$LayoutParams;
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->b:Landroid/view/WindowManager$LayoutParams;
-
-    iput v4, v0, Landroid/view/WindowManager$LayoutParams;->width:I
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->b:Landroid/view/WindowManager$LayoutParams;
-
-    iput v4, v0, Landroid/view/WindowManager$LayoutParams;->height:I
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->b:Landroid/view/WindowManager$LayoutParams;
-
-    const/4 v1, -0x2
-
-    iput v1, v0, Landroid/view/WindowManager$LayoutParams;->format:I
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->c:Landroid/view/View;
-
-    const v1, 0x7f0a0239
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/bn;->e:Landroid/view/View;
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->e:Landroid/view/View;
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->e:Landroid/view/View;
-
-    invoke-virtual {v0, v5}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_3
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->c:Landroid/view/View;
-
-    const v1, 0x7f0a023b
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/bn;->f:Landroid/view/View;
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->f:Landroid/view/View;
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->f:Landroid/view/View;
-
-    invoke-virtual {v0, v5}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_4
-    if-nez p4, :cond_5
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->c:Landroid/view/View;
-
-    const v1, 0x7f0a0235
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v5}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->e:Landroid/view/View;
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_5
-    return-void
-
-    :cond_6
-    const v0, 0x7f030071
-
-    goto/16 :goto_0
-.end method
-
-
-# virtual methods
-.method public a()Z
+.method static synthetic a(Lcom/estrongs/android/ui/view/bn;)Landroid/graphics/drawable/NinePatchDrawable;
     .locals 1
 
-    iget-boolean v0, p0, Lcom/estrongs/android/ui/view/bn;->g:Z
+    invoke-direct {p0}, Lcom/estrongs/android/ui/view/bn;->g()Landroid/graphics/drawable/NinePatchDrawable;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic a(Lcom/estrongs/android/ui/view/bn;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/estrongs/android/ui/view/bn;->k:Z
+
+    return p1
+.end method
+
+.method static synthetic b(Lcom/estrongs/android/ui/view/bn;)I
+    .locals 1
+
+    iget v0, p0, Lcom/estrongs/android/ui/view/bn;->f:I
 
     return v0
 .end method
 
-.method public b()V
+.method static synthetic c(Lcom/estrongs/android/ui/view/bn;)I
+    .locals 1
+
+    iget v0, p0, Lcom/estrongs/android/ui/view/bn;->d:I
+
+    return v0
+.end method
+
+.method static synthetic d(Lcom/estrongs/android/ui/view/bn;)Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->c:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method private g()Landroid/graphics/drawable/NinePatchDrawable;
     .locals 2
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->i:Landroid/graphics/drawable/NinePatchDrawable;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->a:Lcom/estrongs/android/ui/view/IndicatorView;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/IndicatorView;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f0200b8
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/drawable/NinePatchDrawable;
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/bn;->i:Landroid/graphics/drawable/NinePatchDrawable;
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->i:Landroid/graphics/drawable/NinePatchDrawable;
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/NinePatchDrawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->i:Landroid/graphics/drawable/NinePatchDrawable;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public a()I
+    .locals 4
+
+    const/high16 v3, 0x3f000000    # 0.5f
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->a:Lcom/estrongs/android/ui/view/IndicatorView;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/view/IndicatorView;->a(Lcom/estrongs/android/ui/view/IndicatorView;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lcom/estrongs/android/ui/view/bn;->h:I
+
+    int-to-float v0, v0
+
+    iget v1, p0, Lcom/estrongs/android/ui/view/bn;->f:I
+
+    int-to-float v1, v1
+
+    iget v2, p0, Lcom/estrongs/android/ui/view/bn;->j:F
+
+    mul-float/2addr v1, v2
+
+    add-float/2addr v0, v1
+
+    add-float/2addr v0, v3
+
+    float-to-int v0, v0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    iget v0, p0, Lcom/estrongs/android/ui/view/bn;->h:I
+
+    int-to-float v0, v0
+
+    iget v1, p0, Lcom/estrongs/android/ui/view/bn;->f:I
+
+    iget v2, p0, Lcom/estrongs/android/ui/view/bn;->e:I
+
+    add-int/2addr v1, v2
+
+    int-to-float v1, v1
+
+    iget v2, p0, Lcom/estrongs/android/ui/view/bn;->j:F
+
+    mul-float/2addr v1, v2
+
+    add-float/2addr v0, v1
+
+    add-float/2addr v0, v3
+
+    float-to-int v0, v0
+
+    goto :goto_0
+.end method
+
+.method public a(F)V
+    .locals 0
+
+    iput p1, p0, Lcom/estrongs/android/ui/view/bn;->j:F
+
+    return-void
+.end method
+
+.method public b()I
+    .locals 1
+
+    iget v0, p0, Lcom/estrongs/android/ui/view/bn;->g:I
+
+    return v0
+.end method
+
+.method public c()I
+    .locals 1
+
+    iget v0, p0, Lcom/estrongs/android/ui/view/bn;->f:I
+
+    return v0
+.end method
+
+.method public d()Landroid/graphics/drawable/Drawable;
+    .locals 2
+
+    iget v0, p0, Lcom/estrongs/android/ui/view/bn;->j:F
 
     const/4 v1, 0x0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->e:Landroid/view/View;
+    cmpl-float v0, v0, v1
 
-    if-eqz v0, :cond_0
+    if-lez v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->e:Landroid/view/View;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->b:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+    invoke-static {}, Lcom/estrongs/android/ui/view/IndicatorView;->a()[I
 
-    move-result v0
+    move-result-object v1
 
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->e:Landroid/view/View;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
     :goto_0
-    return-void
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->b:Landroid/graphics/drawable/Drawable;
+
+    return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->f:Landroid/view/View;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->b:Landroid/graphics/drawable/Drawable;
 
-    if-eqz v0, :cond_1
+    invoke-static {}, Lcom/estrongs/android/ui/view/IndicatorView;->b()[I
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->f:Landroid/view/View;
+    move-result-object v1
 
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->f:Landroid/view/View;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p0}, Lcom/estrongs/android/ui/view/bn;->d()V
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
     goto :goto_0
 .end method
 
-.method public c()V
-    .locals 3
+.method public e()Z
+    .locals 2
 
-    :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->a:Landroid/view/WindowManager;
+    iget v0, p0, Lcom/estrongs/android/ui/view/bn;->j:F
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/bn;->d:Landroid/widget/LinearLayout;
+    const/4 v1, 0x0
 
-    iget-object v2, p0, Lcom/estrongs/android/ui/view/bn;->b:Landroid/view/WindowManager$LayoutParams;
+    cmpl-float v0, v0, v1
 
-    invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    if-gtz v0, :cond_0
+
+    iget-boolean v0, p0, Lcom/estrongs/android/ui/view/bn;->k:Z
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->a:Lcom/estrongs/android/ui/view/IndicatorView;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/view/IndicatorView;->a(Lcom/estrongs/android/ui/view/IndicatorView;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/estrongs/android/ui/view/bn;->g:Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
     :goto_0
-    return-void
+    return v0
 
-    :catch_0
-    move-exception v0
+    :cond_1
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method public d()V
+.method public f()Z
     .locals 2
 
-    :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->a:Landroid/view/WindowManager;
+    iget v0, p0, Lcom/estrongs/android/ui/view/bn;->j:F
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/bn;->d:Landroid/widget/LinearLayout;
+    const/4 v1, 0x0
 
-    invoke-interface {v0, v1}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
+    cmpl-float v0, v0, v1
 
-    const/4 v0, 0x0
+    if-lez v0, :cond_0
 
-    iput-boolean v0, p0, Lcom/estrongs/android/ui/view/bn;->g:Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bn;->a:Lcom/estrongs/android/ui/view/IndicatorView;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/view/IndicatorView;->a(Lcom/estrongs/android/ui/view/IndicatorView;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
 
     :goto_0
-    return-void
+    return v0
 
-    :catch_0
-    move-exception v0
+    :cond_0
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method

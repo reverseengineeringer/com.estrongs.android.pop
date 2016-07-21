@@ -1,24 +1,35 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.pop.spfs.SPFileObject;
-import com.estrongs.android.pop.spfs.dialog.FlickrPhotoPrivacyDialog.PrivacyOptionCallback;
-import com.estrongs.android.pop.spfs.task.FlickrEditTask;
-import com.estrongs.android.util.TypedMap;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.ap;
 import com.estrongs.fs.h;
+import com.estrongs.fs.impl.local.i;
+import java.util.List;
 
 class gl
-  implements FlickrPhotoPrivacyDialog.PrivacyOptionCallback
+  implements MenuItem.OnMenuItemClickListener
 {
-  gl(gj paramgj, h paramh) {}
+  gl(cr paramcr) {}
   
-  public void setPrivacty(TypedMap paramTypedMap, boolean paramBoolean)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if (paramBoolean) {
-      return;
+    paramMenuItem = cr.a(a);
+    if (paramMenuItem.size() == 0) {
+      ak.a(cr.b(a).getBaseContext(), 2131231551, 0);
     }
-    paramTypedMap = new FlickrEditTask((SPFileObject)a, paramTypedMap);
-    paramTypedMap.addTaskStatusChangeListener(new gm(this));
-    paramTypedMap.execute(true);
+    while (paramMenuItem.size() != 1) {
+      return true;
+    }
+    String str = ((h)paramMenuItem.get(0)).getAbsolutePath();
+    paramMenuItem = str;
+    if (!i.h(str)) {
+      paramMenuItem = ap.bB(str);
+    }
+    cr.b(a).d(paramMenuItem);
+    return true;
   }
 }
 

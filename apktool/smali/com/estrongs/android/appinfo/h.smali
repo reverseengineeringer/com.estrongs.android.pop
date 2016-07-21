@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/util/ab;
+.implements Lcom/estrongs/android/util/af;
 
 
 # instance fields
@@ -10,13 +10,13 @@
 
 .field final synthetic b:Ljava/lang/String;
 
-.field final synthetic c:Lcom/estrongs/android/appinfo/t;
+.field final synthetic c:Lcom/estrongs/android/appinfo/u;
 
 .field final synthetic d:Lcom/estrongs/android/appinfo/AppFolderInfoManager;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/appinfo/AppFolderInfoManager;Ljava/lang/String;Ljava/lang/String;Lcom/estrongs/android/appinfo/t;)V
+.method constructor <init>(Lcom/estrongs/android/appinfo/AppFolderInfoManager;Ljava/lang/String;Ljava/lang/String;Lcom/estrongs/android/appinfo/u;)V
     .locals 0
 
     iput-object p1, p0, Lcom/estrongs/android/appinfo/h;->d:Lcom/estrongs/android/appinfo/AppFolderInfoManager;
@@ -25,7 +25,7 @@
 
     iput-object p3, p0, Lcom/estrongs/android/appinfo/h;->b:Ljava/lang/String;
 
-    iput-object p4, p0, Lcom/estrongs/android/appinfo/h;->c:Lcom/estrongs/android/appinfo/t;
+    iput-object p4, p0, Lcom/estrongs/android/appinfo/h;->c:Lcom/estrongs/android/appinfo/u;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,31 +34,7 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public a(Ljava/lang/Object;JJ)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public a(Ljava/lang/Object;Ljava/lang/Throwable;)V
-    .locals 2
-
-    const-string v0, "AppFolder"
-
-    const-string v1, "request app_folder_map update info failed !"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-.end method
-
-.method public b(Ljava/lang/Object;)V
+.method public downloadCompleted(Ljava/lang/Object;)V
     .locals 6
 
     new-instance v0, Ljava/io/File;
@@ -106,23 +82,23 @@
     :try_start_0
     iget-object v1, p0, Lcom/estrongs/android/appinfo/h;->d:Lcom/estrongs/android/appinfo/AppFolderInfoManager;
 
-    iget v2, v1, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->q:I
+    iget v2, v1, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->r:I
 
-    iget-object v3, p0, Lcom/estrongs/android/appinfo/h;->c:Lcom/estrongs/android/appinfo/t;
+    iget-object v3, p0, Lcom/estrongs/android/appinfo/h;->c:Lcom/estrongs/android/appinfo/u;
 
-    invoke-interface {v3, v0}, Lcom/estrongs/android/appinfo/t;->a(Ljava/lang/String;)I
+    invoke-interface {v3, v0}, Lcom/estrongs/android/appinfo/u;->a(Ljava/lang/String;)I
 
     move-result v0
 
     add-int/2addr v0, v2
 
-    iput v0, v1, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->q:I
+    iput v0, v1, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->r:I
 
     iget-object v0, p0, Lcom/estrongs/android/appinfo/h;->d:Lcom/estrongs/android/appinfo/AppFolderInfoManager;
 
-    iget-object v1, p0, Lcom/estrongs/android/appinfo/h;->c:Lcom/estrongs/android/appinfo/t;
+    iget-object v1, p0, Lcom/estrongs/android/appinfo/h;->c:Lcom/estrongs/android/appinfo/u;
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a(Lcom/estrongs/android/appinfo/AppFolderInfoManager;Lcom/estrongs/android/appinfo/t;)V
+    invoke-static {v0, v1}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a(Lcom/estrongs/android/appinfo/AppFolderInfoManager;Lcom/estrongs/android/appinfo/u;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -132,25 +108,49 @@
     :catch_0
     move-exception v0
 
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/h;->c:Lcom/estrongs/android/appinfo/t;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/h;->c:Lcom/estrongs/android/appinfo/u;
 
-    invoke-interface {v0}, Lcom/estrongs/android/appinfo/t;->c()V
+    invoke-interface {v0}, Lcom/estrongs/android/appinfo/u;->c()V
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/h;->c:Lcom/estrongs/android/appinfo/t;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/h;->c:Lcom/estrongs/android/appinfo/u;
 
-    invoke-interface {v0}, Lcom/estrongs/android/appinfo/t;->c()V
+    invoke-interface {v0}, Lcom/estrongs/android/appinfo/u;->c()V
 
     goto :goto_0
 
     :cond_1
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/h;->c:Lcom/estrongs/android/appinfo/t;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/h;->c:Lcom/estrongs/android/appinfo/u;
 
-    invoke-interface {v0}, Lcom/estrongs/android/appinfo/t;->c()V
+    invoke-interface {v0}, Lcom/estrongs/android/appinfo/u;->c()V
 
     goto :goto_0
+.end method
+
+.method public downloadError(Ljava/lang/Object;Ljava/lang/Throwable;)V
+    .locals 2
+
+    const-string v0, "AppFolder"
+
+    const-string v1, "request app_folder_map update info failed !"
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public downloadProgress(Ljava/lang/Object;JJ)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public downloadStarted(Ljava/lang/Object;)V
+    .locals 0
+
+    return-void
 .end method

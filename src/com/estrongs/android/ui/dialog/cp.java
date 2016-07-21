@@ -1,16 +1,17 @@
 package com.estrongs.android.ui.dialog;
 
+import android.content.DialogInterface.OnClickListener;
 import android.view.View;
 import android.view.View.OnClickListener;
 
 class cp
   implements View.OnClickListener
 {
-  cp(cg paramcg) {}
+  cp(ci paramci) {}
   
   public void onClick(View paramView)
   {
-    a.dismiss();
+    ci.access$000(a).onClick(a, -1);
   }
 }
 

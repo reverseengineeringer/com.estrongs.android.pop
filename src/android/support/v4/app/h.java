@@ -1,15 +1,20 @@
 package android.support.v4.app;
 
-import android.view.View;
+import android.app.Activity;
 
 class h
-  implements k
 {
-  h(FragmentActivity paramFragmentActivity) {}
-  
-  public View a(int paramInt)
+  public static void a(Activity paramActivity, String[] paramArrayOfString, int paramInt)
   {
-    return a.findViewById(paramInt);
+    if ((paramActivity instanceof i)) {
+      ((i)paramActivity).validateRequestPermissionsRequestCode(paramInt);
+    }
+    paramActivity.requestPermissions(paramArrayOfString, paramInt);
+  }
+  
+  public static boolean a(Activity paramActivity, String paramString)
+  {
+    return paramActivity.shouldShowRequestPermissionRationale(paramString);
   }
 }
 

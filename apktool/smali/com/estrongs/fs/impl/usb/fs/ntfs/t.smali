@@ -97,7 +97,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v4}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
     iget-object v3, p0, Lcom/estrongs/fs/impl/usb/fs/ntfs/t;->a:Lcom/estrongs/fs/impl/usb/fs/ntfs/n;
@@ -146,7 +146,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 

@@ -1,126 +1,33 @@
 package com.estrongs.android.ui.e;
 
-import android.app.Activity;
-import android.content.Context;
-import android.graphics.Rect;
-import android.os.Handler;
-import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.view.WindowManager.LayoutParams;
-import android.widget.LinearLayout;
-import android.widget.LinearLayout.LayoutParams;
-import com.estrongs.android.view.a.a;
+import android.content.DialogInterface.OnClickListener;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.app.PopAudioPlayer;
+import com.estrongs.android.pop.app.c.i;
+import com.estrongs.android.ui.dialog.cv;
 import java.util.List;
 
-public abstract class jc
+class jc
+  implements MenuItem.OnMenuItemClickListener
 {
-  private Context a;
-  protected WindowManager.LayoutParams b;
-  private LinearLayout c;
-  private WindowManager d;
-  private boolean e;
-  private boolean f;
-  private jj g;
-  private int h = 5;
-  private Handler i;
-  private Runnable j = new jd(this);
+  jc(iq paramiq) {}
   
-  public jc(Context paramContext, boolean paramBoolean)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    a = paramContext;
-    e = paramBoolean;
-    f = false;
-    d = ((WindowManager)a.getSystemService("window"));
-    i = new Handler();
-    b();
-  }
-  
-  private void e()
-  {
-    try
+    paramMenuItem = iq.a(a).A();
+    if (paramMenuItem.size() > 0)
     {
-      d.addView(c, b);
-      c.setVisibility(0);
-      if ((g instanceof jp)) {
-        ((jp)g).c();
-      }
-      i.post(new ji(this));
-      return;
+      Object localObject = (i)paramMenuItem.get(0);
+      paramMenuItem = iq.a(a).getString(2131231709);
+      String str1 = iq.a(a).getString(2131231708);
+      String str2 = iq.a(a).getString(2131231707);
+      cv localcv = new cv(iq.a(a)).a(2131231709);
+      localObject = new jd(this, (i)localObject);
+      localcv.a(new String[] { paramMenuItem, str1, str2 }, -1, (DialogInterface.OnClickListener)localObject).d(false).c();
     }
-    catch (Exception localException)
-    {
-      for (;;)
-      {
-        localException.printStackTrace();
-      }
-    }
-  }
-  
-  public abstract void a();
-  
-  public void a(List<a> paramList)
-  {
-    g.a(paramList);
-    e();
-  }
-  
-  protected void b()
-  {
-    c = new je(this, a);
-    b = new WindowManager.LayoutParams();
-    b.width = -1;
-    b.height = -1;
-    b.format = -2;
-    c.setVisibility(8);
-    c.setBackgroundDrawable(null);
-    c.setOnClickListener(new jf(this));
-    if (e)
-    {
-      g = new jg(this, a, h);
-      c.setGravity(53);
-      LinearLayout.LayoutParams localLayoutParams = new LinearLayout.LayoutParams(-2, -2);
-      if ((a instanceof jb))
-      {
-        Rect localRect1 = ((jb)a).t();
-        if (localRect1 != null)
-        {
-          Rect localRect2 = new Rect();
-          ((Activity)a).getWindow().getDecorView().getWindowVisibleDisplayFrame(localRect2);
-          int k = top;
-          height = localRect1.height();
-          topMargin = (top - k);
-        }
-      }
-      c.addView(g.a(), localLayoutParams);
-      return;
-    }
-    g = new jh(this, a, h);
-    c.setGravity(17);
-    c.addView(g.a());
-  }
-  
-  public boolean c()
-  {
-    return f;
-  }
-  
-  public void d()
-  {
-    if (c != null) {
-      c.setVisibility(8);
-    }
-    try
-    {
-      d.removeView(c);
-      f = false;
-      a();
-      return;
-    }
-    catch (Exception localException)
-    {
-      for (;;) {}
-    }
+    iq.a(a).z();
+    return true;
   }
 }
 

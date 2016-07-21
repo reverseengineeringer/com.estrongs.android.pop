@@ -3,7 +3,7 @@
 
 
 # instance fields
-.field private b:Lcom/estrongs/android/util/a;
+.field private b:Lcom/estrongs/android/j/c;
 
 
 # direct methods
@@ -14,7 +14,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/ESRingtoneChooserActivity;->b:Lcom/estrongs/android/util/a;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/ESRingtoneChooserActivity;->b:Lcom/estrongs/android/j/c;
 
     return-void
 .end method
@@ -24,7 +24,7 @@
 .method protected a(Lcom/estrongs/fs/h;)Z
     .locals 6
 
-    const v5, 0x7f0b03ef
+    const v5, 0x7f080643
 
     const/4 v2, 0x0
 
@@ -34,11 +34,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bc;->b(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/estrongs/android/util/bg;->b(Ljava/lang/String;)I
 
     move-result v4
 
-    invoke-static {v4}, Lcom/estrongs/android/util/bc;->e(I)Z
+    invoke-static {v4}, Lcom/estrongs/android/util/bg;->e(I)Z
 
     move-result v0
 
@@ -54,7 +54,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-static {p0, v5, v3}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {p0, v5, v3}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     :goto_0
     return v2
@@ -91,13 +91,13 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bc;->a(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/estrongs/android/util/bg;->a(Ljava/lang/String;)I
 
     move-result v0
 
     if-ne v0, v4, :cond_1
 
-    invoke-static {p0, v5, v3}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {p0, v5, v3}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     goto :goto_0
 
@@ -122,13 +122,13 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bl(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bC(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    invoke-static {}, Lcom/estrongs/android/util/bd;->e()Z
+    invoke-static {}, Lcom/estrongs/android/util/bk;->e()Z
 
     move-result v0
 
@@ -138,7 +138,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/fs/impl/media/a;->d(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/fs/impl/media/b;->d(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -149,7 +149,7 @@
     goto :goto_0
 
     :cond_4
-    invoke-static {p0, v5, v3}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {p0, v5, v3}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     goto :goto_0
 
@@ -160,53 +160,56 @@
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 2
+    .locals 3
 
     invoke-super {p0, p1}, Lcom/estrongs/android/pop/app/FileChooserActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const/4 v0, 0x0
-
-    const-string v1, "ESRingtoneChooser"
-
-    invoke-static {p0, v0, v1}, Lcom/estrongs/android/util/a;->a(Landroid/content/Context;ZLjava/lang/String;)Lcom/estrongs/android/util/a;
+    invoke-static {p0}, Lcom/estrongs/android/j/c;->a(Landroid/content/Context;)Lcom/estrongs/android/j/c;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/ESRingtoneChooserActivity;->b:Lcom/estrongs/android/util/a;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/ESRingtoneChooserActivity;->b:Lcom/estrongs/android/j/c;
 
+    :try_start_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ESRingtoneChooserActivity;->b:Lcom/estrongs/android/j/c;
+
+    const-string v1, "act3"
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/j/c;->d(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ESRingtoneChooserActivity;->b:Lcom/estrongs/android/j/c;
+
+    const-string v1, "act3"
+
+    const-string v2, "ringstone_choose"
+
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/j/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
     return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    goto :goto_0
 .end method
 
 .method protected onPause()V
-    .locals 1
+    .locals 0
 
     invoke-super {p0}, Lcom/estrongs/android/pop/app/FileChooserActivity;->onPause()V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ESRingtoneChooserActivity;->b:Lcom/estrongs/android/util/a;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ESRingtoneChooserActivity;->b:Lcom/estrongs/android/util/a;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/util/a;->c()Z
-
-    :cond_0
     return-void
 .end method
 
 .method protected onResume()V
-    .locals 1
+    .locals 0
 
     invoke-super {p0}, Lcom/estrongs/android/pop/app/FileChooserActivity;->onResume()V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ESRingtoneChooserActivity;->b:Lcom/estrongs/android/util/a;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ESRingtoneChooserActivity;->b:Lcom/estrongs/android/util/a;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/util/a;->b()Z
-
-    :cond_0
     return-void
 .end method

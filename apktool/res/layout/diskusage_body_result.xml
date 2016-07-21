@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <ListView android:id="@id/listview_diskusage" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:divider="@drawable/blank" />
+    <android.support.v7.widget.RecyclerView android:id="@id/listview_diskusage" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" />
     <LinearLayout android:orientation="horizontal" android:id="@id/infobar_top" android:background="@drawable/disk_content_statistics_bg" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/dp_16">
         <View android:layout_width="@dimen/dp_45" android:layout_height="fill_parent" />
         <LinearLayout android:orientation="horizontal" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0">

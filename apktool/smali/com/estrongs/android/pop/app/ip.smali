@@ -1,13 +1,19 @@
-.class final Lcom/estrongs/android/pop/app/ip;
+.class Lcom/estrongs/android/pop/app/ip;
 .super Ljava/lang/Object;
 
 # interfaces
 .implements Ljava/lang/Runnable;
 
 
+# instance fields
+.field final synthetic a:Lcom/estrongs/android/pop/app/io;
+
+
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Lcom/estrongs/android/pop/app/io;)V
     .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/ip;->a:Lcom/estrongs/android/pop/app/io;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -17,51 +23,37 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 3
 
-    const/4 v1, 0x0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ip;->a:Lcom/estrongs/android/pop/app/io;
 
-    :try_start_0
-    invoke-static {}, Lcom/estrongs/android/pop/app/io;->b()Landroid/app/ProgressDialog;
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/io;->c:Lcom/estrongs/android/pop/app/im;
 
-    move-result-object v0
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/im;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
 
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Lcom/estrongs/android/pop/app/io;->b()Landroid/app/ProgressDialog;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->c(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)Landroid/preference/Preference$OnPreferenceChangeListener;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/ip;->a:Lcom/estrongs/android/pop/app/io;
 
-    const/4 v0, 0x0
+    iget-object v1, v1, Lcom/estrongs/android/pop/app/io;->c:Lcom/estrongs/android/pop/app/im;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/io;->a(Landroid/app/ProgressDialog;)Landroid/app/ProgressDialog;
+    iget-object v1, v1, Lcom/estrongs/android/pop/app/im;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
 
-    const/4 v0, 0x0
+    iget-object v1, v1, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->r:Landroid/preference/Preference;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/io;->a(Z)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 v2, 0x0
 
-    :cond_0
-    invoke-static {v1}, Lcom/estrongs/android/pop/app/io;->a(Z)Z
+    invoke-interface {v0, v1, v2}, Landroid/preference/Preference$OnPreferenceChangeListener;->onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
 
-    :goto_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ip;->a:Lcom/estrongs/android/pop/app/io;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/io;->c:Lcom/estrongs/android/pop/app/im;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/im;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->finish()V
+
     return-void
-
-    :catch_0
-    move-exception v0
-
-    invoke-static {v1}, Lcom/estrongs/android/pop/app/io;->a(Z)Z
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {v1}, Lcom/estrongs/android/pop/app/io;->a(Z)Z
-
-    throw v0
 .end method

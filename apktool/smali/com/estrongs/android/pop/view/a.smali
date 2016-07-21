@@ -3,16 +3,34 @@
 
 
 # static fields
-.field private static a:I
+.field public static a:Ljava/lang/String;
+
+.field public static b:Ljava/lang/String;
+
+.field private static c:I
+
+.field private static d:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
+    const-string v0, "Market"
+
+    sput-object v0, Lcom/estrongs/android/pop/view/a;->a:Ljava/lang/String;
+
+    const-string v0, ""
+
+    sput-object v0, Lcom/estrongs/android/pop/view/a;->b:Ljava/lang/String;
+
     const/4 v0, 0x0
 
-    sput v0, Lcom/estrongs/android/pop/view/a;->a:I
+    sput v0, Lcom/estrongs/android/pop/view/a;->c:I
+
+    const/4 v0, 0x0
+
+    sput-object v0, Lcom/estrongs/android/pop/view/a;->d:Ljava/lang/String;
 
     return-void
 .end method
@@ -20,7 +38,7 @@
 .method public static a()I
     .locals 1
 
-    sget v0, Lcom/estrongs/android/pop/view/a;->a:I
+    sget v0, Lcom/estrongs/android/pop/view/a;->c:I
 
     return v0
 .end method
@@ -50,9 +68,13 @@
     :goto_0
     if-eqz v0, :cond_0
 
-    iget v0, v0, Landroid/content/pm/PackageInfo;->versionCode:I
+    iget v1, v0, Landroid/content/pm/PackageInfo;->versionCode:I
 
-    sput v0, Lcom/estrongs/android/pop/view/a;->a:I
+    sput v1, Lcom/estrongs/android/pop/view/a;->c:I
+
+    iget-object v0, v0, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
+
+    sput-object v0, Lcom/estrongs/android/pop/view/a;->d:Ljava/lang/String;
 
     :cond_0
     return-void
@@ -78,7 +100,7 @@
 
     if-nez v1, :cond_0
 
-    sget-object v1, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/view/a;->b:Ljava/lang/String;
 
     const-string v2, "Amazon"
 
@@ -175,7 +197,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget v3, Lcom/estrongs/android/pop/view/a;->a:I
+    sget v3, Lcom/estrongs/android/pop/view/a;->c:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -197,7 +219,7 @@
 
     if-nez v1, :cond_0
 
-    sget v1, Lcom/estrongs/android/pop/view/a;->a:I
+    sget v1, Lcom/estrongs/android/pop/view/a;->c:I
 
     if-eqz v1, :cond_0
 
@@ -207,7 +229,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget v2, Lcom/estrongs/android/pop/view/a;->a:I
+    sget v2, Lcom/estrongs/android/pop/view/a;->c:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -234,11 +256,11 @@
 
     const/4 v5, 0x0
 
-    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    const v1, 0x7f030002
+    const v1, 0x7f03003e
 
     const/4 v2, 0x0
 
@@ -246,7 +268,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f0a001e
+    const v0, 0x7f0e0108
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -254,7 +276,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v2, 0x7f0b03f1
+    const v2, 0x7f0800f3
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -282,7 +304,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a001f
+    const v0, 0x7f0e0183
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -290,23 +312,23 @@
 
     check-cast v0, Landroid/widget/CheckBox;
 
-    new-instance v2, Lcom/estrongs/android/ui/dialog/cg;
+    new-instance v2, Lcom/estrongs/android/ui/dialog/ci;
 
-    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/dialog/cg;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/dialog/ci;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v2, v5}, Lcom/estrongs/android/ui/dialog/cg;->setCancelable(Z)V
+    invoke-virtual {v2, v5}, Lcom/estrongs/android/ui/dialog/ci;->setCancelable(Z)V
 
-    const v3, 0x7f0b0046
+    const v3, 0x7f0803e2
 
     invoke-virtual {p0, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/estrongs/android/ui/dialog/cg;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v2, v3}, Lcom/estrongs/android/ui/dialog/ci;->setTitle(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v2, v1}, Lcom/estrongs/android/ui/dialog/cg;->setContentView(Landroid/view/View;)V
+    invoke-virtual {v2, v1}, Lcom/estrongs/android/ui/dialog/ci;->setContentView(Landroid/view/View;)V
 
-    const v1, 0x7f0b000b
+    const v1, 0x7f080226
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -316,9 +338,9 @@
 
     invoke-direct {v3, v0, p0}, Lcom/estrongs/android/pop/view/b;-><init>(Landroid/widget/CheckBox;Landroid/content/Context;)V
 
-    invoke-virtual {v2, v1, v3}, Lcom/estrongs/android/ui/dialog/cg;->setSingleButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v2, v1, v3}, Lcom/estrongs/android/ui/dialog/ci;->setSingleButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    invoke-virtual {v2}, Lcom/estrongs/android/ui/dialog/cg;->show()V
+    invoke-virtual {v2}, Lcom/estrongs/android/ui/dialog/ci;->show()V
 
     return-void
 .end method
@@ -357,9 +379,9 @@
     const/16 v3, 0x2712
 
     :try_start_2
-    invoke-static {v1, v3}, Lcom/estrongs/fs/impl/local/l;->a(Ljava/io/OutputStream;I)V
+    invoke-static {v1, v3}, Lcom/estrongs/fs/impl/local/m;->a(Ljava/io/OutputStream;I)V
 
-    invoke-static {v2}, Lcom/estrongs/fs/impl/local/l;->b(Ljava/io/InputStream;)[B
+    invoke-static {v2}, Lcom/estrongs/fs/impl/local/m;->b(Ljava/io/InputStream;)[B
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_4
     .catchall {:try_start_2 .. :try_end_2} :catchall_2

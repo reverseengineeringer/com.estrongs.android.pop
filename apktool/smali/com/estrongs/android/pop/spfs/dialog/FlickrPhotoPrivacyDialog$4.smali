@@ -216,7 +216,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-interface {v0, v1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -378,7 +378,7 @@
 
     iget-object v1, v0, Lcom/estrongs/android/pop/spfs/Album;->path:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v1}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
@@ -614,7 +614,7 @@
     :cond_b
     iget-object v0, v0, Lcom/estrongs/android/pop/spfs/Album;->name:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 

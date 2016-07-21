@@ -1,46 +1,33 @@
 package com.estrongs.android.pop.app;
 
-import com.estrongs.android.pop.spfs.PhotoInfoException;
-import com.estrongs.android.pop.spfs.PhotoInfoManager;
-import com.estrongs.android.util.m;
+import android.content.Intent;
+import android.view.View;
+import com.estrongs.android.ui.view.ak;
 
 class ds
-  extends m
+  implements Runnable
 {
-  ds(ImageCommentPostActivity paramImageCommentPostActivity, String paramString1, String paramString2)
-  {
-    super(paramString1);
-  }
+  ds(dr paramdr, boolean paramBoolean, String paramString) {}
   
   public void run()
   {
-    Object localObject = null;
-    String str;
-    try
-    {
-      PhotoInfoManager.addComment(ImageCommentPostActivity.b(b), a);
-      if (g) {
-        return;
-      }
-    }
-    catch (PhotoInfoException localPhotoInfoException)
-    {
-      for (;;)
+    if (a) {
+      if (ImageCommentPostActivity.c(c.b))
       {
-        localPhotoInfoException.printStackTrace();
-        str = b.getString(2131428095) + ": " + localPhotoInfoException.getMessage();
+        c.b.setResult(-1);
+        c.b.finish();
       }
-    }
-    boolean bool;
-    if (str != null) {
-      bool = false;
     }
     for (;;)
     {
-      b.a(new dt(this, bool, str));
+      ak.a(c.b, b, 1);
       return;
-      bool = true;
-      str = b.getString(2131428094);
+      Intent localIntent = c.b.getIntent();
+      localIntent.setClass(c.b, ImageCommentActivity.class);
+      c.b.startActivity(localIntent);
+      break;
+      c.b.findViewById(2131625363).setVisibility(8);
+      c.b.findViewById(2131625359).setVisibility(0);
     }
   }
 }

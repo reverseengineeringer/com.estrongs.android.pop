@@ -1,21 +1,24 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.util.o;
-import java.util.List;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import com.estrongs.android.pop.spfs.CreateSiteFileObject;
+import com.estrongs.android.view.cp;
+import com.estrongs.android.view.cr;
+import com.estrongs.fs.h;
 
 class bq
-  implements Runnable
+  implements cp
 {
-  bq(bp parambp) {}
+  bq(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void run()
+  public boolean a(RecyclerView paramRecyclerView, View paramView, int paramInt, boolean paramBoolean)
   {
-    while (FileExplorerActivity.d(a.a).size() > 0) {
-      FileExplorerActivity.a(a.a, (o)FileExplorerActivity.d(a.a).remove(0), false);
+    cr localcr = a.O();
+    if ((localcr != null) && (((h)localcr.e(paramInt) instanceof CreateSiteFileObject))) {
+      return true;
     }
-    if (FileExplorerActivity.e(a.a) == null) {
-      FileExplorerActivity.f(a.a);
-    }
+    return a.I.a(paramRecyclerView, paramView, paramInt, paramBoolean);
   }
 }
 

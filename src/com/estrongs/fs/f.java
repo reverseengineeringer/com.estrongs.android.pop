@@ -1,7 +1,7 @@
 package com.estrongs.fs;
 
 final class f
-  extends n
+  extends x
 {
   f(String paramString)
   {

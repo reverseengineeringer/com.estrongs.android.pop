@@ -1,9 +1,13 @@
 package com.estrongs.android.widget;
 
-class bx
-  implements ah
+import android.content.Context;
+
+public class bx
 {
-  bx(bw parambw) {}
+  protected int b = 0;
+  protected ag c = new by(this);
+  
+  public bx(Context paramContext) {}
 }
 
 /* Location:

@@ -6,7 +6,7 @@
 .method public static a(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
     .locals 3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/bc;->h(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/bg;->h(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -20,7 +20,7 @@
     return-object v0
 
     :cond_0
-    invoke-static {p1}, Lcom/estrongs/android/util/bc;->g(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/bg;->g(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -33,7 +33,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {p1}, Lcom/estrongs/android/util/bc;->F(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/bg;->F(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -46,7 +46,7 @@
     goto :goto_0
 
     :cond_2
-    invoke-static {p1}, Lcom/estrongs/android/util/bc;->i(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/bg;->i(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -61,7 +61,7 @@
     goto :goto_0
 
     :cond_3
-    invoke-static {p1}, Lcom/estrongs/android/util/bc;->c(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/bg;->c(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -74,7 +74,7 @@
     goto :goto_0
 
     :cond_4
-    invoke-static {p1}, Lcom/estrongs/android/util/bc;->C(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/bg;->C(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -87,7 +87,7 @@
     goto :goto_0
 
     :cond_5
-    invoke-static {p1}, Lcom/estrongs/android/util/bc;->D(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/bg;->D(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -100,7 +100,7 @@
     goto :goto_0
 
     :cond_6
-    invoke-static {p1}, Lcom/estrongs/android/util/bc;->G(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/bg;->G(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -113,7 +113,7 @@
     goto :goto_0
 
     :cond_7
-    invoke-static {p1}, Lcom/estrongs/android/util/bc;->E(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/bg;->E(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -126,7 +126,7 @@
     goto :goto_0
 
     :cond_8
-    invoke-static {p1}, Lcom/estrongs/android/util/bc;->q(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/bg;->q(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -139,7 +139,7 @@
     goto :goto_0
 
     :cond_9
-    invoke-static {p1}, Lcom/estrongs/android/util/bc;->j(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/bg;->j(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -152,7 +152,7 @@
     goto :goto_0
 
     :cond_a
-    invoke-static {p1}, Lcom/estrongs/android/util/bc;->K(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/bg;->K(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -165,7 +165,7 @@
     goto :goto_0
 
     :cond_b
-    invoke-static {p1}, Lcom/estrongs/android/util/bc;->k(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/bg;->k(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -188,7 +188,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    invoke-static {p1}, Lcom/estrongs/android/util/bc;->S(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/bg;->U(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -231,7 +231,7 @@
 .method public static a(Landroid/content/Context;Ljava/lang/String;Z)Landroid/content/Intent;
     .locals 3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -251,7 +251,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->aV(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bg(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -367,7 +367,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 

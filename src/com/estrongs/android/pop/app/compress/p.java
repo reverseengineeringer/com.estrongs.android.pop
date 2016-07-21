@@ -1,20 +1,20 @@
 package com.estrongs.android.pop.app.compress;
 
 import android.content.Context;
-import com.estrongs.io.archive.h;
+import com.estrongs.io.archive.i;
 
 class p
   implements Runnable
 {
-  p(o paramo, h paramh) {}
+  p(o paramo, i parami) {}
   
   public void run()
   {
-    be localbe = new be(l.d(b.a), false, true);
-    localbe.setButton(-1, l.d(b.a).getString(2131427339), new q(this, localbe));
-    localbe.setButton(-2, l.d(b.a).getString(2131427340), new r(this, localbe));
-    localbe.setOnCancelListener(new s(this));
-    localbe.show();
+    cb localcb = new cb(l.d(b.a), false, true);
+    localcb.setButton(-1, l.d(b.a).getString(2131231270), new q(this, localcb));
+    localcb.setButton(-2, l.d(b.a).getString(2131231265), new r(this, localcb));
+    localcb.setOnCancelListener(new s(this));
+    localcb.show();
   }
 }
 

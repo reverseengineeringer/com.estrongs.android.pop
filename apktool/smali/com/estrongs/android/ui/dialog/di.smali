@@ -1,70 +1,144 @@
 .class Lcom/estrongs/android/ui/dialog/di;
-.super Landroid/text/InputFilter$LengthFilter;
+.super Ljava/lang/Object;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/dialog/dg;
+.field a:Landroid/app/Activity;
 
-.field private b:J
+.field b:Landroid/app/Dialog;
+
+.field c:Landroid/widget/EditText;
+
+.field d:Z
+
+.field e:Lcom/estrongs/android/ui/dialog/i;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/dg;I)V
-    .locals 2
+.method public constructor <init>(Landroid/app/Activity;Landroid/app/Dialog;)V
+    .locals 5
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/di;->a:Lcom/estrongs/android/ui/dialog/dg;
+    const/4 v4, 0x1
 
-    invoke-direct {p0, p2}, Landroid/text/InputFilter$LengthFilter;-><init>(I)V
+    const/4 v3, 0x0
 
-    const-wide/16 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide v0, p0, Lcom/estrongs/android/ui/dialog/di;->b:J
+    iput-boolean v4, p0, Lcom/estrongs/android/ui/dialog/di;->d:Z
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/dialog/di;->e:Lcom/estrongs/android/ui/dialog/i;
+
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/di;->a:Landroid/app/Activity;
+
+    iput-object p2, p0, Lcom/estrongs/android/ui/dialog/di;->b:Landroid/app/Dialog;
+
+    new-instance v0, Landroid/widget/EditText;
+
+    invoke-direct {v0, p1}, Landroid/widget/EditText;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/dialog/di;->c:Landroid/widget/EditText;
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/di;->c:Landroid/widget/EditText;
+
+    const/high16 v1, 0x41900000    # 18.0f
+
+    invoke-virtual {v0, v4, v1}, Landroid/widget/EditText;->setTextSize(IF)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/di;->c:Landroid/widget/EditText;
+
+    const v1, 0x7f02031b
+
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setBackgroundResource(I)V
+
+    const/high16 v0, 0x40c00000    # 6.0f
+
+    invoke-static {p1, v0}, Lcom/estrongs/android/ui/d/g;->a(Landroid/content/Context;F)I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/di;->c:Landroid/widget/EditText;
+
+    invoke-virtual {v1, v0, v3, v0, v3}, Landroid/widget/EditText;->setPadding(IIII)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/di;->c:Landroid/widget/EditText;
+
+    invoke-static {p1}, Lcom/estrongs/android/ui/theme/at;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
+
+    move-result-object v1
+
+    const v2, 0x7f0d0105
+
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/theme/at;->c(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setTextColor(I)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/di;->c:Landroid/widget/EditText;
+
+    invoke-virtual {v0}, Landroid/widget/EditText;->setSingleLine()V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/di;->c:Landroid/widget/EditText;
+
+    invoke-virtual {p1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f08037a
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/di;->c:Landroid/widget/EditText;
+
+    new-instance v1, Lcom/estrongs/android/ui/dialog/dj;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/dialog/dj;-><init>(Lcom/estrongs/android/ui/dialog/di;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
+
+    new-array v0, v4, [Landroid/text/InputFilter;
+
+    new-instance v1, Lcom/estrongs/android/ui/dialog/dk;
+
+    const/16 v2, 0x14
+
+    invoke-direct {v1, p0, v2}, Lcom/estrongs/android/ui/dialog/dk;-><init>(Lcom/estrongs/android/ui/dialog/di;I)V
+
+    aput-object v1, v0, v3
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/di;->c:Landroid/widget/EditText;
+
+    invoke-virtual {v1, v0}, Landroid/widget/EditText;->setFilters([Landroid/text/InputFilter;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
-    .locals 7
+.method public a(Lcom/estrongs/android/ui/dialog/i;)V
+    .locals 0
 
-    const/4 v6, 0x0
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/di;->e:Lcom/estrongs/android/ui/dialog/i;
 
-    invoke-interface {p4, v6, p5}, Landroid/text/Spanned;->subSequence(II)Ljava/lang/CharSequence;
+    return-void
+.end method
 
-    move-result-object v0
+.method public a()Z
+    .locals 5
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    const/4 v2, 0x1
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/di;->c:Landroid/widget/EditText;
 
-    move-result-object v0
-
-    array-length v0, v0
-
-    invoke-interface {p4}, Landroid/text/Spanned;->length()I
-
-    move-result v1
-
-    invoke-interface {p4, p6, v1}, Landroid/text/Spanned;->subSequence(II)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object v1
-
-    array-length v1, v1
-
-    add-int/2addr v1, v0
-
-    invoke-interface {p1, p2, p3}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
     move-result-object v0
 
@@ -72,104 +146,127 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
 
-    array-length v0, v0
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    rsub-int/lit8 v2, v1, 0x14
+    move-result-object v0
 
-    if-gtz v2, :cond_1
+    const-string v3, "."
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-virtual {v0, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result-wide v0
+    move-result v3
 
-    iget-wide v2, p0, Lcom/estrongs/android/ui/dialog/di;->b:J
+    if-eqz v3, :cond_0
 
-    sub-long v2, v0, v2
+    invoke-virtual {v0, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    const-wide/16 v4, 0x3e8
+    move-result-object v0
 
-    cmp-long v2, v2, v4
-
-    if-lez v2, :cond_0
-
-    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/di;->a:Lcom/estrongs/android/ui/dialog/dg;
-
-    iget-object v2, v2, Lcom/estrongs/android/ui/dialog/dg;->a:Landroid/app/Activity;
-
-    iget-object v3, p0, Lcom/estrongs/android/ui/dialog/di;->a:Lcom/estrongs/android/ui/dialog/dg;
-
-    iget-object v3, v3, Lcom/estrongs/android/ui/dialog/dg;->a:Landroid/app/Activity;
-
-    const v4, 0x7f0b0475
-
-    invoke-virtual {v3, v4}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v3
 
-    invoke-static {v2, v3, v6}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    array-length v3, v3
 
-    iput-wide v0, p0, Lcom/estrongs/android/ui/dialog/di;->b:J
+    const/16 v4, 0x14
 
-    :cond_0
-    const-string v0, ""
+    if-le v3, v4, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/di;->a:Landroid/app/Activity;
+
+    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/di;->a:Landroid/app/Activity;
+
+    const v3, 0x7f08040b
+
+    invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+
+    move v0, v1
 
     :goto_0
-    return-object v0
+    return v0
 
     :cond_1
-    rsub-int/lit8 v2, v1, 0x14
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    if-lt v2, v0, :cond_2
+    move-result v3
 
-    const/4 v0, 0x0
+    if-ge v3, v2, :cond_2
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/di;->a:Landroid/app/Activity;
+
+    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/di;->a:Landroid/app/Activity;
+
+    const v3, 0x7f08040a
+
+    invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+
+    move v0, v1
 
     goto :goto_0
 
     :cond_2
-    if-gt p3, p2, :cond_4
+    iget-boolean v3, p0, Lcom/estrongs/android/ui/dialog/di;->d:Z
 
-    const-string v0, ""
+    if-eqz v3, :cond_3
+
+    invoke-static {v0}, Lcom/estrongs/fs/util/j;->c(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_3
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/di;->a:Landroid/app/Activity;
+
+    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/di;->a:Landroid/app/Activity;
+
+    const v3, 0x7f080409
+
+    invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+
+    move v0, v1
 
     goto :goto_0
 
     :cond_3
-    invoke-interface {p1, p2, p3}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/di;->e:Lcom/estrongs/android/ui/dialog/i;
 
-    move-result-object v0
+    if-eqz v1, :cond_4
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/di;->e:Lcom/estrongs/android/ui/dialog/i;
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object v0
-
-    array-length v0, v0
+    invoke-interface {v1, v0}, Lcom/estrongs/android/ui/dialog/i;->a(Ljava/lang/String;)V
 
     :cond_4
-    add-int/2addr v0, v1
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/di;->b:Landroid/app/Dialog;
 
-    const/16 v2, 0x14
+    invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
-    if-le v0, v2, :cond_5
-
-    add-int/lit8 p3, p3, -0x1
-
-    if-gt p3, p2, :cond_3
-
-    const-string v0, ""
+    move v0, v2
 
     goto :goto_0
+.end method
 
-    :cond_5
-    invoke-interface {p1, p2, p3}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+.method public b()Landroid/view/View;
+    .locals 1
 
-    move-result-object v0
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/di;->c:Landroid/widget/EditText;
 
-    goto :goto_0
+    return-object v0
 .end method

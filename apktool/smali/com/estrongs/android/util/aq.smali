@@ -2,7 +2,19 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/fs/i;
+.implements Ljava/util/Comparator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Ljava/lang/String;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
@@ -16,29 +28,32 @@
 
 
 # virtual methods
-.method public a(Lcom/estrongs/fs/h;)Z
+.method public a(Ljava/lang/String;Ljava/lang/String;)I
     .locals 2
 
-    const/4 v0, 0x1
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
 
-    if-nez p1, :cond_1
+    move-result v0
 
-    :cond_0
-    :goto_0
-    return v0
-
-    :cond_1
-    invoke-interface {p1}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->bW(Ljava/lang/String;)Z
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    sub-int/2addr v0, v1
 
-    const/4 v0, 0x0
+    return v0
+.end method
 
-    goto :goto_0
+.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 1
+
+    check-cast p1, Ljava/lang/String;
+
+    check-cast p2, Ljava/lang/String;
+
+    invoke-virtual {p0, p1, p2}, Lcom/estrongs/android/util/aq;->a(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
 .end method

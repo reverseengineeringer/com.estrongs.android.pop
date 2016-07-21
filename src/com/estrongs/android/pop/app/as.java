@@ -1,16 +1,16 @@
 package com.estrongs.android.pop.app;
 
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
+import android.content.DialogInterface.OnDismissListener;
 
 class as
-  implements DialogInterface.OnCancelListener
+  implements DialogInterface.OnDismissListener
 {
-  as(DownloaderActivity paramDownloaderActivity) {}
+  as(DocumentExtModifyList paramDocumentExtModifyList) {}
   
-  public void onCancel(DialogInterface paramDialogInterface)
+  public void onDismiss(DialogInterface paramDialogInterface)
   {
-    a.finish();
+    DocumentExtModifyList.b(a);
   }
 }
 

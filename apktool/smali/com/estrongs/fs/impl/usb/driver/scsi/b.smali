@@ -142,7 +142,7 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, v5}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v4, Lcom/estrongs/fs/impl/usb/driver/scsi/b;->a:Ljava/lang/String;
 
@@ -176,7 +176,7 @@
 
     move-result-object v1
 
-    invoke-static {v4, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     invoke-virtual {p1}, Lcom/estrongs/fs/impl/usb/driver/scsi/CommandBlockWrapper;->b()I
@@ -379,7 +379,7 @@
 
     move-result-object v1
 
-    invoke-static {v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_7
     iget-object v1, p0, Lcom/estrongs/fs/impl/usb/driver/scsi/b;->e:[B
@@ -422,7 +422,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v4}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_8
     invoke-virtual {v1}, Lcom/estrongs/fs/impl/usb/driver/scsi/a;->a()I
@@ -439,7 +439,7 @@
 
     const-string v4, "wrong csw tag!"
 
-    invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v4}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_9
     invoke-virtual {v1}, Lcom/estrongs/fs/impl/usb/driver/scsi/a;->b()B
@@ -489,7 +489,7 @@
 
     const-string v2, "unit not ready!"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     new-instance v1, Lcom/estrongs/fs/impl/usb/driver/scsi/d;
@@ -540,7 +540,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     iget-boolean v0, p0, Lcom/estrongs/fs/impl/usb/driver/scsi/b;->b:Z
@@ -569,7 +569,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
     return-void
@@ -643,7 +643,7 @@
 
     const-string v4, "we have to round up size to next block sector"
 
-    invoke-static {v0, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v4}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
     iget v0, p0, Lcom/estrongs/fs/impl/usb/driver/scsi/b;->f:I
@@ -707,7 +707,7 @@
 
     move-result-object v6
 
-    invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v5, v6}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
     invoke-direct {p0, v4, v0}, Lcom/estrongs/fs/impl/usb/driver/scsi/b;->a(Lcom/estrongs/fs/impl/usb/driver/scsi/CommandBlockWrapper;Ljava/nio/ByteBuffer;)Z
@@ -779,7 +779,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_5
     monitor-exit v1
@@ -909,7 +909,7 @@
 
     const-string v4, "we have to round up size to next block sector"
 
-    invoke-static {v0, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v4}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
     iget v0, p0, Lcom/estrongs/fs/impl/usb/driver/scsi/b;->f:I
@@ -993,7 +993,7 @@
 
     move-result-object v6
 
-    invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v5, v6}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
     invoke-direct {p0, v4, v0}, Lcom/estrongs/fs/impl/usb/driver/scsi/b;->a(Lcom/estrongs/fs/impl/usb/driver/scsi/CommandBlockWrapper;Ljava/nio/ByteBuffer;)Z
@@ -1034,7 +1034,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_4
     monitor-exit v1

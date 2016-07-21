@@ -1,14 +1,18 @@
 package com.estrongs.android.pop.app;
 
-import android.graphics.Bitmap;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
-public class ad
+class ad
+  implements DialogInterface.OnClickListener
 {
-  public String a;
-  public String b;
-  public String c;
-  public String d;
-  public Bitmap e;
+  ad(x paramx) {}
+  
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  {
+    x.c(a);
+    x.a(a).q();
+  }
 }
 
 /* Location:

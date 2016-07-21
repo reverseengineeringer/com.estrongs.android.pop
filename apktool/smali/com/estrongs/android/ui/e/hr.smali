@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/e/hl;
+.field final synthetic a:Lcom/estrongs/android/ui/e/cr;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/hl;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/cr;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/hr;->a:Lcom/estrongs/android/ui/e/hl;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/hr;->a:Lcom/estrongs/android/ui/e/cr;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,108 +23,130 @@
 
 # virtual methods
 .method public onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 5
+    .locals 7
 
-    const/4 v4, 0x0
+    const/4 v6, 0x1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/hr;->a:Lcom/estrongs/android/ui/e/hl;
+    const/4 v5, 0x0
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/hl;->a(Lcom/estrongs/android/ui/e/hl;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/hr;->a:Lcom/estrongs/android/ui/e/cr;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/cr;->a(Lcom/estrongs/android/ui/e/cr;)Ljava/util/List;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v()Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-lez v0, :cond_0
+    if-ne v0, v6, :cond_0
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/hr;->a:Lcom/estrongs/android/ui/e/cr;
 
-    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/cr;->a(Lcom/estrongs/android/ui/e/cr;)Ljava/util/List;
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/android/pop/app/a/ak;
+    invoke-interface {v0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/a/ak;->b:Ljava/lang/String;
+    move-result-object v0
 
-    new-instance v2, Lcom/estrongs/android/ui/e/hs;
+    check-cast v0, Lcom/estrongs/fs/h;
 
-    invoke-direct {v2, p0, v1}, Lcom/estrongs/android/ui/e/hs;-><init>(Lcom/estrongs/android/ui/e/hr;Ljava/util/List;)V
+    invoke-interface {v0}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->ba(Ljava/lang/String;)Z
+    move-result-object v0
 
-    move-result v1
+    invoke-static {v0}, Lcom/estrongs/android/util/bg;->L(Ljava/lang/String;)Z
 
-    if-eqz v1, :cond_1
+    move-result v0
 
-    new-instance v1, Ljava/util/ArrayList;
+    if-eqz v0, :cond_0
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-static {}, Lcom/estrongs/fs/d;->a()Lcom/estrongs/fs/d;
+    move-result-object v1
+
+    new-instance v2, Lcom/estrongs/fs/b/f;
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/hr;->a:Lcom/estrongs/android/ui/e/cr;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/cr;->a(Lcom/estrongs/android/ui/e/cr;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/fs/h;
+
+    invoke-direct {v2, v0}, Lcom/estrongs/fs/b/f;-><init>(Lcom/estrongs/fs/h;)V
+
+    const v0, 0x7f0800bc
+
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v3, v0}, Lcom/estrongs/fs/d;->j(Ljava/lang/String;)Lcom/estrongs/fs/h;
+    new-array v4, v6, [Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/hr;->a:Lcom/estrongs/android/ui/e/cr;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/cr;->a(Lcom/estrongs/android/ui/e/cr;)Ljava/util/List;
 
     move-result-object v0
 
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/hr;->a:Lcom/estrongs/android/ui/e/hl;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/hl;->a(Lcom/estrongs/android/ui/e/hl;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
+    invoke-interface {v0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {v0, v1, v4, v2}, Lcom/estrongs/android/pop/utils/aj;->a(Lcom/estrongs/android/pop/esclasses/ESActivity;Ljava/util/List;Lcom/estrongs/a/a/p;Lcom/estrongs/android/pop/utils/cb;)Z
+    check-cast v0, Lcom/estrongs/fs/h;
+
+    invoke-interface {v0}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->cc(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v4, v5
+
+    invoke-static {v3, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Lcom/estrongs/fs/b/f;->setDescription(Ljava/lang/String;)V
+
+    new-instance v0, Lcom/estrongs/android/pop/m;
+
+    invoke-direct {v0, v1}, Lcom/estrongs/android/pop/m;-><init>(Landroid/app/Activity;)V
+
+    invoke-virtual {v2, v0}, Lcom/estrongs/fs/b/f;->setTaskDecisionListener(Lcom/estrongs/a/a/a;)V
+
+    new-instance v0, Lcom/estrongs/android/ui/dialog/kh;
+
+    const v3, 0x7f08008d
+
+    invoke-virtual {v1, v3}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v0, v1, v3, v2}, Lcom/estrongs/android/ui/dialog/kh;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/a/a;)V
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/kh;->show()V
+
+    invoke-virtual {v2}, Lcom/estrongs/fs/b/f;->execute()V
 
     :cond_0
-    :goto_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/hr;->a:Lcom/estrongs/android/ui/e/hl;
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/hr;->a:Lcom/estrongs/android/ui/e/cr;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/hl;->a(Lcom/estrongs/android/ui/e/hl;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u()V
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_1
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bq(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/cr;->b(Lcom/estrongs/android/ui/e/cr;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
-    new-instance v1, Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->B()V
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-static {}, Lcom/estrongs/fs/d;->a()Lcom/estrongs/fs/d;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v0}, Lcom/estrongs/fs/d;->j(Ljava/lang/String;)Lcom/estrongs/fs/h;
-
-    move-result-object v0
-
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/hr;->a:Lcom/estrongs/android/ui/e/hl;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/hl;->a(Lcom/estrongs/android/ui/e/hl;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
-
-    move-result-object v0
-
-    invoke-static {v0, v1, v4, v2}, Lcom/estrongs/android/pop/utils/aj;->a(Lcom/estrongs/android/pop/esclasses/ESActivity;Ljava/util/List;Lcom/estrongs/a/a/p;Lcom/estrongs/android/pop/utils/cb;)Z
-
-    goto :goto_0
+    return v6
 .end method

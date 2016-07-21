@@ -6,14 +6,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/dialog/hc;
+.field final synthetic a:Lcom/estrongs/android/util/m;
+
+.field final synthetic b:Lcom/estrongs/android/ui/dialog/hf;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/hc;)V
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/hf;Lcom/estrongs/android/util/m;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/hj;->a:Lcom/estrongs/android/ui/dialog/hc;
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/hj;->b:Lcom/estrongs/android/ui/dialog/hf;
+
+    iput-object p2, p0, Lcom/estrongs/android/ui/dialog/hj;->a:Lcom/estrongs/android/util/m;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,36 +27,22 @@
 
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 3
+    .locals 1
 
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/hj;->a:Lcom/estrongs/android/util/m;
 
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-virtual {v0}, Lcom/estrongs/android/util/m;->isAlive()Z
 
-    move-result-object v0
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    new-instance v1, Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/hj;->a:Lcom/estrongs/android/util/m;
 
-    invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
-
-    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/hj;->a:Lcom/estrongs/android/ui/dialog/hc;
-
-    invoke-static {v2}, Lcom/estrongs/android/ui/dialog/hc;->c(Lcom/estrongs/android/ui/dialog/hc;)Lcom/estrongs/android/ui/dialog/hn;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lcom/estrongs/android/ui/dialog/hn;->c:Lcom/estrongs/fs/h;
-
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v2, Lcom/estrongs/android/ui/dialog/hk;
-
-    invoke-direct {v2, p0, v0}, Lcom/estrongs/android/ui/dialog/hk;-><init>(Lcom/estrongs/android/ui/dialog/hj;Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
-
-    invoke-static {v0, v1, v2}, Lcom/estrongs/fs/impl/l/a;->a(Lcom/estrongs/android/pop/view/FileExplorerActivity;Ljava/util/List;Lcom/estrongs/a/a/p;)V
+    invoke-virtual {v0}, Lcom/estrongs/android/util/m;->a()V
 
     :cond_0
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+
     return-void
 .end method

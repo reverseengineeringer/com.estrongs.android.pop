@@ -1,18 +1,14 @@
 package android.support.v4.view;
 
-import android.view.MotionEvent;
+import android.view.KeyEvent;
 
-abstract interface ac
+class ac
+  extends ab
 {
-  public abstract int a(MotionEvent paramMotionEvent);
-  
-  public abstract int a(MotionEvent paramMotionEvent, int paramInt);
-  
-  public abstract int b(MotionEvent paramMotionEvent, int paramInt);
-  
-  public abstract float c(MotionEvent paramMotionEvent, int paramInt);
-  
-  public abstract float d(MotionEvent paramMotionEvent, int paramInt);
+  public void a(KeyEvent paramKeyEvent)
+  {
+    af.a(paramKeyEvent);
+  }
 }
 
 /* Location:

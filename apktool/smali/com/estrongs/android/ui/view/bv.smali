@@ -1,438 +1,287 @@
 .class Lcom/estrongs/android/ui/view/bv;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Landroid/webkit/WebViewClient;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/view/RecommendListView;
+.field final synthetic a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/view/RecommendListView;)V
+.method private constructor <init>(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
+    iput-object p1, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;Lcom/estrongs/android/ui/view/bp;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/estrongs/android/ui/view/bv;-><init>(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 6
+.method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
+    .locals 4
 
-    const/4 v5, 0x5
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
 
-    const/4 v4, 0x3
-
-    const/4 v3, 0x1
-
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    invoke-static {v0}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->d(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Landroid/os/Handler;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Integer;
+    const/4 v1, 0x7
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
+
+    invoke-static {v1}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->d(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Landroid/os/Handler;
+
+    move-result-object v1
+
+    const-wide/16 v2, 0xc8
+
+    invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+
+    const-string v0, "http://passport.baidu.com/phoenix/account/afterauth"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Landroid/webkit/WebView;->stopLoading()V
+
+    const-string v0, "javascript:window.handler.show(document.body.innerHTML);"
+
+    invoke-virtual {p1, v0}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
+
+    :cond_0
+    const-string v0, "://"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+
+    move-result v0
+
+    if-lez v0, :cond_1
+
+    add-int/lit8 v0, v0, 0x3
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    :cond_1
+    const-string v0, "www.estrongs.com"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const-string v0, "localhost"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    invoke-static {}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->b()Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    invoke-static {}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->b()Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->a()V
+
+    :cond_2
+    return-void
+.end method
+
+.method public onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
+    .locals 3
+
+    invoke-virtual {p1}, Landroid/webkit/WebView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Landroid/webkit/WebView;->getHeight()I
 
     move-result v1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
+    if-nez v1, :cond_1
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/RecommendListView;->a(Lcom/estrongs/android/ui/view/RecommendListView;)[Lcom/estrongs/android/pop/view/utils/v;
+    const/16 v1, 0x12c
+
+    iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    :goto_0
+    invoke-virtual {p1, v0}, Landroid/webkit/WebView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const-string v0, "http://www.estrongs.com"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
+
+    const-string v1, "code"
+
+    invoke-static {v0, p2, v1}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->a(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    aget-object v0, v0, v1
+    if-eqz v0, :cond_2
 
-    iget v0, v0, Lcom/estrongs/android/pop/view/utils/v;->q:I
+    iget-object v1, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
 
-    if-eq v0, v3, :cond_0
+    invoke-static {v1}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->d(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Landroid/os/Handler;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
+    move-result-object v1
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/RecommendListView;->a(Lcom/estrongs/android/ui/view/RecommendListView;)[Lcom/estrongs/android/pop/view/utils/v;
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object v1
+
+    iput-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->d(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Landroid/os/Handler;
 
     move-result-object v0
 
-    aget-object v0, v0, v1
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    iget v0, v0, Lcom/estrongs/android/pop/view/utils/v;->q:I
-
-    if-ne v0, v5, :cond_2
+    :goto_1
+    invoke-virtual {p1}, Landroid/webkit/WebView;->stopLoading()V
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
-
-    invoke-static {v0, v1}, Lcom/estrongs/android/ui/view/RecommendListView;->a(Lcom/estrongs/android/ui/view/RecommendListView;I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/RecommendListView;->a(Lcom/estrongs/android/ui/view/RecommendListView;)[Lcom/estrongs/android/pop/view/utils/v;
-
-    move-result-object v0
-
-    aget-object v0, v0, v1
-
-    const/4 v2, 0x0
-
-    iput v2, v0, Lcom/estrongs/android/pop/view/utils/v;->q:I
-
-    iget-object v2, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/RecommendListView;->b(Lcom/estrongs/android/ui/view/RecommendListView;)Landroid/util/SparseArray;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    iget-object v3, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
-
-    invoke-static {v3}, Lcom/estrongs/android/ui/view/RecommendListView;->a(Lcom/estrongs/android/ui/view/RecommendListView;)[Lcom/estrongs/android/pop/view/utils/v;
-
-    move-result-object v3
-
-    aget-object v1, v3, v1
-
-    invoke-static {v2, v0, v1}, Lcom/estrongs/android/ui/view/RecommendListView;->a(Lcom/estrongs/android/ui/view/RecommendListView;Landroid/view/View;Lcom/estrongs/android/pop/view/utils/v;)V
-
-    :cond_1
-    :goto_0
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
-
     return-void
 
-    :cond_2
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/RecommendListView;->a(Lcom/estrongs/android/ui/view/RecommendListView;)[Lcom/estrongs/android/pop/view/utils/v;
-
-    move-result-object v0
-
-    aget-object v0, v0, v1
-
-    iget v0, v0, Lcom/estrongs/android/pop/view/utils/v;->q:I
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/RecommendListView;->a(Lcom/estrongs/android/ui/view/RecommendListView;)[Lcom/estrongs/android/pop/view/utils/v;
-
-    move-result-object v0
-
-    aget-object v0, v0, v1
-
-    iget v0, v0, Lcom/estrongs/android/pop/view/utils/v;->q:I
-
-    const/4 v2, 0x2
-
-    if-ne v0, v2, :cond_7
-
-    :cond_3
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/RecommendListView;->a(Lcom/estrongs/android/ui/view/RecommendListView;)[Lcom/estrongs/android/pop/view/utils/v;
-
-    move-result-object v0
-
-    aget-object v0, v0, v1
-
-    iget v0, v0, Lcom/estrongs/android/pop/view/utils/v;->v:I
-
-    if-eq v0, v4, :cond_6
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/RecommendListView;->a(Lcom/estrongs/android/ui/view/RecommendListView;)[Lcom/estrongs/android/pop/view/utils/v;
-
-    move-result-object v0
-
-    aget-object v0, v0, v1
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/utils/v;->c()Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_5
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/RecommendListView;->a(Lcom/estrongs/android/ui/view/RecommendListView;)[Lcom/estrongs/android/pop/view/utils/v;
-
-    move-result-object v0
-
-    aget-object v0, v0, v1
-
-    iput-boolean v3, v0, Lcom/estrongs/android/pop/view/utils/v;->y:Z
-
-    new-instance v2, Landroid/content/Intent;
-
-    const-string v0, "android.intent.action.VIEW"
-
-    invoke-direct {v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/RecommendListView;->a(Lcom/estrongs/android/ui/view/RecommendListView;)[Lcom/estrongs/android/pop/view/utils/v;
-
-    move-result-object v0
-
-    aget-object v0, v0, v1
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/utils/v;->c()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
-
-    :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/RecommendListView;->c(Lcom/estrongs/android/ui/view/RecommendListView;)Landroid/content/Context;
-
-    move-result-object v0
-
-    instance-of v0, v0, Lcom/estrongs/android/pop/app/RecommAcitivity;
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/RecommendListView;->c(Lcom/estrongs/android/ui/view/RecommendListView;)Landroid/content/Context;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/android/pop/app/RecommAcitivity;
-
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/pop/app/RecommAcitivity;->a(Landroid/content/Intent;)V
-    :try_end_0
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    :cond_1
+    iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     goto :goto_0
 
-    :catch_0
-    move-exception v0
+    :cond_2
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/RecommendListView;->c(Lcom/estrongs/android/ui/view/RecommendListView;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->d(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Landroid/os/Handler;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
+    const/4 v1, 0x4
 
-    invoke-static {v1}, Lcom/estrongs/android/ui/view/RecommendListView;->c(Lcom/estrongs/android/ui/view/RecommendListView;)Landroid/content/Context;
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
+
+    invoke-static {v1}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->d(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Landroid/os/Handler;
 
     move-result-object v1
 
-    const v2, 0x7f0b0202
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
+    goto :goto_1
+.end method
 
-    move-result-object v1
+.method public onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
+    .locals 2
 
-    invoke-static {v0, v1, v3}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    const-string v0, "://"
 
-    goto/16 :goto_0
+    invoke-virtual {p4, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
-    :cond_4
-    :try_start_1
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
+    move-result v0
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/RecommendListView;->c(Lcom/estrongs/android/ui/view/RecommendListView;)Landroid/content/Context;
+    if-lez v0, :cond_0
 
-    move-result-object v0
+    add-int/lit8 v0, v0, 0x3
 
-    invoke-virtual {v0, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-    :try_end_1
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
+    invoke-virtual {p4, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    goto/16 :goto_0
+    move-result-object p4
 
-    :cond_5
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/RecommendListView;->a(Lcom/estrongs/android/ui/view/RecommendListView;)[Lcom/estrongs/android/pop/view/utils/v;
+    invoke-static {v0}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->n(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Ljava/lang/String;
 
     move-result-object v0
 
-    aget-object v0, v0, v1
+    invoke-virtual {p4, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
-    const-wide/16 v2, 0x0
-
-    iput-wide v2, v0, Lcom/estrongs/android/pop/view/utils/v;->u:J
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/RecommendListView;->a(Lcom/estrongs/android/ui/view/RecommendListView;)[Lcom/estrongs/android/pop/view/utils/v;
-
-    move-result-object v0
-
-    aget-object v0, v0, v1
-
-    iput v5, v0, Lcom/estrongs/android/pop/view/utils/v;->q:I
-
-    iget-object v2, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/RecommendListView;->b(Lcom/estrongs/android/ui/view/RecommendListView;)Landroid/util/SparseArray;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    iget-object v3, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
-
-    invoke-static {v3}, Lcom/estrongs/android/ui/view/RecommendListView;->a(Lcom/estrongs/android/ui/view/RecommendListView;)[Lcom/estrongs/android/pop/view/utils/v;
-
-    move-result-object v3
-
-    aget-object v3, v3, v1
-
-    invoke-static {v2, v0, v3}, Lcom/estrongs/android/ui/view/RecommendListView;->a(Lcom/estrongs/android/ui/view/RecommendListView;Landroid/view/View;Lcom/estrongs/android/pop/view/utils/v;)V
-
-    invoke-static {}, Lcom/estrongs/android/pop/view/utils/n;->b()Lcom/estrongs/android/pop/view/utils/n;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
-
-    invoke-static {v2}, Lcom/estrongs/android/ui/view/RecommendListView;->a(Lcom/estrongs/android/ui/view/RecommendListView;)[Lcom/estrongs/android/pop/view/utils/v;
-
-    move-result-object v2
-
-    aget-object v1, v2, v1
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/utils/n;->c(Lcom/estrongs/android/pop/view/utils/v;)Z
-
-    goto/16 :goto_0
-
-    :cond_6
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/RecommendListView;->c(Lcom/estrongs/android/ui/view/RecommendListView;)Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
-
-    invoke-static {v2}, Lcom/estrongs/android/ui/view/RecommendListView;->a(Lcom/estrongs/android/ui/view/RecommendListView;)[Lcom/estrongs/android/pop/view/utils/v;
-
-    move-result-object v2
-
-    aget-object v1, v2, v1
-
-    iget-object v1, v1, Lcom/estrongs/android/pop/view/utils/v;->f:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object v0
+    move-result v0
 
     if-eqz v0, :cond_1
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
 
-    invoke-static {v1}, Lcom/estrongs/android/ui/view/RecommendListView;->c(Lcom/estrongs/android/ui/view/RecommendListView;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->d(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Landroid/os/Handler;
+
+    move-result-object v0
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
+
+    invoke-static {v1}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->d(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Landroid/os/Handler;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    goto/16 :goto_0
+    :cond_1
+    return-void
+.end method
 
-    :cond_7
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
+.method public onReceivedSslError(Landroid/webkit/WebView;Landroid/webkit/SslErrorHandler;Landroid/net/http/SslError;)V
+    .locals 1
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "NewApi"
+        }
+    .end annotation
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/RecommendListView;->a(Lcom/estrongs/android/ui/view/RecommendListView;)[Lcom/estrongs/android/pop/view/utils/v;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
 
-    move-result-object v0
+    invoke-static {v0, p1, p2, p3}, Lcom/estrongs/android/util/ah;->a(Landroid/content/Context;Landroid/webkit/WebView;Landroid/webkit/SslErrorHandler;Landroid/net/http/SslError;)V
 
-    aget-object v0, v0, v1
+    return-void
+.end method
 
-    iget v0, v0, Lcom/estrongs/android/pop/view/utils/v;->q:I
+.method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
+    .locals 1
 
-    if-ne v0, v4, :cond_8
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/RecommendListView;->a(Lcom/estrongs/android/ui/view/RecommendListView;)[Lcom/estrongs/android/pop/view/utils/v;
-
-    move-result-object v0
-
-    aget-object v0, v0, v1
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/view/utils/v;->f:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/view/utils/n;->a(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/b;->a(Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
-
-    invoke-static {v1}, Lcom/estrongs/android/ui/view/RecommendListView;->c(Lcom/estrongs/android/ui/view/RecommendListView;)Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
-    goto/16 :goto_0
-
-    :cond_8
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/RecommendListView;->a(Lcom/estrongs/android/ui/view/RecommendListView;)[Lcom/estrongs/android/pop/view/utils/v;
-
-    move-result-object v0
-
-    aget-object v0, v0, v1
-
-    iget v0, v0, Lcom/estrongs/android/pop/view/utils/v;->q:I
-
-    const/4 v2, 0x4
-
-    if-ne v0, v2, :cond_1
-
-    invoke-static {}, Lcom/estrongs/android/pop/view/utils/n;->b()Lcom/estrongs/android/pop/view/utils/n;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lcom/estrongs/android/ui/view/bv;->a:Lcom/estrongs/android/ui/view/RecommendListView;
-
-    invoke-static {v2}, Lcom/estrongs/android/ui/view/RecommendListView;->a(Lcom/estrongs/android/ui/view/RecommendListView;)[Lcom/estrongs/android/pop/view/utils/v;
-
-    move-result-object v2
-
-    aget-object v1, v2, v1
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/utils/n;->c(Lcom/estrongs/android/pop/view/utils/v;)Z
-
-    goto/16 :goto_0
+    return v0
 .end method

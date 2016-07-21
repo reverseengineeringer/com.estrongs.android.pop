@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/dialog/hn;
+.field final synthetic a:Landroid/content/Context;
+
+.field final synthetic b:Lcom/estrongs/android/ui/dialog/hq;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/hn;)V
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/hq;Landroid/content/Context;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/ic;->a:Lcom/estrongs/android/ui/dialog/hn;
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/ic;->b:Lcom/estrongs/android/ui/dialog/hq;
+
+    iput-object p2, p0, Lcom/estrongs/android/ui/dialog/ic;->a:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,38 +26,65 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public onClick(Landroid/view/View;)V
+    .locals 3
 
-    :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ic;->a:Lcom/estrongs/android/ui/dialog/hn;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ic;->b:Lcom/estrongs/android/ui/dialog/hq;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/hn;->k:Landroid/widget/ProgressBar;
+    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/hq;->a(Lcom/estrongs/android/ui/dialog/hq;)Ljava/lang/String;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
+    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/ic;->b:Lcom/estrongs/android/ui/dialog/hq;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ic;->a:Lcom/estrongs/android/ui/dialog/hn;
+    invoke-static {v1}, Lcom/estrongs/android/ui/dialog/hq;->a(Lcom/estrongs/android/ui/dialog/hq;)Ljava/lang/String;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/hn;->l:Lcom/estrongs/android/pop/app/diskusage/a;
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->bl(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->G(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    :goto_0
+    if-eqz v1, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ic;->a:Landroid/content/Context;
+
+    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/ic;->a:Landroid/content/Context;
+
+    const-string v2, "clipboard"
+
+    invoke-virtual {v0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/text/ClipboardManager;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ic;->a:Lcom/estrongs/android/ui/dialog/hn;
+    invoke-virtual {v0, v1}, Landroid/text/ClipboardManager;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/hn;->l:Lcom/estrongs/android/pop/app/diskusage/a;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ic;->a:Landroid/content/Context;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/diskusage/a;->a()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    const v1, 0x7f080232
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     :cond_0
-    :goto_0
     return-void
 
-    :catch_0
-    move-exception v0
+    :cond_1
+    move-object v1, v0
 
     goto :goto_0
 .end method

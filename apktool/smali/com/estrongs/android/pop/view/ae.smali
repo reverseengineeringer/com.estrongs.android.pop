@@ -2,7 +2,19 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/estrongs/android/view/cq;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/estrongs/android/view/cq",
+        "<",
+        "Lcom/estrongs/fs/h;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
@@ -22,20 +34,37 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public a(Ljava/util/List;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/estrongs/fs/h;",
+            ">;)V"
+        }
+    .end annotation
 
     iget-object v0, p0, Lcom/estrongs/android/pop/view/ae;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->k()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->O()Lcom/estrongs/android/view/cr;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/ae;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    move-result-object v0
 
-    const/4 v1, 0x0
+    if-nez v0, :cond_0
 
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/pop/app/network/EsNetworkActivity;->a(Lcom/estrongs/android/pop/esclasses/ESActivity;Ljava/util/ArrayList;Z)V
-
+    :goto_0
     return-void
+
+    :cond_0
+    invoke-virtual {v0}, Lcom/estrongs/android/view/cr;->d()I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/ae;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    invoke-virtual {v1, p1, v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a(Ljava/util/List;I)V
+
+    goto :goto_0
 .end method

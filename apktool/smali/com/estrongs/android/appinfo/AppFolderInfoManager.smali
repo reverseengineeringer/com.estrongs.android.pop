@@ -22,6 +22,8 @@
 
 .field static final o:Ljava/lang/String;
 
+.field static final p:Ljava/lang/String;
+
 
 # instance fields
 .field c:Landroid/database/sqlite/SQLiteDatabase;
@@ -50,10 +52,10 @@
     .end annotation
 .end field
 
-.field f:Landroid/support/v4/b/c;
+.field f:Landroid/support/v4/e/g;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroid/support/v4/b/c",
+            "Landroid/support/v4/e/g",
             "<",
             "Ljava/lang/String;",
             "Landroid/graphics/drawable/Drawable;",
@@ -72,9 +74,9 @@
 
 .field k:Ljava/util/concurrent/locks/Lock;
 
-.field l:Lcom/estrongs/android/pop/utils/cm;
+.field l:Lcom/estrongs/android/pop/utils/cv;
 
-.field p:Ljava/util/HashMap;
+.field q:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap",
@@ -82,32 +84,32 @@
             "Ljava/lang/String;",
             "Ljava/util/List",
             "<",
-            "Lcom/estrongs/android/appinfo/o;",
+            "Lcom/estrongs/android/appinfo/p;",
             ">;>;"
         }
     .end annotation
 .end field
 
-.field q:I
+.field r:I
 
-.field r:Ljava/util/LinkedList;
+.field s:Ljava/util/LinkedList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/LinkedList",
             "<",
-            "Lcom/estrongs/android/appinfo/AppFolderInfoManager$LogoDownloadTask;",
+            "Ljava/lang/Object;",
             ">;"
         }
     .end annotation
 .end field
 
-.field s:Landroid/database/sqlite/SQLiteDatabase;
+.field t:Landroid/database/sqlite/SQLiteDatabase;
 
-.field t:Ljava/lang/Object;
+.field u:Ljava/lang/Object;
 
-.field u:Z
+.field v:Z
 
-.field private v:Z
+.field private w:Z
 
 
 # direct methods
@@ -138,7 +140,7 @@
 
     const-string v2, "/Android"
 
-    const v3, 0x7f02010c
+    const v3, 0x7f020262
 
     invoke-direct {v1, v2, v3, v4, v4}, Lcom/estrongs/android/appinfo/n;-><init>(Ljava/lang/String;IZZ)V
 
@@ -150,7 +152,7 @@
 
     const-string v2, "/dcim"
 
-    const v3, 0x7f02010f
+    const v3, 0x7f020265
 
     invoke-direct {v1, v2, v3, v5, v4}, Lcom/estrongs/android/appinfo/n;-><init>(Ljava/lang/String;IZZ)V
 
@@ -162,7 +164,7 @@
 
     const-string v2, "/download"
 
-    const v3, 0x7f020110
+    const v3, 0x7f020266
 
     invoke-direct {v1, v2, v3, v5, v4}, Lcom/estrongs/android/appinfo/n;-><init>(Ljava/lang/String;IZZ)V
 
@@ -174,7 +176,7 @@
 
     const-string v2, "/.android_secure"
 
-    const v3, 0x7f02010d
+    const v3, 0x7f020263
 
     invoke-direct {v1, v2, v3, v5, v4}, Lcom/estrongs/android/appinfo/n;-><init>(Ljava/lang/String;IZZ)V
 
@@ -186,7 +188,7 @@
 
     const-string v2, "/Movies"
 
-    const v3, 0x7f020112
+    const v3, 0x7f020268
 
     invoke-direct {v1, v2, v3, v5, v4}, Lcom/estrongs/android/appinfo/n;-><init>(Ljava/lang/String;IZZ)V
 
@@ -198,7 +200,7 @@
 
     const-string v2, "/Pictures"
 
-    const v3, 0x7f020114
+    const v3, 0x7f02026a
 
     invoke-direct {v1, v2, v3, v5, v4}, Lcom/estrongs/android/appinfo/n;-><init>(Ljava/lang/String;IZZ)V
 
@@ -210,7 +212,7 @@
 
     const-string v2, "/Video"
 
-    const v3, 0x7f020116
+    const v3, 0x7f02026c
 
     invoke-direct {v1, v2, v3, v4, v4}, Lcom/estrongs/android/appinfo/n;-><init>(Ljava/lang/String;IZZ)V
 
@@ -222,7 +224,7 @@
 
     const-string v2, "/Music"
 
-    const v3, 0x7f020113
+    const v3, 0x7f020269
 
     invoke-direct {v1, v2, v3, v4, v4}, Lcom/estrongs/android/appinfo/n;-><init>(Ljava/lang/String;IZZ)V
 
@@ -234,7 +236,7 @@
 
     const-string v2, "/.estrongs"
 
-    const v3, 0x7f020111
+    const v3, 0x7f020267
 
     invoke-direct {v1, v2, v3, v4, v4}, Lcom/estrongs/android/appinfo/n;-><init>(Ljava/lang/String;IZZ)V
 
@@ -246,7 +248,7 @@
 
     const-string v2, "/backups"
 
-    const v3, 0x7f02010e
+    const v3, 0x7f020264
 
     invoke-direct {v1, v2, v3, v4, v4}, Lcom/estrongs/android/appinfo/n;-><init>(Ljava/lang/String;IZZ)V
 
@@ -258,7 +260,7 @@
 
     const-string v2, "/Ringtones"
 
-    const v3, 0x7f020115
+    const v3, 0x7f02026b
 
     invoke-direct {v1, v2, v3, v4, v5}, Lcom/estrongs/android/appinfo/n;-><init>(Ljava/lang/String;IZZ)V
 
@@ -296,7 +298,7 @@
 
     move-result-object v0
 
-    const-string v1, "/.folder_logo"
+    const-string v1, "/.app_icon_back"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -318,7 +320,7 @@
 
     move-result-object v0
 
-    const-string v1, "/folder_app.db"
+    const-string v1, "/.folder_logo"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -329,6 +331,28 @@
     move-result-object v0
 
     sput-object v0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->o:Ljava/lang/String;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v1, Lcom/estrongs/android/pop/a;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "/folder_app.db"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->p:Ljava/lang/String;
 
     return-void
 .end method
@@ -362,7 +386,7 @@
 
     invoke-direct {v0, p0, v1}, Lcom/estrongs/android/appinfo/a;-><init>(Lcom/estrongs/android/appinfo/AppFolderInfoManager;I)V
 
-    iput-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->f:Landroid/support/v4/b/c;
+    iput-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->f:Landroid/support/v4/e/g;
 
     new-instance v0, Lcom/estrongs/android/appinfo/m;
 
@@ -400,39 +424,39 @@
 
     iput-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->k:Ljava/util/concurrent/locks/Lock;
 
-    new-instance v0, Lcom/estrongs/android/pop/utils/cm;
+    new-instance v0, Lcom/estrongs/android/pop/utils/cv;
 
     const/4 v1, 0x2
 
-    invoke-direct {v0, v1}, Lcom/estrongs/android/pop/utils/cm;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/estrongs/android/pop/utils/cv;-><init>(I)V
 
-    iput-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->l:Lcom/estrongs/android/pop/utils/cm;
+    iput-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->l:Lcom/estrongs/android/pop/utils/cv;
 
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->p:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->q:Ljava/util/HashMap;
 
-    iput v2, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->q:I
+    iput v2, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->r:I
 
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->r:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Ljava/util/LinkedList;
 
-    iput-boolean v2, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->v:Z
+    iput-boolean v2, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->w:Z
 
-    iput-object v3, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iput-object v3, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Ljava/lang/Object;
+    iput-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->u:Ljava/lang/Object;
 
-    iput-boolean v2, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->u:Z
+    iput-boolean v2, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->v:Z
 
     return-void
 .end method
@@ -450,7 +474,7 @@
 .method static synthetic a(Lcom/estrongs/android/appinfo/AppFolderInfoManager;)I
     .locals 1
 
-    invoke-direct {p0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->e()I
+    invoke-direct {p0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->f()I
 
     move-result v0
 
@@ -460,7 +484,7 @@
 .method static synthetic a(Lcom/estrongs/android/appinfo/AppFolderInfoManager;Ljava/lang/String;)I
     .locals 1
 
-    invoke-direct {p0, p1}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->l(Ljava/lang/String;)I
+    invoke-direct {p0, p1}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->m(Ljava/lang/String;)I
 
     move-result v0
 
@@ -612,7 +636,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->m:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1132,6 +1156,8 @@
 .method private a(Landroid/content/pm/PackageManager;Landroid/content/pm/PackageInfo;)V
     .locals 4
 
+    invoke-direct {p0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->h()V
+
     if-eqz p1, :cond_0
 
     if-eqz p2, :cond_0
@@ -1142,7 +1168,7 @@
 
     if-nez v0, :cond_0
 
-    sget-object v0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->m:Ljava/lang/String;
+    sget-object v0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->n:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/estrongs/fs/util/j;->n(Ljava/lang/String;)Z
 
@@ -1190,7 +1216,7 @@
 
     const/16 v3, 0x64
 
-    invoke-static {v0, v1, v2, v3}, Lcom/estrongs/android/util/b;->a(Landroid/graphics/Bitmap;Ljava/lang/String;Landroid/graphics/Bitmap$CompressFormat;I)Z
+    invoke-static {v0, v1, v2, v3}, Lcom/estrongs/android/util/a;->a(Landroid/graphics/Bitmap;Ljava/lang/String;Landroid/graphics/Bitmap$CompressFormat;I)Z
 
     invoke-direct {p0, p2}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->c(Landroid/content/pm/PackageInfo;)V
 
@@ -1205,10 +1231,10 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/estrongs/android/appinfo/AppFolderInfoManager;Lcom/estrongs/android/appinfo/t;)V
+.method static synthetic a(Lcom/estrongs/android/appinfo/AppFolderInfoManager;Lcom/estrongs/android/appinfo/u;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a(Lcom/estrongs/android/appinfo/t;)V
+    invoke-direct {p0, p1}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a(Lcom/estrongs/android/appinfo/u;)V
 
     return-void
 .end method
@@ -1221,10 +1247,10 @@
     return-void
 .end method
 
-.method private a(Lcom/estrongs/android/appinfo/t;)V
+.method private a(Lcom/estrongs/android/appinfo/u;)V
     .locals 5
 
-    invoke-interface {p1}, Lcom/estrongs/android/appinfo/t;->a()I
+    invoke-interface {p1}, Lcom/estrongs/android/appinfo/u;->a()I
 
     move-result v0
 
@@ -1248,7 +1274,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1}, Lcom/estrongs/android/appinfo/t;->b()I
+    invoke-interface {p1}, Lcom/estrongs/android/appinfo/u;->b()I
 
     move-result v1
 
@@ -1324,27 +1350,134 @@
 
     if-nez v3, :cond_0
 
-    invoke-interface {p1}, Lcom/estrongs/android/appinfo/t;->c()V
+    invoke-interface {p1}, Lcom/estrongs/android/appinfo/u;->c()V
 
     :goto_0
     return-void
 
     :cond_0
-    new-instance v3, Lcom/estrongs/android/util/y;
+    new-instance v3, Lcom/estrongs/android/util/aa;
 
-    invoke-direct {v3, v0}, Lcom/estrongs/android/util/y;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v0}, Lcom/estrongs/android/util/aa;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v3, v2}, Lcom/estrongs/android/util/y;->a(Ljava/lang/String;)V
+    invoke-virtual {v3, v2}, Lcom/estrongs/android/util/aa;->a(Ljava/lang/String;)V
 
     new-instance v0, Lcom/estrongs/android/appinfo/h;
 
-    invoke-direct {v0, p0, v2, v1, p1}, Lcom/estrongs/android/appinfo/h;-><init>(Lcom/estrongs/android/appinfo/AppFolderInfoManager;Ljava/lang/String;Ljava/lang/String;Lcom/estrongs/android/appinfo/t;)V
+    invoke-direct {v0, p0, v2, v1, p1}, Lcom/estrongs/android/appinfo/h;-><init>(Lcom/estrongs/android/appinfo/AppFolderInfoManager;Ljava/lang/String;Ljava/lang/String;Lcom/estrongs/android/appinfo/u;)V
 
-    invoke-virtual {v3, v0}, Lcom/estrongs/android/util/y;->a(Lcom/estrongs/android/util/ab;)V
+    invoke-virtual {v3, v0}, Lcom/estrongs/android/util/aa;->a(Lcom/estrongs/android/util/af;)V
 
-    invoke-virtual {v3}, Lcom/estrongs/android/util/y;->c()V
+    invoke-virtual {v3}, Lcom/estrongs/android/util/aa;->c()V
 
     goto :goto_0
+.end method
+
+.method private a(Ljava/io/File;Ljava/io/File;)V
+    .locals 8
+
+    invoke-virtual {p2}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p2}, Ljava/io/File;->mkdirs()Z
+
+    :cond_0
+    invoke-virtual {p1}, Ljava/io/File;->list()[Ljava/lang/String;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_2
+
+    array-length v4, v3
+
+    const/4 v0, 0x0
+
+    move v2, v0
+
+    :goto_0
+    if-ge v2, v4, :cond_2
+
+    aget-object v5, v3, v2
+
+    new-instance v6, Ljava/io/File;
+
+    invoke-direct {v6, p1, v5}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    invoke-virtual {v6}, Ljava/io/File;->isFile()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    new-instance v0, Ljava/io/FileInputStream;
+
+    invoke-direct {v0, v6}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    new-instance v1, Ljava/io/File;
+
+    invoke-direct {v1, p2, v5}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    invoke-static {v0, v1}, Lcom/estrongs/fs/util/j;->a(Ljava/io/InputStream;Ljava/io/File;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    invoke-static {v0}, Lcom/estrongs/fs/util/j;->a(Ljava/io/InputStream;)V
+
+    :cond_1
+    :goto_1
+    add-int/lit8 v0, v2, 0x1
+
+    move v2, v0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    move-object v0, v1
+
+    :goto_2
+    invoke-static {v0}, Lcom/estrongs/fs/util/j;->a(Ljava/io/InputStream;)V
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v0
+
+    :goto_3
+    invoke-static {v1}, Lcom/estrongs/fs/util/j;->a(Ljava/io/InputStream;)V
+
+    throw v0
+
+    :cond_2
+    return-void
+
+    :catchall_1
+    move-exception v1
+
+    move-object v7, v1
+
+    move-object v1, v0
+
+    move-object v0, v7
+
+    goto :goto_3
+
+    :catch_1
+    move-exception v1
+
+    goto :goto_2
 .end method
 
 .method private a(Ljava/lang/String;Ljava/lang/String;)V
@@ -1434,9 +1567,9 @@
 
     const/4 v4, -0x1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_0
 
-    if-eqz p2, :cond_1
+    if-eqz p2, :cond_0
 
     const-string v0, "/"
 
@@ -1444,7 +1577,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     const-string v0, "/"
 
@@ -1452,7 +1585,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
@@ -1462,24 +1595,30 @@
 
     invoke-virtual {p2, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object v0
 
-    :cond_0
-    invoke-direct {p0, p2}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->o(Ljava/lang/String;)I
+    :goto_0
+    invoke-direct {p0, v0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->p(Ljava/lang/String;)I
 
     move-result v2
 
     if-ne v2, v4, :cond_2
 
-    :cond_1
+    :cond_0
+    :goto_1
     return-void
+
+    :cond_1
+    move-object v0, p2
+
+    goto :goto_0
 
     :cond_2
     move v0, v1
 
     :cond_3
-    :goto_0
-    if-eq v0, v4, :cond_1
+    :goto_2
+    if-eq v0, v4, :cond_4
 
     add-int/lit8 v0, v0, 0x1
 
@@ -1495,7 +1634,7 @@
 
     move-result-object v3
 
-    invoke-direct {p0, v3}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->n(Ljava/lang/String;)I
+    invoke-direct {p0, v3}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->o(Ljava/lang/String;)I
 
     move-result v3
 
@@ -1503,7 +1642,16 @@
 
     invoke-direct {p0, v3, v2, p3}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a(IIZ)V
 
-    goto :goto_0
+    goto :goto_2
+
+    :cond_4
+    invoke-static {}, Lcom/estrongs/android/scanner/l;->a()Lcom/estrongs/android/scanner/l;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2}, Lcom/estrongs/android/scanner/l;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_1
 .end method
 
 .method private a(Landroid/content/pm/PackageManager;Ljava/util/Collection;Ljava/lang/String;)Z
@@ -1831,7 +1979,7 @@
     aput-object p1, v4, v1
 
     :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v1, "config"
 
@@ -1921,7 +2069,7 @@
 .method static synthetic b(Lcom/estrongs/android/appinfo/AppFolderInfoManager;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->f()V
+    invoke-direct {p0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->g()V
 
     return-void
 .end method
@@ -1961,26 +2109,26 @@
 
     invoke-virtual {p2, v2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object v0
 
-    :cond_0
-    invoke-direct {p0, p2}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->o(Ljava/lang/String;)I
+    :goto_0
+    invoke-direct {p0, v0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->p(Ljava/lang/String;)I
+
+    move-result v1
+
+    if-ne v1, v7, :cond_7
+
+    invoke-direct {p0, v0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->r(Ljava/lang/String;)I
 
     move-result v0
 
-    if-ne v0, v7, :cond_1
-
-    invoke-direct {p0, p2}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->q(Ljava/lang/String;)I
-
-    move-result v0
-
-    :cond_1
+    :goto_1
     move v1, v2
 
     move v5, v2
 
-    :goto_0
-    if-eq v1, v7, :cond_2
+    :goto_2
+    if-eq v1, v7, :cond_1
 
     add-int/lit8 v3, v5, 0x1
 
@@ -1994,15 +2142,20 @@
 
     move v5, v3
 
+    goto :goto_2
+
+    :cond_0
+    move-object v0, p2
+
     goto :goto_0
 
-    :cond_2
+    :cond_1
     move v1, v2
 
     move v4, v2
 
-    :goto_1
-    if-eq v4, v7, :cond_3
+    :goto_3
+    if-eq v4, v7, :cond_2
 
     add-int/lit8 v3, v1, 0x1
 
@@ -2020,23 +2173,30 @@
 
     move-result-object v6
 
-    invoke-direct {p0, v6}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->m(Ljava/lang/String;)Z
+    invoke-direct {p0, v6}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->n(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
+    :cond_2
+    invoke-static {}, Lcom/estrongs/android/scanner/l;->a()Lcom/estrongs/android/scanner/l;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2}, Lcom/estrongs/android/scanner/l;->b(Ljava/lang/String;Ljava/lang/String;)V
+
     :cond_3
     return-void
 
     :cond_4
-    invoke-direct {p0, v6}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->n(Ljava/lang/String;)I
+    invoke-direct {p0, v6}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->o(Ljava/lang/String;)I
 
     move-result v1
 
     if-ne v1, v7, :cond_5
 
-    invoke-direct {p0, v6}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->p(Ljava/lang/String;)I
+    invoke-direct {p0, v6}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->q(Ljava/lang/String;)I
 
     move-result v1
 
@@ -2047,10 +2207,15 @@
 
     move v1, v3
 
-    goto :goto_1
+    goto :goto_3
 
     :cond_6
     move v1, v3
+
+    goto :goto_3
+
+    :cond_7
+    move v0, v1
 
     goto :goto_1
 .end method
@@ -2151,7 +2316,7 @@
 
     aput-object v2, v0, v1
 
-    iget-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v2, "INSERT OR REPLACE INTO config(key,value) VALUES(?,?)"
 
@@ -2168,7 +2333,21 @@
     return-object v0
 .end method
 
-.method private d(Lcom/estrongs/fs/h;)Ljava/lang/String;
+.method private f()I
+    .locals 2
+
+    const-string v0, "app_folder_map_version"
+
+    const v1, 0x5f5e100
+
+    invoke-direct {p0, v0, v1}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a(Ljava/lang/String;I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method private f(Lcom/estrongs/fs/h;)Ljava/lang/String;
     .locals 5
 
     const/4 v0, 0x0
@@ -2178,7 +2357,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->bD(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->bU(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -2192,17 +2371,17 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->bE(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->bV(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/am;->bW(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/ap;->cp(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/am;->bS(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/estrongs/android/util/ap;->cl(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2269,26 +2448,12 @@
     goto :goto_1
 .end method
 
-.method private e()I
-    .locals 2
+.method private g()V
+    .locals 6
 
-    const-string v0, "app_folder_map_version"
+    const/4 v1, 0x0
 
-    const v1, 0x5f5e100
-
-    invoke-direct {p0, v0, v1}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a(Ljava/lang/String;I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method private f()V
-    .locals 4
-
-    const/4 v3, 0x0
-
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     if-eqz v0, :cond_0
 
@@ -2296,159 +2461,351 @@
     return-void
 
     :cond_0
-    :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/estrongs/android/pop/a;->a:Ljava/lang/String;
+    sget-object v2, Lcom/estrongs/android/pop/a;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-string v1, "/appinfo.db"
+    const-string v2, "/appinfo.db"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v3, Lcom/estrongs/android/pop/a;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
+    const-string v3, "/appinfo.db"
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v3, Ljava/io/File;
+
+    invoke-direct {v3, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3}, Ljava/io/File;->exists()Z
+
+    move-result v4
+
+    if-nez v4, :cond_1
+
+    new-instance v4, Ljava/io/File;
+
+    invoke-direct {v4, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v4, v3}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    :try_start_0
+    new-instance v0, Ljava/io/FileInputStream;
+
+    invoke-direct {v0, v4}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
     :try_start_1
-    new-instance v1, Ljava/io/File;
-
-    invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Ljava/io/File;->exists()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Landroid/database/sqlite/SQLiteDatabase;->openDatabase(Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)Landroid/database/sqlite/SQLiteDatabase;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    invoke-static {v0, v3}, Lcom/estrongs/fs/util/j;->a(Ljava/io/InputStream;Ljava/io/File;)V
     :try_end_1
-    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_4
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    invoke-static {v0}, Lcom/estrongs/fs/util/j;->a(Ljava/io/InputStream;)V
+
+    :cond_1
     :goto_1
     :try_start_2
+    new-instance v0, Ljava/io/File;
+
+    invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    const/4 v0, 0x0
+
+    const/4 v3, 0x0
+
+    invoke-static {v2, v0, v3}, Landroid/database/sqlite/SQLiteDatabase;->openDatabase(Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)Landroid/database/sqlite/SQLiteDatabase;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
+    :try_end_2
+    .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_2
+
+    :goto_2
+    :try_start_3
     const-string v0, "CREATE TABLE IF NOT EXISTS installed_app_info(package VARCHAR PRIMARY KEY  NOT NULL , app_name VARCHAR NOT NULL)"
 
-    const-string v1, "CREATE TABLE IF NOT EXISTS config(key VARCHAR PRIMARY KEY NOT NULL, value VARCHAR NOT  NULL)"
+    const-string v2, "CREATE TABLE IF NOT EXISTS config(key VARCHAR PRIMARY KEY NOT NULL, value VARCHAR NOT  NULL)"
 
-    iget-object v2, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v3, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
-    invoke-virtual {v2, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+    invoke-virtual {v3, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
-    invoke-virtual {v0, v1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
-    :try_end_2
-    .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
+    invoke-virtual {v0, v2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+    :try_end_3
+    .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_0
 
     goto :goto_0
 
     :catch_0
     move-exception v0
 
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    :try_start_3
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    :try_start_4
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
-    :try_end_3
-    .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_2
+    :try_end_4
+    .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_3
 
-    :cond_1
-    :goto_2
-    iput-object v3, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    :cond_2
+    :goto_3
+    iput-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     goto :goto_0
 
-    :cond_2
-    const/4 v1, 0x0
+    :catch_1
+    move-exception v0
 
-    :try_start_4
-    invoke-static {v0, v1}, Landroid/database/sqlite/SQLiteDatabase;->openOrCreateDatabase(Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;)Landroid/database/sqlite/SQLiteDatabase;
+    move-object v0, v1
 
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
-    :try_end_4
-    .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_1
+    :goto_4
+    invoke-static {v0}, Lcom/estrongs/fs/util/j;->a(Ljava/io/InputStream;)V
 
     goto :goto_1
 
-    :catch_1
-    move-exception v1
+    :catchall_0
+    move-exception v0
+
+    :goto_5
+    invoke-static {v1}, Lcom/estrongs/fs/util/j;->a(Ljava/io/InputStream;)V
+
+    throw v0
+
+    :cond_3
+    const/4 v0, 0x0
 
     :try_start_5
+    invoke-static {v2, v0}, Landroid/database/sqlite/SQLiteDatabase;->openOrCreateDatabase(Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;)Landroid/database/sqlite/SQLiteDatabase;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
+    :try_end_5
+    .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_2
+
+    goto :goto_2
+
+    :catch_2
+    move-exception v0
+
+    :try_start_6
+    new-instance v0, Ljava/io/File;
+
+    invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_4
+
+    invoke-virtual {v0}, Ljava/io/File;->delete()Z
+
+    :cond_4
+    const/4 v0, 0x0
+
+    invoke-static {v2, v0}, Landroid/database/sqlite/SQLiteDatabase;->openOrCreateDatabase(Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;)Landroid/database/sqlite/SQLiteDatabase;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
+    :try_end_6
+    .catch Ljava/lang/Throwable; {:try_start_6 .. :try_end_6} :catch_0
+
+    goto :goto_2
+
+    :catch_3
+    move-exception v0
+
+    goto :goto_3
+
+    :catchall_1
+    move-exception v1
+
+    move-object v5, v1
+
+    move-object v1, v0
+
+    move-object v0, v5
+
+    goto :goto_5
+
+    :catch_4
+    move-exception v3
+
+    goto :goto_4
+.end method
+
+.method private h()V
+    .locals 4
+
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->bf()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    :try_start_0
+    new-instance v0, Ljava/io/File;
+
+    sget-object v1, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->m:Ljava/lang/String;
+
+    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/io/File;->isDirectory()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
     new-instance v1, Ljava/io/File;
 
-    invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    sget-object v2, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->n:Ljava/lang/String;
+
+    invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v2
 
-    if-eqz v2, :cond_3
+    if-nez v2, :cond_0
 
-    invoke-virtual {v1}, Ljava/io/File;->delete()Z
+    invoke-virtual {v0, v1}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
-    :cond_3
-    const/4 v1, 0x0
+    move-result v2
 
-    invoke-static {v0, v1}, Landroid/database/sqlite/SQLiteDatabase;->openOrCreateDatabase(Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;)Landroid/database/sqlite/SQLiteDatabase;
+    if-nez v2, :cond_0
+
+    invoke-direct {p0, v0, v1}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a(Ljava/io/File;Ljava/io/File;)V
+
+    new-instance v2, Ljava/io/File;
+
+    const-string v3, "ver"
+
+    invoke-direct {v2, v0, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    new-instance v0, Ljava/io/File;
+
+    const-string v3, "ver"
+
+    invoke-direct {v0, v1, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    invoke-direct {p0, v2, v0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a(Ljava/io/File;Ljava/io/File;)V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_0
+    :goto_0
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
-    :try_end_5
-    .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_0
+    invoke-static {v0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
 
-    goto :goto_1
+    move-result-object v0
 
-    :catch_2
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/ad;->x(Z)V
+
+    :cond_1
+    return-void
+
+    :catch_0
     move-exception v0
 
-    goto :goto_2
+    goto :goto_0
 .end method
 
-.method private g()V
+.method private i()V
     .locals 8
 
     const/4 v3, 0x1
 
+    invoke-direct {p0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->h()V
+
     const-string v1, "installedSaved"
 
-    iget-object v2, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->u:Ljava/lang/Object;
 
     monitor-enter v2
 
     :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     if-nez v0, :cond_0
 
-    invoke-direct {p0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->f()V
+    invoke-direct {p0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->g()V
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_5
@@ -2456,11 +2813,11 @@
     if-nez v0, :cond_2
 
     :try_start_1
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->inTransaction()Z
     :try_end_1
@@ -2471,7 +2828,7 @@
     if-eqz v0, :cond_1
 
     :try_start_2
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
     :try_end_2
@@ -2492,7 +2849,7 @@
     move-exception v0
 
     :try_start_4
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
     :try_end_4
@@ -2501,7 +2858,7 @@
     const/4 v0, 0x0
 
     :try_start_5
-    iput-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iput-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     goto :goto_0
 
@@ -2520,7 +2877,7 @@
     const/4 v1, 0x0
 
     :try_start_6
-    iput-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iput-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     throw v0
     :try_end_6
@@ -2540,11 +2897,11 @@
     if-ne v0, v3, :cond_4
 
     :try_start_8
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->inTransaction()Z
     :try_end_8
@@ -2555,7 +2912,7 @@
     if-eqz v0, :cond_3
 
     :try_start_9
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
     :try_end_9
@@ -2575,7 +2932,7 @@
     move-exception v0
 
     :try_start_b
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
     :try_end_b
@@ -2584,7 +2941,7 @@
     const/4 v0, 0x0
 
     :try_start_c
-    iput-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iput-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     goto :goto_2
 
@@ -2593,7 +2950,7 @@
 
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iput-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     throw v0
     :try_end_c
@@ -2613,13 +2970,17 @@
 
     move-result-object v4
 
-    const/16 v0, 0x2000
-
-    invoke-virtual {v4, v0}, Landroid/content/pm/PackageManager;->getInstalledApplications(I)Ljava/util/List;
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
 
     move-result-object v0
 
-    iget-object v5, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    const/16 v5, 0x2000
+
+    invoke-virtual {v0, v5}, Lcom/estrongs/android/pop/FexApplication;->a(I)Ljava/util/List;
+
+    move-result-object v0
+
+    iget-object v5, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v5}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
@@ -2659,7 +3020,7 @@
 
     move-result-object v6
 
-    invoke-virtual {v6}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-interface {v6}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v6
 
@@ -2675,7 +3036,7 @@
 
     invoke-virtual {v3, v0, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v6, "installed_app_info"
 
@@ -2692,11 +3053,11 @@
     move-exception v0
 
     :try_start_e
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     if-eqz v0, :cond_6
 
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->inTransaction()Z
     :try_end_e
@@ -2707,7 +3068,7 @@
     if-eqz v0, :cond_6
 
     :try_start_f
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
     :try_end_f
@@ -2729,7 +3090,7 @@
     :try_start_11
     invoke-direct {p0, v1, v0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->c(Ljava/lang/String;I)V
 
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_11
@@ -2737,11 +3098,11 @@
     .catchall {:try_start_11 .. :try_end_11} :catchall_5
 
     :try_start_12
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     if-eqz v0, :cond_6
 
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->inTransaction()Z
     :try_end_12
@@ -2752,7 +3113,7 @@
     if-eqz v0, :cond_6
 
     :try_start_13
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
     :try_end_13
@@ -2765,7 +3126,7 @@
     move-exception v0
 
     :try_start_14
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
     :try_end_14
@@ -2774,7 +3135,7 @@
     const/4 v0, 0x0
 
     :try_start_15
-    iput-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iput-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     goto :goto_4
 
@@ -2783,7 +3144,7 @@
 
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iput-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     throw v0
     :try_end_15
@@ -2793,7 +3154,7 @@
     move-exception v0
 
     :try_start_16
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
     :try_end_16
@@ -2802,7 +3163,7 @@
     const/4 v0, 0x0
 
     :try_start_17
-    iput-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iput-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     goto :goto_4
 
@@ -2811,18 +3172,18 @@
 
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iput-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     throw v0
 
     :catchall_5
     move-exception v0
 
-    iget-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     if-eqz v1, :cond_8
 
-    iget-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->inTransaction()Z
     :try_end_17
@@ -2833,7 +3194,7 @@
     if-eqz v1, :cond_8
 
     :try_start_18
-    iget-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
     :try_end_18
@@ -2851,7 +3212,7 @@
     move-exception v1
 
     :try_start_1a
-    iget-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->close()V
     :try_end_1a
@@ -2860,7 +3221,7 @@
     const/4 v1, 0x0
 
     :try_start_1b
-    iput-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iput-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     goto :goto_5
 
@@ -2869,21 +3230,75 @@
 
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iput-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     throw v0
     :try_end_1b
     .catchall {:try_start_1b .. :try_end_1b} :catchall_0
 .end method
 
-.method private h()V
+.method private j(Ljava/lang/String;)Lcom/estrongs/android/appinfo/n;
+    .locals 3
+
+    sget-object v0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/android/appinfo/n;
+
+    iget-boolean v2, v0, Lcom/estrongs/android/appinfo/n;->d:Z
+
+    if-nez v2, :cond_1
+
+    iget-object v2, v0, Lcom/estrongs/android/appinfo/n;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    :goto_0
+    return-object v0
+
+    :cond_1
+    iget-object v2, v0, Lcom/estrongs/android/appinfo/n;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method private j()V
     .locals 6
 
     const/4 v5, 0x1
 
     const/4 v0, 0x0
 
-    iget-boolean v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->u:Z
+    iget-boolean v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->v:Z
 
     if-nez v1, :cond_2
 
@@ -2948,7 +3363,7 @@
 
     new-instance v2, Ljava/io/File;
 
-    sget-object v3, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->n:Ljava/lang/String;
+    sget-object v3, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->o:Ljava/lang/String;
 
     invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -3000,7 +3415,7 @@
 
     :cond_1
     :goto_1
-    iput-boolean v5, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->u:Z
+    iput-boolean v5, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->v:Z
 
     :cond_2
     return-void
@@ -3011,61 +3426,7 @@
     goto :goto_1
 .end method
 
-.method private i(Ljava/lang/String;)Lcom/estrongs/android/appinfo/n;
-    .locals 3
-
-    sget-object v0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/android/appinfo/n;
-
-    iget-boolean v2, v0, Lcom/estrongs/android/appinfo/n;->d:Z
-
-    if-nez v2, :cond_1
-
-    iget-object v2, v0, Lcom/estrongs/android/appinfo/n;->a:Ljava/lang/String;
-
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    :goto_0
-    return-object v0
-
-    :cond_1
-    iget-object v2, v0, Lcom/estrongs/android/appinfo/n;->a:Ljava/lang/String;
-
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method private final j(Ljava/lang/String;)Lcom/estrongs/android/appinfo/m;
+.method private final k(Ljava/lang/String;)Lcom/estrongs/android/appinfo/m;
     .locals 1
 
     iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->d:Lcom/estrongs/android/pop/app/imageviewer/gallery/g;
@@ -3079,7 +3440,7 @@
     return-object v0
 .end method
 
-.method private k(Ljava/lang/String;)Lcom/estrongs/fs/impl/local/f;
+.method private l(Ljava/lang/String;)Lcom/estrongs/fs/impl/local/f;
     .locals 3
 
     if-nez p1, :cond_0
@@ -3136,7 +3497,7 @@
     goto :goto_0
 .end method
 
-.method private l(Ljava/lang/String;)I
+.method private m(Ljava/lang/String;)I
     .locals 11
 
     const/4 v10, 0x1
@@ -3498,10 +3859,10 @@
     goto :goto_3
 .end method
 
-.method private m(Ljava/lang/String;)Z
+.method private n(Ljava/lang/String;)Z
     .locals 1
 
-    invoke-direct {p0, p1}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->i(Ljava/lang/String;)Lcom/estrongs/android/appinfo/n;
+    invoke-direct {p0, p1}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->j(Ljava/lang/String;)Lcom/estrongs/android/appinfo/n;
 
     move-result-object v0
 
@@ -3518,7 +3879,7 @@
     goto :goto_0
 .end method
 
-.method private n(Ljava/lang/String;)I
+.method private o(Ljava/lang/String;)I
     .locals 10
 
     const/4 v0, 0x1
@@ -3582,7 +3943,7 @@
     goto :goto_1
 .end method
 
-.method private o(Ljava/lang/String;)I
+.method private p(Ljava/lang/String;)I
     .locals 10
 
     const/4 v0, 0x1
@@ -3646,7 +4007,7 @@
     goto :goto_1
 .end method
 
-.method private p(Ljava/lang/String;)I
+.method private q(Ljava/lang/String;)I
     .locals 4
 
     new-instance v0, Landroid/content/ContentValues;
@@ -3672,7 +4033,7 @@
     return v0
 .end method
 
-.method private q(Ljava/lang/String;)I
+.method private r(Ljava/lang/String;)I
     .locals 4
 
     new-instance v0, Landroid/content/ContentValues;
@@ -3700,24 +4061,24 @@
 
 
 # virtual methods
-.method public a(Landroid/content/Context;Lcom/estrongs/fs/h;Lcom/estrongs/android/appinfo/o;)Landroid/graphics/drawable/Drawable;
+.method public a(Landroid/content/Context;Lcom/estrongs/fs/h;Lcom/estrongs/android/appinfo/p;)Landroid/graphics/drawable/Drawable;
     .locals 2
 
     invoke-static {p1}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->aE()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->aF()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {p2}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/m;
+    invoke-interface {p2}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/w;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/m;->a()Z
+    invoke-virtual {v0}, Lcom/estrongs/fs/w;->a()Z
 
     move-result v0
 
@@ -3727,7 +4088,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->G(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->I(Ljava/lang/String;)I
 
     move-result v0
 
@@ -3746,21 +4107,21 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, p1, v0, p3}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a(Landroid/content/Context;Ljava/lang/String;Lcom/estrongs/android/appinfo/o;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0, p1, v0, p3}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a(Landroid/content/Context;Ljava/lang/String;Lcom/estrongs/android/appinfo/p;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     goto :goto_0
 .end method
 
-.method public a(Landroid/content/Context;Ljava/io/File;Lcom/estrongs/android/appinfo/o;)Landroid/graphics/drawable/Drawable;
+.method public a(Landroid/content/Context;Ljava/io/File;Lcom/estrongs/android/appinfo/p;)Landroid/graphics/drawable/Drawable;
     .locals 2
 
     invoke-static {p1}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->aE()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->aF()Z
 
     move-result v0
 
@@ -3776,7 +4137,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->G(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->I(Ljava/lang/String;)I
 
     move-result v0
 
@@ -3795,21 +4156,21 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, p1, v0, p3}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a(Landroid/content/Context;Ljava/lang/String;Lcom/estrongs/android/appinfo/o;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0, p1, v0, p3}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a(Landroid/content/Context;Ljava/lang/String;Lcom/estrongs/android/appinfo/p;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     goto :goto_0
 .end method
 
-.method public a(Landroid/content/Context;Ljava/lang/String;Lcom/estrongs/android/appinfo/o;)Landroid/graphics/drawable/Drawable;
+.method public a(Landroid/content/Context;Ljava/lang/String;Lcom/estrongs/android/appinfo/p;)Landroid/graphics/drawable/Drawable;
     .locals 9
 
     const/4 v8, 0x6
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, p2}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->j(Ljava/lang/String;)Lcom/estrongs/android/appinfo/m;
+    invoke-direct {p0, p2}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->k(Ljava/lang/String;)Lcom/estrongs/android/appinfo/m;
 
     move-result-object v3
 
@@ -3859,19 +4220,19 @@
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->k(Ljava/lang/String;)Lcom/estrongs/fs/impl/local/f;
+    invoke-direct {p0, v0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->l(Ljava/lang/String;)Lcom/estrongs/fs/impl/local/f;
 
     move-result-object v4
 
     if-eqz v4, :cond_d
 
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->f:Landroid/support/v4/b/c;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->f:Landroid/support/v4/e/g;
 
     invoke-interface {v4}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/b/c;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroid/support/v4/e/g;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -3885,7 +4246,7 @@
 
     if-ne v1, v4, :cond_7
 
-    invoke-static {v0}, Lcom/estrongs/android/util/b;->a(Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0}, Lcom/estrongs/android/util/a;->a(Landroid/graphics/drawable/Drawable;)V
 
     :cond_3
     :goto_1
@@ -3902,15 +4263,15 @@
     if-ne v1, v8, :cond_6
 
     :cond_4
-    new-instance v1, Lcom/estrongs/android/appinfo/p;
+    new-instance v1, Lcom/estrongs/android/appinfo/q;
 
-    invoke-direct {v1, v0}, Lcom/estrongs/android/appinfo/p;-><init>(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {v1, v0}, Lcom/estrongs/android/appinfo/q;-><init>(Landroid/graphics/drawable/Drawable;)V
 
     iget v0, v3, Lcom/estrongs/android/appinfo/m;->b:I
 
     if-ne v0, v8, :cond_5
 
-    invoke-static {v1}, Lcom/estrongs/android/util/b;->a(Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v1}, Lcom/estrongs/android/util/a;->a(Landroid/graphics/drawable/Drawable;)V
 
     :cond_5
     move-object v0, v1
@@ -3926,12 +4287,12 @@
     goto :goto_1
 
     :cond_8
-    iget-object v5, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->p:Ljava/util/HashMap;
+    iget-object v5, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->q:Ljava/util/HashMap;
 
     monitor-enter v5
 
     :try_start_0
-    iget-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->p:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->q:Ljava/util/HashMap;
 
     invoke-interface {v4}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
 
@@ -3974,7 +4335,7 @@
     invoke-interface {v1, p3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_b
-    iget-object v6, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->p:Ljava/util/HashMap;
+    iget-object v6, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->q:Ljava/util/HashMap;
 
     invoke-interface {v4}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
 
@@ -3988,7 +4349,7 @@
 
     if-eqz p3, :cond_c
 
-    invoke-virtual {p3}, Lcom/estrongs/android/appinfo/o;->a()Z
+    invoke-virtual {p3}, Lcom/estrongs/android/appinfo/p;->a()Z
 
     move-result v1
 
@@ -4001,25 +4362,25 @@
     invoke-virtual {v1}, Landroid/os/ConditionVariable;->close()V
 
     :goto_2
-    iget-object v2, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->l:Lcom/estrongs/android/pop/utils/cm;
+    iget-object v2, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->l:Lcom/estrongs/android/pop/utils/cv;
 
     new-instance v5, Lcom/estrongs/android/appinfo/e;
 
     invoke-direct {v5, p0, v4, v1}, Lcom/estrongs/android/appinfo/e;-><init>(Lcom/estrongs/android/appinfo/AppFolderInfoManager;Lcom/estrongs/fs/h;Landroid/os/ConditionVariable;)V
 
-    invoke-virtual {v2, v5}, Lcom/estrongs/android/pop/utils/cm;->a(Lcom/estrongs/android/pop/utils/cq;)V
+    invoke-virtual {v2, v5}, Lcom/estrongs/android/pop/utils/cv;->a(Lcom/estrongs/android/pop/utils/cz;)V
 
     if-eqz v1, :cond_3
 
     invoke-virtual {v1}, Landroid/os/ConditionVariable;->block()V
 
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->f:Landroid/support/v4/b/c;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->f:Landroid/support/v4/e/g;
 
     invoke-interface {v4}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/b/c;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroid/support/v4/e/g;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -4103,11 +4464,11 @@
 
     const/4 v10, 0x0
 
-    invoke-interface/range {p1 .. p1}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/m;
+    invoke-interface/range {p1 .. p1}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/w;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/estrongs/fs/m;->a()Z
+    invoke-virtual {v1}, Lcom/estrongs/fs/w;->a()Z
 
     move-result v1
 
@@ -4120,7 +4481,7 @@
     :cond_1
     if-nez p2, :cond_2
 
-    invoke-direct/range {p0 .. p1}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->d(Lcom/estrongs/fs/h;)Ljava/lang/String;
+    invoke-direct/range {p0 .. p1}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->f(Lcom/estrongs/fs/h;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -4168,7 +4529,7 @@
     :try_start_0
     move-object/from16 v0, p2
 
-    invoke-direct {p0, v0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->i(Ljava/lang/String;)Lcom/estrongs/android/appinfo/n;
+    invoke-direct {p0, v0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->j(Ljava/lang/String;)Lcom/estrongs/android/appinfo/n;
 
     move-result-object v2
 
@@ -4413,7 +4774,7 @@
     :cond_a
     move-object/from16 v0, p2
 
-    invoke-direct {p0, v0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->n(Ljava/lang/String;)I
+    invoke-direct {p0, v0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->o(Ljava/lang/String;)I
 
     move-result v1
 
@@ -4826,7 +5187,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->m:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->n:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4870,12 +5231,12 @@
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    invoke-direct {p0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->h()V
+    invoke-direct {p0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->j()V
 
     :try_start_0
     new-instance v0, Ljava/io/File;
 
-    sget-object v1, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->o:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->p:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -4892,7 +5253,7 @@
 
     :cond_1
     :try_start_1
-    sget-object v0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->o:Ljava/lang/String;
+    sget-object v0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->p:Ljava/lang/String;
 
     const/4 v1, 0x0
 
@@ -4915,7 +5276,7 @@
 
     new-instance v0, Ljava/io/File;
 
-    sget-object v1, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->o:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->p:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -4923,7 +5284,7 @@
 
     invoke-virtual {p0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->b()V
 
-    sget-object v0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->o:Ljava/lang/String;
+    sget-object v0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->p:Ljava/lang/String;
 
     const/4 v1, 0x0
 
@@ -4978,10 +5339,10 @@
     throw v0
 .end method
 
-.method public a(Landroid/content/Context;Lcom/estrongs/fs/h;Ljava/lang/String;ZLcom/estrongs/android/appinfo/u;)V
+.method public a(Landroid/content/Context;Lcom/estrongs/fs/h;Ljava/lang/String;ZLcom/estrongs/android/appinfo/v;)V
     .locals 8
 
-    invoke-direct {p0, p2}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->d(Lcom/estrongs/fs/h;)Ljava/lang/String;
+    invoke-direct {p0, p2}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->f(Lcom/estrongs/fs/h;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -5005,19 +5366,19 @@
 
     move v7, p4
 
-    invoke-direct/range {v0 .. v7}, Lcom/estrongs/android/appinfo/i;-><init>(Lcom/estrongs/android/appinfo/AppFolderInfoManager;Ljava/lang/String;Ljava/lang/String;Lcom/estrongs/fs/h;Lcom/estrongs/android/appinfo/u;Landroid/content/Context;Z)V
+    invoke-direct/range {v0 .. v7}, Lcom/estrongs/android/appinfo/i;-><init>(Lcom/estrongs/android/appinfo/AppFolderInfoManager;Ljava/lang/String;Ljava/lang/String;Lcom/estrongs/fs/h;Lcom/estrongs/android/appinfo/v;Landroid/content/Context;Z)V
 
     invoke-virtual {v0}, Lcom/estrongs/android/appinfo/i;->start()V
 
     goto :goto_0
 .end method
 
-.method public a(Lcom/estrongs/android/appinfo/u;)V
+.method public a(Lcom/estrongs/android/appinfo/v;)V
     .locals 4
 
-    invoke-direct {p0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->g()V
+    invoke-direct {p0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->i()V
 
-    invoke-static {}, Lcom/estrongs/android/util/ak;->b()Z
+    invoke-static {}, Lcom/estrongs/android/util/an;->b()Z
 
     move-result v0
 
@@ -5036,7 +5397,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->aG()J
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->aH()J
 
     move-result-wide v0
 
@@ -5079,6 +5440,12 @@
     if-eq v1, v0, :cond_0
 
     :cond_2
+    invoke-static {}, Lcom/estrongs/android/scanner/l;->a()Lcom/estrongs/android/scanner/l;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/scanner/l;->g()V
+
     iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->c:Landroid/database/sqlite/SQLiteDatabase;
 
     if-nez v0, :cond_3
@@ -5088,9 +5455,9 @@
     :cond_3
     new-instance v0, Lcom/estrongs/android/appinfo/g;
 
-    invoke-direct {v0, p0, p1}, Lcom/estrongs/android/appinfo/g;-><init>(Lcom/estrongs/android/appinfo/AppFolderInfoManager;Lcom/estrongs/android/appinfo/u;)V
+    invoke-direct {v0, p0, p1}, Lcom/estrongs/android/appinfo/g;-><init>(Lcom/estrongs/android/appinfo/AppFolderInfoManager;Lcom/estrongs/android/appinfo/v;)V
 
-    invoke-direct {p0, v0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a(Lcom/estrongs/android/appinfo/t;)V
+    invoke-direct {p0, v0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a(Lcom/estrongs/android/appinfo/u;)V
 
     goto :goto_0
 .end method
@@ -5319,7 +5686,7 @@
 .end method
 
 .method public a(Ljava/lang/String;Ljava/util/List;)V
-    .locals 5
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -5331,7 +5698,31 @@
         }
     .end annotation
 
-    const/4 v0, 0x0
+    new-instance v0, Lcom/estrongs/android/appinfo/k;
+
+    invoke-direct {v0, p0, p1}, Lcom/estrongs/android/appinfo/k;-><init>(Lcom/estrongs/android/appinfo/AppFolderInfoManager;Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1, p2, v0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a(Ljava/lang/String;Ljava/util/List;Lcom/estrongs/android/appinfo/r;)V
+
+    return-void
+.end method
+
+.method public a(Ljava/lang/String;Ljava/util/List;Lcom/estrongs/android/appinfo/r;)V
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/util/List",
+            "<",
+            "Lcom/estrongs/fs/h;",
+            ">;",
+            "Lcom/estrongs/android/appinfo/r;",
+            ")V"
+        }
+    .end annotation
+
+    const/4 v3, 0x0
 
     if-nez p2, :cond_1
 
@@ -5342,125 +5733,179 @@
     :cond_1
     invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-static {v1}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+    invoke-static {v0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->aE()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->aF()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bC(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_7
+    if-nez v1, :cond_2
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bl(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->cg(Ljava/lang/String;)Z
 
-    move-result v2
+    move-result v1
 
-    if-nez v2, :cond_2
+    if-nez v1, :cond_2
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bP(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bu(Ljava/lang/String;)Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_5
+    if-eqz v1, :cond_6
 
     :cond_2
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
     :goto_1
-    if-nez v2, :cond_7
+    if-nez v1, :cond_3
 
-    :goto_2
+    invoke-virtual {p0, p2}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a(Ljava/util/List;)Z
+
+    move-result v1
+
+    :cond_3
+    if-nez v1, :cond_4
+
+    move v0, v3
+
+    :cond_4
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object v2
+    move-result-object v4
 
-    :cond_3
-    :goto_3
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    :cond_5
+    :goto_2
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_8
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/estrongs/fs/h;
 
-    invoke-interface {v0}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/m;
+    invoke-interface {v0}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/w;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v3}, Lcom/estrongs/fs/m;->a()Z
+    invoke-virtual {v2}, Lcom/estrongs/fs/w;->a()Z
 
-    move-result v3
+    move-result v2
 
-    if-eqz v3, :cond_3
-
-    invoke-interface {v0}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3}, Lcom/estrongs/android/util/am;->G(Ljava/lang/String;)I
-
-    move-result v3
-
-    const/16 v4, 0x17
-
-    if-eq v3, v4, :cond_3
+    if-eqz v2, :cond_5
 
     invoke-interface {v0}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-direct {p0, v3}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->j(Ljava/lang/String;)Lcom/estrongs/android/appinfo/m;
+    invoke-static {v2}, Lcom/estrongs/android/util/ap;->I(Ljava/lang/String;)I
 
-    move-result-object v3
+    move-result v2
 
-    if-nez v3, :cond_3
+    const/16 v5, 0x17
 
-    if-nez v1, :cond_4
+    if-eq v2, v5, :cond_5
 
-    new-instance v1, Ljava/util/LinkedList;
+    instance-of v2, v0, Lcom/estrongs/fs/impl/c/d;
 
-    invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
+    if-eqz v2, :cond_7
 
-    :cond_4
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    check-cast v0, Lcom/estrongs/fs/impl/c/d;
 
-    goto :goto_3
+    iget-object v0, v0, Lcom/estrongs/fs/impl/c/d;->b:Ljava/util/List;
 
-    :cond_5
-    move v2, v0
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/fs/h;
+
+    move-object v2, v0
+
+    :goto_3
+    invoke-interface {v2}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->k(Ljava/lang/String;)Lcom/estrongs/android/appinfo/m;
+
+    move-result-object v0
+
+    if-nez v0, :cond_a
+
+    if-nez v1, :cond_9
+
+    new-instance v0, Ljava/util/LinkedList;
+
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+
+    :goto_4
+    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :goto_5
+    move-object v1, v0
+
+    goto :goto_2
+
+    :cond_6
+    move v1, v3
 
     goto :goto_1
 
-    :cond_6
+    :cond_7
+    instance-of v2, v0, Lcom/estrongs/android/ui/topclassify/c;
+
+    if-eqz v2, :cond_b
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->d(Lcom/estrongs/fs/h;)Lcom/estrongs/fs/h;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    goto :goto_3
+
+    :cond_8
     if-eqz v1, :cond_0
 
-    new-instance v0, Lcom/estrongs/android/appinfo/k;
+    invoke-virtual {p0, v1, p3}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a(Ljava/util/List;Lcom/estrongs/android/appinfo/r;)V
 
-    invoke-direct {v0, p0, p1}, Lcom/estrongs/android/appinfo/k;-><init>(Lcom/estrongs/android/appinfo/AppFolderInfoManager;Ljava/lang/String;)V
+    goto/16 :goto_0
 
-    invoke-virtual {p0, v1, v0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a(Ljava/util/List;Lcom/estrongs/android/appinfo/q;)V
+    :cond_9
+    move-object v0, v1
 
-    goto :goto_0
+    goto :goto_4
 
-    :cond_7
-    move v0, v1
+    :cond_a
+    move-object v0, v1
 
-    goto :goto_2
+    goto :goto_5
+
+    :cond_b
+    move-object v2, v0
+
+    goto :goto_3
 .end method
 
-.method public a(Ljava/util/List;Lcom/estrongs/android/appinfo/q;)V
+.method public a(Ljava/util/List;Lcom/estrongs/android/appinfo/r;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -5469,7 +5914,7 @@
             "<",
             "Lcom/estrongs/fs/h;",
             ">;",
-            "Lcom/estrongs/android/appinfo/q;",
+            "Lcom/estrongs/android/appinfo/r;",
             ")V"
         }
     .end annotation
@@ -5485,14 +5930,14 @@
     :cond_1
     new-instance v0, Lcom/estrongs/android/appinfo/d;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/estrongs/android/appinfo/d;-><init>(Lcom/estrongs/android/appinfo/AppFolderInfoManager;Ljava/util/List;Lcom/estrongs/android/appinfo/q;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/estrongs/android/appinfo/d;-><init>(Lcom/estrongs/android/appinfo/AppFolderInfoManager;Ljava/util/List;Lcom/estrongs/android/appinfo/r;)V
 
     invoke-virtual {v0}, Lcom/estrongs/android/appinfo/d;->start()V
 
     goto :goto_0
 .end method
 
-.method public a([Ljava/io/File;Lcom/estrongs/android/appinfo/q;)V
+.method public a([Ljava/io/File;Lcom/estrongs/android/appinfo/r;)V
     .locals 7
 
     if-eqz p1, :cond_0
@@ -5512,7 +5957,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->aE()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->aF()Z
 
     move-result v0
 
@@ -5545,7 +5990,7 @@
 
     if-eqz v5, :cond_2
 
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->bl(Ljava/lang/String;)Z
+    invoke-static {v4}, Lcom/estrongs/android/util/ap;->bC(Ljava/lang/String;)Z
 
     move-result v5
 
@@ -5562,7 +6007,7 @@
 
     move-result-object v5
 
-    invoke-direct {v5, v4}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->j(Ljava/lang/String;)Lcom/estrongs/android/appinfo/m;
+    invoke-direct {v5, v4}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->k(Ljava/lang/String;)Lcom/estrongs/android/appinfo/m;
 
     move-result-object v4
 
@@ -5586,7 +6031,7 @@
     :cond_5
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0, v0, p2}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a(Ljava/util/List;Lcom/estrongs/android/appinfo/q;)V
+    invoke-virtual {p0, v0, p2}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a(Ljava/util/List;Lcom/estrongs/android/appinfo/r;)V
 
     goto :goto_0
 .end method
@@ -5600,17 +6045,17 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->aE()Z
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->aF()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    invoke-interface {p2}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/m;
+    invoke-interface {p2}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/w;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/estrongs/fs/m;->a()Z
+    invoke-virtual {v1}, Lcom/estrongs/fs/w;->a()Z
 
     move-result v1
 
@@ -5620,7 +6065,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->G(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->I(Ljava/lang/String;)I
 
     move-result v1
 
@@ -5637,7 +6082,7 @@
 
     move-result-object v1
 
-    invoke-direct {p0, v1}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->j(Ljava/lang/String;)Lcom/estrongs/android/appinfo/m;
+    invoke-direct {p0, v1}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->k(Ljava/lang/String;)Lcom/estrongs/android/appinfo/m;
 
     move-result-object v1
 
@@ -5661,12 +6106,54 @@
     goto :goto_0
 .end method
 
-.method public b(Lcom/estrongs/fs/h;)Lcom/estrongs/android/appinfo/r;
+.method public a(Ljava/util/List;)Z
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/estrongs/fs/h;",
+            ">;)Z"
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-ge v1, v2, :cond_1
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/fs/h;
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->e(Lcom/estrongs/fs/h;)Z
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+.method public b(Lcom/estrongs/fs/h;)Lcom/estrongs/android/appinfo/s;
     .locals 7
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->d(Lcom/estrongs/fs/h;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->f(Lcom/estrongs/fs/h;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -5748,18 +6235,18 @@
 
     if-eqz v1, :cond_2
 
-    new-instance v1, Lcom/estrongs/android/appinfo/r;
+    new-instance v1, Lcom/estrongs/android/appinfo/s;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/appinfo/r;-><init>(Lcom/estrongs/android/appinfo/AppFolderInfoManager;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/appinfo/s;-><init>(Lcom/estrongs/android/appinfo/AppFolderInfoManager;)V
     :try_end_2
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_2 .. :try_end_2} :catch_4
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     :try_start_3
-    iput-object v4, v1, Lcom/estrongs/android/appinfo/r;->a:Ljava/lang/String;
+    iput-object v4, v1, Lcom/estrongs/android/appinfo/s;->a:Ljava/lang/String;
 
-    iput v5, v1, Lcom/estrongs/android/appinfo/r;->b:I
+    iput v5, v1, Lcom/estrongs/android/appinfo/s;->b:I
     :try_end_3
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_3 .. :try_end_3} :catch_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
@@ -5881,13 +6368,13 @@
 .method protected b(Ljava/lang/String;)V
     .locals 1
 
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->k(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->p(Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -5915,7 +6402,7 @@
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
     :try_start_0
-    invoke-direct {p0, p1}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->n(Ljava/lang/String;)I
+    invoke-direct {p0, p1}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->o(Ljava/lang/String;)I
 
     move-result v0
 
@@ -6069,9 +6556,9 @@
 
     invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/gallery/g;->a()V
 
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->f:Landroid/support/v4/b/c;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->f:Landroid/support/v4/e/g;
 
-    invoke-virtual {v0}, Landroid/support/v4/b/c;->a()V
+    invoke-virtual {v0}, Landroid/support/v4/e/g;->evictAll()V
 
     return-void
 .end method
@@ -6106,7 +6593,7 @@
 
     :cond_0
     :goto_0
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
@@ -6114,7 +6601,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->g(Z)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->f(Z)V
 
     :cond_1
     return-void
@@ -6137,13 +6624,13 @@
     return v0
 
     :cond_1
-    invoke-direct {p0, p1}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->d(Lcom/estrongs/fs/h;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->f(Lcom/estrongs/fs/h;)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-direct {p0, v1}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->i(Ljava/lang/String;)Lcom/estrongs/android/appinfo/n;
+    invoke-direct {p0, v1}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->j(Ljava/lang/String;)Lcom/estrongs/android/appinfo/n;
 
     move-result-object v0
 
@@ -6159,6 +6646,45 @@
     goto :goto_0
 .end method
 
+.method public d(Lcom/estrongs/fs/h;)Lcom/estrongs/fs/h;
+    .locals 2
+
+    check-cast p1, Lcom/estrongs/android/ui/topclassify/c;
+
+    invoke-virtual {p1}, Lcom/estrongs/android/ui/topclassify/c;->b()I
+
+    move-result v0
+
+    const/16 v1, 0x14
+
+    if-ne v0, v1, :cond_0
+
+    invoke-virtual {p1}, Lcom/estrongs/android/ui/topclassify/c;->c()Ljava/util/List;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Lcom/estrongs/android/ui/topclassify/c;->d()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Lcom/estrongs/fs/x;
+
+    invoke-virtual {p1}, Lcom/estrongs/android/ui/topclassify/c;->d()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/estrongs/fs/x;-><init>(Ljava/lang/String;)V
+
+    move-object p1, v0
+
+    :cond_0
+    return-object p1
+.end method
+
 .method public d(Ljava/lang/String;)V
     .locals 2
 
@@ -6166,7 +6692,7 @@
 
     invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/gallery/g;->a()V
 
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
@@ -6174,7 +6700,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->g(Z)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->f(Z)V
 
     :cond_0
     return-void
@@ -6324,7 +6850,7 @@
 
     if-nez v0, :cond_1
 
-    invoke-static {}, Lcom/estrongs/android/util/am;->a()Ljava/util/List;
+    invoke-static {}, Lcom/estrongs/android/util/ap;->a()Ljava/util/List;
 
     move-result-object v3
 
@@ -6513,7 +7039,7 @@
 
     iget-object v7, v0, Lcom/estrongs/android/appinfo/AppFolderInfoManager$RemnantFolder;->a:Ljava/lang/String;
 
-    invoke-static {v1, v7}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v1, v7}, Lcom/estrongs/android/util/ap;->i(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -6548,6 +7074,435 @@
     move-object v0, v2
 
     goto :goto_4
+.end method
+
+.method public e()Ljava/util/List;
+    .locals 13
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/estrongs/android/appinfo/w;",
+            ">;"
+        }
+    .end annotation
+
+    const/4 v9, 0x1
+
+    const/4 v10, 0x0
+
+    const/4 v8, 0x0
+
+    new-instance v11, Ljava/util/ArrayList;
+
+    invoke-direct {v11}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/FexApplication;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v12
+
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
+
+    if-nez v0, :cond_0
+
+    invoke-direct {p0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->g()V
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
+
+    if-eqz v0, :cond_2
+
+    const/4 v0, 0x2
+
+    :try_start_0
+    new-array v2, v0, [Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    const-string v1, "package"
+
+    aput-object v1, v2, v0
+
+    const/4 v0, 0x1
+
+    const-string v1, "app_name"
+
+    aput-object v1, v2, v0
+
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
+
+    const-string v1, "installed_app_info"
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    invoke-virtual/range {v0 .. v7}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_4
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result-object v1
+
+    if-eqz v1, :cond_5
+
+    :cond_1
+    :goto_0
+    :try_start_1
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    const/4 v0, 0x0
+
+    invoke-interface {v1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v0, 0x1
+
+    invoke-interface {v1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    move-result-object v3
+
+    const/4 v0, 0x0
+
+    :try_start_2
+    invoke-virtual {v12, v2, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    :try_end_2
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_2 .. :try_end_2} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    move-result-object v0
+
+    :goto_1
+    if-nez v0, :cond_1
+
+    :try_start_3
+    new-instance v0, Lcom/estrongs/android/appinfo/w;
+
+    invoke-virtual {p0, v2}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-direct {v0, v3, v2, v4}, Lcom/estrongs/android/appinfo/w;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v11, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    :goto_2
+    :try_start_4
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    :cond_2
+    :goto_3
+    :try_start_5
+    new-instance v2, Ljava/io/File;
+
+    sget-object v0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->n:Ljava/lang/String;
+
+    invoke-direct {v2, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    invoke-virtual {v2}, Ljava/io/File;->isDirectory()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    invoke-virtual {v2}, Ljava/io/File;->list()[Ljava/lang/String;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_7
+
+    array-length v4, v3
+
+    move v1, v10
+
+    :goto_4
+    if-ge v1, v4, :cond_7
+
+    aget-object v0, v3, v1
+
+    new-instance v5, Ljava/io/File;
+
+    invoke-direct {v5, v2, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    invoke-virtual {v5}, Ljava/io/File;->isFile()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_4
+
+    const-string v5, ".png"
+
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bR(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_4
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v6
+
+    add-int/lit8 v6, v6, -0x4
+
+    invoke-virtual {v0, v5, v6}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-interface {v11}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v6
+
+    :cond_3
+    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/android/appinfo/w;
+
+    iget-object v0, v0, Lcom/estrongs/android/appinfo/w;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :try_end_5
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_3
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    move v0, v9
+
+    :goto_5
+    if-nez v0, :cond_4
+
+    const/4 v0, 0x0
+
+    :try_start_6
+    invoke-virtual {v12, v5, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    :try_end_6
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_6 .. :try_end_6} :catch_2
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_3
+
+    move-result-object v0
+
+    :goto_6
+    if-nez v0, :cond_4
+
+    :try_start_7
+    new-instance v0, Lcom/estrongs/android/appinfo/w;
+
+    invoke-virtual {p0, v5}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-direct {v0, v5, v5, v6}, Lcom/estrongs/android/appinfo/w;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v11, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_end_7
+    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_3
+
+    :cond_4
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_4
+
+    :catch_1
+    move-exception v0
+
+    move-object v0, v8
+
+    goto/16 :goto_1
+
+    :cond_5
+    if-eqz v1, :cond_2
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    goto :goto_3
+
+    :catchall_0
+    move-exception v0
+
+    move-object v1, v8
+
+    :goto_7
+    if-eqz v1, :cond_6
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    :cond_6
+    throw v0
+
+    :catch_2
+    move-exception v0
+
+    move-object v0, v8
+
+    goto :goto_6
+
+    :catch_3
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    :cond_7
+    invoke-interface {v11}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_8
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_8
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/android/appinfo/w;
+
+    const-string v2, "eee"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v4, v0, Lcom/estrongs/android/appinfo/w;->b:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, ","
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    iget-object v0, v0, Lcom/estrongs/android/appinfo/w;->a:Ljava/lang/String;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_8
+
+    :cond_8
+    return-object v11
+
+    :catchall_1
+    move-exception v0
+
+    goto :goto_7
+
+    :catch_4
+    move-exception v0
+
+    move-object v1, v8
+
+    goto/16 :goto_2
+
+    :cond_9
+    move v0, v10
+
+    goto :goto_5
+.end method
+
+.method public e(Lcom/estrongs/fs/h;)Z
+    .locals 2
+
+    if-eqz p1, :cond_0
+
+    instance-of v0, p1, Lcom/estrongs/android/ui/topclassify/c;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lcom/estrongs/android/ui/topclassify/c;
+
+    invoke-virtual {p1}, Lcom/estrongs/android/ui/topclassify/c;->b()I
+
+    move-result v0
+
+    const/16 v1, 0x14
+
+    if-ne v0, v1, :cond_0
+
+    invoke-virtual {p1}, Lcom/estrongs/android/ui/topclassify/c;->c()Ljava/util/List;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
 .method f(Ljava/lang/String;)Ljava/util/Map;
@@ -6813,19 +7768,19 @@
 
     const/4 v8, 0x0
 
-    iget-object v9, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Ljava/lang/Object;
+    iget-object v9, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->u:Ljava/lang/Object;
 
     monitor-enter v9
 
     :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     if-nez v0, :cond_0
 
-    invoke-direct {p0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->f()V
+    invoke-direct {p0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->g()V
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     if-nez v0, :cond_1
 
@@ -6858,7 +7813,7 @@
 
     aput-object p1, v4, v0
 
-    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v1, "installed_app_info"
 
@@ -6968,4 +7923,259 @@
     move-object v0, v8
 
     goto :goto_1
+.end method
+
+.method public i(Ljava/lang/String;)Ljava/util/List;
+    .locals 11
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Lcom/estrongs/android/appinfo/o;",
+            ">;"
+        }
+    .end annotation
+
+    const/4 v9, 0x0
+
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->c:Landroid/database/sqlite/SQLiteDatabase;
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a()V
+
+    :cond_0
+    new-instance v10, Ljava/util/ArrayList;
+
+    invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
+
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->j:Ljava/util/concurrent/locks/Lock;
+
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
+
+    const/4 v0, 0x1
+
+    :try_start_0
+    new-array v2, v0, [Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    const-string v1, "folder"
+
+    aput-object v1, v2, v0
+
+    const/4 v0, 0x1
+
+    new-array v4, v0, [Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    aput-object p1, v4, v0
+
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->c:Landroid/database/sqlite/SQLiteDatabase;
+
+    const-string v1, "app_folder_map_user"
+
+    const-string v3, "package_name=?"
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    invoke-virtual/range {v0 .. v7}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    move-result-object v1
+
+    if-eqz v1, :cond_8
+
+    :goto_0
+    :try_start_1
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    new-instance v0, Lcom/estrongs/android/appinfo/o;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/appinfo/o;-><init>(Lcom/estrongs/android/appinfo/AppFolderInfoManager;)V
+
+    const/4 v3, 0x0
+
+    invoke-interface {v1, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    iput-object v3, v0, Lcom/estrongs/android/appinfo/o;->a:Ljava/lang/String;
+
+    invoke-interface {v10, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    :goto_1
+    :try_start_2
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->j:Ljava/util/concurrent/locks/Lock;
+
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    :goto_2
+    return-object v10
+
+    :cond_2
+    :try_start_3
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    move-object v8, v9
+
+    :goto_3
+    :try_start_4
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->c:Landroid/database/sqlite/SQLiteDatabase;
+
+    const-string v1, "app_folder_map"
+
+    const-string v3, "package_name=?"
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    invoke-virtual/range {v0 .. v7}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+
+    move-result-object v1
+
+    if-eqz v1, :cond_6
+
+    :cond_3
+    :goto_4
+    :try_start_5
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    new-instance v0, Lcom/estrongs/android/appinfo/o;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/appinfo/o;-><init>(Lcom/estrongs/android/appinfo/AppFolderInfoManager;)V
+
+    const/4 v2, 0x0
+
+    invoke-interface {v1, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    iput-object v2, v0, Lcom/estrongs/android/appinfo/o;->a:Ljava/lang/String;
+
+    invoke-interface {v10, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    invoke-interface {v10, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_end_5
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    goto :goto_4
+
+    :catchall_0
+    move-exception v0
+
+    :goto_5
+    if-eqz v1, :cond_4
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    :cond_4
+    iget-object v1, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->j:Ljava/util/concurrent/locks/Lock;
+
+    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    throw v0
+
+    :cond_5
+    :try_start_6
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+    :try_end_6
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_0
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+
+    move-object v1, v9
+
+    :cond_6
+    if-eqz v1, :cond_7
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    :cond_7
+    iget-object v0, p0, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->j:Ljava/util/concurrent/locks/Lock;
+
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception v0
+
+    move-object v1, v9
+
+    goto :goto_5
+
+    :catchall_2
+    move-exception v0
+
+    move-object v1, v8
+
+    goto :goto_5
+
+    :catch_1
+    move-exception v0
+
+    move-object v1, v9
+
+    goto :goto_1
+
+    :catch_2
+    move-exception v0
+
+    move-object v1, v8
+
+    goto :goto_1
+
+    :cond_8
+    move-object v8, v1
+
+    goto :goto_3
 .end method

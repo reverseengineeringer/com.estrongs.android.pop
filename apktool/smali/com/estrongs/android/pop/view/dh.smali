@@ -27,9 +27,9 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/view/dh;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    const/4 v1, 0x0
+    const-string v1, "music://"
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a(Lcom/estrongs/android/pop/view/FileExplorerActivity;Z)Z
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->g(Ljava/lang/String;)Lcom/estrongs/android/view/cr;
 
     return-void
 .end method

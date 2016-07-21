@@ -3,7 +3,7 @@ package com.estrongs.android.ui.b;
 import android.app.Activity;
 import com.estrongs.a.a.l;
 import com.estrongs.a.a.m;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.util.bk;
 
 class c
   implements l
@@ -13,14 +13,14 @@ class c
   public void a(com.estrongs.a.a parama, m paramm)
   {
     if (i == 4) {
-      a.a(a.i(a).getString(2131427447));
+      a.a(a.i(a).getString(2131232170));
     }
     do
     {
       return;
       if (i == 1)
       {
-        a.a(a.j(a).getString(2131428091));
+        a.a(a.j(a).getString(2131231100));
         return;
       }
       if (i != 3) {
@@ -47,7 +47,7 @@ class c
       if (b > 0) {
         a.a(b);
       }
-      if ((a.d(a)) || (bd.a(a))) {
+      if ((a.d(a)) || (bk.a(a))) {
         break;
       }
       a.a(a.a(paramm));

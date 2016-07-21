@@ -1,24 +1,50 @@
 package com.estrongs.android.pop.view;
 
-import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
-import com.estrongs.android.ui.drag.DragLayer;
+import com.estrongs.android.pop.utils.ao;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.widget.av;
+import com.estrongs.fs.h;
+import com.estrongs.fs.x;
+import java.util.List;
 
 class ca
-  implements Animation.AnimationListener
+  implements av
 {
   ca(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void onAnimationEnd(Animation paramAnimation)
+  public void a(List<h> paramList)
   {
-    if (FileExplorerActivity.j(a) != null) {
-      FileExplorerActivity.j(a).setVisibility(8);
+    a.B();
+    h localh = (h)paramList.get(0);
+    paramList = localh;
+    if (ap.aV(localh.getPath()))
+    {
+      if ((!ap.az(localh.getPath())) && (!ap.aB(localh.getPath()))) {
+        break label160;
+      }
+      if (!localh.getPath().endsWith("/")) {
+        break label127;
+      }
+      paramList = localh.getPath() + "mine";
+      paramList = new x(paramList);
+    }
+    label127:
+    label160:
+    do
+    {
+      ao.a(a, a.x, paramList, a.n);
+      return;
+      paramList = localh.getPath() + "/" + "mine";
+      break;
+      paramList = localh;
+    } while (!ap.aC(localh.getPath()));
+    if (localh.getPath().endsWith("/")) {}
+    for (paramList = localh.getPath() + "/pictures".substring(1);; paramList = localh.getPath() + "/pictures")
+    {
+      paramList = new x(paramList);
+      break;
     }
   }
-  
-  public void onAnimationRepeat(Animation paramAnimation) {}
-  
-  public void onAnimationStart(Animation paramAnimation) {}
 }
 
 /* Location:

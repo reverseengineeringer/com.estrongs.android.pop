@@ -1,17 +1,35 @@
 package com.estrongs.android.ui.e;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.pop.app.PopAudioPlayer;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.app.diskusage.h;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.dialog.df;
+import com.estrongs.android.ui.dialog.gv;
 
 class p
-  implements View.OnClickListener
+  implements MenuItem.OnMenuItemClickListener
 {
-  p(o paramo) {}
+  p(m paramm) {}
   
-  public void onClick(View paramView)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    o.a(a).j();
+    m.a(a).o();
+    if ((m.a(a).O() instanceof h)) {
+      if ((m.f(a) == null) || (!m.f(a).isShowing())) {}
+    }
+    while ((m.g(a) != null) && (m.g(a).isShowing()))
+    {
+      return true;
+      m.a(a, new df(m.a(a)));
+      m.f(a).a(new q(this));
+      m.f(a).show();
+      return true;
+    }
+    m.a(a, new gv(m.a(a)));
+    m.g(a).a(new s(this));
+    m.g(a).show();
+    return true;
   }
 }
 

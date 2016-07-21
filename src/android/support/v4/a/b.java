@@ -1,27 +1,14 @@
 package android.support.v4.a;
 
-import android.os.Parcel;
-import android.os.Parcelable.Creator;
-
-class b<T>
-  implements Parcelable.Creator<T>
+public abstract interface b
 {
-  final c<T> a;
+  public abstract void onAnimationCancel(l paraml);
   
-  public b(c<T> paramc)
-  {
-    a = paramc;
-  }
+  public abstract void onAnimationEnd(l paraml);
   
-  public T createFromParcel(Parcel paramParcel)
-  {
-    return (T)a.a(paramParcel, null);
-  }
+  public abstract void onAnimationRepeat(l paraml);
   
-  public T[] newArray(int paramInt)
-  {
-    return a.a(paramInt);
-  }
+  public abstract void onAnimationStart(l paraml);
 }
 
 /* Location:

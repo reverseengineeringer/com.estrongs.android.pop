@@ -1,25 +1,25 @@
 package com.estrongs.fs.b;
 
 import com.estrongs.fs.a;
-import com.estrongs.fs.impl.b.c;
-import com.estrongs.fs.impl.b.g;
+import com.estrongs.fs.impl.b.d;
+import com.estrongs.fs.impl.b.h;
 
 final class l
   extends a
 {
-  l(String paramString, c paramc)
+  l(String paramString, d paramd)
   {
     super(paramString);
   }
   
   public String getName()
   {
-    return a.f().a();
+    return a.k().a();
   }
   
   public long length()
   {
-    return a.f().e();
+    return a.k().e();
   }
 }
 

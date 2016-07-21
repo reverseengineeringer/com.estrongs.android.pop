@@ -1,51 +1,183 @@
 package com.estrongs.android.view;
 
+import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
+import com.estrongs.android.pop.esclasses.k;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.navigation.q;
 import com.estrongs.fs.h;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
-class y
-  extends BaseAdapter
+public class y
 {
-  y(x paramx) {}
+  public static boolean a = false;
+  private static y b = null;
+  private static LinkedList<af> e = new LinkedList();
+  private Activity c;
+  private ViewGroup d;
+  private af f = null;
+  private View g;
+  private View h;
+  private View.OnClickListener i = new ae(this);
   
-  public h a(int paramInt)
+  private y(Activity paramActivity)
   {
-    return null;
-  }
-  
-  public int getCount()
-  {
-    return 1;
-  }
-  
-  public long getItemId(int paramInt)
-  {
-    return paramInt;
-  }
-  
-  public View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
-  {
-    paramViewGroup = paramView;
-    if (paramView == null) {
-      paramViewGroup = a.ag.inflate(2130903137, null);
+    c = paramActivity;
+    g = k.a(c).inflate(2130903153, null);
+    d = ((ViewGroup)g.findViewById(2131624583));
+    h = g.findViewById(2131624584);
+    if (e.size() > 0)
+    {
+      while (j < e.size())
+      {
+        ((af)e.get(j)).a(this);
+        j += 1;
+      }
+      i();
+      return;
     }
-    paramViewGroup.setBackgroundResource(2130837560);
-    ((ImageView)paramViewGroup.findViewById(2131362077)).setImageResource(2130837861);
-    ((TextView)paramViewGroup.findViewById(2131361822)).setText(a.l(2131427890) + "(" + a.a.size() + ")");
-    paramViewGroup.setOnClickListener(new z(this));
-    return paramViewGroup;
+    h.setVisibility(0);
   }
   
-  public void notifyDataSetChanged()
+  public static y a(Activity paramActivity)
   {
-    super.notifyDataSetChanged();
-    a.e();
+    if (b == null) {
+      b = new y(paramActivity);
+    }
+    return b;
+  }
+  
+  public static void d()
+  {
+    if (b != null) {
+      b.b();
+    }
+    b = null;
+  }
+  
+  public static void f()
+  {
+    e.clear();
+  }
+  
+  private void i()
+  {
+    c.runOnUiThread(new ac(this));
+  }
+  
+  public Activity a()
+  {
+    return c;
+  }
+  
+  public af a(List<h> paramList, boolean paramBoolean)
+  {
+    if (paramList.size() < 8) {}
+    for (paramList = new af(this, paramList, paramBoolean);; paramList = new z(this, this, paramList, paramBoolean, paramList, paramBoolean))
+    {
+      a(paramList);
+      e.add(0, paramList);
+      f = paramList;
+      i();
+      return paramList;
+    }
+  }
+  
+  public void a(q paramq)
+  {
+    ((FileExplorerActivity)c).b(paramq);
+  }
+  
+  public void a(af paramaf)
+  {
+    Object localObject = null;
+    Iterator localIterator = e.iterator();
+    if (localIterator.hasNext())
+    {
+      af localaf = (af)localIterator.next();
+      if (!localaf.equals(paramaf)) {
+        break label57;
+      }
+      localObject = localaf;
+    }
+    label57:
+    for (;;)
+    {
+      break;
+      if (localObject != null) {
+        e.remove(localObject);
+      }
+      return;
+    }
+  }
+  
+  public void a(List<h> paramList, Boolean paramBoolean)
+  {
+    ArrayList localArrayList1 = new ArrayList();
+    ArrayList localArrayList2 = new ArrayList();
+    localArrayList1.add(paramList);
+    localArrayList2.add(paramBoolean);
+    a(localArrayList1, localArrayList2);
+  }
+  
+  public void a(List<List<h>> paramList, List<Boolean> paramList1)
+  {
+    a(new ad(this, paramList, paramList1));
+  }
+  
+  public void b()
+  {
+    f = null;
+    if (d != null) {
+      d.removeAllViews();
+    }
+    h.setVisibility(0);
+  }
+  
+  public void b(af paramaf)
+  {
+    int k = 0;
+    int j = k;
+    if (e.size() > 0)
+    {
+      j = k;
+      if (e.get(0) == paramaf) {
+        j = 1;
+      }
+    }
+    if (f == paramaf) {
+      f = null;
+    }
+    e.remove(paramaf);
+    i();
+    if (((j != 0) || (e.isEmpty())) && ((c instanceof FileExplorerActivity)))
+    {
+      paramaf = (FileExplorerActivity)c;
+      if (paramaf.j()) {
+        paramaf.i();
+      }
+    }
+  }
+  
+  public View c()
+  {
+    return g;
+  }
+  
+  public af e()
+  {
+    return f;
+  }
+  
+  public View.OnClickListener g()
+  {
+    return i;
   }
 }
 

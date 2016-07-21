@@ -25,7 +25,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 4
 
-    new-instance v0, Lcom/estrongs/android/util/c;
+    new-instance v0, Lcom/estrongs/android/util/b;
 
     iget-object v1, p0, Lcom/estrongs/android/ui/view/k;->a:Lcom/estrongs/android/ui/view/b;
 
@@ -43,9 +43,9 @@
 
     invoke-direct {v3, p0}, Lcom/estrongs/android/ui/view/l;-><init>(Lcom/estrongs/android/ui/view/k;)V
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/estrongs/android/util/c;-><init>(Landroid/content/Context;ILcom/estrongs/android/util/e;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/estrongs/android/util/b;-><init>(Landroid/content/Context;ILcom/estrongs/android/util/d;)V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/util/c;->a()V
+    invoke-virtual {v0}, Lcom/estrongs/android/util/b;->a()V
 
     return-void
 .end method

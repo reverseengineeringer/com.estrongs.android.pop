@@ -90,9 +90,56 @@
 
     :cond_0
     :try_start_1
+    iget-object v0, p0, Lcom/estrongs/android/pop/d;->a:Ljava/lang/String;
+
+    const-string v2, "download_path"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/d;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-static {}, Lcom/estrongs/android/scanner/l;->a()Lcom/estrongs/android/scanner/l;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Lcom/estrongs/android/scanner/l;->b(Ljava/lang/String;)V
+
+    :cond_1
+    :goto_1
     monitor-exit v1
+
+    return-void
+
+    :cond_2
+    iget-object v0, p0, Lcom/estrongs/android/pop/d;->a:Ljava/lang/String;
+
+    const-string v2, "real_time_monitor"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/d;->c:Lcom/estrongs/android/pop/FexApplication;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->bp()Z
+
+    move-result v0
+
+    sput-boolean v0, Lcom/estrongs/android/pop/FexApplication;->a:Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    return-void
+    goto :goto_1
 .end method

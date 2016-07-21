@@ -1,31 +1,26 @@
 package com.estrongs.fs.b;
 
-import java.net.Socket;
-
-public class bl
+class bl
+  implements com.estrongs.android.d.h
 {
-  public String a = null;
-  public int b;
-  public int c;
-  public int d;
-  public long e;
-  public String f;
-  public String g;
-  public String h;
-  public String i;
-  public Socket j;
-  public boolean k;
-  public byte[] l;
-  public int m;
-  public int n;
+  bl(bj parambj) {}
   
-  public bl(String paramString1, String paramString2, String paramString3, Socket paramSocket, long paramLong)
+  public void a(boolean paramBoolean1, boolean paramBoolean2)
   {
-    f = paramString1;
-    h = paramString2;
-    j = paramSocket;
-    i = paramString3;
-    e = paramLong;
+    localh = bc.e(a.a);
+    if (paramBoolean1) {}
+    for (;;)
+    {
+      try
+      {
+        ea.a).g = 1;
+        ea.a).f = paramBoolean2;
+        bc.e(a.a).notify();
+        return;
+      }
+      finally {}
+      ea.a).g = 2;
+    }
   }
 }
 

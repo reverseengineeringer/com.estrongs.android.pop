@@ -3,18 +3,18 @@ package com.estrongs.android.ui.e;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.fs.h;
+import android.content.DialogInterface.OnDismissListener;
+import android.widget.EditText;
 
 final class ih
   implements DialogInterface.OnClickListener
 {
-  ih(cg paramcg, Context paramContext, h paramh, String paramString) {}
+  ih(Context paramContext, String paramString, EditText paramEditText, DialogInterface.OnDismissListener paramOnDismissListener) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    a.dismiss();
-    ie.a(b, c, d);
+    ib.a(a, b, c.getText().toString().trim(), d);
+    paramDialogInterface.dismiss();
   }
 }
 

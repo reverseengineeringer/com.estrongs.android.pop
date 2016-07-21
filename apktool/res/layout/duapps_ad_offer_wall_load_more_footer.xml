@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duapps.ad.offerwall.ui.PullUpForMore android:gravity="center" android:orientation="horizontal" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="@dimen/duapps_ad_offer_wall_loading_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/duapps_ad_offer_wall_more_footer_pb" android:layout_width="@dimen/duapps_ad_offer_wall_loading_pb_size" android:layout_height="@dimen/duapps_ad_offer_wall_loading_pb_size" android:layout_marginRight="@dimen/duapps_ad_offer_wall_more_footer_right_margin" android:src="@drawable/duapps_ad_offer_wall_indeterminate_loading_footer" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/duapps_ad_offer_wall_more_footer_text_size" android:textColor="#66ffffff" android:id="@id/duapps_ad_offer_wall_more_footer_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/duapps_ad_loading" android:layout_toRightOf="@id/duapps_ad_offer_wall_more_footer_pb" android:layout_centerVertical="true" />
+</com.duapps.ad.offerwall.ui.PullUpForMore>

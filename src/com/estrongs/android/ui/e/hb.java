@@ -1,31 +1,26 @@
 package com.estrongs.android.ui.e;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.pop.ad;
+import com.estrongs.android.pop.netfs.NetFsException;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.dialog.ae;
-import com.estrongs.android.util.am;
-import com.estrongs.fs.h;
-import java.util.Iterator;
-import java.util.List;
+import com.estrongs.fs.impl.o.b;
 
 class hb
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
-  hb(ha paramha, List paramList) {}
+  hb(ha paramha, String paramString) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void run()
   {
-    paramDialogInterface.dismiss();
-    ad.a(b.a.b).u(true);
-    paramDialogInterface = am.a().iterator();
-    while (paramDialogInterface.hasNext())
+    try
     {
-      String str = (String)paramDialogInterface.next();
-      cp.a(b.a).j(str);
+      b.d(a);
+      cr.b(b.a).a(new hc(this));
+      return;
     }
-    new ae(b.a.b, (h)a.get(0));
+    catch (NetFsException localNetFsException)
+    {
+      localNetFsException.printStackTrace();
+    }
   }
 }
 

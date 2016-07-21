@@ -1,19 +1,20 @@
 package com.estrongs.android.ui.theme;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 class d
-  implements DialogInterface.OnClickListener
+  implements View.OnClickListener
 {
-  d(b paramb, ai paramai) {}
+  d(ModifyThemeActivity paramModifyThemeActivity) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void onClick(View paramView)
   {
-    paramDialogInterface.dismiss();
-    if ((a.f()) && (ModifyThemeActivity.b(b.a) == ModifyThemeActivity.a(b.a).e())) {
-      b.a.setResult(-1);
-    }
+    paramView = new Intent(a, ThemeColorActivity.class);
+    paramView.putExtra("set_what_color", 1);
+    paramView.putExtra("theme_data_index", ModifyThemeActivity.b(a));
+    a.startActivityForResult(paramView, 4130);
   }
 }
 

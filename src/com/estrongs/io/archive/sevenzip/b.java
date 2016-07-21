@@ -1,7 +1,7 @@
 package com.estrongs.io.archive.sevenzip;
 
-import com.estrongs.android.util.am;
-import com.estrongs.fs.impl.local.r;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.impl.local.s;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -38,7 +38,7 @@ public class b
         new File(paramString2).delete();
         if (paramString3 != null)
         {
-          paramString1 = am.j() + "/p7za a " + str + " -w" + a(paramString1) + " -p" + a(paramString3) + " -y " + a(paramString2) + " ";
+          paramString1 = ap.j() + "/p7za a " + str + " -w" + a(paramString1) + " -p" + a(paramString3) + " -y " + a(paramString2) + " ";
           break label637;
           if (i < e.size())
           {
@@ -49,7 +49,7 @@ public class b
         }
         else
         {
-          paramString1 = am.j() + "/p7za a " + str + " -w" + a(paramString1) + " -y " + a(paramString2) + " ";
+          paramString1 = ap.j() + "/p7za a " + str + " -w" + a(paramString1) + " -y " + a(paramString2) + " ";
           break label637;
         }
         paramString1 = paramString1 + "\n";

@@ -45,10 +45,10 @@
     return-void
 .end method
 
-.method public a(Ljava/lang/Object;Landroid/view/View;Landroid/support/v4/view/a/a;)V
+.method public a(Ljava/lang/Object;Landroid/view/View;Landroid/support/v4/view/a/g;)V
     .locals 1
 
-    invoke-virtual {p3}, Landroid/support/v4/view/a/a;->a()Ljava/lang/Object;
+    invoke-virtual {p3}, Landroid/support/v4/view/a/g;->a()Ljava/lang/Object;
 
     move-result-object v0
 

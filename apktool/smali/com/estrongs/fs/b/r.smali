@@ -139,7 +139,7 @@
     .end annotation
 .end field
 
-.field y:Lcom/estrongs/fs/b/am;
+.field y:Lcom/estrongs/fs/b/ao;
 
 .field z:Ljava/lang/Long;
 
@@ -258,7 +258,7 @@
 
     iput-boolean v3, p0, Lcom/estrongs/fs/b/r;->B:Z
 
-    iput-object v1, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/am;
+    iput-object v1, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/ao;
 
     iput-boolean v3, p0, Lcom/estrongs/fs/b/r;->C:Z
 
@@ -329,7 +329,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -406,7 +406,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->G(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->I(Ljava/lang/String;)I
 
     move-result v0
 
@@ -418,7 +418,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->aG(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->aQ(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -443,7 +443,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -616,7 +616,7 @@
 
     const/4 v2, 0x0
 
-    iput-object v2, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/am;
+    iput-object v2, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/ao;
 
     const/4 v2, 0x0
 
@@ -736,7 +736,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -789,7 +789,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -945,7 +945,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/am;->aG(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/ap;->aQ(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -968,7 +968,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/am;->G(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/estrongs/android/util/ap;->I(Ljava/lang/String;)I
 
     move-result v2
 
@@ -1110,6 +1110,148 @@
     return-void
 .end method
 
+.method private a(Ljava/util/List;)V
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/estrongs/fs/h;",
+            ">;)V"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/estrongs/fs/b/r;->n:Lcom/estrongs/fs/h;
+
+    invoke-interface {v0}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "/"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "/"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    :goto_0
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    invoke-direct {v3, v0}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v4
+
+    :goto_1
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/fs/h;
+
+    invoke-interface {v0}, Lcom/estrongs/fs/h;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    if-nez v2, :cond_2
+
+    invoke-interface {v0}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_2
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    :cond_0
+    invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-static {}, Lcom/estrongs/android/scanner/l;->a()Lcom/estrongs/android/scanner/l;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Lcom/estrongs/android/scanner/l;->b(Ljava/util/List;)V
+
+    :cond_1
+    invoke-static {}, Lcom/estrongs/android/scanner/l;->a()Lcom/estrongs/android/scanner/l;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/scanner/l;->a(Z)V
+
+    return-void
+
+    :cond_2
+    move-object v0, v2
+
+    goto :goto_2
+
+    :cond_3
+    move-object v1, v0
+
+    goto :goto_0
+.end method
+
 .method static synthetic b(Lcom/estrongs/fs/b/r;)Z
     .locals 1
 
@@ -1198,11 +1340,11 @@
 
     invoke-virtual {p0, v1, v2}, Lcom/estrongs/fs/b/r;->recordSummary(Ljava/lang/String;Ljava/lang/Object;)V
 
-    invoke-interface {v0}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/m;
+    invoke-interface {v0}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/w;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/estrongs/fs/m;->a()Z
+    invoke-virtual {v1}, Lcom/estrongs/fs/w;->a()Z
 
     move-result v1
 
@@ -1210,11 +1352,11 @@
 
     const-string v1, "file_type"
 
-    invoke-interface {v0}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/m;
+    invoke-interface {v0}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/w;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/estrongs/fs/m;->c()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/estrongs/fs/w;->c()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1241,11 +1383,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->D(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->F(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1259,7 +1401,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->D(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->F(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1284,7 +1426,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/bc;->b(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->b(Ljava/lang/String;)I
 
     move-result v2
 
@@ -1304,23 +1446,23 @@
 
     const/4 v0, 0x1
 
-    new-instance v2, Lcom/estrongs/fs/b/am;
+    new-instance v2, Lcom/estrongs/fs/b/ao;
 
     iget-object v3, p0, Lcom/estrongs/fs/b/r;->c:Lcom/estrongs/fs/d;
 
     iget-object v4, p0, Lcom/estrongs/fs/b/r;->f:Ljava/util/ArrayList;
 
-    invoke-direct {v2, v3, v4}, Lcom/estrongs/fs/b/am;-><init>(Lcom/estrongs/fs/d;Ljava/util/List;)V
+    invoke-direct {v2, v3, v4}, Lcom/estrongs/fs/b/ao;-><init>(Lcom/estrongs/fs/d;Ljava/util/List;)V
 
-    iput-object v2, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/am;
+    iput-object v2, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/ao;
 
-    iget-object v2, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/am;
+    iget-object v2, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/ao;
 
     invoke-virtual {p0}, Lcom/estrongs/fs/b/r;->getProgressListeners()Ljava/util/List;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/estrongs/fs/b/am;->addProgressListeners(Ljava/util/List;)V
+    invoke-virtual {v2, v3}, Lcom/estrongs/fs/b/ao;->addProgressListeners(Ljava/util/List;)V
 
     invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
 
@@ -1336,29 +1478,29 @@
 
     if-eqz v2, :cond_0
 
-    iget-object v1, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/am;
+    iget-object v1, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/ao;
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/fs/b/am;->execute(Z)V
+    invoke-virtual {v1, v0}, Lcom/estrongs/fs/b/ao;->execute(Z)V
 
-    iget-object v1, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/am;
+    iget-object v1, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/ao;
 
     new-instance v2, Lcom/estrongs/fs/b/s;
 
     invoke-direct {v2, p0}, Lcom/estrongs/fs/b/s;-><init>(Lcom/estrongs/fs/b/r;)V
 
-    invoke-virtual {v1, v2}, Lcom/estrongs/fs/b/am;->addTaskStatusChangeListener(Lcom/estrongs/a/a/p;)V
+    invoke-virtual {v1, v2}, Lcom/estrongs/fs/b/ao;->addTaskStatusChangeListener(Lcom/estrongs/a/a/p;)V
 
     :goto_0
     return v0
 
     :cond_0
-    iget-object v2, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/am;
+    iget-object v2, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/ao;
 
-    invoke-virtual {v2, v1}, Lcom/estrongs/fs/b/am;->execute(Z)V
+    invoke-virtual {v2, v1}, Lcom/estrongs/fs/b/ao;->execute(Z)V
 
-    iget-object v2, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/am;
+    iget-object v2, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/ao;
 
-    invoke-virtual {v2}, Lcom/estrongs/fs/b/am;->getTaskStatus()I
+    invoke-virtual {v2}, Lcom/estrongs/fs/b/ao;->getTaskStatus()I
 
     move-result v2
 
@@ -1366,9 +1508,9 @@
 
     if-eq v2, v3, :cond_1
 
-    iget-object v0, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/am;
+    iget-object v0, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/ao;
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/b/am;->getTaskResult()Lcom/estrongs/a/p;
+    invoke-virtual {v0}, Lcom/estrongs/fs/b/ao;->getTaskResult()Lcom/estrongs/a/p;
 
     move-result-object v0
 
@@ -1391,9 +1533,9 @@
 .method private k()V
     .locals 8
 
-    iget-object v0, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/am;
+    iget-object v0, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/ao;
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/b/am;->a()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/estrongs/fs/b/ao;->a()Ljava/util/List;
 
     move-result-object v2
 
@@ -1412,15 +1554,15 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/fs/b/an;
+    check-cast v0, Lcom/estrongs/fs/b/ap;
 
     iget-object v3, p0, Lcom/estrongs/fs/b/r;->processData:Lcom/estrongs/a/a/m;
 
     iget-wide v4, v3, Lcom/estrongs/a/a/m;->c:J
 
-    iget v6, v0, Lcom/estrongs/fs/b/an;->e:I
+    iget v6, v0, Lcom/estrongs/fs/b/ap;->e:I
 
-    iget v7, v0, Lcom/estrongs/fs/b/an;->f:I
+    iget v7, v0, Lcom/estrongs/fs/b/ap;->f:I
 
     add-int/2addr v6, v7
 
@@ -1434,7 +1576,7 @@
 
     iget-wide v4, v3, Lcom/estrongs/a/a/m;->e:J
 
-    iget-wide v6, v0, Lcom/estrongs/fs/b/an;->c:J
+    iget-wide v6, v0, Lcom/estrongs/fs/b/ap;->c:J
 
     add-long/2addr v4, v6
 
@@ -1502,7 +1644,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->ba(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bl(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1546,7 +1688,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bl(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bC(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1692,13 +1834,13 @@
 
     invoke-super {p0, p1}, Lcom/estrongs/a/a;->addProgressListener(Lcom/estrongs/a/a/l;)V
 
-    iget-object v0, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/am;
+    iget-object v0, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/ao;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/am;
+    iget-object v0, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/ao;
 
-    invoke-virtual {v0, p1}, Lcom/estrongs/fs/b/am;->addProgressListener(Lcom/estrongs/a/a/l;)V
+    invoke-virtual {v0, p1}, Lcom/estrongs/fs/b/ao;->addProgressListener(Lcom/estrongs/a/a/l;)V
 
     :cond_0
     return-void
@@ -1788,7 +1930,7 @@
 .method public f()Lcom/estrongs/a/a/m;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/am;
+    iget-object v0, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/ao;
 
     if-nez v0, :cond_0
 
@@ -1798,9 +1940,9 @@
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/am;
+    iget-object v0, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/ao;
 
-    iget-object v0, v0, Lcom/estrongs/fs/b/am;->processData:Lcom/estrongs/a/a/m;
+    iget-object v0, v0, Lcom/estrongs/fs/b/ao;->processData:Lcom/estrongs/a/a/m;
 
     goto :goto_0
 .end method
@@ -2134,7 +2276,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bs(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bJ(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -2148,10 +2290,10 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-static {}, Lcom/estrongs/fs/impl/local/j;->a()V
+    invoke-static {}, Lcom/estrongs/fs/impl/local/k;->a()V
 
     :cond_0
-    invoke-static {}, Lcom/estrongs/android/util/bd;->f()Z
+    invoke-static {}, Lcom/estrongs/android/util/bk;->f()Z
 
     move-result v0
 
@@ -2169,7 +2311,7 @@
 
     iget-object v1, p0, Lcom/estrongs/fs/b/r;->v:Ljava/util/Set;
 
-    invoke-static {v0, v1}, Lcom/estrongs/fs/impl/media/d;->a(Ljava/util/List;Ljava/util/Set;)V
+    invoke-static {v0, v1}, Lcom/estrongs/fs/impl/media/e;->a(Ljava/util/List;Ljava/util/Set;)V
     :try_end_0
     .catch Lcom/estrongs/fs/impl/media/MediaStoreInsertException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2190,7 +2332,7 @@
     :cond_2
     const/4 v0, 0x1
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->h(Z)V
+    invoke-static {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->g(Z)V
 
     :cond_3
     return-void
@@ -2205,13 +2347,13 @@
 
     if-lez v0, :cond_5
 
-    invoke-static {}, Lcom/estrongs/fs/impl/k/b;->c()Lcom/estrongs/fs/impl/k/b;
+    invoke-static {}, Lcom/estrongs/fs/impl/p/c;->b()Lcom/estrongs/fs/impl/p/c;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/estrongs/fs/b/r;->p:Ljava/util/List;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/fs/impl/k/b;->a(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/fs/impl/p/c;->a(Ljava/util/List;)V
 
     :cond_5
     iget-object v0, p0, Lcom/estrongs/fs/b/r;->q:Ljava/util/List;
@@ -2222,13 +2364,13 @@
 
     if-lez v0, :cond_6
 
-    invoke-static {}, Lcom/estrongs/fs/impl/i/b;->c()Lcom/estrongs/fs/impl/i/b;
+    invoke-static {}, Lcom/estrongs/fs/impl/n/d;->b()Lcom/estrongs/fs/impl/n/d;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/estrongs/fs/b/r;->q:Ljava/util/List;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/fs/impl/i/b;->a(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/fs/impl/n/d;->a(Ljava/util/List;)V
 
     :cond_6
     iget-object v0, p0, Lcom/estrongs/fs/b/r;->r:Ljava/util/List;
@@ -2239,13 +2381,13 @@
 
     if-lez v0, :cond_1
 
-    invoke-static {}, Lcom/estrongs/fs/impl/q/b;->c()Lcom/estrongs/fs/impl/q/b;
+    invoke-static {}, Lcom/estrongs/fs/impl/v/c;->b()Lcom/estrongs/fs/impl/v/c;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/estrongs/fs/b/r;->r:Ljava/util/List;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/fs/impl/q/b;->a(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/fs/impl/v/c;->a(Ljava/util/List;)V
     :try_end_1
     .catch Lcom/estrongs/fs/impl/media/MediaStoreInsertException; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -2256,7 +2398,7 @@
 
     invoke-virtual {v0}, Lcom/estrongs/fs/impl/media/MediaStoreInsertException;->printStackTrace()V
 
-    invoke-static {}, Lcom/estrongs/android/pop/utils/cd;->b()V
+    invoke-static {}, Lcom/estrongs/android/pop/utils/cm;->b()V
 
     goto :goto_0
 .end method
@@ -2266,13 +2408,13 @@
 
     invoke-super {p0, p1}, Lcom/estrongs/a/a;->removeProgressListener(Lcom/estrongs/a/a/l;)V
 
-    iget-object v0, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/am;
+    iget-object v0, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/ao;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/am;
+    iget-object v0, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/ao;
 
-    invoke-virtual {v0, p1}, Lcom/estrongs/fs/b/am;->removeProgressListener(Lcom/estrongs/a/a/l;)V
+    invoke-virtual {v0, p1}, Lcom/estrongs/fs/b/ao;->removeProgressListener(Lcom/estrongs/a/a/l;)V
 
     :cond_0
     return-void
@@ -2281,13 +2423,13 @@
 .method public requestStop()V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/am;
+    iget-object v0, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/ao;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/am;
+    iget-object v0, p0, Lcom/estrongs/fs/b/r;->y:Lcom/estrongs/fs/b/ao;
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/b/am;->requestStop()V
+    invoke-virtual {v0}, Lcom/estrongs/fs/b/ao;->requestStop()V
 
     :cond_0
     invoke-super {p0}, Lcom/estrongs/a/a;->requestStop()V
@@ -2399,6 +2541,8 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    invoke-direct {p0, v3}, Lcom/estrongs/fs/b/r;->a(Ljava/util/List;)V
+
     iput-boolean v1, p0, Lcom/estrongs/fs/b/r;->C:Z
 
     iget-boolean v0, p0, Lcom/estrongs/fs/b/r;->b:Z
@@ -2480,6 +2624,8 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    invoke-direct {p0, v3}, Lcom/estrongs/fs/b/r;->a(Ljava/util/List;)V
+
     iput-boolean v1, p0, Lcom/estrongs/fs/b/r;->C:Z
 
     iget-boolean v0, p0, Lcom/estrongs/fs/b/r;->b:Z
@@ -2512,7 +2658,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->ba(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bl(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -2607,9 +2753,15 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v3}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;Z)Z
+    invoke-static {v0, v3}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;Z)Z
 
     move-result v3
+
+    invoke-static {}, Lcom/estrongs/android/scanner/l;->a()Lcom/estrongs/android/scanner/l;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/scanner/l;->e()V
 
     :cond_6
     :goto_2
@@ -2619,7 +2771,7 @@
 
     move-result v0
 
-    if-lez v0, :cond_12
+    if-lez v0, :cond_13
 
     invoke-virtual {p0}, Lcom/estrongs/fs/b/r;->taskStopped()Z
     :try_end_3
@@ -2629,6 +2781,8 @@
     move-result v0
 
     if-eqz v0, :cond_b
+
+    invoke-direct {p0, v4}, Lcom/estrongs/fs/b/r;->a(Ljava/util/List;)V
 
     iput-boolean v1, p0, Lcom/estrongs/fs/b/r;->C:Z
 
@@ -2662,7 +2816,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->aB(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->aL(Ljava/lang/String;)Z
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
@@ -2672,15 +2826,15 @@
     if-eqz v0, :cond_4
 
     :try_start_5
-    invoke-static {}, Lcom/estrongs/android/ui/pcs/r;->a()Lcom/estrongs/android/ui/pcs/r;
+    invoke-static {}, Lcom/estrongs/android/ui/pcs/u;->a()Lcom/estrongs/android/ui/pcs/u;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/r;->g()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/u;->g()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/fs/impl/j/b;->k(Ljava/lang/String;)[J
+    invoke-static {v0}, Lcom/estrongs/fs/impl/o/b;->k(Ljava/lang/String;)[J
 
     move-result-object v0
 
@@ -2746,6 +2900,8 @@
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
     :goto_3
+    invoke-direct {p0, v3}, Lcom/estrongs/fs/b/r;->a(Ljava/util/List;)V
+
     iput-boolean v1, p0, Lcom/estrongs/fs/b/r;->C:Z
 
     iget-boolean v0, p0, Lcom/estrongs/fs/b/r;->b:Z
@@ -2854,6 +3010,8 @@
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
     :cond_9
+    invoke-direct {p0, v3}, Lcom/estrongs/fs/b/r;->a(Ljava/util/List;)V
+
     iput-boolean v1, p0, Lcom/estrongs/fs/b/r;->C:Z
 
     iget-boolean v0, p0, Lcom/estrongs/fs/b/r;->b:Z
@@ -2890,7 +3048,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->ba(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bl(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -2908,6 +3066,8 @@
     :try_end_9
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_1
     .catchall {:try_start_9 .. :try_end_9} :catchall_1
+
+    invoke-direct {p0, v3}, Lcom/estrongs/fs/b/r;->a(Ljava/util/List;)V
 
     iput-boolean v1, p0, Lcom/estrongs/fs/b/r;->C:Z
 
@@ -2951,7 +3111,7 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lcom/estrongs/android/util/am;->az(Ljava/lang/String;)Z
+    invoke-static {v5}, Lcom/estrongs/android/util/ap;->aJ(Ljava/lang/String;)Z
 
     move-result v5
 
@@ -2967,15 +3127,15 @@
 
     if-eqz v5, :cond_c
 
-    invoke-static {}, Lcom/estrongs/android/ui/pcs/r;->a()Lcom/estrongs/android/ui/pcs/r;
+    invoke-static {}, Lcom/estrongs/android/ui/pcs/u;->a()Lcom/estrongs/android/ui/pcs/u;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Lcom/estrongs/android/ui/pcs/r;->e()Ljava/lang/String;
+    invoke-virtual {v6}, Lcom/estrongs/android/ui/pcs/u;->e()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-static {v5, v6}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, v6}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
     :try_end_a
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_2
     .catchall {:try_start_a .. :try_end_a} :catchall_0
@@ -2983,6 +3143,8 @@
     move-result v5
 
     if-nez v5, :cond_c
+
+    invoke-direct {p0, v4}, Lcom/estrongs/fs/b/r;->a(Ljava/util/List;)V
 
     iput-boolean v1, p0, Lcom/estrongs/fs/b/r;->C:Z
 
@@ -3018,7 +3180,7 @@
 
     iget-object v6, v0, Lcom/estrongs/fs/b/u;->b:Ljava/lang/String;
 
-    invoke-static {v5, v6}, Lcom/estrongs/android/util/am;->e(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v5, v6}, Lcom/estrongs/android/util/ap;->e(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v5
 
@@ -3061,7 +3223,7 @@
     if-eqz v3, :cond_e
 
     :cond_d
-    new-instance v3, Lcom/estrongs/fs/o;
+    new-instance v3, Lcom/estrongs/fs/z;
 
     iget-object v5, p0, Lcom/estrongs/fs/b/r;->n:Lcom/estrongs/fs/h;
 
@@ -3071,7 +3233,7 @@
 
     move-result-object v0
 
-    invoke-direct {v3, v5, v0}, Lcom/estrongs/fs/o;-><init>(Lcom/estrongs/fs/h;Ljava/lang/String;)V
+    invoke-direct {v3, v5, v0}, Lcom/estrongs/fs/z;-><init>(Lcom/estrongs/fs/h;Ljava/lang/String;)V
 
     invoke-interface {v4, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_b
@@ -3079,6 +3241,8 @@
     .catchall {:try_start_b .. :try_end_b} :catchall_0
 
     :cond_e
+    invoke-direct {p0, v4}, Lcom/estrongs/fs/b/r;->a(Ljava/util/List;)V
+
     iput-boolean v1, p0, Lcom/estrongs/fs/b/r;->C:Z
 
     iget-boolean v0, p0, Lcom/estrongs/fs/b/r;->b:Z
@@ -3119,7 +3283,7 @@
 
     if-eqz v5, :cond_10
 
-    new-instance v5, Lcom/estrongs/fs/o;
+    new-instance v5, Lcom/estrongs/fs/z;
 
     iget-object v6, p0, Lcom/estrongs/fs/b/r;->n:Lcom/estrongs/fs/h;
 
@@ -3137,11 +3301,11 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {v5, v6, v0}, Lcom/estrongs/fs/o;-><init>(Lcom/estrongs/fs/h;Ljava/lang/String;)V
+    invoke-direct {v5, v6, v0}, Lcom/estrongs/fs/z;-><init>(Lcom/estrongs/fs/h;Ljava/lang/String;)V
 
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -3155,17 +3319,23 @@
     goto/16 :goto_4
 
     :cond_10
-    new-instance v5, Lcom/estrongs/fs/o;
+    iget-object v5, v0, Lcom/estrongs/fs/b/u;->a:Lcom/estrongs/fs/h;
+
+    instance-of v5, v5, Lcom/estrongs/fs/impl/b/d;
+
+    if-eqz v5, :cond_12
+
+    new-instance v5, Lcom/estrongs/fs/z;
 
     iget-object v6, p0, Lcom/estrongs/fs/b/r;->n:Lcom/estrongs/fs/h;
 
-    iget-object v0, v0, Lcom/estrongs/fs/b/u;->a:Lcom/estrongs/fs/h;
+    iget-object v0, v0, Lcom/estrongs/fs/b/u;->b:Ljava/lang/String;
 
-    invoke-interface {v0}, Lcom/estrongs/fs/h;->getName()Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {v5, v6, v0}, Lcom/estrongs/fs/o;-><init>(Lcom/estrongs/fs/h;Ljava/lang/String;)V
+    invoke-direct {v5, v6, v0}, Lcom/estrongs/fs/z;-><init>(Lcom/estrongs/fs/h;Ljava/lang/String;)V
 
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_c
@@ -3180,6 +3350,8 @@
     move-object v3, v4
 
     :goto_5
+    invoke-direct {p0, v3}, Lcom/estrongs/fs/b/r;->a(Ljava/util/List;)V
+
     iput-boolean v1, p0, Lcom/estrongs/fs/b/r;->C:Z
 
     iget-boolean v1, p0, Lcom/estrongs/fs/b/r;->b:Z
@@ -3206,9 +3378,30 @@
     throw v0
 
     :cond_12
-    if-eqz v3, :cond_13
-
     :try_start_d
+    new-instance v5, Lcom/estrongs/fs/z;
+
+    iget-object v6, p0, Lcom/estrongs/fs/b/r;->n:Lcom/estrongs/fs/h;
+
+    iget-object v0, v0, Lcom/estrongs/fs/b/u;->a:Lcom/estrongs/fs/h;
+
+    invoke-interface {v0}, Lcom/estrongs/fs/h;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v5, v6, v0}, Lcom/estrongs/fs/z;-><init>(Lcom/estrongs/fs/h;Ljava/lang/String;)V
+
+    invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_end_d
+    .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_2
+    .catchall {:try_start_d .. :try_end_d} :catchall_0
+
+    goto/16 :goto_2
+
+    :cond_13
+    if-eqz v3, :cond_14
+
+    :try_start_e
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -3218,47 +3411,28 @@
     move-result-object v0
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-    :try_end_d
-    .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_3
-    .catchall {:try_start_d .. :try_end_d} :catchall_0
+    :try_end_e
+    .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_3
+    .catchall {:try_start_e .. :try_end_e} :catchall_0
 
     move-result-object v3
 
-    if-ne v0, v3, :cond_18
+    if-ne v0, v3, :cond_19
 
     move v0, v1
 
     :goto_6
-    if-nez v0, :cond_13
+    if-nez v0, :cond_14
 
     const-wide/16 v6, 0x2710
 
-    :try_start_e
+    :try_start_f
     invoke-static {v6, v7}, Ljava/lang/Thread;->sleep(J)V
-
-    :cond_13
-    iget-object v0, p0, Lcom/estrongs/fs/b/r;->processData:Lcom/estrongs/a/a/m;
-
-    iget-wide v6, v0, Lcom/estrongs/a/a/m;->c:J
-
-    const-wide/16 v8, 0x0
-
-    cmp-long v0, v6, v8
-
-    if-lez v0, :cond_14
-
-    iget-object v0, p0, Lcom/estrongs/fs/b/r;->processData:Lcom/estrongs/a/a/m;
-
-    iget-object v3, p0, Lcom/estrongs/fs/b/r;->processData:Lcom/estrongs/a/a/m;
-
-    iget-wide v6, v3, Lcom/estrongs/a/a/m;->c:J
-
-    iput-wide v6, v0, Lcom/estrongs/a/a/m;->d:J
 
     :cond_14
     iget-object v0, p0, Lcom/estrongs/fs/b/r;->processData:Lcom/estrongs/a/a/m;
 
-    iget-wide v6, v0, Lcom/estrongs/a/a/m;->e:J
+    iget-wide v6, v0, Lcom/estrongs/a/a/m;->c:J
 
     const-wide/16 v8, 0x0
 
@@ -3270,11 +3444,30 @@
 
     iget-object v3, p0, Lcom/estrongs/fs/b/r;->processData:Lcom/estrongs/a/a/m;
 
+    iget-wide v6, v3, Lcom/estrongs/a/a/m;->c:J
+
+    iput-wide v6, v0, Lcom/estrongs/a/a/m;->d:J
+
+    :cond_15
+    iget-object v0, p0, Lcom/estrongs/fs/b/r;->processData:Lcom/estrongs/a/a/m;
+
+    iget-wide v6, v0, Lcom/estrongs/a/a/m;->e:J
+
+    const-wide/16 v8, 0x0
+
+    cmp-long v0, v6, v8
+
+    if-lez v0, :cond_16
+
+    iget-object v0, p0, Lcom/estrongs/fs/b/r;->processData:Lcom/estrongs/a/a/m;
+
+    iget-object v3, p0, Lcom/estrongs/fs/b/r;->processData:Lcom/estrongs/a/a/m;
+
     iget-wide v6, v3, Lcom/estrongs/a/a/m;->e:J
 
     iput-wide v6, v0, Lcom/estrongs/a/a/m;->f:J
 
-    :cond_15
+    :cond_16
     iget-object v0, p0, Lcom/estrongs/fs/b/r;->processData:Lcom/estrongs/a/a/m;
 
     invoke-virtual {p0, v0}, Lcom/estrongs/fs/b/r;->onProgress(Lcom/estrongs/a/a/m;)V
@@ -3287,37 +3480,39 @@
 
     check-cast v0, Lcom/estrongs/a/a/h;
 
-    if-eqz v0, :cond_17
+    if-eqz v0, :cond_18
 
     iget v0, p0, Lcom/estrongs/fs/b/r;->h:I
 
     iget v3, p0, Lcom/estrongs/fs/b/r;->g:I
 
-    if-ne v0, v3, :cond_17
+    if-ne v0, v3, :cond_18
 
     const/4 v0, 0x3
 
     const/4 v3, 0x0
 
     invoke-virtual {p0, v0, v3}, Lcom/estrongs/fs/b/r;->setTaskResult(ILjava/lang/Object;)V
-    :try_end_e
-    .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_2
-    .catchall {:try_start_e .. :try_end_e} :catchall_0
+    :try_end_f
+    .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_2
+    .catchall {:try_start_f .. :try_end_f} :catchall_0
 
     :goto_7
+    invoke-direct {p0, v4}, Lcom/estrongs/fs/b/r;->a(Ljava/util/List;)V
+
     iput-boolean v1, p0, Lcom/estrongs/fs/b/r;->C:Z
 
     iget-boolean v0, p0, Lcom/estrongs/fs/b/r;->b:Z
 
-    if-eqz v0, :cond_16
+    if-eqz v0, :cond_17
 
-    if-eqz v4, :cond_16
+    if-eqz v4, :cond_17
 
     invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-lez v0, :cond_16
+    if-lez v0, :cond_17
 
     invoke-static {}, Lcom/estrongs/fs/a/b;->a()Lcom/estrongs/fs/a/b;
 
@@ -3327,7 +3522,7 @@
 
     invoke-virtual {v0, v4, v2}, Lcom/estrongs/fs/a/b;->b(Ljava/util/List;I)V
 
-    :cond_16
+    :cond_17
     move v2, v1
 
     goto/16 :goto_0
@@ -3339,16 +3534,16 @@
 
     goto :goto_6
 
-    :cond_17
+    :cond_18
     const/4 v0, 0x0
 
-    :try_start_f
+    :try_start_10
     iget-object v3, p0, Lcom/estrongs/fs/b/r;->k:Lcom/estrongs/fs/b/v;
 
     invoke-virtual {p0, v0, v3}, Lcom/estrongs/fs/b/r;->setTaskResult(ILjava/lang/Object;)V
-    :try_end_f
-    .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_2
-    .catchall {:try_start_f .. :try_end_f} :catchall_0
+    :try_end_10
+    .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_2
+    .catchall {:try_start_10 .. :try_end_10} :catchall_0
 
     goto :goto_7
 
@@ -3357,7 +3552,7 @@
 
     goto/16 :goto_5
 
-    :cond_18
+    :cond_19
     move v0, v2
 
     goto :goto_6

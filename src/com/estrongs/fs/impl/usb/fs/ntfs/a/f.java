@@ -1,6 +1,6 @@
 package com.estrongs.fs.impl.usb.fs.ntfs.a;
 
-import android.util.Log;
+import com.estrongs.android.util.l;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -34,12 +34,12 @@ class f
     int i = a.e(c + 4);
     if (i <= 0)
     {
-      Log.e(d.b(), "Invalid attribute length, preventing infinite loop. Data on disk may be corrupt.");
+      l.e(d.b(), "Invalid attribute length, preventing infinite loop. Data on disk may be corrupt.");
       return false;
     }
     b = new g(a, c);
     if (d.b(a)) {
-      Log.d(d.b(), b.toString());
+      l.b(d.b(), b.toString());
     }
     c += i;
     return true;

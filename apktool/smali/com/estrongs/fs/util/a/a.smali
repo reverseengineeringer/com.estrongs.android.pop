@@ -151,11 +151,11 @@
 .method protected a(Lcom/estrongs/fs/h;)Z
     .locals 1
 
-    invoke-interface {p1}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/m;
+    invoke-interface {p1}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/w;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/m;->a()Z
+    invoke-virtual {v0}, Lcom/estrongs/fs/w;->a()Z
 
     move-result v0
 

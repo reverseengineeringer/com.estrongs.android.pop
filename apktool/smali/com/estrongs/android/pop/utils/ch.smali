@@ -1,172 +1,70 @@
-.class public Lcom/estrongs/android/pop/utils/ch;
+.class Lcom/estrongs/android/pop/utils/ch;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Lcom/estrongs/a/a/o;
 
-# static fields
-.field public static a:I
 
-.field public static b:I
+# instance fields
+.field final synthetic a:Z
 
-.field private static c:Ljava/lang/String;
+.field final synthetic b:Lcom/estrongs/android/pop/utils/bv;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method constructor <init>(Lcom/estrongs/android/pop/utils/bv;Z)V
+    .locals 0
 
-    const/4 v0, -0x1
+    iput-object p1, p0, Lcom/estrongs/android/pop/utils/ch;->b:Lcom/estrongs/android/pop/utils/bv;
 
-    sput v0, Lcom/estrongs/android/pop/utils/ch;->a:I
+    iput-boolean p2, p0, Lcom/estrongs/android/pop/utils/ch;->a:Z
 
-    const/16 v0, 0x3e8
-
-    sput v0, Lcom/estrongs/android/pop/utils/ch;->b:I
-
-    const/4 v0, 0x0
-
-    sput-object v0, Lcom/estrongs/android/pop/utils/ch;->c:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;)Ljava/lang/String;
-    .locals 2
 
-    const-string v0, "phone"
+# virtual methods
+.method public a(Lcom/estrongs/a/a;Z)V
+    .locals 3
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/telephony/TelephonyManager;
-
-    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    const-string v1, "+86"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x3
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v0
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->am()V
 
     :cond_0
-    return-object v0
-.end method
+    iget-boolean v1, p0, Lcom/estrongs/android/pop/utils/ch;->a:Z
 
-.method public static a()Z
-    .locals 2
+    if-eqz v1, :cond_1
 
-    :try_start_0
-    invoke-static {}, Lcom/estrongs/android/pop/utils/ch;->b()Ljava/lang/String;
+    new-instance v1, Lcom/estrongs/android/pop/utils/ci;
 
-    move-result-object v0
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/utils/ci;-><init>(Lcom/estrongs/android/pop/utils/ch;)V
 
-    if-eqz v0, :cond_1
-
-    const-string v1, "cn"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string v1, "hk"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string v1, "mo"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string v1, "tw"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :catch_0
-    move-exception v0
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a(Lcom/estrongs/android/util/z;)V
 
     :cond_1
-    const/4 v0, 0x0
+    invoke-virtual {p1}, Lcom/estrongs/a/a;->getTaskResult()Lcom/estrongs/a/p;
 
-    goto :goto_0
-.end method
+    move-result-object v1
 
-.method private static b()Ljava/lang/String;
-    .locals 2
+    iget v1, v1, Lcom/estrongs/a/p;->a:I
 
-    sget-object v0, Lcom/estrongs/android/pop/utils/ch;->c:Ljava/lang/String;
+    const/16 v2, 0x11
 
-    if-eqz v0, :cond_0
+    if-ne v1, v2, :cond_2
 
-    sget-object v0, Lcom/estrongs/android/pop/utils/ch;->c:Ljava/lang/String;
+    new-instance v1, Lcom/estrongs/android/pop/utils/cj;
 
-    :goto_0
-    return-object v0
+    invoke-direct {v1, p0, v0}, Lcom/estrongs/android/pop/utils/cj;-><init>(Lcom/estrongs/android/pop/utils/ch;Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
 
-    :cond_0
-    :try_start_0
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    move-result-object v0
-
-    const-string v1, "phone"
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/FexApplication;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/telephony/TelephonyManager;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getSimCountryIso()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/estrongs/android/pop/utils/ch;->c:Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :cond_1
-    :goto_1
-    sget-object v0, Lcom/estrongs/android/pop/utils/ch;->c:Ljava/lang/String;
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_1
+    :cond_2
+    return-void
 .end method

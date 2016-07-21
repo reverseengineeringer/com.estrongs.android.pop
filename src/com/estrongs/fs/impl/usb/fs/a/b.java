@@ -1,6 +1,6 @@
 package com.estrongs.fs.impl.usb.fs.a;
 
-import android.util.Log;
+import com.estrongs.android.util.l;
 import com.estrongs.fs.impl.usb.driver.a;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -23,17 +23,17 @@ public class b
     d = parama;
     g = parami;
     int i;
-    if (!paramc.g())
+    if (!paramc.h())
     {
-      i = paramc.h();
+      i = paramc.i();
       f = new int[] { i };
       if (c) {
-        Log.i(b, "fat is not mirrored, fat " + i + " is valid");
+        l.c(b, "fat is not mirrored, fat " + i + " is valid");
       }
     }
     for (;;)
     {
-      h = paramc.j();
+      h = paramc.k();
       e = new long[f.length];
       i = j;
       while (i < e.length)
@@ -50,7 +50,7 @@ public class b
         i += 1;
       }
       if (c) {
-        Log.i(b, "fat is mirrored, fat count: " + k);
+        l.c(b, "fat is mirrored, fat count: " + k);
       }
     }
   }
@@ -111,16 +111,16 @@ public class b
         ByteBuffer localByteBuffer = ByteBuffer.allocate(j);
         localByteBuffer.order(ByteOrder.LITTLE_ENDIAN);
         if (paramArrayOfLong.length == 0) {
-          break label725;
+          break label724;
         }
         l3 = paramArrayOfLong[(paramArrayOfLong.length - 1)].longValue();
         l1 = g.b();
         long l2 = l1;
         if (l1 != i.a) {
-          break label717;
+          break label716;
         }
         l2 = 2L;
-        break label717;
+        break label716;
         long l7;
         if (paramInt > 0)
         {
@@ -136,7 +136,7 @@ public class b
             l4 = l5;
           }
           if (localByteBuffer.getInt((int)((l6 + 4L * l2) % l7)) != 0) {
-            break label710;
+            break label709;
           }
           localArrayList.add(Long.valueOf(l2));
           paramInt -= 1;
@@ -196,20 +196,20 @@ public class b
           g.c(paramInt);
           g.c();
           if (c) {
-            Log.i(b, "allocating clusters finished");
+            l.c(b, "allocating clusters finished");
           }
           paramArrayOfLong = (Long[])localArrayList.toArray(new Long[0]);
           return paramArrayOfLong;
         }
       }
       continue;
-      label710:
+      label709:
       long l1 = l4;
       continue;
-      label717:
+      label716:
       l1 = -1L;
       continue;
-      label725:
+      label724:
       long l3 = -1L;
     }
   }
@@ -247,7 +247,7 @@ public class b
       l1 = l2;
       if (c)
       {
-        Log.i(b, "freed set end EOF ");
+        l.c(b, "freed set end EOF ");
         l1 = l2;
       }
     }
@@ -261,7 +261,7 @@ public class b
         l4 = e[0];
         l5 = k;
         if (l1 == l2) {
-          break label434;
+          break label431;
         }
         if (l1 != -1L)
         {
@@ -272,19 +272,19 @@ public class b
         d.a(l2, localByteBuffer);
         l1 = l2;
       }
-      label434:
+      label431:
       for (;;)
       {
         localByteBuffer.putInt((int)((l3 * 4L + l4) % l5), 0);
         i += 1;
         break;
         if (c) {
-          Log.i(b, "freed all cluster");
+          l.c(b, "freed all cluster");
         }
         localByteBuffer.clear();
         a(l1, localByteBuffer);
         if (c) {
-          Log.i(b, "freed " + paramInt + " clusters");
+          l.c(b, "freed " + paramInt + " clusters");
         }
         g.c(-paramInt);
         g.c();

@@ -1,19 +1,15 @@
 package com.estrongs.android.pop.app.a;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnKeyListener;
+import android.view.KeyEvent;
 
-class i
-  implements MenuItem.OnMenuItemClickListener
+final class i
+  implements DialogInterface.OnKeyListener
 {
-  i(e parame) {}
-  
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public boolean onKey(DialogInterface paramDialogInterface, int paramInt, KeyEvent paramKeyEvent)
   {
-    a.b = new ac(a, e.a(a));
-    a.b.show();
-    a.d();
-    return true;
+    return paramInt == 4;
   }
 }
 

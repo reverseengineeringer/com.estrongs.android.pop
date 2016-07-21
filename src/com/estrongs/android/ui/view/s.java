@@ -8,7 +8,7 @@ import android.view.WindowManager;
 import android.webkit.WebView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import com.estrongs.android.util.a;
+import com.estrongs.android.j.c;
 
 class s
   extends Handler
@@ -19,7 +19,7 @@ class s
   {
     if (what == CreateOAuthNetDisk.a) {
       if (obj == null) {
-        ag.a(a, a.getText(2131427964), 1);
+        ak.a(a, a.getText(2131231423), 1);
       }
     }
     for (;;)
@@ -43,7 +43,7 @@ class s
           CreateOAuthNetDisk.b(localCreateOAuthNetDisk, paramMessage);
           return;
         }
-        if (what != CreateOAuthNetDisk.g) {
+        if (what != CreateOAuthNetDisk.h) {
           break label262;
         }
         if (CreateOAuthNetDisk.c(a).getContentHeight() <= 0) {
@@ -52,16 +52,16 @@ class s
         paramMessage = CreateOAuthNetDisk.c(a).getLayoutParams();
         height = -2;
         CreateOAuthNetDisk.c(a).setLayoutParams(paramMessage);
-      } while (!a.h);
+      } while (!a.i);
       paramMessage = new DisplayMetrics();
       a.getWindowManager().getDefaultDisplay().getMetrics(paramMessage);
       CreateOAuthNetDisk.a(a, heightPixels * 4 / 5);
       return;
-      paramMessage = CreateOAuthNetDisk.b(a).obtainMessage(CreateOAuthNetDisk.g);
+      paramMessage = CreateOAuthNetDisk.b(a).obtainMessage(CreateOAuthNetDisk.h);
       CreateOAuthNetDisk.b(a).sendMessageDelayed(paramMessage, 300L);
       return;
       label262:
-      if (what == CreateOAuthNetDisk.c)
+      if (what == CreateOAuthNetDisk.d)
       {
         CreateOAuthNetDisk.d(a).setVisibility(8);
         CreateOAuthNetDisk.e(a).setVisibility(8);
@@ -69,48 +69,30 @@ class s
         CreateOAuthNetDisk.c(a).requestFocus(130);
         return;
       }
-      if (what == CreateOAuthNetDisk.d) {
-        ag.a(a, 2131428354, 1);
-      } else if (what == CreateOAuthNetDisk.e) {
+      if (what == CreateOAuthNetDisk.e) {
+        ak.a(a, 2131231812, 1);
+      } else if (what == CreateOAuthNetDisk.f) {
         if (!((Boolean)obj).booleanValue())
         {
-          ag.a(a, 2131428354, 1);
+          ak.a(a, 2131231812, 1);
         }
         else
         {
-          paramMessage = a.a();
-          if (CreateOAuthNetDisk.a(a).equals("kuaipan"))
-          {
-            if (paramMessage != null) {
-              paramMessage.c("快盘_Create", "快盘_Create");
+          paramMessage = c.a(a);
+          if ((!CreateOAuthNetDisk.a(a).equals("kuaipan")) && (!CreateOAuthNetDisk.a(a).equals("box")) && (!CreateOAuthNetDisk.a(a).equals("onedrive"))) {
+            if (CreateOAuthNetDisk.a(a).equals("gdrive"))
+            {
+              if (paramMessage != null) {
+                paramMessage.a("Gdrive_Create");
+              }
             }
-          }
-          else if (CreateOAuthNetDisk.a(a).equals("box"))
-          {
-            if (paramMessage != null) {
-              paramMessage.c("Box_Create", "Box_Create");
+            else if (CreateOAuthNetDisk.a(a).equals("dropbox"))
+            {
+              if (paramMessage != null) {
+                paramMessage.a("Dropbox_Create");
+              }
             }
-          }
-          else if (CreateOAuthNetDisk.a(a).equals("onedrive"))
-          {
-            if (paramMessage != null) {
-              paramMessage.c("Skydrive_Create", "Skydrive_Create");
-            }
-          }
-          else if (CreateOAuthNetDisk.a(a).equals("gdrive"))
-          {
-            if (paramMessage != null) {
-              paramMessage.c("Gdrive_Create", "Gdrive_Create");
-            }
-          }
-          else if (CreateOAuthNetDisk.a(a).equals("dropbox"))
-          {
-            if (paramMessage != null) {
-              paramMessage.c("Dropbox_Create", "Dropbox_Create");
-            }
-          }
-          else if ((CreateOAuthNetDisk.a(a).equals("megacloud")) && (paramMessage != null)) {
-            paramMessage.c("Megacloud_Create", "Megacloud_Create");
+            else if (!CreateOAuthNetDisk.a(a).equals("megacloud")) {}
           }
         }
       }

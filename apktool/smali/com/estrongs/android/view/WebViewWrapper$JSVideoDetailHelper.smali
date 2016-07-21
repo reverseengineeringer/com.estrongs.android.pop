@@ -24,17 +24,17 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    invoke-static {p1}, Lcom/estrongs/android/util/bd;->b(Ljava/lang/CharSequence;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/bk;->b(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lcom/estrongs/android/view/en;
+    new-instance v0, Lcom/estrongs/android/view/gs;
 
-    invoke-direct {v0, p0, p1}, Lcom/estrongs/android/view/en;-><init>(Lcom/estrongs/android/view/WebViewWrapper$JSVideoDetailHelper;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1}, Lcom/estrongs/android/view/gs;-><init>(Lcom/estrongs/android/view/WebViewWrapper$JSVideoDetailHelper;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/Runnable;)V
 
     :cond_0
     return-void

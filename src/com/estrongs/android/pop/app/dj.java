@@ -14,7 +14,8 @@ import android.widget.TextView;
 import com.estrongs.android.pop.ad;
 import com.estrongs.android.pop.app.imageviewer.gallery.c;
 import com.estrongs.android.pop.spfs.SPFileInfo;
-import com.estrongs.android.util.as;
+import com.estrongs.android.ui.d.g;
+import com.estrongs.android.util.aw;
 import com.estrongs.android.util.m;
 import com.estrongs.fs.d;
 import java.util.Date;
@@ -24,22 +25,22 @@ class dj
   extends BaseAdapter
 {
   private Bitmap b;
-  private as c = new as(ad.a(a).E(), ImageCommentActivity.l(a));
+  private aw c = new aw(ad.a(a).F(), ImageCommentActivity.j(a));
   
   dj(ImageCommentActivity paramImageCommentActivity) {}
   
   private int a()
   {
-    return a.getResources().getDisplayMetrics().widthPixels - com.estrongs.android.ui.d.a.a(a, 15.0F);
+    return a.getResources().getDisplayMetrics().widthPixels - g.a(a, 15.0F);
   }
   
   private void a(View paramView, Bitmap paramBitmap)
   {
     if (paramBitmap != null)
     {
-      paramView.findViewById(2131362426).setVisibility(8);
+      paramView.findViewById(2131625038).setVisibility(8);
       int i = Math.min(paramBitmap.getWidth(), a());
-      paramView = (ImageView)paramView.findViewById(2131362092);
+      paramView = (ImageView)paramView.findViewById(2131624051);
       paramView.setLayoutParams(new LinearLayout.LayoutParams(i, i));
       paramView.setImageBitmap(paramBitmap);
       paramView.setVisibility(0);
@@ -49,12 +50,12 @@ class dj
   
   public int getCount()
   {
-    return ImageCommentActivity.g(a).size();
+    return ImageCommentActivity.e(a).size();
   }
   
   public Object getItem(int paramInt)
   {
-    return ImageCommentActivity.g(a).get(paramInt);
+    return ImageCommentActivity.e(a).get(paramInt);
   }
   
   public long getItemId(int paramInt)
@@ -70,18 +71,18 @@ class dj
     TextView localTextView3;
     if (paramInt == 0)
     {
-      paramViewGroup = ImageCommentActivity.m(a).inflate(2130903217, null);
+      paramViewGroup = ImageCommentActivity.k(a).inflate(2130903378, null);
       if (a.getIntent().getBooleanExtra("is_dir", false)) {
-        ((ImageView)paramViewGroup.findViewById(2131362092)).setBackgroundResource(2130837543);
+        ((ImageView)paramViewGroup.findViewById(2131624051)).setBackgroundResource(2130837652);
       }
-      localTextView1 = (TextView)paramViewGroup.findViewById(2131361825);
-      localTextView2 = (TextView)paramViewGroup.findViewById(2131362607);
-      localTextView3 = (TextView)paramViewGroup.findViewById(2131362625);
-      if (((b == null) || (b.isRecycled())) && (ImageCommentActivity.n(a) == null) && (com.estrongs.a.b.a.a(10).indexOf("makeAndAddView") >= 0))
+      localTextView1 = (TextView)paramViewGroup.findViewById(2131624055);
+      localTextView2 = (TextView)paramViewGroup.findViewById(2131625357);
+      localTextView3 = (TextView)paramViewGroup.findViewById(2131625372);
+      if (((b == null) || (b.isRecycled())) && (ImageCommentActivity.l(a) == null) && (com.estrongs.a.b.a.a(10).indexOf("makeAndAddView") >= 0))
       {
-        paramView = new c(null, d.a(a), ImageCommentActivity.c(a));
+        paramView = new c(null, d.a(a), ImageCommentActivity.b(a));
         ImageCommentActivity.c(a, new dk(this, "PicComment-ImageLoader", localTextView1, localTextView2, localTextView3, paramView, paramViewGroup));
-        ImageCommentActivity.n(a).start();
+        ImageCommentActivity.l(a).start();
         paramView = paramViewGroup;
         if (a.a != null)
         {
@@ -94,7 +95,7 @@ class dj
             localTextView2.setText(c.a(new Date(l)));
           }
           label264:
-          ((TextView)a.findViewById(2131362518)).setText(a.a.ownerUsername);
+          ((TextView)a.findViewById(2131625255)).setText(a.a.ownerUsername);
           if ((a.a.description == null) || ("".equals(a.a.description))) {
             break label367;
           }
@@ -115,20 +116,20 @@ class dj
       break label264;
       localTextView3.setVisibility(8);
       return paramViewGroup;
-      paramViewGroup = ImageCommentActivity.g(a).get(paramInt);
+      paramViewGroup = ImageCommentActivity.e(a).get(paramInt);
       if ((paramViewGroup instanceof com.gmail.yuyang226.flickr.a.a.a))
       {
         paramView = (com.gmail.yuyang226.flickr.a.a.a)paramViewGroup;
-        paramViewGroup = ImageCommentActivity.m(a).inflate(2130903214, null);
-        localTextView1 = (TextView)paramViewGroup.findViewById(2131362606);
-        localTextView2 = (TextView)paramViewGroup.findViewById(2131362607);
-        localTextView3 = (TextView)paramViewGroup.findViewById(2131362608);
+        paramViewGroup = ImageCommentActivity.k(a).inflate(2130903375, null);
+        localTextView1 = (TextView)paramViewGroup.findViewById(2131625356);
+        localTextView2 = (TextView)paramViewGroup.findViewById(2131625357);
+        localTextView3 = (TextView)paramViewGroup.findViewById(2131625358);
         localTextView1.setText(paramView.a());
         localTextView2.setText(c.a(paramView.b()));
         localTextView3.setText(paramView.c());
         return paramViewGroup;
       }
-    } while (paramViewGroup != ImageCommentActivity.j(a));
+    } while (paramViewGroup != ImageCommentActivity.h(a));
     return (View)paramViewGroup;
   }
 }

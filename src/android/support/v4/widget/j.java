@@ -1,48 +1,17 @@
 package android.support.v4.widget;
 
-import android.content.Context;
-import android.graphics.Canvas;
-import android.widget.EdgeEffect;
+import android.content.res.ColorStateList;
+import android.graphics.PorterDuff.Mode;
+import android.graphics.drawable.Drawable;
+import android.widget.CompoundButton;
 
-class j
+abstract interface j
 {
-  public static Object a(Context paramContext)
-  {
-    return new EdgeEffect(paramContext);
-  }
+  public abstract Drawable a(CompoundButton paramCompoundButton);
   
-  public static void a(Object paramObject, int paramInt1, int paramInt2)
-  {
-    ((EdgeEffect)paramObject).setSize(paramInt1, paramInt2);
-  }
+  public abstract void a(CompoundButton paramCompoundButton, ColorStateList paramColorStateList);
   
-  public static boolean a(Object paramObject)
-  {
-    return ((EdgeEffect)paramObject).isFinished();
-  }
-  
-  public static boolean a(Object paramObject, float paramFloat)
-  {
-    ((EdgeEffect)paramObject).onPull(paramFloat);
-    return true;
-  }
-  
-  public static boolean a(Object paramObject, Canvas paramCanvas)
-  {
-    return ((EdgeEffect)paramObject).draw(paramCanvas);
-  }
-  
-  public static void b(Object paramObject)
-  {
-    ((EdgeEffect)paramObject).finish();
-  }
-  
-  public static boolean c(Object paramObject)
-  {
-    paramObject = (EdgeEffect)paramObject;
-    ((EdgeEffect)paramObject).onRelease();
-    return ((EdgeEffect)paramObject).isFinished();
-  }
+  public abstract void a(CompoundButton paramCompoundButton, PorterDuff.Mode paramMode);
 }
 
 /* Location:

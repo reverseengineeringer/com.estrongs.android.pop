@@ -2,12 +2,11 @@ package com.estrongs.android.ui.b;
 
 import android.app.Activity;
 import com.estrongs.a.a;
-import com.estrongs.android.ui.dialog.ix;
-import com.estrongs.android.ui.notification.e;
+import com.estrongs.android.ui.dialog.jh;
 import java.util.Map;
 
 class h
-  extends e
+  extends com.estrongs.android.ui.notification.f
 {
   h(f paramf, Activity paramActivity, CharSequence paramCharSequence, a parama)
   {
@@ -16,12 +15,12 @@ class h
   
   protected void a(a parama)
   {
-    ix.e.remove(Long.valueOf(parama.getTaskId()));
+    jh.e.remove(Long.valueOf(parama.getTaskId()));
   }
   
   protected void b(a parama)
   {
-    ix.e.remove(Long.valueOf(parama.getTaskId()));
+    jh.e.remove(Long.valueOf(parama.getTaskId()));
   }
 }
 

@@ -3,31 +3,19 @@ package com.estrongs.android.pop.utils;
 import android.app.Activity;
 import com.estrongs.a.a;
 import com.estrongs.a.a.p;
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.util.am;
-import com.estrongs.android.view.aw;
-import com.estrongs.fs.h;
+import com.estrongs.android.pop.view.utils.AppRunner;
+import com.estrongs.fs.b.y;
 
 final class bg
   implements p
 {
-  bg(Activity paramActivity, aw paramaw, h paramh) {}
+  bg(Activity paramActivity, y paramy) {}
   
   public void a(a parama, int paramInt1, int paramInt2)
   {
-    if (((paramInt2 == 5) || (paramInt2 == 4)) && ((a instanceof FileExplorerActivity)) && (b != null))
-    {
-      if (!am.aO(c.getPath())) {
-        break label66;
-      }
-      aj.b(c);
-      a.runOnUiThread(new bh(this));
+    if (paramInt2 == 4) {
+      AppRunner.a(a, b.b(), b.b());
     }
-    label66:
-    while ((!am.ba(c.getPath())) || (c.getExtra("child_count") == null)) {
-      return;
-    }
-    aj.a(c);
   }
 }
 

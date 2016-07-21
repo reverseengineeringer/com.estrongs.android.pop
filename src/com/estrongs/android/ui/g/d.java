@@ -1,25 +1,25 @@
 package com.estrongs.android.ui.g;
 
-import com.estrongs.android.util.ab;
+import com.estrongs.android.util.af;
 
 class d
-  implements ab
+  implements af
 {
   d(c paramc) {}
   
-  public void a(Object paramObject) {}
-  
-  public void a(Object paramObject, long paramLong1, long paramLong2) {}
-  
-  public void a(Object paramObject, Throwable paramThrowable)
+  public void downloadCompleted(Object paramObject)
   {
     c.a(a, false);
   }
   
-  public void b(Object paramObject)
+  public void downloadError(Object paramObject, Throwable paramThrowable)
   {
     c.a(a, false);
   }
+  
+  public void downloadProgress(Object paramObject, long paramLong1, long paramLong2) {}
+  
+  public void downloadStarted(Object paramObject) {}
 }
 
 /* Location:

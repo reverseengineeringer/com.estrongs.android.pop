@@ -46,10 +46,10 @@ public class SlidingDrawer
   private int n;
   private int o;
   private int p;
-  private bp q;
-  private bo r;
-  private bq s;
-  private final Handler t = new br(this, null);
+  private bq q;
+  private bp r;
+  private br s;
+  private final Handler t = new bs(this, null);
   private float u;
   private float v;
   private float w;
@@ -65,7 +65,7 @@ public class SlidingDrawer
   public SlidingDrawer(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, ah.d, paramInt, 0);
+    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, ah.SlidingDrawer, paramInt, 0);
     if (paramContext.getInt(2, 1) == 1) {}
     for (boolean bool = true;; bool = false)
     {
@@ -151,7 +151,7 @@ public class SlidingDrawer
       A = true;
       t.removeMessages(1000);
       t.sendMessageAtTime(t.obtainMessage(1000), y);
-      g();
+      f();
       return;
       i1 = p;
       break;
@@ -456,7 +456,7 @@ public class SlidingDrawer
     }
   }
   
-  private void f()
+  private void e()
   {
     a("prepareContent");
     if (A) {
@@ -497,7 +497,7 @@ public class SlidingDrawer
     }
   }
   
-  private void g()
+  private void f()
   {
     a("stopTracking");
     c.setPressed(false);
@@ -512,12 +512,12 @@ public class SlidingDrawer
     }
   }
   
-  private void h()
+  private void g()
   {
     a("doAnimation", w);
     if (A)
     {
-      i();
+      h();
       if ((k != 1) && (k != 2)) {
         break label157;
       }
@@ -531,13 +531,13 @@ public class SlidingDrawer
     for (int i1 = getHeight(); f1 >= i1 + i2 - 1; i1 = getWidth())
     {
       A = false;
-      j();
+      i();
       return;
     }
     if (w < n)
     {
       A = false;
-      k();
+      j();
       return;
     }
     d((int)w);
@@ -551,13 +551,13 @@ public class SlidingDrawer
     for (i1 = getHeight(); f1 >= i1 + i2 - 1; i1 = getWidth())
     {
       A = false;
-      k();
+      j();
       return;
     }
     if (w < n)
     {
       A = false;
-      j();
+      i();
       return;
     }
     d((int)w);
@@ -565,7 +565,7 @@ public class SlidingDrawer
     t.sendMessageAtTime(t.obtainMessage(1000), y);
   }
   
-  private void i()
+  private void h()
   {
     a("incrementAnimation");
     long l1 = SystemClock.uptimeMillis();
@@ -580,7 +580,7 @@ public class SlidingDrawer
     x = l1;
   }
   
-  private void j()
+  private void i()
   {
     a("closeDrawer");
     d(55534);
@@ -595,7 +595,7 @@ public class SlidingDrawer
     r.a();
   }
   
-  private void k()
+  private void j()
   {
     a("openDrawer");
     d(55535);
@@ -612,14 +612,14 @@ public class SlidingDrawer
   public void a()
   {
     if (!l) {
-      k();
+      j();
     }
     for (;;)
     {
       invalidate();
       requestLayout();
       return;
-      j();
+      i();
     }
   }
   
@@ -636,10 +636,10 @@ public class SlidingDrawer
   public void c()
   {
     a("animateClose");
-    f();
-    bq localbq = s;
-    if (localbq != null) {
-      localbq.a();
+    e();
+    br localbr = s;
+    if (localbr != null) {
+      localbr.a();
     }
     int i1;
     if (j) {
@@ -650,8 +650,8 @@ public class SlidingDrawer
     for (;;)
     {
       a(i1);
-      if (localbq != null) {
-        localbq.b();
+      if (localbr != null) {
+        localbr.b();
       }
       return;
       i1 = c.getBottom();
@@ -667,17 +667,17 @@ public class SlidingDrawer
   public void d()
   {
     a("animateOpen");
-    f();
-    bq localbq = s;
-    if (localbq != null) {
-      localbq.a();
+    e();
+    br localbr = s;
+    if (localbr != null) {
+      localbr.a();
     }
     if (j) {}
     for (int i1 = c.getTop();; i1 = c.getLeft())
     {
       b(i1);
-      if (localbq != null) {
-        localbq.b();
+      if (localbr != null) {
+        localbr.b();
       }
       return;
     }
@@ -752,9 +752,14 @@ public class SlidingDrawer
     drawChild(paramCanvas, d, l1);
   }
   
-  public View e()
+  public View getContent()
   {
     return d;
+  }
+  
+  public View getHandle()
+  {
+    return c;
   }
   
   protected void onFinishInflate()
@@ -763,9 +768,9 @@ public class SlidingDrawer
     if (c == null) {
       throw new IllegalArgumentException("The handle attribute is must refer to an existing child.");
     }
-    c.setOnClickListener(new bn(this, null));
+    c.setOnClickListener(new bo(this, null));
     d = findViewById(b);
-    d.setOnClickListener(new bm(this));
+    d.setOnClickListener(new bn(this));
     if (d == null) {
       throw new IllegalArgumentException("The content attribute is must refer to an existing child.");
     }
@@ -794,7 +799,7 @@ public class SlidingDrawer
     {
       g = true;
       localView.setPressed(true);
-      f();
+      e();
       if (s != null) {
         s.a();
       }
@@ -912,7 +917,7 @@ public class SlidingDrawer
     switch (paramMotionEvent.getAction())
     {
     default: 
-      a("content layout", "left:" + e().getLeft() + "right:" + e().getRight());
+      a("content layout", "left:" + getContent().getLeft() + "right:" + getContent().getRight());
       if ((g) || (A) || (super.onTouchEvent(paramMotionEvent))) {
         return true;
       }
@@ -1070,6 +1075,21 @@ public class SlidingDrawer
       f1 = f3;
       i1 = i2;
     }
+  }
+  
+  public void setOnDrawerCloseListener(bp parambp)
+  {
+    r = parambp;
+  }
+  
+  public void setOnDrawerOpenListener(bq parambq)
+  {
+    q = parambq;
+  }
+  
+  public void setOnDrawerScrollListener(br parambr)
+  {
+    s = parambr;
   }
 }
 

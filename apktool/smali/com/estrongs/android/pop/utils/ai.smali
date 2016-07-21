@@ -3,24 +3,37 @@
 
 
 # instance fields
-.field public a:Z
+.field public a:Ljava/lang/String;
 
-.field public b:I
+.field public b:Z
 
-.field final synthetic c:Lcom/estrongs/android/pop/utils/aa;
+.field public c:Z
+
+.field public d:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/estrongs/android/pop/utils/ai;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public e:Z
 
 
 # direct methods
-.method public constructor <init>(Lcom/estrongs/android/pop/utils/aa;ZI)V
+.method public constructor <init>(Ljava/lang/String;ZZ)V
     .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/pop/utils/ai;->c:Lcom/estrongs/android/pop/utils/aa;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p2, p0, Lcom/estrongs/android/pop/utils/ai;->a:Z
+    iput-object p1, p0, Lcom/estrongs/android/pop/utils/ai;->a:Ljava/lang/String;
 
-    iput p3, p0, Lcom/estrongs/android/pop/utils/ai;->b:I
+    iput-boolean p2, p0, Lcom/estrongs/android/pop/utils/ai;->b:Z
+
+    iput-boolean p3, p0, Lcom/estrongs/android/pop/utils/ai;->c:Z
 
     return-void
 .end method

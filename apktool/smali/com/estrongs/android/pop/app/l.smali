@@ -1,19 +1,19 @@
-.class Lcom/estrongs/android/pop/app/l;
+.class final Lcom/estrongs/android/pop/app/l;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/media/MediaPlayer$OnCompletionListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+.field final synthetic a:Landroid/content/Context;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/AudioPlayerService;)V
+.method constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/l;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/l;->a:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,62 +22,20 @@
 
 
 # virtual methods
-.method public onCompletion(Landroid/media/MediaPlayer;)V
+.method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/l;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+    new-instance v0, Landroid/content/Intent;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->a(Lcom/estrongs/android/pop/app/AudioPlayerService;)Lcom/estrongs/android/pop/app/gc;
+    const-string v1, "android.settings.USAGE_ACCESS_SETTINGS"
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    if-eqz v0, :cond_0
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/l;->a:Landroid/content/Context;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/l;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->a(Lcom/estrongs/android/pop/app/AudioPlayerService;)Lcom/estrongs/android/pop/app/gc;
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/l;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
-
-    invoke-static {v1}, Lcom/estrongs/android/pop/app/AudioPlayerService;->b(Lcom/estrongs/android/pop/app/AudioPlayerService;)Lcom/estrongs/android/pop/app/a/am;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/a/am;->f()I
-
-    move-result v1
-
-    invoke-interface {v0, v1}, Lcom/estrongs/android/pop/app/gc;->f(I)V
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/l;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
-
-    invoke-static {v0, p1}, Lcom/estrongs/android/pop/app/AudioPlayerService;->a(Lcom/estrongs/android/pop/app/AudioPlayerService;Landroid/media/MediaPlayer;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/l;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->c(Lcom/estrongs/android/pop/app/AudioPlayerService;)I
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/l;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
-
-    invoke-static {v1}, Lcom/estrongs/android/pop/app/AudioPlayerService;->b(Lcom/estrongs/android/pop/app/AudioPlayerService;)Lcom/estrongs/android/pop/app/a/am;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/app/a/am;->d(I)Z
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/l;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
-
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->d(I)Z
-
-    :cond_1
     return-void
 .end method

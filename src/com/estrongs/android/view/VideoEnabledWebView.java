@@ -10,9 +10,9 @@ import com.estrongs.android.pop.esclasses.ESWebView;
 public class VideoEnabledWebView
   extends ESWebView
 {
-  private dt a;
+  private fy a;
   private boolean b = false;
-  private dz c = null;
+  private ge c = null;
   
   public VideoEnabledWebView(Context paramContext)
   {
@@ -34,15 +34,10 @@ public class VideoEnabledWebView
   {
     if (!b)
     {
-      addJavascriptInterface(new dy(this), "_VideoEnabledWebView");
+      addJavascriptInterface(new gd(this), "_VideoEnabledWebView");
       addJavascriptInterface(new VideoEnabledWebView.JSVideoDetailHelper(this), "JSVideoFullScreenHelper");
       b = true;
     }
-  }
-  
-  public void a(dz paramdz)
-  {
-    c = paramdz;
   }
   
   public void loadData(String paramString1, String paramString2, String paramString3)
@@ -71,12 +66,17 @@ public class VideoEnabledWebView
     super.onScrollChanged(paramInt1, paramInt2, paramInt3, paramInt4);
   }
   
+  public void setOnWebViewScrollListener(ge paramge)
+  {
+    c = paramge;
+  }
+  
   @SuppressLint({"SetJavaScriptEnabled"})
   public void setWebChromeClient(WebChromeClient paramWebChromeClient)
   {
     getSettings().setJavaScriptEnabled(true);
-    if ((paramWebChromeClient instanceof dt)) {
-      a = ((dt)paramWebChromeClient);
+    if ((paramWebChromeClient instanceof fy)) {
+      a = ((fy)paramWebChromeClient);
     }
     super.setWebChromeClient(paramWebChromeClient);
   }

@@ -1,26 +1,21 @@
 package com.estrongs.android.pop.app;
 
-import android.app.Activity;
-import com.estrongs.a.a;
-import com.estrongs.a.a.p;
-import com.estrongs.fs.b.ad;
-import java.io.File;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.chromecast.CastDeviceInfo;
+import java.util.List;
 
 class ac
-  implements p
+  implements DialogInterface.OnClickListener
 {
-  ac(ab paramab) {}
+  ac(x paramx, List paramList) {}
   
-  public void a(a parama, int paramInt1, int paramInt2)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (paramInt2 == 4)
+    if ((paramInt >= 0) && (paramInt < a.size()))
     {
-      parama = ((ad)parama).c();
-      if (new File(parama).exists())
-      {
-        parama = b.a(parama);
-        a.a.startActivity(parama);
-      }
+      x.a(b).a((CastDeviceInfo)a.get(paramInt));
+      x.g(b);
     }
   }
 }

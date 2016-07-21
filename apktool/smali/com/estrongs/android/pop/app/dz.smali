@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # instance fields
@@ -22,12 +22,14 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
+.method public onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 1
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/dz;->a:Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->finish()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e()V
 
-    return-void
+    const/4 v0, 0x1
+
+    return v0
 .end method

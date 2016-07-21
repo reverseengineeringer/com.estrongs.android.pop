@@ -1,16 +1,26 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.app.Activity;
+import com.estrongs.a.a;
+import com.estrongs.android.ui.notification.f;
+import java.util.Map;
 
 class jj
-  implements DialogInterface.OnClickListener
+  extends f
 {
-  jj(je paramje) {}
-  
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  jj(jh paramjh, Activity paramActivity, CharSequence paramCharSequence, a parama)
   {
-    a.c.a.dismiss();
+    super(paramActivity, paramCharSequence, parama);
+  }
+  
+  protected void a(a parama)
+  {
+    jh.e.remove(Long.valueOf(parama.getTaskId()));
+  }
+  
+  protected void b(a parama)
+  {
+    jh.e.remove(Long.valueOf(parama.getTaskId()));
   }
 }
 

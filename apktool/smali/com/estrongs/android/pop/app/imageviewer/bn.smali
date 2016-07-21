@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
+.implements Landroid/view/animation/Animation$AnimationListener;
 
 
 # instance fields
@@ -22,30 +22,20 @@
 
 
 # virtual methods
-.method public onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 2
+.method public onAnimationEnd(Landroid/view/animation/Animation;)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bn;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+    return-void
+.end method
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->k(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)Lcom/estrongs/android/pop/app/aa;
+.method public onAnimationRepeat(Landroid/view/animation/Animation;)V
+    .locals 0
 
-    move-result-object v0
+    return-void
+.end method
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/aa;->q()V
+.method public onAnimationStart(Landroid/view/animation/Animation;)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bn;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->r(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bn;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/bn;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
-
-    iget-object v1, v1, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->n:Lcom/estrongs/android/pop/esclasses/ESScrollMenuView;
-
-    invoke-static {v0, v1}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->b(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;Lcom/estrongs/android/pop/esclasses/ESScrollMenuView;)V
-
-    const/4 v0, 0x1
-
-    return v0
+    return-void
 .end method

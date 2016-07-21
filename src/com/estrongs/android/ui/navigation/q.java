@@ -1,20 +1,10 @@
 package com.estrongs.android.ui.navigation;
 
-import android.os.Handler;
-import com.estrongs.android.pop.view.FileExplorerActivity;
+import android.view.View;
 
-class q
-  extends a
+public abstract interface q
 {
-  q(n paramn, FileExplorerActivity paramFileExplorerActivity, Handler paramHandler)
-  {
-    super(paramFileExplorerActivity, paramHandler);
-  }
-  
-  protected void a(r paramr)
-  {
-    a.b(paramr);
-  }
+  public abstract void a(View paramView);
 }
 
 /* Location:

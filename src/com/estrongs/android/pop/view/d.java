@@ -2,93 +2,52 @@ package com.estrongs.android.pop.view;
 
 import android.view.Window;
 import android.view.WindowManager.LayoutParams;
-import android.widget.Button;
-import com.estrongs.android.ui.addressbar.AdvancedAddressBar;
-import com.estrongs.android.ui.d.e;
-import com.estrongs.android.ui.e.w;
-import com.estrongs.android.util.am;
+import com.estrongs.android.util.ap;
 import com.estrongs.android.view.WebViewWrapper;
-import com.estrongs.android.view.aw;
-import java.util.ArrayList;
+import com.estrongs.android.view.cr;
 
 class d
   implements Runnable
 {
-  d(c paramc, String paramString1, String paramString2, ArrayList paramArrayList, String paramString3, int paramInt, aw paramaw, boolean paramBoolean1, boolean paramBoolean2) {}
+  d(c paramc, cr paramcr, String paramString, String[] paramArrayOfString, int paramInt, boolean paramBoolean1, boolean paramBoolean2) {}
   
   public void run()
   {
-    for (;;)
+    try
     {
-      try
+      FileExplorerActivity.a(g.b).a(a, b, c, d);
+      WindowManager.LayoutParams localLayoutParams;
+      if (a != null)
       {
-        if ((a == null) && (am.be(b)))
-        {
-          c.add("/");
-          if (i.b.u)
-          {
-            if (d != null) {
-              c.add(0, d);
-            }
-            localObject = e.c(e);
-            if (localObject != null) {
-              ((com.estrongs.android.ui.d.d)localObject).a(c);
-            }
-          }
-          Object localObject = new String[c.size()];
-          c.toArray((Object[])localObject);
-          if (!i.b.u) {
-            break label431;
-          }
-          FileExplorerActivity.a(i.b).b(false);
-          FileExplorerActivity.a(i.b).a((String[])localObject);
-          if (f != null)
-          {
-            if ((f.F()) && ((!g) || (!am.aX(b))) && ((!g) || (!i.b.f(b))))
-            {
-              i.b.q = true;
-              i.b.f(false);
-            }
-            if ((f.z()) && (h)) {
-              i.b.s();
-            }
-            localObject = i.b.getWindow().getAttributes();
-            if (!(f instanceof WebViewWrapper)) {
-              break label453;
-            }
-            softInputMode = 16;
-            i.b.getWindow().setAttributes((WindowManager.LayoutParams)localObject);
-          }
-          i.b.a(b, e, f);
-          FileExplorerActivity.b(i.b);
-          i.b.k.c(true);
-          i.b.k.j();
-          return;
+        if ((a.W()) && ((!e) || (!ap.bi(b))) && ((!e) || (!g.b.h(b)))) {
+          g.b.ab();
         }
-        if ((a != null) && (a.equals("#home_page#")))
-        {
-          c.add(i.b.getString(2131428432));
-          continue;
+        if ((a.N()) && (f)) {
+          g.b.B();
         }
-        localArrayList = c;
+        localLayoutParams = g.b.getWindow().getAttributes();
+        if (!(a instanceof WebViewWrapper)) {
+          break label234;
+        }
       }
-      catch (Exception localException)
+      label234:
+      for (softInputMode = 16;; softInputMode = 48)
       {
-        localException.printStackTrace();
+        g.b.getWindow().setAttributes(localLayoutParams);
+        g.b.a(b, d, a);
+        FileExplorerActivity.b(g.b);
+        FileExplorerActivity.a(g.b).s();
+        if (!com.estrongs.android.pop.app.analysis.a.a(b)) {
+          break;
+        }
+        g.b.av();
         return;
       }
-      ArrayList localArrayList;
-      if (a == null) {}
-      for (String str = "";; str = a)
-      {
-        localArrayList.add(str);
-        break;
-      }
-      label431:
-      i.b.z.setText(str[(str.length - 1)]);
-      continue;
-      label453:
-      softInputMode = 48;
+      return;
+    }
+    catch (Exception localException)
+    {
+      localException.printStackTrace();
     }
   }
 }

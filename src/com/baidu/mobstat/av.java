@@ -1,77 +1,189 @@
 package com.baidu.mobstat;
 
 import android.content.Context;
-import android.support.v4.app.Fragment;
-import com.baidu.mobstat.util.e;
-import java.lang.ref.WeakReference;
-import org.json.JSONObject;
+import android.text.TextUtils;
+import dalvik.system.DexClassLoader;
+import java.io.File;
+import java.util.jar.Attributes;
+import java.util.jar.JarFile;
+import java.util.jar.Manifest;
 
 class av
-  implements Runnable
 {
-  private long b;
-  private long c;
-  private WeakReference<Context> d;
-  private WeakReference<Fragment> e;
-  private WeakReference<Object> f;
-  private int g = 1;
+  private static volatile DexClassLoader a;
+  private static volatile boolean b = false;
   
-  public av(ao paramao, long paramLong1, long paramLong2, Context paramContext, Fragment paramFragment, Object paramObject, int paramInt)
+  private static DexClassLoader a(Context paramContext)
   {
-    b = paramLong1;
-    c = paramLong2;
-    d = new WeakReference(paramContext);
-    e = new WeakReference(paramFragment);
-    f = new WeakReference(paramObject);
-    g = paramInt;
-  }
-  
-  public void run()
-  {
-    Object localObject1;
-    Fragment localFragment;
-    Object localObject2;
-    if ((c - b >= a.b()) && (b > 0L))
-    {
-      localObject1 = (Context)d.get();
-      localFragment = (Fragment)e.get();
-      localObject2 = f.get();
-      if ((localObject1 != null) || (localFragment != null) || (localObject2 != null))
-      {
-        ao.a(a).b(b);
-        String str = ao.a(a).c().toString();
-        e.a("sdkstat", "new session:" + str);
-        DataCore.getInstance().putSession(str);
-        if (g != 1) {
-          break label182;
-        }
-        DataCore.getInstance().flush((Context)localObject1);
-      }
-    }
+    Object localObject2 = null;
     for (;;)
     {
-      ao.a(a).b();
-      ao.a(a, (Context)localObject1);
-      if (localObject1 != null) {
-        ag.a().a((Context)localObject1, "onresume");
-      }
-      return;
-      label182:
-      if (g == 2)
+      File localFile;
+      try
       {
-        localObject1 = localFragment.b();
-        DataCore.getInstance().flush((Context)localObject1);
+        if (a != null)
+        {
+          localObject1 = a;
+          return (DexClassLoader)localObject1;
+        }
+        localFile = paramContext.getFileStreamPath(".remote.jar");
+        if (localFile != null)
+        {
+          localObject1 = localObject2;
+          if (!localFile.isFile()) {
+            continue;
+          }
+        }
+        if (!b(paramContext, localFile.getAbsolutePath()))
+        {
+          bb.a("remote jar version lower than min limit, need delete");
+          localObject1 = localObject2;
+          if (!localFile.isFile()) {
+            continue;
+          }
+          localFile.delete();
+          localObject1 = localObject2;
+          continue;
+        }
+        if (c(paramContext, localFile.getAbsolutePath())) {
+          break label116;
+        }
       }
-      else if (g == 3)
-      {
-        localObject1 = ao.a(localObject2);
-        DataCore.getInstance().flush((Context)localObject1);
+      finally {}
+      bb.a("remote jar md5 is not right, need delete");
+      Object localObject1 = localObject2;
+      if (!localFile.isFile()) {
+        continue;
       }
-      else
+      localFile.delete();
+      localObject1 = localObject2;
+      continue;
+      label116:
+      localObject1 = paramContext.getDir("outdex", 0);
+      try
       {
-        localObject1 = null;
+        a = new DexClassLoader(localFile.getAbsolutePath(), ((File)localObject1).getAbsolutePath(), null, paramContext.getClassLoader());
+        localObject1 = a;
+      }
+      catch (Exception paramContext)
+      {
+        for (;;)
+        {
+          bb.a(paramContext);
+        }
       }
     }
+  }
+  
+  public static Class<?> a(Context paramContext, String paramString)
+  {
+    paramContext = a(paramContext);
+    if (paramContext == null) {
+      return null;
+    }
+    return paramContext.loadClass(paramString);
+  }
+  
+  public static void a(Context paramContext, k paramk)
+  {
+    for (;;)
+    {
+      try
+      {
+        boolean bool = b;
+        if (bool) {
+          return;
+        }
+        if (!cu.m(paramContext))
+        {
+          bb.a("isWifiAvailable = false, will not to update");
+          continue;
+        }
+        if (paramk.a(paramContext)) {
+          break label54;
+        }
+      }
+      finally {}
+      bb.a("check time, will not to update");
+      continue;
+      label54:
+      bb.a("can start update config");
+      new aw(paramContext, paramk).start();
+      b = true;
+    }
+  }
+  
+  private static String b(String paramString)
+  {
+    try
+    {
+      Object localObject = new File(paramString);
+      if (((File)localObject).exists()) {
+        bb.b("file size: " + ((File)localObject).length());
+      }
+      localObject = new JarFile(paramString).getManifest().getMainAttributes().getValue("Plugin-Version");
+      return (String)localObject;
+    }
+    catch (Exception localException)
+    {
+      bb.a(localException);
+      bb.a("baidu remote sdk is not ready" + paramString);
+    }
+    return "";
+  }
+  
+  private static boolean b(Context paramContext, String paramString)
+  {
+    paramContext = b(paramString);
+    if (TextUtils.isEmpty(paramContext)) {}
+    for (;;)
+    {
+      return false;
+      try
+      {
+        i = Integer.valueOf(paramContext).intValue();
+        if (i < 4) {
+          continue;
+        }
+        return true;
+      }
+      catch (Exception paramContext)
+      {
+        for (;;)
+        {
+          bb.b(paramContext);
+          int i = 0;
+        }
+      }
+    }
+  }
+  
+  private static boolean c(Context paramContext, String paramString)
+  {
+    String str = cp.a(new File(paramString));
+    bb.a("remote.jar local file digest value digest = " + str);
+    if (TextUtils.isEmpty(str)) {
+      bb.a("remote.jar local file digest value fail");
+    }
+    do
+    {
+      return false;
+      paramString = b(paramString);
+      bb.a("remote.jar local file digest value version = " + paramString);
+    } while (TextUtils.isEmpty(paramString));
+    paramContext = d(paramContext, paramString);
+    bb.a("remote.jar config digest value remoteJarMd5 = " + paramContext);
+    if (TextUtils.isEmpty(paramContext))
+    {
+      bb.a("remote.jar config digest value lost");
+      return false;
+    }
+    return str.equals(paramContext);
+  }
+  
+  private static String d(Context paramContext, String paramString)
+  {
+    return ax.a(paramContext).c(paramString);
   }
 }
 

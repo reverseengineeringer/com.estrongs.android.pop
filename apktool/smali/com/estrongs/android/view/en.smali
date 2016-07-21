@@ -6,18 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Lcom/estrongs/android/view/WebViewWrapper$JSVideoDetailHelper;
+.field final synthetic a:Lcom/estrongs/android/view/em;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/view/WebViewWrapper$JSVideoDetailHelper;Ljava/lang/String;)V
+.method constructor <init>(Lcom/estrongs/android/view/em;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/view/en;->b:Lcom/estrongs/android/view/WebViewWrapper$JSVideoDetailHelper;
-
-    iput-object p2, p0, Lcom/estrongs/android/view/en;->a:Ljava/lang/String;
+    iput-object p1, p0, Lcom/estrongs/android/view/en;->a:Lcom/estrongs/android/view/em;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,17 +23,13 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/view/en;->b:Lcom/estrongs/android/view/WebViewWrapper$JSVideoDetailHelper;
+    iget-object v0, p0, Lcom/estrongs/android/view/en;->a:Lcom/estrongs/android/view/em;
 
-    iget-object v0, v0, Lcom/estrongs/android/view/WebViewWrapper$JSVideoDetailHelper;->a:Lcom/estrongs/android/view/WebViewWrapper;
+    iget-object v0, v0, Lcom/estrongs/android/view/em;->c:Lcom/estrongs/android/view/eb;
 
-    iget-object v0, v0, Lcom/estrongs/android/view/WebViewWrapper;->ad:Landroid/app/Activity;
-
-    iget-object v1, p0, Lcom/estrongs/android/view/en;->a:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lcom/estrongs/android/view/dt;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-virtual {v0}, Lcom/estrongs/android/view/eb;->e()V
 
     return-void
 .end method

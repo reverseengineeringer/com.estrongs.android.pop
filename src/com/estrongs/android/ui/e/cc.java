@@ -1,17 +1,17 @@
 package com.estrongs.android.ui.e;
 
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.pop.app.PopAudioPlayer;
+
 class cc
-  implements com.estrongs.android.util.e
+  implements View.OnClickListener
 {
-  cc(cb paramcb, com.estrongs.android.view.e parame) {}
+  cc(cb paramcb) {}
   
-  public void a(String paramString1, String paramString2, int paramInt)
+  public void onClick(View paramView)
   {
-    if (!a.b.equals(paramString1))
-    {
-      a.b = paramString1;
-      a.g(a.a);
-    }
+    cb.a(a).s();
   }
 }
 

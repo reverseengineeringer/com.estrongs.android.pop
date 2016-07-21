@@ -1,16 +1,16 @@
 package com.estrongs.android.ui.dialog;
 
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+
 class fy
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  fy(fw paramfw) {}
+  fy(fv paramfv) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (a.b.a != null) {
-      a.b.a.a(a.a);
-    }
-    fs.j(a.b).dismiss();
+    fv.e(a);
   }
 }
 

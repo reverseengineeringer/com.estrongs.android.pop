@@ -1,16 +1,25 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-
 class jm
-  implements DialogInterface.OnClickListener
+  extends Thread
 {
-  jm(jl paramjl) {}
+  jm(PopVideoPlayer paramPopVideoPlayer) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void run()
   {
-    paramDialogInterface.dismiss();
+    try
+    {
+      Thread.sleep(3000L);
+      a.runOnUiThread(new jn(this));
+      return;
+    }
+    catch (InterruptedException localInterruptedException)
+    {
+      for (;;)
+      {
+        localInterruptedException.printStackTrace();
+      }
+    }
   }
 }
 

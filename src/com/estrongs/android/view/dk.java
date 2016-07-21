@@ -1,39 +1,15 @@
 package com.estrongs.android.view;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
+import com.estrongs.fs.b.al;
 
 class dk
-  implements View.OnClickListener
+  implements Runnable
 {
-  dk(dj paramdj) {}
+  dk(di paramdi, al paramal, int paramInt, String paramString) {}
   
-  public void onClick(View paramView)
+  public void run()
   {
-    if (dj.a(a).getText().toString().equals(a.ad.getString(2131427673))) {
-      if (dj.b(a))
-      {
-        dj.a(a, a.l(2131428291));
-        dj.a(a, true);
-      }
-    }
-    do
-    {
-      return;
-      dj.a(a, dj.c(a));
-      break;
-      if (dj.a(a).getText().toString().equals(a.ad.getString(2131427674)))
-      {
-        dj.a(a, false);
-        return;
-      }
-    } while (!dj.a(a).getText().toString().equals(a.ad.getString(2131427672)));
-    paramView = new Intent("android.settings.WIFI_SETTINGS");
-    paramView.setFlags(268435456);
-    a.a(paramView);
+    cr.a(d.b, a, b, c);
   }
 }
 

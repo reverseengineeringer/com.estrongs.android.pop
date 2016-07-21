@@ -1,13 +1,51 @@
 package com.estrongs.android.pop.view;
 
+import com.estrongs.android.pop.view.utils.RemoteSynchronizer;
+import com.estrongs.android.ui.d.i;
+import com.estrongs.android.util.bm;
+import com.estrongs.android.widget.ThumbContentViewSwitcher;
+
 class al
-  implements Runnable
+  extends Thread
 {
-  al(ak paramak) {}
+  al(FileExplorerActivity paramFileExplorerActivity, boolean paramBoolean) {}
   
   public void run()
   {
-    a.c(a.a.a);
+    if (!FileExplorerActivity.C(b))
+    {
+      b.au().a(b);
+      b.au().d();
+      if (b.h != null) {
+        b.h.i();
+      }
+      if (!a) {
+        break label105;
+      }
+      bm.c().f();
+      bm.c().g();
+    }
+    for (;;)
+    {
+      bm.c().d();
+      try
+      {
+        if (com.estrongs.fs.impl.e.a.a()) {
+          com.estrongs.fs.impl.e.a.b();
+        }
+        RemoteSynchronizer.e();
+        if (com.estrongs.a.a.isAllTaskFinished()) {
+          b.m();
+        }
+        return;
+        label105:
+        bm.c().h();
+      }
+      catch (Throwable localThrowable)
+      {
+        for (;;) {}
+      }
+    }
   }
 }
 

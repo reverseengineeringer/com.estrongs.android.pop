@@ -1,44 +1,14 @@
 package android.support.v4.widget;
 
-import android.content.Context;
-import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
+import android.widget.CompoundButton;
 
 class h
-  implements i
+  extends k
 {
-  public Object a(Context paramContext)
+  public Drawable a(CompoundButton paramCompoundButton)
   {
-    return j.a(paramContext);
-  }
-  
-  public void a(Object paramObject, int paramInt1, int paramInt2)
-  {
-    j.a(paramObject, paramInt1, paramInt2);
-  }
-  
-  public boolean a(Object paramObject)
-  {
-    return j.a(paramObject);
-  }
-  
-  public boolean a(Object paramObject, float paramFloat)
-  {
-    return j.a(paramObject, paramFloat);
-  }
-  
-  public boolean a(Object paramObject, Canvas paramCanvas)
-  {
-    return j.a(paramObject, paramCanvas);
-  }
-  
-  public void b(Object paramObject)
-  {
-    j.b(paramObject);
-  }
-  
-  public boolean c(Object paramObject)
-  {
-    return j.c(paramObject);
+    return l.a(paramCompoundButton);
   }
 }
 

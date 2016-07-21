@@ -1,40 +1,18 @@
 package com.estrongs.android.ui.e;
 
-import android.view.View;
-import com.estrongs.android.pop.esclasses.ESScrollView;
-import com.estrongs.android.pop.esclasses.o;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.view.FileExplorerActivity;
 
 class js
-  implements o
+  implements MenuItem.OnMenuItemClickListener
 {
-  js(jp paramjp) {}
+  js(jq paramjq) {}
   
-  public void a()
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if (a.c)
-    {
-      jp.c(a).setVisibility(0);
-      jp.d(a).setVisibility(4);
-    }
-  }
-  
-  public void b()
-  {
-    if (a.c)
-    {
-      jp.c(a).setVisibility(4);
-      jp.d(a).setVisibility(0);
-      jp.e(a).scrollTo(0, 1);
-    }
-  }
-  
-  public void c()
-  {
-    if (a.c)
-    {
-      jp.c(a).setVisibility(0);
-      jp.d(a).setVisibility(0);
-    }
+    jq.a(a).a(jq.a(a).P(), true);
+    return true;
   }
 }
 

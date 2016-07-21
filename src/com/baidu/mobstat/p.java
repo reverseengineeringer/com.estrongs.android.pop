@@ -1,80 +1,64 @@
 package com.baidu.mobstat;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.StatusLine;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.params.BasicHttpParams;
-import org.apache.http.params.HttpConnectionParams;
-import org.apache.http.params.HttpParams;
-import org.apache.http.util.EntityUtils;
-import org.json.JSONException;
+import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.text.TextUtils;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class p
+class p
 {
-  public static long a = 256L;
-  public static String b = " HTTP.UTF_8";
+  static p a = new p();
   
-  public static o a(String paramString1, String paramString2)
+  public void a(Context paramContext, String paramString1, String paramString2)
   {
-    n.a("Post_URL : " + paramString1);
-    localo = new o();
-    Object localObject = new BasicHttpParams();
-    HttpConnectionParams.setConnectionTimeout((HttpParams)localObject, 3000);
-    HttpConnectionParams.setSoTimeout((HttpParams)localObject, 5000);
-    localObject = new DefaultHttpClient((HttpParams)localObject);
-    paramString1 = new HttpPost(paramString1);
+    PackageManager localPackageManager = paramContext.getPackageManager();
+    Object localObject = "unkown";
+    paramContext = (Context)localObject;
+    if (!"android.intent.action.PACKAGE_REMOVED".equals(paramString1)) {}
     try
     {
-      StringEntity localStringEntity = new StringEntity("content=" + paramString2, "UTF-8");
-      n.a("postdata content : " + paramString2);
-      localStringEntity.setContentType("application/x-www-form-urlencoded");
-      paramString1.setEntity(localStringEntity);
-      paramString1 = ((HttpClient)localObject).execute(paramString1);
-      i = (int)paramString1.getEntity().getContentLength();
-      n.a("Response_Length : " + i);
-      i = paramString1.getStatusLine().getStatusCode();
-      n.a("Status : " + i);
-      paramString1 = EntityUtils.toString(paramString1.getEntity());
-      n.a("Return_Content : " + paramString1);
-      switch (i)
-      {
-      }
+      paramContext = getPackageInfo8192versionName;
     }
-    catch (Exception paramString1)
+    catch (PackageManager.NameNotFoundException paramContext)
     {
-      for (;;)
+      try
       {
-        int i;
-        paramString2 = new JSONObject();
-        paramString1.printStackTrace();
-        try
+        for (;;)
         {
-          paramString2.put("err", paramString1.toString());
-          paramString1 = paramString2.toString();
-          localo.a(false);
-          localo.a(paramString1);
-        }
-        catch (JSONException paramString1)
-        {
-          paramString1.printStackTrace();
+          localObject = new JSONObject();
+          ((JSONObject)localObject).put("n", paramString2);
+          ((JSONObject)localObject).put("a", paramString1);
+          ((JSONObject)localObject).put("v", paramContext);
+          paramContext = new JSONArray();
+          paramContext.put(localObject);
+          paramString1 = new StringBuilder();
+          paramString1.append(System.currentTimeMillis());
+          paramString2 = new JSONObject();
+          paramString2.put("app_change", paramContext);
+          paramString2.put("meta-data", paramString1.toString());
+          paramContext = cj.a(paramString2.toString().getBytes());
+          if (!TextUtils.isEmpty(paramContext))
+          {
+            long l = System.currentTimeMillis();
+            x.d.a(l, paramContext);
+          }
+          return;
+          paramContext = paramContext;
+          bb.a(paramContext);
+          paramContext = (Context)localObject;
         }
       }
-    }
-    n.c("Stauts : " + i + "; RetrunConetent : " + paramString1);
-    localo.a(false);
-    localo.a(paramString1);
-    for (;;)
-    {
-      n.a("ServerResponse : " + localo.c());
-      return localo;
-      localo.a(Integer.parseInt(new JSONObject(paramString1).getString("errNum")));
-      localo.a(true);
-      localo.a(paramString1);
+      catch (Exception paramContext)
+      {
+        for (;;)
+        {
+          bb.b(paramContext.getMessage());
+          paramContext = "";
+        }
+      }
     }
   }
 }

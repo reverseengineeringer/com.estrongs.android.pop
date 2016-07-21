@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnCancelListener;
+.implements Landroid/content/DialogInterface$OnDismissListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/DownloaderActivity;
+.field final synthetic a:Lcom/estrongs/android/pop/app/DocumentExtModifyList;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/DownloaderActivity;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/DocumentExtModifyList;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/as;->a:Lcom/estrongs/android/pop/app/DownloaderActivity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/as;->a:Lcom/estrongs/android/pop/app/DocumentExtModifyList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,12 +22,12 @@
 
 
 # virtual methods
-.method public onCancel(Landroid/content/DialogInterface;)V
+.method public onDismiss(Landroid/content/DialogInterface;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/as;->a:Lcom/estrongs/android/pop/app/DownloaderActivity;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/as;->a:Lcom/estrongs/android/pop/app/DocumentExtModifyList;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/DownloaderActivity;->finish()V
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->b(Lcom/estrongs/android/pop/app/DocumentExtModifyList;)V
 
     return-void
 .end method

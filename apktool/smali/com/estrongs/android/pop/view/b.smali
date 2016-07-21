@@ -45,7 +45,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/ad;->r(Z)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/ad;->q(Z)V
 
     :cond_0
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V

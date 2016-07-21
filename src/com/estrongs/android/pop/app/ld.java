@@ -1,30 +1,33 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.content.Intent;
-import com.estrongs.android.pop.ftp.ESFtpShortcut;
+import android.util.SparseArray;
+import android.view.View;
+import android.widget.ImageView;
+import com.estrongs.android.widget.bd;
 
 class ld
-  implements DialogInterface.OnClickListener
+  implements bd
 {
-  ld(ShowDialogActivity paramShowDialogActivity) {}
+  ld(RecommItemImageViewer paramRecommItemImageViewer) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void a(int paramInt)
   {
-    try
-    {
-      Intent localIntent = new Intent(a, ESFtpShortcut.class);
-      localIntent.putExtra("mode", 2);
-      a.startActivity(localIntent);
-      paramDialogInterface.dismiss();
-      return;
-    }
-    catch (Exception localException)
-    {
-      for (;;) {}
-    }
+    a.findViewById(2131625459).setBackgroundColor(-1627389952);
   }
+  
+  public void a(int paramInt, float paramFloat) {}
+  
+  public void b(int paramInt) {}
+  
+  public void c(int paramInt)
+  {
+    ((ImageView)RecommItemImageViewer.b(a).get(RecommItemImageViewer.a(a))).setImageResource(2130837854);
+    RecommItemImageViewer.a(a, paramInt);
+    ((ImageView)RecommItemImageViewer.b(a).get(RecommItemImageViewer.a(a))).setImageResource(2130837853);
+    a.findViewById(2131625459).setBackgroundColor(0);
+  }
+  
+  public void d(int paramInt) {}
 }
 
 /* Location:

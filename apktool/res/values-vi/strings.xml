@@ -1,13 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_select">Chọn</string>
-    <string name="app_name">ES Duyệt Tập Tin</string>
-    <string name="app_media_player">ES Phát Nhạc</string>
-    <string name="app_note_editor">ES Soạn Thảo</string>
-    <string name="app_image_browser">ES Duyệt Ảnh</string>
-    <string name="app_zip_viewer">ES Xem Nén</string>
     <string name="app_downloader">ES Tải</string>
-    <string name="select_device_to_share">Chọn một thiết bị để gửi</string>
+    <string name="app_image_browser">ES Duyệt Ảnh</string>
+    <string name="app_media_player">ES Phát Nhạc</string>
+    <string name="app_name">ES Duyệt Tập Tin</string>
+    <string name="app_note_editor">ES Soạn Thảo</string>
+    <string name="app_zip_viewer">ES Xem Nén</string>
+    <string name="battery_info_remaining_charging_time">Thời gian sạc còn lại:</string>
+    <string name="battery_info_remaining_discharging_time">Tuổi thọ pin:</string>
+    <string name="charging_screen_ad_delete">Xóa</string>
+    <string name="charging_screen_ad_enter">Mở</string>
+    <string name="charging_screen_charging_complete">Đã sạc xong</string>
+    <string name="charging_screen_slide_to_enter">Trượt để mở khóa</string>
+    <string name="common_time_hour">g</string>
+    <string name="common_time_minute">p</string>
+    <string name="duappd_ad_item_action_btn">MIỄN PHÍ</string>
+    <string name="duapps_ad_data_empty">Xin quay lại sau.</string>
+    <string name="duapps_ad_empty_refresh_btn_check">Kiểm tra</string>
+    <string name="duapps_ad_empty_title">TRỐNG</string>
+    <string name="duapps_ad_footer_end">Không còn nội dung</string>
+    <string name="duapps_ad_loading">Đang tải …</string>
+    <string name="duapps_ad_loading_switch_google_play_des">chuyển đổi sang Google chơi…</string>
+    <string name="duapps_ad_no_apps_refresh_button_text">làm mới</string>
+    <string name="duapps_ad_no_browser_play">Không có trình duyệt hoặc Google chơi cài đặt</string>
+    <string name="duapps_ad_nonetwork_message">Không có kết nối mạng. Kiểm tra cài đặt và thử lại.</string>
+    <string name="duapps_ad_pull_refresh">Kéo để làm mới</string>
+    <string name="duscenerysdk_ad_no_browser_play">Không có trình duyệt hoặc Google chơi cài đặt</string>
     <string name="es_share_name_activity">Gửi bằng LAN</string>
+    <string name="lock_screen_setting">Cài đặt</string>
+    <string name="lock_screen_switch">Sạc Thông minh</string>
+    <string name="lockscreen_charge_boost_time">Toàn bộ tốc độ sạc được tăng lên thành %1$d phút</string>
     <string name="save_to_es">ES Lưu vào</string>
+    <string name="scenery_card_antivirus_button">QUÉT BẢO MẬT</string>
+    <string name="scenery_card_antivirus_content">Điện thoại của bạn có &lt;font color=#3080F0>%1$s&lt;/font> rủi ro bảo mật</string>
+    <string name="scenery_card_antivirus_title">Rủi ro Bảo mật</string>
+    <string name="scenery_card_battery_button">TIẾT KIỆM ĐIỆN NGAY</string>
+    <string name="scenery_card_battery_content">&lt;font color=#3080F0>%1$s&lt;/font> tìm thấy (các) ứng dụng sử dụng điện. Dùng DU Battery Saver để tiết kiệm điện và kéo dài thời gian chờ &lt;font color=#3080F0>%2$s h %3$s m&lt;/font></string>
+    <string name="scenery_card_battery_title">Dùng Điện</string>
+    <string name="scenery_card_booster_button">TĂNG TỐC NGAY</string>
+    <string name="scenery_card_booster_content">&lt;font color=#3080F0>%1$s&lt;/font> các ứng dụng tiêu thụ điện đang làm chậm điện thoại</string>
+    <string name="scenery_card_booster_title">Chạy Chậm</string>
+    <string name="scenery_card_cleaner_button">KHẮC PHỤC NGAY</string>
+    <string name="scenery_card_cleaner_content">Đã phát hiện rác &lt;font color=#3080F0>%1$s&lt;/font> trong điện thoại</string>
+    <string name="scenery_card_cleaner_title">Dọn sạch Nhanh</string>
+    <string name="scenery_card_es_button">DỌN SẠCH NGAY</string>
+    <string name="scenery_card_es_content">Bộ nhớ trong còn lại đã giảm &lt;font color=#3080F0>%1$s&lt;/font></string>
+    <string name="scenery_card_es_title">Dọn dẹp Đĩa</string>
+    <string name="scenery_card_photowonder_button">LÀM ĐẸP NGAY</string>
+    <string name="scenery_card_photowonder_content">Bạn có &lt;font color=#3080F0>%1$s&lt;/font> những bức ảnh có thể làm cho đẹp hơn!</string>
+    <string name="scenery_card_photowonder_title">Làm đẹp</string>
+    <string name="scenery_charge_dialog_button_text">TẢI NGAY</string>
+    <string name="scenery_charge_dialog_content">Sạc quá mức %1$d phút &lt;font color=#FF8132>làm tổn hại pin&lt;/font>. Bảo vệ điện thoại bằng &lt;b>DU Battery Saver&lt;/b>.</string>
+    <string name="scenery_charge_dialog_title">Mẹo Sạc Lành mạnh</string>
+    <string name="scenery_disk_usage_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_disk_usage_dialog_content">Bộ nhớ điện thoại của bạn giảm còn &lt;font color=#FF8132>%1$sMB&lt;/font> trong &lt;font color=#FF8132>%2$s ngày cuối cùng&lt;/font>.</string>
+    <string name="scenery_disk_usage_dialog_title">Dọn dẹp Đĩa</string>
+    <string name="scenery_take_photo_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_take_photo_dialog_content">Ảnh chưa đẹp như mong muốn? &lt;font color=#2274E6>Bộ lọc Cinema&lt;/font> từ &lt;b>PhotoWonder&lt;/b> có thể giúp!</string>
+    <string name="scenery_take_photo_dialog_title">Sửa Sắc Đẹp</string>
+    <string name="scenery_uninstall_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_uninstall_dialog_content">%1$s đã để lại một số &lt;font color=#FF8132>Tệp rác dư thừa&lt;/font>, dùng &lt;b>DU Speed Booster&lt;/b> để loại bỏ chúng!</string>
+    <string name="scenery_uninstall_dialog_title">Phát hiện Tệp Dư thừa</string>
+    <string name="screen_lock_charging_boosted_time">Tăng tốc sạc pin cho %1$d phút</string>
+    <string name="select_device_to_share">Chọn một thiết bị để gửi</string>
+    <string name="toolbox_no_apps_refresh_button_text">làm mới</string>
+    <string name="toolbox_nonetwork_tips">Bấm để bật mạng và có thêm nhiều ứng dụng miễn phí.</string>
+    <string name="toolbox_v2_btn_more">Nhiều hơn</string>
+    <string name="toolbox_v2_coin_balance">Số dư:</string>
+    <string name="toolbox_v2_data_empty">Xin quay lại sau.</string>
+    <string name="toolbox_v2_list_item_btn_free">MIỄN PHÍ</string>
+    <string name="v2_toolbox_empty_title">TRỐNG</string>
+    <string name="toolbox_v2_network_mobile">Dữ liệu di động</string>
+    <string name="toolbox_v2_network_wifi">Wi-Fi</string>
+    <string name="toolbox_v2_nomore_content">Không còn nội dung</string>
+    <string name="toolbox_v2_pull_refresh">Kéo để làm mới</string>
 </resources>

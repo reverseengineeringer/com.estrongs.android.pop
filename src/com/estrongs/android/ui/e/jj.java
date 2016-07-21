@@ -1,14 +1,24 @@
 package com.estrongs.android.ui.e;
 
 import android.view.View;
-import com.estrongs.android.view.a.a;
-import java.util.List;
+import android.view.View.OnClickListener;
+import android.widget.CheckBox;
 
-public abstract interface jj
+class jj
+  implements View.OnClickListener
 {
-  public abstract View a();
+  jj(ji paramji, CheckBox paramCheckBox) {}
   
-  public abstract void a(List<a> paramList);
+  public void onClick(View paramView)
+  {
+    paramView = a;
+    if (a.isChecked()) {}
+    for (boolean bool = false;; bool = true)
+    {
+      paramView.setChecked(bool);
+      return;
+    }
+  }
 }
 
 /* Location:

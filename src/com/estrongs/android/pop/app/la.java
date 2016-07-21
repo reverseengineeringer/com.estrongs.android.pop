@@ -1,16 +1,17 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
+import android.view.View;
 
 class la
-  implements DialogInterface.OnDismissListener
+  implements Runnable
 {
-  la(ky paramky) {}
+  la(kz paramkz, String paramString) {}
   
-  public void onDismiss(DialogInterface paramDialogInterface)
+  public void run()
   {
-    a.b.finish();
+    RecommItemDetailAcitivity.a(b.b.a, a, b.a);
+    b.b.a.findViewById(2131625452).setVisibility(0);
+    b.b.a.findViewById(2131624391).setVisibility(8);
   }
 }
 

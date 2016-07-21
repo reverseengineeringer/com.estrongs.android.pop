@@ -1,32 +1,22 @@
 package com.estrongs.android.pop.app;
 
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
-import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.pop.ad;
-
-class gp
-  implements Preference.OnPreferenceChangeListener
+public abstract interface gp
 {
-  gp(PopPreferenceActivity paramPopPreferenceActivity) {}
+  public abstract void a();
   
-  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
-  {
-    if (((Boolean)paramObject).booleanValue())
-    {
-      paramPreference = ad.a(a).G();
-      if ((paramPreference == null) || (paramPreference.length() == 0))
-      {
-        a.showDialog(108);
-        return false;
-      }
-      a.r.setEnabled(true);
-      FexApplication.a().c(((Boolean)paramObject).booleanValue());
-      return true;
-    }
-    a.showDialog(109);
-    return false;
-  }
+  public abstract void a(int paramInt);
+  
+  public abstract void b(int paramInt);
+  
+  public abstract void c(int paramInt);
+  
+  public abstract void d(int paramInt);
+  
+  public abstract void e(int paramInt);
+  
+  public abstract void f(int paramInt);
+  
+  public abstract void g(int paramInt);
 }
 
 /* Location:

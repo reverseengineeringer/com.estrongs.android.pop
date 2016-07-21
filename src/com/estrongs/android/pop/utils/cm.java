@@ -1,179 +1,195 @@
 package com.estrongs.android.pop.utils;
 
-import com.estrongs.android.util.bd;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.RejectedExecutionException;
-import java.util.concurrent.SynchronousQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import android.content.BroadcastReceiver;
+import android.content.ContentResolver;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.database.Cursor;
+import android.media.ExifInterface;
+import android.net.Uri;
+import android.provider.MediaStore;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.util.TypedMap;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bk;
+import java.io.File;
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.List;
 
 public class cm
 {
-  BlockingQueue<Runnable> a;
-  ThreadPoolExecutor b;
-  ck<ct> c = new ck(3);
-  Runnable d = new co(this);
-  private LinkedList<Queue<cq>> e = new LinkedList();
-  private int f;
-  private int g = 0;
-  private int h = 0;
-  private boolean i = false;
-  private ck<cs> j = new ck(3);
-  private cr k = new cn(this);
-  
-  public cm()
+  public static int a(File paramFile, List<String> paramList1, List<String> paramList2, List<String> paramList3, List<String> paramList4)
   {
-    this(Runtime.getRuntime().availableProcessors());
-  }
-  
-  public cm(int paramInt)
-  {
-    this(paramInt, 3);
-  }
-  
-  public cm(int paramInt1, int paramInt2)
-  {
-    f = paramInt1;
-    e.add(new LinkedList());
-    a = new SynchronousQueue();
-    paramInt1 = f / 2;
-    if (paramInt1 < 1) {
-      paramInt1 = m;
-    }
-    for (;;)
+    int k = 1;
+    int i;
+    int j;
+    if (paramFile.isDirectory())
     {
-      b = new ThreadPoolExecutor(paramInt1, f, 60L, TimeUnit.SECONDS, a, new cp(paramInt2));
-      return;
-      if (paramInt1 > 4) {
-        paramInt1 = 4;
-      }
-    }
-  }
-  
-  private cq a()
-  {
-    Queue localQueue = (Queue)e.getLast();
-    cq localcq = (cq)localQueue.poll();
-    if (localcq != null)
-    {
-      if ((localQueue.isEmpty()) && (e.size() > 1)) {
-        e.remove(localQueue);
-      }
-      return localcq;
-    }
-    if (e.size() > 1)
-    {
-      e.remove(localQueue);
-      return a();
-    }
-    return null;
-  }
-  
-  private void a(cs paramcs)
-  {
-    try
-    {
-      g -= 1;
-      j.a(paramcs);
-      if ((g < 0) || (g >= f)) {
-        g = 0;
-      }
-      if (g == 0) {
-        bd.a(d);
-      }
-      return;
-    }
-    finally {}
-  }
-  
-  private cq b()
-  {
-    try
-    {
-      cq localcq = a();
-      if (localcq != null) {
-        h -= 1;
-      }
-      return localcq;
-    }
-    finally {}
-  }
-  
-  private void c()
-  {
-    try
-    {
-      e();
-      return;
-    }
-    finally
-    {
-      localObject = finally;
-      throw ((Throwable)localObject);
-    }
-  }
-  
-  private cs d()
-  {
-    cs localcs2 = (cs)j.a();
-    cs localcs1 = localcs2;
-    if (localcs2 == null) {
-      localcs1 = new cs(this);
-    }
-    return localcs1;
-  }
-  
-  private void e()
-  {
-    try
-    {
-      while ((g < f) && (h > 0))
+      paramFile = paramFile.listFiles();
+      i = k;
+      if (paramFile != null)
       {
-        g += 1;
-        Object localObject1 = null;
-        try
+        int m = paramFile.length;
+        j = 0;
+        for (;;)
         {
-          cs localcs = d();
-          localObject1 = localcs;
-          b.execute(localcs);
-        }
-        catch (RejectedExecutionException localRejectedExecutionException)
-        {
-          a((cs)localObject1);
+          i = k;
+          if (j >= m) {
+            break;
+          }
+          a(paramFile[j], paramList1, paramList2, paramList3, paramList4);
+          j += 1;
         }
       }
     }
-    finally {}
-  }
-  
-  private ct f()
-  {
-    Object localObject;
-    if (c == null) {
-      localObject = null;
+    else
+    {
+      j = 0x1 | com.estrongs.fs.a.a.g(paramFile.getAbsolutePath());
+      if (!bk.f()) {
+        break label99;
+      }
+      paramList4.add(paramFile.getAbsolutePath());
+      i = j;
     }
-    ct localct;
+    label99:
     do
     {
-      return (ct)localObject;
-      localct = (ct)c.a();
-      localObject = localct;
-    } while (localct != null);
-    return new ct(this, null);
+      return i;
+      if (com.estrongs.fs.impl.media.b.a(paramFile.getAbsolutePath()))
+      {
+        paramList1.add(paramFile.getAbsolutePath());
+        return j;
+      }
+      if (com.estrongs.fs.impl.media.b.b(paramFile.getAbsolutePath()))
+      {
+        paramList2.add(paramFile.getAbsolutePath());
+        return j;
+      }
+      i = j;
+    } while (!com.estrongs.fs.impl.media.b.c(paramFile.getAbsolutePath()));
+    paramList3.add(paramFile.getAbsolutePath());
+    return j;
   }
   
-  public void a(cq paramcq)
+  public static void a(String paramString)
+  {
+    if (bk.k()) {}
+    for (;;)
+    {
+      return;
+      if (paramString != null) {}
+      try
+      {
+        com.estrongs.android.pop.b.b();
+        paramString = ap.bU(paramString);
+        if (paramString == null) {
+          continue;
+        }
+        FexApplication.a().sendBroadcast(new Intent("android.intent.action.MEDIA_MOUNTED", Uri.parse("file://" + paramString)));
+        return;
+      }
+      catch (Exception paramString) {}
+      paramString = ap.a().iterator();
+      while (paramString.hasNext())
+      {
+        String str = (String)paramString.next();
+        FexApplication.a().sendBroadcast(new Intent("android.intent.action.MEDIA_MOUNTED", Uri.fromFile(new File(str))));
+      }
+    }
+  }
+  
+  public static boolean a()
+  {
+    Cursor localCursor = FexApplication.a().getContentResolver().query(MediaStore.getMediaScannerUri(), new String[] { "volume" }, null, null, null);
+    if (localCursor != null)
+    {
+      if (localCursor.getCount() == 1) {
+        localCursor.moveToFirst();
+      }
+      for (boolean bool = "external".equals(localCursor.getString(0));; bool = false)
+      {
+        localCursor.close();
+        return bool;
+      }
+    }
+    return false;
+  }
+  
+  public static boolean a(TypedMap paramTypedMap)
+  {
+    com.estrongs.a.a locala = com.estrongs.a.a.getCurrentTask();
+    if (locala == null) {}
+    do
+    {
+      return true;
+      if ((paramTypedMap != null) && (paramTypedMap.getBoolean("updateMediaStore")))
+      {
+        IntentFilter localIntentFilter = new IntentFilter("android.intent.action.MEDIA_SCANNER_FINISHED");
+        localIntentFilter.addDataScheme("file");
+        BroadcastReceiver[] arrayOfBroadcastReceiver = new BroadcastReceiver[1];
+        arrayOfBroadcastReceiver[0] = new cn(locala);
+        FexApplication.a().registerReceiver(arrayOfBroadcastReceiver[0], localIntentFilter);
+        if (!a()) {
+          a(null);
+        }
+        if (!locala.taskStopped()) {
+          locala.suspend();
+        }
+        FexApplication.a().unregisterReceiver(arrayOfBroadcastReceiver[0]);
+        if (locala.taskStopped())
+        {
+          paramTypedMap.remove("updateMediaStore");
+          return false;
+        }
+        paramTypedMap.remove("updateMediaStore");
+        paramTypedMap.put("resultUpdatedMediaStore", Boolean.valueOf(true));
+        return true;
+      }
+    } while (!paramTypedMap.containsKey("resultUpdatedMediaStore"));
+    paramTypedMap.remove("resultUpdatedMediaStore");
+    return true;
+  }
+  
+  public static void b()
+  {
+    a(com.estrongs.android.pop.b.b());
+  }
+  
+  public static void b(String paramString)
+  {
+    if (paramString != null) {
+      FexApplication.a().sendBroadcast(new Intent("android.intent.action.MEDIA_SCANNER_SCAN_FILE", Uri.fromFile(new File(paramString))));
+    }
+  }
+  
+  public static int c(String paramString)
   {
     try
     {
-      ((Queue)e.getLast()).add(paramcq);
-      h += 1;
-      c();
-      return;
+      int i = bk.a(new ExifInterface(paramString).getAttribute("Orientation"));
+      switch (i)
+      {
+      case 0: 
+      case 1: 
+      case 2: 
+      case 4: 
+      case 5: 
+      case 7: 
+      default: 
+        return 0;
+      case 3: 
+        return 180;
+      case 6: 
+        return 90;
+      }
+      return 270;
     }
-    finally {}
+    catch (IOException paramString)
+    {
+      paramString.printStackTrace();
+    }
+    return 0;
   }
 }
 

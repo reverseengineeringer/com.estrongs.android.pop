@@ -1,8 +1,8 @@
 package android.support.v4.view;
 
-abstract interface o
+public abstract interface o
 {
-  public abstract int a(int paramInt1, int paramInt2);
+  public abstract void onSubUiVisibilityChanged(boolean paramBoolean);
 }
 
 /* Location:

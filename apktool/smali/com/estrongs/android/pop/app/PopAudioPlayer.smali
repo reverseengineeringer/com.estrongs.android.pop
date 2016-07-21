@@ -1,34 +1,188 @@
 .class public Lcom/estrongs/android/pop/app/PopAudioPlayer;
-.super Lcom/estrongs/android/pop/esclasses/ESActivity;
+.super Lcom/estrongs/android/ui/base/HomeAsBackActivity;
 
 # interfaces
-.implements Lcom/estrongs/android/ui/e/jb;
+.implements Lcom/estrongs/android/ui/e/jz;
 
 
 # static fields
-.field private static P:[Ljava/lang/String;
+.field private static F:[Ljava/lang/String;
 
-.field private static final h:Ljava/lang/String;
+.field private static final g:Ljava/lang/String;
 
 
 # instance fields
-.field private A:Lcom/estrongs/android/ui/dialog/ProgressDialog;
+.field private A:Z
 
-.field private B:Z
+.field private B:Ljava/lang/String;
 
-.field private C:Lcom/estrongs/android/pop/app/ga;
+.field private C:Z
 
-.field private D:Lcom/estrongs/android/pop/app/ge;
+.field private D:Z
 
-.field private E:Lcom/estrongs/android/pop/app/fy;
+.field private E:Z
 
-.field private F:Lcom/estrongs/android/pop/app/gd;
+.field private G:Lcom/estrongs/android/pop/app/ag;
 
-.field private G:Landroid/widget/ImageView;
+.field private H:Landroid/view/MenuItem;
 
-.field private H:Z
+.field private I:Lcom/estrongs/android/pop/app/x;
 
-.field private I:Ljava/util/List;
+.field private J:Landroid/widget/ProgressBar;
+
+.field private K:Lcom/estrongs/android/pop/app/c/k;
+
+.field private L:I
+
+.field private M:Landroid/graphics/Bitmap;
+
+.field private N:Lcom/estrongs/android/view/a/a;
+
+.field private O:Lcom/estrongs/android/view/a/a;
+
+.field private P:Lcom/estrongs/android/view/a/a;
+
+.field private Q:Lcom/estrongs/android/view/a/a;
+
+.field private R:Lcom/estrongs/android/view/a/a;
+
+.field private S:Lcom/estrongs/android/view/a/a;
+
+.field private T:Lcom/estrongs/android/view/a/a;
+
+.field private U:Lcom/estrongs/android/view/a/a;
+
+.field private V:Lcom/estrongs/android/view/a/a;
+
+.field private W:Lcom/estrongs/android/view/a/a;
+
+.field private X:Lcom/estrongs/android/view/a/a;
+
+.field private Y:Lcom/estrongs/android/view/a/a;
+
+.field private Z:Lcom/estrongs/android/view/a/a;
+
+.field protected a:Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;
+
+.field private aA:I
+
+.field private aB:Lcom/estrongs/android/j/c;
+
+.field private aC:Landroid/widget/ImageView;
+
+.field private aD:Landroid/widget/ImageView;
+
+.field private aE:Lcom/estrongs/android/pop/app/c/a;
+
+.field private aF:Landroid/graphics/Bitmap;
+
+.field private aG:Lcom/estrongs/android/ui/view/ac;
+
+.field private aH:I
+
+.field private aI:Landroid/os/Handler;
+
+.field private aJ:Landroid/content/ServiceConnection;
+
+.field private aK:Landroid/graphics/Rect;
+
+.field private aL:Landroid/view/View$OnClickListener;
+
+.field private aa:Landroid/view/Menu;
+
+.field private ab:Landroid/support/v7/view/ActionMode;
+
+.field private ac:I
+
+.field private ad:I
+
+.field private ae:Landroid/widget/FrameLayout;
+
+.field private af:Landroid/widget/TextView;
+
+.field private ag:Landroid/widget/TextView;
+
+.field private ah:Landroid/widget/ImageView;
+
+.field private ai:Landroid/widget/ImageView;
+
+.field private aj:Landroid/widget/FrameLayout;
+
+.field private ak:Landroid/widget/ImageView;
+
+.field private al:Landroid/graphics/drawable/Drawable;
+
+.field private am:Landroid/graphics/drawable/Drawable;
+
+.field private an:Landroid/widget/TextView;
+
+.field private ao:Landroid/view/View;
+
+.field private ap:Landroid/widget/PopupWindow;
+
+.field private aq:Landroid/widget/ImageView;
+
+.field private ar:Landroid/widget/TextView;
+
+.field private as:Landroid/widget/ImageView;
+
+.field private at:Lcom/estrongs/android/ui/e/hy;
+
+.field private au:Landroid/widget/RelativeLayout;
+
+.field private av:Lcom/estrongs/android/ui/e/ka;
+
+.field private aw:Landroid/support/v7/view/ActionMode$Callback;
+
+.field private final ax:Landroid/content/BroadcastReceiver;
+
+.field private final ay:Landroid/content/BroadcastReceiver;
+
+.field private az:I
+
+.field b:I
+
+.field c:I
+
+.field d:Z
+
+.field e:Lcom/estrongs/android/widget/bd;
+
+.field private f:Lcom/estrongs/android/pop/app/gp;
+
+.field private h:Lcom/estrongs/android/pop/ad;
+
+.field private i:Lcom/estrongs/android/widget/RealViewSwitcher;
+
+.field private j:Landroid/support/v7/app/ActionBar;
+
+.field private k:Landroid/support/v7/widget/Toolbar;
+
+.field private l:Landroid/widget/ImageView;
+
+.field private m:Landroid/view/View;
+
+.field private n:Landroid/support/v7/widget/RecyclerView;
+
+.field private o:Landroid/support/v7/widget/LinearLayoutManager;
+
+.field private p:Lcom/estrongs/android/ui/e/cb;
+
+.field private q:Lcom/estrongs/android/ui/dialog/ProgressDialog;
+
+.field private r:Z
+
+.field private t:Lcom/estrongs/android/pop/app/gn;
+
+.field private u:Lcom/estrongs/android/pop/app/gr;
+
+.field private v:Lcom/estrongs/android/pop/app/gl;
+
+.field private w:Lcom/estrongs/android/pop/app/gq;
+
+.field private x:Z
+
+.field private y:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
@@ -39,107 +193,7 @@
     .end annotation
 .end field
 
-.field private J:Ljava/lang/String;
-
-.field private K:Z
-
-.field private L:Ljava/lang/String;
-
-.field private M:Z
-
-.field private N:Z
-
-.field private O:Z
-
-.field private Q:Lcom/estrongs/android/pop/app/aa;
-
-.field private R:Landroid/view/View;
-
-.field private S:Lcom/estrongs/android/pop/app/r;
-
-.field private T:Landroid/widget/ProgressBar;
-
-.field private U:Lcom/estrongs/android/pop/app/a/am;
-
-.field private V:I
-
-.field private final W:Landroid/content/BroadcastReceiver;
-
-.field private final X:Landroid/content/BroadcastReceiver;
-
-.field private Y:I
-
-.field private Z:I
-
-.field a:I
-
-.field private aa:Lcom/estrongs/android/util/a;
-
-.field private ab:Landroid/view/View;
-
-.field private ac:Landroid/widget/TextView;
-
-.field private ad:Lcom/estrongs/android/pop/app/a/e;
-
-.field private ae:Lcom/estrongs/android/pop/app/a/a;
-
-.field private af:Landroid/graphics/Bitmap;
-
-.field private ag:Lcom/estrongs/android/ui/view/ac;
-
-.field private ah:I
-
-.field private ai:Landroid/os/Handler;
-
-.field private aj:Landroid/content/ServiceConnection;
-
-.field private ak:Landroid/graphics/Rect;
-
-.field b:I
-
-.field protected c:I
-
-.field protected d:I
-
-.field e:Z
-
-.field f:Lcom/estrongs/android/widget/bc;
-
-.field private g:Lcom/estrongs/android/pop/app/gc;
-
-.field private i:Lcom/estrongs/android/pop/ad;
-
-.field private j:Lcom/estrongs/android/widget/RealViewSwitcher;
-
-.field private k:Landroid/view/View;
-
-.field private l:Landroid/widget/TextView;
-
-.field private m:Landroid/widget/TextView;
-
-.field private n:Landroid/widget/ImageView;
-
-.field private o:Lcom/estrongs/android/ui/d/b;
-
-.field private p:Landroid/view/View;
-
-.field private q:Lcom/estrongs/android/ui/view/DragListView;
-
-.field private r:Lcom/estrongs/android/ui/view/by;
-
-.field private t:Lcom/estrongs/android/ui/e/o;
-
-.field private u:Lcom/estrongs/android/ui/e/j;
-
-.field private v:Lcom/estrongs/android/ui/e/hl;
-
-.field private w:Landroid/view/View;
-
-.field private x:Landroid/view/View;
-
-.field private y:Landroid/view/View;
-
-.field private z:Landroid/widget/Button;
+.field private z:Ljava/lang/String;
 
 
 # direct methods
@@ -152,11 +206,11 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h:Ljava/lang/String;
+    sput-object v0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->g:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->P:[Ljava/lang/String;
+    sput-object v0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:[Ljava/lang/String;
 
     return-void
 .end method
@@ -170,106 +224,174 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;-><init>()V
 
-    new-instance v0, Lcom/estrongs/android/pop/app/ej;
+    new-instance v0, Lcom/estrongs/android/pop/app/ei;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/ej;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/ei;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->g:Lcom/estrongs/android/pop/app/gc;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->f:Lcom/estrongs/android/pop/app/gp;
 
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->D:Lcom/estrongs/android/pop/app/ge;
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u:Lcom/estrongs/android/pop/app/gr;
 
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->E:Lcom/estrongs/android/pop/app/fy;
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v:Lcom/estrongs/android/pop/app/gl;
 
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    iput-boolean v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->H:Z
+    iput-boolean v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->x:Z
 
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I:Ljava/util/List;
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->y:Ljava/util/List;
 
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->J:Ljava/lang/String;
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->z:Ljava/lang/String;
 
-    iput-boolean v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->K:Z
+    iput-boolean v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->A:Z
 
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->L:Ljava/lang/String;
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->B:Ljava/lang/String;
 
-    iput-boolean v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->M:Z
+    iput-boolean v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->C:Z
 
-    iput-boolean v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->N:Z
+    iput-boolean v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->D:Z
 
-    iput-boolean v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->O:Z
-
-    iput v3, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a:I
+    iput-boolean v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->E:Z
 
     iput v3, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->b:I
 
-    invoke-static {}, Lcom/estrongs/android/pop/app/aa;->g()Lcom/estrongs/android/pop/app/aa;
+    iput v3, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->c:I
+
+    invoke-static {}, Lcom/estrongs/android/pop/app/ag;->g()Lcom/estrongs/android/pop/app/ag;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Q:Lcom/estrongs/android/pop/app/aa;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->G:Lcom/estrongs/android/pop/app/ag;
 
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->S:Lcom/estrongs/android/pop/app/r;
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I:Lcom/estrongs/android/pop/app/x;
 
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->T:Landroid/widget/ProgressBar;
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->J:Landroid/widget/ProgressBar;
 
-    new-instance v0, Lcom/estrongs/android/pop/app/a/am;
+    new-instance v0, Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-direct {v0}, Lcom/estrongs/android/pop/app/a/am;-><init>()V
+    invoke-direct {v0}, Lcom/estrongs/android/pop/app/c/k;-><init>()V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->U:Lcom/estrongs/android/pop/app/a/am;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->K:Lcom/estrongs/android/pop/app/c/k;
 
-    iput v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->V:I
+    iput v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->L:I
 
-    new-instance v0, Lcom/estrongs/android/pop/app/ey;
+    new-instance v0, Lcom/estrongs/android/pop/app/fa;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/ey;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/fa;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->W:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aw:Landroid/support/v7/view/ActionMode$Callback;
 
-    new-instance v0, Lcom/estrongs/android/pop/app/fn;
+    new-instance v0, Lcom/estrongs/android/pop/app/ft;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/fn;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/ft;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->X:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ax:Landroid/content/BroadcastReceiver;
 
-    iput v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Y:I
+    new-instance v0, Lcom/estrongs/android/pop/app/ge;
 
-    iput v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Z:I
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/ge;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
 
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aa:Lcom/estrongs/android/util/a;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ay:Landroid/content/BroadcastReceiver;
 
-    iput-boolean v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->e:Z
+    iput v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->az:I
 
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->f:Lcom/estrongs/android/widget/bc;
+    iput v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aA:I
 
-    iput v3, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ah:I
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aB:Lcom/estrongs/android/j/c;
 
-    new-instance v0, Lcom/estrongs/android/pop/app/fi;
+    iput-boolean v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->d:Z
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/fi;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->e:Lcom/estrongs/android/widget/bd;
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ai:Landroid/os/Handler;
+    iput v3, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aH:I
 
-    new-instance v0, Lcom/estrongs/android/pop/app/fm;
+    new-instance v0, Lcom/estrongs/android/pop/app/fw;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/fm;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/fw;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aj:Landroid/content/ServiceConnection;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aI:Landroid/os/Handler;
+
+    new-instance v0, Lcom/estrongs/android/pop/app/ga;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/ga;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aJ:Landroid/content/ServiceConnection;
+
+    new-instance v0, Lcom/estrongs/android/pop/app/gb;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/gb;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aL:Landroid/view/View$OnClickListener;
 
     return-void
 .end method
 
-.method static synthetic A(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Lcom/estrongs/android/pop/app/gc;
+.method static synthetic A(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Lcom/estrongs/android/pop/app/gp;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->g:Lcom/estrongs/android/pop/app/gc;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->f:Lcom/estrongs/android/pop/app/gp;
 
     return-object v0
 .end method
 
-.method private B()V
+.method static synthetic B(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ah()V
+
+    return-void
+.end method
+
+.method static synthetic C(Lcom/estrongs/android/pop/app/PopAudioPlayer;)I
+    .locals 1
+
+    iget v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->L:I
+
+    return v0
+.end method
+
+.method static synthetic D(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Landroid/widget/ProgressBar;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->J:Landroid/widget/ProgressBar;
+
+    return-object v0
+.end method
+
+.method static synthetic E(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Landroid/widget/PopupWindow;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ap:Landroid/widget/PopupWindow;
+
+    return-object v0
+.end method
+
+.method public static E()[Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:[Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic F(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Landroid/widget/TextView;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->an:Landroid/widget/TextView;
+
+    return-object v0
+.end method
+
+.method static synthetic G(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Landroid/widget/ImageView;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aq:Landroid/widget/ImageView;
+
+    return-object v0
+.end method
+
+.method private K()V
     .locals 3
 
     const/4 v2, 0x0
@@ -286,48 +408,48 @@
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->E:Lcom/estrongs/android/pop/app/fy;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v:Lcom/estrongs/android/pop/app/gl;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->E:Lcom/estrongs/android/pop/app/fy;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v:Lcom/estrongs/android/pop/app/gl;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/fy;->A()Lcom/estrongs/android/pop/app/a/am;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gl;->A()Lcom/estrongs/android/pop/app/c/k;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->E:Lcom/estrongs/android/pop/app/fy;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v:Lcom/estrongs/android/pop/app/gl;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/fy;->A()Lcom/estrongs/android/pop/app/a/am;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gl;->A()Lcom/estrongs/android/pop/app/c/k;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->U:Lcom/estrongs/android/pop/app/a/am;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->K:Lcom/estrongs/android/pop/app/c/k;
 
     :cond_0
     :goto_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->D:Lcom/estrongs/android/pop/app/ge;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u:Lcom/estrongs/android/pop/app/gr;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->D:Lcom/estrongs/android/pop/app/ge;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u:Lcom/estrongs/android/pop/app/gr;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->U:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->K:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/ge;->a(Lcom/estrongs/android/pop/app/a/am;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/gr;->a(Lcom/estrongs/android/pop/app/c/k;)V
 
     :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->E:Lcom/estrongs/android/pop/app/fy;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v:Lcom/estrongs/android/pop/app/gl;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->E:Lcom/estrongs/android/pop/app/fy;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v:Lcom/estrongs/android/pop/app/gl;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->U:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->K:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/fy;->a(Lcom/estrongs/android/pop/app/a/am;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/gl;->a(Lcom/estrongs/android/pop/app/c/k;)V
 
     :cond_2
     return-void
@@ -343,48 +465,45 @@
 
     move-result v0
 
+    if-nez v0, :cond_4
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string v1, "isFromMusicGridViewPlayerView"
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v0
+
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->D:Lcom/estrongs/android/pop/app/ge;
+    :cond_4
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u:Lcom/estrongs/android/pop/app/gr;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->D:Lcom/estrongs/android/pop/app/ge;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u:Lcom/estrongs/android/pop/app/gr;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ge;->b()Lcom/estrongs/android/pop/app/a/am;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gr;->A()Lcom/estrongs/android/pop/app/c/k;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->D:Lcom/estrongs/android/pop/app/ge;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u:Lcom/estrongs/android/pop/app/gr;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ge;->b()Lcom/estrongs/android/pop/app/a/am;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gr;->A()Lcom/estrongs/android/pop/app/c/k;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->U:Lcom/estrongs/android/pop/app/a/am;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->K:Lcom/estrongs/android/pop/app/c/k;
 
     goto :goto_0
 .end method
 
-.method static synthetic B(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->W()V
-
-    return-void
-.end method
-
-.method static synthetic C(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Landroid/widget/ProgressBar;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->T:Landroid/widget/ProgressBar;
-
-    return-object v0
-.end method
-
-.method private C()V
+.method private L()V
     .locals 1
 
     const/4 v0, 0x1
@@ -394,71 +513,76 @@
     return-void
 .end method
 
-.method private D()V
-    .locals 2
+.method private M()V
+    .locals 3
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Q:Lcom/estrongs/android/pop/app/aa;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->G:Lcom/estrongs/android/pop/app/ag;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/aa;->p()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ag;->p()Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
-    sget-object v0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h:Ljava/lang/String;
+    sget-object v0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->g:Ljava/lang/String;
 
     const-string v1, "changeToCastMode error, chromecast is not connected"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
+    :cond_0
     :goto_0
     return-void
 
-    :cond_0
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a()Z
+    :cond_1
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->d()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->q()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->q()V
 
-    :cond_1
+    :cond_2
     const/4 v0, 0x1
 
-    iput v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->V:I
+    iput v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->L:I
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->E:Lcom/estrongs/android/pop/app/fy;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v:Lcom/estrongs/android/pop/app/gl;
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->R:Landroid/view/View;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->H:Landroid/view/MenuItem;
 
-    const v1, 0x7f0a0087
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->H:Landroid/view/MenuItem;
 
-    move-result-object v0
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getResources()Landroid/content/res/Resources;
 
-    check-cast v0, Landroid/widget/ImageView;
+    move-result-object v1
 
-    const v1, 0x7f02028e
+    const v2, 0x7f020403
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setIcon(Landroid/graphics/drawable/Drawable;)Landroid/view/MenuItem;
 
     goto :goto_0
 .end method
 
-.method private E()V
+.method private N()V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->S:Lcom/estrongs/android/pop/app/r;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I:Lcom/estrongs/android/pop/app/x;
 
     if-eqz v0, :cond_0
 
@@ -466,39 +590,53 @@
     return-void
 
     :cond_0
-    new-instance v0, Lcom/estrongs/android/pop/app/r;
+    new-instance v0, Lcom/estrongs/android/pop/app/x;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/r;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/x;-><init>(Landroid/app/Activity;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->S:Lcom/estrongs/android/pop/app/r;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I:Lcom/estrongs/android/pop/app/x;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->S:Lcom/estrongs/android/pop/app/r;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I:Lcom/estrongs/android/pop/app/x;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/ft;
+    new-instance v1, Lcom/estrongs/android/pop/app/gj;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ft;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/gj;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/r;->a(Lcom/estrongs/android/pop/app/ae;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/x;->a(Lcom/estrongs/android/pop/app/ai;)V
 
     goto :goto_0
 .end method
 
-.method private F()V
+.method private O()V
     .locals 4
 
-    new-instance v0, Lcom/estrongs/android/pop/app/fv;
+    new-instance v0, Lcom/estrongs/android/pop/app/ej;
 
-    invoke-direct {v0, p0, p0}, Lcom/estrongs/android/pop/app/fv;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;Landroid/content/Context;)V
+    invoke-direct {v0, p0, p0}, Lcom/estrongs/android/pop/app/ej;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;Landroid/content/Context;)V
 
-    const/4 v1, 0x0
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ae:Landroid/widget/FrameLayout;
 
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ae:Landroid/widget/FrameLayout;
 
-    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f03000f
+    const v2, 0x7f0d0064
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ae:Landroid/widget/FrameLayout;
+
+    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v1
+
+    const v2, 0x7f03004d
 
     const/4 v3, 0x0
 
@@ -508,9 +646,17 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ae:Landroid/widget/FrameLayout;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Landroid/support/v4/view/cn;->a(Landroid/view/View;Z)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ae:Landroid/widget/FrameLayout;
+
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->setContentView(Landroid/view/View;)V
 
-    const v0, 0x7f0a0077
+    const v0, 0x7f0e01d4
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->findViewById(I)Landroid/view/View;
 
@@ -518,9 +664,9 @@
 
     check-cast v0, Lcom/estrongs/android/widget/RealViewSwitcher;
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->j:Lcom/estrongs/android/widget/RealViewSwitcher;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->i:Lcom/estrongs/android/widget/RealViewSwitcher;
 
-    const v0, 0x7f0a003c
+    const v0, 0x7f0e019f
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->findViewById(I)Landroid/view/View;
 
@@ -528,270 +674,57 @@
 
     check-cast v0, Landroid/widget/ProgressBar;
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->T:Landroid/widget/ProgressBar;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->J:Landroid/widget/ProgressBar;
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->M()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->U()V
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->J()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->R()V
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->K()V
-
-    return-void
-.end method
-
-.method private G()V
-    .locals 2
-
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Q()V
-
-    const v0, 0x7f0a008a
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ab:Landroid/view/View;
-
-    const v0, 0x7f0a00d5
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ac:Landroid/widget/TextView;
-
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->H()V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ai:Landroid/os/Handler;
-
-    new-instance v1, Lcom/estrongs/android/pop/app/ek;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ek;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->L()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->S()V
 
     return-void
 .end method
 
-.method private H()V
+.method private P()V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ab:Landroid/view/View;
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Z()V
 
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ab:Landroid/view/View;
-
-    const v1, 0x7f0a0086
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/estrongs/android/pop/app/el;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/el;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ab:Landroid/view/View;
-
-    const v1, 0x7f0a0358
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aI:Landroid/os/Handler;
 
     new-instance v1, Lcom/estrongs/android/pop/app/em;
 
     invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/em;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ab:Landroid/view/View;
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->T()V
 
-    const v1, 0x7f0a0359
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/estrongs/android/pop/app/en;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/en;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ab:Landroid/view/View;
-
-    const v1, 0x7f0a0357
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/estrongs/android/pop/app/eo;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/eo;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ab:Landroid/view/View;
-
-    const v1, 0x7f0a0272
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/estrongs/android/pop/app/ep;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ep;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    :cond_0
     return-void
 .end method
 
-.method private I()V
+.method private Q()V
+    .locals 0
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->supportInvalidateOptionsMenu()V
+
+    return-void
+.end method
+
+.method private R()V
     .locals 0
 
     return-void
 .end method
 
-.method private J()V
-    .locals 4
-
-    const/4 v3, 0x1
-
-    const v0, 0x7f0a007a
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    new-instance v1, Lcom/estrongs/android/ui/view/by;
-
-    invoke-direct {v1, p0, v0, v3}, Lcom/estrongs/android/ui/view/by;-><init>(Landroid/app/Activity;Landroid/widget/RelativeLayout;I)V
-
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->r:Lcom/estrongs/android/ui/view/by;
-
-    new-instance v0, Lcom/estrongs/android/ui/e/o;
-
-    invoke-direct {v0, p0, v3}, Lcom/estrongs/android/ui/e/o;-><init>(Landroid/content/Context;Z)V
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->t:Lcom/estrongs/android/ui/e/o;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->r:Lcom/estrongs/android/ui/view/by;
-
-    const-string v1, "playing"
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->t:Lcom/estrongs/android/ui/e/o;
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/view/by;->a(Ljava/lang/String;Lcom/estrongs/android/ui/e/a;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->r:Lcom/estrongs/android/ui/view/by;
-
-    const-string v1, "playing"
-
-    const/4 v2, 0x0
-
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/view/by;->a(Ljava/lang/String;Ljava/lang/Boolean;)V
-
-    new-instance v0, Lcom/estrongs/android/ui/e/j;
-
-    invoke-direct {v0, p0, v3}, Lcom/estrongs/android/ui/e/j;-><init>(Landroid/content/Context;Z)V
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u:Lcom/estrongs/android/ui/e/j;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->r:Lcom/estrongs/android/ui/view/by;
-
-    const-string v1, "playlist"
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u:Lcom/estrongs/android/ui/e/j;
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/view/by;->a(Ljava/lang/String;Lcom/estrongs/android/ui/e/a;)V
-
-    new-instance v0, Lcom/estrongs/android/ui/e/hl;
-
-    invoke-direct {v0, p0, v3}, Lcom/estrongs/android/ui/e/hl;-><init>(Landroid/content/Context;Z)V
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v:Lcom/estrongs/android/ui/e/hl;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->r:Lcom/estrongs/android/ui/view/by;
-
-    const-string v1, "playlist_edit"
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v:Lcom/estrongs/android/ui/e/hl;
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/view/by;->a(Ljava/lang/String;Lcom/estrongs/android/ui/e/a;)V
+.method private S()V
+    .locals 0
 
     return-void
 .end method
 
-.method private K()V
-    .locals 2
-
-    const v0, 0x7f0a0074
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    new-instance v1, Lcom/estrongs/android/pop/app/eq;
-
-    invoke-direct {v1, p0, v0, p0, v0}, Lcom/estrongs/android/pop/app/eq;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;Landroid/widget/LinearLayout;Landroid/content/Context;Landroid/widget/LinearLayout;)V
-
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->o:Lcom/estrongs/android/ui/d/b;
-
-    return-void
-.end method
-
-.method private L()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->k:Landroid/view/View;
-
-    const v1, 0x7f0a0082
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->y:Landroid/view/View;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->y:Landroid/view/View;
-
-    new-instance v1, Lcom/estrongs/android/pop/app/eu;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/eu;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->k:Landroid/view/View;
-
-    const v1, 0x7f0a0083
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/Button;
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->z:Landroid/widget/Button;
+.method private T()V
+    .locals 1
 
     const/4 v0, 0x1
 
@@ -800,84 +733,92 @@
     return-void
 .end method
 
-.method private M()V
-    .locals 2
+.method private U()V
+    .locals 4
 
-    const v0, 0x7f0a007b
+    const/4 v3, 0x1
+
+    const v0, 0x7f0e01d5
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->k:Landroid/view/View;
+    check-cast v0, Landroid/support/v7/widget/Toolbar;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->k:Landroid/view/View;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->k:Landroid/support/v7/widget/Toolbar;
 
-    const v1, 0x7f0a007f
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->k:Landroid/support/v7/widget/Toolbar;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->setSupportActionBar(Landroid/support/v7/widget/Toolbar;)V
 
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->l:Landroid/widget/TextView;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->k:Landroid/view/View;
-
-    const v1, 0x7f0a0080
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getSupportActionBar()Landroid/support/v7/app/ActionBar;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->j:Landroid/support/v7/app/ActionBar;
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->m:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->j:Landroid/support/v7/app/ActionBar;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->k:Landroid/view/View;
+    invoke-virtual {v0, v3}, Landroid/support/v7/app/ActionBar;->setDisplayShowCustomEnabled(Z)V
 
-    const v1, 0x7f0a007e
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->j:Landroid/support/v7/app/ActionBar;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/support/v7/app/ActionBar;->setDisplayShowTitleEnabled(Z)V
+
+    new-instance v0, Landroid/support/v7/app/ActionBar$LayoutParams;
+
+    const/4 v1, -0x2
+
+    const/4 v2, -0x1
+
+    invoke-direct {v0, v1, v2}, Landroid/support/v7/app/ActionBar$LayoutParams;-><init>(II)V
+
+    const/16 v1, 0x11
+
+    iput v1, v0, Landroid/support/v7/app/ActionBar$LayoutParams;->gravity:I
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->j:Landroid/support/v7/app/ActionBar;
+
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->V()Landroid/view/View;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2, v0}, Landroid/support/v7/app/ActionBar;->setCustomView(Landroid/view/View;Landroid/support/v7/app/ActionBar$LayoutParams;)V
+
+    new-instance v0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a:Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a:Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;
+
+    invoke-virtual {v0, v3}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->setIsNarrowMode(Z)V
+
+    return-void
+.end method
+
+.method private V()Landroid/view/View;
+    .locals 4
+
+    const/4 v3, 0x1
+
+    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Landroid/view/View;
+    const v1, 0x7f03004f
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->k:Landroid/view/View;
+    const/4 v2, 0x0
 
-    const v1, 0x7f0a0081
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->x:Landroid/view/View;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->k:Landroid/view/View;
-
-    const v1, 0x7f0a007c
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/estrongs/android/pop/app/ew;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ew;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->k:Landroid/view/View;
-
-    const v1, 0x7f0a0088
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v1
 
-    const v0, 0x7f0a0089
+    const v0, 0x7f0e01e6
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -885,77 +826,79 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->G:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aC:Landroid/widget/ImageView;
 
-    new-instance v0, Lcom/estrongs/android/pop/app/ex;
+    const v0, 0x7f0e01e7
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/ex;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v0, 0x7f0a0085
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->R:Landroid/view/View;
+    check-cast v0, Landroid/widget/ImageView;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->R:Landroid/view/View;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aD:Landroid/widget/ImageView;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/ez;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aC:Landroid/widget/ImageView;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ez;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setFocusable(Z)V
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aD:Landroid/widget/ImageView;
 
-    return-void
+    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setFocusable(Z)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aC:Landroid/widget/ImageView;
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aL:Landroid/view/View$OnClickListener;
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aD:Landroid/widget/ImageView;
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aL:Landroid/view/View$OnClickListener;
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    invoke-direct {p0, v3}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->d(Z)V
+
+    return-object v1
 .end method
 
-.method private N()V
+.method private W()V
     .locals 2
 
-    invoke-static {}, Lcom/estrongs/android/pop/app/aa;->b()Z
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->H:Landroid/view/MenuItem;
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->R:Landroid/view/View;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    if-nez v0, :cond_0
 
     :goto_0
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->R:Landroid/view/View;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->H:Landroid/view/MenuItem;
 
-    const/16 v1, 0x8
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
     goto :goto_0
 .end method
 
-.method private O()V
+.method private X()V
     .locals 3
 
     const/4 v2, 0x1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->A:Lcom/estrongs/android/ui/dialog/ProgressDialog;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->q:Lcom/estrongs/android/ui/dialog/ProgressDialog;
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f0b0072
+    const v0, 0x7f0805b6
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    const v1, 0x7f0b01c7
+    const v1, 0x7f080728
 
     invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
 
@@ -965,27 +908,27 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->A:Lcom/estrongs/android/ui/dialog/ProgressDialog;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->q:Lcom/estrongs/android/ui/dialog/ProgressDialog;
 
     :goto_0
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->A:Lcom/estrongs/android/ui/dialog/ProgressDialog;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->q:Lcom/estrongs/android/ui/dialog/ProgressDialog;
 
     invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ProgressDialog;->show()V
 
     goto :goto_0
 .end method
 
-.method private P()V
+.method private Y()V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->A:Lcom/estrongs/android/ui/dialog/ProgressDialog;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->q:Lcom/estrongs/android/ui/dialog/ProgressDialog;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->A:Lcom/estrongs/android/ui/dialog/ProgressDialog;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->q:Lcom/estrongs/android/ui/dialog/ProgressDialog;
 
     invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ProgressDialog;->dismiss()V
 
@@ -993,28 +936,34 @@
     return-void
 .end method
 
-.method private Q()V
-    .locals 4
+.method private Z()V
+    .locals 7
 
-    const/4 v3, 0x0
+    const/4 v6, 0x0
 
-    const/4 v2, 0x0
+    const/4 v5, 0x0
 
-    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    const/4 v2, -0x1
+
+    const/high16 v3, 0x43340000    # 180.0f
+
+    const/4 v4, 0x1
+
+    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    const v1, 0x7f030011
+    const v1, 0x7f030050
 
-    invoke-virtual {v0, v1, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+    invoke-virtual {v0, v1, v6}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->p:Landroid/view/View;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->m:Landroid/view/View;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->p:Landroid/view/View;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->m:Landroid/view/View;
 
-    const v1, 0x7f0a008b
+    const v1, 0x7f0e01ea
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1022,11 +971,35 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->n:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->l:Landroid/widget/ImageView;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->p:Landroid/view/View;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->m:Landroid/view/View;
 
-    const v1, 0x7f0a008c
+    const v1, 0x7f0e01e8
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->af:Landroid/widget/TextView;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->m:Landroid/view/View;
+
+    const v1, 0x7f0e01e9
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag:Landroid/widget/TextView;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->m:Landroid/view/View;
+
+    const v1, 0x7f0e01f2
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1034,502 +1007,337 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/fe;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ak:Landroid/widget/ImageView;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/fe;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->m:Landroid/view/View;
+
+    const v1, 0x7f0e01ef
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ah:Landroid/widget/ImageView;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->m:Landroid/view/View;
+
+    const v1, 0x7f0e01f1
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ai:Landroid/widget/ImageView;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->m:Landroid/view/View;
+
+    const v1, 0x7f0e01f0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/FrameLayout;
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aj:Landroid/widget/FrameLayout;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ak:Landroid/widget/ImageView;
+
+    invoke-static {v0, v3}, Landroid/support/v4/view/cn;->e(Landroid/view/View;F)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aj:Landroid/widget/FrameLayout;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aL:Landroid/view/View$OnClickListener;
+
+    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ah:Landroid/widget/ImageView;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aL:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    new-instance v0, Lcom/estrongs/android/ui/view/DragListView;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ak:Landroid/widget/ImageView;
 
-    invoke-direct {v0, p0, v3}, Lcom/estrongs/android/ui/view/DragListView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aL:Landroid/view/View$OnClickListener;
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->q:Lcom/estrongs/android/ui/view/DragListView;
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->q:Lcom/estrongs/android/ui/view/DragListView;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aj:Landroid/widget/FrameLayout;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/ff;
+    invoke-virtual {v0, v4}, Landroid/widget/FrameLayout;->setFocusable(Z)V
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ff;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ah:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/DragListView;->setOnScrollListener(Landroid/widget/AbsListView$OnScrollListener;)V
+    invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setFocusable(Z)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->q:Lcom/estrongs/android/ui/view/DragListView;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ak:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/view/DragListView;->setCacheColorHint(I)V
+    invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setFocusable(Z)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->q:Lcom/estrongs/android/ui/view/DragListView;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->m:Landroid/view/View;
 
-    const v1, 0x7f02005c
+    const v1, 0x7f0e01f3
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/DragListView;->setSelector(I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RelativeLayout;
+
+    new-instance v1, Lcom/estrongs/android/ui/e/cb;
+
+    invoke-direct {v1, p0, v4}, Lcom/estrongs/android/ui/e/cb;-><init>(Landroid/content/Context;Z)V
+
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->p:Lcom/estrongs/android/ui/e/cb;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->p:Lcom/estrongs/android/ui/e/cb;
+
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/e/cb;->a()Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1, v2, v2}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;II)V
+
+    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v0
+
+    const v1, 0x7f030052
+
+    invoke-virtual {v0, v1, v6}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object v1
+
+    const v0, 0x7f0e0203
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RelativeLayout;
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->au:Landroid/widget/RelativeLayout;
+
+    const v0, 0x7f0e0200
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->an:Landroid/widget/TextView;
+
+    const v0, 0x7f0e01ff
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ao:Landroid/view/View;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ao:Landroid/view/View;
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aL:Landroid/view/View$OnClickListener;
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    const v0, 0x7f0e0201
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aq:Landroid/widget/ImageView;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aq:Landroid/widget/ImageView;
+
+    invoke-static {v0, v3}, Landroid/support/v4/view/cn;->e(Landroid/view/View;F)V
+
+    const v0, 0x7f0e0202
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v7/widget/RecyclerView;
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->n:Landroid/support/v7/widget/RecyclerView;
 
     new-instance v0, Lcom/estrongs/android/ui/view/ac;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ai:Landroid/os/Handler;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aI:Landroid/os/Handler;
 
-    invoke-direct {v0, p0, v1}, Lcom/estrongs/android/ui/view/ac;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v2}, Lcom/estrongs/android/ui/view/ac;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag:Lcom/estrongs/android/ui/view/ac;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aG:Lcom/estrongs/android/ui/view/ac;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->q:Lcom/estrongs/android/ui/view/DragListView;
+    new-instance v0, Landroid/support/v7/widget/LinearLayoutManager;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag:Lcom/estrongs/android/ui/view/ac;
+    invoke-direct {v0, p0}, Landroid/support/v7/widget/LinearLayoutManager;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/DragListView;->setAdapter(Landroid/widget/ListAdapter;)V
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->o:Landroid/support/v7/widget/LinearLayoutManager;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->j:Lcom/estrongs/android/widget/RealViewSwitcher;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->n:Landroid/support/v7/widget/RecyclerView;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->p:Landroid/view/View;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->o:Landroid/support/v7/widget/LinearLayoutManager;
+
+    invoke-virtual {v0, v2}, Landroid/support/v7/widget/RecyclerView;->setLayoutManager(Landroid/support/v7/widget/RecyclerView$LayoutManager;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->n:Landroid/support/v7/widget/RecyclerView;
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aG:Lcom/estrongs/android/ui/view/ac;
+
+    invoke-virtual {v0, v2}, Landroid/support/v7/widget/RecyclerView;->setAdapter(Landroid/support/v7/widget/RecyclerView$Adapter;)V
+
+    new-instance v0, Lcom/estrongs/android/ui/recycler/g;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/recycler/g;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v3, 0x7f0d0059
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v2
+
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/recycler/g;->a(I)V
+
+    invoke-virtual {v0, v4}, Lcom/estrongs/android/ui/recycler/g;->b(I)V
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->n:Landroid/support/v7/widget/RecyclerView;
+
+    invoke-virtual {v2, v0}, Landroid/support/v7/widget/RecyclerView;->addItemDecoration(Landroid/support/v7/widget/RecyclerView$ItemDecoration;)V
+
+    new-instance v0, Lcom/estrongs/android/pop/app/fu;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, p0, v2, v5}, Lcom/estrongs/android/pop/app/fu;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;II)V
+
+    new-instance v2, Landroid/support/v7/widget/helper/ItemTouchHelper;
+
+    invoke-direct {v2, v0}, Landroid/support/v7/widget/helper/ItemTouchHelper;-><init>(Landroid/support/v7/widget/helper/ItemTouchHelper$Callback;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->n:Landroid/support/v7/widget/RecyclerView;
+
+    invoke-virtual {v2, v0}, Landroid/support/v7/widget/helper/ItemTouchHelper;->attachToRecyclerView(Landroid/support/v7/widget/RecyclerView;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aG:Lcom/estrongs/android/ui/view/ac;
+
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/view/ac;->a(Landroid/support/v7/widget/helper/ItemTouchHelper;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->n:Landroid/support/v7/widget/RecyclerView;
+
+    invoke-virtual {v0, v2}, Landroid/support/v7/widget/RecyclerView;->addItemDecoration(Landroid/support/v7/widget/RecyclerView$ItemDecoration;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->i:Lcom/estrongs/android/widget/RealViewSwitcher;
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->m:Landroid/view/View;
+
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/widget/RealViewSwitcher;->addView(Landroid/view/View;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->i:Lcom/estrongs/android/widget/RealViewSwitcher;
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/RealViewSwitcher;->addView(Landroid/view/View;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->j:Lcom/estrongs/android/widget/RealViewSwitcher;
+    new-instance v0, Lcom/estrongs/android/pop/app/fv;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->q:Lcom/estrongs/android/ui/view/DragListView;
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/fv;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/RealViewSwitcher;->addView(Landroid/view/View;)V
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->e:Lcom/estrongs/android/widget/bd;
 
-    new-instance v0, Lcom/estrongs/android/pop/app/fg;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->i:Lcom/estrongs/android/widget/RealViewSwitcher;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/fg;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->e:Lcom/estrongs/android/widget/bd;
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->f:Lcom/estrongs/android/widget/bc;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/RealViewSwitcher;->setOnScreenSwitchListener(Lcom/estrongs/android/widget/bd;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->j:Lcom/estrongs/android/widget/RealViewSwitcher;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->i:Lcom/estrongs/android/widget/RealViewSwitcher;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->f:Lcom/estrongs/android/widget/bc;
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/RealViewSwitcher;->a(Lcom/estrongs/android/widget/bc;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->q:Lcom/estrongs/android/ui/view/DragListView;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag:Lcom/estrongs/android/ui/view/ac;
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/DragListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->q:Lcom/estrongs/android/ui/view/DragListView;
-
-    new-instance v1, Lcom/estrongs/android/pop/app/fh;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/fh;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/DragListView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->j:Lcom/estrongs/android/widget/RealViewSwitcher;
-
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/widget/RealViewSwitcher;->c(Z)V
+    invoke-virtual {v0, v5}, Lcom/estrongs/android/widget/RealViewSwitcher;->a(Z)V
 
     return-void
 .end method
 
-.method private R()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->t:Lcom/estrongs/android/ui/e/o;
-
-    iget v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Y:I
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/e/o;->b(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->t:Lcom/estrongs/android/ui/e/o;
-
-    iget v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Z:I
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/e/o;->c(I)V
-
-    return-void
-.end method
-
-.method private S()V
-    .locals 1
-
-    const/16 v0, 0x1f4
-
-    invoke-direct {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->b(I)V
-
-    return-void
-.end method
-
-.method private T()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ai:Landroid/os/Handler;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
-
-    return-void
-.end method
-
-.method private U()V
-    .locals 3
-
-    const/4 v2, 0x6
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ai:Landroid/os/Handler;
-
-    invoke-virtual {v0, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ai:Landroid/os/Handler;
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ai:Landroid/os/Handler;
-
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    return-void
-.end method
-
-.method private V()V
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->H:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aj:Landroid/content/ServiceConnection;
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->unbindService(Landroid/content/ServiceConnection;)V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->H:Z
-
-    :cond_0
-    return-void
-.end method
-
-.method private W()V
-    .locals 11
-
-    const/4 v10, 0x2
-
-    const/4 v3, 0x0
-
-    const/4 v9, 0x3
-
-    const/4 v8, 0x1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I:Ljava/util/List;
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->q()V
-
-    invoke-static {}, Lcom/estrongs/android/pop/app/a/ao;->a()Lcom/estrongs/android/pop/app/a/ao;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/ao;->b()Lcom/estrongs/android/pop/app/a/al;
-
-    move-result-object v0
-
-    iget-wide v4, v0, Lcom/estrongs/android/pop/app/a/al;->a:J
-
-    const-wide/16 v6, -0x1
-
-    cmp-long v1, v4, v6
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/al;->d()V
-
-    move-object v1, v0
-
-    :goto_0
-    move v2, v3
-
-    :goto_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-ge v2, v0, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I:Ljava/util/List;
-
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/app/a/al;->b(Ljava/lang/String;)V
-
-    add-int/lit8 v0, v2, 0x1
-
-    move v2, v0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-static {}, Lcom/estrongs/android/pop/app/a/ao;->a()Lcom/estrongs/android/pop/app/a/ao;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/a/ao;->a(Lcom/estrongs/android/pop/app/a/al;)V
-
-    invoke-static {}, Lcom/estrongs/android/pop/app/a/ao;->a()Lcom/estrongs/android/pop/app/a/ao;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/ao;->b()Lcom/estrongs/android/pop/app/a/al;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/gd;->a(Lcom/estrongs/android/pop/app/a/al;)Z
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->v()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Z:I
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->u()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Y:I
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->i()I
-
-    move-result v0
-
-    invoke-direct {p0, v0, v8}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(IZ)V
-
-    :goto_2
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->g()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->J:Ljava/lang/String;
-
-    invoke-virtual {p0, v8}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Z)V
-
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h()V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->e()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_8
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->l()I
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/gd;->f()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    invoke-direct {p0, v10, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h(II)V
-
-    invoke-direct {p0, v9, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h(II)V
-
-    :cond_2
-    :goto_3
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->R()V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->J:Ljava/lang/String;
-
-    if-eqz v0, :cond_a
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->J:Ljava/lang/String;
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Ljava/lang/CharSequence;)V
-
-    :goto_4
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->K:Z
-
-    if-eqz v0, :cond_3
-
-    iput-boolean v3, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->K:Z
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->j:Lcom/estrongs/android/widget/RealViewSwitcher;
-
-    invoke-virtual {v0, v8}, Lcom/estrongs/android/widget/RealViewSwitcher;->a(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->f:Lcom/estrongs/android/widget/bc;
-
-    invoke-interface {v0, v8}, Lcom/estrongs/android/widget/bc;->c(I)V
-
-    :cond_3
-    return-void
-
-    :cond_4
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->h()Lcom/estrongs/android/pop/app/a/al;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_5
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->v()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Z:I
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->u()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Y:I
-
-    goto :goto_2
-
-    :cond_5
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->x()V
-
-    iput-boolean v8, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->K:Z
-
-    goto :goto_2
-
-    :cond_6
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/gd;->d()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_7
-
-    invoke-direct {p0, v9, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h(II)V
-
-    goto :goto_3
-
-    :cond_7
-    invoke-direct {p0, v9, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h(II)V
-
-    const/4 v1, 0x4
-
-    invoke-direct {p0, v1, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h(II)V
-
-    goto :goto_3
-
-    :cond_8
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->h()Lcom/estrongs/android/pop/app/a/al;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->h()Lcom/estrongs/android/pop/app/a/al;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/al;->c()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->l()I
-
-    move-result v0
-
-    const/4 v1, -0x1
-
-    if-ne v0, v1, :cond_9
-
-    move v0, v3
-
-    :cond_9
-    invoke-direct {p0, v10, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h(II)V
-
-    invoke-direct {p0, v9, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h(II)V
-
-    goto :goto_3
-
-    :cond_a
-    const v0, 0x7f0b026d
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Ljava/lang/CharSequence;)V
-
-    goto :goto_4
-.end method
-
-.method static synthetic a(Lcom/estrongs/android/pop/app/PopAudioPlayer;Lcom/estrongs/android/pop/app/ga;)Lcom/estrongs/android/pop/app/ga;
+.method static synthetic a(Lcom/estrongs/android/pop/app/PopAudioPlayer;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->C:Lcom/estrongs/android/pop/app/ga;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->M:Landroid/graphics/Bitmap;
 
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Lcom/estrongs/android/pop/app/gd;
+.method static synthetic a(Lcom/estrongs/android/pop/app/PopAudioPlayer;Landroid/support/v7/view/ActionMode;)Landroid/support/v7/view/ActionMode;
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ab:Landroid/support/v7/view/ActionMode;
+
+    return-object p1
+.end method
+
+.method static synthetic a(Lcom/estrongs/android/pop/app/PopAudioPlayer;Landroid/widget/ImageView;)Landroid/widget/ImageView;
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->as:Landroid/widget/ImageView;
+
+    return-object p1
+.end method
+
+.method static synthetic a(Lcom/estrongs/android/pop/app/PopAudioPlayer;Landroid/widget/TextView;)Landroid/widget/TextView;
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ar:Landroid/widget/TextView;
+
+    return-object p1
+.end method
+
+.method static synthetic a(Lcom/estrongs/android/pop/app/PopAudioPlayer;Lcom/estrongs/android/pop/app/gn;)Lcom/estrongs/android/pop/app/gn;
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->t:Lcom/estrongs/android/pop/app/gn;
+
+    return-object p1
+.end method
+
+.method static synthetic a(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Lcom/estrongs/android/pop/app/gq;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
     return-object v0
 .end method
 
-.method static synthetic a(Lcom/estrongs/android/pop/app/PopAudioPlayer;Lcom/estrongs/android/pop/app/gd;)Lcom/estrongs/android/pop/app/gd;
+.method static synthetic a(Lcom/estrongs/android/pop/app/PopAudioPlayer;Lcom/estrongs/android/pop/app/gq;)Lcom/estrongs/android/pop/app/gq;
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/estrongs/android/pop/app/PopAudioPlayer;Lcom/estrongs/android/pop/app/ge;)Lcom/estrongs/android/pop/app/ge;
+.method static synthetic a(Lcom/estrongs/android/pop/app/PopAudioPlayer;Lcom/estrongs/android/pop/app/gr;)Lcom/estrongs/android/pop/app/gr;
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->D:Lcom/estrongs/android/pop/app/ge;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u:Lcom/estrongs/android/pop/app/gr;
+
+    return-object p1
+.end method
+
+.method static synthetic a(Lcom/estrongs/android/pop/app/PopAudioPlayer;Lcom/estrongs/android/ui/e/ka;)Lcom/estrongs/android/ui/e/ka;
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->av:Lcom/estrongs/android/ui/e/ka;
 
     return-object p1
 .end method
@@ -1537,7 +1345,7 @@
 .method static synthetic a(Lcom/estrongs/android/pop/app/PopAudioPlayer;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->J:Ljava/lang/String;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->z:Ljava/lang/String;
 
     return-object p1
 .end method
@@ -1547,7 +1355,7 @@
 
     const/16 v2, 0x8
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ai:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aI:Landroid/os/Handler;
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
@@ -1561,17 +1369,43 @@
 
     iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ai:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aI:Landroid/os/Handler;
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ai:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aI:Landroid/os/Handler;
 
     const-wide/16 v2, 0x64
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     return-void
+.end method
+
+.method private a(Landroid/view/View;)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ap:Landroid/widget/PopupWindow;
+
+    if-nez v0, :cond_0
+
+    invoke-direct {p0, p1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->b(Landroid/view/View;)V
+
+    :goto_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aq:Landroid/widget/ImageView;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Landroid/support/v4/view/cn;->e(Landroid/view/View;F)V
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ap:Landroid/widget/PopupWindow;
+
+    invoke-virtual {v0, p1}, Landroid/widget/PopupWindow;->showAsDropDown(Landroid/view/View;)V
+
+    goto :goto_0
 .end method
 
 .method static synthetic a(Lcom/estrongs/android/pop/app/PopAudioPlayer;I)V
@@ -1585,7 +1419,7 @@
 .method static synthetic a(Lcom/estrongs/android/pop/app/PopAudioPlayer;II)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h(II)V
+    invoke-direct {p0, p1, p2}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->g(II)V
 
     return-void
 .end method
@@ -1598,10 +1432,18 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/estrongs/android/pop/app/PopAudioPlayer;Lcom/estrongs/android/pop/app/a/ak;)V
+.method static synthetic a(Lcom/estrongs/android/pop/app/PopAudioPlayer;Landroid/view/View;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->b(Lcom/estrongs/android/pop/app/a/ak;)V
+    invoke-direct {p0, p1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method static synthetic a(Lcom/estrongs/android/pop/app/PopAudioPlayer;Lcom/estrongs/android/pop/app/c/i;Lcom/estrongs/android/pop/app/c/j;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Lcom/estrongs/android/pop/app/c/i;Lcom/estrongs/android/pop/app/c/j;)V
 
     return-void
 .end method
@@ -1609,12 +1451,31 @@
 .method static synthetic a(Lcom/estrongs/android/pop/app/PopAudioPlayer;Z)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->c(Z)V
+    invoke-direct {p0, p1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->d(Z)V
 
     return-void
 .end method
 
-.method private a(Lcom/estrongs/android/pop/app/gd;)V
+.method private a(Lcom/estrongs/android/pop/app/c/i;Lcom/estrongs/android/pop/app/c/j;)V
+    .locals 1
+
+    if-eqz p1, :cond_0
+
+    if-nez p2, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-object v0, p1, Lcom/estrongs/android/pop/app/c/i;->b:Ljava/lang/String;
+
+    invoke-virtual {p2, v0}, Lcom/estrongs/android/pop/app/c/j;->b(Ljava/lang/String;)V
+
+    goto :goto_0
+.end method
+
+.method private a(Lcom/estrongs/android/pop/app/gq;)V
     .locals 1
 
     if-nez p1, :cond_1
@@ -1626,32 +1487,32 @@
     :cond_1
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lcom/estrongs/android/pop/app/gd;->a(Lcom/estrongs/android/pop/app/gc;)V
+    invoke-virtual {p1, v0}, Lcom/estrongs/android/pop/app/gq;->a(Lcom/estrongs/android/pop/app/gp;)V
 
-    invoke-virtual {p1}, Lcom/estrongs/android/pop/app/gd;->e()Z
+    invoke-virtual {p1}, Lcom/estrongs/android/pop/app/gq;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p1}, Lcom/estrongs/android/pop/app/gd;->f()Z
+    invoke-virtual {p1}, Lcom/estrongs/android/pop/app/gq;->f()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     :cond_2
-    invoke-virtual {p1}, Lcom/estrongs/android/pop/app/gd;->d()Z
+    invoke-virtual {p1}, Lcom/estrongs/android/pop/app/gq;->d()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p1}, Lcom/estrongs/android/pop/app/gd;->n()V
+    invoke-virtual {p1}, Lcom/estrongs/android/pop/app/gq;->n()V
 
-    invoke-virtual {p1}, Lcom/estrongs/android/pop/app/gd;->q()V
+    invoke-virtual {p1}, Lcom/estrongs/android/pop/app/gq;->q()V
 
-    invoke-virtual {p1}, Lcom/estrongs/android/pop/app/gd;->z()V
+    invoke-virtual {p1}, Lcom/estrongs/android/pop/app/gq;->z()V
 
     goto :goto_0
 .end method
@@ -1741,7 +1602,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bq(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bH(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1755,7 +1616,7 @@
 
     const/4 v4, 0x0
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->ba(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->bl(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1775,9 +1636,9 @@
 
     new-instance v2, Ljava/lang/Thread;
 
-    new-instance v3, Lcom/estrongs/android/pop/app/fu;
+    new-instance v3, Lcom/estrongs/android/pop/app/gk;
 
-    invoke-direct {v3, v1, p0, v0}, Lcom/estrongs/android/pop/app/fu;-><init>([[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Exception;)V
+    invoke-direct {v3, v1, p0, v0}, Lcom/estrongs/android/pop/app/gk;-><init>([[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Exception;)V
 
     invoke-direct {v2, v3}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
@@ -1799,6 +1660,397 @@
     goto :goto_0
 .end method
 
+.method private aa()V
+    .locals 0
+
+    return-void
+.end method
+
+.method private ab()V
+    .locals 0
+
+    return-void
+.end method
+
+.method private ac()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->p:Lcom/estrongs/android/ui/e/cb;
+
+    iget v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->az:I
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/e/cb;->c(I)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->p:Lcom/estrongs/android/ui/e/cb;
+
+    iget v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aA:I
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/e/cb;->d(I)V
+
+    return-void
+.end method
+
+.method private ad()V
+    .locals 1
+
+    const/16 v0, 0x1f4
+
+    invoke-direct {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->b(I)V
+
+    return-void
+.end method
+
+.method private ae()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aI:Landroid/os/Handler;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
+
+    return-void
+.end method
+
+.method private af()V
+    .locals 3
+
+    const/4 v2, 0x6
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aI:Landroid/os/Handler;
+
+    invoke-virtual {v0, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aI:Landroid/os/Handler;
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aI:Landroid/os/Handler;
+
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    return-void
+.end method
+
+.method private ag()V
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->x:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aJ:Landroid/content/ServiceConnection;
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->unbindService(Landroid/content/ServiceConnection;)V
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->x:Z
+
+    :cond_0
+    return-void
+.end method
+
+.method private ah()V
+    .locals 11
+
+    const/4 v10, 0x2
+
+    const/4 v3, 0x0
+
+    const/4 v9, 0x3
+
+    const/4 v8, 0x1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->y:Ljava/util/List;
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->q()V
+
+    invoke-static {}, Lcom/estrongs/android/pop/app/c/m;->a()Lcom/estrongs/android/pop/app/c/m;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/m;->b()Lcom/estrongs/android/pop/app/c/j;
+
+    move-result-object v0
+
+    iget-wide v4, v0, Lcom/estrongs/android/pop/app/c/j;->a:J
+
+    const-wide/16 v6, -0x1
+
+    cmp-long v1, v4, v6
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/j;->d()V
+
+    move-object v1, v0
+
+    :goto_0
+    move v2, v3
+
+    :goto_1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->y:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-ge v2, v0, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->y:Ljava/util/List;
+
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/app/c/j;->b(Ljava/lang/String;)V
+
+    add-int/lit8 v0, v2, 0x1
+
+    move v2, v0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-static {}, Lcom/estrongs/android/pop/app/c/m;->a()Lcom/estrongs/android/pop/app/c/m;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/c/m;->a(Lcom/estrongs/android/pop/app/c/j;)V
+
+    invoke-static {}, Lcom/estrongs/android/pop/app/c/m;->a()Lcom/estrongs/android/pop/app/c/m;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/m;->b()Lcom/estrongs/android/pop/app/c/j;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/gq;->a(Lcom/estrongs/android/pop/app/c/j;)Z
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->v()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aA:I
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->u()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->az:I
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->i()I
+
+    move-result v0
+
+    invoke-direct {p0, v0, v8}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(IZ)V
+
+    :goto_2
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->g()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->z:Ljava/lang/String;
+
+    invoke-virtual {p0, v8}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Z)V
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->l()V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->e()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_8
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->l()I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/gq;->f()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    invoke-direct {p0, v10, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->g(II)V
+
+    invoke-direct {p0, v9, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->g(II)V
+
+    :cond_2
+    :goto_3
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ac()V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->z:Ljava/lang/String;
+
+    if-eqz v0, :cond_a
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->z:Ljava/lang/String;
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Ljava/lang/CharSequence;)V
+
+    :goto_4
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->A:Z
+
+    if-eqz v0, :cond_3
+
+    iput-boolean v3, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->A:Z
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->i:Lcom/estrongs/android/widget/RealViewSwitcher;
+
+    invoke-virtual {v0, v8}, Lcom/estrongs/android/widget/RealViewSwitcher;->setCurrentScreen(I)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->e:Lcom/estrongs/android/widget/bd;
+
+    invoke-interface {v0, v8}, Lcom/estrongs/android/widget/bd;->c(I)V
+
+    :cond_3
+    return-void
+
+    :cond_4
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->h()Lcom/estrongs/android/pop/app/c/j;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_5
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->v()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aA:I
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->u()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->az:I
+
+    goto :goto_2
+
+    :cond_5
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->C()V
+
+    iput-boolean v8, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->A:Z
+
+    goto :goto_2
+
+    :cond_6
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/gq;->d()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    invoke-direct {p0, v9, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->g(II)V
+
+    goto :goto_3
+
+    :cond_7
+    invoke-direct {p0, v9, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->g(II)V
+
+    const/4 v1, 0x4
+
+    invoke-direct {p0, v1, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->g(II)V
+
+    goto :goto_3
+
+    :cond_8
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->h()Lcom/estrongs/android/pop/app/c/j;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->h()Lcom/estrongs/android/pop/app/c/j;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/j;->c()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->l()I
+
+    move-result v0
+
+    const/4 v1, -0x1
+
+    if-ne v0, v1, :cond_9
+
+    move v0, v3
+
+    :cond_9
+    invoke-direct {p0, v10, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->g(II)V
+
+    invoke-direct {p0, v9, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->g(II)V
+
+    goto :goto_3
+
+    :cond_a
+    const v0, 0x7f080480
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Ljava/lang/CharSequence;)V
+
+    goto :goto_4
+.end method
+
 .method static synthetic b(Lcom/estrongs/android/pop/app/PopAudioPlayer;I)Ljava/lang/String;
     .locals 1
 
@@ -1814,17 +2066,17 @@
 
     const/4 v2, 0x1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ai:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aI:Landroid/os/Handler;
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ai:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aI:Landroid/os/Handler;
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ai:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aI:Landroid/os/Handler;
 
     int-to-long v2, p1
 
@@ -1833,10 +2085,112 @@
     return-void
 .end method
 
+.method private b(Landroid/view/View;)V
+    .locals 6
+
+    const/4 v5, 0x1
+
+    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v0
+
+    const v1, 0x7f03003f
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/estrongs/android/ui/adapter/dy;
+
+    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/adapter/dy;-><init>(Landroid/content/Context;)V
+
+    const v0, 0x7f0e0128
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ListView;
+
+    invoke-virtual {v0, v2}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
+
+    new-instance v2, Landroid/widget/PopupWindow;
+
+    const/high16 v3, 0x43480000    # 200.0f
+
+    invoke-static {p0, v3}, Lcom/estrongs/android/ui/d/g;->a(Landroid/content/Context;F)I
+
+    move-result v3
+
+    const/4 v4, -0x2
+
+    invoke-direct {v2, v1, v3, v4}, Landroid/widget/PopupWindow;-><init>(Landroid/view/View;II)V
+
+    iput-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ap:Landroid/widget/PopupWindow;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ap:Landroid/widget/PopupWindow;
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v3, 0x7f020411
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/widget/PopupWindow;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ap:Landroid/widget/PopupWindow;
+
+    invoke-virtual {v1, v5}, Landroid/widget/PopupWindow;->setOutsideTouchable(Z)V
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ap:Landroid/widget/PopupWindow;
+
+    const v2, 0x1030002
+
+    invoke-virtual {v1, v2}, Landroid/widget/PopupWindow;->setAnimationStyle(I)V
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ap:Landroid/widget/PopupWindow;
+
+    invoke-virtual {v1}, Landroid/widget/PopupWindow;->update()V
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ap:Landroid/widget/PopupWindow;
+
+    invoke-virtual {v1, v5}, Landroid/widget/PopupWindow;->setTouchable(Z)V
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ap:Landroid/widget/PopupWindow;
+
+    invoke-virtual {v1, v5}, Landroid/widget/PopupWindow;->setFocusable(Z)V
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ap:Landroid/widget/PopupWindow;
+
+    invoke-virtual {v1, p1}, Landroid/widget/PopupWindow;->showAsDropDown(Landroid/view/View;)V
+
+    new-instance v1, Lcom/estrongs/android/pop/app/gc;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/gc;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ap:Landroid/widget/PopupWindow;
+
+    new-instance v1, Lcom/estrongs/android/pop/app/gd;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/gd;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/PopupWindow;->setOnDismissListener(Landroid/widget/PopupWindow$OnDismissListener;)V
+
+    return-void
+.end method
+
 .method static synthetic b(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->V()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag()V
 
     return-void
 .end method
@@ -1844,345 +2198,23 @@
 .method static synthetic b(Lcom/estrongs/android/pop/app/PopAudioPlayer;II)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->g(II)V
+    invoke-direct {p0, p1, p2}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->f(II)V
 
     return-void
 .end method
 
-.method private b(Lcom/estrongs/android/pop/app/a/ak;)V
-    .locals 7
+.method static synthetic b(Lcom/estrongs/android/pop/app/PopAudioPlayer;Z)V
+    .locals 0
 
-    const v6, 0x7f0b044c
+    invoke-direct {p0, p1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->c(Z)V
 
-    if-eqz p1, :cond_3
-
-    new-instance v3, Ljava/util/ArrayList;
-
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
-
-    new-instance v4, Ljava/util/ArrayList;
-
-    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
-
-    new-instance v5, Ljava/util/ArrayList;
-
-    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
-
-    iget-object v0, p1, Lcom/estrongs/android/pop/app/a/ak;->e:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    iget-object v0, p1, Lcom/estrongs/android/pop/app/a/ak;->e:Ljava/lang/String;
-
-    invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p1, Lcom/estrongs/android/pop/app/a/ak;->e:Ljava/lang/String;
-
-    invoke-interface {v5, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p0, v6}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, " \""
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p1, Lcom/estrongs/android/pop/app/a/ak;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\""
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    :goto_0
-    iget-object v0, p1, Lcom/estrongs/android/pop/app/a/ak;->g:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p1, Lcom/estrongs/android/pop/app/a/ak;->g:Ljava/lang/String;
-
-    invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const v1, 0x7f0b045e
-
-    invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, " "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p1, Lcom/estrongs/android/pop/app/a/ak;->g:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v5, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p0, v6}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, " \""
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p1, Lcom/estrongs/android/pop/app/a/ak;->g:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\""
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    iget-object v0, p1, Lcom/estrongs/android/pop/app/a/ak;->f:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    iget-object v0, p1, Lcom/estrongs/android/pop/app/a/ak;->f:Ljava/lang/String;
-
-    invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const v1, 0x7f0b045f
-
-    invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, " "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p1, Lcom/estrongs/android/pop/app/a/ak;->f:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v5, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p0, v6}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, " \""
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p1, Lcom/estrongs/android/pop/app/a/ak;->f:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\""
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_2
-    new-instance v0, Lcom/estrongs/android/ui/dialog/ks;
-
-    const-string v2, "music"
-
-    move-object v1, p0
-
-    invoke-direct/range {v0 .. v5}, Lcom/estrongs/android/ui/dialog/ks;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
-
-    new-instance v1, Lcom/estrongs/android/pop/app/fo;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/fo;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ks;->a(Lcom/estrongs/android/ui/dialog/kv;)V
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ks;->show()V
-
-    :cond_3
     return-void
-
-    :cond_4
-    iget-object v0, p1, Lcom/estrongs/android/pop/app/a/ak;->b:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    :try_start_0
-    iget-object v0, p1, Lcom/estrongs/android/pop/app/a/ak;->b:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bB(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    invoke-interface {v5, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const v2, 0x7f0b044c
-
-    invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " \""
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\""
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto/16 :goto_0
-
-    :catch_0
-    move-exception v0
-
-    goto/16 :goto_0
 .end method
 
 .method public static b([Ljava/lang/String;)V
     .locals 0
 
-    sput-object p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->P:[Ljava/lang/String;
+    sput-object p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:[Ljava/lang/String;
 
     return-void
 .end method
@@ -2197,10 +2229,16 @@
     return-object v0
 .end method
 
-.method static synthetic c(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
-    .locals 0
+.method static synthetic c(Lcom/estrongs/android/pop/app/PopAudioPlayer;)I
+    .locals 1
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->P()V
+    iget v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ac:I
+
+    return v0
+.end method
+
+.method private c(II)V
+    .locals 0
 
     return-void
 .end method
@@ -2216,62 +2254,67 @@
 .method static synthetic c(Lcom/estrongs/android/pop/app/PopAudioPlayer;II)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->e(II)V
+    invoke-direct {p0, p1, p2}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->d(II)V
 
     return-void
 .end method
 
 .method private c(Z)V
-    .locals 2
+    .locals 3
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->V:I
+    iput v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->L:I
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->D:Lcom/estrongs/android/pop/app/ge;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u:Lcom/estrongs/android/pop/app/gr;
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->R:Landroid/view/View;
-
-    const v1, 0x7f0a0087
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    const v1, 0x7f0202b7
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->H:Landroid/view/MenuItem;
 
     if-eqz v0, :cond_0
 
-    if-eqz p1, :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->H:Landroid/view/MenuItem;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getResources()Landroid/content/res/Resources;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->q()V
+    move-result-object v1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    const v2, 0x7f020432
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/gd;->l()I
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setIcon(Landroid/graphics/drawable/Drawable;)Landroid/view/MenuItem;
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    if-eqz v0, :cond_1
+
+    if-eqz p1, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->q()V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/gq;->l()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/gd;->d(I)Z
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/gq;->d(I)Z
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->a()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->a()Z
 
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->T:Landroid/widget/ProgressBar;
+    :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->J:Landroid/widget/ProgressBar;
 
     const/16 v1, 0x8
 
@@ -2280,36 +2323,196 @@
     return-void
 .end method
 
-.method static synthetic d(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Landroid/os/Handler;
+.method static synthetic d(Lcom/estrongs/android/pop/app/PopAudioPlayer;)I
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ai:Landroid/os/Handler;
+    iget v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ad:I
 
-    return-object v0
+    return v0
 .end method
 
 .method private d(II)V
-    .locals 0
+    .locals 4
+
+    const/4 v3, 0x1
+
+    const/4 v2, -0x1
+
+    const/4 v1, 0x0
+
+    iget v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aH:I
+
+    if-eq v0, v2, :cond_0
+
+    if-eqz p1, :cond_0
+
+    iget v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aH:I
+
+    invoke-direct {p0, v0, v1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->c(II)V
+
+    iput v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aH:I
+
+    :cond_0
+    packed-switch p1, :pswitch_data_0
+
+    :cond_1
+    :goto_0
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->l()V
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0, v1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->e(Z)V
+
+    invoke-direct {p0, p2, v1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->c(II)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->t:Lcom/estrongs/android/pop/app/gn;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->t:Lcom/estrongs/android/pop/app/gn;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gn;->a()V
+
+    goto :goto_0
+
+    :pswitch_1
+    invoke-direct {p0, v3}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->e(Z)V
+
+    invoke-direct {p0, p2, v3}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->c(II)V
+
+    goto :goto_0
+
+    :pswitch_2
+    invoke-direct {p0, v1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->e(Z)V
+
+    const/4 v0, 0x2
+
+    invoke-direct {p0, p2, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->c(II)V
+
+    goto :goto_0
+
+    :pswitch_3
+    const/4 v0, 0x3
+
+    invoke-direct {p0, p2, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->c(II)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->t:Lcom/estrongs/android/pop/app/gn;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gn;->a()V
+
+    iput p2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aH:I
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->k()V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->y()Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Landroid/graphics/Bitmap;)V
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->l()V
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+        :pswitch_1
+    .end packed-switch
 .end method
 
 .method static synthetic d(Lcom/estrongs/android/pop/app/PopAudioPlayer;II)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->f(II)V
+    invoke-direct {p0, p1, p2}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->e(II)V
 
     return-void
+.end method
+
+.method private d(Z)V
+    .locals 5
+
+    const v4, 0x7f0d0159
+
+    const v3, 0x7f0d005b
+
+    const v2, 0x7f020433
+
+    const v1, 0x7f020432
+
+    if-eqz p1, :cond_0
+
+    invoke-static {p0}, Lcom/estrongs/android/ui/theme/at;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1, v4}, Lcom/estrongs/android/ui/theme/at;->b(II)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aC:Landroid/widget/ImageView;
+
+    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    invoke-static {p0}, Lcom/estrongs/android/ui/theme/at;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/ui/theme/at;->b(II)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aD:Landroid/widget/ImageView;
+
+    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    :goto_0
+    return-void
+
+    :cond_0
+    invoke-static {p0}, Lcom/estrongs/android/ui/theme/at;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1, v3}, Lcom/estrongs/android/ui/theme/at;->b(II)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aC:Landroid/widget/ImageView;
+
+    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    invoke-static {p0}, Lcom/estrongs/android/ui/theme/at;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2, v4}, Lcom/estrongs/android/ui/theme/at;->b(II)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aD:Landroid/widget/ImageView;
+
+    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_0
 .end method
 
 .method private static d(Ljava/lang/String;)[Ljava/lang/String;
     .locals 5
 
-    new-instance v0, Lcom/estrongs/android/util/ai;
+    new-instance v0, Lcom/estrongs/android/util/al;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/util/ai;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/util/al;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/util/ai;->a()[Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/util/al;->a()[Ljava/lang/String;
 
     move-result-object v2
 
@@ -2324,13 +2527,13 @@
 
     aget-object v0, v2, v1
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->t(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->v(Ljava/lang/String;)Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bo(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bF(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2381,12 +2584,20 @@
     return-object v2
 .end method
 
+.method static synthetic e(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Landroid/widget/TextView;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ar:Landroid/widget/TextView;
+
+    return-object v0
+.end method
+
 .method private e(I)V
     .locals 4
 
     const/4 v2, 0x2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ai:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aI:Landroid/os/Handler;
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
@@ -2394,11 +2605,11 @@
 
     iput p1, v0, Landroid/os/Message;->arg1:I
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ai:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aI:Landroid/os/Handler;
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ai:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aI:Landroid/os/Handler;
 
     const-wide/16 v2, 0x64
 
@@ -2408,133 +2619,69 @@
 .end method
 
 .method private e(II)V
-    .locals 3
-
-    const/4 v2, 0x0
-
-    const/4 v1, -0x1
-
-    iget v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ah:I
-
-    if-eq v0, v1, :cond_0
-
-    if-eqz p1, :cond_0
-
-    iget v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ah:I
-
-    invoke-direct {p0, v0, v2}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->d(II)V
-
-    iput v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ah:I
-
-    :cond_0
-    packed-switch p1, :pswitch_data_0
-
-    :cond_1
-    :goto_0
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h()V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->t:Lcom/estrongs/android/ui/e/o;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/e/o;->h()V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u:Lcom/estrongs/android/ui/e/j;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/e/j;->h()V
-
-    invoke-direct {p0, p2, v2}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->d(II)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->C:Lcom/estrongs/android/pop/app/ga;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->C:Lcom/estrongs/android/pop/app/ga;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ga;->a()V
-
-    goto :goto_0
-
-    :pswitch_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->t:Lcom/estrongs/android/ui/e/o;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/e/o;->j()V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u:Lcom/estrongs/android/ui/e/j;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/e/j;->j()V
+    .locals 2
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, p2, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->d(II)V
+    if-nez p1, :cond_1
 
-    goto :goto_0
+    :goto_0
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->at:Lcom/estrongs/android/ui/e/hy;
 
-    :pswitch_2
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->t:Lcom/estrongs/android/ui/e/o;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/e/o;->i()V
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->at:Lcom/estrongs/android/ui/e/hy;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u:Lcom/estrongs/android/ui/e/j;
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/e/hy;->f(I)V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/e/j;->i()V
+    :cond_0
+    invoke-virtual {p0, p1, p2}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(II)V
+
+    return-void
+
+    :cond_1
+    if-ne p1, v0, :cond_2
 
     const/4 v0, 0x2
 
-    invoke-direct {p0, p2, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->d(II)V
-
     goto :goto_0
 
-    :pswitch_3
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->t:Lcom/estrongs/android/ui/e/o;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/e/o;->h()V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u:Lcom/estrongs/android/ui/e/j;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/e/j;->h()V
-
+    :cond_2
     const/4 v0, 0x3
 
-    invoke-direct {p0, p2, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->d(II)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->C:Lcom/estrongs/android/pop/app/ga;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ga;->a()V
-
-    iput p2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ah:I
-
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->g()V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->y()Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Landroid/graphics/Bitmap;)V
-
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h()V
-
     goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_1
-    .end packed-switch
 .end method
 
-.method static synthetic e(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
-    .locals 0
+.method private e(Z)V
+    .locals 2
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->C()V
+    if-eqz p1, :cond_0
 
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ai:Landroid/widget/ImageView;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->al:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    :goto_0
     return-void
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ai:Landroid/widget/ImageView;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->am:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_0
+.end method
+
+.method static synthetic f(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Landroid/widget/ImageView;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->as:Landroid/widget/ImageView;
+
+    return-object v0
 .end method
 
 .method private f(I)Ljava/lang/String;
@@ -2576,56 +2723,11 @@
 .end method
 
 .method private f(II)V
-    .locals 2
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, p1, p2}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(II)V
-
-    if-nez p1, :cond_0
-
-    :goto_0
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v:Lcom/estrongs/android/ui/e/hl;
-
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/e/hl;->d(I)V
-
-    return-void
-
-    :cond_0
-    if-ne p1, v0, :cond_1
-
-    const/4 v0, 0x2
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x3
-
-    goto :goto_0
-.end method
-
-.method static synthetic f(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I()V
-
-    return-void
-.end method
-
-.method static synthetic g(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Lcom/estrongs/android/widget/RealViewSwitcher;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->j:Lcom/estrongs/android/widget/RealViewSwitcher;
-
-    return-object v0
-.end method
-
-.method private g(II)V
     .locals 4
 
     const/4 v2, 0x7
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ai:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aI:Landroid/os/Handler;
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
@@ -2635,11 +2737,11 @@
 
     iput p1, v0, Landroid/os/Message;->arg2:I
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ai:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aI:Landroid/os/Handler;
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ai:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aI:Landroid/os/Handler;
 
     const-wide/16 v2, 0x64
 
@@ -2648,18 +2750,18 @@
     return-void
 .end method
 
-.method static synthetic h(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Lcom/estrongs/android/ui/view/by;
+.method static synthetic g(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Landroid/support/v7/widget/Toolbar;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->r:Lcom/estrongs/android/ui/view/by;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->k:Landroid/support/v7/widget/Toolbar;
 
     return-object v0
 .end method
 
-.method private h(II)V
+.method private g(II)V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ai:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aI:Landroid/os/Handler;
 
     const/4 v1, 0x4
 
@@ -2671,121 +2773,129 @@
 
     iput p2, v0, Landroid/os/Message;->arg2:I
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ai:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aI:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     return-void
 .end method
 
-.method static synthetic i(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Lcom/estrongs/android/ui/view/ac;
+.method static synthetic h(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Lcom/estrongs/android/ui/view/ac;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag:Lcom/estrongs/android/ui/view/ac;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aG:Lcom/estrongs/android/ui/view/ac;
 
     return-object v0
 .end method
 
-.method static synthetic j(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->B:Z
-
-    return v0
-.end method
-
-.method static synthetic k(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Landroid/widget/Button;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->z:Landroid/widget/Button;
-
-    return-object v0
-.end method
-
-.method static synthetic l(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Lcom/estrongs/android/pop/app/aa;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Q:Lcom/estrongs/android/pop/app/aa;
-
-    return-object v0
-.end method
-
-.method static synthetic m(Lcom/estrongs/android/pop/app/PopAudioPlayer;)I
-    .locals 1
-
-    iget v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->V:I
-
-    return v0
-.end method
-
-.method static synthetic n(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+.method static synthetic i(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->D()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Y()V
 
     return-void
 .end method
 
-.method static synthetic o(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Lcom/estrongs/android/pop/app/r;
+.method static synthetic j(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Landroid/os/Handler;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->S:Lcom/estrongs/android/pop/app/r;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aI:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method static synthetic p(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+.method static synthetic k(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->E()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->L()V
 
     return-void
 .end method
 
-.method static synthetic q(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Landroid/widget/ImageView;
+.method static synthetic l(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Q()V
+
+    return-void
+.end method
+
+.method static synthetic m(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Lcom/estrongs/android/widget/RealViewSwitcher;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->G:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->i:Lcom/estrongs/android/widget/RealViewSwitcher;
 
     return-object v0
 .end method
 
-.method static synthetic r(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Lcom/estrongs/android/ui/d/b;
+.method static synthetic n(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Z
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->o:Lcom/estrongs/android/ui/d/b;
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->r:Z
+
+    return v0
+.end method
+
+.method static synthetic o(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Lcom/estrongs/android/ui/e/ka;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->av:Lcom/estrongs/android/ui/e/ka;
 
     return-object v0
 .end method
 
-.method static synthetic s(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Landroid/view/View;
+.method static synthetic p(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Landroid/graphics/Bitmap;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Landroid/view/View;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->M:Landroid/graphics/Bitmap;
 
     return-object v0
 .end method
 
-.method static synthetic t(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Landroid/view/View;
+.method static synthetic q(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Landroid/graphics/Bitmap;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->x:Landroid/view/View;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aF:Landroid/graphics/Bitmap;
 
     return-object v0
+.end method
+
+.method static synthetic r(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Landroid/view/View;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->m:Landroid/view/View;
+
+    return-object v0
+.end method
+
+.method static synthetic s(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aa()V
+
+    return-void
+.end method
+
+.method static synthetic t(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ab()V
+
+    return-void
 .end method
 
 .method static synthetic u(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->M:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->C:Z
 
     return v0
 .end method
 
-.method static synthetic v(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Lcom/estrongs/android/pop/app/ga;
+.method static synthetic v(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Lcom/estrongs/android/pop/app/gn;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->C:Lcom/estrongs/android/pop/app/ga;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->t:Lcom/estrongs/android/pop/app/gn;
 
     return-object v0
 .end method
@@ -2793,7 +2903,7 @@
 .method static synthetic w(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->U()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->af()V
 
     return-void
 .end method
@@ -2801,7 +2911,7 @@
 .method static synthetic x(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->S()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ad()V
 
     return-void
 .end method
@@ -2809,251 +2919,321 @@
 .method static synthetic y(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->B()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->K()V
 
     return-void
 .end method
 
-.method static synthetic z(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Lcom/estrongs/android/pop/app/ge;
+.method static synthetic z(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Lcom/estrongs/android/pop/app/gr;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->D:Lcom/estrongs/android/pop/app/ge;
-
-    return-object v0
-.end method
-
-.method public static z()[Ljava/lang/String;
-    .locals 1
-
-    sget-object v0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->P:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u:Lcom/estrongs/android/pop/app/gr;
 
     return-object v0
 .end method
 
 
 # virtual methods
+.method public A()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/estrongs/android/pop/app/c/i;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aG:Lcom/estrongs/android/ui/view/ac;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/ac;->c()Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public B()Lcom/estrongs/android/pop/app/c/i;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->r()Lcom/estrongs/android/pop/app/c/i;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method public C()V
+    .locals 4
+
+    const/4 v3, 0x0
+
+    invoke-static {}, Lcom/estrongs/android/pop/app/c/m;->a()Lcom/estrongs/android/pop/app/c/m;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/m;->e()Lcom/estrongs/android/pop/app/c/j;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/pop/app/gq;->a(Lcom/estrongs/android/pop/app/c/j;)Z
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aG:Lcom/estrongs/android/ui/view/ac;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/m;->e()Lcom/estrongs/android/pop/app/c/j;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/view/ac;->a(Lcom/estrongs/android/pop/app/c/j;)V
+
+    invoke-direct {p0, v3, v3}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(IZ)V
+
+    return-void
+.end method
+
+.method public D()V
+    .locals 4
+
+    const/4 v1, 0x0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->h()Lcom/estrongs/android/pop/app/c/j;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/estrongs/android/pop/app/c/m;->a()Lcom/estrongs/android/pop/app/c/m;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/c/m;->e()Lcom/estrongs/android/pop/app/c/j;
+
+    move-result-object v2
+
+    if-ne v0, v2, :cond_1
+
+    invoke-static {}, Lcom/estrongs/android/pop/app/c/m;->a()Lcom/estrongs/android/pop/app/c/m;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/m;->f()V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->f()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-static {}, Lcom/estrongs/android/pop/app/c/m;->a()Lcom/estrongs/android/pop/app/c/m;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/estrongs/android/pop/app/c/m;->e()Lcom/estrongs/android/pop/app/c/j;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Lcom/estrongs/android/pop/app/gq;->a(Lcom/estrongs/android/pop/app/c/j;)Z
+
+    invoke-direct {p0, v1, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(IZ)V
+
+    :goto_1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aG:Lcom/estrongs/android/ui/view/ac;
+
+    invoke-static {}, Lcom/estrongs/android/pop/app/c/m;->a()Lcom/estrongs/android/pop/app/c/m;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/c/m;->e()Lcom/estrongs/android/pop/app/c/j;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/view/ac;->a(Lcom/estrongs/android/pop/app/c/j;)V
+
+    invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Z)V
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->l()V
+
+    return-void
+
+    :cond_0
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {}, Lcom/estrongs/android/pop/app/c/m;->a()Lcom/estrongs/android/pop/app/c/m;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/m;->f()V
+
+    goto :goto_1
+.end method
+
+.method public F()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aG:Lcom/estrongs/android/ui/view/ac;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/ac;->c()Ljava/util/List;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aG:Lcom/estrongs/android/ui/view/ac;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/ac;->c()Ljava/util/List;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/android/pop/app/c/i;
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->b(Lcom/estrongs/android/pop/app/c/i;)V
+
+    :goto_0
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->B()Lcom/estrongs/android/pop/app/c/i;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->b(Lcom/estrongs/android/pop/app/c/i;)V
+
+    goto :goto_0
+.end method
+
+.method protected a()Landroid/support/v7/app/ActionBar;
+    .locals 3
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getSupportActionBar()Landroid/support/v7/app/ActionBar;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->J()Lcom/estrongs/android/ui/theme/at;
+
+    move-result-object v1
+
+    const v2, 0x7f0d0148
+
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/theme/at;->a(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/support/v7/app/ActionBar;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    return-object v0
+.end method
+
 .method public a(I)V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->j:Lcom/estrongs/android/widget/RealViewSwitcher;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->i:Lcom/estrongs/android/widget/RealViewSwitcher;
 
-    invoke-virtual {v0, p1}, Lcom/estrongs/android/widget/RealViewSwitcher;->b(I)V
+    invoke-virtual {v0, p1}, Lcom/estrongs/android/widget/RealViewSwitcher;->a(I)V
 
     return-void
 .end method
 
 .method public a(II)V
-    .locals 7
+    .locals 1
 
-    const v6, 0x7f0a003d
+    iput p1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ac:I
 
-    const/16 v2, 0x8
+    iput p2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ad:I
 
-    const v5, -0x777778
-
-    const/4 v4, 0x0
-
-    const/4 v3, 0x1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ab:Landroid/view/View;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ab:Landroid/support/v7/view/ActionMode;
 
     if-eqz v0, :cond_0
 
-    if-ne p1, p2, :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ab:Landroid/support/v7/view/ActionMode;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ab:Landroid/view/View;
-
-    const v1, 0x7f0a0359
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ab:Landroid/view/View;
-
-    const v1, 0x7f0a0358
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    :goto_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ac:Landroid/widget/TextView;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "/"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ab:Landroid/view/View;
-
-    const v1, 0x7f0a0357
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag:Lcom/estrongs/android/ui/view/ac;
-
-    invoke-virtual {v1}, Lcom/estrongs/android/ui/view/ac;->c()Z
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setEnabled(Z)V
-
-    if-eqz v1, :cond_2
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
-
-    :goto_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ab:Landroid/view/View;
-
-    const v1, 0x7f0a0272
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    if-ne p1, v3, :cond_3
-
-    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setEnabled(Z)V
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
+    invoke-virtual {v0}, Landroid/support/v7/view/ActionMode;->invalidate()V
 
     :cond_0
-    :goto_2
     return-void
-
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ab:Landroid/view/View;
-
-    const v1, 0x7f0a0359
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ab:Landroid/view/View;
-
-    const v1, 0x7f0a0358
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_0
-
-    :cond_2
-    new-instance v1, Landroid/graphics/LightingColorFilter;
-
-    invoke-direct {v1, v3, v5}, Landroid/graphics/LightingColorFilter;-><init>(II)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setEnabled(Z)V
-
-    new-instance v1, Landroid/graphics/LightingColorFilter;
-
-    invoke-direct {v1, v3, v5}, Landroid/graphics/LightingColorFilter;-><init>(II)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
-
-    goto :goto_2
 .end method
 
 .method public a(Landroid/graphics/Bitmap;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->n:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->l:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->n:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->l:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u:Lcom/estrongs/android/ui/e/j;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aF:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u:Lcom/estrongs/android/ui/e/j;
-
-    invoke-virtual {v0, p1}, Lcom/estrongs/android/ui/e/j;->a(Landroid/graphics/Bitmap;)V
-
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->af:Landroid/graphics/Bitmap;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->af:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aF:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->af:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aF:Landroid/graphics/Bitmap;
 
-    if-eq v0, p1, :cond_2
+    if-eq v0, p1, :cond_1
 
     :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->af:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aF:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_2
+    :cond_1
     :goto_0
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->af:Landroid/graphics/Bitmap;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aF:Landroid/graphics/Bitmap;
+
+    new-instance v0, Lcom/estrongs/android/pop/app/fs;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/fs;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Ljava/lang/Runnable;)V
 
     return-void
 
@@ -3065,7 +3245,7 @@
     goto :goto_0
 .end method
 
-.method public a(Lcom/estrongs/android/pop/app/a/ak;)V
+.method public a(Lcom/estrongs/android/pop/app/c/i;)V
     .locals 3
 
     const/4 v2, 0x0
@@ -3076,17 +3256,17 @@
 
     invoke-virtual {v0, p1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/app/gd;->a(Ljava/util/List;)V
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/app/gq;->a(Ljava/util/List;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->h()Lcom/estrongs/android/pop/app/a/al;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->h()Lcom/estrongs/android/pop/app/c/j;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/al;->c()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/j;->c()Ljava/util/List;
 
     move-result-object v0
 
@@ -3096,9 +3276,9 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->q()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->q()V
 
     const/4 v0, -0x1
 
@@ -3107,14 +3287,14 @@
     :goto_0
     invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Z)V
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h()V
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->l()V
 
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->l()I
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->l()I
 
     move-result v0
 
@@ -3126,114 +3306,349 @@
 .end method
 
 .method public a(Ljava/lang/CharSequence;)V
-    .locals 1
+    .locals 4
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->z:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a:Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;
 
-    invoke-virtual {v0, p1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    aput-object v3, v1, v2
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->setDisplayPaths([Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->an:Landroid/widget/TextView;
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
 
-.method public a(Ljava/util/List;)V
-    .locals 3
+.method protected a(Ljava/util/List;)V
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List",
             "<",
-            "Lcom/estrongs/android/pop/app/a/ak;",
+            "Lcom/estrongs/android/view/a/a;",
             ">;)V"
         }
     .end annotation
 
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    const v3, 0x7f02040b
 
-    move-result v0
+    new-instance v0, Lcom/estrongs/android/view/a/a;
 
-    new-array v0, v0, [Lcom/estrongs/android/pop/app/a/ak;
+    const v1, 0x7f020434
 
-    invoke-interface {p1, v0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    const v2, 0x7f080141
 
-    invoke-static {}, Lcom/estrongs/android/pop/app/a/ao;->a()Lcom/estrongs/android/pop/app/a/ao;
+    invoke-direct {v0, v1, v2}, Lcom/estrongs/android/view/a/a;-><init>(II)V
+
+    new-instance v1, Lcom/estrongs/android/pop/app/ep;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ep;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/a/a;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)Lcom/estrongs/android/view/a/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/ao;->c()Z
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->N:Lcom/estrongs/android/view/a/a;
 
-    move-result v1
+    new-instance v0, Lcom/estrongs/android/view/a/a;
 
-    if-nez v1, :cond_0
+    const v1, 0x7f0806d9
 
-    const/4 v1, 0x0
+    invoke-direct {v0, v3, v1}, Lcom/estrongs/android/view/a/a;-><init>(II)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/a/ao;->a(Lcom/estrongs/android/pop/app/a/al;)V
+    new-instance v1, Lcom/estrongs/android/pop/app/eq;
 
-    :cond_0
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/ao;->b()Lcom/estrongs/android/pop/app/a/al;
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/eq;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
 
-    move-result-object v1
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/a/a;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)Lcom/estrongs/android/view/a/a;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/a/al;->d()V
+    move-result-object v0
 
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->O:Lcom/estrongs/android/view/a/a;
+
+    new-instance v0, Lcom/estrongs/android/view/a/a;
+
+    const v1, 0x7f080142
+
+    invoke-direct {v0, v3, v1}, Lcom/estrongs/android/view/a/a;-><init>(II)V
+
+    new-instance v1, Lcom/estrongs/android/pop/app/er;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/er;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/a/a;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)Lcom/estrongs/android/view/a/a;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->P:Lcom/estrongs/android/view/a/a;
+
+    new-instance v0, Lcom/estrongs/android/view/a/a;
+
+    const v1, 0x7f080143
+
+    invoke-direct {v0, v3, v1}, Lcom/estrongs/android/view/a/a;-><init>(II)V
+
+    new-instance v1, Lcom/estrongs/android/pop/app/et;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/et;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/a/a;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)Lcom/estrongs/android/view/a/a;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->W:Lcom/estrongs/android/view/a/a;
+
+    new-instance v0, Lcom/estrongs/android/view/a/a;
+
+    const v1, 0x7f02043e
+
+    const v2, 0x7f080148
+
+    invoke-direct {v0, v1, v2}, Lcom/estrongs/android/view/a/a;-><init>(II)V
+
+    new-instance v1, Lcom/estrongs/android/pop/app/eu;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/eu;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/a/a;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)Lcom/estrongs/android/view/a/a;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->V:Lcom/estrongs/android/view/a/a;
+
+    new-instance v0, Lcom/estrongs/android/view/a/a;
+
+    const v1, 0x7f020443
+
+    const v2, 0x7f080149
+
+    invoke-direct {v0, v1, v2}, Lcom/estrongs/android/view/a/a;-><init>(II)V
+
+    new-instance v1, Lcom/estrongs/android/pop/app/ew;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ew;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/a/a;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)Lcom/estrongs/android/view/a/a;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->U:Lcom/estrongs/android/view/a/a;
+
+    new-instance v0, Lcom/estrongs/android/view/a/a;
+
+    const v1, 0x7f020424
+
+    const v2, 0x7f0803dd
+
+    invoke-direct {v0, v1, v2}, Lcom/estrongs/android/view/a/a;-><init>(II)V
+
+    new-instance v1, Lcom/estrongs/android/pop/app/ey;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ey;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/a/a;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)Lcom/estrongs/android/view/a/a;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Q:Lcom/estrongs/android/view/a/a;
+
+    new-instance v0, Lcom/estrongs/android/view/a/a;
+
+    const v1, 0x7f02044c
+
+    const v2, 0x7f0800ac
+
+    invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    invoke-direct {v0, v1, v2}, Lcom/estrongs/android/view/a/a;-><init>(ILjava/lang/String;)V
 
-    move-result v0
+    new-instance v1, Lcom/estrongs/android/pop/app/fh;
 
-    if-eqz v0, :cond_1
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/fh;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/a/a;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)Lcom/estrongs/android/view/a/a;
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/android/pop/app/a/ak;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->R:Lcom/estrongs/android/view/a/a;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/a/ak;->b:Ljava/lang/String;
+    new-instance v0, Lcom/estrongs/android/view/a/a;
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/app/a/al;->b(Ljava/lang/String;)V
+    const v1, 0x7f0203fa
 
-    goto :goto_0
+    const v2, 0x7f0802b2
 
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    invoke-direct {v0, v1, v2}, Lcom/estrongs/android/view/a/a;-><init>(II)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/gd;->a(Lcom/estrongs/android/pop/app/a/al;)Z
+    new-instance v1, Lcom/estrongs/android/pop/app/fi;
 
-    const/4 v0, 0x0
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/fi;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
 
-    invoke-direct {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->e(I)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/a/a;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)Lcom/estrongs/android/view/a/a;
 
-    const/4 v0, 0x1
+    move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Z)V
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->S:Lcom/estrongs/android/view/a/a;
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h()V
+    new-instance v0, Lcom/estrongs/android/view/a/a;
+
+    const v1, 0x7f02043a
+
+    const v2, 0x7f08022e
+
+    invoke-direct {v0, v1, v2}, Lcom/estrongs/android/view/a/a;-><init>(II)V
+
+    new-instance v1, Lcom/estrongs/android/pop/app/fj;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/fj;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/a/a;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)Lcom/estrongs/android/view/a/a;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->T:Lcom/estrongs/android/view/a/a;
+
+    new-instance v0, Lcom/estrongs/android/view/a/a;
+
+    const v1, 0x7f02044b
+
+    const v2, 0x7f080381
+
+    invoke-direct {v0, v1, v2}, Lcom/estrongs/android/view/a/a;-><init>(II)V
+
+    new-instance v1, Lcom/estrongs/android/pop/app/fk;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/fk;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/a/a;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)Lcom/estrongs/android/view/a/a;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->X:Lcom/estrongs/android/view/a/a;
+
+    new-instance v0, Lcom/estrongs/android/view/a/a;
+
+    const v1, 0x7f020415
+
+    const v2, 0x7f080083
+
+    invoke-direct {v0, v1, v2}, Lcom/estrongs/android/view/a/a;-><init>(II)V
+
+    new-instance v1, Lcom/estrongs/android/pop/app/fl;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/fl;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/a/a;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)Lcom/estrongs/android/view/a/a;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Z:Lcom/estrongs/android/view/a/a;
+
+    new-instance v0, Lcom/estrongs/android/view/a/a;
+
+    const v1, 0x7f020402
+
+    const v2, 0x7f0801b2
+
+    invoke-direct {v0, v1, v2}, Lcom/estrongs/android/view/a/a;-><init>(II)V
+
+    new-instance v1, Lcom/estrongs/android/pop/app/fm;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/fm;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/a/a;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)Lcom/estrongs/android/view/a/a;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Y:Lcom/estrongs/android/view/a/a;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->N:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->O:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->P:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->W:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->V:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->U:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Q:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->R:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->T:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->X:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Z:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Y:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
-.method public a(Ljava/util/List;Lcom/estrongs/android/pop/app/a/al;)V
+.method public a(Ljava/util/List;Lcom/estrongs/android/pop/app/c/j;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List",
             "<",
-            "Lcom/estrongs/android/pop/app/a/ak;",
+            "Lcom/estrongs/android/pop/app/c/i;",
             ">;",
-            "Lcom/estrongs/android/pop/app/a/al;",
+            "Lcom/estrongs/android/pop/app/c/j;",
             ")V"
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->h()Lcom/estrongs/android/pop/app/a/al;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->h()Lcom/estrongs/android/pop/app/c/j;
 
     move-result-object v0
 
@@ -3258,18 +3673,18 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/android/pop/app/a/ak;
+    check-cast v0, Lcom/estrongs/android/pop/app/c/i;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/a/ak;->b:Ljava/lang/String;
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/c/i;->b:Ljava/lang/String;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/gd;->b(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/gq;->b(Ljava/util/List;)V
 
     :cond_1
     return-void
@@ -3290,50 +3705,74 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/android/pop/app/a/ak;
+    check-cast v0, Lcom/estrongs/android/pop/app/c/i;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/a/ak;->b:Ljava/lang/String;
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/c/i;->b:Ljava/lang/String;
 
-    invoke-virtual {p2, v0}, Lcom/estrongs/android/pop/app/a/al;->b(Ljava/lang/String;)V
+    invoke-virtual {p2, v0}, Lcom/estrongs/android/pop/app/c/j;->b(Ljava/lang/String;)V
 
     goto :goto_1
 .end method
 
 .method public a(Z)V
-    .locals 2
+    .locals 5
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    const/4 v2, 0x1
+
+    const/4 v4, 0x0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
     if-eqz v0, :cond_0
 
     if-eqz p1, :cond_2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->h()Lcom/estrongs/android/pop/app/a/al;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->h()Lcom/estrongs/android/pop/app/c/j;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag:Lcom/estrongs/android/ui/view/ac;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aG:Lcom/estrongs/android/ui/view/ac;
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/view/ac;->a(Lcom/estrongs/android/pop/app/a/al;)V
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/view/ac;->a(Lcom/estrongs/android/pop/app/c/j;)V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/al;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/j;->a()Ljava/lang/String;
 
     move-result-object v1
 
     if-nez v1, :cond_1
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->z:Landroid/widget/Button;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a:Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/al;->b()I
+    new-array v2, v2, [Ljava/lang/String;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/j;->b()I
+
+    move-result v3
+
+    invoke-virtual {p0, v3}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    aput-object v3, v2, v4
+
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->setDisplayPaths([Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->an:Landroid/widget/TextView;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/j;->b()I
 
     move-result v0
 
-    invoke-virtual {v1, v0}, Landroid/widget/Button;->setText(I)V
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :goto_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag:Lcom/estrongs/android/ui/view/ac;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aG:Lcom/estrongs/android/ui/view/ac;
 
     invoke-virtual {v0}, Lcom/estrongs/android/ui/view/ac;->notifyDataSetChanged()V
 
@@ -3341,138 +3780,643 @@
     return-void
 
     :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->z:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a:Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;
 
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
+    new-array v2, v2, [Ljava/lang/String;
+
+    aput-object v1, v2, v4
+
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->setDisplayPaths([Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->an:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
     :cond_2
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag:Lcom/estrongs/android/ui/view/ac;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aG:Lcom/estrongs/android/ui/view/ac;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/ac;->a()Lcom/estrongs/android/pop/app/a/al;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/ac;->a()Lcom/estrongs/android/pop/app/c/j;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/al;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/j;->a()Ljava/lang/String;
 
     move-result-object v1
 
     if-nez v1, :cond_3
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->z:Landroid/widget/Button;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a:Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/al;->b()I
+    new-array v2, v2, [Ljava/lang/String;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/j;->b()I
+
+    move-result v3
+
+    invoke-virtual {p0, v3}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    aput-object v3, v2, v4
+
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->setDisplayPaths([Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->an:Landroid/widget/TextView;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/j;->b()I
 
     move-result v0
 
-    invoke-virtual {v1, v0}, Landroid/widget/Button;->setText(I)V
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
     :cond_3
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->z:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a:Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;
 
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
+    new-array v2, v2, [Ljava/lang/String;
+
+    aput-object v1, v2, v4
+
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->setDisplayPaths([Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->an:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 .end method
 
-.method public a()Z
-    .locals 1
+.method public b(Lcom/estrongs/android/pop/app/c/i;)V
+    .locals 7
 
-    iget v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->V:I
+    const v6, 0x7f080630
 
-    if-nez v0, :cond_0
+    if-eqz p1, :cond_4
 
-    const/4 v0, 0x1
+    new-instance v0, Ljava/util/ArrayList;
 
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    iget-object v3, p1, Lcom/estrongs/android/pop/app/c/i;->e:Ljava/lang/String;
+
+    invoke-static {v3}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_5
+
+    iget-object v3, p1, Lcom/estrongs/android/pop/app/c/i;->e:Ljava/lang/String;
+
+    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object v3, p1, Lcom/estrongs/android/pop/app/c/i;->e:Ljava/lang/String;
+
+    invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0, v6}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " \""
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    iget-object v4, p1, Lcom/estrongs/android/pop/app/c/i;->e:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, "\""
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_0
     :goto_0
-    return v0
+    iget-object v3, p1, Lcom/estrongs/android/pop/app/c/i;->g:Ljava/lang/String;
 
-    :cond_0
-    const/4 v0, 0x0
+    invoke-static {v3}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
-    goto :goto_0
-.end method
+    move-result v3
 
-.method public b()V
-    .locals 2
+    if-nez v3, :cond_1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ab:Landroid/view/View;
+    iget-object v3, p1, Lcom/estrongs/android/pop/app/c/i;->g:Ljava/lang/String;
 
-    if-eqz v0, :cond_0
+    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ab:Landroid/view/View;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    const v4, 0x7f080637
 
-    :cond_0
+    invoke-virtual {p0, v4}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    iget-object v4, p1, Lcom/estrongs/android/pop/app/c/i;->g:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0, v6}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " \""
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    iget-object v4, p1, Lcom/estrongs/android/pop/app/c/i;->g:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, "\""
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_1
+    iget-object v3, p1, Lcom/estrongs/android/pop/app/c/i;->f:Ljava/lang/String;
+
+    invoke-static {v3}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_2
+
+    iget-object v3, p1, Lcom/estrongs/android/pop/app/c/i;->f:Ljava/lang/String;
+
+    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const v3, 0x7f080636
+
+    invoke-virtual {p0, v3}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v3, " "
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v3, p1, Lcom/estrongs/android/pop/app/c/i;->f:Ljava/lang/String;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0, v6}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v2, " \""
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v2, p1, Lcom/estrongs/android/pop/app/c/i;->f:Ljava/lang/String;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v2, "\""
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_2
+    :try_start_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aB:Lcom/estrongs/android/j/c;
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aB:Lcom/estrongs/android/j/c;
+
+    const-string v1, "Search_Wan"
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/j/c;->a(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aB:Lcom/estrongs/android/j/c;
+
+    const-string v1, "Search_Wan_UV"
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/j/c;->c(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
+
+    :cond_3
+    :goto_1
+    :try_start_1
+    const-string v0, "music"
+
+    iget-object v1, p1, Lcom/estrongs/android/pop/app/c/i;->e:Ljava/lang/String;
+
+    invoke-static {p0, v0, v1}, Lcom/estrongs/android/pop/utils/de;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/estrongs/android/pop/utils/dh;
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    move-result-object v0
+
+    if-nez v0, :cond_6
+
+    :cond_4
+    :goto_2
     return-void
-.end method
 
-.method public b(II)V
-    .locals 4
+    :cond_5
+    iget-object v3, p1, Lcom/estrongs/android/pop/app/c/i;->b:Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    invoke-static {v3}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->h()Lcom/estrongs/android/pop/app/a/al;
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    :try_start_2
+    iget-object v3, p1, Lcom/estrongs/android/pop/app/c/i;->b:Ljava/lang/String;
+
+    invoke-static {v3}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lcom/estrongs/android/util/ap;->bS(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const v5, 0x7f080630
+
+    invoke-virtual {p0, v5}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, " \""
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, "\""
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+
+    goto/16 :goto_0
+
+    :catch_0
+    move-exception v3
+
+    goto/16 :goto_0
+
+    :cond_6
+    :try_start_3
+    iget-object v1, v0, Lcom/estrongs/android/pop/utils/dh;->b:Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/estrongs/android/pop/utils/de;->a(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->finish()V
+
+    goto :goto_2
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_2
+
+    :cond_7
+    new-instance v1, Landroid/content/Intent;
+
+    const-class v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const/high16 v2, 0x24000000
+
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/utils/dh;->a:Ljava/lang/String;
+
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag:Lcom/estrongs/android/ui/view/ac;
+    invoke-virtual {v1, v0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/ui/view/ac;->a()Lcom/estrongs/android/pop/app/a/al;
+    invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->startActivity(Landroid/content/Intent;)V
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
 
-    move-result-object v1
+    goto :goto_2
 
-    if-ne v0, v1, :cond_0
+    :catch_2
+    move-exception v0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0, p1, p2}, Lcom/estrongs/android/pop/app/gd;->a(II)V
-
-    :goto_0
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->b(Z)V
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag:Lcom/estrongs/android/ui/view/ac;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/ac;->a()Lcom/estrongs/android/pop/app/a/al;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/a/al;->c()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/android/pop/app/a/ak;
-
-    int-to-long v2, p2
-
-    invoke-virtual {v1, v0, v2, v3}, Lcom/estrongs/android/pop/app/a/al;->a(Lcom/estrongs/android/pop/app/a/ak;J)V
-
-    goto :goto_0
+    goto :goto_1
 .end method
 
 .method public b(Ljava/util/List;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/estrongs/android/pop/app/c/i;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    new-array v0, v0, [Lcom/estrongs/android/pop/app/c/i;
+
+    invoke-interface {p1, v0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    invoke-static {}, Lcom/estrongs/android/pop/app/c/m;->a()Lcom/estrongs/android/pop/app/c/m;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/m;->c()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/c/m;->a(Lcom/estrongs/android/pop/app/c/j;)V
+
+    :cond_0
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/m;->b()Lcom/estrongs/android/pop/app/c/j;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/c/j;->d()V
+
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/android/pop/app/c/i;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/c/i;->b:Ljava/lang/String;
+
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/app/c/j;->b(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/gq;->a(Lcom/estrongs/android/pop/app/c/j;)Z
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->e(I)V
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Z)V
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->l()V
+
+    return-void
+.end method
+
+.method public b(Z)V
+    .locals 4
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aG:Lcom/estrongs/android/ui/view/ac;
+
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/view/ac;->a()Lcom/estrongs/android/pop/app/c/j;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/gq;->h()Lcom/estrongs/android/pop/app/c/j;
+
+    move-result-object v2
+
+    if-ne v1, v2, :cond_2
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/gq;->l()I
+
+    move-result v1
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aG:Lcom/estrongs/android/ui/view/ac;
+
+    iget-object v3, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v3}, Lcom/estrongs/android/pop/app/gq;->e()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    iget-object v3, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v3}, Lcom/estrongs/android/pop/app/gq;->f()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :cond_1
+    iget-object v3, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v3}, Lcom/estrongs/android/pop/app/gq;->d()Z
+
+    move-result v3
+
+    invoke-virtual {v2, v1, v0, v3}, Lcom/estrongs/android/ui/view/ac;->a(IZZ)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aG:Lcom/estrongs/android/ui/view/ac;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/ac;->notifyDataSetChanged()V
+
+    :goto_0
+    return-void
+
+    :cond_2
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aG:Lcom/estrongs/android/ui/view/ac;
+
+    const/4 v2, -0x1
+
+    invoke-virtual {v1, v2, v0, v0}, Lcom/estrongs/android/ui/view/ac;->a(IZZ)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aG:Lcom/estrongs/android/ui/view/ac;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/ac;->notifyDataSetChanged()V
+
+    goto :goto_0
+.end method
+
+.method public c(Ljava/util/List;)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List",
             "<",
-            "Lcom/estrongs/android/pop/app/a/ak;",
+            "Lcom/estrongs/android/pop/app/c/i;",
             ">;)V"
         }
     .end annotation
@@ -3481,19 +4425,19 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->q()Lcom/estrongs/android/pop/app/a/al;
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v()Lcom/estrongs/android/pop/app/c/j;
 
     move-result-object v5
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->h()Lcom/estrongs/android/pop/app/a/al;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->h()Lcom/estrongs/android/pop/app/c/j;
 
     move-result-object v0
 
     if-ne v0, v5, :cond_4
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w()Lcom/estrongs/android/pop/app/a/ak;
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->B()Lcom/estrongs/android/pop/app/c/i;
 
     move-result-object v6
 
@@ -3512,7 +4456,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/android/pop/app/a/ak;
+    check-cast v0, Lcom/estrongs/android/pop/app/c/i;
 
     invoke-virtual {v0, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -3530,11 +4474,11 @@
     goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v0, p1}, Lcom/estrongs/android/pop/app/gd;->a(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/estrongs/android/pop/app/gq;->a(Ljava/util/List;)V
 
-    invoke-virtual {v5}, Lcom/estrongs/android/pop/app/a/al;->c()Ljava/util/List;
+    invoke-virtual {v5}, Lcom/estrongs/android/pop/app/c/j;->c()Ljava/util/List;
 
     move-result-object v0
 
@@ -3544,9 +4488,9 @@
 
     if-nez v0, :cond_3
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->q()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->q()V
 
     const/4 v0, -0x1
 
@@ -3556,16 +4500,16 @@
     :goto_1
     invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Z)V
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h()V
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->l()V
 
     return-void
 
     :cond_3
     if-eqz v3, :cond_2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->l()I
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->l()I
 
     move-result v0
 
@@ -3574,219 +4518,98 @@
     goto :goto_1
 
     :cond_4
-    invoke-virtual {v5, p1}, Lcom/estrongs/android/pop/app/a/al;->a(Ljava/util/List;)V
+    invoke-virtual {v5, p1}, Lcom/estrongs/android/pop/app/c/j;->a(Ljava/util/List;)V
 
     goto :goto_1
 .end method
 
-.method public b(Z)V
-    .locals 4
+.method protected c()Z
+    .locals 1
 
     const/4 v0, 0x0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag:Lcom/estrongs/android/ui/view/ac;
+    return v0
+.end method
 
-    invoke-virtual {v1}, Lcom/estrongs/android/ui/view/ac;->a()Lcom/estrongs/android/pop/app/a/al;
+.method public d()Z
+    .locals 1
 
-    move-result-object v1
+    iget v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->L:I
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    if-nez v0, :cond_0
 
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/gd;->h()Lcom/estrongs/android/pop/app/a/al;
-
-    move-result-object v2
-
-    if-ne v1, v2, :cond_4
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/gd;->l()I
-
-    move-result v1
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag:Lcom/estrongs/android/ui/view/ac;
-
-    iget-object v3, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v3}, Lcom/estrongs/android/pop/app/gd;->e()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    iget-object v3, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v3}, Lcom/estrongs/android/pop/app/gd;->f()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    :cond_0
     const/4 v0, 0x1
 
-    :cond_1
-    iget-object v3, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v3}, Lcom/estrongs/android/pop/app/gd;->d()Z
-
-    move-result v3
-
-    invoke-virtual {v2, v1, v0, v3}, Lcom/estrongs/android/ui/view/ac;->a(IZZ)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag:Lcom/estrongs/android/ui/view/ac;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/ac;->notifyDataSetChanged()V
-
-    if-eqz p1, :cond_2
-
-    iget v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->c:I
-
-    if-lt v0, v1, :cond_3
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->q:Lcom/estrongs/android/ui/view/DragListView;
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/DragListView;->setSelection(I)V
-
-    :cond_2
     :goto_0
-    return-void
-
-    :cond_3
-    iget v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->d:I
-
-    add-int/lit8 v2, v1, 0x1
-
-    if-gt v0, v2, :cond_2
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->q:Lcom/estrongs/android/ui/view/DragListView;
-
-    iget v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->c:I
-
-    add-int/2addr v1, v2
-
-    add-int/lit8 v1, v1, 0x2
-
-    iget v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->d:I
-
-    sub-int/2addr v1, v2
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/DragListView;->setSelection(I)V
-
-    goto :goto_0
-
-    :cond_4
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag:Lcom/estrongs/android/ui/view/ac;
-
-    const/4 v2, -0x1
-
-    invoke-virtual {v1, v2, v0, v0}, Lcom/estrongs/android/ui/view/ac;->a(IZZ)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag:Lcom/estrongs/android/ui/view/ac;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/ac;->notifyDataSetChanged()V
-
-    goto :goto_0
-.end method
-
-.method public c()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ab:Landroid/view/View;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ab:Landroid/view/View;
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    return v0
 
     :cond_0
-    return-void
-.end method
-
-.method public d()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Q:Lcom/estrongs/android/pop/app/aa;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/aa;->p()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->V:I
-
-    const/4 v1, 0x1
-
-    if-eq v0, v1, :cond_0
-
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->D()V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->a()Z
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->S:Lcom/estrongs/android/pop/app/r;
-
-    if-nez v0, :cond_2
-
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->E()V
-
-    :cond_2
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->S:Lcom/estrongs/android/pop/app/r;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/r;->show()V
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
 .method public e()V
-    .locals 2
+    .locals 5
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ad:Lcom/estrongs/android/pop/app/a/e;
+    const/4 v4, 0x0
+
+    const/4 v3, -0x1
+
+    const/4 v2, 0x1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aw:Landroid/support/v7/view/ActionMode$Callback;
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->startSupportActionMode(Landroid/support/v7/view/ActionMode$Callback;)Landroid/support/v7/view/ActionMode;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->au:Landroid/widget/RelativeLayout;
 
     if-nez v0, :cond_0
-
-    new-instance v0, Lcom/estrongs/android/pop/app/fa;
-
-    invoke-direct {v0, p0, p0}, Lcom/estrongs/android/pop/app/fa;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ad:Lcom/estrongs/android/pop/app/a/e;
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ad:Lcom/estrongs/android/pop/app/a/e;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/e;->b()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ad:Lcom/estrongs/android/pop/app/a/e;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/e;->c()V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->G:Landroid/widget/ImageView;
-
-    const v1, 0x7f0202bc
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     :goto_0
     return-void
 
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ad:Lcom/estrongs/android/pop/app/a/e;
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->at:Lcom/estrongs/android/ui/e/hy;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/e;->d()V
+    if-nez v0, :cond_1
+
+    new-instance v0, Lcom/estrongs/android/ui/e/hy;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v2, v1}, Lcom/estrongs/android/ui/e/hy;-><init>(Landroid/app/Activity;ZLandroid/widget/LinearLayout;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->at:Lcom/estrongs/android/ui/e/hy;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->at:Lcom/estrongs/android/ui/e/hy;
+
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/e/hy;->f(I)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->au:Landroid/widget/RelativeLayout;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->at:Lcom/estrongs/android/ui/e/hy;
+
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/e/hy;->a()Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1, v3, v3}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;II)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->au:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v0, v4}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->at:Lcom/estrongs/android/ui/e/hy;
+
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/e/hy;->f(I)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->au:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v0, v4}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
     goto :goto_0
 .end method
@@ -3794,194 +4617,361 @@
 .method public f()V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ae:Lcom/estrongs/android/pop/app/a/a;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ab:Landroid/support/v7/view/ActionMode;
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    new-instance v0, Lcom/estrongs/android/pop/app/a/a;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ab:Landroid/support/v7/view/ActionMode;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/a/a;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ae:Lcom/estrongs/android/pop/app/a/a;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ae:Lcom/estrongs/android/pop/app/a/a;
-
-    new-instance v1, Lcom/estrongs/android/pop/app/fb;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/fb;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/a/a;->a(Lcom/estrongs/android/pop/app/ae;)V
+    invoke-virtual {v0}, Landroid/support/v7/view/ActionMode;->finish()V
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ae:Lcom/estrongs/android/pop/app/a/a;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->au:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/a;->a()Z
+    if-eqz v0, :cond_1
 
-    move-result v0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->au:Landroid/widget/RelativeLayout;
 
-    if-nez v0, :cond_1
+    const/16 v1, 0x8
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ae:Lcom/estrongs/android/pop/app/a/a;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/a;->b()V
-
-    :goto_0
-    return-void
+    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
     :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ae:Lcom/estrongs/android/pop/app/a/a;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/a;->c()V
-
-    goto :goto_0
+    return-void
 .end method
 
 .method public finish()V
     .locals 1
 
-    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;->finish()V
+    invoke-super {p0}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;->finish()V
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->N:Z
+    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->D:Z
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->D:Lcom/estrongs/android/pop/app/ge;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u:Lcom/estrongs/android/pop/app/gr;
 
-    invoke-direct {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Lcom/estrongs/android/pop/app/gd;)V
+    invoke-direct {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Lcom/estrongs/android/pop/app/gq;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->E:Lcom/estrongs/android/pop/app/fy;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v:Lcom/estrongs/android/pop/app/gl;
 
-    invoke-direct {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Lcom/estrongs/android/pop/app/gd;)V
+    invoke-direct {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Lcom/estrongs/android/pop/app/gq;)V
 
     :cond_0
     return-void
 .end method
 
-.method public g()V
-    .locals 3
+.method protected g()I
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    const v0, 0x7f020438
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->r()Lcom/estrongs/android/pop/app/a/ak;
+    return v0
+.end method
+
+.method public h()Z
+    .locals 6
+
+    const/4 v2, 0x0
+
+    invoke-static {}, Lcom/estrongs/android/pop/app/c/m;->a()Lcom/estrongs/android/pop/app/c/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->l:Landroid/widget/TextView;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/m;->j()Ljava/util/List;
 
-    if-eqz v1, :cond_0
+    move-result-object v3
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->l:Landroid/widget/TextView;
+    invoke-static {}, Lcom/estrongs/android/pop/app/c/m;->a()Lcom/estrongs/android/pop/app/c/m;
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    move-result-object v0
 
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/gd;->s()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/m;->e()Lcom/estrongs/android/pop/app/c/j;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-interface {v3, v0}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
+    invoke-interface {v3}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const v0, 0x7f080144
+
+    invoke-static {p0, v0, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
+
+    const/4 v2, 0x1
+
+    :goto_0
+    return v2
 
     :cond_0
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u:Lcom/estrongs/android/ui/e/j;
+    invoke-interface {v3}, Ljava/util/List;->size()I
 
-    if-eqz v1, :cond_1
+    move-result v0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u:Lcom/estrongs/android/ui/e/j;
+    add-int/lit8 v0, v0, 0x1
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    new-array v4, v0, [Ljava/lang/String;
 
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/gd;->s()Ljava/lang/String;
+    move v1, v2
 
-    move-result-object v2
+    :goto_1
+    invoke-interface {v3}, Ljava/util/List;->size()I
 
-    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/e/j;->a(Ljava/lang/String;)V
+    move-result v0
+
+    if-ge v1, v0, :cond_2
+
+    invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/android/pop/app/c/j;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/j;->a()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/android/pop/app/c/j;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/j;->b()I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
 
     :cond_1
-    if-eqz v0, :cond_5
+    aput-object v0, v4, v1
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/ak;->c()Z
+    add-int/lit8 v0, v1, 0x1
 
-    move-result v1
+    move v1, v0
 
-    if-eqz v1, :cond_4
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->m:Landroid/widget/TextView;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->m:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/gd;->t()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    goto :goto_1
 
     :cond_2
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u:Lcom/estrongs/android/ui/e/j;
+    invoke-interface {v3}, Ljava/util/List;->size()I
 
-    if-eqz v0, :cond_3
+    move-result v0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u:Lcom/estrongs/android/ui/e/j;
+    const v1, 0x7f0803d7
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/gd;->t()Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/e/j;->b(Ljava/lang/String;)V
+    aput-object v1, v4, v0
 
-    :cond_3
-    :goto_0
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h()V
+    new-instance v0, Lcom/estrongs/android/ui/dialog/cv;
 
-    return-void
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
 
-    :cond_4
-    new-instance v1, Ljava/lang/Thread;
+    const v1, 0x7f0803da
 
-    new-instance v2, Lcom/estrongs/android/pop/app/fc;
+    invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
 
-    invoke-direct {v2, p0, v0}, Lcom/estrongs/android/pop/app/fc;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;Lcom/estrongs/android/pop/app/a/ak;)V
+    move-result-object v1
 
-    invoke-direct {v1, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->a(Ljava/lang/CharSequence;)Lcom/estrongs/android/ui/dialog/cv;
 
-    invoke-virtual {v1}, Ljava/lang/Thread;->start()V
+    move-result-object v0
 
-    goto :goto_0
+    const/4 v1, -0x1
 
-    :cond_5
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->m:Landroid/widget/TextView;
+    new-instance v5, Lcom/estrongs/android/pop/app/en;
 
-    if-eqz v0, :cond_6
+    invoke-direct {v5, p0, v3}, Lcom/estrongs/android/pop/app/en;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;Ljava/util/List;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->m:Landroid/widget/TextView;
+    invoke-virtual {v0, v4, v1, v5}, Lcom/estrongs/android/ui/dialog/cv;->a([Ljava/lang/CharSequence;ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
-    const-string v1, ""
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/dialog/cv;->d(Z)Lcom/estrongs/android/ui/dialog/cv;
 
-    :cond_6
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u:Lcom/estrongs/android/ui/e/j;
+    move-result-object v0
 
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u:Lcom/estrongs/android/ui/e/j;
-
-    const-string v1, ""
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/e/j;->b(Ljava/lang/String;)V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cv;->c()Lcom/estrongs/android/ui/dialog/ci;
 
     goto :goto_0
 .end method
 
-.method public h()V
+.method public i()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->G:Lcom/estrongs/android/pop/app/ag;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ag;->p()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->L:I
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_0
+
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->M()V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->a()Z
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I:Lcom/estrongs/android/pop/app/x;
+
+    if-nez v0, :cond_2
+
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->N()V
+
+    :cond_2
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I:Lcom/estrongs/android/pop/app/x;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/x;->show()V
+
+    goto :goto_0
+.end method
+
+.method public j()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aE:Lcom/estrongs/android/pop/app/c/a;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcom/estrongs/android/pop/app/c/a;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/c/a;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aE:Lcom/estrongs/android/pop/app/c/a;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aE:Lcom/estrongs/android/pop/app/c/a;
+
+    new-instance v1, Lcom/estrongs/android/pop/app/fp;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/fp;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/c/a;->a(Lcom/estrongs/android/pop/app/ai;)V
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aE:Lcom/estrongs/android/pop/app/c/a;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/a;->a()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aE:Lcom/estrongs/android/pop/app/c/a;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/a;->b()V
+
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aE:Lcom/estrongs/android/pop/app/c/a;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/a;->c()V
+
+    goto :goto_0
+.end method
+
+.method public k()V
+    .locals 5
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/gq;->r()Lcom/estrongs/android/pop/app/c/i;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/gq;->s()Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->af:Landroid/widget/TextView;
+
+    invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/c/i;->c()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->t()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag:Landroid/widget/TextView;
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :goto_0
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->af:Landroid/widget/TextView;
+
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    if-nez v0, :cond_0
+
+    :cond_0
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->l()V
+
+    return-void
+
+    :cond_1
+    new-instance v3, Ljava/lang/Thread;
+
+    new-instance v4, Lcom/estrongs/android/pop/app/fq;
+
+    invoke-direct {v4, p0, v1}, Lcom/estrongs/android/pop/app/fq;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;Lcom/estrongs/android/pop/app/c/i;)V
+
+    invoke-direct {v3, v4}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+
+    invoke-virtual {v3}, Ljava/lang/Thread;->start()V
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag:Landroid/widget/TextView;
+
+    const-string v3, ""
+
+    invoke-virtual {v1, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_0
+.end method
+
+.method public l()V
     .locals 1
 
     const/4 v0, 0x1
@@ -3991,32 +4981,32 @@
     return-void
 .end method
 
-.method public i()I
+.method public m()I
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->j:Lcom/estrongs/android/widget/RealViewSwitcher;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->i:Lcom/estrongs/android/widget/RealViewSwitcher;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/RealViewSwitcher;->h()I
+    invoke-virtual {v0}, Lcom/estrongs/android/widget/RealViewSwitcher;->getCurrentScreen()I
 
     move-result v0
 
     return v0
 .end method
 
-.method public j()V
+.method public o()V
     .locals 8
 
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
     if-eqz v2, :cond_0
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/gd;->h()Lcom/estrongs/android/pop/app/a/al;
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/gq;->h()Lcom/estrongs/android/pop/app/c/j;
 
     move-result-object v2
 
@@ -4027,26 +5017,26 @@
     return-void
 
     :cond_1
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/gd;->e()Z
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/gq;->e()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/gd;->f()Z
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/gq;->f()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
     :cond_2
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/gd;->d()Z
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/gq;->d()Z
 
     move-result v2
 
@@ -4058,9 +5048,9 @@
     :goto_1
     if-eqz v2, :cond_5
 
-    iget-object v3, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v3, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v3}, Lcom/estrongs/android/pop/app/gd;->c()J
+    invoke-virtual {v3}, Lcom/estrongs/android/pop/app/gq;->c()J
 
     move-result-wide v4
 
@@ -4070,20 +5060,20 @@
 
     if-lez v3, :cond_5
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->k()V
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->p()V
 
     :goto_2
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->k()I
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->k()I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/gd;->q()V
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/gq;->q()V
 
     invoke-direct {p0, v0, v2}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(IZ)V
 
@@ -4100,211 +5090,23 @@
     goto :goto_2
 .end method
 
-.method public k()V
-    .locals 4
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    const-wide/16 v2, 0x0
-
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/pop/app/gd;->a(J)V
-
-    return-void
-.end method
-
-.method public l()V
-    .locals 2
-
-    iget v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Y:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    rem-int/lit8 v0, v0, 0x2
-
-    iput v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Y:I
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    iget v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Y:I
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/gd;->b(I)V
-
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->R()V
-
-    return-void
-.end method
-
-.method public m()V
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    if-nez v0, :cond_1
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->h()Lcom/estrongs/android/pop/app/a/al;
-
-    move-result-object v0
-
-    if-nez v0, :cond_3
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->t:Lcom/estrongs/android/ui/e/o;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->t:Lcom/estrongs/android/ui/e/o;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/e/o;->h()V
-
-    :cond_2
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u:Lcom/estrongs/android/ui/e/j;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u:Lcom/estrongs/android/ui/e/j;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/e/j;->h()V
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->e()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->f()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    :cond_4
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->f()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->p()V
-
-    goto :goto_0
-
-    :cond_5
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->x()Z
-
-    goto :goto_0
-
-    :cond_6
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->w()V
-
-    goto :goto_0
-.end method
-
-.method public n()V
-    .locals 2
-
-    iget v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Z:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    rem-int/lit8 v0, v0, 0x3
-
-    iput v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Z:I
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    iget v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Z:I
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/gd;->c(I)V
-
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->R()V
-
-    return-void
-.end method
-
-.method public o()V
-    .locals 3
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->j()I
-
-    move-result v1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->f()Z
-
-    move-result v0
-
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/gd;->q()V
-
-    :cond_0
-    if-nez v0, :cond_2
-
-    const/4 v0, 0x1
-
-    :goto_0
-    invoke-direct {p0, v1, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(IZ)V
-
-    :cond_1
-    return-void
-
-    :cond_2
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
 .method protected onActivityResult(IILandroid/content/Intent;)V
     .locals 1
 
-    invoke-static {}, Lcom/estrongs/android/ui/pcs/r;->a()Lcom/estrongs/android/ui/pcs/r;
+    invoke-static {}, Lcom/estrongs/android/ui/pcs/u;->a()Lcom/estrongs/android/ui/pcs/u;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/r;->j()Lcom/estrongs/android/ui/pcs/j;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/u;->j()Lcom/estrongs/android/ui/pcs/l;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1, p3, p2}, Lcom/estrongs/android/ui/pcs/j;->a(ILandroid/content/Intent;I)V
+    invoke-virtual {v0, p1, p3, p2}, Lcom/estrongs/android/ui/pcs/l;->a(ILandroid/content/Intent;I)V
 
     :cond_0
-    invoke-super {p0, p1, p2, p3}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;->onActivityResult(IILandroid/content/Intent;)V
 
     return-void
 .end method
@@ -4312,13 +5114,30 @@
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 1
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->av:Lcom/estrongs/android/ui/e/ka;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->av:Lcom/estrongs/android/ui/e/ka;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/e/ka;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->av:Lcom/estrongs/android/ui/e/ka;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/e/ka;->d()V
+
+    :cond_0
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ak:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aK:Landroid/graphics/Rect;
 
-    invoke-static {}, Lcom/estrongs/android/ui/f/e;->d()V
+    invoke-static {}, Lcom/estrongs/android/ui/f/k;->a()V
 
     return-void
 .end method
@@ -4328,19 +5147,61 @@
 
     const/4 v3, 0x0
 
-    const v10, 0x7f0b0417
+    const v5, 0x7f0d0159
+
+    const v10, 0x7f080183
 
     const/4 v4, 0x1
 
     const/4 v1, 0x0
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onCreate(Landroid/os/Bundle;)V
+    const/16 v0, 0x9
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->requestWindowFeature(I)Z
+
+    invoke-super {p0, p1}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;->onCreate(Landroid/os/Bundle;)V
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v2, 0x7f0d0148
+
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v0
+
+    invoke-static {p0, v0}, Lcom/estrongs/android/pop/utils/an;->a(Landroid/app/Activity;I)V
+
+    invoke-static {p0}, Lcom/estrongs/android/ui/theme/at;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
+
+    move-result-object v0
+
+    const v2, 0x7f0202eb
+
+    invoke-virtual {v0, v2, v5}, Lcom/estrongs/android/ui/theme/at;->b(II)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->al:Landroid/graphics/drawable/Drawable;
+
+    invoke-static {p0}, Lcom/estrongs/android/ui/theme/at;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
+
+    move-result-object v0
+
+    const v2, 0x7f0202ec
+
+    invoke-virtual {v0, v2, v5}, Lcom/estrongs/android/ui/theme/at;->b(II)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->am:Landroid/graphics/drawable/Drawable;
 
     invoke-static {p0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->i:Lcom/estrongs/android/pop/ad;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h:Lcom/estrongs/android/pop/ad;
 
     :try_start_0
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getResources()Landroid/content/res/Resources;
@@ -4358,7 +5219,7 @@
     move v0, v4
 
     :goto_0
-    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->B:Z
+    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->r:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -4373,9 +5234,9 @@
 
     move-result v6
 
-    if-eqz v6, :cond_a
+    if-eqz v6, :cond_c
 
-    invoke-static {}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->z()[Ljava/lang/String;
+    invoke-static {}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->E()[Ljava/lang/String;
 
     move-result-object v2
 
@@ -4383,7 +5244,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_10
+    if-eqz v0, :cond_12
 
     new-instance v7, Ljava/util/ArrayList;
 
@@ -4421,7 +5282,7 @@
 
     invoke-interface {v7, v8}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
     :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
 
     :cond_0
     :goto_3
@@ -4439,7 +5300,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    iput-boolean v4, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->B:Z
+    iput-boolean v4, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->r:Z
 
     goto :goto_1
 
@@ -4457,7 +5318,7 @@
 
     if-nez v0, :cond_5
 
-    invoke-static {p0, v10, v4}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {p0, v10, v4}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->finish()V
 
@@ -4481,13 +5342,13 @@
 
     move-result v2
 
-    iput-boolean v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->K:Z
+    iput-boolean v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->A:Z
 
-    if-nez v0, :cond_c
+    if-nez v0, :cond_e
 
-    iget-boolean v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->K:Z
+    iget-boolean v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->A:Z
 
-    if-nez v2, :cond_c
+    if-nez v2, :cond_e
 
     invoke-virtual {v5}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
@@ -4509,7 +5370,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_b
+    if-eqz v2, :cond_d
 
     const-string v2, "file://"
 
@@ -4521,7 +5382,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->L:Ljava/lang/String;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->B:Ljava/lang/String;
 
     :cond_6
     :goto_6
@@ -4529,57 +5390,57 @@
 
     invoke-direct {v2}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I:Ljava/util/List;
+    iput-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->y:Ljava/util/List;
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I:Ljava/util/List;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->y:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I:Ljava/util/List;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->y:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_7
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->O()V
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->G()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->P()V
 
-    invoke-static {}, Lcom/estrongs/android/pop/app/a/ao;->a()Lcom/estrongs/android/pop/app/a/ao;
+    invoke-static {}, Lcom/estrongs/android/pop/app/c/m;->a()Lcom/estrongs/android/pop/app/c/m;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/ao;->h()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/m;->h()Z
 
     move-result v2
 
     if-nez v2, :cond_8
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->O()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->X()V
 
-    new-instance v2, Lcom/estrongs/android/pop/app/fp;
+    new-instance v2, Lcom/estrongs/android/pop/app/gf;
 
-    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/fp;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/gf;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
 
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/pop/app/a/ao;->a(Lcom/estrongs/android/pop/app/a/ap;)V
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/pop/app/c/m;->a(Lcom/estrongs/android/pop/app/c/n;)V
 
-    new-instance v2, Lcom/estrongs/android/pop/app/fr;
+    new-instance v2, Lcom/estrongs/android/pop/app/gh;
 
-    invoke-direct {v2, p0, v0}, Lcom/estrongs/android/pop/app/fr;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;Lcom/estrongs/android/pop/app/a/ao;)V
+    invoke-direct {v2, p0, v0}, Lcom/estrongs/android/pop/app/gh;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;Lcom/estrongs/android/pop/app/c/m;)V
 
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/fr;->start()V
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/gh;->start()V
 
     :cond_8
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/ao;->d()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/m;->d()Z
 
     move-result v2
 
     if-nez v2, :cond_9
 
-    new-instance v2, Lcom/estrongs/android/pop/app/fs;
+    new-instance v2, Lcom/estrongs/android/pop/app/gi;
 
-    invoke-direct {v2, p0, v0}, Lcom/estrongs/android/pop/app/fs;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;Lcom/estrongs/android/pop/app/a/ao;)V
+    invoke-direct {v2, p0, v0}, Lcom/estrongs/android/pop/app/gi;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;Lcom/estrongs/android/pop/app/c/m;)V
 
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/fs;->start()V
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/gi;->start()V
 
     :cond_9
     new-instance v0, Landroid/content/ContextWrapper;
@@ -4598,29 +5459,54 @@
 
     invoke-virtual {v0, v2}, Landroid/content/ContextWrapper;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->s()V
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->x()V
 
-    const-string v0, "PopAudioPlayer"
-
-    invoke-static {p0, v1, v0}, Lcom/estrongs/android/util/a;->a(Landroid/content/Context;ZLjava/lang/String;)Lcom/estrongs/android/util/a;
+    invoke-static {p0}, Lcom/estrongs/android/j/c;->a(Landroid/content/Context;)Lcom/estrongs/android/j/c;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aa:Lcom/estrongs/android/util/a;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aB:Lcom/estrongs/android/j/c;
 
-    new-instance v0, Lcom/estrongs/android/pop/app/fy;
+    const-string v0, "islocalopen"
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/fy;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+    invoke-virtual {v5, v0, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->E:Lcom/estrongs/android/pop/app/fy;
+    move-result v0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Q:Lcom/estrongs/android/pop/app/aa;
+    if-nez v0, :cond_a
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->E:Lcom/estrongs/android/pop/app/fy;
+    :try_start_2
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aB:Lcom/estrongs/android/j/c;
 
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/pop/app/aa;->a(Lcom/estrongs/chromecast/RemoteMediaPlayerListener;)V
+    const-string v2, "act3"
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->B()V
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/j/c;->d(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aB:Lcom/estrongs/android/j/c;
+
+    const-string v2, "act3"
+
+    const-string v4, "audio_player"
+
+    invoke-virtual {v0, v2, v4}, Lcom/estrongs/android/j/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_3
+
+    :cond_a
+    :goto_7
+    new-instance v0, Lcom/estrongs/android/pop/app/gl;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/gl;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v:Lcom/estrongs/android/pop/app/gl;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->G:Lcom/estrongs/android/pop/app/ag;
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v:Lcom/estrongs/android/pop/app/gl;
+
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/pop/app/ag;->a(Lcom/estrongs/chromecast/RemoteMediaPlayerListener;)V
+
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->K()V
 
     const-string v0, "Chromecast"
 
@@ -4628,17 +5514,17 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_b
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Q:Lcom/estrongs/android/pop/app/aa;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->G:Lcom/estrongs/android/pop/app/ag;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/aa;->p()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ag;->p()Z
 
     move-result v0
 
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_10
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->D()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->M()V
 
     const-string v0, "ChromecastNotification"
 
@@ -4646,25 +5532,47 @@
 
     move-result v0
 
-    if-nez v0, :cond_d
+    if-nez v0, :cond_f
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->E:Lcom/estrongs/android/pop/app/fy;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v:Lcom/estrongs/android/pop/app/gl;
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->d()V
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->i()V
 
-    :goto_7
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->W()V
+    :goto_8
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ah()V
+
+    :cond_b
+    :goto_9
+    :try_start_3
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aB:Lcom/estrongs/android/j/c;
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aB:Lcom/estrongs/android/j/c;
+
+    const-string v1, "AudioPlayer_UV"
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/j/c;->c(Ljava/lang/String;)V
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
 
     goto/16 :goto_4
 
-    :cond_a
+    :catch_1
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    goto/16 :goto_4
+
+    :cond_c
     invoke-virtual {v5}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v0
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_11
 
     invoke-virtual {v5}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
@@ -4684,31 +5592,31 @@
 
     move-result v0
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_11
 
-    :try_start_2
+    :try_start_4
     invoke-virtual {v5}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Landroid/net/Uri;)[Ljava/lang/String;
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
 
     move-result-object v0
 
     goto/16 :goto_5
 
-    :catch_1
+    :catch_2
     move-exception v0
 
-    invoke-static {p0, v10, v4}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {p0, v10, v4}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->finish()V
 
     goto/16 :goto_4
 
-    :cond_b
+    :cond_d
     const-string v2, "http://127.0.0.1:59777/"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -4745,27 +5653,27 @@
 
     goto/16 :goto_6
 
-    :cond_c
+    :cond_e
     if-eqz v0, :cond_7
 
     new-instance v2, Ljava/util/LinkedList;
 
     invoke-direct {v2}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I:Ljava/util/List;
+    iput-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->y:Ljava/util/List;
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I:Ljava/util/List;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->y:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
     move v2, v1
 
-    :goto_8
+    :goto_a
     array-length v4, v0
 
     if-ge v2, v4, :cond_7
 
-    iget-object v4, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I:Ljava/util/List;
+    iget-object v4, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->y:Ljava/util/List;
 
     aget-object v7, v0, v2
 
@@ -4773,42 +5681,101 @@
 
     add-int/lit8 v2, v2, 0x1
 
-    goto :goto_8
+    goto :goto_a
 
-    :cond_d
-    iput-object v3, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I:Ljava/util/List;
+    :catch_3
+    move-exception v0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->E:Lcom/estrongs/android/pop/app/fy;
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/fy;->b()V
+    goto/16 :goto_7
 
-    goto :goto_7
+    :cond_f
+    iput-object v3, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->y:Ljava/util/List;
 
-    :cond_e
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->E:Lcom/estrongs/android/pop/app/fy;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v:Lcom/estrongs/android/pop/app/gl;
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gl;->b()V
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->W()V
+    goto/16 :goto_8
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->d()V
+    :cond_10
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v:Lcom/estrongs/android/pop/app/gl;
 
-    goto/16 :goto_4
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    :catch_2
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ah()V
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->i()V
+
+    goto/16 :goto_9
+
+    :catch_4
     move-exception v8
 
     goto/16 :goto_3
 
-    :cond_f
+    :cond_11
     move-object v0, v3
 
     goto/16 :goto_5
 
-    :cond_10
+    :cond_12
     move-object v0, v2
 
     goto/16 :goto_5
+.end method
+
+.method public onCreateOptionsMenu(Landroid/view/Menu;)Z
+    .locals 4
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getMenuInflater()Landroid/view/MenuInflater;
+
+    move-result-object v0
+
+    const v1, 0x7f100004
+
+    invoke-virtual {v0, v1, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->k:Landroid/support/v7/widget/Toolbar;
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Landroid/support/v7/widget/Toolbar;)V
+
+    const v0, 0x7f0e01e2
+
+    invoke-interface {p1, v0}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->H:Landroid/view/MenuItem;
+
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->W()V
+
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aa:Landroid/view/Menu;
+
+    const v0, 0x7f0e06be
+
+    invoke-interface {p1, v0}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    invoke-static {p0}, Lcom/estrongs/android/ui/theme/at;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
+
+    move-result-object v1
+
+    const v2, 0x7f020425
+
+    const v3, 0x7f0d0159
+
+    invoke-virtual {v1, v2, v3}, Lcom/estrongs/android/ui/theme/at;->b(II)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setIcon(Landroid/graphics/drawable/Drawable;)Landroid/view/MenuItem;
+
+    const/4 v0, 0x1
+
+    return v0
 .end method
 
 .method protected onDestroy()V
@@ -4816,17 +5783,17 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->M:Z
+    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->C:Z
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->V()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag()V
 
     :goto_0
     :try_start_0
-    const-string v0, "Market"
+    sget-object v0, Lcom/estrongs/android/pop/view/a;->a:Ljava/lang/String;
 
     const-string v1, "Market"
 
@@ -4836,11 +5803,11 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->W:Landroid/content/BroadcastReceiver;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ax:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->X:Landroid/content/BroadcastReceiver;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ay:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
     :try_end_0
@@ -4848,32 +5815,49 @@
 
     :cond_0
     :goto_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->E:Lcom/estrongs/android/pop/app/fy;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v:Lcom/estrongs/android/pop/app/gl;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Q:Lcom/estrongs/android/pop/app/aa;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->G:Lcom/estrongs/android/pop/app/ag;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->E:Lcom/estrongs/android/pop/app/fy;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v:Lcom/estrongs/android/pop/app/gl;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/aa;->b(Lcom/estrongs/chromecast/RemoteMediaPlayerListener;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/ag;->b(Lcom/estrongs/chromecast/RemoteMediaPlayerListener;)V
 
     :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->S:Lcom/estrongs/android/pop/app/r;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I:Lcom/estrongs/android/pop/app/x;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->S:Lcom/estrongs/android/pop/app/r;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I:Lcom/estrongs/android/pop/app/x;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/r;->a()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/x;->a()V
 
     :cond_2
-    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onDestroy()V
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->M:Landroid/graphics/Bitmap;
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->M:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->M:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
+
+    :cond_3
+    invoke-super {p0}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;->onDestroy()V
 
     return-void
 
-    :cond_3
-    const-string v0, "Market"
+    :cond_4
+    sget-object v0, Lcom/estrongs/android/pop/view/a;->a:Ljava/lang/String;
 
     const-string v1, "Spreadtrum"
 
@@ -4881,9 +5865,9 @@
 
     move-result v0
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_5
 
-    const-string v0, "Market"
+    sget-object v0, Lcom/estrongs/android/pop/view/a;->a:Ljava/lang/String;
 
     const-string v1, "Huawei"
 
@@ -4891,28 +5875,28 @@
 
     move-result v0
 
+    if-eqz v0, :cond_7
+
+    :cond_5
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->E:Z
+
     if-eqz v0, :cond_6
-
-    :cond_4
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->O:Z
-
-    if-eqz v0, :cond_5
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->O:Z
+    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->E:Z
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->s()V
-
-    goto :goto_0
-
-    :cond_5
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->V()V
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->x()V
 
     goto :goto_0
 
     :cond_6
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->V()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag()V
+
+    goto :goto_0
+
+    :cond_7
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag()V
 
     goto :goto_0
 
@@ -4923,200 +5907,267 @@
 .end method
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
-    .locals 2
+    .locals 4
+
+    const v3, 0x7f0e06be
+
+    const/4 v2, 0x0
 
     const/4 v0, 0x1
 
     const/4 v1, 0x4
 
-    if-ne p1, v1, :cond_2
+    if-ne p1, v1, :cond_3
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag:Lcom/estrongs/android/ui/view/ac;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aG:Lcom/estrongs/android/ui/view/ac;
 
     invoke-virtual {v1}, Lcom/estrongs/android/ui/view/ac;->b()Z
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u()V
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->z()V
 
+    :cond_0
     :goto_0
     return v0
 
-    :cond_0
-    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->N:Z
-
     :cond_1
-    invoke-super {p0, p1, p2}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
+    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->D:Z
+
+    :cond_2
+    invoke-super {p0, p1, p2}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result v0
 
     goto :goto_0
 
-    :cond_2
-    const/16 v1, 0x18
-
-    if-ne p1, v1, :cond_3
-
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a()Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Q:Lcom/estrongs/android/pop/app/aa;
-
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/aa;->v()V
-
-    goto :goto_0
-
     :cond_3
-    const/16 v1, 0x19
+    const/16 v1, 0x18
 
     if-ne p1, v1, :cond_4
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a()Z
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->d()Z
 
     move-result v1
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_2
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Q:Lcom/estrongs/android/pop/app/aa;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->G:Lcom/estrongs/android/pop/app/ag;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/aa;->w()V
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/ag;->v()V
 
     goto :goto_0
 
     :cond_4
+    const/16 v1, 0x19
+
+    if-ne p1, v1, :cond_5
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->d()Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->G:Lcom/estrongs/android/pop/app/ag;
+
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/ag;->w()V
+
+    goto :goto_0
+
+    :cond_5
     const/16 v1, 0x52
 
-    if-ne p1, v1, :cond_1
+    if-ne p1, v1, :cond_2
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->e()V
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ab:Landroid/support/v7/view/ActionMode;
+
+    if-eqz v1, :cond_6
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ab:Landroid/support/v7/view/ActionMode;
+
+    invoke-virtual {v1}, Landroid/support/v7/view/ActionMode;->getMenu()Landroid/view/Menu;
+
+    move-result-object v1
+
+    invoke-interface {v1, v3, v2}, Landroid/view/Menu;->performIdentifierAction(II)Z
+
+    goto :goto_0
+
+    :cond_6
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aa:Landroid/view/Menu;
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aa:Landroid/view/Menu;
+
+    invoke-interface {v1, v3, v2}, Landroid/view/Menu;->performIdentifierAction(II)Z
 
     goto :goto_0
 .end method
 
 .method protected onNewIntent(Landroid/content/Intent;)V
-    .locals 5
-
-    const/4 v0, 0x0
+    .locals 6
 
     const/4 v1, 0x0
 
+    const/4 v2, 0x0
+
     :try_start_0
-    const-string v2, "hasplaylist"
+    const-string v0, "hasplaylist"
 
     const/4 v3, 0x0
 
-    invoke-virtual {p1, v2, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_7
-
-    invoke-static {}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->z()[Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v2, 0x0
-
-    sput-object v2, Lcom/estrongs/android/pop/app/PopAudioPlayer;->P:[Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a([Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    :goto_0
-    array-length v3, v0
-
-    if-ge v1, v3, :cond_3
-
-    aget-object v3, v0, v1
-
-    const-string v4, ".m3u"
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {p1, v0, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v3
 
-    if-eqz v3, :cond_1
+    const-string v0, "islocalopen"
+
+    const/4 v4, 0x0
+
+    invoke-virtual {p1, v0, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+
+    move-result v0
+
+    if-nez v0, :cond_0
 
     :try_start_1
-    aget-object v3, v0, v1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aB:Lcom/estrongs/android/j/c;
 
-    invoke-static {v3}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Ljava/lang/String;)[Ljava/lang/String;
+    const-string v4, "act3"
 
-    move-result-object v3
+    invoke-virtual {v0, v4}, Lcom/estrongs/android/j/c;->d(Ljava/lang/String;)V
 
-    if-eqz v3, :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aB:Lcom/estrongs/android/j/c;
 
-    invoke-static {v3}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    const-string v4, "act3"
 
-    move-result-object v3
+    const-string v5, "audio_player"
 
-    invoke-interface {v2, v3}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+    invoke-virtual {v0, v4, v5}, Lcom/estrongs/android/j/c;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
     :cond_0
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
+    :goto_0
+    if-eqz v3, :cond_8
 
-    goto :goto_0
+    :try_start_2
+    invoke-static {}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->E()[Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    sput-object v1, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:[Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a([Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+
+    move v1, v2
+
+    :goto_1
+    array-length v2, v0
+
+    if-ge v1, v2, :cond_4
+
+    aget-object v2, v0, v1
+
+    const-string v4, ".m3u"
+
+    invoke-virtual {v2, v4}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    :try_start_3
+    aget-object v2, v0, v1
+
+    invoke-static {v2}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1
+
+    invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-interface {v3, v2}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
 
     :cond_1
-    :try_start_2
-    aget-object v3, v0, v1
-
-    invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :goto_2
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
     :catch_0
     move-exception v0
 
+    :try_start_4
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
     :cond_2
-    :goto_2
+    :goto_3
     return-void
 
     :cond_3
-    invoke-interface {v2}, Ljava/util/List;->size()I
+    aget-object v2, v0, v1
 
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    const v0, 0x7f0b0417
-
-    const/4 v1, 0x1
-
-    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
     :cond_4
+    invoke-interface {v3}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    const v0, 0x7f080183
+
+    const/4 v1, 0x1
+
+    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
+
+    goto :goto_3
+
+    :cond_5
     const/4 v0, 0x0
 
     new-array v0, v0, [Ljava/lang/String;
 
-    invoke-interface {v2, v0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-interface {v3, v0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [Ljava/lang/String;
 
-    :cond_5
-    :goto_3
+    :cond_6
+    :goto_4
     if-nez v0, :cond_2
 
     invoke-virtual {p1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
@@ -5139,7 +6190,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_9
 
     const-string v1, "file://"
 
@@ -5151,92 +6202,92 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->L:Ljava/lang/String;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->B:Ljava/lang/String;
 
-    :cond_6
-    :goto_4
+    :cond_7
+    :goto_5
     new-instance v1, Ljava/util/LinkedList;
 
     invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I:Ljava/util/List;
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->y:Ljava/util/List;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I:Ljava/util/List;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->y:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I:Ljava/util/List;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->y:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->V()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag()V
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->s()V
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->x()V
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_7
+    :cond_8
     invoke-virtual {p1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
-    move-result-object v1
+    move-result-object v0
 
-    if-eqz v1, :cond_5
+    if-eqz v0, :cond_a
 
     invoke-virtual {p1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-static {v1}, Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
     const-string v2, ".m3u"
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    invoke-virtual {v0, v2}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_5
+    if-eqz v0, :cond_a
 
-    :try_start_3
+    :try_start_5
     invoke-virtual {p1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Landroid/net/Uri;)[Ljava/lang/String;
-    :try_end_3
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
+    :try_end_5
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
 
     move-result-object v0
 
-    goto :goto_3
+    goto :goto_4
 
-    :catch_1
+    :catch_2
     move-exception v0
 
-    const v0, 0x7f0b0417
+    const v0, 0x7f080183
 
     const/4 v1, 0x1
 
-    :try_start_4
-    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    :try_start_6
+    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
-    goto :goto_2
+    goto/16 :goto_3
 
-    :cond_8
+    :cond_9
     const-string v1, "http://127.0.0.1:59777/"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_6
+    if-eqz v2, :cond_7
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -5261,61 +6312,393 @@
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-    :try_end_4
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
+    :try_end_6
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_1
 
     move-result-object v0
 
-    goto :goto_4
+    goto :goto_5
 
-    :catch_2
-    move-exception v3
+    :catch_3
+    move-exception v2
 
-    goto/16 :goto_1
+    goto/16 :goto_2
+
+    :cond_a
+    move-object v0, v1
+
+    goto/16 :goto_4
+.end method
+
+.method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    .locals 2
+
+    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
+
+    move-result v0
+
+    const v1, 0x102002c
+
+    if-ne v0, v1, :cond_1
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->finish()V
+
+    :cond_0
+    :goto_0
+    invoke-super {p0, p1}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+
+    move-result v0
+
+    return v0
+
+    :cond_1
+    const v1, 0x7f0e01e2
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->G:Lcom/estrongs/android/pop/app/ag;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ag;->p()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    iget v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->L:I
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_2
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->j()V
+
+    goto :goto_0
+
+    :cond_2
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->M()V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->a()Z
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I:Lcom/estrongs/android/pop/app/x;
+
+    if-nez v0, :cond_4
+
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->N()V
+
+    :cond_4
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I:Lcom/estrongs/android/pop/app/x;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/x;->show()V
+
+    goto :goto_0
 .end method
 
 .method protected onPause()V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->e()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->f()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->f()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/gd;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/gq;->a(Z)V
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aa:Lcom/estrongs/android/util/a;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aa:Lcom/estrongs/android/util/a;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/util/a;->c()Z
-
-    :cond_1
-    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onPause()V
+    invoke-super {p0}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;->onPause()V
 
     return-void
+.end method
+
+.method public onPrepareOptionsMenu(Landroid/view/Menu;)Z
+    .locals 10
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    const v2, 0x7f0e06be
+
+    invoke-interface {p1, v2}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v3
+
+    if-nez v3, :cond_0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    invoke-interface {v3}, Landroid/view/MenuItem;->getSubMenu()Landroid/view/SubMenu;
+
+    move-result-object v2
+
+    if-nez v2, :cond_1
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->B()Lcom/estrongs/android/pop/app/c/i;
+
+    move-result-object v2
+
+    if-nez v2, :cond_2
+
+    invoke-interface {v3, v0}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_2
+    new-instance v4, Ljava/util/ArrayList;
+
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->m()I
+
+    move-result v5
+
+    if-nez v5, :cond_9
+
+    iget-object v5, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->N:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v()Lcom/estrongs/android/pop/app/c/j;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Lcom/estrongs/android/pop/app/c/j;->f()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    iget-object v5, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->O:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_3
+    iget-object v2, v2, Lcom/estrongs/android/pop/app/c/i;->b:Ljava/lang/String;
+
+    if-eqz v2, :cond_4
+
+    invoke-static {v2}, Lcom/estrongs/android/util/ap;->bl(Ljava/lang/String;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_4
+
+    invoke-static {v2}, Lcom/estrongs/android/util/ap;->bH(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    :cond_4
+    if-eqz v2, :cond_f
+
+    const-string v5, "http://"
+
+    invoke-virtual {v2, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_f
+
+    const-string v5, "http://127.0.0.1:"
+
+    invoke-virtual {v2, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_f
+
+    :goto_1
+    if-eqz v0, :cond_5
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->P:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_5
+    invoke-static {v2}, Lcom/estrongs/android/util/ap;->bl(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Q:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_6
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->R:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    invoke-static {}, Lcom/estrongs/android/pop/app/ag;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Y:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_7
+    invoke-static {v2}, Lcom/estrongs/android/util/ap;->aL(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    invoke-static {p0}, Lcom/estrongs/android/ui/pcs/am;->a(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_8
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->S:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_8
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->T:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Z:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :goto_2
+    new-instance v0, Lcom/estrongs/android/pop/app/fn;
+
+    invoke-direct {v0, p0, v4}, Lcom/estrongs/android/pop/app/fn;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;Ljava/util/List;)V
+
+    invoke-interface {v3, v0}, Landroid/view/MenuItem;->setOnMenuItemClickListener(Landroid/view/MenuItem$OnMenuItemClickListener;)Landroid/view/MenuItem;
+
+    move v0, v1
+
+    goto/16 :goto_0
+
+    :cond_9
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v()Lcom/estrongs/android/pop/app/c/j;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/estrongs/android/pop/app/c/m;->a()Lcom/estrongs/android/pop/app/c/m;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/c/m;->e()Lcom/estrongs/android/pop/app/c/j;
+
+    move-result-object v2
+
+    if-ne v0, v2, :cond_a
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->X:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_a
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v()Lcom/estrongs/android/pop/app/c/j;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/j;->f()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_b
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v()Lcom/estrongs/android/pop/app/c/j;
+
+    move-result-object v0
+
+    iget-wide v6, v0, Lcom/estrongs/android/pop/app/c/j;->a:J
+
+    const-wide/16 v8, 0x0
+
+    cmp-long v0, v6, v8
+
+    if-gez v0, :cond_e
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->U:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_b
+    :goto_3
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v()Lcom/estrongs/android/pop/app/c/j;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/j;->f()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_c
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->W:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_c
+    invoke-static {}, Lcom/estrongs/android/pop/app/ag;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_d
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Y:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_d
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->Z:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_2
+
+    :cond_e
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->V:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_3
+
+    :cond_f
+    move v0, v1
+
+    goto/16 :goto_1
 .end method
 
 .method protected onResume()V
@@ -5325,111 +6708,100 @@
 
     const/4 v0, 0x0
 
-    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onResume()V
+    invoke-super {p0}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;->onResume()V
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aa:Lcom/estrongs/android/util/a;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_6
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aa:Lcom/estrongs/android/util/a;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/util/a;->b()Z
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/app/gq;->a(Z)V
+
+    iget-boolean v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->d:Z
+
+    if-nez v1, :cond_3
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->e()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->l()I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/gq;->f()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/4 v1, 0x2
+
+    invoke-direct {p0, v1, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->g(II)V
 
     :cond_0
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    :goto_0
+    return-void
 
-    if-eqz v1, :cond_7
+    :cond_1
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/app/gd;->a(Z)V
-
-    iget-boolean v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->e:Z
-
-    if-nez v1, :cond_4
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->e()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->l()I
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/gd;->f()Z
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/gq;->d()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    const/4 v1, 0x2
-
-    invoke-direct {p0, v1, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h(II)V
-
-    :cond_1
-    :goto_0
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->N()V
-
-    return-void
-
-    :cond_2
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/gd;->d()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
     const/4 v1, 0x3
 
-    invoke-direct {p0, v1, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h(II)V
+    invoke-direct {p0, v1, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->g(II)V
+
+    goto :goto_0
+
+    :cond_2
+    invoke-direct {p0, v2, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->g(II)V
 
     goto :goto_0
 
     :cond_3
-    invoke-direct {p0, v2, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h(II)V
-
-    goto :goto_0
-
-    :cond_4
-    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->e:Z
+    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->d:Z
 
     :try_start_0
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/gd;->q()V
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/gq;->q()V
 
-    invoke-static {}, Lcom/estrongs/android/pop/app/a/ao;->a()Lcom/estrongs/android/pop/app/a/ao;
+    invoke-static {}, Lcom/estrongs/android/pop/app/c/m;->a()Lcom/estrongs/android/pop/app/c/m;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/a/ao;->b()Lcom/estrongs/android/pop/app/a/al;
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/c/m;->b()Lcom/estrongs/android/pop/app/c/j;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/a/al;->d()V
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/c/j;->d()V
 
     move v1, v0
 
     :goto_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I:Ljava/util/List;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->y:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-ge v1, v0, :cond_5
+    if-ge v1, v0, :cond_4
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->I:Ljava/util/List;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->y:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -5437,7 +6809,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-virtual {v2, v0}, Lcom/estrongs/android/pop/app/a/al;->b(Ljava/lang/String;)V
+    invoke-virtual {v2, v0}, Lcom/estrongs/android/pop/app/c/j;->b(Ljava/lang/String;)V
 
     add-int/lit8 v0, v1, 0x1
 
@@ -5445,14 +6817,14 @@
 
     goto :goto_1
 
-    :cond_5
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    :cond_4
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/pop/app/gd;->a(Lcom/estrongs/android/pop/app/a/al;)Z
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/pop/app/gq;->a(Lcom/estrongs/android/pop/app/c/j;)Z
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->i()I
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->i()I
 
     move-result v0
 
@@ -5460,13 +6832,13 @@
 
     invoke-direct {p0, v0, v1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(IZ)V
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->R()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ac()V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->J:Ljava/lang/String;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->z:Ljava/lang/String;
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_5
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->J:Ljava/lang/String;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->z:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Ljava/lang/CharSequence;)V
 
@@ -5477,8 +6849,8 @@
 
     goto :goto_0
 
-    :cond_6
-    const v0, 0x7f0b026d
+    :cond_5
+    const v0, 0x7f080480
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getText(I)Ljava/lang/CharSequence;
 
@@ -5490,8 +6862,8 @@
 
     goto :goto_0
 
-    :cond_7
-    const-string v0, "Market"
+    :cond_6
+    sget-object v0, Lcom/estrongs/android/pop/view/a;->a:Ljava/lang/String;
 
     const-string v1, "Spreadtrum"
 
@@ -5499,9 +6871,9 @@
 
     move-result v0
 
-    if-nez v0, :cond_8
+    if-nez v0, :cond_7
 
-    const-string v0, "Market"
+    sget-object v0, Lcom/estrongs/android/pop/view/a;->a:Ljava/lang/String;
 
     const-string v1, "Huawei"
 
@@ -5509,31 +6881,49 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
-    :cond_8
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->s()V
+    :cond_7
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->x()V
 
     goto :goto_0
 .end method
 
 .method protected onStart()V
-    .locals 2
+    .locals 4
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->S()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ad()V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->g:Lcom/estrongs/android/pop/app/gc;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->f:Lcom/estrongs/android/pop/app/gp;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/gd;->a(Lcom/estrongs/android/pop/app/gc;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/gq;->a(Lcom/estrongs/android/pop/app/gp;)V
 
     :cond_0
-    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onStart()V
+    invoke-super {p0}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;->onStart()V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->j:Landroid/support/v7/app/ActionBar;
+
+    invoke-static {p0}, Lcom/estrongs/android/ui/theme/at;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->g()I
+
+    move-result v2
+
+    const v3, 0x7f0d0159
+
+    invoke-virtual {v1, v2, v3}, Lcom/estrongs/android/ui/theme/at;->b(II)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/support/v7/app/ActionBar;->setHomeAsUpIndicator(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
@@ -5541,36 +6931,36 @@
 .method protected onStop()V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->f()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->f()Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->O:Z
+    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->E:Z
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->e()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->O:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->E:Z
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->o()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->o()V
 
     :cond_0
-    const-string v0, "Market"
+    sget-object v0, Lcom/estrongs/android/pop/view/a;->a:Ljava/lang/String;
 
     const-string v1, "Spreadtrum"
 
@@ -5580,7 +6970,7 @@
 
     if-nez v0, :cond_1
 
-    const-string v0, "Market"
+    sget-object v0, Lcom/estrongs/android/pop/view/a;->a:Ljava/lang/String;
 
     const-string v1, "Huawei"
 
@@ -5591,41 +6981,209 @@
     if-eqz v0, :cond_2
 
     :cond_1
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->V()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag()V
 
     :cond_2
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->T()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ae()V
 
-    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onStop()V
+    invoke-super {p0}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;->onStop()V
 
     return-void
 .end method
 
 .method public p()V
+    .locals 4
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    const-wide/16 v2, 0x0
+
+    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/pop/app/gq;->a(J)V
+
+    return-void
+.end method
+
+.method public q()V
+    .locals 2
+
+    iget v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->az:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    rem-int/lit8 v0, v0, 0x2
+
+    iput v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->az:I
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    iget v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->az:I
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/gq;->b(I)V
+
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ac()V
+
+    return-void
+.end method
+
+.method public r()V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->h()Lcom/estrongs/android/pop/app/c/j;
+
+    move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->q()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->e()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->f()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    :cond_2
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->f()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->p()V
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->x()Z
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->w()V
+
+    goto :goto_0
+.end method
+
+.method public s()V
+    .locals 2
+
+    iget v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aA:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    rem-int/lit8 v0, v0, 0x3
+
+    iput v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aA:I
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    iget v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aA:I
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/gq;->c(I)V
+
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ac()V
+
+    return-void
+.end method
+
+.method public t()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->j()I
+
+    move-result v1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->f()Z
+
+    move-result v0
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->d()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/gq;->q()V
+
+    :cond_0
+    if-nez v0, :cond_2
+
+    const/4 v0, 0x1
+
+    :goto_0
+    invoke-direct {p0, v1, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(IZ)V
+
+    :cond_1
+    return-void
+
+    :cond_2
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public u()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->q()V
 
     :cond_0
     return-void
 .end method
 
-.method public q()Lcom/estrongs/android/pop/app/a/al;
+.method public v()Lcom/estrongs/android/pop/app/c/j;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag:Lcom/estrongs/android/ui/view/ac;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aG:Lcom/estrongs/android/ui/view/ac;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag:Lcom/estrongs/android/ui/view/ac;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aG:Lcom/estrongs/android/ui/view/ac;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/ac;->a()Lcom/estrongs/android/pop/app/a/al;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/ac;->a()Lcom/estrongs/android/pop/app/c/j;
 
     move-result-object v0
 
@@ -5638,58 +7196,61 @@
     goto :goto_0
 .end method
 
-.method public r()V
+.method public w()V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag:Lcom/estrongs/android/ui/view/ac;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aG:Lcom/estrongs/android/ui/view/ac;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/ac;->a()Lcom/estrongs/android/pop/app/a/al;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/ac;->a()Lcom/estrongs/android/pop/app/c/j;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lcom/estrongs/android/pop/app/a/ao;->a()Lcom/estrongs/android/pop/app/a/ao;
+    invoke-static {}, Lcom/estrongs/android/pop/app/c/m;->a()Lcom/estrongs/android/pop/app/c/m;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/app/a/ao;->b(Lcom/estrongs/android/pop/app/a/al;)V
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/app/c/m;->b(Lcom/estrongs/android/pop/app/c/j;)V
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/gd;->h()Lcom/estrongs/android/pop/app/a/al;
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/gq;->h()Lcom/estrongs/android/pop/app/c/j;
 
     move-result-object v1
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w:Lcom/estrongs/android/pop/app/gq;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->q()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gq;->q()V
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->x()V
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->C()V
 
     :cond_0
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Z)V
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h()V
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->l()V
 
     :cond_1
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->supportInvalidateOptionsMenu()V
+
+    :cond_2
     return-void
 .end method
 
-.method s()V
+.method x()V
     .locals 3
 
     const/4 v2, 0x1
 
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->H:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->x:Z
 
     if-nez v0, :cond_0
 
@@ -5699,24 +7260,24 @@
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aj:Landroid/content/ServiceConnection;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aJ:Landroid/content/ServiceConnection;
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
-    iput-boolean v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->H:Z
+    iput-boolean v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->x:Z
 
     :cond_0
     return-void
 .end method
 
-.method public t()Landroid/graphics/Rect;
+.method public y()Landroid/graphics/Rect;
     .locals 7
 
     const/4 v6, 0x1
 
     const/4 v4, 0x0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ak:Landroid/graphics/Rect;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aK:Landroid/graphics/Rect;
 
     if-nez v0, :cond_0
 
@@ -5724,13 +7285,13 @@
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ak:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aK:Landroid/graphics/Rect;
 
     const/4 v0, 0x2
 
     new-array v0, v0, [I
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->j:Lcom/estrongs/android/widget/RealViewSwitcher;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->i:Lcom/estrongs/android/widget/RealViewSwitcher;
 
     invoke-virtual {v1, v0}, Lcom/estrongs/android/widget/RealViewSwitcher;->getLocationInWindow([I)V
 
@@ -5742,7 +7303,7 @@
 
     aget v4, v0, v4
 
-    iget-object v5, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->j:Lcom/estrongs/android/widget/RealViewSwitcher;
+    iget-object v5, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->i:Lcom/estrongs/android/widget/RealViewSwitcher;
 
     invoke-virtual {v5}, Lcom/estrongs/android/widget/RealViewSwitcher;->getMeasuredWidth()I
 
@@ -5752,7 +7313,7 @@
 
     aget v0, v0, v6
 
-    iget-object v5, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->j:Lcom/estrongs/android/widget/RealViewSwitcher;
+    iget-object v5, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->i:Lcom/estrongs/android/widget/RealViewSwitcher;
 
     invoke-virtual {v5}, Lcom/estrongs/android/widget/RealViewSwitcher;->getMeasuredHeight()I
 
@@ -5762,171 +7323,22 @@
 
     invoke-direct {v1, v2, v3, v4, v0}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ak:Landroid/graphics/Rect;
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aK:Landroid/graphics/Rect;
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ak:Landroid/graphics/Rect;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aK:Landroid/graphics/Rect;
 
     return-object v0
 .end method
 
-.method public u()V
+.method public z()V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag:Lcom/estrongs/android/ui/view/ac;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->aG:Lcom/estrongs/android/ui/view/ac;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/ac;->a(Z)V
 
     return-void
-.end method
-
-.method public v()Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcom/estrongs/android/pop/app/a/ak;",
-            ">;"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag:Lcom/estrongs/android/ui/view/ac;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/ac;->d()Ljava/util/List;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public w()Lcom/estrongs/android/pop/app/a/ak;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->r()Lcom/estrongs/android/pop/app/a/ak;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public x()V
-    .locals 4
-
-    const/4 v3, 0x0
-
-    invoke-static {}, Lcom/estrongs/android/pop/app/a/ao;->a()Lcom/estrongs/android/pop/app/a/ao;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/ao;->e()Lcom/estrongs/android/pop/app/a/al;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lcom/estrongs/android/pop/app/gd;->a(Lcom/estrongs/android/pop/app/a/al;)Z
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag:Lcom/estrongs/android/ui/view/ac;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/ao;->e()Lcom/estrongs/android/pop/app/a/al;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/view/ac;->a(Lcom/estrongs/android/pop/app/a/al;)V
-
-    invoke-direct {p0, v3, v3}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(IZ)V
-
-    return-void
-.end method
-
-.method public y()V
-    .locals 4
-
-    const/4 v1, 0x0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->h()Lcom/estrongs/android/pop/app/a/al;
-
-    move-result-object v0
-
-    invoke-static {}, Lcom/estrongs/android/pop/app/a/ao;->a()Lcom/estrongs/android/pop/app/a/ao;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/a/ao;->e()Lcom/estrongs/android/pop/app/a/al;
-
-    move-result-object v2
-
-    if-ne v0, v2, :cond_1
-
-    invoke-static {}, Lcom/estrongs/android/pop/app/a/ao;->a()Lcom/estrongs/android/pop/app/a/ao;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/ao;->f()V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/gd;->f()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->F:Lcom/estrongs/android/pop/app/gd;
-
-    invoke-static {}, Lcom/estrongs/android/pop/app/a/ao;->a()Lcom/estrongs/android/pop/app/a/ao;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcom/estrongs/android/pop/app/a/ao;->e()Lcom/estrongs/android/pop/app/a/al;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Lcom/estrongs/android/pop/app/gd;->a(Lcom/estrongs/android/pop/app/a/al;)Z
-
-    invoke-direct {p0, v1, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(IZ)V
-
-    :goto_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->ag:Lcom/estrongs/android/ui/view/ac;
-
-    invoke-static {}, Lcom/estrongs/android/pop/app/a/ao;->a()Lcom/estrongs/android/pop/app/a/ao;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/a/ao;->e()Lcom/estrongs/android/pop/app/a/al;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/view/ac;->a(Lcom/estrongs/android/pop/app/a/al;)V
-
-    invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Z)V
-
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h()V
-
-    return-void
-
-    :cond_0
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-static {}, Lcom/estrongs/android/pop/app/a/ao;->a()Lcom/estrongs/android/pop/app/a/ao;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/ao;->f()V
-
-    goto :goto_1
 .end method

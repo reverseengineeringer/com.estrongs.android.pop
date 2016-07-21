@@ -275,7 +275,7 @@
 
     move-result v0
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/CropImageView;->f()F
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/CropImageView;->getScale()F
 
     move-result v1
 
@@ -287,7 +287,7 @@
 
     move-result v0
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/CropImageView;->f()F
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/CropImageView;->getScale()F
 
     move-result v1
 
@@ -838,7 +838,7 @@
     goto/16 :goto_2
 
     :pswitch_4
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/CropImageView;->f()F
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/CropImageView;->getScale()F
 
     move-result v0
 

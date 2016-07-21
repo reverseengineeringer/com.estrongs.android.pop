@@ -1,130 +1,110 @@
 package com.estrongs.android.view;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
-import android.content.res.Resources;
-import android.view.LayoutInflater;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView.LayoutParams;
+import android.support.v7.widget.RecyclerView.Recycler;
+import android.support.v7.widget.RecyclerView.State;
 import android.view.View;
+import android.view.View.MeasureSpec;
 import android.view.ViewGroup;
-import android.widget.TextView;
-import com.estrongs.android.pop.esclasses.g;
-import com.estrongs.android.ui.view.ag;
 
-public abstract class ea
+public class ea
+  extends GridLayoutManager
 {
-  protected Activity ad;
-  protected Context ae;
-  protected View af;
-  protected LayoutInflater ag;
-  protected eb ah;
+  private int[] a = new int[2];
   
-  public ea(Activity paramActivity)
+  public ea(Context paramContext, int paramInt)
   {
-    this(paramActivity, null, true);
+    super(paramContext, paramInt);
   }
   
-  public ea(Activity paramActivity, ViewGroup paramViewGroup, boolean paramBoolean)
+  private void a(RecyclerView.Recycler paramRecycler, int paramInt1, int paramInt2, int paramInt3, int[] paramArrayOfInt)
   {
-    ad = paramActivity;
-    a(paramViewGroup, paramBoolean);
-  }
-  
-  public ea(Context paramContext)
-  {
-    this(paramContext, null, true);
-  }
-  
-  public ea(Context paramContext, ViewGroup paramViewGroup, boolean paramBoolean)
-  {
-    ae = paramContext;
-    a(paramViewGroup, paramBoolean);
-  }
-  
-  private void a(ViewGroup paramViewGroup, boolean paramBoolean)
-  {
-    ag = g.a(ar());
-    if (paramBoolean) {
-      af = ag.inflate(a(), paramViewGroup);
-    }
-    do
-    {
-      return;
-      af = paramViewGroup.findViewById(a());
-    } while (af != null);
-    af = paramViewGroup;
-  }
-  
-  protected abstract int a();
-  
-  public void a(int paramInt1, int paramInt2)
-  {
-    TextView localTextView = n(paramInt1);
-    if (localTextView != null) {
-      localTextView.setText(l(paramInt2));
-    }
-  }
-  
-  public void a(Intent paramIntent)
-  {
+    if (paramInt1 < getItemCount()) {}
     try
     {
-      ar().startActivity(paramIntent);
+      View localView = paramRecycler.getViewForPosition(0);
+      if (localView != null)
+      {
+        RecyclerView.LayoutParams localLayoutParams = (RecyclerView.LayoutParams)localView.getLayoutParams();
+        localView.measure(ViewGroup.getChildMeasureSpec(paramInt2, getPaddingLeft() + getPaddingRight(), width), ViewGroup.getChildMeasureSpec(paramInt3, getPaddingTop() + getPaddingBottom(), height));
+        paramArrayOfInt[0] = (localView.getMeasuredWidth() + leftMargin + rightMargin);
+        paramInt1 = localView.getMeasuredHeight();
+        paramInt2 = bottomMargin;
+        paramArrayOfInt[1] = (topMargin + (paramInt1 + paramInt2));
+        paramRecycler.recycleView(localView);
+      }
       return;
     }
-    catch (Exception localException)
+    catch (Exception paramRecycler)
     {
-      ag.a(ar(), "Failed to start the activity: " + paramIntent, 1);
+      paramRecycler.printStackTrace();
     }
   }
   
-  public void a(eb parameb)
+  public void onMeasure(RecyclerView.Recycler paramRecycler, RecyclerView.State paramState, int paramInt1, int paramInt2)
   {
-    ah = parameb;
-  }
-  
-  public void a(int[] paramArrayOfInt1, int[] paramArrayOfInt2)
-  {
-    int j = paramArrayOfInt1.length;
+    int n = View.MeasureSpec.getMode(paramInt1);
+    int m = View.MeasureSpec.getMode(paramInt2);
+    int k = View.MeasureSpec.getSize(paramInt1);
+    int j = View.MeasureSpec.getSize(paramInt2);
+    paramInt2 = 0;
+    paramInt1 = 0;
+    int i1 = getItemCount();
+    int i2 = getSpanCount();
     int i = 0;
-    while (i < j)
+    if (i < i1)
     {
-      a(paramArrayOfInt1[i], paramArrayOfInt2[i]);
-      i += 1;
+      a(paramRecycler, i, View.MeasureSpec.makeMeasureSpec(i, 0), View.MeasureSpec.makeMeasureSpec(i, 0), a);
+      if (getOrientation() == 0)
+      {
+        if (i % i2 != 0) {
+          break label226;
+        }
+        paramInt2 += a[0];
+      }
     }
-  }
-  
-  public View aq()
-  {
-    return af;
-  }
-  
-  public Context ar()
-  {
-    if (ad != null) {
-      return ad;
+    label226:
+    for (;;)
+    {
+      if (i == 0) {
+        paramInt1 = a[1];
+      }
+      for (;;)
+      {
+        i += 1;
+        break;
+        if (i % i2 == 0) {
+          paramInt1 = a[1] + paramInt1;
+        }
+        for (;;)
+        {
+          if (i == 0)
+          {
+            paramInt2 = a[0];
+            break;
+            switch (n)
+            {
+            default: 
+              switch (m)
+              {
+              }
+              break;
+            }
+            for (;;)
+            {
+              setMeasuredDimension(paramInt2, paramInt1);
+              return;
+              paramInt2 = k;
+              break;
+              paramInt1 = j;
+            }
+          }
+          break;
+        }
+      }
     }
-    return ae;
-  }
-  
-  protected View k(int paramInt)
-  {
-    return af.findViewById(paramInt);
-  }
-  
-  protected String l(int paramInt)
-  {
-    return ar().getResources().getString(paramInt);
-  }
-  
-  protected String m(int paramInt)
-  {
-    return ar().getText(paramInt).toString();
-  }
-  
-  protected TextView n(int paramInt)
-  {
-    return (TextView)k(paramInt);
   }
 }
 

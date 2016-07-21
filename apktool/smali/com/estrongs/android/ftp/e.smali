@@ -73,9 +73,9 @@
 
     if-eqz v2, :cond_3
 
-    const v0, 0x7f0b013d
+    const v0, 0x7f080540
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/e;->b(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/i;->b(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -83,7 +83,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ftp/e;->a:Lcom/estrongs/android/ftp/ESFtpService;
 
-    const v3, 0x7f0b013d
+    const v3, 0x7f080540
 
     invoke-virtual {v0, v3}, Lcom/estrongs/android/ftp/ESFtpService;->getText(I)Ljava/lang/CharSequence;
 
@@ -188,7 +188,7 @@
 
     iget-object v3, p0, Lcom/estrongs/android/ftp/e;->a:Lcom/estrongs/android/ftp/ESFtpService;
 
-    const v4, 0x7f0b0149
+    const v4, 0x7f080479
 
     invoke-static {v3, v4}, Lcom/estrongs/android/ftp/ESFtpService;->b(Lcom/estrongs/android/ftp/ESFtpService;I)Ljava/lang/String;
 
@@ -217,7 +217,7 @@
 
     iget-object v3, p0, Lcom/estrongs/android/ftp/e;->a:Lcom/estrongs/android/ftp/ESFtpService;
 
-    const v4, 0x7f0b014a
+    const v4, 0x7f08047a
 
     invoke-static {v3, v4}, Lcom/estrongs/android/ftp/ESFtpService;->b(Lcom/estrongs/android/ftp/ESFtpService;I)Ljava/lang/String;
 
@@ -314,7 +314,7 @@
 
     iget-object v4, p0, Lcom/estrongs/android/ftp/e;->a:Lcom/estrongs/android/ftp/ESFtpService;
 
-    const v5, 0x7f0b0082
+    const v5, 0x7f0805b3
 
     invoke-static {v4, v5}, Lcom/estrongs/android/ftp/ESFtpService;->b(Lcom/estrongs/android/ftp/ESFtpService;I)Ljava/lang/String;
 
@@ -365,7 +365,7 @@
 
     iget-object v3, p0, Lcom/estrongs/android/ftp/e;->a:Lcom/estrongs/android/ftp/ESFtpService;
 
-    const v5, 0x7f0b014b
+    const v5, 0x7f08047b
 
     invoke-static {v3, v5}, Lcom/estrongs/android/ftp/ESFtpService;->b(Lcom/estrongs/android/ftp/ESFtpService;I)Ljava/lang/String;
 
@@ -416,7 +416,7 @@
 
     iget-object v5, p0, Lcom/estrongs/android/ftp/e;->a:Lcom/estrongs/android/ftp/ESFtpService;
 
-    const v6, 0x7f0b014d
+    const v6, 0x7f080478
 
     invoke-static {v5, v6}, Lcom/estrongs/android/ftp/ESFtpService;->b(Lcom/estrongs/android/ftp/ESFtpService;I)Ljava/lang/String;
 
@@ -444,7 +444,7 @@
 
     iget-object v3, p0, Lcom/estrongs/android/ftp/e;->a:Lcom/estrongs/android/ftp/ESFtpService;
 
-    const v5, 0x7f0b014c
+    const v5, 0x7f08047c
 
     invoke-static {v3, v5}, Lcom/estrongs/android/ftp/ESFtpService;->b(Lcom/estrongs/android/ftp/ESFtpService;I)Ljava/lang/String;
 

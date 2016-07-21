@@ -2,31 +2,35 @@ package com.estrongs.android.pop.app;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup.LayoutParams;
 import android.webkit.WebView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
-import android.widget.TextView;
-import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.pop.utils.cc;
+import com.estrongs.android.pop.esclasses.k;
 import com.estrongs.android.pop.view.utils.n;
-import com.estrongs.android.ui.theme.al;
+import com.estrongs.android.ui.base.HomeAsBackActivity;
+import com.estrongs.android.ui.theme.at;
 import com.estrongs.android.ui.view.RecommendListView;
+import com.estrongs.android.ui.view.ba;
 
 public class RecommAcitivity
-  extends ESActivity
+  extends HomeAsBackActivity
 {
   private ProgressBar a;
   private RecommendListView b;
-  private al c;
-  private View d;
-  private boolean e = false;
-  private WebView f;
+  private at c;
+  private boolean d = false;
+  private WebView e;
+  private View f;
+  private ba g;
+  private LinearLayout h;
   
-  private boolean a()
+  private boolean d()
   {
     if ((!n.b().h()) && (n.b().d() == null)) {}
     while (n.b().a(this) / 1000L > 60L) {
@@ -35,81 +39,97 @@ public class RecommAcitivity
     return false;
   }
   
+  private void e()
+  {
+    n.b().f();
+    g.b();
+  }
+  
   public void a(Intent paramIntent)
   {
     super.startActivity(paramIntent);
   }
   
+  public void onConfigurationChanged(Configuration paramConfiguration)
+  {
+    super.onConfigurationChanged(paramConfiguration);
+    try
+    {
+      if (g != null) {
+        g.c();
+      }
+      return;
+    }
+    catch (Exception paramConfiguration)
+    {
+      paramConfiguration.printStackTrace();
+    }
+  }
+  
   protected void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    requestWindowFeature(1);
-    setContentView(2130903233);
-    c = al.a(this);
-    int i = getIntent().getIntExtra("com.estrongs.intent.extra.TITLE", -1);
-    if (i != -1) {
-      ((TextView)findViewById(2131361825)).setText(i);
-    }
-    d = findViewById(2131362670);
-    findViewById(2131362671).setOnClickListener(new kg(this));
-    a = ((ProgressBar)findViewById(2131362673));
-    findViewById(2131362674).setBackgroundDrawable(c.h());
-    b = ((RecommendListView)findViewById(2131362675));
-    paramBundle = n.b().d();
-    b.a(paramBundle);
-    if (a())
+    setTitle(2131232249);
+    setContentView(2130903398);
+    c = at.a(this);
+    a = ((ProgressBar)findViewById(2131625439));
+    b = ((RecommendListView)findViewById(2131625438));
+    try
     {
-      b.a(a);
-      a.setVisibility(0);
-      n.b().c();
-    }
-    for (;;)
-    {
-      b.setOnItemClickListener(new kh(this, i));
-      return;
-      if (n.b().h())
+      paramBundle = k.a(this).inflate(2130903399, null);
+      h = ((LinearLayout)paramBundle.findViewById(2131625442));
+      g = new ba(this);
+      h.addView(g.a(), new ViewGroup.LayoutParams(-1, -2));
+      b.setListHeaderLayout(paramBundle);
+      paramBundle = n.b().d();
+      b.a(paramBundle);
+      f = findViewById(2131625440);
+      b.setListFooter(f);
+      if (d())
       {
-        b.a(a);
+        b.setRefreshProgressBar(a);
         a.setVisibility(0);
+        n.b().c();
+        b.setOnItemClickListener(new kv(this));
+        return;
+      }
+    }
+    catch (Throwable paramBundle)
+    {
+      for (;;)
+      {
+        paramBundle.printStackTrace();
+        continue;
+        if (n.b().h())
+        {
+          b.setRefreshProgressBar(a);
+          a.setVisibility(0);
+        }
       }
     }
   }
   
-  public boolean onCreateOptionsMenu(Menu paramMenu)
-  {
-    super.onCreateOptionsMenu(paramMenu);
-    if (cc.a()) {
-      paramMenu.add(0, 2, 0, 2131428621);
-    }
-    return true;
-  }
-  
   public void onDestroy()
   {
-    n.b().f();
     super.onDestroy();
   }
   
   public boolean onKeyDown(int paramInt, KeyEvent paramKeyEvent)
   {
-    if ((e) && (paramInt == 4) && (f.canGoBack()))
+    if ((d) && (paramInt == 4) && (e.canGoBack()))
     {
-      f.goBack();
+      e.goBack();
       return true;
     }
     return super.onKeyDown(paramInt, paramKeyEvent);
   }
   
-  public boolean onOptionsItemSelected(MenuItem paramMenuItem)
+  protected void onPause()
   {
-    switch (paramMenuItem.getItemId())
-    {
+    if (isFinishing()) {
+      e();
     }
-    for (;;)
-    {
-      return super.onOptionsItemSelected(paramMenuItem);
-      finish();
-    }
+    super.onPause();
   }
   
   protected void onResume()

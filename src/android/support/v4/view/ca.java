@@ -1,19 +1,55 @@
 package android.support.v4.view;
 
-import android.os.Parcel;
-import android.support.v4.a.c;
+import android.database.DataSetObserver;
 
-final class ca
-  implements c<ViewPager.SavedState>
+class ca
+  extends DataSetObserver
+  implements ek, el
 {
-  public ViewPager.SavedState b(Parcel paramParcel, ClassLoader paramClassLoader)
+  private int b;
+  
+  private ca(PagerTitleStrip paramPagerTitleStrip) {}
+  
+  public void a(int paramInt)
   {
-    return new ViewPager.SavedState(paramParcel, paramClassLoader);
+    b = paramInt;
   }
   
-  public ViewPager.SavedState[] b(int paramInt)
+  public void a(int paramInt1, float paramFloat, int paramInt2)
   {
-    return new ViewPager.SavedState[paramInt];
+    paramInt2 = paramInt1;
+    if (paramFloat > 0.5F) {
+      paramInt2 = paramInt1 + 1;
+    }
+    a.a(paramInt2, paramFloat, false);
+  }
+  
+  public void a(bw parambw1, bw parambw2)
+  {
+    a.a(parambw1, parambw2);
+  }
+  
+  public void b(int paramInt)
+  {
+    float f = 0.0F;
+    if (b == 0)
+    {
+      a.a(a.a.getCurrentItem(), a.a.getAdapter());
+      if (PagerTitleStrip.a(a) >= 0.0F) {
+        f = PagerTitleStrip.a(a);
+      }
+      a.a(a.a.getCurrentItem(), f, true);
+    }
+  }
+  
+  public void onChanged()
+  {
+    float f = 0.0F;
+    a.a(a.a.getCurrentItem(), a.a.getAdapter());
+    if (PagerTitleStrip.a(a) >= 0.0F) {
+      f = PagerTitleStrip.a(a);
+    }
+    a.a(a.a.getCurrentItem(), f, true);
   }
 }
 

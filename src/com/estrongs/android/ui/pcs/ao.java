@@ -1,21 +1,20 @@
 package com.estrongs.android.ui.pcs;
 
-import com.baidu.sapi2.SapiWebView;
-import com.baidu.sapi2.SapiWebView.OnBackCallback;
+import android.content.Context;
+import android.content.Intent;
+import android.view.View;
+import android.view.View.OnClickListener;
 
-class ao
-  implements SapiWebView.OnBackCallback
+final class ao
+  implements View.OnClickListener
 {
-  ao(SocialLoginActivity paramSocialLoginActivity, SapiWebView paramSapiWebView) {}
+  ao(Context paramContext) {}
   
-  public void onBack()
+  public void onClick(View paramView)
   {
-    if (a.canGoBack())
-    {
-      a.goBack();
-      return;
-    }
-    b.finish();
+    paramView = new Intent("android.settings.SETTINGS");
+    paramView.setFlags(270532608);
+    a.startActivity(paramView);
   }
 }
 

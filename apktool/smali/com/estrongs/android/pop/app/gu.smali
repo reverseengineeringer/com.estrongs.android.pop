@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/preference/Preference$OnPreferenceChangeListener;
+.implements Landroid/preference/Preference$OnPreferenceClickListener;
 
 
 # instance fields
@@ -22,64 +22,82 @@
 
 
 # virtual methods
-.method public onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
-    .locals 2
+.method public onPreferenceClick(Landroid/preference/Preference;)Z
+    .locals 4
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/gu;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+    invoke-static {}, Lcom/estrongs/android/util/an;->d()Z
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->b:Lcom/estrongs/android/pop/ad;
+    move-result v0
 
-    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    move-result-object v1
+    new-instance v0, Landroid/content/Intent;
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Ljava/lang/String;)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/ad;->c(Z)V
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/gu;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
 
-    iget-object v1, v1, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->c:Landroid/preference/EditTextPreference;
-
-    invoke-virtual {v1}, Landroid/preference/EditTextPreference;->getText()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->bF(Ljava/lang/String;)Ljava/lang/String;
+    const-class v2, Lcom/estrongs/android/pop/app/HelpActivity;
 
-    move-result-object v1
+    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    move-result-object v0
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    const-string v1, "*"
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/gu;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->startActivity(Landroid/content/Intent;)V
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {}, Lcom/estrongs/fs/a/b;->a()Lcom/estrongs/fs/a/b;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/estrongs/fs/a/b;->a(Ljava/lang/String;)V
-
+    :goto_0
     const/4 v0, 0x1
 
     return v0
+
+    :cond_0
+    new-instance v0, Lcom/estrongs/android/ui/dialog/cv;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/gu;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+
+    invoke-direct {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/gu;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+
+    const v2, 0x7f0803e2
+
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->a(Ljava/lang/CharSequence;)Lcom/estrongs/android/ui/dialog/cv;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/gu;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+
+    const v3, 0x7f08067e
+
+    invoke-virtual {v2, v3}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->b(Ljava/lang/CharSequence;)Lcom/estrongs/android/ui/dialog/cv;
+
+    move-result-object v1
+
+    const v2, 0x7f080226
+
+    new-instance v3, Lcom/estrongs/android/pop/app/gv;
+
+    invoke-direct {v3, p0}, Lcom/estrongs/android/pop/app/gv;-><init>(Lcom/estrongs/android/pop/app/gu;)V
+
+    invoke-virtual {v1, v2, v3}, Lcom/estrongs/android/ui/dialog/cv;->a(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cv;->c()Lcom/estrongs/android/ui/dialog/ci;
+
+    goto :goto_0
 .end method

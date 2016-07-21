@@ -1,19 +1,17 @@
 package com.estrongs.android.ui.navigation;
 
-import android.content.Intent;
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
 import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.dialog.gj;
 
 class j
-  implements MenuItem.OnMenuItemClickListener
+  implements gj
 {
-  j(a parama) {}
+  j(i parami) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void a(int paramInt, String paramString)
   {
-    a.b(a).startActivity(new Intent("com.estrongs.action.DEFAULT_OPEN_WINDOW_LIST"));
-    return false;
+    h.b(a.a);
+    h.c(a.a).d(paramString);
   }
 }
 

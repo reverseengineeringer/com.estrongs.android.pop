@@ -1,15 +1,39 @@
 package com.estrongs.android.pop.app;
 
-import android.widget.MediaController;
+import android.preference.EditTextPreference;
+import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
+import com.estrongs.android.pop.ad;
 
 class iy
-  extends Thread
+  implements Preference.OnPreferenceChangeListener
 {
-  iy(ix paramix) {}
+  iy(PopPreferenceActivity paramPopPreferenceActivity) {}
   
-  public void run()
+  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
   {
-    PopVideoPlayer.e(a.a).hide();
+    paramObject = paramObject.toString();
+    if (((String)paramObject).trim().equals(""))
+    {
+      a.showDialog(105);
+      return false;
+    }
+    boolean bool = PopPreferenceActivity.a(a, (String)paramObject);
+    paramPreference = (Preference)paramObject;
+    if (((String)paramObject).charAt(((String)paramObject).length() - 1) != '/') {
+      paramPreference = (String)paramObject + "/";
+    }
+    PopPreferenceActivity.b(a, paramPreference);
+    PopPreferenceActivity.a(a, 3);
+    if (bool)
+    {
+      a.e.setSummary(paramPreference);
+      a.e.setText(paramPreference);
+      a.b.u(paramPreference);
+      return true;
+    }
+    a.showDialog(105);
+    return false;
   }
 }
 

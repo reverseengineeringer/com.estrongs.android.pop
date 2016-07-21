@@ -13,7 +13,7 @@ class y
   {
     try
     {
-      ((TextView)l.e(b.a).findViewById(2131361822)).setText(l.d(b.a).getString(2131428119, new Object[] { a }));
+      ((TextView)l.e(b.a).findViewById(2131624200)).setText(l.d(b.a).getString(2131232402, new Object[] { a }));
       return;
     }
     catch (Exception localException) {}

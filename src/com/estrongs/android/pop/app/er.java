@@ -1,27 +1,35 @@
 package com.estrongs.android.pop.app;
 
-import android.content.Context;
-import com.estrongs.android.ui.view.IndicatorView;
-import com.estrongs.android.ui.view.by;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.app.c.i;
+import com.estrongs.android.pop.utils.ao;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.d;
+import java.util.ArrayList;
+import java.util.List;
 
 class er
-  extends IndicatorView
+  implements MenuItem.OnMenuItemClickListener
 {
-  er(eq parameq, Context paramContext)
-  {
-    super(paramContext);
-  }
+  er(PopAudioPlayer paramPopAudioPlayer) {}
   
-  public void a(int paramInt)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    int i = 0;
-    if ("playlist".equals(PopAudioPlayer.h(a.b).b())) {
-      i = 1;
-    }
-    if (i != paramInt)
+    String str = a.B().b;
+    paramMenuItem = new es(this);
+    ArrayList localArrayList = new ArrayList();
+    if (ap.bl(str))
     {
-      a(i, paramInt);
-      a.a(paramInt);
+      localArrayList.add(d.a().j(str));
+      ao.a(a, localArrayList, null, paramMenuItem);
+    }
+    for (;;)
+    {
+      return false;
+      str = ap.bH(str);
+      localArrayList.add(d.a().j(str));
+      ao.a(a, localArrayList, null, paramMenuItem);
     }
   }
 }

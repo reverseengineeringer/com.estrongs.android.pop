@@ -27,9 +27,9 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/dialog/g;->a:Lcom/estrongs/android/ui/dialog/f;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/f;->a:Lcom/estrongs/android/ui/dialog/dg;
+    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/f;->a:Lcom/estrongs/android/ui/dialog/di;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/dg;->a()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/di;->a()Z
 
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 

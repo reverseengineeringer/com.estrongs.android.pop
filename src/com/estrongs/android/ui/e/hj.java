@@ -1,35 +1,27 @@
 package com.estrongs.android.ui.e;
 
-import android.content.Context;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.m;
+import com.estrongs.android.pop.utils.ao;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.dialog.jw;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bc;
-import com.estrongs.fs.b.f;
-import com.estrongs.fs.h;
+import com.estrongs.android.ui.view.ak;
 import java.util.List;
 
 class hj
   implements MenuItem.OnMenuItemClickListener
 {
-  hj(cp paramcp) {}
+  hj(cr paramcr) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if ((cp.b(a).size() == 1) && (bc.L(((h)cp.b(a).get(0)).getAbsolutePath())))
+    paramMenuItem = cr.a(a);
+    if (paramMenuItem.size() == 0)
     {
-      paramMenuItem = FileExplorerActivity.J();
-      f localf = new f((h)cp.b(a).get(0));
-      localf.setDescription(String.format(a.b.getString(2131428731), new Object[] { am.bL(((h)cp.b(a).get(0)).getAbsolutePath()) }));
-      localf.setTaskDecisionListener(new m(paramMenuItem));
-      new jw(paramMenuItem, paramMenuItem.getString(2131428733), localf).show();
-      localf.execute();
+      ak.a(cr.b(a).getBaseContext(), 2131231551, 0);
+      return false;
     }
-    cp.a(a).s();
-    return true;
+    ao.a(cr.b(a), paramMenuItem);
+    return false;
   }
 }
 

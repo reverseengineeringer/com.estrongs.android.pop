@@ -1,18 +1,16 @@
 package com.estrongs.android.pop.app.editor;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class j
-  implements MenuItem.OnMenuItemClickListener
+  implements DialogInterface.OnClickListener
 {
   j(PopNoteEditor paramPopNoteEditor) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    PopNoteEditor.r(a);
-    PopNoteEditor.q(a);
-    return true;
+    paramDialogInterface.dismiss();
   }
 }
 

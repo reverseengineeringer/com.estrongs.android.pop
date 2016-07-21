@@ -2,42 +2,50 @@ package com.estrongs.android.ui.e;
 
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.app.compress.ai;
+import com.estrongs.android.j.c;
+import com.estrongs.android.pop.utils.ao;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.am;
+import com.estrongs.android.ui.view.ak;
 import com.estrongs.fs.h;
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 class dj
   implements MenuItem.OnMenuItemClickListener
 {
-  dj(cp paramcp) {}
+  dj(cr paramcr) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = cp.b(a);
-    if (paramMenuItem.size() == 0) {
-      ag.a(cp.a(a).getBaseContext(), 2131427774, 0);
-    }
-    for (;;)
+    try
     {
-      return true;
-      ArrayList localArrayList = new ArrayList();
-      paramMenuItem = paramMenuItem.iterator();
-      while (paramMenuItem.hasNext()) {
-        localArrayList.add(((h)paramMenuItem.next()).getAbsolutePath());
+      cr.b(a).at().a("Longpress_rename");
+      paramMenuItem = cr.a(a);
+      if (paramMenuItem.size() == 0)
+      {
+        ak.a(cr.b(a).getBaseContext(), 2131231551, 0);
+        return true;
       }
-      String str = cp.a(a).z();
-      paramMenuItem = str;
-      if (am.aW(str)) {
-        paramMenuItem = am.aY(str);
-      }
-      new ai(cp.a(a), paramMenuItem, localArrayList).b();
-      cp.a(a).s();
     }
+    catch (Exception paramMenuItem)
+    {
+      for (;;)
+      {
+        paramMenuItem.printStackTrace();
+      }
+      if (paramMenuItem.size() == 1)
+      {
+        paramMenuItem = (h)paramMenuItem.get(0);
+        ao.a(cr.b(a), paramMenuItem);
+        cr.b(a).B();
+        return true;
+      }
+      paramMenuItem = cr.b(a).O();
+      if (paramMenuItem != null) {
+        ao.a(cr.b(a), paramMenuItem.o());
+      }
+      cr.b(a).B();
+    }
+    return true;
   }
 }
 

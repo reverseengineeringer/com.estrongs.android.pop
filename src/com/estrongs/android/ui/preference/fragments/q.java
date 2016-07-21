@@ -1,17 +1,33 @@
 package com.estrongs.android.ui.preference.fragments;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.widget.g;
+import com.estrongs.android.util.bg;
+import com.estrongs.fs.h;
+import com.estrongs.fs.i;
+import com.estrongs.fs.w;
 
 class q
-  implements DialogInterface.OnClickListener
+  implements i
 {
-  q(n paramn, g paramg) {}
+  q(p paramp, boolean paramBoolean) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public boolean a(h paramh)
   {
-    a.k();
+    boolean bool = true;
+    if (paramh.getFileType().a()) {
+      if ((!paramh.getName().startsWith(".")) || (a)) {}
+    }
+    do
+    {
+      return false;
+      return true;
+      paramh = paramh.getName();
+    } while (paramh == null);
+    if ((bg.j(paramh)) && (paramh.contains("ESSettings"))) {}
+    for (;;)
+    {
+      return bool;
+      bool = false;
+    }
   }
 }
 

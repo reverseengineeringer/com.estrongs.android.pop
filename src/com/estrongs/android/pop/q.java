@@ -3,10 +3,10 @@ package com.estrongs.android.pop;
 import android.content.Context;
 import com.estrongs.a.a;
 import com.estrongs.a.a.f;
-import com.estrongs.android.ui.dialog.dn;
+import com.estrongs.android.ui.dialog.dp;
 
 class q
-  extends dn
+  extends dp
 {
   q(n paramn, Context paramContext, boolean paramBoolean, f paramf)
   {
@@ -17,6 +17,7 @@ class q
   {
     a.a = c();
     a.b = e();
+    a.c = g();
     b.b.sendMessage(5, new Object[] { b.a });
     dismiss();
   }

@@ -1,19 +1,13 @@
 package com.estrongs.android.view;
 
-import com.estrongs.fs.h;
-import com.estrongs.fs.util.a.a;
-
 class cu
-  extends a
+  implements Runnable
 {
-  cu(cq paramcq, boolean paramBoolean)
-  {
-    super(paramBoolean);
-  }
+  cu(cs paramcs) {}
   
-  public int a(h paramh1, h paramh2)
+  public void run()
   {
-    return a(paramh1.getAbsolutePath(), paramh2.getAbsolutePath());
+    a.a.g();
   }
 }
 

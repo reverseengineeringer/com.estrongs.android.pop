@@ -1,16 +1,16 @@
 package com.estrongs.android.pop.app;
 
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
+import android.content.DialogInterface.OnCancelListener;
 
 class ks
-  implements DialogInterface.OnDismissListener
+  implements DialogInterface.OnCancelListener
 {
-  ks(SaveToESActivity paramSaveToESActivity) {}
+  ks(ko paramko) {}
   
-  public void onDismiss(DialogInterface paramDialogInterface)
+  public void onCancel(DialogInterface paramDialogInterface)
   {
-    a.finish();
+    a.a.finish();
   }
 }
 

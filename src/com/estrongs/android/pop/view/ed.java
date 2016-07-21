@@ -1,16 +1,13 @@
 package com.estrongs.android.pop.view;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
-
 class ed
-  implements DialogInterface.OnDismissListener
+  implements Runnable
 {
   ed(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void onDismiss(DialogInterface paramDialogInterface)
+  public void run()
   {
-    a.G();
+    a.e(1);
   }
 }
 

@@ -7,9 +7,9 @@ import android.content.res.Resources;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import com.estrongs.android.ui.view.ag;
+import com.estrongs.android.pop.view.FileExplorerActivity;
 import com.estrongs.fs.FileSystemException;
-import com.estrongs.fs.impl.local.h;
+import com.estrongs.fs.impl.local.i;
 import com.estrongs.fs.util.j;
 
 class c
@@ -19,27 +19,28 @@ class c
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
+    Object localObject;
     if (a.a(b) == 3)
     {
       a.a(b, a.b(b).getText().toString());
-      a locala = b;
+      localObject = b;
       if (a.c(b) == null) {}
       for (paramDialogInterface = "";; paramDialogInterface = a.c(b).trim())
       {
-        a.a(locala, paramDialogInterface);
+        a.a((a)localObject, paramDialogInterface);
         if (a.c(b).trim().length() >= 1) {
           break;
         }
-        ag.a(a.d(b), a.d(b).getText(2131427854), 0);
+        com.estrongs.android.ui.view.ak.a(a.d(b), a.d(b).getText(2131231769), 0);
         a.b(b).setText("/sdcard/");
         return;
       }
       try
       {
-        if (!h.a(a.c(b))) {}
-        for (bool = h.a(a.c(b), true); !bool; bool = true)
+        if (!i.a(a.c(b))) {}
+        for (bool = i.a(a.c(b), true); !bool; bool = true)
         {
-          ag.a(a.d(b), a.d(b).getString(2131427763) + ": " + a.c(b), 0);
+          com.estrongs.android.ui.view.ak.a(a.d(b), a.d(b).getString(2131231915) + ": " + a.c(b), 0);
           return;
         }
       }
@@ -51,7 +52,7 @@ class c
         }
         if (!j.d(a.c(b)))
         {
-          ag.a(a.d(b), a.d(b).getResources().getString(2131427860) + a.d(b).getResources().getString(2131428713), 0);
+          com.estrongs.android.ui.view.ak.a(a.d(b), a.d(b).getResources().getString(2131231759) + a.d(b).getResources().getString(2131232363), 0);
           return;
         }
       }
@@ -59,18 +60,56 @@ class c
     if (a.e(b))
     {
       a.a(b, new k(b));
-      fb).c = ((CheckBox)a.findViewById(2131361879)).isChecked();
+      fb).c = ((CheckBox)a.findViewById(2131624377)).isChecked();
       fb).b = a.c(b);
       fb).a = a.a(b);
       a.a(b, true);
-      b.b();
-      return;
     }
-    if (a.g(b) != null) {}
-    for (paramDialogInterface = a.g(b).getText().toString();; paramDialogInterface = null)
+    try
     {
-      new l(a.d(b), a.h(b), a.i(b), a.c(b), paramDialogInterface, a.j(b), true, false, a.a(b), null).b();
-      break;
+      for (;;)
+      {
+        com.estrongs.android.j.c.a(a.d(b)).a("compress_lb", "lp_unzip");
+        b.b();
+        return;
+        if (a.g(b) == null) {
+          break label664;
+        }
+        paramDialogInterface = a.g(b).getText().toString();
+        if (!a.h(b)) {
+          break;
+        }
+        new l(a.d(b), a.i(b), a.j(b), a.c(b), paramDialogInterface, a.k(b), true, false, a.a(b), null).b();
+      }
+      localObject = new ba();
+      a = a.i(b);
+      b = a.j(b);
+      e = a.k(b);
+      f = true;
+      c = a.c(b);
+      g = a.a(b);
+      d = paramDialogInterface;
+      if (a.l(b) != null)
+      {
+        a.l(b).a((ba)localObject);
+        a.l(b).b();
+      }
+      while ((a.d(b) instanceof FileExplorerActivity))
+      {
+        ((FileExplorerActivity)a.d(b)).f("archive://");
+        break;
+        com.estrongs.android.view.ak.a((ba)localObject);
+      }
+    }
+    catch (Exception paramDialogInterface)
+    {
+      for (;;)
+      {
+        paramDialogInterface.printStackTrace();
+        continue;
+        label664:
+        paramDialogInterface = null;
+      }
     }
   }
 }

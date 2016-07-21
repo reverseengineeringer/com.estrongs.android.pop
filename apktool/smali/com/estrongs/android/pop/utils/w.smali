@@ -96,7 +96,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -222,11 +222,11 @@
     :catch_0
     move-exception v0
 
-    const v0, 0x7f0b01ff
+    const v0, 0x7f080675
 
     const/4 v1, 0x0
 
-    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     goto :goto_0
 
@@ -243,7 +243,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v1, 0x7f0b0224
+    const v1, 0x7f0803ef
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -269,49 +269,102 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/estrongs/android/ui/dialog/ct;
+    new-instance v1, Lcom/estrongs/android/ui/dialog/cv;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/dialog/ct;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0b0046
+    const v2, 0x7f0803e2
 
-    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->a(I)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->a(I)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/dialog/ct;->b(Ljava/lang/CharSequence;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/dialog/cv;->b(Ljava/lang/CharSequence;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    const v1, 0x7f0b000d
+    const v1, 0x7f080229
 
     new-instance v2, Lcom/estrongs/android/pop/utils/x;
 
     invoke-direct {v2, p1, p0}, Lcom/estrongs/android/pop/utils/x;-><init>(Lcom/estrongs/android/pop/view/utils/v;Landroid/content/Context;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    const v1, 0x7f0b000e
+    const v1, 0x7f080225
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ct;->c()Lcom/estrongs/android/ui/dialog/cg;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cv;->c()Lcom/estrongs/android/ui/dialog/ci;
 
     return-void
 .end method
 
+.method public static a(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 3
+
+    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    new-instance v1, Landroid/content/Intent;
+
+    const-string v2, "android.intent.action.VIEW"
+
+    invoke-direct {v1, v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    :try_start_0
+    invoke-virtual {p0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    const v0, 0x7f0803ca
+
+    const/4 v1, 0x1
+
+    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
+
+    goto :goto_0
+.end method
+
 .method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 5
+    .locals 6
 
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
-    const-string v0, "Market"
+    const-string v4, "http://www.estrongs.com/download.html"
+
+    const/4 v5, 0x1
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    invoke-static/range {v0 .. v5}, Lcom/estrongs/android/pop/utils/w;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+
+    return-void
+.end method
+
+.method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+    .locals 6
+
+    const/4 v5, 0x0
+
+    sget-object v0, Lcom/estrongs/android/pop/view/a;->a:Ljava/lang/String;
 
     const-string v1, "Web"
 
@@ -321,7 +374,7 @@
 
     if-eqz v0, :cond_1
 
-    sget-object v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e:Ljava/lang/String;
+    sget-object v0, Lcom/estrongs/android/pop/view/a;->b:Ljava/lang/String;
 
     const-string v1, "Amazon"
 
@@ -331,150 +384,137 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {p0}, Lcom/estrongs/android/pop/utils/w;->f(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/estrongs/android/pop/utils/w;->e(Landroid/content/Context;)V
 
     :goto_0
     return-void
 
     :cond_0
-    invoke-static {p0}, Lcom/estrongs/android/pop/utils/w;->e(Landroid/content/Context;)V
+    invoke-static {p0, p4}, Lcom/estrongs/android/pop/utils/w;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_1
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
+    move-result-object v1
+
+    new-instance v2, Landroid/content/Intent;
+
+    const-string v0, "android.intent.action.VIEW"
+
+    invoke-direct {v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    if-eqz p3, :cond_2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "&referrer="
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     move-result-object v0
 
-    new-instance v1, Landroid/content/Intent;
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v2, "android.intent.action.VIEW"
+    move-result-object v0
 
-    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    :goto_1
+    if-nez p5, :cond_3
 
-    const-string v3, "market://search?q="
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v2
+    const-string v4, "market://search?q="
 
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    const-string v3, ":"
+    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v3
 
-    move-result-object v2
+    const-string v4, ":"
 
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v4}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
+    move-result-object v3
 
-    move-result-object v2
+    invoke-static {v3}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    invoke-interface {v2}, Ljava/util/List;->size()I
+    move-result-object v3
 
-    move-result v2
+    invoke-virtual {v2, v3}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    if-eqz v2, :cond_2
+    invoke-virtual {v1, v2, v5}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
-    invoke-virtual {p0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    move-result-object v3
+
+    invoke-interface {v3}, Ljava/util/List;->size()I
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    invoke-virtual {p0, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0
 
     :cond_2
-    new-instance v2, Ljava/lang/StringBuilder;
+    const-string v0, ""
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "market://details?id="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
-
-    invoke-virtual {v0, v1, v4}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    invoke-virtual {p0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
-    goto :goto_0
+    goto :goto_1
 
     :cond_3
-    const-string v2, "Meizu"
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    sget-object v3, Landroid/os/Build;->BRAND:Ljava/lang/String;
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    const-string v4, "market://details?id="
 
-    move-result v2
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v2, :cond_4
+    move-result-object v3
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object v3
 
-    const-string v3, "mstore:http://app.meizu.com/phone/apps/"
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    move-result-object v2
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    move-result-object v2
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v2
+    invoke-virtual {v2, v0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
-
-    invoke-virtual {v0, v1, v4}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
+    invoke-virtual {v1, v2, v5}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v0
 
@@ -484,12 +524,61 @@
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {p0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     goto/16 :goto_0
 
     :cond_4
-    invoke-static {p0}, Lcom/estrongs/android/pop/utils/w;->e(Landroid/content/Context;)V
+    const-string v0, "Meizu"
+
+    sget-object v3, Landroid/os/Build;->BRAND:Ljava/lang/String;
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "mstore:http://app.meizu.com/phone/apps/"
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
+
+    invoke-virtual {v1, v2, v5}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    invoke-virtual {p0, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    goto/16 :goto_0
+
+    :cond_5
+    invoke-static {p0, p4}, Lcom/estrongs/android/pop/utils/w;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     goto/16 :goto_0
 .end method
@@ -525,18 +614,34 @@
     goto :goto_0
 .end method
 
-.method public static b(Landroid/content/pm/PackageManager;Ljava/lang/String;)Ljava/lang/String;
+.method public static b(Landroid/content/pm/PackageManager;Ljava/lang/String;)Landroid/content/pm/ApplicationInfo;
     .locals 1
 
-    invoke-static {p0, p1}, Lcom/estrongs/android/pop/utils/w;->d(Landroid/content/pm/PackageManager;Ljava/lang/String;)Ljava/lang/String;
+    const/16 v0, 0x2000
+
+    :try_start_0
+    invoke-virtual {p0, p1, v0}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_1
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/utils/w;->b(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
+    :goto_0
     return-object v0
+
+    :catch_0
+    move-exception v0
+
+    :goto_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_1
 .end method
 
 .method private static b(Ljava/lang/String;)Ljava/lang/String;
@@ -697,11 +802,11 @@
     :catch_0
     move-exception v0
 
-    const v0, 0x7f0b01ff
+    const v0, 0x7f080675
 
     const/4 v1, 0x0
 
-    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     goto :goto_0
 
@@ -814,32 +919,18 @@
     goto :goto_0
 .end method
 
-.method public static c(Landroid/content/pm/PackageManager;Ljava/lang/String;)Landroid/content/pm/PackageInfo;
+.method public static c(Landroid/content/pm/PackageManager;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    if-eqz p0, :cond_0
-
-    if-eqz p1, :cond_0
-
-    const/4 v0, 0x1
-
-    :try_start_0
-    invoke-virtual {p0, p1, v0}, Landroid/content/pm/PackageManager;->getPackageArchiveInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {p0, p1}, Lcom/estrongs/android/pop/utils/w;->f(Landroid/content/pm/PackageManager;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    :goto_0
+    invoke-static {v0}, Lcom/estrongs/android/pop/utils/w;->b(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
     return-object v0
-
-    :catch_0
-    move-exception v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method
 
 .method public static c(Landroid/content/Context;)Z
@@ -876,7 +967,146 @@
     goto :goto_0
 .end method
 
-.method private static d(Landroid/content/pm/PackageManager;Ljava/lang/String;)Ljava/lang/String;
+.method public static d(Landroid/content/pm/PackageManager;Ljava/lang/String;)Landroid/content/pm/PackageInfo;
+    .locals 1
+
+    if-eqz p0, :cond_0
+
+    if-eqz p1, :cond_0
+
+    const/4 v0, 0x1
+
+    :try_start_0
+    invoke-virtual {p0, p1, v0}, Landroid/content/pm/PackageManager;->getPackageArchiveInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static d(Landroid/content/Context;)V
+    .locals 3
+
+    new-instance v0, Lcom/estrongs/android/ui/dialog/cv;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
+
+    const v1, 0x7f0803e2
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->a(I)Lcom/estrongs/android/ui/dialog/cv;
+
+    move-result-object v0
+
+    const v1, 0x7f080224
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->b(I)Lcom/estrongs/android/ui/dialog/cv;
+
+    move-result-object v0
+
+    const v1, 0x7f080229
+
+    new-instance v2, Lcom/estrongs/android/pop/utils/z;
+
+    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/utils/z;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
+
+    move-result-object v0
+
+    const v1, 0x7f080225
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cv;->c()Lcom/estrongs/android/ui/dialog/ci;
+
+    return-void
+.end method
+
+.method public static e(Landroid/content/Context;)V
+    .locals 3
+
+    sget-object v0, Lcom/estrongs/android/pop/utils/w;->b:Ljava/lang/String;
+
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    new-instance v1, Landroid/content/Intent;
+
+    const-string v2, "android.intent.action.VIEW"
+
+    invoke-direct {v1, v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    :try_start_0
+    invoke-virtual {p0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    const v0, 0x7f0803ca
+
+    const/4 v1, 0x1
+
+    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
+
+    goto :goto_0
+.end method
+
+.method public static e(Landroid/content/pm/PackageManager;Ljava/lang/String;)[Ljava/lang/String;
+    .locals 2
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    const/16 v1, 0x1000
+
+    :try_start_0
+    invoke-virtual {p0, p1, v1}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+    move-result-object v1
+
+    iget-object v0, v1, Landroid/content/pm/PackageInfo;->requestedPermissions:[Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    const/4 v1, 0x0
+
+    new-array v0, v1, [Ljava/lang/String;
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_0
+    :goto_0
+    return-object v0
+
+    :catch_0
+    move-exception v1
+
+    goto :goto_0
+.end method
+
+.method private static f(Landroid/content/pm/PackageManager;Ljava/lang/String;)Ljava/lang/String;
     .locals 6
 
     const/4 v1, 0x0
@@ -1007,116 +1237,4 @@
         0x65s
         0x66s
     .end array-data
-.end method
-
-.method public static d(Landroid/content/Context;)V
-    .locals 3
-
-    new-instance v0, Lcom/estrongs/android/ui/dialog/ct;
-
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/dialog/ct;-><init>(Landroid/content/Context;)V
-
-    const v1, 0x7f0b0046
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->a(I)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    const v1, 0x7f0b0201
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->b(I)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    const v1, 0x7f0b000d
-
-    new-instance v2, Lcom/estrongs/android/pop/utils/z;
-
-    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/utils/z;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    const v1, 0x7f0b000e
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ct;->c()Lcom/estrongs/android/ui/dialog/cg;
-
-    return-void
-.end method
-
-.method public static e(Landroid/content/Context;)V
-    .locals 3
-
-    const-string v0, "http://www.estrongs.com/download.html"
-
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    new-instance v1, Landroid/content/Intent;
-
-    const-string v2, "android.intent.action.VIEW"
-
-    invoke-direct {v1, v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
-
-    :try_start_0
-    invoke-virtual {p0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-    :try_end_0
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    const v0, 0x7f0b0202
-
-    const/4 v1, 0x1
-
-    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
-
-    goto :goto_0
-.end method
-
-.method public static f(Landroid/content/Context;)V
-    .locals 3
-
-    sget-object v0, Lcom/estrongs/android/pop/utils/w;->b:Ljava/lang/String;
-
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    new-instance v1, Landroid/content/Intent;
-
-    const-string v2, "android.intent.action.VIEW"
-
-    invoke-direct {v1, v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
-
-    :try_start_0
-    invoke-virtual {p0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-    :try_end_0
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    const v0, 0x7f0b0202
-
-    const/4 v1, 0x1
-
-    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
-
-    goto :goto_0
 .end method

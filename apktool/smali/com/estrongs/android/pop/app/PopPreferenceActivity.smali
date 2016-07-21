@@ -3,21 +3,19 @@
 
 
 # static fields
-.field private static E:I
+.field private static D:I
 
 .field static a:Z
 
-.field public static u:Ljava/lang/String;
+.field public static s:Ljava/lang/String;
 
 
 # instance fields
-.field private A:Lcom/estrongs/android/ui/theme/al;
+.field private A:Ljava/lang/String;
 
-.field private B:Ljava/lang/String;
+.field private B:I
 
-.field private C:I
-
-.field private D:Landroid/os/Handler;
+.field private C:Landroid/os/Handler;
 
 .field b:Lcom/estrongs/android/pop/ad;
 
@@ -41,9 +39,9 @@
 
 .field l:Landroid/preference/CheckBoxPreference;
 
-.field m:Landroid/preference/CheckBoxPreference;
+.field m:Landroid/preference/Preference;
 
-.field n:Landroid/preference/CheckBoxPreference;
+.field n:Landroid/preference/Preference;
 
 .field o:Landroid/preference/Preference;
 
@@ -53,19 +51,17 @@
 
 .field r:Landroid/preference/Preference;
 
-.field s:Landroid/preference/Preference;
-
-.field t:Landroid/preference/Preference;
+.field private u:Landroid/preference/Preference;
 
 .field private v:Landroid/preference/Preference;
 
 .field private w:Landroid/preference/Preference;
 
-.field private x:Landroid/preference/Preference;
+.field private x:Landroid/preference/EditTextPreference;
 
-.field private y:Landroid/preference/EditTextPreference;
+.field private y:Landroid/preference/Preference$OnPreferenceChangeListener;
 
-.field private z:Landroid/preference/Preference$OnPreferenceChangeListener;
+.field private z:Lcom/estrongs/android/ui/theme/at;
 
 
 # direct methods
@@ -78,9 +74,9 @@
 
     const-string v0, "www.estrongs.com"
 
-    sput-object v0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->u:Ljava/lang/String;
+    sput-object v0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->s:Ljava/lang/String;
 
-    sput v1, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->E:I
+    sput v1, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->D:I
 
     return-void
 .end method
@@ -92,19 +88,19 @@
 
     invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/ESPreferenceActivity;-><init>()V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->y:Landroid/preference/EditTextPreference;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->x:Landroid/preference/EditTextPreference;
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->B:Ljava/lang/String;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->A:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->C:I
+    iput v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->B:I
 
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->D:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->C:Landroid/os/Handler;
 
     return-void
 .end method
@@ -112,7 +108,7 @@
 .method static synthetic a(Lcom/estrongs/android/pop/app/PopPreferenceActivity;I)I
     .locals 0
 
-    iput p1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->C:I
+    iput p1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->B:I
 
     return p1
 .end method
@@ -372,7 +368,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->z:Landroid/preference/Preference$OnPreferenceChangeListener;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->y:Landroid/preference/Preference$OnPreferenceChangeListener;
 
     invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -393,7 +389,7 @@
 .method static synthetic b(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)Landroid/os/Handler;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->D:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->C:Landroid/os/Handler;
 
     return-object v0
 .end method
@@ -401,7 +397,7 @@
 .method static synthetic b(Lcom/estrongs/android/pop/app/PopPreferenceActivity;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->B:Ljava/lang/String;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->A:Ljava/lang/String;
 
     return-object p1
 .end method
@@ -413,11 +409,11 @@
 
     sget-boolean v0, Lcom/estrongs/android/pop/z;->j:Z
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->b:Lcom/estrongs/android/pop/ad;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->x()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->y()Ljava/lang/String;
 
     move-result-object v1
 
@@ -429,21 +425,21 @@
 
     check-cast v0, Landroid/preference/EditTextPreference;
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->y:Landroid/preference/EditTextPreference;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->x:Landroid/preference/EditTextPreference;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->y:Landroid/preference/EditTextPreference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->x:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v0, v1}, Landroid/preference/EditTextPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->y:Landroid/preference/EditTextPreference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->x:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v0, v1}, Landroid/preference/EditTextPreference;->setText(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->y:Landroid/preference/EditTextPreference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->x:Landroid/preference/EditTextPreference;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/he;
+    new-instance v1, Lcom/estrongs/android/pop/app/hs;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/he;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/hs;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/EditTextPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -451,7 +447,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->j()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->k()Z
 
     move-result v0
 
@@ -474,6 +470,21 @@
     invoke-virtual {v0, v2}, Landroid/preference/Preference;->setEnabled(Z)V
 
     :cond_0
+    const-string v0, "auto_check_list"
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    new-instance v1, Lcom/estrongs/android/pop/app/hu;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/hu;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+
+    invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
+
+    :cond_1
     const-string v0, "appmanager_preference"
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
@@ -482,13 +493,13 @@
 
     check-cast v0, Landroid/preference/PreferenceScreen;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    invoke-static {}, Lcom/estrongs/android/pop/utils/cc;->a()Z
+    invoke-static {}, Lcom/estrongs/android/pop/utils/cl;->a()Z
 
     move-result v1
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_2
 
     const-string v1, "app_check_update"
 
@@ -498,11 +509,11 @@
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
-    :cond_1
+    :cond_2
     :goto_0
     return-void
 
-    :cond_2
+    :cond_3
     const-string v0, "preference_tools_settings"
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
@@ -519,9 +530,9 @@
 
     check-cast v1, Landroid/preference/PreferenceScreen;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
 
@@ -570,7 +581,7 @@
 .method static synthetic c(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)Landroid/preference/Preference$OnPreferenceChangeListener;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->z:Landroid/preference/Preference$OnPreferenceChangeListener;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->y:Landroid/preference/Preference$OnPreferenceChangeListener;
 
     return-object v0
 .end method
@@ -578,7 +589,7 @@
 .method private c()V
     .locals 4
 
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
@@ -592,17 +603,17 @@
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->showDialog(I)V
 
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->D:Landroid/os/Handler;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->C:Landroid/os/Handler;
 
-    new-instance v3, Lcom/estrongs/android/pop/app/hf;
+    new-instance v3, Lcom/estrongs/android/pop/app/hv;
 
-    invoke-direct {v3, p0}, Lcom/estrongs/android/pop/app/hf;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v3, p0}, Lcom/estrongs/android/pop/app/hv;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a(ZLandroid/os/Handler;Ljava/lang/Runnable;)V
 
@@ -612,7 +623,7 @@
 .method static synthetic d(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)Landroid/preference/EditTextPreference;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->y:Landroid/preference/EditTextPreference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->x:Landroid/preference/EditTextPreference;
 
     return-object v0
 .end method
@@ -622,11 +633,11 @@
 
     const/4 v2, 0x1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->B:Ljava/lang/String;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->A:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->B:Ljava/lang/String;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->A:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -643,7 +654,7 @@
     :cond_0
     const-string v0, "/sdcard/"
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->B:Ljava/lang/String;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->A:Ljava/lang/String;
 
     :cond_1
     :goto_0
@@ -652,7 +663,7 @@
     :cond_2
     new-instance v0, Ljava/io/File;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->B:Ljava/lang/String;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->A:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -662,57 +673,57 @@
 
     if-eqz v0, :cond_8
 
-    iget v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->C:I
+    iget v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->B:I
 
     if-nez v0, :cond_3
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->c:Landroid/preference/EditTextPreference;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->B:Ljava/lang/String;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->A:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/preference/EditTextPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->c:Landroid/preference/EditTextPreference;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->B:Ljava/lang/String;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->A:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/preference/EditTextPreference;->setText(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->b:Lcom/estrongs/android/pop/ad;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->B:Ljava/lang/String;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->A:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/ad;->i(Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_3
-    iget v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->C:I
+    iget v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->B:I
 
     if-ne v0, v2, :cond_4
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->y:Landroid/preference/EditTextPreference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->x:Landroid/preference/EditTextPreference;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->B:Ljava/lang/String;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->A:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/preference/EditTextPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->y:Landroid/preference/EditTextPreference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->x:Landroid/preference/EditTextPreference;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->B:Ljava/lang/String;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->A:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/preference/EditTextPreference;->setText(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->b:Lcom/estrongs/android/pop/ad;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->B:Ljava/lang/String;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->A:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/ad;->s(Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_4
-    iget v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->C:I
+    iget v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->B:I
 
     const/4 v1, 0x2
 
@@ -724,27 +735,27 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->d:Landroid/preference/EditTextPreference;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->B:Ljava/lang/String;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->A:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/preference/EditTextPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->d:Landroid/preference/EditTextPreference;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->B:Ljava/lang/String;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->A:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/preference/EditTextPreference;->setText(Ljava/lang/String;)V
 
     :cond_5
     iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->b:Lcom/estrongs/android/pop/ad;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->B:Ljava/lang/String;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->A:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/ad;->t(Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_6
-    iget v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->C:I
+    iget v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->B:I
 
     const/4 v1, 0x3
 
@@ -756,29 +767,29 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->e:Landroid/preference/EditTextPreference;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->B:Ljava/lang/String;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->A:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/preference/EditTextPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->e:Landroid/preference/EditTextPreference;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->B:Ljava/lang/String;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->A:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/preference/EditTextPreference;->setText(Ljava/lang/String;)V
 
     :cond_7
     iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->b:Lcom/estrongs/android/pop/ad;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->B:Ljava/lang/String;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->A:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/ad;->t(Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_8
-    const v0, 0x7f0b01b3
+    const v0, 0x7f0804ab
 
-    invoke-static {p0, v0, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {p0, v0, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     goto/16 :goto_0
 .end method
@@ -792,13 +803,13 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->s:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->q:Landroid/preference/Preference;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->s:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->q:Landroid/preference/Preference;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/hp;
+    new-instance v1, Lcom/estrongs/android/pop/app/if;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/hp;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/if;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
@@ -808,13 +819,13 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->t:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->r:Landroid/preference/Preference;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->t:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->r:Landroid/preference/Preference;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/hw;
+    new-instance v1, Lcom/estrongs/android/pop/app/im;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/hw;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/im;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
@@ -828,9 +839,9 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v1, Lcom/estrongs/android/pop/app/ie;
+    new-instance v1, Lcom/estrongs/android/pop/app/iu;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ie;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/iu;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -897,11 +908,11 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 9
 
-    const v6, 0x7f0b006f
+    const v6, 0x7f080381
 
     const/4 v5, 0x7
 
-    const v8, 0x7f0b0294
+    const v8, 0x7f080547
 
     const/4 v2, 0x1
 
@@ -916,7 +927,7 @@
     move-result-object v0
 
     :cond_0
-    invoke-static {}, Lcom/estrongs/android/util/bd;->f()Z
+    invoke-static {}, Lcom/estrongs/android/util/bk;->f()Z
 
     move-result v1
 
@@ -941,26 +952,30 @@
     if-nez v1, :cond_2
 
     :cond_1
-    const v1, 0x7f0c0017
+    const v1, 0x7f090181
 
     invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->setTheme(I)V
 
     invoke-virtual {p0, v5}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->requestWindowFeature(I)Z
 
     :cond_2
+    :try_start_0
     invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESPreferenceActivity;->onCreate(Landroid/os/Bundle;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-static {p0}, Lcom/estrongs/android/ui/theme/al;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
+    :goto_0
+    invoke-static {p0}, Lcom/estrongs/android/ui/theme/at;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->A:Lcom/estrongs/android/ui/theme/al;
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->z:Lcom/estrongs/android/ui/theme/at;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->A:Lcom/estrongs/android/ui/theme/al;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->z:Lcom/estrongs/android/ui/theme/at;
 
-    const v4, 0x7f02021a
+    const v4, 0x7f02038d
 
-    invoke-virtual {v1, v4}, Lcom/estrongs/android/ui/theme/al;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, v4}, Lcom/estrongs/android/ui/theme/at;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -996,7 +1011,7 @@
 
     move-result-object v1
 
-    const v4, 0x7f020218
+    const v4, 0x7f02038b
 
     invoke-virtual {v1, v4}, Landroid/view/Window;->setBackgroundDrawableResource(I)V
 
@@ -1018,17 +1033,17 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->b:Lcom/estrongs/android/pop/ad;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->am()Z
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->an()Z
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->b:Lcom/estrongs/android/pop/ad;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->ak()Z
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->al()Z
 
     const v1, 0x7f050005
 
     invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->addPreferencesFromResource(I)V
 
-    invoke-static {}, Lcom/estrongs/android/util/bd;->f()Z
+    invoke-static {}, Lcom/estrongs/android/util/bk;->f()Z
 
     move-result v1
 
@@ -1057,11 +1072,11 @@
 
     move-result-object v0
 
-    const v1, 0x7f0300e0
+    const v1, 0x7f030197
 
     invoke-virtual {v0, v5, v1}, Landroid/view/Window;->setFeatureInt(II)V
 
-    const v0, 0x7f0a003d
+    const v0, 0x7f0e0076
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->findViewById(I)Landroid/view/View;
 
@@ -1069,17 +1084,17 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->A:Lcom/estrongs/android/ui/theme/al;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->z:Lcom/estrongs/android/ui/theme/at;
 
-    const v4, 0x7f020087
+    const v4, 0x7f020181
 
-    invoke-virtual {v1, v4}, Lcom/estrongs/android/ui/theme/al;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, v4}, Lcom/estrongs/android/ui/theme/at;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const v0, 0x7f0a0021
+    const v0, 0x7f0e0077
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->findViewById(I)Landroid/view/View;
 
@@ -1090,15 +1105,15 @@
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setText(I)V
 
     :cond_4
-    new-instance v0, Lcom/estrongs/android/pop/app/gg;
+    new-instance v0, Lcom/estrongs/android/pop/app/gt;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/gg;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/gt;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->z:Landroid/preference/Preference$OnPreferenceChangeListener;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->y:Landroid/preference/Preference$OnPreferenceChangeListener;
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->b:Lcom/estrongs/android/pop/ad;
 
-    const-string v1, "Market"
+    sget-object v1, Lcom/estrongs/android/pop/view/a;->a:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/ad;->j(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1124,9 +1139,9 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->c:Landroid/preference/EditTextPreference;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/gt;
+    new-instance v1, Lcom/estrongs/android/pop/app/hg;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/gt;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/hg;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/EditTextPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -1138,9 +1153,9 @@
 
     check-cast v0, Landroid/preference/CheckBoxPreference;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/hg;
+    new-instance v1, Lcom/estrongs/android/pop/app/ht;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/hg;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ht;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -1150,13 +1165,13 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->o:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->m:Landroid/preference/Preference;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->o:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->m:Landroid/preference/Preference;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/id;
+    new-instance v1, Lcom/estrongs/android/pop/app/ie;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/id;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ie;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
@@ -1166,13 +1181,13 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->p:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->n:Landroid/preference/Preference;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->p:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->n:Landroid/preference/Preference;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/if;
+    new-instance v1, Lcom/estrongs/android/pop/app/iv;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/if;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/iv;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
@@ -1196,15 +1211,15 @@
 
     check-cast v1, Landroid/preference/CheckBoxPreference;
 
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->k:Landroid/preference/CheckBoxPreference;
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->j:Landroid/preference/CheckBoxPreference;
 
     if-eqz v0, :cond_5
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->k:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->j:Landroid/preference/CheckBoxPreference;
 
     if-eqz v1, :cond_5
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->k:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->j:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
@@ -1217,15 +1232,15 @@
 
     check-cast v0, Landroid/preference/CheckBoxPreference;
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->l:Landroid/preference/CheckBoxPreference;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->k:Landroid/preference/CheckBoxPreference;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->l:Landroid/preference/CheckBoxPreference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->k:Landroid/preference/CheckBoxPreference;
 
     if-eqz v0, :cond_a
 
     const-string v0, "CN"
 
-    sget-object v1, Lcom/estrongs/android/pop/esclasses/e;->a:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/esclasses/i;->a:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -1237,44 +1252,44 @@
 
     if-eqz v0, :cond_a
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->l:Landroid/preference/CheckBoxPreference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->k:Landroid/preference/CheckBoxPreference;
 
     const-string v1, "\u7edf\u8ba1"
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setTitle(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->l:Landroid/preference/CheckBoxPreference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->k:Landroid/preference/CheckBoxPreference;
 
     const-string v1, "\u53d1\u9001\u7edf\u8ba1\u6570\u636e"
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     :cond_6
-    :goto_0
+    :goto_1
     const-string v0, "clean_prefer"
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->q:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->o:Landroid/preference/Preference;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->q:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->o:Landroid/preference/Preference;
 
     if-eqz v0, :cond_7
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->q:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->o:Landroid/preference/Preference;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/ig;
+    new-instance v1, Lcom/estrongs/android/pop/app/iw;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ig;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/iw;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     :cond_7
     iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->b:Lcom/estrongs/android/pop/ad;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->y()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->z()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1306,17 +1321,17 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->d:Landroid/preference/EditTextPreference;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/ih;
+    new-instance v1, Lcom/estrongs/android/pop/app/ix;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ih;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ix;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/EditTextPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     :cond_8
-    :goto_1
+    :goto_2
     iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->b:Lcom/estrongs/android/pop/ad;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->z()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->A()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1344,9 +1359,9 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->e:Landroid/preference/EditTextPreference;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/ii;
+    new-instance v1, Lcom/estrongs/android/pop/app/iy;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ii;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/iy;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/EditTextPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -1357,7 +1372,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->v:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->u:Landroid/preference/Preference;
 
     const-string v0, "search_engine_default"
 
@@ -1371,7 +1386,7 @@
 
     move-result-object v1
 
-    const v4, 0x7f07000e
+    const v4, 0x7f0c000e
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -1389,7 +1404,7 @@
 
     move v1, v2
 
-    :goto_2
+    :goto_3
     array-length v6, v4
 
     if-ge v1, v6, :cond_c
@@ -1400,7 +1415,20 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_2
+    goto :goto_3
+
+    :catch_0
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
+
+    const v1, 0x7f0900f0
+
+    invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->setTheme(I)V
+
+    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESPreferenceActivity;->onCreate(Landroid/os/Bundle;)V
+
+    goto/16 :goto_0
 
     :cond_a
     const-string v0, "update_preference"
@@ -1413,15 +1441,15 @@
 
     if-eqz v0, :cond_6
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->l:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->k:Landroid/preference/CheckBoxPreference;
 
     if-eqz v1, :cond_6
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->l:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->k:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
     :cond_b
     const-string v0, "preference_directory_settings_category"
@@ -1438,7 +1466,7 @@
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
-    goto :goto_1
+    goto/16 :goto_2
 
     :cond_c
     invoke-virtual {v0, v5}, Lcom/estrongs/android/ui/preference/CustomListPreference;->setEntries([Ljava/lang/CharSequence;)V
@@ -1468,10 +1496,10 @@
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/preference/CustomListPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    :goto_3
-    new-instance v1, Lcom/estrongs/android/pop/app/ij;
+    :goto_4
+    new-instance v1, Lcom/estrongs/android/pop/app/iz;
 
-    invoke-direct {v1, p0, v0}, Lcom/estrongs/android/pop/app/ij;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;Lcom/estrongs/android/ui/preference/CustomListPreference;)V
+    invoke-direct {v1, p0, v0}, Lcom/estrongs/android/pop/app/iz;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;Lcom/estrongs/android/ui/preference/CustomListPreference;)V
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/preference/CustomListPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -1479,29 +1507,29 @@
 
     if-nez v0, :cond_1e
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->v:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->u:Landroid/preference/Preference;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/gh;
+    new-instance v1, Lcom/estrongs/android/pop/app/gu;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/gh;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/gu;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     :cond_e
-    :goto_4
+    :goto_5
     const-string v0, "preference_privacy"
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->w:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->v:Landroid/preference/Preference;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->w:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->v:Landroid/preference/Preference;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/gj;
+    new-instance v1, Lcom/estrongs/android/pop/app/gw;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/gj;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/gw;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
@@ -1511,13 +1539,13 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->x:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->w:Landroid/preference/Preference;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->x:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->w:Landroid/preference/Preference;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/gl;
+    new-instance v1, Lcom/estrongs/android/pop/app/gy;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/gl;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/gy;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
@@ -1530,7 +1558,7 @@
     const-string v0, "1.x"
 
     :cond_f
-    const-string v1, "Market"
+    sget-object v1, Lcom/estrongs/android/pop/view/a;->a:Ljava/lang/String;
 
     const-string v4, "oem"
 
@@ -1547,10 +1575,10 @@
     sget-object v1, Lcom/estrongs/android/pop/z;->b:Ljava/lang/String;
 
     :cond_10
-    :goto_5
+    :goto_6
     const-string v4, "\u5de5\u4fe1\u90e8"
 
-    sget-object v5, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e:Ljava/lang/String;
+    sget-object v5, Lcom/estrongs/android/pop/view/a;->b:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -1606,7 +1634,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f0b000f
+    const v7, 0x7f08071e
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -1642,7 +1670,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f0b041b
+    const v0, 0x7f08066d
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->getString(I)Ljava/lang/String;
 
@@ -1654,7 +1682,7 @@
 
     move v0, v2
 
-    :goto_6
+    :goto_7
     if-nez v0, :cond_13
 
     const-string v0, "none"
@@ -1676,16 +1704,16 @@
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
-    :goto_7
+    :goto_8
     const-string v0, "preference_website"
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    new-instance v1, Lcom/estrongs/android/pop/app/gm;
+    new-instance v1, Lcom/estrongs/android/pop/app/gz;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/gm;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/gz;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
@@ -1695,9 +1723,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/estrongs/android/pop/app/gn;
+    new-instance v1, Lcom/estrongs/android/pop/app/ha;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/gn;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ha;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
@@ -1707,9 +1735,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/estrongs/android/pop/app/go;
+    new-instance v1, Lcom/estrongs/android/pop/app/hb;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/go;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/hb;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
@@ -1729,7 +1757,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->r:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->p:Landroid/preference/Preference;
 
     const-string v0, "start_passwd_enable"
 
@@ -1757,9 +1785,9 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->f:Landroid/preference/CheckBoxPreference;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/gp;
+    new-instance v1, Lcom/estrongs/android/pop/app/hc;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/gp;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/hc;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -1770,9 +1798,9 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->g:Landroid/preference/CheckBoxPreference;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/gq;
+    new-instance v1, Lcom/estrongs/android/pop/app/hd;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/gq;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/hd;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -1783,14 +1811,14 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->h:Landroid/preference/CheckBoxPreference;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/gr;
+    new-instance v1, Lcom/estrongs/android/pop/app/he;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/gr;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/he;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     :cond_16
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->r:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->p:Landroid/preference/Preference;
 
     if-eqz v0, :cond_1a
 
@@ -1798,7 +1826,7 @@
 
     if-eqz v0, :cond_1a
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->r:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->p:Landroid/preference/Preference;
 
     invoke-virtual {v0, v3}, Landroid/preference/Preference;->setEnabled(Z)V
 
@@ -1810,7 +1838,7 @@
 
     if-eqz v0, :cond_17
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->r:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->p:Landroid/preference/Preference;
 
     invoke-virtual {v0, v2}, Landroid/preference/Preference;->setEnabled(Z)V
 
@@ -1823,7 +1851,7 @@
 
     if-eqz v0, :cond_18
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->r:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->p:Landroid/preference/Preference;
 
     invoke-virtual {v0, v2}, Landroid/preference/Preference;->setEnabled(Z)V
 
@@ -1836,16 +1864,16 @@
 
     if-eqz v0, :cond_19
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->r:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->p:Landroid/preference/Preference;
 
     invoke-virtual {v0, v2}, Landroid/preference/Preference;->setEnabled(Z)V
 
     :cond_19
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->r:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->p:Landroid/preference/Preference;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/gs;
+    new-instance v1, Lcom/estrongs/android/pop/app/hf;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/gs;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/hf;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
@@ -1864,7 +1892,7 @@
 
     if-eqz v0, :cond_1b
 
-    invoke-static {}, Lcom/estrongs/android/pop/utils/cc;->a()Z
+    invoke-static {}, Lcom/estrongs/android/pop/utils/cl;->a()Z
 
     move-result v1
 
@@ -1874,54 +1902,14 @@
 
     if-eqz v1, :cond_23
 
-    new-instance v1, Lcom/estrongs/android/pop/app/gu;
+    new-instance v1, Lcom/estrongs/android/pop/app/hh;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/gu;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/hh;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     :cond_1b
-    :goto_8
-    const-string v0, "show_select_button"
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/preference/CheckBoxPreference;
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->i:Landroid/preference/CheckBoxPreference;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->i:Landroid/preference/CheckBoxPreference;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->b:Lcom/estrongs/android/pop/ad;
-
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->ak()Z
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
-
-    const-string v0, "show_windows_button"
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/preference/CheckBoxPreference;
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->m:Landroid/preference/CheckBoxPreference;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->m:Landroid/preference/CheckBoxPreference;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->b:Lcom/estrongs/android/pop/ad;
-
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->am()Z
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
-
+    :goto_9
     const-string v0, "show_disk_usage"
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
@@ -1932,7 +1920,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->b:Lcom/estrongs/android/pop/ad;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->N()Z
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->O()Z
 
     move-result v1
 
@@ -1946,9 +1934,9 @@
 
     check-cast v0, Landroid/preference/CheckBoxPreference;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/gv;
+    new-instance v1, Lcom/estrongs/android/pop/app/hi;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/gv;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/hi;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -1962,7 +1950,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->b:Lcom/estrongs/android/pop/ad;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->P()Z
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->Q()Z
 
     move-result v1
 
@@ -1976,23 +1964,23 @@
 
     check-cast v0, Landroid/preference/CheckBoxPreference;
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->n:Landroid/preference/CheckBoxPreference;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->l:Landroid/preference/CheckBoxPreference;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->n:Landroid/preference/CheckBoxPreference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->l:Landroid/preference/CheckBoxPreference;
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->b:Lcom/estrongs/android/pop/ad;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->Q()Z
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->R()Z
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->n:Landroid/preference/CheckBoxPreference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->l:Landroid/preference/CheckBoxPreference;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/gx;
+    new-instance v1, Lcom/estrongs/android/pop/app/hk;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/gx;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/hk;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -2012,7 +2000,7 @@
 
     check-cast v0, Landroid/preference/PreferenceScreen;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->n:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->l:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
@@ -2025,13 +2013,13 @@
 
     check-cast v0, Landroid/preference/CheckBoxPreference;
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->j:Landroid/preference/CheckBoxPreference;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->i:Landroid/preference/CheckBoxPreference;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->j:Landroid/preference/CheckBoxPreference;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->i:Landroid/preference/CheckBoxPreference;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/gy;
+    new-instance v1, Lcom/estrongs/android/pop/app/hl;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/gy;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/hl;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -2047,7 +2035,7 @@
 
     move-result-object v1
 
-    const v4, 0x7f070014
+    const v4, 0x7f0c000a
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -2063,7 +2051,7 @@
 
     aput-object v5, v4, v3
 
-    :goto_9
+    :goto_a
     array-length v3, v1
 
     if-ge v2, v3, :cond_24
@@ -2074,7 +2062,7 @@
 
     add-int/lit8 v2, v2, 0x1
 
-    goto :goto_9
+    goto :goto_a
 
     :cond_1d
     invoke-virtual {v0}, Lcom/estrongs/android/ui/preference/CustomListPreference;->getEntry()Ljava/lang/CharSequence;
@@ -2083,7 +2071,7 @@
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/preference/CustomListPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_3
+    goto/16 :goto_4
 
     :cond_1e
     const-string v0, "preference_upgrade_settings_text_category"
@@ -2096,15 +2084,15 @@
 
     if-eqz v0, :cond_e
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->v:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->u:Landroid/preference/Preference;
 
     if-eqz v1, :cond_e
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->v:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->u:Landroid/preference/Preference;
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
 
-    goto/16 :goto_4
+    goto/16 :goto_5
 
     :cond_1f
     const-string v4, "Market"
@@ -2115,11 +2103,11 @@
 
     if-eqz v4, :cond_10
 
-    sget-object v4, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e:Ljava/lang/String;
+    sget-object v4, Lcom/estrongs/android/pop/view/a;->b:Ljava/lang/String;
 
     if-eqz v4, :cond_10
 
-    sget-object v4, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e:Ljava/lang/String;
+    sget-object v4, Lcom/estrongs/android/pop/view/a;->b:Ljava/lang/String;
 
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
@@ -2127,9 +2115,9 @@
 
     if-lez v4, :cond_10
 
-    sget-object v1, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/view/a;->b:Ljava/lang/String;
 
-    const-string v4, "\u767e\u5ea6"
+    const-string v4, "Baidu"
 
     invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2137,19 +2125,19 @@
 
     if-nez v1, :cond_20
 
-    sget-object v1, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/view/a;->b:Ljava/lang/String;
 
-    goto/16 :goto_5
+    goto/16 :goto_6
 
     :cond_20
     const-string v1, "ES"
 
-    goto/16 :goto_5
+    goto/16 :goto_6
 
     :cond_21
     move v0, v3
 
-    goto/16 :goto_6
+    goto/16 :goto_7
 
     :cond_22
     const-string v0, ","
@@ -2162,7 +2150,7 @@
 
     invoke-virtual {v1, v0}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_7
+    goto/16 :goto_8
 
     :cond_23
     const-string v0, "preference_display_settings_category"
@@ -2183,7 +2171,7 @@
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
-    goto/16 :goto_8
+    goto/16 :goto_9
 
     :cond_24
     invoke-virtual {v0, v4}, Lcom/estrongs/android/ui/preference/ListPreference;->a([Ljava/lang/CharSequence;)V
@@ -2192,7 +2180,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070015
+    const v2, 0x7f0c000b
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -2206,7 +2194,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/ad;->B()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/ad;->C()Ljava/lang/String;
 
     move-result-object v2
 
@@ -2221,9 +2209,9 @@
     invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/preference/ListPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     :cond_25
-    new-instance v1, Lcom/estrongs/android/pop/app/gz;
+    new-instance v1, Lcom/estrongs/android/pop/app/hm;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/gz;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/hm;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/preference/ListPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -2237,9 +2225,9 @@
 
     if-eqz v0, :cond_26
 
-    new-instance v1, Lcom/estrongs/android/pop/app/hb;
+    new-instance v1, Lcom/estrongs/android/pop/app/ho;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/hb;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ho;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -2252,7 +2240,7 @@
 
     check-cast v0, Landroid/preference/CheckBoxPreference;
 
-    sget-boolean v1, Lcom/estrongs/android/pop/esclasses/k;->a:Z
+    sget-boolean v1, Lcom/estrongs/android/pop/esclasses/p;->a:Z
 
     if-eqz v1, :cond_27
 
@@ -2264,19 +2252,51 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->aZ()Z
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->aY()Z
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
 
-    new-instance v1, Lcom/estrongs/android/pop/app/hc;
+    new-instance v1, Lcom/estrongs/android/pop/app/hp;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/hc;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/hp;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
-    :goto_a
+    :goto_b
+    const-string v0, "scroll_thumb"
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+
+    move-result-object v1
+
+    const-string v0, "others"
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/preference/PreferenceCategory;
+
+    invoke-virtual {v0, v1}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
+
+    const-string v0, "default_window"
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/estrongs/android/pop/app/hq;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/hq;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+
+    invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
+
+    const-string v0, "show_analysis_button"
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+
     invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->a()V
 
     const-string v0, "hidden_file"
@@ -2291,23 +2311,11 @@
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->a(Ljava/lang/String;)V
 
-    const-string v0, "show_select_button"
-
-    invoke-direct {p0, v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->a(Ljava/lang/String;)V
-
-    const-string v0, "show_windows_button"
-
-    invoke-direct {p0, v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->a(Ljava/lang/String;)V
-
     const-string v0, "show_search_engine"
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->a(Ljava/lang/String;)V
 
     const-string v0, "enable_recycle"
-
-    invoke-direct {p0, v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->a(Ljava/lang/String;)V
-
-    const-string v0, "toolbar_setting_show_name"
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->a(Ljava/lang/String;)V
 
@@ -2319,11 +2327,15 @@
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->a(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->D:Landroid/os/Handler;
+    const-string v0, "show_homepage_message"
 
-    new-instance v1, Lcom/estrongs/android/pop/app/hd;
+    invoke-direct {p0, v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->a(Ljava/lang/String;)V
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/hd;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->C:Landroid/os/Handler;
+
+    new-instance v1, Lcom/estrongs/android/pop/app/hr;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/hr;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -2340,15 +2352,15 @@
 
     invoke-virtual {v1, v0}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
 
-    goto :goto_a
+    goto :goto_b
 .end method
 
 .method protected onCreateDialog(I)Landroid/app/Dialog;
     .locals 8
 
-    const v7, 0x7f0a02b8
+    const v7, 0x7f080221
 
-    const v6, 0x7f03009d
+    const v6, 0x7f030134
 
     const/4 v5, 0x5
 
@@ -2371,7 +2383,7 @@
 
     invoke-direct {v0, p0}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0b007f
+    const v1, 0x7f0805b1
 
     invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -2390,85 +2402,83 @@
     goto :goto_0
 
     :pswitch_2
-    new-instance v0, Lcom/estrongs/android/ui/dialog/ct;
+    new-instance v0, Lcom/estrongs/android/ui/dialog/cv;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/dialog/ct;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0b0047
+    const v1, 0x7f0803e7
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->a(I)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    const v1, 0x7f0b01b2
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->b(I)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->a(I)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    const v1, 0x7f0b000d
+    const v1, 0x7f0804ac
 
-    new-instance v2, Lcom/estrongs/android/pop/app/hi;
-
-    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/hi;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->b(I)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    const v1, 0x7f0b000e
+    const v1, 0x7f080229
 
-    new-instance v2, Lcom/estrongs/android/pop/app/hh;
+    new-instance v2, Lcom/estrongs/android/pop/app/hx;
 
-    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/hh;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/hx;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ct;->b()Lcom/estrongs/android/ui/dialog/cg;
+    const v1, 0x7f080225
+
+    new-instance v2, Lcom/estrongs/android/pop/app/hw;
+
+    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/hw;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cv;->b()Lcom/estrongs/android/ui/dialog/ci;
 
     move-result-object v0
 
     goto :goto_0
 
     :pswitch_3
-    new-instance v0, Lcom/estrongs/android/ui/dialog/ct;
+    new-instance v0, Lcom/estrongs/android/ui/dialog/cv;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/dialog/ct;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0b029b
+    const v2, 0x7f08054b
 
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/dialog/ct;->a(I)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    const v2, 0x7f0b000b
-
-    new-instance v3, Lcom/estrongs/android/pop/app/hk;
-
-    invoke-direct {v3, p0}, Lcom/estrongs/android/pop/app/hk;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
-
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/ui/dialog/ct;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/dialog/cv;->a(I)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    const v2, 0x7f0b000c
+    const v2, 0x7f080226
 
-    new-instance v3, Lcom/estrongs/android/pop/app/hj;
+    new-instance v3, Lcom/estrongs/android/pop/app/hz;
 
-    invoke-direct {v3, p0}, Lcom/estrongs/android/pop/app/hj;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v3, p0}, Lcom/estrongs/android/pop/app/hz;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
 
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/ui/dialog/ct;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/ui/dialog/cv;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
+
+    move-result-object v0
+
+    new-instance v2, Lcom/estrongs/android/pop/app/hy;
+
+    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/hy;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+
+    invoke-virtual {v0, v7, v2}, Lcom/estrongs/android/ui/dialog/cv;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v2
 
     :try_start_0
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2477,7 +2487,7 @@
     :goto_1
     if-nez v0, :cond_0
 
-    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
@@ -2486,7 +2496,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a02bb
+    const v1, 0x7f0e050c
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2494,7 +2504,9 @@
 
     invoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {v0, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    const v1, 0x7f0e0509
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -2502,13 +2514,13 @@
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {v2, v0}, Lcom/estrongs/android/ui/dialog/ct;->a(Landroid/view/View;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v2, v0}, Lcom/estrongs/android/ui/dialog/cv;->a(Landroid/view/View;)Lcom/estrongs/android/ui/dialog/cv;
 
-    invoke-virtual {v2}, Lcom/estrongs/android/ui/dialog/ct;->b()Lcom/estrongs/android/ui/dialog/cg;
+    invoke-virtual {v2}, Lcom/estrongs/android/ui/dialog/cv;->b()Lcom/estrongs/android/ui/dialog/ci;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->getWindow()Landroid/view/Window;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ci;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
@@ -2524,42 +2536,40 @@
     goto :goto_1
 
     :pswitch_4
-    new-instance v0, Lcom/estrongs/android/ui/dialog/ct;
+    new-instance v0, Lcom/estrongs/android/ui/dialog/cv;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/dialog/ct;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0b029d
+    const v2, 0x7f080441
 
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/dialog/ct;->a(I)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    const v2, 0x7f0b000b
-
-    new-instance v3, Lcom/estrongs/android/pop/app/hm;
-
-    invoke-direct {v3, p0, p1}, Lcom/estrongs/android/pop/app/hm;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;I)V
-
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/ui/dialog/ct;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/dialog/cv;->a(I)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    const v2, 0x7f0b000c
+    const v2, 0x7f080226
 
-    new-instance v3, Lcom/estrongs/android/pop/app/hl;
+    new-instance v3, Lcom/estrongs/android/pop/app/ib;
 
-    invoke-direct {v3, p0}, Lcom/estrongs/android/pop/app/hl;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v3, p0, p1}, Lcom/estrongs/android/pop/app/ib;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;I)V
 
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/ui/dialog/ct;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/ui/dialog/cv;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
+
+    move-result-object v0
+
+    new-instance v2, Lcom/estrongs/android/pop/app/ia;
+
+    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/ia;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+
+    invoke-virtual {v0, v7, v2}, Lcom/estrongs/android/ui/dialog/cv;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v2
 
     :try_start_1
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -2568,7 +2578,7 @@
     :goto_2
     if-nez v0, :cond_1
 
-    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
@@ -2577,13 +2587,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V
-
-    const v1, 0x7f0a02bb
+    const v1, 0x7f0e0509
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2591,13 +2595,21 @@
 
     invoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {v2, v0}, Lcom/estrongs/android/ui/dialog/ct;->a(Landroid/view/View;)Lcom/estrongs/android/ui/dialog/ct;
+    const v1, 0x7f0e050c
 
-    invoke-virtual {v2}, Lcom/estrongs/android/ui/dialog/ct;->b()Lcom/estrongs/android/ui/dialog/cg;
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-virtual {v2, v0}, Lcom/estrongs/android/ui/dialog/cv;->a(Landroid/view/View;)Lcom/estrongs/android/ui/dialog/cv;
+
+    invoke-virtual {v2}, Lcom/estrongs/android/ui/dialog/cv;->b()Lcom/estrongs/android/ui/dialog/ci;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->getWindow()Landroid/view/Window;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ci;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
@@ -2613,42 +2625,40 @@
     goto :goto_2
 
     :pswitch_5
-    new-instance v0, Lcom/estrongs/android/ui/dialog/ct;
+    new-instance v0, Lcom/estrongs/android/ui/dialog/cv;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/dialog/ct;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0b0238
+    const v2, 0x7f080394
 
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/dialog/ct;->a(I)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    const v2, 0x7f0b000b
-
-    new-instance v3, Lcom/estrongs/android/pop/app/ho;
-
-    invoke-direct {v3, p0, p1}, Lcom/estrongs/android/pop/app/ho;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;I)V
-
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/ui/dialog/ct;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/dialog/cv;->a(I)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    const v2, 0x7f0b000c
+    const v2, 0x7f080226
 
-    new-instance v3, Lcom/estrongs/android/pop/app/hn;
+    new-instance v3, Lcom/estrongs/android/pop/app/id;
 
-    invoke-direct {v3, p0}, Lcom/estrongs/android/pop/app/hn;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-direct {v3, p0, p1}, Lcom/estrongs/android/pop/app/id;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;I)V
 
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/ui/dialog/ct;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/ui/dialog/cv;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
+
+    move-result-object v0
+
+    new-instance v2, Lcom/estrongs/android/pop/app/ic;
+
+    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/ic;-><init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+
+    invoke-virtual {v0, v7, v2}, Lcom/estrongs/android/ui/dialog/cv;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v2
 
     :try_start_2
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
@@ -2657,7 +2667,7 @@
     :goto_3
     if-nez v0, :cond_2
 
-    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
@@ -2666,7 +2676,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a02bb
+    const v1, 0x7f0e050c
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2674,13 +2684,7 @@
 
     invoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {v0, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V
-
-    const v1, 0x7f0a02bf
+    const v1, 0x7f0e0509
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2688,13 +2692,21 @@
 
     invoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {v2, v0}, Lcom/estrongs/android/ui/dialog/ct;->a(Landroid/view/View;)Lcom/estrongs/android/ui/dialog/ct;
+    const v1, 0x7f0e0510
 
-    invoke-virtual {v2}, Lcom/estrongs/android/ui/dialog/ct;->b()Lcom/estrongs/android/ui/dialog/cg;
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-virtual {v2, v0}, Lcom/estrongs/android/ui/dialog/cv;->a(Landroid/view/View;)Lcom/estrongs/android/ui/dialog/cv;
+
+    invoke-virtual {v2}, Lcom/estrongs/android/ui/dialog/cv;->b()Lcom/estrongs/android/ui/dialog/ci;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->getWindow()Landroid/view/Window;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ci;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
@@ -2774,7 +2786,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f02021a
+    const v4, 0x7f02038d
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2806,7 +2818,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f020218
+    const v1, 0x7f02038b
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setBackgroundDrawableResource(I)V
 
@@ -2821,7 +2833,7 @@
 .method protected onPrepareDialog(ILandroid/app/Dialog;)V
     .locals 5
 
-    const v4, 0x7f0a0191
+    const v4, 0x7f0e034b
 
     const/16 v3, 0x8
 
@@ -2832,7 +2844,7 @@
     return-void
 
     :pswitch_1
-    const v0, 0x7f0a02bb
+    const v0, 0x7f0e050c
 
     invoke-virtual {p2, v0}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
@@ -2840,7 +2852,7 @@
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f0a02be
+    const v0, 0x7f0e050f
 
     invoke-virtual {p2, v0}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
@@ -2852,7 +2864,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a02ba
+    const v0, 0x7f0e050b
 
     invoke-virtual {p2, v0}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
@@ -2864,7 +2876,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a02c0
+    const v0, 0x7f0e0511
 
     invoke-virtual {p2, v0}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
@@ -2876,7 +2888,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a02b9
+    const v0, 0x7f0e050a
 
     invoke-virtual {p2, v0}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
@@ -2888,7 +2900,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v2, 0x7f0b02a2
+    const v2, 0x7f080440
 
     invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -2932,7 +2944,7 @@
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
     :goto_1
-    const v0, 0x7f0a0193
+    const v0, 0x7f0e034d
 
     invoke-virtual {p2, v0}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
@@ -2944,7 +2956,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v2, 0x7f0b02a3
+    const v2, 0x7f08043d
 
     invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -2979,7 +2991,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v2, 0x7f0b02a1
+    const v2, 0x7f08043e
 
     invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->getText(I)Ljava/lang/CharSequence;
 

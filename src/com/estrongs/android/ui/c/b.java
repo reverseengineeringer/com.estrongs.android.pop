@@ -1,26 +1,39 @@
 package com.estrongs.android.ui.c;
 
-import android.app.Activity;
-import android.os.Looper;
-import com.estrongs.android.util.bb;
+import com.estrongs.android.k.d;
+import com.estrongs.android.pop.app.unlock.y;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 class b
-  implements bb
+  implements y
 {
   b(a parama) {}
   
-  public void a()
+  public void a(String paramString)
   {
-    if (a.a(a) != null)
+    Iterator localIterator = a.a(a).keySet().iterator();
+    d locald;
+    do
     {
-      if (Thread.currentThread() == Looper.getMainLooper().getThread()) {
-        a.a(a).l();
+      if (!localIterator.hasNext()) {
+        break;
       }
-    }
-    else {
+      locald = (d)localIterator.next();
+    } while (!paramString.equals(locald.g()));
+    for (paramString = locald;; paramString = null)
+    {
+      if (paramString != null)
+      {
+        int i = a.b(a).indexOf(a.a(a).get(paramString));
+        if (i != -1) {
+          a.notifyItemChanged(i);
+        }
+      }
       return;
     }
-    a.b(a).runOnUiThread(new c(this));
   }
 }
 

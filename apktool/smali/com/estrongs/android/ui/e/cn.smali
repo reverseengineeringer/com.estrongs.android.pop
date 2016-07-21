@@ -1,102 +1,90 @@
-.class public Lcom/estrongs/android/ui/e/cn;
+.class Lcom/estrongs/android/ui/e/cn;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/view/View$OnLongClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/e/ck;
-
-.field private b:Landroid/view/View;
-
-.field private c:Landroid/widget/Button;
+.field final synthetic a:Lcom/estrongs/android/ui/e/cl;
 
 
 # direct methods
-.method public constructor <init>(Lcom/estrongs/android/ui/e/ck;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/cl;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/cn;->a:Lcom/estrongs/android/ui/e/ck;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/cn;->a:Lcom/estrongs/android/ui/e/cl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/estrongs/android/ui/e/cn;Landroid/view/View;)Landroid/view/View;
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/cn;->b:Landroid/view/View;
-
-    return-object p1
-.end method
-
-.method static synthetic a(Lcom/estrongs/android/ui/e/cn;)Landroid/widget/Button;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/cn;->c:Landroid/widget/Button;
-
-    return-object v0
-.end method
-
-.method static synthetic a(Lcom/estrongs/android/ui/e/cn;Landroid/widget/Button;)Landroid/widget/Button;
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/cn;->c:Landroid/widget/Button;
-
-    return-object p1
-.end method
-
-.method static synthetic b(Lcom/estrongs/android/ui/e/cn;)Landroid/view/View;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/cn;->b:Landroid/view/View;
-
-    return-object v0
-.end method
-
 
 # virtual methods
-.method public a()V
+.method public onLongClick(Landroid/view/View;)Z
     .locals 3
+
+    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/e/cn;->a:Lcom/estrongs/android/ui/e/cl;
+
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/e/cl;->b(I)Lcom/estrongs/android/view/a/a;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/estrongs/android/view/a/a;->d()Lcom/estrongs/android/view/a/e;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {v1}, Lcom/estrongs/android/view/a/a;->getTitle()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/cn;->a:Lcom/estrongs/android/ui/e/cl;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/cl;->b(Lcom/estrongs/android/ui/e/cl;)Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v1}, Lcom/estrongs/android/view/a/a;->a()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_0
+    iget-object v1, p0, Lcom/estrongs/android/ui/e/cn;->a:Lcom/estrongs/android/ui/e/cl;
+
+    invoke-static {v1}, Lcom/estrongs/android/ui/e/cl;->b(Lcom/estrongs/android/ui/e/cl;)Landroid/content/Context;
+
+    move-result-object v1
 
     const/4 v2, 0x0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/cn;->b:Landroid/view/View;
+    invoke-static {v1, v0, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
-    const/4 v1, 0x0
+    :goto_0
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    return v0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/cn;->c:Landroid/widget/Button;
+    :cond_1
+    invoke-virtual {v1}, Lcom/estrongs/android/view/a/a;->e()V
 
-    invoke-virtual {v0, v2, v2, v2, v2}, Landroid/widget/Button;->setCompoundDrawables(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/cn;->c:Landroid/widget/Button;
-
-    invoke-virtual {v0, v2}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
-.method public b()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/cn;->b:Landroid/view/View;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    return-void
-.end method
-
-.method public c()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/cn;->b:Landroid/view/View;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    return-void
+    goto :goto_0
 .end method

@@ -1,50 +1,27 @@
 package com.estrongs.android.pop.app;
 
-import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.Intent;
-import android.util.Log;
-import com.estrongs.android.pop.app.a.ao;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.pop.utils.w;
 
-class j
-  extends BroadcastReceiver
+final class j
+  implements DialogInterface.OnClickListener
 {
-  j(AudioPlayerService paramAudioPlayerService) {}
+  j(Context paramContext) {}
   
-  public void onReceive(Context paramContext, Intent paramIntent)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    paramContext = paramIntent.getAction();
-    Log.e("test", "receive notification action : " + paramContext);
-    if ("com.estrongs.action.audio.control.preview".equals(paramContext)) {
-      a.v();
-    }
-    do
+    paramDialogInterface.dismiss();
+    try
     {
+      w.a(a, "com.estrongs.locker", "pname");
       return;
-      if ("com.estrongs.action.audio.control.play".equals(paramContext))
-      {
-        a.y();
-        return;
-      }
-      if ("com.estrongs.action.audio.control.next".equals(paramContext))
-      {
-        a.x();
-        return;
-      }
-      if ("com.estrongs.action.audio.control.close".equals(paramContext))
-      {
-        a.o();
-        a.z();
-        ao.k();
-        return;
-      }
-      if ("com.android.music.musicservicecommand.pause".endsWith(paramContext))
-      {
-        a.u();
-        return;
-      }
-    } while ((!"com.android.music.musicservicecommand".endsWith(paramContext)) || (!"pause".equals(paramIntent.getStringExtra("command"))));
-    a.u();
+    }
+    catch (Exception paramDialogInterface)
+    {
+      paramDialogInterface.printStackTrace();
+    }
   }
 }
 

@@ -1,99 +1,131 @@
-.class Lcom/estrongs/android/ui/e/hy;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
+.class public Lcom/estrongs/android/ui/e/hy;
+.super Lcom/estrongs/android/ui/e/f;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/e/hl;
+.field private k:Lcom/estrongs/android/pop/app/PopAudioPlayer;
+
+.field private l:Lcom/estrongs/android/ui/e/iq;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/hl;)V
+.method public constructor <init>(Landroid/app/Activity;ZLandroid/widget/LinearLayout;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/hy;->a:Lcom/estrongs/android/ui/e/hl;
+    invoke-direct {p0, p1, p2}, Lcom/estrongs/android/ui/e/f;-><init>(Landroid/content/Context;Z)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Lcom/estrongs/android/ui/e/hy;->k()V
+
+    return-void
+.end method
+
+.method private m()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/hy;->l:Lcom/estrongs/android/ui/e/iq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/e/iq;->d()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 3
+.method public f(I)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/hy;->a:Lcom/estrongs/android/ui/e/hl;
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/hy;->l:Lcom/estrongs/android/ui/e/iq;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/hl;->a(Lcom/estrongs/android/ui/e/hl;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
+    invoke-virtual {v0, p1}, Lcom/estrongs/android/ui/e/iq;->a(I)V
 
-    move-result-object v0
+    invoke-virtual {p0}, Lcom/estrongs/android/ui/e/hy;->l()V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v()Ljava/util/List;
+    return-void
+.end method
 
-    move-result-object v0
+.method protected h()V
+    .locals 2
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/hy;->b:Landroid/content/Context;
 
-    move-result v1
+    instance-of v0, v0, Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
-    if-lez v1, :cond_1
+    if-eqz v0, :cond_0
 
-    const/4 v1, 0x0
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/hy;->b:Landroid/content/Context;
 
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    check-cast v0, Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
-    move-result-object v0
+    iput-object v0, p0, Lcom/estrongs/android/ui/e/hy;->k:Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
-    check-cast v0, Lcom/estrongs/android/pop/app/a/ak;
+    new-instance v0, Lcom/estrongs/android/ui/e/iq;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/a/ak;->b:Ljava/lang/String;
+    iget-object v1, p0, Lcom/estrongs/android/ui/e/hy;->k:Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->ba(Ljava/lang/String;)Z
+    invoke-direct {v0, v1}, Lcom/estrongs/android/ui/e/iq;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
 
-    move-result v1
+    iput-object v0, p0, Lcom/estrongs/android/ui/e/hy;->l:Lcom/estrongs/android/ui/e/iq;
 
-    if-nez v1, :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/hy;->l:Lcom/estrongs/android/ui/e/iq;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bq(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/e/iq;->e()V
 
-    move-result-object v0
+    return-void
 
     :cond_0
-    new-instance v1, Ljava/util/ArrayList;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+    const-string v1, "Need PopAudioPlayer as the first argument"
 
-    invoke-static {}, Lcom/estrongs/fs/d;->a()Lcom/estrongs/fs/d;
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    move-result-object v2
+    throw v0
+.end method
 
-    invoke-virtual {v2, v0}, Lcom/estrongs/fs/d;->j(Ljava/lang/String;)Lcom/estrongs/fs/h;
+.method protected i()Ljava/util/Map;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/estrongs/android/view/a/a;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/hy;->l:Lcom/estrongs/android/ui/e/iq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/e/iq;->c()Ljava/util/Map;
 
     move-result-object v0
 
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    return-object v0
+.end method
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/hy;->a:Lcom/estrongs/android/ui/e/hl;
+.method protected k()V
+    .locals 1
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/hl;->a(Lcom/estrongs/android/ui/e/hl;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
+    invoke-direct {p0}, Lcom/estrongs/android/ui/e/hy;->m()V
+
+    const v0, 0x7f0d0159
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/e/hy;->e(I)V
+
+    return-void
+.end method
+
+.method public l()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/hy;->l:Lcom/estrongs/android/ui/e/iq;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/e/iq;->a()[Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/pop/utils/aj;->b(Lcom/estrongs/android/pop/esclasses/ESActivity;Ljava/util/List;)V
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/e/hy;->a([Ljava/lang/String;)V
 
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/hy;->a:Lcom/estrongs/android/ui/e/hl;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/hl;->a(Lcom/estrongs/android/ui/e/hl;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->u()V
-
-    const/4 v0, 0x1
-
-    return v0
+    return-void
 .end method

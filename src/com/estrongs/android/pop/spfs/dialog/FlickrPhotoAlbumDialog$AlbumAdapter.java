@@ -47,12 +47,12 @@ class FlickrPhotoAlbumDialog$AlbumAdapter
   {
     paramViewGroup = paramView;
     if (paramView == null) {
-      paramViewGroup = this$0.factory.inflate(2130903130, null);
+      paramViewGroup = this$0.factory.inflate(2130903235, null);
     }
-    ((TextView)paramViewGroup.findViewById(2131362309)).setText(access$100this$0).get(paramInt)).name);
-    paramView = (CheckBox)paramViewGroup.findViewById(2131362310);
+    ((TextView)paramViewGroup.findViewById(2131624915)).setText(access$100this$0).get(paramInt)).name);
+    paramView = (CheckBox)paramViewGroup.findViewById(2131624916);
     paramView.setOnCheckedChangeListener(new FlickrPhotoAlbumDialog.AlbumAdapter.1(this, paramInt));
-    RadioButton localRadioButton = (RadioButton)paramViewGroup.findViewById(2131362311);
+    RadioButton localRadioButton = (RadioButton)paramViewGroup.findViewById(2131624917);
     localRadioButton.setOnCheckedChangeListener(new FlickrPhotoAlbumDialog.AlbumAdapter.2(this, paramInt));
     if (FlickrPhotoAlbumDialog.access$500(this$0))
     {

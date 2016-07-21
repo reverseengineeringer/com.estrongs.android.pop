@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/io/archive/e;
+.implements Lcom/estrongs/io/archive/f;
 
 
 # instance fields

@@ -1,16 +1,19 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
+import android.preference.Preference;
+import android.preference.Preference.OnPreferenceClickListener;
 
 class hq
-  implements DialogInterface.OnClickListener
+  implements Preference.OnPreferenceClickListener
 {
-  hq(hp paramhp) {}
+  hq(PopPreferenceActivity paramPopPreferenceActivity) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public boolean onPreferenceClick(Preference paramPreference)
   {
-    paramDialogInterface.dismiss();
+    paramPreference = new Intent(a, DefaultWindowSetting.class);
+    a.startActivity(paramPreference);
+    return true;
   }
 }
 

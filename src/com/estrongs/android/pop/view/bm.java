@@ -1,60 +1,61 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.ui.c.b.t;
-import com.estrongs.android.ui.navigation.n;
+import android.app.Activity;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.ui.dialog.VerifyPasswordDialog;
+import com.estrongs.android.ui.dialog.VerifyPasswordDialog.DialogType;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.TypedMap;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.view.cr;
+import com.estrongs.android.view.dw;
+import com.estrongs.fs.h;
+import com.estrongs.fs.impl.usb.e;
 import com.estrongs.fs.impl.usb.g;
-import java.util.ArrayList;
-import java.util.Iterator;
+import com.estrongs.fs.util.a.a;
 
 class bm
-  implements Runnable
+  extends cr
 {
-  bm(bl parambl, g[] paramArrayOfg, boolean paramBoolean, ArrayList paramArrayList1, ArrayList paramArrayList2) {}
-  
-  public void run()
+  bm(FileExplorerActivity paramFileExplorerActivity, Activity paramActivity, a parama, dw paramdw)
   {
-    n localn = e.a.O();
-    Object localObject1;
-    if ((a != null) && (localn != null))
+    super(paramActivity, parama, paramdw);
+  }
+  
+  private void a(h paramh)
+  {
+    super.c(paramh);
+  }
+  
+  protected void a(h paramh, TypedMap paramTypedMap)
+  {
+    if ((ap.bm(paramh.getAbsolutePath())) && (!ap.br(paramh.getAbsolutePath()))) {}
+    for (int i = 1; (i != 0) && (FexApplication.a().h()); i = 0)
     {
-      localObject1 = a;
-      int j = localObject1.length;
-      int i = 0;
-      if (i < j)
+      paramTypedMap = VerifyPasswordDialog.DialogType.NETWORK;
+      paramTypedMap = VerifyPasswordDialog.a(a, paramTypedMap);
+      paramTypedMap.a(new bn(this, paramh));
+      paramTypedMap.b();
+      return;
+    }
+    if (paramh.getAbsolutePath().startsWith("usb://"))
+    {
+      if (e.b() == null) {
+        e.a();
+      }
+      g localg = e.b(paramh.getAbsolutePath());
+      if (localg == null)
       {
-        Object localObject2 = localObject1[i];
-        if (b) {
-          localn.b(((g)localObject2).j());
-        }
-        for (;;)
-        {
-          i += 1;
-          break;
-          if (!((g)localObject2).g()) {
-            localn.a(((g)localObject2).j(), ((g)localObject2).k());
-          }
-        }
+        ak.a(a, k(2131231465), 0);
+        return;
+      }
+      if (!localg.b())
+      {
+        localg.a(new bo(this, localg, paramh));
+        return;
       }
     }
-    if ((c != null) && (d != null))
-    {
-      if (localn != null)
-      {
-        localObject1 = c.iterator();
-        while (((Iterator)localObject1).hasNext()) {
-          localn.b((String)((Iterator)localObject1).next());
-        }
-        localObject1 = d.iterator();
-        while (((Iterator)localObject1).hasNext()) {
-          localn.a((String)((Iterator)localObject1).next());
-        }
-      }
-      if (FileExplorerActivity.F(e.a) != null)
-      {
-        FileExplorerActivity.F(e.a).b(c);
-        FileExplorerActivity.F(e.a).a(d);
-      }
-    }
+    super.a(paramh, paramTypedMap);
   }
 }
 

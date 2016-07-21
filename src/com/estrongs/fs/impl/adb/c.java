@@ -1,7 +1,6 @@
 package com.estrongs.fs.impl.adb;
 
 import android.content.Context;
-import android.util.Log;
 import com.estrongs.a.q;
 import com.estrongs.android.exception.GeneralException;
 import com.estrongs.android.pop.FexApplication;
@@ -9,16 +8,17 @@ import com.estrongs.android.pop.ad;
 import com.estrongs.android.pop.netfs.utils.HttpUtils;
 import com.estrongs.android.pop.netfs.utils.TypeUtils;
 import com.estrongs.android.util.TypedMap;
-import com.estrongs.android.util.ac;
-import com.estrongs.android.util.ak;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.util.ah;
+import com.estrongs.android.util.an;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bk;
+import com.estrongs.android.util.l;
 import com.estrongs.fs.FileSystemException;
 import com.estrongs.fs.h;
 import com.estrongs.fs.i;
-import com.estrongs.fs.k;
-import com.estrongs.fs.m;
-import com.estrongs.fs.n;
+import com.estrongs.fs.u;
+import com.estrongs.fs.w;
+import com.estrongs.fs.x;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -43,7 +43,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class c
-  implements k
+  implements u
 {
   private static final String a = c.class.getSimpleName();
   private static HashMap<String, com.a.a.b> b = new HashMap();
@@ -72,7 +72,7 @@ public class c
       {
         paramString = new String(paramb.d());
         if (e) {
-          Log.d(a, "########install result " + paramString);
+          l.b(a, "########install result " + paramString);
         }
         paramBoolean = paramString.startsWith("Success");
         if (!paramBoolean) {
@@ -110,7 +110,7 @@ public class c
     int j = 0;
     com.a.a.b localb = o(paramString2);
     if ((localb == null) || (!TypeUtils.isAndroidApp(paramString1))) {
-      Log.e(a, "installApk failed, get connection null");
+      l.e(a, "installApk failed, get connection null");
     }
     int i;
     for (;;)
@@ -121,7 +121,7 @@ public class c
       {
         Object localObject1;
         Object localObject2;
-        if ((am.O(paramString1)) && (am.c(paramString1, paramString2)))
+        if ((ap.Q(paramString1)) && (ap.c(paramString1, paramString2)))
         {
           long l = com.estrongs.fs.d.a().d(paramString1);
           localObject1 = b(paramString2, false);
@@ -153,7 +153,7 @@ public class c
           localObject1 = ByteBuffer.allocate(8).order(ByteOrder.LITTLE_ENDIAN);
           ((ByteBuffer)localObject1).put("SEND".getBytes("UTF-8"));
           localObject2 = localb.a("sync:");
-          String str = URLEncoder.encode("/data/local/tmp/" + am.d(paramString1)).replace("%2F", "/").replace("+", "%20");
+          String str = URLEncoder.encode("/data/local/tmp/" + ap.d(paramString1)).replace("%2F", "/").replace("+", "%20");
           ((ByteBuffer)localObject1).putInt(str.length() + 6);
           ((com.a.a.g)localObject2).b(((ByteBuffer)localObject1).array());
           if (a((com.a.a.g)localObject2, paramString1, str))
@@ -175,7 +175,7 @@ public class c
               if ((locala instanceof com.estrongs.fs.b.a))
               {
                 ((com.a.a.g)localObject2).close();
-                locala.setTaskResult(10000, new q(FexApplication.a().getString(2131427700), null));
+                locala.setTaskResult(10000, new q(FexApplication.a().getString(2131230969), null));
                 return 104;
               }
             }
@@ -185,7 +185,7 @@ public class c
       catch (Exception paramString1)
       {
         if ((locala != null) && ((locala instanceof com.estrongs.fs.b.a))) {
-          locala.setTaskResult(10000, new q(FexApplication.a().getString(2131427700), paramString1));
+          locala.setTaskResult(10000, new q(FexApplication.a().getString(2131230969), paramString1));
         }
         paramString1.printStackTrace();
         return 104;
@@ -219,13 +219,13 @@ public class c
     default: 
       return null;
     case 100: 
-      return paramContext.getString(2131428736);
+      return paramContext.getString(2131230965);
     case 101: 
-      return paramContext.getString(2131428737);
+      return paramContext.getString(2131230966);
     case 102: 
-      return paramContext.getString(2131428738);
+      return paramContext.getString(2131230967);
     }
-    return paramContext.getString(2131428739);
+    return paramContext.getString(2131230968);
   }
   
   public static String a(e parame)
@@ -256,10 +256,10 @@ public class c
       return null;
     }
     String str2 = parama.getAbsolutePath();
-    String str1 = am.a(str2, 19);
-    parama = am.z(str2);
-    String str3 = am.A(str2);
-    str2 = am.a(str2);
+    String str1 = ap.a(str2, 19);
+    parama = ap.B(str2);
+    String str3 = ap.C(str2);
+    str2 = ap.a(str2);
     StringBuilder localStringBuilder = new StringBuilder().append("adb://");
     if (parama != null) {}
     for (parama = parama + ":" + str3 + "@";; parama = "") {
@@ -269,10 +269,10 @@ public class c
   
   public static String a(String paramString, int paramInt)
   {
-    if ((paramString == null) || (!am.K(paramString))) {
+    if ((paramString == null) || (!ap.M(paramString))) {
       return null;
     }
-    paramString = am.b(paramString);
+    paramString = ap.b(paramString);
     switch (paramInt)
     {
     default: 
@@ -297,7 +297,7 @@ public class c
       paramString.setEntity(paramHttpEntity);
       paramString.setHeader("Accept", "application/json");
       paramString.setHeader("Content-type", "application/json");
-      paramString = HttpUtils.readResponse(ac.a(null).execute(paramString));
+      paramString = HttpUtils.readResponse(ah.a(null).execute(paramString));
       return paramString;
     }
     catch (Exception paramString)
@@ -331,12 +331,12 @@ public class c
   {
     bool1 = true;
     if (paramb == null) {
-      Log.e(a, "installApk failed, get connection null");
+      l.e(a, "installApk failed, get connection null");
     }
     do
     {
       return false;
-      paramb = paramb.a("shell:am start -n com.estrongs.android.pop/.app.AdbControllerActivity -e adbRemoteIp " + ak.a() + " -e adbControlMode " + paramString);
+      paramb = paramb.a("shell:am start -n com.estrongs.android.pop/.app.AdbControllerActivity -e adbRemoteIp " + an.a() + " -e adbControlMode " + paramString);
     } while (paramb.f());
     try
     {
@@ -344,7 +344,7 @@ public class c
       {
         paramString = new String(paramb.e());
         if (e) {
-          Log.d(a, "############# invokeRemoteAdbController ret" + new String(paramString));
+          l.b(a, "############# invokeRemoteAdbController ret" + new String(paramString));
         }
         boolean bool2 = paramString.contains("Error");
         if (bool2) {
@@ -367,7 +367,7 @@ public class c
     InputStream localInputStream = com.estrongs.fs.d.a().e(paramString1);
     if (localInputStream == null)
     {
-      Log.e(a, "sendFile error fail to get file input stream");
+      l.e(a, "sendFile error fail to get file input stream");
       return false;
     }
     int k = 1;
@@ -381,7 +381,7 @@ public class c
     int n;
     int i;
     long l2;
-    label263:
+    label262:
     do
     {
       long l4;
@@ -395,7 +395,7 @@ public class c
           paramString1.putInt((int)System.currentTimeMillis());
           paramg.b(paramString1.array());
           if (!new String(paramg.d(), "UTF-8").startsWith("OKAY")) {
-            break label560;
+            break label559;
           }
           if ((locala != null) && ((locala instanceof com.estrongs.fs.b.a))) {
             locala.sendMessage(9, new Object[] { Long.valueOf(l5), Long.valueOf(l5) });
@@ -466,10 +466,10 @@ public class c
           }
         }
         l2 = l1;
-        break label263;
+        break label262;
         m = 65536;
         break;
-        label560:
+        label559:
         return false;
       }
       k = 0;
@@ -523,7 +523,7 @@ public class c
         return bool1;
       }
       if (e) {
-        Log.d(a, "adb list try count " + i);
+        l.b(a, "adb list try count " + i);
       }
       try
       {
@@ -543,7 +543,7 @@ public class c
     boolean bool1 = true;
     Object localObject = o(paramString1);
     if ((localObject == null) || (paramString2 == null)) {
-      Log.e(a, "uninstallApk failed, get connection or package name null");
+      l.e(a, "uninstallApk failed, get connection or package name null");
     }
     com.estrongs.a.a locala;
     do
@@ -559,7 +559,7 @@ public class c
           {
             localObject = new String(paramString2.d());
             if (e) {
-              Log.d(a, "########uninstall result " + (String)localObject);
+              l.b(a, "########uninstall result " + (String)localObject);
             }
             bool2 = ((String)localObject).startsWith("Success");
             if (!bool2) {
@@ -594,13 +594,13 @@ public class c
         }
       }
     } while ((locala == null) || (!(locala instanceof com.estrongs.fs.b.a)));
-    locala.setTaskResult(10000, new q(FexApplication.a().getString(2131427706), paramString1));
+    locala.setTaskResult(10000, new q(FexApplication.a().getString(2131230975), paramString1));
     return false;
   }
   
   public static f b(String paramString, boolean paramBoolean)
   {
-    String str = am.b(paramString);
+    String str = ap.b(paramString);
     if ((paramBoolean) || (!c.containsKey(str)))
     {
       try
@@ -671,7 +671,7 @@ public class c
   
   public static boolean b()
   {
-    return !bd.p();
+    return !bk.p();
   }
   
   public static boolean b(String paramString, int paramInt)
@@ -689,12 +689,12 @@ public class c
   
   private static com.a.a.d c()
   {
-    Object localObject = new File(com.estrongs.android.pop.a.q);
+    Object localObject = new File(com.estrongs.android.pop.a.t);
     if (!((File)localObject).exists()) {
       ((File)localObject).mkdirs();
     }
-    localObject = new File(com.estrongs.android.pop.a.q + "/KEY_PUBLIC");
-    File localFile = new File(com.estrongs.android.pop.a.q + "/KEY_PRIVATE");
+    localObject = new File(com.estrongs.android.pop.a.t + "/KEY_PUBLIC");
+    File localFile = new File(com.estrongs.android.pop.a.t + "/KEY_PRIVATE");
     if ((((File)localObject).exists()) && (localFile.exists())) {
       try
       {
@@ -748,7 +748,7 @@ public class c
       paramString.setEntity(paramHttpEntity);
       paramString.setHeader("Accept", "application/octet-stream");
       paramString.setHeader("Content-type", "application/json");
-      paramHttpEntity = ac.a(null).execute(paramString).getEntity();
+      paramHttpEntity = ah.a(null).execute(paramString).getEntity();
       paramString = (String)localObject;
       if (paramHttpEntity != null) {
         paramString = paramHttpEntity.getContent();
@@ -764,7 +764,7 @@ public class c
   
   public static boolean e(String paramString)
   {
-    if (!am.O(paramString)) {
+    if (!ap.Q(paramString)) {
       return false;
     }
     try
@@ -782,7 +782,7 @@ public class c
   {
     int j = 0;
     int i;
-    if (!am.M(paramString)) {
+    if (!ap.O(paramString)) {
       i = -1;
     }
     do
@@ -834,7 +834,7 @@ public class c
   
   public static String j(String paramString)
   {
-    if (!am.O(paramString)) {
+    if (!ap.Q(paramString)) {
       return null;
     }
     return paramString.substring(0, paramString.indexOf("/files") + 1);
@@ -845,7 +845,7 @@ public class c
     h localh = com.estrongs.fs.a.b.a().h(paramString);
     if (localh == null)
     {
-      Log.e(a, " fail to get file obj");
+      l.e(a, " fail to get file obj");
       return null;
     }
     paramString = new com.estrongs.fs.c(paramString);
@@ -859,12 +859,12 @@ public class c
   
   private static String l(String paramString)
   {
-    return am.a(paramString, 36);
+    return ap.a(paramString, 36);
   }
   
   private static String m(String paramString)
   {
-    String str2 = am.a(paramString, 36);
+    String str2 = ap.a(paramString, 36);
     if (str2 == null) {
       return null;
     }
@@ -872,9 +872,9 @@ public class c
     if (str2.startsWith("/files")) {
       str1 = str2.substring("/files".length());
     }
-    String str3 = am.y(paramString);
-    String str4 = am.A(paramString);
-    str2 = am.a(paramString);
+    String str3 = ap.A(paramString);
+    String str4 = ap.C(paramString);
+    str2 = ap.a(paramString);
     paramString = b(paramString, false);
     int i = 3721;
     if (paramString != null) {
@@ -889,15 +889,15 @@ public class c
   
   private static String n(String paramString)
   {
-    return "http://" + am.a(paramString) + ":" + 59777;
+    return "http://" + ap.a(paramString) + ":" + 59777;
   }
   
   private static com.a.a.b o(String paramString)
   {
-    String str = am.b(paramString);
+    String str = ap.b(paramString);
     if (str == null)
     {
-      Log.e(a, "getOrCreateConnection error");
+      l.e(a, "getOrCreateConnection error");
       paramString = null;
     }
     Object localObject;
@@ -925,7 +925,7 @@ public class c
       com.a.a.d locald = c();
       if (locald == null)
       {
-        Log.e(a, "fail to getAdbCrypto()");
+        l.e(a, "fail to getAdbCrypto()");
         try
         {
           ((Socket)localObject).close();
@@ -984,7 +984,7 @@ public class c
   
   public OutputStream a(String paramString, TypedMap paramTypedMap)
   {
-    if (!am.O(paramString)) {
+    if (!ap.Q(paramString)) {
       return null;
     }
     if (paramTypedMap != null) {}
@@ -999,7 +999,7 @@ public class c
   
   public OutputStream a(String paramString, boolean paramBoolean)
   {
-    if (am.O(paramString)) {
+    if (ap.Q(paramString)) {
       return com.estrongs.old.fs.impl.a.c.b().j(m(paramString));
     }
     return null;
@@ -1012,7 +1012,7 @@ public class c
     Object localObject1 = l(paramTypedMap);
     Object localObject2 = com.estrongs.a.a.getCurrentTask();
     ArrayList localArrayList = new ArrayList();
-    paramh = am.a(paramTypedMap);
+    paramh = ap.a(paramTypedMap);
     if (((String)localObject1).equals("/"))
     {
       boolean bool;
@@ -1042,7 +1042,7 @@ public class c
       }
       if (!a(paramh, 59777, 10))
       {
-        Log.e(a, "Adb port " + 59777 + " can not be connected.");
+        l.e(a, "Adb port " + 59777 + " can not be connected.");
         return null;
       }
       b(paramTypedMap, true);
@@ -1054,24 +1054,24 @@ public class c
       }
       localObject1 = paramh + "/appsuser";
       localObject2 = paramh + "/files";
-      parami = ad.a(FexApplication.a()).R((String)localObject1);
+      parami = ad.a(FexApplication.a()).Q((String)localObject1);
       paramh = parami;
       if (parami == null) {
-        paramh = FexApplication.a().getString(2131428433);
+        paramh = FexApplication.a().getString(2131232487);
       }
-      paramTypedMap = ad.a(FexApplication.a()).R((String)localObject2);
+      paramTypedMap = ad.a(FexApplication.a()).Q((String)localObject2);
       parami = paramTypedMap;
       if (paramTypedMap == null) {
-        parami = FexApplication.a().getString(2131428012);
+        parami = FexApplication.a().getString(2131232462);
       }
-      paramh = new n((String)localObject1, m.P, paramh);
-      parami = new n((String)localObject2, m.P, parami);
+      paramh = new x((String)localObject1, w.O, paramh);
+      parami = new x((String)localObject2, w.O, parami);
       localArrayList.add(paramh);
       localArrayList.add(parami);
       return localArrayList;
     }
     if (((String)localObject1).startsWith("/apps")) {}
-    label935:
+    label932:
     for (;;)
     {
       try
@@ -1103,20 +1103,20 @@ public class c
               b = ((JSONObject)localObject1).getString("packageName");
               a = ((JSONObject)localObject1).getString("label");
               if ((a == null) || (b == null)) {
-                break label935;
+                break label932;
               }
               if (!a.endsWith(".apk")) {
                 a += ".apk";
               }
               f = j;
-              e = am.b(paramTypedMap);
+              e = ap.b(paramTypedMap);
               h = ((JSONObject)localObject1).getLong("mTime");
               g = ((JSONObject)localObject1).getLong("size");
               c = ((JSONObject)localObject1).getString("version");
               d = ((JSONObject)localObject1).getInt("versionCode");
               localObject1 = new a((e)localObject2);
               if ((parami == null) || (!parami.a((h)localObject1))) {
-                break label935;
+                break label932;
               }
               localArrayList.add(localObject1);
             }
@@ -1137,12 +1137,12 @@ public class c
         f localf = b(paramTypedMap, false);
         if (localf == null)
         {
-          Log.e(a, "Fail to get device info.");
+          l.e(a, "Fail to get device info.");
           return null;
         }
         if (!a(paramh, c, 10))
         {
-          Log.e(a, "Ftp port " + c + " can not be connected.");
+          l.e(a, "Ftp port " + c + " can not be connected.");
           return null;
         }
         m(paramTypedMap);
@@ -1179,13 +1179,13 @@ public class c
   public boolean a(h paramh1, h paramh2)
   {
     String str1 = paramh1.getAbsolutePath();
-    String str2 = am.d(paramh2.getAbsolutePath());
-    if ((am.N(str1)) || (am.P(str1)))
+    String str2 = ap.d(paramh2.getAbsolutePath());
+    if ((ap.P(str1)) || (ap.R(str1)))
     {
       ad.a(FexApplication.a()).j(str1, str2);
       return true;
     }
-    if (am.O(str1)) {
+    if (ap.Q(str1)) {
       return com.estrongs.old.fs.impl.a.c.b().a(m(paramh1.getAbsolutePath()), m(paramh2.getAbsolutePath()));
     }
     return false;
@@ -1225,7 +1225,7 @@ public class c
         paramString = com.estrongs.fs.a.b.a().h(paramString);
         if ((paramString == null) || (!(paramString instanceof a)))
         {
-          Log.e(a, "getInputStream fail to get file obj");
+          l.e(a, "getInputStream fail to get file obj");
           return null;
         }
         paramString = (a)paramString;
@@ -1249,7 +1249,7 @@ public class c
     paramString = o(paramString);
     if (paramString == null)
     {
-      Log.e(a, "installApk failed, get connection null");
+      l.e(a, "installApk failed, get connection null");
       throw new IOException();
     }
     String str = "shell:pm path " + FexApplication.a().getPackageName();
@@ -1282,7 +1282,7 @@ public class c
       try
       {
         if (e) {
-          Log.d(a, "########checkESInstalled result " + str);
+          l.b(a, "########checkESInstalled result " + str);
         }
         paramString.close();
         return bool1;

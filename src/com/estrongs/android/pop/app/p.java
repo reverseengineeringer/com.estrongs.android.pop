@@ -1,41 +1,25 @@
 package com.estrongs.android.pop.app;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
-import android.telephony.TelephonyManager;
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnCompletionListener;
+import com.estrongs.android.pop.app.c.k;
 
 class p
-  extends BroadcastReceiver
+  implements MediaPlayer.OnCompletionListener
 {
   p(AudioPlayerService paramAudioPlayerService) {}
   
-  public void onReceive(Context paramContext, Intent paramIntent)
+  public void onCompletion(MediaPlayer paramMediaPlayer)
   {
-    paramContext = paramIntent.getExtras().getString("state");
-    if (paramContext.equals(TelephonyManager.EXTRA_STATE_RINGING)) {
-      if ((AudioPlayerService.d(a)) && (!AudioPlayerService.e(a)))
-      {
-        a.a = true;
-        a.u();
-      }
+    if (AudioPlayerService.a(a) != null) {
+      AudioPlayerService.a(a).f(AudioPlayerService.b(a).f());
     }
-    do
+    if (!AudioPlayerService.a(a, paramMediaPlayer))
     {
-      do
-      {
-        return;
-        if (!paramContext.equals(TelephonyManager.EXTRA_STATE_OFFHOOK)) {
-          break;
-        }
-      } while ((!AudioPlayerService.d(a)) || (AudioPlayerService.e(a)));
-      a.a = true;
-      a.u();
-      return;
-    } while ((!paramContext.equals(TelephonyManager.EXTRA_STATE_IDLE)) || (!AudioPlayerService.d(a)) || (!AudioPlayerService.e(a)) || (!a.a));
-    a.a = false;
-    a.E();
+      int i = AudioPlayerService.c(a);
+      AudioPlayerService.b(a).d(i);
+      a.d(i);
+    }
   }
 }
 

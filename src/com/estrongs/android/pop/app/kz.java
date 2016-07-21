@@ -1,17 +1,21 @@
 package com.estrongs.android.pop.app;
 
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.ui.pcs.n;
+import com.estrongs.android.util.ah;
 
 class kz
-  implements n
+  extends Thread
 {
-  kz(ky paramky) {}
+  kz(ky paramky, String paramString) {}
   
-  public void a(boolean paramBoolean, String paramString1, String paramString2)
+  public void run()
   {
-    if (paramString2 != null) {
-      ad.a(a.b).ag();
+    String str = ah.a(a);
+    if (str != null) {}
+    for (;;)
+    {
+      b.a.runOnUiThread(new la(this, str));
+      return;
+      str = a;
     }
   }
 }

@@ -3,7 +3,7 @@
 
 
 # instance fields
-.field private a:Lcom/estrongs/android/pop/app/ap;
+.field private a:Lcom/estrongs/android/pop/app/at;
 
 .field private b:Landroid/widget/TextView;
 
@@ -21,10 +21,10 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/estrongs/android/pop/app/DocumentExtModifyList;)Lcom/estrongs/android/pop/app/ap;
+.method static synthetic a(Lcom/estrongs/android/pop/app/DocumentExtModifyList;)Lcom/estrongs/android/pop/app/at;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->a:Lcom/estrongs/android/pop/app/ap;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->a:Lcom/estrongs/android/pop/app/at;
 
     return-object v0
 .end method
@@ -32,7 +32,7 @@
 .method private a()V
     .locals 2
 
-    const v0, 0x7f0a0024
+    const v0, 0x7f0e0187
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->findViewById(I)Landroid/view/View;
 
@@ -52,15 +52,15 @@
 
     invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/ad;->g(Ljava/util/List;)V
 
-    new-instance v1, Lcom/estrongs/android/pop/app/ap;
+    new-instance v1, Lcom/estrongs/android/pop/app/at;
 
-    invoke-direct {v1, p0, p0, v0}, Lcom/estrongs/android/pop/app/ap;-><init>(Lcom/estrongs/android/pop/app/DocumentExtModifyList;Landroid/content/Context;Ljava/util/List;)V
+    invoke-direct {v1, p0, p0, v0}, Lcom/estrongs/android/pop/app/at;-><init>(Lcom/estrongs/android/pop/app/DocumentExtModifyList;Landroid/content/Context;Ljava/util/List;)V
 
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->a:Lcom/estrongs/android/pop/app/ap;
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->a:Lcom/estrongs/android/pop/app/at;
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->d:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->a:Lcom/estrongs/android/pop/app/ap;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->a:Lcom/estrongs/android/pop/app/at;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
@@ -82,9 +82,9 @@
 .method private b()V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->a:Lcom/estrongs/android/pop/app/ap;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->a:Lcom/estrongs/android/pop/app/at;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ap;->a()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/at;->a()Ljava/util/List;
 
     move-result-object v0
 
@@ -94,17 +94,17 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->a:Lcom/estrongs/android/pop/app/ap;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->a:Lcom/estrongs/android/pop/app/at;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/ap;->a()Ljava/util/List;
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/at;->a()Ljava/util/List;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/ad;->g(Ljava/util/List;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->a:Lcom/estrongs/android/pop/app/ap;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->a:Lcom/estrongs/android/pop/app/at;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ap;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/at;->notifyDataSetChanged()V
 
     return-void
 .end method
@@ -126,15 +126,15 @@
 
     invoke-direct {v0, p0}, Lcom/estrongs/android/ui/dialog/f;-><init>(Landroid/app/Activity;)V
 
-    new-instance v1, Lcom/estrongs/android/pop/app/an;
+    new-instance v1, Lcom/estrongs/android/pop/app/ar;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/an;-><init>(Lcom/estrongs/android/pop/app/DocumentExtModifyList;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ar;-><init>(Lcom/estrongs/android/pop/app/DocumentExtModifyList;)V
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/f;->a(Lcom/estrongs/android/ui/dialog/i;)V
 
-    new-instance v1, Lcom/estrongs/android/pop/app/ao;
+    new-instance v1, Lcom/estrongs/android/pop/app/as;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ao;-><init>(Lcom/estrongs/android/pop/app/DocumentExtModifyList;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/as;-><init>(Lcom/estrongs/android/pop/app/DocumentExtModifyList;)V
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/f;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
@@ -150,15 +150,15 @@
 
     invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030003
+    const v0, 0x7f030041
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->setContentView(I)V
 
-    const v0, 0x7f0c0018
+    const v0, 0x7f090172
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->setTheme(I)V
 
-    const v0, 0x7f0a0021
+    const v0, 0x7f0e0077
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->findViewById(I)Landroid/view/View;
 
@@ -170,11 +170,11 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0b0472
+    const v1, 0x7f0800c0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    const v0, 0x7f0a0022
+    const v0, 0x7f0e0185
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->findViewById(I)Landroid/view/View;
 
@@ -186,15 +186,15 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->c:Landroid/widget/TextView;
 
-    const v1, 0x7f0b0473
+    const v1, 0x7f080291
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    const v0, 0x7f0b0470
+    const v0, 0x7f08028f
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->setTitle(I)V
 
-    const v0, 0x7f0a0023
+    const v0, 0x7f0e0186
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->findViewById(I)Landroid/view/View;
 
@@ -204,13 +204,13 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/Button;->setFocusable(Z)V
 
-    new-instance v1, Lcom/estrongs/android/pop/app/al;
+    new-instance v1, Lcom/estrongs/android/pop/app/ap;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/al;-><init>(Lcom/estrongs/android/pop/app/DocumentExtModifyList;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ap;-><init>(Lcom/estrongs/android/pop/app/DocumentExtModifyList;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a0020
+    const v0, 0x7f0e0184
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->findViewById(I)Landroid/view/View;
 
@@ -218,9 +218,9 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setFocusable(Z)V
 
-    new-instance v1, Lcom/estrongs/android/pop/app/am;
+    new-instance v1, Lcom/estrongs/android/pop/app/aq;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/am;-><init>(Lcom/estrongs/android/pop/app/DocumentExtModifyList;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/aq;-><init>(Lcom/estrongs/android/pop/app/DocumentExtModifyList;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

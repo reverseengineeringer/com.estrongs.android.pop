@@ -30,28 +30,23 @@ public class ImageViewTouch
     a = ((ViewImage21)paramContext);
   }
   
-  public float a()
-  {
-    return k;
-  }
-  
-  public void a(am paramam)
-  {
-    c = paramam;
-  }
-  
   protected void b(float paramFloat1, float paramFloat2)
   {
     super.a(paramFloat1, paramFloat2);
     a(true, true);
     RectF localRectF = new RectF(0.0F, 0.0F, h.b().getWidth(), h.b().getHeight());
-    g().mapRect(localRectF);
+    getImageViewMatrix().mapRect(localRectF);
     if ((Math.abs(left) < 20.0F) && (c != null)) {
       c.a(0, paramFloat1);
     }
     if ((Math.abs(right) - getWidth() < 20.0F) && (c != null)) {
       c.a(1, paramFloat1);
     }
+  }
+  
+  public float getMaxZoom()
+  {
+    return k;
   }
   
   public boolean onKeyDown(int paramInt, KeyEvent arg2)
@@ -91,7 +86,7 @@ public class ImageViewTouch
         throw ???;
         long l1;
         long l2;
-        if (f() <= 1.0F)
+        if (getScale() <= 1.0F)
         {
           l1 = ???.getEventTime();
           l2 = d;
@@ -120,7 +115,7 @@ public class ImageViewTouch
               a(true, true);
             }
           }
-          if (f() <= 1.0F)
+          if (getScale() <= 1.0F)
           {
             l1 = ???.getEventTime();
             l2 = d;
@@ -161,6 +156,16 @@ public class ImageViewTouch
         ae.a(a, a.l, a.c());
       }
     }
+  }
+  
+  public void setEnableTrackballScroll(boolean paramBoolean)
+  {
+    b = paramBoolean;
+  }
+  
+  public void setOnImageEdgeDetector(am paramam)
+  {
+    c = paramam;
   }
 }
 

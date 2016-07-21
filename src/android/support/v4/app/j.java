@@ -1,15 +1,13 @@
 package android.support.v4.app;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import android.app.Activity;
 
-final class j
+class j
 {
-  Object a;
-  Object b;
-  HashMap<String, Object> c;
-  ArrayList<Fragment> d;
-  HashMap<String, y> e;
+  static void a(Activity paramActivity)
+  {
+    paramActivity.invalidateOptionsMenu();
+  }
 }
 
 /* Location:

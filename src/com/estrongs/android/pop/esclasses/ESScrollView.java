@@ -11,9 +11,9 @@ public class ESScrollView
   extends ScrollView
 {
   private Handler a;
-  View.OnTouchListener b = new m(this);
+  View.OnTouchListener b = new r(this);
   private View c;
-  private o d;
+  private t d;
   
   public ESScrollView(Context paramContext)
   {
@@ -33,25 +33,25 @@ public class ESScrollView
   private void a()
   {
     setOnTouchListener(b);
-    a = new l(this);
+    a = new q(this);
   }
   
   public static void a(View paramView1, View paramView2)
   {
-    new Handler().post(new n(paramView1, paramView2));
+    new Handler().post(new s(paramView1, paramView2));
   }
   
-  public void a(o paramo)
-  {
-    d = paramo;
-  }
-  
-  public void b()
+  public void getView()
   {
     c = getChildAt(0);
     if (c != null) {
       a();
     }
+  }
+  
+  public void setOnScrollListener(t paramt)
+  {
+    d = paramt;
   }
 }
 

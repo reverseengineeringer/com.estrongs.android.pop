@@ -50,7 +50,7 @@
 
     iget-object v1, v1, Lcom/estrongs/android/pop/utils/c;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->N()V
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->ac()V
 
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 

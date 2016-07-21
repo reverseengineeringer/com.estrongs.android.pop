@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/log_prg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ProgressBar" />
+        <TextView android:textColor="@color/main_content_detail_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/progress_loading" />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView android:scrollbarStyle="outsideOverlay" android:id="@id/log_lst" android:paddingTop="@dimen/dp_15" android:visibility="gone" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.estrongs.android.ui.fastscroller.vertical.VerticalRecyclerViewFastScroller android:id="@id/fast_scroller" android:layout_width="24.0dip" android:layout_height="fill_parent" android:layout_alignTop="@id/log_lst" android:layout_alignBottom="@id/log_lst" android:layout_alignParentRight="true" app:rfs_handleBackground="@drawable/icon_handle" xmlns:app="http://schemas.android.com/apk/res-auto" />
+    <TextView android:textColor="@color/main_content_detail_text" android:gravity="center" android:layout_gravity="center" android:id="@id/log_emp" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/folder_empty" />
+</RelativeLayout>

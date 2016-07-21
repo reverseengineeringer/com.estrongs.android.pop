@@ -1,20 +1,11 @@
 package com.estrongs.android.widget;
 
-import com.estrongs.fs.m;
-import com.estrongs.fs.n;
+import com.estrongs.fs.h;
+import java.util.List;
 
-class av
-  extends n
+public abstract interface av
 {
-  public av(m paramm, String paramString1, String paramString2)
-  {
-    super(paramString1, paramm, paramString2);
-  }
-  
-  public boolean exists()
-  {
-    return true;
-  }
+  public abstract void a(List<h> paramList);
 }
 
 /* Location:

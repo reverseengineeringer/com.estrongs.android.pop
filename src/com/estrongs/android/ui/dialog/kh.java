@@ -1,33 +1,128 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.Context;
-import android.content.DialogInterface;
+import android.app.Activity;
 import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.pop.app.b;
-import com.estrongs.android.util.y;
+import android.content.DialogInterface.OnDismissListener;
+import android.os.Handler;
+import com.estrongs.a.a;
+import com.estrongs.a.a.l;
+import com.estrongs.a.q;
+import com.estrongs.android.pop.m;
+import com.estrongs.android.view.fm;
 
-class kh
-  implements DialogInterface.OnClickListener
+public class kh
+  extends ci
 {
-  kh(kf paramkf) {}
+  private Activity a;
+  private boolean b = false;
+  private com.estrongs.a.a.p c = new km(this);
+  private DialogInterface.OnDismissListener d;
+  private DialogInterface.OnClickListener e;
+  public final DialogInterface.OnClickListener f;
+  private DialogInterface.OnClickListener g;
+  private DialogInterface.OnClickListener h;
+  private fm i;
+  private a j;
+  private Handler k;
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public kh(Activity paramActivity, String paramString, a parama)
   {
-    if (kf.g(a) == 2) {
-      if (kf.h(a) == 1)
+    this(paramActivity, paramString, null, parama);
+    setCancelable(false);
+  }
+  
+  public kh(Activity paramActivity, String paramString1, String paramString2, a parama)
+  {
+    super(paramActivity);
+    a = paramActivity;
+    setCancelable(false);
+    setTitle(paramString1);
+    i = new fm(paramActivity, null, paramString2);
+    setContentView(i.aE());
+    k = new Handler();
+    parama.setTaskDecisionListener(new m(paramActivity));
+    e = new ki(this);
+    f = new kj(this, parama);
+    g = new kk(this, parama);
+    h = new kl(this, parama);
+    if (parama.canPause())
+    {
+      setRightButton(getString(2131230857), e);
+      if (parama.getTaskStatus() == 3)
       {
-        kf.a(a, 3);
-        if (kf.i(a)) {
-          kf.a(a);
-        }
+        setMiddleButton(getString(2131231909), h);
+        setLeftButton(getString(2131231265), f);
       }
     }
-    while ((kf.g(a) != 4) || (kf.j(a) != 9)) {
+    for (;;)
+    {
+      parama.addProgressListener(i.c);
+      parama.addTaskStatusChangeListener(c);
+      j = parama;
+      if (processData != null) {
+        i.c.a(parama, processData);
+      }
+      return;
+      setMiddleButton(getString(2131230873), g);
+      break;
+      setConfirmButton(getString(2131230857), e);
+      setCancelButton(getString(2131231265), f);
+    }
+  }
+  
+  private void a(String paramString)
+  {
+    k.post(new kp(this, paramString));
+  }
+  
+  protected String a()
+  {
+    return j.getDescription() + " " + getString(2131232195);
+  }
+  
+  protected String a(com.estrongs.a.p paramp)
+  {
+    if ((paramp != null) && (b != null)) {
+      return b).a;
+    }
+    return null;
+  }
+  
+  protected void a(a parama) {}
+  
+  protected Object b(com.estrongs.a.p paramp)
+  {
+    if ((paramp != null) && (b != null)) {
+      return b).b;
+    }
+    return Integer.valueOf(-1);
+  }
+  
+  protected String b()
+  {
+    return j.getDescription() + " " + getString(2131232166);
+  }
+  
+  protected void b(a parama) {}
+  
+  public void dismiss()
+  {
+    if (!isShowing())
+    {
+      if (d != null) {
+        d.onDismiss(this);
+      }
       return;
     }
-    paramDialogInterface = b.a(kf.c(a).e());
-    kf.b(a).startActivity(paramDialogInterface);
-    a.c();
+    b = true;
+    j.removeProgressListener(i.c);
+    super.dismiss();
+  }
+  
+  public void setOnDismissListener(DialogInterface.OnDismissListener paramOnDismissListener)
+  {
+    d = paramOnDismissListener;
+    super.setOnDismissListener(paramOnDismissListener);
   }
 }
 

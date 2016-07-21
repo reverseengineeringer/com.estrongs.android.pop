@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/p;->a:Lcom/estrongs/android/pop/app/diskusage/h;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/diskusage/h;->v(Lcom/estrongs/android/pop/app/diskusage/h;)Z
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/diskusage/h;->x(Lcom/estrongs/android/pop/app/diskusage/h;)Z
 
     move-result v0
 
@@ -35,7 +35,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/p;->a:Lcom/estrongs/android/pop/app/diskusage/h;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/diskusage/h;->F(Lcom/estrongs/android/pop/app/diskusage/h;)Z
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/diskusage/h;->H(Lcom/estrongs/android/pop/app/diskusage/h;)Z
 
     move-result v0
 
@@ -59,7 +59,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/pop/app/diskusage/h;->a(Lcom/estrongs/android/pop/app/diskusage/h;Lcom/estrongs/android/widget/bg;)Lcom/estrongs/android/widget/bg;
+    invoke-static {v0, v1}, Lcom/estrongs/android/pop/app/diskusage/h;->a(Lcom/estrongs/android/pop/app/diskusage/h;Lcom/estrongs/android/widget/bh;)Lcom/estrongs/android/widget/bh;
 
     goto :goto_0
 .end method

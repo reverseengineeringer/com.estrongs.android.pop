@@ -1,59 +1,58 @@
 package com.estrongs.android.pop.app.diskusage;
 
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import com.estrongs.android.pop.view.utils.AppRunner;
-import com.estrongs.android.ui.a.k;
-import com.estrongs.android.view.ca;
-import com.estrongs.android.widget.bg;
+import com.estrongs.android.ui.adapter.k;
+import com.estrongs.android.view.co;
+import com.estrongs.android.view.dv;
+import com.estrongs.android.widget.bh;
 import com.estrongs.fs.util.g;
 import java.io.File;
 
 class q
-  implements AdapterView.OnItemClickListener
+  implements co
 {
   q(h paramh) {}
   
-  public void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
+  public void a(RecyclerView paramRecyclerView, View paramView, int paramInt)
   {
-    paramInt -= 1;
     try
     {
-      if (h.G(a))
+      if (h.I(a))
       {
         a.c(paramInt);
         return;
       }
       if (h.f(a) == 0L)
       {
-        paramAdapterView = (File)h.m(a).getItem(paramInt);
-        if (paramAdapterView.isDirectory())
+        paramRecyclerView = (File)h.n(a).a(paramInt);
+        if (paramRecyclerView.isDirectory())
         {
-          h.a(a, paramAdapterView);
-          if (h.H(a) != null) {
-            h.I(a).a("du://" + h.o(a).getAbsolutePath(), false);
+          h.a(a, paramRecyclerView);
+          if (h.J(a) != null) {
+            h.K(a).a("du://" + h.q(a).getAbsolutePath(), false);
           }
-          paramAdapterView = h.k(a).a(paramAdapterView);
-          h.c(a, 0L);
-          if (h.b(a) == null) {
-            h.a(a, h.J(a));
+          paramRecyclerView = h.k(a).a(paramRecyclerView);
+          h.a(a, 0L);
+          if (h.c(a) == null) {
+            h.a(a, h.L(a));
           }
-          if (h.b(a) != null)
+          if (h.c(a) != null)
           {
-            h.b(a).a();
-            h.b(a).a(paramAdapterView.b());
-            h.b(a).setMessage(h.a(a, 2131427863));
-            h.b(a).b(h.c(a));
+            h.c(a).a();
+            h.c(a).a(paramRecyclerView.b());
+            h.c(a).setMessage(h.a(a, 2131231747));
+            h.c(a).b(h.b(a));
           }
           a.g();
           return;
         }
-        AppRunner.a(h.K(a), paramAdapterView.getAbsolutePath(), paramAdapterView.getAbsolutePath());
+        AppRunner.a(h.M(a), paramRecyclerView.getAbsolutePath(), paramRecyclerView.getAbsolutePath());
       }
       return;
     }
-    catch (Exception paramAdapterView) {}
+    catch (Exception paramRecyclerView) {}
   }
 }
 

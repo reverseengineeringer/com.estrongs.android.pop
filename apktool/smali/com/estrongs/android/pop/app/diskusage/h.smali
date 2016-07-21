@@ -1,9 +1,9 @@
 .class public Lcom/estrongs/android/pop/app/diskusage/h;
-.super Lcom/estrongs/android/view/aw;
+.super Lcom/estrongs/android/view/cr;
 
 
 # static fields
-.field private static final ai:Ljava/lang/String;
+.field private static final an:Ljava/lang/String;
 
 .field public static c:Landroid/util/DisplayMetrics;
 
@@ -27,9 +27,19 @@
 
 .field private aH:J
 
-.field private aI:Z
+.field private aI:J
 
-.field private aJ:Ljava/util/Stack;
+.field private aJ:J
+
+.field private aK:J
+
+.field private aL:J
+
+.field private aM:J
+
+.field private aN:Z
+
+.field private aO:Ljava/util/Stack;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Stack",
@@ -40,7 +50,7 @@
     .end annotation
 .end field
 
-.field private aK:Ljava/util/Stack;
+.field private aP:Ljava/util/Stack;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Stack",
@@ -51,31 +61,35 @@
     .end annotation
 .end field
 
-.field private aL:Lcom/estrongs/android/ui/a/k;
+.field private aQ:Lcom/estrongs/android/ui/adapter/k;
 
-.field private aM:J
+.field private aR:J
 
-.field private aN:Landroid/widget/ListView;
+.field private aS:Landroid/support/v7/widget/RecyclerView;
 
-.field private aO:Landroid/os/Handler;
+.field private aT:Landroid/os/Handler;
 
-.field private aj:Ljava/lang/Object;
+.field private al:Lcom/estrongs/android/view/cp;
 
-.field private ak:Z
+.field private am:Lcom/estrongs/android/view/co;
 
-.field private al:Z
+.field private ao:Ljava/lang/Object;
 
-.field private am:J
+.field private ap:Z
 
-.field private an:Ljava/io/File;
+.field private aq:Z
 
-.field private ao:Ljava/io/File;
+.field private ar:J
 
-.field private ap:Lcom/estrongs/android/pop/app/diskusage/e;
+.field private as:Ljava/io/File;
 
-.field private aq:Lcom/estrongs/android/pop/app/diskusage/e;
+.field private at:Ljava/io/File;
 
-.field private ar:Ljava/util/HashMap;
+.field private au:Lcom/estrongs/android/pop/app/diskusage/e;
+
+.field private av:Lcom/estrongs/android/pop/app/diskusage/e;
+
+.field private aw:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap",
@@ -87,17 +101,7 @@
     .end annotation
 .end field
 
-.field private as:Lcom/estrongs/android/widget/bg;
-
-.field private at:J
-
-.field private au:J
-
-.field private av:J
-
-.field private aw:J
-
-.field private ax:J
+.field private ax:Lcom/estrongs/android/widget/bh;
 
 .field private ay:J
 
@@ -106,6 +110,8 @@
 .field b:Ljava/lang/String;
 
 .field private d:Z
+
+.field private e:Landroid/support/v7/widget/LinearLayoutManager;
 
 
 # direct methods
@@ -116,7 +122,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/estrongs/android/pop/app/diskusage/h;->ai:Ljava/lang/String;
+    sput-object v0, Lcom/estrongs/android/pop/app/diskusage/h;->an:Ljava/lang/String;
 
     new-instance v0, Landroid/util/DisplayMetrics;
 
@@ -127,38 +133,38 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/app/Activity;Lcom/estrongs/fs/util/a/a;Lcom/estrongs/android/view/cb;)V
-    .locals 6
+.method public constructor <init>(Landroid/app/Activity;Lcom/estrongs/fs/util/a/a;Lcom/estrongs/android/view/dw;)V
+    .locals 8
 
-    const/high16 v5, 0x41800000    # 16.0f
+    const/4 v2, 0x0
 
-    const/4 v1, 0x0
+    const/4 v7, 0x1
 
-    const/4 v4, 0x0
+    const/4 v6, 0x0
 
-    const-wide/16 v2, 0x0
+    const-wide/16 v4, 0x0
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/estrongs/android/view/aw;-><init>(Landroid/app/Activity;Lcom/estrongs/fs/util/a/a;Lcom/estrongs/android/view/cb;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/estrongs/android/view/cr;-><init>(Landroid/app/Activity;Lcom/estrongs/fs/util/a/a;Lcom/estrongs/android/view/dw;)V
 
-    iput-boolean v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->d:Z
+    iput-boolean v6, p0, Lcom/estrongs/android/pop/app/diskusage/h;->d:Z
 
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aj:Ljava/lang/Object;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ao:Ljava/lang/Object;
 
-    iput-boolean v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ak:Z
+    iput-boolean v6, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ap:Z
 
-    iput-boolean v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->al:Z
+    iput-boolean v6, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aq:Z
 
-    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->am:J
+    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ar:J
 
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ar:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aw:Ljava/util/HashMap;
 
     new-instance v0, Lcom/estrongs/android/pop/app/diskusage/i;
 
@@ -166,53 +172,53 @@
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->a:Lcom/estrongs/fs/util/h;
 
-    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aw:J
+    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aB:J
 
-    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:J
+    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aC:J
 
-    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ay:J
+    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aD:J
 
-    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->az:J
+    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aE:J
 
-    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aA:J
+    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aF:J
 
-    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aB:J
+    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aG:J
 
-    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aC:J
+    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aH:J
 
-    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aD:J
+    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aI:J
 
-    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aE:J
+    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:J
 
-    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aF:J
+    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aK:J
 
-    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aG:J
+    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aL:J
 
-    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aH:J
+    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aM:J
 
-    iput-boolean v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aI:Z
-
-    new-instance v0, Ljava/util/Stack;
-
-    invoke-direct {v0}, Ljava/util/Stack;-><init>()V
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:Ljava/util/Stack;
+    iput-boolean v6, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aN:Z
 
     new-instance v0, Ljava/util/Stack;
 
     invoke-direct {v0}, Ljava/util/Stack;-><init>()V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aK:Ljava/util/Stack;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aO:Ljava/util/Stack;
+
+    new-instance v0, Ljava/util/Stack;
+
+    invoke-direct {v0}, Ljava/util/Stack;-><init>()V
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aP:Ljava/util/Stack;
 
     new-instance v0, Lcom/estrongs/android/pop/app/diskusage/j;
 
     invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/diskusage/j;-><init>(Lcom/estrongs/android/pop/app/diskusage/h;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aO:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aT:Landroid/os/Handler;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->g:Lcom/estrongs/android/widget/HeaderGridView;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->h:Landroid/support/v7/widget/RecyclerView;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/HeaderGridView;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
@@ -220,205 +226,346 @@
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ag:Landroid/view/LayoutInflater;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ag:Landroid/app/Activity;
 
-    const v3, 0x7f030046
+    invoke-static {v1}, Lcom/estrongs/android/ui/theme/at;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
 
-    invoke-virtual {v2, v3, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+    move-result-object v1
 
-    move-result-object v2
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/theme/at;->o()Z
 
-    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    move-result v1
 
-    const v0, 0x7f0a015d
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/diskusage/h;->k(I)Landroid/view/View;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aj:Landroid/view/LayoutInflater;
+
+    const v3, 0x7f03012c
+
+    invoke-virtual {v1, v3, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    new-instance v0, Lcom/estrongs/android/pop/app/diskusage/v;
+
+    invoke-direct {v0, p0, v6, v7}, Lcom/estrongs/android/pop/app/diskusage/v;-><init>(Lcom/estrongs/android/pop/app/diskusage/h;ZZ)V
+
+    move-object v1, v0
+
+    :goto_0
+    const v0, 0x7f0e0305
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/diskusage/h;->b(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/ListView;
+    check-cast v0, Landroid/support/v7/widget/RecyclerView;
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aN:Landroid/widget/ListView;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aS:Landroid/support/v7/widget/RecyclerView;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aN:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aS:Landroid/support/v7/widget/RecyclerView;
 
-    invoke-virtual {v0, v4}, Landroid/widget/ListView;->setVisibility(I)V
+    invoke-virtual {v0, v6}, Landroid/support/v7/widget/RecyclerView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aN:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aS:Landroid/support/v7/widget/RecyclerView;
 
-    invoke-virtual {v0, v4}, Landroid/widget/ListView;->setBackgroundColor(I)V
+    invoke-virtual {v0, v6}, Landroid/support/v7/widget/RecyclerView;->setBackgroundColor(I)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aN:Landroid/widget/ListView;
+    new-instance v0, Landroid/support/v7/widget/LinearLayoutManager;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setDivider(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {v0, p1}, Landroid/support/v7/widget/LinearLayoutManager;-><init>(Landroid/content/Context;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aN:Landroid/widget/ListView;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->e:Landroid/support/v7/widget/LinearLayoutManager;
 
-    invoke-virtual {v0, v4}, Landroid/widget/ListView;->setDividerHeight(I)V
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aS:Landroid/support/v7/widget/RecyclerView;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aN:Landroid/widget/ListView;
+    iget-object v3, p0, Lcom/estrongs/android/pop/app/diskusage/h;->e:Landroid/support/v7/widget/LinearLayoutManager;
 
-    invoke-virtual {v0, v4}, Landroid/widget/ListView;->setCacheColorHint(I)V
+    invoke-virtual {v0, v3}, Landroid/support/v7/widget/RecyclerView;->setLayoutManager(Landroid/support/v7/widget/RecyclerView$LayoutManager;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aN:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aS:Landroid/support/v7/widget/RecyclerView;
 
-    const/high16 v2, 0x2000000
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/RecyclerView;->addItemDecoration(Landroid/support/v7/widget/RecyclerView$ItemDecoration;)V
 
-    invoke-virtual {v0, v2}, Landroid/widget/ListView;->setScrollBarStyle(I)V
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aS:Landroid/support/v7/widget/RecyclerView;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aN:Landroid/widget/ListView;
+    const/high16 v1, 0x2000000
 
-    const v2, 0x7f020038
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/RecyclerView;->setScrollBarStyle(I)V
 
-    invoke-virtual {v0, v2}, Landroid/widget/ListView;->setSelector(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aN:Landroid/widget/ListView;
-
-    invoke-virtual {v0, v4}, Landroid/widget/ListView;->setScrollingCacheEnabled(Z)V
-
-    new-instance v0, Landroid/widget/LinearLayout;
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ad:Landroid/app/Activity;
-
-    invoke-direct {v0, v2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ad:Landroid/app/Activity;
-
-    invoke-static {v2, v5}, Lcom/estrongs/android/ui/d/a;->a(Landroid/content/Context;F)I
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setMinimumHeight(I)V
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aN:Landroid/widget/ListView;
-
-    invoke-virtual {v2, v0, v1, v4}, Landroid/widget/ListView;->addHeaderView(Landroid/view/View;Ljava/lang/Object;Z)V
-
-    new-instance v0, Landroid/widget/LinearLayout;
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ad:Landroid/app/Activity;
-
-    invoke-direct {v0, v2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ad:Landroid/app/Activity;
-
-    invoke-static {v2, v5}, Lcom/estrongs/android/ui/d/a;->a(Landroid/content/Context;F)I
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setMinimumHeight(I)V
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aN:Landroid/widget/ListView;
-
-    invoke-virtual {v2, v0, v1, v4}, Landroid/widget/ListView;->addFooterView(Landroid/view/View;Ljava/lang/Object;Z)V
-
-    invoke-static {v1}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    sget-object v0, Lcom/estrongs/android/pop/app/diskusage/h;->ai:Ljava/lang/String;
+    sget-object v0, Lcom/estrongs/android/pop/app/diskusage/h;->an:Ljava/lang/String;
 
-    :goto_0
+    :goto_1
     iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->b:Ljava/lang/String;
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->al()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->v()V
 
     return-void
 
     :cond_0
-    move-object v0, v1
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aj:Landroid/view/LayoutInflater;
+
+    const v3, 0x7f03009f
+
+    invoke-virtual {v1, v3, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    new-instance v0, Lcom/estrongs/android/pop/app/diskusage/v;
+
+    invoke-direct {v0, p0, v7, v7}, Lcom/estrongs/android/pop/app/diskusage/v;-><init>(Lcom/estrongs/android/pop/app/diskusage/h;ZZ)V
+
+    move-object v1, v0
 
     goto :goto_0
+
+    :cond_1
+    move-object v0, v2
+
+    goto :goto_1
 .end method
 
 .method static synthetic A(Lcom/estrongs/android/pop/app/diskusage/h;)Landroid/app/Activity;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ad:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ag:Landroid/app/Activity;
 
     return-object v0
 .end method
 
-.method static synthetic B(Lcom/estrongs/android/pop/app/diskusage/h;)V
+.method private A()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:Lcom/estrongs/android/widget/bh;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:Lcom/estrongs/android/widget/bh;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/widget/bh;->dismiss()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:Lcom/estrongs/android/widget/bh;
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->O:Lcom/estrongs/android/view/dw;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->O:Lcom/estrongs/android/view/dw;
+
+    const/4 v1, 0x1
+
+    invoke-interface {v0, p0, v1}, Lcom/estrongs/android/view/dw;->a(Lcom/estrongs/android/view/cr;Z)V
+
+    :cond_1
+    return-void
+.end method
+
+.method static synthetic B(Lcom/estrongs/android/pop/app/diskusage/h;)Landroid/app/Activity;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ag:Landroid/app/Activity;
+
+    return-object v0
+.end method
+
+.method private B()Z
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:Lcom/estrongs/android/widget/bh;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:Lcom/estrongs/android/widget/bh;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/widget/bh;->isShowing()Z
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method static synthetic C(Lcom/estrongs/android/pop/app/diskusage/h;)Landroid/app/Activity;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ag:Landroid/app/Activity;
+
+    return-object v0
+.end method
+
+.method private C()V
+    .locals 2
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aq:Z
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ao:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->av:Lcom/estrongs/android/pop/app/diskusage/e;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->av:Lcom/estrongs/android/pop/app/diskusage/e;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/diskusage/e;->a()V
+
+    :cond_0
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->b:Ljava/lang/String;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->at:Ljava/io/File;
+
+    invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aT:Landroid/os/Handler;
+
+    new-instance v1, Lcom/estrongs/android/pop/app/diskusage/r;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/diskusage/r;-><init>(Lcom/estrongs/android/pop/app/diskusage/h;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_1
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method static synthetic D(Lcom/estrongs/android/pop/app/diskusage/h;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->au()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->C()V
 
     return-void
 .end method
 
-.method static synthetic C(Lcom/estrongs/android/pop/app/diskusage/h;)Ljava/io/File;
+.method static synthetic E(Lcom/estrongs/android/pop/app/diskusage/h;)Ljava/io/File;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->an:Ljava/io/File;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Ljava/io/File;
 
     return-object v0
 .end method
 
-.method static synthetic D(Lcom/estrongs/android/pop/app/diskusage/h;)Lcom/estrongs/android/view/ca;
+.method static synthetic F(Lcom/estrongs/android/pop/app/diskusage/h;)Lcom/estrongs/android/view/dv;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->y:Lcom/estrongs/android/view/ca;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->F:Lcom/estrongs/android/view/dv;
 
     return-object v0
 .end method
 
-.method static synthetic E(Lcom/estrongs/android/pop/app/diskusage/h;)Lcom/estrongs/android/view/ca;
+.method static synthetic G(Lcom/estrongs/android/pop/app/diskusage/h;)Lcom/estrongs/android/view/dv;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->y:Lcom/estrongs/android/view/ca;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->F:Lcom/estrongs/android/view/dv;
 
     return-object v0
 .end method
 
-.method static synthetic F(Lcom/estrongs/android/pop/app/diskusage/h;)Z
+.method static synthetic H(Lcom/estrongs/android/pop/app/diskusage/h;)Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->al:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aq:Z
 
     return v0
 .end method
 
-.method static synthetic G(Lcom/estrongs/android/pop/app/diskusage/h;)Z
+.method static synthetic I(Lcom/estrongs/android/pop/app/diskusage/h;)Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->l:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->q:Z
 
     return v0
 .end method
 
-.method static synthetic H(Lcom/estrongs/android/pop/app/diskusage/h;)Lcom/estrongs/android/view/ca;
+.method static synthetic J(Lcom/estrongs/android/pop/app/diskusage/h;)Lcom/estrongs/android/view/dv;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->y:Lcom/estrongs/android/view/ca;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->F:Lcom/estrongs/android/view/dv;
 
     return-object v0
 .end method
 
-.method static synthetic I(Lcom/estrongs/android/pop/app/diskusage/h;)Lcom/estrongs/android/view/ca;
+.method static synthetic K(Lcom/estrongs/android/pop/app/diskusage/h;)Lcom/estrongs/android/view/dv;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->y:Lcom/estrongs/android/view/ca;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->F:Lcom/estrongs/android/view/dv;
 
     return-object v0
 .end method
 
-.method static synthetic J(Lcom/estrongs/android/pop/app/diskusage/h;)Lcom/estrongs/android/widget/bg;
+.method static synthetic L(Lcom/estrongs/android/pop/app/diskusage/h;)Lcom/estrongs/android/widget/bh;
     .locals 1
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->r()Lcom/estrongs/android/widget/bg;
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->u()Lcom/estrongs/android/widget/bh;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic K(Lcom/estrongs/android/pop/app/diskusage/h;)Landroid/app/Activity;
+.method static synthetic M(Lcom/estrongs/android/pop/app/diskusage/h;)Landroid/app/Activity;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ad:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ag:Landroid/app/Activity;
+
+    return-object v0
+.end method
+
+.method static synthetic N(Lcom/estrongs/android/pop/app/diskusage/h;)Landroid/app/Activity;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ag:Landroid/app/Activity;
+
+    return-object v0
+.end method
+
+.method static synthetic O(Lcom/estrongs/android/pop/app/diskusage/h;)Landroid/app/Activity;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ag:Landroid/app/Activity;
 
     return-object v0
 .end method
@@ -426,43 +573,39 @@
 .method static synthetic a(Lcom/estrongs/android/pop/app/diskusage/h;)J
     .locals 2
 
-    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aM:J
+    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aR:J
 
     return-wide v0
 .end method
 
 .method static synthetic a(Lcom/estrongs/android/pop/app/diskusage/h;J)J
-    .locals 3
+    .locals 1
 
-    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->av:J
+    iput-wide p1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aA:J
 
-    add-long/2addr v0, p1
-
-    iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->av:J
-
-    return-wide v0
+    return-wide p1
 .end method
 
 .method static synthetic a(Lcom/estrongs/android/pop/app/diskusage/h;Lcom/estrongs/android/pop/app/diskusage/e;)Lcom/estrongs/android/pop/app/diskusage/e;
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aq:Lcom/estrongs/android/pop/app/diskusage/e;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->av:Lcom/estrongs/android/pop/app/diskusage/e;
 
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/estrongs/android/pop/app/diskusage/h;Lcom/estrongs/android/ui/a/k;)Lcom/estrongs/android/ui/a/k;
+.method static synthetic a(Lcom/estrongs/android/pop/app/diskusage/h;Lcom/estrongs/android/ui/adapter/k;)Lcom/estrongs/android/ui/adapter/k;
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aL:Lcom/estrongs/android/ui/a/k;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aQ:Lcom/estrongs/android/ui/adapter/k;
 
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/estrongs/android/pop/app/diskusage/h;Lcom/estrongs/android/widget/bg;)Lcom/estrongs/android/widget/bg;
+.method static synthetic a(Lcom/estrongs/android/pop/app/diskusage/h;Lcom/estrongs/android/widget/bh;)Lcom/estrongs/android/widget/bh;
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Lcom/estrongs/android/widget/bg;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:Lcom/estrongs/android/widget/bh;
 
     return-object p1
 .end method
@@ -470,7 +613,7 @@
 .method static synthetic a(Lcom/estrongs/android/pop/app/diskusage/h;Ljava/io/File;)Ljava/io/File;
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ao:Ljava/io/File;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->at:Ljava/io/File;
 
     return-object p1
 .end method
@@ -478,7 +621,7 @@
 .method static synthetic a(Lcom/estrongs/android/pop/app/diskusage/h;I)Ljava/lang/String;
     .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/estrongs/android/pop/app/diskusage/h;->l(I)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/estrongs/android/pop/app/diskusage/h;->j(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -496,7 +639,7 @@
 .method static synthetic a(Lcom/estrongs/android/pop/app/diskusage/h;Z)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/estrongs/android/pop/app/diskusage/h;->j(Z)V
+    invoke-direct {p0, p1}, Lcom/estrongs/android/pop/app/diskusage/h;->k(Z)V
 
     return-void
 .end method
@@ -509,7 +652,7 @@
     move v1, v0
 
     :goto_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:Ljava/util/Stack;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aO:Ljava/util/Stack;
 
     invoke-virtual {v0}, Ljava/util/Stack;->size()I
 
@@ -517,7 +660,7 @@
 
     if-ge v1, v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:Ljava/util/Stack;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aO:Ljava/util/Stack;
 
     invoke-virtual {v0, v1}, Ljava/util/Stack;->get(I)Ljava/lang/Object;
 
@@ -534,57 +677,17 @@
     goto :goto_0
 
     :cond_0
-    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->au:J
+    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->az:J
 
     iget-wide v2, p1, Lcom/estrongs/fs/util/g;->a:J
 
     sub-long/2addr v0, v2
 
-    iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->au:J
-
-    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aw:J
-
-    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->d:J
-
-    sub-long/2addr v0, v2
-
-    iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aw:J
-
-    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:J
-
-    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->e:J
-
-    sub-long/2addr v0, v2
-
-    iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:J
-
-    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ay:J
-
-    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->f:J
-
-    sub-long/2addr v0, v2
-
-    iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ay:J
-
-    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->az:J
-
-    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->g:J
-
-    sub-long/2addr v0, v2
-
     iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->az:J
-
-    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aA:J
-
-    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->h:J
-
-    sub-long/2addr v0, v2
-
-    iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aA:J
 
     iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aB:J
 
-    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->i:J
+    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->d:J
 
     sub-long/2addr v0, v2
 
@@ -592,7 +695,7 @@
 
     iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aC:J
 
-    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->j:J
+    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->e:J
 
     sub-long/2addr v0, v2
 
@@ -600,7 +703,7 @@
 
     iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aD:J
 
-    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->k:J
+    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->f:J
 
     sub-long/2addr v0, v2
 
@@ -608,7 +711,7 @@
 
     iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aE:J
 
-    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->l:J
+    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->g:J
 
     sub-long/2addr v0, v2
 
@@ -616,7 +719,7 @@
 
     iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aF:J
 
-    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->m:J
+    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->h:J
 
     sub-long/2addr v0, v2
 
@@ -624,7 +727,7 @@
 
     iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aG:J
 
-    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->n:J
+    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->i:J
 
     sub-long/2addr v0, v2
 
@@ -632,11 +735,51 @@
 
     iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aH:J
 
-    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->o:J
+    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->j:J
 
     sub-long/2addr v0, v2
 
     iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aH:J
+
+    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aI:J
+
+    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->k:J
+
+    sub-long/2addr v0, v2
+
+    iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aI:J
+
+    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:J
+
+    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->l:J
+
+    sub-long/2addr v0, v2
+
+    iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:J
+
+    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aK:J
+
+    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->m:J
+
+    sub-long/2addr v0, v2
+
+    iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aK:J
+
+    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aL:J
+
+    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->n:J
+
+    sub-long/2addr v0, v2
+
+    iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aL:J
+
+    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aM:J
+
+    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->o:J
+
+    sub-long/2addr v0, v2
+
+    iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aM:J
 
     return-void
 .end method
@@ -767,641 +910,20 @@
     return-void
 .end method
 
-.method private a(Ljava/lang/String;)V
-    .locals 6
-
-    const-wide/16 v4, 0x0
-
-    if-eqz p1, :cond_0
-
-    const-string v0, "du://"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
-
-    move-result v0
-
-    if-ltz v0, :cond_0
-
-    const-string v0, "du://"
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    :cond_0
-    invoke-static {p1}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    sget-object p1, Lcom/estrongs/android/pop/app/diskusage/h;->ai:Ljava/lang/String;
-
-    :cond_1
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->b:Ljava/lang/String;
-
-    new-instance v0, Ljava/io/File;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->b:Ljava/lang/String;
-
-    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ao:Ljava/io/File;
-
-    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->am:J
-
-    cmp-long v0, v0, v4
-
-    if-eqz v0, :cond_2
-
-    :goto_0
-    return-void
-
-    :cond_2
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->y:Lcom/estrongs/android/view/ca;
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->y:Lcom/estrongs/android/view/ca;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "du://"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ao:Ljava/io/File;
-
-    invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-interface {v0, v1, v2}, Lcom/estrongs/android/view/ca;->a(Ljava/lang/String;Z)V
-
-    :cond_3
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->q()V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aI:Z
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:Ljava/util/Stack;
-
-    invoke-virtual {v0}, Ljava/util/Stack;->clear()V
-
-    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aw:J
-
-    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:J
-
-    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ay:J
-
-    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->az:J
-
-    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aA:J
-
-    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aB:J
-
-    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aC:J
-
-    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aD:J
-
-    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aE:J
-
-    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aF:J
-
-    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aG:J
-
-    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aH:J
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ar:Ljava/util/HashMap;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-nez v0, :cond_6
-
-    new-instance v0, Lcom/estrongs/android/pop/app/diskusage/e;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ad:Landroid/app/Activity;
-
-    invoke-direct {v0, v1}, Lcom/estrongs/android/pop/app/diskusage/e;-><init>(Landroid/content/ContextWrapper;)V
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ap:Lcom/estrongs/android/pop/app/diskusage/e;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ap:Lcom/estrongs/android/pop/app/diskusage/e;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->a:Lcom/estrongs/fs/util/h;
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/diskusage/e;->a(Lcom/estrongs/fs/util/h;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ap:Lcom/estrongs/android/pop/app/diskusage/e;
-
-    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->at:J
-
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/pop/app/diskusage/e;->a(J)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ap:Lcom/estrongs/android/pop/app/diskusage/e;
-
-    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aM:J
-
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/pop/app/diskusage/e;->b(J)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ar:Ljava/util/HashMap;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->b:Ljava/lang/String;
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ap:Lcom/estrongs/android/pop/app/diskusage/e;
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Lcom/estrongs/android/widget/bg;
-
-    if-nez v0, :cond_5
-
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->r()Lcom/estrongs/android/widget/bg;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Lcom/estrongs/android/widget/bg;
-
-    :goto_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Lcom/estrongs/android/widget/bg;
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Lcom/estrongs/android/widget/bg;
-
-    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->au:J
-
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/widget/bg;->a(J)V
-
-    :cond_4
-    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->av:J
-
-    :goto_2
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->g()V
-
-    goto/16 :goto_0
-
-    :cond_5
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Lcom/estrongs/android/widget/bg;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/bg;->a()V
-
-    goto :goto_1
-
-    :cond_6
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ar:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/android/pop/app/diskusage/e;
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ap:Lcom/estrongs/android/pop/app/diskusage/e;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ap:Lcom/estrongs/android/pop/app/diskusage/e;
-
-    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->at:J
-
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/pop/app/diskusage/e;->a(J)V
-
-    goto :goto_2
-.end method
-
-.method private al()V
-    .locals 3
-
-    const v0, 0x7f0a0161
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/diskusage/h;->k(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const v2, 0x7f0b0062
-
-    invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/diskusage/h;->l(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "/"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const v2, 0x7f0b0063
-
-    invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/diskusage/h;->l(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aN:Landroid/widget/ListView;
-
-    new-instance v1, Lcom/estrongs/android/pop/app/diskusage/q;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/diskusage/q;-><init>(Lcom/estrongs/android/pop/app/diskusage/h;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
-
-    return-void
-.end method
-
-.method private am()V
-    .locals 3
-
-    new-instance v0, Lcom/estrongs/android/ui/a/k;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ad:Landroid/app/Activity;
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ap:Lcom/estrongs/android/pop/app/diskusage/e;
-
-    invoke-direct {v0, v1, v2}, Lcom/estrongs/android/ui/a/k;-><init>(Landroid/content/Context;Lcom/estrongs/android/pop/app/diskusage/e;)V
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aL:Lcom/estrongs/android/ui/a/k;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aN:Landroid/widget/ListView;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aL:Lcom/estrongs/android/ui/a/k;
-
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/diskusage/h;->d(Z)[J
-
-    return-void
-.end method
-
-.method private an()V
-    .locals 3
-
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->al:Z
-
-    if-nez v0, :cond_1
-
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ak:Z
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:Ljava/util/Stack;
-
-    invoke-virtual {v0}, Ljava/util/Stack;->size()I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:Ljava/util/Stack;
-
-    invoke-virtual {v0}, Ljava/util/Stack;->pop()Ljava/lang/Object;
-
-    :cond_0
-    :goto_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aq:Lcom/estrongs/android/pop/app/diskusage/e;
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ap:Lcom/estrongs/android/pop/app/diskusage/e;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ao:Ljava/io/File;
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->an:Ljava/io/File;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ar:Ljava/util/HashMap;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->b:Ljava/lang/String;
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ap:Lcom/estrongs/android/pop/app/diskusage/e;
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->am()V
-
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ak:Z
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aK:Ljava/util/Stack;
-
-    invoke-virtual {v0}, Ljava/util/Stack;->size()I
-
-    move-result v0
-
-    if-lez v0, :cond_1
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aN:Landroid/widget/ListView;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aK:Ljava/util/Stack;
-
-    invoke-virtual {v0}, Ljava/util/Stack;->pop()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/Parcelable;
-
-    invoke-virtual {v1, v0}, Landroid/widget/ListView;->onRestoreInstanceState(Landroid/os/Parcelable;)V
-
-    :cond_1
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ak:Z
-
-    return-void
-
-    :cond_2
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ap:Lcom/estrongs/android/pop/app/diskusage/e;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ao:Ljava/io/File;
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/diskusage/e;->a(Ljava/io/File;)Lcom/estrongs/fs/util/g;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_4
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:Ljava/util/Stack;
-
-    invoke-virtual {v1}, Ljava/util/Stack;->size()I
-
-    move-result v1
-
-    if-lez v1, :cond_3
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:Ljava/util/Stack;
-
-    invoke-virtual {v1}, Ljava/util/Stack;->peek()Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-ne v1, v0, :cond_3
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:Ljava/util/Stack;
-
-    invoke-virtual {v1}, Ljava/util/Stack;->pop()Ljava/lang/Object;
-
-    :cond_3
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:Ljava/util/Stack;
-
-    invoke-virtual {v1, v0}, Ljava/util/Stack;->push(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_4
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aK:Ljava/util/Stack;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aN:Landroid/widget/ListView;
-
-    invoke-virtual {v1}, Landroid/widget/ListView;->onSaveInstanceState()Landroid/os/Parcelable;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/Stack;->push(Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-.end method
-
-.method private ao()V
-    .locals 4
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Lcom/estrongs/android/widget/bg;
-
-    if-nez v0, :cond_0
-
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->r()Lcom/estrongs/android/widget/bg;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Lcom/estrongs/android/widget/bg;
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Lcom/estrongs/android/widget/bg;
-
-    if-eqz v0, :cond_1
-
-    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->am:J
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Lcom/estrongs/android/widget/bg;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/bg;->show()V
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->am:J
-
-    :cond_1
-    return-void
-.end method
-
-.method private ap()V
-    .locals 4
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Lcom/estrongs/android/widget/bg;
-
-    if-nez v0, :cond_0
-
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->r()Lcom/estrongs/android/widget/bg;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Lcom/estrongs/android/widget/bg;
-
-    :cond_0
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->am:J
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Lcom/estrongs/android/widget/bg;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aO:Landroid/os/Handler;
-
-    const/4 v1, 0x1
-
-    const-wide/16 v2, 0x320
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
-
-    :cond_1
-    return-void
-.end method
-
-.method private as()V
+.method static synthetic b(Lcom/estrongs/android/pop/app/diskusage/h;)J
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Lcom/estrongs/android/widget/bg;
+    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aA:J
 
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Lcom/estrongs/android/widget/bg;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/bg;->dismiss()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Lcom/estrongs/android/widget/bg;
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->H:Lcom/estrongs/android/view/cb;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->H:Lcom/estrongs/android/view/cb;
-
-    const/4 v1, 0x1
-
-    invoke-interface {v0, p0, v1}, Lcom/estrongs/android/view/cb;->a(Lcom/estrongs/android/view/aw;Z)V
-
-    :cond_1
-    return-void
-.end method
-
-.method private at()Z
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Lcom/estrongs/android/widget/bg;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Lcom/estrongs/android/widget/bg;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/bg;->isShowing()Z
-
-    move-result v0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method private au()V
-    .locals 2
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->al:Z
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aj:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aq:Lcom/estrongs/android/pop/app/diskusage/e;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aq:Lcom/estrongs/android/pop/app/diskusage/e;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/diskusage/e;->a()V
-
-    :cond_0
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->b:Ljava/lang/String;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ao:Ljava/io/File;
-
-    invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aO:Landroid/os/Handler;
-
-    new-instance v1, Lcom/estrongs/android/pop/app/diskusage/r;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/diskusage/r;-><init>(Lcom/estrongs/android/pop/app/diskusage/h;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :cond_1
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
+    return-wide v0
 .end method
 
 .method static synthetic b(Lcom/estrongs/android/pop/app/diskusage/h;J)J
     .locals 1
 
-    iput-wide p1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->am:J
+    iput-wide p1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ar:J
 
     return-wide p1
-.end method
-
-.method static synthetic b(Lcom/estrongs/android/pop/app/diskusage/h;)Lcom/estrongs/android/widget/bg;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Lcom/estrongs/android/widget/bg;
-
-    return-object v0
 .end method
 
 .method static synthetic b(Lcom/estrongs/android/pop/app/diskusage/h;Lcom/estrongs/fs/util/g;)V
@@ -1420,7 +942,7 @@
     move v1, v0
 
     :goto_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:Ljava/util/Stack;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aO:Ljava/util/Stack;
 
     invoke-virtual {v0}, Ljava/util/Stack;->size()I
 
@@ -1428,7 +950,7 @@
 
     if-ge v1, v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:Ljava/util/Stack;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aO:Ljava/util/Stack;
 
     invoke-virtual {v0, v1}, Ljava/util/Stack;->get(I)Ljava/lang/Object;
 
@@ -1445,57 +967,17 @@
     goto :goto_0
 
     :cond_0
-    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->au:J
+    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->az:J
 
     iget-wide v2, p1, Lcom/estrongs/fs/util/g;->a:J
 
     add-long/2addr v0, v2
 
-    iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->au:J
-
-    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aw:J
-
-    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->d:J
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aw:J
-
-    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:J
-
-    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->e:J
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:J
-
-    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ay:J
-
-    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->f:J
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ay:J
-
-    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->az:J
-
-    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->g:J
-
-    add-long/2addr v0, v2
-
     iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->az:J
-
-    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aA:J
-
-    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->h:J
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aA:J
 
     iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aB:J
 
-    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->i:J
+    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->d:J
 
     add-long/2addr v0, v2
 
@@ -1503,7 +985,7 @@
 
     iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aC:J
 
-    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->j:J
+    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->e:J
 
     add-long/2addr v0, v2
 
@@ -1511,7 +993,7 @@
 
     iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aD:J
 
-    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->k:J
+    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->f:J
 
     add-long/2addr v0, v2
 
@@ -1519,7 +1001,7 @@
 
     iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aE:J
 
-    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->l:J
+    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->g:J
 
     add-long/2addr v0, v2
 
@@ -1527,7 +1009,7 @@
 
     iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aF:J
 
-    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->m:J
+    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->h:J
 
     add-long/2addr v0, v2
 
@@ -1535,7 +1017,7 @@
 
     iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aG:J
 
-    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->n:J
+    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->i:J
 
     add-long/2addr v0, v2
 
@@ -1543,11 +1025,51 @@
 
     iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aH:J
 
-    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->o:J
+    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->j:J
 
     add-long/2addr v0, v2
 
     iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aH:J
+
+    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aI:J
+
+    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->k:J
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aI:J
+
+    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:J
+
+    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->l:J
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:J
+
+    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aK:J
+
+    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->m:J
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aK:J
+
+    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aL:J
+
+    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->n:J
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aL:J
+
+    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aM:J
+
+    iget-wide v2, p1, Lcom/estrongs/fs/util/g;->o:J
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aM:J
 
     return-void
 .end method
@@ -1678,34 +1200,250 @@
     return-void
 .end method
 
+.method private b(Ljava/lang/String;)V
+    .locals 6
+
+    const-wide/16 v4, 0x0
+
+    if-eqz p1, :cond_0
+
+    const-string v0, "du://"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+
+    move-result v0
+
+    if-ltz v0, :cond_0
+
+    const-string v0, "du://"
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    :cond_0
+    invoke-static {p1}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    sget-object p1, Lcom/estrongs/android/pop/app/diskusage/h;->an:Ljava/lang/String;
+
+    :cond_1
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->b:Ljava/lang/String;
+
+    new-instance v0, Ljava/io/File;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->b:Ljava/lang/String;
+
+    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->at:Ljava/io/File;
+
+    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ar:J
+
+    cmp-long v0, v0, v4
+
+    if-eqz v0, :cond_2
+
+    :goto_0
+    return-void
+
+    :cond_2
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->F:Lcom/estrongs/android/view/dv;
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->F:Lcom/estrongs/android/view/dv;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "du://"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->at:Ljava/io/File;
+
+    invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v1, v2}, Lcom/estrongs/android/view/dv;->a(Ljava/lang/String;Z)V
+
+    :cond_3
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->t()V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aN:Z
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aO:Ljava/util/Stack;
+
+    invoke-virtual {v0}, Ljava/util/Stack;->clear()V
+
+    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aB:J
+
+    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aC:J
+
+    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aD:J
+
+    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aE:J
+
+    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aF:J
+
+    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aG:J
+
+    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aH:J
+
+    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aI:J
+
+    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:J
+
+    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aK:J
+
+    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aL:J
+
+    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aM:J
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aw:Ljava/util/HashMap;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-nez v0, :cond_6
+
+    new-instance v0, Lcom/estrongs/android/pop/app/diskusage/e;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ag:Landroid/app/Activity;
+
+    invoke-direct {v0, v1}, Lcom/estrongs/android/pop/app/diskusage/e;-><init>(Landroid/content/ContextWrapper;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->au:Lcom/estrongs/android/pop/app/diskusage/e;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->au:Lcom/estrongs/android/pop/app/diskusage/e;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->a:Lcom/estrongs/fs/util/h;
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/diskusage/e;->a(Lcom/estrongs/fs/util/h;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->au:Lcom/estrongs/android/pop/app/diskusage/e;
+
+    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ay:J
+
+    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/pop/app/diskusage/e;->a(J)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->au:Lcom/estrongs/android/pop/app/diskusage/e;
+
+    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aR:J
+
+    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/pop/app/diskusage/e;->b(J)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aw:Ljava/util/HashMap;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->b:Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->au:Lcom/estrongs/android/pop/app/diskusage/e;
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:Lcom/estrongs/android/widget/bh;
+
+    if-nez v0, :cond_5
+
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->u()Lcom/estrongs/android/widget/bh;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:Lcom/estrongs/android/widget/bh;
+
+    :goto_1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:Lcom/estrongs/android/widget/bh;
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:Lcom/estrongs/android/widget/bh;
+
+    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->az:J
+
+    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/widget/bh;->a(J)V
+
+    :cond_4
+    iput-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aA:J
+
+    :goto_2
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->g()V
+
+    goto/16 :goto_0
+
+    :cond_5
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:Lcom/estrongs/android/widget/bh;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/widget/bh;->a()V
+
+    goto :goto_1
+
+    :cond_6
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aw:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/android/pop/app/diskusage/e;
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->au:Lcom/estrongs/android/pop/app/diskusage/e;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->au:Lcom/estrongs/android/pop/app/diskusage/e;
+
+    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ay:J
+
+    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/pop/app/diskusage/e;->a(J)V
+
+    goto :goto_2
+.end method
+
 .method static synthetic b(Lcom/estrongs/android/pop/app/diskusage/h;Z)Z
     .locals 0
 
-    iput-boolean p1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aI:Z
+    iput-boolean p1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aN:Z
 
     return p1
 .end method
 
-.method static synthetic c(Lcom/estrongs/android/pop/app/diskusage/h;)J
-    .locals 2
-
-    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->av:J
-
-    return-wide v0
-.end method
-
-.method static synthetic c(Lcom/estrongs/android/pop/app/diskusage/h;J)J
+.method static synthetic c(Lcom/estrongs/android/pop/app/diskusage/h;)Lcom/estrongs/android/widget/bh;
     .locals 1
 
-    iput-wide p1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->av:J
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:Lcom/estrongs/android/widget/bh;
 
-    return-wide p1
+    return-object v0
 .end method
 
 .method static synthetic d(Lcom/estrongs/android/pop/app/diskusage/h;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->ao()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->y()V
 
     return-void
 .end method
@@ -1713,7 +1451,7 @@
 .method static synthetic e(Lcom/estrongs/android/pop/app/diskusage/h;)Z
     .locals 1
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->at()Z
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->B()Z
 
     move-result v0
 
@@ -1723,7 +1461,7 @@
 .method static synthetic f(Lcom/estrongs/android/pop/app/diskusage/h;)J
     .locals 2
 
-    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->am:J
+    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ar:J
 
     return-wide v0
 .end method
@@ -1731,7 +1469,7 @@
 .method static synthetic g(Lcom/estrongs/android/pop/app/diskusage/h;)Landroid/os/Handler;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aO:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aT:Landroid/os/Handler;
 
     return-object v0
 .end method
@@ -1739,7 +1477,7 @@
 .method static synthetic h(Lcom/estrongs/android/pop/app/diskusage/h;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->as()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->A()V
 
     return-void
 .end method
@@ -1747,7 +1485,7 @@
 .method static synthetic i(Lcom/estrongs/android/pop/app/diskusage/h;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->an()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->x()V
 
     return-void
 .end method
@@ -1755,12 +1493,20 @@
 .method static synthetic j(Lcom/estrongs/android/pop/app/diskusage/h;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->am()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->w()V
 
     return-void
 .end method
 
-.method private j(Z)V
+.method static synthetic k(Lcom/estrongs/android/pop/app/diskusage/h;)Lcom/estrongs/android/pop/app/diskusage/e;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->au:Lcom/estrongs/android/pop/app/diskusage/e;
+
+    return-object v0
+.end method
+
+.method private k(Z)V
     .locals 8
 
     const/4 v7, 0x1
@@ -1783,7 +1529,7 @@
 
     mul-long/2addr v2, v4
 
-    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->at:J
+    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ay:J
 
     aget-wide v2, v0, v6
 
@@ -1795,11 +1541,11 @@
 
     mul-long/2addr v2, v4
 
-    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->au:J
+    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->az:J
 
     aget-wide v2, v0, v1
 
-    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aM:J
+    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aR:J
 
     aget-wide v2, v0, v7
 
@@ -1810,31 +1556,31 @@
     move-wide v4, v0
 
     :goto_0
-    const v0, 0x7f0a0164
+    const v0, 0x7f0e0308
 
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/diskusage/h;->k(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/diskusage/h;->b(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f0a0166
+    const v1, 0x7f0e030a
 
-    invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/diskusage/h;->k(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/diskusage/h;->b(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f0a0168
+    const v2, 0x7f0e030c
 
-    invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/diskusage/h;->k(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/diskusage/h;->b(I)Landroid/view/View;
 
     move-result-object v2
 
     check-cast v2, Landroid/widget/TextView;
 
-    iget-wide v6, p0, Lcom/estrongs/android/pop/app/diskusage/h;->at:J
+    iget-wide v6, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ay:J
 
     invoke-static {v6, v7}, Lcom/estrongs/fs/util/j;->c(J)Ljava/lang/String;
 
@@ -1842,7 +1588,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-wide v6, p0, Lcom/estrongs/android/pop/app/diskusage/h;->au:J
+    iget-wide v6, p0, Lcom/estrongs/android/pop/app/diskusage/h;->az:J
 
     invoke-static {v6, v7}, Lcom/estrongs/fs/util/j;->c(J)Ljava/lang/String;
 
@@ -1859,9 +1605,9 @@
     return-void
 
     :cond_0
-    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->at:J
+    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ay:J
 
-    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->au:J
+    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->az:J
 
     sub-long/2addr v0, v2
 
@@ -1870,58 +1616,74 @@
     goto :goto_0
 .end method
 
-.method static synthetic k(Lcom/estrongs/android/pop/app/diskusage/h;)Lcom/estrongs/android/pop/app/diskusage/e;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ap:Lcom/estrongs/android/pop/app/diskusage/e;
-
-    return-object v0
-.end method
-
 .method static synthetic l(Lcom/estrongs/android/pop/app/diskusage/h;)Landroid/app/Activity;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ad:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ag:Landroid/app/Activity;
 
     return-object v0
 .end method
 
-.method static synthetic m(Lcom/estrongs/android/pop/app/diskusage/h;)Lcom/estrongs/android/ui/a/k;
+.method static synthetic m(Lcom/estrongs/android/pop/app/diskusage/h;)Lcom/estrongs/android/view/co;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aL:Lcom/estrongs/android/ui/a/k;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->am:Lcom/estrongs/android/view/co;
 
     return-object v0
 .end method
 
-.method static synthetic n(Lcom/estrongs/android/pop/app/diskusage/h;)Landroid/widget/ListView;
+.method static synthetic n(Lcom/estrongs/android/pop/app/diskusage/h;)Lcom/estrongs/android/ui/adapter/k;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aN:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aQ:Lcom/estrongs/android/ui/adapter/k;
 
     return-object v0
 .end method
 
-.method static synthetic o(Lcom/estrongs/android/pop/app/diskusage/h;)Ljava/io/File;
+.method static synthetic o(Lcom/estrongs/android/pop/app/diskusage/h;)Lcom/estrongs/android/view/cp;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ao:Ljava/io/File;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->al:Lcom/estrongs/android/view/cp;
 
     return-object v0
 .end method
 
-.method static synthetic p(Lcom/estrongs/android/pop/app/diskusage/h;)Ljava/lang/Object;
+.method static synthetic p(Lcom/estrongs/android/pop/app/diskusage/h;)Landroid/support/v7/widget/RecyclerView;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aj:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aS:Landroid/support/v7/widget/RecyclerView;
 
     return-object v0
 .end method
 
-.method private p()V
+.method static synthetic q(Lcom/estrongs/android/pop/app/diskusage/h;)Ljava/io/File;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->at:Ljava/io/File;
+
+    return-object v0
+.end method
+
+.method static synthetic r(Lcom/estrongs/android/pop/app/diskusage/h;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ao:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method static synthetic s(Lcom/estrongs/android/pop/app/diskusage/h;)Landroid/app/Activity;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ag:Landroid/app/Activity;
+
+    return-object v0
+.end method
+
+.method private s()V
     .locals 6
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aq:Lcom/estrongs/android/pop/app/diskusage/e;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->av:Lcom/estrongs/android/pop/app/diskusage/e;
 
     iget-object v0, v0, Lcom/estrongs/android/pop/app/diskusage/e;->i:Ljava/util/Map;
 
@@ -1955,49 +1717,9 @@
 
     if-eqz v0, :cond_0
 
-    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aw:J
-
-    iget-wide v4, v0, Lcom/estrongs/fs/util/g;->d:J
-
-    add-long/2addr v2, v4
-
-    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aw:J
-
-    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:J
-
-    iget-wide v4, v0, Lcom/estrongs/fs/util/g;->e:J
-
-    add-long/2addr v2, v4
-
-    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:J
-
-    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ay:J
-
-    iget-wide v4, v0, Lcom/estrongs/fs/util/g;->f:J
-
-    add-long/2addr v2, v4
-
-    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ay:J
-
-    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->az:J
-
-    iget-wide v4, v0, Lcom/estrongs/fs/util/g;->g:J
-
-    add-long/2addr v2, v4
-
-    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->az:J
-
-    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aA:J
-
-    iget-wide v4, v0, Lcom/estrongs/fs/util/g;->h:J
-
-    add-long/2addr v2, v4
-
-    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aA:J
-
     iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aB:J
 
-    iget-wide v4, v0, Lcom/estrongs/fs/util/g;->i:J
+    iget-wide v4, v0, Lcom/estrongs/fs/util/g;->d:J
 
     add-long/2addr v2, v4
 
@@ -2005,7 +1727,7 @@
 
     iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aC:J
 
-    iget-wide v4, v0, Lcom/estrongs/fs/util/g;->j:J
+    iget-wide v4, v0, Lcom/estrongs/fs/util/g;->e:J
 
     add-long/2addr v2, v4
 
@@ -2013,7 +1735,7 @@
 
     iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aD:J
 
-    iget-wide v4, v0, Lcom/estrongs/fs/util/g;->k:J
+    iget-wide v4, v0, Lcom/estrongs/fs/util/g;->f:J
 
     add-long/2addr v2, v4
 
@@ -2021,7 +1743,7 @@
 
     iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aE:J
 
-    iget-wide v4, v0, Lcom/estrongs/fs/util/g;->l:J
+    iget-wide v4, v0, Lcom/estrongs/fs/util/g;->g:J
 
     add-long/2addr v2, v4
 
@@ -2029,7 +1751,7 @@
 
     iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aF:J
 
-    iget-wide v4, v0, Lcom/estrongs/fs/util/g;->m:J
+    iget-wide v4, v0, Lcom/estrongs/fs/util/g;->h:J
 
     add-long/2addr v2, v4
 
@@ -2037,7 +1759,7 @@
 
     iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aG:J
 
-    iget-wide v4, v0, Lcom/estrongs/fs/util/g;->n:J
+    iget-wide v4, v0, Lcom/estrongs/fs/util/g;->i:J
 
     add-long/2addr v2, v4
 
@@ -2045,11 +1767,51 @@
 
     iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aH:J
 
-    iget-wide v4, v0, Lcom/estrongs/fs/util/g;->o:J
+    iget-wide v4, v0, Lcom/estrongs/fs/util/g;->j:J
 
     add-long/2addr v2, v4
 
     iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aH:J
+
+    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aI:J
+
+    iget-wide v4, v0, Lcom/estrongs/fs/util/g;->k:J
+
+    add-long/2addr v2, v4
+
+    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aI:J
+
+    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:J
+
+    iget-wide v4, v0, Lcom/estrongs/fs/util/g;->l:J
+
+    add-long/2addr v2, v4
+
+    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:J
+
+    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aK:J
+
+    iget-wide v4, v0, Lcom/estrongs/fs/util/g;->m:J
+
+    add-long/2addr v2, v4
+
+    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aK:J
+
+    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aL:J
+
+    iget-wide v4, v0, Lcom/estrongs/fs/util/g;->n:J
+
+    add-long/2addr v2, v4
+
+    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aL:J
+
+    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aM:J
+
+    iget-wide v4, v0, Lcom/estrongs/fs/util/g;->o:J
+
+    add-long/2addr v2, v4
+
+    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aM:J
 
     goto :goto_0
 
@@ -2057,75 +1819,75 @@
     return-void
 .end method
 
-.method static synthetic q(Lcom/estrongs/android/pop/app/diskusage/h;)Landroid/app/Activity;
+.method static synthetic t(Lcom/estrongs/android/pop/app/diskusage/h;)Lcom/estrongs/android/pop/app/diskusage/e;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ad:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->av:Lcom/estrongs/android/pop/app/diskusage/e;
 
     return-object v0
 .end method
 
-.method private q()V
+.method private t()V
     .locals 1
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/estrongs/android/pop/app/diskusage/h;->j(Z)V
+    invoke-direct {p0, v0}, Lcom/estrongs/android/pop/app/diskusage/h;->k(Z)V
 
     return-void
 .end method
 
-.method static synthetic r(Lcom/estrongs/android/pop/app/diskusage/h;)Lcom/estrongs/android/pop/app/diskusage/e;
-    .locals 1
+.method static synthetic u(Lcom/estrongs/android/pop/app/diskusage/h;)J
+    .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aq:Lcom/estrongs/android/pop/app/diskusage/e;
+    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ay:J
 
-    return-object v0
+    return-wide v0
 .end method
 
-.method private r()Lcom/estrongs/android/widget/bg;
+.method private u()Lcom/estrongs/android/widget/bh;
     .locals 2
 
     :try_start_0
-    new-instance v0, Lcom/estrongs/android/widget/bg;
+    new-instance v0, Lcom/estrongs/android/widget/bh;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ad:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ag:Landroid/app/Activity;
 
-    invoke-direct {v0, v1}, Lcom/estrongs/android/widget/bg;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/estrongs/android/widget/bh;-><init>(Landroid/content/Context;)V
 
-    new-instance v1, Lcom/estrongs/android/widget/bi;
+    new-instance v1, Lcom/estrongs/android/widget/bj;
 
-    invoke-direct {v1}, Lcom/estrongs/android/widget/bi;-><init>()V
+    invoke-direct {v1}, Lcom/estrongs/android/widget/bj;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/bg;->a(Lcom/estrongs/android/widget/bk;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/bh;->a(Lcom/estrongs/android/widget/bl;)V
 
-    const v1, 0x7f0b0085
+    const v1, 0x7f0805a3
 
-    invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/diskusage/h;->l(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/diskusage/h;->j(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/bg;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/bh;->setTitle(Ljava/lang/CharSequence;)V
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/bg;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/bh;->a(I)V
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/bg;->setCancelable(Z)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/bh;->setCancelable(Z)V
 
     new-instance v1, Lcom/estrongs/android/pop/app/diskusage/o;
 
     invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/diskusage/o;-><init>(Lcom/estrongs/android/pop/app/diskusage/h;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/bg;->a(Lcom/estrongs/android/widget/bj;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/bh;->a(Lcom/estrongs/android/widget/bk;)V
 
     new-instance v1, Lcom/estrongs/android/pop/app/diskusage/p;
 
     invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/diskusage/p;-><init>(Lcom/estrongs/android/pop/app/diskusage/h;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/bg;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/bh;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2140,68 +1902,349 @@
     goto :goto_0
 .end method
 
-.method static synthetic s(Lcom/estrongs/android/pop/app/diskusage/h;)J
-    .locals 2
-
-    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->at:J
-
-    return-wide v0
-.end method
-
-.method static synthetic t(Lcom/estrongs/android/pop/app/diskusage/h;)Ljava/util/HashMap;
+.method static synthetic v(Lcom/estrongs/android/pop/app/diskusage/h;)Ljava/util/HashMap;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ar:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aw:Ljava/util/HashMap;
 
     return-object v0
 .end method
 
-.method static synthetic u(Lcom/estrongs/android/pop/app/diskusage/h;)Landroid/app/Activity;
+.method private v()V
+    .locals 3
+
+    const v0, 0x7f0e0113
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/diskusage/h;->b(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const v2, 0x7f08019b
+
+    invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/diskusage/h;->j(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "/"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const v2, 0x7f08019d
+
+    invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/diskusage/h;->j(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    new-instance v0, Lcom/estrongs/android/pop/app/diskusage/q;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/diskusage/q;-><init>(Lcom/estrongs/android/pop/app/diskusage/h;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->am:Lcom/estrongs/android/view/co;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aQ:Lcom/estrongs/android/ui/adapter/k;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aQ:Lcom/estrongs/android/ui/adapter/k;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->am:Lcom/estrongs/android/view/co;
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/adapter/k;->a(Lcom/estrongs/android/view/co;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method static synthetic w(Lcom/estrongs/android/pop/app/diskusage/h;)Landroid/app/Activity;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ad:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ag:Landroid/app/Activity;
 
     return-object v0
 .end method
 
-.method static synthetic v(Lcom/estrongs/android/pop/app/diskusage/h;)Z
-    .locals 1
+.method private w()V
+    .locals 3
 
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aI:Z
+    new-instance v0, Lcom/estrongs/android/ui/adapter/k;
 
-    return v0
-.end method
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ag:Landroid/app/Activity;
 
-.method static synthetic w(Lcom/estrongs/android/pop/app/diskusage/h;)V
-    .locals 0
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->au:Lcom/estrongs/android/pop/app/diskusage/e;
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->p()V
+    invoke-direct {v0, v1, v2}, Lcom/estrongs/android/ui/adapter/k;-><init>(Landroid/content/Context;Lcom/estrongs/android/pop/app/diskusage/e;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aQ:Lcom/estrongs/android/ui/adapter/k;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aQ:Lcom/estrongs/android/ui/adapter/k;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->am:Lcom/estrongs/android/view/co;
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/adapter/k;->a(Lcom/estrongs/android/view/co;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aQ:Lcom/estrongs/android/ui/adapter/k;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->al:Lcom/estrongs/android/view/cp;
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/adapter/k;->a(Lcom/estrongs/android/view/cp;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aS:Landroid/support/v7/widget/RecyclerView;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aQ:Lcom/estrongs/android/ui/adapter/k;
+
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/RecyclerView;->setAdapter(Landroid/support/v7/widget/RecyclerView$Adapter;)V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/diskusage/h;->d(Z)[J
 
     return-void
 .end method
 
-.method static synthetic x(Lcom/estrongs/android/pop/app/diskusage/h;)Landroid/app/Activity;
-    .locals 1
+.method private x()V
+    .locals 3
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ad:Landroid/app/Activity;
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aq:Z
 
-    return-object v0
+    if-nez v0, :cond_1
+
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ap:Z
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aO:Ljava/util/Stack;
+
+    invoke-virtual {v0}, Ljava/util/Stack;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aO:Ljava/util/Stack;
+
+    invoke-virtual {v0}, Ljava/util/Stack;->pop()Ljava/lang/Object;
+
+    :cond_0
+    :goto_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->av:Lcom/estrongs/android/pop/app/diskusage/e;
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->au:Lcom/estrongs/android/pop/app/diskusage/e;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->at:Ljava/io/File;
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Ljava/io/File;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aw:Ljava/util/HashMap;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->b:Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->au:Lcom/estrongs/android/pop/app/diskusage/e;
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->w()V
+
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ap:Z
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aP:Ljava/util/Stack;
+
+    invoke-virtual {v0}, Ljava/util/Stack;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_1
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->e:Landroid/support/v7/widget/LinearLayoutManager;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aP:Ljava/util/Stack;
+
+    invoke-virtual {v0}, Ljava/util/Stack;->pop()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/Parcelable;
+
+    invoke-virtual {v1, v0}, Landroid/support/v7/widget/LinearLayoutManager;->onRestoreInstanceState(Landroid/os/Parcelable;)V
+
+    :cond_1
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ap:Z
+
+    return-void
+
+    :cond_2
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->au:Lcom/estrongs/android/pop/app/diskusage/e;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->at:Ljava/io/File;
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/diskusage/e;->a(Ljava/io/File;)Lcom/estrongs/fs/util/g;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_4
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aO:Ljava/util/Stack;
+
+    invoke-virtual {v1}, Ljava/util/Stack;->size()I
+
+    move-result v1
+
+    if-lez v1, :cond_3
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aO:Ljava/util/Stack;
+
+    invoke-virtual {v1}, Ljava/util/Stack;->peek()Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-ne v1, v0, :cond_3
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aO:Ljava/util/Stack;
+
+    invoke-virtual {v1}, Ljava/util/Stack;->pop()Ljava/lang/Object;
+
+    :cond_3
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aO:Ljava/util/Stack;
+
+    invoke-virtual {v1, v0}, Ljava/util/Stack;->push(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_4
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aP:Ljava/util/Stack;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->e:Landroid/support/v7/widget/LinearLayoutManager;
+
+    invoke-virtual {v1}, Landroid/support/v7/widget/LinearLayoutManager;->onSaveInstanceState()Landroid/os/Parcelable;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/Stack;->push(Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
 .end method
 
-.method static synthetic y(Lcom/estrongs/android/pop/app/diskusage/h;)Landroid/app/Activity;
+.method static synthetic x(Lcom/estrongs/android/pop/app/diskusage/h;)Z
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ad:Landroid/app/Activity;
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aN:Z
 
-    return-object v0
+    return v0
+.end method
+
+.method private y()V
+    .locals 4
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:Lcom/estrongs/android/widget/bh;
+
+    if-nez v0, :cond_0
+
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->u()Lcom/estrongs/android/widget/bh;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:Lcom/estrongs/android/widget/bh;
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:Lcom/estrongs/android/widget/bh;
+
+    if-eqz v0, :cond_1
+
+    iget-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ar:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:Lcom/estrongs/android/widget/bh;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/widget/bh;->show()V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ar:J
+
+    :cond_1
+    return-void
+.end method
+
+.method static synthetic y(Lcom/estrongs/android/pop/app/diskusage/h;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->s()V
+
+    return-void
 .end method
 
 .method static synthetic z(Lcom/estrongs/android/pop/app/diskusage/h;)Landroid/app/Activity;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ad:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ag:Landroid/app/Activity;
 
     return-object v0
+.end method
+
+.method private z()V
+    .locals 4
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:Lcom/estrongs/android/widget/bh;
+
+    if-nez v0, :cond_0
+
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->u()Lcom/estrongs/android/widget/bh;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:Lcom/estrongs/android/widget/bh;
+
+    :cond_0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ar:J
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:Lcom/estrongs/android/widget/bh;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aT:Landroid/os/Handler;
+
+    const/4 v1, 0x1
+
+    const-wide/16 v2, 0x320
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
+
+    :cond_1
+    return-void
 .end method
 
 
@@ -2215,22 +2258,29 @@
 .method public a(Landroid/view/View$OnTouchListener;)V
     .locals 1
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/view/aw;->a(Landroid/view/View$OnTouchListener;)V
+    invoke-super {p0, p1}, Lcom/estrongs/android/view/cr;->a(Landroid/view/View$OnTouchListener;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aN:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aS:Landroid/support/v7/widget/RecyclerView;
 
-    invoke-virtual {v0, p1}, Landroid/widget/ListView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/RecyclerView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     return-void
 .end method
 
-.method public a(Landroid/widget/AdapterView$OnItemLongClickListener;)V
+.method public a(Lcom/estrongs/android/view/cp;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aN:Landroid/widget/ListView;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->al:Lcom/estrongs/android/view/cp;
 
-    invoke-virtual {v0, p1}, Landroid/widget/ListView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aQ:Lcom/estrongs/android/ui/adapter/k;
 
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aQ:Lcom/estrongs/android/ui/adapter/k;
+
+    invoke-virtual {v0, p1}, Lcom/estrongs/android/ui/adapter/k;->a(Lcom/estrongs/android/view/cp;)V
+
+    :cond_0
     return-void
 .end method
 
@@ -2241,7 +2291,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0, p1}, Lcom/estrongs/android/pop/app/diskusage/h;->a(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/estrongs/android/pop/app/diskusage/h;->b(Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -2259,9 +2309,9 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ad:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ag:Landroid/app/Activity;
 
-    check-cast v0, Lcom/estrongs/android/pop/esclasses/ESActivity;
+    check-cast v0, Lcom/estrongs/android/pop/app/d/a;
 
     new-instance v1, Lcom/estrongs/android/pop/app/diskusage/s;
 
@@ -2271,7 +2321,7 @@
 
     invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/diskusage/t;-><init>(Lcom/estrongs/android/pop/app/diskusage/h;)V
 
-    invoke-static {v0, p1, v1, v2}, Lcom/estrongs/android/pop/utils/aj;->a(Lcom/estrongs/android/pop/esclasses/ESActivity;Ljava/util/List;Lcom/estrongs/a/a/p;Lcom/estrongs/android/pop/utils/cb;)Z
+    invoke-static {v0, p1, v1, v2}, Lcom/estrongs/android/pop/utils/ao;->a(Lcom/estrongs/android/pop/app/d/a;Ljava/util/List;Lcom/estrongs/a/a/p;Lcom/estrongs/android/pop/utils/ck;)Z
 
     return-void
 .end method
@@ -2279,9 +2329,9 @@
 .method public a(Z)V
     .locals 1
 
-    iput-boolean p1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->l:Z
+    iput-boolean p1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->q:Z
 
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->l:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->q:Z
 
     if-nez v0, :cond_1
 
@@ -2290,13 +2340,13 @@
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/diskusage/h;->c(I)V
 
     :goto_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aL:Lcom/estrongs/android/ui/a/k;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aQ:Lcom/estrongs/android/ui/adapter/k;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aL:Lcom/estrongs/android/ui/a/k;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aQ:Lcom/estrongs/android/ui/adapter/k;
 
-    invoke-virtual {v0, p1}, Lcom/estrongs/android/ui/a/k;->a(Z)V
+    invoke-virtual {v0, p1}, Lcom/estrongs/android/ui/adapter/k;->a(Z)V
 
     :cond_0
     return-void
@@ -2307,48 +2357,18 @@
     goto :goto_0
 .end method
 
-.method public a_()V
-    .locals 0
-
-    invoke-super {p0}, Lcom/estrongs/android/view/aw;->a_()V
-
-    return-void
-.end method
-
-.method public b()Lcom/estrongs/fs/h;
+.method public a_(I)Lcom/estrongs/fs/h;
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ao:Ljava/io/File;
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Lcom/estrongs/android/pop/app/diskusage/u;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ao:Ljava/io/File;
-
-    invoke-direct {v0, v1}, Lcom/estrongs/android/pop/app/diskusage/u;-><init>(Ljava/io/File;)V
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public b(I)Lcom/estrongs/fs/h;
-    .locals 2
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aL:Lcom/estrongs/android/ui/a/k;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aQ:Lcom/estrongs/android/ui/adapter/k;
 
     if-eqz v0, :cond_0
 
     if-ltz p1, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aL:Lcom/estrongs/android/ui/a/k;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aQ:Lcom/estrongs/android/ui/adapter/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/a/k;->getCount()I
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/adapter/k;->getItemCount()I
 
     move-result v0
 
@@ -2356,9 +2376,9 @@
 
     new-instance v1, Lcom/estrongs/android/pop/app/diskusage/u;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aL:Lcom/estrongs/android/ui/a/k;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aQ:Lcom/estrongs/android/ui/adapter/k;
 
-    invoke-virtual {v0, p1}, Lcom/estrongs/android/ui/a/k;->getItem(I)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lcom/estrongs/android/ui/adapter/k;->a(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2377,6 +2397,28 @@
     goto :goto_0
 .end method
 
+.method public b()Lcom/estrongs/fs/h;
+    .locals 2
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->at:Ljava/io/File;
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Lcom/estrongs/android/pop/app/diskusage/u;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->at:Ljava/io/File;
+
+    invoke-direct {v0, v1}, Lcom/estrongs/android/pop/app/diskusage/u;-><init>(Ljava/io/File;)V
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method public b(Z)V
     .locals 3
 
@@ -2384,9 +2426,9 @@
 
     if-eqz p1, :cond_0
 
-    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->al:Z
+    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aq:Z
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ar:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aw:Ljava/util/HashMap;
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->b:Ljava/lang/String;
 
@@ -2394,15 +2436,15 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->b:Ljava/lang/String;
 
-    invoke-direct {p0, v0}, Lcom/estrongs/android/pop/app/diskusage/h;->a(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/estrongs/android/pop/app/diskusage/h;->b(Ljava/lang/String;)V
 
     :goto_0
     return-void
 
     :cond_0
-    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->al:Z
+    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aq:Z
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->ap()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->z()V
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->k()Ljava/util/List;
 
@@ -2422,7 +2464,7 @@
 .method public c()Ljava/lang/String;
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ao:Ljava/io/File;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->at:Ljava/io/File;
 
     if-eqz v0, :cond_0
 
@@ -2436,7 +2478,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ao:Ljava/io/File;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->at:Ljava/io/File;
 
     invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -2483,7 +2525,7 @@
     const/4 v0, 0x0
 
     :try_start_0
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aL:Lcom/estrongs/android/ui/a/k;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aQ:Lcom/estrongs/android/ui/adapter/k;
 
     if-nez v1, :cond_1
 
@@ -2492,15 +2534,15 @@
     return-void
 
     :cond_1
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->m:Ljava/util/SortedMap;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/h;->r:Ljava/util/SortedMap;
 
     invoke-interface {v1}, Ljava/util/SortedMap;->size()I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aL:Lcom/estrongs/android/ui/a/k;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aQ:Lcom/estrongs/android/ui/adapter/k;
 
-    invoke-virtual {v2}, Lcom/estrongs/android/ui/a/k;->getCount()I
+    invoke-virtual {v2}, Lcom/estrongs/android/ui/adapter/k;->getItemCount()I
 
     move-result v2
 
@@ -2508,20 +2550,20 @@
 
     if-ne p1, v3, :cond_2
 
-    iget-object v3, p0, Lcom/estrongs/android/pop/app/diskusage/h;->m:Ljava/util/SortedMap;
+    iget-object v3, p0, Lcom/estrongs/android/pop/app/diskusage/h;->r:Ljava/util/SortedMap;
 
     invoke-interface {v3}, Ljava/util/SortedMap;->clear()V
 
     :goto_1
     if-ge v0, v2, :cond_3
 
-    iget-object v3, p0, Lcom/estrongs/android/pop/app/diskusage/h;->m:Ljava/util/SortedMap;
+    iget-object v3, p0, Lcom/estrongs/android/pop/app/diskusage/h;->r:Ljava/util/SortedMap;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
 
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/diskusage/h;->b(I)Lcom/estrongs/fs/h;
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/diskusage/h;->a_(I)Lcom/estrongs/fs/h;
 
     move-result-object v5
 
@@ -2536,15 +2578,15 @@
 
     if-ne p1, v0, :cond_4
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->v()V
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->K()V
 
     :cond_3
     :goto_2
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aL:Lcom/estrongs/android/ui/a/k;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aQ:Lcom/estrongs/android/ui/adapter/k;
 
     new-instance v2, Ljava/util/ArrayList;
 
-    iget-object v3, p0, Lcom/estrongs/android/pop/app/diskusage/h;->m:Ljava/util/SortedMap;
+    iget-object v3, p0, Lcom/estrongs/android/pop/app/diskusage/h;->r:Ljava/util/SortedMap;
 
     invoke-interface {v3}, Ljava/util/SortedMap;->keySet()Ljava/util/Set;
 
@@ -2552,15 +2594,15 @@
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/a/k;->a(Ljava/util/List;)V
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/adapter/k;->a(Ljava/util/List;)V
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->e()V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->i:Lcom/estrongs/android/view/av;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->l:Lcom/estrongs/android/view/cq;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->m:Ljava/util/SortedMap;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->r:Ljava/util/SortedMap;
 
     invoke-interface {v0}, Ljava/util/SortedMap;->size()I
 
@@ -2568,13 +2610,13 @@
 
     if-eq v1, v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->i:Lcom/estrongs/android/view/av;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->l:Lcom/estrongs/android/view/cq;
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->w()Ljava/util/List;
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->o()Ljava/util/List;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/estrongs/android/view/av;->a(Ljava/util/List;)V
+    invoke-interface {v0, v1}, Lcom/estrongs/android/view/cq;->a(Ljava/util/List;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2593,13 +2635,13 @@
     if-ne p1, v0, :cond_5
 
     :try_start_1
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->y()[I
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->M()[I
 
     move-result-object v2
 
     if-eqz v2, :cond_3
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->m:Ljava/util/SortedMap;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->r:Ljava/util/SortedMap;
 
     invoke-interface {v0}, Ljava/util/SortedMap;->clear()V
 
@@ -2614,13 +2656,13 @@
 
     if-gt v0, v3, :cond_3
 
-    iget-object v3, p0, Lcom/estrongs/android/pop/app/diskusage/h;->m:Ljava/util/SortedMap;
+    iget-object v3, p0, Lcom/estrongs/android/pop/app/diskusage/h;->r:Ljava/util/SortedMap;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
 
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/diskusage/h;->b(I)Lcom/estrongs/fs/h;
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/diskusage/h;->a_(I)Lcom/estrongs/fs/h;
 
     move-result-object v5
 
@@ -2635,7 +2677,7 @@
 
     if-ge p1, v2, :cond_3
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->m:Ljava/util/SortedMap;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->r:Ljava/util/SortedMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2647,13 +2689,13 @@
 
     if-nez v0, :cond_6
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->m:Ljava/util/SortedMap;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->r:Ljava/util/SortedMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    invoke-virtual {p0, p1}, Lcom/estrongs/android/pop/app/diskusage/h;->b(I)Lcom/estrongs/fs/h;
+    invoke-virtual {p0, p1}, Lcom/estrongs/android/pop/app/diskusage/h;->a_(I)Lcom/estrongs/fs/h;
 
     move-result-object v3
 
@@ -2662,7 +2704,7 @@
     goto :goto_2
 
     :cond_6
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->m:Ljava/util/SortedMap;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->r:Ljava/util/SortedMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2692,7 +2734,7 @@
 
     new-array v1, v0, [J
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:Ljava/util/Stack;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aO:Ljava/util/Stack;
 
     invoke-virtual {v0}, Ljava/util/Stack;->size()I
 
@@ -2703,53 +2745,53 @@
     if-nez v0, :cond_1
 
     :cond_0
-    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:J
+    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aC:J
 
     aput-wide v2, v1, v4
 
-    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->az:J
+    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aE:J
 
     aput-wide v2, v1, v5
 
-    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aB:J
+    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aG:J
 
     aput-wide v2, v1, v6
 
-    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aF:J
+    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aK:J
 
     aput-wide v2, v1, v7
 
-    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aD:J
+    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aI:J
 
     aput-wide v2, v1, v8
 
     const/4 v0, 0x5
 
-    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aH:J
+    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aM:J
 
     aput-wide v2, v1, v0
 
     const/4 v0, 0x6
 
-    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:J
+    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aC:J
 
-    iget-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->az:J
-
-    add-long/2addr v2, v4
-
-    iget-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aB:J
+    iget-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aE:J
 
     add-long/2addr v2, v4
 
-    iget-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aF:J
+    iget-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aG:J
 
     add-long/2addr v2, v4
 
-    iget-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aD:J
+    iget-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aK:J
 
     add-long/2addr v2, v4
 
-    iget-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aH:J
+    iget-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aI:J
+
+    add-long/2addr v2, v4
+
+    iget-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aM:J
 
     add-long/2addr v2, v4
 
@@ -2759,7 +2801,7 @@
     return-object v1
 
     :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:Ljava/util/Stack;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aO:Ljava/util/Stack;
 
     invoke-virtual {v0}, Ljava/util/Stack;->peek()Ljava/lang/Object;
 
@@ -2807,7 +2849,7 @@
 .method public d()I
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aL:Lcom/estrongs/android/ui/a/k;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aQ:Lcom/estrongs/android/ui/adapter/k;
 
     if-nez v0, :cond_0
 
@@ -2817,9 +2859,9 @@
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aL:Lcom/estrongs/android/ui/a/k;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aQ:Lcom/estrongs/android/ui/adapter/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/a/k;->getCount()I
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/adapter/k;->getItemCount()I
 
     move-result v0
 
@@ -2829,11 +2871,11 @@
 .method public d(I)V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ap:Lcom/estrongs/android/pop/app/diskusage/e;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->au:Lcom/estrongs/android/pop/app/diskusage/e;
 
     invoke-virtual {v0, p1}, Lcom/estrongs/android/pop/app/diskusage/e;->a(I)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aO:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aT:Landroid/os/Handler;
 
     const/4 v1, 0x3
 
@@ -2862,7 +2904,7 @@
     :goto_0
     new-array v1, v0, [J
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:Ljava/util/Stack;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aO:Ljava/util/Stack;
 
     invoke-virtual {v0}, Ljava/util/Stack;->size()I
 
@@ -2873,39 +2915,39 @@
     if-nez v0, :cond_4
 
     :cond_0
-    iget-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aw:J
+    iget-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aB:J
 
     aput-wide v4, v1, v2
 
-    iget-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ay:J
+    iget-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aD:J
 
     aput-wide v4, v1, v7
 
-    iget-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aA:J
+    iget-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aF:J
 
     aput-wide v4, v1, v8
 
-    iget-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aE:J
+    iget-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:J
 
     aput-wide v4, v1, v9
 
     const/4 v0, 0x4
 
-    iget-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aC:J
+    iget-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aH:J
 
     aput-wide v4, v1, v0
 
     const/4 v0, 0x5
 
-    iget-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aG:J
+    iget-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aL:J
 
     aput-wide v4, v1, v0
 
     if-eqz p1, :cond_3
 
-    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->at:J
+    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ay:J
 
-    iget-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->au:J
+    iget-wide v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->az:J
 
     sub-long/2addr v2, v4
 
@@ -2913,7 +2955,7 @@
 
     const/4 v0, 0x7
 
-    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->at:J
+    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ay:J
 
     aput-wide v2, v1, v0
 
@@ -2951,7 +2993,7 @@
     goto :goto_2
 
     :cond_4
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:Ljava/util/Stack;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aO:Ljava/util/Stack;
 
     invoke-virtual {v0}, Ljava/util/Stack;->peek()Ljava/lang/Object;
 
@@ -2999,7 +3041,7 @@
 .method public synthetic e(I)Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/estrongs/android/pop/app/diskusage/h;->b(I)Lcom/estrongs/fs/h;
+    invoke-virtual {p0, p1}, Lcom/estrongs/android/pop/app/diskusage/h;->a_(I)Lcom/estrongs/fs/h;
 
     move-result-object v0
 
@@ -3009,13 +3051,13 @@
 .method public e()V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aL:Lcom/estrongs/android/ui/a/k;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aQ:Lcom/estrongs/android/ui/adapter/k;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aL:Lcom/estrongs/android/ui/a/k;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aQ:Lcom/estrongs/android/ui/adapter/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/a/k;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/adapter/k;->notifyDataSetChanged()V
 
     :cond_0
     return-void
@@ -3024,13 +3066,13 @@
 .method public f()Lcom/estrongs/fs/h;
     .locals 1
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->at()Z
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->B()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->au()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->C()V
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->b()Lcom/estrongs/fs/h;
 
@@ -3069,7 +3111,7 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ap:Lcom/estrongs/android/pop/app/diskusage/e;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->au:Lcom/estrongs/android/pop/app/diskusage/e;
 
     invoke-virtual {v0}, Lcom/estrongs/android/pop/app/diskusage/e;->c()[Ljava/io/File;
 
@@ -3108,6 +3150,14 @@
     return-void
 .end method
 
+.method public i_()V
+    .locals 0
+
+    invoke-super {p0}, Lcom/estrongs/android/view/cr;->i_()V
+
+    return-void
+.end method
+
 .method public j()Lcom/estrongs/fs/h;
     .locals 8
 
@@ -3118,7 +3168,7 @@
     const/4 v1, 0x0
 
     :try_start_0
-    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->am:J
+    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ar:J
 
     cmp-long v0, v2, v6
 
@@ -3132,13 +3182,13 @@
     :cond_0
     iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->b:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->an:Ljava/io/File;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Ljava/io/File;
 
     invoke-virtual {v2}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/estrongs/android/util/am;->e(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/ap;->e(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 
@@ -3146,21 +3196,21 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ak:Z
+    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ap:Z
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->an:Ljava/io/File;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ao:Ljava/io/File;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->at:Ljava/io/File;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->y:Lcom/estrongs/android/view/ca;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->F:Lcom/estrongs/android/view/dv;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->y:Lcom/estrongs/android/view/ca;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->F:Lcom/estrongs/android/view/dv;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -3172,7 +3222,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ao:Ljava/io/File;
+    iget-object v3, p0, Lcom/estrongs/android/pop/app/diskusage/h;->at:Ljava/io/File;
 
     invoke-virtual {v3}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -3188,10 +3238,10 @@
 
     const/4 v3, 0x0
 
-    invoke-interface {v0, v2, v3}, Lcom/estrongs/android/view/ca;->a(Ljava/lang/String;Z)V
+    invoke-interface {v0, v2, v3}, Lcom/estrongs/android/view/dv;->a(Ljava/lang/String;Z)V
 
     :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:Ljava/util/Stack;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aO:Ljava/util/Stack;
 
     invoke-virtual {v0}, Ljava/util/Stack;->size()I
 
@@ -3199,9 +3249,9 @@
 
     if-le v0, v4, :cond_6
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:Ljava/util/Stack;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aO:Ljava/util/Stack;
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aJ:Ljava/util/Stack;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aO:Ljava/util/Stack;
 
     invoke-virtual {v2}, Ljava/util/Stack;->size()I
 
@@ -3218,58 +3268,58 @@
     :goto_1
     const-wide/16 v2, 0x0
 
-    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->av:J
+    iput-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aA:J
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Lcom/estrongs/android/widget/bg;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:Lcom/estrongs/android/widget/bh;
 
     if-nez v2, :cond_2
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->r()Lcom/estrongs/android/widget/bg;
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->u()Lcom/estrongs/android/widget/bh;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Lcom/estrongs/android/widget/bg;
+    iput-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:Lcom/estrongs/android/widget/bh;
 
     :cond_2
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Lcom/estrongs/android/widget/bg;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:Lcom/estrongs/android/widget/bh;
 
     if-eqz v2, :cond_3
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Lcom/estrongs/android/widget/bg;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:Lcom/estrongs/android/widget/bh;
 
-    invoke-virtual {v2}, Lcom/estrongs/android/widget/bg;->a()V
+    invoke-virtual {v2}, Lcom/estrongs/android/widget/bh;->a()V
 
-    iget-object v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Lcom/estrongs/android/widget/bg;
+    iget-object v4, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:Lcom/estrongs/android/widget/bh;
 
     if-nez v0, :cond_4
 
-    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->au:J
+    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->az:J
 
     :goto_2
-    invoke-virtual {v4, v2, v3}, Lcom/estrongs/android/widget/bg;->a(J)V
+    invoke-virtual {v4, v2, v3}, Lcom/estrongs/android/widget/bh;->a(J)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Lcom/estrongs/android/widget/bg;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:Lcom/estrongs/android/widget/bh;
 
-    const v2, 0x7f0b0217
+    const v2, 0x7f080403
 
-    invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/diskusage/h;->l(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/diskusage/h;->j(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/widget/bg;->setMessage(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/widget/bh;->setMessage(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->as:Lcom/estrongs/android/widget/bg;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ax:Lcom/estrongs/android/widget/bh;
 
-    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->av:J
+    iget-wide v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->aA:J
 
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/widget/bg;->b(J)V
+    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/widget/bh;->b(J)V
 
     :cond_3
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/diskusage/h;->g()V
 
     new-instance v0, Lcom/estrongs/android/pop/app/diskusage/u;
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->ao:Ljava/io/File;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/h;->at:Ljava/io/File;
 
     invoke-direct {v0, v2}, Lcom/estrongs/android/pop/app/diskusage/u;-><init>(Ljava/io/File;)V
     :try_end_0
@@ -3319,7 +3369,7 @@
         }
     .end annotation
 
-    invoke-static {}, Lcom/estrongs/android/util/am;->a()Ljava/util/List;
+    invoke-static {}, Lcom/estrongs/android/util/ap;->a()Ljava/util/List;
 
     move-result-object v0
 
@@ -3347,7 +3397,7 @@
 
     const/4 v1, 0x0
 
-    sget-object v2, Lcom/estrongs/android/pop/app/diskusage/h;->ai:Ljava/lang/String;
+    sget-object v2, Lcom/estrongs/android/pop/app/diskusage/h;->an:Ljava/lang/String;
 
     invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
@@ -3370,10 +3420,10 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/diskusage/h;->g(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/diskusage/h;->j(Ljava/lang/String;)V
 
     :cond_0
-    invoke-super {p0}, Lcom/estrongs/android/view/aw;->l()V
+    invoke-super {p0}, Lcom/estrongs/android/view/cr;->l()V
 
     return-void
 .end method

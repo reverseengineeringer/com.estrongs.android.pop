@@ -4,16 +4,16 @@ import android.view.View;
 import android.widget.Button;
 
 class e
-  implements com.estrongs.android.util.e
+  implements com.estrongs.android.util.d
 {
   e(d paramd) {}
   
   public void a(String paramString1, String paramString2, int paramInt)
   {
-    if (!a.i(a.b).equals(paramString1))
+    if (!a.j(a.b).equals(paramString1))
     {
       a.c(a.b, paramString1);
-      ((Button)a.a.findViewById(2131361878)).setText(paramString2);
+      ((Button)a.a.findViewById(2131624376)).setText(paramString2);
     }
   }
 }

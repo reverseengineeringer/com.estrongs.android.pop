@@ -5,7 +5,7 @@ import com.estrongs.android.ftp.ESFtpService;
 import com.estrongs.android.ftp.k;
 import com.estrongs.android.ftp.m;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.ui.view.ag;
+import com.estrongs.android.ui.view.ak;
 
 class a
   implements m
@@ -20,10 +20,10 @@ class a
       {
         if (a == 1)
         {
-          Object localObject = ad.a(d).T();
-          int i = ad.a(d).V();
-          String str1 = ad.a(d).U();
-          String str2 = ad.a(d).S();
+          Object localObject = ad.a(d).U();
+          int i = ad.a(d).W();
+          String str1 = ad.a(d).V();
+          String str2 = ad.a(d).T();
           b.a((String)localObject, str2, i, str1);
           i = b.d();
           if (i != 0)
@@ -31,14 +31,14 @@ class a
             localObject = null;
             if (i == 1)
             {
-              localObject = d.getString(2131427662);
-              ag.a(d, (CharSequence)localObject, 0);
+              localObject = d.getString(2131231524);
+              ak.a(d, (CharSequence)localObject, 0);
               return;
             }
             if (i != 2) {
               continue;
             }
-            localObject = d.getString(2131427663);
+            localObject = d.getString(2131232578);
             continue;
           }
           if ((c) && (com.estrongs.android.ftp.a.e() != null)) {

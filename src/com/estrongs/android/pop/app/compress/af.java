@@ -2,7 +2,7 @@ package com.estrongs.android.pop.app.compress;
 
 import android.content.Context;
 import android.content.res.Resources;
-import com.estrongs.android.ui.view.ag;
+import com.estrongs.android.ui.view.ak;
 
 class af
   implements Runnable
@@ -11,7 +11,7 @@ class af
   
   public void run()
   {
-    ag.a(l.d(a.f), l.d(a.f).getResources().getString(2131427897), 1);
+    ak.a(l.d(a.f), l.d(a.f).getResources().getString(2131231784), 1);
   }
 }
 

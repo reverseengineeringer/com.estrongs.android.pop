@@ -1,90 +1,64 @@
 .class public Lcom/estrongs/android/pop/app/GestureManageActivity;
-.super Lcom/estrongs/android/pop/esclasses/ESActivity;
+.super Lcom/estrongs/android/ui/base/HomeAsBackActivity;
 
 
 # instance fields
-.field private a:Landroid/widget/FrameLayout;
+.field private a:Lcom/estrongs/android/ui/adapter/y;
 
-.field private b:Lcom/estrongs/android/ui/a/w;
+.field private b:Lcom/estrongs/android/pop/ad;
 
-.field private c:Lcom/estrongs/android/pop/ad;
+.field private c:Landroid/widget/TextView;
 
-.field private d:Landroid/widget/TextView;
+.field private d:Lcom/estrongs/android/view/a/a;
+
+.field private e:Lcom/estrongs/android/view/a/a;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;-><init>()V
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/estrongs/android/pop/app/GestureManageActivity;)Lcom/estrongs/android/ui/a/w;
+.method static synthetic a(Lcom/estrongs/android/pop/app/GestureManageActivity;)Landroid/widget/TextView;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->b:Lcom/estrongs/android/ui/a/w;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->c:Landroid/widget/TextView;
 
     return-object v0
 .end method
 
-.method private a()V
-    .locals 8
+.method static synthetic b(Lcom/estrongs/android/pop/app/GestureManageActivity;)Lcom/estrongs/android/view/a/a;
+    .locals 1
 
-    const/4 v7, 0x1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->e:Lcom/estrongs/android/view/a/a;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->a:Landroid/widget/FrameLayout;
+    return-object v0
+.end method
 
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->removeAllViews()V
+.method static synthetic c(Lcom/estrongs/android/pop/app/GestureManageActivity;)Lcom/estrongs/android/view/a/a;
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->a:Landroid/widget/FrameLayout;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->d:Lcom/estrongs/android/view/a/a;
 
-    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    return-object v0
+.end method
 
-    move-result-object v1
+.method static synthetic d(Lcom/estrongs/android/pop/app/GestureManageActivity;)Lcom/estrongs/android/ui/adapter/y;
+    .locals 1
 
-    const v2, 0x7f030060
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->a:Lcom/estrongs/android/ui/adapter/y;
 
-    const/4 v3, 0x0
+    return-object v0
+.end method
 
-    invoke-virtual {v1, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+.method private d()V
+    .locals 3
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
-
-    const v0, 0x7f0a01a0
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/GestureManageActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/FrameLayout;
-
-    invoke-static {p0}, Lcom/estrongs/android/ui/theme/al;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/estrongs/android/ui/theme/al;->h()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    const v0, 0x7f0a022a
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/GestureManageActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    const v1, 0x7f0b03fa
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
-
-    const v0, 0x7f0a011a
+    const v0, 0x7f0e0128
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/GestureManageActivity;->findViewById(I)Landroid/view/View;
 
@@ -92,17 +66,17 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    new-instance v1, Lcom/estrongs/android/ui/a/w;
+    new-instance v1, Lcom/estrongs/android/ui/adapter/y;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/a/w;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/adapter/y;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->b:Lcom/estrongs/android/ui/a/w;
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->a:Lcom/estrongs/android/ui/adapter/y;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->b:Lcom/estrongs/android/ui/a/w;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->a:Lcom/estrongs/android/ui/adapter/y;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    const v1, 0x7f0a00f9
+    const v1, 0x7f0e035e
 
     invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/GestureManageActivity;->findViewById(I)Landroid/view/View;
 
@@ -110,241 +84,170 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->d:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->c:Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->d:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->c:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setEmptyView(Landroid/view/View;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->c:Lcom/estrongs/android/pop/ad;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->b:Lcom/estrongs/android/pop/ad;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->al()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->am()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->d:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->c:Landroid/widget/TextView;
 
-    const v2, 0x7f0b0401
+    const v2, 0x7f080330
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
     :goto_0
-    const v0, 0x7f0a019f
+    const v0, 0x7f0e019c
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/GestureManageActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/RelativeLayout;
+    check-cast v0, Landroid/support/v7/widget/SwitchCompat;
 
-    new-instance v2, Lcom/estrongs/android/ui/view/by;
+    const/4 v2, 0x1
 
-    invoke-direct {v2, p0, v0, v7}, Lcom/estrongs/android/ui/view/by;-><init>(Landroid/app/Activity;Landroid/widget/RelativeLayout;I)V
-
-    new-instance v0, Lcom/estrongs/android/ui/e/jk;
-
-    invoke-direct {v0, p0, v7}, Lcom/estrongs/android/ui/e/jk;-><init>(Landroid/content/Context;Z)V
-
-    new-instance v3, Lcom/estrongs/android/view/a/a;
-
-    invoke-static {p0}, Lcom/estrongs/android/ui/theme/al;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
-
-    move-result-object v4
-
-    const v5, 0x7f0202c4
-
-    invoke-virtual {v4, v5}, Lcom/estrongs/android/ui/theme/al;->c(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v4
-
-    const v5, 0x7f0b03fe
-
-    invoke-virtual {p0, v5}, Lcom/estrongs/android/pop/app/GestureManageActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-direct {v3, v4, v5}, Lcom/estrongs/android/view/a/a;-><init>(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V
-
-    new-instance v4, Lcom/estrongs/android/pop/app/cm;
-
-    invoke-direct {v4, p0}, Lcom/estrongs/android/pop/app/cm;-><init>(Lcom/estrongs/android/pop/app/GestureManageActivity;)V
-
-    invoke-virtual {v3, v4}, Lcom/estrongs/android/view/a/a;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)Lcom/estrongs/android/view/a/a;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Lcom/estrongs/android/ui/e/jk;->a(Lcom/estrongs/android/view/a/a;)V
-
-    invoke-virtual {v3, v1}, Lcom/estrongs/android/view/a/a;->d(Z)Lcom/estrongs/android/view/a/a;
-
-    new-instance v4, Lcom/estrongs/android/view/a/a;
-
-    invoke-static {p0}, Lcom/estrongs/android/ui/theme/al;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
-
-    move-result-object v5
-
-    const v6, 0x7f0202cc
-
-    invoke-virtual {v5, v6}, Lcom/estrongs/android/ui/theme/al;->c(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v5
-
-    const v6, 0x7f0b040a
-
-    invoke-virtual {p0, v6}, Lcom/estrongs/android/pop/app/GestureManageActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-direct {v4, v5, v6}, Lcom/estrongs/android/view/a/a;-><init>(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V
-
-    new-instance v5, Lcom/estrongs/android/pop/app/cp;
-
-    invoke-direct {v5, p0}, Lcom/estrongs/android/pop/app/cp;-><init>(Lcom/estrongs/android/pop/app/GestureManageActivity;)V
-
-    invoke-virtual {v4, v5}, Lcom/estrongs/android/view/a/a;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)Lcom/estrongs/android/view/a/a;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v4}, Lcom/estrongs/android/ui/e/jk;->a(Lcom/estrongs/android/view/a/a;)V
-
-    invoke-virtual {v4, v1}, Lcom/estrongs/android/view/a/a;->d(Z)Lcom/estrongs/android/view/a/a;
-
-    const-string v5, "add"
-
-    invoke-virtual {v2, v5, v0}, Lcom/estrongs/android/ui/view/by;->a(Ljava/lang/String;Lcom/estrongs/android/ui/e/a;)V
-
-    const-string v0, "add"
-
-    const/4 v5, 0x0
-
-    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v5
-
-    invoke-virtual {v2, v0, v5}, Lcom/estrongs/android/ui/view/by;->a(Ljava/lang/String;Ljava/lang/Boolean;)V
-
-    const v0, 0x7f0a0038
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/GestureManageActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/android/ui/view/SimpleSwitchButton;
-
-    invoke-virtual {v0, v7}, Lcom/estrongs/android/ui/view/SimpleSwitchButton;->setFocusable(Z)V
+    invoke-virtual {v0, v2}, Landroid/support/v7/widget/SwitchCompat;->setFocusable(Z)V
 
     new-instance v2, Lcom/estrongs/android/pop/app/cq;
 
-    invoke-direct {v2, p0, v3, v4}, Lcom/estrongs/android/pop/app/cq;-><init>(Lcom/estrongs/android/pop/app/GestureManageActivity;Lcom/estrongs/android/view/a/a;Lcom/estrongs/android/view/a/a;)V
+    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/cq;-><init>(Lcom/estrongs/android/pop/app/GestureManageActivity;)V
 
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/view/SimpleSwitchButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+    invoke-virtual {v0, v2}, Landroid/support/v7/widget/SwitchCompat;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/SimpleSwitchButton;->setChecked(Z)V
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/SwitchCompat;->setChecked(Z)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->b:Lcom/estrongs/android/ui/a/w;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->a:Lcom/estrongs/android/ui/adapter/y;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/a/w;->a(Z)V
-
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/GestureManageActivity;->b()V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/adapter/y;->a(Z)V
 
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->d:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->c:Landroid/widget/TextView;
 
-    const v2, 0x7f0b040f
+    const v2, 0x7f08032f
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
-    goto/16 :goto_0
+    goto :goto_0
 .end method
 
-.method static synthetic b(Lcom/estrongs/android/pop/app/GestureManageActivity;)Landroid/widget/TextView;
+.method static synthetic e(Lcom/estrongs/android/pop/app/GestureManageActivity;)Lcom/estrongs/android/pop/ad;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->d:Landroid/widget/TextView;
-
-    return-object v0
-.end method
-
-.method private b()V
-    .locals 2
-
-    const v0, 0x7f0a007d
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/GestureManageActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    invoke-virtual {v0}, Landroid/widget/ImageView;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setFocusable(Z)V
-
-    new-instance v1, Lcom/estrongs/android/pop/app/cr;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/cr;-><init>(Lcom/estrongs/android/pop/app/GestureManageActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    return-void
-.end method
-
-.method static synthetic c(Lcom/estrongs/android/pop/app/GestureManageActivity;)Lcom/estrongs/android/pop/ad;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->c:Lcom/estrongs/android/pop/ad;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->b:Lcom/estrongs/android/pop/ad;
 
     return-object v0
 .end method
 
 
 # virtual methods
+.method protected a(Ljava/util/List;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/estrongs/android/view/a/a;",
+            ">;)V"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->b:Lcom/estrongs/android/pop/ad;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->am()Z
+
+    move-result v0
+
+    new-instance v1, Lcom/estrongs/android/view/a/a;
+
+    const v2, 0x7f02042c
+
+    const v3, 0x7f08032e
+
+    invoke-direct {v1, v2, v3}, Lcom/estrongs/android/view/a/a;-><init>(II)V
+
+    new-instance v2, Lcom/estrongs/android/pop/app/cr;
+
+    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/cr;-><init>(Lcom/estrongs/android/pop/app/GestureManageActivity;)V
+
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/view/a/a;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)Lcom/estrongs/android/view/a/a;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->e:Lcom/estrongs/android/view/a/a;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->e:Lcom/estrongs/android/view/a/a;
+
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/view/a/a;->d(Z)Lcom/estrongs/android/view/a/a;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->e:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {p1, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Lcom/estrongs/android/view/a/a;
+
+    const v2, 0x7f020436
+
+    const v3, 0x7f080335
+
+    invoke-direct {v1, v2, v3}, Lcom/estrongs/android/view/a/a;-><init>(II)V
+
+    new-instance v2, Lcom/estrongs/android/pop/app/cu;
+
+    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/cu;-><init>(Lcom/estrongs/android/pop/app/GestureManageActivity;)V
+
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/view/a/a;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)Lcom/estrongs/android/view/a/a;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->d:Lcom/estrongs/android/view/a/a;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->d:Lcom/estrongs/android/view/a/a;
+
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/view/a/a;->d(Z)Lcom/estrongs/android/view/a/a;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->d:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 2
-
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onCreate(Landroid/os/Bundle;)V
-
-    const v0, 0x7f030093
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/GestureManageActivity;->setContentView(I)V
-
-    const v0, 0x7f0a01a2
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/GestureManageActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/FrameLayout;
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->a:Landroid/widget/FrameLayout;
-
-    const v0, 0x7f0a01a4
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/GestureManageActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     invoke-static {p0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->c:Lcom/estrongs/android/pop/ad;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/GestureManageActivity;->b:Lcom/estrongs/android/pop/ad;
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/GestureManageActivity;->a()V
+    invoke-super {p0, p1}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;->onCreate(Landroid/os/Bundle;)V
+
+    const v0, 0x7f0300cc
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/GestureManageActivity;->setContentView(I)V
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/GestureManageActivity;->getSupportActionBar()Landroid/support/v7/app/ActionBar;
+
+    move-result-object v0
+
+    const v1, 0x7f08033b
+
+    invoke-virtual {v0, v1}, Landroid/support/v7/app/ActionBar;->setTitle(I)V
+
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/GestureManageActivity;->d()V
 
     return-void
 .end method

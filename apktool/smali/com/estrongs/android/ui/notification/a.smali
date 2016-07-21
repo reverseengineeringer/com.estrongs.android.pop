@@ -2,25 +2,146 @@
 .super Ljava/lang/Object;
 
 
+# static fields
+.field private static final b:Ljava/lang/Object;
+
+.field private static c:Lcom/estrongs/android/ui/notification/a;
+
+
 # instance fields
-.field private a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+.field public a:I
 
-.field private b:Z
+.field private d:Landroid/content/Context;
 
-.field private c:Landroid/graphics/Bitmap;
+.field private e:Lcom/estrongs/android/ui/notification/d;
+
+.field private f:Landroid/widget/RemoteViews;
+
+.field private g:Z
+
+.field private h:Z
+
+.field private i:Ljava/lang/String;
+
+.field private j:I
 
 
 # direct methods
-.method public constructor <init>(Lcom/estrongs/android/pop/app/AudioPlayerService;)V
+.method static constructor <clinit>()V
     .locals 1
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcom/estrongs/android/ui/notification/a;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method private constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+    const/4 v0, 0x2
 
-    const/4 v0, 0x0
+    iput v0, p0, Lcom/estrongs/android/ui/notification/a;->a:I
 
-    iput-boolean v0, p0, Lcom/estrongs/android/ui/notification/a;->b:Z
+    iput-object p1, p0, Lcom/estrongs/android/ui/notification/a;->d:Landroid/content/Context;
+
+    new-instance v0, Lcom/estrongs/android/ui/notification/d;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Lcom/estrongs/android/ui/notification/d;-><init>(Landroid/content/Context;Z)V
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/notification/a;->e:Lcom/estrongs/android/ui/notification/d;
+
+    return-void
+.end method
+
+.method public static a(Landroid/content/Context;)Lcom/estrongs/android/ui/notification/a;
+    .locals 2
+
+    sget-object v0, Lcom/estrongs/android/ui/notification/a;->c:Lcom/estrongs/android/ui/notification/a;
+
+    if-nez v0, :cond_1
+
+    sget-object v1, Lcom/estrongs/android/ui/notification/a;->b:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
+    sget-object v0, Lcom/estrongs/android/ui/notification/a;->c:Lcom/estrongs/android/ui/notification/a;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcom/estrongs/android/ui/notification/a;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/notification/a;-><init>(Landroid/content/Context;)V
+
+    sput-object v0, Lcom/estrongs/android/ui/notification/a;->c:Lcom/estrongs/android/ui/notification/a;
+
+    :cond_0
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :cond_1
+    sget-object v0, Lcom/estrongs/android/ui/notification/a;->c:Lcom/estrongs/android/ui/notification/a;
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method private a(I)V
+    .locals 4
+
+    const/16 v3, 0x8
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->f:Landroid/widget/RemoteViews;
+
+    const v1, 0x7f0e055a
+
+    iget-object v2, p0, Lcom/estrongs/android/ui/notification/a;->d:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p1}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->f:Landroid/widget/RemoteViews;
+
+    const v1, 0x7f0e055b
+
+    invoke-virtual {v0, v1, v3}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->f:Landroid/widget/RemoteViews;
+
+    const v1, 0x7f0e055d
+
+    invoke-virtual {v0, v1, v3}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->f:Landroid/widget/RemoteViews;
+
+    const v1, 0x7f0e055e
+
+    invoke-virtual {v0, v1, v3}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     return-void
 .end method
@@ -28,330 +149,309 @@
 
 # virtual methods
 .method public a()V
-    .locals 2
+    .locals 7
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    const v6, 0x7f0e055f
 
-    const/16 v1, 0x10
+    const v5, 0x7f080706
 
-    if-lt v0, v1, :cond_0
-
-    invoke-virtual {p0}, Lcom/estrongs/android/ui/notification/a;->b()V
-
-    :goto_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/estrongs/android/ui/notification/a;->b:Z
-
-    return-void
-
-    :cond_0
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0xe
-
-    if-lt v0, v1, :cond_1
-
-    invoke-virtual {p0}, Lcom/estrongs/android/ui/notification/a;->b()V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p0}, Lcom/estrongs/android/ui/notification/a;->c()V
-
-    goto :goto_0
-.end method
-
-.method public a(Ljava/lang/String;Ljava/lang/CharSequence;)V
-    .locals 5
-
-    :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
-
-    const-string v1, "notification"
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/AudioPlayerService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/app/NotificationManager;
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Landroid/app/Notification;
-
-    invoke-direct {v0}, Landroid/app/Notification;-><init>()V
-
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
-
-    move-result-object v1
-
-    const v2, 0x7f0b00a1
-
-    invoke-virtual {v1, v2}, Lcom/estrongs/android/pop/FexApplication;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, v0, Landroid/app/Notification;->tickerText:Ljava/lang/CharSequence;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    iput-wide v2, v0, Landroid/app/Notification;->when:J
-
-    const v1, 0x7f020018
-
-    iput v1, v0, Landroid/app/Notification;->icon:I
-
-    iget v1, v0, Landroid/app/Notification;->flags:I
-
-    or-int/lit8 v1, v1, 0x2
-
-    iput v1, v0, Landroid/app/Notification;->flags:I
-
-    if-eqz p1, :cond_1
-
-    :goto_0
-    new-instance v1, Landroid/content/Intent;
-
-    iget-object v2, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
-
-    const-class v3, Lcom/estrongs/android/pop/app/PopAudioPlayer;
-
-    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v2, "AudioServiceNotification"
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    iget-object v2, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+    const v4, 0x7f080178
 
     const/4 v3, 0x0
 
-    const/4 v4, 0x0
+    const/4 v2, 0x1
 
-    invoke-static {v2, v3, v1, v4}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+    iput-boolean v2, p0, Lcom/estrongs/android/ui/notification/a;->h:Z
 
-    move-result-object v1
+    iget v0, p0, Lcom/estrongs/android/ui/notification/a;->a:I
 
-    iget-object v2, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0, v2, p1, p2, v1}, Landroid/app/Notification;->setLatestEventInfo(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
-
-    const/16 v2, 0x302d
-
-    invoke-virtual {v1, v2, v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->startForeground(ILandroid/app/Notification;)V
-
-    :cond_0
-    :goto_1
+    :goto_0
     return-void
 
-    :cond_1
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+    :pswitch_0
+    invoke-direct {p0, v5}, Lcom/estrongs/android/ui/notification/a;->a(I)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->f:Landroid/widget/RemoteViews;
+
+    invoke-virtual {v0, v6, v3}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->f:Landroid/widget/RemoteViews;
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/notification/a;->d:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0b00a1
+    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
-    invoke-virtual {v1, v2}, Lcom/estrongs/android/pop/FexApplication;->getString(I)Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object v1
 
-    move-result-object p1
+    invoke-virtual {v0, v6, v1}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
+
+    :goto_1
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->i:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/b;->a(Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/notification/a;->e:Lcom/estrongs/android/ui/notification/d;
+
+    invoke-virtual {v1, v0, v2}, Lcom/estrongs/android/ui/notification/d;->a(Landroid/content/Intent;Z)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->e:Lcom/estrongs/android/ui/notification/d;
+
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/notification/d;->b(Z)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->e:Lcom/estrongs/android/ui/notification/d;
+
+    invoke-virtual {v0, v3}, Lcom/estrongs/android/ui/notification/d;->a(Z)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->e:Lcom/estrongs/android/ui/notification/d;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/d;->c()V
 
     goto :goto_0
 
-    :catch_0
-    move-exception v0
+    :pswitch_1
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->e:Lcom/estrongs/android/ui/notification/d;
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/notification/a;->d:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/notification/d;->b(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->e:Lcom/estrongs/android/ui/notification/d;
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/notification/a;->d:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/notification/d;->c(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->e:Lcom/estrongs/android/ui/notification/d;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/d;->a()V
 
     goto :goto_1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public b()V
+.method public a(JJ)V
     .locals 7
 
-    const v6, 0x7f0a006f
+    const-wide/16 v4, 0x3e8
 
-    const/4 v5, 0x1
+    const/4 v1, 0x0
 
-    new-instance v1, Landroid/widget/RemoteViews;
+    const-wide/16 v2, 0x0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+    iget-boolean v0, p0, Lcom/estrongs/android/ui/notification/a;->h:Z
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->getPackageName()Ljava/lang/String;
-
-    move-result-object v0
-
-    const v2, 0x7f03000e
-
-    invoke-direct {v1, v0, v2}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
-
-    const/4 v0, 0x0
-
-    :try_start_0
-    iget-object v2, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
-
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/AudioPlayerService;->D()Landroid/graphics/Bitmap;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
-
-    const/high16 v4, 0x42800000    # 64.0f
-
-    invoke-static {v3, v4}, Lcom/estrongs/android/ui/d/a;->a(Landroid/content/Context;F)I
-
-    move-result v3
-
-    invoke-static {v2, v3}, Lcom/estrongs/android/ui/d/a;->a(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    :goto_0
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+    iget-boolean v0, p0, Lcom/estrongs/android/ui/notification/a;->g:Z
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v2, 0x7f02000e
-
-    invoke-static {v0, v2}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
-
-    move-result-object v0
+    if-nez v0, :cond_1
 
     :cond_0
-    const v2, 0x7f0a006a
+    :goto_0
+    return-void
 
-    invoke-virtual {v1, v2, v0}, Landroid/widget/RemoteViews;->setImageViewBitmap(ILandroid/graphics/Bitmap;)V
+    :cond_1
+    iget v0, p0, Lcom/estrongs/android/ui/notification/a;->a:I
 
-    const v2, 0x7f0a006c
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v3, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+    goto :goto_0
 
-    invoke-virtual {v3}, Lcom/estrongs/android/pop/app/AudioPlayerService;->B()Ljava/lang/String;
+    :pswitch_0
+    cmp-long v0, p1, p3
 
-    move-result-object v3
+    if-nez v0, :cond_5
 
-    invoke-virtual {v1, v2, v3}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
+    cmp-long v0, p1, v2
 
-    const v2, 0x7f0a006e
+    if-lez v0, :cond_5
 
-    invoke-virtual {p0}, Lcom/estrongs/android/ui/notification/a;->d()Landroid/app/PendingIntent;
+    :cond_2
+    :goto_1
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->e:Lcom/estrongs/android/ui/notification/d;
 
-    move-result-object v3
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/d;->c()V
 
-    invoke-virtual {v1, v2, v3}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
+    goto :goto_0
 
-    invoke-virtual {p0}, Lcom/estrongs/android/ui/notification/a;->e()Landroid/app/PendingIntent;
+    :pswitch_1
+    cmp-long v0, p1, p3
+
+    if-nez v0, :cond_3
+
+    cmp-long v0, p1, v2
+
+    if-gtz v0, :cond_2
+
+    :cond_3
+    cmp-long v0, p1, v2
+
+    if-nez v0, :cond_4
+
+    move v0, v1
+
+    :goto_2
+    iput v0, p0, Lcom/estrongs/android/ui/notification/a;->j:I
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->f:Landroid/widget/RemoteViews;
+
+    const v2, 0x7f0e055c
+
+    const/16 v3, 0x64
+
+    iget v4, p0, Lcom/estrongs/android/ui/notification/a;->j:I
+
+    div-int/lit8 v4, v4, 0xa
+
+    invoke-virtual {v0, v2, v3, v4, v1}, Landroid/widget/RemoteViews;->setProgressBar(IIIZ)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->f:Landroid/widget/RemoteViews;
+
+    const v1, 0x7f0e055d
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget v3, p0, Lcom/estrongs/android/ui/notification/a;->j:I
+
+    div-int/lit8 v3, v3, 0xa
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    invoke-virtual {v1, v6, v2}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
+    const-string v3, "%"
 
-    const v2, 0x7f0a0070
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Lcom/estrongs/android/ui/notification/a;->f()Landroid/app/PendingIntent;
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->f:Landroid/widget/RemoteViews;
+
+    const v1, 0x7f0e055e
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {p3, p4}, Lcom/estrongs/fs/util/j;->c(J)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v1, v2, v3}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const v2, 0x7f0a006d
+    move-result-object v2
 
-    invoke-virtual {p0}, Lcom/estrongs/android/ui/notification/a;->g()Landroid/app/PendingIntent;
+    const-string v3, "/"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-static {p1, p2}, Lcom/estrongs/fs/util/j;->c(J)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v1, v2, v3}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+    move-result-object v2
 
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/AudioPlayerService;->k()Z
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result v2
+    move-result-object v2
 
-    if-eqz v2, :cond_2
+    invoke-virtual {v0, v1, v2}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
-    iget-object v2, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+    goto :goto_1
 
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/AudioPlayerService;->m()Z
+    :cond_4
+    mul-long v2, p3, v4
 
-    move-result v2
+    div-long/2addr v2, p1
 
-    if-nez v2, :cond_2
+    long-to-int v0, v2
 
-    const v2, 0x7f020015
+    goto :goto_2
 
-    invoke-virtual {v1, v6, v2}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
+    :cond_5
+    cmp-long v0, p1, v2
 
-    :goto_1
-    new-instance v2, Lcom/estrongs/android/ui/notification/c;
+    if-nez v0, :cond_6
 
-    iget-object v3, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+    :goto_3
+    iput v1, p0, Lcom/estrongs/android/ui/notification/a;->j:I
 
-    const/4 v4, 0x0
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->e:Lcom/estrongs/android/ui/notification/d;
 
-    invoke-direct {v2, v3, v4}, Lcom/estrongs/android/ui/notification/c;-><init>(Landroid/content/Context;Z)V
+    iget v1, p0, Lcom/estrongs/android/ui/notification/a;->j:I
 
-    invoke-virtual {v2, v1}, Lcom/estrongs/android/ui/notification/c;->a(Landroid/widget/RemoteViews;)V
+    div-int/lit8 v1, v1, 0xa
 
-    invoke-virtual {v2, v5}, Lcom/estrongs/android/ui/notification/c;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/notification/d;->c(I)V
 
-    new-instance v1, Landroid/content/Intent;
-
-    iget-object v3, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
-
-    const-class v4, Lcom/estrongs/android/pop/app/PopAudioPlayer;
-
-    invoke-direct {v1, v3, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v3, "AudioServiceNotification"
-
-    invoke-virtual {v1, v3, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    invoke-virtual {v2, v1, v5}, Lcom/estrongs/android/ui/notification/c;->a(Landroid/content/Intent;Z)V
-
-    const v1, 0x7f02018c
-
-    invoke-virtual {v2, v1}, Lcom/estrongs/android/ui/notification/c;->a(I)V
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->e:Lcom/estrongs/android/ui/notification/d;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v3, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+    invoke-static {p3, p4}, Lcom/estrongs/fs/util/j;->c(J)Ljava/lang/String;
 
-    invoke-virtual {v3}, Lcom/estrongs/android/pop/app/AudioPlayerService;->B()Ljava/lang/String;
+    move-result-object v2
 
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    const-string v3, "\n"
+    const-string v2, "/"
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    iget-object v3, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+    invoke-static {p1, p2}, Lcom/estrongs/fs/util/j;->c(J)Ljava/lang/String;
 
-    invoke-virtual {v3}, Lcom/estrongs/android/pop/app/AudioPlayerService;->C()Ljava/lang/String;
+    move-result-object v2
 
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -359,296 +459,92 @@
 
     move-result-object v1
 
-    invoke-virtual {v2, v1}, Lcom/estrongs/android/ui/notification/c;->a(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v2}, Lcom/estrongs/android/ui/notification/c;->d()Landroid/app/Notification;
-
-    move-result-object v1
-
-    :try_start_1
-    iget-object v2, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
-
-    const/16 v3, 0x302d
-
-    invoke-virtual {v2, v3, v1}, Lcom/estrongs/android/pop/app/AudioPlayerService;->startForeground(ILandroid/app/Notification;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
-
-    :goto_2
-    iget-object v1, p0, Lcom/estrongs/android/ui/notification/a;->c:Landroid/graphics/Bitmap;
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/notification/a;->c:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->isRecycled()Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    :try_start_2
-    iget-object v1, p0, Lcom/estrongs/android/ui/notification/a;->c:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
-
-    :cond_1
-    :goto_3
-    iput-object v0, p0, Lcom/estrongs/android/ui/notification/a;->c:Landroid/graphics/Bitmap;
-
-    return-void
-
-    :catch_0
-    move-exception v2
-
-    :try_start_3
-    iget-object v2, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
-
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/AudioPlayerService;->D()Landroid/graphics/Bitmap;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
-
-    const/high16 v4, 0x42800000    # 64.0f
-
-    invoke-static {v3, v4}, Lcom/estrongs/android/ui/d/a;->a(Landroid/content/Context;F)I
-
-    move-result v3
-
-    invoke-static {v2, v3}, Lcom/estrongs/android/ui/d/a;->a(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
-    :try_end_3
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
-
-    move-result-object v0
-
-    goto/16 :goto_0
-
-    :cond_2
-    const v2, 0x7f020016
-
-    invoke-virtual {v1, v6, v2}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/notification/d;->c(Ljava/lang/CharSequence;)V
 
     goto/16 :goto_1
 
-    :catch_1
-    move-exception v1
+    :cond_6
+    mul-long v0, p3, v4
 
-    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
+    div-long/2addr v0, p1
+
+    long-to-int v1, v0
 
     goto :goto_3
 
-    :catch_2
-    move-exception v1
+    nop
 
-    goto :goto_2
-
-    :catch_3
-    move-exception v2
-
-    goto/16 :goto_0
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method
 
-.method public c()V
+.method public b()V
     .locals 3
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+    const v2, 0x7f0805f5
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->l()Z
+    iget v0, p0, Lcom/estrongs/android/ui/notification/a;->a:I
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
-
-    move-result-object v1
-
-    const v2, 0x7f0b0088
-
-    invoke-virtual {v1, v2}, Lcom/estrongs/android/pop/FexApplication;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v0, v1}, Lcom/estrongs/android/ui/notification/a;->a(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    packed-switch v0, :pswitch_data_0
 
     :goto_0
     return-void
 
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->B()Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->k()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->m()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x1
+    :pswitch_0
+    invoke-direct {p0, v2}, Lcom/estrongs/android/ui/notification/a;->a(I)V
 
     :goto_1
-    if-eqz v0, :cond_2
-
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
-
-    move-result-object v0
-
-    const v2, 0x7f0b0087
-
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/pop/FexApplication;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_2
-    invoke-virtual {p0, v1, v0}, Lcom/estrongs/android/ui/notification/a;->a(Ljava/lang/String;Ljava/lang/CharSequence;)V
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_1
-
-    :cond_2
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
-
-    move-result-object v0
-
-    const v2, 0x7f0b0089
-
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/pop/FexApplication;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_2
-.end method
-
-.method public d()Landroid/app/PendingIntent;
-    .locals 4
-
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v1, "com.estrongs.action.audio.control.preview"
-
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
-
-    const/4 v2, 0x0
-
-    const/high16 v3, 0x8000000
-
-    invoke-static {v1, v2, v0, v3}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public e()Landroid/app/PendingIntent;
-    .locals 4
-
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v1, "com.estrongs.action.audio.control.play"
-
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
-
-    const/4 v2, 0x0
-
-    const/high16 v3, 0x8000000
-
-    invoke-static {v1, v2, v0, v3}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public f()Landroid/app/PendingIntent;
-    .locals 4
-
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v1, "com.estrongs.action.audio.control.next"
-
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
-
-    const/4 v2, 0x0
-
-    const/high16 v3, 0x8000000
-
-    invoke-static {v1, v2, v0, v3}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public g()Landroid/app/PendingIntent;
-    .locals 4
-
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v1, "com.estrongs.action.audio.control.close"
-
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
-
-    const/4 v2, 0x0
-
-    const/high16 v3, 0x8000000
-
-    invoke-static {v1, v2, v0, v3}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public h()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/estrongs/android/ui/notification/a;->b:Z
-
-    return v0
-.end method
-
-.method public i()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->e:Lcom/estrongs/android/ui/notification/d;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/AudioPlayerService;->stopForeground(Z)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/notification/d;->b(Z)V
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->e:Lcom/estrongs/android/ui/notification/d;
 
-    iput-boolean v0, p0, Lcom/estrongs/android/ui/notification/a;->b:Z
+    const/4 v1, 0x0
 
-    return-void
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/notification/d;->a(Z)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->e:Lcom/estrongs/android/ui/notification/d;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/d;->c()V
+
+    goto :goto_0
+
+    :pswitch_1
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->e:Lcom/estrongs/android/ui/notification/d;
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/notification/a;->d:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/notification/d;->b(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->e:Lcom/estrongs/android/ui/notification/d;
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/notification/d;->c(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/notification/a;->e:Lcom/estrongs/android/ui/notification/d;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/d;->a()V
+
+    goto :goto_1
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 final class BackStackState
   implements Parcelable
 {
-  public static final Parcelable.Creator<BackStackState> CREATOR = new d();
+  public static final Parcelable.Creator<BackStackState> CREATOR = new w();
   final int[] a;
   final int b;
   final int c;
@@ -20,6 +20,8 @@ final class BackStackState
   final CharSequence g;
   final int h;
   final CharSequence i;
+  final ArrayList<String> j;
+  final ArrayList<String> k;
   
   public BackStackState(Parcel paramParcel)
   {
@@ -32,154 +34,160 @@ final class BackStackState
     g = ((CharSequence)TextUtils.CHAR_SEQUENCE_CREATOR.createFromParcel(paramParcel));
     h = paramParcel.readInt();
     i = ((CharSequence)TextUtils.CHAR_SEQUENCE_CREATOR.createFromParcel(paramParcel));
+    j = paramParcel.createStringArrayList();
+    k = paramParcel.createStringArrayList();
   }
   
-  public BackStackState(n paramn, b paramb)
+  public BackStackState(q paramq)
   {
-    paramn = b;
-    int k;
-    for (int j = 0; paramn != null; j = k)
+    u localu = c;
+    int n;
+    for (int m = 0; localu != null; m = n)
     {
-      k = j;
+      n = m;
       if (i != null) {
-        k = j + i.size();
+        n = m + i.size();
       }
-      paramn = a;
+      localu = a;
     }
-    a = new int[j + d * 7];
-    if (!k) {
+    a = new int[m + e * 7];
+    if (!l) {
       throw new IllegalStateException("Not on back stack");
     }
-    paramn = b;
-    j = 0;
-    if (paramn != null)
+    localu = c;
+    m = 0;
+    if (localu != null)
     {
       int[] arrayOfInt = a;
-      k = j + 1;
-      arrayOfInt[j] = c;
+      n = m + 1;
+      arrayOfInt[m] = c;
       arrayOfInt = a;
-      int m = k + 1;
+      int i1 = n + 1;
       if (d != null) {}
-      for (j = d.f;; j = -1)
+      for (m = d.mIndex;; m = -1)
       {
-        arrayOfInt[k] = j;
+        arrayOfInt[n] = m;
         arrayOfInt = a;
-        j = m + 1;
-        arrayOfInt[m] = e;
+        m = i1 + 1;
+        arrayOfInt[i1] = e;
         arrayOfInt = a;
-        k = j + 1;
-        arrayOfInt[j] = f;
+        n = m + 1;
+        arrayOfInt[m] = f;
         arrayOfInt = a;
-        j = k + 1;
-        arrayOfInt[k] = g;
+        m = n + 1;
+        arrayOfInt[n] = g;
         arrayOfInt = a;
-        k = j + 1;
-        arrayOfInt[j] = h;
+        n = m + 1;
+        arrayOfInt[m] = h;
         if (i == null) {
-          break label311;
+          break label314;
         }
-        m = i.size();
+        i1 = i.size();
         arrayOfInt = a;
-        j = k + 1;
-        arrayOfInt[k] = m;
-        k = 0;
-        while (k < m)
+        m = n + 1;
+        arrayOfInt[n] = i1;
+        n = 0;
+        while (n < i1)
         {
-          a[j] = i.get(k)).f;
-          k += 1;
-          j += 1;
+          a[m] = i.get(n)).mIndex;
+          n += 1;
+          m += 1;
         }
       }
       for (;;)
       {
-        paramn = a;
+        localu = a;
         break;
-        label311:
+        label314:
         arrayOfInt = a;
-        j = k + 1;
-        arrayOfInt[k] = 0;
+        m = n + 1;
+        arrayOfInt[n] = 0;
       }
     }
-    b = i;
-    c = j;
-    d = m;
-    e = o;
-    f = p;
-    g = q;
-    h = r;
-    i = s;
+    b = j;
+    c = k;
+    d = n;
+    e = p;
+    f = q;
+    g = r;
+    h = s;
+    i = t;
+    j = u;
+    k = v;
   }
   
-  public b a(n paramn)
+  public q a(al paramal)
   {
-    b localb = new b(paramn);
+    q localq = new q(paramal);
+    int i1 = 0;
     int m = 0;
-    int j = 0;
-    while (j < a.length)
+    while (m < a.length)
     {
-      c localc = new c();
+      u localu = new u();
       Object localObject = a;
-      int k = j + 1;
-      c = localObject[j];
-      if (n.a) {
-        Log.v("FragmentManager", "Instantiate " + localb + " op #" + m + " base fragment #" + a[k]);
+      int n = m + 1;
+      c = localObject[m];
+      if (al.a) {
+        Log.v("FragmentManager", "Instantiate " + localq + " op #" + i1 + " base fragment #" + a[n]);
       }
       localObject = a;
-      j = k + 1;
-      k = localObject[k];
-      if (k >= 0) {}
-      for (d = ((Fragment)f.get(k));; d = null)
+      m = n + 1;
+      n = localObject[n];
+      if (n >= 0) {}
+      for (d = ((Fragment)f.get(n));; d = null)
       {
         localObject = a;
-        k = j + 1;
-        e = localObject[j];
+        n = m + 1;
+        e = localObject[m];
         localObject = a;
-        j = k + 1;
-        f = localObject[k];
+        m = n + 1;
+        f = localObject[n];
         localObject = a;
-        k = j + 1;
-        g = localObject[j];
+        n = m + 1;
+        g = localObject[m];
         localObject = a;
-        j = k + 1;
-        h = localObject[k];
+        m = n + 1;
+        h = localObject[n];
         localObject = a;
-        k = j + 1;
-        int i1 = localObject[j];
-        j = k;
-        if (i1 <= 0) {
+        n = m + 1;
+        int i3 = localObject[m];
+        m = n;
+        if (i3 <= 0) {
           break;
         }
-        i = new ArrayList(i1);
-        int n = 0;
+        i = new ArrayList(i3);
+        int i2 = 0;
         for (;;)
         {
-          j = k;
-          if (n >= i1) {
+          m = n;
+          if (i2 >= i3) {
             break;
           }
-          if (n.a) {
-            Log.v("FragmentManager", "Instantiate " + localb + " set remove fragment #" + a[k]);
+          if (al.a) {
+            Log.v("FragmentManager", "Instantiate " + localq + " set remove fragment #" + a[n]);
           }
-          localObject = (Fragment)f.get(a[k]);
+          localObject = (Fragment)f.get(a[n]);
           i.add(localObject);
+          i2 += 1;
           n += 1;
-          k += 1;
         }
       }
-      localb.a(localc);
-      m += 1;
+      localq.a(localu);
+      i1 += 1;
     }
-    i = b;
-    j = c;
-    m = d;
-    o = e;
-    k = true;
-    p = f;
-    q = g;
-    r = h;
-    s = i;
-    localb.a(1);
-    return localb;
+    j = b;
+    k = c;
+    n = d;
+    p = e;
+    l = true;
+    q = f;
+    r = g;
+    s = h;
+    t = i;
+    u = j;
+    v = k;
+    localq.a(1);
+    return localq;
   }
   
   public int describeContents()
@@ -198,6 +206,8 @@ final class BackStackState
     TextUtils.writeToParcel(g, paramParcel, 0);
     paramParcel.writeInt(h);
     TextUtils.writeToParcel(i, paramParcel, 0);
+    paramParcel.writeStringList(j);
+    paramParcel.writeStringList(k);
   }
 }
 

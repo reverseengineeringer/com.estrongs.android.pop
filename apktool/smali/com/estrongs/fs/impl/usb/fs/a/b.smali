@@ -56,13 +56,13 @@
 
     iput-object p3, p0, Lcom/estrongs/fs/impl/usb/fs/a/b;->g:Lcom/estrongs/fs/impl/usb/fs/a/i;
 
-    invoke-virtual {p2}, Lcom/estrongs/fs/impl/usb/fs/a/c;->g()Z
+    invoke-virtual {p2}, Lcom/estrongs/fs/impl/usb/fs/a/c;->h()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    invoke-virtual {p2}, Lcom/estrongs/fs/impl/usb/fs/a/c;->h()I
+    invoke-virtual {p2}, Lcom/estrongs/fs/impl/usb/fs/a/c;->i()I
 
     move-result v1
 
@@ -104,11 +104,11 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v1}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     :goto_0
-    invoke-virtual {p2}, Lcom/estrongs/fs/impl/usb/fs/a/c;->j()J
+    invoke-virtual {p2}, Lcom/estrongs/fs/impl/usb/fs/a/c;->k()J
 
     move-result-wide v2
 
@@ -192,7 +192,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -856,7 +856,7 @@
 
     const-string v3, "allocating clusters finished"
 
-    invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_8
     const/4 v2, 0x0
@@ -1028,7 +1028,7 @@
 
     const-string v5, "freed set end EOF "
 
-    invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, v5}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     move v6, v7
@@ -1139,7 +1139,7 @@
 
     const-string v3, "freed all cluster"
 
-    invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_4
     invoke-virtual {v10}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
@@ -1182,7 +1182,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_5
     move-object/from16 v0, p0

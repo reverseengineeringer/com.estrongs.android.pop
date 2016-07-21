@@ -1,14 +1,26 @@
 package com.estrongs.android.pop.app.editor;
 
+import android.os.AsyncTask;
+
 class ad
-  implements aw
+  extends AsyncTask<Object, Object, Object>
 {
-  ad(ac paramac) {}
+  private ad(PopNoteEditor paramPopNoteEditor) {}
   
-  public void a(int paramInt)
+  protected Object doInBackground(Object... paramVarArgs)
   {
-    PopNoteEditor.c(a.a, paramInt);
+    try
+    {
+      PopNoteEditor.s(a);
+      return null;
+    }
+    catch (Exception paramVarArgs)
+    {
+      for (;;) {}
+    }
   }
+  
+  protected void onPostExecute(Object paramObject) {}
 }
 
 /* Location:

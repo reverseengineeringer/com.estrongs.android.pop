@@ -1,18 +1,13 @@
 package com.estrongs.android.util;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.webkit.SslErrorHandler;
-
-final class ad
-  implements DialogInterface.OnClickListener
+class ad
+  extends Thread
 {
-  ad(SslErrorHandler paramSslErrorHandler) {}
+  ad(aa paramaa) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void run()
   {
-    a.proceed();
-    paramDialogInterface.dismiss();
+    aa.a(a);
   }
 }
 

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/lock_screen_background">
+        <shape>
+            <gradient android:startColor="@color/lock_screen_background_gradient_start" android:endColor="@color/lock_screen_background_gradient_end" android:angle="-90.0" />
+        </shape>
+    </item>
+</layer-list>

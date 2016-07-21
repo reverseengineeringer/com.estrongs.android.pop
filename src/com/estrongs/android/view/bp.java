@@ -1,31 +1,34 @@
 package com.estrongs.android.view;
 
-import android.os.Parcelable;
-import com.estrongs.android.util.bd;
-import com.estrongs.android.widget.HeaderGridView;
-import com.estrongs.fs.b.aj;
-import com.estrongs.fs.h;
-import java.util.HashMap;
-import java.util.List;
+import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.pop.view.FileExplorerActivity;
 
 class bp
-  implements Runnable
+  implements View.OnClickListener
 {
-  bp(bo parambo, aj paramaj, List paramList) {}
+  bp(bo parambo) {}
   
-  public void run()
+  public void onClick(View paramView)
   {
-    synchronized (c.a.e)
+    if (a.c != null) {
+      a.c.cancel();
+    }
+    if ((a.ag instanceof FileExplorerActivity))
     {
-      c.a.e.remove(this);
-      c.b.a(a, b);
-      ??? = a.b.getPath();
-      Parcelable localParcelable = (Parcelable)c.b.F.get(???);
-      if ((localParcelable != null) && (bd.a(???, c.b.v))) {
-        c.b.g.onRestoreInstanceState(localParcelable);
-      }
+      ((FileExplorerActivity)a.ag).d("clean://");
       return;
     }
+    paramView = new Intent(a.ag, FileExplorerActivity.class);
+    paramView.setData(Uri.parse("clean://"));
+    paramView.addFlags(268435456);
+    paramView.addFlags(67108864);
+    a.ag.startActivity(paramView);
+    a.ag.finish();
   }
 }
 

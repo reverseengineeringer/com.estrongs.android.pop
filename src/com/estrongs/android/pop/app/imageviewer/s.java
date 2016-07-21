@@ -4,7 +4,7 @@ import android.graphics.Bitmap;
 import android.graphics.Matrix;
 import android.widget.ImageView;
 import com.estrongs.android.pop.app.imageviewer.gallery.e;
-import com.estrongs.android.pop.utils.cd;
+import com.estrongs.android.pop.utils.cm;
 
 class s
   implements Runnable
@@ -22,7 +22,7 @@ class s
     else {
       return;
     }
-    int i = cd.c(b.d());
+    int i = cm.c(b.d());
     if (i != 0)
     {
       Object localObject = new Matrix();

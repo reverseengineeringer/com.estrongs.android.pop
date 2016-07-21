@@ -1,21 +1,13 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.ui.pcs.j;
-import com.estrongs.android.ui.pcs.n;
-import com.estrongs.android.ui.view.ag;
-
 class dm
   implements Runnable
 {
-  dm(dk paramdk, n paramn) {}
+  dm(FileExplorerActivity paramFileExplorerActivity) {}
   
   public void run()
   {
-    ag.a(FexApplication.a(), dk.a(b, 2131428616), 0);
-    j localj = new j(b.a);
-    localj.a(a);
-    localj.a(true);
+    a.finish();
   }
 }
 

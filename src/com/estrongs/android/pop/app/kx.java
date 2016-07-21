@@ -1,40 +1,32 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.content.Intent;
-import android.net.Uri;
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.util.am;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 
 class kx
-  implements DialogInterface.OnClickListener
+  extends BaseAdapter
 {
-  kx(ShowDialogActivity paramShowDialogActivity, String paramString, boolean paramBoolean) {}
+  kx(RecommItemDetailAcitivity paramRecommItemDetailAcitivity) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public int getCount()
   {
-    Object localObject2 = a;
-    Object localObject1 = localObject2;
-    if (b)
-    {
-      localObject1 = localObject2;
-      if (am.bb(a)) {
-        localObject1 = am.bk(a);
-      }
-    }
-    localObject2 = new Intent(c, FileExplorerActivity.class);
-    ((Intent)localObject2).addFlags(603979776);
-    if (((String)localObject1).endsWith("/")) {}
-    for (;;)
-    {
-      ((Intent)localObject2).setData(Uri.parse(Uri.encode((String)localObject1, "/")));
-      c.startActivity((Intent)localObject2);
-      paramDialogInterface.dismiss();
-      c.finish();
-      return;
-      localObject1 = (String)localObject1 + "/";
-    }
+    return 0;
+  }
+  
+  public Object getItem(int paramInt)
+  {
+    return null;
+  }
+  
+  public long getItemId(int paramInt)
+  {
+    return 0L;
+  }
+  
+  public View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
+  {
+    return null;
   }
 }
 

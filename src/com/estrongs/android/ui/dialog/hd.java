@@ -1,28 +1,40 @@
 package com.estrongs.android.ui.dialog;
 
-import android.view.View;
-import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.util.m;
-import com.estrongs.fs.d;
-import com.estrongs.fs.h;
+import android.content.Context;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.adapter.f;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.view.cr;
 
 class hd
-  extends m
+  extends f
 {
-  hd(hc paramhc, String paramString, cg paramcg, View paramView)
+  hd(hc paramhc, Context paramContext)
   {
-    super(paramString);
+    super(paramContext);
   }
   
-  public void run()
+  public void a()
   {
-    h localh = d.a().j(hc.a(c));
-    if (g)
+    cr localcr = null;
+    if (FileExplorerActivity.X() != null) {
+      localcr = FileExplorerActivity.X().O();
+    }
+    if (localcr != null)
     {
-      hc.b(c).runOnUiThread(new he(this));
+      if ((b.mContext instanceof FileExplorerActivity))
+      {
+        if (ap.X(localcr.c())) {
+          a = 1;
+        }
+      }
+      else {
+        return;
+      }
+      a = 0;
       return;
     }
-    hc.b(c).runOnUiThread(new hf(this, localh));
+    a = 0;
   }
 }
 

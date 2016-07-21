@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/preference/Preference$OnPreferenceChangeListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/preference/fragments/DownloadPreferenceFragment;
+.field final synthetic a:Lcom/estrongs/android/ui/preference/fragments/ak;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/preference/fragments/DownloadPreferenceFragment;)V
+.method constructor <init>(Lcom/estrongs/android/ui/preference/fragments/ak;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/preference/fragments/al;->a:Lcom/estrongs/android/ui/preference/fragments/DownloadPreferenceFragment;
+    iput-object p1, p0, Lcom/estrongs/android/ui/preference/fragments/al;->a:Lcom/estrongs/android/ui/preference/fragments/ak;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,24 +22,33 @@
 
 
 # virtual methods
-.method public onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
-    .locals 2
+.method public run()V
+    .locals 1
 
-    invoke-static {}, Lcom/estrongs/fs/d;->a()Lcom/estrongs/fs/d;
+    :try_start_0
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
-    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->ah()V
 
-    move-result-object v1
+    iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/al;->a:Lcom/estrongs/android/ui/preference/fragments/ak;
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Ljava/lang/String;)Ljava/lang/Boolean;
+    iget-object v0, v0, Lcom/estrongs/android/ui/preference/fragments/ak;->a:Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;
 
-    move-result-object v1
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->getActivity()Landroid/app/Activity;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/fs/d;->a(Ljava/lang/Boolean;)V
+    move-result-object v0
 
-    const/4 v0, 0x1
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    return v0
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
 .end method

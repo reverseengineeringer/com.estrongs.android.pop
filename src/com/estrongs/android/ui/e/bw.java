@@ -1,19 +1,26 @@
 package com.estrongs.android.ui.e;
 
-import android.content.Context;
-import android.os.Handler;
-import com.estrongs.android.pop.app.a.ao;
-import com.estrongs.android.ui.dialog.ProgressDialog;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.util.b;
+import com.estrongs.android.view.g;
 
-final class bw
-  extends Thread
+class bw
+  implements MenuItem.OnMenuItemClickListener
 {
-  bw(Handler paramHandler, ProgressDialog[] paramArrayOfProgressDialog, Context paramContext) {}
+  bw(m paramm) {}
   
-  public void run()
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    ao.a().e();
-    a.post(new bx(this));
+    if ((m.a(a).O() == null) || (!(m.a(a).O() instanceof g))) {}
+    do
+    {
+      return true;
+      paramMenuItem = (g)m.a(a).O();
+    } while (paramMenuItem == null);
+    new b(m.a(a), b, new bx(this, paramMenuItem)).a();
+    return true;
   }
 }
 

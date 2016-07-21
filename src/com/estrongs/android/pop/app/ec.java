@@ -1,17 +1,19 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.ui.dialog.cv;
 
 class ec
-  implements DialogInterface.OnClickListener
+  implements View.OnClickListener
 {
-  ec(LocalFileSharingActivity paramLocalFileSharingActivity) {}
+  ec(LocalFileSharingActivity paramLocalFileSharingActivity, cv paramcv) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void onClick(View paramView)
   {
-    a.c();
-    paramDialogInterface.dismiss();
+    b.f();
+    a.a.dismiss();
   }
 }
 

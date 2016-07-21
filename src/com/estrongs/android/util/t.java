@@ -1,13 +1,14 @@
 package com.estrongs.android.util;
 
 import java.io.File;
+import java.util.Comparator;
 
-public class t
-  extends s
+final class t
+  implements Comparator<File>
 {
-  protected String a(File paramFile)
+  public int a(File paramFile1, File paramFile2)
   {
-    return paramFile.getName();
+    return s.a(paramFile1.getName(), paramFile1.isDirectory(), true).compareToIgnoreCase(s.a(paramFile2.getName(), paramFile2.isDirectory(), true));
   }
 }
 

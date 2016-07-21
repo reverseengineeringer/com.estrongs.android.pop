@@ -1,23 +1,19 @@
-.class Lcom/estrongs/android/ui/pcs/ao;
+.class final Lcom/estrongs/android/ui/pcs/ao;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/baidu/sapi2/SapiWebView$OnBackCallback;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/baidu/sapi2/SapiWebView;
-
-.field final synthetic b:Lcom/estrongs/android/ui/pcs/SocialLoginActivity;
+.field final synthetic a:Landroid/content/Context;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/pcs/SocialLoginActivity;Lcom/baidu/sapi2/SapiWebView;)V
+.method constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/pcs/ao;->b:Lcom/estrongs/android/ui/pcs/SocialLoginActivity;
-
-    iput-object p2, p0, Lcom/estrongs/android/ui/pcs/ao;->a:Lcom/baidu/sapi2/SapiWebView;
+    iput-object p1, p0, Lcom/estrongs/android/ui/pcs/ao;->a:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,28 +22,22 @@
 
 
 # virtual methods
-.method public onBack()V
-    .locals 1
+.method public onClick(Landroid/view/View;)V
+    .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/pcs/ao;->a:Lcom/baidu/sapi2/SapiWebView;
+    new-instance v0, Landroid/content/Intent;
 
-    invoke-virtual {v0}, Lcom/baidu/sapi2/SapiWebView;->canGoBack()Z
+    const-string v1, "android.settings.SETTINGS"
 
-    move-result v0
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    if-eqz v0, :cond_0
+    const/high16 v1, 0x10200000
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/pcs/ao;->a:Lcom/baidu/sapi2/SapiWebView;
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    invoke-virtual {v0}, Lcom/baidu/sapi2/SapiWebView;->goBack()V
+    iget-object v1, p0, Lcom/estrongs/android/ui/pcs/ao;->a:Landroid/content/Context;
 
-    :goto_0
+    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
     return-void
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/pcs/ao;->b:Lcom/estrongs/android/ui/pcs/SocialLoginActivity;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/SocialLoginActivity;->finish()V
-
-    goto :goto_0
 .end method

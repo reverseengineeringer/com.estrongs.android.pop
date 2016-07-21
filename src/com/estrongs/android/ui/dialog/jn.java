@@ -1,44 +1,26 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.DialogInterface.OnDismissListener;
-import android.os.Handler;
-import com.estrongs.a.a;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
+import android.net.Uri;
 
 class jn
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  jn(ix paramix) {}
+  jn(jm paramjm) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (ix.p(a)) {
-      a.d();
-    }
-    do
+    paramDialogInterface = new Intent("android.intent.action.VIEW");
+    paramDialogInterface.setData(Uri.parse("http://0.esfileexplorer.duapp.com/notify/1t"));
+    try
     {
+      a.a.a.mContext.startActivity(paramDialogInterface);
       return;
-      if ((ix.a(a).getTaskStatus() == 2) && (ix.l(a)))
-      {
-        a.d();
-        return;
-      }
-      if ((ix.a(a).getTaskStatus() == 3) && (ix.l(a)))
-      {
-        if (aa).waitingDecision)
-        {
-          ix.k(a).postDelayed(this, 400L);
-          return;
-        }
-        a.d();
-        return;
-      }
-      if (ix.a(a).getTaskStatus() == 1)
-      {
-        ix.k(a).postDelayed(this, 400L);
-        return;
-      }
-    } while (ix.o(a) == null);
-    ix.o(a).onDismiss(a);
+    }
+    catch (Exception paramDialogInterface) {}
   }
 }
 

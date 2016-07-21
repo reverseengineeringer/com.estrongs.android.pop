@@ -1,83 +1,150 @@
 .class Lcom/estrongs/android/pop/app/t;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.super Landroid/content/BroadcastReceiver;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/r;
+.field final synthetic a:Lcom/estrongs/android/pop/app/AudioPlayerService;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/r;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/AudioPlayerService;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/t;->a:Lcom/estrongs/android/pop/app/r;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/t;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 4
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 3
 
-    const/4 v3, 0x1
+    const/4 v2, 0x1
 
-    const/4 v2, 0x0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/t;->a:Lcom/estrongs/android/pop/app/r;
-
-    invoke-static {v0, v3}, Lcom/estrongs/android/pop/app/r;->a(Lcom/estrongs/android/pop/app/r;Z)Z
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/t;->a:Lcom/estrongs/android/pop/app/r;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/r;->a(Lcom/estrongs/android/pop/app/r;)Lcom/estrongs/android/pop/app/aa;
+    invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/aa;->e()Z
+    const-string v1, "state"
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    sget-object v1, Landroid/telephony/TelephonyManager;->EXTRA_STATE_RINGING:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/t;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->d(Lcom/estrongs/android/pop/app/AudioPlayerService;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/t;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->e(Lcom/estrongs/android/pop/app/AudioPlayerService;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/t;->a:Lcom/estrongs/android/pop/app/r;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/t;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/r;->d(Lcom/estrongs/android/pop/app/r;)Landroid/app/Activity;
+    iput-boolean v2, v0, Lcom/estrongs/android/pop/app/AudioPlayerService;->a:Z
 
-    move-result-object v0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/t;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
 
-    const v1, 0x7f0b04a5
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->u()V
 
-    invoke-static {v0, v1, v3}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/t;->a:Lcom/estrongs/android/pop/app/r;
-
-    invoke-static {v0, v2}, Lcom/estrongs/android/pop/app/r;->a(Lcom/estrongs/android/pop/app/r;Z)Z
-
+    :cond_0
     :goto_0
     return-void
 
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/t;->a:Lcom/estrongs/android/pop/app/r;
+    :cond_1
+    sget-object v1, Landroid/telephony/TelephonyManager;->EXTRA_STATE_OFFHOOK:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/r;->g(Lcom/estrongs/android/pop/app/r;)Landroid/os/Handler;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result v1
 
-    new-instance v1, Lcom/estrongs/android/pop/app/u;
+    if-eqz v1, :cond_2
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/u;-><init>(Lcom/estrongs/android/pop/app/t;)V
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/t;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->d(Lcom/estrongs/android/pop/app/AudioPlayerService;)Z
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/t;->a:Lcom/estrongs/android/pop/app/r;
+    move-result v0
 
-    invoke-static {v0, v2}, Lcom/estrongs/android/pop/app/r;->a(Lcom/estrongs/android/pop/app/r;Z)Z
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/t;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->e(Lcom/estrongs/android/pop/app/AudioPlayerService;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/t;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+
+    iput-boolean v2, v0, Lcom/estrongs/android/pop/app/AudioPlayerService;->a:Z
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/t;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->u()V
+
+    goto :goto_0
+
+    :cond_2
+    sget-object v1, Landroid/telephony/TelephonyManager;->EXTRA_STATE_IDLE:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/t;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->d(Lcom/estrongs/android/pop/app/AudioPlayerService;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/t;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->e(Lcom/estrongs/android/pop/app/AudioPlayerService;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/t;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+
+    iget-boolean v0, v0, Lcom/estrongs/android/pop/app/AudioPlayerService;->a:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/t;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Lcom/estrongs/android/pop/app/AudioPlayerService;->a:Z
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/t;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->F()V
 
     goto :goto_0
 .end method

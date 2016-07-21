@@ -1,31 +1,20 @@
 package com.estrongs.android.pop.view;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
 
 class ch
-  implements View.OnClickListener
+  implements DialogInterface.OnClickListener
 {
   ch(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void onClick(View paramView)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ((a.v) && (!a.c))
-    {
-      if (a.D.getVisibility() == 8)
-      {
-        a.D.setVisibility(0);
-        return;
-      }
-      a.D.setVisibility(8);
-      return;
-    }
-    if (a.o())
-    {
-      a.q();
-      return;
-    }
-    a.l();
+    Intent localIntent = new Intent("android.settings.WIFI_SETTINGS");
+    localIntent.setFlags(268435456);
+    a.startActivity(localIntent);
+    paramDialogInterface.dismiss();
   }
 }
 

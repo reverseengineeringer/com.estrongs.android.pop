@@ -1,18 +1,13 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.ui.dialog.kr;
-import com.estrongs.fs.h;
-
 class dq
-  implements kr
+  implements Runnable
 {
-  dq(dp paramdp, h paramh) {}
+  dq(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void a(boolean paramBoolean)
+  public void run()
   {
-    if (paramBoolean) {
-      dp.a(b, a);
-    }
+    a.g("net://");
   }
 }
 

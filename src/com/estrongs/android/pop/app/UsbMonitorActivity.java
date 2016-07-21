@@ -2,19 +2,38 @@ package com.estrongs.android.pop.app;
 
 import android.content.Intent;
 import android.os.Bundle;
+import com.estrongs.android.j.c;
 import com.estrongs.android.pop.esclasses.ESActivity;
 import com.estrongs.android.pop.view.FileExplorerActivity;
 
 public class UsbMonitorActivity
   extends ESActivity
 {
+  private c a = null;
+  
   protected void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    paramBundle = new Intent(this, FileExplorerActivity.class);
-    paramBundle.setFlags(335544320);
-    startActivity(paramBundle);
-    finish();
+    a = c.a(this);
+    try
+    {
+      if (a != null) {
+        a.d("act1");
+      }
+      paramBundle = new Intent(this, FileExplorerActivity.class);
+      paramBundle.setFlags(335544320);
+      paramBundle.setAction("com.estrongs.android.usb.plug.in");
+      startActivity(paramBundle);
+      finish();
+      return;
+    }
+    catch (Exception paramBundle)
+    {
+      for (;;)
+      {
+        paramBundle.printStackTrace();
+      }
+    }
   }
 }
 

@@ -1,72 +1,38 @@
 package com.estrongs.android.pop.app;
 
+import android.content.Context;
+import android.graphics.Canvas;
+import android.widget.FrameLayout;
+import com.estrongs.android.util.l;
+
 class ej
-  implements gc
+  extends FrameLayout
 {
-  ej(PopAudioPlayer paramPopAudioPlayer) {}
+  private boolean b = true;
   
-  public void a()
+  ej(PopAudioPlayer paramPopAudioPlayer, Context paramContext)
   {
-    if (("Market".startsWith("Spreadtrum")) || ("Market".equalsIgnoreCase("Huawei")))
-    {
-      PopAudioPlayer.b(a);
-      PopAudioPlayer.a(a, null);
-    }
+    super(paramContext);
   }
   
-  public void a(int paramInt)
-  {
-    PopAudioPlayer.a(a, 3, paramInt);
-  }
-  
-  public void b(int paramInt)
-  {
-    PopAudioPlayer.a(a, 0, paramInt);
-  }
-  
-  public void c(int paramInt)
-  {
-    PopAudioPlayer.a(a, 4, paramInt);
-  }
-  
-  public void d(int paramInt)
-  {
-    PopAudioPlayer.a(a, 2, paramInt);
-  }
-  
-  public void e(int paramInt)
-  {
-    PopAudioPlayer.a(a, 1, paramInt);
-  }
-  
-  public void f(int paramInt)
-  {
-    PopAudioPlayer.a(a, 0, paramInt);
-  }
-  
-  public void g(int paramInt)
+  public void draw(Canvas paramCanvas)
   {
     try
     {
-      Thread.sleep(1000L);
-      if ((PopAudioPlayer.a(a).d()) || (PopAudioPlayer.a(a).e())) {}
-      int i;
-      do
+      super.draw(paramCanvas);
+      if (b)
       {
-        return;
-        i = PopAudioPlayer.a(a).i();
-        if (i == -1)
-        {
-          PopAudioPlayer.a(a).q();
-          return;
-        }
-      } while (i == paramInt);
-      PopAudioPlayer.a(a, i);
+        post(new ek(this));
+        b = false;
+      }
       return;
     }
-    catch (Exception localException)
+    catch (Throwable paramCanvas)
     {
-      for (;;) {}
+      for (;;)
+      {
+        l.d("FileExplorerActivity", "containerEsFrameLayout.draw() catchs " + paramCanvas.getMessage());
+      }
     }
   }
 }

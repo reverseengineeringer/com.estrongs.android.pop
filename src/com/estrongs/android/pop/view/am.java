@@ -1,23 +1,42 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.appinfo.AppFolderInfoManager;
+import android.os.Handler;
+import com.estrongs.android.pop.a;
+import java.io.File;
 
 class am
-  extends Thread
+  implements Runnable
 {
-  am(ak paramak) {}
+  am(FileExplorerActivity paramFileExplorerActivity, Handler paramHandler, Runnable paramRunnable) {}
   
   public void run()
   {
-    try
+    int j = 0;
+    Object localObject = a.a + "/cache";
+    File[] arrayOfFile = new File((String)localObject, ".thumbnails").listFiles();
+    int i;
+    if (arrayOfFile != null)
     {
-      Thread.sleep(3000L);
-      AppFolderInfoManager.d().a(new an(this));
-      return;
+      i = 0;
+      while (i < arrayOfFile.length)
+      {
+        arrayOfFile[i].delete();
+        i += 1;
+      }
     }
-    catch (InterruptedException localInterruptedException)
+    localObject = new File((String)localObject, ".apps").listFiles();
+    if (localObject != null)
     {
-      for (;;) {}
+      i = j;
+      while (i < localObject.length)
+      {
+        localObject[i].delete();
+        i += 1;
+      }
+    }
+    c.m();
+    if ((a != null) && (b != null)) {
+      c.i.post(b);
     }
   }
 }

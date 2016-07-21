@@ -1,15 +1,16 @@
 package com.estrongs.android.ui.dialog;
 
-import com.estrongs.android.pop.view.FileExplorerActivity;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class hl
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  hl(hk paramhk) {}
+  hl(hf paramhf) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    a.a.V();
+    paramDialogInterface.dismiss();
   }
 }
 

@@ -1,16 +1,24 @@
 package com.estrongs.android.pop.app;
 
-import android.media.MediaPlayer;
-import android.media.MediaPlayer.OnPreparedListener;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
+import android.net.Uri;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.util.ap;
 
 class ln
-  implements MediaPlayer.OnPreparedListener
+  implements DialogInterface.OnClickListener
 {
-  ln(StreamingMediaPlayer paramStreamingMediaPlayer) {}
+  ln(ShowDialogActivity paramShowDialogActivity, String paramString) {}
   
-  public void onPrepared(MediaPlayer paramMediaPlayer)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    StreamingMediaPlayer.a(a, paramMediaPlayer);
+    Intent localIntent = new Intent(b, FileExplorerActivity.class);
+    localIntent.addFlags(603979776);
+    localIntent.setData(Uri.parse(Uri.encode(ap.bB(a), "/")));
+    b.startActivity(localIntent);
+    paramDialogInterface.dismiss();
   }
 }
 

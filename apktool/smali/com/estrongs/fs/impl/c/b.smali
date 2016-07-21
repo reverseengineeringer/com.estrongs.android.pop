@@ -1,188 +1,121 @@
-.class final Lcom/estrongs/fs/impl/c/b;
-.super Landroid/content/BroadcastReceiver;
+.class public Lcom/estrongs/fs/impl/c/b;
+.super Lcom/estrongs/fs/a;
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/fs/a;-><init>()V
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/io/File;)V
+    .locals 2
 
-# virtual methods
-.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 5
+    invoke-virtual {p1}, Ljava/io/File;->getPath()Ljava/lang/String;
 
-    invoke-static {}, Lcom/estrongs/fs/impl/c/a;->g()Z
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Lcom/estrongs/fs/a;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/fs/impl/c/b;->setName(Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Ljava/io/File;->lastModified()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/estrongs/fs/impl/c/b;->lastModified:J
+
+    invoke-virtual {p1}, Ljava/io/File;->isDirectory()Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_1
 
-    invoke-static {}, Lcom/estrongs/fs/impl/c/a;->d()V
+    const-wide/16 v0, -0x1
+
+    iput-wide v0, p0, Lcom/estrongs/fs/impl/c/b;->size:J
+
+    sget-object v0, Lcom/estrongs/fs/w;->a:Lcom/estrongs/fs/w;
+
+    iput-object v0, p0, Lcom/estrongs/fs/impl/c/b;->type:Lcom/estrongs/fs/w;
+
+    const-string v0, "child_count"
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/fs/impl/c/b;->getExtra(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcom/estrongs/fs/impl/c/c;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/fs/impl/c/c;-><init>(Lcom/estrongs/fs/impl/c/b;)V
+
+    invoke-virtual {p1, v0}, Ljava/io/File;->listFiles(Ljava/io/FilenameFilter;)[Ljava/io/File;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const-string v1, "child_count"
+
+    array-length v0, v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v1, v0}, Lcom/estrongs/fs/impl/c/b;->putExtra(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     :goto_0
     return-void
 
     :cond_1
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/io/File;->length()J
 
-    move-result-object v0
+    move-result-wide v0
 
-    const-string v1, "android.bluetooth.device.action.FOUND"
+    iput-wide v0, p0, Lcom/estrongs/fs/impl/c/b;->size:J
 
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    sget-object v0, Lcom/estrongs/fs/w;->b:Lcom/estrongs/fs/w;
 
-    move-result v1
+    iput-object v0, p0, Lcom/estrongs/fs/impl/c/b;->type:Lcom/estrongs/fs/w;
 
-    if-eqz v1, :cond_5
+    goto :goto_0
+.end method
 
-    :try_start_0
-    const-string v0, "android.bluetooth.device.extra.DEVICE"
 
-    invoke-virtual {p2, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
+# virtual methods
+.method public a(Ljava/lang/String;)V
+    .locals 0
 
-    move-result-object v0
+    iput-object p1, p0, Lcom/estrongs/fs/impl/c/b;->path:Ljava/lang/String;
 
-    check-cast v0, Landroid/bluetooth/BluetoothDevice;
+    return-void
+.end method
 
-    invoke-virtual {v0}, Landroid/bluetooth/BluetoothDevice;->getName()Ljava/lang/String;
+.method public exists()Z
+    .locals 2
+
+    new-instance v0, Ljava/io/File;
+
+    invoke-virtual {p0}, Lcom/estrongs/fs/impl/c/b;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v1
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "bt://"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    if-eqz v1, :cond_3
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v4, "\n"
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    :goto_1
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v0}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, "/"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {p1, v0}, Lcom/estrongs/fs/impl/c/a;->a(Landroid/content/Context;Landroid/bluetooth/BluetoothDevice;)Ljava/lang/String;
-
-    move-result-object v3
-
-    if-eqz v1, :cond_4
-
-    :goto_2
-    new-instance v4, Lcom/estrongs/fs/impl/c/f;
-
-    invoke-static {v0}, Lcom/estrongs/fs/impl/c/a;->a(Landroid/bluetooth/BluetoothDevice;)Lcom/estrongs/fs/m;
-
-    move-result-object v0
-
-    invoke-direct {v4, v2, v0, v1, v3}, Lcom/estrongs/fs/impl/c/f;-><init>(Ljava/lang/String;Lcom/estrongs/fs/m;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {}, Lcom/estrongs/fs/impl/c/a;->h()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0, v4}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v0
 
-    if-nez v0, :cond_2
-
-    invoke-static {}, Lcom/estrongs/fs/impl/c/a;->h()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_2
-    invoke-static {}, Lcom/estrongs/fs/a/b;->a()Lcom/estrongs/fs/a/b;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Lcom/estrongs/fs/a/b;->a(Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-
-    goto :goto_0
-
-    :cond_3
-    :try_start_1
-    const-string v2, ""
-
-    goto :goto_1
-
-    :cond_4
-    invoke-virtual {v0}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-
-    move-result-object v1
-
-    goto :goto_2
-
-    :cond_5
-    const-string v1, "android.bluetooth.adapter.action.DISCOVERY_FINISHED"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Lcom/estrongs/fs/impl/c/a;->a(Z)Z
-
-    goto/16 :goto_0
+    return v0
 .end method

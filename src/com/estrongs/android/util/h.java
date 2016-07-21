@@ -1,350 +1,300 @@
 package com.estrongs.android.util;
 
-import android.content.Context;
-import android.content.res.Resources;
-import android.util.Log;
-import java.io.InputStream;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Method;
-import java.util.HashMap;
+import android.content.ContentResolver;
+import android.content.ContentUris;
+import android.content.ContentValues;
+import android.database.Cursor;
+import android.location.Location;
+import android.net.Uri;
+import android.net.Uri.Builder;
+import android.provider.MediaStore.Audio.Media;
+import android.provider.MediaStore.Images.Media;
 
 public class h
 {
-  public static HashMap<String, Object> a = new HashMap();
-  public static HashMap<String, String> b = new HashMap();
-  public static String c = null;
+  private static h a = new h();
+  private static final String[] b = { "image/jpeg", "image/png" };
+  private static Uri c = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
+  private static Uri d = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
+  private static String[] e = { "_id", "_data" };
+  private static String f = "(mime_type=? or mime_type=?)";
   
-  public static Class<?> a(Object paramObject, String paramString)
+  private int a(String paramString)
   {
-    if (paramObject == null) {
-      return Class.forName(paramString);
+    if (paramString == null) {
+      return 0;
     }
+    return ap.e(paramString).toLowerCase().hashCode();
+  }
+  
+  private Uri a(ContentResolver paramContentResolver, String paramString1, String paramString2, long paramLong, Location paramLocation, int paramInt)
+  {
+    Object localObject = c(paramContentResolver, paramString1);
+    if ((localObject != null) && (((Cursor)localObject).getCount() > 0) && (((Cursor)localObject).moveToFirst()))
+    {
+      paramContentResolver = ContentUris.withAppendedId(c, ((Cursor)localObject).getLong(0));
+      ((Cursor)localObject).close();
+      return paramContentResolver;
+    }
+    localObject = ap.d(paramString1);
+    ContentValues localContentValues = new ContentValues(9);
+    localContentValues.put("title", (String)localObject);
+    localContentValues.put("_display_name", (String)localObject);
+    localContentValues.put("description", paramString2);
+    localContentValues.put("datetaken", Long.valueOf(paramLong));
+    if (paramString1.endsWith(".png")) {
+      localContentValues.put("mime_type", "image/png");
+    }
+    for (;;)
+    {
+      localContentValues.put("orientation", Integer.valueOf(paramInt));
+      localContentValues.put("bucket_id", Integer.valueOf(a(paramString1)));
+      localContentValues.put("bucket_display_name", ap.e(paramString1).toLowerCase());
+      if (paramLocation != null)
+      {
+        localContentValues.put("latitude", Double.valueOf(paramLocation.getLatitude()));
+        localContentValues.put("longitude", Double.valueOf(paramLocation.getLongitude()));
+      }
+      localContentValues.put("_data", paramString1);
+      try
+      {
+        paramContentResolver = paramContentResolver.insert(c, localContentValues);
+        return paramContentResolver;
+      }
+      catch (Exception paramContentResolver) {}
+      localContentValues.put("mime_type", "image/jpeg");
+    }
+    return null;
+  }
+  
+  public static h a()
+  {
+    return a;
+  }
+  
+  private Cursor c(ContentResolver paramContentResolver, String paramString)
+  {
     try
     {
-      paramObject = ((ClassLoader)paramObject).loadClass(paramString);
-      return (Class<?>)paramObject;
+      Uri localUri = c;
+      paramString = "(mime_type=? or mime_type=?) and _data='" + paramString.replace("'", "''") + "'";
+      String[] arrayOfString = b;
+      paramContentResolver = MediaStore.Images.Media.query(paramContentResolver, localUri, new String[] { "_id", "bucket_id" }, paramString, arrayOfString, "_id ASC");
+      return paramContentResolver;
     }
-    catch (Exception paramObject) {}
+    catch (Throwable paramContentResolver) {}
     return null;
+  }
+  
+  public Uri a(ContentResolver paramContentResolver, String paramString)
+  {
+    Object localObject = null;
+    paramString = c(paramContentResolver, paramString);
+    paramContentResolver = (ContentResolver)localObject;
+    if (paramString != null)
+    {
+      paramContentResolver = (ContentResolver)localObject;
+      if (paramString.moveToFirst())
+      {
+        paramContentResolver = ContentUris.withAppendedId(c, paramString.getLong(0)).buildUpon().appendQueryParameter("bucketId", "" + paramString.getInt(1)).build();
+        paramString.close();
+      }
+    }
+    return paramContentResolver;
+  }
+  
+  public Uri a(ContentResolver paramContentResolver, String[] paramArrayOfString, String paramString)
+  {
+    Object localObject2;
+    if ((paramString == null) || (paramArrayOfString == null) || (paramArrayOfString.length == 0) || (paramString.contains("/."))) {
+      localObject2 = null;
+    }
+    int i;
+    Object localObject1;
+    do
+    {
+      return (Uri)localObject2;
+      i = 0;
+      localObject1 = null;
+      localObject2 = localObject1;
+    } while (i >= paramArrayOfString.length);
+    String str = paramArrayOfString[i];
+    if (str.contains("/.")) {}
+    for (;;)
+    {
+      i += 1;
+      break;
+      if ((str.endsWith(".png")) || (str.endsWith(".jpg")) || (str.endsWith(".jpeg")))
+      {
+        localObject2 = c(paramContentResolver, str);
+        if ((localObject2 != null) && (((Cursor)localObject2).getCount() > 0))
+        {
+          ((Cursor)localObject2).close();
+        }
+        else if (paramString.equals(str))
+        {
+          localObject2 = a(paramContentResolver, str, "", System.currentTimeMillis(), null, 0);
+          localObject1 = localObject2;
+          if (localObject2 != null) {
+            localObject1 = ((Uri)localObject2).buildUpon().appendQueryParameter("bucketId", String.valueOf(a(str))).build();
+          }
+        }
+        else
+        {
+          a(paramContentResolver, str, "", System.currentTimeMillis(), null, 0);
+        }
+      }
+    }
   }
   
   /* Error */
-  public static Object a(Context paramContext, String paramString1, String paramString2)
+  public Uri b(ContentResolver paramContentResolver, String paramString)
   {
     // Byte code:
-    //   0: getstatic 20	com/estrongs/android/util/h:a	Ljava/util/HashMap;
-    //   3: astore_3
-    //   4: aload_3
-    //   5: monitorenter
-    //   6: aload_1
-    //   7: ifnonnull +7 -> 14
-    //   10: aload_3
-    //   11: monitorexit
-    //   12: aconst_null
-    //   13: areturn
-    //   14: getstatic 20	com/estrongs/android/util/h:a	Ljava/util/HashMap;
-    //   17: aload_1
-    //   18: invokevirtual 47	java/util/HashMap:get	(Ljava/lang/Object;)Ljava/lang/Object;
+    //   0: aload_2
+    //   1: ifnull +12 -> 13
+    //   4: aload_2
+    //   5: ldc -22
+    //   7: invokevirtual 238	java/lang/String:contains	(Ljava/lang/CharSequence;)Z
+    //   10: ifeq +7 -> 17
+    //   13: aconst_null
+    //   14: astore_1
+    //   15: aload_1
+    //   16: areturn
+    //   17: aload_2
+    //   18: invokestatic 260	com/estrongs/android/util/ap:bV	(Ljava/lang/String;)Ljava/lang/String;
     //   21: astore 4
-    //   23: aload 4
-    //   25: ifnull +13 -> 38
-    //   28: aload_3
-    //   29: monitorexit
-    //   30: aload 4
-    //   32: areturn
-    //   33: astore_0
-    //   34: aload_3
-    //   35: monitorexit
-    //   36: aload_0
-    //   37: athrow
-    //   38: getstatic 22	com/estrongs/android/util/h:b	Ljava/util/HashMap;
-    //   41: aload_1
-    //   42: invokevirtual 47	java/util/HashMap:get	(Ljava/lang/Object;)Ljava/lang/Object;
-    //   45: checkcast 49	java/lang/String
-    //   48: astore 4
-    //   50: aload 4
-    //   52: ifnonnull +7 -> 59
-    //   55: aload_3
-    //   56: monitorexit
-    //   57: aconst_null
-    //   58: areturn
-    //   59: new 51	java/io/File
-    //   62: dup
-    //   63: aload 4
-    //   65: invokespecial 54	java/io/File:<init>	(Ljava/lang/String;)V
-    //   68: invokevirtual 58	java/io/File:exists	()Z
-    //   71: ifne +15 -> 86
-    //   74: aload_0
-    //   75: aload_1
-    //   76: invokestatic 61	com/estrongs/android/util/h:a	(Landroid/content/Context;Ljava/lang/String;)Z
-    //   79: ifne +7 -> 86
-    //   82: aload_3
-    //   83: monitorexit
-    //   84: aconst_null
-    //   85: areturn
-    //   86: aload_2
-    //   87: ifnull +57 -> 144
-    //   90: new 63	dalvik/system/DexClassLoader
-    //   93: dup
-    //   94: new 65	java/lang/StringBuilder
-    //   97: dup
-    //   98: invokespecial 66	java/lang/StringBuilder:<init>	()V
-    //   101: aload 4
-    //   103: invokevirtual 70	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   106: ldc 72
-    //   108: invokevirtual 70	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   111: aload_2
-    //   112: invokevirtual 70	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   115: invokevirtual 76	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   118: getstatic 24	com/estrongs/android/util/h:c	Ljava/lang/String;
-    //   121: aconst_null
-    //   122: ldc 2
-    //   124: invokevirtual 80	java/lang/Class:getClassLoader	()Ljava/lang/ClassLoader;
-    //   127: invokespecial 83	dalvik/system/DexClassLoader:<init>	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/ClassLoader;)V
-    //   130: astore_0
-    //   131: getstatic 20	com/estrongs/android/util/h:a	Ljava/util/HashMap;
-    //   134: aload_1
-    //   135: aload_0
-    //   136: invokevirtual 87	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    //   139: pop
-    //   140: aload_3
-    //   141: monitorexit
-    //   142: aload_0
-    //   143: areturn
-    //   144: new 63	dalvik/system/DexClassLoader
-    //   147: dup
-    //   148: aload 4
-    //   150: getstatic 24	com/estrongs/android/util/h:c	Ljava/lang/String;
-    //   153: aconst_null
-    //   154: ldc 2
-    //   156: invokevirtual 80	java/lang/Class:getClassLoader	()Ljava/lang/ClassLoader;
-    //   159: invokespecial 83	dalvik/system/DexClassLoader:<init>	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/ClassLoader;)V
-    //   162: astore_0
-    //   163: goto -32 -> 131
+    //   23: getstatic 34	android/provider/MediaStore$Images$Media:EXTERNAL_CONTENT_URI	Landroid/net/Uri;
+    //   26: astore_2
+    //   27: new 179	java/lang/StringBuilder
+    //   30: dup
+    //   31: invokespecial 180	java/lang/StringBuilder:<init>	()V
+    //   34: ldc_w 262
+    //   37: invokevirtual 186	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   40: aload 4
+    //   42: invokevirtual 186	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   45: ldc -68
+    //   47: invokevirtual 186	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   50: invokevirtual 197	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   53: astore 5
+    //   55: aload_1
+    //   56: aload_2
+    //   57: iconst_1
+    //   58: anewarray 23	java/lang/String
+    //   61: dup
+    //   62: iconst_0
+    //   63: ldc 43
+    //   65: aastore
+    //   66: aload 5
+    //   68: aconst_null
+    //   69: aconst_null
+    //   70: invokevirtual 265	android/content/ContentResolver:query	(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    //   73: astore_2
+    //   74: aload_2
+    //   75: ifnull +79 -> 154
+    //   78: aload_2
+    //   79: invokeinterface 78 1 0
+    //   84: ifle +70 -> 154
+    //   87: aload_2
+    //   88: invokeinterface 82 1 0
+    //   93: pop
+    //   94: aload_2
+    //   95: iconst_0
+    //   96: invokeinterface 218 2 0
+    //   101: istore_3
+    //   102: getstatic 34	android/provider/MediaStore$Images$Media:EXTERNAL_CONTENT_URI	Landroid/net/Uri;
+    //   105: invokevirtual 266	android/net/Uri:toString	()Ljava/lang/String;
+    //   108: astore_1
+    //   109: new 179	java/lang/StringBuilder
+    //   112: dup
+    //   113: invokespecial 180	java/lang/StringBuilder:<init>	()V
+    //   116: aload_1
+    //   117: invokevirtual 186	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   120: ldc_w 268
+    //   123: invokevirtual 186	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   126: iload_3
+    //   127: invokevirtual 221	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
+    //   130: invokevirtual 197	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   133: invokestatic 272	android/net/Uri:parse	(Ljava/lang/String;)Landroid/net/Uri;
+    //   136: astore 4
+    //   138: aload 4
+    //   140: astore_1
+    //   141: aload_2
+    //   142: ifnull -127 -> 15
+    //   145: aload_2
+    //   146: invokeinterface 95 1 0
+    //   151: aload 4
+    //   153: areturn
+    //   154: aload_0
+    //   155: aload_1
+    //   156: aload 4
+    //   158: ldc -42
+    //   160: invokestatic 252	java/lang/System:currentTimeMillis	()J
+    //   163: aconst_null
+    //   164: iconst_0
+    //   165: invokespecial 254	com/estrongs/android/util/h:a	(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;JLandroid/location/Location;I)Landroid/net/Uri;
+    //   168: astore 4
+    //   170: aload 4
+    //   172: astore_1
+    //   173: aload_2
+    //   174: ifnull -159 -> 15
+    //   177: aload_2
+    //   178: invokeinterface 95 1 0
+    //   183: aload 4
+    //   185: areturn
+    //   186: astore_2
+    //   187: aconst_null
+    //   188: astore_1
+    //   189: aload_2
+    //   190: invokevirtual 275	java/lang/Exception:printStackTrace	()V
+    //   193: aload_1
+    //   194: ifnull +9 -> 203
+    //   197: aload_1
+    //   198: invokeinterface 95 1 0
+    //   203: aconst_null
+    //   204: areturn
+    //   205: astore_1
+    //   206: aconst_null
+    //   207: astore_2
+    //   208: aload_2
+    //   209: ifnull +9 -> 218
+    //   212: aload_2
+    //   213: invokeinterface 95 1 0
+    //   218: aload_1
+    //   219: athrow
+    //   220: astore_1
+    //   221: goto -13 -> 208
+    //   224: astore 4
+    //   226: aload_1
+    //   227: astore_2
+    //   228: aload 4
+    //   230: astore_1
+    //   231: goto -23 -> 208
+    //   234: astore 4
+    //   236: aload_2
+    //   237: astore_1
+    //   238: aload 4
+    //   240: astore_2
+    //   241: goto -52 -> 189
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	166	0	paramContext	Context
-    //   0	166	1	paramString1	String
-    //   0	166	2	paramString2	String
-    //   3	138	3	localHashMap	HashMap
-    //   21	128	4	localObject	Object
+    //   0	244	0	this	h
+    //   0	244	1	paramContentResolver	ContentResolver
+    //   0	244	2	paramString	String
+    //   101	26	3	i	int
+    //   21	163	4	localObject1	Object
+    //   224	5	4	localObject2	Object
+    //   234	5	4	localException	Exception
+    //   53	14	5	str	String
     // Exception table:
     //   from	to	target	type
-    //   10	12	33	finally
-    //   14	23	33	finally
-    //   28	30	33	finally
-    //   34	36	33	finally
-    //   38	50	33	finally
-    //   55	57	33	finally
-    //   59	84	33	finally
-    //   90	131	33	finally
-    //   131	142	33	finally
-    //   144	163	33	finally
-  }
-  
-  public static Object a(Object paramObject, String paramString1, String paramString2, Class[] paramArrayOfClass, Object[] paramArrayOfObject)
-  {
-    try
-    {
-      paramObject = a(paramObject, paramString1).getMethod(paramString2, paramArrayOfClass).invoke(null, paramArrayOfObject);
-      return paramObject;
-    }
-    catch (ClassNotFoundException paramObject)
-    {
-      Log.e("ESClassLoader", "Can't find class:" + paramString1);
-      throw ((Throwable)paramObject);
-    }
-    catch (NoSuchMethodException paramObject)
-    {
-      Log.e("ESClassLoader", "Can't find method:" + paramString2);
-      throw ((Throwable)paramObject);
-    }
-    catch (SecurityException paramObject)
-    {
-      Log.e("ESClassLoader", "Can't get method:" + paramString2 + " for security issue");
-      throw ((Throwable)paramObject);
-    }
-    catch (Exception paramObject)
-    {
-      Log.e("ESClassLoader", "call method:" + paramString2 + " failed");
-      throw ((Throwable)paramObject);
-    }
-  }
-  
-  public static Object a(Object paramObject, String paramString1, String paramString2, Object[] paramArrayOfObject)
-  {
-    if (paramArrayOfObject != null)
-    {
-      Class[] arrayOfClass = new Class[paramArrayOfObject.length];
-      int i = 0;
-      while (i < paramArrayOfObject.length)
-      {
-        arrayOfClass[i] = paramArrayOfObject[i].getClass();
-        i += 1;
-      }
-      return a(paramObject, paramString1, paramString2, arrayOfClass, paramArrayOfObject);
-    }
-    return a(paramObject, paramString1, paramString2, null, null);
-  }
-  
-  public static Object a(Object paramObject, String paramString, Class[] paramArrayOfClass, Object[] paramArrayOfObject)
-  {
-    try
-    {
-      paramObject = a(paramObject, paramString);
-      if (paramArrayOfObject != null) {
-        return ((Class)paramObject).getConstructor(paramArrayOfClass).newInstance(paramArrayOfObject);
-      }
-      paramObject = ((Class)paramObject).newInstance();
-      return paramObject;
-    }
-    catch (Exception paramObject)
-    {
-      ((Exception)paramObject).printStackTrace();
-      Log.e("ESClassLoader", "create object failed for class:" + paramString);
-    }
-    return null;
-  }
-  
-  public static Object a(Object paramObject, String paramString, Object[] paramArrayOfObject)
-  {
-    try
-    {
-      paramObject = a(paramObject, paramString);
-      if (paramArrayOfObject != null)
-      {
-        Class[] arrayOfClass = new Class[paramArrayOfObject.length];
-        int i = 0;
-        while (i < paramArrayOfObject.length)
-        {
-          arrayOfClass[i] = paramArrayOfObject[i].getClass();
-          i += 1;
-        }
-        return ((Class)paramObject).getConstructor(arrayOfClass).newInstance(paramArrayOfObject);
-      }
-      paramObject = ((Class)paramObject).newInstance();
-      return paramObject;
-    }
-    catch (Exception paramObject)
-    {
-      ((Exception)paramObject).printStackTrace();
-      Log.e("ESClassLoader", "create object failed for class:" + paramString);
-    }
-    return null;
-  }
-  
-  public static Object a(String paramString1, String paramString2)
-  {
-    return a(null, paramString1, paramString2);
-  }
-  
-  public static Object a(String paramString1, String paramString2, Class[] paramArrayOfClass, Object[] paramArrayOfObject)
-  {
-    return a(null, paramString1, paramString2, paramArrayOfClass, paramArrayOfObject);
-  }
-  
-  public static String a()
-  {
-    return c;
-  }
-  
-  public static void a(String paramString)
-  {
-    c = paramString;
-    if (paramString == null) {
-      return;
-    }
-    new StringBuilder().append(am.bk(c)).append("lib/").toString();
-    b.put("dropbox", c + "/es_dropbox.jar");
-    b.put("vdisk", c + "/es_vdisk.jar");
-    b.put("kanbox", c + "/es_kanbox.jar");
-    b.put("sugarsync", c + "/es_sugarsync.jar");
-    b.put("kuaipan", c + "/es_kuaipan.jar");
-    b.put("box", c + "/es_boxnet.jar");
-    b.put("onedrive", c + "/es_skydrv.jar");
-    b.put("gdrive", c + "/es_gdrive.jar");
-    b.put("s3", c + "/es_s3.jar");
-    b.put("megacloud", c + "/es_megacloud.jar");
-    b.put("mediafire", c + "/es_mediafire.jar");
-  }
-  
-  public static boolean a(Context paramContext, String paramString)
-  {
-    if (paramContext == null) {
-      return false;
-    }
-    try
-    {
-      if (paramString.equals("dropbox")) {
-        a(paramContext, c + "/es_dropbox.jar", 2131099655, -1);
-      } else if (paramString.equals("sugarsync")) {
-        a(paramContext, c + "/es_sugarsync.jar", 2131099663, -1);
-      }
-    }
-    catch (Exception paramContext)
-    {
-      paramContext.printStackTrace();
-      return false;
-    }
-    if (paramString.equals("box")) {
-      a(paramContext, c + "/es_boxnet.jar", 2131099654, -1);
-    } else if (paramString.equals("kanbox")) {
-      a(paramContext, c + "/es_kanbox.jar", 2131099657, -1);
-    } else if (paramString.equals("kuaipan")) {
-      a(paramContext, c + "/es_kuaipan.jar", 2131099658, -1);
-    } else if (paramString.equals("vdisk")) {
-      a(paramContext, c + "/es_vdisk.jar", 2131099664, -1);
-    } else if (paramString.equals("onedrive")) {
-      a(paramContext, c + "/es_skydrv.jar", 2131099662, -1);
-    } else if (paramString.equals("gdrive")) {
-      a(paramContext, c + "/es_gdrive.jar", 2131099656, -1);
-    } else if (paramString.equals("s3")) {
-      a(paramContext, c + "/es_s3.jar", 2131099661, -1);
-    } else if (paramString.equals("megacloud")) {
-      a(paramContext, c + "/es_megacloud.jar", 2131099660, -1);
-    } else if (paramString.equals("mediafire")) {
-      a(paramContext, c + "/es_bitcasa.jar", 2131099659, -1);
-    }
-    return true;
-  }
-  
-  private static boolean a(Context paramContext, String paramString, int paramInt1, int paramInt2)
-  {
-    try
-    {
-      paramContext = paramContext.getResources().openRawResource(paramInt1);
-      if (!bd.a(paramContext, paramString, paramInt2)) {
-        return false;
-      }
-      paramContext.close();
-      return true;
-    }
-    catch (Exception paramContext) {}
-    return false;
-  }
-  
-  public static Object b(String paramString)
-  {
-    return a(paramString, null);
-  }
-  
-  public static Object b(String paramString1, String paramString2, Class<?>[] paramArrayOfClass, Object[] paramArrayOfObject)
-  {
-    try
-    {
-      paramString1 = a(b(paramString1), paramString2);
-      if (paramArrayOfObject != null) {
-        return paramString1.getConstructor(paramArrayOfClass).newInstance(paramArrayOfObject);
-      }
-      paramString1 = paramString1.newInstance();
-      return paramString1;
-    }
-    catch (Exception paramString1)
-    {
-      paramString1.printStackTrace();
-      Log.e("ESClassLoader", "create object failed for class:" + paramString2);
-    }
-    return null;
+    //   23	74	186	java/lang/Exception
+    //   23	74	205	finally
+    //   78	138	220	finally
+    //   154	170	220	finally
+    //   189	193	224	finally
+    //   78	138	234	java/lang/Exception
+    //   154	170	234	java/lang/Exception
   }
 }
 

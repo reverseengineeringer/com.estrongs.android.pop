@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/estrongs/android/ui/dialog/gj;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/navigation/a;
+.field final synthetic a:Lcom/estrongs/android/ui/navigation/c;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/navigation/a;)V
+.method constructor <init>(Lcom/estrongs/android/ui/navigation/c;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/navigation/d;->a:Lcom/estrongs/android/ui/navigation/a;
+    iput-object p1, p0, Lcom/estrongs/android/ui/navigation/d;->a:Lcom/estrongs/android/ui/navigation/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,18 +22,20 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 2
+.method public a(ILjava/lang/String;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/navigation/d;->a:Lcom/estrongs/android/ui/navigation/a;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/navigation/a;->c(Lcom/estrongs/android/ui/navigation/a;)Lcom/estrongs/android/widget/RealViewSwitcher;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
-    const/4 v1, 0x1
+    invoke-virtual {v0, p2}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->d(Ljava/lang/String;)Lcom/estrongs/android/view/cr;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/RealViewSwitcher;->b(I)V
+    iget-object v0, p0, Lcom/estrongs/android/ui/navigation/d;->a:Lcom/estrongs/android/ui/navigation/c;
+
+    iget-object v0, v0, Lcom/estrongs/android/ui/navigation/c;->a:Lcom/estrongs/android/ui/navigation/MultiWindowActivity;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/navigation/MultiWindowActivity;->finish()V
 
     return-void
 .end method

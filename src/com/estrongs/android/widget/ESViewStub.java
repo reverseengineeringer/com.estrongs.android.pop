@@ -18,7 +18,7 @@ public class ESViewStub
   private int d;
   private WeakReference<View> e;
   private LayoutInflater f;
-  private b g;
+  private e g;
   
   public ESViewStub(Context paramContext)
   {
@@ -93,28 +93,48 @@ public class ESViewStub
     throw new IllegalStateException("ViewStub must have a non-null ViewGroup viewParent");
   }
   
-  public void a(int paramInt)
-  {
-    d = paramInt;
-  }
-  
-  public void a(LayoutInflater paramLayoutInflater)
-  {
-    f = paramLayoutInflater;
-  }
-  
-  public void b(int paramInt)
-  {
-    c = paramInt;
-  }
-  
   protected void dispatchDraw(Canvas paramCanvas) {}
   
   public void draw(Canvas paramCanvas) {}
   
+  public int getInflatedId()
+  {
+    return d;
+  }
+  
+  public LayoutInflater getLayoutInflater()
+  {
+    return f;
+  }
+  
+  public int getLayoutResource()
+  {
+    return c;
+  }
+  
   protected void onMeasure(int paramInt1, int paramInt2)
   {
     setMeasuredDimension(0, 0);
+  }
+  
+  public void setInflatedId(int paramInt)
+  {
+    d = paramInt;
+  }
+  
+  public void setLayoutInflater(LayoutInflater paramLayoutInflater)
+  {
+    f = paramLayoutInflater;
+  }
+  
+  public void setLayoutResource(int paramInt)
+  {
+    c = paramInt;
+  }
+  
+  public void setOnInflateListener(e parame)
+  {
+    g = parame;
   }
   
   public void setVisibility(int paramInt)

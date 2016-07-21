@@ -11,7 +11,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import com.estrongs.android.pop.ad;
 import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.ui.dialog.y;
+import com.estrongs.android.ui.dialog.aa;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
@@ -21,14 +21,14 @@ public class AppCheckUpdateList
 {
   TextView a;
   TextView b;
-  y c = null;
+  aa c = null;
   private HashMap<String, String> d;
   private HashMap<String, Drawable> e;
   private f f;
   
   private void a()
   {
-    ListView localListView = (ListView)findViewById(2131361828);
+    ListView localListView = (ListView)findViewById(2131624327);
     d = new HashMap();
     e = new HashMap();
     ad.a(this, d);
@@ -74,7 +74,7 @@ public class AppCheckUpdateList
   public void a(Context paramContext)
   {
     if (c == null) {
-      c = new y(paramContext);
+      c = new aa(paramContext);
     }
     for (;;)
     {
@@ -88,16 +88,16 @@ public class AppCheckUpdateList
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    setContentView(2130903043);
-    a = ((TextView)findViewById(2131361825));
-    a.setText(2131428669);
-    b = ((TextView)findViewById(2131361826));
-    b.setText(2131428670);
-    setTitle(2131428667);
-    paramBundle = (Button)findViewById(2131361827);
+    setContentView(2130903105);
+    a = ((TextView)findViewById(2131624055));
+    a.setText(2131230983);
+    b = ((TextView)findViewById(2131624325));
+    b.setText(2131230992);
+    setTitle(2131231034);
+    paramBundle = (Button)findViewById(2131624326);
     paramBundle.setFocusable(true);
     paramBundle.setOnClickListener(new c(this));
-    paramBundle = findViewById(2131361824);
+    paramBundle = findViewById(2131624324);
     paramBundle.setFocusable(true);
     paramBundle.setOnClickListener(new d(this));
     a();

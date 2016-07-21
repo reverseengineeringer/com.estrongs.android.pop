@@ -1,52 +1,31 @@
 package com.estrongs.android.ui.pcs;
 
-import com.baidu.sapi2.SapiAccount;
-import com.baidu.sapi2.SapiAccountManager;
-import com.baidu.sapi2.shell.listener.AuthorizationListener;
-import com.estrongs.android.util.bd;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 class k
-  extends AuthorizationListener
+  implements View.OnClickListener
 {
-  k(j paramj) {}
+  k(f paramf) {}
   
-  public void onFailed(int paramInt, String paramString) {}
-  
-  public void onSuccess()
+  public void onClick(View paramView)
   {
-    if (!j.a(a)) {
+    f.b(a).dismiss();
+    a.dismiss();
+    if (u.a().b())
+    {
+      if ((f.c(a)) && (a.b != null)) {
+        a.b.a(true, "pcs_temp_mode", u.a().e());
+      }
       return;
     }
-    SapiAccount localSapiAccount = SapiAccountManager.getInstance().getSession();
-    Object localObject2 = username;
-    if (localObject2 != null)
+    if (!f.b(a).d()) {}
+    for (paramView = new c(f.d(a), false, true);; paramView = new c(f.d(a)))
     {
-      localObject1 = localObject2;
-      if (((String)localObject2).length() != 0) {}
+      paramView.a(a.b);
+      paramView.a();
+      return;
     }
-    else
-    {
-      localObject1 = email;
-    }
-    if (localObject1 != null)
-    {
-      localObject2 = localObject1;
-      if (((String)localObject1).length() != 0) {}
-    }
-    else
-    {
-      localObject2 = uid;
-    }
-    Object localObject1 = bduss + "\n" + (String)localObject2;
-    localObject1 = "login:" + bd.c((String)localObject1);
-    localObject1 = aj.a(j.b(a), (String)localObject1, j.c(a), j.d(a), j.e(a));
-    if ((!j.c(a)) && (j.f(a) != null))
-    {
-      j.f(a).a(1);
-      j.f(a).a((String)localObject1);
-    }
-    j.a(a, (String)localObject1);
-    a.dismiss();
   }
 }
 

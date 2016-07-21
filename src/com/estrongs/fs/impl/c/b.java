@@ -1,63 +1,44 @@
 package com.estrongs.fs.impl.c;
 
-import android.bluetooth.BluetoothDevice;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import java.util.List;
+import com.estrongs.fs.a;
+import com.estrongs.fs.w;
+import java.io.File;
 
-final class b
-  extends BroadcastReceiver
+public class b
+  extends a
 {
-  public void onReceive(Context paramContext, Intent paramIntent)
+  public b() {}
+  
+  public b(File paramFile)
   {
-    if (!a.g()) {
-      a.d();
-    }
-    String str;
-    label175:
-    do
+    super(paramFile.getPath());
+    setName(paramFile.getName());
+    lastModified = paramFile.lastModified();
+    if (paramFile.isDirectory())
     {
-      return;
-      str = paramIntent.getAction();
-      if ("android.bluetooth.device.action.FOUND".equals(str)) {
-        for (;;)
-        {
-          BluetoothDevice localBluetoothDevice;
-          try
-          {
-            localBluetoothDevice = (BluetoothDevice)paramIntent.getParcelableExtra("android.bluetooth.device.extra.DEVICE");
-            str = localBluetoothDevice.getName();
-            Object localObject = new StringBuilder().append("bt://");
-            if (str != null)
-            {
-              paramIntent = str + "\n";
-              paramIntent = paramIntent + localBluetoothDevice.getAddress() + "/";
-              localObject = a.a(paramContext, localBluetoothDevice);
-              if (str == null) {
-                break label175;
-              }
-              paramContext = str;
-              paramContext = new f(paramIntent, a.a(localBluetoothDevice), paramContext, (String)localObject);
-              if (!a.h().contains(paramContext)) {
-                a.h().add(paramContext);
-              }
-              com.estrongs.fs.a.b.a().a(paramIntent);
-              return;
-            }
-          }
-          catch (Exception paramContext)
-          {
-            paramContext.printStackTrace();
-            return;
-          }
-          paramIntent = "";
-          continue;
-          paramContext = localBluetoothDevice.getAddress();
+      size = -1L;
+      type = w.a;
+      if (getExtra("child_count") == null)
+      {
+        paramFile = paramFile.listFiles(new c(this));
+        if (paramFile != null) {
+          putExtra("child_count", Integer.valueOf(paramFile.length));
         }
       }
-    } while (!"android.bluetooth.adapter.action.DISCOVERY_FINISHED".equals(str));
-    a.a(false);
+      return;
+    }
+    size = paramFile.length();
+    type = w.b;
+  }
+  
+  public void a(String paramString)
+  {
+    path = paramString;
+  }
+  
+  public boolean exists()
+  {
+    return new File(getAbsolutePath()).exists();
   }
 }
 

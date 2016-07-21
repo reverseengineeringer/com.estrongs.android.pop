@@ -6,7 +6,7 @@ import android.content.DialogInterface.OnClickListener;
 class ad
   implements DialogInterface.OnClickListener
 {
-  ad(ThemeFolderActivity paramThemeFolderActivity) {}
+  ad(ThemeColorActivity paramThemeColorActivity) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {

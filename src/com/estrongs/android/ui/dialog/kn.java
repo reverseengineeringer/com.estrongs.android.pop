@@ -1,16 +1,15 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.ui.view.ak;
 
 class kn
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
-  kn(VerifyPasswordDialog paramVerifyPasswordDialog) {}
+  kn(km paramkm, String paramString) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void run()
   {
-    paramDialogInterface.dismiss();
+    ak.a(b.a.getContext(), a, 1);
   }
 }
 

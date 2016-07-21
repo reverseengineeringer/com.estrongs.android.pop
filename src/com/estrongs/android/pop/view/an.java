@@ -1,15 +1,33 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.appinfo.u;
+import android.os.Handler;
+import android.os.Message;
 
 class an
-  implements u
+  extends Handler
 {
-  an(am paramam) {}
+  an(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void a()
+  public void handleMessage(Message paramMessage)
   {
-    a.a.a.a.runOnUiThread(new ao(this));
+    int i;
+    switch (what)
+    {
+    default: 
+      return;
+    case 0: 
+      a.d(null);
+      return;
+    case 1: 
+      i = arg1;
+      a.f(i);
+      return;
+    case 2: 
+      i = arg1;
+      a.g(i);
+      return;
+    }
+    a.finish();
   }
 }
 

@@ -1,6 +1,6 @@
 package com.estrongs.fs.impl.usb.fs.ntfs;
 
-import android.util.Log;
+import com.estrongs.android.util.l;
 import com.estrongs.fs.impl.usb.fs.ntfs.a.a;
 import com.estrongs.fs.impl.usb.fs.ntfs.a.g;
 import com.estrongs.fs.impl.usb.fs.ntfs.a.h;
@@ -26,7 +26,7 @@ class r
     }
     catch (IOException localIOException)
     {
-      Log.e(n.m(), "Error getting attributes from attribute list, file record " + paramn, localIOException);
+      l.c(n.m(), "Error getting attributes from attribute list, file record " + paramn, localIOException);
       b = Collections.emptyList().iterator();
     }
   }
@@ -51,10 +51,10 @@ class r
           if (!n.a(a)) {
             break;
           }
-          Log.d(n.m(), "Attribute: " + localObject);
+          l.b(n.m(), "Attribute: " + localObject);
           break;
           if (n.a(a)) {
-            Log.d(n.m(), "Looking up MFT entry for: " + localg.c());
+            l.b(n.m(), "Looking up MFT entry for: " + localg.c());
           }
         }
         return null;

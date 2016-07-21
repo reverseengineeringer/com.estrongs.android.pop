@@ -85,7 +85,7 @@
 
     const-string v1, "charset_name"
 
-    sget-object v2, Lcom/estrongs/android/util/f;->a:[Ljava/lang/String;
+    sget-object v2, Lcom/estrongs/android/util/e;->a:[Ljava/lang/String;
 
     const/4 v3, 0x0
 
@@ -101,7 +101,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/utils/k;->e:Ljava/lang/String;
 
-    invoke-static {v1, v0}, Lcom/estrongs/io/archive/c;->b(Ljava/lang/String;Ljava/util/Map;)Lcom/estrongs/io/archive/h;
+    invoke-static {v1, v0}, Lcom/estrongs/io/archive/d;->b(Ljava/lang/String;Ljava/util/Map;)Lcom/estrongs/io/archive/i;
 
     move-result-object v0
 
@@ -125,7 +125,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/estrongs/fs/impl/local/l;->f(Ljava/lang/String;)Lcom/estrongs/fs/impl/local/q;
+    invoke-static {v1}, Lcom/estrongs/fs/impl/local/m;->f(Ljava/lang/String;)Lcom/estrongs/fs/impl/local/r;
 
     move-result-object v1
 
@@ -137,13 +137,13 @@
 
     const/4 v3, 0x0
 
-    iget v4, v1, Lcom/estrongs/fs/impl/local/q;->b:I
+    iget v4, v1, Lcom/estrongs/fs/impl/local/r;->b:I
 
     aput v4, v2, v3
 
     const/4 v3, 0x1
 
-    iget v1, v1, Lcom/estrongs/fs/impl/local/q;->c:I
+    iget v1, v1, Lcom/estrongs/fs/impl/local/r;->c:I
 
     aput v1, v2, v3
 
@@ -154,7 +154,7 @@
 
     invoke-direct {v1, p0}, Lcom/estrongs/android/pop/utils/l;-><init>(Lcom/estrongs/android/pop/utils/k;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/io/archive/h;->a(Lcom/estrongs/io/a/b;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/io/archive/i;->a(Lcom/estrongs/io/a/b;)V
 
     const/4 v0, 0x1
 
@@ -186,7 +186,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/utils/k;->c:Landroid/content/Context;
 
-    const v1, 0x7f0b016d
+    const v1, 0x7f08012b
 
     invoke-static {v0, v1}, Lcom/estrongs/android/pop/utils/a;->a(Landroid/content/Context;I)V
 
@@ -221,7 +221,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/utils/k;->c:Landroid/content/Context;
 
-    const v1, 0x7f0b03f8
+    const v1, 0x7f080134
 
     invoke-static {v0, v1}, Lcom/estrongs/android/pop/utils/a;->a(Landroid/content/Context;I)V
 

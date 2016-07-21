@@ -1,141 +1,163 @@
 .class Lcom/estrongs/android/view/aa;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.super Landroid/widget/BaseAdapter;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/view/u;
+.field final synthetic a:Lcom/estrongs/android/view/z;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/view/u;)V
+.method constructor <init>(Lcom/estrongs/android/view/z;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/view/aa;->a:Lcom/estrongs/android/view/u;
+    iput-object p1, p0, Lcom/estrongs/android/view/aa;->a:Lcom/estrongs/android/view/z;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 5
-
-    iget-object v0, p0, Lcom/estrongs/android/view/aa;->a:Lcom/estrongs/android/view/u;
-
-    invoke-static {v0}, Lcom/estrongs/android/view/u;->b(Lcom/estrongs/android/view/u;)Landroid/view/ViewGroup;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
+.method public a(I)Lcom/estrongs/fs/h;
+    .locals 1
 
     const/4 v0, 0x0
 
-    move v1, v0
+    return-object v0
+.end method
 
-    :goto_0
-    invoke-static {}, Lcom/estrongs/android/view/u;->g()Ljava/util/LinkedList;
+.method public getCount()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public synthetic getItem(I)Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Lcom/estrongs/android/view/aa;->a(I)Lcom/estrongs/fs/h;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
+    return-object v0
+.end method
 
-    move-result v0
+.method public getItemId(I)J
+    .locals 2
 
-    if-ge v1, v0, :cond_2
+    int-to-long v0, p1
 
-    if-lez v1, :cond_0
+    return-wide v0
+.end method
 
-    invoke-static {}, Lcom/estrongs/android/view/u;->g()Ljava/util/LinkedList;
+.method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 4
 
-    move-result-object v0
+    if-nez p2, :cond_0
 
-    invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
+    iget-object v0, p0, Lcom/estrongs/android/view/aa;->a:Lcom/estrongs/android/view/z;
 
-    move-result v0
+    iget-object v0, v0, Lcom/estrongs/android/view/z;->aj:Landroid/view/LayoutInflater;
 
-    if-ge v1, v0, :cond_0
+    const v1, 0x7f0300cd
 
-    new-instance v0, Lcom/estrongs/android/pop/esclasses/ESImageView;
+    const/4 v2, 0x0
 
-    iget-object v2, p0, Lcom/estrongs/android/view/aa;->a:Lcom/estrongs/android/view/u;
+    invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    invoke-static {v2}, Lcom/estrongs/android/view/u;->a(Lcom/estrongs/android/view/u;)Landroid/app/Activity;
-
-    move-result-object v2
-
-    invoke-direct {v0, v2}, Lcom/estrongs/android/pop/esclasses/ESImageView;-><init>(Landroid/content/Context;)V
-
-    new-instance v2, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 v3, -0x1
-
-    const/4 v4, -0x2
-
-    invoke-direct {v2, v3, v4}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const v2, 0x7f0202d5
-
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setBackgroundResource(I)V
-
-    iget-object v2, p0, Lcom/estrongs/android/view/aa;->a:Lcom/estrongs/android/view/u;
-
-    invoke-static {v2}, Lcom/estrongs/android/view/u;->b(Lcom/estrongs/android/view/u;)Landroid/view/ViewGroup;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    move-result-object p2
 
     :cond_0
-    invoke-static {}, Lcom/estrongs/android/view/u;->g()Ljava/util/LinkedList;
+    const v0, 0x7f0200aa
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->setBackgroundResource(I)V
+
+    const v0, 0x7f0e0107
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
+    check-cast v0, Landroid/widget/ImageView;
+
+    const v1, 0x7f02028e
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    const v0, 0x7f0e0108
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/android/view/ac;
+    check-cast v0, Landroid/widget/TextView;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/view/ac;->aq()Landroid/view/View;
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v2, p0, Lcom/estrongs/android/view/aa;->a:Lcom/estrongs/android/view/z;
+
+    const v3, 0x7f080429
+
+    invoke-virtual {v2, v3}, Lcom/estrongs/android/view/z;->j(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v1
 
-    if-eqz v0, :cond_1
+    const-string v2, "("
 
-    invoke-virtual {v2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Landroid/view/ViewGroup;
+    iget-object v2, p0, Lcom/estrongs/android/view/aa;->a:Lcom/estrongs/android/view/z;
 
-    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+    iget-object v2, v2, Lcom/estrongs/android/view/z;->a:Ljava/util/List;
 
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/view/aa;->a:Lcom/estrongs/android/view/u;
+    invoke-interface {v2}, Ljava/util/List;->size()I
 
-    invoke-static {v0}, Lcom/estrongs/android/view/u;->b(Lcom/estrongs/android/view/u;)Landroid/view/ViewGroup;
+    move-result v2
 
-    move-result-object v0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    move-result-object v1
 
-    add-int/lit8 v0, v1, 0x1
+    const-string v2, ")"
 
-    move v1, v0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    move-result-object v1
 
-    :cond_2
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    new-instance v0, Lcom/estrongs/android/view/ab;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/view/ab;-><init>(Lcom/estrongs/android/view/aa;)V
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    return-object p2
+.end method
+
+.method public notifyDataSetChanged()V
+    .locals 1
+
+    invoke-super {p0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
+
+    iget-object v0, p0, Lcom/estrongs/android/view/aa;->a:Lcom/estrongs/android/view/z;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/view/z;->e()V
+
     return-void
 .end method

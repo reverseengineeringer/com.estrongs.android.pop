@@ -1,16 +1,20 @@
 package com.estrongs.android.ui.theme;
 
+import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
 
 class m
   implements View.OnClickListener
 {
-  m(ThemeActivity paramThemeActivity) {}
+  m(ModifyThemeActivity paramModifyThemeActivity) {}
   
   public void onClick(View paramView)
   {
-    a.finish();
+    paramView = new Intent(a, ThemeColorActivity.class);
+    paramView.putExtra("set_what_color", 5);
+    paramView.putExtra("theme_data_index", ModifyThemeActivity.b(a));
+    a.startActivityForResult(paramView, 4130);
   }
 }
 

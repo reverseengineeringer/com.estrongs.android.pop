@@ -1,8 +1,8 @@
 package android.support.v4.app;
 
-class i
+public abstract interface i
 {
-  public static final int[] a = { 16842755, 16842960, 16842961 };
+  public abstract void validateRequestPermissionsRequestCode(int paramInt);
 }
 
 /* Location:

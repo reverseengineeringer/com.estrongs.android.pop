@@ -2,26 +2,19 @@ package com.estrongs.android.ui.dialog;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import java.util.List;
+import com.estrongs.android.util.aa;
 
 class kt
   implements DialogInterface.OnClickListener
 {
-  kt(ks paramks, List paramList1, List paramList2, List paramList3) {}
+  kt(kq paramkq) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    paramDialogInterface.dismiss();
-    if (ks.a(d) != null)
-    {
-      if ((a != null) && (paramInt < a.size())) {
-        ks.a(d).a((String)b.get(paramInt), (String)a.get(paramInt));
-      }
+    if ((kq.d(a) == 3) && (kq.c(a) != null)) {
+      kq.c(a).b();
     }
-    else {
-      return;
-    }
-    ks.a(d).a((String)b.get(paramInt), (String)c.get(paramInt));
+    a.c();
   }
 }
 

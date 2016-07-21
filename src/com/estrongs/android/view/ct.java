@@ -1,24 +1,13 @@
 package com.estrongs.android.view;
 
-import android.widget.TextView;
-import java.util.ArrayList;
-import java.util.Iterator;
-
 class ct
   implements Runnable
 {
-  ct(cs paramcs, aw paramaw) {}
+  ct(cs paramcs) {}
   
   public void run()
   {
-    Iterator localIterator = cq.a(b.a).iterator();
-    while (localIterator.hasNext())
-    {
-      dd localdd = (dd)localIterator.next();
-      if ((a == d) && (c != null)) {
-        c.setText(a + " (" + a.d() + ")");
-      }
-    }
+    a.a.g();
   }
 }
 

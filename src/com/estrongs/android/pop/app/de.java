@@ -9,8 +9,7 @@ class de
   
   public void run()
   {
-    ImageCommentActivity.e(a.a).setVisibility(0);
-    ImageCommentActivity.f(a.a).setVisibility(8);
+    ImageCommentActivity.d(a.a).setVisibility(8);
   }
 }
 

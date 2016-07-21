@@ -77,8 +77,8 @@ class h
       if (i >= 700) {
         break;
       }
-      int k = e - d.f(a).e();
-      int j = f - d.f(a).f();
+      int k = e - d.f(a).getRegistrationX();
+      int j = f - d.f(a).getRegistrationY();
       k = (int)(d.g(a) + b() + k - a(i, 700.0F) * (k + b()));
       double d1 = d.h(a) - b() + j;
       double d2 = a(i, 700.0F);
@@ -87,8 +87,8 @@ class h
     } while (d.i(a));
     d.e(a).postDelayed(this, 25L);
     return;
-    Bitmap localBitmap1 = d.f(a).d();
-    Bitmap localBitmap2 = b.d();
+    Bitmap localBitmap1 = d.f(a).getBitmap();
+    Bitmap localBitmap2 = b.getBitmap();
     Bitmap localBitmap3 = a(localBitmap1, localBitmap2);
     d.f(a).a(localBitmap3, a());
     d.f(a).a(d.g(a), d.h(a));

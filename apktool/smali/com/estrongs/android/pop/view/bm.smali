@@ -1,199 +1,195 @@
 .class Lcom/estrongs/android/pop/view/bm;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.super Lcom/estrongs/android/view/cr;
 
 
 # instance fields
-.field final synthetic a:[Lcom/estrongs/fs/impl/usb/g;
-
-.field final synthetic b:Z
-
-.field final synthetic c:Ljava/util/ArrayList;
-
-.field final synthetic d:Ljava/util/ArrayList;
-
-.field final synthetic e:Lcom/estrongs/android/pop/view/bl;
+.field final synthetic a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/view/bl;[Lcom/estrongs/fs/impl/usb/g;ZLjava/util/ArrayList;Ljava/util/ArrayList;)V
+.method constructor <init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;Landroid/app/Activity;Lcom/estrongs/fs/util/a/a;Lcom/estrongs/android/view/dw;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/view/bm;->e:Lcom/estrongs/android/pop/view/bl;
+    iput-object p1, p0, Lcom/estrongs/android/pop/view/bm;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    iput-object p2, p0, Lcom/estrongs/android/pop/view/bm;->a:[Lcom/estrongs/fs/impl/usb/g;
-
-    iput-boolean p3, p0, Lcom/estrongs/android/pop/view/bm;->b:Z
-
-    iput-object p4, p0, Lcom/estrongs/android/pop/view/bm;->c:Ljava/util/ArrayList;
-
-    iput-object p5, p0, Lcom/estrongs/android/pop/view/bm;->d:Ljava/util/ArrayList;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p3, p4}, Lcom/estrongs/android/view/cr;-><init>(Landroid/app/Activity;Lcom/estrongs/fs/util/a/a;Lcom/estrongs/android/view/dw;)V
 
     return-void
 .end method
 
+.method static synthetic a(Lcom/estrongs/android/pop/view/bm;I)Ljava/lang/String;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Lcom/estrongs/android/pop/view/bm;->k(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic a(Lcom/estrongs/android/pop/view/bm;Lcom/estrongs/fs/h;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/estrongs/android/pop/view/bm;->a(Lcom/estrongs/fs/h;)V
+
+    return-void
+.end method
+
+.method private a(Lcom/estrongs/fs/h;)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/estrongs/android/view/cr;->c(Lcom/estrongs/fs/h;)V
+
+    return-void
+.end method
+
+.method static synthetic b(Lcom/estrongs/android/pop/view/bm;I)Ljava/lang/String;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Lcom/estrongs/android/pop/view/bm;->k(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic c(Lcom/estrongs/android/pop/view/bm;I)Ljava/lang/String;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Lcom/estrongs/android/pop/view/bm;->k(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public run()V
-    .locals 6
+.method protected a(Lcom/estrongs/fs/h;Lcom/estrongs/android/util/TypedMap;)V
+    .locals 3
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/bm;->e:Lcom/estrongs/android/pop/view/bl;
+    const/4 v1, 0x0
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/view/bl;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-interface {p1}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->O()Lcom/estrongs/android/ui/navigation/n;
+    move-result-object v0
 
-    move-result-object v1
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/bm;->a:[Lcom/estrongs/fs/impl/usb/g;
+    move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_0
 
-    if-eqz v1, :cond_2
+    invoke-interface {p1}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/view/bm;->a:[Lcom/estrongs/fs/impl/usb/g;
+    move-result-object v0
 
-    array-length v3, v2
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->br(Ljava/lang/String;)Z
 
-    const/4 v0, 0x0
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
 
     :goto_0
-    if-ge v0, v3, :cond_2
+    if-eqz v0, :cond_1
 
-    aget-object v4, v2, v0
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
 
-    iget-boolean v5, p0, Lcom/estrongs/android/pop/view/bm;->b:Z
+    move-result-object v0
 
-    if-eqz v5, :cond_1
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/FexApplication;->h()Z
 
-    invoke-virtual {v4}, Lcom/estrongs/fs/impl/usb/g;->j()Ljava/lang/String;
+    move-result v0
 
-    move-result-object v4
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v1, v4}, Lcom/estrongs/android/ui/navigation/n;->b(Ljava/lang/String;)V
+    sget-object v0, Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog$DialogType;->NETWORK:Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog$DialogType;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/bm;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    invoke-static {v1, v0}, Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog;->a(Landroid/content/Context;Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog$DialogType;)Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/estrongs/android/pop/view/bn;
+
+    invoke-direct {v1, p0, p1}, Lcom/estrongs/android/pop/view/bn;-><init>(Lcom/estrongs/android/pop/view/bm;Lcom/estrongs/fs/h;)V
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog;->a(Lcom/estrongs/android/ui/dialog/lc;)V
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog;->b()V
+
+    :goto_1
+    return-void
 
     :cond_0
-    :goto_1
-    add-int/lit8 v0, v0, 0x1
+    move v0, v1
 
     goto :goto_0
 
     :cond_1
-    invoke-virtual {v4}, Lcom/estrongs/fs/impl/usb/g;->g()Z
-
-    move-result v5
-
-    if-nez v5, :cond_0
-
-    invoke-virtual {v4}, Lcom/estrongs/fs/impl/usb/g;->j()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4}, Lcom/estrongs/fs/impl/usb/g;->k()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v1, v5, v4}, Lcom/estrongs/android/ui/navigation/n;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :cond_2
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/bm;->c:Ljava/util/ArrayList;
-
-    if-eqz v0, :cond_5
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/bm;->d:Ljava/util/ArrayList;
-
-    if-eqz v0, :cond_5
-
-    if-eqz v1, :cond_4
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/bm;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_2
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {p1}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/String;
+    const-string v2, "usb://"
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/navigation/n;->b(Ljava/lang/String;)V
-
-    goto :goto_2
-
-    :cond_3
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/bm;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_3
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {}, Lcom/estrongs/fs/impl/usb/e;->b()[Lcom/estrongs/fs/impl/usb/g;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/String;
+    if-nez v0, :cond_2
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/navigation/n;->a(Ljava/lang/String;)V
+    invoke-static {}, Lcom/estrongs/fs/impl/usb/e;->a()[Lcom/estrongs/fs/impl/usb/g;
 
-    goto :goto_3
+    :cond_2
+    invoke-interface {p1}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/estrongs/fs/impl/usb/e;->b(Ljava/lang/String;)Lcom/estrongs/fs/impl/usb/g;
+
+    move-result-object v0
+
+    if-nez v0, :cond_3
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/bm;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    const v2, 0x7f0802e9
+
+    invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/view/bm;->k(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {v0}, Lcom/estrongs/fs/impl/usb/g;->b()Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    new-instance v1, Lcom/estrongs/android/pop/view/bo;
+
+    invoke-direct {v1, p0, v0, p1}, Lcom/estrongs/android/pop/view/bo;-><init>(Lcom/estrongs/android/pop/view/bm;Lcom/estrongs/fs/impl/usb/g;Lcom/estrongs/fs/h;)V
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/fs/impl/usb/g;->a(Lcom/estrongs/fs/impl/usb/k;)V
+
+    goto :goto_1
 
     :cond_4
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/bm;->e:Lcom/estrongs/android/pop/view/bl;
+    invoke-super {p0, p1, p2}, Lcom/estrongs/android/view/cr;->a(Lcom/estrongs/fs/h;Lcom/estrongs/android/util/TypedMap;)V
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/view/bl;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->F(Lcom/estrongs/android/pop/view/FileExplorerActivity;)Lcom/estrongs/android/ui/c/b/t;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_5
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/bm;->e:Lcom/estrongs/android/pop/view/bl;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/view/bl;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->F(Lcom/estrongs/android/pop/view/FileExplorerActivity;)Lcom/estrongs/android/ui/c/b/t;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/view/bm;->c:Ljava/util/ArrayList;
-
-    invoke-interface {v0, v1}, Lcom/estrongs/android/ui/c/b/t;->b(Ljava/util/ArrayList;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/bm;->e:Lcom/estrongs/android/pop/view/bl;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/view/bl;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->F(Lcom/estrongs/android/pop/view/FileExplorerActivity;)Lcom/estrongs/android/ui/c/b/t;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/view/bm;->d:Ljava/util/ArrayList;
-
-    invoke-interface {v0, v1}, Lcom/estrongs/android/ui/c/b/t;->a(Ljava/util/ArrayList;)V
-
-    :cond_5
-    return-void
+    goto :goto_1
 .end method

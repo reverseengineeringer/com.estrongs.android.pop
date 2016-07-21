@@ -1,22 +1,16 @@
 package com.estrongs.android.view;
 
-import com.estrongs.android.widget.HeaderGridView;
-import com.handmark.pulltorefresh.library.PullToRefreshBase;
-import com.handmark.pulltorefresh.library.k;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 class c
-  implements k<HeaderGridView>
+  implements View.OnClickListener
 {
-  c(a parama) {}
+  c(b paramb) {}
   
-  public void a(PullToRefreshBase<HeaderGridView> paramPullToRefreshBase)
+  public void onClick(View paramView)
   {
-    new d(a, null).execute(new Void[0]);
-  }
-  
-  public void b(PullToRefreshBase<HeaderGridView> paramPullToRefreshBase)
-  {
-    new d(a, null).execute(new Void[0]);
+    b.a(a, paramView);
   }
 }
 

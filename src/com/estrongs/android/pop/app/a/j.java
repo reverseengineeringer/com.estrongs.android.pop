@@ -1,21 +1,41 @@
 package com.estrongs.android.pop.app.a;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.app.PopAudioPlayer;
-import com.estrongs.android.ui.e.iw;
+import android.app.Dialog;
+import android.support.v7.widget.SwitchCompat;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.j.c;
+import com.estrongs.android.pop.FexApplication;
+import org.json.JSONObject;
 
-class j
-  implements MenuItem.OnMenuItemClickListener
+final class j
+  implements View.OnClickListener
 {
-  j(e parame) {}
+  j(Dialog paramDialog, int paramInt, SwitchCompat paramSwitchCompat) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void onClick(View paramView)
   {
-    e.a(a).p();
-    e.b(a).d();
-    e.a(a).finish();
-    return true;
+    a.dismiss();
+    if (b == 1)
+    {
+      if (c.isChecked()) {
+        a.a(true, "newuser_1");
+      }
+    }
+    else {
+      return;
+    }
+    try
+    {
+      paramView = new JSONObject();
+      paramView.put("event", "user_closed");
+      c.a(FexApplication.a()).a("charge", "charge_new_user", paramView);
+      return;
+    }
+    catch (Exception paramView)
+    {
+      paramView.printStackTrace();
+    }
   }
 }
 

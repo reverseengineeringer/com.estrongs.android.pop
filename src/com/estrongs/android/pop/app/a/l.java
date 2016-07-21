@@ -1,21 +1,8 @@
 package com.estrongs.android.pop.app.a;
 
-import com.estrongs.android.pop.app.PopAudioPlayer;
-
 class l
-  extends Thread
 {
-  l(e parame, String paramString, int paramInt) {}
-  
-  public void run()
-  {
-    if (!c.a(a, b))
-    {
-      e.a(c).runOnUiThread(new m(this));
-      return;
-    }
-    e.a(c).runOnUiThread(new n(this));
-  }
+  boolean a = false;
 }
 
 /* Location:

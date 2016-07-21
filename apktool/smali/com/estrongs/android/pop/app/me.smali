@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/media/MediaPlayer$OnPreparedListener;
 
 
 # instance fields
@@ -22,12 +22,12 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
+.method public onPrepared(Landroid/media/MediaPlayer;)V
     .locals 1
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/me;->a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->finish()V
+    invoke-static {v0, p1}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->a(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;Landroid/media/MediaPlayer;)Landroid/media/MediaPlayer;
 
     return-void
 .end method

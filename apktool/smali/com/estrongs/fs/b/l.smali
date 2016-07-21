@@ -3,14 +3,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/fs/impl/b/c;
+.field final synthetic a:Lcom/estrongs/fs/impl/b/d;
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;Lcom/estrongs/fs/impl/b/c;)V
+.method constructor <init>(Ljava/lang/String;Lcom/estrongs/fs/impl/b/d;)V
     .locals 0
 
-    iput-object p2, p0, Lcom/estrongs/fs/b/l;->a:Lcom/estrongs/fs/impl/b/c;
+    iput-object p2, p0, Lcom/estrongs/fs/b/l;->a:Lcom/estrongs/fs/impl/b/d;
 
     invoke-direct {p0, p1}, Lcom/estrongs/fs/a;-><init>(Ljava/lang/String;)V
 
@@ -22,13 +22,13 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/fs/b/l;->a:Lcom/estrongs/fs/impl/b/c;
+    iget-object v0, p0, Lcom/estrongs/fs/b/l;->a:Lcom/estrongs/fs/impl/b/d;
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/c;->f()Lcom/estrongs/fs/impl/b/g;
+    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/d;->k()Lcom/estrongs/fs/impl/b/h;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/g;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/h;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -38,13 +38,13 @@
 .method public length()J
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/fs/b/l;->a:Lcom/estrongs/fs/impl/b/c;
+    iget-object v0, p0, Lcom/estrongs/fs/b/l;->a:Lcom/estrongs/fs/impl/b/d;
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/c;->f()Lcom/estrongs/fs/impl/b/g;
+    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/d;->k()Lcom/estrongs/fs/impl/b/h;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/g;->e()J
+    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/h;->e()J
 
     move-result-wide v0
 

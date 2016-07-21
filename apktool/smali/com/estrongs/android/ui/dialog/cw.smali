@@ -1,289 +1,214 @@
 .class Lcom/estrongs/android/ui/dialog/cw;
-.super Landroid/os/AsyncTask;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Landroid/os/AsyncTask",
-        "<",
-        "Ljava/util/List",
-        "<",
-        "Ljava/io/File;",
-        ">;",
-        "Ljava/lang/String;",
-        "Ljava/lang/Void;",
-        ">;"
-    }
-.end annotation
+.super Landroid/widget/BaseAdapter;
 
 
 # instance fields
-.field a:Lcom/estrongs/fs/util/g;
+.field final synthetic a:Lcom/estrongs/android/ui/dialog/ci;
 
-.field final synthetic b:Landroid/content/Context;
+.field private b:Landroid/content/Context;
 
-.field final synthetic c:Landroid/widget/TextView;
+.field private c:[Ljava/lang/CharSequence;
 
-.field final synthetic d:Lcom/estrongs/android/ui/dialog/cv;
+.field private d:[Landroid/graphics/drawable/Drawable;
+
+.field private e:I
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/cv;Landroid/content/Context;Landroid/widget/TextView;)V
+.method public constructor <init>(Lcom/estrongs/android/ui/dialog/ci;Landroid/content/Context;[Landroid/graphics/drawable/Drawable;[Ljava/lang/CharSequence;I)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/cw;->d:Lcom/estrongs/android/ui/dialog/cv;
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/cw;->a:Lcom/estrongs/android/ui/dialog/ci;
+
+    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
     iput-object p2, p0, Lcom/estrongs/android/ui/dialog/cw;->b:Landroid/content/Context;
 
-    iput-object p3, p0, Lcom/estrongs/android/ui/dialog/cw;->c:Landroid/widget/TextView;
+    iput-object p3, p0, Lcom/estrongs/android/ui/dialog/cw;->d:[Landroid/graphics/drawable/Drawable;
 
-    invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
+    iput-object p4, p0, Lcom/estrongs/android/ui/dialog/cw;->c:[Ljava/lang/CharSequence;
 
-    return-void
-.end method
-
-.method static synthetic a(Lcom/estrongs/android/ui/dialog/cw;[Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lcom/estrongs/android/ui/dialog/cw;->publishProgress([Ljava/lang/Object;)V
+    iput p5, p0, Lcom/estrongs/android/ui/dialog/cw;->e:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected varargs a([Ljava/util/List;)Ljava/lang/Void;
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "([",
-            "Ljava/util/List",
-            "<",
-            "Ljava/io/File;",
-            ">;)",
-            "Ljava/lang/Void;"
-        }
-    .end annotation
+.method public a(I)V
+    .locals 0
 
-    const/4 v3, 0x0
+    iput p1, p0, Lcom/estrongs/android/ui/dialog/cw;->e:I
 
-    new-instance v0, Lcom/estrongs/android/ui/dialog/cx;
+    return-void
+.end method
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/dialog/cx;-><init>(Lcom/estrongs/android/ui/dialog/cw;)V
+.method public getCount()I
+    .locals 1
 
-    new-instance v1, Lcom/estrongs/fs/util/g;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/cw;->c:[Ljava/lang/CharSequence;
 
-    invoke-direct {v1, v0}, Lcom/estrongs/fs/util/g;-><init>(Lcom/estrongs/fs/util/h;)V
+    if-nez v0, :cond_0
 
-    iput-object v1, p0, Lcom/estrongs/android/ui/dialog/cw;->a:Lcom/estrongs/fs/util/g;
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/cw;->a:Lcom/estrongs/fs/util/g;
+    :goto_0
+    return v0
 
-    aget-object v1, p1, v3
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/cw;->c:[Ljava/lang/CharSequence;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/fs/util/g;->a(Ljava/util/List;)V
+    array-length v0, v0
 
-    const/4 v0, 0x3
+    goto :goto_0
+.end method
 
-    new-array v0, v0, [Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, ""
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/cw;->a:Lcom/estrongs/fs/util/g;
-
-    invoke-virtual {v2}, Lcom/estrongs/fs/util/g;->c()I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    aput-object v1, v0, v3
-
-    const/4 v1, 0x1
-
-    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/cw;->a:Lcom/estrongs/fs/util/g;
-
-    invoke-virtual {v2}, Lcom/estrongs/fs/util/g;->b()J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Lcom/estrongs/fs/util/j;->c(J)Ljava/lang/String;
-
-    move-result-object v2
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x2
-
-    const-string v2, "over"
-
-    aput-object v2, v0, v1
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/dialog/cw;->publishProgress([Ljava/lang/Object;)V
+.method public getItem(I)Ljava/lang/Object;
+    .locals 1
 
     const/4 v0, 0x0
 
     return-object v0
 .end method
 
-.method protected a(Ljava/lang/Void;)V
-    .locals 4
+.method public getItemId(I)J
+    .locals 2
 
-    const/4 v0, 0x2
+    const-wide/16 v0, 0x0
 
-    new-array v0, v0, [Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, ""
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/estrongs/android/ui/dialog/cw;->a:Lcom/estrongs/fs/util/g;
-
-    invoke-virtual {v3}, Lcom/estrongs/fs/util/g;->c()I
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x1
-
-    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/cw;->a:Lcom/estrongs/fs/util/g;
-
-    invoke-virtual {v2}, Lcom/estrongs/fs/util/g;->b()J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Lcom/estrongs/fs/util/j;->c(J)Ljava/lang/String;
-
-    move-result-object v2
-
-    aput-object v2, v0, v1
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/dialog/cw;->publishProgress([Ljava/lang/Object;)V
-
-    return-void
+    return-wide v0
 .end method
 
-.method protected varargs a([Ljava/lang/String;)V
-    .locals 8
+.method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 6
 
-    const/4 v7, 0x1
+    const/16 v5, 0x8
 
-    const/4 v6, 0x0
+    const/4 v3, 0x0
+
+    if-nez p2, :cond_0
 
     iget-object v0, p0, Lcom/estrongs/android/ui/dialog/cw;->b:Landroid/content/Context;
 
-    const v1, 0x7f0b031a
-
-    new-array v2, v7, [Ljava/lang/Object;
-
-    aget-object v3, p1, v7
-
-    aput-object v3, v2, v6
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/cw;->c:Landroid/widget/TextView;
+    const v1, 0x7f0300f0
 
-    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/cw;->b:Landroid/content/Context;
+    const/4 v2, 0x0
 
-    const v3, 0x7f0b0319
+    invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const/4 v4, 0x2
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    aget-object v5, p1, v6
-
-    aput-object v5, v4, v6
-
-    aput-object v0, v4, v7
-
-    invoke-virtual {v2, v3, v4}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
-.method protected synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    check-cast p1, [Ljava/util/List;
-
-    invoke-virtual {p0, p1}, Lcom/estrongs/android/ui/dialog/cw;->a([Ljava/util/List;)Ljava/lang/Void;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method protected onCancelled()V
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/cw;->a:Lcom/estrongs/fs/util/g;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/cw;->a:Lcom/estrongs/fs/util/g;
-
-    invoke-virtual {v0}, Lcom/estrongs/fs/util/g;->a()V
+    move-result-object p2
 
     :cond_0
-    return-void
-.end method
+    const v0, 0x7f0e0455
 
-.method protected synthetic onPostExecute(Ljava/lang/Object;)V
-    .locals 0
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    check-cast p1, Ljava/lang/Void;
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Lcom/estrongs/android/ui/dialog/cw;->a(Ljava/lang/Void;)V
+    check-cast v0, Landroid/widget/ImageView;
 
-    return-void
-.end method
+    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/cw;->d:[Landroid/graphics/drawable/Drawable;
 
-.method protected synthetic onProgressUpdate([Ljava/lang/Object;)V
-    .locals 0
+    if-nez v1, :cond_3
 
-    check-cast p1, [Ljava/lang/String;
+    invoke-virtual {v0, v5}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    invoke-virtual {p0, p1}, Lcom/estrongs/android/ui/dialog/cw;->a([Ljava/lang/String;)V
+    :goto_0
+    const v1, 0x7f0e0456
 
-    return-void
+    invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/TextView;
+
+    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/cw;->c:[Ljava/lang/CharSequence;
+
+    aget-object v2, v2, p1
+
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    const v2, 0x7f0e0457
+
+    invoke-virtual {p2, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/RadioButton;
+
+    iget-object v4, p0, Lcom/estrongs/android/ui/dialog/cw;->a:Lcom/estrongs/android/ui/dialog/ci;
+
+    # getter for: Lcom/estrongs/android/ui/dialog/ci;->mSelectable:Z
+    invoke-static {v4}, Lcom/estrongs/android/ui/dialog/ci;->access$500(Lcom/estrongs/android/ui/dialog/ci;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_1
+
+    invoke-virtual {v2, v5}, Landroid/widget/RadioButton;->setVisibility(I)V
+
+    :cond_1
+    iget v4, p0, Lcom/estrongs/android/ui/dialog/cw;->e:I
+
+    if-ne v4, p1, :cond_2
+
+    const/4 v3, 0x1
+
+    :cond_2
+    invoke-virtual {v2, v3}, Landroid/widget/RadioButton;->setChecked(Z)V
+
+    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/cw;->a:Lcom/estrongs/android/ui/dialog/ci;
+
+    iget-boolean v2, v2, Lcom/estrongs/android/ui/dialog/ci;->itemsEnable:Z
+
+    if-eqz v2, :cond_4
+
+    const/16 v2, 0xff
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setAlpha(I)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/cw;->a:Lcom/estrongs/android/ui/dialog/ci;
+
+    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/ci;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/theme/at;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
+
+    move-result-object v0
+
+    const v2, 0x7f0d0105
+
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/theme/at;->c(I)I
+
+    move-result v0
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    :goto_1
+    return-object p2
+
+    :cond_3
+    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/cw;->d:[Landroid/graphics/drawable/Drawable;
+
+    aget-object v1, v1, p1
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_0
+
+    :cond_4
+    const/16 v2, 0x80
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setAlpha(I)V
+
+    const v0, -0x777778
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    goto :goto_1
 .end method

@@ -3,13 +3,13 @@ package android.support.v4.view;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.Parcelable.Creator;
-import android.support.v4.a.a;
+import android.support.v4.os.f;
 import android.view.View.BaseSavedState;
 
 public class ViewPager$SavedState
   extends View.BaseSavedState
 {
-  public static final Parcelable.Creator<SavedState> CREATOR = a.a(new ca());
+  public static final Parcelable.Creator<SavedState> CREATOR = f.a(new eo());
   int a;
   Parcelable b;
   ClassLoader c;

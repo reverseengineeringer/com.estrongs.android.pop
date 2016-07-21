@@ -2,18 +2,26 @@ package com.estrongs.android.pop.app;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.widget.g;
 
 class kq
   implements DialogInterface.OnClickListener
 {
-  kq(SaveToESActivity paramSaveToESActivity) {}
+  kq(ko paramko) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    SaveToESActivity.a(a, a.a.d());
-    a.a.a(new kr(this));
-    a.a.k();
+    if (PopVideoPlayer.r(a.a).p()) {
+      PopVideoPlayer.c(a.a, true);
+    }
+    for (;;)
+    {
+      paramDialogInterface.dismiss();
+      return;
+      if (PopVideoPlayer.t(a.a) == null) {
+        PopVideoPlayer.u(a.a);
+      }
+      PopVideoPlayer.t(a.a).show();
+    }
   }
 }
 

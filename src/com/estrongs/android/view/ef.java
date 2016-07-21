@@ -1,21 +1,54 @@
 package com.estrongs.android.view;
 
-import android.content.Intent;
-import android.net.Uri;
-import android.webkit.DownloadListener;
-import com.estrongs.android.pop.app.DownloaderActivity;
+import android.content.DialogInterface.OnClickListener;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.CheckBox;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.pop.ad;
+import com.estrongs.android.pop.spfs.CreateSiteFileObject;
+import com.estrongs.android.ui.dialog.cv;
+import com.estrongs.android.ui.pcs.u;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.h;
 
 class ef
-  implements DownloadListener
+  implements View.OnClickListener
 {
-  ef(WebViewWrapper paramWebViewWrapper) {}
+  ef(ee paramee, int paramInt, ci paramci) {}
   
-  public void onDownloadStart(String paramString1, String paramString2, String paramString3, String paramString4, long paramLong)
+  public void onClick(View paramView)
   {
-    paramString1 = Uri.parse(paramString1);
-    paramString2 = new Intent(a.ad, DownloaderActivity.class);
-    paramString2.setData(paramString1);
-    a.a(paramString2);
+    if (c.a.q) {
+      if (!((h)c.a.e(a) instanceof CreateSiteFileObject)) {}
+    }
+    do
+    {
+      return;
+      paramView = b.l;
+      if (!paramView.isChecked()) {}
+      for (boolean bool = true;; bool = false)
+      {
+        paramView.setChecked(bool);
+        c.a.c(a);
+        return;
+      }
+      Object localObject = (h)c.a.e(a);
+      if ((ap.aE(((h)localObject).getPath())) && (!u.a().b()))
+      {
+        paramView = new eg(this, (h)localObject);
+        ei localei = new ei(this, (h)localObject);
+        localObject = new ek(this, (h)localObject);
+        if (ad.a(FexApplication.a()).a(0L) != null)
+        {
+          new cv(c.a.ag).a(2131231137).b(2131232362).d(2131230863, paramView).e(2131232267, localei).f(2131232468, (DialogInterface.OnClickListener)localObject).b().show();
+          return;
+        }
+        new cv(c.a.ag).a(2131231137).b(2131232362).c(2131230863, paramView).b(2131232267, localei).b().show();
+        return;
+      }
+    } while (c.a.j == null);
+    c.a.j.a(c.a.h, b.itemView, a);
   }
 }
 

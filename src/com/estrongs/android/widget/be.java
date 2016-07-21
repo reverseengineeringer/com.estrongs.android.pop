@@ -13,13 +13,15 @@ class be
     int i = (int)(System.currentTimeMillis() - ScaledImageView.a(a));
     if (i < ScaledImageView.b(a))
     {
-      float f = i / ScaledImageView.b(a);
-      ScaledImageView.a(a, (int)(ScaledImageView.d(a) - (ScaledImageView.d(a) - ScaledImageView.c(a)) * f));
-      ScaledImageView.b(a, (int)(ScaledImageView.f(a) - f * (ScaledImageView.f(a) - ScaledImageView.e(a))));
+      float f1 = i / ScaledImageView.b(a);
+      ScaledImageView.a(a, (int)(ScaledImageView.c(a) + (ScaledImageView.d(a) - ScaledImageView.c(a)) * f1));
+      paramMessage = a;
+      float f2 = ScaledImageView.e(a);
+      ScaledImageView.b(paramMessage, (int)(f1 * (ScaledImageView.f(a) - ScaledImageView.e(a)) + f2));
       ScaledImageView.g(a);
       return;
     }
-    a.b();
+    a.a();
   }
 }
 

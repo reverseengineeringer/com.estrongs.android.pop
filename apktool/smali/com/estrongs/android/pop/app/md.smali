@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
+.field final synthetic a:Lcom/estrongs/android/pop/app/StartServiceReceiver;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/StartServiceReceiver;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/md;->a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/md;->a:Lcom/estrongs/android/pop/app/StartServiceReceiver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,13 +23,13 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/md;->a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->aj()Landroid/net/LocalSocket;
 
-    const/4 v1, 0x2
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->a(I)V
+    invoke-static {v0}, Lcom/estrongs/android/nativetool/c;->a(Landroid/net/LocalSocket;)Z
 
     return-void
 .end method

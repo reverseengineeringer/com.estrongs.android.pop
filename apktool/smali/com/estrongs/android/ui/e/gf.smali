@@ -2,18 +2,26 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/view/a/b;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/e/cp;
+.field final synthetic a:Ljava/util/List;
+
+.field final synthetic b:Landroid/widget/CheckBox;
+
+.field final synthetic c:Lcom/estrongs/android/ui/e/ge;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/cp;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/ge;Ljava/util/List;Landroid/widget/CheckBox;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/gf;->a:Lcom/estrongs/android/ui/e/cp;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/gf;->c:Lcom/estrongs/android/ui/e/ge;
+
+    iput-object p2, p0, Lcom/estrongs/android/ui/e/gf;->a:Ljava/util/List;
+
+    iput-object p3, p0, Lcom/estrongs/android/ui/e/gf;->b:Landroid/widget/CheckBox;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,28 +30,24 @@
 
 
 # virtual methods
-.method public a(Lcom/estrongs/android/ui/e/co;)Z
-    .locals 2
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 3
 
-    const/4 v0, 0x1
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/co;->q:Z
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/gf;->c:Lcom/estrongs/android/ui/e/ge;
 
-    if-eqz v1, :cond_0
+    iget-object v0, v0, Lcom/estrongs/android/ui/e/ge;->a:Lcom/estrongs/android/ui/e/cr;
 
-    iget-boolean v1, p1, Lcom/estrongs/android/ui/e/co;->r:Z
+    iget-object v1, p0, Lcom/estrongs/android/ui/e/gf;->a:Ljava/util/List;
 
-    if-nez v1, :cond_0
+    iget-object v2, p0, Lcom/estrongs/android/ui/e/gf;->b:Landroid/widget/CheckBox;
 
-    iget v1, p1, Lcom/estrongs/android/ui/e/co;->F:I
+    invoke-virtual {v2}, Landroid/widget/CheckBox;->isChecked()Z
 
-    if-ne v1, v0, :cond_0
+    move-result v2
 
-    :goto_0
-    return v0
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/e/cr;->a(Lcom/estrongs/android/ui/e/cr;Ljava/util/List;Z)V
 
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-void
 .end method

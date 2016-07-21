@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/preference/Preference$OnPreferenceChangeListener;
+.implements Landroid/preference/Preference$OnPreferenceClickListener;
 
 
 # instance fields
@@ -22,22 +22,12 @@
 
 
 # virtual methods
-.method public onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
-    .locals 2
+.method public onPreferenceClick(Landroid/preference/Preference;)Z
+    .locals 1
 
-    invoke-static {}, Lcom/estrongs/fs/d;->a()Lcom/estrongs/fs/d;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/hb;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
 
-    move-result-object v0
-
-    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Ljava/lang/String;)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/fs/d;->a(Ljava/lang/Boolean;)V
+    invoke-static {v0}, Lcom/estrongs/android/util/p;->a(Landroid/content/Context;)V
 
     const/4 v0, 0x1
 

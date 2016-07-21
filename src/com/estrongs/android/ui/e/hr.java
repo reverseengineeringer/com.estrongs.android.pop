@@ -2,45 +2,33 @@ package com.estrongs.android.ui.e;
 
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.app.PopAudioPlayer;
-import com.estrongs.android.pop.app.a.ak;
-import com.estrongs.android.pop.utils.aj;
-import com.estrongs.android.util.am;
-import com.estrongs.fs.d;
-import java.util.ArrayList;
+import com.estrongs.android.pop.m;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.dialog.kh;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bg;
+import com.estrongs.fs.b.f;
+import com.estrongs.fs.h;
 import java.util.List;
 
 class hr
   implements MenuItem.OnMenuItemClickListener
 {
-  hr(hl paramhl) {}
+  hr(cr paramcr) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = hl.a(a).v();
-    String str;
-    ArrayList localArrayList;
-    if (paramMenuItem.size() > 0)
+    if ((cr.a(a).size() == 1) && (bg.L(((h)cr.a(a).get(0)).getAbsolutePath())))
     {
-      str = get0b;
-      paramMenuItem = new hs(this, paramMenuItem);
-      if (!am.ba(str)) {
-        break label99;
-      }
-      localArrayList = new ArrayList();
-      localArrayList.add(d.a().j(str));
-      aj.a(hl.a(a), localArrayList, null, paramMenuItem);
+      paramMenuItem = FileExplorerActivity.X();
+      f localf = new f((h)cr.a(a).get(0));
+      localf.setDescription(String.format(paramMenuItem.getString(2131230908), new Object[] { ap.cc(((h)cr.a(a).get(0)).getAbsolutePath()) }));
+      localf.setTaskDecisionListener(new m(paramMenuItem));
+      new kh(paramMenuItem, paramMenuItem.getString(2131230861), localf).show();
+      localf.execute();
     }
-    for (;;)
-    {
-      hl.a(a).u();
-      return true;
-      label99:
-      str = am.bq(str);
-      localArrayList = new ArrayList();
-      localArrayList.add(d.a().j(str));
-      aj.a(hl.a(a), localArrayList, null, paramMenuItem);
-    }
+    cr.b(a).B();
+    return true;
   }
 }
 

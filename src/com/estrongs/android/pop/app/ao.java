@@ -1,17 +1,13 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 class ao
-  implements DialogInterface.OnDismissListener
 {
-  ao(DocumentExtModifyList paramDocumentExtModifyList) {}
-  
-  public void onDismiss(DialogInterface paramDialogInterface)
-  {
-    DocumentExtModifyList.b(a);
-  }
+  ImageView a;
+  TextView b;
+  ImageView c;
 }
 
 /* Location:

@@ -16,8 +16,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.pop.utils.cl;
-import com.estrongs.android.ui.preference.fragments.am;
+import com.estrongs.android.pop.utils.cu;
+import com.estrongs.android.ui.preference.fragments.ao;
 
 @SuppressLint({"NewApi"})
 public class TabletSettingsActivity
@@ -29,14 +29,14 @@ public class TabletSettingsActivity
   private ViewGroup b;
   private TextView c;
   private Handler d;
-  private am e;
+  private ao e;
   
   private void a()
   {
     a.setVisibility(0);
     b.setVisibility(0);
-    e = new am();
-    getFragmentManager().beginTransaction().replace(2131362654, e).commit();
+    e = new ao();
+    getFragmentManager().beginTransaction().replace(2131625419, e).commit();
   }
   
   private void a(CharSequence paramCharSequence)
@@ -49,13 +49,13 @@ public class TabletSettingsActivity
   protected void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    setContentView(2130903226);
-    a = ((ViewGroup)findViewById(2131362654));
-    b = ((ViewGroup)findViewById(2131362655));
-    c = ((TextView)b.findViewById(2131362656));
+    setContentView(2130903391);
+    a = ((ViewGroup)findViewById(2131625419));
+    b = ((ViewGroup)findViewById(2131625420));
+    c = ((TextView)b.findViewById(2131625421));
     d = new Handler();
     a();
-    if (cl.b(this))
+    if (cu.b(this))
     {
       int i = getResourcesgetDisplayMetricswidthPixels / 3;
       paramBundle = (LinearLayout.LayoutParams)a.getLayoutParams();
@@ -80,7 +80,7 @@ public class TabletSettingsActivity
   {
     paramPreferenceFragment = Fragment.instantiate(this, paramPreference.getFragment(), paramPreference.getExtras());
     FragmentTransaction localFragmentTransaction = getFragmentManager().beginTransaction();
-    localFragmentTransaction.replace(2131362657, paramPreferenceFragment);
+    localFragmentTransaction.replace(2131625422, paramPreferenceFragment);
     a(paramPreference.getTitle());
     localFragmentTransaction.commitAllowingStateLoss();
     return true;

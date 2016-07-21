@@ -1,17 +1,40 @@
 package com.estrongs.android.pop.utils;
 
-import com.estrongs.android.ui.b.u;
-import com.estrongs.android.util.x;
-import com.estrongs.android.view.aw;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.TextView;
+import com.estrongs.android.pop.app.d.a;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.fs.h;
+import com.estrongs.fs.w;
+import java.util.List;
 
 class bz
-  implements x<aw>
+  implements CompoundButton.OnCheckedChangeListener
 {
-  bz(by paramby) {}
+  bz(bv parambv, boolean paramBoolean1, boolean paramBoolean2, boolean paramBoolean3, boolean paramBoolean4, int paramInt, ci paramci, String paramString, List paramList, a parama, boolean paramBoolean5, boolean paramBoolean6, TextView paramTextView) {}
   
-  public boolean a(aw paramaw)
+  public void onCheckedChanged(CompoundButton paramCompoundButton, boolean paramBoolean)
   {
-    return paramaw instanceof u;
+    boolean bool1 = true;
+    int n = bv.a(m, a, b, c, d, e, paramBoolean);
+    f.setTitle(n);
+    if (g == null)
+    {
+      paramCompoundButton = (h)h.get(0);
+      if (h.size() != 1) {
+        break label148;
+      }
+    }
+    for (;;)
+    {
+      boolean bool2 = paramCompoundButton.getFileType().a();
+      m.b = bv.a(m, i, h, j, a, b, c, paramCompoundButton, bool1, bool2, k, paramBoolean);
+      l.setText(m.b);
+      return;
+      label148:
+      bool1 = false;
+    }
   }
 }
 

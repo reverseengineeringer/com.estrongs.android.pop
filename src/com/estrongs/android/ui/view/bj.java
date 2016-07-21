@@ -1,102 +1,94 @@
 package com.estrongs.android.ui.view;
 
-import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
-import android.webkit.WebView;
-import android.widget.Button;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-import com.estrongs.android.util.a;
+import java.util.List;
 
 class bj
   extends Handler
 {
-  bj(PcsThirdPartOAuth paramPcsThirdPartOAuth) {}
+  bj(IndicatorView paramIndicatorView) {}
   
   public void handleMessage(Message paramMessage)
   {
-    if (what == 1) {
-      new bk(this, (String)obj).start();
-    }
-    label141:
-    do
+    switch (what)
     {
-      do
-      {
-        return;
-        if (what == 5)
-        {
-          new bl(this, (String)obj).start();
-          return;
-        }
-        if (what == 6)
-        {
-          paramMessage = new Intent();
-          paramMessage.putExtra("result", true);
-          paramMessage.putExtra("userinfo", a.a);
-          a.setResult(-1, paramMessage);
-          paramMessage = a.a();
-          if (paramMessage != null)
-          {
-            if (!PcsThirdPartOAuth.b(a).equals("sinaweibo")) {
-              break label141;
-            }
-            paramMessage.e("Sina_Login", "Sina_Login");
-          }
-          for (;;)
-          {
-            a.finish();
-            return;
-            if (PcsThirdPartOAuth.b(a).equals("qq")) {
-              paramMessage.e("QQ_Login", "QQ_Login");
-            } else if (PcsThirdPartOAuth.b(a).equals("renren")) {
-              paramMessage.e("RenRen_Login", "RenRen_Login");
-            }
-          }
-        }
-        if (what == 2)
-        {
-          PcsThirdPartOAuth.i(a).loadUrl((String)obj);
-          String str = (String)obj;
-          int i = str.indexOf("://");
-          PcsThirdPartOAuth localPcsThirdPartOAuth = a;
-          paramMessage = str;
-          if (i > 0) {
-            paramMessage = str.substring(i + 3);
-          }
-          PcsThirdPartOAuth.b(localPcsThirdPartOAuth, paramMessage);
-          return;
-        }
-        if (what == 7)
-        {
-          if (PcsThirdPartOAuth.i(a).getContentHeight() > 0)
-          {
-            paramMessage = PcsThirdPartOAuth.i(a).getLayoutParams();
-            height = -2;
-            PcsThirdPartOAuth.i(a).setLayoutParams(paramMessage);
-            return;
-          }
-          paramMessage = PcsThirdPartOAuth.d(a).obtainMessage(7);
-          PcsThirdPartOAuth.d(a).sendMessageDelayed(paramMessage, 300L);
-          return;
-        }
-        if (what != 3) {
-          break;
-        }
-        PcsThirdPartOAuth.j(a).setVisibility(8);
-        PcsThirdPartOAuth.k(a).setVisibility(8);
-        PcsThirdPartOAuth.i(a).setVisibility(0);
-        PcsThirdPartOAuth.i(a).requestFocus(130);
-      } while (!PcsThirdPartOAuth.l(a));
-      PcsThirdPartOAuth.m(a).setVisibility(0);
+    }
+    int i;
+    long l;
+    int j;
+    for (;;)
+    {
       return;
-    } while (what != 4);
-    ag.a(a, 2131428354, 1);
-    paramMessage = new Intent();
-    paramMessage.putExtra("result", false);
-    a.setResult(-1, paramMessage);
-    a.finish();
+      try
+      {
+        i = arg1;
+        l = System.currentTimeMillis() - IndicatorView.b(a);
+        if (l >= IndicatorView.c(a))
+        {
+          a.a(i);
+          return;
+        }
+      }
+      catch (Exception paramMessage)
+      {
+        paramMessage.printStackTrace();
+        return;
+      }
+      f = (float)l;
+      f = f * 1.0F / (float)IndicatorView.c(a);
+      ((bn)IndicatorView.d(a).get(i)).a(f);
+      a.invalidate();
+      sendMessage(Message.obtain(paramMessage));
+      return;
+      try
+      {
+        i = arg1;
+        l = System.currentTimeMillis() - IndicatorView.b(a);
+        if (l >= IndicatorView.c(a))
+        {
+          ((bn)IndicatorView.d(a).get(i)).a(0.0F);
+          a.invalidate();
+          return;
+        }
+      }
+      catch (Exception paramMessage)
+      {
+        paramMessage.printStackTrace();
+        return;
+      }
+      f = (float)l;
+      f = f * 1.0F / (float)IndicatorView.c(a);
+      ((bn)IndicatorView.d(a).get(i)).a(f);
+      a.invalidate();
+      sendMessage(Message.obtain(paramMessage));
+      return;
+      try
+      {
+        i = arg1;
+        j = arg2;
+        l = System.currentTimeMillis() - IndicatorView.b(a);
+        if (l >= IndicatorView.c(a))
+        {
+          a.a(j);
+          if (!((Boolean)obj).booleanValue()) {
+            continue;
+          }
+          a.b(i);
+        }
+      }
+      catch (Exception paramMessage)
+      {
+        paramMessage.printStackTrace();
+        return;
+      }
+    }
+    float f = (float)l;
+    f = f * 1.0F / (float)IndicatorView.c(a);
+    ((bn)IndicatorView.d(a).get(i)).a(1.0F - f);
+    ((bn)IndicatorView.d(a).get(j)).a(f);
+    a.invalidate();
+    sendMessage(Message.obtain(paramMessage));
   }
 }
 

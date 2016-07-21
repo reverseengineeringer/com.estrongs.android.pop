@@ -1,16 +1,18 @@
 package com.estrongs.android.pop.app;
 
-import android.os.Handler;
-import com.estrongs.android.pop.app.a.ap;
-
 class fp
-  implements ap
+  implements ai
 {
   fp(PopAudioPlayer paramPopAudioPlayer) {}
   
   public void a()
   {
-    PopAudioPlayer.d(a).postDelayed(new fq(this), 500L);
+    a.i();
+  }
+  
+  public void b()
+  {
+    PopAudioPlayer.k(a);
   }
 }
 

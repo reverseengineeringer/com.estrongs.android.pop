@@ -4,11 +4,11 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import com.estrongs.android.pop.b;
-import com.estrongs.android.pop.esclasses.ESActivity;
+import com.estrongs.android.pop.esclasses.ESResourceActivity;
 import com.estrongs.android.pop.view.FileExplorerActivity;
 
 public class TransitActivity
-  extends ESActivity
+  extends ESResourceActivity
 {
   protected void onCreate(Bundle paramBundle)
   {

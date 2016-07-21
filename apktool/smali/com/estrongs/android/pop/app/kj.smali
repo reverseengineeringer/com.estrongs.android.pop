@@ -1,64 +1,43 @@
 .class Lcom/estrongs/android/pop/app/kj;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.super Landroid/content/BroadcastReceiver;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;
+.field final synthetic a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/PopVideoPlayer;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/kj;->a:Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/kj;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 1
 
-    new-instance v0, Landroid/content/Intent;
+    :try_start_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/kj;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/kj;->a:Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->m(Lcom/estrongs/android/pop/app/PopVideoPlayer;)V
 
-    const-class v2, Lcom/estrongs/android/pop/app/RecommItemImageViewer;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/kj;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->finish()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    const-string v1, "position"
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/kj;->a:Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;
-
-    invoke-static {v2}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->c(Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;)I
-
-    move-result v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    const-string v1, "index"
-
-    invoke-virtual {v0, v1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/kj;->a:Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;
-
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->startActivity(Landroid/content/Intent;)V
-
+    :goto_0
     return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
 .end method

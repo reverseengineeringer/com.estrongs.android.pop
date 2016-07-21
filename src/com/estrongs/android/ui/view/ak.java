@@ -1,56 +1,55 @@
 package com.estrongs.android.ui.view;
 
-import android.media.MediaPlayer;
-import android.media.MediaPlayer.OnPreparedListener;
-import android.view.SurfaceHolder;
-import android.widget.MediaController;
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.widget.Toast;
+import com.estrongs.android.pop.FexApplication;
 
-class ak
-  implements MediaPlayer.OnPreparedListener
+public class ak
 {
-  ak(ESVideoView paramESVideoView) {}
+  private static Toast a;
   
-  public void onPrepared(MediaPlayer paramMediaPlayer)
+  @SuppressLint({"ShowToast"})
+  public static void a()
   {
-    ESVideoView.c(a, 2);
-    ESVideoView.a(a, ESVideoView.b(a, ESVideoView.c(a, true)));
-    if (ESVideoView.c(a) != null) {
-      ESVideoView.c(a).onPrepared(ESVideoView.d(a));
-    }
-    if (ESVideoView.e(a) != null) {
-      ESVideoView.e(a).setEnabled(true);
-    }
-    ESVideoView.a(a, paramMediaPlayer.getVideoWidth());
-    ESVideoView.b(a, paramMediaPlayer.getVideoHeight());
-    int i = ESVideoView.f(a);
-    if (i != 0) {
-      a.seekTo(i);
-    }
-    if ((ESVideoView.a(a) != 0) && (ESVideoView.b(a) != 0))
+    try
     {
-      a.getHolder().setFixedSize(ESVideoView.a(a), ESVideoView.b(a));
-      if ((ESVideoView.g(a) == ESVideoView.a(a)) && (ESVideoView.h(a) == ESVideoView.b(a)))
-      {
-        if (ESVideoView.i(a) != 3) {
-          break label245;
-        }
-        a.start();
-        if (ESVideoView.e(a) != null) {
-          ESVideoView.e(a).show();
-        }
-      }
-    }
-    label245:
-    while (ESVideoView.i(a) != 3)
-    {
-      do
-      {
-        return;
-      } while ((a.isPlaying()) || ((i == 0) && (a.getCurrentPosition() <= 0)) || (ESVideoView.e(a) == null));
-      ESVideoView.e(a).show(0);
+      a = Toast.makeText(FexApplication.a(), "", 0);
       return;
     }
-    a.start();
+    catch (Throwable localThrowable) {}
+  }
+  
+  public static void a(Context paramContext, int paramInt1, int paramInt2)
+  {
+    try
+    {
+      a(paramContext, FexApplication.a().getText(paramInt1), paramInt2);
+      return;
+    }
+    catch (Exception paramContext) {}
+  }
+  
+  public static void a(Context paramContext, CharSequence paramCharSequence, int paramInt)
+  {
+    try
+    {
+      a.setText(paramCharSequence);
+      a.setDuration(paramInt);
+      a.show();
+      return;
+    }
+    catch (Exception paramContext) {}
+  }
+  
+  public static void b()
+  {
+    try
+    {
+      a.cancel();
+      return;
+    }
+    catch (Exception localException) {}
   }
 }
 

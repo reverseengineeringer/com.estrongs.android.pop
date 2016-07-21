@@ -1,29 +1,15 @@
 package com.estrongs.android.view;
 
-import android.app.Activity;
-import com.estrongs.fs.util.a.a;
+import android.support.v7.widget.RecyclerView;
 
 class de
-  extends aw
+  implements Runnable
 {
-  public de(cq paramcq, Activity paramActivity, a parama, cb paramcb)
+  de(cr paramcr, int paramInt) {}
+  
+  public void run()
   {
-    super(paramActivity, parama, paramcb);
-  }
-  
-  public boolean H()
-  {
-    return a.H();
-  }
-  
-  public void b(String paramString) {}
-  
-  public void f(int paramInt) {}
-  
-  protected void n()
-  {
-    super.n();
-    super.b(null);
+    b.h.smoothScrollToPosition(a);
   }
 }
 

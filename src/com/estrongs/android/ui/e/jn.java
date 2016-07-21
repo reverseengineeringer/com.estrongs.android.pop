@@ -1,18 +1,31 @@
 package com.estrongs.android.ui.e;
 
-import android.view.View;
-import android.view.View.OnLongClickListener;
-import com.estrongs.android.view.a.a;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.view.cr;
 
 class jn
-  implements View.OnLongClickListener
+  implements MenuItem.OnMenuItemClickListener
 {
-  jn(jk paramjk, a parama) {}
+  jn(jm paramjm, FileExplorerActivity paramFileExplorerActivity) {}
   
-  public boolean onLongClick(View paramView)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    a.e();
-    return true;
+    if (!a.V()) {
+      a.d(2131231914);
+    }
+    for (;;)
+    {
+      return true;
+      a.a(a.Q());
+      a.U();
+      paramMenuItem = a.O();
+      if (paramMenuItem != null) {
+        paramMenuItem.a(false);
+      }
+      a.i();
+    }
   }
 }
 

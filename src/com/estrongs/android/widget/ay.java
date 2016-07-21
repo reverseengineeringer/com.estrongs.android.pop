@@ -6,22 +6,21 @@ import android.view.animation.Animation.AnimationListener;
 class ay
   implements Animation.AnimationListener
 {
-  ay(aw paramaw) {}
+  ay(ax paramax) {}
   
   public void onAnimationEnd(Animation paramAnimation)
   {
-    aw.a(a, false);
-    a.g();
+    ax.a(a, false);
   }
   
   public void onAnimationRepeat(Animation paramAnimation)
   {
-    aw.a(a, true);
+    ax.a(a, true);
   }
   
   public void onAnimationStart(Animation paramAnimation)
   {
-    aw.a(a, true);
+    ax.a(a, true);
   }
 }
 

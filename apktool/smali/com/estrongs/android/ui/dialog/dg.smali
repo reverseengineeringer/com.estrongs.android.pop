@@ -1,272 +1,109 @@
 .class Lcom/estrongs/android/ui/dialog/dg;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
 
 # instance fields
-.field a:Landroid/app/Activity;
+.field final synthetic a:I
 
-.field b:Landroid/app/Dialog;
-
-.field c:Landroid/widget/EditText;
-
-.field d:Z
-
-.field e:Lcom/estrongs/android/ui/dialog/i;
+.field final synthetic b:Lcom/estrongs/android/ui/dialog/df;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Activity;Landroid/app/Dialog;)V
-    .locals 5
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/df;I)V
+    .locals 0
 
-    const/4 v4, 0x1
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/dg;->b:Lcom/estrongs/android/ui/dialog/df;
 
-    const/4 v3, 0x0
+    iput p2, p0, Lcom/estrongs/android/ui/dialog/dg;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean v4, p0, Lcom/estrongs/android/ui/dialog/dg;->d:Z
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/dialog/dg;->e:Lcom/estrongs/android/ui/dialog/i;
-
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/dg;->a:Landroid/app/Activity;
-
-    iput-object p2, p0, Lcom/estrongs/android/ui/dialog/dg;->b:Landroid/app/Dialog;
-
-    new-instance v0, Landroid/widget/EditText;
-
-    invoke-direct {v0, p1}, Landroid/widget/EditText;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/dialog/dg;->c:Landroid/widget/EditText;
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/dg;->c:Landroid/widget/EditText;
-
-    const/high16 v1, 0x41900000    # 18.0f
-
-    invoke-virtual {v0, v4, v1}, Landroid/widget/EditText;->setTextSize(IF)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/dg;->c:Landroid/widget/EditText;
-
-    const v1, 0x7f0201d4
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setBackgroundResource(I)V
-
-    const/high16 v0, 0x40c00000    # 6.0f
-
-    invoke-static {p1, v0}, Lcom/estrongs/android/ui/d/a;->a(Landroid/content/Context;F)I
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/dg;->c:Landroid/widget/EditText;
-
-    invoke-virtual {v1, v0, v3, v0, v3}, Landroid/widget/EditText;->setPadding(IIII)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/dg;->c:Landroid/widget/EditText;
-
-    invoke-static {p1}, Lcom/estrongs/android/ui/theme/al;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
-
-    move-result-object v1
-
-    const v2, 0x7f080012
-
-    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/theme/al;->d(I)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setTextColor(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/dg;->c:Landroid/widget/EditText;
-
-    invoke-virtual {v0}, Landroid/widget/EditText;->setSingleLine()V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/dg;->c:Landroid/widget/EditText;
-
-    invoke-virtual {p1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x7f0b0474
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/dg;->c:Landroid/widget/EditText;
-
-    new-instance v1, Lcom/estrongs/android/ui/dialog/dh;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/dialog/dh;-><init>(Lcom/estrongs/android/ui/dialog/dg;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
-
-    new-array v0, v4, [Landroid/text/InputFilter;
-
-    new-instance v1, Lcom/estrongs/android/ui/dialog/di;
-
-    const/16 v2, 0x14
-
-    invoke-direct {v1, p0, v2}, Lcom/estrongs/android/ui/dialog/di;-><init>(Lcom/estrongs/android/ui/dialog/dg;I)V
-
-    aput-object v1, v0, v3
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/dg;->c:Landroid/widget/EditText;
-
-    invoke-virtual {v1, v0}, Landroid/widget/EditText;->setFilters([Landroid/text/InputFilter;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/estrongs/android/ui/dialog/i;)V
-    .locals 0
+.method public onClick(Landroid/view/View;)V
+    .locals 4
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/dg;->e:Lcom/estrongs/android/ui/dialog/i;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/dg;->b:Lcom/estrongs/android/ui/dialog/df;
 
-    return-void
-.end method
-
-.method public a()Z
-    .locals 5
-
-    const/4 v2, 0x1
-
-    const/4 v1, 0x0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/dg;->c:Landroid/widget/EditText;
-
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/df;->a(Lcom/estrongs/android/ui/dialog/df;)Lcom/estrongs/android/ui/dialog/dh;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    if-eqz v0, :cond_1
 
-    move-result-object v0
+    sget-object v0, Lcom/estrongs/android/ui/dialog/df;->a:Ljava/util/List;
 
-    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v3, "."
-
-    invoke-virtual {v0, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v0
+    move-result-object v2
 
     :cond_0
-    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result-object v3
+    move-result v0
 
-    array-length v3, v3
+    if-eqz v0, :cond_1
 
-    const/16 v4, 0x14
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    if-le v3, v4, :cond_1
+    move-result-object v0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/dg;->a:Landroid/app/Activity;
+    check-cast v0, Lcom/estrongs/android/util/q;
 
-    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/dg;->a:Landroid/app/Activity;
+    iget-object v1, v0, Lcom/estrongs/android/util/q;->a:Ljava/lang/Object;
 
-    const v3, 0x7f0b0475
+    check-cast v1, Ljava/lang/Integer;
 
-    invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    iget v3, p0, Lcom/estrongs/android/ui/dialog/dg;->a:I
+
+    if-ne v1, v3, :cond_0
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/dg;->b:Lcom/estrongs/android/ui/dialog/df;
+
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/dialog/df;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
 
     move-result-object v2
 
-    invoke-static {v0, v2, v1}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    iget-object v1, v0, Lcom/estrongs/android/util/q;->b:Ljava/lang/Object;
 
-    move v0, v1
+    check-cast v1, Ljava/lang/Integer;
 
-    :goto_0
-    return v0
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    invoke-virtual {v2, v1}, Lcom/estrongs/android/pop/ad;->d(I)V
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/dg;->b:Lcom/estrongs/android/ui/dialog/df;
+
+    invoke-static {v1}, Lcom/estrongs/android/ui/dialog/df;->a(Lcom/estrongs/android/ui/dialog/df;)Lcom/estrongs/android/ui/dialog/dh;
+
+    move-result-object v1
+
+    iget-object v0, v0, Lcom/estrongs/android/util/q;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-interface {v1, v0}, Lcom/estrongs/android/ui/dialog/dh;->a(I)V
 
     :cond_1
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    if-ge v3, v2, :cond_2
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/dg;->a:Landroid/app/Activity;
-
-    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/dg;->a:Landroid/app/Activity;
-
-    const v3, 0x7f0b0476
-
-    invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v2, v1}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
-
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_2
-    iget-boolean v3, p0, Lcom/estrongs/android/ui/dialog/dg;->d:Z
-
-    if-eqz v3, :cond_3
-
-    invoke-static {v0}, Lcom/estrongs/fs/util/j;->c(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_3
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/dg;->a:Landroid/app/Activity;
-
-    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/dg;->a:Landroid/app/Activity;
-
-    const v3, 0x7f0b0477
-
-    invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v2, v1}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
-
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/dg;->e:Lcom/estrongs/android/ui/dialog/i;
-
-    if-eqz v1, :cond_4
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/dg;->e:Lcom/estrongs/android/ui/dialog/i;
-
-    invoke-interface {v1, v0}, Lcom/estrongs/android/ui/dialog/i;->a(Ljava/lang/String;)V
-
-    :cond_4
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/dg;->b:Landroid/app/Dialog;
-
-    invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
-
-    move v0, v2
-
-    goto :goto_0
-.end method
-
-.method public b()Landroid/view/View;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/dg;->c:Landroid/widget/EditText;
-
-    return-object v0
+    return-void
 .end method

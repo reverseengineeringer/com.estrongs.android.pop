@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/drawer_content_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0"
+<RelativeLayout android:id="@id/drawer_content_container" android:background="@color/c_f5f6f7" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
         <LinearLayout android:orientation="vertical" android:id="@id/clipboard_listview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" />
     </ScrollView>
+    <RelativeLayout android:gravity="center" android:id="@id/none_clipboard_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/content_empty_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/none_clipboard" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/dp_15" android:textColor="@color/main_content_detail_text" android:gravity="center" android:id="@id/content_empty_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_15" android:text="@string/location_clipboard" android:layout_below="@id/content_empty_iv" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
     <com.estrongs.android.pop.esclasses.ESImageView android:layout_width="fill_parent" android:layout_height="fill_parent" />
 </RelativeLayout>

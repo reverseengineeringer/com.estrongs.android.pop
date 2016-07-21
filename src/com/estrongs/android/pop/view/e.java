@@ -1,53 +1,45 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.pop.ad;
+import com.estrongs.android.pop.app.f.c;
+import com.estrongs.android.pop.app.f.f;
 import com.estrongs.android.pop.app.service.a;
+import com.estrongs.android.pop.app.service.b;
+import com.estrongs.android.util.an;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
 
 class e
-  implements a
+  implements b
 {
-  e(FileExplorerActivity paramFileExplorerActivity) {}
+  e(FileExplorerActivity paramFileExplorerActivity, a parama) {}
   
-  public void a(String paramString1, String paramString2, boolean paramBoolean)
+  public void a()
   {
-    a.m.b(paramString1, paramString2, paramBoolean);
+    c.a().f();
   }
   
-  public void a(ArrayList<com.estrongs.android.pop.app.b.f> paramArrayList, Map<String, String> paramMap)
+  public void a(a parama)
   {
-    if ((paramMap == null) || (paramMap.isEmpty()))
-    {
-      a.m.a(paramArrayList);
-      a.runOnUiThread(new g(this));
-      return;
+    if (c.a() != null) {
+      c.a().a(a);
     }
-    Iterator localIterator = paramMap.keySet().iterator();
-    label52:
-    String str;
-    if (localIterator.hasNext())
-    {
-      paramArrayList = (String)localIterator.next();
-      str = (String)paramArrayList;
-      if (paramMap.get(paramArrayList) != null) {
-        break label106;
-      }
+    Map localMap = c.a().b(an.c());
+    if ((localMap != null) && (!localMap.isEmpty())) {
+      parama.a(null, null);
     }
-    label106:
-    for (paramArrayList = null;; paramArrayList = ((String)paramMap.get(paramArrayList)).toString())
-    {
-      a.m.b(str, paramArrayList, false);
-      break label52;
-      break;
+    parama.a(null, localMap);
+  }
+  
+  public void a(ArrayList<f> paramArrayList)
+  {
+    if (an.b()) {
+      c.a().a(an.c(), a, paramArrayList, true);
     }
   }
   
-  public void a(boolean paramBoolean)
+  public boolean b(ArrayList<f> paramArrayList)
   {
-    a.runOnUiThread(new f(this, paramBoolean));
+    return c.a().a(paramArrayList);
   }
 }
 

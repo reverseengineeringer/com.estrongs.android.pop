@@ -1,17 +1,21 @@
 package com.estrongs.android.ui.e;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.pop.app.PopAudioPlayer;
+import com.estrongs.android.pop.app.diskusage.h;
+import com.estrongs.android.pop.view.FileExplorerActivity;
 
 class r
-  implements View.OnClickListener
+  extends Thread
 {
-  r(o paramo) {}
+  r(q paramq, int paramInt) {}
   
-  public void onClick(View paramView)
+  public void run()
   {
-    o.a(a).m();
+    try
+    {
+      ((h)m.a(b.a.a).O()).d(a);
+      return;
+    }
+    catch (Exception localException) {}
   }
 }
 

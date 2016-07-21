@@ -1,40 +1,14 @@
 package com.estrongs.android.pop.app.imageviewer;
 
-import android.graphics.Bitmap;
-import com.estrongs.android.pop.app.imageviewer.gallery.e;
-import com.estrongs.android.pop.app.imageviewer.gallery.f;
-
 class cd
-  implements Runnable
+  implements o
 {
-  cd(cc paramcc, e parame, Bitmap paramBitmap, an paraman) {}
+  cd(ViewImage21 paramViewImage21) {}
   
-  public void run()
+  public void a(int paramInt)
   {
-    if ((d.d.a) || (!a.equals(d.d.e.a(d.a)))) {}
-    for (;;)
-    {
-      return;
-      if (Math.abs(d.d.c - d.a) < 2)
-      {
-        if (b != null) {
-          break label155;
-        }
-        d.b.b(a);
-        if (d.d.c == d.a) {
-          d.d.g = null;
-        }
-      }
-      while (d.c != null)
-      {
-        d.d.b.post(d.c);
-        return;
-        label155:
-        d.b.a(a, c);
-        if (d.d.c == d.a) {
-          d.d.g = d.b.a;
-        }
-      }
+    if (paramInt == 2) {
+      a.b.removeCallbacks(ViewImage21.h(a));
     }
   }
 }

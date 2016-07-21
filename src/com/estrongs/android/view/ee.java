@@ -1,86 +1,72 @@
 package com.estrongs.android.view;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.net.Uri;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.ValueCallback;
-import android.webkit.WebChromeClient.FileChooserParams;
-import android.webkit.WebView;
-import android.widget.ProgressBar;
-import com.estrongs.android.util.bd;
-import com.estrongs.android.util.be;
+import com.estrongs.fs.h;
+import com.estrongs.fs.w;
 
-class ee
-  extends dt
+public class ee<T>
+  extends cg<h>.ck<T>
 {
-  ee(WebViewWrapper paramWebViewWrapper, View paramView1, ViewGroup paramViewGroup, View paramView2, VideoEnabledWebView paramVideoEnabledWebView)
+  protected ee(eb parameb)
   {
-    super(paramView1, paramViewGroup, paramView2, paramVideoEnabledWebView);
+    super(parameb);
   }
   
-  @SuppressLint({"NewApi"})
-  protected void a(String paramString, ValueCallback<Uri> paramValueCallback, ValueCallback<Uri[]> paramValueCallback1)
+  public ci a(ViewGroup paramViewGroup, int paramInt)
   {
-    if (WebViewWrapper.c(c) != null) {
-      WebViewWrapper.c(c).onReceiveValue(null);
-    }
-    WebViewWrapper.a(c, paramValueCallback);
-    if (WebViewWrapper.d(c) != null) {
-      WebViewWrapper.d(c).onReceiveValue(null);
-    }
-    WebViewWrapper.b(c, paramValueCallback1);
-    paramValueCallback = paramString;
-    if (bd.a(paramString)) {
-      paramValueCallback = "*/*";
-    }
-    paramString = new Intent("android.intent.action.GET_CONTENT");
-    paramString.addCategory("android.intent.category.OPENABLE");
-    paramString.setType(paramValueCallback);
-    if (c.ad != null) {
-      c.ad.startActivityForResult(Intent.createChooser(paramString, c.ad.getText(2131427955)), 16781344);
-    }
-  }
-  
-  public void onProgressChanged(WebView paramWebView, int paramInt)
-  {
-    WebViewWrapper.e(c).setProgress(paramInt);
-    if (paramInt == 100) {
-      WebViewWrapper.e(c).setVisibility(4);
-    }
-    super.onProgressChanged(paramWebView, paramInt);
-  }
-  
-  public void onReceivedIcon(WebView paramWebView, Bitmap paramBitmap)
-  {
-    WebViewWrapper.b(c);
-    be.c().a(paramWebView.getUrl(), paramBitmap);
-  }
-  
-  public void onReceivedTitle(WebView paramWebView, String paramString)
-  {
-    if ((paramString == null) || (paramString.length() == 0)) {
-      paramWebView = c.ad.getString(2131428368);
+    if (paramInt == 1)
+    {
+      paramViewGroup = a.aj.inflate(a.x(), null, false);
+      paramViewGroup = (eq)c.b(paramViewGroup);
+      a = paramInt;
     }
     for (;;)
     {
-      WebViewWrapper.a(c, paramWebView, true);
-      WebViewWrapper.e(c, paramWebView);
-      return;
-      paramWebView = paramString;
-      if (paramString.contains("百度手机助手")) {
-        paramWebView = "应用";
+      if (paramInt == 3)
+      {
+        View localView = a.aj.inflate(2130903272, null, false);
+        paramViewGroup = (eq)c.b(localView);
+        a = paramInt;
+        b = true;
+        localView.setTag(paramViewGroup);
+      }
+      return paramViewGroup;
+      if (paramInt == 2)
+      {
+        paramViewGroup = a.aj.inflate(a.y(), null, false);
+        paramViewGroup = (eq)c.b(paramViewGroup);
+        a = paramInt;
+      }
+      else
+      {
+        paramViewGroup = null;
       }
     }
   }
   
-  public boolean onShowFileChooser(WebView paramWebView, ValueCallback<Uri[]> paramValueCallback, WebChromeClient.FileChooserParams paramFileChooserParams)
+  public void a(ci paramci, int paramInt)
   {
-    a(null, null, paramValueCallback);
-    return true;
+    super.a(paramci, paramInt);
+    itemView.setOnClickListener(new ef(this, paramInt, paramci));
+  }
+  
+  public int getItemCount()
+  {
+    return a.d();
+  }
+  
+  public int getItemViewType(int paramInt)
+  {
+    h localh = (h)a.e(paramInt);
+    if ((localh != null) && (localh.getFileType().a())) {
+      return 1;
+    }
+    if ((localh != null) && (localh.getFileType().equals(w.K))) {
+      return 3;
+    }
+    return 2;
   }
 }
 

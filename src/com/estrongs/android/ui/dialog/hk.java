@@ -1,19 +1,16 @@
 package com.estrongs.android.ui.dialog;
 
-import com.estrongs.a.a;
-import com.estrongs.a.a.p;
-import com.estrongs.android.pop.view.FileExplorerActivity;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class hk
-  implements p
+  implements DialogInterface.OnClickListener
 {
-  hk(hj paramhj, FileExplorerActivity paramFileExplorerActivity) {}
+  hk(hf paramhf) {}
   
-  public void a(a parama, int paramInt1, int paramInt2)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ((paramInt2 == 4) || (paramInt2 == 5)) {
-      a.a(new hl(this));
-    }
+    paramDialogInterface.dismiss();
   }
 }
 

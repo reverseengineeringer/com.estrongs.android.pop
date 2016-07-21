@@ -1,35 +1,18 @@
 package com.estrongs.android.pop.app;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.pop.utils.aa;
-import com.estrongs.android.pop.utils.af;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 
 class cu
-  implements View.OnClickListener
+  implements MenuItem.OnMenuItemClickListener
 {
-  cu(HideListActivity paramHideListActivity) {}
+  cu(GestureManageActivity paramGestureManageActivity) {}
   
-  public void onClick(View paramView)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    int i = ((Integer)paramView.getTag()).intValue();
-    if (i == -1) {
-      return;
-    }
-    HideListActivity.a(a, HideListActivity.b(a)[i]);
-    paramView = aa.d(da).b);
-    if (paramView != null)
-    {
-      Intent localIntent = new Intent();
-      Bundle localBundle = new Bundle();
-      localBundle.putString("path", paramView);
-      localBundle.putBoolean("isDir", da).a);
-      localIntent.putExtras(localBundle);
-      a.setResult(-1, localIntent);
-    }
+    a.setResult(-1);
     a.finish();
+    return false;
   }
 }
 

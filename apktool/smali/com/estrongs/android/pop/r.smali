@@ -1,5 +1,5 @@
 .class Lcom/estrongs/android/pop/r;
-.super Lcom/estrongs/android/ui/dialog/dn;
+.super Lcom/estrongs/android/ui/dialog/dp;
 
 
 # instance fields
@@ -16,7 +16,7 @@
 
     iput-object p4, p0, Lcom/estrongs/android/pop/r;->a:Lcom/estrongs/a/a/e;
 
-    invoke-direct {p0, p2, p3}, Lcom/estrongs/android/ui/dialog/dn;-><init>(Landroid/content/Context;Z)V
+    invoke-direct {p0, p2, p3}, Lcom/estrongs/android/ui/dialog/dp;-><init>(Landroid/content/Context;Z)V
 
     return-void
 .end method

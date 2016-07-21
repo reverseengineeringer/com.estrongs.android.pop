@@ -1,53 +1,52 @@
 .class Lcom/estrongs/android/pop/view/dz;
-.super Lcom/estrongs/a/a;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/view/dy;
+.field final synthetic a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/view/dy;)V
+.method constructor <init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/view/dz;->a:Lcom/estrongs/android/pop/view/dy;
+    iput-object p1, p0, Lcom/estrongs/android/pop/view/dz;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-direct {p0}, Lcom/estrongs/a/a;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public task()Z
-    .locals 3
+.method public run()V
+    .locals 2
 
-    :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/dz;->a:Lcom/estrongs/android/pop/view/dy;
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/dz;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/view/dy;->a:Lcom/estrongs/fs/d;
+    invoke-static {v0}, Lcom/estrongs/android/pop/utils/w;->a(Landroid/content/Context;)V
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/view/dz;->a:Lcom/estrongs/android/pop/view/dy;
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/dz;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    iget-object v1, v1, Lcom/estrongs/android/pop/view/dy;->b:Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->s(Lcom/estrongs/android/pop/view/FileExplorerActivity;)Lcom/estrongs/android/j/c;
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/view/dz;->a:Lcom/estrongs/android/pop/view/dy;
+    move-result-object v0
 
-    iget-boolean v2, v2, Lcom/estrongs/android/pop/view/dy;->c:Z
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/fs/d;->b(Ljava/lang/String;Z)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/dz;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    move-result v0
+    invoke-static {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->s(Lcom/estrongs/android/pop/view/FileExplorerActivity;)Lcom/estrongs/android/j/c;
 
-    :goto_0
-    return v0
+    move-result-object v0
 
-    :catch_0
-    move-exception v0
+    const-string v1, "TaskManager_Show"
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/j/c;->a(Ljava/lang/String;)V
 
-    goto :goto_0
+    :cond_0
+    return-void
 .end method

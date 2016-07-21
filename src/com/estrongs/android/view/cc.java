@@ -1,10 +1,17 @@
 package com.estrongs.android.view;
 
-import com.estrongs.fs.h;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
-public abstract interface cc
+class cc
+  implements DialogInterface.OnClickListener
 {
-  public abstract void a(h paramh);
+  cc(bx parambx) {}
+  
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  {
+    paramDialogInterface.dismiss();
+  }
 }
 
 /* Location:

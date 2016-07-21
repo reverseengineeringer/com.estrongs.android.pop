@@ -6,7 +6,7 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/dialog/cg;
+.field final synthetic a:Lcom/estrongs/android/ui/dialog/ci;
 
 .field final synthetic b:Ljava/lang/String;
 
@@ -14,10 +14,10 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/cg;Ljava/lang/String;Landroid/app/Activity;)V
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/ci;Ljava/lang/String;Landroid/app/Activity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/view/utils/m;->a:Lcom/estrongs/android/ui/dialog/cg;
+    iput-object p1, p0, Lcom/estrongs/android/pop/view/utils/m;->a:Lcom/estrongs/android/ui/dialog/ci;
 
     iput-object p2, p0, Lcom/estrongs/android/pop/view/utils/m;->b:Ljava/lang/String;
 
@@ -37,17 +37,17 @@
 
     const/4 v3, 0x1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/utils/m;->a:Lcom/estrongs/android/ui/dialog/cg;
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/utils/m;->a:Lcom/estrongs/android/ui/dialog/ci;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->dismiss()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ci;->dismiss()V
 
-    invoke-static {}, Lcom/estrongs/android/util/be;->c()Lcom/estrongs/android/util/be;
+    invoke-static {}, Lcom/estrongs/android/util/bm;->c()Lcom/estrongs/android/util/bm;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/m;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/util/be;->a(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/util/bm;->a(Ljava/lang/String;Z)V
 
     if-nez p2, :cond_1
 

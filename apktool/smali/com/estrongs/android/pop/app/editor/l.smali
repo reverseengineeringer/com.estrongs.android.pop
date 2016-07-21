@@ -1,51 +1,60 @@
 .class Lcom/estrongs/android/pop/app/editor/l;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
+.super Lcom/estrongs/a/a;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
+.field final synthetic a:Lcom/estrongs/android/pop/app/editor/k;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/editor/k;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/editor/l;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/editor/l;->a:Lcom/estrongs/android/pop/app/editor/k;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/a/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 4
+.method public task()Z
+    .locals 2
 
-    new-instance v0, Lcom/estrongs/android/util/c;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/editor/l;->a:Lcom/estrongs/android/pop/app/editor/k;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/editor/l;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/editor/k;->b:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/editor/l;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/editor/PopNoteEditor;->o(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;)V
 
-    invoke-static {v2}, Lcom/estrongs/android/pop/app/editor/PopNoteEditor;->t(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;)Ljava/lang/String;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/editor/l;->a:Lcom/estrongs/android/pop/app/editor/k;
 
-    move-result-object v2
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/editor/k;->b:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
 
-    new-instance v3, Lcom/estrongs/android/pop/app/editor/m;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/editor/PopNoteEditor;->p(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;)Lcom/estrongs/android/pop/app/editor/c;
 
-    invoke-direct {v3, p0}, Lcom/estrongs/android/pop/app/editor/m;-><init>(Lcom/estrongs/android/pop/app/editor/l;)V
+    move-result-object v0
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/estrongs/android/util/c;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/estrongs/android/util/e;)V
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/editor/l;->a:Lcom/estrongs/android/pop/app/editor/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/util/c;->a()V
+    iget-boolean v1, v1, Lcom/estrongs/android/pop/app/editor/k;->a:Z
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/editor/l;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/editor/c;->a(Z)V
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/editor/PopNoteEditor;->q(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;)V
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/editor/l;->a:Lcom/estrongs/android/pop/app/editor/k;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/editor/k;->b:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/pop/app/editor/PopNoteEditor;->a(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;Lcom/estrongs/android/pop/app/editor/b;)Lcom/estrongs/android/pop/app/editor/b;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/editor/l;->a:Lcom/estrongs/android/pop/app/editor/k;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/editor/k;->b:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/editor/PopNoteEditor;->finish()V
 
     const/4 v0, 0x1
 

@@ -1,40 +1,17 @@
 package com.estrongs.android.ui.e;
 
-import android.view.View;
-import com.estrongs.android.pop.esclasses.ESScrollView;
-import com.estrongs.android.pop.esclasses.o;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.ui.dialog.ci;
 
-class id
-  implements o
+final class id
+  implements DialogInterface.OnClickListener
 {
-  id(ic paramic) {}
+  id(ci paramci) {}
   
-  public void a()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (a.a)
-    {
-      ic.a(a).setVisibility(0);
-      ic.b(a).setVisibility(4);
-    }
-  }
-  
-  public void b()
-  {
-    if (a.a)
-    {
-      ic.a(a).setVisibility(4);
-      ic.b(a).setVisibility(0);
-      ic.c(a).scrollTo(0, 1);
-    }
-  }
-  
-  public void c()
-  {
-    if (a.a)
-    {
-      ic.a(a).setVisibility(0);
-      ic.b(a).setVisibility(0);
-    }
+    a.dismiss();
   }
 }
 

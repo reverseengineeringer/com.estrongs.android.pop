@@ -1,16 +1,26 @@
 package com.estrongs.android.ui.dialog;
 
-import com.estrongs.android.pop.view.FileExplorerActivity;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.appinfo.AppFolderInfoManager;
+import com.estrongs.fs.h;
 
 class ah
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  ah(ag paramag, FileExplorerActivity paramFileExplorerActivity) {}
+  ah(ag paramag, Context paramContext, h paramh) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    a.g(false);
-    a.s();
+    if (!c.b.b())
+    {
+      paramDialogInterface.dismiss();
+      return;
+    }
+    String str = c.b.a();
+    AppFolderInfoManager.d().a(a, b, str, true, new ai(this));
+    paramDialogInterface.dismiss();
   }
 }
 

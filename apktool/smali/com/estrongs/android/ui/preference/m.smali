@@ -59,7 +59,7 @@
 
     iget-object v2, p0, Lcom/estrongs/android/ui/preference/m;->a:Lcom/estrongs/android/ui/preference/FtpServerPreference;
 
-    const v3, 0x7f0b0157
+    const v3, 0x7f08032a
 
     invoke-virtual {v2, v3}, Lcom/estrongs/android/ui/preference/FtpServerPreference;->getText(I)Ljava/lang/CharSequence;
 
@@ -74,7 +74,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0200a9
+    const v2, 0x7f0201ad
 
     invoke-static {v0, v2}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 

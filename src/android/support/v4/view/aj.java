@@ -1,10 +1,19 @@
 package android.support.v4.view;
 
-import android.widget.TextView;
+import android.view.LayoutInflater;
 
-abstract interface aj
+class aj
+  implements ai
 {
-  public abstract void a(TextView paramTextView);
+  public ar a(LayoutInflater paramLayoutInflater)
+  {
+    return am.a(paramLayoutInflater);
+  }
+  
+  public void a(LayoutInflater paramLayoutInflater, ar paramar)
+  {
+    am.a(paramLayoutInflater, paramar);
+  }
 }
 
 /* Location:

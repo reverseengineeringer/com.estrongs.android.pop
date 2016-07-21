@@ -2,22 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
+.field final synthetic a:Lcom/estrongs/fs/h;
 
-.field final synthetic b:Lcom/estrongs/android/view/eh;
+.field final synthetic b:Lcom/estrongs/android/view/ef;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/view/eh;Ljava/lang/String;)V
+.method constructor <init>(Lcom/estrongs/android/view/ef;Lcom/estrongs/fs/h;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/view/ei;->b:Lcom/estrongs/android/view/eh;
+    iput-object p1, p0, Lcom/estrongs/android/view/ei;->b:Lcom/estrongs/android/view/ef;
 
-    iput-object p2, p0, Lcom/estrongs/android/view/ei;->a:Ljava/lang/String;
+    iput-object p2, p0, Lcom/estrongs/android/view/ei;->a:Lcom/estrongs/fs/h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,56 +26,32 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 2
 
-    new-instance v0, Ljava/io/File;
+    new-instance v0, Lcom/estrongs/android/ui/pcs/r;
 
-    iget-object v1, p0, Lcom/estrongs/android/view/ei;->a:Ljava/lang/String;
+    iget-object v1, p0, Lcom/estrongs/android/view/ei;->b:Lcom/estrongs/android/view/ef;
 
-    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    iget-object v1, v1, Lcom/estrongs/android/view/ef;->c:Lcom/estrongs/android/view/ee;
 
-    invoke-static {v0}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+    iget-object v1, v1, Lcom/estrongs/android/view/ee;->a:Lcom/estrongs/android/view/eb;
 
-    move-result-object v0
+    iget-object v1, v1, Lcom/estrongs/android/view/eb;->ag:Landroid/app/Activity;
 
-    new-instance v1, Landroid/content/Intent;
+    invoke-direct {v0, v1}, Lcom/estrongs/android/ui/pcs/r;-><init>(Landroid/content/Context;)V
 
-    const-string v2, "android.intent.action.ATTACH_DATA"
+    new-instance v1, Lcom/estrongs/android/view/ej;
 
-    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/view/ej;-><init>(Lcom/estrongs/android/view/ei;)V
 
-    const-string v2, "image/*"
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/pcs/r;->a(Lcom/estrongs/android/ui/pcs/q;)V
 
-    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
+    const/4 v1, 0x1
 
-    const-string v0, "mimeType"
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/pcs/r;->a(Z)V
 
-    const-string v2, "image/*"
-
-    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    iget-object v0, p0, Lcom/estrongs/android/view/ei;->b:Lcom/estrongs/android/view/eh;
-
-    iget-object v0, v0, Lcom/estrongs/android/view/eh;->b:Lcom/estrongs/android/view/eg;
-
-    iget-object v0, v0, Lcom/estrongs/android/view/eg;->a:Lcom/estrongs/android/view/WebViewWrapper;
-
-    iget-object v0, v0, Lcom/estrongs/android/view/WebViewWrapper;->ad:Landroid/app/Activity;
-
-    const-class v2, Lcom/estrongs/android/pop/app/imageviewer/Wallpaper;
-
-    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
-
-    iget-object v0, p0, Lcom/estrongs/android/view/ei;->b:Lcom/estrongs/android/view/eh;
-
-    iget-object v0, v0, Lcom/estrongs/android/view/eh;->b:Lcom/estrongs/android/view/eg;
-
-    iget-object v0, v0, Lcom/estrongs/android/view/eg;->a:Lcom/estrongs/android/view/WebViewWrapper;
-
-    iget-object v0, v0, Lcom/estrongs/android/view/WebViewWrapper;->ad:Landroid/app/Activity;
-
-    invoke-virtual {v0, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     return-void
 .end method

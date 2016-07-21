@@ -1,41 +1,37 @@
 package com.estrongs.android.ui.dialog;
 
-import android.app.Activity;
-import android.app.Dialog;
-import android.view.View;
-import com.estrongs.android.util.am;
-import com.estrongs.fs.h;
-import java.util.List;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.Button;
 
-public class du
+class du
+  implements TextWatcher
 {
-  private eb a = null;
+  du(dp paramdp) {}
   
-  public du(Activity paramActivity, List<h> paramList, String paramString)
+  public void afterTextChanged(Editable paramEditable)
   {
-    a = new eb(paramActivity, paramList, paramString);
-  }
-  
-  public void a()
-  {
-    Object localObject = a.aq();
-    ct localct = new ct(((View)localObject).getContext()).a(2131427577);
-    localct.a((View)localObject);
-    if (!am.bP(a.g)) {
-      localct.a(2131427340, new dv(this));
-    }
-    for (;;)
+    if (a.c().length() == 0)
     {
-      localct.a(new ea(this));
-      localObject = localct.b();
-      a.h = ((Dialog)localObject);
-      ((cg)localObject).show();
-      a.c();
+      a.button_ok.setEnabled(false);
       return;
-      localct.c(2131427340, new dw(this));
-      localct.b(2131427380, new dx(this));
     }
+    if (dp.b(a))
+    {
+      if (!a.c().equals(a.d()))
+      {
+        a.button_ok.setEnabled(false);
+        return;
+      }
+      a.button_ok.setEnabled(true);
+      return;
+    }
+    a.button_ok.setEnabled(true);
   }
+  
+  public void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}
+  
+  public void onTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}
 }
 
 /* Location:

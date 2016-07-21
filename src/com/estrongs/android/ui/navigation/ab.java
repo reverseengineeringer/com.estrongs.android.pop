@@ -1,18 +1,15 @@
 package com.estrongs.android.ui.navigation;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.view.FileExplorerActivity;
+import android.view.View;
 
 class ab
-  implements MenuItem.OnMenuItemClickListener
+  implements q
 {
-  ab(s params, FileExplorerActivity paramFileExplorerActivity) {}
+  ab(aa paramaa) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void a(View paramView)
   {
-    b.a(new ac(this));
-    return true;
+    r.a(a.a);
   }
 }
 

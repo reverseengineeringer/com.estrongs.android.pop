@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/estrongs/android/view/dw;
 
 
 # instance fields
@@ -22,104 +22,131 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 6
+.method public a()V
+    .locals 1
 
-    :try_start_0
     iget-object v0, p0, Lcom/estrongs/android/pop/view/aq;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    iget-object v2, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->x:Ljava/util/List;
+    invoke-static {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->b(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
 
-    monitor-enter v2
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    return-void
+.end method
 
-    :try_start_1
+.method public a(Lcom/estrongs/android/view/cr;Z)V
+    .locals 4
+
     iget-object v0, p0, Lcom/estrongs/android/pop/view/aq;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    iget-object v3, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->x:Ljava/util/List;
+    invoke-static {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->b(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/aq;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    move v1, v0
+    iget v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e:I
 
-    :goto_0
-    invoke-interface {v3}, Ljava/util/List;->size()I
+    const/4 v1, 0x4
 
-    move-result v0
+    if-eq v0, v1, :cond_0
 
-    if-ge v1, v0, :cond_2
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/aq;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iget v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e:I
+
+    const/4 v1, 0x2
+
+    if-eq v0, v1, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/aq;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    iget v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e:I
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/aq;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    iget v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e:I
+
+    const/4 v1, 0x3
+
+    if-eq v0, v1, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/aq;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    iget v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e:I
+
+    const/16 v1, 0x1c
+
+    if-ne v0, v1, :cond_1
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/aq;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->O()Lcom/estrongs/android/view/cr;
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/android/view/aw;
+    if-eqz v0, :cond_1
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Lcom/estrongs/android/view/cr;->h()Ljava/util/List;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/view/aw;->c()Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v4
+    if-eqz v1, :cond_1
 
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->X(Ljava/lang/String;)Z
+    invoke-virtual {v0}, Lcom/estrongs/android/view/cr;->h()Ljava/util/List;
 
-    move-result v4
+    move-result-object v0
 
-    if-eqz v4, :cond_0
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
-    iget-object v4, p0, Lcom/estrongs/android/pop/view/aq;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    move-result v0
 
-    invoke-virtual {v4}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->y()Lcom/estrongs/android/view/aw;
+    if-eqz v0, :cond_1
 
-    move-result-object v4
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/aq;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    if-ne v0, v4, :cond_1
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->au()Lcom/estrongs/android/ui/d/i;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/view/aw;->g()V
+    move-result-object v0
 
-    :cond_0
-    :goto_1
-    add-int/lit8 v0, v1, 0x1
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/d/i;->a()I
 
-    move v1, v0
+    move-result v0
 
-    goto :goto_0
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/aq;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/view/aq;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    iget v2, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e:I
+
+    invoke-static {v2}, Lcom/estrongs/android/ui/e/ik;->a(I)I
+
+    move-result v2
+
+    invoke-static {v1, v2, v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a(Lcom/estrongs/android/pop/view/FileExplorerActivity;II)V
 
     :cond_1
-    const/4 v4, 0x1
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/aq;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    const/4 v5, 0x1
+    iget-object v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->i:Landroid/os/Handler;
 
-    invoke-virtual {v0, v4, v5}, Lcom/estrongs/android/view/aw;->a(ZZ)V
+    new-instance v1, Lcom/estrongs/android/pop/view/ar;
 
-    goto :goto_1
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/view/ar;-><init>(Lcom/estrongs/android/pop/view/aq;)V
 
-    :catchall_0
-    move-exception v0
+    const-wide/16 v2, 0x3e8
 
-    monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    :try_start_2
-    throw v0
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    if-eqz p2, :cond_2
 
-    :catch_0
-    move-exception v0
+    if-eqz p1, :cond_2
 
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/aq;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    :goto_2
-    return-void
+    invoke-static {v0, p1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a(Lcom/estrongs/android/pop/view/FileExplorerActivity;Lcom/estrongs/android/view/cr;)V
 
     :cond_2
-    :try_start_3
-    monitor-exit v2
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    goto :goto_2
+    return-void
 .end method

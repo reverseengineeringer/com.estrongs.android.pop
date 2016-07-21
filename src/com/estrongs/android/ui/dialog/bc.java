@@ -1,40 +1,80 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.Context;
-import com.estrongs.fs.impl.adb.c;
-import java.util.ArrayList;
+import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.pop.b.a;
 
-public class bc
+class bc
+  implements DialogInterface.OnClickListener
 {
-  private cg a;
-  private Context b;
+  bc(bb parambb) {}
   
-  public bc(Context paramContext)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    b = paramContext;
-    b();
-  }
-  
-  private void b()
-  {
-    Object localObject = new ArrayList();
-    ((ArrayList)localObject).add("ftp");
-    ((ArrayList)localObject).add("sftp");
-    ((ArrayList)localObject).add("ftps");
-    ((ArrayList)localObject).add("webdav");
-    ((ArrayList)localObject).add(b.getString(2131427410));
-    ((ArrayList)localObject).add(b.getString(2131427412));
-    if (c.b()) {
-      ((ArrayList)localObject).add(b.getString(2131428722));
+    String str = null;
+    int i = -1;
+    paramDialogInterface.dismiss();
+    if (paramInt == 0)
+    {
+      paramInt = a.a("ftp");
+      if (paramInt != -1)
+      {
+        paramDialogInterface = null;
+        str = "ftp";
+      }
     }
-    localObject = (String[])((ArrayList)localObject).toArray(new String[((ArrayList)localObject).size()]);
-    a = new ct(b).a((CharSequence[])localObject, -1, new bd(this)).a(2131427361).d(false).b();
-  }
-  
-  public void a()
-  {
-    if (a != null) {
-      a.show();
+    for (;;)
+    {
+      if (str != null)
+      {
+        a.a((Activity)bb.a(a), str, paramInt, new bd(this, str));
+        return;
+        paramDialogInterface = new fb(bb.a(a), "ftp", true);
+        continue;
+        if (paramInt == 1)
+        {
+          paramInt = a.a("sftp");
+          if (paramInt != -1)
+          {
+            paramDialogInterface = null;
+            str = "sftp";
+            continue;
+          }
+          paramDialogInterface = new fb(bb.a(a), "sftp", true);
+          continue;
+        }
+        if (paramInt == 2)
+        {
+          paramInt = a.a("ftp");
+          if (paramInt != -1)
+          {
+            paramDialogInterface = null;
+            str = "ftps";
+            continue;
+          }
+          paramDialogInterface = new fb(bb.a(a), "ftps", true);
+          continue;
+        }
+        if (paramInt == 3)
+        {
+          paramInt = a.a("webdav");
+          if (paramInt != -1)
+          {
+            paramDialogInterface = null;
+            str = "webdav";
+            continue;
+          }
+          paramDialogInterface = new fb(bb.a(a), "webdav", true);
+        }
+      }
+      else
+      {
+        paramDialogInterface.a();
+        return;
+      }
+      paramDialogInterface = null;
+      paramInt = i;
     }
   }
 }

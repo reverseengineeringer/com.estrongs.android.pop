@@ -1,5 +1,5 @@
 .class Lcom/estrongs/android/ui/b/h;
-.super Lcom/estrongs/android/ui/notification/e;
+.super Lcom/estrongs/android/ui/notification/f;
 
 
 # instance fields
@@ -12,7 +12,7 @@
 
     iput-object p1, p0, Lcom/estrongs/android/ui/b/h;->a:Lcom/estrongs/android/ui/b/f;
 
-    invoke-direct {p0, p2, p3, p4}, Lcom/estrongs/android/ui/notification/e;-><init>(Landroid/app/Activity;Ljava/lang/CharSequence;Lcom/estrongs/a/a;)V
+    invoke-direct {p0, p2, p3, p4}, Lcom/estrongs/android/ui/notification/f;-><init>(Landroid/app/Activity;Ljava/lang/CharSequence;Lcom/estrongs/a/a;)V
 
     return-void
 .end method
@@ -22,7 +22,7 @@
 .method protected a(Lcom/estrongs/a/a;)V
     .locals 4
 
-    sget-object v0, Lcom/estrongs/android/ui/dialog/ix;->e:Ljava/util/Map;
+    sget-object v0, Lcom/estrongs/android/ui/dialog/jh;->e:Ljava/util/Map;
 
     invoke-virtual {p1}, Lcom/estrongs/a/a;->getTaskId()J
 
@@ -40,7 +40,7 @@
 .method protected b(Lcom/estrongs/a/a;)V
     .locals 4
 
-    sget-object v0, Lcom/estrongs/android/ui/dialog/ix;->e:Ljava/util/Map;
+    sget-object v0, Lcom/estrongs/android/ui/dialog/jh;->e:Ljava/util/Map;
 
     invoke-virtual {p1}, Lcom/estrongs/a/a;->getTaskId()J
 

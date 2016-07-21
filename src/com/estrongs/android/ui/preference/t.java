@@ -2,7 +2,7 @@ package com.estrongs.android.ui.preference;
 
 import android.content.Intent;
 import android.preference.Preference;
-import com.estrongs.android.ui.preference.fragments.am;
+import com.estrongs.android.ui.preference.fragments.ao;
 
 class t
   implements Runnable

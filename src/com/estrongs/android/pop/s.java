@@ -2,7 +2,6 @@ package com.estrongs.android.pop;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.pop.esclasses.ESActivity;
 
 class s
   implements DialogInterface.OnClickListener
@@ -13,7 +12,7 @@ class s
   {
     try
     {
-      if (!(m.a(a.c) instanceof ESActivity)) {
+      if (!(m.a(a.c) instanceof com.estrongs.android.pop.app.d.a)) {
         throw new Exception("unsupported activity for open tree auth");
       }
     }
@@ -23,7 +22,7 @@ class s
       a.b.sendMessage(5, new Object[] { a.a });
       localException.printStackTrace();
       return;
-      com.estrongs.fs.impl.local.a.a((ESActivity)m.a(a.c), new t(this));
+      com.estrongs.fs.impl.local.a.a((com.estrongs.android.pop.app.d.a)m.a(a.c), new t(this));
       return;
     }
     finally

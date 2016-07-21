@@ -1,21 +1,16 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.DialogInterface.OnClickListener;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
+import android.view.View.OnClickListener;
 
 class cj
-  implements AdapterView.OnItemClickListener
+  implements View.OnClickListener
 {
-  cj(cg paramcg) {}
+  cj(ci paramci) {}
   
-  public void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
+  public void onClick(View paramView)
   {
-    paramAdapterView = (cu)paramAdapterView.getAdapter();
-    paramAdapterView.a(paramInt);
-    paramAdapterView.notifyDataSetChanged();
-    cg.access$300(a).onClick(a, paramInt);
+    a.dismiss();
   }
 }
 

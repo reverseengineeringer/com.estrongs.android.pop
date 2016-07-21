@@ -39,7 +39,7 @@
 
     iget-object v0, v0, Lcom/estrongs/android/pop/app/dk;->e:Landroid/view/View;
 
-    const v1, 0x7f0a012c
+    const v1, 0x7f0e0073
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -47,7 +47,7 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    const v1, 0x7f02009c
+    const v1, 0x7f020199
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 

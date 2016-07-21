@@ -1,5 +1,5 @@
 .class public Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
-.super Lcom/estrongs/android/pop/esclasses/ESActivity;
+.super Lcom/estrongs/android/pop/esclasses/ESResourceActivity;
 
 
 # static fields
@@ -9,37 +9,37 @@
 # instance fields
 .field a:Ljava/lang/String;
 
-.field private c:Ljava/lang/String;
-
 .field private d:Ljava/lang/String;
 
 .field private e:Ljava/lang/String;
 
-.field private f:Z
+.field private f:Ljava/lang/String;
 
-.field private g:Ljava/lang/String;
+.field private g:Z
 
 .field private h:Ljava/lang/String;
 
-.field private i:Landroid/webkit/WebView;
+.field private i:Ljava/lang/String;
 
-.field private j:Lcom/estrongs/android/ui/view/bm;
+.field private j:Landroid/webkit/WebView;
 
-.field private k:Landroid/widget/ProgressBar;
+.field private k:Lcom/estrongs/android/ui/view/bv;
 
-.field private l:Landroid/widget/TextView;
+.field private l:Landroid/widget/ProgressBar;
 
-.field private m:Landroid/widget/ScrollView;
+.field private m:Landroid/widget/TextView;
 
-.field private n:Ljava/lang/String;
+.field private n:Landroid/widget/ScrollView;
 
 .field private o:Ljava/lang/String;
 
-.field private p:Z
+.field private p:Ljava/lang/String;
 
-.field private q:Landroid/widget/Button;
+.field private q:Z
 
-.field private r:Landroid/widget/ImageView;
+.field private r:Landroid/widget/Button;
+
+.field private s:Landroid/widget/ImageView;
 
 .field private t:Landroid/os/Handler;
 
@@ -62,45 +62,45 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;-><init>()V
-
-    iput-object v1, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->c:Ljava/lang/String;
+    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;-><init>()V
 
     iput-object v1, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->d:Ljava/lang/String;
 
     iput-object v1, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->e:Ljava/lang/String;
 
-    iput-boolean v2, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->f:Z
+    iput-object v1, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->f:Ljava/lang/String;
 
-    iput-object v1, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->g:Ljava/lang/String;
+    iput-boolean v2, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->g:Z
 
     iput-object v1, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->h:Ljava/lang/String;
 
-    iput-object v1, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->i:Landroid/webkit/WebView;
+    iput-object v1, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->i:Ljava/lang/String;
 
-    new-instance v0, Lcom/estrongs/android/ui/view/bm;
+    iput-object v1, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->j:Landroid/webkit/WebView;
 
-    invoke-direct {v0, p0, v1}, Lcom/estrongs/android/ui/view/bm;-><init>(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;Lcom/estrongs/android/ui/view/bg;)V
+    new-instance v0, Lcom/estrongs/android/ui/view/bv;
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->j:Lcom/estrongs/android/ui/view/bm;
+    invoke-direct {v0, p0, v1}, Lcom/estrongs/android/ui/view/bv;-><init>(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;Lcom/estrongs/android/ui/view/bp;)V
 
-    iput-object v1, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->k:Landroid/widget/ProgressBar;
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->k:Lcom/estrongs/android/ui/view/bv;
 
-    iput-object v1, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->l:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->l:Landroid/widget/ProgressBar;
 
-    iput-object v1, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->m:Landroid/widget/ScrollView;
+    iput-object v1, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->m:Landroid/widget/TextView;
 
-    iput-object v1, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->n:Ljava/lang/String;
+    iput-object v1, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->n:Landroid/widget/ScrollView;
 
     iput-object v1, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->o:Ljava/lang/String;
 
+    iput-object v1, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->p:Ljava/lang/String;
+
     iput-object v1, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->a:Ljava/lang/String;
 
-    iput-boolean v2, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->p:Z
+    iput-boolean v2, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->q:Z
 
-    new-instance v0, Lcom/estrongs/android/ui/view/bj;
+    new-instance v0, Lcom/estrongs/android/ui/view/bs;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/bj;-><init>(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/bs;-><init>(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)V
 
     iput-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->t:Landroid/os/Handler;
 
@@ -110,7 +110,7 @@
 .method static synthetic a(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Landroid/widget/ImageView;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->r:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->s:Landroid/widget/ImageView;
 
     return-object v0
 .end method
@@ -118,7 +118,7 @@
 .method static synthetic a(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->o:Ljava/lang/String;
+    iput-object p1, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->p:Ljava/lang/String;
 
     return-object p1
 .end method
@@ -227,7 +227,7 @@
 .method static synthetic b(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->d:Ljava/lang/String;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->e:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -235,7 +235,7 @@
 .method static synthetic b(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->n:Ljava/lang/String;
+    iput-object p1, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->o:Ljava/lang/String;
 
     return-object p1
 .end method
@@ -243,7 +243,7 @@
 .method static synthetic c(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->e:Ljava/lang/String;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->f:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -259,7 +259,7 @@
 .method static synthetic e(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->o:Ljava/lang/String;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->p:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -267,7 +267,7 @@
 .method static synthetic f(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->f:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->g:Z
 
     return v0
 .end method
@@ -275,7 +275,7 @@
 .method static synthetic g(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->g:Ljava/lang/String;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->h:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -283,7 +283,7 @@
 .method static synthetic h(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->h:Ljava/lang/String;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->i:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -291,7 +291,7 @@
 .method static synthetic i(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Landroid/webkit/WebView;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->i:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->j:Landroid/webkit/WebView;
 
     return-object v0
 .end method
@@ -299,7 +299,7 @@
 .method static synthetic j(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Landroid/widget/ProgressBar;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->k:Landroid/widget/ProgressBar;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->l:Landroid/widget/ProgressBar;
 
     return-object v0
 .end method
@@ -307,7 +307,7 @@
 .method static synthetic k(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Landroid/widget/TextView;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->l:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->m:Landroid/widget/TextView;
 
     return-object v0
 .end method
@@ -315,7 +315,7 @@
 .method static synthetic l(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->p:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->q:Z
 
     return v0
 .end method
@@ -323,7 +323,7 @@
 .method static synthetic m(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Landroid/widget/Button;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->q:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->r:Landroid/widget/Button;
 
     return-object v0
 .end method
@@ -331,7 +331,7 @@
 .method static synthetic n(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->n:Ljava/lang/String;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->o:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -359,7 +359,7 @@
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 2
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     new-instance v0, Landroid/util/DisplayMetrics;
 
@@ -385,15 +385,15 @@
 
     const/4 v2, 0x0
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;->onCreate(Landroid/os/Bundle;)V
 
     invoke-virtual {p0, v1}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->requestWindowFeature(I)Z
 
-    const v0, 0x7f0300ab
+    const v0, 0x7f03014c
 
-    invoke-super {p0, v0}, Lcom/estrongs/android/pop/esclasses/ESActivity;->setContentView(I)V
+    invoke-super {p0, v0}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;->setContentView(I)V
 
-    const v0, 0x7f0a02ef
+    const v0, 0x7f0e0540
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->findViewById(I)Landroid/view/View;
 
@@ -401,9 +401,9 @@
 
     check-cast v0, Landroid/webkit/WebView;
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->i:Landroid/webkit/WebView;
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->j:Landroid/webkit/WebView;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->i:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->j:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
@@ -411,7 +411,7 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->i:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->j:Landroid/webkit/WebView;
 
     new-instance v3, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth$MyHandler;
 
@@ -423,13 +423,13 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/webkit/WebView;->addJavascriptInterface(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->i:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->j:Landroid/webkit/WebView;
 
-    iget-object v3, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->j:Lcom/estrongs/android/ui/view/bm;
+    iget-object v3, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->k:Lcom/estrongs/android/ui/view/bv;
 
     invoke-virtual {v0, v3}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->i:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->j:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
@@ -455,7 +455,7 @@
 
     invoke-virtual {v0, v4}, Landroid/webkit/WebSettings;->setDefaultTextEncodingName(Ljava/lang/String;)V
 
-    const v0, 0x7f0a02f1
+    const v0, 0x7f0e0542
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->findViewById(I)Landroid/view/View;
 
@@ -463,9 +463,9 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->l:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->m:Landroid/widget/TextView;
 
-    const v0, 0x7f0a02f0
+    const v0, 0x7f0e0541
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->findViewById(I)Landroid/view/View;
 
@@ -473,9 +473,9 @@
 
     check-cast v0, Landroid/widget/ProgressBar;
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->k:Landroid/widget/ProgressBar;
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->l:Landroid/widget/ProgressBar;
 
-    const v0, 0x7f0a02ee
+    const v0, 0x7f0e053f
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->findViewById(I)Landroid/view/View;
 
@@ -483,9 +483,9 @@
 
     check-cast v0, Landroid/widget/ScrollView;
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->m:Landroid/widget/ScrollView;
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->n:Landroid/widget/ScrollView;
 
-    const v0, 0x7f0a0321
+    const v0, 0x7f0e0580
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->findViewById(I)Landroid/view/View;
 
@@ -493,17 +493,17 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->q:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->r:Landroid/widget/Button;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->q:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->r:Landroid/widget/Button;
 
-    new-instance v4, Lcom/estrongs/android/ui/view/bg;
+    new-instance v4, Lcom/estrongs/android/ui/view/bp;
 
-    invoke-direct {v4, p0}, Lcom/estrongs/android/ui/view/bg;-><init>(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)V
+    invoke-direct {v4, p0}, Lcom/estrongs/android/ui/view/bp;-><init>(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)V
 
     invoke-virtual {v0, v4}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a012c
+    const v0, 0x7f0e0073
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->findViewById(I)Landroid/view/View;
 
@@ -511,13 +511,13 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->r:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->s:Landroid/widget/ImageView;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->r:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->s:Landroid/widget/ImageView;
 
-    new-instance v4, Lcom/estrongs/android/ui/view/bh;
+    new-instance v4, Lcom/estrongs/android/ui/view/bq;
 
-    invoke-direct {v4, p0}, Lcom/estrongs/android/ui/view/bh;-><init>(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)V
+    invoke-direct {v4, p0}, Lcom/estrongs/android/ui/view/bq;-><init>(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)V
 
     invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -547,7 +547,7 @@
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->c:Ljava/lang/String;
+    iput-object v4, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->d:Ljava/lang/String;
 
     const-string v4, "ostype"
 
@@ -555,7 +555,7 @@
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->d:Ljava/lang/String;
+    iput-object v4, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->e:Ljava/lang/String;
 
     const-string v4, "login"
 
@@ -563,15 +563,15 @@
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->e:Ljava/lang/String;
+    iput-object v4, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->f:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->d:Ljava/lang/String;
+    iget-object v4, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->e:Ljava/lang/String;
 
     if-nez v4, :cond_1
 
     const-string v4, "sinaweibo"
 
-    iput-object v4, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->d:Ljava/lang/String;
+    iput-object v4, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->e:Ljava/lang/String;
 
     :cond_1
     const-string v4, "editServer"
@@ -580,7 +580,7 @@
 
     move-result v4
 
-    iput-boolean v4, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->f:Z
+    iput-boolean v4, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->g:Z
 
     const-string v4, "originalPath"
 
@@ -588,7 +588,7 @@
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->g:Ljava/lang/String;
+    iput-object v4, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->h:Ljava/lang/String;
 
     const-string v4, "displayName"
 
@@ -596,13 +596,13 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->h:Ljava/lang/String;
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->i:Ljava/lang/String;
 
-    invoke-static {}, Lcom/estrongs/android/pop/utils/cc;->e()Ljava/lang/String;
+    invoke-static {}, Lcom/estrongs/android/pop/utils/cl;->c()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v4, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->d:Ljava/lang/String;
+    iget-object v4, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->e:Ljava/lang/String;
 
     const-string v5, "qq"
 
@@ -612,7 +612,7 @@
 
     if-eqz v4, :cond_2
 
-    invoke-static {}, Lcom/estrongs/android/pop/utils/cc;->b()Z
+    invoke-static {}, Lcom/estrongs/android/pop/utils/cl;->b()Z
 
     move-result v4
 
@@ -637,13 +637,13 @@
     move v0, v1
 
     :goto_1
-    iput-boolean v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->p:Z
+    iput-boolean v0, p0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->q:Z
 
-    new-instance v0, Lcom/estrongs/android/ui/view/bi;
+    new-instance v0, Lcom/estrongs/android/ui/view/br;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/bi;-><init>(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/br;-><init>(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/bi;->start()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/br;->start()V
 
     invoke-virtual {v3}, Landroid/webkit/CookieManager;->removeAllCookie()V
 
@@ -664,7 +664,7 @@
 
     sput-object v0, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->b:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
 
-    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onDestroy()V
+    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;->onDestroy()V
 
     return-void
 .end method

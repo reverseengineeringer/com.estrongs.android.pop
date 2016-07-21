@@ -88,7 +88,7 @@
 
     iput-object v2, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->d:Ljava/lang/Runnable;
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->a()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->c()V
 
     return-void
 .end method
@@ -148,17 +148,7 @@
 
     iput-object v2, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->d:Ljava/lang/Runnable;
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->a()V
-
-    return-void
-.end method
-
-.method private a()V
-    .locals 1
-
-    sget-object v0, Landroid/widget/ImageView$ScaleType;->MATRIX:Landroid/widget/ImageView$ScaleType;
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->c()V
 
     return-void
 .end method
@@ -298,6 +288,16 @@
     return-void
 .end method
 
+.method private c()V
+    .locals 1
+
+    sget-object v0, Landroid/widget/ImageView$ScaleType;->MATRIX:Landroid/widget/ImageView$ScaleType;
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
+
+    return-void
+.end method
+
 
 # virtual methods
 .method protected a(Landroid/graphics/Matrix;)F
@@ -324,6 +324,18 @@
     aget v0, v0, p2
 
     return v0
+.end method
+
+.method public a()V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p0, v0, v1}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->a(Landroid/graphics/Bitmap;Z)V
+
+    return-void
 .end method
 
 .method protected a(F)V
@@ -376,7 +388,7 @@
     iget p1, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->k:F
 
     :cond_0
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->f()F
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->getScale()F
 
     move-result v0
 
@@ -386,7 +398,7 @@
 
     invoke-virtual {v1, v0, v0, p2, p3}, Landroid/graphics/Matrix;->postScale(FFFF)Z
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->g()Landroid/graphics/Matrix;
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->getImageViewMatrix()Landroid/graphics/Matrix;
 
     move-result-object v0
 
@@ -400,7 +412,7 @@
 .method protected a(FFFF)V
     .locals 10
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->f()F
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->getScale()F
 
     move-result v0
 
@@ -408,7 +420,7 @@
 
     div-float v7, v0, p4
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->f()F
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->getScale()F
 
     move-result v6
 
@@ -526,13 +538,13 @@
     invoke-virtual {v0}, Landroid/graphics/Matrix;->reset()V
 
     :cond_2
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->g()Landroid/graphics/Matrix;
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->getImageViewMatrix()Landroid/graphics/Matrix;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->setImageMatrix(Landroid/graphics/Matrix;)V
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->h()F
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->b()F
 
     move-result v0
 
@@ -546,7 +558,7 @@
 
     if-gez v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->f()F
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->getScale()F
 
     move-result v0
 
@@ -585,7 +597,7 @@
     return-void
 
     :cond_0
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->g()Landroid/graphics/Matrix;
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->getImageViewMatrix()Landroid/graphics/Matrix;
 
     move-result-object v1
 
@@ -684,7 +696,7 @@
     :goto_2
     invoke-virtual {p0, v0, v1}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->a(FF)V
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->g()Landroid/graphics/Matrix;
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->getImageViewMatrix()Landroid/graphics/Matrix;
 
     move-result-object v0
 
@@ -762,121 +774,7 @@
     goto :goto_1
 .end method
 
-.method public b()F
-    .locals 1
-
-    iget v0, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->l:F
-
-    return v0
-.end method
-
-.method protected b(FFF)V
-    .locals 4
-
-    const/high16 v2, 0x40000000    # 2.0f
-
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->getWidth()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    div-float/2addr v0, v2
-
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->getHeight()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    div-float/2addr v1, v2
-
-    sub-float v2, v0, p2
-
-    sub-float v3, v1, p3
-
-    invoke-virtual {p0, v2, v3}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->c(FF)V
-
-    invoke-virtual {p0, p1, v0, v1}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->a(FFF)V
-
-    return-void
-.end method
-
-.method public c()I
-    .locals 1
-
-    iget v0, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->n:I
-
-    return v0
-.end method
-
-.method protected c(FF)V
-    .locals 1
-
-    invoke-virtual {p0, p1, p2}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->a(FF)V
-
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->g()Landroid/graphics/Matrix;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->setImageMatrix(Landroid/graphics/Matrix;)V
-
-    return-void
-.end method
-
-.method public d()I
-    .locals 1
-
-    iget v0, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->m:I
-
-    return v0
-.end method
-
-.method public e()V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p0, v0, v1}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->a(Landroid/graphics/Bitmap;Z)V
-
-    return-void
-.end method
-
-.method protected f()F
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->g:Landroid/graphics/Matrix;
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->a(Landroid/graphics/Matrix;)F
-
-    move-result v0
-
-    return v0
-.end method
-
-.method protected g()Landroid/graphics/Matrix;
-    .locals 2
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->a:Landroid/graphics/Matrix;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->f:Landroid/graphics/Matrix;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->a:Landroid/graphics/Matrix;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->g:Landroid/graphics/Matrix;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->postConcat(Landroid/graphics/Matrix;)Z
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->a:Landroid/graphics/Matrix;
-
-    return-object v0
-.end method
-
-.method protected h()F
+.method protected b()F
     .locals 3
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->h:Lcom/estrongs/android/pop/app/imageviewer/an;
@@ -932,6 +830,168 @@
     goto :goto_0
 .end method
 
+.method protected b(FFF)V
+    .locals 4
+
+    const/high16 v2, 0x40000000    # 2.0f
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->getWidth()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    div-float/2addr v0, v2
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->getHeight()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    div-float/2addr v1, v2
+
+    sub-float v2, v0, p2
+
+    sub-float v3, v1, p3
+
+    invoke-virtual {p0, v2, v3}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->c(FF)V
+
+    invoke-virtual {p0, p1, v0, v1}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->a(FFF)V
+
+    return-void
+.end method
+
+.method protected c(FF)V
+    .locals 1
+
+    invoke-virtual {p0, p1, p2}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->a(FF)V
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->getImageViewMatrix()Landroid/graphics/Matrix;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->setImageMatrix(Landroid/graphics/Matrix;)V
+
+    return-void
+.end method
+
+.method public getBitmapHeight()I
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->h:Lcom/estrongs/android/pop/app/imageviewer/an;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/an;->b()Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, -0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->h:Lcom/estrongs/android/pop/app/imageviewer/an;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/an;->b()Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+.method public getBitmapWidth()I
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->h:Lcom/estrongs/android/pop/app/imageviewer/an;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/an;->b()Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, -0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->h:Lcom/estrongs/android/pop/app/imageviewer/an;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/an;->b()Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+.method public getDefaultScale()F
+    .locals 1
+
+    iget v0, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->l:F
+
+    return v0
+.end method
+
+.method protected getImageViewMatrix()Landroid/graphics/Matrix;
+    .locals 2
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->a:Landroid/graphics/Matrix;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->f:Landroid/graphics/Matrix;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->a:Landroid/graphics/Matrix;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->g:Landroid/graphics/Matrix;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->postConcat(Landroid/graphics/Matrix;)Z
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->a:Landroid/graphics/Matrix;
+
+    return-object v0
+.end method
+
+.method protected getScale()F
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->g:Landroid/graphics/Matrix;
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->a(Landroid/graphics/Matrix;)F
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getScaledHeight()I
+    .locals 1
+
+    iget v0, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->n:I
+
+    return v0
+.end method
+
+.method public getScaledWidth()I
+    .locals 1
+
+    iget v0, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->m:I
+
+    return v0
+.end method
+
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 2
 
@@ -984,7 +1044,7 @@
 
     if-ne p1, v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->f()F
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->getScale()F
 
     move-result v0
 
@@ -1045,7 +1105,7 @@
 
     invoke-direct {p0, v0, v1}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->a(Lcom/estrongs/android/pop/app/imageviewer/an;Landroid/graphics/Matrix;)V
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->g()Landroid/graphics/Matrix;
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->getImageViewMatrix()Landroid/graphics/Matrix;
 
     move-result-object v0
 
@@ -1061,6 +1121,14 @@
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->a(Landroid/graphics/Bitmap;I)V
+
+    return-void
+.end method
+
+.method public setRecycler(Lcom/estrongs/android/pop/app/imageviewer/ad;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouchBase;->c:Lcom/estrongs/android/pop/app/imageviewer/ad;
 
     return-void
 .end method

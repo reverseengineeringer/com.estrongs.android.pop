@@ -2,26 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Landroid/content/pm/ApplicationInfo;
+.field final synthetic a:Ljava/util/List;
 
-.field final synthetic b:Ljava/lang/String;
-
-.field final synthetic c:Lcom/estrongs/android/ui/dialog/ab;
+.field final synthetic b:Lcom/estrongs/android/ui/dialog/ab;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/ab;Landroid/content/pm/ApplicationInfo;Ljava/lang/String;)V
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/ab;Ljava/util/List;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/ac;->c:Lcom/estrongs/android/ui/dialog/ab;
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/ac;->b:Lcom/estrongs/android/ui/dialog/ab;
 
-    iput-object p2, p0, Lcom/estrongs/android/ui/dialog/ac;->a:Landroid/content/pm/ApplicationInfo;
-
-    iput-object p3, p0, Lcom/estrongs/android/ui/dialog/ac;->b:Ljava/lang/String;
+    iput-object p2, p0, Lcom/estrongs/android/ui/dialog/ac;->a:Ljava/util/List;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -30,34 +26,40 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 3
+.method public run()V
+    .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ac;->c:Lcom/estrongs/android/ui/dialog/ab;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ac;->b:Lcom/estrongs/android/ui/dialog/ab;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/ab;->c:Lcom/estrongs/android/ui/dialog/y;
+    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/ab;->a:Lcom/estrongs/android/ui/dialog/aa;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/y;->mContext:Landroid/content/Context;
+    const v1, 0x7f0e019f
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/ac;->a:Landroid/content/pm/ApplicationInfo;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/aa;->findViewById(I)Landroid/view/View;
 
-    iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+    move-result-object v0
 
-    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/ac;->b:Ljava/lang/String;
+    const/16 v1, 0x8
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ac;->c:Lcom/estrongs/android/ui/dialog/ab;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ac;->b:Lcom/estrongs/android/ui/dialog/ab;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/ab;->a:Ljava/util/List;
+    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/ab;->a:Lcom/estrongs/android/ui/dialog/aa;
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/ac;->a:Landroid/content/pm/ApplicationInfo;
+    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/aa;->d:Lcom/estrongs/android/ui/dialog/ad;
 
-    invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/ac;->a:Ljava/util/List;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ac;->c:Lcom/estrongs/android/ui/dialog/ab;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ad;->a(Ljava/util/List;)V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ab;->notifyDataSetChanged()V
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ac;->b:Lcom/estrongs/android/ui/dialog/ab;
+
+    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/ab;->a:Lcom/estrongs/android/ui/dialog/aa;
+
+    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/aa;->d:Lcom/estrongs/android/ui/dialog/ad;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ad;->notifyDataSetChanged()V
 
     return-void
 .end method

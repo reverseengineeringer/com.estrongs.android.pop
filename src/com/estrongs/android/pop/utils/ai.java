@@ -1,14 +1,20 @@
 package com.estrongs.android.pop.utils;
 
+import java.util.ArrayList;
+
 public class ai
 {
-  public boolean a;
-  public int b;
+  public String a;
+  public boolean b;
+  public boolean c;
+  public ArrayList<ai> d;
+  public boolean e;
   
-  public ai(aa paramaa, boolean paramBoolean, int paramInt)
+  public ai(String paramString, boolean paramBoolean1, boolean paramBoolean2)
   {
-    a = paramBoolean;
-    b = paramInt;
+    a = paramString;
+    b = paramBoolean1;
+    c = paramBoolean2;
   }
 }
 

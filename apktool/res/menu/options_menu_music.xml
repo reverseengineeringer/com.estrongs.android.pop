@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/toolbar_play" android:id="@id/chrome_cast" android:title="Chromecast" app:showAsAction="always" />
+    <item android:icon="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha" android:id="@id/menu_overflow" android:title="@string/edit_button_more" app:showAsAction="always">
+        <menu />
+    </item>
+</menu>

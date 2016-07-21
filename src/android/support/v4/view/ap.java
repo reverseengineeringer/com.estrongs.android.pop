@@ -1,18 +1,22 @@
 package android.support.v4.view;
 
-import android.view.VelocityTracker;
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.LayoutInflater.Factory2;
+import android.view.View;
 
 class ap
-  implements ar
+  extends an
+  implements LayoutInflater.Factory2
 {
-  public float a(VelocityTracker paramVelocityTracker, int paramInt)
+  ap(ar paramar)
   {
-    return paramVelocityTracker.getXVelocity();
+    super(paramar);
   }
   
-  public float b(VelocityTracker paramVelocityTracker, int paramInt)
+  public View onCreateView(View paramView, String paramString, Context paramContext, AttributeSet paramAttributeSet)
   {
-    return paramVelocityTracker.getYVelocity();
+    return a.onCreateView(paramView, paramString, paramContext, paramAttributeSet);
   }
 }
 

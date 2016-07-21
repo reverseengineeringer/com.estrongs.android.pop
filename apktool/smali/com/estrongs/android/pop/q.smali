@@ -1,5 +1,5 @@
 .class Lcom/estrongs/android/pop/q;
-.super Lcom/estrongs/android/ui/dialog/dn;
+.super Lcom/estrongs/android/ui/dialog/dp;
 
 
 # instance fields
@@ -16,7 +16,7 @@
 
     iput-object p4, p0, Lcom/estrongs/android/pop/q;->a:Lcom/estrongs/a/a/f;
 
-    invoke-direct {p0, p2, p3}, Lcom/estrongs/android/ui/dialog/dn;-><init>(Landroid/content/Context;Z)V
+    invoke-direct {p0, p2, p3}, Lcom/estrongs/android/ui/dialog/dp;-><init>(Landroid/content/Context;Z)V
 
     return-void
 .end method
@@ -41,6 +41,14 @@
     move-result v1
 
     iput-boolean v1, v0, Lcom/estrongs/a/a/f;->b:Z
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/q;->a:Lcom/estrongs/a/a/f;
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/q;->g()Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/estrongs/a/a/f;->c:Ljava/lang/String;
 
     iget-object v0, p0, Lcom/estrongs/android/pop/q;->b:Lcom/estrongs/android/pop/n;
 

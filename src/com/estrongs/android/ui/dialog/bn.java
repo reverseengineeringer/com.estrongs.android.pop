@@ -1,26 +1,14 @@
 package com.estrongs.android.ui.dialog;
 
 import com.estrongs.a.a;
-import com.estrongs.a.a.l;
-import com.estrongs.a.a.m;
-import com.estrongs.android.util.bd;
+import com.estrongs.a.a.p;
 
 class bn
-  implements l
+  implements p
 {
-  long a = 0L;
+  bn(bm parambm) {}
   
-  bn(bj parambj) {}
-  
-  public void a(a parama, m paramm)
-  {
-    long l = System.currentTimeMillis();
-    if (l - a > 800L)
-    {
-      a = l;
-      bd.a(new bo(this));
-    }
-  }
+  public void a(a parama, int paramInt1, int paramInt2) {}
 }
 
 /* Location:

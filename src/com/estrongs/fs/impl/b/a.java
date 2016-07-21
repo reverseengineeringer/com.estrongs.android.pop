@@ -1,30 +1,16 @@
 package com.estrongs.fs.impl.b;
 
-import android.annotation.TargetApi;
-import android.content.pm.ApplicationInfo;
-import com.estrongs.fs.h;
+import android.graphics.drawable.Drawable;
+import com.estrongs.android.recommand.m;
 
-@TargetApi(8)
 public class a
-  extends b
+  extends com.estrongs.fs.a
 {
-  public boolean a(h paramh)
+  private m a;
+  
+  public Drawable a()
   {
-    boolean bool = super.a(paramh);
-    if (bool) {
-      return bool;
-    }
-    paramh = ((c)paramh).c();
-    if (a == 3)
-    {
-      if ((flags & 0x40000) == 0) {
-        return true;
-      }
-    }
-    else if ((a == 4) && ((flags & 0x40000) != 0)) {
-      return true;
-    }
-    return false;
+    return a.e;
   }
 }
 

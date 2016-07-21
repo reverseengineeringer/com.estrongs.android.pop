@@ -1,17 +1,20 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
-import com.estrongs.android.ui.a.w;
+import android.app.NotificationManager;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.fs.b.ba;
 
 class co
-  implements DialogInterface.OnDismissListener
+  implements View.OnClickListener
 {
-  co(cn paramcn) {}
+  co(FileSharingNotificationActivity paramFileSharingNotificationActivity) {}
   
-  public void onDismiss(DialogInterface paramDialogInterface)
+  public void onClick(View paramView)
   {
-    GestureManageActivity.a(a.b.a).notifyDataSetChanged();
+    ba.b();
+    FileSharingNotificationActivity.a(a).cancel(1);
+    a.finish();
   }
 }
 

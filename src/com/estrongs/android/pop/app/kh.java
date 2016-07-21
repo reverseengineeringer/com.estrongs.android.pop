@@ -1,21 +1,22 @@
 package com.estrongs.android.pop.app;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 
 class kh
-  implements AdapterView.OnItemClickListener
+  extends BroadcastReceiver
 {
-  kh(RecommAcitivity paramRecommAcitivity, int paramInt) {}
+  kh(PopVideoPlayer paramPopVideoPlayer) {}
   
-  public void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
+  public void onReceive(Context paramContext, Intent paramIntent)
   {
-    paramAdapterView = new Intent(b, RecommItemDetailAcitivity.class);
-    paramAdapterView.putExtra("position", paramInt);
-    paramAdapterView.putExtra("com.estrongs.intent.extra.TITLE", a);
-    b.startActivity(paramAdapterView);
+    if ((a.a()) && (a.c))
+    {
+      PopVideoPlayer.c(a);
+      a.c = false;
+    }
+    a.j = true;
   }
 }
 

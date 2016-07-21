@@ -5,15 +5,11 @@ import com.estrongs.android.view.a.b;
 class dz
   implements b
 {
-  dz(cp paramcp) {}
+  dz(cr paramcr) {}
   
-  public boolean a(co paramco)
+  public boolean a(cp paramcp)
   {
-    if (e) {}
-    while (((h) && (F == 1) && (G)) || (((f) || (x)) && (((!d) && (F == 1) && (G)) || (m) || (A) || (i) || (j) || (k) || ((p) && (G)) || (l)))) {
-      return true;
-    }
-    return false;
+    return (f) && (N == 1) && (P);
   }
 }
 

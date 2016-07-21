@@ -123,7 +123,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     iget-object v0, p0, Lcom/estrongs/fs/impl/usb/fs/ntfs/b/h;->d:Lcom/estrongs/fs/impl/usb/fs/ntfs/b/g;
@@ -176,7 +176,7 @@
 
     const-string v1, "iterator"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     new-instance v0, Lcom/estrongs/fs/impl/usb/fs/ntfs/b/i;

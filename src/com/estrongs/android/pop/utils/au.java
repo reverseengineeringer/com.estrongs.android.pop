@@ -1,24 +1,15 @@
 package com.estrongs.android.pop.utils;
 
-import android.app.Activity;
-import com.estrongs.a.a;
-import com.estrongs.a.a.p;
+import com.estrongs.android.util.bg;
 import com.estrongs.fs.h;
-import java.io.File;
+import com.estrongs.fs.i;
 
 final class au
-  implements p
+  implements i
 {
-  au(Activity paramActivity, h paramh1, h paramh2) {}
-  
-  public void a(a parama, int paramInt1, int paramInt2)
+  public boolean a(h paramh)
   {
-    if (paramInt2 == 4) {
-      aj.a(a, new File(b.getAbsolutePath(), (String)c.getExtra("item_paste_name")).getAbsolutePath());
-    }
-    while (paramInt2 != 5) {
-      return;
-    }
+    return bg.b(paramh);
   }
 }
 

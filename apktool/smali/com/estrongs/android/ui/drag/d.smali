@@ -25,16 +25,16 @@
 
 .field private H:Lcom/estrongs/fs/h;
 
-.field private I:Lcom/estrongs/android/view/aw;
+.field private I:Lcom/estrongs/android/view/cr;
 
 .field private J:Z
 
 .field private K:Z
 
-.field private L:Ljava/util/ArrayList;
+.field private L:Ljava/util/HashSet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/ArrayList",
+            "Ljava/util/HashSet",
             "<",
             "Lcom/estrongs/android/ui/drag/s;",
             ">;"
@@ -217,11 +217,11 @@
 
     iput-boolean v1, p0, Lcom/estrongs/android/ui/drag/d;->K:Z
 
-    new-instance v0, Ljava/util/ArrayList;
+    new-instance v0, Ljava/util/HashSet;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/drag/d;->L:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/estrongs/android/ui/drag/d;->L:Ljava/util/HashSet;
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -255,7 +255,7 @@
 
     const/high16 v1, 0x41a00000    # 20.0f
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/ui/d/a;->a(Landroid/content/Context;F)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/ui/d/g;->a(Landroid/content/Context;F)I
 
     move-result v0
 
@@ -389,7 +389,7 @@
 
     invoke-direct {v2}, Ljava/lang/RuntimeException;-><init>()V
 
-    invoke-static {v0, v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     const/4 v0, 0x0
 
@@ -522,20 +522,20 @@
     goto :goto_1
 
     :cond_2
-    iget-object v4, p0, Lcom/estrongs/android/ui/drag/d;->L:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/estrongs/android/ui/drag/d;->L:Ljava/util/HashSet;
 
-    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_3
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    add-int/lit8 v0, v0, -0x1
+    if-eqz v0, :cond_4
 
-    move v2, v0
-
-    :goto_2
-    if-ltz v2, :cond_4
-
-    invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -545,29 +545,29 @@
 
     invoke-interface {v0, p3}, Lcom/estrongs/android/ui/drag/s;->getLocationOnScreen([I)V
 
-    aget v5, p3, v8
+    aget v4, p3, v8
 
     invoke-interface {v0}, Lcom/estrongs/android/ui/drag/s;->getLeft()I
+
+    move-result v5
+
+    sub-int/2addr v4, v5
+
+    aget v5, p3, v9
+
+    invoke-interface {v0}, Lcom/estrongs/android/ui/drag/s;->getTop()I
 
     move-result v6
 
     sub-int/2addr v5, v6
 
-    aget v6, p3, v9
-
-    invoke-interface {v0}, Lcom/estrongs/android/ui/drag/s;->getTop()I
-
-    move-result v7
-
-    sub-int/2addr v6, v7
-
-    invoke-virtual {v3, v5, v6}, Landroid/graphics/Rect;->offset(II)V
+    invoke-virtual {v3, v4, v5}, Landroid/graphics/Rect;->offset(II)V
 
     invoke-virtual {v3, p1, p2}, Landroid/graphics/Rect;->contains(II)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_3
+    if-eqz v4, :cond_3
 
     aget v1, p3, v8
 
@@ -582,13 +582,6 @@
     aput v1, p3, v9
 
     goto :goto_1
-
-    :cond_3
-    add-int/lit8 v0, v2, -0x1
-
-    move v2, v0
-
-    goto :goto_2
 
     :cond_4
     move-object v0, v1
@@ -970,9 +963,9 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/drag/d;->I:Lcom/estrongs/android/view/aw;
+    iget-object v1, p0, Lcom/estrongs/android/ui/drag/d;->I:Lcom/estrongs/android/view/cr;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/view/aw;->w()Ljava/util/List;
+    invoke-virtual {v1}, Lcom/estrongs/android/view/cr;->o()Ljava/util/List;
 
     move-result-object v1
 
@@ -986,9 +979,9 @@
 
     move-result-object v2
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/drag/d;->I:Lcom/estrongs/android/view/aw;
+    iget-object v0, p0, Lcom/estrongs/android/ui/drag/d;->I:Lcom/estrongs/android/view/cr;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/view/aw;->D()Ljava/util/Map;
+    invoke-virtual {v0}, Lcom/estrongs/android/view/cr;->R()Ljava/util/Map;
 
     move-result-object v3
 
@@ -1034,6 +1027,91 @@
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
+    invoke-interface {v3}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v5
+
+    const/4 v0, 0x0
+
+    move v2, v0
+
+    :goto_1
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map$Entry;
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/android/ui/drag/j;
+
+    if-eqz v0, :cond_5
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/drag/j;->b()Lcom/estrongs/android/ui/drag/DragGrid;
+
+    move-result-object v6
+
+    if-eqz v6, :cond_5
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/drag/j;->c()Landroid/graphics/Bitmap;
+
+    move-result-object v6
+
+    if-nez v6, :cond_2
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/drag/j;->b()Lcom/estrongs/android/ui/drag/DragGrid;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Lcom/estrongs/android/ui/drag/DragGrid;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v6
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/drag/j;->b()Lcom/estrongs/android/ui/drag/DragGrid;
+
+    move-result-object v7
+
+    const v8, 0x7f0200bc
+
+    invoke-virtual {v7, v8}, Lcom/estrongs/android/ui/drag/DragGrid;->setBackgroundResource(I)V
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/drag/j;->b()Lcom/estrongs/android/ui/drag/DragGrid;
+
+    move-result-object v7
+
+    invoke-static {v7}, Lcom/estrongs/android/ui/d/g;->a(Landroid/view/View;)Landroid/graphics/Bitmap;
+
+    move-result-object v7
+
+    invoke-virtual {v0, v7}, Lcom/estrongs/android/ui/drag/j;->a(Landroid/graphics/Bitmap;)V
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/drag/j;->b()Lcom/estrongs/android/ui/drag/DragGrid;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v6}, Lcom/estrongs/android/ui/drag/DragGrid;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_2
+    add-int/lit8 v2, v2, 0x1
+
+    const/4 v0, 0x5
+
+    if-lt v2, v0, :cond_5
+
+    :cond_3
     invoke-interface {v3}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v0
@@ -1042,13 +1120,13 @@
 
     move-result-object v5
 
-    :cond_2
-    :goto_1
+    :cond_4
+    :goto_2
     invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_7
 
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1066,38 +1144,45 @@
 
     move-result v6
 
-    if-nez v6, :cond_2
+    if-nez v6, :cond_4
 
     invoke-virtual {v2}, Lcom/estrongs/android/ui/drag/j;->b()Lcom/estrongs/android/ui/drag/DragGrid;
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/estrongs/android/view/aw;->a(Landroid/view/View;)Ljava/lang/String;
+    invoke-static {v6}, Lcom/estrongs/android/view/cr;->a(Landroid/view/View;)Ljava/lang/String;
 
     move-result-object v6
 
-    if-eqz v6, :cond_3
+    if-eqz v6, :cond_6
 
     invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_6
 
     invoke-interface {v4, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    goto :goto_2
+
+    :cond_5
+    move v0, v2
+
+    move v2, v0
+
     goto :goto_1
 
-    :cond_3
+    :cond_6
     const/4 v0, 0x0
 
     invoke-virtual {v2, v0}, Lcom/estrongs/android/ui/drag/j;->a(Lcom/estrongs/android/ui/drag/DragGrid;)V
 
     invoke-interface {v4, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_4
+    :cond_7
     iput-object v4, p0, Lcom/estrongs/android/ui/drag/d;->v:Ljava/util/List;
 
     if-eqz v1, :cond_0
@@ -1138,23 +1223,23 @@
 
     invoke-direct/range {v0 .. v10}, Lcom/estrongs/android/ui/drag/d;->a(Landroid/graphics/Bitmap;IIIIIILcom/estrongs/android/ui/drag/l;Ljava/lang/Object;I)V
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/drag/d;->I:Lcom/estrongs/android/view/aw;
+    iget-object v0, p0, Lcom/estrongs/android/ui/drag/d;->I:Lcom/estrongs/android/view/cr;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/view/aw;->C()Landroid/widget/AbsListView;
+    invoke-virtual {v0}, Lcom/estrongs/android/view/cr;->Q()Landroid/support/v7/widget/RecyclerView;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/AbsListView;->getFirstVisiblePosition()I
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView;->getLayoutManager()Landroid/support/v7/widget/RecyclerView$LayoutManager;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v7/widget/GridLayoutManager;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/GridLayoutManager;->findFirstVisibleItemPosition()I
 
     move-result v12
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/drag/d;->I:Lcom/estrongs/android/view/aw;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/view/aw;->C()Landroid/widget/AbsListView;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/AbsListView;->getLastVisiblePosition()I
+    invoke-virtual {v0}, Landroid/support/v7/widget/GridLayoutManager;->findLastVisibleItemPosition()I
 
     iget-object v0, p0, Lcom/estrongs/android/ui/drag/d;->c:Landroid/content/Context;
 
@@ -1190,9 +1275,9 @@
 
     move-result v0
 
-    const/16 v1, 0x8
+    const/4 v1, 0x5
 
-    if-gt v0, v1, :cond_6
+    if-gt v0, v1, :cond_9
 
     iget-object v0, p0, Lcom/estrongs/android/ui/drag/d;->v:Ljava/util/List;
 
@@ -1202,13 +1287,13 @@
 
     move v9, v0
 
-    :goto_2
+    :goto_3
     const/4 v0, 0x0
 
     move v11, v0
 
-    :goto_3
-    if-ge v11, v9, :cond_c
+    :goto_4
+    if-ge v11, v9, :cond_f
 
     const/4 v2, 0x0
 
@@ -1224,30 +1309,30 @@
 
     move-result-object v1
 
-    if-nez v1, :cond_d
+    if-nez v1, :cond_10
 
     invoke-virtual {v0}, Lcom/estrongs/android/ui/drag/j;->b()Lcom/estrongs/android/ui/drag/DragGrid;
 
     move-result-object v2
 
-    if-nez v2, :cond_7
+    if-nez v2, :cond_a
 
-    :cond_5
-    :goto_4
+    :cond_8
+    :goto_5
     add-int/lit8 v0, v11, 0x1
 
     move v11, v0
 
-    goto :goto_3
+    goto :goto_4
 
-    :cond_6
-    const/16 v0, 0x8
+    :cond_9
+    const/4 v0, 0x5
 
     move v9, v0
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_7
+    :cond_a
     invoke-virtual {v2}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
@@ -1266,21 +1351,21 @@
 
     move v10, v2
 
-    :goto_5
-    if-nez v1, :cond_8
+    :goto_6
+    if-nez v1, :cond_b
 
     invoke-direct {p0}, Lcom/estrongs/android/ui/drag/d;->h()V
 
     goto/16 :goto_0
 
-    :cond_8
+    :cond_b
     iget-object v3, p0, Lcom/estrongs/android/ui/drag/d;->h:[I
 
     invoke-virtual {v0}, Lcom/estrongs/android/ui/drag/j;->b()Lcom/estrongs/android/ui/drag/DragGrid;
 
     move-result-object v2
 
-    if-eqz v2, :cond_9
+    if-eqz v2, :cond_c
 
     invoke-virtual {v0}, Lcom/estrongs/android/ui/drag/j;->b()Lcom/estrongs/android/ui/drag/DragGrid;
 
@@ -1288,7 +1373,7 @@
 
     invoke-virtual {v0, v3}, Lcom/estrongs/android/ui/drag/DragGrid;->getLocationOnScreen([I)V
 
-    :goto_6
+    :goto_7
     const/4 v0, 0x0
 
     aget v2, v3, v0
@@ -1315,20 +1400,20 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/estrongs/android/ui/drag/d;->a(Landroid/graphics/Bitmap;IIIIIII)V
 
-    if-eqz v10, :cond_5
+    if-eqz v10, :cond_8
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
 
-    goto :goto_4
+    goto :goto_5
 
-    :cond_9
+    :cond_c
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v2
 
     sub-int v2, v13, v2
 
-    if-gtz v2, :cond_a
+    if-gtz v2, :cond_d
 
     const/4 v2, 0x0
 
@@ -1336,12 +1421,12 @@
 
     aput v4, v3, v2
 
-    :goto_7
+    :goto_8
     invoke-virtual {v0}, Lcom/estrongs/android/ui/drag/j;->a()I
 
     move-result v0
 
-    if-ge v0, v12, :cond_b
+    if-ge v0, v12, :cond_e
 
     const/4 v0, 0x1
 
@@ -1349,9 +1434,9 @@
 
     aput v2, v3, v0
 
-    goto :goto_6
+    goto :goto_7
 
-    :cond_a
+    :cond_d
     const/4 v2, 0x0
 
     new-instance v4, Ljava/util/Random;
@@ -1370,23 +1455,23 @@
 
     aput v4, v3, v2
 
-    goto :goto_7
+    goto :goto_8
 
-    :cond_b
+    :cond_e
     const/4 v0, 0x1
 
     aput v14, v3, v0
 
-    goto :goto_6
+    goto :goto_7
 
-    :cond_c
-    iget-object v0, p0, Lcom/estrongs/android/ui/drag/d;->I:Lcom/estrongs/android/view/aw;
+    :cond_f
+    iget-object v0, p0, Lcom/estrongs/android/ui/drag/d;->I:Lcom/estrongs/android/view/cr;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/view/aw;->e()V
+    invoke-virtual {v0}, Lcom/estrongs/android/view/cr;->e()V
 
     iget-object v0, p0, Lcom/estrongs/android/ui/drag/d;->Q:Lcom/estrongs/android/ui/drag/k;
 
-    invoke-interface {v0}, Lcom/estrongs/android/ui/drag/k;->e()Landroid/graphics/Rect;
+    invoke-interface {v0}, Lcom/estrongs/android/ui/drag/k;->getScrollViewRect()Landroid/graphics/Rect;
 
     move-result-object v0
 
@@ -1446,10 +1531,10 @@
 
     goto/16 :goto_0
 
-    :cond_d
+    :cond_10
     move v10, v2
 
-    goto/16 :goto_5
+    goto/16 :goto_6
 .end method
 
 .method static synthetic h(Lcom/estrongs/android/ui/drag/d;)I
@@ -1515,13 +1600,13 @@
 
     iput-object v1, p0, Lcom/estrongs/android/ui/drag/d;->s:Ljava/lang/Object;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/drag/d;->L:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/estrongs/android/ui/drag/d;->L:Ljava/util/HashSet;
 
     if-eqz v0, :cond_4
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/drag/d;->L:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/estrongs/android/ui/drag/d;->L:Ljava/util/HashSet;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+    invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
     :cond_4
     iget-object v0, p0, Lcom/estrongs/android/ui/drag/d;->M:Ljava/util/ArrayList;
@@ -1605,21 +1690,21 @@
 .method public a(Lcom/estrongs/android/ui/drag/s;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/drag/d;->L:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/estrongs/android/ui/drag/d;->L:Ljava/util/HashSet;
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
-.method public a(Lcom/estrongs/fs/h;Lcom/estrongs/android/view/aw;Lcom/estrongs/android/ui/drag/l;IZ)V
+.method public a(Lcom/estrongs/fs/h;Lcom/estrongs/android/view/cr;Lcom/estrongs/android/ui/drag/l;IZ)V
     .locals 2
 
     const/4 v1, 0x0
 
     iput-object p1, p0, Lcom/estrongs/android/ui/drag/d;->H:Lcom/estrongs/fs/h;
 
-    iput-object p2, p0, Lcom/estrongs/android/ui/drag/d;->I:Lcom/estrongs/android/view/aw;
+    iput-object p2, p0, Lcom/estrongs/android/ui/drag/d;->I:Lcom/estrongs/android/view/cr;
 
     iput p4, p0, Lcom/estrongs/android/ui/drag/d;->u:I
 
@@ -2368,9 +2453,9 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/drag/d;->L:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/estrongs/android/ui/drag/d;->L:Ljava/util/HashSet;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+    invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
     return-void
 .end method

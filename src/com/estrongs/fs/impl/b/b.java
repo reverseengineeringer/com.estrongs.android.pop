@@ -1,19 +1,27 @@
 package com.estrongs.fs.impl.b;
 
+import android.annotation.TargetApi;
 import android.content.pm.ApplicationInfo;
 import com.estrongs.fs.h;
-import com.estrongs.fs.i;
 
+@TargetApi(8)
 public class b
-  implements i
+  extends c
 {
-  public int a = 2;
-  
   public boolean a(h paramh)
   {
-    paramh = ((c)paramh).c();
-    if (a == 0) {}
-    while (((a == 1) && ((flags & 0x1) > 0)) || ((a == 2) && (((flags & 0x80) != 0) || ((flags & 0x1) == 0)))) {
+    boolean bool = super.a(paramh);
+    if (bool) {
+      return bool;
+    }
+    paramh = ((d)paramh).h();
+    if (a == 3)
+    {
+      if ((flags & 0x40000) == 0) {
+        return true;
+      }
+    }
+    else if ((a == 4) && ((flags & 0x40000) != 0)) {
       return true;
     }
     return false;

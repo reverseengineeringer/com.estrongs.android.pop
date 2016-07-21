@@ -1,17 +1,24 @@
 package com.estrongs.android.pop.view;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.EditText;
+import com.estrongs.android.pop.utils.ad;
 
 class ct
-  implements View.OnClickListener
+  extends Thread
 {
-  ct(FileExplorerActivity paramFileExplorerActivity) {}
+  ct(cr paramcr, String paramString) {}
   
-  public void onClick(View paramView)
+  public void run()
   {
-    FileExplorerActivity.B(a).setText("");
+    try
+    {
+      ad.d();
+      b.b.runOnUiThread(new cu(this));
+      return;
+    }
+    catch (Exception localException)
+    {
+      for (;;) {}
+    }
   }
 }
 

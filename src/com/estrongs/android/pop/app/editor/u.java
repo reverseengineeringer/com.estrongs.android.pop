@@ -1,18 +1,23 @@
 package com.estrongs.android.pop.app.editor;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.LinearLayout;
 
 class u
-  implements DialogInterface.OnClickListener
+  implements View.OnClickListener
 {
   u(PopNoteEditor paramPopNoteEditor) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void onClick(View paramView)
   {
-    PopNoteEditor.a(a, true);
-    paramDialogInterface.dismiss();
-    PopNoteEditor.c(a, PopNoteEditor.x(a));
+    if (PopNoteEditor.j(a).getVisibility() == 0)
+    {
+      PopNoteEditor.k(a);
+      return;
+    }
+    PopNoteEditor.l(a);
+    a.d();
   }
 }
 

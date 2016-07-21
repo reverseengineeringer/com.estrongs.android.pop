@@ -1,50 +1,55 @@
 package com.estrongs.fs.b;
 
-import android.content.res.Resources;
-import com.estrongs.a.q;
-import com.estrongs.android.pop.FexApplication;
-import com.estrongs.fs.d;
+import com.estrongs.a.a;
+import com.estrongs.a.a.f;
+import com.estrongs.a.a.p;
+import com.estrongs.android.pop.view.FileExplorerActivity;
 import com.estrongs.fs.h;
-import com.estrongs.fs.util.a;
-import com.estrongs.fs.util.b;
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
-class ai
-  extends am
+final class ai
+  implements p
 {
-  boolean a = true;
-  boolean b = false;
-  Map<String, b> c = new HashMap();
-  List<h> d = new ArrayList();
+  ai(p paramp, FileExplorerActivity paramFileExplorerActivity, List paramList) {}
   
-  public ai(List<h> paramList, d paramd)
+  public void a(a parama, int paramInt1, int paramInt2)
   {
-    super(paramList, paramd, false);
-  }
-  
-  protected boolean a(h paramh)
-  {
-    if (paramh.getAbsolutePath().endsWith(".eslock"))
+    if ((paramInt2 != 4) || (!(parama instanceof ag))) {}
+    f localf;
+    String str;
+    do
     {
-      paramh = new Exception(FexApplication.a().getResources().getString(2131428488));
-      setTaskResult(10000, new q(paramh.getMessage(), paramh));
-      return false;
-    }
-    String str = com.estrongs.android.util.am.bE(paramh.getAbsolutePath());
-    b localb = (b)a.a.get(str);
-    if (localb == null) {
-      a = false;
-    }
-    for (;;)
+      return;
+      if (a != null) {
+        a.a(parama, paramInt1, paramInt2);
+      }
+      localf = (f)parama.getDecisionData(f.class);
+      str = c;
+    } while (str == null);
+    Object localObject1 = ((ag)parama).c();
+    parama = new StringBuilder();
+    parama.append("<html><body>");
+    parama.append(b.getString(2131231624));
+    localObject1 = ((List)localObject1).iterator();
+    Object localObject2;
+    while (((Iterator)localObject1).hasNext())
     {
-      d.add(paramh);
-      return true;
-      c.put(str, localb);
-      b = true;
+      localObject2 = (String)((Iterator)localObject1).next();
+      parama.append((String)localObject2 + ";<br></br>");
     }
+    parama.append(b.getString(2131231625));
+    localObject1 = c.iterator();
+    while (((Iterator)localObject1).hasNext())
+    {
+      localObject2 = (h)((Iterator)localObject1).next();
+      parama.append(((h)localObject2).getAbsolutePath() + ";<br></br>");
+    }
+    parama.append(b.getString(2131231343));
+    parama.append(a);
+    parama.append("<br></br><br></br>Thanks, <br></br><br></br>ES Support Team<br></br>");
+    parama.append("</body></html>");
+    b.runOnUiThread(new aj(this, str, parama));
   }
 }
 

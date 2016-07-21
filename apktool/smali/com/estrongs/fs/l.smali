@@ -1,86 +1,54 @@
 .class public Lcom/estrongs/fs/l;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/estrongs/fs/k;
+.super Lcom/estrongs/fs/k;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/fs/k;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/String;)Lcom/estrongs/fs/h;
+.method public a(Lcom/estrongs/android/scanner/f;)Ljava/lang/Boolean;
     .locals 1
 
-    const/4 v0, 0x0
+    const-string v0, "DCIM"
 
-    return-object v0
-.end method
-
-.method public a(Ljava/lang/String;Lcom/estrongs/android/util/TypedMap;)Ljava/io/OutputStream;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public a(Ljava/lang/String;Z)Ljava/io/OutputStream;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public a(Lcom/estrongs/fs/h;Lcom/estrongs/fs/i;Lcom/estrongs/android/util/TypedMap;)Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/estrongs/fs/h;",
-            "Lcom/estrongs/fs/i;",
-            "Lcom/estrongs/android/util/TypedMap;",
-            ")",
-            "Ljava/util/List",
-            "<",
-            "Lcom/estrongs/fs/h;",
-            ">;"
-        }
-    .end annotation
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public b(Ljava/lang/String;)Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public c(Ljava/lang/String;)Z
-    .locals 1
+    invoke-virtual {p1, v0}, Lcom/estrongs/android/scanner/f;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
-    return v0
-.end method
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-.method public d(Ljava/lang/String;)Ljava/io/InputStream;
-    .locals 1
-
-    const/4 v0, 0x0
+    move-result-object v0
 
     return-object v0
+.end method
+
+.method public a(Lcom/estrongs/fs/h;)Z
+    .locals 2
+
+    invoke-interface {p1}, Lcom/estrongs/fs/h;->getPath()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bV(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "/dcim/"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    return v0
 .end method

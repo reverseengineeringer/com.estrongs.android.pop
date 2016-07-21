@@ -3,7 +3,6 @@ package com.estrongs.android.ftp;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
-import android.util.Log;
 import com.estrongs.android.pop.ftp.ESFtpShortcut;
 
 public class k
@@ -31,7 +30,7 @@ public class k
   public static void a(Context paramContext)
   {
     if (paramContext == null) {
-      Log.e("ESFtpServer", "Failed to closeFtpServer - context is null.");
+      com.estrongs.android.util.l.e("ESFtpServer", "Failed to closeFtpServer - context is null.");
     }
     try
     {

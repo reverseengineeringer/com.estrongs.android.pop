@@ -4,7 +4,7 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.widget.LinearLayout;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.d.e;
+import com.estrongs.android.ui.d.i;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -29,7 +29,7 @@ public class p
       d = bool;
       try
       {
-        b();
+        c();
         return;
       }
       catch (Exception paramFileExplorerActivity)
@@ -46,51 +46,51 @@ public class p
       return;
     }
     b.add(paramDragWindowView);
-    paramDragWindowView.a(paramInt);
+    paramDragWindowView.setPosition(paramInt);
   }
   
-  private void b()
+  private void c()
   {
     int j = 0;
     int i = 0;
     if (d)
     {
       localObject = new LinearLayout[4];
-      localObject[0] = ((LinearLayout)a.findViewById(2131362078));
-      localObject[1] = ((LinearLayout)a.findViewById(2131362082));
-      localObject[2] = ((LinearLayout)a.findViewById(2131362083));
-      localObject[3] = ((LinearLayout)a.findViewById(2131362187));
+      localObject[0] = ((LinearLayout)a.findViewById(2131624643));
+      localObject[1] = ((LinearLayout)a.findViewById(2131624647));
+      localObject[2] = ((LinearLayout)a.findViewById(2131624648));
+      localObject[3] = ((LinearLayout)a.findViewById(2131624752));
       while (i < localObject.length)
       {
-        a((DragWindowView)localObject[i].findViewById(2131362079), i * 3 + 0);
-        a((DragWindowView)localObject[i].findViewById(2131362080), i * 3 + 1);
-        a((DragWindowView)localObject[i].findViewById(2131362081), i * 3 + 2);
+        a((DragWindowView)localObject[i].findViewById(2131624644), i * 3 + 0);
+        a((DragWindowView)localObject[i].findViewById(2131624645), i * 3 + 1);
+        a((DragWindowView)localObject[i].findViewById(2131624646), i * 3 + 2);
         i += 1;
       }
     }
     Object localObject = new LinearLayout[2];
-    localObject[0] = ((LinearLayout)a.findViewById(2131362078));
-    localObject[1] = ((LinearLayout)a.findViewById(2131362082));
+    localObject[0] = ((LinearLayout)a.findViewById(2131624643));
+    localObject[1] = ((LinearLayout)a.findViewById(2131624647));
     i = j;
     while (i < localObject.length)
     {
-      a((DragWindowView)localObject[i].findViewById(2131362079), i * 6 + 0);
-      a((DragWindowView)localObject[i].findViewById(2131362080), i * 6 + 1);
-      a((DragWindowView)localObject[i].findViewById(2131362081), i * 6 + 2);
-      a((DragWindowView)localObject[i].findViewById(2131362088), i * 6 + 3);
-      a((DragWindowView)localObject[i].findViewById(2131362188), i * 6 + 4);
-      a((DragWindowView)localObject[i].findViewById(2131362189), i * 6 + 5);
+      a((DragWindowView)localObject[i].findViewById(2131624644), i * 6 + 0);
+      a((DragWindowView)localObject[i].findViewById(2131624645), i * 6 + 1);
+      a((DragWindowView)localObject[i].findViewById(2131624646), i * 6 + 2);
+      a((DragWindowView)localObject[i].findViewById(2131624653), i * 6 + 3);
+      a((DragWindowView)localObject[i].findViewById(2131624753), i * 6 + 4);
+      a((DragWindowView)localObject[i].findViewById(2131624754), i * 6 + 5);
       i += 1;
     }
     localObject = b.iterator();
     while (((Iterator)localObject).hasNext()) {
-      ((DragWindowView)((Iterator)localObject).next()).a(e);
+      ((DragWindowView)((Iterator)localObject).next()).setActivity(e);
     }
   }
   
   public void a()
   {
-    int k = e.c();
+    int k = b().c();
     int i = 0;
     int j;
     for (;;)
@@ -110,6 +110,11 @@ public class p
       ((DragWindowView)b.get(j)).setVisibility(4);
       j += 1;
     }
+  }
+  
+  public i b()
+  {
+    return e.au();
   }
 }
 

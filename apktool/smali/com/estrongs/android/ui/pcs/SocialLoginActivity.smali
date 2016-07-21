@@ -20,7 +20,7 @@
 .method protected a()V
     .locals 3
 
-    const v0, 0x7f0a02a5
+    const v0, 0x7f0e0494
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/pcs/SocialLoginActivity;->findViewById(I)Landroid/view/View;
 
@@ -28,23 +28,23 @@
 
     check-cast v0, Lcom/baidu/sapi2/SapiWebView;
 
-    invoke-static {p0, v0}, Lcom/estrongs/android/ui/pcs/ak;->a(Landroid/content/Context;Lcom/baidu/sapi2/SapiWebView;)V
+    invoke-static {p0, v0}, Lcom/estrongs/android/ui/pcs/an;->a(Landroid/content/Context;Lcom/baidu/sapi2/SapiWebView;)V
 
-    new-instance v1, Lcom/estrongs/android/ui/pcs/ao;
+    new-instance v1, Lcom/estrongs/android/ui/pcs/ar;
 
-    invoke-direct {v1, p0, v0}, Lcom/estrongs/android/ui/pcs/ao;-><init>(Lcom/estrongs/android/ui/pcs/SocialLoginActivity;Lcom/baidu/sapi2/SapiWebView;)V
+    invoke-direct {v1, p0, v0}, Lcom/estrongs/android/ui/pcs/ar;-><init>(Lcom/estrongs/android/ui/pcs/SocialLoginActivity;Lcom/baidu/sapi2/SapiWebView;)V
 
     invoke-virtual {v0, v1}, Lcom/baidu/sapi2/SapiWebView;->setOnBackCallback(Lcom/baidu/sapi2/SapiWebView$OnBackCallback;)V
 
-    new-instance v1, Lcom/estrongs/android/ui/pcs/ap;
+    new-instance v1, Lcom/estrongs/android/ui/pcs/as;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/pcs/ap;-><init>(Lcom/estrongs/android/ui/pcs/SocialLoginActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/pcs/as;-><init>(Lcom/estrongs/android/ui/pcs/SocialLoginActivity;)V
 
     invoke-virtual {v0, v1}, Lcom/baidu/sapi2/SapiWebView;->setOnFinishCallback(Lcom/baidu/sapi2/SapiWebView$OnFinishCallback;)V
 
-    new-instance v1, Lcom/estrongs/android/ui/pcs/aq;
+    new-instance v1, Lcom/estrongs/android/ui/pcs/at;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/pcs/aq;-><init>(Lcom/estrongs/android/ui/pcs/SocialLoginActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/pcs/at;-><init>(Lcom/estrongs/android/ui/pcs/SocialLoginActivity;)V
 
     invoke-virtual {v0, v1}, Lcom/baidu/sapi2/SapiWebView;->setAuthorizationListener(Lcom/baidu/sapi2/shell/listener/AuthorizationListener;)V
 
@@ -62,7 +62,7 @@
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030091
+    const v0, 0x7f030106
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/pcs/SocialLoginActivity;->setContentView(I)V
 

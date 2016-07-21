@@ -6,14 +6,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
+.method constructor <init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/view/q;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/view/q;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    iput-object p2, p0, Lcom/estrongs/android/pop/view/q;->a:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,22 +27,13 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 2
 
-    :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/q;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/q;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/navigation/s;->a(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/q;->a:Ljava/lang/String;
 
-    :goto_0
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->o(Ljava/lang/String;)V
+
     return-void
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-
-    goto :goto_0
 .end method

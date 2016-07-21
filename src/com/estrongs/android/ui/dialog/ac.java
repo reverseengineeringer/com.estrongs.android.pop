@@ -1,21 +1,18 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.pm.ApplicationInfo;
 import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.pop.ad;
 import java.util.List;
 
 class ac
-  implements View.OnClickListener
+  implements Runnable
 {
-  ac(ab paramab, ApplicationInfo paramApplicationInfo, String paramString) {}
+  ac(ab paramab, List paramList) {}
   
-  public void onClick(View paramView)
+  public void run()
   {
-    ad.a(c.c.mContext, a.packageName, b);
-    c.a.remove(a);
-    c.notifyDataSetChanged();
+    b.a.findViewById(2131624351).setVisibility(8);
+    b.a.d.a(a);
+    b.a.d.notifyDataSetChanged();
   }
 }
 

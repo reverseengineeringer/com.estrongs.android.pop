@@ -1,17 +1,15 @@
 package com.estrongs.android.ui.dialog;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.RadioButton;
+import com.estrongs.fs.impl.local.m;
 
 class av
-  implements View.OnClickListener
+  implements Runnable
 {
-  av(au paramau, ap paramap) {}
+  av(au paramau) {}
   
-  public void onClick(View paramView)
+  public void run()
   {
-    b.a.setChecked(true);
+    m.b(ar.a(a.a));
   }
 }
 

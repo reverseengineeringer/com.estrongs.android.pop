@@ -1,22 +1,21 @@
 .class Lcom/estrongs/android/pop/app/fr;
-.super Ljava/lang/Thread;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/a/ao;
-
-.field final synthetic b:Lcom/estrongs/android/pop/app/PopAudioPlayer;
+.field final synthetic a:Lcom/estrongs/android/pop/app/fq;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;Lcom/estrongs/android/pop/app/a/ao;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/fq;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/fr;->b:Lcom/estrongs/android/pop/app/PopAudioPlayer;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/fr;->a:Lcom/estrongs/android/pop/app/fq;
 
-    iput-object p2, p0, Lcom/estrongs/android/pop/app/fr;->a:Lcom/estrongs/android/pop/app/a/ao;
-
-    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -26,9 +25,11 @@
 .method public run()V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/fr;->a:Lcom/estrongs/android/pop/app/a/ao;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/fr;->a:Lcom/estrongs/android/pop/app/fq;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/ao;->i()V
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/fq;->b:Lcom/estrongs/android/pop/app/PopAudioPlayer;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->k()V
 
     return-void
 .end method

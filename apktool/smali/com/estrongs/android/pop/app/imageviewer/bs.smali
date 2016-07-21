@@ -2,22 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/pop/app/imageviewer/am;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Landroid/view/MotionEvent;
+.field final synthetic a:[Ljava/lang/CharSequence;
 
-.field final synthetic b:Lcom/estrongs/android/pop/app/imageviewer/br;
+.field final synthetic b:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/imageviewer/br;Landroid/view/MotionEvent;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;[Ljava/lang/CharSequence;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/imageviewer/bs;->b:Lcom/estrongs/android/pop/app/imageviewer/br;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/imageviewer/bs;->b:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
-    iput-object p2, p0, Lcom/estrongs/android/pop/app/imageviewer/bs;->a:Landroid/view/MotionEvent;
+    iput-object p2, p0, Lcom/estrongs/android/pop/app/imageviewer/bs;->a:[Ljava/lang/CharSequence;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,84 +26,57 @@
 
 
 # virtual methods
-.method public a(IF)V
-    .locals 3
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 4
 
-    const/4 v2, 0x1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bs;->a:[Ljava/lang/CharSequence;
 
-    if-nez p1, :cond_0
+    aget-object v0, v0, p2
 
-    const/high16 v0, 0x41200000    # 10.0f
+    invoke-static {v0}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/Object;)I
 
-    cmpl-float v0, p2, v0
+    move-result v0
 
-    if-gtz v0, :cond_1
+    int-to-long v0, v0
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v2, v0, v2
+
+    if-lez v2, :cond_0
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/imageviewer/bs;->b:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+
+    iget-wide v2, v2, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->q:J
+
+    cmp-long v2, v2, v0
+
+    if-eqz v2, :cond_0
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/imageviewer/bs;->b:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+
+    iput-wide v0, v2, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->q:J
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bs;->b:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->u(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string v1, "slide_setting_interval"
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/imageviewer/bs;->b:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+
+    iget-wide v2, v2, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->q:J
+
+    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     :cond_0
-    if-ne p1, v2, :cond_2
-
-    const/high16 v0, -0x3ee00000    # -10.0f
-
-    cmpg-float v0, p2, v0
-
-    if-gez v0, :cond_2
-
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bs;->b:Lcom/estrongs/android/pop/app/imageviewer/br;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/br;->d:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->i:Lcom/estrongs/android/widget/RealViewSwitcher;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/bs;->a:Landroid/view/MotionEvent;
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/RealViewSwitcher;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bs;->b:Lcom/estrongs/android/pop/app/imageviewer/br;
-
-    iput-boolean v2, v0, Lcom/estrongs/android/pop/app/imageviewer/br;->a:Z
-
-    :cond_2
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bs;->b:Lcom/estrongs/android/pop/app/imageviewer/br;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/br;->d:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
-
-    iget v0, v0, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->c:I
-
-    if-nez v0, :cond_3
-
-    if-eqz p1, :cond_4
-
-    :cond_3
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bs;->b:Lcom/estrongs/android/pop/app/imageviewer/br;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/br;->d:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
-
-    iget v0, v0, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->c:I
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/bs;->b:Lcom/estrongs/android/pop/app/imageviewer/br;
-
-    iget-object v1, v1, Lcom/estrongs/android/pop/app/imageviewer/br;->d:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
-
-    iget-object v1, v1, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->e:Lcom/estrongs/android/pop/app/imageviewer/gallery/f;
-
-    invoke-interface {v1}, Lcom/estrongs/android/pop/app/imageviewer/gallery/f;->b()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x1
-
-    if-ne v0, v1, :cond_5
-
-    if-ne p1, v2, :cond_5
-
-    :cond_4
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bs;->b:Lcom/estrongs/android/pop/app/imageviewer/br;
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, Lcom/estrongs/android/pop/app/imageviewer/br;->a:Z
-
-    :cond_5
     return-void
 .end method

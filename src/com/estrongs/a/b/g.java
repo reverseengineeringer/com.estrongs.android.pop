@@ -1,13 +1,13 @@
 package com.estrongs.a.b;
 
-import com.estrongs.fs.b.bl;
+import com.estrongs.fs.b.bn;
 
 class g
   extends n
 {
-  g(e parame, bl parambl)
+  g(e parame, bn parambn)
   {
-    super(a, parambl);
+    super(a, parambn);
   }
   
   public void run()

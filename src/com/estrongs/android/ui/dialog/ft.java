@@ -1,27 +1,28 @@
 package com.estrongs.android.ui.dialog;
 
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
-import android.widget.EditText;
+import android.content.Context;
+import android.content.res.Resources;
+import android.view.LayoutInflater;
+import android.widget.GridView;
+import android.widget.LinearLayout;
+import com.estrongs.android.pop.esclasses.k;
+import com.estrongs.android.ui.adapter.d;
 
-class ft
-  implements CompoundButton.OnCheckedChangeListener
+public class ft
+  extends ci
 {
-  ft(fs paramfs) {}
+  private static ft a = null;
+  private LinearLayout b;
   
-  public void onCheckedChanged(CompoundButton paramCompoundButton, boolean paramBoolean)
+  public ft(Context paramContext)
   {
-    if (fs.a(a).isChecked())
-    {
-      fs.b(a).setEnabled(false);
-      fs.c(a).setEnabled(false);
-      fs.d(a).setEnabled(false);
-      return;
-    }
-    fs.b(a).setEnabled(true);
-    fs.c(a).setEnabled(true);
-    fs.d(a).setEnabled(true);
+    super(paramContext);
+    setTitle(mContext.getResources().getString(2131230867));
+    b = ((LinearLayout)k.a(mContext).inflate(2130903467, null));
+    setContentView(b);
+    paramContext = (GridView)b.findViewById(2131625655);
+    paramContext.setAdapter(new d(mContext));
+    paramContext.setOnItemClickListener(new fu(this));
   }
 }
 

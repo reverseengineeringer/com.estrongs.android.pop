@@ -1,18 +1,17 @@
 package android.support.v4.view;
 
-import android.view.VelocityTracker;
+import android.view.LayoutInflater;
 
 class aq
-  implements ar
 {
-  public float a(VelocityTracker paramVelocityTracker, int paramInt)
+  static void a(LayoutInflater paramLayoutInflater, ar paramar)
   {
-    return as.a(paramVelocityTracker, paramInt);
-  }
-  
-  public float b(VelocityTracker paramVelocityTracker, int paramInt)
-  {
-    return as.b(paramVelocityTracker, paramInt);
+    if (paramar != null) {}
+    for (paramar = new ap(paramar);; paramar = null)
+    {
+      paramLayoutInflater.setFactory2(paramar);
+      return;
+    }
   }
 }
 

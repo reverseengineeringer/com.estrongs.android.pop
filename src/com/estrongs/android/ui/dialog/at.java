@@ -1,15 +1,16 @@
 package com.estrongs.android.ui.dialog;
 
-import com.estrongs.fs.impl.local.l;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class at
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  at(as paramas) {}
+  at(ar paramar) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    l.b(ap.a(a.a));
+    paramDialogInterface.dismiss();
   }
 }
 

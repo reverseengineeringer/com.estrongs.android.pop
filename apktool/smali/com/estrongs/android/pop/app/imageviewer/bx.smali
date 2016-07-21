@@ -1,21 +1,22 @@
 .class Lcom/estrongs/android/pop/app/imageviewer/bx;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.super Ljava/lang/Thread;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+.field final synthetic a:Lcom/estrongs/android/pop/app/imageviewer/gallery/e;
+
+.field final synthetic b:Lcom/estrongs/android/pop/app/imageviewer/bw;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/imageviewer/bw;Lcom/estrongs/android/pop/app/imageviewer/gallery/e;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/imageviewer/bx;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/imageviewer/bx;->b:Lcom/estrongs/android/pop/app/imageviewer/bw;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lcom/estrongs/android/pop/app/imageviewer/bx;->a:Lcom/estrongs/android/pop/app/imageviewer/gallery/e;
+
+    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
     return-void
 .end method
@@ -23,33 +24,89 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 4
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bx;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bx;->b:Lcom/estrongs/android/pop/app/imageviewer/bw;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/bw;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
     iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->e:Lcom/estrongs/android/pop/app/imageviewer/gallery/f;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/bx;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/bx;->b:Lcom/estrongs/android/pop/app/imageviewer/bw;
+
+    iget-object v1, v1, Lcom/estrongs/android/pop/app/imageviewer/bw;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
     iget v1, v1, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->c:I
 
-    invoke-interface {v0, v1}, Lcom/estrongs/android/pop/app/imageviewer/gallery/f;->a(I)Lcom/estrongs/android/pop/app/imageviewer/gallery/e;
+    invoke-interface {v0, v1}, Lcom/estrongs/android/pop/app/imageviewer/gallery/f;->b(I)Z
 
-    move-result-object v0
+    move-result v0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/bx;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+    if-eqz v0, :cond_0
 
-    invoke-static {v1}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->f(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)Lcom/estrongs/android/pop/app/imageviewer/a;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bx;->b:Lcom/estrongs/android/pop/app/imageviewer/bw;
 
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/app/imageviewer/a;->b(Lcom/estrongs/android/pop/app/imageviewer/gallery/e;)V
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/bw;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
     new-instance v1, Lcom/estrongs/android/pop/app/imageviewer/by;
 
-    invoke-direct {v1, p0, v0}, Lcom/estrongs/android/pop/app/imageviewer/by;-><init>(Lcom/estrongs/android/pop/app/imageviewer/bx;Lcom/estrongs/android/pop/app/imageviewer/gallery/e;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/imageviewer/by;-><init>(Lcom/estrongs/android/pop/app/imageviewer/bx;)V
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/imageviewer/by;->start()V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->runOnUiThread(Ljava/lang/Runnable;)V
 
+    :goto_0
     return-void
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bx;->b:Lcom/estrongs/android/pop/app/imageviewer/bw;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/bw;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/imageviewer/bx;->a:Lcom/estrongs/android/pop/app/imageviewer/gallery/e;
+
+    invoke-interface {v2}, Lcom/estrongs/android/pop/app/imageviewer/gallery/e;->d()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/imageviewer/bx;->b:Lcom/estrongs/android/pop/app/imageviewer/bw;
+
+    iget-object v2, v2, Lcom/estrongs/android/pop/app/imageviewer/bw;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+
+    const v3, 0x7f08049a
+
+    invoke-virtual {v2, v3}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+
+    goto :goto_0
 .end method

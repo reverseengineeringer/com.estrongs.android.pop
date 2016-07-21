@@ -1,168 +1,86 @@
 .class public Lcom/estrongs/android/ui/a/a;
 .super Ljava/lang/Object;
 
-
-# instance fields
-.field a:Landroid/graphics/drawable/Drawable;
-
-.field b:Ljava/lang/String;
-
-.field public c:Ljava/lang/String;
-
-.field public d:Landroid/view/View$OnClickListener;
-
-.field public e:Z
-
-.field public f:Z
-
-.field public g:Ljava/lang/String;
-
-.field public h:Landroid/widget/CompoundButton$OnCheckedChangeListener;
-
-.field public i:Landroid/view/View$OnClickListener;
-
-.field private j:Ljava/lang/String;
-
-.field private k:Landroid/content/Intent;
-
-.field private l:I
+# interfaces
+.implements Landroid/view/animation/Interpolator;
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/drawable/Drawable;Ljava/lang/String;Landroid/view/View$OnClickListener;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, p2, p3, v0}, Lcom/estrongs/android/ui/a/a;-><init>(Landroid/graphics/drawable/Drawable;Ljava/lang/String;Landroid/view/View$OnClickListener;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/graphics/drawable/Drawable;Ljava/lang/String;Landroid/view/View$OnClickListener;Ljava/lang/String;)V
-    .locals 2
-
-    const/4 v1, 0x0
+.method public constructor <init>()V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/estrongs/android/ui/a/a;->e:Z
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/estrongs/android/ui/a/a;->f:Z
-
-    iput-object v1, p0, Lcom/estrongs/android/ui/a/a;->g:Ljava/lang/String;
-
-    iput-object v1, p0, Lcom/estrongs/android/ui/a/a;->k:Landroid/content/Intent;
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lcom/estrongs/android/ui/a/a;->l:I
-
-    iput-object p1, p0, Lcom/estrongs/android/ui/a/a;->a:Landroid/graphics/drawable/Drawable;
-
-    iput-object p2, p0, Lcom/estrongs/android/ui/a/a;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lcom/estrongs/android/ui/a/a;->d:Landroid/view/View$OnClickListener;
-
-    iput-object p4, p0, Lcom/estrongs/android/ui/a/a;->j:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/String;Landroid/view/View$OnClickListener;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, p2, p4, v0}, Lcom/estrongs/android/ui/a/a;-><init>(Landroid/graphics/drawable/Drawable;Ljava/lang/String;Landroid/view/View$OnClickListener;Ljava/lang/String;)V
-
-    iput-object p3, p0, Lcom/estrongs/android/ui/a/a;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(I)Lcom/estrongs/android/ui/a/a;
-    .locals 0
+.method public getInterpolation(F)F
+    .locals 8
 
-    iput p1, p0, Lcom/estrongs/android/ui/a/a;->l:I
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    return-object p0
-.end method
+    const/4 v0, 0x0
 
-.method public a(Landroid/content/Intent;)Lcom/estrongs/android/ui/a/a;
-    .locals 0
+    cmpl-float v2, p1, v0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/a/a;->k:Landroid/content/Intent;
+    if-nez v2, :cond_0
 
-    return-object p0
-.end method
-
-.method public a(Landroid/view/View$OnClickListener;)Lcom/estrongs/android/ui/a/a;
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/ui/a/a;->i:Landroid/view/View$OnClickListener;
-
-    return-object p0
-.end method
-
-.method public a(Landroid/widget/CompoundButton$OnCheckedChangeListener;)Lcom/estrongs/android/ui/a/a;
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/ui/a/a;->h:Landroid/widget/CompoundButton$OnCheckedChangeListener;
-
-    return-object p0
-.end method
-
-.method public a(Ljava/lang/String;)Lcom/estrongs/android/ui/a/a;
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/ui/a/a;->j:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public a(Z)Lcom/estrongs/android/ui/a/a;
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/estrongs/android/ui/a/a;->f:Z
-
-    return-object p0
-.end method
-
-.method public a()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
+    :goto_0
     return v0
-.end method
 
-.method public b()Ljava/lang/String;
-    .locals 1
+    :cond_0
+    cmpl-float v0, p1, v1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/a/a;->j:Ljava/lang/String;
+    if-nez v0, :cond_1
 
-    return-object v0
-.end method
+    move v0, v1
 
-.method public c()Landroid/content/Intent;
-    .locals 1
+    goto :goto_0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/a/a;->k:Landroid/content/Intent;
+    :cond_1
+    const v0, 0x3e99999a    # 0.3f
 
-    return-object v0
-.end method
+    const/high16 v1, 0x40800000    # 4.0f
 
-.method public d()I
-    .locals 1
+    div-float v1, v0, v1
 
-    iget v0, p0, Lcom/estrongs/android/ui/a/a;->l:I
+    const-wide/high16 v2, 0x4000000000000000L    # 2.0
 
-    return v0
+    const/high16 v4, -0x3ee00000    # -10.0f
+
+    mul-float/2addr v4, p1
+
+    float-to-double v4, v4
+
+    invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v2
+
+    sub-float v1, p1, v1
+
+    float-to-double v4, v1
+
+    const-wide v6, 0x401921fb54442d18L    # 6.283185307179586
+
+    float-to-double v0, v0
+
+    div-double v0, v6, v0
+
+    mul-double/2addr v0, v4
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v0
+
+    mul-double/2addr v0, v2
+
+    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
+
+    add-double/2addr v0, v2
+
+    double-to-float v0, v0
+
+    goto :goto_0
 .end method

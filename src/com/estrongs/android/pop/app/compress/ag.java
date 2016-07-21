@@ -1,6 +1,6 @@
 package com.estrongs.android.pop.app.compress;
 
-import com.estrongs.android.view.e;
+import com.estrongs.android.view.g;
 import java.io.File;
 
 class ag
@@ -10,7 +10,7 @@ class ag
   
   public void run()
   {
-    File localFile = l.s(a.f).q();
+    File localFile = l.s(a.f).r();
     l.s(a.f).a(new ah(this, localFile));
   }
 }

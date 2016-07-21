@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/view/a/b;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/e/cp;
+.field final synthetic a:Lcom/estrongs/android/ui/e/df;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/cp;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/df;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/dg;->a:Lcom/estrongs/android/ui/e/cp;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/dg;->a:Lcom/estrongs/android/ui/e/df;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,124 +22,193 @@
 
 
 # virtual methods
-.method public a(Lcom/estrongs/android/ui/e/co;)Z
-    .locals 3
+.method public run()V
+    .locals 5
 
     const/4 v0, 0x0
 
-    const/4 v1, 0x1
+    iget-object v1, p0, Lcom/estrongs/android/ui/e/dg;->a:Lcom/estrongs/android/ui/e/df;
 
-    iget-boolean v2, p1, Lcom/estrongs/android/ui/e/co;->z:Z
+    iget-object v1, v1, Lcom/estrongs/android/ui/e/df;->b:Lcom/estrongs/android/ui/dialog/ProgressDialog;
 
-    if-eqz v2, :cond_1
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/dialog/ProgressDialog;->dismiss()V
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/e/dg;->a:Lcom/estrongs/android/ui/e/df;
+
+    iget-object v1, v1, Lcom/estrongs/android/ui/e/df;->c:Lcom/estrongs/fs/b/w;
+
+    invoke-virtual {v1}, Lcom/estrongs/fs/b/w;->a()Ljava/util/List;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_5
+
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-lez v1, :cond_5
+
+    new-instance v3, Landroid/content/Intent;
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/e/dg;->a:Lcom/estrongs/android/ui/e/df;
+
+    iget-object v1, v1, Lcom/estrongs/android/ui/e/df;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    const-class v4, Lcom/estrongs/android/pop/app/PopAudioPlayer;
+
+    invoke-direct {v3, v1, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    new-array v4, v1, [Ljava/lang/String;
+
+    move v1, v0
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-ge v1, v0, :cond_1
+
+    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->aJ(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->cd(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v4, v1
+
+    :goto_1
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_0
 
     :cond_0
-    :goto_0
-    return v0
+    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    aput-object v0, v4, v1
+
+    goto :goto_1
 
     :cond_1
-    iget-boolean v2, p1, Lcom/estrongs/android/ui/e/co;->e:Z
+    const-string v0, "hasplaylist"
 
-    if-eqz v2, :cond_2
+    const/4 v1, 0x1
 
-    iget-boolean v2, p1, Lcom/estrongs/android/ui/e/co;->P:Z
+    invoke-virtual {v3, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    if-nez v2, :cond_2
+    invoke-static {v4}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->b([Ljava/lang/String;)V
 
-    move v0, v1
+    const-string v0, "isadd"
 
-    goto :goto_0
+    iget-object v1, p0, Lcom/estrongs/android/ui/e/dg;->a:Lcom/estrongs/android/ui/e/df;
+
+    iget-boolean v1, v1, Lcom/estrongs/android/ui/e/df;->d:Z
+
+    invoke-virtual {v3, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/dg;->a:Lcom/estrongs/android/ui/e/df;
+
+    iget-boolean v0, v0, Lcom/estrongs/android/ui/e/df;->e:Z
+
+    if-eqz v0, :cond_2
+
+    const-string v0, "Chromecast"
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/e/dg;->a:Lcom/estrongs/android/ui/e/df;
+
+    iget-boolean v1, v1, Lcom/estrongs/android/ui/e/df;->e:Z
+
+    invoke-virtual {v3, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     :cond_2
-    iget-boolean v2, p1, Lcom/estrongs/android/ui/e/co;->h:Z
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/dg;->a:Lcom/estrongs/android/ui/e/df;
 
-    if-eqz v2, :cond_3
+    iget-boolean v0, v0, Lcom/estrongs/android/ui/e/df;->d:Z
 
-    iget v2, p1, Lcom/estrongs/android/ui/e/co;->F:I
+    if-eqz v0, :cond_4
 
-    if-ne v2, v1, :cond_3
+    sget-object v0, Lcom/estrongs/android/pop/app/AudioPlayerService;->b:Lcom/estrongs/android/pop/app/AudioPlayerService;
 
-    iget-boolean v2, p1, Lcom/estrongs/android/ui/e/co;->G:Z
+    if-nez v0, :cond_3
 
-    if-eqz v2, :cond_3
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/dg;->a:Lcom/estrongs/android/ui/e/df;
 
-    move v0, v1
+    iget-object v0, v0, Lcom/estrongs/android/ui/e/df;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    goto :goto_0
+    invoke-virtual {v0, v3}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->startActivity(Landroid/content/Intent;)V
+
+    :goto_2
+    return-void
 
     :cond_3
-    iget-boolean v2, p1, Lcom/estrongs/android/ui/e/co;->f:Z
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/dg;->a:Lcom/estrongs/android/ui/e/df;
 
-    if-nez v2, :cond_4
+    iget-object v0, v0, Lcom/estrongs/android/ui/e/df;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    iget-boolean v2, p1, Lcom/estrongs/android/ui/e/co;->x:Z
+    const-class v1, Lcom/estrongs/android/pop/app/AudioPlayerService;
 
-    if-eqz v2, :cond_5
+    invoke-virtual {v3, v0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/dg;->a:Lcom/estrongs/android/ui/e/df;
+
+    iget-object v0, v0, Lcom/estrongs/android/ui/e/df;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    invoke-virtual {v0, v3}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+
+    goto :goto_2
 
     :cond_4
-    iget-boolean v2, p1, Lcom/estrongs/android/ui/e/co;->d:Z
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/dg;->a:Lcom/estrongs/android/ui/e/df;
 
-    if-nez v2, :cond_5
+    iget-object v0, v0, Lcom/estrongs/android/ui/e/df;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    iget v2, p1, Lcom/estrongs/android/ui/e/co;->F:I
+    invoke-virtual {v0, v3}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->startActivity(Landroid/content/Intent;)V
 
-    if-ne v2, v1, :cond_5
-
-    iget-boolean v2, p1, Lcom/estrongs/android/ui/e/co;->G:Z
-
-    if-eqz v2, :cond_5
-
-    move v0, v1
-
-    goto :goto_0
+    goto :goto_2
 
     :cond_5
-    iget-boolean v2, p1, Lcom/estrongs/android/ui/e/co;->m:Z
+    iget-object v1, p0, Lcom/estrongs/android/ui/e/dg;->a:Lcom/estrongs/android/ui/e/df;
 
-    if-nez v2, :cond_6
+    iget-object v1, v1, Lcom/estrongs/android/ui/e/df;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    iget-boolean v2, p1, Lcom/estrongs/android/ui/e/co;->A:Z
+    iget-object v2, p0, Lcom/estrongs/android/ui/e/dg;->a:Lcom/estrongs/android/ui/e/df;
 
-    if-eqz v2, :cond_7
+    iget-object v2, v2, Lcom/estrongs/android/ui/e/df;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    :cond_6
-    move v0, v1
+    const v3, 0x7f08046b
 
-    goto :goto_0
+    invoke-virtual {v2, v3}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->getText(I)Ljava/lang/CharSequence;
 
-    :cond_7
-    iget-boolean v2, p1, Lcom/estrongs/android/ui/e/co;->i:Z
+    move-result-object v2
 
-    if-nez v2, :cond_8
+    invoke-static {v1, v2, v0}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
-    iget-boolean v2, p1, Lcom/estrongs/android/ui/e/co;->j:Z
-
-    if-nez v2, :cond_8
-
-    iget-boolean v2, p1, Lcom/estrongs/android/ui/e/co;->k:Z
-
-    if-eqz v2, :cond_9
-
-    :cond_8
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_9
-    iget-boolean v2, p1, Lcom/estrongs/android/ui/e/co;->p:Z
-
-    if-nez v2, :cond_a
-
-    iget-boolean v2, p1, Lcom/estrongs/android/ui/e/co;->q:Z
-
-    if-eqz v2, :cond_0
-
-    :cond_a
-    iget-boolean v2, p1, Lcom/estrongs/android/ui/e/co;->G:Z
-
-    if-eqz v2, :cond_0
-
-    move v0, v1
-
-    goto :goto_0
+    goto :goto_2
 .end method

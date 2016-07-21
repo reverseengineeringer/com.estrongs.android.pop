@@ -1,22 +1,13 @@
 package com.estrongs.android.pop.utils;
 
-public class cx
+class cx
+  implements Runnable
 {
-  public String a;
-  public String b;
-  public String c;
-  public String d;
-  public String e;
+  cx(cv paramcv) {}
   
-  public cx() {}
-  
-  public cx(String paramString1, String paramString2, String paramString3, String paramString4, String paramString5)
+  public void run()
   {
-    a = paramString1;
-    b = paramString2;
-    d = paramString3;
-    c = paramString4;
-    e = paramString5;
+    cv.a(a);
   }
 }
 

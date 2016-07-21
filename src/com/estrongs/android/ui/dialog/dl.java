@@ -1,28 +1,75 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.content.Context;
+import android.view.LayoutInflater;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import com.estrongs.android.ui.view.ag;
+import android.widget.LinearLayout;
+import com.estrongs.android.pop.esclasses.k;
 
-class dl
-  implements DialogInterface.OnClickListener
+public class dl
 {
-  dl(dj paramdj) {}
+  private ci a;
+  private Context b;
+  private do c;
+  private EditText d;
+  private CheckBox e;
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  private dl(Context paramContext)
   {
-    String str = dj.a(a).getEditableText().toString();
-    if ((str.equals("")) && (dj.b(a).getVisibility() != 8)) {
-      ag.a(dj.c(a), 2131428598, 0);
-    }
-    do
+    b = paramContext;
+    b();
+  }
+  
+  public dl(Context paramContext, String paramString1, String paramString2)
+  {
+    this(paramContext, paramString1, paramString2, true);
+  }
+  
+  public dl(Context paramContext, String paramString1, String paramString2, boolean paramBoolean)
+  {
+    this(paramContext);
+    b(paramString1);
+    a(paramString2);
+    paramContext = e;
+    if (paramBoolean) {}
+    for (int i = 0;; i = 8)
     {
+      paramContext.setVisibility(i);
       return;
-      paramDialogInterface.dismiss();
-    } while (dj.d(a) == null);
-    dj.d(a).a(str, dj.b(a).isChecked());
+    }
+  }
+  
+  private void b()
+  {
+    LinearLayout localLinearLayout = (LinearLayout)k.a(b).inflate(2130903191, null);
+    d = ((EditText)localLinearLayout.findViewById(2131624658));
+    a = new cv(b).a(localLinearLayout).b(2131231270, new dn(this)).c(2131231265, new dm(this)).b();
+    e = ((CheckBox)localLinearLayout.findViewById(2131624659));
+  }
+  
+  public void a()
+  {
+    a.show();
+  }
+  
+  public void a(do paramdo)
+  {
+    c = paramdo;
+  }
+  
+  public void a(String paramString)
+  {
+    if (d != null)
+    {
+      d.setText(paramString);
+      d.selectAll();
+    }
+  }
+  
+  public void b(String paramString)
+  {
+    a.setTitle(paramString);
   }
 }
 

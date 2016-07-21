@@ -27,7 +27,7 @@
 
 .field private l:Z
 
-.field private m:Lcom/estrongs/android/util/y;
+.field private m:Lcom/estrongs/android/util/aa;
 
 .field private n:Ljava/lang/String;
 
@@ -175,31 +175,7 @@
     return-object v1
 .end method
 
-.method static synthetic a(Lcom/estrongs/android/ui/g/c;)Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/estrongs/android/ui/g/c;->o:Z
-
-    return v0
-.end method
-
-.method static synthetic a(Lcom/estrongs/android/ui/g/c;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/estrongs/android/ui/g/c;->k:Z
-
-    return p1
-.end method
-
-.method static synthetic b(Lcom/estrongs/android/ui/g/c;)Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/g/c;->n:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public static b(Ljava/lang/String;)Ljava/util/List;
+.method public static a(Ljava/lang/String;)Ljava/util/List;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -441,6 +417,30 @@
     goto :goto_3
 .end method
 
+.method static synthetic a(Lcom/estrongs/android/ui/g/c;)Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/estrongs/android/ui/g/c;->o:Z
+
+    return v0
+.end method
+
+.method static synthetic a(Lcom/estrongs/android/ui/g/c;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/estrongs/android/ui/g/c;->k:Z
+
+    return p1
+.end method
+
+.method static synthetic b(Lcom/estrongs/android/ui/g/c;)Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/g/c;->n:Ljava/lang/String;
+
+    return-object v0
+.end method
+
 .method static synthetic b(Lcom/estrongs/android/ui/g/c;Z)Z
     .locals 0
 
@@ -474,7 +474,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->b(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->b(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -617,43 +617,35 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/estrongs/android/util/y;
+    new-instance v1, Lcom/estrongs/android/util/aa;
 
     iget-object v2, p0, Lcom/estrongs/android/ui/g/c;->g:Ljava/lang/String;
 
-    invoke-direct {v1, v2}, Lcom/estrongs/android/util/y;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Lcom/estrongs/android/util/aa;-><init>(Ljava/lang/String;)V
 
-    iput-object v1, p0, Lcom/estrongs/android/ui/g/c;->m:Lcom/estrongs/android/util/y;
+    iput-object v1, p0, Lcom/estrongs/android/ui/g/c;->m:Lcom/estrongs/android/util/aa;
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/g/c;->m:Lcom/estrongs/android/util/y;
+    iget-object v1, p0, Lcom/estrongs/android/ui/g/c;->m:Lcom/estrongs/android/util/aa;
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/util/y;->a(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/util/aa;->a(Ljava/lang/String;)V
 
     new-instance v0, Lcom/estrongs/android/ui/g/e;
 
     invoke-direct {v0, p0, p2, p1}, Lcom/estrongs/android/ui/g/e;-><init>(Lcom/estrongs/android/ui/g/c;Landroid/os/Handler;Landroid/content/Context;)V
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/g/c;->m:Lcom/estrongs/android/util/y;
+    iget-object v1, p0, Lcom/estrongs/android/ui/g/c;->m:Lcom/estrongs/android/util/aa;
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/util/y;->a(Lcom/estrongs/android/util/ab;)V
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/util/aa;->a(Lcom/estrongs/android/util/af;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/g/c;->m:Lcom/estrongs/android/util/y;
+    iget-object v0, p0, Lcom/estrongs/android/ui/g/c;->m:Lcom/estrongs/android/util/aa;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/util/y;->c()V
+    invoke-virtual {v0}, Lcom/estrongs/android/util/aa;->c()V
 
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/estrongs/android/ui/g/c;->l:Z
 
     goto :goto_0
-.end method
-
-.method public a(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/ui/g/c;->g:Ljava/lang/String;
-
-    return-void
 .end method
 
 .method public b()Ljava/lang/String;
@@ -752,21 +744,21 @@
 
     if-nez v1, :cond_0
 
-    new-instance v1, Lcom/estrongs/android/util/y;
+    new-instance v1, Lcom/estrongs/android/util/aa;
 
     iget-object v2, p0, Lcom/estrongs/android/ui/g/c;->d:Ljava/lang/String;
 
-    invoke-direct {v1, v2}, Lcom/estrongs/android/util/y;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Lcom/estrongs/android/util/aa;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/util/y;->a(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/util/aa;->a(Ljava/lang/String;)V
 
     new-instance v0, Lcom/estrongs/android/ui/g/d;
 
     invoke-direct {v0, p0}, Lcom/estrongs/android/ui/g/d;-><init>(Lcom/estrongs/android/ui/g/c;)V
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/util/y;->a(Lcom/estrongs/android/util/ab;)V
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/util/aa;->a(Lcom/estrongs/android/util/af;)V
 
-    invoke-virtual {v1}, Lcom/estrongs/android/util/y;->c()V
+    invoke-virtual {v1}, Lcom/estrongs/android/util/aa;->c()V
 
     const/4 v0, 0x1
 
@@ -1054,19 +1046,19 @@
 .method public h()V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/g/c;->m:Lcom/estrongs/android/util/y;
+    iget-object v0, p0, Lcom/estrongs/android/ui/g/c;->m:Lcom/estrongs/android/util/aa;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/g/c;->m:Lcom/estrongs/android/util/y;
+    iget-object v0, p0, Lcom/estrongs/android/ui/g/c;->m:Lcom/estrongs/android/util/aa;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/util/y;->a(Lcom/estrongs/android/util/ab;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/util/aa;->a(Lcom/estrongs/android/util/af;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/g/c;->m:Lcom/estrongs/android/util/y;
+    iget-object v0, p0, Lcom/estrongs/android/ui/g/c;->m:Lcom/estrongs/android/util/aa;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/util/y;->b()V
+    invoke-virtual {v0}, Lcom/estrongs/android/util/aa;->b()V
 
     const/4 v0, 0x0
 

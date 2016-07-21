@@ -8,11 +8,6 @@ import android.widget.ScrollView;
 public class ESGestureScrollView
   extends ScrollView
 {
-  public ESGestureScrollView(Context paramContext)
-  {
-    super(paramContext);
-  }
-  
   public ESGestureScrollView(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);

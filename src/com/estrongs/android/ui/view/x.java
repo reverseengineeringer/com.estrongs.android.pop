@@ -40,7 +40,7 @@ class x
       catch (Exception localException)
       {
         localException.printStackTrace();
-        localObject3 = CreateOAuthServiceProvider.c(a).obtainMessage(CreateOAuthServiceProvider.d);
+        localObject3 = CreateOAuthServiceProvider.c(a).obtainMessage(CreateOAuthServiceProvider.e);
         str = localException.getMessage();
         if ((localException instanceof UnknownHostException)) {
           break label162;
@@ -57,7 +57,7 @@ class x
       }
       label204:
       label342:
-      for (obj = a.getString(2131427916);; obj = null)
+      for (obj = a.getString(2131231827);; obj = null)
       {
         CreateOAuthServiceProvider.c(a).sendMessage((Message)localObject3);
         return;

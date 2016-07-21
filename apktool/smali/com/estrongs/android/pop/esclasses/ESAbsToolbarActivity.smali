@@ -26,9 +26,9 @@
 
     iput-boolean v0, p0, Lcom/estrongs/android/pop/esclasses/ESAbsToolbarActivity;->b:Z
 
-    new-instance v0, Lcom/estrongs/android/pop/esclasses/a;
+    new-instance v0, Lcom/estrongs/android/pop/esclasses/e;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/esclasses/a;-><init>(Lcom/estrongs/android/pop/esclasses/ESAbsToolbarActivity;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/esclasses/e;-><init>(Lcom/estrongs/android/pop/esclasses/ESAbsToolbarActivity;)V
 
     iput-object v0, p0, Lcom/estrongs/android/pop/esclasses/ESAbsToolbarActivity;->d:Lcom/estrongs/android/pop/app/a;
 
@@ -40,7 +40,7 @@
 .method protected abstract a()Landroid/view/View;
 .end method
 
-.method protected a(Lcom/estrongs/android/view/aw;)V
+.method protected a(Lcom/estrongs/android/view/cr;)V
     .locals 2
 
     invoke-static {}, Lcom/estrongs/android/pop/ac;->a()I
@@ -53,7 +53,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/esclasses/ESAbsToolbarActivity;->d:Lcom/estrongs/android/pop/app/a;
 
-    invoke-virtual {p1, v0}, Lcom/estrongs/android/view/aw;->a(Landroid/view/View$OnTouchListener;)V
+    invoke-virtual {p1, v0}, Lcom/estrongs/android/view/cr;->a(Landroid/view/View$OnTouchListener;)V
 
     :cond_0
     return-void
@@ -154,7 +154,7 @@
     return v0
 .end method
 
-.method protected d()Z
+.method public d()Z
     .locals 1
 
     iget-boolean v0, p0, Lcom/estrongs/android/pop/esclasses/ESAbsToolbarActivity;->a:Z
@@ -176,6 +176,14 @@
 .method protected abstract g()V
 .end method
 
+.method protected onCreate(Landroid/os/Bundle;)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onCreate(Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
 .method protected onPause()V
     .locals 2
 
@@ -192,7 +200,7 @@
     const/4 v0, 0x1
 
     :goto_0
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/ad;->e(Z)V
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/ad;->d(Z)V
 
     return-void
 
@@ -211,7 +219,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->t()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->u()Z
 
     move-result v0
 

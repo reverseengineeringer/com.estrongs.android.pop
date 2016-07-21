@@ -5,23 +5,23 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import com.estrongs.android.j.c;
 import com.estrongs.android.pop.FexApplication;
 import com.estrongs.android.pop.ac;
 import com.estrongs.android.pop.ad;
 import com.estrongs.android.pop.b;
-import com.estrongs.android.pop.esclasses.ESActivity;
+import com.estrongs.android.pop.esclasses.ESResourceActivity;
 import com.estrongs.android.pop.view.FileExplorerActivity;
 import com.estrongs.android.pop.z;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.a;
-import com.estrongs.android.util.am;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.ap;
 import com.estrongs.fs.util.j;
 import java.util.List;
 
 public class PerfNotifyActivity
-  extends ESActivity
+  extends ESResourceActivity
 {
-  private a a = null;
+  private c a = null;
   
   private String a(String paramString)
   {
@@ -34,7 +34,7 @@ public class PerfNotifyActivity
       if (!paramString.startsWith("/mnt/asec")) {
         break;
       }
-      paramString = am.a();
+      paramString = ap.a();
       paramString.remove(str);
     } while (paramString.size() <= 0);
     return (String)paramString.get(0);
@@ -65,16 +65,16 @@ public class PerfNotifyActivity
         }
         if (((applicationInfo.flags & 0x40000) != 0) && (str2.startsWith("/mnt/asec")))
         {
-          localObject1 = getString(2131428366);
+          localObject1 = getString(2131232376);
           if (localObject2[0] / localObject2[1] < 3L) {
             break;
           }
-          str2 = getString(2131428364, new Object[] { j.c(localObject2[1] * localObject2[2]) });
+          str2 = getString(2131231364, new Object[] { j.c(localObject2[1] * localObject2[2]) });
           localObject2 = str2;
           if (localObject1 != null) {
             localObject2 = (String)localObject1 + " " + str2;
           }
-          ag.a(this, (CharSequence)localObject2, 1);
+          ak.a(this, (CharSequence)localObject2, 1);
           return;
         }
       }
@@ -83,7 +83,7 @@ public class PerfNotifyActivity
         localException.printStackTrace();
         return;
       }
-      String str1 = getString(2131428365);
+      String str1 = getString(2131232377);
       continue;
       label180:
       str1 = null;
@@ -93,21 +93,19 @@ public class PerfNotifyActivity
   protected void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    a = a.a(this, false, "Shadow");
-    FileExplorerActivity.h(true);
+    a = c.a(this);
+    FileExplorerActivity.g(true);
   }
   
   protected void onPause()
   {
-    a.c();
     super.onPause();
   }
   
   protected void onResume()
   {
     super.onResume();
-    a.b();
-    if ((!z.aj) && (ad.a(FexApplication.a()).P())) {
+    if ((!z.aj) && (ad.a(FexApplication.a()).Q())) {
       a();
     }
     finish();

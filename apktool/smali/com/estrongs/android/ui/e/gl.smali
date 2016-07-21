@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/pop/spfs/dialog/FlickrPhotoPrivacyDialog$PrivacyOptionCallback;
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/fs/h;
-
-.field final synthetic b:Lcom/estrongs/android/ui/e/gj;
+.field final synthetic a:Lcom/estrongs/android/ui/e/cr;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/gj;Lcom/estrongs/fs/h;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/cr;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/gl;->b:Lcom/estrongs/android/ui/e/gj;
-
-    iput-object p2, p0, Lcom/estrongs/android/ui/e/gl;->a:Lcom/estrongs/fs/h;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/gl;->a:Lcom/estrongs/android/ui/e/cr;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,32 +22,78 @@
 
 
 # virtual methods
-.method public setPrivacty(Lcom/estrongs/android/util/TypedMap;Z)V
-    .locals 2
+.method public onMenuItemClick(Landroid/view/MenuItem;)Z
+    .locals 4
 
-    if-eqz p2, :cond_0
+    const/4 v3, 0x1
 
-    :goto_0
-    return-void
+    const/4 v2, 0x0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/gl;->a:Lcom/estrongs/android/ui/e/cr;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/cr;->a(Lcom/estrongs/android/ui/e/cr;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/gl;->a:Lcom/estrongs/android/ui/e/cr;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/cr;->b(Lcom/estrongs/android/ui/e/cr;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->getBaseContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const v1, 0x7f08033f
+
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     :cond_0
-    new-instance v1, Lcom/estrongs/android/pop/spfs/task/FlickrEditTask;
+    :goto_0
+    return v3
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/gl;->a:Lcom/estrongs/fs/h;
+    :cond_1
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    check-cast v0, Lcom/estrongs/android/pop/spfs/SPFileObject;
+    move-result v1
 
-    invoke-direct {v1, v0, p1}, Lcom/estrongs/android/pop/spfs/task/FlickrEditTask;-><init>(Lcom/estrongs/android/pop/spfs/SPFileObject;Lcom/estrongs/android/util/TypedMap;)V
+    if-ne v1, v3, :cond_0
 
-    new-instance v0, Lcom/estrongs/android/ui/e/gm;
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/e/gm;-><init>(Lcom/estrongs/android/ui/e/gl;)V
+    move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/spfs/task/FlickrEditTask;->addTaskStatusChangeListener(Lcom/estrongs/a/a/p;)V
+    check-cast v0, Lcom/estrongs/fs/h;
 
-    const/4 v0, 0x1
+    invoke-interface {v0}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/spfs/task/FlickrEditTask;->execute(Z)V
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/estrongs/fs/impl/local/i;->h(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_2
+    iget-object v1, p0, Lcom/estrongs/android/ui/e/gl;->a:Lcom/estrongs/android/ui/e/cr;
+
+    invoke-static {v1}, Lcom/estrongs/android/ui/e/cr;->b(Lcom/estrongs/android/ui/e/cr;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->d(Ljava/lang/String;)Lcom/estrongs/android/view/cr;
 
     goto :goto_0
 .end method

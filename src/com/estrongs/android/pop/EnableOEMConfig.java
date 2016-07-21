@@ -4,9 +4,10 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bd;
-import com.estrongs.android.view.aw;
+import com.estrongs.android.pop.app.ad.a;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bk;
+import com.estrongs.android.view.cr;
 
 public class EnableOEMConfig
   extends BroadcastReceiver
@@ -18,19 +19,23 @@ public class EnableOEMConfig
     try
     {
       b.a();
-      aw.ae();
-      am.e();
-      am.h();
+      cr.at();
+      ap.e();
+      ap.h();
       try
       {
-        if ((bd.l()) && ((paramContext.equals("android.intent.action.MEDIA_UNMOUNTED")) || (paramContext.equals("android.intent.action.MEDIA_BAD_REMOVAL"))))
+        if ((bk.l()) && ((paramContext.equals("android.intent.action.MEDIA_UNMOUNTED")) || (paramContext.equals("android.intent.action.MEDIA_BAD_REMOVAL"))))
         {
           paramContext = paramIntent.getData().getPath();
-          ad.a(FexApplication.a()).T(paramContext);
+          ad.a(FexApplication.a()).S(paramContext);
         }
-        return;
       }
-      catch (Exception paramContext) {}
+      catch (Exception paramContext)
+      {
+        for (;;) {}
+      }
+      a.a().a("oemconfig");
+      return;
     }
     catch (Exception localException)
     {

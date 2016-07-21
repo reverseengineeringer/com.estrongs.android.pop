@@ -1,6 +1,7 @@
 package com.estrongs.android.widget;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.os.Message;
@@ -19,7 +20,7 @@ public class ScaledImageView
   private Drawable a;
   private Handler b;
   private Handler c;
-  private bf d;
+  private bg d;
   private ImageView e;
   private LinearLayout f;
   private int g = -1;
@@ -46,18 +47,13 @@ public class ScaledImageView
     d();
   }
   
-  private void a(int paramInt)
-  {
-    e.setAlpha(paramInt);
-  }
-  
   private void d()
   {
     a = getBackground();
     e = new ESImageView(getContext());
     e.setScaleType(ImageView.ScaleType.FIT_XY);
     e.setBackgroundDrawable(a);
-    setBackgroundResource(2130837568);
+    setBackgroundResource(2130837692);
     setDrawingCacheEnabled(false);
     addView(e, new LinearLayout.LayoutParams(-1, -1));
     e();
@@ -65,8 +61,8 @@ public class ScaledImageView
   
   private void e()
   {
-    b = new bd(this);
-    c = new be(this);
+    b = new be(this);
+    c = new bf(this);
   }
   
   private void f()
@@ -85,7 +81,7 @@ public class ScaledImageView
     e.getLayoutParams().height = n;
     e.getLayoutParams().width = m;
     c();
-    a(a);
+    setImageDrawable(a);
     invalidate();
     g();
   }
@@ -115,6 +111,11 @@ public class ScaledImageView
     c.sendMessageDelayed(localMessage, 20L);
   }
   
+  private void setAlpha(int paramInt)
+  {
+    e.setAlpha(paramInt);
+  }
+  
   public void a()
   {
     g = -1;
@@ -128,18 +129,12 @@ public class ScaledImageView
       o.width = i;
       o.height = k;
     }
-    a(255);
+    setAlpha(255);
     f();
     if (d != null) {
       d.a();
     }
     d = null;
-  }
-  
-  public void a(Drawable paramDrawable)
-  {
-    e.setImageDrawable(paramDrawable);
-    a = paramDrawable;
   }
   
   public void b()
@@ -155,7 +150,7 @@ public class ScaledImageView
       o.width = j;
       o.height = l;
     }
-    a(255);
+    setAlpha(255);
     f();
     if (d != null) {
       d.a();
@@ -195,6 +190,43 @@ public class ScaledImageView
         i1 += 1;
       }
     }
+  }
+  
+  public LinearLayout getContainer()
+  {
+    return f;
+  }
+  
+  public ImageView getImageView()
+  {
+    return e;
+  }
+  
+  public void setContainer(LinearLayout paramLinearLayout)
+  {
+    f = paramLinearLayout;
+  }
+  
+  public void setDuration(int paramInt)
+  {
+    p = paramInt;
+  }
+  
+  public void setImageDrawable(Drawable paramDrawable)
+  {
+    e.setImageDrawable(paramDrawable);
+    a = paramDrawable;
+  }
+  
+  public void setImageResource(int paramInt)
+  {
+    a = getContext().getResources().getDrawable(paramInt);
+    e.setImageDrawable(a);
+  }
+  
+  public void setOnScaledListener(bg parambg)
+  {
+    d = parambg;
   }
 }
 

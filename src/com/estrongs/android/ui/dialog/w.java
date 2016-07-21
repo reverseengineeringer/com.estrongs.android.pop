@@ -1,13 +1,28 @@
 package com.estrongs.android.ui.dialog;
 
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.pop.utils.c;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import java.util.ArrayList;
+
 class w
-  extends Thread
+  implements View.OnClickListener
 {
-  w(v paramv) {}
+  w(u paramu, o paramo) {}
   
-  public void run()
+  public void onClick(View paramView)
   {
-    t.a(a.a);
+    b.a.b();
+    if ((u.a(b) instanceof FileExplorerActivity))
+    {
+      paramView = (FileExplorerActivity)u.b(b);
+      ArrayList localArrayList = new ArrayList();
+      localArrayList.add(b.a.a);
+      paramView.ag().a(localArrayList);
+      return;
+    }
+    u.a(b, b.a.a, u.c(b));
   }
 }
 

@@ -3,7 +3,7 @@ package com.estrongs.a.b;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import com.estrongs.android.util.ak;
+import com.estrongs.android.util.an;
 
 final class h
   extends BroadcastReceiver
@@ -12,7 +12,7 @@ final class h
   {
     paramContext = paramIntent.getAction();
     if (paramContext.equals("android.net.conn.CONNECTIVITY_CHANGE")) {
-      if (ak.b()) {
+      if (an.b()) {
         d.d();
       }
     }
@@ -26,7 +26,7 @@ final class h
         d.e();
         return;
       }
-    } while ((!paramContext.equals("android.intent.action.SCREEN_ON")) || (!ak.b()));
+    } while ((!paramContext.equals("android.intent.action.SCREEN_ON")) || (!an.b()));
     d.d();
   }
 }

@@ -26,7 +26,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->x()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->y()Ljava/lang/String;
 
     move-result-object v0
 
@@ -40,7 +40,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->z()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->A()Ljava/lang/String;
 
     move-result-object v0
 
@@ -537,7 +537,7 @@
 
     const-string v0, "view_local"
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->G(Ljava/lang/String;)I
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->I(Ljava/lang/String;)I
 
     move-result v1
 
@@ -671,9 +671,23 @@
     :cond_e
     const/16 v2, 0x1c
 
+    if-eq v1, v2, :cond_f
+
+    const/16 v2, 0x27
+
+    if-ne v1, v2, :cond_10
+
+    :cond_f
+    const-string v0, "view_compress"
+
+    goto :goto_0
+
+    :cond_10
+    const/16 v2, 0x28
+
     if-ne v1, v2, :cond_0
 
-    const-string v0, "view_compress"
+    const-string v0, "view_encrypt"
 
     goto :goto_0
 .end method
@@ -685,7 +699,7 @@
 
     if-eqz p0, :cond_0
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->ba(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->bl(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -698,7 +712,7 @@
     :cond_1
     sget-object v1, Lcom/estrongs/android/pop/view/utils/ac;->a:Ljava/lang/String;
 
-    invoke-static {v1, p0}, Lcom/estrongs/android/util/am;->e(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v1, p0}, Lcom/estrongs/android/util/ap;->e(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -706,7 +720,7 @@
 
     sget-object v1, Lcom/estrongs/android/pop/view/utils/ac;->b:Ljava/lang/String;
 
-    invoke-static {v1, p0}, Lcom/estrongs/android/util/am;->e(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v1, p0}, Lcom/estrongs/android/util/ap;->e(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -719,13 +733,33 @@
 .end method
 
 .method public static d(Ljava/lang/String;)Lcom/estrongs/android/pop/view/utils/ad;
-    .locals 2
+    .locals 4
 
-    const/4 v1, 0x0
+    const/4 v3, 0x0
+
+    const-string v0, "view_local"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     new-instance v0, Lcom/estrongs/android/pop/view/utils/ad;
 
-    invoke-direct {v0, p0, v1, v1, v1}, Lcom/estrongs/android/pop/view/utils/ad;-><init>(Ljava/lang/String;III)V
+    invoke-direct {v0, p0, v3, v3, v3}, Lcom/estrongs/android/pop/view/utils/ad;-><init>(Ljava/lang/String;III)V
 
+    :goto_0
     return-object v0
+
+    :cond_0
+    new-instance v0, Lcom/estrongs/android/pop/view/utils/ad;
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, p0, v3, v1, v2}, Lcom/estrongs/android/pop/view/utils/ad;-><init>(Ljava/lang/String;III)V
+
+    goto :goto_0
 .end method

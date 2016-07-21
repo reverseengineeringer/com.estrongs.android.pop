@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/navigation/a;
+.field final synthetic a:Lcom/estrongs/android/ui/navigation/i;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/navigation/a;)V
+.method constructor <init>(Lcom/estrongs/android/ui/navigation/i;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/navigation/k;->a:Lcom/estrongs/android/ui/navigation/a;
+    iput-object p1, p0, Lcom/estrongs/android/ui/navigation/k;->a:Lcom/estrongs/android/ui/navigation/i;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,52 +22,30 @@
 
 
 # virtual methods
-.method public onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 3
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 2
 
-    new-instance v0, Lcom/estrongs/android/ui/dialog/ct;
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/navigation/k;->a:Lcom/estrongs/android/ui/navigation/a;
+    iget-object v0, p0, Lcom/estrongs/android/ui/navigation/k;->a:Lcom/estrongs/android/ui/navigation/i;
 
-    invoke-static {v1}, Lcom/estrongs/android/ui/navigation/a;->b(Lcom/estrongs/android/ui/navigation/a;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    iget-object v0, v0, Lcom/estrongs/android/ui/navigation/i;->a:Lcom/estrongs/android/ui/navigation/h;
 
-    move-result-object v1
+    invoke-static {v0}, Lcom/estrongs/android/ui/navigation/h;->b(Lcom/estrongs/android/ui/navigation/h;)V
 
-    invoke-direct {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;-><init>(Landroid/content/Context;)V
+    iget-object v0, p0, Lcom/estrongs/android/ui/navigation/k;->a:Lcom/estrongs/android/ui/navigation/i;
 
-    const v1, 0x7f0b0314
+    iget-object v0, v0, Lcom/estrongs/android/ui/navigation/i;->a:Lcom/estrongs/android/ui/navigation/h;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->a(I)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    const v1, 0x7f0b0352
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->b(I)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-static {v0}, Lcom/estrongs/android/ui/navigation/h;->a(Lcom/estrongs/android/ui/navigation/h;)Landroid/os/Handler;
 
     move-result-object v0
 
-    const v1, 0x7f0b000c
+    new-instance v1, Lcom/estrongs/android/ui/navigation/l;
 
-    const/4 v2, 0x0
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/navigation/l;-><init>(Lcom/estrongs/android/ui/navigation/k;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    move-result-object v0
-
-    const v1, 0x7f0b000b
-
-    new-instance v2, Lcom/estrongs/android/ui/navigation/l;
-
-    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/navigation/l;-><init>(Lcom/estrongs/android/ui/navigation/k;)V
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ct;->c()Lcom/estrongs/android/ui/dialog/cg;
-
-    const/4 v0, 0x0
-
-    return v0
+    return-void
 .end method

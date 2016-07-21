@@ -3,10 +3,10 @@ package com.estrongs.android.pop.ftp;
 import android.content.Intent;
 import android.os.Bundle;
 import com.estrongs.android.ftp.k;
-import com.estrongs.android.pop.esclasses.ESActivity;
+import com.estrongs.android.pop.esclasses.ESResourceActivity;
 
 public class ESFtpShortcut
-  extends ESActivity
+  extends ESResourceActivity
 {
   protected void onCreate(Bundle paramBundle)
   {

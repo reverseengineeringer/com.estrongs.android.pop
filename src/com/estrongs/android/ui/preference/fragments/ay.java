@@ -7,51 +7,60 @@ import android.preference.Preference;
 import android.widget.EditText;
 import com.estrongs.android.pop.FexApplication;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.android.ui.view.ag;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.ui.view.ak;
 
 class ay
   implements DialogInterface.OnClickListener
 {
-  ay(PasswordPreferenceFragment paramPasswordPreferenceFragment, int paramInt) {}
+  ay(PasswordPreferenceFragment paramPasswordPreferenceFragment) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    Object localObject = (cg)paramDialogInterface;
-    String str = ((EditText)((cg)localObject).findViewById(2131362494)).getText().toString();
-    localObject = ((EditText)((cg)localObject).findViewById(2131362496)).getText().toString();
-    if ((str == null) || (str.length() == 0)) {
-      ag.a(b.getActivity(), 2131427999, 1);
+    Object localObject3 = (ci)paramDialogInterface;
+    String str = ((EditText)((ci)localObject3).findViewById(2131625227)).getText().toString();
+    Object localObject2 = ((EditText)((ci)localObject3).findViewById(2131625231)).getText().toString();
+    Object localObject1 = localObject2;
+    if (localObject2 == null) {
+      localObject1 = new String("");
+    }
+    localObject3 = ((EditText)((ci)localObject3).findViewById(2131625233)).getText().toString();
+    localObject2 = localObject3;
+    if (localObject3 == null) {
+      localObject2 = new String("");
+    }
+    localObject3 = ad.a(a.getActivity()).H();
+    if (!((String)localObject1).equals(localObject2))
+    {
+      ak.a(a.getActivity(), 2131231807, 1);
+      paramDialogInterface.dismiss();
+      return;
+    }
+    if (!str.equals(localObject3))
+    {
+      ak.a(a.getActivity(), 2131231784, 1);
+      paramDialogInterface.dismiss();
+      return;
+    }
+    if (((String)localObject1).length() > 0)
+    {
+      ad.a(a.getActivity()).x((String)localObject1);
+      ak.a(a.getActivity(), 2131231804, 1);
     }
     for (;;)
     {
       paramDialogInterface.dismiss();
       return;
-      if (str.equals(localObject)) {
-        break;
-      }
-      ag.a(b.getActivity(), 2131428000, 1);
-    }
-    ad.a(b.getActivity()).x(str);
-    if (a == 108)
-    {
-      PasswordPreferenceFragment.c(b).setChecked(true);
-      FexApplication.a().c(true);
-    }
-    for (;;)
-    {
-      PasswordPreferenceFragment.a(b).setEnabled(true);
-      break;
-      if (a == 111)
-      {
-        PasswordPreferenceFragment.d(b).setChecked(true);
-        FexApplication.a().d(true);
-      }
-      else if (a == 113)
-      {
-        PasswordPreferenceFragment.e(b).setChecked(true);
-        FexApplication.a().e(true);
-      }
+      ad.a(a.getActivity()).x((String)localObject1);
+      localObject1 = FexApplication.a();
+      PasswordPreferenceFragment.c(a).setChecked(false);
+      ((FexApplication)localObject1).c(false);
+      PasswordPreferenceFragment.d(a).setChecked(false);
+      ((FexApplication)localObject1).d(false);
+      PasswordPreferenceFragment.e(a).setChecked(false);
+      ((FexApplication)localObject1).e(false);
+      PasswordPreferenceFragment.a(a).setEnabled(false);
+      ak.a(a.getActivity(), 2131231911, 1);
     }
   }
 }

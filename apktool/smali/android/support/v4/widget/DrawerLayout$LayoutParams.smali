@@ -5,11 +5,11 @@
 # instance fields
 .field public a:I
 
-.field b:F
+.field private b:F
 
-.field c:Z
+.field private c:Z
 
-.field d:Z
+.field private d:I
 
 
 # direct methods
@@ -91,4 +91,64 @@
     iput v0, p0, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->a:I
 
     return-void
+.end method
+
+.method static synthetic a(Landroid/support/v4/widget/DrawerLayout$LayoutParams;)F
+    .locals 1
+
+    iget v0, p0, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->b:F
+
+    return v0
+.end method
+
+.method static synthetic a(Landroid/support/v4/widget/DrawerLayout$LayoutParams;F)F
+    .locals 0
+
+    iput p1, p0, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->b:F
+
+    return p1
+.end method
+
+.method static synthetic a(Landroid/support/v4/widget/DrawerLayout$LayoutParams;I)I
+    .locals 0
+
+    iput p1, p0, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->d:I
+
+    return p1
+.end method
+
+.method static synthetic a(Landroid/support/v4/widget/DrawerLayout$LayoutParams;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->c:Z
+
+    return p1
+.end method
+
+.method static synthetic b(Landroid/support/v4/widget/DrawerLayout$LayoutParams;)I
+    .locals 1
+
+    iget v0, p0, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->d:I
+
+    return v0
+.end method
+
+.method static synthetic b(Landroid/support/v4/widget/DrawerLayout$LayoutParams;I)I
+    .locals 1
+
+    iget v0, p0, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->d:I
+
+    or-int/2addr v0, p1
+
+    iput v0, p0, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->d:I
+
+    return v0
+.end method
+
+.method static synthetic c(Landroid/support/v4/widget/DrawerLayout$LayoutParams;)Z
+    .locals 1
+
+    iget-boolean v0, p0, Landroid/support/v4/widget/DrawerLayout$LayoutParams;->c:Z
+
+    return v0
 .end method

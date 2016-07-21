@@ -15,17 +15,17 @@ import java.util.List;
 public class DocumentExtModifyList
   extends ESActivity
 {
-  private ap a;
+  private at a;
   private TextView b;
   private TextView c;
   private ListView d;
   
   private void a()
   {
-    d = ((ListView)findViewById(2131361828));
+    d = ((ListView)findViewById(2131624327));
     ArrayList localArrayList = new ArrayList();
     ad.a(this).g(localArrayList);
-    a = new ap(this, this, localArrayList);
+    a = new at(this, this, localArrayList);
     d.setAdapter(a);
     d.setCacheColorHint(0);
     d.setItemsCanFocus(true);
@@ -41,27 +41,27 @@ public class DocumentExtModifyList
   public void a(Context paramContext)
   {
     paramContext = new f(this);
-    paramContext.a(new an(this));
-    paramContext.setOnDismissListener(new ao(this));
+    paramContext.a(new ar(this));
+    paramContext.setOnDismissListener(new as(this));
     paramContext.show();
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    setContentView(2130903043);
-    setTheme(2131492888);
-    b = ((TextView)findViewById(2131361825));
-    b.setText(2131428466);
-    c = ((TextView)findViewById(2131361826));
-    c.setText(2131428467);
-    setTitle(2131428464);
-    paramBundle = (Button)findViewById(2131361827);
+    setContentView(2130903105);
+    setTheme(2131296626);
+    b = ((TextView)findViewById(2131624055));
+    b.setText(2131230912);
+    c = ((TextView)findViewById(2131624325));
+    c.setText(2131231377);
+    setTitle(2131231375);
+    paramBundle = (Button)findViewById(2131624326);
     paramBundle.setFocusable(true);
-    paramBundle.setOnClickListener(new al(this));
-    paramBundle = findViewById(2131361824);
+    paramBundle.setOnClickListener(new ap(this));
+    paramBundle = findViewById(2131624324);
     paramBundle.setFocusable(true);
-    paramBundle.setOnClickListener(new am(this));
+    paramBundle.setOnClickListener(new aq(this));
     a();
   }
   

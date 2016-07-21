@@ -9,7 +9,7 @@ import android.os.Message;
 import android.webkit.SslErrorHandler;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import com.estrongs.android.util.ac;
+import com.estrongs.android.util.ah;
 
 class ab
   extends WebViewClient
@@ -83,7 +83,7 @@ class ab
         paramString = CreateOAuthServiceProvider.a(a, paramString, "access_token");
         continue;
       }
-      paramWebView = CreateOAuthServiceProvider.c(a).obtainMessage(CreateOAuthServiceProvider.d);
+      paramWebView = CreateOAuthServiceProvider.c(a).obtainMessage(CreateOAuthServiceProvider.e);
       CreateOAuthServiceProvider.c(a).sendMessage(paramWebView);
       return;
       label267:
@@ -96,13 +96,13 @@ class ab
   {
     if (!paramString2.startsWith("fbconnect://success"))
     {
-      paramWebView = CreateOAuthServiceProvider.c(a).obtainMessage(CreateOAuthServiceProvider.d);
+      paramWebView = CreateOAuthServiceProvider.c(a).obtainMessage(CreateOAuthServiceProvider.e);
       if (!CreateOAuthServiceProvider.d(a)) {
         break label52;
       }
     }
     label52:
-    for (obj = paramString1;; obj = a.getString(2131427916))
+    for (obj = paramString1;; obj = a.getString(2131231827))
     {
       CreateOAuthServiceProvider.c(a).sendMessage(paramWebView);
       return;
@@ -112,7 +112,7 @@ class ab
   @SuppressLint({"NewApi"})
   public void onReceivedSslError(WebView paramWebView, SslErrorHandler paramSslErrorHandler, SslError paramSslError)
   {
-    ac.a(a, paramWebView, paramSslErrorHandler, paramSslError);
+    ah.a(a, paramWebView, paramSslErrorHandler, paramSslError);
   }
   
   public boolean shouldOverrideUrlLoading(WebView paramWebView, String paramString)
@@ -132,7 +132,7 @@ class ab
       for (;;)
       {
         return true;
-        paramWebView = CreateOAuthServiceProvider.c(a).obtainMessage(CreateOAuthServiceProvider.d);
+        paramWebView = CreateOAuthServiceProvider.c(a).obtainMessage(CreateOAuthServiceProvider.e);
         CreateOAuthServiceProvider.c(a).sendMessage(paramWebView);
       }
     }

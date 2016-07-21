@@ -19,9 +19,9 @@ class dd
     try
     {
       Object localObject = new TypedMap();
-      ((TypedMap)localObject).put("limit", ImageCommentActivity.d(a).get("offset"));
+      ((TypedMap)localObject).put("limit", ImageCommentActivity.c(a).get("offset"));
       ((TypedMap)localObject).put("offset", Integer.valueOf(0));
-      localObject = PhotoInfoManager.getComments(ImageCommentActivity.c(a), (TypedMap)localObject);
+      localObject = PhotoInfoManager.getComments(ImageCommentActivity.b(a), (TypedMap)localObject);
       a.a(new de(this));
       if (g) {
         return;
@@ -29,7 +29,7 @@ class dd
       int i = ((List)localObject).size();
       if (i > 0)
       {
-        ImageCommentActivity.d(a).put("offset", Integer.valueOf(i));
+        ImageCommentActivity.c(a).put("offset", Integer.valueOf(i));
         a.a(new df(this, (List)localObject));
       }
     }

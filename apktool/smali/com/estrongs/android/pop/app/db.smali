@@ -23,11 +23,35 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/db;->a:Lcom/estrongs/android/pop/app/ImageCommentActivity;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->b(Lcom/estrongs/android/pop/app/ImageCommentActivity;)V
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->a(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Lcom/estrongs/android/util/m;
 
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/db;->a:Lcom/estrongs/android/pop/app/ImageCommentActivity;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->a(Lcom/estrongs/android/pop/app/ImageCommentActivity;)Lcom/estrongs/android/util/m;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/util/m;->isAlive()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/db;->a:Lcom/estrongs/android/pop/app/ImageCommentActivity;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->a(Lcom/estrongs/android/pop/app/ImageCommentActivity;Z)V
+
+    :cond_1
     return-void
 .end method

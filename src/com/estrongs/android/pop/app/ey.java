@@ -1,60 +1,23 @@
 package com.estrongs.android.pop.app;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import com.estrongs.android.pop.app.a.ak;
-import com.estrongs.android.pop.app.a.al;
-import java.util.List;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.ui.dialog.cv;
 
 class ey
-  extends BroadcastReceiver
+  implements MenuItem.OnMenuItemClickListener
 {
   ey(PopAudioPlayer paramPopAudioPlayer) {}
   
-  public void onReceive(Context paramContext, Intent paramIntent)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    for (;;)
-    {
-      try
-      {
-        if ((!"Market".equalsIgnoreCase("Market")) && (a.a()) && (PopAudioPlayer.a(a) != null) && (PopAudioPlayer.a(a).e()) && (PopAudioPlayer.a(a).f()))
-        {
-          paramContext = PopAudioPlayer.a(a).h();
-          if ((paramContext == null) || (paramContext.c().size() <= PopAudioPlayer.a(a).l())) {
-            break label206;
-          }
-          paramContext = cgetaa).l())).b;
-          if (paramContext == null) {
-            break label206;
-          }
-          if (paramContext.startsWith("/")) {
-            break label211;
-          }
-          if (!paramContext.startsWith("file:///")) {
-            break label206;
-          }
-          break label211;
-          if (i != 0)
-          {
-            a.a = ((int)PopAudioPlayer.a(a).c());
-            a.b = PopAudioPlayer.a(a).l();
-            PopAudioPlayer.a(a).n();
-            PopAudioPlayer.a(a).q();
-          }
-        }
-        return;
-      }
-      catch (Exception paramContext)
-      {
-        return;
-      }
-      label206:
-      int i = 0;
-      continue;
-      label211:
-      i = 1;
-    }
+    paramMenuItem = a.getString(2131231709);
+    String str1 = a.getString(2131231708);
+    String str2 = a.getString(2131231707);
+    cv localcv = new cv(a).a(2131231709);
+    ez localez = new ez(this);
+    localcv.a(new String[] { paramMenuItem, str1, str2 }, -1, localez).d(false).c();
+    return false;
   }
 }
 

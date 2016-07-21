@@ -1,5 +1,5 @@
 .class public Lcom/estrongs/android/ui/b/l;
-.super Lcom/estrongs/android/ui/dialog/cg;
+.super Lcom/estrongs/android/ui/dialog/ci;
 
 
 # instance fields
@@ -22,25 +22,25 @@
 .method public constructor <init>(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 8
 
-    const v7, 0x7f0b036a
+    const v7, 0x7f0d0105
 
-    const v6, 0x7f080012
+    const v6, 0x7f08029a
 
-    const v5, 0x7f0201d4
+    const v5, 0x7f02031b
 
     const/4 v4, 0x0
 
-    invoke-direct {p0, p1}, Lcom/estrongs/android/ui/dialog/cg;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/estrongs/android/ui/dialog/ci;-><init>(Landroid/content/Context;)V
 
-    const v0, 0x7f0b001f
+    const v0, 0x7f08007f
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/b/l;->setTitle(I)V
 
-    invoke-static {p1}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {p1}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    const v1, 0x7f03009f
+    const v1, 0x7f030136
 
     const/4 v2, 0x0
 
@@ -52,11 +52,11 @@
 
     const/high16 v0, 0x40c00000    # 6.0f
 
-    invoke-static {p1, v0}, Lcom/estrongs/android/ui/d/a;->a(Landroid/content/Context;F)I
+    invoke-static {p1, v0}, Lcom/estrongs/android/ui/d/g;->a(Landroid/content/Context;F)I
 
     move-result v2
 
-    const v0, 0x7f0a02c8
+    const v0, 0x7f0e0519
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -66,7 +66,7 @@
 
     iput-object v0, p0, Lcom/estrongs/android/ui/b/l;->a:Landroid/widget/EditText;
 
-    invoke-static {p2}, Lcom/estrongs/android/util/bd;->b(Ljava/lang/CharSequence;)Z
+    invoke-static {p2}, Lcom/estrongs/android/util/bk;->b(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -79,11 +79,11 @@
     :cond_0
     iget-object v0, p0, Lcom/estrongs/android/ui/b/l;->a:Landroid/widget/EditText;
 
-    invoke-static {p1}, Lcom/estrongs/android/ui/theme/al;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
+    invoke-static {p1}, Lcom/estrongs/android/ui/theme/at;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
 
     move-result-object v3
 
-    invoke-virtual {v3, v6}, Lcom/estrongs/android/ui/theme/al;->d(I)I
+    invoke-virtual {v3, v7}, Lcom/estrongs/android/ui/theme/at;->c(I)I
 
     move-result v3
 
@@ -97,7 +97,7 @@
 
     invoke-virtual {v0, v2, v4, v2, v4}, Landroid/widget/EditText;->setPadding(IIII)V
 
-    const v0, 0x7f0a02ca
+    const v0, 0x7f0e051b
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -109,11 +109,11 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/b/l;->b:Landroid/widget/EditText;
 
-    invoke-static {p1}, Lcom/estrongs/android/ui/theme/al;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
+    invoke-static {p1}, Lcom/estrongs/android/ui/theme/at;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
 
     move-result-object v1
 
-    invoke-virtual {v1, v6}, Lcom/estrongs/android/ui/theme/al;->d(I)I
+    invoke-virtual {v1, v7}, Lcom/estrongs/android/ui/theme/at;->c(I)I
 
     move-result v1
 
@@ -127,13 +127,13 @@
 
     invoke-virtual {v0, v2, v4, v2, v4}, Landroid/widget/EditText;->setPadding(IIII)V
 
-    invoke-static {}, Lcom/estrongs/android/pop/utils/cc;->a()Z
+    invoke-static {}, Lcom/estrongs/android/pop/utils/cl;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p1, v7}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p1, v6}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -143,7 +143,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/estrongs/android/ui/b/l;->setConfirmButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/widget/Button;
 
-    const v0, 0x7f0b04c5
+    const v0, 0x7f08029b
 
     invoke-virtual {p1, v0}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
 
@@ -161,7 +161,7 @@
     return-void
 
     :cond_1
-    invoke-virtual {p1, v7}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p1, v6}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -197,7 +197,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1}, Lcom/estrongs/android/util/bd;->b(Ljava/lang/CharSequence;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/bk;->b(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -257,9 +257,9 @@
 
     move-result-object v2
 
-    const v3, 0x7f0b038f
+    const v3, 0x7f08070c
 
-    invoke-static {v2, v3, v1}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {v2, v3, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     :cond_1
     return v0

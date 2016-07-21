@@ -159,7 +159,7 @@
 
     move-result-object v4
 
-    new-instance v5, Lcom/estrongs/fs/o;
+    new-instance v5, Lcom/estrongs/fs/z;
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -195,7 +195,7 @@
 
     move-result-object v2
 
-    invoke-direct {v5, v2}, Lcom/estrongs/fs/o;-><init>(Ljava/lang/String;)V
+    invoke-direct {v5, v2}, Lcom/estrongs/fs/z;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v4, v5}, Lcom/estrongs/fs/a/b;->a(Lcom/estrongs/fs/h;)V
 
@@ -280,7 +280,7 @@
 
     move-result-object v4
 
-    new-instance v5, Lcom/estrongs/fs/o;
+    new-instance v5, Lcom/estrongs/fs/z;
 
     const-string v6, "Flickr"
 
@@ -314,11 +314,11 @@
 
     move-result-object v2
 
-    invoke-static {v6, v7, v8, v2}, Lcom/estrongs/android/util/am;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v6, v7, v8, v2}, Lcom/estrongs/android/util/ap;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-direct {v5, v2}, Lcom/estrongs/fs/o;-><init>(Ljava/lang/String;)V
+    invoke-direct {v5, v2}, Lcom/estrongs/fs/z;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v4, v5}, Lcom/estrongs/fs/a/b;->a(Lcom/estrongs/fs/h;)V
     :try_end_0

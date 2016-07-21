@@ -1,23 +1,18 @@
 package com.estrongs.android.pop.app.imageviewer;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnTouchListener;
 
 class bf
-  implements MenuItem.OnMenuItemClickListener
+  implements View.OnTouchListener
 {
   bf(ViewImage21 paramViewImage21) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    a.b.removeCallbacks(ViewImage21.h(a));
-    ViewImage21.e(a);
     a.a();
-    if (a.g != null) {
-      a.g.a(90);
-    }
-    ViewImage21.b(a, a.m);
-    return true;
+    return false;
   }
 }
 

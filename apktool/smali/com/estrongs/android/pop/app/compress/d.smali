@@ -35,7 +35,7 @@
 
     move-result v0
 
-    const v1, 0x7f0a0053
+    const v1, 0x7f0e01b5
 
     if-ne v0, v1, :cond_2
 
@@ -67,11 +67,11 @@
 
     move-result v0
 
-    const v1, 0x7f0a0056
+    const v1, 0x7f0e01b8
 
     if-ne v0, v1, :cond_1
 
-    new-instance v0, Lcom/estrongs/android/util/c;
+    new-instance v0, Lcom/estrongs/android/util/b;
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/compress/d;->b:Lcom/estrongs/android/pop/app/compress/a;
 
@@ -81,7 +81,7 @@
 
     iget-object v2, p0, Lcom/estrongs/android/pop/app/compress/d;->b:Lcom/estrongs/android/pop/app/compress/a;
 
-    invoke-static {v2}, Lcom/estrongs/android/pop/app/compress/a;->i(Lcom/estrongs/android/pop/app/compress/a;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/estrongs/android/pop/app/compress/a;->j(Lcom/estrongs/android/pop/app/compress/a;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -89,9 +89,9 @@
 
     invoke-direct {v3, p0}, Lcom/estrongs/android/pop/app/compress/e;-><init>(Lcom/estrongs/android/pop/app/compress/d;)V
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/estrongs/android/util/c;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/estrongs/android/util/e;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/estrongs/android/util/b;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/estrongs/android/util/d;)V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/util/c;->a()V
+    invoke-virtual {v0}, Lcom/estrongs/android/util/b;->a()V
 
     :cond_1
     return-void
@@ -101,7 +101,7 @@
 
     move-result v0
 
-    const v1, 0x7f0a0052
+    const v1, 0x7f0e01b4
 
     if-ne v0, v1, :cond_3
 
@@ -109,7 +109,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/compress/d;->b:Lcom/estrongs/android/pop/app/compress/a;
 
-    invoke-static {v1}, Lcom/estrongs/android/pop/app/compress/a;->k(Lcom/estrongs/android/pop/app/compress/a;)Ljava/io/File;
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/compress/a;->m(Lcom/estrongs/android/pop/app/compress/a;)Ljava/io/File;
 
     move-result-object v1
 
@@ -148,7 +148,7 @@
 
     move-result v0
 
-    const v1, 0x7f0a0051
+    const v1, 0x7f0e01b3
 
     if-ne v0, v1, :cond_0
 
@@ -160,7 +160,7 @@
 
     iget-object v2, p0, Lcom/estrongs/android/pop/app/compress/d;->b:Lcom/estrongs/android/pop/app/compress/a;
 
-    invoke-static {v2}, Lcom/estrongs/android/pop/app/compress/a;->k(Lcom/estrongs/android/pop/app/compress/a;)Ljava/io/File;
+    invoke-static {v2}, Lcom/estrongs/android/pop/app/compress/a;->m(Lcom/estrongs/android/pop/app/compress/a;)Ljava/io/File;
 
     move-result-object v2
 
@@ -190,7 +190,7 @@
 
     iget-object v3, p0, Lcom/estrongs/android/pop/app/compress/d;->b:Lcom/estrongs/android/pop/app/compress/a;
 
-    invoke-static {v3}, Lcom/estrongs/android/pop/app/compress/a;->k(Lcom/estrongs/android/pop/app/compress/a;)Ljava/io/File;
+    invoke-static {v3}, Lcom/estrongs/android/pop/app/compress/a;->m(Lcom/estrongs/android/pop/app/compress/a;)Ljava/io/File;
 
     move-result-object v3
 

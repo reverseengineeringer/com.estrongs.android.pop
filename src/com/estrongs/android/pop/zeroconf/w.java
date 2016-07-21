@@ -6,7 +6,7 @@ import android.net.wifi.WifiManager.MulticastLock;
 import android.os.Build;
 import com.estrongs.android.pop.zeroconf.constants.DNSRecordClass;
 import com.estrongs.android.pop.zeroconf.constants.DNSRecordType;
-import com.estrongs.android.util.ak;
+import com.estrongs.android.util.an;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.net.DatagramPacket;
@@ -58,7 +58,7 @@ public class w
   
   public w(Context paramContext, int paramInt)
   {
-    String str = ak.a();
+    String str = an.a();
     if (str == null) {
       throw new IOException("network error");
     }
@@ -198,161 +198,173 @@ public class w
     }
   }
   
-  private void a(List<n> paramList)
+  private void a(List<n> arg1)
   {
-    ??? = null;
-    Iterator localIterator = paramList.iterator();
-    paramList = (List<n>)???;
-    while (localIterator.hasNext())
+    ArrayList localArrayList = new ArrayList();
+    Iterator localIterator = ???.iterator();
+    for (;;)
     {
-      ??? = (n)localIterator.next();
-      Object localObject3;
-      if (((n)???).b(System.currentTimeMillis()))
+      if (localIterator.hasNext())
       {
-        if ((??? instanceof r))
+        ??? = (n)localIterator.next();
+        if (???.b(System.currentTimeMillis()))
         {
-          localObject3 = a(((r)???).g());
-          if (localObject3 != null) {
-            synchronized (k)
-            {
-              k.remove(localObject3);
-              if (r == null) {
-                continue;
-              }
-              r.b((u)localObject3);
-            }
-          }
-        }
-      }
-      else if ((??? instanceof s))
-      {
-        if (i) {
-          System.out.println("######## get serivce " + ((s)???).a());
-        }
-        if (s != null)
-        {
-          localObject3 = new u(((s)???).a(), ((s)???).h(), ((s)???).g());
-          u localu = a((u)localObject3);
-          ??? = localu;
-          if (localu == null)
+          if ((??? instanceof r))
           {
-            ??? = localu;
-            if (c != null)
-            {
-              ??? = localu;
-              if (!s.contains(c)) {}
-            }
-          }
-          label475:
-          for (;;)
-          {
-            synchronized (k)
-            {
-              k.add(localObject3);
-              ??? = localObject3;
-              if ((??? == null) || (((u)???).a())) {
-                break label475;
-              }
-              if (u.containsKey(e))
+            u localu1 = a(((r)???).g());
+            if (localu1 != null) {
+              synchronized (k)
               {
-                ((u)???).a((Inet4Address)u.get(e));
-                if (i) {
-                  System.out.println("#########domain4Map add service");
+                k.remove(localu1);
+                if (r == null) {
+                  continue;
                 }
-                paramList = (List<n>)???;
-              }
-            }
-            if (v.containsKey(e))
-            {
-              ((u)???).a((Inet6Address)v.get(e));
-              if (i) {
-                System.out.println("#########domain6Map add service");
-              }
-              paramList = (List<n>)???;
-            }
-            else
-            {
-              try
-              {
-                localObject3 = new e(0);
-                ((e)localObject3).a(g.a(k, DNSRecordType.TYPE_SRV, DNSRecordClass.CLASS_IN, false));
-                ((e)localObject3).a(g.a(k, DNSRecordType.TYPE_TXT, DNSRecordClass.CLASS_IN, false));
-                if (e.length() > 0)
-                {
-                  ((e)localObject3).a(g.a(e, DNSRecordType.TYPE_A, DNSRecordClass.CLASS_IN, false));
-                  ((e)localObject3).a(g.a(e, DNSRecordType.TYPE_AAAA, DNSRecordClass.CLASS_IN, false));
-                }
-                a((e)localObject3);
-              }
-              catch (Exception localException)
-              {
-                localException.printStackTrace();
+                r.b(localu1);
               }
             }
           }
         }
-      }
-      else
-      {
-        if ((localException instanceof p))
+        else if ((??? instanceof s))
         {
-          localObject3 = (p)localException;
           if (i) {
-            System.out.println("######## get IPv4 address " + ((p)localObject3).a());
+            System.out.println("######## get serivce " + ((s)???).a());
           }
-          synchronized (u)
-          {
-            u.put(((p)localObject3).a(), (Inet4Address)((p)localObject3).g());
-            ??? = b(((p)localObject3).a());
-            if (??? == null) {
-              continue;
-            }
-            if (((u)???).a()) {
-              paramList = (List<n>)???;
-            }
-            a((u)???, (o)localObject3);
+          if (s == null) {
+            continue;
           }
-        }
-        if ((??? instanceof q))
-        {
-          localObject3 = (q)???;
-          if (i) {
-            System.out.println("######## get IPv6 address " + ((q)localObject3).a());
-          }
-          synchronized (v)
-          {
-            v.put(((q)localObject3).a(), (Inet6Address)((q)localObject3).g());
-            ??? = b(((q)localObject3).a());
-            if (??? == null) {
-              continue;
-            }
-            if (((u)???).a()) {
-              paramList = (List<n>)???;
-            }
-            a((u)???, (o)localObject3);
-          }
-        }
-        if ((??? instanceof t))
-        {
-          ??? = (t)???;
-          localObject3 = a(((t)???).a());
-          if (localObject3 != null) {
-            ((u)localObject3).a(((t)???).g());
+          ??? = new u(((s)???).a(), ((s)???).h(), ((s)???).g());
+          ??? = a(???);
+          if ((??? != null) || (c == null) || (!s.contains(c))) {
+            break label879;
           }
         }
       }
     }
-    if ((paramList != null) && (r != null))
+    for (;;)
     {
-      if (i) {
-        System.out.println("#########to add service");
+      synchronized (k)
+      {
+        k.add(???);
+        if ((??? == null) || (???.a())) {
+          break;
+        }
+        if (u.containsKey(e))
+        {
+          ???.a((Inet4Address)u.get(e));
+          if (i) {
+            System.out.println("#########domain4Map add service");
+          }
+          localArrayList.add(???);
+        }
       }
-      r.a(paramList);
+      if (v.containsKey(e))
+      {
+        ???.a((Inet6Address)v.get(e));
+        if (i) {
+          System.out.println("#########domain6Map add service");
+        }
+        localArrayList.add(???);
+        break;
+      }
+      try
+      {
+        ??? = new e(0);
+        ((e)???).a(g.a(k, DNSRecordType.TYPE_SRV, DNSRecordClass.CLASS_IN, false));
+        ((e)???).a(g.a(k, DNSRecordType.TYPE_TXT, DNSRecordClass.CLASS_IN, false));
+        if (e.length() > 0)
+        {
+          ((e)???).a(g.a(e, DNSRecordType.TYPE_A, DNSRecordClass.CLASS_IN, false));
+          ((e)???).a(g.a(e, DNSRecordType.TYPE_AAAA, DNSRecordClass.CLASS_IN, false));
+        }
+        a((e)???);
+      }
+      catch (Exception ???)
+      {
+        ???.printStackTrace();
+      }
+      break;
+      u localu2;
+      if ((??? instanceof p))
+      {
+        ??? = (p)???;
+        if (i) {
+          System.out.println("######## get IPv4 address " + ???.a());
+        }
+        synchronized (u)
+        {
+          u.put(???.a(), (Inet4Address)???.g());
+          ??? = b(???.a());
+          if ((??? == null) || (((ArrayList)???).size() <= 0)) {
+            break;
+          }
+          ??? = ((ArrayList)???).iterator();
+          do
+          {
+            if (!((Iterator)???).hasNext()) {
+              break;
+            }
+            localu2 = (u)((Iterator)???).next();
+            a(localu2, ???);
+          } while (!localu2.a());
+          localArrayList.add(localu2);
+        }
+      }
+      if ((??? instanceof q))
+      {
+        ??? = (q)???;
+        if (i) {
+          System.out.println("######## get IPv6 address " + ???.a());
+        }
+        synchronized (v)
+        {
+          v.put(???.a(), (Inet6Address)???.g());
+          ??? = b(???.a());
+          if ((??? == null) || (((ArrayList)???).size() <= 0)) {
+            break;
+          }
+          ??? = ((ArrayList)???).iterator();
+          do
+          {
+            if (!((Iterator)???).hasNext()) {
+              break;
+            }
+            localu2 = (u)((Iterator)???).next();
+            a(localu2, ???);
+          } while (!localu2.a());
+          localArrayList.add(localu2);
+        }
+      }
+      if (!(??? instanceof t)) {
+        break;
+      }
+      ??? = (t)???;
+      ??? = a(???.a());
+      if (??? == null) {
+        break;
+      }
+      ((u)???).a(???.g());
+      break;
+      if ((localArrayList.size() > 0) && (r != null))
+      {
+        if (i) {
+          System.out.println("#########to add service");
+        }
+        ??? = localArrayList.iterator();
+        while (???.hasNext())
+        {
+          ??? = (u)???.next();
+          r.a((u)???);
+        }
+      }
+      return;
+      label879:
+      ??? = (List<n>)???;
     }
   }
   
-  private u b(String paramString)
+  private ArrayList<u> b(String paramString)
   {
+    ArrayList localArrayList2 = new ArrayList();
     synchronized (k)
     {
       Iterator localIterator = k.iterator();
@@ -360,11 +372,11 @@ public class w
       {
         u localu = (u)localIterator.next();
         if (e.equals(paramString)) {
-          return localu;
+          localArrayList2.add(localu);
         }
       }
-      return null;
     }
+    return localArrayList2;
   }
   
   private void b(d paramd)

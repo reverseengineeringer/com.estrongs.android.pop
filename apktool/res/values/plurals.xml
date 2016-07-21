@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="log_time_title_day">
+        <item quantity="other">%1$d days ago</item>
+        <item quantity="one">%1$d day ago</item>
+    </plurals>
+    <plurals name="log_time_title_hour">
+        <item quantity="other">%1$d hours ago</item>
+        <item quantity="one">%1$d hour ago</item>
+    </plurals>
+    <plurals name="log_time_title_minute">
+        <item quantity="other">%1$d mins ago</item>
+        <item quantity="one">%1$d min ago</item>
+    </plurals>
+    <plurals name="log_title_apk">
+        <item quantity="other">%1$d APKs from %2$s</item>
+        <item quantity="one">%1$d APK from %2$s</item>
+    </plurals>
+    <plurals name="log_title_audio">
+        <item quantity="other">%1$d songs from %2$s</item>
+        <item quantity="one">%1$d song from %2$s</item>
+    </plurals>
+    <plurals name="log_title_doc">
+        <item quantity="other">%1$d documents from %2$s</item>
+        <item quantity="one">%1$d document from %2$s</item>
+    </plurals>
+    <plurals name="log_title_folder">
+        <item quantity="other">%1$d folders from %2$s</item>
+        <item quantity="one">%1$d folder from %2$s</item>
+    </plurals>
+    <plurals name="log_title_image">
+        <item quantity="other">%1$d images from %2$s</item>
+        <item quantity="one">%1$d image from %2$s</item>
+    </plurals>
+    <plurals name="log_title_netdisk">
+        <item quantity="other">My Cloud accounts</item>
+        <item quantity="one">My Cloud account</item>
+    </plurals>
+    <plurals name="log_title_video">
+        <item quantity="other">%1$d videos from %2$s</item>
+        <item quantity="one">%1$d video from %2$s</item>
+    </plurals>
+</resources>

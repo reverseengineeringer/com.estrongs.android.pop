@@ -48,7 +48,7 @@
 
     iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/ag;->d:Landroid/view/View;
 
-    const v2, 0x7f0a0259
+    const v2, 0x7f0e042c
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

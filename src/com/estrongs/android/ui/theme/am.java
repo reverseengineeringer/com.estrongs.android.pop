@@ -1,17 +1,33 @@
 package com.estrongs.android.ui.theme;
 
-import android.graphics.drawable.Drawable;
+import android.os.Handler;
+import android.os.Message;
+import com.estrongs.android.util.af;
 
-public class am
+class am
+  implements af
 {
-  int[] a;
-  Drawable b;
+  am(al paramal, Handler paramHandler) {}
   
-  public am(int[] paramArrayOfInt, Drawable paramDrawable)
+  public void downloadCompleted(Object paramObject)
   {
-    a = paramArrayOfInt;
-    b = paramDrawable;
+    al.b(b, false);
+    if (a != null)
+    {
+      paramObject = new Message();
+      what = 13;
+      a.sendMessage((Message)paramObject);
+    }
   }
+  
+  public void downloadError(Object paramObject, Throwable paramThrowable)
+  {
+    al.a(b, false);
+  }
+  
+  public void downloadProgress(Object paramObject, long paramLong1, long paramLong2) {}
+  
+  public void downloadStarted(Object paramObject) {}
 }
 
 /* Location:

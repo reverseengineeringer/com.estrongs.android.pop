@@ -1,14 +1,14 @@
 package com.estrongs.android.pop.utils;
 
-public class ah
+class ah
 {
-  public String a;
-  public int b;
+  String a;
+  boolean b;
   
-  public ah(String paramString, int paramInt)
+  public ah(ad paramad, String paramString, boolean paramBoolean)
   {
     a = paramString;
-    b = paramInt;
+    b = paramBoolean;
   }
 }
 

@@ -22,9 +22,9 @@
 
 .field private e:I
 
-.field private f:Lcom/estrongs/android/ui/addressbar/e;
+.field private f:Lcom/estrongs/android/ui/addressbar/f;
 
-.field private g:Lcom/estrongs/android/ui/addressbar/f;
+.field private g:Lcom/estrongs/android/ui/addressbar/g;
 
 .field private h:Landroid/os/Handler;
 
@@ -37,6 +37,12 @@
 .field private l:Z
 
 .field private m:Z
+
+.field private n:Z
+
+.field private o:Z
+
+.field private p:I
 
 
 # direct methods
@@ -64,6 +70,12 @@
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->m:Z
+
+    iput-boolean v1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->n:Z
+
+    iput-boolean v1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->o:Z
+
+    iput v1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->p:I
 
     invoke-direct {p0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->b()V
 
@@ -95,6 +107,12 @@
 
     iput-boolean v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->m:Z
 
+    iput-boolean v1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->n:Z
+
+    iput-boolean v1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->o:Z
+
+    iput v1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->p:I
+
     invoke-direct {p0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->b()V
 
     return-void
@@ -125,19 +143,13 @@
 
     iput-boolean v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->m:Z
 
+    iput-boolean v1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->n:Z
+
+    iput-boolean v1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->o:Z
+
+    iput v1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->p:I
+
     invoke-direct {p0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->b()V
-
-    return-void
-.end method
-
-.method private a(I)V
-    .locals 1
-
-    iput p1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->d:I
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a:Lcom/estrongs/android/ui/addressbar/a;
-
-    invoke-virtual {v0, p1}, Lcom/estrongs/android/ui/addressbar/a;->a(I)V
 
     return-void
 .end method
@@ -153,7 +165,7 @@
 .method static synthetic a(Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a(I)V
+    invoke-direct {p0, p1}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->setCurrentIndex(I)V
 
     return-void
 .end method
@@ -177,7 +189,7 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1, p0}, Lcom/estrongs/android/ui/addressbar/a;-><init>(Landroid/content/Context;Landroid/view/View;)V
+    invoke-direct {v0, v1, p0}, Lcom/estrongs/android/ui/addressbar/a;-><init>(Landroid/content/Context;Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;)V
 
     iput-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a:Lcom/estrongs/android/ui/addressbar/a;
 
@@ -191,35 +203,35 @@
 
     iput-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->h:Landroid/os/Handler;
 
-    new-instance v0, Lcom/estrongs/android/ui/addressbar/b;
-
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/addressbar/b;-><init>(Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;)V
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->i:Ljava/lang/Runnable;
-
     new-instance v0, Lcom/estrongs/android/ui/addressbar/c;
 
     invoke-direct {v0, p0}, Lcom/estrongs/android/ui/addressbar/c;-><init>(Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;)V
 
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+    iput-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->i:Ljava/lang/Runnable;
 
     new-instance v0, Lcom/estrongs/android/ui/addressbar/d;
 
     invoke-direct {v0, p0}, Lcom/estrongs/android/ui/addressbar/d;-><init>(Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;)V
 
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+
+    new-instance v0, Lcom/estrongs/android/ui/addressbar/e;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/addressbar/e;-><init>(Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;)V
+
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
     const/4 v0, -0x1
 
-    invoke-direct {p0, v0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a(I)V
+    invoke-direct {p0, v0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->setCurrentIndex(I)V
 
     return-void
 .end method
 
-.method static synthetic c(Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;)Lcom/estrongs/android/ui/addressbar/f;
+.method static synthetic c(Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;)Lcom/estrongs/android/ui/addressbar/g;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->g:Lcom/estrongs/android/ui/addressbar/f;
+    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->g:Lcom/estrongs/android/ui/addressbar/g;
 
     return-object v0
 .end method
@@ -233,7 +245,7 @@
 
     const/4 v0, -0x1
 
-    invoke-direct {p0, v0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a(I)V
+    invoke-direct {p0, v0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->setCurrentIndex(I)V
 
     invoke-virtual {p0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->invalidate()V
 
@@ -251,6 +263,19 @@
 .method private d()V
     .locals 8
 
+    iget v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->e:I
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-boolean v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->n:Z
+
+    if-nez v0, :cond_0
+
     invoke-virtual {p0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->getWidth()I
 
     move-result v0
@@ -259,11 +284,11 @@
 
     move-result v1
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_2
 
-    if-nez v1, :cond_2
+    if-nez v1, :cond_3
 
-    :cond_0
+    :cond_2
     iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->h:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->i:Ljava/lang/Runnable;
@@ -272,10 +297,9 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    :cond_1
-    return-void
+    goto :goto_0
 
-    :cond_2
+    :cond_3
     iget v2, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->e:I
 
     div-int v2, v0, v2
@@ -286,10 +310,10 @@
 
     const/4 v0, 0x0
 
-    :goto_0
+    :goto_1
     iget v3, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->e:I
 
-    if-ge v0, v3, :cond_1
+    if-ge v0, v3, :cond_0
 
     new-instance v3, Landroid/graphics/RectF;
 
@@ -315,7 +339,7 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_0
+    goto :goto_1
 .end method
 
 .method static synthetic e(Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;)V
@@ -326,42 +350,30 @@
     return-void
 .end method
 
-.method static synthetic f(Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;)Lcom/estrongs/android/ui/addressbar/e;
+.method static synthetic f(Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;)Lcom/estrongs/android/ui/addressbar/f;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->f:Lcom/estrongs/android/ui/addressbar/e;
+    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->f:Lcom/estrongs/android/ui/addressbar/f;
 
     return-object v0
 .end method
 
+.method private setCurrentIndex(I)V
+    .locals 1
+
+    iput p1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->d:I
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a:Lcom/estrongs/android/ui/addressbar/a;
+
+    invoke-virtual {v0, p1}, Lcom/estrongs/android/ui/addressbar/a;->a(I)V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public a(Lcom/estrongs/android/ui/addressbar/e;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->f:Lcom/estrongs/android/ui/addressbar/e;
-
-    return-void
-.end method
-
-.method public a(Lcom/estrongs/android/ui/addressbar/f;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->g:Lcom/estrongs/android/ui/addressbar/f;
-
-    return-void
-.end method
-
-.method public a(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->j:Ljava/lang/String;
-
-    return-void
-.end method
-
 .method public a(Ljava/util/List;Ljava/util/List;F)V
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -376,65 +388,65 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a:Lcom/estrongs/android/ui/addressbar/a;
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/estrongs/android/ui/addressbar/a;->a(Ljava/util/List;Ljava/util/List;F)V
+    iget-boolean v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->n:Z
 
-    invoke-virtual {p0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->invalidate()V
+    if-eqz v0, :cond_1
 
-    return-void
-.end method
+    if-eqz p1, :cond_0
 
-.method public a(Z)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a:Lcom/estrongs/android/ui/addressbar/a;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a:Lcom/estrongs/android/ui/addressbar/a;
-
-    invoke-virtual {v0, p1}, Lcom/estrongs/android/ui/addressbar/a;->a(Z)V
-
-    :cond_0
-    invoke-virtual {p0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->postInvalidate()V
-
-    return-void
-.end method
-
-.method public varargs a([Ljava/lang/String;)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a:Lcom/estrongs/android/ui/addressbar/a;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/addressbar/a;->e()V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a:Lcom/estrongs/android/ui/addressbar/a;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p1, v1}, Lcom/estrongs/android/ui/addressbar/a;->a([Ljava/lang/String;I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a:Lcom/estrongs/android/ui/addressbar/a;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/addressbar/a;->a()I
+    invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
 
-    iget v1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->e:I
+    if-le v0, v1, :cond_0
 
-    if-eq v1, v0, :cond_0
+    invoke-interface {p1}, Ljava/util/List;->size()I
 
-    iput v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->e:I
+    move-result v0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->h:Landroid/os/Handler;
+    add-int/lit8 v0, v0, -0x1
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->i:Ljava/lang/Runnable;
+    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-interface {p1}, Ljava/util/List;->clear()V
+
+    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_0
-    invoke-direct {p0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->c()V
+    if-eqz p2, :cond_1
+
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-le v0, v1, :cond_1
+
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-interface {p2}, Ljava/util/List;->clear()V
+
+    invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a:Lcom/estrongs/android/ui/addressbar/a;
+
+    invoke-virtual {v0, p1, p2, p3}, Lcom/estrongs/android/ui/addressbar/a;->a(Ljava/util/List;Ljava/util/List;F)V
 
     invoke-virtual {p0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->invalidate()V
 
@@ -449,34 +461,32 @@
     return v0
 .end method
 
-.method public b(Z)V
+.method public getCurrentPath()Ljava/lang/String;
     .locals 1
 
-    iput-boolean p1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->l:Z
+    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->j:Ljava/lang/String;
 
-    if-eqz p1, :cond_0
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->m:Z
-
-    :goto_0
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->m:Z
-
-    goto :goto_0
+    return-object v0
 .end method
 
-.method public c(Z)V
-    .locals 0
+.method public getMeasureHeight()I
+    .locals 1
 
-    iput-boolean p1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->m:Z
+    iget v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->p:I
 
-    return-void
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->getHeight()I
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    iget v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->p:I
+
+    goto :goto_0
 .end method
 
 .method public invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
@@ -546,7 +556,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a:Lcom/estrongs/android/ui/addressbar/a;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/addressbar/a;->c()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/addressbar/a;->d()Z
 
     move-result v0
 
@@ -554,7 +564,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a:Lcom/estrongs/android/ui/addressbar/a;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/addressbar/a;->d()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/addressbar/a;->e()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -631,7 +641,7 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    invoke-direct {p0, v0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a(I)V
+    invoke-direct {p0, v0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->setCurrentIndex(I)V
 
     :goto_0
     invoke-virtual {p0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->invalidate()V
@@ -641,16 +651,43 @@
     :cond_0
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a(I)V
+    invoke-direct {p0, v0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->setCurrentIndex(I)V
 
     goto :goto_0
 
     :cond_1
     const/4 v0, -0x1
 
-    invoke-direct {p0, v0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a(I)V
+    invoke-direct {p0, v0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->setCurrentIndex(I)V
 
     goto :goto_0
+.end method
+
+.method public onMeasure(II)V
+    .locals 1
+
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->p:I
+
+    invoke-super {p0, p1, p2}, Landroid/view/View;->onMeasure(II)V
+
+    iget-boolean v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->o:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a:Lcom/estrongs/android/ui/addressbar/a;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/addressbar/a;->b()I
+
+    move-result v0
+
+    invoke-virtual {p0, v0, p2}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->setMeasuredDimension(II)V
+
+    :cond_0
+    return-void
 .end method
 
 .method protected onSizeChanged(IIII)V
@@ -662,7 +699,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a:Lcom/estrongs/android/ui/addressbar/a;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/addressbar/a;->e()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/addressbar/a;->f()V
 
     return-void
 .end method
@@ -672,7 +709,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a:Lcom/estrongs/android/ui/addressbar/a;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/addressbar/a;->b()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/addressbar/a;->c()Z
 
     move-result v0
 
@@ -737,7 +774,7 @@
 
     if-eqz v4, :cond_4
 
-    invoke-direct {p0, v1}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a(I)V
+    invoke-direct {p0, v1}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->setCurrentIndex(I)V
 
     iput-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->c:Landroid/graphics/RectF;
 
@@ -777,17 +814,17 @@
 
     if-eq v0, v1, :cond_5
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->f:Lcom/estrongs/android/ui/addressbar/e;
+    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->f:Lcom/estrongs/android/ui/addressbar/f;
 
     if-eqz v0, :cond_5
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->f:Lcom/estrongs/android/ui/addressbar/e;
+    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->f:Lcom/estrongs/android/ui/addressbar/f;
 
     iget v1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->d:I
 
     iget v2, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->e:I
 
-    invoke-interface {v0, p0, v1, v2}, Lcom/estrongs/android/ui/addressbar/e;->a(Landroid/view/View;II)V
+    invoke-interface {v0, p0, v1, v2}, Lcom/estrongs/android/ui/addressbar/f;->a(Landroid/view/View;II)V
 
     :cond_5
     invoke-direct {p0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->c()V
@@ -808,12 +845,183 @@
     .end packed-switch
 .end method
 
+.method public setCurrentPath(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->j:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public varargs setDisplayPaths([Ljava/lang/String;)V
+    .locals 3
+
+    const/4 v2, 0x0
+
+    iget-boolean v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->n:Z
+
+    if-eqz v0, :cond_0
+
+    array-length v0, p1
+
+    add-int/lit8 v0, v0, -0x1
+
+    aget-object v0, p1, v0
+
+    const/4 v1, 0x1
+
+    new-array p1, v1, [Ljava/lang/String;
+
+    aput-object v0, p1, v2
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a:Lcom/estrongs/android/ui/addressbar/a;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/addressbar/a;->f()V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a:Lcom/estrongs/android/ui/addressbar/a;
+
+    invoke-virtual {v0, p1, v2}, Lcom/estrongs/android/ui/addressbar/a;->a([Ljava/lang/String;I)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a:Lcom/estrongs/android/ui/addressbar/a;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/addressbar/a;->a()I
+
+    move-result v0
+
+    iget v1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->e:I
+
+    if-eq v1, v0, :cond_1
+
+    iput v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->e:I
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->h:Landroid/os/Handler;
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->i:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_1
+    invoke-direct {p0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->c()V
+
+    invoke-virtual {p0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->invalidate()V
+
+    invoke-virtual {p0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->requestLayout()V
+
+    return-void
+.end method
+
+.method public setDrawableRes(Lcom/estrongs/android/ui/addressbar/b;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a:Lcom/estrongs/android/ui/addressbar/a;
+
+    invoke-virtual {v0, p1}, Lcom/estrongs/android/ui/addressbar/a;->a(Lcom/estrongs/android/ui/addressbar/b;)V
+
+    return-void
+.end method
+
+.method public setEnableClick(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->m:Z
+
+    return-void
+.end method
+
+.method public setIsBroadMode(Z)V
+    .locals 1
+
+    iput-boolean p1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->o:Z
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a:Lcom/estrongs/android/ui/addressbar/a;
+
+    invoke-virtual {v0, p1}, Lcom/estrongs/android/ui/addressbar/a;->c(Z)V
+
+    return-void
+.end method
+
+.method public setIsLoading(Z)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a:Lcom/estrongs/android/ui/addressbar/a;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a:Lcom/estrongs/android/ui/addressbar/a;
+
+    invoke-virtual {v0, p1}, Lcom/estrongs/android/ui/addressbar/a;->a(Z)V
+
+    :cond_0
+    invoke-virtual {p0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->postInvalidate()V
+
+    return-void
+.end method
+
+.method public setIsNarrowMode(Z)V
+    .locals 1
+
+    iput-boolean p1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->n:Z
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a:Lcom/estrongs/android/ui/addressbar/a;
+
+    invoke-virtual {v0, p1}, Lcom/estrongs/android/ui/addressbar/a;->b(Z)V
+
+    return-void
+.end method
+
+.method public setIsScreenSwitching(Z)V
+    .locals 1
+
+    iput-boolean p1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->l:Z
+
+    if-eqz p1, :cond_0
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->m:Z
+
+    :goto_0
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->m:Z
+
+    goto :goto_0
+.end method
+
+.method public setLevelDirection(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->k:I
+
+    return-void
+.end method
+
+.method public setOnAddressBarClickListener(Lcom/estrongs/android/ui/addressbar/f;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->f:Lcom/estrongs/android/ui/addressbar/f;
+
+    return-void
+.end method
+
+.method public setOnAddressBarLongClickListener(Lcom/estrongs/android/ui/addressbar/g;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->g:Lcom/estrongs/android/ui/addressbar/g;
+
+    return-void
+.end method
+
 .method protected verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
     .locals 1
 
     iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a:Lcom/estrongs/android/ui/addressbar/a;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/addressbar/a;->d()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/addressbar/a;->e()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 

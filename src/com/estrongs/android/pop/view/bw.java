@@ -1,68 +1,64 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.pop.utils.aj;
-import com.estrongs.android.ui.drag.c;
-import com.estrongs.android.ui.drag.l;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bd;
+import com.estrongs.a.a;
+import com.estrongs.a.p;
+import com.estrongs.android.pop.ac;
+import com.estrongs.android.pop.m;
+import com.estrongs.android.pop.utils.ao;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.FileSystemException;
+import com.estrongs.fs.a.b;
+import com.estrongs.fs.d;
 import com.estrongs.fs.h;
-import com.estrongs.fs.m;
-import java.util.Iterator;
-import java.util.List;
+import com.estrongs.fs.impl.local.k;
+import java.text.MessageFormat;
 
 class bw
-  implements c
+  extends Thread
 {
-  bw(FileExplorerActivity paramFileExplorerActivity) {}
+  bw(FileExplorerActivity paramFileExplorerActivity, d paramd, String paramString1, boolean paramBoolean, String paramString2) {}
   
-  public void a(l paraml, Object paramObject)
+  public void run()
   {
-    paraml = a.z();
-    paramObject = (List)paramObject;
-    if (am.bb(paraml))
-    {
-      if (((List)paramObject).size() >= 2)
+    for (int i = 1;; i = 0) {
+      try
       {
-        ag.a(a, 2131428219, 0);
-        return;
+        if (a.b(b))
+        {
+          e.c(e.getString(2131231900));
+          return;
+        }
+        Object localObject = new bx(this);
+        ((a)localObject).setTaskDecisionListener(new m(e));
+        ((a)localObject).execute(false);
+        if (getTaskResulta == 0)
+        {
+          if (i == 0) {
+            break;
+          }
+          e.c(MessageFormat.format(e.getString(2131231902), new Object[] { d }));
+          if ((c) && (ap.bJ(b))) {
+            k.a();
+          }
+          localObject = b.a().h(ap.bB(b));
+          if ((localObject == null) || (((h)localObject).getExtra("child_count") == null)) {
+            return;
+          }
+          ao.a((h)localObject);
+          return;
+        }
       }
-      if (am.aV(paraml))
+      catch (FileSystemException localFileSystemException)
       {
-        ag.a(a, 2131428220, 0);
+        e.c(e.getString(2131231901) + ":" + localFileSystemException.getMessage());
         return;
       }
     }
-    paraml = ((List)paramObject).iterator();
-    do
-    {
-      if (!paraml.hasNext()) {
-        break;
-      }
-    } while (!((h)paraml.next()).getFileType().a());
-    for (int i = 1;; i = 0)
-    {
-      if (i != 0)
-      {
-        ag.a(a, 2131428103, 0);
-        return;
-      }
-      if (((List)paramObject).size() == 1)
-      {
-        aj.a(a, ((h)((List)paramObject).get(0)).getAbsolutePath());
-        a.s();
-        return;
-      }
-      if (((List)paramObject).size() <= 1) {
-        break;
-      }
-      aj.b(a, bd.a((List)paramObject));
-      a.s();
-      return;
+    e.c(e.getString(2131231901));
+    if ((ac.a() >= 18) && (ap.bJ(b))) {
+      e.runOnUiThread(new by(this));
     }
   }
-  
-  public void b(l paraml, Object paramObject) {}
 }
 
 /* Location:

@@ -1,103 +1,128 @@
-.class public Lcom/estrongs/android/pop/app/b/t;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/estrongs/fs/i;
+.class Lcom/estrongs/android/pop/app/b/t;
+.super Landroid/support/v7/widget/RecyclerView$OnScrollListener;
 
 
 # instance fields
-.field private a:[Ljava/lang/String;
+.field final synthetic a:Lcom/estrongs/android/pop/app/b/k;
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;)V
-    .locals 1
+.method constructor <init>(Lcom/estrongs/android/pop/app/b/k;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/b/t;->a:Lcom/estrongs/android/pop/app/b/k;
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Landroid/support/v7/widget/RecyclerView$OnScrollListener;-><init>()V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/b/t;->a:[Ljava/lang/String;
-
-    if-eqz p1, :cond_0
-
-    const-string v0, ";"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/b/t;->a:[Ljava/lang/String;
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/estrongs/fs/h;)Z
-    .locals 6
+.method public onScrolled(Landroid/support/v7/widget/RecyclerView;II)V
+    .locals 3
 
-    const/4 v0, 0x0
+    invoke-super {p0, p1, p2, p3}, Landroid/support/v7/widget/RecyclerView$OnScrollListener;->onScrolled(Landroid/support/v7/widget/RecyclerView;II)V
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/b/t;->a:[Ljava/lang/String;
+    sget-boolean v0, Lcom/estrongs/android/pop/FexApplication;->a:Z
 
-    if-nez v1, :cond_1
+    if-eqz v0, :cond_1
 
-    :cond_0
-    :goto_0
-    return v0
+    if-lez p3, :cond_1
 
-    :cond_1
-    if-eqz p1, :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/b/t;->a:Lcom/estrongs/android/pop/app/b/k;
 
-    invoke-interface {p1}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/m;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/b/k;->d(Lcom/estrongs/android/pop/app/b/k;)Ljava/util/List;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1}, Lcom/estrongs/fs/m;->a()Z
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/b/t;->a:Lcom/estrongs/android/pop/app/b/k;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/b/k;->m(Lcom/estrongs/android/pop/app/b/k;)Landroid/support/v7/widget/RecyclerView;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView;->getLayoutManager()Landroid/support/v7/widget/RecyclerView$LayoutManager;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v7/widget/LinearLayoutManager;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/LinearLayoutManager;->findLastVisibleItemPosition()I
 
     move-result v1
 
-    if-nez v1, :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/b/t;->a:Lcom/estrongs/android/pop/app/b/k;
 
-    invoke-interface {p1}, Lcom/estrongs/fs/h;->getName()Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/b/k;->m(Lcom/estrongs/android/pop/app/b/k;)Landroid/support/v7/widget/RecyclerView;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView;->getAdapter()Landroid/support/v7/widget/RecyclerView$Adapter;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$Adapter;->getItemCount()I
+
+    move-result v0
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/b/t;->a:Lcom/estrongs/android/pop/app/b/k;
+
+    invoke-static {v2}, Lcom/estrongs/android/pop/app/b/k;->m(Lcom/estrongs/android/pop/app/b/k;)Landroid/support/v7/widget/RecyclerView;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/estrongs/android/pop/app/b/t;->a:[Ljava/lang/String;
+    invoke-virtual {v2}, Landroid/support/v7/widget/RecyclerView;->getAdapter()Landroid/support/v7/widget/RecyclerView$Adapter;
 
-    array-length v4, v3
+    move-result-object v2
 
-    move v1, v0
+    instance-of v2, v2, Lcom/estrongs/android/ui/c/a;
 
-    :goto_1
-    if-ge v1, v4, :cond_0
+    if-eqz v2, :cond_0
 
-    aget-object v5, v3, v1
+    sget v2, Lcom/estrongs/android/ui/c/a;->a:I
 
-    if-eqz v5, :cond_2
+    sub-int/2addr v0, v2
 
-    invoke-virtual {v5}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+    :cond_0
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/b/t;->a:Lcom/estrongs/android/pop/app/b/k;
 
-    move-result-object v5
+    invoke-static {v2}, Lcom/estrongs/android/pop/app/b/k;->g(Lcom/estrongs/android/pop/app/b/k;)Z
 
-    invoke-virtual {v2, v5}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    move-result v2
 
-    move-result v5
+    if-nez v2, :cond_1
 
-    if-eqz v5, :cond_2
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/b/t;->a:Lcom/estrongs/android/pop/app/b/k;
 
-    const/4 v0, 0x1
+    invoke-static {v2}, Lcom/estrongs/android/pop/app/b/k;->b(Lcom/estrongs/android/pop/app/b/k;)Z
 
-    goto :goto_0
+    move-result v2
 
-    :cond_2
-    add-int/lit8 v1, v1, 0x1
+    if-nez v2, :cond_1
 
-    goto :goto_1
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/b/t;->a:Lcom/estrongs/android/pop/app/b/k;
+
+    invoke-static {v2}, Lcom/estrongs/android/pop/app/b/k;->n(Lcom/estrongs/android/pop/app/b/k;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    add-int/lit8 v0, v0, -0x2
+
+    if-lt v1, v0, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/b/t;->a:Lcom/estrongs/android/pop/app/b/k;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/b/k;->o(Lcom/estrongs/android/pop/app/b/k;)V
+
+    :cond_1
+    return-void
 .end method

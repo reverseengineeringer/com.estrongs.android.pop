@@ -1,24 +1,14 @@
 package com.estrongs.android.pop.app.editor;
 
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.View.OnTouchListener;
-import com.estrongs.android.pop.esclasses.ESScrollMenuView;
-
-class ag
-  implements View.OnTouchListener
+public class ag
 {
-  ag(PopNoteEditor paramPopNoteEditor) {}
+  int a = 0;
+  long b = 0L;
   
-  public boolean onTouch(View paramView, MotionEvent paramMotionEvent)
+  public ag(af paramaf, int paramInt, long paramLong)
   {
-    if ((paramMotionEvent.getAction() == 1) || (paramMotionEvent.getAction() == 0)) {
-      PopNoteEditor.b(a).a();
-    }
-    if (PopNoteEditor.p(a).getVisibility() == 0) {
-      PopNoteEditor.q(a);
-    }
-    return false;
+    a = paramInt;
+    b = paramLong;
   }
 }
 

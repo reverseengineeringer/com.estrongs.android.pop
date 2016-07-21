@@ -1,17 +1,16 @@
 package com.estrongs.android.pop.app;
 
-import com.estrongs.fs.h;
-import com.estrongs.fs.i;
-import com.estrongs.fs.m;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnDismissListener;
 
 class ca
-  implements i
+  implements DialogInterface.OnDismissListener
 {
-  ca(FileChooserActivity paramFileChooserActivity, boolean paramBoolean) {}
+  ca(ESUsePromptActivity paramESUsePromptActivity) {}
   
-  public boolean a(h paramh)
+  public void onDismiss(DialogInterface paramDialogInterface)
   {
-    return (paramh.getFileType().a()) && ((!paramh.getName().startsWith(".")) || (a));
+    a.finish();
   }
 }
 

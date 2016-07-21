@@ -1,17 +1,19 @@
 package com.estrongs.android.pop.app;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.ui.e.ju;
 
 class ki
-  implements View.OnClickListener
+  implements MenuItem.OnMenuItemClickListener
 {
-  ki(RecommItemDetailAcitivity paramRecommItemDetailAcitivity) {}
+  ki(PopVideoPlayer paramPopVideoPlayer) {}
   
-  public void onClick(View paramView)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    RecommItemDetailAcitivity.b(a);
-    a.finish();
+    PopVideoPlayer.w(a);
+    PopVideoPlayer.E(a).d();
+    return true;
   }
 }
 

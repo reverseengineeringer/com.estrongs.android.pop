@@ -6,9 +6,9 @@
 
 
 # instance fields
-.field private A:Lcom/estrongs/android/ui/view/ar;
+.field private A:Lcom/estrongs/android/ui/view/av;
 
-.field private B:Lcom/estrongs/android/ui/view/aq;
+.field private B:Lcom/estrongs/android/ui/view/au;
 
 .field private C:Landroid/media/MediaPlayer$OnCompletionListener;
 
@@ -68,7 +68,7 @@
 
 .field private y:Z
 
-.field private z:Lcom/estrongs/android/ui/view/as;
+.field private z:Lcom/estrongs/android/ui/view/aw;
 
 
 # direct methods
@@ -95,51 +95,51 @@
 
     iput-boolean v2, p0, Lcom/estrongs/android/ui/view/ESVideoView;->y:Z
 
-    iput-object v1, p0, Lcom/estrongs/android/ui/view/ESVideoView;->z:Lcom/estrongs/android/ui/view/as;
+    iput-object v1, p0, Lcom/estrongs/android/ui/view/ESVideoView;->z:Lcom/estrongs/android/ui/view/aw;
 
-    iput-object v1, p0, Lcom/estrongs/android/ui/view/ESVideoView;->A:Lcom/estrongs/android/ui/view/ar;
+    iput-object v1, p0, Lcom/estrongs/android/ui/view/ESVideoView;->A:Lcom/estrongs/android/ui/view/av;
 
-    iput-object v1, p0, Lcom/estrongs/android/ui/view/ESVideoView;->B:Lcom/estrongs/android/ui/view/aq;
-
-    new-instance v0, Lcom/estrongs/android/ui/view/aj;
-
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/aj;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;)V
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->b:Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
-
-    new-instance v0, Lcom/estrongs/android/ui/view/ak;
-
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/ak;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;)V
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->c:Landroid/media/MediaPlayer$OnPreparedListener;
-
-    new-instance v0, Lcom/estrongs/android/ui/view/al;
-
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/al;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;)V
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->C:Landroid/media/MediaPlayer$OnCompletionListener;
-
-    new-instance v0, Lcom/estrongs/android/ui/view/am;
-
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/am;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;)V
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->D:Landroid/media/MediaPlayer$OnSeekCompleteListener;
+    iput-object v1, p0, Lcom/estrongs/android/ui/view/ESVideoView;->B:Lcom/estrongs/android/ui/view/au;
 
     new-instance v0, Lcom/estrongs/android/ui/view/an;
 
     invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/an;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->E:Landroid/media/MediaPlayer$OnErrorListener;
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->b:Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
 
     new-instance v0, Lcom/estrongs/android/ui/view/ao;
 
     invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/ao;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->F:Landroid/media/MediaPlayer$OnBufferingUpdateListener;
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->c:Landroid/media/MediaPlayer$OnPreparedListener;
 
     new-instance v0, Lcom/estrongs/android/ui/view/ap;
 
     invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/ap;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->C:Landroid/media/MediaPlayer$OnCompletionListener;
+
+    new-instance v0, Lcom/estrongs/android/ui/view/aq;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/aq;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->D:Landroid/media/MediaPlayer$OnSeekCompleteListener;
+
+    new-instance v0, Lcom/estrongs/android/ui/view/ar;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/ar;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->E:Landroid/media/MediaPlayer$OnErrorListener;
+
+    new-instance v0, Lcom/estrongs/android/ui/view/as;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/as;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->F:Landroid/media/MediaPlayer$OnBufferingUpdateListener;
+
+    new-instance v0, Lcom/estrongs/android/ui/view/at;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/at;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;)V
 
     iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->d:Landroid/view/SurfaceHolder$Callback;
 
@@ -187,51 +187,51 @@
 
     iput-boolean v2, p0, Lcom/estrongs/android/ui/view/ESVideoView;->y:Z
 
-    iput-object v1, p0, Lcom/estrongs/android/ui/view/ESVideoView;->z:Lcom/estrongs/android/ui/view/as;
+    iput-object v1, p0, Lcom/estrongs/android/ui/view/ESVideoView;->z:Lcom/estrongs/android/ui/view/aw;
 
-    iput-object v1, p0, Lcom/estrongs/android/ui/view/ESVideoView;->A:Lcom/estrongs/android/ui/view/ar;
+    iput-object v1, p0, Lcom/estrongs/android/ui/view/ESVideoView;->A:Lcom/estrongs/android/ui/view/av;
 
-    iput-object v1, p0, Lcom/estrongs/android/ui/view/ESVideoView;->B:Lcom/estrongs/android/ui/view/aq;
-
-    new-instance v0, Lcom/estrongs/android/ui/view/aj;
-
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/aj;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;)V
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->b:Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
-
-    new-instance v0, Lcom/estrongs/android/ui/view/ak;
-
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/ak;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;)V
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->c:Landroid/media/MediaPlayer$OnPreparedListener;
-
-    new-instance v0, Lcom/estrongs/android/ui/view/al;
-
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/al;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;)V
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->C:Landroid/media/MediaPlayer$OnCompletionListener;
-
-    new-instance v0, Lcom/estrongs/android/ui/view/am;
-
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/am;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;)V
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->D:Landroid/media/MediaPlayer$OnSeekCompleteListener;
+    iput-object v1, p0, Lcom/estrongs/android/ui/view/ESVideoView;->B:Lcom/estrongs/android/ui/view/au;
 
     new-instance v0, Lcom/estrongs/android/ui/view/an;
 
     invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/an;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->E:Landroid/media/MediaPlayer$OnErrorListener;
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->b:Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
 
     new-instance v0, Lcom/estrongs/android/ui/view/ao;
 
     invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/ao;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->F:Landroid/media/MediaPlayer$OnBufferingUpdateListener;
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->c:Landroid/media/MediaPlayer$OnPreparedListener;
 
     new-instance v0, Lcom/estrongs/android/ui/view/ap;
 
     invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/ap;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->C:Landroid/media/MediaPlayer$OnCompletionListener;
+
+    new-instance v0, Lcom/estrongs/android/ui/view/aq;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/aq;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->D:Landroid/media/MediaPlayer$OnSeekCompleteListener;
+
+    new-instance v0, Lcom/estrongs/android/ui/view/ar;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/ar;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->E:Landroid/media/MediaPlayer$OnErrorListener;
+
+    new-instance v0, Lcom/estrongs/android/ui/view/as;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/as;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->F:Landroid/media/MediaPlayer$OnBufferingUpdateListener;
+
+    new-instance v0, Lcom/estrongs/android/ui/view/at;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/at;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;)V
 
     iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->d:Landroid/view/SurfaceHolder$Callback;
 
@@ -266,10 +266,10 @@
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/estrongs/android/ui/view/ESVideoView;Lcom/estrongs/android/ui/view/as;)Lcom/estrongs/android/ui/view/as;
+.method static synthetic a(Lcom/estrongs/android/ui/view/ESVideoView;Lcom/estrongs/android/ui/view/aw;)Lcom/estrongs/android/ui/view/aw;
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/view/ESVideoView;->z:Lcom/estrongs/android/ui/view/as;
+    iput-object p1, p0, Lcom/estrongs/android/ui/view/ESVideoView;->z:Lcom/estrongs/android/ui/view/aw;
 
     return-object p1
 .end method
@@ -429,19 +429,19 @@
 .method private f()V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->z:Lcom/estrongs/android/ui/view/as;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->z:Lcom/estrongs/android/ui/view/aw;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcom/estrongs/android/ui/view/as;
+    new-instance v0, Lcom/estrongs/android/ui/view/aw;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/as;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/aw;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->z:Lcom/estrongs/android/ui/view/as;
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->z:Lcom/estrongs/android/ui/view/aw;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->z:Lcom/estrongs/android/ui/view/as;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->z:Lcom/estrongs/android/ui/view/aw;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/as;->start()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/aw;->start()V
 
     :cond_0
     return-void
@@ -628,7 +628,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v1, v2, v0}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     iput v4, p0, Lcom/estrongs/android/ui/view/ESVideoView;->g:I
 
@@ -669,7 +669,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v1, v2, v0}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     iput v4, p0, Lcom/estrongs/android/ui/view/ESVideoView;->g:I
 
@@ -787,10 +787,10 @@
     return-object v0
 .end method
 
-.method static synthetic k(Lcom/estrongs/android/ui/view/ESVideoView;)Lcom/estrongs/android/ui/view/ar;
+.method static synthetic k(Lcom/estrongs/android/ui/view/ESVideoView;)Lcom/estrongs/android/ui/view/av;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->A:Lcom/estrongs/android/ui/view/ar;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->A:Lcom/estrongs/android/ui/view/av;
 
     return-object v0
 .end method
@@ -819,10 +819,10 @@
     return-void
 .end method
 
-.method static synthetic o(Lcom/estrongs/android/ui/view/ESVideoView;)Lcom/estrongs/android/ui/view/as;
+.method static synthetic o(Lcom/estrongs/android/ui/view/ESVideoView;)Lcom/estrongs/android/ui/view/aw;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->z:Lcom/estrongs/android/ui/view/as;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->z:Lcom/estrongs/android/ui/view/aw;
 
     return-object v0
 .end method
@@ -846,9 +846,9 @@
 
     new-instance v1, Ljava/lang/Thread;
 
-    new-instance v2, Lcom/estrongs/android/ui/view/ah;
+    new-instance v2, Lcom/estrongs/android/ui/view/al;
 
-    invoke-direct {v2, p0, v0}, Lcom/estrongs/android/ui/view/ah;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;Landroid/media/MediaPlayer;)V
+    invoke-direct {v2, p0, v0}, Lcom/estrongs/android/ui/view/al;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;Landroid/media/MediaPlayer;)V
 
     invoke-direct {v1, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
@@ -905,40 +905,6 @@
     goto :goto_0
 .end method
 
-.method public a(Landroid/media/MediaPlayer$OnCompletionListener;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/ui/view/ESVideoView;->p:Landroid/media/MediaPlayer$OnCompletionListener;
-
-    return-void
-.end method
-
-.method public a(Landroid/media/MediaPlayer$OnErrorListener;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/ui/view/ESVideoView;->s:Landroid/media/MediaPlayer$OnErrorListener;
-
-    return-void
-.end method
-
-.method public a(Landroid/media/MediaPlayer$OnPreparedListener;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/ui/view/ESVideoView;->q:Landroid/media/MediaPlayer$OnPreparedListener;
-
-    return-void
-.end method
-
-.method public a(Landroid/net/Uri;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p1, v0}, Lcom/estrongs/android/ui/view/ESVideoView;->a(Landroid/net/Uri;Ljava/util/Map;)V
-
-    return-void
-.end method
-
 .method public a(Landroid/net/Uri;Ljava/util/Map;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
@@ -985,45 +951,6 @@
     return-void
 .end method
 
-.method public a(Landroid/widget/MediaController;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->o:Landroid/widget/MediaController;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->o:Landroid/widget/MediaController;
-
-    invoke-virtual {v0}, Landroid/widget/MediaController;->hide()V
-
-    :cond_0
-    iput-object p1, p0, Lcom/estrongs/android/ui/view/ESVideoView;->o:Landroid/widget/MediaController;
-
-    invoke-direct {p0}, Lcom/estrongs/android/ui/view/ESVideoView;->h()V
-
-    return-void
-.end method
-
-.method public a(Lcom/estrongs/android/ui/view/ar;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/ui/view/ESVideoView;->A:Lcom/estrongs/android/ui/view/ar;
-
-    return-void
-.end method
-
-.method public a(Ljava/lang/String;)V
-    .locals 1
-
-    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/view/ESVideoView;->a(Landroid/net/Uri;)V
-
-    return-void
-.end method
-
 .method public a(Z)V
     .locals 1
 
@@ -1053,9 +980,9 @@
 
     new-instance v1, Ljava/lang/Thread;
 
-    new-instance v2, Lcom/estrongs/android/ui/view/ai;
+    new-instance v2, Lcom/estrongs/android/ui/view/am;
 
-    invoke-direct {v2, p0, v0}, Lcom/estrongs/android/ui/view/ai;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;Landroid/media/MediaPlayer;)V
+    invoke-direct {v2, p0, v0}, Lcom/estrongs/android/ui/view/am;-><init>(Lcom/estrongs/android/ui/view/ESVideoView;Landroid/media/MediaPlayer;)V
 
     invoke-direct {v1, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
@@ -1197,9 +1124,9 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->z:Lcom/estrongs/android/ui/view/as;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->z:Lcom/estrongs/android/ui/view/aw;
 
-    iget v0, v0, Lcom/estrongs/android/ui/view/as;->b:I
+    iget v0, v0, Lcom/estrongs/android/ui/view/aw;->b:I
 
     :goto_0
     return v0
@@ -1603,24 +1530,105 @@
 
     iput-boolean v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->y:Z
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->A:Lcom/estrongs/android/ui/view/ar;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->A:Lcom/estrongs/android/ui/view/av;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->A:Lcom/estrongs/android/ui/view/ar;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->A:Lcom/estrongs/android/ui/view/av;
 
-    invoke-interface {v0}, Lcom/estrongs/android/ui/view/ar;->a()V
+    invoke-interface {v0}, Lcom/estrongs/android/ui/view/av;->a()V
 
     :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->z:Lcom/estrongs/android/ui/view/as;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->z:Lcom/estrongs/android/ui/view/aw;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->z:Lcom/estrongs/android/ui/view/as;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->z:Lcom/estrongs/android/ui/view/aw;
 
-    invoke-virtual {v0, p1}, Lcom/estrongs/android/ui/view/as;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/estrongs/android/ui/view/aw;->a(I)V
 
     :cond_2
+    return-void
+.end method
+
+.method public setMediaController(Landroid/widget/MediaController;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->o:Landroid/widget/MediaController;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ESVideoView;->o:Landroid/widget/MediaController;
+
+    invoke-virtual {v0}, Landroid/widget/MediaController;->hide()V
+
+    :cond_0
+    iput-object p1, p0, Lcom/estrongs/android/ui/view/ESVideoView;->o:Landroid/widget/MediaController;
+
+    invoke-direct {p0}, Lcom/estrongs/android/ui/view/ESVideoView;->h()V
+
+    return-void
+.end method
+
+.method public setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/ui/view/ESVideoView;->p:Landroid/media/MediaPlayer$OnCompletionListener;
+
+    return-void
+.end method
+
+.method public setOnDrawListener(Lcom/estrongs/android/ui/view/au;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/ui/view/ESVideoView;->B:Lcom/estrongs/android/ui/view/au;
+
+    return-void
+.end method
+
+.method public setOnErrorListener(Landroid/media/MediaPlayer$OnErrorListener;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/ui/view/ESVideoView;->s:Landroid/media/MediaPlayer$OnErrorListener;
+
+    return-void
+.end method
+
+.method public setOnPreparedListener(Landroid/media/MediaPlayer$OnPreparedListener;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/ui/view/ESVideoView;->q:Landroid/media/MediaPlayer$OnPreparedListener;
+
+    return-void
+.end method
+
+.method public setSeekListener(Lcom/estrongs/android/ui/view/av;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/ui/view/ESVideoView;->A:Lcom/estrongs/android/ui/view/av;
+
+    return-void
+.end method
+
+.method public setVideoPath(Ljava/lang/String;)V
+    .locals 1
+
+    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/view/ESVideoView;->setVideoURI(Landroid/net/Uri;)V
+
+    return-void
+.end method
+
+.method public setVideoURI(Landroid/net/Uri;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, p1, v0}, Lcom/estrongs/android/ui/view/ESVideoView;->a(Landroid/net/Uri;Ljava/util/Map;)V
+
     return-void
 .end method
 

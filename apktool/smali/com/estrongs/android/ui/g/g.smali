@@ -59,11 +59,11 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/estrongs/android/util/y;
+    new-instance v1, Lcom/estrongs/android/util/aa;
 
-    invoke-direct {v1, v0}, Lcom/estrongs/android/util/y;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v0}, Lcom/estrongs/android/util/aa;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Lcom/estrongs/android/util/y;->c()V
+    invoke-virtual {v1}, Lcom/estrongs/android/util/aa;->c()V
 
     :goto_0
     return-void

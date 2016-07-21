@@ -1,10 +1,21 @@
 package com.estrongs.android.view;
 
-public abstract interface ca
+import android.app.Activity;
+import com.estrongs.android.widget.f;
+import com.estrongs.fs.i;
+
+class ca
+  extends f
 {
-  public abstract void a(String paramString, boolean paramBoolean);
+  ca(bx parambx, Activity paramActivity, String paramString, i parami)
+  {
+    super(paramActivity, paramString, parami);
+  }
   
-  public abstract void a(String paramString, boolean paramBoolean1, boolean paramBoolean2);
+  protected boolean a()
+  {
+    return false;
+  }
 }
 
 /* Location:

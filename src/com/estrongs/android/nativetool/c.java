@@ -1,8 +1,8 @@
 package com.estrongs.android.nativetool;
 
 import android.net.LocalSocket;
-import com.estrongs.android.util.am;
-import com.estrongs.fs.impl.local.l;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.impl.local.m;
 import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -20,14 +20,14 @@ public class c
     // Byte code:
     //   0: ldc 2
     //   2: monitorenter
-    //   3: invokestatic 18	com/estrongs/fs/impl/local/l:d	()Ljava/lang/String;
+    //   3: invokestatic 18	com/estrongs/fs/impl/local/m:d	()Ljava/lang/String;
     //   6: astore 4
     //   8: new 20	java/lang/StringBuilder
     //   11: dup
     //   12: invokespecial 24	java/lang/StringBuilder:<init>	()V
     //   15: aload 4
-    //   17: invokestatic 30	com/estrongs/android/util/am:bk	(Ljava/lang/String;)Ljava/lang/String;
-    //   20: invokestatic 30	com/estrongs/android/util/am:bk	(Ljava/lang/String;)Ljava/lang/String;
+    //   17: invokestatic 30	com/estrongs/android/util/ap:bB	(Ljava/lang/String;)Ljava/lang/String;
+    //   20: invokestatic 30	com/estrongs/android/util/ap:bB	(Ljava/lang/String;)Ljava/lang/String;
     //   23: invokevirtual 34	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   26: ldc 36
     //   28: invokevirtual 34	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -56,12 +56,12 @@ public class c
     //   77: astore 7
     //   79: aload_2
     //   80: bipush 80
-    //   82: invokestatic 68	com/estrongs/fs/impl/local/l:a	(Ljava/io/OutputStream;I)V
+    //   82: invokestatic 68	com/estrongs/fs/impl/local/m:a	(Ljava/io/OutputStream;I)V
     //   85: aload 7
-    //   87: invokestatic 72	com/estrongs/fs/impl/local/l:c	(Ljava/io/InputStream;)I
-    //   90: bipush 38
+    //   87: invokestatic 72	com/estrongs/fs/impl/local/m:c	(Ljava/io/InputStream;)I
+    //   90: bipush 39
     //   92: if_icmpne +13 -> 105
-    //   95: invokestatic 76	com/estrongs/fs/impl/local/l:m	()Z
+    //   95: invokestatic 76	com/estrongs/fs/impl/local/m:m	()Z
     //   98: istore_1
     //   99: aload_3
     //   100: astore_2
@@ -79,11 +79,11 @@ public class c
     //   123: aload_2
     //   124: invokevirtual 61	android/net/LocalSocket:getOutputStream	()Ljava/io/OutputStream;
     //   127: bipush 100
-    //   129: invokestatic 68	com/estrongs/fs/impl/local/l:a	(Ljava/io/OutputStream;I)V
+    //   129: invokestatic 68	com/estrongs/fs/impl/local/m:a	(Ljava/io/OutputStream;I)V
     //   132: aload_2
     //   133: invokevirtual 79	android/net/LocalSocket:close	()V
     //   136: invokestatic 84	com/estrongs/android/pop/FexApplication:a	()Lcom/estrongs/android/pop/FexApplication;
-    //   139: invokestatic 87	com/estrongs/fs/impl/local/l:a	(Landroid/content/Context;)Z
+    //   139: invokestatic 87	com/estrongs/fs/impl/local/m:a	(Landroid/content/Context;)Z
     //   142: ifeq +30 -> 172
     //   145: iload_0
     //   146: ifeq +26 -> 172
@@ -113,10 +113,10 @@ public class c
     //   187: aconst_null
     //   188: astore_2
     //   189: goto -28 -> 161
-    //   192: invokestatic 93	com/estrongs/fs/impl/local/l:h	()Z
+    //   192: invokestatic 93	com/estrongs/fs/impl/local/m:h	()Z
     //   195: ifeq +17 -> 212
     //   198: invokestatic 84	com/estrongs/android/pop/FexApplication:a	()Lcom/estrongs/android/pop/FexApplication;
-    //   201: invokestatic 87	com/estrongs/fs/impl/local/l:a	(Landroid/content/Context;)Z
+    //   201: invokestatic 87	com/estrongs/fs/impl/local/m:a	(Landroid/content/Context;)Z
     //   204: ifne +8 -> 212
     //   207: aconst_null
     //   208: astore_2
@@ -194,12 +194,12 @@ public class c
     //   23: astore 4
     //   25: aload 4
     //   27: sipush 10001
-    //   30: invokestatic 68	com/estrongs/fs/impl/local/l:a	(Ljava/io/OutputStream;I)V
+    //   30: invokestatic 68	com/estrongs/fs/impl/local/m:a	(Ljava/io/OutputStream;I)V
     //   33: aload 4
     //   35: aload_0
-    //   36: invokestatic 103	com/estrongs/fs/impl/local/l:a	(Ljava/io/OutputStream;Ljava/lang/String;)V
+    //   36: invokestatic 103	com/estrongs/fs/impl/local/m:a	(Ljava/io/OutputStream;Ljava/lang/String;)V
     //   39: aload_3
-    //   40: invokestatic 72	com/estrongs/fs/impl/local/l:c	(Ljava/io/InputStream;)I
+    //   40: invokestatic 72	com/estrongs/fs/impl/local/m:c	(Ljava/io/InputStream;)I
     //   43: istore_1
     //   44: iload_1
     //   45: ifeq +31 -> 76
@@ -219,10 +219,10 @@ public class c
     //   74: aconst_null
     //   75: areturn
     //   76: aload_3
-    //   77: invokestatic 72	com/estrongs/fs/impl/local/l:c	(Ljava/io/InputStream;)I
+    //   77: invokestatic 72	com/estrongs/fs/impl/local/m:c	(Ljava/io/InputStream;)I
     //   80: istore_1
     //   81: aload_3
-    //   82: invokestatic 72	com/estrongs/fs/impl/local/l:c	(Ljava/io/InputStream;)I
+    //   82: invokestatic 72	com/estrongs/fs/impl/local/m:c	(Ljava/io/InputStream;)I
     //   85: istore_2
     //   86: new 111	com/estrongs/android/nativetool/a
     //   89: dup
@@ -236,7 +236,7 @@ public class c
     //   102: putfield 117	com/estrongs/android/nativetool/a:a	Ljava/lang/String;
     //   105: aload 6
     //   107: aload_3
-    //   108: invokestatic 72	com/estrongs/fs/impl/local/l:c	(Ljava/io/InputStream;)I
+    //   108: invokestatic 72	com/estrongs/fs/impl/local/m:c	(Ljava/io/InputStream;)I
     //   111: putfield 120	com/estrongs/android/nativetool/a:d	I
     //   114: aload 6
     //   116: areturn
@@ -352,7 +352,7 @@ public class c
     paramString2.redirectErrorStream(true);
     try
     {
-      paramString2.directory(new File(am.bk(paramString1)));
+      paramString2.directory(new File(ap.bB(paramString1)));
       try
       {
         paramString2.start();
@@ -377,8 +377,8 @@ public class c
       {
         OutputStream localOutputStream = paramLocalSocket.getOutputStream();
         paramLocalSocket = paramLocalSocket.getInputStream();
-        l.a(localOutputStream, 10005);
-        int i = l.c(paramLocalSocket);
+        m.a(localOutputStream, 10005);
+        int i = m.c(paramLocalSocket);
         if (i == 0) {
           return true;
         }
@@ -395,12 +395,12 @@ public class c
     }
     OutputStream localOutputStream = paramLocalSocket.getOutputStream();
     paramLocalSocket = paramLocalSocket.getInputStream();
-    l.a(localOutputStream, 205);
-    l.a(localOutputStream, paramString);
-    if (l.c(paramLocalSocket) < 0) {
+    m.a(localOutputStream, 205);
+    m.a(localOutputStream, paramString);
+    if (m.c(paramLocalSocket) < 0) {
       throw new IOException("File IO errors");
     }
-    return l.c(paramLocalSocket) != 0;
+    return m.c(paramLocalSocket) != 0;
   }
   
   /* Error */
@@ -423,7 +423,7 @@ public class c
     //   20: istore_3
     //   21: aload_0
     //   22: iload_1
-    //   23: invokestatic 166	com/estrongs/android/util/am:b	(Ljava/lang/String;Z)Ljava/lang/String;
+    //   23: invokestatic 166	com/estrongs/android/util/ap:b	(Ljava/lang/String;Z)Ljava/lang/String;
     //   26: astore 8
     //   28: aload 8
     //   30: ifnonnull +10 -> 40
@@ -450,16 +450,16 @@ public class c
     //   71: astore 4
     //   73: aload 5
     //   75: iload_3
-    //   76: invokestatic 68	com/estrongs/fs/impl/local/l:a	(Ljava/io/OutputStream;I)V
+    //   76: invokestatic 68	com/estrongs/fs/impl/local/m:a	(Ljava/io/OutputStream;I)V
     //   79: aload 5
     //   81: astore 4
     //   83: aload 5
     //   85: aload 8
-    //   87: invokestatic 103	com/estrongs/fs/impl/local/l:a	(Ljava/io/OutputStream;Ljava/lang/String;)V
+    //   87: invokestatic 103	com/estrongs/fs/impl/local/m:a	(Ljava/io/OutputStream;Ljava/lang/String;)V
     //   90: aload 5
     //   92: astore 4
     //   94: aload_0
-    //   95: invokestatic 72	com/estrongs/fs/impl/local/l:c	(Ljava/io/InputStream;)I
+    //   95: invokestatic 72	com/estrongs/fs/impl/local/m:c	(Ljava/io/InputStream;)I
     //   98: istore_3
     //   99: iload_3
     //   100: ifne +31 -> 131
@@ -483,7 +483,7 @@ public class c
     //   135: new 168	com/estrongs/fs/impl/local/NativeException
     //   138: dup
     //   139: iload_3
-    //   140: invokestatic 173	com/estrongs/fs/impl/local/k:a	(I)Ljava/lang/String;
+    //   140: invokestatic 173	com/estrongs/fs/impl/local/l:a	(I)Ljava/lang/String;
     //   143: invokespecial 174	com/estrongs/fs/impl/local/NativeException:<init>	(Ljava/lang/String;)V
     //   146: athrow
     //   147: astore 4
@@ -620,16 +620,16 @@ public class c
     //   41: astore_3
     //   42: aload 4
     //   44: sipush 10006
-    //   47: invokestatic 68	com/estrongs/fs/impl/local/l:a	(Ljava/io/OutputStream;I)V
+    //   47: invokestatic 68	com/estrongs/fs/impl/local/m:a	(Ljava/io/OutputStream;I)V
     //   50: aload 4
     //   52: astore_3
     //   53: aload 4
     //   55: aload_0
-    //   56: invokestatic 103	com/estrongs/fs/impl/local/l:a	(Ljava/io/OutputStream;Ljava/lang/String;)V
+    //   56: invokestatic 103	com/estrongs/fs/impl/local/m:a	(Ljava/io/OutputStream;Ljava/lang/String;)V
     //   59: aload 4
     //   61: astore_3
     //   62: aload_2
-    //   63: invokestatic 72	com/estrongs/fs/impl/local/l:c	(Ljava/io/InputStream;)I
+    //   63: invokestatic 72	com/estrongs/fs/impl/local/m:c	(Ljava/io/InputStream;)I
     //   66: istore_1
     //   67: iload_1
     //   68: iconst_1

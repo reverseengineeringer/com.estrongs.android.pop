@@ -4,12 +4,12 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import com.estrongs.android.c.a;
+import com.estrongs.android.g.a;
 import com.estrongs.android.pop.app.imageviewer.ViewImage21;
 import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bc;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bg;
 
 public class PopChromecastPlayer
   extends ESActivity
@@ -22,7 +22,7 @@ public class PopChromecastPlayer
     {
       paramBundle = null;
       str = getIntent().getData().getPath();
-      if (!bc.h(str)) {
+      if (!bg.h(str)) {
         break label96;
       }
       paramBundle = PopVideoPlayer.class;
@@ -32,7 +32,7 @@ public class PopChromecastPlayer
       paramBundle = new Intent(this, paramBundle);
       paramBundle.fillIn(getIntent(), 3);
       paramBundle.putExtra("Chromecast", true);
-      paramBundle.putExtra("ChromecastUrl", am.a(str, a.a(), true, true));
+      paramBundle.putExtra("ChromecastUrl", ap.a(str, a.a(), true, true));
     }
     for (;;)
     {
@@ -42,12 +42,12 @@ public class PopChromecastPlayer
         finish();
         return;
         label96:
-        if (bc.g(str))
+        if (bg.g(str))
         {
           paramBundle = PopAudioPlayer.class;
           break;
         }
-        if (!bc.c(str)) {
+        if (!bg.c(str)) {
           break;
         }
         paramBundle = ViewImage21.class;
@@ -58,7 +58,7 @@ public class PopChromecastPlayer
         continue;
       }
       label130:
-      ag.a(this, 2131428093, 1);
+      ak.a(this, 2131231905, 1);
     }
   }
 }

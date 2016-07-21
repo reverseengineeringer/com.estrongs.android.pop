@@ -17,7 +17,11 @@ class p
     paramDialogInterface.dismiss();
     paramDialogInterface = new ArrayList();
     paramDialogInterface.add(a.a);
-    o.a(a).Q().c(o.a(a), paramDialogInterface);
+    if ((o.a(a) instanceof FileExplorerActivity))
+    {
+      FileExplorerActivity localFileExplorerActivity = (FileExplorerActivity)o.a(a);
+      localFileExplorerActivity.ag().c(localFileExplorerActivity, paramDialogInterface);
+    }
   }
 }
 

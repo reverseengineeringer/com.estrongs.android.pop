@@ -11,7 +11,7 @@
 # instance fields
 .field public a:Z
 
-.field public c:Lcom/estrongs/android/c/a;
+.field public c:Lcom/estrongs/android/g/a;
 
 .field public d:Z
 
@@ -19,7 +19,7 @@
 
 .field f:Landroid/media/MediaPlayer$OnErrorListener;
 
-.field g:Lcom/estrongs/android/pop/app/i;
+.field g:Lcom/estrongs/android/pop/app/m;
 
 .field public h:Z
 
@@ -33,13 +33,13 @@
 
 .field private n:Z
 
-.field private o:Lcom/estrongs/android/ui/notification/a;
+.field private o:Lcom/estrongs/android/ui/notification/b;
 
 .field private p:Landroid/media/MediaPlayer;
 
 .field private q:Z
 
-.field private r:Lcom/estrongs/android/pop/app/a/am;
+.field private r:Lcom/estrongs/android/pop/app/c/k;
 
 .field private final s:Landroid/content/BroadcastReceiver;
 
@@ -51,7 +51,7 @@
 
 .field private w:Ljava/lang/Object;
 
-.field private x:Lcom/estrongs/android/pop/app/gc;
+.field private x:Lcom/estrongs/android/pop/app/gp;
 
 
 # direct methods
@@ -84,9 +84,9 @@
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->k:Ljava/lang/Object;
 
-    new-instance v0, Lcom/estrongs/android/pop/app/q;
+    new-instance v0, Lcom/estrongs/android/pop/app/u;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/q;-><init>(Lcom/estrongs/android/pop/app/AudioPlayerService;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/u;-><init>(Lcom/estrongs/android/pop/app/AudioPlayerService;)V
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->l:Landroid/os/IBinder;
 
@@ -98,49 +98,49 @@
 
     iput-object v2, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->p:Landroid/media/MediaPlayer;
 
-    iput-object v2, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->c:Lcom/estrongs/android/c/a;
+    iput-object v2, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->c:Lcom/estrongs/android/g/a;
 
     iput-boolean v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->q:Z
 
     iput-boolean v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->d:Z
 
-    new-instance v0, Lcom/estrongs/android/pop/app/j;
-
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/j;-><init>(Lcom/estrongs/android/pop/app/AudioPlayerService;)V
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->s:Landroid/content/BroadcastReceiver;
-
-    new-instance v0, Lcom/estrongs/android/pop/app/l;
-
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/l;-><init>(Lcom/estrongs/android/pop/app/AudioPlayerService;)V
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->e:Landroid/media/MediaPlayer$OnCompletionListener;
-
-    new-instance v0, Lcom/estrongs/android/pop/app/m;
-
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/m;-><init>(Lcom/estrongs/android/pop/app/AudioPlayerService;)V
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->f:Landroid/media/MediaPlayer$OnErrorListener;
-
     new-instance v0, Lcom/estrongs/android/pop/app/n;
 
     invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/n;-><init>(Lcom/estrongs/android/pop/app/AudioPlayerService;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->t:Landroid/content/BroadcastReceiver;
-
-    new-instance v0, Lcom/estrongs/android/pop/app/o;
-
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/o;-><init>(Lcom/estrongs/android/pop/app/AudioPlayerService;)V
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->u:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->s:Landroid/content/BroadcastReceiver;
 
     new-instance v0, Lcom/estrongs/android/pop/app/p;
 
     invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/p;-><init>(Lcom/estrongs/android/pop/app/AudioPlayerService;)V
 
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->e:Landroid/media/MediaPlayer$OnCompletionListener;
+
+    new-instance v0, Lcom/estrongs/android/pop/app/q;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/q;-><init>(Lcom/estrongs/android/pop/app/AudioPlayerService;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->f:Landroid/media/MediaPlayer$OnErrorListener;
+
+    new-instance v0, Lcom/estrongs/android/pop/app/r;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/r;-><init>(Lcom/estrongs/android/pop/app/AudioPlayerService;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->t:Landroid/content/BroadcastReceiver;
+
+    new-instance v0, Lcom/estrongs/android/pop/app/s;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/s;-><init>(Lcom/estrongs/android/pop/app/AudioPlayerService;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->u:Landroid/content/BroadcastReceiver;
+
+    new-instance v0, Lcom/estrongs/android/pop/app/t;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/t;-><init>(Lcom/estrongs/android/pop/app/AudioPlayerService;)V
+
     iput-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->v:Landroid/content/BroadcastReceiver;
 
-    iput-object v2, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->g:Lcom/estrongs/android/pop/app/i;
+    iput-object v2, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->g:Lcom/estrongs/android/pop/app/m;
 
     iput-boolean v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->h:Z
 
@@ -152,24 +152,24 @@
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->w:Ljava/lang/Object;
 
-    iput-object v2, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gc;
+    iput-object v2, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gp;
 
     return-void
 .end method
 
-.method private G()I
+.method private H()I
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/am;->b()I
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/k;->b()I
 
     move-result v0
 
     return v0
 .end method
 
-.method private declared-synchronized H()V
+.method private declared-synchronized I()V
     .locals 2
 
     monitor-enter p0
@@ -192,15 +192,15 @@
 
     :cond_0
     :try_start_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->g:Lcom/estrongs/android/pop/app/i;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->g:Lcom/estrongs/android/pop/app/m;
 
     if-nez v0, :cond_1
 
-    new-instance v0, Lcom/estrongs/android/pop/app/i;
+    new-instance v0, Lcom/estrongs/android/pop/app/m;
 
-    invoke-direct {v0, p0, p0}, Lcom/estrongs/android/pop/app/i;-><init>(Landroid/content/Context;Lcom/estrongs/android/pop/app/AudioPlayerService;)V
+    invoke-direct {v0, p0, p0}, Lcom/estrongs/android/pop/app/m;-><init>(Landroid/content/Context;Lcom/estrongs/android/pop/app/AudioPlayerService;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->g:Lcom/estrongs/android/pop/app/i;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->g:Lcom/estrongs/android/pop/app/m;
 
     :cond_1
     iget-object v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->w:Ljava/lang/Object;
@@ -214,9 +214,9 @@
 
     if-nez v0, :cond_2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->g:Lcom/estrongs/android/pop/app/i;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->g:Lcom/estrongs/android/pop/app/m;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/i;->a()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/m;->a()Z
 
     move-result v0
 
@@ -247,7 +247,7 @@
     throw v0
 .end method
 
-.method private declared-synchronized I()V
+.method private declared-synchronized J()V
     .locals 2
 
     monitor-enter p0
@@ -261,7 +261,7 @@
 
     if-lt v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->g:Lcom/estrongs/android/pop/app/i;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->g:Lcom/estrongs/android/pop/app/m;
 
     if-eqz v0, :cond_0
 
@@ -290,9 +290,9 @@
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->g:Lcom/estrongs/android/pop/app/i;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->g:Lcom/estrongs/android/pop/app/m;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/i;->b()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/m;->b()Z
 
     move-result v0
 
@@ -333,10 +333,52 @@
     goto :goto_1
 .end method
 
-.method static synthetic a(Lcom/estrongs/android/pop/app/AudioPlayerService;)Lcom/estrongs/android/pop/app/gc;
+.method private K()V
+    .locals 2
+
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/ai;->b(Landroid/content/Context;)Lcom/estrongs/android/pop/ai;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
+
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/c/k;->e()Lcom/estrongs/android/pop/app/c/j;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/c/j;->a()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/ai;->c(Ljava/lang/String;)V
+
+    :cond_0
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
+
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/c/k;->g()Lcom/estrongs/android/pop/app/c/i;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, v1, Lcom/estrongs/android/pop/app/c/i;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/ai;->d(Ljava/lang/String;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method static synthetic a(Lcom/estrongs/android/pop/app/AudioPlayerService;)Lcom/estrongs/android/pop/app/gp;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gc;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gp;
 
     return-object v0
 .end method
@@ -346,9 +388,9 @@
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->t()V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/am;->n()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/k;->n()Z
 
     move-result v0
 
@@ -360,11 +402,11 @@
     return v0
 
     :cond_0
-    new-instance v0, Lcom/estrongs/android/pop/app/k;
+    new-instance v0, Lcom/estrongs/android/pop/app/o;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/k;-><init>(Lcom/estrongs/android/pop/app/AudioPlayerService;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/o;-><init>(Lcom/estrongs/android/pop/app/AudioPlayerService;)V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/k;->start()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/o;->start()V
 
     const/4 v0, 0x1
 
@@ -381,10 +423,10 @@
     return v0
 .end method
 
-.method static synthetic b(Lcom/estrongs/android/pop/app/AudioPlayerService;)Lcom/estrongs/android/pop/app/a/am;
+.method static synthetic b(Lcom/estrongs/android/pop/app/AudioPlayerService;)Lcom/estrongs/android/pop/app/c/k;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
     return-object v0
 .end method
@@ -392,7 +434,7 @@
 .method static synthetic c(Lcom/estrongs/android/pop/app/AudioPlayerService;)I
     .locals 1
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->G()I
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->H()I
 
     move-result v0
 
@@ -424,21 +466,21 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/am;->e()Lcom/estrongs/android/pop/app/a/al;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/k;->e()Lcom/estrongs/android/pop/app/c/j;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->o:Lcom/estrongs/android/ui/notification/a;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->o:Lcom/estrongs/android/ui/notification/b;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/a;->a()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/b;->a()V
 
     :cond_0
     return-void
@@ -449,7 +491,7 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->h()Lcom/estrongs/android/pop/app/a/al;
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->h()Lcom/estrongs/android/pop/app/c/j;
 
     move-result-object v1
 
@@ -460,21 +502,21 @@
     return-object v0
 
     :cond_1
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/a/am;->j()I
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/c/k;->j()I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/am;->g()Lcom/estrongs/android/pop/app/a/ak;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/k;->g()Lcom/estrongs/android/pop/app/c/i;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/a/ak;->e:Ljava/lang/String;
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/c/i;->e:Ljava/lang/String;
 
     if-eqz v0, :cond_2
 
@@ -487,15 +529,15 @@
     if-eqz v1, :cond_0
 
     :cond_2
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/am;->g()Lcom/estrongs/android/pop/app/a/ak;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/k;->g()Lcom/estrongs/android/pop/app/c/i;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/a/ak;->b:Ljava/lang/String;
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/c/i;->b:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -507,7 +549,7 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->h()Lcom/estrongs/android/pop/app/a/al;
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->h()Lcom/estrongs/android/pop/app/c/j;
 
     move-result-object v1
 
@@ -518,21 +560,21 @@
     return-object v0
 
     :cond_1
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/a/am;->j()I
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/c/k;->j()I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/am;->g()Lcom/estrongs/android/pop/app/a/ak;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/k;->g()Lcom/estrongs/android/pop/app/c/i;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/a/ak;->g:Ljava/lang/String;
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/c/i;->g:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
@@ -540,7 +582,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b03d8
+    const v1, 0x7f080145
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/FexApplication;->getString(I)Ljava/lang/String;
 
@@ -552,9 +594,32 @@
 .method public D()Landroid/graphics/Bitmap;
     .locals 2
 
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->E()Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f020295
+
+    invoke-static {v0, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    :cond_0
+    return-object v0
+.end method
+
+.method public E()Landroid/graphics/Bitmap;
+    .locals 2
+
     const/4 v0, 0x0
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->h()Lcom/estrongs/android/pop/app/a/al;
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->h()Lcom/estrongs/android/pop/app/c/j;
 
     move-result-object v1
 
@@ -565,45 +630,33 @@
     return-object v0
 
     :cond_1
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/a/am;->j()I
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/c/k;->j()I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/am;->g()Lcom/estrongs/android/pop/app/a/ak;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lcom/estrongs/android/pop/app/a/ak;->a(Landroid/content/Context;)Landroid/graphics/Bitmap;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/k;->g()Lcom/estrongs/android/pop/app/c/i;
 
     move-result-object v0
 
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f02000e
-
-    invoke-static {v0, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
+    invoke-virtual {v0, p0}, Lcom/estrongs/android/pop/app/c/i;->a(Landroid/content/Context;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     goto :goto_0
 .end method
 
-.method public E()V
+.method public F()V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/am;->i()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/k;->i()Z
 
     move-result v0
 
@@ -626,32 +679,32 @@
 
     iput-boolean v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->m:Z
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gc;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gp;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gc;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gp;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/a/am;->f()I
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/c/k;->f()I
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcom/estrongs/android/pop/app/gc;->e(I)V
+    invoke-interface {v0, v1}, Lcom/estrongs/android/pop/app/gp;->e(I)V
 
     :cond_2
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->H()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->I()V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->p:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->start()V
 
-    invoke-static {}, Lcom/estrongs/android/util/l;->a()V
+    invoke-static {}, Lcom/estrongs/android/util/k;->a()V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->o:Lcom/estrongs/android/ui/notification/a;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->o:Lcom/estrongs/android/ui/notification/b;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/a;->h()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/b;->h()Z
 
     move-result v0
 
@@ -662,10 +715,10 @@
     goto :goto_0
 .end method
 
-.method public F()Lcom/estrongs/android/pop/app/a/am;
+.method public G()Lcom/estrongs/android/pop/app/c/k;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
     return-object v0
 .end method
@@ -674,25 +727,25 @@
     .locals 3
 
     :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/am;->e()Lcom/estrongs/android/pop/app/a/al;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/k;->e()Lcom/estrongs/android/pop/app/c/j;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/al;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/j;->a()Ljava/lang/String;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/a/am;->e()Lcom/estrongs/android/pop/app/a/al;
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/c/k;->e()Lcom/estrongs/android/pop/app/c/j;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/a/al;->b()I
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/c/j;->b()I
 
     move-result v1
 
@@ -725,35 +778,25 @@
 .method public a(I)V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0, p1}, Lcom/estrongs/android/pop/app/a/am;->a(I)V
-
-    return-void
-.end method
-
-.method public a(II)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
-
-    invoke-virtual {v0, p1, p2}, Lcom/estrongs/android/pop/app/a/am;->a(II)V
+    invoke-virtual {v0, p1}, Lcom/estrongs/android/pop/app/c/k;->a(I)V
 
     return-void
 .end method
 
-.method public a(Lcom/estrongs/android/pop/app/a/am;)V
+.method public a(Lcom/estrongs/android/pop/app/c/k;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
     return-void
 .end method
 
-.method public a(Lcom/estrongs/android/pop/app/gc;)V
+.method public a(Lcom/estrongs/android/pop/app/gp;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gc;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gp;
 
     return-void
 .end method
@@ -765,14 +808,14 @@
             "(",
             "Ljava/util/List",
             "<",
-            "Lcom/estrongs/android/pop/app/a/ak;",
+            "Lcom/estrongs/android/pop/app/c/i;",
             ">;)V"
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0, p1}, Lcom/estrongs/android/pop/app/a/am;->b(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/estrongs/android/pop/app/c/k;->b(Ljava/util/List;)V
 
     return-void
 .end method
@@ -797,12 +840,12 @@
     goto :goto_0
 .end method
 
-.method public a(Lcom/estrongs/android/pop/app/a/al;)Z
+.method public a(Lcom/estrongs/android/pop/app/c/j;)Z
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0, p1}, Lcom/estrongs/android/pop/app/a/am;->a(Lcom/estrongs/android/pop/app/a/al;)Z
+    invoke-virtual {v0, p1}, Lcom/estrongs/android/pop/app/c/k;->a(Lcom/estrongs/android/pop/app/c/j;)Z
 
     move-result v0
 
@@ -812,9 +855,9 @@
 .method public b()I
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/am;->c()I
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/k;->c()I
 
     move-result v0
 
@@ -824,9 +867,9 @@
 .method public b(I)V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0, p1}, Lcom/estrongs/android/pop/app/a/am;->b(I)V
+    invoke-virtual {v0, p1}, Lcom/estrongs/android/pop/app/c/k;->b(I)V
 
     return-void
 .end method
@@ -843,9 +886,9 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0, p1}, Lcom/estrongs/android/pop/app/a/am;->a(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/estrongs/android/pop/app/c/k;->a(Ljava/util/List;)V
 
     return-void
 .end method
@@ -853,9 +896,9 @@
 .method public c()I
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/am;->d()I
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/k;->d()I
 
     move-result v0
 
@@ -889,9 +932,9 @@
 .method public d()I
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/am;->m()I
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/k;->m()I
 
     move-result v0
 
@@ -905,9 +948,9 @@
 
     const/4 v1, 0x0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/am;->h()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/k;->h()Z
 
     move-result v0
 
@@ -937,32 +980,32 @@
     if-gez p1, :cond_2
 
     :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/am;->a()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/k;->a()V
 
     :cond_2
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0, p1}, Lcom/estrongs/android/pop/app/a/am;->d(I)Z
+    invoke-virtual {v0, p1}, Lcom/estrongs/android/pop/app/c/k;->d(I)Z
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/am;->j()I
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/k;->j()I
 
     move-result v0
 
     if-nez v0, :cond_4
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gc;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gp;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gc;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gp;
 
     const/4 v1, -0x1
 
-    invoke-interface {v0, v1}, Lcom/estrongs/android/pop/app/gc;->a(I)V
+    invoke-interface {v0, v1}, Lcom/estrongs/android/pop/app/gp;->a(I)V
 
     :cond_3
     const/4 v0, 0x0
@@ -980,15 +1023,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/am;->g()Lcom/estrongs/android/pop/app/a/ak;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/k;->g()Lcom/estrongs/android/pop/app/c/i;
 
     move-result-object v0
 
     if-eqz v0, :cond_5
 
-    iget-object v3, v0, Lcom/estrongs/android/pop/app/a/ak;->b:Ljava/lang/String;
+    iget-object v3, v0, Lcom/estrongs/android/pop/app/c/i;->b:Ljava/lang/String;
 
     if-nez v3, :cond_6
 
@@ -1008,43 +1051,52 @@
     throw v0
 
     :cond_6
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/a/ak;->b:Ljava/lang/String;
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/c/i;->b:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_a
+    if-eqz v3, :cond_b
 
     const v3, 0x8c18
 
-    invoke-static {v0, v3}, Lcom/estrongs/android/util/am;->b(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v0, v3}, Lcom/estrongs/android/util/ap;->b(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
     :cond_7
     :goto_1
-    iget-object v3, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bl(Ljava/lang/String;)Z
 
-    invoke-virtual {v3}, Lcom/estrongs/android/pop/app/a/am;->f()I
+    move-result v3
+
+    if-eqz v3, :cond_8
+
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->K()V
+
+    :cond_8
+    iget-object v3, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
+
+    invoke-virtual {v3}, Lcom/estrongs/android/pop/app/c/k;->f()I
 
     move-result v4
 
     :try_start_2
-    iget-object v3, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gc;
+    iget-object v3, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gp;
 
-    if-eqz v3, :cond_8
+    if-eqz v3, :cond_9
 
-    iget-object v3, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gc;
+    iget-object v3, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gp;
 
-    invoke-interface {v3, v4}, Lcom/estrongs/android/pop/app/gc;->a(I)V
+    invoke-interface {v3, v4}, Lcom/estrongs/android/pop/app/gp;->a(I)V
 
-    :cond_8
+    :cond_9
     iget-object v3, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->p:Landroid/media/MediaPlayer;
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    if-eqz v3, :cond_9
+    if-eqz v3, :cond_a
 
     :try_start_3
     iget-object v3, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->p:Landroid/media/MediaPlayer;
@@ -1057,7 +1109,7 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
 
-    :cond_9
+    :cond_a
     :goto_2
     :try_start_4
     new-instance v3, Landroid/media/MediaPlayer;
@@ -1098,14 +1150,14 @@
 
     goto/16 :goto_0
 
-    :cond_a
+    :cond_b
     sget-object v3, Lcom/estrongs/android/pop/app/AudioPlayerService;->j:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_b
+    if-eqz v3, :cond_c
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1143,7 +1195,7 @@
 
     goto :goto_1
 
-    :cond_b
+    :cond_c
     const-string v3, "http://"
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -1203,44 +1255,44 @@
 
     instance-of v3, v0, Ljava/lang/IllegalStateException;
 
-    if-nez v3, :cond_c
+    if-nez v3, :cond_d
 
     instance-of v3, v0, Ljava/lang/NullPointerException;
 
-    if-nez v3, :cond_c
+    if-nez v3, :cond_d
 
-    iget-object v3, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v3, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v3, v4, v1}, Lcom/estrongs/android/pop/app/a/am;->a(IZ)V
+    invoke-virtual {v3, v4, v1}, Lcom/estrongs/android/pop/app/c/k;->a(IZ)V
 
-    :cond_c
+    :cond_d
     iput-boolean v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->h:Z
 
     invoke-virtual {p0, v4}, Lcom/estrongs/android/pop/app/AudioPlayerService;->e(I)V
 
-    iget-object v3, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gc;
+    iget-object v3, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gp;
 
-    if-eqz v3, :cond_e
+    if-eqz v3, :cond_f
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gc;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gp;
 
-    invoke-interface {v2, v4}, Lcom/estrongs/android/pop/app/gc;->g(I)V
+    invoke-interface {v2, v4}, Lcom/estrongs/android/pop/app/gp;->g(I)V
 
-    :cond_d
+    :cond_e
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     move v0, v1
 
     goto/16 :goto_0
 
-    :cond_e
+    :cond_f
     iget-object v3, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->p:Landroid/media/MediaPlayer;
 
     invoke-direct {p0, v3}, Lcom/estrongs/android/pop/app/AudioPlayerService;->a(Landroid/media/MediaPlayer;)Z
 
     move-result v3
 
-    if-nez v3, :cond_d
+    if-nez v3, :cond_e
 
     move v0, v2
 
@@ -1250,9 +1302,9 @@
 .method public e()I
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/am;->k()I
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/k;->k()I
 
     move-result v0
 
@@ -1262,21 +1314,21 @@
 .method public e(I)V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/am;->f()I
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/k;->f()I
 
     move-result v0
 
     if-eq v0, p1, :cond_1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gc;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gp;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gc;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gp;
 
-    invoke-interface {v0, p1}, Lcom/estrongs/android/pop/app/gc;->b(I)V
+    invoke-interface {v0, p1}, Lcom/estrongs/android/pop/app/gp;->b(I)V
 
     :cond_0
     :goto_0
@@ -1291,9 +1343,9 @@
 .method public f()I
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/am;->l()I
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/k;->l()I
 
     move-result v0
 
@@ -1305,9 +1357,9 @@
 
     const/4 v0, 0x0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v1, p1}, Lcom/estrongs/android/pop/app/a/am;->c(I)Z
+    invoke-virtual {v1, p1}, Lcom/estrongs/android/pop/app/c/k;->c(I)Z
 
     move-result v1
 
@@ -1336,21 +1388,21 @@
 .method public g()I
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/am;->o()I
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/k;->o()I
 
     move-result v0
 
     return v0
 .end method
 
-.method public h()Lcom/estrongs/android/pop/app/a/al;
+.method public h()Lcom/estrongs/android/pop/app/c/j;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/am;->e()Lcom/estrongs/android/pop/app/a/al;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/k;->e()Lcom/estrongs/android/pop/app/c/j;
 
     move-result-object v0
 
@@ -1360,9 +1412,9 @@
 .method public i()I
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/am;->f()I
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/k;->f()I
 
     move-result v0
 
@@ -1408,15 +1460,15 @@
 .method public l()Z
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/a/am;->f()I
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/c/k;->f()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/a/am;->c(I)Z
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/c/k;->c(I)Z
 
     move-result v0
 
@@ -1461,7 +1513,7 @@
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->stopSelf()V
 
-    invoke-static {}, Lcom/estrongs/android/util/l;->b()V
+    invoke-static {}, Lcom/estrongs/android/util/k;->b()V
 
     return-void
 .end method
@@ -1487,7 +1539,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     :try_start_1
-    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/e;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/i;->a(Landroid/content/Context;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 
@@ -1495,15 +1547,15 @@
     :try_start_2
     sput-object p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->b:Lcom/estrongs/android/pop/app/AudioPlayerService;
 
-    new-instance v0, Lcom/estrongs/android/c/a;
+    new-instance v0, Lcom/estrongs/android/g/a;
 
     const-string v1, "/sdcard/"
 
     const v2, 0x8c18
 
-    invoke-direct {v0, v1, v2}, Lcom/estrongs/android/c/a;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2}, Lcom/estrongs/android/g/a;-><init>(Ljava/lang/String;I)V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->c:Lcom/estrongs/android/c/a;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->c:Lcom/estrongs/android/g/a;
 
     new-instance v0, Landroid/content/IntentFilter;
 
@@ -1596,20 +1648,20 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v2, Lcom/estrongs/android/util/al;
+    new-instance v2, Lcom/estrongs/android/util/ao;
 
-    invoke-direct {v2, v0}, Lcom/estrongs/android/util/al;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v2, v0}, Lcom/estrongs/android/util/ao;-><init>(Ljava/lang/Object;)V
 
     const-string v0, "registerMediaButtonEventReceiver"
 
-    invoke-virtual {v2, v0, v1}, Lcom/estrongs/android/util/al;->a(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v0, v1}, Lcom/estrongs/android/util/ao;->a(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_4
 
     :cond_0
     :goto_2
     :try_start_5
-    const-string v0, "Market"
+    sget-object v0, Lcom/estrongs/android/pop/view/a;->a:Ljava/lang/String;
 
     const-string v1, "Market"
 
@@ -1636,17 +1688,17 @@
 
     :cond_1
     :goto_3
-    new-instance v0, Lcom/estrongs/android/ui/notification/a;
+    new-instance v0, Lcom/estrongs/android/ui/notification/b;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/notification/a;-><init>(Lcom/estrongs/android/pop/app/AudioPlayerService;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/notification/b;-><init>(Lcom/estrongs/android/pop/app/AudioPlayerService;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->o:Lcom/estrongs/android/ui/notification/a;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->o:Lcom/estrongs/android/ui/notification/b;
 
-    new-instance v0, Lcom/estrongs/android/pop/app/a/am;
+    new-instance v0, Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-direct {v0}, Lcom/estrongs/android/pop/app/a/am;-><init>()V
+    invoke-direct {v0}, Lcom/estrongs/android/pop/app/c/k;-><init>()V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
     return-void
 
@@ -1665,7 +1717,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->c:Lcom/estrongs/android/c/a;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->c:Lcom/estrongs/android/g/a;
 
     goto :goto_3
 
@@ -1692,22 +1744,22 @@
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->t()V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gc;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gp;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gc;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gp;
 
-    invoke-interface {v0}, Lcom/estrongs/android/pop/app/gc;->a()V
+    invoke-interface {v0}, Lcom/estrongs/android/pop/app/gp;->a()V
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->c:Lcom/estrongs/android/c/a;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->c:Lcom/estrongs/android/g/a;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->c:Lcom/estrongs/android/c/a;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->c:Lcom/estrongs/android/g/a;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/c/a;->h()V
+    invoke-virtual {v0}, Lcom/estrongs/android/g/a;->h()V
 
     :cond_1
     :try_start_0
@@ -1763,13 +1815,13 @@
 
     if-eqz v0, :cond_2
 
-    new-instance v2, Lcom/estrongs/android/util/al;
+    new-instance v2, Lcom/estrongs/android/util/ao;
 
-    invoke-direct {v2, v0}, Lcom/estrongs/android/util/al;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v2, v0}, Lcom/estrongs/android/util/ao;-><init>(Ljava/lang/Object;)V
 
     const-string v0, "unregisterMediaButtonEventReceiver"
 
-    invoke-virtual {v2, v0, v1}, Lcom/estrongs/android/util/al;->a(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v0, v1}, Lcom/estrongs/android/util/ao;->a(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_3
     .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_1
@@ -1777,7 +1829,7 @@
     :cond_2
     :goto_1
     :try_start_3
-    const-string v0, "Market"
+    sget-object v0, Lcom/estrongs/android/pop/view/a;->a:Ljava/lang/String;
 
     const-string v1, "Market"
 
@@ -1801,7 +1853,7 @@
     :goto_2
     sput-object v4, Lcom/estrongs/android/pop/app/AudioPlayerService;->b:Lcom/estrongs/android/pop/app/AudioPlayerService;
 
-    invoke-static {}, Lcom/estrongs/android/pop/app/a/ao;->k()V
+    invoke-static {}, Lcom/estrongs/android/pop/app/c/m;->k()V
 
     invoke-static {v4}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->b([Ljava/lang/String;)V
 
@@ -1875,7 +1927,7 @@
 
     if-eqz v2, :cond_a
 
-    invoke-static {}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->z()[Ljava/lang/String;
+    invoke-static {}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->E()[Ljava/lang/String;
 
     move-result-object v0
 
@@ -1953,11 +2005,11 @@
 
     if-nez v0, :cond_4
 
-    const v0, 0x7f0b0417
+    const v0, 0x7f080183
 
     const/4 v2, 0x1
 
-    invoke-static {p0, v0, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {p0, v0, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     goto :goto_2
 
@@ -1975,38 +2027,38 @@
     move-object v2, v0
 
     :goto_3
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/am;->e()Lcom/estrongs/android/pop/app/a/al;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/k;->e()Lcom/estrongs/android/pop/app/c/j;
 
     move-result-object v0
 
     if-nez v0, :cond_5
 
-    invoke-static {}, Lcom/estrongs/android/pop/app/a/ao;->a()Lcom/estrongs/android/pop/app/a/ao;
+    invoke-static {}, Lcom/estrongs/android/pop/app/c/m;->a()Lcom/estrongs/android/pop/app/c/m;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/ao;->b()Lcom/estrongs/android/pop/app/a/al;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/m;->b()Lcom/estrongs/android/pop/app/c/j;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->a(Lcom/estrongs/android/pop/app/a/al;)Z
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->a(Lcom/estrongs/android/pop/app/c/j;)Z
 
     :cond_5
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/am;->e()Lcom/estrongs/android/pop/app/a/al;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/k;->e()Lcom/estrongs/android/pop/app/c/j;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/al;->f()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/j;->f()Z
 
     move-result v3
 
     if-eqz v3, :cond_8
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/al;->c()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/j;->c()Ljava/util/List;
 
     move-result-object v0
 
@@ -2047,7 +2099,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0b027d
+    const v2, 0x7f080146
 
     invoke-virtual {v0, v2}, Lcom/estrongs/android/pop/FexApplication;->getText(I)Ljava/lang/CharSequence;
 
@@ -2055,7 +2107,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {p0, v0, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    invoke-static {p0, v0, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
     goto :goto_2
 
@@ -2064,7 +2116,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0b03f0
+    const v2, 0x7f080147
 
     invoke-virtual {v0, v2}, Lcom/estrongs/android/pop/FexApplication;->getText(I)Ljava/lang/CharSequence;
 
@@ -2072,7 +2124,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {p0, v0, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    invoke-static {p0, v0, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
@@ -2132,12 +2184,12 @@
     goto :goto_0
 .end method
 
-.method public q()Lcom/estrongs/android/pop/app/a/ak;
+.method public q()Lcom/estrongs/android/pop/app/c/i;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/am;->g()Lcom/estrongs/android/pop/app/a/ak;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/k;->g()Lcom/estrongs/android/pop/app/c/i;
 
     move-result-object v0
 
@@ -2160,17 +2212,17 @@
     return v0
 
     :cond_1
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/a/am;->i()Z
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/c/k;->i()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/a/am;->f()I
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/app/c/k;->f()I
 
     move-result v3
 
@@ -2198,13 +2250,13 @@
 
     iput-boolean v2, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->n:Z
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gc;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gp;
 
     if-eqz v2, :cond_3
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gc;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gp;
 
-    invoke-interface {v2, v3}, Lcom/estrongs/android/pop/app/gc;->c(I)V
+    invoke-interface {v2, v3}, Lcom/estrongs/android/pop/app/gp;->c(I)V
 
     :cond_3
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->A()V
@@ -2216,20 +2268,20 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :try_start_1
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
     const/4 v5, 0x1
 
-    invoke-virtual {v2, v3, v5}, Lcom/estrongs/android/pop/app/a/am;->a(IZ)V
+    invoke-virtual {v2, v3, v5}, Lcom/estrongs/android/pop/app/c/k;->a(IZ)V
 
     monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :try_start_2
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->H()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->I()V
 
-    invoke-static {}, Lcom/estrongs/android/util/l;->a()V
+    invoke-static {}, Lcom/estrongs/android/util/k;->a()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
@@ -2263,22 +2315,22 @@
 
     if-nez v2, :cond_4
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v2, v3, v0}, Lcom/estrongs/android/pop/app/a/am;->a(IZ)V
+    invoke-virtual {v2, v3, v0}, Lcom/estrongs/android/pop/app/c/k;->a(IZ)V
 
     :cond_4
     iput-boolean v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->h:Z
 
     invoke-virtual {p0, v3}, Lcom/estrongs/android/pop/app/AudioPlayerService;->e(I)V
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gc;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gp;
 
     if-eqz v2, :cond_5
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gc;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gp;
 
-    invoke-interface {v1, v3}, Lcom/estrongs/android/pop/app/gc;->g(I)V
+    invoke-interface {v1, v3}, Lcom/estrongs/android/pop/app/gp;->g(I)V
 
     goto :goto_0
 
@@ -2301,9 +2353,9 @@
 
     const/4 v0, 0x0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/a/am;->f()I
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/c/k;->f()I
 
     move-result v1
 
@@ -2332,9 +2384,9 @@
 .method public t()V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/am;->f()I
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/k;->f()I
 
     move-result v1
 
@@ -2363,18 +2415,18 @@
     iput-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->p:Landroid/media/MediaPlayer;
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gc;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gp;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gc;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gp;
 
-    invoke-interface {v0, v1}, Lcom/estrongs/android/pop/app/gc;->b(I)V
+    invoke-interface {v0, v1}, Lcom/estrongs/android/pop/app/gp;->b(I)V
 
     :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->o:Lcom/estrongs/android/ui/notification/a;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->o:Lcom/estrongs/android/ui/notification/b;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/a;->h()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/b;->h()Z
 
     move-result v0
 
@@ -2383,9 +2435,9 @@
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->A()V
 
     :cond_2
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->I()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->J()V
 
-    invoke-static {}, Lcom/estrongs/android/util/l;->b()V
+    invoke-static {}, Lcom/estrongs/android/util/k;->b()V
 
     return-void
 
@@ -2413,32 +2465,32 @@
     iput-boolean v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->n:Z
 
     :try_start_0
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->I()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->J()V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->p:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->pause()V
 
-    invoke-static {}, Lcom/estrongs/android/util/l;->b()V
+    invoke-static {}, Lcom/estrongs/android/util/k;->b()V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gc;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gp;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gc;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->x:Lcom/estrongs/android/pop/app/gp;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/a/am;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->r:Lcom/estrongs/android/pop/app/c/k;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/a/am;->f()I
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/c/k;->f()I
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcom/estrongs/android/pop/app/gc;->d(I)V
+    invoke-interface {v0, v1}, Lcom/estrongs/android/pop/app/gp;->d(I)V
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->o:Lcom/estrongs/android/ui/notification/a;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->o:Lcom/estrongs/android/ui/notification/b;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/a;->h()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/b;->h()Z
 
     move-result v0
 
@@ -2465,7 +2517,7 @@
 .method public v()V
     .locals 5
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->h()Lcom/estrongs/android/pop/app/a/al;
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->h()Lcom/estrongs/android/pop/app/c/j;
 
     move-result-object v0
 
@@ -2539,7 +2591,7 @@
 .method public x()V
     .locals 1
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->h()Lcom/estrongs/android/pop/app/a/al;
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->h()Lcom/estrongs/android/pop/app/c/j;
 
     move-result-object v0
 
@@ -2561,7 +2613,7 @@
 .method public y()V
     .locals 2
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->h()Lcom/estrongs/android/pop/app/a/al;
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->h()Lcom/estrongs/android/pop/app/c/j;
 
     move-result-object v0
 
@@ -2590,7 +2642,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->E()V
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->F()V
 
     goto :goto_0
 
@@ -2623,9 +2675,9 @@
 .method public z()V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->o:Lcom/estrongs/android/ui/notification/a;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AudioPlayerService;->o:Lcom/estrongs/android/ui/notification/b;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/a;->i()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/b;->i()V
 
     return-void
 .end method

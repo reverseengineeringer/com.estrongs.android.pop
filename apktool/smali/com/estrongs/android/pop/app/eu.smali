@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # instance fields
@@ -22,56 +22,43 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 3
-
-    const/4 v2, 0x0
+.method public onMenuItemClick(Landroid/view/MenuItem;)Z
+    .locals 5
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/eu;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->j(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->v()Lcom/estrongs/android/pop/app/c/j;
 
-    move-result v0
+    move-result-object v0
 
     if-eqz v0, :cond_0
 
+    new-instance v1, Lcom/estrongs/android/ui/dialog/er;
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/eu;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
+
+    iget-object v3, p0, Lcom/estrongs/android/pop/app/eu;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
+
+    const v4, 0x7f080148
+
+    invoke-virtual {v3, v4}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, ""
+
+    invoke-direct {v1, v2, v3, v4}, Lcom/estrongs/android/ui/dialog/er;-><init>(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v2, Lcom/estrongs/android/pop/app/ev;
+
+    invoke-direct {v2, p0, v0}, Lcom/estrongs/android/pop/app/ev;-><init>(Lcom/estrongs/android/pop/app/eu;Lcom/estrongs/android/pop/app/c/j;)V
+
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/dialog/er;->a(Lcom/estrongs/android/ui/dialog/eu;)V
+
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/dialog/er;->show()V
+
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/eu;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
+    const/4 v0, 0x0
 
-    const v1, 0x7f0b026e
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/eu;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
-
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->t()Landroid/graphics/Rect;
-
-    move-result-object v1
-
-    invoke-static {p1, v0, v2, v1, v2}, Lcom/estrongs/android/ui/f/e;->a(Landroid/view/View;Ljava/lang/String;ILandroid/graphics/Rect;Z)Lcom/estrongs/android/ui/f/e;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/estrongs/android/pop/app/ev;
-
-    invoke-direct {v1, p0, v0}, Lcom/estrongs/android/pop/app/ev;-><init>(Lcom/estrongs/android/pop/app/eu;Lcom/estrongs/android/ui/f/e;)V
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/f/e;->a(Lcom/estrongs/android/pop/app/fz;)V
-
-    :try_start_0
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/f/e;->c()V
-    :try_end_0
-    .catch Landroid/view/WindowManager$BadTokenException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Landroid/view/WindowManager$BadTokenException;->printStackTrace()V
-
-    goto :goto_0
+    return v0
 .end method

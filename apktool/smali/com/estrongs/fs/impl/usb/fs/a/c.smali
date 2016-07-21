@@ -269,7 +269,7 @@
 
     int-to-long v4, p1
 
-    invoke-virtual {p0}, Lcom/estrongs/fs/impl/usb/fs/a/c;->d()J
+    invoke-virtual {p0}, Lcom/estrongs/fs/impl/usb/fs/a/c;->e()J
 
     move-result-wide v6
 
@@ -301,7 +301,7 @@
 .method d()J
     .locals 2
 
-    iget-wide v0, p0, Lcom/estrongs/fs/impl/usb/fs/a/c;->f:J
+    iget-wide v0, p0, Lcom/estrongs/fs/impl/usb/fs/a/c;->e:J
 
     return-wide v0
 .end method
@@ -309,12 +309,20 @@
 .method e()J
     .locals 2
 
+    iget-wide v0, p0, Lcom/estrongs/fs/impl/usb/fs/a/c;->f:J
+
+    return-wide v0
+.end method
+
+.method f()J
+    .locals 2
+
     iget-wide v0, p0, Lcom/estrongs/fs/impl/usb/fs/a/c;->g:J
 
     return-wide v0
 .end method
 
-.method f()I
+.method g()I
     .locals 1
 
     iget v0, p0, Lcom/estrongs/fs/impl/usb/fs/a/c;->h:I
@@ -322,7 +330,7 @@
     return v0
 .end method
 
-.method g()Z
+.method h()Z
     .locals 1
 
     iget-boolean v0, p0, Lcom/estrongs/fs/impl/usb/fs/a/c;->i:Z
@@ -330,7 +338,7 @@
     return v0
 .end method
 
-.method h()I
+.method i()I
     .locals 1
 
     iget v0, p0, Lcom/estrongs/fs/impl/usb/fs/a/c;->j:I
@@ -338,7 +346,7 @@
     return v0
 .end method
 
-.method i()I
+.method j()I
     .locals 2
 
     iget v0, p0, Lcom/estrongs/fs/impl/usb/fs/a/c;->b:I
@@ -350,7 +358,7 @@
     return v0
 .end method
 
-.method j()J
+.method k()J
     .locals 4
 
     invoke-virtual {p0}, Lcom/estrongs/fs/impl/usb/fs/a/c;->a()I
@@ -359,7 +367,7 @@
 
     int-to-long v0, v0
 
-    invoke-virtual {p0}, Lcom/estrongs/fs/impl/usb/fs/a/c;->d()J
+    invoke-virtual {p0}, Lcom/estrongs/fs/impl/usb/fs/a/c;->e()J
 
     move-result-wide v2
 
@@ -368,7 +376,7 @@
     return-wide v0
 .end method
 
-.method k()J
+.method l()J
     .locals 6
 
     const/4 v0, 0x0
@@ -383,7 +391,7 @@
 
     int-to-long v2, v2
 
-    invoke-virtual {p0}, Lcom/estrongs/fs/impl/usb/fs/a/c;->d()J
+    invoke-virtual {p0}, Lcom/estrongs/fs/impl/usb/fs/a/c;->e()J
 
     move-result-wide v4
 
@@ -402,7 +410,7 @@
     return-wide v0
 .end method
 
-.method l()Ljava/lang/String;
+.method m()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/estrongs/fs/impl/usb/fs/a/c;->k:Ljava/lang/String;

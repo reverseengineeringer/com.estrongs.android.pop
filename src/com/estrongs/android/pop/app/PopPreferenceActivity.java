@@ -25,19 +25,20 @@ import android.widget.TextView;
 import com.estrongs.android.pop.ac;
 import com.estrongs.android.pop.ad;
 import com.estrongs.android.pop.esclasses.ESPreferenceActivity;
-import com.estrongs.android.pop.esclasses.e;
-import com.estrongs.android.pop.esclasses.g;
+import com.estrongs.android.pop.esclasses.i;
 import com.estrongs.android.pop.esclasses.k;
-import com.estrongs.android.pop.utils.cc;
+import com.estrongs.android.pop.esclasses.p;
+import com.estrongs.android.pop.utils.cl;
 import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.pop.view.a;
 import com.estrongs.android.pop.z;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.android.ui.dialog.ct;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.ui.dialog.cv;
 import com.estrongs.android.ui.preference.CustomListPreference;
 import com.estrongs.android.ui.preference.ListPreference;
-import com.estrongs.android.ui.theme.al;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.ui.theme.at;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.bk;
 import com.estrongs.fs.FileSystemException;
 import com.estrongs.fs.d;
 import java.io.File;
@@ -47,13 +48,12 @@ import java.util.List;
 public final class PopPreferenceActivity
   extends ESPreferenceActivity
 {
-  private static int E = 0;
+  private static int D = 0;
   static boolean a = false;
-  public static String u = "www.estrongs.com";
-  private al A;
-  private String B = null;
-  private int C = 0;
-  private Handler D = new Handler();
+  public static String s = "www.estrongs.com";
+  private String A = null;
+  private int B = 0;
+  private Handler C = new Handler();
   ad b;
   EditTextPreference c;
   EditTextPreference d;
@@ -65,19 +65,18 @@ public final class PopPreferenceActivity
   CheckBoxPreference j;
   CheckBoxPreference k;
   CheckBoxPreference l;
-  CheckBoxPreference m;
-  CheckBoxPreference n;
+  Preference m;
+  Preference n;
   Preference o;
   Preference p;
   Preference q;
   Preference r;
-  Preference s;
-  Preference t;
+  private Preference u;
   private Preference v;
   private Preference w;
-  private Preference x;
-  private EditTextPreference y = null;
-  private Preference.OnPreferenceChangeListener z;
+  private EditTextPreference x = null;
+  private Preference.OnPreferenceChangeListener y;
+  private at z;
   
   private void a()
   {
@@ -160,7 +159,7 @@ public final class PopPreferenceActivity
   {
     paramString = findPreference(paramString);
     if (paramString != null) {
-      paramString.setOnPreferenceChangeListener(z);
+      paramString.setOnPreferenceChangeListener(y);
     }
   }
   
@@ -169,18 +168,22 @@ public final class PopPreferenceActivity
     Object localObject;
     if (z.j)
     {
-      localObject = b.x();
-      y = ((EditTextPreference)findPreference("app_backup_dir"));
-      y.setSummary((CharSequence)localObject);
-      y.setText((String)localObject);
-      y.setOnPreferenceChangeListener(new he(this));
-      if (!ad.a(this).j())
+      localObject = b.y();
+      x = ((EditTextPreference)findPreference("app_backup_dir"));
+      x.setSummary((CharSequence)localObject);
+      x.setText((String)localObject);
+      x.setOnPreferenceChangeListener(new hs(this));
+      if (!ad.a(this).k())
       {
         findPreference("backup_app_cache").setEnabled(false);
         findPreference("root_auto_install").setEnabled(false);
       }
+      localObject = findPreference("auto_check_list");
+      if (localObject != null) {
+        ((Preference)localObject).setOnPreferenceClickListener(new hu(this));
+      }
       localObject = (PreferenceScreen)findPreference("appmanager_preference");
-      if ((localObject != null) && (!cc.a())) {
+      if ((localObject != null) && (!cl.a())) {
         ((PreferenceScreen)localObject).removePreference(findPreference("app_check_update"));
       }
     }
@@ -213,68 +216,68 @@ public final class PopPreferenceActivity
   
   private void c()
   {
-    if (FileExplorerActivity.J() == null) {
+    if (FileExplorerActivity.X() == null) {
       return;
     }
     showDialog(102);
-    FileExplorerActivity.J().a(true, D, new hf(this));
+    FileExplorerActivity.X().a(true, C, new hv(this));
   }
   
   private void d()
   {
-    if ((B == null) || (B.trim().equals(""))) {
-      B = "/sdcard/";
+    if ((A == null) || (A.trim().equals(""))) {
+      A = "/sdcard/";
     }
     do
     {
       return;
-      if (!new File(B).mkdirs()) {
+      if (!new File(A).mkdirs()) {
         break;
       }
-      if (C == 0)
+      if (B == 0)
       {
-        c.setSummary(B);
-        c.setText(B);
-        b.i(B);
+        c.setSummary(A);
+        c.setText(A);
+        b.i(A);
         return;
       }
-      if (C == 1)
+      if (B == 1)
       {
-        y.setSummary(B);
-        y.setText(B);
-        b.s(B);
+        x.setSummary(A);
+        x.setText(A);
+        b.s(A);
         return;
       }
-      if (C == 2)
+      if (B == 2)
       {
         if (d != null)
         {
-          d.setSummary(B);
-          d.setText(B);
+          d.setSummary(A);
+          d.setText(A);
         }
-        b.t(B);
+        b.t(A);
         return;
       }
-    } while (C != 3);
+    } while (B != 3);
     if (e != null)
     {
-      e.setSummary(B);
-      e.setText(B);
+      e.setSummary(A);
+      e.setText(A);
     }
-    b.t(B);
+    b.t(A);
     return;
-    ag.a(this, 2131427763, 1);
+    ak.a(this, 2131231915, 1);
   }
   
   private void e()
   {
-    s = findPreference("backupsettings");
-    s.setOnPreferenceClickListener(new hp(this));
-    t = findPreference("restoresettings");
-    t.setOnPreferenceClickListener(new hw(this));
+    q = findPreference("backupsettings");
+    q.setOnPreferenceClickListener(new if(this));
+    r = findPreference("restoresettings");
+    r.setOnPreferenceClickListener(new im(this));
     CheckBoxPreference localCheckBoxPreference = (CheckBoxPreference)findPreference("enableRemoteSynchronizer");
     if (localCheckBoxPreference != null) {
-      localCheckBoxPreference.setOnPreferenceChangeListener(new ie(this));
+      localCheckBoxPreference.setOnPreferenceChangeListener(new iu(this));
     }
   }
   
@@ -311,288 +314,301 @@ public final class PopPreferenceActivity
     if (localObject2 != null) {
       localObject1 = ((String)localObject2).toLowerCase();
     }
-    if ((!bd.f()) && ((localObject1 == null) || ((!((String)localObject1).contains("vland")) && (!((String)localObject1).contains("nj820")))))
+    if ((!bk.f()) && ((localObject1 == null) || ((!((String)localObject1).contains("vland")) && (!((String)localObject1).contains("nj820")))))
     {
-      setTheme(2131492887);
+      setTheme(2131296641);
       requestWindowFeature(7);
     }
-    super.onCreate(paramBundle);
-    A = al.a(this);
-    paramBundle = A.a(2130838042);
-    getListView().setDivider(paramBundle);
-    getListView().setDividerHeight(paramBundle.getIntrinsicHeight());
-    getListView().setCacheColorHint(0);
-    getListView().setPadding(0, 0, 0, 0);
-    getWindow().setBackgroundDrawableResource(2130838040);
-    setTitle(getResources().getString(2131427439));
-    b = ad.a(this);
-    b.am();
-    b.ak();
-    addPreferencesFromResource(2131034117);
-    if ((!bd.f()) && ((localObject1 == null) || ((!((String)localObject1).contains("vland")) && (!((String)localObject1).contains("nj820")))))
+    try
     {
-      getWindow().setFeatureInt(7, 2130903264);
-      ((ImageView)findViewById(2131361853)).setImageDrawable(A.a(2130837639));
-      ((TextView)findViewById(2131361825)).setText(2131427439);
-    }
-    z = new gg(this);
-    paramBundle = b.j("Market");
-    c = ((EditTextPreference)findPreference("root_dir"));
-    c.setSummary(paramBundle);
-    c.setText(paramBundle);
-    c.setOnPreferenceChangeListener(new gt(this));
-    ((CheckBoxPreference)findPreference("show_sdcard_notification")).setOnPreferenceChangeListener(new hg(this));
-    o = findPreference("cache");
-    o.setOnPreferenceClickListener(new id(this));
-    p = findPreference("upgrade_check");
-    p.setOnPreferenceClickListener(new if(this));
-    if (z.y)
-    {
-      paramBundle = (PreferenceScreen)findPreference("update_preference");
-      k = ((CheckBoxPreference)findPreference("upgrade_auto_check"));
-      if ((paramBundle != null) && (k != null)) {
-        paramBundle.removePreference(k);
-      }
-    }
-    l = ((CheckBoxPreference)findPreference("send_statistics"));
-    if ((l != null) && ("CN".equalsIgnoreCase(e.a)) && (z.z))
-    {
-      l.setTitle("统计");
-      l.setSummary("发送统计数据");
-      q = findPreference("clean_prefer");
-      if (q != null) {
-        q.setOnPreferenceClickListener(new ig(this));
-      }
-      paramBundle = b.y();
-      d = ((EditTextPreference)findPreference("bt_dir"));
-      if (d != null)
+      super.onCreate(paramBundle);
+      z = at.a(this);
+      paramBundle = z.a(2130838413);
+      getListView().setDivider(paramBundle);
+      getListView().setDividerHeight(paramBundle.getIntrinsicHeight());
+      getListView().setCacheColorHint(0);
+      getListView().setPadding(0, 0, 0, 0);
+      getWindow().setBackgroundDrawableResource(2130838411);
+      setTitle(getResources().getString(2131231617));
+      b = ad.a(this);
+      b.an();
+      b.al();
+      addPreferencesFromResource(2131034117);
+      if ((!bk.f()) && ((localObject1 == null) || ((!((String)localObject1).contains("vland")) && (!((String)localObject1).contains("nj820")))))
       {
-        if (!z.e) {
-          break label792;
+        getWindow().setFeatureInt(7, 2130903447);
+        ((ImageView)findViewById(2131624054)).setImageDrawable(z.a(2130837889));
+        ((TextView)findViewById(2131624055)).setText(2131231617);
+      }
+      y = new gt(this);
+      paramBundle = b.j(a.a);
+      c = ((EditTextPreference)findPreference("root_dir"));
+      c.setSummary(paramBundle);
+      c.setText(paramBundle);
+      c.setOnPreferenceChangeListener(new hg(this));
+      ((CheckBoxPreference)findPreference("show_sdcard_notification")).setOnPreferenceChangeListener(new ht(this));
+      m = findPreference("cache");
+      m.setOnPreferenceClickListener(new ie(this));
+      n = findPreference("upgrade_check");
+      n.setOnPreferenceClickListener(new iv(this));
+      if (z.y)
+      {
+        paramBundle = (PreferenceScreen)findPreference("update_preference");
+        j = ((CheckBoxPreference)findPreference("upgrade_auto_check"));
+        if ((paramBundle != null) && (j != null)) {
+          paramBundle.removePreference(j);
         }
-        d.setSummary(paramBundle);
-        d.setText(paramBundle);
-        d.setOnPreferenceChangeListener(new ih(this));
+      }
+      k = ((CheckBoxPreference)findPreference("send_statistics"));
+      if ((k != null) && ("CN".equalsIgnoreCase(i.a)) && (z.z))
+      {
+        k.setTitle("统计");
+        k.setSummary("发送统计数据");
+        o = findPreference("clean_prefer");
+        if (o != null) {
+          o.setOnPreferenceClickListener(new iw(this));
+        }
+        paramBundle = b.z();
+        d = ((EditTextPreference)findPreference("bt_dir"));
+        if (d != null)
+        {
+          if (!z.e) {
+            break label814;
+          }
+          d.setSummary(paramBundle);
+          d.setText(paramBundle);
+          d.setOnPreferenceChangeListener(new ix(this));
+        }
+        paramBundle = b.A();
+        e = ((EditTextPreference)findPreference("download_dir"));
+        if (e != null)
+        {
+          e.setSummary(paramBundle);
+          e.setText(paramBundle);
+          e.setOnPreferenceChangeListener(new iy(this));
+        }
+        u = findPreference("preference_help");
+        paramBundle = (CustomListPreference)findPreference("search_engine_default");
+        localObject1 = getResources().getStringArray(2131492878);
+        localObject2 = new String[localObject1.length];
+        localObject2[0] = getString(2131232071);
+        i1 = 1;
+        while (i1 < localObject1.length)
+        {
+          localObject2[i1] = localObject1[i1];
+          i1 += 1;
+        }
       }
     }
-    for (;;)
+    catch (Exception localException)
     {
-      paramBundle = b.z();
-      e = ((EditTextPreference)findPreference("download_dir"));
-      if (e != null)
+      for (;;)
       {
-        e.setSummary(paramBundle);
-        e.setText(paramBundle);
-        e.setOnPreferenceChangeListener(new ii(this));
+        localException.printStackTrace();
+        setTheme(2131296496);
+        super.onCreate(paramBundle);
+        continue;
+        paramBundle = (PreferenceScreen)findPreference("update_preference");
+        if ((paramBundle != null) && (k != null))
+        {
+          paramBundle.removePreference(k);
+          continue;
+          label814:
+          paramBundle = (PreferenceScreen)findPreference("preference_directory_settings_category");
+          if (paramBundle != null) {
+            paramBundle.removePreference(d);
+          }
+        }
       }
-      v = findPreference("preference_help");
-      paramBundle = (CustomListPreference)findPreference("search_engine_default");
-      localObject1 = getResources().getStringArray(2131165198);
-      localObject2 = new String[localObject1.length];
-      localObject2[0] = getString(2131427988);
-      i1 = 1;
-      while (i1 < localObject1.length)
+      paramBundle.setEntries(localException);
+      label912:
+      Object localObject3;
+      if ((paramBundle.getValue() == null) || (paramBundle.getValue().equalsIgnoreCase("auto")))
       {
-        localObject2[i1] = localObject1[i1];
-        i1 += 1;
+        paramBundle.setSummary(getString(2131232071));
+        paramBundle.setOnPreferenceChangeListener(new iz(this, paramBundle));
+        if (z.k) {
+          break label1707;
+        }
+        u.setOnPreferenceClickListener(new gu(this));
+        v = findPreference("preference_privacy");
+        v.setOnPreferenceClickListener(new gw(this));
+        w = findPreference("preference_rate");
+        w.setOnPreferenceClickListener(new gy(this));
+        paramBundle = f();
+        localObject1 = paramBundle;
+        if (paramBundle == null) {
+          localObject1 = "1.x";
+        }
+        localObject3 = a.a;
+        if (!((String)localObject3).equalsIgnoreCase("oem")) {
+          break label1740;
+        }
+        paramBundle = (Bundle)localObject3;
+        if (z.b != null) {
+          paramBundle = z.b;
+        }
+        label1009:
+        if ("工信部".equalsIgnoreCase(a.b)) {
+          paramBundle = "ES";
+        }
+        localObject3 = paramBundle;
+        if (paramBundle.length() > 0) {
+          localObject3 = " (" + paramBundle + ")";
+        }
+        findPreference("preference_version").setSummary(getResources().getText(2131232542) + " " + (String)localObject1 + (String)localObject3);
+        paramBundle = findPreference("preference_special_thanks_to_translators");
+        localObject1 = getString(2131232365);
+        if (z.b == null) {
+          break label1801;
+        }
+        i1 = 1;
+        label1137:
+        if ((i1 == 0) && (!((String)localObject1).equals("none"))) {
+          break label1806;
+        }
+        ((PreferenceScreen)findPreference("preference_about")).removePreference(paramBundle);
+        label1166:
+        findPreference("preference_website").setOnPreferenceClickListener(new gz(this));
+        findPreference("preference_more_app").setOnPreferenceClickListener(new ha(this));
+        findPreference("preference_feedback").setOnPreferenceClickListener(new hb(this));
+        f = ((CheckBoxPreference)findPreference("net_passwd_enable"));
+        p = findPreference("net_passwd_change");
+        g = ((CheckBoxPreference)findPreference("start_passwd_enable"));
+        h = ((CheckBoxPreference)findPreference("hided_dirfiles_passwd_enable"));
+        if (f != null) {
+          f.setOnPreferenceChangeListener(new hc(this));
+        }
+        if (g != null) {
+          g.setOnPreferenceChangeListener(new hd(this));
+        }
+        if (h != null) {
+          h.setOnPreferenceChangeListener(new he(this));
+        }
+        if ((p != null) && (f != null))
+        {
+          p.setEnabled(false);
+          if (f.isChecked()) {
+            p.setEnabled(true);
+          }
+          if (g.isChecked()) {
+            p.setEnabled(true);
+          }
+          if (h.isChecked()) {
+            p.setEnabled(true);
+          }
+          p.setOnPreferenceClickListener(new hf(this));
+        }
+        e();
+        b();
+        paramBundle = (CheckBoxPreference)findPreference("show_pcs_drive");
+        if (paramBundle != null)
+        {
+          if ((!cl.a()) || (!z.N)) {
+            break label1824;
+          }
+          paramBundle.setOnPreferenceChangeListener(new hh(this));
+        }
       }
-      paramBundle = (PreferenceScreen)findPreference("update_preference");
-      if ((paramBundle == null) || (l == null)) {
+      for (;;)
+      {
+        ((CheckBoxPreference)findPreference("show_disk_usage")).setChecked(b.O());
+        ((CheckBoxPreference)findPreference("history_dir_only")).setOnPreferenceChangeListener(new hi(this));
+        ((CheckBoxPreference)findPreference("show_disk_remain")).setChecked(b.Q());
+        l = ((CheckBoxPreference)findPreference("show_usb_prompt"));
+        l.setChecked(b.R());
+        l.setOnPreferenceChangeListener(new hk(this));
+        if (ac.a() < 12) {
+          ((PreferenceScreen)findPreference("preference_display_settings_category")).removePreference(l);
+        }
+        i = ((CheckBoxPreference)findPreference("browser_downloader_disabled"));
+        i.setOnPreferenceChangeListener(new hl(this));
+        paramBundle = (ListPreference)findPreference("language_setting");
+        localObject1 = getResources().getStringArray(2131492874);
+        localObject3 = new String[localObject1.length];
+        localObject3[0] = getString(2131232071);
+        i1 = i2;
+        while (i1 < localObject1.length)
+        {
+          localObject3[i1] = localObject1[i1];
+          i1 += 1;
+        }
+        paramBundle.setSummary(paramBundle.getEntry());
         break;
-      }
-      paramBundle.removePreference(l);
-      break;
-      label792:
-      paramBundle = (PreferenceScreen)findPreference("preference_directory_settings_category");
-      if (paramBundle != null) {
-        paramBundle.removePreference(d);
-      }
-    }
-    paramBundle.setEntries((CharSequence[])localObject2);
-    if ((paramBundle.getValue() == null) || (paramBundle.getValue().equalsIgnoreCase("auto")))
-    {
-      paramBundle.setSummary(getString(2131427988));
-      paramBundle.setOnPreferenceChangeListener(new ij(this, paramBundle));
-      if (z.k) {
-        break label1742;
-      }
-      v.setOnPreferenceClickListener(new gh(this));
-      label890:
-      w = findPreference("preference_privacy");
-      w.setOnPreferenceClickListener(new gj(this));
-      x = findPreference("preference_rate");
-      x.setOnPreferenceClickListener(new gl(this));
-      paramBundle = f();
-      localObject1 = paramBundle;
-      if (paramBundle == null) {
-        localObject1 = "1.x";
-      }
-      localObject2 = "Market";
-      if (!"Market".equalsIgnoreCase("oem")) {
-        break label1775;
-      }
-      paramBundle = (Bundle)localObject2;
-      if (z.b != null) {
-        paramBundle = z.b;
-      }
-      label988:
-      if ("工信部".equalsIgnoreCase(FileExplorerActivity.e)) {
+        label1707:
+        paramBundle = (PreferenceCategory)findPreference("preference_upgrade_settings_text_category");
+        if ((paramBundle == null) || (u == null)) {
+          break label912;
+        }
+        paramBundle.removePreference(u);
+        break label912;
+        label1740:
+        paramBundle = (Bundle)localObject3;
+        if (!((String)localObject3).equals("Market")) {
+          break label1009;
+        }
+        paramBundle = (Bundle)localObject3;
+        if (a.b == null) {
+          break label1009;
+        }
+        paramBundle = (Bundle)localObject3;
+        if (a.b.length() <= 0) {
+          break label1009;
+        }
+        if (!a.b.equals("Baidu"))
+        {
+          paramBundle = a.b;
+          break label1009;
+        }
         paramBundle = "ES";
+        break label1009;
+        label1801:
+        i1 = 0;
+        break label1137;
+        label1806:
+        paramBundle.setSummary(((String)localObject1).replaceAll(",", "\n"));
+        break label1166;
+        label1824:
+        ((PreferenceScreen)findPreference("preference_display_settings_category")).removePreference((PreferenceCategory)findPreference("file"));
       }
-      localObject2 = paramBundle;
-      if (paramBundle.length() > 0) {
-        localObject2 = " (" + paramBundle + ")";
+      paramBundle.a((CharSequence[])localObject3);
+      int i1 = Arrays.asList(getResources().getStringArray(2131492875)).indexOf(ad.a(this).C());
+      if (i1 >= 0) {
+        paramBundle.setSummary(localObject3[i1]);
       }
-      findPreference("preference_version").setSummary(getResources().getText(2131427343) + " " + (String)localObject1 + (String)localObject2);
-      paramBundle = findPreference("preference_special_thanks_to_translators");
-      localObject1 = getString(2131428379);
-      if (z.b == null) {
-        break label1837;
+      paramBundle.setOnPreferenceChangeListener(new hm(this));
+      paramBundle = (CheckBoxPreference)findPreference("multithread_copy_enabled");
+      if (paramBundle != null) {
+        paramBundle.setOnPreferenceChangeListener(new ho(this));
       }
-      i1 = 1;
-      label1116:
-      if ((i1 == 0) && (!((String)localObject1).equals("none"))) {
-        break label1842;
+      paramBundle = (CheckBoxPreference)findPreference("use_xlarge_layout");
+      if (!p.a) {
+        break label2105;
       }
-      ((PreferenceScreen)findPreference("preference_about")).removePreference(paramBundle);
-      label1145:
-      findPreference("preference_website").setOnPreferenceClickListener(new gm(this));
-      findPreference("preference_more_app").setOnPreferenceClickListener(new gn(this));
-      findPreference("preference_feedback").setOnPreferenceClickListener(new go(this));
-      f = ((CheckBoxPreference)findPreference("net_passwd_enable"));
-      r = findPreference("net_passwd_change");
-      g = ((CheckBoxPreference)findPreference("start_passwd_enable"));
-      h = ((CheckBoxPreference)findPreference("hided_dirfiles_passwd_enable"));
-      if (f != null) {
-        f.setOnPreferenceChangeListener(new gp(this));
-      }
-      if (g != null) {
-        g.setOnPreferenceChangeListener(new gq(this));
-      }
-      if (h != null) {
-        h.setOnPreferenceChangeListener(new gr(this));
-      }
-      if ((r != null) && (f != null))
-      {
-        r.setEnabled(false);
-        if (f.isChecked()) {
-          r.setEnabled(true);
-        }
-        if (g.isChecked()) {
-          r.setEnabled(true);
-        }
-        if (h.isChecked()) {
-          r.setEnabled(true);
-        }
-        r.setOnPreferenceClickListener(new gs(this));
-      }
-      e();
-      b();
-      paramBundle = (CheckBoxPreference)findPreference("show_pcs_drive");
-      if (paramBundle != null)
-      {
-        if ((!cc.a()) || (!z.N)) {
-          break label1860;
-        }
-        paramBundle.setOnPreferenceChangeListener(new gu(this));
-      }
+    }
+    if (!z.O)
+    {
+      paramBundle.setChecked(ad.a(this).aY());
+      paramBundle.setOnPreferenceChangeListener(new hp(this));
     }
     for (;;)
     {
-      i = ((CheckBoxPreference)findPreference("show_select_button"));
-      i.setChecked(b.ak());
-      m = ((CheckBoxPreference)findPreference("show_windows_button"));
-      m.setChecked(b.am());
-      ((CheckBoxPreference)findPreference("show_disk_usage")).setChecked(b.N());
-      ((CheckBoxPreference)findPreference("history_dir_only")).setOnPreferenceChangeListener(new gv(this));
-      ((CheckBoxPreference)findPreference("show_disk_remain")).setChecked(b.P());
-      n = ((CheckBoxPreference)findPreference("show_usb_prompt"));
-      n.setChecked(b.Q());
-      n.setOnPreferenceChangeListener(new gx(this));
-      if (ac.a() < 12) {
-        ((PreferenceScreen)findPreference("preference_display_settings_category")).removePreference(n);
-      }
-      j = ((CheckBoxPreference)findPreference("browser_downloader_disabled"));
-      j.setOnPreferenceChangeListener(new gy(this));
-      paramBundle = (ListPreference)findPreference("language_setting");
-      localObject1 = getResources().getStringArray(2131165204);
-      localObject2 = new String[localObject1.length];
-      localObject2[0] = getString(2131427988);
-      i1 = i2;
-      while (i1 < localObject1.length)
-      {
-        localObject2[i1] = localObject1[i1];
-        i1 += 1;
-      }
-      paramBundle.setSummary(paramBundle.getEntry());
-      break;
-      label1742:
-      paramBundle = (PreferenceCategory)findPreference("preference_upgrade_settings_text_category");
-      if ((paramBundle == null) || (v == null)) {
-        break label890;
-      }
-      paramBundle.removePreference(v);
-      break label890;
-      label1775:
-      paramBundle = (Bundle)localObject2;
-      if (!"Market".equals("Market")) {
-        break label988;
-      }
-      paramBundle = (Bundle)localObject2;
-      if (FileExplorerActivity.e == null) {
-        break label988;
-      }
-      paramBundle = (Bundle)localObject2;
-      if (FileExplorerActivity.e.length() <= 0) {
-        break label988;
-      }
-      if (!FileExplorerActivity.e.equals("百度"))
-      {
-        paramBundle = FileExplorerActivity.e;
-        break label988;
-      }
-      paramBundle = "ES";
-      break label988;
-      label1837:
-      i1 = 0;
-      break label1116;
-      label1842:
-      paramBundle.setSummary(((String)localObject1).replaceAll(",", "\n"));
-      break label1145;
-      label1860:
-      ((PreferenceScreen)findPreference("preference_display_settings_category")).removePreference((PreferenceCategory)findPreference("file"));
-    }
-    paramBundle.a((CharSequence[])localObject2);
-    int i1 = Arrays.asList(getResources().getStringArray(2131165205)).indexOf(ad.a(this).B());
-    if (i1 >= 0) {
-      paramBundle.setSummary(localObject2[i1]);
-    }
-    paramBundle.setOnPreferenceChangeListener(new gz(this));
-    paramBundle = (CheckBoxPreference)findPreference("multithread_copy_enabled");
-    if (paramBundle != null) {
-      paramBundle.setOnPreferenceChangeListener(new hb(this));
-    }
-    paramBundle = (CheckBoxPreference)findPreference("use_xlarge_layout");
-    if ((k.a) && (!z.O))
-    {
-      paramBundle.setChecked(ad.a(this).aZ());
-      paramBundle.setOnPreferenceChangeListener(new hc(this));
-    }
-    for (;;)
-    {
+      paramBundle = findPreference("scroll_thumb");
+      ((PreferenceCategory)findPreference("others")).removePreference(paramBundle);
+      findPreference("default_window").setOnPreferenceClickListener(new hq(this));
+      findPreference("show_analysis_button");
       a();
       a("hidden_file");
       a("gesture_setting_enabled");
       a("thumbnail");
-      a("show_select_button");
-      a("show_windows_button");
       a("show_search_engine");
       a("enable_recycle");
-      a("toolbar_setting_show_name");
       a("scroll_thumb");
       a("sdcard_size");
-      D.post(new hd(this));
+      a("show_homepage_message");
+      C.post(new hr(this));
       return;
+      label2105:
       ((PreferenceCategory)findPreference("others")).removePreference(paramBundle);
     }
   }
@@ -614,27 +630,27 @@ public final class PopPreferenceActivity
       return null;
     case 102: 
       localObject1 = new ProgressDialog(this);
-      ((ProgressDialog)localObject1).setMessage(getText(2131427455));
+      ((ProgressDialog)localObject1).setMessage(getText(2131232177));
       ((ProgressDialog)localObject1).setIndeterminate(true);
       ((ProgressDialog)localObject1).setCancelable(true);
       return (Dialog)localObject1;
     case 105: 
-      return new ct(this).a(2131427399).b(2131427762).b(2131427341, new hi(this)).c(2131427342, new hh(this)).b();
+      return new cv(this).a(2131231719).b(2131231916).b(2131231273, new hx(this)).c(2131231269, new hw(this)).b();
     case 107: 
-      localct = new ct(this).a(2131427995).b(2131427339, new hk(this)).c(2131427340, new hj(this));
+      localcv = new cv(this).a(2131232075).b(2131231270, new hz(this)).c(2131231265, new hy(this));
       try
       {
-        localObject1 = g.a(FileExplorerActivity.J());
+        localObject1 = k.a(FileExplorerActivity.X());
         localObject5 = localObject1;
         if (localObject1 == null) {
-          localObject5 = g.a(this);
+          localObject5 = k.a(this);
         }
-        localObject1 = ((LayoutInflater)localObject5).inflate(2130903197, null);
-        ((View)localObject1).findViewById(2131362491).setVisibility(8);
-        ((View)localObject1).findViewById(2131362488).setVisibility(0);
-        localct.a((View)localObject1);
-        localObject1 = localct.b();
-        ((cg)localObject1).getWindow().setSoftInputMode(5);
+        localObject1 = ((LayoutInflater)localObject5).inflate(2130903348, null);
+        ((View)localObject1).findViewById(2131625228).setVisibility(8);
+        ((View)localObject1).findViewById(2131625225).setVisibility(0);
+        localcv.a((View)localObject1);
+        localObject1 = localcv.b();
+        ((ci)localObject1).getWindow().setSoftInputMode(5);
         return (Dialog)localObject1;
       }
       catch (Exception localException1)
@@ -647,20 +663,20 @@ public final class PopPreferenceActivity
     case 108: 
     case 111: 
     case 113: 
-      localct = new ct(this).a(2131427997).b(2131427339, new hm(this, paramInt)).c(2131427340, new hl(this));
+      localcv = new cv(this).a(2131231809).b(2131231270, new ib(this, paramInt)).c(2131231265, new ia(this));
       try
       {
-        localObject2 = g.a(FileExplorerActivity.J());
+        localObject2 = k.a(FileExplorerActivity.X());
         localObject5 = localObject2;
         if (localObject2 == null) {
-          localObject5 = g.a(this);
+          localObject5 = k.a(this);
         }
-        localObject2 = ((LayoutInflater)localObject5).inflate(2130903197, null);
-        ((View)localObject2).findViewById(2131362488).setVisibility(8);
-        ((View)localObject2).findViewById(2131362491).setVisibility(8);
-        localct.a((View)localObject2);
-        localObject2 = localct.b();
-        ((cg)localObject2).getWindow().setSoftInputMode(5);
+        localObject2 = ((LayoutInflater)localObject5).inflate(2130903348, null);
+        ((View)localObject2).findViewById(2131625225).setVisibility(8);
+        ((View)localObject2).findViewById(2131625228).setVisibility(8);
+        localcv.a((View)localObject2);
+        localObject2 = localcv.b();
+        ((ci)localObject2).getWindow().setSoftInputMode(5);
         return (Dialog)localObject2;
       }
       catch (Exception localException2)
@@ -671,21 +687,21 @@ public final class PopPreferenceActivity
         }
       }
     }
-    ct localct = new ct(this).a(2131427896).b(2131427339, new ho(this, paramInt)).c(2131427340, new hn(this));
+    cv localcv = new cv(this).a(2131231636).b(2131231270, new id(this, paramInt)).c(2131231265, new ic(this));
     try
     {
-      localObject3 = g.a(FileExplorerActivity.J());
+      localObject3 = k.a(FileExplorerActivity.X());
       localObject5 = localObject3;
       if (localObject3 == null) {
-        localObject5 = g.a(this);
+        localObject5 = k.a(this);
       }
-      localObject3 = ((LayoutInflater)localObject5).inflate(2130903197, null);
-      ((View)localObject3).findViewById(2131362491).setVisibility(8);
-      ((View)localObject3).findViewById(2131362488).setVisibility(8);
-      ((View)localObject3).findViewById(2131362495).setVisibility(8);
-      localct.a((View)localObject3);
-      localObject3 = localct.b();
-      ((cg)localObject3).getWindow().setSoftInputMode(5);
+      localObject3 = ((LayoutInflater)localObject5).inflate(2130903348, null);
+      ((View)localObject3).findViewById(2131625228).setVisibility(8);
+      ((View)localObject3).findViewById(2131625225).setVisibility(8);
+      ((View)localObject3).findViewById(2131625232).setVisibility(8);
+      localcv.a((View)localObject3);
+      localObject3 = localcv.b();
+      ((ci)localObject3).getWindow().setSoftInputMode(5);
       return (Dialog)localObject3;
     }
     catch (Exception localException3)
@@ -716,14 +732,14 @@ public final class PopPreferenceActivity
       if (localDialog != null)
       {
         ListView localListView = new ListView(localPreferenceScreen.getContext());
-        Drawable localDrawable = getResources().getDrawable(2130838042);
+        Drawable localDrawable = getResources().getDrawable(2130838413);
         localListView.setDivider(localDrawable);
         localListView.setDividerHeight(localDrawable.getIntrinsicHeight());
         localListView.setCacheColorHint(0);
         localPreferenceScreen.bind(localListView);
         localDialog.setContentView(localListView);
         if (localDialog.getWindow() != null) {
-          localDialog.getWindow().setBackgroundDrawableResource(2130838040);
+          localDialog.getWindow().setBackgroundDrawableResource(2130838411);
         }
       }
     }
@@ -738,19 +754,19 @@ public final class PopPreferenceActivity
     default: 
       return;
     }
-    paramDialog.findViewById(2131362491).setVisibility(8);
-    ((EditText)paramDialog.findViewById(2131362494)).setText("");
-    ((EditText)paramDialog.findViewById(2131362490)).setText("");
-    ((EditText)paramDialog.findViewById(2131362496)).setText("");
-    ((TextView)paramDialog.findViewById(2131362489)).setText(getText(2131428002) + " ");
+    paramDialog.findViewById(2131625228).setVisibility(8);
+    ((EditText)paramDialog.findViewById(2131625231)).setText("");
+    ((EditText)paramDialog.findViewById(2131625227)).setText("");
+    ((EditText)paramDialog.findViewById(2131625233)).setText("");
+    ((TextView)paramDialog.findViewById(2131625226)).setText(getText(2131231808) + " ");
     if ((paramInt == 109) || (paramInt == 112) || (paramInt == 114)) {
-      ((TextView)paramDialog.findViewById(2131362193)).setVisibility(8);
+      ((TextView)paramDialog.findViewById(2131624779)).setVisibility(8);
     }
     for (;;)
     {
-      ((TextView)paramDialog.findViewById(2131362195)).setText(getText(2131428003) + " ");
+      ((TextView)paramDialog.findViewById(2131624781)).setText(getText(2131231805) + " ");
       return;
-      ((TextView)paramDialog.findViewById(2131362193)).setText(getText(2131428001) + " ");
+      ((TextView)paramDialog.findViewById(2131624779)).setText(getText(2131231806) + " ");
     }
   }
   

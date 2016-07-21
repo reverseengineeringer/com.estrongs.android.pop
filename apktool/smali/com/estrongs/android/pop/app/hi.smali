@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/preference/Preference$OnPreferenceChangeListener;
 
 
 # instance fields
@@ -22,14 +22,22 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 1
+.method public onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
+    .locals 2
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/hi;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->e(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->b(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)Landroid/os/Handler;
 
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    move-result-object v0
 
-    return-void
+    new-instance v1, Lcom/estrongs/android/pop/app/hj;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/hj;-><init>(Lcom/estrongs/android/pop/app/hi;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

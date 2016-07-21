@@ -1,19 +1,35 @@
 package com.estrongs.android.pop.app;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.ui.e.iw;
+import android.app.ProgressDialog;
 
-class jf
-  implements MenuItem.OnMenuItemClickListener
+final class jf
+  implements Runnable
 {
-  jf(PopVideoPlayer paramPopVideoPlayer) {}
-  
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void run()
   {
-    PopVideoPlayer.w(a);
-    PopVideoPlayer.z(a).d();
-    return true;
+    try
+    {
+      if (je.b() != null)
+      {
+        je.b().dismiss();
+        je.a(null);
+        je.a(false);
+      }
+      je.a(false);
+      return;
+    }
+    catch (Exception localException)
+    {
+      localException = localException;
+      je.a(false);
+      return;
+    }
+    finally
+    {
+      localObject = finally;
+      je.a(false);
+      throw ((Throwable)localObject);
+    }
   }
 }
 

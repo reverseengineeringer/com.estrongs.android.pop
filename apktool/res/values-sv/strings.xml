@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_select">Välj</string>
-    <string name="app_name">ES Filutforskaren</string>
-    <string name="app_media_player">ES Media Player</string>
-    <string name="app_note_editor">ES Note Editor</string>
-    <string name="app_image_browser">ES Image Browser</string>
-    <string name="app_zip_viewer">ES Zip Viewer</string>
     <string name="app_downloader">ES Downloader</string>
-    <string name="select_device_to_share">Välj en enhet att skicka till</string>
+    <string name="app_image_browser">ES Image Browser</string>
+    <string name="app_media_player">ES Media Player</string>
+    <string name="app_name">ES Filutforskaren</string>
+    <string name="app_note_editor">ES Note Editor</string>
+    <string name="app_zip_viewer">ES Zip Viewer</string>
     <string name="es_share_name_activity">Skicka via LAN</string>
     <string name="save_to_es">ES Spara som</string>
+    <string name="select_device_to_share">Välj en enhet att skicka till</string>
 </resources>

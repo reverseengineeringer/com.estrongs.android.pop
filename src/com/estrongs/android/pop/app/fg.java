@@ -1,51 +1,23 @@
 package com.estrongs.android.pop.app;
 
 import android.view.View;
-import com.estrongs.android.ui.d.b;
+import android.view.View.OnClickListener;
+import com.estrongs.android.pop.app.c.i;
 import com.estrongs.android.ui.view.ac;
-import com.estrongs.android.ui.view.by;
-import com.estrongs.android.widget.bc;
+import java.util.List;
 
 class fg
-  implements bc
+  implements View.OnClickListener
 {
-  fg(PopAudioPlayer paramPopAudioPlayer) {}
+  fg(fa paramfa) {}
   
-  public void a(int paramInt) {}
-  
-  public void a(int paramInt, float paramFloat)
+  public void onClick(View paramView)
   {
-    if (paramFloat != 0.0D)
-    {
-      paramFloat = Math.abs(paramFloat);
-      PopAudioPlayer.r(a).a(paramInt, 1.0F - paramFloat);
-      PopAudioPlayer.r(a).a((paramInt + 1) % 2, paramFloat);
+    paramView = PopAudioPlayer.h(a.a).c();
+    if ((paramView != null) && (paramView.size() > 0)) {
+      a.a.b((i)PopAudioPlayer.h(a.a).c().get(0));
     }
   }
-  
-  public void b(int paramInt) {}
-  
-  public void c(int paramInt)
-  {
-    if (PopAudioPlayer.r(a) != null) {
-      PopAudioPlayer.r(a).d(paramInt);
-    }
-    if (paramInt == 0)
-    {
-      PopAudioPlayer.s(a).setVisibility(0);
-      PopAudioPlayer.t(a).setVisibility(8);
-      PopAudioPlayer.h(a).a("playing", Boolean.valueOf(false));
-      if (PopAudioPlayer.i(a).b()) {
-        a.u();
-      }
-      return;
-    }
-    PopAudioPlayer.s(a).setVisibility(8);
-    PopAudioPlayer.t(a).setVisibility(0);
-    PopAudioPlayer.h(a).a("playlist", Boolean.valueOf(false));
-  }
-  
-  public void d(int paramInt) {}
 }
 
 /* Location:

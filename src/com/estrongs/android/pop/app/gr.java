@@ -1,31 +1,204 @@
 package com.estrongs.android.pop.app;
 
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
-import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.pop.ad;
+import android.graphics.Bitmap;
+import com.estrongs.android.pop.app.c.i;
+import com.estrongs.android.pop.app.c.j;
+import com.estrongs.android.pop.app.c.k;
+import java.util.List;
 
-class gr
-  implements Preference.OnPreferenceChangeListener
+public class gr
+  extends gq
 {
-  gr(PopPreferenceActivity paramPopPreferenceActivity) {}
+  private AudioPlayerService a;
   
-  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
+  public gr(AudioPlayerService paramAudioPlayerService)
   {
-    if (((Boolean)paramObject).booleanValue())
-    {
-      paramPreference = ad.a(a).G();
-      if ((paramPreference == null) || (paramPreference.length() == 0))
-      {
-        a.showDialog(113);
-        return false;
-      }
-      a.r.setEnabled(true);
-      FexApplication.a().e(((Boolean)paramObject).booleanValue());
-      return true;
-    }
-    a.showDialog(114);
-    return false;
+    a = paramAudioPlayerService;
+  }
+  
+  public k A()
+  {
+    return a.G();
+  }
+  
+  public void a(long paramLong)
+  {
+    a.c((int)paramLong);
+  }
+  
+  public void a(k paramk)
+  {
+    a.a(paramk);
+  }
+  
+  public void a(gp paramgp)
+  {
+    a.a(paramgp);
+  }
+  
+  public void a(List<i> paramList)
+  {
+    a.a(paramList);
+  }
+  
+  public void a(boolean paramBoolean)
+  {
+    a.a(paramBoolean);
+  }
+  
+  public boolean a()
+  {
+    return a.s();
+  }
+  
+  public boolean a(int paramInt)
+  {
+    return a.f(paramInt);
+  }
+  
+  public boolean a(j paramj)
+  {
+    return a.a(paramj);
+  }
+  
+  public void b(int paramInt)
+  {
+    a.a(paramInt);
+  }
+  
+  public void b(List<String> paramList)
+  {
+    a.b(paramList);
+  }
+  
+  public long c()
+  {
+    return a.p();
+  }
+  
+  public void c(int paramInt)
+  {
+    a.b(paramInt);
+  }
+  
+  public boolean d()
+  {
+    return a.n();
+  }
+  
+  public boolean d(int paramInt)
+  {
+    return a.d(paramInt);
+  }
+  
+  public boolean e()
+  {
+    return a.k();
+  }
+  
+  public boolean f()
+  {
+    return a.m();
+  }
+  
+  public String g()
+  {
+    return a.a();
+  }
+  
+  public j h()
+  {
+    return a.h();
+  }
+  
+  public int i()
+  {
+    return a.d();
+  }
+  
+  public int j()
+  {
+    return a.e();
+  }
+  
+  public int k()
+  {
+    return a.f();
+  }
+  
+  public int l()
+  {
+    return a.i();
+  }
+  
+  public long m()
+  {
+    return a.j();
+  }
+  
+  public void n()
+  {
+    a.z();
+  }
+  
+  public void o()
+  {
+    a.A();
+  }
+  
+  public void p()
+  {
+    a.F();
+  }
+  
+  public void q()
+  {
+    a.t();
+  }
+  
+  public i r()
+  {
+    return a.q();
+  }
+  
+  public String s()
+  {
+    return a.B();
+  }
+  
+  public String t()
+  {
+    return a.C();
+  }
+  
+  public int u()
+  {
+    return a.b();
+  }
+  
+  public int v()
+  {
+    return a.c();
+  }
+  
+  public void w()
+  {
+    a.u();
+  }
+  
+  public boolean x()
+  {
+    return a.r();
+  }
+  
+  public Bitmap y()
+  {
+    return a.D();
+  }
+  
+  public void z()
+  {
+    a.o();
   }
 }
 

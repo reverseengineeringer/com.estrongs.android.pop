@@ -1,21 +1,21 @@
 package com.estrongs.android.view;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.ui.pcs.o;
-import com.estrongs.fs.h;
+import android.support.v7.widget.RecyclerView.AdapterDataObserver;
 
 class ch
-  implements DialogInterface.OnClickListener
+  extends RecyclerView.AdapterDataObserver
 {
-  ch(ce paramce, h paramh) {}
+  ch(cg paramcg) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void onChanged()
   {
-    o localo = new o(b.a.ad);
-    localo.a(new ci(this));
-    localo.a(true);
-    paramDialogInterface.dismiss();
+    super.onChanged();
+    if ((a.i.getItemCount() == 0) && (a.x))
+    {
+      a.n_();
+      return;
+    }
+    a.U();
   }
 }
 

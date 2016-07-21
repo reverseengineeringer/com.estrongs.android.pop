@@ -1,25 +1,35 @@
 package com.estrongs.android.pop.esclasses;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.Window;
+import com.estrongs.android.j.c;
 import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.pop.app.d.a;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.e.d;
+import com.estrongs.android.ui.theme.at;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 public class ESActivity
-  extends Activity
+  extends AppCompatActivity
+  implements a
 {
   private static List<Activity> a = new ArrayList();
-  ArrayList<c> s = null;
+  ArrayList<g> s = null;
   
-  public static Activity A()
+  public static Activity H()
   {
     synchronized (a)
     {
@@ -33,12 +43,35 @@ public class ESActivity
     }
   }
   
-  public void a(c paramc)
+  public static void I()
+  {
+    Iterator localIterator = a.iterator();
+    while (localIterator.hasNext())
+    {
+      Activity localActivity = (Activity)localIterator.next();
+      if ((localActivity != null) && (!(localActivity instanceof FileExplorerActivity))) {
+        localActivity.finish();
+      }
+    }
+    a.clear();
+  }
+  
+  public Activity G()
+  {
+    return this;
+  }
+  
+  public at J()
+  {
+    return at.a(this);
+  }
+  
+  public void a(g paramg)
   {
     if (s == null) {
       s = new ArrayList();
     }
-    s.add(paramc);
+    s.add(paramg);
   }
   
   public void a(Runnable paramRunnable)
@@ -48,25 +81,25 @@ public class ESActivity
   
   public void a(String paramString, int paramInt)
   {
-    runOnUiThread(new b(this, paramString, paramInt));
+    runOnUiThread(new f(this, paramString, paramInt));
   }
   
-  public void b(c paramc)
+  public void b(int paramInt1, int paramInt2)
+  {
+    a(getString(paramInt1), paramInt2);
+  }
+  
+  public void b(g paramg)
   {
     if (s == null) {
       return;
     }
-    s.remove(paramc);
+    s.remove(paramg);
   }
   
   public Drawable c(int paramInt)
   {
     return getResources().getDrawable(paramInt);
-  }
-  
-  public void c(int paramInt1, int paramInt2)
-  {
-    a(getString(paramInt1), paramInt2);
   }
   
   public void c(String paramString)
@@ -76,7 +109,7 @@ public class ESActivity
   
   public void d(int paramInt)
   {
-    c(paramInt, 0);
+    b(paramInt, 0);
   }
   
   public boolean dispatchKeyEvent(KeyEvent paramKeyEvent)
@@ -94,8 +127,8 @@ public class ESActivity
   {
     try
     {
-      k localk = k.a(super.getResources());
-      return localk;
+      p localp = p.a(super.getResources());
+      return localp;
     }
     finally
     {
@@ -104,13 +137,28 @@ public class ESActivity
     }
   }
   
+  public Object getSystemService(String paramString)
+  {
+    Object localObject = super.getSystemService(paramString);
+    paramString = (String)localObject;
+    if ((localObject instanceof LayoutInflater)) {
+      paramString = new k((LayoutInflater)localObject, this);
+    }
+    return paramString;
+  }
+  
+  public Context n()
+  {
+    return this;
+  }
+  
   protected void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
   {
     if (s != null)
     {
       Iterator localIterator = s.iterator();
       while (localIterator.hasNext()) {
-        ((c)localIterator.next()).a(paramInt1, paramInt2, paramIntent);
+        ((g)localIterator.next()).a(paramInt1, paramInt2, paramIntent);
       }
     }
   }
@@ -120,7 +168,7 @@ public class ESActivity
     super.onConfigurationChanged(paramConfiguration);
     try
     {
-      k.a(super.getResources()).a();
+      p.a(super.getResources()).a();
       return;
     }
     catch (Exception paramConfiguration) {}
@@ -129,14 +177,14 @@ public class ESActivity
   protected void onCreate(Bundle arg1)
   {
     super.onCreate(???);
-    ((k)getResources()).a();
+    ((p)getResources()).a();
     try
     {
-      e.a(this);
+      i.a(this);
       synchronized (a)
       {
         a.add(this);
-        return;
+        d.a(this);
       }
     }
     catch (Exception ???)
@@ -148,6 +196,7 @@ public class ESActivity
   protected void onDestroy()
   {
     super.onDestroy();
+    c.b(this);
     for (;;)
     {
       int i;
@@ -172,12 +221,14 @@ public class ESActivity
   protected void onPause()
   {
     super.onPause();
+    c.a(this).b();
     FexApplication.a().d();
   }
   
   protected void onResume()
   {
     super.onResume();
+    c.a(this).a();
     FexApplication.a().c();
     for (;;)
     {
@@ -205,7 +256,13 @@ public class ESActivity
   public void setContentView(int paramInt)
   {
     getWindow().setContentView(paramInt);
-    new h(this).a(paramInt, getWindow().peekDecorView());
+    new l(this).a(paramInt, getWindow().peekDecorView());
+  }
+  
+  public void setSupportActionBar(Toolbar paramToolbar)
+  {
+    super.setSupportActionBar(paramToolbar);
+    d.a(this);
   }
 }
 

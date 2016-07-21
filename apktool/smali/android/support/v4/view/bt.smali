@@ -1,39 +1,25 @@
-.class Landroid/support/v4/view/bt;
+.class public interface abstract Landroid/support/v4/view/bt;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field final synthetic a:Landroid/support/v4/view/ViewPager;
-
-
-# direct methods
-.method constructor <init>(Landroid/support/v4/view/ViewPager;)V
-    .locals 0
-
-    iput-object p1, p0, Landroid/support/v4/view/bt;->a:Landroid/support/v4/view/ViewPager;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public abstract onNestedFling(Landroid/view/View;FFZ)Z
+.end method
 
-    iget-object v0, p0, Landroid/support/v4/view/bt;->a:Landroid/support/v4/view/ViewPager;
+.method public abstract onNestedPreFling(Landroid/view/View;FF)Z
+.end method
 
-    const/4 v1, 0x0
+.method public abstract onNestedPreScroll(Landroid/view/View;II[I)V
+.end method
 
-    invoke-static {v0, v1}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ViewPager;I)V
+.method public abstract onNestedScroll(Landroid/view/View;IIII)V
+.end method
 
-    iget-object v0, p0, Landroid/support/v4/view/bt;->a:Landroid/support/v4/view/ViewPager;
+.method public abstract onNestedScrollAccepted(Landroid/view/View;Landroid/view/View;I)V
+.end method
 
-    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->d()V
+.method public abstract onStartNestedScroll(Landroid/view/View;Landroid/view/View;I)Z
+.end method
 
-    return-void
+.method public abstract onStopNestedScroll(Landroid/view/View;)V
 .end method

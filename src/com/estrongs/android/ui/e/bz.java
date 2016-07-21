@@ -1,16 +1,18 @@
 package com.estrongs.android.ui.e;
 
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.dialog.gg;
 
 class bz
-  implements gg
+  implements MenuItem.OnMenuItemClickListener
 {
-  bz(by paramby) {}
+  bz(m paramm) {}
   
-  public void a(int paramInt, String paramString)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    a.a.k.b(paramString);
+    m.a(a).N();
+    return true;
   }
 }
 

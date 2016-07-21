@@ -1,18 +1,24 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.view.a.b;
+import com.estrongs.android.pop.spfs.SPFileObject;
+import com.estrongs.android.pop.spfs.dialog.FlickrPhotoPrivacyDialog.PrivacyOptionCallback;
+import com.estrongs.android.pop.spfs.task.FlickrEditTask;
+import com.estrongs.android.util.TypedMap;
 import com.estrongs.fs.h;
-import com.estrongs.fs.util.j;
-import java.util.List;
 
 class gr
-  implements b
+  implements FlickrPhotoPrivacyDialog.PrivacyOptionCallback
 {
-  gr(cp paramcp) {}
+  gr(gp paramgp, h paramh) {}
   
-  public boolean a(co paramco)
+  public void setPrivacty(TypedMap paramTypedMap, boolean paramBoolean)
   {
-    return ((h) || (((f) || (x) || (g)) && (!d))) && (F == 1) && (G) && (j.c((h)b.get(0)));
+    if (paramBoolean) {
+      return;
+    }
+    paramTypedMap = new FlickrEditTask((SPFileObject)a, paramTypedMap);
+    paramTypedMap.addTaskStatusChangeListener(new gs(this));
+    paramTypedMap.execute(true);
   }
 }
 

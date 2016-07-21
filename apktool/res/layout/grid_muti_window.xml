@@ -2,10 +2,11 @@
 <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <LinearLayout android:id="@id/container" android:paddingLeft="15.0dip" android:paddingTop="15.0dip" android:paddingRight="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
-            <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/image_grid_muti_window" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerInside" />
+        <LinearLayout android:id="@id/container" android:paddingTop="@dimen/dp_1" android:paddingRight="@dimen/dp_3" android:paddingBottom="@dimen/dp_3" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/image_grid_muti_window" android:background="@drawable/bg_card" android:focusable="true" android:layout_width="@dimen/dp_141" android:layout_height="@dimen/dp_141" android:scaleType="fitStart" />
         </LinearLayout>
-        <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/grid_remove_muti_window" android:focusable="true" android:layout_width="@dimen/dp_30" android:layout_height="@dimen/dp_30" android:src="@drawable/multi_window_remove_bg" android:layout_alignTop="@id/container" android:layout_alignRight="@id/container" />
+        <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/grid_remove_muti_window" android:background="@color/white" android:focusable="true" android:layout_width="@dimen/dp_22" android:layout_height="@dimen/dp_22" android:layout_marginTop="@dimen/dp_6" android:layout_marginRight="@dimen/dp_6" android:src="@drawable/icon_close24" android:scaleType="centerInside" android:layout_alignTop="@id/container" android:layout_alignRight="@id/container" />
+        <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/iv_window_check" android:visibility="gone" android:layout_width="@dimen/dp_20" android:layout_height="@dimen/dp_20" android:src="@drawable/btn_checkbox_pressed" android:layout_alignRight="@id/container" android:layout_alignBottom="@id/container" />
     </RelativeLayout>
-    <TextView android:textSize="@dimen/dp_12" android:textColor="@color/window_content_text" android:id="@id/text_grid_muti_window" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+    <TextView android:textSize="@dimen/dp_15" android:textColor="@color/c_99000000" android:id="@id/text_grid_muti_window" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_4" android:singleLine="true" />
 </LinearLayout>

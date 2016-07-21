@@ -1,87 +1,93 @@
 package com.estrongs.android.ui.view;
 
-import android.content.ActivityNotFoundException;
-import android.content.Context;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.net.Uri;
-import android.util.SparseArray;
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.pop.app.RecommAcitivity;
-import com.estrongs.android.pop.app.b;
-import com.estrongs.android.pop.view.utils.n;
-import com.estrongs.android.pop.view.utils.v;
+import android.annotation.SuppressLint;
+import android.graphics.Bitmap;
+import android.net.http.SslError;
+import android.os.Handler;
+import android.os.Message;
+import android.webkit.SslErrorHandler;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import com.estrongs.android.util.ah;
 
 class bv
-  implements View.OnClickListener
+  extends WebViewClient
 {
-  bv(RecommendListView paramRecommendListView) {}
+  private bv(PcsThirdPartOAuth paramPcsThirdPartOAuth) {}
   
-  public void onClick(View paramView)
+  public void onPageFinished(WebView paramWebView, String paramString)
   {
-    int i = ((Integer)paramView.getTag()).intValue();
-    if ((aa)[i].q == 1) || (aa)[i].q == 5))
+    Message localMessage = PcsThirdPartOAuth.d(a).obtainMessage(7);
+    PcsThirdPartOAuth.d(a).sendMessageDelayed(localMessage, 200L);
+    if (paramString.startsWith("http://passport.baidu.com/phoenix/account/afterauth"))
     {
-      RecommendListView.a(a, i);
-      aa)[i].q = 0;
-      RecommendListView.a(a, (View)RecommendListView.b(a).get(i), RecommendListView.a(a)[i]);
+      paramWebView.stopLoading();
+      paramWebView.loadUrl("javascript:window.handler.show(document.body.innerHTML);");
+    }
+    int i = paramString.indexOf("://");
+    paramWebView = paramString;
+    if (i > 0) {
+      paramWebView = paramString.substring(i + 3);
+    }
+    if ((!paramWebView.startsWith("www.estrongs.com")) && (!paramWebView.startsWith("localhost")) && (PcsThirdPartOAuth.b() != null)) {
+      PcsThirdPartOAuth.b().a();
+    }
+  }
+  
+  public void onPageStarted(WebView paramWebView, String paramString, Bitmap paramBitmap)
+  {
+    paramBitmap = paramWebView.getLayoutParams();
+    int i = paramWebView.getHeight();
+    if (i == 0)
+    {
+      height = 300;
+      paramWebView.setLayoutParams(paramBitmap);
+      if (paramString.startsWith("http://www.estrongs.com"))
+      {
+        paramString = PcsThirdPartOAuth.a(a, paramString, "code");
+        if (paramString == null) {
+          break label95;
+        }
+        paramBitmap = PcsThirdPartOAuth.d(a).obtainMessage(1);
+        obj = paramString;
+        PcsThirdPartOAuth.d(a).sendMessage(paramBitmap);
+      }
     }
     for (;;)
     {
-      paramView.invalidate();
+      paramWebView.stopLoading();
       return;
-      label261:
-      Intent localIntent2;
-      if ((aa)[i].q == 0) || (aa)[i].q == 2))
-      {
-        if (aa)[i].v != 3)
-        {
-          if (RecommendListView.a(a)[i].c() != null)
-          {
-            aa)[i].y = true;
-            Intent localIntent1 = new Intent("android.intent.action.VIEW");
-            localIntent1.setData(Uri.parse(RecommendListView.a(a)[i].c()));
-            try
-            {
-              if (!(RecommendListView.c(a) instanceof RecommAcitivity)) {
-                break label261;
-              }
-              ((RecommAcitivity)RecommendListView.c(a)).a(localIntent1);
-            }
-            catch (ActivityNotFoundException localActivityNotFoundException)
-            {
-              ag.a(RecommendListView.c(a), RecommendListView.c(a).getText(2131427842), 1);
-            }
-            continue;
-            RecommendListView.c(a).startActivity(localActivityNotFoundException);
-          }
-          else
-          {
-            aa)[i].u = 0L;
-            aa)[i].q = 5;
-            RecommendListView.a(a, (View)RecommendListView.b(a).get(i), RecommendListView.a(a)[i]);
-            n.b().c(RecommendListView.a(a)[i]);
-          }
-        }
-        else
-        {
-          localIntent2 = RecommendListView.c(a).getPackageManager().getLaunchIntentForPackage(aa)[i].f);
-          if (localIntent2 != null) {
-            RecommendListView.c(a).startActivity(localIntent2);
-          }
-        }
-      }
-      else if (aa)[i].q == 3)
-      {
-        localIntent2 = b.a(n.a(aa)[i].f));
-        RecommendListView.c(a).startActivity(localIntent2);
-      }
-      else if (aa)[i].q == 4)
-      {
-        n.b().c(RecommendListView.a(a)[i]);
-      }
+      height = i;
+      break;
+      label95:
+      paramString = PcsThirdPartOAuth.d(a).obtainMessage(4);
+      PcsThirdPartOAuth.d(a).sendMessage(paramString);
     }
+  }
+  
+  public void onReceivedError(WebView paramWebView, int paramInt, String paramString1, String paramString2)
+  {
+    paramInt = paramString2.indexOf("://");
+    paramWebView = paramString2;
+    if (paramInt > 0) {
+      paramWebView = paramString2.substring(paramInt + 3);
+    }
+    if (paramWebView.equalsIgnoreCase(PcsThirdPartOAuth.n(a)))
+    {
+      paramWebView = PcsThirdPartOAuth.d(a).obtainMessage(4);
+      PcsThirdPartOAuth.d(a).sendMessage(paramWebView);
+    }
+  }
+  
+  @SuppressLint({"NewApi"})
+  public void onReceivedSslError(WebView paramWebView, SslErrorHandler paramSslErrorHandler, SslError paramSslError)
+  {
+    ah.a(a, paramWebView, paramSslErrorHandler, paramSslError);
+  }
+  
+  public boolean shouldOverrideUrlLoading(WebView paramWebView, String paramString)
+  {
+    return false;
   }
 }
 

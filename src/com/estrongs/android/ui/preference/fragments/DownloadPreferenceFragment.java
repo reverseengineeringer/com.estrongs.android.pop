@@ -3,11 +3,11 @@ package com.estrongs.android.ui.preference.fragments;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
-import com.estrongs.android.pop.esclasses.i;
+import com.estrongs.android.pop.esclasses.m;
 
 @SuppressLint({"NewApi"})
 public class DownloadPreferenceFragment
-  extends i
+  extends m
 {
   private CheckBoxPreference a;
   
@@ -16,10 +16,10 @@ public class DownloadPreferenceFragment
     super.onCreate(paramBundle);
     addPreferencesFromResource(2131034126);
     a = ((CheckBoxPreference)findPreference("browser_downloader_disabled"));
-    a.setOnPreferenceChangeListener(new ak(this));
+    a.setOnPreferenceChangeListener(new am(this));
     paramBundle = (CheckBoxPreference)findPreference("multithread_copy_enabled");
     if (paramBundle != null) {
-      paramBundle.setOnPreferenceChangeListener(new al(this));
+      paramBundle.setOnPreferenceChangeListener(new an(this));
     }
   }
 }

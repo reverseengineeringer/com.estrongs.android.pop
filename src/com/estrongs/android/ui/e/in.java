@@ -1,120 +1,20 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.util.am;
+import android.view.MenuItem.OnMenuItemClickListener;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.view.a.a;
 
-public class in
+class in
+  implements View.OnClickListener
 {
-  public static final int a(int paramInt)
-  {
-    switch (paramInt)
-    {
-    default: 
-      return paramInt;
-    case 1: 
-      return 10;
-    case 2: 
-      return 11;
-    case 3: 
-      return 12;
-    case 4: 
-      return 13;
-    }
-    return 29;
-  }
+  in(im paramim, View paramView, a parama) {}
   
-  public static int a(String paramString)
+  public void onClick(View paramView)
   {
-    int j = 0;
-    int i;
-    if ("#home_page#".equals(paramString)) {
-      i = 25;
+    if ((a.isEnabled()) && (b.c() != null)) {
+      b.c().onMenuItemClick(b);
     }
-    do
-    {
-      do
-      {
-        return i;
-        if (((am.J(paramString)) || (am.I(paramString))) && (am.bg(paramString))) {
-          return 2;
-        }
-        if ((am.H(paramString)) && (am.bg(paramString))) {
-          return 1;
-        }
-        if ((am.aw(paramString)) && (am.bg(paramString))) {
-          return 3;
-        }
-        if (am.S(paramString)) {
-          return 6;
-        }
-        if (am.U(paramString)) {
-          return 7;
-        }
-        if (am.T(paramString)) {
-          return 5;
-        }
-        if (am.V(paramString)) {
-          return 8;
-        }
-        if (am.aZ(paramString)) {
-          return 4;
-        }
-        if ((am.W(paramString)) || (am.af(paramString))) {
-          return 9;
-        }
-        if (am.aO(paramString)) {
-          return 14;
-        }
-        if (am.aG(paramString)) {
-          return 15;
-        }
-        if ((paramString == null) || (paramString.equals("New"))) {
-          return -1;
-        }
-        if ((am.Y(paramString)) && (!am.af(paramString)))
-        {
-          if (am.ae(paramString)) {
-            return 24;
-          }
-          return 16;
-        }
-        if (am.r(paramString)) {
-          return 17;
-        }
-        if (am.aQ(paramString)) {
-          return 19;
-        }
-        if (am.s(paramString)) {
-          return 18;
-        }
-        if ((am.aB(paramString)) || (paramString.contains("PCS_DRIVE_Js1a7M5e_9yAcTvFX"))) {
-          return 20;
-        }
-        if (am.q(paramString)) {
-          return 21;
-        }
-        if (am.t(paramString)) {
-          return 22;
-        }
-        if ((am.bP(paramString)) || (am.bW(paramString))) {
-          return 23;
-        }
-        if ((am.bQ(paramString)) || ((am.aW(paramString)) && (am.bQ(am.bz(paramString))))) {
-          return 26;
-        }
-        if (am.bR(paramString)) {
-          return 27;
-        }
-        i = j;
-      } while (!am.K(paramString));
-      if (am.bg(paramString)) {
-        return 28;
-      }
-      if (am.M(paramString)) {
-        return 30;
-      }
-      i = j;
-    } while (am.O(paramString));
-    return 31;
   }
 }
 

@@ -1,8 +1,5 @@
 package com.estrongs.android.pop.app.imageviewer;
 
-import android.view.View;
-import com.estrongs.android.widget.RealViewSwitcher;
-
 class bv
   implements Runnable
 {
@@ -10,9 +7,7 @@ class bv
   
   public void run()
   {
-    a.i.getCurrentView().startAnimation(a.i.getOutAnimation());
-    a.b.removeCallbacks(ViewImage21.u(a));
-    a.b.postDelayed(ViewImage21.u(a), ViewImage21.v(a) - 50);
+    ViewImage21.t(a);
   }
 }
 

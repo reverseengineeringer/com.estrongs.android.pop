@@ -1,39 +1,18 @@
 package com.estrongs.android.pop.app;
 
-import android.content.Context;
-import android.view.ViewGroup.LayoutParams;
-import android.widget.LinearLayout;
-import com.estrongs.android.ui.d.b;
-import com.estrongs.android.widget.RealViewSwitcher;
-import com.estrongs.android.widget.bc;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 
 class eq
-  extends b
+  implements MenuItem.OnMenuItemClickListener
 {
-  eq(PopAudioPlayer paramPopAudioPlayer, LinearLayout paramLinearLayout1, Context paramContext, LinearLayout paramLinearLayout2)
-  {
-    super(paramLinearLayout1, paramContext);
-  }
+  eq(PopAudioPlayer paramPopAudioPlayer) {}
   
-  protected void a()
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    c = new er(this, b);
-    a.removeAllViews();
-    a.addView(c, new ViewGroup.LayoutParams(-1, -1));
-    a(new es(this, null));
-    a(new et(this, null));
-    e(0);
-  }
-  
-  public void a(int paramInt)
-  {
-    PopAudioPlayer.g(b).a(paramInt);
-    b.f.c(paramInt);
-  }
-  
-  protected int b()
-  {
-    return 2;
+    paramMenuItem = a.B();
+    a.a(paramMenuItem);
+    return false;
   }
 }
 

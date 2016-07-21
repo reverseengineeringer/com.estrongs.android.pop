@@ -1,18 +1,32 @@
 package com.estrongs.android.ui.e;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.app.LocalFileSharingActivity;
+import com.estrongs.android.ui.preference.q;
 
 class ci
-  implements MenuItem.OnMenuItemClickListener
+  implements q
 {
-  ci(cf paramcf, LocalFileSharingActivity paramLocalFileSharingActivity) {}
+  ci(ch paramch) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void a(String paramString, Object paramObject)
   {
-    a.b();
-    return true;
+    if ("show_select_button".equals(paramString))
+    {
+      ch.a(a, Boolean.valueOf(paramObject.toString()).booleanValue());
+      a.k();
+      a.f(ch.a(a));
+    }
+    do
+    {
+      return;
+      if ("show_windows_button".equals(paramString))
+      {
+        ch.b(a, Boolean.valueOf(paramObject.toString()).booleanValue());
+        a.k();
+        a.f(ch.a(a));
+        return;
+      }
+    } while (!"toolbar_setting_show_name".equals(paramString));
+    a.f(ch.a(a));
   }
 }
 

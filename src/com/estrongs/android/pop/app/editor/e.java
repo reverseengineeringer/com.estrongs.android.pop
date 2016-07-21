@@ -14,7 +14,7 @@ class e
       {
         if (ObservableScrollView.c(a) != null)
         {
-          ObservableScrollView.c(a).a();
+          ObservableScrollView.c(a).g_();
           ObservableScrollView.a(a, false);
         }
         return;

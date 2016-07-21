@@ -1,14 +1,17 @@
 package android.support.v4.app;
 
-public abstract class v
+import android.support.v4.e.a;
+import android.view.View;
+import java.util.ArrayList;
+
+public class v
 {
-  public abstract int a();
+  public a<String, String> a = new a();
+  public ArrayList<View> b = new ArrayList();
+  public bf c = new bf();
+  public View d;
   
-  public abstract v a(int paramInt, Fragment paramFragment, String paramString);
-  
-  public abstract v a(Fragment paramFragment);
-  
-  public abstract v b(Fragment paramFragment);
+  public v(q paramq) {}
 }
 
 /* Location:

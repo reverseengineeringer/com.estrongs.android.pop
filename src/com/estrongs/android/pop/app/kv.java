@@ -1,16 +1,21 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
+import android.content.Intent;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import com.estrongs.android.ui.view.RecommendListView;
 
 class kv
-  implements DialogInterface.OnDismissListener
+  implements AdapterView.OnItemClickListener
 {
-  kv(ku paramku) {}
+  kv(RecommAcitivity paramRecommAcitivity) {}
   
-  public void onDismiss(DialogInterface paramDialogInterface)
+  public void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    a.c.finish();
+    paramAdapterView = new Intent(a, RecommItemDetailAcitivity.class);
+    paramAdapterView.putExtra("position", paramInt - RecommAcitivity.a(a).getHeaderViewsCount());
+    a.startActivity(paramAdapterView);
   }
 }
 

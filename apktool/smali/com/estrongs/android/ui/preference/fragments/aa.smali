@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/preference/Preference$OnPreferenceChangeListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;
+.field final synthetic a:Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)V
+.method constructor <init>(Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/preference/fragments/aa;->a:Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;
+    iput-object p1, p0, Lcom/estrongs/android/ui/preference/fragments/aa;->a:Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,20 +22,10 @@
 
 
 # virtual methods
-.method public onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
-    .locals 2
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 0
 
-    invoke-virtual {p1}, Landroid/preference/Preference;->getKey()Ljava/lang/String;
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    move-result-object v0
-
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0, p2}, Lcom/estrongs/android/pop/FexApplication;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    const/4 v0, 0x1
-
-    return v0
+    return-void
 .end method

@@ -2,16 +2,15 @@ package com.estrongs.android.pop.app;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.widget.g;
 
 class ic
   implements DialogInterface.OnClickListener
 {
-  ic(hz paramhz, g paramg) {}
+  ic(PopPreferenceActivity paramPopPreferenceActivity) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    a.k();
+    paramDialogInterface.dismiss();
   }
 }
 

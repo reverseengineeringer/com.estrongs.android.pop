@@ -5,9 +5,9 @@
 # instance fields
 .field private a:Landroid/content/Context;
 
-.field private b:Lcom/estrongs/android/ui/dialog/cg;
+.field private b:Lcom/estrongs/android/ui/dialog/ci;
 
-.field private c:Lcom/estrongs/android/ui/theme/al;
+.field private c:Lcom/estrongs/android/ui/theme/at;
 
 .field private d:Ljava/io/File;
 
@@ -44,10 +44,14 @@
 
 .field private p:Lcom/estrongs/android/pop/app/compress/k;
 
+.field private q:Lcom/estrongs/android/pop/app/compress/bb;
+
+.field private r:Z
+
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;ZLjava/lang/String;Ljava/lang/String;Ljava/util/List;Lcom/estrongs/android/pop/app/compress/j;)V
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -64,21 +68,25 @@
         }
     .end annotation
 
+    const/4 v1, 0x0
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/compress/a;->i:Ljava/lang/String;
 
+    iput-boolean v1, p0, Lcom/estrongs/android/pop/app/compress/a;->r:Z
+
     iput-object p1, p0, Lcom/estrongs/android/pop/app/compress/a;->a:Landroid/content/Context;
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/a;->a:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/theme/al;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
+    invoke-static {v0}, Lcom/estrongs/android/ui/theme/at;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/compress/a;->c:Lcom/estrongs/android/ui/theme/al;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/compress/a;->c:Lcom/estrongs/android/ui/theme/at;
 
     iput-boolean p2, p0, Lcom/estrongs/android/pop/app/compress/a;->l:Z
 
@@ -90,9 +98,7 @@
 
     iput-object p6, p0, Lcom/estrongs/android/pop/app/compress/a;->k:Lcom/estrongs/android/pop/app/compress/j;
 
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/compress/a;->o:Z
+    iput-boolean v1, p0, Lcom/estrongs/android/pop/app/compress/a;->o:Z
 
     invoke-direct {p0}, Lcom/estrongs/android/pop/app/compress/a;->c()V
 
@@ -207,11 +213,11 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/a;->a:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    const v1, 0x7f030009
+    const v1, 0x7f030047
 
     const/4 v2, 0x0
 
@@ -219,47 +225,47 @@
 
     move-result-object v1
 
-    new-instance v0, Lcom/estrongs/android/ui/dialog/ct;
+    new-instance v0, Lcom/estrongs/android/ui/dialog/cv;
 
     iget-object v2, p0, Lcom/estrongs/android/pop/app/compress/a;->a:Landroid/content/Context;
 
-    invoke-direct {v0, v2}, Lcom/estrongs/android/ui/dialog/ct;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v2}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0b0216
+    const v2, 0x7f08026b
 
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/dialog/ct;->a(I)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->a(Landroid/view/View;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/dialog/cv;->a(I)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    const v2, 0x7f0b000b
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->a(Landroid/view/View;)Lcom/estrongs/android/ui/dialog/cv;
+
+    move-result-object v0
+
+    const v2, 0x7f080226
 
     new-instance v3, Lcom/estrongs/android/pop/app/compress/c;
 
     invoke-direct {v3, p0, v1}, Lcom/estrongs/android/pop/app/compress/c;-><init>(Lcom/estrongs/android/pop/app/compress/a;Landroid/view/View;)V
 
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/ui/dialog/ct;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/ui/dialog/cv;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    const v2, 0x7f0b000c
+    const v2, 0x7f080221
 
     new-instance v3, Lcom/estrongs/android/pop/app/compress/b;
 
     invoke-direct {v3, p0}, Lcom/estrongs/android/pop/app/compress/b;-><init>(Lcom/estrongs/android/pop/app/compress/a;)V
 
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/ui/dialog/ct;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/ui/dialog/cv;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ct;->b()Lcom/estrongs/android/ui/dialog/cg;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cv;->b()Lcom/estrongs/android/ui/dialog/ci;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/compress/a;->b:Lcom/estrongs/android/ui/dialog/cg;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/compress/a;->b:Lcom/estrongs/android/ui/dialog/ci;
 
     new-instance v0, Lcom/estrongs/android/pop/app/compress/d;
 
@@ -275,7 +281,7 @@
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/compress/a;->d:Ljava/io/File;
 
-    const v0, 0x7f0a0051
+    const v0, 0x7f0e01b3
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -325,7 +331,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/RadioButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a0052
+    const v0, 0x7f0e01b4
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -337,7 +343,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/RadioButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a0053
+    const v0, 0x7f0e01b5
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -349,7 +355,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/RadioButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a0050
+    const v0, 0x7f0e01b2
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -361,7 +367,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/RadioGroup;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a0041
+    const v0, 0x7f0e01a3
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -395,7 +401,7 @@
 
     if-nez v0, :cond_0
 
-    sget-object v0, Lcom/estrongs/android/util/f;->a:[Ljava/lang/String;
+    sget-object v0, Lcom/estrongs/android/util/e;->a:[Ljava/lang/String;
 
     const/4 v3, 0x0
 
@@ -404,7 +410,7 @@
     iput-object v0, p0, Lcom/estrongs/android/pop/app/compress/a;->i:Ljava/lang/String;
 
     :cond_0
-    const v0, 0x7f0a0056
+    const v0, 0x7f0e01b8
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -420,11 +426,11 @@
 
     iget-object v3, p0, Lcom/estrongs/android/pop/app/compress/a;->i:Ljava/lang/String;
 
-    invoke-static {v3}, Lcom/estrongs/android/util/c;->a(Ljava/lang/String;)I
+    invoke-static {v3}, Lcom/estrongs/android/util/b;->a(Ljava/lang/String;)I
 
     move-result v3
 
-    invoke-static {v1, v3}, Lcom/estrongs/android/util/c;->a(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v1, v3}, Lcom/estrongs/android/util/b;->a(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -511,7 +517,15 @@
     return-object v0
 .end method
 
-.method static synthetic h(Lcom/estrongs/android/pop/app/compress/a;)Ljava/lang/String;
+.method static synthetic h(Lcom/estrongs/android/pop/app/compress/a;)Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/compress/a;->r:Z
+
+    return v0
+.end method
+
+.method static synthetic i(Lcom/estrongs/android/pop/app/compress/a;)Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/a;->m:Ljava/lang/String;
@@ -519,7 +533,7 @@
     return-object v0
 .end method
 
-.method static synthetic i(Lcom/estrongs/android/pop/app/compress/a;)Ljava/lang/String;
+.method static synthetic j(Lcom/estrongs/android/pop/app/compress/a;)Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/a;->i:Ljava/lang/String;
@@ -527,7 +541,7 @@
     return-object v0
 .end method
 
-.method static synthetic j(Lcom/estrongs/android/pop/app/compress/a;)Ljava/util/List;
+.method static synthetic k(Lcom/estrongs/android/pop/app/compress/a;)Ljava/util/List;
     .locals 1
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/a;->n:Ljava/util/List;
@@ -535,7 +549,15 @@
     return-object v0
 .end method
 
-.method static synthetic k(Lcom/estrongs/android/pop/app/compress/a;)Ljava/io/File;
+.method static synthetic l(Lcom/estrongs/android/pop/app/compress/a;)Lcom/estrongs/android/pop/app/compress/bb;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/a;->q:Lcom/estrongs/android/pop/app/compress/bb;
+
+    return-object v0
+.end method
+
+.method static synthetic m(Lcom/estrongs/android/pop/app/compress/a;)Ljava/io/File;
     .locals 1
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/a;->d:Ljava/io/File;
@@ -543,7 +565,7 @@
     return-object v0
 .end method
 
-.method static synthetic l(Lcom/estrongs/android/pop/app/compress/a;)Lcom/estrongs/android/pop/app/compress/j;
+.method static synthetic n(Lcom/estrongs/android/pop/app/compress/a;)Lcom/estrongs/android/pop/app/compress/j;
     .locals 1
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/a;->k:Lcom/estrongs/android/pop/app/compress/j;
@@ -556,9 +578,25 @@
 .method public a()V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/a;->b:Lcom/estrongs/android/ui/dialog/cg;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/a;->b:Lcom/estrongs/android/ui/dialog/ci;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->show()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ci;->show()V
+
+    return-void
+.end method
+
+.method public a(Lcom/estrongs/android/pop/app/compress/bb;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/compress/a;->q:Lcom/estrongs/android/pop/app/compress/bb;
+
+    return-void
+.end method
+
+.method public a(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/estrongs/android/pop/app/compress/a;->r:Z
 
     return-void
 .end method
@@ -570,18 +608,18 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/a;->b:Lcom/estrongs/android/ui/dialog/cg;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/a;->b:Lcom/estrongs/android/ui/dialog/ci;
 
     new-instance v1, Lcom/estrongs/android/pop/app/compress/i;
 
     invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/compress/i;-><init>(Lcom/estrongs/android/pop/app/compress/a;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cg;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ci;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/a;->b:Lcom/estrongs/android/ui/dialog/cg;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/a;->b:Lcom/estrongs/android/ui/dialog/ci;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->dismiss()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ci;->dismiss()V
 
     return-void
 .end method

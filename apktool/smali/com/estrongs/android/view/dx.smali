@@ -3,5 +3,5 @@
 
 
 # virtual methods
-.method public abstract a(Z)V
+.method public abstract a(Lcom/estrongs/fs/h;)V
 .end method

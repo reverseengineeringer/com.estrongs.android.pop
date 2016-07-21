@@ -1,81 +1,35 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
-import java.text.Collator;
+import com.estrongs.android.appinfo.s;
+import java.util.List;
 
-final class an
-  implements Comparable<an>
+class an
+  implements Runnable
 {
-  public static String a = null;
-  public static String b = null;
-  private static Collator h = ;
-  public String c = null;
-  public String d = null;
-  public boolean e = false;
-  ApplicationInfo f;
-  boolean g;
+  an(am paramam, List paramList, s params, int paramInt) {}
   
-  public static an a(PackageManager paramPackageManager, ApplicationInfo paramApplicationInfo)
+  public void run()
   {
-    boolean bool = false;
-    if (paramApplicationInfo == null) {
-      return null;
-    }
-    an localan = new an();
-    String str = packageName;
-    d = str;
-    c = str;
-    f = paramApplicationInfo;
-    if ((flags & 0x1) > 0) {
-      bool = true;
-    }
-    g = bool;
-    try
+    int j = -1;
+    ao localao = d.a.b;
+    List localList = a;
+    int i;
+    if (b == null)
     {
-      c = paramPackageManager.getApplicationLabel(paramPackageManager.getApplicationInfo(packageName, 0)).toString();
-      e = packageName.equals(a);
-      return localan;
-    }
-    catch (PackageManager.NameNotFoundException paramPackageManager)
-    {
-      for (;;) {}
-    }
-  }
-  
-  public int a(an paraman)
-  {
-    if ((paraman == null) || (d.equals(b))) {}
-    do
-    {
-      do
-      {
-        return 1;
-        if (!d.equals(b)) {
-          break;
-        }
-      } while (paraman == null);
-      return -1;
-    } while ((g) && (!g));
-    if ((!g) && (g)) {
-      return -1;
-    }
-    return h.compare(c, c);
-  }
-  
-  public boolean equals(Object paramObject)
-  {
-    if (this == paramObject) {}
-    do
-    {
-      return true;
-      if (!(paramObject instanceof an)) {
-        break;
+      i = -1;
+      if (b != null) {
+        break label53;
       }
-    } while (a((an)paramObject) == 0);
-    return false;
-    return false;
+    }
+    for (;;)
+    {
+      localao.a(localList, i, j, c);
+      return;
+      i = 1;
+      break;
+      label53:
+      j = b.b;
+    }
   }
 }
 

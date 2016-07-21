@@ -1,6 +1,6 @@
 package com.estrongs.io.model;
 
-import com.estrongs.android.util.q;
+import com.estrongs.android.util.s;
 import java.io.File;
 import java.io.FileFilter;
 import java.io.FileInputStream;
@@ -52,7 +52,7 @@ public class ExtFile
       }
       i += 1;
     }
-    Collections.sort(localArrayList, q.c);
+    Collections.sort(localArrayList, s.c);
     return (File[])localArrayList.toArray(new File[0]);
   }
 }

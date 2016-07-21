@@ -1,225 +1,127 @@
 package com.baidu.mobstat;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.net.http.SslError;
-import android.os.Message;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.text.TextUtils;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.webkit.HttpAuthHandler;
-import android.webkit.SslErrorHandler;
-import android.webkit.WebResourceResponse;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import com.baidu.mobstat.util.e;
-import java.io.UnsupportedEncodingException;
-import java.lang.ref.WeakReference;
-import java.net.URLDecoder;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 class q
-  extends WebViewClient
 {
-  private WeakReference<Context> a;
-  private WebViewClient b;
+  static final q a = new q();
   
-  public q(Context paramContext, WebViewClient paramWebViewClient)
+  private void a(boolean paramBoolean, PackageInfo paramPackageInfo, JSONArray paramJSONArray)
   {
-    a = new WeakReference(paramContext);
-    b = paramWebViewClient;
+    if ((paramBoolean) && (packageName.startsWith("com.android."))) {
+      return;
+    }
+    JSONObject localJSONObject = new JSONObject();
+    try
+    {
+      localJSONObject.put("n", packageName);
+      localJSONObject.put("v", String.valueOf(versionName));
+      localJSONObject.put("f", firstInstallTime);
+      localJSONObject.put("l", lastUpdateTime);
+      paramJSONArray.put(localJSONObject);
+      return;
+    }
+    catch (JSONException paramPackageInfo)
+    {
+      paramPackageInfo.printStackTrace();
+    }
   }
   
-  private void a(String paramString)
+  private void b(Context paramContext, boolean paramBoolean)
   {
-    JSONObject localJSONObject = new JSONObject(paramString);
-    paramString = localJSONObject.getString("action");
-    localJSONObject = localJSONObject.getJSONObject("obj");
-    Context localContext = (Context)a.get();
-    if (localContext == null) {}
+    Object localObject1 = paramContext.getPackageManager();
+    if (localObject1 == null) {}
+    Object localObject3;
+    label127:
     do
     {
       return;
-      if ("onPageStart".equals(paramString))
-      {
-        StatService.onPageStart(localContext, localJSONObject.getString("page"));
-        return;
-      }
-      if ("onPageEnd".equals(paramString))
-      {
-        StatService.onPageEnd(localContext, localJSONObject.getString("page"));
-        return;
-      }
-      if ("onEvent".equals(paramString))
-      {
-        StatService.onEvent(localContext, localJSONObject.getString("event_id"), localJSONObject.getString("label"), localJSONObject.getInt("acc"));
-        return;
-      }
-      if ("onEventStart".equals(paramString))
-      {
-        StatService.onEventStart(localContext, localJSONObject.getString("event_id"), localJSONObject.getString("label"));
-        return;
-      }
-      if ("onEventEnd".equals(paramString))
-      {
-        StatService.onEventEnd(localContext, localJSONObject.getString("event_id"), localJSONObject.getString("label"));
-        return;
-      }
-    } while (!"onEventDuration".equals(paramString));
-    StatService.onEventDuration(localContext, localJSONObject.getString("event_id"), localJSONObject.getString("label"), localJSONObject.getLong("duration"));
-  }
-  
-  public void doUpdateVisitedHistory(WebView paramWebView, String paramString, boolean paramBoolean)
-  {
-    if (b != null) {
-      b.doUpdateVisitedHistory(paramWebView, paramString, paramBoolean);
-    }
-  }
-  
-  public void onFormResubmission(WebView paramWebView, Message paramMessage1, Message paramMessage2)
-  {
-    if (b != null) {
-      b.onFormResubmission(paramWebView, paramMessage1, paramMessage2);
-    }
-  }
-  
-  public void onLoadResource(WebView paramWebView, String paramString)
-  {
-    if (b != null) {
-      b.onLoadResource(paramWebView, paramString);
-    }
-  }
-  
-  public void onPageFinished(WebView paramWebView, String paramString)
-  {
-    if (b != null) {
-      b.onPageFinished(paramWebView, paramString);
-    }
-  }
-  
-  public void onPageStarted(WebView paramWebView, String paramString, Bitmap paramBitmap)
-  {
-    if (b != null) {
-      b.onPageStarted(paramWebView, paramString, paramBitmap);
-    }
-  }
-  
-  public void onReceivedError(WebView paramWebView, int paramInt, String paramString1, String paramString2)
-  {
-    if (b != null) {
-      b.onReceivedError(paramWebView, paramInt, paramString1, paramString2);
-    }
-  }
-  
-  public void onReceivedHttpAuthRequest(WebView paramWebView, HttpAuthHandler paramHttpAuthHandler, String paramString1, String paramString2)
-  {
-    if (b != null) {
-      b.onReceivedHttpAuthRequest(paramWebView, paramHttpAuthHandler, paramString1, paramString2);
-    }
-  }
-  
-  public void onReceivedLoginRequest(WebView paramWebView, String paramString1, String paramString2, String paramString3)
-  {
-    if (b != null) {
-      b.onReceivedLoginRequest(paramWebView, paramString1, paramString2, paramString3);
-    }
-  }
-  
-  public void onReceivedSslError(WebView paramWebView, SslErrorHandler paramSslErrorHandler, SslError paramSslError)
-  {
-    if (b != null) {
-      b.onReceivedSslError(paramWebView, paramSslErrorHandler, paramSslError);
-    }
-  }
-  
-  public void onScaleChanged(WebView paramWebView, float paramFloat1, float paramFloat2)
-  {
-    if (b != null) {
-      b.onScaleChanged(paramWebView, paramFloat1, paramFloat2);
-    }
-  }
-  
-  @Deprecated
-  public void onTooManyRedirects(WebView paramWebView, Message paramMessage1, Message paramMessage2)
-  {
-    if (b != null) {
-      b.onTooManyRedirects(paramWebView, paramMessage1, paramMessage2);
-    }
-  }
-  
-  public void onUnhandledKeyEvent(WebView paramWebView, KeyEvent paramKeyEvent)
-  {
-    if (b != null) {
-      b.onUnhandledKeyEvent(paramWebView, paramKeyEvent);
-    }
-  }
-  
-  public WebResourceResponse shouldInterceptRequest(WebView paramWebView, String paramString)
-  {
-    if (b != null) {
-      return b.shouldInterceptRequest(paramWebView, paramString);
-    }
-    return null;
-  }
-  
-  public boolean shouldOverrideKeyEvent(WebView paramWebView, KeyEvent paramKeyEvent)
-  {
-    if (b != null) {
-      return b.shouldOverrideKeyEvent(paramWebView, paramKeyEvent);
-    }
-    return false;
-  }
-  
-  public boolean shouldOverrideUrlLoading(WebView paramWebView, String paramString)
-  {
-    Log.d("BaiduStatJSInterface", "shouldOverrideUrlLoading");
-    try
-    {
-      String str1 = URLDecoder.decode(paramString, "UTF-8");
-      paramString = str1;
-      str1 = paramString;
-      String str2;
-      label56:
-      String str3;
-      return false;
-    }
-    catch (UnsupportedEncodingException localUnsupportedEncodingException1)
-    {
+      paramContext = new ArrayList(1);
       try
       {
-        if (TextUtils.isEmpty(paramString)) {
-          break label56;
-        }
-        str1 = paramString;
-        if (!paramString.startsWith("bmtj:")) {
-          break label56;
-        }
-        a(paramString.substring(5));
-        return true;
+        localObject1 = ((PackageManager)localObject1).getInstalledPackages(0);
+        paramContext = (Context)localObject1;
       }
-      catch (JSONException localJSONException2)
+      catch (Exception localException1)
       {
-        for (;;) {}
+        for (;;)
+        {
+          bb.b(localException1);
+          continue;
+          boolean bool = false;
+        }
       }
-      catch (UnsupportedEncodingException localUnsupportedEncodingException2)
-      {
-        for (;;) {}
-      }
-      localUnsupportedEncodingException1 = localUnsupportedEncodingException1;
-      e.b(localUnsupportedEncodingException1);
-      str2 = paramString;
-      if (b != null) {
-        return b.shouldOverrideUrlLoading(paramWebView, str2);
-      }
-    }
-    catch (JSONException localJSONException1)
-    {
+      localObject1 = new JSONArray();
+      paramContext = paramContext.iterator();
       for (;;)
       {
-        e.b(localJSONException1);
-        str3 = paramString;
+        if (!paramContext.hasNext()) {
+          break label127;
+        }
+        localObject2 = (PackageInfo)paramContext.next();
+        localObject3 = applicationInfo;
+        if (localObject3 != null)
+        {
+          if ((flags & 0x1) == 0) {
+            break;
+          }
+          bool = true;
+          if (paramBoolean == bool) {
+            a(paramBoolean, (PackageInfo)localObject2, (JSONArray)localObject1);
+          }
+        }
       }
+    } while (localException1.length() == 0);
+    Object localObject2 = new StringBuilder();
+    ((StringBuilder)localObject2).append(System.currentTimeMillis() + "|");
+    if (paramBoolean) {}
+    for (int i = 1;; i = 0)
+    {
+      ((StringBuilder)localObject2).append(i);
+      paramContext = "";
+      try
+      {
+        localObject3 = new JSONObject();
+        ((JSONObject)localObject3).put("app_list", localException1);
+        ((JSONObject)localObject3).put("meta-data", ((StringBuilder)localObject2).toString());
+        String str = cj.a(((JSONObject)localObject3).toString().getBytes());
+        paramContext = str;
+      }
+      catch (Exception localException2)
+      {
+        long l;
+        for (;;) {}
+      }
+      if (TextUtils.isEmpty(paramContext)) {
+        break;
+      }
+      l = System.currentTimeMillis();
+      x.b.a(l, paramContext);
+      return;
+    }
+  }
+  
+  public void a(Context paramContext, boolean paramBoolean)
+  {
+    try
+    {
+      b(paramContext, paramBoolean);
+      return;
+    }
+    finally
+    {
+      paramContext = finally;
+      throw paramContext;
     }
   }
 }

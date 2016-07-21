@@ -1,79 +1,91 @@
-.class final Lcom/estrongs/android/util/r;
+.class public Lcom/estrongs/android/util/r;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/util/Comparator;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
-        "<",
-        "Ljava/io/File;",
-        ">;"
-    }
-.end annotation
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public a(Ljava/io/File;Ljava/io/File;)I
+.method public static final a(ZLjava/lang/String;Ljava/lang/String;)Z
     .locals 4
 
-    const/4 v3, 0x1
+    const/4 v0, 0x0
 
-    invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Ljava/io/File;->isDirectory()Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->aG(Ljava/lang/String;)Z
 
     move-result v1
 
-    invoke-static {v0, v1, v3}, Lcom/estrongs/android/util/q;->a(Ljava/lang/String;ZZ)Ljava/lang/String;
+    if-eqz v1, :cond_1
 
-    move-result-object v0
+    const-string v1, "mediafire"
 
-    invoke-virtual {p2}, Ljava/io/File;->getName()Ljava/lang/String;
+    invoke-static {p1, v1}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    if-ge v1, v2, :cond_1
+
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
 
     move-result-object v1
 
-    invoke-virtual {p2}, Ljava/io/File;->isDirectory()Z
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
 
-    move-result v2
+    move-result-object v2
 
-    invoke-static {v1, v2, v3}, Lcom/estrongs/android/util/q;->a(Ljava/lang/String;ZZ)Ljava/lang/String;
+    const v3, 0x7f0803cf
+
+    invoke-virtual {v2, v3}, Lcom/estrongs/android/pop/FexApplication;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2, v0}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+
+    :goto_0
+    return v0
+
+    :cond_0
+    invoke-static {p1}, Lcom/estrongs/fs/util/j;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
+    invoke-static {p2}, Lcom/estrongs/fs/util/j;->b(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result v0
+    move-result-object v2
 
-    return v0
-.end method
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 1
+    move-result v1
 
-    check-cast p1, Ljava/io/File;
+    if-nez v1, :cond_1
 
-    check-cast p2, Ljava/io/File;
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
 
-    invoke-virtual {p0, p1, p2}, Lcom/estrongs/android/util/r;->a(Ljava/io/File;Ljava/io/File;)I
+    move-result-object v1
 
-    move-result v0
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
 
-    return v0
+    move-result-object v2
+
+    const v3, 0x7f0803ce
+
+    invoke-virtual {v2, v3}, Lcom/estrongs/android/pop/FexApplication;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2, v0}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x1
+
+    goto :goto_0
 .end method

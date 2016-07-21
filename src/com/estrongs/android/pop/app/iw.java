@@ -1,37 +1,20 @@
 package com.estrongs.android.pop.app;
 
-import android.content.Intent;
-import android.net.Uri;
-import com.estrongs.android.pop.utils.cv;
-import com.estrongs.android.pop.utils.cy;
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.dialog.kv;
+import android.preference.Preference;
+import android.preference.Preference.OnPreferenceClickListener;
+import com.estrongs.android.pop.view.utils.n;
+import com.estrongs.android.ui.view.ak;
 
 class iw
-  implements kv
+  implements Preference.OnPreferenceClickListener
 {
-  iw(iv paramiv) {}
+  iw(PopPreferenceActivity paramPopPreferenceActivity) {}
   
-  public void a(String paramString1, String paramString2)
+  public boolean onPreferenceClick(Preference paramPreference)
   {
-    try
-    {
-      paramString1 = cv.a(a.a, paramString1, paramString2);
-      if (paramString1 == null) {
-        return;
-      }
-      if (cv.a(b))
-      {
-        a.a.finish();
-        return;
-      }
-      paramString2 = new Intent(a.a, FileExplorerActivity.class);
-      paramString2.setFlags(603979776);
-      paramString2.setData(Uri.parse(a));
-      a.a.startActivity(paramString2);
-      return;
-    }
-    catch (Exception paramString1) {}
+    n.a(a);
+    ak.a(a, 2131231196, 0);
+    return true;
   }
 }
 

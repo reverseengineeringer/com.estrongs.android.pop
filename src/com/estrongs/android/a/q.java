@@ -1,66 +1,261 @@
 package com.estrongs.android.a;
 
-import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.CheckBox;
-import android.widget.TextView;
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.esclasses.g;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.fs.h;
-import com.estrongs.fs.util.j;
-import java.text.DateFormat;
+import android.database.DatabaseUtils;
+import android.provider.MediaStore.Audio.Media;
+import android.provider.MediaStore.Images.Media;
+import android.provider.MediaStore.Video.Media;
+import android.text.TextUtils;
+import com.estrongs.android.a.a.g;
+import com.estrongs.android.a.a.n;
+import com.estrongs.android.a.b.a;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bg;
+import com.estrongs.android.util.l;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 public class q
-  extends cg
 {
-  h a;
-  t b;
-  int c = 0;
-  CheckBox d;
+  private static final String a = q.class.getSimpleName();
+  private j b;
+  private ExecutorService c;
+  private final com.estrongs.android.a.a.q[] d = new com.estrongs.android.a.a.q[5];
+  private final g[] e = new g[4];
   
-  public q(Context paramContext, h paramh, t paramt)
+  public q(j paramj)
   {
-    super(paramContext);
-    a = paramh;
-    b = paramt;
-    paramt = g.a(paramContext).inflate(2130903237, null);
-    setContentView(paramt);
-    a(paramt.findViewById(2131362230), paramContext.getString(2131428277) + paramContext.getString(2131428707));
-    a(paramt.findViewById(2131362236), paramContext.getString(2131428278) + paramContext.getString(2131428707));
-    d = ((CheckBox)paramt.findViewById(2131362229));
-    setCancelButton(paramContext.getText(2131427358), new r(this));
-    setConfirmButton(paramContext.getText(2131428010), new s(this));
-    setTitle(paramContext.getString(2131428402));
-    a(paramt.findViewById(2131361822), paramContext.getString(2131428409));
-    a(paramt, paramh);
-    setCancelable(false);
-    setCanceledOnTouchOutside(false);
+    b = paramj;
   }
   
-  public static void a(View paramView, String paramString)
+  public static String b()
   {
-    if (paramView == null) {}
-    while (!(paramView instanceof TextView)) {
+    Object localObject = bg.c();
+    if (localObject == null) {
+      return null;
+    }
+    localObject = ((String)localObject).split(";");
+    StringBuffer localStringBuffer = new StringBuffer();
+    int i = 0;
+    while (i < localObject.length)
+    {
+      if (i > 0) {
+        localStringBuffer.append(" or ");
+      }
+      localStringBuffer.append("_data").append(" like ").append(DatabaseUtils.sqlEscapeString("%" + localObject[i]));
+      i += 1;
+    }
+    return localStringBuffer.toString();
+  }
+  
+  private String d()
+  {
+    long l = System.currentTimeMillis() / 1000L;
+    StringBuilder localStringBuilder = new StringBuilder();
+    localStringBuilder.append("date_modified").append(">").append(l - 604800L);
+    return localStringBuilder.toString();
+  }
+  
+  private String e()
+  {
+    long l = System.currentTimeMillis() / 1000L;
+    StringBuilder localStringBuilder = new StringBuilder();
+    localStringBuilder.append("date_modified").append("<").append(l - 7776000L);
+    return localStringBuilder.toString();
+  }
+  
+  private String f()
+  {
+    StringBuilder localStringBuilder = new StringBuilder();
+    localStringBuilder.append("_data").append(" like ").append("'%").append(".log'").append(" or ");
+    localStringBuilder.append("_data").append(" like ").append("'%").append(".temp'").append(" or ");
+    localStringBuilder.append("_data").append(" like ").append("'%").append(".tmp'");
+    return localStringBuilder.toString();
+  }
+  
+  public static long g(String paramString)
+  {
+    if (TextUtils.isEmpty(paramString)) {
+      return 0L;
+    }
+    if (ap.bp(paramString))
+    {
+      paramString = com.estrongs.android.cleaner.j.d().iterator();
+      long[] arrayOfLong;
+      long l3;
+      for (long l1 = 0L;; l1 = arrayOfLong[2] * (l2 - l3) + l1)
+      {
+        l2 = l1;
+        if (!paramString.hasNext()) {
+          break;
+        }
+        arrayOfLong = com.estrongs.fs.util.j.k((String)paramString.next());
+        l2 = arrayOfLong[0];
+        l3 = arrayOfLong[1];
+      }
+    }
+    if (paramString.startsWith("/")) {
+      paramString = com.estrongs.fs.util.j.k(paramString);
+    }
+    for (long l2 = (paramString[0] - paramString[1]) * paramString[2];; l2 = 0L) {
+      return l2;
+    }
+  }
+  
+  private String g()
+  {
+    StringBuilder localStringBuilder = new StringBuilder();
+    localStringBuilder.append("_size").append(">").append(10485760L);
+    return localStringBuilder.toString();
+  }
+  
+  private String h()
+  {
+    return "_data like " + DatabaseUtils.sqlEscapeString("%.apk");
+  }
+  
+  private void h(String paramString)
+  {
+    d[0] = new com.estrongs.android.a.a.q(h());
+    d[1] = new com.estrongs.android.a.a.q(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI);
+    d[3] = new com.estrongs.android.a.a.q(MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+    d[2] = new com.estrongs.android.a.a.q(MediaStore.Video.Media.EXTERNAL_CONTENT_URI);
+    d[4] = new com.estrongs.android.a.a.q(b());
+    e[1] = new g(e());
+    e[2] = new g(d());
+    e[3] = new g(f());
+    e[0] = new g(g());
+  }
+  
+  public void a()
+  {
+    try
+    {
+      if (c != null)
+      {
+        c.shutdownNow();
+        c = null;
+      }
       return;
     }
-    ((TextView)paramView).setText(paramString);
+    finally
+    {
+      localObject = finally;
+      throw ((Throwable)localObject);
+    }
   }
   
-  public void a(View paramView, h paramh)
+  public void a(String paramString)
   {
-    DateFormat localDateFormat = ad.a(mContext).E();
-    String str = paramh.getPath();
-    a(paramView.findViewById(2131362231), str);
-    a(paramView.findViewById(2131362233), j.c(paramh.length()));
-    a(paramView.findViewById(2131362235), localDateFormat.format(Long.valueOf(paramh.lastModified())));
+    int k = 0;
+    l.c(a, "analyze files in the library...");
+    h(paramString);
+    int i = d.length + e.length;
+    ArrayList localArrayList = new ArrayList(i);
+    Object localObject = new u(this, null);
+    ArrayBlockingQueue localArrayBlockingQueue = new ArrayBlockingQueue(i);
+    c = new ThreadPoolExecutor(5, 5, 0L, TimeUnit.SECONDS, localArrayBlockingQueue, (ThreadFactory)localObject);
+    i = 0;
+    int j;
+    for (;;)
+    {
+      j = k;
+      if (i >= d.length) {
+        break;
+      }
+      if (d[i] != null)
+      {
+        localObject = new s(this, paramString, d[i]);
+        localArrayList.add(c.submit((Callable)localObject));
+      }
+      i += 1;
+    }
+    while (j < e.length)
+    {
+      if (e[j] != null)
+      {
+        localObject = new s(this, paramString, e[j]);
+        localArrayList.add(c.submit((Callable)localObject));
+      }
+      j += 1;
+    }
+    c.execute(new r(this, localArrayList, paramString));
   }
   
-  public void dismiss()
+  public final void a(List<com.estrongs.android.a.b.q> paramList) {}
+  
+  public a b(String paramString)
   {
-    b.a(c, d.isChecked());
-    super.dismiss();
+    int i = 0;
+    long l2 = 0L;
+    if (TextUtils.isEmpty(paramString)) {
+      return new a(0L);
+    }
+    if (ap.V(paramString)) {
+      paramString = d[1];
+    }
+    for (;;)
+    {
+      return new a(0, paramString.c(), paramString.d());
+      if (ap.X(paramString))
+      {
+        paramString = d[3];
+      }
+      else if (ap.Z(paramString))
+      {
+        paramString = d[2];
+      }
+      else if (ap.ae(paramString))
+      {
+        paramString = d[4];
+      }
+      else
+      {
+        if (!ap.ag(paramString)) {
+          break;
+        }
+        paramString = d[0];
+      }
+    }
+    com.estrongs.android.a.a.q[] arrayOfq = d;
+    int j = arrayOfq.length;
+    long l1 = 0L;
+    while (i < j)
+    {
+      l1 += arrayOfq[i].d();
+      i += 1;
+    }
+    long l3 = g(paramString);
+    if (l3 == 0L) {}
+    for (l1 = l2;; l1 = l3 - l1) {
+      return new a(l1);
+    }
+  }
+  
+  public final a c(String paramString)
+  {
+    return e[0].a();
+  }
+  
+  public final a d(String paramString)
+  {
+    return e[2].a();
+  }
+  
+  public final a e(String paramString)
+  {
+    return e[1].a();
+  }
+  
+  public final a f(String paramString)
+  {
+    return e[3].a();
   }
 }
 

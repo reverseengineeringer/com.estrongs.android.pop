@@ -1,13 +1,17 @@
 package com.estrongs.android.pop.app;
 
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.ui.view.ac;
+
 class fd
-  implements Runnable
+  implements View.OnClickListener
 {
-  fd(fc paramfc) {}
+  fd(fa paramfa) {}
   
-  public void run()
+  public void onClick(View paramView)
   {
-    a.b.g();
+    PopAudioPlayer.h(a.a).d();
   }
 }
 

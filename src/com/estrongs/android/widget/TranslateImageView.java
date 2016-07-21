@@ -26,22 +26,22 @@ public class TranslateImageView
   private int e;
   private int f = 250;
   private long g;
-  private bu h;
-  private bt i;
+  private bv h;
+  private bu i;
   private Rect j = new Rect();
   private boolean k = false;
   private Runnable l;
   private Drawable m;
   private Drawable n;
   private Paint o;
-  private ColorMatrixColorFilter r;
-  private ColorMatrix s;
-  private int t;
+  private ColorMatrixColorFilter s;
+  private ColorMatrix t;
   private int u;
   private int v;
   private int w;
   private int x;
-  private VelocityTracker y;
+  private int y;
+  private VelocityTracker z;
   
   public TranslateImageView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -62,15 +62,15 @@ public class TranslateImageView
     e = 0;
     k = false;
     ViewConfiguration localViewConfiguration = ViewConfiguration.get(getContext());
-    w = localViewConfiguration.getScaledTouchSlop();
-    x = localViewConfiguration.getScaledMinimumFlingVelocity();
-    l = new bs(this);
-    m = getContext().getResources().getDrawable(2130837809);
-    n = getContext().getResources().getDrawable(2130837808);
+    x = localViewConfiguration.getScaledTouchSlop();
+    y = localViewConfiguration.getScaledMinimumFlingVelocity();
+    l = new bt(this);
+    m = getContext().getResources().getDrawable(2130838145);
+    n = getContext().getResources().getDrawable(2130838144);
     o = new Paint();
-    s = new ColorMatrix();
-    r = new ColorMatrixColorFilter(s);
-    o.setColorFilter(r);
+    t = new ColorMatrix();
+    s = new ColorMatrixColorFilter(t);
+    o.setColorFilter(s);
   }
   
   private void b()
@@ -90,7 +90,7 @@ public class TranslateImageView
     d = (i1 * (i3 - i4) / f + c);
   }
   
-  private Rect c()
+  private Rect getImageRect()
   {
     if (d > 0) {
       j.set(d, 0, getRight(), getBottom());
@@ -140,14 +140,14 @@ public class TranslateImageView
         }
         i1 = d;
         int i3 = Math.abs(d * 80 / i2);
-        float[] arrayOfFloat = s.getArray();
+        float[] arrayOfFloat = t.getArray();
         float f1 = 0 - i3;
         arrayOfFloat[14] = f1;
         arrayOfFloat[9] = f1;
         arrayOfFloat[4] = f1;
-        s.set(arrayOfFloat);
-        r = new ColorMatrixColorFilter(s);
-        o.setColorFilter(r);
+        t.set(arrayOfFloat);
+        s = new ColorMatrixColorFilter(t);
+        o.setColorFilter(s);
         paramCanvas.translate(d - i1, 0.0F);
         if (d <= 0) {
           continue;
@@ -192,6 +192,11 @@ public class TranslateImageView
     }
   }
   
+  public bu getOnHideListener()
+  {
+    return i;
+  }
+  
   public boolean onTouchEvent(MotionEvent paramMotionEvent)
   {
     boolean bool = false;
@@ -216,24 +221,24 @@ public class TranslateImageView
             do
             {
               return bool;
-            } while (!c().contains(i1, i2));
-            u = i1;
-            v = i2;
-            y = VelocityTracker.obtain();
-            y.addMovement(paramMotionEvent);
+            } while (!getImageRect().contains(i1, i2));
+            v = i1;
+            w = i2;
+            z = VelocityTracker.obtain();
+            z.addMovement(paramMotionEvent);
           }
-          if (t != -1) {
+          if (u != -1) {
             break;
           }
-          i3 = u;
-          i4 = u;
-          i5 = v;
-          if ((int)Math.sqrt((i2 - v) * (i2 - i5) + (i1 - i3) * (i1 - i4)) > w) {
-            t = 0;
+          i3 = v;
+          i4 = v;
+          i5 = w;
+          if ((int)Math.sqrt((i2 - w) * (i2 - i5) + (i1 - i3) * (i1 - i4)) > x) {
+            u = 0;
           }
-        } while (t != 0);
-        i2 = u;
-      } while (t != 0);
+        } while (u != 0);
+        i2 = v;
+      } while (u != 0);
       d = (i1 - i2 + e);
       if (e > 0) {
         if (d < 0) {
@@ -244,7 +249,7 @@ public class TranslateImageView
       {
         invalidate();
         break;
-        y.addMovement(paramMotionEvent);
+        z.addMovement(paramMotionEvent);
         break label162;
         if (d > e)
         {
@@ -260,19 +265,19 @@ public class TranslateImageView
         }
       }
     }
-    if (t == -1)
+    if (u == -1)
     {
-      i3 = u;
-      i4 = u;
-      i5 = v;
-      if ((int)Math.sqrt((i1 - i4) * (i1 - i3) + (i2 - v) * (i2 - i5)) > w) {
-        t = 0;
+      i3 = v;
+      i4 = v;
+      i5 = w;
+      if ((int)Math.sqrt((i1 - i4) * (i1 - i3) + (i2 - w) * (i2 - i5)) > x) {
+        u = 0;
       }
     }
-    if (t == 0)
+    if (u == 0)
     {
-      y.computeCurrentVelocity(100);
-      i1 = (int)y.getXVelocity();
+      z.computeCurrentVelocity(100);
+      i1 = (int)z.getXVelocity();
       if (e > 0) {
         if (d >= e)
         {
@@ -281,15 +286,15 @@ public class TranslateImageView
           c = d;
           a(e, i1);
           label444:
-          t = -1;
+          u = -1;
         }
       }
     }
     for (;;)
     {
-      y.recycle();
+      z.recycle();
       break;
-      if ((i1 > 0) && (i1 > x))
+      if ((i1 > 0) && (i1 > y))
       {
         h = null;
         i1 = (e - d) * 250 / e;
@@ -307,7 +312,7 @@ public class TranslateImageView
       }
       if (d >= e)
       {
-        if ((i1 < 0) && (i1 < 0 - x))
+        if ((i1 < 0) && (i1 < 0 - y))
         {
           h = null;
           i1 = (e - d) * 250 / e;
@@ -326,10 +331,36 @@ public class TranslateImageView
       c = d;
       a(e, i1);
       break label444;
-      if (t == -1) {
+      if (u == -1) {
         a(0, 300);
       }
     }
+  }
+  
+  public void setOnHideListener(bu parambu)
+  {
+    i = parambu;
+  }
+  
+  public void setOnTranslateListener(bv parambv)
+  {
+    h = parambv;
+  }
+  
+  public void setTranslateBitmap(Bitmap paramBitmap)
+  {
+    b = paramBitmap;
+    postInvalidate();
+  }
+  
+  public void setmDestPosition(int paramInt)
+  {
+    e = paramInt;
+  }
+  
+  public void setmDuration(int paramInt)
+  {
+    f = paramInt;
   }
 }
 

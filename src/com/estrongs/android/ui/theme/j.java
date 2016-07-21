@@ -11,10 +11,9 @@ class j
   
   public void onClick(View paramView)
   {
-    paramView = new Intent(a, ThemeColorActivity.class);
-    paramView.putExtra("set_what_color", 2);
+    paramView = new Intent(a, ThemeFolderActivity.class);
     paramView.putExtra("theme_data_index", ModifyThemeActivity.b(a));
-    a.startActivityForResult(paramView, 268439586);
+    a.startActivityForResult(paramView, 4131);
   }
 }
 

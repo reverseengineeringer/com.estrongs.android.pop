@@ -1,39 +1,10 @@
 package com.estrongs.android.pop.app;
 
-import android.content.Intent;
-import android.net.Uri;
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceClickListener;
-import com.estrongs.android.pop.z;
+import com.estrongs.android.pop.app.c.j;
 
-class gm
-  implements Preference.OnPreferenceClickListener
+public abstract interface gm
 {
-  gm(PopPreferenceActivity paramPopPreferenceActivity) {}
-  
-  public boolean onPreferenceClick(Preference paramPreference)
-  {
-    if (!z.m) {}
-    try
-    {
-      String str = a.getString(2131428711);
-      paramPreference = str;
-      if (!str.startsWith("http://"))
-      {
-        paramPreference = str;
-        if (!str.startsWith("https://")) {
-          paramPreference = "http://" + str;
-        }
-      }
-      paramPreference = Uri.parse(paramPreference);
-      a.startActivity(new Intent("android.intent.action.VIEW", paramPreference));
-    }
-    catch (Exception paramPreference)
-    {
-      for (;;) {}
-    }
-    return true;
-  }
+  public abstract void a(j paramj);
 }
 
 /* Location:

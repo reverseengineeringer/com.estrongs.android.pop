@@ -1,71 +1,137 @@
 package com.estrongs.android.view;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
-import com.estrongs.android.d.f;
-import com.estrongs.android.d.k;
-import com.estrongs.android.ui.theme.al;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.LinearLayout.LayoutParams;
+import com.estrongs.android.ui.d.g;
+import com.estrongs.android.ui.theme.at;
 import com.estrongs.fs.h;
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
-class af
-  extends BaseAdapter
+public class af
+  extends gf
 {
-  af(ac paramac) {}
+  private LinearLayout a;
+  private Button b;
+  private Button c;
+  List<h> d = new LinkedList();
+  y e;
+  protected LinearLayout f = null;
+  LinearLayout.LayoutParams g = new LinearLayout.LayoutParams(0, -2);
+  protected BaseAdapter h;
+  private boolean i = true;
+  private at j;
   
-  public h a(int paramInt)
+  public af(y paramy, List<h> paramList, boolean paramBoolean)
   {
-    return (h)a.d.get(paramInt);
+    super(paramy.a());
+    d.addAll(paramList);
+    e = paramy;
+    i = paramBoolean;
+    g();
   }
   
-  public int getCount()
+  private void g()
   {
-    return a.d.size();
-  }
-  
-  public long getItemId(int paramInt)
-  {
-    return paramInt;
-  }
-  
-  public View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
-  {
-    paramViewGroup = paramView;
-    if (paramView == null) {
-      paramViewGroup = a.ag.inflate(2130903137, null);
+    j = at.a(ag);
+    a = ((LinearLayout)b(2131625064));
+    g.weight = 1.0F;
+    if (h == null) {
+      h = b();
     }
-    paramViewGroup.setBackgroundResource(2130837560);
-    ImageView localImageView = (ImageView)paramViewGroup.findViewById(2131362077);
-    h localh = (h)a.d.get(paramInt);
-    paramView = f.d(localh);
-    if (f.c(localh)) {
-      if (f.a(localh)) {
-        paramView = f.e(localh);
-      }
+    h.notifyDataSetChanged();
+    b = ((Button)b(2131625066));
+    c = ((Button)b(2131625065));
+    b.setOnClickListener(new ag(this));
+    c.setOnClickListener(new ah(this));
+  }
+  
+  protected int a()
+  {
+    return 2130903289;
+  }
+  
+  public void a(y paramy)
+  {
+    e = paramy;
+  }
+  
+  protected void a(List<h> paramList)
+  {
+    e.a(paramList, Boolean.valueOf(i));
+  }
+  
+  protected BaseAdapter b()
+  {
+    return new ai(this);
+  }
+  
+  public void c()
+  {
+    a(d);
+    if (!i) {
+      e.b(this);
     }
-    for (;;)
+  }
+  
+  public List<h> d()
+  {
+    return d;
+  }
+  
+  protected void e()
+  {
+    a.removeAllViews();
+    int m = g.a(aF(), 15.0F);
+    int k = 0;
+    while (k < h.getCount())
     {
-      localImageView.setImageDrawable(paramView);
-      paramView = (TextView)paramViewGroup.findViewById(2131361822);
-      paramView.setTextColor(al.a(a.ad).d(2131230726));
-      paramView.setText(((h)a.d.get(paramInt)).getName());
-      paramViewGroup.setOnClickListener(new ag(this, paramInt));
-      return paramViewGroup;
-      if (a.f == null) {
-        ac.a(a);
+      if (k % 4 == 0)
+      {
+        f = new LinearLayout(ag);
+        f.setPadding(0, m, 0, 0);
+        f.setOrientation(0);
+        a.addView(f);
       }
-      a.f.a(paramInt, localh, localImageView);
+      f.addView(h.getView(k, null, null), g);
+      k += 1;
     }
   }
   
-  public void notifyDataSetChanged()
+  public boolean equals(Object paramObject)
   {
-    super.notifyDataSetChanged();
-    a.e();
+    if (!(paramObject instanceof af)) {}
+    do
+    {
+      return false;
+      paramObject = (af)paramObject;
+    } while ((d.size() != d.size()) || (!d.containsAll(d)));
+    return true;
+  }
+  
+  public boolean f()
+  {
+    return i;
+  }
+  
+  public int hashCode()
+  {
+    Iterator localIterator = d.iterator();
+    int k = 0;
+    if (localIterator.hasNext())
+    {
+      Object localObject = localIterator.next();
+      if (localObject == null) {}
+      for (int m = 0;; m = localObject.hashCode())
+      {
+        k += m;
+        break;
+      }
+    }
+    return k;
   }
 }
 

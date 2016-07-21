@@ -1,25 +1,14 @@
 package com.estrongs.android.pop.utils;
 
-import android.app.Activity;
-import com.estrongs.a.a;
-import com.estrongs.android.ui.dialog.ix;
+import com.estrongs.fs.h;
+import com.estrongs.fs.i;
 
 final class av
-  extends ix
+  implements i
 {
-  av(Activity paramActivity, String paramString, a parama, boolean paramBoolean)
+  public boolean a(h paramh)
   {
-    super(paramActivity, paramString, parama, paramBoolean);
-  }
-  
-  protected String a()
-  {
-    return null;
-  }
-  
-  protected String b()
-  {
-    return null;
+    return true;
   }
 }
 

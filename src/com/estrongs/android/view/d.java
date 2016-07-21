@@ -1,23 +1,17 @@
 package com.estrongs.android.view;
 
-import android.os.AsyncTask;
-import com.handmark.pulltorefresh.library.PullToRefreshGridView;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.pop.app.analysis.a;
 
 class d
-  extends AsyncTask<Void, Void, String[]>
+  implements View.OnClickListener
 {
-  private d(a parama) {}
+  d(b paramb) {}
   
-  protected void a(String[] paramArrayOfString)
+  public void onClick(View paramView)
   {
-    a.b(a).n();
-    a.g("app://update");
-    super.onPostExecute(paramArrayOfString);
-  }
-  
-  protected String[] a(Void... paramVarArgs)
-  {
-    return new String[0];
+    a.a().a(a.C, null);
   }
 }
 

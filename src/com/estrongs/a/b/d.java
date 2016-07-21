@@ -8,7 +8,7 @@ import android.content.res.Resources;
 import com.estrongs.android.pop.b;
 import com.estrongs.android.pop.esclasses.ESActivity;
 import com.estrongs.android.pop.zeroconf.w;
-import com.estrongs.fs.b.bl;
+import com.estrongs.fs.b.bn;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -142,20 +142,20 @@ public class d
     }
   }
   
-  private void a(Activity paramActivity, int paramInt, String paramString, bl parambl)
+  private void a(Activity paramActivity, int paramInt, String paramString, bn parambn)
   {
-    parambl = new m(this, paramActivity, n, new k(this), parambl);
-    parambl.a(paramString);
-    parambl.c(paramActivity.getString(2131427340), null);
-    parambl.b(paramActivity.getString(2131427339), parambl);
-    parambl.a(parambl);
-    parambl.j();
+    parambn = new m(this, paramActivity, n, new k(this), parambn);
+    parambn.a(paramString);
+    parambn.c(paramActivity.getString(2131231265), null);
+    parambn.b(paramActivity.getString(2131231270), parambn);
+    parambn.a(parambn);
+    parambn.j();
   }
   
   private void a(Object paramObject)
   {
-    paramObject = (bl)paramObject;
-    if (ESActivity.A() == null) {
+    paramObject = (bn)paramObject;
+    if (ESActivity.H() == null) {
       try
       {
         a(j.getOutputStream(), 404, "Not found");
@@ -163,10 +163,10 @@ public class d
         {
           j.close();
           throw ((Throwable)localObject);
-          paramObject = new l(this, ESActivity.A(), (bl)paramObject);
-          ((l)paramObject).setTitle(2131427400);
-          ((l)paramObject).setConfirmButton(i.getResources().getString(2131427339), (DialogInterface.OnClickListener)paramObject);
-          ((l)paramObject).setCancelButton(i.getResources().getString(2131427340), (DialogInterface.OnClickListener)paramObject);
+          paramObject = new l(this, ESActivity.H(), (bn)paramObject);
+          ((l)paramObject).setTitle(2131231715);
+          ((l)paramObject).setConfirmButton(i.getResources().getString(2131231270), (DialogInterface.OnClickListener)paramObject);
+          ((l)paramObject).setCancelButton(i.getResources().getString(2131231265), (DialogInterface.OnClickListener)paramObject);
           ((l)paramObject).show();
           return;
         }

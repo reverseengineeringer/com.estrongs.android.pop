@@ -1,30 +1,8 @@
 package com.estrongs.android.util;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import java.io.PrintStream;
-
-class d
-  implements DialogInterface.OnClickListener
+public abstract interface d
 {
-  d(c paramc) {}
-  
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
-  {
-    c localc = a;
-    if (a.a) {}
-    for (;;)
-    {
-      c.a(localc, paramInt);
-      System.out.println("Radio clicked - " + c.a(a));
-      if (c.b(a) != null) {
-        c.b(a).a(f.a[c.a(a)], c.a(c.c(a), c.a(a)), c.a(a));
-      }
-      paramDialogInterface.dismiss();
-      return;
-      paramInt += 1;
-    }
-  }
+  public abstract void a(String paramString1, String paramString2, int paramInt);
 }
 
 /* Location:

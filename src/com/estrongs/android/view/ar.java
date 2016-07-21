@@ -1,33 +1,18 @@
 package com.estrongs.android.view;
 
-import android.view.View;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-import com.estrongs.a.a.m;
-import com.estrongs.fs.util.j;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.pop.app.compress.bb;
 
 class ar
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  ar(am paramam, m paramm) {}
+  ar(ak paramak, bb parambb) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    ak.l(b.a).setVisibility(0);
-    ak.b(b.a).setVisibility(0);
-    ak.b(b.a).setIndeterminate(false);
-    ak.o(b.a).setVisibility(0);
-    if (!a.m)
-    {
-      ak.o(b.a).setVisibility(8);
-      ak.b(b.a).setIndeterminate(true);
-    }
-    if ((a.l) && (a.m) && (a.n))
-    {
-      ak.w(b.a).setText(ak.a(b.a, ak.c(b.a) - a.f, a.b));
-      ak.x(b.a).setVisibility(0);
-      ak.B(b.a).setText(j.c(a.b) + "/s");
-    }
+    a.d();
+    paramDialogInterface.dismiss();
   }
 }
 

@@ -5,10 +5,6 @@ import android.content.pm.ApplicationInfo;
 import com.estrongs.android.pop.utils.w;
 import com.estrongs.android.pop.view.utils.AppRunner;
 import com.estrongs.fs.FileSystemException;
-import com.estrongs.fs.d;
-import com.estrongs.fs.h;
-import com.estrongs.fs.impl.b.c;
-import com.estrongs.fs.impl.b.g;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -18,26 +14,26 @@ public class k
 {
   private ArrayList<u> A;
   Activity a;
-  List<c> b;
+  List<com.estrongs.fs.impl.b.d> b;
   
-  public k(Activity paramActivity, d paramd, List<c> paramList, String paramString)
+  public k(Activity paramActivity, com.estrongs.fs.d paramd, List<com.estrongs.fs.impl.b.d> paramList, String paramString)
   {
-    super(paramd, a(paramList), d.m(paramString));
+    super(paramd, a(paramList), com.estrongs.fs.d.m(paramString));
     a = paramActivity;
     b = paramList;
     processData.p = false;
     c(false);
   }
   
-  public static List<h> a(List<c> paramList)
+  public static List<com.estrongs.fs.h> a(List<com.estrongs.fs.impl.b.d> paramList)
   {
     ArrayList localArrayList = new ArrayList();
     paramList = paramList.iterator();
     while (paramList.hasNext())
     {
-      c localc = (c)paramList.next();
-      l locall = new l(localc.f().d(), localc);
-      locall.putExtra("item_paste_name", localc.g());
+      com.estrongs.fs.impl.b.d locald = (com.estrongs.fs.impl.b.d)paramList.next();
+      l locall = new l(locald.k().d(), locald);
+      locall.putExtra("item_paste_name", locald.l());
       localArrayList.add(locall);
     }
     return localArrayList;
@@ -68,11 +64,11 @@ public class k
     {
       try
       {
-        if ((b.size() == 1) && (((c)b.get(0)).f().h()))
+        if ((b.size() == 1) && (((com.estrongs.fs.impl.b.d)b.get(0)).k().h()))
         {
-          String str = b.get(0)).c().packageName;
+          String str = b.get(0)).h().packageName;
           localObject = A.get(0)).b;
-          if (!d.a().b((String)localObject)) {
+          if (!com.estrongs.fs.d.a().b((String)localObject)) {
             return bool;
           }
           if (w.a(str))
@@ -80,7 +76,7 @@ public class k
             a.runOnUiThread(new m(this, str, (String)localObject));
             return bool;
           }
-          AppRunner.r(a, (String)localObject);
+          AppRunner.s(a, (String)localObject);
           return bool;
         }
       }
@@ -94,7 +90,7 @@ public class k
       while (((Iterator)localObject).hasNext())
       {
         u localu = (u)((Iterator)localObject).next();
-        if (d.a().b(b)) {
+        if (com.estrongs.fs.d.a().b(b)) {
           localArrayList.add(b);
         }
       }

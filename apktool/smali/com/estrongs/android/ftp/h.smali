@@ -693,7 +693,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/fs/impl/local/h;->j(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/estrongs/fs/impl/local/i;->j(Ljava/lang/String;)V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
@@ -845,6 +845,16 @@
     monitor-exit p0
 
     throw v0
+.end method
+
+.method static synthetic b(Lcom/estrongs/android/ftp/h;Ljava/lang/String;)Z
+    .locals 1
+
+    invoke-direct {p0, p1}, Lcom/estrongs/android/ftp/h;->g(Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
 .end method
 
 .method private c(Ljava/lang/String;)Ljava/lang/String;
@@ -1125,7 +1135,7 @@
 
     iget-boolean v4, p0, Lcom/estrongs/android/ftp/h;->a:Z
 
-    if-eqz v4, :cond_6
+    if-eqz v4, :cond_7
 
     const-string v0, "RNTO"
 
@@ -1133,7 +1143,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     invoke-virtual {p1, v7}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
@@ -1149,10 +1159,29 @@
 
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
+    move-result v4
+
+    if-nez v4, :cond_3
+
+    invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->g(Ljava/lang/String;)Z
+
     move-result v0
 
     if-eqz v0, :cond_3
 
+    iget-object v0, p0, Lcom/estrongs/android/ftp/h;->o:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->g(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    :cond_3
     const-string v0, "550 Target exist.\r\n"
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->b(Ljava/lang/String;)V
@@ -1164,7 +1193,7 @@
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     :try_start_0
     invoke-static {}, Lcom/estrongs/fs/d;->a()Lcom/estrongs/fs/d;
 
@@ -1195,7 +1224,7 @@
     move-result v0
 
     :goto_2
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     const-string v0, "250 RNTO command successful.\r\n"
 
@@ -1210,34 +1239,34 @@
 
     goto :goto_2
 
-    :cond_4
+    :cond_5
     const-string v0, "550 RNTO failed.\r\n"
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->b(Ljava/lang/String;)V
 
     goto :goto_1
 
-    :cond_5
+    :cond_6
     const-string v0, "503 Bad sequence of commands.\r\n"
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->b(Ljava/lang/String;)V
 
     goto :goto_1
 
-    :cond_6
+    :cond_7
     const-string v4, "USER"
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
-    if-eqz v4, :cond_9
+    if-eqz v4, :cond_a
 
     array-length v1, v0
 
     const/4 v2, 0x2
 
-    if-lt v1, v2, :cond_7
+    if-lt v1, v2, :cond_8
 
     aget-object v1, v0, v6
 
@@ -1245,9 +1274,9 @@
 
     move-result v1
 
-    if-nez v1, :cond_8
+    if-nez v1, :cond_9
 
-    :cond_7
+    :cond_8
     const-string v0, ""
 
     iput-object v0, p0, Lcom/estrongs/android/ftp/h;->g:Ljava/lang/String;
@@ -1259,27 +1288,27 @@
 
     goto/16 :goto_0
 
-    :cond_8
+    :cond_9
     aget-object v0, v0, v6
 
     iput-object v0, p0, Lcom/estrongs/android/ftp/h;->g:Ljava/lang/String;
 
     goto :goto_3
 
-    :cond_9
+    :cond_a
     const-string v4, "PASS"
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
-    if-eqz v4, :cond_11
+    if-eqz v4, :cond_12
 
     array-length v1, v0
 
     const/4 v2, 0x2
 
-    if-lt v1, v2, :cond_a
+    if-lt v1, v2, :cond_b
 
     aget-object v1, v0, v6
 
@@ -1287,9 +1316,9 @@
 
     move-result v1
 
-    if-nez v1, :cond_c
+    if-nez v1, :cond_d
 
-    :cond_a
+    :cond_b
     const-string v0, ""
 
     iput-object v0, p0, Lcom/estrongs/android/ftp/h;->h:Ljava/lang/String;
@@ -1377,15 +1406,15 @@
 
     iget-boolean v0, v0, Lcom/estrongs/android/ftp/a;->g:Z
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
     iput-boolean v6, p0, Lcom/estrongs/android/ftp/h;->f:Z
 
-    :cond_b
+    :cond_c
     :goto_5
     iget-boolean v0, p0, Lcom/estrongs/android/ftp/h;->f:Z
 
-    if-eqz v0, :cond_10
+    if-eqz v0, :cond_11
 
     const-string v0, "230 User logged in, proceed.\r\n"
 
@@ -1393,19 +1422,19 @@
 
     goto/16 :goto_0
 
-    :cond_c
+    :cond_d
     aget-object v0, v0, v6
 
     iput-object v0, p0, Lcom/estrongs/android/ftp/h;->h:Ljava/lang/String;
 
     goto :goto_4
 
-    :cond_d
+    :cond_e
     iget-object v0, p0, Lcom/estrongs/android/ftp/h;->c:Lcom/estrongs/android/ftp/a;
 
     iget-object v0, v0, Lcom/estrongs/android/ftp/a;->a:Ljava/lang/String;
 
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_f
 
     iget-object v0, p0, Lcom/estrongs/android/ftp/h;->c:Lcom/estrongs/android/ftp/a;
 
@@ -1415,7 +1444,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_f
 
     iget-object v0, p0, Lcom/estrongs/android/ftp/h;->g:Ljava/lang/String;
 
@@ -1427,14 +1456,14 @@
 
     move-result v0
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_c
 
-    :cond_e
+    :cond_f
     iget-object v0, p0, Lcom/estrongs/android/ftp/h;->c:Lcom/estrongs/android/ftp/a;
 
     iget-object v0, v0, Lcom/estrongs/android/ftp/a;->b:Ljava/lang/String;
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_10
 
     iget-object v0, p0, Lcom/estrongs/android/ftp/h;->c:Lcom/estrongs/android/ftp/a;
 
@@ -1444,7 +1473,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_10
 
     iget-object v0, p0, Lcom/estrongs/android/ftp/h;->h:Ljava/lang/String;
 
@@ -1456,25 +1485,14 @@
 
     move-result v0
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_c
 
-    :cond_f
+    :cond_10
     iput-boolean v6, p0, Lcom/estrongs/android/ftp/h;->f:Z
 
     goto :goto_5
 
-    :cond_10
-    const-string v0, "530 Not logged in.\r\n"
-
-    invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->b(Ljava/lang/String;)V
-
-    goto/16 :goto_0
-
     :cond_11
-    iget-boolean v4, p0, Lcom/estrongs/android/ftp/h;->f:Z
-
-    if-nez v4, :cond_12
-
     const-string v0, "530 Not logged in.\r\n"
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->b(Ljava/lang/String;)V
@@ -1482,13 +1500,24 @@
     goto/16 :goto_0
 
     :cond_12
+    iget-boolean v4, p0, Lcom/estrongs/android/ftp/h;->f:Z
+
+    if-nez v4, :cond_13
+
+    const-string v0, "530 Not logged in.\r\n"
+
+    invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->b(Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    :cond_13
     const-string v4, "REST"
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
-    if-eqz v4, :cond_13
+    if-eqz v4, :cond_14
 
     const/4 v0, 0x5
 
@@ -1524,25 +1553,25 @@
 
     goto/16 :goto_0
 
-    :cond_13
+    :cond_14
     invoke-direct {p0, v3}, Lcom/estrongs/android/ftp/h;->d(Ljava/lang/String;)I
 
     move-result v4
 
     iget-boolean v5, p0, Lcom/estrongs/android/ftp/h;->p:Z
 
-    if-eqz v5, :cond_16
+    if-eqz v5, :cond_17
 
-    if-nez v4, :cond_15
+    if-nez v4, :cond_16
 
-    :cond_14
+    :cond_15
     const-string v4, "SYST"
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
-    if-eqz v4, :cond_17
+    if-eqz v4, :cond_18
 
     const-string v0, "215 UNIX Type: L8\r\n"
 
@@ -1550,7 +1579,7 @@
 
     goto/16 :goto_0
 
-    :cond_15
+    :cond_16
     const/4 v0, 0x5
 
     :try_start_2
@@ -1592,12 +1621,12 @@
 
     goto :goto_6
 
-    :cond_16
-    if-eqz v4, :cond_14
+    :cond_17
+    if-eqz v4, :cond_15
 
     iget-object v4, p0, Lcom/estrongs/android/ftp/h;->m:Lcom/estrongs/android/ftp/i;
 
-    if-nez v4, :cond_14
+    if-nez v4, :cond_15
 
     const-string v0, "503 Bad sequence of commands.\r\n"
 
@@ -1605,20 +1634,20 @@
 
     goto/16 :goto_0
 
-    :cond_17
+    :cond_18
     const-string v4, "TYPE"
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
-    if-eqz v4, :cond_1c
+    if-eqz v4, :cond_1d
 
     array-length v1, v0
 
     const/4 v3, 0x2
 
-    if-lt v1, v3, :cond_18
+    if-lt v1, v3, :cond_19
 
     aget-object v1, v0, v6
 
@@ -1626,16 +1655,16 @@
 
     move-result v1
 
-    if-nez v1, :cond_19
+    if-nez v1, :cond_1a
 
-    :cond_18
+    :cond_19
     const-string v0, "501 Command invalid args.\r\n"
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->b(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    :cond_19
+    :cond_1a
     aget-object v1, v0, v6
 
     const-string v3, "I"
@@ -1644,7 +1673,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1a
+    if-eqz v1, :cond_1b
 
     const-string v0, "200 Type set to I.\r\n"
 
@@ -1654,7 +1683,7 @@
 
     goto/16 :goto_0
 
-    :cond_1a
+    :cond_1b
     aget-object v0, v0, v6
 
     const-string v1, "A"
@@ -1663,7 +1692,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1b
+    if-eqz v0, :cond_1c
 
     const-string v0, "200 Type set to A.\r\n"
 
@@ -1673,21 +1702,21 @@
 
     goto/16 :goto_0
 
-    :cond_1b
+    :cond_1c
     const-string v0, "501 Command invalid args.\r\n"
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->b(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    :cond_1c
+    :cond_1d
     const-string v4, "PWD"
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
-    if-eqz v4, :cond_1d
+    if-eqz v4, :cond_1e
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1719,14 +1748,14 @@
 
     goto/16 :goto_0
 
-    :cond_1d
+    :cond_1e
     const-string v4, "CDUP"
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
-    if-eqz v4, :cond_22
+    if-eqz v4, :cond_23
 
     iget-object v0, p0, Lcom/estrongs/android/ftp/h;->j:Ljava/lang/String;
 
@@ -1736,7 +1765,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1e
+    if-eqz v0, :cond_1f
 
     const-string v0, "550 Failed to change directory.\r\n"
 
@@ -1744,7 +1773,7 @@
 
     goto/16 :goto_0
 
-    :cond_1e
+    :cond_1f
     iget-object v0, p0, Lcom/estrongs/android/ftp/h;->j:Ljava/lang/String;
 
     const-string v1, "/"
@@ -1753,7 +1782,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1f
+    if-eqz v0, :cond_20
 
     iget-object v0, p0, Lcom/estrongs/android/ftp/h;->j:Ljava/lang/String;
 
@@ -1772,7 +1801,7 @@
     move-result v0
 
     :goto_7
-    if-gez v0, :cond_20
+    if-gez v0, :cond_21
 
     const-string v0, "550 Failed to change directory.\r\n"
 
@@ -1780,7 +1809,7 @@
 
     goto/16 :goto_0
 
-    :cond_1f
+    :cond_20
     iget-object v0, p0, Lcom/estrongs/android/ftp/h;->j:Ljava/lang/String;
 
     const/16 v1, 0x2f
@@ -1791,8 +1820,8 @@
 
     goto :goto_7
 
-    :cond_20
-    if-nez v0, :cond_21
+    :cond_21
+    if-nez v0, :cond_22
 
     const-string v0, "/"
 
@@ -1805,7 +1834,7 @@
 
     goto/16 :goto_0
 
-    :cond_21
+    :cond_22
     iget-object v1, p0, Lcom/estrongs/android/ftp/h;->j:Ljava/lang/String;
 
     invoke-virtual {v1, v2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -1816,14 +1845,14 @@
 
     goto :goto_8
 
-    :cond_22
+    :cond_23
     const-string v4, "CWD"
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
-    if-eqz v4, :cond_24
+    if-eqz v4, :cond_25
 
     invoke-virtual {p1, v8}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
@@ -1841,13 +1870,19 @@
 
     move-result v2
 
-    if-eqz v2, :cond_23
+    if-eqz v2, :cond_24
 
     invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
 
     move-result v1
 
-    if-eqz v1, :cond_23
+    if-eqz v1, :cond_24
+
+    invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->g(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_24
 
     const-string v1, "250 Directory successfully changed.\r\n"
 
@@ -1869,21 +1904,21 @@
 
     goto/16 :goto_0
 
-    :cond_23
+    :cond_24
     const-string v0, "550 Failed to change directory.\r\n"
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->b(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    :cond_24
+    :cond_25
     const-string v4, "FEAT"
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
-    if-eqz v4, :cond_25
+    if-eqz v4, :cond_26
 
     const-string v0, "211-Features\r\nSIZE\r\nPASV\r\n UTF8\r\n211 End\r\n"
 
@@ -1891,7 +1926,7 @@
 
     goto/16 :goto_0
 
-    :cond_25
+    :cond_26
     const-string v4, "LIST"
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1938,11 +1973,11 @@
 
     move-result v4
 
-    if-eqz v4, :cond_2c
+    if-eqz v4, :cond_2d
 
     iget-object v0, p0, Lcom/estrongs/android/ftp/h;->m:Lcom/estrongs/android/ftp/i;
 
-    if-eqz v0, :cond_26
+    if-eqz v0, :cond_27
 
     iget-object v0, p0, Lcom/estrongs/android/ftp/h;->m:Lcom/estrongs/android/ftp/i;
 
@@ -1950,7 +1985,7 @@
 
     iput-object v1, p0, Lcom/estrongs/android/ftp/h;->m:Lcom/estrongs/android/ftp/i;
 
-    :cond_26
+    :cond_27
     :try_start_3
     new-instance v0, Ljava/net/ServerSocket;
 
@@ -1969,27 +2004,27 @@
     move-object v1, v0
 
     :goto_9
-    if-nez v1, :cond_27
+    if-nez v1, :cond_28
 
     const/16 v0, 0x14
 
-    if-lt v2, v0, :cond_26
-
-    :cond_27
-    const/16 v0, 0x14
-
-    if-ge v2, v0, :cond_28
-
-    if-nez v1, :cond_29
+    if-lt v2, v0, :cond_27
 
     :cond_28
+    const/16 v0, 0x14
+
+    if-ge v2, v0, :cond_29
+
+    if-nez v1, :cond_2a
+
+    :cond_29
     const-string v0, "502 open data port failed.\r\n"
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->b(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    :cond_29
+    :cond_2a
     :try_start_4
     iget-object v0, p0, Lcom/estrongs/android/ftp/h;->c:Lcom/estrongs/android/ftp/a;
 
@@ -2003,11 +2038,11 @@
 
     move-result v2
 
-    if-eqz v0, :cond_2a
+    if-eqz v0, :cond_2b
 
-    if-gtz v2, :cond_2b
+    if-gtz v2, :cond_2c
 
-    :cond_2a
+    :cond_2b
     const-string v0, "502 get local ip/port failed.\r\n"
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->b(Ljava/lang/String;)V
@@ -2025,7 +2060,7 @@
 
     goto/16 :goto_0
 
-    :cond_2b
+    :cond_2c
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v4, "227 Entering Passive Mode ("
@@ -2096,14 +2131,14 @@
 
     goto/16 :goto_0
 
-    :cond_2c
+    :cond_2d
     const-string v1, "NOOP"
 
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_2d
+    if-eqz v1, :cond_2e
 
     const-string v0, "200 NOOP OK.\r\n"
 
@@ -2111,14 +2146,14 @@
 
     goto/16 :goto_0
 
-    :cond_2d
+    :cond_2e
     const-string v1, "DELE"
 
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_31
+    if-eqz v1, :cond_33
 
     const/4 v0, 0x5
 
@@ -2137,10 +2172,17 @@
 
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
+    move-result v3
+
+    if-eqz v3, :cond_2f
+
+    invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->g(Ljava/lang/String;)Z
+
     move-result v0
 
-    if-nez v0, :cond_2e
+    if-nez v0, :cond_30
 
+    :cond_2f
     const-string v0, "550 File not exist.\r\n"
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->b(Ljava/lang/String;)V
@@ -2158,13 +2200,13 @@
 
     goto/16 :goto_0
 
-    :cond_2e
+    :cond_30
     :try_start_6
     invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
 
     move-result v0
 
-    if-eqz v0, :cond_2f
+    if-eqz v0, :cond_31
 
     const-string v0, "550 Target is dir.\r\n"
 
@@ -2174,7 +2216,7 @@
 
     goto/16 :goto_0
 
-    :cond_2f
+    :cond_31
     :try_start_7
     invoke-static {}, Lcom/estrongs/fs/d;->a()Lcom/estrongs/fs/d;
 
@@ -2200,7 +2242,7 @@
     move-result v2
 
     :goto_a
-    if-eqz v2, :cond_30
+    if-eqz v2, :cond_32
 
     :try_start_8
     const-string v0, "250 DELE command successful.\r\n"
@@ -2209,7 +2251,7 @@
 
     goto/16 :goto_0
 
-    :cond_30
+    :cond_32
     const-string v0, "450 DELE fail.\r\n"
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->b(Ljava/lang/String;)V
@@ -2218,14 +2260,14 @@
 
     goto/16 :goto_0
 
-    :cond_31
+    :cond_33
     const-string v1, "RMD"
 
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_35
+    if-eqz v1, :cond_38
 
     const/4 v0, 0x4
 
@@ -2244,10 +2286,17 @@
 
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
+    move-result v3
+
+    if-eqz v3, :cond_34
+
+    invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->g(Ljava/lang/String;)Z
+
     move-result v0
 
-    if-nez v0, :cond_32
+    if-nez v0, :cond_35
 
+    :cond_34
     const-string v0, "550 Directory not exist.\r\n"
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->b(Ljava/lang/String;)V
@@ -2265,13 +2314,13 @@
 
     goto/16 :goto_0
 
-    :cond_32
+    :cond_35
     :try_start_a
     invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
 
     move-result v0
 
-    if-nez v0, :cond_33
+    if-nez v0, :cond_36
 
     const-string v0, "550 Target is not a dir.\r\n"
 
@@ -2281,7 +2330,7 @@
 
     goto/16 :goto_0
 
-    :cond_33
+    :cond_36
     :try_start_b
     invoke-static {}, Lcom/estrongs/fs/d;->a()Lcom/estrongs/fs/d;
 
@@ -2307,7 +2356,7 @@
     move-result v2
 
     :goto_b
-    if-eqz v2, :cond_34
+    if-eqz v2, :cond_37
 
     :try_start_c
     const-string v0, "250 RMD command successful.\r\n"
@@ -2316,7 +2365,7 @@
 
     goto/16 :goto_0
 
-    :cond_34
+    :cond_37
     const-string v0, "450 RMD fail.\r\n"
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->b(Ljava/lang/String;)V
@@ -2325,14 +2374,14 @@
 
     goto/16 :goto_0
 
-    :cond_35
+    :cond_38
     const-string v1, "MKD"
 
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_38
+    if-eqz v1, :cond_3c
 
     const/4 v0, 0x4
 
@@ -2353,8 +2402,15 @@
 
     move-result v1
 
-    if-eqz v1, :cond_36
+    if-nez v1, :cond_39
 
+    invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->g(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3a
+
+    :cond_39
     const-string v0, "550 Target exist.\r\n"
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->b(Ljava/lang/String;)V
@@ -2372,7 +2428,7 @@
 
     goto/16 :goto_0
 
-    :cond_36
+    :cond_3a
     :try_start_e
     invoke-static {}, Lcom/estrongs/fs/d;->a()Lcom/estrongs/fs/d;
 
@@ -2386,7 +2442,7 @@
     move-result v2
 
     :goto_c
-    if-eqz v2, :cond_37
+    if-eqz v2, :cond_3b
 
     :try_start_f
     const-string v0, "257 Directory created.\r\n"
@@ -2395,7 +2451,7 @@
 
     goto/16 :goto_0
 
-    :cond_37
+    :cond_3b
     const-string v0, "550 Directory create failed.\r\n"
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->b(Ljava/lang/String;)V
@@ -2404,18 +2460,18 @@
 
     goto/16 :goto_0
 
-    :cond_38
+    :cond_3c
     const-string v1, "OPTS"
 
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_3c
+    if-eqz v1, :cond_40
 
     aget-object v1, v0, v6
 
-    if-eqz v1, :cond_39
+    if-eqz v1, :cond_3d
 
     aget-object v1, v0, v6
 
@@ -2423,7 +2479,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_39
+    if-eqz v1, :cond_3d
 
     aget-object v0, v0, v6
 
@@ -2433,16 +2489,16 @@
 
     move-result v0
 
-    if-nez v0, :cond_3a
+    if-nez v0, :cond_3e
 
-    :cond_39
+    :cond_3d
     const-string v0, "550 OPTS wrong args.\r\n"
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->b(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    :cond_3a
+    :cond_3e
     iget-object v0, p0, Lcom/estrongs/android/ftp/h;->q:Ljava/lang/String;
 
     const-string v1, "UTF-8"
@@ -2451,7 +2507,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_3b
+    if-nez v0, :cond_3f
 
     iput-boolean v2, p0, Lcom/estrongs/android/ftp/h;->r:Z
 
@@ -2484,7 +2540,7 @@
     :try_end_10
     .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_7
 
-    :cond_3b
+    :cond_3f
     :goto_d
     const-string v0, "200 OPTS UTF8 is set to ON.\r\n"
 
@@ -2499,19 +2555,19 @@
 
     goto :goto_d
 
-    :cond_3c
+    :cond_40
     const-string v0, "PORT"
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_45
+    if-eqz v0, :cond_49
 
     :try_start_11
     iget-object v0, p0, Lcom/estrongs/android/ftp/h;->m:Lcom/estrongs/android/ftp/i;
 
-    if-eqz v0, :cond_3d
+    if-eqz v0, :cond_41
 
     iget-object v0, p0, Lcom/estrongs/android/ftp/h;->m:Lcom/estrongs/android/ftp/i;
 
@@ -2521,7 +2577,7 @@
 
     iput-object v0, p0, Lcom/estrongs/android/ftp/h;->m:Lcom/estrongs/android/ftp/i;
 
-    :cond_3d
+    :cond_41
     const/4 v0, 0x5
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
@@ -2534,7 +2590,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_3e
+    if-eqz v1, :cond_42
 
     const-string v1, "::"
 
@@ -2542,7 +2598,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_3e
+    if-eqz v1, :cond_42
 
     const-string v0, "550 IPV6 addr.\r\n"
 
@@ -2563,7 +2619,7 @@
 
     goto/16 :goto_0
 
-    :cond_3e
+    :cond_42
     :try_start_12
     const-string v1, ","
 
@@ -2575,7 +2631,7 @@
 
     const/4 v1, 0x6
 
-    if-eq v0, v1, :cond_3f
+    if-eq v0, v1, :cond_43
 
     const-string v0, "501 PORT invalid format.\r\n"
 
@@ -2583,13 +2639,13 @@
 
     goto/16 :goto_0
 
-    :cond_3f
+    :cond_43
     move v0, v2
 
     :goto_e
     array-length v1, v3
 
-    if-ge v0, v1, :cond_42
+    if-ge v0, v1, :cond_46
 
     aget-object v1, v3, v0
 
@@ -2599,7 +2655,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_40
+    if-eqz v1, :cond_44
 
     aget-object v1, v3, v0
 
@@ -2609,21 +2665,21 @@
 
     const/4 v4, 0x3
 
-    if-le v1, v4, :cond_41
+    if-le v1, v4, :cond_45
 
-    :cond_40
+    :cond_44
     const-string v0, "501 PORT invalid format.\r\n"
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->b(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    :cond_41
+    :cond_45
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_e
 
-    :cond_42
+    :cond_46
     const/4 v0, 0x4
 
     new-array v4, v0, [B
@@ -2633,7 +2689,7 @@
     move v1, v2
 
     :goto_f
-    if-ge v1, v8, :cond_44
+    if-ge v1, v8, :cond_48
 
     :try_start_13
     aget-object v0, v3, v1
@@ -2644,11 +2700,11 @@
 
     const/16 v2, 0x80
 
-    if-lt v0, v2, :cond_43
+    if-lt v0, v2, :cond_47
 
     add-int/lit16 v0, v0, -0x100
 
-    :cond_43
+    :cond_47
     int-to-byte v0, v0
 
     aput-byte v0, v4, v1
@@ -2673,7 +2729,7 @@
 
     goto/16 :goto_0
 
-    :cond_44
+    :cond_48
     :try_start_15
     invoke-static {v4}, Ljava/net/InetAddress;->getByAddress([B)Ljava/net/InetAddress;
     :try_end_15
@@ -2754,14 +2810,14 @@
 
     goto/16 :goto_0
 
-    :cond_45
+    :cond_49
     const-string v0, "ABOR"
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_47
+    if-eqz v0, :cond_4b
 
     iget-object v0, p0, Lcom/estrongs/android/ftp/h;->k:Ljava/lang/Integer;
 
@@ -2769,7 +2825,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_46
+    if-nez v0, :cond_4a
 
     const-string v0, "226 ABOR succ.\r\n"
 
@@ -2777,7 +2833,7 @@
 
     goto/16 :goto_0
 
-    :cond_46
+    :cond_4a
     iget-object v0, p0, Lcom/estrongs/android/ftp/h;->l:Lcom/estrongs/android/ftp/i;
 
     iput-boolean v6, v0, Lcom/estrongs/android/ftp/i;->f:Z
@@ -2788,14 +2844,14 @@
 
     goto/16 :goto_0
 
-    :cond_47
+    :cond_4b
     const-string v0, "SIZE"
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_4a
+    if-eqz v0, :cond_4e
 
     invoke-virtual {p1, v7}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
@@ -2813,7 +2869,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_48
+    if-nez v0, :cond_4c
 
     const-string v0, "550 Target not exist.\r\n"
 
@@ -2821,12 +2877,12 @@
 
     goto/16 :goto_0
 
-    :cond_48
+    :cond_4c
     invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
 
     move-result v0
 
-    if-eqz v0, :cond_49
+    if-eqz v0, :cond_4d
 
     const-string v0, "550 Target is a directory.\r\n"
 
@@ -2834,7 +2890,7 @@
 
     goto/16 :goto_0
 
-    :cond_49
+    :cond_4d
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2867,14 +2923,14 @@
 
     goto/16 :goto_0
 
-    :cond_4a
+    :cond_4e
     const-string v0, "QUIT"
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_4b
+    if-eqz v0, :cond_4f
 
     const-string v0, "221 Byte.\r\n"
 
@@ -2894,14 +2950,14 @@
 
     goto/16 :goto_0
 
-    :cond_4b
+    :cond_4f
     const-string v0, "RNFR"
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_4d
+    if-eqz v0, :cond_51
 
     invoke-virtual {p1, v7}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
@@ -2919,7 +2975,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_4c
+    if-nez v0, :cond_50
 
     const-string v0, "550 Target not exist.\r\n"
 
@@ -2927,7 +2983,7 @@
 
     goto/16 :goto_0
 
-    :cond_4c
+    :cond_50
     const-string v0, "350 Target exists, ready for destination name.\r\n"
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->b(Ljava/lang/String;)V
@@ -2938,7 +2994,7 @@
 
     goto/16 :goto_0
 
-    :cond_4d
+    :cond_51
     const-string v0, "502 Command not implemented.\r\n"
 
     invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->b(Ljava/lang/String;)V
@@ -2966,6 +3022,160 @@
     goto/16 :goto_9
 .end method
 
+.method private f(Ljava/lang/String;)Ljava/lang/String;
+    .locals 4
+
+    const/4 v3, 0x0
+
+    const-string v0, "/.."
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+
+    move-result v0
+
+    if-gtz v0, :cond_0
+
+    :goto_0
+    return-object p1
+
+    :cond_0
+    const-string v1, "/"
+
+    add-int/lit8 v2, v0, -0x1
+
+    invoke-virtual {p1, v1, v2}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;I)I
+
+    move-result v1
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, -0x3
+
+    if-ge v0, v2, :cond_1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    add-int/lit8 v1, v1, 0x1
+
+    invoke-virtual {p1, v3, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    add-int/lit8 v0, v0, 0x3
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_1
+    const-string v1, "//"
+
+    const-string v2, "/"
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Lcom/estrongs/android/ftp/h;->f(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_1
+    add-int/lit8 v0, v1, 0x1
+
+    invoke-virtual {p1, v3, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_1
+.end method
+
+.method private g(Ljava/lang/String;)Z
+    .locals 5
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    invoke-direct {p0, p1}, Lcom/estrongs/android/ftp/h;->f(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bV(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {}, Lcom/estrongs/android/util/ap;->a()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :cond_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/ap;->i(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_1
+
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/ap;->e(Ljava/lang/String;Ljava/lang/String;)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    :cond_1
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_2
+    move v0, v1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    move v0, v1
+
+    goto :goto_0
+.end method
+
 
 # virtual methods
 .method public a(ILjava/io/File;)Ljava/lang/String;
@@ -2973,11 +3183,11 @@
 
     const/4 v0, 0x0
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-virtual {p2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object v1
 
-    invoke-virtual {p2}, Ljava/io/File;->exists()Z
+    invoke-direct {p0, v1}, Lcom/estrongs/android/ftp/h;->g(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -2988,6 +3198,16 @@
     return-object v0
 
     :cond_1
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p2}, Ljava/io/File;->exists()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
     invoke-virtual {p2}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -3115,7 +3335,7 @@
 
     move-result-object v0
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_5
     new-instance v0, Ljava/text/SimpleDateFormat;

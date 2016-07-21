@@ -1,19 +1,20 @@
 package com.estrongs.fs.impl.local;
 
 import android.content.Intent;
-import com.estrongs.android.pop.esclasses.ESActivity;
+import com.estrongs.android.pop.app.d.a;
+import com.estrongs.android.pop.esclasses.g;
 
 final class b
-  implements com.estrongs.android.pop.esclasses.c
+  implements g
 {
-  b(c paramc, ESActivity paramESActivity, com.estrongs.android.pop.esclasses.c[] paramArrayOfc) {}
+  b(c paramc, a parama, g[] paramArrayOfg) {}
   
   public void a(int paramInt1, int paramInt2, Intent paramIntent)
   {
-    if (paramInt1 == 16781343)
+    if (paramInt1 == 4127)
     {
       if (paramInt2 != -1) {
-        break label38;
+        break label41;
       }
       a.a(paramIntent.getData());
     }
@@ -21,7 +22,7 @@ final class b
     {
       b.b(c[0]);
       return;
-      label38:
+      label41:
       a.a(null);
     }
   }

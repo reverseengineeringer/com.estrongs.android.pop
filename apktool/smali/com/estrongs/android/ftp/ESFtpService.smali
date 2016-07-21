@@ -13,7 +13,9 @@
 
 .field private final c:Landroid/os/IBinder;
 
-.field private e:I
+.field private e:Lcom/estrongs/android/j/c;
+
+.field private f:I
 
 
 # direct methods
@@ -40,7 +42,11 @@
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/estrongs/android/ftp/ESFtpService;->e:I
+    iput-object v0, p0, Lcom/estrongs/android/ftp/ESFtpService;->e:Lcom/estrongs/android/j/c;
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/estrongs/android/ftp/ESFtpService;->f:I
 
     new-instance v0, Lcom/estrongs/android/ftp/e;
 
@@ -60,7 +66,7 @@
 .method static synthetic a(Lcom/estrongs/android/ftp/ESFtpService;)I
     .locals 1
 
-    iget v0, p0, Lcom/estrongs/android/ftp/ESFtpService;->e:I
+    iget v0, p0, Lcom/estrongs/android/ftp/ESFtpService;->f:I
 
     return v0
 .end method
@@ -68,7 +74,7 @@
 .method static synthetic a(Lcom/estrongs/android/ftp/ESFtpService;I)I
     .locals 0
 
-    iput p1, p0, Lcom/estrongs/android/ftp/ESFtpService;->e:I
+    iput p1, p0, Lcom/estrongs/android/ftp/ESFtpService;->f:I
 
     return p1
 .end method
@@ -80,7 +86,7 @@
 
     move-result-object v1
 
-    invoke-static {p1}, Lcom/estrongs/android/pop/esclasses/e;->b(I)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/pop/esclasses/i;->b(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -196,7 +202,7 @@
 .method public a(ILjava/lang/String;)V
     .locals 6
 
-    const/4 v4, 0x1
+    const/4 v3, 0x1
 
     :try_start_0
     const-string v0, "notification"
@@ -226,76 +232,103 @@
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/estrongs/android/ftp/ESFtpService;->e:I
+    iput v0, p0, Lcom/estrongs/android/ftp/ESFtpService;->f:I
 
     :cond_1
     :goto_0
     return-void
 
     :cond_2
-    new-instance v1, Landroid/app/Notification;
+    new-instance v2, Landroid/app/Notification;
 
-    invoke-direct {v1}, Landroid/app/Notification;-><init>()V
+    invoke-direct {v2}, Landroid/app/Notification;-><init>()V
 
-    const v2, 0x7f0b0147
+    const v1, 0x7f080477
 
-    invoke-direct {p0, v2}, Lcom/estrongs/android/ftp/ESFtpService;->a(I)Ljava/lang/String;
+    invoke-direct {p0, v1}, Lcom/estrongs/android/ftp/ESFtpService;->a(I)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    iput-object v2, v1, Landroid/app/Notification;->tickerText:Ljava/lang/CharSequence;
+    iput-object v1, v2, Landroid/app/Notification;->tickerText:Ljava/lang/CharSequence;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v2
+    move-result-wide v4
 
-    iput-wide v2, v1, Landroid/app/Notification;->when:J
+    iput-wide v4, v2, Landroid/app/Notification;->when:J
 
     if-nez p1, :cond_4
 
-    const v2, 0x7f0200a5
+    const v1, 0x7f0201a9
 
-    iput v2, v1, Landroid/app/Notification;->icon:I
+    iput v1, v2, Landroid/app/Notification;->icon:I
 
     :cond_3
     :goto_1
-    iget v2, v1, Landroid/app/Notification;->flags:I
+    iget v1, v2, Landroid/app/Notification;->flags:I
 
-    or-int/lit8 v2, v2, 0x2
+    or-int/lit8 v1, v1, 0x2
 
-    iput v2, v1, Landroid/app/Notification;->flags:I
+    iput v1, v2, Landroid/app/Notification;->flags:I
 
-    const v2, 0x7f0b0147
+    const v1, 0x7f080477
 
-    invoke-direct {p0, v2}, Lcom/estrongs/android/ftp/ESFtpService;->a(I)Ljava/lang/String;
+    invoke-direct {p0, v1}, Lcom/estrongs/android/ftp/ESFtpService;->a(I)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    new-instance v3, Landroid/content/Intent;
+    invoke-static {p0}, Lcom/estrongs/android/j/c;->a(Landroid/content/Context;)Lcom/estrongs/android/j/c;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/estrongs/android/ftp/ESFtpService;->e:Lcom/estrongs/android/j/c;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :try_start_1
+    iget-object v1, p0, Lcom/estrongs/android/ftp/ESFtpService;->e:Lcom/estrongs/android/j/c;
+
+    const-string v4, "act3"
+
+    invoke-virtual {v1, v4}, Lcom/estrongs/android/j/c;->d(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/estrongs/android/ftp/ESFtpService;->e:Lcom/estrongs/android/j/c;
+
+    const-string v4, "act3"
+
+    const-string v5, "remote_manager"
+
+    invoke-virtual {v1, v4, v5}, Lcom/estrongs/android/j/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    :goto_2
+    :try_start_2
+    new-instance v1, Landroid/content/Intent;
 
     const-class v4, Lcom/estrongs/android/pop/app/ShowDialogActivity;
 
-    invoke-direct {v3, p0, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    invoke-direct {v1, p0, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     const-string v4, "stop_ftp_server"
 
     const/4 v5, 0x1
 
-    invoke-virtual {v3, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+    invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     const/4 v4, 0x0
 
     const/high16 v5, 0x10000000
 
-    invoke-static {p0, v4, v3, v5}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+    invoke-static {p0, v4, v1, v5}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {v1, p0, v2, p2, v3}, Landroid/app/Notification;->setLatestEventInfo(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
+    invoke-virtual {v2, p0, v3, p2, v1}, Landroid/app/Notification;->setLatestEventInfo(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
-    const v2, 0x237ee9f
+    const v1, 0x237ee9f
 
-    invoke-virtual {v0, v2, v1}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
+    invoke-virtual {v0, v1, v2}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
     goto :goto_0
 
@@ -305,37 +338,44 @@
     goto :goto_0
 
     :cond_4
-    if-ne p1, v4, :cond_5
+    if-ne p1, v3, :cond_5
 
-    const v2, 0x7f0200a4
+    const v1, 0x7f0201a8
 
-    iput v2, v1, Landroid/app/Notification;->icon:I
+    iput v1, v2, Landroid/app/Notification;->icon:I
 
     goto :goto_1
 
     :cond_5
-    const/4 v2, 0x2
+    const/4 v1, 0x2
 
-    if-ne p1, v2, :cond_6
+    if-ne p1, v1, :cond_6
 
-    const v2, 0x7f0200a6
+    const v1, 0x7f0201aa
 
-    iput v2, v1, Landroid/app/Notification;->icon:I
+    iput v1, v2, Landroid/app/Notification;->icon:I
 
     goto :goto_1
 
     :cond_6
-    const/4 v2, 0x3
+    const/4 v1, 0x3
 
-    if-ne p1, v2, :cond_3
+    if-ne p1, v1, :cond_3
 
-    const v2, 0x7f0200a7
+    const v1, 0x7f0201ab
 
-    iput v2, v1, Landroid/app/Notification;->icon:I
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    iput v1, v2, Landroid/app/Notification;->icon:I
 
     goto :goto_1
+
+    :catch_1
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+
+    goto :goto_2
 .end method
 
 .method public a(Ljava/lang/String;)V
@@ -389,7 +429,7 @@
 
     invoke-virtual {p0}, Lcom/estrongs/android/ftp/ESFtpService;->d()V
 
-    invoke-static {}, Lcom/estrongs/android/util/l;->b()V
+    invoke-static {}, Lcom/estrongs/android/util/k;->b()V
 
     return-void
 .end method
@@ -415,7 +455,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->W()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->X()Ljava/lang/String;
 
     move-result-object v0
 
@@ -444,15 +484,15 @@
 
     if-eqz v2, :cond_2
 
-    const v0, 0x7f0b013d
+    const v0, 0x7f080540
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/e;->b(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/i;->b(I)Ljava/lang/String;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
-    const v0, 0x7f0b013d
+    const v0, 0x7f080540
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ftp/ESFtpService;->getText(I)Ljava/lang/CharSequence;
 
@@ -522,10 +562,10 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_2
-    iput v4, p0, Lcom/estrongs/android/ftp/ESFtpService;->e:I
+    iput v4, p0, Lcom/estrongs/android/ftp/ESFtpService;->f:I
 
     :cond_3
-    invoke-static {}, Lcom/estrongs/android/util/l;->a()V
+    invoke-static {}, Lcom/estrongs/android/util/k;->a()V
 
     move v0, v1
 
@@ -537,7 +577,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v3, 0x7f0b0149
+    const v3, 0x7f080479
 
     invoke-direct {p0, v3}, Lcom/estrongs/android/ftp/ESFtpService;->a(I)Ljava/lang/String;
 
@@ -590,7 +630,7 @@
     :goto_0
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/estrongs/android/ftp/ESFtpService;->e:I
+    iput v0, p0, Lcom/estrongs/android/ftp/ESFtpService;->f:I
 
     return-void
 
@@ -638,7 +678,7 @@
     sput-boolean v0, Lcom/estrongs/android/ftp/ESFtpService;->d:Z
 
     :try_start_0
-    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/e;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/i;->a(Landroid/content/Context;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

@@ -241,7 +241,7 @@
 
     const-string v2, "Invalid interval value"
 
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v1, v2, v0}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method
@@ -254,7 +254,7 @@
     :try_start_0
     check-cast p1, Landroid/widget/RelativeLayout;
 
-    const v0, 0x7f0a03af
+    const v0, 0x7f0e0625
 
     invoke-virtual {p1, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -290,7 +290,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setProgress(I)V
 
-    const v0, 0x7f0a03ae
+    const v0, 0x7f0e0624
 
     invoke-virtual {p1, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -302,7 +302,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a03b0
+    const v0, 0x7f0e0626
 
     invoke-virtual {p1, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -326,7 +326,7 @@
 
     const-string v2, "Error updating seek bar preference"
 
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v1, v2, v0}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method
@@ -343,7 +343,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f0a03b1
+    const v0, 0x7f0e0627
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -407,7 +407,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -430,7 +430,7 @@
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    const v2, 0x7f0300cf
+    const v2, 0x7f03017a
 
     const/4 v3, 0x0
 
@@ -452,7 +452,7 @@
 
     const-string v3, "Error creating seek bar preference"
 
-    invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v2, v3, v0}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     move-object v0, v1
 
@@ -633,7 +633,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v3}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v1, v2
 

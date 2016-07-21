@@ -1,38 +1,27 @@
 package com.estrongs.android.pop.view;
 
-import android.os.Handler;
-import com.estrongs.android.ui.d.e;
-import com.estrongs.android.ui.e.in;
-import com.estrongs.android.view.aw;
-import com.estrongs.android.view.cb;
-import java.util.List;
+import android.app.Activity;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.view.dw;
+import com.estrongs.android.view.eb;
+import com.estrongs.fs.h;
+import com.estrongs.fs.util.a.a;
 
 class bp
-  implements cb
+  extends eb
 {
-  bp(FileExplorerActivity paramFileExplorerActivity) {}
-  
-  public void a()
+  bp(FileExplorerActivity paramFileExplorerActivity, Activity paramActivity, a parama, dw paramdw)
   {
-    FileExplorerActivity.b(a);
+    super(paramActivity, parama, paramdw);
   }
   
-  public void a(aw paramaw, boolean paramBoolean)
+  public h j()
   {
-    FileExplorerActivity.b(a);
-    if ((FileExplorerActivity.c(a) == 4) || (FileExplorerActivity.c(a) == 2) || (FileExplorerActivity.c(a) == 1) || (FileExplorerActivity.c(a) == 3) || (FileExplorerActivity.c(a) == 28))
-    {
-      aw localaw = a.y();
-      if ((localaw != null) && (localaw.h() != null) && (localaw.h().isEmpty()))
-      {
-        int i = e.a();
-        FileExplorerActivity.a(a, in.a(FileExplorerActivity.c(a)), i);
-      }
+    if (D == null) {}
+    while ((ap.aX(D.getPath())) || (ap.aP(D.getPath())) || (ap.X(D.getPath()))) {
+      return null;
     }
-    a.h.postDelayed(new bq(this), 1000L);
-    if ((paramBoolean) && (paramaw != null)) {
-      FileExplorerActivity.a(a, paramaw);
-    }
+    return super.j();
   }
 }
 

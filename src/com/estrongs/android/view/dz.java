@@ -1,8 +1,23 @@
 package com.estrongs.android.view;
 
-public abstract interface dz
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.pop.app.finder.a;
+
+class dz
+  implements View.OnClickListener
 {
-  public abstract void a(int paramInt1, int paramInt2, int paramInt3, int paramInt4);
+  dz(dy paramdy) {}
+  
+  public void onClick(View paramView)
+  {
+    if (!a.a().b())
+    {
+      a.a().a(a.ag);
+      return;
+    }
+    a.a().c();
+  }
 }
 
 /* Location:

@@ -3,26 +3,26 @@ package com.estrongs.android.util;
 import java.io.File;
 import java.util.Comparator;
 
-public abstract class s
-  implements Comparator<File>
+public class s
 {
-  private boolean a = true;
+  public static final v a = new v();
+  public static final w b = new w();
+  public static final Comparator<File> c = new t();
   
-  public int a(File paramFile1, File paramFile2)
+  private static String b(String paramString, boolean paramBoolean)
   {
-    paramFile1 = q.a(a(paramFile1), paramFile1.isDirectory());
-    paramFile2 = q.a(a(paramFile2), paramFile2.isDirectory());
-    if (a) {
-      return paramFile1.compareTo(paramFile2);
+    if (paramBoolean) {
+      return "0" + paramString.toLowerCase();
     }
-    return paramFile2.compareTo(paramFile1);
+    return "1" + paramString.toLowerCase();
   }
   
-  protected abstract String a(File paramFile);
-  
-  public void a(boolean paramBoolean)
+  private static String b(String paramString, boolean paramBoolean1, boolean paramBoolean2)
   {
-    a = paramBoolean;
+    if (paramBoolean1) {
+      return "0" + paramString;
+    }
+    return "1" + paramString;
   }
 }
 

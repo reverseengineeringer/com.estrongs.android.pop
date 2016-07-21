@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/estrongs/a/a/p;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/a/a;
-
-.field final synthetic b:Lcom/estrongs/fs/b/bo;
+.field final synthetic a:Lcom/estrongs/fs/b/bo;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/fs/b/bo;Lcom/estrongs/a/a;)V
+.method constructor <init>(Lcom/estrongs/fs/b/bo;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/fs/b/bq;->b:Lcom/estrongs/fs/b/bo;
-
-    iput-object p2, p0, Lcom/estrongs/fs/b/bq;->a:Lcom/estrongs/a/a;
+    iput-object p1, p0, Lcom/estrongs/fs/b/bq;->a:Lcom/estrongs/fs/b/bo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,72 +22,114 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 6
+.method public a(Lcom/estrongs/a/a;II)V
+    .locals 3
 
-    iget-object v0, p0, Lcom/estrongs/fs/b/bq;->b:Lcom/estrongs/fs/b/bo;
+    const/4 v0, 0x4
 
-    iget-object v0, v0, Lcom/estrongs/fs/b/bo;->a:Lcom/estrongs/fs/b/bm;
+    if-ne p3, v0, :cond_1
 
-    iget-object v1, p0, Lcom/estrongs/fs/b/bq;->a:Lcom/estrongs/a/a;
+    :try_start_0
+    iget-object v0, p0, Lcom/estrongs/fs/b/bq;->a:Lcom/estrongs/fs/b/bo;
 
-    invoke-virtual {v1}, Lcom/estrongs/a/a;->getTaskResult()Lcom/estrongs/a/p;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/fs/b/bm;->b(Lcom/estrongs/a/p;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/estrongs/fs/b/bo;->b()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, [Ljava/lang/Long;
+    invoke-static {v0}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
-    move-object v4, v0
+    move-result v1
 
-    check-cast v4, [Ljava/lang/Long;
+    if-nez v1, :cond_0
 
-    new-instance v0, Lcom/estrongs/android/ui/dialog/iw;
+    iget-object v1, p0, Lcom/estrongs/fs/b/bq;->a:Lcom/estrongs/fs/b/bo;
 
-    iget-object v1, p0, Lcom/estrongs/fs/b/bq;->b:Lcom/estrongs/fs/b/bo;
+    iget-object v1, v1, Lcom/estrongs/fs/b/bo;->a:Landroid/app/Activity;
 
-    iget-object v1, v1, Lcom/estrongs/fs/b/bo;->a:Lcom/estrongs/fs/b/bm;
+    new-instance v2, Lcom/estrongs/fs/b/br;
 
-    iget-object v1, v1, Lcom/estrongs/fs/b/bm;->a:Landroid/app/Activity;
+    invoke-direct {v2, p0, v0}, Lcom/estrongs/fs/b/br;-><init>(Lcom/estrongs/fs/b/bq;Ljava/lang/String;)V
 
-    const/4 v2, 0x0
+    invoke-virtual {v1, v2}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    aget-object v2, v4, v2
+    :cond_0
+    :goto_0
+    return-void
 
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+    :catch_0
+    move-exception v0
 
-    move-result-wide v2
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    const/4 v5, 0x1
+    goto :goto_0
 
-    aget-object v4, v4, v5
+    :cond_1
+    const/4 v0, 0x5
 
-    invoke-virtual {v4}, Ljava/lang/Long;->longValue()J
+    if-ne p3, v0, :cond_0
 
-    move-result-wide v4
+    iget-object v0, p0, Lcom/estrongs/fs/b/bq;->a:Lcom/estrongs/fs/b/bo;
 
-    invoke-direct/range {v0 .. v5}, Lcom/estrongs/android/ui/dialog/iw;-><init>(Landroid/content/Context;JJ)V
-
-    iget-object v1, p0, Lcom/estrongs/fs/b/bq;->b:Lcom/estrongs/fs/b/bo;
-
-    iget-object v1, v1, Lcom/estrongs/fs/b/bo;->a:Lcom/estrongs/fs/b/bm;
-
-    iget-object v1, v1, Lcom/estrongs/fs/b/bm;->a:Landroid/app/Activity;
-
-    const v2, 0x7f0b000b
-
-    invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/estrongs/a/a;->getTaskResult()Lcom/estrongs/a/p;
 
     move-result-object v1
 
-    const/4 v2, 0x0
+    invoke-virtual {v0, v1}, Lcom/estrongs/fs/b/bo;->a(Lcom/estrongs/a/p;)Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/iw;->setSingleButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/iw;->show()V
+    if-eqz v0, :cond_2
 
-    return-void
+    :goto_1
+    invoke-static {v0}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {p1}, Lcom/estrongs/a/a;->getTaskResult()Lcom/estrongs/a/p;
+
+    move-result-object v1
+
+    iget v1, v1, Lcom/estrongs/a/p;->a:I
+
+    const/16 v2, 0xc
+
+    if-ne v1, v2, :cond_3
+
+    iget-object v0, p0, Lcom/estrongs/fs/b/bq;->a:Lcom/estrongs/fs/b/bo;
+
+    iget-object v0, v0, Lcom/estrongs/fs/b/bo;->a:Landroid/app/Activity;
+
+    new-instance v1, Lcom/estrongs/fs/b/bs;
+
+    invoke-direct {v1, p0, p1}, Lcom/estrongs/fs/b/bs;-><init>(Lcom/estrongs/fs/b/bq;Lcom/estrongs/a/a;)V
+
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lcom/estrongs/fs/b/bq;->a:Lcom/estrongs/fs/b/bo;
+
+    invoke-virtual {v0}, Lcom/estrongs/fs/b/bo;->c()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_1
+
+    :cond_3
+    iget-object v1, p0, Lcom/estrongs/fs/b/bq;->a:Lcom/estrongs/fs/b/bo;
+
+    iget-object v1, v1, Lcom/estrongs/fs/b/bo;->a:Landroid/app/Activity;
+
+    new-instance v2, Lcom/estrongs/fs/b/bt;
+
+    invoke-direct {v2, p0, v0}, Lcom/estrongs/fs/b/bt;-><init>(Lcom/estrongs/fs/b/bq;Ljava/lang/String;)V
+
+    invoke-virtual {v1, v2}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
+
+    goto :goto_0
 .end method

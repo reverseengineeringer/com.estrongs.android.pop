@@ -1,71 +1,195 @@
 .class Lcom/estrongs/android/ui/view/aw;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Ljava/lang/Thread;
 
 
 # instance fields
-.field final synthetic a:Landroid/text/ClipboardManager;
+.field public a:I
 
-.field final synthetic b:Lcom/estrongs/android/ui/view/au;
+.field public b:I
+
+.field private c:Z
+
+.field private d:Ljava/lang/Object;
+
+.field private e:Lcom/estrongs/android/ui/view/ESVideoView;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/view/au;Landroid/text/ClipboardManager;)V
-    .locals 0
+.method public constructor <init>(Lcom/estrongs/android/ui/view/ESVideoView;)V
+    .locals 2
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/view/aw;->b:Lcom/estrongs/android/ui/view/au;
+    const/4 v1, 0x0
 
-    iput-object p2, p0, Lcom/estrongs/android/ui/view/aw;->a:Landroid/text/ClipboardManager;
+    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-boolean v1, p0, Lcom/estrongs/android/ui/view/aw;->c:Z
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcom/estrongs/android/ui/view/aw;->a:I
+
+    iput v1, p0, Lcom/estrongs/android/ui/view/aw;->b:I
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/aw;->d:Ljava/lang/Object;
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/aw;->e:Lcom/estrongs/android/ui/view/ESVideoView;
+
+    iput-object p1, p0, Lcom/estrongs/android/ui/view/aw;->e:Lcom/estrongs/android/ui/view/ESVideoView;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 6
+.method public a(I)V
+    .locals 2
 
-    const/4 v5, 0x1
+    iget-object v1, p0, Lcom/estrongs/android/ui/view/aw;->d:Ljava/lang/Object;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/aw;->a:Landroid/text/ClipboardManager;
+    monitor-enter v1
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/aw;->b:Lcom/estrongs/android/ui/view/au;
+    :try_start_0
+    iput p1, p0, Lcom/estrongs/android/ui/view/aw;->a:I
 
-    iget-object v1, v1, Lcom/estrongs/android/ui/view/au;->i:Ljava/lang/String;
+    iget v0, p0, Lcom/estrongs/android/ui/view/aw;->a:I
 
-    invoke-virtual {v0, v1}, Landroid/text/ClipboardManager;->setText(Ljava/lang/CharSequence;)V
+    iput v0, p0, Lcom/estrongs/android/ui/view/aw;->b:I
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/aw;->b:Lcom/estrongs/android/ui/view/au;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/aw;->d:Ljava/lang/Object;
 
-    const v1, 0x7f0b027a
+    invoke-virtual {v0}, Ljava/lang/Object;->notify()V
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/ui/view/au;->b(Lcom/estrongs/android/ui/view/au;I)Ljava/lang/String;
+    monitor-exit v1
 
-    move-result-object v0
+    return-void
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/aw;->b:Lcom/estrongs/android/ui/view/au;
+    :catchall_0
+    move-exception v0
 
-    invoke-virtual {v1}, Lcom/estrongs/android/ui/view/au;->ar()Landroid/content/Context;
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object v1
+    throw v0
+.end method
 
-    new-array v2, v5, [Ljava/lang/Object;
+.method public destroy()V
+    .locals 2
 
-    const/4 v3, 0x0
+    const/4 v0, 0x1
 
-    const-string v4, "SHA-1"
+    iput-boolean v0, p0, Lcom/estrongs/android/ui/view/aw;->c:Z
 
-    aput-object v4, v2, v3
+    iget-object v1, p0, Lcom/estrongs/android/ui/view/aw;->d:Ljava/lang/Object;
 
-    invoke-static {v0, v2}, Ljava/text/MessageFormat;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    monitor-enter v1
 
-    move-result-object v0
+    :try_start_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/aw;->d:Ljava/lang/Object;
 
-    invoke-static {v1, v0, v5}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    invoke-virtual {v0}, Ljava/lang/Object;->notify()V
 
+    monitor-exit v1
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+.end method
+
+.method public run()V
+    .locals 3
+
+    :goto_0
+    iget-boolean v0, p0, Lcom/estrongs/android/ui/view/aw;->c:Z
+
+    if-nez v0, :cond_1
+
+    iget v0, p0, Lcom/estrongs/android/ui/view/aw;->a:I
+
+    if-gez v0, :cond_0
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/view/aw;->d:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/aw;->d:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->wait()V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :goto_1
+    :try_start_1
+    monitor-exit v1
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+
+    :catch_0
+    move-exception v0
+
+    :try_start_2
+    invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v1, p0, Lcom/estrongs/android/ui/view/aw;->d:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_3
+    iget v0, p0, Lcom/estrongs/android/ui/view/aw;->a:I
+
+    const/4 v2, -0x1
+
+    iput v2, p0, Lcom/estrongs/android/ui/view/aw;->a:I
+
+    monitor-exit v1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/view/aw;->e:Lcom/estrongs/android/ui/view/ESVideoView;
+
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/view/ESVideoView;->a(I)V
+
+    goto :goto_0
+
+    :catchall_1
+    move-exception v0
+
+    :try_start_4
+    monitor-exit v1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    throw v0
+
+    :cond_1
     return-void
 .end method

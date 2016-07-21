@@ -1,15 +1,23 @@
 package com.estrongs.android.pop.utils;
 
-import com.estrongs.android.view.aw;
+import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.ui.pcs.l;
+import com.estrongs.android.ui.pcs.q;
 
-class bh
-  implements Runnable
+final class bh
+  implements DialogInterface.OnClickListener
 {
-  bh(bg parambg) {}
+  bh(Activity paramActivity, q paramq, Boolean[] paramArrayOfBoolean) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    a.b.e();
+    l locall = new l(a);
+    locall.a(b);
+    locall.a(true);
+    c[0] = Boolean.valueOf(false);
+    paramDialogInterface.dismiss();
   }
 }
 

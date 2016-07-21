@@ -1,13 +1,35 @@
 package com.baidu.mobstat;
 
-class ar
-  implements Runnable
+import android.content.Context;
+import android.content.Intent;
+import com.baidu.bottom.service.BottomReceiver;
+
+public class ar
+  extends Thread
 {
-  ar(ao paramao) {}
+  public ar(BottomReceiver paramBottomReceiver, Context paramContext, Intent paramIntent, ct paramct) {}
   
   public void run()
   {
-    af.a().d();
+    try
+    {
+      BottomReceiver.a(d, a, b);
+      BottomReceiver.b(d, a, b);
+      long l = System.currentTimeMillis();
+      if (l - BottomReceiver.a() < 30000L)
+      {
+        bb.a("No need to handle receiver due to time strategy");
+        return;
+      }
+      BottomReceiver.a(l);
+      an.b.a(a);
+      return;
+    }
+    finally
+    {
+      c.b();
+      BottomReceiver.a(null);
+    }
   }
 }
 

@@ -1,40 +1,30 @@
 package com.estrongs.android.ui.dialog;
 
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.widget.TextView;
-import com.estrongs.android.pop.app.diskusage.a;
-import com.estrongs.fs.b.an;
-import com.estrongs.fs.h;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.fs.impl.local.m;
+import com.estrongs.fs.impl.local.r;
 
 class hw
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  hw(hn paramhn) {}
+  hw(hq paramhq, String[] paramArrayOfString) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    an localan = hn.b(a).b();
-    if (com.estrongs.android.util.am.aO(a.c.getPath()))
-    {
-      hn.h(a).setText(2131427588);
-      hn.i(a).setText(String.valueOf(e));
+    paramDialogInterface.dismiss();
+    b.h.a = -1;
+    b.h.b = m.h(a[paramInt]);
+    if (!m.a(hq.g(b), b.h)) {
+      ak.a(b.aF(), 2131231901, 0);
     }
-    for (;;)
-    {
-      hn.a(a, hn.j(a), c);
-      if (com.estrongs.android.util.am.ba(hn.a(a))) {
-        hn.a(a, hn.k(a), d);
-      }
-      try
-      {
-        if ((hn.b(a) != null) && (a.l != null)) {
-          a.l.b(hn.b(a).b());
-        }
-        return;
-      }
-      catch (Exception localException) {}
-      String str = e + " " + a.d + ", " + f + " " + a.e;
-      hn.i(a).setText(str);
-    }
+    b.h = m.f(hq.g(b));
+    b.a.setText(m.a(b.h.c));
+    b.b.setText(m.b(b.h.b));
+    b.g = hq.a(b, b.h);
+    hq.h(b).setText(b.g.substring(0, 3) + " " + b.g.substring(3, 6) + " " + b.g.substring(6, 9));
   }
 }
 

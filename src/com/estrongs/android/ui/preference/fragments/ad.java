@@ -1,8 +1,8 @@
 package com.estrongs.android.ui.preference.fragments;
 
+import android.app.Activity;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
-import com.estrongs.android.ui.notification.i;
 
 class ad
   implements Preference.OnPreferenceChangeListener
@@ -11,15 +11,9 @@ class ad
   
   public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
   {
-    if (((Boolean)paramObject).booleanValue()) {
-      i.a(a.getActivity()).b();
-    }
-    for (;;)
-    {
-      return true;
-      i.a(a.getActivity()).c();
-      i.a();
-    }
+    DisplayPreferenceFragment.a(a).onPreferenceChange(paramPreference, paramObject);
+    a.getActivity().finish();
+    return true;
   }
 }
 

@@ -1,25 +1,17 @@
 package com.estrongs.android.ui.view;
 
-import android.content.Context;
-import android.view.KeyEvent;
-import android.widget.LinearLayout;
+import android.os.Handler;
+import android.os.Message;
 
 class bo
-  extends LinearLayout
+  extends Handler
 {
-  bo(bn parambn, Context paramContext)
-  {
-    super(paramContext);
-  }
+  bo(NaviListView paramNaviListView) {}
   
-  public boolean dispatchKeyEvent(KeyEvent paramKeyEvent)
+  public void handleMessage(Message paramMessage)
   {
-    if ((paramKeyEvent.getKeyCode() == 4) && (paramKeyEvent.getAction() == 0))
-    {
-      a.b();
-      return true;
-    }
-    return false;
+    super.handleMessage(paramMessage);
+    a.b();
   }
 }
 

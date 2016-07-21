@@ -7,7 +7,7 @@ import android.os.Parcelable.Creator;
 public class AppFolderInfoManager$RemnantFolder
   implements Parcelable
 {
-  public static final Parcelable.Creator<RemnantFolder> CREATOR = new s();
+  public static final Parcelable.Creator<RemnantFolder> CREATOR = new t();
   public String a;
   public boolean b;
   private Object c;

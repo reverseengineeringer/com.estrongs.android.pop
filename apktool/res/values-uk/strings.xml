@@ -1,13 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_select">Вибрати</string>
-    <string name="app_name">ES Провідник</string>
-    <string name="app_media_player">ES Медіаплеєр</string>
-    <string name="app_note_editor">ES Редактор</string>
-    <string name="app_image_browser">ES Галерея</string>
-    <string name="app_zip_viewer">ES ZIP-Архіватор</string>
     <string name="app_downloader">ES Завантажувач</string>
-    <string name="select_device_to_share">ибрати пристрій для надсилання</string>
+    <string name="app_image_browser">ES Галерея</string>
+    <string name="app_media_player">ES Медіаплеєр</string>
+    <string name="app_name">ES Провідник</string>
+    <string name="app_note_editor">ES Редактор</string>
+    <string name="app_zip_viewer">ES ZIP-Архіватор</string>
+    <string name="battery_info_remaining_charging_time">"До закінчення заряджання: "</string>
+    <string name="battery_info_remaining_discharging_time">"Залишилось: "</string>
+    <string name="charging_screen_ad_delete">Видалити</string>
+    <string name="charging_screen_ad_enter">Відкрити</string>
+    <string name="charging_screen_charging_complete">Батарея заряджена</string>
+    <string name="charging_screen_slide_to_enter">Проведіть для розблок.</string>
+    <string name="duscenerysdk_ad_no_browser_play">Не встановлено браузер або Google Play</string>
     <string name="es_share_name_activity">Доступ через LAN</string>
+    <string name="lock_screen_setting">Настройки</string>
+    <string name="lock_screen_switch">Розумна зарядка</string>
     <string name="save_to_es">ES Зберегти до</string>
+    <string name="scenery_card_antivirus_button">СКАНУВАТИ</string>
+    <string name="scenery_card_antivirus_content">На телефоні виявлено &lt;font color=#3080F0>%1$s&lt;/font> кілька загроз безпеці</string>
+    <string name="scenery_card_antivirus_title">Ризик безпеки</string>
+    <string name="scenery_card_battery_button">ЗАОЩАДИТИ ЗАРЯД</string>
+    <string name="scenery_card_battery_content">Знайдено енергоспоживаючих додатків: &lt;font color=#3080F0>%1$s&lt;/font>. Подовжте час роботи від батареї з DU Battery Saver. &lt;font color=#3080F0>%2$s год %3$s хв&lt;/font></string>
+    <string name="scenery_card_battery_title">Споживання заряду</string>
+    <string name="scenery_card_booster_button">ПРИСКОРИТИ</string>
+    <string name="scenery_card_booster_content">&lt;font color=#3080F0>%1$s&lt;/font> Кілька додатків сповільнюють роботу телефона</string>
+    <string name="scenery_card_booster_title">Працює повільно</string>
+    <string name="scenery_card_cleaner_button">ВИПРАВИТИ</string>
+    <string name="scenery_card_cleaner_content">Знайдено сміття &lt;font color=#3080F0>%1$s&lt;/font> на телефоні</string>
+    <string name="scenery_card_cleaner_title">Швидке очищення</string>
+    <string name="scenery_card_es_button">ОЧИСТИТИ</string>
+    <string name="scenery_card_es_content">Малий обсяг внутрішньої пам’яті – &lt;font color=#3080F0>%1$s&lt;/font></string>
+    <string name="scenery_card_es_title">Очищення диска</string>
+    <string name="scenery_card_photowonder_button">ПОКРАЩИТИ</string>
+    <string name="scenery_card_photowonder_content">У вас &lt;font color=#3080F0>%1$s&lt;/font> фото, які можна покращити.</string>
+    <string name="scenery_card_photowonder_title">Покращення фото</string>
+    <string name="scenery_charge_dialog_button_text">ОТРИМАТИ</string>
+    <string name="scenery_charge_dialog_content">Надмірне зарядж. %1$d хв &lt;font color=#FF8132>шкодить батареї&lt;/font>. Захистити з &lt;b>DU Battery Saver&lt;/b> .</string>
+    <string name="scenery_charge_dialog_title">Як заряджати</string>
+    <string name="scenery_disk_usage_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_disk_usage_dialog_content">Вільне місце в телефоні зменшилося на &lt;font color=#FF8132>%1$sМБ&lt;/font> за минулий(-і, -их) &lt;font color=#FF8132>%2$s дн.&lt;/font> .</string>
+    <string name="scenery_disk_usage_dialog_title">Очищення диска</string>
+    <string name="scenery_take_photo_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_take_photo_dialog_content">Фотографії не достатньо гарні? &lt;font color=#2274E6>Кінофільтри&lt;/font> від &lt;b>PhotoWonder&lt;/b> стануть в нагоді!</string>
+    <string name="scenery_take_photo_dialog_title">Навести красу</string>
+    <string name="scenery_uninstall_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_uninstall_dialog_content">%1$s залишив&lt;font color=#FF8132>непотр. файли&lt;/font>. Видаліть їх з &lt;b>DU Speed Booster&lt;/b>!</string>
+    <string name="scenery_uninstall_dialog_title">Є непотр. файли</string>
+    <string name="screen_lock_charging_boosted_time">Заряджання прискорено на %1$d хв</string>
+    <string name="select_device_to_share">ибрати пристрій для надсилання</string>
 </resources>

@@ -1,5 +1,5 @@
 .class Lcom/estrongs/fs/b/j;
-.super Lcom/estrongs/io/archive/i;
+.super Lcom/estrongs/io/archive/j;
 
 
 # instance fields
@@ -16,14 +16,14 @@
 
     iput-object p5, p0, Lcom/estrongs/fs/b/j;->a:Ljava/lang/String;
 
-    invoke-direct {p0, p2, p3, p4}, Lcom/estrongs/io/archive/i;-><init>(Ljava/lang/String;Lcom/estrongs/io/a/d;Ljava/util/Map;)V
+    invoke-direct {p0, p2, p3, p4}, Lcom/estrongs/io/archive/j;-><init>(Ljava/lang/String;Lcom/estrongs/io/a/d;Ljava/util/Map;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected a(Ljava/io/File;Ljava/lang/String;Lcom/estrongs/io/archive/e;)V
+.method protected a(Ljava/io/File;Ljava/lang/String;Lcom/estrongs/io/archive/f;)V
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -91,7 +91,7 @@
     return-void
 
     :cond_1
-    invoke-super {p0, p1, p2, p3}, Lcom/estrongs/io/archive/i;->a(Ljava/io/File;Ljava/lang/String;Lcom/estrongs/io/archive/e;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/estrongs/io/archive/j;->a(Ljava/io/File;Ljava/lang/String;Lcom/estrongs/io/archive/f;)V
 
     goto :goto_0
 .end method

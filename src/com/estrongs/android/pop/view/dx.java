@@ -1,7 +1,5 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.ui.guesture.ESGesturePanel;
-
 class dx
   implements Runnable
 {
@@ -9,7 +7,7 @@ class dx
   
   public void run()
   {
-    a.E.c();
+    a.f("app://user");
   }
 }
 

@@ -9,11 +9,11 @@
 .method public abstract c()V
 .end method
 
-.method public abstract c_()V
-.end method
-
 .method public abstract d()V
 .end method
 
-.method public abstract e()Landroid/graphics/Rect;
+.method public abstract getScrollViewRect()Landroid/graphics/Rect;
+.end method
+
+.method public abstract k_()V
 .end method

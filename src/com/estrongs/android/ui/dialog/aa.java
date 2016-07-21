@@ -1,18 +1,88 @@
 package com.estrongs.android.ui.dialog;
 
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
+import android.os.Handler;
+import android.view.LayoutInflater;
 import android.view.View;
-import java.util.List;
+import android.widget.ListView;
+import com.estrongs.android.pop.esclasses.k;
+import java.util.HashMap;
 
-class aa
-  implements Runnable
+public class aa
+  extends ci
 {
-  aa(z paramz, List paramList) {}
+  Handler a;
+  PackageManager b;
+  protected boolean c = false;
+  ad d;
+  private HashMap<String, Drawable> e;
   
-  public void run()
+  public aa(Context paramContext)
   {
-    b.a.findViewById(2131361852).setVisibility(8);
-    b.a.d.a(a);
-    b.a.d.notifyDataSetChanged();
+    super(paramContext);
+    setTitle(2131230983);
+    a(paramContext);
+    setSingleButton(paramContext.getResources().getString(2131232178), null);
+    e = new HashMap();
+    b = paramContext.getPackageManager();
+    c();
+    a = new Handler();
+  }
+  
+  private boolean a(String paramString)
+  {
+    return com.estrongs.android.pop.ad.b(mContext, paramString);
+  }
+  
+  private void b()
+  {
+    ListView localListView = (ListView)findViewById(2131624350);
+    localListView.setItemsCanFocus(true);
+    localListView.setCacheColorHint(0);
+    d = new ad(this, false);
+    localListView.setAdapter(d);
+  }
+  
+  private void c()
+  {
+    findViewById(2131624351).setVisibility(0);
+    new Thread(new ab(this)).start();
+  }
+  
+  protected int a()
+  {
+    return 2130903108;
+  }
+  
+  protected void a(Context paramContext)
+  {
+    paramContext = k.a(paramContext).inflate(a(), null);
+    paramContext.setMinimumWidth(1000);
+    setContentView(paramContext);
+    b();
+  }
+  
+  public void a(boolean paramBoolean)
+  {
+    c = paramBoolean;
+  }
+  
+  public void dismiss()
+  {
+    super.dismiss();
+  }
+  
+  public void show()
+  {
+    super.show();
+    if (c)
+    {
+      c = false;
+      c();
+    }
   }
 }
 

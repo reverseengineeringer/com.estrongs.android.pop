@@ -4,14 +4,14 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import com.estrongs.android.pop.view.utils.AppRunner;
 import com.estrongs.android.ui.dialog.j;
-import com.estrongs.fs.impl.b.f;
+import com.estrongs.fs.impl.b.g;
 import java.util.HashMap;
 import java.util.Map;
 
 class i
   implements DialogInterface.OnClickListener
 {
-  i(c paramc, f paramf, String paramString1, String paramString2) {}
+  i(c paramc, g paramg, String paramString1, String paramString2) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
@@ -29,7 +29,7 @@ class i
           AppRunner.a(d.a, a.getAbsolutePath(), a);
           return;
         }
-        AppRunner.r(d.a, a.getAbsolutePath());
+        AppRunner.s(d.a, a.getAbsolutePath());
         return;
       }
     } while (2 != paramInt);
@@ -43,7 +43,7 @@ class i
       AppRunner.a(d.a, a.getAbsolutePath(), a);
       return;
     }
-    AppRunner.r(d.a, a.getAbsolutePath());
+    AppRunner.s(d.a, a.getAbsolutePath());
   }
 }
 

@@ -1,16 +1,41 @@
-.class public Lcom/estrongs/android/pop/app/b/l;
-.super Lcom/estrongs/android/pop/app/b/f;
+.class Lcom/estrongs/android/pop/app/b/l;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcom/estrongs/android/scanner/h;
+
+
+# instance fields
+.field final synthetic a:Lcom/estrongs/android/pop/app/b/k;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcom/estrongs/android/pop/app/b/k;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/b/l;->a:Lcom/estrongs/android/pop/app/b/k;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a()V
     .locals 2
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/b/l;->a:Lcom/estrongs/android/pop/app/b/k;
 
-    const/4 v1, 0x0
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/b/k;->a(Lcom/estrongs/android/pop/app/b/k;)Landroid/os/Handler;
 
-    invoke-direct {p0, v0, v1}, Lcom/estrongs/android/pop/app/b/f;-><init>(I[I)V
+    move-result-object v0
+
+    new-instance v1, Lcom/estrongs/android/pop/app/b/m;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/b/m;-><init>(Lcom/estrongs/android/pop/app/b/l;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method

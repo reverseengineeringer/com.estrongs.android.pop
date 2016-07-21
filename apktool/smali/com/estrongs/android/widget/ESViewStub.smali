@@ -24,7 +24,7 @@
 
 .field private f:Landroid/view/LayoutInflater;
 
-.field private g:Lcom/estrongs/android/widget/b;
+.field private g:Lcom/estrongs/android/widget/e;
 
 
 # direct methods
@@ -172,13 +172,13 @@
 
     iput-object v0, p0, Lcom/estrongs/android/widget/ESViewStub;->e:Ljava/lang/ref/WeakReference;
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/ESViewStub;->g:Lcom/estrongs/android/widget/b;
+    iget-object v0, p0, Lcom/estrongs/android/widget/ESViewStub;->g:Lcom/estrongs/android/widget/e;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/ESViewStub;->g:Lcom/estrongs/android/widget/b;
+    iget-object v0, p0, Lcom/estrongs/android/widget/ESViewStub;->g:Lcom/estrongs/android/widget/e;
 
-    invoke-interface {v0, p0, v1}, Lcom/estrongs/android/widget/b;->a(Lcom/estrongs/android/widget/ESViewStub;Landroid/view/View;)V
+    invoke-interface {v0, p0, v1}, Lcom/estrongs/android/widget/e;->a(Lcom/estrongs/android/widget/ESViewStub;Landroid/view/View;)V
 
     :cond_1
     return-object v1
@@ -216,30 +216,6 @@
     throw v0
 .end method
 
-.method public a(I)V
-    .locals 0
-
-    iput p1, p0, Lcom/estrongs/android/widget/ESViewStub;->d:I
-
-    return-void
-.end method
-
-.method public a(Landroid/view/LayoutInflater;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/widget/ESViewStub;->f:Landroid/view/LayoutInflater;
-
-    return-void
-.end method
-
-.method public b(I)V
-    .locals 0
-
-    iput p1, p0, Lcom/estrongs/android/widget/ESViewStub;->c:I
-
-    return-void
-.end method
-
 .method protected dispatchDraw(Landroid/graphics/Canvas;)V
     .locals 0
 
@@ -252,12 +228,68 @@
     return-void
 .end method
 
+.method public getInflatedId()I
+    .locals 1
+
+    iget v0, p0, Lcom/estrongs/android/widget/ESViewStub;->d:I
+
+    return v0
+.end method
+
+.method public getLayoutInflater()Landroid/view/LayoutInflater;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ESViewStub;->f:Landroid/view/LayoutInflater;
+
+    return-object v0
+.end method
+
+.method public getLayoutResource()I
+    .locals 1
+
+    iget v0, p0, Lcom/estrongs/android/widget/ESViewStub;->c:I
+
+    return v0
+.end method
+
 .method protected onMeasure(II)V
     .locals 1
 
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, v0}, Lcom/estrongs/android/widget/ESViewStub;->setMeasuredDimension(II)V
+
+    return-void
+.end method
+
+.method public setInflatedId(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/estrongs/android/widget/ESViewStub;->d:I
+
+    return-void
+.end method
+
+.method public setLayoutInflater(Landroid/view/LayoutInflater;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/widget/ESViewStub;->f:Landroid/view/LayoutInflater;
+
+    return-void
+.end method
+
+.method public setLayoutResource(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/estrongs/android/widget/ESViewStub;->c:I
+
+    return-void
+.end method
+
+.method public setOnInflateListener(Lcom/estrongs/android/widget/e;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/widget/ESViewStub;->g:Lcom/estrongs/android/widget/e;
 
     return-void
 .end method

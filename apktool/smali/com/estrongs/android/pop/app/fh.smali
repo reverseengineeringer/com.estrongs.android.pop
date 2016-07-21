@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemLongClickListener;
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # instance fields
@@ -22,47 +22,33 @@
 
 
 # virtual methods
-.method public onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
+.method public onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)Z"
-        }
-    .end annotation
-
-    const/4 v1, 0x1
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/fh;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->i(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Lcom/estrongs/android/ui/view/ac;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->B()Lcom/estrongs/android/pop/app/c/i;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/ac;->b()Z
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/c/i;->b:Ljava/lang/String;
 
-    move-result v0
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bl(Ljava/lang/String;)Z
 
-    if-eqz v0, :cond_0
+    move-result v1
 
-    invoke-virtual {p1, p2, p3, p4, p5}, Landroid/widget/AdapterView;->performItemClick(Landroid/view/View;IJ)Z
+    if-nez v1, :cond_0
 
-    :goto_0
-    return v1
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bH(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/fh;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/fh;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->i(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Lcom/estrongs/android/ui/view/ac;
+    invoke-static {v1, v0}, Lcom/estrongs/android/pop/utils/ao;->a(Landroid/app/Activity;Ljava/lang/String;)V
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/ac;->a(Z)V
-
-    invoke-virtual {p1, p2, p3, p4, p5}, Landroid/widget/AdapterView;->performItemClick(Landroid/view/View;IJ)Z
-
-    goto :goto_0
+    return v0
 .end method

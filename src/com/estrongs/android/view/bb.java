@@ -1,13 +1,19 @@
 package com.estrongs.android.view;
 
+import com.estrongs.android.pop.app.compress.cb;
+import com.estrongs.io.archive.i;
+
 class bb
   implements Runnable
 {
-  bb(ax paramax) {}
+  bb(ak paramak, i parami) {}
   
   public void run()
   {
-    a.a.g();
+    cb localcb = new cb(b.ag, false, true);
+    localcb.setButton(-1, b.j(2131231270), new bc(this, localcb));
+    localcb.setButton(-2, b.j(2131231265), new bd(this, localcb));
+    localcb.show();
   }
 }
 

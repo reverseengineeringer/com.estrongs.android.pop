@@ -11,13 +11,16 @@ import android.view.ViewConfiguration;
 import android.widget.Scroller;
 import android.widget.ViewAnimator;
 import com.estrongs.android.pop.ac;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.d.i;
 
 public class RealViewSwitcher
   extends ViewAnimator
 {
   private int A = -1;
-  private boolean B = false;
+  private int B = -1;
   private boolean C = false;
+  private boolean D = false;
   private VelocityTracker a;
   private int b = -1;
   protected Scroller c;
@@ -25,7 +28,7 @@ public class RealViewSwitcher
   protected int e = 0;
   protected int f = -2;
   protected boolean g = true;
-  protected bc h = null;
+  protected bd h = null;
   float i = -1.0F;
   private int j = 0;
   private float k;
@@ -35,25 +38,27 @@ public class RealViewSwitcher
   private int o = 0;
   private int p = 0;
   private int q = -1;
-  private boolean r = true;
+  private Context r = null;
   private boolean s = true;
   private boolean t = true;
-  private boolean u = false;
+  private boolean u = true;
   private boolean v = false;
-  private boolean w = true;
-  private boolean x = false;
+  private boolean w = false;
+  private boolean x = true;
   private boolean y = false;
-  private int z = -1;
+  private boolean z = false;
   
   public RealViewSwitcher(Context paramContext)
   {
     super(paramContext);
+    r = paramContext;
     a();
   }
   
   public RealViewSwitcher(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
+    r = paramContext;
     a();
   }
   
@@ -67,17 +72,7 @@ public class RealViewSwitcher
     d = ViewConfiguration.get(getContext()).getScaledTouchSlop();
   }
   
-  private void b()
-  {
-    View localView = getChildAt(0);
-    if (localView == null) {
-      return;
-    }
-    localView.layout(localView.getWidth() + c(p - 1), localView.getTop(), localView.getWidth() * 2 + c(p - 1), localView.getBottom());
-    v = true;
-  }
-  
-  private int c(int paramInt)
+  private int b(int paramInt)
   {
     int i1 = 0;
     if (paramInt < 0) {
@@ -93,6 +88,21 @@ public class RealViewSwitcher
     return i1 + i2 * paramInt;
   }
   
+  private void b()
+  {
+    View localView = getChildAt(0);
+    if (localView == null) {
+      return;
+    }
+    localView.layout(localView.getWidth() + b(p - 1), localView.getTop(), localView.getWidth() * 2 + b(p - 1), localView.getBottom());
+    w = true;
+  }
+  
+  private int c(int paramInt)
+  {
+    return paramInt;
+  }
+  
   private void c()
   {
     View localView = getChildAt(0);
@@ -100,12 +110,7 @@ public class RealViewSwitcher
       return;
     }
     localView.layout(o, localView.getTop(), localView.getWidth() + o, localView.getBottom());
-    v = false;
-  }
-  
-  private int d(int paramInt)
-  {
-    return paramInt;
+    w = false;
   }
   
   private void d()
@@ -115,7 +120,7 @@ public class RealViewSwitcher
       return;
     }
     localView.layout(0, localView.getTop(), localView.getWidth(), localView.getBottom());
-    u = true;
+    v = true;
   }
   
   private void e()
@@ -124,71 +129,23 @@ public class RealViewSwitcher
     if (localView == null) {
       return;
     }
-    localView.layout(c(p - 1), localView.getTop(), localView.getWidth() + c(p - 1), localView.getBottom());
-    u = false;
+    localView.layout(b(p - 1), localView.getTop(), localView.getWidth() + b(p - 1), localView.getBottom());
+    v = false;
   }
   
-  private void f()
+  private void i()
   {
     p = getChildCount();
     if (p < 2) {
       g = false;
     }
-    while (!r) {
+    while (!s) {
       return;
     }
     g = true;
   }
   
   public void a(int paramInt)
-  {
-    a(paramInt, true);
-  }
-  
-  public void a(int paramInt1, int paramInt2)
-  {
-    z = paramInt1;
-    A = paramInt2;
-  }
-  
-  public void a(int paramInt, boolean paramBoolean)
-  {
-    if ((super.getInAnimation() != null) || (super.getOutAnimation() != null)) {
-      super.setDisplayedChild(paramInt);
-    }
-    paramInt = d(paramInt);
-    if (paramInt == -1) {
-      return;
-    }
-    if (paramBoolean) {
-      m = paramInt;
-    }
-    e = paramInt;
-    scrollTo(c(e), 0);
-    invalidate();
-  }
-  
-  public void a(bc parambc)
-  {
-    h = parambc;
-  }
-  
-  public void addView(View paramView)
-  {
-    addView(paramView, -1);
-  }
-  
-  public void addView(View paramView, int paramInt)
-  {
-    m = -2;
-    w = true;
-    paramView.setVisibility(0);
-    super.addView(paramView, paramInt);
-    f();
-    requestLayout();
-  }
-  
-  public void b(int paramInt)
   {
     if (!c.isFinished()) {
       return;
@@ -203,7 +160,7 @@ public class RealViewSwitcher
       if (h != null) {
         h.d(i1);
       }
-      paramInt = c(paramInt) - getScrollX();
+      paramInt = b(paramInt) - getScrollX();
       i1 = Math.min(Math.abs(paramInt) * 1000 / o, 200);
       c.startScroll(getScrollX(), 0, paramInt, 0, i1);
       invalidate();
@@ -216,15 +173,58 @@ public class RealViewSwitcher
     }
   }
   
+  public void a(int paramInt1, int paramInt2)
+  {
+    A = paramInt1;
+    B = paramInt2;
+  }
+  
+  public void a(int paramInt, boolean paramBoolean)
+  {
+    if ((super.getInAnimation() != null) || (super.getOutAnimation() != null)) {
+      super.setDisplayedChild(paramInt);
+    }
+    paramInt = c(paramInt);
+    if (paramInt == -1) {
+      return;
+    }
+    if (paramBoolean) {
+      m = paramInt;
+    }
+    e = paramInt;
+    scrollTo(b(e), 0);
+    invalidate();
+  }
+  
+  public void a(boolean paramBoolean)
+  {
+    s = paramBoolean;
+    g = paramBoolean;
+  }
+  
+  public void addView(View paramView)
+  {
+    addView(paramView, -1);
+  }
+  
+  public void addView(View paramView, int paramInt)
+  {
+    m = -2;
+    x = true;
+    paramView.setVisibility(0);
+    super.addView(paramView, paramInt);
+    i();
+    requestLayout();
+  }
+  
   public void b(boolean paramBoolean)
   {
-    x = paramBoolean;
+    u = paramBoolean;
   }
   
   public void c(boolean paramBoolean)
   {
-    r = paramBoolean;
-    g = paramBoolean;
+    t = paramBoolean;
   }
   
   public void computeScroll()
@@ -245,10 +245,10 @@ public class RealViewSwitcher
     }
     for (;;)
     {
-      if (v) {
+      if (w) {
         c();
       }
-      if (u) {
+      if (v) {
         e();
       }
       if (i2 != 0) {
@@ -264,7 +264,7 @@ public class RealViewSwitcher
         }
       }
       f = -2;
-      y = false;
+      z = false;
       return;
       if (e >= p) {
         i1 = 0;
@@ -274,22 +274,7 @@ public class RealViewSwitcher
     }
   }
   
-  public void d(boolean paramBoolean)
-  {
-    t = paramBoolean;
-  }
-  
-  public void e(boolean paramBoolean)
-  {
-    s = paramBoolean;
-  }
-  
-  public void f(boolean paramBoolean)
-  {
-    B = paramBoolean;
-  }
-  
-  public void g()
+  public void f()
   {
     int i1 = getWidth();
     int i2 = (getScrollX() + i1 / 2) / i1;
@@ -297,27 +282,35 @@ public class RealViewSwitcher
     if (g) {
       i1 = i2 - 1;
     }
-    b(i1);
+    a(i1);
   }
   
-  public int h()
+  public boolean g()
+  {
+    return C;
+  }
+  
+  public int getCurrentChildIndex()
+  {
+    return getCurrentScreen();
+  }
+  
+  public int getCurrentScreen()
   {
     return e;
   }
   
-  public int i()
+  public i getWindowListManager()
   {
-    return h();
+    if ((r instanceof FileExplorerActivity)) {
+      return ((FileExplorerActivity)r).au();
+    }
+    return new i();
   }
   
-  public boolean j()
+  public boolean h()
   {
-    return B;
-  }
-  
-  public boolean k()
-  {
-    return C;
+    return D;
   }
   
   public boolean onInterceptTouchEvent(MotionEvent paramMotionEvent)
@@ -340,7 +333,7 @@ public class RealViewSwitcher
       if (i1 == 0) {
         i = f1;
       }
-    } while ((i <= z) || (i >= getWidth() - A));
+    } while ((i <= A) || (i >= getWidth() - B));
     switch (i1 & 0xFF)
     {
     default: 
@@ -358,7 +351,7 @@ public class RealViewSwitcher
       }
       f1 = paramMotionEvent.getX(i2);
       i1 = (int)Math.abs(f1 - k);
-      if (((j()) && (f1 > k)) || ((k()) && (f1 < k))) {
+      if (((g()) && (f1 > k)) || ((h()) && (f1 < k))) {
         break;
       }
       i2 = (int)Math.abs(paramMotionEvent.getY(i2) - l);
@@ -372,16 +365,16 @@ public class RealViewSwitcher
         if (h != null) {
           h.a(e);
         }
-        y = true;
+        z = true;
         break;
       }
       label297:
       if (getScrollX() % getWidth() == 0) {
         break label132;
       }
-      g();
+      f();
       break label132;
-      if ((x) && (y)) {
+      if ((y) && (z)) {
         return true;
       }
       f1 = paramMotionEvent.getX();
@@ -392,11 +385,11 @@ public class RealViewSwitcher
       if (!c.isFinished())
       {
         c.abortAnimation();
-        y = false;
+        z = false;
       }
       j = 0;
       break label132;
-      if ((x) && (y)) {
+      if ((y) && (z)) {
         return true;
       }
       j = 0;
@@ -449,17 +442,17 @@ public class RealViewSwitcher
       int i1 = o;
       super.onMeasure(paramInt1, paramInt2);
       o = View.MeasureSpec.getSize(paramInt1);
-      if ((getChildCount() < 2) || ((!w) && (p < 2))) {
+      if ((getChildCount() < 2) || ((!x) && (p < 2))) {
         g = false;
       }
-      if (w)
+      if (x)
       {
-        w = false;
-        f();
+        x = false;
+        i();
       }
       if ((n) || (i1 != o))
       {
-        scrollTo(c(e), 0);
+        scrollTo(b(e), 0);
         n = false;
       }
       return;
@@ -486,7 +479,7 @@ public class RealViewSwitcher
     }
     if ((h != null) && (paramInt2 == 0))
     {
-      paramInt2 = c(e);
+      paramInt2 = b(e);
       paramInt3 = getWidth();
       if (paramInt3 != 0) {
         break label90;
@@ -509,41 +502,41 @@ public class RealViewSwitcher
     //   0: iconst_0
     //   1: istore 4
     //   3: aload_0
-    //   4: getfield 255	com/estrongs/android/widget/RealViewSwitcher:a	Landroid/view/VelocityTracker;
+    //   4: getfield 272	com/estrongs/android/widget/RealViewSwitcher:a	Landroid/view/VelocityTracker;
     //   7: ifnonnull +10 -> 17
     //   10: aload_0
-    //   11: invokestatic 261	android/view/VelocityTracker:obtain	()Landroid/view/VelocityTracker;
-    //   14: putfield 255	com/estrongs/android/widget/RealViewSwitcher:a	Landroid/view/VelocityTracker;
+    //   11: invokestatic 278	android/view/VelocityTracker:obtain	()Landroid/view/VelocityTracker;
+    //   14: putfield 272	com/estrongs/android/widget/RealViewSwitcher:a	Landroid/view/VelocityTracker;
     //   17: aload_0
-    //   18: getfield 255	com/estrongs/android/widget/RealViewSwitcher:a	Landroid/view/VelocityTracker;
+    //   18: getfield 272	com/estrongs/android/widget/RealViewSwitcher:a	Landroid/view/VelocityTracker;
     //   21: aload_1
-    //   22: invokevirtual 268	android/view/VelocityTracker:addMovement	(Landroid/view/MotionEvent;)V
+    //   22: invokevirtual 285	android/view/VelocityTracker:addMovement	(Landroid/view/MotionEvent;)V
     //   25: aload_1
-    //   26: invokevirtual 253	android/view/MotionEvent:getAction	()I
+    //   26: invokevirtual 270	android/view/MotionEvent:getAction	()I
     //   29: istore_3
     //   30: aload_1
-    //   31: invokevirtual 272	android/view/MotionEvent:getX	()F
+    //   31: invokevirtual 289	android/view/MotionEvent:getX	()F
     //   34: fstore_2
     //   35: iload_3
     //   36: ifne +8 -> 44
     //   39: aload_0
     //   40: fload_2
-    //   41: putfield 88	com/estrongs/android/widget/RealViewSwitcher:i	F
+    //   41: putfield 92	com/estrongs/android/widget/RealViewSwitcher:i	F
     //   44: aload_0
-    //   45: getfield 88	com/estrongs/android/widget/RealViewSwitcher:i	F
+    //   45: getfield 92	com/estrongs/android/widget/RealViewSwitcher:i	F
     //   48: aload_0
-    //   49: getfield 83	com/estrongs/android/widget/RealViewSwitcher:z	I
+    //   49: getfield 87	com/estrongs/android/widget/RealViewSwitcher:A	I
     //   52: i2f
     //   53: fcmpg
     //   54: ifgt +5 -> 59
     //   57: iconst_0
     //   58: ireturn
     //   59: aload_0
-    //   60: getfield 88	com/estrongs/android/widget/RealViewSwitcher:i	F
+    //   60: getfield 92	com/estrongs/android/widget/RealViewSwitcher:i	F
     //   63: aload_0
-    //   64: invokevirtual 243	com/estrongs/android/widget/RealViewSwitcher:getWidth	()I
+    //   64: invokevirtual 246	com/estrongs/android/widget/RealViewSwitcher:getWidth	()I
     //   67: aload_0
-    //   68: getfield 85	com/estrongs/android/widget/RealViewSwitcher:A	I
+    //   68: getfield 89	com/estrongs/android/widget/RealViewSwitcher:B	I
     //   71: isub
     //   72: i2f
     //   73: fcmpl
@@ -553,86 +546,86 @@ public class RealViewSwitcher
     //   108: iconst_1
     //   109: ireturn
     //   110: aload_0
-    //   111: getfield 77	com/estrongs/android/widget/RealViewSwitcher:x	Z
+    //   111: getfield 81	com/estrongs/android/widget/RealViewSwitcher:y	Z
     //   114: ifeq +20 -> 134
     //   117: aload_0
-    //   118: getfield 79	com/estrongs/android/widget/RealViewSwitcher:y	Z
+    //   118: getfield 83	com/estrongs/android/widget/RealViewSwitcher:z	Z
     //   121: ifeq +13 -> 134
     //   124: aload_0
     //   125: aload_0
-    //   126: getfield 49	com/estrongs/android/widget/RealViewSwitcher:e	I
-    //   129: putfield 61	com/estrongs/android/widget/RealViewSwitcher:q	I
+    //   126: getfield 51	com/estrongs/android/widget/RealViewSwitcher:e	I
+    //   129: putfield 63	com/estrongs/android/widget/RealViewSwitcher:q	I
     //   132: iconst_1
     //   133: ireturn
     //   134: aload_0
     //   135: aload_0
-    //   136: getfield 49	com/estrongs/android/widget/RealViewSwitcher:e	I
-    //   139: putfield 61	com/estrongs/android/widget/RealViewSwitcher:q	I
+    //   136: getfield 51	com/estrongs/android/widget/RealViewSwitcher:e	I
+    //   139: putfield 63	com/estrongs/android/widget/RealViewSwitcher:q	I
     //   142: goto -34 -> 108
     //   145: aload_0
-    //   146: getfield 47	com/estrongs/android/widget/RealViewSwitcher:j	I
+    //   146: getfield 49	com/estrongs/android/widget/RealViewSwitcher:j	I
     //   149: iconst_1
     //   150: if_icmpeq +90 -> 240
     //   153: fload_2
     //   154: aload_0
-    //   155: getfield 280	com/estrongs/android/widget/RealViewSwitcher:k	F
+    //   155: getfield 297	com/estrongs/android/widget/RealViewSwitcher:k	F
     //   158: fsub
-    //   159: invokestatic 283	java/lang/Math:abs	(F)F
+    //   159: invokestatic 300	java/lang/Math:abs	(F)F
     //   162: f2i
     //   163: istore_3
     //   164: aload_0
-    //   165: invokevirtual 285	com/estrongs/android/widget/RealViewSwitcher:j	()Z
+    //   165: invokevirtual 302	com/estrongs/android/widget/RealViewSwitcher:g	()Z
     //   168: ifeq +12 -> 180
     //   171: fload_2
     //   172: aload_0
-    //   173: getfield 280	com/estrongs/android/widget/RealViewSwitcher:k	F
+    //   173: getfield 297	com/estrongs/android/widget/RealViewSwitcher:k	F
     //   176: fcmpl
     //   177: ifgt -120 -> 57
     //   180: aload_0
-    //   181: invokevirtual 287	com/estrongs/android/widget/RealViewSwitcher:k	()Z
+    //   181: invokevirtual 304	com/estrongs/android/widget/RealViewSwitcher:h	()Z
     //   184: ifeq +12 -> 196
     //   187: fload_2
     //   188: aload_0
-    //   189: getfield 280	com/estrongs/android/widget/RealViewSwitcher:k	F
+    //   189: getfield 297	com/estrongs/android/widget/RealViewSwitcher:k	F
     //   192: fcmpg
     //   193: iflt -136 -> 57
     //   196: iload_3
     //   197: aload_0
-    //   198: getfield 132	com/estrongs/android/widget/RealViewSwitcher:d	I
+    //   198: getfield 136	com/estrongs/android/widget/RealViewSwitcher:d	I
     //   201: if_icmple +98 -> 299
     //   204: iconst_1
     //   205: istore_3
     //   206: iload_3
     //   207: ifeq +33 -> 240
     //   210: aload_0
-    //   211: getfield 81	com/estrongs/android/widget/RealViewSwitcher:h	Lcom/estrongs/android/widget/bc;
+    //   211: getfield 85	com/estrongs/android/widget/RealViewSwitcher:h	Lcom/estrongs/android/widget/bd;
     //   214: ifnull +16 -> 230
     //   217: aload_0
-    //   218: getfield 81	com/estrongs/android/widget/RealViewSwitcher:h	Lcom/estrongs/android/widget/bc;
+    //   218: getfield 85	com/estrongs/android/widget/RealViewSwitcher:h	Lcom/estrongs/android/widget/bd;
     //   221: aload_0
-    //   222: getfield 49	com/estrongs/android/widget/RealViewSwitcher:e	I
-    //   225: invokeinterface 297 2 0
+    //   222: getfield 51	com/estrongs/android/widget/RealViewSwitcher:e	I
+    //   225: invokeinterface 313 2 0
     //   230: aload_0
     //   231: iconst_1
-    //   232: putfield 79	com/estrongs/android/widget/RealViewSwitcher:y	Z
+    //   232: putfield 83	com/estrongs/android/widget/RealViewSwitcher:z	Z
     //   235: aload_0
     //   236: iconst_1
-    //   237: putfield 47	com/estrongs/android/widget/RealViewSwitcher:j	I
+    //   237: putfield 49	com/estrongs/android/widget/RealViewSwitcher:j	I
     //   240: aload_0
-    //   241: getfield 47	com/estrongs/android/widget/RealViewSwitcher:j	I
+    //   241: getfield 49	com/estrongs/android/widget/RealViewSwitcher:j	I
     //   244: iconst_1
     //   245: if_icmpne -137 -> 108
     //   248: aload_0
-    //   249: getfield 280	com/estrongs/android/widget/RealViewSwitcher:k	F
+    //   249: getfield 297	com/estrongs/android/widget/RealViewSwitcher:k	F
     //   252: fload_2
     //   253: fsub
     //   254: f2i
     //   255: istore 5
     //   257: aload_0
     //   258: fload_2
-    //   259: putfield 280	com/estrongs/android/widget/RealViewSwitcher:k	F
+    //   259: putfield 297	com/estrongs/android/widget/RealViewSwitcher:k	F
     //   262: aload_0
-    //   263: invokevirtual 207	com/estrongs/android/widget/RealViewSwitcher:getScrollX	()I
+    //   263: invokevirtual 174	com/estrongs/android/widget/RealViewSwitcher:getScrollX	()I
     //   266: istore 6
     //   268: iload 6
     //   270: iload 5
@@ -640,14 +633,14 @@ public class RealViewSwitcher
     //   273: istore_3
     //   274: aload_0
     //   275: aload_0
-    //   276: getfield 49	com/estrongs/android/widget/RealViewSwitcher:e	I
-    //   279: invokespecial 145	com/estrongs/android/widget/RealViewSwitcher:c	(I)I
+    //   276: getfield 51	com/estrongs/android/widget/RealViewSwitcher:e	I
+    //   279: invokespecial 149	com/estrongs/android/widget/RealViewSwitcher:b	(I)I
     //   282: istore 7
     //   284: iload_3
     //   285: iload 7
     //   287: if_icmpge +17 -> 304
     //   290: aload_0
-    //   291: getfield 65	com/estrongs/android/widget/RealViewSwitcher:s	Z
+    //   291: getfield 69	com/estrongs/android/widget/RealViewSwitcher:t	Z
     //   294: ifne +10 -> 304
     //   297: iconst_1
     //   298: ireturn
@@ -658,7 +651,7 @@ public class RealViewSwitcher
     //   305: iload 7
     //   307: if_icmple +12 -> 319
     //   310: aload_0
-    //   311: getfield 67	com/estrongs/android/widget/RealViewSwitcher:t	Z
+    //   311: getfield 71	com/estrongs/android/widget/RealViewSwitcher:u	Z
     //   314: ifne +5 -> 319
     //   317: iconst_1
     //   318: ireturn
@@ -667,7 +660,7 @@ public class RealViewSwitcher
     //   324: iload 6
     //   326: ifle +49 -> 375
     //   329: aload_0
-    //   330: getfield 69	com/estrongs/android/widget/RealViewSwitcher:g	Z
+    //   330: getfield 73	com/estrongs/android/widget/RealViewSwitcher:g	Z
     //   333: ifeq +29 -> 362
     //   336: iload 6
     //   338: iload 5
@@ -676,28 +669,28 @@ public class RealViewSwitcher
     //   342: iload_3
     //   343: aload_0
     //   344: iconst_0
-    //   345: invokespecial 145	com/estrongs/android/widget/RealViewSwitcher:c	(I)I
+    //   345: invokespecial 149	com/estrongs/android/widget/RealViewSwitcher:b	(I)I
     //   348: if_icmpge +107 -> 455
     //   351: aload_0
-    //   352: getfield 71	com/estrongs/android/widget/RealViewSwitcher:u	Z
+    //   352: getfield 75	com/estrongs/android/widget/RealViewSwitcher:v	Z
     //   355: ifne +7 -> 362
     //   358: aload_0
-    //   359: invokespecial 345	com/estrongs/android/widget/RealViewSwitcher:d	()V
+    //   359: invokespecial 361	com/estrongs/android/widget/RealViewSwitcher:d	()V
     //   362: aload_0
     //   363: iload 6
     //   365: ineg
     //   366: iload 5
-    //   368: invokestatic 348	java/lang/Math:max	(II)I
+    //   368: invokestatic 364	java/lang/Math:max	(II)I
     //   371: iconst_0
-    //   372: invokevirtual 351	com/estrongs/android/widget/RealViewSwitcher:scrollBy	(II)V
+    //   372: invokevirtual 367	com/estrongs/android/widget/RealViewSwitcher:scrollBy	(II)V
     //   375: aload_0
-    //   376: getfield 81	com/estrongs/android/widget/RealViewSwitcher:h	Lcom/estrongs/android/widget/bc;
+    //   376: getfield 85	com/estrongs/android/widget/RealViewSwitcher:h	Lcom/estrongs/android/widget/bd;
     //   379: ifnull -271 -> 108
     //   382: aload_0
-    //   383: getfield 57	com/estrongs/android/widget/RealViewSwitcher:o	I
+    //   383: getfield 59	com/estrongs/android/widget/RealViewSwitcher:o	I
     //   386: istore_3
     //   387: aload_0
-    //   388: invokevirtual 207	com/estrongs/android/widget/RealViewSwitcher:getScrollX	()I
+    //   388: invokevirtual 174	com/estrongs/android/widget/RealViewSwitcher:getScrollX	()I
     //   391: iload_3
     //   392: iconst_2
     //   393: idiv
@@ -708,7 +701,7 @@ public class RealViewSwitcher
     //   399: iload 5
     //   401: istore_3
     //   402: aload_0
-    //   403: getfield 69	com/estrongs/android/widget/RealViewSwitcher:g	Z
+    //   403: getfield 73	com/estrongs/android/widget/RealViewSwitcher:g	Z
     //   406: ifeq +267 -> 673
     //   409: iload 5
     //   411: iconst_1
@@ -717,39 +710,39 @@ public class RealViewSwitcher
     //   415: iload 5
     //   417: ifge +241 -> 658
     //   420: aload_0
-    //   421: getfield 59	com/estrongs/android/widget/RealViewSwitcher:p	I
+    //   421: getfield 61	com/estrongs/android/widget/RealViewSwitcher:p	I
     //   424: iconst_1
     //   425: isub
     //   426: istore_3
     //   427: aload_0
-    //   428: getfield 61	com/estrongs/android/widget/RealViewSwitcher:q	I
+    //   428: getfield 63	com/estrongs/android/widget/RealViewSwitcher:q	I
     //   431: iload_3
     //   432: if_icmpeq -324 -> 108
     //   435: iload_3
     //   436: aload_0
-    //   437: getfield 59	com/estrongs/android/widget/RealViewSwitcher:p	I
+    //   437: getfield 61	com/estrongs/android/widget/RealViewSwitcher:p	I
     //   440: if_icmpge -332 -> 108
     //   443: iload_3
     //   444: iflt -336 -> 108
     //   447: aload_0
     //   448: iload_3
-    //   449: putfield 61	com/estrongs/android/widget/RealViewSwitcher:q	I
+    //   449: putfield 63	com/estrongs/android/widget/RealViewSwitcher:q	I
     //   452: goto -344 -> 108
     //   455: iload_3
     //   456: aload_0
     //   457: iconst_1
-    //   458: invokespecial 145	com/estrongs/android/widget/RealViewSwitcher:c	(I)I
+    //   458: invokespecial 149	com/estrongs/android/widget/RealViewSwitcher:b	(I)I
     //   461: if_icmpge -99 -> 362
     //   464: aload_0
-    //   465: getfield 73	com/estrongs/android/widget/RealViewSwitcher:v	Z
+    //   465: getfield 77	com/estrongs/android/widget/RealViewSwitcher:w	Z
     //   468: ifeq -106 -> 362
     //   471: aload_0
-    //   472: invokespecial 236	com/estrongs/android/widget/RealViewSwitcher:c	()V
+    //   472: invokespecial 237	com/estrongs/android/widget/RealViewSwitcher:c	()V
     //   475: goto -113 -> 362
     //   478: iload 5
     //   480: ifle -105 -> 375
     //   483: aload_0
-    //   484: getfield 69	com/estrongs/android/widget/RealViewSwitcher:g	Z
+    //   484: getfield 73	com/estrongs/android/widget/RealViewSwitcher:g	Z
     //   487: ifeq +34 -> 521
     //   490: iload 6
     //   492: iload 5
@@ -758,32 +751,32 @@ public class RealViewSwitcher
     //   496: iload_3
     //   497: aload_0
     //   498: aload_0
-    //   499: getfield 59	com/estrongs/android/widget/RealViewSwitcher:p	I
+    //   499: getfield 61	com/estrongs/android/widget/RealViewSwitcher:p	I
     //   502: iconst_1
     //   503: isub
-    //   504: invokespecial 145	com/estrongs/android/widget/RealViewSwitcher:c	(I)I
+    //   504: invokespecial 149	com/estrongs/android/widget/RealViewSwitcher:b	(I)I
     //   507: if_icmple +65 -> 572
     //   510: aload_0
-    //   511: getfield 73	com/estrongs/android/widget/RealViewSwitcher:v	Z
+    //   511: getfield 77	com/estrongs/android/widget/RealViewSwitcher:w	Z
     //   514: ifne +7 -> 521
     //   517: aload_0
-    //   518: invokespecial 353	com/estrongs/android/widget/RealViewSwitcher:b	()V
+    //   518: invokespecial 369	com/estrongs/android/widget/RealViewSwitcher:b	()V
     //   521: aload_0
-    //   522: getfield 59	com/estrongs/android/widget/RealViewSwitcher:p	I
+    //   522: getfield 61	com/estrongs/android/widget/RealViewSwitcher:p	I
     //   525: ifle +128 -> 653
     //   528: aload_0
-    //   529: getfield 73	com/estrongs/android/widget/RealViewSwitcher:v	Z
+    //   529: getfield 77	com/estrongs/android/widget/RealViewSwitcher:w	Z
     //   532: ifeq +73 -> 605
     //   535: aload_0
     //   536: iconst_0
-    //   537: invokevirtual 137	com/estrongs/android/widget/RealViewSwitcher:getChildAt	(I)Landroid/view/View;
-    //   540: invokevirtual 356	android/view/View:getRight	()I
+    //   537: invokevirtual 142	com/estrongs/android/widget/RealViewSwitcher:getChildAt	(I)Landroid/view/View;
+    //   540: invokevirtual 372	android/view/View:getRight	()I
     //   543: istore_3
     //   544: iload_3
     //   545: iload 6
     //   547: isub
     //   548: aload_0
-    //   549: invokevirtual 243	com/estrongs/android/widget/RealViewSwitcher:getWidth	()I
+    //   549: invokevirtual 246	com/estrongs/android/widget/RealViewSwitcher:getWidth	()I
     //   552: isub
     //   553: istore_3
     //   554: iload_3
@@ -791,53 +784,53 @@ public class RealViewSwitcher
     //   558: aload_0
     //   559: iload_3
     //   560: iload 5
-    //   562: invokestatic 216	java/lang/Math:min	(II)I
+    //   562: invokestatic 183	java/lang/Math:min	(II)I
     //   565: iconst_0
-    //   566: invokevirtual 351	com/estrongs/android/widget/RealViewSwitcher:scrollBy	(II)V
+    //   566: invokevirtual 367	com/estrongs/android/widget/RealViewSwitcher:scrollBy	(II)V
     //   569: goto -194 -> 375
     //   572: iload_3
     //   573: aload_0
     //   574: aload_0
-    //   575: getfield 59	com/estrongs/android/widget/RealViewSwitcher:p	I
+    //   575: getfield 61	com/estrongs/android/widget/RealViewSwitcher:p	I
     //   578: iconst_1
     //   579: isub
-    //   580: invokespecial 145	com/estrongs/android/widget/RealViewSwitcher:c	(I)I
+    //   580: invokespecial 149	com/estrongs/android/widget/RealViewSwitcher:b	(I)I
     //   583: aload_0
-    //   584: getfield 57	com/estrongs/android/widget/RealViewSwitcher:o	I
+    //   584: getfield 59	com/estrongs/android/widget/RealViewSwitcher:o	I
     //   587: isub
     //   588: if_icmple -67 -> 521
     //   591: aload_0
-    //   592: getfield 71	com/estrongs/android/widget/RealViewSwitcher:u	Z
+    //   592: getfield 75	com/estrongs/android/widget/RealViewSwitcher:v	Z
     //   595: ifeq -74 -> 521
     //   598: aload_0
-    //   599: invokespecial 238	com/estrongs/android/widget/RealViewSwitcher:e	()V
+    //   599: invokespecial 239	com/estrongs/android/widget/RealViewSwitcher:e	()V
     //   602: goto -81 -> 521
     //   605: aload_0
-    //   606: getfield 71	com/estrongs/android/widget/RealViewSwitcher:u	Z
+    //   606: getfield 75	com/estrongs/android/widget/RealViewSwitcher:v	Z
     //   609: ifeq +22 -> 631
     //   612: aload_0
     //   613: aload_0
-    //   614: getfield 59	com/estrongs/android/widget/RealViewSwitcher:p	I
+    //   614: getfield 61	com/estrongs/android/widget/RealViewSwitcher:p	I
     //   617: iconst_1
     //   618: isub
-    //   619: invokespecial 145	com/estrongs/android/widget/RealViewSwitcher:c	(I)I
+    //   619: invokespecial 149	com/estrongs/android/widget/RealViewSwitcher:b	(I)I
     //   622: aload_0
-    //   623: getfield 57	com/estrongs/android/widget/RealViewSwitcher:o	I
+    //   623: getfield 59	com/estrongs/android/widget/RealViewSwitcher:o	I
     //   626: iadd
     //   627: istore_3
     //   628: goto -84 -> 544
     //   631: aload_0
     //   632: aload_0
-    //   633: getfield 59	com/estrongs/android/widget/RealViewSwitcher:p	I
+    //   633: getfield 61	com/estrongs/android/widget/RealViewSwitcher:p	I
     //   636: iconst_1
     //   637: isub
-    //   638: invokevirtual 137	com/estrongs/android/widget/RealViewSwitcher:getChildAt	(I)Landroid/view/View;
-    //   641: invokevirtual 356	android/view/View:getRight	()I
+    //   638: invokevirtual 142	com/estrongs/android/widget/RealViewSwitcher:getChildAt	(I)Landroid/view/View;
+    //   641: invokevirtual 372	android/view/View:getRight	()I
     //   644: istore_3
     //   645: goto -101 -> 544
     //   648: astore_1
     //   649: aload_1
-    //   650: invokevirtual 359	java/lang/Exception:printStackTrace	()V
+    //   650: invokevirtual 375	java/lang/Exception:printStackTrace	()V
     //   653: iconst_0
     //   654: istore_3
     //   655: goto -111 -> 544
@@ -845,138 +838,138 @@ public class RealViewSwitcher
     //   660: istore_3
     //   661: iload 5
     //   663: aload_0
-    //   664: getfield 59	com/estrongs/android/widget/RealViewSwitcher:p	I
+    //   664: getfield 61	com/estrongs/android/widget/RealViewSwitcher:p	I
     //   667: if_icmpge -240 -> 427
     //   670: iload 5
     //   672: istore_3
     //   673: goto -246 -> 427
     //   676: aload_0
-    //   677: getfield 47	com/estrongs/android/widget/RealViewSwitcher:j	I
+    //   677: getfield 49	com/estrongs/android/widget/RealViewSwitcher:j	I
     //   680: iconst_1
     //   681: if_icmpne +91 -> 772
     //   684: aload_0
-    //   685: getfield 255	com/estrongs/android/widget/RealViewSwitcher:a	Landroid/view/VelocityTracker;
+    //   685: getfield 272	com/estrongs/android/widget/RealViewSwitcher:a	Landroid/view/VelocityTracker;
     //   688: astore_1
     //   689: aload_1
     //   690: sipush 1000
-    //   693: invokevirtual 362	android/view/VelocityTracker:computeCurrentVelocity	(I)V
+    //   693: invokevirtual 378	android/view/VelocityTracker:computeCurrentVelocity	(I)V
     //   696: aload_1
-    //   697: invokevirtual 365	android/view/VelocityTracker:getXVelocity	()F
+    //   697: invokevirtual 381	android/view/VelocityTracker:getXVelocity	()F
     //   700: f2i
     //   701: istore_3
     //   702: iload_3
     //   703: sipush 300
     //   706: if_icmple +81 -> 787
     //   709: aload_0
-    //   710: getfield 69	com/estrongs/android/widget/RealViewSwitcher:g	Z
+    //   710: getfield 73	com/estrongs/android/widget/RealViewSwitcher:g	Z
     //   713: ifeq +67 -> 780
     //   716: aload_0
-    //   717: getfield 49	com/estrongs/android/widget/RealViewSwitcher:e	I
+    //   717: getfield 51	com/estrongs/android/widget/RealViewSwitcher:e	I
     //   720: iflt +67 -> 787
     //   723: aload_0
     //   724: aload_0
-    //   725: getfield 49	com/estrongs/android/widget/RealViewSwitcher:e	I
-    //   728: invokevirtual 137	com/estrongs/android/widget/RealViewSwitcher:getChildAt	(I)Landroid/view/View;
-    //   731: invokevirtual 368	android/view/View:getLeft	()I
+    //   725: getfield 51	com/estrongs/android/widget/RealViewSwitcher:e	I
+    //   728: invokevirtual 142	com/estrongs/android/widget/RealViewSwitcher:getChildAt	(I)Landroid/view/View;
+    //   731: invokevirtual 384	android/view/View:getLeft	()I
     //   734: istore_3
     //   735: iload_3
     //   736: aload_0
-    //   737: invokevirtual 207	com/estrongs/android/widget/RealViewSwitcher:getScrollX	()I
+    //   737: invokevirtual 174	com/estrongs/android/widget/RealViewSwitcher:getScrollX	()I
     //   740: if_icmple +116 -> 856
     //   743: aload_0
     //   744: aload_0
-    //   745: getfield 49	com/estrongs/android/widget/RealViewSwitcher:e	I
+    //   745: getfield 51	com/estrongs/android/widget/RealViewSwitcher:e	I
     //   748: iconst_1
     //   749: isub
-    //   750: invokevirtual 244	com/estrongs/android/widget/RealViewSwitcher:b	(I)V
+    //   750: invokevirtual 248	com/estrongs/android/widget/RealViewSwitcher:a	(I)V
     //   753: aload_0
-    //   754: getfield 255	com/estrongs/android/widget/RealViewSwitcher:a	Landroid/view/VelocityTracker;
+    //   754: getfield 272	com/estrongs/android/widget/RealViewSwitcher:a	Landroid/view/VelocityTracker;
     //   757: ifnull +15 -> 772
     //   760: aload_0
-    //   761: getfield 255	com/estrongs/android/widget/RealViewSwitcher:a	Landroid/view/VelocityTracker;
-    //   764: invokevirtual 310	android/view/VelocityTracker:recycle	()V
+    //   761: getfield 272	com/estrongs/android/widget/RealViewSwitcher:a	Landroid/view/VelocityTracker;
+    //   764: invokevirtual 326	android/view/VelocityTracker:recycle	()V
     //   767: aload_0
     //   768: aconst_null
-    //   769: putfield 255	com/estrongs/android/widget/RealViewSwitcher:a	Landroid/view/VelocityTracker;
+    //   769: putfield 272	com/estrongs/android/widget/RealViewSwitcher:a	Landroid/view/VelocityTracker;
     //   772: aload_0
     //   773: iconst_0
-    //   774: putfield 47	com/estrongs/android/widget/RealViewSwitcher:j	I
+    //   774: putfield 49	com/estrongs/android/widget/RealViewSwitcher:j	I
     //   777: goto -669 -> 108
     //   780: aload_0
-    //   781: getfield 49	com/estrongs/android/widget/RealViewSwitcher:e	I
+    //   781: getfield 51	com/estrongs/android/widget/RealViewSwitcher:e	I
     //   784: ifgt -61 -> 723
     //   787: iload_3
     //   788: sipush 65236
     //   791: if_icmpge +85 -> 876
     //   794: aload_0
-    //   795: getfield 69	com/estrongs/android/widget/RealViewSwitcher:g	Z
+    //   795: getfield 73	com/estrongs/android/widget/RealViewSwitcher:g	Z
     //   798: ifeq +65 -> 863
     //   801: aload_0
-    //   802: getfield 49	com/estrongs/android/widget/RealViewSwitcher:e	I
+    //   802: getfield 51	com/estrongs/android/widget/RealViewSwitcher:e	I
     //   805: aload_0
-    //   806: getfield 59	com/estrongs/android/widget/RealViewSwitcher:p	I
+    //   806: getfield 61	com/estrongs/android/widget/RealViewSwitcher:p	I
     //   809: if_icmpge +67 -> 876
     //   812: aload_0
     //   813: aload_0
-    //   814: getfield 49	com/estrongs/android/widget/RealViewSwitcher:e	I
-    //   817: invokevirtual 137	com/estrongs/android/widget/RealViewSwitcher:getChildAt	(I)Landroid/view/View;
-    //   820: invokevirtual 368	android/view/View:getLeft	()I
+    //   814: getfield 51	com/estrongs/android/widget/RealViewSwitcher:e	I
+    //   817: invokevirtual 142	com/estrongs/android/widget/RealViewSwitcher:getChildAt	(I)Landroid/view/View;
+    //   820: invokevirtual 384	android/view/View:getLeft	()I
     //   823: istore_3
     //   824: iload_3
     //   825: aload_0
-    //   826: invokevirtual 207	com/estrongs/android/widget/RealViewSwitcher:getScrollX	()I
+    //   826: invokevirtual 174	com/estrongs/android/widget/RealViewSwitcher:getScrollX	()I
     //   829: if_icmpge +65 -> 894
     //   832: aload_0
     //   833: aload_0
-    //   834: getfield 49	com/estrongs/android/widget/RealViewSwitcher:e	I
+    //   834: getfield 51	com/estrongs/android/widget/RealViewSwitcher:e	I
     //   837: iconst_1
     //   838: iadd
-    //   839: invokevirtual 244	com/estrongs/android/widget/RealViewSwitcher:b	(I)V
+    //   839: invokevirtual 248	com/estrongs/android/widget/RealViewSwitcher:a	(I)V
     //   842: goto -89 -> 753
     //   845: astore_1
     //   846: aload_1
-    //   847: invokevirtual 359	java/lang/Exception:printStackTrace	()V
+    //   847: invokevirtual 375	java/lang/Exception:printStackTrace	()V
     //   850: aload_0
-    //   851: invokevirtual 299	com/estrongs/android/widget/RealViewSwitcher:g	()V
+    //   851: invokevirtual 315	com/estrongs/android/widget/RealViewSwitcher:f	()V
     //   854: iconst_1
     //   855: ireturn
     //   856: aload_0
-    //   857: invokevirtual 299	com/estrongs/android/widget/RealViewSwitcher:g	()V
+    //   857: invokevirtual 315	com/estrongs/android/widget/RealViewSwitcher:f	()V
     //   860: goto -107 -> 753
     //   863: aload_0
-    //   864: getfield 49	com/estrongs/android/widget/RealViewSwitcher:e	I
+    //   864: getfield 51	com/estrongs/android/widget/RealViewSwitcher:e	I
     //   867: aload_0
-    //   868: getfield 59	com/estrongs/android/widget/RealViewSwitcher:p	I
+    //   868: getfield 61	com/estrongs/android/widget/RealViewSwitcher:p	I
     //   871: iconst_1
     //   872: isub
     //   873: if_icmplt -61 -> 812
     //   876: aload_0
-    //   877: invokevirtual 299	com/estrongs/android/widget/RealViewSwitcher:g	()V
+    //   877: invokevirtual 315	com/estrongs/android/widget/RealViewSwitcher:f	()V
     //   880: goto -127 -> 753
     //   883: astore_1
     //   884: aload_1
-    //   885: invokevirtual 359	java/lang/Exception:printStackTrace	()V
+    //   885: invokevirtual 375	java/lang/Exception:printStackTrace	()V
     //   888: aload_0
-    //   889: invokevirtual 299	com/estrongs/android/widget/RealViewSwitcher:g	()V
+    //   889: invokevirtual 315	com/estrongs/android/widget/RealViewSwitcher:f	()V
     //   892: iconst_1
     //   893: ireturn
     //   894: aload_0
-    //   895: invokevirtual 299	com/estrongs/android/widget/RealViewSwitcher:g	()V
+    //   895: invokevirtual 315	com/estrongs/android/widget/RealViewSwitcher:f	()V
     //   898: goto -145 -> 753
     //   901: aload_0
-    //   902: invokevirtual 299	com/estrongs/android/widget/RealViewSwitcher:g	()V
+    //   902: invokevirtual 315	com/estrongs/android/widget/RealViewSwitcher:f	()V
     //   905: aload_0
-    //   906: getfield 255	com/estrongs/android/widget/RealViewSwitcher:a	Landroid/view/VelocityTracker;
+    //   906: getfield 272	com/estrongs/android/widget/RealViewSwitcher:a	Landroid/view/VelocityTracker;
     //   909: ifnull +15 -> 924
     //   912: aload_0
-    //   913: getfield 255	com/estrongs/android/widget/RealViewSwitcher:a	Landroid/view/VelocityTracker;
-    //   916: invokevirtual 310	android/view/VelocityTracker:recycle	()V
+    //   913: getfield 272	com/estrongs/android/widget/RealViewSwitcher:a	Landroid/view/VelocityTracker;
+    //   916: invokevirtual 326	android/view/VelocityTracker:recycle	()V
     //   919: aload_0
     //   920: aconst_null
-    //   921: putfield 255	com/estrongs/android/widget/RealViewSwitcher:a	Landroid/view/VelocityTracker;
+    //   921: putfield 272	com/estrongs/android/widget/RealViewSwitcher:a	Landroid/view/VelocityTracker;
     //   924: aload_0
     //   925: iconst_0
-    //   926: putfield 47	com/estrongs/android/widget/RealViewSwitcher:j	I
+    //   926: putfield 49	com/estrongs/android/widget/RealViewSwitcher:j	I
     //   929: goto -821 -> 108
     // Local variable table:
     //   start	length	slot	name	signature
@@ -1000,10 +993,35 @@ public class RealViewSwitcher
   public void removeViewAt(int paramInt)
   {
     m = -2;
-    w = true;
+    x = true;
     super.removeViewAt(paramInt);
-    f();
+    i();
     requestLayout();
+  }
+  
+  public void setCurrentScreen(int paramInt)
+  {
+    a(paramInt, true);
+  }
+  
+  public void setLeftSlideLock(boolean paramBoolean)
+  {
+    D = paramBoolean;
+  }
+  
+  public void setOnScreenSwitchListener(bd parambd)
+  {
+    h = parambd;
+  }
+  
+  public void setRightSlideLock(boolean paramBoolean)
+  {
+    C = paramBoolean;
+  }
+  
+  public void setSwitchControlable(boolean paramBoolean)
+  {
+    y = paramBoolean;
   }
 }
 

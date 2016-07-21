@@ -1,15 +1,16 @@
 package com.estrongs.android.view;
 
-import com.estrongs.android.pop.esclasses.ESTextView;
-import com.estrongs.android.widget.e;
+import android.view.View;
 
-public class bt
-  extends e
+class bt
+  implements Runnable
 {
-  public ESTextView a;
-  public int b;
+  bt(br parambr) {}
   
-  public bt(aw paramaw) {}
+  public void run()
+  {
+    bo.y(a.a).setVisibility(8);
+  }
 }
 
 /* Location:

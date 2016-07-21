@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Lcom/estrongs/android/a/j;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/a/a;
+.field final synthetic a:Lcom/estrongs/android/a/b;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/a/a;)V
+.method constructor <init>(Lcom/estrongs/android/a/b;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/a;
+    iput-object p1, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,286 +22,267 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 9
+.method public a(Ljava/lang/String;)V
+    .locals 8
 
-    iget-object v0, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/a;
-
-    invoke-static {v0}, Lcom/estrongs/android/a/a;->b(Lcom/estrongs/android/a/a;)Landroid/widget/EditText;
+    invoke-static {}, Lcom/estrongs/android/a/b;->h()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    const-string v1, "DiskAnalyzer finish!!!"
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/estrongs/android/a/b;->i()Lcom/estrongs/android/a/b;
+
+    move-result-object v6
+
+    monitor-enter v6
+
+    :try_start_0
+    iget-object v0, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/b;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/a/b;->a(Lcom/estrongs/android/a/b;Z)Z
+
+    iget-object v0, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/b;
+
+    invoke-static {v0}, Lcom/estrongs/android/a/b;->a(Lcom/estrongs/android/a/b;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    new-instance v7, Ljava/util/HashMap;
+
+    invoke-direct {v7}, Ljava/util/HashMap;-><init>()V
+
+    invoke-static {}, Lcom/estrongs/android/a/l;->k()Ljava/util/List;
+
+    move-result-object v1
+
+    new-instance v0, Lcom/estrongs/android/a/b/a;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v3
+
+    const-wide/16 v4, 0x0
+
+    invoke-direct/range {v0 .. v5}, Lcom/estrongs/android/a/b/a;-><init>(Ljava/util/List;IIJ)V
+
+    const-string v1, "appcatalog"
+
+    invoke-virtual {v7, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/b;
+
+    invoke-static {v0}, Lcom/estrongs/android/a/b;->c(Lcom/estrongs/android/a/b;)Lcom/estrongs/android/a/v;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    iget-object v1, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/b;
+
+    invoke-static {v1}, Lcom/estrongs/android/a/b;->b(Lcom/estrongs/android/a/b;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x2
+
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/a/v;->c(Ljava/lang/String;I)Lcom/estrongs/android/a/b/a;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    const-string v1, "newcreate"
+
+    invoke-virtual {v7, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/b;
+
+    invoke-static {v0}, Lcom/estrongs/android/a/b;->c(Lcom/estrongs/android/a/b;)Lcom/estrongs/android/a/v;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/b;
+
+    invoke-static {v1}, Lcom/estrongs/android/a/b;->b(Lcom/estrongs/android/a/b;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x2
+
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/a/v;->d(Ljava/lang/String;I)Lcom/estrongs/android/a/b/a;
+
+    move-result-object v0
+
+    const-string v1, "longtime"
+
+    invoke-virtual {v7, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/b;
+
+    invoke-static {v0}, Lcom/estrongs/android/a/b;->c(Lcom/estrongs/android/a/b;)Lcom/estrongs/android/a/v;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/b;
+
+    invoke-static {v1}, Lcom/estrongs/android/a/b;->b(Lcom/estrongs/android/a/b;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x2
+
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/a/v;->a(Ljava/lang/String;I)Lcom/estrongs/android/a/b/a;
+
+    move-result-object v0
+
+    const-string v1, "largefile"
+
+    invoke-virtual {v7, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/b;
+
+    invoke-static {v0}, Lcom/estrongs/android/a/b;->c(Lcom/estrongs/android/a/b;)Lcom/estrongs/android/a/v;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/b;
+
+    invoke-static {v1}, Lcom/estrongs/android/a/b;->b(Lcom/estrongs/android/a/b;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x2
+
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/a/v;->e(Ljava/lang/String;I)Lcom/estrongs/android/a/b/a;
+
+    move-result-object v0
+
+    const-string v1, "redundancy"
+
+    invoke-virtual {v7, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/b;
+
+    invoke-static {v0}, Lcom/estrongs/android/a/b;->d(Lcom/estrongs/android/a/b;)Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/a;
-
-    invoke-static {v0}, Lcom/estrongs/android/a/a;->a(Lcom/estrongs/android/a/a;)Landroid/widget/CheckBox;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/CheckBox;->isChecked()Z
+    check-cast v0, Lcom/estrongs/android/a/j;
+
+    iget-object v2, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/b;
+
+    invoke-static {v2}, Lcom/estrongs/android/a/b;->b(Lcom/estrongs/android/a/b;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, v2, v7}, Lcom/estrongs/android/a/j;->a(Ljava/lang/String;Ljava/util/Map;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v6
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+
+    :cond_0
+    :try_start_1
+    invoke-static {}, Lcom/estrongs/android/a/b;->h()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "DiskAnalyzer has validate data before DBAnalyzer!"
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/b;
+
+    invoke-static {v0}, Lcom/estrongs/android/a/b;->d(Lcom/estrongs/android/a/b;)Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/a;
-
-    iget-object v0, v0, Lcom/estrongs/android/a/a;->d:Landroid/app/Activity;
-
-    iget-object v1, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/a;
-
-    iget-object v1, v1, Lcom/estrongs/android/a/a;->d:Landroid/app/Activity;
-
-    const v2, 0x7f0b01bd
-
-    invoke-virtual {v1, v2}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
-
-    :goto_0
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/a;
-
-    invoke-static {v0}, Lcom/estrongs/android/a/a;->b(Lcom/estrongs/android/a/a;)Landroid/widget/EditText;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    check-cast v0, Lcom/estrongs/android/a/j;
 
-    move-result-object v0
+    iget-object v2, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/b;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v0, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/a;
-
-    invoke-static {v0}, Lcom/estrongs/android/a/a;->c(Lcom/estrongs/android/a/a;)Landroid/widget/EditText;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v1, :cond_a
-
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->bi(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    move-object v7, v1
-
-    :goto_1
-    if-eqz v0, :cond_1
-
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bi(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    :cond_1
-    iget-object v1, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/a;
-
-    iget-object v5, v1, Lcom/estrongs/android/a/a;->c:Ljava/lang/String;
-
-    invoke-static {v5}, Lcom/estrongs/android/util/am;->D(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/estrongs/android/a/b;->b(Lcom/estrongs/android/a/b;)Ljava/lang/String;
 
     move-result-object v2
 
-    if-eqz v7, :cond_9
+    invoke-interface {v0, v2}, Lcom/estrongs/android/a/j;->a(Ljava/lang/String;)V
 
-    invoke-virtual {v7}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-eqz v1, :cond_9
-
-    invoke-static {v2, v7, v0}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    :goto_2
-    iget-object v3, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/a;
-
-    invoke-static {v3}, Lcom/estrongs/android/a/a;->d(Lcom/estrongs/android/a/a;)Landroid/widget/CheckBox;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/widget/CheckBox;->isChecked()Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->H(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->J(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->p(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->I(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->m(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->O(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_4
+    goto :goto_1
 
     :cond_2
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->O(Ljava/lang/String;)Z
+    iget-object v0, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/b;
 
-    move-result v3
+    invoke-static {v0}, Lcom/estrongs/android/a/b;->c(Lcom/estrongs/android/a/b;)Lcom/estrongs/android/a/v;
 
-    if-eqz v3, :cond_8
+    move-result-object v0
 
-    invoke-static {v5}, Lcom/estrongs/fs/impl/adb/c;->j(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/a/v;->a()V
 
-    move-result-object v4
+    monitor-exit v6
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-static {v1}, Lcom/estrongs/fs/impl/adb/c;->j(Ljava/lang/String;)Ljava/lang/String;
+    return-void
+.end method
 
-    move-result-object v3
+.method public a(Ljava/lang/String;Ljava/util/Map;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/estrongs/android/a/b/a;",
+            ">;)V"
+        }
+    .end annotation
 
-    invoke-static {v2}, Lcom/estrongs/fs/impl/adb/c;->j(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    :goto_3
-    iget-object v6, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/a;
-
-    iget-object v6, v6, Lcom/estrongs/android/a/a;->d:Landroid/app/Activity;
-
-    invoke-static {v6}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
-
-    move-result-object v8
-
-    invoke-virtual {v8, v4}, Lcom/estrongs/android/pop/ad;->h(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    if-nez v6, :cond_3
-
-    invoke-static {v3}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    :cond_3
-    invoke-virtual {v8, v4}, Lcom/estrongs/android/pop/ad;->c(Ljava/lang/String;)V
-
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->O(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    invoke-virtual {v8, v3, v6}, Lcom/estrongs/android/pop/ad;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_4
-    :goto_4
-    iget-object v1, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/a;
-
-    iget-object v1, v1, Lcom/estrongs/android/a/a;->f:Lcom/estrongs/android/a/d;
-
-    if-eqz v1, :cond_5
-
-    iget-object v1, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/a;
-
-    iget-object v1, v1, Lcom/estrongs/android/a/a;->f:Lcom/estrongs/android/a/d;
-
-    invoke-interface {v1, v7, v0, v5}, Lcom/estrongs/android/a/d;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
-
-    :cond_5
-    iget-object v0, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/a;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/a/a;->dismiss()V
-
-    goto/16 :goto_0
-
-    :cond_6
-    iget-object v1, p0, Lcom/estrongs/android/a/c;->a:Lcom/estrongs/android/a/a;
-
-    invoke-static {v1}, Lcom/estrongs/android/a/a;->d(Lcom/estrongs/android/a/a;)Landroid/widget/CheckBox;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/widget/CheckBox;->isChecked()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_7
-
-    invoke-virtual {v8, v3, v6}, Lcom/estrongs/android/pop/ad;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_4
-
-    :cond_7
-    invoke-virtual {v8, v2, v6}, Lcom/estrongs/android/pop/ad;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_4
-
-    :cond_8
-    move-object v3, v1
-
-    move-object v4, v5
-
-    goto :goto_3
-
-    :cond_9
-    move-object v1, v2
-
-    goto/16 :goto_2
-
-    :cond_a
-    move-object v7, v1
-
-    goto/16 :goto_1
+    return-void
 .end method

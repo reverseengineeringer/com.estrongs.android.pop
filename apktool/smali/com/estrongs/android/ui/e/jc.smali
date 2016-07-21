@@ -1,405 +1,142 @@
-.class public abstract Lcom/estrongs/android/ui/e/jc;
+.class Lcom/estrongs/android/ui/e/jc;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # instance fields
-.field private a:Landroid/content/Context;
-
-.field protected b:Landroid/view/WindowManager$LayoutParams;
-
-.field private c:Landroid/widget/LinearLayout;
-
-.field private d:Landroid/view/WindowManager;
-
-.field private e:Z
-
-.field private f:Z
-
-.field private g:Lcom/estrongs/android/ui/e/jj;
-
-.field private h:I
-
-.field private i:Landroid/os/Handler;
-
-.field private j:Ljava/lang/Runnable;
+.field final synthetic a:Lcom/estrongs/android/ui/e/iq;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Z)V
-    .locals 2
+.method constructor <init>(Lcom/estrongs/android/ui/e/iq;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/jc;->a:Lcom/estrongs/android/ui/e/iq;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x5
-
-    iput v0, p0, Lcom/estrongs/android/ui/e/jc;->h:I
-
-    new-instance v0, Lcom/estrongs/android/ui/e/jd;
-
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/e/jd;-><init>(Lcom/estrongs/android/ui/e/jc;)V
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/e/jc;->j:Ljava/lang/Runnable;
-
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/jc;->a:Landroid/content/Context;
-
-    iput-boolean p2, p0, Lcom/estrongs/android/ui/e/jc;->e:Z
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/estrongs/android/ui/e/jc;->f:Z
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->a:Landroid/content/Context;
-
-    const-string v1, "window"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/WindowManager;
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/e/jc;->d:Landroid/view/WindowManager;
-
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/e/jc;->i:Landroid/os/Handler;
-
-    invoke-virtual {p0}, Lcom/estrongs/android/ui/e/jc;->b()V
-
     return-void
-.end method
-
-.method static synthetic a(Lcom/estrongs/android/ui/e/jc;)Ljava/lang/Runnable;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->j:Ljava/lang/Runnable;
-
-    return-object v0
-.end method
-
-.method static synthetic a(Lcom/estrongs/android/ui/e/jc;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/estrongs/android/ui/e/jc;->f:Z
-
-    return p1
-.end method
-
-.method static synthetic b(Lcom/estrongs/android/ui/e/jc;)Landroid/os/Handler;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->i:Landroid/os/Handler;
-
-    return-object v0
-.end method
-
-.method static synthetic c(Lcom/estrongs/android/ui/e/jc;)Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/estrongs/android/ui/e/jc;->f:Z
-
-    return v0
-.end method
-
-.method static synthetic d(Lcom/estrongs/android/ui/e/jc;)Lcom/estrongs/android/ui/e/jj;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->g:Lcom/estrongs/android/ui/e/jj;
-
-    return-object v0
-.end method
-
-.method private e()V
-    .locals 3
-
-    :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->d:Landroid/view/WindowManager;
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/e/jc;->c:Landroid/widget/LinearLayout;
-
-    iget-object v2, p0, Lcom/estrongs/android/ui/e/jc;->b:Landroid/view/WindowManager$LayoutParams;
-
-    invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->c:Landroid/widget/LinearLayout;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->g:Lcom/estrongs/android/ui/e/jj;
-
-    instance-of v0, v0, Lcom/estrongs/android/ui/e/jp;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->g:Lcom/estrongs/android/ui/e/jj;
-
-    check-cast v0, Lcom/estrongs/android/ui/e/jp;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/e/jp;->c()V
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->i:Landroid/os/Handler;
-
-    new-instance v1, Lcom/estrongs/android/ui/e/ji;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/e/ji;-><init>(Lcom/estrongs/android/ui/e/jc;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-
-    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public abstract a()V
-.end method
+.method public onMenuItemClick(Landroid/view/MenuItem;)Z
+    .locals 8
 
-.method public a(Ljava/util/List;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/estrongs/android/view/a/a;",
-            ">;)V"
-        }
-    .end annotation
+    const v7, 0x7f0803dd
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->g:Lcom/estrongs/android/ui/e/jj;
+    const/4 v6, 0x1
 
-    invoke-interface {v0, p1}, Lcom/estrongs/android/ui/e/jj;->a(Ljava/util/List;)V
+    const/4 v5, 0x0
 
-    invoke-direct {p0}, Lcom/estrongs/android/ui/e/jc;->e()V
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->a:Lcom/estrongs/android/ui/e/iq;
 
-    return-void
-.end method
-
-.method protected b()V
-    .locals 4
-
-    const/4 v2, -0x1
-
-    const/4 v3, -0x2
-
-    new-instance v0, Lcom/estrongs/android/ui/e/je;
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/e/jc;->a:Landroid/content/Context;
-
-    invoke-direct {v0, p0, v1}, Lcom/estrongs/android/ui/e/je;-><init>(Lcom/estrongs/android/ui/e/jc;Landroid/content/Context;)V
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/e/jc;->c:Landroid/widget/LinearLayout;
-
-    new-instance v0, Landroid/view/WindowManager$LayoutParams;
-
-    invoke-direct {v0}, Landroid/view/WindowManager$LayoutParams;-><init>()V
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/e/jc;->b:Landroid/view/WindowManager$LayoutParams;
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->b:Landroid/view/WindowManager$LayoutParams;
-
-    iput v2, v0, Landroid/view/WindowManager$LayoutParams;->width:I
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->b:Landroid/view/WindowManager$LayoutParams;
-
-    iput v2, v0, Landroid/view/WindowManager$LayoutParams;->height:I
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->b:Landroid/view/WindowManager$LayoutParams;
-
-    iput v3, v0, Landroid/view/WindowManager$LayoutParams;->format:I
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->c:Landroid/widget/LinearLayout;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->c:Landroid/widget/LinearLayout;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->c:Landroid/widget/LinearLayout;
-
-    new-instance v1, Lcom/estrongs/android/ui/e/jf;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/e/jf;-><init>(Lcom/estrongs/android/ui/e/jc;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-boolean v0, p0, Lcom/estrongs/android/ui/e/jc;->e:Z
-
-    if-eqz v0, :cond_1
-
-    new-instance v0, Lcom/estrongs/android/ui/e/jg;
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/e/jc;->a:Landroid/content/Context;
-
-    iget v2, p0, Lcom/estrongs/android/ui/e/jc;->h:I
-
-    invoke-direct {v0, p0, v1, v2}, Lcom/estrongs/android/ui/e/jg;-><init>(Lcom/estrongs/android/ui/e/jc;Landroid/content/Context;I)V
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/e/jc;->g:Lcom/estrongs/android/ui/e/jj;
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->c:Landroid/widget/LinearLayout;
-
-    const/16 v1, 0x35
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setGravity(I)V
-
-    new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
-
-    invoke-direct {v1, v3, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->a:Landroid/content/Context;
-
-    instance-of v0, v0, Lcom/estrongs/android/ui/e/jb;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->a:Landroid/content/Context;
-
-    check-cast v0, Lcom/estrongs/android/ui/e/jb;
-
-    invoke-interface {v0}, Lcom/estrongs/android/ui/e/jb;->t()Landroid/graphics/Rect;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    new-instance v3, Landroid/graphics/Rect;
-
-    invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->a:Landroid/content/Context;
-
-    check-cast v0, Landroid/app/Activity;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/iq;->a(Lcom/estrongs/android/ui/e/iq;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->A()Ljava/util/List;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    iget v0, v3, Landroid/graphics/Rect;->top:I
+    move-result v1
 
-    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
+    if-lez v1, :cond_0
 
-    move-result v3
+    invoke-interface {v0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    iput v3, v1, Landroid/widget/LinearLayout$LayoutParams;->height:I
+    move-result-object v0
 
-    iget v2, v2, Landroid/graphics/Rect;->top:I
+    check-cast v0, Lcom/estrongs/android/pop/app/c/i;
 
-    sub-int v0, v2, v0
+    const/4 v1, 0x3
 
-    iput v0, v1, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+    new-array v1, v1, [Ljava/lang/String;
 
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->c:Landroid/widget/LinearLayout;
+    iget-object v2, p0, Lcom/estrongs/android/ui/e/jc;->a:Lcom/estrongs/android/ui/e/iq;
 
-    iget-object v2, p0, Lcom/estrongs/android/ui/e/jc;->g:Lcom/estrongs/android/ui/e/jj;
-
-    invoke-interface {v2}, Lcom/estrongs/android/ui/e/jj;->a()Landroid/view/View;
+    invoke-static {v2}, Lcom/estrongs/android/ui/e/iq;->a(Lcom/estrongs/android/ui/e/iq;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
     move-result-object v2
 
-    invoke-virtual {v0, v2, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v2, v7}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
 
-    :goto_0
-    return-void
+    move-result-object v2
 
-    :cond_1
-    new-instance v0, Lcom/estrongs/android/ui/e/jh;
+    aput-object v2, v1, v5
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/e/jc;->a:Landroid/content/Context;
+    iget-object v2, p0, Lcom/estrongs/android/ui/e/jc;->a:Lcom/estrongs/android/ui/e/iq;
 
-    iget v2, p0, Lcom/estrongs/android/ui/e/jc;->h:I
+    invoke-static {v2}, Lcom/estrongs/android/ui/e/iq;->a(Lcom/estrongs/android/ui/e/iq;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
-    invoke-direct {v0, p0, v1, v2}, Lcom/estrongs/android/ui/e/jh;-><init>(Lcom/estrongs/android/ui/e/jc;Landroid/content/Context;I)V
+    move-result-object v2
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/e/jc;->g:Lcom/estrongs/android/ui/e/jj;
+    const v3, 0x7f0803dc
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->c:Landroid/widget/LinearLayout;
+    invoke-virtual {v2, v3}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
 
-    const/16 v1, 0x11
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setGravity(I)V
+    aput-object v2, v1, v6
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->c:Landroid/widget/LinearLayout;
+    const/4 v2, 0x2
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/e/jc;->g:Lcom/estrongs/android/ui/e/jj;
+    iget-object v3, p0, Lcom/estrongs/android/ui/e/jc;->a:Lcom/estrongs/android/ui/e/iq;
 
-    invoke-interface {v1}, Lcom/estrongs/android/ui/e/jj;->a()Landroid/view/View;
+    invoke-static {v3}, Lcom/estrongs/android/ui/e/iq;->a(Lcom/estrongs/android/ui/e/iq;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+    const v4, 0x7f0803db
 
-    goto :goto_0
-.end method
+    invoke-virtual {v3, v4}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
 
-.method public c()Z
-    .locals 1
+    move-result-object v3
 
-    iget-boolean v0, p0, Lcom/estrongs/android/ui/e/jc;->f:Z
+    aput-object v3, v1, v2
 
-    return v0
-.end method
+    new-instance v2, Lcom/estrongs/android/ui/dialog/cv;
 
-.method public d()V
-    .locals 2
+    iget-object v3, p0, Lcom/estrongs/android/ui/e/jc;->a:Lcom/estrongs/android/ui/e/iq;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->c:Landroid/widget/LinearLayout;
+    invoke-static {v3}, Lcom/estrongs/android/ui/e/iq;->a(Lcom/estrongs/android/ui/e/iq;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
-    if-eqz v0, :cond_0
+    move-result-object v3
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->c:Landroid/widget/LinearLayout;
+    invoke-direct {v2, v3}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
 
-    const/16 v1, 0x8
+    invoke-virtual {v2, v7}, Lcom/estrongs/android/ui/dialog/cv;->a(I)Lcom/estrongs/android/ui/dialog/cv;
 
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    move-result-object v2
 
-    :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->d:Landroid/view/WindowManager;
+    const/4 v3, -0x1
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/e/jc;->c:Landroid/widget/LinearLayout;
+    new-instance v4, Lcom/estrongs/android/ui/e/jd;
 
-    invoke-interface {v0, v1}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {v4, p0, v0}, Lcom/estrongs/android/ui/e/jd;-><init>(Lcom/estrongs/android/ui/e/jc;Lcom/estrongs/android/pop/app/c/i;)V
 
-    :goto_0
-    const/4 v0, 0x0
+    invoke-virtual {v2, v1, v3, v4}, Lcom/estrongs/android/ui/dialog/cv;->a([Ljava/lang/CharSequence;ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
-    iput-boolean v0, p0, Lcom/estrongs/android/ui/e/jc;->f:Z
+    move-result-object v0
 
-    invoke-virtual {p0}, Lcom/estrongs/android/ui/e/jc;->a()V
+    invoke-virtual {v0, v5}, Lcom/estrongs/android/ui/dialog/cv;->d(Z)Lcom/estrongs/android/ui/dialog/cv;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cv;->c()Lcom/estrongs/android/ui/dialog/ci;
 
     :cond_0
-    return-void
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/jc;->a:Lcom/estrongs/android/ui/e/iq;
 
-    :catch_0
-    move-exception v0
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/iq;->a(Lcom/estrongs/android/ui/e/iq;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
-    goto :goto_0
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->z()V
+
+    return v6
 .end method

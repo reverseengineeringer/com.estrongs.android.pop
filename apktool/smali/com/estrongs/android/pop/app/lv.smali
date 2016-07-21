@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/media/MediaPlayer$OnErrorListener;
+.implements Landroid/content/DialogInterface$OnDismissListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
+.field final synthetic a:Lcom/estrongs/android/pop/app/ShowDialogActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/lv;->a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/lv;->a:Lcom/estrongs/android/pop/app/ShowDialogActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,26 +22,12 @@
 
 
 # virtual methods
-.method public onError(Landroid/media/MediaPlayer;II)Z
-    .locals 3
+.method public onDismiss(Landroid/content/DialogInterface;)V
+    .locals 1
 
-    const/4 v2, 0x1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/lv;->a:Lcom/estrongs/android/pop/app/ShowDialogActivity;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/lv;->a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ShowDialogActivity;->finish()V
 
-    invoke-static {v0, v2}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->b(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;Z)Z
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/lv;->a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->i(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)Landroid/os/Handler;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/estrongs/android/pop/app/lw;
-
-    invoke-direct {v1, p0, p3}, Lcom/estrongs/android/pop/app/lw;-><init>(Lcom/estrongs/android/pop/app/lv;I)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return v2
+    return-void
 .end method

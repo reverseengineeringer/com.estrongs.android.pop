@@ -33,7 +33,7 @@ class FlickrPhotoAlbumDialog$3
         if (!"".equals(val$new_album_name.getText().toString().trim())) {
           break;
         }
-        a.a(val$context, 2131428071);
+        a.a(val$context, 2131232153);
         return;
       }
     }

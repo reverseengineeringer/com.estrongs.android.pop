@@ -29,19 +29,19 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/dialog/q;->a:Lcom/estrongs/android/ui/dialog/o;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/o;->a(Lcom/estrongs/android/ui/dialog/o;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/o;->a(Lcom/estrongs/android/ui/dialog/o;)Landroid/app/Activity;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/estrongs/android/ui/dialog/q;->a:Lcom/estrongs/android/ui/dialog/o;
 
-    iget-object v1, v1, Lcom/estrongs/android/ui/dialog/o;->a:Lcom/estrongs/fs/impl/b/c;
+    iget-object v1, v1, Lcom/estrongs/android/ui/dialog/o;->a:Lcom/estrongs/fs/impl/b/d;
 
-    invoke-virtual {v1}, Lcom/estrongs/fs/impl/b/c;->c()Landroid/content/pm/ApplicationInfo;
+    invoke-virtual {v1}, Lcom/estrongs/fs/impl/b/d;->h()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/pop/utils/c;->a(Landroid/app/Activity;Landroid/content/pm/ApplicationInfo;)V
+    invoke-static {v0, v1}, Lcom/estrongs/android/pop/utils/c;->b(Landroid/content/Context;Landroid/content/pm/ApplicationInfo;)V
 
     return-void
 .end method

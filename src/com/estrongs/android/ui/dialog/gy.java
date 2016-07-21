@@ -1,8 +1,19 @@
 package com.estrongs.android.ui.dialog;
 
-public abstract interface gy
+import android.view.View;
+import android.view.View.OnClickListener;
+
+class gy
+  implements View.OnClickListener
 {
-  public abstract void a(int paramInt);
+  gy(gx paramgx, int paramInt) {}
+  
+  public void onClick(View paramView)
+  {
+    if (b.b != null) {
+      b.b.a(a);
+    }
+  }
 }
 
 /* Location:

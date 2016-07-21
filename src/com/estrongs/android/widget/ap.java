@@ -1,34 +1,87 @@
 package com.estrongs.android.widget;
 
+import android.app.Activity;
+import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
-import com.estrongs.android.view.ca;
-import com.estrongs.android.view.cd;
+import android.view.ViewGroup;
+import android.widget.TextView;
+import com.estrongs.android.pop.esclasses.k;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.view.dv;
+import com.estrongs.android.view.eb;
 
-class ap
-  implements ca
+public class ap
+  extends ci
 {
-  ap(ao paramao) {}
+  protected eb e;
+  protected Activity f;
+  protected View g;
+  protected av h;
+  protected View i;
+  protected TextView j;
+  protected dv k = new aq(this);
   
-  public void a(String paramString, boolean paramBoolean)
+  public ap(Activity paramActivity, av paramav)
   {
-    a(paramString, paramBoolean, true);
+    super(paramActivity);
+    super.setOnDismissListener(new ar(this));
+    f = paramActivity;
+    h = paramav;
+    a(paramActivity);
+    c();
   }
   
-  public void a(String paramString, boolean paramBoolean1, boolean paramBoolean2)
+  protected int a()
   {
-    if (a.m != null)
+    return 2130903269;
+  }
+  
+  protected void a(Context paramContext)
+  {
+    paramContext = k.a(paramContext).inflate(a(), null);
+    paramContext.setMinimumWidth(1000);
+    setContentView(paramContext);
+    g = ((ViewGroup)findViewById(2131624997));
+    i = ((ViewGroup)findViewById(2131624995));
+    if (i != null)
     {
-      if (a.b().p())
-      {
-        a.m.setVisibility(8);
-        a.b().a(false);
-      }
+      i.setOnClickListener(new as(this));
+      j = ((TextView)findViewById(2131624996));
     }
-    else {
-      return;
+  }
+  
+  protected eb b()
+  {
+    return e;
+  }
+  
+  public void b(boolean paramBoolean)
+  {
+    e.a(e.P());
+    e.b(false);
+  }
+  
+  protected void c()
+  {
+    if (e == null)
+    {
+      e = new at(this, f, null, null);
+      e.i(com.estrongs.android.ui.theme.at.a(mContext).c(2131558661));
+      e.a(11);
+      e.a(new au(this));
+      ((ViewGroup)g).addView(e.aE());
+      e.a(k);
+      e.j("gallery://local/buckets/");
     }
-    a.m.setVisibility(0);
-    a.b().a(true);
+  }
+  
+  public void dismiss()
+  {
+    super.dismiss();
+    if (e != null) {
+      e.i_();
+    }
   }
 }
 

@@ -1,31 +1,30 @@
 package com.estrongs.android.ui.dialog;
 
+import android.app.Activity;
+import android.text.ClipboardManager;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.ProgressBar;
-import com.estrongs.android.pop.app.diskusage.a;
-import com.estrongs.fs.b.am;
+import android.widget.TextView;
+import com.estrongs.android.ui.view.ak;
 
 class ef
   implements View.OnClickListener
 {
-  ef(eb parameb) {}
+  ef(ee paramee, Activity paramActivity) {}
   
   public void onClick(View paramView)
   {
-    if (eb.a(a) != null)
+    paramView = (TextView)ee.a(b, 2131624738);
+    if (paramView != null)
     {
-      paramView = eb.a(a).b();
-      if ((a.l == null) && (paramView != null)) {
-        a.l = new a(eb.b(a), paramView);
-      }
-      if (paramView != null)
+      paramView = paramView.getText().toString();
+      Object localObject = a;
+      Activity localActivity = a;
+      localObject = (ClipboardManager)((Activity)localObject).getSystemService("clipboard");
+      if (localObject != null)
       {
-        a.l.b(paramView);
-        a.l.show();
-        if (a.j.getVisibility() == 0) {
-          a.l.a();
-        }
+        ((ClipboardManager)localObject).setText(paramView);
+        ak.a(a, 2131231282, 0);
       }
     }
   }

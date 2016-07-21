@@ -1,6 +1,6 @@
 package com.estrongs.fs.impl.usb.fs.ntfs.b;
 
-import android.util.Log;
+import com.estrongs.android.util.l;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -15,11 +15,11 @@ class i
   public i(h paramh)
   {
     if (h.a(paramh)) {
-      Log.d(h.d(), "FullIndexEntryIterator");
+      l.b(h.d(), "FullIndexEntryIterator");
     }
     c = paramh.a().d();
     if (h.a(paramh)) {
-      Log.d(h.d(), "currentIterator=" + c);
+      l.b(h.d(), "currentIterator=" + c);
     }
     b();
   }
@@ -32,7 +32,7 @@ class i
       if (d.a())
       {
         if (h.a(a)) {
-          Log.d(h.d(), "next has subnode");
+          l.b(h.d(), "next has subnode");
         }
         b.a(d);
       }
@@ -48,10 +48,10 @@ class i
           break;
         }
       } while (!h.a(a));
-      Log.d(h.d(), "end of list");
+      l.b(h.d(), "end of list");
       return;
       if (h.a(a)) {
-        Log.d(h.d(), "hasNext: read next indexblock");
+        l.b(h.d(), "hasNext: read next indexblock");
       }
       Object localObject = (c)b.a();
       f localf = a.a().a();
@@ -62,7 +62,7 @@ class i
       }
       catch (IOException localIOException) {}
     } while (!h.a(a));
-    Log.d(h.d(), "Cannot read next index block", localIOException);
+    l.a(h.d(), "Cannot read next index block", localIOException);
   }
   
   public c a()

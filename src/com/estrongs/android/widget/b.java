@@ -1,10 +1,17 @@
 package com.estrongs.android.widget;
 
-import android.view.View;
+import android.support.v4.a.l;
 
-public abstract interface b
+public class b
+  implements android.support.v4.a.b
 {
-  public abstract void a(ESViewStub paramESViewStub, View paramView);
+  public void onAnimationCancel(l paraml) {}
+  
+  public void onAnimationEnd(l paraml) {}
+  
+  public void onAnimationRepeat(l paraml) {}
+  
+  public void onAnimationStart(l paraml) {}
 }
 
 /* Location:

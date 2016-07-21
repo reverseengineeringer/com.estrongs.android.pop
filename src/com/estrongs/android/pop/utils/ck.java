@@ -1,77 +1,11 @@
 package com.estrongs.android.pop.utils;
 
-class ck<T>
+import com.estrongs.fs.h;
+import java.util.List;
+
+public abstract interface ck
 {
-  protected Object[] a;
-  
-  public ck(int paramInt)
-  {
-    a = new Object[paramInt];
-  }
-  
-  public T a()
-  {
-    for (;;)
-    {
-      try
-      {
-        int i;
-        synchronized (a)
-        {
-          int j = a.length;
-          i = 0;
-          if (i < j)
-          {
-            if (a[i] != null)
-            {
-              Object localObject1 = a[i];
-              a[i] = null;
-              return (T)localObject1;
-            }
-          }
-          else {
-            return null;
-          }
-        }
-        i += 1;
-      }
-      catch (Exception localException)
-      {
-        return null;
-      }
-    }
-  }
-  
-  public void a(T paramT)
-  {
-    for (;;)
-    {
-      try
-      {
-        Object[] arrayOfObject = a;
-        int i = 0;
-        try
-        {
-          int j = a.length;
-          if (i < j)
-          {
-            if (a[i] == null) {
-              a[i] = paramT;
-            }
-          }
-          else {
-            return;
-          }
-        }
-        finally {}
-        i += 1;
-      }
-      catch (Exception paramT)
-      {
-        return;
-      }
-    }
-  }
+  public abstract void a(List<h> paramList);
 }
 
 /* Location:

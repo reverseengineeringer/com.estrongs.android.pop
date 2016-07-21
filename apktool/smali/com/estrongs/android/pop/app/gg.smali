@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/preference/Preference$OnPreferenceChangeListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+.field final synthetic a:Lcom/estrongs/android/pop/app/gf;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/gf;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/gg;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/gg;->a:Lcom/estrongs/android/pop/app/gf;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,20 +22,14 @@
 
 
 # virtual methods
-.method public onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
-    .locals 2
+.method public run()V
+    .locals 1
 
-    invoke-virtual {p1}, Landroid/preference/Preference;->getKey()Ljava/lang/String;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/gg;->a:Lcom/estrongs/android/pop/app/gf;
 
-    move-result-object v0
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/gf;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->i(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
 
-    move-result-object v1
-
-    invoke-virtual {v1, v0, p2}, Lcom/estrongs/android/pop/FexApplication;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    const/4 v0, 0x1
-
-    return v0
+    return-void
 .end method

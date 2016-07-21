@@ -1,158 +1,35 @@
-.class public Lcom/estrongs/fs/impl/b/f;
-.super Lcom/estrongs/fs/impl/local/f;
+.class Lcom/estrongs/fs/impl/b/f;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/io/FilenameFilter;
 
 
 # instance fields
-.field private a:Ljava/lang/String;
-
-.field private b:Ljava/lang/String;
-
-.field private c:Ljava/lang/String;
-
-.field private d:Z
-
-.field private e:Ljava/lang/String;
-
-.field private f:Ljava/lang/String;
-
-.field private g:Ljava/lang/String;
-
-.field private h:Ljava/lang/String;
+.field final synthetic a:Lcom/estrongs/fs/impl/b/e;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;)V
-    .locals 2
+.method constructor <init>(Lcom/estrongs/fs/impl/b/e;)V
+    .locals 0
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lcom/estrongs/fs/impl/b/f;->a:Lcom/estrongs/fs/impl/b/e;
 
-    invoke-direct {p0, p1}, Lcom/estrongs/fs/impl/local/f;-><init>(Ljava/io/File;)V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/estrongs/fs/impl/b/f;->d:Z
-
-    iput-object v1, p0, Lcom/estrongs/fs/impl/b/f;->e:Ljava/lang/String;
-
-    iput-object v1, p0, Lcom/estrongs/fs/impl/b/f;->f:Ljava/lang/String;
-
-    iput-object v1, p0, Lcom/estrongs/fs/impl/b/f;->g:Ljava/lang/String;
-
-    iput-object v1, p0, Lcom/estrongs/fs/impl/b/f;->h:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Ljava/lang/String;
+.method public accept(Ljava/io/File;Ljava/lang/String;)Z
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/fs/impl/b/f;->c:Ljava/lang/String;
+    const-string v0, ".apk"
 
-    return-object v0
-.end method
+    invoke-virtual {p2, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
-.method public a(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/fs/impl/b/f;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public a(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/estrongs/fs/impl/b/f;->d:Z
-
-    return-void
-.end method
-
-.method public b(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/fs/impl/b/f;->c:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public b()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/estrongs/fs/impl/b/f;->d:Z
+    move-result v0
 
     return v0
-.end method
-
-.method public c()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/fs/impl/b/f;->e:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public c(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/fs/impl/b/f;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public d()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/fs/impl/b/f;->f:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public d(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/fs/impl/b/f;->e:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public e()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/fs/impl/b/f;->g:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public e(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/fs/impl/b/f;->f:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public f()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/fs/impl/b/f;->h:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public f(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/fs/impl/b/f;->g:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public g(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/fs/impl/b/f;->h:Ljava/lang/String;
-
-    return-void
 .end method

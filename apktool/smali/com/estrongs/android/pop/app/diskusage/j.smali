@@ -208,7 +208,7 @@
     :cond_8
     iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/j;->a:Lcom/estrongs/android/pop/app/diskusage/h;
 
-    new-instance v1, Lcom/estrongs/android/ui/a/k;
+    new-instance v1, Lcom/estrongs/android/ui/adapter/k;
 
     iget-object v2, p0, Lcom/estrongs/android/pop/app/diskusage/j;->a:Lcom/estrongs/android/pop/app/diskusage/h;
 
@@ -222,23 +222,51 @@
 
     move-result-object v3
 
-    invoke-direct {v1, v2, v3}, Lcom/estrongs/android/ui/a/k;-><init>(Landroid/content/Context;Lcom/estrongs/android/pop/app/diskusage/e;)V
+    invoke-direct {v1, v2, v3}, Lcom/estrongs/android/ui/adapter/k;-><init>(Landroid/content/Context;Lcom/estrongs/android/pop/app/diskusage/e;)V
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/pop/app/diskusage/h;->a(Lcom/estrongs/android/pop/app/diskusage/h;Lcom/estrongs/android/ui/a/k;)Lcom/estrongs/android/ui/a/k;
+    invoke-static {v0, v1}, Lcom/estrongs/android/pop/app/diskusage/h;->a(Lcom/estrongs/android/pop/app/diskusage/h;Lcom/estrongs/android/ui/adapter/k;)Lcom/estrongs/android/ui/adapter/k;
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/j;->a:Lcom/estrongs/android/pop/app/diskusage/h;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/diskusage/h;->n(Lcom/estrongs/android/pop/app/diskusage/h;)Landroid/widget/ListView;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/diskusage/h;->n(Lcom/estrongs/android/pop/app/diskusage/h;)Lcom/estrongs/android/ui/adapter/k;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/j;->a:Lcom/estrongs/android/pop/app/diskusage/h;
 
-    invoke-static {v1}, Lcom/estrongs/android/pop/app/diskusage/h;->m(Lcom/estrongs/android/pop/app/diskusage/h;)Lcom/estrongs/android/ui/a/k;
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/diskusage/h;->m(Lcom/estrongs/android/pop/app/diskusage/h;)Lcom/estrongs/android/view/co;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/adapter/k;->a(Lcom/estrongs/android/view/co;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/j;->a:Lcom/estrongs/android/pop/app/diskusage/h;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/diskusage/h;->n(Lcom/estrongs/android/pop/app/diskusage/h;)Lcom/estrongs/android/ui/adapter/k;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/j;->a:Lcom/estrongs/android/pop/app/diskusage/h;
+
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/diskusage/h;->o(Lcom/estrongs/android/pop/app/diskusage/h;)Lcom/estrongs/android/view/cp;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/adapter/k;->a(Lcom/estrongs/android/view/cp;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/j;->a:Lcom/estrongs/android/pop/app/diskusage/h;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/diskusage/h;->p(Lcom/estrongs/android/pop/app/diskusage/h;)Landroid/support/v7/widget/RecyclerView;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/diskusage/j;->a:Lcom/estrongs/android/pop/app/diskusage/h;
+
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/diskusage/h;->n(Lcom/estrongs/android/pop/app/diskusage/h;)Lcom/estrongs/android/ui/adapter/k;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/RecyclerView;->setAdapter(Landroid/support/v7/widget/RecyclerView$Adapter;)V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/diskusage/j;->a:Lcom/estrongs/android/pop/app/diskusage/h;
 

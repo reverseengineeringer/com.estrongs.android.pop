@@ -10,13 +10,13 @@ import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
 import android.widget.TextView;
-import com.estrongs.android.pop.esclasses.i;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.android.ui.dialog.ct;
+import com.estrongs.android.pop.esclasses.m;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.ui.dialog.cv;
 
 @SuppressLint({"NewApi"})
 public class PasswordPreferenceFragment
-  extends i
+  extends m
 {
   private CheckBoxPreference a;
   private Preference b;
@@ -25,78 +25,78 @@ public class PasswordPreferenceFragment
   
   private void a()
   {
-    Object localObject = new ct(getActivity()).a(2131427995).b(2131427339, new aw(this)).c(2131427340, new av(this));
-    View localView = ((LayoutInflater)getActivity().getSystemService("layout_inflater")).inflate(2130903197, null);
-    localView.findViewById(2131362491).setVisibility(8);
-    localView.findViewById(2131362488).setVisibility(0);
-    localView.findViewById(2131362491).setVisibility(8);
-    ((EditText)localView.findViewById(2131362494)).setText("");
-    ((EditText)localView.findViewById(2131362490)).setText("");
-    ((EditText)localView.findViewById(2131362496)).setText("");
-    ((TextView)localView.findViewById(2131362489)).setText(getText(2131428002) + " ");
-    ((TextView)localView.findViewById(2131362193)).setText(getText(2131428001) + " ");
-    ((TextView)localView.findViewById(2131362195)).setText(getText(2131428003) + " ");
-    ((ct)localObject).a(localView);
-    localObject = ((ct)localObject).b();
-    ((cg)localObject).getWindow().setSoftInputMode(5);
-    ((cg)localObject).show();
+    Object localObject = new cv(getActivity()).a(2131232075).b(2131231270, new ay(this)).c(2131231265, new ax(this));
+    View localView = ((LayoutInflater)getActivity().getSystemService("layout_inflater")).inflate(2130903348, null);
+    localView.findViewById(2131625228).setVisibility(8);
+    localView.findViewById(2131625225).setVisibility(0);
+    localView.findViewById(2131625228).setVisibility(8);
+    ((EditText)localView.findViewById(2131625231)).setText("");
+    ((EditText)localView.findViewById(2131625227)).setText("");
+    ((EditText)localView.findViewById(2131625233)).setText("");
+    ((TextView)localView.findViewById(2131625226)).setText(getText(2131231808) + " ");
+    ((TextView)localView.findViewById(2131624779)).setText(getText(2131231806) + " ");
+    ((TextView)localView.findViewById(2131624781)).setText(getText(2131231805) + " ");
+    ((cv)localObject).a(localView);
+    localObject = ((cv)localObject).b();
+    ((ci)localObject).getWindow().setSoftInputMode(5);
+    ((ci)localObject).show();
   }
   
   private void a(int paramInt)
   {
-    Object localObject = new ct(getActivity()).a(2131427997).b(2131427339, new ay(this, paramInt)).c(2131427340, new ax(this));
-    View localView = ((LayoutInflater)getActivity().getSystemService("layout_inflater")).inflate(2130903197, null);
-    localView.findViewById(2131362488).setVisibility(8);
-    localView.findViewById(2131362491).setVisibility(8);
-    localView.findViewById(2131362491).setVisibility(8);
-    ((EditText)localView.findViewById(2131362494)).setText("");
-    ((EditText)localView.findViewById(2131362490)).setText("");
-    ((EditText)localView.findViewById(2131362496)).setText("");
-    ((TextView)localView.findViewById(2131362489)).setText(getText(2131428002) + " ");
-    ((TextView)localView.findViewById(2131362193)).setText(getText(2131428001) + " ");
-    ((TextView)localView.findViewById(2131362195)).setText(getText(2131428003) + " ");
-    ((ct)localObject).a(localView);
-    localObject = ((ct)localObject).b();
-    ((cg)localObject).getWindow().setSoftInputMode(5);
-    ((cg)localObject).show();
+    Object localObject = new cv(getActivity()).a(2131231809).b(2131231270, new ba(this, paramInt)).c(2131231265, new az(this));
+    View localView = ((LayoutInflater)getActivity().getSystemService("layout_inflater")).inflate(2130903348, null);
+    localView.findViewById(2131625225).setVisibility(8);
+    localView.findViewById(2131625228).setVisibility(8);
+    localView.findViewById(2131625228).setVisibility(8);
+    ((EditText)localView.findViewById(2131625231)).setText("");
+    ((EditText)localView.findViewById(2131625227)).setText("");
+    ((EditText)localView.findViewById(2131625233)).setText("");
+    ((TextView)localView.findViewById(2131625226)).setText(getText(2131231808) + " ");
+    ((TextView)localView.findViewById(2131624779)).setText(getText(2131231806) + " ");
+    ((TextView)localView.findViewById(2131624781)).setText(getText(2131231805) + " ");
+    ((cv)localObject).a(localView);
+    localObject = ((cv)localObject).b();
+    ((ci)localObject).getWindow().setSoftInputMode(5);
+    ((ci)localObject).show();
   }
   
   private void b(int paramInt)
   {
-    Object localObject = new ct(getActivity()).a(2131427896).b(2131427339, new ar(this, paramInt)).c(2131427340, new az(this));
-    View localView = ((LayoutInflater)getActivity().getSystemService("layout_inflater")).inflate(2130903197, null);
-    localView.findViewById(2131362491).setVisibility(8);
-    localView.findViewById(2131362488).setVisibility(8);
-    localView.findViewById(2131362495).setVisibility(8);
-    localView.findViewById(2131362491).setVisibility(8);
-    ((EditText)localView.findViewById(2131362494)).setText("");
-    ((EditText)localView.findViewById(2131362490)).setText("");
-    ((EditText)localView.findViewById(2131362496)).setText("");
-    ((TextView)localView.findViewById(2131362489)).setText(getText(2131428002) + " ");
-    ((TextView)localView.findViewById(2131362193)).setVisibility(8);
-    ((TextView)localView.findViewById(2131362195)).setText(getText(2131428003) + " ");
-    ((ct)localObject).a(localView);
-    localObject = ((ct)localObject).b();
-    ((cg)localObject).getWindow().setSoftInputMode(5);
-    ((cg)localObject).show();
+    Object localObject = new cv(getActivity()).a(2131231636).b(2131231270, new at(this, paramInt)).c(2131231265, new bb(this));
+    View localView = ((LayoutInflater)getActivity().getSystemService("layout_inflater")).inflate(2130903348, null);
+    localView.findViewById(2131625228).setVisibility(8);
+    localView.findViewById(2131625225).setVisibility(8);
+    localView.findViewById(2131625232).setVisibility(8);
+    localView.findViewById(2131625228).setVisibility(8);
+    ((EditText)localView.findViewById(2131625231)).setText("");
+    ((EditText)localView.findViewById(2131625227)).setText("");
+    ((EditText)localView.findViewById(2131625233)).setText("");
+    ((TextView)localView.findViewById(2131625226)).setText(getText(2131231808) + " ");
+    ((TextView)localView.findViewById(2131624779)).setVisibility(8);
+    ((TextView)localView.findViewById(2131624781)).setText(getText(2131231805) + " ");
+    ((cv)localObject).a(localView);
+    localObject = ((cv)localObject).b();
+    ((ci)localObject).getWindow().setSoftInputMode(5);
+    ((ci)localObject).show();
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    addPreferencesFromResource(2131034128);
+    addPreferencesFromResource(2131034129);
     a = ((CheckBoxPreference)findPreference("net_passwd_enable"));
     b = findPreference("net_passwd_change");
     c = ((CheckBoxPreference)findPreference("start_passwd_enable"));
     d = ((CheckBoxPreference)findPreference("hided_dirfiles_passwd_enable"));
     if (a != null) {
-      a.setOnPreferenceChangeListener(new aq(this));
+      a.setOnPreferenceChangeListener(new as(this));
     }
     if (c != null) {
-      c.setOnPreferenceChangeListener(new as(this));
+      c.setOnPreferenceChangeListener(new au(this));
     }
     if (d != null) {
-      d.setOnPreferenceChangeListener(new at(this));
+      d.setOnPreferenceChangeListener(new av(this));
     }
     if ((b != null) && (a != null))
     {
@@ -110,7 +110,7 @@ public class PasswordPreferenceFragment
       if (d.isChecked()) {
         b.setEnabled(true);
       }
-      b.setOnPreferenceClickListener(new au(this));
+      b.setOnPreferenceClickListener(new aw(this));
     }
   }
 }

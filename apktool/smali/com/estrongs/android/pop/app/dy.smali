@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Landroid/widget/ImageView;
-
-.field final synthetic b:Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
+.field final synthetic a:Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;Landroid/widget/ImageView;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/dy;->b:Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
-
-    iput-object p2, p0, Lcom/estrongs/android/pop/app/dy;->a:Landroid/widget/ImageView;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/dy;->a:Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,12 +22,14 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
+.method public onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/dy;->a:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/dy;->a:Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
 
-    invoke-virtual {v0}, Landroid/widget/ImageView;->performClick()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->h()V
 
-    return-void
+    const/4 v0, 0x0
+
+    return v0
 .end method

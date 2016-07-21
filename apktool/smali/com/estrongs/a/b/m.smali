@@ -1,5 +1,5 @@
 .class Lcom/estrongs/a/b/m;
-.super Lcom/estrongs/android/widget/g;
+.super Lcom/estrongs/android/widget/f;
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnClickListener;
@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field a:Lcom/estrongs/fs/b/bl;
+.field a:Lcom/estrongs/fs/b/bn;
 
 .field i:Z
 
@@ -15,18 +15,18 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/estrongs/a/b/d;Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/i;Lcom/estrongs/fs/b/bl;)V
+.method public constructor <init>(Lcom/estrongs/a/b/d;Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/i;Lcom/estrongs/fs/b/bn;)V
     .locals 1
 
     iput-object p1, p0, Lcom/estrongs/a/b/m;->j:Lcom/estrongs/a/b/d;
 
-    invoke-direct {p0, p2, p3, p4}, Lcom/estrongs/android/widget/g;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/i;)V
+    invoke-direct {p0, p2, p3, p4}, Lcom/estrongs/android/widget/f;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/i;)V
 
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/estrongs/a/b/m;->i:Z
 
-    iput-object p5, p0, Lcom/estrongs/a/b/m;->a:Lcom/estrongs/fs/b/bl;
+    iput-object p5, p0, Lcom/estrongs/a/b/m;->a:Lcom/estrongs/fs/b/bn;
 
     const/4 v0, 0x7
 
@@ -58,7 +58,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/am;->ax(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/ap;->aH(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -75,29 +75,29 @@
     move-result-wide v4
 
     :goto_0
-    iget-object v0, p0, Lcom/estrongs/a/b/m;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v0, p0, Lcom/estrongs/a/b/m;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-wide v0, v0, Lcom/estrongs/fs/b/bl;->e:J
+    iget-wide v0, v0, Lcom/estrongs/fs/b/bn;->e:J
 
     cmp-long v0, v0, v4
 
     if-lez v0, :cond_2
 
-    invoke-static {}, Lcom/estrongs/android/pop/esclasses/ESActivity;->A()Landroid/app/Activity;
+    invoke-static {}, Lcom/estrongs/android/pop/esclasses/ESActivity;->H()Landroid/app/Activity;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lcom/estrongs/android/ui/dialog/iw;
+    new-instance v0, Lcom/estrongs/android/ui/dialog/jf;
 
-    invoke-static {}, Lcom/estrongs/android/pop/esclasses/ESActivity;->A()Landroid/app/Activity;
+    invoke-static {}, Lcom/estrongs/android/pop/esclasses/ESActivity;->H()Landroid/app/Activity;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/estrongs/a/b/m;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v2, p0, Lcom/estrongs/a/b/m;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-wide v2, v2, Lcom/estrongs/fs/b/bl;->e:J
+    iget-wide v2, v2, Lcom/estrongs/fs/b/bn;->e:J
 
     const-string v6, "Error!"
 
@@ -107,31 +107,15 @@
 
     move-result-object v7
 
-    const v8, 0x7f0b02d1
+    const v8, 0x7f080465
 
     invoke-virtual {v7, v8}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
-    invoke-direct/range {v0 .. v7}, Lcom/estrongs/android/ui/dialog/iw;-><init>(Landroid/content/Context;JJLjava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v7}, Lcom/estrongs/android/ui/dialog/jf;-><init>(Landroid/content/Context;JJLjava/lang/String;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/estrongs/a/b/m;->j:Lcom/estrongs/a/b/d;
-
-    invoke-static {}, Lcom/estrongs/a/b/d;->c()Landroid/app/Activity;
-
-    move-result-object v1
-
-    const v2, 0x7f0b000b
-
-    invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/iw;->setSingleButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/iw;->show()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/jf;->show()V
 
     :cond_0
     invoke-virtual {p0}, Lcom/estrongs/a/b/m;->k()V
@@ -188,7 +172,7 @@
 
     if-nez v0, :cond_3
 
-    iget-object v0, p0, Lcom/estrongs/a/b/m;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v0, p0, Lcom/estrongs/a/b/m;->a:Lcom/estrongs/fs/b/bn;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -214,22 +198,22 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/estrongs/fs/b/bl;->i:Ljava/lang/String;
+    iput-object v1, v0, Lcom/estrongs/fs/b/bn;->i:Ljava/lang/String;
 
     :cond_3
-    invoke-static {}, Lcom/estrongs/android/pop/esclasses/ESActivity;->A()Landroid/app/Activity;
+    invoke-static {}, Lcom/estrongs/android/pop/esclasses/ESActivity;->H()Landroid/app/Activity;
 
     move-result-object v0
 
     if-eqz v0, :cond_4
 
-    invoke-static {}, Lcom/estrongs/android/pop/esclasses/ESActivity;->A()Landroid/app/Activity;
+    invoke-static {}, Lcom/estrongs/android/pop/esclasses/ESActivity;->H()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/a/b/m;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v1, p0, Lcom/estrongs/a/b/m;->a:Lcom/estrongs/fs/b/bn;
 
-    invoke-static {v0, v1, v6}, Lcom/estrongs/fs/b/ba;->a(Landroid/app/Activity;Ljava/lang/Object;Z)Lcom/estrongs/fs/b/ba;
+    invoke-static {v0, v1, v6}, Lcom/estrongs/fs/b/bc;->a(Landroid/app/Activity;Ljava/lang/Object;Z)Lcom/estrongs/fs/b/bc;
 
     iput-boolean v6, p0, Lcom/estrongs/a/b/m;->i:Z
 
@@ -261,9 +245,9 @@
 
     iget-object v0, p0, Lcom/estrongs/a/b/m;->j:Lcom/estrongs/a/b/d;
 
-    iget-object v1, p0, Lcom/estrongs/a/b/m;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v1, p0, Lcom/estrongs/a/b/m;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-object v1, v1, Lcom/estrongs/fs/b/bl;->j:Ljava/net/Socket;
+    iget-object v1, v1, Lcom/estrongs/fs/b/bn;->j:Ljava/net/Socket;
 
     invoke-virtual {v1}, Ljava/net/Socket;->getOutputStream()Ljava/io/OutputStream;
 
@@ -278,16 +262,16 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :try_start_1
-    iget-object v0, p0, Lcom/estrongs/a/b/m;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v0, p0, Lcom/estrongs/a/b/m;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-object v0, v0, Lcom/estrongs/fs/b/bl;->j:Ljava/net/Socket;
+    iget-object v0, v0, Lcom/estrongs/fs/b/bn;->j:Ljava/net/Socket;
 
     invoke-virtual {v0}, Ljava/net/Socket;->close()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 
     :goto_0
-    invoke-super {p0}, Lcom/estrongs/android/widget/g;->k()V
+    invoke-super {p0}, Lcom/estrongs/android/widget/f;->k()V
 
     return-void
 
@@ -295,9 +279,9 @@
     :try_start_2
     iget-object v0, p0, Lcom/estrongs/a/b/m;->j:Lcom/estrongs/a/b/d;
 
-    iget-object v1, p0, Lcom/estrongs/a/b/m;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v1, p0, Lcom/estrongs/a/b/m;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-object v1, v1, Lcom/estrongs/fs/b/bl;->j:Ljava/net/Socket;
+    iget-object v1, v1, Lcom/estrongs/fs/b/bn;->j:Ljava/net/Socket;
 
     invoke-virtual {v1}, Ljava/net/Socket;->getOutputStream()Ljava/io/OutputStream;
 
@@ -317,9 +301,9 @@
     move-exception v0
 
     :try_start_3
-    iget-object v0, p0, Lcom/estrongs/a/b/m;->a:Lcom/estrongs/fs/b/bl;
+    iget-object v0, p0, Lcom/estrongs/a/b/m;->a:Lcom/estrongs/fs/b/bn;
 
-    iget-object v0, v0, Lcom/estrongs/fs/b/bl;->j:Ljava/net/Socket;
+    iget-object v0, v0, Lcom/estrongs/fs/b/bn;->j:Ljava/net/Socket;
 
     invoke-virtual {v0}, Ljava/net/Socket;->close()V
     :try_end_3

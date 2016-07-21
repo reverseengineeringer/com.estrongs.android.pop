@@ -1,28 +1,18 @@
 package com.estrongs.android.pop.app.editor;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.ui.dialog.ks;
-import com.estrongs.android.util.am;
-import java.util.ArrayList;
-import java.util.List;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class n
-  implements View.OnClickListener
+  implements DialogInterface.OnClickListener
 {
   n(PopNoteEditor paramPopNoteEditor) {}
   
-  public void onClick(View paramView)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    paramView = PopNoteEditor.v(a).a();
-    if (paramView != null)
-    {
-      ArrayList localArrayList = new ArrayList();
-      localArrayList.add(am.bB(paramView));
-      paramView = new ks(a, "document", localArrayList);
-      paramView.a(new o(this));
-      paramView.show();
-    }
+    PopNoteEditor.a(a, true);
+    paramDialogInterface.dismiss();
+    PopNoteEditor.c(a, PopNoteEditor.q(a));
   }
 }
 

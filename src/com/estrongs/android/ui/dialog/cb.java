@@ -1,15 +1,23 @@
 package com.estrongs.android.ui.dialog;
 
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnDismissListener;
+import com.estrongs.fs.b.r;
+
 class cb
-  implements Runnable
+  implements DialogInterface.OnDismissListener
 {
-  cb(by paramby, String paramString, boolean paramBoolean) {}
+  cb(ca paramca, DialogInterface.OnDismissListener paramOnDismissListener) {}
   
-  public void run()
+  public void onDismiss(DialogInterface paramDialogInterface)
   {
-    by.f(c).setMessage(a);
-    if (b) {
-      by.f(c).setItemsEnable(true);
+    if ((b.b != null) && (b.b.getTaskStatus() == 2))
+    {
+      ca.a(b, true);
+      b.b.requestStop();
+    }
+    if (a != null) {
+      a.onDismiss(paramDialogInterface);
     }
   }
 }

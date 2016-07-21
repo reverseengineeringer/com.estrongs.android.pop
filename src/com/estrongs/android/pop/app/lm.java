@@ -1,16 +1,16 @@
 package com.estrongs.android.pop.app;
 
-import com.estrongs.android.nativetool.c;
-import com.estrongs.android.pop.view.FileExplorerActivity;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnDismissListener;
 
 class lm
-  implements Runnable
+  implements DialogInterface.OnDismissListener
 {
-  lm(StartServiceReceiver paramStartServiceReceiver) {}
+  lm(ll paramll) {}
   
-  public void run()
+  public void onDismiss(DialogInterface paramDialogInterface)
   {
-    c.a(FileExplorerActivity.T());
+    a.c.finish();
   }
 }
 

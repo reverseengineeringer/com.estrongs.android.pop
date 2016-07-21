@@ -1,34 +1,13 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.DialogInterface.OnDismissListener;
-import android.os.Handler;
-import com.estrongs.a.a;
-
 class jm
   implements Runnable
 {
-  jm(ix paramix) {}
+  jm(jk paramjk) {}
   
   public void run()
   {
-    if ((ix.a(a).getTaskStatus() == 2) && (ix.l(a))) {
-      a.d();
-    }
-    do
-    {
-      return;
-      if ((ix.a(a).getTaskStatus() == 3) && (ix.l(a)))
-      {
-        if (aa).waitingDecision)
-        {
-          ix.k(a).postDelayed(this, 400L);
-          return;
-        }
-        a.d();
-        return;
-      }
-    } while (ix.o(a) == null);
-    ix.o(a).onDismiss(a);
+    new cv(a.a.mContext).a(2131231928).b(2131231927).b(2131231273, new jn(this)).c(2131231269, null).c();
   }
 }
 

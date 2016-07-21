@@ -3,22 +3,21 @@ package com.estrongs.android.ui.dialog;
 import android.app.Activity;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.estrongs.android.d.f;
-import com.estrongs.android.view.ea;
+import com.estrongs.android.view.gf;
 import com.estrongs.fs.util.j;
 
 class e
-  extends ea
+  extends gf
 {
   public e(a parama, Activity paramActivity)
   {
     super(paramActivity);
-    paramActivity = (ImageView)k(2131361829);
-    TextView localTextView1 = (TextView)k(2131361830);
-    TextView localTextView2 = (TextView)k(2131361835);
-    TextView localTextView3 = (TextView)k(2131361840);
-    TextView localTextView4 = (TextView)k(2131361842);
-    paramActivity.setImageDrawable(f.e(a));
+    paramActivity = (ImageView)b(2131624328);
+    TextView localTextView1 = (TextView)b(2131624329);
+    TextView localTextView2 = (TextView)b(2131624334);
+    TextView localTextView3 = (TextView)b(2131624339);
+    TextView localTextView4 = (TextView)b(2131624341);
+    com.estrongs.android.h.a.e.a(a.getAbsolutePath(), paramActivity, a);
     localTextView1.setText(a.getName());
     localTextView2.setText(a.b() + "(" + a.c() + ")");
     localTextView3.setText(j.c(a.length()));
@@ -27,7 +26,7 @@ class e
   
   protected int a()
   {
-    return 2130903044;
+    return 2130903106;
   }
 }
 

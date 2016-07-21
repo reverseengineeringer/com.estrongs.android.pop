@@ -1,17 +1,13 @@
 package com.estrongs.android.view;
 
-import android.widget.ExpandableListView.OnGroupCollapseListener;
-import com.estrongs.android.pop.ad;
-import java.util.ArrayList;
-
 class cx
-  implements ExpandableListView.OnGroupCollapseListener
+  implements Runnable
 {
-  cx(cq paramcq) {}
+  cx(cr paramcr) {}
   
-  public void onGroupCollapse(int paramInt)
+  public void run()
   {
-    cq.e(a).e(aa).get(paramInt)).d.c(), false);
+    a.ao();
   }
 }
 

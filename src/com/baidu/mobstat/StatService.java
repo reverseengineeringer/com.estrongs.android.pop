@@ -1,37 +1,35 @@
 package com.baidu.mobstat;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.text.TextUtils;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import com.baidu.mobstat.util.e;
 
 public class StatService
 {
   public static final int EXCEPTION_LOG = 1;
   private static boolean a = false;
+  private static long b;
   
   private static void a(Context paramContext)
   {
     if (!a(paramContext, "onError(...)")) {
       return;
     }
-    ad.a().a(paramContext.getApplicationContext());
-    ag.a().a(true, paramContext.getApplicationContext());
-  }
-  
-  private static boolean a()
-  {
-    return a;
+    bn.a().a(paramContext.getApplicationContext());
+    bs.a().a(true, paramContext.getApplicationContext());
   }
   
   private static boolean a(Context paramContext, String paramString)
   {
     if (paramContext == null)
     {
-      e.c(new Object[] { "sdkstat", paramString + ":context=null" });
+      cr.b(paramString + ":context=null");
       return false;
     }
     return true;
@@ -39,57 +37,45 @@ public class StatService
   
   static boolean a(Class<?> paramClass, String paramString)
   {
-    boolean bool2 = false;
+    StackTraceElement[] arrayOfStackTraceElement = Thread.currentThread().getStackTrace();
     boolean bool1 = false;
     int i = 2;
-    StackTraceElement[] arrayOfStackTraceElement = new Throwable().getStackTrace();
-    e.a(new Object[] { "isCalledBy", Integer.valueOf(arrayOfStackTraceElement.length), paramClass, paramString });
-    if (arrayOfStackTraceElement.length >= 2)
+    boolean bool2;
+    while (i < arrayOfStackTraceElement.length)
     {
+      Object localObject = arrayOfStackTraceElement[i];
       bool2 = bool1;
-      if (i < arrayOfStackTraceElement.length)
+      if (((StackTraceElement)localObject).getMethodName().equals(paramString)) {}
+      try
       {
-        Object localObject = arrayOfStackTraceElement[i];
-        bool2 = bool1;
-        if (((StackTraceElement)localObject).getMethodName().equals(paramString)) {
-          try
-          {
-            localObject = Class.forName(((StackTraceElement)localObject).getClassName());
-            e.a(new Object[] { "isCalledBy", localObject });
-            while ((((Class)localObject).getSuperclass() != null) && (((Class)localObject).getSuperclass() != paramClass))
-            {
-              localObject = ((Class)localObject).getSuperclass();
-              e.a(new Object[] { "isCalledBy", localObject });
-              continue;
-              i += 1;
-            }
-          }
-          catch (Exception localException)
-          {
-            e.a(localException);
-            bool2 = bool1;
-          }
-        }
+        for (localObject = Class.forName(((StackTraceElement)localObject).getClassName()); (((Class)localObject).getSuperclass() != null) && (((Class)localObject).getSuperclass() != paramClass); localObject = ((Class)localObject).getSuperclass()) {}
+        bool2 = true;
+      }
+      catch (Exception localException)
+      {
         for (;;)
         {
-          bool1 = bool2;
-          break;
-          bool2 = true;
+          cr.a(localException);
+          bool2 = bool1;
         }
       }
+      i += 1;
+      bool1 = bool2;
     }
-    return bool2;
-  }
-  
-  private static void b()
-  {
-    a = true;
+    return bool1;
   }
   
   private static void b(Context paramContext)
   {
-    if (!af.a().b()) {
-      af.a().a(paramContext.getApplicationContext());
+    try
+    {
+      bp.a().a(paramContext.getApplicationContext());
+      bp.a().b(paramContext.getApplicationContext());
+      return;
+    }
+    catch (Throwable localThrowable)
+    {
+      for (;;) {}
     }
   }
   
@@ -98,6 +84,7 @@ public class StatService
     bindJSInterface(paramContext, paramWebView, null);
   }
   
+  @SuppressLint({"SetJavaScriptEnabled"})
   public static void bindJSInterface(Context paramContext, WebView paramWebView, WebViewClient paramWebViewClient)
   {
     if (paramContext == null) {
@@ -110,12 +97,45 @@ public class StatService
     localWebSettings.setJavaScriptEnabled(true);
     localWebSettings.setDefaultTextEncodingName("UTF-8");
     localWebSettings.setJavaScriptCanOpenWindowsAutomatically(true);
-    paramWebView.setWebViewClient(new q(paramContext, paramWebViewClient));
+    paramWebView.setWebViewClient(new bd(paramContext, paramWebViewClient));
+  }
+  
+  public static String getAppKey(Context paramContext)
+  {
+    return DataCore.instance().getAppKey(paramContext);
   }
   
   public static String getCuid(Context paramContext)
   {
     return CooperService.a().getCUID(paramContext, false);
+  }
+  
+  public static String getSdkVersion()
+  {
+    return CooperService.a().getMTJSDKVersion();
+  }
+  
+  public static void onErised(Context paramContext, String paramString1, String paramString2, String paramString3)
+  {
+    if (bp.a().b()) {}
+    long l;
+    do
+    {
+      do
+      {
+        return;
+      } while (!a(paramContext, "onErised(...)"));
+      if ((paramString1 == null) || ("".equals(paramString1)))
+      {
+        cr.c("AppKey is invalid");
+        return;
+      }
+      bp.a().c(paramContext);
+      l = System.currentTimeMillis();
+      bh.a().a(paramContext, paramString2, paramString3, 1, l, 0L);
+    } while ((l - b <= 30000L) || (!cu.m(paramContext)));
+    bs.a().b(paramContext);
+    b = l;
   }
   
   public static void onEvent(Context paramContext, String paramString1, String paramString2)
@@ -130,7 +150,7 @@ public class StatService
       return;
     }
     b(paramContext);
-    x.a().a(paramContext.getApplicationContext(), paramString1, paramString2, paramInt, System.currentTimeMillis());
+    bh.a().a(paramContext.getApplicationContext(), paramString1, paramString2, paramInt, System.currentTimeMillis());
   }
   
   public static void onEventDuration(Context paramContext, String paramString1, String paramString2, long paramLong)
@@ -141,11 +161,11 @@ public class StatService
     }
     if (paramLong <= 0L)
     {
-      e.b(new Object[] { "sdkstat", "onEventDuration: duration must be greater than zero" });
+      cr.b("onEventDuration: duration must be greater than zero");
       return;
     }
     b(paramContext);
-    x.a().c(paramContext.getApplicationContext(), paramString1, paramString2, paramLong);
+    bh.a().c(paramContext.getApplicationContext(), paramString1, paramString2, paramLong);
   }
   
   public static void onEventEnd(Context paramContext, String paramString1, String paramString2)
@@ -155,7 +175,7 @@ public class StatService
       return;
     }
     b(paramContext);
-    x.a().b(paramContext.getApplicationContext(), paramString1, paramString2, System.currentTimeMillis());
+    bh.a().b(paramContext.getApplicationContext(), paramString1, paramString2, System.currentTimeMillis());
   }
   
   public static void onEventStart(Context paramContext, String paramString1, String paramString2)
@@ -165,7 +185,7 @@ public class StatService
       return;
     }
     b(paramContext);
-    x.a().a(paramContext.getApplicationContext(), paramString1, paramString2, System.currentTimeMillis());
+    bh.a().a(paramContext.getApplicationContext(), paramString1, paramString2, System.currentTimeMillis());
   }
   
   /* Error */
@@ -179,55 +199,43 @@ public class StatService
     //   7: aload_1
     //   8: ifnull +12 -> 20
     //   11: aload_1
-    //   12: ldc -69
-    //   14: invokevirtual 97	java/lang/String:equals	(Ljava/lang/Object;)Z
-    //   17: ifeq +25 -> 42
-    //   20: iconst_2
-    //   21: anewarray 4	java/lang/Object
-    //   24: dup
-    //   25: iconst_0
-    //   26: ldc 47
-    //   28: aastore
-    //   29: dup
-    //   30: iconst_1
-    //   31: ldc -29
-    //   33: aastore
-    //   34: invokestatic 66	com/baidu/mobstat/util/e:c	([Ljava/lang/Object;)I
-    //   37: pop
-    //   38: ldc 2
-    //   40: monitorexit
-    //   41: return
-    //   42: ldc 47
-    //   44: new 49	java/lang/StringBuilder
-    //   47: dup
-    //   48: invokespecial 50	java/lang/StringBuilder:<init>	()V
-    //   51: ldc -27
-    //   53: invokevirtual 54	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   56: aload_1
-    //   57: invokevirtual 54	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   60: invokevirtual 60	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   63: invokestatic 232	com/baidu/mobstat/util/e:a	(Ljava/lang/String;Ljava/lang/String;)I
-    //   66: pop
-    //   67: invokestatic 237	com/baidu/mobstat/ao:a	()Lcom/baidu/mobstat/ao;
-    //   70: aload_0
-    //   71: invokestatic 200	java/lang/System:currentTimeMillis	()J
-    //   74: aload_1
-    //   75: invokevirtual 240	com/baidu/mobstat/ao:b	(Landroid/content/Context;JLjava/lang/String;)V
-    //   78: goto -40 -> 38
-    //   81: astore_0
-    //   82: ldc 2
-    //   84: monitorexit
-    //   85: aload_0
-    //   86: athrow
+    //   12: ldc -61
+    //   14: invokevirtual 88	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   17: ifeq +13 -> 30
+    //   20: ldc_w 260
+    //   23: invokestatic 200	com/baidu/mobstat/cr:c	(Ljava/lang/String;)V
+    //   26: ldc 2
+    //   28: monitorexit
+    //   29: return
+    //   30: new 48	java/lang/StringBuilder
+    //   33: dup
+    //   34: invokespecial 49	java/lang/StringBuilder:<init>	()V
+    //   37: ldc_w 262
+    //   40: invokevirtual 53	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   43: aload_1
+    //   44: invokevirtual 53	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   47: invokevirtual 59	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   50: invokestatic 264	com/baidu/mobstat/cr:a	(Ljava/lang/String;)V
+    //   53: invokestatic 269	com/baidu/mobstat/ca:a	()Lcom/baidu/mobstat/ca;
+    //   56: aload_0
+    //   57: invokestatic 208	java/lang/System:currentTimeMillis	()J
+    //   60: aload_1
+    //   61: invokevirtual 272	com/baidu/mobstat/ca:b	(Landroid/content/Context;JLjava/lang/String;)V
+    //   64: goto -38 -> 26
+    //   67: astore_0
+    //   68: ldc 2
+    //   70: monitorexit
+    //   71: aload_0
+    //   72: athrow
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	87	0	paramContext	Context
-    //   0	87	1	paramString	String
+    //   0	73	0	paramContext	Context
+    //   0	73	1	paramString	String
     // Exception table:
     //   from	to	target	type
-    //   11	20	81	finally
-    //   20	38	81	finally
-    //   42	78	81	finally
+    //   11	20	67	finally
+    //   20	26	67	finally
+    //   30	64	67	finally
   }
   
   /* Error */
@@ -241,57 +249,45 @@ public class StatService
     //   7: aload_1
     //   8: ifnull +12 -> 20
     //   11: aload_1
-    //   12: ldc -69
-    //   14: invokevirtual 97	java/lang/String:equals	(Ljava/lang/Object;)Z
-    //   17: ifeq +25 -> 42
-    //   20: iconst_2
-    //   21: anewarray 4	java/lang/Object
-    //   24: dup
-    //   25: iconst_0
-    //   26: ldc 47
-    //   28: aastore
-    //   29: dup
-    //   30: iconst_1
-    //   31: ldc -13
-    //   33: aastore
-    //   34: invokestatic 66	com/baidu/mobstat/util/e:c	([Ljava/lang/Object;)I
-    //   37: pop
-    //   38: ldc 2
-    //   40: monitorexit
-    //   41: return
-    //   42: ldc 47
-    //   44: new 49	java/lang/StringBuilder
-    //   47: dup
-    //   48: invokespecial 50	java/lang/StringBuilder:<init>	()V
-    //   51: ldc -11
-    //   53: invokevirtual 54	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   56: aload_1
-    //   57: invokevirtual 54	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   60: invokevirtual 60	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   63: invokestatic 232	com/baidu/mobstat/util/e:a	(Ljava/lang/String;Ljava/lang/String;)I
-    //   66: pop
-    //   67: aload_0
-    //   68: invokestatic 189	com/baidu/mobstat/StatService:b	(Landroid/content/Context;)V
-    //   71: invokestatic 237	com/baidu/mobstat/ao:a	()Lcom/baidu/mobstat/ao;
-    //   74: aload_0
-    //   75: invokestatic 200	java/lang/System:currentTimeMillis	()J
-    //   78: aload_1
-    //   79: invokevirtual 247	com/baidu/mobstat/ao:a	(Landroid/content/Context;JLjava/lang/String;)V
-    //   82: goto -44 -> 38
-    //   85: astore_0
-    //   86: ldc 2
-    //   88: monitorexit
-    //   89: aload_0
-    //   90: athrow
+    //   12: ldc -61
+    //   14: invokevirtual 88	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   17: ifeq +13 -> 30
+    //   20: ldc_w 275
+    //   23: invokestatic 200	com/baidu/mobstat/cr:c	(Ljava/lang/String;)V
+    //   26: ldc 2
+    //   28: monitorexit
+    //   29: return
+    //   30: new 48	java/lang/StringBuilder
+    //   33: dup
+    //   34: invokespecial 49	java/lang/StringBuilder:<init>	()V
+    //   37: ldc_w 277
+    //   40: invokevirtual 53	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   43: aload_1
+    //   44: invokevirtual 53	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   47: invokevirtual 59	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   50: invokestatic 264	com/baidu/mobstat/cr:a	(Ljava/lang/String;)V
+    //   53: aload_0
+    //   54: invokestatic 235	com/baidu/mobstat/StatService:b	(Landroid/content/Context;)V
+    //   57: invokestatic 269	com/baidu/mobstat/ca:a	()Lcom/baidu/mobstat/ca;
+    //   60: aload_0
+    //   61: invokestatic 208	java/lang/System:currentTimeMillis	()J
+    //   64: aload_1
+    //   65: invokevirtual 279	com/baidu/mobstat/ca:a	(Landroid/content/Context;JLjava/lang/String;)V
+    //   68: goto -42 -> 26
+    //   71: astore_0
+    //   72: ldc 2
+    //   74: monitorexit
+    //   75: aload_0
+    //   76: athrow
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	91	0	paramContext	Context
-    //   0	91	1	paramString	String
+    //   0	77	0	paramContext	Context
+    //   0	77	1	paramString	String
     // Exception table:
     //   from	to	target	type
-    //   11	20	85	finally
-    //   20	38	85	finally
-    //   42	82	85	finally
+    //   11	20	71	finally
+    //   20	26	71	finally
+    //   30	68	71	finally
   }
   
   public static void onPause(Context paramContext)
@@ -309,7 +305,7 @@ public class StatService
         }
       }
       finally {}
-      ao.a().b(paramContext, System.currentTimeMillis());
+      ca.a().b(paramContext, System.currentTimeMillis());
     }
   }
   
@@ -321,14 +317,14 @@ public class StatService
     {
       try
       {
-        e.c(new Object[] { "sdkstat", "onResume :parame=null" });
+        cr.c("onResume :parame=null");
         return;
       }
       finally {}
       if (!a(Fragment.class, "onPause")) {
         throw new SecurityException("Fragment onPause(Context context)不在Fragment.onPause()中被调用||onPause(Context context)is not called in Fragment.onPause().");
       }
-      ao.a().b(paramFragment, System.currentTimeMillis());
+      ca.a().b(paramFragment, System.currentTimeMillis());
     }
   }
   
@@ -340,14 +336,14 @@ public class StatService
     {
       try
       {
-        e.c(new Object[] { "sdkstat", "android.app.Fragment onResume :parame=null" });
+        cr.c("android.app.Fragment onResume :parame=null");
         return;
       }
       finally {}
       if (!a(paramObject.getClass(), "onPause")) {
         throw new SecurityException("android.app.Fragment onPause(Context context)不在android.app.Fragment.onPause()中被调用||onPause(Context context)is not called in android.app.Fragment.onPause().");
       }
-      ao.a().b(paramObject, System.currentTimeMillis());
+      ca.a().b(paramObject, System.currentTimeMillis());
     }
   }
   
@@ -367,7 +363,7 @@ public class StatService
       }
       finally {}
       b(paramContext);
-      ao.a().a(paramContext, System.currentTimeMillis());
+      ca.a().a(paramContext, System.currentTimeMillis());
     }
   }
   
@@ -379,15 +375,23 @@ public class StatService
     {
       try
       {
-        e.c(new Object[] { "sdkstat", "onResume :parame=null" });
+        cr.c("onResume :parame=null");
         return;
       }
       finally {}
       if (!a(Fragment.class, "onResume")) {
         throw new SecurityException("onResume(Context context)不在Fragment.onResume()中被调用||onResume(Context context)is not called in Fragment.onResume().");
       }
-      b(paramFragment.b());
-      ao.a().a(paramFragment, System.currentTimeMillis());
+      FragmentActivity localFragmentActivity = paramFragment.getActivity();
+      if (localFragmentActivity == null)
+      {
+        cr.c("can not get correct fragmentActivity, fragment may not attached to activity");
+      }
+      else
+      {
+        b(localFragmentActivity);
+        ca.a().a(paramFragment, System.currentTimeMillis());
+      }
     }
   }
   
@@ -399,52 +403,67 @@ public class StatService
     {
       try
       {
-        e.c(new Object[] { "sdkstat", "onResume :parame=null" });
+        cr.c("onResume :parame=null");
         return;
       }
       finally {}
       if (!a(paramObject.getClass(), "onResume")) {
         throw new SecurityException("onResume(Context context)不在Fragment.onResume()中被调用||onResume(Context context)is not called in Fragment.onResume().");
       }
-      b(ao.a(paramObject));
-      ao.a().a(paramObject, System.currentTimeMillis());
+      Context localContext = ca.a(paramObject);
+      if (localContext == null)
+      {
+        cr.c("can not get correct context, fragment may not attached to activity");
+      }
+      else
+      {
+        b(localContext);
+        ca.a().a(paramObject, System.currentTimeMillis());
+      }
+    }
+  }
+  
+  public static void sendLogData(Context paramContext, String paramString)
+  {
+    if ((paramContext != null) && (!TextUtils.isEmpty(paramString))) {
+      bs.a().a(paramContext.getApplicationContext(), paramString);
     }
   }
   
   public static void setAppChannel(Context paramContext, String paramString, boolean paramBoolean)
   {
-    DataCore.getInstance().setAppChannel(paramContext, paramString, paramBoolean);
+    DataCore.instance().setAppChannel(paramContext, paramString, paramBoolean);
   }
   
   @Deprecated
   public static void setAppChannel(String paramString)
   {
-    DataCore.getInstance().setAppChannel(paramString);
+    DataCore.instance().setAppChannel(paramString);
   }
   
   public static void setAppKey(String paramString)
   {
-    DataCore.getInstance().setAppKey(paramString);
+    DataCore.instance().setAppKey(paramString);
   }
   
   public static void setDebugOn(boolean paramBoolean)
   {
-    if (paramBoolean)
+    if (paramBoolean) {}
+    for (int i = 2;; i = 7)
     {
-      com.baidu.mobstat.util.b.a = 2;
+      cr.a = i;
       return;
     }
-    com.baidu.mobstat.util.b.a = 7;
   }
   
   public static void setForTv(Context paramContext, boolean paramBoolean)
   {
-    r.a().d(paramContext, paramBoolean);
+    be.a().d(paramContext, paramBoolean);
   }
   
   public static void setLogSenderDelayed(int paramInt)
   {
-    ag.a().a(paramInt);
+    bs.a().a(paramInt);
   }
   
   public static void setOn(Context paramContext, int paramInt)
@@ -455,8 +474,8 @@ public class StatService
       do
       {
         return;
-      } while (a());
-      b();
+      } while (a);
+      a = true;
     } while ((paramInt & 0x1) == 0);
     a(paramContext);
   }
@@ -472,23 +491,28 @@ public class StatService
       return;
     }
     b(paramContext);
-    ag.a().a(paramContext.getApplicationContext(), paramSendStrategyEnum, paramInt, paramBoolean);
+    bs.a().a(paramContext.getApplicationContext(), paramSendStrategyEnum, paramInt, paramBoolean);
   }
   
   public static void setSessionTimeOut(int paramInt)
   {
     if (paramInt <= 0)
     {
-      e.b("SessionTimeOut is between 1 and 600. Default value[30] is used");
+      cr.b("SessionTimeOut is between 1 and 600. Default value[30] is used");
       return;
     }
     if (paramInt <= 600)
     {
-      ao.a().a(paramInt);
+      ca.a().a(paramInt);
       return;
     }
-    e.b("SessionTimeOut is between 1 and 600. Value[600] is used");
-    ao.a().a(paramInt);
+    cr.b("SessionTimeOut is between 1 and 600. Value[600] is used");
+    ca.a().a(600);
+  }
+  
+  public static void setWearListener(StatService.WearListener paramWearListener)
+  {
+    DataCore.instance().a(paramWearListener);
   }
 }
 

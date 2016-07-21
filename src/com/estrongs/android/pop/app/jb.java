@@ -1,22 +1,62 @@
 package com.estrongs.android.pop.app;
 
-import android.content.Context;
-import android.view.WindowManager.LayoutParams;
-import com.estrongs.android.ui.e.iw;
+import com.estrongs.android.util.bg;
+import com.estrongs.fs.d;
+import com.estrongs.fs.h;
+import com.estrongs.fs.w;
+import java.util.List;
+import java.util.Vector;
 
 class jb
-  extends iw
+  implements Runnable
 {
-  jb(PopVideoPlayer paramPopVideoPlayer, Context paramContext, boolean paramBoolean1, boolean paramBoolean2)
-  {
-    super(paramContext, paramBoolean1, paramBoolean2);
-  }
+  jb(PopRemoteImageBrowser paramPopRemoteImageBrowser) {}
   
-  protected void a()
+  public void run()
   {
-    super.a();
-    WindowManager.LayoutParams localLayoutParams = b;
-    flags |= 0x400;
+    int j = 0;
+    try
+    {
+      List localList = PopRemoteImageBrowser.f(a).a(PopRemoteImageBrowser.e(a), false);
+      if (localList == null) {
+        return;
+      }
+    }
+    catch (Exception localException)
+    {
+      Object localObject;
+      for (;;)
+      {
+        localObject = null;
+      }
+      Vector localVector = new Vector();
+      int i = 0;
+      if (i < ((List)localObject).size())
+      {
+        h localh = (h)((List)localObject).get(i);
+        if (localh == null) {}
+        for (;;)
+        {
+          i += 1;
+          break;
+          if ((!localh.getFileType().a()) && (bg.c(localh.getAbsolutePath()))) {
+            localVector.add(localh.getAbsolutePath());
+          }
+        }
+      }
+      PopRemoteImageBrowser.a(a, new String[localVector.size()]);
+      localVector.toArray(PopRemoteImageBrowser.a(a));
+      i = j;
+      while (i < PopRemoteImageBrowser.a(a).length)
+      {
+        if (PopRemoteImageBrowser.a(a)[i].equals(PopRemoteImageBrowser.g(a))) {
+          PopRemoteImageBrowser.a(a, i);
+        }
+        i += 1;
+      }
+      PopRemoteImageBrowser.h(a);
+      je.a();
+    }
   }
 }
 

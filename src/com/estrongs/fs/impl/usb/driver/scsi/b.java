@@ -1,6 +1,6 @@
 package com.estrongs.fs.impl.usb.driver.scsi;
 
-import android.util.Log;
+import com.estrongs.android.util.l;
 import com.estrongs.fs.impl.usb.UsbFsException;
 import com.estrongs.fs.impl.usb.UsbFsException.ERROR_CODE;
 import java.io.IOException;
@@ -44,8 +44,8 @@ public class b
         i = c.a(arrayOfByte, arrayOfByte.length);
         if (i != arrayOfByte.length)
         {
-          Log.e(a, "Writing all bytes on command " + paramCommandBlockWrapper + " failed!");
-          Log.e(a, "outArray " + arrayOfByte.length + " written " + i);
+          l.e(a, "Writing all bytes on command " + paramCommandBlockWrapper + " failed!");
+          l.e(a, "outArray " + arrayOfByte.length + " written " + i);
         }
         k = paramCommandBlockWrapper.b();
         if (k <= 0) {
@@ -53,7 +53,7 @@ public class b
         }
         arrayOfByte = paramByteBuffer.array();
         if (paramCommandBlockWrapper.c() != CommandBlockWrapper.Direction.IN) {
-          break label494;
+          break label489;
         }
         i = 0;
         j = c.b(arrayOfByte, paramByteBuffer.position() + i, paramByteBuffer.remaining() - i);
@@ -84,20 +84,20 @@ public class b
         }
         i = c.b(e, e.length);
         if (i != 13) {
-          Log.e(a, "Unexpected command size while expecting csw " + i);
+          l.e(a, "Unexpected command size while expecting csw " + i);
         }
         paramByteBuffer = a.a(ByteBuffer.wrap(e));
         if (paramByteBuffer.b() != 0) {
-          Log.e(a, "Unsuccessful Csw status: " + paramByteBuffer.b());
+          l.e(a, "Unsuccessful Csw status: " + paramByteBuffer.b());
         }
         if (paramByteBuffer.a() != paramCommandBlockWrapper.a()) {
-          Log.e(a, "wrong csw tag!");
+          l.e(a, "wrong csw tag!");
         }
         if (paramByteBuffer.b() == 0) {
           bool = true;
         }
         return bool;
-        label494:
+        label489:
         i = 0;
       }
     }
@@ -107,17 +107,17 @@ public class b
   {
     Object localObject = ByteBuffer.allocate(36);
     if ((!a(new f(), null)) && (b)) {
-      Log.w(a, "unit not ready!");
+      l.d(a, "unit not ready!");
     }
     a(new d(), (ByteBuffer)localObject);
     localObject = e.a((ByteBuffer)localObject);
     f = ((e)localObject).b();
     g = ((e)localObject).a();
     if (b) {
-      Log.i(a, "Block size: " + f);
+      l.c(a, "Block size: " + f);
     }
     if (b) {
-      Log.i(a, "Last block address: " + g);
+      l.c(a, "Last block address: " + g);
     }
   }
   
@@ -136,7 +136,7 @@ public class b
     if (paramByteBuffer.remaining() % f != 0)
     {
       if (b) {
-        Log.i(a, "we have to round up size to next block sector");
+        l.c(a, "we have to round up size to next block sector");
       }
       int i = f;
       int j = paramByteBuffer.remaining();
@@ -149,7 +149,7 @@ public class b
     {
       c localc = new c((int)paramLong, localByteBuffer.remaining(), f);
       if (b) {
-        Log.d(a, "reading: " + localc);
+        l.b(a, "reading: " + localc);
       }
       a(localc, localByteBuffer);
       if (paramByteBuffer.remaining() % f != 0) {
@@ -157,7 +157,7 @@ public class b
       }
       paramByteBuffer.position(paramByteBuffer.limit());
       if (b) {
-        Log.d(a, "read time: " + (System.currentTimeMillis() - l));
+        l.b(a, "read time: " + (System.currentTimeMillis() - l));
       }
       return;
       localByteBuffer = paramByteBuffer;
@@ -199,7 +199,7 @@ public class b
     if (paramByteBuffer.remaining() % f != 0)
     {
       if (b) {
-        Log.i(a, "we have to round up size to next block sector");
+        l.c(a, "we have to round up size to next block sector");
       }
       int i = f;
       int j = paramByteBuffer.remaining();
@@ -213,12 +213,12 @@ public class b
     {
       g localg = new g((int)paramLong, localByteBuffer.remaining(), f);
       if (b) {
-        Log.d(a, "writing: " + localg);
+        l.b(a, "writing: " + localg);
       }
       a(localg, localByteBuffer);
       paramByteBuffer.position(paramByteBuffer.limit());
       if (b) {
-        Log.d(a, "write time: " + (System.currentTimeMillis() - l));
+        l.b(a, "write time: " + (System.currentTimeMillis() - l));
       }
       return;
       localByteBuffer = paramByteBuffer;

@@ -1,18 +1,13 @@
 package com.estrongs.android.view;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.widget.c;
-
 class dr
-  implements View.OnClickListener
+  implements Runnable
 {
-  dr(dp paramdp, int paramInt) {}
+  dr(dq paramdq) {}
   
-  public void onClick(View paramView)
+  public void run()
   {
-    b.c(a);
-    b.f.notifyDataSetChanged();
+    a.e.e();
   }
 }
 

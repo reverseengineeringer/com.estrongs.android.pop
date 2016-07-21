@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/SaveToESActivity;
+.field final synthetic a:Lcom/estrongs/android/pop/app/ko;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/SaveToESActivity;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/ko;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/kq;->a:Lcom/estrongs/android/pop/app/SaveToESActivity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/kq;->a:Lcom/estrongs/android/pop/app/ko;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,33 +25,60 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/kq;->a:Lcom/estrongs/android/pop/app/SaveToESActivity;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/kq;->a:Lcom/estrongs/android/pop/app/ko;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/kq;->a:Lcom/estrongs/android/pop/app/SaveToESActivity;
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/ko;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
-    iget-object v1, v1, Lcom/estrongs/android/pop/app/SaveToESActivity;->a:Lcom/estrongs/android/widget/g;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->r(Lcom/estrongs/android/pop/app/PopVideoPlayer;)Lcom/estrongs/android/pop/app/ag;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/widget/g;->d()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v1
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ag;->p()Z
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/pop/app/SaveToESActivity;->a(Lcom/estrongs/android/pop/app/SaveToESActivity;Ljava/lang/String;)V
+    move-result v0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/kq;->a:Lcom/estrongs/android/pop/app/SaveToESActivity;
+    if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/SaveToESActivity;->a:Lcom/estrongs/android/widget/g;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/kq;->a:Lcom/estrongs/android/pop/app/ko;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/kr;
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/ko;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/kr;-><init>(Lcom/estrongs/android/pop/app/kq;)V
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/g;->a(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-static {v0, v1}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->c(Lcom/estrongs/android/pop/app/PopVideoPlayer;Z)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/kq;->a:Lcom/estrongs/android/pop/app/SaveToESActivity;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/SaveToESActivity;->a:Lcom/estrongs/android/widget/g;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/g;->k()V
+    :goto_0
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     return-void
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/kq;->a:Lcom/estrongs/android/pop/app/ko;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/ko;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->t(Lcom/estrongs/android/pop/app/PopVideoPlayer;)Lcom/estrongs/android/pop/app/x;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/kq;->a:Lcom/estrongs/android/pop/app/ko;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/ko;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->u(Lcom/estrongs/android/pop/app/PopVideoPlayer;)V
+
+    :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/kq;->a:Lcom/estrongs/android/pop/app/ko;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/ko;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->t(Lcom/estrongs/android/pop/app/PopVideoPlayer;)Lcom/estrongs/android/pop/app/x;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/x;->show()V
+
+    goto :goto_0
 .end method

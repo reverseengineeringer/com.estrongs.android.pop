@@ -1,16 +1,15 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-
 class hh
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
-  hh(hc paramhc) {}
+  hh(hg paramhg) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void run()
   {
-    paramDialogInterface.dismiss();
+    if (a.a.isShowing()) {
+      a.a.dismiss();
+    }
   }
 }
 

@@ -1,10 +1,10 @@
 package com.estrongs.android.view.a;
 
-import com.estrongs.android.ui.e.co;
+import com.estrongs.android.ui.e.cp;
 
 public abstract interface b
 {
-  public abstract boolean a(co paramco);
+  public abstract boolean a(cp paramcp);
 }
 
 /* Location:

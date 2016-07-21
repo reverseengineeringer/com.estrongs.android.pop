@@ -1,28 +1,23 @@
 package android.support.v4.app;
 
-import android.os.Build.VERSION;
+import android.view.View;
 
-public class ab
+class ab
+  extends ag
 {
-  private static final ah a = new ai();
+  ab(Fragment paramFragment) {}
   
-  static
+  public View a(int paramInt)
   {
-    if (Build.VERSION.SDK_INT >= 16)
-    {
-      a = new al();
-      return;
+    if (a.mView == null) {
+      throw new IllegalStateException("Fragment does not have a view");
     }
-    if (Build.VERSION.SDK_INT >= 14)
-    {
-      a = new ak();
-      return;
-    }
-    if (Build.VERSION.SDK_INT >= 11)
-    {
-      a = new aj();
-      return;
-    }
+    return a.mView.findViewById(paramInt);
+  }
+  
+  public boolean a()
+  {
+    return a.mView != null;
   }
 }
 

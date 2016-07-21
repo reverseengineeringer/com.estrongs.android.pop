@@ -1,31 +1,15 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.Context;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
-import android.os.Handler;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import com.estrongs.android.pop.app.DownloaderActivity;
 
 class z
   implements Runnable
 {
-  z(y paramy) {}
+  z(u paramu, String paramString) {}
   
   public void run()
   {
-    Object localObject = a.mContext.getPackageManager().getInstalledApplications(8192);
-    ArrayList localArrayList = new ArrayList();
-    localObject = ((List)localObject).iterator();
-    while (((Iterator)localObject).hasNext())
-    {
-      ApplicationInfo localApplicationInfo = (ApplicationInfo)((Iterator)localObject).next();
-      if ((!y.a(a, packageName)) && ((flags & 0x1) <= 0)) {
-        localArrayList.add(localApplicationInfo);
-      }
-    }
-    a.a.post(new aa(this, localArrayList));
+    DownloaderActivity.a(u.e(b), a, "application/*");
   }
 }
 

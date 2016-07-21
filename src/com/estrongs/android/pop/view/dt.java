@@ -1,27 +1,54 @@
 package com.estrongs.android.pop.view;
 
-import android.app.Activity;
-import com.estrongs.android.util.am;
-import com.estrongs.android.view.cb;
-import com.estrongs.android.view.cd;
-import com.estrongs.fs.h;
-import com.estrongs.fs.util.a.a;
+import com.estrongs.android.pop.ad;
+import com.estrongs.android.pop.app.f.f;
+import com.estrongs.android.pop.app.service.a;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 
 class dt
-  extends cd
+  implements a
 {
-  dt(FileExplorerActivity paramFileExplorerActivity, Activity paramActivity, a parama, cb paramcb)
+  dt(FileExplorerActivity paramFileExplorerActivity) {}
+  
+  public void a(String paramString1, String paramString2, boolean paramBoolean)
   {
-    super(paramActivity, parama, paramcb);
+    a.k.b(paramString1, paramString2, paramBoolean);
   }
   
-  public h j()
+  public void a(ArrayList<f> paramArrayList, Map<String, String> paramMap)
   {
-    if (w == null) {}
-    while ((am.aN(w.getPath())) || (am.aF(w.getPath())) || (am.T(w.getPath()))) {
-      return null;
+    if ((paramMap == null) || (paramMap.isEmpty()))
+    {
+      a.k.a(paramArrayList);
+      a.runOnUiThread(new dv(this));
+      return;
     }
-    return super.j();
+    Iterator localIterator = paramMap.keySet().iterator();
+    label52:
+    String str;
+    if (localIterator.hasNext())
+    {
+      paramArrayList = localIterator.next();
+      str = (String)paramArrayList;
+      if (paramMap.get(paramArrayList) != null) {
+        break label103;
+      }
+    }
+    label103:
+    for (paramArrayList = null;; paramArrayList = ((String)paramMap.get(paramArrayList)).toString())
+    {
+      a.k.b(str, paramArrayList, false);
+      break label52;
+      break;
+    }
+  }
+  
+  public void a(boolean paramBoolean)
+  {
+    a.runOnUiThread(new du(this, paramBoolean));
   }
 }
 

@@ -1,10 +1,18 @@
 package com.estrongs.android.view;
 
-import java.util.List;
+import com.estrongs.android.pop.app.compress.br;
 
-public abstract interface av<T>
+class av
+  implements br
 {
-  public abstract void a(List<T> paramList);
+  av(ak paramak) {}
+  
+  public void a()
+  {
+    if (!ak.l(a)) {
+      a.g();
+    }
+  }
 }
 
 /* Location:

@@ -1,96 +1,41 @@
 .class Lcom/estrongs/android/view/d;
-.super Landroid/os/AsyncTask;
+.super Ljava/lang/Object;
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Landroid/os/AsyncTask",
-        "<",
-        "Ljava/lang/Void;",
-        "Ljava/lang/Void;",
-        "[",
-        "Ljava/lang/String;",
-        ">;"
-    }
-.end annotation
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/view/a;
+.field final synthetic a:Lcom/estrongs/android/view/b;
 
 
 # direct methods
-.method private constructor <init>(Lcom/estrongs/android/view/a;)V
+.method constructor <init>(Lcom/estrongs/android/view/b;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/view/d;->a:Lcom/estrongs/android/view/a;
+    iput-object p1, p0, Lcom/estrongs/android/view/d;->a:Lcom/estrongs/android/view/b;
 
-    invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcom/estrongs/android/view/a;Lcom/estrongs/android/view/b;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/estrongs/android/view/d;-><init>(Lcom/estrongs/android/view/a;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected a([Ljava/lang/String;)V
-    .locals 2
+.method public onClick(Landroid/view/View;)V
+    .locals 3
 
-    iget-object v0, p0, Lcom/estrongs/android/view/d;->a:Lcom/estrongs/android/view/a;
-
-    invoke-static {v0}, Lcom/estrongs/android/view/a;->b(Lcom/estrongs/android/view/a;)Lcom/handmark/pulltorefresh/library/PullToRefreshGridView;
+    invoke-static {}, Lcom/estrongs/android/pop/app/analysis/a;->a()Lcom/estrongs/android/pop/app/analysis/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/handmark/pulltorefresh/library/PullToRefreshGridView;->n()V
+    iget-object v1, p0, Lcom/estrongs/android/view/d;->a:Lcom/estrongs/android/view/b;
 
-    iget-object v0, p0, Lcom/estrongs/android/view/d;->a:Lcom/estrongs/android/view/a;
+    iget-object v1, v1, Lcom/estrongs/android/view/b;->C:Ljava/lang/String;
 
-    const-string v1, "app://update"
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/a;->g(Ljava/lang/String;)V
-
-    invoke-super {p0, p1}, Landroid/os/AsyncTask;->onPostExecute(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method protected varargs a([Ljava/lang/Void;)[Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    new-array v0, v0, [Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method protected synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    check-cast p1, [Ljava/lang/Void;
-
-    invoke-virtual {p0, p1}, Lcom/estrongs/android/view/d;->a([Ljava/lang/Void;)[Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method protected synthetic onPostExecute(Ljava/lang/Object;)V
-    .locals 0
-
-    check-cast p1, [Ljava/lang/String;
-
-    invoke-virtual {p0, p1}, Lcom/estrongs/android/view/d;->a([Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/pop/app/analysis/a;->a(Ljava/lang/String;Lcom/estrongs/android/pop/app/analysis/y;)V
 
     return-void
 .end method

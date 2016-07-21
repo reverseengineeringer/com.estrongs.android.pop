@@ -1,6 +1,6 @@
 package com.estrongs.fs.impl.pcs;
 
-import android.util.Log;
+import com.estrongs.android.util.l;
 import java.io.BufferedInputStream;
 import java.io.InputStream;
 import org.apache.http.client.methods.HttpGet;
@@ -25,7 +25,7 @@ class c
     {
       for (;;)
       {
-        Log.e("PcsFileSystem", "Error when HttpGet.abort()" + localException);
+        l.e("PcsFileSystem", "Error when HttpGet.abort()" + localException);
       }
     }
   }

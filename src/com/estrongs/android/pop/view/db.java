@@ -1,22 +1,26 @@
 package com.estrongs.android.pop.view;
 
-import android.view.View;
-import android.view.animation.Animation;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
-import com.estrongs.android.widget.a;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.view.cr;
 
 class db
-  extends a
+  implements Runnable
 {
-  db(FileExplorerActivity paramFileExplorerActivity, View paramView) {}
+  db(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void onAnimationEnd(Animation paramAnimation)
+  public void run()
   {
-    super.onAnimationEnd(paramAnimation);
-    b.q = false;
-    paramAnimation = (EditText)a.findViewById(2131361988);
-    ((InputMethodManager)b.getSystemService("input_method")).hideSoftInputFromWindow(paramAnimation.getWindowToken(), 0);
+    cr localcr = a.O();
+    String str = a.P();
+    if ((localcr != null) && (str != null) && (!localcr.ae()))
+    {
+      if ((ap.bi(a.P())) && (!ap.ah(ap.bQ(a.P()))))
+      {
+        a.O().d(0L);
+        a.O().o("all");
+      }
+      localcr.f();
+    }
   }
 }
 

@@ -1,13 +1,18 @@
 package android.support.v4.view;
 
-import android.view.View;
+import android.view.ViewGroup.MarginLayoutParams;
 
 class av
-  extends au
+  implements at
 {
-  public int a(View paramView)
+  public int a(ViewGroup.MarginLayoutParams paramMarginLayoutParams)
   {
-    return bb.a(paramView);
+    return aw.a(paramMarginLayoutParams);
+  }
+  
+  public int b(ViewGroup.MarginLayoutParams paramMarginLayoutParams)
+  {
+    return aw.b(paramMarginLayoutParams);
   }
 }
 

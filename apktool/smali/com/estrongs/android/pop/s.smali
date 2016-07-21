@@ -34,7 +34,7 @@
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/estrongs/android/pop/esclasses/ESActivity;
+    instance-of v0, v0, Lcom/estrongs/android/pop/app/d/a;
 
     if-nez v0, :cond_0
 
@@ -100,13 +100,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/android/pop/esclasses/ESActivity;
+    check-cast v0, Lcom/estrongs/android/pop/app/d/a;
 
     new-instance v1, Lcom/estrongs/android/pop/t;
 
     invoke-direct {v1, p0}, Lcom/estrongs/android/pop/t;-><init>(Lcom/estrongs/android/pop/s;)V
 
-    invoke-static {v0, v1}, Lcom/estrongs/fs/impl/local/a;->a(Lcom/estrongs/android/pop/esclasses/ESActivity;Lcom/estrongs/fs/impl/local/c;)V
+    invoke-static {v0, v1}, Lcom/estrongs/fs/impl/local/a;->a(Lcom/estrongs/android/pop/app/d/a;Lcom/estrongs/fs/impl/local/c;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0

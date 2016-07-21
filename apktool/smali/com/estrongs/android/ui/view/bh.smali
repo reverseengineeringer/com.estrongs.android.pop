@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/estrongs/a/b/b;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
+.field final synthetic a:Lcom/estrongs/android/ui/view/bg;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)V
+.method constructor <init>(Lcom/estrongs/android/ui/view/bg;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/view/bh;->a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
+    iput-object p1, p0, Lcom/estrongs/android/ui/view/bh;->a:Lcom/estrongs/android/ui/view/bg;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,18 +22,14 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 2
+.method public a()Z
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bh;->a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bh;->a:Lcom/estrongs/android/ui/view/bg;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->a(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Landroid/widget/ImageView;
+    iget-object v0, v0, Lcom/estrongs/android/ui/view/bg;->d:Lcom/estrongs/android/ui/view/bd;
 
-    move-result-object v0
+    iget-boolean v0, v0, Lcom/estrongs/android/ui/view/bd;->e:Z
 
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    return-void
+    return v0
 .end method

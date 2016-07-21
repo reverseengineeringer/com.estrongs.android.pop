@@ -1,22 +1,17 @@
 package com.estrongs.android.ui.dialog;
 
-import com.estrongs.a.a;
-import com.estrongs.android.ui.notification.e;
-import java.util.Map;
+import com.estrongs.fs.h;
+import com.estrongs.fs.i;
+import com.estrongs.fs.w;
 
 class jb
-  implements Runnable
+  implements i
 {
-  jb(ja paramja, a parama) {}
+  jb(ja paramja, boolean paramBoolean) {}
   
-  public void run()
+  public boolean a(h paramh)
   {
-    if ((!ix.j(b.a)) && (ix.i(b.a) != null))
-    {
-      ix.e.remove(Long.valueOf(a.getTaskId()));
-      ix.i(b.a).a();
-      ix.a(b.a, null);
-    }
+    return ((!paramh.getName().startsWith(".")) || (a)) && (paramh.getFileType().a());
   }
 }
 

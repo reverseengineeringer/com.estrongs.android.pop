@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/scenery_card_layout" android:background="@drawable/scenery_card_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/scenery_card_banner" android:layout_width="103.0dip" android:layout_height="149.0dip" />
+    <FrameLayout android:background="#00000000" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="right" android:id="@id/scenery_card_adview" android:background="@drawable/scenery_card_ad" android:layout_width="23.0dip" android:layout_height="23.0dip" />
+        <LinearLayout android:orientation="vertical" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.baidu.scenery.dispatcher.commondialog.CommonTextView android:textSize="18.0sp" android:textColor="#ff000000" android:ellipsize="end" android:id="@id/scenery_card_title" android:paddingLeft="15.0dip" android:paddingTop="20.5dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" custom:fontFamily="sans-serif" />
+            <com.baidu.scenery.dispatcher.commondialog.CommonTextView android:textSize="14.0sp" android:textColor="#ff8c8c8c" android:ellipsize="end" android:id="@id/scenery_card_content" android:paddingLeft="15.0dip" android:paddingTop="8.0dip" android:paddingRight="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:fontFamily="sans-serif-light" custom:maxLines="3" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center|right" android:layout_gravity="bottom|center|right" android:background="#00000000" android:paddingTop="10.0dip" android:paddingRight="14.5dip" android:paddingBottom="18.5dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/scenery_card_button_icon" android:layout_width="wrap_content" android:layout_height="18.0dip" android:adjustViewBounds="true" />
+            <com.baidu.scenery.dispatcher.commondialog.CommonTextView android:textSize="@dimen/du_scenerysdk_resultcard_button" android:textStyle="bold" android:textColor="@drawable/scenery_card_view_button" android:layout_gravity="right" android:id="@id/scenery_card_button" android:paddingLeft="8.5dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" custom:fontFamily="sans-serif-bold" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

@@ -27,7 +27,7 @@
 
 .field private l:F
 
-.field private m:Lcom/estrongs/android/util/a;
+.field private m:Lcom/estrongs/android/j/c;
 
 .field private n:Landroid/view/View$OnClickListener;
 
@@ -66,11 +66,11 @@
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->k:Landroid/util/DisplayMetrics;
 
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->m:Lcom/estrongs/android/util/a;
+    iput-object v1, p0, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->m:Lcom/estrongs/android/j/c;
 
-    new-instance v0, Lcom/estrongs/android/pop/app/ik;
+    new-instance v0, Lcom/estrongs/android/pop/app/ja;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/ik;-><init>(Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/ja;-><init>(Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;)V
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->n:Landroid/view/View$OnClickListener;
 
@@ -208,13 +208,13 @@
 .method private b()V
     .locals 2
 
-    invoke-static {p0}, Lcom/estrongs/android/pop/app/io;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/estrongs/android/pop/app/je;->a(Landroid/content/Context;)V
 
     new-instance v0, Ljava/lang/Thread;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/il;
+    new-instance v1, Lcom/estrongs/android/pop/app/jb;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/il;-><init>(Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/jb;-><init>(Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;)V
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
@@ -234,13 +234,13 @@
 .method private c()V
     .locals 2
 
-    invoke-static {p0}, Lcom/estrongs/android/pop/app/io;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/estrongs/android/pop/app/je;->a(Landroid/content/Context;)V
 
     new-instance v0, Ljava/lang/Thread;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/im;
+    new-instance v1, Lcom/estrongs/android/pop/app/jc;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/im;-><init>(Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/jc;-><init>(Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;)V
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
@@ -278,9 +278,9 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->o:Landroid/os/Handler;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/in;
+    new-instance v1, Lcom/estrongs/android/pop/app/jd;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/in;-><init>(Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/jd;-><init>(Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -421,7 +421,7 @@
 
     aget-object v5, v5, v2
 
-    invoke-static {v5}, Lcom/estrongs/android/util/am;->J(Ljava/lang/String;)Z
+    invoke-static {v5}, Lcom/estrongs/android/util/ap;->L(Ljava/lang/String;)Z
 
     move-result v5
 
@@ -429,7 +429,7 @@
 
     aget-object v6, v6, v2
 
-    invoke-static {v6}, Lcom/estrongs/android/util/am;->aV(Ljava/lang/String;)Z
+    invoke-static {v6}, Lcom/estrongs/android/util/ap;->bg(Ljava/lang/String;)Z
 
     move-result v6
 
@@ -588,7 +588,7 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 8
 
-    const v7, 0x7f0b0230
+    const v7, 0x7f08040e
 
     const/16 v6, 0x8
 
@@ -603,8 +603,6 @@
     move-result-object v0
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->a:Lcom/estrongs/fs/d;
-
-    invoke-virtual {p0, v5}, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->requestWindowFeature(I)Z
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->getWindowManager()Landroid/view/WindowManager;
 
@@ -624,13 +622,11 @@
 
     iput v0, p0, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->l:F
 
-    const-string v0, "PopRemoteImageBrowser"
-
-    invoke-static {p0, v3, v0}, Lcom/estrongs/android/util/a;->a(Landroid/content/Context;ZLjava/lang/String;)Lcom/estrongs/android/util/a;
+    invoke-static {p0}, Lcom/estrongs/android/j/c;->a(Landroid/content/Context;)Lcom/estrongs/android/j/c;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->m:Lcom/estrongs/android/util/a;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->m:Lcom/estrongs/android/j/c;
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->getWindow()Landroid/view/Window;
 
@@ -642,11 +638,48 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/Window;->setFlags(II)V
 
-    const v0, 0x7f0300c6
+    const v0, 0x7f03016d
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->setContentView(I)V
 
-    const v0, 0x7f0a0077
+    invoke-static {p0}, Lcom/estrongs/android/j/c;->a(Landroid/content/Context;)Lcom/estrongs/android/j/c;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->m:Lcom/estrongs/android/j/c;
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string v1, "islocalopen"
+
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    :try_start_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->m:Lcom/estrongs/android/j/c;
+
+    const-string v1, "act3"
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/j/c;->d(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->m:Lcom/estrongs/android/j/c;
+
+    const-string v1, "act3"
+
+    const-string v2, "image_browser"
+
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/j/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_0
+    :goto_0
+    const v0, 0x7f0e01d4
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->findViewById(I)Landroid/view/View;
 
@@ -664,7 +697,7 @@
 
     move-result-object v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->getIntent()Landroid/content/Intent;
 
@@ -674,7 +707,7 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     const-string v2, "FILE_PATH"
 
@@ -686,7 +719,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->d:Ljava/lang/String;
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->d:Ljava/lang/String;
 
@@ -694,9 +727,9 @@
 
     move-result-object v0
 
-    :cond_0
-    :goto_0
-    if-nez v0, :cond_9
+    :cond_1
+    :goto_1
+    if-nez v0, :cond_a
 
     const-string v0, "pic://"
 
@@ -706,27 +739,27 @@
 
     move-object v1, v0
 
-    :goto_1
+    :goto_2
     invoke-virtual {v1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v0
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_4
 
     const-string v0, ""
 
     move-object v2, v0
 
-    :goto_2
+    :goto_3
     invoke-virtual {v1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     const-string v0, "file"
 
@@ -734,17 +767,17 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     invoke-virtual {v1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bl(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bC(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     const-string v0, "pic"
 
@@ -752,7 +785,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     const-string v0, "search"
 
@@ -760,9 +793,9 @@
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
-    :cond_1
+    :cond_2
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -773,49 +806,56 @@
 
     move-result v2
 
-    if-ge v2, v6, :cond_4
+    if-ge v2, v6, :cond_5
 
     const-class v2, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
     invoke-virtual {v0, p0, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    :goto_3
+    :goto_4
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->startActivity(Landroid/content/Intent;)V
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->finish()V
 
-    :goto_4
+    :goto_5
     return-void
 
-    :cond_2
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    goto/16 :goto_0
+
+    :cond_3
     invoke-virtual {v0}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->d:Ljava/lang/String;
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_3
+    :cond_4
     invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v0
 
     move-object v2, v0
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_4
+    :cond_5
     const-class v2, Lcom/estrongs/android/pop/app/imageviewer/ViewImage;
 
     invoke-virtual {v0, p0, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    goto :goto_3
+    goto :goto_4
 
-    :cond_5
-    const v0, 0x7f0a0274
+    :cond_6
+    const v0, 0x7f0e0448
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->findViewById(I)Landroid/view/View;
 
@@ -825,7 +865,7 @@
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->i:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a0275
+    const v0, 0x7f0e0449
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->findViewById(I)Landroid/view/View;
 
@@ -877,7 +917,7 @@
 
     iget-object v3, p0, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->d:Ljava/lang/String;
 
-    invoke-static {v3}, Lcom/estrongs/android/util/am;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/estrongs/android/util/ap;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -907,13 +947,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_9
 
     const/16 v0, 0x320
 
     const/high16 v2, 0x300000
 
-    :try_start_0
+    :try_start_1
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
@@ -924,7 +964,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_8
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->f:Landroid/widget/ImageView;
 
@@ -939,12 +979,12 @@
     invoke-direct {v1, v2, v0}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
     iput-object v1, p0, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->q:Landroid/graphics/drawable/BitmapDrawable;
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_1
+    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
 
-    :cond_6
-    :goto_5
-    const v0, 0x7f0a0386
+    :cond_7
+    :goto_6
+    const v0, 0x7f0e05f7
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->findViewById(I)Landroid/view/View;
 
@@ -952,10 +992,10 @@
 
     invoke-virtual {v0, v6}, Landroid/view/View;->setVisibility(I)V
 
-    goto/16 :goto_4
+    goto/16 :goto_5
 
-    :cond_7
-    :try_start_1
+    :cond_8
+    :try_start_2
     iget-object v0, p0, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->f:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageURI(Landroid/net/Uri;)V
@@ -966,9 +1006,9 @@
 
     move-result-object v0
 
-    if-nez v0, :cond_6
+    if-nez v0, :cond_7
 
-    const v0, 0x7f0b0230
+    const v0, 0x7f08040e
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->getString(I)Ljava/lang/String;
 
@@ -976,13 +1016,13 @@
 
     const/4 v1, 0x1
 
-    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
-    :try_end_1
-    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
+    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    :try_end_2
+    .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_1
 
-    goto :goto_5
+    goto :goto_6
 
-    :catch_0
+    :catch_1
     move-exception v0
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1021,25 +1061,25 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0, v5}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    invoke-static {p0, v0, v5}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
-    goto :goto_5
-
-    :cond_8
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->b()V
-
-    goto/16 :goto_4
+    goto :goto_6
 
     :cond_9
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->b()V
+
+    goto/16 :goto_5
+
+    :cond_a
     move-object v1, v0
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 .end method
 
 .method public onCreateContextMenu(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;)V
     .locals 1
 
-    const v0, 0x7f0b0231
+    const v0, 0x7f08064e
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->getString(I)Ljava/lang/String;
 
@@ -1059,25 +1099,17 @@
 .end method
 
 .method protected onPause()V
-    .locals 1
+    .locals 0
 
     invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onPause()V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->m:Lcom/estrongs/android/util/a;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/util/a;->c()Z
 
     return-void
 .end method
 
 .method protected onResume()V
-    .locals 1
+    .locals 0
 
     invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onResume()V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/PopRemoteImageBrowser;->m:Lcom/estrongs/android/util/a;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/util/a;->b()Z
 
     return-void
 .end method

@@ -1,20 +1,13 @@
 package com.estrongs.android.pop.app.editor;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.pop.m;
-
 class v
-  implements DialogInterface.OnClickListener
+  implements ao
 {
   v(PopNoteEditor paramPopNoteEditor) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void a(int paramInt)
   {
-    PopNoteEditor.a(a, new aj(a, null));
-    PopNoteEditor.y(a).setTaskDecisionListener(new m(a));
-    PopNoteEditor.y(a).execute();
-    paramDialogInterface.dismiss();
+    PopNoteEditor.c(a, paramInt);
   }
 }
 

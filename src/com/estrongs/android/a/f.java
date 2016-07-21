@@ -1,18 +1,23 @@
 package com.estrongs.android.a;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.a.b.a;
+import com.estrongs.android.util.l;
+import java.util.Map;
+import java.util.concurrent.CountDownLatch;
 
 class f
-  implements DialogInterface.OnClickListener
+  implements j
 {
-  f(e parame) {}
+  f(b paramb) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void a(String paramString)
   {
-    e.a(a, true);
-    a.dismiss();
+    l.e(b.h(), "DiskAnalyzer for App finish!!");
+    b.h(a).countDown();
+    b.a(a, true);
   }
+  
+  public void a(String paramString, Map<String, a> paramMap) {}
 }
 
 /* Location:

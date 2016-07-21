@@ -5,7 +5,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 class t
-  extends OutputStream
+  extends InputStream
 {
   private LocalSocket a = null;
   private InputStream b = null;
@@ -20,26 +20,24 @@ class t
   
   public void close()
   {
-    c.close();
     b.close();
+    c.close();
     a.close();
   }
   
-  public void flush() {}
-  
-  public void write(int paramInt)
+  public int read()
   {
-    c.write(paramInt);
+    return b.read();
   }
   
-  public void write(byte[] paramArrayOfByte)
+  public int read(byte[] paramArrayOfByte)
   {
-    c.write(paramArrayOfByte);
+    return b.read(paramArrayOfByte);
   }
   
-  public void write(byte[] paramArrayOfByte, int paramInt1, int paramInt2)
+  public int read(byte[] paramArrayOfByte, int paramInt1, int paramInt2)
   {
-    c.write(paramArrayOfByte, paramInt1, paramInt2);
+    return b.read(paramArrayOfByte, paramInt1, paramInt2);
   }
 }
 

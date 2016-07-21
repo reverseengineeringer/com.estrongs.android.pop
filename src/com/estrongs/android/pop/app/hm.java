@@ -1,58 +1,18 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.preference.CheckBoxPreference;
+import android.os.Handler;
 import android.preference.Preference;
-import android.widget.EditText;
-import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.android.ui.view.ag;
+import android.preference.Preference.OnPreferenceChangeListener;
 
 class hm
-  implements DialogInterface.OnClickListener
+  implements Preference.OnPreferenceChangeListener
 {
-  hm(PopPreferenceActivity paramPopPreferenceActivity, int paramInt) {}
+  hm(PopPreferenceActivity paramPopPreferenceActivity) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
   {
-    Object localObject = (cg)paramDialogInterface;
-    String str = ((EditText)((cg)localObject).findViewById(2131362494)).getText().toString();
-    localObject = ((EditText)((cg)localObject).findViewById(2131362496)).getText().toString();
-    if ((str == null) || (str.length() == 0)) {
-      ag.a(b, 2131427999, 1);
-    }
-    for (;;)
-    {
-      paramDialogInterface.dismiss();
-      return;
-      if (str.equals(localObject)) {
-        break;
-      }
-      ag.a(b, 2131428000, 1);
-    }
-    ad.a(b).x(str);
-    if (a == 108)
-    {
-      b.f.setChecked(true);
-      FexApplication.a().c(true);
-    }
-    for (;;)
-    {
-      b.r.setEnabled(true);
-      break;
-      if (a == 111)
-      {
-        b.g.setChecked(true);
-        FexApplication.a().d(true);
-      }
-      else if (a == 113)
-      {
-        b.h.setChecked(true);
-        FexApplication.a().e(true);
-      }
-    }
+    PopPreferenceActivity.b(a).post(new hn(this));
+    return true;
   }
 }
 

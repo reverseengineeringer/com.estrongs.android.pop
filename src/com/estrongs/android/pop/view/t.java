@@ -1,14 +1,22 @@
 package com.estrongs.android.pop.view;
 
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.Animation.AnimationListener;
+
 class t
-  implements Runnable
+  implements Animation.AnimationListener
 {
-  t(FileExplorerActivity paramFileExplorerActivity) {}
+  t(FileExplorerActivity paramFileExplorerActivity, View paramView, Animation paramAnimation) {}
   
-  public void run()
+  public void onAnimationEnd(Animation paramAnimation)
   {
-    a.e("smb://");
+    a.startAnimation(b);
   }
+  
+  public void onAnimationRepeat(Animation paramAnimation) {}
+  
+  public void onAnimationStart(Animation paramAnimation) {}
 }
 
 /* Location:

@@ -2,10 +2,28 @@ package com.estrongs.android.pop.utils;
 
 import android.app.Activity;
 import android.content.Context;
-import com.estrongs.android.ui.view.ag;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.os.Bundle;
+import com.estrongs.android.ui.view.ak;
 
 public class a
 {
+  public static String a(Context paramContext, String paramString)
+  {
+    try
+    {
+      paramContext = getPackageManagergetApplicationInfogetPackageName128metaData.get(paramString).toString();
+      return paramContext;
+    }
+    catch (PackageManager.NameNotFoundException paramContext)
+    {
+      paramContext.printStackTrace();
+    }
+    return null;
+  }
+  
   public static void a(Activity paramActivity, int paramInt)
   {
     a(paramActivity, paramActivity.getText(paramInt));
@@ -35,7 +53,7 @@ public class a
   {
     try
     {
-      ag.a(paramContext, paramCharSequence, 0);
+      ak.a(paramContext, paramCharSequence, 0);
       return;
     }
     catch (Exception paramContext) {}

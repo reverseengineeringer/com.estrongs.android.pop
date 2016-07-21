@@ -55,236 +55,310 @@ public class b
   public static void c()
   {
     // Byte code:
-    //   0: aconst_null
-    //   1: astore_3
-    //   2: iconst_0
-    //   3: istore_0
-    //   4: getstatic 17	com/estrongs/android/pop/b:b	Z
-    //   7: ifeq +4 -> 11
-    //   10: return
-    //   11: iconst_1
-    //   12: putstatic 17	com/estrongs/android/pop/b:b	Z
-    //   15: ldc 53
-    //   17: invokestatic 55	com/estrongs/android/pop/b:a	(Ljava/lang/String;)Ljava/lang/String;
-    //   20: astore 5
-    //   22: invokestatic 48	android/os/Environment:getExternalStorageDirectory	()Ljava/io/File;
-    //   25: invokevirtual 51	java/io/File:getAbsolutePath	()Ljava/lang/String;
-    //   28: astore 6
-    //   30: aload 5
-    //   32: ifnull +328 -> 360
-    //   35: aload 6
-    //   37: ifnull +323 -> 360
-    //   40: aload 5
-    //   42: aload 6
-    //   44: invokevirtual 61	java/lang/String:equals	(Ljava/lang/Object;)Z
-    //   47: ifeq +13 -> 60
-    //   50: iconst_1
-    //   51: putstatic 15	com/estrongs/android/pop/b:a	Z
-    //   54: aload 5
-    //   56: putstatic 19	com/estrongs/android/pop/b:c	Ljava/lang/String;
-    //   59: return
-    //   60: new 30	java/io/File
-    //   63: dup
-    //   64: getstatic 65	com/estrongs/android/pop/a:b	Ljava/lang/String;
-    //   67: invokespecial 33	java/io/File:<init>	(Ljava/lang/String;)V
-    //   70: astore 4
-    //   72: aload 4
-    //   74: invokevirtual 69	java/io/File:exists	()Z
-    //   77: ifne +9 -> 86
-    //   80: aload 4
-    //   82: invokevirtual 72	java/io/File:mkdirs	()Z
-    //   85: pop
-    //   86: invokestatic 78	java/lang/System:currentTimeMillis	()J
-    //   89: lstore_1
-    //   90: new 30	java/io/File
-    //   93: dup
-    //   94: new 80	java/lang/StringBuilder
-    //   97: dup
-    //   98: invokespecial 81	java/lang/StringBuilder:<init>	()V
-    //   101: aload 5
-    //   103: invokevirtual 85	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   106: ldc 87
-    //   108: invokevirtual 85	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   111: ldc 89
-    //   113: invokevirtual 85	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   116: lload_1
-    //   117: invokevirtual 92	java/lang/StringBuilder:append	(J)Ljava/lang/StringBuilder;
-    //   120: invokevirtual 95	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   123: invokespecial 33	java/io/File:<init>	(Ljava/lang/String;)V
-    //   126: astore 4
-    //   128: aload 4
-    //   130: invokevirtual 98	java/io/File:createNewFile	()Z
-    //   133: pop
-    //   134: new 30	java/io/File
-    //   137: dup
-    //   138: new 80	java/lang/StringBuilder
-    //   141: dup
-    //   142: invokespecial 81	java/lang/StringBuilder:<init>	()V
-    //   145: getstatic 65	com/estrongs/android/pop/a:b	Ljava/lang/String;
-    //   148: invokevirtual 85	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   151: ldc 89
-    //   153: invokevirtual 85	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   156: lload_1
-    //   157: invokevirtual 92	java/lang/StringBuilder:append	(J)Ljava/lang/StringBuilder;
-    //   160: invokevirtual 95	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   163: invokespecial 33	java/io/File:<init>	(Ljava/lang/String;)V
-    //   166: invokevirtual 69	java/io/File:exists	()Z
-    //   169: ifeq +24 -> 193
-    //   172: iconst_1
-    //   173: putstatic 15	com/estrongs/android/pop/b:a	Z
-    //   176: aload 6
-    //   178: putstatic 19	com/estrongs/android/pop/b:c	Ljava/lang/String;
-    //   181: aload 4
-    //   183: ifnull -173 -> 10
-    //   186: aload 4
-    //   188: invokevirtual 101	java/io/File:delete	()Z
-    //   191: pop
-    //   192: return
-    //   193: iconst_0
-    //   194: putstatic 15	com/estrongs/android/pop/b:a	Z
-    //   197: aconst_null
-    //   198: putstatic 19	com/estrongs/android/pop/b:c	Ljava/lang/String;
-    //   201: aload 5
-    //   203: ldc 103
-    //   205: invokevirtual 107	java/lang/String:equalsIgnoreCase	(Ljava/lang/String;)Z
-    //   208: ifeq +130 -> 338
-    //   211: iload_0
-    //   212: iconst_3
-    //   213: if_icmpge +71 -> 284
-    //   216: new 30	java/io/File
-    //   219: dup
-    //   220: new 80	java/lang/StringBuilder
-    //   223: dup
-    //   224: invokespecial 81	java/lang/StringBuilder:<init>	()V
-    //   227: ldc 109
-    //   229: invokevirtual 85	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   232: iload_0
-    //   233: invokevirtual 112	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   236: ldc 87
-    //   238: invokevirtual 85	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   241: ldc 89
-    //   243: invokevirtual 85	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   246: lload_1
-    //   247: invokevirtual 92	java/lang/StringBuilder:append	(J)Ljava/lang/StringBuilder;
-    //   250: invokevirtual 95	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   253: invokespecial 33	java/io/File:<init>	(Ljava/lang/String;)V
-    //   256: invokevirtual 69	java/io/File:exists	()Z
-    //   259: ifeq +72 -> 331
-    //   262: new 80	java/lang/StringBuilder
-    //   265: dup
-    //   266: invokespecial 81	java/lang/StringBuilder:<init>	()V
-    //   269: ldc 109
-    //   271: invokevirtual 85	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   274: iload_0
-    //   275: invokevirtual 112	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   278: invokevirtual 95	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   281: putstatic 19	com/estrongs/android/pop/b:c	Ljava/lang/String;
-    //   284: getstatic 19	com/estrongs/android/pop/b:c	Ljava/lang/String;
-    //   287: ifnonnull -106 -> 181
-    //   290: aload 5
-    //   292: putstatic 19	com/estrongs/android/pop/b:c	Ljava/lang/String;
-    //   295: goto -114 -> 181
-    //   298: astore 5
-    //   300: aload 4
-    //   302: astore_3
-    //   303: aload 5
-    //   305: astore 4
-    //   307: aload 4
-    //   309: invokevirtual 40	java/lang/Exception:printStackTrace	()V
-    //   312: iconst_1
-    //   313: putstatic 15	com/estrongs/android/pop/b:a	Z
-    //   316: aload 6
-    //   318: putstatic 19	com/estrongs/android/pop/b:c	Ljava/lang/String;
-    //   321: aload_3
-    //   322: ifnull -312 -> 10
-    //   325: aload_3
-    //   326: invokevirtual 101	java/io/File:delete	()Z
-    //   329: pop
-    //   330: return
-    //   331: iload_0
-    //   332: iconst_1
-    //   333: iadd
-    //   334: istore_0
-    //   335: goto -124 -> 211
-    //   338: aload 5
-    //   340: putstatic 19	com/estrongs/android/pop/b:c	Ljava/lang/String;
-    //   343: goto -162 -> 181
-    //   346: astore_3
-    //   347: aload 4
-    //   349: ifnull +9 -> 358
-    //   352: aload 4
-    //   354: invokevirtual 101	java/io/File:delete	()Z
-    //   357: pop
-    //   358: aload_3
-    //   359: athrow
-    //   360: aload 6
-    //   362: ifnull +13 -> 375
-    //   365: iconst_1
-    //   366: putstatic 15	com/estrongs/android/pop/b:a	Z
-    //   369: aload 6
-    //   371: putstatic 19	com/estrongs/android/pop/b:c	Ljava/lang/String;
-    //   374: return
-    //   375: iconst_0
-    //   376: putstatic 15	com/estrongs/android/pop/b:a	Z
-    //   379: aload 5
-    //   381: putstatic 19	com/estrongs/android/pop/b:c	Ljava/lang/String;
-    //   384: return
-    //   385: astore_3
-    //   386: aconst_null
-    //   387: astore 4
-    //   389: goto -42 -> 347
-    //   392: astore 5
-    //   394: aload_3
-    //   395: astore 4
-    //   397: aload 5
-    //   399: astore_3
-    //   400: goto -53 -> 347
-    //   403: astore 4
-    //   405: goto -98 -> 307
+    //   0: getstatic 17	com/estrongs/android/pop/b:b	Z
+    //   3: ifeq +4 -> 7
+    //   6: return
+    //   7: iconst_1
+    //   8: putstatic 17	com/estrongs/android/pop/b:b	Z
+    //   11: ldc 55
+    //   13: invokestatic 57	com/estrongs/android/pop/b:a	(Ljava/lang/String;)Ljava/lang/String;
+    //   16: astore 5
+    //   18: invokestatic 48	android/os/Environment:getExternalStorageDirectory	()Ljava/io/File;
+    //   21: invokevirtual 51	java/io/File:getAbsolutePath	()Ljava/lang/String;
+    //   24: astore 6
+    //   26: aload 5
+    //   28: ifnull +459 -> 487
+    //   31: aload 6
+    //   33: ifnull +454 -> 487
+    //   36: new 30	java/io/File
+    //   39: dup
+    //   40: getstatic 61	com/estrongs/android/pop/a:b	Ljava/lang/String;
+    //   43: invokespecial 33	java/io/File:<init>	(Ljava/lang/String;)V
+    //   46: astore_3
+    //   47: aload_3
+    //   48: invokevirtual 65	java/io/File:exists	()Z
+    //   51: ifne +56 -> 107
+    //   54: aload_3
+    //   55: invokevirtual 68	java/io/File:mkdirs	()Z
+    //   58: pop
+    //   59: invokestatic 73	com/estrongs/android/pop/FexApplication:a	()Lcom/estrongs/android/pop/FexApplication;
+    //   62: invokestatic 78	com/estrongs/android/pop/ai:b	(Landroid/content/Context;)Lcom/estrongs/android/pop/ai;
+    //   65: invokevirtual 81	com/estrongs/android/pop/ai:t	()Z
+    //   68: ifne +12 -> 80
+    //   71: invokestatic 73	com/estrongs/android/pop/FexApplication:a	()Lcom/estrongs/android/pop/FexApplication;
+    //   74: invokestatic 78	com/estrongs/android/pop/ai:b	(Landroid/content/Context;)Lcom/estrongs/android/pop/ai;
+    //   77: invokevirtual 84	com/estrongs/android/pop/ai:v	()V
+    //   80: new 30	java/io/File
+    //   83: dup
+    //   84: getstatic 85	com/estrongs/android/pop/a:c	Ljava/lang/String;
+    //   87: invokespecial 33	java/io/File:<init>	(Ljava/lang/String;)V
+    //   90: invokevirtual 88	java/io/File:createNewFile	()Z
+    //   93: pop
+    //   94: invokestatic 73	com/estrongs/android/pop/FexApplication:a	()Lcom/estrongs/android/pop/FexApplication;
+    //   97: invokestatic 93	com/estrongs/android/j/c:a	(Landroid/content/Context;)Lcom/estrongs/android/j/c;
+    //   100: ldc 95
+    //   102: ldc 97
+    //   104: invokevirtual 100	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   107: invokestatic 73	com/estrongs/android/pop/FexApplication:a	()Lcom/estrongs/android/pop/FexApplication;
+    //   110: invokestatic 78	com/estrongs/android/pop/ai:b	(Landroid/content/Context;)Lcom/estrongs/android/pop/ai;
+    //   113: invokevirtual 81	com/estrongs/android/pop/ai:t	()Z
+    //   116: ifne +12 -> 128
+    //   119: invokestatic 73	com/estrongs/android/pop/FexApplication:a	()Lcom/estrongs/android/pop/FexApplication;
+    //   122: invokestatic 78	com/estrongs/android/pop/ai:b	(Landroid/content/Context;)Lcom/estrongs/android/pop/ai;
+    //   125: invokevirtual 103	com/estrongs/android/pop/ai:u	()V
+    //   128: aload 5
+    //   130: aload 6
+    //   132: invokevirtual 109	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   135: ifeq +29 -> 164
+    //   138: iconst_1
+    //   139: putstatic 15	com/estrongs/android/pop/b:a	Z
+    //   142: aload 5
+    //   144: putstatic 19	com/estrongs/android/pop/b:c	Ljava/lang/String;
+    //   147: return
+    //   148: astore_3
+    //   149: aload_3
+    //   150: invokevirtual 110	java/io/IOException:printStackTrace	()V
+    //   153: goto -59 -> 94
+    //   156: astore_3
+    //   157: aload_3
+    //   158: invokevirtual 40	java/lang/Exception:printStackTrace	()V
+    //   161: goto -54 -> 107
+    //   164: invokestatic 116	java/lang/System:currentTimeMillis	()J
+    //   167: lstore_1
+    //   168: new 30	java/io/File
+    //   171: dup
+    //   172: new 118	java/lang/StringBuilder
+    //   175: dup
+    //   176: invokespecial 119	java/lang/StringBuilder:<init>	()V
+    //   179: aload 5
+    //   181: invokevirtual 123	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   184: ldc 125
+    //   186: invokevirtual 123	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   189: ldc 127
+    //   191: invokevirtual 123	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   194: lload_1
+    //   195: invokevirtual 130	java/lang/StringBuilder:append	(J)Ljava/lang/StringBuilder;
+    //   198: invokevirtual 133	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   201: invokespecial 33	java/io/File:<init>	(Ljava/lang/String;)V
+    //   204: astore 4
+    //   206: aload 4
+    //   208: astore_3
+    //   209: aload 4
+    //   211: invokevirtual 88	java/io/File:createNewFile	()Z
+    //   214: pop
+    //   215: aload 4
+    //   217: astore_3
+    //   218: new 30	java/io/File
+    //   221: dup
+    //   222: new 118	java/lang/StringBuilder
+    //   225: dup
+    //   226: invokespecial 119	java/lang/StringBuilder:<init>	()V
+    //   229: getstatic 61	com/estrongs/android/pop/a:b	Ljava/lang/String;
+    //   232: invokevirtual 123	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   235: ldc 127
+    //   237: invokevirtual 123	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   240: lload_1
+    //   241: invokevirtual 130	java/lang/StringBuilder:append	(J)Ljava/lang/StringBuilder;
+    //   244: invokevirtual 133	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   247: invokespecial 33	java/io/File:<init>	(Ljava/lang/String;)V
+    //   250: invokevirtual 65	java/io/File:exists	()Z
+    //   253: ifeq +30 -> 283
+    //   256: aload 4
+    //   258: astore_3
+    //   259: iconst_1
+    //   260: putstatic 15	com/estrongs/android/pop/b:a	Z
+    //   263: aload 4
+    //   265: astore_3
+    //   266: aload 6
+    //   268: putstatic 19	com/estrongs/android/pop/b:c	Ljava/lang/String;
+    //   271: aload 4
+    //   273: ifnull -267 -> 6
+    //   276: aload 4
+    //   278: invokevirtual 136	java/io/File:delete	()Z
+    //   281: pop
+    //   282: return
+    //   283: aload 4
+    //   285: astore_3
+    //   286: iconst_0
+    //   287: putstatic 15	com/estrongs/android/pop/b:a	Z
+    //   290: aload 4
+    //   292: astore_3
+    //   293: aconst_null
+    //   294: putstatic 19	com/estrongs/android/pop/b:c	Ljava/lang/String;
+    //   297: aload 4
+    //   299: astore_3
+    //   300: aload 5
+    //   302: ldc -118
+    //   304: invokevirtual 142	java/lang/String:equalsIgnoreCase	(Ljava/lang/String;)Z
+    //   307: ifeq +148 -> 455
+    //   310: iconst_0
+    //   311: istore_0
+    //   312: iload_0
+    //   313: iconst_3
+    //   314: if_icmpge +77 -> 391
+    //   317: aload 4
+    //   319: astore_3
+    //   320: new 30	java/io/File
+    //   323: dup
+    //   324: new 118	java/lang/StringBuilder
+    //   327: dup
+    //   328: invokespecial 119	java/lang/StringBuilder:<init>	()V
+    //   331: ldc -112
+    //   333: invokevirtual 123	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   336: iload_0
+    //   337: invokevirtual 147	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
+    //   340: ldc 125
+    //   342: invokevirtual 123	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   345: ldc 127
+    //   347: invokevirtual 123	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   350: lload_1
+    //   351: invokevirtual 130	java/lang/StringBuilder:append	(J)Ljava/lang/StringBuilder;
+    //   354: invokevirtual 133	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   357: invokespecial 33	java/io/File:<init>	(Ljava/lang/String;)V
+    //   360: invokevirtual 65	java/io/File:exists	()Z
+    //   363: ifeq +85 -> 448
+    //   366: aload 4
+    //   368: astore_3
+    //   369: new 118	java/lang/StringBuilder
+    //   372: dup
+    //   373: invokespecial 119	java/lang/StringBuilder:<init>	()V
+    //   376: ldc -112
+    //   378: invokevirtual 123	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   381: iload_0
+    //   382: invokevirtual 147	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
+    //   385: invokevirtual 133	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   388: putstatic 19	com/estrongs/android/pop/b:c	Ljava/lang/String;
+    //   391: aload 4
+    //   393: astore_3
+    //   394: getstatic 19	com/estrongs/android/pop/b:c	Ljava/lang/String;
+    //   397: ifnonnull -126 -> 271
+    //   400: aload 4
+    //   402: astore_3
+    //   403: aload 5
+    //   405: putstatic 19	com/estrongs/android/pop/b:c	Ljava/lang/String;
+    //   408: goto -137 -> 271
+    //   411: astore 5
+    //   413: aload 4
+    //   415: astore_3
+    //   416: aload 5
+    //   418: invokevirtual 40	java/lang/Exception:printStackTrace	()V
+    //   421: aload 4
+    //   423: astore_3
+    //   424: iconst_1
+    //   425: putstatic 15	com/estrongs/android/pop/b:a	Z
+    //   428: aload 4
+    //   430: astore_3
+    //   431: aload 6
+    //   433: putstatic 19	com/estrongs/android/pop/b:c	Ljava/lang/String;
+    //   436: aload 4
+    //   438: ifnull -432 -> 6
+    //   441: aload 4
+    //   443: invokevirtual 136	java/io/File:delete	()Z
+    //   446: pop
+    //   447: return
+    //   448: iload_0
+    //   449: iconst_1
+    //   450: iadd
+    //   451: istore_0
+    //   452: goto -140 -> 312
+    //   455: aload 4
+    //   457: astore_3
+    //   458: aload 5
+    //   460: putstatic 19	com/estrongs/android/pop/b:c	Ljava/lang/String;
+    //   463: goto -192 -> 271
+    //   466: astore 5
+    //   468: aload_3
+    //   469: astore 4
+    //   471: aload 5
+    //   473: astore_3
+    //   474: aload 4
+    //   476: ifnull +9 -> 485
+    //   479: aload 4
+    //   481: invokevirtual 136	java/io/File:delete	()Z
+    //   484: pop
+    //   485: aload_3
+    //   486: athrow
+    //   487: aload 6
+    //   489: ifnull +13 -> 502
+    //   492: iconst_1
+    //   493: putstatic 15	com/estrongs/android/pop/b:a	Z
+    //   496: aload 6
+    //   498: putstatic 19	com/estrongs/android/pop/b:c	Ljava/lang/String;
+    //   501: return
+    //   502: iconst_0
+    //   503: putstatic 15	com/estrongs/android/pop/b:a	Z
+    //   506: aload 5
+    //   508: putstatic 19	com/estrongs/android/pop/b:c	Ljava/lang/String;
+    //   511: return
+    //   512: astore_3
+    //   513: aconst_null
+    //   514: astore 4
+    //   516: goto -42 -> 474
+    //   519: astore 5
+    //   521: aconst_null
+    //   522: astore 4
+    //   524: goto -111 -> 413
     // Local variable table:
     //   start	length	slot	name	signature
-    //   3	332	0	i	int
-    //   89	158	1	l	long
-    //   1	325	3	localObject1	Object
-    //   346	13	3	localObject2	Object
-    //   385	10	3	localObject3	Object
-    //   399	1	3	localObject4	Object
-    //   70	326	4	localObject5	Object
-    //   403	1	4	localException1	Exception
-    //   20	271	5	str1	String
-    //   298	82	5	localException2	Exception
-    //   392	6	5	localObject6	Object
-    //   28	342	6	str2	String
+    //   311	141	0	i	int
+    //   167	184	1	l	long
+    //   46	9	3	localFile	File
+    //   148	2	3	localIOException	java.io.IOException
+    //   156	2	3	localException1	Exception
+    //   208	278	3	localObject1	Object
+    //   512	1	3	localObject2	Object
+    //   204	319	4	localObject3	Object
+    //   16	388	5	str1	String
+    //   411	48	5	localException2	Exception
+    //   466	41	5	str2	String
+    //   519	1	5	localException3	Exception
+    //   24	473	6	str3	String
     // Exception table:
     //   from	to	target	type
-    //   128	181	298	java/lang/Exception
-    //   193	211	298	java/lang/Exception
-    //   216	284	298	java/lang/Exception
-    //   284	295	298	java/lang/Exception
-    //   338	343	298	java/lang/Exception
-    //   128	181	346	finally
-    //   193	211	346	finally
-    //   216	284	346	finally
-    //   284	295	346	finally
-    //   338	343	346	finally
-    //   60	86	385	finally
-    //   86	128	385	finally
-    //   307	321	392	finally
-    //   60	86	403	java/lang/Exception
-    //   86	128	403	java/lang/Exception
+    //   80	94	148	java/io/IOException
+    //   94	107	156	java/lang/Exception
+    //   209	215	411	java/lang/Exception
+    //   218	256	411	java/lang/Exception
+    //   259	263	411	java/lang/Exception
+    //   266	271	411	java/lang/Exception
+    //   286	290	411	java/lang/Exception
+    //   293	297	411	java/lang/Exception
+    //   300	310	411	java/lang/Exception
+    //   320	366	411	java/lang/Exception
+    //   369	391	411	java/lang/Exception
+    //   394	400	411	java/lang/Exception
+    //   403	408	411	java/lang/Exception
+    //   458	463	411	java/lang/Exception
+    //   209	215	466	finally
+    //   218	256	466	finally
+    //   259	263	466	finally
+    //   266	271	466	finally
+    //   286	290	466	finally
+    //   293	297	466	finally
+    //   300	310	466	finally
+    //   320	366	466	finally
+    //   369	391	466	finally
+    //   394	400	466	finally
+    //   403	408	466	finally
+    //   416	421	466	finally
+    //   424	428	466	finally
+    //   431	436	466	finally
+    //   458	463	466	finally
+    //   164	206	512	finally
+    //   164	206	519	java/lang/Exception
   }
   
   public static boolean d()
   {
     boolean bool1 = false;
-    if (!a.d.startsWith("/sdcard")) {}
+    if (!a.f.startsWith("/sdcard")) {}
     for (;;)
     {
       return bool1;
-      String str = a.d + "/testDB";
+      String str = a.f + "/testDB";
       try
       {
-        File localFile = new File(a.d);
+        File localFile = new File(a.f);
         if (!localFile.exists())
         {
           boolean bool2 = localFile.mkdirs();
@@ -304,7 +378,7 @@ public class b
             }
           }
         }
-        SQLiteDatabase localSQLiteDatabase = SQLiteDatabase.openOrCreateDatabase(str, null);
+        SQLiteDatabase localSQLiteDatabase = SQLiteDatabase.openOrCreateDatabase(localException1, null);
         bool1 = true;
         if (localSQLiteDatabase != null) {
           try

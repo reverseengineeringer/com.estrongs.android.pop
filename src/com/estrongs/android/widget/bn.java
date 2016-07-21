@@ -6,20 +6,9 @@ import android.view.View.OnClickListener;
 class bn
   implements View.OnClickListener
 {
-  private bn(SlidingDrawer paramSlidingDrawer) {}
+  bn(SlidingDrawer paramSlidingDrawer) {}
   
-  public void onClick(View paramView)
-  {
-    if (SlidingDrawer.a(a)) {
-      return;
-    }
-    if (SlidingDrawer.b(a))
-    {
-      a.b();
-      return;
-    }
-    a.a();
-  }
+  public void onClick(View paramView) {}
 }
 
 /* Location:

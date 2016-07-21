@@ -1,16 +1,16 @@
 package com.estrongs.android.ui.dialog;
 
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
+import android.content.DialogInterface.OnClickListener;
 
 class dr
-  implements DialogInterface.OnCancelListener
+  implements DialogInterface.OnClickListener
 {
-  dr(dn paramdn) {}
+  dr(dp paramdp) {}
   
-  public void onCancel(DialogInterface paramDialogInterface)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    a.b();
+    a.a();
   }
 }
 

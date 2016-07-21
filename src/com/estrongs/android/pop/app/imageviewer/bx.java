@@ -2,17 +2,22 @@ package com.estrongs.android.pop.app.imageviewer;
 
 import com.estrongs.android.pop.app.imageviewer.gallery.e;
 import com.estrongs.android.pop.app.imageviewer.gallery.f;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.ap;
 
 class bx
-  implements Runnable
+  extends Thread
 {
-  bx(ViewImage21 paramViewImage21) {}
+  bx(bw parambw, e parame) {}
   
   public void run()
   {
-    e locale = a.e.a(a.c);
-    ViewImage21.f(a).b(locale);
-    new by(this, locale).start();
+    if (b.a.e.b(b.a.c))
+    {
+      b.a.runOnUiThread(new by(this));
+      return;
+    }
+    ak.a(b.a, ap.d(a.d()) + " " + b.a.getString(2131231898), 1);
   }
 }
 

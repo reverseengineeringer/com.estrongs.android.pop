@@ -1,17 +1,17 @@
 package com.estrongs.android.ui.theme;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.ui.view.ColorPickerView;
 
 class z
-  implements DialogInterface.OnClickListener
+  implements View.OnClickListener
 {
   z(ThemeColorActivity paramThemeColorActivity) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void onClick(View paramView)
   {
-    paramDialogInterface.dismiss();
-    a.finish();
+    ThemeColorActivity.a(a).setColor(-1);
   }
 }
 

@@ -10,8 +10,9 @@ import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Vibrator;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.Display;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
@@ -19,13 +20,13 @@ import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.AbsListView;
-import com.estrongs.android.ui.d.a;
-import com.estrongs.android.view.aw;
+import com.estrongs.android.view.cr;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Random;
 import java.util.Set;
 
@@ -41,10 +42,10 @@ public class d
   private Rect F = new Rect();
   private boolean G;
   private com.estrongs.fs.h H;
-  private aw I;
+  private cr I;
   private boolean J = false;
   private boolean K = false;
-  private ArrayList<s> L = new ArrayList();
+  private HashSet<s> L = new HashSet();
   private ArrayList<s> M = new ArrayList();
   private g N;
   private IBinder O;
@@ -87,7 +88,7 @@ public class d
   {
     c = paramContext;
     d = new Handler();
-    q = a.a(c, 20.0F);
+    q = com.estrongs.android.ui.d.g.a(c, 20.0F);
     e = ((Vibrator)c.getSystemService("vibrator"));
     Y = (ViewConfiguration.get(c).getScaledTouchSlop() - 1);
   }
@@ -118,7 +119,7 @@ public class d
     Bitmap localBitmap = paramView.getDrawingCache();
     if (localBitmap == null)
     {
-      Log.e("Launcher.DragController", "failed getViewBitmap(" + paramView + ")", new RuntimeException());
+      com.estrongs.android.util.l.c("Launcher.DragController", "failed getViewBitmap(" + paramView + ")", new RuntimeException());
       return null;
     }
     localBitmap = Bitmap.createBitmap(localBitmap);
@@ -130,22 +131,22 @@ public class d
   private s a(int paramInt1, int paramInt2, int[] paramArrayOfInt)
   {
     Rect localRect = f;
-    ArrayList localArrayList = M;
-    int i1 = localArrayList.size() - 1;
-    Object localObject;
+    Object localObject1 = M;
+    int i1 = ((ArrayList)localObject1).size() - 1;
+    Object localObject2;
     while (i1 >= 0)
     {
-      localObject = (DragActionZone)localArrayList.get(i1);
-      ((DragActionZone)localObject).getHitRect(localRect);
-      ((DragActionZone)localObject).getLocationOnScreen(paramArrayOfInt);
-      localRect.offset(paramArrayOfInt[0] - ((DragActionZone)localObject).getLeft(), paramArrayOfInt[1] - ((DragActionZone)localObject).getTop());
-      if ((localRect.contains(paramInt1, paramInt2)) && (((DragActionZone)localObject).a(localRect, paramInt1, paramInt2)))
+      localObject2 = (DragActionZone)((ArrayList)localObject1).get(i1);
+      ((DragActionZone)localObject2).getHitRect(localRect);
+      ((DragActionZone)localObject2).getLocationOnScreen(paramArrayOfInt);
+      localRect.offset(paramArrayOfInt[0] - ((DragActionZone)localObject2).getLeft(), paramArrayOfInt[1] - ((DragActionZone)localObject2).getTop());
+      if ((localRect.contains(paramInt1, paramInt2)) && (((DragActionZone)localObject2).a(localRect, paramInt1, paramInt2)))
       {
         U = true;
         R = 0;
         paramArrayOfInt[0] = (paramInt1 - paramArrayOfInt[0]);
         paramArrayOfInt[1] = (paramInt2 - paramArrayOfInt[1]);
-        return (s)localObject;
+        return (s)localObject2;
       }
       i1 -= 1;
     }
@@ -153,21 +154,19 @@ public class d
     if ((!G) && (!E.contains(C, D))) {
       return null;
     }
-    localArrayList = L;
-    i1 = localArrayList.size() - 1;
-    while (i1 >= 0)
+    localObject1 = L.iterator();
+    while (((Iterator)localObject1).hasNext())
     {
-      localObject = (s)localArrayList.get(i1);
-      ((s)localObject).getHitRect(localRect);
-      ((s)localObject).getLocationOnScreen(paramArrayOfInt);
-      localRect.offset(paramArrayOfInt[0] - ((s)localObject).getLeft(), paramArrayOfInt[1] - ((s)localObject).getTop());
+      localObject2 = (s)((Iterator)localObject1).next();
+      ((s)localObject2).getHitRect(localRect);
+      ((s)localObject2).getLocationOnScreen(paramArrayOfInt);
+      localRect.offset(paramArrayOfInt[0] - ((s)localObject2).getLeft(), paramArrayOfInt[1] - ((s)localObject2).getTop());
       if (localRect.contains(paramInt1, paramInt2))
       {
         paramArrayOfInt[0] = (paramInt1 - paramArrayOfInt[0]);
         paramArrayOfInt[1] = (paramInt2 - paramArrayOfInt[1]);
-        return (s)localObject;
+        return (s)localObject2;
       }
-      i1 -= 1;
     }
     return null;
   }
@@ -240,6 +239,8 @@ public class d
     if (H == null) {}
     Object localObject3;
     Object localObject2;
+    int i2;
+    label396:
     do
     {
       do
@@ -247,10 +248,10 @@ public class d
         return;
         i = true;
         localObject1 = new ArrayList();
-        ((List)localObject1).addAll(I.w());
+        ((List)localObject1).addAll(I.o());
         s = localObject1;
         localObject3 = H.getAbsolutePath();
-        localObject1 = I.D();
+        localObject1 = I.R();
         localObject2 = (j)((Map)localObject1).get(localObject3);
       } while (localObject2 == null);
       n = ((j)localObject2).b();
@@ -260,23 +261,55 @@ public class d
       n.setBackgroundDrawable((Drawable)localObject4);
       ((Map)localObject1).remove(localObject3);
       localObject3 = new ArrayList();
-      localObject4 = ((Map)localObject1).keySet().iterator();
-      while (((Iterator)localObject4).hasNext())
+      localObject4 = ((Map)localObject1).entrySet().iterator();
+      i2 = 0;
+      Object localObject5;
+      Object localObject6;
+      if (((Iterator)localObject4).hasNext())
       {
-        String str1 = (String)((Iterator)localObject4).next();
-        j localj = (j)((Map)localObject1).get(str1);
-        if (!((List)localObject3).contains(localj))
+        localObject5 = (j)((Map.Entry)((Iterator)localObject4).next()).getValue();
+        i1 = i2;
+        if (localObject5 != null)
         {
-          String str2 = aw.a(localj.b());
-          if ((str2 != null) && (str2.equals(str1)))
+          i1 = i2;
+          if (((j)localObject5).b() != null)
           {
-            ((List)localObject3).add(localj);
+            if (((j)localObject5).c() == null)
+            {
+              localObject6 = ((j)localObject5).b().getBackground();
+              ((j)localObject5).b().setBackgroundResource(2130837692);
+              ((j)localObject5).a(com.estrongs.android.ui.d.g.a(((j)localObject5).b()));
+              ((j)localObject5).b().setBackgroundDrawable((Drawable)localObject6);
+            }
+            i2 += 1;
+            i1 = i2;
+            if (i2 < 5) {}
           }
-          else
+        }
+      }
+      else
+      {
+        localObject4 = ((Map)localObject1).keySet().iterator();
+      }
+      for (;;)
+      {
+        if (!((Iterator)localObject4).hasNext()) {
+          break label396;
+        }
+        localObject5 = (String)((Iterator)localObject4).next();
+        localObject6 = (j)((Map)localObject1).get(localObject5);
+        if (!((List)localObject3).contains(localObject6))
+        {
+          String str = cr.a(((j)localObject6).b());
+          if ((str != null) && (str.equals(localObject5)))
           {
-            localj.a(null);
-            ((List)localObject3).add(localj);
+            ((List)localObject3).add(localObject6);
+            continue;
+            i2 = i1;
+            break;
           }
+          ((j)localObject6).a(null);
+          ((List)localObject3).add(localObject6);
         }
       }
       v = ((List)localObject3);
@@ -284,25 +317,25 @@ public class d
     Object localObject1 = h;
     n.getLocationOnScreen((int[])localObject1);
     a((Bitmap)localObject2, localObject1[0], localObject1[1], 0, 0, ((Bitmap)localObject2).getWidth(), ((Bitmap)localObject2).getHeight(), r, s, u);
-    int i4 = I.C().getFirstVisiblePosition();
-    I.C().getLastVisiblePosition();
+    localObject1 = (GridLayoutManager)I.Q().getLayoutManager();
+    int i4 = ((GridLayoutManager)localObject1).findFirstVisibleItemPosition();
+    ((GridLayoutManager)localObject1).findLastVisibleItemPosition();
     int i5 = c.getResources().getDisplayMetrics().widthPixels;
     int i6 = c.getResources().getDisplayMetrics().heightPixels;
     y = false;
-    if (v.size() <= 8) {}
-    int i2;
-    for (int i1 = v.size();; i1 = 8)
+    if (v.size() <= 5) {}
+    for (int i1 = v.size();; i1 = 5)
     {
       i2 = 0;
       for (;;)
       {
         if (i2 >= i1) {
-          break label643;
+          break label777;
         }
         localObject2 = (j)v.get(i2);
         localObject1 = ((j)localObject2).c();
         if (localObject1 != null) {
-          break label751;
+          break label885;
         }
         localObject3 = ((j)localObject2).b();
         if (localObject3 != null) {
@@ -315,9 +348,9 @@ public class d
     ((View)localObject3).setBackgroundDrawable(null);
     localObject1 = a((View)localObject3);
     ((View)localObject3).setBackgroundDrawable((Drawable)localObject4);
-    label634:
-    label643:
-    label751:
+    label768:
+    label777:
+    label885:
     for (int i3 = 1;; i3 = 0)
     {
       if (localObject1 == null)
@@ -343,7 +376,7 @@ public class d
         for (;;)
         {
           if (((j)localObject2).a() >= i4) {
-            break label634;
+            break label768;
           }
           localObject3[1] = 0;
           break;
@@ -352,7 +385,7 @@ public class d
         localObject3[1] = i6;
       }
       I.e();
-      E = Q.e();
+      E = Q.getScrollViewRect();
       F = new Rect(E.left + q, E.top + q, E.right - q, E.bottom - q);
       if (N == null) {
         break;
@@ -418,10 +451,10 @@ public class d
     L.add(params);
   }
   
-  public void a(com.estrongs.fs.h paramh, aw paramaw, l paraml, int paramInt, boolean paramBoolean)
+  public void a(com.estrongs.fs.h paramh, cr paramcr, l paraml, int paramInt, boolean paramBoolean)
   {
     H = paramh;
-    I = paramaw;
+    I = paramcr;
     u = paramInt;
     r = paraml;
     j = true;

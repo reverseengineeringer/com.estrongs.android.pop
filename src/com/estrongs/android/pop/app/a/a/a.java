@@ -1,53 +1,27 @@
 package com.estrongs.android.pop.app.a.a;
 
+import android.content.Context;
+import android.view.View;
+
 public class a
-  extends c
+  extends com.estrongs.android.ui.c.c.a
 {
-  protected int a(int paramInt)
+  private d b;
+  
+  public a(Context paramContext)
   {
-    int i;
-    if (a == 0) {
-      i = -1;
-    }
-    do
-    {
-      return i;
-      if (paramInt == -1) {
-        return a - 1;
-      }
-      i = paramInt;
-    } while (paramInt < a);
-    if (c == 2) {
-      return paramInt % a;
-    }
-    return -1;
+    super(paramContext, 2130903129);
   }
   
-  protected void a() {}
-  
-  protected void b() {}
-  
-  public void c() {}
-  
-  public int d()
+  protected void a(View paramView)
   {
-    if (a == 0) {
-      return -1;
-    }
-    return (b + 1) % a;
+    com.estrongs.android.pop.app.a.a.a(itemView, "homepage", new b(this));
+    com.estrongs.android.pop.app.a.a.a(new c(this));
   }
   
-  public int e()
+  public void a(d paramd)
   {
-    if (a == 0) {
-      return -1;
-    }
-    return (b - 1 + a) % a;
-  }
-  
-  public int f()
-  {
-    return 0;
+    b = paramd;
   }
 }
 

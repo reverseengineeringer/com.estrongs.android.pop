@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.duapps.ad.coin.ui.PullUpForMore android:orientation="vertical" android:id="@id/click_for_more" android:layout_width="fill_parent" android:layout_height="@dimen/duapps_ad_toolbox_footer_content_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/duapps_ad_toolbox_footer_content_loader_tips_text_size" android:textColor="#66ffffff" android:id="@id/loader_tips" android:visibility="gone" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/duapps_ad_pull_refresh" android:layout_centerInParent="true" />
+    <ProgressBar android:id="@id/loader_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/duapps_ad_toolbox_footer_content_loader_progress_margin_right" android:indeterminateDrawable="@drawable/duapps_ad_offer_wall_indeterminate_loading_footer" android:layout_toLeftOf="@id/loader_tips" android:layout_centerInParent="true" style="?android:attr/progressBarStyleSmall" />
+</com.duapps.ad.coin.ui.PullUpForMore>

@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/pop/zeroconf/v;
+.implements Lcom/estrongs/a/a/l;
 
 
 # instance fields
@@ -22,73 +22,55 @@
 
 
 # virtual methods
-.method public a(Lcom/estrongs/android/pop/zeroconf/u;)V
-    .locals 2
+.method public a(Lcom/estrongs/a/a;Lcom/estrongs/a/a/m;)V
+    .locals 9
 
-    invoke-virtual {p1}, Lcom/estrongs/android/pop/zeroconf/u;->a()Z
+    const/4 v8, 0x1
 
-    move-result v0
+    iget-object v0, p0, Lcom/estrongs/fs/b/av;->a:Lcom/estrongs/fs/b/au;
 
-    if-eqz v0, :cond_0
+    iget-wide v0, v0, Lcom/estrongs/fs/b/au;->g:J
 
-    iget-object v0, p1, Lcom/estrongs/android/pop/zeroconf/u;->f:Ljava/net/Inet4Address;
+    iget-wide v2, p2, Lcom/estrongs/a/a/m;->d:J
+
+    cmp-long v0, v0, v2
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcom/estrongs/fs/b/av;->a:Lcom/estrongs/fs/b/au;
 
-    invoke-static {v0}, Lcom/estrongs/fs/b/au;->c(Lcom/estrongs/fs/b/au;)Landroid/content/Context;
+    const/4 v1, 0x2
 
-    move-result-object v0
+    new-array v1, v1, [Ljava/lang/Object;
 
-    instance-of v0, v0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
+    const/4 v2, 0x0
 
-    if-eqz v0, :cond_0
+    iget-wide v4, p2, Lcom/estrongs/a/a/m;->d:J
 
-    iget-object v0, p1, Lcom/estrongs/android/pop/zeroconf/u;->f:Ljava/net/Inet4Address;
+    iget-object v3, p0, Lcom/estrongs/fs/b/av;->a:Lcom/estrongs/fs/b/au;
 
-    invoke-virtual {v0}, Ljava/net/Inet4Address;->getAddress()[B
+    iget-wide v6, v3, Lcom/estrongs/fs/b/au;->g:J
 
-    move-result-object v0
+    sub-long/2addr v4, v6
 
-    iget-object v1, p1, Lcom/estrongs/android/pop/zeroconf/u;->b:Ljava/lang/String;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-static {v0, v1}, Lcom/estrongs/fs/b/au;->a([BLjava/lang/String;)V
+    move-result-object v3
 
-    iget-object v0, p0, Lcom/estrongs/fs/b/av;->a:Lcom/estrongs/fs/b/au;
+    aput-object v3, v1, v2
 
-    invoke-static {v0}, Lcom/estrongs/fs/b/au;->a(Lcom/estrongs/fs/b/au;)Ljava/util/ArrayList;
+    iget-object v2, p2, Lcom/estrongs/a/a/m;->a:Ljava/lang/String;
 
-    move-result-object v0
+    aput-object v2, v1, v8
 
-    iget-object v1, p1, Lcom/estrongs/android/pop/zeroconf/u;->f:Ljava/net/Inet4Address;
-
-    invoke-virtual {v1}, Ljava/net/Inet4Address;->getHostAddress()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v8, v1}, Lcom/estrongs/fs/b/au;->sendMessage(I[Ljava/lang/Object;)V
 
     iget-object v0, p0, Lcom/estrongs/fs/b/av;->a:Lcom/estrongs/fs/b/au;
 
-    invoke-static {v0}, Lcom/estrongs/fs/b/au;->c(Lcom/estrongs/fs/b/au;)Landroid/content/Context;
+    iget-wide v2, p2, Lcom/estrongs/a/a/m;->d:J
 
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
-
-    new-instance v1, Lcom/estrongs/fs/b/aw;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/fs/b/aw;-><init>(Lcom/estrongs/fs/b/av;)V
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->runOnUiThread(Ljava/lang/Runnable;)V
+    iput-wide v2, v0, Lcom/estrongs/fs/b/au;->g:J
 
     :cond_0
-    return-void
-.end method
-
-.method public b(Lcom/estrongs/android/pop/zeroconf/u;)V
-    .locals 0
-
     return-void
 .end method

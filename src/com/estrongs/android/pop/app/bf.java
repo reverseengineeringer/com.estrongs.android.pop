@@ -1,57 +1,24 @@
 package com.estrongs.android.pop.app;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.net.NetworkInfo;
-import android.net.NetworkInfo.State;
-import android.net.wifi.WifiInfo;
-import android.net.wifi.WifiManager;
-import com.estrongs.android.ftp.a;
-import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.util.ak;
+import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.ui.pcs.c;
+import com.estrongs.android.ui.pcs.q;
 
-class bf
-  extends BroadcastReceiver
+final class bf
+  implements DialogInterface.OnClickListener
 {
-  bf(be parambe) {}
+  bf(Activity paramActivity, q paramq, DialogInterface.OnCancelListener paramOnCancelListener) {}
   
-  public void onReceive(Context paramContext, Intent paramIntent)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    boolean bool = paramIntent.getBooleanExtra("noConnectivity", false);
-    paramIntent = (NetworkInfo)paramIntent.getParcelableExtra("networkInfo");
-    if (paramIntent == null) {}
-    do
-    {
-      do
-      {
-        do
-        {
-          do
-          {
-            do
-            {
-              return;
-              if ((!bool) && (paramIntent.getState() != NetworkInfo.State.DISCONNECTED)) {
-                break;
-              }
-              be.a(a);
-            } while (a.e() == null);
-            a.e().k();
-            return;
-          } while (paramIntent.getType() != 1);
-          paramContext = (WifiManager)paramContext.getSystemService("wifi");
-          if ((paramContext != null) && (paramContext.getConnectionInfo() != null)) {
-            break;
-          }
-          be.a(a);
-        } while (a.e() == null);
-        a.e().k();
-        return;
-      } while ((paramContext.getConnectionInfo().getSSID() == null) || (ak.a() == null));
-      be.b(a);
-    } while (a.e() == null);
-    a.e().a(FexApplication.a());
+    c localc = new c(a);
+    localc.a();
+    localc.a(b);
+    localc.a(c);
+    paramDialogInterface.dismiss();
   }
 }
 

@@ -76,7 +76,7 @@
 
     iput-boolean v1, p0, Lcom/estrongs/android/pop/app/editor/c;->k:Z
 
-    sget-object v0, Lcom/estrongs/android/pop/a;->d:Ljava/lang/String;
+    sget-object v0, Lcom/estrongs/android/pop/a;->f:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/editor/c;->l:Ljava/lang/String;
 
@@ -120,7 +120,7 @@
     :goto_0
     iget-object v0, p0, Lcom/estrongs/android/pop/app/editor/c;->d:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -135,7 +135,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -188,7 +188,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v4, Lcom/estrongs/android/pop/a;->d:Ljava/lang/String;
+    sget-object v4, Lcom/estrongs/android/pop/a;->f:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -221,7 +221,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v4, Lcom/estrongs/android/pop/a;->d:Ljava/lang/String;
+    sget-object v4, Lcom/estrongs/android/pop/a;->f:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -690,7 +690,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v1, v2, v3}, Lcom/estrongs/fs/impl/local/h;->a(Landroid/content/Context;Ljava/lang/String;Lcom/estrongs/a/b/s;)Z
+    invoke-static {v1, v2, v3}, Lcom/estrongs/fs/impl/local/i;->a(Landroid/content/Context;Ljava/lang/String;Lcom/estrongs/a/b/s;)Z
 
     :cond_1
     invoke-virtual {v0}, Lcom/estrongs/android/pop/app/editor/a;->c()V
@@ -719,7 +719,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v1, v2, v3}, Lcom/estrongs/fs/impl/local/h;->a(Landroid/content/Context;Ljava/lang/String;Lcom/estrongs/a/b/s;)Z
+    invoke-static {v1, v2, v3}, Lcom/estrongs/fs/impl/local/i;->a(Landroid/content/Context;Ljava/lang/String;Lcom/estrongs/a/b/s;)Z
 
     :cond_2
     invoke-virtual {v0}, Lcom/estrongs/android/pop/app/editor/a;->c()V
@@ -748,7 +748,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v1, v2, v3}, Lcom/estrongs/fs/impl/local/h;->a(Landroid/content/Context;Ljava/lang/String;Lcom/estrongs/a/b/s;)Z
+    invoke-static {v1, v2, v3}, Lcom/estrongs/fs/impl/local/i;->a(Landroid/content/Context;Ljava/lang/String;Lcom/estrongs/a/b/s;)Z
 
     :cond_3
     invoke-virtual {v0}, Lcom/estrongs/android/pop/app/editor/a;->c()V
@@ -789,7 +789,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bl(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bC(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -803,7 +803,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->bD(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->bU(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1033,13 +1033,13 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v3}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v1, Ljava/io/IOException;
 
     iget-object v3, p0, Lcom/estrongs/android/pop/app/editor/c;->c:Landroid/content/Context;
 
-    const v4, 0x7f0b02d1
+    const v4, 0x7f080465
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1298,7 +1298,7 @@
 
     const-string v1, "source file is not created"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Ljava/io/IOException;
 
@@ -1339,7 +1339,7 @@
 
     new-instance v0, Ljava/io/File;
 
-    sget-object v1, Lcom/estrongs/android/pop/a;->d:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/a;->f:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -1358,7 +1358,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v2, Lcom/estrongs/android/pop/a;->d:Ljava/lang/String;
+    sget-object v2, Lcom/estrongs/android/pop/a;->f:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1721,7 +1721,7 @@
 
     const-string v1, "source file is not created"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Ljava/io/IOException;
 
@@ -1746,7 +1746,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/f;->a(Ljava/io/InputStream;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/estrongs/android/util/e;->a(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1772,7 +1772,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/estrongs/android/util/f;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/estrongs/android/util/e;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1871,7 +1871,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v2, Lcom/estrongs/android/pop/a;->j:Ljava/lang/String;
+    sget-object v2, Lcom/estrongs/android/pop/a;->l:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1904,15 +1904,7 @@
     goto :goto_0
 .end method
 
-.method public j()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/editor/c;->j:Z
-
-    return v0
-.end method
-
-.method public k()V
+.method public j()V
     .locals 1
 
     iget-boolean v0, p0, Lcom/estrongs/android/pop/app/editor/c;->j:Z

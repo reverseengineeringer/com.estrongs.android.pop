@@ -225,35 +225,34 @@ public class ao
     //   344: astore 4
     //   346: aload_2
     //   347: instanceof 126
-    //   350: ifeq +16 -> 366
+    //   350: ifeq +15 -> 365
     //   353: aload 9
     //   355: astore 4
     //   357: ldc -128
     //   359: ldc -126
     //   361: aload_2
-    //   362: invokestatic 136	android/util/Log:e	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-    //   365: pop
-    //   366: aload 9
-    //   368: invokestatic 50	com/estrongs/fs/util/j:a	(Landroid/os/ParcelFileDescriptor;)V
-    //   371: aconst_null
-    //   372: areturn
-    //   373: astore_2
-    //   374: aload 4
-    //   376: invokestatic 50	com/estrongs/fs/util/j:a	(Landroid/os/ParcelFileDescriptor;)V
-    //   379: aload_2
-    //   380: athrow
+    //   362: invokestatic 136	com/estrongs/android/util/l:c	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    //   365: aload 9
+    //   367: invokestatic 50	com/estrongs/fs/util/j:a	(Landroid/os/ParcelFileDescriptor;)V
+    //   370: aconst_null
+    //   371: areturn
+    //   372: astore_2
+    //   373: aload 4
+    //   375: invokestatic 50	com/estrongs/fs/util/j:a	(Landroid/os/ParcelFileDescriptor;)V
+    //   378: aload_2
+    //   379: athrow
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	381	0	paramInt1	int
-    //   0	381	1	paramInt2	int
-    //   0	381	2	paramUri	Uri
-    //   0	381	3	paramContentResolver	ContentResolver
-    //   0	381	4	paramParcelFileDescriptor	ParcelFileDescriptor
-    //   0	381	5	paramOptions	BitmapFactory.Options
+    //   0	380	0	paramInt1	int
+    //   0	380	1	paramInt2	int
+    //   0	380	2	paramUri	Uri
+    //   0	380	3	paramContentResolver	ContentResolver
+    //   0	380	4	paramParcelFileDescriptor	ParcelFileDescriptor
+    //   0	380	5	paramOptions	BitmapFactory.Options
     //   146	6	6	i	int
     //   1	318	7	bool	boolean
     //   5	323	8	localParcelFileDescriptor1	ParcelFileDescriptor
-    //   14	353	9	localParcelFileDescriptor2	ParcelFileDescriptor
+    //   14	352	9	localParcelFileDescriptor2	ParcelFileDescriptor
     // Exception table:
     //   from	to	target	type
     //   16	23	341	java/lang/Throwable
@@ -275,27 +274,27 @@ public class ao
     //   286	293	341	java/lang/Throwable
     //   301	310	341	java/lang/Throwable
     //   331	338	341	java/lang/Throwable
-    //   16	23	373	finally
-    //   51	59	373	finally
-    //   67	73	373	finally
-    //   81	86	373	finally
-    //   94	103	373	finally
-    //   111	118	373	finally
-    //   126	134	373	finally
-    //   142	148	373	finally
-    //   169	179	373	finally
-    //   187	192	373	finally
-    //   200	205	373	finally
-    //   213	219	373	finally
-    //   227	233	373	finally
-    //   241	246	373	finally
-    //   254	262	373	finally
-    //   270	278	373	finally
-    //   286	293	373	finally
-    //   301	310	373	finally
-    //   331	338	373	finally
-    //   346	353	373	finally
-    //   357	366	373	finally
+    //   16	23	372	finally
+    //   51	59	372	finally
+    //   67	73	372	finally
+    //   81	86	372	finally
+    //   94	103	372	finally
+    //   111	118	372	finally
+    //   126	134	372	finally
+    //   142	148	372	finally
+    //   169	179	372	finally
+    //   187	192	372	finally
+    //   200	205	372	finally
+    //   213	219	372	finally
+    //   227	233	372	finally
+    //   241	246	372	finally
+    //   254	262	372	finally
+    //   270	278	372	finally
+    //   286	293	372	finally
+    //   301	310	372	finally
+    //   331	338	372	finally
+    //   346	353	372	finally
+    //   357	365	372	finally
   }
   
   /* Error */

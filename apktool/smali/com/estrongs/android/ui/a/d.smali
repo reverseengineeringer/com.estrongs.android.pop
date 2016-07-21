@@ -1,188 +1,138 @@
 .class public Lcom/estrongs/android/ui/a/d;
-.super Landroid/widget/BaseAdapter;
+.super Landroid/view/animation/Animation;
 
 
 # instance fields
-.field private a:Landroid/content/Context;
+.field private final a:F
 
-.field private b:[Ljava/lang/String;
+.field private final b:F
 
-.field private c:[I
+.field private final c:F
 
-.field private d:[Ljava/lang/String;
+.field private final d:F
+
+.field private final e:F
+
+.field private final f:Z
+
+.field private g:Landroid/graphics/Camera;
+
+.field private final h:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 6
+.method public constructor <init>(FFFFFZZ)V
+    .locals 0
 
-    const/4 v5, 0x2
+    invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
 
-    const/4 v4, 0x1
+    iput p1, p0, Lcom/estrongs/android/ui/a/d;->a:F
 
-    const/4 v3, 0x0
+    iput p2, p0, Lcom/estrongs/android/ui/a/d;->b:F
 
-    const/4 v2, 0x3
+    iput p3, p0, Lcom/estrongs/android/ui/a/d;->c:F
 
-    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
+    iput p4, p0, Lcom/estrongs/android/ui/a/d;->d:F
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/a/d;->a:Landroid/content/Context;
+    iput p5, p0, Lcom/estrongs/android/ui/a/d;->e:F
 
-    new-array v0, v2, [Ljava/lang/String;
+    iput-boolean p6, p0, Lcom/estrongs/android/ui/a/d;->f:Z
 
-    const-string v1, "Flickr"
-
-    aput-object v1, v0, v3
-
-    const-string v1, "Instagram"
-
-    aput-object v1, v0, v4
-
-    const-string v1, "Facebook"
-
-    aput-object v1, v0, v5
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/a/d;->b:[Ljava/lang/String;
-
-    new-array v0, v2, [I
-
-    fill-array-data v0, :array_0
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/a/d;->c:[I
-
-    new-array v0, v2, [Ljava/lang/String;
-
-    const-string v1, "Flickr"
-
-    aput-object v1, v0, v3
-
-    const-string v1, "Instagram"
-
-    aput-object v1, v0, v4
-
-    const-string v1, "Facebook"
-
-    aput-object v1, v0, v5
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/a/d;->d:[Ljava/lang/String;
+    iput-boolean p7, p0, Lcom/estrongs/android/ui/a/d;->h:Z
 
     return-void
-
-    nop
-
-    :array_0
-    .array-data 4
-        0x7f02002d
-        0x7f02002e
-        0x7f02002c
-    .end array-data
 .end method
 
 
 # virtual methods
-.method public a(I)Ljava/lang/String;
-    .locals 1
+.method protected applyTransformation(FLandroid/view/animation/Transformation;)V
+    .locals 8
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/a/d;->b:[Ljava/lang/String;
+    const/4 v7, 0x0
 
-    aget-object v0, v0, p1
+    iget v0, p0, Lcom/estrongs/android/ui/a/d;->a:F
 
-    return-object v0
-.end method
+    iget v1, p0, Lcom/estrongs/android/ui/a/d;->b:F
 
-.method public b(I)I
-    .locals 1
+    sub-float/2addr v1, v0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/a/d;->c:[I
+    mul-float/2addr v1, p1
 
-    aget v0, v0, p1
+    add-float/2addr v0, v1
 
-    return v0
-.end method
+    iget v1, p0, Lcom/estrongs/android/ui/a/d;->c:F
 
-.method public c(I)Ljava/lang/String;
-    .locals 1
+    iget v2, p0, Lcom/estrongs/android/ui/a/d;->d:F
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/a/d;->d:[Ljava/lang/String;
+    iget-object v3, p0, Lcom/estrongs/android/ui/a/d;->g:Landroid/graphics/Camera;
 
-    aget-object v0, v0, p1
+    invoke-virtual {p2}, Landroid/view/animation/Transformation;->getMatrix()Landroid/graphics/Matrix;
 
-    return-object v0
-.end method
+    move-result-object v4
 
-.method public getCount()I
-    .locals 1
+    invoke-virtual {v3}, Landroid/graphics/Camera;->save()V
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/a/d;->b:[Ljava/lang/String;
+    iget-boolean v5, p0, Lcom/estrongs/android/ui/a/d;->f:Z
 
-    array-length v0, v0
+    if-eqz v5, :cond_0
 
-    return v0
-.end method
+    iget v5, p0, Lcom/estrongs/android/ui/a/d;->e:F
 
-.method public getItem(I)Ljava/lang/Object;
-    .locals 1
+    mul-float/2addr v5, p1
 
-    const/4 v0, 0x0
+    invoke-virtual {v3, v7, v7, v5}, Landroid/graphics/Camera;->translate(FFF)V
 
-    return-object v0
-.end method
+    :goto_0
+    iget-boolean v5, p0, Lcom/estrongs/android/ui/a/d;->h:Z
 
-.method public getItemId(I)J
-    .locals 2
+    if-eqz v5, :cond_1
 
-    const-wide/16 v0, 0x0
+    invoke-virtual {v3, v0}, Landroid/graphics/Camera;->rotateX(F)V
 
-    return-wide v0
-.end method
+    :goto_1
+    invoke-virtual {v3, v4}, Landroid/graphics/Camera;->getMatrix(Landroid/graphics/Matrix;)V
 
-.method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 3
+    invoke-virtual {v3}, Landroid/graphics/Camera;->restore()V
 
-    if-nez p2, :cond_0
+    neg-float v0, v1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/a/d;->a:Landroid/content/Context;
+    neg-float v3, v2
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-virtual {v4, v0, v3}, Landroid/graphics/Matrix;->preTranslate(FF)Z
 
-    move-result-object v0
+    invoke-virtual {v4, v1, v2}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    const v1, 0x7f030063
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object p2
+    return-void
 
     :cond_0
-    const v0, 0x7f0a022f
+    iget v5, p0, Lcom/estrongs/android/ui/a/d;->e:F
 
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    const/high16 v6, 0x3f800000    # 1.0f
 
-    move-result-object v0
+    sub-float/2addr v6, p1
 
-    check-cast v0, Landroid/widget/ImageView;
+    mul-float/2addr v5, v6
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/a/d;->c:[I
+    invoke-virtual {v3, v7, v7, v5}, Landroid/graphics/Camera;->translate(FFF)V
 
-    aget v1, v1, p1
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+    :cond_1
+    invoke-virtual {v3, v0}, Landroid/graphics/Camera;->rotateY(F)V
 
-    const v0, 0x7f0a0230
+    goto :goto_1
+.end method
 
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+.method public initialize(IIII)V
+    .locals 1
 
-    move-result-object v0
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/animation/Animation;->initialize(IIII)V
 
-    check-cast v0, Landroid/widget/TextView;
+    new-instance v0, Landroid/graphics/Camera;
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/a/d;->b:[Ljava/lang/String;
+    invoke-direct {v0}, Landroid/graphics/Camera;-><init>()V
 
-    aget-object v1, v1, p1
+    iput-object v0, p0, Lcom/estrongs/android/ui/a/d;->g:Landroid/graphics/Camera;
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    return-object p2
+    return-void
 .end method

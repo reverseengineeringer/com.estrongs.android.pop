@@ -1,12 +1,17 @@
 package android.support.v4.view;
 
-public abstract interface by
+import android.view.View;
+import android.view.View.OnClickListener;
+
+class by
+  implements View.OnClickListener
 {
-  public abstract void a(int paramInt);
+  by(PagerTabStrip paramPagerTabStrip) {}
   
-  public abstract void a(int paramInt1, float paramFloat, int paramInt2);
-  
-  public abstract void b(int paramInt);
+  public void onClick(View paramView)
+  {
+    a.a.setCurrentItem(a.a.getCurrentItem() + 1);
+  }
 }
 
 /* Location:

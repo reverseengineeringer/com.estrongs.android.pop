@@ -2,19 +2,21 @@ package com.estrongs.fs.impl.usb;
 
 import android.content.Context;
 import android.hardware.usb.UsbDevice;
-import android.util.Log;
+import com.estrongs.a.a.n;
 import com.estrongs.a.b.o;
 import com.estrongs.a.b.s;
 import com.estrongs.a.q;
 import com.estrongs.android.pop.FexApplication;
 import com.estrongs.android.pop.ac;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.ar;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.av;
+import com.estrongs.android.util.l;
 import com.estrongs.fs.FileExistException;
 import com.estrongs.fs.FileSystemException;
 import com.estrongs.fs.h;
 import com.estrongs.fs.i;
-import com.estrongs.fs.m;
+import com.estrongs.fs.w;
+import com.estrongs.fs.x;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -31,7 +33,7 @@ public class e
   private static Object c = new Object();
   private static boolean d = false;
   private static String e = null;
-  private static com.estrongs.a.a.n f = new f();
+  private static n f = new f();
   
   static
   {
@@ -101,7 +103,7 @@ public class e
     return null;
   }
   
-  public static ArrayList<h> a(m paramm)
+  public static ArrayList<h> a(w paramw)
   {
     synchronized (c)
     {
@@ -120,7 +122,7 @@ public class e
         while (i < j)
         {
           g localg = arrayOfg[i];
-          localArrayList.add(new com.estrongs.fs.n(localg.j(), paramm, localg.k()));
+          localArrayList.add(new x(localg.j(), paramw, localg.k()));
           i += 1;
         }
       }
@@ -210,7 +212,7 @@ public class e
         return false;
       }
       if (localc.c() == null) {
-        throw new RuntimeException(paramContext.getString(2131428093));
+        throw new RuntimeException(paramContext.getString(2131231905));
       }
     }
     catch (Exception paramContext)
@@ -250,10 +252,10 @@ public class e
       throw new FileExistException(paramString1);
       if (localc.c() == null)
       {
-        Log.e(a, "can not rename root dir");
+        l.e(a, "can not rename root dir");
         return false;
       }
-      localc.a(am.d(paramString2));
+      localc.a(ap.d(paramString2));
       return true;
     }
     catch (Exception paramString1)
@@ -270,13 +272,13 @@ public class e
       int i;
       try
       {
-        localc = c(am.bk(paramString));
+        localc = c(ap.bB(paramString));
         if (localc == null)
         {
-          Log.e(a, "Failed to get the path " + am.bk(paramString));
+          l.e(a, "Failed to get the path " + ap.bB(paramString));
           return false;
         }
-        paramString = am.d(paramString);
+        paramString = ap.d(paramString);
         String[] arrayOfString = localc.d();
         int j = arrayOfString.length;
         i = 0;
@@ -285,7 +287,7 @@ public class e
         }
         if (arrayOfString[i].equalsIgnoreCase(paramString))
         {
-          Log.e(a, "The file exist.");
+          l.e(a, "The file exist.");
           return false;
         }
       }
@@ -402,7 +404,7 @@ public class e
         com.estrongs.fs.impl.usb.fs.c localc = c(paramString);
         if (localc == null)
         {
-          localc = c(am.bk(paramString));
+          localc = c(ap.bB(paramString));
           if (localc == null) {
             return null;
           }
@@ -413,7 +415,7 @@ public class e
       {
         try
         {
-          paramString = localc.c(am.d(paramString));
+          paramString = localc.c(ap.d(paramString));
           paramString = new d(paramString, paramLong);
           return paramString;
         }
@@ -442,7 +444,7 @@ public class e
     {
       throw new FileSystemException(paramString1);
     }
-    paramString1 = am.bk(paramString2);
+    paramString1 = ap.bB(paramString2);
     paramString2 = c(paramString1);
     if (paramString2 == null) {
       throw new FileNotFoundException(paramString1);
@@ -477,16 +479,16 @@ public class e
         localObject2 = paramString.substring("usb://".length());
         arrayOfString = ((String)localObject2).split("/");
         if (arrayOfString.length > 1) {
-          break label301;
+          break label300;
         }
         return null;
       }
       finally {}
       if (i >= b.length) {
-        break label296;
+        break label295;
       }
       if (!b[i].i().equalsIgnoreCase(paramString)) {
-        break label311;
+        break label310;
       }
       paramString = b[i];
       label93:
@@ -505,8 +507,8 @@ public class e
       label152:
       if (paramString == null)
       {
-        Log.e(a, "getFile file failed to get partion " + (String)localObject2);
-        throw new RuntimeException(FexApplication.a().getString(2131428093));
+        l.e(a, "getFile file failed to get partion " + (String)localObject2);
+        throw new RuntimeException(FexApplication.a().getString(2131231905));
       }
     }
     catch (IOException paramString)
@@ -543,14 +545,14 @@ public class e
           }
           paramString = null;
           break label152;
-          label296:
+          label295:
           paramString = null;
           break label93;
-          label301:
+          label300:
           paramString = arrayOfString[0];
           i = 0;
           break;
-          label311:
+          label310:
           i += 1;
           break;
         }
@@ -657,7 +659,7 @@ public class e
     {
       try
       {
-        Object localObject = am.c();
+        Object localObject = ap.c();
         boolean bool2;
         if (localObject != null)
         {
@@ -666,7 +668,7 @@ public class e
           bool2 = bool1;
           if (((Iterator)localObject).hasNext())
           {
-            if (!am.bv(nextc)) {
+            if (!ap.bM(nextc)) {
               break label74;
             }
             d = true;
@@ -697,9 +699,9 @@ public class e
       if (localc != null) {
         return true;
       }
-      str = am.bk(paramString);
+      str = ap.bB(paramString);
       if (str != null) {
-        break label131;
+        break label130;
       }
       return false;
     }
@@ -709,8 +711,8 @@ public class e
       String str;
       throw new FileSystemException(paramString);
     }
-    str = am.bk(str);
-    label131:
+    str = ap.bB(str);
+    label130:
     for (;;)
     {
       if (str != null)
@@ -722,7 +724,7 @@ public class e
       }
       if (localc == null)
       {
-        Log.e(a, "Failed to get the path " + paramString);
+        l.e(a, "Failed to get the path " + paramString);
         return false;
       }
       paramString = paramString.substring(str.length()).split("/");
@@ -765,15 +767,15 @@ public class e
   {
     if (e == null)
     {
-      Object localObject = am.c();
+      Object localObject = ap.c();
       if (localObject != null)
       {
         localObject = ((List)localObject).iterator();
         while (((Iterator)localObject).hasNext())
         {
-          ar localar = (ar)((Iterator)localObject).next();
-          if (am.bv(c)) {
-            e = am.d(b);
+          av localav = (av)((Iterator)localObject).next();
+          if (ap.bM(c)) {
+            e = ap.d(b);
           }
         }
       }
@@ -882,14 +884,23 @@ public class e
   
   public static long k(String paramString)
   {
-    paramString = l(paramString);
+    paramString = m(paramString);
     if (paramString == null) {
       return 0L;
     }
     return paramString.e();
   }
   
-  private static com.estrongs.fs.impl.usb.a.b l(String paramString)
+  public static long l(String paramString)
+  {
+    paramString = m(paramString);
+    if (paramString == null) {
+      return 0L;
+    }
+    return paramString.f();
+  }
+  
+  private static com.estrongs.fs.impl.usb.a.b m(String paramString)
   {
     int i = 0;
     for (;;)
@@ -907,37 +918,48 @@ public class e
           }
           str = paramString.substring("usb://".length());
           localObject2 = str.split("/");
-          if (localObject2.length > 1) {
-            break label208;
+          if (localObject2.length >= 1) {
+            break label248;
           }
           return null;
         }
         finally {}
         if (i >= b.length) {
-          break label203;
+          break label243;
         }
         if (!b[i].i().equalsIgnoreCase(paramString)) {
-          break label216;
+          break label256;
         }
         paramString = b[i];
         if (paramString == null) {
           return null;
         }
-        localObject2 = localObject2[1];
-        Iterator localIterator = paramString.h().iterator();
-        if (localIterator.hasNext())
+        if (paramString.h().size() == 1)
         {
+          paramString = (com.estrongs.fs.impl.usb.a.b)paramString.h().get(0);
+          if (paramString == null)
+          {
+            l.e(a, "getFile file failed to get partion " + str);
+            return null;
+          }
+        }
+        else
+        {
+          if (localObject2.length < 2) {
+            return null;
+          }
+          localObject2 = localObject2[1];
+          Iterator localIterator = paramString.h().iterator();
+          if (!localIterator.hasNext()) {
+            break label238;
+          }
           paramString = (com.estrongs.fs.impl.usb.a.b)localIterator.next();
           if (!((String)localObject2).equalsIgnoreCase(paramString.d())) {
             continue;
           }
-          if (paramString == null)
-          {
-            Log.e(a, "getFile file failed to get partion " + str);
-            return null;
-          }
-          return paramString;
+          continue;
         }
+        return paramString;
       }
       catch (Exception paramString)
       {
@@ -945,15 +967,16 @@ public class e
         paramString.printStackTrace();
         return null;
       }
+      label238:
       paramString = null;
       continue;
-      label203:
+      label243:
       paramString = null;
       continue;
-      label208:
+      label248:
       paramString = localObject2[0];
       continue;
-      label216:
+      label256:
       i += 1;
     }
   }

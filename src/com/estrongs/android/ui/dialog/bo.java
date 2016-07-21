@@ -1,13 +1,20 @@
 package com.estrongs.android.ui.dialog;
 
+import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnDismissListener;
+
 class bo
-  implements Runnable
+  implements DialogInterface.OnDismissListener
 {
-  bo(bn parambn) {}
+  bo(bl parambl, DialogInterface.OnDismissListener paramOnDismissListener) {}
   
-  public void run()
+  public void onDismiss(DialogInterface paramDialogInterface)
   {
-    a.b.c.notifyDataSetChanged();
+    if (a != null) {
+      a.onDismiss(paramDialogInterface);
+    }
+    b.a.finish();
   }
 }
 

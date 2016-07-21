@@ -1,31 +1,32 @@
 package com.estrongs.android.ui.e;
 
-import android.content.Context;
-import android.os.Handler;
-import android.view.KeyEvent;
-import android.widget.LinearLayout;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.app.PopAudioPlayer;
+import com.estrongs.android.pop.app.c.i;
+import com.estrongs.android.pop.utils.ao;
+import com.estrongs.android.util.ap;
+import java.util.List;
 
 class je
-  extends LinearLayout
+  implements MenuItem.OnMenuItemClickListener
 {
-  je(jc paramjc, Context paramContext)
-  {
-    super(paramContext);
-  }
+  je(iq paramiq) {}
   
-  public boolean dispatchKeyEvent(KeyEvent paramKeyEvent)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if (paramKeyEvent.getKeyCode() == 4)
+    paramMenuItem = iq.a(a).A();
+    if (paramMenuItem.size() > 0)
     {
-      jc.b(a).post(jc.a(a));
-      return true;
+      String str = get0b;
+      paramMenuItem = str;
+      if (!ap.bl(str)) {
+        paramMenuItem = ap.bH(str);
+      }
+      ao.a(iq.a(a), paramMenuItem);
     }
-    if ((paramKeyEvent.getKeyCode() == 82) && (paramKeyEvent.getAction() == 0) && (jc.c(a)))
-    {
-      jc.b(a).post(jc.a(a));
-      return true;
-    }
-    return super.dispatchKeyEvent(paramKeyEvent);
+    iq.a(a).z();
+    return true;
   }
 }
 

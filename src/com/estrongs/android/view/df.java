@@ -1,37 +1,15 @@
 package com.estrongs.android.view;
 
-import com.estrongs.android.util.bd;
-import com.estrongs.fs.h;
-import com.estrongs.fs.i;
+import com.estrongs.fs.impl.adb.c;
 
 class df
-  implements i
+  implements Runnable
 {
-  private int a = 0;
+  df(cr paramcr) {}
   
-  public df(int paramInt)
+  public void run()
   {
-    a = paramInt;
-  }
-  
-  public boolean a(h paramh)
-  {
-    boolean bool2 = true;
-    boolean bool3 = bd.b(paramh.getExtra("item_is_scanned_server"));
-    boolean bool1;
-    if (a == 1) {
-      bool1 = bool3;
-    }
-    do
-    {
-      do
-      {
-        return bool1;
-        bool1 = bool2;
-      } while (a != 2);
-      bool1 = bool2;
-    } while (!bool3);
-    return false;
+    c.i(a.C);
   }
 }
 

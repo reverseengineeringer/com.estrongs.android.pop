@@ -1,16 +1,42 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
+import android.os.Handler;
+import android.os.Message;
 
 class lb
-  implements DialogInterface.OnDismissListener
+  extends Handler
 {
-  lb(ShowDialogActivity paramShowDialogActivity) {}
+  lb(RecommItemDetailAcitivity paramRecommItemDetailAcitivity) {}
   
-  public void onDismiss(DialogInterface paramDialogInterface)
+  public void handleMessage(Message paramMessage)
   {
-    a.finish();
+    for (;;)
+    {
+      try
+      {
+        int i = arg1;
+        switch (i)
+        {
+        case 123466: 
+        default: 
+          return;
+        }
+      }
+      finally {}
+      a.a(obj);
+      continue;
+      a.f(obj);
+      continue;
+      a.b(obj);
+      continue;
+      a.c(obj);
+      continue;
+      a.d(obj);
+      continue;
+      a.e(obj);
+      continue;
+      a.a(arg2);
+    }
   }
 }
 

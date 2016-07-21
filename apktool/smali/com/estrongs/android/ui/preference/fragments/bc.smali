@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/preference/fragments/SearchEnginePreferenceFragment;
+.field final synthetic a:Lcom/estrongs/android/ui/preference/fragments/RecyclePreferenceFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/preference/fragments/SearchEnginePreferenceFragment;)V
+.method constructor <init>(Lcom/estrongs/android/ui/preference/fragments/RecyclePreferenceFragment;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/preference/fragments/bc;->a:Lcom/estrongs/android/ui/preference/fragments/SearchEnginePreferenceFragment;
+    iput-object p1, p0, Lcom/estrongs/android/ui/preference/fragments/bc;->a:Lcom/estrongs/android/ui/preference/fragments/RecyclePreferenceFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

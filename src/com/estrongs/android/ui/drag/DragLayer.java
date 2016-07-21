@@ -17,11 +17,6 @@ public class DragLayer
     super(paramContext, paramAttributeSet);
   }
   
-  public void a(d paramd)
-  {
-    a = paramd;
-  }
-  
   public boolean dispatchKeyEvent(KeyEvent paramKeyEvent)
   {
     try
@@ -70,6 +65,11 @@ public class DragLayer
       return a.b(paramMotionEvent);
     }
     return super.onTouchEvent(paramMotionEvent);
+  }
+  
+  public void setDragController(d paramd)
+  {
+    a = paramd;
   }
 }
 

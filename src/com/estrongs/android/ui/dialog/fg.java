@@ -1,34 +1,16 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.Context;
-import android.gesture.Gesture;
-import com.estrongs.android.ui.guesture.ESGesturePanel;
-import com.estrongs.android.ui.guesture.b;
-import com.estrongs.android.ui.guesture.c;
-import com.estrongs.android.ui.view.ag;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class fg
-  implements c
+  implements DialogInterface.OnClickListener
 {
   fg(ff paramff) {}
   
-  public void a(Gesture paramGesture)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (paramGesture != null)
-    {
-      if (b.a(paramGesture) != null)
-      {
-        ff.a(a).b();
-        ag.a(ff.b(a), 2131428347, 0);
-      }
-    }
-    else {
-      return;
-    }
-    if (!b.a(ff.c(a), paramGesture)) {
-      ag.a(ff.b(a), ff.b(a).getString(2131428386), 0);
-    }
-    a.b();
+    paramDialogInterface.dismiss();
   }
 }
 

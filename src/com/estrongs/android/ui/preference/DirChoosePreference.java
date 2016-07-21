@@ -10,7 +10,7 @@ import android.util.AttributeSet;
 import com.estrongs.android.pop.ad;
 import com.estrongs.android.pop.ah;
 import com.estrongs.android.pop.z;
-import com.estrongs.android.widget.g;
+import com.estrongs.android.widget.f;
 
 public class DirChoosePreference
   extends EditTextPreference
@@ -33,7 +33,7 @@ public class DirChoosePreference
   {
     super(paramContext, paramAttributeSet, paramInt);
     b = paramContext;
-    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, ah.a);
+    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, ah.DirChoosePreference);
     c = paramContext.getBoolean(0, false);
     paramContext.recycle();
   }
@@ -54,11 +54,11 @@ public class DirChoosePreference
       if (!bool1) {
         bool2 = c;
       }
-      paramBundle = new b(this, ad.a(b).p());
-      paramBundle = new g((Activity)b, getText(), paramBundle, true, bool2);
-      paramBundle.c(b.getString(2131427340), (DialogInterface.OnClickListener)null);
+      paramBundle = new b(this, ad.a(b).q());
+      paramBundle = new f((Activity)b, getText(), paramBundle, true, bool2);
+      paramBundle.c(b.getString(2131231265), (DialogInterface.OnClickListener)null);
       paramBundle.a(getTitle());
-      paramBundle.b(b.getString(2131427339), new c(this, paramBundle));
+      paramBundle.b(b.getString(2131231270), new c(this, paramBundle));
       paramBundle.a(this);
       paramBundle.j();
       return;

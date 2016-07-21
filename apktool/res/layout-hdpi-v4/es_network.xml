@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/content" android:background="@color/grey_create_new_window" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/body_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ListView android:id="@id/listview" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/content_listview_selector" android:cacheColorHint="@color/transparent" android:divider="@drawable/toolbar_search_sp" />
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:gravity="center" android:id="@id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+    </LinearLayout>
+    <com.estrongs.android.pop.esclasses.ESImageView android:background="@drawable/shadow_tools_top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+</RelativeLayout>

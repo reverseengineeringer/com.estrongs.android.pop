@@ -1,16 +1,26 @@
 package com.estrongs.android.pop.utils;
 
-public abstract class cq
+import android.content.Context;
+import android.telephony.TelephonyManager;
+
+public class cq
 {
-  public void a() {}
+  public static int a = -1;
+  public static int b = 1000;
+  private static String c = null;
   
-  public abstract void a(cr paramcr);
-  
-  public void b() {}
-  
-  public boolean c()
+  public static String a(Context paramContext)
   {
-    return true;
+    String str = ((TelephonyManager)paramContext.getSystemService("phone")).getLine1Number();
+    paramContext = str;
+    if (str != null)
+    {
+      paramContext = str;
+      if (str.startsWith("+86")) {
+        paramContext = str.substring(3);
+      }
+    }
+    return paramContext;
   }
 }
 

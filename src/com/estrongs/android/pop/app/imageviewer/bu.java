@@ -1,6 +1,7 @@
 package com.estrongs.android.pop.app.imageviewer;
 
-import com.estrongs.android.pop.app.imageviewer.gallery.f;
+import android.view.View;
+import com.estrongs.android.widget.RealViewSwitcher;
 
 class bu
   implements Runnable
@@ -9,13 +10,9 @@ class bu
   
   public void run()
   {
-    if (a.c < a.e.b() - 1)
-    {
-      ViewImage21.i(a).setSelection(a.c + 1);
-      a.a(true);
-      return;
-    }
-    a.e();
+    a.i.getCurrentView().startAnimation(a.i.getOutAnimation());
+    a.b.removeCallbacks(ViewImage21.v(a));
+    a.b.postDelayed(ViewImage21.v(a), ViewImage21.w(a) - 50);
   }
 }
 

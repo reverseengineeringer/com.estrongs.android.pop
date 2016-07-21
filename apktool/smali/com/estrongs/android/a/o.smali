@@ -2,18 +2,30 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Ljava/util/Comparator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Lcom/estrongs/fs/h;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/a/i;
+.field final synthetic a:Lcom/estrongs/android/a/l;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/a/i;)V
+.method constructor <init>(Lcom/estrongs/android/a/l;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/a/o;->a:Lcom/estrongs/android/a/i;
+    iput-object p1, p0, Lcom/estrongs/android/a/o;->a:Lcom/estrongs/android/a/l;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,18 +34,38 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+.method public a(Lcom/estrongs/fs/h;Lcom/estrongs/fs/h;)I
+    .locals 4
 
-    iget-object v0, p0, Lcom/estrongs/android/a/o;->a:Lcom/estrongs/android/a/i;
+    check-cast p1, Lcom/estrongs/android/a/b/f;
 
-    sget v1, Lcom/estrongs/android/a/i;->b:I
+    check-cast p2, Lcom/estrongs/android/a/b/f;
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/a/i;->a(Lcom/estrongs/android/a/i;I)I
+    invoke-virtual {p2}, Lcom/estrongs/android/a/b/f;->length()J
 
-    iget-object v0, p0, Lcom/estrongs/android/a/o;->a:Lcom/estrongs/android/a/i;
+    move-result-wide v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/a/i;->dismiss()V
+    invoke-virtual {p1}, Lcom/estrongs/android/a/b/f;->length()J
 
-    return-void
+    move-result-wide v2
+
+    sub-long/2addr v0, v2
+
+    long-to-int v0, v0
+
+    return v0
+.end method
+
+.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 1
+
+    check-cast p1, Lcom/estrongs/fs/h;
+
+    check-cast p2, Lcom/estrongs/fs/h;
+
+    invoke-virtual {p0, p1, p2}, Lcom/estrongs/android/a/o;->a(Lcom/estrongs/fs/h;Lcom/estrongs/fs/h;)I
+
+    move-result v0
+
+    return v0
 .end method

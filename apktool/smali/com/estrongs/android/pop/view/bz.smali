@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/ui/drag/c;
+.implements Lcom/estrongs/fs/i;
 
 
 # instance fields
@@ -22,94 +22,36 @@
 
 
 # virtual methods
-.method public a(Lcom/estrongs/android/ui/drag/l;Ljava/lang/Object;)V
-    .locals 3
+.method public a(Lcom/estrongs/fs/h;)Z
+    .locals 2
 
-    check-cast p2, Ljava/util/List;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/bz;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->z()Ljava/lang/String;
+    invoke-interface {p1}, Lcom/estrongs/fs/h;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->Y(Ljava/lang/String;)Z
+    const-string v1, "."
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcom/estrongs/android/pop/view/bz;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->z()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->af(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e(Lcom/estrongs/android/pop/view/FileExplorerActivity;)Z
 
     move-result v0
 
-    if-nez v0, :cond_1
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-interface {p2}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    invoke-direct {v2, v0}, Ljava/util/ArrayList;-><init>(I)V
+    if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    move v1, v0
-
     :goto_0
-    invoke-interface {p2}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-ge v1, v0, :cond_0
-
-    invoke-interface {p2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/fs/impl/b/c;
-
-    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v0, v1, 0x1
-
-    move v1, v0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/bz;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->Q()Lcom/estrongs/android/pop/utils/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/pop/utils/c;->a(Ljava/util/List;)Z
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/bz;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->s()V
-
-    :goto_1
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/bz;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-virtual {v0, p2}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a(Ljava/util/List;)Z
-
-    goto :goto_1
-.end method
-
-.method public b(Lcom/estrongs/android/ui/drag/l;Ljava/lang/Object;)V
-    .locals 0
-
-    return-void
+    goto :goto_0
 .end method

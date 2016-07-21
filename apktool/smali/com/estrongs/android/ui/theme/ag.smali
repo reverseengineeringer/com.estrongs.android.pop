@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:I
-
-.field final synthetic b:Lcom/estrongs/android/ui/theme/af;
+.field final synthetic a:Lcom/estrongs/android/ui/theme/ThemeFolderActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/theme/af;I)V
+.method constructor <init>(Lcom/estrongs/android/ui/theme/ThemeFolderActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/theme/ag;->b:Lcom/estrongs/android/ui/theme/af;
-
-    iput p2, p0, Lcom/estrongs/android/ui/theme/ag;->a:I
+    iput-object p1, p0, Lcom/estrongs/android/ui/theme/ag;->a:Lcom/estrongs/android/ui/theme/ThemeFolderActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,14 +22,14 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 2
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/theme/ag;->b:Lcom/estrongs/android/ui/theme/af;
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    iget v1, p0, Lcom/estrongs/android/ui/theme/ag;->a:I
+    iget-object v0, p0, Lcom/estrongs/android/ui/theme/ag;->a:Lcom/estrongs/android/ui/theme/ThemeFolderActivity;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/theme/af;->c(I)V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/theme/ThemeFolderActivity;->finish()V
 
     return-void
 .end method

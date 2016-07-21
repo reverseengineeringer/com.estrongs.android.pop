@@ -27,11 +27,11 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Landroid/support/v4/view/ca;
+    new-instance v0, Landroid/support/v4/view/eo;
 
-    invoke-direct {v0}, Landroid/support/v4/view/ca;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/view/eo;-><init>()V
 
-    invoke-static {v0}, Landroid/support/v4/a/a;->a(Landroid/support/v4/a/c;)Landroid/os/Parcelable$Creator;
+    invoke-static {v0}, Landroid/support/v4/os/f;->a(Landroid/support/v4/os/h;)Landroid/os/Parcelable$Creator;
 
     move-result-object v0
 

@@ -1,9 +1,9 @@
 package com.estrongs.android.pop.app;
 
+import android.preference.EditTextPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
-import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.ui.notification.i;
+import com.estrongs.android.pop.ad;
 
 class hg
   implements Preference.OnPreferenceChangeListener
@@ -12,15 +12,28 @@ class hg
   
   public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
   {
-    if (((Boolean)paramObject).booleanValue()) {
-      i.a(FexApplication.a()).b();
-    }
-    for (;;)
+    paramObject = paramObject.toString();
+    if (((String)paramObject).trim().equals(""))
     {
-      return true;
-      i.a(FexApplication.a()).c();
-      i.a();
+      a.showDialog(105);
+      return false;
     }
+    boolean bool = PopPreferenceActivity.a(a, (String)paramObject);
+    paramPreference = (Preference)paramObject;
+    if (((String)paramObject).charAt(((String)paramObject).length() - 1) != '/') {
+      paramPreference = (String)paramObject + "/";
+    }
+    PopPreferenceActivity.b(a, paramPreference);
+    PopPreferenceActivity.a(a, 0);
+    if (bool)
+    {
+      a.c.setSummary(paramPreference);
+      a.c.setText(paramPreference);
+      a.b.i(paramPreference);
+      return true;
+    }
+    a.showDialog(105);
+    return false;
   }
 }
 

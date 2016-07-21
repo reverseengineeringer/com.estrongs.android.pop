@@ -1,35 +1,46 @@
 package com.estrongs.android.ui.e;
 
-import android.content.Context;
-import com.estrongs.android.pop.m;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.app.i;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.dialog.ix;
-import com.estrongs.android.util.am;
-import com.estrongs.android.widget.ac;
-import com.estrongs.android.widget.ae;
-import com.estrongs.fs.b.a;
-import com.estrongs.fs.h;
+import com.estrongs.fs.impl.b.d;
+import java.util.List;
 
 class cx
-  implements ac
+  implements MenuItem.OnMenuItemClickListener
 {
-  cx(cv paramcv, ae paramae) {}
+  cx(cr paramcr) {}
   
-  public boolean a(h paramh)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    FileExplorerActivity localFileExplorerActivity = FileExplorerActivity.J();
-    if (!am.K(paramh.getAbsolutePath())) {
-      return false;
+    paramMenuItem = cr.a(a);
+    try
+    {
+      StringBuilder localStringBuilder = new StringBuilder();
+      int i = 0;
+      while (i < paramMenuItem.size())
+      {
+        if (i > 0) {
+          localStringBuilder.append(",");
+        }
+        localStringBuilder.append(((d)paramMenuItem.get(i)).m());
+        i += 1;
+      }
+      i.a(cr.b(a), "action.lock_apps", localStringBuilder.toString());
+      paramMenuItem = cr.b(a).O();
+      if (paramMenuItem != null) {
+        paramMenuItem.i(true);
+      }
     }
-    a locala = new a(cp.b(b.a), paramh, false);
-    locala.setDescription(String.format(b.a.b.getString(2131428726), new Object[] { am.bL(paramh.getAbsolutePath()) }));
-    locala.setTaskDecisionListener(new m(localFileExplorerActivity));
-    paramh = new ix(localFileExplorerActivity, localFileExplorerActivity.getString(2131427460), locala);
-    paramh.a(false);
-    paramh.show();
-    locala.a(paramh);
-    locala.execute();
-    a.k();
+    catch (Exception paramMenuItem)
+    {
+      for (;;)
+      {
+        paramMenuItem.printStackTrace();
+      }
+    }
+    cr.b(a).B();
     return true;
   }
 }

@@ -1,17 +1,14 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
+import android.graphics.Bitmap;
 
-class ah
-  implements DialogInterface.OnDismissListener
+public class ah
 {
-  ah(DefaultWindowSetting paramDefaultWindowSetting) {}
-  
-  public void onDismiss(DialogInterface paramDialogInterface)
-  {
-    DefaultWindowSetting.d(a);
-  }
+  public String a;
+  public String b;
+  public String c;
+  public String d;
+  public Bitmap e;
 }
 
 /* Location:

@@ -9,32 +9,30 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.pop.esclasses.g;
-import com.estrongs.android.ui.theme.al;
+import com.estrongs.android.pop.esclasses.k;
+import com.estrongs.android.ui.theme.at;
 
 public class FileSharingNotificationActivity
   extends ESActivity
 {
-  private al a;
+  private at a;
   private NotificationManager b;
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    requestWindowFeature(1);
-    getWindow().setBackgroundDrawableResource(2130837568);
+    getWindow().setBackgroundDrawableResource(2130837692);
     b = ((NotificationManager)getSystemService("notification"));
-    a = al.a(this);
-    paramBundle = g.a(this).inflate(2130903128, null);
-    TextView localTextView = (TextView)paramBundle.findViewById(2131362296);
+    a = at.a(this);
+    paramBundle = k.a(this).inflate(2130903227, null);
+    TextView localTextView = (TextView)paramBundle.findViewById(2131624888);
     Bundle localBundle = getIntent().getExtras();
     if ((localBundle != null) && (localBundle.getString("file_name") != null)) {
       localTextView.setText(localBundle.getString("file_name"));
     }
-    paramBundle.setBackgroundDrawable(a.a(2130837935));
     setContentView(paramBundle);
-    ((Button)findViewById(2131362297)).setOnClickListener(new ck(this));
-    ((Button)findViewById(2131362298)).setOnClickListener(new cl(this));
+    ((Button)findViewById(2131624889)).setOnClickListener(new co(this));
+    ((Button)findViewById(2131624890)).setOnClickListener(new cp(this));
   }
 }
 

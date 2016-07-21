@@ -2,13 +2,13 @@ package com.estrongs.android.ui.preference;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.widget.g;
+import com.estrongs.android.widget.f;
 import com.estrongs.fs.h;
 
 class c
   implements DialogInterface.OnClickListener
 {
-  c(DirChoosePreference paramDirChoosePreference, g paramg) {}
+  c(DirChoosePreference paramDirChoosePreference, f paramf) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {

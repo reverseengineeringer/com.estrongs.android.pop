@@ -113,7 +113,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -158,7 +158,7 @@
 
     move-result-object v1
 
-    invoke-static {v3}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -182,7 +182,7 @@
 
     iget-object v1, v1, Lcom/estrongs/android/pop/view/utils/RemoteSynchronizer$RemoteFile;->path:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->aw(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->aG(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -194,7 +194,7 @@
 
     iget-object v1, v1, Lcom/estrongs/android/pop/view/utils/RemoteSynchronizer$RemoteFile;->path:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->aB(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->aL(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -206,7 +206,7 @@
 
     iget-object v1, v1, Lcom/estrongs/android/pop/view/utils/RemoteSynchronizer$RemoteFile;->path:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->az(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->aJ(Ljava/lang/String;)Z
     :try_end_0
     .catch Lcom/estrongs/fs/FileSystemException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -282,7 +282,7 @@
 
     iget-object v0, v0, Lcom/estrongs/android/pop/view/utils/RemoteSynchronizer$RemoteFile;->path:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->aw(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->aG(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -294,7 +294,7 @@
 
     iget-object v0, v0, Lcom/estrongs/android/pop/view/utils/RemoteSynchronizer$RemoteFile;->path:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->aB(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->aL(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -306,7 +306,7 @@
 
     iget-object v0, v0, Lcom/estrongs/android/pop/view/utils/RemoteSynchronizer$RemoteFile;->path:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->az(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->aJ(Ljava/lang/String;)Z
     :try_end_2
     .catch Lcom/estrongs/fs/FileSystemException; {:try_start_2 .. :try_end_2} :catch_0
 
@@ -446,7 +446,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 

@@ -1,91 +1,19 @@
 package com.estrongs.android.pop.app.b;
 
-import com.estrongs.android.pop.zeroconf.u;
-import com.estrongs.android.pop.zeroconf.w;
-import java.io.PrintStream;
-import java.net.Inet4Address;
+import com.estrongs.android.pop.app.b.b.a;
+import com.estrongs.fs.h;
+import java.util.HashMap;
 
-class e
-  implements Runnable
+final class e
+  implements a
 {
-  e(d paramd, u paramu) {}
-  
-  public void run()
+  public void a(HashMap<Long, h> paramHashMap, long paramLong)
   {
-    Object localObject2;
-    Object localObject1;
-    int i;
-    if (a.a())
-    {
-      if (c.a(b.a)) {
-        System.out.println("+++++" + a.k + " " + a.d + " " + a.a);
-      }
-      if ((a.f != null) && (a.a != null))
-      {
-        if (!a.c.equals(w.d)) {
-          break label264;
-        }
-        localObject2 = "webdav://" + a.f.getHostAddress();
-        localObject1 = localObject2;
-        if (a.d == 80) {
-          break label420;
-        }
-        localObject1 = localObject2;
-        i = 1;
-      }
-    }
-    for (;;)
-    {
-      localObject2 = localObject1;
-      if (localObject1 != null)
-      {
-        localObject2 = localObject1;
-        if (i != 0) {
-          localObject2 = (String)localObject1 + ":" + a.d;
-        }
-        localObject1 = a.c();
-        if (localObject1 == null) {
-          break label397;
-        }
-      }
-      label264:
-      label397:
-      for (localObject2 = (String)localObject2 + (String)localObject1;; localObject2 = (String)localObject2 + "/")
-      {
-        if (localObject2 != null) {
-          c.a(b.a, (String)localObject2, a.a, true);
-        }
-        return;
-        if (a.c.equals(w.e))
-        {
-          localObject2 = "ftp://" + a.f.getHostAddress();
-          localObject1 = localObject2;
-          if (a.d == 21) {
-            break label420;
-          }
-          localObject1 = localObject2;
-          i = 1;
-          break;
-        }
-        if (!a.c.equals(w.c)) {
-          break label425;
-        }
-        localObject2 = "smb://" + a.f.getHostAddress();
-        localObject1 = localObject2;
-        if (a.d == 445) {
-          break label420;
-        }
-        localObject1 = localObject2;
-        i = 1;
-        break;
-      }
-      label420:
-      i = 0;
-      continue;
-      label425:
-      localObject1 = null;
-      i = 0;
-    }
+    String str = com.estrongs.android.pop.b.b();
+    new com.estrongs.android.pop.app.b.b.b(str + "/WhatsApp/Media/WhatsApp Audio", -2).a(paramHashMap, paramLong);
+    new com.estrongs.android.pop.app.b.b.b(str + "/WhatsApp/Media/WhatsApp Documents", -2).a(paramHashMap, paramLong);
+    new com.estrongs.android.pop.app.b.b.b(str + "/WhatsApp/Media/WhatsApp Images", -2).a(paramHashMap, paramLong);
+    new com.estrongs.android.pop.app.b.b.b(str + "/WhatsApp/Media/WhatsApp Video", -2).a(paramHashMap, paramLong);
   }
 }
 

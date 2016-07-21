@@ -1,13 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_select">Selezionare</string>
-    <string name="app_name">ES File Explorer</string>
-    <string name="app_media_player">ES Media Player</string>
-    <string name="app_note_editor">ES Note Editor</string>
-    <string name="app_image_browser">ES Image Browser</string>
-    <string name="app_zip_viewer">ES Zip Viewer</string>
     <string name="app_downloader">ES Downloader</string>
-    <string name="select_device_to_share">Selezionare un dispositivo</string>
+    <string name="app_image_browser">ES Image Browser</string>
+    <string name="app_media_player">ES Media Player</string>
+    <string name="app_name">ES File Explorer</string>
+    <string name="app_note_editor">ES Note Editor</string>
+    <string name="app_zip_viewer">ES Zip Viewer</string>
+    <string name="battery_info_remaining_charging_time">Tempo di ricarica:</string>
+    <string name="battery_info_remaining_discharging_time">Tempo:</string>
+    <string name="charging_screen_ad_delete">Elimina</string>
+    <string name="charging_screen_ad_enter">Apri</string>
+    <string name="charging_screen_charging_complete">Ricarica completata</string>
+    <string name="charging_screen_slide_to_enter">Scorrere per sbloccare</string>
+    <string name="common_time_hour">h</string>
+    <string name="common_time_minute">m</string>
+    <string name="duappd_ad_item_action_btn">GRATIS</string>
+    <string name="duapps_ad_data_empty">Riprova più tardi.</string>
+    <string name="duapps_ad_empty_refresh_btn_check">Controllare</string>
+    <string name="duapps_ad_empty_title">NESSUNA APP</string>
+    <string name="duapps_ad_footer_end">Nessun altro contenuto</string>
+    <string name="duapps_ad_loading">Caricamento in corso …</string>
+    <string name="duapps_ad_loading_switch_google_play_des">il passaggio a Google Play…</string>
+    <string name="duapps_ad_no_apps_refresh_button_text">Aggiorna</string>
+    <string name="duapps_ad_no_browser_play">Nessun browser o Google Play installato</string>
+    <string name="duapps_ad_nonetwork_message">Nessuna connessione di rete. Verifica le impostazioni e riprova.</string>
+    <string name="duapps_ad_pull_refresh">Tira per aggiornare</string>
+    <string name="duscenerysdk_ad_no_browser_play">Nessun browser o Google Play installato</string>
     <string name="es_share_name_activity">Invia via LAN</string>
+    <string name="lock_screen_setting">Impostazioni</string>
+    <string name="lock_screen_switch">Smart Charge</string>
+    <string name="lockscreen_charge_boost_time">Carica totale accelerata di %1$d minuti</string>
     <string name="save_to_es">ES Salva con nome</string>
+    <string name="scenery_card_antivirus_button">SCANSIONE SICUREZZA</string>
+    <string name="scenery_card_antivirus_content">Il tuo telefono ha &lt;font color=#3080F0>%1$s&lt;/font> rischi sicurezza</string>
+    <string name="scenery_card_antivirus_title">Rischio sicurezza</string>
+    <string name="scenery_card_battery_button">RISPARMIA ENERGIA</string>
+    <string name="scenery_card_battery_content">&lt;font color=#3080F0>%1$s&lt;/font> Rilevate app che consumano. Usa DU Battery Saver per consumare meno e aumentare lo standby &lt;font color=#3080F0>%2$s h %3$s m&lt;/font></string>
+    <string name="scenery_card_battery_title">Cons. energia</string>
+    <string name="scenery_card_booster_button">BOOST ORA</string>
+    <string name="scenery_card_booster_content">&lt;font color=#3080F0>%1$s&lt;/font> app con consumi alti che rallentano il telefono</string>
+    <string name="scenery_card_booster_title">Disp. lento</string>
+    <string name="scenery_card_cleaner_button">CORREGGI</string>
+    <string name="scenery_card_cleaner_content">Cestino trovato &lt;font color=#3080F0>%1$s&lt;/font> del telefono</string>
+    <string name="scenery_card_cleaner_title">Pulizia rapida</string>
+    <string name="scenery_card_es_button">PULISCI ORA</string>
+    <string name="scenery_card_es_content">Spazio interno restante ridotto &lt;font color=#3080F0>%1$s&lt;/font></string>
+    <string name="scenery_card_es_title">Pulizia disco</string>
+    <string name="scenery_card_photowonder_button">ABBELLISCI ORA</string>
+    <string name="scenery_card_photowonder_content">Hai &lt;font color=#3080F0>%1$s&lt;/font> foto che possono essere più belle!</string>
+    <string name="scenery_card_photowonder_title">Abbellisci</string>
+    <string name="scenery_charge_dialog_button_text">SCOPRILO</string>
+    <string name="scenery_charge_dialog_content">Il sovrac. di %1$d min &lt;font color=#FF8132>danneggia la batteria&lt;/font>. Proteggila con &lt;b>DU Battery Saver&lt;/b>.</string>
+    <string name="scenery_charge_dialog_title">Suggerimenti di ricarica</string>
+    <string name="scenery_disk_usage_dialog_button_text">SCOPRILO</string>
+    <string name="scenery_disk_usage_dialog_content">La memoria del telefono è diminuita di &lt;font color=#FF8132>%1$sMB&lt;/font> negli ultimi &lt;font color=#FF8132>%2$s giorni&lt;/font>.</string>
+    <string name="scenery_disk_usage_dialog_title">Pulizia disco</string>
+    <string name="scenery_take_photo_dialog_button_text">SCOPRILO</string>
+    <string name="scenery_take_photo_dialog_content">Le foto non sono abbastanza belle? &lt;font color=#2274E6>Filtri cinematografici&lt;/font> da &lt;b>PhotoWonder&lt;/b> possono essere di aiuto!</string>
+    <string name="scenery_take_photo_dialog_title">Abbellisci</string>
+    <string name="scenery_uninstall_dialog_button_text">SCOPRILO</string>
+    <string name="scenery_uninstall_dialog_content">%1$s ha lasciato alcuni &lt;font color=#FF8132>file cestino residuali&lt;/font>, utilizza &lt;b>DU Speed Booster&lt;/b> per liberartene!</string>
+    <string name="scenery_uninstall_dialog_title">File cestino</string>
+    <string name="screen_lock_charging_boosted_time">Carica accelerata per %1$d minuti</string>
+    <string name="select_device_to_share">Selezionare un dispositivo</string>
+    <string name="toolbox_no_apps_refresh_button_text">Aggiorna</string>
+    <string name="toolbox_nonetwork_tips">Fai clic per abilitare la rete per nuove app gratuite.</string>
+    <string name="toolbox_v2_btn_more">Altro</string>
+    <string name="toolbox_v2_coin_balance">Resto:</string>
+    <string name="toolbox_v2_data_empty">Riprova più tardi.</string>
+    <string name="toolbox_v2_list_item_btn_free">GRATIS</string>
+    <string name="v2_toolbox_empty_title">NESSUNA APP</string>
+    <string name="toolbox_v2_network_mobile">Dati mobili</string>
+    <string name="toolbox_v2_network_wifi">Wi-Fi</string>
+    <string name="toolbox_v2_nomore_content">Nessun altro contenuto</string>
+    <string name="toolbox_v2_pull_refresh">Tira per aggiornare</string>
 </resources>

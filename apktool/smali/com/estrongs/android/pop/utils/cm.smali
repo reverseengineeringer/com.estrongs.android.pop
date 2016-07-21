@@ -2,587 +2,559 @@
 .super Ljava/lang/Object;
 
 
-# instance fields
-.field a:Ljava/util/concurrent/BlockingQueue;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/concurrent/BlockingQueue",
-            "<",
-            "Ljava/lang/Runnable;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field b:Ljava/util/concurrent/ThreadPoolExecutor;
-
-.field c:Lcom/estrongs/android/pop/utils/ck;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/estrongs/android/pop/utils/ck",
-            "<",
-            "Lcom/estrongs/android/pop/utils/ct;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field d:Ljava/lang/Runnable;
-
-.field private e:Ljava/util/LinkedList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/LinkedList",
-            "<",
-            "Ljava/util/Queue",
-            "<",
-            "Lcom/estrongs/android/pop/utils/cq;",
-            ">;>;"
-        }
-    .end annotation
-.end field
-
-.field private f:I
-
-.field private g:I
-
-.field private h:I
-
-.field private i:Z
-
-.field private j:Lcom/estrongs/android/pop/utils/ck;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/estrongs/android/pop/utils/ck",
-            "<",
-            "Lcom/estrongs/android/pop/utils/cs;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private k:Lcom/estrongs/android/pop/utils/cr;
-
-
 # direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Runtime;->availableProcessors()I
-
-    move-result v0
-
-    invoke-direct {p0, v0}, Lcom/estrongs/android/pop/utils/cm;-><init>(I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 1
-
-    const/4 v0, 0x3
-
-    invoke-direct {p0, p1, v0}, Lcom/estrongs/android/pop/utils/cm;-><init>(II)V
-
-    return-void
-.end method
-
-.method public constructor <init>(II)V
-    .locals 9
-
-    const/4 v0, 0x4
-
-    const/4 v4, 0x3
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v1, Ljava/util/LinkedList;
-
-    invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
-
-    iput-object v1, p0, Lcom/estrongs/android/pop/utils/cm;->e:Ljava/util/LinkedList;
-
-    iput v3, p0, Lcom/estrongs/android/pop/utils/cm;->g:I
-
-    iput v3, p0, Lcom/estrongs/android/pop/utils/cm;->h:I
-
-    iput-boolean v3, p0, Lcom/estrongs/android/pop/utils/cm;->i:Z
-
-    new-instance v1, Lcom/estrongs/android/pop/utils/ck;
-
-    invoke-direct {v1, v4}, Lcom/estrongs/android/pop/utils/ck;-><init>(I)V
-
-    iput-object v1, p0, Lcom/estrongs/android/pop/utils/cm;->j:Lcom/estrongs/android/pop/utils/ck;
-
-    new-instance v1, Lcom/estrongs/android/pop/utils/ck;
-
-    invoke-direct {v1, v4}, Lcom/estrongs/android/pop/utils/ck;-><init>(I)V
-
-    iput-object v1, p0, Lcom/estrongs/android/pop/utils/cm;->c:Lcom/estrongs/android/pop/utils/ck;
-
-    new-instance v1, Lcom/estrongs/android/pop/utils/cn;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/utils/cn;-><init>(Lcom/estrongs/android/pop/utils/cm;)V
-
-    iput-object v1, p0, Lcom/estrongs/android/pop/utils/cm;->k:Lcom/estrongs/android/pop/utils/cr;
-
-    new-instance v1, Lcom/estrongs/android/pop/utils/co;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/utils/co;-><init>(Lcom/estrongs/android/pop/utils/cm;)V
-
-    iput-object v1, p0, Lcom/estrongs/android/pop/utils/cm;->d:Ljava/lang/Runnable;
-
-    iput p1, p0, Lcom/estrongs/android/pop/utils/cm;->f:I
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/utils/cm;->e:Ljava/util/LinkedList;
-
-    new-instance v3, Ljava/util/LinkedList;
-
-    invoke-direct {v3}, Ljava/util/LinkedList;-><init>()V
-
-    invoke-virtual {v1, v3}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
-
-    new-instance v1, Ljava/util/concurrent/SynchronousQueue;
-
-    invoke-direct {v1}, Ljava/util/concurrent/SynchronousQueue;-><init>()V
-
-    iput-object v1, p0, Lcom/estrongs/android/pop/utils/cm;->a:Ljava/util/concurrent/BlockingQueue;
-
-    iget v1, p0, Lcom/estrongs/android/pop/utils/cm;->f:I
-
-    div-int/lit8 v1, v1, 0x2
-
-    if-ge v1, v2, :cond_0
-
-    :goto_0
-    new-instance v1, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    iget v3, p0, Lcom/estrongs/android/pop/utils/cm;->f:I
-
-    const-wide/16 v4, 0x3c
-
-    sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    iget-object v7, p0, Lcom/estrongs/android/pop/utils/cm;->a:Ljava/util/concurrent/BlockingQueue;
-
-    new-instance v8, Lcom/estrongs/android/pop/utils/cp;
-
-    invoke-direct {v8, p2}, Lcom/estrongs/android/pop/utils/cp;-><init>(I)V
-
-    invoke-direct/range {v1 .. v8}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
-
-    iput-object v1, p0, Lcom/estrongs/android/pop/utils/cm;->b:Ljava/util/concurrent/ThreadPoolExecutor;
-
-    return-void
-
-    :cond_0
-    if-le v1, v0, :cond_1
-
-    move v2, v0
-
-    goto :goto_0
-
-    :cond_1
-    move v2, v1
-
-    goto :goto_0
-.end method
-
-.method private a()Lcom/estrongs/android/pop/utils/cq;
-    .locals 4
-
-    const/4 v3, 0x1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/utils/cm;->e:Ljava/util/LinkedList;
-
-    invoke-virtual {v0}, Ljava/util/LinkedList;->getLast()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Queue;
-
-    invoke-interface {v0}, Ljava/util/Queue;->poll()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/estrongs/android/pop/utils/cq;
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Queue;->isEmpty()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/utils/cm;->e:Ljava/util/LinkedList;
-
-    invoke-virtual {v2}, Ljava/util/LinkedList;->size()I
-
-    move-result v2
-
-    if-le v2, v3, :cond_0
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/utils/cm;->e:Ljava/util/LinkedList;
-
-    invoke-virtual {v2, v0}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
-
-    :cond_0
-    :goto_0
-    return-object v1
-
-    :cond_1
-    iget-object v1, p0, Lcom/estrongs/android/pop/utils/cm;->e:Ljava/util/LinkedList;
-
-    invoke-virtual {v1}, Ljava/util/LinkedList;->size()I
+.method public static a(Ljava/io/File;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;)I
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/io/File;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;)I"
+        }
+    .end annotation
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0}, Ljava/io/File;->isDirectory()Z
 
     move-result v1
 
-    if-le v1, v3, :cond_2
+    if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/utils/cm;->e:Ljava/util/LinkedList;
+    invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
-    invoke-virtual {v1, v0}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
+    move-result-object v2
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/utils/cm;->a()Lcom/estrongs/android/pop/utils/cq;
+    if-eqz v2, :cond_1
+
+    array-length v3, v2
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v3, :cond_1
+
+    aget-object v4, v2, v1
+
+    invoke-static {v4, p1, p2, p3, p4}, Lcom/estrongs/android/pop/utils/cm;->a(Ljava/io/File;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;)I
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v1
 
-    goto :goto_0
+    invoke-static {v1}, Lcom/estrongs/fs/a/a;->g(Ljava/lang/String;)I
 
-    :cond_2
-    const/4 v1, 0x0
+    move-result v1
 
-    goto :goto_0
-.end method
+    or-int/2addr v0, v1
 
-.method static synthetic a(Lcom/estrongs/android/pop/utils/cm;)V
-    .locals 0
+    invoke-static {}, Lcom/estrongs/android/util/bk;->f()Z
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/utils/cm;->c()V
+    move-result v1
 
-    return-void
-.end method
+    if-eqz v1, :cond_2
 
-.method static synthetic a(Lcom/estrongs/android/pop/utils/cm;Lcom/estrongs/android/pop/utils/cs;)V
-    .locals 0
+    invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-    invoke-direct {p0, p1}, Lcom/estrongs/android/pop/utils/cm;->a(Lcom/estrongs/android/pop/utils/cs;)V
+    move-result-object v1
 
-    return-void
-.end method
-
-.method private declared-synchronized a(Lcom/estrongs/android/pop/utils/cs;)V
-    .locals 2
-
-    monitor-enter p0
-
-    :try_start_0
-    iget v0, p0, Lcom/estrongs/android/pop/utils/cm;->g:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Lcom/estrongs/android/pop/utils/cm;->g:I
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/utils/cm;->j:Lcom/estrongs/android/pop/utils/ck;
-
-    invoke-virtual {v0, p1}, Lcom/estrongs/android/pop/utils/ck;->a(Ljava/lang/Object;)V
-
-    iget v0, p0, Lcom/estrongs/android/pop/utils/cm;->g:I
-
-    if-ltz v0, :cond_0
-
-    iget v0, p0, Lcom/estrongs/android/pop/utils/cm;->g:I
-
-    iget v1, p0, Lcom/estrongs/android/pop/utils/cm;->f:I
-
-    if-lt v0, v1, :cond_1
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/estrongs/android/pop/utils/cm;->g:I
+    invoke-interface {p4, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_1
-    iget v0, p0, Lcom/estrongs/android/pop/utils/cm;->g:I
-
-    if-nez v0, :cond_2
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/utils/cm;->d:Ljava/lang/Runnable;
-
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :goto_1
+    return v0
 
     :cond_2
-    monitor-exit p0
+    invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-    return-void
+    move-result-object v1
 
-    :catchall_0
-    move-exception v0
+    invoke-static {v1}, Lcom/estrongs/fs/impl/media/b;->a(Ljava/lang/String;)Z
 
-    monitor-exit p0
+    move-result v1
 
-    throw v0
+    if-eqz v1, :cond_3
+
+    invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {p1, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/estrongs/fs/impl/media/b;->b(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {p2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    :cond_4
+    invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/estrongs/fs/impl/media/b;->c(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {p3, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
 .end method
 
-.method private b()Lcom/estrongs/android/pop/utils/cq;
-    .locals 2
+.method public static a(Ljava/lang/String;)V
+    .locals 6
 
-    monitor-enter p0
+    invoke-static {}, Lcom/estrongs/android/util/bk;->k()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    if-eqz p0, :cond_2
 
     :try_start_0
-    invoke-direct {p0}, Lcom/estrongs/android/pop/utils/cm;->a()Lcom/estrongs/android/pop/utils/cq;
+    invoke-static {}, Lcom/estrongs/android/pop/b;->b()Ljava/lang/String;
+
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->bU(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget v1, p0, Lcom/estrongs/android/pop/utils/cm;->h:I
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
 
-    add-int/lit8 v1, v1, -0x1
+    move-result-object v1
 
-    iput v1, p0, Lcom/estrongs/android/pop/utils/cm;->h:I
+    new-instance v2, Landroid/content/Intent;
 
-    :cond_0
-    monitor-exit p0
+    const-string v3, "android.intent.action.MEDIA_MOUNTED"
 
-    return-object v0
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    :catchall_0
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "file://"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    invoke-direct {v2, v3, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/pop/FexApplication;->sendBroadcast(Landroid/content/Intent;)V
+
+    goto :goto_0
+
+    :catch_0
     move-exception v0
 
-    monitor-exit p0
+    goto :goto_0
+
+    :cond_2
+    invoke-static {}, Lcom/estrongs/android/util/ap;->a()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+
+    move-result-object v2
+
+    new-instance v3, Landroid/content/Intent;
+
+    const-string v4, "android.intent.action.MEDIA_MOUNTED"
+
+    new-instance v5, Ljava/io/File;
+
+    invoke-direct {v5, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v5}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    invoke-direct {v3, v4, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    invoke-virtual {v2, v3}, Lcom/estrongs/android/pop/FexApplication;->sendBroadcast(Landroid/content/Intent;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    throw v0
+    goto :goto_1
 .end method
 
-.method static synthetic b(Lcom/estrongs/android/pop/utils/cm;)Z
-    .locals 1
+.method public static a()Z
+    .locals 8
 
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/utils/cm;->i:Z
+    const/4 v7, 0x1
 
-    return v0
-.end method
+    const/4 v3, 0x0
 
-.method static synthetic c(Lcom/estrongs/android/pop/utils/cm;)Lcom/estrongs/android/pop/utils/cq;
-    .locals 1
+    const/4 v6, 0x0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/utils/cm;->b()Lcom/estrongs/android/pop/utils/cq;
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
 
     move-result-object v0
 
-    return-object v0
-.end method
-
-.method private declared-synchronized c()V
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    invoke-direct {p0}, Lcom/estrongs/android/pop/utils/cm;->e()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
-.end method
-
-.method static synthetic d(Lcom/estrongs/android/pop/utils/cm;)Lcom/estrongs/android/pop/utils/cr;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/utils/cm;->k:Lcom/estrongs/android/pop/utils/cr;
-
-    return-object v0
-.end method
-
-.method private d()Lcom/estrongs/android/pop/utils/cs;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/utils/cm;->j:Lcom/estrongs/android/pop/utils/ck;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/utils/ck;->a()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/FexApplication;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/android/pop/utils/cs;
+    invoke-static {}, Landroid/provider/MediaStore;->getMediaScannerUri()Landroid/net/Uri;
 
-    if-nez v0, :cond_0
+    move-result-object v1
 
-    new-instance v0, Lcom/estrongs/android/pop/utils/cs;
+    new-array v2, v7, [Ljava/lang/String;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/utils/cs;-><init>(Lcom/estrongs/android/pop/utils/cm;)V
+    const-string v4, "volume"
 
-    :cond_0
-    return-object v0
-.end method
+    aput-object v4, v2, v6
 
-.method static synthetic e(Lcom/estrongs/android/pop/utils/cm;)Lcom/estrongs/android/pop/utils/ct;
-    .locals 1
+    move-object v4, v3
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/utils/cm;->f()Lcom/estrongs/android/pop/utils/ct;
+    move-object v5, v3
 
-    move-result-object v0
+    invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
-    return-object v0
-.end method
+    move-result-object v1
 
-.method private declared-synchronized e()V
-    .locals 2
+    if-eqz v1, :cond_1
 
-    monitor-enter p0
+    invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
+
+    move-result v0
+
+    if-ne v0, v7, :cond_0
+
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
+
+    const-string v0, "external"
+
+    invoke-interface {v1, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
 
     :goto_0
-    :try_start_0
-    iget v0, p0, Lcom/estrongs/android/pop/utils/cm;->g:I
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    iget v1, p0, Lcom/estrongs/android/pop/utils/cm;->f:I
+    :goto_1
+    return v0
 
-    if-ge v0, v1, :cond_0
+    :cond_0
+    move v0, v6
 
-    iget v0, p0, Lcom/estrongs/android/pop/utils/cm;->h:I
+    goto :goto_0
 
-    if-lez v0, :cond_0
+    :cond_1
+    move v0, v6
 
-    iget v0, p0, Lcom/estrongs/android/pop/utils/cm;->g:I
+    goto :goto_1
+.end method
 
-    add-int/lit8 v0, v0, 0x1
+.method public static a(Lcom/estrongs/android/util/TypedMap;)Z
+    .locals 7
 
-    iput v0, p0, Lcom/estrongs/android/pop/utils/cm;->g:I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    invoke-static {}, Lcom/estrongs/a/a;->getCurrentTask()Lcom/estrongs/a/a;
+
+    move-result-object v2
+
+    if-nez v2, :cond_1
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    if-eqz p0, :cond_5
+
+    const-string v3, "updateMediaStore"
+
+    invoke-virtual {p0, v3}, Lcom/estrongs/android/util/TypedMap;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_5
+
+    new-instance v3, Landroid/content/IntentFilter;
+
+    const-string v4, "android.intent.action.MEDIA_SCANNER_FINISHED"
+
+    invoke-direct {v3, v4}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+
+    const-string v4, "file"
+
+    invoke-virtual {v3, v4}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
+
+    new-array v4, v0, [Landroid/content/BroadcastReceiver;
+
+    new-instance v5, Lcom/estrongs/android/pop/utils/cn;
+
+    invoke-direct {v5, v2}, Lcom/estrongs/android/pop/utils/cn;-><init>(Lcom/estrongs/a/a;)V
+
+    aput-object v5, v4, v1
+
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+
+    move-result-object v5
+
+    aget-object v6, v4, v1
+
+    invoke-virtual {v5, v6, v3}, Lcom/estrongs/android/pop/FexApplication;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    invoke-static {}, Lcom/estrongs/android/pop/utils/cm;->a()Z
+
+    move-result v3
+
+    if-nez v3, :cond_2
+
+    const/4 v3, 0x0
+
+    invoke-static {v3}, Lcom/estrongs/android/pop/utils/cm;->a(Ljava/lang/String;)V
+
+    :cond_2
+    invoke-virtual {v2}, Lcom/estrongs/a/a;->taskStopped()Z
+
+    move-result v3
+
+    if-nez v3, :cond_3
+
+    invoke-virtual {v2}, Lcom/estrongs/a/a;->suspend()V
+
+    :cond_3
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+
+    move-result-object v3
+
+    aget-object v4, v4, v1
+
+    invoke-virtual {v3, v4}, Lcom/estrongs/android/pop/FexApplication;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+
+    invoke-virtual {v2}, Lcom/estrongs/a/a;->taskStopped()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    const-string v0, "updateMediaStore"
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/util/TypedMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_4
+    const-string v1, "updateMediaStore"
+
+    invoke-virtual {p0, v1}, Lcom/estrongs/android/util/TypedMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v1, "resultUpdatedMediaStore"
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v1, v2}, Lcom/estrongs/android/util/TypedMap;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/estrongs/android/util/TypedMap;
+
+    goto :goto_0
+
+    :cond_5
+    const-string v1, "resultUpdatedMediaStore"
+
+    invoke-virtual {p0, v1}, Lcom/estrongs/android/util/TypedMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const-string v1, "resultUpdatedMediaStore"
+
+    invoke-virtual {p0, v1}, Lcom/estrongs/android/util/TypedMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+.end method
+
+.method public static b()V
+    .locals 1
+
+    invoke-static {}, Lcom/estrongs/android/pop/b;->b()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/utils/cm;->a(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static b(Ljava/lang/String;)V
+    .locals 4
+
+    if-eqz p0, :cond_0
+
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+
+    move-result-object v0
+
+    new-instance v1, Landroid/content/Intent;
+
+    const-string v2, "android.intent.action.MEDIA_SCANNER_SCAN_FILE"
+
+    new-instance v3, Ljava/io/File;
+
+    invoke-direct {v3, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v3}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+
+    move-result-object v3
+
+    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/FexApplication;->sendBroadcast(Landroid/content/Intent;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public static c(Ljava/lang/String;)I
+    .locals 3
 
     const/4 v0, 0x0
 
-    :try_start_1
-    invoke-direct {p0}, Lcom/estrongs/android/pop/utils/cm;->d()Lcom/estrongs/android/pop/utils/cs;
+    :try_start_0
+    new-instance v1, Landroid/media/ExifInterface;
 
-    move-result-object v0
+    invoke-direct {v1, p0}, Landroid/media/ExifInterface;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/utils/cm;->b:Ljava/util/concurrent/ThreadPoolExecutor;
+    const-string v2, "Orientation"
 
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/ThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
-    :try_end_1
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-virtual {v1, v2}, Landroid/media/ExifInterface;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/String;)I
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v1
+
+    packed-switch v1, :pswitch_data_0
+
+    :goto_0
+    :pswitch_0
+    return v0
+
+    :pswitch_1
+    const/16 v0, 0xb4
+
+    goto :goto_0
+
+    :pswitch_2
+    const/16 v0, 0x5a
+
+    goto :goto_0
+
+    :pswitch_3
+    const/16 v0, 0x10e
 
     goto :goto_0
 
     :catch_0
     move-exception v1
 
-    :try_start_2
-    invoke-direct {p0, v0}, Lcom/estrongs/android/pop/utils/cm;->a(Lcom/estrongs/android/pop/utils/cs;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
-
-    :cond_0
-    monitor-exit p0
-
-    return-void
-.end method
-
-.method private f()Lcom/estrongs/android/pop/utils/ct;
-    .locals 2
-
-    const/4 v1, 0x0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/utils/cm;->c:Lcom/estrongs/android/pop/utils/ck;
-
-    if-nez v0, :cond_1
-
-    move-object v0, v1
-
-    :cond_0
-    :goto_0
-    return-object v0
-
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/utils/cm;->c:Lcom/estrongs/android/pop/utils/ck;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/utils/ck;->a()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/android/pop/utils/ct;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lcom/estrongs/android/pop/utils/ct;
-
-    invoke-direct {v0, p0, v1}, Lcom/estrongs/android/pop/utils/ct;-><init>(Lcom/estrongs/android/pop/utils/cm;Lcom/estrongs/android/pop/utils/cn;)V
-
-    goto :goto_0
-.end method
-
-
-# virtual methods
-.method public a(Lcom/estrongs/android/pop/utils/cq;)V
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/utils/cm;->e:Ljava/util/LinkedList;
-
-    invoke-virtual {v0}, Ljava/util/LinkedList;->getLast()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Queue;
-
-    invoke-interface {v0, p1}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
-
-    iget v0, p0, Lcom/estrongs/android/pop/utils/cm;->h:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Lcom/estrongs/android/pop/utils/cm;->h:I
-
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-direct {p0}, Lcom/estrongs/android/pop/utils/cm;->c()V
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_0
+        :pswitch_0
+        :pswitch_2
+        :pswitch_0
+        :pswitch_3
+    .end packed-switch
 .end method

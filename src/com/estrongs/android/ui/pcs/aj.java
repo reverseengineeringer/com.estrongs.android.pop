@@ -1,55 +1,23 @@
 package com.estrongs.android.ui.pcs;
 
-import android.content.Context;
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.utils.cc;
-import com.estrongs.android.util.am;
-import com.estrongs.fs.impl.j.b;
+import android.view.View;
+import android.widget.EditText;
 
-public class aj
+class aj
+  implements Runnable
 {
-  public static String a(Context paramContext, String paramString)
-  {
-    return a(paramContext, paramString, false, null, null);
-  }
+  aj(ai paramai) {}
   
-  public static String a(Context paramContext, String paramString1, boolean paramBoolean, String paramString2, String paramString3)
+  public void run()
   {
-    if (paramString1 != null)
+    z.m(a.a);
+    if ((z.h(a.a) != null) && (z.h(a.a).length() != 0))
     {
-      paramString1 = b.f("pcs", paramString1);
-      if (paramString1 != null)
-      {
-        if (paramBoolean)
-        {
-          if (paramString2 != null) {
-            ad.a(paramContext).a(paramString2, false);
-          }
-          a(paramContext, paramString1, paramString3);
-        }
-        return paramString1 + ":fake";
-      }
+      EditText localEditText = (EditText)z.d(a.a).findViewById(2131624477);
+      localEditText.setText(z.h(a.a));
+      localEditText.setVisibility(8);
     }
-    return null;
-  }
-  
-  private static void a(Context paramContext, String paramString1, String paramString2)
-  {
-    String str2 = am.a("pcs", paramString1, "fake", "/files");
-    String str1 = paramString1;
-    if (paramString2 != null)
-    {
-      str1 = paramString1;
-      if (paramString2.length() > 0) {
-        str1 = paramString2;
-      }
-    }
-    ad.a(paramContext).a(str2, str1);
-  }
-  
-  public static boolean a(Context paramContext)
-  {
-    return cc.a();
+    z.n(a.a);
   }
 }
 

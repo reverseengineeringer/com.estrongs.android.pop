@@ -2,40 +2,46 @@ package com.estrongs.android.ui.e;
 
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.b;
+import com.estrongs.android.j.c;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.pop.z;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.am;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.view.y;
 import java.util.List;
 
 class fs
   implements MenuItem.OnMenuItemClickListener
 {
-  fs(cp paramcp) {}
+  fs(cr paramcr) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = cp.b(a);
+    paramMenuItem = cr.a(a);
     if (paramMenuItem.size() == 0)
     {
-      ag.a(cp.a(a).getBaseContext(), 2131427774, 0);
+      ak.a(cr.b(a).getBaseContext(), 2131231551, 0);
       return true;
     }
-    String str = cp.c(a);
-    if ((am.aG(str)) || (am.aO(str)))
+    try
     {
-      cp.a(a).a(cp.a(a).getString(2131427349), paramMenuItem, true);
+      cr.b(a).at().a("Longpress_cut");
+      ba).n = false;
+      ba).o = true;
+      ba).x.clear();
+      ba).x.addAll(paramMenuItem);
+      ba).m = y.a(cr.b(a)).a(paramMenuItem, ba).n);
+      cr.b(a).aq();
+      cr.b(a).B();
+      cr.b(a).h();
+      ba).q = "paste_mode";
       return true;
     }
-    paramMenuItem = new ft(this, paramMenuItem);
-    int i = -1;
-    if (z.n) {
-      i = -2;
+    catch (Exception localException)
+    {
+      for (;;)
+      {
+        localException.printStackTrace();
+      }
     }
-    str = b.b();
-    cp.a(a).a(2130837859, cp.a(a).getString(2131427349), paramMenuItem, i, str);
-    return true;
   }
 }
 

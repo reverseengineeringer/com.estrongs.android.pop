@@ -1,44 +1,23 @@
 package com.estrongs.android.pop.app.imageviewer;
 
-import android.util.DisplayMetrics;
-import android.view.GestureDetector;
 import android.view.MotionEvent;
-import android.view.View;
-import android.view.View.OnTouchListener;
+import com.estrongs.android.pop.app.imageviewer.gallery.f;
 import com.estrongs.android.widget.RealViewSwitcher;
 
 class br
-  implements View.OnTouchListener
+  implements am
 {
-  boolean a = false;
-  am b = null;
+  br(bq parambq, MotionEvent paramMotionEvent) {}
   
-  br(ViewImage21 paramViewImage21, View.OnTouchListener paramOnTouchListener) {}
-  
-  public boolean onTouch(View paramView, MotionEvent paramMotionEvent)
+  public void a(int paramInt, float paramFloat)
   {
-    c.onTouch(paramView, paramMotionEvent);
-    if (paramMotionEvent.getPointerCount() > 1)
+    if (((paramInt == 0) && (paramFloat > 10.0F)) || ((paramInt == 1) && (paramFloat < -10.0F)))
     {
-      d.a(paramMotionEvent);
-      return true;
+      b.d.i.onTouchEvent(a);
+      b.a = true;
     }
-    if ((d.g == null) || (d.g.f() <= d.g.b()) || ((d.g.d() <= d.k.widthPixels) && (d.g.c() <= d.k.heightPixels)) || (a)) {
-      d.i.onTouchEvent(paramMotionEvent);
-    }
-    for (;;)
-    {
-      if ((a) && (paramMotionEvent.getAction() == 1))
-      {
-        d.i.g();
-        a = false;
-      }
-      d.f.onTouchEvent(paramMotionEvent);
-      return true;
-      if (b == null) {
-        b = new bs(this, paramMotionEvent);
-      }
-      d.g.a(b);
+    if (((b.d.c == 0) && (paramInt == 0)) || ((b.d.c == b.d.e.b() - 1) && (paramInt == 1))) {
+      b.a = false;
     }
   }
 }

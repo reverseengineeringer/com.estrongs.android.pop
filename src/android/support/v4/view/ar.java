@@ -1,12 +1,12 @@
 package android.support.v4.view;
 
-import android.view.VelocityTracker;
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.View;
 
-abstract interface ar
+public abstract interface ar
 {
-  public abstract float a(VelocityTracker paramVelocityTracker, int paramInt);
-  
-  public abstract float b(VelocityTracker paramVelocityTracker, int paramInt);
+  public abstract View onCreateView(View paramView, String paramString, Context paramContext, AttributeSet paramAttributeSet);
 }
 
 /* Location:

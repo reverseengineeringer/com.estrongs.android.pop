@@ -1,21 +1,20 @@
 package com.estrongs.android.ui.e;
 
-import android.content.Context;
-import android.content.Intent;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.ui.preference.RecyclePreference;
+import com.estrongs.android.pop.ai;
+import com.estrongs.android.pop.view.FileExplorerActivity;
 
 class bl
   implements MenuItem.OnMenuItemClickListener
 {
-  bl(w paramw) {}
+  bl(m paramm) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = new Intent(a.b, RecyclePreference.class);
-    a.b.startActivity(paramMenuItem);
-    return false;
+    m.a(a).d("clean://");
+    ai.b(m.a(a)).i();
+    return true;
   }
 }
 

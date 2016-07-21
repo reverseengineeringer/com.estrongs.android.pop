@@ -1,7 +1,7 @@
 package com.estrongs.a.b;
 
 import com.estrongs.android.pop.zeroconf.w;
-import com.estrongs.android.util.ak;
+import com.estrongs.android.util.an;
 
 final class j
   implements Runnable
@@ -12,7 +12,7 @@ final class j
     {
       if (d.g() != null)
       {
-        if (ak.b()) {
+        if (an.b()) {
           d.g().a();
         }
         d.g().b();

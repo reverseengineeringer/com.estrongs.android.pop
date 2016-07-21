@@ -16,14 +16,12 @@ import com.estrongs.a.a.e;
 import com.estrongs.a.a.f;
 import com.estrongs.a.a.i;
 import com.estrongs.a.a.j;
-import com.estrongs.a.a.k;
 import com.estrongs.android.pop.app.ShowDialogActivity;
-import com.estrongs.android.pop.esclasses.g;
 import com.estrongs.android.pop.spfs.dialog.FlickrPhotoPrivacyDialog;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.android.ui.dialog.ct;
-import com.estrongs.android.ui.dialog.dn;
-import com.estrongs.android.util.am;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.ui.dialog.cv;
+import com.estrongs.android.ui.dialog.dp;
+import com.estrongs.android.util.ap;
 import com.estrongs.fs.impl.adb.c;
 import java.text.MessageFormat;
 
@@ -43,30 +41,30 @@ class n
       if ((c == null) || (c.getFileType() == null) || (d == null))
       {
         g = 3;
-        b.setTaskResult(10000, new com.estrongs.a.q(MessageFormat.format(m.a(c).getString(2131427853), new Object[] { "" }), null));
+        b.setTaskResult(10000, new com.estrongs.a.q(MessageFormat.format(m.a(c).getString(2131231463), new Object[] { "" }), null));
         b.sendMessage(5, new Object[] { localObject1 });
         return;
       }
       if ((c.getFileType().a() ^ d.getFileType().a()))
       {
         g = 3;
-        b.setTaskResult(16, new com.estrongs.a.q((String)m.a(c).getText(2131427817), null));
+        b.setTaskResult(16, new com.estrongs.a.q((String)m.a(c).getText(2131231900), null));
         b.sendMessage(5, new Object[] { localObject1 });
         return;
       }
       localObject2 = m.a(c, b, (com.estrongs.a.a.h)localObject1);
-      localObject3 = am.bL(a);
+      localObject3 = ap.cc(a);
       if (b)
       {
-        ((cg)localObject2).setTitle(m.a(c).getString(2131428010));
-        ((cg)localObject2).setMessage(m.a(c).getString(2131428011) + "\n" + (String)localObject3);
+        ((ci)localObject2).setTitle(m.a(c).getString(2131231909));
+        ((ci)localObject2).setMessage(m.a(c).getString(2131231908) + "\n" + (String)localObject3);
       }
       for (;;)
       {
-        ((cg)localObject2).show();
+        ((ci)localObject2).show();
         return;
-        ((cg)localObject2).setTitle(m.a(c).getString(2131427401));
-        ((cg)localObject2).setMessage(m.a(c).getString(2131427894) + ", " + m.a(c).getString(2131427810) + "\n" + am.d((String)localObject3));
+        ((ci)localObject2).setTitle(m.a(c).getString(2131231721));
+        ((ci)localObject2).setMessage(m.a(c).getString(2131231763) + ", " + m.a(c).getString(2131231340) + "\n" + ap.d((String)localObject3));
       }
     }
     if (a.h == 3)
@@ -95,8 +93,8 @@ class n
     }
     if (a.h == 6)
     {
-      localObject1 = (k)a;
-      new com.estrongs.android.a.q(m.a(c), a, new p(this, (k)localObject1)).show();
+      localObject1 = (com.estrongs.a.a.k)a;
+      new com.estrongs.android.d.q(m.a(c), a, new p(this, (com.estrongs.a.a.k)localObject1)).show();
       return;
     }
     if (a.h == 7)
@@ -113,30 +111,30 @@ class n
     }
     if (a.h == 9)
     {
-      localObject2 = new ct(m.a(c));
-      ((ct)localObject2).a(2131427404);
+      localObject2 = new cv(m.a(c));
+      ((cv)localObject2).a(2131231718);
       localObject3 = (j)a;
-      View localView = g.a(m.a(c)).inflate(2130903101, null);
-      TextView localTextView = (TextView)localView.findViewById(2131361822);
+      View localView = com.estrongs.android.pop.esclasses.k.a(m.a(c)).inflate(2130903189, null);
+      TextView localTextView = (TextView)localView.findViewById(2131624200);
       Activity localActivity = m.a(c);
       if (d == null) {}
       for (localObject1 = "";; localObject1 = d)
       {
-        localTextView.setText(localActivity.getString(2131428532, new Object[] { localObject1, c }));
-        ((ImageView)localView.findViewById(2131362092)).setImageResource(2130838013);
-        ((ct)localObject2).a(localView);
+        localTextView.setText(localActivity.getString(2131231793, new Object[] { localObject1, c }));
+        ((ImageView)localView.findViewById(2131624051)).setImageResource(2130838384);
+        ((cv)localObject2).a(localView);
         localObject1 = new s(this);
-        ((ct)localObject2).b(m.a(c).getString(2131427370), (DialogInterface.OnClickListener)localObject1);
-        ((ct)localObject2).c(m.a(c).getString(2131427340), new u(this));
-        ((ct)localObject2).b(false);
-        ((ct)localObject2).c();
+        ((cv)localObject2).b(m.a(c).getString(2131230720), (DialogInterface.OnClickListener)localObject1);
+        ((cv)localObject2).c(m.a(c).getString(2131231265), new u(this));
+        ((cv)localObject2).b(false);
+        ((cv)localObject2).c();
         return;
       }
     }
     if (a.h == 10)
     {
       localObject2 = (b)a;
-      localObject1 = m.a(c).getString(2131428729, new Object[] { a, am.D(b) });
+      localObject1 = m.a(c).getString(2131230906, new Object[] { a, ap.F(b) });
       localObject2 = c.a(m.a(c), c);
       if (localObject2 == null) {
         break label1137;
@@ -146,14 +144,14 @@ class n
     label1137:
     for (;;)
     {
-      localObject2 = new ct(m.a(c));
-      ((ct)localObject2).a(2131427700);
-      ((ct)localObject2).b((CharSequence)localObject1);
-      ((ct)localObject2).b(false);
-      ((ct)localObject2).b(m.a(c).getString(2131428268), new v(this));
-      ((ct)localObject2).c(m.a(c).getString(2131427340), new w(this));
-      ((ct)localObject2).b(false);
-      ((ct)localObject2).c();
+      localObject2 = new cv(m.a(c));
+      ((cv)localObject2).a(2131230969);
+      ((cv)localObject2).b((CharSequence)localObject1);
+      ((cv)localObject2).b(false);
+      ((cv)localObject2).b(m.a(c).getString(2131231272), new v(this));
+      ((cv)localObject2).c(m.a(c).getString(2131231265), new w(this));
+      ((cv)localObject2).b(false);
+      ((cv)localObject2).c();
       return;
       a.g = 3;
       a.f = true;

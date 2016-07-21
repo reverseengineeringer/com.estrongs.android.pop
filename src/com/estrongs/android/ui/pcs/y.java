@@ -1,23 +1,65 @@
 package com.estrongs.android.ui.pcs;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.content.Context;
+import android.content.res.Configuration;
+import android.view.View;
+import android.view.Window;
+import android.widget.FrameLayout;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.ui.view.ax;
 
-class y
-  implements DialogInterface.OnClickListener
+public class y
+  extends ci
+  implements ax
 {
-  y(w paramw) {}
+  protected boolean a = false;
+  protected q b;
+  View c;
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public y(Context paramContext)
   {
-    paramDialogInterface = a.c();
-    if (paramDialogInterface.equals(w.d(a))) {
-      w.e(a);
-    }
-    while ((!paramDialogInterface.equals(w.f(a))) || (!w.g(a))) {
-      return;
-    }
-    w.e(a);
+    super(paramContext);
+    setCanceledOnTouchOutside(false);
+  }
+  
+  public void a(Configuration paramConfiguration) {}
+  
+  public void a(q paramq)
+  {
+    b = paramq;
+  }
+  
+  public View c()
+  {
+    return c;
+  }
+  
+  public boolean d()
+  {
+    return a;
+  }
+  
+  public void dismiss()
+  {
+    super.dismiss();
+  }
+  
+  public boolean e()
+  {
+    return false;
+  }
+  
+  public void requestInputMethod()
+  {
+    getWindow().setSoftInputMode(5);
+  }
+  
+  public void setContentView(View paramView)
+  {
+    mContentContainer.removeAllViews();
+    super.setContentView(paramView);
+    c = paramView;
+    c.requestFocus();
   }
 }
 

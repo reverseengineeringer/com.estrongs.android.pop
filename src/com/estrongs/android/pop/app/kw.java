@@ -1,24 +1,21 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
-import android.net.Uri;
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.util.am;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 
 class kw
-  implements DialogInterface.OnClickListener
+  implements AdapterView.OnItemClickListener
 {
-  kw(ShowDialogActivity paramShowDialogActivity, String paramString) {}
+  kw(RecommItemDetailAcitivity paramRecommItemDetailAcitivity) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    Intent localIntent = new Intent(b, FileExplorerActivity.class);
-    localIntent.addFlags(603979776);
-    localIntent.setData(Uri.parse(Uri.encode(am.bk(a), "/")));
-    b.startActivity(localIntent);
-    paramDialogInterface.dismiss();
+    paramAdapterView = new Intent(a, RecommItemImageViewer.class);
+    paramAdapterView.putExtra("position", RecommItemDetailAcitivity.b(a));
+    paramAdapterView.putExtra("index", paramInt);
+    a.startActivity(paramAdapterView);
   }
 }
 

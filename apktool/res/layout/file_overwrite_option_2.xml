@@ -1,34 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:orientation="vertical" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <TextView android:textSize="@dimen/dp_16" android:textColor="@color/popupbox_content_text" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/file_exists_overwrite_prompt_message" />
-        <TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:stretchColumns="1">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/dp_15" android:paddingTop="@dimen/dp_20" android:paddingRight="@dimen/dp_15" android:paddingBottom="@dimen/dp_20" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/dp_15" android:textColor="@color/c_99000000" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/file_exists_overwrite_prompt_message" />
+        <View android:background="@color/c_d9d9d9" android:layout_width="fill_parent" android:layout_height="@dimen/dp_0.5" android:layout_marginTop="@dimen/dp_15" />
+        <TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_15" android:stretchColumns="1">
             <TableRow>
-                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:gravity="right" android:id="@id/source_title" android:text="@string/source_file_title" android:singleLine="true" />
-                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/source_path" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:singleLine="false" android:layout_weight="1.0" />
+                <TextView android:textSize="@dimen/dp_13" android:textColor="@color/c_99000000" android:gravity="left" android:id="@id/source_title" android:text="@string/source_file_title" android:singleLine="true" />
+                <TextView android:textSize="@dimen/dp_13" android:textColor="@color/c_99000000" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/source_path" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:singleLine="false" android:layout_weight="1.0" />
             </TableRow>
             <TableRow>
-                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:gravity="right" android:id="@id/source_size_title" android:text="@string/property_size" android:singleLine="true" />
-                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:id="@id/source_size" android:singleLine="true" />
+                <TextView android:textSize="@dimen/dp_13" android:textColor="@color/c_99000000" android:gravity="left" android:id="@id/source_size_title" android:text="@string/property_size" android:singleLine="true" />
+                <TextView android:textSize="@dimen/dp_13" android:textColor="@color/c_99000000" android:id="@id/source_size" android:singleLine="true" />
             </TableRow>
             <TableRow>
-                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:gravity="right" android:id="@id/source_modified_title" android:text="@string/property_modified" android:singleLine="true" />
-                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:id="@id/source_last_modified" android:singleLine="true" />
+                <TextView android:textSize="@dimen/dp_13" android:textColor="@color/c_99000000" android:gravity="left" android:id="@id/source_modified_title" android:text="@string/property_modified" android:singleLine="true" />
+                <TextView android:textSize="@dimen/dp_13" android:textColor="@color/c_99000000" android:id="@id/source_last_modified" android:singleLine="true" />
             </TableRow>
-            <TableRow android:layout_marginTop="10.0dip">
-                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:gravity="right" android:id="@id/dest_title" android:text="@string/dest_file_title" android:singleLine="true" />
-                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/dest_path" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:singleLine="false" android:layout_weight="1.0" />
-            </TableRow>
-            <TableRow>
-                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:gravity="right" android:id="@id/dest_size_title" android:text="@string/property_size" android:singleLine="true" />
-                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:id="@id/dest_size" android:singleLine="true" />
+            <TableRow android:layout_marginTop="@dimen/dp_20">
+                <TextView android:textSize="@dimen/dp_13" android:textColor="@color/c_99000000" android:gravity="left" android:id="@id/dest_title" android:text="@string/dest_file_title" android:singleLine="true" />
+                <TextView android:textSize="@dimen/dp_13" android:textColor="@color/c_99000000" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/dest_path" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:singleLine="false" android:layout_weight="1.0" />
             </TableRow>
             <TableRow>
-                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:gravity="right" android:id="@id/dest_modified_title" android:text="@string/property_modified" android:singleLine="true" />
-                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:id="@id/dest_last_modified" android:singleLine="true" />
+                <TextView android:textSize="@dimen/dp_13" android:textColor="@color/c_99000000" android:gravity="left" android:id="@id/dest_size_title" android:text="@string/property_size" android:singleLine="true" />
+                <TextView android:textSize="@dimen/dp_13" android:textColor="@color/c_99000000" android:id="@id/dest_size" android:singleLine="true" />
+            </TableRow>
+            <TableRow>
+                <TextView android:textSize="@dimen/dp_13" android:textColor="@color/c_99000000" android:gravity="left" android:id="@id/dest_modified_title" android:text="@string/property_modified" android:singleLine="true" />
+                <TextView android:textSize="@dimen/dp_13" android:textColor="@color/c_99000000" android:id="@id/dest_last_modified" android:singleLine="true" />
             </TableRow>
         </TableLayout>
-        <CheckBox android:textColor="@color/popupbox_content_text" android:id="@id/cbxApplyToAll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:button="@drawable/popupbox_checkbox_drawable" android:text="@string/action_apply_to_all" />
+        <CheckBox android:textSize="@dimen/dp_13" android:textColor="@color/c_66000000" android:id="@id/cbxApplyToAll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_20" android:button="@drawable/popupbox_checkbox_drawable" android:text="@string/action_apply_to_all" />
     </LinearLayout>
 </ScrollView>

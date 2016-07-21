@@ -1,6 +1,6 @@
 package com.estrongs.fs.impl.usb.driver.scsi;
 
-import android.util.Log;
+import com.estrongs.android.util.l;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
@@ -18,7 +18,7 @@ public class a
     a locala = new a();
     b = paramByteBuffer.getInt();
     if (b != 1396855637) {
-      Log.e(a, "unexpected dCSWSignature");
+      l.e(a, "unexpected dCSWSignature");
     }
     c = paramByteBuffer.getInt();
     d = paramByteBuffer.getInt();

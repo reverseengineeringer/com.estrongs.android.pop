@@ -1,5 +1,5 @@
 .class public Lcom/estrongs/android/pop/app/diskusage/e;
-.super Lcom/estrongs/android/widget/ag;
+.super Lcom/estrongs/android/widget/af;
 
 
 # static fields
@@ -120,7 +120,7 @@
 .method public constructor <init>(Landroid/content/ContextWrapper;)V
     .locals 2
 
-    invoke-direct {p0}, Lcom/estrongs/android/widget/ag;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/android/widget/af;-><init>()V
 
     const/4 v0, 0x0
 
@@ -160,7 +160,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-super {p0}, Lcom/estrongs/android/widget/ag;->c()[Ljava/io/File;
+    invoke-super {p0}, Lcom/estrongs/android/widget/af;->c()[Ljava/io/File;
 
     move-result-object v0
 
@@ -171,15 +171,15 @@
     return-void
 
     :cond_1
-    sget-object v0, Lcom/estrongs/android/util/q;->a:Lcom/estrongs/android/util/t;
+    sget-object v0, Lcom/estrongs/android/util/s;->a:Lcom/estrongs/android/util/v;
 
-    invoke-virtual {v0, p2}, Lcom/estrongs/android/util/t;->a(Z)V
+    invoke-virtual {v0, p2}, Lcom/estrongs/android/util/v;->a(Z)V
 
-    invoke-super {p0}, Lcom/estrongs/android/widget/ag;->c()[Ljava/io/File;
+    invoke-super {p0}, Lcom/estrongs/android/widget/af;->c()[Ljava/io/File;
 
     move-result-object v0
 
-    sget-object v1, Lcom/estrongs/android/util/q;->a:Lcom/estrongs/android/util/t;
+    sget-object v1, Lcom/estrongs/android/util/s;->a:Lcom/estrongs/android/util/v;
 
     invoke-static {v0, v1}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
 
@@ -194,21 +194,21 @@
 
     if-eqz v0, :cond_3
 
-    invoke-super {p0}, Lcom/estrongs/android/widget/ag;->c()[Ljava/io/File;
+    invoke-super {p0}, Lcom/estrongs/android/widget/af;->c()[Ljava/io/File;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/estrongs/android/util/q;->b:Lcom/estrongs/android/util/u;
+    sget-object v0, Lcom/estrongs/android/util/s;->b:Lcom/estrongs/android/util/w;
 
-    invoke-virtual {v0, p2}, Lcom/estrongs/android/util/u;->a(Z)V
+    invoke-virtual {v0, p2}, Lcom/estrongs/android/util/w;->a(Z)V
 
-    invoke-super {p0}, Lcom/estrongs/android/widget/ag;->c()[Ljava/io/File;
+    invoke-super {p0}, Lcom/estrongs/android/widget/af;->c()[Ljava/io/File;
 
     move-result-object v0
 
-    sget-object v1, Lcom/estrongs/android/util/q;->b:Lcom/estrongs/android/util/u;
+    sget-object v1, Lcom/estrongs/android/util/s;->b:Lcom/estrongs/android/util/w;
 
     invoke-static {v0, v1}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
 
@@ -281,7 +281,7 @@
     goto :goto_2
 
     :cond_4
-    invoke-super {p0, v2}, Lcom/estrongs/android/widget/ag;->a([Ljava/io/File;)Z
+    invoke-super {p0, v2}, Lcom/estrongs/android/widget/af;->a([Ljava/io/File;)Z
 
     goto :goto_0
 
@@ -377,7 +377,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f020095
+    const v1, 0x7f020190
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -386,7 +386,7 @@
     goto :goto_0
 
     :cond_4
-    invoke-static {v0}, Lcom/estrongs/android/util/bc;->b(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/estrongs/android/util/bg;->b(Ljava/lang/String;)I
 
     move-result v0
 
@@ -394,7 +394,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/d/f;->a(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0}, Lcom/estrongs/android/h/f;->a(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -849,7 +849,7 @@
     goto :goto_2
 
     :cond_7
-    invoke-super {p0, p1}, Lcom/estrongs/android/widget/ag;->a([Ljava/io/File;)Z
+    invoke-super {p0, p1}, Lcom/estrongs/android/widget/af;->a([Ljava/io/File;)Z
 
     const/4 v0, 0x1
 

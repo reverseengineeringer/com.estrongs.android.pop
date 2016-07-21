@@ -1,30 +1,20 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.pop.z;
-import com.estrongs.android.view.a.b;
+import com.estrongs.a.a;
+import com.estrongs.a.a.p;
+import com.estrongs.android.pop.ai;
+import com.estrongs.android.pop.view.FileExplorerActivity;
 
 class dq
-  implements b
+  implements p
 {
-  dq(cp paramcp) {}
+  dq(dp paramdp) {}
   
-  public boolean a(co paramco)
+  public void a(a parama, int paramInt1, int paramInt2)
   {
-    if (z.ad) {}
-    do
-    {
-      return false;
-      if ((e) && (F == 1)) {
-        return true;
-      }
-      if ((f) && (F == 1) && (H)) {
-        return true;
-      }
-      if ((m) && (F == 1)) {
-        return true;
-      }
-    } while (((!i) && (!j) && (!k)) || (F != 1));
-    return true;
+    if (ai.b(cr.b(a.a)).F()) {
+      cr.b(a.a).runOnUiThread(new dr(this));
+    }
   }
 }
 

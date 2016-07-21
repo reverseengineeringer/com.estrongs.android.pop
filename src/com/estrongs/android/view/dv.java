@@ -1,22 +1,10 @@
 package com.estrongs.android.view;
 
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.guesture.ESGesturePanel;
-
-class dv
-  implements Runnable
+public abstract interface dv
 {
-  dv(dt paramdt) {}
+  public abstract void a(String paramString, boolean paramBoolean);
   
-  public void run()
-  {
-    FileExplorerActivity localFileExplorerActivity = FileExplorerActivity.J();
-    if (localFileExplorerActivity != null)
-    {
-      E.b = false;
-      E.postInvalidate();
-    }
-  }
+  public abstract void a(String paramString, boolean paramBoolean1, boolean paramBoolean2);
 }
 
 /* Location:

@@ -1,16 +1,8 @@
 package com.estrongs.android.ui.pcs;
 
-import com.baidu.sapi2.SapiWebView.OnFinishCallback;
-
-class q
-  implements SapiWebView.OnFinishCallback
+public abstract interface q
 {
-  q(o paramo) {}
-  
-  public void onFinish()
-  {
-    o.h(a);
-  }
+  public abstract void a(boolean paramBoolean, String paramString1, String paramString2);
 }
 
 /* Location:

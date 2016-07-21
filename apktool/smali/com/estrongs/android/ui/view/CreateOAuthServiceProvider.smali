@@ -1,5 +1,5 @@
 .class public Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;
-.super Lcom/estrongs/android/pop/esclasses/ESActivity;
+.super Lcom/estrongs/android/pop/esclasses/ESResourceActivity;
 
 
 # static fields
@@ -7,39 +7,39 @@
 
 .field public static b:I
 
-.field public static c:I
-
 .field public static d:I
 
 .field public static e:I
 
-.field private static f:Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;
+.field public static f:I
+
+.field private static g:Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;
 
 
 # instance fields
-.field private g:Ljava/lang/String;
+.field private h:Ljava/lang/String;
 
-.field private h:Z
+.field private i:Z
 
-.field private i:Landroid/webkit/WebView;
+.field private j:Landroid/webkit/WebView;
 
-.field private j:Lcom/estrongs/android/ui/view/ab;
+.field private k:Lcom/estrongs/android/ui/view/ab;
 
-.field private k:Landroid/widget/ProgressBar;
+.field private l:Landroid/widget/ProgressBar;
 
-.field private l:Landroid/widget/TextView;
+.field private m:Landroid/widget/TextView;
 
-.field private m:Landroid/view/View;
-
-.field private n:Ljava/lang/String;
+.field private n:Landroid/view/View;
 
 .field private o:Ljava/lang/String;
 
 .field private p:Ljava/lang/String;
 
-.field private q:Landroid/view/View$OnClickListener;
+.field private q:Ljava/lang/String;
 
-.field private r:Landroid/os/Handler;
+.field private r:Landroid/view/View$OnClickListener;
+
+.field private s:Landroid/os/Handler;
 
 
 # direct methods
@@ -48,7 +48,7 @@
 
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->f:Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;
+    sput-object v0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->g:Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;
 
     const/4 v0, 0x1
 
@@ -60,15 +60,15 @@
 
     const/4 v0, 0x3
 
-    sput v0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->c:I
+    sput v0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->d:I
 
     const/4 v0, 0x4
 
-    sput v0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->d:I
+    sput v0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->e:I
 
     const/4 v0, 0x5
 
-    sput v0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->e:I
+    sput v0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->f:I
 
     return-void
 .end method
@@ -78,43 +78,43 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;-><init>()V
 
-    iput-object v1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->g:Ljava/lang/String;
+    iput-object v1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->h:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->h:Z
+    iput-boolean v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->i:Z
 
-    iput-object v1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->i:Landroid/webkit/WebView;
+    iput-object v1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->j:Landroid/webkit/WebView;
 
     new-instance v0, Lcom/estrongs/android/ui/view/ab;
 
     invoke-direct {v0, p0, v1}, Lcom/estrongs/android/ui/view/ab;-><init>(Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;Lcom/estrongs/android/ui/view/x;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->j:Lcom/estrongs/android/ui/view/ab;
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->k:Lcom/estrongs/android/ui/view/ab;
 
-    iput-object v1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->k:Landroid/widget/ProgressBar;
+    iput-object v1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->l:Landroid/widget/ProgressBar;
 
-    iput-object v1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->l:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->m:Landroid/widget/TextView;
 
-    iput-object v1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->m:Landroid/view/View;
+    iput-object v1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->n:Landroid/view/View;
 
-    iput-object v1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->n:Ljava/lang/String;
+    iput-object v1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->o:Ljava/lang/String;
 
-    iput-object v1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->p:Ljava/lang/String;
+    iput-object v1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->q:Ljava/lang/String;
 
     new-instance v0, Lcom/estrongs/android/ui/view/y;
 
     invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/y;-><init>(Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->q:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->r:Landroid/view/View$OnClickListener;
 
     new-instance v0, Lcom/estrongs/android/ui/view/z;
 
     invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/z;-><init>(Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->r:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->s:Landroid/os/Handler;
 
     return-void
 .end method
@@ -122,7 +122,7 @@
 .method static synthetic a(Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;)Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->g:Ljava/lang/String;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->h:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -130,7 +130,7 @@
 .method static synthetic a(Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->p:Ljava/lang/String;
+    iput-object p1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->q:Ljava/lang/String;
 
     return-object p1
 .end method
@@ -250,7 +250,7 @@
     :try_start_0
     const-string v3, "1.0a"
 
-    iget-object v4, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->p:Ljava/lang/String;
+    iget-object v4, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->q:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -258,7 +258,7 @@
 
     if-eqz v3, :cond_3
 
-    iget-object v3, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->g:Ljava/lang/String;
+    iget-object v3, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->h:Ljava/lang/String;
 
     const-string v4, "Flickr"
 
@@ -268,15 +268,15 @@
 
     if-eqz v3, :cond_2
 
-    iget-object v2, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->g:Ljava/lang/String;
+    iget-object v2, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->h:Ljava/lang/String;
 
     invoke-static {v2}, Lcom/estrongs/android/pop/spfs/SPFileSystem;->getAccessTokenUrl(Ljava/lang/String;)Ljava/net/URL;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->g:Ljava/lang/String;
+    iget-object v3, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->h:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->o:Ljava/lang/String;
+    iget-object v4, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->p:Ljava/lang/String;
 
     invoke-static {v3, v0, v4, v1}, Lcom/estrongs/android/pop/spfs/SPFileSystem;->getAccessTokenParameters(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
 
@@ -359,7 +359,7 @@
 
     check-cast v3, Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->g:Ljava/lang/String;
+    iget-object v4, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->h:Ljava/lang/String;
 
     invoke-static {v4, v3, v2, v0, v1}, Lcom/estrongs/android/pop/spfs/SPFileSystem;->saveUsernameAndToken(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -367,17 +367,17 @@
     :goto_2
     if-eqz v2, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->g:Ljava/lang/String;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->h:Ljava/lang/String;
 
     const-string v1, "fake"
 
     const-string v3, "/"
 
-    invoke-static {v0, v2, v1, v3}, Lcom/estrongs/android/util/am;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v1, v3}, Lcom/estrongs/android/util/ap;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iget-boolean v1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->h:Z
+    iget-boolean v1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->i:Z
 
     if-eqz v1, :cond_4
 
@@ -409,7 +409,7 @@
     goto :goto_1
 
     :cond_3
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->g:Ljava/lang/String;
+    iget-object v1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->h:Ljava/lang/String;
 
     invoke-static {v1, v0}, Lcom/estrongs/android/pop/spfs/SPFileSystem;->getUserLoginName(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -450,7 +450,7 @@
 .method static synthetic b()Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;
     .locals 1
 
-    sget-object v0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->f:Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;
+    sget-object v0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->g:Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;
 
     return-object v0
 .end method
@@ -458,7 +458,7 @@
 .method static synthetic b(Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;)Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->p:Ljava/lang/String;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->q:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -466,7 +466,7 @@
 .method static synthetic b(Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->o:Ljava/lang/String;
+    iput-object p1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->p:Ljava/lang/String;
 
     return-object p1
 .end method
@@ -474,7 +474,7 @@
 .method static synthetic c(Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;)Landroid/os/Handler;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->r:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->s:Landroid/os/Handler;
 
     return-object v0
 .end method
@@ -482,7 +482,7 @@
 .method static synthetic c(Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->n:Ljava/lang/String;
+    iput-object p1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->o:Ljava/lang/String;
 
     return-object p1
 .end method
@@ -540,7 +540,7 @@
 .method static synthetic e(Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;)Landroid/webkit/WebView;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->i:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->j:Landroid/webkit/WebView;
 
     return-object v0
 .end method
@@ -548,7 +548,7 @@
 .method static synthetic f(Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;)Landroid/widget/ProgressBar;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->k:Landroid/widget/ProgressBar;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->l:Landroid/widget/ProgressBar;
 
     return-object v0
 .end method
@@ -556,7 +556,7 @@
 .method static synthetic g(Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;)Landroid/widget/TextView;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->l:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->m:Landroid/widget/TextView;
 
     return-object v0
 .end method
@@ -566,15 +566,15 @@
 .method public a()V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->r:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->s:Landroid/os/Handler;
 
-    sget v1, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->c:I
+    sget v1, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->d:I
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->r:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->s:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
@@ -588,15 +588,15 @@
 
     const/4 v3, 0x0
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;->onCreate(Landroid/os/Bundle;)V
 
     invoke-virtual {p0, v1}, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->requestWindowFeature(I)Z
 
-    const v0, 0x7f0300a1
+    const v0, 0x7f030138
 
-    invoke-super {p0, v0}, Lcom/estrongs/android/pop/esclasses/ESActivity;->setContentView(I)V
+    invoke-super {p0, v0}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;->setContentView(I)V
 
-    const v0, 0x7f0a02ef
+    const v0, 0x7f0e0540
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->findViewById(I)Landroid/view/View;
 
@@ -604,9 +604,9 @@
 
     check-cast v0, Landroid/webkit/WebView;
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->i:Landroid/webkit/WebView;
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->j:Landroid/webkit/WebView;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->i:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->j:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
@@ -614,13 +614,13 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->i:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->j:Landroid/webkit/WebView;
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->j:Lcom/estrongs/android/ui/view/ab;
+    iget-object v1, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->k:Lcom/estrongs/android/ui/view/ab;
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->i:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->j:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
@@ -646,7 +646,7 @@
 
     invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setDefaultTextEncodingName(Ljava/lang/String;)V
 
-    const v0, 0x7f0a02f1
+    const v0, 0x7f0e0542
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->findViewById(I)Landroid/view/View;
 
@@ -654,9 +654,9 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->l:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->m:Landroid/widget/TextView;
 
-    const v0, 0x7f0a02f0
+    const v0, 0x7f0e0541
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->findViewById(I)Landroid/view/View;
 
@@ -664,15 +664,15 @@
 
     check-cast v0, Landroid/widget/ProgressBar;
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->k:Landroid/widget/ProgressBar;
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->l:Landroid/widget/ProgressBar;
 
-    const v0, 0x7f0a02ee
+    const v0, 0x7f0e053f
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->m:Landroid/view/View;
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->n:Landroid/view/View;
 
     invoke-virtual {p0}, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->getIntent()Landroid/content/Intent;
 
@@ -700,7 +700,7 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->g:Ljava/lang/String;
+    iput-object v2, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->h:Ljava/lang/String;
 
     const-string v2, "editServer"
 
@@ -708,7 +708,7 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->h:Z
+    iput-boolean v0, p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->i:Z
 
     new-instance v0, Lcom/estrongs/android/ui/view/x;
 
@@ -718,7 +718,7 @@
 
     invoke-virtual {v1}, Landroid/webkit/CookieManager;->removeAllCookie()V
 
-    sput-object p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->f:Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;
+    sput-object p0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->g:Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;
 
     goto :goto_0
 .end method
@@ -728,9 +728,9 @@
 
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->f:Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;
+    sput-object v0, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->g:Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;
 
-    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onDestroy()V
+    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;->onDestroy()V
 
     return-void
 .end method

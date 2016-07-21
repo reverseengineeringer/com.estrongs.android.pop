@@ -1,23 +1,20 @@
 package com.estrongs.android.pop.app;
 
-import android.content.Intent;
-import android.net.Uri;
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.pop.view.FileExplorerActivity;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.ui.dialog.er;
 
 class ew
-  implements View.OnClickListener
+  implements MenuItem.OnMenuItemClickListener
 {
   ew(PopAudioPlayer paramPopAudioPlayer) {}
   
-  public void onClick(View paramView)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramView = new Intent(a, FileExplorerActivity.class);
-    paramView.setData(Uri.parse("music://"));
-    paramView.setFlags(603979776);
-    a.startActivity(paramView);
-    a.finish();
+    paramMenuItem = new er(a, a.getString(2131231049), "");
+    paramMenuItem.a(new ex(this));
+    paramMenuItem.show();
+    return false;
   }
 }
 

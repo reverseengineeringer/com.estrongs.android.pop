@@ -8,7 +8,7 @@ import android.os.Parcelable.Creator;
 public class Fragment$SavedState
   implements Parcelable
 {
-  public static final Parcelable.Creator<SavedState> CREATOR = new f();
+  public static final Parcelable.Creator<SavedState> CREATOR = new ac();
   final Bundle a;
   
   Fragment$SavedState(Parcel paramParcel, ClassLoader paramClassLoader)

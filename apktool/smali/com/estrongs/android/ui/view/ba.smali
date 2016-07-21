@@ -1,71 +1,262 @@
-.class Lcom/estrongs/android/ui/view/ba;
-.super Landroid/os/Handler;
+.class public Lcom/estrongs/android/ui/view/ba;
+.super Ljava/lang/Object;
+
+
+# static fields
+.field private static final a:Ljava/lang/String;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/view/IndicatorView;
+.field private b:Lcom/estrongs/android/ui/view/bc;
+
+.field private c:Landroid/view/LayoutInflater;
+
+.field private d:Landroid/support/v4/view/ViewPager;
+
+.field private e:Landroid/widget/TextView;
+
+.field private f:Landroid/widget/LinearLayout;
+
+.field private g:Landroid/view/View;
+
+.field private h:Lcom/estrongs/android/ui/view/ay;
+
+.field private i:Landroid/content/Context;
+
+.field private j:I
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/view/IndicatorView;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/view/ba;->a:Lcom/estrongs/android/ui/view/IndicatorView;
+    const-class v0, Lcom/estrongs/android/ui/view/ba;
 
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/estrongs/android/ui/view/ba;->a:Ljava/lang/String;
 
     return-void
 .end method
 
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-# virtual methods
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 9
+    const/4 v0, 0x0
 
-    const/high16 v8, 0x3f800000    # 1.0f
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p1, Landroid/os/Message;->what:I
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ba;->b:Lcom/estrongs/android/ui/view/bc;
 
-    packed-switch v0, :pswitch_data_0
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ba;->c:Landroid/view/LayoutInflater;
 
-    :cond_0
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ba;->d:Landroid/support/v4/view/ViewPager;
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ba;->e:Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ba;->f:Landroid/widget/LinearLayout;
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ba;->g:Landroid/view/View;
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ba;->h:Lcom/estrongs/android/ui/view/ay;
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ba;->i:Landroid/content/Context;
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/estrongs/android/ui/view/ba;->j:I
+
+    iput-object p1, p0, Lcom/estrongs/android/ui/view/ba;->i:Landroid/content/Context;
+
+    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ba;->c:Landroid/view/LayoutInflater;
+
+    new-instance v0, Lcom/estrongs/android/ui/view/bc;
+
+    new-instance v1, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v1, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    invoke-direct {v0, p0, v1}, Lcom/estrongs/android/ui/view/bc;-><init>(Lcom/estrongs/android/ui/view/ba;Ljava/lang/ref/WeakReference;)V
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ba;->b:Lcom/estrongs/android/ui/view/bc;
+
+    invoke-direct {p0}, Lcom/estrongs/android/ui/view/ba;->d()V
+
+    new-instance v0, Lcom/estrongs/android/ui/view/ay;
+
+    invoke-direct {v0}, Lcom/estrongs/android/ui/view/ay;-><init>()V
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ba;->h:Lcom/estrongs/android/ui/view/ay;
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ba;->d:Landroid/support/v4/view/ViewPager;
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/view/ba;->h:Lcom/estrongs/android/ui/view/ay;
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->setAdapter(Landroid/support/v4/view/bw;)V
+
+    return-void
+.end method
+
+.method static synthetic a(Lcom/estrongs/android/ui/view/ba;I)I
+    .locals 0
+
+    iput p1, p0, Lcom/estrongs/android/ui/view/ba;->j:I
+
+    return p1
+.end method
+
+.method static synthetic a(Lcom/estrongs/android/ui/view/ba;)Lcom/estrongs/android/ui/view/ay;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ba;->h:Lcom/estrongs/android/ui/view/ay;
+
+    return-object v0
+.end method
+
+.method private a(Landroid/view/View;Z)V
+    .locals 2
+
+    if-nez p1, :cond_0
+
     :goto_0
-    :pswitch_0
     return-void
 
-    :pswitch_1
+    :cond_0
+    if-eqz p2, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ba;->i:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f0202ee
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ba;->i:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f0202ed
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_0
+.end method
+
+.method static synthetic a(Lcom/estrongs/android/ui/view/ba;Landroid/view/View;Z)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/estrongs/android/ui/view/ba;->a(Landroid/view/View;Z)V
+
+    return-void
+.end method
+
+.method static synthetic b(Lcom/estrongs/android/ui/view/ba;)Lcom/estrongs/android/ui/view/bc;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ba;->b:Lcom/estrongs/android/ui/view/bc;
+
+    return-object v0
+.end method
+
+.method static synthetic c(Lcom/estrongs/android/ui/view/ba;)I
+    .locals 1
+
+    iget v0, p0, Lcom/estrongs/android/ui/view/ba;->j:I
+
+    return v0
+.end method
+
+.method static synthetic d(Lcom/estrongs/android/ui/view/ba;)Landroid/widget/LinearLayout;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ba;->f:Landroid/widget/LinearLayout;
+
+    return-object v0
+.end method
+
+.method private d()V
+    .locals 3
+
     :try_start_0
-    iget v0, p1, Landroid/os/Message;->arg1:I
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ba;->c:Landroid/view/LayoutInflater;
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    const v1, 0x7f0301a0
 
-    move-result-wide v2
+    const/4 v2, 0x0
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/ba;->a:Lcom/estrongs/android/ui/view/IndicatorView;
+    invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    invoke-static {v1}, Lcom/estrongs/android/ui/view/IndicatorView;->b(Lcom/estrongs/android/ui/view/IndicatorView;)J
+    move-result-object v1
 
-    move-result-wide v4
+    if-eqz v1, :cond_0
 
-    sub-long/2addr v2, v4
+    const v0, 0x7f0e068a
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/ba;->a:Lcom/estrongs/android/ui/view/IndicatorView;
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    invoke-static {v1}, Lcom/estrongs/android/ui/view/IndicatorView;->c(Lcom/estrongs/android/ui/view/IndicatorView;)J
+    move-result-object v0
 
-    move-result-wide v4
+    check-cast v0, Landroid/support/v4/view/ViewPager;
 
-    cmp-long v1, v2, v4
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ba;->d:Landroid/support/v4/view/ViewPager;
 
-    if-ltz v1, :cond_1
+    const v0, 0x7f0e068c
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/ba;->a:Lcom/estrongs/android/ui/view/IndicatorView;
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/view/IndicatorView;->b(I)V
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ba;->e:Landroid/widget/TextView;
+
+    const v0, 0x7f0e068b
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ba;->f:Landroid/widget/LinearLayout;
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ba;->d:Landroid/support/v4/view/ViewPager;
+
+    new-instance v2, Lcom/estrongs/android/ui/view/bb;
+
+    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/view/bb;-><init>(Lcom/estrongs/android/ui/view/ba;)V
+
+    invoke-virtual {v0, v2}, Landroid/support/v4/view/ViewPager;->setOnPageChangeListener(Landroid/support/v4/view/el;)V
+
+    :cond_0
+    iput-object v1, p0, Lcom/estrongs/android/ui/view/ba;->g:Landroid/view/View;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    :goto_0
+    return-void
 
     :catch_0
     move-exception v0
@@ -73,276 +264,56 @@
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
+.end method
 
-    :cond_1
-    long-to-float v1, v2
+.method static synthetic e(Lcom/estrongs/android/ui/view/ba;)Landroid/support/v4/view/ViewPager;
+    .locals 1
 
-    mul-float/2addr v1, v8
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ba;->d:Landroid/support/v4/view/ViewPager;
 
-    :try_start_1
-    iget-object v2, p0, Lcom/estrongs/android/ui/view/ba;->a:Lcom/estrongs/android/ui/view/IndicatorView;
+    return-object v0
+.end method
 
-    invoke-static {v2}, Lcom/estrongs/android/ui/view/IndicatorView;->c(Lcom/estrongs/android/ui/view/IndicatorView;)J
 
-    move-result-wide v2
+# virtual methods
+.method public a()Landroid/view/View;
+    .locals 1
 
-    long-to-float v2, v2
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ba;->g:Landroid/view/View;
 
-    div-float/2addr v1, v2
+    return-object v0
+.end method
 
-    iget-object v2, p0, Lcom/estrongs/android/ui/view/ba;->a:Lcom/estrongs/android/ui/view/IndicatorView;
+.method public b()V
+    .locals 2
 
-    invoke-static {v2}, Lcom/estrongs/android/ui/view/IndicatorView;->d(Lcom/estrongs/android/ui/view/IndicatorView;)Ljava/util/List;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ba;->b:Lcom/estrongs/android/ui/view/bc;
 
-    move-result-object v2
+    const/4 v1, 0x1
 
-    invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/bc;->removeMessages(I)V
 
-    move-result-object v0
+    return-void
+.end method
 
-    check-cast v0, Lcom/estrongs/android/ui/view/be;
+.method public c()V
+    .locals 2
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/be;->a(F)V
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ba;->h:Lcom/estrongs/android/ui/view/ay;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ba;->a:Lcom/estrongs/android/ui/view/IndicatorView;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/ay;->a()V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/IndicatorView;->invalidate()V
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ba;->d:Landroid/support/v4/view/ViewPager;
 
-    invoke-static {p1}, Landroid/os/Message;->obtain(Landroid/os/Message;)Landroid/os/Message;
+    iget-object v1, p0, Lcom/estrongs/android/ui/view/ba;->h:Lcom/estrongs/android/ui/view/ay;
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->setAdapter(Landroid/support/v4/view/bw;)V
 
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/view/ba;->sendMessage(Landroid/os/Message;)Z
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ba;->d:Landroid/support/v4/view/ViewPager;
 
-    goto :goto_0
+    const/4 v1, 0x1
 
-    :pswitch_2
-    :try_start_2
-    iget v0, p1, Landroid/os/Message;->arg1:I
+    invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->setCurrentItem(I)V
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/ba;->a:Lcom/estrongs/android/ui/view/IndicatorView;
-
-    invoke-static {v1}, Lcom/estrongs/android/ui/view/IndicatorView;->b(Lcom/estrongs/android/ui/view/IndicatorView;)J
-
-    move-result-wide v4
-
-    sub-long/2addr v2, v4
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/ba;->a:Lcom/estrongs/android/ui/view/IndicatorView;
-
-    invoke-static {v1}, Lcom/estrongs/android/ui/view/IndicatorView;->c(Lcom/estrongs/android/ui/view/IndicatorView;)J
-
-    move-result-wide v4
-
-    cmp-long v1, v2, v4
-
-    if-ltz v1, :cond_2
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/ba;->a:Lcom/estrongs/android/ui/view/IndicatorView;
-
-    invoke-static {v1}, Lcom/estrongs/android/ui/view/IndicatorView;->d(Lcom/estrongs/android/ui/view/IndicatorView;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/android/ui/view/be;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/be;->a(F)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ba;->a:Lcom/estrongs/android/ui/view/IndicatorView;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/IndicatorView;->invalidate()V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
-
-    goto :goto_0
-
-    :catch_1
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-
-    goto :goto_0
-
-    :cond_2
-    long-to-float v1, v2
-
-    mul-float/2addr v1, v8
-
-    :try_start_3
-    iget-object v2, p0, Lcom/estrongs/android/ui/view/ba;->a:Lcom/estrongs/android/ui/view/IndicatorView;
-
-    invoke-static {v2}, Lcom/estrongs/android/ui/view/IndicatorView;->c(Lcom/estrongs/android/ui/view/IndicatorView;)J
-
-    move-result-wide v2
-
-    long-to-float v2, v2
-
-    div-float/2addr v1, v2
-
-    iget-object v2, p0, Lcom/estrongs/android/ui/view/ba;->a:Lcom/estrongs/android/ui/view/IndicatorView;
-
-    invoke-static {v2}, Lcom/estrongs/android/ui/view/IndicatorView;->d(Lcom/estrongs/android/ui/view/IndicatorView;)Ljava/util/List;
-
-    move-result-object v2
-
-    invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/android/ui/view/be;
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/be;->a(F)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ba;->a:Lcom/estrongs/android/ui/view/IndicatorView;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/IndicatorView;->invalidate()V
-
-    invoke-static {p1}, Landroid/os/Message;->obtain(Landroid/os/Message;)Landroid/os/Message;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/view/ba;->sendMessage(Landroid/os/Message;)Z
-    :try_end_3
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
-
-    goto/16 :goto_0
-
-    :pswitch_3
-    :try_start_4
-    iget v1, p1, Landroid/os/Message;->arg1:I
-
-    iget v2, p1, Landroid/os/Message;->arg2:I
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v4
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ba;->a:Lcom/estrongs/android/ui/view/IndicatorView;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/IndicatorView;->b(Lcom/estrongs/android/ui/view/IndicatorView;)J
-
-    move-result-wide v6
-
-    sub-long/2addr v4, v6
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ba;->a:Lcom/estrongs/android/ui/view/IndicatorView;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/IndicatorView;->c(Lcom/estrongs/android/ui/view/IndicatorView;)J
-
-    move-result-wide v6
-
-    cmp-long v0, v4, v6
-
-    if-ltz v0, :cond_3
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ba;->a:Lcom/estrongs/android/ui/view/IndicatorView;
-
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/view/IndicatorView;->b(I)V
-
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ba;->a:Lcom/estrongs/android/ui/view/IndicatorView;
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/IndicatorView;->c(I)V
-    :try_end_4
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
-
-    goto/16 :goto_0
-
-    :catch_2
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-
-    goto/16 :goto_0
-
-    :cond_3
-    long-to-float v0, v4
-
-    mul-float/2addr v0, v8
-
-    :try_start_5
-    iget-object v3, p0, Lcom/estrongs/android/ui/view/ba;->a:Lcom/estrongs/android/ui/view/IndicatorView;
-
-    invoke-static {v3}, Lcom/estrongs/android/ui/view/IndicatorView;->c(Lcom/estrongs/android/ui/view/IndicatorView;)J
-
-    move-result-wide v4
-
-    long-to-float v3, v4
-
-    div-float v3, v0, v3
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ba;->a:Lcom/estrongs/android/ui/view/IndicatorView;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/IndicatorView;->d(Lcom/estrongs/android/ui/view/IndicatorView;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/android/ui/view/be;
-
-    sub-float v1, v8, v3
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/be;->a(F)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ba;->a:Lcom/estrongs/android/ui/view/IndicatorView;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/IndicatorView;->d(Lcom/estrongs/android/ui/view/IndicatorView;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/android/ui/view/be;
-
-    invoke-virtual {v0, v3}, Lcom/estrongs/android/ui/view/be;->a(F)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ba;->a:Lcom/estrongs/android/ui/view/IndicatorView;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/IndicatorView;->invalidate()V
-
-    invoke-static {p1}, Landroid/os/Message;->obtain(Landroid/os/Message;)Landroid/os/Message;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/view/ba;->sendMessage(Landroid/os/Message;)Z
-    :try_end_5
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
-
-    goto/16 :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-    .end packed-switch
+    return-void
 .end method

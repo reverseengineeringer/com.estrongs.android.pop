@@ -53,7 +53,7 @@
 
     iput-object p2, p0, Lcom/estrongs/android/pop/app/imageviewer/gallery/c;->c:Lcom/estrongs/fs/d;
 
-    invoke-static {p3}, Lcom/estrongs/android/util/am;->ba(Ljava/lang/String;)Z
+    invoke-static {p3}, Lcom/estrongs/android/util/ap;->bl(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -171,7 +171,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->ba(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bl(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -203,7 +203,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -342,7 +342,7 @@
 
     const-string v3, "got exception closing ParcelFileDescriptor "
 
-    invoke-static {v1, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v1, v3, v0}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_0
 
@@ -354,7 +354,7 @@
 
     const-string v4, "got exception decoding bitmap "
 
-    invoke-static {v1, v4, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v1, v4, v0}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -372,7 +372,7 @@
 
     const-string v3, "got exception closing ParcelFileDescriptor "
 
-    invoke-static {v1, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v1, v3, v0}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_0
 
@@ -394,7 +394,7 @@
 
     const-string v3, "got exception closing ParcelFileDescriptor "
 
-    invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v2, v3, v1}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_1
 
@@ -446,13 +446,13 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/estrongs/android/util/am;->J(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/estrongs/android/util/ap;->L(Ljava/lang/String;)Z
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/gallery/c;->d()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/estrongs/android/util/am;->aV(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/estrongs/android/util/ap;->bg(Ljava/lang/String;)Z
 
     iget-object v3, p0, Lcom/estrongs/android/pop/app/imageviewer/gallery/c;->e:Landroid/graphics/BitmapFactory$Options;
 
@@ -588,7 +588,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->E(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->G(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -640,7 +640,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v2, Lcom/estrongs/android/pop/a;->d:Ljava/lang/String;
+    sget-object v2, Lcom/estrongs/android/pop/a;->f:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -733,15 +733,15 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/gallery/c;->c:Lcom/estrongs/fs/d;
 
-    new-instance v3, Lcom/estrongs/fs/o;
+    new-instance v3, Lcom/estrongs/fs/z;
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/imageviewer/gallery/c;->d()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-direct {v3, v4}, Lcom/estrongs/fs/o;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v4}, Lcom/estrongs/fs/z;-><init>(Ljava/lang/String;)V
 
-    new-instance v4, Lcom/estrongs/fs/o;
+    new-instance v4, Lcom/estrongs/fs/z;
 
     invoke-virtual {v2}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
@@ -751,7 +751,7 @@
 
     move-result-object v5
 
-    invoke-direct {v4, v5}, Lcom/estrongs/fs/o;-><init>(Ljava/lang/String;)V
+    invoke-direct {v4, v5}, Lcom/estrongs/fs/z;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v2}, Ljava/io/File;->getName()Ljava/lang/String;
 

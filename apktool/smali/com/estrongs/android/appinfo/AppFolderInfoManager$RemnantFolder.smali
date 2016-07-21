@@ -30,9 +30,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/estrongs/android/appinfo/s;
+    new-instance v0, Lcom/estrongs/android/appinfo/t;
 
-    invoke-direct {v0}, Lcom/estrongs/android/appinfo/s;-><init>()V
+    invoke-direct {v0}, Lcom/estrongs/android/appinfo/t;-><init>()V
 
     sput-object v0, Lcom/estrongs/android/appinfo/AppFolderInfoManager$RemnantFolder;->CREATOR:Landroid/os/Parcelable$Creator;
 

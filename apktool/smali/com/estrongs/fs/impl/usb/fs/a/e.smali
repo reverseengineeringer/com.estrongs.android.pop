@@ -149,7 +149,7 @@
 
     new-instance v1, Lcom/estrongs/fs/impl/usb/fs/a/a;
 
-    invoke-virtual {p2}, Lcom/estrongs/fs/impl/usb/fs/a/c;->e()J
+    invoke-virtual {p2}, Lcom/estrongs/fs/impl/usb/fs/a/c;->f()J
 
     move-result-wide v2
 
@@ -551,7 +551,7 @@
 
     const-string v4, "volume label in non root dir!"
 
-    invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v4}, Lcom/estrongs/android/util/l;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_4
     invoke-virtual {v2}, Lcom/estrongs/fs/impl/usb/fs/a/f;->o()Ljava/lang/String;
@@ -566,7 +566,7 @@
 
     iget-object v2, p0, Lcom/estrongs/fs/impl/usb/fs/a/e;->f:Lcom/estrongs/fs/impl/usb/fs/a/c;
 
-    invoke-virtual {v2}, Lcom/estrongs/fs/impl/usb/fs/a/c;->l()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/estrongs/fs/impl/usb/fs/a/c;->m()Ljava/lang/String;
 
     move-result-object v2
 
@@ -599,7 +599,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1002,7 +1002,7 @@
 
     iget-object v0, p0, Lcom/estrongs/fs/impl/usb/fs/a/e;->f:Lcom/estrongs/fs/impl/usb/fs/a/c;
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/impl/usb/fs/a/c;->l()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/fs/impl/usb/fs/a/c;->m()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1339,7 +1339,7 @@
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v0}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     invoke-virtual {v2}, Lcom/estrongs/fs/impl/usb/fs/a/h;->i()Lcom/estrongs/fs/impl/usb/fs/a/f;
@@ -1599,7 +1599,7 @@
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v0}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     invoke-virtual {v2}, Lcom/estrongs/fs/impl/usb/fs/a/h;->i()Lcom/estrongs/fs/impl/usb/fs/a/f;
@@ -2071,7 +2071,7 @@
     :cond_4
     iget-object v0, p0, Lcom/estrongs/fs/impl/usb/fs/a/e;->f:Lcom/estrongs/fs/impl/usb/fs/a/c;
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/impl/usb/fs/a/c;->i()I
+    invoke-virtual {v0}, Lcom/estrongs/fs/impl/usb/fs/a/c;->j()I
 
     move-result v0
 

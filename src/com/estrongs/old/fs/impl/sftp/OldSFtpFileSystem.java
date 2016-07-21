@@ -1,8 +1,8 @@
 package com.estrongs.old.fs.impl.sftp;
 
 import com.estrongs.android.util.TypedMap;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bk;
 import com.estrongs.fs.FileSystemException;
 import com.estrongs.fs.h;
 import com.estrongs.fs.i;
@@ -174,7 +174,7 @@ public class OldSFtpFileSystem
     //   301: getfield 149	com/estrongs/old/fs/impl/sftp/d:b	Lcom/jcraft/jsch/ChannelSftp;
     //   304: sipush 30000
     //   307: invokevirtual 151	com/jcraft/jsch/ChannelSftp:b	(I)V
-    //   310: getstatic 156	com/estrongs/android/util/f:a	[Ljava/lang/String;
+    //   310: getstatic 156	com/estrongs/android/util/e:a	[Ljava/lang/String;
     //   313: iconst_0
     //   314: aaload
     //   315: aload 6
@@ -266,7 +266,7 @@ public class OldSFtpFileSystem
     //   498: astore_1
     //   499: aload 7
     //   501: astore 8
-    //   503: getstatic 156	com/estrongs/android/util/f:a	[Ljava/lang/String;
+    //   503: getstatic 156	com/estrongs/android/util/e:a	[Ljava/lang/String;
     //   506: iconst_0
     //   507: aaload
     //   508: aload 6
@@ -509,10 +509,10 @@ public class OldSFtpFileSystem
   {
     try
     {
-      String str1 = am.y(paramString);
-      String str3 = am.A(paramString);
-      String str2 = am.a(paramString);
-      Object localObject2 = am.w(paramString);
+      String str1 = ap.A(paramString);
+      String str3 = ap.C(paramString);
+      String str2 = ap.a(paramString);
+      Object localObject2 = ap.y(paramString);
       Object localObject1 = localObject2;
       if (localObject2 == null) {
         localObject1 = "22";
@@ -521,7 +521,7 @@ public class OldSFtpFileSystem
       if (localObject2 == null) {
         return null;
       }
-      paramString = am.i(paramString);
+      paramString = ap.j(paramString);
       paramString = new b(b.a(paramString, null, paramLong), (d)localObject2, str1, str2, (String)localObject1);
       return paramString;
     }
@@ -551,13 +551,13 @@ public class OldSFtpFileSystem
     {
       try
       {
-        str4 = am.y(paramString);
+        str4 = ap.A(paramString);
         localObject1 = locald;
-        localObject2 = am.A(paramString);
+        localObject2 = ap.C(paramString);
         localObject1 = locald;
-        str5 = am.a(paramString);
+        str5 = ap.a(paramString);
         localObject1 = locald;
-        str2 = am.w(paramString);
+        str2 = ap.y(paramString);
         if (str2 != null) {
           break label802;
         }
@@ -599,21 +599,21 @@ public class OldSFtpFileSystem
       }
       try
       {
-        str6 = am.i(paramString);
+        str6 = ap.j(paramString);
         localObject1 = locald;
         b.b(str6);
         localObject1 = locald;
         localObject3 = b.d(".");
         localObject2 = "UTF-8";
         localObject1 = locald;
-        localObject4 = (TypedMap)a.get(am.h(paramString));
+        localObject4 = (TypedMap)a.get(ap.i(paramString));
         if (localObject4 != null)
         {
           localObject1 = locald;
           localObject2 = ((TypedMap)localObject4).getString("encode", "UTF-8");
         }
         localObject1 = locald;
-        if (com.estrongs.android.util.f.a[0].equals(localObject2))
+        if (com.estrongs.android.util.e.a[0].equals(localObject2))
         {
           localObject1 = locald;
           if (!"UTF-8".equals(b.q()))
@@ -784,12 +784,12 @@ public class OldSFtpFileSystem
   
   public void a(TypedMap paramTypedMap)
   {
-    Object localObject = (TypedMap)a.get(am.h(paramTypedMap.getString("server")));
+    Object localObject = (TypedMap)a.get(ap.i(paramTypedMap.getString("server")));
     if ((localObject != null) && (((TypedMap)localObject).getString("detectedEncoding") != null)) {
       paramTypedMap.put("detectedEncoding", ((TypedMap)localObject).getString("detectedEncoding"));
     }
     localObject = paramTypedMap.getString("server");
-    a.put(am.h((String)localObject), paramTypedMap);
+    a.put(ap.i((String)localObject), paramTypedMap);
     String str1 = paramTypedMap.getString("privatekey");
     paramTypedMap = paramTypedMap.getString("privatekey_passphrases");
     if (str1 != null) {}
@@ -817,7 +817,7 @@ public class OldSFtpFileSystem
         b.b(str2);
       }
       f.put(localObject, str1);
-      if (bd.a(paramTypedMap))
+      if (bk.a(paramTypedMap))
       {
         b.a(str1);
         return;
@@ -844,16 +844,16 @@ public class OldSFtpFileSystem
     //   0: aconst_null
     //   1: astore 6
     //   3: aload_1
-    //   4: invokestatic 283	com/estrongs/android/util/am:y	(Ljava/lang/String;)Ljava/lang/String;
+    //   4: invokestatic 283	com/estrongs/android/util/ap:A	(Ljava/lang/String;)Ljava/lang/String;
     //   7: astore 7
     //   9: aload_1
-    //   10: invokestatic 286	com/estrongs/android/util/am:A	(Ljava/lang/String;)Ljava/lang/String;
+    //   10: invokestatic 286	com/estrongs/android/util/ap:C	(Ljava/lang/String;)Ljava/lang/String;
     //   13: astore 4
     //   15: aload_1
-    //   16: invokestatic 288	com/estrongs/android/util/am:a	(Ljava/lang/String;)Ljava/lang/String;
+    //   16: invokestatic 288	com/estrongs/android/util/ap:a	(Ljava/lang/String;)Ljava/lang/String;
     //   19: astore 8
     //   21: aload_1
-    //   22: invokestatic 291	com/estrongs/android/util/am:w	(Ljava/lang/String;)Ljava/lang/String;
+    //   22: invokestatic 291	com/estrongs/android/util/ap:y	(Ljava/lang/String;)Ljava/lang/String;
     //   25: astore_3
     //   26: aload_3
     //   27: astore 5
@@ -876,7 +876,7 @@ public class OldSFtpFileSystem
     //   62: aload 4
     //   64: astore_3
     //   65: aload_1
-    //   66: invokestatic 295	com/estrongs/android/util/am:i	(Ljava/lang/String;)Ljava/lang/String;
+    //   66: invokestatic 295	com/estrongs/android/util/ap:j	(Ljava/lang/String;)Ljava/lang/String;
     //   69: astore_1
     //   70: aload 4
     //   72: astore_3
@@ -953,16 +953,16 @@ public class OldSFtpFileSystem
   {
     // Byte code:
     //   0: aload_1
-    //   1: invokestatic 283	com/estrongs/android/util/am:y	(Ljava/lang/String;)Ljava/lang/String;
+    //   1: invokestatic 283	com/estrongs/android/util/ap:A	(Ljava/lang/String;)Ljava/lang/String;
     //   4: astore 6
     //   6: aload_1
-    //   7: invokestatic 286	com/estrongs/android/util/am:A	(Ljava/lang/String;)Ljava/lang/String;
+    //   7: invokestatic 286	com/estrongs/android/util/ap:C	(Ljava/lang/String;)Ljava/lang/String;
     //   10: astore_2
     //   11: aload_1
-    //   12: invokestatic 288	com/estrongs/android/util/am:a	(Ljava/lang/String;)Ljava/lang/String;
+    //   12: invokestatic 288	com/estrongs/android/util/ap:a	(Ljava/lang/String;)Ljava/lang/String;
     //   15: astore 7
     //   17: aload_1
-    //   18: invokestatic 291	com/estrongs/android/util/am:w	(Ljava/lang/String;)Ljava/lang/String;
+    //   18: invokestatic 291	com/estrongs/android/util/ap:y	(Ljava/lang/String;)Ljava/lang/String;
     //   21: astore 4
     //   23: aload 4
     //   25: ifnonnull +158 -> 183
@@ -984,7 +984,7 @@ public class OldSFtpFileSystem
     //   54: aload_3
     //   55: astore_2
     //   56: aload_1
-    //   57: invokestatic 295	com/estrongs/android/util/am:i	(Ljava/lang/String;)Ljava/lang/String;
+    //   57: invokestatic 295	com/estrongs/android/util/ap:j	(Ljava/lang/String;)Ljava/lang/String;
     //   60: astore 5
     //   62: aload_3
     //   63: astore_2
@@ -1097,16 +1097,16 @@ public class OldSFtpFileSystem
     //   0: aconst_null
     //   1: astore 6
     //   3: aload_1
-    //   4: invokestatic 283	com/estrongs/android/util/am:y	(Ljava/lang/String;)Ljava/lang/String;
+    //   4: invokestatic 283	com/estrongs/android/util/ap:A	(Ljava/lang/String;)Ljava/lang/String;
     //   7: astore 7
     //   9: aload_1
-    //   10: invokestatic 286	com/estrongs/android/util/am:A	(Ljava/lang/String;)Ljava/lang/String;
+    //   10: invokestatic 286	com/estrongs/android/util/ap:C	(Ljava/lang/String;)Ljava/lang/String;
     //   13: astore 4
     //   15: aload_1
-    //   16: invokestatic 288	com/estrongs/android/util/am:a	(Ljava/lang/String;)Ljava/lang/String;
+    //   16: invokestatic 288	com/estrongs/android/util/ap:a	(Ljava/lang/String;)Ljava/lang/String;
     //   19: astore 8
     //   21: aload_1
-    //   22: invokestatic 291	com/estrongs/android/util/am:w	(Ljava/lang/String;)Ljava/lang/String;
+    //   22: invokestatic 291	com/estrongs/android/util/ap:y	(Ljava/lang/String;)Ljava/lang/String;
     //   25: astore_3
     //   26: aload_3
     //   27: astore 5
@@ -1130,12 +1130,12 @@ public class OldSFtpFileSystem
     //   63: aload 4
     //   65: astore_3
     //   66: aload_1
-    //   67: invokestatic 295	com/estrongs/android/util/am:i	(Ljava/lang/String;)Ljava/lang/String;
+    //   67: invokestatic 295	com/estrongs/android/util/ap:j	(Ljava/lang/String;)Ljava/lang/String;
     //   70: astore_1
     //   71: aload 4
     //   73: astore_3
     //   74: aload_2
-    //   75: invokestatic 295	com/estrongs/android/util/am:i	(Ljava/lang/String;)Ljava/lang/String;
+    //   75: invokestatic 295	com/estrongs/android/util/ap:j	(Ljava/lang/String;)Ljava/lang/String;
     //   78: astore_2
     //   79: aload 4
     //   81: astore_3
@@ -1225,16 +1225,16 @@ public class OldSFtpFileSystem
     //   2: invokestatic 215	com/estrongs/a/a:getCurrentTask	()Lcom/estrongs/a/a;
     //   5: astore 7
     //   7: aload_1
-    //   8: invokestatic 283	com/estrongs/android/util/am:y	(Ljava/lang/String;)Ljava/lang/String;
+    //   8: invokestatic 283	com/estrongs/android/util/ap:A	(Ljava/lang/String;)Ljava/lang/String;
     //   11: astore 8
     //   13: aload_1
-    //   14: invokestatic 286	com/estrongs/android/util/am:A	(Ljava/lang/String;)Ljava/lang/String;
+    //   14: invokestatic 286	com/estrongs/android/util/ap:C	(Ljava/lang/String;)Ljava/lang/String;
     //   17: astore 4
     //   19: aload_1
-    //   20: invokestatic 288	com/estrongs/android/util/am:a	(Ljava/lang/String;)Ljava/lang/String;
+    //   20: invokestatic 288	com/estrongs/android/util/ap:a	(Ljava/lang/String;)Ljava/lang/String;
     //   23: astore 9
     //   25: aload_1
-    //   26: invokestatic 291	com/estrongs/android/util/am:w	(Ljava/lang/String;)Ljava/lang/String;
+    //   26: invokestatic 291	com/estrongs/android/util/ap:y	(Ljava/lang/String;)Ljava/lang/String;
     //   29: astore 6
     //   31: aload 6
     //   33: ifnonnull +291 -> 324
@@ -1267,7 +1267,7 @@ public class OldSFtpFileSystem
     //   90: aload 5
     //   92: astore 4
     //   94: aload_1
-    //   95: invokestatic 295	com/estrongs/android/util/am:i	(Ljava/lang/String;)Ljava/lang/String;
+    //   95: invokestatic 295	com/estrongs/android/util/ap:j	(Ljava/lang/String;)Ljava/lang/String;
     //   98: astore 10
     //   100: aload 5
     //   102: astore 4
@@ -1339,7 +1339,7 @@ public class OldSFtpFileSystem
     //   235: aload 5
     //   237: astore 4
     //   239: aload_1
-    //   240: invokestatic 429	com/estrongs/android/util/am:bk	(Ljava/lang/String;)Ljava/lang/String;
+    //   240: invokestatic 429	com/estrongs/android/util/ap:bB	(Ljava/lang/String;)Ljava/lang/String;
     //   243: invokestatic 431	com/estrongs/old/fs/impl/sftp/OldSFtpFileSystem:n	(Ljava/lang/String;)V
     //   246: iload_2
     //   247: istore_3
@@ -1434,16 +1434,16 @@ public class OldSFtpFileSystem
     //   0: aconst_null
     //   1: astore 5
     //   3: aload_1
-    //   4: invokestatic 283	com/estrongs/android/util/am:y	(Ljava/lang/String;)Ljava/lang/String;
+    //   4: invokestatic 283	com/estrongs/android/util/ap:A	(Ljava/lang/String;)Ljava/lang/String;
     //   7: astore 6
     //   9: aload_1
-    //   10: invokestatic 286	com/estrongs/android/util/am:A	(Ljava/lang/String;)Ljava/lang/String;
+    //   10: invokestatic 286	com/estrongs/android/util/ap:C	(Ljava/lang/String;)Ljava/lang/String;
     //   13: astore_3
     //   14: aload_1
-    //   15: invokestatic 288	com/estrongs/android/util/am:a	(Ljava/lang/String;)Ljava/lang/String;
+    //   15: invokestatic 288	com/estrongs/android/util/ap:a	(Ljava/lang/String;)Ljava/lang/String;
     //   18: astore 7
     //   20: aload_1
-    //   21: invokestatic 291	com/estrongs/android/util/am:w	(Ljava/lang/String;)Ljava/lang/String;
+    //   21: invokestatic 291	com/estrongs/android/util/ap:y	(Ljava/lang/String;)Ljava/lang/String;
     //   24: astore_2
     //   25: aload_2
     //   26: astore 4
@@ -1467,7 +1467,7 @@ public class OldSFtpFileSystem
     //   58: aload_3
     //   59: astore_2
     //   60: aload_1
-    //   61: invokestatic 295	com/estrongs/android/util/am:i	(Ljava/lang/String;)Ljava/lang/String;
+    //   61: invokestatic 295	com/estrongs/android/util/ap:j	(Ljava/lang/String;)Ljava/lang/String;
     //   64: astore_1
     //   65: aload_3
     //   66: astore_2
@@ -1559,18 +1559,18 @@ public class OldSFtpFileSystem
     //   3: ldc 93
     //   5: astore 5
     //   7: aload_1
-    //   8: invokestatic 283	com/estrongs/android/util/am:y	(Ljava/lang/String;)Ljava/lang/String;
+    //   8: invokestatic 283	com/estrongs/android/util/ap:A	(Ljava/lang/String;)Ljava/lang/String;
     //   11: astore 10
     //   13: aload_1
-    //   14: invokestatic 286	com/estrongs/android/util/am:A	(Ljava/lang/String;)Ljava/lang/String;
+    //   14: invokestatic 286	com/estrongs/android/util/ap:C	(Ljava/lang/String;)Ljava/lang/String;
     //   17: astore 8
     //   19: aload_1
-    //   20: invokestatic 288	com/estrongs/android/util/am:a	(Ljava/lang/String;)Ljava/lang/String;
+    //   20: invokestatic 288	com/estrongs/android/util/ap:a	(Ljava/lang/String;)Ljava/lang/String;
     //   23: astore 9
     //   25: aload 5
     //   27: astore 7
     //   29: aload_1
-    //   30: invokestatic 291	com/estrongs/android/util/am:w	(Ljava/lang/String;)Ljava/lang/String;
+    //   30: invokestatic 291	com/estrongs/android/util/ap:y	(Ljava/lang/String;)Ljava/lang/String;
     //   33: astore 6
     //   35: aload 6
     //   37: astore 5
@@ -1596,7 +1596,7 @@ public class OldSFtpFileSystem
     //   78: aload 8
     //   80: astore 7
     //   82: aload_1
-    //   83: invokestatic 295	com/estrongs/android/util/am:i	(Ljava/lang/String;)Ljava/lang/String;
+    //   83: invokestatic 295	com/estrongs/android/util/ap:j	(Ljava/lang/String;)Ljava/lang/String;
     //   86: astore 6
     //   88: aload 8
     //   90: astore 7
@@ -1685,7 +1685,7 @@ public class OldSFtpFileSystem
     //   269: aload 8
     //   271: astore 7
     //   273: aload_1
-    //   274: invokestatic 463	com/estrongs/android/util/am:d	(Ljava/lang/String;)Ljava/lang/String;
+    //   274: invokestatic 463	com/estrongs/android/util/ap:d	(Ljava/lang/String;)Ljava/lang/String;
     //   277: astore 12
     //   279: aload 8
     //   281: astore 7
@@ -1882,10 +1882,10 @@ public class OldSFtpFileSystem
   {
     try
     {
-      String str1 = am.y(paramString);
-      String str3 = am.A(paramString);
-      String str2 = am.a(paramString);
-      Object localObject2 = am.w(paramString);
+      String str1 = ap.A(paramString);
+      String str3 = ap.C(paramString);
+      String str2 = ap.a(paramString);
+      Object localObject2 = ap.y(paramString);
       Object localObject1 = localObject2;
       if (localObject2 == null) {
         localObject1 = "22";
@@ -1894,7 +1894,7 @@ public class OldSFtpFileSystem
       if (localObject2 == null) {
         return null;
       }
-      paramString = am.i(paramString);
+      paramString = ap.j(paramString);
       paramString = new c(b.c(paramString), (d)localObject2, str1, str2, (String)localObject1);
       return paramString;
     }
@@ -1916,16 +1916,16 @@ public class OldSFtpFileSystem
     //   0: aconst_null
     //   1: astore_2
     //   2: aload_1
-    //   3: invokestatic 283	com/estrongs/android/util/am:y	(Ljava/lang/String;)Ljava/lang/String;
+    //   3: invokestatic 283	com/estrongs/android/util/ap:A	(Ljava/lang/String;)Ljava/lang/String;
     //   6: astore 5
     //   8: aload_1
-    //   9: invokestatic 286	com/estrongs/android/util/am:A	(Ljava/lang/String;)Ljava/lang/String;
+    //   9: invokestatic 286	com/estrongs/android/util/ap:C	(Ljava/lang/String;)Ljava/lang/String;
     //   12: astore 4
     //   14: aload_1
-    //   15: invokestatic 288	com/estrongs/android/util/am:a	(Ljava/lang/String;)Ljava/lang/String;
+    //   15: invokestatic 288	com/estrongs/android/util/ap:a	(Ljava/lang/String;)Ljava/lang/String;
     //   18: astore 6
     //   20: aload_1
-    //   21: invokestatic 291	com/estrongs/android/util/am:w	(Ljava/lang/String;)Ljava/lang/String;
+    //   21: invokestatic 291	com/estrongs/android/util/ap:y	(Ljava/lang/String;)Ljava/lang/String;
     //   24: astore_1
     //   25: aload_1
     //   26: astore_3
@@ -2023,16 +2023,16 @@ public class OldSFtpFileSystem
     //   6: iconst_0
     //   7: istore_2
     //   8: aload_1
-    //   9: invokestatic 283	com/estrongs/android/util/am:y	(Ljava/lang/String;)Ljava/lang/String;
+    //   9: invokestatic 283	com/estrongs/android/util/ap:A	(Ljava/lang/String;)Ljava/lang/String;
     //   12: astore 7
     //   14: aload_1
-    //   15: invokestatic 286	com/estrongs/android/util/am:A	(Ljava/lang/String;)Ljava/lang/String;
+    //   15: invokestatic 286	com/estrongs/android/util/ap:C	(Ljava/lang/String;)Ljava/lang/String;
     //   18: astore 10
     //   20: aload_1
-    //   21: invokestatic 288	com/estrongs/android/util/am:a	(Ljava/lang/String;)Ljava/lang/String;
+    //   21: invokestatic 288	com/estrongs/android/util/ap:a	(Ljava/lang/String;)Ljava/lang/String;
     //   24: astore 8
     //   26: aload_1
-    //   27: invokestatic 291	com/estrongs/android/util/am:w	(Ljava/lang/String;)Ljava/lang/String;
+    //   27: invokestatic 291	com/estrongs/android/util/ap:y	(Ljava/lang/String;)Ljava/lang/String;
     //   30: astore 9
     //   32: aload 9
     //   34: ifnonnull +471 -> 505
@@ -2056,7 +2056,7 @@ public class OldSFtpFileSystem
     //   70: iload 5
     //   72: istore_3
     //   73: aload_1
-    //   74: invokestatic 295	com/estrongs/android/util/am:i	(Ljava/lang/String;)Ljava/lang/String;
+    //   74: invokestatic 295	com/estrongs/android/util/ap:j	(Ljava/lang/String;)Ljava/lang/String;
     //   77: astore 13
     //   79: iload 4
     //   81: istore_2

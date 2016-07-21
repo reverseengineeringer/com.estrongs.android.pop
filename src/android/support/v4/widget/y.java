@@ -1,62 +1,21 @@
 package android.support.v4.widget;
 
-import android.util.Log;
+import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.view.View;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
+import android.view.ViewGroup.MarginLayoutParams;
 
-class y
-  extends x
+abstract interface y
 {
-  private Method a;
-  private Field b;
+  public abstract int a(Object paramObject);
   
-  y()
-  {
-    try
-    {
-      a = View.class.getDeclaredMethod("getDisplayList", (Class[])null);
-    }
-    catch (NoSuchMethodException localNoSuchMethodException)
-    {
-      for (;;)
-      {
-        try
-        {
-          b = View.class.getDeclaredField("mRecreateDisplayList");
-          b.setAccessible(true);
-          return;
-        }
-        catch (NoSuchFieldException localNoSuchFieldException)
-        {
-          Log.e("SlidingPaneLayout", "Couldn't fetch mRecreateDisplayList field; dimming will be slow.", localNoSuchFieldException);
-        }
-        localNoSuchMethodException = localNoSuchMethodException;
-        Log.e("SlidingPaneLayout", "Couldn't fetch getDisplayList method; dimming won't work right.", localNoSuchMethodException);
-      }
-    }
-  }
+  public abstract Drawable a(Context paramContext);
   
-  public void a(SlidingPaneLayout paramSlidingPaneLayout, View paramView)
-  {
-    if ((a != null) && (b != null)) {
-      try
-      {
-        b.setBoolean(paramView, true);
-        a.invoke(paramView, (Object[])null);
-        super.a(paramSlidingPaneLayout, paramView);
-        return;
-      }
-      catch (Exception localException)
-      {
-        for (;;)
-        {
-          Log.e("SlidingPaneLayout", "Error refreshing display list state", localException);
-        }
-      }
-    }
-    paramView.invalidate();
-  }
+  public abstract void a(View paramView);
+  
+  public abstract void a(View paramView, Object paramObject, int paramInt);
+  
+  public abstract void a(ViewGroup.MarginLayoutParams paramMarginLayoutParams, Object paramObject, int paramInt);
 }
 
 /* Location:

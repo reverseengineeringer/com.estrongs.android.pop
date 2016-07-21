@@ -41,7 +41,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0b0077
+    const v2, 0x7f0805aa
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -68,7 +68,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0b02fb
+    const v2, 0x7f08017c
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -170,7 +170,7 @@
 
     iget-object v0, p2, Lcom/estrongs/a/a/m;->a:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 

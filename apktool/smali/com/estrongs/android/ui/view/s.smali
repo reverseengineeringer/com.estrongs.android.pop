@@ -22,7 +22,7 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 5
 
-    const v4, 0x7f0b0402
+    const v4, 0x7f080444
 
     const/16 v2, 0x8
 
@@ -42,13 +42,13 @@
 
     iget-object v1, p0, Lcom/estrongs/android/ui/view/s;->a:Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;
 
-    const v2, 0x7f0b027c
+    const v2, 0x7f0802bf
 
     invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    invoke-static {v0, v1, v3}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    invoke-static {v0, v1, v3}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
     :cond_0
     :goto_0
@@ -120,7 +120,7 @@
     :cond_5
     iget v0, p1, Landroid/os/Message;->what:I
 
-    sget v1, Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;->g:I
+    sget v1, Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;->h:I
 
     if-ne v0, v1, :cond_7
 
@@ -160,7 +160,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/view/s;->a:Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;
 
-    iget-boolean v0, v0, Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;->h:Z
+    iget-boolean v0, v0, Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;->i:Z
 
     if-eqz v0, :cond_1
 
@@ -199,7 +199,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;->g:I
+    sget v1, Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;->h:I
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
@@ -220,7 +220,7 @@
     :cond_7
     iget v0, p1, Landroid/os/Message;->what:I
 
-    sget v1, Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;->c:I
+    sget v1, Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;->d:I
 
     if-ne v0, v1, :cond_8
 
@@ -265,20 +265,20 @@
     :cond_8
     iget v0, p1, Landroid/os/Message;->what:I
 
-    sget v1, Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;->d:I
+    sget v1, Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;->e:I
 
     if-ne v0, v1, :cond_9
 
     iget-object v0, p0, Lcom/estrongs/android/ui/view/s;->a:Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;
 
-    invoke-static {v0, v4, v3}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {v0, v4, v3}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     goto/16 :goto_0
 
     :cond_9
     iget v0, p1, Landroid/os/Message;->what:I
 
-    sget v1, Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;->e:I
+    sget v1, Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;->f:I
 
     if-ne v0, v1, :cond_0
 
@@ -294,12 +294,14 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/view/s;->a:Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;
 
-    invoke-static {v0, v4, v3}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {v0, v4, v3}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     goto/16 :goto_0
 
     :cond_a
-    invoke-static {}, Lcom/estrongs/android/util/a;->a()Lcom/estrongs/android/util/a;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/s;->a:Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;
+
+    invoke-static {v0}, Lcom/estrongs/android/j/c;->a(Landroid/content/Context;)Lcom/estrongs/android/j/c;
 
     move-result-object v0
 
@@ -315,19 +317,8 @@
 
     move-result v1
 
-    if-eqz v1, :cond_b
+    if-nez v1, :cond_0
 
-    if-eqz v0, :cond_0
-
-    const-string v1, "\u5feb\u76d8_Create"
-
-    const-string v2, "\u5feb\u76d8_Create"
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/util/a;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto/16 :goto_0
-
-    :cond_b
     iget-object v1, p0, Lcom/estrongs/android/ui/view/s;->a:Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;
 
     invoke-static {v1}, Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;->a(Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;)Ljava/lang/String;
@@ -340,19 +331,8 @@
 
     move-result v1
 
-    if-eqz v1, :cond_c
+    if-nez v1, :cond_0
 
-    if-eqz v0, :cond_0
-
-    const-string v1, "Box_Create"
-
-    const-string v2, "Box_Create"
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/util/a;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto/16 :goto_0
-
-    :cond_c
     iget-object v1, p0, Lcom/estrongs/android/ui/view/s;->a:Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;
 
     invoke-static {v1}, Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;->a(Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;)Ljava/lang/String;
@@ -365,19 +345,8 @@
 
     move-result v1
 
-    if-eqz v1, :cond_d
+    if-nez v1, :cond_0
 
-    if-eqz v0, :cond_0
-
-    const-string v1, "Skydrive_Create"
-
-    const-string v2, "Skydrive_Create"
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/util/a;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto/16 :goto_0
-
-    :cond_d
     iget-object v1, p0, Lcom/estrongs/android/ui/view/s;->a:Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;
 
     invoke-static {v1}, Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;->a(Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;)Ljava/lang/String;
@@ -390,19 +359,17 @@
 
     move-result v1
 
-    if-eqz v1, :cond_e
+    if-eqz v1, :cond_b
 
     if-eqz v0, :cond_0
 
     const-string v1, "Gdrive_Create"
 
-    const-string v2, "Gdrive_Create"
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/util/a;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/j/c;->a(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    :cond_e
+    :cond_b
     iget-object v1, p0, Lcom/estrongs/android/ui/view/s;->a:Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;
 
     invoke-static {v1}, Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;->a(Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;)Ljava/lang/String;
@@ -415,40 +382,30 @@
 
     move-result v1
 
-    if-eqz v1, :cond_f
+    if-eqz v1, :cond_c
 
     if-eqz v0, :cond_0
 
     const-string v1, "Dropbox_Create"
 
-    const-string v2, "Dropbox_Create"
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/util/a;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/j/c;->a(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    :cond_f
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/s;->a:Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;
+    :cond_c
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/s;->a:Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;
 
-    invoke-static {v1}, Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;->a(Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;->a(Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    const-string v2, "megacloud"
+    const-string v1, "megacloud"
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
-
-    if-eqz v1, :cond_0
+    move-result v0
 
     if-eqz v0, :cond_0
-
-    const-string v1, "Megacloud_Create"
-
-    const-string v2, "Megacloud_Create"
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/util/a;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 .end method

@@ -57,7 +57,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-interface {v1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -77,7 +77,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/appinfo/c;->b:Lcom/estrongs/android/appinfo/AppFolderInfoManager;
 
-    iget-object v1, v1, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Ljava/lang/Object;
+    iget-object v1, v1, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->u:Ljava/lang/Object;
 
     monitor-enter v1
     :try_end_0
@@ -86,7 +86,7 @@
     :try_start_1
     iget-object v3, p0, Lcom/estrongs/android/appinfo/c;->b:Lcom/estrongs/android/appinfo/AppFolderInfoManager;
 
-    iget-object v3, v3, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v3, v3, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     if-nez v3, :cond_0
 
@@ -97,7 +97,7 @@
     :cond_0
     iget-object v3, p0, Lcom/estrongs/android/appinfo/c;->b:Lcom/estrongs/android/appinfo/AppFolderInfoManager;
 
-    iget-object v3, v3, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v3, v3, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     if-nez v3, :cond_2
 
@@ -110,7 +110,7 @@
     :cond_2
     iget-object v3, p0, Lcom/estrongs/android/appinfo/c;->b:Lcom/estrongs/android/appinfo/AppFolderInfoManager;
 
-    iget-object v3, v3, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->s:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v3, v3, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->t:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v4, "INSERT OR REPLACE INTO installed_app_info(package,app_name) VALUES(?,?)"
 

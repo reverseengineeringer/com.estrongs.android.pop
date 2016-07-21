@@ -1,151 +1,61 @@
 .class Lcom/estrongs/android/widget/r;
-.super Lcom/estrongs/android/view/dp;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic b:Lcom/estrongs/android/widget/g;
+.field final synthetic a:Lcom/estrongs/fs/h;
+
+.field final synthetic b:Lcom/estrongs/android/widget/q;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/widget/g;Landroid/app/Activity;Lcom/estrongs/fs/util/a/a;Lcom/estrongs/android/view/cb;)V
+.method constructor <init>(Lcom/estrongs/android/widget/q;Lcom/estrongs/fs/h;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/widget/r;->b:Lcom/estrongs/android/widget/g;
+    iput-object p1, p0, Lcom/estrongs/android/widget/r;->b:Lcom/estrongs/android/widget/q;
 
-    invoke-direct {p0, p2, p3, p4}, Lcom/estrongs/android/view/dp;-><init>(Landroid/app/Activity;Lcom/estrongs/fs/util/a/a;Lcom/estrongs/android/view/cb;)V
+    iput-object p2, p0, Lcom/estrongs/android/widget/r;->a:Lcom/estrongs/fs/h;
 
-    return-void
-.end method
-
-.method static synthetic a(Lcom/estrongs/android/widget/r;Lcom/estrongs/fs/h;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/estrongs/android/widget/r;->b(Lcom/estrongs/fs/h;)V
-
-    return-void
-.end method
-
-.method private b(Lcom/estrongs/fs/h;)V
-    .locals 0
-
-    invoke-super {p0, p1}, Lcom/estrongs/android/view/dp;->a(Lcom/estrongs/fs/h;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public H()Z
-    .locals 1
+.method public run()V
+    .locals 2
 
-    invoke-virtual {p0}, Lcom/estrongs/android/widget/r;->V()Z
+    iget-object v0, p0, Lcom/estrongs/android/widget/r;->b:Lcom/estrongs/android/widget/q;
 
-    move-result v0
+    iget-object v0, v0, Lcom/estrongs/android/widget/q;->b:Lcom/estrongs/android/widget/f;
 
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method protected a()I
-    .locals 1
-
-    const v0, 0x7f030055
-
-    return v0
-.end method
-
-.method protected a(Lcom/estrongs/fs/h;Lcom/estrongs/android/util/TypedMap;)V
-    .locals 4
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/r;->b:Lcom/estrongs/android/widget/g;
-
-    invoke-static {v0}, Lcom/estrongs/android/widget/g;->c(Lcom/estrongs/android/widget/g;)Lcom/estrongs/android/widget/ac;
+    invoke-static {v0}, Lcom/estrongs/android/widget/f;->d(Lcom/estrongs/android/widget/f;)Landroid/app/Activity;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    sget-object v1, Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog$DialogType;->NETWORK:Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog$DialogType;
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/r;->b:Lcom/estrongs/android/widget/g;
-
-    invoke-static {v0}, Lcom/estrongs/android/widget/g;->c(Lcom/estrongs/android/widget/g;)Lcom/estrongs/android/widget/ac;
+    invoke-static {v0, v1}, Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog;->a(Landroid/content/Context;Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog$DialogType;)Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog;
 
     move-result-object v0
-
-    invoke-interface {v0, p1}, Lcom/estrongs/android/widget/ac;->a(Lcom/estrongs/fs/h;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    :goto_0
-    return-void
-
-    :cond_0
-    invoke-interface {p1}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p1}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bg(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x1
-
-    :goto_1
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/FexApplication;->h()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    if-eqz v0, :cond_2
-
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     new-instance v1, Lcom/estrongs/android/widget/s;
 
-    invoke-direct {v1, p0, p1}, Lcom/estrongs/android/widget/s;-><init>(Lcom/estrongs/android/widget/r;Lcom/estrongs/fs/h;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/widget/s;-><init>(Lcom/estrongs/android/widget/r;)V
 
-    const-wide/16 v2, 0x32
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog;->a(Lcom/estrongs/android/ui/dialog/lc;)V
 
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    new-instance v1, Lcom/estrongs/android/widget/t;
 
-    goto :goto_0
+    invoke-direct {v1, p0}, Lcom/estrongs/android/widget/t;-><init>(Lcom/estrongs/android/widget/r;)V
 
-    :cond_1
-    const/4 v0, 0x0
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog;->a(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    goto :goto_1
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog;->b()V
 
-    :cond_2
-    invoke-super {p0, p1, p2}, Lcom/estrongs/android/view/dp;->a(Lcom/estrongs/fs/h;Lcom/estrongs/android/util/TypedMap;)V
-
-    goto :goto_0
+    return-void
 .end method

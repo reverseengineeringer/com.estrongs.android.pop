@@ -11,9 +11,9 @@ import android.hardware.usb.UsbEndpoint;
 import android.hardware.usb.UsbInterface;
 import android.hardware.usb.UsbManager;
 import android.os.Build.VERSION;
-import android.util.Log;
 import com.estrongs.android.pop.FexApplication;
 import com.estrongs.android.pop.z;
+import com.estrongs.android.util.l;
 import com.estrongs.fs.impl.usb.a.c;
 import com.estrongs.fs.impl.usb.a.d;
 import java.io.IOException;
@@ -74,7 +74,7 @@ public class g
     UsbDevice localUsbDevice;
     int i1;
     UsbInterface localUsbInterface;
-    label141:
+    label140:
     int i2;
     UsbEndpoint localUsbEndpoint3;
     if (localUsbManager != null)
@@ -94,13 +94,13 @@ public class g
         } while (i1 >= i3);
         localUsbInterface = localUsbDevice.getInterface(i1);
         if ((localUsbInterface.getInterfaceClass() != 8) || (localUsbInterface.getInterfaceSubclass() != 6) || (localUsbInterface.getInterfaceProtocol() != 80)) {
-          break label224;
+          break label222;
         }
         i4 = localUsbInterface.getEndpointCount();
         if (i4 == 2) {
-          break label231;
+          break label229;
         }
-        Log.e(a, "inteface endpoint count != 2");
+        l.e(a, "inteface endpoint count != 2");
       }
       catch (Exception localException)
       {
@@ -109,25 +109,25 @@ public class g
         localException.printStackTrace();
       }
       if (i2 >= i4) {
-        break label256;
+        break label254;
       }
       localUsbEndpoint3 = localUsbInterface.getEndpoint(i2);
       if (localUsbEndpoint3.getDirection() != 0) {
-        break label249;
+        break label247;
       }
       localUsbEndpoint1 = localUsbEndpoint3;
     }
     for (;;)
     {
-      label169:
-      Log.e(a, "Not all needed endpoints found!");
-      break label224;
+      label168:
+      l.e(a, "Not all needed endpoints found!");
+      break label222;
       return (g[])localArrayList.toArray(new g[0]);
       UsbEndpoint localUsbEndpoint2;
-      label224:
-      label231:
-      label249:
-      label256:
+      label222:
+      label229:
+      label247:
+      label254:
       do
       {
         localArrayList.add(new g(localUsbManager, localUsbDevice, localUsbInterface, localUsbEndpoint2, localException));
@@ -136,7 +136,7 @@ public class g
         i2 = 0;
         localUsbEndpoint2 = null;
         Object localObject = null;
-        break label141;
+        break label140;
         for (;;)
         {
           i2 += 1;
@@ -144,7 +144,7 @@ public class g
           localUsbEndpoint2 = localUsbEndpoint3;
         }
         if (localObject == null) {
-          break label169;
+          break label168;
         }
       } while (localUsbEndpoint2 != null);
     }
@@ -165,12 +165,12 @@ public class g
     e = d.openDevice(f);
     if (e == null)
     {
-      Log.e(a, "deviceConnetion is null!");
+      l.e(a, "deviceConnetion is null!");
       return;
     }
     if (!e.claimInterface(g, true))
     {
-      Log.e(a, "could not claim interface!");
+      l.e(a, "could not claim interface!");
       return;
     }
     j = com.estrongs.fs.impl.usb.driver.b.a(a(b));
@@ -242,7 +242,7 @@ public class g
         return;
       }
       if (!e.releaseInterface(g)) {
-        Log.e(a, "could not release interface!");
+        l.e(a, "could not release interface!");
       }
       e.close();
       e = null;

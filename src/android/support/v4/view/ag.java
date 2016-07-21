@@ -1,16 +1,22 @@
 package android.support.v4.view;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.view.KeyEvent;
 
 class ag
-  implements View.OnClickListener
 {
-  ag(PagerTabStrip paramPagerTabStrip) {}
-  
-  public void onClick(View paramView)
+  public static int a(int paramInt)
   {
-    a.a.a(a.a.c() + 1);
+    return KeyEvent.normalizeMetaState(paramInt);
+  }
+  
+  public static boolean a(int paramInt1, int paramInt2)
+  {
+    return KeyEvent.metaStateHasModifiers(paramInt1, paramInt2);
+  }
+  
+  public static boolean b(int paramInt)
+  {
+    return KeyEvent.metaStateHasNoModifiers(paramInt);
   }
 }
 

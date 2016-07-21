@@ -3,7 +3,7 @@
 
 
 # instance fields
-.field private a:Lcom/estrongs/android/ui/dialog/cg;
+.field private a:Lcom/estrongs/android/ui/dialog/ci;
 
 .field private b:I
 
@@ -81,7 +81,7 @@
     goto :goto_0
 .end method
 
-.method protected a(Lcom/estrongs/android/ui/dialog/ct;)V
+.method protected a(Lcom/estrongs/android/ui/dialog/cv;)V
     .locals 3
 
     invoke-virtual {p0}, Lcom/estrongs/android/ui/preference/CustomListPreference;->getEntries()[Ljava/lang/CharSequence;
@@ -122,7 +122,7 @@
 
     invoke-direct {v2, p0}, Lcom/estrongs/android/ui/preference/a;-><init>(Lcom/estrongs/android/ui/preference/CustomListPreference;)V
 
-    invoke-virtual {p1, v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->a([Ljava/lang/CharSequence;ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {p1, v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->a([Ljava/lang/CharSequence;ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     return-void
 .end method
@@ -138,7 +138,7 @@
 .method public getDialog()Landroid/app/Dialog;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/preference/CustomListPreference;->a:Lcom/estrongs/android/ui/dialog/cg;
+    iget-object v0, p0, Lcom/estrongs/android/ui/preference/CustomListPreference;->a:Lcom/estrongs/android/ui/dialog/ci;
 
     return-object v0
 .end method
@@ -166,7 +166,7 @@
 
     aget-object v0, v0, v1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -189,15 +189,15 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/estrongs/android/ui/dialog/ct;
+    new-instance v1, Lcom/estrongs/android/ui/dialog/cv;
 
-    invoke-direct {v1, v0}, Lcom/estrongs/android/ui/dialog/ct;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v0}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
 
     invoke-virtual {p0}, Lcom/estrongs/android/ui/preference/CustomListPreference;->getDialogTitle()Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/dialog/ct;->a(Ljava/lang/CharSequence;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/dialog/cv;->a(Ljava/lang/CharSequence;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
@@ -209,20 +209,20 @@
 
     invoke-virtual {p0, v1}, Lcom/estrongs/android/ui/preference/CustomListPreference;->onBindDialogView(Landroid/view/View;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->a(Landroid/view/View;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->a(Landroid/view/View;)Lcom/estrongs/android/ui/dialog/cv;
 
     :goto_0
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/preference/CustomListPreference;->a(Lcom/estrongs/android/ui/dialog/ct;)V
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/preference/CustomListPreference;->a(Lcom/estrongs/android/ui/dialog/cv;)V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ct;->b()Lcom/estrongs/android/ui/dialog/cg;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cv;->b()Lcom/estrongs/android/ui/dialog/ci;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/preference/CustomListPreference;->a:Lcom/estrongs/android/ui/dialog/cg;
+    iput-object v0, p0, Lcom/estrongs/android/ui/preference/CustomListPreference;->a:Lcom/estrongs/android/ui/dialog/ci;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/estrongs/android/ui/dialog/cg;->onRestoreInstanceState(Landroid/os/Bundle;)V
+    invoke-virtual {v0, p1}, Lcom/estrongs/android/ui/dialog/ci;->onRestoreInstanceState(Landroid/os/Bundle;)V
 
     :cond_0
     invoke-virtual {p0}, Lcom/estrongs/android/ui/preference/CustomListPreference;->a()Z
@@ -231,12 +231,12 @@
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->requestInputMethod()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ci;->requestInputMethod()V
 
     :cond_1
-    invoke-virtual {v0, p0}, Lcom/estrongs/android/ui/dialog/cg;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-virtual {v0, p0}, Lcom/estrongs/android/ui/dialog/ci;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->show()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ci;->show()V
 
     return-void
 
@@ -245,7 +245,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->b(Ljava/lang/CharSequence;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->b(Ljava/lang/CharSequence;)Lcom/estrongs/android/ui/dialog/cv;
 
     goto :goto_0
 .end method

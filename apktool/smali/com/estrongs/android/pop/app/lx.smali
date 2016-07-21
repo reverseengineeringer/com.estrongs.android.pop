@@ -1,91 +1,73 @@
 .class Lcom/estrongs/android/pop/app/lx;
-.super Ljava/lang/Thread;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
+.field final synthetic a:Lcom/estrongs/a/a/c;
+
+.field final synthetic b:Lcom/estrongs/a/a;
+
+.field final synthetic c:Lcom/estrongs/android/pop/app/ShowDialogActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;Lcom/estrongs/a/a/c;Lcom/estrongs/a/a;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/lx;->a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/lx;->c:Lcom/estrongs/android/pop/app/ShowDialogActivity;
 
-    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
+    iput-object p2, p0, Lcom/estrongs/android/pop/app/lx;->a:Lcom/estrongs/a/a/c;
+
+    iput-object p3, p0, Lcom/estrongs/android/pop/app/lx;->b:Lcom/estrongs/a/a;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
+.method public onClick(Landroid/content/DialogInterface;I)V
     .locals 5
 
-    const-wide/16 v2, -0x1
+    const/4 v4, 0x1
 
-    const/4 v1, 0x0
+    sget-object v0, Lcom/estrongs/android/d/a;->a:Ljava/util/Map;
 
-    :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/lx;->a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/lx;->c:Lcom/estrongs/android/pop/app/ShowDialogActivity;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->k(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)Lcom/estrongs/fs/d;
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/ShowDialogActivity;->a(Lcom/estrongs/android/pop/app/ShowDialogActivity;)J
 
-    move-result-object v0
+    move-result-wide v2
 
-    iget-object v4, p0, Lcom/estrongs/android/pop/app/lx;->a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
-
-    invoke-static {v4}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->j(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v4}, Lcom/estrongs/fs/d;->c(Ljava/lang/String;)Lcom/estrongs/fs/c;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
-    iget-wide v2, v1, Lcom/estrongs/fs/c;->e:J
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :goto_0
-    if-nez v1, :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/lx;->a:Lcom/estrongs/a/a/c;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/lx;->a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
+    iput-boolean v4, v0, Lcom/estrongs/a/a/c;->d:Z
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->i(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)Landroid/os/Handler;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/lx;->b:Lcom/estrongs/a/a;
 
-    move-result-object v0
+    const/4 v1, 0x5
 
-    new-instance v1, Lcom/estrongs/android/pop/app/ly;
+    new-array v2, v4, [Ljava/lang/Object;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ly;-><init>(Lcom/estrongs/android/pop/app/lx;)V
+    const/4 v3, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    iget-object v4, p0, Lcom/estrongs/android/pop/app/lx;->a:Lcom/estrongs/a/a/c;
 
-    :goto_1
+    aput-object v4, v2, v3
+
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/a/a;->sendMessage(I[Ljava/lang/Object;)V
+
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+
     return-void
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/lx;->a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
-
-    invoke-static {v0, v2, v3}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->a(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;J)J
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/lx;->a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/lx;->a:Lcom/estrongs/android/pop/app/StreamingMediaPlayer;
-
-    invoke-static {v1}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->j(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1, v2, v3}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->a(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;Ljava/lang/String;J)V
-
-    goto :goto_1
 .end method

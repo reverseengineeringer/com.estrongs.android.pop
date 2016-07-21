@@ -5,20 +5,20 @@
 # instance fields
 .field final synthetic a:Lcom/estrongs/io/a/b;
 
-.field final synthetic b:Lcom/estrongs/io/archive/g;
+.field final synthetic b:Lcom/estrongs/io/archive/h;
 
 .field final synthetic c:Lcom/estrongs/io/archive/rar/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/io/archive/rar/a;Lcom/estrongs/io/a/d;Lcom/estrongs/io/a/b;Lcom/estrongs/io/archive/g;)V
+.method constructor <init>(Lcom/estrongs/io/archive/rar/a;Lcom/estrongs/io/a/d;Lcom/estrongs/io/a/b;Lcom/estrongs/io/archive/h;)V
     .locals 0
 
     iput-object p1, p0, Lcom/estrongs/io/archive/rar/b;->c:Lcom/estrongs/io/archive/rar/a;
 
     iput-object p3, p0, Lcom/estrongs/io/archive/rar/b;->a:Lcom/estrongs/io/a/b;
 
-    iput-object p4, p0, Lcom/estrongs/io/archive/rar/b;->b:Lcom/estrongs/io/archive/g;
+    iput-object p4, p0, Lcom/estrongs/io/archive/rar/b;->b:Lcom/estrongs/io/archive/h;
 
     invoke-direct {p0, p2}, Lcom/estrongs/io/archive/rar/e;-><init>(Lcom/estrongs/io/a/d;)V
 
@@ -36,21 +36,21 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/estrongs/io/archive/rar/b;->b:Lcom/estrongs/io/archive/g;
+    iget-object v2, p0, Lcom/estrongs/io/archive/rar/b;->b:Lcom/estrongs/io/archive/h;
 
-    invoke-virtual {v2}, Lcom/estrongs/io/archive/g;->a()J
+    invoke-virtual {v2}, Lcom/estrongs/io/archive/h;->a()J
 
     move-result-wide v2
 
-    iget-object v4, p0, Lcom/estrongs/io/archive/rar/b;->b:Lcom/estrongs/io/archive/g;
+    iget-object v4, p0, Lcom/estrongs/io/archive/rar/b;->b:Lcom/estrongs/io/archive/h;
 
-    invoke-virtual {v4}, Lcom/estrongs/io/archive/g;->b()I
+    invoke-virtual {v4}, Lcom/estrongs/io/archive/h;->b()I
 
     move-result v4
 
-    iget-object v5, p0, Lcom/estrongs/io/archive/rar/b;->b:Lcom/estrongs/io/archive/g;
+    iget-object v5, p0, Lcom/estrongs/io/archive/rar/b;->b:Lcom/estrongs/io/archive/h;
 
-    invoke-virtual {v5}, Lcom/estrongs/io/archive/g;->c()I
+    invoke-virtual {v5}, Lcom/estrongs/io/archive/h;->c()I
 
     move-result v5
 

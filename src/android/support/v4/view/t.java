@@ -1,72 +1,41 @@
 package android.support.v4.view;
 
-import android.view.KeyEvent;
+import android.os.Handler;
+import android.os.Message;
+import android.view.GestureDetector.OnDoubleTapListener;
+import android.view.GestureDetector.OnGestureListener;
 
 class t
-  implements w
+  extends Handler
 {
-  private static int a(int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5)
+  t(s params) {}
+  
+  t(s params, Handler paramHandler)
   {
-    int j = 1;
-    int i;
-    if ((paramInt2 & paramInt3) != 0)
+    super(paramHandler.getLooper());
+  }
+  
+  public void handleMessage(Message paramMessage)
+  {
+    switch (what)
     {
-      i = 1;
-      paramInt4 |= paramInt5;
-      if ((paramInt2 & paramInt4) == 0) {
-        break label51;
-      }
-      paramInt2 = j;
-    }
-    for (;;)
-    {
-      if (i != 0)
-      {
-        if (paramInt2 != 0)
-        {
-          throw new IllegalArgumentException("bad arguments");
-          i = 0;
-          break;
-          label51:
-          paramInt2 = 0;
-          continue;
-        }
-        paramInt4 = paramInt1 & (paramInt4 ^ 0xFFFFFFFF);
-      }
+    default: 
+      throw new RuntimeException("Unknown message " + paramMessage);
+    case 1: 
+      s.b(a).onShowPress(s.a(a));
     }
     do
     {
-      return paramInt4;
-      paramInt4 = paramInt1;
-    } while (paramInt2 == 0);
-    return paramInt1 & (paramInt3 ^ 0xFFFFFFFF);
-  }
-  
-  public int a(int paramInt)
-  {
-    if ((paramInt & 0xC0) != 0) {
-      paramInt |= 0x1;
-    }
-    for (;;)
+      return;
+      s.c(a);
+      return;
+    } while (s.d(a) == null);
+    if (!s.e(a))
     {
-      int i = paramInt;
-      if ((paramInt & 0x30) != 0) {
-        i = paramInt | 0x2;
-      }
-      return i & 0xF7;
+      s.d(a).onSingleTapConfirmed(s.a(a));
+      return;
     }
-  }
-  
-  public void a(KeyEvent paramKeyEvent) {}
-  
-  public boolean a(int paramInt1, int paramInt2)
-  {
-    return a(a(a(paramInt1) & 0xF7, paramInt2, 1, 64, 128), paramInt2, 2, 16, 32) == paramInt2;
-  }
-  
-  public boolean b(int paramInt)
-  {
-    return (a(paramInt) & 0xF7) == 0;
+    s.a(a, true);
   }
 }
 

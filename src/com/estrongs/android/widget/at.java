@@ -1,39 +1,42 @@
 package com.estrongs.android.widget;
 
-import android.text.TextUtils.TruncateAt;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.TextView;
-import com.estrongs.android.view.cd;
-import com.estrongs.fs.h;
-import com.estrongs.fs.m;
+import android.app.Activity;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.support.v7.widget.GridLayoutManager;
+import com.estrongs.android.view.dw;
+import com.estrongs.android.view.eb;
+import com.estrongs.fs.util.a.a;
 
 class at
-  implements AdapterView.OnItemClickListener
+  extends eb
 {
-  at(ao paramao) {}
-  
-  public void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
+  at(ap paramap, Activity paramActivity, a parama, dw paramdw)
   {
-    paramAdapterView = (h)a.b().e(paramInt);
-    if (paramAdapterView.getFileType().a())
+    super(paramActivity, parama, paramdw);
+  }
+  
+  public void a(int paramInt)
+  {
+    int i = 1;
+    p = paramInt;
+    if (ag.getResources().getConfiguration().orientation == 1) {}
+    for (paramInt = i; paramInt != 0; paramInt = 0)
     {
-      a.i.a(paramAdapterView);
-      if (a.n != null)
-      {
-        paramView = paramAdapterView.getExtra("item_count");
-        if (paramView == null) {
-          break label120;
-        }
-        a.n.setText(paramAdapterView.getName() + "(" + paramView + ")");
-        a.n.setEllipsize(TextUtils.TruncateAt.valueOf("MIDDLE"));
-      }
+      g.setSpanCount(3);
+      return;
     }
-    return;
-    label120:
-    a.n.setText(paramAdapterView.getName());
-    a.n.setEllipsize(TextUtils.TruncateAt.valueOf("END"));
+    g.setSpanCount(4);
+  }
+  
+  protected int x()
+  {
+    return 2130903275;
+  }
+  
+  protected int y()
+  {
+    return 2130903274;
   }
 }
 

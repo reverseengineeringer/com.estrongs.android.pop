@@ -1,16 +1,19 @@
 package com.estrongs.android.pop.app;
 
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.widget.f;
 
 class lh
-  implements DialogInterface.OnDismissListener
+  implements DialogInterface.OnClickListener
 {
-  lh(ShowDialogActivity paramShowDialogActivity) {}
+  lh(SaveToESActivity paramSaveToESActivity) {}
   
-  public void onDismiss(DialogInterface paramDialogInterface)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    a.finish();
+    SaveToESActivity.a(a, a.a.d());
+    a.a.a(new li(this));
+    a.a.k();
   }
 }
 

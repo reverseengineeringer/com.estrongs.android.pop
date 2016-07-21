@@ -1,16 +1,12 @@
 package com.estrongs.android.pop.esclasses;
 
-import com.estrongs.android.ui.view.ag;
+import android.view.ViewGroup;
 
 class b
-  implements Runnable
 {
-  b(ESActivity paramESActivity, String paramString, int paramInt) {}
-  
-  public void run()
-  {
-    ag.a(c, a, b);
-  }
+  public ViewGroup a;
+  public Object b;
+  public boolean c;
 }
 
 /* Location:

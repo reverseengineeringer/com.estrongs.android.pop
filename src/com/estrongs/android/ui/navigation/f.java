@@ -1,17 +1,18 @@
 package com.estrongs.android.ui.navigation;
 
-import android.os.Handler;
-import android.os.Message;
-import android.view.View;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.d.i;
 
 class f
-  implements r
+  implements Runnable
 {
-  f(e parame, Message paramMessage) {}
+  f(e parame) {}
   
-  public void a(View paramView)
+  public void run()
   {
-    a.d(b.a).sendMessage(a);
+    while (a.a.a.e().c() > 1) {
+      FileExplorerActivity.X().g(1);
+    }
   }
 }
 

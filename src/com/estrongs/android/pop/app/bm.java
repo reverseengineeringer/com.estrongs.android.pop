@@ -1,16 +1,21 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
+import java.net.Inet4Address;
+import java.util.Map;
 
-class bm
-  implements DialogInterface.OnDismissListener
+public class bm
 {
-  bm(ESFileSharingActivity paramESFileSharingActivity) {}
+  public Inet4Address a;
+  public String b;
+  private Map<String, byte[]> c;
   
-  public void onDismiss(DialogInterface paramDialogInterface)
+  public boolean equals(Object paramObject)
   {
-    a.finish();
+    if ((paramObject == null) || (!(paramObject instanceof bm))) {}
+    while (!a.getHostAddress().equals(a.getHostAddress())) {
+      return false;
+    }
+    return true;
   }
 }
 

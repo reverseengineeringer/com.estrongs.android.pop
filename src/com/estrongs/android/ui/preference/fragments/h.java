@@ -1,15 +1,37 @@
 package com.estrongs.android.ui.preference.fragments;
 
-import com.estrongs.fs.i;
+import android.app.Activity;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.EditText;
+import com.estrongs.android.pop.ad;
+import com.estrongs.android.pop.b;
+import com.estrongs.android.pop.z;
+import com.estrongs.android.widget.f;
 
 class h
-  implements i
+  implements View.OnClickListener
 {
-  h(g paramg, boolean paramBoolean) {}
+  h(e parame, String paramString, EditText paramEditText) {}
   
-  public boolean a(com.estrongs.fs.h paramh)
+  public void onClick(View paramView)
   {
-    return (!paramh.getName().startsWith(".")) || (a);
+    i locali = new i(this, ad.a(c.a.getActivity()).q());
+    int i = -1;
+    if (z.n) {
+      i = -2;
+    }
+    Activity localActivity = c.a.getActivity();
+    if (a == null) {}
+    for (paramView = b.b();; paramView = a)
+    {
+      paramView = new f(localActivity, paramView, locali, i);
+      paramView.a(c.a.getText(2131230720));
+      paramView.b(c.a.getString(2131231270), new j(this, paramView));
+      paramView.c(c.a.getString(2131231265), new k(this, paramView));
+      paramView.j();
+      return;
+    }
   }
 }
 

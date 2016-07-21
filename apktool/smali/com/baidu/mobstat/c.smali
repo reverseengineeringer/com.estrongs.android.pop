@@ -1,97 +1,106 @@
-.class public Lcom/baidu/mobstat/c;
+.class public final Lcom/baidu/mobstat/c;
 .super Ljava/lang/Object;
 
 
-# static fields
-.field private static final a:Ljava/lang/String;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-class v0, Lcom/baidu/mobstat/c;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/baidu/mobstat/c;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public static a(Landroid/content/Context;)Ljava/lang/String;
-    .locals 3
-
-    invoke-static {p0}, Lcom/baidu/mobstat/c;->b(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {p0}, Lcom/baidu/mobstat/d;->b(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    const-string v0, "0"
-
-    :cond_0
-    new-instance v2, Ljava/lang/StringBuffer;
-
-    invoke-direct {v2, v0}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2}, Ljava/lang/StringBuffer;->reverse()Ljava/lang/StringBuffer;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
-
-    move-result-object v0
+.method public static a([BLjava/lang/String;Z)Ljava/lang/String;
+    .locals 6
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    array-length v3, p0
 
-    move-result-object v1
+    const/4 v0, 0x0
 
-    const-string v2, "|"
+    move v1, v0
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :goto_0
+    if-ge v1, v3, :cond_2
 
-    move-result-object v1
+    aget-byte v0, p0, v1
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    and-int/lit16 v0, v0, 0xff
+
+    invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-eqz p2, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v4
+
+    const/4 v5, 0x1
+
+    if-ne v4, v5, :cond_1
+
+    const-string v4, "0"
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_1
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method private static b(Landroid/content/Context;)Ljava/lang/String;
-    .locals 1
+.method public static a([BZ)Ljava/lang/String;
+    .locals 2
 
-    invoke-static {p0}, Lcom/baidu/mobstat/d;->a(Landroid/content/Context;)Ljava/lang/String;
+    :try_start_0
+    const-string v0, "MD5"
+
+    invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/security/MessageDigest;->reset()V
+
+    invoke-virtual {v0, p0}, Ljava/security/MessageDigest;->update([B)V
+
+    invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
+
+    move-result-object v0
+
+    const-string v1, ""
+
+    invoke-static {v0, v1, p1}, Lcom/baidu/mobstat/c;->a([BLjava/lang/String;Z)Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
     return-object v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 .end method

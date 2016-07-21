@@ -1,14 +1,20 @@
 package com.estrongs.android.appinfo;
 
-abstract interface t
+import android.os.Parcel;
+import android.os.Parcelable.Creator;
+
+final class t
+  implements Parcelable.Creator<AppFolderInfoManager.RemnantFolder>
 {
-  public abstract int a();
+  public AppFolderInfoManager.RemnantFolder a(Parcel paramParcel)
+  {
+    return new AppFolderInfoManager.RemnantFolder(paramParcel, null);
+  }
   
-  public abstract int a(String paramString);
-  
-  public abstract int b();
-  
-  public abstract void c();
+  public AppFolderInfoManager.RemnantFolder[] a(int paramInt)
+  {
+    return new AppFolderInfoManager.RemnantFolder[paramInt];
+  }
 }
 
 /* Location:

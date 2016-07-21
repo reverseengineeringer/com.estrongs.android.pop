@@ -1,33 +1,44 @@
 package com.estrongs.fs.impl.c;
 
-import android.bluetooth.BluetoothDevice;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import com.estrongs.android.pop.FexApplication;
+import java.io.File;
+import java.util.List;
 
-class d
-  extends BroadcastReceiver
+public class d
+  extends b
 {
-  d(a parama) {}
+  public ApplicationInfo a;
+  public List<b> b;
   
-  public void onReceive(Context paramContext, Intent paramIntent)
+  public d(ApplicationInfo paramApplicationInfo, List<b> paramList, String paramString1, String paramString2)
   {
-    int i;
-    if ("android.bluetooth.device.action.BOND_STATE_CHANGED".equals(paramIntent.getAction()))
-    {
-      i = paramIntent.getIntExtra("android.bluetooth.device.extra.BOND_STATE", 10);
-      if (i != 12) {
-        break label60;
-      }
-      if (((BluetoothDevice)paramIntent.getParcelableExtra("android.bluetooth.device.extra.DEVICE")).getAddress().equals(a.a(a))) {
-        a.b(a);
-      }
+    a = paramApplicationInfo;
+    b = paramList;
+    absolutePath = paramString1;
+    setName(paramString2);
+    size = -1L;
+    type = com.estrongs.fs.w.a;
+    putExtra("child_count", Integer.valueOf(paramList.size()));
+    paramApplicationInfo = new File(sourceDir);
+    if (paramApplicationInfo.exists()) {
+      lastModified = paramApplicationInfo.lastModified();
     }
-    label60:
-    while (i != 10) {
-      return;
-    }
-    a.b(a);
+  }
+  
+  public com.estrongs.fs.impl.b.d a()
+  {
+    return new com.estrongs.fs.impl.b.d(a.sourceDir, com.estrongs.fs.w.b, com.estrongs.android.pop.utils.w.a(FexApplication.a().getPackageManager(), a), a);
+  }
+  
+  public void a(long paramLong)
+  {
+    size = paramLong;
+  }
+  
+  public boolean exists()
+  {
+    return (b != null) && (b.size() > 0);
   }
 }
 

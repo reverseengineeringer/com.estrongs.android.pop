@@ -1,13 +1,19 @@
 package android.support.v4.widget;
 
-class ac
-  implements Runnable
+import android.os.Parcel;
+import android.os.Parcelable.Creator;
+
+final class ac
+  implements Parcelable.Creator<DrawerLayout.SavedState>
 {
-  ac(aa paramaa) {}
-  
-  public void run()
+  public DrawerLayout.SavedState a(Parcel paramParcel)
   {
-    a.c(0);
+    return new DrawerLayout.SavedState(paramParcel);
+  }
+  
+  public DrawerLayout.SavedState[] a(int paramInt)
+  {
+    return new DrawerLayout.SavedState[paramInt];
   }
 }
 

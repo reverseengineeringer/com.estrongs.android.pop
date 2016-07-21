@@ -1,27 +1,21 @@
 package com.estrongs.android.widget;
 
+import android.os.Handler;
+import android.os.Message;
+
 class bs
-  implements Runnable
+  extends Handler
 {
-  bs(TranslateImageView paramTranslateImageView) {}
+  private bs(SlidingDrawer paramSlidingDrawer) {}
   
-  public void run()
+  public void handleMessage(Message paramMessage)
   {
-    if ((a.isShown()) && (TranslateImageView.a(a) != TranslateImageView.b(a))) {
-      a.postInvalidate();
-    }
-    do
+    switch (what)
     {
+    default: 
       return;
-      TranslateImageView.a(a, TranslateImageView.a(a));
-      TranslateImageView.a(a, false);
-      if (TranslateImageView.c(a) != null)
-      {
-        TranslateImageView.c(a).a();
-        TranslateImageView.a(a, null);
-      }
-    } while ((TranslateImageView.b(a) != 0) || (TranslateImageView.d(a) == null));
-    TranslateImageView.d(a).a();
+    }
+    SlidingDrawer.c(a);
   }
 }
 

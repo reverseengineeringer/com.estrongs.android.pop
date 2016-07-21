@@ -1,16 +1,26 @@
 package com.estrongs.android.pop.app;
 
-import com.estrongs.fs.h;
-import com.estrongs.fs.i;
+import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.ui.notification.j;
 
 class ht
-  implements i
+  implements Preference.OnPreferenceChangeListener
 {
-  ht(hs paramhs, boolean paramBoolean) {}
+  ht(PopPreferenceActivity paramPopPreferenceActivity) {}
   
-  public boolean a(h paramh)
+  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
   {
-    return (!paramh.getName().startsWith(".")) || (a);
+    if (((Boolean)paramObject).booleanValue()) {
+      j.a(FexApplication.a()).b();
+    }
+    for (;;)
+    {
+      return true;
+      j.a(FexApplication.a()).c();
+      j.a();
+    }
   }
 }
 

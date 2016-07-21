@@ -30,7 +30,7 @@ public class VerticalViewSwitcher
   private boolean o = false;
   private boolean p = false;
   private boolean q = true;
-  private bv r = null;
+  private bw r = null;
   
   public VerticalViewSwitcher(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -44,17 +44,7 @@ public class VerticalViewSwitcher
     b = ViewConfiguration.get(getContext()).getScaledTouchSlop();
   }
   
-  private void b()
-  {
-    View localView = getChildAt(0);
-    if (localView == null) {
-      return;
-    }
-    localView.layout(localView.getLeft(), localView.getHeight() + c(l - 1), localView.getRight(), localView.getHeight() * 2 + c(l - 1));
-    p = true;
-  }
-  
-  private int c(int paramInt)
+  private int b(int paramInt)
   {
     int i1 = 0;
     if (paramInt < 0) {
@@ -68,6 +58,16 @@ public class VerticalViewSwitcher
       i1 = k;
     }
     return i1 + i2 * paramInt;
+  }
+  
+  private void b()
+  {
+    View localView = getChildAt(0);
+    if (localView == null) {
+      return;
+    }
+    localView.layout(localView.getLeft(), localView.getHeight() + b(l - 1), localView.getRight(), localView.getHeight() * 2 + b(l - 1));
+    p = true;
   }
   
   private void c()
@@ -93,7 +93,7 @@ public class VerticalViewSwitcher
     if (localView == null) {
       return;
     }
-    localView.layout(localView.getLeft(), c(l - 1), localView.getRight(), localView.getHeight() + c(l - 1));
+    localView.layout(localView.getLeft(), b(l - 1), localView.getRight(), localView.getHeight() + b(l - 1));
     o = false;
   }
   
@@ -126,7 +126,7 @@ public class VerticalViewSwitcher
       return;
     }
     d = paramInt;
-    paramInt = c(paramInt) - getScrollY();
+    paramInt = b(paramInt) - getScrollY();
     a.startScroll(0, getScrollY(), 0, paramInt, Math.abs(paramInt) * 2);
     invalidate();
   }
@@ -138,16 +138,6 @@ public class VerticalViewSwitcher
     super.addView(paramView);
     g();
     requestLayout();
-  }
-  
-  public void b(int paramInt)
-  {
-    if (paramInt == -1) {
-      return;
-    }
-    c = paramInt;
-    scrollTo(0, c(c));
-    invalidate();
   }
   
   public void computeScroll()
@@ -177,7 +167,7 @@ public class VerticalViewSwitcher
         e();
       }
       if (i2 != 0) {
-        b(i1);
+        setCurrentScreen(i1);
       }
       if (r != null) {
         r.a(c);
@@ -194,6 +184,16 @@ public class VerticalViewSwitcher
         i1 = -1;
       }
     }
+  }
+  
+  public int getCurrentChildIndex()
+  {
+    return getCurrentScreen();
+  }
+  
+  public int getCurrentScreen()
+  {
+    return c;
   }
   
   public boolean onInterceptTouchEvent(MotionEvent paramMotionEvent)
@@ -294,7 +294,7 @@ public class VerticalViewSwitcher
         }
         if ((j) || (i2 != k))
         {
-          scrollTo(0, c(c));
+          scrollTo(0, b(c));
           j = false;
         }
         return;
@@ -311,7 +311,7 @@ public class VerticalViewSwitcher
     super.onScrollChanged(paramInt1, paramInt2, paramInt3, paramInt4);
     if (r != null)
     {
-      float f1 = (paramInt2 - c(c)) / getWidth();
+      float f1 = (paramInt2 - b(c)) / getWidth();
       r.a(c, f1);
     }
   }
@@ -357,7 +357,7 @@ public class VerticalViewSwitcher
           if (e)
           {
             i1 = i4 + i3;
-            if (i1 >= c(0)) {
+            if (i1 >= b(0)) {
               break label276;
             }
             if (!o) {
@@ -383,7 +383,7 @@ public class VerticalViewSwitcher
         return true;
         i1 = 0;
         break label99;
-        if ((i1 >= c(1)) || (!p)) {
+        if ((i1 >= b(1)) || (!p)) {
           break label179;
         }
         c();
@@ -394,7 +394,7 @@ public class VerticalViewSwitcher
         if (e)
         {
           i1 = i4 + i3;
-          if (i1 <= c(l - 1)) {
+          if (i1 <= b(l - 1)) {
             break label386;
           }
           if (!p) {
@@ -414,13 +414,13 @@ public class VerticalViewSwitcher
             }
             scrollBy(0, Math.min(i1, i3));
             break;
-            if ((i1 <= c(l - 1) - k) || (!o)) {
+            if ((i1 <= b(l - 1) - k) || (!o)) {
               break label342;
             }
             e();
             break label342;
             if (o) {
-              i1 = c(l - 1) + k;
+              i1 = b(l - 1) + k;
             } else {
               i1 = getChildAt(l - 1).getBottom();
             }
@@ -514,6 +514,21 @@ public class VerticalViewSwitcher
     super.removeViewAt(paramInt);
     g();
     requestLayout();
+  }
+  
+  public void setCurrentScreen(int paramInt)
+  {
+    if (paramInt == -1) {
+      return;
+    }
+    c = paramInt;
+    scrollTo(0, b(c));
+    invalidate();
+  }
+  
+  public void setOnScreenSwitchListener(bw parambw)
+  {
+    r = parambw;
   }
 }
 

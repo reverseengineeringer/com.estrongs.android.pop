@@ -1,12 +1,12 @@
 package com.estrongs.io.archive.b;
 
-import com.estrongs.io.archive.e;
+import com.estrongs.io.archive.f;
 import java.io.OutputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 public class a
-  implements e
+  implements f
 {
   ZipOutputStream a;
   ZipEntry b = null;

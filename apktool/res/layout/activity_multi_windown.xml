@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="@color/c_es_actionbar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/abc_action_bar_default_height_material" />
+    <android.support.v7.widget.RecyclerView android:id="@id/window_recycler" android:layout_width="fill_parent" android:layout_height="@dimen/dp_0" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/container_buttons" android:background="@drawable/window_toolbar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/dp_54">
+        <TextView android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="Return" android:layout_weight="1.0" />
+        <TextView android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="New" android:layout_weight="1.0" />
+        <TextView android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="Close all" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

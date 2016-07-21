@@ -4,15 +4,16 @@ import android.os.ParcelFileDescriptor;
 import android.os.StatFs;
 import com.estrongs.a.b.s;
 import com.estrongs.android.pop.a;
-import com.estrongs.android.pop.utils.cc;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.pop.utils.cl;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bk;
 import com.estrongs.fs.FileExistException;
 import com.estrongs.fs.FileSystemException;
 import com.estrongs.fs.d;
 import com.estrongs.fs.h;
-import com.estrongs.fs.impl.local.v;
 import java.io.BufferedOutputStream;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -21,18 +22,22 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.RandomAccessFile;
 import java.io.Reader;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.zip.InflaterInputStream;
 
 public class j
 {
-  public static final String a = a.d;
+  public static final String a = a.f;
   public static final DecimalFormat b = new DecimalFormat("0.00");
   public static final DecimalFormat c = new DecimalFormat("###,###,###");
+  private static final DecimalFormat d = new DecimalFormat("0.0");
+  private static final DecimalFormat e = new DecimalFormat("#");
   
   public static long a(long paramLong)
   {
@@ -50,7 +55,7 @@ public class j
   
   public static File a(String paramString1, String paramString2)
   {
-    if ((bd.a(paramString1)) || (bd.a(paramString2)))
+    if ((bk.a(paramString1)) || (bk.a(paramString2)))
     {
       paramString2 = null;
       return paramString2;
@@ -104,16 +109,16 @@ public class j
     if (localObject != null)
     {
       localStringBuilder = new StringBuilder().append("");
-      if (((com.estrongs.fs.m)localObject).a()) {
+      if (((com.estrongs.fs.w)localObject).a()) {
         localObject = "d";
       }
     }
     for (localObject = (String)localObject;; localObject = "" + "-")
     {
-      if (!(paramh instanceof v)) {
+      if (!(paramh instanceof com.estrongs.fs.impl.local.w)) {
         break label105;
       }
-      return (String)localObject + ((v)paramh).a();
+      return (String)localObject + ((com.estrongs.fs.impl.local.w)paramh).a();
       localObject = "-";
       break;
     }
@@ -191,7 +196,7 @@ public class j
     File localFile = null;
     try
     {
-      paramFile = c(paramFile);
+      paramFile = d(paramFile);
       localFile = paramFile;
       m.a(paramString1, paramFile, paramString2);
       return;
@@ -295,16 +300,16 @@ public class j
     //   0: sipush 16384
     //   3: newarray <illegal type>
     //   5: astore 6
-    //   7: new 227	java/io/FileInputStream
+    //   7: new 237	java/io/FileInputStream
     //   10: dup
     //   11: aload_0
-    //   12: invokespecial 228	java/io/FileInputStream:<init>	(Ljava/lang/String;)V
+    //   12: invokespecial 238	java/io/FileInputStream:<init>	(Ljava/lang/String;)V
     //   15: astore 5
     //   17: aload 5
     //   19: astore_0
     //   20: aload 5
     //   22: aload 6
-    //   24: invokevirtual 231	java/io/InputStream:read	([B)I
+    //   24: invokevirtual 241	java/io/InputStream:read	([B)I
     //   27: istore_3
     //   28: iload_3
     //   29: ifle +23 -> 52
@@ -313,12 +318,12 @@ public class j
     //   36: aload 5
     //   38: astore_0
     //   39: aload_1
-    //   40: invokeinterface 234 1 0
+    //   40: invokeinterface 244 1 0
     //   45: istore 4
     //   47: iload 4
     //   49: ifeq +9 -> 58
     //   52: aload 5
-    //   54: invokestatic 236	com/estrongs/fs/util/j:a	(Ljava/io/InputStream;)V
+    //   54: invokestatic 246	com/estrongs/fs/util/j:a	(Ljava/io/InputStream;)V
     //   57: return
     //   58: aload 5
     //   60: astore_0
@@ -326,7 +331,7 @@ public class j
     //   62: aload 6
     //   64: iconst_0
     //   65: iload_3
-    //   66: invokeinterface 240 4 0
+    //   66: invokeinterface 250 4 0
     //   71: goto -54 -> 17
     //   74: astore_1
     //   75: aload 5
@@ -339,7 +344,7 @@ public class j
     //   83: aload_2
     //   84: astore_0
     //   85: aload_1
-    //   86: invokestatic 236	com/estrongs/fs/util/j:a	(Ljava/io/InputStream;)V
+    //   86: invokestatic 246	com/estrongs/fs/util/j:a	(Ljava/io/InputStream;)V
     //   89: aload_0
     //   90: athrow
     //   91: astore_1
@@ -348,9 +353,9 @@ public class j
     //   95: aload 5
     //   97: astore_0
     //   98: aload_1
-    //   99: invokevirtual 243	java/lang/Exception:printStackTrace	()V
+    //   99: invokevirtual 253	java/lang/Exception:printStackTrace	()V
     //   102: aload 5
-    //   104: invokestatic 236	com/estrongs/fs/util/j:a	(Ljava/io/InputStream;)V
+    //   104: invokestatic 246	com/estrongs/fs/util/j:a	(Ljava/io/InputStream;)V
     //   107: return
     //   108: astore_0
     //   109: aconst_null
@@ -440,27 +445,9 @@ public class j
     return paramLong1 + (paramLong2 - l);
   }
   
-  public static FileInputStream b(File paramFile)
-  {
-    if (paramFile.exists())
-    {
-      if (paramFile.isDirectory()) {
-        throw new IOException("File '" + paramFile + "' exists but is a directory");
-      }
-      if (!paramFile.canRead()) {
-        throw new IOException("File '" + paramFile + "' cannot be read");
-      }
-    }
-    else
-    {
-      throw new FileNotFoundException("File '" + paramFile + "' does not exist");
-    }
-    return new FileInputStream(paramFile);
-  }
-  
   public static String b(long paramLong)
   {
-    if ("RU".equalsIgnoreCase(cc.e()))
+    if ("RU".equalsIgnoreCase(cl.c()))
     {
       if (paramLong >= 1073741824L) {
         return "Gб";
@@ -485,12 +472,17 @@ public class j
     return "B";
   }
   
+  public static String b(File paramFile)
+  {
+    return b(paramFile, null);
+  }
+  
   public static String b(File paramFile, String paramString)
   {
     File localFile = null;
     try
     {
-      paramFile = b(paramFile);
+      paramFile = c(paramFile);
       localFile = paramFile;
       paramString = m.a(paramFile, paramString);
       return paramString;
@@ -523,35 +515,32 @@ public class j
   public static boolean b(h paramh)
   {
     paramh = paramh.getPath();
-    return (paramh == null) || ("apk://".equalsIgnoreCase(paramh)) || ("book://".equalsIgnoreCase(paramh)) || ("pic://".equalsIgnoreCase(paramh)) || ("music://".equalsIgnoreCase(paramh)) || ("video://".equalsIgnoreCase(paramh)) || (am.bg(paramh));
+    return (paramh == null) || ("apk://".equalsIgnoreCase(paramh)) || ("book://".equalsIgnoreCase(paramh)) || ("encrypt://".equalsIgnoreCase(paramh)) || ("pic://".equalsIgnoreCase(paramh)) || ("music://".equalsIgnoreCase(paramh)) || ("video://".equalsIgnoreCase(paramh)) || (ap.br(paramh));
   }
   
-  public static FileOutputStream c(File paramFile)
+  public static FileInputStream c(File paramFile)
   {
     if (paramFile.exists())
     {
       if (paramFile.isDirectory()) {
         throw new IOException("File '" + paramFile + "' exists but is a directory");
       }
-      if (!paramFile.canWrite()) {
-        throw new IOException("File '" + paramFile + "' cannot be written to");
+      if (!paramFile.canRead()) {
+        throw new IOException("File '" + paramFile + "' cannot be read");
       }
     }
     else
     {
-      File localFile = paramFile.getParentFile();
-      if ((localFile != null) && (!localFile.exists()) && (!localFile.mkdirs())) {
-        throw new IOException("File '" + paramFile + "' could not be created");
-      }
+      throw new FileNotFoundException("File '" + paramFile + "' does not exist");
     }
-    return new FileOutputStream(paramFile);
+    return new FileInputStream(paramFile);
   }
   
   public static String c(long paramLong)
   {
-    double d = paramLong;
+    double d1 = paramLong;
     paramLong = a(paramLong);
-    return b.format(d / paramLong) + " " + b(paramLong);
+    return b.format(d1 / paramLong) + " " + b(paramLong);
   }
   
   public static boolean c(h paramh)
@@ -594,6 +583,27 @@ public class j
     return true;
   }
   
+  public static FileOutputStream d(File paramFile)
+  {
+    if (paramFile.exists())
+    {
+      if (paramFile.isDirectory()) {
+        throw new IOException("File '" + paramFile + "' exists but is a directory");
+      }
+      if (!paramFile.canWrite()) {
+        throw new IOException("File '" + paramFile + "' cannot be written to");
+      }
+    }
+    else
+    {
+      File localFile = paramFile.getParentFile();
+      if ((localFile != null) && (!localFile.exists()) && (!localFile.mkdirs())) {
+        throw new IOException("File '" + paramFile + "' could not be created");
+      }
+    }
+    return new FileOutputStream(paramFile);
+  }
+  
   public static String d(long paramLong)
   {
     return c.format(paramLong);
@@ -631,6 +641,74 @@ public class j
     return true;
   }
   
+  public static String e(long paramLong)
+  {
+    double d1 = paramLong;
+    long l = paramLong / 1048576L;
+    if (l > 9999L)
+    {
+      d1 = l;
+      return d.format(d1 / 1024.0D) + " " + f(paramLong);
+    }
+    if (l > 999L)
+    {
+      d1 = l;
+      return b.format(d1 / 1024.0D) + " " + f(paramLong);
+    }
+    if (l > 1L) {
+      return e.format(l) + " " + f(paramLong);
+    }
+    if (paramLong > 1024000L) {
+      return b.format(d1 / 1048576.0D) + " " + f(paramLong);
+    }
+    if (paramLong > 1024L) {
+      return e.format(paramLong / 1024L) + " " + f(paramLong);
+    }
+    if (paramLong > 1000L) {
+      return b.format(d1 / 1024.0D) + " " + f(paramLong);
+    }
+    return e.format(paramLong) + " " + f(paramLong);
+  }
+  
+  public static String e(File paramFile)
+  {
+    if (!paramFile.exists()) {
+      return null;
+    }
+    ByteArrayOutputStream localByteArrayOutputStream;
+    try
+    {
+      int i = Long.valueOf(paramFile.length()).intValue();
+      byte[] arrayOfByte = new byte[i];
+      paramFile = new RandomAccessFile(paramFile, "r");
+      paramFile.read(arrayOfByte, 0, i);
+      paramFile.close();
+      localByteArrayOutputStream = new ByteArrayOutputStream();
+      paramFile = new InflaterInputStream(new ByteArrayInputStream(arrayOfByte));
+      arrayOfByte = new byte['Ѐ'];
+      for (;;)
+      {
+        i = paramFile.read(arrayOfByte, 0, 1024);
+        if (i <= 0) {
+          break;
+        }
+        localByteArrayOutputStream.write(arrayOfByte, 0, i);
+      }
+      return paramFile;
+    }
+    catch (Exception paramFile)
+    {
+      paramFile.printStackTrace();
+      paramFile = null;
+    }
+    for (;;)
+    {
+      paramFile.close();
+      paramFile = new String(localByteArrayOutputStream.toByteArray());
+      localByteArrayOutputStream.close();
+    }
+  }
+  
   public static String e(String paramString)
   {
     String str;
@@ -660,6 +738,33 @@ public class j
       paramString = paramString.replace(arrayOfString[i], "");
       i += 1;
     }
+  }
+  
+  public static String f(long paramLong)
+  {
+    if ("RU".equalsIgnoreCase(cl.c()))
+    {
+      if (paramLong >= 1048576000L) {
+        return "Gб";
+      }
+      if (paramLong >= 1024000L) {
+        return "Mб";
+      }
+      if (paramLong >= 1000L) {
+        return "Kб";
+      }
+      return "B";
+    }
+    if (paramLong >= 1048576000L) {
+      return "GB";
+    }
+    if (paramLong >= 1024000L) {
+      return "MB";
+    }
+    if (paramLong >= 1000L) {
+      return "KB";
+    }
+    return "B";
   }
   
   public static boolean f(String paramString)
@@ -741,7 +846,7 @@ public class j
   {
     int i = 1;
     String str2;
-    if (bd.a(paramString)) {
+    if (bk.a(paramString)) {
       str2 = null;
     }
     for (;;)

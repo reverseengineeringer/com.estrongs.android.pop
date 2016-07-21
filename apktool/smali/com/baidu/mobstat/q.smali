@@ -1,549 +1,306 @@
 .class Lcom/baidu/mobstat/q;
-.super Landroid/webkit/WebViewClient;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field private a:Ljava/lang/ref/WeakReference;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/ref/WeakReference",
-            "<",
-            "Landroid/content/Context;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private b:Landroid/webkit/WebViewClient;
+# static fields
+.field static final a:Lcom/baidu/mobstat/q;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/webkit/WebViewClient;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
+    new-instance v0, Lcom/baidu/mobstat/q;
 
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    invoke-direct {v0}, Lcom/baidu/mobstat/q;-><init>()V
 
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lcom/baidu/mobstat/q;->a:Ljava/lang/ref/WeakReference;
-
-    iput-object p2, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
+    sput-object v0, Lcom/baidu/mobstat/q;->a:Lcom/baidu/mobstat/q;
 
     return-void
 .end method
 
-.method private a(Ljava/lang/String;)V
-    .locals 6
+.method constructor <init>()V
+    .locals 0
 
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method private a(ZLandroid/content/pm/PackageInfo;Lorg/json/JSONArray;)V
+    .locals 4
+
+    if-eqz p1, :cond_0
+
+    iget-object v0, p2, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
+
+    const-string v1, "com.android."
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
     new-instance v0, Lorg/json/JSONObject;
 
-    invoke-direct {v0, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    const-string v1, "action"
+    :try_start_0
+    const-string v1, "n"
 
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    iget-object v2, p2, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
-    move-result-object v1
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    const-string v2, "obj"
+    const-string v1, "v"
 
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+    iget-object v2, p2, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
+
+    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->a:Ljava/lang/ref/WeakReference;
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    const-string v1, "f"
 
-    move-result-object v0
+    iget-wide v2, p2, Landroid/content/pm/PackageInfo;->firstInstallTime:J
 
-    check-cast v0, Landroid/content/Context;
+    invoke-virtual {v0, v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    if-nez v0, :cond_1
+    const-string v1, "l"
+
+    iget-wide v2, p2, Landroid/content/pm/PackageInfo;->lastUpdateTime:J
+
+    invoke-virtual {v0, v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+
+    invoke-virtual {p3, v0}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
+
+    goto :goto_0
+.end method
+
+.method private b(Landroid/content/Context;Z)V
+    .locals 8
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v3
+
+    if-nez v3, :cond_1
 
     :cond_0
     :goto_0
     return-void
 
     :cond_1
-    const-string v3, "onPageStart"
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    move-result v3
+    const/4 v4, 0x0
 
-    if-eqz v3, :cond_2
-
-    const-string v1, "page"
-
-    invoke-virtual {v2, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/baidu/mobstat/StatService;->onPageStart(Landroid/content/Context;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_2
-    const-string v3, "onPageEnd"
-
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    const-string v1, "page"
-
-    invoke-virtual {v2, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/baidu/mobstat/StatService;->onPageEnd(Landroid/content/Context;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_3
-    const-string v3, "onEvent"
-
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_4
-
-    const-string v1, "event_id"
-
-    invoke-virtual {v2, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v3, "label"
-
-    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "acc"
-
-    invoke-virtual {v2, v4}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
-
-    move-result v2
-
-    invoke-static {v0, v1, v3, v2}, Lcom/baidu/mobstat/StatService;->onEvent(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
-
-    goto :goto_0
-
-    :cond_4
-    const-string v3, "onEventStart"
-
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_5
-
-    const-string v1, "event_id"
-
-    invoke-virtual {v2, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v3, "label"
-
-    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v1, v2}, Lcom/baidu/mobstat/StatService;->onEventStart(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_5
-    const-string v3, "onEventEnd"
-
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_6
-
-    const-string v1, "event_id"
-
-    invoke-virtual {v2, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v3, "label"
-
-    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v1, v2}, Lcom/baidu/mobstat/StatService;->onEventEnd(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_6
-    const-string v3, "onEventDuration"
-
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const-string v1, "event_id"
-
-    invoke-virtual {v2, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v3, "label"
-
-    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "duration"
-
-    invoke-virtual {v2, v4}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
-
-    move-result-wide v4
-
-    invoke-static {v0, v1, v3, v4, v5}, Lcom/baidu/mobstat/StatService;->onEventDuration(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;J)V
-
-    goto/16 :goto_0
-.end method
-
-
-# virtual methods
-.method public doUpdateVisitedHistory(Landroid/webkit/WebView;Ljava/lang/String;Z)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    invoke-virtual {v0, p1, p2, p3}, Landroid/webkit/WebViewClient;->doUpdateVisitedHistory(Landroid/webkit/WebView;Ljava/lang/String;Z)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onFormResubmission(Landroid/webkit/WebView;Landroid/os/Message;Landroid/os/Message;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    invoke-virtual {v0, p1, p2, p3}, Landroid/webkit/WebViewClient;->onFormResubmission(Landroid/webkit/WebView;Landroid/os/Message;Landroid/os/Message;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onLoadResource(Landroid/webkit/WebView;Ljava/lang/String;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    invoke-virtual {v0, p1, p2}, Landroid/webkit/WebViewClient;->onLoadResource(Landroid/webkit/WebView;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    invoke-virtual {v0, p1, p2}, Landroid/webkit/WebViewClient;->onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    invoke-virtual {v0, p1, p2, p3}, Landroid/webkit/WebViewClient;->onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Landroid/webkit/WebViewClient;->onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onReceivedHttpAuthRequest(Landroid/webkit/WebView;Landroid/webkit/HttpAuthHandler;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Landroid/webkit/WebViewClient;->onReceivedHttpAuthRequest(Landroid/webkit/WebView;Landroid/webkit/HttpAuthHandler;Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onReceivedLoginRequest(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Landroid/webkit/WebViewClient;->onReceivedLoginRequest(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onReceivedSslError(Landroid/webkit/WebView;Landroid/webkit/SslErrorHandler;Landroid/net/http/SslError;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    invoke-virtual {v0, p1, p2, p3}, Landroid/webkit/WebViewClient;->onReceivedSslError(Landroid/webkit/WebView;Landroid/webkit/SslErrorHandler;Landroid/net/http/SslError;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onScaleChanged(Landroid/webkit/WebView;FF)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    invoke-virtual {v0, p1, p2, p3}, Landroid/webkit/WebViewClient;->onScaleChanged(Landroid/webkit/WebView;FF)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onTooManyRedirects(Landroid/webkit/WebView;Landroid/os/Message;Landroid/os/Message;)V
-    .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    invoke-virtual {v0, p1, p2, p3}, Landroid/webkit/WebViewClient;->onTooManyRedirects(Landroid/webkit/WebView;Landroid/os/Message;Landroid/os/Message;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onUnhandledKeyEvent(Landroid/webkit/WebView;Landroid/view/KeyEvent;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    invoke-virtual {v0, p1, p2}, Landroid/webkit/WebViewClient;->onUnhandledKeyEvent(Landroid/webkit/WebView;Landroid/view/KeyEvent;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public shouldInterceptRequest(Landroid/webkit/WebView;Ljava/lang/String;)Landroid/webkit/WebResourceResponse;
-    .locals 1
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    invoke-virtual {v0, p1, p2}, Landroid/webkit/WebViewClient;->shouldInterceptRequest(Landroid/webkit/WebView;Ljava/lang/String;)Landroid/webkit/WebResourceResponse;
+    :try_start_0
+    invoke-virtual {v3, v4}, Landroid/content/pm/PackageManager;->getInstalledPackages(I)Ljava/util/List;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
-    :goto_0
-    return-object v0
+    :goto_1
+    new-instance v4, Lorg/json/JSONArray;
 
-    :cond_0
-    const/4 v0, 0x0
+    invoke-direct {v4}, Lorg/json/JSONArray;-><init>()V
 
-    goto :goto_0
-.end method
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-.method public shouldOverrideKeyEvent(Landroid/webkit/WebView;Landroid/view/KeyEvent;)Z
-    .locals 1
+    move-result-object v5
 
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    invoke-virtual {v0, p1, p2}, Landroid/webkit/WebViewClient;->shouldOverrideKeyEvent(Landroid/webkit/WebView;Landroid/view/KeyEvent;)Z
+    :cond_2
+    :goto_2
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    :goto_0
-    return v0
+    if-eqz v0, :cond_4
 
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
-    .locals 2
-
-    const-string v0, "BaiduStatJSInterface"
-
-    const-string v1, "shouldOverrideUrlLoading"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :try_start_0
-    const-string v0, "UTF-8"
-
-    invoke-static {p2, v0}, Ljava/net/URLDecoder;->decode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_1
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
+    check-cast v0, Landroid/content/pm/PackageInfo;
+
+    iget-object v3, v0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    if-eqz v3, :cond_2
+
+    iget v3, v3, Landroid/content/pm/ApplicationInfo;->flags:I
+
+    and-int/lit8 v3, v3, 0x1
+
+    if-eqz v3, :cond_3
+
+    move v3, v1
+
+    :goto_3
+    if-ne p2, v3, :cond_2
+
+    invoke-direct {p0, p2, v0, v4}, Lcom/baidu/mobstat/q;->a(ZLandroid/content/pm/PackageInfo;Lorg/json/JSONArray;)V
+
+    goto :goto_2
+
+    :catch_0
+    move-exception v3
+
+    invoke-static {v3}, Lcom/baidu/mobstat/bb;->b(Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :cond_3
+    move v3, v2
+
+    goto :goto_3
+
+    :cond_4
+    invoke-virtual {v4}, Lorg/json/JSONArray;->length()I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v6
+
+    invoke-virtual {v0, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v5, "|"
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-eqz p2, :cond_5
+
+    move v0, v1
+
+    :goto_4
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ""
+
     :try_start_1
+    new-instance v1, Lorg/json/JSONObject;
+
+    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+
+    const-string v2, "app_list"
+
+    invoke-virtual {v1, v2, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    const-string v2, "meta-data"
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    invoke-virtual {v1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/baidu/mobstat/cj;->a([B)Ljava/lang/String;
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    move-result-object v0
+
+    :goto_5
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    const-string v1, "bmtj:"
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    move-result-wide v2
 
-    move-result v1
+    sget-object v1, Lcom/baidu/mobstat/x;->b:Lcom/baidu/mobstat/x;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v1, v2, v3, v0}, Lcom/baidu/mobstat/x;->a(JLjava/lang/String;)J
 
-    const/4 v1, 0x5
+    goto/16 :goto_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    :cond_5
+    move v0, v2
 
-    move-result-object v1
-
-    invoke-direct {p0, v1}, Lcom/baidu/mobstat/q;->a(Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_1 .. :try_end_1} :catch_3
-    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_2
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :catch_0
-    move-exception v0
-
-    move-object v1, v0
-
-    move-object v0, p2
-
-    :goto_1
-    invoke-static {v1}, Lcom/baidu/mobstat/util/e;->b(Ljava/lang/Throwable;)I
-
-    :cond_0
-    :goto_2
-    iget-object v1, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lcom/baidu/mobstat/q;->b:Landroid/webkit/WebViewClient;
-
-    invoke-virtual {v1, p1, v0}, Landroid/webkit/WebViewClient;->shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
-
-    move-result v0
-
-    goto :goto_0
+    goto :goto_4
 
     :catch_1
+    move-exception v1
+
+    goto :goto_5
+.end method
+
+
+# virtual methods
+.method public declared-synchronized a(Landroid/content/Context;Z)V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    invoke-direct {p0, p1, p2}, Lcom/baidu/mobstat/q;->b(Landroid/content/Context;Z)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
     move-exception v0
 
-    move-object v1, v0
+    monitor-exit p0
 
-    move-object v0, p2
-
-    :goto_3
-    invoke-static {v1}, Lcom/baidu/mobstat/util/e;->b(Ljava/lang/Throwable;)I
-
-    goto :goto_2
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :catch_2
-    move-exception v1
-
-    goto :goto_3
-
-    :catch_3
-    move-exception v1
-
-    goto :goto_1
+    throw v0
 .end method

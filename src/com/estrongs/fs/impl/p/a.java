@@ -1,105 +1,25 @@
 package com.estrongs.fs.impl.p;
 
-import com.estrongs.fs.FileSystemException;
-import com.estrongs.fs.m;
-import java.net.MalformedURLException;
-import jcifs.smb.SmbException;
-import jcifs.smb.SmbFile;
+import com.estrongs.fs.h;
+import com.estrongs.fs.y;
+import java.io.File;
 
 public class a
-  extends com.estrongs.fs.a
+  extends y
 {
-  protected boolean a = true;
-  protected boolean b = true;
-  
-  public a(SmbFile paramSmbFile, String paramString)
+  public a(h paramh)
   {
-    super(paramString);
-    paramString = paramSmbFile.getName();
-    for (;;)
-    {
-      try
-      {
-        if ((!paramSmbFile.isDirectory()) || (!paramString.endsWith("/"))) {
-          continue;
-        }
-        String str = paramString.substring(0, paramString.length() - 1);
-        paramString = str;
-      }
-      catch (SmbException paramSmbFile)
-      {
-        continue;
-        continue;
-      }
-      try
-      {
-        size = paramSmbFile.length();
-        a = paramSmbFile.canWrite();
-        b = paramSmbFile.canRead();
-        lastModified = paramSmbFile.getLastModified();
-        if (paramSmbFile.isDirectory())
-        {
-          type = m.a;
-          setName(paramString);
-          return;
-        }
-        type = m.b;
-      }
-      catch (SmbException paramSmbFile)
-      {
-        paramSmbFile.printStackTrace();
-      }
-    }
+    super(paramh);
   }
   
-  protected boolean canDelete()
+  public a(File paramFile)
   {
-    return canWrite();
+    super(paramFile);
   }
   
-  protected boolean canRead()
+  protected String a()
   {
-    return b;
-  }
-  
-  protected boolean canWrite()
-  {
-    return a;
-  }
-  
-  public boolean exists()
-  {
-    try
-    {
-      boolean bool = new SmbFile(getAbsolutePath()).exists();
-      return bool;
-    }
-    catch (SmbException localSmbException)
-    {
-      throw new FileSystemException(localSmbException);
-    }
-    catch (MalformedURLException localMalformedURLException)
-    {
-      throw new FileSystemException(localMalformedURLException);
-    }
-  }
-  
-  public void setName(String paramString)
-  {
-    int i = 0;
-    if (name != null) {
-      i = 1;
-    }
-    super.setName(paramString);
-    if ((i != 0) && (getFileType().a()))
-    {
-      if (!path.endsWith("/")) {
-        path += "/";
-      }
-      if (!absolutePath.endsWith("/")) {
-        absolutePath += "/";
-      }
-    }
+    return "pic://";
   }
 }
 

@@ -1,52 +1,32 @@
 .class Lcom/estrongs/android/ui/view/bo;
-.super Landroid/widget/LinearLayout;
+.super Landroid/os/Handler;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/view/bn;
+.field final synthetic a:Lcom/estrongs/android/ui/view/NaviListView;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/view/bn;Landroid/content/Context;)V
+.method constructor <init>(Lcom/estrongs/android/ui/view/NaviListView;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/view/bo;->a:Lcom/estrongs/android/ui/view/bn;
+    iput-object p1, p0, Lcom/estrongs/android/ui/view/bo;->a:Lcom/estrongs/android/ui/view/NaviListView;
 
-    invoke-direct {p0, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
-    .locals 2
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 1
 
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
+    invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    move-result v0
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bo;->a:Lcom/estrongs/android/ui/view/NaviListView;
 
-    const/4 v1, 0x4
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/NaviListView;->b()V
 
-    if-ne v0, v1, :cond_0
-
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bo;->a:Lcom/estrongs/android/ui/view/bn;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/bn;->b()V
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-void
 .end method

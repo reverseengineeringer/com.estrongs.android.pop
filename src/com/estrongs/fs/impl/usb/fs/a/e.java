@@ -1,6 +1,6 @@
 package com.estrongs.fs.impl.usb.fs.a;
 
-import android.util.Log;
+import com.estrongs.android.util.l;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -44,7 +44,7 @@ public class e
   static e a(com.estrongs.fs.impl.usb.driver.a parama, b paramb, c paramc)
   {
     e locale = new e(parama, paramb, paramc, null);
-    c = new a(paramc.e(), parama, paramb, paramc);
+    c = new a(paramc.f(), parama, paramb, paramc);
     locale.o();
     return locale;
   }
@@ -166,14 +166,14 @@ public class e
       else if (localf.e())
       {
         if ((!q()) && (b)) {
-          Log.w(a, "volume label in non root dir!");
+          l.d(a, "volume label in non root dir!");
         }
         l = localf.o();
         if (l == null) {
-          l = f.l();
+          l = f.m();
         }
         if (b) {
-          Log.d(a, "volume label: " + l);
+          l.b(a, "volume label: " + l);
         }
       }
       else if (localf.j())
@@ -283,7 +283,7 @@ public class e
     if (q())
     {
       if (l == null) {
-        l = f.l();
+        l = f.m();
       }
       return l;
     }
@@ -358,7 +358,7 @@ public class e
     paramString = h.a(paramString, locala);
     paramString.b(e.a(new Long[0], 1)[0].longValue());
     if (b) {
-      Log.d(a, "adding entry: " + paramString + " with short name: " + locala);
+      l.b(a, "adding entry: " + paramString + " with short name: " + locala);
     }
     a(paramString, paramString.i());
     m();
@@ -420,7 +420,7 @@ public class e
     long l1 = e.a(new Long[0], 1)[0].longValue();
     paramString.b(l1);
     if (b) {
-      Log.d(a, "adding entry: " + paramString + " with short name: " + localObject2);
+      l.b(a, "adding entry: " + paramString + " with short name: " + localObject2);
     }
     a(paramString, paramString.i());
     m();
@@ -556,7 +556,7 @@ public class e
     while (localIterator.hasNext()) {
       ((h)localIterator.next()).a((ByteBuffer)localObject);
     }
-    if (l1 % f.i() != 0L) {
+    if (l1 % f.j() != 0L) {
       ((ByteBuffer)localObject).put(new byte[32]);
     }
     ((ByteBuffer)localObject).rewind();

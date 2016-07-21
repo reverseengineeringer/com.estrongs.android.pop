@@ -3,7 +3,6 @@ package com.estrongs.android.pop;
 import android.content.ComponentName;
 import android.content.pm.PackageManager;
 import android.os.Build;
-import android.util.Log;
 import com.estrongs.android.pop.app.AudioPlayerProxyActivity;
 import com.estrongs.android.pop.app.BrowserDownloaderActivity;
 import com.estrongs.android.pop.app.ESContentChooserActivity;
@@ -14,11 +13,12 @@ import com.estrongs.android.pop.app.PopRemoteImageBrowser;
 import com.estrongs.android.pop.app.PopVideoPlayerProxyActivity;
 import com.estrongs.android.pop.app.SaveToESActivity;
 import com.estrongs.android.pop.app.compress.CompressionProxyActivity;
-import com.estrongs.android.pop.esclasses.e;
-import com.estrongs.android.pop.utils.cl;
-import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.pop.esclasses.i;
+import com.estrongs.android.pop.utils.cu;
+import com.estrongs.android.pop.view.a;
 import com.estrongs.android.pop.view.utils.u;
-import com.estrongs.android.util.am;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.l;
 import com.estrongs.fs.util.j;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -80,6 +80,8 @@ public class z
   public static boolean ar = false;
   public static boolean as = false;
   public static boolean at = false;
+  public static boolean au = false;
+  public static boolean av = false;
   public static String b = null;
   public static String c = null;
   public static boolean d = false;
@@ -125,7 +127,7 @@ public class z
         return "/sdcard";
       }
       if (paramString.equals("picture")) {
-        return "gallery://local/buckets/";
+        return "pic://";
       }
       if (paramString.equals("music")) {
         return "music://";
@@ -205,28 +207,28 @@ public class z
     if ((Build.MODEL != null) && (Build.MODEL.contains("IdeaPad"))) {
       x = true;
     }
-    if (FileExplorerActivity.e.equalsIgnoreCase("Amazon"))
+    if (a.b.equalsIgnoreCase("Amazon"))
     {
       f = false;
       P = true;
     }
-    if (FileExplorerActivity.e.equalsIgnoreCase("工信部"))
+    if (a.b.equalsIgnoreCase("工信部"))
     {
       m = true;
       w = true;
     }
     W = false;
-    if ((FileExplorerActivity.e.equalsIgnoreCase("安智")) || (FileExplorerActivity.e.equalsIgnoreCase("智汇云"))) {
+    if ((a.b.equalsIgnoreCase("Anzhi")) || (a.b.equalsIgnoreCase("Zhihuiyun"))) {
       f = false;
     }
-    if ((FileExplorerActivity.e.equalsIgnoreCase("天猫魔盒")) || (FileExplorerActivity.e.equalsIgnoreCase("Shafa")))
+    if ((a.b.equalsIgnoreCase("TmallBox")) || (a.b.equalsIgnoreCase("Shafa")))
     {
       f = false;
       ai = true;
       R = true;
       P = true;
     }
-    if (cl.d(FexApplication.a())) {
+    if (cu.d(FexApplication.a())) {
       P = true;
     }
   }
@@ -236,23 +238,23 @@ public class z
     String str2 = c(paramString);
     String str1 = str2;
     if (str2 == null) {
-      str1 = am.d(paramString);
+      str1 = ap.d(paramString);
     }
     return str1;
   }
   
   private static void b()
   {
-    label2420:
-    label2443:
-    label2466:
-    label2489:
-    label2512:
-    label2535:
-    label2558:
-    label2581:
-    label2624:
-    label2625:
+    label2471:
+    label2494:
+    label2517:
+    label2540:
+    label2563:
+    label2586:
+    label2609:
+    label2632:
+    label2675:
+    label2676:
     String str2;
     for (Object localObject1 = "/system/etc/ESOemConfig";; str2 = "/sdcard/ESOemConfig")
     {
@@ -264,13 +266,13 @@ public class z
           if (!new File("/system/etc/ESOemConfig").exists())
           {
             if (new File("/sdcard/ESOemConfig").exists()) {
-              break label2625;
+              break label2676;
             }
             localObject1 = new File(FexApplication.a().getFilesDir(), "ESOemConfig");
             if (!((File)localObject1).exists())
             {
-              if (!"影棒".equals(FileExplorerActivity.e)) {
-                break label2624;
+              if (!"Yingbang".equals(a.b)) {
+                break label2675;
               }
               j.a((File)localObject1, "{\"oem\" : \"TV\",\"home_dir\" : \"/sdcard\",\"disable_audio_player\" : true,\"disable_video_player\" : true,\"disable_es_share\" : true,\"show_albumart\" : false,\"enable_recomm\" : false,\"disable_guide\" : true,\"large_layout\" : true,\"enable_bt\" : false,\"disable_send_on_homepage\" : true,\"enable_navi_recomm\" : false,\"enable_default_web_bookmarks\" : false,\"enable_hot_pcs_res\" : false}");
               localObject1 = ((File)localObject1).getAbsolutePath();
@@ -371,7 +373,7 @@ public class z
         }
         catch (FileNotFoundException localFileNotFoundException)
         {
-          Log.d(a, "OEC Config file not found");
+          l.b(a, "OEC Config file not found");
           return;
           if (((JSONObject)localObject2).containsKey("init_windows"))
           {
@@ -549,6 +551,12 @@ public class z
           if (((JSONObject)localObject2).containsKey("disable_chromecast")) {
             at = ((Boolean)((JSONObject)localObject2).get("disable_chromecast")).booleanValue();
           }
+          if (((JSONObject)localObject2).containsKey("enable_share_audios_by_audiotype")) {
+            au = ((Boolean)((JSONObject)localObject2).get("enable_share_audios_by_audiotype")).booleanValue();
+          }
+          if (((JSONObject)localObject2).containsKey("enable_use_wma_as_ringtone")) {
+            av = ((Boolean)((JSONObject)localObject2).get("enable_use_wma_as_ringtone")).booleanValue();
+          }
           ((JSONObject)localObject2).clear();
           localFileNotFoundException.close();
           str1 = FexApplication.a().getPackageName();
@@ -557,35 +565,35 @@ public class z
           {
             ((PackageManager)localObject2).setComponentEnabledSetting(new ComponentName(str1, AudioPlayerProxyActivity.class.getName()), 2, 1);
             if (!s) {
-              break label2420;
+              break label2471;
             }
             ((PackageManager)localObject2).setComponentEnabledSetting(new ComponentName(str1, PopVideoPlayerProxyActivity.class.getName()), 2, 1);
             if (!t) {
-              break label2443;
+              break label2494;
             }
             ((PackageManager)localObject2).setComponentEnabledSetting(new ComponentName(str1, CompressionProxyActivity.class.getName()), 2, 1);
             if (!E) {
-              break label2466;
+              break label2517;
             }
             ((PackageManager)localObject2).setComponentEnabledSetting(new ComponentName(str1, PopRemoteImageBrowser.class.getName()), 2, 1);
             if (!F) {
-              break label2489;
+              break label2540;
             }
             ((PackageManager)localObject2).setComponentEnabledSetting(new ComponentName(str1, ESContentChooserActivity.class.getName()), 2, 1);
             if (!G) {
-              break label2512;
+              break label2563;
             }
             ((PackageManager)localObject2).setComponentEnabledSetting(new ComponentName(str1, ESWallPaperChooserActivity.class.getName()), 2, 1);
             if (!H) {
-              break label2535;
+              break label2586;
             }
             ((PackageManager)localObject2).setComponentEnabledSetting(new ComponentName(str1, ESRingtoneChooserActivity.class.getName()), 2, 1);
             if (!J) {
-              break label2558;
+              break label2609;
             }
             ((PackageManager)localObject2).setComponentEnabledSetting(new ComponentName(str1, ESFileSharingActivity.class.getName()), 2, 1);
             if (!T) {
-              break label2581;
+              break label2632;
             }
             ((PackageManager)localObject2).setComponentEnabledSetting(new ComponentName(str1, BrowserDownloaderActivity.class.getName()), 2, 1);
             if (!ar) {
@@ -636,7 +644,7 @@ public class z
           if (str != null) {
             try
             {
-              if ((str.equals(paramString)) && ((c == null) || (c.length() == 0) || (c.equals(e.a))))
+              if ((str.equals(paramString)) && ((c == null) || (c.length() == 0) || (c.equals(i.a))))
               {
                 localObject = b;
                 return (String)localObject;

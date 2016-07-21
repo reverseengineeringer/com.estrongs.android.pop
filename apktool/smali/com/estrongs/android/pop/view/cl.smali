@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnLongClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+.field final synthetic a:Lcom/estrongs/android/pop/app/service/b;
+
+.field final synthetic b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
+.method constructor <init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;Lcom/estrongs/android/pop/app/service/b;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/view/cl;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/view/cl;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    iput-object p2, p0, Lcom/estrongs/android/pop/view/cl;->a:Lcom/estrongs/android/pop/app/service/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,18 +26,14 @@
 
 
 # virtual methods
-.method public onLongClick(Landroid/view/View;)Z
-    .locals 3
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/cl;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/cl;->a:Lcom/estrongs/android/pop/app/service/b;
 
-    const v1, 0x7f0b0057
+    invoke-interface {v0}, Lcom/estrongs/android/pop/app/service/b;->a()V
 
-    const/4 v2, 0x0
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
-
-    const/4 v0, 0x1
-
-    return v0
+    return-void
 .end method

@@ -1,11 +1,6 @@
 package android.support.v4.view;
 
-import android.view.View;
-
-public abstract interface bz
-{
-  public abstract void a(View paramView, float paramFloat);
-}
+class bz {}
 
 /* Location:
  * Qualified Name:     android.support.v4.view.bz

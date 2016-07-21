@@ -11,3 +11,6 @@
 
 .method public abstract c()J
 .end method
+
+.method public abstract d()J
+.end method

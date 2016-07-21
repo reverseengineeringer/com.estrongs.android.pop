@@ -1,17 +1,18 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.pop.ad;
+import com.estrongs.android.ui.pcs.q;
 
 class lq
-  implements DialogInterface.OnClickListener
+  implements q
 {
-  lq(StreamingMediaPlayer paramStreamingMediaPlayer) {}
+  lq(lp paramlp) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void a(boolean paramBoolean, String paramString1, String paramString2)
   {
-    StreamingMediaPlayer.n(a);
-    a.finish();
+    if (paramString2 != null) {
+      ad.a(a.b).ah();
+    }
   }
 }
 

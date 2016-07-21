@@ -1,42 +1,16 @@
 package com.estrongs.android.pop.app.editor;
 
-import android.content.Context;
-import android.content.res.Configuration;
-import android.content.res.Resources;
-import android.view.View.OnTouchListener;
-import com.estrongs.android.pop.app.a;
-
 class ae
-  extends a
 {
-  ae(PopNoteEditor paramPopNoteEditor, View.OnTouchListener paramOnTouchListener)
-  {
-    super(paramOnTouchListener);
-  }
+  public String a;
+  public int b;
+  public int c;
   
-  public boolean a()
+  public ae(PopNoteEditor paramPopNoteEditor, String paramString, int paramInt1, int paramInt2)
   {
-    return true;
-  }
-  
-  public void b()
-  {
-    PopNoteEditor.b(a, false);
-  }
-  
-  public void c()
-  {
-    PopNoteEditor.b(a, true);
-  }
-  
-  public boolean d()
-  {
-    return la).getResources().getConfiguration().orientation == 1;
-  }
-  
-  public boolean e()
-  {
-    return true;
+    a = paramString;
+    c = paramInt1;
+    b = paramInt2;
   }
 }
 

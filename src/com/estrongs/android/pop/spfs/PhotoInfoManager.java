@@ -1,14 +1,14 @@
 package com.estrongs.android.pop.spfs;
 
 import com.estrongs.android.util.TypedMap;
-import com.estrongs.android.util.am;
+import com.estrongs.android.util.ap;
 import java.util.List;
 
 public class PhotoInfoManager
 {
   public static String addComment(String paramString1, String paramString2)
   {
-    switch (am.G(paramString1))
+    switch (ap.I(paramString1))
     {
     default: 
       return null;
@@ -26,7 +26,7 @@ public class PhotoInfoManager
   
   public static com.gmail.yuyang226.flickr.a.a addNote(String paramString, com.gmail.yuyang226.flickr.a.a parama)
   {
-    switch (am.G(paramString))
+    switch (ap.I(paramString))
     {
     default: 
       return null;
@@ -44,7 +44,7 @@ public class PhotoInfoManager
   
   public static void addPhoto(String paramString1, String paramString2)
   {
-    switch (am.G(paramString1))
+    switch (ap.I(paramString1))
     {
     default: 
       return;
@@ -54,7 +54,7 @@ public class PhotoInfoManager
   
   public static Album createAlbum(String paramString1, String paramString2, String paramString3)
   {
-    switch (am.G(paramString3))
+    switch (ap.I(paramString3))
     {
     default: 
       return null;
@@ -64,7 +64,7 @@ public class PhotoInfoManager
   
   public static void deleteComment(String paramString1, String paramString2)
   {
-    switch (am.G(paramString1))
+    switch (ap.I(paramString1))
     {
     default: 
       return;
@@ -82,7 +82,7 @@ public class PhotoInfoManager
   
   public static void deleteNote(String paramString1, String paramString2)
   {
-    switch (am.G(paramString1))
+    switch (ap.I(paramString1))
     {
     default: 
       return;
@@ -100,7 +100,7 @@ public class PhotoInfoManager
   
   public static void editComment(String paramString1, String paramString2, String paramString3)
   {
-    switch (am.G(paramString1))
+    switch (ap.I(paramString1))
     {
     default: 
       return;
@@ -118,7 +118,7 @@ public class PhotoInfoManager
   
   public static void editNote(String paramString, com.gmail.yuyang226.flickr.a.a parama)
   {
-    switch (am.G(paramString))
+    switch (ap.I(paramString))
     {
     default: 
       return;
@@ -136,7 +136,7 @@ public class PhotoInfoManager
   
   public static List<Album> getAlbums(String paramString)
   {
-    switch (am.G(paramString))
+    switch (ap.I(paramString))
     {
     default: 
       return null;
@@ -146,7 +146,7 @@ public class PhotoInfoManager
   
   public static List<Album> getAllAlbums(String paramString)
   {
-    switch (am.G(paramString))
+    switch (ap.I(paramString))
     {
     default: 
       return null;
@@ -156,7 +156,7 @@ public class PhotoInfoManager
   
   public static String getBuddyIcon(String paramString1, String paramString2)
   {
-    switch (am.G(paramString1))
+    switch (ap.I(paramString1))
     {
     default: 
       return null;
@@ -174,7 +174,7 @@ public class PhotoInfoManager
   
   public static List<com.gmail.yuyang226.flickr.a.a.a> getComments(String paramString, TypedMap paramTypedMap)
   {
-    switch (am.G(paramString))
+    switch (ap.I(paramString))
     {
     default: 
       return null;
@@ -192,7 +192,7 @@ public class PhotoInfoManager
   
   public static String getPhotoExtension(String paramString)
   {
-    switch (am.G(paramString))
+    switch (ap.I(paramString))
     {
     default: 
       return null;
@@ -210,7 +210,7 @@ public class PhotoInfoManager
   
   public static SPFileInfo getPhotoInfo(String paramString)
   {
-    switch (am.G(paramString))
+    switch (ap.I(paramString))
     {
     default: 
       return null;
@@ -233,7 +233,7 @@ public class PhotoInfoManager
   
   public static void removePhoto(String paramString1, String paramString2)
   {
-    switch (am.G(paramString1))
+    switch (ap.I(paramString1))
     {
     default: 
       return;
@@ -243,7 +243,7 @@ public class PhotoInfoManager
   
   public static void setMeta(String paramString1, String paramString2, String paramString3)
   {
-    switch (am.G(paramString1))
+    switch (ap.I(paramString1))
     {
     default: 
       return;
@@ -261,7 +261,7 @@ public class PhotoInfoManager
   
   public static void setPerms(String paramString, TypedMap paramTypedMap)
   {
-    switch (am.G(paramString))
+    switch (ap.I(paramString))
     {
     default: 
       return;
@@ -279,7 +279,7 @@ public class PhotoInfoManager
   
   public static void setTags(String paramString1, String paramString2)
   {
-    switch (am.G(paramString1))
+    switch (ap.I(paramString1))
     {
     default: 
       return;

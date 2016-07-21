@@ -27,11 +27,11 @@
 
     new-instance v0, Landroid/util/SparseArray;
 
-    const/16 v1, 0x48f
+    const/16 v1, 0x4c7
 
     invoke-direct {v0, v1}, Landroid/util/SparseArray;-><init>(I)V
 
-    const v1, 0x7f0b0020
+    const v1, 0x7f080280
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -39,7 +39,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b034b
+    const v1, 0x7f08032f
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -47,7 +47,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b016b
+    const v1, 0x7f08029e
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -55,7 +55,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0094
+    const v1, 0x7f0803e1
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -63,7 +63,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0374
+    const v1, 0x7f08049c
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -71,7 +71,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0449
+    const v1, 0x7f080411
 
     const/4 v2, 0x5
 
@@ -81,7 +81,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00b5
+    const v1, 0x7f08042e
 
     const/4 v2, 0x6
 
@@ -91,7 +91,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0034
+    const v1, 0x7f08054c
 
     const/4 v2, 0x7
 
@@ -101,7 +101,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b025e
+    const v1, 0x7f080587
 
     const/16 v2, 0x8
 
@@ -111,7 +111,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01e6
+    const v1, 0x7f080634
 
     const/16 v2, 0x9
 
@@ -121,7 +121,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0264
+    const v1, 0x7f080449
 
     const/16 v2, 0xa
 
@@ -131,7 +131,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0340
+    const v1, 0x7f080742
 
     const/16 v2, 0xb
 
@@ -141,7 +141,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b025c
+    const v1, 0x7f08066c
 
     const/16 v2, 0xc
 
@@ -151,7 +151,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03ee
+    const v1, 0x7f08042c
 
     const/16 v2, 0xd
 
@@ -161,7 +161,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0427
+    const v1, 0x7f0801f9
 
     const/16 v2, 0xe
 
@@ -171,7 +171,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00d8
+    const v1, 0x7f08033c
 
     const/16 v2, 0xf
 
@@ -181,7 +181,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b036b
+    const v1, 0x7f0805c9
 
     const/16 v2, 0x10
 
@@ -191,7 +191,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0243
+    const v1, 0x7f080285
 
     const/16 v2, 0x11
 
@@ -201,7 +201,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b023f
+    const v1, 0x7f0804f0
 
     const/16 v2, 0x12
 
@@ -211,7 +211,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00c2
+    const v1, 0x7f080180
 
     const/16 v2, 0x13
 
@@ -221,7 +221,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0323
+    const v1, 0x7f08019d
 
     const/16 v2, 0x14
 
@@ -231,7 +231,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0402
+    const v1, 0x7f080703
 
     const/16 v2, 0x15
 
@@ -241,7 +241,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b029b
+    const v1, 0x7f080519
 
     const/16 v2, 0x16
 
@@ -251,7 +251,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0455
+    const v1, 0x7f08071e
 
     const/16 v2, 0x17
 
@@ -261,7 +261,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0193
+    const v1, 0x7f0802ad
 
     const/16 v2, 0x18
 
@@ -271,7 +271,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b002d
+    const v1, 0x7f0805b6
 
     const/16 v2, 0x19
 
@@ -281,7 +281,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03bf
+    const v1, 0x7f0802e2
 
     const/16 v2, 0x1a
 
@@ -291,17 +291,47 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0194
+    const v1, 0x7f0c000d
 
-    const/16 v2, 0x1b
+    const/4 v2, 0x7
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-array v2, v2, [Ljava/lang/String;
 
-    move-result-object v2
+    const-string v3, "\u0412\u0441\u0438\u0447\u043a\u0438"
+
+    aput-object v3, v2, v5
+
+    const-string v3, "0 - 100 KB"
+
+    aput-object v3, v2, v6
+
+    const-string v3, "100KB - 1 MB"
+
+    aput-object v3, v2, v7
+
+    const-string v3, "1 MB - 16 MB"
+
+    aput-object v3, v2, v8
+
+    const-string v3, "16 MB - 128 MB"
+
+    aput-object v3, v2, v9
+
+    const/4 v3, 0x5
+
+    const-string v4, "> 128 MB"
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x6
+
+    const-string v4, "\u0412\u044a\u0432\u0435\u0434\u0435\u0442\u0435"
+
+    aput-object v4, v2, v3
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01f0
+    const v1, 0x7f08045f
 
     const/16 v2, 0x1c
 
@@ -311,7 +341,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0300
+    const v1, 0x7f0805b0
 
     const/16 v2, 0x1d
 
@@ -321,7 +351,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b033f
+    const v1, 0x7f0802d0
 
     const/16 v2, 0x1e
 
@@ -331,7 +361,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0429
+    const v1, 0x7f080594
 
     const/16 v2, 0x1f
 
@@ -341,7 +371,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0414
+    const v1, 0x7f0801ac
 
     const/16 v2, 0x20
 
@@ -351,7 +381,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0229
+    const v1, 0x7f0805c0
 
     const/16 v2, 0x21
 
@@ -361,7 +391,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01cc
+    const v1, 0x7f080513
 
     const/16 v2, 0x22
 
@@ -371,7 +401,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b001a
+    const v1, 0x7f080566
 
     const/16 v2, 0x23
 
@@ -381,7 +411,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b010c
+    const v1, 0x7f080722
 
     const/16 v2, 0x24
 
@@ -391,7 +421,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b006c
+    const v1, 0x7f08055d
 
     const/16 v2, 0x25
 
@@ -401,7 +431,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b045f
+    const v1, 0x7f0804f4
 
     const/16 v2, 0x26
 
@@ -411,7 +441,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02f6
+    const v1, 0x7f080728
 
     const/16 v2, 0x27
 
@@ -421,7 +451,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00d2
+    const v1, 0x7f08058d
 
     const/16 v2, 0x28
 
@@ -431,7 +461,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b005f
+    const v1, 0x7f080320
 
     const/16 v2, 0x29
 
@@ -441,7 +471,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b016f
+    const v1, 0x7f080607
 
     const/16 v2, 0x2a
 
@@ -451,7 +481,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b008b
+    const v1, 0x7f080398
 
     const/16 v2, 0x2b
 
@@ -461,7 +491,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b006f
+    const v1, 0x7f080440
 
     const/16 v2, 0x2c
 
@@ -471,7 +501,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b020b
+    const v1, 0x7f080452
 
     const/16 v2, 0x2d
 
@@ -481,7 +511,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0216
+    const v1, 0x7f08051c
 
     const/16 v2, 0x2e
 
@@ -491,7 +521,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0174
+    const v1, 0x7f080297
 
     const/16 v2, 0x2f
 
@@ -501,7 +531,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0069
+    const v1, 0x7f08050b
 
     const/16 v2, 0x30
 
@@ -511,7 +541,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b031d
+    const v1, 0x7f080427
 
     const/16 v2, 0x31
 
@@ -521,7 +551,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01a2
+    const v1, 0x7f0801ae
 
     const/16 v2, 0x32
 
@@ -531,7 +561,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03ab
+    const v1, 0x7f080260
 
     const/16 v2, 0x33
 
@@ -541,7 +571,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0237
+    const v1, 0x7f0802c3
 
     const/16 v2, 0x34
 
@@ -551,7 +581,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b037a
+    const v1, 0x7f080605
 
     const/16 v2, 0x35
 
@@ -561,7 +591,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b035d
+    const v1, 0x7f080348
 
     const/16 v2, 0x36
 
@@ -571,7 +601,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02e3
+    const v1, 0x7f08063b
 
     const/16 v2, 0x37
 
@@ -581,7 +611,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02ad
+    const v1, 0x7f080558
 
     const/16 v2, 0x38
 
@@ -591,7 +621,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b026c
+    const v1, 0x7f08062e
 
     const/16 v2, 0x39
 
@@ -601,7 +631,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0377
+    const v1, 0x7f08022f
 
     const/16 v2, 0x3a
 
@@ -611,7 +641,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02e4
+    const v1, 0x7f08043a
 
     const/16 v2, 0x3b
 
@@ -621,7 +651,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b008d
+    const v1, 0x7f080004
 
     const/16 v2, 0x3c
 
@@ -631,17 +661,21 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00c8
+    const v1, 0x7f0c0009
 
-    const/16 v2, 0x3d
+    new-array v2, v7, [Ljava/lang/String;
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const-string v3, "\u0421\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043d\u043e \u0437\u0430 Android\n(\u0437\u0430 MMS, Gmail,\u2026)"
 
-    move-result-object v2
+    aput-object v3, v2, v5
+
+    const-string v3, "\u041a\u0430\u0442\u043e \u0444\u0430\u0439\u043b\n(\u043e\u043f\u0438\u0442\u0430\u0439\u0442\u0435 \u0442\u043e\u0432\u0430, \u0430\u043a\u043e \u043f\u043e-\u0433\u043e\u0440\u043d\u043e\u0442\u043e \u043d\u0435 \u0440\u0430\u0431\u043e\u0442\u0438)"
+
+    aput-object v3, v2, v6
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0298
+    const v1, 0x7f0802bb
 
     const/16 v2, 0x3e
 
@@ -651,7 +685,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03a9
+    const v1, 0x7f08028f
 
     const/16 v2, 0x3f
 
@@ -661,7 +695,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03f5
+    const v1, 0x7f080256
 
     const/16 v2, 0x40
 
@@ -671,7 +705,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b023d
+    const v1, 0x7f08059b
 
     const/16 v2, 0x41
 
@@ -681,7 +715,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b017e
+    const v1, 0x7f0803f2
 
     const/16 v2, 0x42
 
@@ -691,7 +725,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0057
+    const v1, 0x7f08060b
 
     const/16 v2, 0x43
 
@@ -701,7 +735,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01cf
+    const v1, 0x7f0801c4
 
     const/16 v2, 0x44
 
@@ -711,7 +745,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b007e
+    const v1, 0x7f0800b2
 
     const/16 v2, 0x45
 
@@ -721,7 +755,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b010b
+    const v1, 0x7f080487
 
     const/16 v2, 0x46
 
@@ -731,7 +765,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b041a
+    const v1, 0x7f080714
 
     const/16 v2, 0x47
 
@@ -741,7 +775,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02ef
+    const v1, 0x7f080694
 
     const/16 v2, 0x48
 
@@ -751,7 +785,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0038
+    const v1, 0x7f080318
 
     const/16 v2, 0x49
 
@@ -761,7 +795,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0253
+    const v1, 0x7f08042d
 
     const/16 v2, 0x4a
 
@@ -771,7 +805,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b035e
+    const v1, 0x7f080750
 
     const/16 v2, 0x4b
 
@@ -781,7 +815,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b031c
+    const v1, 0x7f0806ff
 
     const/16 v2, 0x4c
 
@@ -791,7 +825,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02f0
+    const v1, 0x7f08038e
 
     const/16 v2, 0x4d
 
@@ -801,7 +835,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b035c
+    const v1, 0x7f0803db
 
     const/16 v2, 0x4e
 
@@ -811,7 +845,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0255
+    const v1, 0x7f080344
 
     const/16 v2, 0x4f
 
@@ -821,7 +855,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b015e
+    const v1, 0x7f0804a2
 
     const/16 v2, 0x50
 
@@ -831,7 +865,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02a4
+    const v1, 0x7f0803a1
 
     const/16 v2, 0x51
 
@@ -841,7 +875,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0383
+    const v1, 0x7f08009f
 
     const/16 v2, 0x52
 
@@ -851,7 +885,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b005b
+    const v1, 0x7f080541
 
     const/16 v2, 0x53
 
@@ -861,7 +895,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0233
+    const v1, 0x7f0800c0
 
     const/16 v2, 0x54
 
@@ -871,7 +905,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02fa
+    const v1, 0x7f0806b0
 
     const/16 v2, 0x55
 
@@ -881,7 +915,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0441
+    const v1, 0x7f080667
 
     const/16 v2, 0x56
 
@@ -891,7 +925,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0097
+    const v1, 0x7f080597
 
     const/16 v2, 0x57
 
@@ -901,7 +935,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0248
+    const v1, 0x7f0800c2
 
     const/16 v2, 0x58
 
@@ -911,7 +945,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01e3
+    const v1, 0x7f080560
 
     const/16 v2, 0x59
 
@@ -921,7 +955,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03e1
+    const v1, 0x7f080678
 
     const/16 v2, 0x5a
 
@@ -931,17 +965,25 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0153
+    const v1, 0x7f0c0004
 
-    const/16 v2, 0x5b
+    new-array v2, v8, [Ljava/lang/String;
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const-string v3, "DOS Terminators - CR/LF"
 
-    move-result-object v2
+    aput-object v3, v2, v5
+
+    const-string v3, "UNIX Terminators - LF"
+
+    aput-object v3, v2, v6
+
+    const-string v3, "MAC Terminators - CR"
+
+    aput-object v3, v2, v7
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0208
+    const v1, 0x7f0805c5
 
     const/16 v2, 0x5c
 
@@ -951,7 +993,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02d4
+    const v1, 0x7f0801de
 
     const/16 v2, 0x5d
 
@@ -961,7 +1003,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0123
+    const v1, 0x7f080099
 
     const/16 v2, 0x5e
 
@@ -971,7 +1013,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0190
+    const v1, 0x7f0803d4
 
     const/16 v2, 0x5f
 
@@ -981,7 +1023,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0077
+    const v1, 0x7f08072c
 
     const/16 v2, 0x60
 
@@ -991,7 +1033,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03e4
+    const v1, 0x7f0805fd
 
     const/16 v2, 0x61
 
@@ -1001,7 +1043,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0205
+    const v1, 0x7f080464
 
     const/16 v2, 0x62
 
@@ -1011,7 +1053,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03f7
+    const v1, 0x7f0803c5
 
     const/16 v2, 0x63
 
@@ -1021,7 +1063,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02ee
+    const v1, 0x7f08064a
 
     const/16 v2, 0x64
 
@@ -1031,7 +1073,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03d3
+    const v1, 0x7f0801f4
 
     const/16 v2, 0x65
 
@@ -1041,7 +1083,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03a3
+    const v1, 0x7f0805a7
 
     const/16 v2, 0x66
 
@@ -1051,7 +1093,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b012f
+    const v1, 0x7f0806df
 
     const/16 v2, 0x67
 
@@ -1061,7 +1103,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00db
+    const v1, 0x7f0801b2
 
     const/16 v2, 0x68
 
@@ -1071,7 +1113,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0284
+    const v1, 0x7f0804a3
 
     const/16 v2, 0x69
 
@@ -1081,17 +1123,25 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0333
+    const/high16 v1, 0x7f0c0000
 
-    const/16 v2, 0x6a
+    new-array v2, v8, [Ljava/lang/String;
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const-string v3, "\u0418\u043c\u0435"
 
-    move-result-object v2
+    aput-object v3, v2, v5
+
+    const-string v3, "\u0422\u0438\u043f"
+
+    aput-object v3, v2, v6
+
+    const-string v3, "\u0420\u0430\u0437\u043c\u0435\u0440"
+
+    aput-object v3, v2, v7
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0310
+    const v1, 0x7f080234
 
     const/16 v2, 0x6b
 
@@ -1101,7 +1151,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0378
+    const v1, 0x7f080556
 
     const/16 v2, 0x6c
 
@@ -1111,7 +1161,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00bf
+    const v1, 0x7f08042a
 
     const/16 v2, 0x6d
 
@@ -1121,7 +1171,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b046d
+    const v1, 0x7f08036f
 
     const/16 v2, 0x6e
 
@@ -1131,7 +1181,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00f7
+    const v1, 0x7f08039c
 
     const/16 v2, 0x6f
 
@@ -1141,7 +1191,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0023
+    const v1, 0x7f0802c7
 
     const/16 v2, 0x70
 
@@ -1151,7 +1201,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0428
+    const v1, 0x7f08014f
 
     const/16 v2, 0x71
 
@@ -1161,7 +1211,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01d6
+    const v1, 0x7f080145
 
     const/16 v2, 0x72
 
@@ -1171,7 +1221,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0241
+    const v1, 0x7f0805f5
 
     const/16 v2, 0x73
 
@@ -1181,7 +1231,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03e6
+    const v1, 0x7f08040c
 
     const/16 v2, 0x74
 
@@ -1191,7 +1241,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b023b
+    const v1, 0x7f0805a9
 
     const/16 v2, 0x75
 
@@ -1201,7 +1251,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0130
+    const v1, 0x7f080539
 
     const/16 v2, 0x76
 
@@ -1211,7 +1261,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0046
+    const v1, 0x7f080326
 
     const/16 v2, 0x77
 
@@ -1221,7 +1271,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b002b
+    const v1, 0x7f08015c
 
     const/16 v2, 0x78
 
@@ -1231,7 +1281,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b006d
+    const v1, 0x7f0806c5
 
     const/16 v2, 0x79
 
@@ -1241,7 +1291,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03f2
+    const v1, 0x7f08017d
 
     const/16 v2, 0x7a
 
@@ -1251,7 +1301,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0136
+    const v1, 0x7f0805b2
 
     const/16 v2, 0x7b
 
@@ -1261,7 +1311,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b024d
+    const v1, 0x7f08063c
 
     const/16 v2, 0x7c
 
@@ -1271,7 +1321,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03fc
+    const v1, 0x7f08062b
 
     const/16 v2, 0x7d
 
@@ -1281,7 +1331,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0453
+    const v1, 0x7f080588
 
     const/16 v2, 0x7e
 
@@ -1291,7 +1341,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00c3
+    const v1, 0x7f080291
 
     const/16 v2, 0x7f
 
@@ -1301,7 +1351,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b035b
+    const v1, 0x7f0803ae
 
     const/16 v2, 0x80
 
@@ -1311,7 +1361,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0162
+    const v1, 0x7f080349
 
     const/16 v2, 0x81
 
@@ -1321,7 +1371,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02ff
+    const v1, 0x7f0803e6
 
     const/16 v2, 0x82
 
@@ -1331,7 +1381,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03dc
+    const v1, 0x7f080635
 
     const/16 v2, 0x83
 
@@ -1341,7 +1391,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0096
+    const v1, 0x7f0805e7
 
     const/16 v2, 0x84
 
@@ -1351,7 +1401,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02e9
+    const v1, 0x7f08057d
 
     const/16 v2, 0x85
 
@@ -1361,7 +1411,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b021c
+    const v1, 0x7f0805a2
 
     const/16 v2, 0x86
 
@@ -1371,7 +1421,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01d9
+    const v1, 0x7f0803f0
 
     const/16 v2, 0x87
 
@@ -1381,7 +1431,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02c2
+    const v1, 0x7f08015e
 
     const/16 v2, 0x88
 
@@ -1391,7 +1441,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b019c
+    const v1, 0x7f080643
 
     const/16 v2, 0x89
 
@@ -1401,7 +1451,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03a1
+    const v1, 0x7f0802ec
 
     const/16 v2, 0x8a
 
@@ -1411,7 +1461,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0198
+    const v1, 0x7f080284
 
     const/16 v2, 0x8b
 
@@ -1421,7 +1471,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0450
+    const v1, 0x7f080743
 
     const/16 v2, 0x8c
 
@@ -1431,7 +1481,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b004d
+    const v1, 0x7f080506
 
     const/16 v2, 0x8d
 
@@ -1441,7 +1491,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b023c
+    const v1, 0x7f080295
 
     const/16 v2, 0x8e
 
@@ -1451,7 +1501,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0345
+    const v1, 0x7f08047c
 
     const/16 v2, 0x8f
 
@@ -1461,7 +1511,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0022
+    const v1, 0x7f08014b
 
     const/16 v2, 0x90
 
@@ -1471,7 +1521,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02de
+    const v1, 0x7f0803e9
 
     const/16 v2, 0x91
 
@@ -1481,7 +1531,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0059
+    const v1, 0x7f080481
 
     const/16 v2, 0x92
 
@@ -1491,7 +1541,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0324
+    const v1, 0x7f0804f1
 
     const/16 v2, 0x93
 
@@ -1501,7 +1551,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0335
+    const v1, 0x7f0800f4
 
     const/16 v2, 0x94
 
@@ -1511,7 +1561,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0164
+    const v1, 0x7f080632
 
     const/16 v2, 0x95
 
@@ -1521,47 +1571,17 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f07000e
+    const v1, 0x7f0806b6
 
-    const/4 v2, 0x7
+    const/16 v2, 0x96
 
-    new-array v2, v2, [Ljava/lang/String;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-string v3, "Auto"
-
-    aput-object v3, v2, v5
-
-    const-string v3, "\u09ac\u09be\u0987\u09a1\u09c1"
-
-    aput-object v3, v2, v6
-
-    const-string v3, "\u0997\u09c1\u0997\u09b2"
-
-    aput-object v3, v2, v7
-
-    const-string v3, "\u0987\u09af\u09bc\u09be\u09b9\u09c1"
-
-    aput-object v3, v2, v8
-
-    const-string v3, "\u0987\u09af\u09bc\u09be\u09a8\u09a1\u09c7\u0995\u09cd\u09b8"
-
-    aput-object v3, v2, v9
-
-    const/4 v3, 0x5
-
-    const-string v4, "\u09a8\u09be\u09ad\u09c7\u09b0"
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x6
-
-    const-string v4, "\u0987\u09b8\u09b2\u09be\u09ae"
-
-    aput-object v4, v2, v3
+    move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0479
+    const v1, 0x7f0806c1
 
     const/16 v2, 0x97
 
@@ -1571,7 +1591,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00fb
+    const v1, 0x7f08049a
 
     const/16 v2, 0x98
 
@@ -1581,7 +1601,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00a8
+    const v1, 0x7f080704
 
     const/16 v2, 0x99
 
@@ -1591,7 +1611,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0177
+    const v1, 0x7f0802d7
 
     const/16 v2, 0x9a
 
@@ -1601,7 +1621,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b034e
+    const v1, 0x7f080222
 
     const/16 v2, 0x9b
 
@@ -1611,7 +1631,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b018c
+    const v1, 0x7f0800a6
 
     const/16 v2, 0x9c
 
@@ -1621,7 +1641,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01fd
+    const v1, 0x7f0806a1
 
     const/16 v2, 0x9d
 
@@ -1631,7 +1651,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0124
+    const v1, 0x7f0806fe
 
     const/16 v2, 0x9e
 
@@ -1641,7 +1661,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0108
+    const v1, 0x7f08058f
 
     const/16 v2, 0x9f
 
@@ -1651,7 +1671,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02e6
+    const v1, 0x7f080568
 
     const/16 v2, 0xa0
 
@@ -1661,7 +1681,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b022b
+    const v1, 0x7f0806b5
 
     const/16 v2, 0xa1
 
@@ -1671,7 +1691,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03d4
+    const v1, 0x7f08043f
 
     const/16 v2, 0xa2
 
@@ -1681,7 +1701,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0147
+    const v1, 0x7f0803d8
 
     const/16 v2, 0xa3
 
@@ -1691,7 +1711,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03cf
+    const v1, 0x7f08007f
 
     const/16 v2, 0xa4
 
@@ -1701,7 +1721,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02f5
+    const v1, 0x7f0802d3
 
     const/16 v2, 0xa5
 
@@ -1711,7 +1731,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03af
+    const v1, 0x7f0805d0
 
     const/16 v2, 0xa6
 
@@ -1721,7 +1741,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0165
+    const v1, 0x7f080402
 
     const/16 v2, 0xa7
 
@@ -1731,7 +1751,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00de
+    const v1, 0x7f08054a
 
     const/16 v2, 0xa8
 
@@ -1741,7 +1761,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0120
+    const v1, 0x7f08025e
 
     const/16 v2, 0xa9
 
@@ -1751,7 +1771,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b009d
+    const v1, 0x7f080589
 
     const/16 v2, 0xaa
 
@@ -1761,7 +1781,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b026d
+    const v1, 0x7f0801c5
 
     const/16 v2, 0xab
 
@@ -1771,7 +1791,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00a2
+    const v1, 0x7f080609
 
     const/16 v2, 0xac
 
@@ -1781,7 +1801,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01f2
+    const v1, 0x7f080120
 
     const/16 v2, 0xad
 
@@ -1791,7 +1811,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0238
+    const v1, 0x7f080429
 
     const/16 v2, 0xae
 
@@ -1801,7 +1821,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03a7
+    const v1, 0x7f0800ad
 
     const/16 v2, 0xaf
 
@@ -1811,7 +1831,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0353
+    const v1, 0x7f080619
 
     const/16 v2, 0xb0
 
@@ -1821,7 +1841,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02e0
+    const v1, 0x7f08007b
 
     const/16 v2, 0xb1
 
@@ -1831,7 +1851,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b043e
+    const v1, 0x7f080651
 
     const/16 v2, 0xb2
 
@@ -1841,7 +1861,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03f9
+    const v1, 0x7f08015d
 
     const/16 v2, 0xb3
 
@@ -1851,7 +1871,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0128
+    const v1, 0x7f080179
 
     const/16 v2, 0xb4
 
@@ -1861,7 +1881,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0234
+    const v1, 0x7f080747
 
     const/16 v2, 0xb5
 
@@ -1871,7 +1891,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0387
+    const v1, 0x7f08056f
 
     const/16 v2, 0xb6
 
@@ -1881,7 +1901,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0312
+    const v1, 0x7f080514
 
     const/16 v2, 0xb7
 
@@ -1891,7 +1911,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0121
+    const v1, 0x7f0800c7
 
     const/16 v2, 0xb8
 
@@ -1901,7 +1921,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0347
+    const v1, 0x7f080097
 
     const/16 v2, 0xb9
 
@@ -1911,7 +1931,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0266
+    const v1, 0x7f08032a
 
     const/16 v2, 0xba
 
@@ -1921,7 +1941,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b044c
+    const v1, 0x7f080085
 
     const/16 v2, 0xbb
 
@@ -1931,7 +1951,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01c7
+    const v1, 0x7f080103
 
     const/16 v2, 0xbc
 
@@ -1941,17 +1961,29 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0278
+    const v1, 0x7f0c0017
 
-    const/16 v2, 0xbd
+    new-array v2, v9, [Ljava/lang/String;
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const-string v3, "\u0411\u0435\u0437 \u043a\u043e\u043c\u043f\u0440\u0435\u0441\u0438\u044f"
 
-    move-result-object v2
+    aput-object v3, v2, v5
+
+    const-string v3, "\u0411\u044a\u0440\u0437\u043e"
+
+    aput-object v3, v2, v6
+
+    const-string v3, "\u0421\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043d\u043e"
+
+    aput-object v3, v2, v7
+
+    const-string v3, "\u041d\u0430\u0439-\u0434\u043e\u0431\u0440\u043e"
+
+    aput-object v3, v2, v8
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0107
+    const v1, 0x7f0804fa
 
     const/16 v2, 0xbe
 
@@ -1961,7 +1993,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0487
+    const v1, 0x7f0800fa
 
     const/16 v2, 0xbf
 
@@ -1971,7 +2003,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0385
+    const v1, 0x7f080532
 
     const/16 v2, 0xc0
 
@@ -1981,7 +2013,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0161
+    const v1, 0x7f080075
 
     const/16 v2, 0xc1
 
@@ -1991,7 +2023,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b025a
+    const v1, 0x7f0805ac
 
     const/16 v2, 0xc2
 
@@ -2001,7 +2033,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0210
+    const v1, 0x7f0806bd
 
     const/16 v2, 0xc3
 
@@ -2011,65 +2043,17 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f070002
+    const v1, 0x7f0800b6
 
-    const/16 v2, 0xa
+    const/16 v2, 0xc4
 
-    new-array v2, v2, [Ljava/lang/String;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-string v3, ""
-
-    aput-object v3, v2, v5
-
-    const-string v3, "\u09b8\u09cd\u0995\u09cd\u09af\u09be\u09a8 \u0995\u09b0\u09be ..."
-
-    aput-object v3, v2, v6
-
-    const-string v3, "\u09b8\u0982\u09af\u09c1\u0995\u09cd\u09a4 \u09b9\u099a\u09cd\u099b\u09c7 ..."
-
-    aput-object v3, v2, v7
-
-    const-string v3, "\u09aa\u09cd\u09b0\u09ae\u09be\u09a3 \u0995\u09b0\u09be \u09b9\u099a\u09cd\u099b\u09c7 ..."
-
-    aput-object v3, v2, v8
-
-    const-string v3, "Ip \u09a0\u09bf\u0995\u09be\u09a8\u09be \u09aa\u09cd\u09b0\u09be\u09aa\u09cd\u09a4 \u0995\u09b0\u09be\u09b0 \u09aa\u09a6\u09cd\u09a7\u09a4\u09bf ..."
-
-    aput-object v3, v2, v9
-
-    const/4 v3, 0x5
-
-    const-string v4, "\u09b8\u0982\u09af\u09c1\u0995\u09cd\u09a4"
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x6
-
-    const-string v4, "\u09a8\u09bf\u09b2\u09ae\u09cd\u09ac\u09bf\u09a4"
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x7
-
-    const-string v4, "... \u09b8\u0982\u09af\u09cb\u0997 \u09ac\u09bf\u099a\u09cd\u099b\u09bf\u09a8\u09cd\u09a8"
-
-    aput-object v4, v2, v3
-
-    const/16 v3, 0x8
-
-    const-string v4, "\u09b8\u0982\u09af\u09cb\u0997 \u09ac\u09bf\u099a\u09cd\u099b\u09bf\u09a8\u09cd\u09a8"
-
-    aput-object v4, v2, v3
-
-    const/16 v3, 0x9
-
-    const-string v4, "\u09b8\u0982\u09af\u09cb\u0997 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5"
-
-    aput-object v4, v2, v3
+    move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0182
+    const v1, 0x7f080540
 
     const/16 v2, 0xc5
 
@@ -2079,7 +2063,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b020a
+    const v1, 0x7f08019f
 
     const/16 v2, 0xc6
 
@@ -2089,7 +2073,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0413
+    const v1, 0x7f08047d
 
     const/16 v2, 0xc7
 
@@ -2099,7 +2083,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0111
+    const v1, 0x7f080343
 
     const/16 v2, 0xc8
 
@@ -2109,7 +2093,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0119
+    const v1, 0x7f08047b
 
     const/16 v2, 0xc9
 
@@ -2119,7 +2103,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0036
+    const v1, 0x7f0804a9
 
     const/16 v2, 0xca
 
@@ -2129,7 +2113,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03ed
+    const v1, 0x7f08006d
 
     const/16 v2, 0xcb
 
@@ -2139,7 +2123,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02a1
+    const v1, 0x7f08012b
 
     const/16 v2, 0xcc
 
@@ -2149,7 +2133,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03ef
+    const v1, 0x7f08055a
 
     const/16 v2, 0xcd
 
@@ -2159,7 +2143,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b047c
+    const v1, 0x7f080365
 
     const/16 v2, 0xce
 
@@ -2169,7 +2153,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00af
+    const v1, 0x7f08016c
 
     const/16 v2, 0xcf
 
@@ -2179,7 +2163,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0473
+    const v1, 0x7f08046b
 
     const/16 v2, 0xd0
 
@@ -2189,7 +2173,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0150
+    const v1, 0x7f080596
 
     const/16 v2, 0xd1
 
@@ -2199,7 +2183,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00b9
+    const v1, 0x7f080555
 
     const/16 v2, 0xd2
 
@@ -2209,7 +2193,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0463
+    const v1, 0x7f080515
 
     const/16 v2, 0xd3
 
@@ -2219,7 +2203,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02d2
+    const v1, 0x7f08044d
 
     const/16 v2, 0xd4
 
@@ -2229,7 +2213,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02b9
+    const v1, 0x7f0803ab
 
     const/16 v2, 0xd5
 
@@ -2239,7 +2223,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0214
+    const v1, 0x7f080333
 
     const/16 v2, 0xd6
 
@@ -2249,7 +2233,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0445
+    const v1, 0x7f08060f
 
     const/16 v2, 0xd7
 
@@ -2259,7 +2243,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00ef
+    const v1, 0x7f0801b3
 
     const/16 v2, 0xd8
 
@@ -2269,7 +2253,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b032d
+    const v1, 0x7f080226
 
     const/16 v2, 0xd9
 
@@ -2279,7 +2263,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01bb
+    const v1, 0x7f0806e5
 
     const/16 v2, 0xda
 
@@ -2289,7 +2273,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01ab
+    const v1, 0x7f0802d5
 
     const/16 v2, 0xdb
 
@@ -2299,7 +2283,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0073
+    const v1, 0x7f0805bf
 
     const/16 v2, 0xdc
 
@@ -2309,7 +2293,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03a4
+    const v1, 0x7f08069e
 
     const/16 v2, 0xdd
 
@@ -2319,7 +2303,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0118
+    const v1, 0x7f080225
 
     const/16 v2, 0xde
 
@@ -2329,7 +2313,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0267
+    const v1, 0x7f08062a
 
     const/16 v2, 0xdf
 
@@ -2339,7 +2323,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02a8
+    const v1, 0x7f0803e0
 
     const/16 v2, 0xe0
 
@@ -2349,7 +2333,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b033a
+    const v1, 0x7f080731
 
     const/16 v2, 0xe1
 
@@ -2359,7 +2343,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0406
+    const v1, 0x7f0800f9
 
     const/16 v2, 0xe2
 
@@ -2369,7 +2353,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00b2
+    const v1, 0x7f080505
 
     const/16 v2, 0xe3
 
@@ -2379,7 +2363,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03ad
+    const v1, 0x7f08019a
 
     const/16 v2, 0xe4
 
@@ -2389,7 +2373,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0087
+    const v1, 0x7f080674
 
     const/16 v2, 0xe5
 
@@ -2399,17 +2383,29 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0405
+    const v1, 0x7f0c0014
 
-    const/16 v2, 0xe6
+    new-array v2, v9, [Ljava/lang/String;
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const-string v3, "\u0421\u043b\u0430\u0431"
 
-    move-result-object v2
+    aput-object v3, v2, v5
+
+    const-string v3, "\u0417\u0430\u0434\u043e\u0432\u043e\u043b\u0438\u0442\u0435\u043b\u0435\u043d"
+
+    aput-object v3, v2, v6
+
+    const-string v3, "\u0414\u043e\u0431\u044a\u0440"
+
+    aput-object v3, v2, v7
+
+    const-string v3, "\u041e\u0442\u043b\u0438\u0447\u0435\u043d"
+
+    aput-object v3, v2, v8
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0242
+    const v1, 0x7f080319
 
     const/16 v2, 0xe7
 
@@ -2419,7 +2415,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0330
+    const v1, 0x7f08052e
 
     const/16 v2, 0xe8
 
@@ -2429,7 +2425,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02c4
+    const v1, 0x7f080675
 
     const/16 v2, 0xe9
 
@@ -2439,7 +2435,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0173
+    const v1, 0x7f0806cc
 
     const/16 v2, 0xea
 
@@ -2449,7 +2445,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00ad
+    const v1, 0x7f0805be
 
     const/16 v2, 0xeb
 
@@ -2459,7 +2455,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01c4
+    const v1, 0x7f080453
 
     const/16 v2, 0xec
 
@@ -2469,7 +2465,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b005e
+    const v1, 0x7f0805c4
 
     const/16 v2, 0xed
 
@@ -2479,7 +2475,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0322
+    const v1, 0x7f080428
 
     const/16 v2, 0xee
 
@@ -2489,7 +2485,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0030
+    const v1, 0x7f08051e
 
     const/16 v2, 0xef
 
@@ -2499,7 +2495,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b032c
+    const v1, 0x7f080406
 
     const/16 v2, 0xf0
 
@@ -2509,7 +2505,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0438
+    const v1, 0x7f0803fe
 
     const/16 v2, 0xf1
 
@@ -2519,7 +2515,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02dd
+    const v1, 0x7f08031a
 
     const/16 v2, 0xf2
 
@@ -2529,7 +2525,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0113
+    const v1, 0x7f080536
 
     const/16 v2, 0xf3
 
@@ -2539,7 +2535,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01ee
+    const v1, 0x7f08058a
 
     const/16 v2, 0xf4
 
@@ -2549,7 +2545,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b046b
+    const v1, 0x7f0806f0
 
     const/16 v2, 0xf5
 
@@ -2559,7 +2555,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0127
+    const v1, 0x7f080483
 
     const/16 v2, 0xf6
 
@@ -2569,7 +2565,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01a1
+    const v1, 0x7f08054b
 
     const/16 v2, 0xf7
 
@@ -2579,7 +2575,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0482
+    const v1, 0x7f08048a
 
     const/16 v2, 0xf8
 
@@ -2589,7 +2585,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0249
+    const v1, 0x7f0803f5
 
     const/16 v2, 0xf9
 
@@ -2599,7 +2595,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0105
+    const v1, 0x7f080611
 
     const/16 v2, 0xfa
 
@@ -2609,7 +2605,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02bf
+    const v1, 0x7f080691
 
     const/16 v2, 0xfb
 
@@ -2619,7 +2615,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03f4
+    const v1, 0x7f080744
 
     const/16 v2, 0xfc
 
@@ -2629,7 +2625,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0437
+    const v1, 0x7f080633
 
     const/16 v2, 0xfd
 
@@ -2639,7 +2635,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0134
+    const v1, 0x7f080476
 
     const/16 v2, 0xfe
 
@@ -2649,7 +2645,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0102
+    const v1, 0x7f08050c
 
     const/16 v2, 0xff
 
@@ -2659,7 +2655,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01b4
+    const v1, 0x7f08048d
 
     const/16 v2, 0x100
 
@@ -2669,7 +2665,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0363
+    const v1, 0x7f080726
 
     const/16 v2, 0x101
 
@@ -2679,7 +2675,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0308
+    const v1, 0x7f0806ab
 
     const/16 v2, 0x102
 
@@ -2689,7 +2685,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0131
+    const v1, 0x7f08057e
 
     const/16 v2, 0x103
 
@@ -2699,7 +2695,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0375
+    const v1, 0x7f080573
 
     const/16 v2, 0x104
 
@@ -2709,7 +2705,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0273
+    const/high16 v1, 0x7f080000
 
     const/16 v2, 0x105
 
@@ -2719,7 +2715,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0049
+    const v1, 0x7f0803e8
 
     const/16 v2, 0x106
 
@@ -2729,7 +2725,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0302
+    const v1, 0x7f08052d
 
     const/16 v2, 0x107
 
@@ -2739,7 +2735,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0477
+    const v1, 0x7f08052f
 
     const/16 v2, 0x108
 
@@ -2749,7 +2745,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b034c
+    const v1, 0x7f08010c
 
     const/16 v2, 0x109
 
@@ -2759,7 +2755,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01fb
+    const v1, 0x7f0803ea
 
     const/16 v2, 0x10a
 
@@ -2769,7 +2765,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0163
+    const v1, 0x7f080316
 
     const/16 v2, 0x10b
 
@@ -2779,7 +2775,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02ed
+    const v1, 0x7f0803ef
 
     const/16 v2, 0x10c
 
@@ -2789,7 +2785,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0188
+    const v1, 0x7f080736
 
     const/16 v2, 0x10d
 
@@ -2799,7 +2795,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03be
+    const v1, 0x7f080564
 
     const/16 v2, 0x10e
 
@@ -2809,7 +2805,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0276
+    const v1, 0x7f080148
 
     const/16 v2, 0x10f
 
@@ -2819,7 +2815,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0418
+    const v1, 0x7f080160
 
     const/16 v2, 0x110
 
@@ -2829,7 +2825,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00a5
+    const v1, 0x7f08074b
 
     const/16 v2, 0x111
 
@@ -2839,7 +2835,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b020e
+    const v1, 0x7f08026d
 
     const/16 v2, 0x112
 
@@ -2849,7 +2845,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0348
+    const v1, 0x7f080127
 
     const/16 v2, 0x113
 
@@ -2859,7 +2855,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b012b
+    const v1, 0x7f080510
 
     const/16 v2, 0x114
 
@@ -2869,7 +2865,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0271
+    const v1, 0x7f08037b
 
     const/16 v2, 0x115
 
@@ -2879,7 +2875,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01e5
+    const v1, 0x7f080431
 
     const/16 v2, 0x116
 
@@ -2889,7 +2885,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0314
+    const v1, 0x7f080697
 
     const/16 v2, 0x117
 
@@ -2899,7 +2895,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0042
+    const v1, 0x7f08069d
 
     const/16 v2, 0x118
 
@@ -2909,7 +2905,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0155
+    const v1, 0x7f080572
 
     const/16 v2, 0x119
 
@@ -2919,7 +2915,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0470
+    const v1, 0x7f08026e
 
     const/16 v2, 0x11a
 
@@ -2929,7 +2925,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b008f
+    const v1, 0x7f080735
 
     const/16 v2, 0x11b
 
@@ -2939,7 +2935,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00fd
+    const v1, 0x7f080370
 
     const/16 v2, 0x11c
 
@@ -2949,7 +2945,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0409
+    const v1, 0x7f080689
 
     const/16 v2, 0x11d
 
@@ -2959,7 +2955,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0054
+    const v1, 0x7f080312
 
     const/16 v2, 0x11e
 
@@ -2969,7 +2965,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0148
+    const v1, 0x7f08009a
 
     const/16 v2, 0x11f
 
@@ -2979,7 +2975,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b031b
+    const v1, 0x7f0803d5
 
     const/16 v2, 0x120
 
@@ -2989,7 +2985,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0166
+    const v1, 0x7f080125
 
     const/16 v2, 0x121
 
@@ -2999,7 +2995,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b041f
+    const v1, 0x7f080270
 
     const/16 v2, 0x122
 
@@ -3009,7 +3005,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b024c
+    const v1, 0x7f080727
 
     const/16 v2, 0x123
 
@@ -3019,7 +3015,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03b8
+    const v1, 0x7f080157
 
     const/16 v2, 0x124
 
@@ -3029,7 +3025,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b039b
+    const v1, 0x7f080490
 
     const/16 v2, 0x125
 
@@ -3039,7 +3035,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0469
+    const v1, 0x7f0801b1
 
     const/16 v2, 0x126
 
@@ -3049,7 +3045,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02d6
+    const v1, 0x7f080637
 
     const/16 v2, 0x127
 
@@ -3059,7 +3055,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0384
+    const v1, 0x7f080433
 
     const/16 v2, 0x128
 
@@ -3069,1453 +3065,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0179
-
-    const/16 v2, 0x129
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0018
-
-    const/16 v2, 0x12a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02ce
-
-    const/16 v2, 0x12b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b009c
-
-    const/16 v2, 0x12c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02b7
-
-    const/16 v2, 0x12d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02d9
-
-    const/16 v2, 0x12e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01c9
-
-    const/16 v2, 0x12f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0013
-
-    const/16 v2, 0x130
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0056
-
-    const/16 v2, 0x131
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0112
-
-    const/16 v2, 0x132
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01b0
-
-    const/16 v2, 0x133
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0289
-
-    const/16 v2, 0x134
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0376
-
-    const/16 v2, 0x135
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b001e
-
-    const/16 v2, 0x136
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b032a
-
-    const/16 v2, 0x137
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0222
-
-    const/16 v2, 0x138
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0316
-
-    const/16 v2, 0x139
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0204
-
-    const/16 v2, 0x13a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0421
-
-    const/16 v2, 0x13b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0338
-
-    const/16 v2, 0x13c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b019f
-
-    const/16 v2, 0x13d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0292
-
-    const/16 v2, 0x13e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0329
-
-    const/16 v2, 0x13f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01da
-
-    const/16 v2, 0x140
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0362
-
-    const/16 v2, 0x141
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b027d
-
-    const/16 v2, 0x142
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0440
-
-    const/16 v2, 0x143
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00d3
-
-    const/16 v2, 0x144
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01dc
-
-    const/16 v2, 0x145
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b043d
-
-    const/16 v2, 0x146
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b042c
-
-    const/16 v2, 0x147
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b026f
-
-    const/16 v2, 0x148
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b042d
-
-    const/16 v2, 0x149
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0343
-
-    const/16 v2, 0x14a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b036e
-
-    const/16 v2, 0x14b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00a9
-
-    const/16 v2, 0x14c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b007f
-
-    const/16 v2, 0x14d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b021a
-
-    const/16 v2, 0x14e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b005d
-
-    const/16 v2, 0x14f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0334
-
-    const/16 v2, 0x150
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02d8
-
-    const/16 v2, 0x151
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b047b
-
-    const/16 v2, 0x152
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00cf
-
-    const/16 v2, 0x153
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01b3
-
-    const/16 v2, 0x154
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b020d
-
-    const/16 v2, 0x155
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02b2
-
-    const/16 v2, 0x156
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00b4
-
-    const/16 v2, 0x157
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0361
-
-    const/16 v2, 0x158
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f07000b
-
-    new-array v2, v7, [Ljava/lang/String;
-
-    const-string v3, "(\u09af\u09c7\u09ae\u09a8 \u098f\u09ae\u098f\u09ae\u098f\u09b8, \u099c\u09bf\u09ae\u09c7\u0987\u09b2, \u09b9\u09bf\u09b8\u09be\u09ac\u09c7)\' \u09b8\u09cd\u099f\u09cd\u09af\u09be\u09a8\u09cd\u09a1\u09be\u09b0\u09cd\u09a1 \u0985\u09cd\u09af\u09be\u09a8\u09cd\u09a1\u09cd\u09b0\u09af\u09bc\u09c7\u09a1 \u0989\u09aa\u09be\u09af\u09bc \n\'"
-
-    aput-object v3, v2, v5
-
-    const-string v3, "\'\u09ab\u09be\u0987\u09b2 \u09ae\u09cb\u09a1 \n\' (\u098f\u0995\u099f\u09bf \u09ac\u09cd\u09af\u09b0\u09cd\u09a5\u09a4\u09be \u098f\u0987 \u09ad\u09be\u09ac\u09c7 \u099a\u09c7\u09b7\u09cd\u099f\u09be \u0995\u09b0\u09c7 \u09a6\u09c7\u0996\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7\u09a8)"
-
-    aput-object v3, v2, v6
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0091
-
-    const/16 v2, 0x15a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02d1
-
-    const/16 v2, 0x15b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b036f
-
-    const/16 v2, 0x15c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02cf
-
-    const/16 v2, 0x15d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00ff
-
-    const/16 v2, 0x15e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b023e
-
-    const/16 v2, 0x15f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03c9
-
-    const/16 v2, 0x160
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0279
-
-    const/16 v2, 0x161
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0070
-
-    const/16 v2, 0x162
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03fb
-
-    const/16 v2, 0x163
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0168
-
-    const/16 v2, 0x164
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b027b
-
-    const/16 v2, 0x165
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b026e
-
-    const/16 v2, 0x166
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0355
-
-    const/16 v2, 0x167
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b045a
-
-    const/16 v2, 0x168
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03b3
-
-    const/16 v2, 0x169
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0213
-
-    const/16 v2, 0x16a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03ff
-
-    const/16 v2, 0x16b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0380
-
-    const/16 v2, 0x16c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00d7
-
-    const/16 v2, 0x16d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b039a
-
-    const/16 v2, 0x16e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03ba
-
-    const/16 v2, 0x16f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03b4
-
-    const/16 v2, 0x170
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0209
-
-    const/16 v2, 0x171
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02e2
-
-    const/16 v2, 0x172
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01aa
-
-    const/16 v2, 0x173
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0212
-
-    const/16 v2, 0x174
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0448
-
-    const/16 v2, 0x175
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0351
-
-    const/16 v2, 0x176
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0090
-
-    const/16 v2, 0x177
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0158
-
-    const/16 v2, 0x178
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03db
-
-    const/16 v2, 0x179
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0115
-
-    const/16 v2, 0x17a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03e0
-
-    const/16 v2, 0x17b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03de
-
-    const/16 v2, 0x17c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0315
-
-    const/16 v2, 0x17d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0156
-
-    const/16 v2, 0x17e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0311
-
-    const/16 v2, 0x17f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b019a
-
-    const/16 v2, 0x180
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0313
-
-    const/16 v2, 0x181
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01a4
-
-    const/16 v2, 0x182
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0401
-
-    const/16 v2, 0x183
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0317
-
-    const/16 v2, 0x184
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02b6
-
-    const/16 v2, 0x185
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0451
-
-    const/16 v2, 0x186
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0029
-
-    const/16 v2, 0x187
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03f6
-
-    const/16 v2, 0x188
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0080
-
-    const/16 v2, 0x189
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b000b
-
-    const/16 v2, 0x18a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00c1
-
-    const/16 v2, 0x18b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00c6
-
-    const/16 v2, 0x18c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0199
-
-    const/16 v2, 0x18d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02fd
-
-    const/16 v2, 0x18e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0203
-
-    const/16 v2, 0x18f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0048
-
-    const/16 v2, 0x190
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b004b
-
-    const/16 v2, 0x191
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b019b
-
-    const/16 v2, 0x192
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01ed
-
-    const/16 v2, 0x193
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0224
-
-    const/16 v2, 0x194
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b000e
-
-    const/16 v2, 0x195
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b044a
-
-    const/16 v2, 0x196
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0442
-
-    const/16 v2, 0x197
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0396
-
-    const/16 v2, 0x198
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0227
-
-    const/16 v2, 0x199
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00cb
-
-    const/16 v2, 0x19a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0244
-
-    const/16 v2, 0x19b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01ae
-
-    const/16 v2, 0x19c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f070009
-
-    new-array v2, v9, [Ljava/lang/String;
-
-    const-string v3, "\u0995\u09c7\u09ac\u09b2 \u09b8\u099e\u09cd\u099a\u09af\u09bc"
-
-    aput-object v3, v2, v5
-
-    const-string v3, "\u09ab\u09be\u09b8\u09cd\u099f"
-
-    aput-object v3, v2, v6
-
-    const-string v3, "\u09b8\u09cd\u099f\u09cd\u09af\u09be\u09a8\u09cd\u09a1\u09be\u09b0\u09cd\u09a1"
-
-    aput-object v3, v2, v7
-
-    const-string v3, "\u09b8\u09b0\u09cd\u09ac\u09cb\u09a4\u09cd\u09a4\u09ae"
-
-    aput-object v3, v2, v8
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0024
-
-    const/16 v2, 0x19e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0261
-
-    const/16 v2, 0x19f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b026a
-
-    const/16 v2, 0x1a0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b016d
-
-    const/16 v2, 0x1a1
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00a0
-
-    const/16 v2, 0x1a2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b010a
-
-    const/16 v2, 0x1a3
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0372
-
-    const/16 v2, 0x1a4
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b020c
-
-    const/16 v2, 0x1a5
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0485
-
-    const/16 v2, 0x1a6
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b001b
-
-    const/16 v2, 0x1a7
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01d7
-
-    const/16 v2, 0x1a8
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b001c
-
-    const/16 v2, 0x1a9
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0454
-
-    const/16 v2, 0x1aa
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b038b
-
-    const/16 v2, 0x1ab
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b040d
-
-    const/16 v2, 0x1ac
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0369
-
-    const/16 v2, 0x1ad
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0403
-
-    const/16 v2, 0x1ae
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0269
-
-    const/16 v2, 0x1af
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02bc
-
-    const/16 v2, 0x1b0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02ac
-
-    const/16 v2, 0x1b1
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0459
-
-    const/16 v2, 0x1b2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0055
-
-    const/16 v2, 0x1b3
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02c0
-
-    const/16 v2, 0x1b4
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0039
-
-    const/16 v2, 0x1b5
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03c8
-
-    const/16 v2, 0x1b6
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b038a
-
-    const/16 v2, 0x1b7
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f070003
+    const v1, 0x7f0c0016
 
     const/16 v2, 0xa
 
@@ -4525,55 +3075,1527 @@
 
     aput-object v3, v2, v5
 
-    const-string v3, "\u09b8\u09cd\u0995\u09cd\u09af\u09be\u09a8 \u0995\u09b0\u09be ..."
+    const-string v3, "\u0421\u043a\u0430\u043d\u0438\u0440\u0430\u043d\u0435\u2026"
 
     aput-object v3, v2, v6
 
-    const-string v3, "%1$s \u0997\u09c1\u09b2\u09bf \u09a4\u09c7 \u09b8\u0982\u09af\u09c1\u0995\u09cd\u09a4 \u09b9\u099a\u09cd\u099b\u09c7 ..."
+    const-string v3, "\u0421\u0432\u044a\u0440\u0437\u0432\u0430\u043d\u0435\u2026"
 
     aput-object v3, v2, v7
 
-    const-string v3, "\u09aa\u09cd\u09b0\u09ae\u09be\u09a3 \u0995\u09b0\u09be \u09b9\u099a\u09cd\u099b\u09c7%1$s \u0997\u09c1\u09b2\u09bf ..."
+    const-string v3, "\u0423\u0434\u043e\u0441\u0442\u043e\u0432\u0435\u0440\u044f\u0432\u0430\u043d\u0435\u2026"
 
     aput-object v3, v2, v8
 
-    const-string v3, "%1$s \u0997\u09c1\u09b2\u09bf \u09a5\u09c7\u0995\u09c7 IP \u09a0\u09bf\u0995\u09be\u09a8\u09be \u09aa\u09cd\u09b0\u09be\u09aa\u09cd\u09a4 \u0995\u09b0\u09be\u09b0 \u09aa\u09a6\u09cd\u09a7\u09a4\u09bf ..."
+    const-string v3, "\u041f\u043e\u043b\u0443\u0447\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 IP \u0430\u0434\u0440\u0435\u0441\u2026"
 
     aput-object v3, v2, v9
 
     const/4 v3, 0x5
 
-    const-string v4, "%1$s \u0997\u09c1\u09b2\u09bf \u09a4\u09c7 \u09b8\u0982\u09af\u09c1\u0995\u09cd\u09a4"
+    const-string v4, "\u0421\u0432\u044a\u0440\u0437\u0430\u043d"
 
     aput-object v4, v2, v3
 
     const/4 v3, 0x6
 
-    const-string v4, "\u09a8\u09bf\u09b2\u09ae\u09cd\u09ac\u09bf\u09a4"
+    const-string v4, "\u041f\u0440\u0435\u043a\u0440\u0430\u0442\u0435\u043d"
 
     aput-object v4, v2, v3
 
     const/4 v3, 0x7
 
-    const-string v4, "%1$s \u0997\u09c1\u09b2\u09bf \u09a5\u09c7\u0995\u09c7 \u09b8\u0982\u09af\u09cb\u0997 \u09ac\u09bf\u099a\u09cd\u099b\u09bf\u09a8\u09cd\u09a8 \u0995\u09b0\u09be \u09b9\u09af\u09bc ..."
+    const-string v4, "\u041f\u0440\u0435\u043a\u044a\u0441\u0432\u0430\u043d\u0435 \u043d\u0430 \u0432\u0440\u044a\u0437\u043a\u0430\u0442\u0430\u2026"
 
     aput-object v4, v2, v3
 
     const/16 v3, 0x8
 
-    const-string v4, "\u09b8\u0982\u09af\u09cb\u0997 \u09ac\u09bf\u099a\u09cd\u099b\u09bf\u09a8\u09cd\u09a8"
+    const-string v4, "\u0418\u0437\u043a\u043b\u044e\u0447\u0435\u043d"
 
     aput-object v4, v2, v3
 
     const/16 v3, 0x9
 
-    const-string v4, "\u09b8\u0982\u09af\u09cb\u0997 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5"
+    const-string v4, "\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e"
 
     aput-object v4, v2, v3
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b033d
+    const v1, 0x7f080460
+
+    const/16 v2, 0x12a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0c0002
+
+    const/4 v2, 0x5
+
+    new-array v2, v2, [Ljava/lang/String;
+
+    const-string v3, "1 \u0441\u0435\u043a"
+
+    aput-object v3, v2, v5
+
+    const-string v3, "3 \u0441\u0435\u043a"
+
+    aput-object v3, v2, v6
+
+    const-string v3, "5 \u0441\u0435\u043a"
+
+    aput-object v3, v2, v7
+
+    const-string v3, "10 \u0441\u0435\u043a"
+
+    aput-object v3, v2, v8
+
+    const-string v3, "15 \u0441\u0435\u043a"
+
+    aput-object v3, v2, v9
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080636
+
+    const/16 v2, 0x12c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800b1
+
+    const/16 v2, 0x12d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080480
+
+    const/16 v2, 0x12e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806c9
+
+    const/16 v2, 0x12f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08074d
+
+    const/16 v2, 0x130
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08037a
+
+    const/16 v2, 0x131
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080095
+
+    const/16 v2, 0x132
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080325
+
+    const/16 v2, 0x133
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080149
+
+    const/16 v2, 0x134
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806c8
+
+    const/16 v2, 0x135
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080124
+
+    const/16 v2, 0x136
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08037d
+
+    const/16 v2, 0x137
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0804a4
+
+    const/16 v2, 0x138
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0801f7
+
+    const/16 v2, 0x139
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080601
+
+    const/16 v2, 0x13a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080475
+
+    const/16 v2, 0x13b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080412
+
+    const/16 v2, 0x13c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0801a2
+
+    const/16 v2, 0x13d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080170
+
+    const/16 v2, 0x13e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803d0
+
+    const/16 v2, 0x13f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08015b
+
+    const/16 v2, 0x140
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08009b
+
+    const/16 v2, 0x141
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080002
+
+    const/16 v2, 0x142
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080741
+
+    const/16 v2, 0x143
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08016f
+
+    const/16 v2, 0x144
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080562
+
+    const/16 v2, 0x145
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806c4
+
+    const/16 v2, 0x146
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802ca
+
+    const/16 v2, 0x147
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080570
+
+    const/16 v2, 0x148
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08026c
+
+    const/16 v2, 0x149
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802e9
+
+    const/16 v2, 0x14a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806cb
+
+    const/16 v2, 0x14b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08031e
+
+    const/16 v2, 0x14c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080253
+
+    const/16 v2, 0x14d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802cb
+
+    const/16 v2, 0x14e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080183
+
+    const/16 v2, 0x14f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802fb
+
+    const/16 v2, 0x150
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080158
+
+    const/16 v2, 0x151
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080673
+
+    const/16 v2, 0x152
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08056a
+
+    const/16 v2, 0x153
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080265
+
+    const/16 v2, 0x154
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08032d
+
+    const/16 v2, 0x155
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803a0
+
+    const/16 v2, 0x156
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805c3
+
+    const/16 v2, 0x157
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803cd
+
+    const/16 v2, 0x158
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080231
+
+    const/16 v2, 0x159
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080645
+
+    const/16 v2, 0x15a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806db
+
+    const/16 v2, 0x15b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080630
+
+    const/16 v2, 0x15c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08073d
+
+    const/16 v2, 0x15d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080494
+
+    const/16 v2, 0x15e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080254
+
+    const/16 v2, 0x15f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080290
+
+    const/16 v2, 0x160
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803a6
+
+    const/16 v2, 0x161
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805ff
+
+    const/16 v2, 0x162
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080706
+
+    const/16 v2, 0x163
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806d8
+
+    const/16 v2, 0x164
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080141
+
+    const/16 v2, 0x165
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08053e
+
+    const/16 v2, 0x166
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080586
+
+    const/16 v2, 0x167
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806bb
+
+    const/16 v2, 0x168
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08055b
+
+    const/16 v2, 0x169
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080071
+
+    const/16 v2, 0x16a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080093
+
+    const/16 v2, 0x16b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08022b
+
+    const/16 v2, 0x16c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080146
+
+    const/16 v2, 0x16d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080700
+
+    const/16 v2, 0x16e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080486
+
+    const/16 v2, 0x16f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08023e
+
+    const/16 v2, 0x170
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806ca
+
+    const/16 v2, 0x171
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080116
+
+    const/16 v2, 0x172
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802b0
+
+    const/16 v2, 0x173
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080250
+
+    const/16 v2, 0x174
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080371
+
+    const/16 v2, 0x175
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080474
+
+    const/16 v2, 0x176
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0801d0
+
+    const/16 v2, 0x177
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806d2
+
+    const/16 v2, 0x178
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08068d
+
+    const/16 v2, 0x179
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080565
+
+    const/16 v2, 0x17a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803aa
+
+    const/16 v2, 0x17b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08007d
+
+    const/16 v2, 0x17c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08041c
+
+    const/16 v2, 0x17d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806a0
+
+    const/16 v2, 0x17e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080396
+
+    const/16 v2, 0x17f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08047a
+
+    const/16 v2, 0x180
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08057b
+
+    const/16 v2, 0x181
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0c0010
+
+    const/4 v2, 0x6
+
+    new-array v2, v2, [Ljava/lang/String;
+
+    const-string v3, "\u041f\u043e \u043f\u043e\u0434\u0440\u0430\u0437\u0431\u0438\u0440\u0430\u043d\u0435"
+
+    aput-object v3, v2, v5
+
+    const-string v3, "\u0416\u044a\u043b\u0442"
+
+    aput-object v3, v2, v6
+
+    const-string v3, "\u0417\u0435\u043b\u0435\u043d"
+
+    aput-object v3, v2, v7
+
+    const-string v3, "\u0427\u0435\u0440\u0432\u0435\u043d"
+
+    aput-object v3, v2, v8
+
+    const-string v3, "\u0420\u043e\u0437\u043e\u0432"
+
+    aput-object v3, v2, v9
+
+    const/4 v3, 0x5
+
+    const-string v4, "\u0427\u0435\u0440\u0435\u043d"
+
+    aput-object v4, v2, v3
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080684
+
+    const/16 v2, 0x183
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803cb
+
+    const/16 v2, 0x184
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08003f
+
+    const/16 v2, 0x185
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805d2
+
+    const/16 v2, 0x186
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080590
+
+    const/16 v2, 0x187
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08013f
+
+    const/16 v2, 0x188
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806d7
+
+    const/16 v2, 0x189
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0801b0
+
+    const/16 v2, 0x18a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080324
+
+    const/16 v2, 0x18b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08012c
+
+    const/16 v2, 0x18c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080529
+
+    const/16 v2, 0x18d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08029f
+
+    const/16 v2, 0x18e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080096
+
+    const/16 v2, 0x18f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080228
+
+    const/16 v2, 0x190
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080450
+
+    const/16 v2, 0x191
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802c9
+
+    const/16 v2, 0x192
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806e0
+
+    const/16 v2, 0x193
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0801fa
+
+    const/16 v2, 0x194
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08039f
+
+    const/16 v2, 0x195
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080386
+
+    const/16 v2, 0x196
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08019c
+
+    const/16 v2, 0x197
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080713
+
+    const/16 v2, 0x198
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080167
+
+    const/16 v2, 0x199
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802af
+
+    const/16 v2, 0x19a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080321
+
+    const/16 v2, 0x19b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08048f
+
+    const/16 v2, 0x19c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800c3
+
+    const/16 v2, 0x19d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080680
+
+    const/16 v2, 0x19e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080639
+
+    const/16 v2, 0x19f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802c6
+
+    const/16 v2, 0x1a0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080655
+
+    const/16 v2, 0x1a1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080604
+
+    const/16 v2, 0x1a2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800fe
+
+    const/16 v2, 0x1a3
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080670
+
+    const/16 v2, 0x1a4
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080740
+
+    const/16 v2, 0x1a5
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080322
+
+    const/16 v2, 0x1a6
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080395
+
+    const/16 v2, 0x1a7
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080133
+
+    const/16 v2, 0x1a8
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803a2
+
+    const/16 v2, 0x1a9
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080552
+
+    const/16 v2, 0x1aa
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0804a7
+
+    const/16 v2, 0x1ab
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080340
+
+    const/16 v2, 0x1ac
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802fe
+
+    const/16 v2, 0x1ad
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080287
+
+    const/16 v2, 0x1ae
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080100
+
+    const/16 v2, 0x1af
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080574
+
+    const/16 v2, 0x1b0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08022a
+
+    const/16 v2, 0x1b1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080243
+
+    const/16 v2, 0x1b2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080549
+
+    const/16 v2, 0x1b3
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802ab
+
+    const/16 v2, 0x1b4
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080329
+
+    const/16 v2, 0x1b5
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08007a
+
+    const/16 v2, 0x1b6
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08016b
+
+    const/16 v2, 0x1b7
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08037f
+
+    const/16 v2, 0x1b8
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080345
 
     const/16 v2, 0x1b9
 
@@ -4583,7 +4605,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b036c
+    const v1, 0x7f080509
 
     const/16 v2, 0x1ba
 
@@ -4593,7 +4615,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00a1
+    const v1, 0x7f0806a6
 
     const/16 v2, 0x1bb
 
@@ -4603,7 +4625,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b003b
+    const v1, 0x7f0802b9
 
     const/16 v2, 0x1bc
 
@@ -4613,7 +4635,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00ce
+    const v1, 0x7f08034a
 
     const/16 v2, 0x1bd
 
@@ -4623,35 +4645,17 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f070004
+    const v1, 0x7f080174
 
-    const/4 v2, 0x5
+    const/16 v2, 0x1be
 
-    new-array v2, v2, [Ljava/lang/String;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-string v3, "\u09b8\u0982\u0997\u09cd\u09b0\u09b9"
-
-    aput-object v3, v2, v5
-
-    const-string v3, "\u09b8\u09cd\u09a5\u09be\u09a8\u09c0\u09af\u09bc"
-
-    aput-object v3, v2, v6
-
-    const-string v3, "\u09b2\u09be\u0987\u09ac\u09cd\u09b0\u09c7\u09b0\u09c0"
-
-    aput-object v3, v2, v7
-
-    const-string v3, "\u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995"
-
-    aput-object v3, v2, v8
-
-    const-string v3, "\u09b8\u09b0\u099e\u09cd\u099c\u09be\u09ae"
-
-    aput-object v3, v2, v9
+    move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03bc
+    const v1, 0x7f080397
 
     const/16 v2, 0x1bf
 
@@ -4661,7 +4665,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01fc
+    const v1, 0x7f08031c
 
     const/16 v2, 0x1c0
 
@@ -4671,7 +4675,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b015b
+    const v1, 0x7f080366
 
     const/16 v2, 0x1c1
 
@@ -4681,7 +4685,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0425
+    const v1, 0x7f080455
 
     const/16 v2, 0x1c2
 
@@ -4691,7 +4695,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b002e
+    const v1, 0x7f0805c6
 
     const/16 v2, 0x1c3
 
@@ -4701,7 +4705,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03a0
+    const v1, 0x7f080693
 
     const/16 v2, 0x1c4
 
@@ -4711,7 +4715,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01a6
+    const v1, 0x7f0802da
 
     const/16 v2, 0x1c5
 
@@ -4721,7 +4725,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00f4
+    const v1, 0x7f080470
 
     const/16 v2, 0x1c6
 
@@ -4731,7 +4735,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01c3
+    const v1, 0x7f0800fc
 
     const/16 v2, 0x1c7
 
@@ -4741,7 +4745,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b047a
+    const v1, 0x7f08039a
 
     const/16 v2, 0x1c8
 
@@ -4751,7 +4755,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b017c
+    const v1, 0x7f08041f
 
     const/16 v2, 0x1c9
 
@@ -4761,7 +4765,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03da
+    const v1, 0x7f080618
 
     const/16 v2, 0x1ca
 
@@ -4771,7 +4775,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0035
+    const v1, 0x7f0805af
 
     const/16 v2, 0x1cb
 
@@ -4781,7 +4785,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0464
+    const v1, 0x7f0806dd
 
     const/16 v2, 0x1cc
 
@@ -4791,7 +4795,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b017f
+    const v1, 0x7f0806bc
 
     const/16 v2, 0x1cd
 
@@ -4801,7 +4805,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0465
+    const v1, 0x7f0805da
 
     const/16 v2, 0x1ce
 
@@ -4811,7 +4815,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b036d
+    const v1, 0x7f08065a
 
     const/16 v2, 0x1cf
 
@@ -4821,7 +4825,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0460
+    const v1, 0x7f0802f1
 
     const/16 v2, 0x1d0
 
@@ -4831,7 +4835,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b022f
+    const v1, 0x7f0806a2
 
     const/16 v2, 0x1d1
 
@@ -4841,7 +4845,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b046e
+    const v1, 0x7f080155
 
     const/16 v2, 0x1d2
 
@@ -4851,7 +4855,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03d0
+    const v1, 0x7f0805db
 
     const/16 v2, 0x1d3
 
@@ -4861,7 +4865,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00fe
+    const v1, 0x7f0804a6
 
     const/16 v2, 0x1d4
 
@@ -4871,7 +4875,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0326
+    const v1, 0x7f0805b8
 
     const/16 v2, 0x1d5
 
@@ -4881,7 +4885,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0263
+    const v1, 0x7f080438
 
     const/16 v2, 0x1d6
 
@@ -4891,7 +4895,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b013f
+    const v1, 0x7f080293
 
     const/16 v2, 0x1d7
 
@@ -4901,7 +4905,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0444
+    const v1, 0x7f0805cb
 
     const/16 v2, 0x1d8
 
@@ -4911,17 +4915,35 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b027e
+    const v1, 0x7f0c0007
 
-    const/16 v2, 0x1d9
+    const/4 v2, 0x5
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-array v2, v2, [Ljava/lang/String;
 
-    move-result-object v2
+    const-string v3, "\u041b\u044e\u0431\u0438\u043c\u0438"
+
+    aput-object v3, v2, v5
+
+    const-string v3, "\u041b\u043e\u043a\u0430\u043b\u043d\u0438"
+
+    aput-object v3, v2, v6
+
+    const-string v3, "\u0411\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a\u0430"
+
+    aput-object v3, v2, v7
+
+    const-string v3, "\u041c\u0440\u0435\u0436\u0430"
+
+    aput-object v3, v2, v8
+
+    const-string v3, "\u0418\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u0438"
+
+    aput-object v3, v2, v9
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02fe
+    const v1, 0x7f0804f8
 
     const/16 v2, 0x1da
 
@@ -4931,7 +4953,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b043f
+    const v1, 0x7f08049b
 
     const/16 v2, 0x1db
 
@@ -4941,7 +4963,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0346
+    const v1, 0x7f08072a
 
     const/16 v2, 0x1dc
 
@@ -4951,7 +4973,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b031a
+    const v1, 0x7f080528
 
     const/16 v2, 0x1dd
 
@@ -4961,7 +4983,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b028f
+    const v1, 0x7f0804f9
 
     const/16 v2, 0x1de
 
@@ -4971,7 +4993,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b028a
+    const v1, 0x7f080478
 
     const/16 v2, 0x1df
 
@@ -4981,7 +5003,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0417
+    const v1, 0x7f080129
 
     const/16 v2, 0x1e0
 
@@ -4991,7 +5013,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0287
+    const v1, 0x7f080641
 
     const/16 v2, 0x1e1
 
@@ -5001,7 +5023,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0411
+    const v1, 0x7f0804a8
 
     const/16 v2, 0x1e2
 
@@ -5011,7 +5033,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00e6
+    const v1, 0x7f080647
 
     const/16 v2, 0x1e3
 
@@ -5021,7 +5043,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b036a
+    const v1, 0x7f0805a8
 
     const/16 v2, 0x1e4
 
@@ -5031,7 +5053,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01c6
+    const v1, 0x7f080409
 
     const/16 v2, 0x1e5
 
@@ -5041,7 +5063,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b014a
+    const v1, 0x7f080491
 
     const/16 v2, 0x1e6
 
@@ -5051,7 +5073,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03f3
+    const v1, 0x7f08028c
 
     const/16 v2, 0x1e7
 
@@ -5061,7 +5083,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0186
+    const v1, 0x7f080258
 
     const/16 v2, 0x1e8
 
@@ -5071,7 +5093,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0416
+    const v1, 0x7f0800c8
 
     const/16 v2, 0x1e9
 
@@ -5081,7 +5103,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0171
+    const v1, 0x7f080690
 
     const/16 v2, 0x1ea
 
@@ -5091,7 +5113,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b047f
+    const v1, 0x7f0800b0
 
     const/16 v2, 0x1eb
 
@@ -5101,7 +5123,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0446
+    const v1, 0x7f080257
 
     const/16 v2, 0x1ec
 
@@ -5111,7 +5133,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02bd
+    const v1, 0x7f080271
 
     const/16 v2, 0x1ed
 
@@ -5121,7 +5143,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0137
+    const v1, 0x7f080328
 
     const/16 v2, 0x1ee
 
@@ -5131,7 +5153,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03d9
+    const v1, 0x7f08040d
 
     const/16 v2, 0x1ef
 
@@ -5141,7 +5163,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02ca
+    const v1, 0x7f08025f
 
     const/16 v2, 0x1f0
 
@@ -5151,7 +5173,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b013b
+    const v1, 0x7f08031d
 
     const/16 v2, 0x1f1
 
@@ -5161,7 +5183,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01a8
+    const v1, 0x7f080696
 
     const/16 v2, 0x1f2
 
@@ -5171,7 +5193,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b044e
+    const v1, 0x7f08016e
 
     const/16 v2, 0x1f3
 
@@ -5181,7 +5203,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b037f
+    const v1, 0x7f080394
 
     const/16 v2, 0x1f4
 
@@ -5191,7 +5213,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02a9
+    const v1, 0x7f080469
 
     const/16 v2, 0x1f5
 
@@ -5201,7 +5223,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0064
+    const v1, 0x7f08070f
 
     const/16 v2, 0x1f6
 
@@ -5211,7 +5233,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0086
+    const v1, 0x7f080525
 
     const/16 v2, 0x1f7
 
@@ -5221,7 +5243,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00c7
+    const v1, 0x7f0802f2
 
     const/16 v2, 0x1f8
 
@@ -5231,7 +5253,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00f9
+    const v1, 0x7f08024c
 
     const/16 v2, 0x1f9
 
@@ -5241,7 +5263,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00a3
+    const v1, 0x7f080458
 
     const/16 v2, 0x1fa
 
@@ -5251,7 +5273,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0285
+    const v1, 0x7f080669
 
     const/16 v2, 0x1fb
 
@@ -5261,7 +5283,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0397
+    const v1, 0x7f0800f3
 
     const/16 v2, 0x1fc
 
@@ -5271,7 +5293,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b028e
+    const v1, 0x7f0802ed
 
     const/16 v2, 0x1fd
 
@@ -5281,7 +5303,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0484
+    const v1, 0x7f080338
 
     const/16 v2, 0x1fe
 
@@ -5291,7 +5313,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b040b
+    const v1, 0x7f08009c
 
     const/16 v2, 0x1ff
 
@@ -5301,7 +5323,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02bb
+    const v1, 0x7f0806ef
 
     const/16 v2, 0x200
 
@@ -5311,7 +5333,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b039c
+    const v1, 0x7f080584
 
     const/16 v2, 0x201
 
@@ -5321,7 +5343,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02d3
+    const v1, 0x7f080147
 
     const/16 v2, 0x202
 
@@ -5331,7 +5353,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02be
+    const v1, 0x7f080521
 
     const/16 v2, 0x203
 
@@ -5341,7 +5363,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0262
+    const v1, 0x7f080658
 
     const/16 v2, 0x204
 
@@ -5351,7 +5373,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0296
+    const v1, 0x7f0801af
 
     const/16 v2, 0x205
 
@@ -5361,7 +5383,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0135
+    const v1, 0x7f080248
 
     const/16 v2, 0x206
 
@@ -5371,7 +5393,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b031e
+    const v1, 0x7f080069
 
     const/16 v2, 0x207
 
@@ -5381,7 +5403,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01b9
+    const v1, 0x7f080084
 
     const/16 v2, 0x208
 
@@ -5391,7 +5413,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0458
+    const v1, 0x7f08032e
 
     const/16 v2, 0x209
 
@@ -5401,7 +5423,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b019d
+    const v1, 0x7f08067f
 
     const/16 v2, 0x20a
 
@@ -5411,7 +5433,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b021f
+    const v1, 0x7f0806ac
 
     const/16 v2, 0x20b
 
@@ -5421,7 +5443,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0327
+    const v1, 0x7f0800a3
 
     const/16 v2, 0x20c
 
@@ -5431,7 +5453,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b018e
+    const v1, 0x7f0802c8
 
     const/16 v2, 0x20d
 
@@ -5441,7 +5463,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b037e
+    const v1, 0x7f08026b
 
     const/16 v2, 0x20e
 
@@ -5451,7 +5473,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02b4
+    const v1, 0x7f08025d
 
     const/16 v2, 0x20f
 
@@ -5461,7 +5483,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b044b
+    const v1, 0x7f08031b
 
     const/16 v2, 0x210
 
@@ -5471,7 +5493,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0081
+    const v1, 0x7f080445
 
     const/16 v2, 0x211
 
@@ -5481,7 +5503,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b007c
+    const v1, 0x7f0805f6
 
     const/16 v2, 0x212
 
@@ -5491,7 +5513,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0246
+    const v1, 0x7f08001f
 
     const/16 v2, 0x213
 
@@ -5501,7 +5523,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02e5
+    const v1, 0x7f080186
 
     const/16 v2, 0x214
 
@@ -5511,7 +5533,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b038d
+    const v1, 0x7f0802b1
 
     const/16 v2, 0x215
 
@@ -5521,7 +5543,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03e8
+    const v1, 0x7f080172
 
     const/16 v2, 0x216
 
@@ -5531,7 +5553,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b027a
+    const v1, 0x7f080629
 
     const/16 v2, 0x217
 
@@ -5541,7 +5563,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02b1
+    const v1, 0x7f08046d
 
     const/16 v2, 0x218
 
@@ -5551,7 +5573,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0277
+    const v1, 0x7f08074a
 
     const/16 v2, 0x219
 
@@ -5561,7 +5583,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b011f
+    const v1, 0x7f08023b
 
     const/16 v2, 0x21a
 
@@ -5571,7 +5593,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b029d
+    const v1, 0x7f0802d6
 
     const/16 v2, 0x21b
 
@@ -5581,7 +5603,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02fc
+    const v1, 0x7f080646
 
     const/16 v2, 0x21c
 
@@ -5591,7 +5613,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0109
+    const v1, 0x7f0806ed
 
     const/16 v2, 0x21d
 
@@ -5601,7 +5623,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0318
+    const v1, 0x7f08021f
 
     const/16 v2, 0x21e
 
@@ -5611,7 +5633,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0223
+    const v1, 0x7f080390
 
     const/16 v2, 0x21f
 
@@ -5621,7 +5643,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0344
+    const v1, 0x7f08024f
 
     const/16 v2, 0x220
 
@@ -5631,7 +5653,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0356
+    const v1, 0x7f080223
 
     const/16 v2, 0x221
 
@@ -5641,7 +5663,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0399
+    const v1, 0x7f0806da
 
     const/16 v2, 0x222
 
@@ -5651,7 +5673,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0117
+    const v1, 0x7f08069c
 
     const/16 v2, 0x223
 
@@ -5661,7 +5683,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00b7
+    const v1, 0x7f080288
 
     const/16 v2, 0x224
 
@@ -5671,7 +5693,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b038e
+    const v1, 0x7f080425
 
     const/16 v2, 0x225
 
@@ -5681,7 +5703,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03a2
+    const v1, 0x7f0806ee
 
     const/16 v2, 0x226
 
@@ -5691,7 +5713,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03eb
+    const v1, 0x7f0802fd
 
     const/16 v2, 0x227
 
@@ -5701,7 +5723,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b041e
+    const v1, 0x7f080074
 
     const/16 v2, 0x228
 
@@ -5711,7 +5733,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b017d
+    const v1, 0x7f0805b4
 
     const/16 v2, 0x229
 
@@ -5721,7 +5743,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00b6
+    const v1, 0x7f080073
 
     const/16 v2, 0x22a
 
@@ -5731,7 +5753,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01eb
+    const v1, 0x7f08045d
 
     const/16 v2, 0x22b
 
@@ -5741,7 +5763,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03c2
+    const v1, 0x7f080339
 
     const/16 v2, 0x22c
 
@@ -5751,7 +5773,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02b0
+    const v1, 0x7f080430
 
     const/16 v2, 0x22d
 
@@ -5761,7 +5783,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01d0
+    const v1, 0x7f080150
 
     const/16 v2, 0x22e
 
@@ -5771,7 +5793,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03ce
+    const v1, 0x7f080559
 
     const/16 v2, 0x22f
 
@@ -5781,7 +5803,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0062
+    const v1, 0x7f080482
 
     const/16 v2, 0x230
 
@@ -5791,7 +5813,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b012e
+    const v1, 0x7f08022d
 
     const/16 v2, 0x231
 
@@ -5801,7 +5823,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00b3
+    const v1, 0x7f0804f7
 
     const/16 v2, 0x232
 
@@ -5811,7 +5833,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0142
+    const v1, 0x7f08063a
 
     const/16 v2, 0x233
 
@@ -5821,7 +5843,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b009a
+    const v1, 0x7f0803a8
 
     const/16 v2, 0x234
 
@@ -5831,7 +5853,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b046f
+    const v1, 0x7f0806d9
 
     const/16 v2, 0x235
 
@@ -5841,7 +5863,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01ca
+    const v1, 0x7f0802f4
 
     const/16 v2, 0x236
 
@@ -5851,7 +5873,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0257
+    const v1, 0x7f080101
 
     const/16 v2, 0x237
 
@@ -5861,7 +5883,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0138
+    const v1, 0x7f08004b
 
     const/16 v2, 0x238
 
@@ -5871,7 +5893,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0368
+    const v1, 0x7f080066
 
     const/16 v2, 0x239
 
@@ -5881,7 +5903,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0258
+    const v1, 0x7f080083
 
     const/16 v2, 0x23a
 
@@ -5891,7 +5913,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0187
+    const v1, 0x7f0803ca
 
     const/16 v2, 0x23b
 
@@ -5901,7 +5923,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01de
+    const v1, 0x7f08025c
 
     const/16 v2, 0x23c
 
@@ -5911,7 +5933,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02a5
+    const v1, 0x7f080733
 
     const/16 v2, 0x23d
 
@@ -5921,7 +5943,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01af
+    const v1, 0x7f08041d
 
     const/16 v2, 0x23e
 
@@ -5931,7 +5953,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0236
+    const v1, 0x7f080385
 
     const/16 v2, 0x23f
 
@@ -5941,7 +5963,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0309
+    const v1, 0x7f080534
 
     const/16 v2, 0x240
 
@@ -5951,7 +5973,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b047e
+    const v1, 0x7f08072b
 
     const/16 v2, 0x241
 
@@ -5961,7 +5983,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b013e
+    const v1, 0x7f0802a3
 
     const/16 v2, 0x242
 
@@ -5971,7 +5993,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02da
+    const v1, 0x7f08012f
 
     const/16 v2, 0x243
 
@@ -5981,7 +6003,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b009b
+    const v1, 0x7f080327
 
     const/16 v2, 0x244
 
@@ -5991,7 +6013,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0106
+    const v1, 0x7f0804a5
 
     const/16 v2, 0x245
 
@@ -6001,7 +6023,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00d4
+    const v1, 0x7f08038c
 
     const/16 v2, 0x246
 
@@ -6011,7 +6033,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03c7
+    const v1, 0x7f08070e
 
     const/16 v2, 0x247
 
@@ -6021,7 +6043,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01e2
+    const v1, 0x7f080569
 
     const/16 v2, 0x248
 
@@ -6031,7 +6053,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0072
+    const v1, 0x7f0804a0
 
     const/16 v2, 0x249
 
@@ -6041,7 +6063,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01f3
+    const v1, 0x7f080459
 
     const/16 v2, 0x24a
 
@@ -6051,7 +6073,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0159
+    const v1, 0x7f0803eb
 
     const/16 v2, 0x24b
 
@@ -6061,7 +6083,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0364
+    const v1, 0x7f08011f
 
     const/16 v2, 0x24c
 
@@ -6071,7 +6093,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b042b
+    const v1, 0x7f080414
 
     const/16 v2, 0x24d
 
@@ -6081,7 +6103,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b017b
+    const v1, 0x7f08001b
 
     const/16 v2, 0x24e
 
@@ -6091,7 +6113,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0104
+    const v1, 0x7f0802d1
 
     const/16 v2, 0x24f
 
@@ -6101,7 +6123,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b007d
+    const v1, 0x7f0805a4
 
     const/16 v2, 0x250
 
@@ -6111,7 +6133,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0432
+    const v1, 0x7f0806b2
 
     const/16 v2, 0x251
 
@@ -6121,7 +6143,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0218
+    const v1, 0x7f0805bd
 
     const/16 v2, 0x252
 
@@ -6131,7 +6153,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0206
+    const v1, 0x7f08051d
 
     const/16 v2, 0x253
 
@@ -6141,7 +6163,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0420
+    const v1, 0x7f0805fe
 
     const/16 v2, 0x254
 
@@ -6151,7 +6173,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0157
+    const v1, 0x7f080640
 
     const/16 v2, 0x255
 
@@ -6161,41 +6183,17 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f070005
+    const v1, 0x7f080467
 
-    const/4 v2, 0x6
+    const/16 v2, 0x256
 
-    new-array v2, v2, [Ljava/lang/String;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-string v3, "\u09a1\u09bf\u09ab\u09b2\u09cd\u099f"
-
-    aput-object v3, v2, v5
-
-    const-string v3, "\u09b9\u09b2\u09c1\u09a6 \u0986\u0987\u0995\u09a8"
-
-    aput-object v3, v2, v6
-
-    const-string v3, "\u09b8\u09ac\u09c1\u099c \u0986\u0987\u0995\u09a8"
-
-    aput-object v3, v2, v7
-
-    const-string v3, "\u09b2\u09be\u09b2 \u0986\u0987\u0995\u09a8"
-
-    aput-object v3, v2, v8
-
-    const-string v3, "\u09aa\u09bf\u0999\u09cd\u0995 \u0986\u0987\u0995\u09a8"
-
-    aput-object v3, v2, v9
-
-    const/4 v3, 0x5
-
-    const-string v4, "\u0995\u09be\u09b2\u09cb \u0986\u0987\u0995\u09a8"
-
-    aput-object v4, v2, v3
+    move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b043b
+    const v1, 0x7f0805cf
 
     const/16 v2, 0x257
 
@@ -6205,7 +6203,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03b0
+    const v1, 0x7f08063f
 
     const/16 v2, 0x258
 
@@ -6215,7 +6213,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00b8
+    const v1, 0x7f0802ac
 
     const/16 v2, 0x259
 
@@ -6225,7 +6223,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0116
+    const v1, 0x7f080401
 
     const/16 v2, 0x25a
 
@@ -6235,7 +6233,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01fe
+    const v1, 0x7f0805fb
 
     const/16 v2, 0x25b
 
@@ -6245,7 +6243,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b041c
+    const v1, 0x7f080524
 
     const/16 v2, 0x25c
 
@@ -6255,7 +6253,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b028c
+    const v1, 0x7f08069b
 
     const/16 v2, 0x25d
 
@@ -6265,7 +6263,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03c6
+    const v1, 0x7f0800a1
 
     const/16 v2, 0x25e
 
@@ -6275,7 +6273,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00bb
+    const v1, 0x7f0802a4
 
     const/16 v2, 0x25f
 
@@ -6285,7 +6283,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0032
+    const v1, 0x7f08059d
 
     const/16 v2, 0x260
 
@@ -6295,7 +6293,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02df
+    const v1, 0x7f080679
 
     const/16 v2, 0x261
 
@@ -6305,7 +6303,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0053
+    const v1, 0x7f0806e7
 
     const/16 v2, 0x262
 
@@ -6315,7 +6313,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0272
+    const v1, 0x7f0806ec
 
     const/16 v2, 0x263
 
@@ -6325,7 +6323,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03ea
+    const v1, 0x7f080707
 
     const/16 v2, 0x264
 
@@ -6335,7 +6333,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01db
+    const v1, 0x7f080142
 
     const/16 v2, 0x265
 
@@ -6345,7 +6343,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b022e
+    const v1, 0x7f080080
 
     const/16 v2, 0x266
 
@@ -6355,7 +6353,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0366
+    const v1, 0x7f080413
 
     const/16 v2, 0x267
 
@@ -6365,7 +6363,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0217
+    const v1, 0x7f080687
 
     const/16 v2, 0x268
 
@@ -6375,7 +6373,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b024a
+    const v1, 0x7f080154
 
     const/16 v2, 0x269
 
@@ -6385,7 +6383,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0149
+    const v1, 0x7f08019b
 
     const/16 v2, 0x26a
 
@@ -6395,7 +6393,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0140
+    const v1, 0x7f0806aa
 
     const/16 v2, 0x26b
 
@@ -6405,7 +6403,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02a0
+    const v1, 0x7f0803d7
 
     const/16 v2, 0x26c
 
@@ -6415,7 +6413,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00d9
+    const v1, 0x7f0806e8
 
     const/16 v2, 0x26d
 
@@ -6425,7 +6423,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b002a
+    const v1, 0x7f08072f
 
     const/16 v2, 0x26e
 
@@ -6435,7 +6433,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03aa
+    const v1, 0x7f080523
 
     const/16 v2, 0x26f
 
@@ -6445,7 +6443,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b015f
+    const v1, 0x7f0806cf
 
     const/16 v2, 0x270
 
@@ -6455,7 +6453,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b026b
+    const v1, 0x7f08027e
 
     const/16 v2, 0x271
 
@@ -6465,7 +6463,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b003c
+    const v1, 0x7f080723
 
     const/16 v2, 0x272
 
@@ -6475,59 +6473,17 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const/high16 v1, 0x7f070000
+    const v1, 0x7f080173
 
-    const/16 v2, 0x9
+    const/16 v2, 0x273
 
-    new-array v2, v2, [Ljava/lang/String;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-string v3, "\u0986\u0987\u0995\u09a8 (\u09ac\u09a1\u09bc),"
-
-    aput-object v3, v2, v5
-
-    const-string v3, "\u0986\u0987\u0995\u09a8 (\u09ae\u09a7\u09cd\u09af\u09c7)"
-
-    aput-object v3, v2, v6
-
-    const-string v3, "\u0986\u0987\u0995\u09a8 (\u099b\u09cb\u099f)"
-
-    aput-object v3, v2, v7
-
-    const-string v3, "\u09a4\u09be\u09b2\u09bf\u0995\u09be (\u09ac\u09a1\u09bc)"
-
-    aput-object v3, v2, v8
-
-    const-string v3, "\u09a4\u09be\u09b2\u09bf\u0995\u09be (\u09ae\u09a7\u09cd\u09af\u09c7)"
-
-    aput-object v3, v2, v9
-
-    const/4 v3, 0x5
-
-    const-string v4, "\u09a4\u09be\u09b2\u09bf\u0995\u09be (\u099b\u09cb\u099f)"
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x6
-
-    const-string v4, "(\u09ac\u09a1\u09bc) \u09ac\u09bf\u09ac\u09b0\u09a3,"
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x7
-
-    const-string v4, "(\u098f) \u098f\u09b0 \u09ac\u09bf\u09ac\u09b0\u09a3"
-
-    aput-object v4, v2, v3
-
-    const/16 v3, 0x8
-
-    const-string v4, "(\u099b\u09cb\u099f) \u098f\u09b0 \u09ac\u09bf\u09ac\u09b0\u09a3"
-
-    aput-object v4, v2, v3
+    move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0435
+    const v1, 0x7f0805a5
 
     const/16 v2, 0x274
 
@@ -6537,7 +6493,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b033c
+    const v1, 0x7f0802ba
 
     const/16 v2, 0x275
 
@@ -6547,7 +6503,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0231
+    const v1, 0x7f0803f6
 
     const/16 v2, 0x276
 
@@ -6557,7 +6513,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0067
+    const v1, 0x7f08065d
 
     const/16 v2, 0x277
 
@@ -6567,7 +6523,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0426
+    const v1, 0x7f0805d6
 
     const/16 v2, 0x278
 
@@ -6577,7 +6533,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01b8
+    const v1, 0x7f0804f5
 
     const/16 v2, 0x279
 
@@ -6587,7 +6543,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b012c
+    const v1, 0x7f0803ff
 
     const/16 v2, 0x27a
 
@@ -6597,47 +6553,17 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f070007
+    const v1, 0x7f080159
 
-    const/4 v2, 0x7
+    const/16 v2, 0x27b
 
-    new-array v2, v2, [Ljava/lang/String;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-string v3, "\u09b8\u09ac \u09ae\u09be\u09aa\u09c7\u09b0"
-
-    aput-object v3, v2, v5
-
-    const-string v3, "0 - 100 \u0995\u09bf\u09b2\u09cb\u09ac\u09be\u0987\u099f"
-
-    aput-object v3, v2, v6
-
-    const-string v3, "100KB - 1 \u09ae\u09c7\u0997\u09be\u09ac\u09be\u0987\u099f"
-
-    aput-object v3, v2, v7
-
-    const-string v3, "1 \u09ae\u09c7\u0997\u09be\u09ac\u09be\u0987\u099f - 16 \u09ae\u09c7\u0997\u09be\u09ac\u09be\u0987\u099f"
-
-    aput-object v3, v2, v8
-
-    const-string v3, "16 \u098f\u09ae\u09ac\u09bf - 128 \u09ae\u09c7\u0997\u09be\u09ac\u09be\u0987\u099f"
-
-    aput-object v3, v2, v9
-
-    const/4 v3, 0x5
-
-    const-string v4, "> 128 \u09ae\u09c7\u0997\u09be\u09ac\u09be\u0987\u099f"
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x6
-
-    const-string v4, "\u0995\u09cb\u09a8\u09cb \u09ae\u09be\u09a8 \u09b2\u09bf\u0996\u09c1\u09a8."
-
-    aput-object v4, v2, v3
+    move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0012
+    const v1, 0x7f080600
 
     const/16 v2, 0x27c
 
@@ -6647,7 +6573,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0040
+    const v1, 0x7f08038a
 
     const/16 v2, 0x27d
 
@@ -6657,7 +6583,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b004a
+    const v1, 0x7f080548
 
     const/16 v2, 0x27e
 
@@ -6667,7 +6593,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00c9
+    const v1, 0x7f080420
 
     const/16 v2, 0x27f
 
@@ -6677,7 +6603,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02b8
+    const v1, 0x7f0805fc
 
     const/16 v2, 0x280
 
@@ -6687,7 +6613,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0395
+    const v1, 0x7f0805dc
 
     const/16 v2, 0x281
 
@@ -6697,7 +6623,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0252
+    const v1, 0x7f080709
 
     const/16 v2, 0x282
 
@@ -6707,7 +6633,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01d4
+    const v1, 0x7f08041e
 
     const/16 v2, 0x283
 
@@ -6717,7 +6643,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02c1
+    const v1, 0x7f08070c
 
     const/16 v2, 0x284
 
@@ -6727,17 +6653,59 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03d6
+    const v1, 0x7f0c0011
 
-    const/16 v2, 0x285
+    const/16 v2, 0x9
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-array v2, v2, [Ljava/lang/String;
 
-    move-result-object v2
+    const-string v3, "\u0418\u043a\u043e\u043d\u0438, \u0433\u043e\u043b\u0435\u043c\u0438"
+
+    aput-object v3, v2, v5
+
+    const-string v3, "\u0418\u043a\u043e\u043d\u0438, \u0441\u0440\u0435\u0434\u043d\u0438"
+
+    aput-object v3, v2, v6
+
+    const-string v3, "\u0418\u043a\u043e\u043d\u0438, \u043c\u0430\u043b\u043a\u0438"
+
+    aput-object v3, v2, v7
+
+    const-string v3, "\u0421\u043f\u0438\u0441\u044a\u043a, \u0433\u043e\u043b\u0435\u043c\u0438"
+
+    aput-object v3, v2, v8
+
+    const-string v3, "\u0421\u043f\u0438\u0441\u044a\u043a, \u0441\u0440\u0435\u0434\u043d\u0438"
+
+    aput-object v3, v2, v9
+
+    const/4 v3, 0x5
+
+    const-string v4, "\u0421\u043f\u0438\u0441\u044a\u043a, \u043c\u0430\u043b\u043a\u0438"
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x6
+
+    const-string v4, "\u0414\u0435\u0442\u0430\u0439\u043b\u0438, \u0433\u043e\u043b\u0435\u043c\u0438"
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x7
+
+    const-string v4, "\u0414\u0435\u0442\u0430\u0439\u043b\u0438, \u0441\u0440\u0435\u0434\u043d\u0438"
+
+    aput-object v4, v2, v3
+
+    const/16 v3, 0x8
+
+    const-string v4, "\u0414\u0435\u0442\u0430\u0439\u043b\u0438, \u043c\u0430\u043b\u043a\u0438"
+
+    aput-object v4, v2, v3
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0178
+    const v1, 0x7f0805ce
 
     const/16 v2, 0x286
 
@@ -6747,7 +6715,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0499
+    const v1, 0x7f0800af
 
     const/16 v2, 0x287
 
@@ -6757,7 +6725,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b018b
+    const v1, 0x7f0802f8
 
     const/16 v2, 0x288
 
@@ -6767,7 +6735,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01bd
+    const v1, 0x7f080229
 
     const/16 v2, 0x289
 
@@ -6777,7 +6745,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02ab
+    const v1, 0x7f0802f6
 
     const/16 v2, 0x28a
 
@@ -6787,7 +6755,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00e9
+    const v1, 0x7f0802f7
 
     const/16 v2, 0x28b
 
@@ -6797,7 +6765,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03a8
+    const v1, 0x7f080517
 
     const/16 v2, 0x28c
 
@@ -6807,7 +6775,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b010e
+    const v1, 0x7f080003
 
     const/16 v2, 0x28d
 
@@ -6817,7 +6785,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01a3
+    const v1, 0x7f080725
 
     const/16 v2, 0x28e
 
@@ -6827,7 +6795,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b027f
+    const v1, 0x7f0806d0
 
     const/16 v2, 0x28f
 
@@ -6837,7 +6805,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0412
+    const v1, 0x7f0805b1
 
     const/16 v2, 0x290
 
@@ -6847,7 +6815,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0268
+    const v1, 0x7f080242
 
     const/16 v2, 0x291
 
@@ -6857,7 +6825,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02d5
+    const v1, 0x7f0803ac
 
     const/16 v2, 0x292
 
@@ -6867,7 +6835,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0467
+    const v1, 0x7f08066e
 
     const/16 v2, 0x293
 
@@ -6877,7 +6845,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0099
+    const v1, 0x7f0806dc
 
     const/16 v2, 0x294
 
@@ -6887,7 +6855,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b045e
+    const v1, 0x7f0800a5
 
     const/16 v2, 0x295
 
@@ -6897,7 +6865,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0160
+    const v1, 0x7f08044e
 
     const/16 v2, 0x296
 
@@ -6907,7 +6875,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b040a
+    const v1, 0x7f08045a
 
     const/16 v2, 0x297
 
@@ -6917,7 +6885,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03b7
+    const v1, 0x7f0800fd
 
     const/16 v2, 0x298
 
@@ -6927,7 +6895,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03cd
+    const v1, 0x7f08049d
 
     const/16 v2, 0x299
 
@@ -6937,7 +6905,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b029e
+    const v1, 0x7f08068b
 
     const/16 v2, 0x29a
 
@@ -6947,7 +6915,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b018f
+    const v1, 0x7f0803df
 
     const/16 v2, 0x29b
 
@@ -6957,7 +6925,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0185
+    const v1, 0x7f080230
 
     const/16 v2, 0x29c
 
@@ -6967,7 +6935,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02ae
+    const v1, 0x7f08057a
 
     const/16 v2, 0x29d
 
@@ -6977,7 +6945,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b030e
+    const v1, 0x7f080451
 
     const/16 v2, 0x29e
 
@@ -6987,7 +6955,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0152
+    const v1, 0x7f0806b1
 
     const/16 v2, 0x29f
 
@@ -6997,7 +6965,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b004e
+    const v1, 0x7f080232
 
     const/16 v2, 0x2a0
 
@@ -7007,7 +6975,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b008c
+    const v1, 0x7f0803f8
 
     const/16 v2, 0x2a1
 
@@ -7017,7 +6985,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02b3
+    const v1, 0x7f0803a3
 
     const/16 v2, 0x2a2
 
@@ -7027,7 +6995,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00ba
+    const v1, 0x7f080683
 
     const/16 v2, 0x2a3
 
@@ -7037,7 +7005,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03f8
+    const v1, 0x7f0800ab
 
     const/16 v2, 0x2a4
 
@@ -7047,7 +7015,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02a7
+    const v1, 0x7f0805f4
 
     const/16 v2, 0x2a5
 
@@ -7057,7 +7025,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02eb
+    const v1, 0x7f08064f
 
     const/16 v2, 0x2a6
 
@@ -7067,7 +7035,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0250
+    const v1, 0x7f080117
 
     const/16 v2, 0x2a7
 
@@ -7077,7 +7045,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01b7
+    const v1, 0x7f080221
 
     const/16 v2, 0x2a8
 
@@ -7087,7 +7055,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02e7
+    const v1, 0x7f080575
 
     const/16 v2, 0x2a9
 
@@ -7097,7 +7065,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01d3
+    const v1, 0x7f0806f3
 
     const/16 v2, 0x2aa
 
@@ -7107,7 +7075,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0388
+    const v1, 0x7f0805b5
 
     const/16 v2, 0x2ab
 
@@ -7117,7 +7085,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03f0
+    const v1, 0x7f08011d
 
     const/16 v2, 0x2ac
 
@@ -7127,7 +7095,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02f7
+    const v1, 0x7f0805bb
 
     const/16 v2, 0x2ad
 
@@ -7137,7 +7105,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0139
+    const v1, 0x7f08029a
 
     const/16 v2, 0x2ae
 
@@ -7147,7 +7115,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02a3
+    const v1, 0x7f0805ab
 
     const/16 v2, 0x2af
 
@@ -7157,7 +7125,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02e1
+    const v1, 0x7f0805bc
 
     const/16 v2, 0x2b0
 
@@ -7167,7 +7135,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02f9
+    const v1, 0x7f080488
 
     const/16 v2, 0x2b1
 
@@ -7177,53 +7145,17 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f070008
+    const v1, 0x7f080175
 
-    const/16 v2, 0x8
+    const/16 v2, 0x2b2
 
-    new-array v2, v2, [Ljava/lang/String;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-string v3, "\u09b8\u09ae\u09b8\u09cd\u09a4 \u09a4\u09be\u09b0\u09bf\u0996\u0997\u09c1\u09b2\u09bf"
-
-    aput-object v3, v2, v5
-
-    const-string v3, "\u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8 \u09a6\u09bf\u09a8"
-
-    aput-object v3, v2, v6
-
-    const-string v3, "\u0997\u09a4\u0995\u09be\u09b2"
-
-    aput-object v3, v2, v7
-
-    const-string v3, "\u098f\u0987 \u09b8\u09aa\u09cd\u09a4\u09be\u09b9\u09c7\u09b0"
-
-    aput-object v3, v2, v8
-
-    const-string v3, "\u098f\u0987 \u09ae\u09be\u09b8\u09c7"
-
-    aput-object v3, v2, v9
-
-    const/4 v3, 0x5
-
-    const-string v4, "\u098f\u0987 \u09ac\u099b\u09b0"
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x6
-
-    const-string v4, "\u09aa\u09cd\u09b0\u09be\u09af\u09bc 1 \u09ac\u099b\u09b0"
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x7
-
-    const-string v4, "\u0995\u09cb\u09a8\u09cb \u09ae\u09be\u09a8 \u09b2\u09bf\u0996\u09c1\u09a8."
-
-    aput-object v4, v2, v3
+    move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0075
+    const v1, 0x7f08068c
 
     const/16 v2, 0x2b3
 
@@ -7233,7 +7165,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b020f
+    const v1, 0x7f0806c6
 
     const/16 v2, 0x2b4
 
@@ -7243,7 +7175,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00e8
+    const v1, 0x7f080087
 
     const/16 v2, 0x2b5
 
@@ -7253,7 +7185,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0400
+    const v1, 0x7f08064d
 
     const/16 v2, 0x2b6
 
@@ -7263,7 +7195,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0061
+    const v1, 0x7f08066d
 
     const/16 v2, 0x2b7
 
@@ -7273,7 +7205,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b031f
+    const v1, 0x7f08023c
 
     const/16 v2, 0x2b8
 
@@ -7283,7 +7215,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0215
+    const v1, 0x7f080666
 
     const/16 v2, 0x2b9
 
@@ -7293,7 +7225,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0015
+    const v1, 0x7f080169
 
     const/16 v2, 0x2ba
 
@@ -7303,7 +7235,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03a6
+    const v1, 0x7f0801f5
 
     const/16 v2, 0x2bb
 
@@ -7313,7 +7245,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b042a
+    const v1, 0x7f080094
 
     const/16 v2, 0x2bc
 
@@ -7323,7 +7255,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0085
+    const v1, 0x7f080434
 
     const/16 v2, 0x2bd
 
@@ -7333,7 +7265,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01b2
+    const v1, 0x7f08042f
 
     const/16 v2, 0x2be
 
@@ -7343,7 +7275,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b041b
+    const v1, 0x7f0806e1
 
     const/16 v2, 0x2bf
 
@@ -7353,7 +7285,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0299
+    const v1, 0x7f080712
 
     const/16 v2, 0x2c0
 
@@ -7363,7 +7295,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00e7
+    const v1, 0x7f080391
 
     const/16 v2, 0x2c1
 
@@ -7373,7 +7305,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b014c
+    const v1, 0x7f080730
 
     const/16 v2, 0x2c2
 
@@ -7383,7 +7315,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b021e
+    const v1, 0x7f0802c2
 
     const/16 v2, 0x2c3
 
@@ -7393,7 +7325,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b001d
+    const v1, 0x7f0805e8
 
     const/16 v2, 0x2c4
 
@@ -7403,7 +7335,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02f3
+    const v1, 0x7f08024d
 
     const/16 v2, 0x2c5
 
@@ -7413,7 +7345,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0089
+    const v1, 0x7f080612
 
     const/16 v2, 0x2c6
 
@@ -7423,7 +7355,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01c0
+    const v1, 0x7f080078
 
     const/16 v2, 0x2c7
 
@@ -7433,7 +7365,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0083
+    const v1, 0x7f080410
 
     const/16 v2, 0x2c8
 
@@ -7443,7 +7375,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0026
+    const v1, 0x7f080296
 
     const/16 v2, 0x2c9
 
@@ -7453,7 +7385,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0371
+    const v1, 0x7f0805d8
 
     const/16 v2, 0x2ca
 
@@ -7463,7 +7395,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03d1
+    const v1, 0x7f08007c
 
     const/16 v2, 0x2cb
 
@@ -7473,7 +7405,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00cc
+    const v1, 0x7f08043e
 
     const/16 v2, 0x2cc
 
@@ -7483,7 +7415,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0352
+    const v1, 0x7f08051f
 
     const/16 v2, 0x2cd
 
@@ -7493,7 +7425,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b014f
+    const v1, 0x7f080104
 
     const/16 v2, 0x2ce
 
@@ -7503,7 +7435,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b013d
+    const v1, 0x7f080005
 
     const/16 v2, 0x2cf
 
@@ -7513,7 +7445,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b045c
+    const v1, 0x7f0805c1
 
     const/16 v2, 0x2d0
 
@@ -7523,7 +7455,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b037c
+    const v1, 0x7f0803cc
 
     const/16 v2, 0x2d1
 
@@ -7533,7 +7465,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01b5
+    const v1, 0x7f080415
 
     const/16 v2, 0x2d2
 
@@ -7543,7 +7475,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b039e
+    const v1, 0x7f08028a
 
     const/16 v2, 0x2d3
 
@@ -7553,7 +7485,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b014d
+    const v1, 0x7f0806b8
 
     const/16 v2, 0x2d4
 
@@ -7563,7 +7495,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0391
+    const v1, 0x7f08053d
 
     const/16 v2, 0x2d5
 
@@ -7573,7 +7505,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b030a
+    const v1, 0x7f080542
 
     const/16 v2, 0x2d6
 
@@ -7583,7 +7515,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0447
+    const v1, 0x7f0805a0
 
     const/16 v2, 0x2d7
 
@@ -7593,7 +7525,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b033e
+    const v1, 0x7f08053c
 
     const/16 v2, 0x2d8
 
@@ -7603,7 +7535,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00fa
+    const v1, 0x7f0806eb
 
     const/16 v2, 0x2d9
 
@@ -7613,7 +7545,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02b5
+    const v1, 0x7f080382
 
     const/16 v2, 0x2da
 
@@ -7623,7 +7555,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01f6
+    const v1, 0x7f080403
 
     const/16 v2, 0x2db
 
@@ -7633,7 +7565,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0288
+    const v1, 0x7f080456
 
     const/16 v2, 0x2dc
 
@@ -7643,7 +7575,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b046a
+    const v1, 0x7f0802c4
 
     const/16 v2, 0x2dd
 
@@ -7653,7 +7585,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03df
+    const v1, 0x7f080466
 
     const/16 v2, 0x2de
 
@@ -7663,7 +7595,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03c1
+    const v1, 0x7f08045c
 
     const/16 v2, 0x2df
 
@@ -7673,7 +7605,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b004c
+    const v1, 0x7f08066f
 
     const/16 v2, 0x2e0
 
@@ -7683,7 +7615,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0357
+    const v1, 0x7f0802c5
 
     const/16 v2, 0x2e1
 
@@ -7693,7 +7625,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0303
+    const v1, 0x7f0805ca
 
     const/16 v2, 0x2e2
 
@@ -7703,7 +7635,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00d1
+    const v1, 0x7f08064c
 
     const/16 v2, 0x2e3
 
@@ -7713,7 +7645,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02c3
+    const v1, 0x7f080377
 
     const/16 v2, 0x2e4
 
@@ -7723,7 +7655,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01e9
+    const v1, 0x7f0805d9
 
     const/16 v2, 0x2e5
 
@@ -7733,7 +7665,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00df
+    const v1, 0x7f0805c2
 
     const/16 v2, 0x2e6
 
@@ -7743,7 +7675,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0201
+    const v1, 0x7f080115
 
     const/16 v2, 0x2e7
 
@@ -7753,7 +7685,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0145
+    const v1, 0x7f080665
 
     const/16 v2, 0x2e8
 
@@ -7763,7 +7695,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0430
+    const v1, 0x7f08048e
 
     const/16 v2, 0x2e9
 
@@ -7773,7 +7705,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01c5
+    const v1, 0x7f0803d6
 
     const/16 v2, 0x2ea
 
@@ -7783,7 +7715,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0439
+    const v1, 0x7f080134
 
     const/16 v2, 0x2eb
 
@@ -7793,7 +7725,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b037b
+    const v1, 0x7f0803e4
 
     const/16 v2, 0x2ec
 
@@ -7803,7 +7735,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0341
+    const v1, 0x7f0803e5
 
     const/16 v2, 0x2ed
 
@@ -7813,7 +7745,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b006b
+    const v1, 0x7f08067d
 
     const/16 v2, 0x2ee
 
@@ -7823,7 +7755,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b003f
+    const v1, 0x7f080598
 
     const/16 v2, 0x2ef
 
@@ -7833,7 +7765,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b030c
+    const v1, 0x7f080668
 
     const/16 v2, 0x2f0
 
@@ -7843,7 +7775,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0331
+    const v1, 0x7f080337
 
     const/16 v2, 0x2f1
 
@@ -7853,7 +7785,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0098
+    const v1, 0x7f08059c
 
     const/16 v2, 0x2f2
 
@@ -7863,7 +7795,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0100
+    const v1, 0x7f08061b
 
     const/16 v2, 0x2f3
 
@@ -7873,7 +7805,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0126
+    const v1, 0x7f080282
 
     const/16 v2, 0x2f4
 
@@ -7883,7 +7815,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0476
+    const v1, 0x7f0804f2
 
     const/16 v2, 0x2f5
 
@@ -7893,7 +7825,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03d2
+    const v1, 0x7f080165
 
     const/16 v2, 0x2f6
 
@@ -7903,7 +7835,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0286
+    const v1, 0x7f08053a
 
     const/16 v2, 0x2f7
 
@@ -7913,7 +7845,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02a2
+    const v1, 0x7f080591
 
     const/16 v2, 0x2f8
 
@@ -7923,7 +7855,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0332
+    const v1, 0x7f080531
 
     const/16 v2, 0x2f9
 
@@ -7933,7 +7865,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b015c
+    const v1, 0x7f08043c
 
     const/16 v2, 0x2fa
 
@@ -7943,7 +7875,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01b6
+    const v1, 0x7f080426
 
     const/16 v2, 0x2fb
 
@@ -7953,17 +7885,65 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0295
+    const v1, 0x7f0c0015
 
-    const/16 v2, 0x2fc
+    const/16 v2, 0xa
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-array v2, v2, [Ljava/lang/String;
 
-    move-result-object v2
+    const-string v3, ""
+
+    aput-object v3, v2, v5
+
+    const-string v3, "\u0421\u043a\u0430\u043d\u0438\u0440\u0430\u043d\u0435\u2026"
+
+    aput-object v3, v2, v6
+
+    const-string v3, "\u0421\u0432\u044a\u0440\u0437\u0432\u0430\u043d\u0435 \u0441 %1$s\u2026"
+
+    aput-object v3, v2, v7
+
+    const-string v3, "\u0423\u0434\u043e\u0441\u0442\u043e\u0432\u0435\u0440\u044f\u0432\u0430\u043d\u0435 \u0441 %1$s\u2026"
+
+    aput-object v3, v2, v8
+
+    const-string v3, "\u041f\u043e\u043b\u0443\u0447\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 IP \u0430\u0434\u0440\u0435\u0441 \u043e\u0442 %1$s\u2026"
+
+    aput-object v3, v2, v9
+
+    const/4 v3, 0x5
+
+    const-string v4, "\u0421\u0432\u044a\u0440\u0437\u0430\u043d \u043a\u044a\u043c %1$s"
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x6
+
+    const-string v4, "\u041f\u0440\u0435\u043a\u0440\u0430\u0442\u0435\u043d"
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x7
+
+    const-string v4, "\u041f\u0440\u0435\u043a\u044a\u0441\u0432\u0430\u043d\u0435 \u043d\u0430 \u0432\u0440\u044a\u0437\u043a\u0430\u0442\u0430 \u0441 %1$s\u2026"
+
+    aput-object v4, v2, v3
+
+    const/16 v3, 0x8
+
+    const-string v4, "\u041f\u0440\u0435\u043a\u044a\u0441\u043d\u0430\u0442"
+
+    aput-object v4, v2, v3
+
+    const/16 v3, 0x9
+
+    const-string v4, "\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e"
+
+    aput-object v4, v2, v3
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02cd
+    const v1, 0x7f0803a9
 
     const/16 v2, 0x2fd
 
@@ -7973,7 +7953,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b043a
+    const v1, 0x7f0802c1
 
     const/16 v2, 0x2fe
 
@@ -7983,7 +7963,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b040c
+    const v1, 0x7f0805b7
 
     const/16 v2, 0x2ff
 
@@ -7993,7 +7973,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01d1
+    const v1, 0x7f080502
 
     const/16 v2, 0x300
 
@@ -8003,7 +7983,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0240
+    const v1, 0x7f080454
 
     const/16 v2, 0x301
 
@@ -8013,7 +7993,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01a7
+    const v1, 0x7f080439
 
     const/16 v2, 0x302
 
@@ -8023,7 +8003,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b021b
+    const v1, 0x7f0805d5
 
     const/16 v2, 0x303
 
@@ -8033,7 +8013,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0393
+    const v1, 0x7f08028e
 
     const/16 v2, 0x304
 
@@ -8043,7 +8023,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0434
+    const v1, 0x7f0801b5
 
     const/16 v2, 0x305
 
@@ -8053,7 +8033,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01f4
+    const v1, 0x7f08074c
 
     const/16 v2, 0x306
 
@@ -8063,7 +8043,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b030b
+    const v1, 0x7f0802ef
 
     const/16 v2, 0x307
 
@@ -8073,7 +8053,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0154
+    const v1, 0x7f080498
 
     const/16 v2, 0x308
 
@@ -8083,7 +8063,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0394
+    const v1, 0x7f08014e
 
     const/16 v2, 0x309
 
@@ -8093,7 +8073,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0068
+    const v1, 0x7f0801f1
 
     const/16 v2, 0x30a
 
@@ -8103,7 +8083,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0016
+    const v1, 0x7f080392
 
     const/16 v2, 0x30b
 
@@ -8113,7 +8093,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02f4
+    const v1, 0x7f0803f3
 
     const/16 v2, 0x30c
 
@@ -8123,7 +8103,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01ac
+    const v1, 0x7f080330
 
     const/16 v2, 0x30d
 
@@ -8133,25 +8113,17 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f07000d
+    const v1, 0x7f080255
 
-    new-array v2, v8, [Ljava/lang/String;
+    const/16 v2, 0x30e
 
-    const-string v3, "\u09a1\u09b8 \u09b2\u09be\u0987\u09a8 \u09ac\u09cd\u09b0\u09c7\u0995 - CR / LF"
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    aput-object v3, v2, v5
-
-    const-string v3, "\u0987\u0989\u09a8\u09bf\u0995\u09cd\u09b8\u09cd \u09b2\u09be\u0987\u09a8 \u09ac\u09cd\u09b0\u09c7\u0995 - \u098f\u09b2\u098f\u09ab"
-
-    aput-object v3, v2, v6
-
-    const-string v3, "\u09ae\u09cd\u09af\u09be\u0995 \u09b2\u09be\u0987\u09a8 \u09ac\u09cd\u09b0\u09c7\u0995 - \u09b8\u09bf\u0986\u09b0"
-
-    aput-object v3, v2, v7
+    move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00e5
+    const v1, 0x7f080504
 
     const/16 v2, 0x30f
 
@@ -8161,7 +8133,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00e4
+    const v1, 0x7f08032b
 
     const/16 v2, 0x310
 
@@ -8171,7 +8143,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01ec
+    const v1, 0x7f080554
 
     const/16 v2, 0x311
 
@@ -8181,7 +8153,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03b1
+    const v1, 0x7f0802f9
 
     const/16 v2, 0x312
 
@@ -8191,7 +8163,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00ea
+    const v1, 0x7f0802fa
 
     const/16 v2, 0x313
 
@@ -8201,7 +8173,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02d7
+    const v1, 0x7f080263
 
     const/16 v2, 0x314
 
@@ -8211,7 +8183,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03c3
+    const v1, 0x7f080261
 
     const/16 v2, 0x315
 
@@ -8221,7 +8193,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03e9
+    const v1, 0x7f080746
 
     const/16 v2, 0x316
 
@@ -8231,7 +8203,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01fa
+    const v1, 0x7f080236
 
     const/16 v2, 0x317
 
@@ -8241,7 +8213,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b032f
+    const v1, 0x7f0803a4
 
     const/16 v2, 0x318
 
@@ -8251,7 +8223,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0202
+    const v1, 0x7f0800a9
 
     const/16 v2, 0x319
 
@@ -8261,7 +8233,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01ce
+    const v1, 0x7f08056b
 
     const/16 v2, 0x31a
 
@@ -8271,7 +8243,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0047
+    const v1, 0x7f0800c1
 
     const/16 v2, 0x31b
 
@@ -8281,7 +8253,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0275
+    const v1, 0x7f08022c
 
     const/16 v2, 0x31c
 
@@ -8291,7 +8263,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0389
+    const v1, 0x7f0806cd
 
     const/16 v2, 0x31d
 
@@ -8301,7 +8273,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0052
+    const v1, 0x7f080698
 
     const/16 v2, 0x31e
 
@@ -8311,7 +8283,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00a4
+    const v1, 0x7f080269
 
     const/16 v2, 0x31f
 
@@ -8321,7 +8293,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b011e
+    const v1, 0x7f080323
 
     const/16 v2, 0x320
 
@@ -8331,7 +8303,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b037d
+    const v1, 0x7f080522
 
     const/16 v2, 0x321
 
@@ -8341,7 +8313,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0328
+    const v1, 0x7f0802cd
 
     const/16 v2, 0x322
 
@@ -8351,7 +8323,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01cd
+    const v1, 0x7f08014a
 
     const/16 v2, 0x323
 
@@ -8361,7 +8333,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b045d
+    const v1, 0x7f080738
 
     const/16 v2, 0x324
 
@@ -8371,7 +8343,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03fe
+    const v1, 0x7f080465
 
     const/16 v2, 0x325
 
@@ -8381,7 +8353,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b024f
+    const v1, 0x7f08068a
 
     const/16 v2, 0x326
 
@@ -8391,7 +8363,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b012a
+    const v1, 0x7f08065c
 
     const/16 v2, 0x327
 
@@ -8401,7 +8373,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0176
+    const v1, 0x7f08069f
 
     const/16 v2, 0x328
 
@@ -8411,7 +8383,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0239
+    const v1, 0x7f080122
 
     const/16 v2, 0x329
 
@@ -8421,7 +8393,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00ab
+    const v1, 0x7f0804fc
 
     const/16 v2, 0x32a
 
@@ -8431,7 +8403,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03e7
+    const v1, 0x7f08028d
 
     const/16 v2, 0x32b
 
@@ -8441,7 +8413,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0051
+    const v1, 0x7f080444
 
     const/16 v2, 0x32c
 
@@ -8451,7 +8423,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b045b
+    const v1, 0x7f080156
 
     const/16 v2, 0x32d
 
@@ -8461,7 +8433,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00da
+    const v1, 0x7f0803a5
 
     const/16 v2, 0x32e
 
@@ -8471,7 +8443,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0245
+    const v1, 0x7f08062c
 
     const/16 v2, 0x32f
 
@@ -8481,7 +8453,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03cc
+    const v1, 0x7f0802e7
 
     const/16 v2, 0x330
 
@@ -8491,7 +8463,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0065
+    const v1, 0x7f08016d
 
     const/16 v2, 0x331
 
@@ -8501,7 +8473,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b018a
+    const v1, 0x7f080642
 
     const/16 v2, 0x332
 
@@ -8511,7 +8483,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01b1
+    const v1, 0x7f0801b4
 
     const/16 v2, 0x333
 
@@ -8521,7 +8493,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0408
+    const v1, 0x7f08070d
 
     const/16 v2, 0x334
 
@@ -8531,7 +8503,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b014e
+    const v1, 0x7f0803a7
 
     const/16 v2, 0x335
 
@@ -8541,7 +8513,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01d8
+    const v1, 0x7f080493
 
     const/16 v2, 0x336
 
@@ -8551,7 +8523,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0058
+    const v1, 0x7f080422
 
     const/16 v2, 0x337
 
@@ -8561,7 +8533,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b044f
+    const v1, 0x7f0803da
 
     const/16 v2, 0x338
 
@@ -8571,7 +8543,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b007a
+    const v1, 0x7f080752
 
     const/16 v2, 0x339
 
@@ -8581,7 +8553,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0270
+    const v1, 0x7f08064b
 
     const/16 v2, 0x33a
 
@@ -8591,7 +8563,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b009f
+    const v1, 0x7f0806e4
 
     const/16 v2, 0x33b
 
@@ -8601,7 +8573,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0478
+    const v1, 0x7f080068
 
     const/16 v2, 0x33c
 
@@ -8611,7 +8583,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01bf
+    const v1, 0x7f08012e
 
     const/16 v2, 0x33d
 
@@ -8621,7 +8593,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0410
+    const v1, 0x7f080076
 
     const/16 v2, 0x33e
 
@@ -8631,7 +8603,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0247
+    const v1, 0x7f08073e
 
     const/16 v2, 0x33f
 
@@ -8641,7 +8613,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b042e
+    const v1, 0x7f080583
 
     const/16 v2, 0x340
 
@@ -8651,7 +8623,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0443
+    const v1, 0x7f080446
 
     const/16 v2, 0x341
 
@@ -8661,7 +8633,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b004f
+    const v1, 0x7f080547
 
     const/16 v2, 0x342
 
@@ -8671,7 +8643,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02c7
+    const v1, 0x7f0806b7
 
     const/16 v2, 0x343
 
@@ -8681,7 +8653,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b014b
+    const v1, 0x7f08040a
 
     const/16 v2, 0x344
 
@@ -8691,7 +8663,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b040f
+    const v1, 0x7f080061
 
     const/16 v2, 0x345
 
@@ -8701,29 +8673,17 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f070001
+    const v1, 0x7f08062d
 
-    new-array v2, v9, [Ljava/lang/String;
+    const/16 v2, 0x346
 
-    const-string v3, "\u09a6\u09b0\u09bf\u09a6\u09cd\u09b0"
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    aput-object v3, v2, v5
-
-    const-string v3, "\u09b8\u09be\u09a7\u09be\u09b0\u09a8"
-
-    aput-object v3, v2, v6
-
-    const-string v3, "\u0997\u09c1\u09a1"
-
-    aput-object v3, v2, v7
-
-    const-string v3, "\u099a\u09ae\u09ce\u0995\u09be\u09b0"
-
-    aput-object v3, v2, v8
+    move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0456
+    const v1, 0x7f080711
 
     const/16 v2, 0x347
 
@@ -8733,7 +8693,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00b0
+    const v1, 0x7f080535
 
     const/16 v2, 0x348
 
@@ -8743,7 +8703,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03d5
+    const v1, 0x7f080399
 
     const/16 v2, 0x349
 
@@ -8753,7 +8713,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01f1
+    const v1, 0x7f08073b
 
     const/16 v2, 0x34a
 
@@ -8763,7 +8723,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b029c
+    const v1, 0x7f0806ba
 
     const/16 v2, 0x34b
 
@@ -8773,7 +8733,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b008e
+    const v1, 0x7f0803f4
 
     const/16 v2, 0x34c
 
@@ -8783,7 +8743,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0486
+    const v1, 0x7f08059f
 
     const/16 v2, 0x34d
 
@@ -8793,7 +8753,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0468
+    const v1, 0x7f080715
 
     const/16 v2, 0x34e
 
@@ -8803,7 +8763,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b005a
+    const v1, 0x7f0800aa
 
     const/16 v2, 0x34f
 
@@ -8813,7 +8773,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02c5
+    const v1, 0x7f0804a1
 
     const/16 v2, 0x350
 
@@ -8823,7 +8783,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00ae
+    const v1, 0x7f0802fc
 
     const/16 v2, 0x351
 
@@ -8833,7 +8793,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b015d
+    const v1, 0x7f0803dd
 
     const/16 v2, 0x352
 
@@ -8843,7 +8803,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00b1
+    const v1, 0x7f080608
 
     const/16 v2, 0x353
 
@@ -8853,7 +8813,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b046c
+    const v1, 0x7f08053f
 
     const/16 v2, 0x354
 
@@ -8863,7 +8823,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0151
+    const v1, 0x7f0805ed
 
     const/16 v2, 0x355
 
@@ -8873,7 +8833,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0386
+    const v1, 0x7f080378
 
     const/16 v2, 0x356
 
@@ -8883,7 +8843,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b030f
+    const v1, 0x7f080623
 
     const/16 v2, 0x357
 
@@ -8893,7 +8853,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0093
+    const v1, 0x7f080416
 
     const/16 v2, 0x358
 
@@ -8903,7 +8863,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b039d
+    const v1, 0x7f080461
 
     const/16 v2, 0x359
 
@@ -8913,7 +8873,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0424
+    const v1, 0x7f0801f0
 
     const/16 v2, 0x35a
 
@@ -8923,7 +8883,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0381
+    const v1, 0x7f080745
 
     const/16 v2, 0x35b
 
@@ -8933,7 +8893,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b001f
+    const v1, 0x7f080660
 
     const/16 v2, 0x35c
 
@@ -8943,7 +8903,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0462
+    const v1, 0x7f0803e2
 
     const/16 v2, 0x35d
 
@@ -8953,7 +8913,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b034f
+    const v1, 0x7f0802db
 
     const/16 v2, 0x35e
 
@@ -8963,7 +8923,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0337
+    const v1, 0x7f0806d1
 
     const/16 v2, 0x35f
 
@@ -8973,7 +8933,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0360
+    const v1, 0x7f08017b
 
     const/16 v2, 0x360
 
@@ -8983,7 +8943,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0092
+    const v1, 0x7f080533
 
     const/16 v2, 0x361
 
@@ -8993,7 +8953,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03f1
+    const v1, 0x7f0804f6
 
     const/16 v2, 0x362
 
@@ -9003,7 +8963,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00d5
+    const v1, 0x7f080447
 
     const/16 v2, 0x363
 
@@ -9013,7 +8973,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0079
+    const v1, 0x7f0802a2
 
     const/16 v2, 0x364
 
@@ -9023,7 +8983,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00ac
+    const v1, 0x7f0806c3
 
     const/16 v2, 0x365
 
@@ -9033,7 +8993,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0132
+    const v1, 0x7f08019e
 
     const/16 v2, 0x366
 
@@ -9043,7 +9003,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0349
+    const v1, 0x7f08056e
 
     const/16 v2, 0x367
 
@@ -9053,7 +9013,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0063
+    const v1, 0x7f0805ee
 
     const/16 v2, 0x368
 
@@ -9063,7 +9023,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00f0
+    const v1, 0x7f080072
 
     const/16 v2, 0x369
 
@@ -9073,25 +9033,17 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f07000c
+    const v1, 0x7f08008f
 
-    new-array v2, v8, [Ljava/lang/String;
+    const/16 v2, 0x36a
 
-    const-string v3, "\u09a8\u09be\u09ae"
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    aput-object v3, v2, v5
-
-    const-string v3, "\u099f\u09be\u0987\u09aa \u0995\u09b0\u09c1\u09a8"
-
-    aput-object v3, v2, v6
-
-    const-string v3, "\u0986\u09af\u09bc\u09a4\u09a8"
-
-    aput-object v3, v2, v7
+    move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03bb
+    const v1, 0x7f08017e
 
     const/16 v2, 0x36b
 
@@ -9101,7 +9053,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00f6
+    const v1, 0x7f08024e
 
     const/16 v2, 0x36c
 
@@ -9111,7 +9063,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00be
+    const v1, 0x7f080571
 
     const/16 v2, 0x36d
 
@@ -9121,7 +9073,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00dc
+    const v1, 0x7f0801ec
 
     const/16 v2, 0x36e
 
@@ -9131,7 +9083,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00d0
+    const v1, 0x7f080606
 
     const/16 v2, 0x36f
 
@@ -9141,7 +9093,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01ba
+    const v1, 0x7f080233
 
     const/16 v2, 0x370
 
@@ -9151,7 +9103,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0071
+    const v1, 0x7f080106
 
     const/16 v2, 0x371
 
@@ -9161,7 +9113,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b003e
+    const v1, 0x7f080224
 
     const/16 v2, 0x372
 
@@ -9171,7 +9123,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0483
+    const v1, 0x7f080516
 
     const/16 v2, 0x373
 
@@ -9181,7 +9133,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0144
+    const v1, 0x7f0805ae
 
     const/16 v2, 0x374
 
@@ -9191,7 +9143,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0415
+    const v1, 0x7f0805f0
 
     const/16 v2, 0x375
 
@@ -9201,7 +9153,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00cd
+    const v1, 0x7f0806e2
 
     const/16 v2, 0x376
 
@@ -9211,7 +9163,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b034a
+    const v1, 0x7f080702
 
     const/16 v2, 0x377
 
@@ -9221,7 +9173,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0028
+    const v1, 0x7f0803f7
 
     const/16 v2, 0x378
 
@@ -9231,7 +9183,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01f5
+    const v1, 0x7f0805ad
 
     const/16 v2, 0x379
 
@@ -9241,7 +9193,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01ff
+    const v1, 0x7f0806ea
 
     const/16 v2, 0x37a
 
@@ -9251,7 +9203,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0350
+    const v1, 0x7f080376
 
     const/16 v2, 0x37b
 
@@ -9261,7 +9213,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0359
+    const v1, 0x7f080692
 
     const/16 v2, 0x37c
 
@@ -9271,7 +9223,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0407
+    const v1, 0x7f08033f
 
     const/16 v2, 0x37d
 
@@ -9281,7 +9233,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03b9
+    const v1, 0x7f080463
 
     const/16 v2, 0x37e
 
@@ -9291,7 +9243,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b019e
+    const v1, 0x7f080599
 
     const/16 v2, 0x37f
 
@@ -9301,7 +9253,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0221
+    const v1, 0x7f0806ad
 
     const/16 v2, 0x380
 
@@ -9311,7 +9263,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b025d
+    const v1, 0x7f080484
 
     const/16 v2, 0x381
 
@@ -9321,7 +9273,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03dd
+    const v1, 0x7f080567
 
     const/16 v2, 0x382
 
@@ -9331,7 +9283,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0339
+    const v1, 0x7f0802f3
 
     const/16 v2, 0x383
 
@@ -9341,7 +9293,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03b5
+    const v1, 0x7f0806b3
 
     const/16 v2, 0x384
 
@@ -9351,7 +9303,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b028b
+    const v1, 0x7f0803f1
 
     const/16 v2, 0x385
 
@@ -9361,7 +9313,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0325
+    const v1, 0x7f080379
 
     const/16 v2, 0x386
 
@@ -9371,7 +9323,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0027
+    const v1, 0x7f08063d
 
     const/16 v2, 0x387
 
@@ -9381,7 +9333,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0431
+    const v1, 0x7f0802ee
 
     const/16 v2, 0x388
 
@@ -9391,7 +9343,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00f2
+    const v1, 0x7f080335
 
     const/16 v2, 0x389
 
@@ -9401,7 +9353,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0422
+    const v1, 0x7f080437
 
     const/16 v2, 0x38a
 
@@ -9411,7 +9363,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b007b
+    const v1, 0x7f0800a4
 
     const/16 v2, 0x38b
 
@@ -9421,7 +9373,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0082
+    const v1, 0x7f080400
 
     const/16 v2, 0x38c
 
@@ -9431,7 +9383,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b003a
+    const v1, 0x7f08057c
 
     const/16 v2, 0x38d
 
@@ -9441,7 +9393,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b035f
+    const v1, 0x7f080062
 
     const/16 v2, 0x38e
 
@@ -9451,7 +9403,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b041d
+    const v1, 0x7f08005f
 
     const/16 v2, 0x38f
 
@@ -9461,7 +9413,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0354
+    const v1, 0x7f080477
 
     const/16 v2, 0x390
 
@@ -9471,7 +9423,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0172
+    const v1, 0x7f080383
 
     const/16 v2, 0x391
 
@@ -9481,7 +9433,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0452
+    const v1, 0x7f080109
 
     const/16 v2, 0x392
 
@@ -9491,7 +9443,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0280
+    const v1, 0x7f0804aa
 
     const/16 v2, 0x393
 
@@ -9501,7 +9453,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0306
+    const v1, 0x7f08040b
 
     const/16 v2, 0x394
 
@@ -9511,7 +9463,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0045
+    const v1, 0x7f08023a
 
     const/16 v2, 0x395
 
@@ -9521,7 +9473,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0336
+    const v1, 0x7f080654
 
     const/16 v2, 0x396
 
@@ -9531,7 +9483,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b016a
+    const v1, 0x7f080681
 
     const/16 v2, 0x397
 
@@ -9541,7 +9493,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02f8
+    const v1, 0x7f08041a
 
     const/16 v2, 0x398
 
@@ -9551,7 +9503,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b049b
+    const v1, 0x7f080121
 
     const/16 v2, 0x399
 
@@ -9561,7 +9513,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03c5
+    const v1, 0x7f08037c
 
     const/16 v2, 0x39a
 
@@ -9571,7 +9523,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0232
+    const v1, 0x7f080317
 
     const/16 v2, 0x39b
 
@@ -9581,7 +9533,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0283
+    const v1, 0x7f0802ae
 
     const/16 v2, 0x39c
 
@@ -9591,7 +9543,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0297
+    const v1, 0x7f080582
 
     const/16 v2, 0x39d
 
@@ -9601,7 +9553,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01e1
+    const v1, 0x7f08017c
 
     const/16 v2, 0x39e
 
@@ -9611,7 +9563,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00e3
+    const v1, 0x7f08052a
 
     const/16 v2, 0x39f
 
@@ -9621,7 +9573,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0379
+    const v1, 0x7f080563
 
     const/16 v2, 0x3a0
 
@@ -9631,7 +9583,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b010f
+    const v1, 0x7f080423
 
     const/16 v2, 0x3a1
 
@@ -9641,7 +9593,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03fa
+    const v1, 0x7f0805a3
 
     const/16 v2, 0x3a2
 
@@ -9651,7 +9603,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0319
+    const v1, 0x7f0805dd
 
     const/16 v2, 0x3a3
 
@@ -9661,7 +9613,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02f2
+    const v1, 0x7f0802d4
 
     const/16 v2, 0x3a4
 
@@ -9671,7 +9623,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01a9
+    const v1, 0x7f080380
 
     const/16 v2, 0x3a5
 
@@ -9681,7 +9633,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0480
+    const v1, 0x7f080652
 
     const/16 v2, 0x3a6
 
@@ -9691,7 +9643,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03ec
+    const v1, 0x7f080441
 
     const/16 v2, 0x3a7
 
@@ -9701,7 +9653,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00c0
+    const v1, 0x7f080622
 
     const/16 v2, 0x3a8
 
@@ -9711,7 +9663,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0143
+    const v1, 0x7f080419
 
     const/16 v2, 0x3a9
 
@@ -9721,7 +9673,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b006a
+    const v1, 0x7f080347
 
     const/16 v2, 0x3aa
 
@@ -9731,7 +9683,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b013c
+    const v1, 0x7f08044f
 
     const/16 v2, 0x3ab
 
@@ -9741,7 +9693,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03c4
+    const v1, 0x7f08059e
 
     const/16 v2, 0x3ac
 
@@ -9751,7 +9703,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0043
+    const v1, 0x7f0806b9
 
     const/16 v2, 0x3ad
 
@@ -9761,7 +9713,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b042f
+    const v1, 0x7f080161
 
     const/16 v2, 0x3ae
 
@@ -9771,7 +9723,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b016e
+    const v1, 0x7f08067e
 
     const/16 v2, 0x3af
 
@@ -9781,77 +9733,17 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f070006
+    const v1, 0x7f0803d3
 
-    const/16 v2, 0xc
+    const/16 v2, 0x3b0
 
-    new-array v2, v2, [Ljava/lang/String;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-string v3, "\u09ac\u0995\u09cd\u09b8"
-
-    aput-object v3, v2, v5
-
-    const-string v3, "SugarSync"
-
-    aput-object v3, v2, v6
-
-    const-string v3, "\u09a1\u09cd\u09b0\u09aa\u09ac\u0995\u09cd\u09b8"
-
-    aput-object v3, v2, v7
-
-    const-string v3, "OneDrive"
-
-    aput-object v3, v2, v8
-
-    const-string v3, "GDrive"
-
-    aput-object v3, v2, v9
-
-    const/4 v3, 0x5
-
-    const-string v4, "S3"
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x6
-
-    const-string v4, "\u0987\u09af\u09bc\u09be\u09a8\u09a1\u09c7\u0995\u09cd\u09b8"
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x7
-
-    const-string v4, "\u0995\u09bf\u0982\u09b8\u09ab\u09cd\u099f \u09a1\u09bf\u09b8\u09cd\u0995"
-
-    aput-object v4, v2, v3
-
-    const/16 v3, 0x8
-
-    const-string v4, "\u0995\u09c1\u09b2 \u09aa\u09cd\u09b2\u09c7\u099f"
-
-    aput-object v4, v2, v3
-
-    const/16 v3, 0x9
-
-    const-string v4, "\u09b8\u09bf\u09a8\u09be \u09ae\u09be\u0987\u0995\u09cd\u09b0\u09cb \u09aa\u09cd\u09b2\u09c7\u099f"
-
-    aput-object v4, v2, v3
-
-    const/16 v3, 0xa
-
-    const-string v4, "\u09ac\u09be\u0987\u09a1\u09c1 \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09a1\u09bf\u09b8\u09cd\u0995"
-
-    aput-object v4, v2, v3
-
-    const/16 v3, 0xb
-
-    const-string v4, "MediaFire"
-
-    aput-object v4, v2, v3
+    move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00c5
+    const v1, 0x7f080199
 
     const/16 v2, 0x3b1
 
@@ -9861,7 +9753,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0211
+    const v1, 0x7f080592
 
     const/16 v2, 0x3b2
 
@@ -9871,7 +9763,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0321
+    const v1, 0x7f080405
 
     const/16 v2, 0x3b3
 
@@ -9881,7 +9773,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00f3
+    const v1, 0x7f08028b
 
     const/16 v2, 0x3b4
 
@@ -9891,7 +9783,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0220
+    const v1, 0x7f080267
 
     const/16 v2, 0x3b5
 
@@ -9901,7 +9793,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0281
+    const v1, 0x7f080710
 
     const/16 v2, 0x3b6
 
@@ -9911,7 +9803,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0390
+    const v1, 0x7f080171
 
     const/16 v2, 0x3b7
 
@@ -9921,7 +9813,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0370
+    const v1, 0x7f08023d
 
     const/16 v2, 0x3b8
 
@@ -9931,7 +9823,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00ed
+    const v1, 0x7f0802d2
 
     const/16 v2, 0x3b9
 
@@ -9941,7 +9833,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b022d
+    const v1, 0x7f080602
 
     const/16 v2, 0x3ba
 
@@ -9951,7 +9843,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b024e
+    const v1, 0x7f0800ae
 
     const/16 v2, 0x3bb
 
@@ -9961,7 +9853,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03d8
+    const v1, 0x7f08058b
 
     const/16 v2, 0x3bc
 
@@ -9971,7 +9863,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0033
+    const v1, 0x7f0805f9
 
     const/16 v2, 0x3bd
 
@@ -9981,7 +9873,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0095
+    const v1, 0x7f0806fd
 
     const/16 v2, 0x3be
 
@@ -9991,7 +9883,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0305
+    const v1, 0x7f080315
 
     const/16 v2, 0x3bf
 
@@ -10001,7 +9893,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0050
+    const v1, 0x7f08038f
 
     const/16 v2, 0x3c0
 
@@ -10011,7 +9903,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0141
+    const v1, 0x7f080526
 
     const/16 v2, 0x3c1
 
@@ -10021,7 +9913,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0457
+    const v1, 0x7f08031f
 
     const/16 v2, 0x3c2
 
@@ -10031,7 +9923,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b002c
+    const v1, 0x7f080695
 
     const/16 v2, 0x3c3
 
@@ -10041,7 +9933,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0195
+    const v1, 0x7f0805b3
 
     const/16 v2, 0x3c4
 
@@ -10051,7 +9943,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00bc
+    const v1, 0x7f08026a
 
     const/16 v2, 0x3c5
 
@@ -10061,7 +9953,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01dd
+    const v1, 0x7f080331
 
     const/16 v2, 0x3c6
 
@@ -10071,7 +9963,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00a6
+    const v1, 0x7f080580
 
     const/16 v2, 0x3c7
 
@@ -10081,7 +9973,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0200
+    const v1, 0x7f080518
 
     const/16 v2, 0x3c8
 
@@ -10091,7 +9983,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b022a
+    const v1, 0x7f080091
 
     const/16 v2, 0x3c9
 
@@ -10101,7 +9993,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01d2
+    const v1, 0x7f080220
 
     const/16 v2, 0x3ca
 
@@ -10111,7 +10003,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02aa
+    const v1, 0x7f0800fb
 
     const/16 v2, 0x3cb
 
@@ -10121,7 +10013,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0260
+    const v1, 0x7f08006c
 
     const/16 v2, 0x3cc
 
@@ -10131,7 +10023,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0129
+    const v1, 0x7f0805d7
 
     const/16 v2, 0x3cd
 
@@ -10141,7 +10033,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0110
+    const v1, 0x7f0805b9
 
     const/16 v2, 0x3ce
 
@@ -10151,7 +10043,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0146
+    const v1, 0x7f0801a0
 
     const/16 v2, 0x3cf
 
@@ -10161,7 +10053,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01c8
+    const v1, 0x7f080436
 
     const/16 v2, 0x3d0
 
@@ -10171,7 +10063,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0103
+    const v1, 0x7f080098
 
     const/16 v2, 0x3d1
 
@@ -10181,7 +10073,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b025b
+    const v1, 0x7f080448
 
     const/16 v2, 0x3d2
 
@@ -10191,7 +10083,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0197
+    const v1, 0x7f080136
 
     const/16 v2, 0x3d3
 
@@ -10201,7 +10093,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00ec
+    const v1, 0x7f080001
 
     const/16 v2, 0x3d4
 
@@ -10211,7 +10103,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02e8
+    const v1, 0x7f080367
 
     const/16 v2, 0x3d5
 
@@ -10221,7 +10113,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0466
+    const v1, 0x7f080294
 
     const/16 v2, 0x3d6
 
@@ -10231,7 +10123,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03b6
+    const v1, 0x7f080499
 
     const/16 v2, 0x3d7
 
@@ -10241,7 +10133,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0290
+    const v1, 0x7f08046a
 
     const/16 v2, 0x3d8
 
@@ -10251,7 +10143,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b032b
+    const v1, 0x7f0800ff
 
     const/16 v2, 0x3d9
 
@@ -10261,7 +10153,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00e2
+    const v1, 0x7f080649
 
     const/16 v2, 0x3da
 
@@ -10271,7 +10163,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00e1
+    const v1, 0x7f08015a
 
     const/16 v2, 0x3db
 
@@ -10281,7 +10173,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00e0
+    const v1, 0x7f080334
 
     const/16 v2, 0x3dc
 
@@ -10291,7 +10183,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0122
+    const v1, 0x7f080006
 
     const/16 v2, 0x3dd
 
@@ -10301,7 +10193,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b003d
+    const v1, 0x7f080595
 
     const/16 v2, 0x3de
 
@@ -10311,7 +10203,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02c9
+    const v1, 0x7f080663
 
     const/16 v2, 0x3df
 
@@ -10321,7 +10213,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0010
+    const v1, 0x7f080457
 
     const/16 v2, 0x3e0
 
@@ -10331,7 +10223,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0254
+    const v1, 0x7f08022e
 
     const/16 v2, 0x3e1
 
@@ -10341,53 +10233,17 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f070016
+    const v1, 0x7f080286
 
-    const/16 v2, 0x8
+    const/16 v2, 0x3e2
 
-    new-array v2, v2, [Ljava/lang/String;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-string v3, "\u09b8\u09ac \u09ab\u09be\u0987\u09b2"
-
-    aput-object v3, v2, v5
-
-    const-string v3, "\u099a\u09bf\u09a4\u09cd\u09b0"
-
-    aput-object v3, v2, v6
-
-    const-string v3, "\u09a8\u09a5\u09bf\u09aa\u09a4\u09cd\u09b0"
-
-    aput-object v3, v2, v7
-
-    const-string v3, "\u09b8\u0999\u09cd\u0997\u09c0\u09a4"
-
-    aput-object v3, v2, v8
-
-    const-string v3, "\u09ad\u09bf\u09a1\u09bf\u0993"
-
-    aput-object v3, v2, v9
-
-    const/4 v3, 0x5
-
-    const-string v4, "\u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8"
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x6
-
-    const-string v4, "\u0985\u09a8\u09cd\u09af\u09be\u09a8\u09cd\u09af"
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x7
-
-    const-string v4, "\u0986\u09ae\u09be\u09b0 \u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1"
-
-    aput-object v4, v2, v3
+    move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0282
+    const v1, 0x7f0804ac
 
     const/16 v2, 0x3e3
 
@@ -10397,7 +10253,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b011c
+    const v1, 0x7f080128
 
     const/16 v2, 0x3e4
 
@@ -10407,7 +10263,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01f8
+    const v1, 0x7f08049f
 
     const/16 v2, 0x3e5
 
@@ -10417,7 +10273,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02a6
+    const v1, 0x7f08058c
 
     const/16 v2, 0x3e6
 
@@ -10427,7 +10283,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0304
+    const v1, 0x7f080749
 
     const/16 v2, 0x3e7
 
@@ -10437,7 +10293,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00ee
+    const v1, 0x7f08059a
 
     const/16 v2, 0x3e8
 
@@ -10447,7 +10303,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01a5
+    const v1, 0x7f080281
 
     const/16 v2, 0x3e9
 
@@ -10457,7 +10313,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0475
+    const v1, 0x7f08050f
 
     const/16 v2, 0x3ea
 
@@ -10467,7 +10323,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b002f
+    const v1, 0x7f08067c
 
     const/16 v2, 0x3eb
 
@@ -10477,7 +10333,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02d0
+    const v1, 0x7f08045e
 
     const/16 v2, 0x3ec
 
@@ -10487,7 +10343,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0189
+    const v1, 0x7f080393
 
     const/16 v2, 0x3ed
 
@@ -10497,7 +10353,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02cc
+    const v1, 0x7f0803e7
 
     const/16 v2, 0x3ee
 
@@ -10507,7 +10363,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b011a
+    const v1, 0x7f08038b
 
     const/16 v2, 0x3ef
 
@@ -10517,7 +10373,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02cb
+    const v1, 0x7f080613
 
     const/16 v2, 0x3f0
 
@@ -10527,7 +10383,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00ca
+    const v1, 0x7f080544
 
     const/16 v2, 0x3f1
 
@@ -10537,7 +10393,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02f1
+    const v1, 0x7f080472
 
     const/16 v2, 0x3f2
 
@@ -10547,7 +10403,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0175
+    const v1, 0x7f0801dd
 
     const/16 v2, 0x3f3
 
@@ -10557,7 +10413,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0170
+    const v1, 0x7f0800a2
 
     const/16 v2, 0x3f4
 
@@ -10567,7 +10423,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03ae
+    const v1, 0x7f080314
 
     const/16 v2, 0x3f5
 
@@ -10577,7 +10433,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0184
+    const v1, 0x7f080163
 
     const/16 v2, 0x3f6
 
@@ -10587,7 +10443,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01ea
+    const v1, 0x7f080672
 
     const/16 v2, 0x3f7
 
@@ -10597,7 +10453,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b038f
+    const v1, 0x7f08037e
 
     const/16 v2, 0x3f8
 
@@ -10607,7 +10463,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b024b
+    const v1, 0x7f0801f2
 
     const/16 v2, 0x3f9
 
@@ -10617,7 +10473,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02db
+    const v1, 0x7f080492
 
     const/16 v2, 0x3fa
 
@@ -10627,7 +10483,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b044d
+    const v1, 0x7f080187
 
     const/16 v2, 0x3fb
 
@@ -10637,7 +10493,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0181
+    const v1, 0x7f080686
 
     const/16 v2, 0x3fc
 
@@ -10647,7 +10503,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01f9
+    const v1, 0x7f080585
 
     const/16 v2, 0x3fd
 
@@ -10657,7 +10513,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0230
+    const v1, 0x7f0805f2
 
     const/16 v2, 0x3fe
 
@@ -10667,7 +10523,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b010d
+    const v1, 0x7f0805d1
 
     const/16 v2, 0x3ff
 
@@ -10677,7 +10533,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0225
+    const v1, 0x7f0800ac
 
     const/16 v2, 0x400
 
@@ -10687,7 +10543,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0342
+    const v1, 0x7f08064e
 
     const/16 v2, 0x401
 
@@ -10697,7 +10553,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01f7
+    const v1, 0x7f08073a
 
     const/16 v2, 0x402
 
@@ -10707,7 +10563,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01e8
+    const v1, 0x7f08027f
 
     const/16 v2, 0x403
 
@@ -10717,7 +10573,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b000d
+    const v1, 0x7f08062f
 
     const/16 v2, 0x404
 
@@ -10727,7 +10583,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01ef
+    const v1, 0x7f080178
 
     const/16 v2, 0x405
 
@@ -10737,7 +10593,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0404
+    const v1, 0x7f08029d
 
     const/16 v2, 0x406
 
@@ -10747,7 +10603,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b029f
+    const v1, 0x7f080508
 
     const/16 v2, 0x407
 
@@ -10757,7 +10613,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0114
+    const v1, 0x7f080424
 
     const/16 v2, 0x408
 
@@ -10767,7 +10623,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0021
+    const v1, 0x7f08061c
 
     const/16 v2, 0x409
 
@@ -10777,7 +10633,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b032e
+    const v1, 0x7f080537
 
     const/16 v2, 0x40a
 
@@ -10787,7 +10643,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03cb
+    const v1, 0x7f080593
 
     const/16 v2, 0x40b
 
@@ -10797,7 +10653,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0392
+    const v1, 0x7f08046f
 
     const/16 v2, 0x40c
 
@@ -10807,7 +10663,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0471
+    const v1, 0x7f080274
 
     const/16 v2, 0x40d
 
@@ -10817,7 +10673,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02fb
+    const v1, 0x7f08074f
 
     const/16 v2, 0x40e
 
@@ -10827,7 +10683,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0014
+    const v1, 0x7f0805ef
 
     const/16 v2, 0x40f
 
@@ -10837,7 +10693,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b028d
+    const v1, 0x7f080495
 
     const/16 v2, 0x410
 
@@ -10847,7 +10703,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0101
+    const v1, 0x7f080060
 
     const/16 v2, 0x411
 
@@ -10857,7 +10713,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0088
+    const v1, 0x7f0802a1
 
     const/16 v2, 0x412
 
@@ -10867,7 +10723,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00eb
+    const v1, 0x7f0805fa
 
     const/16 v2, 0x413
 
@@ -10877,7 +10733,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0192
+    const v1, 0x7f080530
 
     const/16 v2, 0x414
 
@@ -10887,7 +10743,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0301
+    const v1, 0x7f0805cc
 
     const/16 v2, 0x415
 
@@ -10897,7 +10753,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0474
+    const v1, 0x7f080268
 
     const/16 v2, 0x416
 
@@ -10907,7 +10763,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0133
+    const v1, 0x7f08044c
 
     const/16 v2, 0x417
 
@@ -10917,7 +10773,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0436
+    const v1, 0x7f080614
 
     const/16 v2, 0x418
 
@@ -10927,7 +10783,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0037
+    const v1, 0x7f08057f
 
     const/16 v2, 0x419
 
@@ -10937,7 +10793,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0398
+    const v1, 0x7f080144
 
     const/16 v2, 0x41a
 
@@ -10947,7 +10803,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0256
+    const v1, 0x7f080140
 
     const/16 v2, 0x41b
 
@@ -10957,7 +10813,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03d7
+    const v1, 0x7f080581
 
     const/16 v2, 0x41c
 
@@ -10967,7 +10823,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01c1
+    const v1, 0x7f08033b
 
     const/16 v2, 0x41d
 
@@ -10977,7 +10833,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b021d
+    const v1, 0x7f080313
 
     const/16 v2, 0x41e
 
@@ -10987,7 +10843,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b043c
+    const v1, 0x7f08068e
 
     const/16 v2, 0x41f
 
@@ -10997,7 +10853,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0382
+    const v1, 0x7f0803b0
 
     const/16 v2, 0x420
 
@@ -11007,7 +10863,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0294
+    const v1, 0x7f080479
 
     const/16 v2, 0x421
 
@@ -11017,7 +10873,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b040e
+    const v1, 0x7f080177
 
     const/16 v2, 0x422
 
@@ -11027,7 +10883,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b029a
+    const v1, 0x7f08046c
 
     const/16 v2, 0x423
 
@@ -11037,7 +10893,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0274
+    const v1, 0x7f08006b
 
     const/16 v2, 0x424
 
@@ -11047,7 +10903,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0320
+    const v1, 0x7f080123
 
     const/16 v2, 0x425
 
@@ -11057,7 +10913,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0367
+    const v1, 0x7f080252
 
     const/16 v2, 0x426
 
@@ -11067,7 +10923,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01a0
+    const v1, 0x7f080421
 
     const/16 v2, 0x427
 
@@ -11077,7 +10933,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b035a
+    const v1, 0x7f080676
 
     const/16 v2, 0x428
 
@@ -11087,7 +10943,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0307
+    const v1, 0x7f080615
 
     const/16 v2, 0x429
 
@@ -11097,7 +10953,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b009e
+    const v1, 0x7f08060e
 
     const/16 v2, 0x42a
 
@@ -11107,7 +10963,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03b2
+    const v1, 0x7f08074e
 
     const/16 v2, 0x42b
 
@@ -11117,7 +10973,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b012d
+    const v1, 0x7f0806e9
 
     const/16 v2, 0x42c
 
@@ -11127,7 +10983,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03e3
+    const v1, 0x7f080657
 
     const/16 v2, 0x42d
 
@@ -11137,7 +10993,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00d6
+    const v1, 0x7f0805cd
 
     const/16 v2, 0x42e
 
@@ -11147,7 +11003,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01df
+    const v1, 0x7f0803dc
 
     const/16 v2, 0x42f
 
@@ -11157,7 +11013,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b000c
+    const v1, 0x7f080734
 
     const/16 v2, 0x430
 
@@ -11167,7 +11023,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0235
+    const v1, 0x7f08039b
 
     const/16 v2, 0x431
 
@@ -11177,7 +11033,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00a7
+    const v1, 0x7f08017f
 
     const/16 v2, 0x432
 
@@ -11187,7 +11043,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01bc
+    const v1, 0x7f0803d9
 
     const/16 v2, 0x433
 
@@ -11197,7 +11053,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b015a
+    const v1, 0x7f080299
 
     const/16 v2, 0x434
 
@@ -11207,7 +11063,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b022c
+    const v1, 0x7f080511
 
     const/16 v2, 0x435
 
@@ -11217,7 +11073,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b016c
+    const v1, 0x7f080181
 
     const/16 v2, 0x436
 
@@ -11227,7 +11083,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03fd
+    const v1, 0x7f080489
 
     const/16 v2, 0x437
 
@@ -11237,7 +11093,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0358
+    const v1, 0x7f080638
 
     const/16 v2, 0x438
 
@@ -11247,7 +11103,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03bd
+    const v1, 0x7f0804ab
 
     const/16 v2, 0x439
 
@@ -11257,7 +11113,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b000f
+    const v1, 0x7f0802cc
 
     const/16 v2, 0x43a
 
@@ -11267,7 +11123,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0025
+    const v1, 0x7f080527
 
     const/16 v2, 0x43b
 
@@ -11277,7 +11133,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b038c
+    const v1, 0x7f08058e
 
     const/16 v2, 0x43c
 
@@ -11287,7 +11143,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0228
+    const v1, 0x7f0800f1
 
     const/16 v2, 0x43d
 
@@ -11297,7 +11153,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0419
+    const v1, 0x7f080435
 
     const/16 v2, 0x43e
 
@@ -11307,7 +11163,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01be
+    const v1, 0x7f0806c2
 
     const/16 v2, 0x43f
 
@@ -11317,7 +11173,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b006e
+    const v1, 0x7f080705
 
     const/16 v2, 0x440
 
@@ -11327,7 +11183,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01e7
+    const v1, 0x7f0801dc
 
     const/16 v2, 0x441
 
@@ -11337,7 +11193,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0041
+    const v1, 0x7f080342
 
     const/16 v2, 0x442
 
@@ -11347,7 +11203,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0365
+    const v1, 0x7f0802c0
 
     const/16 v2, 0x443
 
@@ -11357,7 +11213,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0291
+    const v1, 0x7f080143
 
     const/16 v2, 0x444
 
@@ -11367,7 +11223,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0219
+    const v1, 0x7f08044a
 
     const/16 v2, 0x445
 
@@ -11377,7 +11233,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01d5
+    const v1, 0x7f080501
 
     const/16 v2, 0x446
 
@@ -11387,7 +11243,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0423
+    const v1, 0x7f080092
 
     const/16 v2, 0x447
 
@@ -11397,7 +11253,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0167
+    const v1, 0x7f080102
 
     const/16 v2, 0x448
 
@@ -11407,7 +11263,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0066
+    const v1, 0x7f0805aa
 
     const/16 v2, 0x449
 
@@ -11417,7 +11273,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0481
+    const v1, 0x7f0800a0
 
     const/16 v2, 0x44a
 
@@ -11427,7 +11283,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01ad
+    const v1, 0x7f0803c9
 
     const/16 v2, 0x44b
 
@@ -11437,7 +11293,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03e2
+    const v1, 0x7f0800c9
 
     const/16 v2, 0x44c
 
@@ -11447,7 +11303,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03c0
+    const v1, 0x7f080503
 
     const/16 v2, 0x44d
 
@@ -11457,7 +11313,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0191
+    const v1, 0x7f08071f
 
     const/16 v2, 0x44e
 
@@ -11467,7 +11323,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00f5
+    const v1, 0x7f0805f8
 
     const/16 v2, 0x44f
 
@@ -11477,7 +11333,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b039f
+    const v1, 0x7f080751
 
     const/16 v2, 0x450
 
@@ -11487,7 +11343,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0183
+    const v1, 0x7f0802f5
 
     const/16 v2, 0x451
 
@@ -11497,7 +11353,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01e0
+    const v1, 0x7f08055e
 
     const/16 v2, 0x452
 
@@ -11507,7 +11363,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b023a
+    const v1, 0x7f0803af
 
     const/16 v2, 0x453
 
@@ -11517,7 +11373,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0076
+    const v1, 0x7f080283
 
     const/16 v2, 0x454
 
@@ -11527,7 +11383,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00c4
+    const v1, 0x7f080496
 
     const/16 v2, 0x455
 
@@ -11537,7 +11393,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0074
+    const v1, 0x7f080082
 
     const/16 v2, 0x456
 
@@ -11547,7 +11403,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b005c
+    const v1, 0x7f0805a6
 
     const/16 v2, 0x457
 
@@ -11557,7 +11413,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b027c
+    const v1, 0x7f080671
 
     const/16 v2, 0x458
 
@@ -11567,7 +11423,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03a5
+    const v1, 0x7f0804fb
 
     const/16 v2, 0x459
 
@@ -11577,7 +11433,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b033b
+    const v1, 0x7f08068f
 
     const/16 v2, 0x45a
 
@@ -11587,7 +11443,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02ba
+    const v1, 0x7f0806af
 
     const/16 v2, 0x45b
 
@@ -11597,7 +11453,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03ca
+    const v1, 0x7f080332
 
     const/16 v2, 0x45c
 
@@ -11607,7 +11463,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00dd
+    const v1, 0x7f08053b
 
     const/16 v2, 0x45d
 
@@ -11617,7 +11473,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01c2
+    const v1, 0x7f0806c7
 
     const/16 v2, 0x45e
 
@@ -11627,7 +11483,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0078
+    const v1, 0x7f0801f8
 
     const/16 v2, 0x45f
 
@@ -11637,7 +11493,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03e5
+    const v1, 0x7f0802e6
 
     const/16 v2, 0x460
 
@@ -11647,7 +11503,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0226
+    const v1, 0x7f080384
 
     const/16 v2, 0x461
 
@@ -11657,7 +11513,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00bd
+    const v1, 0x7f08073c
 
     const/16 v2, 0x462
 
@@ -11667,7 +11523,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02c8
+    const v1, 0x7f0802ce
 
     const/16 v2, 0x463
 
@@ -11677,7 +11533,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0017
+    const v1, 0x7f080653
 
     const/16 v2, 0x464
 
@@ -11687,7 +11543,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03ac
+    const v1, 0x7f080112
 
     const/16 v2, 0x465
 
@@ -11697,7 +11553,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01e4
+    const v1, 0x7f080247
 
     const/16 v2, 0x466
 
@@ -11707,7 +11563,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01cb
+    const v1, 0x7f080631
 
     const/16 v2, 0x467
 
@@ -11717,7 +11573,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b013a
+    const v1, 0x7f080162
 
     const/16 v2, 0x468
 
@@ -11727,7 +11583,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b025f
+    const v1, 0x7f080485
 
     const/16 v2, 0x469
 
@@ -11737,7 +11593,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b030d
+    const v1, 0x7f0806d3
 
     const/16 v2, 0x46a
 
@@ -11747,7 +11603,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0011
+    const v1, 0x7f08046e
 
     const/16 v2, 0x46b
 
@@ -11757,7 +11613,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0461
+    const v1, 0x7f08050a
 
     const/16 v2, 0x46c
 
@@ -11767,7 +11623,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0265
+    const v1, 0x7f0805f1
 
     const/16 v2, 0x46d
 
@@ -11777,7 +11633,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0196
+    const v1, 0x7f080336
 
     const/16 v2, 0x46e
 
@@ -11787,7 +11643,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0125
+    const v1, 0x7f080473
 
     const/16 v2, 0x46f
 
@@ -11797,7 +11653,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b047d
+    const v1, 0x7f08051b
 
     const/16 v2, 0x470
 
@@ -11807,7 +11663,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b011b
+    const v1, 0x7f080381
 
     const/16 v2, 0x471
 
@@ -11817,7 +11673,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02dc
+    const v1, 0x7f08065b
 
     const/16 v2, 0x472
 
@@ -11827,7 +11683,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00f1
+    const v1, 0x7f0805a1
 
     const/16 v2, 0x473
 
@@ -11837,7 +11693,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00aa
+    const v1, 0x7f080079
 
     const/16 v2, 0x474
 
@@ -11847,7 +11703,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0019
+    const v1, 0x7f08055f
 
     const/16 v2, 0x475
 
@@ -11857,7 +11713,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0060
+    const v1, 0x7f080682
 
     const/16 v2, 0x476
 
@@ -11867,7 +11723,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02af
+    const v1, 0x7f080729
 
     const/16 v2, 0x477
 
@@ -11877,7 +11733,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0472
+    const v1, 0x7f0803e3
 
     const/16 v2, 0x478
 
@@ -11887,7 +11743,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0084
+    const v1, 0x7f0805ba
 
     const/16 v2, 0x479
 
@@ -11897,7 +11753,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b034d
+    const v1, 0x7f080543
 
     const/16 v2, 0x47a
 
@@ -11907,7 +11763,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0180
+    const v1, 0x7f080538
 
     const/16 v2, 0x47b
 
@@ -11917,7 +11773,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0169
+    const v1, 0x7f080442
 
     const/16 v2, 0x47c
 
@@ -11927,7 +11783,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0373
+    const v1, 0x7f08036e
 
     const/16 v2, 0x47d
 
@@ -11937,7 +11793,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02c6
+    const v1, 0x7f08009d
 
     const/16 v2, 0x47e
 
@@ -11947,7 +11803,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0251
+    const v1, 0x7f080185
 
     const/16 v2, 0x47f
 
@@ -11957,7 +11813,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00f8
+    const v1, 0x7f080346
 
     const/16 v2, 0x480
 
@@ -11967,35 +11823,17 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f07000a
+    const v1, 0x7f0806ce
 
-    const/4 v2, 0x5
+    const/16 v2, 0x481
 
-    new-array v2, v2, [Ljava/lang/String;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-string v3, "\u098f\u0995 \u09a6\u09cd\u09ac\u09bf\u09a4\u09c0\u09af\u09bc"
-
-    aput-object v3, v2, v5
-
-    const-string v3, "3 \u09af\u09be\u0993"
-
-    aput-object v3, v2, v6
-
-    const-string v3, "5 \u09af\u09be\u0993"
-
-    aput-object v3, v2, v7
-
-    const-string v3, "10 \u09b8\u09c7\u0995\u09c7\u09a8\u09cd\u09a1\u09c7\u09b0"
-
-    aput-object v3, v2, v8
-
-    const-string v3, "15 \u09b8\u09c7\u0995\u09c7\u09a8\u09cd\u09a1\u09c7\u09b0"
-
-    aput-object v3, v2, v9
+    move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0031
+    const v1, 0x7f080748
 
     const/16 v2, 0x482
 
@@ -12005,7 +11843,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02ec
+    const v1, 0x7f0802bf
 
     const/16 v2, 0x483
 
@@ -12015,7 +11853,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0433
+    const v1, 0x7f08011e
 
     const/16 v2, 0x484
 
@@ -12025,7 +11863,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02ea
+    const v1, 0x7f08043d
 
     const/16 v2, 0x485
 
@@ -12035,7 +11873,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0044
+    const v1, 0x7f0803cf
 
     const/16 v2, 0x486
 
@@ -12045,7 +11883,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b008a
+    const v1, 0x7f08054d
 
     const/16 v2, 0x487
 
@@ -12055,7 +11893,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00fc
+    const v1, 0x7f080471
 
     const/16 v2, 0x488
 
@@ -12065,7 +11903,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0207
+    const v1, 0x7f0805f3
 
     const/16 v2, 0x489
 
@@ -12075,7 +11913,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b017a
+    const v1, 0x7f0803de
 
     const/16 v2, 0x48a
 
@@ -12085,7 +11923,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b018d
+    const v1, 0x7f08017a
 
     const/16 v2, 0x48b
 
@@ -12095,7 +11933,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0259
+    const v1, 0x7f080545
 
     const/16 v2, 0x48c
 
@@ -12105,7 +11943,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0293
+    const v1, 0x7f0803d2
 
     const/16 v2, 0x48d
 
@@ -12115,9 +11953,605 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b011d
+    const v1, 0x7f080176
 
     const/16 v2, 0x48e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08051a
+
+    const/16 v2, 0x48f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080664
+
+    const/16 v2, 0x490
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080512
+
+    const/16 v2, 0x491
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806e3
+
+    const/16 v2, 0x492
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080497
+
+    const/16 v2, 0x493
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08033a
+
+    const/16 v2, 0x494
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08006a
+
+    const/16 v2, 0x495
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805c7
+
+    const/16 v2, 0x496
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0804f3
+
+    const/16 v2, 0x497
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803ce
+
+    const/16 v2, 0x498
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080418
+
+    const/16 v2, 0x499
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802cf
+
+    const/16 v2, 0x49a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080298
+
+    const/16 v2, 0x49b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802a0
+
+    const/16 v2, 0x49c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803d1
+
+    const/16 v2, 0x49d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805d3
+
+    const/16 v2, 0x49e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080264
+
+    const/16 v2, 0x49f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802a5
+
+    const/16 v2, 0x4a0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0801ad
+
+    const/16 v2, 0x4a1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080553
+
+    const/16 v2, 0x4a2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08055c
+
+    const/16 v2, 0x4a3
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080557
+
+    const/16 v2, 0x4a4
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080404
+
+    const/16 v2, 0x4a5
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08032c
+
+    const/16 v2, 0x4a6
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080721
+
+    const/16 v2, 0x4a7
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080417
+
+    const/16 v2, 0x4a8
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08040e
+
+    const/16 v2, 0x4a9
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080089
+
+    const/16 v2, 0x4aa
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08049e
+
+    const/16 v2, 0x4ab
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080164
+
+    const/16 v2, 0x4ac
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080507
+
+    const/16 v2, 0x4ad
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08012a
+
+    const/16 v2, 0x4ae
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080685
+
+    const/16 v2, 0x4af
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08073f
+
+    const/16 v2, 0x4b0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805f7
+
+    const/16 v2, 0x4b1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08009e
+
+    const/16 v2, 0x4b2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08040f
+
+    const/16 v2, 0x4b3
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08016a
+
+    const/16 v2, 0x4b4
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08054e
+
+    const/16 v2, 0x4b5
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800c6
+
+    const/16 v2, 0x4b6
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806b4
+
+    const/16 v2, 0x4b7
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08039d
+
+    const/16 v2, 0x4b8
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080724
+
+    const/16 v2, 0x4b9
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080251
+
+    const/16 v2, 0x4ba
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080739
+
+    const/16 v2, 0x4bb
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08026f
+
+    const/16 v2, 0x4bc
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080561
+
+    const/16 v2, 0x4bd
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080235
+
+    const/16 v2, 0x4be
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080289
+
+    const/16 v2, 0x4bf
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0c000c
+
+    const/16 v2, 0x8
+
+    new-array v2, v2, [Ljava/lang/String;
+
+    const-string v3, "\u0412\u0441\u0438\u0447\u043a\u0438"
+
+    aput-object v3, v2, v5
+
+    const-string v3, "\u0414\u043d\u0435\u0441"
+
+    aput-object v3, v2, v6
+
+    const-string v3, "\u0412\u0447\u0435\u0440\u0430"
+
+    aput-object v3, v2, v7
+
+    const-string v3, "\u0422\u0430\u0437\u0438 \u0441\u0435\u0434\u043c\u0438\u0446\u0430"
+
+    aput-object v3, v2, v8
+
+    const-string v3, "\u0422\u043e\u0437\u0438 \u043c\u0435\u0441\u0435\u0446"
+
+    aput-object v3, v2, v9
+
+    const/4 v3, 0x5
+
+    const-string v4, "\u0422\u0430\u0437\u0438 \u0433\u043e\u0434\u0438\u043d\u0430"
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x6
+
+    const-string v4, "> 1 \u0433\u043e\u0434\u0438\u043d\u0430"
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x7
+
+    const-string v4, "\u0412\u044a\u0432\u0435\u0434\u0435\u0442\u0435"
+
+    aput-object v4, v2, v3
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080077
+
+    const/16 v2, 0x4c1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08070a
+
+    const/16 v2, 0x4c2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08041b
+
+    const/16 v2, 0x4c3
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800a7
+
+    const/16 v2, 0x4c4
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08043b
+
+    const/16 v2, 0x4c5
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080737
+
+    const/16 v2, 0x4c6
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -12137,13 +12571,13 @@
 
     const/4 v1, 0x0
 
-    const-string v2, "\u0985\u09a8\u09c1\u09b8\u09a8\u09cd\u09a7\u09be\u09a8___\u09a1\u09bf\u09ad\u09be\u0987\u09b8 root-\u09b0 \u09b9\u09af\u09bc, root-\u09b0, \u09b8\u09c1\u0987\u099a \u0996\u09c1\u09b2\u09a4\u09c7 \u09aa\u09cd\u09b0\u09b6\u09be\u09b8\u0995 \u0985\u09aa\u09be\u09b0\u09c7\u09b6\u09a8 \u09b8\u09ae\u09cd\u09aa\u09be\u09a6\u09a8 \u0995\u09b0\u09a4\u09c7 \u09aa\u09be\u09b0\u09ac\u09c7\u09a8___\u09ae\u09c1\u099b\u09c7 \u09a6\u09bf\u09a8 \u098f\u0995\u09be\u09a7\u09bf\u0995 \u09ab\u09be\u0987\u09b2 \u09a8\u09bf\u09b6\u09cd\u099a\u09bf\u09a4?___\u09a8\u09bf\u09b0\u09be\u09aa\u09a4\u09cd\u09a4\u09be___ES \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09aa\u09be\u09a0\u09be\u09a8___\u0985\u09a8\u09c1\u09b8\u09a8\u09cd\u09a7\u09be\u09a8 \u09ae\u09c2\u09b2\u09b6\u09ac\u09cd\u09a6 \u09b2\u09bf\u0996\u09c1\u09a8___\u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u0995\u09a8\u09ab\u09bf\u0997\u09be\u09b0 \u0995\u09b0\u09be \u09af\u09be\u09af\u09bc \u09a8\u09bf, \u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae \u09b8\u09c7\u099f\u09bf\u0982\u09b8 \u0995\u09a8\u09ab\u09bf\u0997\u09be\u09b0\u09c7\u09b6\u09a8 \u09af\u09c7\u09a4\u09c7___\u09aa\u09c1\u09a8\u09b0\u09c1\u09a6\u09cd\u09a7\u09be\u09b0\u09c7\u09b0___\u09b8\u09cd\u09b2\u09be\u0987\u09a1\u09b6\u09cb___root-\u09b0 \u099f\u09c1\u09b2\u09ac\u0995\u09cd\u09b8___\u09b8\u09c7\u099f \u09ac\u09bf\u09aa\u09a6\u09be\u09b6\u0999\u09cd\u0995\u09be___\u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1 \u09b8\u09c7\u099f\u09bf\u0982\u09b8___\u098f\u09b8\u09a1\u09bf \u0995\u09be\u09b0\u09cd\u09a1 \u09aa\u09be\u0993\u09af\u09bc\u09be \u09af\u09be\u09af\u09bc \u09a8\u09be___\u09b8\u09ae\u09b8\u09cd\u09a4 \u0997\u09be\u09a8 \u09a4\u09be\u09b2\u09bf\u0995\u09be 500kb \u09a4\u09c1\u09b2\u09a8\u09be\u09af\u09bc \u09b6\u09c1\u09a7\u09c1\u09ae\u09be\u09a4\u09cd\u09b0 \u09b8\u0999\u09cd\u0997\u09c0\u09a4 \u09ab\u09be\u0987\u09b2 \u09ac\u09c3\u09b9\u09a4\u09cd\u09a4\u09b0 \u09aa\u09cd\u09b0\u09a6\u09b0\u09cd\u09b6\u09a8\u09c7\u09b0 \u099c\u09a8\u09cd\u09af___\u0985\u09ac\u09c8\u09a7 \u09b6\u0982\u09b8\u09be\u09aa\u09a4\u09cd\u09b0___\u09aa\u099f\u09ad\u09c2\u09ae\u09bf___\u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09bf\u09a4 \u09aa\u09cd\u09b0\u09cb\u0997\u09cd\u09b0\u09be\u09ae \u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u0995\u09b0\u09a4\u09c7 \u0995\u09bf\u09a8\u09be?___\u0995\u09ae\u09cd\u09aa\u09cd\u09b0\u09c7\u09b6\u09a8 \u09b8\u09cd\u09a4\u09b0:___\u09a8\u09bf\u09ac\u09a8\u09cd\u09a7\u09c0\u0995\u09b0\u09a3 \u09b8\u09ab\u09b2___\u0986\u09aa\u09a8\u09bf \u09af\u09a6\u09bf \u09af\u09cb\u0997 \u09a6\u09bf\u09a4\u09c7 \u099a\u09be\u09a8 \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8___\u0996\u09cb\u09b2\u09be \u0985\u09ac\u09b8\u09cd\u09a5\u09be\u09a8___\u0985\u09a8\u09c1\u09ae\u09cb\u09a6\u09a8 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5 \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1 \u09aa\u09b0\u09bf\u09ac\u09b0\u09cd\u09a4\u09a8 \u0995\u09b0\u09c1\u09a8___\u0985\u09a8\u09c1\u09b8\u09a8\u09cd\u09a7\u09be\u09a8 \u0987\u099e\u09cd\u099c\u09bf\u09a8 \u09b8\u09c7\u099f\u09bf\u0982\u09b8___\u0985\u09ac\u09bf\u09b2\u09ae\u09cd\u09ac\u09c7 \u0986\u09aa\u09a1\u09c7\u099f,%s-\u09aa\u09cd\u09b2\u09be\u0997 \u0987\u09a8 \u098f\u09b0 \u098f\u0995\u099f\u09bf \u09a8\u09a4\u09c1\u09a8 \u09b8\u0982\u09b8\u09cd\u0995\u09b0\u09a3 \u0996\u09c1\u0981\u099c\u09c7?___\u09b8\u09ae\u09cd\u09aa\u09be\u09a6\u09a8\u09be \u0995\u09b0\u09c1\u09a8___\u0987\u09a4\u09bf\u09ae\u09a7\u09cd\u09af\u09c7 \u09a8\u09a4\u09c1\u09a8 \u09b8\u0982\u09b8\u09cd\u0995\u09b0\u09a3 \u09aa\u09c1\u09b0\u09cb\u09a8\u09cb \u09b8\u0982\u09b8\u09cd\u0995\u09b0\u09a3 \u0986\u09a8\u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u0995\u09b0\u09a4\u09c7 \u09b9\u09ac\u09c7 \u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u0995\u09b0\u09be\u09b0 \u09aa\u09c2\u09b0\u09cd\u09ac\u09c7 \u09aa\u09c1\u09b0\u09be\u09a4\u09a8 \u09b8\u0982\u09b8\u09cd\u0995\u09b0\u09a3 \u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u0996\u09c1\u0981\u099c\u09c1\u09a8___\u09a6\u09cd\u09ac\u09bf\u09a4\u09c0\u09af\u09bc___\u098f\u09a8\u0995\u09cd\u09b0\u09bf\u09aa\u09b6\u09a8___\u098f\u09a8\u0995\u09cd\u09b0\u09bf\u09aa\u09b6\u09a8___\u09b0\u0995\u09cd\u09b7\u09be \u0985\u09a8___\u09a8\u09bf\u09b0\u09be\u09aa\u09a4\u09cd\u09a4\u09be \u09b6\u0982\u09b8\u09be\u09aa\u09a4\u09cd\u09b0\u09c7 \u09a4\u09cd\u09b0\u09c1\u099f\u09bf___\u0986\u09a8\u09b2\u0995 \u0995\u09cd\u09b2\u09bf\u0995 \u0995\u09b0\u09c1\u09a8___- \u0986\u0987\u09aa\u09bf \u09a0\u09bf\u0995\u09be\u09a8\u09be \u09b8\u09a0\u09bf\u0995 \u09a8\u09af\u09bc___\u0987\u0989\u099f\u09bf\u0989\u09ac \u09ad\u09bf\u09a1\u09bf\u0993___\u09b8\u09ae\u09b8\u09cd\u09a4 \u09aa\u09cd\u09b0\u09a4\u09bf\u09b2\u09c7\u09aa\u09a8___\u0986\u09aa\u09a8\u09bf \u09ae\u09c1\u099b\u09c7 \u09ab\u09c7\u09b2\u09a4\u09c7 \u099a\u09be\u09a8?___\u09ac\u09c7\u09a8\u09be\u09ae\u09c0___\u0985\u09cd\u09af\u09be\u09b2\u09ac\u09be\u09ae___\u09ae\u09a8\u09cd\u09a4\u09ac\u09cd\u09af___\u09af\u09cb\u0997 \u0995\u09b0\u09be \u09b9\u099a\u09cd\u099b\u09c7, \u09a6\u09af\u09bc\u09be \u0995\u09b0\u09c7 \u0985\u09aa\u09c7\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09c1\u09a8 ...___\u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8___\u0987\u09a8\u09b8\u09cd\u099f\u09b2___\u0995\u09aa\u09bf___\u09b8\u09c7\u099f\u09bf\u0982\u09b8___\u09ab\u09be\u0987\u09b2 \u0996\u09c1\u09b2\u09a4\u09c7 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5___\u09ae\u09a7\u09cd\u09af\u09c7 \u09ab\u09be\u0987\u09b2 \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09be \u0986\u09a8\u099c\u09bf\u09aa___\u0987\u09a8\u09b8\u09cd\u099f\u09b2\u09c7\u09b6\u09a8 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5 \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u099a\u09bf\u09a4\u09cd\u09b0___\u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8 \u0985\u0997\u09cd\u09b0\u0997\u09a4\u09bf___\u0985\u09a8\u09cd\u09af\u09be\u09a8\u09cd\u09af___ES \u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1\u09be\u09b0 \u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1 \u09b2\u09bf\u0999\u09cd\u0995 \u09a8\u09bf\u09b7\u09bf\u09a6\u09cd\u09a7___\u098f\u09b8\u09a1\u09bf \u0995\u09be\u09b0\u09cd\u09a1 \u09b8\u09cd\u09a5\u09be\u09a8 \u0985\u09ad\u09be\u09ac,___\u09a8\u09a4\u09c1\u09a8 \u0989\u0987\u09a8\u09cd\u09a1\u09cb\u09a4\u09c7 \u0996\u09c1\u09b2\u09c1\u09a8___\u09a1\u09bf\u09ab\u09b2\u09cd\u099f \u09b8\u09c7\u099f\u09bf\u0982\u09b8 \u09aa\u09c1\u09a8\u0983\u09b8\u09cd\u09a5\u09be\u09aa\u09a8 \u0995\u09b0\u09c1\u09a8___\u09b2\u09c7\u09ac\u09c7\u09b2___\u09a1\u09bf\u09b0\u09c7\u0995\u09cd\u099f\u09b0\u09bf \u09ac\u09bf\u09b6\u09cd\u09b2\u09c7\u09b7\u09a3___\u09aa\u09cd\u09b2\u09c7\u09b2\u09bf\u09b8\u09cd\u099f \u09a8\u09be\u09ae \u09b2\u09bf\u0996\u09c1\u09a8___, \u099a\u09c2\u09a1\u09bc\u09be\u09a8\u09cd\u09a4 \u09aa\u09cc\u0981\u099b\u09c7\u099b\u09c7___\u0985\u09a8\u09c1\u09ae\u09a4\u09bf___\u09b8\u0982\u09af\u09c1\u0995\u09cd\u09a4___\u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09af\u09cb\u0997\u09a6\u09be\u09a8\u09c7\u09b0 \u099c\u09a8\u09cd\u09af \u0985\u09aa\u09c7\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be___\u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09aa\u09cd\u09b0\u09ac\u09c7\u09b6 \u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1 \u09b8\u09c7\u099f\u09bf\u0982\u09b8___\u099f\u09c1\u09b2\u09ac\u09be\u09b0\u09c7 \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u09ac\u09be\u099f\u09a8 \u09aa\u09cd\u09b0\u09a6\u09b0\u09cd\u09b6\u09a8 \u0995\u09b0\u09a4\u09c7___\u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae \u09b8\u09c0\u09ae\u09be, \u09ae\u09be\u09a4\u09cd\u09b0 100 \u099f\u09bf \u09ab\u09be\u0987\u09b2 \u09b6\u09c7\u09af\u09bc\u09be\u09b0\u09bf\u0982 \u09a5\u09c7\u0995\u09c7 \u09b8\u09b0\u09cd\u09ac\u09cb\u099a\u09cd\u099a___\u09a8\u09bf\u09ac\u09a8\u09cd\u09a7\u09bf\u09a4___\u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09bf\u09a4 \u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8 \u0986\u09a8\u0987\u09a8\u09b8\u09cd\u099f\u09b2?___\u0987\u09a4\u09bf\u09b9\u09be\u09b8___\u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8 \u09ac\u09cd\u09af\u09be\u0995\u0986\u09aa \u09a1\u09bf\u09b0\u09c7\u0995\u09cd\u099f\u09b0\u09bf:___\u09a8\u09c7\u0987 \u09aa\u09cd\u09af\u09be\u0995 \u09a8\u09be \u0995\u09b0\u09be \u09b9\u099a\u09cd\u099b\u09c7 ...___\u09b8\u0982\u09b0\u0995\u09cd\u09b7\u09a3 \u09ab\u09be\u0987\u09b2 \u09a4\u09cd\u09b0\u09c1\u099f\u09bf, \u09aa\u09b0\u09bf\u09ac\u09b0\u09cd\u09a4\u09bf\u09a4 \u0995\u09a8\u09cd\u099f\u09c7\u09a8\u09cd\u099f \u09b8\u0982\u09b0\u0995\u09cd\u09b7\u09a3 \u0995\u09b0\u09be \u09b9\u09af\u09bc \u09a8\u09be___\u09ac\u09bf\u09b6\u09c7\u09b7 \u09a7\u09a8\u09cd\u09af\u09ac\u09be\u09a6 \u0985\u09a8\u09c1\u09ac\u09be\u09a6 \u0995\u09be\u099c___\u09b2\u09cb\u09a1 \u0995\u09b0\u09a4\u09c7 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5___\u09a6\u09c7\u0996\u09be\u09a8 \u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1___\u09a1\u09cb\u09ae\u09c7\u0987\u09a8\u09c7\u09b0 \u09a8\u09be\u09ae \u0989\u09b2\u09cd\u09b2\u09c7\u0996 \u0995\u09b0\u09c1\u09a8, \u0996\u09be\u09b2\u09bf \u09b9\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7___\u09b0\u09bf\u0995\u09ad\u09be\u09b0\u09bf \u09a5\u09bf\u09ae \u09b8\u09c7\u099f\u09bf\u0982\u09b8___\u09ae\u09cb\u099f \u0985\u0997\u09cd\u09b0\u0997\u09a4\u09bf___\u0985\u09cd\u09af\u09be\u09b2\u09ac\u09be\u09ae \u09b2\u09cb\u09a1 \u0995\u09b0\u09a4\u09c7 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5___\'%1$s\' \u09a8\u09a5\u09bf  \u09b8\u0982\u09b0\u0995\u09cd\u09b7\u09bf\u09a4 \u09aa\u09c7\u09af\u09bc\u09c7\u099b\u09bf___\u098f\u0995\u099f\u09bf \u09aa\u09cd\u09b0\u09bf\u09af\u09bc \u09a8\u09bf\u09b0\u09cd\u09ae\u09be\u09a3\'{0}\'\u09ac\u09cd\u09af\u09b0\u09cd\u09a5___\u098f\u09ab\u099f\u09bf\u09aa\u09bf \u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0___\u09ac\u09cd\u09af\u09be\u0995\u0986\u09aa \u09a1\u09be\u099f\u09be \u09ac\u09cd\u09af\u09be\u0995\u0986\u09aa \u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8 \u09af\u0996\u09a8___\u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae \u09aa\u099b\u09a8\u09cd\u09a6 \u0986\u09ac\u09c7\u09a6\u09a8 \u0986\u09a8,___\u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0___\u09ab\u09be\u0987\u09b2\u09c7\u09b0 \u09a8\u09be\u09ae___\u09aa\u09c7\u09b8\u09cd\u099f \u0995\u09b0\u09a4\u09c7 \u09aa\u09be\u09b0\u09ac\u09c7\u09a8 \u09a8\u09be___\u09b0\u09bf\u09b8\u09be\u0987\u0995\u09c7\u09b2 \u09ac\u09bf\u09a8 \u0996\u09c1\u09b2\u09c1\u09a8___\u0985\u09cd\u09af\u09be\u0995\u09be\u0989\u09a8\u09cd\u099f___\u09aa\u09cd\u09b0\u09b8\u09cd\u09a4\u09c1\u09a4\u0995\u09b0\u09cd\u09a4\u09be:___\u0986\u09aa\u09a8\u09bf \u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae \u09b2\u09bf\u0996\u09a8\u09af\u09cb\u0997\u09cd\u09af \u09ab\u09be\u0987\u09b2 \u09b2\u09cb\u09a1 \u0995\u09b0\u09be \u09b9\u09af\u09bc \u09b8\u09a4\u09b0\u09cd\u0995\u09ac\u09be\u09a3\u09c0, \u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae \u09ab\u09be\u0987\u09b2 \u098f\u0987 \u09b0\u09be\u09b7\u09cd\u099f\u09cd\u09b0 \u09ac\u09cd\u09af\u09ac\u09b8\u09cd\u09a5\u09be\u09b0 \u0985\u09aa\u09be\u09b0\u09c7\u09b6\u09a8 \u0995\u09cd\u09b7\u09a4\u09bf\u09b8\u09be\u09a7\u09a8 \u0995\u09b0\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7, \u09b8\u09be\u09ac\u09a7\u09be\u09a8 \u09ac\u09cd\u09af\u09be\u09af\u09bc\u09be\u09ae \u0995\u09b0\u09c1\u09a8!!___\u09ae\u09c1\u099b\u09c7 \u09ab\u09c7\u09b2\u09c1\u09a8 \u0995\u09cb\u09a8 \u09ab\u09be\u0987\u09b2___\u098f\u09a8\u0995\u09cb\u09a1\u09bf\u0982 \u09a8\u09bf\u09b0\u09cd\u09a7\u09be\u09b0\u09a3 \u0995\u09b0\u09c1\u09a8___\u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8 \u09aa\u09be\u09a5___\u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995___\u09ae\u09c7\u09af\u09bc\u09be\u09a6\u09c0 \u09a8\u09a4\u09c1\u09a8 \u09b8\u0982\u09b8\u09cd\u0995\u09b0\u09a3 \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be___%s-\u09aa\u09cd\u09b2\u09be\u0997 \u0987\u09a8 \u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1 \u0995\u09b0\u09a4\u09c7 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5___\u09b8\u0982\u09af\u09c1\u0995\u09cd\u09a4 \u09b9\u099a\u09cd\u099b\u09c7 ...___\u09aa\u09cd\u09b2\u09c7\u09b2\u09bf\u09b8\u09cd\u099f \u09af\u09cb\u0997 \u0995\u09b0\u09c1\u09a8___\u09b8\u09cd\u0995\u09cd\u09af\u09be\u09a8\u09bf\u0982 ...___\u0995\u09cd\u09af\u09be\u09b6\u09c7 \u09a4\u09a5\u09cd\u09af \u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u0995\u09b0\u09c1\u09a8 \u098f\u09ac\u0982 \u09aa\u09c1\u09a8\u09b0\u09c1\u09a6\u09cd\u09a7\u09be\u09b0___\u09b8\u09ae\u09cd\u09aa\u09be\u09a6\u09a8\u09be \u09ac\u09cd\u09af\u09b0\u09cd\u09a5 \u09b9\u09af\u09bc\u09c7\u099b\u09c7___%1$s \u0997\u09c1\u09b2\u09bf \u09aa\u09be\u09b2\u099f\u09c7 \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u09a8\u09be\u09ae \u098f\u09ac\u0982 \u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1 \u0996\u09be\u09b2\u09bf \u09b9\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7 \u09a8\u09be___\u09ad\u09bf\u09a1\u09bf\u0993___\u09aa\u09cd\u09b0\u09a4\u09cd\u09af\u09be\u0996\u09cd\u09af\u09be\u09a8___\u09ac\u09cd\u09b2\u09c1\u099f\u09c1\u09a5 \u09ac\u09cd\u09af\u09b8\u09cd\u09a4 \u0986\u099b\u09c7, \u09aa\u09b0\u09c7 \u0986\u09ac\u09be\u09b0 \u099a\u09c7\u09b7\u09cd\u099f\u09be \u0995\u09b0\u09c1\u09a8___\u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1:___\u09b8\u0982\u0997\u09cd\u09b0\u09b9___\u09aa\u09a5 \u09b8\u09ab\u09b2\u09ad\u09be\u09ac\u09c7 \u0995\u09aa\u09bf___\u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995\u09c7 \u09af\u09cb\u0997 \u0995\u09b0\u09be \u09b6\u09c1\u09b0\u09c1 \u0995\u09b0\u09c7\u09a8___\u09af\u09a6\u09bf \u09b8\u0995\u09cd\u09b0\u09bf\u09af\u09bc \u09ab\u09cb\u09b2\u09cd\u09a1\u09be\u09b0 \u09aa\u09cd\u09b0\u09a6\u09b0\u09cd\u09b6\u09a8 \u0986\u09ac\u09c7\u09a6\u09a8 \u0986\u0987\u0995\u09a8 \u09ac\u09c8\u09b6\u09bf\u09b7\u09cd\u099f\u09cd\u09af \u09b8\u0995\u09cd\u09b0\u09bf\u09af\u09bc \u0995\u09b0\u09be \u09b9\u09af\u09bc \u09a8\u09be?___\u0985\u09a8\u09c1\u09ae\u09a4\u09bf \u09aa\u09b0\u09bf\u09ac\u09b0\u09cd\u09a4\u09a8 \u0995\u09b0\u09a4\u09c7 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5___\u09aa\u09cd\u09b0\u09b8\u09cd\u09a5\u09be\u09a8___\u09b8\u09be\u09b0\u09cd\u099f\u09bf\u09ab\u09bf\u0995\u09c7\u099f\u09c7\u09b0 \u09a4\u09be\u09b0\u09bf\u0996 \u0985\u09ac\u09c8\u09a7___\u09ae\u09bf\u09a1\u09bf\u09af\u09bc\u09be \u099f\u09be\u0987\u09aa \u09b8\u09ae\u09b0\u09cd\u09a5\u09bf\u09a4 \u09a8\u09af\u09bc___\u098f\u0995\u099f\u09bf \u09ac\u09c8\u09a7 \u0987\u09ae\u09c7\u0987\u09b2 \u09a0\u09bf\u0995\u09be\u09a8\u09be \u09b2\u09bf\u0996\u09c1\u09a8___\u09ae\u09be\u09b2\u09bf\u0995___\u098f\u09a8\u0995\u09cd\u09b0\u09bf\u09aa\u09b6\u09a8 \u098f\u09b2\u0997\u09b0\u09bf\u09a6\u09ae \u09b6\u0995\u09cd\u09a4\u09bf \u09b8\u09ae\u09b0\u09cd\u09a5\u09bf\u09a4 \u09a8\u09af\u09bc___\u09a1\u0995\u09c1\u09ae\u09c7\u09a8\u09cd\u099f:___\u09b8\u09a4\u09b0\u09cd\u0995\u09ac\u09be\u09b0\u09cd\u09a4\u09be___\u09b8\u0995\u09b2 \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8___\u09ae\u09c7\u09a8\u09c1___\u0986\u09b0 \u09b8\u09a4\u09b0\u09cd\u0995\u09ac\u09be\u09b0\u09cd\u09a4\u09be \u09aa\u09cd\u09b0\u09a6\u09b0\u09cd\u09b6\u09a8 \u0995\u09b0\u09be___\u09a1\u09bf\u09b8\u09cd\u0995\u09c7 \u09ac\u09bf\u09b6\u09cd\u09b2\u09c7\u09b7\u0995___\u0997\u09c7\u09ae \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995___\u09ae\u09cd\u09af\u09be\u09a8\u09c7\u099c\u09ae\u09c7\u09a8\u09cd\u099f \u0985\u0999\u09cd\u0997\u09ad\u0999\u09cd\u0997\u09bf___\u09ae\u09cb\u09ac\u09be\u0987\u09b2 \u09ae\u09cd\u09af\u09be\u09a8\u09c7\u099c\u09ae\u09c7\u09a8\u09cd\u099f \u0995\u09ae\u09cd\u09aa\u09bf\u0989\u099f\u09be\u09b0___\u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8 \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09a5\u09c7\u0995\u09c7 \u09aa\u09cd\u09b0\u09b8\u09cd\u09a5\u09be\u09a8___\'%1$s\' \u09aa\u09be\u09a0\u09be\u09a8\u09cb \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u09ae\u09c7\u099f\u09be\u09b2 \u09b6\u09cd\u09b0\u09c7\u09a8\u09c0___\u09ae\u09a8\u09cd\u09a4\u09ac\u09cd\u09af \u09ac\u09cd\u09af\u09b0\u09cd\u09a5 \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u098f\u0995\u099f\u09bf \u09a8\u09a4\u09c1\u09a8 \u09aa\u09cd\u09b2\u09c7\u09b2\u09bf\u09b8\u09cd\u099f \u09a4\u09c8\u09b0\u09bf \u0995\u09b0\u09c1\u09a8___\u09aa\u09cb\u09b0\u09cd\u099f___Instagram \u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8\u09c7 \u09ae\u09c1\u099b\u09c7 \u09ab\u09be\u0982\u09b6\u09a8 \u0996\u09c1\u09b2\u09a4\u09c7 \u09a8\u09be \u09b9\u09af\u09bc___\u09ae\u09cd\u09af\u09be\u09a8\u09c7\u099c\u09be\u09b0___\u09b6\u09c1\u09a7\u09c1\u09ae\u09be\u09a4\u09cd\u09b0 \u09aa\u09be\u09a0\u09af\u09cb\u0997\u09cd\u09af \u09b9\u09bf\u09b8\u09be\u09ac\u09c7 \u09b2\u09cb\u09a1\u09bf\u0982 \u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae \u09a1\u09bf\u09b0\u09c7\u0995\u09cd\u099f\u09b0\u09bf___\u099c\u09be\u09a8\u09be\u09b2\u09be___\u09b8\u09be\u09a8\u09cd\u09a8\u09bf\u09a7\u09cd\u09af\u09c7\u09b0 \u09ae\u09a7\u09cd\u09af\u09c7 \u09ac\u09cd\u09b2\u09c1\u099f\u09c1\u09a5 \u09a1\u09bf\u09ad\u09be\u0987\u09b8 \u0996\u09c1\u0981\u099c\u099b\u09c7\u09a8 \u09b2\u09bf\u0996\u09c7\u099b\u09c7\u09a8 ...___\u098f\u0995\u099f\u09bf \u09a8\u09be\u09ae \u09b2\u09bf\u0996\u09c1\u09a8___\u09b8\u09aa\u09cd\u09a4\u09be\u09b9___\u09b9\u09cb\u09ae___\u0985\u09a8___\u09ac\u09b0\u09cd\u09a3 \u0993 \u09b8\u0982\u0996\u09cd\u09af\u09be___\u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0 \u0997\u09be\u0987\u09a1___\u09aa\u09be\u09a0\u09be\u09a8___\u09a6\u09c7\u0996\u09be \u09af\u09c7 \u0995\u09c7\u0989 (\u0996\u09cb\u09b2\u09be)___\u0995\u09cd\u09b2\u09bf\u09aa\u09ac\u09cb\u09b0\u09cd\u09a1___\u09b8\u09ae\u09b8\u09cd\u09a4 Expand___\'%s\'\u09a4\u09c8\u09b0\u09bf \u0995\u09b0\u09be \u09b9\u09ac\u09c7___\u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0\u0995\u09be\u09b0\u09c0 \u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8___ ___\u09ac\u09cd\u09b2\u09c1\u099f\u09c1\u09a5 \u09a6\u09c7\u0996\u09be \u09b9\u09ac\u09c7 \u09b8\u09c7\u099f \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7,___\u09aa\u09a5:___\u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8 \u09ae\u09cd\u09af\u09be\u09a8\u09c7\u099c\u09be\u09b0___\u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8 \u0987\u09a8\u09b8\u09cd\u099f\u09b2\u09c7\u09b6\u09a8 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5 \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae \u09ab\u09be\u0987\u09b2 \u09b2\u09bf\u0996\u09a8\u09af\u09cb\u0997\u09cd\u09af___%s-\u09aa\u09cd\u09b2\u09be\u0997 \u0987\u09a8 \u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1 \u0995\u09b0\u09c1\u09a8___\u09b8\u09c7\u099f\u09bf\u0982\u09b8 \u09a6\u09c7\u0996\u09be\u09b0 \u099c\u09a8\u09cd\u09af \u0995\u09cd\u09b2\u09bf\u0995 \u0995\u09b0\u09c1\u09a8___\u09b8\u09cd\u09ac\u09af\u09bc\u0982\u0995\u09cd\u09b0\u09bf\u09af\u09bc \u09b8\u09a8\u09be\u0995\u09cd\u09a4\u0995\u09b0\u09a3___\u0986\u09aa\u09a8\u09bf \u09b8\u0982\u09b0\u0995\u09cd\u09b7\u09a3 \u0995\u09b0\u09a4\u09c7 \u099a\u09be\u09a8 \u09a8\u09be___\u098f\u0995\u099f\u09bf \u09ac\u09bf\u09ac\u09b0\u09a3 \u09b2\u09bf\u0996\u09c1\u09a8___- \u09ab\u09be\u09af\u09bc\u09be\u09b0\u0993\u09af\u09bc\u09be\u09b2 \u09ac\u09cd\u09b2\u0995___\u09aa\u09cd\u09b2\u09c7\u09b2\u09bf\u09b8\u09cd\u099f \u0986\u0989\u099f___ES FTP \u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0 \u09b6\u09c1\u09b0\u09c1 \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u09b9\u09bf\u09b8\u09be\u09ac \u0995\u09b0\u09be \u09af\u09be\u09ac\u09c7 \u09a8\u09be___\u09ac\u09bf\u09ac\u09b0\u09a3___\u09b8\u09b0\u099e\u09cd\u099c\u09be\u09ae___\u09ac\u09cd\u09af\u09be\u0995 \u09b6\u09cd\u09b0\u09c7\u09a3\u09c0\u09ac\u09bf\u09ad\u09be\u0997___\u09aa\u09be\u09a0\u09be\u09a4\u09c7 \u09a1\u09bf\u09ad\u09be\u0987\u09b8 \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8\u09ae___\u0985\u09cd\u09af\u09be\u09b2\u09ac\u09be\u09ae___\u09a1\u09c7\u09b8\u09cd\u0995\u099f\u09aa \u09af\u09c1\u0995\u09cd\u09a4 \u0995\u09b0\u09c1\u09a8___\u098f\u0996\u09a8 \u09ac\u09be\u099c\u09be\u09a8\u09cb___ES FTP \u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0___\u098f\u09b8\u09a1\u09bf \u0995\u09be\u09b0\u09cd\u09a1 \u0986\u09a8\u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1 \u09b2\u09bf\u0996\u09c1\u09a8___\u09ae\u09c1\u0995\u09cd\u09a4\u09bf \u09b9\u099a\u09cd\u099b\u09c7 ...___\u09a1\u09bf\u09b8\u09aa\u09cd\u09b2\u09c7 \u09b8\u09c7\u099f\u09bf\u0982\u09b8___\u0995\u09be\u09b8\u09cd\u099f\u09ae \u0985\u09cd\u09af\u09be\u09b2\u09ac\u09be\u09ae___, \u09b0\u09bf\u09b8\u09be\u0987\u0995\u09c7\u09b2 \u09ac\u09bf\u09a8 \u09a1\u09bf\u09b0\u09c7\u0995\u09cd\u099f\u09b0\u09bf \u09a7\u09be\u09b0\u09a3\u0995\u09be\u09b0\u09c0 \u09b0\u09bf\u09b8\u09be\u0987\u0995\u09c7\u09b2 \u09ac\u09bf\u09a8 emptied \u0995\u09b0\u09be \u09b9\u09ac\u09c7 \u09ae\u09c1\u099b\u09c7 \u09ab\u09c7\u09b2\u09be, \u09ab\u09be\u0987\u09b2 \u09aa\u09c1\u09a8\u09b0\u09c1\u09a6\u09cd\u09a7\u09be\u09b0 \u0995\u09b0\u09be \u09af\u09be\u09af\u09bc \u09a8\u09be \u09ae\u09cb\u099b\u09be___\u0985\u0999\u09cd\u0997\u09ad\u0999\u09cd\u0997\u09bf \u09b8\u09c7\u099f\u09bf\u0982\u09b8___\u0987\u09a4\u09bf\u09ae\u09a7\u09cd\u09af\u09c7\u0987 \u09b8\u09b0\u09cd\u09ac\u09b6\u09c7\u09b7 \u09b8\u0982\u09b8\u09cd\u0995\u09b0\u09a3___\u09ae\u09c7\u099f\u09be\u09b2 \u09b6\u09cd\u09b0\u09c7\u09a8\u09c0___\u09aa\u09a5___\u09a6\u09c2\u09b0\u09ac\u09b0\u09cd\u09a4\u09c0 \u09ae\u09cd\u09af\u09be\u09a8\u09c7\u099c\u09be\u09b0___\u09ad\u09be\u0997 \u09aa\u09c7\u09af\u09bc\u09c7\u099b\u09c7___\u098f\u0995\u099f\u09bf \u09aa\u09cd\u09b2\u09c7\u09b2\u09bf\u09b8\u09cd\u099f \u09a4\u09c8\u09b0\u09bf___\u09b8\u09c7\u099f \u09ac\u09cd\u09af\u09b0\u09cd\u09a5 \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u09b8\u09be\u09b0\u09cd\u099a \u09b8\u0999\u09cd\u0997\u09c0\u09a4___\u09ab\u09be\u0987\u09b2 \u09b2\u09cb\u09a1 \u09b9\u099a\u09cd\u099b\u09c7, \u09a6\u09af\u09bc\u09be \u0995\u09b0\u09c7 \u0985\u09aa\u09c7\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09c1\u09a8___\u0985\u09a8\u09cd\u09a4\u09a4 \u098f\u0995\u099f\u09bf {0} \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8___\u09ac\u09be\u09a4\u09bf\u09b2___\u099f\u09c1\u09b2\u09ac\u0995\u09cd\u09b8___\u09b9\u09cb\u09b8\u09cd\u099f \u09ab\u09be\u0987\u09b2 \u09aa\u09b0\u09bf\u09ac\u09b0\u09cd\u09a4\u09a8 \u0995\u09b0\u09c1\u09a8___\u0995\u09ae\u09cd\u09aa\u09bf\u0989\u099f\u09be\u09b0 \u09a5\u09c7\u0995\u09c7 \u09a1\u09bf\u09ad\u09be\u0987\u09b8 \u09ae\u09cd\u09af\u09be\u09a8\u09c7\u099c\u09ae\u09c7\u09a8\u09cd\u099f___\u099a\u09bf\u09a4\u09cd\u09b0 \u09aa\u09be\u0993\u09af\u09bc\u09be \u09af\u09be\u09af\u09bc \u09a8\u09be___\u09b8\u0982\u0995\u09cd\u09b7\u09c7\u09aa\u09a8 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5 \u09b9\u09af\u09bc\u09c7\u099b\u09c7.: {0} \u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae \u0985\u09cd\u09af\u09be\u0995\u09cd\u09b8\u09c7\u09b8 \u0985\u09b8\u09cd\u09ac\u09c0\u0995\u09c3\u09a4___ ___\u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8 \u09aa\u09be\u09a5___\u099c\u09bf\u099c\u09cd\u099e\u09be\u09b8\u09be \u0995\u09b0\u09ac\u09c7\u09a8 \u09a8\u09be___\u09a4\u09be\u09b2\u09be \u0995\u09cd\u09b2\u09bf\u0995 \u0995\u09b0\u09c1\u09a8___\u0987\u09a8\u09aa\u09c1\u099f \u09ae\u09be\u09aa___\u0986\u09aa\u09a1\u09c7\u099f \u0995\u09b0\u09c1\u09a8___\u09b8\u09cd\u09ac\u09c0\u0995\u09be\u09b0___\u09b8\u09cd\u0995\u09cd\u09af\u09be\u09a8___\u0997\u09c7\u09ae \u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1:___\u09ab\u09be\u0987\u09b2 \u099f\u09be\u0987\u09aa \u09a4\u09cd\u09b0\u09c1\u099f\u09bf, \u09aa\u09c1\u09a8\u09b0\u09be\u09af\u09bc \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8___\u09aa\u09cd\u09b0\u09ae\u09cd\u09aa\u099f \u098f\u099f\u09bf \u098f\u0995\u099f\u09bf \u09b8\u09a6\u09cd\u09af \u09a2\u09cb\u0995\u09be\u09a8\u09cb \u0987\u0989\u098f\u09b8\u09ac\u09bf \u09ae\u09c7\u09ae\u09b0\u09bf \u09b8\u09a8\u09be\u0995\u09cd\u09a4 \u0995\u09b0\u09c7 \u09af\u0996\u09a8___\u09ac\u09cd\u09af\u09be\u0995\u0986\u09aa \u09b8\u09c7\u099f\u09bf\u0982\u09b8 \u09b8\u09be\u09ab\u09b2\u09cd\u09af___\u09a1\u0995\u09c1\u09ae\u09c7\u09a8\u09cd\u099f \u09ab\u09b0\u09ae\u09cd\u09af\u09be\u099f \u0985\u09aa\u09b8\u09be\u09b0\u09a3 \u0995\u09b0\u09c1\u09a8 \u0995\u09cd\u09b2\u09bf\u0995 \u0995\u09b0\u09c1\u09a8___\u09a6\u09cd\u09ac\u09be\u09b0\u09be \u09a1\u09bf\u09ad\u09be\u0987\u09b8 \u09aa\u09b0\u09bf\u099a\u09be\u09b2\u09a8\u09be \u0995\u09b0\u09a4\u09c7 FTP \u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0,___\u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995, \u0986\u0987\u09a1\u09bf \u09aa\u09cd\u09b0\u09a4\u09bf\u09b7\u09cd\u09a0\u09bf\u09a4 \u09b9\u09af\u09bc\u09c7\u099b\u09c7:___\u09ae\u09be\u09b2\u09cd\u099f\u09bf \u09a5\u09cd\u09b0\u09c7\u09a1\u09c7\u09a1 \u09b0\u09c7\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8 \u09b8\u0995\u09cd\u09b0\u09bf\u09af\u09bc \u0995\u09b0\u09c1\u09a8 \u098f\u09ac\u0982 \u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1 \u0995\u09b0\u09c1\u09a8___\u099c\u09be\u09af\u09bc\u0997\u09be \u09a6\u09b0\u0995\u09be\u09b0:___\u09aa\u09cd\u09b0\u09cb\u09aa\u09be\u09b0\u09cd\u099f\u09bf___\u09aa\u09a5 \u0985\u09a8\u09c1\u09b8\u09b0\u09a3 \u0985\u0995\u09cd\u09b7\u09b0 \u09a5\u09be\u0995\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7 \u09a8\u09be * \\ \\ \": / | <> ___\u09a0\u09bf\u0995 \u0986\u099b\u09c7 ... \u09b0\u09bf\u09b8\u09be\u0987\u0995\u09c7\u09b2 \u09ac\u09bf\u09a8 {0} ({1} \u0986\u0987\u099f\u09c7\u09ae) \u09b8\u09b0\u09be\u09a8\u09cb?___\u09aa\u09b0\u09bf\u09ac\u09b0\u09cd\u09a4\u09a8___%s-\u099f\u09be\u09b8\u09cd\u0995 \u09b8\u09ae\u09cd\u09aa\u09a8\u09cd\u09a8 \u09b9\u09b2\u09c7,___\u0995\u09aa\u09bf \u09a8\u09bf\u09b6\u09cd\u099a\u09bf\u09a4?___\u09ac\u09cd\u09b2\u09c1\u099f\u09c1\u09a5 \u09a1\u09bf\u09b0\u09c7\u0995\u09cd\u099f\u09b0\u09bf \u09b6\u09c7\u09af\u09bc\u09be\u09b0 \u0995\u09b0\u09be:___\u09b6\u09c7\u09b7___\u09a8\u09be\u09ae\u09c7\u09b0 \u09a6\u09c8\u09b0\u09cd\u0998\u09cd\u09af \u0995\u09ae 32 \u0985\u0995\u09cd\u09b7\u09b0 \u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0 \u0995\u09b0\u09be \u09b9\u09ac\u09c7___\u09ac\u09be\u099c\u09be\u09b0___\u09b8\u09be\u09ab\u09b2\u09cd\u09af\u09c7\u09b0 \u09b8\u09c7\u099f \u0995\u09b0\u09c1\u09a8___192.168.1.100 / \u09b6\u09c7\u09af\u09bc\u09be\u09b0\u09cd\u09a1 \u09a1\u0995\u09c1\u09ae\u09c7\u09a8\u09cd\u099f\u09b8___\u09b8\u09ae\u09cd\u09aa\u09be\u09a6\u09a8\u09be \u09a5\u09bf\u09ae___\u09a6\u09c7\u0996\u09be\u09a8 \u09a5\u09be\u09ae\u09cd\u09ac\u09a8\u09c7\u09b2___\u09b8\u09c7\u099f\u09bf\u0982\u09b8 \u09aa\u09c1\u09a8\u09b0\u09c1\u09a6\u09cd\u09a7\u09be\u09b0 \u0995\u09b0\u09be \u09af\u09be\u09ac\u09c7 \u09a8\u09be___\u09b8\u09ae\u09cd\u09aa\u09c2\u09b0\u09cd\u09a3 \u09aa\u09be\u09a5 \u0995\u09aa\u09bf___\u098f\u0996\u09a8 \u09ac\u09be\u099c\u09be\u09a8\u09cb ...___\u09b8\u09ae\u09cd\u09aa\u09c2\u09b0\u09cd\u09a3 \u09b0\u09bf\u0995\u09ad\u09be\u09b0\u09bf___. \u09aa\u09cd\u09b0\u09ae\u09be\u09a3\u09c0\u0995\u09b0\u09a3 \u09b8\u09a0\u09bf\u0995 \u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0\u0995\u09be\u09b0\u09c0\u09b0 \u09a8\u09be\u09ae \u098f\u09ac\u0982 \u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1 \u09aa\u09c1\u09a8\u09b0\u09be\u09af\u09bc \u09b2\u09bf\u0996\u09c1\u09a8 \u09a6\u09af\u09bc\u09be \u0995\u09b0\u09c7 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5 \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae \u09b8\u09c7\u099f\u09bf\u0982\u09b8___\u09a8\u09be\u09ae \u09b2\u09bf\u0996\u09c1\u09a8___\u09b8\u09ab\u09b2 \u0987\u09a8\u09b8\u09cd\u099f\u09b2\u09c7\u09b6\u09a8___\u098f\u09ac\u0982 \u09ac\u09cd\u09af\u09be\u0995\u0986\u09aa \u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8 \u09b8\u09c7\u099f\u09bf\u0982\u09b8 \u09aa\u09c2\u09b0\u09cd\u09ac\u09be\u09ac\u09b8\u09cd\u09a5\u09be\u09af\u09bc \u09ab\u09bf\u09b0\u09bf\u09af\u09bc\u09c7 \u0986\u09a8\u09c1\u09a8___\u09b8\u09be\u09ab\u09b2\u09cd\u09af\u09c7\u09b0 \u09aa\u09c1\u09a8\u0983\u09a8\u09be\u09ae\u0995\u09b0\u09a3___\u09b8\u0999\u09cd\u0997\u09c0\u09a4___\u09ab\u09be\u0987\u09b2 \u0996\u09c1\u09b2\u09c1\u09a8___\u09b8\u09be\u09ab___\u099a\u09be\u09b2\u09be\u09a8\u09cb\u09b0%s \u0997\u09c1\u09b2\u09bf \u099f\u09be\u09b8\u09cd\u0995___\u09b0\u09bf\u09b8\u09be\u0987\u0995\u09c7\u09b2 \u09ac\u09bf\u09a8 \u09b8\u09c7\u099f\u09bf\u0982\u09b8___\u09a6\u09c3\u09b6\u09cd\u09af\u09ae\u09be\u09a8 \u09aa\u09b0\u09bf\u09ac\u09be\u09b0___\u0986\u09aa\u09a8\u09bf \u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae \u09a1\u09bf\u09b0\u09c7\u0995\u09cd\u099f\u09b0\u09bf\u09b0 \u09ae\u09a7\u09cd\u09af\u09c7 \u0985\u09a8\u09c1\u09b8\u09a8\u09cd\u09a7\u09be\u09a8 \u0995\u09b0\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7\u09a8 \u09a8\u09be___\u0997\u09c7\u09ae%s \u0997\u09c1\u09b2\u09bf \u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0___\u09a8\u09be___\u099f\u09c7\u09b8\u09cd\u099f\u09bf\u0982 ...___\u0987\u09ae\u09c7\u099c\u09bf\u0982___\u098f\u09a8\u0995\u09cd\u09b0\u09bf\u09aa\u09cd\u099f \u0995\u09b0\u09be \u09ab\u09be\u0987\u09b2 \u09a8\u09be\u09ae___\u09aa\u09cd\u09b0\u0995\u09be\u09b0:___\u099a\u09bf\u09a4\u09cd\u09b0:___\'%1$s\'\u0995\u09b0\u09be\u09b0 \u0995\u09aa\u09bf \u09ab\u09be\u0987\u09b2___\u09a5\u09bf\u09ae \u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0 \u0995\u09b0\u09be\u09b0 \u09aa\u09c2\u09b0\u09cd\u09ac\u09c7 \u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1 \u0995\u09b0\u09c1\u09a8___\u09b0\u09bf\u09b8\u09be\u0987\u0995\u09c7\u09b2 \u09ac\u09bf\u09a8 \u0996\u09be\u09b2\u09bf___\u09ae\u09cb\u099f:___\u09b2\u09bf\u0996\u09a8\u09af\u09cb\u0997\u09cd\u09af \u09b9\u09b2:___\u0986\u09aa\u09a8\u09bf \u099c\u09cb\u09a1\u09bc\u09be \u09ae\u09c1\u099b\u09c7 \u09ab\u09c7\u09b2\u09a4\u09c7 \u099a\u09be\u09a8 \u09a1\u09bf\u09ad\u09be\u0987\u09b8 \u09ac\u09be\u09a4\u09bf\u09b2 \u0995\u09b0\u09c1\u09a8___\u098f\u0995\u099f\u09bf \u09ac\u09bf\u09ad\u09be\u0997 \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8___\u0995\u09cb\u09a8 \u09ae\u09a8\u09cd\u09a4\u09ac\u09cd\u09af \u09a8\u09c7\u0987___\u09aa\u09cd\u09af\u09be\u0995\u09c7\u099c:___\u09b8\u09ab\u09b2\u09ad\u09be\u09ac\u09c7___\u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u09ab\u09be\u0987\u09b2___\u0995\u09ad\u09be\u09b0___\u09b8\u09cd\u09aa\u09b7\u09cd\u099f___\u09a1\u0995\u09c1\u09ae\u09c7\u09a8\u09cd\u099f \u09aa\u09cd\u09b0\u09a4\u09cd\u09af\u09af\u09bc \u09a8\u09bf\u09ae\u09cd\u09a8\u09b2\u09bf\u0996\u09bf\u09a4 \u0985\u0995\u09cd\u09b7\u09b0 \u09a5\u09be\u0995\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7 \u09a8\u09be * \\ \\ / \": |? <> ___root-\u09b0 \u09aa\u09b0\u09bf\u09a3\u09a4 \u09b9\u09af\u09bc___\u098f\u09ab\u099f\u09bf\u09aa\u09bf \u09ae\u09be\u09b8\u09cd\u099f\u09be\u09b0 \u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0___\u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae \u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8___\u09b8\u09ae\u09cd\u09aa\u09be\u09a6\u09a8\u09be \u09b8\u09be\u09ab\u09b2\u09cd\u09af___\u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1:___\u09b8\u09aa\u09cd\u09a4\u09be\u09b9___\u0995\u09ae\u09cd\u09aa\u09bf\u0989\u099f\u09bf\u0982___\u09b8\u09be\u09aa\u09cb\u09b0\u09cd\u099f \u09b0\u09be\u09a8___ES \u0995\u09ae\u09cd\u09aa\u09cd\u09b0\u09c7\u09b6\u09a8 \u09a6\u09b0\u09cd\u09b6\u09a8\u0995\u09be\u09b0\u09c0___\u09ab\u09be\u0987\u09b2\u09c7\u09b0 \u09a8\u09be\u09ae \u09b2\u09bf\u0996\u09c1\u09a8___\u0997\u09be\u09a8 \u099c\u09a8\u09cd\u09af \u0985\u09a8\u09c1\u09b8\u09a8\u09cd\u09a7\u09be\u09a8 ...___\u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1 \u09b8\u09ae\u09be\u09aa\u09cd\u09a4___\u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1 (- 34 6) \u098f \u09b9\u09a4\u09c7 \u09b9\u09ac\u09c7___\u09b8\u09ae\u09cd\u09aa\u09be\u09a6\u09a8\u09be \u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0___\u09ac\u09a8\u09cd\u09a7 \u0985\u09a8\u09cd\u09af\u09be\u09a8\u09cd\u09af___\u0986\u09a8\u099c\u09bf\u09aa___\u098f\u09ab\u099f\u09bf\u09aa\u09bf \u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0\u09c7 \u098f\u0995\u099f\u09bf \u09a1\u09c7\u09b8\u09cd\u0995\u099f\u09aa \u09b6\u09b0\u09cd\u099f\u0995\u09be\u099f \u09a4\u09c8\u09b0\u09bf \u0995\u09b0\u09c1\u09a8___\u09a1\u0995\u09c1\u09ae\u09c7\u09a8\u09cd\u099f \u09ab\u09b0\u09ae\u09cd\u09af\u09be\u099f \u09b8\u09c7\u099f\u09bf\u0982\u09b8___\u0995\u09bf Signal \u0995\u09cd\u09b7\u09ae\u09a4\u09be___\u0989\u09aa\u09b8\u09cd\u09a5\u09bf\u09a4 \u09b0\u09af\u09bc\u09c7\u099b\u09c7:___\u0986\u09ac\u09c7\u09a6\u09a8 \u0985\u09ac\u09b6\u09bf\u09b7\u09cd\u099f \u09b8\u09cd\u09a5\u09be\u09a8 \u09aa\u09b0\u09c7 \u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u0995\u09b0\u09be \u09b9\u09af\u09bc, \u09aa\u09aa \u0986\u09aa \u0985\u09a8\u09c1\u09b8\u09cd\u09ae\u09be\u09b0\u0995 \u0985\u09a4\u09cd\u09af\u09a8\u09cd\u09a4 \u0995\u09ae___\u09aa\u09be\u09ac\u09b2\u09bf\u0995 \u09ae\u09c7\u0998___\u09ac\u09a8\u09cd\u09a7 \u0995\u09b0\u09c1\u09a8 ES FTP \u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0?___\u09aa\u09cd\u09b0\u0997\u09a4\u09bf___\u09ac\u09cd\u09af\u09be\u0995 \u0986\u09aa \u09a8\u09be___\u0996\u09cb\u09b2\u09be \u099c\u09be\u09a8\u09be\u09b2\u09be -%1$s___\u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u0996\u09c1\u0981\u099c\u09c7 \u09aa\u09be\u0993\u09af\u09bc\u09be \u09af\u09be\u09ac\u09c7 \u09a8\u09be___\u09ae\u09c1\u099b\u09c7 \u09ab\u09c7\u09b2\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7 \'%1$s\'___\u09aa\u09b0\u09bf\u09ae\u09bf\u09a4___\u09ab\u09cb\u09b2\u09cd\u09a1\u09be\u09b0\u09c7 \u09a6\u09c7\u0996\u09be\u09a8 \u09af\u09c1\u0995\u09cd\u09a4 \u0986\u09ac\u09c7\u09a6\u09a8 \u0986\u0987\u0995\u09a8___\u09ac\u09c7\u09b6\u09bf\u09b0\u09ad\u09be\u0997 \u09a6\u09c7\u0996\u09be___\u09aa\u09cd\u09b0\u09be\u09b0\u09ae\u09cd\u09ad\u0995\u09be\u09b2\u09c7 \u09ae\u09cd\u09af\u09be\u09a8\u09c7\u099c\u09be\u09b0___\u0986\u09a8\u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u09b8\u09be\u09ab\u09b2\u09cd\u09af___\u0995\u09be\u099f\u09be___\u0985\u09a8\u09c1\u0997\u09cd\u09b0\u09b9 \u0995\u09b0\u09c7 \u0985\u09aa\u09c7\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09c1\u09a8 ...___\u0985\u099c\u09be\u09a8\u09be___\u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0___\u0986\u09b0\u09cb___\u0985\u09a8\u09c1\u0997\u09cd\u09b0\u09b9 \u0995\u09b0\u09c7 \u0985\u09aa\u09c7\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09c1\u09a8 ...___\u09ae\u09c1\u099b\u09c7 \u09a6\u09bf\u09a8___\u09b8\u09cd\u09a5\u09be\u09a8\u09c0\u09af\u09bc___\u09a4\u09be\u09b0\u09bf\u0996\u099f\u09bf \u09b2\u09bf\u0996\u09c1\u09a8___\u09ac\u09cd\u09b2\u09c1\u099f\u09c1\u09a5 \u0995\u09a8\u09ab\u09bf\u0997\u09be\u09b0\u09c7\u09b6\u09a8___\u0993\u09aa\u09c7\u09a8 \u0995\u09b0\u09c7___\u09ac\u09be\u09a4\u09bf\u09b2___\u09ac\u09a8\u09cd\u09a7 \u0995\u09b0\u09c1\u09a8___\u09a6\u09c3\u09b6\u09cd\u09af\u09ae\u09be\u09a8 \u0995\u09b0\u09c1\u09a8___\u09ab\u09be\u0987\u09b2\u09c7\u09b0 \u09a8\u09be\u09ae \u09ab\u09be\u0981\u0995\u09be \u09b9\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7 \u09a8\u09be___\u09b8\u09ae\u09b8\u09cd\u09a4 \u09b8\u0999\u09cd\u0995\u09c1\u099a\u09bf\u09a4___\u0986\u09b0\u0993 \u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8___\u0993\u09aa\u09c7\u09a8 \u09a1\u09bf\u09b0\u09c7\u0995\u09cd\u099f\u09b0\u09bf -%1$s___\u09a1\u09bf\u09ab\u09b2\u09cd\u099f \u09a5\u09bf\u09ae___\u0995\u09ae\u09cd\u09aa\u09bf\u0989\u099f\u09be\u09b0___\u09a6\u0995\u09cd\u09b7\u09a4\u09be \u0985\u0997\u09cd\u09b0\u09be\u09a7\u09bf\u0995\u09be\u09b0 \u09aa\u09cd\u09b0\u09a6\u09be\u09a8, \u0997\u09a4\u09bf \u09b8\u09cd\u09b2\u09be\u0987\u09a1, \u0986\u09aa\u09a8\u09bf, \u09af\u09a8\u09cd\u09a4\u09cd\u09b0\u09aa\u09be\u09a4\u09bf \u09b8\u09ae\u09b0\u09cd\u09a5\u09a8 \u09aa\u09cd\u09b0\u09af\u09bc\u09cb\u099c\u09a8___\u09a5\u09bf\u09ae___\u0986\u09a8\u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5 \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u0985\u09a8\u09b2\u09be\u0987\u09a8\u09c7 \u0986\u09b0\u0993 \u09a5\u09bf\u09ae \u09aa\u09be\u09a8___\u0997\u09be\u09a8\u09c7\u09b0 \u09af\u09cb\u0997 \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u09a6\u09c2\u09b0\u09ac\u09b0\u09cd\u09a4\u09c0 \u0985\u09ac\u09b8\u09cd\u09a5\u09be\u09a8 \u09a5\u09c7\u0995\u09c7 \u09ae\u09c1\u099b\u09c7 \u09ab\u09c7\u09b2\u09be \u09ab\u09be\u0987\u09b2 \u09aa\u09c1\u09a8\u09b0\u09c1\u09a6\u09cd\u09a7\u09be\u09b0 \u0995\u09b0\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7 \u09a8\u09be___\u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995, \u0986\u0987\u09a1\u09bf \u09af\u09cb\u0997 \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7:___\u09ab\u09be\u0987\u09b2 \u09ae\u09bf\u09a1\u09bf\u09af\u09bc\u09be \u09aa\u09cd\u09b2\u09c7\u09af\u09bc\u09be\u09b0 \u09b8\u09cd\u099f\u09cd\u09b0\u09bf\u09ae\u09bf\u0982 \u09b8\u09ae\u09b0\u09cd\u09a5\u09a8 \u0995\u09b0\u09c7 \u09a8\u09be, \u09aa\u09cd\u09b2\u09c7\u09af\u09bc\u09be\u09b0 \u09b8\u09ae\u09cd\u09aa\u09c2\u09b0\u09cd\u09a3\u09b0\u09c2\u09aa\u09c7 \u09b8\u09cd\u09a5\u09be\u09a8\u09c0\u09af\u09bc\u09ad\u09be\u09ac\u09c7 \u0995\u09cd\u09af\u09be\u09b6\u09c7 \u098f\u09ac\u0982 \u09a4\u09be\u09b0\u09aa\u09b0 \u0996\u09c7\u09b2\u09be \u09b6\u09c1\u09b0\u09c1 \u0995\u09b0\u09be \u09b9\u09ac\u09c7___unrecoverable \u09aa\u09b0\u09c7 \u09ae\u09c1\u099b\u09c7 \u0985\u099c\u09be\u09a8\u09be \u09ae\u09c7\u09ae\u09b0\u09bf \u0995\u09be\u09b0\u09cd\u09a1 \u09ab\u09be\u0987\u09b2___\u0986\u09ae\u09be\u09a6\u09c7\u09b0 \u0995\u09be\u099b\u09c7 \u09ae\u09c7\u0987\u09b2 \u200b\u200b\u09aa\u09be\u09a0\u09be\u09a8 \u09a6\u09af\u09bc\u09be \u0995\u09b0\u09c7,___\u09af\u09be\u099a\u09be\u0987\u0995\u09b0\u09a3 \u0995\u09cb\u09a1 \u09a4\u09cd\u09b0\u09c1\u099f\u09bf___\u09ae\u09c7\u0987\u09b2 \u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8 \u0986\u09b0\u09ae\u09cd\u09ad \u0995\u09b0\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7\u09a8 \u09a8\u09be___\u0993\u09aa\u09c7\u09a8 \u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1 \u09b8\u09c1\u09b0\u0995\u09cd\u09b7\u09bf\u09a4 \u0997\u09cb\u09aa\u09a8 \u09a4\u09be\u09b2\u09bf\u0995\u09be___\u0985\u09ad\u09cd\u09af\u09a8\u09cd\u09a4\u09b0\u09c0\u09a3 \u09b8\u09cd\u099f\u09cb\u09b0\u09c7\u099c \u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8 \u0987\u09a8\u09b8\u09cd\u099f\u09b2___\u09ab\u09cd\u09b2\u09bf\u0995\u09be\u09b0___\u09ae\u09c1\u099b\u09c7 \u09ab\u09c7\u09b2\u09be \u09b9\u099a\u09cd\u099b\u09c7 ...___\u098f\u0987 \u0985\u09aa\u09be\u09b0\u09c7\u09b6\u09a8 \u09b8\u09ae\u09b0\u09cd\u09a5\u09bf\u09a4 \u09a8\u09af\u09bc___\u099a\u09bf\u09a4\u09cd\u09b0___\u09b8\u09c7\u099f\u09bf\u0982\u09b8 \u09ab\u09be\u0987\u09b2:___\u09a5\u09c7\u0995\u09c7 \u099d\u09be\u0981\u09aa \u09a6\u09be\u0993___\u09a6\u09c7\u0996\u09be\u09a8 \u0987\u0989\u098f\u09b8\u09ac\u09bf \u09aa\u09cd\u09b0\u09ae\u09cd\u09aa\u099f___\u09a4\u09c8\u09b0\u09bf \u0995\u09b0\u09be \u09b9\u099a\u09cd\u099b\u09c7, \u09a6\u09af\u09bc\u09be \u0995\u09b0\u09c7 \u0985\u09aa\u09c7\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09c1\u09a8 ...___\u09aa\u09a5 \u09a4\u09c8\u09b0\u09bf \u0995\u09b0\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7 \u09a8\u09be___{0} \u09ab\u09be\u0987\u09b2 \u0995\u09aa\u09bf \u0995\u09b0\u09a4\u09c7 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5___\u09af\u09be\u0993___\u0985\u09a8\u09cd\u09a4\u09a4 8 \u09b9\u09be\u099c\u09be\u09b0 \u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1 \u09a6\u09c8\u09b0\u09cd\u0998\u09cd\u09af___\u09b8\u0982\u09ac\u09c7\u09a6\u09a8\u09b6\u09c0\u09b2\u09a4\u09be \u09b6\u09c7\u0995___ ___\u0997\u09a4\u09bf___\u09b8\u09cd\u09a5\u09be\u09a8 \u0985\u09ad\u09be\u09ac___\u098f\u09b8\u09a1\u09bf \u0995\u09be\u09b0\u09cd\u09a1 \u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8___\u09a1\u09bf\u09b0\u09c7\u0995\u09cd\u099f\u09b0\u09bf\u09a4\u09c7 \u09a5\u09c7\u0995\u09c7 \u09a8\u09bf\u099c\u09c7\u0995\u09c7 \u0995\u09aa\u09bf \u0995\u09b0\u09a4\u09c7 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5___\u09aa\u09b0\u09bf\u09ae\u09bf\u09a4___\u09b8\u09ac \u09ab\u09be\u0981\u0995\u09be \u098f\u09a8\u09cd\u099f\u09cd\u09b0\u09bf \u09aa\u09c2\u09b0\u09a3 \u0995\u09b0\u09c1\u09a8___\u098f\u0995\u09cd\u09b8\u099f\u09c7\u09a8\u09b6\u09a8 \u09aa\u09b0\u09bf\u09ac\u09b0\u09cd\u09a4\u09a8 \u0995\u09b0\u09c1\u09a8___{0} \u09ab\u09be\u0987\u09b2 \u09b8\u0982\u09b0\u0995\u09cd\u09b7\u09bf\u09a4 \u099a\u09c7\u0995\u09b8\u09be\u09ae: {1}___\u0995\u09be\u09b2\u09cb___\u0985\u0999\u09cd\u0997\u09ad\u0999\u09cd\u0997\u09bf \u09a6\u0996\u09b2 \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7 \u09b2\u09bf\u0996\u09c1\u09a8, \u09aa\u09c1\u09a8\u09b0\u09be\u09af\u09bc \u0989\u09b2\u09cd\u09b2\u09c7\u0996 \u0995\u09b0\u09c1\u09a8___\u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8 \u09ab\u09be\u0987\u09b2 \u09ac\u09cd\u09af\u09be\u0995 \u0986\u09aa \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u09b2\u09cb\u09a1 \u09b9\u099a\u09cd\u099b\u09c7 \u09b6\u0982\u09b8\u09be\u0995\u09b0\u09a3 \u09aa\u09be\u09a4\u09be ...___\u09aa\u09cd\u09b2\u09c7\u09b2\u09bf\u09b8\u09cd\u099f___\u09a1\u09bf\u09b0\u09c7\u0995\u09cd\u099f\u09b0\u09bf \u09b8\u09c7\u099f\u09bf\u0982\u0997\u09c1\u09b2\u09bf___\u09b8\u0982\u09ac\u09be\u09a6___\u09a6\u09c1\u0987 \u0986\u0999\u09c1\u09b2 \u099c\u09c1\u09ae \u0985\u0999\u09cd\u0997\u09ad\u0999\u09cd\u0997\u09bf \u0989\u0987\u09a8\u09cd\u09a1\u09cb \u099c\u09c1\u09ae \u0995\u09b0\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7\u09a8___\u09aa\u09be\u09a5 / sdcard / \u09aa\u09cd\u09b0\u09be\u09b0\u09ae\u09cd\u09ad\u09c7 \u09a6\u09b0\u0995\u09be\u09b0 \u09b2\u09bf\u0996\u09c1\u09a8___\u0985\u0999\u09cd\u0997\u09ad\u0999\u09cd\u0997\u09bf \u09b8\u099e\u09cd\u099a\u09be\u09b2\u09a8\u09c7\u09b0 \u098f\u0995\u099f\u09bf \u0995\u09b0\u09cd\u09ae \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8___\u098f\u0995 \u0995\u09cd\u09b2\u09bf\u0995 \u09aa\u09cd\u09b0\u09b8\u09cd\u09a4\u09c1\u09a4\u09bf___\u0985\u09aa\u09c7\u0995\u09cd\u09b7\u09be___\u09ae\u09be\u09aa___\u09ac\u09bf\u099c\u09cd\u099e\u09aa\u09cd\u09a4\u09bf \u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae \u09a1\u09be\u099f\u09be\u09ac\u09c7\u09b8 \u0986\u09aa\u09a1\u09c7\u099f___\u09a6\u09cd\u09b0\u09c1\u09a4 \u09aa\u09b0\u09bf\u09ad\u09cd\u09b0\u09ae\u09a8 \u09aa\u09cd\u09b0\u09ac\u09c7\u09b6 \u0995\u09b0\u09a4\u09c7 \u099f\u09c1\u09b2\u09ac\u09be\u09b0\u09c7 \u09b8\u09b9\u099a\u09b0\u09c0 \u0995\u09be\u099b\u09be\u0995\u09be\u099b\u09bf___\u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u09aa\u09a5___\u09ac\u09b0\u09cd\u09a3\u09a8\u09be___\u09ac\u09cd\u09b2\u09c1\u099f\u09c1\u09a5 \u09a1\u09bf\u09b0\u09c7\u0995\u09cd\u099f\u09b0\u09bf \u09b6\u09c7\u09af\u09bc\u09be\u09b0 \u0995\u09b0\u09be___\u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8\u09c7 {0} \u09ab\u09be\u0987\u09b2 \u099f\u09be\u0987\u09aa \u09b8\u09be\u09aa\u09cb\u09b0\u09cd\u099f \u0995\u09b0\u09c7 \u09a8\u09be!___\u09b0\u09bf\u09b8\u09be\u0987\u0995\u09c7\u09b2 \u09ac\u09bf\u09a8 \u09ab\u09be\u0987\u09b2 \u09b8\u09cd\u09ac\u09af\u09bc\u0982\u0995\u09cd\u09b0\u09bf\u09af\u09bc\u09ad\u09be\u09ac\u09c7 \u09ab\u09be\u0987\u09b2 \u09ae\u09c1\u099b\u09c7 \u09ab\u09c7\u09b2\u09be\u09b0 \u09aa\u09b0\u09c7 \\ \u09b8\u09be\u09ab \u098f\u09a8 \u09b0\u09bf\u09b8\u09be\u0987\u0995\u09c7\u09b2 \u09ac\u09a8\u09cd\u09a7 \u09b9\u09af\u09bc \u09a8\u09be \u09b0\u09bf\u09b8\u09cd\u099f\u09cb\u09b0 \u0995\u09b0\u09be ..___\u0989\u09aa\u09b0 \u09a5\u09c7\u0995\u09c7 12 \u0989\u0987\u09a8\u09cd\u09a1\u09cb\u099c \u09b6\u09c1\u09a7\u09c1\u09ae\u09be\u09a4\u09cd\u09b0 \u0996\u09cb\u09b2\u09be \u09af\u09be\u09ac\u09c7___\u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09b8\u09cd\u09a5\u09bf\u09a4\u09bf___\u0993\u09af\u09bc\u09cd\u09af\u09be\u09b0\u09b2\u09c7\u09b8 \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09b8\u0995\u09cd\u09b7\u09ae \u0995\u09b0\u09c1\u09a8___\u09aa\u09cd\u09b2\u09c7\u09b2\u09bf\u09b8\u09cd\u099f \u09b8\u0982\u09b0\u0995\u09cd\u09b7\u09a3 \u0995\u09b0\u09c1\u09a8___\u0986\u09aa\u09a8\u09bf \u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8 \u0985\u09ac\u09b8\u09cd\u09a5\u09be\u09a8 \u09ae\u09a7\u09cd\u09af\u09c7 \u0985\u09a8\u09c1\u09b8\u09a8\u09cd\u09a7\u09be\u09a8 \u0995\u09b0\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7\u09a8 \u09a8\u09be___\u09aa\u09cd\u09b2\u09c7\u09b2\u09bf\u09b8\u09cd\u099f \u09ae\u09c1\u099b\u09c7 \u09a6\u09bf\u09a8___\u098f\u0996\u09a8 \u09ac\u09be\u099c\u09be\u09a8\u09cb___\u09ae\u09bf\u09b6\u09a8 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5 \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u09b6\u09b0\u09cd\u099f\u0995\u09be\u099f \u09a4\u09c8\u09b0\u09bf___\u09ae\u09be\u09b2\u09cd\u099f\u09bf \u0989\u0987\u09a8\u09cd\u09a1\u09cb___\u0986\u0997\u09c7___\u099c\u09be\u09a8\u09be\u09b2\u09be___\u09aa\u09cd\u09b0\u09be\u09a8\u09cd\u09a4\u09bf\u0995___\u0995\u09cb\u09a8 \u0985\u0999\u09cd\u0997\u09ad\u0999\u09cd\u0997\u09bf \u09af\u09a5\u09be\u09af\u09a5 \u099b\u09bf\u09b2 ___\u09a8\u09be\u09ae:%s___\u0997\u09c7\u09ae SFTP___\u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8___\u0993\u09aa\u09c7\u09a8 \u0995\u09b0\u09c7___\u0995\u09cd\u09af\u09be\u09b6\u09c7 \u09a4\u09a5\u09cd\u09af \u09aa\u09c1\u09a8\u09b0\u09c1\u09a6\u09cd\u09a7\u09be\u09b0___... \u09aa\u09be\u09a0\u09be\u09a8\u09cb \u09b9\u099a\u09cd\u099b\u09c7___\u09a0\u09bf\u0995 \u0986\u099b\u09c7___\u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09af\u09cb\u0997\u09a6\u09be\u09a8___\u0986\u09aa\u09a8\u09bf \u098f\u0996\u09a8 \u09ab\u09be\u0987\u09b2 \u09b9\u09b8\u09cd\u09a4\u09be\u09a8\u09cd\u09a4\u09b0 \u098f\u09ac\u0982 \u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0\u0995\u09be\u09b0\u09c0\u09b0 \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09aa\u09be\u09b0\u09c7\u09a8 \u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8\u09c7 \u098f\u0995\u099f\u09bf \u09b9\u09b2___\u09ae\u09be\u09b8___\u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8 \u0985\u09aa\u09be\u09b0\u09c7\u09b6\u09a8 \u09b8\u09ae\u09b0\u09cd\u09a5\u09a8 \u0995\u09b0\u09c7 \u09a8\u09be___\u09b8\u09be\u09aa\u09cb\u09b0\u09cd\u099f \u09b0\u09be\u09a8___\u09a0\u09bf\u0995 \u0986\u099b\u09c7___\u09aa\u09cd\u09b0\u09c7\u09b8 \u09a5\u09c7\u0995\u09c7 \u09aa\u09cd\u09b0\u09b8\u09cd\u09a5\u09be\u09a8 \u0995\u09b0\u09c1\u09a8___\u09ac\u09cd\u09b2\u09c1\u099f\u09c1\u09a5 \u09b8\u0995\u09cd\u09b0\u09bf\u09af\u09bc \u09a8\u09af\u09bc___\u0996\u09be\u09b2\u09bf \u09b9\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7 \u09b8\u09ae\u09cd\u09aa\u09be\u09a6\u09a8\u09be \u0995\u09b0\u09be\u09b0 \u099c\u09a8\u09cd\u09af \u0995\u09cd\u09b2\u09bf\u0995 \u0995\u09b0\u09c1\u09a8.___\u0995\u09bf\u099b\u09c1 \u09ae\u09a1\u09bf\u0989\u09b2 \u098f\u0987 \u09ae\u09a1\u09bf\u0989\u09b2 \u09b8\u09ae\u09b8\u09cd\u09a4 \u09ac\u09c8\u09b6\u09bf\u09b7\u09cd\u099f\u09cd\u09af \u09b8\u09ae\u09cd\u09aa\u09c2\u09b0\u09cd\u09a3 \u0995\u09b0\u09a4\u09c7 \u09aa\u09be\u0993\u09af\u09bc\u09be \u09af\u09be\u09af\u09bc \u09a8\u09be \u098f\u09ac\u0982 \u0996\u09c1\u0981\u099c\u09c7 \u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u0995\u09b0\u09a4\u09c7 \u09b9\u09af\u09bc. ___\u09a8\u09be___\u0993\u09af\u09bc\u09c7\u09ac \u0985\u09a8\u09c1\u09b8\u09a8\u09cd\u09a7\u09be\u09a8___\u09ae\u09c1\u099b\u09c7 \u09ab\u09c7\u09b2\u09be \u09ab\u09be\u0987\u09b2 \u0989\u09a6\u09cd\u09a7\u09be\u09b0 \u0995\u09b0\u09be \u09af\u09be\u09af\u09bc,___\u09b8\u09ae\u09b8\u09cd\u09a4 \u0997\u09be\u09a8___\'{0}\'\u09a4\u09c8\u09b0\u09bf \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09b9\u099f \u09b8\u09cd\u09aa\u099f \u09a4\u09c8\u09b0\u09bf \u0995\u09b0\u09c1\u09a8___\u099b\u09ac\u09bf \u0995\u09be\u099f\u09be___\u09ac\u09cd\u09b2\u09c1\u099f\u09c1\u09a5 \u09a1\u09bf\u09ad\u09be\u0987\u09b8\u09c7\u09b0 \u09aa\u09be\u09b2\u099f\u09c7 \u0995\u09b0\u09be \u09af\u09be\u09ac\u09c7 \u09a8\u09be___ ___\u09ad\u09bf\u0989___\u09a4\u09be\u09b2\u09bf\u0995\u09be \u09a5\u09c7\u0995\u09c7 \u09b8\u09b0\u09be\u09a8___\u09b8\u0982\u09b0\u0995\u09cd\u09b7\u09bf\u09a4 \u09aa\u09cd\u09b2\u09c7\u09b2\u09bf\u09b8\u09cd\u099f___\u0995\u09cd\u09af\u09be\u09b6\u09c7 \u09a4\u09a5\u09cd\u09af \u09b8\u09ab\u09b2 \u09aa\u09c1\u09a8\u09b0\u09c1\u09a6\u09cd\u09a7\u09be\u09b0\u09c7\u09b0___ES \u09ab\u09be\u0987\u09b2 \u09ac\u09cd\u09b0\u09be\u0989\u099c\u09be\u09b0___\u09ab\u09be\u0987\u09b2\u09c7\u09b0 \u09ac\u09bf\u09b7\u09af\u09bc\u09ac\u09b8\u09cd\u09a4\u09c1 \u09aa\u09be\u0993\u09af\u09bc\u09be\u09b0 \u09b8\u09ae\u09af\u09bc \u098f\u0995\u099f\u09bf \u09a4\u09cd\u09b0\u09c1\u099f\u09bf \u0998\u099f\u09c7\u099b\u09c7:___\u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8 \u09ae\u09cd\u09af\u09be\u09a8\u09c7\u099c\u09be\u09b0___\u0996\u09cb\u09b2\u09be \u09ab\u09be\u0987\u09b2 {0} \u09ac\u09be\u09a4\u09bf\u09b2 \u0995\u09b0\u09c1\u09a8___\u09aa\u09cd\u09b0\u09be\u0987\u09ad\u09c7\u099f___\u09aa\u09c1\u09a8\u0983\u09a8\u09be\u09ae\u0995\u09b0\u09a3___\u09b2\u09cb\u09a1\u09bf\u0982 \u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae \u09a1\u09bf\u09b0\u09c7\u0995\u09cd\u099f\u09b0\u09bf \u09b2\u09bf\u0996\u09a8\u09af\u09cb\u0997\u09cd\u09af___\u09aa\u09cd\u09b2\u09c7___\u09a6\u09cd\u09b0\u09c1\u09a4 \u09aa\u09be\u09b8 \u09ab\u09be\u0987\u09b2___\u09aa\u09a5:___\u0985\u09ad\u09cd\u09af\u09a8\u09cd\u09a4\u09b0\u09c0\u09a3 \u09b8\u099e\u09cd\u099a\u09af\u09bc___\u09aa\u09cd\u09b0\u09ac\u09c7\u09b6 \u0995\u09b0\u09c1\u09a8___\u09ac\u09be\u09ae \u098f\u0995\u099f\u09bf \u09a8\u09a4\u09c1\u09a8 \u0985\u0999\u09cd\u0997\u09ad\u0999\u09cd\u0997\u09bf \u0997\u09cc\u09a3 \u09b8\u09b0\u099e\u09cd\u099c\u09be\u09ae \u09a4\u09c8\u09b0\u09bf, \u09ac\u09be \u09a0\u09be\u09b0\u09c7 \u09a8\u09bf\u09b7\u09cd\u0995\u09cd\u09b0\u09bf\u09af\u09bc \u0995\u09b0\u09c1\u09a8___\u09b8\u0982\u09b0\u0995\u09cd\u09b7\u09a3 \u09aa\u09cd\u09b2\u09c7\u09b2\u09bf\u09b8\u09cd\u099f \u09ac\u09cd\u09af\u09b0\u09cd\u09a5\u09a4\u09be___\u09b6\u09c7\u0995 \u09aa\u09b0\u09bf\u09ac\u09b0\u09cd\u09a4\u09a8\u09c7\u09b0 \u0997\u09be\u09a8 \u09b8\u0995\u09cd\u09b0\u09bf\u09af\u09bc \u0995\u09b0\u09c1\u09a8___\u09a1\u09bf\u09b8\u09cd\u0995___\u0986\u09ac\u09b9\u09be\u0993\u09af\u09bc\u09be___\u09ac\u09cd\u09b2\u09c1\u099f\u09c1\u09a5___\'%1$s\'\u09ab\u09be\u0987\u09b2 \u09a8\u09bf\u09af\u09bc\u09c7 \u09af\u09be\u09a8___\u0996\u09cb\u09b2\u09be \u0985\u09ac\u09b8\u09cd\u09a5\u09be\u09a8___\u09ae\u09c2\u09b2 \u09ab\u09be\u0987\u09b2\u09c7\u09b0 \u09a8\u09be\u09ae___\u09aa\u09c1\u09a8\u09b0\u09be\u09af\u09bc \u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1 \u0995\u09b0\u09c1\u09a8___ ___\u098f\u0987 \u09a4\u09be\u09b2\u09bf\u0995\u09be \u09b6\u09c2\u09a3\u09cd\u09af___\u09aa\u09cd\u09b0\u09b8\u09cd\u09a5\u09be\u09a8 \u0985\u09cd\u09af\u09be\u0995\u09be\u0989\u09a8\u09cd\u099f___ES \u09ae\u09bf\u09a1\u09bf\u09af\u09bc\u09be \u09aa\u09cd\u09b2\u09c7\u09af\u09bc\u09be\u09b0___\u09a8\u09be\u09ae___\u09b9\u099f\u09b8\u09cd\u09aa\u099f \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09a8\u09bf\u09b0\u09cd\u09ae\u09be\u09a3___ ___\u0987\u0989\u09a8\u09bf\u099f___\u0995\u09cb\u09a1___\u09b8\u0982\u09af\u09cb\u0997 \u09b8\u09a8\u09be\u0995\u09cd\u09a4 \u09a8\u09be, \n\u09ac\u09c7\u09a4\u09be\u09b0 \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09b8\u0995\u09cd\u09b0\u09bf\u09af\u09bc \u0995\u09b0\u09c1\u09a8___\u09b8\u09be\u09b0\u09cd\u099f\u09bf\u09ab\u09bf\u0995\u09c7\u099f \u0986\u0987\u09a1\u09bf \u09ae\u09c7\u09b2\u09c7 \u09a8\u09be___\u09ac\u09a8\u09cd\u09a7___\u09a4\u09be\u09a6\u09c7\u09b0 \u09a8\u09bf\u099c\u09b8\u09cd\u09ac \u09b9\u099f\u09b8\u09cd\u09aa\u099f \u09a8\u09be\u09ae \u098f\u09ac\u0982 \u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1 \u09a8\u09bf\u09b0\u09cd\u09a7\u09be\u09b0\u09a3 \u0995\u09b0\u09c1\u09a8___\u0985\u099c\u09be\u09a8\u09be___\u0997\u09cd\u09b0\u09c1\u09aa___\u0986\u09aa\u09a8\u09bf \u098f\u0987 \u09a4\u09c8\u09b0\u09bf \u0995\u09b0\u09a4\u09c7 \u09aa\u09be\u09b0\u09ac\u09c7\u09a8 \u09a8\u09be,___, \u0995\u09be\u099c \u0995\u09b0\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7 \u09a8\u09be \u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8\u09c7 \u09b6\u09c1\u09a7\u09c1\u09ae\u09be\u09a4\u09cd\u09b0 FAT32 \u09ab\u09b0\u09ae\u09cd\u09af\u09be\u099f \u0987\u0989\u098f\u09b8\u09ac\u09bf \u09a1\u09bf\u09ad\u09be\u0987\u09b8 \u09b8\u09ae\u09b0\u09cd\u09a5\u09bf\u09a4 \u09b9\u09ac\u09c7___\u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8 \u0986\u09a8\u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u09b8\u0982\u09b0\u0995\u09cd\u09b7\u09a3 \u0995\u09b0\u09be \u09a4\u09be\u09b2\u09bf\u0995\u09be___\u09b8\u0982\u0995\u09cb\u099a\u09a8___\u09a1\u09bf\u09ab\u09b2\u09cd\u099f \u09a4\u09be\u09b2\u09bf\u0995\u09be\u09af\u09bc \u0989\u0987\u09a8\u09cd\u09a1\u09cb\u09a4\u09c7 \u09af\u09cb\u0997 \u0995\u09b0\u09be\u09b0 \u09aa\u09a6\u09cd\u09a7\u09a4\u09bf___\u0995\u09ae\u09cd\u09aa\u09cd\u09b0\u09c7\u09b6\u09a8 \u09b8\u09cd\u09a4\u09b0___\u09a1\u09bf\u09ab\u09b2\u09cd\u099f \u09a4\u09be\u09b2\u09bf\u0995\u09be \u09a5\u09c7\u0995\u09c7 \u0989\u0987\u09a8\u09cd\u09a1\u09cb \u0985\u09aa\u09b8\u09be\u09b0\u09a3 \u0995\u09b0\u09be\u09b0 \u09ac\u09be\u099f\u09a8\u09c7 \u0995\u09cd\u09b2\u09bf\u0995 \u0995\u09b0\u09c1\u09a8___\u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09bf\u09a4 \u0985\u09cd\u09af\u09be\u0995\u09be\u0989\u09a8\u09cd\u099f \u09a5\u09c7\u0995\u09c7 \u09aa\u09cd\u09b0\u09b8\u09cd\u09a5\u09be\u09a8 \u0995\u09b0\u09be\u09b0 \u099c\u09a8\u09cd\u09af \u0995\u09bf\u09a8\u09be?___\u09b9\u09cb\u09ae \u09aa\u09c7\u099c\u09c7 \u09a6\u09c7\u0996\u09be\u09a8 \u09b8\u09be\u09b0\u09cd\u099a \u0987\u099e\u09cd\u099c\u09bf\u09a8___- SMB \u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0, \u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8 \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09b8\u09c1\u09af\u09cb\u0997 \u09b9\u09af\u09bc \u09a8\u09be___{0}% \u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0\u0995\u09be\u09b0\u09c0 \u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8 \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u09af\u09c7\u0996\u09be\u09a8\u09c7___\u09b8\u0982\u09b0\u0995\u09cd\u09b7\u09a3 \u0995\u09b0\u09be \u09af\u09be\u09ac\u09c7 \u09a8\u09be___\u09a4\u09c8\u09b0\u09c0 \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7:___\u09b8\u09ae\u09cd\u09aa\u09be\u09a6\u09a8\u09be \u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0___\u09b8\u09cd\u09ac\u09a8 \u09b8\u09c7\u099f___root \u09a1\u09bf\u09b0\u09c7\u0995\u09cd\u099f\u09b0\u09bf \u09b8\u09c7\u099f \u0995\u09b0\u09c1\u09a8___{0} \u09a1\u09bf\u09b0\u09c7\u0995\u09cd\u099f\u09b0\u09bf \u09b0\u09bf\u09b8\u09be\u0987\u0995\u09c7\u09b2 \u09ac\u09bf\u09a8 \u09b8\u09b0\u09bf\u09af\u09bc\u09c7 \u09a8\u09bf\u09b0\u09cd\u09a7\u09be\u09b0\u09a3?___\u09b8\u09be\u09ab \u0987\u09a4\u09bf\u09b9\u09be\u09b8___\u09ae\u09a8\u09cd\u09a4\u09ac\u09cd\u09af \u09b8\u09be\u09ab\u09b2\u09cd\u09af___\u09b0\u09bf\u09b8\u09be\u0987\u0995\u09c7\u09b2 \u09ac\u09bf\u09a8 \u09a5\u09c7\u0995\u09c7 \u09b8\u09b0\u09be\u09a8\u09cb___\'%1$s\' \'%2$s\' \u0995\u09b0\u09a4\u09c7 \u09aa\u09be\u09b2\u099f\u09c7 \u0995\u09b0\u09be \u09b9\u09ac\u09c7___, \u09ae\u09cb\u099f \u0986\u09af\u09bc\u09a4\u09a8:%s___\u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09bf\u09a4 \u09aa\u09cd\u09b0\u09cb\u0997\u09cd\u09b0\u09be\u09ae \u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae \u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8 \u0989\u09aa\u09b8\u09cd\u09a5\u09bf\u09a4 \u09b0\u09af\u09bc\u09c7\u099b\u09c7, \u0986\u09aa\u09a8\u09bf \u09ae\u09c2\u09b2 \u09ab\u09be\u0982\u09b6\u09a8 \u0996\u09cb\u09b2\u09be\u09b0 \u09aa\u09cd\u09b0\u09af\u09bc\u09cb\u099c\u09a8___\u09aa\u09cd\u09b0\u09b8\u09cd\u09a4\u09be\u09ac\u09bf\u09a4___\u098f\u0987 \u09ae\u09bf\u0989\u099c\u09bf\u0995 \u09aa\u09cd\u09b2\u09c7 \u0995\u09b0\u09be \u09af\u09be\u09ac\u09c7 \u09a8\u09be___\u09b8\u09be\u09ab \u09a1\u09bf\u09ab\u09b2\u09cd\u099f___\u09ab\u09b0\u09cb\u09af\u09bc\u09be\u09b0\u09cd\u09a1___\u09aa\u09cd\u09b0\u09be\u09aa\u0995 \u0997\u09cd\u09b0\u09b9\u09a3 \u0995\u09b0\u09a4\u09c7 \u0985\u09b8\u09cd\u09ac\u09c0\u0995\u09be\u09b0 \u0995\u09b0\u09c7___\u09b8\u09cd\u09a5\u09be\u09a8\u09c0\u09af\u09bc \u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1___\u0995\u09cb\u09a8 \u0989\u09aa\u09af\u09c1\u0995\u09cd\u09a4 \u09aa\u09cd\u09b0\u09cb\u0997\u09cd\u09b0\u09be\u09ae \u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8 \u0985\u09aa\u09be\u09b0\u09c7\u09b6\u09a8 \u09b8\u09ae\u09cd\u09aa\u09be\u09a6\u09a8___\u09aa\u09b0\u09bf\u09ac\u09b9\u09a8___\u09a5\u09bf\u09ae \u09aa\u09cd\u09af\u09be\u0995\u09c7\u099c \u098f\u09b0 \u098f\u0995\u099f\u09bf \u09a8\u09a4\u09c1\u09a8 \u09b8\u0982\u09b8\u09cd\u0995\u09b0\u09a3 \u0989\u09aa\u09b2\u09ac\u09cd\u09a7, \u0986\u09aa\u09a1\u09c7\u099f \u0995\u09b0\u09c1\u09a8___\u09aa\u09bf\u09a8___\u09b8\u09be\u09b0\u09cd\u099f\u09bf\u09ab\u09bf\u0995\u09c7\u09b6\u09a8 \u09ae\u09c7\u09af\u09bc\u09be\u09a6 \u09b6\u09c7\u09b7 \u09b9\u09af\u09bc\u09c7\u099b\u09c7, \u0986\u09ac\u09be\u09b0 \u09b2\u0997\u0987\u09a8 \u0995\u09b0\u09c1\u09a8___/ \u0986\u09a8\u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8 \u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u0995\u09b0\u09be\u09b0 \u099c\u09a8\u09cd\u09af \u098f\u0995\u099f\u09bf \u0995\u09bf___\u09a1\u09bf\u0995\u09cd\u09b0\u09bf\u09aa\u09cd\u099f___\u099f\u09cd\u09b0\u09cd\u09af\u09be\u09b6 \u09ac\u09cd\u09af\u09b8\u09cd\u09a4___\u09b6\u09c7\u0995___\u09ae\u09be\u09aa___\u0986\u09aa\u09a8\u09be\u09b0 \u0995\u09be\u099b\u09c7 \u098f\u0995\u099f\u09bf \u09ab\u09be\u0987\u09b2 \u09b6\u09c7\u09af\u09bc\u09be\u09b0 \u0995\u09b0\u09a4\u09c7%1$s, \u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1 \u09b2\u09bf\u0982\u0995\u09c7 \u0995\u09cd\u09b2\u09bf\u0995 \u0995\u09b0\u09c1\u09a8:%2$s___\u0985\u09aa\u09be\u09b0\u09c7\u09b6\u09a8___\u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0 \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7:___\u09ac\u09cd\u09b2\u09c1\u099f\u09c1\u09a5 OBEX FTP-\u09b0 \u09b8\u09c7\u09ac\u09be \u0985\u09a8\u09cd\u09af\u09be\u09a8\u09cd\u09af \u09ac\u09cd\u09b2\u09c1\u099f\u09c1\u09a5 \u09a1\u09bf\u09ad\u09be\u0987\u09b8 \u098f\u0996\u09a8 \u09ab\u09be\u0987\u09b2 \u09b9\u09b8\u09cd\u09a4\u09be\u09a8\u09cd\u09a4\u09b0 \u0995\u09b0\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7\u09a8 \u09b8\u0999\u09cd\u0997\u09c7 \u09b8\u09ab\u09b2\u09ad\u09be\u09ac\u09c7 \u09b6\u09c1\u09b0\u09c1 \u09b9\u09af\u09bc ..___\u09ad\u09bf\u09a1\u09bf\u0993 \u0985\u09a8\u09c1\u09b8\u09a8\u09cd\u09a7\u09be\u09a8 \u0995\u09b0\u09c1\u09a8___\u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1 \u09ae\u09cd\u09af\u09be\u09a8\u09c7\u099c\u09be\u09b0___\u09ac\u09c7\u09b6\u09bf___\u09ab\u09be\u0987\u09b2___\u09aa\u09be\u09a0\u09be\u09a8\u09cb___\u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09af\u09cb\u0997 \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7, SSID \u09b9\u09af\u09bc___\u09aa\u09cd\u09b0\u09cb\u09aa\u09be\u09b0\u09cd\u099f\u09bf___ES \u099f\u09c7\u0995\u09cd\u09b8\u099f \u09b0\u09bf\u09a1\u09be\u09b0___\u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u09b8\u0982\u0997\u09cd\u09b0\u09b9\u09b8\u09cd\u09a5\u09b2 \u0995\u09be\u09b0\u09cd\u09a1___\u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae \u09b8\u09ae\u09af\u09bc \u098f\u09b0\u09b0, \u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae \u09b8\u09ae\u09af\u09bc \u09aa\u09b0\u09bf\u09ac\u09b0\u09cd\u09a4\u09a8 \u0995\u09b0\u09a4\u09c7___\u09b8\u09c7\u099f \u0993\u09af\u09bc\u09be\u09b2\u09aa\u09c7\u09aa\u09be\u09b0___\u098f\u09ac\u0982 \u09a4\u09be\u09b0\u09aa\u09b0 \u098f\u0995\u099f\u09bf \u09b8\u09cd\u09a5\u09be\u09a8\u09c0\u09af\u09bc \u09a1\u09bf\u0995\u09cd\u09b0\u09bf\u09aa\u09b6\u09a8 \u09ab\u09be\u0987\u09b2 \u0995\u09aa\u09bf___\u09b6\u09c1\u09b0\u09c1 \u0985\u09ac\u09b8\u09cd\u09a5\u09be\u09a8\u09c7 \u09b8\u09c7\u099f \u09a1\u09cd\u09b0\u09cd\u09af\u09be\u0997 \u0985\u0999\u09cd\u0997\u09ad\u0999\u09cd\u0997\u09bf \u09a1\u09cd\u09b0\u09aa___\u099f\u09be\u09b8\u09cd\u0995 \u0995\u09c7\u09a8\u09cd\u09a6\u09cd\u09b0___\u09b8\u09c7\u099f \u0995\u09b0\u09c1\u09a8 \u09b9\u099f \u09b8\u09cd\u09aa\u099f___\u09ab\u09cd\u09b0\u09bf \u09b8\u09cd\u09aa\u09c7\u09b8:___\u0985\u09a8\u09c1\u09b8\u09a8\u09cd\u09a7\u09be\u09a8___\u09aa\u09cd\u09b2\u09c7\u09b2\u09bf\u09b8\u09cd\u099f \u09ae\u09c1\u099b\u09c7 \u09a6\u09bf\u09a8___\u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8 \u09ad\u09be\u09b7\u09be___\u09a1\u09bf\u09b0\u09c7\u0995\u09cd\u099f\u09b0\u09bf\u09b0 \u09ae\u09be\u09aa:___\u09b8\u09ae\u09be\u09aa\u09cd\u09a4\u09bf\u09b0 \u09b6\u09c7\u09b7\u09c7\u09b0 \u0995\u09be\u099b\u09be\u0995\u09be\u099b\u09bf___\u09ae\u09c1\u099b\u09c7 \u09a8\u09be \u09aa\u09be\u09b0\u09bf___\u09a8\u09be\u09ae \u0996\u09be\u09b2\u09bf \u09b9\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7 \u09a8\u09be___\u09aa\u09af\u09bc\u09c7\u09a8\u09cd\u099f \u098f\u0995\u099f\u09bf \u09ac\u09cd\u09b2\u09c1\u099f\u09c1\u09a5 \u09a1\u09bf\u09ad\u09be\u0987\u09b8 \u0996\u09c1\u0981\u099c\u09c7 \u0985\u09a8\u09c1\u09b8\u09a8\u09cd\u09a7\u09be\u09a8___\u0986\u09aa\u09a8\u09bf \u0995\u09bf \u09a8\u09bf\u09b6\u09cd\u099a\u09bf\u09a4 \u09af\u09c7 \u0986\u09aa\u09a8\u09bf, \u09ad\u09bf\u09a1\u09bf\u0993 \u09ae\u09c1\u099b\u09c7 \u09ab\u09c7\u09b2\u09a4\u09c7 \u099a\u09be\u09a8___\u09b8\u09ae\u09b8\u09cd\u09a4%s \u0997\u09c1\u09b2\u09bf \u099f\u09be\u09b8\u09cd\u0995 \u09ae\u09c1\u099b\u09c7 \u09ab\u09c7\u09b2\u09a4\u09c7?___\u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1 \u09b9\u099a\u09cd\u099b\u09c7%s-\u09aa\u09cd\u09b2\u09be\u0997 \u0987\u09a8 ...___\u0986\u09aa\u09a8\u09be\u09b0 \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09bf\u09a4 \u0989\u0987\u09a8\u09cd\u09a1\u09cb \u0996\u09cb\u09b2\u09be\u09b0 \u099c\u09a8\u09cd\u09af \u09b8\u09ab\u09cd\u099f\u0993\u09af\u09bc\u09cd\u09af\u09be\u09b0 \u09b6\u09c1\u09b0\u09c1___\u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0___\u0985\u09a8\u09c1\u09b8\u09a8\u09cd\u09a7\u09be\u09a8 \u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8___\u0985\u09a8\u09c1\u09b8\u09a8\u09cd\u09a7\u09be\u09a8 \u0995\u09b0\u09c1\u09a8 ...___\u09ac\u09cd\u09af\u09be\u0995 \u0986\u09aa ...___\u0995\u09cb\u09a8 \u09aa\u09cd\u09b0\u09cb\u0997\u09cd\u09b0\u09be\u09ae, \u099b\u09ac\u09bf \u09b6\u09c7\u09af\u09bc\u09be\u09b0 \u0995\u09b0\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7\u09a8___\u098f\u0995\u099f\u09bf \u09b6\u09bf\u09b0\u09cb\u09a8\u09be\u09ae \u09b2\u09bf\u0996\u09c1\u09a8___\u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1 \u09a4\u09be\u09b0\u09bf\u0996:___UID \u09b8\u09c7\u099f \u0995\u09b0\u09c1\u09a8___{0} \u0995\u09aa\u09bf ___\u0985\u09ac\u09b8\u09cd\u09a5\u09be\u09a8___\u0997\u09a3\u09a8\u09be \u0995\u09b0\u09be ...___\u0987\u09a8\u09cd\u099f\u09be\u09b0\u09a8\u09c7\u099f \u09b8\u0982\u09b0\u0995\u09cd\u09b7\u09be\u09a3\u09be\u0997\u09be\u09b0___\u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1 \u09b8\u09c7\u099f \u0995\u09b0\u09c1\u09a8___\u09ab\u09be\u0987\u09b2%s \u0997\u09c1\u09b2\u09bf \u0987\u09a4\u09bf\u09ae\u09a7\u09cd\u09af\u09c7, \u09ae\u09c1\u099b\u09c7 \u09ab\u09c7\u09b2\u09be \u09ac\u09bf\u09a6\u09cd\u09af\u09ae\u09be\u09a8?___\u09a4\u09cd\u09b0\u09c1\u099f\u09bf, \u09ab\u09be\u0987\u09b2 \u0985\u09a4\u09cd\u09af\u09a8\u09cd\u09a4 \u09ac\u09a1\u09bc___\u09ae\u09be\u09aa:%s___\u09ab\u09be\u0987\u09b2\u09c7\u09b0 \u09a8\u09be\u09ae \u09a8\u09bf\u09ae\u09cd\u09a8\u09b2\u09bf\u0996\u09bf\u09a4 \u0985\u0995\u09cd\u09b7\u09b0 \u09a5\u09be\u0995\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7 \u09a8\u09be * \\ \\ / \": |? <> ___\u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1 \u09b8\u09be\u09ab \u09b9\u09af\u09bc\u09c7\u099b\u09c7, \u09b8\u09c1\u09b0\u0995\u09cd\u09b7\u09be \u09a5\u09be\u09ae\u09be\u09a4\u09c7___\u09a1\u09bf\u09ab\u09b2\u09cd\u099f \u09b8\u09c2\u099a\u09a8\u09be\u09b0 \u0989\u0987\u09a8\u09cd\u09a1\u09cb \u09b8\u09c7\u099f \u0995\u09b0\u09c1\u09a8___\u09a7\u09b0\u09a8___\u0986\u09aa\u09a8\u09bf \u09aa\u099b\u09a8\u09cd\u09a6 \u0995\u09b0\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7\u09a8___\u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09af\u09cb\u0997\u09a6\u09be\u09a8 \u0995\u09b0\u09c7\u09a8\u09bf___\u09aa\u09cd\u09b0\u09a4\u09bf\u09b2\u09bf\u09aa\u09bf \u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1 \u09aa\u09be\u09a5___\u0986\u09aa\u09a8\u09be\u09b0 \u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1 \u09a6\u09bf\u09a8___\u09ae\u09be\u09b2\u09bf\u0995___\u09aa\u09cd\u09b0\u099a\u09b2\u09bf\u09a4 \u0985\u09aa\u09be\u09b0\u09c7\u09b6\u09a8\u09b8___\u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8 \u0986\u09a8\u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u0995\u09b0\u09a4\u09c7 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5___\u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09aa\u09cd\u09b0\u09a4\u09bf\u09b7\u09cd\u09a0\u09bf\u09a4 \u09b9\u09af\u09bc\u09c7\u099b\u09c7,___IP Address \u0985\u09a5\u09ac\u09be IP \u09a0\u09bf\u0995\u09be\u09a8\u09be / \u09ad\u09be\u0997 \u09ab\u09cb\u09b2\u09cd\u09a1\u09be\u09b0 \u09a8\u09be\u09ae \u09b2\u09bf\u0996\u09c1\u09a8___\u0987\u09a4\u09bf\u09b9\u09be\u09b8\u09c7 \u09a6\u09c7\u0996\u09be\u09a8 \u09a1\u09bf\u09b8\u09cd\u0995\u09c7\u09b0 \u09b8\u09cd\u09a5\u09be\u09a8___\u0995\u09cb\u09a1___\u09a6\u09c2\u09b0\u09ac\u09b0\u09cd\u09a4\u09c0 \u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0___\u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8 \u09b8\u09ae\u09cd\u09aa\u09a6 \u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0 \u0995\u09b0\u09be \u09b8\u09ae\u09cd\u09ad\u09ac \u09a8\u09be___\u09ab\u09be\u0987\u09b2___\u0985\u09a1\u09bf\u0993:___\u09ac\u09c7\u09a4\u09be\u09b0 \u09b9\u099f \u09b8\u09cd\u09aa\u099f \u098f\u09b0 \u0995\u09a8\u09ab\u09bf\u0997\u09be\u09b0\u09c7\u09b6\u09a8___\u09aa\u09cb\u09b0\u09cd\u099f (- 65534 1025) \u09b8\u09c7\u099f \u0995\u09b0\u09c1\u09a8___\u09aa\u09cd\u09af\u09be\u09b8\u09bf\u09ad___\u09a1\u0995\u09c1\u09ae\u09c7\u09a8\u09cd\u099f \u09b8\u09c7\u099f\u09bf\u0982\u0997\u09c1\u09b2\u09bf___\u09b9\u09cb\u09ae \u09a1\u09bf\u09b0\u09c7\u0995\u09cd\u099f\u09b0\u09bf___\u09ae\u09c1\u099b\u09c7 \u09a8\u09bf\u09b6\u09cd\u099a\u09bf\u09a4 \u0995\u09b0\u09c1\u09a8 {0} ... ({1} \u0986\u0987\u099f\u09c7\u09ae)___\u09b9\u09bf\u09b8\u09be\u09ac___\u099f\u09be\u09b8\u09cd\u0995 \u09ac\u09bf\u099c\u09cd\u099e\u09aa\u09cd\u09a4\u09bf \u09ac\u09be\u09b0\u09c7\u09b0 \u09ae\u09a7\u09cd\u09af\u09c7 \u09b8\u09ae\u09cd\u09aa\u09a8\u09cd\u09a8 \u09b9\u09af\u09bc \u09af\u0996\u09a8 \u09b8\u09ae\u09be\u09aa\u09cd\u09a4\u09bf\u09b0 \u09a8\u09cb\u099f\u09bf\u09b6 \u09aa\u09cd\u09b0\u09a6\u09b0\u09cd\u09b6\u09a8 \u0995\u09b0\u09be \u09b9\u09af\u09bc \u09a8\u09be___\u09b8\u0982\u0997\u09cd\u09b0\u09b9 \u0986\u0987\u099f\u09c7\u09ae \'{0} \'? \u0987\u09a4\u09bf\u09ae\u09a7\u09cd\u09af\u09c7\u0987 \u09ae\u09c1\u099b\u09c7 \u09ab\u09c7\u09b2\u09be, \u09ac\u09bf\u09a6\u09cd\u09af\u09ae\u09be\u09a8___\u0995\u09ae\u09cd\u09aa\u09cd\u09b0\u09c7\u09b6\u09a8 \u09b8\u09cd\u09a4\u09b0:___\u098f\u0987 \u09ad\u09bf\u09a1\u09bf\u0993 \u09aa\u09cd\u09b2\u09c7 \u0995\u09b0\u09be \u09af\u09be\u09ac\u09c7 \u09a8\u09be___\u09ac\u09cd\u09af\u09be\u0995\u0986\u09aa \u09a1\u09c7\u099f\u09be___\u09b8\u09c7\u099f\u09bf\u0982\u09b8 \u09aa\u09b0\u09bf\u099a\u09be\u09b2\u09a8\u09be \u0995\u09b0\u09c1\u09a8___\u09ab\u09be\u0987\u09b2 \u09b9\u09bf\u09b8\u09be\u09ac\u09c7 \u098f\u0995\u0987 \u09a8\u09be\u09ae \u0987\u09a4\u09bf\u09ae\u09a7\u09cd\u09af\u09c7\u0987 \u09ac\u09bf\u09a6\u09cd\u09af\u09ae\u09be\u09a8___\u0985\u0997\u09cd\u09b0\u0997\u09a4\u09bf___\u098f\u09a8\u0995\u09cd\u09b0\u09bf\u09aa\u09b6\u09a8___\u09aa\u09cd\u09b0\u09b8\u09cd\u09a5\u09be\u09a8 \u0989\u09aa\u09b0 \u09ac\u09a8\u09cd\u09a7___\u0997\u09cb\u09aa\u09a8\u09c0\u09af\u09bc\u09a4\u09be \u09b8\u09c7\u099f\u09bf\u0982\u09b8 \u09aa\u09b0\u09bf\u09ac\u09b0\u09cd\u09a4\u09a8 \u0995\u09b0\u09c1\u09a8___\u09b8\u0995\u09cd\u09b0\u09bf\u09af\u09bc___\u09ac\u09be\u0987\u099f___\u0986\u09aa\u09a8\u09bf \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995\u09c7 \u09ab\u09be\u0987\u09b2 \u098f\u09ac\u0982 \u0985\u09a8\u09cd\u09af\u09be\u09a8\u09cd\u09af \u09ac\u09cd\u09af\u0995\u09cd\u09a4\u09bf\u09a6\u09c7\u09b0 \u09b9\u09b8\u09cd\u09a4\u09be\u09a8\u09cd\u09a4\u09b0 \u0995\u09b0\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7\u09a8,___\u09a1\u09bf\u099c\u09bf\u099f\u09be\u09b2 \u0986\u09b0\u09ae\u09cd\u09ad\u09c7\u09b0 \u09ae\u09be\u09a8___\u09af\u09a6\u09bf \u0986\u09aa\u09a8\u09bf \u09ae\u09c1\u099b\u09c7 \u09ab\u09c7\u09b2\u09be \u099a\u09be\u09a8___\u09b2\u09cb\u09a1 \u09b9\u099a\u09cd\u099b\u09c7 ...___\u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0 \u09af\u09cb\u0997 \u0995\u09b0\u09a4\u09c7 \u09a8\u09bf\u0989 \u09ac\u09be\u099f\u09a8\u09c7 \u0995\u09cd\u09b2\u09bf\u0995 \u0995\u09b0\u09c1\u09a8___\u0993\u09aa\u09c7\u09a8___\u0997\u09ad\u09c0\u09b0\u09a4\u09be \u0985\u09a8\u09c1\u09b8\u09a8\u09cd\u09a7\u09be\u09a8\u09c7\u09b0 \u099a\u09c7\u09b7\u09cd\u099f\u09be \u09ab\u09be\u0987\u09b2 \u0996\u09c1\u0981\u099c\u09c7 \u09aa\u09be\u099a\u09cd\u099b\u09c7\u09a8 \u09a8\u09be?___\u09ab\u09bf\u09a1\u09ac\u09cd\u09af\u09be\u0995 \u09b8\u09ae\u09b8\u09cd\u09af\u09be___\u0986\u09a8\u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u09b8\u09ae\u09cd\u09aa\u09a8\u09cd\u09a8___\u099a\u09bf\u09a4\u09cd\u09b0:___\u09b8\u0982\u0995\u09cd\u09b7\u09bf\u09aa\u09cd\u09a4\u0995\u09be\u09b0\u09c0 ...___\u09b0\u09bf\u09b8\u09be\u0987\u0995\u09c7\u09b2 \u09ac\u09bf\u09a8___\u09a8\u09c7\u09b8\u09cd\u099f\u09c7\u09a1 \u0995\u09ae\u09cd\u09aa\u09cd\u09b0\u09c7\u09b8 \u09ab\u09be\u0987\u09b2 \u0996\u09c1\u09b2\u09a4\u09c7 \u0985\u0995\u09cd\u09b7\u09ae___\u09ac\u09c7\u09a4\u09be\u09b0 \u09b8\u0982\u09af\u09cb\u0997 \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09c1\u09a8!___\u09b6\u09c1\u09b0\u09c1 \u0986\u09ac\u09c7\u09a6\u09a8 -%1$s___ES \u09b0\u09bf\u09ae\u09cb\u099f \u09ae\u09cd\u09af\u09be\u09a8\u09c7\u099c\u09ae\u09c7\u09a8\u09cd\u099f___ ___\u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae \u09ae\u09c1\u099b\u09c7 \u09ab\u09c7\u09b2\u09be \u09ab\u09be\u0987\u09b2 \u09aa\u09c1\u09a8\u09b0\u09c1\u09a6\u09cd\u09a7\u09be\u09b0 \u0995\u09b0\u09be \u09af\u09be\u09ac\u09c7 \u09a8\u09be___\u09ab\u09be\u0987\u09b2 \u09ac\u09bf\u099c\u09cd\u099e\u09aa\u09cd\u09a4\u09bf \u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae (\u098f\u099f\u09bf \u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae\u09c7\u09b0 \u0989\u09aa\u09b0 \u09a8\u09bf\u09b0\u09cd\u09ad\u09b0 \u0995\u09b0\u09c7 \u0995\u09bf\u099b\u09c1 \u09b8\u09ae\u09af\u09bc \u09b2\u09be\u0997\u09c7) \u09ae\u09bf\u09a1\u09bf\u09af\u09bc\u09be \u09b2\u09be\u0987\u09ac\u09cd\u09b0\u09c7\u09b0\u09bf \u0986\u09aa\u09a1\u09c7\u099f \u0996\u09c1\u0981\u099c\u09c7 \u09aa\u09be\u099a\u09cd\u099b\u09c7\u09a8 \u09a8\u09be?___\u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09b8\u09cd\u09a5\u09be\u09aa\u09a8___\u09aa\u09cd\u09b0\u09b8\u09cd\u09a4\u09be\u09ac\u09bf\u09a4___\u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8 \u098f\u09a8\u0995\u09cb\u09a1\u09bf\u0982___\u09b8\u09cd\u099f\u09be\u09b0\u09cd\u099f \u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8___\u0995\u09be\u09b8\u09cd\u099f\u09ae \u09aa\u09c3\u09b7\u09cd\u09a0\u09ad\u09c2\u09ae\u09bf___\u09b8\u0982\u0996\u09cd\u09af\u09be___\u09aa\u09bf \u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0 \u0995\u09b0\u099b\u09c7\u09a8, SSID \u09b9\u09af\u09bc___\u0986\u09a8\u0987\u09a8\u09b8\u09cd\u099f\u09b2___\u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0985\u09cd\u09af\u09be\u09b2\u09ac\u09be\u09ae___FTP-\u09b0___\u09a8\u09be\u09ae \u0985\u09a8\u09c1\u09ae\u09cb\u09a6\u09bf\u09a4 \u09a8\u09af\u09bc, \u098f\u0995\u099f\u09bf \u09ad\u09bf\u09a8\u09cd\u09a8 \u09a8\u09be\u09ae \u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0 \u0995\u09b0\u09c1\u09a8___\u09b8\u09cd\u099f\u09bf\u0995\u09bf \u09ac\u09bf\u099f___\u0995\u09cd\u09af\u09be\u09b6\u09c7___- SMB \u09aa\u09b0\u09bf\u09b8\u09c7\u09ac\u09be \u09b8\u0995\u09cd\u09b0\u09bf\u09af\u09bc \u0995\u09b0\u09be \u09b9\u09af\u09bc \u09a8\u09be___\u0998\u09cb\u09b0\u09be\u09a8 \u09b0\u09be\u0987\u099f___\u09ab\u09be\u0987\u09b2\u09c7\u09b0 \u0986\u0995\u09be\u09b0 \u0997\u09a3\u09a8\u09be, \u098f\u0995\u099f\u09c1 \u0985\u09aa\u09c7\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09c1\u09a8___\u09b6\u09c1\u099f\u09bf\u0982 \u099c\u09a8\u09cd\u09ae:___\u0985\u09b2\u09b8___\u09a1\u09bf\u09b0\u09c7\u0995\u09cd\u099f\u09b0\u09bf\u09b0 \u09ae\u09a7\u09cd\u09af\u09c7 \u09b8\u09c0\u09ae\u09bf\u09a4 \u09aa\u09cd\u09b0\u09ac\u09c7\u09b6\u09be\u09a7\u09bf\u0995\u09be\u09b0___\u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1 \u09b8\u0999\u09cd\u0997\u09a4\u09bf\u09b9\u09c0\u09a8___\u0986\u09aa\u09a8\u09be\u09b0 \u0993\u09af\u09bc\u09cd\u09af\u09be\u09b0\u09b2\u09c7\u09b8 \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09b8\u0982\u09af\u09cb\u0997 \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09c1\u09a8, \u0985\u09a5\u09ac\u09be \u0985\u09a8\u09cd\u09af\u09a6\u09c7\u09b0 \u09b8\u0982\u09af\u09c1\u0995\u09cd\u09a4 \u09b9\u0993\u09af\u09bc\u09be\u09b0 \u099c\u09a8\u09cd\u09af \u098f\u0995\u099f\u09bf \u09b9\u099f\u09b8\u09cd\u09aa\u099f \u09a4\u09c8\u09b0\u09bf \u0995\u09b0\u09c1\u09a8___\u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8___\u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae\u09c7\u09b0 \u09b8\u09c0\u09ae\u09be\u09ac\u09a6\u09cd\u09a7\u09a4\u09be, \u0986\u09aa\u09a8\u09bf \u098f\u0995\u099f\u09bf \u0995\u09be\u09b8\u09cd\u099f\u09ae \u09aa\u09bf \u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0 \u0995\u09b0\u09be \u09b8\u09ae\u09cd\u09ad\u09ac \u09a8\u09af\u09bc___\u0995\u09ae\u09cd\u09aa\u09bf\u0989\u099f\u09be\u09b0 \u09a5\u09c7\u0995\u09c7 FTP \u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0 \u09aa\u09cd\u09b0\u09a4\u09bf\u09b7\u09cd\u09a0\u09be\u09b0 \u09ae\u09be\u09a7\u09cd\u09af\u09ae\u09c7 \u09a1\u09bf\u09ad\u09be\u0987\u09b8 \u09aa\u09b0\u09bf\u099a\u09be\u09b2\u09a8\u09be \u0995\u09b0\u09be___\u09aa\u09cd\u09b2\u09c7\u09b2\u09bf\u09b8\u09cd\u099f \u098f\u0995\u0987 \u09a8\u09be\u09ae \u0987\u09a4\u09bf\u09ae\u09a7\u09cd\u09af\u09c7\u0987 \u09ac\u09bf\u09a6\u09cd\u09af\u09ae\u09be\u09a8___\u09b6\u09c7\u09af\u09bc\u09be\u09b0___ ___\u09ab\u09be\u0987\u09b2 \u09ab\u09bf\u09b0\u09bf\u09af\u09bc\u09c7 \u0986\u09a8\u09c1\u09a8___\u0986\u09a1\u09bc\u09be\u09b2 \u09a4\u09be\u09b2\u09bf\u0995\u09be \u09b8\u09be\u09ab \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u0993\u09af\u09bc\u09be\u09b2\u09aa\u09c7\u09aa\u09be\u09b0 \u09b8\u09c7\u099f \u0995\u09b0\u09c1\u09a8___\u0985\u09a1\u09bf\u0993___\u09b6\u0982\u09b8\u09be\u09aa\u09a4\u09cd\u09b0 \u098f\u0996\u09a8\u0993 \u09ac\u09b9\u09be\u09b2,___\u09b8\u09ab\u09b2\u09ad\u09be\u09ac\u09c7 \u09ae\u09cb\u099b\u09be!___\u09b8\u09cd\u09ac\u09af\u09bc\u0982\u0995\u09cd\u09b0\u09bf\u09af\u09bc \u09b8\u09a8\u09be\u0995\u09cd\u09a4\u0995\u09b0\u09a3 \u09a8\u09bf\u09b7\u09cd\u0995\u09cd\u09b0\u09bf\u09af\u09bc \u0995\u09b0\u09c1\u09a8___ ___\u09b8\u0982\u09b0\u0995\u09cd\u09b7\u09a3 \u09b9\u09bf\u09b8\u09be\u09ac\u09c7___\u09a4\u09c8\u09b0\u09bf___\u09b2\u0997\u0987\u09a8 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5 \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u09ac\u09c7\u09a4\u09be\u09b0 \u09aa\u09bf \u098f\u0987 \u09a7\u09b0\u09a8\u09c7\u09b0 \u09b8\u09ae\u09b0\u09cd\u09a5\u09a8 \u0995\u09b0\u09c7 \u09a8\u09be___\u09ab\u09c7\u09ad\u09be\u09b0\u09bf\u099f\u09c7 \u09af\u09cb\u0997 \u0995\u09b0\u09c1\u09a8___root \u09a1\u09bf\u09b0\u09c7\u0995\u09cd\u099f\u09b0\u09bf___\u09a1\u09cb\u09ae\u09c7\u0987\u09a8 \u09a8\u09be\u09ae___\u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09a4\u09cd\u09b0\u09c1\u099f\u09bf, \u09aa\u09b0\u09c7 \u0986\u09ac\u09be\u09b0 \u099a\u09c7\u09b7\u09cd\u099f\u09be \u0995\u09b0\u09c1\u09a8___\u0995\u09cb\u09a8 \u09ab\u09be\u0987\u09b2 \u09ae\u09c1\u099b\u09c7 \u09a6\u09bf\u09a8___\u09ac\u09bf\u099c\u09cd\u099e\u09aa\u09cd\u09a4\u09bf \u09b0\u09bf\u0982\u099f\u09cb\u09a8 \u09b9\u09bf\u09b8\u09c7\u09ac\u09c7 \u09b8\u09c7\u099f \u0995\u09b0\u09c1\u09a8___unloaded \u0995\u09b0\u09be \u09b9\u099a\u09cd\u099b\u09c7___\u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995___\u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1%s \u0997\u09c1\u09b2\u09bf \u09b8\u09ab\u09b2___\u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0\u0995\u09be\u09b0\u09c0 \u09a8\u09be\u09ae \u0996\u09be\u09b2\u09bf \u09b9\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7 \u09a8\u09be!___\u09af\u09a6\u09bf \u0986\u09aa\u09a8\u09bf \u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1 \u0995\u09b0\u09c1\u09a8 \u09b8\u09ae\u09cd\u09aa\u09c2\u09b0\u09cd\u09a3 \u0985\u09ac\u09bf\u09b0\u09a4 \u0995\u09b0\u09a4\u09c7 \u099a\u09be\u09a8___\u09a1\u09c7\u09b2\u09bf\u09ad\u09be\u09b0\u09bf \u09ac\u09cd\u09af\u09b0\u09cd\u09a5\u09a4\u09be:, \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5\u09a4\u09be, \u0985\u09a5\u09ac\u09be \u09aa\u09cd\u09b0\u09be\u09aa\u0995 \u09ac\u09be\u09a4\u09bf\u09b2 \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u09a6\u09c7\u0996\u09be\u09a8 \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u09ac\u09be\u099f\u09a8___\u0989\u09a8\u09cd\u09a8\u09a4 \u09ac\u09bf\u0995\u09b2\u09cd\u09aa___\u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995___\u09aa\u09cd\u09b0\u09b8\u09cd\u09a5\u09be\u09a8\u09c7\u09b0 \u0987\u09a4\u09bf\u09b9\u09be\u09b8 \u09b8\u09be\u09ab \u0995\u09b0\u09c1\u09a8___\u0985\u09a8\u09c1\u09a8\u09cd\u09a8\u09a4___\u09b0\u09bf\u0982\u099f\u09cb\u09a8 \u09b9\u09bf\u09b8\u09be\u09ac\u09c7 \u09b8\u09c7\u099f \u0995\u09b0\u09a4\u09c7 \u0985\u0995\u09cd\u09b7\u09ae, \u0986\u09aa\u09a8\u09bf \u098f\u0995\u099f\u09bf \u09b8\u09cd\u09a5\u09be\u09a8\u09c0\u09af\u09bc \u09af\u09be\u0993 \u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1 \u0995\u09b0\u09a4\u09c7 \u09b9\u09ac\u09c7___\u0986\u09ae\u09be\u09b0 \u099b\u09ac\u09bf ___\u0986\u09ac\u09c7\u09a6\u09a8\u09c7\u09b0 \u09b8\u0999\u09cd\u0997\u09c7 \u09af\u09c1\u0995\u09cd\u09a4 \u09aa\u09cd\u09b0\u09a6\u09b0\u09cd\u09b6\u09a8 \u0986\u0987\u0995\u09a8___\u09ae\u09cb\u09a1___\u0997\u09be\u09af\u09bc\u0995___\u09b0\u09bf\u09ae\u09cb\u099f \u09ae\u09cd\u09af\u09be\u09a8\u09c7\u099c\u09ae\u09c7\u09a8\u09cd\u099f___\u09b8\u09c7\u099f \u0995\u09b0\u09c1\u09a8 \u0985\u0999\u09cd\u0997\u09ad\u0999\u09cd\u0997\u09bf \u0985\u09ac\u09b8\u09cd\u09a5\u09be\u09a8___\u09a8\u09a4\u09c1\u09a8___\u09a8\u09bf\u099c\u09b8\u09cd\u09ac\u0995\u09b0\u09a3___\u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1 \u09aa\u09b0\u09bf\u09ac\u09b0\u09cd\u09a4\u09a8 \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7___%s-\u09aa\u09cd\u09b2\u09be\u0997 \u0987\u09a8 \u09aa\u09cd\u09b2\u09be\u0997 \u09aa\u09be\u09a5 \u09b2\u09c7\u0996\u09be \u09af\u09be\u09ac\u09c7 \u09a8\u09be \u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1 \u0995\u09b0\u09a4\u09c7 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5___\u0986\u09b0\u09cd\u0995\u09be\u0987\u09ad \u09a8\u09bf\u09b0\u09cd\u09ae\u09be\u09a3 \u0995\u09b0\u09c1\u09a8___\u09aa\u09cd\u09b2\u09c7\u09af\u09bc\u09be\u09b0___\u098f\u0987 \u0995\u09be\u099c\u09c7\u09b0 \u09ae\u09c1\u099b\u09c7 \u09a8\u09bf\u09b6\u09cd\u099a\u09bf\u09a4?___\u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8 \u0985\u09ac\u09b8\u09cd\u09a5\u09be\u09a8___\u09ac\u09a8\u09cd\u09a7___\u09aa\u09be\u09a0\u09be\u09a8\u09cb___\u09a1\u09cb\u09ae\u09c7\u09a8 \u09a8\u09be\u09ae___\u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1:___\u0995\u09cd\u09af\u09be\u09b6\u09c7 \u09a4\u09a5\u09cd\u09af \u09aa\u09c1\u09a8\u09b0\u09c1\u09a6\u09cd\u09a7\u09be\u09b0 \u0995\u09b0\u09be \u09b9\u099a\u09cd\u099b\u09c7___\u099f\u09cd\u09b0\u09be\u09af\u09bc\u09be\u09b2 \u09b8\u0982\u09b8\u09cd\u0995\u09b0\u09a3\u09c7\u09b0 \u09ae\u09c7\u09af\u09bc\u09be\u09a6 \u09b6\u09c7\u09b7 \u09b9\u09af\u09bc\u09c7\u099b\u09c7, \u09a8\u09a4\u09c1\u09a8 \u09b8\u0982\u09b8\u09cd\u0995\u09b0\u09a3 \u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1 \u0995\u09b0\u09c1\u09a8___\u09ab\u09c7\u09b8\u09ac\u09c1\u0995 \u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8\u09c7 \u09ae\u09c1\u099b\u09c7 \u09ab\u09be\u0982\u09b6\u09a8 \u09b8\u09ae\u09b0\u09cd\u09a5\u09a8 \u0995\u09b0\u09c7 \u09a8\u09be___\u0985\u09ac\u09b6\u09bf\u09b7\u09cd\u099f:___\u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09aa\u09be\u09a5 \u09aa\u09be\u0993\u09af\u09bc\u09be \u09ac\u09be \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09b8\u09ae\u09af\u09bc\u09b8\u09c0\u09ae\u09be\u09b0 \u099b\u09bf\u09b2 \u09a8\u09be, \u0986\u09ac\u09be\u09b0 \u099a\u09c7\u09b7\u09cd\u099f\u09be \u0995\u09b0\u09c1\u09a8___\u0985\u09cd\u09af\u09be\u09b2\u09ac\u09be\u09ae\u09c7\u09b0 \u09a8\u09be\u09ae \u0996\u09be\u09b2\u09bf \u09b9\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7 \u09a8\u09be___\u098f\u0995\u09be\u09a7\u09bf\u0995 \u0985\u09aa\u09be\u09b0\u09c7\u09b6\u09a8 \u09b8\u09ae\u09cd\u09aa\u09a8\u09cd\u09a8 \u09b9\u09af\u09bc___\u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1\u09c7\u09b0 \u09a0\u09bf\u0995\u09be\u09a8\u09be \u09b2\u09bf\u0996\u09c1\u09a8___\u0997\u09be\u09a8 \u09af\u09cb\u0997 \u0995\u09b0\u09a4\u09c7 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5, \u09aa\u09cd\u09b2\u09c7\u09b2\u09bf\u09b8\u09cd\u099f \u09aa\u09b0\u09bf\u09ac\u09b0\u09cd\u09a4\u09a8 \u0995\u09b0\u09be \u09af\u09be\u09ac\u09c7 \u09a8\u09be___%s \u09aa\u09be\u0993\u09af\u09bc\u09be___\u09ab\u09be\u0987\u09b2 \u09a8\u09ae\u09cd\u09ac\u09b0___\u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1 \u09a8\u09bf\u09b6\u09cd\u099a\u09bf\u09a4 \u0995\u09b0\u09c1\u09a8:___\u09b6\u09bf\u09b0\u09cb\u09a8\u09be\u09ae___\u09ac\u09cd\u09af\u09be\u099a \u09aa\u09c1\u09a8\u0983\u09a8\u09be\u09ae\u0995\u09b0\u09a3___ ___\u09a8\u09bf\u099a\u09c7 \u09ac\u09a8\u09cd\u09a7 \u0995\u09b0\u09be\u09b0 \u09aa\u09cd\u09b0\u09a3\u09be\u09b2\u09c0 ...___. \u0995\u09ae\u09cd\u09aa\u09cd\u09b0\u09c7\u09b8 {0} {1}___\u09ab\u09be\u0987\u09b2 \u09aa\u09be\u09a0\u09be\u09a8\u09cb \u09b9\u099a\u09cd\u099b\u09c7___\u0985\u09aa\u09be\u09b0\u09c7\u09b6\u09a8:%1$s___\u09ad\u09bf\u09a1\u09bf\u0993___\u09a5\u09c7\u0995\u09c7:___\u0985\u09b8\u09cd\u09ac\u09be\u09ad\u09be\u09ac\u09bf\u0995!___\u09a5\u09c7\u0995\u09c7 \u0995\u09aa\u09bf___\u098f\u0996\u09be\u09a8\u09c7 \u0986\u09aa\u09a8\u09be\u09b0 \u09ae\u09a8\u09cd\u09a4\u09ac\u09cd\u09af \u09b2\u09bf\u0996\u09c1\u09a8___\u0986\u09aa\u09a8\u09bf \u0995\u09bf \u09a8\u09bf\u09b6\u09cd\u099a\u09bf\u09a4 \u0986\u09aa\u09a8\u09bf \u0995\u09bf \u098f\u0997\u09bf\u09af\u09bc\u09c7 \u09af\u09c7\u09a4\u09c7 \u099a\u09be\u09a8?___\u09ac\u09bf\u09b6\u09cd\u09b2\u09c7\u09b7\u09a3 \u09b9\u099a\u09cd\u099b\u09c7,___\u0986\u09aa\u09a8\u09bf \u09a4\u09c8\u09b0\u09bf \u0995\u09b0\u09a4\u09c7 \u099a\u09be\u09a8 \u0995\u09bf\u09a8\u09be, \u0985\u09a8\u09c1\u09b0\u09cb\u09a7 \u09aa\u09a5 \u0996\u09c1\u0981\u099c\u09c7 \u09aa\u09be\u099a\u09cd\u099b\u09c7\u09a8 \u09a8\u09be?___\u0995\u09cb\u09a8\u099f\u09bf \u09a8\u09be___\u0993\u09aa\u09c7\u09a8 \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09aa\u09cd\u09b0\u09cb\u099f\u09c7\u0995\u09b6\u09a8___\u09b8\u0982\u09af\u09cb\u0997 \u09ac\u09a8\u09cd\u09a7___\u0989\u09aa\u09b0___\u09ab\u09be\u0987\u09b2 \u098f\u09b8\u09a1\u09bf \u0995\u09be\u09b0\u09cd\u09a1 \n \u0989\u09aa\u09b0 \u0995\u09cd\u09af\u09be\u09b6\u09c7 \u098f\u09ac\u0982 \u09b6\u09c1\u09a7\u09c1\u09ae\u09be\u09a4\u09cd\u09b0 \u09aa\u09be\u09a0\u09af\u09cb\u0997\u09cd\u09af \u0996\u09cb\u09b2\u09be \u09b9\u09ac\u09c7___\u09af\u09be\u0993 \u0996\u09c7\u09b2\u09c1\u09a8___\u0997\u09cb\u09aa\u09a8\u09c0\u09af\u09bc\u09a4\u09be___\u09ac\u09bf\u09b0\u09a4\u09bf \u09a6\u09c7\u0993\u09af\u09bc\u09be___\u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1 \u09ae\u09a8\u09c7 \u09b0\u09be\u0996\u09c1\u09a8___\u099a\u09b2\u09ae\u09be\u09a8___\u09aa\u09bf\u099b\u09a8\u09c7___\u099f\u09c1\u09b2 \u09b8\u09c7\u099f___\u09a6\u09c7\u0996\u09be\u09a8 \u0989\u0987\u09a8\u09cd\u09a1\u09cb\u09b0 \u09ac\u09be\u099f\u09a8___\u09a1\u09bf\u09ad\u09be\u0987\u09b8 \u09b8\u0982\u09af\u09c1\u0995\u09cd\u09a4 \u09b9\u0993\u09af\u09bc\u09be\u09b0 \u09aa\u09cb\u09b0\u09cd\u099f\u09c7\u09ac\u09b2 \u09b9\u099f\u09b8\u09cd\u09aa\u099f \u09a4\u09c8\u09b0\u09bf \u0995\u09b0\u09be___\u0985\u09a8\u09cd\u09af\u09be\u09a8\u09cd\u09af \u0989\u0987\u09a8\u09cd\u09a1\u09cb\u099c\u09bc \u0995\u09be\u099c \u09ac\u09a8\u09cd\u09a7 \u0995\u09b0\u09be\u09b0 \u099c\u09a8\u09cd\u09af Confirm?___\u09ac\u09c7\u09a4\u09be\u09b0 \u09b8\u0982\u09af\u09cb\u0997 \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09c1\u09a8!___\u0985\u09cd\u09af\u09be\u0995\u09cd\u09b8\u09c7\u09b8:___\u0985\u09a8\u09c1\u09b8\u09a8\u09cd\u09a7\u09be\u09a8 \u0997\u09be\u09af\u09bc\u0995___\u098f\u0995\u099f\u09bf \u09ac\u09cd\u09b2\u09c1\u099f\u09c1\u09a5 \u09b0\u09bf\u09ae\u09cb\u099f \u09ab\u09be\u0987\u09b2 \u09b6\u09c7\u09af\u09bc\u09be\u09b0 \u0995\u09b0\u09a4\u09c7 \u09aa\u09be\u09b0\u09ac\u09c7\u09a8 \u09a8\u09be___\u09ac\u09cd\u09af\u09be\u0995\u0986\u09aa \u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8___\u09a1\u09bf\u09ad\u09be\u0987\u09b8 \u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0 \u0995\u09b0\u09c1\u09a8 \u098f\u09b2\u09cb\u09ae\u09c7\u09b2\u09cb\u09ad\u09be\u09ac\u09c7 \u099c\u09c7\u09a8\u09be\u09b0\u09c7\u099f \u09b9\u099f \u09b8\u09cd\u09aa\u099f___\u098f\u09b0 \u0985\u09a7\u09c0\u09a8\u09c7___\u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1 \u0995\u09b0\u09be \u09ab\u09be\u0987\u09b2 \u09ae\u09c1\u099b\u09c7 \u09ab\u09c7\u09b2\u09be \u09b9\u09ac\u09c7___\u09b8\u09ae\u09be\u09aa\u09cd\u09a4___(\u09ab\u09be\u0987\u09b2 \u09ae\u09c1\u099b\u09c7 \u09ab\u09c7\u09b2\u09be\u09b0 \u09af\u0996\u09a8 \u09aa\u09cd\u09b0\u09a5\u09ae \u09b0\u09bf\u09b8\u09be\u0987\u0995\u09c7\u09b2 \u09ac\u09bf\u09a8 \u09ae\u09a7\u09cd\u09af\u09c7 \u09b8\u09cd\u09a5\u09be\u09aa\u09a8) \u09b0\u09bf\u09b8\u09be\u0987\u0995\u09c7\u09b2 \u09ac\u09bf\u09a8 \u09ac\u09c8\u09b6\u09bf\u09b7\u09cd\u099f\u09cd\u09af \u0996\u09cb\u09b2\u09be\u09b0 \u099c\u09a8\u09cd\u09af \u09a0\u09bf\u0995 \u0986\u099b\u09c7?___\u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1 \u09ab\u09be\u0987\u09b2 \u0985\u09cd\u09af\u09be\u0995\u09cd\u09b8\u09c7\u09b8 \u0995\u09b0\u09a4\u09c7 \u09aa\u09cd\u09b0\u09af\u09bc\u09cb\u099c\u09a8 \u09ac\u09cb\u09a7 \u0995\u09b0\u09be \u09b9\u09af\u09bc___\u09aa\u09cd\u09b0\u0995\u09be\u09b0:___\u0997\u09c7\u09ae \u098f\u09ab\u099f\u09bf\u09aa\u09bf___\u09b8\u09be\u09ab \u0995\u09cd\u09af\u09be\u09b6\u09c7 \u09a4\u09a5\u09cd\u09af \u09b8\u09be\u09ab\u09b2\u09cd\u09af___\u09aa\u09a5 \u0996\u09cb\u09b2\u09be \u09a1\u09bf\u09ab\u09b2\u09cd\u099f\u09b0\u09c2\u09aa\u09c7 \u09b8\u09be\u09ab \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u09ac\u09c7\u09a8\u09be\u09ae\u09c0 \u0986\u09ae\u09be\u09b0 \u09aa\u099b\u09a8\u09cd\u09a6 \u09ac\u09b2\u09c1\u09a8___\u09aa\u09cd\u09b2\u09c7\u09b2\u09bf\u09b8\u09cd\u099f___\u09a6\u09c7\u0996\u09be\u09a8 \u09a1\u09bf\u09b8\u09cd\u0995\u09c7\u09b0 \u09b8\u09cd\u09a5\u09be\u09a8___\u09aa\u09cd\u09b0\u09ae\u09cd\u09aa\u099f___\u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1 \u09aa\u09a5___\u098f\u09a8\u0995\u09cd\u09b0\u09bf\u09aa\u09cd\u099f (HTTPS)___\u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1 \u09b2\u09bf\u0996\u09c1\u09a8___\u09b6\u09b0\u09cd\u099f\u0995\u09be\u099f___. \u0985\u09aa\u09be\u09b0\u09c7\u09b6\u09a8 \u09ab\u09be\u0987\u09b2 \u0987\u09a4\u09bf\u09ae\u09a7\u09cd\u09af\u09c7\u0987 \u09ac\u09bf\u09a6\u09cd\u09af\u09ae\u09be\u09a8 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5 \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u098f\u09ac\u0982 \u0986\u09aa\u09a8\u09bf \u09ae\u09bf\u09a1\u09bf\u09af\u09bc\u09be%1$s \u0997\u09c1\u09b2\u09bf \u09b6\u09c7\u09af\u09bc\u09be\u09b0 \u0995\u09b0\u09a4\u09c7 \u099a\u09be\u0987___\u09ae\u09a1\u09bf\u0989\u09b2 \u0996\u09c1\u0981\u099c\u09c7 \u09aa\u09be\u0993\u09af\u09bc\u09be \u09af\u09be\u09ac\u09c7 \u09a8\u09be.:? \n ES \u099f\u09be\u09b8\u09cd\u0995 \u09ae\u09cd\u09af\u09be\u09a8\u09c7\u099c\u09be\u09b0 \n \u098f\u099f\u09bf \u098f\u0995\u099f\u09bf \u09ac\u09a7 \u09aa\u09cd\u09b0\u0995\u09cd\u09b0\u09bf\u09af\u09bc\u09be \u0989\u09aa\u09b2\u09ac\u09cd\u09a7 \u0995\u09b0\u09be / \u09aa\u09b0\u09bf\u09b7\u09cd\u0995\u09be\u09b0 \u0995\u09cd\u09af\u09be\u09b6\u09c7 / \u09aa\u09b0\u09bf\u099a\u09be\u09b2\u09a8\u09be \u09aa\u09cd\u09b0\u09be\u09b0\u09ae\u09cd\u09ad\u0995\u09be\u09b2\u09c7 \u0986\u0987\u099f\u09c7\u09ae / \u09b6\u0995\u09cd\u09a4\u09bf \u09b8\u099e\u09cd\u099a\u09af\u09bc \u09ae\u09cb\u09a1 / \u09a1\u09c7\u09b8\u09cd\u0995\u099f\u09aa \u0997\u09cd\u09af\u09be\u099c\u09c7\u099f \u09ab\u09be\u0982\u09b6\u09a8 \n \n \u0987\u09a8\u09b8\u09cd\u099f\u09b2\u09c7\u09b6\u09a8 \u0985\u09ac\u09bf\u09b2\u09ae\u09cd\u09ac\u09c7 \u0995\u09bf\u09a8\u09be___. \u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0\u09c7\u09b0 \u09a8\u09a4\u09c1\u09a8 \u09aa\u09cb\u09b0\u09cd\u099f \u09aa\u09c1\u09a8\u09b0\u09be\u09af\u09bc \u09ac\u09c1\u099f \u0995\u09b0\u09be\u09b0 \u09aa\u09b0\u09c7___\u09a6\u09c2\u09b0\u09ac\u09b0\u09cd\u09a4\u09c0 \u0985\u099f\u09cb \u09b8\u09bf\u0999\u09cd\u0995 \u09b8\u0995\u09cd\u09b7\u09ae \u0995\u09b0\u09c1\u09a8___\u0986\u09aa\u09a8\u09bf \u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8 \u0995\u09be\u099c\u09c7\u09b0 \u09ac\u09be\u09a4\u09bf\u09b2 \u0995\u09b0\u09a4\u09c7 \u099a\u09be\u09a8?___: \u09b0\u09bf\u09b8\u09be\u0987\u0995\u09c7\u09b2 \u09ac\u09bf\u09a8 \u09ae\u09a7\u09cd\u09af\u09c7 \u09a6\u09be\u09af\u09bc\u09c7\u09b0 \u0995\u09be\u099c \u099a\u09be\u09b2\u09bf\u09af\u09bc\u09c7 \u09af\u09c7\u09a4\u09c7 \u09aa\u09cd\u09b0\u09af\u09bc\u09cb\u099c\u09a8 \u09ae\u09c1\u099b\u09a4\u09c7 \u0985\u09b8\u09ae\u09b0\u09cd\u09a5?___\u098f\u0995\u09be\u09a7\u09bf\u0995 \u09a6\u09c2\u09b0\u09ac\u09b0\u09cd\u09a4\u09c0 \u09ab\u09be\u0987\u09b2 \u09b6\u09c7\u09af\u09bc\u09be\u09b0 \u0995\u09b0\u09be \u09af\u09be\u09ac\u09c7 \u09a8\u09be___\u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1 \u09b2\u09bf\u0996\u09c1\u09a8 \u09aa\u09cd\u09b0\u09af\u09bc\u09cb\u099c\u09a8 \u09b0\u09bf\u09b8\u09cb\u09b0\u09cd\u09b8 \u0985\u09cd\u09af\u09be\u0995\u09cd\u09b8\u09c7\u09b8 \u09b8\u09c7\u099f \u0995\u09b0\u09c1\u09a8___\u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0\u0995\u09be\u09b0\u09c0\u09b0 \u09a8\u09be\u09ae___\u09ac\u09be\u099b\u09be\u0987___\u0985\u09ac\u09b8\u09cd\u09a5\u09be\u09a8___\u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8 \u09b8\u0982\u09b8\u09cd\u0995\u09b0\u09a3\u09c7 \u0986\u09aa\u09a1\u09c7\u099f___\u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09b8\u0982\u09af\u09cb\u0997___\u0985\u09cd\u09af\u09be\u0995\u09b8\u09c7\u09b8 \u099f\u09be\u0987\u09ae:___\u0985\u09ac\u09bf\u09b2\u09ae\u09cd\u09ac\u09c7 \u09b8\u09a8\u09be\u0995\u09cd\u09a4___\u09a1\u0995\u09c1\u09ae\u09c7\u09a8\u09cd\u099f \u098f\u0995\u09cd\u09b8\u099f\u09c7\u09a8\u09b6\u09a8 \u0996\u09be\u09b2\u09bf \u09b9\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7 \u09a8\u09be___\u099f\u09c1\u09b2\u09ac\u09be\u09b0 \u09ac\u09be\u099f\u09a8 \u09aa\u09cd\u09b0\u09a6\u09b0\u09cd\u09b6\u09a8 \u0989\u0987\u09a8\u09cd\u09a1\u09cb\u09a4\u09c7___\u09b8\u09be\u09ab \u09a1\u09bf\u09ab\u09b2\u09cd\u099f \u0996\u09cb\u09b2\u09be \u09ae\u09cb\u09a1___\u0993\u09b2\u09cd\u09a1 \u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1:___\u09ac\u09cd\u09af\u09be\u0995\u0986\u09aa \u09a1\u09bf\u09b0\u09c7\u0995\u09cd\u099f\u09b0\u09bf:___\u0986\u09aa\u09a8\u09bf \u0995\u09ae\u09cd\u09aa\u09bf\u0989\u099f\u09be\u09b0\u09c7 \u09ac\u09be\u0981\u0995 \u09aa\u09b0\u09c7 \u09a1\u09bf\u09ad\u09be\u0987\u09b8\u09c7\u09b0 \u09ab\u09be\u0987\u09b2 \u09aa\u09b0\u09bf\u099a\u09be\u09b2\u09a8\u09be \u0995\u09b0\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7\u09a8___\u09a6\u09c1\u0983\u0996\u09bf\u09a4, \u0985\u09aa\u09be\u09b0\u09c7\u09b6\u09a8 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5___\u09ad\u09be\u09b7\u09be \u09b8\u09c7\u099f\u09bf\u0982\u09b8___\u09ab\u09cb\u09b2\u09cd\u09a1\u09be\u09b0 \'%s\'\u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0 \u09a4\u09be\u09b2\u09bf\u0995\u09be\u09af\u09bc \u09af\u09c1\u0995\u09cd\u09a4 \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u09ae\u09c1\u099b\u09c7 \u09ab\u09c7\u09b2\u09be \u09ab\u09be\u0987\u09b2 \u09aa\u09c1\u09a8\u09b0\u09c1\u09a6\u09cd\u09a7\u09be\u09b0 \u0995\u09b0\u09be \u09af\u09be\u09ac\u09c7 \u09a8\u09be \u09aa\u09b0\u09c7___\u09ae\u09c1\u0995\u09cd\u09a4 \u09b8\u09cd\u09a5\u09be\u09a8:%s___\u098f\u0995\u099f\u09bf \u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0 \u09aa\u09be\u09a5 \u0989\u09b2\u09cd\u09b2\u09c7\u0996 \u0995\u09b0\u09c1\u09a8 \u098f\u09ac\u0982 \u09a4\u09be\u09b0\u09aa\u09b0 \u0985\u09a8\u09c1\u09b8\u09a8\u09cd\u09a7\u09be\u09a8 \u0995\u09b0\u09c1\u09a8___\u09a8\u09bf\u09ac\u09a8\u09cd\u09a7\u09c0\u0995\u09b0\u09a3 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5 \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u09aa\u09b0\u09bf\u09a7\u09c7\u09af\u09bc___\u098f\u09b8\u09a1\u09bf \u0995\u09be\u09b0\u09cd\u09a1 \u09b2\u09cb\u09a1 \u0996\u09be\u09b2\u09bf \u09ac\u09be \u09a8\u09be___\u09b8\u0982\u0995\u09cd\u09b7\u09bf\u09aa\u09cd\u09a4\u0995\u09be\u09b0\u09c0___\u09aa\u09c1\u09a8\u09b0\u09c1\u09a6\u09cd\u09a7\u09be\u09b0\u09c7\u09b0___\u09a8\u09bf\u099c\u09c7 \u0995\u09cd\u09af\u09be\u09b6\u09c7 \u09aa\u09b0\u09bf\u09b7\u09cd\u0995\u09be\u09b0___\u09a6\u09c7\u0996\u09c1\u09a8 \u09ac\u09bf\u09ac\u09b0\u09a3___\u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8\u09c7 \u098f\u09a8\u0995\u09cb\u09a1\u09bf\u0982 \u09a1\u09bf\u09ad\u09be\u0987\u09b8 \u09b8\u09ae\u09b0\u09cd\u09a5\u09a8 \u0995\u09b0\u09c7 \u09a8\u09be___\u0986\u09a8\u099c\u09bf\u09aa \u0995\u09b0\u09c7___\u09ad\u09bf\u09a1\u09bf\u0993___\u09aa\u09a6\u0995\u09cd\u09b7\u09c7\u09aa___\u09aa\u09b0\u09cd\u09af\u09be\u09b2\u09cb\u099a\u09a8\u09be___\u09af\u09a6\u09bf \u0986\u09aa\u09a8\u09bf \u0985\u09aa\u09b6\u09a8 \u09a5\u09c7\u0995\u09c7 \u09aa\u09cd\u09b0\u09b8\u09cd\u09a5\u09be\u09a8 \u0995\u09b0\u09be\u09b0 \u09b8\u09ae\u09af\u09bc___ ___%2$d \u0986\u0987\u099f\u09c7\u09ae, \u09ae\u09cb\u099f \u0986\u09af\u09bc\u09a4\u09a8%3$s \u0997\u09c1\u09b2\u09bf \u09b8\u09b9 \u0985\u09a8\u09cd\u09af\u09be\u09a8\u09cd\u09af \u09a8\u09a5\u09bf%1$s \u0997\u09c1\u09b2\u09bf \u09b8\u09ab\u09b2 \u0985\u09ad\u09cd\u09af\u09b0\u09cd\u09a5\u09a8\u09be,___\u09b8\u09ab\u09b2\u09ad\u09be\u09ac\u09c7 \u09aa\u09c7\u09af\u09bc\u09c7\u099b\u09bf%1$s, \u098f\u09b0 \u09ae\u09cb\u099f \u0986\u09af\u09bc\u09a4\u09a8%2$s___\u09aa\u09c1\u09a8\u0983\u09a8\u09be\u09ae\u0995\u09b0\u09a3___\u09aa\u09cd\u09b0\u09c7\u09b8 \u09ae\u09be\u09b2\u09cd\u099f\u09bf\u09aa\u09b2 \u099a\u09af\u09bc\u09c7\u09b8 \u09b0\u09be\u09b7\u09cd\u099f\u09cd\u09b0 \u09b2\u09bf\u0996\u09c1\u09a8,___ \u09b8\u09be\u09a5\u09c7 \u09b8\u0982\u09af\u09cb\u0997 \u09b8\u09cd\u09a5\u09be\u09aa\u09a8\u09c7\u09b0 \u099c\u09a8\u09cd\u09af \u0985\u09aa\u09c7\u0995\u09cd\u09b7\u09be\u09b0\u09a4___\u0985\u09cd\u09af\u09be\u09b2\u09ac\u09be\u09ae___\u09aa\u09bf \u09b8\u0995\u09cd\u09b7\u09ae \u0995\u09b0\u09c7\u099b\u09c7\u09a8___GID \u09b8\u09c7\u099f \u0995\u09b0\u09c1\u09a8___\u09a6\u09cd\u09b0\u09c1\u09a4 \u099f\u09c7\u09a8\u09c7 \u09b2\u09ae\u09cd\u09ac\u09be \u09a4\u09be\u09b2\u09bf\u0995\u09be \u09b8\u09c1\u09ac\u09bf\u09a7\u09be\u09b0\u09cd\u09a5\u09c7 \u098f\u0995\u099f\u09bf \u09ac\u09a1\u09bc \u09a1\u09cd\u09b0\u09cd\u09af\u09be\u0997 \u09ab\u09be\u09b2\u09be \u09a6\u09c7\u0996\u09be\u09a8___\u09ae\u09cd\u09af\u09be\u09a8\u09c7\u099c\u09ae\u09c7\u09a8\u09cd\u099f \u09b2\u09c1\u0995\u09be\u09a8\u09cb \u09a4\u09be\u09b2\u09bf\u0995\u09be___\u0985\u09cd\u09af\u09be\u09a8\u09a1\u09cd\u09b0\u0987\u09a1 \u09ac\u09be\u099c\u09be\u09b0\u09c7 \u0996\u09c1\u0981\u099c\u09c7 \u09aa\u09be\u0993\u09af\u09bc\u09be \u09af\u09be\u09ac\u09c7 \u09a8\u09be___\u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8 \u09a1\u09bf\u09b0\u09c7\u0995\u09cd\u099f\u09b0\u09bf:___\u0985\u09ac\u09c8\u09a7 \u09aa\u09a5___\u09ab\u09be\u0987\u09b2 \u099a\u09c7\u0995\u09b8\u09be\u09ae___\u0995\u09cb\u09a8 \u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1\u09c7\u09b0 \u099f\u09be\u09b8\u09cd\u0995 \u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8\u09c7 \u0986\u099b\u09c7___\u09b2\u09cd\u09af\u09be\u09a8___ES \u099a\u09bf\u09a4\u09cd\u09b0 \u09ac\u09cd\u09b0\u09be\u0989\u099c\u09be\u09b0"
+    const-string v2, "\u2116___\u0416\u0435\u0441\u0442\u043e\u0432\u0435 \u0438\u0437\u043a\u043b\u044e\u0447\u0435\u043d\u0438___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u0438\u0437\u0442\u0435\u0433\u043b\u044f\u043d\u0435 \u043d\u0430 \u0434\u043e\u0431\u0430\u0432\u043a\u0430\u0442\u0430 %s___\u0422\u0435\u043c\u0438___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u0430 \u043e\u043f\u0435\u0440\u0430\u0446\u0438\u044f! \u041c\u043e\u043b\u044f, \u0438\u0437\u043f\u043e\u043b\u0437\u0432\u0430\u0439\u0442\u0435 \u0434\u0440\u0443\u0433\u043e \u0438\u043c\u0435___\u0422\u0438\u043f\u044a\u0442 \u043d\u0430 \u0444\u0430\u0439\u043b\u0430 {0} \u043d\u0435 \u0441\u0435 \u043f\u043e\u0434\u0434\u044a\u0440\u0436\u0430!___%s \u0437\u0430\u0434\u0430\u0447\u0438 \u0441\u0430 \u0437\u0430\u0432\u044a\u0440\u0448\u0435\u043d\u0438.___\u0418\u0437\u0438\u0441\u043a\u0432\u0430 \u043f\u0430\u0440\u043e\u043b\u0430 \u0437\u0430 \u0437\u0430\u0449\u0438\u0442\u0430 \u043d\u0430 \u0432\u0430\u0448\u0438\u0442\u0435 \u043c\u0440\u0435\u0436\u043e\u0432\u0438 \u0440\u0435\u0441\u0443\u0440\u0441\u0438___\u041f\u043e\u043a\u0430\u0437\u0432\u0430\u043d\u0435 \u043d\u0430 \u0431\u0443\u0442\u043e\u043d\u0430 \u201e\u041f\u0440\u043e\u0437\u043e\u0440\u0446\u0438\u201c \u0432 \u043b\u0435\u043d\u0442\u0430\u0442\u0430 \u0441 \u0438\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u0438___\u0422\u044a\u0440\u0441\u0435\u043d\u0435 \u0432\u044a\u0432 \u0432\u0438\u0434\u0435\u043e___\u0418\u043c\u0435\u0442\u043e \u043d\u0430 \u0434\u043e\u043c\u0435\u0439\u043d\u0430, \u043c\u043e\u0436\u0435 \u0434\u0430 \u0435 \u043f\u0440\u0430\u0437\u043d\u043e___\u041f\u0440\u043e\u0432\u0435\u0440\u0435\u0442\u0435 \u0431\u0435\u0437\u0436\u0438\u0447\u043d\u0430\u0442\u0430 \u0432\u0440\u044a\u0437\u043a\u0430!___\u0421\u043f\u0435\u0446\u0438\u0430\u043b\u043d\u0438 \u0431\u043b\u0430\u0433\u043e\u0434\u0430\u0440\u043d\u043e\u0441\u0442\u0438 \u043d\u0430 \u043f\u0440\u0435\u0432\u043e\u0434\u0430\u0447\u0438\u0442\u0435___\u0422\u0440\u044f\u0431\u0432\u0430 \u0434\u0430 \u0430\u043a\u0442\u0443\u0430\u043b\u0438\u0437\u0438\u0440\u0430\u0442\u0435 \u0434\u043e\u0431\u0430\u0432\u043a\u0430\u0442\u0430 %s, \u0438\u0441\u043a\u0430\u0442\u0435 \u043b\u0438 \u0434\u0430 \u044f \u0430\u043a\u0442\u0443\u0430\u043b\u0438\u0437\u0438\u0440\u0430\u0442\u0435?___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u043f\u0443\u0431\u043b\u0438\u043a\u0443\u0432\u0430\u043d\u0435 \u043d\u0430 \u043a\u043e\u043c\u0435\u043d\u0442\u0430\u0440___\u0422\u043e\u0437\u0438 \u0436\u0435\u0441\u0442 \u0435 \u0438\u0437\u043f\u043e\u043b\u0437\u0432\u0430\u043d, \u043c\u043e\u043b\u044f \u043e\u043f\u0438\u0442\u0430\u0439\u0442\u0435 \u0441 \u0434\u0440\u0443\u0433___\u041f\u043e\u0442\u0432\u044a\u0440\u0436\u0434\u0430\u0432\u0430\u043d\u0435...___\u0410\u043d\u0430\u043b\u0438\u0437\u0430\u0442\u043e\u0440 \u043d\u0430 SD \u043a\u0430\u0440\u0442\u0430___ES \u043c\u0435\u043d\u0438\u0436\u0434\u044a\u0440 \u043d\u0430 \u043f\u0440\u0430\u0432\u0430___\u041c\u043e\u0436\u0435 \u0434\u0430 \u043f\u0438\u0448\u0435\u0442\u0435 \u0432 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u0438\u0442\u0435 \u0444\u0430\u0439\u043b\u043e\u0432\u0435___\u041f\u0430\u043f\u043a\u0430___\u0410\u043a\u0442\u0443\u0430\u043b\u0438\u0437\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u0434\u043e\u0431\u0430\u0432\u043a\u0430\u0442\u0430 %s___\u041e\u043f\u0446\u0438\u0438 \u0437\u0430 \u0438\u0437\u0445\u043e\u0434___\u0412\u0435\u0440\u0441\u0438\u044f___\u041e\u0449\u0435___\u0417\u0430\u0440\u0435\u0436\u0434\u0430\u043d\u0435...___\u0424\u0430\u0439\u043b\u044a\u0442 \u0435 \u0438\u0437\u0432\u044a\u043d \u0432\u044a\u0442\u0440\u0435\u0448\u043d\u0430\u0442\u0430 \u043f\u0430\u043c\u0435\u0442 \u0438 \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u043f\u0440\u0435\u043c\u0435\u0441\u0442\u0435\u043d \u0432 \u043a\u043e\u0448\u0447\u0435\u0442\u043e, \u0441\u043b\u0435\u0434\u043e\u0432\u0430\u0442\u0435\u043b\u043d\u043e \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u0432\u044a\u0437\u0441\u0442\u0430\u043d\u043e\u0432\u0435\u043d___ ___\u0421\u044a\u0440\u0432\u044a\u0440___\u0434\u0435\u043a\u0440\u0438\u043f\u0442\u0438\u0440\u0430\u043d\u0435...___\u0418\u0437\u043f\u043e\u043b\u0437\u0432\u0430\u0439 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u0438\u0442\u0435 \u043c\u0440\u0435\u0436\u043e\u0432\u0438 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438___\u041f\u0440\u043e\u0432\u0435\u0440\u0438 \u0441\u0435\u0433\u0430___\u0418\u0437\u043b\u0438\u0437\u0430\u043d\u0435___\u0418\u0437\u043f\u0440\u0430\u0449\u0430\u043d\u0435...___\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u043d\u043e (\u0434\u0435)\u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 apk___\u041d\u0410\u0421\u0422\u0420\u041e\u0419\u041a\u0418 \u041d\u0410 \u0421\u0418\u0413\u0423\u0420\u041d\u041e\u0421\u0422\u0422\u0410___\u041f\u043e\u0432\u0442\u043e\u0440\u0438___\u041c\u043e\u0434\u0438\u0444\u0438\u0446\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u0444\u0430\u0439\u043b Hosts___\u0417\u0430\u0434\u0430\u0439 GID___\u041c\u043e\u043b\u044f, \u0438\u0437\u0447\u0430\u043a\u0430\u0439\u0442\u0435, \u0434\u043e\u043a\u0430\u0442\u043e \u0441\u0435 \u0437\u0430\u0440\u0435\u0434\u0438 \u0444\u0430\u0439\u043b\u044a\u0442___\u041d\u0410\u0421\u0422\u0420\u041e\u0419\u041a\u0418 \u041d\u0410 \u0418\u041d\u0421\u0422\u0420\u0423\u041c\u0415\u041d\u0422\u0418\u0422\u0415___FTP \u0441\u044a\u0440\u0432\u044a\u0440___\u041e\u0442\u0445\u0432\u044a\u0440\u043b\u0438___\u041b\u0438\u043d\u0435\u0435\u043d \u0442\u0435\u0440\u043c\u0438\u043d\u0430\u0442\u043e\u0440___\u0421\u0442\u0430\u0440\u0430 \u043f\u0430\u0440\u043e\u043b\u0430:___\u0417\u0430\u043f\u043e\u043c\u043d\u0438 \u043f\u0430\u0440\u043e\u043b\u0430\u0442\u0430___\u0418\u0437\u0447\u0438\u0441\u0442\u0438 \u0445\u0440\u043e\u043d\u043e\u043b\u043e\u0433\u0438\u044f\u0442\u0430 \u043f\u0440\u0438 \u0438\u0437\u043b\u0438\u0437\u0430\u043d\u0435___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u0438\u0437\u0442\u0435\u0433\u043b\u044f\u043d\u0435 \u043d\u0430 %s___\u041f\u043e\u043a\u0430\u0437\u0432\u0430\u043d\u0435 \u043d\u0430 \u043f\u0430\u043f\u043a\u0438 \u0441\u0430\u043c\u043e \u0432 \u0445\u0440\u043e\u043d\u043e\u043b\u043e\u0433\u0438\u044f\u0442\u0430___\u0422\u043e\u0437\u0438 \u043f\u0440\u043e\u0437\u043e\u0440\u0435\u0446 \u0432\u0435\u0447\u0435 \u0441\u044a\u0449\u0435\u0441\u0442\u0432\u0443\u0432\u0430___Google Play \u0441\u0435\u0440\u0432\u0438\u0437\u0430 \u043d\u0435 \u0435 \u043d\u0430\u043b\u0438\u0447\u0435\u043d \u0438\u043b\u0438 \u0441\u0435 \u043d\u0443\u0436\u0434\u0430\u0435 \u043e\u0442 \u0430\u043a\u0442\u0443\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u044f.___\u0414\u0430\u0442\u0430 \u043d\u0430 \u0437\u0430\u0441\u043d\u0435\u043c\u0430\u043d\u0435:___\u041c\u043e\u043b\u044f \u0438\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u0446\u0435\u043b___\u041d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u043e\u0442\u043e \u0432\u0440\u0435\u043c\u0435 \u0437\u0430\u0432\u0438\u0441\u0438 \u043e\u0442 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e\u0442\u043e \u0432\u0438___\u0412\u044a\u0437\u0441\u0442\u0430\u043d\u043e\u0432\u0438 \u0432\u0441\u0438\u0447\u043a\u0438___\u0412\u044a\u0432\u0435\u0434\u0435\u0442\u0435 \u0440\u0430\u0437\u043c\u0435\u0440___\u0414\u043e\u0441\u0442\u044a\u043f \u0434\u043e \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e \u0447\u0440\u0435\u0437 FTP \u0441\u044a\u0440\u0432\u044a\u0440___\u0422\u044a\u0440\u0441\u0435\u043d\u0435 \u0432 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f___\u041e\u043f\u0435\u0440\u0430\u0446\u0438\u044f___- WLAN \u0435 \u0438\u0437\u043a\u043b\u044e\u0447\u0435\u043d\u0430___ES File Explorer___ ___\u041a\u0440\u0438\u043f\u0442\u0438\u0440\u0430\u0439 \u0438\u043c\u0435\u0442\u043e \u043d\u0430 \u0444\u0430\u0439\u043b\u0430___\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u043d\u0430 \u0442\u0438\u043f\u043e\u0432\u0435 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0438___\u041f\u0440\u0435\u043c\u0435\u0441\u0442\u0432\u0430 \u0444\u0430\u0439\u043b\u043e\u0432\u0435\u0442\u0435 \u0432 \u043a\u043e\u0448\u0447\u0435\u0442\u043e___\u0412\u044a\u0432\u0435\u0434\u0435\u0442\u0435 \u043e\u043f\u0438\u0441\u0430\u043d\u0438\u0435___\u041f\u043e\u0442\u0432\u044a\u0440\u0436\u0434\u0430\u0432\u0430\u0442\u0435 \u043b\u0438 \u043f\u0440\u0435\u043c\u0435\u0441\u0442\u0432\u0430\u043d\u0435\u0442\u043e?___\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f___\u041f\u043e\u0447\u0438\u0441\u0442\u0432\u0430 \u0430\u0441\u043e\u0446\u0438\u0438\u0440\u0430\u043d\u0438\u0442\u0435 \u043f\u0430\u043f\u043a\u0438 \u043d\u0430 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u0438\u0442\u0435 \u0441\u043b\u0435\u0434 \u0442\u044f\u0445\u043d\u043e\u0442\u043e \u0434\u0435\u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0435___\u0414\u0435\u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u0439___\u0417\u0430\u0435\u0442\u0438:___\u0420\u0430\u0437\u0440\u0435\u0448\u0430\u0432\u0430 \u0440\u0430\u0437\u0431\u044a\u0440\u043a\u0432\u0430\u043d\u0435 \u043d\u0430 \u043f\u0435\u0441\u043d\u0438\u0442\u0435 \u0447\u0440\u0435\u0437 \u0440\u0430\u0437\u043a\u043b\u0430\u0449\u0430\u043d\u0435___\uff0c\u041e\u0431\u0449 \u0440\u0430\u0437\u043c\u0435\u0440: %s___\u041e\u0442:___\u041c\u0440\u0435\u0436\u0430___\u0418\u0437\u0447\u0430\u043a\u0432\u0430\u043d\u0435 \u0437\u0430 \u0432\u043b\u0438\u0437\u0430\u043d\u0435 \u0432 \u043c\u0440\u0435\u0436\u0430___\u041c\u043e\u043b\u044f, \u0440\u0430\u0437\u0434\u0432\u043e\u0435\u0442\u0435 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e\u0442\u043e, \u043a\u043e\u0435\u0442\u043e \u0438\u0441\u043a\u0430\u0442\u0435 \u0434\u0430 \u0438\u0437\u0442\u0440\u0438\u0435\u0442\u0435___\u0418\u0437\u0447\u0438\u0441\u043b\u0438___\u0417\u0430\u0434\u0430\u0439 \u0430\u043b\u0430\u0440\u043c\u0430___\u041c\u0430\u0449\u0430\u0431\u0438\u0440\u0430\u043d\u0435___\u0414\u0440\u0443\u0433\u0438___Bluetooth___\u0421\u0432\u0430\u043b\u0438 \u043e\u0442\u043d\u043e\u0432\u043e___\u0421\u044a\u0437\u0434\u0430\u0432\u0430\u043d\u0435 \u0438 \u0440\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u0436\u0435\u0441\u0442\u043e\u0432\u0435___\u0422\u043e\u0431\u0430\u0432\u0438 \u0442\u0438\u043f \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442___\u043f\u0440\u0435\u0434\u0438___\u041d\u0438\u0437\u0445\u043e\u0434\u044f\u0449___\u0413\u043e\u043b\u044f\u043c \u0438\u0437\u0433\u043b\u0435\u0434___\u0414\u043e\u0431\u0430\u0432\u044f\u043d\u0435 \u043d\u0430 \u0441\u044a\u0440\u0432\u044a\u0440___\u0418\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0435 \u0441 \u0435\u0434\u0438\u043d \u0431\u0443\u0442\u043e\u043d___\u0412\u044a\u043d\u0448\u043d\u0430 \u043f\u0430\u043c\u0435\u0442___ ___\u041f\u0440\u0435\u0445\u0432\u044a\u0440\u043b\u044f\u043d\u0435___\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f\u0442\u0430 \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u0432\u044a\u0437\u0441\u0442\u0430\u043d\u043e\u0432\u0435\u043d\u0430 \u0441\u043b\u0435\u0434 \u0438\u0437\u0442\u0440\u0438\u0432\u0430\u043d\u0435___\u041f\u0430\u0443\u0437\u0430___\u0414\u0435\u0442\u0430\u0439\u043b\u0438___\u041c\u043e\u043b\u044f, \u0438\u0437\u0447\u0430\u043a\u0430\u0439\u0442\u0435\u2026___\u041a\u043e\u0448\u0447\u0435\u0442\u043e \u0435 \u0430\u043a\u0442\u0438\u0432\u043d\u043e___\u041d\u044f\u043c\u0430 \u043a\u0440\u0438\u043f\u0442\u0438\u0440\u0430\u043d\u0438 \u0444\u0430\u0439\u043b\u043e\u0432\u0435___\u0412\u0445\u043e\u0434 \u0441 \u043a\u043b\u044e\u0447___\u041f\u0430\u043f\u043a\u0430\u0442\u0430 \u201e%s\u201c \u0435 \u0437\u0430\u0434\u0430\u0434\u0435\u043d\u0430 \u043a\u0430\u0442\u043e \u043d\u0430\u0447\u0430\u043b\u043d\u0430.___%1$s \u0441\u043f\u043e\u0434\u0435\u043b\u0438 \u0444\u0430\u0439\u043b \u0441 \u0432\u0430\u0441, \u043c\u043e\u043b\u044f \u0449\u0440\u0430\u043a\u043d\u0435\u0442\u0435 \u0432\u044a\u0440\u0445\u0443 \u0442\u0430\u0437\u0438 \u0432\u0440\u044a\u0437\u043a\u0430, \u0437\u0430 \u0434\u0430 \u0438\u0437\u0442\u0435\u0433\u043b\u0438\u0442\u0435: %2$s___\u041a\u043e\u043c\u043f\u0440\u0435\u0441\u0438\u0440\u0430\u043d\u0435...___\u0418\u0437\u043f\u0440\u0430\u0442\u0435\u043d\u0438 \u201e%1$s\u201c___Chromecast___\u041d\u0435\u0434\u043e\u0441\u0442\u0438\u0433 \u043d\u0430 \u043f\u0430\u043c\u0435\u0442___ ___\u041d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u043a\u043e\u043f\u0438\u0440\u0430\u043d\u043e \u0432 \u043f\u043e\u0434\u0434\u0438\u0440\u0435\u043a\u0442\u043e\u0440\u0438\u044f___\u0417\u0430\u0449\u0438\u0442\u0430 \u043d\u0430 \u0441\u043f\u0438\u0441\u044a\u043a\u0430 \u201e\u0441\u043a\u0440\u0438\u0442\u0438\u201c___\u0420\u0430\u0437\u0440\u0435\u0448\u0438 \u043c\u043d\u043e\u0433\u043e\u0437\u0430\u0434\u0430\u0447\u043d\u043e \u043a\u043e\u043f\u0438\u0440\u0430\u043d\u0435 \u0438 \u0441\u0432\u0430\u043b\u044f\u043d\u0435___\u0413\u043e\u0440\u0435\u0449\u043e___\u0417\u0430\u0440\u0435\u0436\u0434\u0430\u043d\u0435 \u043d\u0430 \u043e\u0449\u0435\u2026___\u0421\u044a\u0437\u0434\u0430\u0432\u0430 \u043c\u043e\u0431\u0438\u043b\u043d\u0430 \u0442\u043e\u0447\u043a\u0430 \u0437\u0430 \u0434\u043e\u0441\u0442\u044a\u043f, \u0437\u0430 \u0441\u0432\u044a\u0440\u0437\u0432\u0430\u043d\u0435 \u0441 \u0434\u0440\u0443\u0433\u0438 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430___\u0421\u0432\u043e\u0431\u043e\u0434\u043d\u043e \u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0441\u0442\u0432\u043e:___\u041d\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u0435\u043d \u0438\u0437\u043f\u044a\u043b\u043d\u0438\u0442\u0435\u043b___\u0418\u0437\u0442\u0435\u0433\u043b\u044f\u043d\u0435\u0442\u043e \u0441\u0435 \u043f\u0440\u043e\u0432\u0430\u043b\u0438___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u043f\u043e\u043b\u0443\u0447\u0430\u0432\u0430\u043d\u0435 \u0438\u043c\u0435\u0442\u043e \u043d\u0430 \u0444\u0430\u0439\u043b\u0430___\u0421\u0432\u044a\u0440\u0437\u0430\u043d___\u0422\u0435\u043a\u0443\u0449 \u043f\u043e\u0440\u0442:___\u0418\u0437\u043a\u043b\u044e\u0447\u0432\u0430\u043d\u0435___\u041f\u0430\u0440\u043e\u043b\u0430 :___\u041c\u043e\u0436\u0435 \u0434\u0430 \u0438\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u043d\u0430\u0439-\u043c\u043d\u043e\u0433\u043e 12 \u0435\u043b\u0435\u043c\u0435\u043d\u0442\u0430___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u0438\u0437\u0447\u0438\u0441\u043b\u044f\u0432\u0430\u043d\u0435___\u0413\u043e\u0442\u043e\u0432\u043e___\u0420\u0430\u0437\u043c\u0435\u0440___\u0420\u0430\u0437\u0448\u0438\u0440\u0435\u043d\u043e \u0442\u044a\u0440\u0441\u0435\u043d\u0435___\u0421\u043e\u0440\u0442\u0438\u0440\u0430\u0439 \u043f\u043e___\u041d\u0430\u0442\u0438\u0441\u043d\u0438, \u0437\u0430 \u043f\u0440\u0435\u043c\u0430\u0445\u0432\u0430\u043d\u0435 \u043e\u0442 \u0441\u043f\u0438\u0441\u044a\u043a\u0430 \u0441 \u0442\u0438\u043f\u043e\u0432\u0435 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0438___SD \u043a\u0430\u0440\u0442\u0430___\u0421\u043f\u0438\u0441\u044a\u043a\u044a\u0442 \u201e\u0441\u043a\u0440\u0438\u0442\u0438\u201c \u0435 \u0438\u0437\u0447\u0438\u0441\u0442\u0435\u043d___\u041f\u043e\u0434\u0441\u043a\u0430\u0437\u043a\u0430___\u0412\u043a\u043b\u044e\u0447\u0438\u0442\u0435\u043b\u043d\u043e \u043f\u043e\u0434 \u0434\u0438\u0440\u0435\u043a\u0442\u043e\u0440\u0438\u0438___\u041d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u043e \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435:___\u041f\u043e\u043a\u0430\u0437\u0432\u0430\u043d\u0435 \u043d\u0430 \u0435\u043b\u0435\u043c\u0435\u043d\u0442 \u0437\u0430 \u043f\u0440\u0435\u0432\u044a\u0440\u0442\u0430\u043d\u0435 \u0441 \u043f\u0430\u043b\u0435\u0446 \u043f\u0440\u0438 \u0434\u044a\u043b\u0433\u043e \u043f\u043b\u044a\u0437\u0432\u0430\u043d\u0435___\u041a\u043b\u044e\u0447\u043e\u0432\u0430\u0442\u0430 \u0444\u0440\u0430\u0437\u0430___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u043c\u043e\u043d\u0442\u0438\u0440\u0430\u043d\u0435___\u0414\u0438\u0440\u0435\u043a\u0442\u043e\u0440\u0438\u044f \u0437\u0430 \u0430\u0440\u0445\u0438\u0432\u0438:___\u0413\u0440\u0435\u0448\u0435\u043d \u0442\u0438\u043f \u0444\u0430\u0439\u043b, \u043c\u043e\u043b\u044f \u0438\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u043e\u0442\u043d\u043e\u0432\u043e___\u0412\u0430\u0448\u0435\u0442\u043e \u0441\u0435\u043c\u0435\u0439\u0441\u0442\u0432\u043e___\u041e\u0441\u0442\u0430\u0432\u0430\u0449\u043e \u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0441\u0442\u0432\u043e: %s___\u0422\u043e\u0447\u043a\u0430\u0442\u0430 \u0437\u0430 \u0434\u043e\u0441\u0442\u044a\u043f \u0435 \u0441\u0442\u0430\u0440\u0442\u0438\u0440\u0430\u043d\u0430, \u043d\u043e \u043d\u0435 \u0441\u0430 \u043f\u0440\u043e\u0432\u0435\u0440\u0435\u043d\u0438 \u043f\u0440\u0430\u0432\u0430\u0442\u0430, \u043c\u043e\u043b\u044f \u043f\u043e\u0433\u043b\u0435\u0434\u043d\u0435\u0442\u0435 \u0433\u0438 \u0432 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u0438\u0442\u0435 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438___\u0412\u044a\u0432\u0435\u0434\u0435\u0442\u0435 \u043a\u043e\u043c\u0435\u043d\u0442\u0430\u0440 \u0442\u0443\u043a___\u0418\u0437\u0447\u0438\u0441\u0442\u0432\u0430\u043d\u0435 \u043d\u0430 \u0437\u0430\u0434\u0430\u0447\u0438\u0442\u0435___\u2191___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u0443\u0434\u043e\u0441\u0442\u043e\u0432\u0435\u0440\u044f\u0432\u0430\u043d\u0435. \u041c\u043e\u043b\u044f, \u0440\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u0430\u0439\u0442\u0435 \u0432\u0430\u0448\u0435\u0442\u043e \u043f\u043e\u0442\u0440\u0435\u0431\u0438\u0442\u0435\u043b\u0441\u043a\u043e \u0438\u043c\u0435/\u043f\u0430\u0440\u043e\u043b\u0430___\u041f\u0440\u0435\u0437\u0430\u043f\u0438\u0448\u0438___\u041d\u043e\u043c\u0435\u0440___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u0430 \u043f\u0440\u043e\u043c\u044f\u043d\u0430 \u043d\u0430 \u043f\u0440\u0430\u0432\u0430\u0442\u0430___\u0418\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u0438\u0437\u0431\u0440\u0430\u043d\u0438\u0442\u0435 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f?___\u0422\u044a\u0440\u0441\u0438 \u043f\u043e \u0438\u0437\u043f\u044a\u043b\u043d\u0438\u0442\u0435\u043b___\u041e\u0441\u0442\u0430\u0432\u0430\u0449\u043e \u0432\u0440\u0435\u043c\u0435:___\u0414\u043e:___\u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u0438\u0437\u0442\u0440\u0438\u0442___\u0417\u0430\u0431\u0440\u0430\u043d\u044f\u0432\u0430\u043d\u0435 \u043d\u0430 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u043d\u043e\u0442\u043e \u0430\u043a\u0442\u0443\u0430\u043b\u0438\u0437\u0438\u0440\u0430\u043d\u0435___\u0413\u0435\u043d\u0435\u0440\u0438\u0440\u0430 \u043f\u0440\u043e\u0438\u0437\u0432\u043e\u043b\u043d\u0438 \u0438\u043c\u0435\u043d\u0430 \u0437\u0430 \u0442\u043e\u0447\u043a\u0438\u0442\u0435 \u0437\u0430 \u0434\u043e\u0441\u0442\u044a\u043f___\u0418\u0441\u043a\u0430\u0442\u0435 \u043b\u0438 \u0434\u0430 \u043e\u0442\u043c\u0435\u043d\u0438\u0442\u0435 \u0442\u0435\u043a\u0443\u0449\u0430\u0442\u0430 \u0437\u0430\u0434\u0430\u0447\u0430?___\u0422\u044a\u0440\u0441\u0435\u043d\u0435___\u041d\u0430\u043b\u0438\u0447\u043d\u0430 \u0435 \u043f\u043e-\u043d\u043e\u0432\u0430 \u0442\u0435\u043c\u0430, \u043c\u043e\u043b\u044f \u0430\u043a\u0442\u0443\u0430\u043b\u0438\u0437\u0438\u0440\u0430\u0439\u0442\u0435___\u0421\u0438\u0441\u0442\u0435\u043c\u043d\u0430\u0442\u0430 \u0434\u0438\u0440\u0435\u043a\u0442\u043e\u0440\u0438\u044f \u0435 \u043c\u043e\u043d\u0442\u0438\u0440\u0430\u043d\u0430 \u0441\u0430\u043c\u043e \u0437\u0430 \u0447\u0435\u0442\u0435\u043d\u0435___\u0421\u0418\u0421\u0422\u0415\u041c\u041d\u0418 \u041d\u0410\u0421\u0422\u0420\u041e\u0419\u041a\u0418___\u041f\u0430\u0440\u043e\u043b\u0430___\u0422\u0430\u0437\u0438 \u043f\u0440\u043e\u0431\u043d\u0430 \u0432\u0435\u0440\u0441\u0438\u044f \u0435 \u0438\u0437\u0442\u0435\u043a\u043b\u0430, \u0442\u0440\u044f\u0431\u0432\u0430 \u0434\u0430 \u0430\u043a\u0442\u0443\u0430\u043b\u0438\u0437\u0438\u0440\u0430\u0442\u0435 \u0441 \u043d\u043e\u0432\u0430\u0442\u0430 \u0432\u0435\u0440\u0441\u0438\u044f.___\u041f\u0430\u0440\u043e\u043b\u0430\u0442\u0430 \u043d\u0435 \u0435 \u043f\u043e\u0442\u0432\u044a\u0440\u0434\u0435\u043d\u0430___\u041f\u043e\u0432\u0435\u0440\u0438\u0442\u0435\u043b\u043d\u043e\u0441\u0442___\u0418\u0437\u0442\u0435\u0433\u043b\u0435\u043d\u0438___\u041c\u043e\u043b\u044f, \u0432\u044a\u0432\u0435\u0434\u0435\u0442\u0435 \u043f\u0430\u0440\u043e\u043b\u0430___\u0424\u0430\u0439\u043b:___\u0418\u0437\u0447\u0438\u0441\u043b\u044f\u0432\u0430\u043d\u0435\u2026___\u041f\u0440\u043e\u043c\u044f\u043d\u0430 \u043d\u0430 \u043f\u0430\u0440\u043e\u043b\u0430\u0442\u0430___\u0435\u043b\u0435\u043c\u0435\u043d\u0442\u0430___\u041d\u0443\u0436\u043d\u0430 \u0435 \u043f\u0430\u0440\u043e\u043b\u0430 \u0437\u0430 \u0434\u043e\u0441\u0442\u044a\u043f \u0434\u043e ES File Explorer___\u041f\u043e\u0447\u0438\u0441\u0442\u0432\u0430\u043d\u0435 \u043d\u0430 \u0430\u0441\u043e\u0446\u0438\u0438\u0440\u0430\u043d\u0438\u0442\u0435 \u043f\u0430\u043f\u043a\u0438 \u0441\u043b\u0435\u0434 \u0434\u0435\u0438\u043d\u0441\u0442\u0430\u043b\u0430\u0446\u0438\u044f___\u0423\u0441\u043f\u0435\u0448\u043d\u0430 \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f___\u041d\u044f\u043c\u0430 \u0430\u0440\u0445\u0438\u0432\u0438\u0440\u0430\u043d\u0438 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f___\u041c\u043d\u043e\u0436\u0435\u0441\u0442\u0432\u043e \u0444\u0430\u0439\u043b\u043e\u0432\u0435___\u0421\u043f\u043e\u0434\u0435\u043b\u0438 \u0447\u0440\u0435\u0437___\u0412\u044a\u0437\u0441\u0442\u0430\u043d\u043e\u0432\u0438 \u0444\u0430\u0439\u043b\u043e\u0432\u0435\u0442\u0435___\u0414\u0435\u043a\u0440\u0438\u043f\u0442\u0438\u0440\u0430\u0439___\u041a\u043b\u044e\u0447___\u0424\u0430\u0439\u043b \u0441 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438:___\u041e\u0442\u043c\u0435\u0442\u043a\u0438___\u041c\u043e\u043b\u044f, \u0438\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u043c\u0440\u0435\u0436\u0430 \u0437\u0430 \u043f\u0440\u0438\u0441\u044a\u0435\u0434\u0438\u043d\u044f\u0432\u0430\u043d\u0435___\u041d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0432\u044a\u0437\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u0435 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438\u0442\u0435___\u0410\u0440\u0445\u0438\u0432\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435\u0442\u043e \u0437\u0430\u0435\u0434\u043d\u043e \u0441 \u0434\u0430\u043d\u043d\u0438\u0442\u0435 \u043c\u0443___\u041f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u0438\u0437\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u0430\u043b\u0431\u0443\u043c___\u041f\u043e\u0441\u0442\u0430\u0432\u0438___ESFTP___\u0418\u0437\u0432\u043b\u0435\u0447\u0438 \u0432___\u0414\u0435\u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0435\u0442\u043e \u0435 \u0443\u0441\u043f\u0435\u0448\u043d\u043e___ ___\u0427\u0435\u0442\u0435\u043d\u0435___\u0418\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0435\u0442\u043e \u043f\u0440\u0438\u043a\u043b\u044e\u0447\u0438___\u0417\u0430\u0434\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 \u043f\u0440\u043e\u0444\u0438\u043b \u0437\u0430 \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435___\u0421\u0432\u044a\u0440\u0436\u0438___\u041a\u043e\u043f\u0438\u0440\u0430\u043d___Instagram \u043d\u0435 \u043f\u043e\u0434\u0434\u044a\u0440\u0436\u0430 \u043a\u0430\u0447\u0432\u0430\u043d\u0435 \u043e\u0442 \u0442\u0443\u043a!___\u0418\u0437\u0433\u043b\u0435\u0434___\u043f\u043e\u0441\u0435\u0442\u0435\u0442\u0435:___\u0424\u0438\u043b\u043c\u0438___\u0421\u043f\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 ES FTP \u0441\u044a\u0440\u0432\u044a\u0440\u0430?___\u041f\u043b\u044a\u0437\u043d\u0435\u0442\u0435___\u041a\u0430\u0447\u0432\u0430\u043d\u0435___\u0411\u0443\u043a\u0432\u0438 \u0438 \u0446\u0438\u0444\u0440\u0438___\u041d\u0430\u0437\u0430\u0434___\u0412\u044a\u0437\u0441\u0442\u0430\u043d\u043e\u0432\u044f\u0432\u0430\u043d\u0435 \u043d\u0430 \u043a\u0435\u0448\u0430 \u0435 \u0443\u0441\u043f\u0435\u0448\u043d\u043e.___\u041d\u0430\u0447\u0430\u043b\u043d\u0430 \u0434\u0438\u0440\u0435\u043a\u0442\u043e\u0440\u0438\u044f___LAN___\u0417\u0434\u0440\u0430\u0432\u0435___\u041d\u044f\u043c\u0430 \u043d\u0430\u043c\u0435\u0440\u0435\u043d\u0438 \u043f\u0435\u0441\u043d\u0438___\u041f\u0440\u043e\u0437\u043e\u0440\u0446\u0438___\u041f\u0430\u0440\u043e\u043b\u0430 \u0437\u0430 \u0437\u0430\u0449\u0438\u0442\u0430 \u0441\u044a\u0434\u044a\u0440\u0436\u0430\u043d\u0438\u0435\u0442\u043e \u043d\u0430 \u0441\u043f\u0438\u0441\u044a\u043a\u0430 \u201e\u0441\u043a\u0440\u0438\u0442\u0438\u201c___\u0410\u0440\u0445\u0438\u0432\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u0434\u0430\u043d\u043d\u0438\u0442\u0435___\u0429\u0440\u0430\u043a\u043d\u0435\u0442\u0435 \u0437\u0430 \u0440\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u0430\u043d\u0435, \u043c\u043e\u0436\u0435 \u0434\u0430 \u0435 \u043f\u0440\u0430\u0437\u043d\u043e___\u041b\u043e\u043a\u0430\u043b\u043d\u0438___\u041f\u0440\u043e\u0437\u043e\u0440\u0435\u0446 - %1$s___\u041e\u0442\u0434\u0430\u043b\u0435\u0447\u0435\u043d\u0438 \u0441\u044a\u0440\u0432\u044a\u0440\u0438___\u0441\u0435 \u0438\u0437\u043f\u044a\u043b\u043d\u044f\u0432\u0430 \u043f\u043e Chromecast___\u0414\u043e\u0431\u0440\u0435___\u0417\u0430\u0432\u044a\u0440\u0442\u0438 \u043d\u0430\u0434\u044f\u0441\u043d\u043e___\u0418\u043c\u0435\u0442\u043e \u043d\u0430 \u043c\u0440\u0435\u0436\u0430\u0442\u0430 \u0442\u0440\u044f\u0431\u0432\u0430 \u0434\u0430 \u0431\u044a\u0434\u0435 \u043f\u043e-\u043c\u0430\u043b\u043a\u043e \u043e\u0442 32 \u0441\u0438\u043c\u0432\u043e\u043b\u0430___\u0422\u044a\u0440\u0441\u0435\u043d\u0435...___\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u043d\u0430 \u0442\u0435\u043c\u0438___\u041d\u0435___\u0420\u0430\u0437\u0448\u0438\u0440\u0435\u043d\u0438 \u043e\u043f\u0446\u0438\u0438___\u041f\u043e\u043a\u0430\u0436\u0438 \u0432\u0441\u0438\u0447\u043a\u0438___\u0425\u043e\u0441\u0442 \u043d\u0430 WebDAV \u0441\u044a\u0440\u0432\u044a\u0440___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0435___\u041c\u043e\u043b\u044f, \u0438\u0437\u0447\u0430\u043a\u0430\u0439\u0442\u0435\u2026___\u041a\u043d\u0438\u0433\u0438___\u0421\u0435\u0440\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u044a\u0442 \u0435 \u043d\u0435\u043d\u0430\u0434\u0435\u0436\u0434\u0435\u043d___ ___\u0429\u0440\u0430\u043a\u043d\u0435\u0442\u0435, \u0437\u0430 \u0434\u0430 \u0437\u0430\u0434\u0430\u0434\u0435\u0442\u0435___FTP \u0441\u044a\u0440\u0432\u044a\u0440___\u0417\u0430 \u0441\u044a\u0436\u0430\u043b\u0435\u043d\u0438\u0435 \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0441\u0435 \u0441\u0442\u0430\u0440\u0442\u0438\u0440\u0430 \u0442\u043e\u0432\u0430 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435___\u0410\u043d\u0430\u043b\u0438\u0437 \u043d\u0430 \u0434\u0438\u0440\u0435\u043a\u0442\u043e\u0440\u0438\u044f___\u0421\u043a\u0430\u043d\u0438\u0440\u0430\u043d\u0435...___\u0413\u0440\u0435\u0448\u043a\u0430, \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u043d\u0430\u043c\u0435\u0440\u0435\u043d\u0430 \u0432\u0430\u0448\u0430\u0442\u0430 \u043c\u0440\u0435\u0436\u0430___\u0421\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0438\u0440\u0430\u043d\u0435...___\u041f\u0430\u0440\u043e\u043b\u0430\u0442\u0430 \u0435 \u043d\u0435\u043f\u0440\u0430\u0432\u0438\u043b\u043d\u0430___\u0412\u044a\u0440\u043d\u0438 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438\u0442\u0435 \u043f\u043e \u043f\u043e\u0434\u0440\u0430\u0437\u0431\u0438\u0440\u0430\u043d\u0435___\u0421\u0438\u0433\u0443\u0440\u043d\u0438 \u043b\u0438 \u0441\u0442\u0435, \u0447\u0435 \u0438\u0441\u043a\u0430\u0442\u0435 \u0434\u0430 \u0438\u0437\u0442\u0440\u0438\u0435\u0442\u0435 {0} \u2026 ({1} \u0435\u043b\u0435\u043c\u0435\u043d\u0442\u0430)?___\u041d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0441\u0435 \u043e\u0442\u0432\u043e\u0440\u0438 \u0432\u043b\u043e\u0436\u0435\u043d\u0438\u044f\u0442 ZIP-\u043f\u043e\u0434\u043e\u0431\u0435\u043d \u0444\u0430\u0439\u043b___\u041a\u043e\u0434\u0438\u0440\u0430\u043d\u0435___\u0418\u0437\u0431\u0440\u0430\u043d\u0438\u0442\u0435 \u0441\u0438\u043c\u0432\u043e\u043b\u0438 \u043d\u0435 \u0441\u0430 \u043d\u0430\u043b\u0438\u0447\u043d\u0438 \u043d\u0430 \u0432\u0430\u0448\u0435\u0442\u043e \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e___\u0417\u0430\u0449\u0438\u0442\u0430 \u043f\u0440\u0438 \u0441\u0442\u0430\u0440\u0442\u0438\u0440\u0430\u043d\u0435___\u0415\u0434\u0438\u043d\u0438\u0446\u0430___OBEX FTP \u0443\u0441\u043b\u0443\u0433\u0430\u0442\u0430 \u0435 \u0441\u0442\u0430\u0440\u0442\u0438\u0440\u0430\u043d\u0430 \u0443\u0441\u043f\u0435\u0448\u043d\u043e. \u0412\u0435\u0447\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u043f\u0440\u0435\u0445\u0432\u044a\u0440\u043b\u044f\u0442\u0435 \u0444\u0430\u0439\u043b\u043e\u0432\u0435 \u0441 \u0434\u0440\u0443\u0433\u043e bluetooth \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e.___\u041f\u0440\u043e\u043c\u044f\u043d\u0430 \u043d\u0430 \u043f\u0430\u0440\u043e\u043b\u0430\u0442\u0430___\u0421\u0430\u043c\u043e \u0432\u0438\u0435 (\u0447\u0430\u0441\u0442\u043d\u043e)___\u041f\u0440\u0435\u043c\u0435\u0441\u0442\u0432\u0430\u043d\u0435 \u043d\u0430 \u0444\u0430\u0439\u043b\u043e\u0432\u0435 \u0432 \u201e%1$s\u201c___\u0421\u0438\u0433\u0443\u0440\u043d\u0438 \u043b\u0438 \u0441\u0442\u0435, \u0447\u0435 \u0438\u0441\u043a\u0430\u0442\u0435 \u0434\u0430 \u043f\u0440\u0435\u043c\u0430\u0445\u043d\u0435\u0442\u0435 \u0434\u0440\u0443\u0433\u0438\u0442\u0435 \u043f\u0440\u043e\u0437\u043e\u0440\u0446\u0438?___\u0422\u0435\u043a\u0443\u0449 \u043f\u0440\u043e\u0433\u0440\u0435\u0441___\u041d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0441\u0435 \u0438\u0437\u043f\u043e\u043b\u0437\u0432\u0430 \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u0438\u0437\u0438\u0440\u0430\u043d\u0430 \u0442\u043e\u0447\u043a\u0430 \u0437\u0430 \u0434\u043e\u0441\u0442\u044a\u043f___\u0422\u044a\u0440\u0441\u0435\u043d\u0435 \u0432 \u0441\u043d\u0438\u043c\u043a\u0438___\u0413\u0440\u0435\u0448\u043a\u0430, \u0444\u0430\u0439\u043b\u044a\u0442 \u0435 \u0442\u0432\u044a\u0440\u0434\u0435 \u0433\u043e\u043b\u044f\u043c___\u041d\u0435 \u043f\u043e\u043a\u0430\u0437\u0432\u0430\u0439 \u0444\u0430\u0439\u043b\u043e\u0432\u0435 \u0432 \u0445\u0440\u043e\u043d\u043e\u043b\u043e\u0433\u0438\u044f\u0442\u0430___\u0417\u0430\u0434\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 \u043f\u0440\u043e\u0437\u043e\u0440\u0446\u0438 \u043f\u043e \u043f\u043e\u0434\u0440\u0430\u0437\u0431\u0438\u0440\u0430\u043d\u0435___\u0420\u0430\u0437\u0433\u043b\u0435\u0436\u0434\u0430\u043d\u0435 \u043d\u0430 \u043f\u0440\u0430\u0432\u0430___\u0412\u044a\u0437\u0441\u0442\u0430\u043d\u043e\u0432\u0438 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438\u0442\u0435 \u043f\u043e \u043f\u043e\u0434\u0440\u0430\u0437\u0431\u0438\u0440\u0430\u043d\u0435___\u041f\u043e\u043a\u0430\u0437\u0432\u0430\u043d\u0435 \u0438\u0437\u043f\u043e\u043b\u0437\u0432\u0430\u043d\u0435\u0442\u043e \u043d\u0430 SD \u043a\u0430\u0440\u0442\u0430\u0442\u0430 \u0432 \u0441\u0442\u0430\u0442\u0443\u0441 \u043b\u0435\u043d\u0442\u0430\u0442\u0430___\u0418\u0437\u0432\u0435\u0441\u0442\u044f\u0432\u0430 \u0430\u043a\u043e \u0441\u0432\u043e\u0431\u043e\u0434\u043d\u043e\u0442\u043e \u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0441\u0442\u0432\u043e \u0435 \u043c\u0430\u043b\u043a\u043e, \u0441\u043b\u0435\u0434 \u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0435\u0442\u043e \u043d\u0430 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u0430___\u0418\u0437\u0431\u0435\u0440\u0438___\u0412\u043f\u0438\u0441\u0432\u0430\u043d\u0435\u0442\u043e \u0441\u0435 \u043f\u0440\u043e\u0432\u0430\u043b\u0438___\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u043f\u0430\u043f\u043a\u0430\u0442\u0430, \u043a\u043e\u044f\u0442\u043e \u0438\u0441\u043a\u0430\u0442\u0435___\u041e\u0442\u0434\u0430\u043b\u0435\u0447\u0435\u043d\u043e \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435___\u0414\u0438\u0440\u0435\u043a\u0442\u043e\u0440\u0438\u044f \u0437\u0430 \u0430\u0440\u0445\u0438\u0432 \u043d\u0430 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f:___ES \u043c\u0435\u043d\u0438\u0436\u0434\u044a\u0440 \u043d\u0430 \u043f\u0440\u0430\u0432\u0430 \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u043d\u0430\u043c\u0435\u0440\u0435\u043d. \u0421\u0432\u0430\u043b\u0435\u0442\u0435 \u0441\u0435\u0433\u0430?___\u041f\u0440\u0430\u0437\u043d\u0430 \u043f\u0430\u043f\u043a\u0430___\u041d\u0435 \u0441\u0430 \u043e\u0442\u043a\u0440\u0438\u0442\u0438 \u043d\u044f\u043a\u043e\u0438 \u043c\u043e\u0434\u0443\u043b\u0438, \u0442\u0440\u044f\u0431\u0432\u0430\u0442 \u0432\u0438, \u0437\u0430 \u0434\u0430 \u043f\u043e\u043b\u0443\u0447\u0438\u0442\u0435 \u0432\u0441\u0438\u0447\u043a\u0438 \u0444\u0443\u043d\u043a\u0446\u0438\u0438. \u0418\u0441\u043a\u0430\u0442\u0435 \u043b\u0438 \u0434\u0430 \u0433\u0438 \u043d\u0430\u043c\u0435\u0440\u0438\u0442\u0435 \u0438 \u0434\u0430 \u0433\u0438 \u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u0442\u0435?___\u041c\u0440\u0435\u0436\u0430\u0442\u0430 \u0435 \u0441\u044a\u0437\u0434\u0430\u0434\u0435\u043d\u0430___\u0414\u0435\u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u0438 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f___\u041f\u0440\u0435\u0438\u043c\u0435\u043d\u0443\u0432\u0430\u0439 \u0441\u043f\u0438\u0441\u044a\u043a\u0430___\u041a\u043b\u0438\u0435\u043d\u0442\u044a\u0442 \u0435 \u0437\u0430\u0435\u0442, \u043e\u043f\u0438\u0442\u0430\u0439\u0442\u0435 \u043f\u043e-\u043a\u044a\u0441\u043d\u043e___\u0418\u043c\u0435 \u043d\u0430 \u043c\u0440\u0435\u0436\u0430___\u041c\u043e\u043b\u044f, \u043f\u0440\u043e\u0432\u0435\u0440\u0435\u0442\u0435 \u0431\u0435\u0437\u0436\u0438\u0447\u043d\u0430\u0442\u0430 \u0432\u0440\u044a\u0437\u043a\u0430, \u0438\u043b\u0438 \u0441\u044a\u0437\u0434\u0430\u0439\u0442\u0435 \u0441\u043e\u0431\u0441\u0442\u0432\u0435\u043d\u0430 \u0442\u043e\u0447\u043a\u0430 \u0437\u0430 \u0434\u043e\u0441\u0442\u044a\u043f___\u041f\u043e\u0442\u0440\u0435\u0431\u0438\u0442\u0435\u043b\u0441\u043a\u0438 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f___\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u0437\u0430 \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435___\u041c\u043e\u043b\u044f, \u0432\u044a\u0432\u0435\u0434\u0435\u0442\u0435 \u0430\u0434\u0440\u0435\u0441 \u0437\u0430 \u0438\u0437\u0442\u0435\u0433\u043b\u044f\u043d\u0435___\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u0433\u043b\u0430\u0432\u043d\u0430\u0442\u0430 \u0434\u0438\u0440\u0435\u043a\u0442\u043e\u0440\u0438\u044f %1$s(%2$s) \u043d\u0430 \u0432\u044a\u043d\u0448\u043d\u0430\u0442\u0430 \u043a\u0430\u0440\u0442\u0430 \u043f\u0430\u043c\u0435\u0442, \u0437\u0430 \u0434\u0430 \u043c\u043e\u0436\u0435 ES \u0434\u0430 \u0440\u0430\u0431\u043e\u0442\u0438 \u0441 \u043d\u0435\u044f___\u041e\u0431\u0449 \u043f\u0440\u043e\u0433\u0440\u0435\u0441___\u0417\u0430\u0434\u0430\u0439 \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435 \u0437\u0430 \u0444\u043e\u043d___\u041f\u043e\u043a\u0430\u0436\u0438 \u0438\u0437\u0432\u0435\u0441\u0442\u0438\u0435 \u043f\u0440\u0438 \u043c\u0430\u043b\u043a\u043e \u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0441\u0442\u0432\u043e___\u041d\u0438\u0432\u043e \u043d\u0430 \u043a\u043e\u043c\u043f\u0440\u0435\u0441\u0438\u044f:___\u041a\u043e\u043d\u0444\u0438\u0433\u0443\u0440\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u0431\u0435\u0437\u0436\u0438\u0447\u043d\u0430 \u0442\u043e\u0447\u043a\u0430 \u0437\u0430 \u0434\u043e\u0441\u0442\u044a\u043f___\u041c\u0438\u043d\u0430___\u0421\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u0444\u0430\u0439\u043b\u043e\u0432\u0435 \u0432 \'%1$s\'___Flickr___\u0412\u044a\u0437\u043f\u0440\u043e\u0438\u0437\u0432\u0435\u0434\u0438___\u0412\u0438\u0434\u0438\u043c___\u0421\u0438\u0441\u0442\u0435\u043c\u043d\u0438 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f___\u041d\u043e\u0432 \u043f\u0430\u043a\u0435\u0442___\u041f\u0440\u0435\u0433\u043b\u0435\u0434 \u043d\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u0438\u0442\u0435 \u043c\u0440\u0435\u0436\u043e\u0432\u0438 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438___\u0412\u044a\u0432\u0435\u0434\u0435\u0442\u0435 \u043d\u043e\u0432\u043e \u0438\u043c\u0435___\u041e\u0442\u0432\u043e\u0440\u0438 \u0432 \u0431\u0440\u0430\u0443\u0437\u044a\u0440___\u0423\u0432\u0435\u0440\u0435\u0442\u0435 \u0441\u0435, \u0447\u0435 Chromecast \u0435 \u043d\u0430\u043b\u0438\u0447\u0435\u043d \u0432 LAN \u043c\u0440\u0435\u0436\u0430\u0442\u0430___\u0418\u0437\u043f\u044a\u043b\u043d\u0438\u0442\u0435\u043b___\u0422\u043e\u0432\u0430 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u043f\u0440\u0438\u0447\u0438\u043d\u0435\u043d\u043e \u043e\u0442:___ ___\u041d\u043e\u0432 SFTP___ ___\u0410\u043b\u0431\u0443\u043c___\u0421\u043f\u0440\u0438___\u0421\u0435\u0433\u0430 \u0441\u0435 \u0438\u0437\u043f\u044a\u043b\u043d\u044f\u0432\u0430___\u0421\u043f\u0438\u0441\u044a\u043a\u044a\u0442 \u0435 \u0437\u0430\u043f\u0430\u0437\u0435\u043d___\u0417\u0430\u043f\u043e\u0447\u0432\u0430 \u0441\u0432\u044a\u0440\u0437\u0432\u0430\u043d\u0435 \u043a\u044a\u043c \u043c\u0440\u0435\u0436\u0430\u0442\u0430___\u0414\u043e\u0431\u0430\u0432\u0435\u0442\u0435 \u0440\u0430\u0437\u0448\u0438\u0440\u0435\u043d\u0438\u0435 \u043d\u0430 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430___\u041e\u0442\u0432\u043e\u0440\u0438 \u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435\u0442\u043e___\u0412\u043a\u043b\u044e\u0447\u0432\u0430\u043d\u0435 \u043d\u0430 WLAN___\u0417\u0430\u043f\u0438\u0448\u0438 \u0441\u043f\u0438\u0441\u044a\u043a\u0430___\u0417\u0430\u043f\u0438\u0441\u0432\u0430\u043d\u0435\u0442\u043e \u043d\u0430 \u0441\u043f\u0438\u0441\u044a\u043a\u0430 \u0435 \u043d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e___\u0418\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0438 \u043d\u0430 SD \u043a\u0430\u0440\u0442\u0430\u0442\u0430___\u041e\u043f\u0435\u0440\u0430\u0446\u0438\u0438___\u0416\u0435\u043b\u0430\u0435\u0442\u0435 \u043b\u0438 \u0434\u0430 \u0432\u044a\u0437\u043e\u0431\u043d\u043e\u0432\u0438\u0442\u0435, \u0437\u0430 \u0434\u0430 \u0437\u0430\u0432\u044a\u0440\u0448\u0438 \u0444\u0430\u0439\u043b\u0430___\u0427\u0435\u0440\u043d\u043e___\u0418\u0441\u043a\u0430\u0442\u0435 \u043b\u0438 \u0434\u0430 \u043f\u0440\u0435\u043c\u0435\u0441\u0442\u0438\u0442\u0435 \u043f\u0430\u043f\u043a\u0430 {0} \u0432 \u043a\u043e\u0448\u0447\u0435\u0442\u043e___\u0431\u0435\u0448\u0435 \u0437\u0430\u043f\u0438\u0441\u0430\u043d \u0443\u0441\u043f\u0435\u0448\u043d\u043e!___\u0422\u0430\u0437\u0438 \u043e\u043f\u0435\u0440\u0430\u0446\u0438\u044f \u043d\u0435 \u0441\u0435 \u043f\u043e\u0434\u0434\u044a\u0440\u0436\u0430___\u0421\u043d\u0438\u043c\u043a\u0438___\u041f\u0435\u0440\u0438\u0444\u0435\u0440\u0435\u043d___\u0414\u043e\u0431\u0430\u0432\u0438 \u043a\u044a\u043c \u0441\u043f\u0438\u0441\u044a\u043a___\u041f\u0440\u0435\u0438\u043c\u0435\u043d\u0443\u0432\u0430\u0439 \u0440\u0430\u0437\u0448\u0438\u0440\u0435\u043d\u0438\u0435\u0442\u043e \u043d\u0430 \u0444\u0430\u0439\u043b\u0430___\u0412\u044a\u0437\u043f\u0440\u043e\u0438\u0437\u0432\u0435\u0434\u0438 \u0441___ES \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u044f___\u041f\u0440\u0438\u0441\u044a\u0435\u0434\u0438\u043d\u0435\u043d\u0438 \u0441\u0442\u0435 \u043a\u044a\u043c \u043c\u0440\u0435\u0436\u0430 \u0441 \u0438\u043c\u0435___\u041c\u0440\u0435\u0436\u0430___\u041f\u044a\u0442___\u0412\u044a\u0432\u0435\u0434\u0435\u0442\u0435 \u0438\u043c\u0435 \u043d\u0430 \u0441\u043f\u0438\u0441\u044a\u043a\u0430___\u041c\u043e\u0436\u0435 \u0434\u0430 \u0441\u0435 \u0441\u0432\u044a\u0440\u0436\u0435\u0442\u0435 \u0441 \u0434\u0440\u0443\u0433\u0438 \u0432 \u0442\u0430\u0437\u0438 \u043c\u0440\u0435\u0436\u0430___\u0412\u044a\u0437\u0441\u0442\u0430\u043d\u043e\u0432\u044f\u0432\u0430\u043d\u0435\u0442\u043e \u043d\u0430 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438\u0442\u0435 \u0435 \u0443\u0441\u043f\u0435\u0448\u043d\u043e, \u0438\u0437\u0438\u0441\u043a\u0432\u0430 \u0440\u0435\u0441\u0442\u0430\u0440\u0442\u0438\u0440\u0430\u043d\u0435___\u0418\u0441\u043a\u0430\u0442\u0435 \u043b\u0438 \u0434\u0430 \u0437\u0430\u043c\u0435\u0441\u0442\u0438\u0442\u0435___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u043e\u0442\u0432\u0430\u0440\u044f\u043d\u0435 \u043d\u0430 \u0444\u0430\u0439\u043b\u0430___\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u0437\u0430\u0434\u0430\u0432\u0430\u043d\u0435___\u041f\u0430\u0441\u0438\u0432\u0435\u043d___\u041e\u0442\u0434\u0430\u043b\u0435\u0447\u0435\u043d\u0438\u0442\u0435 \u0444\u0430\u0439\u043b\u043e\u0432\u0435 \u043d\u0435 \u043c\u043e\u0433\u0430\u0442 \u0434\u0430 \u0431\u044a\u0434\u0430\u0442 \u0432\u044a\u0437\u0441\u0442\u0430\u043d\u043e\u0432\u0435\u043d\u0438 \u0441\u043b\u0435\u0434 \u0438\u0437\u0442\u0440\u0438\u0432\u0430\u043d\u0435___\u0412\u0435\u0447\u0435 \u0441\u0442\u0435 \u0432 \u043c\u0440\u0435\u0436\u0430\u0442\u0430:___\u0422\u043e\u0437\u0438 \u0430\u0443\u0434\u0438\u043e \u0444\u0430\u0439\u043b \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u0432\u044a\u0437\u043f\u0440\u043e\u0438\u0437\u0432\u0435\u0434\u0435\u043d___\u0423\u0441\u043f\u0435\u0448\u043d\u043e___\u041d\u0430\u0447\u0430\u043b\u0435\u043d \u043d\u043e\u043c\u0435\u0440___\u0421\u0435\u0440\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u044a\u0442 \u043d\u0435 \u0435 \u0432\u0430\u043b\u0438\u0434\u0435\u043d \u0432\u0441\u0435 \u043e\u0449\u0435___\u041f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u0438\u0437\u0438\u0440\u0430\u0439 \u0444\u043e\u043d\u0430___\u0420\u0435\u0437\u043e\u043b\u044e\u0446\u0438\u044f:___\u0414\u0435\u0439\u0441\u0442\u0432\u0438\u0435: %1$s___\u041e\u0431\u043b\u0430\u043a___\u0423\u0441\u043f\u0435\u0448\u043d\u043e___\u0413\u0440\u0435\u0448\u043a\u0430 \u0432 \u043d\u043e\u0441\u0438\u0442\u0435\u043b\u044f___\u041f\u043e\u0442\u0432\u044a\u0440\u0436\u0434\u0430\u0432\u0430\u0442\u0435 \u043b\u0438 \u043a\u043e\u043f\u0438\u0440\u0430\u043d\u0435\u0442\u043e?___\u0418\u0437\u043f\u0440\u0430\u0442\u0435\u0442\u0435 \u043d\u0438 \u0438\u043c\u0435\u0439\u043b___\u041e\u0442\u043a\u043b\u044e\u0447\u0438 \u043f\u0440\u043e\u0437\u043e\u0440\u0435\u0446\u0430___\u0422\u044a\u0440\u0441\u0435\u043d\u0435 \u0432 \u043c\u0443\u0437\u0438\u043a\u0430___IP \u0430\u0434\u0440\u0435\u0441___\u041e\u0442\u0432\u0430\u0440\u044f\u043d\u0435 \u0441___\u0418\u0437\u0442\u0440\u0438\u0442\u043e \u201e%1$s\u201c___\u041f\u043e\u043a\u0430\u0437\u0432\u0430 \u0438\u0437\u0431\u0440\u0430\u043d\u0438 \u0442\u0438\u043f\u043e\u0432\u0435 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0438 \u0432 \u0414\u043e\u043b\u0443\u043c\u043d\u0435\u0442\u043d\u0430\u0442\u0430 \u0431\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a\u0430___\u0421\u043f\u0438\u0441\u044a\u043a \u201e\u0441\u043a\u0440\u0438\u0442\u0438\u201c___\u041a\u043e\u0448\u0447\u0435\u0442\u043e \u0435 \u043f\u0440\u0430\u0437\u043d\u043e___\u0418\u0437\u0442\u0435\u0433\u043b\u044f\u043d\u0435\u0442\u043e \u043f\u0440\u0438\u043a\u043b\u044e\u0447\u0438___\u041c\u0435\u043d\u0438\u0434\u0436\u044a\u0440\u0438___\u0414\u043e\u0431\u0430\u0432\u0438 \u043a\u044a\u043c \u0441\u043f\u0438\u0441\u044a\u043a\u0430___\u0417\u0430\u0434\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 \u0433\u043b\u0430\u0432\u043d\u0430 \u0434\u0438\u0440\u0435\u043a\u0442\u043e\u0440\u0438\u044f___\u041f\u043e\u043a\u0430\u0436\u0438 \u0431\u0443\u0442\u043e\u043d\u0430 \u201e\u041f\u0440\u043e\u0437\u043e\u0440\u0446\u0438\u201c___Instagram \u043d\u0435 \u043f\u043e\u0434\u0434\u044a\u0440\u0436\u0430 \u0438\u0437\u0442\u0440\u0438\u0432\u0430\u043d\u0435 \u043e\u0442 \u0442\u0443\u043a!___ROOT \u0424\u0423\u041d\u041a\u0426\u0418\u0418___\u0418\u0437\u0447\u0438\u0441\u0442\u0438___\u0421\u044a\u0437\u0434\u0430\u0439___\u0412\u0440\u044a\u0437\u043a\u0430\u0442\u0430 \u0435 \u043f\u0440\u0435\u043a\u044a\u0441\u043d\u0430\u0442\u0430___\u041f\u0435\u0441\u043d\u0438\u0442\u0435 \u0441\u0430 \u0434\u043e\u0431\u0430\u0432\u0435\u043d\u0438___\u0421\u043f\u0438\u0441\u044a\u043a \u201e\u043d\u0435\u0437\u0430\u043f\u0430\u043c\u0435\u0442\u0435\u043d\u0438\u201c___%s \u043d\u0435 \u0435 \u043d\u0430\u043c\u0435\u0440\u0435\u043d___\u041f\u0430\u0440\u043e\u043b\u0430\u0442\u0430 \u0442\u0440\u044f\u0431\u0432\u0430 \u0434\u0430 \u0441\u044a\u0434\u044a\u0440\u0436\u0430 \u043d\u0430\u0439-\u043c\u0430\u043b\u043a\u043e 8 \u0437\u043d\u0430\u043a\u0430___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u0437\u0430\u0434\u0430\u0432\u0430\u043d\u0435___\u0418\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u0439 \u0441 \u043a\u0435\u0448\u0438\u0440\u0430\u043d\u0438 \u0434\u0430\u043d\u043d\u0438___\u0420\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u043c\u0440\u0435\u0436\u0430___\u0421\u0438\u0433\u0443\u0440\u043d\u0438 \u043b\u0438 \u0441\u0442\u0435, \u0447\u0435 \u0438\u0441\u043a\u0430\u0442\u0435 \u0434\u0430 \u0438\u0437\u0442\u0440\u0438\u0435\u0442\u0435 {0}?___\u041c\u0440\u0435\u0436\u0430___\u0412\u044a\u0437\u043d\u0438\u043a\u043d\u0430 \u0433\u0440\u0435\u0448\u043a\u0430 \u043f\u0440\u0438 \u0437\u0430\u043f\u0438\u0441\u0432\u0430\u043d\u0435\u0442\u043e \u043d\u0430 \u0444\u0430\u0439\u043b\u0430 \u0438 \u0442\u043e\u0439 \u043d\u044f\u043c\u0430 \u0434\u0430 \u0431\u044a\u0434\u0435 \u0437\u0430\u043f\u0438\u0441\u0430\u043d.___\u0418\u0437\u0447\u0438\u0441\u0442\u0438 \u0445\u0440\u043e\u043d\u043e\u043b\u043e\u0433\u0438\u044f\u0442\u0430___\u041f\u0440\u0435\u0433\u043b\u0435\u0434___\u0421\u0438\u0433\u0443\u0440\u043d\u0438 \u043b\u0438 \u0441\u0442\u0435, \u0447\u0435 \u0438\u0441\u043a\u0430\u0442\u0435 \u0434\u0430 \u0418\u0417\u0422\u0420\u0418\u0415\u0422\u0415 \u0442\u0430\u0437\u0438 \u0437\u0430\u0434\u0430\u0447\u0430?___\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u043d\u0430 \u0442\u044a\u0440\u0441\u0435\u043d\u0435___LAN___\u0418\u0437\u0442\u0440\u0438\u0439___\u0410\u043b\u0433\u043e\u0440\u0438\u0442\u044a\u043c\u044a\u0442 \u0437\u0430 \u0448\u0438\u0444\u0440\u043e\u0432\u0430\u043d\u0435 \u043d\u0435 \u0441\u0435 \u043f\u043e\u0434\u0434\u044a\u0440\u0436\u0430___\u0421\u0442\u0438\u043b \u043d\u0430 \u043f\u0430\u043f\u043a\u0430\u0442\u0430___\u0421\u043b\u0430\u0439\u0434\u0448\u043e\u0443___\u041f\u0440\u0435\u0445\u0432\u044a\u0440\u043b\u044f\u043d\u0435___\u0411\u044a\u0440\u0437\u043e \u043f\u0440\u0435\u0432\u044a\u0440\u0442\u0430\u043d\u0435___ ___\u041f\u043e\u043b\u0443\u0447\u0435\u043d\u0438 \u0441\u043f\u043e\u0434\u0435\u043b\u044f\u043d\u0438\u044f___\u041d\u0430\u043b\u0438\u0447\u043d\u0430 \u0435 \u043d\u043e\u0432\u0430 \u0434\u043e\u0431\u0430\u0432\u043a\u0430 %s, \u0436\u0435\u043b\u0430\u0435\u0442\u0435 \u043b\u0438 \u0434\u0430 \u044f \u0430\u043a\u0442\u0443\u0430\u043b\u0438\u0437\u0438\u0440\u0430\u0442\u0435?___\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e \u0437\u0430 \u0438\u0437\u043f\u0440\u0430\u0449\u0430\u043d\u0435___\u041f\u044a\u0442:___\u0410\u043a\u0442\u0443\u0430\u043b\u0438\u0437\u0438\u0440\u0430\u043d\u0435 \u0434\u043e \u0442\u0435\u043a\u0443\u0449\u0430\u0442\u0430 \u0432\u0435\u0440\u0441\u0438\u044f___\u0418\u0437\u0431\u043e\u0440 \u043d\u0430 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435___\u0417\u0430\u043a\u043b\u044e\u0447\u0438 \u043f\u0440\u043e\u0437\u043e\u0440\u0435\u0446\u0430___Chromecast \u0434\u043e\u0431\u0430\u0432\u043a\u0430\u0442\u0430 \u043d\u0435 \u0435 \u043d\u0430\u043c\u0435\u0440\u0435\u043d\u0430___\u0421\u044a\u0440\u0432\u044a\u0440\u044a\u0442 \u043d\u0435 \u0441\u0435 \u0441\u0442\u0430\u0440\u0442\u0438\u0440\u0430, \u043c\u043e\u043b\u044f \u043f\u0440\u043e\u0432\u0435\u0440\u0435\u0442\u0435 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438\u0442\u0435 \u043d\u0430 \u043f\u043e\u0440\u0442\u0430.___\u0412\u044a\u0437\u0441\u0442\u0430\u043d\u043e\u0432\u044f\u0432\u0430\u043d\u0435 \u043d\u0430 \u043a\u0435\u0448 \u0434\u0430\u043d\u043d\u0438\u0442\u0435?___\u0412\u043a\u043b\u044e\u0447\u0438 \u043e\u0442\u0434\u0430\u043b\u0435\u0447\u0435\u043d\u043e \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0438\u0440\u0430\u043d\u0435___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u0441\u0432\u0430\u043b\u044f\u043d\u0435 \u043d\u0430 \u0434\u043e\u0431\u0430\u0432\u043a\u0430\u0442\u0430, \u043e\u043f\u0435\u0440\u0430\u0446\u0438\u044f\u0442\u0430 \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u0437\u0430\u0432\u044a\u0440\u0448\u0435\u043d\u0430___\u041e\u0442\u0432\u043e\u0440\u0438 \u043a\u0430\u0442\u043e___\u041f\u0440\u043e\u043f\u0443\u0441\u043d\u0438___IP \u0430\u0434\u0440., \u0438\u043b\u0438 IP \u0430\u0434\u0440./\u0421\u043f\u043e\u0434\u0435\u043b\u0435\u043d\u0430 \u041f\u0430\u043f\u043a\u0430___\u0421\u044a\u0437\u0434\u0430\u0432\u0430\u043d\u0435, \u043c\u043e\u043b\u044f \u0438\u0437\u0447\u0430\u043a\u0430\u0439\u0442\u0435...___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u043f\u0440\u0435\u0445\u0432\u044a\u0440\u043b\u044f\u043d\u0435: \u0433\u0440\u0435\u0448\u043a\u0430 \u0432 \u043c\u0440\u0435\u0436\u0430\u0442\u0430 \u0438\u043b\u0438 \u043f\u043e\u043b\u0443\u0447\u0430\u0432\u0430\u043d\u0435\u0442\u043e \u0435 \u043f\u0440\u0435\u043a\u044a\u0441\u043d\u0430\u0442\u043e___\u041a\u043e\u043c\u0435\u043d\u0442\u0430\u0440\u044a\u0442 \u0435 \u043f\u0443\u0431\u043b\u0438\u043a\u0443\u0432\u0430\u043d \u0443\u0441\u043f\u0435\u0448\u043d\u043e___\u041a\u043b\u0438\u043f\u0431\u043e\u0440\u0434___%s \u0435\u043b\u0435\u043c\u0435\u043d\u0442(\u0430)___\u0424\u0430\u0439\u043ba___\u0420\u0430\u0437\u043a\u043b\u0430\u0449\u0430\u043d\u0435___\u041e\u0442\u043c\u0435\u0442\u043a\u0438___\u0420\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u0430\u0439 \u0441\u044a\u0440\u0432\u044a\u0440 %s___\u0412\u044a\u0432\u0435\u0434\u0435\u0442\u0435 \u0430\u0434\u0440\u0435\u0441\u0430 \u0432 Windows Explorer:\n___\u041e\u0442\u0432\u043e\u0440\u0438 \u043f\u0430\u043f\u043a\u0430___\u041f\u0430\u043f\u043a\u0430\u0442\u0430 \u201e%s\u201c \u0435 \u0434\u043e\u0431\u0430\u0432\u0435\u043d\u0430 \u043a\u044a\u043c \u0441\u043f\u0438\u0441\u044a\u043a\u0430 \u0441\u044a\u0441 \u0441\u044a\u0440\u0432\u044a\u0440\u0438.___\u0417\u0430 \u0441\u044a\u0436\u0430\u043b\u0435\u043d\u0438\u0435 \u0438\u043c\u0430 \u0433\u0440\u0435\u0448\u043a\u0430 \u0432 \u043c\u0440\u0435\u0436\u0430\u0442\u0430 \u043f\u0440\u0438 \u043f\u043e\u043b\u0443\u0447\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 \u043c\u0443\u043b\u0442\u0438\u043c\u0435\u0434\u0438\u0439\u043d\u043e \u0441\u044a\u0434\u044a\u0440\u0436\u0430\u043d\u0438\u0435___\u041c\u043e\u043b\u044f, \u0442\u044a\u0440\u0441\u0435\u0442\u0435 \u0444\u0430\u0439\u043b\u043e\u0432\u0435\u0442\u0435 \u043f\u043e\u0434 \u0441\u043f\u0435\u0446\u0438\u0430\u043b\u0435\u043d \u0441\u044a\u0440\u0432\u044a\u0440\u0435\u043d \u043f\u044a\u0442___\u0421\u044a\u0437\u0434\u0430\u0439 \u0442\u043e\u0447\u043a\u0430 \u0437\u0430 \u0434\u043e\u0441\u0442\u044a\u043f___\u041d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0441\u043f\u043e\u0434\u0435\u043b\u0438\u0442\u0435 \u0444\u0430\u0439\u043b\u0430 \u0441 bluetooth___\u0421\u0430\u043c\u043e \u043e\u0431\u043d\u043e\u0432\u0438___\u0418\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0435___\u0421\u0435\u0440\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u044a\u0442 \u0435 \u0438\u0437\u0442\u0435\u043a\u044a\u043b___\u041f\u0440\u0438\u0441\u044a\u0435\u0434\u0438\u043d\u0435\u043d \u043a\u044a\u043c \u043c\u0440\u0435\u0436\u0430___\u041d\u0435 \u0435 \u043e\u0442\u043a\u0440\u0438\u0442\u0430 \u0432\u0440\u044a\u0437\u043a\u0430, \u0432\u043a\u043b\u044e\u0447\u0435\u0442\u0435 \u0431\u0435\u0437\u0436\u0438\u0447\u043d\u0430\u0442\u0430 \u043c\u0440\u0435\u0436\u0430___\u041f\u043e\u043a\u0430\u0436\u0438 \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u043d\u0430\u0442\u0430 \u0441\u0443\u043c\u0430___\u0412\u044a\u0437\u0441\u0442\u0430\u043d\u043e\u0432\u0438 \u043a\u0435\u0448\u0438\u0440\u0430\u043d\u0438\u0442\u0435 \u0434\u0430\u043d\u043d\u0438___\u0423\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e___\u041f\u0440\u0435\u043c\u0435\u0441\u0442\u0432\u0430 \u0438\u0437\u0442\u0440\u0438\u0442\u0438\u0442\u0435 \u0444\u0430\u0439\u043b\u043e\u0432\u0435 \u0432 \u043a\u043e\u0448\u0447\u0435\u0442\u043e, \u0437\u0430 \u0434\u0430 \u043c\u043e\u0433\u0430\u0442 \u0434\u0430 \u0431\u044a\u0434\u0430\u0442 \u0432\u044a\u0437\u0441\u0442\u0430\u043d\u043e\u0432\u0435\u043d\u0438___\u041f\u0430\u0440\u043e\u043b\u0430\u0442\u0430 \u0435 \u043f\u0440\u0435\u043c\u0430\u0445\u043d\u0430\u0442\u0430, \u0437\u0430\u0449\u0438\u0442\u0430\u0442\u0430 \u0435 \u0441\u043f\u0440\u044f\u043d\u0430___\u0417\u0430\u0434\u0440\u044a\u0436\u0442\u0435 \u0438 \u043f\u043b\u044a\u0437\u043d\u0435\u0442\u0435___\u041f\u043e-\u043d\u043e\u0432\u0438___\u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f:___\u0414\u0435\u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0435\u0442\u043e \u043f\u0440\u0438\u043a\u043b\u044e\u0447\u0438___\u041f\u043e\u043a\u0430\u0436\u0438 \u0440\u0430\u0437\u043c\u0435\u0440\u0430 \u043d\u0430 SD \u043a\u0430\u0440\u0442\u0430\u0442\u0430___SD \u043a\u0430\u0440\u0442\u0430\u0442\u0430 \u0435 \u043f\u0440\u0430\u0437\u043d\u0430, \u043d\u0435 \u0435 \u043c\u043e\u043d\u0442\u0438\u0440\u0430\u043d\u0430 \u0438\u043b\u0438 \u043d\u0435 \u043f\u0440\u0438\u0441\u044a\u0441\u0442\u0432\u0430___\u0422\u0435\u043a\u0443\u0449\u0430 \u043d\u0430\u0447\u0430\u043b\u043d\u0430 \u0434\u0438\u0440\u0435\u043a\u0442\u043e\u0440\u0438\u044f:___E\u0437\u0438\u043a___\u0414\u043e\u0431\u0430\u0432\u0438 \u043a\u044a\u043c___\u043a\u043e\u0441\u0432\u0435\u043d\u043e___\u0418\u0437\u0440\u0435\u0436\u0438___\u041a\u043e\u043c\u043f\u044e\u0442\u044a\u0440___\u0412\u044a\u0432\u0435\u0434\u0435\u0442\u0435 \u043f\u0430\u0440\u043e\u043b\u0430___\u0420\u044a\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e \u0437\u0430 ES File Explorer___\u041c\u0430\u043a\u0441\u0438\u043c\u0430\u043b\u0435\u043d \u043e\u0431\u0435\u043c \u043d\u0430 \u0445\u0440\u043e\u043d\u043e\u043b\u043e\u0433\u0438\u044f\u0442\u0430___\u0420\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u0430\u0439 \u0442\u0435\u043c\u0430\u0442\u0430___\u0410\u043a\u0442\u0438\u0432\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u043a\u043e\u0448\u0447\u0435 \u0444\u0443\u043d\u043a\u0446\u0438\u044f (\u043f\u0440\u0435\u043c\u0435\u0441\u0442\u0432\u0430 \u0444\u0430\u0439\u043b\u043e\u0432\u0435\u0442\u0435 \u0442\u0430\u043c, \u0432\u043c\u0435\u0441\u0442\u043e \u0434\u0430 \u0433\u0438 \u0438\u0437\u0442\u0440\u0438\u0432\u0430)?___\u041e\u0442\u043c\u0435\u0442\u043a\u0438___Bluetooth \u0434\u0438\u0440\u0435\u043a\u0442\u043e\u0440\u0438\u044f:___\u041e\u0441\u0442\u0430\u0432\u0430\u0449\u0438:___\u0420\u0435\u0436\u0438\u043c___\u041e\u0442\u0434\u0430\u043b\u0435\u0447\u0435\u043d\u043e \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435___\u041d\u043e\u0432 \u0441\u044a\u0440\u0432\u044a\u0440 %s___\u0418\u0437\u043a\u043b\u044e\u0447\u0432\u0430\u043d\u0435...___\u041e\u0431\u0449\u043e: %s \u0435\u043b\u0435\u043c\u0435\u043d\u0442(\u0430) %s___\u0414\u0435\u043a\u0440\u0438\u043f\u0442\u0438\u0440\u0430\u0439\u0442\u0435 \u0444\u0430\u0439\u043e\u0432\u0435\u0442\u0435 \u043f\u0440\u0435\u0434\u0438 \u043f\u043e\u0432\u0442\u043e\u0440\u043d\u043e \u043a\u0440\u0438\u043f\u0442\u0438\u0440\u0430\u043d\u0435___\u0418\u0441\u043a\u0430\u0442\u0435 \u043b\u0438 \u0434\u0430 \u0437\u0430\u043f\u0438\u0448\u0435\u0442\u0435___\u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f\u0442\u0430 \u0441\u0430 \u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0438___\u0414\u043e\u0431\u0430\u0432\u0435\u0442\u0435 \u0441\u044a\u0440\u0432\u044a\u0440 \u043e\u0442 \u0421\u044a\u0437\u0434\u0430\u0439->\u0421\u044a\u0440\u0432\u044a\u0440___\u041d\u0430\u043c\u0435\u0440\u0435\u043d\u043e \u0435 \u0438\u0437\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435!___\u041d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u043e \u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0441\u0442\u0432\u043e:___\u0414\u0435\u043a\u043e\u043c\u043f\u0440\u0435\u0441\u0438\u0440\u0430\u043d\u0435___\u041e\u0442\u0434\u0430\u043b\u0435\u0447\u0430\u0432\u0430\u043d\u0435___Instagram \u043d\u0435 \u043f\u043e\u0434\u0434\u044a\u0440\u0436\u0430 \u0440\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u0430\u043d\u0435 \u043e\u0442 \u0442\u0443\u043a!___\u0420\u0430\u0437\u043c\u0435\u0440:___\u0412\u044a\u0432\u0435\u0434\u0435\u0442\u0435 \u0438\u043c\u0435___\u0418\u043c\u0435:___\u0418\u0437\u0442\u0435\u0433\u043b\u0435\u0442\u0435 \u043e\u0449\u0435 \u0442\u0435\u043c\u0438 \u043e\u043d\u043b\u0430\u0439\u043d___QQ \u043f\u043e\u0442\u0440\u0435\u0431\u0438\u0442\u0435\u043b___\u0421\u0432\u043e\u0439\u0441\u0442\u0432\u0430___\u0421\u043e\u0431\u0441\u0442\u0432\u0435\u043d\u0438\u043a___\u041f\u0440\u0435\u043c\u0435\u0441\u0442\u0432\u0430\u043d\u0435___- SMB \u0441\u044a\u0440\u0432\u044a\u0440\u044a\u0442 \u0435 \u0438\u0437\u0432\u044a\u043d \u043e\u0431\u0445\u0432\u0430\u0442\u0430 \u043d\u0430 \u043c\u0440\u0435\u0436\u0430\u0442\u0430___\u041f\u043e\u0442\u0432\u044a\u0440\u0436\u0434\u0430\u0432\u0430\u0442\u0435 \u043b\u0438 \u0438\u0437\u0447\u0438\u0441\u0442\u0432\u0430\u043d\u0435\u0442\u043e \u043d\u0430 \u0437\u0430\u0434\u0430\u0447\u0438\u0442\u0435?\n \u0412\u043a\u043b\u044e\u0447\u0438\u0442\u0435\u043b\u043d\u043e %1$s \u0435\u043b\u0435\u043c\u0435\u043d\u0442(\u0430), %2$s \u0437\u0430\u0434\u0430\u0447\u0430(\u0438) \u0437\u0430 \u0438\u0437\u0442\u0435\u0433\u043b\u044f\u043d\u0435___\u0414\u043e\u0441\u0442\u044a\u043f\u0435\u043d:___ ___\u0413\u0440\u0443\u043f\u0430___\u0435 \u0438\u0437\u0442\u0440\u0438\u0442 \u0443\u0441\u043f\u0435\u0448\u043d\u043e!___\u041e\u0442\u043a\u0440\u0438\u0432\u0430\u043d\u0435 \u043d\u0430 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430 \u0432 \u0431\u043b\u0438\u0437\u043e\u0441\u0442\u2026___\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u043d\u043e \u043a\u0430\u0447\u0432\u0430 \u0444\u0430\u0439\u043b, \u043a\u043e\u0433\u0430\u0442\u043e \u0441\u0435 \u0440\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u0430 \u043b\u043e\u043a\u0430\u043b\u043d\u043e \u043e\u0442 \u0434\u0440\u0443\u0433\u043e \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435___\u0414\u0440\u0443\u0433\u0438___\u2193___\u041f\u043e\u0442\u0432\u044a\u0440\u0436\u0434\u0430\u0432\u0430\u0442\u0435 \u043b\u0438 \u0438\u0437\u0442\u0440\u0438\u0432\u0430\u043d\u0435\u0442\u043e \u043d\u0430 \u043c\u043d\u043e\u0436\u0435\u0441\u0442\u0432\u043e \u0444\u0430\u0439\u043b\u043e\u0432\u0435?___\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e___\u0414\u044a\u043b\u0436\u0438\u043d\u0430\u0442\u0430 \u043d\u0430 \u043f\u0430\u0440\u043e\u043b\u0430\u0442\u0430 \u0435 \u0433\u0440\u0435\u0448\u043d\u0430 (6 - 34)___\u0413\u0440\u0435\u0448\u043a\u0430, \u0441\u044a\u0440\u0432\u044a\u0440\u044a\u0442 {0} \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u043d\u0430\u043c\u0435\u0440\u0435\u043d___\u041a\u043e\u043c\u043f\u0440\u0435\u0441\u0438\u0440\u0430\u043d\u0435___\u0420\u0430\u0437\u0448\u0438\u0440\u0435\u043d\u0438\u0435\u0442\u043e \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0441\u044a\u0434\u044a\u0440\u0436\u0430 \u0441\u043b\u0435\u0434\u043d\u0438\u0442\u0435 \u0441\u0438\u043c\u0432\u043e\u043b\u0438 * \\ / \" : ? | < >___\u041e\u0442\u0432\u043e\u0440\u0438 \u0432 \u0442\u0435\u043a\u0443\u0449\u0438\u044f \u043f\u0440\u043e\u0437\u043e\u0440\u0435\u0446___\u0421\u043d\u0438\u043c\u043a\u0438:___\u0418\u0437\u0442\u0440\u0438\u0432\u0430\u043d\u0435 \u043d\u0430 \u0438\u0437\u0442\u043e\u0447\u043d\u0438\u0446\u0438\u0442\u0435\u2026___\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u0430\u043b\u0431\u0443\u043c___\u0417\u0430\u0434\u0430\u0447\u0430\u0442\u0430 \u0435 \u043d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u0430___\u0421\u0442\u0430\u0440\u0442\u0438\u0440\u0430\u0439___\u041a\u0435\u0448\u0438\u0440\u0430\u043d\u0438\u0442\u0435 \u0434\u0430\u043d\u043d\u0438 \u0441\u0430 \u0438\u0437\u0442\u0440\u0438\u0442\u0438 \u0443\u0441\u043f\u0435\u0448\u043d\u043e___zip___\u0438\u0437\u0440\u0438\u0447\u043d\u043e___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u043a\u043e\u043c\u043f\u0440\u0435\u0441\u0438\u0440\u0430\u043d\u0435: {0}. \u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u043e\u0442 \u0441\u0438\u0441\u0442\u0435\u043c\u0430\u0442\u0430___\u0414\u0435\u0442\u0430\u0439\u043b\u0438___\u0410\u043a\u0442\u0438\u0432\u0435\u043d___\u041f\u0440\u043e\u0433\u0440\u0435\u0441___\u0420\u0430\u0437\u043d\u0438___\u0412\u044a\u0432\u0435\u0434\u0435\u0442\u0435 \u043f\u0430\u0440\u043e\u043b\u0430\u0442\u0430___\u041d\u044f\u043c\u0430\u0442\u0435 \u043f\u0440\u0430\u0432\u0430 \u0437\u0430 \u0442\u0430\u0437\u0438 \u043f\u0430\u043f\u043a\u0430___\u041f\u0440\u0438\u043d\u0443\u0434\u0438\u0442\u0435\u043b\u043d\u043e\u0442\u043e \u0438\u0437\u0432\u0430\u0436\u0434\u0430\u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0434\u043e\u0432\u0435\u0434\u0435 \u0434\u043e \u0437\u0430\u0433\u0443\u0431\u0430 \u043d\u0430 \u0434\u0430\u043d\u043d\u0438___\u0418\u0437\u0433\u043b\u0435\u0434___\u041d\u043e\u0432\u0438\u043d\u0438___\u0424\u0430\u0439\u043b\u044a\u0442 \u043d\u0435 \u0435 \u043d\u0430\u043c\u0435\u0440\u0435\u043d? \u041e\u043f\u0438\u0442\u0430\u0439\u0442\u0435 \u043f\u043e-\u0437\u0430\u0434\u044a\u043b\u0431\u043e\u0447\u0435\u043d\u043e \u0442\u044a\u0440\u0441\u0435\u043d\u0435___\u0420\u0430\u0437\u0433\u044a\u043d\u0438 \u0432\u0441\u0438\u0447\u043a\u0438___\u0424\u0430\u0439\u043b-\u0438\u0437\u0442\u043e\u0447\u043d\u0438\u043a___\u0418\u0437\u043f\u043e\u043b\u0437\u0432\u0430\u0442\u0435 \u043d\u0435\u043e\u0444\u0438\u0446\u0438\u0430\u043b\u043d\u0430 \u0432\u0435\u0440\u0441\u0438\u044f \u043d\u0430 {0}! \u0417\u0430 \u0434\u0430 \u0441\u0435 \u043e\u0441\u0438\u0433\u0443\u0440\u0438 \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442, \u043c\u043e\u043b\u044f, \u043f\u043e\u0441\u0435\u0442\u0435\u0442\u0435 http://www.estrongs.com \u0438 \u0438\u0437\u0442\u0435\u0433\u043b\u0435\u0442\u0435 \u043e\u0444\u0438\u0446\u0438\u0430\u043b\u043d\u0430\u0442\u0430 \u0432\u0435\u0440\u0441\u0438\u044f___\u041f\u0440\u0435\u043f\u043e\u0440\u044a\u043a\u0438___\u0410\u043a\u0442\u0438\u0432\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u0436\u0435\u0441\u0442\u043e\u0432\u0435___\u041f\u0443\u0431\u043b\u0438\u043a\u0443\u0432\u0430\u0439___\u0414\u0435\u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u043e \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435, \u0441\u0438\u0433\u0443\u0440\u043d\u0438 \u043b\u0438 \u0441\u0442\u0435?___\u0421\u044a\u043e\u0431\u0449\u0435\u043d\u0438\u0435 \u043f\u0440\u0438 USB___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u0434\u043e\u0431\u0430\u0432\u044f\u043d\u0435 \u043d\u0430 \u043f\u0435\u0441\u0435\u043d, \u0441\u043f\u0438\u0441\u044a\u043a\u044a\u0442 \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0441\u0435 \u0440\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u0430___\u0424\u043e\u0440\u043c\u0430\u0442 \u043d\u0430 \u0434\u0430\u0442\u0430\u0442\u0430___\u041d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0441\u043f\u043e\u0434\u0435\u043b\u0438\u0442\u0435 \u043f\u043e\u0432\u0435\u0447\u0435 \u043e\u0442 100 \u0444\u0430\u0439\u043b\u0430 \u043d\u0430\u0432\u0435\u0434\u043d\u044a\u0436___\u041f\u0443\u0441\u043d\u0435\u0442\u0435 \u043b\u043e\u043a\u0430\u043b\u043d\u043e___\u0421\u0435\u0434\u043c\u0438\u0446\u0438___\u041f\u0440\u0438\u043b\u043e\u0436\u0438 \u043a\u044a\u043c \u0432\u0441\u0438\u0447\u043a\u0438___\u0418\u0437\u0432\u043b\u0435\u0447\u0438___\u0414\u043e\u0431\u0430\u0432\u0438 \u0436\u0435\u0441\u0442___\u0417\u0430 \u0441\u044a\u0436\u0430\u043b\u0435\u043d\u0438\u0435, \u0442\u043e\u0437\u0438 \u0442\u0438\u043f \u043c\u0435\u0434\u0438\u044f \u043d\u0435 \u0441\u0435 \u043f\u043e\u0434\u0434\u044a\u0440\u0436\u0430___\u0421\u0438\u0433\u0443\u0440\u043d\u0438 \u043b\u0438 \u0441\u0442\u0435, \u0447\u0435 \u0438\u0441\u043a\u0430\u0442\u0435 \u0434\u0430 \u0432\u044a\u0437\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u0435 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438\u0442\u0435 \u0437\u0430 %s?___\u0417\u0430\u043f\u0430\u0437\u0438___\u0421\u044a\u0437\u0434\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 \u0442\u043e\u0447\u043a\u0430 \u0437\u0430 \u0434\u043e\u0441\u0442\u044a\u043f___\u0418\u0437\u0432\u043b\u0438\u0447\u0430\u043d\u0435 \u043d\u0430 \u0438\u0437\u0431\u0440\u0430\u043d\u0438\u0442\u0435 \u0444\u0430\u0439\u043b\u043e\u0432\u0435 \u0432___\u0435\u043b\u0435\u043c\u0435\u043d\u0442(\u0430)___\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u043a\u043e\u0434\u0438\u0440\u0430\u043d\u0435___\u041f\u0440\u043e\u0444\u0438\u043b___\u0418\u0437\u043f\u044a\u043b\u043d\u0438___\u0417\u0430\u043f\u0430\u0437\u0438 \u0432 SD___\u0418\u0437\u043a\u043b.___\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u0430\u043d\u0435!___\u041d\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u0435\u043d\u043e___SD \u043a\u0430\u0440\u0442\u0430\u0442\u0430 \u0435 \u0434\u0435\u043c\u043e\u043d\u0442\u0438\u0440\u0430\u043d\u0430___\u041d\u0435 \u0438\u0437\u0442\u0440\u0438\u0432\u0430\u0439\u0442\u0435 \u043c\u0435\u0434\u0438\u0439\u043d\u0438\u0442\u0435 \u0444\u0430\u0439\u043b\u043e\u0432\u0435___\u0421\u043a\u043e\u0440\u043e\u0441\u0442___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u0441\u044a\u0437\u0434\u0430\u0434\u0435\u043d \u043f\u0440\u044f\u043a \u043f\u044a\u0442___\u0418\u0437\u043f\u043e\u043b\u0437\u0432\u0430\u0439 \u0441\u043b\u0443\u0447\u0430\u0439\u043d\u0438 \u0438\u043c\u0435\u043d\u0430 \u0437\u0430 \u043c\u0440\u0435\u0436\u0430___\u0418\u0437\u043f\u0440\u0430\u0449\u0430\u0447\u044a\u0442 \u0435  \u043f\u0440\u0435\u043a\u044a\u0441\u043d\u0430\u0442___\u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0441\u0435 \u0434\u0435\u043c\u043e\u043d\u0442\u0438\u0440\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u0430, \u0437\u0430\u043f\u0438\u0441\u0432\u0430\u0435\u043c\u0430 \u0437\u0430 \u0434\u0435\u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0435___\u041d\u0438\u0432\u043e \u043d\u0430 \u043a\u043e\u043c\u043f\u0440\u0435\u0441\u0438\u0440\u0430\u043d\u0435___\u0418\u0437\u0440\u0435\u0436\u0438 \u0441\u043d\u0438\u043c\u043a\u0430\u0442\u0430___\u0418\u0441\u043a\u0430\u0442\u0435 \u043b\u0438 \u0434\u0430 \u0438\u0437\u0442\u0440\u0438\u0435\u0442\u0435 \u0432\u0441\u0438\u0447\u043a\u0438\u0442\u0435 %s \u0437\u0430\u0434\u0430\u0447\u0438?___\u0418\u0441\u043a\u0430\u0442\u0435 \u043b\u0438 \u0434\u0430 \u0438\u0437\u043f\u0440\u0430\u0437\u043d\u0438\u0442\u0435 \u043a\u043e\u0448\u0447\u0435\u0442\u043e?___\u0418\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u0438___\u0417\u0430\u0434\u0430\u0439 \u0446\u0432\u044f\u0442 \u043d\u0430 \u0444\u043e\u043d\u0430___\u0410\u0443\u0434\u0438\u043e:___\u0422\u044a\u0440\u0441\u0435\u043d\u0435 \u043d\u0430 \u043f\u0435\u0441\u043d\u0438\u2026___\u0412 \u0438\u0437\u0431\u0440\u0430\u043d\u0438\u0442\u0435 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f \u043f\u0440\u0438\u0441\u044a\u0441\u0442\u0432\u0430\u0442 \u0438 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u0438 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f, \u0430\u043a\u0442\u0438\u0432\u0438\u0440\u0430\u0439\u0442\u0435 \u043e\u043f\u0446\u0438\u044f\u0442\u0430 root explorer \u043e\u0442 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438\u0442\u0435.___\u0424\u0430\u0439\u043b \u043d\u0430\u0434 2GB \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u043a\u0440\u0438\u043f\u0442\u0438\u0440\u0430\u043d___\u041a\u043e\u043c\u043f\u0440\u0435\u0441\u0438\u0440\u0430\u0439___\u043a\u0440\u0438\u043f\u0442\u0438\u0440\u0430\u043d\u0435...___\u0417\u0430\u0442\u0432\u043e\u0440\u0438___\u0421\u044a\u0440\u0432\u044a\u0440___\u0421\u0442\u0430\u0440\u0442\u0438\u0440\u0430\u0439 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435___\u0418\u043c\u0435\u0442\u043e \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0435 \u043f\u0440\u0430\u0437\u043d\u043e___\u0410\u0440\u0445\u0438\u0432\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435\u0442\u043e___\u041e\u0442\u0434\u0430\u043b\u0435\u0447\u0435\u043d\u0438 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438___\u0417\u0430\u0440\u0435\u0436\u0434\u0430\u043d\u0435 \u043d\u0430 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430\u0442\u0430 \u0437\u0430 \u0443\u0434\u043e\u0441\u0442\u043e\u0432\u0435\u0440\u044f\u0432\u0430\u043d\u0435\u2026___\u041f\u0440\u0435\u0441\u043a\u043e\u0447\u0438 \u0434\u043e___\u0418\u0437\u043f\u044a\u043b\u043d\u0435\u043d\u0438\u0435___\u041d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0442\u044a\u0440\u0441\u0438\u0442\u0435 \u0432 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u0438 \u0434\u0438\u0440\u0435\u043a\u0442\u043e\u0440\u0438\u0438.___\u041d\u0430\u0447\u0430\u043b\u043e___\u041f\u0440\u0435\u043c\u0430\u0445\u043d\u0438 \u043e\u0442 \u0441\u043f\u0438\u0441\u044a\u043a\u0430___\u0424\u0430\u0439\u043b\u044a\u0442 %s \u0432\u0435\u0447\u0435 \u0441\u044a\u0449\u0435\u0441\u0442\u0432\u0443\u0432\u0430, \u0434\u0430 \u0431\u044a\u0434\u0435 \u043b\u0438 \u043f\u0440\u0435\u0437\u0430\u043f\u0438\u0441\u0430\u043d?___\u0414\u0435\u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0435\u0442\u043e \u0435 \u043d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e___\u0418\u0437\u043f\u0440\u0430\u0442\u0438 \u043f\u043e LAN___\u0420\u0435\u0441\u0443\u0440\u0441\u0438\u0442\u0435 \u0441\u0430 \u043d\u0435\u0434\u043e\u0441\u0442\u044a\u043f\u043d\u0438 \u0432 \u043c\u043e\u043c\u0435\u043d\u0442\u0430___\u0418\u0437\u0445\u043e\u0434___\u041d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u043d\u0430\u043c\u0435\u0440\u0435\u043d \u043c\u0430\u0433\u0430\u0437\u0438\u043d\u044a\u0442 Google Play___\u0424\u0430\u0439\u043b-\u043d\u0430\u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435___\u0422\u0430\u0437\u0438 \u0431\u0435\u0437\u0436\u0438\u0447\u043d\u0430 \u0442\u043e\u0447\u043a\u0430 \u043d\u0435 \u0441\u0435 \u043f\u043e\u0434\u0434\u044a\u0440\u0436\u0430___\u0421\u0438\u043b\u0430\u0442\u0430 \u043d\u0430 \u0430\u043b\u0433\u043e\u0440\u0438\u0442\u044a\u043c\u0430 \u0437\u0430 \u0448\u0438\u0444\u0440\u043e\u0432\u0430\u043d\u0435 \u043d\u0435 \u0441\u0435 \u043f\u043e\u0434\u0434\u044a\u0440\u0436\u0430___\u0413\u0440\u0435\u0448\u043a\u0430 \u0432 SSL \u0441\u0435\u0440\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u0430___\u0422\u0435\u043a\u0443\u0449 \u043d\u0430\u0431\u043e\u0440 \u043e\u0442 \u0441\u0438\u043c\u0432\u043e\u043b\u0438:___\u0418\u0437\u0447\u0430\u043a\u0432\u0430\u043d\u0435 \u043d\u0430 \u0432\u0440\u044a\u0437\u043a\u0430 \u0441___\u0418\u0437\u0442\u043e\u0447\u043d\u0438\u043a:___\u041c\u0440\u0435\u0436\u043e\u0432\u0438 \u043c\u0435\u043d\u0438\u0434\u0436\u044a\u0440___\u0448\u0438\u0444\u0440\u043e\u0432\u0430\u043d\u0435___\u0412\u044a\u0437\u043e\u0431\u043d\u043e\u0432\u0438___\u0441\u043a\u0430\u043d\u0438\u0440\u0430\u043d\u0435\u2026___USB \u0443-\u0432\u043e\u0442\u043e \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0432\u044a\u0434\u0435 \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e \u0438\u0437\u0432\u0430\u0434\u0435\u043d\u043e. \u0417\u0430\u0432\u044a\u0440\u0448\u0435\u0442\u0435 \u0437\u0430\u0434\u0430\u0447\u0438\u0442\u0435 \u0438 \u043e\u043f\u0438\u0442\u0430\u0439\u0442\u0435 \u043e\u0442\u043d\u043e\u0432\u043e \u0438\u043b\u0438 \u0438\u0437\u0432\u0430\u0434\u0435\u0442\u0435 \u043f\u0440\u0438\u043d\u0443\u0434\u0438\u0442\u0435\u043b\u043d\u043e___\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u0432\u0430\u0448\u0435\u0442\u043e \u0444\u043e\u043d\u043e\u0432\u043e \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435___\u041e\u043f\u0435\u0440\u0430\u0446\u0438\u044f\u0442\u0430 \u0441 \u043c\u043d\u043e\u0436\u0435\u0441\u0442\u0432\u043e \u0444\u0430\u0439\u043b\u043e\u0432\u0435 \u0435 \u0437\u0430\u0432\u044a\u0440\u0448\u0435\u043d\u0430___\u041f\u0440\u043e\u0437\u043e\u0440\u0446\u0438___\u041e\u043f\u0438\u0442\u0430\u0439 \u043e\u0442\u043d\u043e\u0432\u043e___\u0410\u0440\u0445\u0438\u0432\u043d\u0430 \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f___\u0418\u043c\u0435\u0442\u043e \u043d\u0430 \u0444\u0430\u0439\u043b\u0430 \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0441\u044a\u0434\u044a\u0440\u0436\u0430 \u0441\u0438\u043c\u0432\u043e\u043b\u0438\u0442\u0435 * \\ / \":? | < >___\u0418\u0437\u043f\u0440\u0430\u0442\u0438 \u043f\u043e LAN___\u0418\u0437\u0432\u043b\u0438\u0447\u0430 \u0438 \u0438\u0437\u043f\u043e\u043b\u0437\u0432\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u0438\u0442\u0435 \u043c\u0440\u0435\u0436\u043e\u0432\u0438 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438___\u0410\u0440\u0445\u0438\u0432\u0438\u0440\u0430\u043d___\u0447\u0430\u0441\u043e\u0432\u0435___\u0412\u044a\u0437\u0441\u0442\u0430\u043d\u043e\u0432\u044f\u0432\u0430\u043d\u0435___\u0418\u0437\u0447\u0438\u0441\u0442\u0432\u0430\u043d\u0435 \u043d\u0430 \u0442\u0435\u043a\u0443\u0449\u0438\u0442\u0435 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u0438 \u0432\u0440\u044a\u0449\u0430\u043d\u0435 \u043d\u0430 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438\u0442\u0435 \u043f\u043e \u043f\u043e\u0434\u0440\u0430\u0437\u0431\u0438\u0440\u0430\u043d\u0435___\u0418\u0441\u043a\u0430\u0442\u0435 \u043b\u0438 \u0434\u0430 \u043f\u0440\u0435\u043c\u0435\u0441\u0442\u0438\u0442\u0435 {0} \u0432 \u043a\u043e\u0448\u0447\u0435\u0442\u043e___\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f___\u041d\u044f\u043c\u0430 \u043f\u043e\u0432\u0435\u0447\u0435 \u043a\u043e\u043c\u0435\u043d\u0442\u0430\u0440\u0438___\u0421\u044a\u0437\u0434\u0430\u0434\u0435\u043d:___\u041f\u043e\u0434\u0440\u043e\u0431\u043d\u0438 \u0434\u0430\u043d\u043d\u0438___\u0420\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u0430\u0439 \u0441\u044a\u0440\u0432\u044a\u0440___\u041a\u043e\u043c\u043f\u0440\u0435\u0441\u0438\u0440\u0430\u043d\u0435 {0}.{1}___\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f\u0442\u0430 \u043d\u0435 \u0435 \u043e\u0431\u043d\u043e\u0432\u0435\u043d\u0430___\u0418\u0437\u0433\u043b\u0435\u0434___\u0417\u0430\u043f\u0438\u0448\u0438 \u043f\u0440\u043e\u043c\u0435\u043d\u0438\u0442\u0435___\u041f\u0440\u0435\u0438\u043c\u0435\u043d\u0443\u0432\u0430\u0439___\u0418\u0437\u0442\u043e\u0447\u043d\u0438\u043a\u044a\u0442 \u043d\u0430 \u0438\u0437\u0442\u0435\u0433\u043b\u044f\u043d\u0435 \u0435 \u043a\u043e\u043f\u0438\u0440\u0430\u043d___\u041f\u0440\u0430\u0432\u0430___\u0412\u044a\u0442\u0440\u0435\u0448\u043d\u0430 \u043f\u0430\u043c\u0435\u0442___\u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f___\u041d\u0430\u043c\u0435\u0440\u0435\u043d\u0430 \u0435 \u043f\u043e-\u0441\u0442\u0430\u0440\u0430 \u0432\u0435\u0440\u0441\u0438\u044f, \u0438\u0441\u043a\u0430\u0442\u0435 \u043b\u0438 \u0434\u0430 \u044f \u0434\u0435\u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u0442\u0435 \u0441\u0435\u0433\u0430, \u0437\u0430 \u0434\u0430 \u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u0442\u0435 \u043e\u0444\u0438\u0446\u0438\u0430\u043b\u043d\u0430\u0442\u0430 \u0432\u0435\u0440\u0441\u0438\u044f?___\u041d\u0430\u043c\u0435\u0440\u0435\u043d\u0430 \u0435 \u043d\u043e\u0432\u0430 \u0432\u0435\u0440\u0441\u0438\u044f, \u0430\u043a\u0442\u0443\u0430\u043b\u0438\u0437\u0438\u0440\u0430\u043d\u0435 \u0441\u0435\u0433\u0430?___\u0418\u0437\u0442\u0440\u0438\u0439 \u0444\u0430\u0439\u043b\u0430___\u0420\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u0430\u0439___\u0412\u0435\u0447\u0435 \u0441\u044a\u0449\u0435\u0441\u0442\u0432\u0443\u0432\u0430 \u0444\u0430\u0439\u043b \u0441 \u0442\u043e\u0432\u0430 \u0438\u043c\u0435___\u041f\u0440\u0435\u0434\u0443\u043f\u0440\u0435\u0436\u0434\u0435\u043d\u0438\u0435!!! \u0422\u0440\u044f\u0431\u0432\u0430 \u0434\u0430 \u043c\u043e\u043d\u0442\u0438\u0440\u0430\u0442\u0435 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u0430\u0442\u0430 \u0434\u0438\u0440\u0435\u043a\u0442\u043e\u0440\u0438\u044f \u043a\u0430\u0442\u043e \u0437\u0430\u043f\u0438\u0441\u0432\u0430\u0435\u043c\u0430, \u0430\u043a\u043e \u0438\u0441\u043a\u0430\u0442\u0435 \u0434\u0430 \u043f\u0440\u0430\u0432\u0438\u0442\u0435 \u043f\u0440\u043e\u043c\u0435\u043d\u0438 \u0432 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u0438\u0442\u0435 \u0444\u0430\u0439\u043b\u043e\u0432\u0435. \u041f\u0440\u043e\u043c\u044f\u043d\u0430\u0442\u0430 \u043d\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u0438\u0442\u0435 \u0444\u0430\u0439\u043b\u043e\u0432\u0435 \u0438 \u043f\u0430\u043f\u043a\u0438 \u0435 \u043e\u043f\u0430\u0441\u043d\u0430, \u043c\u043e\u043b\u044f \u0432\u043d\u0438\u043c\u0430\u0432\u0430\u0439\u0442\u0435!___Baidu \u043f\u043e\u0442\u0440\u0435\u0431\u0438\u0442\u0435\u043b___\u0424\u0430\u0439\u043b___\u041f\u044a\u0440\u0432\u043e \u0438\u0437\u0442\u0435\u0433\u043b\u0435\u0442\u0435 \u0442\u0435\u043c\u0430\u0442\u0430___\u0421\u044a\u0437\u0434\u0430\u0439 \u043d\u043e\u0432 \u0441\u043f\u0438\u0441\u044a\u043a___\u0410\u0443\u0434\u0438\u043e___\u0422\u044a\u0440\u0441\u0435\u043d\u0435 \u0432 \u043c\u0440\u0435\u0436\u0430\u0442\u0430___\u0414\u0438\u0440\u0435\u043a\u0442\u043e\u0440\u0438\u0438___\u041c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435___\u041d\u0430\u043b\u0438\u0447\u043d\u0438:___\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u043f\u044a\u0442___\u0423\u0434\u043e\u0431\u043d\u043e \u0437\u0430 \u043d\u043e\u0441\u0435\u043d\u0435___\u0410\u0440\u0445\u0438\u0432\u0438\u0440\u0430\u043d\u0435...___M\u0438\u043d\u0438\u0430\u0442\u044e\u0440\u0438___\u041e\u0442\u043c\u0435\u0442\u043a\u0430\u0442\u0430 {0} \u0435 \u0441\u044a\u0437\u0434\u0430\u0434\u0435\u043d\u0430 \u0443\u0441\u043f\u0435\u0448\u043d\u043e.___\u041f\u043e\u043a\u0430\u0436\u0438 \u0441\u0432\u043e\u0439\u0441\u0442\u0432\u0430___\u0427\u0435\u0442\u0435\u043d\u0435:___Sticky \u0431\u0438\u0442___{0} \u043a\u043e\u043f\u0438\u0440\u0430\u043d\u0438.___\u041e\u0440\u0438\u0433\u0438\u043d\u0430\u043b\u043d\u043e \u0438\u043c\u0435 \u043d\u0430 \u0444\u0430\u0439\u043b\u0430___\u0424\u0430\u0439\u043b\u044a\u0442 \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u043f\u0440\u0435\u043c\u0435\u0441\u0442\u0435\u043d \u0432 \u043a\u043e\u0448\u0447\u0435\u0442\u043e, \u0438\u0441\u043a\u0430\u0442\u0435 \u043b\u0438 \u0434\u0430 \u0433\u043e \u0438\u0437\u0442\u0440\u0438\u0435\u0442\u0435?___\u041d\u044f\u043c\u0430 \u0431\u0435\u0437\u0436\u0438\u0447\u043d\u0430 \u0432\u0440\u044a\u0437\u043a\u0430, \u043c\u043e\u043b\u044f \u0441\u044a\u0437\u0434\u0430\u0439\u0442\u0435 \u0442\u0430\u043a\u0430\u0432\u0430!___\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u0432\u0430\u0448\u0438\u044f \u0435\u0437\u0438\u043a___\u0418\u043c\u0430 \u043f\u0440\u043e\u0431\u043b\u0435\u043c \u043f\u0440\u0438 \u0430\u043d\u0430\u043b\u0438\u0437\u0430 \u043d\u0430 \u043f\u0430\u043a\u0435\u0442\u0430___\u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e \u043e\u0442 \u043f\u043e\u043b\u0443\u0447\u0430\u0442\u0435\u043b\u044f___\u0422\u0438\u043f:___\u0412\u0435\u0440\u0441\u0438\u044f\u0442\u0430 \u0435 \u0430\u043a\u0442\u0443\u0430\u043b\u043d\u0430.___\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u043f\u043e\u043d\u0435 \u0435\u0434\u0438\u043d {0}.___URL \u0430\u0434\u0440\u0435\u0441\u044a\u0442 \u0435 \u043d\u0435\u0432\u0430\u043b\u0438\u0434\u0435\u043d___ ___\u0421\u044a\u0434\u044a\u0440\u0436\u0430:___\u0421\u043e\u0440\u0442\u0438\u0440\u0430\u043d\u0435___\u0449\u0435 \u0432\u0438 \u0438\u0437\u043f\u0440\u0430\u0442\u0438 \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435\u0442\u043e %1$s___\u0414\u0430___\u0449\u0435 \u0432\u0438 \u0438\u0437\u043f\u0440\u0430\u0442\u0438 \u043f\u0430\u043f\u043a\u0430 %1$s___\u0449\u0435 \u0432\u0438 \u0438\u0437\u043f\u0440\u0430\u0442\u0438 %1$s___\u0410\u0440\u0445\u0438\u0432\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438\u0442\u0435___ES \u043c\u0435\u0434\u0438\u0430 \u043f\u043b\u0435\u044a\u0440___\u041d\u0435 \u043f\u0438\u0442\u0430\u0439 \u043f\u043e\u0432\u0435\u0447\u0435___\u041f\u0440\u043e\u0437\u043e\u0440\u0446\u0438___\u0418\u0437\u0442\u0440\u0438\u0432\u0430\u043d\u0435...___\u0422\u0435\u043a\u0443\u0449\u0430 \u0434\u0438\u0440\u0435\u043a\u0442\u043e\u0440\u0438\u044f:___\u0422\u0435\u043b\u0435\u0444\u043e\u043d___\u041d\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u0435\u043d___\u041f\u0440\u043e\u0431\u043b\u0438\u0436\u0430\u0432\u0430\u043d\u0435___\u0421\u043a\u0430\u043d\u0438\u0440\u0430\u0439___\u041f\u0440\u0438\u043c\u0435\u0440___\u041d\u043e\u0432\u0430 \u043c\u0440\u0435\u0436\u0430___\u0418\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u043e \u0443\u0441\u043f\u0435\u0448\u043d\u043e___\u0417\u0430 \u0441\u044a\u0436\u0430\u043b\u0435\u043d\u0438\u0435 \u043e\u043f\u0435\u0440\u0430\u0446\u0438\u044f\u0442\u0430 \u0435 \u043d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u0430___\u0422\u0435\u043a\u0443\u0449\u0438___\u0414\u043e\u0431\u0430\u0432\u0438 \u043a\u044a\u043c \u043d\u0430\u0447\u0430\u043b\u043d\u0438\u044f \u0435\u043a\u0440\u0430\u043d___\u0414\u043e\u0431\u0430\u0432\u0438 \u043a\u044a\u043c \u043b\u044e\u0431\u0438\u043c\u0438___\u0412\u0438\u0441\u043e\u043a\u0430 \u0435\u0444\u0435\u043a\u0442\u0438\u0432\u043d\u043e\u0441\u0442, \u0431\u044a\u0440\u0437\u043e \u043f\u0440\u0435\u0432\u044a\u0440\u0442\u0430\u043d\u0435___\u0413\u0440\u0435\u0448\u043a\u0430, \u0441\u044a\u0440\u0432\u044a\u0440\u043d\u0438\u044f\u0442 \u043f\u044a\u0442 \u0435 \u043f\u0440\u0430\u0437\u0435\u043d___\u0434\u043d\u0438___\u043f\u044a\u0442\u044f\u0442 \u0435 \u043a\u043e\u043f\u0438\u0440\u0430\u043d___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u0441\u044a\u0437\u0434\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 \u043e\u0442\u043c\u0435\u0442\u043a\u0430 {0}.___\u0411\u044a\u0440\u0437 \u0434\u043e\u0441\u0442\u044a\u043f___\u041c\u043e\u0431\u0438\u043b\u043d\u0438 \u0441\u043d\u0438\u043c\u043a\u0438___\u0418\u043c\u0435___\u041f\u0440\u043e\u0434\u044a\u043b\u0436\u0438___\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0430 \u043d\u0430 WLAN___\u0418\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0438___\u041e\u0442\u043a\u0430\u0437___\u041f\u043e\u043a\u0430\u0437\u0432\u0430\u043d\u0435 \u0440\u0430\u0437\u043c\u0435\u0440\u0430 \u043d\u0430 SD \u043a\u0430\u0440\u0442\u0430\u0442\u0430 \u0432 \u201e\u0425\u0440\u043e\u043d\u043e\u043b\u043e\u0433\u0438\u044f\u201c___\u0424\u0430\u0439\u043b\u044a\u0442 \u0435 \u043d\u0430 \u043d\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u0435\u043d \u043d\u043e\u0441\u0438\u0442\u0435\u043b \u0438 \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u043f\u0440\u0435\u043c\u0435\u0441\u0442\u0435\u043d \u0432 \u043a\u043e\u0448\u0447\u0435\u0442\u043e, \u0441\u043b\u0435\u0434\u043e\u0432\u0430\u0442\u0435\u043b\u043d\u043e \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u0432\u044a\u0437\u0441\u0442\u0430\u043d\u043e\u0432\u0435\u043d___\u041f\u043e\u043b\u0443\u0447\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 IP \u0430\u0434\u0440\u0435\u0441...___\u0410\u0440\u0445\u0438\u0432\u0438\u0440\u0430\u043d\u0438 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f___\u041f\u043e\u043b\u0443\u0447\u0430\u0432\u0430\u043d\u0435...___\u0418\u0437\u0442\u0435\u0433\u043b\u0438 \u0441\u0435\u0433\u0430___\u0421\u0432\u044a\u0440\u0437\u0432\u0430\u043d\u0435 \u043a\u044a\u043c___\u043f\u0440\u0435\u0438\u043c\u0435\u043d\u0443\u0432\u0430\u043d\u0435\u2026___\u041e\u0444\u0438\u0446\u0438\u0430\u043b\u043d\u0430 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430___Bluetooth-\u0430 \u0435 \u0432\u0438\u0434\u0438\u043c___\u0426\u0435\u043d\u0442\u044a\u0440 \u0437\u0430 \u0437\u0430\u0434\u0430\u0447\u0438___\u041c\u043e\u0436\u0435 \u0434\u0430 \u0438\u043c\u0430\u0442\u0435 \u043d\u0430\u0439-\u043c\u043d\u043e\u0433\u043e 12 \u043f\u0440\u043e\u0437\u043e\u0440\u0446\u0438___\u041d\u0430\u043f\u0440\u0435\u0434___\u0417\u0430\u0434\u0430\u0439 \u043a\u0430\u0442\u043e \u0442\u043e\u043d \u0437\u0430 \u043f\u043e\u0432\u0438\u043a\u0432\u0430\u043d\u0435___\u0412\u0430\u043b\u0435\u043d\u0442\u0438\u043d \u0421\u0442\u0430\u043d\u0447\u0435\u0432 (v.stan4ev@gmail.com)\n\u041c\u0430\u0440\u0442\u0438\u043d \u041c\u0430\u0440\u0442\u0438\u043d\u043e\u0432___\u041f\u0440\u0435\u043a\u0438\u044f\u0442 \u043f\u044a\u0442 \u0435 \u0441\u044a\u0437\u0434\u0430\u0434\u0435\u043d \u0443\u0441\u043f\u0435\u0448\u043d\u043e___\u0422\u0438\u043f___\u0418\u0437\u043a\u043b\u044e\u0447\u0432\u0430\u043d\u0435 \u043d\u0430 \u201eES \u0438\u0437\u0442\u0435\u0433\u043b\u044f\u043d\u0435\u201c___\u0421\u043f\u043e\u0434\u0435\u043b\u0438 \u0447\u0440\u0435\u0437 \u043e\u0431\u043b\u0430\u043a___\u041e\u0442\u0432\u043e\u0440\u0438___- \u0411\u043b\u043e\u043a\u0438\u0440\u0430\u043d\u043e \u043e\u0442 \u0437\u0430\u0449\u0438\u0442\u043d\u0430\u0442\u0430 \u0441\u0442\u0435\u043d\u0430___%s \u0437\u0430\u0434\u0430\u0447\u0438 \u0441\u0435 \u0438\u0437\u043f\u044a\u043b\u043d\u044f\u0432\u0430\u0442.___\u041f\u0440\u0435\u0445\u0432\u044a\u0440\u043b\u044f\u043d\u0435 \u043d\u0430 \u0444\u0430\u0439\u043b\u043e\u0432\u0435 \u043a\u044a\u043c___\u0418\u0441\u043a\u0430\u0442\u0435 \u043b\u0438 \u0434\u0430 \u043f\u0440\u043e\u0434\u044a\u043b\u0436\u0438\u0442\u0435 \u0432\u0441\u0435 \u043f\u0430\u043a??___\u041a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f___\u0428\u0438\u0444\u0440\u043e\u0432\u0430\u043d\u0435 (https)___\u0422\u043e\u0447\u043a\u0430 \u0437\u0430 \u0434\u043e\u0441\u0442\u044a\u043f___\u0413\u043b\u0430\u0441\u0443\u0432\u0430\u0439\u0442\u0435, \u0437\u0430 \u0434\u0430 \u043d\u0438 \u043f\u043e\u0434\u043a\u0440\u0435\u043f\u0438\u0442\u0435___\u041f\u0440\u0435\u043c\u0430\u0445\u043d\u0438 \u043e\u0442 \u0441\u043f\u0438\u0441\u044a\u043a\u0430 \u043d\u0430 \u043f\u0440\u043e\u0437\u043e\u0440\u0435\u0446\u0430 \u043f\u043e \u043f\u043e\u0434\u0440\u0430\u0437\u0431\u0438\u0440\u0430\u043d\u0435___\u041e\u0442\u0434\u0430\u043b\u0435\u0447\u0435\u043d\u0438\u044f\u0442 \u043f\u0440\u044f\u043a \u043f\u044a\u0442 \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u0441\u044a\u0437\u0434\u0430\u0434\u0435\u043d___\u041a\u043e\u043f\u0438\u0440\u0430\u0439 \u0432___\u0418\u0437\u0445\u043e\u0434\u043d\u0438\u044f\u0442 \u043f\u044a\u0442 \u0442\u0440\u044f\u0431\u0432\u0430 \u0434\u0430 \u0437\u0430\u043f\u043e\u0447\u0432\u0430 \u0441 /sdcard/___\u0414\u0430\u0442\u0430 \u043d\u0430 \u0438\u0437\u0442\u0435\u0433\u043b\u044f\u043d\u0435:___\u0421\u043e\u0431\u0441\u0442\u0432\u0435\u043d\u0438\u043a:___\u041f\u043e \u043f\u043e\u0434\u0440\u0430\u0437\u0431\u0438\u0440\u0430\u043d\u0435___\u041d\u043e\u0432\u0430 \u043f\u0430\u0440\u043e\u043b\u0430:___\u041f\u043e\u0447\u0438\u0441\u0442\u0432\u0430\u043d\u0435___\u0414\u0435\u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0435___ES \u0442\u0435\u043a\u0441\u0442\u043e\u0432 \u0440\u0435\u0434\u0430\u043a\u0442\u043e\u0440___\u0418\u0437\u043f\u0440\u0430\u0442\u0435\u043d___\u0417\u0430 \u0441\u044a\u0436\u0430\u043b\u0435\u043d\u0438\u0435 \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0432\u044a\u0437\u043f\u0440\u043e\u0438\u0437\u0432\u0435\u0434\u0435 \u0442\u043e\u0432\u0430 \u0432\u0438\u0434\u0435\u043e___\u0418\u043c\u0435\u0442\u043e \u043d\u0430 \u0444\u0430\u0439\u043b\u0430 \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u043f\u0440\u0430\u0437\u043d\u043e___\u0421\u0432\u043e\u0431\u043e\u0434\u043d\u043e:___\u0441\u0435\u0434\u043c\u0438\u0446\u0438___\u0417\u0430\u0434\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 \u043f\u043e\u0440\u0442 (1025 \u2013 65534)___\u0423\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u043d\u0430 \u0436\u0435\u0441\u0442\u043e\u0432\u0435\u0442\u0435___\u0415\u0442\u0438\u043a\u0435\u0442___\u041f\u043e\u0440\u0442\u044a\u0442 \u0442\u0440\u044f\u0431\u0432\u0430 \u0434\u0430 \u0435 \u0432 \u0438\u043d\u0442\u0435\u0440\u0432\u0430\u043b (1025 \u2013 65534)___\u0412\u0438\u0434\u0435\u043e___\u041f\u043e\u0442\u0440\u0435\u0431\u0438\u0442\u0435\u043b\u0441\u043a\u043e \u0438\u043c\u0435___\u041c\u043e\u043b\u044f, \u0438\u0437\u0447\u0430\u043a\u0430\u0439\u0442\u0435, \u0434\u043e\u043a\u0430\u0442\u043e \u0441\u0435 \u0438\u0437\u0447\u0438\u0441\u043b\u0438 \u0440\u0430\u0437\u043c\u0435\u0440\u044a\u0442 \u043d\u0430 \u0444\u0430\u0439\u043b\u0430___\u0417\u0430\u0442\u0432\u043e\u0440\u0438 \u0434\u0440\u0443\u0433\u0438\u0442\u0435___\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u043c\u0440\u0435\u0436\u0430___\u041d\u044f\u043c\u0430 \u0444\u0430\u0439\u043b \u0437\u0430 \u043a\u0440\u0438\u043f\u0442\u0438\u0440\u0430\u043d\u0435___\u041d\u043e\u0432 FTP___\u0414\u0430\u0442\u0430\u0442\u0430 \u043d\u0430 \u0441\u0435\u0440\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u0430 \u0435 \u043d\u0435\u0432\u0430\u043b\u0438\u0434\u043d\u0430___\u041f\u0440\u0438\u0441\u044a\u0435\u0434\u0438\u043d\u044f\u0432\u0430\u043d\u0435, \u043c\u043e\u043b\u044f \u0438\u0437\u0447\u0430\u043a\u0430\u0439\u0442\u0435...___\u041f\u0438\u0442\u0430\u043d\u0435___\u0417\u0430\u0434\u0430\u0439 \u043a\u0430\u0442\u043e \u0442\u043e\u043d \u0437\u0430 \u0443\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u0435___\u0421\u043f\u0438\u0441\u044a\u043a \u0437\u0430 \u0438\u0437\u043f\u044a\u043b\u043d\u0435\u043d\u0438\u0435___\u041f\u0440\u0430\u0432\u0430:___\u0421\u043f\u0440\u044f\u043d___ES FTP \u0441\u044a\u0440\u0432\u044a\u0440___\u0420\u0430\u0437\u043c\u0435\u0440___\u041e\u0442\u0432\u043e\u0440\u0438 \u0444\u0430\u0439\u043b___\u0420\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u0430\u0439 \u0441\u044a\u0440\u0432\u044a\u0440___\u0412\u044a\u0437\u0441\u0442\u0430\u043d\u043e\u0432\u044f\u0432\u0430\u043d\u0435 \u043d\u0430 \u043a\u0435\u0448\u0438\u0440\u0430\u043d\u0438\u0442\u0435 \u0434\u0430\u043d\u043d\u0438___\u0413\u0440\u0435\u0448\u043a\u0430___\u041d\u0430\u0442\u0438\u0441\u043d\u0435\u0442\u0435 \u043e\u0442\u043d\u043e\u0432\u043e, \u0437\u0430 \u0434\u0430 \u0438\u0437\u043b\u0435\u0437\u0435\u0442\u0435___\u041a\u0435\u0448\u0438\u0440\u0430\u043d\u0435___\u0418\u0437\u043f\u043e\u043b\u0437\u0432\u0430\u043d\u0435 \u043d\u0430 \u0433\u043e\u043b\u044f\u043c \u0438\u0437\u0433\u043b\u0435\u0434___\u0412\u044a\u0437\u0445\u043e\u0434\u044f\u0449___\u0416\u0435\u0441\u0442\u043e\u0432\u0435___\u0412\u044a\u0432\u0435\u0434\u0435\u0442\u0435 \u0437\u0430\u0433\u043b\u0430\u0432\u0438\u0435___\u0424\u043e\u043d\u043e\u0432 \u0440\u0435\u0436\u0438\u043c___\u0420\u0430\u0437\u043c\u0435\u0440 \u043d\u0430 \u0434\u0438\u0440\u0435\u043a\u0442\u043e\u0440\u0438\u044f\u0442\u0430:___\u0423\u0441\u043f\u0435\u0448\u043d\u0430 \u043f\u0440\u043e\u043c\u044f\u043d\u0430 \u043d\u0430 \u043f\u0440\u0430\u0432\u0430\u0442\u0430___Bluetooth \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438___\u0422\u0435\u043a\u0443\u0449 \u043f\u043e\u0442\u0440\u0435\u0431\u0438\u0442\u0435\u043b:___\u041f\u0440\u043e\u0432\u0435\u0440\u043a\u0430 \u0437\u0430 \u043d\u043e\u0432\u0430 \u0432\u0435\u0440\u0441\u0438\u044f \u043f\u043e \u0433\u0440\u0430\u0444\u0438\u043a___\u0414\u043e\u0441\u0442\u044a\u043f \u0434\u043e \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e \u043f\u0440\u0435\u0437 FTP \u0441\u044a\u0440\u0432\u044a\u0440___\u041f\u0430\u0440\u043e\u043b\u0430\u0442\u0430 \u0435 \u043f\u0440\u043e\u043c\u0435\u043d\u0435\u043d\u0430___\u0417\u0430\u0434\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 \u0442\u0430\u043f\u0435\u0442\u0430, \u043c\u043e\u043b\u044f \u0438\u0437\u0447\u0430\u043a\u0430\u0439\u0442\u0435\u2026___ ___\u041d\u0430\u0447\u0430\u043b\u043d\u0430 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430___ES Chromecast \u043f\u043b\u0435\u044a\u0440___\u041f\u0440\u0435\u043c\u0435\u0441\u0442\u0435\u043d___\u041e\u0442\u043f\u0438\u0441\u0432\u0430\u043d\u0435___\u041f\u043e\u0440\u0442___- \u0423\u0441\u043b\u0443\u0433\u0430\u0442\u0430 SMB \u0435 \u0438\u0437\u043a\u043b\u044e\u0447\u0435\u043d\u0430___\u0421\u043d\u0438\u043c\u043a\u0438:___\u0417\u0430\u0435\u0442\u0438:___Chromecast___\u0417\u0430\u043f\u043e\u0447\u043d\u0438 \u0441\u0432\u044a\u0440\u0437\u0432\u0430\u043d\u0435 \u043a\u044a\u043c \u043c\u0440\u0435\u0436\u0430\u0442\u0430___\u0421\u0438\u0441\u0442\u0435\u043c\u0435\u043d \u043c\u0435\u043d\u0438\u0434\u0436\u044a\u0440___\u041e\u0442\u0432\u043e\u0440\u0438 root explorer___\u0421\u0435\u0441\u0438\u044f\u0442\u0430 \u0438\u0437\u0442\u0435\u0447\u0435, \u043c\u043e\u043b\u044f \u0432\u043f\u0438\u0448\u0435\u0442\u0435 \u0441\u0435 \u043e\u0442\u043d\u043e\u0432\u043e___\u0417\u0430\u0442\u0432\u0430\u0440\u044f\u043d\u0435 \u043d\u0430 \u0443\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u0435\u0442\u043e, \u043a\u043e\u0433\u0430\u0442\u043e \u0437\u0430\u0434\u0430\u0447\u0430\u0442\u0430 \u043f\u0440\u0438\u043a\u043b\u044e\u0447\u0438___\u041a\u043e\u043d\u0442\u0440\u043e\u043b\u043d\u0430 \u0441\u0443\u043c\u0430 \u043d\u0430 \u0444\u0430\u0439\u043b\u0430___\u041d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u043f\u0440\u0435\u043c\u0435\u0441\u0442\u0435\u043d\u043e \u0432 \u043f\u043e\u0434\u0434\u0438\u0440\u0435\u043a\u0442\u043e\u0440\u0438\u044f___\u041d\u044f\u043c\u0430 \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d \u0436\u0435\u0441\u0442___\u0418\u0437\u0442\u0440\u0438\u0432\u0430\u043d\u0435 \u043d\u0430 \u0444\u0430\u0439\u043b\u043e\u0432\u0435\u0442\u0435___\u0421\u043f\u0438\u0441\u044a\u043a \u0437\u0430 \u0438\u0437\u043f\u044a\u043b\u043d\u0435\u043d\u0438\u0435___\u0414\u0440\u0443\u0433\u0438 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f___\u041f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u0438\u0437\u0438\u0440\u0430\u043d\u0435___\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u0438 %1$s, \u043e\u0431\u0449 \u0440\u0430\u0437\u043c\u0435\u0440 %2$s___\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u043f\u043e\u043b\u0443\u0447\u0435\u043d(\u0438) %1$s \u0444\u0430\u0439\u043b(\u0430), \u0432\u043a\u043b\u044e\u0447\u0438\u0442\u0435\u043b\u043d\u043e %2$d \u043e\u0431\u0435\u043a\u0442(\u0430) \u0441 \u043e\u0431\u0449 \u0440\u0430\u0437\u043c\u0435\u0440 %3$s___\u041f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0438\u0442\u0435\u043b:___\u0414\u0430\u0442\u0430 \u043d\u0430 \u043a\u0430\u0447\u0432\u0430\u043d\u0435:___\u0421\u0438\u0433\u0443\u0440\u043d\u043e\u0441\u0442___\u041a\u043e\u043f\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u0444\u0430\u0439\u043b\u043e\u0432\u0435 \u0432 \u201e%1$s\u201c___FTP___\u0420\u0430\u0437\u043c\u0430\u0440\u043a\u0438\u0440\u0430\u0439___\u0410\u0440\u0445\u0438\u0432\u0438\u0440\u0430\u043d\u0435\u0442\u043e \u0435 \u043d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e___\u0418\u0437\u0447\u0430\u043a\u0430\u0439\u0442\u0435 \u043c\u0430\u043b\u043a\u043e\u2026___\u041e\u0431\u0440\u0430\u0442\u043d\u043e___\u041d\u0430\u0431\u043e\u0440 \u043e\u0442 \u0441\u0438\u043c\u0432\u043e\u043b\u0438___\u041f\u0440\u0435\u0434 \u0437\u0430\u0432\u044a\u0440\u0448\u0432\u0430\u043d\u0435___\u0422\u0435\u043a\u0443\u0449 \u043f\u044a\u0442"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x1
 
-    const-string v2, "\u09ae\u09cd\u09af\u09be\u099c\u09bf\u0995 \u09ac\u09cd\u09b0\u09bf\u09ab\u0995\u09c7\u09b8___\u0989\u0987\u09a8\u09cd\u09a1\u09cb \u09b8\u09c7\u099f\u09bf\u0982\u09b8___\u0995\u09aa\u09bf \u09a6\u09c2\u09b0\u09ac\u09b0\u09cd\u09a4\u09c0 \u09ab\u09be\u0987\u09b2 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5 \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8 \u09a1\u09bf\u09b0\u09c7\u0995\u09cd\u099f\u09b0\u09bf\u09b0 \u09ae\u09a7\u09cd\u09af\u09c7:___\u0985\u09a8\u09c1\u09b8\u09a8\u09cd\u09a7\u09be\u09a8 \u0985\u09cd\u09af\u09be\u09b2\u09ac\u09be\u09ae___\u098f\u0995\u099f\u09bf \u09a8\u09a4\u09c1\u09a8 \u0985\u0999\u09cd\u0997\u09ad\u0999\u09cd\u0997\u09bf \u09a4\u09c8\u09b0\u09bf \u0995\u09b0\u09c1\u09a8___\u09ab\u09be\u0987\u09b2 \u09a8\u09be\u09ae \u0995\u09ae\u09be\u09a8, \u0985\u09a4\u09cd\u09af\u09a8\u09cd\u09a4 \u09a6\u09c0\u09b0\u09cd\u0998___\u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09a4\u09cd\u09b0\u09c1\u099f\u09bf, \u09aa\u09b0\u09c7 \u0986\u09ac\u09be\u09b0 \u099a\u09c7\u09b7\u09cd\u099f\u09be \u0995\u09b0\u09c1\u09a8___\u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8 \u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7,___\u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1\u099f\u09bf \u09ad\u09c1\u09b2___\u09ab\u09c7\u09b8\u09ac\u09c1\u0995___\u09a6\u09b2___\u098f\u09b8\u09a1\u09bf \u0995\u09be\u09b0\u09cd\u09a1___\u09aa\u09cd\u09b0\u09be\u09b0\u09ae\u09cd\u09ad\u09bf\u0995 \u09aa\u09c3\u09b7\u09cd\u09a0\u09be \u09b9\u09bf\u09b8\u09be\u09ac\u09c7 \u09b8\u09c7\u099f \u0995\u09b0\u09c1\u09a8___\u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae \u09ad\u09bf\u0989 \u09b8\u09c7\u099f\u09bf\u0982\u09b8___\u0993\u09af\u09bc\u09be\u09b2\u09aa\u09c7\u09aa\u09be\u09b0 \u09b8\u09c7\u099f, \u0995\u09b0\u09c7 \u0985\u09aa\u09c7\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09c1\u09a8 ...___\u099f\u09c1\u09b2\u09ac\u09be\u09b0 \u09ac\u09be\u099f\u09a8 \u09a8\u09be\u09ae \u09aa\u09cd\u09b0\u09a6\u09b0\u09cd\u09b6\u09bf\u09a4 \u09b9\u09af\u09bc___\u09ab\u09cb\u09b2\u09cd\u09a1\u09be\u09b0___%s \u0997\u09c1\u09b2\u09bf \u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1 \u0995\u09b0\u09a4\u09c7 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5___root-\u09b0 \u09ac\u09cd\u09b2\u09c1\u099f\u09c1\u09a5 \u09ab\u09be\u0982\u09b6\u09a8 \u09b8\u09ac \u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0 \u0995\u09b0\u09be\u09b0 \u0985\u09a8\u09c1\u09ae\u09a4\u09bf, \u0985\u09a5\u09ac\u09be \u098f\u099f\u09be \u098f\u0987 \u09ac\u09c8\u09b6\u09bf\u09b7\u09cd\u099f\u09cd\u09af \u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0 \u0995\u09b0\u09be \u0989\u099a\u09bf\u09a4 \u0995\u09bf\u09a8\u09be \u098f\u09a8 \n \u09a4\u09cd\u09b0\u09c1\u099f\u09bf \\ \u0998\u099f\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7.? \u09a1\u09bf\u09ad\u09be\u0987\u09b8\u09c7\u09b0 \u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae \u09b8\u0982\u09b8\u09cd\u0995\u09b0\u09a3 \u0996\u09c1\u09ac \u09ac\u09c7\u09b6\u09bf \u09aa\u09c1\u09b0\u09be\u09a8\u09cb \u09b9\u09af\u09bc, \u0986\u09aa\u09a8\u09bf \u09aa\u09cd\u09b0\u09af\u09bc\u09cb\u099c\u09a8___\u09a6\u09c7\u0996\u09be\u09a8 \u0995\u09ae \u09a1\u09bf\u09b8\u09cd\u0995 \u09b8\u09cd\u09aa\u09c7\u09b8 \u09b8\u09a4\u09b0\u09cd\u0995\u09a4\u09be___\u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0\u09c7\u09b0 \u09aa\u09cb\u09b0\u09cd\u099f \u09b8\u09c7\u099f\u09bf\u0982\u09b8 \u099a\u09c7\u0995 \u0986\u09b0\u09ae\u09cd\u09ad \u0995\u09b0\u09a4\u09c7 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5___\u09b2\u09cb\u09a1 \u0995\u09b0\u09a4\u09c7 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5___\u09b2\u09c1\u0995\u09be\u09a8\u09cb \u09a4\u09be\u09b2\u09bf\u0995\u09be___\u0985\u09a8\u09c1\u09b8\u09a8\u09cd\u09a7\u09be\u09a8 \u09a8\u09a5\u09bf___IP \u09a0\u09bf\u0995\u09be\u09a8\u09be \u09aa\u09cd\u09b0\u09be\u09aa\u09cd\u09a4 \u0995\u09b0\u09be\u09b0 \u09aa\u09a6\u09cd\u09a7\u09a4\u09bf ...___\u09a4\u09be\u09b0\u09bf\u0996 \u09ac\u09bf\u09a8\u09cd\u09af\u09be\u09b8___\u09ac\u09cd\u09af\u09b0\u09cd\u09a5 \u098f\u0995\u099f\u09bf \u09b6\u09b0\u09cd\u099f\u0995\u09be\u099f \u09a4\u09c8\u09b0\u09bf \u0995\u09b0\u09c1\u09a8___\u0986\u09aa\u09a8\u09bf \u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae \u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8 \u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u0995\u09b0\u09a4\u09c7 \u099a\u09be\u09a8 \u09a8\u09bf\u09b6\u09cd\u099a\u09bf\u09a4?___\u0989\u09a6\u09be\u09b9\u09b0\u09a3___\u0993\u09af\u09bc\u09c7\u09ac___\u09b0\u09c7\u099c\u09cb\u09b2\u09bf\u0989\u09b6\u09a8:___\'%1$s\' \u0995\u09b0\u09be\u09b0 \u0995\u09aa\u09bf \u09ab\u09be\u0987\u09b2___{0} \u09b0\u09bf\u09b8\u09be\u0987\u0995\u09c7\u09b2 \u09ac\u09bf\u09a8 \u09a8\u09bf\u09b0\u09cd\u09a7\u09be\u09b0\u09a3 \u09b8\u09b0\u09be\u09a8\u09cb?___\u09ab\u09cb\u09a8___\u09b8\u0982\u09b8\u09cd\u0995\u09b0\u09a3:___\u0986\u09aa\u09b2\u09cb\u09a1___\u09a0\u09be\u09b0\u09c7 \u09b8\u0995\u09cd\u09b0\u09bf\u09af\u09bc \u0995\u09b0\u09c1\u09a8, \u0986\u09aa\u09a8\u09bf \u098f\u09a1\u09bf\u099f \u0995\u09b0\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7\u09a8___ ___\u09af\u09c1\u0995\u09cd\u09a4___\u09ac\u09cd\u09af\u09be\u0995\u0986\u09aa \u09b8\u09c7\u099f\u09bf\u0982\u09b8 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5___\u09b0\u09bf\u0982\u099f\u09cb\u09a8 \u09b9\u09bf\u09b8\u09c7\u09ac\u09c7 \u09b8\u09c7\u099f \u0995\u09b0\u09c1\u09a8___\u09ab\u09cb\u09b2\u09cd\u09a1\u09be\u09b0 \u0996\u09be\u09b2\u09bf___\u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1 \u09aa\u09b0\u09bf\u09ac\u09b0\u09cd\u09a4\u09a8 \u0995\u09b0\u09c1\u09a8___\u09ac\u09cd\u09af\u09be\u0995 \u0986\u09aa \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u09ac\u09cd\u09b0\u09be\u0989\u099c\u09be\u09b0 \u0996\u09c1\u09b2\u09c1\u09a8___\u09af\u09c1\u0995\u09cd\u09a4 \u0986\u09ac\u09c7\u09a6\u09a8 \u0986\u0987\u0995\u09a8___\u09a6\u09cd\u09b0\u09c1\u09a4 \u09a8\u09cd\u09af\u09be\u09ad\u09bf\u0997\u09c7\u09b6\u09a8___\u099f\u09be\u09b8\u09cd\u0995 \u09ae\u09cd\u09af\u09be\u09a8\u09c7\u099c\u09be\u09b0___\u09b8\u09c7\u099f\u09bf\u0982\u09b8 \u09aa\u09c1\u09a8\u0983\u09b8\u09cd\u09a5\u09be\u09aa\u09a8 \u0995\u09b0\u09c1\u09a8___\u0995\u09ae\u09cd\u09aa\u09bf\u0989\u099f\u09be\u09b0 \u0987\u09a8\u09aa\u09c1\u099f:\n___\u09aa\u09c1\u09a8\u09b0\u09cd\u09b8\u09c2\u099a\u09a8\u09be \u09aa\u09b0\u09c7 \u0995\u09be\u09b0\u09cd\u09af\u0995\u09b0 \u09b8\u09ab\u09b2 \u09b8\u09c7\u099f\u09bf\u0982\u09b8, \u09aa\u09c1\u09a8\u0983\u09b8\u09cd\u09a5\u09be\u09aa\u09a8 \u0995\u09b0\u09c1\u09a8___\u0986\u09aa\u09a8\u09bf \u09b8\u0982\u09af\u09c1\u0995\u09cd\u09a4 \u0995\u09b0\u09a4\u09c7 \u099a\u09be\u09a8 \u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8 \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8___\u09a6\u09c2\u09b0\u09ac\u09b0\u09cd\u09a4\u09c0 \u09b8\u09c7\u099f\u09bf\u0982\u09b8___\u09aa\u09a1\u09bc\u09be / \u09b2\u09c7\u0996\u09be\u09b0 \u09b9\u09bf\u09b8\u09be\u09ac\u09c7 \u09b2\u09cb\u09a1___\u0986\u09aa___\u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 SSID___\u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0 \u0995\u09b0\u09c1\u09a8 \u09b0\u09cd\u09af\u09be\u09a8\u09cd\u09a1\u09ae \u09b9\u099f \u09b8\u09cd\u09aa\u099f___\u09b8\u09be\u09b0\u09cd\u099f\u09bf\u09ab\u09bf\u0995\u09c7\u099f\u09c7\u09b0 \u09ae\u09c7\u09af\u09bc\u09be\u09a6 \u0989\u09a4\u09cd\u09a4\u09c0\u09b0\u09cd\u09a3___\u0986\u09a8\u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u0995\u09b0\u09be\u09b0 \u098f\u0995\u099f\u09bf \u0995\u09c0___\u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1___\u09b8\u0982\u0995\u09c0\u09b0\u09cd\u09a3___\u09aa\u09cd\u09af\u09be\u0995\u09c7\u099c \u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u0995\u09b0\u09be\u09b0 \u09b8\u09ae\u09af\u09bc \u09ae\u09c0\u09ae\u09be\u0982\u09b8\u09be \u09b8\u09ae\u09b8\u09cd\u09af\u09be\u09b0 \u09b8\u09ae\u09cd\u09ae\u09c1\u0996\u09c0\u09a8___\u099f\u09c7\u0995\u09cd\u09b8\u099f \u0995\u09be\u09b2\u09be\u09b0 \u09b8\u09c7\u099f \u0995\u09b0\u09c1\u09a8___\u09b6\u09c7\u0995 \u09a1\u09bf\u09ad\u09be\u0987\u09b8\u09c7\u09b0 \u09b8\u0982\u09ac\u09c7\u09a6\u09a8\u09b6\u09c0\u09b2\u09a4\u09be \u09b8\u09ae\u09a8\u09cd\u09ac\u09af\u09bc___IP \u09a0\u09bf\u0995\u09be\u09a8\u09be___\u0986\u09aa\u09a8\u09bf \u0986\u09aa\u09a8\u09be\u09b0 \u09a8\u09bf\u09b0\u09be\u09aa\u09a4\u09cd\u09a4\u09be \u09a8\u09bf\u09b6\u09cd\u099a\u09bf\u09a4 \u0995\u09b0\u09be\u09b0 \u099c\u09a8\u09cd\u09af {0} \u098f\u09b0 \u098f\u0995\u099f\u09bf \u09ac\u09c7\u09b8\u09b0\u0995\u09be\u09b0\u09c0 \u09b8\u0982\u09b8\u09cd\u0995\u09b0\u09a3 \u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0 \u0995\u09b0\u099b\u09c7\u09a8, http://www.estrongs.com \u0985\u09ab\u09bf\u09b8\u09bf\u09af\u09bc\u09be\u09b2 \u09b8\u0982\u09b8\u09cd\u0995\u09b0\u09a3 \u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1 \u09a6\u09c7\u0996\u09be\u09b0 \u099c\u09a8\u09cd\u09af \u0985\u09a8\u09c1\u0997\u09cd\u09b0\u09b9 \u0995\u09b0\u09c7.___\u0989\u09a6\u09cd\u09a6\u09c7\u09b6\u09cd\u09af \u09aa\u09be\u09a0\u09be\u09a8 \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8___\u09af\u09be\u099a\u09be\u0987 \u0995\u09b0\u09be \u09b9\u099a\u09cd\u099b\u09c7 ...___\u09ac\u09cd\u09af\u09be\u0995\u0986\u09aa \u09b8\u09c7\u099f\u09bf\u0982\u09b8___\u0985\u09a8\u09cd\u09af:___\u09aa\u09cd\u09b2\u09c7\u09b2\u09bf\u09b8\u09cd\u099f \u09ac\u09be\u09a4\u09bf\u09b2___\u09ab\u09cb\u09b2\u09cd\u09a1\u09be\u09b0___\u0986\u09b0___ ___\u0986\u09aa\u09a8\u09be\u09b0 \u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae\u09c7\u09b0 \u0989\u09aa\u09b0 \u09a8\u09bf\u09b0\u09cd\u09ad\u09b0 \u0995\u09b0\u09c7 \u09a6\u09c0\u09b0\u09cd\u0998 \u09b8\u09ae\u09af\u09bc \u09a7\u09b0\u09c7 \u0985\u09aa\u09c7\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09a4\u09c7 \u09b9\u09ac\u09c7___\u09aa\u09b0\u09bf\u09ac\u09b0\u09cd\u09a4\u09a8 \u0985\u09a8\u09c1\u09ae\u09a4\u09bf \u09b8\u09be\u09ab\u09b2\u09cd\u09af___\u09ac\u09be\u09a4\u09bf\u09b2 \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995\u09c7\u09b0___\u09ad\u09bf\u09a1\u09bf\u0993 \u09ab\u09be\u0987\u09b2 \u09b8\u09b0\u09be\u09b8\u09b0\u09bf \u0985\u09ad\u09bf\u09a8\u09af\u09bc \u0995\u09b0\u09be \u09af\u09be\u09ac\u09c7___\u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995___\u0986\u09aa\u09a8\u09bf \u0995\u09bf \u09a8\u09bf\u09b6\u09cd\u099a\u09bf\u09a4 \u0986\u09aa\u09a8\u09bf {0} \u09ae\u09c1\u099b\u09c7 \u09ab\u09c7\u09b2\u09a4\u09c7 \u099a\u09be\u09a8?___\u09b8\u09be\u09a6\u09be___\u09b6\u09c1\u09b0\u09c1___\u098f\u0995\u0987 \u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1 \u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0 \u0995\u09b0\u09c7 \u098f\u0995\u099f\u09bf \u09a7\u09be\u09b0\u09be\u09ac\u09be\u09b9\u09bf\u0995 \u0985\u09aa\u09be\u09b0\u09c7\u09b6\u09a8 \u09aa\u09b0\u09c7___\u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8 \u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0\u0995\u09be\u09b0\u09c0:___\u0986\u09aa\u09a8\u09bf \u098f\u0987 \u0985\u09aa\u09be\u09b0\u09c7\u09b6\u09a8 \u09b8\u09ae\u09cd\u09aa\u09a8\u09cd\u09a8 \u0995\u09b0\u09be\u09b0 \u09b8\u09ab\u099f\u0993\u09af\u09bc\u09cd\u09af\u09be\u09b0 \u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u0995\u09b0\u09a4\u09c7 \u09b9\u09ac\u09c7:___\u0985\u09a8\u09cd\u09af \u0995\u09c7\u0989 \u09a6\u09cd\u09ac\u09be\u09b0\u09be \u09a4\u09c8\u09b0\u09bf \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995\u09c7 \u09af\u09cb\u0997 \u0995\u09b0\u09be\u09b0 \u099c\u09a8\u09cd\u09af___\u0993\u09aa\u09c7\u09a8 root-\u09b0 \u099f\u09c1\u09b2\u09ac\u0995\u09cd\u09b8___\u0993\u09aa\u09c7\u09a8___(\u0987\u09a4\u09cd\u09af\u09be\u09a6\u09bf \u09a5\u09be\u09ae\u09cd\u09ac\u09a8\u09c7\u09b2, \u09b8\u09b9) \u0995\u09cd\u09af\u09be\u09b6\u09c7 \u09a4\u09a5\u09cd\u09af \u09aa\u09b0\u09bf\u09b7\u09cd\u0995\u09be\u09b0 \u0995\u09b0\u09be\u09b0 \u099c\u09a8\u09cd\u09af \u0995\u09cd\u09b2\u09bf\u0995 \u0995\u09b0\u09c1\u09a8___\u098f\u0987 \u09aa\u09cd\u09b0\u09cb\u0997\u09cd\u09b0\u09be\u09ae \u0986\u09b0\u09ae\u09cd\u09ad \u0995\u09b0\u09a4\u09c7 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5___\u09b6\u09c1\u09a7\u09c1\u09ae\u09be\u09a4\u09cd\u09b0 12 \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09a4\u09c7 \u09aa\u09be\u09b0\u09ac\u09c7\u09a8___\'%1$s\' \u09ab\u09be\u0987\u09b2 \u0995\u09aa\u09bf \u0995\u09b0\u09be \u09b9\u09af\u09bc___\u09ac\u09bf\u09ac\u09c3\u09a4\u09bf___\u09b6\u09c1\u09a7\u09c1 \u09aa\u09c3\u09b7\u09cd\u09a0\u09be\u099f\u09bf \u09b0\u09bf\u09ab\u09cd\u09b0\u09c7\u09b6___\u0985\u09a1\u09bf\u0993 / \u09ad\u09bf\u09a1\u09bf\u0993___\u09b8\u0982\u0997\u09cd\u09b0\u09b9___\u09ab\u09be\u0987\u09b2 \u09b8\u09be\u0987\u099c \u09b8\u09c0\u09ae\u09be \u0985\u09a4\u09bf\u0995\u09cd\u09b0\u09ae \u0995\u09b0\u09c7\u099b\u09c7___\u09aa\u09cd\u09b2\u09c7\u09b2\u09bf\u09b8\u09cd\u099f \u0987\u09a4\u09bf\u09ae\u09a7\u09cd\u09af\u09c7\u0987 \u09ac\u09bf\u09a6\u09cd\u09af\u09ae\u09be\u09a8___\u09ab\u09cb\u09b2\u09cd\u09a1\u09be\u09b0 \u09b6\u09c8\u09b2\u09c0___\u0989\u09ce\u09b8___\u09a1\u09bf\u09ab\u09b2\u09cd\u099f \u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8 \u09b9\u09bf\u09b8\u09be\u09ac\u09c7 \u09b8\u09c7\u099f___\u09b8\u09cb\u09b0\u09cd\u09b8 \u09ab\u09be\u0987\u09b2 \u09ae\u09c1\u099b\u09c7 \u09a6\u09bf\u09a8 ...___\u09b2\u09c1\u0995\u09be\u09a8\u09cb___\u09b8\u09cd\u09ac\u09af\u09bc\u0982\u0995\u09cd\u09b0\u09bf\u09af\u09bc\u09ad\u09be\u09ac\u09c7 \u09a6\u09c2\u09b0\u09ac\u09b0\u09cd\u09a4\u09c0 \u09ab\u09be\u0987\u09b2 \u09b8\u09ae\u09cd\u09aa\u09be\u09a6\u09a8\u09be \u0995\u09b0\u09be\u09b0 \u099c\u09a8\u09cd\u09af \u098f\u0995\u099f\u09bf \u09b8\u09cd\u09ac\u09a4\u09a8\u09cd\u09a4\u09cd\u09b0 \u09ac\u09bf\u0995\u09cd\u09b0\u09c7\u09a4\u09be\u09a6\u09c7\u09b0 \u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8\u09c7\u09b0 \u09b9\u099a\u09cd\u099b\u09c7 \u09aa\u09b0\u09c7 \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995\u09c7 \u09ab\u09bf\u09b0\u09c7 \u09b8\u09c1\u09b8\u0982\u0997\u09a4___\u09b8\u09ae\u09cd\u09aa\u09be\u09a6\u09a8___\u098f\u09b8\u09a1\u09bf \u0995\u09be\u09b0\u09cd\u09a1, \u099a\u09c7\u0995 \u0985\u0999\u09cd\u0997\u09ad\u0999\u09cd\u0997\u09bf \u09ac\u09cd\u09af\u09b0\u09cd\u09a5 \u09b8\u0982\u09b0\u0995\u09cd\u09b7\u09a3___\u09aa\u09cd\u09b0\u09be\u09aa\u09cd\u09a4\u09bf\u09b0 ...___\u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1 \u09b9\u099a\u09cd\u099b\u09c7 ...___\u09b8\u09ac \u09aa\u09cd\u09b0\u09af\u09bc\u09cb\u0997 \u0995\u09b0\u09c1\u09a8___\u09a8\u09bf\u09b6\u09cd\u099a\u09bf\u09a4 \u0995\u09b0\u09c1\u09a8 \u09b0\u09bf\u0995\u09ad\u09be\u09b0\u09bf%s \u09a7\u09be\u09b0\u09cd\u09af \u0995\u09b0\u09be \u09b9\u09af\u09bc?___\u0985\u09a8\u09cd\u09af\u09be\u09a8\u09cd\u09af \u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8___\u09aa\u09b0\u09bf\u09b7\u09cd\u0995\u09be\u09b0\u09c7\u09b0 \u09b8\u09c7\u099f\u09bf\u0982\u0997\u09c1\u09b2\u09bf___\u0987\u09a8\u09b8\u09cd\u099f\u09b2\u09c7\u09b6\u09a8___\u0995\u09ae\u09cd\u09aa\u09bf\u0989\u099f\u09be\u09b0 \u09ae\u09cd\u09af\u09be\u09a8\u09c7\u099c\u09ae\u09c7\u09a8\u09cd\u099f \u09ab\u09cb\u09a8___\u0986\u0987\u099f\u09c7\u09ae___newline___\u09aa\u09c1\u09a8\u09b0\u09be\u09af\u09bc \u099a\u09c7\u09b7\u09cd\u099f\u09be___\u09aa\u099f\u09ad\u09c2\u09ae\u09bf\u09b0 \u09b0\u0999 \u09a8\u09bf\u09b0\u09cd\u09a7\u09be\u09b0\u09a3 \u0995\u09b0\u09c1\u09a8___\u09ae\u09c1\u099b\u09c7 \u09a8\u09bf\u09b6\u09cd\u099a\u09bf\u09a4?___\u09b2\u09cb\u09a1 \u0986\u09b0\u09cb ...___\u09b8\u09b0\u099e\u09cd\u099c\u09be\u09ae___\u09a8\u09a4\u09c1\u09a8 \u09ab\u09be\u0987\u09b2 \u09a8\u09be\u09ae \u09b2\u09bf\u0996\u09c1\u09a8___\u09ab\u09be\u0987\u09b2\u09c7\u09b0 \u098f\u0995\u099f\u09bf \u09ac\u09b9\u09c1\u09ac\u099a\u09a8___\u09a6\u09c7\u0996\u09be\u09a8 \u09ac\u09bf\u0995\u09b2\u09cd\u09aa___\u0986\u09a8 \u0986\u0997\u09c7 \u09ac\u09cd\u09af\u09be\u0995\u0986\u09aa___\u09ac\u09bf\u09ac\u09b0\u09a3___\u09b8\u09be\u09ab\u09b2\u09cd\u09af___\u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8 \u0989\u0987\u09a8\u09cd\u09a1\u09cb\u09b0 \u09ae\u09a7\u09cd\u09af\u09c7 \u0996\u09cb\u09b2\u09be___\u09ae\u09be\u09aa___\u0985\u0999\u09cd\u0997\u09ad\u0999\u09cd\u0997\u09bf \u09b8\u0995\u09cd\u09b0\u09bf\u09af\u09bc \u0995\u09b0\u09c1\u09a8___\u09b8\u09ae\u09cd\u09aa\u09c2\u09b0\u09cd\u09a3:%s \u0997\u09c1\u09b2\u09bf \u098f\u09a8\u09cd\u099f\u09cd\u09b0\u09bf%s___\u09aa\u09b0\u09bf\u09ac\u09b0\u09cd\u09a4\u09a8 \u09b8\u0982\u09b0\u0995\u09cd\u09b7\u09a3 \u0995\u09b0\u09c1\u09a8___\u09ac\u09cd\u09b2\u09c1\u099f\u09c1\u09a5 OBEX FTP-\u09b0 \u09b8\u09c7\u09ac\u09be \u09ac\u09a8\u09cd\u09a7 \u0995\u09b0\u09c7 \u09a6\u09bf\u09af\u09bc\u09c7\u099b\u09c7.___\u098f\u09a8\u0995\u09cd\u09b0\u09bf\u09aa\u09b6\u09a8 ...___\u09ae\u09c7\u0998 \u09ad\u09be\u0997___\u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09af\u09cb\u0997\u09a6\u09be\u09a8 \u09b6\u09c1\u09b0\u09c1 \u09b9\u09af\u09bc___\u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8 \u09aa\u09cb\u09b0\u09cd\u099f:___\u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1___\u0989\u09aa\u09b2\u09ac\u09cd\u09a7___\u09aa\u09c1\u09a8\u0983\u09a8\u09be\u09ae\u0995\u09b0\u09a8\u09c7\u09b0 ...___\u09ac\u09bf\u09b0\u09be\u09ae___\u09b8\u09c1\u09b8\u0982\u0997\u09a4\u09bf ...___\u09aa\u09cd\u09b0\u09ae\u09cd\u09aa\u099f___ ___\u0985\u09a8\u09cd\u09af \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09af\u09cb\u0997 \u09a6\u09bf\u09a8___\u09b8\u09ab\u09b2\u09ad\u09be\u09ac\u09c7 \u09b8\u099e\u09cd\u099a\u09bf\u09a4: \n {0}___\u0985\u09ac\u09b6\u09bf\u09b7\u09cd\u099f \u09b8\u09ae\u09af\u09bc:___\u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0\u0995\u09be\u09b0\u09c0___\u09b0\u09bf\u09aa\u09cd\u09b2\u09c7___\u0986\u0987\u099f\u09c7\u09ae___\u0986\u09aa\u09a8\u09bf \u0995\u09bf \u09a5\u09be\u0995\u09c7 \n \u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1\u09c7\u09b0 \u099f\u09be\u09b8\u09cd\u0995 \u09b8\u09be\u09ab \u09a0\u09bf\u0995 \u0986\u099b\u09c7:%1$s \u0997\u09c1\u09b2\u09bf \u099f\u09be\u09b8\u09cd\u0995, %2$s \u0997\u09c1\u09b2\u09bf \u0986\u0987\u099f\u09c7\u09ae \u099f\u09be\u09b8\u09cd\u0995 \u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1 \u09b9\u099a\u09cd\u099b\u09c7, \u09af\u09be___\u0987\u09a8\u09b8\u09cd\u099f\u09b2\u09c7\u09b6\u09a8 \u09aa\u09cd\u09af\u09be\u0995\u09c7\u099c \u09b8\u09ac ___\u0995\u09cb\u09a8 \u09ac\u09c7\u09a4\u09be\u09b0 \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09b8\u0982\u09af\u09cb\u0997, \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09b8\u09c7\u099f \u0986\u09aa!___- FTP \u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0 \u09b8\u0995\u09cd\u09b0\u09bf\u09af\u09bc \u0995\u09b0\u09be \u09b9\u09af\u09bc \u09a8\u09be___\u09b8\u09ae\u09cd\u09aa\u09be\u09a6\u09a8\u09be \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995___\u0985\u099c\u09be\u09a8\u09be \u09b6\u09bf\u09b2\u09cd\u09aa\u09c0___\u09ac\u09cd\u09af\u09be\u0995\u0986\u09aa___\u098f\u0995\u099f\u09bf \u09ac\u09c7\u09a4\u09be\u09b0 \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09b8\u09c7\u099f \u0986\u09aa \u0995\u09b0\u09c1\u09a8___\u09a1\u09b8 / \u0987\u0989\u09a8\u09bf\u0995\u09cd\u09b8 / \u09ae\u09cd\u09af\u09be\u0995 newline___\u09b9\u09cb\u09ae \u09a1\u09bf\u09b0\u09c7\u0995\u09cd\u099f\u09b0\u09bf___\u09b8\u09c7\u099f \u0995\u09b0\u09c1\u09a8 \u09ac\u09cd\u09af\u09ac\u09b8\u09cd\u09a5\u09be\u09aa\u09a8\u09be \u0985\u09cd\u09af\u09be\u0995\u09be\u0989\u09a8\u09cd\u099f___\u09a8\u09be\u09ae:___\u09b8\u09be\u09ab \u09b8\u09ac___\u09aa\u09af\u09bc\u09c7\u09a8\u09cd\u099f___\u09aa\u09bf \u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1:___\u09ae\u09bf\u09a1\u09bf\u09af\u09bc\u09be \u09a4\u09cd\u09b0\u09c1\u099f\u09bf___ES \u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1\u09be\u09b0___\u09a6\u09c7\u0996\u09be\u09a8 \u09b8\u09ac\u09be\u0987___- WLAN \u0996\u09c1\u09b2\u09a4\u09c7 \u09a8\u09be \u09b9\u09af\u09bc___\u09ac\u09be\u099b\u09be\u0987___\u099a\u09be\u09b2\u09bf\u09af\u09bc\u09c7 \u09af\u09be\u09a8___\u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0\u09c7\u09b0 \u09a4\u09be\u09b2\u09bf\u0995\u09be \u09af\u09cb\u0997 \u09a6\u09bf\u09a8___\u0985\u09ac\u09bf\u09b2\u09ae\u09cd\u09ac\u09c7 \u09a8\u09a4\u09c1\u09a8 \u09b8\u0982\u09b8\u09cd\u0995\u09b0\u09a3, \u0986\u09aa\u09a1\u09c7\u099f \u0996\u09c1\u0981\u099c\u09c7?___\u09a4\u09be\u09b0\u09bf\u0996___\u09ac\u09a8\u09cd\u09a6\u09b0 \u09b9\u09a4\u09c7 \u09b9\u09ac\u09c7 - \u09a1\u09bf\u099c\u09bf\u099f\u09be\u09b2 (1025 65534) \u09ae\u09a7\u09cd\u09af\u09c7___\u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0 \u09ac\u09be\u09a1\u09bc\u099b\u09c7___\u09b2\u09c1\u0995\u09bf\u09af\u09bc\u09c7 \u0986\u099b\u09c7:___\u09b8\u0982\u0995\u09c1\u099a\u09bf\u09a4 \u09aa\u09cd\u09af\u09be\u0995\u09c7\u099c\u09c7\u09b0 \u09ae\u09a7\u09cd\u09af\u09c7, \u09aa\u09b0\u09bf\u09ac\u09b0\u09cd\u09a4\u09bf\u09a4 \u099f\u09c7\u0995\u09cd\u09b8\u099f \u09b8\u0982\u09b0\u0995\u09cd\u09b7\u09bf\u09a4 \u0995\u09b0\u09be \u09af\u09be\u09ac\u09c7 \u09a8\u09be \u0995\u09be\u09b0\u09a3___\u09b8\u09cd\u09ac\u09b0\u09cd\u0997___\u09aa\u09cd\u09b0\u09c7\u09b0\u0995 \u09b8\u0982\u09af\u09cb\u0997 \u09ac\u09bf\u099a\u09cd\u099b\u09bf\u09a8\u09cd\u09a8___Instagram \u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8\u09c7 \u0996\u09cb\u09b2\u09be \u0986\u09aa\u09b2\u09cb\u09a1 \u09ab\u09be\u0982\u09b6\u09a8 \u09a8\u09af\u09bc___\u09a1\u09bf\u09ab\u09b2\u09cd\u099f \u09a4\u09be\u09b2\u09bf\u0995\u09be \u0987\u09a4\u09bf\u09ae\u09a7\u09cd\u09af\u09c7\u0987 \u09ac\u09bf\u09a6\u09cd\u09af\u09ae\u09be\u09a8___\u0989\u09a6\u09cd\u09a6\u09bf\u09b7\u09cd\u099f \u09ab\u09be\u0987\u09b2___\u0986\u09a8\u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u09b8\u09ae\u09cd\u09aa\u09c2\u09b0\u09cd\u09a3 \u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae \u09aa\u09c1\u09a8\u09b0\u09be\u09af\u09bc \u09b2\u09cb\u09a1 \u0995\u09b0\u09a4\u09c7 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5___%s-\u0986\u0987\u099f\u09c7\u09ae___\u0986\u09aa\u09a8\u09bf \u099b\u09ac\u09bf%1$s \u0997\u09c1\u09b2\u09bf \u09aa\u09be\u09a0\u09be\u09a4\u09c7 \u099a\u09be\u0987___\u0986\u09aa\u09a8\u09bf%1$s \u0997\u09c1\u09b2\u09bf \u09aa\u09be\u09a0\u09be\u09a4\u09c7 \u099a\u09be\u0987___\u0986\u09aa\u09a8\u09bf \u098f\u0995\u099f\u09bf \u09ab\u09be\u0987\u09b2 \u09ab\u09cb\u09b2\u09cd\u09a1\u09be\u09b0%1$s \u0997\u09c1\u09b2\u09bf \u09aa\u09be\u09a0\u09be\u09a4\u09c7 \u099a\u09be\u0987___\u0986\u09aa\u09a1\u09c7\u099f \u09b8\u09c7\u099f\u09bf\u0982\u09b8___\u09b6\u09c7\u09af\u09bc\u09be\u09b0 \u09ae\u09be\u09a7\u09cd\u09af\u09ae___\u09aa\u09cd\u09b0\u09b8\u09cd\u09a4\u09be\u09ac\u09bf\u09a4___\u0986\u09ae\u09be\u09b0___\u09b8\u0982\u0997\u09cd\u09b0\u09b9 \u0986\u0987\u099f\u09c7\u09ae \'{0}\'\u09b8\u09ab\u09b2\u09ad\u09be\u09ac\u09c7 \u09a4\u09c8\u09b0\u09bf \u0995\u09b0\u09be___ ___\u09ab\u09cb\u09b2\u09cd\u09a1\u09be\u09b0 \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8 \u0995\u09be\u09b2\u09be\u09b0___\u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u0995\u09b0\u09c1\u09a8___\u09a1\u0995\u09c1\u09ae\u09c7\u09a8\u09cd\u099f \u09b8\u09c7\u099f\u09bf\u0982\u0997\u09c1\u09b2\u09bf___S3 \u0985\u09ac\u09b8\u09cd\u09a5\u09be\u09a8___\u09a5\u09bf\u09ae \u09b8\u09c7\u099f\u09bf\u0982\u09b8___\u0985\u09a8\u09c1\u09ae\u09a4\u09bf:___\u0996\u09c7\u09b2\u09a8\u09be___\u09a8\u09a5\u09bf \u098f\u0995\u09cd\u09b8\u099f\u09c7\u09a8\u09b6\u09a8 \u0995\u09ae\u09be\u09a8, \u0985\u09a4\u09cd\u09af\u09a8\u09cd\u09a4 \u09a6\u09c0\u09b0\u09cd\u0998___\u09b8\u09c1\u09a6\u09cd\u09a7 \u0995\u09b0\u09c1\u09a8___\u09a1\u09bf\u09b0\u09c7\u0995\u09cd\u099f\u09b0\u09bf\u09a4\u09c7 \u09a5\u09c7\u0995\u09c7 \u09a8\u09bf\u099c\u09c7\u0995\u09c7 \u09b8\u09b0\u09be\u09a4\u09c7 \u0985\u0995\u09cd\u09b7\u09ae___\u09a0\u09bf\u0995\u09be\u09a8\u09be \u09aa\u09be\u0993\u09af\u09bc\u09be \u09af\u09be\u09af\u09bc \u09a8\u09be, \u09a5\u09c7\u0995\u09c7 \u09aa\u09cd\u09b0\u09b8\u09cd\u09a5\u09be\u09a8___\u09ab\u09cb\u09b2\u09cd\u09a1\u09be\u09b0 \'%s\'\u09ad\u09bf\u09a4\u09cd\u09a4\u09bf\u0995 \u09a1\u09bf\u09b0\u09c7\u0995\u09cd\u099f\u09b0\u09bf \u09b8\u09c7\u099f \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u099a\u09be\u09b2\u09be\u09a8___\u09ac\u09bf\u09aa\u09b0\u09c0\u09a4 \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8___\u098f\u0995\u099f\u09bf \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09a4\u09c8\u09b0\u09bf \u09ac\u09be \u09af\u09cb\u0997 \u09a6\u09bf\u09a4\u09c7 \u09a6\u09af\u09bc\u09be \u0995\u09b0\u09c7___\u0997\u09c7\u09ae \u0985\u09cd\u09af\u09be\u0995\u09be\u0989\u09a8\u09cd\u099f___\u0987\u09a8\u09b8\u09cd\u099f\u09b2\u09c7\u09b6\u09a8___\u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8\u09c7\u09b0 \u09aa\u09b0, \u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8, \u09aa\u09b0\u09ac\u09b0\u09cd\u09a4\u09c0 \u09aa\u09a6\u0995\u09cd\u09b7\u09c7\u09aa \u09a8\u09bf\u09b6\u09cd\u099a\u09bf\u09a4 \u0995\u09b0\u09a4\u09c7 \u098f\u0995\u09c7\u09b0 \u09aa\u09b0 \u0987\u09a8\u09b8\u09cd\u099f\u09b2\u09c7\u09b6\u09a8 \u0986\u09a8\u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u098f\u0995 \u09aa\u09cd\u09b0\u09af\u09bc\u09cb\u099c\u09a8 \u09b9\u09af\u09bc \u09a8\u09be___\u0995\u09cb\u09a8 \u0997\u09be\u09a8 \u09aa\u09be\u0993\u09af\u09bc\u09be___\u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8 \u098f\u09a8\u0995\u09cb\u09a1\u09bf\u0982___\u09b8\u09ab\u09b2\u09ad\u09be\u09ac\u09c7 \u09b8\u0982\u09b0\u0995\u09cd\u09b7\u09bf\u09a4!___\u0985\u09ac\u09c8\u09a7 \u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1___\u09a4\u09be\u09b0\u09bf\u0996 \u0986\u09aa\u09b2\u09cb\u09a1:___\u09b6\u09c1\u09a7\u09c1 \u09a8\u09bf\u099c\u09c7\u0995\u09c7 (Privacy)___\u099b\u09ac\u09bf\u09a4\u09c7 \u0985\u09a8\u09c1\u09b8\u09a8\u09cd\u09a7\u09be\u09a8___\u0986\u09a8\u099c\u09bf\u09aa___\u09a6\u09c7\u0996\u09be\u09a8 \u09a1\u09cd\u09b0\u09cd\u09af\u09be\u0997 \u09ab\u09be\u09b2\u09be___\u099b\u09ac\u09bf \u09b2\u09cb\u09a1 \u0995\u09b0\u09be \u09af\u09be\u09af\u09bc\u09a8\u09bf___\u09a8\u09bf\u0983\u09b6\u09b0\u09cd\u09a4___\u09b8\u09cd\u09ae\u09c3\u09a4\u09bf \u0986\u0989\u099f___\u09b2\u09c1\u0995\u09be\u09a8\u09cb \u09a4\u09be\u09b2\u09bf\u0995\u09be\u09b0 \u09b8\u09c1\u09b0\u0995\u09cd\u09b7\u09be___\u09a1\u09bf\u09b8\u09aa\u09cd\u09b2\u09c7 \u09b8\u09c7\u099f\u09bf\u0982\u09b8___\u09a6\u09bf\u09af\u09bc\u09c7 \u09b6\u09c1\u09b0\u09c1 \u09af\u09c7 \u09ab\u09be\u0987\u09b2 \u0993 \u09a1\u09bf\u09b0\u09c7\u0995\u09cd\u099f\u09b0\u09bf \u09aa\u09cd\u09b0\u09a6\u09b0\u09cd\u09b6\u09a8 \u09ab\u09be\u0987\u09b2\u09c7\u09b0 \u09a8\u09be\u09ae \'.\'___\u098f\u0995\u099f\u09bf___\u09b8\u09ae\u09cd\u09aa\u09be\u09a6\u09a8\u09be%s \u0997\u09c1\u09b2\u09bf \u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0___\u0985\u0999\u09cd\u0997\u09ad\u0999\u09cd\u0997\u09bf___\u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1 \u09ab\u09be\u0981\u0995\u09be \u09b9\u09a4\u09c7 \u09aa\u09be\u09b0\u09c7 \u09a8\u09be___\u09b8\u09be\u09ac\u09a1\u09bf\u09b0\u09c7\u0995\u09cd\u099f\u09b0\u09bf \u0985\u09a8\u09cd\u09a4\u09b0\u09cd\u09ad\u09c1\u0995\u09cd\u09a4 \u0995\u09b0\u09c1\u09a8___\u0997\u09c7\u09ae___\u09b8\u09bf\u0995\u09bf\u0989\u09b0\u09bf\u099f\u09bf \u09b8\u09c7\u099f\u09bf\u0982\u09b8___\u099f\u09c1\u09b2\u09ac\u09be\u09b0 \u09ac\u09be\u099f\u09a8 \u09a8\u09be\u09ae \u09aa\u09cd\u09b0\u09a6\u09b0\u09cd\u09b6\u09bf\u09a4 \u09b9\u09af\u09bc___\u09b8\u09be\u09ab \u099f\u09be\u09b8\u09cd\u0995___\u09a1\u0995\u09c1\u09ae\u09c7\u09a8\u09cd\u099f \u09ab\u09b0\u09ae\u09cd\u09af\u09be\u099f \u09aa\u09cd\u09b0\u09a6\u09b0\u09cd\u09b6\u09a8 \u09a1\u0995\u09c1\u09ae\u09c7\u09a8\u09cd\u099f\u09c7\u09b0 \u09b2\u09be\u0987\u09ac\u09cd\u09b0\u09c7\u09b0\u09bf \u09b8\u09c7\u099f \u0995\u09b0\u09c1\u09a8___\u09a8\u09a5\u09bf \u09b8\u0982\u0996\u09cd\u09af\u09be \u09a8\u09bf\u09b0\u09c2\u09aa\u09a3 ...___\u0995\u09aa\u09bf \u0995\u09b0\u09cb___\u098f\u0995\u099f\u09bf \u0995\u09be\u09b8\u09cd\u099f\u09ae \u09ac\u09cd\u09af\u09be\u0995\u0997\u09cd\u09b0\u09be\u0989\u09a8\u09cd\u09a1 \u0987\u09ae\u09c7\u099c \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8___\u09aa\u09be\u09a0\u09af\u09cb\u0997\u09cd\u09af___\u09ac\u09a8\u09cd\u09a7 \u09b9\u09af\u09bc\u09c7 \u0997\u09c7\u099b\u09c7___\u09aa\u09be\u09b0\u09cd\u099f\u09bf \u0997\u09cd\u09b0\u09b9\u09a3 \u09ac\u09be\u09a4\u09bf\u09b2 \u0995\u09b0\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7___%s-\u09aa\u09cd\u09b2\u09be\u0997\u0987\u09a8 \u0985\u09ac\u09bf\u09b2\u09ae\u09cd\u09ac\u09c7 \u0986\u09aa\u09a1\u09c7\u099f, \u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0 \u099a\u09be\u09b2\u09bf\u09af\u09bc\u09c7 \u09af\u09be\u0993 \u09af\u09be\u09a4\u09c7 \u0986\u09aa\u09a1\u09c7\u099f \u0995\u09b0\u09a4\u09c7 \u09b9\u09ac\u09c7?___\u0985\u09a8\u09cd\u09a4\u09b0\u09cd\u09a8\u09bf\u09b9\u09bf\u09a4___\u09a8\u09a5\u09bf\u09b0 \u09a8\u09be\u09ae\u09c7\u09b0 \u09aa\u09cd\u09b0\u09a4\u09cd\u09af\u09af\u09bc \u09b2\u09bf\u0996\u09c1\u09a8___\u0985\u09b2\u09b8___\u0986\u09aa\u09a8\u09bf \u0995\u09bf \u09a8\u09bf\u09b6\u09cd\u099a\u09bf\u09a4 \u0986\u09aa\u09a8\u09bf \u099f\u09cd\u09b0\u09cd\u09af\u09be\u09b6 \u0996\u09be\u09b2\u09bf \u0995\u09b0\u09a4\u09c7 \u099a\u09be\u09a8?___\u09b8\u0982\u09af\u09cb\u0997___\u09a8\u09be\u09ae___\u09ab\u09cb\u09b2\u09cd\u09a1\u09be\u09b0 \u09ae\u09c1\u099b\u09c7 \u09a8\u09bf\u09b6\u09cd\u099a\u09bf\u09a4 \u0995\u09b0\u09c1\u09a8: {0}___\u098f\u09b2\u09be\u09b0\u09cd\u09ae \u09b8\u09cd\u09ac\u09a8 \u09b8\u09c7\u099f \u0995\u09b0\u09c1\u09a8,___\u09a4\u09cd\u09b0\u09c1\u099f\u09bf, \u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0 \u09aa\u09be\u09a5 \u0996\u09be\u09b2\u09bf___\u0985\u09a8\u09c1\u0997\u09cd\u09b0\u09b9 \u0995\u09b0\u09c7 \u0985\u09aa\u09c7\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09c1\u09a8 ...___\u09b0\u09bf\u09b8\u09be\u0987\u0995\u09c7\u09b2 \u09ac\u09bf\u09a8 \u09a5\u09c7\u0995\u09c7 \u098f\u0995\u099f\u09bf \u09ac\u09b9\u09bf\u09b8\u09cd\u09a5\u09bf\u09a4 \u0995\u09be\u09b0\u09cd\u09a1 \u09ab\u09be\u0987\u09b2 \u09b8\u0982\u09af\u09cb\u0997 \u0995\u09b0\u09a4\u09c7 \u09aa\u09be\u09b0\u09ac\u09c7\u09a8 \u09a8\u09be, \u09ae\u09c1\u099b\u09c7 \u09ab\u09c7\u09b2\u09be \u09ab\u09be\u0987\u09b2 \u09aa\u09b0\u09c7 \u09aa\u09c1\u09a8\u09b0\u09c1\u09a6\u09cd\u09a7\u09be\u09b0 \u0995\u09b0\u09be \u09af\u09be\u09ac\u09c7 \u09a8\u09be___\u09ac\u09cd\u09af\u09be\u0995\u0986\u09aa \u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8 \u098f\u09ac\u0982 \u09a4\u09a5\u09cd\u09af___\u09b8\u09cd\u09ac\u09af\u09bc\u0982\u0995\u09cd\u09b0\u09bf\u09af\u09bc \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8___\u09ac\u09be\u09b9\u09cd\u09af\u09bf\u0995 \u09b8\u0982\u0997\u09cd\u09b0\u09b9\u09b8\u09cd\u09a5\u09b2___\u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1\u099f\u09bf \u09b8\u0995\u09cd\u09b0\u09bf\u09af\u09bc, \u0986\u09aa\u09a8\u09bf, \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09b0\u09bf\u09b8\u09cb\u09b0\u09cd\u09b8 \u0985\u09cd\u09af\u09be\u0995\u09cd\u09b8\u09c7\u09b8 \u0995\u09b0\u09a4\u09c7 \u098f\u0995\u099f\u09bf \u09aa\u09be\u09b8\u0993\u09af\u09bc\u09be\u09b0\u09cd\u09a1 \u09aa\u09cd\u09b0\u09ac\u09c7\u09b6 \u0995\u09b0\u09a4\u09c7 \u09b9\u09ac\u09c7___\u09a6\u09c7\u0996\u09be\u09a8 \u099a\u09c7\u0995\u09b8\u09be\u09ae___\u09aa\u09cd\u09b0\u09a4\u09bf:___\u09ac\u09bf\u099c\u09cd\u099e\u09aa\u09cd\u09a4\u09bf \u09a6\u09c7\u0996\u09be\u09ac\u09c7\u09a8 \u09a8\u09be___\u09b8\u09cd\u09ac\u09be\u09b8\u09cd\u09a5\u09cd\u09af___\'%1$s\' \u09ab\u09be\u0987\u09b2 \u09b8\u09b0\u09be\u09a8\u09cb \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u09ab\u09cb\u09b2\u09cd\u09a1\u09be\u09b0 \u09aa\u09cd\u09b0\u09c7\u09b0\u09a3 \u0995\u09b0\u09a4\u09c7 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5___\u09b8\u09be\u09ab\u09b2\u09cd\u09af\u09c7\u09b0 \u098f\u0995\u099f\u09bf \u09b6\u09b0\u09cd\u099f\u0995\u09be\u099f \u09a4\u09c8\u09b0\u09bf \u0995\u09b0\u09c1\u09a8___\u09a6\u09c0\u09b0\u09cd\u0998 \u09aa\u09cd\u09b0\u09c7\u09b8 \u098f\u09ac\u0982 \u09a1\u09cd\u09b0\u09cd\u09af\u09be\u0997 \u0995\u09b0\u09be\u09b0 \u09aa\u09b0, \u09aa\u09a6\u0995\u09cd\u09b7\u09c7\u09aa / \u09ae\u09c1\u099b\u09c7 \u09a6\u09bf\u09a8 / \u09b6\u09c7\u09af\u09bc\u09be\u09b0 \u09ab\u09be\u0987\u09b2___\u099a\u09bf\u09a4\u09cd\u09b0:___\u09b8\u0982\u09b0\u0995\u09cd\u09b7\u09a3 \u09aa\u09cd\u09b2\u09c7\u09b2\u09bf\u09b8\u09cd\u099f___\u09a1\u09bf\u09ad\u09be\u0987\u09b8 \u0996\u09c1\u0981\u099c\u09c7 \u09aa\u09be\u0993\u09af\u09bc\u09be \u09af\u09be\u09ac\u09c7 \u09a8\u09be, \u09b0\u09bf\u09ab\u09cd\u09b0\u09c7\u09b6 \u0995\u09b0\u09be\u09b0 \u099a\u09c7\u09b7\u09cd\u099f\u09be \u0995\u09b0\u09c1\u09a8___\u0986\u09b0\u09cb\u09b9\u09c0___\u09ac\u09be\u09a4\u09bf\u09b2___{0} \u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0 \u0996\u09c1\u0981\u099c\u09c7 \u09aa\u09be\u0993\u09af\u09bc\u09be \u09af\u09be\u09ac\u09c7 \u09a8\u09be___\u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09ae\u09cd\u09af\u09be\u09a8\u09c7\u099c\u09be\u09b0___\u09aa\u09a6\u0995\u09cd\u09b7\u09c7\u09aa \u09a8\u09bf\u09b6\u09cd\u099a\u09bf\u09a4?___\u09ac\u09a8\u09cd\u09a7___- \u0985\u09cd\u09af\u09be\u0995\u09be\u0989\u09a8\u09cd\u099f \u09af\u09a5\u09c7\u09b7\u09cd\u099f \u0985\u09a8\u09c1\u09ae\u09a4\u09bf \u09a8\u09c7\u0987___\u0995\u09cd\u09af\u09be\u09b6\u09c7 \u09a4\u09a5\u09cd\u09af \u09aa\u09c1\u09a8\u09b0\u09c1\u09a6\u09cd\u09a7\u09be\u09b0?___\u09a0\u09be\u09b0\u09c7 \u09a4\u09c8\u09b0\u09bf \u0995\u09b0\u09c1\u09a8 \u09ac\u09be \u09b8\u09ae\u09cd\u09aa\u09be\u09a6\u09a8\u09be \u0995\u09b0\u09c1\u09a8___root-\u09b0 \u0989\u09a8\u09cd\u09a8\u09a4 \u09ac\u09c8\u09b6\u09bf\u09b7\u09cd\u099f\u09cd\u09af___\u09b8\u09cd\u09ac\u09b0\u09cd\u0997___\u09b8\u0982\u09b8\u09cd\u0995\u09b0\u09a3___\u09a1\u09bf\u09ab\u09b2\u09cd\u099f___\u0989\u09a4\u09cd\u09b8 \u09ab\u09be\u0987\u09b2:___\u09ac\u09cd\u09af\u09b0\u09cd\u09a5\u09a4\u09be\u09b0 \u099c\u09a8\u09cd\u09af \u09b8\u09ae\u09cd\u09ad\u09be\u09ac\u09cd\u09af \u0995\u09be\u09b0\u09a3:___\u0985\u09ab\u09bf\u09b8\u09bf\u09af\u09bc\u09be\u09b2 \u09b8\u09be\u0987\u099f___\u0985\u09a8\u09cd\u09a4\u09a4 \u098f\u0995\u099f\u09bf \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09be \u09aa\u09cd\u09b0\u09af\u09bc\u09cb\u099c\u09a8___\u0985\u09aa\u09be\u09b0\u09c7\u09b6\u09a8___\u09a6\u09c7\u0996\u09be\u09a8 \u09b2\u09c1\u0995\u09be\u09a8\u09cb \u09ab\u09be\u0987\u09b2___\u0986\u09a8\u099c\u09bf\u09aa___\u0985\u09a8\u09c1\u09b8\u09a8\u09cd\u09a7\u09be\u09a8\u09c7\u09b0 \u09ab\u09b2\u09be\u09ab\u09b2___\u0986\u09aa\u09a8\u09bf \u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae \u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8 \u0986\u09a8\u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u0995\u09b0\u09be\u09b0 \u09ac\u09cd\u09af\u09be\u09aa\u09be\u09b0\u09c7 \u09a8\u09bf\u09b6\u09cd\u099a\u09bf\u09a4?___\u09ab\u09be\u0987\u09b2 \u09a8\u09be\u09ae \u09aa\u09c7\u09a4\u09c7 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5___\u09ae\u09bf\u09a1\u09bf\u09af\u09bc\u09be \u0995\u09a8\u09cd\u099f\u09c7\u09a8\u09cd\u099f \u09aa\u09c7\u09af\u09bc\u09c7 \u09af\u0996\u09a8 \u098f\u0995\u099f\u09bf \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09b8\u09ae\u09b8\u09cd\u09af\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u09b8\u09be\u09b0\u09cd\u099f\u09bf\u09ab\u09bf\u0995\u09c7\u099f \u0985\u09ac\u09bf\u09b6\u09cd\u09ac\u09b8\u09cd\u09a4 \u09b9\u09af\u09bc___\u09ac\u09cd\u09af\u09be\u0995 \u09b8\u0982\u09b8\u09cd\u0995\u09b0\u09a3 \u0985\u09a4\u09cd\u09af\u09a8\u09cd\u09a4 \u0995\u09ae___\u099f\u09c7\u0995\u09cd\u09b8\u099f___decrypted \u0995\u09b0\u09be \u09b9\u099a\u09cd\u099b\u09c7 ...___\u09a1\u09bf\u09ad\u09be\u0987\u09b8\u09c7\u09b0 \u09ac\u09cd\u09b2\u09c1\u099f\u09c1\u09a5 \u09b8\u09ae\u09b0\u09cd\u09a5\u09a8 \u0995\u09b0\u09c7 \u09a8\u09be___\u09aa\u09c1\u09a8\u0983\u09a8\u09be\u09ae\u0995\u09b0\u09a3 \u09aa\u09cd\u09b2\u09c7\u09b2\u09bf\u09b8\u09cd\u099f___WebDAV \u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0___\u0986\u09aa\u09a1\u09c7\u099f%s \u0997\u09c1\u09b2\u09bf \u09aa\u09cd\u09b2\u09be\u0997 \u0987\u09a8___\u0985\u09a8\u09cd\u09af\u09be\u09a8\u09cd\u09af___\u0995\u09be\u09b8\u09cd\u099f\u09ae \u09b9\u099f \u09b8\u09cd\u09aa\u099f \u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0 \u0995\u09b0\u09c1\u09a8___\u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u09aa\u09a5___\u09b8\u09be\u099c\u09be\u09a8\u09cb___\u098f\u09a8\u0995\u09cd\u09b0\u09bf\u09aa\u09b6\u09a8 \u098f\u09b2\u0997\u09b0\u09bf\u09a6\u09ae \u09b8\u09ae\u09b0\u09cd\u09a5\u09bf\u09a4 \u09a8\u09af\u09bc___\u09b8\u09cd\u0995\u09cd\u09af\u09be\u09a8\u09bf\u0982 ...___\u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8 \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09aa\u09cd\u09b0\u09b8\u09cd\u09a5\u09be\u09a8___\u0996\u09cb\u09b2\u09be \u09b9\u099a\u09cd\u099b\u09c7 ...___\u09b8\u09be\u09b9\u09be\u09af\u09cd\u09af___\u09aa\u09cd\u09b0\u09ae\u09be\u09a3\u09c0\u0995\u09b0\u09a3 \u09aa\u09be\u09a4\u09be \u09b2\u09cb\u09a1 \u0995\u09b0\u09a4\u09c7 \u0985\u0995\u09cd\u09b7\u09ae \u09a8\u09c7\u099f\u0993\u09af\u09bc\u09be\u09b0\u09cd\u0995 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5\u09a4\u09be, \u09aa\u09b0\u09c7 \u0986\u09ac\u09be\u09b0 \u099a\u09c7\u09b7\u09cd\u099f\u09be \u0995\u09b0\u09c1\u09a8___\u09ae\u09c1\u0995\u09cd\u09a4\u09bf___\u09b8\u09c7\u099f \u0995\u09b0\u09c1\u09a8 \u09ac\u09cd\u09af\u09be\u0995\u0997\u09cd\u09b0\u09be\u0989\u09a8\u09cd\u09a1 \u0987\u09ae\u09c7\u099c___\u0989\u09a8\u09cd\u09a8\u09a4 \u0985\u09a8\u09c1\u09b8\u09a8\u09cd\u09a7\u09be\u09a8___\u09a1\u09bf\u09ab\u09b2\u09cd\u099f \u0985\u09aa\u09b0\u09bf\u09ac\u09b0\u09cd\u09a4\u09bf\u09a4___\u09a1\u09bf\u09ad\u09be\u0987\u09b8 \u09a8\u09bf\u09b0\u09cd\u09ac\u09be\u099a\u09a8 \u0995\u09b0\u09c1\u09a8___\u09a4\u09cd\u09b0\u09c1\u099f\u09bf, \u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0 \u0996\u09c1\u0981\u099c\u09c7 \u09aa\u09be\u099a\u09cd\u099b\u09bf \u09a8\u09be___\u09a4\u09c7 \u09b8\u0982\u09af\u09c1\u0995\u09cd\u09a4 \u09b9\u099a\u09cd\u099b\u09c7___\u0995\u09cb\u09a8 \u09aa\u09cd\u09b2\u09c7\u09b2\u09bf\u09b8\u09cd\u099f \u09aa\u09be\u0993\u09af\u09bc\u09be___\u09aa\u09cd\u09b0\u09b8\u09cd\u09a5\u09be\u09a8\u09c7\u09b0 \u09b8\u09be\u09ab \u0995\u09cd\u09af\u09be\u09b6\u09c7___\u09aa\u09bf, \u09a4\u09be\u09b0 \u0985\u09ac\u09b8\u09cd\u09a5\u09be \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae \u09b8\u09c7\u099f\u09bf\u0982\u09b8 \u098f \u09af\u09be\u09a8, \u09b6\u09c1\u09b0\u09c1 \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u09ac\u09b0\u09cd\u09a3\u09a8\u09be:___\u0985\u0997\u09cd\u09b0\u09b8\u09b0___\u098f\u09a1\u09bc\u09be\u09a8\u09cb___\u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u098f\u0987 \u09ac\u09c8\u09b6\u09bf\u09b7\u09cd\u099f\u09cd\u09af \u098f\u0987 \u09a1\u09bf\u09ad\u09be\u0987\u09b8\u09c7 \u099a\u09be\u09b2\u09be\u09a4\u09c7 \u09a8\u09be \u09aa\u09be\u09b0\u09c7\u09a8 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5!___\u0985\u09cd\u09af\u09be\u09aa\u09cd\u09b2\u09bf\u0995\u09c7\u09b6\u09a8 \u09ac\u09cd\u09af\u09be\u0995\u0986\u09aa \u09a1\u09bf\u09b0\u09c7\u0995\u09cd\u099f\u09b0\u09bf___* \u09ae\u09cb\u099f___\u09aa\u09cd\u09b2\u09c7\u09b2\u09bf\u09b8\u09cd\u099f \u09af\u09cb\u0997 \u0995\u09b0\u09c1\u09a8___\u0995\u09be\u09b0\u09cd\u09af \u09ac\u09bf\u09ac\u09b0\u09a3___\u09b8\u0982\u09b0\u0995\u09cd\u09b7\u09a3___\u09ac\u09bf\u09b8\u09cd\u09a4\u09c3\u09a4___\u09b8\u09c7\u099f \u0995\u09b0\u09c1\u09a8 \u09ac\u09bf\u099c\u09cd\u099e\u09aa\u09cd\u09a4\u09bf \u09b6\u09ac\u09cd\u09a6___\u0998\u09a8\u09cd\u099f\u09be___\u09ae\u09cd\u09af\u09be\u09a8\u09c1\u09af\u09bc\u09be\u09b2 \u09a8\u09a4\u09c1\u09a8 \u09b8\u0982\u09b8\u09cd\u0995\u09b0\u09a3 \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be___ES \u09b8\u0982\u09b0\u0995\u09cd\u09b7\u09a3 \u0995\u09b0\u09c1\u09a8___\u099a\u09be\u09b2\u09bf\u09af\u09bc\u09c7 \u09af\u09be\u09a8___\u09ac\u09a8\u09cd\u09a7\u09c1 \u09a6\u09c3\u09b6\u09cd\u09af\u09ae\u09be\u09a8___\u09b2\u09bf\u0996\u09c1\u09a8___Instagram___\u09aa\u09cd\u09b0\u09a4\u09bf\u09b2\u09c7\u09aa\u09a8___\u09a1\u0995\u09c1\u09ae\u09c7\u09a8\u09cd\u099f___\u09a6\u09b0\u09cd\u09b6\u09a8\u0995\u09be\u09b0\u09c0___\u09a1\u0995\u09c1\u09ae\u09c7\u09a8\u09cd\u099f \u09ab\u09b0\u09ae\u09cd\u09af\u09be\u099f \u09af\u09cb\u0997 \u0995\u09b0\u09c1\u09a8___\u0985\u09a8\u09c1\u09b2\u09bf\u09aa\u09bf___\u09b6\u09c1\u09a7\u09c1\u09ae\u09be\u09a4\u09cd\u09b0 \u09aa\u09be\u09a0\u09af\u09cb\u0997\u09cd\u09af \u09ab\u09be\u0987\u09b2 \u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae___\u09b8\u0982\u0995\u09cd\u09b7\u09c7\u09aa\u09a8 \u09ae\u09cd\u09af\u09be\u09a8\u09c7\u099c\u09be\u09b0___{0} \u0987\u09a4\u09bf\u09ae\u09a7\u09cd\u09af\u09c7\u0987 \u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u0995\u09b0\u09be \n \u09b8\u0982\u09b8\u09cd\u0995\u09b0\u09a3 \u0987\u09a4\u09bf\u09ae\u09a7\u09cd\u09af\u09c7 \u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u0995\u09b0\u09be \u09b9\u09af\u09bc.: {1} \n \u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8 \u09b8\u0982\u09b8\u09cd\u0995\u09b0\u09a3: {2} \n\n \u099a\u09be\u09b2\u09bf\u09af\u09bc\u09c7 \u0995\u09bf\u09a8\u09be___\u098f\u0995\u099f\u09bf \u0995\u09c0 \u09ae\u09c7\u0998 \u09b6\u09c7\u09af\u09bc\u09be\u09b0\u09bf\u0982___\u09b8\u0982\u0997\u09cd\u09b0\u09b9___\u09ae\u09bf\u09a1\u09bf\u09af\u09bc\u09be \u09b8\u09be\u09b0\u09cd\u09ad\u09be\u09b0 \u09b8\u09cd\u099f\u09cd\u09b0\u09bf\u09ae\u09bf\u0982 \u09b6\u09c1\u09b0\u09c1 \u0995\u09b0\u09a4\u09c7 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5___\u098f\u0987 \u09ab\u09cb\u09b2\u09cd\u09a1\u09be\u09b0\u09c7\u09b0 \u0985\u09a8\u09c1\u09ae\u09a4\u09bf \u09a8\u09c7\u0987___ ___\u09b8\u09ae\u09b8\u09cd\u09a4 \u09b8\u09be\u09ab \u0995\u09b0\u09c1\u09a8___\u09b2\u09c7\u09ac\u09c7\u09b2___\u09b0\u09bf\u09b8\u09be\u0987\u0995\u09c7\u09b2 \u09ac\u09bf\u09a8 \u09a5\u09c7\u0995\u09c7 \u09b8\u09b0\u09be\u09a8\u09cb___Instagram \u09ac\u09b0\u09cd\u09a4\u09ae\u09be\u09a8\u09c7 \u098f\u09a1\u09bf\u099f\u09bf\u0982 \u09ab\u09be\u0982\u09b6\u09a8 \u09b8\u09ae\u09b0\u09cd\u09a5\u09a8 \u0995\u09b0\u09c7 \u09a8\u09be___\u09a4\u09cd\u09b0\u09c1\u099f\u09bf___\u09b8\u09b0\u09be\u09a8\u09cb \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u0986\u0995\u09be\u09b0:___\u09ab\u09be\u0987\u09b2 \u0995\u09aa\u09bf \u09af\u0996\u09a8 \u0995\u09cd\u09b2\u09bf\u09aa\u09ac\u09cb\u09b0\u09cd\u09a1 \u09a6\u09c7\u0996\u09be\u09ac\u09c7\u09a8 \u09a8\u09be___\u0986\u09a8\u0987\u09a8\u09b8\u09cd\u099f\u09b2 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5 \u09b9\u09af\u09bc\u09c7\u099b\u09c7___\u0986\u09aa\u09a8\u09bf%s-\u09aa\u09cd\u09b2\u09be\u0997 \u0987\u09a8 \u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1 \u0995\u09b0\u09a4\u09c7 \u099a\u09be\u09a8?___\u09ac\u09cd\u09b2\u09c1\u099f\u09c1\u09a5 \u098f\u09b0 \u098f\u0987 \u09b8\u0982\u09b8\u09cd\u0995\u09b0\u09a3 \u0985\u09cd\u09af\u09be\u09a8\u09cd\u09a1\u09cd\u09b0\u09af\u09bc\u09c7\u09a1 1.6 \u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae\u09c7\u09b0 \u099c\u09a8\u09cd\u09af \u0989\u09aa\u09b2\u09ac\u09cd\u09a7 \u09a8\u09af\u09bc, ES \u098f\u0995\u09cd\u09b8\u09aa\u09cd\u09b2\u09cb\u09b0\u09be\u09b0 (Cupcake \u09b8\u0982\u09b8\u09cd\u0995\u09b0\u09a3) \u09ab\u09be\u0987\u09b2 \u09ac\u09cd\u09af\u09ac\u09b9\u09be\u09b0 \u0995\u09b0\u09c1\u09a8___\u09a4\u09cd\u09ac\u09b0\u0995 \u09b8\u09cd\u09b2\u09be\u0987\u09a1___\u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1 \u09ac\u09cd\u09af\u09b0\u09cd\u09a5 \u09b9\u09af\u09bc\u09c7\u099b\u09c7"
+    const-string v2, "\u0412\u043a\u043b\u044e\u0447\u0432\u0430\u043d\u0435___\u041f\u0440\u043e\u0437\u043e\u0440\u0446\u0438\u0442\u0435 \u043f\u043e \u043f\u043e\u0434\u0440\u0430\u0437\u0431\u0438\u0440\u0430\u043d\u0435 \u0449\u0435 \u0431\u044a\u0434\u0430\u0442 \u043e\u0442\u0432\u0430\u0440\u044f\u043d\u0438 \u043f\u0440\u0438 \u0432\u0441\u044f\u043a\u043e \u0441\u0442\u0430\u0440\u0442\u0438\u0440\u0430\u043d\u0435___\u0423\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e\u0442\u043e \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u043e\u0442\u043a\u0440\u0438\u0442\u043e, \u043c\u043e\u043b\u044f \u043f\u0440\u0435\u0437\u0430\u0440\u0435\u0434\u0435\u0442\u0435___\u041f\u043e\u043a\u0430\u0437\u0432\u0430\u0439 \u0441\u0430\u043c\u043e \u0430\u0443\u0434\u0438\u043e \u0444\u0430\u0439\u043b\u043e\u0432\u0435 >500KB \u0432 \u0441\u043f\u0438\u0441\u044a\u043a\u0430___\u041f\u0430\u0440\u043e\u043b\u0430 \u0437\u0430 \u043c\u0440\u0435\u0436\u0430\u0442\u0430:___\u041d\u0435\u0434\u043e\u0441\u0442\u0430\u0442\u044a\u0447\u043d\u043e \u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0441\u0442\u0432\u043e!___\u0417\u0430\u0432\u044a\u0440\u0448\u0435\u043d\u043e___\u041f\u043e\u043a\u0430\u0436\u0438 \u043f\u0430\u043f\u043a\u0430 \u0441 \u0438\u043a\u043e\u043d\u0430___\u0422\u0435\u043c\u0430 \u043f\u043e \u043f\u043e\u0434\u0440\u0430\u0437\u0431\u0438\u0440\u0430\u043d\u0435___\u0412\u0441\u0438\u0447\u043a\u0438 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f___\u0417\u0430\u043f\u0438\u0441___\u0412\u0438\u0434\u0435\u043e:___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u0443\u0434\u043e\u0441\u0442\u043e\u0432\u0435\u0440\u044f\u0432\u0430\u043d\u0435___\u041f\u043e \u043f\u043e\u0434\u0440\u0430\u0437\u0431\u0438\u0440\u0430\u043d\u0435___\u041f\u043e\u043c\u043e\u0449___\u0412\u044a\u0432\u0435\u0434\u0435\u0442\u0435 \u0434\u0430\u0442\u0430___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u043a\u043e\u043f\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u0444\u0430\u0439\u043b\u0430 {0}___\u0421\u044a\u0437\u0434\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 \u0441\u043d\u0438\u043c\u043a\u0438___\u0418\u0437\u0431\u0435\u0440\u0438 \u043c\u044f\u0441\u0442\u043e \u0437\u0430 \u0441\u044a\u0445\u0440\u0430\u043d\u0435\u043d\u0438\u0435___Chromecast \u0434\u043e\u0431\u0430\u0432\u043a\u0430\u0442\u0430 \u043d\u0435 \u0435 \u043d\u0430\u043c\u0435\u0440\u0435\u043d\u0430 \u0438\u043b\u0438 \u0441\u0435 \u043d\u0443\u0436\u0434\u0430\u0435 \u043e\u0442 \u0430\u043a\u0442\u0443\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u044f.\n\n\u0418\u0441\u043a\u0430\u0442\u0435 \u043b\u0438 \u0434\u0430 \u044f \u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u0442\u0435?___\u041f\u0440\u0438\u043d\u0443\u0434\u0438\u0442\u0435\u043b\u043d\u043e \u0438\u0437\u0432\u0430\u0436\u0434\u0430\u043d\u0435___\u0425\u0440\u043e\u043d\u043e\u043b\u043e\u0433\u0438\u044f___\u0417\u0430\u0434\u0430\u0432\u0430\u043d\u0435 \u043a\u0430\u0442\u043e \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u043f\u043e \u043f\u043e\u0434\u0440\u0430\u0437\u0431\u0438\u0440\u0430\u043d\u0435___\u0421\u043f\u0438\u0441\u044a\u043a\u044a\u0442 \u0437\u0430 \u0438\u0437\u043f\u044a\u043b\u043d\u0435\u043d\u0438\u0435 \u0435 \u043e\u0442\u043c\u0435\u043d\u0435\u043d___\u0417\u0430\u043f\u0438\u0448\u0438 \u0432 \u0441\u043f\u0438\u0441\u044a\u043a___\u041c\u043e\u043b\u044f, \u0432\u044a\u0432\u0435\u0434\u0435\u0442\u0435 \u0432\u0430\u043b\u0438\u0434\u0435\u043d \u0438\u043c\u0435\u0439\u043b \u0430\u0434\u0440\u0435\u0441___\u0417\u0430\u0434\u0430\u0439 \u043a\u0430\u0442\u043e \u0442\u043e\u043d \u0437\u0430 \u0430\u043b\u0430\u0440\u043c\u0430___\u0422\u0435\u0441\u0442\u0430 \u043f\u0440\u0438\u043a\u043b\u044e\u0447\u0438, \u043c\u043e\u0436\u0435 \u0434\u0430 \u043f\u0438\u0448\u0435\u0442\u0435 \u0432 \u043a\u0430\u0440\u0442\u0430\u0442\u0430 \u043f\u0430\u043c\u0435\u0442.\n\n\u0417\u0430 \u0434\u0430 \u0435 \u043f\u043e\u0441\u0442\u043e\u044f\u043d\u043d\u043e \u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u0439\u0442\u0435 ES \u043f\u0440\u0438 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u0438\u0442\u0435 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f, \u0438\u0441\u043a\u0430\u0442\u0435 \u043b\u0438 \u0434\u0430 \u0433\u043e \u043d\u0430\u043f\u0440\u0430\u0432\u0438\u0442\u0435 \u0441\u0435\u0433\u0430?___\u0414\u043e\u0431\u0430\u0432\u044f\u043d\u0435___\u0410\u0443\u0434\u0438\u043e \u043f\u043b\u0435\u044a\u0440___\u041a\u043e\u043f\u0438\u0440\u0430\u0439___\u041f\u0440\u0438\u0441\u044a\u0435\u0434\u0438\u043d\u044f\u0432\u0430\u043d\u0435 \u043a\u044a\u043c \u043c\u0440\u0435\u0436\u0430___\u041f\u043e\u043a\u0430\u0436\u0438 \u043e\u043f\u0446\u0438\u0438___\u041c\u043e\u043b\u044f, \u043f\u043e\u043f\u044a\u043b\u043d\u0435\u0442\u0435 \u0432\u0441\u0438\u0447\u043a\u0438 \u043f\u043e\u043b\u0435\u0442\u0430___\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u043d___\u0441\u0435\u043a\u0443\u043d\u0434\u0438___\u0420\u0430\u0437\u0448\u0438\u0440\u0435\u043d\u0438\u0435\u0442\u043e \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0435 \u043f\u0440\u0430\u0437\u043d\u043e___\u041e\u0449\u0435 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f___\u0414\u0430\u0442\u0430___OTG USB \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e\u0442\u043e \u043d\u0435 \u043f\u043e\u0434\u0434\u044a\u0440\u0436\u0430 \u0442\u043e\u0437\u0438 \u0444\u043e\u0440\u043c\u0430\u0442, ES \u043f\u043e\u0434\u0434u\u0440\u0436\u0430 \u0441\u0430\u043c\u043e FAT32 \u0438 NTFS___\u041d\u0430\u0431\u043e\u0440 \u043e\u0442 \u0441\u0438\u043c\u0432\u043e\u043b\u0438___DOS/UNIX/MAC \u0442\u0435\u0440\u043c\u0438\u043d\u0430\u0442\u043e\u0440___\u0418\u0437\u043b\u0438\u0437\u0430\u043d\u0435 \u043e\u0442 \u0441\u0435\u0433\u0430\u0448\u043d\u0430\u0442\u0430 \u043c\u0440\u0435\u0436\u0430___Facebook \u043d\u0435 \u043f\u043e\u0434\u0434\u044a\u0440\u0436\u0430 \u0438\u0437\u0442\u0440\u0438\u0432\u0430\u043d\u0435 \u043e\u0442 \u0442\u0443\u043a!___\u041f\u0440\u0435\u043c\u0435\u0441\u0442\u0435\u043d\u0438 \u0444\u0430\u0439\u043b\u043e\u0432\u0435 \u0432 \u201e%1$s\u201c___\u0414\u0435\u043a\u043b\u0430\u0440\u0430\u0446\u0438\u044f \u0437\u0430 \u043f\u043e\u0432\u0435\u0440\u0438\u0442\u0435\u043b\u043d\u043e\u0441\u0442___\u041f\u043e\u0442\u0440\u0435\u0431\u0438\u0442\u0435\u043b\u0441\u043a\u043e\u0442\u043e \u0438\u043c\u0435 \u043d\u0435 \u0442\u0440\u044f\u0431\u0432\u0430 \u0434\u0430 \u0431\u044a\u0434\u0435 \u043f\u0440\u0430\u0437\u043d\u043e!___\u0418\u0437\u043f\u0440\u0430\u0442\u0438___\u0422\u0430\u0437\u0438 \u043e\u043f\u0435\u0440\u0430\u0446\u0438\u044f \u043d\u0435 \u0441\u0435 \u043f\u043e\u0434\u0434\u044a\u0440\u0436\u0430___\u0420\u0430\u0437\u043c\u0435\u0440\u044a\u0442 \u043d\u0430 \u0444\u0430\u0439\u043b\u0430 \u0435 \u043d\u0430\u0434 \u043e\u0433\u0440\u0430\u043d\u0438\u0447\u0435\u043d\u0438\u0435\u0442\u043e___\u0417\u0430\u0434\u0430\u0439 \u0442\u043e\u043d \u043d\u0430 \u0437\u0432\u044a\u043d\u0435\u043d\u0435___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u0430 \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f___\u041e\u0433\u0440\u0430\u043d\u0438\u0447\u0435\u043d\u0438\u0435 \u043d\u0430 \u0434\u043e\u0441\u0442\u044a\u043f\u0430 \u0434\u043e \u0434\u0438\u0440\u0435\u043a\u0442\u043e\u0440\u0438\u044f\u0442\u0430___\u0412\u0438\u0434\u0435\u043e \u0444\u0430\u0439\u043b\u044a\u0442 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u0432\u044a\u0437\u043f\u0440\u043e\u0438\u0437\u0432\u0435\u0434\u0435\u043d___Web___\u0421\u043a\u0430\u043d\u0438\u0440\u0430\u043d\u0438 \u0443-\u0432\u0430___\u0422\u0432\u044a\u0440\u0434\u0435 \u0434\u044a\u043b\u0433\u043e \u0438\u043c\u0435 \u043d\u0430 \u0444\u0430\u0439\u043b, \u043c\u043e\u043b\u044f \u0438\u0437\u043f\u043e\u043b\u0437\u0432\u0430\u0439\u0442\u0435 \u043f\u043e-\u043a\u0440\u0430\u0442\u043a\u043e.___\u041d\u043e\u0432\u0430 \u0432\u0435\u0440\u0441\u0438\u044f___\u0417\u0430\u0442\u0432\u043e\u0440\u0438 \u0443\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u0435\u0442\u043e___\u041f\u0430\u0440\u043e\u043b\u0430 \u043d\u0430 \u0442\u043e\u0447\u043a\u0430 \u0437\u0430 \u0434\u043e\u0441\u0442\u044a\u043f:___\u0413\u0440\u0435\u0448\u043a\u0430,  \u0441\u044a\u0440\u0432\u044a\u0440\u044a\u0442 \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u043d\u0430\u043c\u0435\u0440\u0435\u043d___\u041f\u0440\u0435\u0434\u0443\u043f\u0440\u0435\u0436\u0434\u0435\u043d\u0438\u0435___\u0418\u0437\u043f\u0440\u0430\u0437\u0432\u0430\u043d\u0435\u0442\u043e \u043d\u0430 \u043a\u043e\u0448\u0447\u0435\u0442\u043e \u0449\u0435 \u0432\u0438 \u043f\u043e\u043f\u0440\u0435\u0447\u0438 \u0434\u0430 \u0432\u044a\u0437\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u0435 \u0444\u0430\u0439\u043b\u043e\u0432\u0435 \u043e\u0442 \u0442\u0430\u043c ___\u041f\u043b\u0435\u0439\u044a\u0440___\u041d\u0430\u0433\u043e\u0440\u0435___\u0421\u043f\u0438\u0440\u0430\u043d\u0435 \u043f\u0440\u0438 \u0438\u0437\u043b\u0438\u0437\u0430\u043d\u0435___\u0417\u0430\u0434\u0430\u0439 UID___\u041c\u0440\u0435\u0436\u043e\u0432\u0430 \u0432\u0440\u044a\u0437\u043a\u0430___\u0418\u0437\u0442\u0435\u0433\u043b\u044f\u043d\u0435 \u043d\u0430 \u0434\u043e\u0431\u0430\u0432\u043a\u0430\u0442\u0430 %s___\u0416\u0435\u0441\u0442\u044a\u0442 \u043d\u0435 \u0435 \u0437\u0430\u043f\u0430\u043c\u0435\u0442\u0435\u043d, \u043f\u0440\u043e\u0432\u0435\u0440\u0435\u0442\u0435 \u0434\u0430\u043b\u0438 sdcard \u0441\u044a\u0449\u0435\u0441\u0442\u0432\u0443\u0432\u0430___\u041f\u0430\u043f\u043a\u0438___\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0430\u0440\u0445\u0438\u0432\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438\u0442\u0435___\u041f\u043e\u043b\u0443\u0447\u0435\u043d\u0438 \u0444\u0430\u0439\u043b\u043e\u0432\u0435 \u0432 \u201e%1$s\u201c___\u0418\u0437\u0447\u0438\u0441\u0442\u0438 \u0432\u0441\u0438\u0447\u043a\u0438___\u0412\u043f\u0438\u0441\u0432\u0430\u043d\u0435___\u041d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0438\u0437\u043f\u0440\u0430\u0442\u0438 \u043f\u0430\u043f\u043a\u0430___\u0414\u043e\u0431\u0430\u0432\u0438 \u043a\u044a\u043c \u043f\u0440\u043e\u0437\u043e\u0440\u0435\u0446\u0430 \u043f\u043e \u043f\u043e\u0434\u0440\u0430\u0437\u0431\u0438\u0440\u0430\u043d\u0435___\u0412\u044a\u0437\u0441\u0442\u0430\u043d\u043e\u0432\u044f\u0432\u0430\u043d\u0435 \u043d\u0430 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438\u0442\u0435___\u0418\u0437\u0447\u0438\u0441\u0442\u0438 \u043a\u0435\u0448\u0430 \u043f\u0440\u0438 \u0438\u0437\u043b\u0438\u0437\u0430\u043d\u0435___\u0423\u0432\u0435\u0434\u043e\u043c\u0438 \u0441\u0438\u0441\u0442\u0435\u043c\u0430\u0442\u0430 \u0437\u0430 \u043e\u0431\u043d\u043e\u0432\u044f\u0432\u0430\u043d\u0435\u0442\u043e___\u043a\u043e\u043f\u0438\u0440\u0430\u043d\u0435\u0442\u043e \u043d\u0430 \u043e\u0442\u0434\u0430\u043b\u0435\u0447\u0435\u043d\u0438\u044f \u0444\u0430\u0439\u043b \u0435 \u043d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e___\u0414\u0435\u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u0438\u0437\u0431\u0440\u0430\u043d\u0438\u0442\u0435 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f?___\u041d\u0435 \u0435 \u043d\u0430\u043c\u0435\u0440\u0435\u043d \u043c\u043e\u0434\u0443\u043b\u044a\u0442: ES Task Manager.\n\n\u0422\u043e\u0439 \u0438\u043c\u0430 \u0444\u0443\u043d\u043a\u0446\u0438\u0438 \u0437\u0430 \u0434\u0435\u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u0438 \u0438 \u0443\u0438\u0434\u0436\u0435\u0442 \u0437\u0430 \u0443\u0431\u0438\u0432\u0430\u043d\u0435 \u043d\u0430 \u043f\u0440\u043e\u0446\u0435\u0441\u0438.\n\n\u0418\u0441\u043a\u0430\u0442\u0435 \u043b\u0438 \u0434\u0430 \u0433\u043e \u043d\u0430\u043c\u0435\u0440\u0438\u0442\u0435 \u0438 \u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u0442\u0435?___\u0410\u0440\u0445\u0438\u0432\u0438\u0440\u0430\u043d\u0435 \u0438 \u0432\u044a\u0437\u0441\u0442\u0430\u043d\u043e\u0432\u044f\u0432\u0430\u043d\u0435 \u043d\u0430 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438\u0442\u0435___\u0414\u0435\u043a\u043e\u043c\u043f\u0440\u0435\u0441\u0438\u0440\u0430\u043d\u0435...___\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435:___\u0422\u0435\u0441\u0442___\u0424\u0430\u0439\u043b\u044a\u0442 \u043d\u0435 \u0435 \u043d\u0430\u043c\u0435\u0440\u0435\u043d? \u0423\u0432\u0435\u0434\u043e\u043c\u0435\u0442\u0435 \u0441\u0438\u0441\u0442\u0435\u043c\u0430\u0442\u0430 \u0437\u0430 \u0430\u043a\u0442\u0443\u0430\u043b\u0438\u0437\u0438\u0440\u0430\u043d\u0435 (\u043e\u0442\u043d\u0435\u043c\u0430 \u0432\u0440\u0435\u043c\u0435 \u0441\u043f\u043e\u0440\u0435\u0434 \u0432\u0430\u0448\u0430\u0442\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u0430)?___\u041e\u0442\u043c\u0435\u0442\u043a\u0430\u0442\u0430 {0} \u0432\u0435\u0447\u0435 \u0441\u044a\u0449\u0435\u0441\u0442\u0432\u0443\u0432\u0430, \u0434\u0430 \u0441\u0435 \u043f\u0440\u0435\u0437\u0430\u043f\u0438\u0448\u0435 \u043b\u0438?___\u041a\u043e\u043f\u0438\u0440\u0430\u043d\u0435___\u0422\u0435\u043a\u0441\u0442___\u0412\u044a\u0437\u043f\u0440\u043e\u0438\u0437\u0432\u0435\u0436\u0434\u0430\u043d\u0435___\u0418\u043c\u0435: %s___\u041d\u044f\u043c\u0430 \u0438\u0437\u0431\u0440\u0430\u043d \u0444\u0430\u0439\u043b/\u043f\u0430\u043f\u043a\u0430___\u041d\u044f\u043c\u0430 \u0437\u0430\u0434\u0430\u0447\u0438 \u0437\u0430 \u0441\u0432\u0430\u043b\u044f\u043d\u0435.___\u0418\u043c\u0435\u0442\u043e \u043d\u0430 \u0430\u043b\u0431\u0443\u043c\u0430 \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u043f\u0440\u0430\u0437\u043d\u043e!___\u0412\u044a\u0437\u0441\u0442\u0430\u043d\u043e\u0432\u0438 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438\u0442\u0435 \u043d\u0430 \u0442\u0435\u043c\u0430\u0442\u0430___OBEX FTP \u0443\u0441\u043b\u0443\u0433\u0430\u0442\u0430 \u0435 \u0441\u043f\u0440\u044f\u043d\u0430.___\u0417\u0430\u0434\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 \u043f\u0430\u0440\u043e\u043b\u0430 \u0437\u0430 \u0434\u043e\u0441\u0442\u044a\u043f \u0434\u043e \u0440\u0435\u0441\u0443\u0440\u0441\u0438\u0442\u0435___\u0412\u0440\u0435\u043c\u0435___\u043c\u0438\u043d\u0443\u0442\u0438___\u0421\u0438\u0441\u0442\u0435\u043c\u043d\u0430\u0442\u0430 \u0434\u0438\u0440\u0435\u043a\u0442\u043e\u0440\u0438\u044f \u0435 \u043c\u043e\u043d\u0442\u0438\u0440\u0430\u043d\u0430 \u043a\u0430\u0442\u043e \u0437\u0430\u043f\u0438\u0441\u0432\u0430\u0435\u043c\u0430___\u0410\u043d\u043e\u043d\u0438\u043c\u0435\u043d___\u0422\u044a\u0440\u0441\u0435\u043d\u0435 \u043d\u0430 \u0444\u0430\u0439\u043b\u043e\u0432\u0435___\u041e\u0442\u0434\u0430\u043b\u0435\u0447\u0435\u043d\u043e \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435___\u0417\u0430\u0434\u0430\u0439 \u043f\u043e\u0437\u0438\u0446\u0438\u044f___- \u041f\u0440\u043e\u0444\u0438\u043b\u044a\u0442 \u043d\u044f\u043c\u0430 \u043f\u0440\u0430\u0432\u0430___\u0417\u0430\u043f\u0430\u0437\u0438 \u0432___\u041a\u043e\u043d\u0442\u0440\u043e\u043b\u043d\u0430\u0442\u0430 \u0441\u0443\u043c\u0430 {0} \u0435 \u0437\u0430\u043f\u0438\u0441\u0430\u043d\u0430 \u0432\u044a\u0432 \u0444\u0430\u0439\u043b\u0430: {1}.___\u0415\u043b\u0435\u043c\u0435\u043d\u0442 \u0437\u0430 \u043f\u0440\u0435\u0432\u044a\u0440\u0442\u0430\u043d\u0435 \u0441 \u043f\u0430\u043b\u0435\u0446___\u0423\u0435\u0431 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430___\u0417\u0430 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u0430\u0442\u0430___ES FTP \u0441\u044a\u0440\u0432\u044a\u0440 \u0441\u0442\u0430\u0440\u0442\u0438\u0440\u0430\u043d___Instagram___\u041c\u0435\u043d\u0438\u0434\u0436\u044a\u0440 \u043d\u0430 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f\u0442\u0430___\u041d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u043f\u043e\u0441\u0442\u0430\u0432\u0435\u043d\u043e \u0442\u0443\u043a___\u0420\u0430\u0437\u0448\u0438\u0440\u0435\u043d\u0438\u0435\u0442\u043e \u0435 \u043f\u0440\u0435\u043a\u0430\u043b\u0435\u043d\u043e \u0434\u044a\u043b\u0433\u043e, \u043f\u0440\u043e\u043c\u0435\u043d\u0435\u0442\u0435 \u0433\u043e___\u0421\u044a\u0437\u0434\u0430\u0432\u0430\u043d\u0435\u0442\u043e \u043d\u0430 \u0444\u0430\u0439\u043b\u0430 \u0435 \u043d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e___\u0410\u043d\u043e\u043d\u0438\u043c\u043d\u043e \u043a\u0430\u0447\u0432\u0430\u043d\u0435___\u0423\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e___\u041d\u044f\u043c\u0430 \u043f\u043e\u0432\u0435\u0447\u0435 \u0441\u043d\u0438\u043c\u043a\u0438___\u041a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f___\u041c\u0435\u043d\u044e___\u0412\u0430\u0448\u0438\u0442\u0435 \u043f\u0440\u0438\u044f\u0442\u0435\u043b\u0438___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u0440\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u0430\u043d\u0435!___\u041f\u043e\u043a\u0430\u0437\u0432\u0430\u043d\u0435 \u043d\u0430 \u0431\u0443\u0442\u043e\u043d\u0430 \u201e\u0418\u0437\u0431\u0435\u0440\u0438\u201c \u0432 \u043b\u0435\u043d\u0442\u0430\u0442\u0430 \u0441 \u0438\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u0438___\u0418\u0437\u0447\u0438\u0441\u043b\u044f\u0432\u0430\u043d\u0435 \u043d\u0430 \u0444\u0430\u0439\u043b\u043e\u0432\u0435\u0442\u0435\u2026___\u041d\u0410\u0421\u0422\u0420\u041e\u0419\u041a\u0418 \u041d\u0410 \u0424\u0410\u0419\u041b\u041e\u0412\u0415\u0422\u0415___\u0414\u0438\u0441\u043f\u0435\u0447\u0435\u0440 \u043d\u0430 \u0441\u0442\u0430\u0440\u0442\u0438\u0440\u0430\u043d\u0435___\u0418\u0441\u043a\u0430\u0442\u0435 \u043b\u0438 \u0434\u0430 \u0438\u0437\u0442\u0440\u0438\u0435\u0442\u0435 {0} \u2026 ({1} \u0435\u043b\u0435\u043c\u0435\u043d\u0442\u0430)?___\u0410\u043d\u0430\u043b\u0438\u0437\u0438\u0440\u0430\u043d\u0435___\u0417\u0430\u043f\u0438\u0441: ___\u041c\u043e\u043b\u044f, \u0432\u044a\u0432\u0435\u0434\u0435\u0442\u0435 \u0438\u043c\u0435 \u043d\u0430 \u043c\u0440\u0435\u0436\u0430___\u0412\u044a\u0432\u0435\u0434\u0435\u0442\u0435 \u043a\u043b\u044e\u0447\u043e\u0432\u0430 \u0434\u0443\u043c\u0430___\u0420\u0435\u0433\u0443\u043b\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u0447\u0443\u0432\u0441\u0442\u0432\u0438\u0442\u0435\u043b\u043d\u043e\u0441\u0442\u0442\u0430 \u043f\u0440\u0438 \u0440\u0430\u0437\u043a\u043b\u0430\u0449\u0430\u043d\u0435___\u0417\u0430\u0434\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 \u043f\u0430\u0440\u043e\u043b\u0430___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u0437\u0430\u043f\u0430\u043c\u0435\u0442\u044f\u0432\u0430\u043d\u0435___\u041c\u043e\u043b\u044f, \u0432\u044a\u0432\u0435\u0434\u0435\u0442\u0435 \u0438\u043c\u0435\u0442\u043e \u043d\u0430 \u0444\u0430\u0439\u043b\u0430___\u041f\u0440\u0430\u0437\u0435\u043d \u0441\u043f\u0438\u0441\u044a\u043a___192.168.1.100/\u041c\u043e\u0438\u0442\u0435 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0438___\u041f\u0440\u043e\u043c\u044f\u043d\u0430 \u043d\u0430 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438\u0442\u0435 \u0437\u0430 \u043f\u043e\u0432\u0435\u0440\u0438\u0442\u0435\u043b\u043d\u043e\u0441\u0442___\u0421\u0438\u0441\u0442\u0435\u043c\u043d\u043e\u0442\u043e \u0432\u0440\u0435\u043c\u0435 \u0435 \u0433\u0440\u0435\u0448\u043d\u043e, \u043c\u043e\u043b\u044f \u043f\u0440\u043e\u043c\u0435\u043d\u0435\u0442\u0435 \u0433\u043e___\u0423\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e\u0442\u043e \u0432\u0438 \u043d\u0435 \u043f\u043e\u0434\u0434\u044a\u0440\u0436\u0430 Bluetooth___\u0417\u0430 \u0441\u044a\u0436\u0430\u043b\u0435\u043d\u0438\u0435 \u0438\u043c\u0430 \u0433\u0440\u0435\u0448\u043a\u0430 \u0432 \u043c\u0440\u0435\u0436\u0430\u0442\u0430; \u043c\u043e\u043b\u044f, \u043e\u043f\u0438\u0442\u0430\u0439\u0442\u0435 \u043f\u043e-\u043a\u044a\u0441\u043d\u043e___\u0418\u0437\u0442\u0440\u0438\u0439 \u0441\u043f\u0438\u0441\u044a\u043a\u0430___\u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f___\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u043d\u0430 \u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0430___\u0418\u0441\u043a\u0430\u0442\u0435 \u043b\u0438 \u0434\u0430 \u0438\u0437\u0442\u0440\u0438\u0435\u0442\u0435 \u043f\u0430\u043f\u043a\u0430\u0442\u0430: {0}?___\u0414\u0440\u0443\u0433\u0438:___\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u043a\u043e\u0434\u0438\u0440\u0430\u043d\u0435___\u0414\u0435\u043c\u043e\u043d\u0442\u0438\u0440\u0430\u043d\u0435 %s \u0437\u0430\u0432\u044a\u0440\u0448\u0435\u043d\u043e___\u0418\u0433\u0440\u0430\u0447\u043a\u0430___\u041d\u043e\u0432 \u043f\u0440\u043e\u0444\u0438\u043b___\u0418\u043c\u0435\u0442\u043e \u0438 \u043f\u0430\u0440\u043e\u043b\u0430\u0442\u0430 \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0430\u0442 \u043f\u0440\u0430\u0437\u043d\u0438___\u041a\u043e\u0448\u0447\u0435___\u041f\u043e\u043a\u0430\u0436\u0438 \u043f\u0430\u0440\u043e\u043b\u0430\u0442\u0430___\u041f\u043e\u043a\u0430\u0437\u0432\u0430 \u0438\u043c\u0435\u0442\u043e \u0432 \u043b\u0435\u043d\u0442\u0430\u0442\u0430 \u0441 \u0438\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u0438___\u041c\u043e\u0436\u0435 \u0434\u0430 \u0445\u0430\u0440\u0435\u0441\u0430\u0442\u0435___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u0434\u0435\u043c\u043e\u043d\u0442\u0438\u0440\u0430\u043d\u0435___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u0437\u0430\u0440\u0435\u0436\u0434\u0430\u043d\u0435!___\u041d\u0438\u0432\u043e \u043d\u0430 \u043a\u043e\u043c\u043f\u0440\u0435\u0441\u0438\u0440\u0430\u043d\u0435:___\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u043d\u0430 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0438___\u041c\u043e\u0436\u0435 \u0434\u0430 \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u0432\u0430\u0442\u0435 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e\u0442\u043e \u0441\u0438 \u043f\u0440\u0435\u0437 \u0432\u0430\u0448\u0438\u044f \u043a\u043e\u043c\u043f\u044e\u0442\u044a\u0440, \u0441\u043b\u0435\u0434 \u043a\u0430\u0442\u043e \u0432\u043a\u043b\u044e\u0447\u0438\u0442\u0435 \u0443\u0441\u043b\u0443\u0433\u0430\u0442\u0430___\u0420\u0430\u0437\u043c\u0435\u0440: %s___\u0418\u0437\u0442\u0435\u0433\u043b\u044f\u043d\u0435...___\u0418\u0437\u0432\u043b\u0438\u0447\u0430\u043d\u0435 \u0432___\u041c\u043e\u043b\u044f, \u0434\u043e\u0431\u0430\u0432\u0435\u0442\u0435 \u0438\u043b\u0438 \u0434\u0435\u0430\u043a\u0442\u0438\u0432\u0438\u0440\u0430\u0439\u0442\u0435 \u0436\u0435\u0441\u0442\u043e\u0432\u0435 \u0432 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438\u0442\u0435___\u041f\u043e\u043a\u0430\u0436\u0438 \u0442\u044a\u0440\u0441\u0430\u0447\u043a\u0430 \u0432 \u043d\u0430\u0447\u0430\u043b\u043d\u0430\u0442\u0430 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430___Bluetooth \u0434\u0438\u0440\u0435\u043a\u0442\u043e\u0440\u0438\u044f___\u041f\u0440\u0435\u043c\u0435\u0441\u0442\u0438___\u041c\u0435\u043d\u0438\u0434\u0436\u044a\u0440 \u0437\u0430 \u043a\u043e\u043c\u043f\u0440\u0435\u0441\u0438\u0440\u0430\u043d\u0435___\u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f\u0442\u0430 \u043d\u0435 \u0441\u0430 \u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0438___\u0410\u0440\u0445\u0438\u0432\u0438\u0440\u0430\u043d\u0435___\u0413\u0440\u0443\u043f\u0430:___\u041d\u0430 \u043f\u0430\u0443\u0437\u0430___\u041c\u0443\u0437\u0438\u043a\u0430___- IP \u0435 \u043d\u0435\u0432\u0430\u043b\u0438\u0434\u0435\u043d___\u041f\u043e\u0441\u0442\u0430\u0432\u0438 \u0432\u0441\u0438\u0447\u043a\u0438___\u0414\u043e\u043c\u0435\u0439\u043d___\u0417\u0430 \u0441\u044a\u0436\u0430\u043b\u0435\u043d\u0438\u0435, \u043d\u044f\u043c\u0430 \u043d\u0430\u043b\u0438\u0447\u043d\u043e \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435___ES \u0438\u0437\u0442\u0435\u0433\u043b\u044f\u043d\u0435___\u0418\u0437\u043f\u0440\u0430\u0449\u0430\u043d\u0435 \u043d\u0430 \u0444\u0430\u0439\u043b\u043e\u0432\u0435___\u0418\u0437\u0442\u0440\u0438\u0432\u0430\u043d\u0435 \u0438 \u043d\u0430 \u0444\u0430\u0439\u043b\u043e\u0432\u0435\u0442\u0435-\u0438\u0437\u0442\u043e\u0447\u043d\u0438\u043a___\u041f\u043e\u043a\u0430\u0437\u0432\u0430\u043d\u0435\u0442\u043e \u043d\u0430 \u0438\u043a\u043e\u043d\u0430 \u0432\u044a\u0440\u0445\u0443 \u043f\u0430\u043f\u043a\u0430 \u0432 \u043c\u043e\u043c\u0435\u043d\u0442\u0430 \u043d\u0435 \u0435 \u0430\u043a\u0442\u0438\u0432\u0438\u0440\u0430\u043d\u043e, \u0438\u0441\u043a\u0430\u0442\u0435 \u043b\u0438 \u0434\u0430 \u0433\u043e \u0430\u043a\u0442\u0438\u0432\u0438\u0440\u0430\u0442\u0435 \u0441\u0435\u0433\u0430?___\u041d\u044f\u043c\u0430 \u043c\u043e\u043d\u0442\u0438\u0440\u0430\u043d\u0430 SD \u043a\u0430\u0440\u0442\u0430___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u0434\u0435\u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0435___\u0417\u0430\u0434\u0430\u0439 \u043a\u0430\u0442\u043e \u0441\u0442\u0430\u0440\u0442\u043e\u0432\u0430 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430___\u041f\u0430\u043a\u0435\u0442\u043d\u043e \u043f\u0440\u0435\u0438\u043c\u0435\u043d\u0443\u0432\u0430\u043d\u0435___\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435___ES \u0410\u0440\u0445\u0438\u0432\u0430\u0442\u043e\u0440___\u0410\u043a\u0442\u0443\u0430\u043b\u0438\u0437\u0438\u0440\u0430\u043d\u0435___\u041f\u0440\u043e\u043c\u044f\u043d\u0430___\u0421\u0432\u0438\u0439 \u0432\u0441\u0438\u0447\u043a\u0438___\u0421\u0432\u043e\u0439\u0441\u0442\u0432\u0430___\u041e\u0431\u0449\u043e:___\u0423\u043a\u0430\u0437\u0430\u043d\u0438\u044f\u0442 \u043f\u044a\u0442 \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u043d\u0430\u043c\u0435\u0440\u0435\u043d, \u0438\u0441\u043a\u0430\u0442\u0435 \u043b\u0438 \u0434\u0430 \u0433\u043e \u0441\u044a\u0437\u0434\u0430\u0434\u0435\u0442\u0435?___\u041f\u043e\u0442\u0432\u044a\u0440\u0436\u0434\u0430\u0432\u0430\u0442\u0435 \u043b\u0438 \u0438\u0437\u0442\u0440\u0438\u0432\u0430\u043d\u0435\u0442\u043e?___\u041c\u0440\u0435\u0436\u043e\u0432\u0438\u044f\u0442 \u043f\u044a\u0442 \u043d\u0435 \u0435 \u043d\u0430\u043c\u0435\u0440\u0435\u043d \u0438\u043b\u0438 \u0432\u0440\u0435\u043c\u0435\u0442\u043e \u0437\u0430 \u0438\u0437\u0447\u0430\u043a\u0432\u0430\u043d\u0435 \u0435 \u0438\u0437\u0442\u0435\u043a\u043b\u043e, \u043c\u043e\u043b\u044f \u043e\u043f\u0438\u0442\u0430\u0439\u0442\u0435 \u043e\u0442\u043d\u043e\u0432\u043e___\u041f\u043e\u043a\u0430\u0436\u0438 \u0438\u043c\u0435\u0442\u043e \u0432 \u043b\u0435\u043d\u0442\u0430\u0442\u0430 \u0441 \u0438\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u0438___\u0421\u0438\u043b\u0430 \u043d\u0430 \u0441\u0438\u0433\u043d\u0430\u043b\u0430___\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435___\u0420\u0430\u0437\u043c\u0435\u0440___\u0414\u0438\u0440\u0435\u043a\u0442\u043e\u0440\u0438\u044f \u0437\u0430 \u0430\u0440\u0445\u0438\u0432 \u043d\u0430 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f___\u0422\u043e\u0437\u0438 \u043d\u043e\u0441\u0438\u0442\u0435\u043b \u043d\u0435 \u043f\u043e\u0434\u0434\u044a\u0440\u0436\u0430 \u043f\u043e\u0442\u043e\u0447\u043d\u043e \u043f\u0440\u0435\u0434\u0430\u0432\u0430\u043d\u0435, \u043f\u043b\u0435\u0439\u044a\u0440\u044a\u0442 \u0449\u0435 \u0441\u0435 \u0441\u0442\u0430\u0440\u0442\u0438\u0440\u0430 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u043d\u043e \u0441\u043b\u0435\u0434 \u043f\u044a\u043b\u043d\u043e\u0442\u043e \u043f\u0440\u0435\u0445\u0432\u044a\u0440\u043b\u044f\u043d\u0435___\u0414\u043e\u043c\u0435\u0439\u043d___\u0418\u043c\u0435 \u043d\u0430 \u0444\u0430\u0439\u043b\u0430___\u041d\u0435\u0432\u0430\u043b\u0438\u0434\u0435\u043d \u043f\u044a\u0442___\u041f\u0440\u043e\u0432\u0435\u0440\u0435\u0442\u0435 \u0431\u0435\u0437\u0436\u0438\u0447\u043d\u0430\u0442\u0430 \u0432\u0440\u044a\u0437\u043a\u0430!___%1$s \u0449\u0435 \u0431\u044a\u0434\u0435 \u043f\u0440\u0435\u0438\u043c\u0435\u043d\u0443\u0432\u0430\u043d \u043d\u0430 %2$s \u0430\u0441\u0438\u043d\u0445\u0440\u043e\u043d\u043d\u043e___\u0421\u043a\u0440\u0438\u0442\u0438 \u0444\u0430\u0439\u043b\u043e\u0432\u0435___\u041f\u0440\u043e\u043c\u0435\u043d\u0438\u0442\u0435 \u0432 \u0442\u0435\u043a\u0441\u0442\u0430 \u043d\u044f\u043c\u0430 \u0434\u0430 \u0431\u044a\u0434\u0430\u0442 \u0437\u0430\u043f\u0438\u0441\u0430\u043d\u0438, \u0437\u0430\u0449\u043e\u0442\u043e \u0441\u0430 \u0432 zip \u0444\u0430\u0439\u043b.___\u041f\u0440\u043e\u0433\u0440\u0430\u043c\u0438\u0442\u0435 \u0441\u0430 \u043f\u0440\u0435\u043c\u0430\u0445\u043d\u0430\u0442\u0438.\n\u041c\u043e\u0436\u0435 \u0434\u0430 \u0438\u0437\u0442\u0440\u0438\u0435\u0442\u0435 \u0442\u0435\u0445\u043d\u0438\u0442\u0435 \u043f\u0430\u043f\u043a\u0438___\u0412\u044a\u0437\u0441\u0442\u0430\u043d\u043e\u0432\u044f\u0432\u0430\u043d\u0435___\u0420\u0430\u0437\u0434\u0435\u043b___\u0417\u0430 \u0441\u044a\u0436\u0430\u043b\u0435\u043d\u0438\u0435 \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u043f\u0440\u0435\u0438\u043c\u0435\u043d\u0443\u0432\u0430\u0442\u0435 \u0442\u043e\u0437\u0438 \u0444\u0430\u0439\u043b/\u043f\u0430\u043f\u043a\u0430; \u0442\u043e\u0432\u0430 \u0435 \u043e\u0433\u0440\u0430\u043d\u0438\u0447\u0435\u043d\u0438\u0435 \u043d\u0430 bluetooth \u043f\u0440\u043e\u0442\u043e\u043a\u043e\u043b\u0430___\u0421\u0435\u0440\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u044a\u0442 \u0435 \u043d\u0435\u0432\u0430\u043b\u0438\u0434\u0435\u043d___\u041f\u0430\u0440\u043e\u043b\u0430___Root Explorer \u0435 \u043e\u0442\u0432\u043e\u0440\u0435\u043d___\u041e\u0442\u0432\u043e\u0440\u0438 \u0432 \u043d\u043e\u0432 \u043f\u0440\u043e\u0437\u043e\u0440\u0435\u0446___\u0412\u043a\u043b.___\u0417\u0430 \u0441\u044a\u0436\u0430\u043b\u0435\u043d\u0438\u0435, \u043d\u0435\u0443\u0441\u043f\u0435\u0448\u0435\u043d \u0442\u0435\u0441\u0442. \u0422\u0430\u0437\u0438 \u0444\u0443\u043d\u043a\u0446\u0438\u044f \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0440\u0430\u0431\u043e\u0442\u0438 \u043d\u0430 \u0432\u0430\u0448\u0435\u0442\u043e \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e.___\u041f\u043e\u043a\u0430\u0437\u0432\u0430 \u0441\u044a\u043e\u0431\u0449\u0435\u043d\u0438\u0435, \u043a\u043e\u0433\u0430\u0442\u043e \u0441\u0435 \u0437\u0430\u0431\u043e\u0434\u0435 USB \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e___\u0412\u0435\u0440\u0441\u0438\u044f:___\u0421\u043a\u0440\u0438\u0442:___\u0421\u043f\u043e\u0434\u0435\u043b\u0438___\u0417\u0430\u0434\u0430\u0439 \u043a\u0430\u0442\u043e \u0442\u0430\u043f\u0435\u0442___\u0418\u0437\u0445\u043e\u0434 \u043e\u0442 \u043d\u0430\u0441\u0442\u043e\u044f\u0449\u0430\u0442\u0430 \u043c\u0440\u0435\u0436\u0430___\u0424\u0430\u0439\u043b/SD___\u0422\u044a\u0440\u0441\u0435\u043d\u0435 \u0432 \u043a\u043d\u0438\u0433\u0438___\u0418\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u0439___\u0416\u0435\u043b\u0430\u0435\u0442\u0435 \u043b\u0438 \u0434\u0430 \u0438\u0437\u0442\u0435\u0433\u043b\u0438\u0442\u0435 \u0434\u043e\u0431\u0430\u0432\u043a\u0430\u0442\u0430 %s?___\u041f\u0443\u0431\u043b\u0438\u043a\u0443\u0432\u0430\u043d\u0435\u2026___\u041d\u0435\u0434\u043e\u0441\u0442\u0430\u0442\u044a\u0447\u043d\u043e \u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0441\u0442\u0432\u043e \u043d\u0430 sdcard___S3 \u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435___\u0421\u044a\u0437\u0434\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 \u043f\u0440\u044f\u043a \u043f\u044a\u0442 \u0437\u0430 \u0441\u0442\u0430\u0440\u0442\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 FTP \u0441\u044a\u0440\u0432\u044a\u0440\u0430___\u0420\u044a\u0447\u043d\u0430 \u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0430 \u0437\u0430 \u043d\u043e\u0432\u0430 \u0432\u0435\u0440\u0441\u0438\u044f___\u0421\u0438\u0433\u0443\u0440\u043d\u0438 \u043b\u0438 \u0441\u0442\u0435, \u0447\u0435 \u0438\u0441\u043a\u0430\u0442\u0435 \u0434\u0430 \u0438\u0437\u0442\u0440\u0438\u0435\u0442\u0435 \u0444\u0430\u0439\u043b\u0430?___\u0418\u0437\u0442\u0440\u0438\u0432\u0430 \u0444\u0430\u0439\u043b\u043e\u0432\u0435\u0442\u0435 \u0434\u0438\u0440\u0435\u043a\u0442\u043d\u043e \u0431\u0435\u0437 \u0434\u0430 \u0433\u0438 \u043f\u0440\u0435\u043c\u0435\u0441\u0442\u0432\u0430 \u0432 \u043a\u043e\u0448\u0447\u0435\u0442\u043e___\u0418\u0437\u043f\u043e\u043b\u0437\u0432\u0430\u0442\u0435 \u0442\u043e\u0447\u043a\u0430 \u0437\u0430 \u0434\u043e\u0441\u0442\u044a\u043f \u0441 \u0438\u043c\u0435___\u041e\u0442\u0445\u0432\u044a\u0440\u043b\u044f\u043d\u0435 \u043e\u0442 \u043f\u043e\u043b\u0443\u0447\u0430\u0442\u0435\u043b\u044f___\u041f\u0440\u0435\u043f\u043e\u0440\u044a\u0447\u0430\u043d\u0438___\u041e\u0431\u0440\u0430\u0442\u043d\u0430 \u0432\u0440\u044a\u0437\u043a\u0430___\u0418\u0437\u0442\u0435\u0433\u043b\u044f\u043d\u0435 \u043d\u0430 \u0434\u043e\u0431\u0430\u0432\u043a\u0430\u0442\u0430 %s\u2026___\u041f\u0440\u0435\u043f\u043e\u0440\u044a\u043a\u0430___\u0423\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u043d\u0430 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e\u0442\u043e \u0432\u0438 \u043e\u0442 \u043a\u043e\u043c\u043f\u044e\u0442\u044a\u0440___\u0431\u0430\u0439\u0442\u0430___\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u043f\u044a\u0442___\u041f\u043e\u043a\u0430\u0436\u0438 \u043a\u0430\u0442\u043e___\u0424\u0430\u0439\u043b\u044a\u0442 \u0435 \u043f\u0440\u0435\u0438\u043c\u0435\u043d\u0443\u0432\u0430\u043d \u0443\u0441\u043f\u0435\u0448\u043d\u043e___\u041f\u043e\u043a\u0430\u0437\u0432\u0430\u043d\u0435 \u043d\u0430 SD \u043a\u0430\u0440\u0442\u0430\u0442\u0430 \u0432 \u0441\u0442\u0430\u0442\u0443\u0441 \u043b\u0435\u043d\u0442\u0430\u0442\u0430___\u041d\u044f\u043c\u0430 \u0441\u043f\u0438\u0441\u044a\u043a \u0437\u0430 \u0438\u0437\u043f\u044a\u043b\u043d\u0435\u043d\u0438\u0435___\u0410\u0441\u043e\u0446\u0438\u0438\u0440\u0430 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u0430, \u043a\u043e\u044f\u0442\u043e \u043f\u043e\u043a\u0430\u0437\u0432\u0430 \u0438\u043a\u043e\u043d\u0430 \u0432\u044a\u0440\u0445\u0443 \u043f\u0430\u043f\u043a\u0430___\u041f\u043e\u043a\u0430\u0436\u0438 \u0431\u0443\u0442\u043e\u043d\u0430 \u201e\u0418\u0437\u0431\u0435\u0440\u0438\u201c___\u0416\u0435\u0441\u0442\u043e\u0432\u0435___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u0437\u0430\u0440\u0435\u0436\u0434\u0430\u043d\u0435!___\u041c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435:___\u0418\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u0438___\u041f\u0440\u0435\u0441\u0442\u043e\u0439___\u0414\u043e\u043a\u043b\u0430\u0434___\u041d\u0438\u0442\u043e \u0435\u0434\u043d\u043e___\u041d\u0430\u0437\u0430\u0434___\u0418\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0438 \u043d\u0430 \u0442\u0435\u043b\u0435\u0444\u043e\u043d\u0430___\u0421\u0438\u0441\u0442\u0435\u043c\u043d\u0438\u044f\u0442 \u0444\u0430\u0439\u043b \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u0432\u044a\u0437\u0441\u0442\u0430\u043d\u043e\u0432\u0435\u043d \u0441\u043b\u0435\u0434 \u043a\u0430\u0442\u043e \u0435 \u0438\u0437\u0442\u0440\u0438\u0442___\u041d\u0435 \u0441\u0430 \u043d\u0430\u043c\u0435\u0440\u0435\u043d\u0438 \u0441\u043d\u0438\u043c\u043a\u0438___\u041d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0441\u0442\u0430\u0440\u0442\u0438\u0440\u0430 \u0441\u044a\u0440\u0432\u044a\u0440\u044a\u0442 \u0437\u0430 \u043f\u043e\u0442\u043e\u0447\u043d\u043e \u043f\u0440\u0435\u0434\u0430\u0432\u0430\u043d\u0435___\u041f\u0440\u0435\u0438\u043c\u0435\u043d\u0443\u0432\u0430\u043d \u201e%1$s\u201c___\u0412\u043d\u0438\u043c\u0430\u043d\u0438\u0435, \u043f\u0430\u0440\u043e\u043b\u0430\u0442\u0430 \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u0432\u044a\u0437\u0442\u0430\u043d\u043e\u0432\u0435\u043d\u0430 \u0430\u043a\u043e \u044f \u0437\u0430\u0431\u0440\u0430\u0432\u0438\u0442\u0435!___\u0421\u044a\u0441\u0442\u043e\u044f\u043d\u0438\u0435 \u043d\u0430 \u043c\u0440\u0435\u0436\u0430\u0442\u0430___\u0418\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435___\u041d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0441\u0435 \u0441\u043f\u043e\u0434\u0435\u043b\u044f\u0442 \u043c\u043d\u043e\u0436\u0435\u0441\u0442\u0432\u043e \u043e\u0442\u0434\u0430\u043b\u0435\u0447\u0435\u043d\u0438 \u0444\u0430\u0439\u043b\u043e\u0432\u0435___\u041f\u0440\u043e\u043c\u044f\u043d\u0430___\u0417\u0430\u0434\u0430\u0439 \u0443\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u0435___\u041f\u0440\u0435\u043a\u0440\u0430\u0442\u044f\u0432\u0430\u043d\u0435 \u043d\u0430 \u043c\u0440\u0435\u0436\u0430\u0442\u0430___\u041e\u0442\u043a\u0440\u0438\u0432\u0430\u043d\u0435 \u043d\u0430 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430 \u0447\u0440\u0435\u0437 \u0442\u044a\u0440\u0441\u0435\u043d\u0435___\u0418\u043c\u0435\u0439\u043b \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435\u0442\u043e \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0441\u0435 \u0441\u0442\u0430\u0440\u0442\u0438\u0440\u0430___\u041f\u0440\u0435\u043c\u0430\u0445\u043d\u0438 \u043e\u0442 \u0441\u043f\u0438\u0441\u044a\u043a\u0430___URL a\u0434\u0440\u0435\u0441\u044a\u0442 \u043d\u0435 \u0435 \u043d\u0430\u043c\u0435\u0440\u0435\u043d, \u0438\u0437\u043b\u0438\u0437\u0430\u043d\u0435___\u0420\u0435\u0437\u0435\u0440\u0432\u043d\u043e \u043a\u043e\u043f\u0438\u0435 \u043f\u0440\u0435\u0434\u0438 \u0434\u0435\u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0435___\u041e\u0442\u0432\u0430\u0440\u044f\u043d\u0435\u0442\u043e \u043d\u0430 \u0444\u0430\u0439\u043b\u0430 {0} \u0435 \u043e\u0442\u043a\u0430\u0437\u0430\u043d\u043e___\u0421\u0438\u0441\u0442\u0435\u043c\u043d\u0438\u0442\u0435 \u0444\u0430\u0439\u043b\u043e\u0432\u0435 \u0441\u0430\u043c\u043e \u0437\u0430 \u0447\u0435\u0442\u0435\u043d\u0435___\u0411\u0435\u0437 \u0443\u0441\u043b\u043e\u0432\u0438\u0435___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u0441\u044a\u0437\u0434\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 \u043f\u044a\u0442\u044f___\u041f\u0440\u0438\u0441\u044a\u0435\u0434\u0438\u043d\u044f\u0432\u0430\u043d\u0435 \u043a\u044a\u043c \u0447\u0443\u0436\u0434\u0430 \u043c\u0440\u0435\u0436\u0430___\u0414\u0438\u0440\u0435\u043a\u0442\u043e\u0440\u0438\u044f \u0438\u0437\u0442\u0435\u0433\u043b\u0435\u043d\u0438___\u041c\u0435\u043d\u0438\u0434\u0436\u044a\u0440 \u043d\u0430 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f\u0442\u0430___\u0412\u0441\u0435\u043a\u0438 (\u043f\u0443\u0431\u043b\u0438\u0447\u043d\u043e)___- FTP \u0441\u044a\u0440\u0432\u044a\u0440\u044a\u0442 \u0435 \u0441\u043f\u0440\u044f\u043d___\u0422\u0430\u0437\u0438 \u043f\u0435\u0441\u0435\u043d \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0441\u0435 \u0437\u0430\u0434\u0430\u0434\u0435 \u043a\u0430\u0442\u043e \u0442\u043e\u043d \u043d\u0430 \u0437\u0432\u044a\u043d\u0435\u043d\u0435, \u043f\u044a\u0440\u0432\u043e \u0442\u0440\u044f\u0431\u0432\u0430 \u0434\u0430 \u044f \u0441\u0432\u0430\u043b\u0438\u0442\u0435 \u0440\u044a\u0447\u043d\u043e___\u041f\u0440\u043e\u0432\u0435\u0440\u044f\u0432\u0430\u043d\u0435...___\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438\u0442\u0435 \u043f\u043e \u043f\u043e\u0434\u0440\u0430\u0437\u0431\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435\u0442\u043e \u0441\u0430 \u0432\u044a\u0437\u0441\u0442\u0430\u043d\u043e\u0432\u0435\u043d\u0438___\u0417\u0430\u0434\u0440\u044a\u0436\u0442\u0435___\u0412\u0435\u0447\u0435 \u0441\u044a\u0449\u0435\u0441\u0442\u0432\u0443\u0432\u0430 \u0442\u0430\u043a\u044a\u0432 \u0441\u043f\u0438\u0441\u044a\u043a___\u0418\u0437\u0442\u0440\u0438\u0439 \u0441\u043f\u0438\u0441\u044a\u043a\u0430___\u0428\u0438\u0444\u0440\u043e\u0432\u0430\u043d \u0442\u0440\u0430\u043d\u0441\u043f\u043e\u0440\u0442___\u041e\u0442\u043f\u0438\u0441\u0432\u0430\u043d\u0435 \u043e\u0442 \u0438\u0437\u0431\u0440\u0430\u043d\u0438\u0442\u0435 \u043f\u0440\u043e\u0444\u0438\u043b\u0438?___\u041f\u0440\u0435\u043c\u0435\u0441\u0442\u0438 \u0432___\u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f\u0442\u0430 \u0441\u0430 \u0434\u0435\u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0438___\u0421\u0432\u044a\u0440\u0437\u0432\u0430\u043d\u0435...___\u041e\u0431\u043d\u043e\u0432\u0438___\u0423\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u043d\u0430 \u043f\u0440\u0430\u0432\u0430___\u0412\u0441\u0438\u0447\u043a\u0438 \u043f\u0435\u0441\u043d\u0438___\u0418\u0437\u0431\u0435\u0440\u0435\u0442\u0435 \u0444\u0430\u0439\u043b\u0430 \u043a\u0430\u0442\u043e___YouTube \u0432\u0438\u0434\u0435\u043e___\u0410\u043a\u0442\u0443\u0430\u043b\u0438\u0437\u0438\u0440\u0430\u043d\u0435___\u0420\u0435\u0437\u0443\u043b\u0442\u0430\u0442\u0438 \u043e\u0442 \u0442\u044a\u0440\u0441\u0435\u043d\u0435\u0442\u043e___\u0449\u0435 \u0441\u043f\u043e\u0434\u0435\u043b\u0438 \u0441 \u0432\u0430\u0441 \u043c\u0435\u0434\u0438\u0439\u043d\u0438\u044f \u0444\u0430\u0439\u043b %1$s___\u041c\u043e\u043d\u0442\u0438\u0440\u0430\u043d\u0435 \u0437\u0430 \u0447\u0435\u0442e\u043d\u0435/\u0437\u0430\u043f\u0438\u0441___\u0421\u044a\u0440\u0432\u044a\u0440___*\u0420\u0435\u0437\u044e\u043c\u0435___\u041a\u043e\u043f\u0438\u0440\u0430\u0439\u0442\u0435 \u0442\u043e\u0437\u0438 \u0444\u0430\u0439\u043b \u0432 SD-\u0442\u043e \u043f\u0440\u0438 \u0434\u0435\u043a\u0442\u0438\u043f\u0442\u0438\u0440\u0430\u043d\u0435___\u041a\u0440\u0438\u043f\u0442\u0438\u0440\u0430\u0439___\u041e\u0442\u043c\u0435\u043d\u0435\u043d\u043e___\u041d\u043e\u043c\u0435\u0440\u044a\u0442 \u043d\u0430 \u0441\u0435\u0440\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u0430 \u043d\u0435\u0441\u044a\u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0430___\u041f\u043e\u0442\u0440\u0435\u0431\u0438\u0442\u0435\u043b___\u041f\u043e\u0434\u0440\u043e\u0431\u043d\u043e\u0441\u0442\u0438 \u0437\u0430 \u0437\u0430\u0434\u0430\u0447\u0430\u0442\u0430___\u0417\u0430\u0434\u0430\u0439 \u0446\u0432\u044f\u0442 \u043d\u0430 \u0442\u0435\u043a\u0441\u0442\u0430___\u041f\u0430\u043f\u043a\u0430 - %1$s___\u0420\u0435\u0441\u0442\u0430\u0440\u0442\u0438\u0440\u0430\u0439\u0442\u0435 \u0441\u044a\u0440\u0432\u044a\u0440\u0430, \u0437\u0430 \u0434\u0430 \u0438\u0437\u043f\u043e\u043b\u0437\u0432\u0430 \u043d\u043e\u0432\u0438\u044f \u043f\u043e\u0440\u0442___\u0412\u0435\u0447\u0435 \u0441\u044a\u0449\u0435\u0441\u0442\u0432\u0443\u0432\u0430 \u0441\u043f\u0438\u0441\u044a\u043a \u0441 \u0442\u0430\u043a\u043e\u0432\u0430 \u0438\u043c\u0435___\u0411\u044f\u043b\u043e___Facebook___\u0418\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u043e \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435?___\u041c\u043e\u0436\u0435 \u0434\u0430 \u0432\u0437\u0430\u0438\u043c\u043e\u0434\u0435\u0439\u0441\u0442\u0432\u0430\u0442\u0435 \u0441 \u043f\u043e\u0442\u0440\u0435\u0431\u0438\u0442\u0435\u043b\u0438 \u0432 \u043d\u0430\u0441\u0442\u043e\u044f\u0449\u0430\u0442\u0430 \u043c\u0440\u0435\u0436\u0430___\u0418\u0437\u0447\u0430\u043a\u0432\u0430\u043d\u0435___\u0427\u0443\u0432\u0441\u0442\u0432\u0438\u0442\u0435\u043b\u043d\u043e\u0441\u0442 \u043f\u0440\u0438 \u0440\u0430\u0437\u043a\u043b\u0430\u0449\u0430\u043d\u0435___\u041c\u0435\u043d\u0438\u0434\u0436\u044a\u0440 \u043d\u0430 \u0438\u0437\u0442\u0435\u0433\u043b\u044f\u043d\u0438\u044f\u0442\u0430___\u0414\u043d\u0438___\u0422\u044a\u0440\u0441\u0438 \u043f\u043e \u0430\u043b\u0431\u0443\u043c___Bluetooth \u0444\u0443\u043d\u043a\u0446\u0438\u044f\u0442\u0430 \u043d\u0435 \u0435 \u043d\u0430\u043b\u0438\u0447\u043d\u0430 \u0437\u0430 Android 1.6 \u0432 \u0442\u0430\u0437\u0438 \u0432\u0435\u0440\u0441\u0438\u044f, \u043c\u043e\u043b\u044f \u0438\u0437\u043f\u043e\u043b\u0437\u0432\u0430\u0439\u0442\u0435 ES File Explorer (for Cupcake) \u0432\u0435\u0440\u0441\u0438\u044f\u0442\u0430.___%s \u0449\u0435 \u0431\u044a\u0434\u0435 \u0441\u044a\u0437\u0434\u0430\u0434\u0435\u043d \u0430\u0441\u0438\u043d\u0445\u0440\u043e\u043d\u043d\u043e___\u041b\u0435\u043d\u0442\u0430 \u0441 \u0438\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u0438___\u041d\u0435 \u043f\u043e\u043a\u0430\u0437\u0432\u0430\u0439 \u0442\u043e\u0432\u0430 \u043f\u0440\u0435\u0434\u0443\u043f\u0440\u0435\u0436\u0434\u0435\u043d\u0438\u0435 \u043e\u0442\u043d\u043e\u0432\u043e___\u0422\u0435\u043a\u0443\u0449 : %d___\u0418\u043c\u0430 \u043d\u0430 \u043f\u0430\u043a\u0435\u0442\u0430:___\u041f\u0440\u0438\u0432\u043b\u0430\u0447\u0435\u0442\u0435 \u0434\u043e \u0436\u0435\u043b\u0430\u043d\u0430\u0442\u0430 \u043f\u043e\u0437\u0438\u0446\u0438\u044f \u0437\u0430 \u043d\u0430\u0447\u0430\u043b\u043e \u043d\u0430 \u0436\u0435\u0441\u0442\u043e\u0432\u0435\u0442\u0435___\u0412\u044a\u0437\u043d\u0438\u043a\u043d\u0430 \u0433\u0440\u0435\u0448\u043a\u0430 \u043f\u0440\u0438 \u043f\u043e\u043b\u0443\u0447\u0430\u0432\u0430\u043d\u0435 \u0441\u044a\u0434\u044a\u0440\u0436\u0430\u043d\u0438\u0435\u0442\u043e \u043d\u0430 \u0444\u0430\u0439\u043b\u0430:___\u0418\u0437\u0447\u0438\u0441\u0442\u0438 \u043a\u0435\u0448\u0430___\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438___\u041f\u0440\u044f\u043a \u043f\u044a\u0442___\u0417\u0430\u0433\u043b\u0430\u0432\u0438\u0435___\u0421\u044a\u0437\u0434\u0430\u0439___\u0410\u0440\u0445\u0438\u0432\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0438 \u0434\u0430\u043d\u043d\u0438___\u041c\u0430\u0433\u0438\u0447\u0435\u0441\u043a\u043e \u043a\u0443\u0444\u0430\u0440\u0447\u0435___\u0424\u0430\u0439\u043b\u044a\u0442 \u0449\u0435 \u0431\u044a\u0434\u0435 \u043a\u0435\u0448\u0438\u0440\u0430\u043d \u0432 SD \u043a\u0430\u0440\u0442\u0430\u0442\u0430 \n\u0438 \u043e\u0442\u0432\u043e\u0440\u0435\u043d \u0421\u0410\u041c\u041e \u0417\u0410 \u0427\u0415\u0422\u0415\u041d\u0415___\u041f\u043e\u0442\u0432\u044a\u0440\u0434\u0438___\u0412\u044a\u0437\u043f\u0440\u043e\u0438\u0437\u0432\u0435\u0436\u0434\u0430\u043d\u0435...___\u041f\u043e\u043a\u0430\u0437\u0432\u0430\u043d\u0435 \u043d\u0430 \u0444\u0430\u0439\u043b\u043e\u0432\u0435\u0442\u0435, \u0447\u0438\u0435\u0442\u043e \u0438\u043c\u0435 \u0437\u0430\u043f\u043e\u0447\u0432\u0430 \u0441 \u201e . \u201c (\u0442\u043e\u0447\u043a\u0430)___\u0421\u044a\u0437\u0434\u0430\u0439 \u043f\u0440\u044f\u043a \u043f\u044a\u0442___\u041a\u043e\u0434\u044a\u0442 \u0437\u0430 \u043f\u043e\u0442\u0432\u044a\u0440\u0436\u0434\u0435\u043d\u0438\u0435 \u0435 \u0433\u0440\u0435\u0448\u0435\u043d___\u0410\u043b\u0431\u0443\u043c___\u041f\u043e\u043b\u0443\u0447\u0438___\u041d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0442\u044a\u0440\u0441\u0438\u0442\u0435 \u0442\u0443\u043a___\u041d\u0435 \u043f\u043e\u043a\u0430\u0437\u0432\u0430\u0439 \u043a\u043b\u0438\u043f\u0431\u043e\u0440\u0434\u0430 \u043f\u0440\u0438 \u043a\u043e\u043f\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u0444\u0430\u0439\u043b\u043e\u0432\u0435___\u0423\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430___\u041c\u0440\u0435\u0436\u0430\u0442\u0430 \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u043d\u0430\u0441\u0442\u0440\u043e\u0435\u043d\u0430, \u043c\u043e\u043b\u044f \u043a\u043e\u043d\u0444\u0438\u0433\u0443\u0440\u0438\u0440\u0430\u0439\u0442\u0435 \u044f \u0432 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u0438\u0442\u0435 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438___\u041f\u0440\u043e\u0431\u043b\u0435\u043c \u0441 \u043c\u0440\u0435\u0436\u0430\u0442\u0430, \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0441\u0435 \u0437\u0430\u0440\u0435\u0434\u0438 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430\u0442\u0430, \u043e\u043f\u0438\u0442\u0430\u0439\u0442\u0435 \u043e\u0442\u043d\u043e\u0432\u043e \u043f\u043e-\u043a\u044a\u0441\u043d\u043e___\u0421\u0442\u0430\u0440 \u0430\u0440\u0445\u0438\u0432 \u043d\u0430 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f___\u041f\u043e\u0442\u0432\u044a\u0440\u0434\u0435\u0442\u0435 \u043f\u0430\u0440\u043e\u043b\u0430\u0442\u0430:___\u0418\u043c\u0435\u0442\u043e \u043d\u0430 \u043f\u0430\u043f\u043a\u0430\u0442\u0430 \u0442\u0440\u044f\u0431\u0432\u0430 \u0434\u0430 \u0435 \u2265 3 \u0441\u0438\u043c\u0432\u043e\u043b\u0430___\u041c\u0440\u0435\u0436\u043e\u0432\u0430 \u0437\u0430\u0449\u0438\u0442\u0430___\u041e\u0442\u043a\u0430\u0436\u0438___\u041f\u043e\u0432\u0435\u0447\u0435 \u043e\u0442 {0}% \u043f\u043e\u0442\u0440\u0435\u0431\u0438\u0442\u0435\u043b\u0438 \u0438\u0437\u0431\u0440\u0430\u0445\u0430 \u0442\u043e\u0432\u0430 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435___\u0417\u0430\u0434\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 \u0444\u043e\u043d\u043e\u0432\u043e \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435___\u041c\u0443\u043b\u0442\u0438 \u043f\u0440\u043e\u0437\u043e\u0440\u0435\u0446___\u0423\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u043d\u0430 \u0441\u043f\u0438\u0441\u044a\u043a \u201e\u0441\u043a\u0440\u0438\u0442\u0438\u201c___\u041a\u043e\u043c\u0435\u043d\u0442\u0430\u0440___Bluetooth \u043d\u0435 \u0435 \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043d___\u0429\u0440\u0430\u043a\u043d\u0435\u0442\u0435, \u0437\u0430 \u0434\u0430 \u0438\u0437\u0447\u0438\u0441\u0442\u0438\u0442\u0435 \u043a\u0435\u0448\u0438\u0440\u0430\u043d\u0438\u0442\u0435 \u0434\u0430\u043d\u043d\u0438 (\u043c\u0438\u043d\u0438\u0430\u0442\u044e\u0440\u0438 \u0438 \u0434\u0440.)___\u0418\u043c\u0435___\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u043d\u043e \u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0435/\u0434\u0435\u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u0438___\u0421\u0438\u0441\u0442\u0435\u043c\u0430\u0442\u0430 \u0437\u0430\u0431\u0440\u0430\u043d\u044f\u0432\u0430 \u043d\u0430 ES \u0434\u0430 \u043f\u0438\u0448\u0435 \u043d\u0430 \u043a\u0430\u0440\u0442\u0430\u0442\u0430 \u043f\u0430\u043c\u0435\u0442 (\u043f\u0440\u043e\u0432\u0435\u0440\u0435\u0442\u0435 https://code.google.com/p/android/issues/detail?id=67570), \u0442\u043e\u0432\u0430 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0441\u0442\u0430\u043d\u0435 \u0441\u043b\u0435\u0434 root.___\u0412\u043a\u043b\u044e\u0447\u0435\u0442\u0435, \u0430\u043a\u043e \u0438\u0441\u043a\u0430\u0442\u0435 \u0434\u0430 \u0438\u0437\u043f\u043e\u043b\u0437\u0432\u0430\u0442\u0435 root explorer \u0438 \u0438\u043c\u0430\u0442\u0435 root \u043f\u0440\u0430\u0432\u0430.___\u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 - %1$s___\u0410\u0441\u043e\u0446\u0438\u0438\u0440\u0430\u0439 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u0430___\u0412\u043a\u043b\u044e\u0447\u0432\u0430\u043d\u0435...___\u041d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0441\u0435 (\u0434\u0435)\u043a\u043e\u043c\u043f\u0440\u0435\u0441\u0438\u0440\u0430\u0442 \u0444\u0430\u0439\u043b\u043e\u0432\u0435 \u0432 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u0430\u0442\u0430 \u0434\u0438\u0440\u0435\u043a\u0442\u043e\u0440\u0438\u044f___\u0420\u0430\u0437\u0448\u0438\u0440\u0435\u043d\u0438\u0435\u0442\u043e \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0441\u0435 \u043f\u0440\u043e\u043c\u0435\u043d\u044f___\u0418\u043c\u0435\u0442\u043e \u043d\u0435 \u0435 \u043f\u043e\u0437\u0432\u043e\u043b\u0435\u043d\u043e, \u043c\u043e\u043b\u044f \u043f\u0440\u043e\u043c\u0435\u043d\u0435\u0442\u0435 \u0433\u043e___\u0421\u044a\u0437\u0434\u0430\u0439\u0442\u0435 \u0438\u043b\u0438 \u0441\u0435 \u043f\u0440\u0438\u0441\u044a\u0435\u0434\u0438\u043d\u0435\u0442\u0435 \u043a\u044a\u043c \u043c\u0440\u0435\u0436\u0430___\u041f\u044a\u0442:___\u041d\u0435\u0443\u0441\u043f\u0435\u0448\u043d\u043e \u0438\u0437\u0442\u0435\u0433\u043b\u044f\u043d\u0435 \u043d\u0430 \u0434\u043e\u0431\u0430\u0432\u043a\u0430\u0442\u0430 %s, \u0437\u0430\u0449\u043e\u0442\u043e \u043f\u044a\u0442\u044f\u0442 \u045d \u0435 \u043d\u0435 \u0437\u0430\u043f\u0438\u0441\u0432\u0430\u0435\u043c.___\u0414\u043e\u0431\u0430\u0432\u0438 \u043a\u044a\u043c \u0441\u043f\u0438\u0441\u044a\u043a\u0430 \u0441\u044a\u0441 \u0441\u044a\u0440\u0432\u044a\u0440\u0438___\u041f\u0440\u043e\u043c\u0435\u043d\u0435\u043d:___\u041c\u043e\u0434\u0435\u043b:___\u0423\u0441\u043f\u0435\u0448\u043d\u043e \u0438\u0437\u0442\u0435\u0433\u043b\u044f\u043d\u0435 \u043d\u0430 %s___ES \u0435 \u0442\u0432\u044a\u0440\u0434\u0435 \u0441\u0442\u0430\u0440\u0430 \u0432\u0435\u0440\u0441\u0438\u044f \u0437\u0430 Chromecast \u0434\u043e\u0431\u0430\u0432\u043a\u0430\u0442\u0430, \u0442\u0440\u044f\u0431\u0432\u0430 \u0434\u0430 \u0430\u043a\u0442\u0443\u0430\u043b\u0438\u0437\u0438\u0440\u0430\u0442\u0435 \u0434\u043e \u043f\u043e\u0441\u043b\u0435\u0434\u043d\u0430\u0442\u0430 \u0432\u0435\u0440\u0441\u0438\u044f.___\u0410\u043a\u0442\u0438\u0432\u0438\u0440\u0430\u0439 \u043a\u043e\u0448\u0447\u0435 \u0444\u0443\u043d\u043a\u0446\u0438\u044f\u0442\u0430___Root Explorer___\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u043d\u0430 \u043a\u043e\u0448\u0447\u0435\u0442\u043e___\u0421\u044a\u0437\u0434\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 \u0441\u043f\u0438\u0441\u044a\u043a___\u041e\u0431\u0449\u0438___\u0421\u0438\u0433\u0443\u0440\u043d\u0438 \u043b\u0438 \u0441\u0442\u0435, \u0447\u0435 \u0438\u0441\u043a\u0430\u0442\u0435 \u0434\u0430 \u0438\u0437\u0442\u0440\u0438\u0435\u0442\u0435 \u0432\u0438\u0434\u0435\u043e\u0442\u043e___\u0423\u0441\u043f\u0435\u0448\u043d\u043e\uff0c\u0437\u0430\u043f\u0430\u0437\u0435\u043d\u043e \u0432: \n{0}___\u0418\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435\u0442\u043e \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0441\u0435 \u0437\u0430\u0440\u0435\u0434\u0438___\u0421\u043a\u0440\u0438\u0439___\u201e{0}\u201c \u0435 \u0441\u044a\u0437\u0434\u0430\u0434\u0435\u043d.___\u041e\u0442\u043a\u0440\u0438\u0442\u0430 \u0435 \u0441\u0442\u0430\u0440\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u0430 \u0432\u0435\u0440\u0441\u0438\u044f \u0432 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e\u0442\u043e \u0432\u0438, \u043c\u043e\u0436\u0435 \u0434\u0430 \u0438\u043c\u0430\u0442\u0435 \u043d\u0443\u0436\u0434\u0430 \u043e\u0442 root \u043f\u0440\u0430\u0432\u0430, \u0437\u0430 \u0434\u0430 \u043f\u043e\u043b\u0443\u0447\u0438\u0442\u0435 \u0444\u0430\u0439\u043b\u043e\u0432\u0435\u0442\u0435. \u0412 \u043f\u0440\u043e\u0442\u0438\u0432\u0435\u043d \u0441\u043b\u0443\u0447\u0430\u0439 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0438\u043c\u0430 \u043d\u0435\u043e\u0447\u0430\u043a\u0432\u0430\u043d \u0440\u0435\u0437\u0443\u043b\u0442\u0430\u0442.\n\n\u0418\u0441\u043a\u0430\u0442\u0435 \u043b\u0438 \u0434\u0430 \u043e\u043f\u0438\u0442\u0430\u0442\u0435 \u0442\u0430\u0437\u0438 \u0444\u0443\u043d\u043a\u0446\u0438\u044f \u0432\u0441\u0435 \u043f\u0430\u043a?___\u041f\u0443\u0431\u043b\u0438\u043a\u0443\u0432\u0430\u0439 \u043a\u043e\u043c\u0435\u043d\u0442\u0430\u0440___\u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435\u0442\u043e {0}, \u043a\u043e\u0435\u0442\u043e \u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u0442\u0435 \u0432\u0435\u0447\u0435 \u0441\u044a\u0449\u0435\u0441\u0442\u0432\u0443\u0432\u0430\n\u0418\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0430 \u0432\u0435\u0440\u0441\u0438\u044f:{1}\n\u0422\u0435\u043a\u0443\u0449\u0430 \u0432\u0435\u0440\u0441\u0438\u044f:{2}\n\n\u041f\u0440\u043e\u0434\u044a\u043b\u0436\u0430\u0432\u0430\u043d\u0435?___\u0423\u0435\u0431 \u0410\u0440\u0445\u0438\u0432___\u041f\u0440\u0438\u0441\u044a\u0435\u0434\u0438\u043d\u044f\u0432\u0430\u043d\u0435 \u043a\u044a\u043c \u0434\u0440\u0443\u0433\u0438 \u043c\u0440\u0435\u0436\u0438___Google Play___\u041f\u0440\u0435\u043c\u0435\u0441\u0442\u0432\u0430\u043d\u0435 \u0432 \u043a\u043e\u0448\u0447\u0435\u0442\u043e___\u0418\u0437\u0445\u043e\u0434\u043d\u0438\u044f\u0442 \u043f\u044a\u0442 \u043d\u0435 \u043c\u043e\u0436\u0435 \u0441\u044a\u0434\u044a\u0440\u0436\u0430 \u0441\u0438\u043c\u0432\u043e\u043b\u0438\u0442\u0435 * \\ / \":? | < >___\u0410\u0443\u0434\u0438\u043e/\u0432\u0438\u0434\u0435\u043e___\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0430 \u043d\u0430 \u043f\u0430\u0440\u043e\u043b\u0430\u0442\u0430 \u0437\u0430 \u0434\u043e\u0441\u0442\u044a\u043f \u0434\u043e \u043c\u0440\u0435\u0436\u0430\u0442\u0430___\u0418\u0437\u043f\u043e\u043b\u0437\u0432\u0430\u0439 \u0441\u044a\u0449\u0430\u0442\u0430 \u043f\u0430\u0440\u0438\u043b\u0430 \u0437\u0430 \u0441\u043b\u0435\u0434\u0432\u0430\u0449\u0430\u0442\u0430 \u043e\u043f\u0435\u0440\u0430\u0446\u0438\u044f___\u043c\u0435\u0441\u0435\u0446\u0430___\u0422\u043e\u0447\u043a\u0430\u0442\u0430 \u0437\u0430 \u0434\u043e\u0441\u0442\u044a\u043f \u0430\u043a\u0442\u0438\u0432\u0438\u0440\u0430\u043d\u0430___\u0422\u0435\u043a\u0443\u0449 \u043f\u044a\u0442___\u0424\u0430\u0439\u043b\u044a\u0442 \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u0432\u044a\u0437\u0441\u0442\u0430\u043d\u043e\u0432\u0435\u043d \u0441\u043b\u0435\u0434 \u043a\u0430\u0442\u043e \u0435 \u0438\u0437\u0442\u0440\u0438\u0442___\u0421\u044a\u0437\u0434\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 \u043c\u0440\u0435\u0436\u0430___\u041f\u0430\u0440\u043e\u043b\u0430:___\u0414\u0435\u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0435 \u0441 \u0435\u0434\u0438\u043d \u0431\u0443\u0442\u043e\u043d___\u041a\u043e\u043f\u0438\u0440\u0430\u043d\u0438 \u0444\u0430\u0439\u043b\u043e\u0432\u0435 \u0432 \u201e%1$s\u201c___\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0438:___ ___\u041a\u043e\u043f\u0438\u0440\u0430\u0439 \u0446\u0435\u043b\u0438\u044f \u043f\u044a\u0442___\u0413\u0440\u0435\u0448\u043a\u0430 \u0432 \u043c\u0440\u0435\u0436\u0430\u0442\u0430, \u043c\u043e\u043b\u044f \u043e\u043f\u0438\u0442\u0430\u0439\u0442\u0435 \u043f\u043e-\u043a\u044a\u0441\u043d\u043e.___\u041d\u044f\u043c\u0430 \u043d\u0430\u043b\u0438\u0447\u043d\u043e \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0437\u0430 \u0441\u043f\u043e\u0434\u0435\u043b\u044f\u043d\u0435 \u043d\u0430 \u0441\u043d\u0438\u043c\u043a\u0430\u0442\u0430.___\u0418\u0437\u0431\u0435\u0440\u0438 \u0432\u0441\u0438\u0447\u043a\u0438___\u041f\u043e\u043b\u0435\u0442\u043e \u0441 \u043f\u0430\u0440\u043e\u043b\u0430\u0442\u0430 \u043d\u0435 \u043c\u043e\u0436\u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u043f\u0440\u0430\u0437\u043d\u043e___\u041c\u0440\u0435\u0436\u0430\u0442\u0430 \u0435 \u0441\u044a\u0437\u0434\u0430\u0434\u0435\u043d\u0430, ID:"
 
     aput-object v2, v0, v1
 

@@ -1,21 +1,29 @@
 package android.support.v4.view;
 
-class v
-  extends u
+import android.graphics.Rect;
+import android.os.Build.VERSION;
+
+public final class v
 {
-  public int a(int paramInt)
+  static final w a = new x();
+  
+  static
   {
-    return y.a(paramInt);
+    if (Build.VERSION.SDK_INT >= 17)
+    {
+      a = new y();
+      return;
+    }
   }
   
-  public boolean a(int paramInt1, int paramInt2)
+  public static int a(int paramInt1, int paramInt2)
   {
-    return y.a(paramInt1, paramInt2);
+    return a.a(paramInt1, paramInt2);
   }
   
-  public boolean b(int paramInt)
+  public static void a(int paramInt1, int paramInt2, int paramInt3, Rect paramRect1, Rect paramRect2, int paramInt4)
   {
-    return y.b(paramInt);
+    a.a(paramInt1, paramInt2, paramInt3, paramRect1, paramRect2, paramInt4);
   }
 }
 

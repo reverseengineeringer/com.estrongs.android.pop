@@ -1,15 +1,14 @@
 package com.estrongs.android.pop.utils;
 
-import com.estrongs.fs.impl.local.l;
-
-class am
-  implements Runnable
+public class am
 {
-  am(al paramal) {}
+  public boolean a;
+  public int b;
   
-  public void run()
+  public am(ad paramad, boolean paramBoolean, int paramInt)
   {
-    l.b(a.a.b);
+    a = paramBoolean;
+    b = paramInt;
   }
 }
 

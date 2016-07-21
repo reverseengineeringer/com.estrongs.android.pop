@@ -1,36 +1,30 @@
 package com.estrongs.android.pop.view;
 
-import android.webkit.WebIconDatabase;
-import com.estrongs.android.ui.d.e;
-import com.estrongs.android.util.bd;
-import com.estrongs.android.util.o;
-import java.io.File;
-import java.util.List;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.view.cr;
+import com.estrongs.fs.impl.o.e;
 
-class ei
-  implements Runnable
+public class ei
+  implements e
 {
-  ei(FileExplorerActivity paramFileExplorerActivity) {}
+  private cr b;
+  private String c;
   
-  public void run()
+  public ei(FileExplorerActivity paramFileExplorerActivity) {}
+  
+  public void a(cr paramcr, String paramString)
   {
-    FileExplorerActivity.N(a);
-    int i = e.a();
-    if (bd.a(FileExplorerActivity.d(a), i))
-    {
-      o localo = (o)FileExplorerActivity.d(a).remove(i);
-      if (localo != null) {
-        FileExplorerActivity.a(a, localo, true);
-      }
+    b = paramcr;
+    c = paramString;
+  }
+  
+  public void a(String paramString1, int paramInt, String paramString2)
+  {
+    if (paramString2 != null) {
+      ak.a(a, paramString2, 0);
     }
-    try
-    {
-      WebIconDatabase.getInstance().open(a.getDir("icons", 0).getPath());
-      return;
-    }
-    catch (Exception localException)
-    {
-      localException.printStackTrace();
+    if ((paramInt >= 31041) && (paramInt <= 31046)) {
+      a.runOnUiThread(new ej(this));
     }
   }
 }

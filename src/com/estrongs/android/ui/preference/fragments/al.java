@@ -1,18 +1,22 @@
 package com.estrongs.android.ui.preference.fragments;
 
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
-import com.estrongs.fs.d;
+import android.app.Activity;
+import com.estrongs.android.pop.view.FileExplorerActivity;
 
 class al
-  implements Preference.OnPreferenceChangeListener
+  implements Runnable
 {
-  al(DownloadPreferenceFragment paramDownloadPreferenceFragment) {}
+  al(ak paramak) {}
   
-  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
+  public void run()
   {
-    d.a().a(Boolean.valueOf(paramObject.toString()));
-    return true;
+    try
+    {
+      FileExplorerActivity.X().ah();
+      a.a.getActivity().finish();
+      return;
+    }
+    catch (Exception localException) {}
   }
 }
 

@@ -1,25 +1,14 @@
 package com.estrongs.fs;
 
-import com.estrongs.android.util.TypedMap;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.List;
+import com.estrongs.android.scanner.f;
 
-public abstract interface k
+public abstract class k
+  implements i
 {
-  public abstract h a(String paramString);
-  
-  public abstract OutputStream a(String paramString, TypedMap paramTypedMap);
-  
-  public abstract OutputStream a(String paramString, boolean paramBoolean);
-  
-  public abstract List<h> a(h paramh, i parami, TypedMap paramTypedMap);
-  
-  public abstract boolean b(String paramString);
-  
-  public abstract boolean c(String paramString);
-  
-  public abstract InputStream d(String paramString);
+  public Boolean a(f paramf)
+  {
+    return Boolean.valueOf(false);
+  }
 }
 
 /* Location:

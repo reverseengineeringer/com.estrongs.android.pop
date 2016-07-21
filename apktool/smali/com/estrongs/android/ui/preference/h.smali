@@ -35,7 +35,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/ad;->V()I
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/ad;->W()I
 
     move-result v2
 
@@ -59,7 +59,7 @@
 
     const-string v2, "Port can\'t be null"
 
-    invoke-static {v1, v2, v0}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    invoke-static {v1, v2, v0}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
     :goto_0
     return v0
@@ -92,9 +92,9 @@
 
     iget-object v1, p0, Lcom/estrongs/android/ui/preference/h;->a:Lcom/estrongs/android/ui/preference/FtpServerPreference;
 
-    const v2, 0x7f0b0146
+    const v2, 0x7f08053c
 
-    invoke-static {v1, v2, v0}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {v1, v2, v0}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     goto :goto_0
 
@@ -134,9 +134,9 @@
     :goto_1
     iget-object v2, p0, Lcom/estrongs/android/ui/preference/h;->a:Lcom/estrongs/android/ui/preference/FtpServerPreference;
 
-    const v4, 0x7f0b0145
+    const v4, 0x7f08053b
 
-    invoke-static {v2, v4, v0}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {v2, v4, v0}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/h;->a:Lcom/estrongs/android/ui/preference/FtpServerPreference;
 
@@ -148,7 +148,7 @@
 
     iget-object v4, p0, Lcom/estrongs/android/ui/preference/h;->a:Lcom/estrongs/android/ui/preference/FtpServerPreference;
 
-    const v5, 0x7f0b0143
+    const v5, 0x7f080539
 
     invoke-virtual {v4, v5}, Lcom/estrongs/android/ui/preference/FtpServerPreference;->getText(I)Ljava/lang/CharSequence;
 

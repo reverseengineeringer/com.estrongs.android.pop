@@ -1,78 +1,63 @@
 package com.estrongs.android.pop.app;
 
-import android.content.ActivityNotFoundException;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.net.Uri;
+import android.content.Context;
+import android.view.KeyEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.pop.view.utils.n;
-import com.estrongs.android.pop.view.utils.v;
-import com.estrongs.android.ui.view.ag;
+import android.widget.MediaController;
 
 class kl
-  implements View.OnClickListener
+  extends MediaController
 {
-  kl(RecommItemDetailAcitivity paramRecommItemDetailAcitivity) {}
-  
-  public void onClick(View paramView)
+  kl(PopVideoPlayer paramPopVideoPlayer, Context paramContext)
   {
-    int i = RecommItemDetailAcitivity.c(a);
-    if ((aa).q == 1) || (aa).q == 5))
+    super(paramContext);
+  }
+  
+  public boolean dispatchKeyEvent(KeyEvent paramKeyEvent)
+  {
+    int j = paramKeyEvent.getKeyCode();
+    if ((paramKeyEvent.getRepeatCount() == 0) && (paramKeyEvent.getAction() == 0)) {}
+    for (int i = 1;; i = 0)
     {
-      RecommItemDetailAcitivity.a(a, i);
-      aa).q = 0;
-      RecommItemDetailAcitivity.d(a);
+      if (((j == 4) || (j == 82)) && (i != 0)) {
+        PopVideoPlayer.a(a, true);
+      }
+      return super.dispatchKeyEvent(paramKeyEvent);
     }
-    for (;;)
+  }
+  
+  public void hide()
+  {
+    if (PopVideoPlayer.o(a))
     {
-      paramView.invalidate();
+      if (PopVideoPlayer.p(a))
+      {
+        PopVideoPlayer.a(a, false);
+        a.c();
+        return;
+      }
+      PopVideoPlayer.a(a, false);
       return;
-      Intent localIntent2;
-      if ((aa).q == 0) || (aa).q == 2))
-      {
-        if (aa).v != 3)
-        {
-          if (RecommItemDetailAcitivity.a(a).c() != null)
-          {
-            aa).y = true;
-            Intent localIntent1 = new Intent("android.intent.action.VIEW");
-            localIntent1.setData(Uri.parse(RecommItemDetailAcitivity.a(a).c()));
-            try
-            {
-              a.startActivity(localIntent1);
-            }
-            catch (ActivityNotFoundException localActivityNotFoundException)
-            {
-              ag.a(a, a.getText(2131427842), 1);
-            }
-          }
-          else
-          {
-            aa).u = 0L;
-            aa).q = 5;
-            RecommItemDetailAcitivity.d(a);
-            n.b().c(RecommItemDetailAcitivity.a(a));
-          }
-        }
-        else
-        {
-          localIntent2 = a.getPackageManager().getLaunchIntentForPackage(aa).f);
-          if (localIntent2 != null) {
-            a.startActivity(localIntent2);
-          }
-        }
-      }
-      else if (aa).q == 3)
-      {
-        localIntent2 = b.a(n.a(aa).f));
-        a.startActivity(localIntent2);
-      }
-      else if (aa).q == 4)
-      {
-        n.b().c(RecommItemDetailAcitivity.a(a));
-      }
     }
+    PopVideoPlayer.a(a, false);
+    try
+    {
+      if (a.a()) {
+        PopVideoPlayer.q(a).setVisibility(4);
+      }
+      super.hide();
+      return;
+    }
+    catch (Exception localException)
+    {
+      for (;;) {}
+    }
+  }
+  
+  public void show()
+  {
+    PopVideoPlayer.q(a).setVisibility(0);
+    super.show();
   }
 }
 

@@ -1,20 +1,29 @@
 package com.estrongs.android.ui.e;
 
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.ui.pcs.a;
-import com.estrongs.android.ui.pcs.r;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.view.WebViewWrapper;
 
 class ap
   implements MenuItem.OnMenuItemClickListener
 {
-  ap(w paramw) {}
+  ap(m paramm) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = new a(a.k);
-    paramMenuItem.a(r.a().i());
-    paramMenuItem.a();
+    paramMenuItem = m.a(a).O();
+    if ((paramMenuItem instanceof WebViewWrapper))
+    {
+      if (((WebViewWrapper)paramMenuItem).s()) {
+        ((WebViewWrapper)paramMenuItem).f();
+      }
+    }
+    else {
+      return false;
+    }
+    m.a(a).onKeyDown(4, new KeyEvent(0, 4));
     return false;
   }
 }

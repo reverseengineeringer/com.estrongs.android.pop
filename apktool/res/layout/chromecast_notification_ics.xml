@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="64.0dip"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/large_icon" android:background="@drawable/app_audio_album_default_bg" android:padding="4.0dip" android:layout_width="64.0dip" android:layout_height="64.0dip" android:src="@drawable/app_audio_album_default_icon" android:scaleType="centerInside" />
+    <ImageView android:id="@id/large_icon" android:background="@drawable/app_audio_album_default_bg" android:padding="4.0dip" android:layout_width="64.0dip" android:layout_height="64.0dip" android:src="@drawable/music_player_default_bg" android:scaleType="centerInside" />
     <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
         <LinearLayout android:orientation="vertical" android:id="@id/text_container" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
             <TextView android:textSize="16.0dip" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/content_title" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="12.0dip" android:text="Content Title" android:singleLine="true" android:layout_weight="1.0" />

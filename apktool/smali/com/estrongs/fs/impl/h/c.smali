@@ -1,59 +1,32 @@
-.class Lcom/estrongs/fs/impl/h/c;
-.super Ljava/io/BufferedInputStream;
+.class public Lcom/estrongs/fs/impl/h/c;
+.super Lcom/estrongs/fs/impl/t/a;
 
 
-# instance fields
-.field final synthetic a:Lorg/apache/http/client/methods/HttpGet;
+# static fields
+.field private static a:Lcom/estrongs/fs/impl/h/c;
 
-.field final synthetic b:Lcom/estrongs/fs/impl/h/b;
+.field private static final b:Ljava/lang/String;
+
+.field private static c:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/fs/impl/h/b;Ljava/io/InputStream;Lorg/apache/http/client/methods/HttpGet;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lcom/estrongs/fs/impl/h/c;->b:Lcom/estrongs/fs/impl/h/b;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iput-object p3, p0, Lcom/estrongs/fs/impl/h/c;->a:Lorg/apache/http/client/methods/HttpGet;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {p0, p2}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;)V
+    sget-object v1, Lcom/estrongs/fs/util/j;->a:Ljava/lang/String;
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    move-result-object v0
 
-# virtual methods
-.method public close()V
-    .locals 4
+    const-string v1, "/cache/encrypt.cache"
 
-    :try_start_0
-    iget-object v0, p0, Lcom/estrongs/fs/impl/h/c;->a:Lorg/apache/http/client/methods/HttpGet;
-
-    invoke-virtual {v0}, Lorg/apache/http/client/methods/HttpGet;->abort()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
-    invoke-super {p0}, Ljava/io/BufferedInputStream;->close()V
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "HttpFileSystem"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "Error when HttpGet.abort()"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -61,7 +34,129 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    sput-object v0, Lcom/estrongs/fs/impl/h/c;->b:Ljava/lang/String;
+
+    const/4 v0, 0x1
+
+    sput-boolean v0, Lcom/estrongs/fs/impl/h/c;->c:Z
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/estrongs/fs/impl/t/a;-><init>()V
+
+    return-void
+.end method
+
+.method public static a()Lcom/estrongs/fs/impl/h/c;
+    .locals 1
+
+    sget-object v0, Lcom/estrongs/fs/impl/h/c;->a:Lcom/estrongs/fs/impl/h/c;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcom/estrongs/fs/impl/h/c;
+
+    invoke-direct {v0}, Lcom/estrongs/fs/impl/h/c;-><init>()V
+
+    sput-object v0, Lcom/estrongs/fs/impl/h/c;->a:Lcom/estrongs/fs/impl/h/c;
+
+    :cond_0
+    sget-object v0, Lcom/estrongs/fs/impl/h/c;->a:Lcom/estrongs/fs/impl/h/c;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public a(Lcom/estrongs/fs/h;Lcom/estrongs/fs/i;Lcom/estrongs/android/util/TypedMap;)Ljava/util/List;
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/estrongs/fs/h;",
+            "Lcom/estrongs/fs/i;",
+            "Lcom/estrongs/android/util/TypedMap;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Lcom/estrongs/fs/h;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-super {p0, p1, p2, p3}, Lcom/estrongs/fs/impl/t/a;->a(Lcom/estrongs/fs/h;Lcom/estrongs/fs/i;Lcom/estrongs/android/util/TypedMap;)Ljava/util/List;
+
+    move-result-object v3
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_0
+    invoke-interface {v3}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-ge v1, v0, :cond_0
+
+    new-instance v4, Lcom/estrongs/fs/impl/h/a;
+
+    invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/fs/h;
+
+    invoke-direct {v4, v0}, Lcom/estrongs/fs/impl/h/a;-><init>(Lcom/estrongs/fs/h;)V
+
+    invoke-interface {v2, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
 
     goto :goto_0
+
+    :cond_0
+    return-object v2
+.end method
+
+.method protected a(Z)V
+    .locals 0
+
+    sput-boolean p1, Lcom/estrongs/fs/impl/h/c;->c:Z
+
+    return-void
+.end method
+
+.method protected b()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lcom/estrongs/fs/impl/h/c;->b:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method protected c()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "encrypt"
+
+    return-object v0
+.end method
+
+.method protected d()Z
+    .locals 1
+
+    sget-boolean v0, Lcom/estrongs/fs/impl/h/c;->c:Z
+
+    return v0
 .end method

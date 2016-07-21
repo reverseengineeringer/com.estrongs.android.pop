@@ -1,6 +1,6 @@
 package com.estrongs.android.pop.spfs.facebook;
 
-import com.estrongs.android.util.bd;
+import com.estrongs.android.util.bk;
 import java.io.BufferedOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -26,7 +26,7 @@ final class FacebookFileSystem$1
       String str1 = FacebookFileSystem.access$000(val$conn.getInputStream());
       try
       {
-        if (bd.a(new JSONObject(str1).getString("id"))) {
+        if (bk.a(new JSONObject(str1).getString("id"))) {
           throw new IOException("Failed to upload");
         }
       }

@@ -2,7 +2,7 @@ package com.estrongs.android.pop.app;
 
 import android.widget.TextView;
 import com.estrongs.android.pop.spfs.SPFileInfo;
-import com.estrongs.android.util.as;
+import com.estrongs.android.util.aw;
 import java.util.Date;
 
 class dl
@@ -22,7 +22,7 @@ class dl
     }
     for (;;)
     {
-      ((TextView)a.f.a.findViewById(2131362518)).setText(a.f.a.a.ownerUsername);
+      ((TextView)a.f.a.findViewById(2131625255)).setText(a.f.a.a.ownerUsername);
       if ((a.f.a.a.description == null) || ("".equals(a.f.a.a.description))) {
         break;
       }

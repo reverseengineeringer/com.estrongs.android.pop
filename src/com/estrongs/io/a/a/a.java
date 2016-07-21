@@ -1,6 +1,6 @@
 package com.estrongs.io.a.a;
 
-import com.estrongs.io.archive.d;
+import com.estrongs.io.archive.e;
 
 public class a
   extends b
@@ -10,9 +10,9 @@ public class a
   private boolean k = false;
   private String l;
   
-  public a(d paramd, String paramString)
+  public a(e parame, String paramString)
   {
-    super(paramd);
+    super(parame);
     l = paramString;
   }
   

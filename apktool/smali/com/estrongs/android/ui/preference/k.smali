@@ -31,11 +31,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->W()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->X()Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Lcom/estrongs/android/util/c;
+    new-instance v1, Lcom/estrongs/android/util/b;
 
     iget-object v2, p0, Lcom/estrongs/android/ui/preference/k;->a:Lcom/estrongs/android/ui/preference/FtpServerPreference;
 
@@ -43,13 +43,13 @@
 
     invoke-direct {v3, p0, v0}, Lcom/estrongs/android/ui/preference/l;-><init>(Lcom/estrongs/android/ui/preference/k;Ljava/lang/String;)V
 
-    invoke-direct {v1, v2, v0, v3}, Lcom/estrongs/android/util/c;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/estrongs/android/util/e;)V
+    invoke-direct {v1, v2, v0, v3}, Lcom/estrongs/android/util/b;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/estrongs/android/util/d;)V
 
     const/4 v0, 0x0
 
-    iput-boolean v0, v1, Lcom/estrongs/android/util/c;->a:Z
+    iput-boolean v0, v1, Lcom/estrongs/android/util/b;->a:Z
 
-    invoke-virtual {v1}, Lcom/estrongs/android/util/c;->a()V
+    invoke-virtual {v1}, Lcom/estrongs/android/util/b;->a()V
 
     const/4 v0, 0x1
 

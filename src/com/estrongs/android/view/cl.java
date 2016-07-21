@@ -1,22 +1,16 @@
 package com.estrongs.android.view;
 
 import android.view.View;
-import java.util.List;
+import android.view.View.OnClickListener;
 
 class cl
-  implements Runnable
+  implements View.OnClickListener
 {
-  cl(cd paramcd, List paramList) {}
+  cl(ck paramck, ci paramci, int paramInt) {}
   
-  public void run()
+  public void onClick(View paramView)
   {
-    if ((!cd.a(b)) && (a.size() == 0)) {
-      b.f(2131427825);
-    }
-    View localView = b.k(2131362048);
-    if (localView != null) {
-      localView.setVisibility(8);
-    }
+    c.e.a(a, paramView, b);
   }
 }
 

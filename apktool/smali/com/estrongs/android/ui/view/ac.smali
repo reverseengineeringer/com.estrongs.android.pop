@@ -1,14 +1,22 @@
 .class public Lcom/estrongs/android/ui/view/ac;
-.super Landroid/widget/BaseAdapter;
+.super Landroid/support/v7/widget/RecyclerView$Adapter;
 
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroid/support/v7/widget/RecyclerView$Adapter",
+        "<",
+        "Lcom/estrongs/android/ui/view/aj;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field a:Lcom/estrongs/android/pop/app/a/ag;
+.field a:Lcom/estrongs/android/pop/app/c/e;
 
-.field b:Lcom/estrongs/android/ui/theme/al;
+.field b:Lcom/estrongs/android/ui/theme/at;
 
 .field private c:Z
 
@@ -25,42 +33,44 @@
 
 .field private e:Landroid/os/Handler;
 
-.field private f:Lcom/estrongs/android/pop/app/a/al;
+.field private f:Lcom/estrongs/android/pop/app/c/j;
 
 .field private g:Landroid/content/Context;
 
 .field private h:I
 
-.field private i:Z
+.field private i:Lcom/estrongs/android/pop/app/c/i;
 
 .field private j:Z
 
-.field private k:I
+.field private k:Z
+
+.field private l:Landroid/support/v7/widget/helper/ItemTouchHelper;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;)V
-    .locals 2
+    .locals 3
 
-    const/4 v1, -0x1
+    const/4 v2, 0x0
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
+    invoke-direct {p0}, Landroid/support/v7/widget/RecyclerView$Adapter;-><init>()V
 
-    iput-boolean v0, p0, Lcom/estrongs/android/ui/view/ac;->c:Z
+    iput-boolean v1, p0, Lcom/estrongs/android/ui/view/ac;->c:Z
 
-    iput v1, p0, Lcom/estrongs/android/ui/view/ac;->h:I
+    const/4 v0, -0x1
 
-    iput-boolean v0, p0, Lcom/estrongs/android/ui/view/ac;->i:Z
+    iput v0, p0, Lcom/estrongs/android/ui/view/ac;->h:I
 
-    iput-boolean v0, p0, Lcom/estrongs/android/ui/view/ac;->j:Z
+    iput-object v2, p0, Lcom/estrongs/android/ui/view/ac;->i:Lcom/estrongs/android/pop/app/c/i;
 
-    iput v1, p0, Lcom/estrongs/android/ui/view/ac;->k:I
+    iput-boolean v1, p0, Lcom/estrongs/android/ui/view/ac;->j:Z
 
-    const/4 v0, 0x0
+    iput-boolean v1, p0, Lcom/estrongs/android/ui/view/ac;->k:Z
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/ac;->a:Lcom/estrongs/android/pop/app/a/ag;
+    iput-object v2, p0, Lcom/estrongs/android/ui/view/ac;->a:Lcom/estrongs/android/pop/app/c/e;
 
     iput-object p1, p0, Lcom/estrongs/android/ui/view/ac;->g:Landroid/content/Context;
 
@@ -68,13 +78,13 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->g:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/theme/al;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
+    invoke-static {v0}, Lcom/estrongs/android/ui/theme/at;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/ac;->b:Lcom/estrongs/android/ui/theme/al;
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ac;->b:Lcom/estrongs/android/ui/theme/at;
 
-    invoke-direct {p0}, Lcom/estrongs/android/ui/view/ac;->i()V
+    invoke-direct {p0}, Lcom/estrongs/android/ui/view/ac;->h()V
 
     return-void
 .end method
@@ -87,17 +97,17 @@
     return-object v0
 .end method
 
-.method private a(Lcom/estrongs/android/pop/app/a/ak;)Ljava/lang/String;
+.method private a(Lcom/estrongs/android/pop/app/c/i;)Ljava/lang/String;
     .locals 3
 
-    iget-object v0, p1, Lcom/estrongs/android/pop/app/a/ak;->f:Ljava/lang/String;
+    iget-object v0, p1, Lcom/estrongs/android/pop/app/c/i;->f:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p1, Lcom/estrongs/android/pop/app/a/ak;->f:Ljava/lang/String;
+    iget-object v0, p1, Lcom/estrongs/android/pop/app/c/i;->f:Ljava/lang/String;
 
     :goto_0
-    iget-object v1, p1, Lcom/estrongs/android/pop/app/a/ak;->g:Ljava/lang/String;
+    iget-object v1, p1, Lcom/estrongs/android/pop/app/c/i;->g:Ljava/lang/String;
 
     if-nez v1, :cond_0
 
@@ -111,7 +121,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/ui/view/ac;->g:Landroid/content/Context;
 
-    const v2, 0x7f0b03d8
+    const v2, 0x7f080145
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -134,56 +144,543 @@
     goto :goto_0
 .end method
 
-.method static synthetic a(Lcom/estrongs/android/ui/view/ac;Lcom/estrongs/android/pop/app/a/ak;)Ljava/lang/String;
+.method static synthetic a(Lcom/estrongs/android/ui/view/ac;Lcom/estrongs/android/pop/app/c/i;)Ljava/lang/String;
     .locals 1
 
-    invoke-direct {p0, p1}, Lcom/estrongs/android/ui/view/ac;->a(Lcom/estrongs/android/pop/app/a/ak;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/estrongs/android/ui/view/ac;->a(Lcom/estrongs/android/pop/app/c/i;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method private i()V
+.method static synthetic b(Lcom/estrongs/android/ui/view/ac;)Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/estrongs/android/ui/view/ac;->c:Z
+
+    return v0
+.end method
+
+.method static synthetic c(Lcom/estrongs/android/ui/view/ac;)Ljava/util/List;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->d:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method static synthetic d(Lcom/estrongs/android/ui/view/ac;)I
+    .locals 1
+
+    iget v0, p0, Lcom/estrongs/android/ui/view/ac;->h:I
+
+    return v0
+.end method
+
+.method static synthetic e(Lcom/estrongs/android/ui/view/ac;)Landroid/support/v7/widget/helper/ItemTouchHelper;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->l:Landroid/support/v7/widget/helper/ItemTouchHelper;
+
+    return-object v0
+.end method
+
+.method private h()V
     .locals 1
 
     new-instance v0, Lcom/estrongs/android/ui/view/ad;
 
     invoke-direct {v0, p0}, Lcom/estrongs/android/ui/view/ad;-><init>(Lcom/estrongs/android/ui/view/ac;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/view/ac;->a:Lcom/estrongs/android/pop/app/a/ag;
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ac;->a:Lcom/estrongs/android/pop/app/c/e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Lcom/estrongs/android/pop/app/a/al;
+.method public a()Lcom/estrongs/android/pop/app/c/j;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->f:Lcom/estrongs/android/pop/app/a/al;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->f:Lcom/estrongs/android/pop/app/c/j;
 
     return-object v0
 .end method
 
+.method public a(Landroid/view/ViewGroup;I)Lcom/estrongs/android/ui/view/aj;
+    .locals 4
+
+    const v3, 0x7f030053
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->g:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v3, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/estrongs/android/ui/view/aj;
+
+    invoke-direct {v2, v1}, Lcom/estrongs/android/ui/view/aj;-><init>(Landroid/view/View;)V
+
+    const v0, 0x7f0e0077
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, v2, Lcom/estrongs/android/ui/view/aj;->a:Landroid/widget/TextView;
+
+    const v0, 0x7f0e0207
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, v2, Lcom/estrongs/android/ui/view/aj;->b:Landroid/widget/TextView;
+
+    const v0, 0x7f0e0209
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, v2, Lcom/estrongs/android/ui/view/aj;->c:Landroid/widget/TextView;
+
+    const v0, 0x7f0e0208
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ProgressBar;
+
+    iput-object v0, v2, Lcom/estrongs/android/ui/view/aj;->d:Landroid/widget/ProgressBar;
+
+    const v0, 0x7f0e0086
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/CheckBox;
+
+    iput-object v0, v2, Lcom/estrongs/android/ui/view/aj;->e:Landroid/widget/CheckBox;
+
+    const v0, 0x7f0e020a
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, v2, Lcom/estrongs/android/ui/view/aj;->f:Landroid/widget/ImageView;
+
+    invoke-virtual {v1, v3, v2}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    return-object v2
+.end method
+
 .method public a(IZZ)V
-    .locals 0
+    .locals 2
 
     iput p1, p0, Lcom/estrongs/android/ui/view/ac;->h:I
 
-    iput-boolean p2, p0, Lcom/estrongs/android/ui/view/ac;->i:Z
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->f:Lcom/estrongs/android/pop/app/c/j;
 
-    iput-boolean p3, p0, Lcom/estrongs/android/ui/view/ac;->j:Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/j;->c()Ljava/util/List;
+
+    move-result-object v0
+
+    const/4 v1, -0x1
+
+    if-eq p1, v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-le v1, p1, :cond_0
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/android/pop/app/c/i;
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ac;->i:Lcom/estrongs/android/pop/app/c/i;
+
+    :goto_0
+    iput-boolean p2, p0, Lcom/estrongs/android/ui/view/ac;->j:Z
+
+    iput-boolean p3, p0, Lcom/estrongs/android/ui/view/ac;->k:Z
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/view/ac;->i:Lcom/estrongs/android/pop/app/c/i;
+
+    goto :goto_0
+.end method
+
+.method public a(Landroid/support/v7/widget/helper/ItemTouchHelper;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/ui/view/ac;->l:Landroid/support/v7/widget/helper/ItemTouchHelper;
 
     return-void
 .end method
 
-.method public a(Lcom/estrongs/android/pop/app/a/al;)V
+.method public a(Lcom/estrongs/android/pop/app/c/j;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/view/ac;->f:Lcom/estrongs/android/pop/app/a/al;
+    iput-object p1, p0, Lcom/estrongs/android/ui/view/ac;->f:Lcom/estrongs/android/pop/app/c/j;
+
+    invoke-virtual {p0}, Lcom/estrongs/android/ui/view/ac;->notifyDataSetChanged()V
 
     return-void
+.end method
+
+.method public a(Lcom/estrongs/android/ui/view/aj;I)V
+    .locals 11
+
+    const v10, 0x7f0d00f8
+
+    const/4 v9, 0x1
+
+    const v8, 0x7f0d0159
+
+    const/16 v7, 0x8
+
+    const/4 v6, 0x0
+
+    invoke-virtual {p0, p2}, Lcom/estrongs/android/ui/view/ac;->b(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/android/pop/app/c/i;
+
+    iget-object v1, p1, Lcom/estrongs/android/ui/view/aj;->itemView:Landroid/view/View;
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+
+    iget-object v1, p1, Lcom/estrongs/android/ui/view/aj;->itemView:Landroid/view/View;
+
+    invoke-virtual {v1, v6}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v1, p1, Lcom/estrongs/android/ui/view/aj;->itemView:Landroid/view/View;
+
+    const v2, 0x7f0e0205
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/TextView;
+
+    iget-wide v2, v0, Lcom/estrongs/android/pop/app/c/i;->d:J
+
+    const-wide/16 v4, 0x1
+
+    add-long/2addr v2, v4
+
+    invoke-static {v2, v3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/i;->c()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v3, p1, Lcom/estrongs/android/ui/view/aj;->a:Landroid/widget/TextView;
+
+    iget-object v2, v0, Lcom/estrongs/android/pop/app/c/i;->e:Ljava/lang/String;
+
+    if-eqz v2, :cond_0
+
+    const-string v2, ""
+
+    iget-object v4, v0, Lcom/estrongs/android/pop/app/c/i;->e:Ljava/lang/String;
+
+    invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    :cond_0
+    iget-object v2, v0, Lcom/estrongs/android/pop/app/c/i;->b:Ljava/lang/String;
+
+    invoke-static {v2}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v2, p1, Lcom/estrongs/android/ui/view/aj;->b:Landroid/widget/TextView;
+
+    invoke-direct {p0, v0}, Lcom/estrongs/android/ui/view/ac;->a(Lcom/estrongs/android/pop/app/c/i;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v2, p1, Lcom/estrongs/android/ui/view/aj;->c:Landroid/widget/TextView;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/i;->a()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :goto_1
+    iget-boolean v2, p0, Lcom/estrongs/android/ui/view/ac;->c:Z
+
+    if-eqz v2, :cond_4
+
+    iget-object v2, p1, Lcom/estrongs/android/ui/view/aj;->e:Landroid/widget/CheckBox;
+
+    invoke-virtual {v2, v6}, Landroid/widget/CheckBox;->setVisibility(I)V
+
+    iget-object v2, p1, Lcom/estrongs/android/ui/view/aj;->f:Landroid/widget/ImageView;
+
+    invoke-virtual {v2, v7}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    invoke-virtual {p0, p2}, Lcom/estrongs/android/ui/view/ac;->a(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    iget-object v2, p1, Lcom/estrongs/android/ui/view/aj;->e:Landroid/widget/CheckBox;
+
+    invoke-virtual {v2, v9}, Landroid/widget/CheckBox;->setChecked(Z)V
+
+    :goto_2
+    iget-object v2, p0, Lcom/estrongs/android/ui/view/ac;->i:Lcom/estrongs/android/pop/app/c/i;
+
+    if-ne v2, v0, :cond_6
+
+    iget-object v0, p1, Lcom/estrongs/android/ui/view/aj;->a:Landroid/widget/TextView;
+
+    iget-object v2, p0, Lcom/estrongs/android/ui/view/ac;->b:Lcom/estrongs/android/ui/theme/at;
+
+    invoke-virtual {v2, v10}, Lcom/estrongs/android/ui/theme/at;->c(I)I
+
+    move-result v2
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->b:Lcom/estrongs/android/ui/theme/at;
+
+    invoke-virtual {v0, v10}, Lcom/estrongs/android/ui/theme/at;->c(I)I
+
+    move-result v0
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    iget-object v0, p1, Lcom/estrongs/android/ui/view/aj;->b:Landroid/widget/TextView;
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/view/ac;->b:Lcom/estrongs/android/ui/theme/at;
+
+    const v2, 0x7f0d00f9
+
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/theme/at;->c(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    iget-object v0, p1, Lcom/estrongs/android/ui/view/aj;->c:Landroid/widget/TextView;
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/view/ac;->b:Lcom/estrongs/android/ui/theme/at;
+
+    invoke-virtual {v1, v8}, Lcom/estrongs/android/ui/theme/at;->c(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    iget-boolean v0, p0, Lcom/estrongs/android/ui/view/ac;->k:Z
+
+    if-eqz v0, :cond_5
+
+    iget-object v0, p1, Lcom/estrongs/android/ui/view/aj;->d:Landroid/widget/ProgressBar;
+
+    invoke-virtual {v0, v6}, Landroid/widget/ProgressBar;->setVisibility(I)V
+
+    :goto_3
+    iget-object v0, p1, Lcom/estrongs/android/ui/view/aj;->itemView:Landroid/view/View;
+
+    invoke-virtual {v0, v9}, Landroid/view/View;->setFocusable(Z)V
+
+    iget-object v0, p1, Lcom/estrongs/android/ui/view/aj;->itemView:Landroid/view/View;
+
+    new-instance v1, Lcom/estrongs/android/ui/view/af;
+
+    invoke-direct {v1, p0, p2}, Lcom/estrongs/android/ui/view/af;-><init>(Lcom/estrongs/android/ui/view/ac;I)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p1, Lcom/estrongs/android/ui/view/aj;->itemView:Landroid/view/View;
+
+    new-instance v1, Lcom/estrongs/android/ui/view/ag;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/view/ag;-><init>(Lcom/estrongs/android/ui/view/ac;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+
+    iget-object v0, p1, Lcom/estrongs/android/ui/view/aj;->itemView:Landroid/view/View;
+
+    const v1, 0x7f0e0204
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/estrongs/android/ui/view/ah;
+
+    invoke-direct {v1, p0, p1}, Lcom/estrongs/android/ui/view/ah;-><init>(Lcom/estrongs/android/ui/view/ac;Lcom/estrongs/android/ui/view/aj;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+
+    iget-object v0, p1, Lcom/estrongs/android/ui/view/aj;->f:Landroid/widget/ImageView;
+
+    new-instance v1, Lcom/estrongs/android/ui/view/ai;
+
+    invoke-direct {v1, p0, p1}, Lcom/estrongs/android/ui/view/ai;-><init>(Lcom/estrongs/android/ui/view/ac;Lcom/estrongs/android/ui/view/aj;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    return-void
+
+    :cond_1
+    iget-object v2, v0, Lcom/estrongs/android/pop/app/c/i;->e:Ljava/lang/String;
+
+    goto/16 :goto_0
+
+    :cond_2
+    iget-object v2, p1, Lcom/estrongs/android/ui/view/aj;->a:Landroid/widget/TextView;
+
+    iget-object v3, v0, Lcom/estrongs/android/pop/app/c/i;->b:Ljava/lang/String;
+
+    invoke-static {v3}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v2, p1, Lcom/estrongs/android/ui/view/aj;->b:Landroid/widget/TextView;
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v2, p1, Lcom/estrongs/android/ui/view/aj;->c:Landroid/widget/TextView;
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v2, p0, Lcom/estrongs/android/ui/view/ac;->a:Lcom/estrongs/android/pop/app/c/e;
+
+    iget-object v3, p1, Lcom/estrongs/android/ui/view/aj;->itemView:Landroid/view/View;
+
+    invoke-virtual {v2, p2, v0, v3}, Lcom/estrongs/android/pop/app/c/e;->a(ILcom/estrongs/android/pop/app/c/i;Landroid/view/View;)V
+
+    goto/16 :goto_1
+
+    :cond_3
+    iget-object v2, p1, Lcom/estrongs/android/ui/view/aj;->e:Landroid/widget/CheckBox;
+
+    invoke-virtual {v2, v6}, Landroid/widget/CheckBox;->setChecked(Z)V
+
+    goto/16 :goto_2
+
+    :cond_4
+    iget-object v2, p1, Lcom/estrongs/android/ui/view/aj;->e:Landroid/widget/CheckBox;
+
+    invoke-virtual {v2, v7}, Landroid/widget/CheckBox;->setVisibility(I)V
+
+    iget-object v2, p1, Lcom/estrongs/android/ui/view/aj;->f:Landroid/widget/ImageView;
+
+    invoke-virtual {v2, v6}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    goto/16 :goto_2
+
+    :cond_5
+    iget-object v0, p1, Lcom/estrongs/android/ui/view/aj;->d:Landroid/widget/ProgressBar;
+
+    invoke-virtual {v0, v7}, Landroid/widget/ProgressBar;->setVisibility(I)V
+
+    goto :goto_3
+
+    :cond_6
+    iget-object v0, p1, Lcom/estrongs/android/ui/view/aj;->a:Landroid/widget/TextView;
+
+    iget-object v2, p0, Lcom/estrongs/android/ui/view/ac;->b:Lcom/estrongs/android/ui/theme/at;
+
+    invoke-virtual {v2, v8}, Lcom/estrongs/android/ui/theme/at;->c(I)I
+
+    move-result v2
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->b:Lcom/estrongs/android/ui/theme/at;
+
+    invoke-virtual {v0, v8}, Lcom/estrongs/android/ui/theme/at;->c(I)I
+
+    move-result v0
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    iget-object v0, p1, Lcom/estrongs/android/ui/view/aj;->b:Landroid/widget/TextView;
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/view/ac;->b:Lcom/estrongs/android/ui/theme/at;
+
+    const v2, 0x7f0d0066
+
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/theme/at;->c(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    iget-object v0, p1, Lcom/estrongs/android/ui/view/aj;->c:Landroid/widget/TextView;
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/view/ac;->b:Lcom/estrongs/android/ui/theme/at;
+
+    invoke-virtual {v1, v8}, Lcom/estrongs/android/ui/theme/at;->c(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    iget-object v0, p1, Lcom/estrongs/android/ui/view/aj;->d:Landroid/widget/ProgressBar;
+
+    invoke-virtual {v0, v7}, Landroid/widget/ProgressBar;->setVisibility(I)V
+
+    goto/16 :goto_3
 .end method
 
 .method public a(Z)V
@@ -250,14 +747,14 @@
     return v0
 .end method
 
-.method protected a(Lcom/estrongs/android/pop/app/a/ai;)Z
+.method protected a(Lcom/estrongs/android/pop/app/c/g;)Z
     .locals 2
 
-    iget-boolean v0, p1, Lcom/estrongs/android/pop/app/a/ai;->d:Z
+    iget-boolean v0, p1, Lcom/estrongs/android/pop/app/c/g;->d:Z
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p1, Lcom/estrongs/android/pop/app/a/ai;->c:Landroid/view/View;
+    iget-object v0, p1, Lcom/estrongs/android/pop/app/c/g;->c:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -265,9 +762,9 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p1, Lcom/estrongs/android/pop/app/a/ai;->b:Lcom/estrongs/android/pop/app/a/ak;
+    iget-object v0, p1, Lcom/estrongs/android/pop/app/c/g;->b:Lcom/estrongs/android/pop/app/c/i;
 
-    iget-object v1, p1, Lcom/estrongs/android/pop/app/a/ai;->c:Landroid/view/View;
+    iget-object v1, p1, Lcom/estrongs/android/pop/app/c/g;->c:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -287,12 +784,32 @@
     goto :goto_0
 .end method
 
-.method public b(I)V
-    .locals 0
+.method public b(I)Ljava/lang/Object;
+    .locals 1
 
-    iput p1, p0, Lcom/estrongs/android/ui/view/ac;->k:I
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->f:Lcom/estrongs/android/pop/app/c/j;
 
-    return-void
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->f:Lcom/estrongs/android/pop/app/c/j;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/j;->c()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/android/pop/app/c/i;
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
 .method public b()Z
@@ -303,50 +820,14 @@
     return v0
 .end method
 
-.method public c()Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0}, Lcom/estrongs/android/ui/view/ac;->h()[I
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    aget v3, v2, v0
-
-    aget v2, v2, v1
-
-    sub-int v2, v3, v2
-
-    iget-object v3, p0, Lcom/estrongs/android/ui/view/ac;->d:Ljava/util/List;
-
-    invoke-interface {v3}, Ljava/util/List;->size()I
-
-    move-result v3
-
-    if-lt v2, v3, :cond_0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    move v0, v1
-
-    goto :goto_0
-.end method
-
-.method public d()Ljava/util/List;
+.method public c()Ljava/util/List;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
             "Ljava/util/List",
             "<",
-            "Lcom/estrongs/android/pop/app/a/ak;",
+            "Lcom/estrongs/android/pop/app/c/i;",
             ">;"
         }
     .end annotation
@@ -382,11 +863,11 @@
 
     move-result v0
 
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/view/ac;->getItem(I)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/view/ac;->b(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/android/pop/app/a/ak;
+    check-cast v0, Lcom/estrongs/android/pop/app/c/i;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -396,14 +877,14 @@
     return-object v1
 .end method
 
-.method public e()V
+.method public d()V
     .locals 4
 
     iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->d:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    invoke-virtual {p0}, Lcom/estrongs/android/ui/view/ac;->getCount()I
+    invoke-virtual {p0}, Lcom/estrongs/android/ui/view/ac;->getItemCount()I
 
     move-result v1
 
@@ -436,7 +917,7 @@
     return-void
 .end method
 
-.method public f()V
+.method public e()V
     .locals 2
 
     iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->d:Ljava/util/List;
@@ -454,10 +935,10 @@
     return-void
 .end method
 
-.method public g()V
+.method public f()V
     .locals 4
 
-    invoke-virtual {p0}, Lcom/estrongs/android/ui/view/ac;->h()[I
+    invoke-virtual {p0}, Lcom/estrongs/android/ui/view/ac;->g()[I
 
     move-result-object v1
 
@@ -503,417 +984,7 @@
     return-void
 .end method
 
-.method public getCount()I
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->f:Lcom/estrongs/android/pop/app/a/al;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->f:Lcom/estrongs/android/pop/app/a/al;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/al;->c()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public getItem(I)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->f:Lcom/estrongs/android/pop/app/a/al;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->f:Lcom/estrongs/android/pop/app/a/al;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/al;->c()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/android/pop/app/a/ak;
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public getItemId(I)J
-    .locals 2
-
-    int-to-long v0, p1
-
-    return-wide v0
-.end method
-
-.method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 10
-
-    const v9, 0x7f08003a
-
-    const v2, 0x7f030013
-
-    const/16 v8, 0x8
-
-    const/4 v7, 0x0
-
-    const v6, -0xb35201
-
-    if-nez p2, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->g:Landroid/content/Context;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object p2
-
-    new-instance v1, Lcom/estrongs/android/ui/view/af;
-
-    invoke-direct {v1}, Lcom/estrongs/android/ui/view/af;-><init>()V
-
-    const v0, 0x7f0a0021
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, v1, Lcom/estrongs/android/ui/view/af;->a:Landroid/widget/TextView;
-
-    const v0, 0x7f0a009f
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, v1, Lcom/estrongs/android/ui/view/af;->b:Landroid/widget/TextView;
-
-    const v0, 0x7f0a009e
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, v1, Lcom/estrongs/android/ui/view/af;->c:Landroid/widget/TextView;
-
-    const v0, 0x7f0a00a1
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ProgressBar;
-
-    iput-object v0, v1, Lcom/estrongs/android/ui/view/af;->d:Landroid/widget/ProgressBar;
-
-    const v0, 0x7f0a00a0
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, v1, Lcom/estrongs/android/ui/view/af;->e:Landroid/widget/ImageView;
-
-    const v0, 0x7f0a00a2
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/CheckBox;
-
-    iput-object v0, v1, Lcom/estrongs/android/ui/view/af;->f:Landroid/widget/CheckBox;
-
-    invoke-virtual {p2, v2, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    move-object v2, v1
-
-    :goto_0
-    invoke-virtual {p0, p1}, Lcom/estrongs/android/ui/view/ac;->getItem(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/android/pop/app/a/ak;
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
-
-    iget v1, p0, Lcom/estrongs/android/ui/view/ac;->k:I
-
-    if-ne p1, v1, :cond_1
-
-    const/4 v0, 0x4
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->setVisibility(I)V
-
-    :goto_1
-    return-object p2
-
-    :cond_0
-    invoke-virtual {p2, v2}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/android/ui/view/af;
-
-    move-object v2, v0
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p2, v7}, Landroid/view/View;->setVisibility(I)V
-
-    const v1, 0x7f0a009d
-
-    invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/TextView;
-
-    add-int/lit8 v3, p1, 0x1
-
-    invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/ak;->c()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_4
-
-    iget-object v4, v2, Lcom/estrongs/android/ui/view/af;->a:Landroid/widget/TextView;
-
-    iget-object v3, v0, Lcom/estrongs/android/pop/app/a/ak;->e:Ljava/lang/String;
-
-    if-eqz v3, :cond_2
-
-    const-string v3, ""
-
-    iget-object v5, v0, Lcom/estrongs/android/pop/app/a/ak;->e:Ljava/lang/String;
-
-    invoke-virtual {v3, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    :cond_2
-    iget-object v3, v0, Lcom/estrongs/android/pop/app/a/ak;->b:Ljava/lang/String;
-
-    invoke-static {v3}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    :goto_2
-    invoke-virtual {v4, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v3, v2, Lcom/estrongs/android/ui/view/af;->b:Landroid/widget/TextView;
-
-    invoke-direct {p0, v0}, Lcom/estrongs/android/ui/view/ac;->a(Lcom/estrongs/android/pop/app/a/ak;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v3, v2, Lcom/estrongs/android/ui/view/af;->c:Landroid/widget/TextView;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/ak;->a()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    :goto_3
-    iget-boolean v0, p0, Lcom/estrongs/android/ui/view/ac;->c:Z
-
-    if-eqz v0, :cond_6
-
-    iget-object v0, v2, Lcom/estrongs/android/ui/view/af;->f:Landroid/widget/CheckBox;
-
-    invoke-virtual {v0, v7}, Landroid/widget/CheckBox;->setVisibility(I)V
-
-    invoke-virtual {p0, p1}, Lcom/estrongs/android/ui/view/ac;->a(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    iget-object v0, v2, Lcom/estrongs/android/ui/view/af;->f:Landroid/widget/CheckBox;
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v0, v3}, Landroid/widget/CheckBox;->setChecked(Z)V
-
-    :goto_4
-    iget v0, p0, Lcom/estrongs/android/ui/view/ac;->h:I
-
-    if-ne v0, p1, :cond_8
-
-    iget-object v0, v2, Lcom/estrongs/android/ui/view/af;->a:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v6}, Landroid/widget/TextView;->setTextColor(I)V
-
-    invoke-virtual {v1, v6}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object v0, v2, Lcom/estrongs/android/ui/view/af;->b:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v6}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object v0, v2, Lcom/estrongs/android/ui/view/af;->c:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v6}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-boolean v0, p0, Lcom/estrongs/android/ui/view/ac;->j:Z
-
-    if-eqz v0, :cond_7
-
-    iget-object v0, v2, Lcom/estrongs/android/ui/view/af;->d:Landroid/widget/ProgressBar;
-
-    invoke-virtual {v0, v7}, Landroid/widget/ProgressBar;->setVisibility(I)V
-
-    goto/16 :goto_1
-
-    :cond_3
-    iget-object v3, v0, Lcom/estrongs/android/pop/app/a/ak;->e:Ljava/lang/String;
-
-    goto :goto_2
-
-    :cond_4
-    iget-object v3, v2, Lcom/estrongs/android/ui/view/af;->a:Landroid/widget/TextView;
-
-    iget-object v4, v0, Lcom/estrongs/android/pop/app/a/ak;->b:Ljava/lang/String;
-
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v3, v2, Lcom/estrongs/android/ui/view/af;->b:Landroid/widget/TextView;
-
-    const-string v4, ""
-
-    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v3, v2, Lcom/estrongs/android/ui/view/af;->c:Landroid/widget/TextView;
-
-    const-string v4, ""
-
-    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v3, p0, Lcom/estrongs/android/ui/view/ac;->a:Lcom/estrongs/android/pop/app/a/ag;
-
-    invoke-virtual {v3, p1, v0, p2}, Lcom/estrongs/android/pop/app/a/ag;->a(ILcom/estrongs/android/pop/app/a/ak;Landroid/view/View;)V
-
-    goto :goto_3
-
-    :cond_5
-    iget-object v0, v2, Lcom/estrongs/android/ui/view/af;->f:Landroid/widget/CheckBox;
-
-    invoke-virtual {v0, v7}, Landroid/widget/CheckBox;->setChecked(Z)V
-
-    goto :goto_4
-
-    :cond_6
-    iget-object v0, v2, Lcom/estrongs/android/ui/view/af;->f:Landroid/widget/CheckBox;
-
-    invoke-virtual {v0, v8}, Landroid/widget/CheckBox;->setVisibility(I)V
-
-    goto :goto_4
-
-    :cond_7
-    iget-object v0, v2, Lcom/estrongs/android/ui/view/af;->d:Landroid/widget/ProgressBar;
-
-    invoke-virtual {v0, v8}, Landroid/widget/ProgressBar;->setVisibility(I)V
-
-    goto/16 :goto_1
-
-    :cond_8
-    iget-object v0, v2, Lcom/estrongs/android/ui/view/af;->a:Landroid/widget/TextView;
-
-    iget-object v3, p0, Lcom/estrongs/android/ui/view/ac;->b:Lcom/estrongs/android/ui/theme/al;
-
-    invoke-virtual {v3, v9}, Lcom/estrongs/android/ui/theme/al;->d(I)I
-
-    move-result v3
-
-    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->b:Lcom/estrongs/android/ui/theme/al;
-
-    invoke-virtual {v0, v9}, Lcom/estrongs/android/ui/theme/al;->d(I)I
-
-    move-result v0
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object v0, v2, Lcom/estrongs/android/ui/view/af;->b:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/ac;->b:Lcom/estrongs/android/ui/theme/al;
-
-    const v3, 0x7f08003b
-
-    invoke-virtual {v1, v3}, Lcom/estrongs/android/ui/theme/al;->d(I)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object v0, v2, Lcom/estrongs/android/ui/view/af;->c:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/ac;->b:Lcom/estrongs/android/ui/theme/al;
-
-    const v3, 0x7f08003b
-
-    invoke-virtual {v1, v3}, Lcom/estrongs/android/ui/theme/al;->d(I)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object v0, v2, Lcom/estrongs/android/ui/view/af;->d:Landroid/widget/ProgressBar;
-
-    invoke-virtual {v0, v8}, Landroid/widget/ProgressBar;->setVisibility(I)V
-
-    goto/16 :goto_1
-.end method
-
-.method protected h()[I
+.method protected g()[I
     .locals 7
 
     const/4 v5, 0x2
@@ -1026,93 +1097,56 @@
     goto :goto_1
 .end method
 
-.method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public getItemCount()I
+    .locals 1
 
-    iget-boolean v0, p0, Lcom/estrongs/android/ui/view/ac;->c:Z
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->d:Ljava/util/List;
-
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->f:Lcom/estrongs/android/pop/app/c/j;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->d:Ljava/util/List;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->f:Lcom/estrongs/android/pop/app/c/j;
 
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/c/j;->c()Ljava/util/List;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
 
     :goto_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->e:Landroid/os/Handler;
-
-    const v1, 0x124f82
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
-
-    invoke-virtual {p0}, Lcom/estrongs/android/ui/view/ac;->notifyDataSetChanged()V
-
-    :goto_1
-    return-void
+    return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->d:Ljava/util/List;
-
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->e:Landroid/os/Handler;
-
-    const v1, 0x124f83
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
-
-    move-result-object v1
-
-    iput p3, v1, Landroid/os/Message;->arg1:I
-
-    iget v0, p0, Lcom/estrongs/android/ui/view/ac;->h:I
-
-    if-ne v0, p3, :cond_2
-
-    const/4 v0, 0x1
-
-    :goto_2
-    iput v0, v1, Landroid/os/Message;->arg2:I
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ac;->e:Landroid/os/Handler;
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    goto :goto_1
-
-    :cond_2
     const/4 v0, 0x0
 
-    goto :goto_2
+    goto :goto_0
+.end method
+
+.method public getItemId(I)J
+    .locals 2
+
+    int-to-long v0, p1
+
+    return-wide v0
+.end method
+
+.method public synthetic onBindViewHolder(Landroid/support/v7/widget/RecyclerView$ViewHolder;I)V
+    .locals 0
+
+    check-cast p1, Lcom/estrongs/android/ui/view/aj;
+
+    invoke-virtual {p0, p1, p2}, Lcom/estrongs/android/ui/view/ac;->a(Lcom/estrongs/android/ui/view/aj;I)V
+
+    return-void
+.end method
+
+.method public synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroid/support/v7/widget/RecyclerView$ViewHolder;
+    .locals 1
+
+    invoke-virtual {p0, p1, p2}, Lcom/estrongs/android/ui/view/ac;->a(Landroid/view/ViewGroup;I)Lcom/estrongs/android/ui/view/aj;
+
+    move-result-object v0
+
+    return-object v0
 .end method

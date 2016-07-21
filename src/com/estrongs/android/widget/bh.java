@@ -1,34 +1,114 @@
 package com.estrongs.android.widget;
 
+import android.content.Context;
 import android.os.Handler;
-import android.os.Message;
+import android.util.DisplayMetrics;
+import android.view.Display;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import com.estrongs.android.pop.esclasses.k;
+import com.estrongs.android.ui.dialog.ci;
 import java.text.NumberFormat;
 
-class bh
-  extends Handler
+public class bh
+  extends ci
 {
-  bh(bg parambg) {}
+  bk a;
+  protected ProgressBar b;
+  protected TextView c;
+  protected TextView d;
+  protected TextView e;
+  protected NumberFormat f = NumberFormat.getPercentInstance();
+  protected TextView g;
+  protected long h;
+  protected long i;
+  protected CharSequence j;
+  private int k = 0;
+  private long l = 0L;
+  private Handler m;
+  private bl n = new bm();
   
-  public void handleMessage(Message paramMessage)
+  public bh(Context paramContext)
   {
-    super.handleMessage(paramMessage);
-    bg.a(a);
-    if (1 == what) {
-      a.c.setText(a.j);
-    }
-    do
-    {
+    super(paramContext);
+    Object localObject = k.a(getContext()).inflate(2130903425, null);
+    setContentView((View)localObject);
+    b = ((ProgressBar)((View)localObject).findViewById(2131624429));
+    c = ((TextView)((View)localObject).findViewById(2131624200));
+    e = ((TextView)((View)localObject).findViewById(2131624692));
+    d = ((TextView)((View)localObject).findViewById(2131624380));
+    g = ((TextView)((View)localObject).findViewById(2131624691));
+    localObject = (WindowManager)paramContext.getSystemService("window");
+    DisplayMetrics localDisplayMetrics = new DisplayMetrics();
+    ((WindowManager)localObject).getDefaultDisplay().getMetrics(localDisplayMetrics);
+    c.setWidth((int)(widthPixels * 0.9D));
+    c.setText(paramContext.getText(2131231747));
+    m = new bi(this);
+  }
+  
+  public void a()
+  {
+    j = "";
+    i = 0L;
+    h = 0L;
+    c.setText(j);
+    n.a(b, g, h);
+    n.b(b, d, i);
+    double d1 = i / h;
+    e.setText(f.format(d1));
+  }
+  
+  public void a(int paramInt)
+  {
+    k = paramInt;
+  }
+  
+  public void a(long paramLong)
+  {
+    h = paramLong;
+    l += 1L;
+    m.sendEmptyMessage(3);
+  }
+  
+  public void a(bk parambk)
+  {
+    a = parambk;
+  }
+  
+  public void a(bl parambl)
+  {
+    n = parambl;
+  }
+  
+  public void b(long paramLong)
+  {
+    if (l > 100L) {
       return;
-      if (3 == what)
-      {
-        bg.b(a).a(a.b, a.g, a.h);
-        return;
-      }
-    } while (2 != what);
-    bg.b(a).b(a.b, a.d, a.i);
-    double d = a.i / a.h;
-    a.e.setText(a.f.format(d));
+    }
+    i = paramLong;
+    l += 1L;
+    m.sendEmptyMessage(2);
+  }
+  
+  public void onBackPressed()
+  {
+    if (a != null) {
+      a.a();
+    }
+    super.onBackPressed();
+  }
+  
+  public void setMessage(CharSequence paramCharSequence)
+  {
+    if (l > 100L) {
+      return;
+    }
+    j = paramCharSequence;
+    l += 1L;
+    m.sendEmptyMessage(1);
   }
 }
 

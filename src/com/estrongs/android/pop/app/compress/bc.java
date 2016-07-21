@@ -1,15 +1,21 @@
 package com.estrongs.android.pop.app.compress;
 
-import com.estrongs.android.ui.view.ag;
+import android.content.Context;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.io.archive.c;
 
 class bc
-  implements Runnable
+  extends c
 {
-  bc(ay paramay) {}
-  
-  public void run()
+  bc(bb parambb, Context paramContext, l paraml, String paramString, boolean paramBoolean)
   {
-    ag.a(a.a.getContext(), 2131428546, 1);
+    super(paramContext, paraml, paramString, paramBoolean);
+  }
+  
+  public void a(String paramString)
+  {
+    a.a(paramString);
+    bb.a(a).show();
   }
 }
 

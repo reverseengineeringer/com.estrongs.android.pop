@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -22,16 +22,28 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 1
+.method public run()V
+    .locals 3
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/em;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->i(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Lcom/estrongs/android/ui/view/ac;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->m(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Lcom/estrongs/android/widget/RealViewSwitcher;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/ac;->e()V
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/RealViewSwitcher;->setCurrentScreen(I)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/em;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
+
+    new-instance v1, Lcom/estrongs/android/pop/app/gn;
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/em;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
+
+    invoke-direct {v1, v2}, Lcom/estrongs/android/pop/app/gn;-><init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Lcom/estrongs/android/pop/app/PopAudioPlayer;Lcom/estrongs/android/pop/app/gn;)Lcom/estrongs/android/pop/app/gn;
 
     return-void
 .end method

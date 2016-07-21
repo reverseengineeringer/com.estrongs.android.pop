@@ -1,16 +1,19 @@
 package com.estrongs.android.widget;
 
-import com.estrongs.android.ui.dialog.kr;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnDismissListener;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.view.fv;
 
 class t
-  implements kr
+  implements DialogInterface.OnDismissListener
 {
-  t(s params) {}
+  t(r paramr) {}
   
-  public void a(boolean paramBoolean)
+  public void onDismiss(DialogInterface paramDialogInterface)
   {
-    if (paramBoolean) {
-      r.a(a.b, a.a);
+    if (FexApplication.a().h()) {
+      f.b(a.b.b).j("storage://");
     }
   }
 }

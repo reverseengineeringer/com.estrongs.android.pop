@@ -1,116 +1,158 @@
-.class public Lcom/estrongs/android/pop/app/io;
+.class Lcom/estrongs/android/pop/app/io;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
 
-# static fields
-.field private static a:Landroid/app/ProgressDialog;
 
-.field private static b:Z
+# instance fields
+.field final synthetic a:Landroid/widget/EditText;
 
-.field private static c:Landroid/os/Handler;
+.field final synthetic b:Landroid/widget/EditText;
+
+.field final synthetic c:Lcom/estrongs/android/pop/app/im;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    sput-object v0, Lcom/estrongs/android/pop/app/io;->a:Landroid/app/ProgressDialog;
-
-    const/4 v0, 0x0
-
-    sput-boolean v0, Lcom/estrongs/android/pop/app/io;->b:Z
-
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
-
-    sput-object v0, Lcom/estrongs/android/pop/app/io;->c:Landroid/os/Handler;
-
-    return-void
-.end method
-
-.method static synthetic a(Landroid/app/ProgressDialog;)Landroid/app/ProgressDialog;
+.method constructor <init>(Lcom/estrongs/android/pop/app/im;Landroid/widget/EditText;Landroid/widget/EditText;)V
     .locals 0
 
-    sput-object p0, Lcom/estrongs/android/pop/app/io;->a:Landroid/app/ProgressDialog;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/io;->c:Lcom/estrongs/android/pop/app/im;
 
-    return-object p0
+    iput-object p2, p0, Lcom/estrongs/android/pop/app/io;->a:Landroid/widget/EditText;
+
+    iput-object p3, p0, Lcom/estrongs/android/pop/app/io;->b:Landroid/widget/EditText;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method
 
-.method public static final a()V
-    .locals 2
 
-    sget-boolean v0, Lcom/estrongs/android/pop/app/io;->b:Z
+# virtual methods
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 6
 
-    if-nez v0, :cond_0
+    const v5, 0x7f08056f
+
+    const/4 v4, 0x1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/io;->a:Landroid/widget/EditText;
+
+    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/io;->b:Landroid/widget/EditText;
+
+    invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/estrongs/android/util/ax;
+
+    invoke-direct {v2}, Lcom/estrongs/android/util/ax;-><init>()V
+
+    iget-object v3, p0, Lcom/estrongs/android/pop/app/io;->c:Lcom/estrongs/android/pop/app/im;
+
+    iget-object v3, v3, Lcom/estrongs/android/pop/app/im;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+
+    invoke-virtual {v2, v3, v0, v1}, Lcom/estrongs/android/util/ax;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v0
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/io;->c:Lcom/estrongs/android/pop/app/im;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/im;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+
+    invoke-static {v0, v5, v4}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     :goto_0
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+
     return-void
 
-    :cond_0
-    sget-object v0, Lcom/estrongs/android/pop/app/io;->c:Landroid/os/Handler;
+    :pswitch_0
+    invoke-static {}, Lcom/estrongs/fs/a/b;->a()Lcom/estrongs/fs/a/b;
+
+    move-result-object v0
+
+    const-string v1, "net://*"
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/fs/a/b;->a(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/io;->c:Lcom/estrongs/android/pop/app/im;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/im;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+
+    const v1, 0x7f080570
+
+    invoke-static {v0, v1, v4}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/io;->c:Lcom/estrongs/android/pop/app/im;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/im;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->b(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)Landroid/os/Handler;
+
+    move-result-object v0
 
     new-instance v1, Lcom/estrongs/android/pop/app/ip;
 
-    invoke-direct {v1}, Lcom/estrongs/android/pop/app/ip;-><init>()V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ip;-><init>(Lcom/estrongs/android/pop/app/io;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
-.end method
 
-.method public static final a(Landroid/content/Context;)V
-    .locals 3
+    :pswitch_1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/io;->c:Lcom/estrongs/android/pop/app/im;
 
-    const/4 v2, 0x1
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/im;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
 
-    sput-boolean v2, Lcom/estrongs/android/pop/app/io;->b:Z
+    invoke-static {v0, v5, v4}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
-    new-instance v0, Landroid/app/ProgressDialog;
+    goto :goto_0
 
-    invoke-direct {v0, p0}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;)V
+    :pswitch_2
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/io;->c:Lcom/estrongs/android/pop/app/im;
 
-    sput-object v0, Lcom/estrongs/android/pop/app/io;->a:Landroid/app/ProgressDialog;
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/im;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
 
-    sget-object v0, Lcom/estrongs/android/pop/app/io;->a:Landroid/app/ProgressDialog;
+    const v1, 0x7f08056d
 
-    const v1, 0x7f0b0072
+    invoke-static {v0, v1, v4}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
-    invoke-virtual {p0, v1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
+    goto :goto_0
 
-    move-result-object v1
+    :pswitch_3
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/io;->c:Lcom/estrongs/android/pop/app/im;
 
-    invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/im;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
 
-    sget-object v0, Lcom/estrongs/android/pop/app/io;->a:Landroid/app/ProgressDialog;
+    const v1, 0x7f08056c
 
-    invoke-virtual {v0, v2}, Landroid/app/ProgressDialog;->setIndeterminate(Z)V
+    invoke-static {v0, v1, v4}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
-    sget-object v0, Lcom/estrongs/android/pop/app/io;->a:Landroid/app/ProgressDialog;
+    goto :goto_0
 
-    invoke-virtual {v0, v2}, Landroid/app/ProgressDialog;->setCancelable(Z)V
+    nop
 
-    sget-object v0, Lcom/estrongs/android/pop/app/io;->a:Landroid/app/ProgressDialog;
-
-    invoke-virtual {v0}, Landroid/app/ProgressDialog;->show()V
-
-    return-void
-.end method
-
-.method static synthetic a(Z)Z
-    .locals 0
-
-    sput-boolean p0, Lcom/estrongs/android/pop/app/io;->b:Z
-
-    return p0
-.end method
-
-.method static synthetic b()Landroid/app/ProgressDialog;
-    .locals 1
-
-    sget-object v0, Lcom/estrongs/android/pop/app/io;->a:Landroid/app/ProgressDialog;
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch -0x3
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

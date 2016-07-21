@@ -1,26 +1,16 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.pop.view.utils.AppRunner;
-import com.estrongs.android.ui.dialog.cg;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 class ku
-  implements DialogInterface.OnClickListener
+  extends WebViewClient
 {
-  ku(ShowDialogActivity paramShowDialogActivity, String paramString, cg paramcg) {}
+  ku(PrivacyActivity paramPrivacyActivity) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public boolean shouldOverrideUrlLoading(WebView paramWebView, String paramString)
   {
-    if (AppRunner.q(c, a) == null)
-    {
-      b.setOnDismissListener(null);
-      b.dismiss();
-      AppRunner.s(c, a).setOnDismissListener(new kv(this));
-      return;
-    }
-    AppRunner.a(c, a, a);
-    paramDialogInterface.dismiss();
+    return super.shouldOverrideUrlLoading(paramWebView, paramString);
   }
 }
 

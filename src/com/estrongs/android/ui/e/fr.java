@@ -1,38 +1,19 @@
 package com.estrongs.android.ui.e;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.view.ag;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import com.estrongs.android.view.a.b;
 
 class fr
-  implements MenuItem.OnMenuItemClickListener
+  implements b
 {
-  fr(cp paramcp) {}
+  fr(cr paramcr) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public boolean a(cp paramcp)
   {
-    Object localObject = cp.b(a);
-    if (((List)localObject).size() == 0) {
-      ag.a(cp.a(a).getBaseContext(), 2131427774, 0);
-    }
-    for (;;)
-    {
-      cp.a(a).s();
+    if (B) {}
+    while ((m) && (N == 1)) {
       return true;
-      if ((((List)localObject).size() >= 1) && ((((List)localObject).get(0) instanceof com.estrongs.fs.impl.b.c)))
-      {
-        paramMenuItem = new ArrayList();
-        localObject = ((List)localObject).iterator();
-        while (((Iterator)localObject).hasNext()) {
-          paramMenuItem.add((com.estrongs.fs.impl.b.c)((Iterator)localObject).next());
-        }
-        cp.a(a).Q().c(cp.a(a), paramMenuItem);
-      }
     }
+    return false;
   }
 }
 

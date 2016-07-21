@@ -7,7 +7,7 @@ import android.provider.Settings.Secure;
 import com.estrongs.android.pop.FexApplication;
 import com.estrongs.android.pop.app.imageviewer.gallery.g;
 import com.estrongs.android.pop.netfs.utils.HttpUtils;
-import com.estrongs.android.util.y;
+import com.estrongs.android.util.aa;
 import com.estrongs.fs.h;
 import java.net.URLEncoder;
 import java.util.concurrent.locks.Lock;
@@ -15,7 +15,7 @@ import java.util.concurrent.locks.Lock;
 class i
   extends Thread
 {
-  i(AppFolderInfoManager paramAppFolderInfoManager, String paramString1, String paramString2, h paramh, u paramu, Context paramContext, boolean paramBoolean) {}
+  i(AppFolderInfoManager paramAppFolderInfoManager, String paramString1, String paramString2, h paramh, v paramv, Context paramContext, boolean paramBoolean) {}
   
   public void run()
   {
@@ -67,9 +67,9 @@ class i
     localObject3 = String.format("http://www.estrongs.com/console/service/app_folder/share.php?f=%s&a=%s&i=%s", new Object[] { URLEncoder.encode(HttpUtils.base64Encode(a.getBytes())), b, localObject3 });
     if ((f) && (b != null))
     {
-      localObject3 = new y((String)localObject3);
-      ((y)localObject3).a(new j(this));
-      ((y)localObject3).c();
+      localObject3 = new aa((String)localObject3);
+      ((aa)localObject3).a(new j(this));
+      ((aa)localObject3).c();
     }
   }
 }

@@ -1,29 +1,19 @@
 package com.estrongs.android.ui.e;
 
-import android.content.Context;
-import android.content.Intent;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.view.WebViewWrapper;
+import com.estrongs.android.pop.app.ad.DuSpeedBoosterController;
+import com.estrongs.android.pop.app.ad.DuSpeedBoosterController.LocationType;
 
 class bj
   implements MenuItem.OnMenuItemClickListener
 {
-  bj(w paramw) {}
+  bj(m paramm) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = a.k.y();
-    if ((paramMenuItem != null) && ((paramMenuItem instanceof WebViewWrapper)))
-    {
-      paramMenuItem = ((WebViewWrapper)paramMenuItem).c();
-      Intent localIntent = new Intent("android.intent.action.SEND");
-      localIntent.setType("text/plain");
-      localIntent.putExtra("android.intent.extra.TEXT", paramMenuItem);
-      a.b.startActivity(localIntent);
-    }
-    return false;
+    DuSpeedBoosterController.a(m.a(a), DuSpeedBoosterController.LocationType.TOOLBAR);
+    return true;
   }
 }
 

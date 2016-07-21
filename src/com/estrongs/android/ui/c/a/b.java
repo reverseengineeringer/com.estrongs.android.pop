@@ -1,66 +1,68 @@
 package com.estrongs.android.ui.c.a;
 
-import android.graphics.drawable.Drawable;
+import android.content.Context;
+import android.content.res.Resources;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.View.OnLongClickListener;
-import android.widget.ImageView;
 import android.widget.TextView;
-import com.estrongs.android.pop.esclasses.e;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.theme.al;
+import java.text.DecimalFormat;
+import java.util.List;
 
 public class b
   extends a
 {
-  private Drawable c;
-  private String d;
-  private View.OnClickListener e;
-  private View.OnLongClickListener f;
+  private TextView c;
+  private TextView d;
+  private TextView e;
+  private final DecimalFormat f = new DecimalFormat(" 0%");
+  private List<String> g = null;
+  private String h = "/";
   
   public b(FileExplorerActivity paramFileExplorerActivity)
   {
     super(paramFileExplorerActivity);
   }
   
-  public void a(Drawable paramDrawable)
+  public static void a(Context paramContext, String paramString)
   {
-    c = paramDrawable;
+    com.estrongs.android.pop.app.analysis.a.a().a(paramString, null);
   }
   
-  public void a(View.OnClickListener paramOnClickListener)
+  private String c(int paramInt)
   {
-    e = paramOnClickListener;
+    return a.getResources().getString(paramInt);
   }
   
-  public void a(View.OnLongClickListener paramOnLongClickListener)
+  public void a()
   {
-    f = paramOnLongClickListener;
+    a(2131231566);
+    b(2131231568);
+    d.setVisibility(0);
+  }
+  
+  public void a(int paramInt)
+  {
+    c.setText(c(paramInt));
   }
   
   public void a(String paramString)
   {
-    d = paramString;
+    h = paramString;
+  }
+  
+  public void b(int paramInt)
+  {
+    d.setText(c(paramInt));
   }
   
   protected void b(View paramView)
   {
-    paramView.setBackgroundResource(2130837560);
-    ((ImageView)paramView.findViewById(2131361853)).setImageDrawable(c);
-    paramView = (TextView)paramView.findViewById(2131361979);
-    if (e.a()) {
-      paramView.setText("‏" + d);
-    }
-    for (;;)
-    {
-      paramView.setTextColor(al.a(a).i());
-      b.setOnClickListener(e);
-      if (f != null) {
-        b.setOnLongClickListener(new c(this));
-      }
-      return;
-      paramView.setText(d);
-    }
+    c = ((TextView)paramView.findViewById(2131624489));
+    d = ((TextView)paramView.findViewById(2131624490));
+    e = ((TextView)paramView.findViewById(2131624491));
+    e.setFocusable(true);
+    e.setText(c(2131231563));
+    e.setOnClickListener(new c(this));
   }
 }
 

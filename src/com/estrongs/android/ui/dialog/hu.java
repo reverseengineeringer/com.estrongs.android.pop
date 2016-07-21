@@ -1,20 +1,16 @@
 package com.estrongs.android.ui.dialog;
 
-import com.estrongs.a.a;
-import com.estrongs.a.a.p;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class hu
-  implements p
+  implements DialogInterface.OnClickListener
 {
-  hu(hn paramhn) {}
+  hu(hq paramhq) {}
   
-  public void a(a parama, int paramInt1, int paramInt2)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ((paramInt2 == 4) || (paramInt2 == 5))
-    {
-      hn.f(a);
-      hn.g(a);
-    }
+    paramDialogInterface.dismiss();
   }
 }
 

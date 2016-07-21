@@ -7,7 +7,7 @@ import com.estrongs.a.p;
 import com.estrongs.a.q;
 import com.estrongs.android.pop.utils.w;
 import com.estrongs.fs.h;
-import com.estrongs.fs.impl.b.c;
+import com.estrongs.fs.impl.b.e;
 import com.estrongs.fs.impl.local.f;
 import java.io.File;
 import java.util.ArrayList;
@@ -21,13 +21,13 @@ public class i
 {
   protected com.estrongs.fs.d a = null;
   protected PackageManager b = null;
-  public final List<c> c;
+  public final List<com.estrongs.fs.impl.b.d> c;
   public final String d;
   protected boolean e = false;
   boolean f = false;
   private boolean g = false;
   
-  public i(com.estrongs.fs.d paramd, PackageManager paramPackageManager, List<c> paramList, String paramString, boolean paramBoolean)
+  public i(com.estrongs.fs.d paramd, PackageManager paramPackageManager, List<com.estrongs.fs.impl.b.d> paramList, String paramString, boolean paramBoolean)
   {
     a = paramd;
     b = paramPackageManager;
@@ -41,7 +41,7 @@ public class i
     int i = 0;
     if (i < j)
     {
-      paramd.append(((c)paramList.get(i)).getName());
+      paramd.append(((com.estrongs.fs.impl.b.d)paramList.get(i)).getName());
       if (i + 1 != j)
       {
         paramd.append(" , ");
@@ -75,7 +75,7 @@ public class i
         i += 1;
         break;
       }
-      paramd = paramd + ((c)paramList.get(i)).getName() + ",";
+      paramd = paramd + ((com.estrongs.fs.impl.b.d)paramList.get(i)).getName() + ",";
       i += 1;
     }
   }
@@ -103,65 +103,71 @@ public class i
   
   public boolean task()
   {
-    int i;
     for (;;)
     {
-      c localc;
+      int i;
+      com.estrongs.fs.impl.b.d locald;
       Object localObject3;
-      String str2;
-      Object localObject2;
-      String str3;
+      Object localObject4;
+      Object localObject5;
+      String str1;
       boolean bool;
       try
       {
         if ((c == null) || (c.size() == 0)) {
-          break label874;
+          break;
         }
         int j = c.size();
         processData.c = j;
         processData.e = j;
         onProgress(processData);
         i = 0;
+        localObject1 = null;
         if (i < j)
         {
           if (taskStopped()) {
             return false;
           }
-          localc = (c)c.get(i);
-          localObject1 = localc.c();
-          localObject3 = w.a(b, (ApplicationInfo)localObject1);
-          str2 = w.b(b, localObject1)[0];
-          localObject2 = (String)localObject3 + "_" + str2 + ".apk";
-          str3 = packageName;
-          processData.a = ((String)localObject3);
+          locald = (com.estrongs.fs.impl.b.d)c.get(i);
+          localObject3 = locald.h();
+          localObject4 = w.a(b, (ApplicationInfo)localObject3);
+          localObject5 = w.b(b, localObject3)[0];
+          localObject6 = (String)localObject4 + "_" + (String)localObject5 + ".apk";
+          str1 = packageName;
+          processData.a = ((String)localObject4);
           onProgress(processData);
-          localObject1 = localc.getPath();
-          if (!a.b((String)localObject1)) {
-            break label876;
+          localObject3 = locald.getPath();
+          if (localObject1 == null) {
+            break label907;
           }
-          localc.putExtra("item_paste_name", localObject2);
-          if (((String)localObject1).startsWith("/system/"))
+          bool = isAppBackupOverwriteApplyAllByUser;
+          if (!a.b((String)localObject3)) {
+            break label914;
+          }
+          locald.putExtra("item_paste_name", localObject6);
+          if (((String)localObject3).startsWith("/system/"))
           {
-            localObject4 = ((String)localObject1).substring(0, ((String)localObject1).length() - 4) + ".odex";
-            localObject2 = new JSONObject();
-            ((JSONObject)localObject2).put("apkpath", localObject1);
-            if (a.b((String)localObject4))
+            localObject6 = ((String)localObject3).substring(0, ((String)localObject3).length() - 4) + ".odex";
+            localObject1 = new JSONObject();
+            ((JSONObject)localObject1).put("apkpath", localObject3);
+            if (a.b((String)localObject6))
             {
-              localObject1 = com.estrongs.fs.d.a().j((String)localObject4);
-              ((h)localObject1).putExtra("item_paste_name", com.estrongs.fs.impl.b.d.b((String)localObject3, str2));
-              ((JSONObject)localObject2).put("odexpath", localObject4);
-              localObject4 = new ArrayList();
-              ((List)localObject4).add(localc);
-              ((List)localObject4).add(localObject1);
-              localObject1 = new r(a, (List)localObject4, new f(new File(d)));
-              localObject4 = d + com.estrongs.fs.impl.b.d.c((String)localObject3, str2);
-              com.estrongs.fs.d.a().b((String)localObject4, false);
-              str4 = ((JSONObject)localObject2).toString();
-              localObject2 = localObject1;
-              if (str4 != null)
+              localObject3 = com.estrongs.fs.d.a().j((String)localObject6);
+              ((h)localObject3).putExtra("item_paste_name", e.b((String)localObject4, (String)localObject5));
+              ((JSONObject)localObject1).put("odexpath", localObject6);
+              localObject6 = new ArrayList();
+              ((List)localObject6).add(locald);
+              ((List)localObject6).add(localObject3);
+              localObject3 = new r(a, (List)localObject6, new f(new File(d)));
+              isAppBackupOverwriteApplyAllByUser = bool;
+              localObject6 = d + e.c((String)localObject4, (String)localObject5);
+              com.estrongs.fs.d.a().b((String)localObject6, false);
+              str2 = ((JSONObject)localObject1).toString();
+              localObject1 = localObject3;
+              if (str2 != null)
               {
-                bool = "".equals(str4);
-                localObject2 = localObject1;
+                bool = "".equals(str2);
+                localObject1 = localObject3;
                 if (bool) {}
               }
             }
@@ -171,35 +177,38 @@ public class i
       catch (Exception localException1)
       {
         Object localObject1;
-        Object localObject4;
-        String str4;
+        Object localObject6;
+        String str2;
         localException1.printStackTrace();
         setTaskResult(10000, new q(localException1.toString(), localException1));
         return false;
       }
       try
       {
-        com.estrongs.fs.util.j.a(new File((String)localObject4), str4, "UTF-8");
-        localObject2 = localObject1;
+        com.estrongs.fs.util.j.a(new File((String)localObject6), str2, "UTF-8");
+        localObject1 = localObject3;
       }
-      catch (Exception localException3)
+      catch (Exception localException2)
       {
-        Exception localException4 = localException2;
+        r localr;
+        Object localObject2 = localException3;
         continue;
       }
-      ((r)localObject2).setTaskDecisionListener(getTaskDecisionListener());
-      ((r)localObject2).setParentTask(this);
-      ((r)localObject2).execute(false);
+      ((r)localObject1).setTaskDecisionListener(getTaskDecisionListener());
+      ((r)localObject1).setParentTask(this);
+      ((r)localObject1).execute(false);
       if (getTaskResulta != 0)
       {
         return false;
-        localObject1 = new r(a, localc, new f(new File(d)));
+        localObject3 = new r(a, locald, new f(new File(d)));
+        isAppBackupOverwriteApplyAllByUser = bool;
         continue;
-        localObject2 = new r(a, localc, new f(new File(d)));
+        localr = new r(a, locald, new f(new File(d)));
+        isAppBackupOverwriteApplyAllByUser = bool;
       }
       else
       {
-        localc.a(3);
+        locald.a(3);
         for (;;)
         {
           try
@@ -207,18 +216,17 @@ public class i
             if (taskStopped()) {
               return false;
             }
-            str1 = "/data/data/" + str3;
-            localObject2 = d + com.estrongs.fs.impl.b.d.a((String)localObject3, str2);
+            localObject3 = "/data/data/" + str1;
+            localObject4 = d + e.a((String)localObject4, (String)localObject5);
             if (g)
             {
-              bool = a.b(str1);
+              bool = a.b((String)localObject3);
               if (!bool) {}
             }
           }
-          catch (Exception localException2)
+          catch (Exception localException3)
           {
-            String str1;
-            localException2.printStackTrace();
+            localException3.printStackTrace();
             continue;
             processData.d = (i + 1);
             processData.f = (i + 1);
@@ -227,32 +235,34 @@ public class i
           }
           try
           {
-            if (a.b((String)localObject2)) {
-              a.a(a.j((String)localObject2));
+            if (a.b((String)localObject4)) {
+              a.a(a.j((String)localObject4));
             }
-            localObject3 = new HashMap(2);
-            ((HashMap)localObject3).put("compress_level", String.valueOf(0));
-            localObject2 = new j(this, (String)localObject2, null, (Map)localObject3, str1);
-            localObject3 = new ArrayList();
-            ((List)localObject3).add(str1);
-            ((com.estrongs.io.archive.i)localObject2).a((List)localObject3);
+            localObject5 = new HashMap(2);
+            ((HashMap)localObject5).put("compress_level", String.valueOf(0));
+            localObject4 = new j(this, (String)localObject4, null, (Map)localObject5, (String)localObject3);
+            localObject5 = new ArrayList();
+            ((List)localObject5).add(localObject3);
+            ((com.estrongs.io.archive.j)localObject4).a((List)localObject5);
             bool = taskStopped();
             if (bool) {
               return false;
             }
           }
-          catch (Exception localException5)
+          catch (Exception localException4)
           {
-            localException5.printStackTrace();
+            localException4.printStackTrace();
           }
         }
+        continue;
+        setTaskResult(0, null);
+        return true;
+        label907:
+        bool = false;
       }
     }
-    setTaskResult(0, null);
-    return true;
-    label874:
     return false;
-    label876:
+    label914:
     return false;
   }
 }

@@ -3,8 +3,5 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/widget/ProgressBar;Landroid/widget/TextView;J)V
-.end method
-
-.method public abstract b(Landroid/widget/ProgressBar;Landroid/widget/TextView;J)V
+.method public abstract a()Z
 .end method

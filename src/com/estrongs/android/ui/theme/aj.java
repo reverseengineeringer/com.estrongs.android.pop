@@ -1,32 +1,16 @@
 package com.estrongs.android.ui.theme;
 
-import android.os.Handler;
-import android.os.Message;
-import com.estrongs.android.util.ab;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 class aj
-  implements ab
+  implements View.OnClickListener
 {
-  aj(ai paramai, Handler paramHandler) {}
+  aj(ai paramai, int paramInt) {}
   
-  public void a(Object paramObject) {}
-  
-  public void a(Object paramObject, long paramLong1, long paramLong2) {}
-  
-  public void a(Object paramObject, Throwable paramThrowable)
+  public void onClick(View paramView)
   {
-    ai.a(b, false);
-  }
-  
-  public void b(Object paramObject)
-  {
-    ai.b(b, false);
-    if (a != null)
-    {
-      paramObject = new Message();
-      what = 13;
-      a.sendMessage((Message)paramObject);
-    }
+    b.b(a);
   }
 }
 

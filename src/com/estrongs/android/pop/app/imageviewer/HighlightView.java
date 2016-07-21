@@ -42,9 +42,9 @@ class HighlightView
   private void f()
   {
     Resources localResources = a.getResources();
-    m = localResources.getDrawable(2130837600);
-    n = localResources.getDrawable(2130837599);
-    o = localResources.getDrawable(2130837598);
+    m = localResources.getDrawable(2130837836);
+    n = localResources.getDrawable(2130837835);
+    o = localResources.getDrawable(2130837834);
   }
   
   private Rect g()

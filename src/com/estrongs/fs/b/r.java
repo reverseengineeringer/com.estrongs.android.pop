@@ -2,22 +2,25 @@ package com.estrongs.fs.b;
 
 import android.os.StatFs;
 import com.estrongs.a.a;
-import com.estrongs.a.a.l;
+import com.estrongs.a.a.m;
 import com.estrongs.a.p;
 import com.estrongs.a.q;
 import com.estrongs.android.pop.FexApplication;
 import com.estrongs.android.pop.ac;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.utils.cd;
+import com.estrongs.android.pop.utils.cm;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.util.bc;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.util.bg;
+import com.estrongs.android.util.bk;
 import com.estrongs.fs.h;
-import com.estrongs.fs.impl.local.j;
+import com.estrongs.fs.impl.local.k;
 import com.estrongs.fs.impl.media.MediaStoreInsertException;
+import com.estrongs.fs.impl.media.e;
+import com.estrongs.fs.w;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
@@ -52,7 +55,7 @@ public class r
   public Set<String> v = new HashSet();
   public int w = 1;
   protected List<h> x = new ArrayList();
-  am y = null;
+  ao y = null;
   Long z = Long.valueOf(0L);
   
   public r(com.estrongs.fs.d paramd, h paramh1, h paramh2)
@@ -75,7 +78,7 @@ public class r
       String str2 = paramh1.getName();
       paramd = str2;
       if (str2 == null) {
-        paramd = com.estrongs.android.util.am.d(paramh1.getAbsolutePath());
+        paramd = com.estrongs.android.util.ap.d(paramh1.getAbsolutePath());
       }
       processData.j = paramd;
       if (paramh1.getExtra("item_paste_name") != null) {
@@ -87,16 +90,16 @@ public class r
         paramd = str1 + paramString;
         f.add(new u(paramh1, paramd, 0L));
         o = paramh2.getAbsolutePath().startsWith(paramh1.getAbsolutePath());
-        d = com.estrongs.android.util.am.G(paramh1.getAbsolutePath());
+        d = com.estrongs.android.util.ap.I(paramh1.getAbsolutePath());
         paramd = processData;
-        if (!com.estrongs.android.util.am.aG(paramh1.getPath())) {}
+        if (!com.estrongs.android.util.ap.aQ(paramh1.getPath())) {}
         for (boolean bool = true;; bool = false)
         {
           l = bool;
           l = true;
           canRestart = true;
           task_type = 2;
-          recordSummary("title", com.estrongs.android.util.am.d(paramh1.getName()));
+          recordSummary("title", com.estrongs.android.util.ap.d(paramh1.getName()));
           recordSummary("items_ori_count", Integer.valueOf(1));
           i();
           return;
@@ -127,7 +130,7 @@ public class r
         str = ((h)localLinkedList.get(i1)).getName();
         paramd = str;
         if (str == null) {
-          paramd = com.estrongs.android.util.am.d(((h)localLinkedList.get(i1)).getAbsolutePath());
+          paramd = com.estrongs.android.util.ap.d(((h)localLinkedList.get(i1)).getAbsolutePath());
         }
         localStringBuilder.append(paramd);
         if (i1 + 1 != i2)
@@ -147,12 +150,12 @@ public class r
         }
         paramd = ((h)localLinkedList.get(i1)).getName();
         if (paramd != null) {
-          break label863;
+          break label861;
         }
-        paramd = com.estrongs.android.util.am.d(((h)localLinkedList.get(i1)).getAbsolutePath());
+        paramd = com.estrongs.android.util.ap.d(((h)localLinkedList.get(i1)).getAbsolutePath());
       }
       label647:
-      label863:
+      label861:
       for (;;)
       {
         if (((h)localLinkedList.get(i1)).getExtra("item_paste_name") != null) {
@@ -175,11 +178,11 @@ public class r
         processData.j = localStringBuilder.toString();
         paramd = processData;
         boolean bool;
-        if (!com.estrongs.android.util.am.aG(((h)paramList.get(0)).getPath()))
+        if (!com.estrongs.android.util.ap.aQ(((h)paramList.get(0)).getPath()))
         {
           bool = true;
           l = bool;
-          d = com.estrongs.android.util.am.G(((h)localLinkedList.get(0)).getAbsolutePath());
+          d = com.estrongs.android.util.ap.I(((h)localLinkedList.get(0)).getAbsolutePath());
           l = true;
           canRestart = true;
           task_type = 2;
@@ -209,6 +212,39 @@ public class r
     }
   }
   
+  private void a(List<h> paramList)
+  {
+    String str = n.getAbsolutePath();
+    if (!str.endsWith("/")) {
+      str = str + "/";
+    }
+    for (;;)
+    {
+      ArrayList localArrayList = new ArrayList(paramList.size());
+      Iterator localIterator = paramList.iterator();
+      if (localIterator.hasNext())
+      {
+        h localh = (h)localIterator.next();
+        paramList = localh.getName();
+        if (paramList != null) {
+          break label158;
+        }
+        paramList = com.estrongs.android.util.ap.d(localh.getAbsolutePath());
+      }
+      label158:
+      for (;;)
+      {
+        localArrayList.add(str + paramList);
+        break;
+        if (!localArrayList.isEmpty()) {
+          com.estrongs.android.scanner.l.a().b(localArrayList);
+        }
+        com.estrongs.android.scanner.l.a().a(true);
+        return;
+      }
+    }
+  }
+  
   private void i()
   {
     h localh = f.get(0)).a;
@@ -225,17 +261,17 @@ public class r
     for (;;)
     {
       recordSummary("items_selected_count", Integer.valueOf(f.size()));
-      recordSummary("source", com.estrongs.android.util.am.D(com.estrongs.android.util.am.bk(localh.getPath())));
-      recordSummary("target", com.estrongs.android.util.am.D(n.getPath()));
+      recordSummary("source", com.estrongs.android.util.ap.F(com.estrongs.android.util.ap.bB(localh.getPath())));
+      recordSummary("target", com.estrongs.android.util.ap.F(n.getPath()));
       recordSummary("status", Integer.valueOf(1));
       return;
-      recordSummary("file_type", Integer.valueOf(bc.b(localh.getName())));
+      recordSummary("file_type", Integer.valueOf(bg.b(localh.getName())));
     }
   }
   
   private boolean j()
   {
-    y = new am(c, f);
+    y = new ao(c, f);
     y.addProgressListeners(getProgressListeners());
     if (ad.a(FexApplication.a()).aW())
     {
@@ -260,8 +296,8 @@ public class r
     int i1 = 0;
     while (i1 < ((List)localObject).size())
     {
-      an localan = (an)((List)localObject).get(i1);
-      com.estrongs.a.a.m localm = processData;
+      ap localap = (ap)((List)localObject).get(i1);
+      m localm = processData;
       c += e + f;
       localm = processData;
       e += c;
@@ -280,13 +316,13 @@ public class r
   
   private q l()
   {
-    if (com.estrongs.android.util.am.ba(n.getAbsolutePath())) {
+    if (com.estrongs.android.util.ap.bl(n.getAbsolutePath())) {
       try
       {
         Object localObject = new StatFs(n.getAbsolutePath());
         long l1 = ((StatFs)localObject).getBlockSize();
         long l2 = ((StatFs)localObject).getAvailableBlocks();
-        if (((l1 == 0L) || (l2 == 0L)) && (!com.estrongs.android.util.am.bl(n.getAbsolutePath()))) {
+        if (((l1 == 0L) || (l2 == 0L)) && (!com.estrongs.android.util.ap.bC(n.getAbsolutePath()))) {
           return null;
         }
         if ((processData.e > 0L) && (processData.e - processData.f > l2 * l1))
@@ -322,7 +358,7 @@ public class r
     m = paramBoolean;
   }
   
-  public void addProgressListener(l paraml)
+  public void addProgressListener(com.estrongs.a.a.l paraml)
   {
     super.addProgressListener(paraml);
     if (y != null) {
@@ -375,7 +411,7 @@ public class r
     return j;
   }
   
-  public com.estrongs.a.a.m f()
+  public m f()
   {
     if (y == null) {
       return null;
@@ -412,7 +448,7 @@ public class r
         do
         {
           return;
-          com.estrongs.a.a.m localm = processData;
+          m localm = processData;
           long l1 = d;
           d = (((Long)paramVarArgs[0]).longValue() + l1);
           processData.a = ((String)paramVarArgs[1]);
@@ -465,41 +501,41 @@ public class r
     {
       try
       {
-        if ((com.estrongs.android.util.am.bs(n.getAbsolutePath())) && (ac.a() == 19)) {
-          j.a();
+        if ((com.estrongs.android.util.ap.bJ(n.getAbsolutePath())) && (ac.a() == 19)) {
+          k.a();
         }
-        if (!bd.f()) {
+        if (!bk.f()) {
           continue;
         }
         if (s.size() > 0) {
-          com.estrongs.fs.impl.media.d.a(s, v);
+          e.a(s, v);
         }
       }
       catch (MediaStoreInsertException localMediaStoreInsertException)
       {
         int i1;
         localMediaStoreInsertException.printStackTrace();
-        cd.b();
+        cm.b();
         continue;
       }
       i1 = getTaskResulta;
       if ((i1 == 0) || (4 == i1)) {
-        FileExplorerActivity.h(true);
+        FileExplorerActivity.g(true);
       }
       return;
       if (p.size() > 0) {
-        com.estrongs.fs.impl.k.b.c().a(p);
+        com.estrongs.fs.impl.p.c.b().a(p);
       }
       if (q.size() > 0) {
-        com.estrongs.fs.impl.i.b.c().a(q);
+        com.estrongs.fs.impl.n.d.b().a(q);
       }
       if (r.size() > 0) {
-        com.estrongs.fs.impl.q.b.c().a(r);
+        com.estrongs.fs.impl.v.c.b().a(r);
       }
     }
   }
   
-  public void removeProgressListener(l paraml)
+  public void removeProgressListener(com.estrongs.a.a.l paraml)
   {
     super.removeProgressListener(paraml);
     if (y != null) {
@@ -533,19 +569,19 @@ public class r
     //   21: aload_0
     //   22: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
     //   25: iconst_0
-    //   26: putfield 212	com/estrongs/a/a/m:l	Z
+    //   26: putfield 211	com/estrongs/a/a/m:l	Z
     //   29: aload 7
     //   31: astore 6
     //   33: aload_0
     //   34: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
     //   37: iconst_0
-    //   38: putfield 542	com/estrongs/a/a/m:m	Z
+    //   38: putfield 570	com/estrongs/a/a/m:m	Z
     //   41: aload 7
     //   43: astore 6
     //   45: aload_0
     //   46: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
     //   49: iconst_0
-    //   50: putfield 543	com/estrongs/a/a/m:o	Z
+    //   50: putfield 571	com/estrongs/a/a/m:o	Z
     //   53: aload 7
     //   55: astore 6
     //   57: aload_0
@@ -554,21 +590,21 @@ public class r
     //   62: aload 7
     //   64: astore 6
     //   66: aload_0
-    //   67: invokestatic 548	com/estrongs/fs/d:a	()Lcom/estrongs/fs/d;
+    //   67: invokestatic 576	com/estrongs/fs/d:a	()Lcom/estrongs/fs/d;
     //   70: aload_0
     //   71: getfield 74	com/estrongs/fs/b/r:f	Ljava/util/ArrayList;
     //   74: iconst_0
-    //   75: invokevirtual 271	java/util/ArrayList:get	(I)Ljava/lang/Object;
+    //   75: invokevirtual 301	java/util/ArrayList:get	(I)Ljava/lang/Object;
     //   78: checkcast 194	com/estrongs/fs/b/u
-    //   81: getfield 273	com/estrongs/fs/b/u:a	Lcom/estrongs/fs/h;
+    //   81: getfield 303	com/estrongs/fs/b/u:a	Lcom/estrongs/fs/h;
     //   84: invokeinterface 148 1 0
     //   89: aload_0
     //   90: getfield 74	com/estrongs/fs/b/r:f	Ljava/util/ArrayList;
     //   93: iconst_0
-    //   94: invokevirtual 271	java/util/ArrayList:get	(I)Ljava/lang/Object;
+    //   94: invokevirtual 301	java/util/ArrayList:get	(I)Ljava/lang/Object;
     //   97: checkcast 194	com/estrongs/fs/b/u
-    //   100: getfield 550	com/estrongs/fs/b/u:b	Ljava/lang/String;
-    //   103: invokevirtual 553	com/estrongs/fs/d:a	(Ljava/lang/String;Ljava/lang/String;)I
+    //   100: getfield 578	com/estrongs/fs/b/u:b	Ljava/lang/String;
+    //   103: invokevirtual 581	com/estrongs/fs/d:a	(Ljava/lang/String;Ljava/lang/String;)I
     //   106: newarray <illegal type>
     //   108: putfield 114	com/estrongs/fs/b/r:a	[B
     //   111: aload 7
@@ -576,770 +612,820 @@ public class r
     //   115: aload_0
     //   116: getfield 87	com/estrongs/fs/b/r:k	Lcom/estrongs/fs/b/v;
     //   119: iconst_0
-    //   120: putfield 481	com/estrongs/fs/b/v:a	Z
+    //   120: putfield 509	com/estrongs/fs/b/v:a	Z
     //   123: aload 7
     //   125: astore 6
     //   127: aload_0
     //   128: getfield 93	com/estrongs/fs/b/r:o	Z
-    //   131: ifeq +50 -> 181
+    //   131: ifeq +55 -> 186
     //   134: aload 7
     //   136: astore 6
     //   138: aload_0
     //   139: bipush 13
-    //   141: new 430	com/estrongs/a/q
+    //   141: new 458	com/estrongs/a/q
     //   144: dup
-    //   145: ldc_w 432
+    //   145: ldc_w 460
     //   148: aconst_null
-    //   149: invokespecial 556	com/estrongs/a/q:<init>	(Ljava/lang/String;Ljava/lang/Exception;)V
-    //   152: invokevirtual 387	com/estrongs/fs/b/r:setTaskResult	(ILjava/lang/Object;)V
+    //   149: invokespecial 584	com/estrongs/a/q:<init>	(Ljava/lang/String;Ljava/lang/Exception;)V
+    //   152: invokevirtual 415	com/estrongs/fs/b/r:setTaskResult	(ILjava/lang/Object;)V
     //   155: aload_0
-    //   156: iconst_1
-    //   157: putfield 126	com/estrongs/fs/b/r:C	Z
+    //   156: aconst_null
+    //   157: invokespecial 585	com/estrongs/fs/b/r:a	(Ljava/util/List;)V
     //   160: aload_0
-    //   161: getfield 118	com/estrongs/fs/b/r:b	Z
-    //   164: ifeq +15 -> 179
-    //   167: iconst_0
-    //   168: ifeq +11 -> 179
-    //   171: new 558	java/lang/NullPointerException
-    //   174: dup
-    //   175: invokespecial 559	java/lang/NullPointerException:<init>	()V
-    //   178: athrow
-    //   179: iconst_0
-    //   180: ireturn
-    //   181: aload 7
-    //   183: astore 6
-    //   185: aload_0
-    //   186: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
-    //   189: getfield 393	com/estrongs/a/a/m:c	J
-    //   192: ldc2_w 278
-    //   195: lcmp
-    //   196: ifne +672 -> 868
-    //   199: aload 7
-    //   201: astore 6
-    //   203: aload_0
-    //   204: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
-    //   207: getfield 399	com/estrongs/a/a/m:e	J
-    //   210: ldc2_w 278
-    //   213: lcmp
-    //   214: ifne +654 -> 868
-    //   217: aload 7
-    //   219: astore 6
-    //   221: aload_0
-    //   222: getfield 89	com/estrongs/fs/b/r:l	Z
-    //   225: ifeq +643 -> 868
-    //   228: aload 7
-    //   230: astore 6
-    //   232: aload_0
-    //   233: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
-    //   236: lconst_0
-    //   237: putfield 393	com/estrongs/a/a/m:c	J
-    //   240: aload 7
-    //   242: astore 6
-    //   244: aload_0
-    //   245: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
-    //   248: lconst_0
-    //   249: putfield 399	com/estrongs/a/a/m:e	J
-    //   252: aload 7
-    //   254: astore 6
-    //   256: aload_0
-    //   257: invokespecial 561	com/estrongs/fs/b/r:j	()Z
-    //   260: ifne +55 -> 315
-    //   263: aload 7
-    //   265: astore 6
-    //   267: aload_0
-    //   268: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
-    //   271: ldc2_w 278
-    //   274: putfield 393	com/estrongs/a/a/m:c	J
-    //   277: aload 7
-    //   279: astore 6
-    //   281: aload_0
-    //   282: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
-    //   285: ldc2_w 278
-    //   288: putfield 399	com/estrongs/a/a/m:e	J
-    //   291: aload_0
-    //   292: iconst_1
-    //   293: putfield 126	com/estrongs/fs/b/r:C	Z
+    //   161: iconst_1
+    //   162: putfield 126	com/estrongs/fs/b/r:C	Z
+    //   165: aload_0
+    //   166: getfield 118	com/estrongs/fs/b/r:b	Z
+    //   169: ifeq +15 -> 184
+    //   172: iconst_0
+    //   173: ifeq +11 -> 184
+    //   176: new 587	java/lang/NullPointerException
+    //   179: dup
+    //   180: invokespecial 588	java/lang/NullPointerException:<init>	()V
+    //   183: athrow
+    //   184: iconst_0
+    //   185: ireturn
+    //   186: aload 7
+    //   188: astore 6
+    //   190: aload_0
+    //   191: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
+    //   194: getfield 421	com/estrongs/a/a/m:c	J
+    //   197: ldc2_w 308
+    //   200: lcmp
+    //   201: ifne +700 -> 901
+    //   204: aload 7
+    //   206: astore 6
+    //   208: aload_0
+    //   209: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
+    //   212: getfield 427	com/estrongs/a/a/m:e	J
+    //   215: ldc2_w 308
+    //   218: lcmp
+    //   219: ifne +682 -> 901
+    //   222: aload 7
+    //   224: astore 6
+    //   226: aload_0
+    //   227: getfield 89	com/estrongs/fs/b/r:l	Z
+    //   230: ifeq +671 -> 901
+    //   233: aload 7
+    //   235: astore 6
+    //   237: aload_0
+    //   238: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
+    //   241: lconst_0
+    //   242: putfield 421	com/estrongs/a/a/m:c	J
+    //   245: aload 7
+    //   247: astore 6
+    //   249: aload_0
+    //   250: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
+    //   253: lconst_0
+    //   254: putfield 427	com/estrongs/a/a/m:e	J
+    //   257: aload 7
+    //   259: astore 6
+    //   261: aload_0
+    //   262: invokespecial 590	com/estrongs/fs/b/r:j	()Z
+    //   265: ifne +60 -> 325
+    //   268: aload 7
+    //   270: astore 6
+    //   272: aload_0
+    //   273: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
+    //   276: ldc2_w 308
+    //   279: putfield 421	com/estrongs/a/a/m:c	J
+    //   282: aload 7
+    //   284: astore 6
+    //   286: aload_0
+    //   287: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
+    //   290: ldc2_w 308
+    //   293: putfield 427	com/estrongs/a/a/m:e	J
     //   296: aload_0
-    //   297: getfield 118	com/estrongs/fs/b/r:b	Z
-    //   300: ifeq -121 -> 179
-    //   303: iconst_0
-    //   304: ifeq -125 -> 179
-    //   307: new 558	java/lang/NullPointerException
-    //   310: dup
-    //   311: invokespecial 559	java/lang/NullPointerException:<init>	()V
-    //   314: athrow
-    //   315: aload 7
-    //   317: astore 6
-    //   319: aload_0
-    //   320: getfield 136	com/estrongs/fs/b/r:n	Lcom/estrongs/fs/h;
-    //   323: invokeinterface 148 1 0
-    //   328: invokestatic 412	com/estrongs/android/util/am:ba	(Ljava/lang/String;)Z
-    //   331: ifeq +223 -> 554
-    //   334: aload 7
-    //   336: astore 6
-    //   338: aload_0
-    //   339: invokespecial 403	com/estrongs/fs/b/r:l	()Lcom/estrongs/a/q;
-    //   342: astore 9
-    //   344: aload 9
-    //   346: ifnull +15 -> 361
-    //   349: aload 7
-    //   351: astore 6
-    //   353: aload_0
-    //   354: bipush 12
-    //   356: aload 9
-    //   358: invokevirtual 387	com/estrongs/fs/b/r:setTaskResult	(ILjava/lang/Object;)V
-    //   361: aload 7
-    //   363: astore 6
-    //   365: aload_0
-    //   366: aload_0
-    //   367: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
-    //   370: getfield 428	com/estrongs/a/a/m:f	J
-    //   373: invokestatic 132	java/lang/Long:valueOf	(J)Ljava/lang/Long;
-    //   376: putfield 134	com/estrongs/fs/b/r:z	Ljava/lang/Long;
-    //   379: aload 7
-    //   381: astore 6
-    //   383: new 563	com/estrongs/fs/b/t
-    //   386: dup
-    //   387: aload_0
-    //   388: invokespecial 564	com/estrongs/fs/b/t:<init>	(Lcom/estrongs/fs/b/r;)V
-    //   391: invokevirtual 567	com/estrongs/fs/b/t:start	()V
-    //   394: aload 7
-    //   396: astore 6
-    //   398: aload_0
-    //   399: getfield 74	com/estrongs/fs/b/r:f	Ljava/util/ArrayList;
-    //   402: invokevirtual 315	java/util/ArrayList:size	()I
-    //   405: ifle +45 -> 450
-    //   408: aload 7
-    //   410: astore 6
-    //   412: aload_0
-    //   413: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
-    //   416: aload_0
-    //   417: getfield 74	com/estrongs/fs/b/r:f	Ljava/util/ArrayList;
-    //   420: iconst_0
-    //   421: invokevirtual 271	java/util/ArrayList:get	(I)Ljava/lang/Object;
-    //   424: checkcast 194	com/estrongs/fs/b/u
-    //   427: getfield 273	com/estrongs/fs/b/u:a	Lcom/estrongs/fs/h;
-    //   430: invokeinterface 148 1 0
-    //   435: putfield 463	com/estrongs/a/a/m:a	Ljava/lang/String;
-    //   438: aload 7
-    //   440: astore 6
-    //   442: aload_0
-    //   443: aload_0
-    //   444: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
-    //   447: invokevirtual 571	com/estrongs/fs/b/r:onProgress	(Lcom/estrongs/a/a/m;)V
-    //   450: aload 7
-    //   452: astore 6
-    //   454: aload_0
-    //   455: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
-    //   458: iconst_2
-    //   459: putfield 573	com/estrongs/a/a/m:i	I
-    //   462: aload 7
-    //   464: astore 6
-    //   466: new 71	java/util/ArrayList
-    //   469: dup
-    //   470: invokespecial 72	java/util/ArrayList:<init>	()V
-    //   473: astore 7
-    //   475: aload_0
-    //   476: getfield 74	com/estrongs/fs/b/r:f	Ljava/util/ArrayList;
-    //   479: iconst_0
-    //   480: invokevirtual 271	java/util/ArrayList:get	(I)Ljava/lang/Object;
-    //   483: checkcast 194	com/estrongs/fs/b/u
-    //   486: getfield 550	com/estrongs/fs/b/u:b	Ljava/lang/String;
+    //   297: aconst_null
+    //   298: invokespecial 585	com/estrongs/fs/b/r:a	(Ljava/util/List;)V
+    //   301: aload_0
+    //   302: iconst_1
+    //   303: putfield 126	com/estrongs/fs/b/r:C	Z
+    //   306: aload_0
+    //   307: getfield 118	com/estrongs/fs/b/r:b	Z
+    //   310: ifeq -126 -> 184
+    //   313: iconst_0
+    //   314: ifeq -130 -> 184
+    //   317: new 587	java/lang/NullPointerException
+    //   320: dup
+    //   321: invokespecial 588	java/lang/NullPointerException:<init>	()V
+    //   324: athrow
+    //   325: aload 7
+    //   327: astore 6
+    //   329: aload_0
+    //   330: getfield 136	com/estrongs/fs/b/r:n	Lcom/estrongs/fs/h;
+    //   333: invokeinterface 148 1 0
+    //   338: invokestatic 440	com/estrongs/android/util/ap:bl	(Ljava/lang/String;)Z
+    //   341: ifeq +238 -> 579
+    //   344: aload 7
+    //   346: astore 6
+    //   348: aload_0
+    //   349: invokespecial 431	com/estrongs/fs/b/r:l	()Lcom/estrongs/a/q;
+    //   352: astore 9
+    //   354: aload 9
+    //   356: ifnull +15 -> 371
+    //   359: aload 7
+    //   361: astore 6
+    //   363: aload_0
+    //   364: bipush 12
+    //   366: aload 9
+    //   368: invokevirtual 415	com/estrongs/fs/b/r:setTaskResult	(ILjava/lang/Object;)V
+    //   371: aload 7
+    //   373: astore 6
+    //   375: aload_0
+    //   376: aload_0
+    //   377: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
+    //   380: getfield 456	com/estrongs/a/a/m:f	J
+    //   383: invokestatic 132	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+    //   386: putfield 134	com/estrongs/fs/b/r:z	Ljava/lang/Long;
+    //   389: aload 7
+    //   391: astore 6
+    //   393: new 592	com/estrongs/fs/b/t
+    //   396: dup
+    //   397: aload_0
+    //   398: invokespecial 593	com/estrongs/fs/b/t:<init>	(Lcom/estrongs/fs/b/r;)V
+    //   401: invokevirtual 596	com/estrongs/fs/b/t:start	()V
+    //   404: aload 7
+    //   406: astore 6
+    //   408: aload_0
+    //   409: getfield 74	com/estrongs/fs/b/r:f	Ljava/util/ArrayList;
+    //   412: invokevirtual 345	java/util/ArrayList:size	()I
+    //   415: ifle +45 -> 460
+    //   418: aload 7
+    //   420: astore 6
+    //   422: aload_0
+    //   423: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
+    //   426: aload_0
+    //   427: getfield 74	com/estrongs/fs/b/r:f	Ljava/util/ArrayList;
+    //   430: iconst_0
+    //   431: invokevirtual 301	java/util/ArrayList:get	(I)Ljava/lang/Object;
+    //   434: checkcast 194	com/estrongs/fs/b/u
+    //   437: getfield 303	com/estrongs/fs/b/u:a	Lcom/estrongs/fs/h;
+    //   440: invokeinterface 148 1 0
+    //   445: putfield 491	com/estrongs/a/a/m:a	Ljava/lang/String;
+    //   448: aload 7
+    //   450: astore 6
+    //   452: aload_0
+    //   453: aload_0
+    //   454: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
+    //   457: invokevirtual 600	com/estrongs/fs/b/r:onProgress	(Lcom/estrongs/a/a/m;)V
+    //   460: aload 7
+    //   462: astore 6
+    //   464: aload_0
+    //   465: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
+    //   468: iconst_2
+    //   469: putfield 602	com/estrongs/a/a/m:i	I
+    //   472: aload 7
+    //   474: astore 6
+    //   476: new 71	java/util/ArrayList
+    //   479: dup
+    //   480: invokespecial 72	java/util/ArrayList:<init>	()V
+    //   483: astore 7
+    //   485: aload_0
+    //   486: getfield 74	com/estrongs/fs/b/r:f	Ljava/util/ArrayList;
     //   489: iconst_0
-    //   490: invokestatic 576	com/estrongs/android/util/am:a	(Ljava/lang/String;Z)Z
-    //   493: istore_2
-    //   494: aload_0
-    //   495: getfield 74	com/estrongs/fs/b/r:f	Ljava/util/ArrayList;
-    //   498: invokevirtual 315	java/util/ArrayList:size	()I
-    //   501: ifle +837 -> 1338
-    //   504: aload_0
-    //   505: invokevirtual 579	com/estrongs/fs/b/r:taskStopped	()Z
-    //   508: istore_3
-    //   509: iload_3
-    //   510: ifeq +439 -> 949
-    //   513: aload_0
-    //   514: iconst_1
-    //   515: putfield 126	com/estrongs/fs/b/r:C	Z
-    //   518: aload_0
-    //   519: getfield 118	com/estrongs/fs/b/r:b	Z
-    //   522: ifeq -343 -> 179
-    //   525: aload 7
-    //   527: ifnull -348 -> 179
-    //   530: aload 7
-    //   532: invokeinterface 237 1 0
-    //   537: ifle -358 -> 179
-    //   540: invokestatic 584	com/estrongs/fs/a/b:a	()Lcom/estrongs/fs/a/b;
-    //   543: aload 7
-    //   545: aload_0
-    //   546: getfield 112	com/estrongs/fs/b/r:w	I
-    //   549: invokevirtual 587	com/estrongs/fs/a/b:b	(Ljava/util/List;I)V
-    //   552: iconst_0
-    //   553: ireturn
-    //   554: aload 7
-    //   556: astore 6
-    //   558: aload_0
-    //   559: getfield 136	com/estrongs/fs/b/r:n	Lcom/estrongs/fs/h;
-    //   562: invokeinterface 148 1 0
-    //   567: invokestatic 590	com/estrongs/android/util/am:aB	(Ljava/lang/String;)Z
-    //   570: istore_2
-    //   571: iload_2
-    //   572: ifeq -211 -> 361
-    //   575: aload 7
-    //   577: astore 6
-    //   579: invokestatic 595	com/estrongs/android/ui/pcs/r:a	()Lcom/estrongs/android/ui/pcs/r;
-    //   582: invokevirtual 597	com/estrongs/android/ui/pcs/r:g	()Ljava/lang/String;
-    //   585: invokestatic 602	com/estrongs/fs/impl/j/b:k	(Ljava/lang/String;)[J
-    //   588: astore 9
-    //   590: aload 9
-    //   592: iconst_0
-    //   593: laload
-    //   594: aload 9
-    //   596: iconst_1
-    //   597: laload
-    //   598: lsub
-    //   599: lstore 4
-    //   601: aload 7
-    //   603: astore 6
-    //   605: aload_0
-    //   606: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
-    //   609: getfield 399	com/estrongs/a/a/m:e	J
-    //   612: lload 4
-    //   614: lcmp
-    //   615: ifle -254 -> 361
-    //   618: lload 4
-    //   620: ldc2_w 603
-    //   623: lcmp
-    //   624: ifge +70 -> 694
+    //   490: invokevirtual 301	java/util/ArrayList:get	(I)Ljava/lang/Object;
+    //   493: checkcast 194	com/estrongs/fs/b/u
+    //   496: getfield 578	com/estrongs/fs/b/u:b	Ljava/lang/String;
+    //   499: iconst_0
+    //   500: invokestatic 605	com/estrongs/android/util/ap:a	(Ljava/lang/String;Z)Z
+    //   503: istore 4
+    //   505: invokestatic 290	com/estrongs/android/scanner/l:a	()Lcom/estrongs/android/scanner/l;
+    //   508: invokevirtual 607	com/estrongs/android/scanner/l:e	()V
+    //   511: aload_0
+    //   512: getfield 74	com/estrongs/fs/b/r:f	Ljava/util/ArrayList;
+    //   515: invokevirtual 345	java/util/ArrayList:size	()I
+    //   518: ifle +919 -> 1437
+    //   521: aload_0
+    //   522: invokevirtual 610	com/estrongs/fs/b/r:taskStopped	()Z
+    //   525: istore 5
+    //   527: iload 5
+    //   529: ifeq +458 -> 987
+    //   532: aload_0
+    //   533: aload 7
+    //   535: invokespecial 585	com/estrongs/fs/b/r:a	(Ljava/util/List;)V
+    //   538: aload_0
+    //   539: iconst_1
+    //   540: putfield 126	com/estrongs/fs/b/r:C	Z
+    //   543: aload_0
+    //   544: getfield 118	com/estrongs/fs/b/r:b	Z
+    //   547: ifeq -363 -> 184
+    //   550: aload 7
+    //   552: ifnull -368 -> 184
+    //   555: aload 7
+    //   557: invokeinterface 236 1 0
+    //   562: ifle -378 -> 184
+    //   565: invokestatic 615	com/estrongs/fs/a/b:a	()Lcom/estrongs/fs/a/b;
+    //   568: aload 7
+    //   570: aload_0
+    //   571: getfield 112	com/estrongs/fs/b/r:w	I
+    //   574: invokevirtual 618	com/estrongs/fs/a/b:b	(Ljava/util/List;I)V
+    //   577: iconst_0
+    //   578: ireturn
+    //   579: aload 7
+    //   581: astore 6
+    //   583: aload_0
+    //   584: getfield 136	com/estrongs/fs/b/r:n	Lcom/estrongs/fs/h;
+    //   587: invokeinterface 148 1 0
+    //   592: invokestatic 621	com/estrongs/android/util/ap:aL	(Ljava/lang/String;)Z
+    //   595: istore 4
+    //   597: iload 4
+    //   599: ifeq -228 -> 371
+    //   602: aload 7
+    //   604: astore 6
+    //   606: invokestatic 626	com/estrongs/android/ui/pcs/u:a	()Lcom/estrongs/android/ui/pcs/u;
+    //   609: invokevirtual 628	com/estrongs/android/ui/pcs/u:g	()Ljava/lang/String;
+    //   612: invokestatic 633	com/estrongs/fs/impl/o/b:k	(Ljava/lang/String;)[J
+    //   615: astore 9
+    //   617: aload 9
+    //   619: iconst_0
+    //   620: laload
+    //   621: aload 9
+    //   623: iconst_1
+    //   624: laload
+    //   625: lsub
+    //   626: lstore_2
     //   627: aload 7
     //   629: astore 6
     //   631: aload_0
-    //   632: bipush 15
-    //   634: new 430	com/estrongs/a/q
-    //   637: dup
-    //   638: aconst_null
-    //   639: iconst_2
-    //   640: anewarray 128	java/lang/Long
-    //   643: dup
-    //   644: iconst_0
-    //   645: aload_0
-    //   646: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
-    //   649: getfield 399	com/estrongs/a/a/m:e	J
-    //   652: invokestatic 132	java/lang/Long:valueOf	(J)Ljava/lang/Long;
-    //   655: aastore
-    //   656: dup
-    //   657: iconst_1
-    //   658: lload 4
-    //   660: invokestatic 132	java/lang/Long:valueOf	(J)Ljava/lang/Long;
-    //   663: aastore
-    //   664: invokespecial 434	com/estrongs/a/q:<init>	(Ljava/lang/String;Ljava/lang/Object;)V
-    //   667: invokevirtual 387	com/estrongs/fs/b/r:setTaskResult	(ILjava/lang/Object;)V
-    //   670: aload_0
-    //   671: iconst_1
-    //   672: putfield 126	com/estrongs/fs/b/r:C	Z
-    //   675: aload_0
-    //   676: getfield 118	com/estrongs/fs/b/r:b	Z
-    //   679: ifeq -500 -> 179
-    //   682: iconst_0
-    //   683: ifeq -504 -> 179
-    //   686: new 558	java/lang/NullPointerException
-    //   689: dup
-    //   690: invokespecial 559	java/lang/NullPointerException:<init>	()V
-    //   693: athrow
-    //   694: aload 7
-    //   696: astore 6
+    //   632: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
+    //   635: getfield 427	com/estrongs/a/a/m:e	J
+    //   638: lload_2
+    //   639: lcmp
+    //   640: ifle -269 -> 371
+    //   643: lload_2
+    //   644: ldc2_w 634
+    //   647: lcmp
+    //   648: ifge +74 -> 722
+    //   651: aload 7
+    //   653: astore 6
+    //   655: aload_0
+    //   656: bipush 15
+    //   658: new 458	com/estrongs/a/q
+    //   661: dup
+    //   662: aconst_null
+    //   663: iconst_2
+    //   664: anewarray 128	java/lang/Long
+    //   667: dup
+    //   668: iconst_0
+    //   669: aload_0
+    //   670: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
+    //   673: getfield 427	com/estrongs/a/a/m:e	J
+    //   676: invokestatic 132	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+    //   679: aastore
+    //   680: dup
+    //   681: iconst_1
+    //   682: lload_2
+    //   683: invokestatic 132	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+    //   686: aastore
+    //   687: invokespecial 462	com/estrongs/a/q:<init>	(Ljava/lang/String;Ljava/lang/Object;)V
+    //   690: invokevirtual 415	com/estrongs/fs/b/r:setTaskResult	(ILjava/lang/Object;)V
+    //   693: aload_0
+    //   694: aconst_null
+    //   695: invokespecial 585	com/estrongs/fs/b/r:a	(Ljava/util/List;)V
     //   698: aload_0
-    //   699: bipush 12
-    //   701: new 430	com/estrongs/a/q
-    //   704: dup
-    //   705: ldc_w 432
-    //   708: iconst_2
-    //   709: anewarray 128	java/lang/Long
-    //   712: dup
-    //   713: iconst_0
-    //   714: aload_0
-    //   715: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
-    //   718: getfield 399	com/estrongs/a/a/m:e	J
-    //   721: invokestatic 132	java/lang/Long:valueOf	(J)Ljava/lang/Long;
-    //   724: aastore
-    //   725: dup
-    //   726: iconst_1
-    //   727: lload 4
-    //   729: invokestatic 132	java/lang/Long:valueOf	(J)Ljava/lang/Long;
-    //   732: aastore
-    //   733: invokespecial 434	com/estrongs/a/q:<init>	(Ljava/lang/String;Ljava/lang/Object;)V
-    //   736: invokevirtual 387	com/estrongs/fs/b/r:setTaskResult	(ILjava/lang/Object;)V
-    //   739: goto -69 -> 670
-    //   742: astore 9
-    //   744: aload 7
-    //   746: astore 6
-    //   748: aload 9
-    //   750: invokevirtual 437	java/lang/Exception:printStackTrace	()V
-    //   753: goto -392 -> 361
-    //   756: astore 6
-    //   758: aload 8
-    //   760: astore 7
-    //   762: aload 6
-    //   764: astore 8
-    //   766: aload 7
-    //   768: astore 6
-    //   770: aload 8
-    //   772: invokevirtual 437	java/lang/Exception:printStackTrace	()V
-    //   775: aload 7
-    //   777: astore 6
-    //   779: aload_0
-    //   780: sipush 10000
-    //   783: new 430	com/estrongs/a/q
-    //   786: dup
-    //   787: aload 8
-    //   789: invokevirtual 605	java/lang/Exception:toString	()Ljava/lang/String;
-    //   792: aload 8
-    //   794: invokespecial 556	com/estrongs/a/q:<init>	(Ljava/lang/String;Ljava/lang/Exception;)V
-    //   797: invokevirtual 387	com/estrongs/fs/b/r:setTaskResult	(ILjava/lang/Object;)V
-    //   800: aload 7
-    //   802: astore 6
-    //   804: aload_0
-    //   805: invokespecial 403	com/estrongs/fs/b/r:l	()Lcom/estrongs/a/q;
-    //   808: astore 8
-    //   810: aload 8
-    //   812: ifnull +15 -> 827
-    //   815: aload 7
-    //   817: astore 6
-    //   819: aload_0
-    //   820: bipush 12
-    //   822: aload 8
-    //   824: invokevirtual 387	com/estrongs/fs/b/r:setTaskResult	(ILjava/lang/Object;)V
-    //   827: aload_0
-    //   828: iconst_1
-    //   829: putfield 126	com/estrongs/fs/b/r:C	Z
-    //   832: aload_0
-    //   833: getfield 118	com/estrongs/fs/b/r:b	Z
-    //   836: ifeq -657 -> 179
-    //   839: aload 7
-    //   841: ifnull -662 -> 179
-    //   844: aload 7
-    //   846: invokeinterface 237 1 0
-    //   851: ifle -672 -> 179
-    //   854: invokestatic 584	com/estrongs/fs/a/b:a	()Lcom/estrongs/fs/a/b;
-    //   857: aload 7
-    //   859: aload_0
-    //   860: getfield 112	com/estrongs/fs/b/r:w	I
-    //   863: invokevirtual 587	com/estrongs/fs/a/b:b	(Ljava/util/List;I)V
-    //   866: iconst_0
-    //   867: ireturn
-    //   868: aload 7
-    //   870: astore 6
-    //   872: aload_0
-    //   873: getfield 89	com/estrongs/fs/b/r:l	Z
-    //   876: ifeq -515 -> 361
-    //   879: aload 7
-    //   881: astore 6
-    //   883: aload_0
-    //   884: getfield 136	com/estrongs/fs/b/r:n	Lcom/estrongs/fs/h;
-    //   887: invokeinterface 148 1 0
-    //   892: invokestatic 412	com/estrongs/android/util/am:ba	(Ljava/lang/String;)Z
-    //   895: ifeq -534 -> 361
-    //   898: aload 7
-    //   900: astore 6
-    //   902: aload_0
-    //   903: invokespecial 403	com/estrongs/fs/b/r:l	()Lcom/estrongs/a/q;
-    //   906: astore 9
-    //   908: aload 9
-    //   910: ifnull -549 -> 361
-    //   913: aload 7
-    //   915: astore 6
-    //   917: aload_0
-    //   918: bipush 12
-    //   920: aload 9
-    //   922: invokevirtual 387	com/estrongs/fs/b/r:setTaskResult	(ILjava/lang/Object;)V
-    //   925: aload_0
-    //   926: iconst_1
-    //   927: putfield 126	com/estrongs/fs/b/r:C	Z
-    //   930: aload_0
-    //   931: getfield 118	com/estrongs/fs/b/r:b	Z
-    //   934: ifeq -755 -> 179
-    //   937: iconst_0
-    //   938: ifeq -759 -> 179
-    //   941: new 558	java/lang/NullPointerException
-    //   944: dup
-    //   945: invokespecial 559	java/lang/NullPointerException:<init>	()V
-    //   948: athrow
-    //   949: aload_0
-    //   950: getfield 74	com/estrongs/fs/b/r:f	Ljava/util/ArrayList;
-    //   953: iconst_0
-    //   954: invokevirtual 608	java/util/ArrayList:remove	(I)Ljava/lang/Object;
-    //   957: checkcast 194	com/estrongs/fs/b/u
-    //   960: astore 6
-    //   962: aload 6
-    //   964: getfield 273	com/estrongs/fs/b/u:a	Lcom/estrongs/fs/h;
-    //   967: invokeinterface 148 1 0
-    //   972: invokestatic 611	com/estrongs/android/util/am:az	(Ljava/lang/String;)Z
-    //   975: ifeq +80 -> 1055
-    //   978: aload 6
-    //   980: getfield 273	com/estrongs/fs/b/u:a	Lcom/estrongs/fs/h;
-    //   983: ldc_w 613
-    //   986: invokeinterface 188 2 0
-    //   991: astore 8
-    //   993: aload 8
-    //   995: ifnull +60 -> 1055
-    //   998: aload 8
-    //   1000: invokestatic 595	com/estrongs/android/ui/pcs/r:a	()Lcom/estrongs/android/ui/pcs/r;
-    //   1003: invokevirtual 615	com/estrongs/android/ui/pcs/r:e	()Ljava/lang/String;
-    //   1006: invokestatic 618	com/estrongs/android/util/bd:a	(Ljava/lang/Object;Ljava/lang/Object;)Z
-    //   1009: istore_3
-    //   1010: iload_3
-    //   1011: ifne +44 -> 1055
-    //   1014: aload_0
-    //   1015: iconst_1
-    //   1016: putfield 126	com/estrongs/fs/b/r:C	Z
-    //   1019: aload_0
-    //   1020: getfield 118	com/estrongs/fs/b/r:b	Z
-    //   1023: ifeq -844 -> 179
-    //   1026: aload 7
-    //   1028: ifnull -849 -> 179
-    //   1031: aload 7
-    //   1033: invokeinterface 237 1 0
-    //   1038: ifle -859 -> 179
-    //   1041: invokestatic 584	com/estrongs/fs/a/b:a	()Lcom/estrongs/fs/a/b;
-    //   1044: aload 7
-    //   1046: aload_0
-    //   1047: getfield 112	com/estrongs/fs/b/r:w	I
-    //   1050: invokevirtual 587	com/estrongs/fs/a/b:b	(Ljava/util/List;I)V
-    //   1053: iconst_0
-    //   1054: ireturn
-    //   1055: aload 6
-    //   1057: getfield 273	com/estrongs/fs/b/u:a	Lcom/estrongs/fs/h;
-    //   1060: invokeinterface 148 1 0
-    //   1065: aload 6
-    //   1067: getfield 550	com/estrongs/fs/b/u:b	Ljava/lang/String;
-    //   1070: invokestatic 621	com/estrongs/android/util/am:e	(Ljava/lang/String;Ljava/lang/String;)Z
-    //   1073: ifne -579 -> 494
-    //   1076: aload_0
-    //   1077: getfield 62	com/estrongs/fs/b/r:c	Lcom/estrongs/fs/d;
-    //   1080: aload 6
-    //   1082: invokevirtual 624	com/estrongs/fs/d:a	(Lcom/estrongs/fs/b/u;)Z
-    //   1085: ifne +104 -> 1189
-    //   1088: aload_0
-    //   1089: invokevirtual 505	com/estrongs/fs/b/r:getTaskResult	()Lcom/estrongs/a/p;
-    //   1092: getfield 380	com/estrongs/a/p:a	I
-    //   1095: iconst_1
-    //   1096: if_icmpeq +23 -> 1119
-    //   1099: invokestatic 548	com/estrongs/fs/d:a	()Lcom/estrongs/fs/d;
-    //   1102: aload_0
-    //   1103: getfield 136	com/estrongs/fs/b/r:n	Lcom/estrongs/fs/h;
-    //   1106: invokeinterface 208 1 0
-    //   1111: iconst_0
-    //   1112: iconst_0
-    //   1113: invokevirtual 627	com/estrongs/fs/d:a	(Ljava/lang/String;ZZ)Lcom/estrongs/fs/h;
-    //   1116: ifnull +32 -> 1148
-    //   1119: aload 7
-    //   1121: new 629	com/estrongs/fs/o
-    //   1124: dup
-    //   1125: aload_0
-    //   1126: getfield 136	com/estrongs/fs/b/r:n	Lcom/estrongs/fs/h;
-    //   1129: aload 6
-    //   1131: getfield 273	com/estrongs/fs/b/u:a	Lcom/estrongs/fs/h;
-    //   1134: invokeinterface 169 1 0
-    //   1139: invokespecial 632	com/estrongs/fs/o:<init>	(Lcom/estrongs/fs/h;Ljava/lang/String;)V
-    //   1142: invokeinterface 142 2 0
-    //   1147: pop
+    //   699: iconst_1
+    //   700: putfield 126	com/estrongs/fs/b/r:C	Z
+    //   703: aload_0
+    //   704: getfield 118	com/estrongs/fs/b/r:b	Z
+    //   707: ifeq -523 -> 184
+    //   710: iconst_0
+    //   711: ifeq -527 -> 184
+    //   714: new 587	java/lang/NullPointerException
+    //   717: dup
+    //   718: invokespecial 588	java/lang/NullPointerException:<init>	()V
+    //   721: athrow
+    //   722: aload 7
+    //   724: astore 6
+    //   726: aload_0
+    //   727: bipush 12
+    //   729: new 458	com/estrongs/a/q
+    //   732: dup
+    //   733: ldc_w 460
+    //   736: iconst_2
+    //   737: anewarray 128	java/lang/Long
+    //   740: dup
+    //   741: iconst_0
+    //   742: aload_0
+    //   743: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
+    //   746: getfield 427	com/estrongs/a/a/m:e	J
+    //   749: invokestatic 132	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+    //   752: aastore
+    //   753: dup
+    //   754: iconst_1
+    //   755: lload_2
+    //   756: invokestatic 132	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+    //   759: aastore
+    //   760: invokespecial 462	com/estrongs/a/q:<init>	(Ljava/lang/String;Ljava/lang/Object;)V
+    //   763: invokevirtual 415	com/estrongs/fs/b/r:setTaskResult	(ILjava/lang/Object;)V
+    //   766: goto -73 -> 693
+    //   769: astore 9
+    //   771: aload 7
+    //   773: astore 6
+    //   775: aload 9
+    //   777: invokevirtual 465	java/lang/Exception:printStackTrace	()V
+    //   780: goto -409 -> 371
+    //   783: astore 6
+    //   785: aload 8
+    //   787: astore 7
+    //   789: aload 6
+    //   791: astore 8
+    //   793: aload 7
+    //   795: astore 6
+    //   797: aload 8
+    //   799: invokevirtual 465	java/lang/Exception:printStackTrace	()V
+    //   802: aload 7
+    //   804: astore 6
+    //   806: aload_0
+    //   807: sipush 10000
+    //   810: new 458	com/estrongs/a/q
+    //   813: dup
+    //   814: aload 8
+    //   816: invokevirtual 636	java/lang/Exception:toString	()Ljava/lang/String;
+    //   819: aload 8
+    //   821: invokespecial 584	com/estrongs/a/q:<init>	(Ljava/lang/String;Ljava/lang/Exception;)V
+    //   824: invokevirtual 415	com/estrongs/fs/b/r:setTaskResult	(ILjava/lang/Object;)V
+    //   827: aload 7
+    //   829: astore 6
+    //   831: aload_0
+    //   832: invokespecial 431	com/estrongs/fs/b/r:l	()Lcom/estrongs/a/q;
+    //   835: astore 8
+    //   837: aload 8
+    //   839: ifnull +15 -> 854
+    //   842: aload 7
+    //   844: astore 6
+    //   846: aload_0
+    //   847: bipush 12
+    //   849: aload 8
+    //   851: invokevirtual 415	com/estrongs/fs/b/r:setTaskResult	(ILjava/lang/Object;)V
+    //   854: aload_0
+    //   855: aload 7
+    //   857: invokespecial 585	com/estrongs/fs/b/r:a	(Ljava/util/List;)V
+    //   860: aload_0
+    //   861: iconst_1
+    //   862: putfield 126	com/estrongs/fs/b/r:C	Z
+    //   865: aload_0
+    //   866: getfield 118	com/estrongs/fs/b/r:b	Z
+    //   869: ifeq -685 -> 184
+    //   872: aload 7
+    //   874: ifnull -690 -> 184
+    //   877: aload 7
+    //   879: invokeinterface 236 1 0
+    //   884: ifle -700 -> 184
+    //   887: invokestatic 615	com/estrongs/fs/a/b:a	()Lcom/estrongs/fs/a/b;
+    //   890: aload 7
+    //   892: aload_0
+    //   893: getfield 112	com/estrongs/fs/b/r:w	I
+    //   896: invokevirtual 618	com/estrongs/fs/a/b:b	(Ljava/util/List;I)V
+    //   899: iconst_0
+    //   900: ireturn
+    //   901: aload 7
+    //   903: astore 6
+    //   905: aload_0
+    //   906: getfield 89	com/estrongs/fs/b/r:l	Z
+    //   909: ifeq -538 -> 371
+    //   912: aload 7
+    //   914: astore 6
+    //   916: aload_0
+    //   917: getfield 136	com/estrongs/fs/b/r:n	Lcom/estrongs/fs/h;
+    //   920: invokeinterface 148 1 0
+    //   925: invokestatic 440	com/estrongs/android/util/ap:bl	(Ljava/lang/String;)Z
+    //   928: ifeq -557 -> 371
+    //   931: aload 7
+    //   933: astore 6
+    //   935: aload_0
+    //   936: invokespecial 431	com/estrongs/fs/b/r:l	()Lcom/estrongs/a/q;
+    //   939: astore 9
+    //   941: aload 9
+    //   943: ifnull -572 -> 371
+    //   946: aload 7
+    //   948: astore 6
+    //   950: aload_0
+    //   951: bipush 12
+    //   953: aload 9
+    //   955: invokevirtual 415	com/estrongs/fs/b/r:setTaskResult	(ILjava/lang/Object;)V
+    //   958: aload_0
+    //   959: aconst_null
+    //   960: invokespecial 585	com/estrongs/fs/b/r:a	(Ljava/util/List;)V
+    //   963: aload_0
+    //   964: iconst_1
+    //   965: putfield 126	com/estrongs/fs/b/r:C	Z
+    //   968: aload_0
+    //   969: getfield 118	com/estrongs/fs/b/r:b	Z
+    //   972: ifeq -788 -> 184
+    //   975: iconst_0
+    //   976: ifeq -792 -> 184
+    //   979: new 587	java/lang/NullPointerException
+    //   982: dup
+    //   983: invokespecial 588	java/lang/NullPointerException:<init>	()V
+    //   986: athrow
+    //   987: aload_0
+    //   988: getfield 74	com/estrongs/fs/b/r:f	Ljava/util/ArrayList;
+    //   991: iconst_0
+    //   992: invokevirtual 639	java/util/ArrayList:remove	(I)Ljava/lang/Object;
+    //   995: checkcast 194	com/estrongs/fs/b/u
+    //   998: astore 8
+    //   1000: aload 8
+    //   1002: getfield 303	com/estrongs/fs/b/u:a	Lcom/estrongs/fs/h;
+    //   1005: invokeinterface 148 1 0
+    //   1010: invokestatic 642	com/estrongs/android/util/ap:aJ	(Ljava/lang/String;)Z
+    //   1013: ifeq +88 -> 1101
+    //   1016: aload 8
+    //   1018: getfield 303	com/estrongs/fs/b/u:a	Lcom/estrongs/fs/h;
+    //   1021: ldc_w 644
+    //   1024: invokeinterface 188 2 0
+    //   1029: astore 6
+    //   1031: aload 6
+    //   1033: ifnull +68 -> 1101
+    //   1036: aload 6
+    //   1038: invokestatic 626	com/estrongs/android/ui/pcs/u:a	()Lcom/estrongs/android/ui/pcs/u;
+    //   1041: invokevirtual 646	com/estrongs/android/ui/pcs/u:e	()Ljava/lang/String;
+    //   1044: invokestatic 649	com/estrongs/android/util/bk:a	(Ljava/lang/Object;Ljava/lang/Object;)Z
+    //   1047: istore 5
+    //   1049: iload 5
+    //   1051: ifne +50 -> 1101
+    //   1054: aload_0
+    //   1055: aload 7
+    //   1057: invokespecial 585	com/estrongs/fs/b/r:a	(Ljava/util/List;)V
+    //   1060: aload_0
+    //   1061: iconst_1
+    //   1062: putfield 126	com/estrongs/fs/b/r:C	Z
+    //   1065: aload_0
+    //   1066: getfield 118	com/estrongs/fs/b/r:b	Z
+    //   1069: ifeq -885 -> 184
+    //   1072: aload 7
+    //   1074: ifnull -890 -> 184
+    //   1077: aload 7
+    //   1079: invokeinterface 236 1 0
+    //   1084: ifle -900 -> 184
+    //   1087: invokestatic 615	com/estrongs/fs/a/b:a	()Lcom/estrongs/fs/a/b;
+    //   1090: aload 7
+    //   1092: aload_0
+    //   1093: getfield 112	com/estrongs/fs/b/r:w	I
+    //   1096: invokevirtual 618	com/estrongs/fs/a/b:b	(Ljava/util/List;I)V
+    //   1099: iconst_0
+    //   1100: ireturn
+    //   1101: aload 8
+    //   1103: getfield 303	com/estrongs/fs/b/u:a	Lcom/estrongs/fs/h;
+    //   1106: invokeinterface 148 1 0
+    //   1111: aload 8
+    //   1113: getfield 578	com/estrongs/fs/b/u:b	Ljava/lang/String;
+    //   1116: invokestatic 652	com/estrongs/android/util/ap:e	(Ljava/lang/String;Ljava/lang/String;)Z
+    //   1119: ifne -608 -> 511
+    //   1122: aload_0
+    //   1123: getfield 62	com/estrongs/fs/b/r:c	Lcom/estrongs/fs/d;
+    //   1126: aload 8
+    //   1128: invokevirtual 655	com/estrongs/fs/d:a	(Lcom/estrongs/fs/b/u;)Z
+    //   1131: ifne +110 -> 1241
+    //   1134: aload_0
+    //   1135: invokevirtual 533	com/estrongs/fs/b/r:getTaskResult	()Lcom/estrongs/a/p;
+    //   1138: getfield 408	com/estrongs/a/p:a	I
+    //   1141: iconst_1
+    //   1142: if_icmpeq +23 -> 1165
+    //   1145: invokestatic 576	com/estrongs/fs/d:a	()Lcom/estrongs/fs/d;
     //   1148: aload_0
-    //   1149: iconst_1
-    //   1150: putfield 126	com/estrongs/fs/b/r:C	Z
-    //   1153: aload_0
-    //   1154: getfield 118	com/estrongs/fs/b/r:b	Z
-    //   1157: ifeq -978 -> 179
-    //   1160: aload 7
-    //   1162: ifnull -983 -> 179
+    //   1149: getfield 136	com/estrongs/fs/b/r:n	Lcom/estrongs/fs/h;
+    //   1152: invokeinterface 207 1 0
+    //   1157: iconst_0
+    //   1158: iconst_0
+    //   1159: invokevirtual 658	com/estrongs/fs/d:a	(Ljava/lang/String;ZZ)Lcom/estrongs/fs/h;
+    //   1162: ifnull +32 -> 1194
     //   1165: aload 7
-    //   1167: invokeinterface 237 1 0
-    //   1172: ifle -993 -> 179
-    //   1175: invokestatic 584	com/estrongs/fs/a/b:a	()Lcom/estrongs/fs/a/b;
-    //   1178: aload 7
-    //   1180: aload_0
-    //   1181: getfield 112	com/estrongs/fs/b/r:w	I
-    //   1184: invokevirtual 587	com/estrongs/fs/a/b:b	(Ljava/util/List;I)V
-    //   1187: iconst_0
-    //   1188: ireturn
-    //   1189: aload_0
-    //   1190: getfield 69	com/estrongs/fs/b/r:e	Ljava/util/HashMap;
-    //   1193: aload 6
-    //   1195: getfield 273	com/estrongs/fs/b/u:a	Lcom/estrongs/fs/h;
-    //   1198: invokeinterface 208 1 0
-    //   1203: invokevirtual 635	java/util/HashMap:containsKey	(Ljava/lang/Object;)Z
-    //   1206: ifeq +48 -> 1254
-    //   1209: aload 7
-    //   1211: new 629	com/estrongs/fs/o
-    //   1214: dup
-    //   1215: aload_0
-    //   1216: getfield 136	com/estrongs/fs/b/r:n	Lcom/estrongs/fs/h;
-    //   1219: aload_0
-    //   1220: getfield 69	com/estrongs/fs/b/r:e	Ljava/util/HashMap;
-    //   1223: aload 6
-    //   1225: getfield 273	com/estrongs/fs/b/u:a	Lcom/estrongs/fs/h;
-    //   1228: invokeinterface 208 1 0
-    //   1233: invokevirtual 440	java/util/HashMap:get	(Ljava/lang/Object;)Ljava/lang/Object;
-    //   1236: checkcast 152	java/lang/String
-    //   1239: invokestatic 174	com/estrongs/android/util/am:d	(Ljava/lang/String;)Ljava/lang/String;
-    //   1242: invokespecial 632	com/estrongs/fs/o:<init>	(Lcom/estrongs/fs/h;Ljava/lang/String;)V
-    //   1245: invokeinterface 142 2 0
-    //   1250: pop
-    //   1251: goto -757 -> 494
-    //   1254: aload 7
-    //   1256: new 629	com/estrongs/fs/o
-    //   1259: dup
-    //   1260: aload_0
-    //   1261: getfield 136	com/estrongs/fs/b/r:n	Lcom/estrongs/fs/h;
-    //   1264: aload 6
-    //   1266: getfield 273	com/estrongs/fs/b/u:a	Lcom/estrongs/fs/h;
-    //   1269: invokeinterface 169 1 0
-    //   1274: invokespecial 632	com/estrongs/fs/o:<init>	(Lcom/estrongs/fs/h;Ljava/lang/String;)V
-    //   1277: invokeinterface 142 2 0
-    //   1282: pop
-    //   1283: goto -789 -> 494
-    //   1286: astore 8
-    //   1288: aload 7
-    //   1290: astore 6
-    //   1292: aload 8
-    //   1294: astore 7
-    //   1296: aload_0
-    //   1297: iconst_1
-    //   1298: putfield 126	com/estrongs/fs/b/r:C	Z
-    //   1301: aload_0
-    //   1302: getfield 118	com/estrongs/fs/b/r:b	Z
-    //   1305: ifeq +30 -> 1335
-    //   1308: aload 6
-    //   1310: ifnull +25 -> 1335
-    //   1313: aload 6
-    //   1315: invokeinterface 237 1 0
-    //   1320: ifle +15 -> 1335
-    //   1323: invokestatic 584	com/estrongs/fs/a/b:a	()Lcom/estrongs/fs/a/b;
-    //   1326: aload 6
-    //   1328: aload_0
-    //   1329: getfield 112	com/estrongs/fs/b/r:w	I
-    //   1332: invokevirtual 587	com/estrongs/fs/a/b:b	(Ljava/util/List;I)V
-    //   1335: aload 7
-    //   1337: athrow
-    //   1338: iload_2
-    //   1339: ifeq +35 -> 1374
-    //   1342: invokestatic 641	android/os/Looper:getMainLooper	()Landroid/os/Looper;
-    //   1345: invokevirtual 645	android/os/Looper:getThread	()Ljava/lang/Thread;
-    //   1348: astore 8
-    //   1350: invokestatic 650	java/lang/Thread:currentThread	()Ljava/lang/Thread;
-    //   1353: astore 6
-    //   1355: aload 8
-    //   1357: aload 6
-    //   1359: if_acmpne +170 -> 1529
-    //   1362: iconst_1
-    //   1363: istore_1
-    //   1364: iload_1
-    //   1365: ifne +9 -> 1374
-    //   1368: ldc2_w 651
-    //   1371: invokestatic 656	java/lang/Thread:sleep	(J)V
-    //   1374: aload_0
-    //   1375: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
-    //   1378: getfield 393	com/estrongs/a/a/m:c	J
-    //   1381: lconst_0
-    //   1382: lcmp
-    //   1383: ifle +17 -> 1400
-    //   1386: aload_0
-    //   1387: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
-    //   1390: aload_0
-    //   1391: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
-    //   1394: getfield 393	com/estrongs/a/a/m:c	J
-    //   1397: putfield 442	com/estrongs/a/a/m:d	J
-    //   1400: aload_0
-    //   1401: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
-    //   1404: getfield 399	com/estrongs/a/a/m:e	J
-    //   1407: lconst_0
-    //   1408: lcmp
-    //   1409: ifle +17 -> 1426
-    //   1412: aload_0
-    //   1413: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
-    //   1416: aload_0
-    //   1417: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
-    //   1420: getfield 399	com/estrongs/a/a/m:e	J
-    //   1423: putfield 428	com/estrongs/a/a/m:f	J
-    //   1426: aload_0
-    //   1427: aload_0
-    //   1428: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
-    //   1431: invokevirtual 571	com/estrongs/fs/b/r:onProgress	(Lcom/estrongs/a/a/m;)V
-    //   1434: aload_0
-    //   1435: ldc_w 658
-    //   1438: invokevirtual 662	com/estrongs/fs/b/r:getDecisionData	(Ljava/lang/Class;)Lcom/estrongs/a/a/d;
-    //   1441: checkcast 658	com/estrongs/a/a/h
-    //   1444: ifnull +68 -> 1512
-    //   1447: aload_0
-    //   1448: getfield 78	com/estrongs/fs/b/r:h	I
-    //   1451: aload_0
-    //   1452: getfield 76	com/estrongs/fs/b/r:g	I
-    //   1455: if_icmpne +57 -> 1512
-    //   1458: aload_0
-    //   1459: iconst_3
-    //   1460: aconst_null
-    //   1461: invokevirtual 387	com/estrongs/fs/b/r:setTaskResult	(ILjava/lang/Object;)V
-    //   1464: aload_0
-    //   1465: iconst_1
-    //   1466: putfield 126	com/estrongs/fs/b/r:C	Z
-    //   1469: aload_0
-    //   1470: getfield 118	com/estrongs/fs/b/r:b	Z
-    //   1473: ifeq +30 -> 1503
-    //   1476: aload 7
-    //   1478: ifnull +25 -> 1503
-    //   1481: aload 7
-    //   1483: invokeinterface 237 1 0
-    //   1488: ifle +15 -> 1503
-    //   1491: invokestatic 584	com/estrongs/fs/a/b:a	()Lcom/estrongs/fs/a/b;
-    //   1494: aload 7
-    //   1496: aload_0
-    //   1497: getfield 112	com/estrongs/fs/b/r:w	I
-    //   1500: invokevirtual 587	com/estrongs/fs/a/b:b	(Ljava/util/List;I)V
-    //   1503: iconst_1
-    //   1504: ireturn
-    //   1505: astore 6
-    //   1507: iconst_0
-    //   1508: istore_1
-    //   1509: goto -145 -> 1364
+    //   1167: new 660	com/estrongs/fs/z
+    //   1170: dup
+    //   1171: aload_0
+    //   1172: getfield 136	com/estrongs/fs/b/r:n	Lcom/estrongs/fs/h;
+    //   1175: aload 8
+    //   1177: getfield 303	com/estrongs/fs/b/u:a	Lcom/estrongs/fs/h;
+    //   1180: invokeinterface 169 1 0
+    //   1185: invokespecial 663	com/estrongs/fs/z:<init>	(Lcom/estrongs/fs/h;Ljava/lang/String;)V
+    //   1188: invokeinterface 142 2 0
+    //   1193: pop
+    //   1194: aload_0
+    //   1195: aload 7
+    //   1197: invokespecial 585	com/estrongs/fs/b/r:a	(Ljava/util/List;)V
+    //   1200: aload_0
+    //   1201: iconst_1
+    //   1202: putfield 126	com/estrongs/fs/b/r:C	Z
+    //   1205: aload_0
+    //   1206: getfield 118	com/estrongs/fs/b/r:b	Z
+    //   1209: ifeq -1025 -> 184
+    //   1212: aload 7
+    //   1214: ifnull -1030 -> 184
+    //   1217: aload 7
+    //   1219: invokeinterface 236 1 0
+    //   1224: ifle -1040 -> 184
+    //   1227: invokestatic 615	com/estrongs/fs/a/b:a	()Lcom/estrongs/fs/a/b;
+    //   1230: aload 7
+    //   1232: aload_0
+    //   1233: getfield 112	com/estrongs/fs/b/r:w	I
+    //   1236: invokevirtual 618	com/estrongs/fs/a/b:b	(Ljava/util/List;I)V
+    //   1239: iconst_0
+    //   1240: ireturn
+    //   1241: aload_0
+    //   1242: getfield 69	com/estrongs/fs/b/r:e	Ljava/util/HashMap;
+    //   1245: aload 8
+    //   1247: getfield 303	com/estrongs/fs/b/u:a	Lcom/estrongs/fs/h;
+    //   1250: invokeinterface 207 1 0
+    //   1255: invokevirtual 666	java/util/HashMap:containsKey	(Ljava/lang/Object;)Z
+    //   1258: ifeq +48 -> 1306
+    //   1261: aload 7
+    //   1263: new 660	com/estrongs/fs/z
+    //   1266: dup
+    //   1267: aload_0
+    //   1268: getfield 136	com/estrongs/fs/b/r:n	Lcom/estrongs/fs/h;
+    //   1271: aload_0
+    //   1272: getfield 69	com/estrongs/fs/b/r:e	Ljava/util/HashMap;
+    //   1275: aload 8
+    //   1277: getfield 303	com/estrongs/fs/b/u:a	Lcom/estrongs/fs/h;
+    //   1280: invokeinterface 207 1 0
+    //   1285: invokevirtual 468	java/util/HashMap:get	(Ljava/lang/Object;)Ljava/lang/Object;
+    //   1288: checkcast 152	java/lang/String
+    //   1291: invokestatic 174	com/estrongs/android/util/ap:d	(Ljava/lang/String;)Ljava/lang/String;
+    //   1294: invokespecial 663	com/estrongs/fs/z:<init>	(Lcom/estrongs/fs/h;Ljava/lang/String;)V
+    //   1297: invokeinterface 142 2 0
+    //   1302: pop
+    //   1303: goto -792 -> 511
+    //   1306: aload 8
+    //   1308: getfield 303	com/estrongs/fs/b/u:a	Lcom/estrongs/fs/h;
+    //   1311: instanceof 668
+    //   1314: ifeq +91 -> 1405
+    //   1317: aload 7
+    //   1319: new 660	com/estrongs/fs/z
+    //   1322: dup
+    //   1323: aload_0
+    //   1324: getfield 136	com/estrongs/fs/b/r:n	Lcom/estrongs/fs/h;
+    //   1327: aload 8
+    //   1329: getfield 578	com/estrongs/fs/b/u:b	Ljava/lang/String;
+    //   1332: invokestatic 174	com/estrongs/android/util/ap:d	(Ljava/lang/String;)Ljava/lang/String;
+    //   1335: invokespecial 663	com/estrongs/fs/z:<init>	(Lcom/estrongs/fs/h;Ljava/lang/String;)V
+    //   1338: invokeinterface 142 2 0
+    //   1343: pop
+    //   1344: goto -833 -> 511
+    //   1347: astore 8
+    //   1349: aload 7
+    //   1351: astore 6
+    //   1353: aload 8
+    //   1355: astore 7
+    //   1357: aload_0
+    //   1358: aload 6
+    //   1360: invokespecial 585	com/estrongs/fs/b/r:a	(Ljava/util/List;)V
+    //   1363: aload_0
+    //   1364: iconst_1
+    //   1365: putfield 126	com/estrongs/fs/b/r:C	Z
+    //   1368: aload_0
+    //   1369: getfield 118	com/estrongs/fs/b/r:b	Z
+    //   1372: ifeq +30 -> 1402
+    //   1375: aload 6
+    //   1377: ifnull +25 -> 1402
+    //   1380: aload 6
+    //   1382: invokeinterface 236 1 0
+    //   1387: ifle +15 -> 1402
+    //   1390: invokestatic 615	com/estrongs/fs/a/b:a	()Lcom/estrongs/fs/a/b;
+    //   1393: aload 6
+    //   1395: aload_0
+    //   1396: getfield 112	com/estrongs/fs/b/r:w	I
+    //   1399: invokevirtual 618	com/estrongs/fs/a/b:b	(Ljava/util/List;I)V
+    //   1402: aload 7
+    //   1404: athrow
+    //   1405: aload 7
+    //   1407: new 660	com/estrongs/fs/z
+    //   1410: dup
+    //   1411: aload_0
+    //   1412: getfield 136	com/estrongs/fs/b/r:n	Lcom/estrongs/fs/h;
+    //   1415: aload 8
+    //   1417: getfield 303	com/estrongs/fs/b/u:a	Lcom/estrongs/fs/h;
+    //   1420: invokeinterface 169 1 0
+    //   1425: invokespecial 663	com/estrongs/fs/z:<init>	(Lcom/estrongs/fs/h;Ljava/lang/String;)V
+    //   1428: invokeinterface 142 2 0
+    //   1433: pop
+    //   1434: goto -923 -> 511
+    //   1437: iload 4
+    //   1439: ifeq +35 -> 1474
+    //   1442: invokestatic 674	android/os/Looper:getMainLooper	()Landroid/os/Looper;
+    //   1445: invokevirtual 678	android/os/Looper:getThread	()Ljava/lang/Thread;
+    //   1448: astore 8
+    //   1450: invokestatic 683	java/lang/Thread:currentThread	()Ljava/lang/Thread;
+    //   1453: astore 6
+    //   1455: aload 8
+    //   1457: aload 6
+    //   1459: if_acmpne +176 -> 1635
+    //   1462: iconst_1
+    //   1463: istore_1
+    //   1464: iload_1
+    //   1465: ifne +9 -> 1474
+    //   1468: ldc2_w 684
+    //   1471: invokestatic 689	java/lang/Thread:sleep	(J)V
+    //   1474: aload_0
+    //   1475: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
+    //   1478: getfield 421	com/estrongs/a/a/m:c	J
+    //   1481: lconst_0
+    //   1482: lcmp
+    //   1483: ifle +17 -> 1500
+    //   1486: aload_0
+    //   1487: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
+    //   1490: aload_0
+    //   1491: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
+    //   1494: getfield 421	com/estrongs/a/a/m:c	J
+    //   1497: putfield 470	com/estrongs/a/a/m:d	J
+    //   1500: aload_0
+    //   1501: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
+    //   1504: getfield 427	com/estrongs/a/a/m:e	J
+    //   1507: lconst_0
+    //   1508: lcmp
+    //   1509: ifle +17 -> 1526
     //   1512: aload_0
-    //   1513: iconst_0
-    //   1514: aload_0
-    //   1515: getfield 87	com/estrongs/fs/b/r:k	Lcom/estrongs/fs/b/v;
-    //   1518: invokevirtual 387	com/estrongs/fs/b/r:setTaskResult	(ILjava/lang/Object;)V
-    //   1521: goto -57 -> 1464
-    //   1524: astore 7
-    //   1526: goto -230 -> 1296
-    //   1529: iconst_0
-    //   1530: istore_1
-    //   1531: goto -167 -> 1364
-    //   1534: astore 8
-    //   1536: goto -770 -> 766
+    //   1513: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
+    //   1516: aload_0
+    //   1517: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
+    //   1520: getfield 427	com/estrongs/a/a/m:e	J
+    //   1523: putfield 456	com/estrongs/a/a/m:f	J
+    //   1526: aload_0
+    //   1527: aload_0
+    //   1528: getfield 178	com/estrongs/fs/b/r:processData	Lcom/estrongs/a/a/m;
+    //   1531: invokevirtual 600	com/estrongs/fs/b/r:onProgress	(Lcom/estrongs/a/a/m;)V
+    //   1534: aload_0
+    //   1535: ldc_w 691
+    //   1538: invokevirtual 695	com/estrongs/fs/b/r:getDecisionData	(Ljava/lang/Class;)Lcom/estrongs/a/a/d;
+    //   1541: checkcast 691	com/estrongs/a/a/h
+    //   1544: ifnull +74 -> 1618
+    //   1547: aload_0
+    //   1548: getfield 78	com/estrongs/fs/b/r:h	I
+    //   1551: aload_0
+    //   1552: getfield 76	com/estrongs/fs/b/r:g	I
+    //   1555: if_icmpne +63 -> 1618
+    //   1558: aload_0
+    //   1559: iconst_3
+    //   1560: aconst_null
+    //   1561: invokevirtual 415	com/estrongs/fs/b/r:setTaskResult	(ILjava/lang/Object;)V
+    //   1564: aload_0
+    //   1565: aload 7
+    //   1567: invokespecial 585	com/estrongs/fs/b/r:a	(Ljava/util/List;)V
+    //   1570: aload_0
+    //   1571: iconst_1
+    //   1572: putfield 126	com/estrongs/fs/b/r:C	Z
+    //   1575: aload_0
+    //   1576: getfield 118	com/estrongs/fs/b/r:b	Z
+    //   1579: ifeq +30 -> 1609
+    //   1582: aload 7
+    //   1584: ifnull +25 -> 1609
+    //   1587: aload 7
+    //   1589: invokeinterface 236 1 0
+    //   1594: ifle +15 -> 1609
+    //   1597: invokestatic 615	com/estrongs/fs/a/b:a	()Lcom/estrongs/fs/a/b;
+    //   1600: aload 7
+    //   1602: aload_0
+    //   1603: getfield 112	com/estrongs/fs/b/r:w	I
+    //   1606: invokevirtual 618	com/estrongs/fs/a/b:b	(Ljava/util/List;I)V
+    //   1609: iconst_1
+    //   1610: ireturn
+    //   1611: astore 6
+    //   1613: iconst_0
+    //   1614: istore_1
+    //   1615: goto -151 -> 1464
+    //   1618: aload_0
+    //   1619: iconst_0
+    //   1620: aload_0
+    //   1621: getfield 87	com/estrongs/fs/b/r:k	Lcom/estrongs/fs/b/v;
+    //   1624: invokevirtual 415	com/estrongs/fs/b/r:setTaskResult	(ILjava/lang/Object;)V
+    //   1627: goto -63 -> 1564
+    //   1630: astore 7
+    //   1632: goto -275 -> 1357
+    //   1635: iconst_0
+    //   1636: istore_1
+    //   1637: goto -173 -> 1464
+    //   1640: astore 8
+    //   1642: goto -849 -> 793
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	1539	0	this	r
-    //   1363	168	1	i1	int
-    //   493	846	2	bool1	boolean
-    //   508	503	3	bool2	boolean
-    //   599	129	4	l1	long
-    //   8	739	6	localObject1	Object
-    //   756	7	6	localException1	Exception
-    //   768	590	6	localObject2	Object
-    //   1505	1	6	localException2	Exception
-    //   1	1494	7	localObject3	Object
-    //   1524	1	7	localObject4	Object
-    //   4	995	8	localObject5	Object
-    //   1286	7	8	localObject6	Object
-    //   1348	8	8	localThread	Thread
-    //   1534	1	8	localException3	Exception
-    //   342	253	9	localObject7	Object
-    //   742	7	9	localException4	Exception
-    //   906	15	9	localq	q
+    //   0	1645	0	this	r
+    //   1463	174	1	i1	int
+    //   626	130	2	l1	long
+    //   503	935	4	bool1	boolean
+    //   525	525	5	bool2	boolean
+    //   8	766	6	localObject1	Object
+    //   783	7	6	localException1	Exception
+    //   795	663	6	localObject2	Object
+    //   1611	1	6	localException2	Exception
+    //   1	1600	7	localObject3	Object
+    //   1630	1	7	localObject4	Object
+    //   4	1324	8	localObject5	Object
+    //   1347	69	8	localObject6	Object
+    //   1448	8	8	localThread	Thread
+    //   1640	1	8	localException3	Exception
+    //   352	270	9	localObject7	Object
+    //   769	7	9	localException4	Exception
+    //   939	15	9	localq	q
     // Exception table:
     //   from	to	target	type
-    //   579	590	742	java/lang/Exception
-    //   605	618	742	java/lang/Exception
-    //   631	670	742	java/lang/Exception
-    //   698	739	742	java/lang/Exception
-    //   10	17	756	java/lang/Exception
-    //   21	29	756	java/lang/Exception
-    //   33	41	756	java/lang/Exception
-    //   45	53	756	java/lang/Exception
-    //   57	62	756	java/lang/Exception
-    //   66	111	756	java/lang/Exception
-    //   115	123	756	java/lang/Exception
-    //   127	134	756	java/lang/Exception
-    //   138	155	756	java/lang/Exception
-    //   185	199	756	java/lang/Exception
-    //   203	217	756	java/lang/Exception
-    //   221	228	756	java/lang/Exception
-    //   232	240	756	java/lang/Exception
-    //   244	252	756	java/lang/Exception
-    //   256	263	756	java/lang/Exception
-    //   267	277	756	java/lang/Exception
-    //   281	291	756	java/lang/Exception
-    //   319	334	756	java/lang/Exception
-    //   338	344	756	java/lang/Exception
-    //   353	361	756	java/lang/Exception
-    //   365	379	756	java/lang/Exception
-    //   383	394	756	java/lang/Exception
-    //   398	408	756	java/lang/Exception
-    //   412	438	756	java/lang/Exception
-    //   442	450	756	java/lang/Exception
-    //   454	462	756	java/lang/Exception
-    //   466	475	756	java/lang/Exception
-    //   558	571	756	java/lang/Exception
-    //   748	753	756	java/lang/Exception
-    //   872	879	756	java/lang/Exception
-    //   883	898	756	java/lang/Exception
-    //   902	908	756	java/lang/Exception
-    //   917	925	756	java/lang/Exception
-    //   475	494	1286	finally
-    //   494	509	1286	finally
-    //   949	993	1286	finally
-    //   998	1010	1286	finally
-    //   1055	1119	1286	finally
-    //   1119	1148	1286	finally
-    //   1189	1251	1286	finally
-    //   1254	1283	1286	finally
-    //   1342	1355	1286	finally
-    //   1368	1374	1286	finally
-    //   1374	1400	1286	finally
-    //   1400	1426	1286	finally
-    //   1426	1464	1286	finally
-    //   1512	1521	1286	finally
-    //   1342	1355	1505	java/lang/Exception
-    //   10	17	1524	finally
-    //   21	29	1524	finally
-    //   33	41	1524	finally
-    //   45	53	1524	finally
-    //   57	62	1524	finally
-    //   66	111	1524	finally
-    //   115	123	1524	finally
-    //   127	134	1524	finally
-    //   138	155	1524	finally
-    //   185	199	1524	finally
-    //   203	217	1524	finally
-    //   221	228	1524	finally
-    //   232	240	1524	finally
-    //   244	252	1524	finally
-    //   256	263	1524	finally
-    //   267	277	1524	finally
-    //   281	291	1524	finally
-    //   319	334	1524	finally
-    //   338	344	1524	finally
-    //   353	361	1524	finally
-    //   365	379	1524	finally
-    //   383	394	1524	finally
-    //   398	408	1524	finally
-    //   412	438	1524	finally
-    //   442	450	1524	finally
-    //   454	462	1524	finally
-    //   466	475	1524	finally
-    //   558	571	1524	finally
-    //   579	590	1524	finally
-    //   605	618	1524	finally
-    //   631	670	1524	finally
-    //   698	739	1524	finally
-    //   748	753	1524	finally
-    //   770	775	1524	finally
-    //   779	800	1524	finally
-    //   804	810	1524	finally
-    //   819	827	1524	finally
-    //   872	879	1524	finally
-    //   883	898	1524	finally
-    //   902	908	1524	finally
-    //   917	925	1524	finally
-    //   475	494	1534	java/lang/Exception
-    //   494	509	1534	java/lang/Exception
-    //   949	993	1534	java/lang/Exception
-    //   998	1010	1534	java/lang/Exception
-    //   1055	1119	1534	java/lang/Exception
-    //   1119	1148	1534	java/lang/Exception
-    //   1189	1251	1534	java/lang/Exception
-    //   1254	1283	1534	java/lang/Exception
-    //   1368	1374	1534	java/lang/Exception
-    //   1374	1400	1534	java/lang/Exception
-    //   1400	1426	1534	java/lang/Exception
-    //   1426	1464	1534	java/lang/Exception
-    //   1512	1521	1534	java/lang/Exception
+    //   606	617	769	java/lang/Exception
+    //   631	643	769	java/lang/Exception
+    //   655	693	769	java/lang/Exception
+    //   726	766	769	java/lang/Exception
+    //   10	17	783	java/lang/Exception
+    //   21	29	783	java/lang/Exception
+    //   33	41	783	java/lang/Exception
+    //   45	53	783	java/lang/Exception
+    //   57	62	783	java/lang/Exception
+    //   66	111	783	java/lang/Exception
+    //   115	123	783	java/lang/Exception
+    //   127	134	783	java/lang/Exception
+    //   138	155	783	java/lang/Exception
+    //   190	204	783	java/lang/Exception
+    //   208	222	783	java/lang/Exception
+    //   226	233	783	java/lang/Exception
+    //   237	245	783	java/lang/Exception
+    //   249	257	783	java/lang/Exception
+    //   261	268	783	java/lang/Exception
+    //   272	282	783	java/lang/Exception
+    //   286	296	783	java/lang/Exception
+    //   329	344	783	java/lang/Exception
+    //   348	354	783	java/lang/Exception
+    //   363	371	783	java/lang/Exception
+    //   375	389	783	java/lang/Exception
+    //   393	404	783	java/lang/Exception
+    //   408	418	783	java/lang/Exception
+    //   422	448	783	java/lang/Exception
+    //   452	460	783	java/lang/Exception
+    //   464	472	783	java/lang/Exception
+    //   476	485	783	java/lang/Exception
+    //   583	597	783	java/lang/Exception
+    //   775	780	783	java/lang/Exception
+    //   905	912	783	java/lang/Exception
+    //   916	931	783	java/lang/Exception
+    //   935	941	783	java/lang/Exception
+    //   950	958	783	java/lang/Exception
+    //   485	511	1347	finally
+    //   511	527	1347	finally
+    //   987	1031	1347	finally
+    //   1036	1049	1347	finally
+    //   1101	1165	1347	finally
+    //   1165	1194	1347	finally
+    //   1241	1303	1347	finally
+    //   1306	1344	1347	finally
+    //   1405	1434	1347	finally
+    //   1442	1455	1347	finally
+    //   1468	1474	1347	finally
+    //   1474	1500	1347	finally
+    //   1500	1526	1347	finally
+    //   1526	1564	1347	finally
+    //   1618	1627	1347	finally
+    //   1442	1455	1611	java/lang/Exception
+    //   10	17	1630	finally
+    //   21	29	1630	finally
+    //   33	41	1630	finally
+    //   45	53	1630	finally
+    //   57	62	1630	finally
+    //   66	111	1630	finally
+    //   115	123	1630	finally
+    //   127	134	1630	finally
+    //   138	155	1630	finally
+    //   190	204	1630	finally
+    //   208	222	1630	finally
+    //   226	233	1630	finally
+    //   237	245	1630	finally
+    //   249	257	1630	finally
+    //   261	268	1630	finally
+    //   272	282	1630	finally
+    //   286	296	1630	finally
+    //   329	344	1630	finally
+    //   348	354	1630	finally
+    //   363	371	1630	finally
+    //   375	389	1630	finally
+    //   393	404	1630	finally
+    //   408	418	1630	finally
+    //   422	448	1630	finally
+    //   452	460	1630	finally
+    //   464	472	1630	finally
+    //   476	485	1630	finally
+    //   583	597	1630	finally
+    //   606	617	1630	finally
+    //   631	643	1630	finally
+    //   655	693	1630	finally
+    //   726	766	1630	finally
+    //   775	780	1630	finally
+    //   797	802	1630	finally
+    //   806	827	1630	finally
+    //   831	837	1630	finally
+    //   846	854	1630	finally
+    //   905	912	1630	finally
+    //   916	931	1630	finally
+    //   935	941	1630	finally
+    //   950	958	1630	finally
+    //   485	511	1640	java/lang/Exception
+    //   511	527	1640	java/lang/Exception
+    //   987	1031	1640	java/lang/Exception
+    //   1036	1049	1640	java/lang/Exception
+    //   1101	1165	1640	java/lang/Exception
+    //   1165	1194	1640	java/lang/Exception
+    //   1241	1303	1640	java/lang/Exception
+    //   1306	1344	1640	java/lang/Exception
+    //   1405	1434	1640	java/lang/Exception
+    //   1468	1474	1640	java/lang/Exception
+    //   1474	1500	1640	java/lang/Exception
+    //   1500	1526	1640	java/lang/Exception
+    //   1526	1564	1640	java/lang/Exception
+    //   1618	1627	1640	java/lang/Exception
   }
 }
 

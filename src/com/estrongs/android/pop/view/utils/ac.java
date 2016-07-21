@@ -2,7 +2,7 @@ package com.estrongs.android.pop.view.utils;
 
 import android.content.Context;
 import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.util.am;
+import com.estrongs.android.util.ap;
 import com.estrongs.fs.util.a.a;
 import com.estrongs.fs.util.a.c;
 import com.estrongs.fs.util.a.d;
@@ -11,8 +11,8 @@ import com.estrongs.fs.util.a.f;
 
 public class ac
 {
-  private static volatile String a = com.estrongs.android.pop.ad.a(FexApplication.a()).x();
-  private static volatile String b = com.estrongs.android.pop.ad.a(FexApplication.a()).z();
+  private static volatile String a = com.estrongs.android.pop.ad.a(FexApplication.a()).y();
+  private static volatile String b = com.estrongs.android.pop.ad.a(FexApplication.a()).A();
   
   public static ad a(Context paramContext, String paramString)
   {
@@ -177,7 +177,7 @@ public class ac
   private static String c(Context paramContext, String paramString)
   {
     paramContext = "view_local";
-    int i = am.G(paramString);
+    int i = ap.I(paramString);
     if (i == 1) {
       paramContext = "view_smb";
     }
@@ -207,16 +207,18 @@ public class ac
         paramContext = "view_book";
       } else if ((i == 21) || (i == 22)) {
         paramContext = "view_webdav";
-      } else if (i == 28) {
+      } else if ((i == 28) || (i == 39)) {
         paramContext = "view_compress";
+      } else if (i == 40) {
+        paramContext = "view_encrypt";
       }
     }
   }
   
   public static boolean c(String paramString)
   {
-    if ((paramString == null) || (!am.ba(paramString))) {}
-    while ((!am.e(a, paramString)) && (!am.e(b, paramString))) {
+    if ((paramString == null) || (!ap.bl(paramString))) {}
+    while ((!ap.e(a, paramString)) && (!ap.e(b, paramString))) {
       return false;
     }
     return true;
@@ -224,7 +226,10 @@ public class ac
   
   public static ad d(String paramString)
   {
-    return new ad(paramString, 0, 0, 0);
+    if (paramString.equals("view_local")) {
+      return new ad(paramString, 0, 0, 0);
+    }
+    return new ad(paramString, 0, 3, 1);
   }
 }
 

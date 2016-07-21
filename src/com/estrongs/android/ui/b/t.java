@@ -1,30 +1,30 @@
 package com.estrongs.android.ui.b;
 
+import android.app.Activity;
 import android.text.ClipboardManager;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
-import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.ui.view.ag;
+import com.estrongs.android.ui.view.ak;
 
 class t
   implements View.OnClickListener
 {
-  t(q paramq, ESActivity paramESActivity) {}
+  t(q paramq, Activity paramActivity) {}
   
   public void onClick(View paramView)
   {
-    paramView = (TextView)q.a(b, 2131362178);
+    paramView = (TextView)q.a(b, 2131624743);
     if (paramView != null)
     {
       paramView = paramView.getText().toString();
       Object localObject = a;
-      ESActivity localESActivity = a;
-      localObject = (ClipboardManager)((ESActivity)localObject).getSystemService("clipboard");
+      Activity localActivity = a;
+      localObject = (ClipboardManager)((Activity)localObject).getSystemService("clipboard");
       if (localObject != null)
       {
         ((ClipboardManager)localObject).setText(paramView);
-        ag.a(a, 2131428238, 0);
+        ak.a(a, 2131231396, 0);
       }
     }
   }

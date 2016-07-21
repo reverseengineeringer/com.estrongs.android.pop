@@ -1,39 +1,40 @@
 package com.estrongs.android.pop.app;
 
-import android.widget.SeekBar;
-import android.widget.SeekBar.OnSeekBarChangeListener;
-import android.widget.TextView;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.ui.view.ac;
 
 class gb
-  implements SeekBar.OnSeekBarChangeListener
+  implements View.OnClickListener
 {
-  gb(ga paramga, PopAudioPlayer paramPopAudioPlayer) {}
+  gb(PopAudioPlayer paramPopAudioPlayer) {}
   
-  public void onProgressChanged(SeekBar paramSeekBar, int paramInt, boolean paramBoolean)
+  public void onClick(View paramView)
   {
-    if ((PopAudioPlayer.a(b.a) != null) && (PopAudioPlayer.a(b.a).e()) && (paramBoolean) && (PopAudioPlayer.a(b.a).m() > 0L))
+    switch (paramView.getId())
     {
-      ga.a(b, paramInt);
-      ga.a(b).setText(PopAudioPlayer.b(b.a, paramInt));
-      PopAudioPlayer.c(b.a, 1000);
-      if (!ga.b(b)) {
-        PopAudioPlayer.a(b.a).a((int)ga.c(b));
+    default: 
+      return;
+    case 2131624432: 
+      a.r();
+      return;
+    case 2131624434: 
+      a.t();
+      return;
+    case 2131624431: 
+      a.o();
+      return;
+    case 2131624447: 
+      if (PopAudioPlayer.h(a).b()) {
+        a.z();
       }
+      PopAudioPlayer.a(a, paramView);
+      return;
+    case 2131624422: 
+      a.a(0);
+      return;
     }
-  }
-  
-  public void onStartTrackingTouch(SeekBar paramSeekBar)
-  {
-    ga.a(b, true);
-  }
-  
-  public void onStopTrackingTouch(SeekBar paramSeekBar)
-  {
-    ga.a(b, false);
-    if (ga.c(b) != -1L) {
-      PopAudioPlayer.a(b.a).a((int)ga.c(b));
-    }
-    ga.a(b, -1L);
+    a.a(1);
   }
 }
 

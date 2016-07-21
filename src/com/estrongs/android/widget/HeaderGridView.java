@@ -5,6 +5,7 @@ import android.os.Vibrator;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View.MeasureSpec;
+import android.view.ViewConfiguration;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
@@ -28,11 +29,6 @@ public class HeaderGridView
   private int k = 0;
   private Vibrator l;
   
-  public HeaderGridView(Context paramContext)
-  {
-    super(paramContext);
-  }
-  
   public HeaderGridView(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
@@ -44,6 +40,17 @@ public class HeaderGridView
   }
   
   private void a()
+  {
+    setOnScrollListener(this);
+    g = -100;
+    f = false;
+    a.setVisibility(4);
+    d = a.getMeasuredHeight();
+    i = ViewConfiguration.get(getContext()).getScaledTouchSlop();
+    l = ((Vibrator)getContext().getSystemService("vibrator"));
+  }
+  
+  private void b()
   {
     if (k == 0) {}
     for (;;)
@@ -57,7 +64,7 @@ public class HeaderGridView
         if ((f) && (n < d))
         {
           f = false;
-          e();
+          f();
           m = n;
         }
       }
@@ -76,7 +83,7 @@ public class HeaderGridView
           if (n > d)
           {
             f = true;
-            e();
+            f();
             m = n;
             continue;
             if (k != 3)
@@ -94,7 +101,7 @@ public class HeaderGridView
                 if (n > 0)
                 {
                   f = true;
-                  e();
+                  f();
                   m = n;
                 }
               }
@@ -105,13 +112,13 @@ public class HeaderGridView
     }
   }
   
-  private void b()
+  private void c()
   {
     if (k == 1) {
       if (f)
       {
         k = 2;
-        c();
+        d();
       }
     }
     for (;;)
@@ -122,17 +129,17 @@ public class HeaderGridView
       setVerticalScrollBarEnabled(true);
       return;
       k = 0;
-      d();
+      e();
       continue;
       if (k == 3)
       {
         k = 0;
-        d();
+        e();
       }
     }
   }
   
-  private void c()
+  private void d()
   {
     a.setVisibility(0);
     int m = getLeft();
@@ -142,22 +149,17 @@ public class HeaderGridView
     layout(m, i1, n, getBottom());
   }
   
-  private void d()
+  private void e()
   {
     a.setVisibility(4);
     layout(getLeft(), 0, getRight(), getBottom());
   }
   
-  private void e()
+  private void f()
   {
     if (l != null) {
       l.vibrate(30L);
     }
-  }
-  
-  public void a(boolean paramBoolean)
-  {
-    j = paramBoolean;
   }
   
   public void onMeasure(int paramInt1, int paramInt2)
@@ -222,7 +224,7 @@ public class HeaderGridView
           m = 1;
         }
         h = i2;
-        a();
+        b();
         if (m == 0) {
           break;
         }
@@ -245,11 +247,30 @@ public class HeaderGridView
           m = 1;
         }
         h = i2;
-        a();
         b();
+        c();
       }
     } while (m == 0);
     return true;
+  }
+  
+  public void setExpanded(boolean paramBoolean)
+  {
+    j = paramBoolean;
+  }
+  
+  public void setHeader(LinearLayout paramLinearLayout)
+  {
+    a = paramLinearLayout;
+    if (a != null) {}
+    for (boolean bool = true;; bool = false)
+    {
+      e = bool;
+      if (e) {
+        a();
+      }
+      return;
+    }
   }
 }
 

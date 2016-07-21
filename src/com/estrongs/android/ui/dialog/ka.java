@@ -1,5 +1,6 @@
 package com.estrongs.android.ui.dialog;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import com.estrongs.a.a;
@@ -7,15 +8,22 @@ import com.estrongs.a.a;
 class ka
   implements DialogInterface.OnClickListener
 {
-  ka(jw paramjw, a parama) {}
+  ka(jh paramjh) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (a.canPause())
+    if (jh.a(a).canPause())
     {
-      a.resume();
-      b.setMiddleButton(b.getString(2131427395), jw.b(b));
+      jh.a(a).requsestPause();
+      if (jh.a(a).canHide()) {
+        a.setRightButton(a.mContext.getString(2131231909), jh.b(a));
+      }
     }
+    else
+    {
+      return;
+    }
+    a.setConfirmButton(a.mContext.getString(2131231909), jh.b(a));
   }
 }
 

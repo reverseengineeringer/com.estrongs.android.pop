@@ -1,33 +1,30 @@
 package com.estrongs.android.util;
 
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
-import com.estrongs.android.ui.view.ag;
+import java.net.Socket;
+import java.security.KeyStore;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.TrustManager;
 
 public class n
+  extends org.apache.http.conn.ssl.SSLSocketFactory
 {
-  public static void a(Context paramContext)
+  SSLContext a = SSLContext.getInstance("TLS");
+  
+  public n(KeyStore paramKeyStore)
   {
-    a(paramContext, "contact@estrongs.com", null, null);
+    super(paramKeyStore);
+    paramKeyStore = new o(paramKeyStore);
+    a.init(null, new TrustManager[] { paramKeyStore }, null);
   }
   
-  public static void a(Context paramContext, String paramString1, String paramString2, String paramString3)
+  public Socket createSocket()
   {
-    paramString2 = new Intent();
-    paramString2.setType("text/plain");
-    paramString2.setAction("android.intent.action.SENDTO");
-    paramString2.setData(Uri.fromParts("mailto", paramString1, null));
-    try
-    {
-      paramContext.startActivity(paramString2);
-      return;
-    }
-    catch (Exception paramString1)
-    {
-      paramString1.printStackTrace();
-      ag.a(paramContext, paramContext.getString(2131428397), 1);
-    }
+    return a.getSocketFactory().createSocket();
+  }
+  
+  public Socket createSocket(Socket paramSocket, String paramString, int paramInt, boolean paramBoolean)
+  {
+    return a.getSocketFactory().createSocket(paramSocket, paramString, paramInt, paramBoolean);
   }
 }
 

@@ -1,16 +1,34 @@
 package com.estrongs.android.pop.app;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import com.estrongs.android.pop.app.c.j;
+import com.estrongs.android.pop.app.c.m;
+import com.estrongs.android.ui.dialog.eu;
+import com.estrongs.android.ui.view.ak;
 
 class ex
-  implements View.OnClickListener
+  implements eu
 {
-  ex(PopAudioPlayer paramPopAudioPlayer) {}
+  ex(ew paramew) {}
   
-  public void onClick(View paramView)
+  public boolean a(String paramString)
   {
-    a.e();
+    if (m.a().b(paramString)) {
+      ak.a(a.a, 2131231424, 0);
+    }
+    for (;;)
+    {
+      return true;
+      j localj = a.a.v();
+      if (localj.f())
+      {
+        localj.a(paramString);
+        localj.e();
+      }
+      m.a().g();
+      a.a.a(false);
+      a.a.l();
+      a.a.supportInvalidateOptionsMenu();
+    }
   }
 }
 

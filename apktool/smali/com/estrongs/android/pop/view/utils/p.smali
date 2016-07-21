@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/util/ab;
+.implements Lcom/estrongs/android/util/af;
 
 
 # instance fields
@@ -30,7 +30,7 @@
     return-void
 .end method
 
-.method private a(Lcom/estrongs/android/util/y;I)V
+.method private a(Lcom/estrongs/android/util/aa;I)V
     .locals 4
 
     new-instance v0, Landroid/os/Message;
@@ -52,16 +52,16 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;)V
+.method public downloadCompleted(Ljava/lang/Object;)V
     .locals 2
 
-    check-cast p1, Lcom/estrongs/android/util/y;
+    check-cast p1, Lcom/estrongs/android/util/aa;
 
-    iget-object v0, p1, Lcom/estrongs/android/util/y;->d:Ljava/lang/Object;
+    iget-object v0, p1, Lcom/estrongs/android/util/aa;->d:Ljava/lang/Object;
 
     check-cast v0, Lcom/estrongs/android/pop/view/utils/v;
 
-    const/4 v1, 0x1
+    const/4 v1, 0x3
 
     iput v1, v0, Lcom/estrongs/android/pop/view/utils/v;->q:I
 
@@ -69,66 +69,27 @@
 
     invoke-static {v0}, Lcom/estrongs/android/pop/view/utils/n;->a(Lcom/estrongs/android/pop/view/utils/n;)V
 
-    const v0, 0x1e246
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/utils/p;->a:Lcom/estrongs/android/pop/view/utils/n;
 
-    invoke-direct {p0, p1, v0}, Lcom/estrongs/android/pop/view/utils/p;->a(Lcom/estrongs/android/util/y;I)V
+    invoke-static {v0, p1}, Lcom/estrongs/android/pop/view/utils/n;->a(Lcom/estrongs/android/pop/view/utils/n;Lcom/estrongs/android/util/aa;)V
 
-    return-void
-.end method
+    const v0, 0x1e248
 
-.method public a(Ljava/lang/Object;JJ)V
-    .locals 6
-
-    check-cast p1, Lcom/estrongs/android/util/y;
-
-    iget-object v0, p1, Lcom/estrongs/android/util/y;->d:Ljava/lang/Object;
-
-    check-cast v0, Lcom/estrongs/android/pop/view/utils/v;
-
-    iget-wide v2, v0, Lcom/estrongs/android/pop/view/utils/v;->t:J
-
-    invoke-virtual {p1}, Lcom/estrongs/android/util/y;->g()J
-
-    move-result-wide v4
-
-    cmp-long v1, v2, v4
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p1}, Lcom/estrongs/android/util/y;->g()J
-
-    move-result-wide v2
-
-    iput-wide v2, v0, Lcom/estrongs/android/pop/view/utils/v;->t:J
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/p;->a:Lcom/estrongs/android/pop/view/utils/n;
-
-    invoke-static {v1}, Lcom/estrongs/android/pop/view/utils/n;->a(Lcom/estrongs/android/pop/view/utils/n;)V
-
-    :cond_0
-    invoke-virtual {p1}, Lcom/estrongs/android/util/y;->a()J
-
-    move-result-wide v2
-
-    iput-wide v2, v0, Lcom/estrongs/android/pop/view/utils/v;->u:J
-
-    const v0, 0x1e247
-
-    invoke-direct {p0, p1, v0}, Lcom/estrongs/android/pop/view/utils/p;->a(Lcom/estrongs/android/util/y;I)V
+    invoke-direct {p0, p1, v0}, Lcom/estrongs/android/pop/view/utils/p;->a(Lcom/estrongs/android/util/aa;I)V
 
     return-void
 .end method
 
-.method public a(Ljava/lang/Object;Ljava/lang/Throwable;)V
+.method public downloadError(Ljava/lang/Object;Ljava/lang/Throwable;)V
     .locals 8
 
     const/4 v7, 0x5
 
     const/4 v6, 0x1
 
-    check-cast p1, Lcom/estrongs/android/util/y;
+    check-cast p1, Lcom/estrongs/android/util/aa;
 
-    iget-object v0, p1, Lcom/estrongs/android/util/y;->d:Ljava/lang/Object;
+    iget-object v0, p1, Lcom/estrongs/android/util/aa;->d:Ljava/lang/Object;
 
     check-cast v0, Lcom/estrongs/android/pop/view/utils/v;
 
@@ -150,7 +111,7 @@
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {p1}, Lcom/estrongs/android/util/y;->h()V
+    invoke-virtual {p1}, Lcom/estrongs/android/util/aa;->h()V
 
     iget v1, v0, Lcom/estrongs/android/pop/view/utils/v;->q:I
 
@@ -174,7 +135,7 @@
     return-void
 
     :cond_2
-    invoke-virtual {p1}, Lcom/estrongs/android/util/y;->a()J
+    invoke-virtual {p1}, Lcom/estrongs/android/util/aa;->a()J
 
     move-result-wide v2
 
@@ -184,13 +145,13 @@
 
     if-lez v1, :cond_3
 
-    invoke-virtual {p1}, Lcom/estrongs/android/util/y;->a()J
+    invoke-virtual {p1}, Lcom/estrongs/android/util/aa;->a()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/estrongs/android/pop/view/utils/p;->b:J
 
-    invoke-virtual {p1}, Lcom/estrongs/android/util/y;->f()V
+    invoke-virtual {p1}, Lcom/estrongs/android/util/aa;->f()V
 
     goto :goto_0
 
@@ -203,7 +164,7 @@
 
     if-gez v1, :cond_4
 
-    invoke-virtual {p1}, Lcom/estrongs/android/util/y;->f()V
+    invoke-virtual {p1}, Lcom/estrongs/android/util/aa;->f()V
 
     iget-wide v0, p0, Lcom/estrongs/android/pop/view/utils/p;->c:J
 
@@ -236,21 +197,64 @@
     :cond_6
     const v0, 0x1e245
 
-    invoke-direct {p0, p1, v0}, Lcom/estrongs/android/pop/view/utils/p;->a(Lcom/estrongs/android/util/y;I)V
+    invoke-direct {p0, p1, v0}, Lcom/estrongs/android/pop/view/utils/p;->a(Lcom/estrongs/android/util/aa;I)V
 
     goto :goto_0
 .end method
 
-.method public b(Ljava/lang/Object;)V
-    .locals 2
+.method public downloadProgress(Ljava/lang/Object;JJ)V
+    .locals 6
 
-    check-cast p1, Lcom/estrongs/android/util/y;
+    check-cast p1, Lcom/estrongs/android/util/aa;
 
-    iget-object v0, p1, Lcom/estrongs/android/util/y;->d:Ljava/lang/Object;
+    iget-object v0, p1, Lcom/estrongs/android/util/aa;->d:Ljava/lang/Object;
 
     check-cast v0, Lcom/estrongs/android/pop/view/utils/v;
 
-    const/4 v1, 0x3
+    iget-wide v2, v0, Lcom/estrongs/android/pop/view/utils/v;->t:J
+
+    invoke-virtual {p1}, Lcom/estrongs/android/util/aa;->g()J
+
+    move-result-wide v4
+
+    cmp-long v1, v2, v4
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p1}, Lcom/estrongs/android/util/aa;->g()J
+
+    move-result-wide v2
+
+    iput-wide v2, v0, Lcom/estrongs/android/pop/view/utils/v;->t:J
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/p;->a:Lcom/estrongs/android/pop/view/utils/n;
+
+    invoke-static {v1}, Lcom/estrongs/android/pop/view/utils/n;->a(Lcom/estrongs/android/pop/view/utils/n;)V
+
+    :cond_0
+    invoke-virtual {p1}, Lcom/estrongs/android/util/aa;->a()J
+
+    move-result-wide v2
+
+    iput-wide v2, v0, Lcom/estrongs/android/pop/view/utils/v;->u:J
+
+    const v0, 0x1e247
+
+    invoke-direct {p0, p1, v0}, Lcom/estrongs/android/pop/view/utils/p;->a(Lcom/estrongs/android/util/aa;I)V
+
+    return-void
+.end method
+
+.method public downloadStarted(Ljava/lang/Object;)V
+    .locals 2
+
+    check-cast p1, Lcom/estrongs/android/util/aa;
+
+    iget-object v0, p1, Lcom/estrongs/android/util/aa;->d:Ljava/lang/Object;
+
+    check-cast v0, Lcom/estrongs/android/pop/view/utils/v;
+
+    const/4 v1, 0x1
 
     iput v1, v0, Lcom/estrongs/android/pop/view/utils/v;->q:I
 
@@ -258,13 +262,9 @@
 
     invoke-static {v0}, Lcom/estrongs/android/pop/view/utils/n;->a(Lcom/estrongs/android/pop/view/utils/n;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/utils/p;->a:Lcom/estrongs/android/pop/view/utils/n;
+    const v0, 0x1e246
 
-    invoke-static {v0, p1}, Lcom/estrongs/android/pop/view/utils/n;->a(Lcom/estrongs/android/pop/view/utils/n;Lcom/estrongs/android/util/y;)V
-
-    const v0, 0x1e248
-
-    invoke-direct {p0, p1, v0}, Lcom/estrongs/android/pop/view/utils/p;->a(Lcom/estrongs/android/util/y;I)V
+    invoke-direct {p0, p1, v0}, Lcom/estrongs/android/pop/view/utils/p;->a(Lcom/estrongs/android/util/aa;I)V
 
     return-void
 .end method

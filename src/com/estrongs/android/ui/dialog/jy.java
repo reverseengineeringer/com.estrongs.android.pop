@@ -1,21 +1,44 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.content.DialogInterface.OnDismissListener;
+import android.os.Handler;
 import com.estrongs.a.a;
 
 class jy
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
-  jy(jw paramjw, a parama) {}
+  jy(jh paramjh) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void run()
   {
-    if (a.canCancel())
-    {
-      b.dismiss();
-      a.requestStop();
+    if (jh.p(a)) {
+      a.d();
     }
+    do
+    {
+      return;
+      if ((jh.a(a).getTaskStatus() == 2) && (jh.l(a)))
+      {
+        a.d();
+        return;
+      }
+      if ((jh.a(a).getTaskStatus() == 3) && (jh.l(a)))
+      {
+        if (aa).waitingDecision)
+        {
+          jh.k(a).postDelayed(this, 400L);
+          return;
+        }
+        a.d();
+        return;
+      }
+      if (jh.a(a).getTaskStatus() == 1)
+      {
+        jh.k(a).postDelayed(this, 400L);
+        return;
+      }
+    } while (jh.o(a) == null);
+    jh.o(a).onDismiss(a);
   }
 }
 

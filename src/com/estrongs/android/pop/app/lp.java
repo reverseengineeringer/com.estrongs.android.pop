@@ -2,15 +2,22 @@ package com.estrongs.android.pop.app;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.ui.pcs.r;
 
 class lp
   implements DialogInterface.OnClickListener
 {
-  lp(StreamingMediaPlayer paramStreamingMediaPlayer) {}
+  lp(ShowDialogActivity paramShowDialogActivity, ci paramci) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    a.finish();
+    a.setOnDismissListener(null);
+    paramDialogInterface.dismiss();
+    paramDialogInterface = new r(b);
+    paramDialogInterface.a(new lq(this));
+    paramDialogInterface.a(true);
+    paramDialogInterface.setOnDismissListener(new lr(this));
   }
 }
 

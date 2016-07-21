@@ -1,43 +1,67 @@
 .class Lcom/estrongs/android/pop/view/ao;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.super Lcom/estrongs/android/widget/ThumbContentViewSwitcher;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/view/an;
+.field final synthetic a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/view/an;)V
+.method constructor <init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;Landroid/content/Context;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/view/ao;->a:Lcom/estrongs/android/pop/view/an;
+    iput-object p1, p0, Lcom/estrongs/android/pop/view/ao;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lcom/estrongs/android/widget/ThumbContentViewSwitcher;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
+.method protected a()Z
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/ao;->a:Lcom/estrongs/android/pop/view/an;
+    const/4 v0, 0x1
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/view/an;->a:Lcom/estrongs/android/pop/view/am;
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/ao;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/view/am;->a:Lcom/estrongs/android/pop/view/ak;
+    invoke-static {v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->c(Lcom/estrongs/android/pop/view/FileExplorerActivity;)Ljava/util/List;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/view/ak;->a:Lcom/estrongs/android/pop/view/aj;
+    move-result-object v1
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/view/aj;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    if-eqz v1, :cond_0
 
-    const/4 v1, 0x1
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/ao;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->g(Z)V
+    invoke-static {v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->c(Lcom/estrongs/android/pop/view/FileExplorerActivity;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-gtz v1, :cond_1
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public setCurrentScreen(I)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/ao;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->ab()V
+
+    invoke-super {p0, p1}, Lcom/estrongs/android/widget/ThumbContentViewSwitcher;->setCurrentScreen(I)V
 
     return-void
 .end method

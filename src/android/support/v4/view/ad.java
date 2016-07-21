@@ -1,32 +1,21 @@
 package android.support.v4.view;
 
-import android.view.MotionEvent;
-
 class ad
+  extends ac
 {
-  public static int a(MotionEvent paramMotionEvent)
+  public int a(int paramInt)
   {
-    return paramMotionEvent.getPointerCount();
+    return ag.a(paramInt);
   }
   
-  public static int a(MotionEvent paramMotionEvent, int paramInt)
+  public boolean a(int paramInt1, int paramInt2)
   {
-    return paramMotionEvent.findPointerIndex(paramInt);
+    return ag.a(paramInt1, paramInt2);
   }
   
-  public static int b(MotionEvent paramMotionEvent, int paramInt)
+  public boolean b(int paramInt)
   {
-    return paramMotionEvent.getPointerId(paramInt);
-  }
-  
-  public static float c(MotionEvent paramMotionEvent, int paramInt)
-  {
-    return paramMotionEvent.getX(paramInt);
-  }
-  
-  public static float d(MotionEvent paramMotionEvent, int paramInt)
-  {
-    return paramMotionEvent.getY(paramInt);
+    return ag.b(paramInt);
   }
 }
 

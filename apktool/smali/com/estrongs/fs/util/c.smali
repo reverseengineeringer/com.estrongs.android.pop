@@ -25,6 +25,8 @@
 
 .field private q:Ljava/io/File;
 
+.field private r:Ljava/lang/String;
+
 
 # direct methods
 .method public constructor <init>(Lcom/estrongs/fs/h;Ljava/lang/String;Z)V
@@ -38,6 +40,26 @@
 .end method
 
 .method public constructor <init>(Lcom/estrongs/fs/h;Ljava/lang/String;ZLjava/lang/String;)V
+    .locals 6
+
+    const/4 v5, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move v3, p3
+
+    move-object v4, p4
+
+    invoke-direct/range {v0 .. v5}, Lcom/estrongs/fs/util/c;-><init>(Lcom/estrongs/fs/h;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/estrongs/fs/h;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -59,6 +81,8 @@
     iput-boolean p3, p0, Lcom/estrongs/fs/util/c;->m:Z
 
     iput-object p4, p0, Lcom/estrongs/fs/util/c;->o:Ljava/lang/String;
+
+    iput-object p5, p0, Lcom/estrongs/fs/util/c;->r:Ljava/lang/String;
 
     return-void
 .end method
@@ -160,7 +184,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -228,7 +252,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -988,11 +1012,11 @@
 
     iget-object v0, p0, Lcom/estrongs/fs/util/c;->c:Lcom/estrongs/fs/h;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bc;->a(Lcom/estrongs/fs/h;)I
+    invoke-static {v0}, Lcom/estrongs/android/util/bg;->a(Lcom/estrongs/fs/h;)I
 
     move-result v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bc;->f(I)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/bg;->f(I)Z
 
     move-result v1
 
@@ -1028,7 +1052,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bc;->i(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/bg;->i(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1405,7 +1429,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/am;->bE(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/estrongs/android/util/ap;->bV(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1621,7 +1645,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->bE(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->bV(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 

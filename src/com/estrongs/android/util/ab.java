@@ -1,14 +1,21 @@
 package com.estrongs.android.util;
 
-public abstract interface ab
+import java.security.cert.X509Certificate;
+import javax.net.ssl.X509TrustManager;
+
+class ab
+  implements X509TrustManager
 {
-  public abstract void a(Object paramObject);
+  ab(aa paramaa) {}
   
-  public abstract void a(Object paramObject, long paramLong1, long paramLong2);
+  public void checkClientTrusted(X509Certificate[] paramArrayOfX509Certificate, String paramString) {}
   
-  public abstract void a(Object paramObject, Throwable paramThrowable);
+  public void checkServerTrusted(X509Certificate[] paramArrayOfX509Certificate, String paramString) {}
   
-  public abstract void b(Object paramObject);
+  public X509Certificate[] getAcceptedIssuers()
+  {
+    return null;
+  }
 }
 
 /* Location:

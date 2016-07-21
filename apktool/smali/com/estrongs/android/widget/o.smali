@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/ui/dialog/er;
+.implements Landroid/content/DialogInterface$OnDismissListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/widget/n;
+.field final synthetic a:Lcom/estrongs/android/widget/f;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/widget/n;)V
+.method constructor <init>(Lcom/estrongs/android/widget/f;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/widget/o;->a:Lcom/estrongs/android/widget/n;
+    iput-object p1, p0, Lcom/estrongs/android/widget/o;->a:Lcom/estrongs/android/widget/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,16 +22,16 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/String;)Z
+.method public onDismiss(Landroid/content/DialogInterface;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/o;->a:Lcom/estrongs/android/widget/n;
+    iget-object v0, p0, Lcom/estrongs/android/widget/o;->a:Lcom/estrongs/android/widget/f;
 
-    iget-object v0, v0, Lcom/estrongs/android/widget/n;->a:Lcom/estrongs/android/widget/g;
+    invoke-static {v0}, Lcom/estrongs/android/widget/f;->b(Lcom/estrongs/android/widget/f;)Lcom/estrongs/android/view/fv;
 
-    invoke-static {v0, p1}, Lcom/estrongs/android/widget/g;->b(Lcom/estrongs/android/widget/g;Ljava/lang/String;)V
+    move-result-object v0
 
-    const/4 v0, 0x1
+    invoke-virtual {v0}, Lcom/estrongs/android/view/fv;->i_()V
 
-    return v0
+    return-void
 .end method

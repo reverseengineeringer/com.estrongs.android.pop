@@ -1,12 +1,10 @@
 package android.support.v4.view;
 
-class bv
+import android.view.View;
+
+public abstract interface bv
 {
-  Object a;
-  int b;
-  boolean c;
-  float d;
-  float e;
+  public abstract fr onApplyWindowInsets(View paramView, fr paramfr);
 }
 
 /* Location:

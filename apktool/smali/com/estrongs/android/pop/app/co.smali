@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnDismissListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/cn;
+.field final synthetic a:Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/cn;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/co;->a:Lcom/estrongs/android/pop/app/cn;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/co;->a:Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,20 +22,24 @@
 
 
 # virtual methods
-.method public onDismiss(Landroid/content/DialogInterface;)V
-    .locals 1
+.method public onClick(Landroid/view/View;)V
+    .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/co;->a:Lcom/estrongs/android/pop/app/cn;
+    invoke-static {}, Lcom/estrongs/fs/b/ba;->b()V
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/cn;->b:Lcom/estrongs/android/pop/app/cm;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/co;->a:Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/cm;->a:Lcom/estrongs/android/pop/app/GestureManageActivity;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/GestureManageActivity;->a(Lcom/estrongs/android/pop/app/GestureManageActivity;)Lcom/estrongs/android/ui/a/w;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;->a(Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;)Landroid/app/NotificationManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/a/w;->notifyDataSetChanged()V
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/app/NotificationManager;->cancel(I)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/co;->a:Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;->finish()V
 
     return-void
 .end method

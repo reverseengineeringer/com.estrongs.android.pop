@@ -5,75 +5,104 @@ import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
-import android.graphics.drawable.NinePatchDrawable;
 import android.text.Layout;
 import android.text.Layout.Alignment;
 import android.text.StaticLayout;
 import android.text.TextPaint;
-import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import com.estrongs.android.pop.ac;
-import com.estrongs.android.ui.theme.al;
+import com.estrongs.android.ui.d.g;
+import com.estrongs.android.ui.theme.at;
 import java.util.HashMap;
 import java.util.List;
 
 public class a
 {
-  private List<String> A;
-  private float B;
-  private int a = 1;
-  private String[] b;
-  private int c;
-  private int d;
-  private NinePatchDrawable e;
-  private NinePatchDrawable f;
-  private NinePatchDrawable g;
+  private AdvancedAddressBar A;
+  private int B;
+  private HashMap<String, Layout> C;
+  private List<String> D;
+  private List<String> E;
+  private float F;
+  private boolean G = false;
+  private boolean H = false;
+  private final int I = 100;
+  private Context J;
+  private Drawable K;
+  private int L = 0;
+  int a = 0;
+  b b = null;
+  boolean c = true;
+  private int d = 1;
+  private String[] e;
+  private int f;
+  private int g;
   private Drawable h;
   private Drawable i;
-  private TextPaint j;
-  private int k;
-  private int l;
-  private int m;
-  private boolean n;
-  private boolean o = false;
-  private boolean p = false;
-  private int q = 0;
-  private long r;
-  private int s = 500;
+  private Drawable j;
+  private Drawable k;
+  private Drawable l;
+  private Drawable m;
+  private TextPaint n;
+  private int o;
+  private int p;
+  private int q;
+  private boolean r;
+  private boolean s = false;
   private boolean t = false;
-  private AccelerateDecelerateInterpolator u;
-  private String[] v;
-  private View w;
-  private int x;
-  private HashMap<String, Layout> y;
-  private List<String> z;
+  private int u = 0;
+  private long v;
+  private int w = 500;
+  private boolean x = false;
+  private AccelerateDecelerateInterpolator y;
+  private String[] z;
   
-  public a(Context paramContext, View paramView)
+  public a(Context paramContext, AdvancedAddressBar paramAdvancedAddressBar)
   {
-    w = paramView;
-    e = ((NinePatchDrawable)paramContext.getResources().getDrawable(2130837788));
-    f = ((NinePatchDrawable)paramContext.getResources().getDrawable(2130837790));
-    g = ((NinePatchDrawable)paramContext.getResources().getDrawable(2130837799));
-    i = paramContext.getResources().getDrawable(2130837791);
-    if (ac.a() < 14) {}
-    for (h = new g(paramContext.getResources().getDrawable(2130837771), 0.5F, 0.5F);; h = paramContext.getResources().getDrawable(2130837984))
+    this(paramContext, paramAdvancedAddressBar, null);
+  }
+  
+  public a(Context paramContext, AdvancedAddressBar paramAdvancedAddressBar, b paramb)
+  {
+    J = paramContext;
+    A = paramAdvancedAddressBar;
+    b = paramb;
+    if (paramb != null)
     {
-      h.setCallback(w);
-      c = com.estrongs.android.ui.d.a.a(paramContext, 8.0F);
-      d = com.estrongs.android.ui.d.a.a(paramContext, 0.0F);
-      k = com.estrongs.android.ui.d.a.a(paramContext, 4.0F);
-      l = com.estrongs.android.ui.d.a.a(paramContext, 6.0F);
-      m = com.estrongs.android.ui.d.a.a(paramContext, 18.0F);
-      u = new AccelerateDecelerateInterpolator();
-      y = new HashMap();
+      h = a;
+      i = b;
+      c = d;
+      f = e;
+      j = paramContext.getResources().getDrawable(2130838137);
+      m = paramContext.getResources().getDrawable(2130838129);
+      if (ac.a() >= 14) {
+        break label321;
+      }
+    }
+    label321:
+    for (l = new h(paramContext.getResources().getDrawable(2130838090), 0.5F, 0.5F);; l = paramContext.getResources().getDrawable(2130838317))
+    {
+      k = paramContext.getResources().getDrawable(2130838133);
+      l.setCallback(A);
+      g = g.a(paramContext, 1.0F);
+      o = g.a(paramContext, 4.0F);
+      p = g.a(paramContext, 6.0F);
+      q = g.a(paramContext, 18.0F);
+      y = new AccelerateDecelerateInterpolator();
+      C = new HashMap();
       a(paramContext);
+      a = g.a(paramContext, 100.0F);
       return;
+      h = paramContext.getResources().getDrawable(2130837665);
+      i = paramContext.getResources().getDrawable(2130837666);
+      f = g.a(paramContext, 8.0F);
+      break;
     }
   }
   
   private String a(String paramString, int paramInt)
   {
-    float f1 = StaticLayout.getDesiredWidth(paramString, j);
+    float f1 = StaticLayout.getDesiredWidth(paramString, n);
     int i1 = (int)(paramString.length() * paramInt / f1);
     for (;;)
     {
@@ -81,7 +110,7 @@ public class a
       if (i1 > 0)
       {
         str = paramString.substring(0, i1) + "…";
-        if (StaticLayout.getDesiredWidth(str, j) >= paramInt) {}
+        if (StaticLayout.getDesiredWidth(str, n) >= paramInt) {}
       }
       else
       {
@@ -93,11 +122,18 @@ public class a
   
   private void a(Context paramContext)
   {
-    j = new TextPaint();
-    j.setColor(al.a(paramContext).d(2131230735));
-    j.setTextSize(paramContext.getResources().getDimensionPixelSize(2131296266));
-    j.setAntiAlias(true);
-    j.setDither(true);
+    n = new TextPaint();
+    if (b != null) {
+      n.setColor(at.a(paramContext).c(b.c));
+    }
+    for (;;)
+    {
+      n.setTextSize(paramContext.getResources().getDimensionPixelSize(2131165465));
+      n.setAntiAlias(true);
+      n.setDither(true);
+      return;
+      n.setColor(at.a(paramContext).c(2131558620));
+    }
   }
   
   private void a(Canvas paramCanvas, Drawable paramDrawable, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
@@ -109,23 +145,38 @@ public class a
   private void a(Canvas paramCanvas, String paramString, int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5)
   {
     paramInt3 -= paramInt1;
-    Layout localLayout = (Layout)y.get(paramString);
-    Object localObject = localLayout;
-    if (localLayout == null) {
-      if (StaticLayout.getDesiredWidth(paramString, j) <= paramInt3) {
-        break label111;
+    Object localObject2 = (Layout)C.get(paramString);
+    Object localObject1 = localObject2;
+    if (localObject2 == null) {
+      if (StaticLayout.getDesiredWidth(paramString, n) <= paramInt3) {
+        break label148;
       }
     }
-    label111:
-    for (localObject = a(paramString, paramInt3);; localObject = paramString)
+    label148:
+    for (localObject2 = a(paramString, paramInt3);; localObject2 = paramString)
     {
-      localObject = new StaticLayout((CharSequence)localObject, j, paramInt3, Layout.Alignment.ALIGN_CENTER, 1.0F, 0.0F, false);
-      y.put(paramString, localObject);
-      paramCanvas.save();
-      paramCanvas.translate(paramInt1, paramInt2);
-      ((Layout)localObject).draw(paramCanvas);
-      paramCanvas.restore();
-      return;
+      if (G) {}
+      for (;;)
+      {
+        try
+        {
+          localObject1 = Layout.Alignment.valueOf("ALIGN_LEFT");
+          localObject1 = new StaticLayout((CharSequence)localObject2, n, paramInt3, (Layout.Alignment)localObject1, 1.0F, 0.0F, false);
+          C.put(paramString, localObject1);
+          paramCanvas.save();
+          paramCanvas.translate(paramInt1, paramInt2);
+          ((Layout)localObject1).draw(paramCanvas);
+          paramCanvas.restore();
+          return;
+        }
+        catch (Exception localException)
+        {
+          localException.printStackTrace();
+          localAlignment = Layout.Alignment.ALIGN_NORMAL;
+          continue;
+        }
+        Layout.Alignment localAlignment = Layout.Alignment.ALIGN_CENTER;
+      }
     }
   }
   
@@ -133,24 +184,29 @@ public class a
   {
     int i6 = paramList1.size();
     int i3 = paramList2.size();
-    int i1 = w.getWidth();
-    int i7 = (i1 - (i6 - 1) * (d - c) + c * 2) / i6;
-    int i4 = (w.getWidth() - (i3 - 1) * (d - c) + c * 2) / i3;
-    int i2 = Math.round(j.getFontMetricsInt(null));
-    int i5 = (w.getHeight() - i2) / 2;
-    i1 = (int)((i1 + d + c) * paramFloat);
-    i1 = 0 - c + i1;
+    int i1 = A.getWidth();
+    int i7 = (i1 - (i6 - 1) * (g - f) + f * 2) / i6;
+    int i4 = (A.getWidth() - (i3 - 1) * (g - f) + f * 2) / i3;
+    int i2 = Math.round(n.getFontMetricsInt(null));
+    int i5 = (A.getMeasureHeight() - i2) / 2;
+    i1 = (int)((i1 + g + f) * paramFloat);
+    i1 = 0 - f + i1;
     i2 = 0;
     if (i2 < i6)
     {
       int i8 = i1 + i7;
-      if ((x == i2) && (!t)) {}
-      for (NinePatchDrawable localNinePatchDrawable = f;; localNinePatchDrawable = e)
+      if ((B == i2) && (!x)) {}
+      for (Drawable localDrawable = i;; localDrawable = h)
       {
-        a(paramCanvas, localNinePatchDrawable, i1, 0, i8, w.getHeight());
-        a(paramCanvas, (String)paramList1.get(i2), i1 + c, i5, i8 - c, w.getHeight(), i2);
-        i1 = d + i8 - c;
+        a(paramCanvas, localDrawable, i1, 0, i8, A.getMeasureHeight());
+        a(paramCanvas, (String)paramList1.get(i2), i1 + f, i5, i8 - f, A.getMeasureHeight(), i2);
+        i1 = g;
+        int i9 = f;
+        if ((!G) && (c)) {
+          a(paramCanvas, k, i8 - k.getIntrinsicWidth(), (A.getMeasureHeight() - k.getIntrinsicHeight()) / 2, i8, (A.getMeasureHeight() + k.getIntrinsicHeight()) / 2);
+        }
         i2 += 1;
+        i1 = i1 + i8 - i9;
         break;
       }
     }
@@ -158,13 +214,18 @@ public class a
     if (i2 < i3)
     {
       i6 = i1 + i4;
-      if ((x == i2) && (!t)) {}
-      for (paramList1 = f;; paramList1 = e)
+      if ((B == i2) && (!x)) {}
+      for (paramList1 = i;; paramList1 = h)
       {
-        a(paramCanvas, paramList1, i1, 0, i6, w.getHeight());
-        a(paramCanvas, (String)paramList2.get(i2), i1 + c, i5, i6 - c, w.getHeight(), i2);
-        i1 = d + i6 - c;
+        a(paramCanvas, paramList1, i1, 0, i6, A.getMeasureHeight());
+        a(paramCanvas, (String)paramList2.get(i2), i1 + f, i5, i6 - f, A.getMeasureHeight(), i2);
+        i1 = g;
+        i7 = f;
+        if ((i2 != i3 - 1) && (!G) && (c)) {
+          a(paramCanvas, k, i6 - k.getIntrinsicWidth(), (A.getMeasureHeight() - k.getIntrinsicHeight()) / 2, i6, (A.getMeasureHeight() + k.getIntrinsicHeight()) / 2);
+        }
         i2 += 1;
+        i1 = i1 + i6 - i7;
         break;
       }
     }
@@ -172,91 +233,129 @@ public class a
   
   private void a(Canvas paramCanvas, String[] paramArrayOfString, float paramFloat)
   {
-    int i1 = Math.round(j.getFontMetricsInt(null));
-    int i3 = (w.getHeight() - i1) / 2;
-    int i4 = (w.getWidth() - (a - 1) * (d - c) + c * 2) / a;
-    i1 = (int)((i4 - d - c) * paramFloat);
-    int i2 = 0 - c + i1;
-    int i5 = paramArrayOfString.length;
-    i1 = 0;
-    if (i1 < i5)
+    int i1 = Math.round(n.getFontMetricsInt(null));
+    if (A.getMeasureHeight() > 1000) {
+      return;
+    }
+    int i4 = (A.getMeasureHeight() - i1) / 2;
+    int i2;
+    label92:
+    int i5;
+    int i3;
+    label128:
+    int i6;
+    Drawable localDrawable;
+    if (H)
     {
-      int i6 = i2 + i4;
-      if ((x == i1) && (!t)) {}
-      for (NinePatchDrawable localNinePatchDrawable = f;; localNinePatchDrawable = e)
+      i2 = (a * a() - (d - 1) * (g - f) + f) / d - L;
+      i1 = (int)((i2 - g - f) * paramFloat);
+      i1 = 0 - f + i1;
+      i5 = paramArrayOfString.length;
+      i3 = 0;
+      if (i3 < i5)
       {
-        a(paramCanvas, localNinePatchDrawable, i2, 0, i6, w.getHeight());
-        a(paramCanvas, paramArrayOfString[i1], i2 + c, i3, i6 - c, w.getHeight(), i1);
-        i2 = d + i6 - c;
-        i1 += 1;
-        break;
+        i6 = i1 + i2;
+        if ((B != i3) || (x)) {
+          break label430;
+        }
+        localDrawable = i;
+        label164:
+        a(paramCanvas, localDrawable, i1, 0, i6, A.getMeasureHeight());
+        a(paramCanvas, paramArrayOfString[i3], i1 + f, i4, i6 - f, A.getMeasureHeight(), i3);
+        if ((i3 != i5 - 1) && (!c))
+        {
+          localDrawable = K;
+          i1 = (A.getMeasureHeight() - localDrawable.getIntrinsicHeight()) / 2;
+          a(paramCanvas, localDrawable, i6, i1, i6 + localDrawable.getIntrinsicWidth(), localDrawable.getIntrinsicHeight() + i1);
+        }
+        if (!c) {
+          break label439;
+        }
       }
+    }
+    label430:
+    label439:
+    for (i1 = g + i6 - f;; i1 = g + i6 - f + K.getIntrinsicWidth())
+    {
+      if ((i3 != i5 - 1) && (c)) {
+        a(paramCanvas, k, i6 - k.getIntrinsicWidth(), (A.getMeasureHeight() - k.getIntrinsicHeight()) / 2, i6, (A.getMeasureHeight() + k.getIntrinsicHeight()) / 2);
+      }
+      i3 += 1;
+      break label128;
+      break;
+      i2 = (A.getWidth() - (d - 1) * (g - f) + f * 2) / d - L;
+      break label92;
+      localDrawable = h;
+      break label164;
     }
   }
   
   private void a(Canvas paramCanvas, String[] paramArrayOfString, int paramInt1, int paramInt2, float paramFloat)
   {
-    int i2 = (w.getWidth() - (paramInt1 - 1) * (d - c) + c * 2) / paramInt1;
-    int i3 = (w.getWidth() - (paramInt2 - 1) * (d - c) + c * 2) / paramInt2;
+    int i2 = (A.getWidth() - (paramInt1 - 1) * (g - f) + f * 2) / paramInt1;
+    int i3 = (A.getWidth() - (paramInt2 - 1) * (g - f) + f * 2) / paramInt2;
     int i1 = Math.max(paramInt1, paramInt2);
     i2 = (int)(i2 - (i2 - i3) * paramFloat);
-    paramInt1 = Math.round(j.getFontMetricsInt(null));
-    i3 = (w.getHeight() - paramInt1) / 2;
-    paramInt2 = 0 - c;
+    paramInt1 = Math.round(n.getFontMetricsInt(null));
+    i3 = (A.getMeasureHeight() - paramInt1) / 2;
+    paramInt2 = 0 - f;
     paramInt1 = 0;
     while (paramInt1 < i1)
     {
       int i4 = paramInt2 + i2;
-      a(paramCanvas, e, paramInt2, 0, i4, w.getHeight());
-      a(paramCanvas, paramArrayOfString[paramInt1], paramInt2, i3, i4, w.getHeight(), paramInt1);
-      paramInt2 = d + i4 - c;
+      a(paramCanvas, h, paramInt2, 0, i4, A.getMeasureHeight());
+      a(paramCanvas, paramArrayOfString[paramInt1], paramInt2, i3, i4, A.getMeasureHeight(), paramInt1);
+      paramInt2 = g + i4 - f;
       paramInt1 += 1;
     }
   }
   
   private void c(Canvas paramCanvas)
   {
-    int i1 = w.getWidth() - k;
-    int i2 = i.getIntrinsicWidth();
-    int i3 = w.getHeight() - k;
-    int i4 = i.getIntrinsicHeight();
-    a(paramCanvas, i, i1 - i2, i3 - i4, i1, i3);
+    if (H) {
+      return;
+    }
+    int i1 = A.getWidth() - o;
+    int i2 = m.getIntrinsicWidth();
+    int i3 = A.getMeasureHeight() - o;
+    int i4 = m.getIntrinsicHeight();
+    a(paramCanvas, m, i1 - i2, i3 - i4, i1, i3);
   }
   
   private void d(Canvas paramCanvas)
   {
-    int i1 = w.getWidth() - l;
-    int i2 = m;
-    int i3 = (w.getHeight() + m) / 2;
-    int i4 = (w.getHeight() - m) / 2;
-    a(paramCanvas, h, i1 - i2, i4, i1, i3);
+    int i1 = A.getWidth() - p;
+    int i2 = q;
+    int i3 = (A.getMeasureHeight() + q) / 2;
+    int i4 = (A.getMeasureHeight() - q) / 2;
+    a(paramCanvas, l, i1 - i2, i4, i1, i3);
   }
   
   private void e(Canvas paramCanvas)
   {
-    a(paramCanvas, g, 0, 0, w.getWidth(), w.getHeight());
+    a(paramCanvas, j, 0, 0, A.getWidth(), A.getMeasureHeight());
   }
   
-  private void f()
+  private void g()
   {
-    t = false;
-    r = -1L;
+    x = false;
+    v = -1L;
   }
   
   public int a()
   {
-    return a;
+    return d;
   }
   
   public void a(int paramInt)
   {
-    x = paramInt;
+    B = paramInt;
   }
   
   public void a(Canvas paramCanvas)
   {
-    t = false;
-    String[] arrayOfString = b;
+    x = false;
+    String[] arrayOfString = e;
     Object localObject1 = arrayOfString;
     if (arrayOfString == null)
     {
@@ -266,15 +365,15 @@ public class a
     long l1;
     float f1;
     int i1;
-    if (t)
+    if (x)
     {
-      if (r == -1L) {
-        r = System.currentTimeMillis();
+      if (v == -1L) {
+        v = System.currentTimeMillis();
       }
-      l1 = System.currentTimeMillis() - r;
-      if (l1 > s)
+      l1 = System.currentTimeMillis() - v;
+      if (l1 > w)
       {
-        f();
+        g();
         f1 = 0.0F;
         i1 = 0;
       }
@@ -282,76 +381,76 @@ public class a
     for (;;)
     {
       if (i1 != 0) {
-        if (v.length > b.length)
+        if (z.length > e.length)
         {
-          localObject1 = v;
-          v[0] = b[0];
+          localObject1 = z;
+          z[0] = e[0];
           label122:
-          a(paramCanvas, (String[])localObject1, v.length, b.length, f1);
+          a(paramCanvas, (String[])localObject1, z.length, e.length, f1);
         }
       }
       for (;;)
       {
-        e(paramCanvas);
-        if (!t) {
-          c(paramCanvas);
+        if (!H) {
+          e(paramCanvas);
         }
+        c(paramCanvas);
         Object localObject2 = null;
         localObject1 = null;
         arrayOfString = null;
-        if (n)
+        if (r)
         {
           localObject1 = localObject2;
-          if (o)
+          if (s)
           {
             localObject1 = arrayOfString;
-            if ((h instanceof Animatable)) {
-              localObject1 = (Animatable)h;
+            if ((l instanceof Animatable)) {
+              localObject1 = (Animatable)l;
             }
             if (localObject1 != null) {
               ((Animatable)localObject1).start();
             }
-            o = false;
+            s = false;
           }
           d(paramCanvas);
         }
-        if (p)
+        if (t)
         {
-          if ((h instanceof Animatable)) {
-            localObject1 = (Animatable)h;
+          if ((l instanceof Animatable)) {
+            localObject1 = (Animatable)l;
           }
           if (localObject1 != null) {
             ((Animatable)localObject1).stop();
           }
-          p = false;
+          t = false;
         }
-        if (t) {
-          w.postInvalidate();
+        if (x) {
+          A.postInvalidate();
         }
         return;
-        localObject1 = v;
-        f1 = (float)l1 * 1.0F / s;
-        f1 = u.getInterpolation(f1);
-        if (q == -1)
+        localObject1 = z;
+        f1 = (float)l1 * 1.0F / w;
+        f1 = y.getInterpolation(f1);
+        if (u == -1)
         {
           f1 = (1.0F - f1) * -1.0F;
           i1 = 0;
           break;
         }
-        if (q == 1)
+        if (u == 1)
         {
           f1 = 0.0F - f1;
           i1 = 0;
           break;
         }
-        if (b.length == v.length) {
+        if (e.length == z.length) {
           break label399;
         }
         i1 = 1;
         break;
-        localObject1 = b;
+        localObject1 = e;
         break label122;
-        if (q == 0) {
+        if (u == 0) {
           f1 = 0.0F;
         }
         a(paramCanvas, (String[])localObject1, f1);
@@ -364,137 +463,168 @@ public class a
     }
   }
   
+  public void a(b paramb)
+  {
+    b = paramb;
+    h = a;
+    i = b;
+    c = d;
+    f = e;
+    K = f;
+    L = g.a(J, 14.0F);
+    a(J);
+  }
+  
   public void a(List<String> paramList1, List<String> paramList2, float paramFloat)
   {
-    z = paramList1;
-    A = paramList2;
-    B = paramFloat;
+    D = paramList1;
+    E = paramList2;
+    F = paramFloat;
   }
   
   public void a(boolean paramBoolean)
   {
-    n = paramBoolean;
-    if (n)
+    r = paramBoolean;
+    if (r)
     {
-      o = true;
-      p = false;
+      s = true;
+      t = false;
       return;
     }
-    p = true;
-    o = false;
+    t = true;
+    s = false;
   }
   
   public void a(String[] paramArrayOfString, int paramInt)
   {
-    q = paramInt;
-    if (q == 1)
+    u = paramInt;
+    if (u == 1)
     {
-      v = new String[a + 1];
+      z = new String[d + 1];
       paramInt = 0;
-      while (paramInt < b.length)
+      while (paramInt < e.length)
       {
-        v[paramInt] = b[paramInt];
+        z[paramInt] = e[paramInt];
         paramInt += 1;
       }
-      v[paramInt] = paramArrayOfString[(paramArrayOfString.length - 1)];
-      t = true;
-      if (b.length != paramArrayOfString.length) {
-        q = 0;
+      z[paramInt] = paramArrayOfString[(paramArrayOfString.length - 1)];
+      x = true;
+      if (e.length != paramArrayOfString.length) {
+        u = 0;
       }
     }
     for (;;)
     {
-      if (q == 0)
+      if (u == 0)
       {
-        if ((b != null) && (b.length != paramArrayOfString.length)) {
-          t = true;
+        if ((e != null) && (e.length != paramArrayOfString.length)) {
+          x = true;
         }
-        v = b;
+        z = e;
       }
-      b = paramArrayOfString;
-      a = paramArrayOfString.length;
-      if (a > 2) {
-        a = 2;
+      e = paramArrayOfString;
+      d = paramArrayOfString.length;
+      if ((!H) && (d > 2)) {
+        d = 2;
       }
-      r = -1L;
+      v = -1L;
       return;
-      if (q == -1)
+      if (u == -1)
       {
-        v = new String[a + 1];
-        v[0] = paramArrayOfString[0];
+        z = new String[d + 1];
+        z[0] = paramArrayOfString[0];
         paramInt = 0;
-        while (paramInt < b.length)
+        while (paramInt < e.length)
         {
-          v[(paramInt + 1)] = b[paramInt];
+          z[(paramInt + 1)] = e[paramInt];
           paramInt += 1;
         }
-        t = true;
-        if (b.length != paramArrayOfString.length) {
-          q = 0;
+        x = true;
+        if (e.length != paramArrayOfString.length) {
+          u = 0;
         }
       }
     }
+  }
+  
+  public int b()
+  {
+    return a * a() + g.a(J, 10.0F);
   }
   
   public void b(Canvas paramCanvas)
   {
-    float f1 = B;
+    float f1 = F;
     if (f1 > 0.0F) {}
     for (f1 = 0.0F - f1;; f1 = -1.0F - f1)
     {
-      a(paramCanvas, z, A, f1);
-      e(paramCanvas);
+      a(paramCanvas, D, E, f1);
+      if (!H) {
+        e(paramCanvas);
+      }
+      c(paramCanvas);
       Object localObject3 = null;
       Object localObject1 = null;
       Object localObject2 = null;
-      if (n)
+      if (r)
       {
         localObject1 = localObject3;
-        if (o)
+        if (s)
         {
           localObject1 = localObject2;
-          if ((h instanceof Animatable)) {
-            localObject1 = (Animatable)h;
+          if ((l instanceof Animatable)) {
+            localObject1 = (Animatable)l;
           }
           if (localObject1 != null) {
             ((Animatable)localObject1).start();
           }
-          o = false;
+          s = false;
         }
         d(paramCanvas);
       }
-      if (p)
+      if (t)
       {
-        if ((h instanceof Animatable)) {
-          localObject1 = (Animatable)h;
+        if ((l instanceof Animatable)) {
+          localObject1 = (Animatable)l;
         }
         if (localObject1 != null) {
           ((Animatable)localObject1).stop();
         }
-        p = false;
+        t = false;
       }
       return;
     }
   }
   
-  public boolean b()
+  public void b(boolean paramBoolean)
   {
-    return t;
+    G = paramBoolean;
+    f();
+  }
+  
+  public void c(boolean paramBoolean)
+  {
+    H = paramBoolean;
   }
   
   public boolean c()
   {
-    return n;
+    return x;
   }
   
-  public Drawable d()
+  public boolean d()
   {
-    return h;
+    return r;
   }
   
-  public void e()
+  public Drawable e()
   {
-    y.clear();
+    return l;
+  }
+  
+  public void f()
+  {
+    C.clear();
   }
 }
 

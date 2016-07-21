@@ -1,36 +1,22 @@
 package com.estrongs.android.pop.app;
 
-import android.content.ActivityNotFoundException;
-import android.content.Intent;
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.ui.e.iw;
+import android.content.Context;
+import android.view.WindowManager.LayoutParams;
+import com.estrongs.android.ui.e.ju;
 
 class jq
-  implements MenuItem.OnMenuItemClickListener
+  extends ju
 {
-  jq(PopVideoPlayer paramPopVideoPlayer) {}
-  
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  jq(PopVideoPlayer paramPopVideoPlayer, Context paramContext, boolean paramBoolean1, boolean paramBoolean2)
   {
-    paramMenuItem = a.getIntent().getData();
-    if (paramMenuItem == null) {
-      return true;
-    }
-    Intent localIntent = new Intent();
-    localIntent.setAction("android.intent.action.SEND");
-    localIntent.setType("video/*");
-    localIntent.putExtra("android.intent.extra.STREAM", paramMenuItem);
-    try
-    {
-      a.startActivity(Intent.createChooser(localIntent, a.getText(2131427389)));
-      PopVideoPlayer.D(a).d();
-      return true;
-    }
-    catch (ActivityNotFoundException paramMenuItem)
-    {
-      for (;;) {}
-    }
+    super(paramContext, paramBoolean1, paramBoolean2);
+  }
+  
+  protected void a()
+  {
+    super.a();
+    WindowManager.LayoutParams localLayoutParams = b;
+    flags |= 0x400;
   }
 }
 

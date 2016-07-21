@@ -1,41 +1,57 @@
 .class Lcom/estrongs/android/view/bz;
-.super Landroid/os/FileObserver;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcom/estrongs/fs/i;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/view/aw;
+.field final synthetic a:Z
+
+.field final synthetic b:Lcom/estrongs/android/view/bx;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/view/aw;Ljava/lang/String;)V
-    .locals 1
+.method constructor <init>(Lcom/estrongs/android/view/bx;Z)V
+    .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/view/bz;->a:Lcom/estrongs/android/view/aw;
+    iput-object p1, p0, Lcom/estrongs/android/view/bz;->b:Lcom/estrongs/android/view/bx;
 
-    const/16 v0, 0x3c0
+    iput-boolean p2, p0, Lcom/estrongs/android/view/bz;->a:Z
 
-    invoke-direct {p0, p2, v0}, Landroid/os/FileObserver;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onEvent(ILjava/lang/String;)V
+.method public a(Lcom/estrongs/fs/h;)Z
     .locals 2
 
-    const/4 v1, 0x1
+    invoke-interface {p1}, Lcom/estrongs/fs/h;->getName()Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/estrongs/android/view/bz;->a:Lcom/estrongs/android/view/aw;
+    move-result-object v0
 
-    iget-boolean v0, v0, Lcom/estrongs/android/view/aw;->X:Z
+    const-string v1, "."
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/view/bz;->a:Lcom/estrongs/android/view/aw;
+    iget-boolean v0, p0, Lcom/estrongs/android/view/bz;->a:Z
 
-    invoke-virtual {v0, v1, v1}, Lcom/estrongs/android/view/aw;->a(ZZ)V
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
 
     :cond_0
-    return-void
+    const/4 v0, 0x1
+
+    goto :goto_0
 .end method

@@ -1,7 +1,7 @@
 package com.estrongs.fs;
 
 import com.estrongs.android.util.TypedMap;
-import com.estrongs.android.util.am;
+import com.estrongs.android.util.ap;
 
 public abstract class a
   implements h
@@ -11,12 +11,13 @@ public abstract class a
   protected TypedMap extras = null;
   protected boolean isLink = false;
   protected boolean isShouldTryLoadThumbnail = true;
+  protected long lastAccessed = -1L;
   protected long lastModified = -1L;
   protected String linkTarget = null;
   protected String name;
   protected String path;
   protected long size = -1L;
-  protected m type = m.M;
+  protected w type = w.L;
   
   public a() {}
   
@@ -26,7 +27,7 @@ public abstract class a
     absolutePath = paramString;
   }
   
-  public a(String paramString, m paramm)
+  public a(String paramString, w paramw)
   {
     this(paramString);
   }
@@ -37,7 +38,7 @@ public abstract class a
     absolutePath = paramString2;
   }
   
-  public a(String paramString1, String paramString2, m paramm)
+  public a(String paramString1, String paramString2, w paramw)
   {
     this(paramString1, paramString2);
   }
@@ -62,7 +63,7 @@ public abstract class a
     return lastModified();
   }
   
-  protected m doGetFileType()
+  protected w doGetFileType()
   {
     return type;
   }
@@ -105,9 +106,9 @@ public abstract class a
     return null;
   }
   
-  public m getFileType()
+  public w getFileType()
   {
-    if (type == m.M) {
+    if (type == w.L) {
       type = doGetFileType();
     }
     return type;
@@ -121,7 +122,7 @@ public abstract class a
   public String getName()
   {
     if (name == null) {
-      name = am.d(absolutePath);
+      name = ap.d(absolutePath);
     }
     if (name == null) {
       name = "";
@@ -131,7 +132,7 @@ public abstract class a
   
   public String getPath()
   {
-    return am.bx(path);
+    return ap.bO(path);
   }
   
   public boolean hasPermission(int paramInt)
@@ -155,7 +156,10 @@ public abstract class a
   
   public long lastAccessed()
   {
-    return lastModified();
+    if (lastAccessed == -1L) {
+      lastAccessed = lastModified();
+    }
+    return lastAccessed;
   }
   
   public long lastModified()
@@ -181,9 +185,9 @@ public abstract class a
     esType = paramInt;
   }
   
-  public void setFileType(m paramm)
+  public void setFileType(w paramw)
   {
-    type = paramm;
+    type = paramw;
   }
   
   public void setName(String paramString)

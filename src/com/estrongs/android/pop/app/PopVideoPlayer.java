@@ -9,13 +9,10 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Rect;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
@@ -23,15 +20,19 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.TextView;
+import com.estrongs.android.j.c;
 import com.estrongs.android.pop.ac;
 import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.ui.e.ic;
-import com.estrongs.android.ui.e.iw;
+import com.estrongs.android.ui.d.g;
+import com.estrongs.android.ui.e.hz;
+import com.estrongs.android.ui.e.im;
 import com.estrongs.android.ui.notification.ChromeCastPlayerNotificationHelper;
+import com.estrongs.android.ui.theme.at;
 import com.estrongs.android.ui.view.ESVideoView;
-import com.estrongs.android.util.al;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bc;
+import com.estrongs.android.util.ao;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bg;
+import com.estrongs.android.util.k;
 import com.estrongs.android.util.l;
 import com.estrongs.fs.d;
 import java.io.InputStream;
@@ -39,24 +40,24 @@ import java.net.URL;
 
 public class PopVideoPlayer
   extends ESActivity
-  implements com.estrongs.android.ui.e.jb
+  implements com.estrongs.android.ui.e.jz
 {
   private static final String k = PopVideoPlayer.class.getSimpleName();
   private int A = 0;
-  private aa B = aa.g();
-  private r C = null;
+  private ag B = ag.g();
+  private x C = null;
   private TextView D = null;
   private boolean E = false;
   private boolean F = false;
   private boolean G = true;
   private long H = 0L;
   private long I = 0L;
-  private Handler J = new iq(this);
-  private final BroadcastReceiver K = new jd(this);
-  private final BroadcastReceiver L = new js(this);
-  private final BroadcastReceiver M = new ju(this);
-  private iw N;
-  private ic O;
+  private Handler J = new jg(this);
+  private final BroadcastReceiver K = new js(this);
+  private final BroadcastReceiver L = new kh(this);
+  private final BroadcastReceiver M = new kj(this);
+  private com.estrongs.android.ui.e.ju N;
+  private hz O;
   private com.estrongs.android.view.a.a P;
   private com.estrongs.android.view.a.a Q;
   private com.estrongs.android.view.a.a R;
@@ -64,8 +65,8 @@ public class PopVideoPlayer
   private final int T = 0;
   private final int U = 1;
   private Object V = new Object();
-  private iw W;
-  private ic X;
+  private com.estrongs.android.ui.e.ju W;
+  private hz X;
   private com.estrongs.android.view.a.a Y;
   private com.estrongs.android.view.a.a Z;
   boolean a = true;
@@ -78,7 +79,7 @@ public class PopVideoPlayer
   boolean e = false;
   boolean f = false;
   boolean g = false;
-  i h = null;
+  m h = null;
   Boolean i = Boolean.valueOf(false);
   boolean j = true;
   private d l = d.a(this);
@@ -87,11 +88,11 @@ public class PopVideoPlayer
   private FrameLayout o;
   private MediaController p;
   private MediaController q;
-  private ke r;
+  private kt r;
   private int t = 0;
   private Uri u = null;
   private String v = null;
-  private com.estrongs.android.util.a w = null;
+  private c w = null;
   private View x;
   private TextView y;
   private View z;
@@ -109,7 +110,7 @@ public class PopVideoPlayer
         return paramUri.getPath();
       }
       if (("http".equals(paramUri.getScheme())) && ("127.0.0.1".equals(paramUri.getHost()))) {
-        return am.bq(Uri.decode(paramUri.toString()));
+        return ap.bH(Uri.decode(paramUri.toString()));
       }
       Cursor localCursor = getContentResolver().query(paramUri, new String[] { "_data" }, null, null, null);
       try
@@ -145,7 +146,7 @@ public class PopVideoPlayer
     {
       if ((a()) || (paramBoolean))
       {
-        B.a(u.getPath(), am.a(v, com.estrongs.android.c.a.a(), true, true), am.d(v), bc.S(am.d(v)), null);
+        B.a(u.getPath(), ap.a(v, com.estrongs.android.g.a.a(), true, true), ap.d(v), bg.U(ap.d(v)), null);
         h();
       }
       return;
@@ -173,7 +174,7 @@ public class PopVideoPlayer
           if (!str.substring(0, i1).startsWith("127.0.0.1")) {
             return false;
           }
-          str = am.bq(str.substring(i1));
+          str = ap.bH(str.substring(i1));
           Intent localIntent = new Intent(this, StreamingMediaPlayer.class);
           localIntent.addFlags(67108864);
           localIntent.setData(Uri.parse(str));
@@ -202,7 +203,7 @@ public class PopVideoPlayer
   {
     if (!B.p())
     {
-      Log.e(k, "changeToCastMode error, chromecast is not connected");
+      l.e(k, "changeToCastMode error, chromecast is not connected");
       return;
     }
     if (p != null) {
@@ -213,10 +214,10 @@ public class PopVideoPlayer
     o.setVisibility(0);
     if (q == null)
     {
-      q = new jv(this, this);
+      q = new kk(this, this);
       if (r == null)
       {
-        r = new ke(this);
+        r = new kt(this);
         B.a(r);
         B.a(r);
         B.a(r);
@@ -224,7 +225,7 @@ public class PopVideoPlayer
       q.setMediaPlayer(r);
       q.setAnchorView(o);
     }
-    ((ImageView)z.findViewById(2131361853)).setImageResource(2130838158);
+    ((ImageView)z.findViewById(2131624054)).setImageResource(2130838531);
     if ((B.r() > 0) && (B.r() != 2)) {
       b.setVisibility(0);
     }
@@ -233,7 +234,7 @@ public class PopVideoPlayer
   
   private void i()
   {
-    if (aa.b())
+    if (ag.b())
     {
       z.setVisibility(0);
       return;
@@ -256,8 +257,8 @@ public class PopVideoPlayer
     o.setVisibility(8);
     Message localMessage = J.obtainMessage(4);
     J.sendMessageDelayed(localMessage, 100L);
-    n();
-    ((ImageView)z.findViewById(2131361853)).setImageResource(2130838199);
+    o();
+    ((ImageView)z.findViewById(2131624054)).setImageResource(2130838530);
     if (b.getVisibility() == 0) {
       b.setVisibility(8);
     }
@@ -269,9 +270,9 @@ public class PopVideoPlayer
     if (C != null) {
       return;
     }
-    C = new r(this);
-    C.a(new iz(this));
-    C.setOnCancelListener(new ja(this));
+    C = new x(this);
+    C.a(new jo(this));
+    C.setOnCancelListener(new jp(this));
   }
   
   private void m()
@@ -286,10 +287,10 @@ public class PopVideoPlayer
     if (b.getVisibility() == 0) {
       b.setVisibility(8);
     }
-    new Thread(new jh(this)).start();
+    new Thread(new jw(this)).start();
   }
   
-  private void n()
+  private void o()
   {
     if (!a()) {
       ChromeCastPlayerNotificationHelper.a().j();
@@ -304,11 +305,11 @@ public class PopVideoPlayer
         {
           if (ac.a() >= 8)
           {
-            new al(m).a("resume");
+            new ao(m).a("resume");
             if (ac.a() >= 14) {
               m.seekTo(t);
             }
-            if ("Market".startsWith("Spreadtrum"))
+            if (com.estrongs.android.pop.view.a.a.startsWith("Spreadtrum"))
             {
               if (!j) {
                 break label107;
@@ -332,16 +333,16 @@ public class PopVideoPlayer
           g = false;
           return;
         }
-        q();
+        r();
         return;
       }
     } while (!e);
-    q();
+    r();
     t = 0;
     e = false;
   }
   
-  private void o()
+  private void p()
   {
     for (;;)
     {
@@ -359,7 +360,7 @@ public class PopVideoPlayer
       finally {}
       return;
       if (h == null) {
-        h = new i(this, null);
+        h = new m(this, null);
       }
       synchronized (V)
       {
@@ -370,7 +371,7 @@ public class PopVideoPlayer
     }
   }
   
-  private void p()
+  private void q()
   {
     for (;;)
     {
@@ -406,7 +407,7 @@ public class PopVideoPlayer
     }
   }
   
-  private void q()
+  private void r()
   {
     int i1 = 0;
     Object localObject = getIntent().getData();
@@ -414,7 +415,7 @@ public class PopVideoPlayer
     {
       if (((Uri)localObject).toString().startsWith("smb://"))
       {
-        m.a((Uri)localObject);
+        m.setVideoURI((Uri)localObject);
         new URL(((Uri)localObject).toString()).openStream().close();
         return;
       }
@@ -432,12 +433,12 @@ public class PopVideoPlayer
     catch (Exception localException) {}
   }
   
-  private boolean r()
+  private boolean s()
   {
     return (N != null) && (N.b());
   }
   
-  private boolean s()
+  private boolean t()
   {
     return (W != null) && (W.b());
   }
@@ -454,7 +455,7 @@ public class PopVideoPlayer
       }
       if (!F)
       {
-        l.a();
+        k.a();
         F = true;
       }
       return;
@@ -469,7 +470,7 @@ public class PopVideoPlayer
       m.a();
       if (F)
       {
-        l.b();
+        k.b();
         F = false;
       }
       return;
@@ -490,19 +491,20 @@ public class PopVideoPlayer
   {
     if (N == null)
     {
-      N = new jb(this, this, true, true);
-      O = new ic(this, true);
+      N = new jq(this, this, true, true);
+      O = new hz(this, true);
       N.a(O);
       N.a(O.c());
-      N.a(new jc(this));
-      Q = new com.estrongs.android.view.a.a(getResources().getDrawable(2130838180), getString(2131428524)).a(new je(this));
-      P = new com.estrongs.android.view.a.a(getResources().getDrawable(2130838157), getString(2131428525)).a(new jf(this));
-      R = new com.estrongs.android.view.a.a(getResources().getDrawable(2130838157), getString(2131428523)).a(new jg(this));
-      com.estrongs.android.ui.e.jk localjk = O.b();
-      localjk.j();
-      localjk.a(R);
+      N.a(new jr(this));
+      int i1 = J().c(2131558714);
+      Q = new com.estrongs.android.view.a.a(g.a(getResources().getDrawable(2130838578), i1), getString(2131231151)).a(new jt(this));
+      P = new com.estrongs.android.view.a.a(g.a(getResources().getDrawable(2130838530), i1), getString(2131231154)).a(new ju(this));
+      R = new com.estrongs.android.view.a.a(g.a(getResources().getDrawable(2130838530), i1), getString(2131231148)).a(new jv(this));
+      com.estrongs.android.ui.e.km localkm = O.b();
+      localkm.j();
+      localkm.a(R);
       if ((!a()) && (!n)) {
-        localjk.a(Q);
+        localkm.a(Q);
       }
     }
     if (!N.b())
@@ -517,40 +519,44 @@ public class PopVideoPlayer
   {
     if (W == null)
     {
-      W = new ji(this, this, true, true);
-      X = new ic(this, true);
+      W = new jx(this, this, true, true);
+      X = new hz(this, true);
       W.a(X);
       W.a(X.c());
-      W.a(new jj(this));
-      Y = new com.estrongs.android.view.a.a(getResources().getDrawable(2130838180), getString(2131427872)).a(new jk(this));
-      aa = new com.estrongs.android.view.a.a(getResources().getDrawable(2130838172), getString(2131427347)).a(new jl(this));
-      ab = new com.estrongs.android.view.a.a(getResources().getDrawable(2130838188), getString(2131427388)).a(new jq(this));
-      Z = new com.estrongs.android.view.a.a(getResources().getDrawable(2130838180), getString(2131427872)).a(new jr(this));
-      P = new com.estrongs.android.view.a.a(getResources().getDrawable(2130838157), getString(2131428525)).a(new jt(this));
+      W.a(new jy(this));
+      int i1 = J().c(2131558714);
+      Y = new com.estrongs.android.view.a.a(g.a(getResources().getDrawable(2130838578), i1), getString(2131232546)).a(new jz(this));
+      aa = new com.estrongs.android.view.a.a(g.a(getResources().getDrawable(2130838539), i1), getString(2131230845)).a(new ka(this));
+      ab = new com.estrongs.android.view.a.a(g.a(getResources().getDrawable(2130838604), i1), getString(2131230892)).a(new kf(this));
+      Z = new com.estrongs.android.view.a.a(g.a(getResources().getDrawable(2130838578), i1), getString(2131232546)).a(new kg(this));
+      P = new com.estrongs.android.view.a.a(g.a(getResources().getDrawable(2130838530), i1), getString(2131231154)).a(new ki(this));
     }
-    com.estrongs.android.ui.e.jk localjk = X.b();
-    localjk.j();
+    com.estrongs.android.ui.e.km localkm = X.b();
+    if ((localkm instanceof im)) {
+      ((im)localkm).b(true);
+    }
+    localkm.j();
     String str = a(u);
     if ((str != null) && (!"http".equals(u.getScheme()))) {
-      localjk.a(ab);
+      localkm.a(ab);
     }
-    if ((!"Market".equals("Sharp")) && (str != null)) {
-      localjk.a(aa);
+    if ((!com.estrongs.android.pop.view.a.a.equals("Sharp")) && (str != null)) {
+      localkm.a(aa);
     }
     if (a())
     {
-      if (aa.a()) {
-        localjk.a(P);
+      if (ag.a()) {
+        localkm.a(P);
       }
-      localjk.a(Y);
+      localkm.a(Y);
     }
     while (!W.b())
     {
       W.c();
-      ((ImageView)d.findViewById(2131361853)).setImageResource(2130838204);
+      ((ImageView)d.findViewById(2131624054)).setImageResource(2130838565);
       return;
-      if (aa.a()) {
-        localjk.a(Z);
+      if (ag.a()) {
+        localkm.a(Z);
       }
     }
     W.d();
@@ -566,24 +572,23 @@ public class PopVideoPlayer
   {
     super.onCreate(paramBundle);
     setDefaultKeyMode(2);
-    requestWindowFeature(1);
     getWindow().setFlags(2000, 1024);
-    setContentView(2130903219);
-    p = new jw(this, this);
-    m = ((ESVideoView)findViewById(2131362629));
-    o = ((FrameLayout)findViewById(2131362630));
-    o.setOnClickListener(new jx(this));
-    D = ((TextView)findViewById(2131362631));
-    D.setText(getString(2131427432) + getString(2131428526));
-    m.a(p);
+    setContentView(2130903380);
+    p = new kl(this, this);
+    m = ((ESVideoView)findViewById(2131625376));
+    o = ((FrameLayout)findViewById(2131625377));
+    o.setOnClickListener(new km(this));
+    D = ((TextView)findViewById(2131625378));
+    D.setText(getString(2131232491) + getString(2131231155));
+    m.setMediaController(p);
     try
     {
       p.setEnabled(false);
       p.requestFocus();
-      m.a(new jy(this));
-      m.a(new jz(this));
-      m.a(new ir(this));
-      m.a(new is(this));
+      m.setOnCompletionListener(new kn(this));
+      m.setOnErrorListener(new ko(this));
+      m.setOnPreparedListener(new jh(this));
+      m.setSeekListener(new ji(this));
       u = getIntent().getData();
       if ((ac.a() < 8) && (e())) {
         finish();
@@ -593,60 +598,69 @@ public class PopVideoPlayer
         return;
         t = 0;
         g = false;
-        if ("Market".startsWith("Spreadtrum")) {}
+        if (com.estrongs.android.pop.view.a.a.startsWith("Spreadtrum")) {}
         try
         {
           registerReceiver(K, new IntentFilter("android.intent.action.SCREEN_OFF"));
           registerReceiver(L, new IntentFilter("android.intent.action.USER_PRESENT"));
           registerReceiver(M, new IntentFilter("android.intent.action.ACTION_SHUTDOWN"));
-          b = findViewById(2131361852);
-          w = com.estrongs.android.util.a.a(this, false, "PopVideoPlayer");
-          x = findViewById(2131362632);
-          y = ((TextView)x.findViewById(2131362633));
-          paramBundle = getIntent().getData();
-          v = a(paramBundle);
-          if (v != null) {
-            y.setText(am.d(v));
-          }
-          Object localObject = x;
-          int i1;
-          if (p.isShown())
+          b = findViewById(2131624351);
+          w = c.a(this);
+          if (!getIntent().getBooleanExtra("islocalopen", false)) {}
+          try
           {
-            i1 = 0;
-            label446:
-            ((View)localObject).setVisibility(i1);
-            localObject = new ColorDrawable(-16777216);
-            ((ColorDrawable)localObject).setAlpha(150);
-            x.setBackgroundDrawable((Drawable)localObject);
-            d = x.findViewById(2131362419);
-            d.setOnClickListener(new it(this));
-            z = findViewById(2131361927);
-            z.setOnClickListener(new iu(this));
-            findViewById(2131362418).setOnClickListener(new iv(this));
-            m.a(paramBundle);
-            if (n) {
+            w.d("act3");
+            w.a("act3", "video_player");
+            x = findViewById(2131625379);
+            y = ((TextView)x.findViewById(2131625380));
+            paramBundle = getIntent().getData();
+            v = a(paramBundle);
+            if (v != null) {
+              y.setText(ap.d(v));
+            }
+            View localView = x;
+            if (p.isShown())
+            {
+              i1 = 0;
+              localView.setVisibility(i1);
+              d = x.findViewById(2131625031);
+              d.setOnClickListener(new jj(this));
+              z = findViewById(2131624418);
+              z.setOnClickListener(new jk(this));
+              findViewById(2131625030).setOnClickListener(new jl(this));
+              m.setVideoURI(paramBundle);
+              if (n) {
+                continue;
+              }
+              if (!getIntent().getBooleanExtra("Chromecast", false)) {
+                break label648;
+              }
+              h();
+              if (getIntent().getStringExtra("ChromecastUrl") != null) {
+                a(true);
+              }
+              if (!a()) {
+                continue;
+              }
+              if (!p.isShown()) {
+                f();
+              }
+              new jm(this).start();
+              return;
+            }
+          }
+          catch (Exception paramBundle)
+          {
+            for (;;)
+            {
+              paramBundle.printStackTrace();
               continue;
+              int i1 = 4;
+              continue;
+              label648:
+              p();
+              r();
             }
-            if (!getIntent().getBooleanExtra("Chromecast", false)) {
-              break label639;
-            }
-            h();
-            if (getIntent().getStringExtra("ChromecastUrl") != null) {
-              a(true);
-            }
-          }
-          while (a())
-          {
-            if (!p.isShown()) {
-              f();
-            }
-            new ix(this).start();
-            return;
-            i1 = 4;
-            break label446;
-            label639:
-            o();
-            q();
           }
         }
         catch (Exception paramBundle)
@@ -679,8 +693,8 @@ public class PopVideoPlayer
       C.a();
       C = null;
     }
-    p();
-    if ("Market".startsWith("Spreadtrum")) {}
+    q();
+    if (com.estrongs.android.pop.view.a.a.startsWith("Spreadtrum")) {}
     try
     {
       unregisterReceiver(K);
@@ -718,7 +732,6 @@ public class PopVideoPlayer
   {
     super.onPause();
     m();
-    w.c();
   }
   
   public void onRestoreInstanceState(Bundle paramBundle)
@@ -729,8 +742,7 @@ public class PopVideoPlayer
   public void onResume()
   {
     super.onResume();
-    w.b();
-    n();
+    o();
     i();
   }
   
@@ -755,13 +767,13 @@ public class PopVideoPlayer
     catch (Exception localException) {}
   }
   
-  public Rect t()
+  public Rect y()
   {
     if (ac == null)
     {
       ac = new Rect();
       int[] arrayOfInt = new int[2];
-      View localView = findViewById(2131362634);
+      View localView = findViewById(2131625381);
       localView.getLocationInWindow(arrayOfInt);
       ac = new Rect(arrayOfInt[0], arrayOfInt[1], arrayOfInt[0] + localView.getMeasuredWidth(), arrayOfInt[1] + localView.getMeasuredHeight());
     }

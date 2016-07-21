@@ -6,10 +6,10 @@ import android.net.Uri;
 import android.os.storage.StorageManager;
 import com.estrongs.android.pop.FexApplication;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.util.al;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bc;
+import com.estrongs.android.pop.esclasses.g;
+import com.estrongs.android.util.ao;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bg;
 import com.estrongs.fs.b.r;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -35,7 +35,7 @@ public class a
     //   0: ldc 2
     //   2: monitorenter
     //   3: aload_0
-    //   4: invokestatic 50	com/estrongs/android/util/am:bE	(Ljava/lang/String;)Ljava/lang/String;
+    //   4: invokestatic 50	com/estrongs/android/util/ap:bV	(Ljava/lang/String;)Ljava/lang/String;
     //   7: astore_0
     //   8: aload_0
     //   9: ldc 52
@@ -173,12 +173,12 @@ public class a
     //   271: getstatic 26	com/estrongs/fs/impl/local/a:b	Ljava/util/ArrayList;
     //   274: invokevirtual 69	java/util/ArrayList:size	()I
     //   277: ifne +178 -> 455
-    //   280: new 134	com/estrongs/android/util/al
+    //   280: new 134	com/estrongs/android/util/ao
     //   283: dup
     //   284: aload 10
-    //   286: invokespecial 137	com/estrongs/android/util/al:<init>	(Ljava/lang/Object;)V
+    //   286: invokespecial 137	com/estrongs/android/util/ao:<init>	(Ljava/lang/Object;)V
     //   289: ldc -117
-    //   291: invokevirtual 142	com/estrongs/android/util/al:a	(Ljava/lang/String;)Ljava/lang/Object;
+    //   291: invokevirtual 142	com/estrongs/android/util/ao:a	(Ljava/lang/String;)Ljava/lang/Object;
     //   294: checkcast 144	java/util/List
     //   297: astore 5
     //   299: iconst_0
@@ -194,14 +194,14 @@ public class a
     //   318: invokespecial 146	com/estrongs/fs/impl/local/d:<init>	()V
     //   321: astore 6
     //   323: aload 6
-    //   325: new 134	com/estrongs/android/util/al
+    //   325: new 134	com/estrongs/android/util/ao
     //   328: dup
     //   329: aload 5
     //   331: iload_1
     //   332: invokeinterface 147 2 0
-    //   337: invokespecial 137	com/estrongs/android/util/al:<init>	(Ljava/lang/Object;)V
+    //   337: invokespecial 137	com/estrongs/android/util/ao:<init>	(Ljava/lang/Object;)V
     //   340: ldc -107
-    //   342: invokevirtual 142	com/estrongs/android/util/al:a	(Ljava/lang/String;)Ljava/lang/Object;
+    //   342: invokevirtual 142	com/estrongs/android/util/ao:a	(Ljava/lang/String;)Ljava/lang/Object;
     //   345: checkcast 83	android/net/Uri
     //   348: putfield 152	com/estrongs/fs/impl/local/d:a	Landroid/net/Uri;
     //   351: getstatic 32	com/estrongs/fs/impl/local/a:d	Ljava/lang/reflect/Method;
@@ -266,7 +266,7 @@ public class a
     //   458: aload 8
     //   460: ifnonnull +297 -> 757
     //   463: aload_0
-    //   464: invokestatic 174	com/estrongs/android/util/am:bD	(Ljava/lang/String;)Ljava/lang/String;
+    //   464: invokestatic 174	com/estrongs/android/util/ap:bU	(Ljava/lang/String;)Ljava/lang/String;
     //   467: astore 5
     //   469: aload 5
     //   471: ifnonnull +35 -> 506
@@ -280,7 +280,7 @@ public class a
     //   490: ldc -78
     //   492: invokevirtual 116	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   495: invokevirtual 120	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   498: invokestatic 183	com/estrongs/android/util/v:a	(Ljava/lang/String;)V
+    //   498: invokestatic 183	com/estrongs/android/util/x:a	(Ljava/lang/String;)V
     //   501: aconst_null
     //   502: astore_0
     //   503: goto -102 -> 401
@@ -310,7 +310,7 @@ public class a
     //   556: ldc -78
     //   558: invokevirtual 116	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   561: invokevirtual 120	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   564: invokestatic 183	com/estrongs/android/util/v:a	(Ljava/lang/String;)V
+    //   564: invokestatic 183	com/estrongs/android/util/x:a	(Ljava/lang/String;)V
     //   567: aload_0
     //   568: astore 6
     //   570: aload_0
@@ -433,7 +433,7 @@ public class a
     //   820: aload 8
     //   822: ifnonnull +72 -> 894
     //   825: aload 5
-    //   827: invokestatic 195	com/estrongs/android/util/am:d	(Ljava/lang/String;)Ljava/lang/String;
+    //   827: invokestatic 195	com/estrongs/android/util/ap:d	(Ljava/lang/String;)Ljava/lang/String;
     //   830: astore 9
     //   832: aload 11
     //   834: ldc -59
@@ -532,7 +532,7 @@ public class a
     //   1021: ldc -78
     //   1023: invokevirtual 116	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   1026: invokevirtual 120	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   1029: invokestatic 183	com/estrongs/android/util/v:a	(Ljava/lang/String;)V
+    //   1029: invokestatic 183	com/estrongs/android/util/x:a	(Ljava/lang/String;)V
     //   1032: aload_0
     //   1033: getfield 106	com/estrongs/fs/impl/local/d:c	Ljava/lang/String;
     //   1036: ifnull +422 -> 1458
@@ -571,10 +571,10 @@ public class a
     //   1118: istore 4
     //   1120: iload 4
     //   1122: ifeq +78 -> 1200
-    //   1125: new 134	com/estrongs/android/util/al
+    //   1125: new 134	com/estrongs/android/util/ao
     //   1128: dup
     //   1129: aload 10
-    //   1131: invokespecial 137	com/estrongs/android/util/al:<init>	(Ljava/lang/Object;)V
+    //   1131: invokespecial 137	com/estrongs/android/util/ao:<init>	(Ljava/lang/Object;)V
     //   1134: astore 7
     //   1136: getstatic 222	java/lang/Integer:TYPE	Ljava/lang/Class;
     //   1139: astore 11
@@ -604,7 +604,7 @@ public class a
     //   1176: iconst_3
     //   1177: invokestatic 227	java/lang/Integer:valueOf	(I)Ljava/lang/Integer;
     //   1180: aastore
-    //   1181: invokevirtual 230	com/estrongs/android/util/al:a	(Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    //   1181: invokevirtual 230	com/estrongs/android/util/ao:a	(Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
     //   1184: pop
     //   1185: aload 9
     //   1187: iconst_0
@@ -615,7 +615,7 @@ public class a
     //   1195: astore 7
     //   1197: goto -465 -> 732
     //   1200: ldc -21
-    //   1202: invokestatic 183	com/estrongs/android/util/v:a	(Ljava/lang/String;)V
+    //   1202: invokestatic 183	com/estrongs/android/util/x:a	(Ljava/lang/String;)V
     //   1205: aload 7
     //   1207: astore_0
     //   1208: goto -23 -> 1185
@@ -635,7 +635,7 @@ public class a
     //   1237: aload 6
     //   1239: invokevirtual 240	java/lang/StringBuilder:append	(Ljava/lang/Object;)Ljava/lang/StringBuilder;
     //   1242: invokevirtual 120	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   1245: invokestatic 183	com/estrongs/android/util/v:a	(Ljava/lang/String;)V
+    //   1245: invokestatic 183	com/estrongs/android/util/x:a	(Ljava/lang/String;)V
     //   1248: aload 6
     //   1250: astore_0
     //   1251: aload 6
@@ -657,7 +657,7 @@ public class a
     //   1284: putfield 164	com/estrongs/fs/impl/local/d:b	Ljava/lang/String;
     //   1287: aload_0
     //   1288: aload 5
-    //   1290: invokestatic 195	com/estrongs/android/util/am:d	(Ljava/lang/String;)Ljava/lang/String;
+    //   1290: invokestatic 195	com/estrongs/android/util/ap:d	(Ljava/lang/String;)Ljava/lang/String;
     //   1293: putfield 213	com/estrongs/fs/impl/local/d:d	Ljava/lang/String;
     //   1296: invokestatic 128	com/estrongs/android/pop/FexApplication:a	()Lcom/estrongs/android/pop/FexApplication;
     //   1299: invokestatic 245	com/estrongs/android/pop/ad:a	(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
@@ -848,8 +848,8 @@ public class a
     for (Uri localUri = b(paramString, false); localUri == null; localUri = a(paramString)) {
       return null;
     }
-    String str1 = am.bA(paramString);
-    String str2 = am.bA(localUri.toString());
+    String str1 = ap.bR(paramString);
+    String str2 = ap.bR(localUri.toString());
     com.estrongs.a.a locala = com.estrongs.a.a.getCurrentTask();
     if ((str1 != null) && (str2 != null) && (!str2.equals(str1)) && ((locala instanceof r))) {
       u = (paramString.substring(0, paramString.length() - str1.length()) + str2);
@@ -886,14 +886,14 @@ public class a
     }
     finally {}
     return;
-    arrayOfObject = (Object[])new al(localObject1).a("getVolumeList");
+    arrayOfObject = (Object[])new ao(localObject1).a("getVolumeList");
     k = arrayOfObject.length;
     int i = 0;
     if (i < k)
     {
-      localObject3 = new al(arrayOfObject[i]);
-      if (!"mounted".equals(((al)localObject3).a("getState"))) {
-        if (!"mounted_ro".equals(((al)localObject3).a("getState"))) {
+      localObject3 = new ao(arrayOfObject[i]);
+      if (!"mounted".equals(((ao)localObject3).a("getState"))) {
+        if (!"mounted_ro".equals(((ao)localObject3).a("getState"))) {
           break label310;
         }
       }
@@ -902,17 +902,17 @@ public class a
     label313:
     for (;;)
     {
-      File localFile = (File)((al)localObject3).a("getPathFile");
-      localObject1 = (String)((al)localObject3).a("getUuid");
-      if ((((Boolean)((al)localObject3).a("isPrimary")).booleanValue()) && (((Boolean)((al)localObject3).a("isEmulated")).booleanValue())) {
+      File localFile = (File)((ao)localObject3).a("getPathFile");
+      localObject1 = (String)((ao)localObject3).a("getUuid");
+      if ((((Boolean)((ao)localObject3).a("isPrimary")).booleanValue()) && (((Boolean)((ao)localObject3).a("isEmulated")).booleanValue())) {
         localObject1 = "primary";
       }
       for (;;)
       {
-        String str = (String)((al)localObject3).a("getUserLabel");
+        String str = (String)((ao)localObject3).a("getUserLabel");
         localObject3 = localObject1;
         if (localObject1 == null) {
-          localObject3 = ad.a(FexApplication.a()).U(localFile.getAbsolutePath());
+          localObject3 = ad.a(FexApplication.a()).T(localFile.getAbsolutePath());
         }
         if (localObject3 == null) {
           break;
@@ -922,7 +922,7 @@ public class a
         b = ((String)localObject3);
         localObject1 = str;
         if (str == null) {
-          localObject1 = am.d(c);
+          localObject1 = ap.d(c);
         }
         d = ((String)localObject1);
         a.add(locald);
@@ -940,14 +940,14 @@ public class a
     }
   }
   
-  public static void a(ESActivity paramESActivity, c paramc)
+  public static void a(com.estrongs.android.pop.app.d.a parama, c paramc)
   {
     Intent localIntent = new Intent("android.intent.action.OPEN_DOCUMENT_TREE");
-    com.estrongs.android.pop.esclasses.c[] arrayOfc = new com.estrongs.android.pop.esclasses.c[1];
-    paramc = new b(paramc, paramESActivity, arrayOfc);
-    paramESActivity.a(paramc);
-    arrayOfc[0] = paramc;
-    paramESActivity.startActivityForResult(localIntent, 16781343);
+    g[] arrayOfg = new g[1];
+    paramc = new b(paramc, parama, arrayOfg);
+    parama.a(paramc);
+    arrayOfg[0] = paramc;
+    parama.startActivityForResult(localIntent, 4127);
   }
   
   public static boolean a(String paramString1, String paramString2)
@@ -955,12 +955,12 @@ public class a
     boolean bool = true;
     Uri localUri = a(paramString1);
     if (localUri == null) {}
-    while (!am.bk(paramString1).equalsIgnoreCase(am.bk(paramString2))) {
+    while (!ap.bB(paramString1).equalsIgnoreCase(ap.bB(paramString2))) {
       return false;
     }
     try
     {
-      paramString1 = h.invoke(null, new Object[] { FexApplication.a().getContentResolver(), localUri, am.d(paramString2) });
+      paramString1 = h.invoke(null, new Object[] { FexApplication.a().getContentResolver(), localUri, ap.d(paramString2) });
       if (paramString1 != null) {}
       for (;;)
       {
@@ -974,13 +974,13 @@ public class a
   
   static Uri b(String paramString, boolean paramBoolean)
   {
-    Uri localUri = a(am.bk(paramString));
+    Uri localUri = a(ap.bB(paramString));
     if (localUri == null) {
       return null;
     }
-    String str2 = am.d(paramString);
+    String str2 = ap.d(paramString);
     if (paramBoolean) {}
-    for (paramString = "vnd.android.document/directory";; paramString = bc.S(str2))
+    for (paramString = "vnd.android.document/directory";; paramString = bg.U(str2))
     {
       String str1 = paramString;
       if (paramString.equals("*/*")) {

@@ -1,77 +1,197 @@
 .class Lcom/baidu/mobstat/aj;
-.super Ljava/util/TimerTask;
-
-
-# instance fields
-.field final synthetic a:Landroid/content/Context;
-
-.field final synthetic b:Ljava/lang/String;
-
-.field final synthetic c:Ljava/lang/String;
-
-.field final synthetic d:Lcom/baidu/mobstat/ag;
+.super Lcom/baidu/mobstat/w;
 
 
 # direct methods
-.method constructor <init>(Lcom/baidu/mobstat/ag;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput-object p1, p0, Lcom/baidu/mobstat/aj;->d:Lcom/baidu/mobstat/ag;
+    const-string v0, "app_trace2"
 
-    iput-object p2, p0, Lcom/baidu/mobstat/aj;->a:Landroid/content/Context;
+    const-string v1, "Create table if not exists app_trace2(_id Integer primary key AUTOINCREMENT,time VARCHAR(50),content TEXT);"
 
-    iput-object p3, p0, Lcom/baidu/mobstat/aj;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Lcom/baidu/mobstat/aj;->c:Ljava/lang/String;
-
-    invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
+    invoke-direct {p0, v0, v1}, Lcom/baidu/mobstat/w;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
+.method private a(Landroid/database/Cursor;)Ljava/util/ArrayList;
+    .locals 9
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/database/Cursor;",
+            ")",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/baidu/mobstat/v;",
+            ">;"
+        }
+    .end annotation
 
-# virtual methods
-.method public run()V
-    .locals 5
+    new-instance v0, Ljava/util/ArrayList;
 
-    const-string v0, "samelog"
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    const-string v1, "timer"
+    if-nez p1, :cond_1
 
-    invoke-static {v0, v1}, Lcom/baidu/mobstat/util/e;->a(Ljava/lang/String;Ljava/lang/String;)I
+    :cond_0
+    return-object v0
 
-    invoke-static {}, Lcom/baidu/mobstat/DataCore;->getInstance()Lcom/baidu/mobstat/DataCore;
+    :cond_1
+    invoke-interface {p1}, Landroid/database/Cursor;->getCount()I
 
-    move-result-object v0
+    move-result v1
 
-    invoke-virtual {v0}, Lcom/baidu/mobstat/DataCore;->isPartEmpty()Z
+    if-eqz v1, :cond_0
 
-    move-result v0
+    const-string v1, "_id"
 
-    if-nez v0, :cond_0
+    invoke-interface {p1, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
-    const-string v0, "samelog"
+    move-result v1
 
-    const-string v1, "timer send"
+    const-string v2, "time"
 
-    invoke-static {v0, v1}, Lcom/baidu/mobstat/util/e;->a(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object v0, p0, Lcom/baidu/mobstat/aj;->d:Lcom/baidu/mobstat/ag;
-
-    iget-object v1, p0, Lcom/baidu/mobstat/aj;->a:Landroid/content/Context;
-
-    iget-object v2, p0, Lcom/baidu/mobstat/aj;->d:Lcom/baidu/mobstat/ag;
-
-    invoke-static {v2}, Lcom/baidu/mobstat/ag;->d(Lcom/baidu/mobstat/ag;)Z
+    invoke-interface {p1, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
 
-    iget-object v3, p0, Lcom/baidu/mobstat/aj;->b:Ljava/lang/String;
+    const-string v3, "content"
 
-    iget-object v4, p0, Lcom/baidu/mobstat/aj;->c:Ljava/lang/String;
+    invoke-interface {p1, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/baidu/mobstat/ag;->a(Landroid/content/Context;ZLjava/lang/String;Ljava/lang/String;)V
+    move-result v3
+
+    :goto_0
+    invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    invoke-interface {p1, v1}, Landroid/database/Cursor;->getLong(I)J
+
+    move-result-wide v4
+
+    invoke-interface {p1, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-interface {p1, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v7
+
+    new-instance v8, Lcom/baidu/mobstat/v;
+
+    invoke-direct {v8, v4, v5, v6, v7}, Lcom/baidu/mobstat/v;-><init>(JLjava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+.end method
+
+
+# virtual methods
+.method public a(Ljava/lang/String;Ljava/lang/String;)J
+    .locals 3
+
+    const-string v0, "content"
+
+    const-string v1, "time"
+
+    const/4 v2, 0x1
+
+    invoke-virtual {p0, v0, p2, v1, v2}, Lcom/baidu/mobstat/aj;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Landroid/database/Cursor;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Lcom/baidu/mobstat/aj;->a(Landroid/database/Cursor;)Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
     :cond_0
-    return-void
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/baidu/mobstat/v;
+
+    invoke-virtual {v0}, Lcom/baidu/mobstat/v;->a()J
+
+    move-result-wide v0
+
+    :goto_0
+    return-wide v0
+
+    :cond_1
+    new-instance v0, Landroid/content/ContentValues;
+
+    invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
+
+    const-string v1, "time"
+
+    invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "content"
+
+    invoke-virtual {v0, v1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0, v0}, Lcom/baidu/mobstat/aj;->a(Landroid/content/ContentValues;)J
+
+    move-result-wide v0
+
+    goto :goto_0
+.end method
+
+.method public a(II)Ljava/util/ArrayList;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(II)",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/baidu/mobstat/v;",
+            ">;"
+        }
+    .end annotation
+
+    const-string v0, "time"
+
+    invoke-virtual {p0, v0, p1, p2}, Lcom/baidu/mobstat/aj;->a(Ljava/lang/String;II)Landroid/database/Cursor;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Lcom/baidu/mobstat/aj;->a(Landroid/database/Cursor;)Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+
+    :cond_0
+    return-object v1
+.end method
+
+.method public b(J)Z
+    .locals 1
+
+    invoke-virtual {p0, p1, p2}, Lcom/baidu/mobstat/aj;->a(J)Z
+
+    move-result v0
+
+    return v0
 .end method

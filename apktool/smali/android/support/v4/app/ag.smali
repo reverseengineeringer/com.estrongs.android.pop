@@ -1,31 +1,20 @@
-.class public Landroid/support/v4/app/ag;
-.super Landroid/support/v4/app/am;
-
-
-# instance fields
-.field a:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList",
-            "<",
-            "Ljava/lang/CharSequence;",
-            ">;"
-        }
-    .end annotation
-.end field
+.class public abstract Landroid/support/v4/app/ag;
+.super Ljava/lang/Object;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
-    invoke-direct {p0}, Landroid/support/v4/app/am;-><init>()V
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Landroid/support/v4/app/ag;->a:Ljava/util/ArrayList;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public abstract a(I)Landroid/view/View;
+.end method
+
+.method public abstract a()Z
 .end method

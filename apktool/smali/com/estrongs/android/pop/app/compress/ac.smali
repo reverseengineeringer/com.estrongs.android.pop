@@ -29,11 +29,11 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/compress/ac;->a:Lcom/estrongs/android/pop/app/compress/l;
 
-    invoke-static {v1}, Lcom/estrongs/android/pop/app/compress/l;->g(Lcom/estrongs/android/pop/app/compress/l;)Lcom/estrongs/android/pop/app/compress/be;
+    invoke-static {v1}, Lcom/estrongs/android/pop/app/compress/l;->g(Lcom/estrongs/android/pop/app/compress/l;)Lcom/estrongs/android/pop/app/compress/cb;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/compress/be;->a()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/app/compress/cb;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -58,11 +58,11 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/ac;->a:Lcom/estrongs/android/pop/app/compress/l;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/l;->g(Lcom/estrongs/android/pop/app/compress/l;)Lcom/estrongs/android/pop/app/compress/be;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/l;->g(Lcom/estrongs/android/pop/app/compress/l;)Lcom/estrongs/android/pop/app/compress/cb;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/compress/be;->dismiss()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/compress/cb;->dismiss()V
 
     monitor-exit v1
 

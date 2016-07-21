@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.dianxinos.lockscreen.ui.FontTextView android:textSize="@dimen/lock_screen_power_view_description_digital_text_size" android:textColor="@android:color/white" android:id="@id/digital_time_text_minutes" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.dianxinos.lockscreen.ui.FontTextView android:textSize="@dimen/lock_screen_power_view_description_sign_text_size" android:textColor="@android:color/white" android:id="@id/digital_time_text_minutes_lable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginRight="4.0dip" android:text="@string/common_time_minute" />
+    <com.dianxinos.lockscreen.ui.FontTextView android:textSize="@dimen/lock_screen_power_view_description_digital_text_size" android:textColor="@android:color/white" android:id="@id/digital_time_text_hours" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.dianxinos.lockscreen.ui.FontTextView android:textSize="@dimen/lock_screen_power_view_description_sign_text_size" android:textColor="@android:color/white" android:id="@id/digital_time_text_hours_lable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginRight="4.0dip" android:text="@string/common_time_hour" />
+</merge>

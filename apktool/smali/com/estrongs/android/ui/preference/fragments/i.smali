@@ -2,22 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Lcom/estrongs/fs/i;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/widget/g;
+.field final synthetic a:Z
 
-.field final synthetic b:Lcom/estrongs/android/ui/preference/fragments/g;
+.field final synthetic b:Lcom/estrongs/android/ui/preference/fragments/h;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/preference/fragments/g;Lcom/estrongs/android/widget/g;)V
+.method constructor <init>(Lcom/estrongs/android/ui/preference/fragments/h;Z)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/preference/fragments/i;->b:Lcom/estrongs/android/ui/preference/fragments/g;
+    iput-object p1, p0, Lcom/estrongs/android/ui/preference/fragments/i;->b:Lcom/estrongs/android/ui/preference/fragments/h;
 
-    iput-object p2, p0, Lcom/estrongs/android/ui/preference/fragments/i;->a:Lcom/estrongs/android/widget/g;
+    iput-boolean p2, p0, Lcom/estrongs/android/ui/preference/fragments/i;->a:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,24 +26,32 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
+.method public a(Lcom/estrongs/fs/h;)Z
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/i;->a:Lcom/estrongs/android/widget/g;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/g;->k()V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/i;->a:Lcom/estrongs/android/widget/g;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/g;->f()Ljava/lang/String;
+    invoke-interface {p1}, Lcom/estrongs/fs/h;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/preference/fragments/i;->b:Lcom/estrongs/android/ui/preference/fragments/g;
+    const-string v1, "."
 
-    iget-object v1, v1, Lcom/estrongs/android/ui/preference/fragments/g;->b:Landroid/widget/EditText;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    invoke-virtual {v1, v0}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    move-result v0
 
-    return-void
+    if-eqz v0, :cond_0
+
+    iget-boolean v0, p0, Lcom/estrongs/android/ui/preference/fragments/i;->a:Z
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    goto :goto_0
 .end method

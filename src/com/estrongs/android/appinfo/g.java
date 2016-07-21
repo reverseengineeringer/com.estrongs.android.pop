@@ -2,11 +2,12 @@ package com.estrongs.android.appinfo;
 
 import com.estrongs.android.pop.FexApplication;
 import com.estrongs.android.pop.ad;
+import com.estrongs.android.scanner.l;
 
 class g
-  implements t
+  implements u
 {
-  g(AppFolderInfoManager paramAppFolderInfoManager, u paramu) {}
+  g(AppFolderInfoManager paramAppFolderInfoManager, v paramv) {}
   
   public int a()
   {
@@ -25,12 +26,13 @@ class g
   
   public void c()
   {
-    if (b.q > 0)
+    if (b.r > 0)
     {
       b.d.a();
       a.a();
     }
     ad.a(FexApplication.a()).h(System.currentTimeMillis());
+    l.a().h();
   }
 }
 

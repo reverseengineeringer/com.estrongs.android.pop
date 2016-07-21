@@ -249,7 +249,7 @@
     :try_start_3
     const-string v3, "ImageUtils"
 
-    invoke-static {v3, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v3, v1}, Lcom/estrongs/android/util/l;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
@@ -266,7 +266,7 @@
     :try_start_4
     const-string v3, "ImageUtils"
 
-    invoke-static {v3, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v3, v1}, Lcom/estrongs/android/util/l;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 

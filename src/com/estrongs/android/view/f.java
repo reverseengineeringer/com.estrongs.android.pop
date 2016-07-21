@@ -1,18 +1,16 @@
 package com.estrongs.android.view;
 
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import com.estrongs.fs.h;
+import android.support.v4.view.cn;
+import android.widget.PopupWindow.OnDismissListener;
 
 class f
-  implements AdapterView.OnItemClickListener
+  implements PopupWindow.OnDismissListener
 {
-  f(e parame) {}
+  f(b paramb) {}
   
-  public void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
+  public void onDismiss()
   {
-    a.a((h)a.e(paramInt), paramView, paramInt, paramLong);
+    cn.e(b.d(a), 180.0F);
   }
 }
 

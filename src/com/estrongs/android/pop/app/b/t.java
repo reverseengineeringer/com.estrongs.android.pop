@@ -1,41 +1,31 @@
 package com.estrongs.android.pop.app.b;
 
-import com.estrongs.fs.h;
-import com.estrongs.fs.i;
-import com.estrongs.fs.m;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.RecyclerView.Adapter;
+import android.support.v7.widget.RecyclerView.OnScrollListener;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.ui.c.a;
+import java.util.List;
 
-public class t
-  implements i
+class t
+  extends RecyclerView.OnScrollListener
 {
-  private String[] a = null;
+  t(k paramk) {}
   
-  t(String paramString)
+  public void onScrolled(RecyclerView paramRecyclerView, int paramInt1, int paramInt2)
   {
-    if (paramString != null) {
-      a = paramString.split(";");
-    }
-  }
-  
-  public boolean a(h paramh)
-  {
-    if (a == null) {}
-    for (;;)
+    super.onScrolled(paramRecyclerView, paramInt1, paramInt2);
+    if ((FexApplication.a) && (paramInt2 > 0) && (k.d(a).size() > 0))
     {
-      return false;
-      if ((paramh != null) && (!paramh.getFileType().a()))
-      {
-        paramh = paramh.getName().toLowerCase();
-        String[] arrayOfString = a;
-        int j = arrayOfString.length;
-        int i = 0;
-        while (i < j)
-        {
-          String str = arrayOfString[i];
-          if ((str != null) && (paramh.endsWith(str.toLowerCase()))) {
-            return true;
-          }
-          i += 1;
-        }
+      int i = ((LinearLayoutManager)k.m(a).getLayoutManager()).findLastVisibleItemPosition();
+      paramInt2 = k.m(a).getAdapter().getItemCount();
+      paramInt1 = paramInt2;
+      if ((k.m(a).getAdapter() instanceof a)) {
+        paramInt1 = paramInt2 - a.a;
+      }
+      if ((!k.g(a)) && (!k.b(a)) && (!k.n(a)) && (i >= paramInt1 - 2)) {
+        k.o(a);
       }
     }
   }

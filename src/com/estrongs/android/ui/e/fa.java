@@ -1,13 +1,17 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.ui.pcs.n;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class fa
-  implements n
+  implements DialogInterface.OnClickListener
 {
   fa(ez paramez) {}
   
-  public void a(boolean paramBoolean, String paramString1, String paramString2) {}
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  {
+    paramDialogInterface.dismiss();
+  }
 }
 
 /* Location:

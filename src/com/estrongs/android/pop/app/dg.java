@@ -18,7 +18,7 @@ class dg
   {
     try
     {
-      List localList = PhotoInfoManager.getComments(ImageCommentActivity.c(b), ImageCommentActivity.d(b));
+      List localList = PhotoInfoManager.getComments(ImageCommentActivity.b(b), ImageCommentActivity.c(b));
       if (localList == null) {
         return;
       }
@@ -37,7 +37,7 @@ class dg
       {
         ImageCommentActivity.b(b, null);
         return;
-        ImageCommentActivity.d(b).put("offset", Integer.valueOf(i + ImageCommentActivity.d(b).getInt("offset")));
+        ImageCommentActivity.c(b).put("offset", Integer.valueOf(i + ImageCommentActivity.c(b).getInt("offset")));
         b.a(new di(this, localPhotoInfoException));
       }
     }

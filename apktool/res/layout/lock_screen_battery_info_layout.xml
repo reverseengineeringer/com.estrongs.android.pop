@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center_vertical" android:id="@id/battery_info_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/lock_screen_battery_content_margin_left" android:layout_marginRight="@dimen/lock_screen_battery_content_margin_right">
+        <com.dianxinos.lockscreen.ui.BatteryPercentView android:id="@id/battery_view" android:layout_width="@dimen/lock_screen_battery_view_width" android:layout_height="@dimen/lock_screen_battery_view_height" />
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/lock_screen_battery_text_size" android:textColor="@android:color/white" android:id="@id/battery_percent_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/lock_screen_battery_percent_size" android:textColor="@android:color/white" android:id="@id/battery_percent_sign" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lock_screen_percent_sign" />
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/lock_screen_time_text_size" android:textColor="#ffffffff" android:id="@id/time_lable" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/lock_screen_date_text_size" android:textColor="#99ffffff" android:id="@id/date_lable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/lock_screen_battery_info_date_label_margin_top" />
+    </LinearLayout>
+</merge>

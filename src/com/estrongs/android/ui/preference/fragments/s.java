@@ -1,17 +1,17 @@
 package com.estrongs.android.ui.preference.fragments;
 
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceClickListener;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.widget.f;
 
 class s
-  implements Preference.OnPreferenceClickListener
+  implements DialogInterface.OnClickListener
 {
-  s(CleanPreferenceFragment paramCleanPreferenceFragment) {}
+  s(p paramp, f paramf) {}
   
-  public boolean onPreferenceClick(Preference paramPreference)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    CleanPreferenceFragment.a(a);
-    return true;
+    a.k();
   }
 }
 

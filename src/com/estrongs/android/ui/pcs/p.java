@@ -1,72 +1,32 @@
 package com.estrongs.android.ui.pcs;
 
-import com.baidu.sapi2.SapiAccount;
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Handler;
+import android.os.Message;
 import com.baidu.sapi2.SapiAccountManager;
-import com.baidu.sapi2.shell.listener.AuthorizationListener;
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.util.a;
-import com.estrongs.android.util.bd;
+import com.baidu.sapi2.utils.enums.SocialType;
 
 class p
-  extends AuthorizationListener
+  extends Handler
 {
-  p(o paramo) {}
+  p(l paraml) {}
   
-  public void onFailed(int paramInt, String paramString) {}
-  
-  public void onSuccess()
+  public void handleMessage(Message paramMessage)
   {
-    if (!o.a(a)) {
+    super.handleMessage(paramMessage);
+    if (what == SocialType.WEIXIN.getType()) {
       return;
     }
-    if (o.b(a).a() == null)
+    try
     {
-      o.b(a).d();
-      localObject2 = com.estrongs.android.pop.b.b();
-      localObject1 = localObject2;
-      if (!((String)localObject2).endsWith("/")) {
-        localObject1 = (String)localObject2 + "/";
-      }
-      com.estrongs.fs.a.b.a().a((String)localObject1 + "*");
+      SapiAccountManager.getInstance().getSapiConfiguration();
+      Intent localIntent = new Intent(l.b(a), SocialLoginActivity.class);
+      localIntent.putExtra("social_type", SocialType.getSocialType(what));
+      ((Activity)l.b(a)).startActivityForResult(localIntent, 1001);
+      return;
     }
-    o.b(a).a(null);
-    if (o.c(a) != null) {
-      o.c(a).dismiss();
-    }
-    Object localObject1 = a.a();
-    if (localObject1 != null) {
-      ((a)localObject1).e("PCS_Upgrade_UV", "PCS_Upgrade_UV");
-    }
-    SapiAccount localSapiAccount = SapiAccountManager.getInstance().getSession();
-    Object localObject2 = username;
-    if (localObject2 != null)
-    {
-      localObject1 = localObject2;
-      if (((String)localObject2).length() != 0) {}
-    }
-    else
-    {
-      localObject1 = email;
-    }
-    if (localObject1 != null)
-    {
-      localObject2 = localObject1;
-      if (((String)localObject1).length() != 0) {}
-    }
-    else
-    {
-      localObject2 = uid;
-    }
-    localObject1 = bduss + "\n" + (String)localObject2;
-    localObject1 = "login:" + bd.c((String)localObject1);
-    localObject1 = aj.a(o.d(a), (String)localObject1, o.e(a), o.f(a), null);
-    if ((!o.e(a)) && (o.g(a) != null))
-    {
-      o.g(a).a(1);
-      o.g(a).a((String)localObject1);
-    }
-    o.a(a, (String)localObject1);
-    a.dismiss();
+    catch (Throwable paramMessage) {}
   }
 }
 

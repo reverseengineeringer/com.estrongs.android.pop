@@ -1,86 +1,38 @@
 package com.estrongs.android.pop.app.b;
 
-import com.estrongs.fs.h;
-import com.estrongs.fs.i;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.view.cq;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
-public class r
-  implements i
+class r
+  implements c
 {
-  private List<i> a = null;
+  r(k paramk) {}
   
-  public r(Map<String, String> paramMap, boolean paramBoolean)
+  public void a(i parami, boolean paramBoolean)
   {
-    this(paramMap, paramBoolean, false);
-  }
-  
-  public r(Map<String, String> paramMap, boolean paramBoolean1, boolean paramBoolean2)
-  {
-    a = q.a(paramMap, paramBoolean1);
-    if (paramBoolean2) {
-      q.a(a);
-    }
-  }
-  
-  public r(boolean paramBoolean)
-  {
-    a = new ArrayList();
-    if (paramBoolean) {
-      q.a(a);
-    }
-  }
-  
-  public v a()
-  {
-    int i = 0;
-    while (i < a.size())
+    if (paramBoolean)
     {
-      if ((a.get(i) instanceof v)) {
-        return (v)a.get(i);
+      k.i(a).add(parami);
+      if (k.i(a).size() <= 0) {
+        break label115;
       }
-      i += 1;
-    }
-    return null;
-  }
-  
-  public void a(i parami)
-  {
-    a.add(parami);
-  }
-  
-  public boolean a(h paramh)
-  {
-    if (a != null)
-    {
-      Iterator localIterator = a.iterator();
-      boolean bool = true;
-      if (localIterator.hasNext())
+      if (!k.j(a))
       {
-        i locali = (i)localIterator.next();
-        if (locali != null) {
-          if ((bool) && (locali.a(paramh))) {
-            bool = true;
-          }
-        }
-        for (;;)
-        {
-          if (!bool)
-          {
-            return bool;
-            bool = false;
-          }
-          else
-          {
-            break;
-          }
-        }
+        k.c(a, true);
+        ((FileExplorerActivity)k.h(a)).p();
       }
-      return bool;
     }
-    return true;
+    for (;;)
+    {
+      ha)).F.a(new ArrayList(k.i(a)));
+      return;
+      k.i(a).remove(parami);
+      break;
+      label115:
+      k.c(a, false);
+    }
   }
 }
 

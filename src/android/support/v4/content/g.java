@@ -1,24 +1,11 @@
 package android.support.v4.content;
 
-import android.os.Handler;
-import android.os.Message;
+import android.net.Uri;
+import java.io.File;
 
-class g
-  extends Handler
+abstract interface g
 {
-  public void handleMessage(Message paramMessage)
-  {
-    f localf = (f)obj;
-    switch (what)
-    {
-    default: 
-      return;
-    case 1: 
-      ModernAsyncTask.a(a, b[0]);
-      return;
-    }
-    a.a(b);
-  }
+  public abstract File a(Uri paramUri);
 }
 
 /* Location:

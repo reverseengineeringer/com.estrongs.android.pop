@@ -1,7 +1,7 @@
 package com.estrongs.fs.impl.usb.a;
 
-import android.util.Log;
-import com.estrongs.android.util.v;
+import com.estrongs.android.util.l;
+import com.estrongs.android.util.x;
 import com.estrongs.fs.impl.usb.fs.ntfs.y;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -25,7 +25,7 @@ public class a
     if ((paramByteBuffer.get(510) != 85) || (paramByteBuffer.get(511) != -86))
     {
       if (c) {
-        Log.i(b, "not a valid mbr partition table!");
+        l.c(b, "not a valid mbr partition table!");
       }
       localObject = null;
     }
@@ -34,14 +34,14 @@ public class a
       return (a)localObject;
       if (com.estrongs.fs.impl.usb.fs.a.d.a(paramByteBuffer.array()))
       {
-        v.a("FAT32 no mbr");
+        x.a("FAT32 no mbr");
         paramByteBuffer = new d((byte)11, 0, 0);
         a.add(paramByteBuffer);
         return locala;
       }
       if (y.a(paramByteBuffer.array()))
       {
-        v.a("NTFS no mbr");
+        x.a("NTFS no mbr");
         paramByteBuffer = new d((byte)7, 0, 0);
         a.add(paramByteBuffer);
         return locala;
@@ -58,7 +58,7 @@ public class a
       if ((b1 == 5) || (b1 == 15))
       {
         if (c) {
-          Log.w(b, "extended partitions are currently unsupported!");
+          l.d(b, "extended partitions are currently unsupported!");
         }
       }
       else

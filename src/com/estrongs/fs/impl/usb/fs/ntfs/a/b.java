@@ -1,6 +1,6 @@
 package com.estrongs.fs.impl.usb.fs.ntfs.a;
 
-import android.util.Log;
+import com.estrongs.android.util.l;
 import com.estrongs.fs.impl.usb.fs.ntfs.ab;
 import com.estrongs.fs.impl.usb.fs.ntfs.n;
 import java.util.Iterator;
@@ -21,7 +21,7 @@ public class b
   {
     int i = p();
     if (b) {
-      Log.d(a, String.format("Allocating %d clusters for non-resident attribute", new Object[] { Integer.valueOf(i) }));
+      l.b(a, String.format("Allocating %d clusters for non-resident attribute", new Object[] { Integer.valueOf(i) }));
     }
     byte[] arrayOfByte = new byte[j().r().b() * i];
     a(b(), arrayOfByte, 0, i);

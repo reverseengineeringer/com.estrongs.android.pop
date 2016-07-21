@@ -1,98 +1,22 @@
 package com.estrongs.android.ui.a;
 
-import android.content.Intent;
-import android.graphics.drawable.Drawable;
-import android.view.View.OnClickListener;
-import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.view.animation.Interpolator;
 
 public class a
+  implements Interpolator
 {
-  Drawable a;
-  String b;
-  public String c;
-  public View.OnClickListener d;
-  public boolean e = true;
-  public boolean f = false;
-  public String g = null;
-  public CompoundButton.OnCheckedChangeListener h;
-  public View.OnClickListener i;
-  private String j;
-  private Intent k = null;
-  private int l = -1;
-  
-  public a(Drawable paramDrawable, String paramString, View.OnClickListener paramOnClickListener)
+  public float getInterpolation(float paramFloat)
   {
-    this(paramDrawable, paramString, paramOnClickListener, null);
-  }
-  
-  public a(Drawable paramDrawable, String paramString1, View.OnClickListener paramOnClickListener, String paramString2)
-  {
-    a = paramDrawable;
-    b = paramString1;
-    d = paramOnClickListener;
-    j = paramString2;
-  }
-  
-  public a(Drawable paramDrawable, String paramString1, String paramString2, View.OnClickListener paramOnClickListener)
-  {
-    this(paramDrawable, paramString1, paramOnClickListener, null);
-    c = paramString2;
-  }
-  
-  public a a(int paramInt)
-  {
-    l = paramInt;
-    return this;
-  }
-  
-  public a a(Intent paramIntent)
-  {
-    k = paramIntent;
-    return this;
-  }
-  
-  public a a(View.OnClickListener paramOnClickListener)
-  {
-    i = paramOnClickListener;
-    return this;
-  }
-  
-  public a a(CompoundButton.OnCheckedChangeListener paramOnCheckedChangeListener)
-  {
-    h = paramOnCheckedChangeListener;
-    return this;
-  }
-  
-  public a a(String paramString)
-  {
-    j = paramString;
-    return this;
-  }
-  
-  public a a(boolean paramBoolean)
-  {
-    f = paramBoolean;
-    return this;
-  }
-  
-  public boolean a()
-  {
-    return true;
-  }
-  
-  public String b()
-  {
-    return j;
-  }
-  
-  public Intent c()
-  {
-    return k;
-  }
-  
-  public int d()
-  {
-    return l;
+    if (paramFloat == 0.0F) {
+      return 0.0F;
+    }
+    if (paramFloat == 1.0F) {
+      return 1.0F;
+    }
+    float f = 0.3F / 4.0F;
+    double d1 = Math.pow(2.0D, -10.0F * paramFloat);
+    double d2 = paramFloat - f;
+    return (float)(Math.sin(6.283185307179586D / 0.3F * d2) * d1 + 1.0D);
   }
 }
 

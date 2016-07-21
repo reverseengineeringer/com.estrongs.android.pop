@@ -1,9 +1,10 @@
 package com.estrongs.android.pop.app.b;
 
-public class x
+public abstract interface x
 {
-  public long a;
-  public long b;
+  public abstract void a();
+  
+  public abstract void a(int paramInt);
 }
 
 /* Location:

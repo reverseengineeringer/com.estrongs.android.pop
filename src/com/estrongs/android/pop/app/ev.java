@@ -1,35 +1,24 @@
 package com.estrongs.android.pop.app;
 
-import android.widget.Button;
-import com.estrongs.android.pop.app.a.al;
-import com.estrongs.android.ui.f.e;
-import com.estrongs.android.ui.view.ac;
+import com.estrongs.android.pop.app.c.j;
+import com.estrongs.android.pop.app.c.m;
+import com.estrongs.android.ui.view.ak;
 
 class ev
-  implements fz
+  implements com.estrongs.android.ui.dialog.eu
 {
-  ev(eu parameu, e parame) {}
+  ev(eu parameu, j paramj) {}
   
-  public void a(al paramal)
+  public boolean a(String paramString)
   {
-    a.g();
-    try
-    {
-      if (paramal.a() == null) {
-        PopAudioPlayer.k(b.a).setText(paramal.b());
-      }
-      for (;;)
-      {
-        PopAudioPlayer.i(b.a).a(paramal);
-        b.a.h();
-        return;
-        PopAudioPlayer.k(b.a).setText(paramal.a());
-      }
-      return;
+    if (m.a().b(paramString)) {
+      ak.a(b.a, 2131231424, 0);
     }
-    catch (Exception paramal)
+    for (;;)
     {
-      paramal.printStackTrace();
+      return true;
+      a.c(paramString);
+      b.a.a(paramString);
     }
   }
 }

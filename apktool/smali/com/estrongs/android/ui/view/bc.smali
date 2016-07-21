@@ -1,188 +1,255 @@
 .class Lcom/estrongs/android/ui/view/bc;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/view/View$OnTouchListener;
+.super Landroid/os/Handler;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/view/IndicatorView;
+.field final synthetic a:Lcom/estrongs/android/ui/view/ba;
+
+.field private b:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Landroid/content/Context;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private c:I
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/view/IndicatorView;)V
-    .locals 0
+.method protected constructor <init>(Lcom/estrongs/android/ui/view/ba;Ljava/lang/ref/WeakReference;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Landroid/content/Context;",
+            ">;)V"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/IndicatorView;
+    iput-object p1, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/ba;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/estrongs/android/ui/view/bc;->c:I
+
+    iput-object p2, p0, Lcom/estrongs/android/ui/view/bc;->b:Ljava/lang/ref/WeakReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+.method public handleMessage(Landroid/os/Message;)V
     .locals 4
 
-    const/4 v1, 0x1
-
-    const/4 v3, 0x0
+    invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
     :try_start_0
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bc;->b:Ljava/lang/ref/WeakReference;
 
-    move-result v0
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/Context;
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/IndicatorView;
+    :cond_0
+    :goto_0
+    return-void
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/IndicatorView;
+    :cond_1
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
+    packed-switch v0, :pswitch_data_0
 
-    move-result v2
+    goto :goto_0
 
-    float-to-int v2, v2
+    :pswitch_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/ba;
 
-    invoke-static {v1, v2}, Lcom/estrongs/android/ui/view/IndicatorView;->b(Lcom/estrongs/android/ui/view/IndicatorView;I)I
-
-    move-result v1
-
-    invoke-static {v0, v1}, Lcom/estrongs/android/ui/view/IndicatorView;->a(Lcom/estrongs/android/ui/view/IndicatorView;I)I
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/IndicatorView;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/IndicatorView;->f(Lcom/estrongs/android/ui/view/IndicatorView;)I
-
-    move-result v0
-
-    if-ltz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/IndicatorView;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/IndicatorView;->d(Lcom/estrongs/android/ui/view/IndicatorView;)Ljava/util/List;
+    invoke-static {v0}, Lcom/estrongs/android/ui/view/ba;->b(Lcom/estrongs/android/ui/view/ba;)Lcom/estrongs/android/ui/view/bc;
 
     move-result-object v0
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/IndicatorView;
-
-    invoke-static {v1}, Lcom/estrongs/android/ui/view/IndicatorView;->f(Lcom/estrongs/android/ui/view/IndicatorView;)I
-
-    move-result v1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/android/ui/view/be;
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/ui/view/be;->a(Lcom/estrongs/android/ui/view/be;Z)Z
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/IndicatorView;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/IndicatorView;->invalidate()V
-
-    :cond_0
-    :goto_0
-    return v3
-
-    :cond_1
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/bc;->hasMessages(I)Z
 
     move-result v0
 
-    if-eq v0, v1, :cond_2
+    if-eqz v0, :cond_2
 
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/ba;
 
-    move-result v0
+    invoke-static {v0}, Lcom/estrongs/android/ui/view/ba;->b(Lcom/estrongs/android/ui/view/ba;)Lcom/estrongs/android/ui/view/bc;
 
-    const/4 v1, 0x3
+    move-result-object v0
 
-    if-ne v0, v1, :cond_0
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/bc;->removeMessages(I)V
 
     :cond_2
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/IndicatorView;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/ba;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/IndicatorView;->f(Lcom/estrongs/android/ui/view/IndicatorView;)I
-
-    move-result v0
-
-    if-ltz v0, :cond_3
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
-
-    move-result v0
-
-    float-to-int v1, v0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/IndicatorView;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/IndicatorView;->d(Lcom/estrongs/android/ui/view/IndicatorView;)Ljava/util/List;
+    invoke-static {v0}, Lcom/estrongs/android/ui/view/ba;->a(Lcom/estrongs/android/ui/view/ba;)Lcom/estrongs/android/ui/view/ay;
 
     move-result-object v0
 
-    iget-object v2, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/IndicatorView;
-
-    invoke-static {v2}, Lcom/estrongs/android/ui/view/IndicatorView;->f(Lcom/estrongs/android/ui/view/IndicatorView;)I
-
-    move-result v2
-
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/android/ui/view/be;
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v2}, Lcom/estrongs/android/ui/view/be;->a(Lcom/estrongs/android/ui/view/be;Z)Z
-
-    if-ltz v1, :cond_4
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/IndicatorView;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/IndicatorView;->getHeight()I
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/ay;->getCount()I
 
     move-result v0
 
-    if-gt v1, v0, :cond_4
+    if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/IndicatorView;
+    iget v0, p0, Lcom/estrongs/android/ui/view/bc;->c:I
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/IndicatorView;
+    add-int/lit8 v0, v0, 0x1
 
-    invoke-static {v1}, Lcom/estrongs/android/ui/view/IndicatorView;->f(Lcom/estrongs/android/ui/view/IndicatorView;)I
+    iput v0, p0, Lcom/estrongs/android/ui/view/bc;->c:I
+
+    iget v0, p0, Lcom/estrongs/android/ui/view/bc;->c:I
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/ba;
+
+    invoke-static {v1}, Lcom/estrongs/android/ui/view/ba;->a(Lcom/estrongs/android/ui/view/ba;)Lcom/estrongs/android/ui/view/ay;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/view/ay;->getCount()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/IndicatorView;->a(I)V
+    rem-int/2addr v0, v1
+
+    iput v0, p0, Lcom/estrongs/android/ui/view/bc;->c:I
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/ba;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/view/ba;->e(Lcom/estrongs/android/ui/view/ba;)Landroid/support/v4/view/ViewPager;
+
+    move-result-object v0
+
+    iget v1, p0, Lcom/estrongs/android/ui/view/bc;->c:I
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->setCurrentItem(I)V
 
     :cond_3
-    :goto_1
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/IndicatorView;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/ba;
 
-    const/4 v1, -0x1
+    invoke-static {v0}, Lcom/estrongs/android/ui/view/ba;->b(Lcom/estrongs/android/ui/view/ba;)Lcom/estrongs/android/ui/view/bc;
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/ui/view/IndicatorView;->a(Lcom/estrongs/android/ui/view/IndicatorView;I)I
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    const-wide/16 v2, 0x1770
+
+    invoke-virtual {v0, v1, v2, v3}, Lcom/estrongs/android/ui/view/bc;->sendEmptyMessageDelayed(IJ)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
     :catch_0
     move-exception v0
 
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
     goto :goto_0
 
+    :pswitch_1
+    :try_start_1
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/ba;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/view/ba;->b(Lcom/estrongs/android/ui/view/ba;)Lcom/estrongs/android/ui/view/bc;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/bc;->hasMessages(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/ba;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/view/ba;->b(Lcom/estrongs/android/ui/view/ba;)Lcom/estrongs/android/ui/view/bc;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/bc;->removeMessages(I)V
+
+    goto :goto_0
+
+    :pswitch_2
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/ba;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/view/ba;->b(Lcom/estrongs/android/ui/view/ba;)Lcom/estrongs/android/ui/view/bc;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/bc;->hasMessages(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/ba;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/view/ba;->b(Lcom/estrongs/android/ui/view/ba;)Lcom/estrongs/android/ui/view/bc;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/bc;->removeMessages(I)V
+
     :cond_4
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/IndicatorView;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/bc;->a:Lcom/estrongs/android/ui/view/ba;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/IndicatorView;->invalidate()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {v0}, Lcom/estrongs/android/ui/view/ba;->b(Lcom/estrongs/android/ui/view/ba;)Lcom/estrongs/android/ui/view/bc;
 
-    goto :goto_1
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    const-wide/16 v2, 0x1770
+
+    invoke-virtual {v0, v1, v2, v3}, Lcom/estrongs/android/ui/view/bc;->sendEmptyMessageDelayed(IJ)Z
+
+    goto/16 :goto_0
+
+    :pswitch_3
+    iget v0, p1, Landroid/os/Message;->arg1:I
+
+    iput v0, p0, Lcom/estrongs/android/ui/view/bc;->c:I
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto/16 :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+    .end packed-switch
 .end method

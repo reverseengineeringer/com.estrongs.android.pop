@@ -1,17 +1,28 @@
 package com.estrongs.android.a;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.a.a.n;
+import com.estrongs.android.a.b.a;
+import java.util.concurrent.Callable;
 
 class s
-  implements DialogInterface.OnClickListener
+  implements Callable<t>
 {
-  s(q paramq) {}
+  private final n b;
+  private final String c;
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public s(q paramq, String paramString, n paramn)
   {
-    a.c = 2;
-    a.dismiss();
+    b = paramn;
+    c = paramString;
+  }
+  
+  public t a()
+  {
+    b.a(c);
+    t localt = new t(a, null);
+    b = b.a().a();
+    a = b.a().b();
+    return localt;
   }
 }
 

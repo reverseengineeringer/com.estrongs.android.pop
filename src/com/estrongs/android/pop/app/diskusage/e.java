@@ -2,12 +2,12 @@ package com.estrongs.android.pop.app.diskusage;
 
 import android.content.ContextWrapper;
 import android.content.res.Resources;
-import com.estrongs.android.d.f;
-import com.estrongs.android.util.bc;
-import com.estrongs.android.util.q;
-import com.estrongs.android.util.t;
-import com.estrongs.android.util.u;
-import com.estrongs.android.widget.ag;
+import com.estrongs.android.h.f;
+import com.estrongs.android.util.bg;
+import com.estrongs.android.util.s;
+import com.estrongs.android.util.v;
+import com.estrongs.android.util.w;
+import com.estrongs.android.widget.af;
 import com.estrongs.fs.util.h;
 import com.estrongs.fs.util.i;
 import com.estrongs.fs.util.j;
@@ -24,7 +24,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 public class e
-  extends ag
+  extends af
 {
   public static String a = "fileIcon";
   public static String b = "fileName";
@@ -61,15 +61,15 @@ public class e
       do
       {
         return;
-        q.a.a(paramBoolean);
-        Arrays.sort(super.c(), q.a);
+        s.a.a(paramBoolean);
+        Arrays.sort(super.c(), s.a);
         return;
         if (!d.equals(paramString)) {
           break;
         }
       } while (super.c() == null);
-      q.b.a(paramBoolean);
-      Arrays.sort(super.c(), q.b);
+      s.b.a(paramBoolean);
+      Arrays.sort(super.c(), s.b);
       return;
     } while (!c.equals(paramString));
     t.a(paramBoolean);
@@ -116,9 +116,9 @@ public class e
         {
           paramString = paramFile.getName();
           if (paramFile.isDirectory()) {
-            return r.getResources().getDrawable(2130837653);
+            return r.getResources().getDrawable(2130837904);
           }
-          return f.a(String.valueOf(bc.b(paramString)));
+          return f.a(String.valueOf(bg.b(paramString)));
         }
         if (!b.equals(paramString)) {
           break;

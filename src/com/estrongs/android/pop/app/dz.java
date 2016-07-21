@@ -1,16 +1,17 @@
 package com.estrongs.android.pop.app;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 
 class dz
-  implements View.OnClickListener
+  implements MenuItem.OnMenuItemClickListener
 {
   dz(LocalFileSharingActivity paramLocalFileSharingActivity) {}
   
-  public void onClick(View paramView)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    a.finish();
+    a.e();
+    return true;
   }
 }
 

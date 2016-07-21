@@ -14,8 +14,8 @@ import android.widget.MediaController;
 import com.estrongs.android.pop.a;
 import com.estrongs.android.pop.esclasses.ESActivity;
 import com.estrongs.android.ui.view.ESVideoView;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bc;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bg;
 import com.estrongs.fs.FileSystemException;
 import com.estrongs.fs.d;
 import java.io.File;
@@ -37,7 +37,7 @@ public class StreamingMediaPlayer
   private long h = 0L;
   private final Handler i = new Handler();
   private File j;
-  private final String k = a.d + "/downloadingMedia.dat";
+  private final String k = a.f + "/downloadingMedia.dat";
   private boolean l;
   private String m;
   private MediaPlayer n = null;
@@ -55,13 +55,13 @@ public class StreamingMediaPlayer
   
   private void a(String paramString, long paramLong)
   {
-    p = new Thread(new lz(this, paramString));
+    p = new Thread(new mq(this, paramString));
     p.start();
   }
   
   private void a(boolean paramBoolean)
   {
-    i.post(new ls(this, paramBoolean));
+    i.post(new mj(this, paramBoolean));
   }
   
   private void b()
@@ -102,8 +102,8 @@ public class StreamingMediaPlayer
   
   private void e()
   {
-    lr locallr = new lr(this);
-    i.post(locallr);
+    mi localmi = new mi(this);
+    i.post(localmi);
   }
   
   private boolean f()
@@ -161,7 +161,7 @@ public class StreamingMediaPlayer
       paramString = a.e(paramString);
       if (paramString == null)
       {
-        i.post(new mc(this));
+        i.post(new mt(this));
         return;
       }
     }
@@ -209,7 +209,7 @@ public class StreamingMediaPlayer
       }
       catch (IOException paramString)
       {
-        i.post(new md(this));
+        i.post(new mu(this));
         return;
       }
       do
@@ -234,25 +234,25 @@ public class StreamingMediaPlayer
   
   public void onCreate(Bundle paramBundle)
   {
-    super.onCreate(paramBundle);
     setDefaultKeyMode(2);
     requestWindowFeature(1);
+    super.onCreate(paramBundle);
     getWindow().setFlags(2000, 1024);
-    setContentView(2130903219);
+    setContentView(2130903380);
     m = getIntent().getData().toString();
     d = new MediaController(this);
-    b = ((ESVideoView)findViewById(2131362629));
-    b.a(d);
+    b = ((ESVideoView)findViewById(2131625376));
+    b.setMediaController(d);
     d.requestFocus();
-    b.a(new ln(this));
-    b.a(new lt(this));
-    b.a(new lv(this));
-    if (bc.Q(am.d(m)))
+    b.setOnPreparedListener(new me(this));
+    b.setOnCompletionListener(new mk(this));
+    b.setOnErrorListener(new mm(this));
+    if (bg.R(ap.d(m)))
     {
       a(4);
       return;
     }
-    new lx(this).start();
+    new mo(this).start();
   }
   
   protected Dialog onCreateDialog(int paramInt)
@@ -262,25 +262,25 @@ public class StreamingMediaPlayer
     default: 
       return null;
     case 1: 
-      return new AlertDialog.Builder(this).setIcon(17301543).setTitle(2131427396).setCancelable(false).setMessage(2131427796).setPositiveButton(2131427339, new me(this)).create();
+      return new AlertDialog.Builder(this).setIcon(17301543).setTitle(2131231716).setCancelable(false).setMessage(2131232382).setPositiveButton(2131231270, new mv(this)).create();
     case 2: 
-      return new AlertDialog.Builder(this).setIcon(17301543).setTitle(2131427396).setCancelable(false).setMessage(2131427932).setPositiveButton(2131427339, new mf(this)).create();
+      return new AlertDialog.Builder(this).setIcon(17301543).setTitle(2131231716).setCancelable(false).setMessage(2131231850).setPositiveButton(2131231270, new mw(this)).create();
     case 3: 
-      return new AlertDialog.Builder(this).setIcon(17301543).setTitle(2131427396).setMessage(2131427797).setCancelable(false).setPositiveButton(2131427339, new lo(this)).create();
+      return new AlertDialog.Builder(this).setIcon(17301543).setTitle(2131231716).setMessage(2131232384).setCancelable(false).setPositiveButton(2131231270, new mf(this)).create();
     case 4: 
-      return new AlertDialog.Builder(this).setIcon(17301543).setTitle(2131427396).setCancelable(false).setMessage(2131427798).setPositiveButton(2131427339, new lp(this)).create();
+      return new AlertDialog.Builder(this).setIcon(17301543).setTitle(2131231716).setCancelable(false).setMessage(2131232383).setPositiveButton(2131231270, new mg(this)).create();
     case 5: 
       x = new ProgressDialog(this);
       x.setIcon(17301543);
-      x.setTitle(2131427803);
+      x.setTitle(2131232381);
       x.setProgressStyle(1);
       x.setCancelable(false);
-      x.setMessage(getText(2131427804));
-      x.setButton2(getText(2131427340), new lq(this));
+      x.setMessage(getText(2131232380));
+      x.setButton2(getText(2131231265), new mh(this));
       return x;
     }
     y = new ProgressDialog(this);
-    y.setMessage(getText(2131427442));
+    y.setMessage(getText(2131232182));
     y.setIndeterminate(true);
     y.setCancelable(true);
     return y;

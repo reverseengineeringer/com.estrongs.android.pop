@@ -2,13 +2,13 @@ package com.estrongs.fs.b;
 
 import android.app.Activity;
 import android.content.res.Resources;
-import com.estrongs.a.a.e;
 import com.estrongs.a.a.m;
 import com.estrongs.a.p;
 import com.estrongs.a.q;
 import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.pop.utils.cd;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.pop.utils.cm;
+import com.estrongs.android.util.bk;
+import com.estrongs.fs.a.b;
 import com.estrongs.fs.h;
 import com.estrongs.fs.impl.media.MediaStoreInsertException;
 import com.estrongs.fs.util.EncryptException;
@@ -26,9 +26,10 @@ public class y
   private List<String> f = new ArrayList();
   private List<String> g = new ArrayList();
   private List<String> h = new ArrayList();
-  private int i = 1;
-  private String j = null;
-  private boolean k = false;
+  private List<String> i = new ArrayList();
+  private int j = 1;
+  private String k = null;
+  private boolean l = false;
   
   public y(Activity paramActivity, List<h> paramList)
   {
@@ -61,7 +62,7 @@ public class y
     }
   }
   
-  private boolean d()
+  private boolean e()
   {
     a = new aa(b, com.estrongs.fs.d.a(c));
     a.addProgressListeners(getProgressListeners());
@@ -75,7 +76,7 @@ public class y
     }
     if (a.a.size() == 0)
     {
-      localObject = new Exception(FexApplication.a().getResources().getString(2131428489));
+      localObject = new Exception(FexApplication.a().getResources().getString(2131231844));
       setTaskResult(10000, new q(((Exception)localObject).getMessage(), (Exception)localObject));
       return false;
     }
@@ -88,34 +89,34 @@ public class y
   {
     try
     {
-      if (bd.f())
+      if (bk.f())
       {
-        com.estrongs.fs.impl.media.d.b(g);
-        com.estrongs.fs.impl.media.d.a(h, null);
+        com.estrongs.fs.impl.media.e.b(g);
+        com.estrongs.fs.impl.media.e.a(h, null);
         return;
       }
       if (d.size() > 0) {
-        com.estrongs.fs.impl.k.b.c().a(d);
+        com.estrongs.fs.impl.p.c.b().a(d);
       }
       if (e.size() > 0) {
-        com.estrongs.fs.impl.i.b.c().a(e);
+        com.estrongs.fs.impl.n.d.b().a(e);
       }
       if (f.size() > 0)
       {
-        com.estrongs.fs.impl.q.b.c().a(f);
+        com.estrongs.fs.impl.v.c.b().a(f);
         return;
       }
     }
     catch (MediaStoreInsertException localMediaStoreInsertException)
     {
       localMediaStoreInsertException.printStackTrace();
-      cd.b();
+      cm.b();
     }
   }
   
   public String b()
   {
-    return j;
+    return k;
   }
   
   public List<h> c()
@@ -126,6 +127,11 @@ public class y
   public boolean canHide()
   {
     return false;
+  }
+  
+  public List<String> d()
+  {
+    return i;
   }
   
   public void handleMessage(int paramInt, Object... paramVarArgs)
@@ -161,17 +167,16 @@ public class y
   
   public boolean task()
   {
-    ArrayList localArrayList = new ArrayList();
     Object localObject1 = new ArrayList();
     try
     {
-      boolean bool1 = d();
+      boolean bool1 = e();
       if (!bool1) {
         return false;
       }
-      k = false;
+      l = false;
       onProgress(processData);
-      e locale = (e)getDecision(e.class, new Object[0]);
+      com.estrongs.a.a.e locale = (com.estrongs.a.a.e)getDecision(com.estrongs.a.a.e.class, new Object[0]);
       if (a == null)
       {
         setTaskResult(1, null);
@@ -199,8 +204,8 @@ public class y
     }
     finally
     {
-      k = true;
-      com.estrongs.fs.a.b.a().a(localArrayList);
+      l = true;
+      b.a().a(i);
     }
   }
 }

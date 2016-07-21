@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/c_e3e4e5" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" />
+    <CheckBox android:id="@id/checkBox" android:paddingLeft="@dimen/dp_15" android:paddingTop="@dimen/dp_15" android:paddingBottom="@dimen/dp_3" android:drawablePadding="@dimen/dp_3" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" style="@style/es_grid_image_selection_checkbox_style" />
+</RelativeLayout>

@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Landroid/widget/RadioGroup$OnCheckedChangeListener;
 
 
 # instance fields
-.field final synthetic a:I
-
-.field final synthetic b:Lcom/estrongs/android/pop/app/compress/ai;
+.field final synthetic a:Lcom/estrongs/android/pop/app/compress/aj;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/compress/ai;I)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/compress/aj;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/compress/ap;->b:Lcom/estrongs/android/pop/app/compress/ai;
-
-    iput p2, p0, Lcom/estrongs/android/pop/app/compress/ap;->a:I
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/compress/ap;->a:Lcom/estrongs/android/pop/app/compress/aj;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,56 +22,92 @@
 
 
 # virtual methods
-.method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 2
+.method public onCheckedChanged(Landroid/widget/RadioGroup;I)V
+    .locals 4
 
-    if-eqz p2, :cond_0
+    const/16 v3, 0x8
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/ap;->b:Lcom/estrongs/android/pop/app/compress/ai;
+    const/4 v2, 0x0
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/ai;->l(Lcom/estrongs/android/pop/app/compress/ai;)Landroid/widget/EditText;
+    invoke-virtual {p1}, Landroid/widget/RadioGroup;->getCheckedRadioButtonId()I
+
+    move-result v0
+
+    const v1, 0x7f0e01a7
+
+    if-ne v0, v1, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/ap;->a:Lcom/estrongs/android/pop/app/compress/aj;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/aj;->j(Lcom/estrongs/android/pop/app/compress/aj;)Landroid/view/View;
 
     move-result-object v0
 
-    const/16 v1, 0x90
+    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setInputType(I)V
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/ap;->a:Lcom/estrongs/android/pop/app/compress/aj;
 
-    :goto_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/ap;->b:Lcom/estrongs/android/pop/app/compress/ai;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/ai;->l(Lcom/estrongs/android/pop/app/compress/ai;)Landroid/widget/EditText;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/aj;->k(Lcom/estrongs/android/pop/app/compress/aj;)Landroid/view/View;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/compress/ap;->b:Lcom/estrongs/android/pop/app/compress/ai;
-
-    invoke-static {v1}, Lcom/estrongs/android/pop/app/compress/ai;->l(Lcom/estrongs/android/pop/app/compress/ai;)Landroid/widget/EditText;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Landroid/text/Editable;->length()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setSelection(I)V
-
-    return-void
+    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/ap;->b:Lcom/estrongs/android/pop/app/compress/ai;
+    :goto_0
+    return-void
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/ai;->l(Lcom/estrongs/android/pop/app/compress/ai;)Landroid/widget/EditText;
+    :cond_1
+    invoke-virtual {p1}, Landroid/widget/RadioGroup;->getCheckedRadioButtonId()I
+
+    move-result v0
+
+    const v1, 0x7f0e01a6
+
+    if-ne v0, v1, :cond_2
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/ap;->a:Lcom/estrongs/android/pop/app/compress/aj;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/aj;->j(Lcom/estrongs/android/pop/app/compress/aj;)Landroid/view/View;
 
     move-result-object v0
 
-    iget v1, p0, Lcom/estrongs/android/pop/app/compress/ap;->a:I
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setInputType(I)V
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/ap;->a:Lcom/estrongs/android/pop/app/compress/aj;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/aj;->k(Lcom/estrongs/android/pop/app/compress/aj;)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1}, Landroid/widget/RadioGroup;->getCheckedRadioButtonId()I
+
+    move-result v0
+
+    const v1, 0x7f0e01a5
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/ap;->a:Lcom/estrongs/android/pop/app/compress/aj;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/aj;->j(Lcom/estrongs/android/pop/app/compress/aj;)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/ap;->a:Lcom/estrongs/android/pop/app/compress/aj;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/aj;->k(Lcom/estrongs/android/pop/app/compress/aj;)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_0
 .end method

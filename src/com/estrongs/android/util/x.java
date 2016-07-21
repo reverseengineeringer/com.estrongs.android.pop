@@ -1,8 +1,14 @@
 package com.estrongs.android.util;
 
-public abstract interface x<T>
+import java.io.PrintWriter;
+
+public class x
 {
-  public abstract boolean a(T paramT);
+  static PrintWriter a = null;
+  
+  public static void a(String paramString) {}
+  
+  public static void a(String paramString, Throwable paramThrowable) {}
 }
 
 /* Location:

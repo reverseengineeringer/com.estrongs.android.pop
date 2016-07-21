@@ -1,13 +1,31 @@
 package com.estrongs.android.pop.view;
 
+import android.view.KeyEvent;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.TextView;
+import android.widget.TextView.OnEditorActionListener;
+import com.estrongs.android.view.cr;
+
 class ac
-  implements Runnable
+  implements TextView.OnEditorActionListener
 {
-  ac(FileExplorerActivity paramFileExplorerActivity, String paramString) {}
+  ac(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void run()
+  public boolean onEditorAction(TextView paramTextView, int paramInt, KeyEvent paramKeyEvent)
   {
-    b.d("cmpn://" + a);
+    if (paramInt == 3)
+    {
+      if (paramTextView == null) {
+        return false;
+      }
+      if (a.O() == null) {
+        return false;
+      }
+      FileExplorerActivity.a(a, "externalstorage://", a.O().aq());
+      ((InputMethodManager)a.getSystemService("input_method")).hideSoftInputFromWindow(paramTextView.getWindowToken(), 0);
+      return true;
+    }
+    return false;
   }
 }
 

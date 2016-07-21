@@ -6,12 +6,11 @@ import android.content.DialogInterface.OnClickListener;
 class ji
   implements DialogInterface.OnClickListener
 {
-  ji(je paramje) {}
+  ji(jh paramjh) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    a.c.a.dismiss();
-    ix.g(a.c.a);
+    a.dismiss();
   }
 }
 

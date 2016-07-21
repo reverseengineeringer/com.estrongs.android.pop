@@ -70,7 +70,7 @@
 .method private a()V
     .locals 4
 
-    const v3, 0x7f0b0144
+    const v3, 0x7f08053a
 
     const-string v0, "ftpsvr_root_dir"
 
@@ -130,7 +130,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->T()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->U()Ljava/lang/String;
 
     move-result-object v0
 
@@ -157,7 +157,7 @@
 
     move-result-object v2
 
-    const v0, 0x7f0b006c
+    const v0, 0x7f080379
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/preference/FtpServerPreference;->getText(I)Ljava/lang/CharSequence;
 
@@ -180,7 +180,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->V()I
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->W()I
 
     move-result v0
 
@@ -190,7 +190,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v3, 0x7f0b0143
+    const v3, 0x7f080539
 
     invoke-virtual {p0, v3}, Lcom/estrongs/android/ui/preference/FtpServerPreference;->getText(I)Ljava/lang/CharSequence;
 
@@ -242,7 +242,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->U()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->V()Ljava/lang/String;
 
     move-result-object v1
 
@@ -252,7 +252,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v3, 0x7f0b01cd
+    const v3, 0x7f080242
 
     invoke-virtual {p0, v3}, Lcom/estrongs/android/ui/preference/FtpServerPreference;->getText(I)Ljava/lang/CharSequence;
 
@@ -334,7 +334,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->W()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->X()Ljava/lang/String;
 
     move-result-object v0
 
@@ -344,7 +344,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v3, 0x7f0b0152
+    const v3, 0x7f080534
 
     invoke-virtual {p0, v3}, Lcom/estrongs/android/ui/preference/FtpServerPreference;->getText(I)Ljava/lang/CharSequence;
 
@@ -520,11 +520,11 @@
 
     if-nez v0, :cond_1
 
-    const v0, 0x7f0b01b3
+    const v0, 0x7f0804ab
 
     const/4 v1, 0x1
 
-    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     goto :goto_0
 .end method
@@ -555,7 +555,7 @@
     move-result-object v0
 
     :cond_0
-    invoke-static {}, Lcom/estrongs/android/util/bd;->f()Z
+    invoke-static {}, Lcom/estrongs/android/util/bk;->f()Z
 
     move-result v1
 
@@ -580,7 +580,7 @@
     if-nez v1, :cond_2
 
     :cond_1
-    const v1, 0x7f0c0017
+    const v1, 0x7f090181
 
     invoke-virtual {p0, v1}, Lcom/estrongs/android/ui/preference/FtpServerPreference;->setTheme(I)V
 
@@ -593,7 +593,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f02021a
+    const v2, 0x7f02038d
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -631,7 +631,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f020218
+    const v2, 0x7f02038b
 
     invoke-virtual {v1, v2}, Landroid/view/Window;->setBackgroundDrawableResource(I)V
 
@@ -639,7 +639,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0b006f
+    const v2, 0x7f080381
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -653,7 +653,7 @@
 
     iput-object v1, p0, Lcom/estrongs/android/ui/preference/FtpServerPreference;->h:Lcom/estrongs/android/pop/ad;
 
-    invoke-static {p0}, Lcom/estrongs/android/pop/utils/cl;->a(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/estrongs/android/pop/utils/cu;->a(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -664,7 +664,7 @@
     invoke-virtual {p0, v1}, Lcom/estrongs/android/ui/preference/FtpServerPreference;->addPreferencesFromResource(I)V
 
     :goto_0
-    invoke-static {}, Lcom/estrongs/android/util/bd;->f()Z
+    invoke-static {}, Lcom/estrongs/android/util/bk;->f()Z
 
     move-result v1
 
@@ -693,11 +693,11 @@
 
     move-result-object v0
 
-    const v1, 0x7f0300e0
+    const v1, 0x7f030197
 
     invoke-virtual {v0, v4, v1}, Landroid/view/Window;->setFeatureInt(II)V
 
-    const v0, 0x7f0a003d
+    const v0, 0x7f0e0076
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/preference/FtpServerPreference;->findViewById(I)Landroid/view/View;
 
@@ -705,19 +705,19 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    invoke-static {p0}, Lcom/estrongs/android/ui/theme/al;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
+    invoke-static {p0}, Lcom/estrongs/android/ui/theme/at;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
 
     move-result-object v1
 
-    const v2, 0x7f0201f6
+    const v2, 0x7f020347
 
-    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/theme/al;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/theme/at;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const v0, 0x7f0a0021
+    const v0, 0x7f0e0077
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/preference/FtpServerPreference;->findViewById(I)Landroid/view/View;
 
@@ -725,7 +725,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f0b0151
+    const v1, 0x7f080559
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -755,84 +755,84 @@
     return-object v0
 
     :sswitch_0
-    new-instance v0, Lcom/estrongs/android/ui/dialog/ct;
+    new-instance v0, Lcom/estrongs/android/ui/dialog/cv;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/dialog/ct;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0b0047
+    const v1, 0x7f0803e7
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->a(I)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    const v1, 0x7f0b01b2
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->b(I)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->a(I)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    const v1, 0x7f0b000d
+    const v1, 0x7f0804ac
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->b(I)Lcom/estrongs/android/ui/dialog/cv;
+
+    move-result-object v0
+
+    const v1, 0x7f080229
 
     new-instance v2, Lcom/estrongs/android/ui/preference/o;
 
     invoke-direct {v2, p0}, Lcom/estrongs/android/ui/preference/o;-><init>(Lcom/estrongs/android/ui/preference/FtpServerPreference;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    const v1, 0x7f0b000e
+    const v1, 0x7f080225
 
     new-instance v2, Lcom/estrongs/android/ui/preference/n;
 
     invoke-direct {v2, p0}, Lcom/estrongs/android/ui/preference/n;-><init>(Lcom/estrongs/android/ui/preference/FtpServerPreference;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ct;->b()Lcom/estrongs/android/ui/dialog/cg;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cv;->b()Lcom/estrongs/android/ui/dialog/ci;
 
     move-result-object v0
 
     goto :goto_0
 
     :sswitch_1
-    new-instance v0, Lcom/estrongs/android/ui/dialog/ct;
+    new-instance v0, Lcom/estrongs/android/ui/dialog/cv;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/dialog/ct;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0b0141
+    const v1, 0x7f080532
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->a(I)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->a(I)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    const v1, 0x7f0b000b
+    const v1, 0x7f080226
 
     new-instance v2, Lcom/estrongs/android/ui/preference/f;
 
     invoke-direct {v2, p0}, Lcom/estrongs/android/ui/preference/f;-><init>(Lcom/estrongs/android/ui/preference/FtpServerPreference;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    const v1, 0x7f0b000c
+    const v1, 0x7f080221
 
     new-instance v2, Lcom/estrongs/android/ui/preference/p;
 
     invoke-direct {v2, p0}, Lcom/estrongs/android/ui/preference/p;-><init>(Lcom/estrongs/android/ui/preference/FtpServerPreference;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v1
 
-    const v2, 0x7f03009d
+    const v2, 0x7f030134
 
     const/4 v3, 0x0
 
@@ -840,7 +840,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a02b8
+    const v2, 0x7f0e0509
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -850,13 +850,13 @@
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->a(Landroid/view/View;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->a(Landroid/view/View;)Lcom/estrongs/android/ui/dialog/cv;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ct;->b()Lcom/estrongs/android/ui/dialog/cg;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cv;->b()Lcom/estrongs/android/ui/dialog/ci;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->getWindow()Landroid/view/Window;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ci;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
@@ -900,7 +900,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f02021a
+    const v4, 0x7f02038d
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -930,7 +930,7 @@
 
     move-result-object v0
 
-    const v3, 0x7f080008
+    const v3, 0x7f0d010a
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -951,7 +951,7 @@
 .method protected onPrepareDialog(ILandroid/app/Dialog;)V
     .locals 4
 
-    const v3, 0x7f0b0563
+    const v3, 0x7f0801f6
 
     :try_start_0
     invoke-virtual {p2}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
@@ -993,7 +993,7 @@
     return-void
 
     :pswitch_0
-    const v0, 0x7f0a02bb
+    const v0, 0x7f0e050c
 
     invoke-virtual {p2, v0}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
@@ -1003,7 +1003,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f0a02bf
+    const v0, 0x7f0e0510
 
     invoke-virtual {p2, v0}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
@@ -1013,7 +1013,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f0a02bc
+    const v0, 0x7f0e050d
 
     invoke-virtual {p2, v0}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
@@ -1025,13 +1025,13 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v2, 0x7f0b006b
+    const v2, 0x7f080382
 
     invoke-virtual {p0, v2}, Lcom/estrongs/android/ui/preference/FtpServerPreference;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1043,7 +1043,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1063,7 +1063,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a0191
+    const v0, 0x7f0e034b
 
     invoke-virtual {p2, v0}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
@@ -1075,13 +1075,13 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v2, 0x7f0b006a
+    const v2, 0x7f08037e
 
     invoke-virtual {p0, v2}, Lcom/estrongs/android/ui/preference/FtpServerPreference;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1093,7 +1093,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v2
 

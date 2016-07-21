@@ -6,7 +6,7 @@ import android.view.Window;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.pop.utils.cc;
+import com.estrongs.android.pop.utils.cl;
 
 public class PrivacyActivity
   extends ESActivity
@@ -24,22 +24,22 @@ public class PrivacyActivity
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    setTitle(2131428359);
+    setTitle(2131232159);
     getWindow().setBackgroundDrawable(null);
-    setContentView(2130903228);
-    a = ((WebView)findViewById(2131362658));
+    setContentView(2130903392);
+    a = ((WebView)findViewById(2131625423));
     a.setFocusableInTouchMode(true);
     a.getSettings().setJavaScriptEnabled(true);
-    a.setWebViewClient(new kf(this));
+    a.setWebViewClient(new ku(this));
     paramBundle = "http://www.estrongs.com/privacyStatement/en/index.htm";
-    if (cc.b()) {
+    if (cl.b()) {
       paramBundle = "http://www.estrongs.com/privacyStatement/cn/index.htm";
     }
     for (;;)
     {
       a(paramBundle);
       return;
-      if (cc.g()) {
+      if (cl.d()) {
         paramBundle = "http://www.estrongs.com/privacyStatement/ru/index.htm";
       }
     }

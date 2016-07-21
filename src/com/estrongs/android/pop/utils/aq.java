@@ -1,19 +1,18 @@
 package com.estrongs.android.pop.utils;
 
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.ui.pcs.o;
+import android.app.Activity;
+import com.estrongs.a.a;
 
-final class aq
-  implements DialogInterface.OnClickListener
+class aq
+  implements com.estrongs.a.a.p
 {
-  aq(Context paramContext) {}
+  aq(ap paramap) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void a(a parama, int paramInt1, int paramInt2)
   {
-    paramDialogInterface.dismiss();
-    new o(a, false).show();
+    if ((paramInt2 == 5) && (getTaskResulta == 17)) {
+      a.b.runOnUiThread(new ar(this));
+    }
   }
 }
 

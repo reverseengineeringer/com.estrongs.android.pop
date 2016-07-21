@@ -7,23 +7,26 @@ public class a
 {
   public static String a = "/sdcard/Android/data/" + FexApplication.a().getPackageName();
   public static String b = Environment.getExternalStorageDirectory().getAbsolutePath() + "/.estrongs";
-  public static final String c = "/Android/data/" + FexApplication.a().getPackageName();
-  public static String d = a + "/tmp";
-  public static String e = a + "/cache";
-  public static String f = a + "/recomm";
-  public static String g = a + "/settings";
-  public static String h = a + "/chromecast";
-  public static String i = d + "/share";
-  public static String j = d + "/zip";
-  public static String k = b + "/bookmark";
-  public static String l = b + "/bookmark1";
-  public static String m = b + "/data";
-  public static String n = b + "/playlist";
-  public static String o = b + "/theme";
-  public static String p = b + "/plugin";
-  public static String q = b + "/adbKeys";
-  public static String r = b + "/searchEngines";
-  public static final int s = "ES".length();
+  public static String c = Environment.getExternalStorageDirectory().getAbsolutePath() + "/.estrongs/.dontedit_v1";
+  public static String d = "content://com.estrongs.locker/appLocked";
+  public static final String e = "/Android/data/" + FexApplication.a().getPackageName();
+  public static String f = a + "/tmp";
+  public static String g = a + "/cache";
+  public static String h = a + "/recomm";
+  public static String i = a + "/settings";
+  public static String j = a + "/chromecast";
+  public static String k = f + "/share";
+  public static String l = f + "/zip";
+  public static String m = f + "/appLocker";
+  public static String n = b + "/bookmark";
+  public static String o = b + "/bookmark1";
+  public static String p = b + "/data";
+  public static String q = b + "/playlist";
+  public static String r = b + "/theme";
+  public static String s = b + "/plugin";
+  public static String t = b + "/adbKeys";
+  public static String u = b + "/searchEngines";
+  public static final int v = "ES".length();
   
   static
   {
@@ -51,13 +54,15 @@ public class a
   
   public static final int a()
   {
-    if (ac.a() >= 22) {
-      return 15;
-    }
-    return 14;
+    return 19;
   }
   
-  public static void b()
+  public static final int b()
+  {
+    return 3;
+  }
+  
+  public static void c()
   {
     Object localObject = Environment.getExternalStorageState();
     if ((localObject != null) && (!((String)localObject).equalsIgnoreCase("mounted"))) {}
@@ -81,19 +86,19 @@ public class a
       {
         continue;
       }
-      d = a + "/tmp";
-      e = a + "/cache";
-      f = a + "/recomm";
-      g = a + "/settings";
-      i = d + "/share";
-      k = b + "/bookmark";
-      l = b + "/bookmark1";
-      m = b + "/data";
-      n = b + "/playlist";
-      o = b + "/theme";
-      p = b + "/plugin";
-      q = b + "/adbKeys";
-      r = b + "/searchEngines";
+      f = a + "/tmp";
+      g = a + "/cache";
+      h = a + "/recomm";
+      i = a + "/settings";
+      k = f + "/share";
+      n = b + "/bookmark";
+      o = b + "/bookmark1";
+      p = b + "/data";
+      q = b + "/playlist";
+      r = b + "/theme";
+      s = b + "/plugin";
+      t = b + "/adbKeys";
+      u = b + "/searchEngines";
       return;
       a = "/sdcard/Android/data/" + FexApplication.a().getPackageName();
       b = "/sdcard/.estrongs";

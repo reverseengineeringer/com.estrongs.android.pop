@@ -1,6 +1,6 @@
 package com.estrongs.fs.impl.usb.fs.ntfs;
 
-import android.util.Log;
+import com.estrongs.android.util.l;
 import com.estrongs.fs.impl.usb.UsbFsException;
 import com.estrongs.fs.impl.usb.UsbFsException.ERROR_CODE;
 import java.nio.ByteBuffer;
@@ -54,7 +54,7 @@ public class ab
       StringBuilder localStringBuilder = new StringBuilder().append("readClusters(").append(paramLong).append(", ").append(paramInt2).append(") ");
       j = i;
       i = (j + 1);
-      Log.d(str, j);
+      l.b(str, j);
     }
     int j = b();
     long l = j;
@@ -102,7 +102,7 @@ public class ab
     {
       h = c().c(5L);
       if (b) {
-        Log.d(a, "getRootDirectory: " + h.i());
+        l.b(a, "getRootDirectory: " + h.i());
       }
     }
     return h;

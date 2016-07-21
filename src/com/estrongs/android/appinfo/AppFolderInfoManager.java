@@ -20,13 +20,15 @@ import android.os.Build.VERSION;
 import android.os.ConditionVariable;
 import com.estrongs.android.pop.FexApplication;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.utils.cm;
+import com.estrongs.android.pop.utils.cv;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.util.ak;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.y;
+import com.estrongs.android.util.aa;
+import com.estrongs.android.util.an;
+import com.estrongs.android.util.ap;
 import com.estrongs.fs.impl.local.f;
 import com.estrongs.fs.util.j;
+import com.estrongs.fs.w;
+import com.estrongs.fs.x;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -58,39 +60,40 @@ public class AppFolderInfoManager
   static AppFolderInfoManager a = new AppFolderInfoManager();
   static ArrayList<n> b = new ArrayList(11);
   static final String m = com.estrongs.android.pop.a.a + "/.app_icon_back";
-  static final String n = com.estrongs.android.pop.a.b + "/.folder_logo";
-  static final String o = com.estrongs.android.pop.a.b + "/folder_app.db";
+  static final String n = com.estrongs.android.pop.a.b + "/.app_icon_back";
+  static final String o = com.estrongs.android.pop.a.b + "/.folder_logo";
+  static final String p = com.estrongs.android.pop.a.b + "/folder_app.db";
   SQLiteDatabase c = null;
   com.estrongs.android.pop.app.imageviewer.gallery.g<String, m> d = new com.estrongs.android.pop.app.imageviewer.gallery.g();
   com.estrongs.android.pop.app.imageviewer.gallery.g<String, com.estrongs.fs.h> e = new com.estrongs.android.pop.app.imageviewer.gallery.g(100);
-  android.support.v4.b.c<String, Drawable> f = new a(this, 100);
+  android.support.v4.e.g<String, Drawable> f = new a(this, 100);
   m g = new m(0);
   m h = new m(5);
   ReentrantReadWriteLock i = new ReentrantReadWriteLock();
   Lock j = i.readLock();
   Lock k = i.writeLock();
-  cm l = new cm(2);
-  HashMap<String, List<o>> p = new HashMap();
-  int q = 0;
-  LinkedList<AppFolderInfoManager.LogoDownloadTask> r = new LinkedList();
-  SQLiteDatabase s = null;
-  Object t = new Object();
-  boolean u = false;
-  private boolean v = false;
+  cv l = new cv(2);
+  HashMap<String, List<p>> q = new HashMap();
+  int r = 0;
+  LinkedList<Object> s = new LinkedList();
+  SQLiteDatabase t = null;
+  Object u = new Object();
+  boolean v = false;
+  private boolean w = false;
   
   static
   {
-    b.add(new n("/Android", 2130837772, false, false));
-    b.add(new n("/dcim", 2130837775, true, false));
-    b.add(new n("/download", 2130837776, true, false));
-    b.add(new n("/.android_secure", 2130837773, true, false));
-    b.add(new n("/Movies", 2130837778, true, false));
-    b.add(new n("/Pictures", 2130837780, true, false));
-    b.add(new n("/Video", 2130837782, false, false));
-    b.add(new n("/Music", 2130837779, false, false));
-    b.add(new n("/.estrongs", 2130837777, false, false));
-    b.add(new n("/backups", 2130837774, false, false));
-    b.add(new n("/Ringtones", 2130837781, false, true));
+    b.add(new n("/Android", 2130838114, false, false));
+    b.add(new n("/dcim", 2130838117, true, false));
+    b.add(new n("/download", 2130838118, true, false));
+    b.add(new n("/.android_secure", 2130838115, true, false));
+    b.add(new n("/Movies", 2130838120, true, false));
+    b.add(new n("/Pictures", 2130838122, true, false));
+    b.add(new n("/Video", 2130838124, false, false));
+    b.add(new n("/Music", 2130838121, false, false));
+    b.add(new n("/.estrongs", 2130838119, false, false));
+    b.add(new n("/backups", 2130838116, false, false));
+    b.add(new n("/Ringtones", 2130838123, false, true));
   }
   
   /* Error */
@@ -100,30 +103,30 @@ public class AppFolderInfoManager
     //   0: aconst_null
     //   1: astore 4
     //   3: aload_0
-    //   4: getfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   4: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
     //   7: ifnonnull +7 -> 14
     //   10: aload_0
-    //   11: invokevirtual 216	com/estrongs/android/appinfo/AppFolderInfoManager:a	()V
+    //   11: invokevirtual 219	com/estrongs/android/appinfo/AppFolderInfoManager:a	()V
     //   14: aload_0
-    //   15: getfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   15: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
     //   18: ifnonnull +5 -> 23
     //   21: iload_2
     //   22: ireturn
     //   23: aload_0
-    //   24: getfield 169	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
-    //   27: invokeinterface 221 1 0
+    //   24: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   27: invokeinterface 224 1 0
     //   32: aload_0
-    //   33: getfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
-    //   36: ldc -33
+    //   33: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   36: ldc -30
     //   38: iconst_1
-    //   39: anewarray 225	java/lang/String
+    //   39: anewarray 228	java/lang/String
     //   42: dup
     //   43: iconst_0
-    //   44: ldc -29
+    //   44: ldc -26
     //   46: aastore
-    //   47: ldc -27
+    //   47: ldc -24
     //   49: iconst_1
-    //   50: anewarray 225	java/lang/String
+    //   50: anewarray 228	java/lang/String
     //   53: dup
     //   54: iconst_0
     //   55: aload_1
@@ -131,7 +134,7 @@ public class AppFolderInfoManager
     //   57: aconst_null
     //   58: aconst_null
     //   59: aconst_null
-    //   60: invokevirtual 235	android/database/sqlite/SQLiteDatabase:query	(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    //   60: invokevirtual 238	android/database/sqlite/SQLiteDatabase:query	(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     //   63: astore_1
     //   64: aload_1
     //   65: astore 4
@@ -144,21 +147,21 @@ public class AppFolderInfoManager
     //   76: aload 4
     //   78: astore_1
     //   79: aload 4
-    //   81: invokeinterface 241 1 0
+    //   81: invokeinterface 244 1 0
     //   86: ifeq +15 -> 101
     //   89: aload 4
     //   91: astore_1
     //   92: aload 4
     //   94: iconst_0
-    //   95: invokeinterface 245 2 0
+    //   95: invokeinterface 248 2 0
     //   100: istore_3
     //   101: aload 4
     //   103: ifnull +10 -> 113
     //   106: aload 4
-    //   108: invokeinterface 248 1 0
+    //   108: invokeinterface 251 1 0
     //   113: aload_0
-    //   114: getfield 169	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
-    //   117: invokeinterface 251 1 0
+    //   114: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   117: invokeinterface 254 1 0
     //   122: iload_3
     //   123: ireturn
     //   124: astore 5
@@ -167,24 +170,24 @@ public class AppFolderInfoManager
     //   129: aload 4
     //   131: astore_1
     //   132: aload 5
-    //   134: invokevirtual 254	java/lang/Exception:printStackTrace	()V
+    //   134: invokevirtual 257	java/lang/Exception:printStackTrace	()V
     //   137: aload 4
     //   139: ifnull +10 -> 149
     //   142: aload 4
-    //   144: invokeinterface 248 1 0
+    //   144: invokeinterface 251 1 0
     //   149: aload_0
-    //   150: getfield 169	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
-    //   153: invokeinterface 251 1 0
+    //   150: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   153: invokeinterface 254 1 0
     //   158: iload_2
     //   159: ireturn
     //   160: astore_1
     //   161: aload 4
     //   163: ifnull +10 -> 173
     //   166: aload 4
-    //   168: invokeinterface 248 1 0
+    //   168: invokeinterface 251 1 0
     //   173: aload_0
-    //   174: getfield 169	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
-    //   177: invokeinterface 251 1 0
+    //   174: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   177: invokeinterface 254 1 0
     //   182: aload_1
     //   183: athrow
     //   184: astore 5
@@ -218,7 +221,7 @@ public class AppFolderInfoManager
   
   private String a(PackageInfo paramPackageInfo)
   {
-    return m + "/ver/" + packageName + "_" + versionCode;
+    return n + "/ver/" + packageName + "_" + versionCode;
   }
   
   private String a(File paramFile)
@@ -337,7 +340,8 @@ public class AppFolderInfoManager
   
   private void a(PackageManager paramPackageManager, PackageInfo paramPackageInfo)
   {
-    if ((paramPackageManager == null) || (paramPackageInfo == null) || (b(paramPackageInfo)) || (!j.n(m))) {}
+    h();
+    if ((paramPackageManager == null) || (paramPackageInfo == null) || (b(paramPackageInfo)) || (!j.n(n))) {}
     String str;
     Drawable localDrawable1;
     do
@@ -350,25 +354,122 @@ public class AppFolderInfoManager
         localDrawable1 = applicationInfo.loadIcon(paramPackageManager);
       }
     } while (!(localDrawable1 instanceof BitmapDrawable));
-    com.estrongs.android.util.b.a(((BitmapDrawable)localDrawable1).getBitmap(), str, Bitmap.CompressFormat.PNG, 100);
+    com.estrongs.android.util.a.a(((BitmapDrawable)localDrawable1).getBitmap(), str, Bitmap.CompressFormat.PNG, 100);
     c(paramPackageInfo);
   }
   
-  private void a(t paramt)
+  private void a(u paramu)
   {
-    int i1 = paramt.a();
-    Object localObject = "http://www.estrongs.com/console/service/app_folder?v=" + i1 + "&t=" + paramt.b();
+    int i1 = paramu.a();
+    Object localObject = "http://www.estrongs.com/console/service/app_folder?v=" + i1 + "&t=" + paramu.b();
     String str1 = com.estrongs.android.pop.a.b + "/tmp/folder_app_update";
     String str2 = str1 + ".tmp";
     if (!j.n(com.estrongs.android.pop.a.b + "/tmp"))
     {
-      paramt.c();
+      paramu.c();
       return;
     }
-    localObject = new y((String)localObject);
-    ((y)localObject).a(str2);
-    ((y)localObject).a(new h(this, str2, str1, paramt));
-    ((y)localObject).c();
+    localObject = new aa((String)localObject);
+    ((aa)localObject).a(str2);
+    ((aa)localObject).a(new h(this, str2, str1, paramu));
+    ((aa)localObject).c();
+  }
+  
+  /* Error */
+  private void a(File paramFile1, File paramFile2)
+  {
+    // Byte code:
+    //   0: aload_2
+    //   1: invokevirtual 491	java/io/File:exists	()Z
+    //   4: ifne +8 -> 12
+    //   7: aload_2
+    //   8: invokevirtual 494	java/io/File:mkdirs	()Z
+    //   11: pop
+    //   12: aload_1
+    //   13: invokevirtual 498	java/io/File:list	()[Ljava/lang/String;
+    //   16: astore 7
+    //   18: aload 7
+    //   20: ifnull +108 -> 128
+    //   23: aload 7
+    //   25: arraylength
+    //   26: istore 4
+    //   28: iconst_0
+    //   29: istore_3
+    //   30: iload_3
+    //   31: iload 4
+    //   33: if_icmpge +95 -> 128
+    //   36: aload 7
+    //   38: iload_3
+    //   39: aaload
+    //   40: astore 8
+    //   42: new 279	java/io/File
+    //   45: dup
+    //   46: aload_1
+    //   47: aload 8
+    //   49: invokespecial 499	java/io/File:<init>	(Ljava/io/File;Ljava/lang/String;)V
+    //   52: astore 5
+    //   54: aload 5
+    //   56: invokevirtual 502	java/io/File:isFile	()Z
+    //   59: ifeq +37 -> 96
+    //   62: aconst_null
+    //   63: astore 6
+    //   65: new 504	java/io/FileInputStream
+    //   68: dup
+    //   69: aload 5
+    //   71: invokespecial 507	java/io/FileInputStream:<init>	(Ljava/io/File;)V
+    //   74: astore 5
+    //   76: aload 5
+    //   78: new 279	java/io/File
+    //   81: dup
+    //   82: aload_2
+    //   83: aload 8
+    //   85: invokespecial 499	java/io/File:<init>	(Ljava/io/File;Ljava/lang/String;)V
+    //   88: invokestatic 510	com/estrongs/fs/util/j:a	(Ljava/io/InputStream;Ljava/io/File;)V
+    //   91: aload 5
+    //   93: invokestatic 512	com/estrongs/fs/util/j:a	(Ljava/io/InputStream;)V
+    //   96: iload_3
+    //   97: iconst_1
+    //   98: iadd
+    //   99: istore_3
+    //   100: goto -70 -> 30
+    //   103: astore 5
+    //   105: aconst_null
+    //   106: astore 5
+    //   108: aload 5
+    //   110: invokestatic 512	com/estrongs/fs/util/j:a	(Ljava/io/InputStream;)V
+    //   113: goto -17 -> 96
+    //   116: astore_1
+    //   117: aload 6
+    //   119: astore 5
+    //   121: aload 5
+    //   123: invokestatic 512	com/estrongs/fs/util/j:a	(Ljava/io/InputStream;)V
+    //   126: aload_1
+    //   127: athrow
+    //   128: return
+    //   129: astore_1
+    //   130: goto -9 -> 121
+    //   133: astore 6
+    //   135: goto -27 -> 108
+    // Local variable table:
+    //   start	length	slot	name	signature
+    //   0	138	0	this	AppFolderInfoManager
+    //   0	138	1	paramFile1	File
+    //   0	138	2	paramFile2	File
+    //   29	71	3	i1	int
+    //   26	8	4	i2	int
+    //   52	40	5	localObject1	Object
+    //   103	1	5	localException1	Exception
+    //   106	16	5	localObject2	Object
+    //   63	55	6	localObject3	Object
+    //   133	1	6	localException2	Exception
+    //   16	21	7	arrayOfString	String[]
+    //   40	44	8	str	String
+    // Exception table:
+    //   from	to	target	type
+    //   65	76	103	java/lang/Exception
+    //   65	76	116	finally
+    //   76	91	129	finally
+    //   76	91	133	java/lang/Exception
   }
   
   private void a(String paramString1, String paramString2)
@@ -396,39 +497,38 @@ public class AppFolderInfoManager
   
   private void a(String paramString1, String paramString2, boolean paramBoolean)
   {
-    int i3;
-    if ((paramString1 != null) && (paramString2 != null) && (paramString1.startsWith("/")))
-    {
-      String str = paramString2;
-      if (paramString2.endsWith("/")) {
-        str = paramString2.substring(0, paramString2.length() - 1);
-      }
-      i3 = o(str);
-      if (i3 != -1) {
-        break label59;
+    if ((paramString1 != null) && (paramString2 != null) && (paramString1.startsWith("/"))) {
+      if (!paramString2.endsWith("/")) {
+        break label56;
       }
     }
-    for (;;)
+    int i3;
+    label56:
+    for (String str = paramString2.substring(0, paramString2.length() - 1);; str = paramString2)
     {
+      i3 = p(str);
+      if (i3 != -1) {
+        break;
+      }
       return;
-      label59:
-      int i1 = 0;
-      while (i1 != -1)
+    }
+    int i1 = 0;
+    while (i1 != -1)
+    {
+      int i2 = paramString1.indexOf("/", i1 + 1);
+      i1 = i2;
+      if (i2 != -1)
       {
-        int i2 = paramString1.indexOf("/", i1 + 1);
+        int i4 = o(paramString1.substring(0, i2));
         i1 = i2;
-        if (i2 != -1)
+        if (i4 != -1)
         {
-          int i4 = n(paramString1.substring(0, i2));
+          a(i4, i3, paramBoolean);
           i1 = i2;
-          if (i4 != -1)
-          {
-            a(i4, i3, paramBoolean);
-            i1 = i2;
-          }
         }
       }
     }
+    com.estrongs.android.scanner.l.a().c(paramString1, paramString2);
   }
   
   private boolean a(PackageManager paramPackageManager, Collection<String> paramCollection, String paramString)
@@ -554,17 +654,17 @@ public class AppFolderInfoManager
     //   0: aconst_null
     //   1: astore 5
     //   3: aload_0
-    //   4: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   7: ldc -33
+    //   4: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   7: ldc -30
     //   9: iconst_1
-    //   10: anewarray 225	java/lang/String
+    //   10: anewarray 228	java/lang/String
     //   13: dup
     //   14: iconst_0
-    //   15: ldc -29
+    //   15: ldc -26
     //   17: aastore
-    //   18: ldc -27
+    //   18: ldc -24
     //   20: iconst_1
-    //   21: anewarray 225	java/lang/String
+    //   21: anewarray 228	java/lang/String
     //   24: dup
     //   25: iconst_0
     //   26: aload_1
@@ -572,7 +672,7 @@ public class AppFolderInfoManager
     //   28: aconst_null
     //   29: aconst_null
     //   30: aconst_null
-    //   31: invokevirtual 235	android/database/sqlite/SQLiteDatabase:query	(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    //   31: invokevirtual 238	android/database/sqlite/SQLiteDatabase:query	(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     //   34: astore_1
     //   35: aload_1
     //   36: astore 5
@@ -585,20 +685,20 @@ public class AppFolderInfoManager
     //   47: aload 5
     //   49: astore_1
     //   50: aload 5
-    //   52: invokeinterface 241 1 0
+    //   52: invokeinterface 244 1 0
     //   57: ifeq +15 -> 72
     //   60: aload 5
     //   62: astore_1
     //   63: aload 5
     //   65: iconst_0
-    //   66: invokeinterface 245 2 0
+    //   66: invokeinterface 248 2 0
     //   71: istore_3
     //   72: iload_3
     //   73: istore 4
     //   75: aload 5
     //   77: ifnull +13 -> 90
     //   80: aload 5
-    //   82: invokeinterface 248 1 0
+    //   82: invokeinterface 251 1 0
     //   87: iload_3
     //   88: istore 4
     //   90: iload 4
@@ -609,20 +709,20 @@ public class AppFolderInfoManager
     //   98: aload 5
     //   100: astore_1
     //   101: aload 6
-    //   103: invokevirtual 254	java/lang/Exception:printStackTrace	()V
+    //   103: invokevirtual 257	java/lang/Exception:printStackTrace	()V
     //   106: iload_2
     //   107: istore 4
     //   109: aload 5
     //   111: ifnull -21 -> 90
     //   114: aload 5
-    //   116: invokeinterface 248 1 0
+    //   116: invokeinterface 251 1 0
     //   121: iload_2
     //   122: ireturn
     //   123: astore_1
     //   124: aload 5
     //   126: ifnull +10 -> 136
     //   129: aload 5
-    //   131: invokeinterface 248 1 0
+    //   131: invokeinterface 251 1 0
     //   136: aload_1
     //   137: athrow
     //   138: astore 6
@@ -657,58 +757,66 @@ public class AppFolderInfoManager
   
   private void b(String paramString1, String paramString2, boolean paramBoolean)
   {
-    int i1;
+    String str;
     int i2;
-    int i3;
-    int i4;
-    if ((paramString1 != null) && (paramString2 != null) && (paramString1.startsWith("/")))
-    {
-      String str = paramString2;
-      if (paramString2.endsWith("/")) {
-        str = paramString2.substring(0, paramString2.length() - 1);
-      }
-      i1 = o(str);
-      i2 = i1;
-      if (i1 == -1) {
-        i2 = q(str);
-      }
-      i1 = 0;
-      i3 = 0;
-      while (i1 != -1)
+    if ((paramString1 != null) && (paramString2 != null) && (paramString1.startsWith("/"))) {
+      if (paramString2.endsWith("/"))
       {
-        i1 = paramString1.indexOf("/", i1 + 1);
-        i3 += 1;
+        str = paramString2.substring(0, paramString2.length() - 1);
+        i2 = p(str);
+        if (i2 != -1) {
+          break label221;
+        }
+        i2 = r(str);
       }
-      i1 = 0;
-      i4 = 0;
     }
+    label214:
+    label221:
     for (;;)
     {
-      int i5;
-      if (i4 != -1)
+      int i1 = 0;
+      int i3 = 0;
+      for (;;)
       {
-        i1 += 1;
-        i5 = paramString1.indexOf("/", i4 + 1);
-        if (i5 == -1) {
-          break label203;
+        if (i1 != -1)
+        {
+          i1 = paramString1.indexOf("/", i1 + 1);
+          i3 += 1;
+          continue;
+          str = paramString2;
+          break;
         }
-        paramString2 = paramString1.substring(0, i5);
-        if (!m(paramString2)) {}
       }
-      else
+      i1 = 0;
+      int i4 = 0;
+      for (;;)
       {
-        return;
+        int i5;
+        if (i4 != -1)
+        {
+          i1 += 1;
+          i5 = paramString1.indexOf("/", i4 + 1);
+          if (i5 == -1) {
+            break label214;
+          }
+          str = paramString1.substring(0, i5);
+          if (!n(str)) {}
+        }
+        else
+        {
+          com.estrongs.android.scanner.l.a().b(paramString1, paramString2);
+          return;
+        }
+        int i6 = o(str);
+        i4 = i6;
+        if (i6 == -1) {
+          i4 = q(str);
+        }
+        a(i4, i2, i3 - i1, paramBoolean);
+        i4 = i5;
+        continue;
+        i4 = i5;
       }
-      int i6 = n(paramString2);
-      i4 = i6;
-      if (i6 == -1) {
-        i4 = p(paramString2);
-      }
-      a(i4, i2, i3 - i1, paramBoolean);
-      i4 = i5;
-      continue;
-      label203:
-      i4 = i5;
     }
   }
   
@@ -736,7 +844,7 @@ public class AppFolderInfoManager
   
   private void c(String paramString, int paramInt)
   {
-    s.execSQL("INSERT OR REPLACE INTO config(key,value) VALUES(?,?)", new Object[] { paramString, Integer.valueOf(paramInt) });
+    t.execSQL("INSERT OR REPLACE INTO config(key,value) VALUES(?,?)", new Object[] { paramString, Integer.valueOf(paramInt) });
   }
   
   public static AppFolderInfoManager d()
@@ -744,20 +852,25 @@ public class AppFolderInfoManager
     return a;
   }
   
-  private String d(com.estrongs.fs.h paramh)
+  private int f()
+  {
+    return a("app_folder_map_version", 100000000);
+  }
+  
+  private String f(com.estrongs.fs.h paramh)
   {
     for (;;)
     {
       try
       {
-        String str2 = am.bD(paramh.getAbsolutePath());
+        String str2 = ap.bU(paramh.getAbsolutePath());
         if (str2 == null) {
           return null;
         }
-        paramh = am.bE(paramh.getAbsolutePath());
-        if (am.bW(paramh))
+        paramh = ap.bV(paramh.getAbsolutePath());
+        if (ap.cp(paramh))
         {
-          String str1 = am.bS(paramh);
+          String str1 = ap.cl(paramh);
           if (str1 != null)
           {
             paramh = str1;
@@ -776,426 +889,537 @@ public class AppFolderInfoManager
     }
   }
   
-  private int e()
-  {
-    return a("app_folder_map_version", 100000000);
-  }
-  
-  /* Error */
-  private void f()
-  {
-    // Byte code:
-    //   0: aload_0
-    //   1: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   4: ifnull +4 -> 8
-    //   7: return
-    //   8: new 105	java/lang/StringBuilder
-    //   11: dup
-    //   12: invokespecial 106	java/lang/StringBuilder:<init>	()V
-    //   15: getstatic 110	com/estrongs/android/pop/a:a	Ljava/lang/String;
-    //   18: invokevirtual 114	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   21: ldc_w 653
-    //   24: invokevirtual 114	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   27: invokevirtual 120	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   30: astore_1
-    //   31: new 276	java/io/File
-    //   34: dup
-    //   35: aload_1
-    //   36: invokespecial 555	java/io/File:<init>	(Ljava/lang/String;)V
-    //   39: invokevirtual 615	java/io/File:exists	()Z
-    //   42: ifeq +55 -> 97
-    //   45: aload_0
-    //   46: aload_1
-    //   47: aconst_null
-    //   48: iconst_0
-    //   49: invokestatic 657	android/database/sqlite/SQLiteDatabase:openDatabase	(Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)Landroid/database/sqlite/SQLiteDatabase;
-    //   52: putfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   55: aload_0
-    //   56: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   59: ldc_w 659
-    //   62: invokevirtual 661	android/database/sqlite/SQLiteDatabase:execSQL	(Ljava/lang/String;)V
-    //   65: aload_0
-    //   66: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   69: ldc_w 663
-    //   72: invokevirtual 661	android/database/sqlite/SQLiteDatabase:execSQL	(Ljava/lang/String;)V
-    //   75: return
-    //   76: astore_1
-    //   77: aload_0
-    //   78: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   81: ifnull +10 -> 91
-    //   84: aload_0
-    //   85: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   88: invokevirtual 664	android/database/sqlite/SQLiteDatabase:close	()V
-    //   91: aload_0
-    //   92: aconst_null
-    //   93: putfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   96: return
-    //   97: aload_0
-    //   98: aload_1
-    //   99: aconst_null
-    //   100: invokestatic 668	android/database/sqlite/SQLiteDatabase:openOrCreateDatabase	(Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;)Landroid/database/sqlite/SQLiteDatabase;
-    //   103: putfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   106: goto -51 -> 55
-    //   109: astore_2
-    //   110: new 276	java/io/File
-    //   113: dup
-    //   114: aload_1
-    //   115: invokespecial 555	java/io/File:<init>	(Ljava/lang/String;)V
-    //   118: astore_2
-    //   119: aload_2
-    //   120: invokevirtual 615	java/io/File:exists	()Z
-    //   123: ifeq +8 -> 131
-    //   126: aload_2
-    //   127: invokevirtual 670	java/io/File:delete	()Z
-    //   130: pop
-    //   131: aload_0
-    //   132: aload_1
-    //   133: aconst_null
-    //   134: invokestatic 668	android/database/sqlite/SQLiteDatabase:openOrCreateDatabase	(Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;)Landroid/database/sqlite/SQLiteDatabase;
-    //   137: putfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   140: goto -85 -> 55
-    //   143: astore_1
-    //   144: goto -53 -> 91
-    // Local variable table:
-    //   start	length	slot	name	signature
-    //   0	147	0	this	AppFolderInfoManager
-    //   30	17	1	str	String
-    //   76	57	1	localThrowable1	Throwable
-    //   143	1	1	localThrowable2	Throwable
-    //   109	1	2	localThrowable3	Throwable
-    //   118	9	2	localFile	File
-    // Exception table:
-    //   from	to	target	type
-    //   8	31	76	java/lang/Throwable
-    //   55	75	76	java/lang/Throwable
-    //   110	131	76	java/lang/Throwable
-    //   131	140	76	java/lang/Throwable
-    //   31	55	109	java/lang/Throwable
-    //   97	106	109	java/lang/Throwable
-    //   84	91	143	java/lang/Throwable
-  }
-  
   /* Error */
   private void g()
   {
     // Byte code:
-    //   0: aload_0
-    //   1: getfield 198	com/estrongs/android/appinfo/AppFolderInfoManager:t	Ljava/lang/Object;
-    //   4: astore_3
-    //   5: aload_3
-    //   6: monitorenter
-    //   7: aload_0
-    //   8: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   11: ifnonnull +7 -> 18
-    //   14: aload_0
-    //   15: invokespecial 602	com/estrongs/android/appinfo/AppFolderInfoManager:f	()V
-    //   18: aload_0
-    //   19: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   22: astore 4
-    //   24: aload 4
-    //   26: ifnonnull +66 -> 92
-    //   29: aload_0
-    //   30: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   33: ifnull +22 -> 55
-    //   36: aload_0
-    //   37: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   40: invokevirtual 673	android/database/sqlite/SQLiteDatabase:inTransaction	()Z
-    //   43: istore_2
-    //   44: iload_2
-    //   45: ifeq +10 -> 55
-    //   48: aload_0
-    //   49: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   52: invokevirtual 676	android/database/sqlite/SQLiteDatabase:endTransaction	()V
-    //   55: aload_3
-    //   56: monitorexit
-    //   57: return
-    //   58: astore 4
-    //   60: aload_0
-    //   61: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   64: invokevirtual 664	android/database/sqlite/SQLiteDatabase:close	()V
-    //   67: aload_0
-    //   68: aconst_null
-    //   69: putfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   72: goto -17 -> 55
-    //   75: astore 4
-    //   77: aload_3
-    //   78: monitorexit
-    //   79: aload 4
-    //   81: athrow
-    //   82: astore 4
-    //   84: aload_0
-    //   85: aconst_null
-    //   86: putfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   89: aload 4
-    //   91: athrow
-    //   92: aload_0
-    //   93: ldc_w 678
-    //   96: iconst_0
-    //   97: invokespecial 680	com/estrongs/android/appinfo/AppFolderInfoManager:b	(Ljava/lang/String;I)I
-    //   100: istore_1
-    //   101: iload_1
-    //   102: iconst_1
-    //   103: if_icmpne +59 -> 162
-    //   106: aload_0
-    //   107: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   110: ifnull +22 -> 132
-    //   113: aload_0
-    //   114: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   117: invokevirtual 673	android/database/sqlite/SQLiteDatabase:inTransaction	()Z
-    //   120: istore_2
-    //   121: iload_2
-    //   122: ifeq +10 -> 132
-    //   125: aload_0
-    //   126: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   129: invokevirtual 676	android/database/sqlite/SQLiteDatabase:endTransaction	()V
-    //   132: aload_3
-    //   133: monitorexit
-    //   134: return
-    //   135: astore 4
-    //   137: aload_0
-    //   138: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   141: invokevirtual 664	android/database/sqlite/SQLiteDatabase:close	()V
-    //   144: aload_0
-    //   145: aconst_null
-    //   146: putfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   149: goto -17 -> 132
-    //   152: astore 4
-    //   154: aload_0
-    //   155: aconst_null
-    //   156: putfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   159: aload 4
-    //   161: athrow
-    //   162: new 347	android/content/ContentValues
-    //   165: dup
-    //   166: invokespecial 348	android/content/ContentValues:<init>	()V
-    //   169: astore 4
-    //   171: invokestatic 685	com/estrongs/android/pop/FexApplication:a	()Lcom/estrongs/android/pop/FexApplication;
-    //   174: invokevirtual 689	com/estrongs/android/pop/FexApplication:getPackageManager	()Landroid/content/pm/PackageManager;
-    //   177: astore 5
-    //   179: aload 5
-    //   181: sipush 8192
-    //   184: invokevirtual 693	android/content/pm/PackageManager:getInstalledApplications	(I)Ljava/util/List;
-    //   187: astore 6
-    //   189: aload_0
-    //   190: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   193: invokevirtual 696	android/database/sqlite/SQLiteDatabase:beginTransaction	()V
-    //   196: aload 6
-    //   198: invokeinterface 699 1 0
-    //   203: astore 6
-    //   205: aload 6
-    //   207: invokeinterface 529 1 0
-    //   212: ifeq +122 -> 334
-    //   215: aload 6
-    //   217: invokeinterface 533 1 0
-    //   222: checkcast 414	android/content/pm/ApplicationInfo
-    //   225: astore 7
-    //   227: aload 7
-    //   229: getfield 702	android/content/pm/ApplicationInfo:flags	I
-    //   232: iconst_1
-    //   233: iand
-    //   234: ifgt -29 -> 205
-    //   237: aload 5
-    //   239: aload 5
-    //   241: aload 7
-    //   243: getfield 703	android/content/pm/ApplicationInfo:packageName	Ljava/lang/String;
-    //   246: iconst_0
-    //   247: invokevirtual 707	android/content/pm/PackageManager:getApplicationInfo	(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
-    //   250: invokevirtual 711	android/content/pm/PackageManager:getApplicationLabel	(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;
-    //   253: invokevirtual 712	java/lang/Object:toString	()Ljava/lang/String;
-    //   256: astore 8
-    //   258: aload 4
-    //   260: invokevirtual 715	android/content/ContentValues:clear	()V
-    //   263: aload 4
-    //   265: ldc_w 361
-    //   268: aload 7
-    //   270: getfield 703	android/content/pm/ApplicationInfo:packageName	Ljava/lang/String;
-    //   273: invokevirtual 368	android/content/ContentValues:put	(Ljava/lang/String;Ljava/lang/String;)V
-    //   276: aload 4
-    //   278: ldc_w 717
-    //   281: aload 8
-    //   283: invokevirtual 368	android/content/ContentValues:put	(Ljava/lang/String;Ljava/lang/String;)V
-    //   286: aload_0
-    //   287: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   290: ldc_w 719
-    //   293: aconst_null
-    //   294: aload 4
-    //   296: invokevirtual 376	android/database/sqlite/SQLiteDatabase:insert	(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
-    //   299: pop2
-    //   300: goto -95 -> 205
-    //   303: astore 4
-    //   305: aload_0
-    //   306: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   309: ifnull +22 -> 331
-    //   312: aload_0
-    //   313: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   316: invokevirtual 673	android/database/sqlite/SQLiteDatabase:inTransaction	()Z
-    //   319: istore_2
-    //   320: iload_2
-    //   321: ifeq +10 -> 331
-    //   324: aload_0
-    //   325: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   328: invokevirtual 676	android/database/sqlite/SQLiteDatabase:endTransaction	()V
-    //   331: aload_3
-    //   332: monitorexit
-    //   333: return
-    //   334: aload_0
-    //   335: ldc_w 678
-    //   338: iconst_1
-    //   339: invokespecial 721	com/estrongs/android/appinfo/AppFolderInfoManager:c	(Ljava/lang/String;I)V
-    //   342: aload_0
-    //   343: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   346: invokevirtual 724	android/database/sqlite/SQLiteDatabase:setTransactionSuccessful	()V
-    //   349: aload_0
-    //   350: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   353: ifnull -22 -> 331
-    //   356: aload_0
-    //   357: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   360: invokevirtual 673	android/database/sqlite/SQLiteDatabase:inTransaction	()Z
-    //   363: istore_2
-    //   364: iload_2
-    //   365: ifeq -34 -> 331
-    //   368: aload_0
-    //   369: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   372: invokevirtual 676	android/database/sqlite/SQLiteDatabase:endTransaction	()V
-    //   375: goto -44 -> 331
-    //   378: astore 4
-    //   380: aload_0
-    //   381: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   384: invokevirtual 664	android/database/sqlite/SQLiteDatabase:close	()V
-    //   387: aload_0
-    //   388: aconst_null
-    //   389: putfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   392: goto -61 -> 331
-    //   395: astore 4
-    //   397: aload_0
-    //   398: aconst_null
-    //   399: putfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   402: aload 4
-    //   404: athrow
-    //   405: astore 4
-    //   407: aload_0
-    //   408: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   411: invokevirtual 664	android/database/sqlite/SQLiteDatabase:close	()V
-    //   414: aload_0
-    //   415: aconst_null
-    //   416: putfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   419: goto -88 -> 331
-    //   422: astore 4
-    //   424: aload_0
-    //   425: aconst_null
-    //   426: putfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   429: aload 4
-    //   431: athrow
-    //   432: astore 4
-    //   434: aload_0
-    //   435: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   438: ifnull +22 -> 460
-    //   441: aload_0
-    //   442: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   445: invokevirtual 673	android/database/sqlite/SQLiteDatabase:inTransaction	()Z
-    //   448: istore_2
-    //   449: iload_2
-    //   450: ifeq +10 -> 460
-    //   453: aload_0
-    //   454: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   457: invokevirtual 676	android/database/sqlite/SQLiteDatabase:endTransaction	()V
-    //   460: aload 4
-    //   462: athrow
-    //   463: astore 5
-    //   465: aload_0
-    //   466: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   469: invokevirtual 664	android/database/sqlite/SQLiteDatabase:close	()V
-    //   472: aload_0
-    //   473: aconst_null
-    //   474: putfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   477: goto -17 -> 460
-    //   480: astore 4
-    //   482: aload_0
-    //   483: aconst_null
-    //   484: putfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   487: aload 4
-    //   489: athrow
+    //   0: aconst_null
+    //   1: astore_2
+    //   2: aload_0
+    //   3: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   6: ifnull +4 -> 10
+    //   9: return
+    //   10: new 106	java/lang/StringBuilder
+    //   13: dup
+    //   14: invokespecial 107	java/lang/StringBuilder:<init>	()V
+    //   17: getstatic 125	com/estrongs/android/pop/a:b	Ljava/lang/String;
+    //   20: invokevirtual 115	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   23: ldc_w 686
+    //   26: invokevirtual 115	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   29: invokevirtual 121	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   32: astore_3
+    //   33: new 106	java/lang/StringBuilder
+    //   36: dup
+    //   37: invokespecial 107	java/lang/StringBuilder:<init>	()V
+    //   40: getstatic 111	com/estrongs/android/pop/a:a	Ljava/lang/String;
+    //   43: invokevirtual 115	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   46: ldc_w 686
+    //   49: invokevirtual 115	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   52: invokevirtual 121	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   55: astore_1
+    //   56: new 279	java/io/File
+    //   59: dup
+    //   60: aload_3
+    //   61: invokespecial 592	java/io/File:<init>	(Ljava/lang/String;)V
+    //   64: astore 4
+    //   66: aload 4
+    //   68: invokevirtual 491	java/io/File:exists	()Z
+    //   71: ifne +47 -> 118
+    //   74: new 279	java/io/File
+    //   77: dup
+    //   78: aload_1
+    //   79: invokespecial 592	java/io/File:<init>	(Ljava/lang/String;)V
+    //   82: astore_1
+    //   83: aload_1
+    //   84: invokevirtual 491	java/io/File:exists	()Z
+    //   87: ifeq +31 -> 118
+    //   90: aload_1
+    //   91: aload 4
+    //   93: invokevirtual 690	java/io/File:renameTo	(Ljava/io/File;)Z
+    //   96: ifne +22 -> 118
+    //   99: new 504	java/io/FileInputStream
+    //   102: dup
+    //   103: aload_1
+    //   104: invokespecial 507	java/io/FileInputStream:<init>	(Ljava/io/File;)V
+    //   107: astore_1
+    //   108: aload_1
+    //   109: aload 4
+    //   111: invokestatic 510	com/estrongs/fs/util/j:a	(Ljava/io/InputStream;Ljava/io/File;)V
+    //   114: aload_1
+    //   115: invokestatic 512	com/estrongs/fs/util/j:a	(Ljava/io/InputStream;)V
+    //   118: new 279	java/io/File
+    //   121: dup
+    //   122: aload_3
+    //   123: invokespecial 592	java/io/File:<init>	(Ljava/lang/String;)V
+    //   126: invokevirtual 491	java/io/File:exists	()Z
+    //   129: ifeq +76 -> 205
+    //   132: aload_0
+    //   133: aload_3
+    //   134: aconst_null
+    //   135: iconst_0
+    //   136: invokestatic 694	android/database/sqlite/SQLiteDatabase:openDatabase	(Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)Landroid/database/sqlite/SQLiteDatabase;
+    //   139: putfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   142: aload_0
+    //   143: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   146: ldc_w 696
+    //   149: invokevirtual 698	android/database/sqlite/SQLiteDatabase:execSQL	(Ljava/lang/String;)V
+    //   152: aload_0
+    //   153: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   156: ldc_w 700
+    //   159: invokevirtual 698	android/database/sqlite/SQLiteDatabase:execSQL	(Ljava/lang/String;)V
+    //   162: return
+    //   163: astore_1
+    //   164: aload_0
+    //   165: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   168: ifnull +10 -> 178
+    //   171: aload_0
+    //   172: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   175: invokevirtual 701	android/database/sqlite/SQLiteDatabase:close	()V
+    //   178: aload_0
+    //   179: aconst_null
+    //   180: putfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   183: return
+    //   184: astore_1
+    //   185: aconst_null
+    //   186: astore_1
+    //   187: aload_1
+    //   188: invokestatic 512	com/estrongs/fs/util/j:a	(Ljava/io/InputStream;)V
+    //   191: goto -73 -> 118
+    //   194: astore_3
+    //   195: aload_2
+    //   196: astore_1
+    //   197: aload_3
+    //   198: astore_2
+    //   199: aload_1
+    //   200: invokestatic 512	com/estrongs/fs/util/j:a	(Ljava/io/InputStream;)V
+    //   203: aload_2
+    //   204: athrow
+    //   205: aload_0
+    //   206: aload_3
+    //   207: aconst_null
+    //   208: invokestatic 705	android/database/sqlite/SQLiteDatabase:openOrCreateDatabase	(Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;)Landroid/database/sqlite/SQLiteDatabase;
+    //   211: putfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   214: goto -72 -> 142
+    //   217: astore_1
+    //   218: new 279	java/io/File
+    //   221: dup
+    //   222: aload_3
+    //   223: invokespecial 592	java/io/File:<init>	(Ljava/lang/String;)V
+    //   226: astore_1
+    //   227: aload_1
+    //   228: invokevirtual 491	java/io/File:exists	()Z
+    //   231: ifeq +8 -> 239
+    //   234: aload_1
+    //   235: invokevirtual 707	java/io/File:delete	()Z
+    //   238: pop
+    //   239: aload_0
+    //   240: aload_3
+    //   241: aconst_null
+    //   242: invokestatic 705	android/database/sqlite/SQLiteDatabase:openOrCreateDatabase	(Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;)Landroid/database/sqlite/SQLiteDatabase;
+    //   245: putfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   248: goto -106 -> 142
+    //   251: astore_1
+    //   252: goto -74 -> 178
+    //   255: astore_2
+    //   256: goto -57 -> 199
+    //   259: astore_2
+    //   260: goto -73 -> 187
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	490	0	this	AppFolderInfoManager
-    //   100	4	1	i1	int
-    //   43	407	2	bool	boolean
-    //   4	328	3	localObject1	Object
-    //   22	3	4	localSQLiteDatabase	SQLiteDatabase
-    //   58	1	4	localException1	Exception
-    //   75	5	4	localObject2	Object
-    //   82	8	4	localObject3	Object
-    //   135	1	4	localException2	Exception
-    //   152	8	4	localObject4	Object
-    //   169	126	4	localContentValues	ContentValues
-    //   303	1	4	localException3	Exception
-    //   378	1	4	localException4	Exception
-    //   395	8	4	localObject5	Object
-    //   405	1	4	localException5	Exception
-    //   422	8	4	localObject6	Object
-    //   432	29	4	localObject7	Object
-    //   480	8	4	localObject8	Object
-    //   177	63	5	localPackageManager	PackageManager
-    //   463	1	5	localException6	Exception
-    //   187	29	6	localObject9	Object
-    //   225	44	7	localApplicationInfo	ApplicationInfo
-    //   256	26	8	str	String
+    //   0	263	0	this	AppFolderInfoManager
+    //   55	60	1	localObject1	Object
+    //   163	1	1	localThrowable1	Throwable
+    //   184	1	1	localThrowable2	Throwable
+    //   186	14	1	localObject2	Object
+    //   217	1	1	localThrowable3	Throwable
+    //   226	9	1	localFile1	File
+    //   251	1	1	localThrowable4	Throwable
+    //   1	203	2	localObject3	Object
+    //   255	1	2	localObject4	Object
+    //   259	1	2	localThrowable5	Throwable
+    //   32	102	3	str1	String
+    //   194	47	3	str2	String
+    //   64	46	4	localFile2	File
     // Exception table:
     //   from	to	target	type
-    //   48	55	58	java/lang/Exception
-    //   29	44	75	finally
-    //   48	55	75	finally
-    //   55	57	75	finally
-    //   67	72	75	finally
-    //   77	79	75	finally
-    //   84	92	75	finally
-    //   106	121	75	finally
-    //   125	132	75	finally
-    //   132	134	75	finally
-    //   144	149	75	finally
-    //   154	162	75	finally
-    //   305	320	75	finally
-    //   324	331	75	finally
-    //   331	333	75	finally
-    //   349	364	75	finally
-    //   368	375	75	finally
-    //   387	392	75	finally
-    //   397	405	75	finally
-    //   414	419	75	finally
-    //   424	432	75	finally
-    //   434	449	75	finally
-    //   453	460	75	finally
-    //   460	463	75	finally
-    //   472	477	75	finally
-    //   482	490	75	finally
-    //   60	67	82	finally
-    //   125	132	135	java/lang/Exception
-    //   137	144	152	finally
-    //   7	18	303	java/lang/Exception
-    //   18	24	303	java/lang/Exception
-    //   92	101	303	java/lang/Exception
-    //   162	205	303	java/lang/Exception
-    //   205	300	303	java/lang/Exception
-    //   334	349	303	java/lang/Exception
-    //   368	375	378	java/lang/Exception
-    //   380	387	395	finally
-    //   324	331	405	java/lang/Exception
-    //   407	414	422	finally
-    //   7	18	432	finally
-    //   18	24	432	finally
-    //   92	101	432	finally
-    //   162	205	432	finally
-    //   205	300	432	finally
-    //   334	349	432	finally
-    //   453	460	463	java/lang/Exception
-    //   465	472	480	finally
+    //   142	162	163	java/lang/Throwable
+    //   218	239	163	java/lang/Throwable
+    //   239	248	163	java/lang/Throwable
+    //   99	108	184	java/lang/Throwable
+    //   99	108	194	finally
+    //   118	142	217	java/lang/Throwable
+    //   205	214	217	java/lang/Throwable
+    //   171	178	251	java/lang/Throwable
+    //   108	114	255	finally
+    //   108	114	259	java/lang/Throwable
   }
   
   private void h()
   {
+    if (!ad.a(FexApplication.a()).bf()) {}
+    try
+    {
+      File localFile1 = new File(m);
+      if ((localFile1.exists()) && (localFile1.isDirectory()))
+      {
+        File localFile2 = new File(n);
+        if ((!localFile2.exists()) && (!localFile1.renameTo(localFile2)))
+        {
+          a(localFile1, localFile2);
+          a(new File(localFile1, "ver"), new File(localFile2, "ver"));
+        }
+      }
+      ad.a(FexApplication.a()).x(true);
+      return;
+    }
+    catch (Throwable localThrowable)
+    {
+      for (;;) {}
+    }
+  }
+  
+  /* Error */
+  private void i()
+  {
+    // Byte code:
+    //   0: aload_0
+    //   1: invokespecial 396	com/estrongs/android/appinfo/AppFolderInfoManager:h	()V
+    //   4: aload_0
+    //   5: getfield 201	com/estrongs/android/appinfo/AppFolderInfoManager:u	Ljava/lang/Object;
+    //   8: astore_3
+    //   9: aload_3
+    //   10: monitorenter
+    //   11: aload_0
+    //   12: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   15: ifnonnull +7 -> 22
+    //   18: aload_0
+    //   19: invokespecial 637	com/estrongs/android/appinfo/AppFolderInfoManager:g	()V
+    //   22: aload_0
+    //   23: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   26: astore 4
+    //   28: aload 4
+    //   30: ifnonnull +66 -> 96
+    //   33: aload_0
+    //   34: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   37: ifnull +22 -> 59
+    //   40: aload_0
+    //   41: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   44: invokevirtual 732	android/database/sqlite/SQLiteDatabase:inTransaction	()Z
+    //   47: istore_2
+    //   48: iload_2
+    //   49: ifeq +10 -> 59
+    //   52: aload_0
+    //   53: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   56: invokevirtual 735	android/database/sqlite/SQLiteDatabase:endTransaction	()V
+    //   59: aload_3
+    //   60: monitorexit
+    //   61: return
+    //   62: astore 4
+    //   64: aload_0
+    //   65: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   68: invokevirtual 701	android/database/sqlite/SQLiteDatabase:close	()V
+    //   71: aload_0
+    //   72: aconst_null
+    //   73: putfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   76: goto -17 -> 59
+    //   79: astore 4
+    //   81: aload_3
+    //   82: monitorexit
+    //   83: aload 4
+    //   85: athrow
+    //   86: astore 4
+    //   88: aload_0
+    //   89: aconst_null
+    //   90: putfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   93: aload 4
+    //   95: athrow
+    //   96: aload_0
+    //   97: ldc_w 737
+    //   100: iconst_0
+    //   101: invokespecial 739	com/estrongs/android/appinfo/AppFolderInfoManager:b	(Ljava/lang/String;I)I
+    //   104: istore_1
+    //   105: iload_1
+    //   106: iconst_1
+    //   107: if_icmpne +59 -> 166
+    //   110: aload_0
+    //   111: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   114: ifnull +22 -> 136
+    //   117: aload_0
+    //   118: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   121: invokevirtual 732	android/database/sqlite/SQLiteDatabase:inTransaction	()Z
+    //   124: istore_2
+    //   125: iload_2
+    //   126: ifeq +10 -> 136
+    //   129: aload_0
+    //   130: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   133: invokevirtual 735	android/database/sqlite/SQLiteDatabase:endTransaction	()V
+    //   136: aload_3
+    //   137: monitorexit
+    //   138: return
+    //   139: astore 4
+    //   141: aload_0
+    //   142: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   145: invokevirtual 701	android/database/sqlite/SQLiteDatabase:close	()V
+    //   148: aload_0
+    //   149: aconst_null
+    //   150: putfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   153: goto -17 -> 136
+    //   156: astore 4
+    //   158: aload_0
+    //   159: aconst_null
+    //   160: putfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   163: aload 4
+    //   165: athrow
+    //   166: new 350	android/content/ContentValues
+    //   169: dup
+    //   170: invokespecial 351	android/content/ContentValues:<init>	()V
+    //   173: astore 4
+    //   175: invokestatic 712	com/estrongs/android/pop/FexApplication:a	()Lcom/estrongs/android/pop/FexApplication;
+    //   178: invokevirtual 743	com/estrongs/android/pop/FexApplication:getPackageManager	()Landroid/content/pm/PackageManager;
+    //   181: astore 5
+    //   183: invokestatic 712	com/estrongs/android/pop/FexApplication:a	()Lcom/estrongs/android/pop/FexApplication;
+    //   186: sipush 8192
+    //   189: invokevirtual 746	com/estrongs/android/pop/FexApplication:a	(I)Ljava/util/List;
+    //   192: astore 6
+    //   194: aload_0
+    //   195: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   198: invokevirtual 749	android/database/sqlite/SQLiteDatabase:beginTransaction	()V
+    //   201: aload 6
+    //   203: invokeinterface 752 1 0
+    //   208: astore 6
+    //   210: aload 6
+    //   212: invokeinterface 566 1 0
+    //   217: ifeq +124 -> 341
+    //   220: aload 6
+    //   222: invokeinterface 570 1 0
+    //   227: checkcast 419	android/content/pm/ApplicationInfo
+    //   230: astore 7
+    //   232: aload 7
+    //   234: getfield 755	android/content/pm/ApplicationInfo:flags	I
+    //   237: iconst_1
+    //   238: iand
+    //   239: ifgt -29 -> 210
+    //   242: aload 5
+    //   244: aload 5
+    //   246: aload 7
+    //   248: getfield 756	android/content/pm/ApplicationInfo:packageName	Ljava/lang/String;
+    //   251: iconst_0
+    //   252: invokevirtual 760	android/content/pm/PackageManager:getApplicationInfo	(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+    //   255: invokevirtual 764	android/content/pm/PackageManager:getApplicationLabel	(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;
+    //   258: invokeinterface 767 1 0
+    //   263: astore 8
+    //   265: aload 4
+    //   267: invokevirtual 770	android/content/ContentValues:clear	()V
+    //   270: aload 4
+    //   272: ldc_w 364
+    //   275: aload 7
+    //   277: getfield 756	android/content/pm/ApplicationInfo:packageName	Ljava/lang/String;
+    //   280: invokevirtual 371	android/content/ContentValues:put	(Ljava/lang/String;Ljava/lang/String;)V
+    //   283: aload 4
+    //   285: ldc_w 772
+    //   288: aload 8
+    //   290: invokevirtual 371	android/content/ContentValues:put	(Ljava/lang/String;Ljava/lang/String;)V
+    //   293: aload_0
+    //   294: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   297: ldc_w 774
+    //   300: aconst_null
+    //   301: aload 4
+    //   303: invokevirtual 379	android/database/sqlite/SQLiteDatabase:insert	(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
+    //   306: pop2
+    //   307: goto -97 -> 210
+    //   310: astore 4
+    //   312: aload_0
+    //   313: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   316: ifnull +22 -> 338
+    //   319: aload_0
+    //   320: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   323: invokevirtual 732	android/database/sqlite/SQLiteDatabase:inTransaction	()Z
+    //   326: istore_2
+    //   327: iload_2
+    //   328: ifeq +10 -> 338
+    //   331: aload_0
+    //   332: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   335: invokevirtual 735	android/database/sqlite/SQLiteDatabase:endTransaction	()V
+    //   338: aload_3
+    //   339: monitorexit
+    //   340: return
+    //   341: aload_0
+    //   342: ldc_w 737
+    //   345: iconst_1
+    //   346: invokespecial 776	com/estrongs/android/appinfo/AppFolderInfoManager:c	(Ljava/lang/String;I)V
+    //   349: aload_0
+    //   350: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   353: invokevirtual 779	android/database/sqlite/SQLiteDatabase:setTransactionSuccessful	()V
+    //   356: aload_0
+    //   357: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   360: ifnull -22 -> 338
+    //   363: aload_0
+    //   364: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   367: invokevirtual 732	android/database/sqlite/SQLiteDatabase:inTransaction	()Z
+    //   370: istore_2
+    //   371: iload_2
+    //   372: ifeq -34 -> 338
+    //   375: aload_0
+    //   376: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   379: invokevirtual 735	android/database/sqlite/SQLiteDatabase:endTransaction	()V
+    //   382: goto -44 -> 338
+    //   385: astore 4
+    //   387: aload_0
+    //   388: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   391: invokevirtual 701	android/database/sqlite/SQLiteDatabase:close	()V
+    //   394: aload_0
+    //   395: aconst_null
+    //   396: putfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   399: goto -61 -> 338
+    //   402: astore 4
+    //   404: aload_0
+    //   405: aconst_null
+    //   406: putfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   409: aload 4
+    //   411: athrow
+    //   412: astore 4
+    //   414: aload_0
+    //   415: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   418: invokevirtual 701	android/database/sqlite/SQLiteDatabase:close	()V
+    //   421: aload_0
+    //   422: aconst_null
+    //   423: putfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   426: goto -88 -> 338
+    //   429: astore 4
+    //   431: aload_0
+    //   432: aconst_null
+    //   433: putfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   436: aload 4
+    //   438: athrow
+    //   439: astore 4
+    //   441: aload_0
+    //   442: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   445: ifnull +22 -> 467
+    //   448: aload_0
+    //   449: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   452: invokevirtual 732	android/database/sqlite/SQLiteDatabase:inTransaction	()Z
+    //   455: istore_2
+    //   456: iload_2
+    //   457: ifeq +10 -> 467
+    //   460: aload_0
+    //   461: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   464: invokevirtual 735	android/database/sqlite/SQLiteDatabase:endTransaction	()V
+    //   467: aload 4
+    //   469: athrow
+    //   470: astore 5
+    //   472: aload_0
+    //   473: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   476: invokevirtual 701	android/database/sqlite/SQLiteDatabase:close	()V
+    //   479: aload_0
+    //   480: aconst_null
+    //   481: putfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   484: goto -17 -> 467
+    //   487: astore 4
+    //   489: aload_0
+    //   490: aconst_null
+    //   491: putfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   494: aload 4
+    //   496: athrow
+    // Local variable table:
+    //   start	length	slot	name	signature
+    //   0	497	0	this	AppFolderInfoManager
+    //   104	4	1	i1	int
+    //   47	410	2	bool	boolean
+    //   8	331	3	localObject1	Object
+    //   26	3	4	localSQLiteDatabase	SQLiteDatabase
+    //   62	1	4	localException1	Exception
+    //   79	5	4	localObject2	Object
+    //   86	8	4	localObject3	Object
+    //   139	1	4	localException2	Exception
+    //   156	8	4	localObject4	Object
+    //   173	129	4	localContentValues	ContentValues
+    //   310	1	4	localException3	Exception
+    //   385	1	4	localException4	Exception
+    //   402	8	4	localObject5	Object
+    //   412	1	4	localException5	Exception
+    //   429	8	4	localObject6	Object
+    //   439	29	4	localObject7	Object
+    //   487	8	4	localObject8	Object
+    //   181	64	5	localPackageManager	PackageManager
+    //   470	1	5	localException6	Exception
+    //   192	29	6	localObject9	Object
+    //   230	46	7	localApplicationInfo	ApplicationInfo
+    //   263	26	8	str	String
+    // Exception table:
+    //   from	to	target	type
+    //   52	59	62	java/lang/Exception
+    //   33	48	79	finally
+    //   52	59	79	finally
+    //   59	61	79	finally
+    //   71	76	79	finally
+    //   81	83	79	finally
+    //   88	96	79	finally
+    //   110	125	79	finally
+    //   129	136	79	finally
+    //   136	138	79	finally
+    //   148	153	79	finally
+    //   158	166	79	finally
+    //   312	327	79	finally
+    //   331	338	79	finally
+    //   338	340	79	finally
+    //   356	371	79	finally
+    //   375	382	79	finally
+    //   394	399	79	finally
+    //   404	412	79	finally
+    //   421	426	79	finally
+    //   431	439	79	finally
+    //   441	456	79	finally
+    //   460	467	79	finally
+    //   467	470	79	finally
+    //   479	484	79	finally
+    //   489	497	79	finally
+    //   64	71	86	finally
+    //   129	136	139	java/lang/Exception
+    //   141	148	156	finally
+    //   11	22	310	java/lang/Exception
+    //   22	28	310	java/lang/Exception
+    //   96	105	310	java/lang/Exception
+    //   166	210	310	java/lang/Exception
+    //   210	307	310	java/lang/Exception
+    //   341	356	310	java/lang/Exception
+    //   375	382	385	java/lang/Exception
+    //   387	394	402	finally
+    //   331	338	412	java/lang/Exception
+    //   414	421	429	finally
+    //   11	22	439	finally
+    //   22	28	439	finally
+    //   96	105	439	finally
+    //   166	210	439	finally
+    //   210	307	439	finally
+    //   341	356	439	finally
+    //   460	467	470	java/lang/Exception
+    //   472	479	487	finally
+  }
+  
+  private n j(String paramString)
+  {
+    Iterator localIterator = b.iterator();
+    while (localIterator.hasNext())
+    {
+      n localn = (n)localIterator.next();
+      if (!d)
+      {
+        if (a.equals(paramString)) {
+          return localn;
+        }
+      }
+      else if (a.equalsIgnoreCase(paramString)) {
+        return localn;
+      }
+    }
+    return null;
+  }
+  
+  private void j()
+  {
     int i1 = 0;
     Object localObject1;
-    if ((!u) && (Build.VERSION.SDK_INT == 21))
+    if ((!v) && (Build.VERSION.SDK_INT == 21))
     {
       localObject1 = FexApplication.a().getSharedPreferences("app_folder", 0);
       if (((SharedPreferences)localObject1).getBoolean("logo_repaired", false)) {}
@@ -1206,7 +1430,7 @@ public class AppFolderInfoManager
       int i2 = agetPackageManagergetPackageInfo0versionCode;
       if ((i2 >= 222) && (i2 <= 225))
       {
-        localObject2 = new File(n);
+        localObject2 = new File(o);
         if ((((File)localObject2).exists()) && (((File)localObject2).isDirectory()))
         {
           localObject2 = ((File)localObject2).listFiles();
@@ -1229,34 +1453,15 @@ public class AppFolderInfoManager
     {
       for (;;) {}
     }
-    u = true;
+    v = true;
   }
   
-  private n i(String paramString)
-  {
-    Iterator localIterator = b.iterator();
-    while (localIterator.hasNext())
-    {
-      n localn = (n)localIterator.next();
-      if (!d)
-      {
-        if (a.equals(paramString)) {
-          return localn;
-        }
-      }
-      else if (a.equalsIgnoreCase(paramString)) {
-        return localn;
-      }
-    }
-    return null;
-  }
-  
-  private final m j(String paramString)
+  private final m k(String paramString)
   {
     return (m)d.a(paramString);
   }
   
-  private f k(String paramString)
+  private f l(String paramString)
   {
     if (paramString == null) {
       return null;
@@ -1278,135 +1483,135 @@ public class AppFolderInfoManager
   }
   
   /* Error */
-  private int l(String paramString)
+  private int m(String paramString)
   {
     // Byte code:
     //   0: aload_0
-    //   1: getfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   1: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
     //   4: ifnonnull +7 -> 11
     //   7: aload_0
-    //   8: invokevirtual 216	com/estrongs/android/appinfo/AppFolderInfoManager:a	()V
+    //   8: invokevirtual 219	com/estrongs/android/appinfo/AppFolderInfoManager:a	()V
     //   11: aload_0
-    //   12: getfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   12: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
     //   15: ifnonnull +5 -> 20
     //   18: iconst_0
     //   19: ireturn
-    //   20: new 796	org/json/simple/parser/JSONParser
+    //   20: new 850	org/json/simple/parser/JSONParser
     //   23: dup
-    //   24: invokespecial 797	org/json/simple/parser/JSONParser:<init>	()V
+    //   24: invokespecial 851	org/json/simple/parser/JSONParser:<init>	()V
     //   27: aload_1
-    //   28: invokevirtual 801	org/json/simple/parser/JSONParser:parse	(Ljava/lang/String;)Ljava/lang/Object;
+    //   28: invokevirtual 855	org/json/simple/parser/JSONParser:parse	(Ljava/lang/String;)Ljava/lang/Object;
     //   31: astore_1
     //   32: aload_1
-    //   33: instanceof 803
+    //   33: instanceof 857
     //   36: ifeq +376 -> 412
     //   39: aload_1
-    //   40: checkcast 803	org/json/simple/JSONArray
-    //   43: invokevirtual 804	org/json/simple/JSONArray:iterator	()Ljava/util/Iterator;
+    //   40: checkcast 857	org/json/simple/JSONArray
+    //   43: invokevirtual 858	org/json/simple/JSONArray:iterator	()Ljava/util/Iterator;
     //   46: astore_1
     //   47: iconst_0
     //   48: istore_2
     //   49: aload_1
-    //   50: invokeinterface 529 1 0
+    //   50: invokeinterface 566 1 0
     //   55: ifeq +355 -> 410
     //   58: aload_1
-    //   59: invokeinterface 533 1 0
+    //   59: invokeinterface 570 1 0
     //   64: astore 8
     //   66: aload 8
-    //   68: checkcast 806	java/util/Map
-    //   71: ldc_w 808
-    //   74: invokeinterface 811 2 0
-    //   79: checkcast 282	java/lang/Long
-    //   82: invokevirtual 289	java/lang/Long:intValue	()I
+    //   68: checkcast 860	java/util/Map
+    //   71: ldc_w 862
+    //   74: invokeinterface 865 2 0
+    //   79: checkcast 285	java/lang/Long
+    //   82: invokevirtual 292	java/lang/Long:intValue	()I
     //   85: istore_3
     //   86: aload 8
-    //   88: checkcast 806	java/util/Map
-    //   91: ldc_w 350
-    //   94: invokeinterface 811 2 0
-    //   99: checkcast 225	java/lang/String
+    //   88: checkcast 860	java/util/Map
+    //   91: ldc_w 353
+    //   94: invokeinterface 865 2 0
+    //   99: checkcast 228	java/lang/String
     //   102: astore 7
     //   104: aload 8
-    //   106: checkcast 806	java/util/Map
-    //   109: ldc_w 486
-    //   112: invokeinterface 811 2 0
-    //   117: checkcast 225	java/lang/String
+    //   106: checkcast 860	java/util/Map
+    //   109: ldc_w 516
+    //   112: invokeinterface 865 2 0
+    //   117: checkcast 228	java/lang/String
     //   120: astore 9
     //   122: aload 8
-    //   124: checkcast 806	java/util/Map
-    //   127: ldc_w 813
-    //   130: invokeinterface 811 2 0
-    //   135: checkcast 282	java/lang/Long
-    //   138: invokevirtual 289	java/lang/Long:intValue	()I
+    //   124: checkcast 860	java/util/Map
+    //   127: ldc_w 867
+    //   130: invokeinterface 865 2 0
+    //   135: checkcast 285	java/lang/Long
+    //   138: invokevirtual 292	java/lang/Long:intValue	()I
     //   141: istore 4
     //   143: aload 8
-    //   145: checkcast 806	java/util/Map
-    //   148: ldc_w 815
-    //   151: invokeinterface 811 2 0
-    //   156: checkcast 282	java/lang/Long
-    //   159: invokevirtual 289	java/lang/Long:intValue	()I
+    //   145: checkcast 860	java/util/Map
+    //   148: ldc_w 869
+    //   151: invokeinterface 865 2 0
+    //   156: checkcast 285	java/lang/Long
+    //   159: invokevirtual 292	java/lang/Long:intValue	()I
     //   162: istore 5
     //   164: aload 8
-    //   166: checkcast 806	java/util/Map
-    //   169: ldc_w 817
-    //   172: invokeinterface 811 2 0
-    //   177: checkcast 282	java/lang/Long
-    //   180: invokevirtual 289	java/lang/Long:intValue	()I
+    //   166: checkcast 860	java/util/Map
+    //   169: ldc_w 871
+    //   172: invokeinterface 865 2 0
+    //   177: checkcast 285	java/lang/Long
+    //   180: invokevirtual 292	java/lang/Long:intValue	()I
     //   183: istore 6
     //   185: aload_0
-    //   186: getfield 175	com/estrongs/android/appinfo/AppFolderInfoManager:k	Ljava/util/concurrent/locks/Lock;
-    //   189: invokeinterface 221 1 0
+    //   186: getfield 178	com/estrongs/android/appinfo/AppFolderInfoManager:k	Ljava/util/concurrent/locks/Lock;
+    //   189: invokeinterface 224 1 0
     //   194: aload_0
-    //   195: getfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
-    //   198: invokevirtual 696	android/database/sqlite/SQLiteDatabase:beginTransaction	()V
+    //   195: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   198: invokevirtual 749	android/database/sqlite/SQLiteDatabase:beginTransaction	()V
     //   201: iload 5
     //   203: iconst_1
     //   204: if_icmpne +99 -> 303
     //   207: aload_0
     //   208: iload_3
-    //   209: invokespecial 819	com/estrongs/android/appinfo/AppFolderInfoManager:a	(I)V
-    //   212: new 347	android/content/ContentValues
+    //   209: invokespecial 873	com/estrongs/android/appinfo/AppFolderInfoManager:a	(I)V
+    //   212: new 350	android/content/ContentValues
     //   215: dup
-    //   216: invokespecial 348	android/content/ContentValues:<init>	()V
+    //   216: invokespecial 351	android/content/ContentValues:<init>	()V
     //   219: astore 8
     //   221: aload 8
-    //   223: ldc -29
+    //   223: ldc -26
     //   225: iload 4
-    //   227: invokestatic 355	java/lang/Integer:valueOf	(I)Ljava/lang/Integer;
-    //   230: invokevirtual 359	android/content/ContentValues:put	(Ljava/lang/String;Ljava/lang/Integer;)V
+    //   227: invokestatic 358	java/lang/Integer:valueOf	(I)Ljava/lang/Integer;
+    //   230: invokevirtual 362	android/content/ContentValues:put	(Ljava/lang/String;Ljava/lang/Integer;)V
     //   233: aload_0
-    //   234: getfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
-    //   237: ldc -33
+    //   234: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   237: ldc -30
     //   239: aload 8
-    //   241: ldc -27
+    //   241: ldc -24
     //   243: iconst_1
-    //   244: anewarray 225	java/lang/String
+    //   244: anewarray 228	java/lang/String
     //   247: dup
     //   248: iconst_0
-    //   249: ldc_w 646
+    //   249: ldc_w 657
     //   252: aastore
-    //   253: invokevirtual 823	android/database/sqlite/SQLiteDatabase:update	(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+    //   253: invokevirtual 877	android/database/sqlite/SQLiteDatabase:update	(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
     //   256: pop
     //   257: aload_0
-    //   258: getfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
-    //   261: invokevirtual 724	android/database/sqlite/SQLiteDatabase:setTransactionSuccessful	()V
+    //   258: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   261: invokevirtual 779	android/database/sqlite/SQLiteDatabase:setTransactionSuccessful	()V
     //   264: iload_2
     //   265: iconst_1
     //   266: iadd
     //   267: istore_2
     //   268: aload_0
-    //   269: getfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
-    //   272: invokevirtual 676	android/database/sqlite/SQLiteDatabase:endTransaction	()V
+    //   269: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   272: invokevirtual 735	android/database/sqlite/SQLiteDatabase:endTransaction	()V
     //   275: aload_0
-    //   276: getfield 175	com/estrongs/android/appinfo/AppFolderInfoManager:k	Ljava/util/concurrent/locks/Lock;
-    //   279: invokeinterface 251 1 0
+    //   276: getfield 178	com/estrongs/android/appinfo/AppFolderInfoManager:k	Ljava/util/concurrent/locks/Lock;
+    //   279: invokeinterface 254 1 0
     //   284: aload_0
-    //   285: getfield 141	com/estrongs/android/appinfo/AppFolderInfoManager:d	Lcom/estrongs/android/pop/app/imageviewer/gallery/g;
+    //   285: getfield 144	com/estrongs/android/appinfo/AppFolderInfoManager:d	Lcom/estrongs/android/pop/app/imageviewer/gallery/g;
     //   288: aload 7
-    //   290: invokevirtual 826	com/estrongs/android/pop/app/imageviewer/gallery/g:b	(Ljava/lang/Object;)V
+    //   290: invokevirtual 880	com/estrongs/android/pop/app/imageviewer/gallery/g:b	(Ljava/lang/Object;)V
     //   293: goto -244 -> 49
     //   296: astore_1
     //   297: aload_1
-    //   298: invokevirtual 254	java/lang/Exception:printStackTrace	()V
+    //   298: invokevirtual 257	java/lang/Exception:printStackTrace	()V
     //   301: aload_1
     //   302: athrow
     //   303: aload_0
@@ -1416,57 +1621,57 @@ public class AppFolderInfoManager
     //   309: iload 4
     //   311: iload 5
     //   313: iload 6
-    //   315: invokespecial 828	com/estrongs/android/appinfo/AppFolderInfoManager:a	(ILjava/lang/String;Ljava/lang/String;III)V
+    //   315: invokespecial 882	com/estrongs/android/appinfo/AppFolderInfoManager:a	(ILjava/lang/String;Ljava/lang/String;III)V
     //   318: goto -106 -> 212
     //   321: astore_1
     //   322: aload_0
-    //   323: getfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
-    //   326: invokevirtual 676	android/database/sqlite/SQLiteDatabase:endTransaction	()V
+    //   323: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   326: invokevirtual 735	android/database/sqlite/SQLiteDatabase:endTransaction	()V
     //   329: aload_0
-    //   330: getfield 175	com/estrongs/android/appinfo/AppFolderInfoManager:k	Ljava/util/concurrent/locks/Lock;
-    //   333: invokeinterface 251 1 0
+    //   330: getfield 178	com/estrongs/android/appinfo/AppFolderInfoManager:k	Ljava/util/concurrent/locks/Lock;
+    //   333: invokeinterface 254 1 0
     //   338: aload_1
     //   339: athrow
     //   340: astore_1
     //   341: aload_0
-    //   342: getfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
-    //   345: invokevirtual 664	android/database/sqlite/SQLiteDatabase:close	()V
+    //   342: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   345: invokevirtual 701	android/database/sqlite/SQLiteDatabase:close	()V
     //   348: aload_0
     //   349: aconst_null
-    //   350: putfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   350: putfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
     //   353: aload_1
     //   354: athrow
     //   355: astore_1
     //   356: aload_0
-    //   357: getfield 175	com/estrongs/android/appinfo/AppFolderInfoManager:k	Ljava/util/concurrent/locks/Lock;
-    //   360: invokeinterface 251 1 0
+    //   357: getfield 178	com/estrongs/android/appinfo/AppFolderInfoManager:k	Ljava/util/concurrent/locks/Lock;
+    //   360: invokeinterface 254 1 0
     //   365: aload_1
     //   366: athrow
     //   367: astore_1
     //   368: aload_0
     //   369: aconst_null
-    //   370: putfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   370: putfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
     //   373: aload_1
     //   374: athrow
     //   375: astore_1
     //   376: aload_0
-    //   377: getfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
-    //   380: invokevirtual 664	android/database/sqlite/SQLiteDatabase:close	()V
+    //   377: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   380: invokevirtual 701	android/database/sqlite/SQLiteDatabase:close	()V
     //   383: aload_0
     //   384: aconst_null
-    //   385: putfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   385: putfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
     //   388: aload_1
     //   389: athrow
     //   390: astore_1
     //   391: aload_0
-    //   392: getfield 175	com/estrongs/android/appinfo/AppFolderInfoManager:k	Ljava/util/concurrent/locks/Lock;
-    //   395: invokeinterface 251 1 0
+    //   392: getfield 178	com/estrongs/android/appinfo/AppFolderInfoManager:k	Ljava/util/concurrent/locks/Lock;
+    //   395: invokeinterface 254 1 0
     //   400: aload_1
     //   401: athrow
     //   402: astore_1
     //   403: aload_0
     //   404: aconst_null
-    //   405: putfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   405: putfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
     //   408: aload_1
     //   409: athrow
     //   410: iload_2
@@ -1512,12 +1717,12 @@ public class AppFolderInfoManager
     //   376	383	402	finally
   }
   
-  private boolean m(String paramString)
+  private boolean n(String paramString)
   {
-    return i(paramString) != null;
+    return j(paramString) != null;
   }
   
-  private int n(String paramString)
+  private int o(String paramString)
   {
     paramString = c.query("folder_table", new String[] { "id" }, "folder=? COLLATE NOCASE", new String[] { paramString }, null, null, null);
     if (paramString != null)
@@ -1532,7 +1737,7 @@ public class AppFolderInfoManager
     return -1;
   }
   
-  private int o(String paramString)
+  private int p(String paramString)
   {
     paramString = c.query("package_table", new String[] { "id" }, "package=?", new String[] { paramString }, null, null, null);
     if (paramString != null)
@@ -1547,52 +1752,52 @@ public class AppFolderInfoManager
     return -1;
   }
   
-  private int p(String paramString)
+  private int q(String paramString)
   {
     ContentValues localContentValues = new ContentValues();
     localContentValues.put("folder", paramString);
     return (int)c.insert("folder_table", null, localContentValues);
   }
   
-  private int q(String paramString)
+  private int r(String paramString)
   {
     ContentValues localContentValues = new ContentValues();
     localContentValues.put("package", paramString);
     return (int)c.insert("package_table", null, localContentValues);
   }
   
-  public Drawable a(Context paramContext, com.estrongs.fs.h paramh, o paramo)
+  public Drawable a(Context paramContext, com.estrongs.fs.h paramh, p paramp)
   {
-    if ((!ad.a(paramContext).aE()) || (!paramh.getFileType().a()) || (am.G(paramh.getAbsolutePath()) == 23)) {
+    if ((!ad.a(paramContext).aF()) || (!paramh.getFileType().a()) || (ap.I(paramh.getAbsolutePath()) == 23)) {
       return null;
     }
-    return a(paramContext, paramh.getAbsolutePath(), paramo);
+    return a(paramContext, paramh.getAbsolutePath(), paramp);
   }
   
-  public Drawable a(Context paramContext, File paramFile, o paramo)
+  public Drawable a(Context paramContext, File paramFile, p paramp)
   {
-    if ((!ad.a(paramContext).aE()) || (!paramFile.isDirectory()) || (am.G(paramFile.getAbsolutePath()) == 23)) {
+    if ((!ad.a(paramContext).aF()) || (!paramFile.isDirectory()) || (ap.I(paramFile.getAbsolutePath()) == 23)) {
       return null;
     }
-    return a(paramContext, paramFile.getAbsolutePath(), paramo);
+    return a(paramContext, paramFile.getAbsolutePath(), paramp);
   }
   
-  public Drawable a(Context paramContext, String arg2, o paramo)
+  public Drawable a(Context paramContext, String arg2, p paramp)
   {
-    m localm = j(???);
+    m localm = k(???);
     if ((localm == null) || (b == 0) || (b == 5)) {
       return null;
     }
     if (b == 1) {
       return FexApplication.a().getResources().getDrawable(c);
     }
-    f localf = k(a(a));
+    f localf = l(a(a));
     if (localf != null)
     {
-      paramContext = (Drawable)f.a(localf.getAbsolutePath());
+      paramContext = (Drawable)f.get(localf.getAbsolutePath());
       if (paramContext != null) {
         if (b == 4) {
-          com.estrongs.android.util.b.a(paramContext);
+          com.estrongs.android.util.a.a(paramContext);
         }
       }
     }
@@ -1607,32 +1812,32 @@ public class AppFolderInfoManager
         }
         else
         {
-          ??? = new p(paramContext);
+          ??? = new q(paramContext);
           if (b == 6) {
-            com.estrongs.android.util.b.a(???);
+            com.estrongs.android.util.a.a(???);
           }
         }
       }
       return (Drawable)???;
       paramContext.setColorFilter(null);
       continue;
-      synchronized (p)
+      synchronized (q)
       {
-        localObject = (List)p.get(localf.getAbsolutePath());
+        localObject = (List)q.get(localf.getAbsolutePath());
         if (localObject != null)
         {
-          if (paramo != null) {
-            ((List)localObject).add(paramo);
+          if (paramp != null) {
+            ((List)localObject).add(paramp);
           }
           return null;
         }
       }
       Object localObject = new ArrayList();
-      if (paramo != null) {
-        ((List)localObject).add(paramo);
+      if (paramp != null) {
+        ((List)localObject).add(paramp);
       }
-      p.put(localf.getAbsolutePath(), localObject);
-      if ((paramo != null) && (paramo.a()))
+      q.put(localf.getAbsolutePath(), localObject);
+      if ((paramp != null) && (paramp.a()))
       {
         ??? = new ConditionVariable();
         ???.close();
@@ -1644,7 +1849,7 @@ public class AppFolderInfoManager
           break;
         }
         ???.block();
-        paramContext = (Drawable)f.a(localf.getAbsolutePath());
+        paramContext = (Drawable)f.get(localf.getAbsolutePath());
         break;
         ??? = null;
       }
@@ -1688,8 +1893,8 @@ public class AppFolderInfoManager
   {
     // Byte code:
     //   0: aload_1
-    //   1: invokeinterface 851 1 0
-    //   6: invokevirtual 855	com/estrongs/fs/m:a	()Z
+    //   1: invokeinterface 900 1 0
+    //   6: invokevirtual 904	com/estrongs/fs/w:a	()Z
     //   9: ifne +5 -> 14
     //   12: aconst_null
     //   13: areturn
@@ -1699,633 +1904,633 @@ public class AppFolderInfoManager
     //   18: ifnonnull +10 -> 28
     //   21: aload_0
     //   22: aload_1
-    //   23: invokespecial 930	com/estrongs/android/appinfo/AppFolderInfoManager:d	(Lcom/estrongs/fs/h;)Ljava/lang/String;
+    //   23: invokespecial 978	com/estrongs/android/appinfo/AppFolderInfoManager:f	(Lcom/estrongs/fs/h;)Ljava/lang/String;
     //   26: astore 10
     //   28: aload 10
     //   30: ifnull -18 -> 12
-    //   33: new 189	java/util/LinkedList
+    //   33: new 192	java/util/LinkedList
     //   36: dup
-    //   37: invokespecial 190	java/util/LinkedList:<init>	()V
+    //   37: invokespecial 193	java/util/LinkedList:<init>	()V
     //   40: astore 12
     //   42: aconst_null
-    //   43: astore_2
-    //   44: aconst_null
-    //   45: astore 5
-    //   47: new 189	java/util/LinkedList
-    //   50: dup
-    //   51: invokespecial 190	java/util/LinkedList:<init>	()V
-    //   54: astore 11
-    //   56: iconst_1
-    //   57: anewarray 225	java/lang/String
-    //   60: astore 13
-    //   62: aload 13
-    //   64: iconst_0
-    //   65: ldc_w 486
-    //   68: aastore
-    //   69: iconst_1
-    //   70: anewarray 225	java/lang/String
-    //   73: astore 14
-    //   75: aload 14
-    //   77: iconst_0
-    //   78: aload 10
-    //   80: aastore
-    //   81: aload_0
-    //   82: getfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
-    //   85: ifnull +1133 -> 1218
-    //   88: aload_0
-    //   89: getfield 169	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
-    //   92: invokeinterface 221 1 0
-    //   97: aload_0
-    //   98: aload 10
-    //   100: invokespecial 830	com/estrongs/android/appinfo/AppFolderInfoManager:i	(Ljava/lang/String;)Lcom/estrongs/android/appinfo/n;
-    //   103: astore 6
-    //   105: aload 6
-    //   107: ifnull +55 -> 162
-    //   110: new 153	com/estrongs/android/appinfo/m
-    //   113: dup
-    //   114: aload 6
-    //   116: getfield 931	com/estrongs/android/appinfo/n:b	I
-    //   119: iconst_1
-    //   120: invokespecial 934	com/estrongs/android/appinfo/m:<init>	(II)V
-    //   123: astore_2
-    //   124: aload_0
-    //   125: getfield 141	com/estrongs/android/appinfo/AppFolderInfoManager:d	Lcom/estrongs/android/pop/app/imageviewer/gallery/g;
-    //   128: aload_1
-    //   129: invokeinterface 628 1 0
-    //   134: aload_2
-    //   135: invokevirtual 783	com/estrongs/android/pop/app/imageviewer/gallery/g:a	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    //   138: pop
-    //   139: iconst_0
-    //   140: ifeq +11 -> 151
-    //   143: new 936	java/lang/NullPointerException
-    //   146: dup
-    //   147: invokespecial 937	java/lang/NullPointerException:<init>	()V
-    //   150: athrow
-    //   151: aload_0
-    //   152: getfield 169	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
-    //   155: invokeinterface 251 1 0
-    //   160: aload_2
-    //   161: areturn
-    //   162: aload_0
-    //   163: getfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
-    //   166: ldc_w 484
-    //   169: aload 13
-    //   171: ldc_w 834
-    //   174: aload 14
+    //   43: astore 6
+    //   45: aconst_null
+    //   46: astore 7
+    //   48: new 192	java/util/LinkedList
+    //   51: dup
+    //   52: invokespecial 193	java/util/LinkedList:<init>	()V
+    //   55: astore 11
+    //   57: iconst_1
+    //   58: anewarray 228	java/lang/String
+    //   61: astore 14
+    //   63: aload 14
+    //   65: iconst_0
+    //   66: ldc_w 516
+    //   69: aastore
+    //   70: iconst_1
+    //   71: anewarray 228	java/lang/String
+    //   74: astore 13
+    //   76: aload 13
+    //   78: iconst_0
+    //   79: aload 10
+    //   81: aastore
+    //   82: aload_0
+    //   83: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   86: ifnull +1117 -> 1203
+    //   89: aload_0
+    //   90: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   93: invokeinterface 224 1 0
+    //   98: aload_0
+    //   99: aload 10
+    //   101: invokespecial 884	com/estrongs/android/appinfo/AppFolderInfoManager:j	(Ljava/lang/String;)Lcom/estrongs/android/appinfo/n;
+    //   104: astore_2
+    //   105: aload_2
+    //   106: ifnull +54 -> 160
+    //   109: new 156	com/estrongs/android/appinfo/m
+    //   112: dup
+    //   113: aload_2
+    //   114: getfield 979	com/estrongs/android/appinfo/n:b	I
+    //   117: iconst_1
+    //   118: invokespecial 982	com/estrongs/android/appinfo/m:<init>	(II)V
+    //   121: astore_2
+    //   122: aload_0
+    //   123: getfield 144	com/estrongs/android/appinfo/AppFolderInfoManager:d	Lcom/estrongs/android/pop/app/imageviewer/gallery/g;
+    //   126: aload_1
+    //   127: invokeinterface 666 1 0
+    //   132: aload_2
+    //   133: invokevirtual 837	com/estrongs/android/pop/app/imageviewer/gallery/g:a	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    //   136: pop
+    //   137: iconst_0
+    //   138: ifeq +11 -> 149
+    //   141: new 984	java/lang/NullPointerException
+    //   144: dup
+    //   145: invokespecial 985	java/lang/NullPointerException:<init>	()V
+    //   148: athrow
+    //   149: aload_0
+    //   150: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   153: invokeinterface 254 1 0
+    //   158: aload_2
+    //   159: areturn
+    //   160: aload_0
+    //   161: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   164: ldc_w 514
+    //   167: aload 14
+    //   169: ldc_w 888
+    //   172: aload 13
+    //   174: aconst_null
+    //   175: aconst_null
     //   176: aconst_null
-    //   177: aconst_null
-    //   178: aconst_null
-    //   179: invokevirtual 235	android/database/sqlite/SQLiteDatabase:query	(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-    //   182: astore 7
-    //   184: aload 7
-    //   186: ifnull +1025 -> 1211
-    //   189: aload 5
-    //   191: astore_2
-    //   192: aload 7
-    //   194: astore 5
-    //   196: aload_2
-    //   197: astore 9
-    //   199: aload 7
-    //   201: astore 6
-    //   203: aload 7
-    //   205: invokeinterface 241 1 0
-    //   210: ifeq +113 -> 323
-    //   213: aload 7
-    //   215: astore 5
-    //   217: aload_2
-    //   218: astore 9
-    //   220: aload 7
-    //   222: astore 6
-    //   224: aload 7
-    //   226: iconst_0
-    //   227: invokeinterface 337 2 0
-    //   232: astore 8
-    //   234: aload 7
-    //   236: astore 5
-    //   238: aload_2
-    //   239: astore 9
-    //   241: aload 7
-    //   243: astore 6
-    //   245: aload 8
-    //   247: ldc_w 492
-    //   250: invokevirtual 536	java/lang/String:equals	(Ljava/lang/Object;)Z
-    //   253: ifeq +64 -> 317
-    //   256: aload 7
-    //   258: astore 5
+    //   177: invokevirtual 238	android/database/sqlite/SQLiteDatabase:query	(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    //   180: astore_2
+    //   181: aload_2
+    //   182: ifnull +1012 -> 1194
+    //   185: aload_2
+    //   186: astore 5
+    //   188: aload 7
+    //   190: astore 9
+    //   192: aload_2
+    //   193: astore 6
+    //   195: aload_2
+    //   196: invokeinterface 244 1 0
+    //   201: ifeq +107 -> 308
+    //   204: aload_2
+    //   205: astore 5
+    //   207: aload 7
+    //   209: astore 9
+    //   211: aload_2
+    //   212: astore 6
+    //   214: aload_2
+    //   215: iconst_0
+    //   216: invokeinterface 340 2 0
+    //   221: astore 8
+    //   223: aload_2
+    //   224: astore 5
+    //   226: aload 7
+    //   228: astore 9
+    //   230: aload_2
+    //   231: astore 6
+    //   233: aload 8
+    //   235: ldc_w 522
+    //   238: invokevirtual 573	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   241: ifeq +60 -> 301
+    //   244: aload_2
+    //   245: astore 5
+    //   247: aload 7
+    //   249: astore 9
+    //   251: aload_2
+    //   252: astore 6
+    //   254: aload_0
+    //   255: getfield 159	com/estrongs/android/appinfo/AppFolderInfoManager:g	Lcom/estrongs/android/appinfo/m;
+    //   258: astore 10
     //   260: aload_2
-    //   261: astore 9
-    //   263: aload 7
-    //   265: astore 6
-    //   267: aload_0
-    //   268: getfield 156	com/estrongs/android/appinfo/AppFolderInfoManager:g	Lcom/estrongs/android/appinfo/m;
-    //   271: astore 10
-    //   273: aload 7
-    //   275: astore 6
-    //   277: aload_0
-    //   278: getfield 141	com/estrongs/android/appinfo/AppFolderInfoManager:d	Lcom/estrongs/android/pop/app/imageviewer/gallery/g;
-    //   281: aload_1
-    //   282: invokeinterface 628 1 0
-    //   287: aload 10
-    //   289: invokevirtual 783	com/estrongs/android/pop/app/imageviewer/gallery/g:a	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    //   292: pop
-    //   293: aload 7
-    //   295: ifnull +10 -> 305
-    //   298: aload 7
-    //   300: invokeinterface 248 1 0
-    //   305: aload_0
-    //   306: getfield 169	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
-    //   309: invokeinterface 251 1 0
-    //   314: aload 10
-    //   316: areturn
-    //   317: aload 8
-    //   319: astore_2
-    //   320: goto -128 -> 192
-    //   323: aload 7
+    //   261: astore 6
+    //   263: aload_0
+    //   264: getfield 144	com/estrongs/android/appinfo/AppFolderInfoManager:d	Lcom/estrongs/android/pop/app/imageviewer/gallery/g;
+    //   267: aload_1
+    //   268: invokeinterface 666 1 0
+    //   273: aload 10
+    //   275: invokevirtual 837	com/estrongs/android/pop/app/imageviewer/gallery/g:a	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    //   278: pop
+    //   279: aload_2
+    //   280: ifnull +9 -> 289
+    //   283: aload_2
+    //   284: invokeinterface 251 1 0
+    //   289: aload_0
+    //   290: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   293: invokeinterface 254 1 0
+    //   298: aload 10
+    //   300: areturn
+    //   301: aload 8
+    //   303: astore 7
+    //   305: goto -120 -> 185
+    //   308: aload_2
+    //   309: astore 5
+    //   311: aload 7
+    //   313: astore 9
+    //   315: aload_2
+    //   316: astore 6
+    //   318: aload_2
+    //   319: invokeinterface 251 1 0
+    //   324: aconst_null
     //   325: astore 5
-    //   327: aload_2
-    //   328: astore 9
-    //   330: aload 7
-    //   332: astore 6
-    //   334: aload 7
-    //   336: invokeinterface 248 1 0
-    //   341: aconst_null
-    //   342: astore 5
-    //   344: aload_0
-    //   345: getfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
-    //   348: ldc_w 329
-    //   351: aload 13
-    //   353: ldc_w 834
-    //   356: aload 14
-    //   358: aconst_null
-    //   359: aconst_null
-    //   360: ldc_w 939
-    //   363: invokevirtual 235	android/database/sqlite/SQLiteDatabase:query	(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-    //   366: astore 8
-    //   368: aload 8
-    //   370: astore 7
-    //   372: aload 8
-    //   374: ifnull +178 -> 552
-    //   377: aload 8
-    //   379: astore 5
-    //   381: aload_2
-    //   382: astore 9
+    //   327: aload 7
+    //   329: astore_2
+    //   330: aload_0
+    //   331: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   334: ldc_w 332
+    //   337: aload 14
+    //   339: ldc_w 888
+    //   342: aload 13
+    //   344: aconst_null
+    //   345: aconst_null
+    //   346: ldc_w 987
+    //   349: invokevirtual 238	android/database/sqlite/SQLiteDatabase:query	(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    //   352: astore 8
+    //   354: aload 8
+    //   356: astore 7
+    //   358: aload 8
+    //   360: ifnull +175 -> 535
+    //   363: aload 8
+    //   365: astore 5
+    //   367: aload_2
+    //   368: astore 9
+    //   370: aload 8
+    //   372: astore 6
+    //   374: aload 8
+    //   376: invokeinterface 244 1 0
+    //   381: ifeq +133 -> 514
     //   384: aload 8
-    //   386: astore 6
-    //   388: aload 8
-    //   390: invokeinterface 241 1 0
-    //   395: ifeq +136 -> 531
-    //   398: aload 8
-    //   400: astore 5
-    //   402: aload_2
-    //   403: astore 9
-    //   405: aload 8
-    //   407: astore 6
-    //   409: aload 12
-    //   411: aload 8
-    //   413: iconst_0
-    //   414: invokeinterface 337 2 0
-    //   419: invokeinterface 900 2 0
-    //   424: pop
-    //   425: goto -48 -> 377
-    //   428: astore 7
-    //   430: aload 9
-    //   432: astore_2
-    //   433: aconst_null
-    //   434: astore 8
-    //   436: aload 5
-    //   438: astore 6
-    //   440: aload 8
-    //   442: astore 5
-    //   444: aload 7
-    //   446: invokevirtual 254	java/lang/Exception:printStackTrace	()V
-    //   449: aload 6
-    //   451: ifnull +10 -> 461
-    //   454: aload 6
-    //   456: invokeinterface 248 1 0
-    //   461: aload_0
-    //   462: getfield 169	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
-    //   465: invokeinterface 251 1 0
-    //   470: aload_2
-    //   471: astore 6
-    //   473: aload 5
-    //   475: astore_2
-    //   476: aload 12
-    //   478: invokeinterface 942 1 0
-    //   483: istore 4
-    //   485: aload 6
-    //   487: ifnonnull +291 -> 778
-    //   490: iconst_0
-    //   491: istore_3
-    //   492: iload_3
-    //   493: iload 4
-    //   495: iadd
-    //   496: aload 11
-    //   498: invokeinterface 942 1 0
-    //   503: iadd
-    //   504: ifne +279 -> 783
-    //   507: aload_0
-    //   508: getfield 156	com/estrongs/android/appinfo/AppFolderInfoManager:g	Lcom/estrongs/android/appinfo/m;
-    //   511: astore_2
-    //   512: aload_0
-    //   513: getfield 141	com/estrongs/android/appinfo/AppFolderInfoManager:d	Lcom/estrongs/android/pop/app/imageviewer/gallery/g;
-    //   516: aload_1
-    //   517: invokeinterface 628 1 0
-    //   522: aload_2
-    //   523: invokevirtual 783	com/estrongs/android/pop/app/imageviewer/gallery/g:a	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    //   526: pop
-    //   527: aload_2
-    //   528: astore_1
-    //   529: aload_1
-    //   530: areturn
-    //   531: aload 8
-    //   533: astore 5
-    //   535: aload_2
-    //   536: astore 9
-    //   538: aload 8
-    //   540: astore 6
-    //   542: aload 8
-    //   544: invokeinterface 248 1 0
-    //   549: aconst_null
-    //   550: astore 7
-    //   552: aload 7
-    //   554: astore 5
-    //   556: aload_2
-    //   557: astore 9
-    //   559: aload 7
-    //   561: astore 6
-    //   563: aload_0
-    //   564: aload 10
-    //   566: invokespecial 513	com/estrongs/android/appinfo/AppFolderInfoManager:n	(Ljava/lang/String;)I
-    //   569: istore_3
-    //   570: aload 7
-    //   572: astore 5
-    //   574: iload_3
-    //   575: iconst_m1
-    //   576: if_icmpeq +173 -> 749
-    //   579: aload 7
-    //   581: astore 5
-    //   583: aload_2
-    //   584: astore 9
-    //   586: aload 7
-    //   588: astore 6
-    //   590: new 105	java/lang/StringBuilder
-    //   593: dup
-    //   594: invokespecial 106	java/lang/StringBuilder:<init>	()V
-    //   597: ldc_w 327
-    //   600: invokevirtual 114	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   603: iload_3
-    //   604: invokevirtual 270	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   607: invokevirtual 120	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   610: astore 8
-    //   612: aload 7
-    //   614: astore 5
-    //   616: aload_2
-    //   617: astore 9
-    //   619: aload 7
-    //   621: astore 6
-    //   623: aload_0
-    //   624: getfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
-    //   627: ldc_w 944
-    //   630: iconst_1
-    //   631: anewarray 225	java/lang/String
-    //   634: dup
-    //   635: iconst_0
-    //   636: aload 8
-    //   638: aastore
-    //   639: invokevirtual 948	android/database/sqlite/SQLiteDatabase:rawQuery	(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-    //   642: astore 7
-    //   644: aload 7
-    //   646: astore 5
-    //   648: aload 7
-    //   650: ifnull +99 -> 749
-    //   653: aload 7
-    //   655: astore 5
-    //   657: aload_2
-    //   658: astore 9
-    //   660: aload 7
-    //   662: astore 6
+    //   386: astore 5
+    //   388: aload_2
+    //   389: astore 9
+    //   391: aload 8
+    //   393: astore 6
+    //   395: aload 12
+    //   397: aload 8
+    //   399: iconst_0
+    //   400: invokeinterface 340 2 0
+    //   405: invokeinterface 948 2 0
+    //   410: pop
+    //   411: goto -48 -> 363
+    //   414: astore 7
+    //   416: aload 9
+    //   418: astore_2
+    //   419: aconst_null
+    //   420: astore 8
+    //   422: aload 5
+    //   424: astore 6
+    //   426: aload 8
+    //   428: astore 5
+    //   430: aload 7
+    //   432: invokevirtual 257	java/lang/Exception:printStackTrace	()V
+    //   435: aload 6
+    //   437: ifnull +10 -> 447
+    //   440: aload 6
+    //   442: invokeinterface 251 1 0
+    //   447: aload_0
+    //   448: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   451: invokeinterface 254 1 0
+    //   456: aload_2
+    //   457: astore 6
+    //   459: aload 12
+    //   461: invokeinterface 990 1 0
+    //   466: istore 4
+    //   468: aload 6
+    //   470: ifnonnull +292 -> 762
+    //   473: iconst_0
+    //   474: istore_3
+    //   475: iload_3
+    //   476: iload 4
+    //   478: iadd
+    //   479: aload 11
+    //   481: invokeinterface 990 1 0
+    //   486: iadd
+    //   487: ifne +280 -> 767
+    //   490: aload_0
+    //   491: getfield 159	com/estrongs/android/appinfo/AppFolderInfoManager:g	Lcom/estrongs/android/appinfo/m;
+    //   494: astore_2
+    //   495: aload_0
+    //   496: getfield 144	com/estrongs/android/appinfo/AppFolderInfoManager:d	Lcom/estrongs/android/pop/app/imageviewer/gallery/g;
+    //   499: aload_1
+    //   500: invokeinterface 666 1 0
+    //   505: aload_2
+    //   506: invokevirtual 837	com/estrongs/android/pop/app/imageviewer/gallery/g:a	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    //   509: pop
+    //   510: aload_2
+    //   511: astore_1
+    //   512: aload_1
+    //   513: areturn
+    //   514: aload 8
+    //   516: astore 5
+    //   518: aload_2
+    //   519: astore 9
+    //   521: aload 8
+    //   523: astore 6
+    //   525: aload 8
+    //   527: invokeinterface 251 1 0
+    //   532: aconst_null
+    //   533: astore 7
+    //   535: aload 7
+    //   537: astore 5
+    //   539: aload_2
+    //   540: astore 9
+    //   542: aload 7
+    //   544: astore 6
+    //   546: aload_0
+    //   547: aload 10
+    //   549: invokespecial 543	com/estrongs/android/appinfo/AppFolderInfoManager:o	(Ljava/lang/String;)I
+    //   552: istore_3
+    //   553: aload 7
+    //   555: astore 5
+    //   557: iload_3
+    //   558: iconst_m1
+    //   559: if_icmpeq +173 -> 732
+    //   562: aload 7
+    //   564: astore 5
+    //   566: aload_2
+    //   567: astore 9
+    //   569: aload 7
+    //   571: astore 6
+    //   573: new 106	java/lang/StringBuilder
+    //   576: dup
+    //   577: invokespecial 107	java/lang/StringBuilder:<init>	()V
+    //   580: ldc_w 330
+    //   583: invokevirtual 115	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   586: iload_3
+    //   587: invokevirtual 273	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
+    //   590: invokevirtual 121	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   593: astore 8
+    //   595: aload 7
+    //   597: astore 5
+    //   599: aload_2
+    //   600: astore 9
+    //   602: aload 7
+    //   604: astore 6
+    //   606: aload_0
+    //   607: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   610: ldc_w 992
+    //   613: iconst_1
+    //   614: anewarray 228	java/lang/String
+    //   617: dup
+    //   618: iconst_0
+    //   619: aload 8
+    //   621: aastore
+    //   622: invokevirtual 996	android/database/sqlite/SQLiteDatabase:rawQuery	(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    //   625: astore 7
+    //   627: aload 7
+    //   629: astore 5
+    //   631: aload 7
+    //   633: ifnull +99 -> 732
+    //   636: aload 7
+    //   638: astore 5
+    //   640: aload_2
+    //   641: astore 9
+    //   643: aload 7
+    //   645: astore 6
+    //   647: aload 7
+    //   649: invokeinterface 244 1 0
+    //   654: ifeq +57 -> 711
+    //   657: aload 7
+    //   659: astore 5
+    //   661: aload_2
+    //   662: astore 9
     //   664: aload 7
-    //   666: invokeinterface 241 1 0
-    //   671: ifeq +57 -> 728
-    //   674: aload 7
-    //   676: astore 5
-    //   678: aload_2
-    //   679: astore 9
-    //   681: aload 7
-    //   683: astore 6
-    //   685: aload 11
-    //   687: aload 7
-    //   689: iconst_0
-    //   690: invokeinterface 337 2 0
-    //   695: invokeinterface 900 2 0
-    //   700: pop
-    //   701: goto -48 -> 653
-    //   704: astore_1
-    //   705: aload 6
-    //   707: ifnull +10 -> 717
-    //   710: aload 6
-    //   712: invokeinterface 248 1 0
-    //   717: aload_0
-    //   718: getfield 169	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
-    //   721: invokeinterface 251 1 0
-    //   726: aload_1
-    //   727: athrow
-    //   728: aload 7
+    //   666: astore 6
+    //   668: aload 11
+    //   670: aload 7
+    //   672: iconst_0
+    //   673: invokeinterface 340 2 0
+    //   678: invokeinterface 948 2 0
+    //   683: pop
+    //   684: goto -48 -> 636
+    //   687: astore_1
+    //   688: aload 6
+    //   690: ifnull +10 -> 700
+    //   693: aload 6
+    //   695: invokeinterface 251 1 0
+    //   700: aload_0
+    //   701: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   704: invokeinterface 254 1 0
+    //   709: aload_1
+    //   710: athrow
+    //   711: aload 7
+    //   713: astore 5
+    //   715: aload_2
+    //   716: astore 9
+    //   718: aload 7
+    //   720: astore 6
+    //   722: aload 7
+    //   724: invokeinterface 251 1 0
+    //   729: aconst_null
     //   730: astore 5
-    //   732: aload_2
-    //   733: astore 9
-    //   735: aload 7
-    //   737: astore 6
-    //   739: aload 7
-    //   741: invokeinterface 248 1 0
-    //   746: aconst_null
-    //   747: astore 5
-    //   749: aload 5
-    //   751: ifnull +10 -> 761
-    //   754: aload 5
-    //   756: invokeinterface 248 1 0
-    //   761: aload_0
-    //   762: getfield 169	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
-    //   765: invokeinterface 251 1 0
-    //   770: aload_2
-    //   771: astore 6
-    //   773: aconst_null
-    //   774: astore_2
-    //   775: goto -299 -> 476
-    //   778: iconst_1
-    //   779: istore_3
-    //   780: goto -288 -> 492
-    //   783: invokestatic 685	com/estrongs/android/pop/FexApplication:a	()Lcom/estrongs/android/pop/FexApplication;
-    //   786: invokevirtual 689	com/estrongs/android/pop/FexApplication:getPackageManager	()Landroid/content/pm/PackageManager;
-    //   789: astore 7
-    //   791: aload_2
-    //   792: astore 5
-    //   794: aload 6
-    //   796: ifnull +13 -> 809
-    //   799: aload_0
-    //   800: aload 7
-    //   802: aload 6
-    //   804: invokevirtual 950	com/estrongs/android/appinfo/AppFolderInfoManager:a	(Landroid/content/pm/PackageManager;Ljava/lang/String;)Lcom/estrongs/android/appinfo/m;
-    //   807: astore 5
-    //   809: aload 5
-    //   811: astore_2
-    //   812: aload 5
-    //   814: ifnonnull +54 -> 868
-    //   817: aload 12
-    //   819: invokeinterface 699 1 0
-    //   824: astore 8
-    //   826: aload 5
-    //   828: astore_2
-    //   829: aload 8
-    //   831: invokeinterface 529 1 0
-    //   836: ifeq +32 -> 868
-    //   839: aload_0
-    //   840: aload 7
-    //   842: aload 8
-    //   844: invokeinterface 533 1 0
-    //   849: checkcast 225	java/lang/String
-    //   852: invokevirtual 950	com/estrongs/android/appinfo/AppFolderInfoManager:a	(Landroid/content/pm/PackageManager;Ljava/lang/String;)Lcom/estrongs/android/appinfo/m;
-    //   855: astore 5
-    //   857: aload 5
-    //   859: astore_2
-    //   860: aload 5
-    //   862: ifnull -33 -> 829
-    //   865: aload 5
-    //   867: astore_2
-    //   868: aload 11
-    //   870: invokeinterface 699 1 0
-    //   875: astore 8
-    //   877: aload 8
-    //   879: invokeinterface 529 1 0
-    //   884: ifeq +321 -> 1205
-    //   887: aload_0
-    //   888: aload 7
-    //   890: aload 8
-    //   892: invokeinterface 533 1 0
-    //   897: checkcast 225	java/lang/String
-    //   900: invokevirtual 950	com/estrongs/android/appinfo/AppFolderInfoManager:a	(Landroid/content/pm/PackageManager;Ljava/lang/String;)Lcom/estrongs/android/appinfo/m;
-    //   903: astore 5
-    //   905: aload 5
-    //   907: ifnull +36 -> 943
-    //   910: aload_2
-    //   911: ifnonnull +297 -> 1208
-    //   914: aload 5
-    //   916: astore_2
+    //   732: aload 5
+    //   734: ifnull +10 -> 744
+    //   737: aload 5
+    //   739: invokeinterface 251 1 0
+    //   744: aload_0
+    //   745: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   748: invokeinterface 254 1 0
+    //   753: aconst_null
+    //   754: astore 5
+    //   756: aload_2
+    //   757: astore 6
+    //   759: goto -300 -> 459
+    //   762: iconst_1
+    //   763: istore_3
+    //   764: goto -289 -> 475
+    //   767: invokestatic 712	com/estrongs/android/pop/FexApplication:a	()Lcom/estrongs/android/pop/FexApplication;
+    //   770: invokevirtual 743	com/estrongs/android/pop/FexApplication:getPackageManager	()Landroid/content/pm/PackageManager;
+    //   773: astore 7
+    //   775: aload 6
+    //   777: ifnull +13 -> 790
+    //   780: aload_0
+    //   781: aload 7
+    //   783: aload 6
+    //   785: invokevirtual 998	com/estrongs/android/appinfo/AppFolderInfoManager:a	(Landroid/content/pm/PackageManager;Ljava/lang/String;)Lcom/estrongs/android/appinfo/m;
+    //   788: astore 5
+    //   790: aload 5
+    //   792: astore_2
+    //   793: aload 5
+    //   795: ifnonnull +54 -> 849
+    //   798: aload 12
+    //   800: invokeinterface 752 1 0
+    //   805: astore 8
+    //   807: aload 5
+    //   809: astore_2
+    //   810: aload 8
+    //   812: invokeinterface 566 1 0
+    //   817: ifeq +32 -> 849
+    //   820: aload_0
+    //   821: aload 7
+    //   823: aload 8
+    //   825: invokeinterface 570 1 0
+    //   830: checkcast 228	java/lang/String
+    //   833: invokevirtual 998	com/estrongs/android/appinfo/AppFolderInfoManager:a	(Landroid/content/pm/PackageManager;Ljava/lang/String;)Lcom/estrongs/android/appinfo/m;
+    //   836: astore 5
+    //   838: aload 5
+    //   840: astore_2
+    //   841: aload 5
+    //   843: ifnull -33 -> 810
+    //   846: aload 5
+    //   848: astore_2
+    //   849: aload 11
+    //   851: invokeinterface 752 1 0
+    //   856: astore 8
+    //   858: aload 8
+    //   860: invokeinterface 566 1 0
+    //   865: ifeq +323 -> 1188
+    //   868: aload_0
+    //   869: aload 7
+    //   871: aload 8
+    //   873: invokeinterface 570 1 0
+    //   878: checkcast 228	java/lang/String
+    //   881: invokevirtual 998	com/estrongs/android/appinfo/AppFolderInfoManager:a	(Landroid/content/pm/PackageManager;Ljava/lang/String;)Lcom/estrongs/android/appinfo/m;
+    //   884: astore 5
+    //   886: aload 5
+    //   888: ifnull +36 -> 924
+    //   891: aload_2
+    //   892: ifnonnull +299 -> 1191
+    //   895: aload 5
+    //   897: astore_2
+    //   898: aload_2
+    //   899: iconst_3
+    //   900: putfield 915	com/estrongs/android/appinfo/m:b	I
+    //   903: aload_2
+    //   904: ifnull +23 -> 927
+    //   907: aload_0
+    //   908: getfield 144	com/estrongs/android/appinfo/AppFolderInfoManager:d	Lcom/estrongs/android/pop/app/imageviewer/gallery/g;
+    //   911: aload_1
+    //   912: invokeinterface 666 1 0
     //   917: aload_2
-    //   918: iconst_3
-    //   919: putfield 867	com/estrongs/android/appinfo/m:b	I
+    //   918: invokevirtual 837	com/estrongs/android/pop/app/imageviewer/gallery/g:a	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    //   921: pop
     //   922: aload_2
-    //   923: ifnull +23 -> 946
-    //   926: aload_0
-    //   927: getfield 141	com/estrongs/android/appinfo/AppFolderInfoManager:d	Lcom/estrongs/android/pop/app/imageviewer/gallery/g;
-    //   930: aload_1
-    //   931: invokeinterface 628 1 0
-    //   936: aload_2
-    //   937: invokevirtual 783	com/estrongs/android/pop/app/imageviewer/gallery/g:a	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    //   940: pop
-    //   941: aload_2
-    //   942: areturn
-    //   943: goto -66 -> 877
-    //   946: aload 6
-    //   948: ifnull +13 -> 961
-    //   951: aload 12
-    //   953: iconst_0
-    //   954: aload 6
-    //   956: invokeinterface 953 3 0
-    //   961: aload 12
-    //   963: invokeinterface 699 1 0
+    //   923: areturn
+    //   924: goto -66 -> 858
+    //   927: aload 6
+    //   929: ifnull +13 -> 942
+    //   932: aload 12
+    //   934: iconst_0
+    //   935: aload 6
+    //   937: invokeinterface 1001 3 0
+    //   942: aload 12
+    //   944: invokeinterface 752 1 0
+    //   949: astore_2
+    //   950: aload_2
+    //   951: invokeinterface 566 1 0
+    //   956: ifeq +61 -> 1017
+    //   959: aload_2
+    //   960: invokeinterface 570 1 0
+    //   965: checkcast 228	java/lang/String
     //   968: astore 5
-    //   970: aload 5
-    //   972: invokeinterface 529 1 0
-    //   977: ifeq +59 -> 1036
-    //   980: aload 5
-    //   982: invokeinterface 533 1 0
-    //   987: checkcast 225	java/lang/String
-    //   990: astore_2
-    //   991: new 276	java/io/File
-    //   994: dup
-    //   995: aload_0
-    //   996: aload_2
-    //   997: invokevirtual 402	com/estrongs/android/appinfo/AppFolderInfoManager:a	(Ljava/lang/String;)Ljava/lang/String;
-    //   1000: invokespecial 555	java/io/File:<init>	(Ljava/lang/String;)V
-    //   1003: invokevirtual 615	java/io/File:exists	()Z
-    //   1006: ifeq -36 -> 970
-    //   1009: new 153	com/estrongs/android/appinfo/m
-    //   1012: dup
-    //   1013: aload_2
-    //   1014: iconst_4
-    //   1015: invokespecial 924	com/estrongs/android/appinfo/m:<init>	(Ljava/lang/String;I)V
-    //   1018: astore_2
-    //   1019: aload_0
-    //   1020: getfield 141	com/estrongs/android/appinfo/AppFolderInfoManager:d	Lcom/estrongs/android/pop/app/imageviewer/gallery/g;
-    //   1023: aload_1
-    //   1024: invokeinterface 628 1 0
-    //   1029: aload_2
-    //   1030: invokevirtual 783	com/estrongs/android/pop/app/imageviewer/gallery/g:a	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    //   1033: pop
-    //   1034: aload_2
-    //   1035: areturn
-    //   1036: aload 11
-    //   1038: invokeinterface 699 1 0
-    //   1043: astore 5
-    //   1045: aload 5
-    //   1047: invokeinterface 529 1 0
-    //   1052: ifeq +60 -> 1112
-    //   1055: aload 5
-    //   1057: invokeinterface 533 1 0
-    //   1062: checkcast 225	java/lang/String
-    //   1065: astore_2
-    //   1066: new 276	java/io/File
-    //   1069: dup
-    //   1070: aload_0
-    //   1071: aload_2
-    //   1072: invokevirtual 402	com/estrongs/android/appinfo/AppFolderInfoManager:a	(Ljava/lang/String;)Ljava/lang/String;
-    //   1075: invokespecial 555	java/io/File:<init>	(Ljava/lang/String;)V
-    //   1078: invokevirtual 615	java/io/File:exists	()Z
-    //   1081: ifeq -36 -> 1045
-    //   1084: new 153	com/estrongs/android/appinfo/m
-    //   1087: dup
-    //   1088: aload_2
-    //   1089: bipush 6
-    //   1091: invokespecial 924	com/estrongs/android/appinfo/m:<init>	(Ljava/lang/String;I)V
-    //   1094: astore_2
-    //   1095: aload_0
-    //   1096: getfield 141	com/estrongs/android/appinfo/AppFolderInfoManager:d	Lcom/estrongs/android/pop/app/imageviewer/gallery/g;
-    //   1099: aload_1
-    //   1100: invokeinterface 628 1 0
-    //   1105: aload_2
-    //   1106: invokevirtual 783	com/estrongs/android/pop/app/imageviewer/gallery/g:a	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    //   1109: pop
-    //   1110: aload_2
-    //   1111: areturn
-    //   1112: aload_0
-    //   1113: getfield 158	com/estrongs/android/appinfo/AppFolderInfoManager:h	Lcom/estrongs/android/appinfo/m;
-    //   1116: astore_2
-    //   1117: aload_0
-    //   1118: getfield 141	com/estrongs/android/appinfo/AppFolderInfoManager:d	Lcom/estrongs/android/pop/app/imageviewer/gallery/g;
-    //   1121: aload_1
-    //   1122: invokeinterface 628 1 0
-    //   1127: aload_0
-    //   1128: getfield 158	com/estrongs/android/appinfo/AppFolderInfoManager:h	Lcom/estrongs/android/appinfo/m;
-    //   1131: invokevirtual 783	com/estrongs/android/pop/app/imageviewer/gallery/g:a	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    //   1134: pop
-    //   1135: aload_2
+    //   970: new 279	java/io/File
+    //   973: dup
+    //   974: aload_0
+    //   975: aload 5
+    //   977: invokevirtual 407	com/estrongs/android/appinfo/AppFolderInfoManager:a	(Ljava/lang/String;)Ljava/lang/String;
+    //   980: invokespecial 592	java/io/File:<init>	(Ljava/lang/String;)V
+    //   983: invokevirtual 491	java/io/File:exists	()Z
+    //   986: ifeq -36 -> 950
+    //   989: new 156	com/estrongs/android/appinfo/m
+    //   992: dup
+    //   993: aload 5
+    //   995: iconst_4
+    //   996: invokespecial 972	com/estrongs/android/appinfo/m:<init>	(Ljava/lang/String;I)V
+    //   999: astore_2
+    //   1000: aload_0
+    //   1001: getfield 144	com/estrongs/android/appinfo/AppFolderInfoManager:d	Lcom/estrongs/android/pop/app/imageviewer/gallery/g;
+    //   1004: aload_1
+    //   1005: invokeinterface 666 1 0
+    //   1010: aload_2
+    //   1011: invokevirtual 837	com/estrongs/android/pop/app/imageviewer/gallery/g:a	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    //   1014: pop
+    //   1015: aload_2
+    //   1016: areturn
+    //   1017: aload 11
+    //   1019: invokeinterface 752 1 0
+    //   1024: astore 5
+    //   1026: aload 5
+    //   1028: invokeinterface 566 1 0
+    //   1033: ifeq +60 -> 1093
+    //   1036: aload 5
+    //   1038: invokeinterface 570 1 0
+    //   1043: checkcast 228	java/lang/String
+    //   1046: astore_2
+    //   1047: new 279	java/io/File
+    //   1050: dup
+    //   1051: aload_0
+    //   1052: aload_2
+    //   1053: invokevirtual 407	com/estrongs/android/appinfo/AppFolderInfoManager:a	(Ljava/lang/String;)Ljava/lang/String;
+    //   1056: invokespecial 592	java/io/File:<init>	(Ljava/lang/String;)V
+    //   1059: invokevirtual 491	java/io/File:exists	()Z
+    //   1062: ifeq -36 -> 1026
+    //   1065: new 156	com/estrongs/android/appinfo/m
+    //   1068: dup
+    //   1069: aload_2
+    //   1070: bipush 6
+    //   1072: invokespecial 972	com/estrongs/android/appinfo/m:<init>	(Ljava/lang/String;I)V
+    //   1075: astore_2
+    //   1076: aload_0
+    //   1077: getfield 144	com/estrongs/android/appinfo/AppFolderInfoManager:d	Lcom/estrongs/android/pop/app/imageviewer/gallery/g;
+    //   1080: aload_1
+    //   1081: invokeinterface 666 1 0
+    //   1086: aload_2
+    //   1087: invokevirtual 837	com/estrongs/android/pop/app/imageviewer/gallery/g:a	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    //   1090: pop
+    //   1091: aload_2
+    //   1092: areturn
+    //   1093: aload_0
+    //   1094: getfield 161	com/estrongs/android/appinfo/AppFolderInfoManager:h	Lcom/estrongs/android/appinfo/m;
+    //   1097: astore_2
+    //   1098: aload_0
+    //   1099: getfield 144	com/estrongs/android/appinfo/AppFolderInfoManager:d	Lcom/estrongs/android/pop/app/imageviewer/gallery/g;
+    //   1102: aload_1
+    //   1103: invokeinterface 666 1 0
+    //   1108: aload_0
+    //   1109: getfield 161	com/estrongs/android/appinfo/AppFolderInfoManager:h	Lcom/estrongs/android/appinfo/m;
+    //   1112: invokevirtual 837	com/estrongs/android/pop/app/imageviewer/gallery/g:a	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    //   1115: pop
+    //   1116: aload_2
+    //   1117: astore_1
+    //   1118: goto -606 -> 512
+    //   1121: astore_1
+    //   1122: aconst_null
+    //   1123: astore 6
+    //   1125: goto -437 -> 688
+    //   1128: astore_1
+    //   1129: aload 5
+    //   1131: astore 6
+    //   1133: goto -445 -> 688
     //   1136: astore_1
-    //   1137: goto -608 -> 529
-    //   1140: astore_1
-    //   1141: aconst_null
-    //   1142: astore 6
-    //   1144: goto -439 -> 705
-    //   1147: astore_1
-    //   1148: aload 5
-    //   1150: astore 6
-    //   1152: goto -447 -> 705
-    //   1155: astore_1
-    //   1156: goto -451 -> 705
-    //   1159: astore 7
-    //   1161: aconst_null
-    //   1162: astore 6
-    //   1164: aconst_null
-    //   1165: astore 5
-    //   1167: aconst_null
-    //   1168: astore_2
-    //   1169: goto -725 -> 444
-    //   1172: astore 6
-    //   1174: aload 7
-    //   1176: astore 8
-    //   1178: aload 10
-    //   1180: astore 5
-    //   1182: aload 6
-    //   1184: astore 7
-    //   1186: aload 8
-    //   1188: astore 6
-    //   1190: goto -746 -> 444
-    //   1193: astore 7
-    //   1195: aload 5
-    //   1197: astore 6
-    //   1199: aconst_null
-    //   1200: astore 5
-    //   1202: goto -758 -> 444
-    //   1205: goto -283 -> 922
-    //   1208: goto -291 -> 917
-    //   1211: aload 7
-    //   1213: astore 5
-    //   1215: goto -871 -> 344
-    //   1218: aconst_null
-    //   1219: astore 6
-    //   1221: aconst_null
-    //   1222: astore_2
-    //   1223: goto -747 -> 476
+    //   1137: goto -449 -> 688
+    //   1140: astore 7
+    //   1142: aconst_null
+    //   1143: astore 6
+    //   1145: aconst_null
+    //   1146: astore 5
+    //   1148: aconst_null
+    //   1149: astore_2
+    //   1150: goto -720 -> 430
+    //   1153: astore 6
+    //   1155: aload_2
+    //   1156: astore 8
+    //   1158: aload 7
+    //   1160: astore_2
+    //   1161: aload 10
+    //   1163: astore 5
+    //   1165: aload 6
+    //   1167: astore 7
+    //   1169: aload 8
+    //   1171: astore 6
+    //   1173: goto -743 -> 430
+    //   1176: astore 7
+    //   1178: aload 5
+    //   1180: astore 6
+    //   1182: aconst_null
+    //   1183: astore 5
+    //   1185: goto -755 -> 430
+    //   1188: goto -285 -> 903
+    //   1191: goto -293 -> 898
+    //   1194: aload_2
+    //   1195: astore 5
+    //   1197: aload 6
+    //   1199: astore_2
+    //   1200: goto -870 -> 330
+    //   1203: aconst_null
+    //   1204: astore 6
+    //   1206: aconst_null
+    //   1207: astore 5
+    //   1209: goto -750 -> 459
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	1226	0	this	AppFolderInfoManager
-    //   0	1226	1	paramh	com.estrongs.fs.h
-    //   0	1226	2	paramString	String
-    //   491	289	3	i1	int
-    //   483	13	4	i2	int
-    //   45	1169	5	localObject1	Object
-    //   103	1060	6	localObject2	Object
-    //   1172	11	6	localException1	Exception
-    //   1188	32	6	localObject3	Object
-    //   182	189	7	localObject4	Object
-    //   428	17	7	localException2	Exception
-    //   550	339	7	localObject5	Object
-    //   1159	16	7	localException3	Exception
-    //   1184	1	7	localException4	Exception
-    //   1193	19	7	localException5	Exception
-    //   232	955	8	localObject6	Object
-    //   197	537	9	str	String
-    //   15	1164	10	localObject7	Object
-    //   54	983	11	localLinkedList1	LinkedList
-    //   40	922	12	localLinkedList2	LinkedList
-    //   60	292	13	arrayOfString1	String[]
-    //   73	284	14	arrayOfString2	String[]
+    //   0	1212	0	this	AppFolderInfoManager
+    //   0	1212	1	paramh	com.estrongs.fs.h
+    //   0	1212	2	paramString	String
+    //   474	290	3	i1	int
+    //   466	13	4	i2	int
+    //   186	1022	5	localObject1	Object
+    //   43	1101	6	localObject2	Object
+    //   1153	13	6	localException1	Exception
+    //   1171	34	6	localObject3	Object
+    //   46	311	7	localObject4	Object
+    //   414	17	7	localException2	Exception
+    //   533	337	7	localObject5	Object
+    //   1140	19	7	localException3	Exception
+    //   1167	1	7	localException4	Exception
+    //   1176	1	7	localException5	Exception
+    //   221	949	8	localObject6	Object
+    //   190	527	9	localObject7	Object
+    //   15	1147	10	localObject8	Object
+    //   55	963	11	localLinkedList1	LinkedList
+    //   40	903	12	localLinkedList2	LinkedList
+    //   74	269	13	arrayOfString1	String[]
+    //   61	277	14	arrayOfString2	String[]
     // Exception table:
     //   from	to	target	type
-    //   203	213	428	java/lang/Exception
-    //   224	234	428	java/lang/Exception
-    //   245	256	428	java/lang/Exception
-    //   267	273	428	java/lang/Exception
-    //   334	341	428	java/lang/Exception
-    //   388	398	428	java/lang/Exception
-    //   409	425	428	java/lang/Exception
-    //   542	549	428	java/lang/Exception
-    //   563	570	428	java/lang/Exception
-    //   590	612	428	java/lang/Exception
-    //   623	644	428	java/lang/Exception
-    //   664	674	428	java/lang/Exception
-    //   685	701	428	java/lang/Exception
-    //   739	746	428	java/lang/Exception
-    //   203	213	704	finally
-    //   224	234	704	finally
-    //   245	256	704	finally
-    //   267	273	704	finally
-    //   277	293	704	finally
-    //   334	341	704	finally
-    //   388	398	704	finally
-    //   409	425	704	finally
-    //   542	549	704	finally
-    //   563	570	704	finally
-    //   590	612	704	finally
-    //   623	644	704	finally
-    //   664	674	704	finally
-    //   685	701	704	finally
-    //   739	746	704	finally
-    //   97	105	1140	finally
-    //   110	139	1140	finally
-    //   162	184	1140	finally
-    //   344	368	1147	finally
-    //   444	449	1155	finally
-    //   97	105	1159	java/lang/Exception
-    //   110	139	1159	java/lang/Exception
-    //   162	184	1159	java/lang/Exception
-    //   277	293	1172	java/lang/Exception
-    //   344	368	1193	java/lang/Exception
+    //   195	204	414	java/lang/Exception
+    //   214	223	414	java/lang/Exception
+    //   233	244	414	java/lang/Exception
+    //   254	260	414	java/lang/Exception
+    //   318	324	414	java/lang/Exception
+    //   374	384	414	java/lang/Exception
+    //   395	411	414	java/lang/Exception
+    //   525	532	414	java/lang/Exception
+    //   546	553	414	java/lang/Exception
+    //   573	595	414	java/lang/Exception
+    //   606	627	414	java/lang/Exception
+    //   647	657	414	java/lang/Exception
+    //   668	684	414	java/lang/Exception
+    //   722	729	414	java/lang/Exception
+    //   195	204	687	finally
+    //   214	223	687	finally
+    //   233	244	687	finally
+    //   254	260	687	finally
+    //   263	279	687	finally
+    //   318	324	687	finally
+    //   374	384	687	finally
+    //   395	411	687	finally
+    //   525	532	687	finally
+    //   546	553	687	finally
+    //   573	595	687	finally
+    //   606	627	687	finally
+    //   647	657	687	finally
+    //   668	684	687	finally
+    //   722	729	687	finally
+    //   98	105	1121	finally
+    //   109	137	1121	finally
+    //   160	181	1121	finally
+    //   330	354	1128	finally
+    //   430	435	1136	finally
+    //   98	105	1140	java/lang/Exception
+    //   109	137	1140	java/lang/Exception
+    //   160	181	1140	java/lang/Exception
+    //   263	279	1153	java/lang/Exception
+    //   330	354	1176	java/lang/Exception
   }
   
   public String a(String paramString)
   {
-    return m + "/" + paramString + ".png";
+    return n + "/" + paramString + ".png";
   }
   
   /* Error */
@@ -2333,63 +2538,63 @@ public class AppFolderInfoManager
   {
     // Byte code:
     //   0: aload_0
-    //   1: getfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   1: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
     //   4: ifnull +4 -> 8
     //   7: return
     //   8: aload_0
-    //   9: getfield 175	com/estrongs/android/appinfo/AppFolderInfoManager:k	Ljava/util/concurrent/locks/Lock;
-    //   12: invokeinterface 221 1 0
+    //   9: getfield 178	com/estrongs/android/appinfo/AppFolderInfoManager:k	Ljava/util/concurrent/locks/Lock;
+    //   12: invokeinterface 224 1 0
     //   17: aload_0
-    //   18: invokespecial 957	com/estrongs/android/appinfo/AppFolderInfoManager:h	()V
-    //   21: new 276	java/io/File
+    //   18: invokespecial 1005	com/estrongs/android/appinfo/AppFolderInfoManager:j	()V
+    //   21: new 279	java/io/File
     //   24: dup
-    //   25: getstatic 132	com/estrongs/android/appinfo/AppFolderInfoManager:o	Ljava/lang/String;
-    //   28: invokespecial 555	java/io/File:<init>	(Ljava/lang/String;)V
-    //   31: invokevirtual 615	java/io/File:exists	()Z
+    //   25: getstatic 135	com/estrongs/android/appinfo/AppFolderInfoManager:p	Ljava/lang/String;
+    //   28: invokespecial 592	java/io/File:<init>	(Ljava/lang/String;)V
+    //   31: invokevirtual 491	java/io/File:exists	()Z
     //   34: ifne +7 -> 41
     //   37: aload_0
-    //   38: invokevirtual 959	com/estrongs/android/appinfo/AppFolderInfoManager:b	()V
+    //   38: invokevirtual 1007	com/estrongs/android/appinfo/AppFolderInfoManager:b	()V
     //   41: aload_0
-    //   42: getstatic 132	com/estrongs/android/appinfo/AppFolderInfoManager:o	Ljava/lang/String;
+    //   42: getstatic 135	com/estrongs/android/appinfo/AppFolderInfoManager:p	Ljava/lang/String;
     //   45: aconst_null
     //   46: iconst_0
-    //   47: invokestatic 657	android/database/sqlite/SQLiteDatabase:openDatabase	(Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)Landroid/database/sqlite/SQLiteDatabase;
-    //   50: putfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   47: invokestatic 694	android/database/sqlite/SQLiteDatabase:openDatabase	(Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)Landroid/database/sqlite/SQLiteDatabase;
+    //   50: putfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
     //   53: aload_0
-    //   54: getfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   54: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
     //   57: ifnonnull +32 -> 89
-    //   60: new 276	java/io/File
+    //   60: new 279	java/io/File
     //   63: dup
-    //   64: getstatic 132	com/estrongs/android/appinfo/AppFolderInfoManager:o	Ljava/lang/String;
-    //   67: invokespecial 555	java/io/File:<init>	(Ljava/lang/String;)V
-    //   70: invokevirtual 670	java/io/File:delete	()Z
+    //   64: getstatic 135	com/estrongs/android/appinfo/AppFolderInfoManager:p	Ljava/lang/String;
+    //   67: invokespecial 592	java/io/File:<init>	(Ljava/lang/String;)V
+    //   70: invokevirtual 707	java/io/File:delete	()Z
     //   73: pop
     //   74: aload_0
-    //   75: invokevirtual 959	com/estrongs/android/appinfo/AppFolderInfoManager:b	()V
+    //   75: invokevirtual 1007	com/estrongs/android/appinfo/AppFolderInfoManager:b	()V
     //   78: aload_0
-    //   79: getstatic 132	com/estrongs/android/appinfo/AppFolderInfoManager:o	Ljava/lang/String;
+    //   79: getstatic 135	com/estrongs/android/appinfo/AppFolderInfoManager:p	Ljava/lang/String;
     //   82: aconst_null
-    //   83: invokestatic 668	android/database/sqlite/SQLiteDatabase:openOrCreateDatabase	(Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;)Landroid/database/sqlite/SQLiteDatabase;
-    //   86: putfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   83: invokestatic 705	android/database/sqlite/SQLiteDatabase:openOrCreateDatabase	(Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;)Landroid/database/sqlite/SQLiteDatabase;
+    //   86: putfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
     //   89: aload_0
-    //   90: getfield 175	com/estrongs/android/appinfo/AppFolderInfoManager:k	Ljava/util/concurrent/locks/Lock;
-    //   93: invokeinterface 251 1 0
+    //   90: getfield 178	com/estrongs/android/appinfo/AppFolderInfoManager:k	Ljava/util/concurrent/locks/Lock;
+    //   93: invokeinterface 254 1 0
     //   98: return
     //   99: astore_1
     //   100: aload_1
-    //   101: invokevirtual 960	java/lang/Throwable:printStackTrace	()V
+    //   101: invokevirtual 1008	java/lang/Throwable:printStackTrace	()V
     //   104: goto -51 -> 53
     //   107: astore_1
     //   108: aload_1
-    //   109: invokevirtual 960	java/lang/Throwable:printStackTrace	()V
+    //   109: invokevirtual 1008	java/lang/Throwable:printStackTrace	()V
     //   112: aload_0
-    //   113: getfield 175	com/estrongs/android/appinfo/AppFolderInfoManager:k	Ljava/util/concurrent/locks/Lock;
-    //   116: invokeinterface 251 1 0
+    //   113: getfield 178	com/estrongs/android/appinfo/AppFolderInfoManager:k	Ljava/util/concurrent/locks/Lock;
+    //   116: invokeinterface 254 1 0
     //   121: return
     //   122: astore_1
     //   123: aload_0
-    //   124: getfield 175	com/estrongs/android/appinfo/AppFolderInfoManager:k	Ljava/util/concurrent/locks/Lock;
-    //   127: invokeinterface 251 1 0
+    //   124: getfield 178	com/estrongs/android/appinfo/AppFolderInfoManager:k	Ljava/util/concurrent/locks/Lock;
+    //   127: invokeinterface 254 1 0
     //   132: aload_1
     //   133: athrow
     // Local variable table:
@@ -2411,31 +2616,32 @@ public class AppFolderInfoManager
     //   108	112	122	finally
   }
   
-  public void a(Context paramContext, com.estrongs.fs.h paramh, String paramString, boolean paramBoolean, u paramu)
+  public void a(Context paramContext, com.estrongs.fs.h paramh, String paramString, boolean paramBoolean, v paramv)
   {
-    String str = d(paramh);
+    String str = f(paramh);
     if (str == null) {
       return;
     }
-    new i(this, str, paramString, paramh, paramu, paramContext, paramBoolean).start();
+    new i(this, str, paramString, paramh, paramv, paramContext, paramBoolean).start();
   }
   
-  public void a(u paramu)
+  public void a(v paramv)
   {
-    g();
-    if (!ak.b()) {}
+    i();
+    if (!an.b()) {}
     Date localDate1;
     Date localDate2;
     do
     {
       return;
-      localDate1 = new Date(ad.a(FexApplication.a()).aG());
+      localDate1 = new Date(ad.a(FexApplication.a()).aH());
       localDate2 = new Date();
     } while ((localDate1.getYear() == localDate2.getYear()) && (localDate1.getMonth() == localDate2.getMonth()) && (localDate1.getDay() == localDate2.getDay()));
+    com.estrongs.android.scanner.l.a().g();
     if (c == null) {
       a();
     }
-    a(new g(this, paramu));
+    a(new g(this, paramv));
   }
   
   /* Error */
@@ -2445,34 +2651,34 @@ public class AppFolderInfoManager
     //   0: aconst_null
     //   1: astore_3
     //   2: aload_2
-    //   3: invokeinterface 1001 1 0
+    //   3: invokeinterface 1050 1 0
     //   8: iconst_1
-    //   9: anewarray 225	java/lang/String
+    //   9: anewarray 228	java/lang/String
     //   12: astore 5
     //   14: aload 5
     //   16: iconst_0
-    //   17: ldc_w 486
+    //   17: ldc_w 516
     //   20: aastore
     //   21: aload_0
-    //   22: getfield 169	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
-    //   25: invokeinterface 221 1 0
+    //   22: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   25: invokeinterface 224 1 0
     //   30: iconst_1
-    //   31: anewarray 225	java/lang/String
+    //   31: anewarray 228	java/lang/String
     //   34: astore 6
     //   36: aload 6
     //   38: iconst_0
     //   39: aload_1
     //   40: aastore
     //   41: aload_0
-    //   42: getfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
-    //   45: ldc_w 484
+    //   42: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   45: ldc_w 514
     //   48: aload 5
-    //   50: ldc_w 834
+    //   50: ldc_w 888
     //   53: aload 6
     //   55: aconst_null
     //   56: aconst_null
     //   57: aconst_null
-    //   58: invokevirtual 235	android/database/sqlite/SQLiteDatabase:query	(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    //   58: invokevirtual 238	android/database/sqlite/SQLiteDatabase:query	(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     //   61: astore_1
     //   62: aload_1
     //   63: ifnull +222 -> 285
@@ -2481,7 +2687,7 @@ public class AppFolderInfoManager
     //   68: aload_1
     //   69: astore 4
     //   71: aload_1
-    //   72: invokeinterface 241 1 0
+    //   72: invokeinterface 244 1 0
     //   77: ifeq +46 -> 123
     //   80: aload_1
     //   81: astore_3
@@ -2490,37 +2696,37 @@ public class AppFolderInfoManager
     //   85: aload_2
     //   86: aload_1
     //   87: iconst_0
-    //   88: invokeinterface 337 2 0
-    //   93: invokeinterface 1002 2 0
+    //   88: invokeinterface 340 2 0
+    //   93: invokeinterface 1051 2 0
     //   98: pop
     //   99: goto -33 -> 66
     //   102: astore_1
     //   103: aload_3
     //   104: ifnull +9 -> 113
     //   107: aload_3
-    //   108: invokeinterface 248 1 0
+    //   108: invokeinterface 251 1 0
     //   113: aload_0
-    //   114: getfield 169	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
-    //   117: invokeinterface 251 1 0
+    //   114: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   117: invokeinterface 254 1 0
     //   122: return
     //   123: aload_1
     //   124: astore_3
     //   125: aload_1
     //   126: astore 4
     //   128: aload_1
-    //   129: invokeinterface 248 1 0
+    //   129: invokeinterface 251 1 0
     //   134: aconst_null
     //   135: astore_1
     //   136: aload_0
-    //   137: getfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
-    //   140: ldc_w 329
+    //   137: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   140: ldc_w 332
     //   143: aload 5
-    //   145: ldc_w 834
+    //   145: ldc_w 888
     //   148: aload 6
     //   150: aconst_null
     //   151: aconst_null
     //   152: aconst_null
-    //   153: invokevirtual 235	android/database/sqlite/SQLiteDatabase:query	(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    //   153: invokevirtual 238	android/database/sqlite/SQLiteDatabase:query	(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     //   156: astore_3
     //   157: aload_3
     //   158: astore_1
@@ -2533,7 +2739,7 @@ public class AppFolderInfoManager
     //   167: aload_1
     //   168: astore 4
     //   170: aload_1
-    //   171: invokeinterface 241 1 0
+    //   171: invokeinterface 244 1 0
     //   176: ifeq +50 -> 226
     //   179: aload_1
     //   180: astore_3
@@ -2542,8 +2748,8 @@ public class AppFolderInfoManager
     //   184: aload_2
     //   185: aload_1
     //   186: iconst_0
-    //   187: invokeinterface 337 2 0
-    //   192: invokeinterface 1002 2 0
+    //   187: invokeinterface 340 2 0
+    //   192: invokeinterface 1051 2 0
     //   197: pop
     //   198: goto -33 -> 165
     //   201: astore_1
@@ -2552,10 +2758,10 @@ public class AppFolderInfoManager
     //   205: aload_2
     //   206: ifnull +9 -> 215
     //   209: aload_2
-    //   210: invokeinterface 248 1 0
+    //   210: invokeinterface 251 1 0
     //   215: aload_0
-    //   216: getfield 169	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
-    //   219: invokeinterface 251 1 0
+    //   216: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   219: invokeinterface 254 1 0
     //   224: aload_1
     //   225: athrow
     //   226: aload_1
@@ -2563,16 +2769,16 @@ public class AppFolderInfoManager
     //   228: aload_1
     //   229: astore 4
     //   231: aload_1
-    //   232: invokeinterface 248 1 0
+    //   232: invokeinterface 251 1 0
     //   237: aconst_null
     //   238: astore_3
     //   239: aload_3
     //   240: ifnull +9 -> 249
     //   243: aload_3
-    //   244: invokeinterface 248 1 0
+    //   244: invokeinterface 251 1 0
     //   249: aload_0
-    //   250: getfield 169	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
-    //   253: invokeinterface 251 1 0
+    //   250: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   253: invokeinterface 254 1 0
     //   258: return
     //   259: astore_1
     //   260: aload_3
@@ -2628,72 +2834,93 @@ public class AppFolderInfoManager
   
   public void a(String paramString, List<com.estrongs.fs.h> paramList)
   {
-    int i2 = 0;
+    a(paramString, paramList, new k(this, paramString));
+  }
+  
+  public void a(String paramString, List<com.estrongs.fs.h> paramList, r paramr)
+  {
     if (paramList == null) {}
-    label183:
-    label188:
-    for (;;)
+    boolean bool1;
+    label49:
+    do
     {
       return;
-      boolean bool = ad.a(FexApplication.a()).aE();
-      int i1;
-      if (bool) {
-        if ((am.bl(paramString)) || (am.bP(paramString)))
-        {
-          i1 = 1;
-          if (i1 != 0) {
-            break label183;
+      boolean bool3 = ad.a(FexApplication.a()).aF();
+      bool1 = bool3;
+      if (bool3)
+      {
+        if ((!ap.bC(paramString)) && (!ap.cg(paramString)) && (!ap.bu(paramString))) {
+          break;
+        }
+        bool1 = true;
+        boolean bool2 = bool1;
+        if (!bool1) {
+          bool2 = a(paramList);
+        }
+        bool1 = bool3;
+        if (!bool2) {
+          bool1 = false;
+        }
+      }
+    } while (!bool1);
+    paramString = null;
+    Iterator localIterator = paramList.iterator();
+    for (;;)
+    {
+      label92:
+      if (localIterator.hasNext())
+      {
+        paramList = (com.estrongs.fs.h)localIterator.next();
+        if ((paramList.getFileType().a()) && (ap.I(paramList.getAbsolutePath()) != 23)) {
+          if ((paramList instanceof com.estrongs.fs.impl.c.d)) {
+            paramList = (com.estrongs.fs.h)b.get(0);
           }
+        }
+      }
+    }
+    label163:
+    label188:
+    label238:
+    for (;;)
+    {
+      if (k(paramList.getAbsolutePath()) == null) {
+        if (paramString == null)
+        {
+          paramString = new LinkedList();
+          paramString.add(paramList);
         }
       }
       for (;;)
       {
-        if (i2 == 0) {
-          break label188;
+        break label92;
+        bool1 = false;
+        break label49;
+        if (!(paramList instanceof com.estrongs.android.ui.topclassify.c)) {
+          break label238;
         }
-        Object localObject = null;
-        Iterator localIterator = paramList.iterator();
-        paramList = (List<com.estrongs.fs.h>)localObject;
-        for (;;)
-        {
-          if (localIterator.hasNext())
-          {
-            com.estrongs.fs.h localh = (com.estrongs.fs.h)localIterator.next();
-            if ((localh.getFileType().a()) && (am.G(localh.getAbsolutePath()) != 23) && (j(localh.getAbsolutePath()) == null))
-            {
-              localObject = paramList;
-              if (paramList == null) {
-                localObject = new LinkedList();
-              }
-              ((List)localObject).add(localh);
-              paramList = (List<com.estrongs.fs.h>)localObject;
-              continue;
-              i1 = 0;
-              break;
-            }
-          }
-        }
-        if (paramList == null) {
+        paramList = d(paramList);
+        break label163;
+        if (paramString == null) {
           break;
         }
-        a(paramList, new k(this, paramString));
+        a(paramString, paramr);
         return;
-        i2 = bool;
+        break label188;
       }
     }
   }
   
-  public void a(List<com.estrongs.fs.h> paramList, q paramq)
+  public void a(List<com.estrongs.fs.h> paramList, r paramr)
   {
-    if ((paramList == null) || (paramq == null)) {
+    if ((paramList == null) || (paramr == null)) {
       return;
     }
-    new d(this, paramList, paramq).start();
+    new d(this, paramList, paramr).start();
   }
   
-  public void a(File[] paramArrayOfFile, q paramq)
+  public void a(File[] paramArrayOfFile, r paramr)
   {
-    if ((paramArrayOfFile == null) || (paramq == null)) {}
+    if ((paramArrayOfFile == null) || (paramr == null)) {}
     Object localObject1;
     label83:
     do
@@ -2701,7 +2928,7 @@ public class AppFolderInfoManager
       do
       {
         return;
-      } while (!ad.a(FexApplication.a()).aE());
+      } while (!ad.a(FexApplication.a()).aF());
       int i2 = paramArrayOfFile.length;
       localObject1 = null;
       int i1 = 0;
@@ -2712,7 +2939,7 @@ public class AppFolderInfoManager
         Object localObject2 = localObject1;
         if (localFile.isDirectory())
         {
-          if (am.bl(str)) {
+          if (ap.bC(str)) {
             break label83;
           }
           localObject2 = localObject1;
@@ -2723,7 +2950,7 @@ public class AppFolderInfoManager
           localObject1 = localObject2;
           break;
           localObject2 = localObject1;
-          if (d().j(str) == null)
+          if (d().k(str) == null)
           {
             localObject2 = localObject1;
             if (localObject1 == null) {
@@ -2734,22 +2961,30 @@ public class AppFolderInfoManager
         }
       }
     } while (localObject1 == null);
-    a((List)localObject1, paramq);
+    a((List)localObject1, paramr);
   }
   
   public boolean a(Context paramContext, com.estrongs.fs.h paramh)
   {
-    if ((!ad.a(paramContext).aE()) || (!paramh.getFileType().a()) || (am.G(paramh.getAbsolutePath()) == 23)) {}
+    if ((!ad.a(paramContext).aF()) || (!paramh.getFileType().a()) || (ap.I(paramh.getAbsolutePath()) == 23)) {}
     do
     {
       return false;
-      paramContext = j(paramh.getAbsolutePath());
+      paramContext = k(paramh.getAbsolutePath());
     } while ((paramContext == null) || ((b != 4) && (b != 6)));
     return true;
   }
   
+  public boolean a(List<com.estrongs.fs.h> paramList)
+  {
+    if ((paramList == null) || (paramList.size() < 1)) {
+      return false;
+    }
+    return e((com.estrongs.fs.h)paramList.get(0));
+  }
+  
   /* Error */
-  public r b(com.estrongs.fs.h paramh)
+  public s b(com.estrongs.fs.h paramh)
   {
     // Byte code:
     //   0: aconst_null
@@ -2762,28 +2997,28 @@ public class AppFolderInfoManager
     //   10: astore 7
     //   12: aload_0
     //   13: aload_1
-    //   14: invokespecial 930	com/estrongs/android/appinfo/AppFolderInfoManager:d	(Lcom/estrongs/fs/h;)Ljava/lang/String;
+    //   14: invokespecial 978	com/estrongs/android/appinfo/AppFolderInfoManager:f	(Lcom/estrongs/fs/h;)Ljava/lang/String;
     //   17: astore_1
     //   18: aload_1
     //   19: ifnonnull +5 -> 24
     //   22: aconst_null
     //   23: areturn
     //   24: aload_0
-    //   25: getfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   25: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
     //   28: ifnull -6 -> 22
     //   31: aload_0
-    //   32: getfield 169	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
-    //   35: invokeinterface 221 1 0
+    //   32: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   35: invokeinterface 224 1 0
     //   40: aload_0
-    //   41: getfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
-    //   44: ldc_w 1033
+    //   41: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   44: ldc_w 1109
     //   47: iconst_1
-    //   48: anewarray 225	java/lang/String
+    //   48: anewarray 228	java/lang/String
     //   51: dup
     //   52: iconst_0
     //   53: aload_1
     //   54: aastore
-    //   55: invokevirtual 948	android/database/sqlite/SQLiteDatabase:rawQuery	(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    //   55: invokevirtual 996	android/database/sqlite/SQLiteDatabase:rawQuery	(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
     //   58: astore_3
     //   59: aload_3
     //   60: ifnull +120 -> 180
@@ -2791,8 +3026,8 @@ public class AppFolderInfoManager
     //   64: astore 4
     //   66: aload 8
     //   68: astore 5
-    //   70: invokestatic 685	com/estrongs/android/pop/FexApplication:a	()Lcom/estrongs/android/pop/FexApplication;
-    //   73: invokevirtual 689	com/estrongs/android/pop/FexApplication:getPackageManager	()Landroid/content/pm/PackageManager;
+    //   70: invokestatic 712	com/estrongs/android/pop/FexApplication:a	()Lcom/estrongs/android/pop/FexApplication;
+    //   73: invokevirtual 743	com/estrongs/android/pop/FexApplication:getPackageManager	()Landroid/content/pm/PackageManager;
     //   76: astore 8
     //   78: aload 7
     //   80: astore_1
@@ -2803,7 +3038,7 @@ public class AppFolderInfoManager
     //   87: aload_1
     //   88: astore 5
     //   90: aload_3
-    //   91: invokeinterface 241 1 0
+    //   91: invokeinterface 244 1 0
     //   96: ifeq +84 -> 180
     //   99: aload_3
     //   100: astore 4
@@ -2811,7 +3046,7 @@ public class AppFolderInfoManager
     //   103: astore 5
     //   105: aload_3
     //   106: iconst_0
-    //   107: invokeinterface 337 2 0
+    //   107: invokeinterface 340 2 0
     //   112: astore 7
     //   114: aload_3
     //   115: astore 4
@@ -2819,7 +3054,7 @@ public class AppFolderInfoManager
     //   118: astore 5
     //   120: aload_3
     //   121: iconst_1
-    //   122: invokeinterface 245 2 0
+    //   122: invokeinterface 248 2 0
     //   127: istore_2
     //   128: aload_3
     //   129: astore 4
@@ -2828,34 +3063,34 @@ public class AppFolderInfoManager
     //   134: aload 8
     //   136: aload 7
     //   138: iconst_0
-    //   139: invokevirtual 540	android/content/pm/PackageManager:getPackageInfo	(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    //   139: invokevirtual 577	android/content/pm/PackageManager:getPackageInfo	(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
     //   142: ifnull -61 -> 81
     //   145: aload_3
     //   146: astore 4
     //   148: aload_1
     //   149: astore 5
-    //   151: new 1035	com/estrongs/android/appinfo/r
+    //   151: new 1111	com/estrongs/android/appinfo/s
     //   154: dup
     //   155: aload_0
-    //   156: invokespecial 1037	com/estrongs/android/appinfo/r:<init>	(Lcom/estrongs/android/appinfo/AppFolderInfoManager;)V
+    //   156: invokespecial 1113	com/estrongs/android/appinfo/s:<init>	(Lcom/estrongs/android/appinfo/AppFolderInfoManager;)V
     //   159: astore 6
     //   161: aload_3
     //   162: astore 4
     //   164: aload 6
     //   166: aload 7
-    //   168: putfield 1038	com/estrongs/android/appinfo/r:a	Ljava/lang/String;
+    //   168: putfield 1114	com/estrongs/android/appinfo/s:a	Ljava/lang/String;
     //   171: aload_3
     //   172: astore 4
     //   174: aload 6
     //   176: iload_2
-    //   177: putfield 1039	com/estrongs/android/appinfo/r:b	I
+    //   177: putfield 1115	com/estrongs/android/appinfo/s:b	I
     //   180: aload_3
     //   181: ifnull +9 -> 190
     //   184: aload_3
-    //   185: invokeinterface 248 1 0
+    //   185: invokeinterface 251 1 0
     //   190: aload_0
-    //   191: getfield 169	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
-    //   194: invokeinterface 251 1 0
+    //   191: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   194: invokeinterface 254 1 0
     //   199: aload 6
     //   201: areturn
     //   202: astore_1
@@ -2864,14 +3099,14 @@ public class AppFolderInfoManager
     //   205: aload_3
     //   206: astore 4
     //   208: aload_1
-    //   209: invokevirtual 254	java/lang/Exception:printStackTrace	()V
+    //   209: invokevirtual 257	java/lang/Exception:printStackTrace	()V
     //   212: aload_3
     //   213: ifnull +9 -> 222
     //   216: aload_3
-    //   217: invokeinterface 248 1 0
+    //   217: invokeinterface 251 1 0
     //   222: aload_0
-    //   223: getfield 169	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
-    //   226: invokeinterface 251 1 0
+    //   223: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   226: invokeinterface 254 1 0
     //   231: aload 5
     //   233: areturn
     //   234: astore_1
@@ -2880,10 +3115,10 @@ public class AppFolderInfoManager
     //   238: aload 4
     //   240: ifnull +10 -> 250
     //   243: aload 4
-    //   245: invokeinterface 248 1 0
+    //   245: invokeinterface 251 1 0
     //   250: aload_0
-    //   251: getfield 169	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
-    //   254: invokeinterface 251 1 0
+    //   251: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   254: invokeinterface 254 1 0
     //   259: aload_1
     //   260: athrow
     //   261: astore_1
@@ -2946,9 +3181,9 @@ public class AppFolderInfoManager
   
   protected void b(String paramString)
   {
-    FileExplorerActivity localFileExplorerActivity = FileExplorerActivity.J();
+    FileExplorerActivity localFileExplorerActivity = FileExplorerActivity.X();
     if (localFileExplorerActivity != null) {
-      localFileExplorerActivity.k(paramString);
+      localFileExplorerActivity.p(paramString);
     }
   }
   
@@ -2961,71 +3196,71 @@ public class AppFolderInfoManager
     //   3: aconst_null
     //   4: astore 4
     //   6: aload_2
-    //   7: invokeinterface 1001 1 0
+    //   7: invokeinterface 1050 1 0
     //   12: aload_0
-    //   13: getfield 169	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
-    //   16: invokeinterface 221 1 0
+    //   13: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   16: invokeinterface 224 1 0
     //   21: aload_0
     //   22: aload_1
-    //   23: invokespecial 513	com/estrongs/android/appinfo/AppFolderInfoManager:n	(Ljava/lang/String;)I
+    //   23: invokespecial 543	com/estrongs/android/appinfo/AppFolderInfoManager:o	(Ljava/lang/String;)I
     //   26: istore_3
     //   27: aload 4
     //   29: astore_1
     //   30: iload_3
     //   31: iconst_m1
     //   32: if_icmpeq +103 -> 135
-    //   35: new 105	java/lang/StringBuilder
+    //   35: new 106	java/lang/StringBuilder
     //   38: dup
-    //   39: invokespecial 106	java/lang/StringBuilder:<init>	()V
-    //   42: ldc_w 327
-    //   45: invokevirtual 114	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   39: invokespecial 107	java/lang/StringBuilder:<init>	()V
+    //   42: ldc_w 330
+    //   45: invokevirtual 115	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   48: iload_3
-    //   49: invokevirtual 270	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   52: invokevirtual 120	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   49: invokevirtual 273	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
+    //   52: invokevirtual 121	java/lang/StringBuilder:toString	()Ljava/lang/String;
     //   55: astore_1
     //   56: aload_0
-    //   57: getfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
-    //   60: ldc_w 944
+    //   57: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   60: ldc_w 992
     //   63: iconst_1
-    //   64: anewarray 225	java/lang/String
+    //   64: anewarray 228	java/lang/String
     //   67: dup
     //   68: iconst_0
     //   69: aload_1
     //   70: aastore
-    //   71: invokevirtual 948	android/database/sqlite/SQLiteDatabase:rawQuery	(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    //   71: invokevirtual 996	android/database/sqlite/SQLiteDatabase:rawQuery	(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
     //   74: astore_1
     //   75: aload_1
     //   76: ifnull +114 -> 190
     //   79: aload_1
-    //   80: invokeinterface 241 1 0
+    //   80: invokeinterface 244 1 0
     //   85: ifeq +41 -> 126
     //   88: aload_2
     //   89: aload_1
     //   90: iconst_0
-    //   91: invokeinterface 337 2 0
-    //   96: invokeinterface 1002 2 0
+    //   91: invokeinterface 340 2 0
+    //   96: invokeinterface 1051 2 0
     //   101: pop
     //   102: goto -23 -> 79
     //   105: astore_2
     //   106: aload_1
     //   107: ifnull +9 -> 116
     //   110: aload_1
-    //   111: invokeinterface 248 1 0
+    //   111: invokeinterface 251 1 0
     //   116: aload_0
-    //   117: getfield 169	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
-    //   120: invokeinterface 251 1 0
+    //   117: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   120: invokeinterface 254 1 0
     //   125: return
     //   126: aload_1
-    //   127: invokeinterface 248 1 0
+    //   127: invokeinterface 251 1 0
     //   132: aload 4
     //   134: astore_1
     //   135: aload_1
     //   136: ifnull +9 -> 145
     //   139: aload_1
-    //   140: invokeinterface 248 1 0
+    //   140: invokeinterface 251 1 0
     //   145: aload_0
-    //   146: getfield 169	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
-    //   149: invokeinterface 251 1 0
+    //   146: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   149: invokeinterface 254 1 0
     //   154: return
     //   155: astore_2
     //   156: aload 5
@@ -3033,10 +3268,10 @@ public class AppFolderInfoManager
     //   159: aload_1
     //   160: ifnull +9 -> 169
     //   163: aload_1
-    //   164: invokeinterface 248 1 0
+    //   164: invokeinterface 251 1 0
     //   169: aload_0
-    //   170: getfield 169	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
-    //   173: invokeinterface 251 1 0
+    //   170: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   173: invokeinterface 254 1 0
     //   178: aload_2
     //   179: athrow
     //   180: astore_2
@@ -3070,7 +3305,7 @@ public class AppFolderInfoManager
   {
     d.a();
     e.a();
-    f.a();
+    f.evictAll();
   }
   
   public void c(String paramString)
@@ -3088,9 +3323,9 @@ public class AppFolderInfoManager
     {
       for (;;) {}
     }
-    paramString = FileExplorerActivity.J();
+    paramString = FileExplorerActivity.X();
     if (paramString != null) {
-      paramString.g(true);
+      paramString.f(true);
     }
   }
   
@@ -3100,21 +3335,39 @@ public class AppFolderInfoManager
     do
     {
       return false;
-      paramh = d(paramh);
+      paramh = f(paramh);
     } while (paramh == null);
-    paramh = i(paramh);
+    paramh = j(paramh);
     if (paramh == null) {
       return true;
     }
     return c;
   }
   
+  public com.estrongs.fs.h d(com.estrongs.fs.h paramh)
+  {
+    com.estrongs.android.ui.topclassify.c localc = (com.estrongs.android.ui.topclassify.c)paramh;
+    paramh = localc;
+    if (localc.b() == 20)
+    {
+      paramh = localc;
+      if (localc.c() != null)
+      {
+        paramh = localc;
+        if (localc.d() != null) {
+          paramh = new x(localc.d());
+        }
+      }
+    }
+    return paramh;
+  }
+  
   public void d(String paramString)
   {
     d.a();
-    paramString = FileExplorerActivity.J();
+    paramString = FileExplorerActivity.X();
     if (paramString != null) {
-      paramString.g(true);
+      paramString.f(true);
     }
   }
   
@@ -3165,7 +3418,7 @@ public class AppFolderInfoManager
       }
       localObject2 = localObject3;
     } while (((Map)localObject4).isEmpty());
-    localObject3 = am.a();
+    localObject3 = ap.a();
     Object localObject4 = ((Map)localObject4).entrySet().iterator();
     boolean bool;
     if (((Iterator)localObject4).hasNext())
@@ -3226,7 +3479,7 @@ public class AppFolderInfoManager
             if (!((Iterator)localObject3).hasNext()) {
               break;
             }
-          } while (!am.i(nexta, a));
+          } while (!ap.i(nexta, a));
         }
         for (int i1 = 1;; i1 = 0)
         {
@@ -3243,42 +3496,348 @@ public class AppFolderInfoManager
   }
   
   /* Error */
+  public List<w> e()
+  {
+    // Byte code:
+    //   0: new 57	java/util/ArrayList
+    //   3: dup
+    //   4: invokespecial 949	java/util/ArrayList:<init>	()V
+    //   7: astore 8
+    //   9: invokestatic 712	com/estrongs/android/pop/FexApplication:a	()Lcom/estrongs/android/pop/FexApplication;
+    //   12: invokevirtual 743	com/estrongs/android/pop/FexApplication:getPackageManager	()Landroid/content/pm/PackageManager;
+    //   15: astore 9
+    //   17: aload_0
+    //   18: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   21: ifnonnull +7 -> 28
+    //   24: aload_0
+    //   25: invokespecial 637	com/estrongs/android/appinfo/AppFolderInfoManager:g	()V
+    //   28: aload_0
+    //   29: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   32: ifnull +161 -> 193
+    //   35: aload_0
+    //   36: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   39: ldc_w 774
+    //   42: iconst_2
+    //   43: anewarray 228	java/lang/String
+    //   46: dup
+    //   47: iconst_0
+    //   48: ldc_w 364
+    //   51: aastore
+    //   52: dup
+    //   53: iconst_1
+    //   54: ldc_w 772
+    //   57: aastore
+    //   58: aconst_null
+    //   59: aconst_null
+    //   60: aconst_null
+    //   61: aconst_null
+    //   62: aconst_null
+    //   63: invokevirtual 238	android/database/sqlite/SQLiteDatabase:query	(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    //   66: astore 5
+    //   68: aload 5
+    //   70: ifnull +331 -> 401
+    //   73: aload 5
+    //   75: astore 6
+    //   77: aload 5
+    //   79: invokeinterface 244 1 0
+    //   84: ifeq +317 -> 401
+    //   87: aload 5
+    //   89: astore 6
+    //   91: aload 5
+    //   93: iconst_0
+    //   94: invokeinterface 340 2 0
+    //   99: astore 10
+    //   101: aload 5
+    //   103: astore 6
+    //   105: aload 5
+    //   107: iconst_1
+    //   108: invokeinterface 340 2 0
+    //   113: astore 11
+    //   115: aload 5
+    //   117: astore 6
+    //   119: aload 9
+    //   121: aload 10
+    //   123: iconst_0
+    //   124: invokevirtual 577	android/content/pm/PackageManager:getPackageInfo	(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    //   127: astore 7
+    //   129: aload 7
+    //   131: astore 6
+    //   133: aload 6
+    //   135: ifnonnull -62 -> 73
+    //   138: aload 5
+    //   140: astore 6
+    //   142: aload 8
+    //   144: new 1218	com/estrongs/android/appinfo/w
+    //   147: dup
+    //   148: aload 11
+    //   150: aload 10
+    //   152: aload_0
+    //   153: aload 10
+    //   155: invokevirtual 407	com/estrongs/android/appinfo/AppFolderInfoManager:a	(Ljava/lang/String;)Ljava/lang/String;
+    //   158: invokespecial 1221	com/estrongs/android/appinfo/w:<init>	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    //   161: invokeinterface 948 2 0
+    //   166: pop
+    //   167: goto -94 -> 73
+    //   170: astore 7
+    //   172: aload 5
+    //   174: astore 6
+    //   176: aload 7
+    //   178: invokevirtual 257	java/lang/Exception:printStackTrace	()V
+    //   181: aload 5
+    //   183: ifnull +10 -> 193
+    //   186: aload 5
+    //   188: invokeinterface 251 1 0
+    //   193: new 279	java/io/File
+    //   196: dup
+    //   197: getstatic 127	com/estrongs/android/appinfo/AppFolderInfoManager:n	Ljava/lang/String;
+    //   200: invokespecial 592	java/io/File:<init>	(Ljava/lang/String;)V
+    //   203: astore 6
+    //   205: aload 6
+    //   207: invokevirtual 491	java/io/File:exists	()Z
+    //   210: ifeq +241 -> 451
+    //   213: aload 6
+    //   215: invokevirtual 721	java/io/File:isDirectory	()Z
+    //   218: ifeq +233 -> 451
+    //   221: aload 6
+    //   223: invokevirtual 498	java/io/File:list	()[Ljava/lang/String;
+    //   226: astore 7
+    //   228: aload 7
+    //   230: ifnull +221 -> 451
+    //   233: aload 7
+    //   235: arraylength
+    //   236: istore_3
+    //   237: iconst_0
+    //   238: istore_1
+    //   239: iload_1
+    //   240: iload_3
+    //   241: if_icmpge +210 -> 451
+    //   244: aload 7
+    //   246: iload_1
+    //   247: aaload
+    //   248: astore 5
+    //   250: new 279	java/io/File
+    //   253: dup
+    //   254: aload 6
+    //   256: aload 5
+    //   258: invokespecial 499	java/io/File:<init>	(Ljava/io/File;Ljava/lang/String;)V
+    //   261: invokevirtual 502	java/io/File:isFile	()Z
+    //   264: ifeq +122 -> 386
+    //   267: ldc_w 1003
+    //   270: aload 5
+    //   272: invokestatic 1224	com/estrongs/android/util/ap:bR	(Ljava/lang/String;)Ljava/lang/String;
+    //   275: invokevirtual 573	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   278: ifeq +108 -> 386
+    //   281: aload 5
+    //   283: iconst_0
+    //   284: aload 5
+    //   286: invokevirtual 532	java/lang/String:length	()I
+    //   289: iconst_4
+    //   290: isub
+    //   291: invokevirtual 536	java/lang/String:substring	(II)Ljava/lang/String;
+    //   294: astore 10
+    //   296: aload 8
+    //   298: invokeinterface 752 1 0
+    //   303: astore 5
+    //   305: aload 5
+    //   307: invokeinterface 566 1 0
+    //   312: ifeq +227 -> 539
+    //   315: aload 5
+    //   317: invokeinterface 570 1 0
+    //   322: checkcast 1218	com/estrongs/android/appinfo/w
+    //   325: getfield 1225	com/estrongs/android/appinfo/w:b	Ljava/lang/String;
+    //   328: aload 10
+    //   330: invokevirtual 573	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   333: istore 4
+    //   335: iload 4
+    //   337: ifeq -32 -> 305
+    //   340: iconst_1
+    //   341: istore_2
+    //   342: iload_2
+    //   343: ifne +43 -> 386
+    //   346: aload 9
+    //   348: aload 10
+    //   350: iconst_0
+    //   351: invokevirtual 577	android/content/pm/PackageManager:getPackageInfo	(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    //   354: astore 5
+    //   356: aload 5
+    //   358: ifnonnull +28 -> 386
+    //   361: aload 8
+    //   363: new 1218	com/estrongs/android/appinfo/w
+    //   366: dup
+    //   367: aload 10
+    //   369: aload 10
+    //   371: aload_0
+    //   372: aload 10
+    //   374: invokevirtual 407	com/estrongs/android/appinfo/AppFolderInfoManager:a	(Ljava/lang/String;)Ljava/lang/String;
+    //   377: invokespecial 1221	com/estrongs/android/appinfo/w:<init>	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    //   380: invokeinterface 948 2 0
+    //   385: pop
+    //   386: iload_1
+    //   387: iconst_1
+    //   388: iadd
+    //   389: istore_1
+    //   390: goto -151 -> 239
+    //   393: astore 6
+    //   395: aconst_null
+    //   396: astore 6
+    //   398: goto -265 -> 133
+    //   401: aload 5
+    //   403: ifnull -210 -> 193
+    //   406: aload 5
+    //   408: invokeinterface 251 1 0
+    //   413: goto -220 -> 193
+    //   416: astore 5
+    //   418: aconst_null
+    //   419: astore 6
+    //   421: aload 6
+    //   423: ifnull +10 -> 433
+    //   426: aload 6
+    //   428: invokeinterface 251 1 0
+    //   433: aload 5
+    //   435: athrow
+    //   436: astore 5
+    //   438: aconst_null
+    //   439: astore 5
+    //   441: goto -85 -> 356
+    //   444: astore 5
+    //   446: aload 5
+    //   448: invokevirtual 257	java/lang/Exception:printStackTrace	()V
+    //   451: aload 8
+    //   453: invokeinterface 752 1 0
+    //   458: astore 5
+    //   460: aload 5
+    //   462: invokeinterface 566 1 0
+    //   467: ifeq +56 -> 523
+    //   470: aload 5
+    //   472: invokeinterface 570 1 0
+    //   477: checkcast 1218	com/estrongs/android/appinfo/w
+    //   480: astore 6
+    //   482: ldc_w 1227
+    //   485: new 106	java/lang/StringBuilder
+    //   488: dup
+    //   489: invokespecial 107	java/lang/StringBuilder:<init>	()V
+    //   492: aload 6
+    //   494: getfield 1225	com/estrongs/android/appinfo/w:b	Ljava/lang/String;
+    //   497: invokevirtual 115	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   500: ldc_w 1229
+    //   503: invokevirtual 115	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   506: aload 6
+    //   508: getfield 1230	com/estrongs/android/appinfo/w:a	Ljava/lang/String;
+    //   511: invokevirtual 115	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   514: invokevirtual 121	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   517: invokestatic 1233	com/estrongs/android/util/l:b	(Ljava/lang/String;Ljava/lang/String;)V
+    //   520: goto -60 -> 460
+    //   523: aload 8
+    //   525: areturn
+    //   526: astore 5
+    //   528: goto -107 -> 421
+    //   531: astore 7
+    //   533: aconst_null
+    //   534: astore 5
+    //   536: goto -364 -> 172
+    //   539: iconst_0
+    //   540: istore_2
+    //   541: goto -199 -> 342
+    // Local variable table:
+    //   start	length	slot	name	signature
+    //   0	544	0	this	AppFolderInfoManager
+    //   238	152	1	i1	int
+    //   341	200	2	i2	int
+    //   236	6	3	i3	int
+    //   333	3	4	bool	boolean
+    //   66	341	5	localObject1	Object
+    //   416	18	5	localObject2	Object
+    //   436	1	5	localNameNotFoundException1	PackageManager.NameNotFoundException
+    //   439	1	5	localObject3	Object
+    //   444	3	5	localException1	Exception
+    //   458	13	5	localIterator	Iterator
+    //   526	1	5	localObject4	Object
+    //   534	1	5	localObject5	Object
+    //   75	180	6	localObject6	Object
+    //   393	1	6	localNameNotFoundException2	PackageManager.NameNotFoundException
+    //   396	111	6	localw	w
+    //   127	3	7	localPackageInfo	PackageInfo
+    //   170	7	7	localException2	Exception
+    //   226	19	7	arrayOfString	String[]
+    //   531	1	7	localException3	Exception
+    //   7	517	8	localArrayList	ArrayList
+    //   15	332	9	localPackageManager	PackageManager
+    //   99	274	10	str1	String
+    //   113	36	11	str2	String
+    // Exception table:
+    //   from	to	target	type
+    //   77	87	170	java/lang/Exception
+    //   91	101	170	java/lang/Exception
+    //   105	115	170	java/lang/Exception
+    //   119	129	170	java/lang/Exception
+    //   142	167	170	java/lang/Exception
+    //   119	129	393	android/content/pm/PackageManager$NameNotFoundException
+    //   35	68	416	finally
+    //   346	356	436	android/content/pm/PackageManager$NameNotFoundException
+    //   193	228	444	java/lang/Exception
+    //   233	237	444	java/lang/Exception
+    //   250	305	444	java/lang/Exception
+    //   305	335	444	java/lang/Exception
+    //   346	356	444	java/lang/Exception
+    //   361	386	444	java/lang/Exception
+    //   77	87	526	finally
+    //   91	101	526	finally
+    //   105	115	526	finally
+    //   119	129	526	finally
+    //   142	167	526	finally
+    //   176	181	526	finally
+    //   35	68	531	java/lang/Exception
+  }
+  
+  public boolean e(com.estrongs.fs.h paramh)
+  {
+    if ((paramh != null) && ((paramh instanceof com.estrongs.android.ui.topclassify.c)))
+    {
+      paramh = (com.estrongs.android.ui.topclassify.c)paramh;
+      if ((paramh.b() == 20) && (paramh.c() != null)) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  /* Error */
   Map<String, Boolean> f(String paramString)
   {
     // Byte code:
     //   0: aconst_null
     //   1: astore_2
-    //   2: new 182	java/util/HashMap
+    //   2: new 185	java/util/HashMap
     //   5: dup
-    //   6: invokespecial 183	java/util/HashMap:<init>	()V
+    //   6: invokespecial 186	java/util/HashMap:<init>	()V
     //   9: astore 4
     //   11: aload_0
-    //   12: getfield 169	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
-    //   15: invokeinterface 221 1 0
+    //   12: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   15: invokeinterface 224 1 0
     //   20: iconst_1
-    //   21: anewarray 225	java/lang/String
+    //   21: anewarray 228	java/lang/String
     //   24: astore 5
     //   26: aload 5
     //   28: iconst_0
-    //   29: ldc_w 350
+    //   29: ldc_w 353
     //   32: aastore
     //   33: iconst_1
-    //   34: anewarray 225	java/lang/String
+    //   34: anewarray 228	java/lang/String
     //   37: astore 6
     //   39: aload 6
     //   41: iconst_0
     //   42: aload_1
     //   43: aastore
     //   44: aload_0
-    //   45: getfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
-    //   48: ldc_w 484
+    //   45: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   48: ldc_w 514
     //   51: aload 5
-    //   53: ldc_w 1134
+    //   53: ldc_w 1236
     //   56: aload 6
     //   58: aconst_null
     //   59: aconst_null
     //   60: aconst_null
-    //   61: invokevirtual 235	android/database/sqlite/SQLiteDatabase:query	(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    //   61: invokevirtual 238	android/database/sqlite/SQLiteDatabase:query	(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     //   64: astore_1
     //   65: aload_1
     //   66: ifnull +251 -> 317
@@ -3287,7 +3846,7 @@ public class AppFolderInfoManager
     //   71: aload_1
     //   72: astore_3
     //   73: aload_1
-    //   74: invokeinterface 241 1 0
+    //   74: invokeinterface 244 1 0
     //   79: ifeq +52 -> 131
     //   82: aload_1
     //   83: astore_2
@@ -3296,20 +3855,20 @@ public class AppFolderInfoManager
     //   86: aload 4
     //   88: aload_1
     //   89: iconst_0
-    //   90: invokeinterface 337 2 0
+    //   90: invokeinterface 340 2 0
     //   95: iconst_1
-    //   96: invokestatic 790	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
-    //   99: invokeinterface 1135 3 0
+    //   96: invokestatic 844	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+    //   99: invokeinterface 1237 3 0
     //   104: pop
     //   105: goto -36 -> 69
     //   108: astore_1
     //   109: aload_2
     //   110: ifnull +9 -> 119
     //   113: aload_2
-    //   114: invokeinterface 248 1 0
+    //   114: invokeinterface 251 1 0
     //   119: aload_0
-    //   120: getfield 169	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
-    //   123: invokeinterface 251 1 0
+    //   120: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   123: invokeinterface 254 1 0
     //   128: aload 4
     //   130: areturn
     //   131: aload_1
@@ -3317,19 +3876,19 @@ public class AppFolderInfoManager
     //   133: aload_1
     //   134: astore_3
     //   135: aload_1
-    //   136: invokeinterface 248 1 0
+    //   136: invokeinterface 251 1 0
     //   141: aconst_null
     //   142: astore_1
     //   143: aload_0
-    //   144: getfield 136	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
-    //   147: ldc_w 329
+    //   144: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   147: ldc_w 332
     //   150: aload 5
-    //   152: ldc_w 1134
+    //   152: ldc_w 1236
     //   155: aload 6
     //   157: aconst_null
     //   158: aconst_null
     //   159: aconst_null
-    //   160: invokevirtual 235	android/database/sqlite/SQLiteDatabase:query	(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    //   160: invokevirtual 238	android/database/sqlite/SQLiteDatabase:query	(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     //   163: astore_2
     //   164: aload_2
     //   165: astore_1
@@ -3342,7 +3901,7 @@ public class AppFolderInfoManager
     //   174: aload_1
     //   175: astore_3
     //   176: aload_1
-    //   177: invokeinterface 241 1 0
+    //   177: invokeinterface 244 1 0
     //   182: ifeq +77 -> 259
     //   185: aload_1
     //   186: astore_2
@@ -3350,7 +3909,7 @@ public class AppFolderInfoManager
     //   188: astore_3
     //   189: aload_1
     //   190: iconst_0
-    //   191: invokeinterface 337 2 0
+    //   191: invokeinterface 340 2 0
     //   196: astore 5
     //   198: aload_1
     //   199: astore_2
@@ -3358,7 +3917,7 @@ public class AppFolderInfoManager
     //   201: astore_3
     //   202: aload 4
     //   204: aload 5
-    //   206: invokeinterface 1138 2 0
+    //   206: invokeinterface 1240 2 0
     //   211: ifne -39 -> 172
     //   214: aload_1
     //   215: astore_2
@@ -3367,8 +3926,8 @@ public class AppFolderInfoManager
     //   218: aload 4
     //   220: aload 5
     //   222: iconst_0
-    //   223: invokestatic 790	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
-    //   226: invokeinterface 1135 3 0
+    //   223: invokestatic 844	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+    //   226: invokeinterface 1237 3 0
     //   231: pop
     //   232: goto -60 -> 172
     //   235: astore_1
@@ -3377,10 +3936,10 @@ public class AppFolderInfoManager
     //   238: aload_2
     //   239: ifnull +9 -> 248
     //   242: aload_2
-    //   243: invokeinterface 248 1 0
+    //   243: invokeinterface 251 1 0
     //   248: aload_0
-    //   249: getfield 169	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
-    //   252: invokeinterface 251 1 0
+    //   249: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   252: invokeinterface 254 1 0
     //   257: aload_1
     //   258: athrow
     //   259: aload_1
@@ -3388,16 +3947,16 @@ public class AppFolderInfoManager
     //   261: aload_1
     //   262: astore_3
     //   263: aload_1
-    //   264: invokeinterface 248 1 0
+    //   264: invokeinterface 251 1 0
     //   269: aconst_null
     //   270: astore_2
     //   271: aload_2
     //   272: ifnull +9 -> 281
     //   275: aload_2
-    //   276: invokeinterface 248 1 0
+    //   276: invokeinterface 251 1 0
     //   281: aload_0
-    //   282: getfield 169	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
-    //   285: invokeinterface 251 1 0
+    //   282: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   285: invokeinterface 254 1 0
     //   290: aload 4
     //   292: areturn
     //   293: astore_1
@@ -3471,34 +4030,34 @@ public class AppFolderInfoManager
     //   2: aconst_null
     //   3: astore_3
     //   4: aload_0
-    //   5: getfield 198	com/estrongs/android/appinfo/AppFolderInfoManager:t	Ljava/lang/Object;
+    //   5: getfield 201	com/estrongs/android/appinfo/AppFolderInfoManager:u	Ljava/lang/Object;
     //   8: astore 4
     //   10: aload 4
     //   12: monitorenter
     //   13: aload_0
-    //   14: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
+    //   14: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
     //   17: ifnonnull +7 -> 24
     //   20: aload_0
-    //   21: invokespecial 602	com/estrongs/android/appinfo/AppFolderInfoManager:f	()V
+    //   21: invokespecial 637	com/estrongs/android/appinfo/AppFolderInfoManager:g	()V
     //   24: aload_0
-    //   25: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
+    //   25: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
     //   28: ifnonnull +8 -> 36
     //   31: aload 4
     //   33: monitorexit
     //   34: aconst_null
     //   35: areturn
     //   36: aload_0
-    //   37: getfield 196	com/estrongs/android/appinfo/AppFolderInfoManager:s	Landroid/database/sqlite/SQLiteDatabase;
-    //   40: ldc_w 719
+    //   37: getfield 199	com/estrongs/android/appinfo/AppFolderInfoManager:t	Landroid/database/sqlite/SQLiteDatabase;
+    //   40: ldc_w 774
     //   43: iconst_1
-    //   44: anewarray 225	java/lang/String
+    //   44: anewarray 228	java/lang/String
     //   47: dup
     //   48: iconst_0
-    //   49: ldc_w 717
+    //   49: ldc_w 772
     //   52: aastore
-    //   53: ldc_w 838
+    //   53: ldc_w 892
     //   56: iconst_1
-    //   57: anewarray 225	java/lang/String
+    //   57: anewarray 228	java/lang/String
     //   60: dup
     //   61: iconst_0
     //   62: aload_1
@@ -3506,7 +4065,7 @@ public class AppFolderInfoManager
     //   64: aconst_null
     //   65: aconst_null
     //   66: aconst_null
-    //   67: invokevirtual 235	android/database/sqlite/SQLiteDatabase:query	(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    //   67: invokevirtual 238	android/database/sqlite/SQLiteDatabase:query	(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     //   70: astore_1
     //   71: aload_1
     //   72: astore_2
@@ -3517,16 +4076,16 @@ public class AppFolderInfoManager
     //   79: aload_3
     //   80: astore_1
     //   81: aload_2
-    //   82: invokeinterface 241 1 0
+    //   82: invokeinterface 244 1 0
     //   87: ifeq +11 -> 98
     //   90: aload_2
     //   91: iconst_0
-    //   92: invokeinterface 337 2 0
+    //   92: invokeinterface 340 2 0
     //   97: astore_1
     //   98: aload_2
     //   99: ifnull +63 -> 162
     //   102: aload_2
-    //   103: invokeinterface 248 1 0
+    //   103: invokeinterface 251 1 0
     //   108: aload 4
     //   110: monitorexit
     //   111: aload_1
@@ -3542,14 +4101,14 @@ public class AppFolderInfoManager
     //   122: aload_2
     //   123: ifnull +34 -> 157
     //   126: aload_2
-    //   127: invokeinterface 248 1 0
+    //   127: invokeinterface 251 1 0
     //   132: aconst_null
     //   133: astore_1
     //   134: goto -26 -> 108
     //   137: aload_2
     //   138: ifnull +9 -> 147
     //   141: aload_2
-    //   142: invokeinterface 248 1 0
+    //   142: invokeinterface 251 1 0
     //   147: aload_1
     //   148: athrow
     //   149: astore_1
@@ -3583,6 +4142,268 @@ public class AppFolderInfoManager
     //   81	98	149	finally
     //   81	98	153	java/lang/Exception
     //   36	71	165	finally
+  }
+  
+  /* Error */
+  public List<o> i(String paramString)
+  {
+    // Byte code:
+    //   0: aload_0
+    //   1: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   4: ifnonnull +7 -> 11
+    //   7: aload_0
+    //   8: invokevirtual 219	com/estrongs/android/appinfo/AppFolderInfoManager:a	()V
+    //   11: new 57	java/util/ArrayList
+    //   14: dup
+    //   15: invokespecial 949	java/util/ArrayList:<init>	()V
+    //   18: astore 4
+    //   20: aload_0
+    //   21: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   24: invokeinterface 224 1 0
+    //   29: iconst_1
+    //   30: anewarray 228	java/lang/String
+    //   33: astore 5
+    //   35: aload 5
+    //   37: iconst_0
+    //   38: ldc_w 353
+    //   41: aastore
+    //   42: iconst_1
+    //   43: anewarray 228	java/lang/String
+    //   46: astore 6
+    //   48: aload 6
+    //   50: iconst_0
+    //   51: aload_1
+    //   52: aastore
+    //   53: aload_0
+    //   54: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   57: ldc_w 514
+    //   60: aload 5
+    //   62: ldc_w 1236
+    //   65: aload 6
+    //   67: aconst_null
+    //   68: aconst_null
+    //   69: aconst_null
+    //   70: invokevirtual 238	android/database/sqlite/SQLiteDatabase:query	(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    //   73: astore_2
+    //   74: aload_2
+    //   75: ifnull +297 -> 372
+    //   78: aload_2
+    //   79: astore_3
+    //   80: aload_2
+    //   81: astore_1
+    //   82: aload_2
+    //   83: invokeinterface 244 1 0
+    //   88: ifeq +83 -> 171
+    //   91: aload_2
+    //   92: astore_3
+    //   93: aload_2
+    //   94: astore_1
+    //   95: new 1248	com/estrongs/android/appinfo/o
+    //   98: dup
+    //   99: aload_0
+    //   100: invokespecial 1249	com/estrongs/android/appinfo/o:<init>	(Lcom/estrongs/android/appinfo/AppFolderInfoManager;)V
+    //   103: astore 7
+    //   105: aload_2
+    //   106: astore_3
+    //   107: aload_2
+    //   108: astore_1
+    //   109: aload 7
+    //   111: aload_2
+    //   112: iconst_0
+    //   113: invokeinterface 340 2 0
+    //   118: putfield 1250	com/estrongs/android/appinfo/o:a	Ljava/lang/String;
+    //   121: aload_2
+    //   122: astore_3
+    //   123: aload_2
+    //   124: astore_1
+    //   125: aload 4
+    //   127: aload 7
+    //   129: invokeinterface 948 2 0
+    //   134: pop
+    //   135: goto -57 -> 78
+    //   138: astore_1
+    //   139: aload_3
+    //   140: astore_2
+    //   141: aload_1
+    //   142: astore_3
+    //   143: aload_2
+    //   144: astore_1
+    //   145: aload_3
+    //   146: invokevirtual 257	java/lang/Exception:printStackTrace	()V
+    //   149: aload_2
+    //   150: ifnull +9 -> 159
+    //   153: aload_2
+    //   154: invokeinterface 251 1 0
+    //   159: aload_0
+    //   160: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   163: invokeinterface 254 1 0
+    //   168: aload 4
+    //   170: areturn
+    //   171: aload_2
+    //   172: astore_3
+    //   173: aload_2
+    //   174: astore_1
+    //   175: aload_2
+    //   176: invokeinterface 251 1 0
+    //   181: aconst_null
+    //   182: astore_1
+    //   183: aload_0
+    //   184: getfield 139	com/estrongs/android/appinfo/AppFolderInfoManager:c	Landroid/database/sqlite/SQLiteDatabase;
+    //   187: ldc_w 332
+    //   190: aload 5
+    //   192: ldc_w 1236
+    //   195: aload 6
+    //   197: aconst_null
+    //   198: aconst_null
+    //   199: aconst_null
+    //   200: invokevirtual 238	android/database/sqlite/SQLiteDatabase:query	(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    //   203: astore_2
+    //   204: aload_2
+    //   205: astore_1
+    //   206: aload_2
+    //   207: ifnull +117 -> 324
+    //   210: aload_2
+    //   211: astore_3
+    //   212: aload_2
+    //   213: astore_1
+    //   214: aload_2
+    //   215: invokeinterface 244 1 0
+    //   220: ifeq +92 -> 312
+    //   223: aload_2
+    //   224: astore_3
+    //   225: aload_2
+    //   226: astore_1
+    //   227: new 1248	com/estrongs/android/appinfo/o
+    //   230: dup
+    //   231: aload_0
+    //   232: invokespecial 1249	com/estrongs/android/appinfo/o:<init>	(Lcom/estrongs/android/appinfo/AppFolderInfoManager;)V
+    //   235: astore 5
+    //   237: aload_2
+    //   238: astore_3
+    //   239: aload_2
+    //   240: astore_1
+    //   241: aload 5
+    //   243: aload_2
+    //   244: iconst_0
+    //   245: invokeinterface 340 2 0
+    //   250: putfield 1250	com/estrongs/android/appinfo/o:a	Ljava/lang/String;
+    //   253: aload_2
+    //   254: astore_3
+    //   255: aload_2
+    //   256: astore_1
+    //   257: aload 4
+    //   259: aload 5
+    //   261: invokeinterface 1253 2 0
+    //   266: ifne -56 -> 210
+    //   269: aload_2
+    //   270: astore_3
+    //   271: aload_2
+    //   272: astore_1
+    //   273: aload 4
+    //   275: aload 5
+    //   277: invokeinterface 948 2 0
+    //   282: pop
+    //   283: goto -73 -> 210
+    //   286: astore_3
+    //   287: aload_1
+    //   288: astore_2
+    //   289: aload_3
+    //   290: astore_1
+    //   291: aload_2
+    //   292: ifnull +9 -> 301
+    //   295: aload_2
+    //   296: invokeinterface 251 1 0
+    //   301: aload_0
+    //   302: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   305: invokeinterface 254 1 0
+    //   310: aload_1
+    //   311: athrow
+    //   312: aload_2
+    //   313: astore_3
+    //   314: aload_2
+    //   315: astore_1
+    //   316: aload_2
+    //   317: invokeinterface 251 1 0
+    //   322: aconst_null
+    //   323: astore_1
+    //   324: aload_1
+    //   325: ifnull +9 -> 334
+    //   328: aload_1
+    //   329: invokeinterface 251 1 0
+    //   334: aload_0
+    //   335: getfield 172	com/estrongs/android/appinfo/AppFolderInfoManager:j	Ljava/util/concurrent/locks/Lock;
+    //   338: invokeinterface 254 1 0
+    //   343: aload 4
+    //   345: areturn
+    //   346: astore_1
+    //   347: aconst_null
+    //   348: astore_2
+    //   349: goto -58 -> 291
+    //   352: astore_3
+    //   353: aload_1
+    //   354: astore_2
+    //   355: aload_3
+    //   356: astore_1
+    //   357: goto -66 -> 291
+    //   360: astore_3
+    //   361: aconst_null
+    //   362: astore_2
+    //   363: goto -220 -> 143
+    //   366: astore_3
+    //   367: aload_1
+    //   368: astore_2
+    //   369: goto -226 -> 143
+    //   372: aload_2
+    //   373: astore_1
+    //   374: goto -191 -> 183
+    // Local variable table:
+    //   start	length	slot	name	signature
+    //   0	377	0	this	AppFolderInfoManager
+    //   0	377	1	paramString	String
+    //   73	300	2	localObject1	Object
+    //   79	192	3	localObject2	Object
+    //   286	4	3	localObject3	Object
+    //   313	1	3	localObject4	Object
+    //   352	4	3	localObject5	Object
+    //   360	1	3	localException1	Exception
+    //   366	1	3	localException2	Exception
+    //   18	326	4	localArrayList	ArrayList
+    //   33	243	5	localObject6	Object
+    //   46	150	6	arrayOfString	String[]
+    //   103	25	7	localo	o
+    // Exception table:
+    //   from	to	target	type
+    //   82	91	138	java/lang/Exception
+    //   95	105	138	java/lang/Exception
+    //   109	121	138	java/lang/Exception
+    //   125	135	138	java/lang/Exception
+    //   175	181	138	java/lang/Exception
+    //   214	223	138	java/lang/Exception
+    //   227	237	138	java/lang/Exception
+    //   241	253	138	java/lang/Exception
+    //   257	269	138	java/lang/Exception
+    //   273	283	138	java/lang/Exception
+    //   316	322	138	java/lang/Exception
+    //   82	91	286	finally
+    //   95	105	286	finally
+    //   109	121	286	finally
+    //   125	135	286	finally
+    //   145	149	286	finally
+    //   175	181	286	finally
+    //   214	223	286	finally
+    //   227	237	286	finally
+    //   241	253	286	finally
+    //   257	269	286	finally
+    //   273	283	286	finally
+    //   316	322	286	finally
+    //   29	35	346	finally
+    //   42	48	346	finally
+    //   53	74	346	finally
+    //   183	204	352	finally
+    //   29	35	360	java/lang/Exception
+    //   42	48	360	java/lang/Exception
+    //   53	74	360	java/lang/Exception
+    //   183	204	366	java/lang/Exception
   }
 }
 

@@ -137,7 +137,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->aI(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->aS(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -150,7 +150,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->aJ(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->aT(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -454,7 +454,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b02ef
+    const v1, 0x7f080315
 
     invoke-static {v0, v1}, Lcom/estrongs/android/pop/utils/a;->a(Landroid/content/Context;I)V
 

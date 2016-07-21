@@ -1,6 +1,6 @@
 package com.estrongs.android.ftp;
 
-import android.util.Log;
+import com.estrongs.android.util.l;
 import java.io.File;
 import java.net.InetAddress;
 import java.net.ServerSocket;
@@ -159,7 +159,7 @@ public class a
     d = true;
     if (m == null)
     {
-      Log.e("Error", "IN Server, stop inst is null");
+      l.e("Error", "IN Server, stop inst is null");
       return;
     }
     m.k();
@@ -200,7 +200,7 @@ public class a
     //   17: ifeq +5 -> 22
     //   20: iconst_0
     //   21: ireturn
-    //   22: invokestatic 172	com/estrongs/android/util/ak:a	()Ljava/lang/String;
+    //   22: invokestatic 172	com/estrongs/android/util/an:a	()Ljava/lang/String;
     //   25: astore_1
     //   26: aload_1
     //   27: ifnull +11 -> 38

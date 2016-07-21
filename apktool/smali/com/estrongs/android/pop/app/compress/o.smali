@@ -44,11 +44,11 @@
 
     move-result v2
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/io/archive/c;->a(Ljava/lang/String;Ljava/lang/String;Z)Lcom/estrongs/io/archive/h;
+    invoke-static {v0, v1, v2}, Lcom/estrongs/io/archive/d;->a(Ljava/lang/String;Ljava/lang/String;Z)Lcom/estrongs/io/archive/i;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/estrongs/io/archive/h;->k()Z
+    invoke-virtual {v1}, Lcom/estrongs/io/archive/i;->k()Z
 
     move-result v0
 
@@ -64,7 +64,7 @@
 
     new-instance v2, Lcom/estrongs/android/pop/app/compress/p;
 
-    invoke-direct {v2, p0, v1}, Lcom/estrongs/android/pop/app/compress/p;-><init>(Lcom/estrongs/android/pop/app/compress/o;Lcom/estrongs/io/archive/h;)V
+    invoke-direct {v2, p0, v1}, Lcom/estrongs/android/pop/app/compress/p;-><init>(Lcom/estrongs/android/pop/app/compress/o;Lcom/estrongs/io/archive/i;)V
 
     invoke-virtual {v0, v2}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 

@@ -1,69 +1,81 @@
-.class Landroid/support/v4/widget/g;
+.class public final Landroid/support/v4/widget/g;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/support/v4/widget/i;
+
+# static fields
+.field private static final a:Landroid/support/v4/widget/j;
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
+    const/16 v1, 0x17
+
+    if-lt v0, v1, :cond_0
+
+    new-instance v0, Landroid/support/v4/widget/h;
+
+    invoke-direct {v0}, Landroid/support/v4/widget/h;-><init>()V
+
+    sput-object v0, Landroid/support/v4/widget/g;->a:Landroid/support/v4/widget/j;
+
+    :goto_0
     return-void
+
+    :cond_0
+    const/16 v1, 0x15
+
+    if-lt v0, v1, :cond_1
+
+    new-instance v0, Landroid/support/v4/widget/k;
+
+    invoke-direct {v0}, Landroid/support/v4/widget/k;-><init>()V
+
+    sput-object v0, Landroid/support/v4/widget/g;->a:Landroid/support/v4/widget/j;
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v0, Landroid/support/v4/widget/i;
+
+    invoke-direct {v0}, Landroid/support/v4/widget/i;-><init>()V
+
+    sput-object v0, Landroid/support/v4/widget/g;->a:Landroid/support/v4/widget/j;
+
+    goto :goto_0
 .end method
 
-
-# virtual methods
-.method public a(Landroid/content/Context;)Ljava/lang/Object;
+.method public static a(Landroid/widget/CompoundButton;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    const/4 v0, 0x0
+    sget-object v0, Landroid/support/v4/widget/g;->a:Landroid/support/v4/widget/j;
+
+    invoke-interface {v0, p0}, Landroid/support/v4/widget/j;->a(Landroid/widget/CompoundButton;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public a(Ljava/lang/Object;II)V
-    .locals 0
+.method public static a(Landroid/widget/CompoundButton;Landroid/content/res/ColorStateList;)V
+    .locals 1
+
+    sget-object v0, Landroid/support/v4/widget/g;->a:Landroid/support/v4/widget/j;
+
+    invoke-interface {v0, p0, p1}, Landroid/support/v4/widget/j;->a(Landroid/widget/CompoundButton;Landroid/content/res/ColorStateList;)V
 
     return-void
 .end method
 
-.method public a(Ljava/lang/Object;)Z
+.method public static a(Landroid/widget/CompoundButton;Landroid/graphics/PorterDuff$Mode;)V
     .locals 1
 
-    const/4 v0, 0x1
+    sget-object v0, Landroid/support/v4/widget/g;->a:Landroid/support/v4/widget/j;
 
-    return v0
-.end method
-
-.method public a(Ljava/lang/Object;F)Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public a(Ljava/lang/Object;Landroid/graphics/Canvas;)Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public b(Ljava/lang/Object;)V
-    .locals 0
+    invoke-interface {v0, p0, p1}, Landroid/support/v4/widget/j;->a(Landroid/widget/CompoundButton;Landroid/graphics/PorterDuff$Mode;)V
 
     return-void
-.end method
-
-.method public c(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
 .end method

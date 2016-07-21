@@ -1,17 +1,18 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.os.Handler;
+import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
 
 class hi
-  implements DialogInterface.OnClickListener
+  implements Preference.OnPreferenceChangeListener
 {
   hi(PopPreferenceActivity paramPopPreferenceActivity) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
   {
-    PopPreferenceActivity.e(a);
-    paramDialogInterface.dismiss();
+    PopPreferenceActivity.b(a).post(new hj(this));
+    return true;
   }
 }
 

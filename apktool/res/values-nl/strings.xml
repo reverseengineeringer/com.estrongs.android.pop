@@ -1,13 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_select">Selecteren</string>
-    <string name="app_name">ES File Explorer</string>
-    <string name="app_media_player">ES Media Player</string>
-    <string name="app_note_editor">ES Kladblok</string>
-    <string name="app_image_browser">ES Fotoviewer</string>
-    <string name="app_zip_viewer">ES Zip viewer</string>
     <string name="app_downloader">ES Downloader</string>
-    <string name="select_device_to_share">Selecteer een apparaat om naartoe te sturen</string>
+    <string name="app_image_browser">ES Fotoviewer</string>
+    <string name="app_media_player">ES Media Player</string>
+    <string name="app_name">ES File Explorer</string>
+    <string name="app_note_editor">ES Kladblok</string>
+    <string name="app_zip_viewer">ES Zip viewer</string>
+    <string name="battery_info_remaining_charging_time">"Resterende oplaadtijd: "</string>
+    <string name="battery_info_remaining_discharging_time">"Resterende tijd: "</string>
+    <string name="charging_screen_ad_delete">Verwijderen</string>
+    <string name="charging_screen_ad_enter">Openen</string>
+    <string name="charging_screen_charging_complete">Opladen voltooid</string>
+    <string name="charging_screen_slide_to_enter">Schuif om te ontgrendelen</string>
+    <string name="duscenerysdk_ad_no_browser_play">Geen browser of geen Google Play geïnstalleerd</string>
     <string name="es_share_name_activity">versturen via LAN</string>
+    <string name="lock_screen_setting">Instellingen</string>
+    <string name="lock_screen_switch">Slim opladen</string>
     <string name="save_to_es">ES Opslaan als…</string>
+    <string name="scenery_card_antivirus_button">BEVEILIGINGSSCAN</string>
+    <string name="scenery_card_antivirus_content">"Uw telefoon bevat &lt;font color=#3080F0>%1$s&lt;/font> beveiligingsrisico('s)"</string>
+    <string name="scenery_card_antivirus_title">Beveiligingsrisico</string>
+    <string name="scenery_card_battery_button">ENERGIE BESPAREN</string>
+    <string name="scenery_card_battery_content">&lt;font color=#3080F0>%1$s&lt;/font> energie verbruikende app(s) gevonden. Gebruik DU Battery Saver om energie te besparen en stand-by te verlengen &lt;font color=#3080F0>%2$s u %3$s m&lt;/font></string>
+    <string name="scenery_card_battery_title">Energieverbruik</string>
+    <string name="scenery_card_booster_button">NU BOOSTEN</string>
+    <string name="scenery_card_booster_content">&lt;font color=#3080F0>%1$s&lt;/font> hardnekkige apps maken uw telefoon trager</string>
+    <string name="scenery_card_booster_title">Wordt traag</string>
+    <string name="scenery_card_cleaner_button">NU AANPAKKEN</string>
+    <string name="scenery_card_cleaner_content">Rommel gevonden &lt;font color=#3080F0>%1$s&lt;/font> op uw telefoon</string>
+    <string name="scenery_card_cleaner_title">Snel opschonen</string>
+    <string name="scenery_card_es_button">NU OPSCHONEN</string>
+    <string name="scenery_card_es_content">Resterende vrije interne ruimte verminderd met &lt;font color=#3080F0>%1$s&lt;/font></string>
+    <string name="scenery_card_es_title">Schijfopruiming</string>
+    <string name="scenery_card_photowonder_button">NU RETOUCHEREN</string>
+    <string name="scenery_card_photowonder_content">"U heeft &lt;font color=#3080F0>%1$s&lt;/font> foto's die u er mooier kunt laten uitzien!"</string>
+    <string name="scenery_card_photowonder_title">Retoucheren</string>
+    <string name="scenery_charge_dialog_button_text">DOWNLOADEN</string>
+    <string name="scenery_charge_dialog_content">Meer dan %1$d min. opladen &lt;font color=#FF8132>is slecht voor de accu&lt;/font>. Bescherm hem met &lt;b>DU Battery Saver&lt;/b>.</string>
+    <string name="scenery_charge_dialog_title">Oplaadtips</string>
+    <string name="scenery_disk_usage_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_disk_usage_dialog_content">De opslagruimte van uw telefoon is afgenomen met &lt;font color=#FF8132>%1$s MB&lt;/font> in de afgelopen &lt;font color=#FF8132>%2$s dag(en)&lt;/font> .</string>
+    <string name="scenery_disk_usage_dialog_title">Schijfopruiming</string>
+    <string name="scenery_take_photo_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_take_photo_dialog_content">"Zijn uw foto's niet mooi genoeg? &lt;font color=#2274E6>Cinematic Filters&lt;/font> van &lt;b>PhotoWonder&lt;/b> kunnen u helpen!"</string>
+    <string name="scenery_take_photo_dialog_title">Fotoretouchering</string>
+    <string name="scenery_uninstall_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_uninstall_dialog_content">%1$s heeft enkele &lt;font color=#FF8132>bestanden&lt;/font> achtergelaten. Verwijder ze met &lt;b>DU Speed Booster&lt;/b>!</string>
+    <string name="scenery_uninstall_dialog_title">Restbestanden gevonden</string>
+    <string name="screen_lock_charging_boosted_time">Opladen versneld: %1$d minuten</string>
+    <string name="select_device_to_share">Selecteer een apparaat om naartoe te sturen</string>
 </resources>

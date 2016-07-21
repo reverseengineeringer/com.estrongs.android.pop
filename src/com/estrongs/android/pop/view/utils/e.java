@@ -1,15 +1,15 @@
 package com.estrongs.android.pop.view.utils;
 
 import android.app.Activity;
-import com.estrongs.android.ui.dialog.ix;
-import com.estrongs.android.util.am;
+import com.estrongs.android.ui.dialog.jh;
+import com.estrongs.android.util.ap;
 import com.estrongs.fs.h;
 import java.io.File;
 import java.text.MessageFormat;
 import java.util.Map;
 
 class e
-  extends ix
+  extends jh
 {
   e(d paramd, Activity paramActivity, String paramString1, com.estrongs.a.a parama, RemoteSynchronizer.RemoteFile paramRemoteFile, String paramString2)
   {
@@ -23,14 +23,14 @@ class e
   
   protected String b()
   {
-    return MessageFormat.format(c.c.c.getString(2131427852), new Object[] { c.b.getName() });
+    return MessageFormat.format(c.c.c.getString(2131231105), new Object[] { c.b.getName() });
   }
   
   protected void b(com.estrongs.a.a parama)
   {
     if ((c.c.e) && (c.a))
     {
-      RemoteSynchronizer.a(am.bk(c.c.d));
+      RemoteSynchronizer.a(ap.bB(c.c.d));
       if (a == null) {
         break label211;
       }
@@ -61,7 +61,7 @@ class e
   
   protected void c(com.estrongs.a.a parama)
   {
-    com.estrongs.android.pop.utils.a.a(c.c.c, MessageFormat.format(c.c.c.getString(2131427853), new Object[] { c.b.getName() }));
+    com.estrongs.android.pop.utils.a.a(c.c.c, MessageFormat.format(c.c.c.getString(2131231463), new Object[] { c.b.getName() }));
   }
 }
 

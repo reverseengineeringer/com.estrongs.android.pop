@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Lcom/estrongs/android/pop/h;
+.field final synthetic a:Lcom/estrongs/android/pop/k;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/h;Ljava/lang/String;)V
+.method constructor <init>(Lcom/estrongs/android/pop/k;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/l;->b:Lcom/estrongs/android/pop/h;
-
-    iput-object p2, p0, Lcom/estrongs/android/pop/l;->a:Ljava/lang/String;
+    iput-object p1, p0, Lcom/estrongs/android/pop/l;->a:Lcom/estrongs/android/pop/k;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,61 +22,36 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 5
+.method public run()V
+    .locals 3
 
-    new-instance v0, Landroid/content/Intent;
+    new-instance v1, Lcom/estrongs/android/util/TypedMap;
 
-    const-string v1, "android.intent.action.SEND"
+    invoke-direct {v1}, Lcom/estrongs/android/util/TypedMap;-><init>()V
 
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    const-string v1, "android.intent.extra.EMAIL"
+    const-string v0, "refresh"
 
     const/4 v2, 0x1
 
-    new-array v2, v2, [Ljava/lang/String;
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    const/4 v3, 0x0
+    move-result-object v2
 
-    const-string v4, "contact@estrongs.com"
+    invoke-virtual {v1, v0, v2}, Lcom/estrongs/android/util/TypedMap;->put(Ljava/lang/String;Ljava/lang/Object;)Lcom/estrongs/android/util/TypedMap;
 
-    aput-object v4, v2, v3
+    iget-object v0, p0, Lcom/estrongs/android/pop/l;->a:Lcom/estrongs/android/pop/k;
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
+    iget-object v0, v0, Lcom/estrongs/android/pop/k;->b:Lcom/estrongs/android/pop/i;
 
-    const-string v1, "android.intent.extra.SUBJECT"
+    iget-object v0, v0, Lcom/estrongs/android/pop/i;->a:Landroid/app/Activity;
 
-    const-string v2, "Bug report - Net Access"
+    check-cast v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    iget-object v2, p0, Lcom/estrongs/android/pop/l;->a:Lcom/estrongs/android/pop/k;
 
-    const-string v1, "android.intent.extra.TEXT"
+    iget-object v2, v2, Lcom/estrongs/android/pop/k;->a:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/l;->a:Ljava/lang/String;
+    invoke-virtual {v0, v2, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->c(Ljava/lang/String;Lcom/estrongs/android/util/TypedMap;)Lcom/estrongs/android/view/cr;
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    const-string v1, "message/rfc822"
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
-
-    :try_start_0
-    iget-object v1, p0, Lcom/estrongs/android/pop/l;->b:Lcom/estrongs/android/pop/h;
-
-    iget-object v1, v1, Lcom/estrongs/android/pop/h;->a:Landroid/app/Activity;
-
-    invoke-virtual {v1, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
     return-void
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-
-    goto :goto_0
 .end method

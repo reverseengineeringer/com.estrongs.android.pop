@@ -1,18 +1,17 @@
 package com.estrongs.android.pop.app;
 
-import com.estrongs.android.ui.d.d;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 
 class et
-  extends d
+  implements MenuItem.OnMenuItemClickListener
 {
-  et(eq parameq, String paramString)
-  {
-    super(paramString);
-  }
+  et(PopAudioPlayer paramPopAudioPlayer) {}
   
-  public int a()
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    return 21;
+    a.w();
+    return false;
   }
 }
 

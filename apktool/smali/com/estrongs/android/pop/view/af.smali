@@ -23,13 +23,22 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
 
+    :try_start_0
     iget-object v0, p0, Lcom/estrongs/android/pop/view/af;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    const/4 v1, 0x1
+    iget-object v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->A:Lcom/estrongs/android/ui/guesture/ESGesturePanel;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e(I)V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/guesture/ESGesturePanel;->c()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    :goto_0
     return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
 .end method

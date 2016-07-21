@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/estrongs/android/pop/app/a/a/d;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/c/a;
+.field final synthetic a:I
+
+.field final synthetic b:Lcom/estrongs/android/ui/c/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/c/a;)V
+.method constructor <init>(Lcom/estrongs/android/ui/c/a;I)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/c/d;->a:Lcom/estrongs/android/ui/c/a;
+    iput-object p1, p0, Lcom/estrongs/android/ui/c/d;->b:Lcom/estrongs/android/ui/c/a;
+
+    iput p2, p0, Lcom/estrongs/android/ui/c/d;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,40 +26,30 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public a()V
+    .locals 2
 
-    const/4 v2, 0x1
+    iget v0, p0, Lcom/estrongs/android/ui/c/d;->a:I
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/c/d;->a:Lcom/estrongs/android/ui/c/a;
+    const/4 v1, -0x1
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/c/a;->c(Lcom/estrongs/android/ui/c/a;)Lcom/estrongs/android/ui/c/b/f;
+    if-eq v0, v1, :cond_0
 
-    move-result-object v0
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/d;->b:Lcom/estrongs/android/ui/c/a;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/c/b/f;->m()V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/c/d;->a:Lcom/estrongs/android/ui/c/a;
-
-    invoke-static {v0, v2}, Lcom/estrongs/android/ui/c/a;->a(Lcom/estrongs/android/ui/c/a;Z)Z
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/c/d;->a:Lcom/estrongs/android/ui/c/a;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/c/a;->d(Lcom/estrongs/android/ui/c/a;)Lcom/estrongs/android/view/cb;
+    invoke-static {v0}, Lcom/estrongs/android/ui/c/a;->b(Lcom/estrongs/android/ui/c/a;)Ljava/util/List;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    iget v1, p0, Lcom/estrongs/android/ui/c/d;->a:I
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/c/d;->a:Lcom/estrongs/android/ui/c/a;
+    invoke-interface {v0, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/c/a;->e(Lcom/estrongs/android/ui/c/a;)Lcom/estrongs/android/view/cb;
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/d;->b:Lcom/estrongs/android/ui/c/a;
 
-    move-result-object v0
+    iget v1, p0, Lcom/estrongs/android/ui/c/d;->a:I
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/c/d;->a:Lcom/estrongs/android/ui/c/a;
-
-    invoke-interface {v0, v1, v2}, Lcom/estrongs/android/view/cb;->a(Lcom/estrongs/android/view/aw;Z)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/c/a;->notifyItemRemoved(I)V
 
     :cond_0
     return-void

@@ -1,20 +1,16 @@
 package com.estrongs.android.pop.app;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.pop.ad;
-import java.util.List;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnDismissListener;
 
 class al
-  implements View.OnClickListener
+  implements DialogInterface.OnDismissListener
 {
-  al(DocumentExtModifyList paramDocumentExtModifyList) {}
+  al(DefaultWindowSetting paramDefaultWindowSetting) {}
   
-  public void onClick(View paramView)
+  public void onDismiss(DialogInterface paramDialogInterface)
   {
-    ad.a(a).aQ();
-    DocumentExtModifyList.a(a).a().clear();
-    DocumentExtModifyList.a(a).notifyDataSetChanged();
+    DefaultWindowSetting.d(a);
   }
 }
 

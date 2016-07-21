@@ -1,33 +1,26 @@
 package com.estrongs.android.ui.e;
 
-import android.content.DialogInterface.OnClickListener;
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.app.PopAudioPlayer;
-import com.estrongs.android.pop.app.a.ak;
-import com.estrongs.android.ui.dialog.ct;
-import java.util.List;
+import com.estrongs.android.pop.ad;
+import com.estrongs.android.view.a.b;
+import com.estrongs.fs.impl.adb.c;
+import java.util.ArrayList;
 
 class hu
-  implements MenuItem.OnMenuItemClickListener
+  implements b
 {
-  hu(hl paramhl) {}
+  hu(cr paramcr) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public boolean a(cp paramcp)
   {
-    paramMenuItem = hl.a(a).v();
-    if (paramMenuItem.size() > 0)
+    if ((Q) && (!E) && (c.b()))
     {
-      Object localObject = (ak)paramMenuItem.get(0);
-      paramMenuItem = hl.a(a).getString(2131427939);
-      String str1 = hl.a(a).getString(2131427941);
-      String str2 = hl.a(a).getString(2131427940);
-      ct localct = new ct(hl.a(a)).a(2131427939);
-      localObject = new hv(this, (ak)localObject);
-      localct.a(new String[] { paramMenuItem, str1, str2 }, -1, (DialogInterface.OnClickListener)localObject).d(false).c();
+      paramcp = new ArrayList();
+      ad.a(cr.b(a)).e(paramcp);
+      if (!paramcp.isEmpty()) {
+        return true;
+      }
     }
-    hl.a(a).u();
-    return true;
+    return false;
   }
 }
 

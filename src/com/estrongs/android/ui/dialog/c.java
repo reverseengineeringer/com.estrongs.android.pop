@@ -4,7 +4,7 @@ import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import com.estrongs.android.pop.utils.w;
-import com.estrongs.android.ui.view.ag;
+import com.estrongs.android.ui.view.ak;
 
 class c
   implements DialogInterface.OnClickListener
@@ -21,7 +21,7 @@ class c
       return;
     }
     catch (ActivityNotFoundException paramDialogInterface) {}
-    ag.a(a.a(a), 2131427766, 0);
+    ak.a(a.a(a), 2131231901, 0);
     return;
   }
 }

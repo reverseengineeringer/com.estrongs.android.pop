@@ -1,20 +1,32 @@
 package com.estrongs.android.ui.dialog;
 
+import android.app.Dialog;
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.estrongs.fs.impl.local.l;
-import com.estrongs.fs.impl.local.q;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.util.ap;
 
 class ii
   implements View.OnClickListener
 {
-  ii(hn paramhn) {}
+  ii(hq paramhq) {}
   
   public void onClick(View paramView)
   {
-    paramView = l.j();
-    String str = l.a(a.h.c);
-    hn.a(a, paramView, hn.a(a, paramView, str));
+    try
+    {
+      if (a.j != null) {
+        a.j.dismiss();
+      }
+      paramView = FileExplorerActivity.X();
+      if (paramView != null)
+      {
+        paramView.B();
+        paramView.g(ap.bB(hq.a(a)));
+      }
+      return;
+    }
+    catch (Exception paramView) {}
   }
 }
 

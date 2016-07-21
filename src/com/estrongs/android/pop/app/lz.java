@@ -1,25 +1,16 @@
 package com.estrongs.android.pop.app;
 
-import android.os.Handler;
-import java.io.IOException;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnDismissListener;
 
 class lz
-  implements Runnable
+  implements DialogInterface.OnDismissListener
 {
-  lz(StreamingMediaPlayer paramStreamingMediaPlayer, String paramString) {}
+  lz(ShowDialogActivity paramShowDialogActivity) {}
   
-  public void run()
+  public void onDismiss(DialogInterface paramDialogInterface)
   {
-    try
-    {
-      StreamingMediaPlayer.i(b).post(new ma(this));
-      b.a(a);
-      return;
-    }
-    catch (IOException localIOException)
-    {
-      StreamingMediaPlayer.i(b).post(new mb(this));
-    }
+    a.finish();
   }
 }
 

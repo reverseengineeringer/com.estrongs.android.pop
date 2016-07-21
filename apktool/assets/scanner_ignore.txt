@@ -1,0 +1,9 @@
+[es-path-list]
+
+[es-filename-list]
+.thumbnails
+.estrongs
+
+[es-extension-list]
+.db
+.db-journal

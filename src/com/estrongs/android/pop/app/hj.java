@@ -1,16 +1,16 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.util.bm;
 
 class hj
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
-  hj(PopPreferenceActivity paramPopPreferenceActivity) {}
+  hj(hi paramhi) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void run()
   {
-    paramDialogInterface.dismiss();
+    bm.c().h();
+    bm.c().i();
   }
 }
 

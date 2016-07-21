@@ -1,22 +1,31 @@
 package com.estrongs.fs.b;
 
-import com.estrongs.a.a;
-import com.estrongs.a.a.p;
-import com.estrongs.android.util.ak;
+import java.net.Socket;
 
-final class bn
-  implements p
+public class bn
 {
-  public void a(a parama, int paramInt1, int paramInt2)
+  public String a = null;
+  public int b;
+  public int c;
+  public int d;
+  public long e;
+  public String f;
+  public String g;
+  public String h;
+  public String i;
+  public Socket j;
+  public boolean k;
+  public byte[] l;
+  public int m;
+  public int n;
+  
+  public bn(String paramString1, String paramString2, String paramString3, Socket paramSocket, long paramLong)
   {
-    parama = ((bm)parama).a();
-    if ((paramInt1 == 1) && (paramInt2 == 2) && (parama != null)) {
-      ak.a(parama, true);
-    }
-    while ((paramInt1 != 2) || ((paramInt2 != 4) && (paramInt2 != 5)) || (parama == null)) {
-      return;
-    }
-    ak.a(parama, false);
+    f = paramString1;
+    h = paramString2;
+    j = paramSocket;
+    i = paramString3;
+    e = paramLong;
   }
 }
 

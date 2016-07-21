@@ -1,108 +1,169 @@
-.class public abstract Lcom/estrongs/android/util/s;
+.class public Lcom/estrongs/android/util/s;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Ljava/util/Comparator;
 
+# static fields
+.field public static final a:Lcom/estrongs/android/util/v;
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
-        "<",
-        "Ljava/io/File;",
-        ">;"
-    }
-.end annotation
+.field public static final b:Lcom/estrongs/android/util/w;
 
-
-# instance fields
-.field private a:Z
+.field public static final c:Ljava/util/Comparator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Comparator",
+            "<",
+            "Ljava/io/File;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lcom/estrongs/android/util/v;
 
-    const/4 v0, 0x1
+    invoke-direct {v0}, Lcom/estrongs/android/util/v;-><init>()V
 
-    iput-boolean v0, p0, Lcom/estrongs/android/util/s;->a:Z
+    sput-object v0, Lcom/estrongs/android/util/s;->a:Lcom/estrongs/android/util/v;
+
+    new-instance v0, Lcom/estrongs/android/util/w;
+
+    invoke-direct {v0}, Lcom/estrongs/android/util/w;-><init>()V
+
+    sput-object v0, Lcom/estrongs/android/util/s;->b:Lcom/estrongs/android/util/w;
+
+    new-instance v0, Lcom/estrongs/android/util/t;
+
+    invoke-direct {v0}, Lcom/estrongs/android/util/t;-><init>()V
+
+    sput-object v0, Lcom/estrongs/android/util/s;->c:Ljava/util/Comparator;
 
     return-void
 .end method
 
+.method static synthetic a(Ljava/lang/String;Z)Ljava/lang/String;
+    .locals 1
 
-# virtual methods
-.method public a(Ljava/io/File;Ljava/io/File;)I
-    .locals 3
-
-    invoke-virtual {p0, p1}, Lcom/estrongs/android/util/s;->a(Ljava/io/File;)Ljava/lang/String;
+    invoke-static {p0, p1}, Lcom/estrongs/android/util/s;->b(Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Ljava/io/File;->isDirectory()Z
+    return-object v0
+.end method
 
-    move-result v1
+.method static synthetic a(Ljava/lang/String;ZZ)Ljava/lang/String;
+    .locals 1
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/util/q;->a(Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {p0, p1, p2}, Lcom/estrongs/android/util/s;->b(Ljava/lang/String;ZZ)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, p2}, Lcom/estrongs/android/util/s;->a(Ljava/io/File;)Ljava/lang/String;
+    return-object v0
+.end method
+
+.method private static b(Ljava/lang/String;Z)Ljava/lang/String;
+    .locals 2
+
+    if-eqz p1, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "0"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {p2}, Ljava/io/File;->isDirectory()Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v2
+    move-result-object v0
 
-    invoke-static {v1, v2}, Lcom/estrongs/android/util/q;->a(Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
-
-    iget-boolean v2, p0, Lcom/estrongs/android/util/s;->a:Z
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
-
-    move-result v0
+    move-result-object v0
 
     :goto_0
-    return v0
+    return-object v0
 
     :cond_0
-    invoke-virtual {v1, v0}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result v0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "1"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     goto :goto_0
 .end method
 
-.method protected abstract a(Ljava/io/File;)Ljava/lang/String;
-.end method
+.method private static b(Ljava/lang/String;ZZ)Ljava/lang/String;
+    .locals 2
 
-.method public a(Z)V
-    .locals 0
+    if-eqz p1, :cond_0
 
-    iput-boolean p1, p0, Lcom/estrongs/android/util/s;->a:Z
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 1
+    const-string v1, "0"
 
-    check-cast p1, Ljava/io/File;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast p2, Ljava/io/File;
+    move-result-object v0
 
-    invoke-virtual {p0, p1, p2}, Lcom/estrongs/android/util/s;->a(Ljava/io/File;Ljava/io/File;)I
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v0
+    move-result-object v0
 
-    return v0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "1"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method

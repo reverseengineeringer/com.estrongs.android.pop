@@ -1,27 +1,27 @@
 package com.estrongs.android.ui.theme;
 
+import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.ui.view.ColorPickerView;
+import android.view.View.OnTouchListener;
 
 class w
-  implements View.OnClickListener
+  implements View.OnTouchListener
 {
-  w(ThemeColorActivity paramThemeColorActivity) {}
+  w(ThemeActivity paramThemeActivity, int paramInt) {}
   
-  public void onClick(View paramView)
+  public boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    int i = 0;
-    if (ThemeColorActivity.c(a) == 1) {
-      i = ThemeColorActivity.a(a, 2131230763);
+    switch (paramMotionEvent.getAction())
+    {
     }
     for (;;)
     {
-      ThemeColorActivity.b(a).a(i);
-      return;
-      if (ThemeColorActivity.c(a) == 2) {
-        i = ThemeColorActivity.a(a, 2131230724);
-      }
+      return false;
+      paramView.setBackgroundResource(2130838089);
+      paramView.setPadding(a * 2, a, a * 2, a);
+      continue;
+      paramView.setBackgroundResource(2130838511);
+      paramView.setPadding(a * 2, a, a * 2, a);
     }
   }
 }

@@ -1,20 +1,17 @@
 package com.estrongs.android.widget;
 
-import com.estrongs.android.ui.dialog.VerifyPasswordDialog;
-import com.estrongs.android.ui.dialog.VerifyPasswordDialog.DialogType;
-import com.estrongs.fs.h;
+import com.estrongs.android.ui.dialog.lc;
 
 class s
-  implements Runnable
+  implements lc
 {
-  s(r paramr, h paramh) {}
+  s(r paramr) {}
   
-  public void run()
+  public void a(boolean paramBoolean)
   {
-    VerifyPasswordDialog localVerifyPasswordDialog = VerifyPasswordDialog.a(g.d(b.b), VerifyPasswordDialog.DialogType.NETWORK);
-    localVerifyPasswordDialog.a(new t(this));
-    localVerifyPasswordDialog.a(new u(this));
-    localVerifyPasswordDialog.b();
+    if (paramBoolean) {
+      q.a(a.b, a.a);
+    }
   }
 }
 

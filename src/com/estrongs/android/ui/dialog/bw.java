@@ -1,49 +1,39 @@
 package com.estrongs.android.ui.dialog;
 
 import android.view.View;
+import android.view.View.OnClickListener;
 import com.estrongs.android.appinfo.AppFolderInfoManager.RemnantFolder;
-import com.estrongs.fs.b.am;
-import com.estrongs.fs.h;
-import com.estrongs.fs.impl.local.f;
-import java.io.File;
 import java.util.ArrayList;
+import java.util.Set;
 
 class bw
-  implements Runnable
+  implements View.OnClickListener
 {
-  bw(bv parambv, View paramView) {}
+  bw(bv parambv) {}
   
-  public void run()
+  public void onClick(View paramView)
   {
-    bx localbx = (bx)a.getTag();
-    AppFolderInfoManager.RemnantFolder localRemnantFolder;
-    if ((localbx != null) && (e >= 0) && (e < b.a.a.i.size()))
+    paramView = (bz)paramView.getTag();
+    if (paramView == null) {}
+    bu localbu;
+    do
     {
-      localObject1 = (bs)b.a.a.i.get(e);
-      if ((f >= 0) && (f < c.size()))
+      do
       {
-        localRemnantFolder = (AppFolderInfoManager.RemnantFolder)c.get(f);
-        if (localRemnantFolder != null) {
-          break label118;
-        }
-      }
+        return;
+      } while ((e < 0) || (e >= a.a.i.size()));
+      localbu = (bu)a.a.i.get(e);
+    } while ((f < 0) || (f >= c.size()));
+    paramView = c.get(f)).a;
+    if (!a.a.b.contains(paramView)) {
+      a.a.b.add(paramView);
     }
-    return;
-    label118:
-    Object localObject1 = new f(new File(a));
-    hc localhc = new hc(b.a.a.a, (h)localObject1, true);
-    try
+    for (;;)
     {
-      am localam = (am)localRemnantFolder.a();
-      localObject1 = localam;
-      if (localam == null) {
-        localObject1 = bj.a(b.a.a, f, false);
-      }
-      localhc.a((am)localObject1);
-      localhc.a();
+      a.notifyDataSetChanged();
       return;
+      a.a.b.remove(paramView);
     }
-    finally {}
   }
 }
 

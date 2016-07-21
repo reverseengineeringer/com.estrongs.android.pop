@@ -1,5 +1,5 @@
 .class public Lcom/estrongs/android/ui/preference/fragments/BackupPreferenceFragment;
-.super Lcom/estrongs/android/pop/esclasses/i;
+.super Lcom/estrongs/android/pop/esclasses/m;
 
 
 # annotations
@@ -15,14 +15,30 @@
 
 .field private b:Landroid/preference/Preference;
 
+.field private c:Landroid/os/Handler;
+
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/i;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/m;-><init>()V
+
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/BackupPreferenceFragment;->c:Landroid/os/Handler;
 
     return-void
+.end method
+
+.method static synthetic a(Lcom/estrongs/android/ui/preference/fragments/BackupPreferenceFragment;)Landroid/os/Handler;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/BackupPreferenceFragment;->c:Landroid/os/Handler;
+
+    return-object v0
 .end method
 
 .method private a()V
@@ -38,9 +54,9 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/BackupPreferenceFragment;->a:Landroid/preference/Preference;
 
-    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/d;
+    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/e;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/d;-><init>(Lcom/estrongs/android/ui/preference/fragments/BackupPreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/e;-><init>(Lcom/estrongs/android/ui/preference/fragments/BackupPreferenceFragment;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
@@ -54,9 +70,9 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/BackupPreferenceFragment;->b:Landroid/preference/Preference;
 
-    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/k;
+    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/l;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/k;-><init>(Lcom/estrongs/android/ui/preference/fragments/BackupPreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/l;-><init>(Lcom/estrongs/android/ui/preference/fragments/BackupPreferenceFragment;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
@@ -70,9 +86,9 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/r;
+    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/t;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/r;-><init>(Lcom/estrongs/android/ui/preference/fragments/BackupPreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/t;-><init>(Lcom/estrongs/android/ui/preference/fragments/BackupPreferenceFragment;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -85,7 +101,7 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 1
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/i;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/m;->onCreate(Landroid/os/Bundle;)V
 
     const v0, 0x7f050009
 

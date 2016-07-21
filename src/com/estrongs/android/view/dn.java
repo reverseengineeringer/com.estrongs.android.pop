@@ -1,57 +1,15 @@
 package com.estrongs.android.view;
 
-import com.estrongs.android.ftp.a;
-import com.estrongs.android.ftp.k;
-import com.estrongs.android.ftp.m;
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.util.ak;
-import java.net.InetAddress;
+import com.estrongs.android.ui.pcs.a;
 
 class dn
-  implements m
+  implements Runnable
 {
-  dn(dj paramdj, k paramk) {}
+  dn(cr paramcr) {}
   
-  public void a()
+  public void run()
   {
-    int j = 0;
-    try
-    {
-      a locala = a.b();
-      int i = j;
-      if (locala != null)
-      {
-        i = j;
-        if (locala.i())
-        {
-          j = ad.a(b.ad).V();
-          i = 1;
-          if (!dj.b(b)) {
-            break label146;
-          }
-          dj.a(b, b.l(2131428291), "ftp:/" + locala.g().toString() + ":" + j + "/");
-        }
-      }
-      for (;;)
-      {
-        a.b(b.ad);
-        if (ak.a() != null) {
-          break;
-        }
-        if (i != 0) {
-          dj.a(b, false);
-        }
-        dj.e(b);
-        return;
-        label146:
-        dj.a(b, dj.c(b), "ftp:/" + locala.g().toString() + ":" + j + "/");
-      }
-      return;
-    }
-    catch (Exception localException)
-    {
-      localException.printStackTrace();
-    }
+    a.a(a.c());
   }
 }
 

@@ -1,19 +1,31 @@
-.class Lcom/estrongs/android/pop/utils/br;
+.class final Lcom/estrongs/android/pop/utils/br;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Lcom/estrongs/android/ui/pcs/q;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/utils/bn;
+.field final synthetic a:Landroid/app/Activity;
+
+.field final synthetic b:Ljava/util/List;
+
+.field final synthetic c:Lcom/estrongs/fs/h;
+
+.field final synthetic d:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/utils/bn;)V
+.method constructor <init>(Landroid/app/Activity;Ljava/util/List;Lcom/estrongs/fs/h;Z)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/utils/br;->a:Lcom/estrongs/android/pop/utils/bn;
+    iput-object p1, p0, Lcom/estrongs/android/pop/utils/br;->a:Landroid/app/Activity;
+
+    iput-object p2, p0, Lcom/estrongs/android/pop/utils/br;->b:Ljava/util/List;
+
+    iput-object p3, p0, Lcom/estrongs/android/pop/utils/br;->c:Lcom/estrongs/fs/h;
+
+    iput-boolean p4, p0, Lcom/estrongs/android/pop/utils/br;->d:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,34 +34,20 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+.method public a(ZLjava/lang/String;Ljava/lang/String;)V
+    .locals 4
 
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/utils/br;->a:Lcom/estrongs/android/pop/utils/bn;
+    iget-object v0, p0, Lcom/estrongs/android/pop/utils/br;->a:Landroid/app/Activity;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/utils/bn;->a:Lcom/estrongs/fs/b/am;
+    iget-object v1, p0, Lcom/estrongs/android/pop/utils/br;->b:Ljava/util/List;
 
-    if-eqz v0, :cond_0
+    iget-object v2, p0, Lcom/estrongs/android/pop/utils/br;->c:Lcom/estrongs/fs/h;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/utils/br;->a:Lcom/estrongs/android/pop/utils/bn;
+    iget-boolean v3, p0, Lcom/estrongs/android/pop/utils/br;->d:Z
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/utils/bn;->a:Lcom/estrongs/fs/b/am;
-
-    invoke-virtual {v0}, Lcom/estrongs/fs/b/am;->getTaskStatus()I
-
-    move-result v0
-
-    const/4 v1, 0x4
-
-    if-eq v0, v1, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/utils/br;->a:Lcom/estrongs/android/pop/utils/bn;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/utils/bn;->a:Lcom/estrongs/fs/b/am;
-
-    invoke-virtual {v0}, Lcom/estrongs/fs/b/am;->requestStop()V
+    invoke-static {v0, v1, v2, v3}, Lcom/estrongs/android/pop/utils/ao;->b(Landroid/app/Activity;Ljava/util/List;Lcom/estrongs/fs/h;Z)V
 
     :cond_0
     return-void

@@ -9,18 +9,19 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Drawable.ConstantState;
 import android.util.AttributeSet;
 import android.widget.ImageView;
-import com.estrongs.android.d.f;
-import com.estrongs.android.util.bd;
-import com.estrongs.fs.h;
+import com.estrongs.android.h.a.e;
+import com.estrongs.android.util.bk;
 
 public class ESImageView
   extends ImageView
 {
   private Drawable a;
   private Drawable b;
-  private d c;
+  private Drawable c;
+  private h d;
   float p = 0.33333334F;
   float q = 0.33333334F;
+  float r = 0.33333334F;
   
   public ESImageView(Context paramContext)
   {
@@ -37,7 +38,7 @@ public class ESImageView
     super(paramContext, paramAttributeSet, paramInt);
   }
   
-  private boolean b(Drawable paramDrawable)
+  private boolean a(Drawable paramDrawable)
   {
     boolean bool2 = false;
     boolean bool1 = bool2;
@@ -51,7 +52,7 @@ public class ESImageView
     return bool1;
   }
   
-  private boolean c(Drawable paramDrawable)
+  private boolean b(Drawable paramDrawable)
   {
     boolean bool2 = false;
     boolean bool1 = bool2;
@@ -65,98 +66,42 @@ public class ESImageView
     return bool1;
   }
   
-  public void a(Drawable paramDrawable)
-  {
-    a(paramDrawable, 0.33333334F);
-  }
-  
   public void a(Drawable paramDrawable, float paramFloat)
   {
     p = paramFloat;
     a = paramDrawable;
   }
   
-  public void a(d paramd)
+  public void b(Drawable paramDrawable, float paramFloat)
   {
-    c = paramd;
+    b = paramDrawable;
+    q = paramFloat;
   }
   
-  public void a(boolean paramBoolean)
+  public void c(Drawable paramDrawable, float paramFloat)
   {
-    try
-    {
-      if (bd.h())
-      {
-        if (paramBoolean)
-        {
-          setAlpha(0.5F);
-          return;
-        }
-        setAlpha(1.0F);
-        return;
-      }
+    c = paramDrawable;
+    if (c != null) {
+      c.mutate();
     }
-    catch (Exception localException)
-    {
-      localException.printStackTrace();
-      return;
-    }
-    Drawable localDrawable;
-    if (paramBoolean) {
-      if (!b(getDrawable()))
-      {
-        localDrawable = getDrawable().getConstantState().newDrawable().mutate();
-        localDrawable.setAlpha(128);
-        super.setImageDrawable(localDrawable);
-        if ((a != null) && (!b(a)))
-        {
-          a = a.getConstantState().newDrawable().mutate();
-          a.setAlpha(128);
-        }
-        if ((b != null) && (!b(b)))
-        {
-          b = b.getConstantState().newDrawable().mutate();
-          b.mutate().setAlpha(128);
-        }
-      }
-    }
-    for (;;)
-    {
-      invalidate();
-      return;
-      if (!c(getDrawable()))
-      {
-        localDrawable = getDrawable().getConstantState().newDrawable().mutate();
-        localDrawable.setAlpha(255);
-        super.setImageDrawable(localDrawable);
-        if ((a != null) && (!c(a)))
-        {
-          a = a.mutate();
-          a.setAlpha(255);
-        }
-        if ((b != null) && (!c(b)))
-        {
-          b = b.mutate();
-          b.mutate().setAlpha(255);
-        }
-      }
-    }
+    r = paramFloat;
   }
   
   protected void finalize()
   {
-    Drawable localDrawable = getDrawable();
-    if (localDrawable != null) {
-      f.a(localDrawable);
-    }
     super.finalize();
+  }
+  
+  public Drawable getLeftCornorImage()
+  {
+    return a;
   }
   
   protected void onDraw(Canvas paramCanvas)
   {
     int i = getPaddingLeft();
-    if (c != null) {
-      c.a();
+    if (d != null) {
+      d.a();
     }
     try
     {
@@ -173,9 +118,17 @@ public class ESImageView
       {
         j = getMeasuredHeight();
         k = getMeasuredWidth();
-        int m = Math.min(j / 3, k / 3);
+        int m = (int)Math.min(j * q, k * q);
         b.setBounds(k - m, j - m, k, j);
         b.draw(paramCanvas);
+      }
+      if (c != null)
+      {
+        k = getMeasuredHeight();
+        j = getMeasuredWidth();
+        k = (int)Math.min(k * r, j * r);
+        c.setBounds(j - k, 0, j, k);
+        c.draw(paramCanvas);
       }
       return;
     }
@@ -186,17 +139,10 @@ public class ESImageView
         int j;
         int k;
         localRuntimeException.printStackTrace();
-        if ((localRuntimeException.getMessage().indexOf("recycled bitmap") >= 0) && ((getTag() instanceof h)))
+        if ((localRuntimeException.getMessage().indexOf("recycled bitmap") >= 0) && ((getTag() instanceof com.estrongs.fs.h)))
         {
-          f.b(getDrawable());
-          h localh = (h)getTag();
-          boolean[] arrayOfBoolean = new boolean[1];
-          arrayOfBoolean[0] = false;
-          Drawable localDrawable = f.a(localh, false, arrayOfBoolean);
-          setImageDrawable(localDrawable);
-          if (arrayOfBoolean[0] != 0) {
-            f.a(f.f(localh), localDrawable, true);
-          }
+          com.estrongs.fs.h localh = (com.estrongs.fs.h)getTag();
+          e.a(localh.getAbsolutePath(), this, localh);
           super.onDraw(paramCanvas);
           try
           {
@@ -215,6 +161,14 @@ public class ESImageView
               k = (int)Math.min(i * q, j * q);
               b.setBounds(j - k, i - k, j, i);
               b.draw(paramCanvas);
+            }
+            if (c != null)
+            {
+              j = getMeasuredHeight();
+              i = getMeasuredWidth();
+              j = (int)Math.min(j * r, i * r);
+              c.setBounds(i - j, 0, i, j);
+              c.draw(paramCanvas);
               return;
             }
           }
@@ -246,6 +200,98 @@ public class ESImageView
     super.setImageResource(paramInt);
     a = null;
     b = null;
+  }
+  
+  public void setLeftCornerImage(Drawable paramDrawable)
+  {
+    a(paramDrawable, 0.33333334F);
+  }
+  
+  public void setOnDrawer(h paramh)
+  {
+    d = paramh;
+  }
+  
+  public void setRightCornerImage(Drawable paramDrawable)
+  {
+    b(paramDrawable, 0.33333334F);
+  }
+  
+  public void setTopCornerImage(Drawable paramDrawable)
+  {
+    c(paramDrawable, 0.33333334F);
+  }
+  
+  public void setTranslucent(boolean paramBoolean)
+  {
+    try
+    {
+      if (bk.h())
+      {
+        if (paramBoolean)
+        {
+          setAlpha(0.5F);
+          return;
+        }
+        setAlpha(1.0F);
+        return;
+      }
+    }
+    catch (Exception localException)
+    {
+      localException.printStackTrace();
+      return;
+    }
+    Drawable localDrawable;
+    if (paramBoolean) {
+      if (!a(getDrawable()))
+      {
+        localDrawable = getDrawable().getConstantState().newDrawable().mutate();
+        localDrawable.setAlpha(128);
+        super.setImageDrawable(localDrawable);
+        if ((a != null) && (!a(a)))
+        {
+          a = a.getConstantState().newDrawable().mutate();
+          a.setAlpha(128);
+        }
+        if ((b != null) && (!a(b)))
+        {
+          b = b.getConstantState().newDrawable().mutate();
+          b.mutate().setAlpha(128);
+        }
+        if ((c != null) && (!a(c)))
+        {
+          c = c.getConstantState().newDrawable().mutate();
+          c.mutate().setAlpha(128);
+        }
+      }
+    }
+    for (;;)
+    {
+      invalidate();
+      return;
+      if (!b(getDrawable()))
+      {
+        localDrawable = getDrawable().getConstantState().newDrawable().mutate();
+        localDrawable.setAlpha(255);
+        super.setImageDrawable(localDrawable);
+        if ((a != null) && (!b(a)))
+        {
+          a = a.mutate();
+          a.setAlpha(255);
+        }
+        if ((b != null) && (!b(b)))
+        {
+          b = b.mutate();
+          b.mutate().setAlpha(255);
+        }
+        if ((c != null) && (!b(c)))
+        {
+          c = c.mutate();
+          c.mutate().setAlpha(255);
+        }
+      }
+    }
   }
 }
 

@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # instance fields
@@ -22,36 +22,34 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 3
+.method public onMenuItemClick(Landroid/view/MenuItem;)Z
+    .locals 4
 
-    new-instance v0, Landroid/content/Intent;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/ew;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
-
-    const-class v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v1, "music://"
-
-    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
-
-    const/high16 v1, 0x24000000
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+    new-instance v0, Lcom/estrongs/android/ui/dialog/er;
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/ew;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->startActivity(Landroid/content/Intent;)V
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/ew;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ew;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
+    const v3, 0x7f080149
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->finish()V
+    invoke-virtual {v2, v3}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->getString(I)Ljava/lang/String;
 
-    return-void
+    move-result-object v2
+
+    const-string v3, ""
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/estrongs/android/ui/dialog/er;-><init>(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v1, Lcom/estrongs/android/pop/app/ex;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ex;-><init>(Lcom/estrongs/android/pop/app/ew;)V
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/er;->a(Lcom/estrongs/android/ui/dialog/eu;)V
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/er;->show()V
+
+    const/4 v0, 0x0
+
+    return v0
 .end method

@@ -1,19 +1,15 @@
 package com.estrongs.android.ui.e;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.view.a.b;
 
 class fw
-  implements MenuItem.OnMenuItemClickListener
+  implements b
 {
-  fw(cp paramcp) {}
+  fw(cr paramcr) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public boolean a(cp paramcp)
   {
-    cp.a(cp.b(a));
-    cp.a(a).s();
-    return false;
+    return C;
   }
 }
 

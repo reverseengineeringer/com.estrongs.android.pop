@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/i;->a:Lcom/estrongs/android/pop/app/compress/a;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/a;->l(Lcom/estrongs/android/pop/app/compress/a;)Lcom/estrongs/android/pop/app/compress/j;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/a;->n(Lcom/estrongs/android/pop/app/compress/a;)Lcom/estrongs/android/pop/app/compress/j;
 
     move-result-object v0
 

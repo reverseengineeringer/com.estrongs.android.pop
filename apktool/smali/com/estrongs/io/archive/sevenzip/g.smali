@@ -52,7 +52,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/fs/impl/local/l;->a(Ljava/lang/String;Ljava/lang/String;Z)Z
+    invoke-static {v0, v1, v2}, Lcom/estrongs/fs/impl/local/m;->a(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v0
 

@@ -1,212 +1,156 @@
 .class Lcom/baidu/mobstat/ah;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field final synthetic a:Landroid/content/Context;
-
-.field final synthetic b:Ljava/lang/String;
-
-.field final synthetic c:Lcom/baidu/mobstat/ag;
+.super Lcom/baidu/mobstat/w;
 
 
 # direct methods
-.method constructor <init>(Lcom/baidu/mobstat/ag;Landroid/content/Context;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput-object p1, p0, Lcom/baidu/mobstat/ah;->c:Lcom/baidu/mobstat/ag;
+    const-string v0, "app_change"
 
-    iput-object p2, p0, Lcom/baidu/mobstat/ah;->a:Landroid/content/Context;
+    const-string v1, "Create table if not exists app_change(_id Integer primary key AUTOINCREMENT,time VARCHAR(50),content TEXT);"
 
-    iput-object p3, p0, Lcom/baidu/mobstat/ah;->b:Ljava/lang/String;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0, v1}, Lcom/baidu/mobstat/w;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
+.method private a(Landroid/database/Cursor;)Ljava/util/ArrayList;
+    .locals 9
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/database/Cursor;",
+            ")",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/baidu/mobstat/v;",
+            ">;"
+        }
+    .end annotation
 
-# virtual methods
-.method public run()V
-    .locals 4
+    new-instance v0, Ljava/util/ArrayList;
 
-    iget-object v0, p0, Lcom/baidu/mobstat/ah;->c:Lcom/baidu/mobstat/ag;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-static {}, Lcom/baidu/mobstat/r;->a()Lcom/baidu/mobstat/r;
+    if-nez p1, :cond_1
 
-    move-result-object v1
+    :cond_0
+    return-object v0
 
-    iget-object v2, p0, Lcom/baidu/mobstat/ah;->a:Landroid/content/Context;
-
-    invoke-virtual {v1, v2}, Lcom/baidu/mobstat/r;->a(Landroid/content/Context;)Z
+    :cond_1
+    invoke-interface {p1}, Landroid/database/Cursor;->getCount()I
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcom/baidu/mobstat/ag;->a(Lcom/baidu/mobstat/ag;Z)Z
+    if-eqz v1, :cond_0
 
-    iget-object v0, p0, Lcom/baidu/mobstat/ah;->c:Lcom/baidu/mobstat/ag;
+    const-string v1, "_id"
 
-    invoke-static {v0}, Lcom/baidu/mobstat/ag;->a(Lcom/baidu/mobstat/ag;)Z
+    invoke-interface {p1, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
-    move-result v0
+    move-result v1
+
+    const-string v2, "time"
+
+    invoke-interface {p1, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v2
+
+    const-string v3, "content"
+
+    invoke-interface {p1, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v3
+
+    :goto_0
+    invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    invoke-interface {p1, v1}, Landroid/database/Cursor;->getLong(I)J
+
+    move-result-wide v4
+
+    invoke-interface {p1, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-interface {p1, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v7
+
+    new-instance v8, Lcom/baidu/mobstat/v;
+
+    invoke-direct {v8, v4, v5, v6, v7}, Lcom/baidu/mobstat/v;-><init>(JLjava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+.end method
+
+
+# virtual methods
+.method public a(Ljava/lang/String;Ljava/lang/String;)J
+    .locals 2
+
+    new-instance v0, Landroid/content/ContentValues;
+
+    invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
+
+    const-string v1, "time"
+
+    invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "content"
+
+    invoke-virtual {v0, v1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0, v0}, Lcom/baidu/mobstat/ah;->a(Landroid/content/ContentValues;)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public a(II)Ljava/util/ArrayList;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(II)",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/baidu/mobstat/v;",
+            ">;"
+        }
+    .end annotation
+
+    const-string v0, "time"
+
+    invoke-virtual {p0, v0, p1, p2}, Lcom/baidu/mobstat/ah;->a(Ljava/lang/String;II)Landroid/database/Cursor;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Lcom/baidu/mobstat/ah;->a(Landroid/database/Cursor;)Ljava/util/ArrayList;
+
+    move-result-object v1
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/baidu/mobstat/ad;->a()Lcom/baidu/mobstat/ad;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/baidu/mobstat/ah;->a:Landroid/content/Context;
-
-    invoke-virtual {v0, v1}, Lcom/baidu/mobstat/ad;->b(Landroid/content/Context;)V
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
     :cond_0
-    iget-object v0, p0, Lcom/baidu/mobstat/ah;->c:Lcom/baidu/mobstat/ag;
+    return-object v1
+.end method
 
-    invoke-static {v0}, Lcom/baidu/mobstat/ag;->b(Lcom/baidu/mobstat/ag;)Ljava/util/Timer;
+.method public b(J)Z
+    .locals 1
 
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/baidu/mobstat/ah;->c:Lcom/baidu/mobstat/ag;
-
-    invoke-static {v0}, Lcom/baidu/mobstat/ag;->b(Lcom/baidu/mobstat/ag;)Ljava/util/Timer;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/Timer;->cancel()V
-
-    iget-object v0, p0, Lcom/baidu/mobstat/ah;->c:Lcom/baidu/mobstat/ag;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcom/baidu/mobstat/ag;->a(Lcom/baidu/mobstat/ag;Ljava/util/Timer;)Ljava/util/Timer;
-
-    :cond_1
-    iget-object v0, p0, Lcom/baidu/mobstat/ah;->c:Lcom/baidu/mobstat/ag;
-
-    invoke-static {}, Lcom/baidu/mobstat/SendStrategyEnum;->values()[Lcom/baidu/mobstat/SendStrategyEnum;
-
-    move-result-object v1
-
-    invoke-static {}, Lcom/baidu/mobstat/r;->a()Lcom/baidu/mobstat/r;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/baidu/mobstat/ah;->a:Landroid/content/Context;
-
-    invoke-virtual {v2, v3}, Lcom/baidu/mobstat/r;->b(Landroid/content/Context;)I
-
-    move-result v2
-
-    aget-object v1, v1, v2
-
-    invoke-static {v0, v1}, Lcom/baidu/mobstat/ag;->a(Lcom/baidu/mobstat/ag;Lcom/baidu/mobstat/SendStrategyEnum;)Lcom/baidu/mobstat/SendStrategyEnum;
-
-    iget-object v0, p0, Lcom/baidu/mobstat/ah;->c:Lcom/baidu/mobstat/ag;
-
-    invoke-static {}, Lcom/baidu/mobstat/r;->a()Lcom/baidu/mobstat/r;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/baidu/mobstat/ah;->a:Landroid/content/Context;
-
-    invoke-virtual {v1, v2}, Lcom/baidu/mobstat/r;->c(Landroid/content/Context;)I
-
-    move-result v1
-
-    invoke-static {v0, v1}, Lcom/baidu/mobstat/ag;->a(Lcom/baidu/mobstat/ag;I)I
-
-    iget-object v0, p0, Lcom/baidu/mobstat/ah;->c:Lcom/baidu/mobstat/ag;
-
-    invoke-static {}, Lcom/baidu/mobstat/r;->a()Lcom/baidu/mobstat/r;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/baidu/mobstat/ah;->a:Landroid/content/Context;
-
-    invoke-virtual {v1, v2}, Lcom/baidu/mobstat/r;->d(Landroid/content/Context;)Z
-
-    move-result v1
-
-    invoke-static {v0, v1}, Lcom/baidu/mobstat/ag;->b(Lcom/baidu/mobstat/ag;Z)Z
-
-    iget-object v0, p0, Lcom/baidu/mobstat/ah;->c:Lcom/baidu/mobstat/ag;
-
-    invoke-static {v0}, Lcom/baidu/mobstat/ag;->c(Lcom/baidu/mobstat/ag;)Lcom/baidu/mobstat/SendStrategyEnum;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/baidu/mobstat/SendStrategyEnum;->SET_TIME_INTERVAL:Lcom/baidu/mobstat/SendStrategyEnum;
-
-    invoke-virtual {v0, v1}, Lcom/baidu/mobstat/SendStrategyEnum;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1, p2}, Lcom/baidu/mobstat/ah;->a(J)Z
 
     move-result v0
 
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lcom/baidu/mobstat/ah;->c:Lcom/baidu/mobstat/ag;
-
-    iget-object v1, p0, Lcom/baidu/mobstat/ah;->a:Landroid/content/Context;
-
-    iget-object v2, p0, Lcom/baidu/mobstat/ah;->b:Ljava/lang/String;
-
-    const-string v3, "internal"
-
-    invoke-virtual {v0, v1, v2, v3}, Lcom/baidu/mobstat/ag;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_2
-    :goto_0
-    invoke-static {}, Lcom/baidu/mobstat/ag;->b()Landroid/os/Handler;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/baidu/mobstat/ai;
-
-    invoke-direct {v1, p0}, Lcom/baidu/mobstat/ai;-><init>(Lcom/baidu/mobstat/ah;)V
-
-    iget-object v2, p0, Lcom/baidu/mobstat/ah;->c:Lcom/baidu/mobstat/ag;
-
-    invoke-static {v2}, Lcom/baidu/mobstat/ag;->e(Lcom/baidu/mobstat/ag;)I
-
-    move-result v2
-
-    mul-int/lit16 v2, v2, 0x3e8
-
-    int-to-long v2, v2
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    return-void
-
-    :cond_3
-    iget-object v0, p0, Lcom/baidu/mobstat/ah;->c:Lcom/baidu/mobstat/ag;
-
-    invoke-static {v0}, Lcom/baidu/mobstat/ag;->c(Lcom/baidu/mobstat/ag;)Lcom/baidu/mobstat/SendStrategyEnum;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/baidu/mobstat/SendStrategyEnum;->ONCE_A_DAY:Lcom/baidu/mobstat/SendStrategyEnum;
-
-    invoke-virtual {v0, v1}, Lcom/baidu/mobstat/SendStrategyEnum;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/baidu/mobstat/ah;->c:Lcom/baidu/mobstat/ag;
-
-    iget-object v1, p0, Lcom/baidu/mobstat/ah;->a:Landroid/content/Context;
-
-    iget-object v2, p0, Lcom/baidu/mobstat/ah;->b:Ljava/lang/String;
-
-    const-string v3, "onceaday"
-
-    invoke-virtual {v0, v1, v2, v3}, Lcom/baidu/mobstat/ag;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
+    return v0
 .end method

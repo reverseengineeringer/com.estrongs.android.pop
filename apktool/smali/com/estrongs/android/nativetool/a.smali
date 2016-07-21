@@ -89,9 +89,9 @@
     const/16 v1, 0xff
 
     :try_start_2
-    invoke-static {v3, v1}, Lcom/estrongs/fs/impl/local/l;->a(Ljava/io/OutputStream;I)V
+    invoke-static {v3, v1}, Lcom/estrongs/fs/impl/local/m;->a(Ljava/io/OutputStream;I)V
 
-    invoke-static {v4}, Lcom/estrongs/fs/impl/local/l;->c(Ljava/io/InputStream;)I
+    invoke-static {v4}, Lcom/estrongs/fs/impl/local/m;->c(Ljava/io/InputStream;)I
 
     move-result v1
 
@@ -117,7 +117,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v1}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_3
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
@@ -155,7 +155,7 @@
 
     invoke-direct {v1}, Lcom/estrongs/android/nativetool/b;-><init>()V
 
-    invoke-static {v4}, Lcom/estrongs/fs/impl/local/l;->c(Ljava/io/InputStream;)I
+    invoke-static {v4}, Lcom/estrongs/fs/impl/local/m;->c(Ljava/io/InputStream;)I
 
     move-result v2
 
@@ -205,7 +205,7 @@
 
     const-string v2, "read error"
 
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
     .catchall {:try_start_4 .. :try_end_4} :catchall_2

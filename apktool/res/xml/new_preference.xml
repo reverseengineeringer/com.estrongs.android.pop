@@ -2,15 +2,10 @@
 <PreferenceScreen
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res/com.estrongs.android.pop">
-    <PreferenceCategory android:layout="@layout/custom_preference_category" android:title="@string/preference_file_text" android:key="file_preference">
+    <PreferenceCategory android:layout="@layout/custom_preference_category" android:title="@string/preference_common_text" android:key="file_preference">
         <PreferenceScreen android:icon="@drawable/setting_icon_display" android:persistent="true" android:layout="@layout/custom_preference_screen" android:title="@string/preference_display_setting_text" android:key="preference_display_settings_category">
             <PreferenceCategory android:layout="@layout/custom_preference_category" android:title="@string/category_file" android:key="file">
                 <CheckBoxPreference android:persistent="true" android:layout="@layout/custom_preference" android:title="@string/preference_show_pcs_drive_title" android:key="show_pcs_drive" android:summary="@string/preference_show_pcs_drive_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="true" />
-            </PreferenceCategory>
-            <PreferenceCategory android:layout="@layout/custom_preference_category" android:title="@string/toolbar" android:key="toolbar">
-                <CheckBoxPreference android:persistent="true" android:layout="@layout/custom_preference" android:title="@string/preference_show_select" android:key="show_select_button" android:summary="@string/preference_show_select_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" />
-                <CheckBoxPreference android:persistent="true" android:layout="@layout/custom_preference" android:title="@string/preference_show_windows" android:key="show_windows_button" android:summary="@string/preference_show_windows_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" />
-                <CheckBoxPreference android:persistent="true" android:layout="@layout/custom_preference" android:title="@string/preference_toolbar_setting_show_name_title" android:key="toolbar_setting_show_name" android:summary="@string/preference_toolbar_setting_show_name_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="true" />
             </PreferenceCategory>
             <PreferenceCategory android:layout="@layout/custom_preference_category" android:title="@string/location_history" android:key="history">
                 <CheckBoxPreference android:layout="@layout/custom_preference" android:title="@string/pref_show_history_folder_only" android:key="history_dir_only" android:summary="@string/pref_show_history_folder_only_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="false" />
@@ -20,10 +15,10 @@
                 <CheckBoxPreference android:persistent="true" android:layout="@layout/custom_preference" android:title="@string/preference_show_sdcard_notification_title" android:key="show_sdcard_notification" android:summary="@string/preference_show_sdcard_notification_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="false" />
                 <CheckBoxPreference android:persistent="true" android:layout="@layout/custom_preference" android:title="@string/preference_hidden_file_title" android:key="hidden_file" android:summary="@string/preference_hidden_file_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="false" />
                 <CheckBoxPreference android:persistent="true" android:layout="@layout/custom_preference" android:title="@string/preference_show_scroll_thumb" android:key="scroll_thumb" android:summary="@string/preference_show_scroll_thumb_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="true" />
-                <CheckBoxPreference android:persistent="true" android:layout="@layout/custom_preference" android:title="@string/close_notification" android:key="close_notification" android:summary="@string/close_notification_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="false" />
                 <CheckBoxPreference android:persistent="true" android:layout="@layout/custom_preference" android:title="@string/preference_show_disk_usage" android:key="show_disk_usage" android:summary="@string/preference_show_disk_usage_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="true" />
                 <CheckBoxPreference android:persistent="true" android:layout="@layout/custom_preference" android:title="@string/preference_show_disk_remain" android:key="show_disk_remain" android:summary="@string/preference_show_disk_remain_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="true" />
-                <CheckBoxPreference android:persistent="true" android:layout="@layout/custom_preference" android:title="@string/preference_show_usb_prompt" android:key="show_usb_prompt" android:summary="@string/preference_show_usb_prompt_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="false" />
+                <CheckBoxPreference android:persistent="true" android:layout="@layout/custom_preference" android:title="@string/preference_show_usb_prompt" android:key="show_usb_prompt" android:summary="@string/preference_show_usb_prompt_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="true" />
+                <CheckBoxPreference android:persistent="true" android:layout="@layout/custom_preference" android:title="@string/preference_show_homepage_message_title" android:key="show_homepage_message" android:summary="@string/preference_show_homepage_message_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="false" />
                 <com.estrongs.android.ui.preference.ListPreference android:persistent="true" android:entries="@array/preference_language_setting_entries" android:layout="@layout/custom_preference" android:title="@string/preference_language_setting_title" android:key="language_setting" android:summary="@string/preference_language_setting_summary" android:widgetLayout="@layout/custom_preference_widget_dialog" android:defaultValue="-1" android:dialogTitle="@string/preference_language_setting_title" android:entryValues="@array/preference_language_setting_values" />
             </PreferenceCategory>
         </PreferenceScreen>
@@ -42,10 +37,9 @@
             <com.estrongs.android.ui.preference.CustomListPreference android:persistent="true" android:entries="@array/search_engine_entries" android:layout="@layout/custom_preference" android:title="@string/preference_search_engine_title" android:key="search_engine_default" android:defaultValue="auto" android:dialogTitle="@string/preference_search_engine_title" android:entryValues="@array/search_engine_values" />
             <CheckBoxPreference android:persistent="true" android:layout="@layout/custom_preference" android:title="@string/preference_show_search_engine_title" android:key="show_search_engine" android:summary="@string/preference_show_search_engine_title" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="true" />
         </PreferenceScreen>
-        <PreferenceScreen android:icon="@drawable/setting_icon_document" android:layout="@layout/custom_preference_screen" android:title="@string/preference_document_title" android:key="document_preference">
-            <Preference android:persistent="false" android:layout="@layout/custom_preference" android:title="@string/document_ext_setttings_title" android:key="document_ext_list" android:summary="@string/document_ext_setttings_title_summary">
-                <intent android:action="com.estrongs.action.DOCUMENT_EXT_MODIFY_LIST" />
-            </Preference>
+        <PreferenceScreen android:icon="@drawable/setting_icon_notificatioin" android:layout="@layout/custom_preference_screen" android:title="@string/preference_notification_title" android:key="notification_preference">
+            <CheckBoxPreference android:persistent="true" android:layout="@layout/custom_preference" android:title="@string/close_notification" android:key="close_notification" android:summary="@string/close_notification_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="false" />
+            <CheckBoxPreference android:persistent="true" android:layout="@layout/custom_preference" android:title="@string/open_app_permission_notification_title" android:key="open_app_permission_notification" android:summary="@string/open_app_permission_notification_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="true" />
         </PreferenceScreen>
     </PreferenceCategory>
     <PreferenceCategory android:layout="@layout/custom_preference_category" android:title="@string/preference_security" android:key="setting_security">
@@ -67,9 +61,7 @@
             <com.estrongs.android.ui.preference.DirChoosePreference android:persistent="false" android:layout="@layout/custom_preference" android:singleLine="true" android:title="@string/preference_app_backup_dir" android:key="app_backup_dir" android:widgetLayout="@layout/custom_preference_widget_dialog" android:dialogTitle="@string/preference_app_backup_dir" app:sdcardOnly="true" />
             <CheckBoxPreference android:persistent="true" android:layout="@layout/custom_preference" android:title="@string/clean_associated_folders_setting_text" android:key="clear_associate_folders_after_uninstall" android:summary="@string/clean_associated_folders_setting_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="true" android:shouldDisableView="true" />
             <PreferenceCategory android:layout="@layout/custom_preference_category" android:title="@string/app_update" android:key="app_check_update">
-                <Preference android:persistent="false" android:layout="@layout/custom_preference" android:title="@string/app_update_setttings_title" android:key="auto_check_list" android:summary="@string/app_update_setttings_title_summary">
-                    <intent android:action="com.estrongs.action.APP_CHECK_UPDATE_LIST" />
-                </Preference>
+                <Preference android:persistent="false" android:layout="@layout/custom_preference" android:title="@string/app_update_setttings_title" android:key="auto_check_list" android:summary="@string/app_update_setttings_title_summary" />
                 <CheckBoxPreference android:persistent="true" android:layout="@layout/custom_preference" android:title="@string/preference_ignore_inconsistent_sign_app" android:key="ignore_inconsistent_sign_app" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="true" android:shouldDisableView="true" />
             </PreferenceCategory>
             <PreferenceCategory android:layout="@layout/custom_preference_category" android:title="@string/preference_root_enhancement" android:key="app_root_enhancement">
@@ -82,12 +74,10 @@
             <CheckBoxPreference android:persistent="true" android:layout="@layout/custom_preference" android:title="@string/multithread_copy_enabled" android:key="multithread_copy_enabled" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="false" />
         </PreferenceScreen>
         <PreferenceScreen android:icon="@drawable/setting_icon_window" android:layout="@layout/custom_preference_screen" android:title="@string/preference_window_settings" android:key="window_settings">
-            <Preference android:layout="@layout/custom_preference" android:title="@string/open_default_window" android:key="default_window" android:summary="@string/preference_default_window_summary">
-                <intent android:action="com.estrongs.action.DEFAULT_OPEN_WINDOW_LIST" />
-            </Preference>
+            <Preference android:layout="@layout/custom_preference" android:title="@string/open_default_window" android:key="default_window" android:summary="@string/preference_default_window_summary" />
         </PreferenceScreen>
         <PreferenceScreen android:icon="@drawable/setting_icon_recycle" android:layout="@layout/custom_preference_screen" android:title="@string/recycle_title" android:key="recycle_settings">
-            <CheckBoxPreference android:persistent="true" android:layout="@layout/custom_preference" android:title="@string/preference_open_recycle_title" android:key="enable_recycle" android:summary="@string/preference_open_recycle_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="false" />
+            <CheckBoxPreference android:persistent="true" android:layout="@layout/custom_preference" android:title="@string/preference_open_recycle_title" android:key="enable_recycle" android:summary="@string/preference_open_recycle_summary" android:widgetLayout="@layout/custom_preference_widget_checkbox" android:defaultValue="true" />
         </PreferenceScreen>
     </PreferenceCategory>
     <PreferenceCategory android:layout="@layout/custom_preference_category" android:title="@string/preference_update" android:key="preference_upgrade_settings_text_category">

@@ -1,13 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_select">Seç</string>
-    <string name="app_name">ES Dosya Yöneticisi</string>
-    <string name="app_media_player">ES Ortam Yürütücüsü</string>
-    <string name="app_note_editor">ES Metin Düzenleyici</string>
-    <string name="app_image_browser">ES Resim Gösterici</string>
-    <string name="app_zip_viewer">ES Zip Görüntüleyici</string>
     <string name="app_downloader">ES İndirici</string>
-    <string name="select_device_to_share">Göndermek için bir cihaz seçin</string>
+    <string name="app_image_browser">ES Resim Gösterici</string>
+    <string name="app_media_player">ES Medya Oynatıcı</string>
+    <string name="app_name">ES Dosya Yöneticisi</string>
+    <string name="app_note_editor">ES Metin Düzenleyici</string>
+    <string name="app_zip_viewer">ES Zip Görüntüleyici</string>
+    <string name="battery_info_remaining_charging_time">Kalan şarj süresi:</string>
+    <string name="battery_info_remaining_discharging_time">Kalan:</string>
+    <string name="charging_screen_ad_delete">Sil</string>
+    <string name="charging_screen_ad_enter">Açık</string>
+    <string name="charging_screen_charging_complete">Yükleme tamamlandı</string>
+    <string name="charging_screen_slide_to_enter">Kilidi açmak için kaydırın</string>
+    <string name="common_time_hour">sa</string>
+    <string name="common_time_minute">dk</string>
+    <string name="duappd_ad_item_action_btn">ÜCRETSİZ</string>
+    <string name="duapps_ad_data_empty">Daha sonra tekrar deneyin.</string>
+    <string name="duapps_ad_empty_refresh_btn_check">Kontrol edin</string>
+    <string name="duapps_ad_empty_title">BOŞ</string>
+    <string name="duapps_ad_footer_end">Başka içerik yok</string>
+    <string name="duapps_ad_loading">yükleniyor…</string>
+    <string name="duapps_ad_loading_switch_google_play_des">Google Play geçiş…</string>
+    <string name="duapps_ad_no_apps_refresh_button_text">yenileme</string>
+    <string name="duapps_ad_no_browser_play">Yüklü tarayıcı yok veya Google Play</string>
+    <string name="duapps_ad_nonetwork_message">Ağ bağlantısı yok. Ayarları kontrol edin ve yeniden deneyin.</string>
+    <string name="duapps_ad_pull_refresh">Yenilemek için çekin</string>
+    <string name="duscenerysdk_ad_no_browser_play">Yüklü tarayıcı yok veya Google Play</string>
     <string name="es_share_name_activity">Yerel ağ ile gönder</string>
+    <string name="lock_screen_setting">Ayarlar</string>
+    <string name="lock_screen_switch">Akıllı Şarj</string>
+    <string name="lockscreen_charge_boost_time">Toplam şarj etme süresi %1$d dakika hızlandırıldı</string>
     <string name="save_to_es">ES Kaydet...</string>
+    <string name="scenery_card_antivirus_button">GÜVENLİK TARAMASI</string>
+    <string name="scenery_card_antivirus_content">Telefonunuzda &lt;font color=#3080F0>%1$s&lt;/font> güvenlik riski var</string>
+    <string name="scenery_card_antivirus_title">Güvenlik Riski</string>
+    <string name="scenery_card_battery_button">GÜÇ TASARRUFUNA BAŞLA</string>
+    <string name="scenery_card_battery_content">&lt;font color=#3080F0>%1$s&lt;/font> güç tüketen uygulama(lar) bulundu. Güçten tasarruf etmek ve bekleme zamanını artırmak için DU Battery Saver kullanın&lt;font color=#3080F0>%2$s s %3$s dk&lt;/font></string>
+    <string name="scenery_card_battery_title">Güç Kullnımı</string>
+    <string name="scenery_card_booster_button">HIZLANDIR</string>
+    <string name="scenery_card_booster_content">&lt;font color=#3080F0>%1$s&lt;/font> çalışmaya devam eden uygulamalar telefonunuzu yavaşlatıyor</string>
+    <string name="scenery_card_booster_title">Yavaş Çalışıyor</string>
+    <string name="scenery_card_cleaner_button">ŞİMDİ ÇÖZ</string>
+    <string name="scenery_card_cleaner_content">Çöp bulundu &lt;font color=#3080F0>%1$s&lt;/font> telefonunuzda</string>
+    <string name="scenery_card_cleaner_title">Hızlı Temizleme</string>
+    <string name="scenery_card_es_button">ŞİMDİ TEMİZLE</string>
+    <string name="scenery_card_es_content">Kalan dahili alan azaltıldı &lt;font color=#3080F0>%1$s&lt;/font></string>
+    <string name="scenery_card_es_title">Disk Temizliği</string>
+    <string name="scenery_card_photowonder_button">ŞİMDİ GÜZELLEŞTİR</string>
+    <string name="scenery_card_photowonder_content">Daha güzel hale getirebileceğiniz &lt;font color=#3080F0>%1$s&lt;/font> fotoğrafınız var!</string>
+    <string name="scenery_card_photowonder_title">Beautify</string>
+    <string name="scenery_charge_dialog_button_text">İNDİRİN</string>
+    <string name="scenery_charge_dialog_content">%1$d dakika fazla şarj edilmesi &lt;font color=#FF8132>pilinize zarar verir&lt;/font>. &lt;b>DU Battery Saver&lt;/b> ile pilinizi koruyun .</string>
+    <string name="scenery_charge_dialog_title">Doğru Şarj İpuçları</string>
+    <string name="scenery_disk_usage_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_disk_usage_dialog_content">Telefonunuzun depolama alanı son &lt;font color=#FF8132>%2$s günde&lt;/font> &lt;font color=#FF8132>%1$sMB&lt;/font> azaldı .</string>
+    <string name="scenery_disk_usage_dialog_title">Disk Temizliği</string>
+    <string name="scenery_take_photo_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_take_photo_dialog_content">"Fotoğraflarınız yeterince güzel görünmüyor mu? &lt;b>PhotoWonder&lt;/b>'ın &lt;font color=#2274E6>Sinematik Filtreleri&lt;/font> size yardım edebilir!"</string>
+    <string name="scenery_take_photo_dialog_title">Rötuş</string>
+    <string name="scenery_uninstall_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_uninstall_dialog_content">%1$s, &lt;font color=#FF8132>kalıntı dosyalar&lt;/font> bıraktı. &lt;b>DU Speed Booster&lt;/b> ile bunlardan kurtulun!</string>
+    <string name="scenery_uninstall_dialog_title">Artık Dosyalar Bulundu</string>
+    <string name="screen_lock_charging_boosted_time">Şarj etme süresi %1$d dakika hızlandırıldı</string>
+    <string name="select_device_to_share">Göndermek için bir cihaz seçin</string>
+    <string name="toolbox_no_apps_refresh_button_text">yenileme</string>
+    <string name="toolbox_nonetwork_tips">Daha fazla ücretsiz uygulama için tıklayın</string>
+    <string name="toolbox_v2_btn_more">Diğer</string>
+    <string name="toolbox_v2_coin_balance">Bakiye:</string>
+    <string name="toolbox_v2_data_empty">Daha sonra tekrar deneyin.</string>
+    <string name="toolbox_v2_list_item_btn_free">ÜCRETSİZ</string>
+    <string name="v2_toolbox_empty_title">BOŞ</string>
+    <string name="toolbox_v2_network_mobile">Mobil veri</string>
+    <string name="toolbox_v2_network_wifi">Wi-Fi</string>
+    <string name="toolbox_v2_nomore_content">Başka içerik yok</string>
+    <string name="toolbox_v2_pull_refresh">Yenilemek için çekin</string>
 </resources>

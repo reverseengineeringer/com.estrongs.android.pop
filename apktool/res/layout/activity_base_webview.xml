@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="@color/c_es_actionbar_bg" android:layout_width="fill_parent" android:layout_height="@dimen/abc_action_bar_default_height_material" android:layout_alignParentTop="true" />
+    <RelativeLayout android:background="@color/c_es_base_bg" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.estrongs.android.pop.esclasses.ESWebView android:id="@id/base_web_view_WebView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <RelativeLayout android:id="@id/base_web_view_progress_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <ProgressBar android:id="@id/base_web_view_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" style="@style/ProgressBar" />
+            <TextView android:textColor="@color/main_content_detail_text" android:id="@id/base_web_view_progress_tv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/progress_loading" android:layout_below="@id/base_web_view_progress_bar" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

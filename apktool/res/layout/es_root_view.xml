@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.estrongs.android.pop.view.ESRootView android:id="@id/main_container" android:background="@drawable/blank" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<com.estrongs.android.pop.view.ESRootView android:id="@id/main_container" android:background="@drawable/blank" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <FrameLayout android:id="@id/container_body" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <FrameLayout android:id="@id/html5_video_fullscreen" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.estrongs.android.widget.FullScrnVideoLayout android:id="@id/html5_video_fullscreen" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
     <com.estrongs.android.ui.guesture.ESGesturePanel android:orientation="horizontal" android:id="@id/es_guestrue_drawer" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
     <View android:layout_gravity="left" android:id="@id/drawer_hint_left" android:background="@drawable/drawer_slide_left" android:visibility="invisible" android:layout_width="@dimen/dp_5" android:layout_height="fill_parent" />
     <View android:layout_gravity="right" android:id="@id/drawer_hint_right" android:background="@drawable/drawer_slide_right" android:visibility="invisible" android:layout_width="@dimen/dp_5" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/layout_window_container" android:background="@color/transparent" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
 </com.estrongs.android.pop.view.ESRootView>

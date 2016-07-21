@@ -3,5 +3,5 @@
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res/com.estrongs.android.pop">
     <TextView android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:gravity="left" android:id="@id/name" android:layout_width="@dimen/dp_0" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" />
-    <com.estrongs.android.ui.view.SimpleSwitchButton android:gravity="center" android:id="@id/switchWidget" android:clickable="true" android:layout_width="@dimen/dp_60" android:layout_height="@dimen/dp_42" app:thumb="@drawable/switch_inner_holo_dark" app:track="@drawable/switch_track_holo_dark" app:textOn="@string/capital_on" app:textOff="@string/capital_off" app:thumbTextPadding="12.0dip" app:switchTextAppearance="@style/TextAppearance.Holo.Light.Widget.Switch" app:switchMinWidth="40.0dip" app:switchPadding="3.0dip" />
+    <android.support.v7.widget.SwitchCompat android:gravity="center" android:id="@id/switchWidget" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
 </LinearLayout>

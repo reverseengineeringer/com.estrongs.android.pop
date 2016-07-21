@@ -1,11 +1,16 @@
 package com.estrongs.android.pop.app.b;
 
-public class l
-  extends f
+import android.os.Handler;
+import com.estrongs.android.scanner.h;
+
+class l
+  implements h
 {
-  public l()
+  l(k paramk) {}
+  
+  public void a()
   {
-    super(1, null);
+    k.a(a).post(new m(this));
   }
 }
 

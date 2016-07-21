@@ -23,13 +23,13 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lcom/estrongs/android/pop/view/dx;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->E:Lcom/estrongs/android/ui/guesture/ESGesturePanel;
+    const-string v1, "app://user"
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/guesture/ESGesturePanel;->c()V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->f(Ljava/lang/String;)Lcom/estrongs/android/view/cr;
 
     return-void
 .end method

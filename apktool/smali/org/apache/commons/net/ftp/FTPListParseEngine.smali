@@ -96,7 +96,7 @@
 
     if-lez v2, :cond_0
 
-    invoke-static {v1, v2}, Lcom/estrongs/android/util/f;->a([BI)Ljava/lang/String;
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/e;->a([BI)Ljava/lang/String;
 
     move-result-object p2
 

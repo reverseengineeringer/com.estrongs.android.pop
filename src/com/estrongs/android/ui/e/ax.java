@@ -1,29 +1,24 @@
 package com.estrongs.android.ui.e;
 
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.util.bc;
+import com.estrongs.android.view.WebViewWrapper;
+import com.estrongs.android.view.cr;
 
 class ax
   implements MenuItem.OnMenuItemClickListener
 {
-  ax(w paramw) {}
+  ax(m paramm) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = new Intent("android.intent.action.VIEW");
-    paramMenuItem.setData(Uri.parse("http://wappass.baidu.com/passport/?getpass"));
-    try
-    {
-      a.b.startActivity(paramMenuItem);
-      return false;
+    paramMenuItem = m.a(a).O();
+    if ((paramMenuItem != null) && ((paramMenuItem instanceof WebViewWrapper))) {
+      bc.a(m.a(a).getBaseContext(), paramMenuItem.b());
     }
-    catch (Exception paramMenuItem)
-    {
-      for (;;) {}
-    }
+    return false;
   }
 }
 

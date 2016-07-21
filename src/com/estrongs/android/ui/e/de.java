@@ -1,19 +1,16 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.view.a.b;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.view.ak;
 
 class de
-  implements b
+  implements Runnable
 {
-  de(cp paramcp) {}
+  de(dd paramdd) {}
   
-  public boolean a(co paramco)
+  public void run()
   {
-    if ((e) || (h) || (f) || (x) || (g)) {}
-    while ((A) || (m) || (i) || (j) || (k) || (((p) || (r)) && (G))) {
-      return true;
-    }
-    return false;
+    ak.a(a.b, a.b.getString(2131231778), 0);
   }
 }
 

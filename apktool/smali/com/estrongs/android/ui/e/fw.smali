@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
+.implements Lcom/estrongs/android/view/a/b;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/e/cp;
+.field final synthetic a:Lcom/estrongs/android/ui/e/cr;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/cp;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/cr;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/fw;->a:Lcom/estrongs/android/ui/e/cp;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/fw;->a:Lcom/estrongs/android/ui/e/cr;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,26 +22,20 @@
 
 
 # virtual methods
-.method public onMenuItemClick(Landroid/view/MenuItem;)Z
+.method public a(Lcom/estrongs/android/ui/e/cp;)Z
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/fw;->a:Lcom/estrongs/android/ui/e/cp;
+    iget-boolean v0, p1, Lcom/estrongs/android/ui/e/cp;->C:Z
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/cp;->b(Lcom/estrongs/android/ui/e/cp;)Ljava/util/List;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    const/4 v0, 0x1
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/cp;->a(Ljava/util/List;)V
+    :goto_0
+    return v0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/fw;->a:Lcom/estrongs/android/ui/e/cp;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/cp;->a(Lcom/estrongs/android/ui/e/cp;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->s()V
-
+    :cond_0
     const/4 v0, 0x0
 
-    return v0
+    goto :goto_0
 .end method

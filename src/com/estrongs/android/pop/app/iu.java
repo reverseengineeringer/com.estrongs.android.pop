@@ -1,29 +1,20 @@
 package com.estrongs.android.pop.app;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
+import com.estrongs.android.pop.view.utils.RemoteSynchronizer;
 
 class iu
-  implements View.OnClickListener
+  implements Preference.OnPreferenceChangeListener
 {
-  iu(PopVideoPlayer paramPopVideoPlayer) {}
+  iu(PopPreferenceActivity paramPopPreferenceActivity) {}
   
-  public void onClick(View paramView)
+  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
   {
-    if (PopVideoPlayer.r(a).p())
-    {
-      if (PopVideoPlayer.v(a) == 1)
-      {
-        a.b();
-        return;
-      }
-      PopVideoPlayer.w(a);
-      return;
+    if (!Boolean.valueOf(paramObject.toString()).booleanValue()) {
+      RemoteSynchronizer.f();
     }
-    if (PopVideoPlayer.t(a) == null) {
-      PopVideoPlayer.u(a);
-    }
-    PopVideoPlayer.t(a).show();
+    return true;
   }
 }
 

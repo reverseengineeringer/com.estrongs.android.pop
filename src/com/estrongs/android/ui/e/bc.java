@@ -1,24 +1,20 @@
 package com.estrongs.android.ui.e;
 
+import android.content.Intent;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.dialog.fc;
-import com.estrongs.android.view.WebViewWrapper;
+import com.estrongs.android.ui.preference.RecyclePreference;
 
 class bc
   implements MenuItem.OnMenuItemClickListener
 {
-  bc(w paramw) {}
+  bc(m paramm) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = a.k.y();
-    if ((paramMenuItem instanceof WebViewWrapper))
-    {
-      paramMenuItem = (WebViewWrapper)paramMenuItem;
-      new fc(a.k, false, paramMenuItem.at(), paramMenuItem.c()).a();
-    }
+    paramMenuItem = new Intent(m.a(a), RecyclePreference.class);
+    m.a(a).startActivity(paramMenuItem);
     return false;
   }
 }

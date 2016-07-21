@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/content/DialogInterface$OnCancelListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/jo;
+.field final synthetic a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/jo;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/PopVideoPlayer;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/jp;->a:Lcom/estrongs/android/pop/app/jo;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/jp;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,18 +22,21 @@
 
 
 # virtual methods
-.method public run()V
+.method public onCancel(Landroid/content/DialogInterface;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/jp;->a:Lcom/estrongs/android/pop/app/jo;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/jp;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/jo;->b:Lcom/estrongs/android/pop/app/jn;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->b(Lcom/estrongs/android/pop/app/PopVideoPlayer;)Z
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/jn;->c:Lcom/estrongs/android/pop/app/jl;
+    move-result v0
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/jl;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/jp;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
     invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->finish()V
 
+    :cond_0
     return-void
 .end method

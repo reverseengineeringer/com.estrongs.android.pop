@@ -204,20 +204,6 @@
 
     move-result v3
 
-    if-nez v3, :cond_3
-
-    iget-object v3, p0, Lcom/estrongs/android/ui/view/v;->a:Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;
-
-    invoke-static {v3}, Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;->a(Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "kanbox"
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
     if-eqz v3, :cond_5
 
     :cond_3
@@ -262,7 +248,7 @@
 
     move-result-object v0
 
-    goto/16 :goto_1
+    goto :goto_1
 
     :cond_5
     iget-object v3, p0, Lcom/estrongs/android/ui/view/v;->a:Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;
@@ -400,7 +386,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;->d:I
+    sget v1, Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;->e:I
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
@@ -486,7 +472,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/view/v;->a:Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;
 
-    invoke-static {v0, p1, p2, p3}, Lcom/estrongs/android/util/ac;->a(Landroid/content/Context;Landroid/webkit/WebView;Landroid/webkit/SslErrorHandler;Landroid/net/http/SslError;)V
+    invoke-static {v0, p1, p2, p3}, Lcom/estrongs/android/util/ah;->a(Landroid/content/Context;Landroid/webkit/WebView;Landroid/webkit/SslErrorHandler;Landroid/net/http/SslError;)V
 
     return-void
 .end method
@@ -494,7 +480,7 @@
 .method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
     .locals 4
 
-    invoke-static {}, Lcom/estrongs/android/util/bd;->f()Z
+    invoke-static {}, Lcom/estrongs/android/util/bk;->f()Z
 
     move-result v0
 

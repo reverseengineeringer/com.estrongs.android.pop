@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/media/MediaPlayer$OnCompletionListener;
+.implements Lcom/estrongs/android/ui/e/jy;
 
 
 # instance fields
@@ -22,27 +22,28 @@
 
 
 # virtual methods
-.method public onCompletion(Landroid/media/MediaPlayer;)V
+.method public a()V
     .locals 2
 
-    const-string v0, "Market"
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/jy;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
-    const-string v1, "Spreadtrum_cmcc"
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/PopVideoPlayer;->d:Landroid/view/View;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const v1, 0x7f0e0076
 
-    move-result v0
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    if-nez v0, :cond_0
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    const v1, 0x7f020425
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/jy;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->m(Lcom/estrongs/android/pop/app/PopVideoPlayer;)V
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->g(Lcom/estrongs/android/pop/app/PopVideoPlayer;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/jy;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->finish()V
-
-    :cond_0
     return-void
 .end method

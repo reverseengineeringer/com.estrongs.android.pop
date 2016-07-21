@@ -14,17 +14,17 @@ class as
   {
     if (((Boolean)paramObject).booleanValue())
     {
-      paramPreference = ad.a(a.getActivity()).G();
+      paramPreference = ad.a(a.getActivity()).H();
       if ((paramPreference == null) || (paramPreference.length() == 0))
       {
-        PasswordPreferenceFragment.a(a, 111);
+        PasswordPreferenceFragment.a(a, 108);
         return false;
       }
       PasswordPreferenceFragment.a(a).setEnabled(true);
-      FexApplication.a().d(((Boolean)paramObject).booleanValue());
+      FexApplication.a().c(((Boolean)paramObject).booleanValue());
       return true;
     }
-    PasswordPreferenceFragment.b(a, 112);
+    PasswordPreferenceFragment.b(a, 109);
     return false;
   }
 }

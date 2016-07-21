@@ -7,11 +7,11 @@ import android.view.View.OnClickListener;
 class cq
   implements View.OnClickListener
 {
-  cq(cg paramcg) {}
+  cq(ci paramci) {}
   
   public void onClick(View paramView)
   {
-    cg.access$100(a).onClick(a, -2);
+    ci.access$000(a).onClick(a, -1);
   }
 }
 

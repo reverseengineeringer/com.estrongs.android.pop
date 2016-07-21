@@ -2,26 +2,28 @@ package com.estrongs.android.ui.preference.fragments;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.os.Handler;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
-import com.estrongs.android.pop.esclasses.i;
+import com.estrongs.android.pop.esclasses.m;
 
 @SuppressLint({"NewApi"})
 public class BackupPreferenceFragment
-  extends i
+  extends m
 {
   private Preference a;
   private Preference b;
+  private Handler c = new Handler();
   
   private void a()
   {
     a = findPreference("backupsettings");
-    a.setOnPreferenceClickListener(new d(this));
+    a.setOnPreferenceClickListener(new e(this));
     b = findPreference("restoresettings");
-    b.setOnPreferenceClickListener(new k(this));
+    b.setOnPreferenceClickListener(new l(this));
     CheckBoxPreference localCheckBoxPreference = (CheckBoxPreference)findPreference("enableRemoteSynchronizer");
     if (localCheckBoxPreference != null) {
-      localCheckBoxPreference.setOnPreferenceChangeListener(new r(this));
+      localCheckBoxPreference.setOnPreferenceChangeListener(new t(this));
     }
   }
   

@@ -1,30 +1,25 @@
 .class final Lcom/estrongs/android/pop/utils/av;
-.super Lcom/estrongs/android/ui/dialog/ix;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcom/estrongs/fs/i;
 
 
 # direct methods
-.method constructor <init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/a/a;Z)V
+.method constructor <init>()V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/estrongs/android/ui/dialog/ix;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/a/a;Z)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected a()Ljava/lang/String;
+.method public a(Lcom/estrongs/fs/h;)Z
     .locals 1
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
-    return-object v0
-.end method
-
-.method protected b()Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
+    return v0
 .end method

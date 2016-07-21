@@ -1,40 +1,39 @@
 package com.estrongs.android.d;
 
-import com.estrongs.android.util.bd;
-import java.util.HashMap;
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.CheckBox;
+import com.estrongs.android.pop.esclasses.k;
+import com.estrongs.android.ui.dialog.ci;
 
 public class e
+  extends ci
 {
-  private static HashMap<String, String> a = new HashMap();
+  private View a;
+  private boolean b = false;
+  private h c = null;
+  private CheckBox d;
   
-  static
+  public e(Context paramContext, h paramh, boolean paramBoolean)
   {
-    a.put("tsb-wadp", "net_wirelessadapter");
-    a.put("wirelessssd", "net_wireless_ssd");
+    super(paramContext);
+    c = paramh;
+    a = k.a(paramContext).inflate(2130903222, null);
+    setContentView(a);
+    d = ((CheckBox)a.findViewById(2131624822));
+    if (!paramBoolean) {
+      d.setVisibility(8);
+    }
+    setConfirmButton(paramContext.getText(2131231721), new f(this));
+    setCancelButton(paramContext.getText(2131231272), new g(this));
+    setCancelable(false);
   }
   
-  public static boolean a(String paramString)
+  public void dismiss()
   {
-    if (bd.a(paramString)) {
-      return false;
-    }
-    String str = paramString;
-    if (paramString.startsWith("tsb-wadp")) {
-      str = "tsb-wadp";
-    }
-    return a.containsKey(str.toLowerCase());
-  }
-  
-  public static String b(String paramString)
-  {
-    if (bd.a(paramString)) {
-      return null;
-    }
-    String str = paramString;
-    if (paramString.startsWith("tsb-wadp")) {
-      str = "tsb-wadp";
-    }
-    return (String)a.get(str.toLowerCase());
+    super.dismiss();
+    c.a(b, d.isChecked());
   }
 }
 

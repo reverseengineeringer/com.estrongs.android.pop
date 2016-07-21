@@ -33,14 +33,6 @@
 
 
 # virtual methods
-.method public a(Lcom/estrongs/android/pop/app/imageviewer/o;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/imageviewer/ESGallery;->a:Lcom/estrongs/android/pop/app/imageviewer/o;
-
-    return-void
-.end method
-
 .method public onFling(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
     .locals 2
 
@@ -60,4 +52,12 @@
     move-result v0
 
     return v0
+.end method
+
+.method public setOnScrollListener(Lcom/estrongs/android/pop/app/imageviewer/o;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/imageviewer/ESGallery;->a:Lcom/estrongs/android/pop/app/imageviewer/o;
+
+    return-void
 .end method

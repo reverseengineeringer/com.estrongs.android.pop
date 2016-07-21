@@ -10,7 +10,7 @@ class dm
   
   public void run()
   {
-    ((ImageView)b.f.a.findViewById(2131362619)).setImageBitmap(a);
+    ((ImageView)b.f.a.findViewById(2131625365)).setImageBitmap(a);
   }
 }
 

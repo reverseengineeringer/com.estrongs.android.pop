@@ -21,7 +21,7 @@ class i
       if (b != 0) {
         break label39;
       }
-      d.b(a).c_();
+      d.b(a).k_();
       d.a(a, 0);
     }
     label39:

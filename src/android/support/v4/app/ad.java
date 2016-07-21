@@ -1,13 +1,30 @@
 package android.support.v4.app;
 
-import android.graphics.Bitmap;
+import android.os.Handler;
+import android.os.Message;
 
-public class ad
-  extends am
+class ad
+  extends Handler
 {
-  Bitmap a;
-  Bitmap b;
-  boolean c;
+  ad(FragmentActivity paramFragmentActivity) {}
+  
+  public void handleMessage(Message paramMessage)
+  {
+    switch (what)
+    {
+    default: 
+      super.handleMessage(paramMessage);
+    case 1: 
+      do
+      {
+        return;
+      } while (!a.mStopped);
+      a.doReallyStop(false);
+      return;
+    }
+    a.onResumeFragments();
+    a.mFragments.p();
+  }
 }
 
 /* Location:

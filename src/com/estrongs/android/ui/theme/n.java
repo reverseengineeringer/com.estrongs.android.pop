@@ -1,25 +1,31 @@
 package com.estrongs.android.ui.theme;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.ui.a.db;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.widget.LinearLayout;
+import com.estrongs.android.util.an;
 
 class n
-  implements MenuItem.OnMenuItemClickListener
+  extends BroadcastReceiver
 {
   n(ThemeActivity paramThemeActivity) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void onReceive(Context paramContext, Intent paramIntent)
   {
-    int i = ThemeActivity.c(a).a();
-    ai localai = ThemeActivity.c(a).c(i);
-    if (a.getPackageName().equals(b))
+    int i = 0;
+    paramContext = a;
+    if ((an.b()) || (an.d())) {}
+    for (boolean bool = true;; bool = false)
     {
-      paramMenuItem.setEnabled(false);
-      return false;
+      ThemeActivity.a(paramContext, bool);
+      paramContext = ThemeActivity.b(a);
+      if (ThemeActivity.a(a)) {
+        i = 8;
+      }
+      paramContext.setVisibility(i);
+      return;
     }
-    localai.c(a);
-    return false;
   }
 }
 

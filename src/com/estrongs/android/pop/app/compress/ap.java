@@ -1,26 +1,33 @@
 package com.estrongs.android.pop.app.compress;
 
-import android.text.Editable;
-import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
-import android.widget.EditText;
+import android.view.View;
+import android.widget.RadioGroup;
+import android.widget.RadioGroup.OnCheckedChangeListener;
 
 class ap
-  implements CompoundButton.OnCheckedChangeListener
+  implements RadioGroup.OnCheckedChangeListener
 {
-  ap(ai paramai, int paramInt) {}
+  ap(aj paramaj) {}
   
-  public void onCheckedChanged(CompoundButton paramCompoundButton, boolean paramBoolean)
+  public void onCheckedChanged(RadioGroup paramRadioGroup, int paramInt)
   {
-    if (paramBoolean) {
-      ai.l(b).setInputType(144);
-    }
-    for (;;)
+    if (paramRadioGroup.getCheckedRadioButtonId() == 2131624359)
     {
-      ai.l(b).setSelection(ai.l(b).getText().length());
-      return;
-      ai.l(b).setInputType(a);
+      aj.j(a).setVisibility(8);
+      aj.k(a).setVisibility(8);
     }
+    do
+    {
+      return;
+      if (paramRadioGroup.getCheckedRadioButtonId() == 2131624358)
+      {
+        aj.j(a).setVisibility(0);
+        aj.k(a).setVisibility(8);
+        return;
+      }
+    } while (paramRadioGroup.getCheckedRadioButtonId() != 2131624357);
+    aj.j(a).setVisibility(0);
+    aj.k(a).setVisibility(0);
   }
 }
 

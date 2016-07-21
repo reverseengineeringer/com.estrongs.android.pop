@@ -1,6 +1,6 @@
 package com.estrongs.fs.impl.usb.fs.ntfs.a;
 
-import android.util.Log;
+import com.estrongs.android.util.l;
 import com.estrongs.fs.impl.usb.fs.ntfs.ab;
 import com.estrongs.fs.impl.usb.fs.ntfs.b;
 import com.estrongs.fs.impl.usb.fs.ntfs.e;
@@ -59,7 +59,7 @@ public class i
         break label181;
       }
       if (locale.d() + paramInt <= n) {
-        break label558;
+        break label557;
       }
       paramInt = locale.d() - (n - paramInt);
       localList.add(new e(0L, paramInt, true, 0, l1));
@@ -120,10 +120,10 @@ public class i
       paramInt = j().r().b();
       l1 = (m() - 1L) / paramInt + 1L;
       if ((c != l1) && (b)) {
-        Log.d(a, "VCN mismatch between data runs and allocated size, possibly a composite attribute. data run VCNs = " + c + ", allocated size = " + l1 + ", data run count = " + d.size());
+        l.b(a, "VCN mismatch between data runs and allocated size, possibly a composite attribute. data run VCNs = " + c + ", allocated size = " + l1 + ", data run count = " + d.size());
       }
       return;
-      label558:
+      label557:
       i = 0;
     }
   }
@@ -134,7 +134,7 @@ public class i
       throw new IOException("Reading encrypted files is not supported");
     }
     if (b) {
-      Log.d(a, "readVCN: wants start " + paramLong + " length " + paramInt2 + ", we have start " + b() + " length " + p());
+      l.b(a, "readVCN: wants start " + paramLong + " length " + paramInt2 + ", we have start " + b() + " length " + p());
     }
     ab localab = j().r();
     int k = localab.b();
@@ -151,7 +151,7 @@ public class i
       i = j;
     } while (j != paramInt2);
     if (b) {
-      Log.d(a, "readVCN: read " + j);
+      l.b(a, "readVCN: read " + j);
     }
     return j;
   }

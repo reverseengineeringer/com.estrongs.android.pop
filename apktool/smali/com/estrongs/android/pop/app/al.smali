@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/DialogInterface$OnDismissListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/DocumentExtModifyList;
+.field final synthetic a:Lcom/estrongs/android/pop/app/DefaultWindowSetting;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/DocumentExtModifyList;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/DefaultWindowSetting;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/al;->a:Lcom/estrongs/android/pop/app/DocumentExtModifyList;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/al;->a:Lcom/estrongs/android/pop/app/DefaultWindowSetting;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,36 +22,12 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
+.method public onDismiss(Landroid/content/DialogInterface;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/al;->a:Lcom/estrongs/android/pop/app/DocumentExtModifyList;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/al;->a:Lcom/estrongs/android/pop/app/DefaultWindowSetting;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->aQ()V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/al;->a:Lcom/estrongs/android/pop/app/DocumentExtModifyList;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->a(Lcom/estrongs/android/pop/app/DocumentExtModifyList;)Lcom/estrongs/android/pop/app/ap;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ap;->a()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->clear()V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/al;->a:Lcom/estrongs/android/pop/app/DocumentExtModifyList;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->a(Lcom/estrongs/android/pop/app/DocumentExtModifyList;)Lcom/estrongs/android/pop/app/ap;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ap;->notifyDataSetChanged()V
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/DefaultWindowSetting;->d(Lcom/estrongs/android/pop/app/DefaultWindowSetting;)V
 
     return-void
 .end method

@@ -1,23 +1,18 @@
 package com.estrongs.android.view;
 
-import com.estrongs.android.pop.utils.a;
-import com.estrongs.android.util.am;
-
 class bh
-  implements com.estrongs.android.a.d
+  implements Runnable
 {
-  bh(aw paramaw) {}
+  bh(bg parambg) {}
   
-  public void a(String paramString1, String paramString2, Object paramObject)
+  public void run()
   {
-    paramString1 = am.a(am.D(paramObject.toString()), paramString1, paramString2);
-    paramString1 = a.z.j(paramString1);
-    if (paramString1 == null)
-    {
-      a.a(a.ad, 2131427906);
-      return;
+    if (ak.i(a.b) != null) {
+      ak.i(a.b).a(a.b);
     }
-    a.a(paramString1);
+    if (a.b.O != null) {
+      a.b.O.a(a.b, true);
+    }
   }
 }
 

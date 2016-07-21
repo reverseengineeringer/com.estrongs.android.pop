@@ -1,33 +1,17 @@
 package com.estrongs.android.ui.e;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.view.e;
-import com.estrongs.io.archive.rar.a;
-import com.estrongs.io.model.ArchiveEntryFile;
-import java.util.ArrayList;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.pop.app.PopAudioPlayer;
 
 class cd
-  implements MenuItem.OnMenuItemClickListener
+  implements View.OnClickListener
 {
-  cd(w paramw) {}
+  cd(cb paramcb) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void onClick(View paramView)
   {
-    if ((a.k.y() == null) || (!(a.k.y() instanceof e))) {}
-    do
-    {
-      return true;
-      paramMenuItem = (e)a.k.y();
-    } while ((paramMenuItem == null) || (paramMenuItem.o()));
-    if (((paramMenuItem.q() instanceof ArchiveEntryFile)) && (((ArchiveEntryFile)paramMenuItem.q()).isRoot()) && ((paramMenuItem.r() instanceof a)) && (((a)paramMenuItem.r()).l()))
-    {
-      paramMenuItem.a(new ArrayList(), true);
-      return true;
-    }
-    paramMenuItem.a(paramMenuItem.h(), false);
-    return true;
+    cb.a(a).q();
   }
 }
 

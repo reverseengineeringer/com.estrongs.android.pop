@@ -1,7 +1,6 @@
 package com.estrongs.android.pop.app;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,12 +11,12 @@ import com.estrongs.android.pop.ad;
 import com.estrongs.android.pop.app.shortcut.ShortcutFormat;
 import com.estrongs.android.pop.b;
 import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.pop.utils.cu;
+import com.estrongs.android.pop.utils.dd;
 import com.estrongs.android.pop.z;
-import com.estrongs.android.ui.dialog.cy;
-import com.estrongs.android.ui.theme.al;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.ay;
+import com.estrongs.android.ui.dialog.da;
+import com.estrongs.android.ui.theme.at;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bc;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -29,16 +28,16 @@ public class DefaultWindowSetting
 {
   TextView a;
   TextView b;
-  private ai c;
-  private Map<String, Drawable> d = new HashMap();
+  private am c;
+  private Map<String, Integer> d = new HashMap();
   private Map<String, String> e = new HashMap();
   
   private void a()
   {
-    ListView localListView = (ListView)findViewById(2131362066);
+    ListView localListView = (ListView)findViewById(2131624611);
     localListView.setFocusable(false);
     localListView.setItemsCanFocus(true);
-    c = new ai(this, this, ad.a(this).M());
+    c = new am(this, this, ad.a(this).N());
     localListView.setAdapter(c);
     localListView.setCacheColorHint(0);
   }
@@ -50,96 +49,94 @@ public class DefaultWindowSetting
   
   private void c()
   {
-    al localal = al.a(this);
+    at.a(this);
     Object localObject1 = b.b();
-    d.put("#home_page#", localal.a(2130838085));
-    d.put("#home#", localal.a(2130838084));
-    d.put("/", localal.a(2130838091));
-    d.put(localObject1, localal.a(2130838098));
-    d.put("gallery://local/buckets/", localal.a(2130838092));
-    d.put("music://", localal.a(2130838088));
-    d.put("video://", localal.a(2130838087));
-    d.put("book://", localal.a(2130838071));
-    Object localObject2 = ad.a(this).z();
-    d.put(localObject2, localal.a(2130838075));
-    d.put("smb://", localal.a(2130838086));
-    d.put("net://", localal.a(2130838073));
-    d.put("pcs://", localal.a(2130838073));
-    d.put("ftp://", localal.a(2130838080));
-    d.put("bt://", localal.a(2130838070));
-    d.put("app://", localal.a(2130838068));
-    d.put("du://" + (String)localObject1, localal.a(2130838074));
-    d.put("remote://", localal.a(2130838094));
-    d.put("download://", localal.a(2130838075));
-    d.put("mynetwork://", localal.a(2130838076));
-    d.put("recycle://", localal.a(2130838093));
-    e.put("#home_page#", getString(2131428432));
-    e.put("#home#", getString(2131427408));
-    e.put("/", getString(2131428245));
+    d.put("#home_page#", Integer.valueOf(2130838463));
+    d.put("#home#", Integer.valueOf(2130838462));
+    d.put("/", Integer.valueOf(2130838469));
+    d.put(localObject1, Integer.valueOf(2130838477));
+    d.put("pic://", Integer.valueOf(2130838470));
+    d.put("music://", Integer.valueOf(2130838466));
+    d.put("video://", Integer.valueOf(2130838465));
+    d.put("book://", Integer.valueOf(2130838447));
+    Object localObject2 = ad.a(this).A();
+    d.put(localObject2, Integer.valueOf(2130838453));
+    d.put("smb://", Integer.valueOf(2130838464));
+    d.put("net://", Integer.valueOf(2130838451));
+    d.put("pcs://", Integer.valueOf(2130838451));
+    d.put("ftp://", Integer.valueOf(2130838458));
+    d.put("bt://", Integer.valueOf(2130838446));
+    d.put("app://", Integer.valueOf(2130838444));
+    d.put("remote://", Integer.valueOf(2130838473));
+    d.put("download://", Integer.valueOf(2130838453));
+    d.put("mynetwork://", Integer.valueOf(2130838454));
+    d.put("recycle://", Integer.valueOf(2130838472));
+    e.put("#home_page#", getString(2131231657));
+    e.put("#home#", getString(2131231656));
+    e.put("/", getString(2131231650));
     String str = z.c((String)localObject1);
     if (str != null) {
       e.put(localObject1, str);
     }
     for (;;)
     {
-      e.put("gallery://local/buckets/", getString(2131427421));
-      e.put("music://", getString(2131427422));
-      e.put("video://", getString(2131427425));
-      e.put("book://", getString(2131427424));
-      e.put(localObject2, getString(2131427359));
-      e.put("smb://", getString(2131427410));
-      e.put("net://", getString(2131427412));
-      e.put("pcs://", getString(2131428551));
-      e.put("ftp://", getString(2131427411));
-      e.put("bt://", getString(2131427413));
-      e.put("app://", getString(2131427423));
-      e.put("du://" + (String)localObject1, getString(2131427638));
-      e.put("remote://", getString(2131428114));
-      e.put("download://", getString(2131428223));
-      e.put("mynetwork://", getString(2131428505));
-      e.put("recycle://", getString(2131428402));
+      e.put("pic://", getString(2131231138));
+      e.put("music://", getString(2131231136));
+      e.put("video://", getString(2131231135));
+      e.put("book://", getString(2131231130));
+      e.put(localObject2, getString(2131230847));
+      e.put("smb://", getString(2131231658));
+      e.put("net://", getString(2131231648));
+      e.put("pcs://", getString(2131231137));
+      e.put("ftp://", getString(2131231652));
+      e.put("bt://", getString(2131231649));
+      e.put("app://", getString(2131231129));
+      e.put("remote://", getString(2131231470));
+      e.put("download://", getString(2131230994));
+      e.put("mynetwork://", getString(2131231789));
+      e.put("recycle://", getString(2131232258));
       localObject1 = new ArrayList();
-      ((List)localObject1).addAll(cu.a());
-      ay.a(a.k, false, (List)localObject1);
+      ((List)localObject1).addAll(dd.a());
+      bc.a(a.n, false, (List)localObject1);
       localObject1 = ((List)localObject1).iterator();
       while (((Iterator)localObject1).hasNext())
       {
         localObject2 = (ShortcutFormat)((Iterator)localObject1).next();
         e.put(targetLocation, shortcutName);
       }
-      e.put(localObject1, getString(2131427409));
+      e.put(localObject1, getString(2131231662));
     }
-    localObject1 = am.a();
+    localObject1 = ap.a();
     ((List)localObject1).remove(b.b());
     localObject1 = ((List)localObject1).iterator();
     while (((Iterator)localObject1).hasNext())
     {
       localObject2 = (String)((Iterator)localObject1).next();
-      d.put(localObject2, localal.a(2130838098));
+      d.put(localObject2, Integer.valueOf(2130838477));
       e.put(localObject2, z.b((String)localObject2));
     }
   }
   
   public void a(Context paramContext)
   {
-    paramContext = new cy(this, e, d);
+    paramContext = new da(this, e, d);
     paramContext.a();
-    paramContext.a(new ah(this));
+    paramContext.a(new al(this));
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    setContentView(2130903093);
-    a = ((TextView)findViewById(2131361825));
-    a.setText(2131428452);
-    b = ((TextView)findViewById(2131361826));
-    b.setText(2131428453);
-    setTitle(2131428182);
-    ((Button)findViewById(2131361827)).setOnClickListener(new af(this));
-    paramBundle = findViewById(2131362065);
+    setContentView(2130903168);
+    a = ((TextView)findViewById(2131624055));
+    a.setText(2131231310);
+    b = ((TextView)findViewById(2131624325));
+    b.setText(2131231309);
+    setTitle(2131231885);
+    ((Button)findViewById(2131624326)).setOnClickListener(new aj(this));
+    paramBundle = findViewById(2131624610);
     paramBundle.setFocusable(true);
-    paramBundle.setOnClickListener(new ag(this));
+    paramBundle.setOnClickListener(new ak(this));
     c();
     a();
   }

@@ -4,28 +4,21 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Parcelable;
 import android.util.AttributeSet;
-import android.view.View;
-import android.widget.FrameLayout;
-import android.widget.FrameLayout.LayoutParams;
-import android.widget.LinearLayout;
-import android.widget.LinearLayout.LayoutParams;
 import android.widget.TabHost;
 import android.widget.TabHost.OnTabChangeListener;
-import android.widget.TabWidget;
 import java.util.ArrayList;
 
 public class FragmentTabHost
   extends TabHost
   implements TabHost.OnTabChangeListener
 {
-  private final ArrayList<u> a = new ArrayList();
-  private FrameLayout b;
-  private Context c;
-  private l d;
-  private int e;
-  private TabHost.OnTabChangeListener f;
-  private u g;
-  private boolean h;
+  private final ArrayList<ay> a = new ArrayList();
+  private Context b;
+  private aj c;
+  private int d;
+  private TabHost.OnTabChangeListener e;
+  private ay f;
+  private boolean g;
   
   public FragmentTabHost(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -33,17 +26,17 @@ public class FragmentTabHost
     a(paramContext, paramAttributeSet);
   }
   
-  private v a(String paramString, v paramv)
+  private az a(String paramString, az paramaz)
   {
     Object localObject = null;
     int i = 0;
     if (i < a.size())
     {
-      u localu = (u)a.get(i);
-      if (!u.b(localu).equals(paramString)) {
+      ay localay = (ay)a.get(i);
+      if (!ay.b(localay).equals(paramString)) {
         break label217;
       }
-      localObject = localu;
+      localObject = localay;
     }
     label204:
     label217:
@@ -54,57 +47,40 @@ public class FragmentTabHost
       if (localObject == null) {
         throw new IllegalStateException("No tab known for tag " + paramString);
       }
-      paramString = paramv;
-      if (g != localObject)
+      paramString = paramaz;
+      if (f != localObject)
       {
-        paramString = paramv;
-        if (paramv == null) {
-          paramString = d.a();
+        paramString = paramaz;
+        if (paramaz == null) {
+          paramString = c.a();
         }
-        if ((g != null) && (u.a(g) != null)) {
-          paramString.a(u.a(g));
+        if ((f != null) && (ay.a(f) != null)) {
+          paramString.b(ay.a(f));
         }
         if (localObject != null)
         {
-          if (u.a((u)localObject) != null) {
+          if (ay.a((ay)localObject) != null) {
             break label204;
           }
-          u.a((u)localObject, Fragment.a(c, u.c((u)localObject).getName(), u.d((u)localObject)));
-          paramString.a(e, u.a((u)localObject), u.b((u)localObject));
+          ay.a((ay)localObject, Fragment.instantiate(b, ay.c((ay)localObject).getName(), ay.d((ay)localObject)));
+          paramString.a(d, ay.a((ay)localObject), ay.b((ay)localObject));
         }
       }
       for (;;)
       {
-        g = ((u)localObject);
+        f = ((ay)localObject);
         return paramString;
-        paramString.b(u.a((u)localObject));
+        paramString.c(ay.a((ay)localObject));
       }
     }
   }
   
   private void a(Context paramContext, AttributeSet paramAttributeSet)
   {
-    paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, new int[] { 16842995 }, 0, 0);
-    e = paramAttributeSet.getResourceId(0, 0);
-    paramAttributeSet.recycle();
+    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, new int[] { 16842995 }, 0, 0);
+    d = paramContext.getResourceId(0, 0);
+    paramContext.recycle();
     super.setOnTabChangedListener(this);
-    if (findViewById(16908307) == null)
-    {
-      paramAttributeSet = new LinearLayout(paramContext);
-      paramAttributeSet.setOrientation(1);
-      addView(paramAttributeSet, new FrameLayout.LayoutParams(-1, -1));
-      Object localObject = new TabWidget(paramContext);
-      ((TabWidget)localObject).setId(16908307);
-      ((TabWidget)localObject).setOrientation(0);
-      paramAttributeSet.addView((View)localObject, new LinearLayout.LayoutParams(-1, -2, 0.0F));
-      localObject = new FrameLayout(paramContext);
-      ((FrameLayout)localObject).setId(16908305);
-      paramAttributeSet.addView((View)localObject, new LinearLayout.LayoutParams(0, 0, 0.0F));
-      paramContext = new FrameLayout(paramContext);
-      b = paramContext;
-      b.setId(e);
-      paramAttributeSet.addView(paramContext, new LinearLayout.LayoutParams(-1, 0, 1.0F));
-    }
   }
   
   protected void onAttachedToWindow()
@@ -115,18 +91,18 @@ public class FragmentTabHost
     int i = 0;
     if (i < a.size())
     {
-      u localu = (u)a.get(i);
-      u.a(localu, d.a(u.b(localu)));
+      ay localay = (ay)a.get(i);
+      ay.a(localay, c.a(ay.b(localay)));
       Object localObject2 = localObject1;
-      if (u.a(localu) != null)
+      if (ay.a(localay) != null)
       {
         localObject2 = localObject1;
-        if (!u.a(localu).d())
+        if (!ay.a(localay).isDetached())
         {
-          if (!u.b(localu).equals(str)) {
+          if (!ay.b(localay).equals(str)) {
             break label109;
           }
-          g = localu;
+          f = localay;
           localObject2 = localObject1;
         }
       }
@@ -138,24 +114,24 @@ public class FragmentTabHost
         label109:
         localObject2 = localObject1;
         if (localObject1 == null) {
-          localObject2 = d.a();
+          localObject2 = c.a();
         }
-        ((v)localObject2).a(u.a(localu));
+        ((az)localObject2).b(ay.a(localay));
       }
     }
-    h = true;
-    localObject1 = a(str, (v)localObject1);
+    g = true;
+    localObject1 = a(str, (az)localObject1);
     if (localObject1 != null)
     {
-      ((v)localObject1).a();
-      d.b();
+      ((az)localObject1).b();
+      c.b();
     }
   }
   
   protected void onDetachedFromWindow()
   {
     super.onDetachedFromWindow();
-    h = false;
+    g = false;
   }
   
   protected void onRestoreInstanceState(Parcelable paramParcelable)
@@ -174,21 +150,21 @@ public class FragmentTabHost
   
   public void onTabChanged(String paramString)
   {
-    if (h)
+    if (g)
     {
-      v localv = a(paramString, null);
-      if (localv != null) {
-        localv.a();
+      az localaz = a(paramString, null);
+      if (localaz != null) {
+        localaz.b();
       }
     }
-    if (f != null) {
-      f.onTabChanged(paramString);
+    if (e != null) {
+      e.onTabChanged(paramString);
     }
   }
   
   public void setOnTabChangedListener(TabHost.OnTabChangeListener paramOnTabChangeListener)
   {
-    f = paramOnTabChangeListener;
+    e = paramOnTabChangeListener;
   }
   
   @Deprecated

@@ -1,31 +1,14 @@
 package com.estrongs.android.ui.g;
 
-import com.estrongs.android.util.ab;
+import com.estrongs.android.util.af;
 import java.io.File;
 
 class b
-  implements ab
+  implements af
 {
   b(a parama, String paramString) {}
   
-  public void a(Object paramObject) {}
-  
-  public void a(Object paramObject, long paramLong1, long paramLong2) {}
-  
-  public void a(Object paramObject, Throwable paramThrowable)
-  {
-    try
-    {
-      paramObject = new File(a);
-      if (((File)paramObject).exists()) {
-        ((File)paramObject).delete();
-      }
-      return;
-    }
-    catch (Exception paramObject) {}
-  }
-  
-  public void b(Object paramObject)
+  public void downloadCompleted(Object paramObject)
   {
     paramObject = new File(a + ".tmp");
     if ((((File)paramObject).exists()) && (((File)paramObject).length() > 0L))
@@ -43,6 +26,23 @@ class b
     ((File)paramObject).delete();
     return;
   }
+  
+  public void downloadError(Object paramObject, Throwable paramThrowable)
+  {
+    try
+    {
+      paramObject = new File(a);
+      if (((File)paramObject).exists()) {
+        ((File)paramObject).delete();
+      }
+      return;
+    }
+    catch (Exception paramObject) {}
+  }
+  
+  public void downloadProgress(Object paramObject, long paramLong1, long paramLong2) {}
+  
+  public void downloadStarted(Object paramObject) {}
 }
 
 /* Location:

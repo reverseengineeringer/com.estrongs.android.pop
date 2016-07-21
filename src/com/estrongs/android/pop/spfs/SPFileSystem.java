@@ -2,14 +2,15 @@ package com.estrongs.android.pop.spfs;
 
 import android.content.Context;
 import android.content.ContextWrapper;
-import android.util.Log;
 import com.estrongs.android.pop.netfs.NetFsException;
 import com.estrongs.android.pop.netfs.NetFsException.ERROR_CODE;
 import com.estrongs.android.pop.spfs.note.IPhotoInfo;
 import com.estrongs.android.util.TypedMap;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bc;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bg;
+import com.estrongs.android.util.bk;
+import com.estrongs.android.util.g;
+import com.estrongs.android.util.l;
 import com.estrongs.fs.c;
 import com.estrongs.fs.i;
 import java.io.InputStream;
@@ -45,12 +46,12 @@ public class SPFileSystem
   {
     try
     {
-      ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString1));
+      ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString1));
       if (localISPFileSystem == null) {
         return null;
       }
-      String str1 = am.aj(paramString1);
-      String str2 = am.am(paramString1);
+      String str1 = ap.at(paramString1);
+      String str2 = ap.aw(paramString1);
       paramString1 = getRealPathFromPath(paramString1);
       paramString1 = ((IPhotoInfo)localISPFileSystem).addComment(str1, str2, paramString1, paramString2);
       return paramString1;
@@ -65,12 +66,12 @@ public class SPFileSystem
   {
     try
     {
-      ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString));
+      ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString));
       if (localISPFileSystem == null) {
         return null;
       }
-      String str1 = am.aj(paramString);
-      String str2 = am.am(paramString);
+      String str1 = ap.at(paramString);
+      String str2 = ap.aw(paramString);
       paramString = getRealPathFromPath(paramString);
       paramString = ((IPhotoInfo)localISPFileSystem).addNote(str1, str2, paramString, parama);
       return paramString;
@@ -85,12 +86,12 @@ public class SPFileSystem
   {
     try
     {
-      ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString1));
+      ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString1));
       if (localISPFileSystem == null) {
         return;
       }
-      String str1 = am.aj(paramString1);
-      String str2 = am.am(paramString1);
+      String str1 = ap.at(paramString1);
+      String str2 = ap.aw(paramString1);
       paramString1 = getRealPathFromPath(paramString1);
       ((IPhotoInfo)localISPFileSystem).addPhoto(str1, str2, paramString1, paramString2);
       return;
@@ -103,12 +104,12 @@ public class SPFileSystem
   
   public static boolean authenticate(String paramString)
   {
-    ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString));
+    ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString));
     if (localISPFileSystem == null) {
       return false;
     }
-    String str1 = am.aj(paramString);
-    String str2 = am.am(paramString);
+    String str1 = ap.at(paramString);
+    String str2 = ap.aw(paramString);
     getRealPathFromPath(paramString);
     return localISPFileSystem.addServer(str1, str2);
   }
@@ -128,45 +129,45 @@ public class SPFileSystem
   
   public static boolean copyFile(String paramString1, String paramString2)
   {
-    ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString1));
+    ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString1));
     if (localISPFileSystem == null) {
       return false;
     }
-    return localISPFileSystem.copyFile(am.aj(paramString1), am.am(paramString1), getRealPathFromPath(paramString1), getRealPathFromPath(paramString2));
+    return localISPFileSystem.copyFile(ap.at(paramString1), ap.aw(paramString1), getRealPathFromPath(paramString1), getRealPathFromPath(paramString2));
   }
   
   public static Album createAlbum(String paramString1, String paramString2, String paramString3)
   {
-    ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString3));
+    ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString3));
     if (localISPFileSystem == null) {
       return null;
     }
-    String str = am.aj(paramString3);
+    String str = ap.at(paramString3);
     return ((IPhotoInfo)localISPFileSystem).createAlbum(str, paramString1, paramString2, com.estrongs.fs.a.a.b(paramString3));
   }
   
   public static boolean createFile(String paramString, boolean paramBoolean)
   {
-    ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString));
+    ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString));
     if (localISPFileSystem == null) {
       return false;
     }
-    return localISPFileSystem.createFile(am.aj(paramString), am.am(paramString), getRealPathFromPath(paramString), paramBoolean);
+    return localISPFileSystem.createFile(ap.at(paramString), ap.aw(paramString), getRealPathFromPath(paramString), paramBoolean);
   }
   
   public static boolean createThumbnail(Context paramContext, String paramString)
   {
     try
     {
-      ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString));
+      ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString));
       if (localISPFileSystem == null) {
         return false;
       }
-      String str1 = am.aj(paramString);
-      String str2 = am.am(paramString);
+      String str1 = ap.at(paramString);
+      String str2 = ap.aw(paramString);
       String str3 = getRealPathFromPath(paramString);
-      paramContext = com.estrongs.android.d.h.a((ContextWrapper)paramContext);
-      if (bc.c(paramString)) {
+      paramContext = com.estrongs.android.h.h.a((ContextWrapper)paramContext);
+      if (bg.c(paramString)) {
         paramContext.a(paramString, localISPFileSystem.getThumbnail(str1, str2, str3));
       }
       return true;
@@ -182,11 +183,11 @@ public class SPFileSystem
   {
     try
     {
-      ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString));
+      ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString));
       if (localISPFileSystem == null) {
         return;
       }
-      localISPFileSystem.delServer(am.aj(paramString), am.am(paramString));
+      localISPFileSystem.delServer(ap.at(paramString), ap.aw(paramString));
       return;
     }
     catch (Exception paramString)
@@ -199,12 +200,12 @@ public class SPFileSystem
   {
     try
     {
-      ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString1));
+      ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString1));
       if (localISPFileSystem == null) {
         return;
       }
-      String str1 = am.aj(paramString1);
-      String str2 = am.am(paramString1);
+      String str1 = ap.at(paramString1);
+      String str2 = ap.aw(paramString1);
       paramString1 = getRealPathFromPath(paramString1);
       ((IPhotoInfo)localISPFileSystem).deleteComment(str1, str2, paramString1, paramString2);
       return;
@@ -217,23 +218,23 @@ public class SPFileSystem
   
   public static boolean deleteFile(String paramString, long paramLong)
   {
-    ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString));
+    ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString));
     if (localISPFileSystem == null) {
       return false;
     }
-    return localISPFileSystem.deleteFile(am.aj(paramString), am.am(paramString), getRealPathFromPath(paramString));
+    return localISPFileSystem.deleteFile(ap.at(paramString), ap.aw(paramString), getRealPathFromPath(paramString));
   }
   
   public static void deleteNote(String paramString1, String paramString2)
   {
     try
     {
-      ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString1));
+      ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString1));
       if (localISPFileSystem == null) {
         return;
       }
-      String str1 = am.aj(paramString1);
-      String str2 = am.am(paramString1);
+      String str1 = ap.at(paramString1);
+      String str2 = ap.aw(paramString1);
       getRealPathFromPath(paramString1);
       ((IPhotoInfo)localISPFileSystem).deleteNote(str1, str2, paramString2);
       return;
@@ -248,12 +249,12 @@ public class SPFileSystem
   {
     try
     {
-      ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString1));
+      ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString1));
       if (localISPFileSystem == null) {
         return;
       }
-      String str1 = am.aj(paramString1);
-      String str2 = am.am(paramString1);
+      String str1 = ap.at(paramString1);
+      String str2 = ap.aw(paramString1);
       getRealPathFromPath(paramString1);
       ((IPhotoInfo)localISPFileSystem).editComment(str1, str2, paramString2, paramString3);
       return;
@@ -268,12 +269,12 @@ public class SPFileSystem
   {
     try
     {
-      ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString));
+      ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString));
       if (localISPFileSystem == null) {
         return;
       }
-      String str1 = am.aj(paramString);
-      String str2 = am.am(paramString);
+      String str1 = ap.at(paramString);
+      String str2 = ap.aw(paramString);
       getRealPathFromPath(paramString);
       ((IPhotoInfo)localISPFileSystem).editNote(str1, str2, parama);
       return;
@@ -286,11 +287,11 @@ public class SPFileSystem
   
   public static boolean exists(String paramString)
   {
-    ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString));
+    ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString));
     if (localISPFileSystem == null) {
       return false;
     }
-    return localISPFileSystem.exists(am.aj(paramString), am.am(paramString), getRealPathFromPath(paramString));
+    return localISPFileSystem.exists(ap.at(paramString), ap.aw(paramString), getRealPathFromPath(paramString));
   }
   
   public static List<com.gmail.yuyang226.flickr.a> getAccessTokenParameters(String paramString1, String paramString2, String paramString3, String paramString4)
@@ -333,12 +334,12 @@ public class SPFileSystem
   {
     try
     {
-      Object localObject = getFileSystem(am.ao(paramString));
+      Object localObject = getFileSystem(ap.ay(paramString));
       if (localObject == null) {
         return null;
       }
-      String str1 = am.aj(paramString);
-      String str2 = am.am(paramString);
+      String str1 = ap.at(paramString);
+      String str2 = ap.aw(paramString);
       String str3 = getRealPathFromPath(paramString);
       localObject = ((IPhotoInfo)localObject).getAlbums(str1, str2, str3);
       paramString = com.estrongs.fs.a.a.a(com.estrongs.fs.a.a.c(paramString), 1) + "/" + "album";
@@ -360,12 +361,12 @@ public class SPFileSystem
   {
     try
     {
-      Object localObject = getFileSystem(am.ao(paramString));
+      Object localObject = getFileSystem(ap.ay(paramString));
       if (localObject == null) {
         return null;
       }
-      String str1 = am.aj(paramString);
-      String str2 = am.am(paramString);
+      String str1 = ap.at(paramString);
+      String str2 = ap.aw(paramString);
       getRealPathFromPath(paramString);
       localObject = ((IPhotoInfo)localObject).getAllAlbums(str1, str2);
       paramString = com.estrongs.fs.a.a.a(com.estrongs.fs.a.a.c(paramString), 1) + "/" + "album";
@@ -385,11 +386,11 @@ public class SPFileSystem
   
   public static String getBuddyIcon(String paramString1, String paramString2)
   {
-    ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString1));
+    ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString1));
     if (localISPFileSystem == null) {
       return null;
     }
-    paramString1 = am.aj(paramString1);
+    paramString1 = ap.at(paramString1);
     return ((IPhotoInfo)localISPFileSystem).getBuddyIcon(paramString1, paramString2);
   }
   
@@ -397,12 +398,12 @@ public class SPFileSystem
   {
     try
     {
-      ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString));
+      ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString));
       if (localISPFileSystem == null) {
         return null;
       }
-      String str1 = am.aj(paramString);
-      String str2 = am.am(paramString);
+      String str1 = ap.at(paramString);
+      String str2 = ap.aw(paramString);
       paramString = getRealPathFromPath(paramString);
       paramString = ((IPhotoInfo)localISPFileSystem).getComments(str1, str2, paramString, paramTypedMap);
       return paramString;
@@ -429,20 +430,20 @@ public class SPFileSystem
   
   public static InputStream getFileInputStream(String paramString, long paramLong)
   {
-    ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString));
+    ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString));
     if (localISPFileSystem == null) {
       return null;
     }
-    return localISPFileSystem.getFileInputStream(am.aj(paramString), am.am(paramString), getRealPathFromPath(paramString), paramLong);
+    return localISPFileSystem.getFileInputStream(ap.at(paramString), ap.aw(paramString), getRealPathFromPath(paramString), paramLong);
   }
   
   public static long getFileLength(String paramString)
   {
-    ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString));
+    ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString));
     if (localISPFileSystem == null) {
       return -1L;
     }
-    return localISPFileSystem.getFileLength(am.aj(paramString), am.am(paramString), getRealPathFromPath(paramString));
+    return localISPFileSystem.getFileLength(ap.at(paramString), ap.aw(paramString), getRealPathFromPath(paramString));
   }
   
   public static SPFileObject getFileObject(String paramString)
@@ -462,11 +463,11 @@ public class SPFileSystem
   
   public static OutputStream getFileOutputStream(String paramString, long paramLong, TypedMap paramTypedMap)
   {
-    ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString));
+    ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString));
     if (localISPFileSystem == null) {
       return null;
     }
-    return localISPFileSystem.getFileOutputStream(am.aj(paramString), am.am(paramString), getRealPathFromPath(paramString), paramLong, paramTypedMap);
+    return localISPFileSystem.getFileOutputStream(ap.at(paramString), ap.aw(paramString), getRealPathFromPath(paramString), paramLong, paramTypedMap);
   }
   
   private static ISPFileSystem getFileSystem(Context arg0, String paramString)
@@ -483,7 +484,7 @@ public class SPFileSystem
         return (ISPFileSystem)???;
         ??? = localISPFileSystem;
       } while (localISPFileSystem != null);
-      localISPFileSystem = (ISPFileSystem)com.estrongs.android.util.h.a(SPFileSystem.class.getClassLoader(), str, null);
+      localISPFileSystem = (ISPFileSystem)g.a(SPFileSystem.class.getClassLoader(), str, null);
       ??? = localISPFileSystem;
     } while (localISPFileSystem == null);
     synchronized (netfs)
@@ -501,7 +502,7 @@ public class SPFileSystem
   
   public static String getLastErrorString(String paramString)
   {
-    ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString));
+    ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString));
     if (localISPFileSystem == null) {
       return null;
     }
@@ -516,12 +517,12 @@ public class SPFileSystem
   
   public static SPFileInfo getNetFileInfo(String paramString)
   {
-    Object localObject = getFileSystem(am.ao(paramString));
+    Object localObject = getFileSystem(ap.ay(paramString));
     if (localObject == null) {}
     do
     {
       return null;
-      localObject = ((ISPFileSystem)localObject).getFileInfo(am.aj(paramString), am.am(paramString), getRealPathFromPath(paramString));
+      localObject = ((ISPFileSystem)localObject).getFileInfo(ap.at(paramString), ap.aw(paramString), getRealPathFromPath(paramString));
     } while (localObject == null);
     path = paramString;
     return (SPFileInfo)localObject;
@@ -567,11 +568,11 @@ public class SPFileSystem
   {
     try
     {
-      ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString));
+      ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString));
       if (localISPFileSystem == null) {
         return null;
       }
-      paramString = localISPFileSystem.getPhotoExtension(am.aj(paramString), am.am(paramString), getRealPathFromPath(paramString));
+      paramString = localISPFileSystem.getPhotoExtension(ap.at(paramString), ap.aw(paramString), getRealPathFromPath(paramString));
       return paramString;
     }
     catch (NetFsException paramString)
@@ -584,12 +585,12 @@ public class SPFileSystem
   {
     try
     {
-      ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString));
+      ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString));
       if (localISPFileSystem == null) {
         return null;
       }
-      String str1 = am.aj(paramString);
-      String str2 = am.am(paramString);
+      String str1 = ap.at(paramString);
+      String str2 = ap.aw(paramString);
       paramString = getRealPathFromPath(paramString);
       paramString = ((IPhotoInfo)localISPFileSystem).getPhotoInfo(str1, str2, paramString);
       return paramString;
@@ -602,7 +603,7 @@ public class SPFileSystem
   
   private static String getRealPathFromPath(String paramString)
   {
-    String str = am.ah(paramString);
+    String str = ap.ar(paramString);
     paramString = str;
     if (str == null) {
       paramString = null;
@@ -650,11 +651,11 @@ public class SPFileSystem
   {
     try
     {
-      ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString));
+      ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString));
       if (localISPFileSystem == null) {
         return null;
       }
-      paramString = localISPFileSystem.getThumbnail(am.aj(paramString), am.am(paramString), getRealPathFromPath(paramString));
+      paramString = localISPFileSystem.getThumbnail(ap.at(paramString), ap.aw(paramString), getRealPathFromPath(paramString));
       return paramString;
     }
     catch (Exception paramString)
@@ -684,19 +685,19 @@ public class SPFileSystem
   
   public static boolean isDir(String paramString)
   {
-    ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString));
+    ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString));
     if (localISPFileSystem == null) {
       return false;
     }
-    return localISPFileSystem.isDir(am.aj(paramString), am.am(paramString), getRealPathFromPath(paramString));
+    return localISPFileSystem.isDir(ap.at(paramString), ap.aw(paramString), getRealPathFromPath(paramString));
   }
   
   public static List<com.estrongs.fs.h> listFiles(Context paramContext, String paramString, boolean paramBoolean, i parami, TypedMap paramTypedMap)
   {
-    String str1 = am.aj(paramString);
-    String str2 = am.am(paramString);
+    String str1 = ap.at(paramString);
+    String str2 = ap.aw(paramString);
     Object localObject = getRealPathFromPath(paramString);
-    String str3 = am.ao(paramString);
+    String str3 = ap.ay(paramString);
     if ((str1 == null) || (str2 == null) || (localObject == null)) {
       throw new NetFsException("MalFormed URL", NetFsException.ERROR_CODE.NETFS_ERROR_MALFORMED_URL);
     }
@@ -720,11 +721,11 @@ public class SPFileSystem
             while (paramString.hasNext())
             {
               paramTypedMap = (SPFileInfo)((Map.Entry)paramString.next()).getValue();
-              path = am.b(str3, str1, str2, path);
+              path = ap.b(str3, str1, str2, path);
               localObject = new SPFileObject(paramTypedMap);
               if (parami.a((com.estrongs.fs.h)localObject))
               {
-                if (!bd.a(thumbnail_url)) {
+                if (!bk.a(thumbnail_url)) {
                   ((SPFileObject)localObject).putExtra("thumbnail_url", thumbnail_url);
                 }
                 paramContext.add(localObject);
@@ -749,7 +750,7 @@ public class SPFileSystem
   {
     if (getFileSystem(paramString) == null)
     {
-      Log.e("SPFileSystem", "can't load fs for :" + paramString);
+      l.e("SPFileSystem", "can't load fs for :" + paramString);
       throw new NetFsException("Not installed", NetFsException.ERROR_CODE.NETFS_ERROR_NOT_INSTALLED);
     }
   }
@@ -761,18 +762,18 @@ public class SPFileSystem
   
   public static boolean moveFile(String paramString1, String paramString2)
   {
-    ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString1));
+    ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString1));
     if (localISPFileSystem == null) {
       return false;
     }
-    return localISPFileSystem.moveFile(am.aj(paramString1), am.am(paramString1), getRealPathFromPath(paramString1), getRealPathFromPath(paramString2));
+    return localISPFileSystem.moveFile(ap.at(paramString1), ap.aw(paramString1), getRealPathFromPath(paramString1), getRealPathFromPath(paramString2));
   }
   
   private static void refreshUI(String paramString) {}
   
   public static int register(String paramString1, String paramString2, String paramString3, Object[] paramArrayOfObject)
   {
-    paramString1 = getFileSystem(am.ao(paramString1));
+    paramString1 = getFileSystem(ap.ay(paramString1));
     if (paramString1 == null) {
       return 100;
     }
@@ -792,12 +793,12 @@ public class SPFileSystem
   {
     try
     {
-      ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString1));
+      ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString1));
       if (localISPFileSystem == null) {
         return;
       }
-      String str1 = am.aj(paramString1);
-      String str2 = am.am(paramString1);
+      String str1 = ap.at(paramString1);
+      String str2 = ap.aw(paramString1);
       paramString1 = getRealPathFromPath(paramString1);
       ((IPhotoInfo)localISPFileSystem).removePhoto(str1, str2, paramString1, paramString2);
       return;
@@ -810,11 +811,11 @@ public class SPFileSystem
   
   public static boolean renameFile(String paramString1, String paramString2)
   {
-    ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString1));
+    ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString1));
     if (localISPFileSystem == null) {
       return false;
     }
-    return localISPFileSystem.renameFile(am.aj(paramString1), am.am(paramString1), getRealPathFromPath(paramString1), getRealPathFromPath(paramString2));
+    return localISPFileSystem.renameFile(ap.at(paramString1), ap.aw(paramString1), getRealPathFromPath(paramString1), getRealPathFromPath(paramString2));
   }
   
   public static void saveUsernameAndToken(String paramString1, String paramString2, String paramString3, String paramString4, String paramString5)
@@ -838,12 +839,12 @@ public class SPFileSystem
   {
     try
     {
-      ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString1));
+      ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString1));
       if (localISPFileSystem == null) {
         return;
       }
-      String str1 = am.aj(paramString1);
-      String str2 = am.am(paramString1);
+      String str1 = ap.at(paramString1);
+      String str2 = ap.aw(paramString1);
       paramString1 = getRealPathFromPath(paramString1);
       ((IPhotoInfo)localISPFileSystem).setMeta(str1, str2, paramString1, paramString2, paramString3);
       return;
@@ -864,12 +865,12 @@ public class SPFileSystem
   {
     try
     {
-      ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString));
+      ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString));
       if (localISPFileSystem == null) {
         return;
       }
-      String str1 = am.aj(paramString);
-      String str2 = am.am(paramString);
+      String str1 = ap.at(paramString);
+      String str2 = ap.aw(paramString);
       paramString = getRealPathFromPath(paramString);
       ((IPhotoInfo)localISPFileSystem).setPerms(str1, str2, paramString, paramTypedMap);
       return;
@@ -884,12 +885,12 @@ public class SPFileSystem
   {
     try
     {
-      ISPFileSystem localISPFileSystem = getFileSystem(am.ao(paramString1));
+      ISPFileSystem localISPFileSystem = getFileSystem(ap.ay(paramString1));
       if (localISPFileSystem == null) {
         return;
       }
-      String str1 = am.aj(paramString1);
-      String str2 = am.am(paramString1);
+      String str1 = ap.at(paramString1);
+      String str2 = ap.aw(paramString1);
       paramString1 = getRealPathFromPath(paramString1);
       ((IPhotoInfo)localISPFileSystem).setTags(str1, str2, paramString1, paramString2);
       return;

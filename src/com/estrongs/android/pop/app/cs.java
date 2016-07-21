@@ -1,16 +1,24 @@
 package com.estrongs.android.pop.app;
 
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnDismissListener;
+import com.estrongs.android.ui.dialog.fi;
+import com.estrongs.android.ui.dialog.iy;
 
 class cs
-  extends WebViewClient
+  implements DialogInterface.OnDismissListener
 {
-  cs(HelpActivity paramHelpActivity) {}
+  cs(cr paramcr, iy paramiy) {}
   
-  public boolean shouldOverrideUrlLoading(WebView paramWebView, String paramString)
+  public void onDismiss(DialogInterface paramDialogInterface)
   {
-    return super.shouldOverrideUrlLoading(paramWebView, paramString);
+    paramDialogInterface = a.a();
+    if (paramDialogInterface == null) {
+      return;
+    }
+    paramDialogInterface = new fi(b.a, paramDialogInterface);
+    paramDialogInterface.a();
+    paramDialogInterface.a(new ct(this));
   }
 }
 

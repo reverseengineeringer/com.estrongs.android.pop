@@ -1,10 +1,7 @@
-.class interface abstract Landroid/support/v4/view/ar;
+.class public interface abstract Landroid/support/v4/view/ar;
 .super Ljava/lang/Object;
 
 
 # virtual methods
-.method public abstract a(Landroid/view/VelocityTracker;I)F
-.end method
-
-.method public abstract b(Landroid/view/VelocityTracker;I)F
+.method public abstract onCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
 .end method

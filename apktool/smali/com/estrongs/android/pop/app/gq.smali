@@ -1,19 +1,10 @@
-.class Lcom/estrongs/android/pop/app/gq;
+.class public abstract Lcom/estrongs/android/pop/app/gq;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/preference/Preference$OnPreferenceChangeListener;
-
-
-# instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+.method public constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/gq;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,84 +13,128 @@
 
 
 # virtual methods
-.method public onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
-    .locals 3
+.method public abstract A()Lcom/estrongs/android/pop/app/c/k;
+.end method
 
-    const/4 v1, 0x1
+.method public abstract a(J)V
+.end method
 
-    const/4 v2, 0x0
+.method public abstract a(Lcom/estrongs/android/pop/app/gp;)V
+.end method
 
-    move-object v0, p2
+.method public abstract a(Ljava/util/List;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/estrongs/android/pop/app/c/i;",
+            ">;)V"
+        }
+    .end annotation
+.end method
 
-    check-cast v0, Ljava/lang/Boolean;
+.method public abstract a(Z)V
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+.method public abstract a()Z
+.end method
 
-    move-result v0
+.method public abstract a(I)Z
+.end method
 
-    if-eqz v0, :cond_2
+.method public abstract a(Lcom/estrongs/android/pop/app/c/j;)Z
+.end method
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/gq;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+.method public abstract b(I)V
+.end method
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+.method public abstract b(Ljava/util/List;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+.end method
 
-    move-result-object v0
+.method public abstract c()J
+.end method
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->G()Ljava/lang/String;
+.method public abstract c(I)V
+.end method
 
-    move-result-object v0
+.method public abstract d()Z
+.end method
 
-    if-eqz v0, :cond_0
+.method public abstract d(I)Z
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+.method public abstract e()Z
+.end method
 
-    move-result v0
+.method public abstract f()Z
+.end method
 
-    if-nez v0, :cond_1
+.method public abstract g()Ljava/lang/String;
+.end method
 
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/gq;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+.method public abstract h()Lcom/estrongs/android/pop/app/c/j;
+.end method
 
-    const/16 v1, 0x6f
+.method public abstract i()I
+.end method
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->showDialog(I)V
+.method public abstract j()I
+.end method
 
-    move v0, v2
+.method public abstract k()I
+.end method
 
-    :goto_0
-    return v0
+.method public abstract l()I
+.end method
 
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/gq;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+.method public abstract m()J
+.end method
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->r:Landroid/preference/Preference;
+.method public abstract n()V
+.end method
 
-    invoke-virtual {v0, v1}, Landroid/preference/Preference;->setEnabled(Z)V
+.method public abstract o()V
+.end method
 
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+.method public abstract p()V
+.end method
 
-    move-result-object v0
+.method public abstract q()V
+.end method
 
-    check-cast p2, Ljava/lang/Boolean;
+.method public abstract r()Lcom/estrongs/android/pop/app/c/i;
+.end method
 
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+.method public abstract s()Ljava/lang/String;
+.end method
 
-    move-result v2
+.method public abstract t()Ljava/lang/String;
+.end method
 
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/pop/FexApplication;->d(Z)V
+.method public abstract u()I
+.end method
 
-    move v0, v1
+.method public abstract v()I
+.end method
 
-    goto :goto_0
+.method public abstract w()V
+.end method
 
-    :cond_2
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/gq;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+.method public abstract x()Z
+.end method
 
-    const/16 v1, 0x70
+.method public abstract y()Landroid/graphics/Bitmap;
+.end method
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->showDialog(I)V
-
-    move v0, v2
-
-    goto :goto_0
+.method public abstract z()V
 .end method

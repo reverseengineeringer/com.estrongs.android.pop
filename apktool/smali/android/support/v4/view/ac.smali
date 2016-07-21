@@ -1,19 +1,22 @@
-.class interface abstract Landroid/support/v4/view/ac;
-.super Ljava/lang/Object;
+.class Landroid/support/v4/view/ac;
+.super Landroid/support/v4/view/ab;
+
+
+# direct methods
+.method constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Landroid/support/v4/view/ab;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a(Landroid/view/MotionEvent;)I
-.end method
+.method public a(Landroid/view/KeyEvent;)V
+    .locals 0
 
-.method public abstract a(Landroid/view/MotionEvent;I)I
-.end method
+    invoke-static {p1}, Landroid/support/v4/view/af;->a(Landroid/view/KeyEvent;)V
 
-.method public abstract b(Landroid/view/MotionEvent;I)I
-.end method
-
-.method public abstract c(Landroid/view/MotionEvent;I)F
-.end method
-
-.method public abstract d(Landroid/view/MotionEvent;I)F
+    return-void
 .end method

@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/e/w;
+.field final synthetic a:Lcom/estrongs/android/ui/e/m;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/w;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/m;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/z;->a:Lcom/estrongs/android/ui/e/w;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/z;->a:Lcom/estrongs/android/ui/e/m;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,11 +25,13 @@
 .method public onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/z;->a:Lcom/estrongs/android/ui/e/w;
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/z;->a:Lcom/estrongs/android/ui/e/m;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/w;->k:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/m;->a(Lcom/estrongs/android/ui/e/m;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->r()V
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/m;->a(Landroid/content/Context;)V
 
     const/4 v0, 0x1
 

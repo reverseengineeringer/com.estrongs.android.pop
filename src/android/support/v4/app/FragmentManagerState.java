@@ -7,7 +7,7 @@ import android.os.Parcelable.Creator;
 final class FragmentManagerState
   implements Parcelable
 {
-  public static final Parcelable.Creator<FragmentManagerState> CREATOR = new q();
+  public static final Parcelable.Creator<FragmentManagerState> CREATOR = new at();
   FragmentState[] a;
   int[] b;
   BackStackState[] c;

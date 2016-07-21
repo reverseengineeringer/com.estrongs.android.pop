@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/a/a/p;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-.field final synthetic b:Lcom/estrongs/android/ui/dialog/hj;
+.field final synthetic a:Lcom/estrongs/android/ui/dialog/hf;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/hj;Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/hf;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/hk;->b:Lcom/estrongs/android/ui/dialog/hj;
-
-    iput-object p2, p0, Lcom/estrongs/android/ui/dialog/hk;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/hk;->a:Lcom/estrongs/android/ui/dialog/hf;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,26 +22,10 @@
 
 
 # virtual methods
-.method public a(Lcom/estrongs/a/a;II)V
-    .locals 2
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 0
 
-    const/4 v0, 0x4
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    if-eq p3, v0, :cond_0
-
-    const/4 v0, 0x5
-
-    if-ne p3, v0, :cond_1
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/hk;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    new-instance v1, Lcom/estrongs/android/ui/dialog/hl;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/dialog/hl;-><init>(Lcom/estrongs/android/ui/dialog/hk;)V
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a(Ljava/lang/Runnable;)V
-
-    :cond_1
     return-void
 .end method

@@ -1,26 +1,9 @@
 package com.estrongs.android.pop.app.b;
 
-import com.estrongs.fs.h;
-import com.estrongs.fs.i;
-
-public class u
-  implements i
+class u
+  implements h
 {
-  private String a;
-  private boolean b = true;
-  
-  public u(String paramString)
-  {
-    a = paramString.trim();
-  }
-  
-  public boolean a(h paramh)
-  {
-    if (b) {
-      return paramh.getName().toLowerCase().contains(a.toLowerCase());
-    }
-    return paramh.getName().contains(a);
-  }
+  u(k paramk) {}
 }
 
 /* Location:

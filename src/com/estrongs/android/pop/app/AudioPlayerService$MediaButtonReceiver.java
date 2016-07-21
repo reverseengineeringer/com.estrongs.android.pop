@@ -33,7 +33,7 @@ public class AudioPlayerService$MediaButtonReceiver
             break label212;
           }
           if (AudioPlayerService.b.m()) {
-            AudioPlayerService.b.E();
+            AudioPlayerService.b.F();
           }
         }
         else
@@ -43,7 +43,7 @@ public class AudioPlayerService$MediaButtonReceiver
             if (!AudioPlayerService.b.m()) {
               break label222;
             }
-            AudioPlayerService.b.E();
+            AudioPlayerService.b.F();
           }
           if (88 == i) {
             AudioPlayerService.b.f(AudioPlayerService.b.g());
@@ -57,7 +57,7 @@ public class AudioPlayerService$MediaButtonReceiver
               break label231;
             }
             if (AudioPlayerService.b.m()) {
-              AudioPlayerService.b.E();
+              AudioPlayerService.b.F();
             }
           }
           if ((127 != i) || (!bool)) {

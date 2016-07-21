@@ -1,32 +1,28 @@
-.class Landroid/support/v4/view/bc;
+.class interface abstract Landroid/support/v4/view/bc;
 .super Ljava/lang/Object;
 
 
-# direct methods
-.method public static a(Landroid/view/View;)I
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/view/View;->getLayerType()I
-
-    move-result v0
-
-    return v0
+# virtual methods
+.method public abstract a(Landroid/view/MenuItem;Landroid/support/v4/view/bd;)Landroid/view/MenuItem;
 .end method
 
-.method static a()J
-    .locals 2
-
-    invoke-static {}, Landroid/animation/ValueAnimator;->getFrameDelay()J
-
-    move-result-wide v0
-
-    return-wide v0
+.method public abstract a(Landroid/view/MenuItem;Landroid/view/View;)Landroid/view/MenuItem;
 .end method
 
-.method public static a(Landroid/view/View;ILandroid/graphics/Paint;)V
-    .locals 0
+.method public abstract a(Landroid/view/MenuItem;)Landroid/view/View;
+.end method
 
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
+.method public abstract a(Landroid/view/MenuItem;I)V
+.end method
 
-    return-void
+.method public abstract b(Landroid/view/MenuItem;I)Landroid/view/MenuItem;
+.end method
+
+.method public abstract b(Landroid/view/MenuItem;)Z
+.end method
+
+.method public abstract c(Landroid/view/MenuItem;)Z
+.end method
+
+.method public abstract d(Landroid/view/MenuItem;)Z
 .end method

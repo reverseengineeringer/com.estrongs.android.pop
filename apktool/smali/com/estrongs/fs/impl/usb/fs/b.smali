@@ -73,7 +73,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/v;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/estrongs/android/util/x;->a(Ljava/lang/String;)V
 
     new-instance v0, Lcom/estrongs/fs/impl/usb/UsbFsException;
 

@@ -1,155 +1,98 @@
 package com.baidu.mobstat;
 
-import android.os.Handler;
-import android.os.Message;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
+import android.content.ContentValues;
+import android.database.Cursor;
+import java.io.Closeable;
+import java.util.ArrayList;
 
-class w
-  implements Runnable
+abstract class w
+  implements Closeable
 {
-  Message a = Download.a(b).obtainMessage();
+  private ae a;
   
-  w(Download paramDownload) {}
-  
-  public long a(String paramString, File paramFile)
+  public w(String paramString1, String paramString2)
   {
-    l2 = 0L;
-    localObject2 = null;
-    try
-    {
-      paramString = (HttpURLConnection)new URL(paramString).openConnection();
-      try
-      {
-        paramString.setRequestProperty("User-Agent", "PacificHttpClient");
-        paramString.setConnectTimeout(10000);
-        paramString.setReadTimeout(20000);
-        i = paramString.getContentLength();
-        if ((Download.c(b).length() == i) && (Download.c(b).lastModified() - System.currentTimeMillis() < 172800000L))
-        {
-          Download.a(b).sendEmptyMessage(Download.a);
-          l1 = i;
-          if (paramString != null) {
-            paramString.disconnect();
-          }
-          if (0 != 0) {
-            throw new NullPointerException();
-          }
-          if (0 != 0) {
-            throw new NullPointerException();
-          }
-          return l1;
-        }
-        if (paramString.getResponseCode() != 404) {
-          break label210;
-        }
-        Download.a(b).sendEmptyMessage(Download.b);
-        throw new Exception("fail!");
-      }
-      finally
-      {
-        localObject1 = paramString;
-        paramString = paramFile;
-        paramFile = null;
-      }
+    ad localad = new ad();
+    a = new ae(localad, paramString1);
+    if (localad.getDatabasePath(".confd") != null) {
+      a(paramString2);
     }
-    finally
-    {
-      try
-      {
-        paramFile = new FileOutputStream(paramFile, false);
-      }
-      finally
-      {
-        for (;;)
-        {
-          try
-          {
-            int i;
-            localObject2 = new byte['က'];
-            long l1 = 0L;
-            int j = ((InputStream)localObject1).read((byte[])localObject2);
-            if (j > 0)
-            {
-              paramFile.write((byte[])localObject2, 0, j);
-              l1 += j;
-              continue;
-            }
-            if (l1 != i)
-            {
-              Download.a(b).sendEmptyMessage(Download.b);
-              l1 = l2;
-              if (paramString != null) {
-                paramString.disconnect();
-              }
-              if (localObject1 != null) {
-                ((InputStream)localObject1).close();
-              }
-              if (paramFile != null) {
-                paramFile.close();
-              }
-              return l1;
-            }
-            Download.a(b).sendEmptyMessage(Download.a);
-            continue;
-            paramString = finally;
-            paramFile = null;
-            localObject1 = null;
-            continue;
-          }
-          finally
-          {
-            Object localObject3;
-            localObject2 = localObject1;
-            Object localObject1 = paramString;
-            paramString = (String)localObject4;
-          }
-          paramFile = finally;
-          localObject2 = paramString;
-          paramString = paramFile;
-          paramFile = null;
-          localObject3 = localObject1;
-          localObject1 = localObject2;
-          localObject2 = localObject3;
-        }
-      }
-    }
-    if (localObject1 != null) {
-      ((HttpURLConnection)localObject1).disconnect();
-    }
-    if (localObject2 != null) {
-      ((InputStream)localObject2).close();
-    }
-    if (paramFile != null) {
-      paramFile.close();
-    }
-    throw paramString;
-    label210:
-    if (i < 10)
-    {
-      Download.a(b).sendEmptyMessage(Download.b);
-      throw new Exception("fail!");
-    }
-    localObject1 = paramString.getInputStream();
   }
   
-  public void run()
+  private void a(String paramString)
   {
-    Download.b(b, true);
-    a.what = Download.a;
+    a.a(paramString);
+  }
+  
+  protected long a(ContentValues paramContentValues)
+  {
+    return a.a(null, paramContentValues);
+  }
+  
+  public abstract long a(String paramString1, String paramString2);
+  
+  protected Cursor a(String paramString, int paramInt1, int paramInt2)
+  {
+    return a.a(null, null, null, null, null, paramString + " desc", paramInt2 + ", " + paramInt1);
+  }
+  
+  protected Cursor a(String paramString1, String paramString2, String paramString3, int paramInt)
+  {
+    paramString1 = paramString1 + "=? ";
+    ae localae = a;
+    paramString3 = paramString3 + " desc";
+    String str = paramInt + "";
+    return localae.a(null, paramString1, new String[] { paramString2 }, null, null, paramString3, str);
+  }
+  
+  public abstract ArrayList<v> a(int paramInt1, int paramInt2);
+  
+  public boolean a()
+  {
     try
     {
-      a(Download.b(b), Download.c(b));
+      bool = a.a();
+      return bool;
+    }
+    catch (Exception localException)
+    {
+      for (;;)
+      {
+        bb.b(localException);
+        boolean bool = false;
+      }
+    }
+    finally {}
+  }
+  
+  protected boolean a(long paramLong)
+  {
+    String str = paramLong + "";
+    return a.a("_id=? ", new String[] { str }) > 0;
+  }
+  
+  protected int b()
+  {
+    return a.b();
+  }
+  
+  public abstract boolean b(long paramLong);
+  
+  public void close()
+  {
+    try
+    {
+      a.close();
       return;
     }
     catch (Exception localException)
     {
-      localException.printStackTrace();
-      Download.a(b).sendEmptyMessage(Download.b);
+      for (;;)
+      {
+        bb.b(localException);
+      }
     }
+    finally {}
   }
 }
 

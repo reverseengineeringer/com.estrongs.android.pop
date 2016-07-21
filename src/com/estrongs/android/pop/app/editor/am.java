@@ -1,16 +1,19 @@
 package com.estrongs.android.pop.app.editor;
 
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+
 class am
+  implements DialogInterface.OnClickListener
 {
-  public String a;
-  public int b;
-  public int c;
+  am(ak paramak) {}
   
-  public am(PopNoteEditor paramPopNoteEditor, String paramString, int paramInt1, int paramInt2)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    a = paramString;
-    c = paramInt1;
-    b = paramInt2;
+    if (ak.b(a) != null) {
+      ak.b(a).a(ak.a(a));
+    }
+    paramDialogInterface.dismiss();
   }
 }
 

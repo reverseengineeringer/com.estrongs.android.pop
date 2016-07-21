@@ -1,23 +1,23 @@
 package com.estrongs.android.pop.utils;
 
 import android.app.Activity;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.ui.pcs.n;
-import com.estrongs.android.ui.pcs.o;
+import com.estrongs.a.a;
+import com.estrongs.a.a.p;
+import java.util.List;
 
 final class ba
-  implements DialogInterface.OnClickListener
+  implements p
 {
-  ba(Activity paramActivity, n paramn, Boolean[] paramArrayOfBoolean) {}
+  ba(Activity paramActivity, List paramList) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void a(a parama, int paramInt1, int paramInt2)
   {
-    o localo = new o(a);
-    localo.a(b);
-    localo.a(true);
-    c[0] = Boolean.valueOf(false);
-    paramDialogInterface.dismiss();
+    if (paramInt2 == 4) {
+      ao.b(a, b);
+    }
+    while (paramInt2 != 5) {
+      return;
+    }
   }
 }
 

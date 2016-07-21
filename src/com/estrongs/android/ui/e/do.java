@@ -5,11 +5,11 @@ import com.estrongs.android.view.a.b;
 class do
   implements b
 {
-  do(cp paramcp) {}
+  do(cr paramcr) {}
   
-  public boolean a(co paramco)
+  public boolean a(cp paramcp)
   {
-    return (e) && ((N) || (P));
+    return ((e) || (L) || (K) || (l)) && (!af);
   }
 }
 

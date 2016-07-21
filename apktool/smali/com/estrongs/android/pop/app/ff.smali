@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/widget/AbsListView$OnScrollListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
+.field final synthetic a:Lcom/estrongs/android/pop/app/fa;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/PopAudioPlayer;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/fa;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/ff;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/ff;->a:Lcom/estrongs/android/pop/app/fa;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,24 +22,18 @@
 
 
 # virtual methods
-.method public onScroll(Landroid/widget/AbsListView;III)V
-    .locals 2
+.method public onClick(Landroid/view/View;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ff;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ff;->a:Lcom/estrongs/android/pop/app/fa;
 
-    iput p2, v0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->c:I
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/fa;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ff;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Lcom/estrongs/android/ui/view/ac;
 
-    add-int v1, p2, p3
+    move-result-object v0
 
-    iput v1, v0, Lcom/estrongs/android/pop/app/PopAudioPlayer;->d:I
-
-    return-void
-.end method
-
-.method public onScrollStateChanged(Landroid/widget/AbsListView;I)V
-    .locals 0
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/ac;->f()V
 
     return-void
 .end method

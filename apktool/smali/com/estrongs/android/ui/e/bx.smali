@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/estrongs/android/util/d;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/e/bw;
+.field final synthetic a:Lcom/estrongs/android/view/g;
+
+.field final synthetic b:Lcom/estrongs/android/ui/e/bw;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/bw;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/bw;Lcom/estrongs/android/view/g;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/bx;->a:Lcom/estrongs/android/ui/e/bw;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/bx;->b:Lcom/estrongs/android/ui/e/bw;
+
+    iput-object p2, p0, Lcom/estrongs/android/ui/e/bx;->a:Lcom/estrongs/android/view/g;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,43 +26,31 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public a(Ljava/lang/String;Ljava/lang/String;I)V
+    .locals 2
 
-    const/4 v1, 0x0
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/bx;->a:Lcom/estrongs/android/view/g;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/bx;->a:Lcom/estrongs/android/ui/e/bw;
+    iget-object v0, v0, Lcom/estrongs/android/view/g;->b:Ljava/lang/String;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/bw;->b:[Lcom/estrongs/android/ui/dialog/ProgressDialog;
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    aget-object v0, v0, v1
+    move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/bx;->a:Lcom/estrongs/android/ui/e/bw;
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/bx;->a:Lcom/estrongs/android/view/g;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/bw;->b:[Lcom/estrongs/android/ui/dialog/ProgressDialog;
+    iput-object p1, v0, Lcom/estrongs/android/view/g;->b:Ljava/lang/String;
 
-    aget-object v0, v0, v1
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/bx;->a:Lcom/estrongs/android/view/g;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ProgressDialog;->hide()V
+    iget-object v1, p0, Lcom/estrongs/android/ui/e/bx;->a:Lcom/estrongs/android/view/g;
+
+    iget-object v1, v1, Lcom/estrongs/android/view/g;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/g;->j(Ljava/lang/String;)V
 
     :cond_0
-    new-instance v0, Landroid/content/Intent;
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/e/bx;->a:Lcom/estrongs/android/ui/e/bw;
-
-    iget-object v1, v1, Lcom/estrongs/android/ui/e/bw;->c:Landroid/content/Context;
-
-    const-class v2, Lcom/estrongs/android/pop/app/PopAudioPlayer;
-
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/e/bx;->a:Lcom/estrongs/android/ui/e/bw;
-
-    iget-object v1, v1, Lcom/estrongs/android/ui/e/bw;->c:Landroid/content/Context;
-
-    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
     return-void
 .end method

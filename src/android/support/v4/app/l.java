@@ -1,12 +1,30 @@
 package android.support.v4.app;
 
-public abstract class l
+import android.content.Context;
+import android.os.Build.VERSION;
+
+public final class l
 {
-  public abstract Fragment a(String paramString);
+  private static final o a = new o(null);
   
-  public abstract v a();
+  static
+  {
+    if (Build.VERSION.SDK_INT >= 23)
+    {
+      a = new n(null);
+      return;
+    }
+  }
   
-  public abstract boolean b();
+  public static int a(Context paramContext, String paramString1, String paramString2)
+  {
+    return a.a(paramContext, paramString1, paramString2);
+  }
+  
+  public static String a(String paramString)
+  {
+    return a.a(paramString);
+  }
 }
 
 /* Location:

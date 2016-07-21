@@ -1,5 +1,5 @@
 .class Lcom/estrongs/fs/impl/local/t;
-.super Ljava/io/OutputStream;
+.super Ljava/io/InputStream;
 
 
 # instance fields
@@ -16,7 +16,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
+    invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
     iput-object v0, p0, Lcom/estrongs/fs/impl/local/t;->a:Landroid/net/LocalSocket;
 
@@ -38,13 +38,13 @@
 .method public close()V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/fs/impl/local/t;->c:Ljava/io/OutputStream;
-
-    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
-
     iget-object v0, p0, Lcom/estrongs/fs/impl/local/t;->b:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
+
+    iget-object v0, p0, Lcom/estrongs/fs/impl/local/t;->c:Ljava/io/OutputStream;
+
+    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
 
     iget-object v0, p0, Lcom/estrongs/fs/impl/local/t;->a:Landroid/net/LocalSocket;
 
@@ -53,38 +53,38 @@
     return-void
 .end method
 
-.method public flush()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public write(I)V
+.method public read()I
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/fs/impl/local/t;->c:Ljava/io/OutputStream;
+    iget-object v0, p0, Lcom/estrongs/fs/impl/local/t;->b:Ljava/io/InputStream;
 
-    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write(I)V
+    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
 
-    return-void
+    move-result v0
+
+    return v0
 .end method
 
-.method public write([B)V
+.method public read([B)I
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/fs/impl/local/t;->c:Ljava/io/OutputStream;
+    iget-object v0, p0, Lcom/estrongs/fs/impl/local/t;->b:Ljava/io/InputStream;
 
-    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write([B)V
+    invoke-virtual {v0, p1}, Ljava/io/InputStream;->read([B)I
 
-    return-void
+    move-result v0
+
+    return v0
 .end method
 
-.method public write([BII)V
+.method public read([BII)I
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/fs/impl/local/t;->c:Ljava/io/OutputStream;
+    iget-object v0, p0, Lcom/estrongs/fs/impl/local/t;->b:Ljava/io/InputStream;
 
-    invoke-virtual {v0, p1, p2, p3}, Ljava/io/OutputStream;->write([BII)V
+    invoke-virtual {v0, p1, p2, p3}, Ljava/io/InputStream;->read([BII)I
 
-    return-void
+    move-result v0
+
+    return v0
 .end method

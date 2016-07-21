@@ -1,19 +1,20 @@
 package com.estrongs.android.ui.b;
 
 import android.widget.EditText;
-import com.estrongs.android.util.bd;
-import com.estrongs.fs.b.ap;
+import com.estrongs.android.ui.pcs.q;
+import com.estrongs.android.util.bk;
+import com.estrongs.fs.b.ar;
 import com.estrongs.fs.d;
 
 class o
-  implements com.estrongs.android.ui.pcs.n
+  implements q
 {
   o(n paramn, String paramString) {}
   
   public void a(boolean paramBoolean, String paramString1, String paramString2)
   {
-    if ((paramBoolean) && (bd.b(paramString2))) {
-      new ap(d.a(b.a), paramString2, a, l.b(b.b).getText().toString()).execute();
+    if ((paramBoolean) && (bk.b(paramString2))) {
+      new ar(d.a(b.a), paramString2, a, l.b(b.b).getText().toString()).execute();
     }
   }
 }

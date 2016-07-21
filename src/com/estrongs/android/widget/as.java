@@ -1,41 +1,17 @@
 package com.estrongs.android.widget;
 
-import android.app.Activity;
-import android.content.res.Configuration;
-import android.content.res.Resources;
-import com.estrongs.android.view.cb;
-import com.estrongs.android.view.cd;
-import com.estrongs.fs.util.a.a;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.view.eb;
 
 class as
-  extends cd
+  implements View.OnClickListener
 {
-  as(ao paramao, Activity paramActivity, a parama, cb paramcb)
-  {
-    super(paramActivity, parama, paramcb);
-  }
+  as(ap paramap) {}
   
-  public void a(int paramInt)
+  public void onClick(View paramView)
   {
-    int i = 1;
-    k = paramInt;
-    if (ad.getResources().getConfiguration().orientation == 1) {}
-    for (paramInt = i; paramInt != 0; paramInt = 0)
-    {
-      g.setNumColumns(3);
-      return;
-    }
-    g.setNumColumns(4);
-  }
-  
-  protected int an()
-  {
-    return 2130903164;
-  }
-  
-  protected int ao()
-  {
-    return 2130903163;
+    a.b().j();
   }
 }
 

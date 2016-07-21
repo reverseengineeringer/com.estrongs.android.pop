@@ -9,12 +9,16 @@
 
 .field public static final c:Ljava/text/DecimalFormat;
 
+.field private static final d:Ljava/text/DecimalFormat;
+
+.field private static final e:Ljava/text/DecimalFormat;
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    sget-object v0, Lcom/estrongs/android/pop/a;->d:Ljava/lang/String;
+    sget-object v0, Lcom/estrongs/android/pop/a;->f:Ljava/lang/String;
 
     sput-object v0, Lcom/estrongs/fs/util/j;->a:Ljava/lang/String;
 
@@ -33,6 +37,22 @@
     invoke-direct {v0, v1}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
 
     sput-object v0, Lcom/estrongs/fs/util/j;->c:Ljava/text/DecimalFormat;
+
+    new-instance v0, Ljava/text/DecimalFormat;
+
+    const-string v1, "0.0"
+
+    invoke-direct {v0, v1}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lcom/estrongs/fs/util/j;->d:Ljava/text/DecimalFormat;
+
+    new-instance v0, Ljava/text/DecimalFormat;
+
+    const-string v1, "#"
+
+    invoke-direct {v0, v1}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lcom/estrongs/fs/util/j;->e:Ljava/text/DecimalFormat;
 
     return-void
 .end method
@@ -88,13 +108,13 @@
 
     const/16 v3, 0x2e
 
-    invoke-static {p0}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {p0}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-static {p1}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -275,7 +295,7 @@
 
     const-string v0, ""
 
-    invoke-interface {p0}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/m;
+    invoke-interface {p0}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/w;
 
     move-result-object v1
 
@@ -289,7 +309,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1}, Lcom/estrongs/fs/m;->a()Z
+    invoke-virtual {v1}, Lcom/estrongs/fs/w;->a()Z
 
     move-result v0
 
@@ -307,7 +327,7 @@
     move-result-object v0
 
     :goto_1
-    instance-of v1, p0, Lcom/estrongs/fs/impl/local/v;
+    instance-of v1, p0, Lcom/estrongs/fs/impl/local/w;
 
     if-eqz v1, :cond_2
 
@@ -319,9 +339,9 @@
 
     move-result-object v0
 
-    check-cast p0, Lcom/estrongs/fs/impl/local/v;
+    check-cast p0, Lcom/estrongs/fs/impl/local/w;
 
-    invoke-virtual {p0}, Lcom/estrongs/fs/impl/local/v;->a()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/estrongs/fs/impl/local/w;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -632,7 +652,7 @@
     const/4 v1, 0x0
 
     :try_start_0
-    invoke-static {p0}, Lcom/estrongs/fs/util/j;->c(Ljava/io/File;)Ljava/io/FileOutputStream;
+    invoke-static {p0}, Lcom/estrongs/fs/util/j;->d(Ljava/io/File;)Ljava/io/FileOutputStream;
 
     move-result-object v1
 
@@ -1099,7 +1119,251 @@
     goto :goto_0
 .end method
 
-.method public static b(Ljava/io/File;)Ljava/io/FileInputStream;
+.method public static b(J)Ljava/lang/String;
+    .locals 8
+
+    const-wide/32 v6, 0x40000000
+
+    const-wide/32 v4, 0x100000
+
+    const-wide/16 v2, 0x400
+
+    invoke-static {}, Lcom/estrongs/android/pop/utils/cl;->c()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "RU"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    cmp-long v0, p0, v6
+
+    if-ltz v0, :cond_0
+
+    const-string v0, "G\u0431"
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    cmp-long v0, p0, v4
+
+    if-ltz v0, :cond_1
+
+    const-string v0, "M\u0431"
+
+    goto :goto_0
+
+    :cond_1
+    cmp-long v0, p0, v2
+
+    if-ltz v0, :cond_2
+
+    const-string v0, "K\u0431"
+
+    goto :goto_0
+
+    :cond_2
+    const-string v0, "B"
+
+    goto :goto_0
+
+    :cond_3
+    cmp-long v0, p0, v6
+
+    if-ltz v0, :cond_4
+
+    const-string v0, "GB"
+
+    goto :goto_0
+
+    :cond_4
+    cmp-long v0, p0, v4
+
+    if-ltz v0, :cond_5
+
+    const-string v0, "MB"
+
+    goto :goto_0
+
+    :cond_5
+    cmp-long v0, p0, v2
+
+    if-ltz v0, :cond_6
+
+    const-string v0, "KB"
+
+    goto :goto_0
+
+    :cond_6
+    const-string v0, "B"
+
+    goto :goto_0
+.end method
+
+.method public static b(Ljava/io/File;)Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-static {p0, v0}, Lcom/estrongs/fs/util/j;->b(Ljava/io/File;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static b(Ljava/io/File;Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    invoke-static {p0}, Lcom/estrongs/fs/util/j;->c(Ljava/io/File;)Ljava/io/FileInputStream;
+
+    move-result-object v1
+
+    invoke-static {v1, p1}, Lcom/estrongs/fs/util/m;->a(Ljava/io/InputStream;Ljava/lang/String;)Ljava/lang/String;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result-object v0
+
+    invoke-static {v1}, Lcom/estrongs/fs/util/m;->a(Ljava/io/InputStream;)V
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v1}, Lcom/estrongs/fs/util/m;->a(Ljava/io/InputStream;)V
+
+    throw v0
+.end method
+
+.method public static b(Ljava/lang/String;)Ljava/lang/String;
+    .locals 3
+
+    const-string v0, ""
+
+    const-string v1, "."
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
+
+    move-result v1
+
+    const-string v2, "/"
+
+    invoke-virtual {p0, v2}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
+
+    move-result v2
+
+    if-le v1, v2, :cond_0
+
+    if-lez v1, :cond_0
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-ge v1, v2, :cond_0
+
+    const-string v0, "."
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_0
+    return-object v0
+.end method
+
+.method public static b(Lcom/estrongs/fs/h;)Z
+    .locals 2
+
+    invoke-interface {p0}, Lcom/estrongs/fs/h;->getPath()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const-string v1, "apk://"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const-string v1, "book://"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const-string v1, "encrypt://"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const-string v1, "pic://"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const-string v1, "music://"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const-string v1, "video://"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->br(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static c(Ljava/io/File;)Ljava/io/FileInputStream;
     .locals 3
 
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
@@ -1220,231 +1484,138 @@
     return-object v0
 .end method
 
-.method public static b(J)Ljava/lang/String;
+.method public static c(J)Ljava/lang/String;
     .locals 8
 
-    const-wide/32 v6, 0x40000000
+    long-to-double v0, p0
 
-    const-wide/32 v4, 0x100000
+    invoke-static {p0, p1}, Lcom/estrongs/fs/util/j;->a(J)J
 
-    const-wide/16 v2, 0x400
+    move-result-wide v2
 
-    invoke-static {}, Lcom/estrongs/android/pop/utils/cc;->e()Ljava/lang/String;
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v5, Lcom/estrongs/fs/util/j;->b:Ljava/text/DecimalFormat;
+
+    long-to-double v6, v2
+
+    div-double/2addr v0, v6
+
+    invoke-virtual {v5, v0, v1}, Ljava/text/DecimalFormat;->format(D)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "RU"
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    move-result-object v0
 
-    move-result v0
+    const-string v1, " "
 
-    if-eqz v0, :cond_3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    cmp-long v0, p0, v6
+    move-result-object v0
 
-    if-ltz v0, :cond_0
-
-    const-string v0, "G\u0431"
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    cmp-long v0, p0, v4
-
-    if-ltz v0, :cond_1
-
-    const-string v0, "M\u0431"
-
-    goto :goto_0
-
-    :cond_1
-    cmp-long v0, p0, v2
-
-    if-ltz v0, :cond_2
-
-    const-string v0, "K\u0431"
-
-    goto :goto_0
-
-    :cond_2
-    const-string v0, "B"
-
-    goto :goto_0
-
-    :cond_3
-    cmp-long v0, p0, v6
-
-    if-ltz v0, :cond_4
-
-    const-string v0, "GB"
-
-    goto :goto_0
-
-    :cond_4
-    cmp-long v0, p0, v4
-
-    if-ltz v0, :cond_5
-
-    const-string v0, "MB"
-
-    goto :goto_0
-
-    :cond_5
-    cmp-long v0, p0, v2
-
-    if-ltz v0, :cond_6
-
-    const-string v0, "KB"
-
-    goto :goto_0
-
-    :cond_6
-    const-string v0, "B"
-
-    goto :goto_0
-.end method
-
-.method public static b(Ljava/io/File;Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
-
-    const/4 v1, 0x0
-
-    :try_start_0
-    invoke-static {p0}, Lcom/estrongs/fs/util/j;->b(Ljava/io/File;)Ljava/io/FileInputStream;
+    invoke-static {v2, v3}, Lcom/estrongs/fs/util/j;->b(J)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1, p1}, Lcom/estrongs/fs/util/m;->a(Ljava/io/InputStream;Ljava/lang/String;)Ljava/lang/String;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-static {v1}, Lcom/estrongs/fs/util/m;->a(Ljava/io/InputStream;)V
-
-    return-object v0
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {v1}, Lcom/estrongs/fs/util/m;->a(Ljava/io/InputStream;)V
-
-    throw v0
-.end method
-
-.method public static b(Ljava/lang/String;)Ljava/lang/String;
-    .locals 3
-
-    const-string v0, ""
-
-    const-string v1, "."
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
-
-    move-result v1
-
-    const-string v2, "/"
-
-    invoke-virtual {p0, v2}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
-
-    move-result v2
-
-    if-le v1, v2, :cond_0
-
-    if-lez v1, :cond_0
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_0
-
-    const-string v0, "."
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    :cond_0
     return-object v0
 .end method
 
-.method public static b(Lcom/estrongs/fs/h;)Z
+.method public static c(Lcom/estrongs/fs/h;)Z
     .locals 2
 
-    invoke-interface {p0}, Lcom/estrongs/fs/h;->getPath()Ljava/lang/String;
+    const-string v0, "public_share_link"
+
+    invoke-interface {p0, v0}, Lcom/estrongs/fs/h;->getExtra(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    const-string v1, "apk://"
+    const-string v1, ""
 
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string v1, "book://"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string v1, "pic://"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string v1, "music://"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string v1, "video://"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bg(Ljava/lang/String;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_0
 
-    :cond_0
     const/4 v0, 0x1
 
     :goto_0
     return v0
 
-    :cond_1
+    :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method public static c(Ljava/io/File;)Ljava/io/FileOutputStream;
+.method public static c(Ljava/lang/String;)Z
+    .locals 5
+
+    const/4 v0, 0x0
+
+    const/16 v1, 0x9
+
+    new-array v2, v1, [C
+
+    fill-array-data v2, :array_0
+
+    array-length v3, v2
+
+    move v1, v0
+
+    :goto_0
+    if-ge v1, v3, :cond_1
+
+    aget-char v4, v2, v1
+
+    invoke-virtual {p0, v4}, Ljava/lang/String;->indexOf(I)I
+
+    move-result v4
+
+    if-ltz v4, :cond_0
+
+    :goto_1
+    return v0
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x1
+
+    goto :goto_1
+
+    :array_0
+    .array-data 2
+        0x2as
+        0x22s
+        0x3as
+        0x3fs
+        0x3cs
+        0x3es
+        0x7cs
+        0x5cs
+        0x2fs
+    .end array-data
+.end method
+
+.method public static d(Ljava/io/File;)Ljava/io/FileOutputStream;
     .locals 3
 
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
@@ -1583,137 +1754,6 @@
     return-object v0
 .end method
 
-.method public static c(J)Ljava/lang/String;
-    .locals 8
-
-    long-to-double v0, p0
-
-    invoke-static {p0, p1}, Lcom/estrongs/fs/util/j;->a(J)J
-
-    move-result-wide v2
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget-object v5, Lcom/estrongs/fs/util/j;->b:Ljava/text/DecimalFormat;
-
-    long-to-double v6, v2
-
-    div-double/2addr v0, v6
-
-    invoke-virtual {v5, v0, v1}, Ljava/text/DecimalFormat;->format(D)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, " "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-static {v2, v3}, Lcom/estrongs/fs/util/j;->b(J)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static c(Lcom/estrongs/fs/h;)Z
-    .locals 2
-
-    const-string v0, "public_share_link"
-
-    invoke-interface {p0, v0}, Lcom/estrongs/fs/h;->getExtra(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    const-string v1, ""
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public static c(Ljava/lang/String;)Z
-    .locals 5
-
-    const/4 v0, 0x0
-
-    const/16 v1, 0x9
-
-    new-array v2, v1, [C
-
-    fill-array-data v2, :array_0
-
-    array-length v3, v2
-
-    move v1, v0
-
-    :goto_0
-    if-ge v1, v3, :cond_1
-
-    aget-char v4, v2, v1
-
-    invoke-virtual {p0, v4}, Ljava/lang/String;->indexOf(I)I
-
-    move-result v4
-
-    if-ltz v4, :cond_0
-
-    :goto_1
-    return v0
-
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x1
-
-    goto :goto_1
-
-    :array_0
-    .array-data 2
-        0x2as
-        0x22s
-        0x3as
-        0x3fs
-        0x3cs
-        0x3es
-        0x7cs
-        0x5cs
-        0x2fs
-    .end array-data
-.end method
-
 .method public static d(J)Ljava/lang/String;
     .locals 2
 
@@ -1776,6 +1816,423 @@
         0x7cs
         0x5cs
     .end array-data
+.end method
+
+.method public static e(J)Ljava/lang/String;
+    .locals 10
+
+    const-wide/16 v8, 0x400
+
+    const-wide/high16 v6, 0x4090000000000000L    # 1024.0
+
+    long-to-double v0, p0
+
+    const-wide/32 v2, 0x100000
+
+    div-long v2, p0, v2
+
+    const-wide/16 v4, 0x270f
+
+    cmp-long v4, v2, v4
+
+    if-lez v4, :cond_0
+
+    long-to-double v0, v2
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v3, Lcom/estrongs/fs/util/j;->d:Ljava/text/DecimalFormat;
+
+    div-double/2addr v0, v6
+
+    invoke-virtual {v3, v0, v1}, Ljava/text/DecimalFormat;->format(D)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-static {p0, p1}, Lcom/estrongs/fs/util/j;->f(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const-wide/16 v4, 0x3e7
+
+    cmp-long v4, v2, v4
+
+    if-lez v4, :cond_1
+
+    long-to-double v0, v2
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v3, Lcom/estrongs/fs/util/j;->b:Ljava/text/DecimalFormat;
+
+    div-double/2addr v0, v6
+
+    invoke-virtual {v3, v0, v1}, Ljava/text/DecimalFormat;->format(D)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-static {p0, p1}, Lcom/estrongs/fs/util/j;->f(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_1
+    const-wide/16 v4, 0x1
+
+    cmp-long v4, v2, v4
+
+    if-lez v4, :cond_2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v1, Lcom/estrongs/fs/util/j;->e:Ljava/text/DecimalFormat;
+
+    invoke-virtual {v1, v2, v3}, Ljava/text/DecimalFormat;->format(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-static {p0, p1}, Lcom/estrongs/fs/util/j;->f(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_2
+    const-wide/32 v2, 0xfa000
+
+    cmp-long v2, p0, v2
+
+    if-lez v2, :cond_3
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v3, Lcom/estrongs/fs/util/j;->b:Ljava/text/DecimalFormat;
+
+    const-wide/high16 v4, 0x4130000000000000L    # 1048576.0
+
+    div-double/2addr v0, v4
+
+    invoke-virtual {v3, v0, v1}, Ljava/text/DecimalFormat;->format(D)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-static {p0, p1}, Lcom/estrongs/fs/util/j;->f(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_3
+    cmp-long v2, p0, v8
+
+    if-lez v2, :cond_4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v1, Lcom/estrongs/fs/util/j;->e:Ljava/text/DecimalFormat;
+
+    div-long v2, p0, v8
+
+    invoke-virtual {v1, v2, v3}, Ljava/text/DecimalFormat;->format(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-static {p0, p1}, Lcom/estrongs/fs/util/j;->f(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto/16 :goto_0
+
+    :cond_4
+    const-wide/16 v2, 0x3e8
+
+    cmp-long v2, p0, v2
+
+    if-lez v2, :cond_5
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v3, Lcom/estrongs/fs/util/j;->b:Ljava/text/DecimalFormat;
+
+    div-double/2addr v0, v6
+
+    invoke-virtual {v3, v0, v1}, Ljava/text/DecimalFormat;->format(D)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-static {p0, p1}, Lcom/estrongs/fs/util/j;->f(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto/16 :goto_0
+
+    :cond_5
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v1, Lcom/estrongs/fs/util/j;->e:Ljava/text/DecimalFormat;
+
+    invoke-virtual {v1, p0, p1}, Ljava/text/DecimalFormat;->format(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-static {p0, p1}, Lcom/estrongs/fs/util/j;->f(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto/16 :goto_0
+.end method
+
+.method public static e(Ljava/io/File;)Ljava/lang/String;
+    .locals 6
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    :goto_0
+    return-object v1
+
+    :cond_0
+    :try_start_0
+    invoke-virtual {p0}, Ljava/io/File;->length()J
+
+    move-result-wide v2
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Long;->intValue()I
+
+    move-result v0
+
+    new-array v2, v0, [B
+
+    new-instance v3, Ljava/io/RandomAccessFile;
+
+    const-string v4, "r"
+
+    invoke-direct {v3, p0, v4}, Ljava/io/RandomAccessFile;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v3, v2, v4, v0}, Ljava/io/RandomAccessFile;->read([BII)I
+
+    invoke-virtual {v3}, Ljava/io/RandomAccessFile;->close()V
+
+    new-instance v3, Ljava/io/ByteArrayOutputStream;
+
+    invoke-direct {v3}, Ljava/io/ByteArrayOutputStream;-><init>()V
+
+    new-instance v0, Ljava/util/zip/InflaterInputStream;
+
+    new-instance v4, Ljava/io/ByteArrayInputStream;
+
+    invoke-direct {v4, v2}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+
+    invoke-direct {v0, v4}, Ljava/util/zip/InflaterInputStream;-><init>(Ljava/io/InputStream;)V
+
+    const/16 v2, 0x400
+
+    new-array v2, v2, [B
+
+    :goto_1
+    const/4 v4, 0x0
+
+    const/16 v5, 0x400
+
+    invoke-virtual {v0, v2, v4, v5}, Ljava/util/zip/InflaterInputStream;->read([BII)I
+
+    move-result v4
+
+    if-lez v4, :cond_1
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v3, v2, v5, v4}, Ljava/io/ByteArrayOutputStream;->write([BII)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    move-object v0, v1
+
+    :goto_2
+    move-object v1, v0
+
+    goto :goto_0
+
+    :cond_1
+    :try_start_1
+    invoke-virtual {v0}, Ljava/util/zip/InflaterInputStream;->close()V
+
+    new-instance v0, Ljava/lang/String;
+
+    invoke-virtual {v3}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+
+    move-result-object v2
+
+    invoke-direct {v0, v2}, Ljava/lang/String;-><init>([B)V
+
+    invoke-virtual {v3}, Ljava/io/ByteArrayOutputStream;->close()V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_2
 .end method
 
 .method public static e(Ljava/lang/String;)Ljava/lang/String;
@@ -1869,6 +2326,92 @@
     move v1, v0
 
     move-object v0, p0
+
+    goto :goto_0
+.end method
+
+.method public static f(J)Ljava/lang/String;
+    .locals 8
+
+    const-wide/32 v6, 0x3e800000
+
+    const-wide/32 v4, 0xfa000
+
+    const-wide/16 v2, 0x3e8
+
+    invoke-static {}, Lcom/estrongs/android/pop/utils/cl;->c()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "RU"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    cmp-long v0, p0, v6
+
+    if-ltz v0, :cond_0
+
+    const-string v0, "G\u0431"
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    cmp-long v0, p0, v4
+
+    if-ltz v0, :cond_1
+
+    const-string v0, "M\u0431"
+
+    goto :goto_0
+
+    :cond_1
+    cmp-long v0, p0, v2
+
+    if-ltz v0, :cond_2
+
+    const-string v0, "K\u0431"
+
+    goto :goto_0
+
+    :cond_2
+    const-string v0, "B"
+
+    goto :goto_0
+
+    :cond_3
+    cmp-long v0, p0, v6
+
+    if-ltz v0, :cond_4
+
+    const-string v0, "GB"
+
+    goto :goto_0
+
+    :cond_4
+    cmp-long v0, p0, v4
+
+    if-ltz v0, :cond_5
+
+    const-string v0, "MB"
+
+    goto :goto_0
+
+    :cond_5
+    cmp-long v0, p0, v2
+
+    if-ltz v0, :cond_6
+
+    const-string v0, "KB"
+
+    goto :goto_0
+
+    :cond_6
+    const-string v0, "B"
 
     goto :goto_0
 .end method
@@ -2137,7 +2680,7 @@
 
     const/4 v1, 0x1
 
-    invoke-static {p0}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {p0}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 

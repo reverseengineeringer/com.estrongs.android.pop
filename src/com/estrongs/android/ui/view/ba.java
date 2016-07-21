@@ -1,94 +1,86 @@
 package com.estrongs.android.ui.view;
 
-import android.os.Handler;
-import android.os.Message;
-import java.util.List;
+import android.content.Context;
+import android.content.res.Resources;
+import android.support.v4.view.ViewPager;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import java.lang.ref.WeakReference;
 
-class ba
-  extends Handler
+public class ba
 {
-  ba(IndicatorView paramIndicatorView) {}
+  private static final String a = ba.class.getSimpleName();
+  private bc b = null;
+  private LayoutInflater c = null;
+  private ViewPager d = null;
+  private TextView e = null;
+  private LinearLayout f = null;
+  private View g = null;
+  private ay h = null;
+  private Context i = null;
+  private int j = 0;
   
-  public void handleMessage(Message paramMessage)
+  public ba(Context paramContext)
   {
-    switch (what)
-    {
+    i = paramContext;
+    c = LayoutInflater.from(paramContext);
+    b = new bc(this, new WeakReference(paramContext));
+    d();
+    h = new ay();
+    d.setAdapter(h);
+  }
+  
+  private void a(View paramView, boolean paramBoolean)
+  {
+    if (paramView == null) {
+      return;
     }
-    int i;
-    long l;
-    int j;
-    for (;;)
+    if (paramBoolean)
     {
+      paramView.setBackgroundDrawable(i.getResources().getDrawable(2130838254));
       return;
-      try
-      {
-        i = arg1;
-        l = System.currentTimeMillis() - IndicatorView.b(a);
-        if (l >= IndicatorView.c(a))
-        {
-          a.b(i);
-          return;
-        }
-      }
-      catch (Exception paramMessage)
-      {
-        paramMessage.printStackTrace();
-        return;
-      }
-      f = (float)l;
-      f = f * 1.0F / (float)IndicatorView.c(a);
-      ((be)IndicatorView.d(a).get(i)).a(f);
-      a.invalidate();
-      sendMessage(Message.obtain(paramMessage));
-      return;
-      try
-      {
-        i = arg1;
-        l = System.currentTimeMillis() - IndicatorView.b(a);
-        if (l >= IndicatorView.c(a))
-        {
-          ((be)IndicatorView.d(a).get(i)).a(0.0F);
-          a.invalidate();
-          return;
-        }
-      }
-      catch (Exception paramMessage)
-      {
-        paramMessage.printStackTrace();
-        return;
-      }
-      f = (float)l;
-      f = f * 1.0F / (float)IndicatorView.c(a);
-      ((be)IndicatorView.d(a).get(i)).a(f);
-      a.invalidate();
-      sendMessage(Message.obtain(paramMessage));
-      return;
-      try
-      {
-        i = arg1;
-        j = arg2;
-        l = System.currentTimeMillis() - IndicatorView.b(a);
-        if (l >= IndicatorView.c(a))
-        {
-          a.b(j);
-          if (!((Boolean)obj).booleanValue()) {
-            continue;
-          }
-          a.c(i);
-        }
-      }
-      catch (Exception paramMessage)
-      {
-        paramMessage.printStackTrace();
-        return;
-      }
     }
-    float f = (float)l;
-    f = f * 1.0F / (float)IndicatorView.c(a);
-    ((be)IndicatorView.d(a).get(i)).a(1.0F - f);
-    ((be)IndicatorView.d(a).get(j)).a(f);
-    a.invalidate();
-    sendMessage(Message.obtain(paramMessage));
+    paramView.setBackgroundDrawable(i.getResources().getDrawable(2130838253));
+  }
+  
+  private void d()
+  {
+    try
+    {
+      View localView = c.inflate(2130903456, null);
+      if (localView != null)
+      {
+        d = ((ViewPager)localView.findViewById(2131625610));
+        e = ((TextView)localView.findViewById(2131625612));
+        f = ((LinearLayout)localView.findViewById(2131625611));
+        d.setOnPageChangeListener(new bb(this));
+      }
+      g = localView;
+      return;
+    }
+    catch (Exception localException)
+    {
+      localException.printStackTrace();
+    }
+  }
+  
+  public View a()
+  {
+    return g;
+  }
+  
+  public void b()
+  {
+    b.removeMessages(1);
+  }
+  
+  public void c()
+  {
+    h.a();
+    d.setAdapter(h);
+    d.setCurrentItem(1);
   }
 }
 

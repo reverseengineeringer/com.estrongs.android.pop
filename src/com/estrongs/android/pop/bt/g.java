@@ -1,7 +1,7 @@
 package com.estrongs.android.pop.bt;
 
 import android.os.Build.VERSION;
-import android.util.Log;
+import com.estrongs.android.util.l;
 import java.io.File;
 import java.util.UUID;
 
@@ -63,7 +63,7 @@ public class g
     //   33: istore_2
     //   34: aload_0
     //   35: getfield 27	com/estrongs/android/pop/bt/g:c	Z
-    //   38: ifne +59 -> 97
+    //   38: ifne +58 -> 96
     //   41: new 77	com/estrongs/android/pop/bt/i
     //   44: dup
     //   45: aload_0
@@ -86,75 +86,74 @@ public class g
     //   77: astore 4
     //   79: ldc 90
     //   81: ldc 92
-    //   83: invokestatic 97	android/util/Log:e	(Ljava/lang/String;Ljava/lang/String;)I
-    //   86: pop
-    //   87: aload 4
-    //   89: athrow
-    //   90: astore 4
-    //   92: aload_0
-    //   93: iconst_1
-    //   94: putfield 27	com/estrongs/android/pop/bt/g:c	Z
-    //   97: aload_0
-    //   98: invokevirtual 99	com/estrongs/android/pop/bt/g:c	()V
-    //   101: aload_0
-    //   102: iconst_0
-    //   103: putfield 75	com/estrongs/android/pop/bt/g:d	Z
-    //   106: return
-    //   107: astore 4
-    //   109: ldc 101
-    //   111: aload 4
-    //   113: invokevirtual 105	java/lang/Throwable:getMessage	()Ljava/lang/String;
-    //   116: invokevirtual 111	java/lang/String:equals	(Ljava/lang/Object;)Z
-    //   119: ifeq +8 -> 127
-    //   122: aload_0
-    //   123: iconst_1
-    //   124: putfield 27	com/estrongs/android/pop/bt/g:c	Z
-    //   127: aload_0
-    //   128: getfield 27	com/estrongs/android/pop/bt/g:c	Z
-    //   131: istore_3
-    //   132: iload_3
-    //   133: ifeq +13 -> 146
-    //   136: aload_0
-    //   137: invokevirtual 99	com/estrongs/android/pop/bt/g:c	()V
-    //   140: aload_0
-    //   141: iconst_0
-    //   142: putfield 75	com/estrongs/android/pop/bt/g:d	Z
-    //   145: return
-    //   146: iload_2
-    //   147: iconst_1
-    //   148: iadd
-    //   149: istore_2
-    //   150: goto -116 -> 34
-    //   153: astore 4
-    //   155: aload_0
-    //   156: invokevirtual 99	com/estrongs/android/pop/bt/g:c	()V
-    //   159: aload_0
-    //   160: iconst_0
-    //   161: putfield 75	com/estrongs/android/pop/bt/g:d	Z
-    //   164: aload 4
-    //   166: athrow
+    //   83: invokestatic 97	com/estrongs/android/util/l:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   86: aload 4
+    //   88: athrow
+    //   89: astore 4
+    //   91: aload_0
+    //   92: iconst_1
+    //   93: putfield 27	com/estrongs/android/pop/bt/g:c	Z
+    //   96: aload_0
+    //   97: invokevirtual 99	com/estrongs/android/pop/bt/g:c	()V
+    //   100: aload_0
+    //   101: iconst_0
+    //   102: putfield 75	com/estrongs/android/pop/bt/g:d	Z
+    //   105: return
+    //   106: astore 4
+    //   108: ldc 101
+    //   110: aload 4
+    //   112: invokevirtual 105	java/lang/Throwable:getMessage	()Ljava/lang/String;
+    //   115: invokevirtual 111	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   118: ifeq +8 -> 126
+    //   121: aload_0
+    //   122: iconst_1
+    //   123: putfield 27	com/estrongs/android/pop/bt/g:c	Z
+    //   126: aload_0
+    //   127: getfield 27	com/estrongs/android/pop/bt/g:c	Z
+    //   130: istore_3
+    //   131: iload_3
+    //   132: ifeq +13 -> 145
+    //   135: aload_0
+    //   136: invokevirtual 99	com/estrongs/android/pop/bt/g:c	()V
+    //   139: aload_0
+    //   140: iconst_0
+    //   141: putfield 75	com/estrongs/android/pop/bt/g:d	Z
+    //   144: return
+    //   145: iload_2
+    //   146: iconst_1
+    //   147: iadd
+    //   148: istore_2
+    //   149: goto -115 -> 34
+    //   152: astore 4
+    //   154: aload_0
+    //   155: invokevirtual 99	com/estrongs/android/pop/bt/g:c	()V
+    //   158: aload_0
+    //   159: iconst_0
+    //   160: putfield 75	com/estrongs/android/pop/bt/g:d	Z
+    //   163: aload 4
+    //   165: athrow
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	167	0	this	g
+    //   0	166	0	this	g
     //   31	25	1	i	int
-    //   33	117	2	j	int
-    //   131	2	3	bool	boolean
+    //   33	116	2	j	int
+    //   130	2	3	bool	boolean
     //   50	13	4	locali	i
-    //   77	11	4	localIOException	java.io.IOException
-    //   90	1	4	localInterruptedIOException	java.io.InterruptedIOException
-    //   107	5	4	localThrowable	Throwable
-    //   153	12	4	localObject	Object
+    //   77	10	4	localIOException	java.io.IOException
+    //   89	1	4	localInterruptedIOException	java.io.InterruptedIOException
+    //   106	5	4	localThrowable	Throwable
+    //   152	12	4	localObject	Object
     // Exception table:
     //   from	to	target	type
     //   5	25	77	java/io/IOException
-    //   56	72	90	java/io/InterruptedIOException
-    //   56	72	107	java/lang/Throwable
-    //   25	30	153	finally
-    //   34	52	153	finally
-    //   56	72	153	finally
-    //   92	97	153	finally
-    //   109	127	153	finally
-    //   127	132	153	finally
+    //   56	72	89	java/io/InterruptedIOException
+    //   56	72	106	java/lang/Throwable
+    //   25	30	152	finally
+    //   34	52	152	finally
+    //   56	72	152	finally
+    //   91	96	152	finally
+    //   108	126	152	finally
+    //   126	131	152	finally
   }
   
   public boolean b()
@@ -175,7 +174,7 @@ public class g
     }
     catch (Throwable localThrowable)
     {
-      Log.d("OBEXOppServer", "OBEX Server stop error", localThrowable);
+      l.a("OBEXOppServer", "OBEX Server stop error", localThrowable);
     }
   }
 }

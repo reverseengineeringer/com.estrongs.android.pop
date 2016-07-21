@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <GridView android:id="@id/gridview_window_newnetwork_chose" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@drawable/background_content_grid" android:stretchMode="columnWidth" android:numColumns="3" />
+    <GridView android:id="@id/gridview_window_newnetwork_chose" android:paddingBottom="@dimen/dp_20" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@drawable/background_content_grid" android:stretchMode="columnWidth" android:numColumns="3" />
 </LinearLayout>

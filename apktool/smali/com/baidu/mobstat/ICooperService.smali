@@ -15,9 +15,6 @@
 .method public abstract getAppChannel(Landroid/content/Context;)Ljava/lang/String;
 .end method
 
-.method public abstract getAppKey()Ljava/lang/String;
-.end method
-
 .method public abstract getAppKey(Landroid/content/Context;)Ljava/lang/String;
 .end method
 
@@ -28,9 +25,6 @@
 .end method
 
 .method public abstract getCUID(Landroid/content/Context;Z)Ljava/lang/String;
-.end method
-
-.method public abstract getChannel()Ljava/lang/String;
 .end method
 
 .method public abstract getDeviceId(Landroid/telephony/TelephonyManager;Landroid/content/Context;)Ljava/lang/String;
@@ -57,9 +51,6 @@
 .method public abstract getPhoneModel()Ljava/lang/String;
 .end method
 
-.method public abstract getPluginVersion()Ljava/lang/String;
-.end method
-
 .method public abstract getSecretValue(Ljava/lang/String;)Ljava/lang/String;
 .end method
 
@@ -67,13 +58,4 @@
 .end method
 
 .method public abstract installHeader(Landroid/content/Context;Lorg/json/JSONObject;)V
-.end method
-
-.method public abstract isHeadObjectIsNull()Z
-.end method
-
-.method public abstract setChannel(Ljava/lang/String;)V
-.end method
-
-.method public abstract setappKey(Ljava/lang/String;)V
 .end method

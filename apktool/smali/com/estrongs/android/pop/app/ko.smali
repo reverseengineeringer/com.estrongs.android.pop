@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/widget/bc;
+.implements Landroid/media/MediaPlayer$OnErrorListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/RecommItemImageViewer;
+.field final synthetic a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/RecommItemImageViewer;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/PopVideoPlayer;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/ko;->a:Lcom/estrongs/android/pop/app/RecommItemImageViewer;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/ko;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,104 +22,156 @@
 
 
 # virtual methods
-.method public a(I)V
-    .locals 2
+.method public onError(Landroid/media/MediaPlayer;II)Z
+    .locals 4
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ko;->a:Lcom/estrongs/android/pop/app/RecommItemImageViewer;
+    const/4 v3, 0x1
 
-    const v1, 0x7f0a0383
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/RecommItemImageViewer;->findViewById(I)Landroid/view/View;
+    invoke-static {}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->d()Ljava/lang/String;
 
     move-result-object v0
 
-    const/high16 v1, -0x61000000
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    return-void
-.end method
+    const-string v2, "onError what "
 
-.method public a(IF)V
-    .locals 0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    move-result-object v1
 
-.method public b(I)V
-    .locals 0
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    move-result-object v1
 
-.method public c(I)V
-    .locals 2
+    const-string v2, " extra "
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ko;->a:Lcom/estrongs/android/pop/app/RecommItemImageViewer;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/RecommItemImageViewer;->b(Lcom/estrongs/android/pop/app/RecommItemImageViewer;)Landroid/util/SparseArray;
+    move-result-object v1
+
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ko;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->b(Lcom/estrongs/android/pop/app/PopVideoPlayer;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    :goto_0
+    return v3
+
+    :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ko;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+
+    invoke-static {v0, v3}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->b(Lcom/estrongs/android/pop/app/PopVideoPlayer;Z)Z
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ko;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ko;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->s(Lcom/estrongs/android/pop/app/PopVideoPlayer;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ko;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->finish()V
+
+    goto :goto_0
+
+    :cond_2
+    new-instance v0, Lcom/estrongs/android/ui/dialog/cv;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/ko;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+
+    invoke-direct {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
+
+    const v1, 0x7f0803cd
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->a(I)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/ko;->a:Lcom/estrongs/android/pop/app/RecommItemImageViewer;
+    const v1, 0x7f0803cc
 
-    invoke-static {v1}, Lcom/estrongs/android/pop/app/RecommItemImageViewer;->a(Lcom/estrongs/android/pop/app/RecommItemImageViewer;)I
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->b(I)Lcom/estrongs/android/ui/dialog/cv;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/estrongs/android/pop/app/ag;->b()Z
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    if-eqz v1, :cond_3
 
-    move-result-object v0
+    const v1, 0x7f080083
 
-    check-cast v0, Landroid/widget/ImageView;
+    new-instance v2, Lcom/estrongs/android/pop/app/kp;
 
-    const v1, 0x7f02006d
+    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/kp;-><init>(Lcom/estrongs/android/pop/app/ko;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ko;->a:Lcom/estrongs/android/pop/app/RecommItemImageViewer;
+    const v1, 0x7f0801b5
 
-    invoke-static {v0, p1}, Lcom/estrongs/android/pop/app/RecommItemImageViewer;->a(Lcom/estrongs/android/pop/app/RecommItemImageViewer;I)I
+    new-instance v2, Lcom/estrongs/android/pop/app/kq;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ko;->a:Lcom/estrongs/android/pop/app/RecommItemImageViewer;
+    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/kq;-><init>(Lcom/estrongs/android/pop/app/ko;)V
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/RecommItemImageViewer;->b(Lcom/estrongs/android/pop/app/RecommItemImageViewer;)Landroid/util/SparseArray;
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
-    move-result-object v0
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cv;->c()Lcom/estrongs/android/ui/dialog/ci;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/ko;->a:Lcom/estrongs/android/pop/app/RecommItemImageViewer;
+    :goto_1
+    new-instance v1, Lcom/estrongs/android/pop/app/ks;
 
-    invoke-static {v1}, Lcom/estrongs/android/pop/app/RecommItemImageViewer;->a(Lcom/estrongs/android/pop/app/RecommItemImageViewer;)I
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ks;-><init>(Lcom/estrongs/android/pop/app/ko;)V
 
-    move-result v1
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->a(Landroid/content/DialogInterface$OnCancelListener;)Lcom/estrongs/android/ui/dialog/cv;
 
-    invoke-virtual {v0, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ko;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
-    move-result-object v0
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/PopVideoPlayer;->b:Landroid/view/View;
 
-    check-cast v0, Landroid/widget/ImageView;
+    const/16 v1, 0x8
 
-    const v1, 0x7f02006c
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+    goto :goto_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ko;->a:Lcom/estrongs/android/pop/app/RecommItemImageViewer;
+    :cond_3
+    const v1, 0x7f080226
 
-    const v1, 0x7f0a0383
+    new-instance v2, Lcom/estrongs/android/pop/app/kr;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/RecommItemImageViewer;->findViewById(I)Landroid/view/View;
+    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/kr;-><init>(Lcom/estrongs/android/pop/app/ko;)V
 
-    move-result-object v0
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->a(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
-    const/4 v1, 0x0
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/dialog/cv;->c()Lcom/estrongs/android/ui/dialog/ci;
 
-    return-void
-.end method
-
-.method public d(I)V
-    .locals 0
-
-    return-void
+    goto :goto_1
 .end method

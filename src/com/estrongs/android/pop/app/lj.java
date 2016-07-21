@@ -6,7 +6,7 @@ import android.content.DialogInterface.OnDismissListener;
 class lj
   implements DialogInterface.OnDismissListener
 {
-  lj(ShowDialogActivity paramShowDialogActivity) {}
+  lj(SaveToESActivity paramSaveToESActivity) {}
   
   public void onDismiss(DialogInterface paramDialogInterface)
   {

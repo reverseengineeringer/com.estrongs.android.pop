@@ -1,29 +1,18 @@
 package com.estrongs.fs.b;
 
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import android.content.Intent;
-import android.net.Uri;
-import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.pop.view.utils.AppRunner;
 
 class bf
   implements DialogInterface.OnClickListener
 {
-  bf(bb parambb) {}
+  bf(bd parambd) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
     paramDialogInterface.dismiss();
-    paramDialogInterface = ESActivity.A();
-    if (paramDialogInterface == null) {
-      return;
-    }
-    Intent localIntent = new Intent(paramDialogInterface, FileExplorerActivity.class);
-    localIntent.addFlags(603979776);
-    localIntent.setData(Uri.parse(Uri.encode(ba.d(a.a), "/")));
-    paramDialogInterface.startActivity(localIntent);
+    AppRunner.a(bc.b(a.a), null, bc.d(a.a) + bc.c(a.a));
   }
 }
 

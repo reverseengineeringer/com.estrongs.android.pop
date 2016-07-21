@@ -1,19 +1,13 @@
-.class Lcom/estrongs/android/pop/app/a/g;
+.class final Lcom/estrongs/android/pop/app/a/g;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
-
-
-# instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/a/e;
+.implements Lcom/dianxinos/lockscreen/h;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/a/e;)V
+.method constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/a/g;->a:Lcom/estrongs/android/pop/app/a/e;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,59 +16,67 @@
 
 
 # virtual methods
-.method public onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 3
+.method public a(Ljava/lang/Boolean;)V
+    .locals 4
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/a/g;->a:Lcom/estrongs/android/pop/app/a/e;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/a/e;->a(Lcom/estrongs/android/pop/app/a/e;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
+    move-result v0
 
-    move-result-object v0
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->w()Lcom/estrongs/android/pop/app/a/ak;
+    :try_start_0
+    const-string v0, "close_charge"
 
-    move-result-object v0
+    new-instance v1, Lorg/json/JSONObject;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/a/ak;->b:Ljava/lang/String;
+    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->ba(Ljava/lang/String;)Z
+    const-string v2, "event"
 
-    move-result v1
+    invoke-virtual {v1, v2, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    if-nez v1, :cond_0
+    const-string v2, "positon"
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bq(Ljava/lang/String;)Ljava/lang/String;
+    const-string v3, "sdk"
 
-    move-result-object v0
+    invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    :cond_0
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-static {}, Lcom/estrongs/fs/d;->a()Lcom/estrongs/fs/d;
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
 
     move-result-object v2
 
-    invoke-virtual {v2, v0}, Lcom/estrongs/fs/d;->j(Ljava/lang/String;)Lcom/estrongs/fs/h;
+    invoke-static {v2}, Lcom/estrongs/android/j/c;->a(Landroid/content/Context;)Lcom/estrongs/android/j/c;
+
+    move-result-object v2
+
+    const-string v3, "charge"
+
+    invoke-virtual {v2, v3, v0, v1}, Lcom/estrongs/android/j/c;->a(Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_0
+    :goto_0
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/a/g;->a:Lcom/estrongs/android/pop/app/a/e;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/a/e;->a(Lcom/estrongs/android/pop/app/a/e;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->ae()Lcom/estrongs/android/ui/navigation/m;
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/pop/utils/aj;->b(Lcom/estrongs/android/pop/esclasses/ESActivity;Ljava/util/List;)V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/navigation/m;->d()V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/a/g;->a:Lcom/estrongs/android/pop/app/a/e;
+    :cond_1
+    return-void
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/a/e;->d()V
+    :catch_0
+    move-exception v0
 
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    return v0
+    goto :goto_0
 .end method

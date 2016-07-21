@@ -1,16 +1,29 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.view.View;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.fs.h;
 
 class hi
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
-  hi(hc paramhc) {}
+  hi(hg paramhg, h paramh) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void run()
   {
-    paramDialogInterface.dismiss();
+    if (a == null)
+    {
+      if (b.a.isShowing()) {
+        b.a.dismiss();
+      }
+      ak.a(hf.b(b.c), 2131230822, 1);
+    }
+    while (!b.a.isShowing()) {
+      return;
+    }
+    b.b.setVisibility(8);
+    hf.a(b.c, new hq(hf.b(b.c), a));
+    b.c.b();
   }
 }
 

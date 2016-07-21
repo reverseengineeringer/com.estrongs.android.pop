@@ -5,13 +5,13 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Environment;
 import android.os.StatFs;
-import android.util.Log;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.f;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.e;
+import com.estrongs.android.util.l;
 import com.estrongs.fs.b.ab;
 import com.estrongs.fs.d;
-import com.estrongs.fs.impl.local.h;
+import com.estrongs.fs.impl.local.i;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -32,7 +32,7 @@ public class c
   private File i = null;
   private boolean j = false;
   private boolean k = false;
-  private String l = com.estrongs.android.pop.a.d;
+  private String l = com.estrongs.android.pop.a.f;
   
   public c(Activity paramActivity, Uri paramUri)
   {
@@ -42,9 +42,9 @@ public class c
       j = true;
     }
     if (j) {}
-    for (e = a(paramActivity.getContentResolver(), paramUri);; e = am.d(Uri.decode(d)))
+    for (e = a(paramActivity.getContentResolver(), paramUri);; e = ap.d(Uri.decode(d)))
     {
-      k = am.bb(d);
+      k = ap.bm(d);
       return;
     }
   }
@@ -74,7 +74,7 @@ public class c
     //   36: new 113	java/lang/StringBuilder
     //   39: dup
     //   40: invokespecial 114	java/lang/StringBuilder:<init>	()V
-    //   43: getstatic 60	com/estrongs/android/pop/a:d	Ljava/lang/String;
+    //   43: getstatic 60	com/estrongs/android/pop/a:f	Ljava/lang/String;
     //   46: invokevirtual 118	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   49: ldc 120
     //   51: invokevirtual 118	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -92,7 +92,7 @@ public class c
     //   80: new 113	java/lang/StringBuilder
     //   83: dup
     //   84: invokespecial 114	java/lang/StringBuilder:<init>	()V
-    //   87: getstatic 60	com/estrongs/android/pop/a:d	Ljava/lang/String;
+    //   87: getstatic 60	com/estrongs/android/pop/a:f	Ljava/lang/String;
     //   90: invokevirtual 118	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   93: ldc 120
     //   95: invokevirtual 118	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -423,17 +423,17 @@ public class c
       {
         localObject1 = a.a(c, g);
         if ((localObject1 != null) && (((a)localObject1).f())) {
-          h.a(c, ((a)localObject1).g(), null);
+          i.a(c, ((a)localObject1).g(), null);
         }
         ((a)localObject1).c();
         localObject1 = a.a(c, h);
         if ((localObject1 != null) && (((a)localObject1).f())) {
-          h.a(c, ((a)localObject1).g(), null);
+          i.a(c, ((a)localObject1).g(), null);
         }
         ((a)localObject1).c();
         localObject1 = a.a(c, i);
         if ((localObject1 != null) && (((a)localObject1).f())) {
-          h.a(c, ((a)localObject1).g(), null);
+          i.a(c, ((a)localObject1).g(), null);
         }
         ((a)localObject1).c();
         return;
@@ -451,8 +451,8 @@ public class c
   {
     try
     {
-      if (am.bl(g.getAbsolutePath())) {}
-      for (Object localObject = new File(am.bD(g.getAbsolutePath()));; localObject = Environment.getRootDirectory())
+      if (ap.bC(g.getAbsolutePath())) {}
+      for (Object localObject = new File(ap.bU(g.getAbsolutePath()));; localObject = Environment.getRootDirectory())
       {
         localObject = new StatFs(((File)localObject).getAbsolutePath());
         long l1 = ((StatFs)localObject).getBlockSize();
@@ -469,7 +469,7 @@ public class c
     // Byte code:
     //   0: aload_0
     //   1: getfield 57	com/estrongs/android/pop/app/editor/c:k	Z
-    //   4: ifeq +516 -> 520
+    //   4: ifeq +515 -> 519
     //   7: aload_0
     //   8: getfield 41	com/estrongs/android/pop/app/editor/c:c	Landroid/content/Context;
     //   11: invokestatic 211	com/estrongs/fs/d:a	(Landroid/content/Context;)Lcom/estrongs/fs/d;
@@ -550,7 +550,7 @@ public class c
     //   177: invokevirtual 282	com/estrongs/android/pop/app/editor/c:b	()J
     //   180: lload_3
     //   181: lcmp
-    //   182: ifgt +191 -> 373
+    //   182: ifgt +190 -> 372
     //   185: getstatic 30	com/estrongs/android/pop/app/editor/c:a	Ljava/lang/String;
     //   188: new 113	java/lang/StringBuilder
     //   191: dup
@@ -565,271 +565,270 @@ public class c
     //   214: lload_3
     //   215: invokevirtual 287	java/lang/StringBuilder:append	(J)Ljava/lang/StringBuilder;
     //   218: invokevirtual 121	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   221: invokestatic 294	android/util/Log:e	(Ljava/lang/String;Ljava/lang/String;)I
-    //   224: pop
-    //   225: new 268	java/io/IOException
-    //   228: dup
-    //   229: aload_0
-    //   230: getfield 41	com/estrongs/android/pop/app/editor/c:c	Landroid/content/Context;
-    //   233: ldc_w 295
-    //   236: invokevirtual 296	android/content/Context:getString	(I)Ljava/lang/String;
-    //   239: invokespecial 297	java/io/IOException:<init>	(Ljava/lang/String;)V
-    //   242: athrow
-    //   243: astore 8
-    //   245: aconst_null
-    //   246: astore 6
-    //   248: aload 6
-    //   250: astore 7
-    //   252: aload 5
-    //   254: astore 9
-    //   256: aload 8
-    //   258: invokevirtual 167	java/lang/Exception:printStackTrace	()V
-    //   261: aload 6
-    //   263: astore 7
-    //   265: aload 5
-    //   267: astore 9
-    //   269: aload_0
-    //   270: getfield 49	com/estrongs/android/pop/app/editor/c:g	Ljava/io/File;
-    //   273: ifnull +37 -> 310
-    //   276: aload 6
-    //   278: astore 7
-    //   280: aload 5
-    //   282: astore 9
-    //   284: aload_0
-    //   285: getfield 49	com/estrongs/android/pop/app/editor/c:g	Ljava/io/File;
-    //   288: invokevirtual 128	java/io/File:exists	()Z
-    //   291: ifeq +19 -> 310
-    //   294: aload 6
-    //   296: astore 7
-    //   298: aload 5
-    //   300: astore 9
-    //   302: aload_0
-    //   303: getfield 49	com/estrongs/android/pop/app/editor/c:g	Ljava/io/File;
-    //   306: invokevirtual 134	java/io/File:delete	()Z
-    //   309: pop
-    //   310: aload 6
-    //   312: astore 7
-    //   314: aload 5
-    //   316: astore 9
-    //   318: aload_0
-    //   319: aconst_null
-    //   320: putfield 49	com/estrongs/android/pop/app/editor/c:g	Ljava/io/File;
-    //   323: aload 6
-    //   325: astore 7
-    //   327: aload 5
-    //   329: astore 9
-    //   331: new 268	java/io/IOException
-    //   334: dup
-    //   335: aload 8
-    //   337: invokevirtual 300	java/lang/Exception:getMessage	()Ljava/lang/String;
-    //   340: invokespecial 297	java/io/IOException:<init>	(Ljava/lang/String;)V
-    //   343: athrow
-    //   344: astore 6
-    //   346: aload 9
-    //   348: astore 5
-    //   350: aload 5
-    //   352: ifnull +8 -> 360
-    //   355: aload 5
-    //   357: invokevirtual 170	java/io/InputStream:close	()V
-    //   360: aload 7
-    //   362: ifnull +8 -> 370
-    //   365: aload 7
-    //   367: invokevirtual 301	java/io/FileOutputStream:close	()V
-    //   370: aload 6
-    //   372: athrow
-    //   373: new 149	java/io/FileOutputStream
-    //   376: dup
-    //   377: aload 6
-    //   379: invokespecial 302	java/io/FileOutputStream:<init>	(Ljava/lang/String;)V
-    //   382: astore 6
-    //   384: aload 6
-    //   386: astore 7
-    //   388: aload 5
-    //   390: astore 9
-    //   392: sipush 4096
-    //   395: newarray <illegal type>
-    //   397: astore 8
-    //   399: iconst_0
-    //   400: istore_1
-    //   401: iload_1
-    //   402: iconst_m1
-    //   403: if_icmpeq +52 -> 455
-    //   406: aload 6
-    //   408: astore 7
-    //   410: aload 5
-    //   412: astore 9
-    //   414: aload 5
-    //   416: aload 8
-    //   418: invokevirtual 158	java/io/InputStream:read	([B)I
-    //   421: istore_2
-    //   422: iload_2
-    //   423: istore_1
-    //   424: iload_2
-    //   425: ifle -24 -> 401
-    //   428: aload 6
-    //   430: astore 7
-    //   432: aload 5
-    //   434: astore 9
-    //   436: aload 6
-    //   438: aload 8
-    //   440: iconst_0
-    //   441: iload_2
-    //   442: invokevirtual 303	java/io/FileOutputStream:write	([BII)V
-    //   445: iload_2
-    //   446: istore_1
-    //   447: goto -46 -> 401
-    //   450: astore 8
-    //   452: goto -204 -> 248
-    //   455: aload 5
-    //   457: ifnull +8 -> 465
-    //   460: aload 5
-    //   462: invokevirtual 170	java/io/InputStream:close	()V
-    //   465: aload 6
-    //   467: ifnull +8 -> 475
-    //   470: aload 6
-    //   472: invokevirtual 301	java/io/FileOutputStream:close	()V
-    //   475: aload_0
-    //   476: getfield 49	com/estrongs/android/pop/app/editor/c:g	Ljava/io/File;
-    //   479: areturn
-    //   480: astore 5
-    //   482: aload 5
-    //   484: invokevirtual 275	java/io/IOException:printStackTrace	()V
-    //   487: goto -22 -> 465
-    //   490: astore 5
-    //   492: aload 5
-    //   494: invokevirtual 275	java/io/IOException:printStackTrace	()V
-    //   497: goto -22 -> 475
-    //   500: astore 5
-    //   502: aload 5
-    //   504: invokevirtual 275	java/io/IOException:printStackTrace	()V
-    //   507: goto -147 -> 360
-    //   510: astore 5
-    //   512: aload 5
-    //   514: invokevirtual 275	java/io/IOException:printStackTrace	()V
-    //   517: goto -147 -> 370
-    //   520: aload_0
-    //   521: getfield 43	com/estrongs/android/pop/app/editor/c:d	Ljava/lang/String;
-    //   524: invokestatic 141	android/net/Uri:parse	(Ljava/lang/String;)Landroid/net/Uri;
-    //   527: astore 5
-    //   529: aload_0
-    //   530: getfield 55	com/estrongs/android/pop/app/editor/c:j	Z
-    //   533: ifeq +18 -> 551
+    //   221: invokestatic 294	com/estrongs/android/util/l:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   224: new 268	java/io/IOException
+    //   227: dup
+    //   228: aload_0
+    //   229: getfield 41	com/estrongs/android/pop/app/editor/c:c	Landroid/content/Context;
+    //   232: ldc_w 295
+    //   235: invokevirtual 296	android/content/Context:getString	(I)Ljava/lang/String;
+    //   238: invokespecial 297	java/io/IOException:<init>	(Ljava/lang/String;)V
+    //   241: athrow
+    //   242: astore 8
+    //   244: aconst_null
+    //   245: astore 6
+    //   247: aload 6
+    //   249: astore 7
+    //   251: aload 5
+    //   253: astore 9
+    //   255: aload 8
+    //   257: invokevirtual 167	java/lang/Exception:printStackTrace	()V
+    //   260: aload 6
+    //   262: astore 7
+    //   264: aload 5
+    //   266: astore 9
+    //   268: aload_0
+    //   269: getfield 49	com/estrongs/android/pop/app/editor/c:g	Ljava/io/File;
+    //   272: ifnull +37 -> 309
+    //   275: aload 6
+    //   277: astore 7
+    //   279: aload 5
+    //   281: astore 9
+    //   283: aload_0
+    //   284: getfield 49	com/estrongs/android/pop/app/editor/c:g	Ljava/io/File;
+    //   287: invokevirtual 128	java/io/File:exists	()Z
+    //   290: ifeq +19 -> 309
+    //   293: aload 6
+    //   295: astore 7
+    //   297: aload 5
+    //   299: astore 9
+    //   301: aload_0
+    //   302: getfield 49	com/estrongs/android/pop/app/editor/c:g	Ljava/io/File;
+    //   305: invokevirtual 134	java/io/File:delete	()Z
+    //   308: pop
+    //   309: aload 6
+    //   311: astore 7
+    //   313: aload 5
+    //   315: astore 9
+    //   317: aload_0
+    //   318: aconst_null
+    //   319: putfield 49	com/estrongs/android/pop/app/editor/c:g	Ljava/io/File;
+    //   322: aload 6
+    //   324: astore 7
+    //   326: aload 5
+    //   328: astore 9
+    //   330: new 268	java/io/IOException
+    //   333: dup
+    //   334: aload 8
+    //   336: invokevirtual 300	java/lang/Exception:getMessage	()Ljava/lang/String;
+    //   339: invokespecial 297	java/io/IOException:<init>	(Ljava/lang/String;)V
+    //   342: athrow
+    //   343: astore 6
+    //   345: aload 9
+    //   347: astore 5
+    //   349: aload 5
+    //   351: ifnull +8 -> 359
+    //   354: aload 5
+    //   356: invokevirtual 170	java/io/InputStream:close	()V
+    //   359: aload 7
+    //   361: ifnull +8 -> 369
+    //   364: aload 7
+    //   366: invokevirtual 301	java/io/FileOutputStream:close	()V
+    //   369: aload 6
+    //   371: athrow
+    //   372: new 149	java/io/FileOutputStream
+    //   375: dup
+    //   376: aload 6
+    //   378: invokespecial 302	java/io/FileOutputStream:<init>	(Ljava/lang/String;)V
+    //   381: astore 6
+    //   383: aload 6
+    //   385: astore 7
+    //   387: aload 5
+    //   389: astore 9
+    //   391: sipush 4096
+    //   394: newarray <illegal type>
+    //   396: astore 8
+    //   398: iconst_0
+    //   399: istore_1
+    //   400: iload_1
+    //   401: iconst_m1
+    //   402: if_icmpeq +52 -> 454
+    //   405: aload 6
+    //   407: astore 7
+    //   409: aload 5
+    //   411: astore 9
+    //   413: aload 5
+    //   415: aload 8
+    //   417: invokevirtual 158	java/io/InputStream:read	([B)I
+    //   420: istore_2
+    //   421: iload_2
+    //   422: istore_1
+    //   423: iload_2
+    //   424: ifle -24 -> 400
+    //   427: aload 6
+    //   429: astore 7
+    //   431: aload 5
+    //   433: astore 9
+    //   435: aload 6
+    //   437: aload 8
+    //   439: iconst_0
+    //   440: iload_2
+    //   441: invokevirtual 303	java/io/FileOutputStream:write	([BII)V
+    //   444: iload_2
+    //   445: istore_1
+    //   446: goto -46 -> 400
+    //   449: astore 8
+    //   451: goto -204 -> 247
+    //   454: aload 5
+    //   456: ifnull +8 -> 464
+    //   459: aload 5
+    //   461: invokevirtual 170	java/io/InputStream:close	()V
+    //   464: aload 6
+    //   466: ifnull +8 -> 474
+    //   469: aload 6
+    //   471: invokevirtual 301	java/io/FileOutputStream:close	()V
+    //   474: aload_0
+    //   475: getfield 49	com/estrongs/android/pop/app/editor/c:g	Ljava/io/File;
+    //   478: areturn
+    //   479: astore 5
+    //   481: aload 5
+    //   483: invokevirtual 275	java/io/IOException:printStackTrace	()V
+    //   486: goto -22 -> 464
+    //   489: astore 5
+    //   491: aload 5
+    //   493: invokevirtual 275	java/io/IOException:printStackTrace	()V
+    //   496: goto -22 -> 474
+    //   499: astore 5
+    //   501: aload 5
+    //   503: invokevirtual 275	java/io/IOException:printStackTrace	()V
+    //   506: goto -147 -> 359
+    //   509: astore 5
+    //   511: aload 5
+    //   513: invokevirtual 275	java/io/IOException:printStackTrace	()V
+    //   516: goto -147 -> 369
+    //   519: aload_0
+    //   520: getfield 43	com/estrongs/android/pop/app/editor/c:d	Ljava/lang/String;
+    //   523: invokestatic 141	android/net/Uri:parse	(Ljava/lang/String;)Landroid/net/Uri;
+    //   526: astore 5
+    //   528: aload_0
+    //   529: getfield 55	com/estrongs/android/pop/app/editor/c:j	Z
+    //   532: ifeq +18 -> 550
+    //   535: aload_0
     //   536: aload_0
     //   537: aload_0
-    //   538: aload_0
-    //   539: getfield 43	com/estrongs/android/pop/app/editor/c:d	Ljava/lang/String;
-    //   542: invokespecial 305	com/estrongs/android/pop/app/editor/c:a	(Ljava/lang/String;)Ljava/io/File;
-    //   545: putfield 49	com/estrongs/android/pop/app/editor/c:g	Ljava/io/File;
-    //   548: goto -73 -> 475
-    //   551: aload_0
-    //   552: new 111	java/io/File
-    //   555: dup
-    //   556: aload 5
-    //   558: invokevirtual 308	android/net/Uri:getPath	()Ljava/lang/String;
-    //   561: invokespecial 124	java/io/File:<init>	(Ljava/lang/String;)V
-    //   564: putfield 49	com/estrongs/android/pop/app/editor/c:g	Ljava/io/File;
-    //   567: goto -92 -> 475
-    //   570: astore 6
-    //   572: aconst_null
-    //   573: astore 5
-    //   575: aconst_null
-    //   576: astore 7
-    //   578: goto -228 -> 350
-    //   581: astore 6
-    //   583: aconst_null
-    //   584: astore 7
-    //   586: goto -236 -> 350
-    //   589: astore 8
-    //   591: aconst_null
-    //   592: astore 5
-    //   594: aconst_null
-    //   595: astore 6
-    //   597: goto -349 -> 248
+    //   538: getfield 43	com/estrongs/android/pop/app/editor/c:d	Ljava/lang/String;
+    //   541: invokespecial 305	com/estrongs/android/pop/app/editor/c:a	(Ljava/lang/String;)Ljava/io/File;
+    //   544: putfield 49	com/estrongs/android/pop/app/editor/c:g	Ljava/io/File;
+    //   547: goto -73 -> 474
+    //   550: aload_0
+    //   551: new 111	java/io/File
+    //   554: dup
+    //   555: aload 5
+    //   557: invokevirtual 308	android/net/Uri:getPath	()Ljava/lang/String;
+    //   560: invokespecial 124	java/io/File:<init>	(Ljava/lang/String;)V
+    //   563: putfield 49	com/estrongs/android/pop/app/editor/c:g	Ljava/io/File;
+    //   566: goto -92 -> 474
+    //   569: astore 6
+    //   571: aconst_null
+    //   572: astore 5
+    //   574: aconst_null
+    //   575: astore 7
+    //   577: goto -228 -> 349
+    //   580: astore 6
+    //   582: aconst_null
+    //   583: astore 7
+    //   585: goto -236 -> 349
+    //   588: astore 8
+    //   590: aconst_null
+    //   591: astore 5
+    //   593: aconst_null
+    //   594: astore 6
+    //   596: goto -349 -> 247
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	600	0	this	c
-    //   400	47	1	m	int
-    //   421	25	2	n	int
+    //   0	599	0	this	c
+    //   399	47	1	m	int
+    //   420	25	2	n	int
     //   175	40	3	l1	long
     //   21	13	5	localInputStream	InputStream
     //   52	3	5	localIOException1	IOException
-    //   62	266	5	localIOException2	IOException
-    //   348	113	5	localObject1	Object
-    //   480	3	5	localIOException3	IOException
-    //   490	3	5	localIOException4	IOException
-    //   500	3	5	localIOException5	IOException
-    //   510	3	5	localIOException6	IOException
-    //   527	66	5	localUri	Uri
-    //   82	242	6	localObject2	Object
-    //   344	34	6	str	String
-    //   382	89	6	localFileOutputStream	java.io.FileOutputStream
-    //   570	1	6	localObject3	Object
-    //   581	1	6	localObject4	Object
-    //   595	1	6	localObject5	Object
-    //   250	335	7	localObject6	Object
-    //   243	93	8	localException1	Exception
-    //   397	42	8	arrayOfByte	byte[]
-    //   450	1	8	localException2	Exception
-    //   589	1	8	localException3	Exception
-    //   254	181	9	localObject7	Object
+    //   62	265	5	localIOException2	IOException
+    //   347	113	5	localObject1	Object
+    //   479	3	5	localIOException3	IOException
+    //   489	3	5	localIOException4	IOException
+    //   499	3	5	localIOException5	IOException
+    //   509	3	5	localIOException6	IOException
+    //   526	66	5	localUri	Uri
+    //   82	241	6	localObject2	Object
+    //   343	34	6	str	String
+    //   381	89	6	localFileOutputStream	java.io.FileOutputStream
+    //   569	1	6	localObject3	Object
+    //   580	1	6	localObject4	Object
+    //   594	1	6	localObject5	Object
+    //   249	335	7	localObject6	Object
+    //   242	93	8	localException1	Exception
+    //   396	42	8	arrayOfByte	byte[]
+    //   449	1	8	localException2	Exception
+    //   588	1	8	localException3	Exception
+    //   253	181	9	localObject7	Object
     // Exception table:
     //   from	to	target	type
     //   33	38	52	java/io/IOException
     //   42	50	62	java/io/IOException
-    //   71	98	243	java/lang/Exception
-    //   98	161	243	java/lang/Exception
-    //   161	243	243	java/lang/Exception
-    //   373	384	243	java/lang/Exception
-    //   256	261	344	finally
-    //   269	276	344	finally
-    //   284	294	344	finally
-    //   302	310	344	finally
-    //   318	323	344	finally
-    //   331	344	344	finally
-    //   392	399	344	finally
-    //   414	422	344	finally
-    //   436	445	344	finally
-    //   392	399	450	java/lang/Exception
-    //   414	422	450	java/lang/Exception
-    //   436	445	450	java/lang/Exception
-    //   460	465	480	java/io/IOException
-    //   470	475	490	java/io/IOException
-    //   355	360	500	java/io/IOException
-    //   365	370	510	java/io/IOException
-    //   7	23	570	finally
-    //   71	98	581	finally
-    //   98	161	581	finally
-    //   161	243	581	finally
-    //   373	384	581	finally
-    //   7	23	589	java/lang/Exception
+    //   71	98	242	java/lang/Exception
+    //   98	161	242	java/lang/Exception
+    //   161	242	242	java/lang/Exception
+    //   372	383	242	java/lang/Exception
+    //   255	260	343	finally
+    //   268	275	343	finally
+    //   283	293	343	finally
+    //   301	309	343	finally
+    //   317	322	343	finally
+    //   330	343	343	finally
+    //   391	398	343	finally
+    //   413	421	343	finally
+    //   435	444	343	finally
+    //   391	398	449	java/lang/Exception
+    //   413	421	449	java/lang/Exception
+    //   435	444	449	java/lang/Exception
+    //   459	464	479	java/io/IOException
+    //   469	474	489	java/io/IOException
+    //   354	359	499	java/io/IOException
+    //   364	369	509	java/io/IOException
+    //   7	23	569	finally
+    //   71	98	580	finally
+    //   98	161	580	finally
+    //   161	242	580	finally
+    //   372	383	580	finally
+    //   7	23	588	java/lang/Exception
   }
   
   public File d()
   {
     if (g == null)
     {
-      Log.e(a, "source file is not created");
+      l.e(a, "source file is not created");
       throw new IOException("source file is not created");
     }
     Object localObject;
     if (h == null)
     {
       if (!a.a(g.getAbsolutePath())) {
-        break label237;
+        break label236;
       }
       if (!Environment.getExternalStorageState().equals("mounted")) {
-        break label133;
+        break label132;
       }
-      localObject = new File(com.estrongs.android.pop.a.d);
+      localObject = new File(com.estrongs.android.pop.a.f);
       if (!((File)localObject).exists()) {
         ((File)localObject).mkdirs();
       }
-      h = new File(com.estrongs.android.pop.a.d + "/" + e + ".tmp");
+      h = new File(com.estrongs.android.pop.a.f + "/" + e + ".tmp");
     }
     for (;;)
     {
       return h;
-      label133:
+      label132:
       localObject = g.getParent() + "/" + e + ".tmp";
       File localFile = c.getFilesDir();
       if (localFile != null) {
@@ -837,7 +836,7 @@ public class c
       }
       h = new File((String)localObject);
       continue;
-      label237:
+      label236:
       h = new File(g.getParent() + "/" + e + ".tmp");
     }
   }
@@ -1036,18 +1035,18 @@ public class c
   {
     if (g == null)
     {
-      Log.e(a, "source file is not created");
+      l.e(a, "source file is not created");
       throw new IOException("source file is not created");
     }
     a locala = a.a(c, g, "r");
     InputStream localInputStream = locala.d();
-    String str = f.a(localInputStream);
+    String str = e.a(localInputStream);
     localInputStream.close();
     locala.c();
     if ((str != null) && (Charset.isSupported(str))) {
       return str;
     }
-    return ad.a(c).w(f.a());
+    return ad.a(c).w(e.a());
   }
   
   public long h()
@@ -1099,15 +1098,10 @@ public class c
   
   public boolean i()
   {
-    return d.contains(com.estrongs.android.pop.a.j + "/");
+    return d.contains(com.estrongs.android.pop.a.l + "/");
   }
   
-  public boolean j()
-  {
-    return j;
-  }
-  
-  public void k()
+  public void j()
   {
     if ((j) && (g != null)) {
       g.delete();

@@ -1,25 +1,31 @@
 package com.estrongs.android.pop.app;
 
-import android.content.Intent;
-import android.preference.PreferenceScreen;
+import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.pop.ad;
 
 class hd
-  implements Runnable
+  implements Preference.OnPreferenceChangeListener
 {
   hd(PopPreferenceActivity paramPopPreferenceActivity) {}
   
-  public void run()
+  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
   {
-    Object localObject = a.getIntent();
-    if (localObject != null)
+    if (((Boolean)paramObject).booleanValue())
     {
-      localObject = ((Intent)localObject).getStringExtra("category");
-      if (localObject != null)
+      paramPreference = ad.a(a).H();
+      if ((paramPreference == null) || (paramPreference.length() == 0))
       {
-        localObject = (PreferenceScreen)a.findPreference((CharSequence)localObject);
-        a.setPreferenceScreen((PreferenceScreen)localObject);
+        a.showDialog(111);
+        return false;
       }
+      a.p.setEnabled(true);
+      FexApplication.a().d(((Boolean)paramObject).booleanValue());
+      return true;
     }
+    a.showDialog(112);
+    return false;
   }
 }
 

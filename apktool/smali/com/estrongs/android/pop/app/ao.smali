@@ -1,33 +1,28 @@
 .class Lcom/estrongs/android/pop/app/ao;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/content/DialogInterface$OnDismissListener;
-
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/DocumentExtModifyList;
+.field a:Landroid/widget/ImageView;
+
+.field b:Landroid/widget/TextView;
+
+.field c:Landroid/widget/ImageView;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/DocumentExtModifyList;)V
+.method private constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/ao;->a:Lcom/estrongs/android/pop/app/DocumentExtModifyList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method synthetic constructor <init>(Lcom/estrongs/android/pop/app/aj;)V
+    .locals 0
 
-# virtual methods
-.method public onDismiss(Landroid/content/DialogInterface;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ao;->a:Lcom/estrongs/android/pop/app/DocumentExtModifyList;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/DocumentExtModifyList;->b(Lcom/estrongs/android/pop/app/DocumentExtModifyList;)V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/ao;-><init>()V
 
     return-void
 .end method

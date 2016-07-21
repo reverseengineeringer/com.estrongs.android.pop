@@ -1,19 +1,19 @@
 package com.estrongs.android.ui.preference.fragments;
 
 import android.preference.Preference;
-import android.preference.Preference.OnPreferenceClickListener;
-import com.estrongs.android.pop.view.utils.n;
-import com.estrongs.android.ui.view.ag;
+import android.preference.Preference.OnPreferenceChangeListener;
+import com.estrongs.android.pop.view.utils.RemoteSynchronizer;
 
 class t
-  implements Preference.OnPreferenceClickListener
+  implements Preference.OnPreferenceChangeListener
 {
-  t(CleanPreferenceFragment paramCleanPreferenceFragment) {}
+  t(BackupPreferenceFragment paramBackupPreferenceFragment) {}
   
-  public boolean onPreferenceClick(Preference paramPreference)
+  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
   {
-    n.a(a.getActivity());
-    ag.a(a.getActivity(), 2131427976, 0);
+    if (!Boolean.valueOf(paramObject.toString()).booleanValue()) {
+      RemoteSynchronizer.f();
+    }
     return true;
   }
 }

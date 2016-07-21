@@ -1,17 +1,23 @@
 package com.estrongs.android.ui.dialog;
 
-import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
+import com.estrongs.a.a;
+import com.estrongs.a.a.p;
+import com.estrongs.android.util.bk;
 
 class br
-  implements CompoundButton.OnCheckedChangeListener
+  implements p
 {
-  br(bj parambj) {}
+  br(bl parambl, boolean paramBoolean, int paramInt) {}
   
-  public void onCheckedChanged(CompoundButton paramCompoundButton, boolean paramBoolean)
+  public void a(a parama, int paramInt1, int paramInt2)
   {
-    a.f = paramBoolean;
-    a.c.notifyDataSetChanged();
+    if (paramInt2 == 4)
+    {
+      if (a) {
+        bl.a(c, b);
+      }
+      bk.a(new bs(this));
+    }
   }
 }
 

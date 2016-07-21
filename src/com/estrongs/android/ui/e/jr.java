@@ -1,37 +1,30 @@
 package com.estrongs.android.ui.e;
 
-import android.content.Context;
-import android.view.View;
-import android.view.View.OnLongClickListener;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.view.a.a;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.view.cr;
 
 class jr
-  implements View.OnLongClickListener
+  implements MenuItem.OnMenuItemClickListener
 {
-  jr(jp paramjp) {}
+  jr(jq paramjq) {}
   
-  public boolean onLongClick(View paramView)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    int i = ((Integer)paramView.getTag()).intValue();
-    a locala = a.b(i);
-    if (locala != null)
-    {
-      if (locala.d() != null) {
-        break label76;
-      }
-      CharSequence localCharSequence = locala.getTitle();
-      paramView = localCharSequence;
-      if (localCharSequence == null) {
-        paramView = jp.b(a).getString(locala.a());
-      }
-      ag.a(jp.b(a), paramView, 0);
+    if (!jq.a(a).V()) {
+      jq.a(a).d(2131231914);
     }
     for (;;)
     {
       return true;
-      label76:
-      locala.e();
+      jq.a(a).a(jq.a(a).Q());
+      jq.a(a).U();
+      paramMenuItem = jq.a(a).O();
+      if (paramMenuItem != null) {
+        paramMenuItem.a(false);
+      }
+      jq.a(a).i();
     }
   }
 }

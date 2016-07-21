@@ -1,32 +1,31 @@
 package com.estrongs.android.ui.e;
 
-import android.content.Context;
-import android.view.KeyEvent;
-import android.widget.LinearLayout;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.pop.app.PopAudioPlayer;
+import com.estrongs.android.pop.app.c.j;
+import com.estrongs.android.ui.dialog.er;
+import java.util.List;
 
 class ix
-  extends LinearLayout
+  implements DialogInterface.OnClickListener
 {
-  ix(iw paramiw, Context paramContext)
-  {
-    super(paramContext);
-  }
+  ix(iv paramiv, List paramList) {}
   
-  public boolean dispatchKeyEvent(KeyEvent paramKeyEvent)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (paramKeyEvent.getKeyCode() == 4) {
-      a.d();
+    List localList = iq.a(b.a).A();
+    if (paramInt < a.size()) {
+      iq.a(b.a).a(localList, (j)a.get(paramInt));
     }
-    do
+    for (;;)
     {
-      return true;
-      if (paramKeyEvent.getKeyCode() != 82) {
-        break;
-      }
-    } while (!iw.a(a));
-    a.d();
-    return true;
-    return super.dispatchKeyEvent(paramKeyEvent);
+      paramDialogInterface.dismiss();
+      return;
+      er localer = new er(iq.a(b.a), iq.a(b.a).getString(2131231703), "");
+      localer.a(new iy(this, localList));
+      localer.show();
+    }
   }
 }
 

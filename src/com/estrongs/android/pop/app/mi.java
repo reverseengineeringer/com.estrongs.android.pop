@@ -1,16 +1,21 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
+import android.app.ProgressDialog;
+import com.estrongs.android.ui.view.ESVideoView;
+import java.io.File;
 
 class mi
-  implements DialogInterface.OnDismissListener
+  implements Runnable
 {
-  mi(mh parammh) {}
+  mi(StreamingMediaPlayer paramStreamingMediaPlayer) {}
   
-  public void onDismiss(DialogInterface paramDialogInterface)
+  public void run()
   {
-    UninstallMonitorActivity.a = null;
+    if ((StreamingMediaPlayer.o(a) != null) && (StreamingMediaPlayer.o(a).isShowing())) {
+      a.dismissDialog(6);
+    }
+    StreamingMediaPlayer.q(a).setVideoPath(StreamingMediaPlayer.p(a).getAbsolutePath());
+    StreamingMediaPlayer.r(a);
   }
 }
 

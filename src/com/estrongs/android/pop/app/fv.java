@@ -1,40 +1,39 @@
 package com.estrongs.android.pop.app;
 
-import android.content.Context;
-import android.graphics.Canvas;
-import android.util.Log;
-import android.widget.FrameLayout;
+import com.estrongs.android.ui.view.ac;
+import com.estrongs.android.widget.bd;
 
 class fv
-  extends FrameLayout
+  implements bd
 {
-  private boolean b = true;
+  fv(PopAudioPlayer paramPopAudioPlayer) {}
   
-  fv(PopAudioPlayer paramPopAudioPlayer, Context paramContext)
-  {
-    super(paramContext);
-  }
+  public void a(int paramInt) {}
   
-  public void draw(Canvas paramCanvas)
+  public void a(int paramInt, float paramFloat) {}
+  
+  public void b(int paramInt) {}
+  
+  public void c(int paramInt)
   {
-    try
+    if (paramInt == 0)
     {
-      super.draw(paramCanvas);
-      if (b)
-      {
-        post(new fw(this));
-        b = false;
+      PopAudioPlayer.s(a);
+      PopAudioPlayer.a(a, true);
+      if (PopAudioPlayer.h(a).b()) {
+        a.z();
       }
+    }
+    for (;;)
+    {
+      a.invalidateOptionsMenu();
       return;
-    }
-    catch (Throwable paramCanvas)
-    {
-      for (;;)
-      {
-        Log.w("FileExplorerActivity", "containerEsFrameLayout.draw() catchs " + paramCanvas.getMessage());
-      }
+      PopAudioPlayer.a(a, false);
+      PopAudioPlayer.t(a);
     }
   }
+  
+  public void d(int paramInt) {}
 }
 
 /* Location:

@@ -1,19 +1,17 @@
 package com.estrongs.android.pop.view;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.ui.f.c;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class cj
-  implements View.OnClickListener
+  implements DialogInterface.OnClickListener
 {
   cj(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void onClick(View paramView)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    paramView = c.a(paramView, a.getString(2131427415), 2, a.t(), false);
-    paramView.a(new ck(this, paramView));
-    paramView.c();
+    paramDialogInterface.dismiss();
+    a.d(false);
   }
 }
 

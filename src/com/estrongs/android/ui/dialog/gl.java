@@ -1,49 +1,21 @@
 package com.estrongs.android.ui.dialog;
 
-import android.os.RemoteException;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import com.estrongs.android.pop.a.a;
-import org.json.JSONException;
-import org.json.JSONObject;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class gl
-  implements AdapterView.OnItemClickListener
+  implements DialogInterface.OnClickListener
 {
   gl(gk paramgk) {}
   
-  public void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    paramAdapterView = gk.a(a).a(paramInt);
-    if (paramAdapterView.has("key")) {}
-    try
-    {
-      paramView = paramAdapterView.getString("key");
-      if (paramAdapterView.getInt("disable") == 1) {
-        a.b(gk.b(a), paramView);
-      }
-      for (;;)
-      {
-        gk.c(a);
-        return;
-        a.a(gk.b(a), paramView);
-      }
+    gk.a(a, paramInt);
+    gk.b(a, a.b[gk.a(a)]);
+    if (gk.b(a) != null) {
+      gk.b(a).a(gk.c(a), a.c[gk.a(a)]);
     }
-    catch (JSONException paramAdapterView)
-    {
-      for (;;)
-      {
-        paramAdapterView.printStackTrace();
-      }
-    }
-    catch (RemoteException paramAdapterView)
-    {
-      for (;;)
-      {
-        paramAdapterView.printStackTrace();
-      }
-    }
+    paramDialogInterface.dismiss();
   }
 }
 

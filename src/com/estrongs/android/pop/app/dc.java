@@ -12,7 +12,7 @@ class dc
   public void onClick(View paramView)
   {
     paramView = new Intent(a, ImageCommentPostActivity.class);
-    paramView.putExtra("pic_path", ImageCommentActivity.c(a));
+    paramView.putExtra("pic_path", ImageCommentActivity.b(a));
     paramView.putExtra("from_detial_page", true);
     a.startActivityForResult(paramView, 1);
   }

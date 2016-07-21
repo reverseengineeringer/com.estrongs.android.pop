@@ -1,24 +1,30 @@
 package com.estrongs.android.pop.app;
 
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
-import com.estrongs.android.ui.dialog.ff;
-import com.estrongs.android.ui.dialog.ip;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
+import android.net.Uri;
+import java.io.File;
 
 class cn
-  implements DialogInterface.OnDismissListener
+  implements DialogInterface.OnClickListener
 {
-  cn(cm paramcm, ip paramip) {}
+  cn(cm paramcm) {}
   
-  public void onDismiss(DialogInterface paramDialogInterface)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    paramDialogInterface = a.a();
-    if (paramDialogInterface == null) {
+    if (paramInt == 0)
+    {
+      a.c.c.setData(FileContentProvider.a(a.b));
+      a.c.d.setResult(-1, a.c.c);
+      a.c.d.finish();
+    }
+    while (paramInt != 1) {
       return;
     }
-    paramDialogInterface = new ff(b.a, paramDialogInterface);
-    paramDialogInterface.a();
-    paramDialogInterface.a(new co(this));
+    a.c.c.setData(Uri.fromFile(new File(a.b)));
+    a.c.d.setResult(-1, a.c.c);
+    a.c.d.finish();
   }
 }
 

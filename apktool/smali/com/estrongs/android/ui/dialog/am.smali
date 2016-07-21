@@ -1,522 +1,177 @@
 .class Lcom/estrongs/android/ui/dialog/am;
-.super Landroid/widget/BaseAdapter;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field a:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<",
-            "Lcom/estrongs/android/ui/dialog/an;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field b:I
-
-.field c:I
-
-.field d:I
-
-.field e:I
-
-.field final synthetic f:Lcom/estrongs/android/ui/dialog/ae;
+.field final synthetic a:Lcom/estrongs/android/ui/dialog/ag;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/ae;)V
-    .locals 2
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/ag;)V
+    .locals 0
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/am;->a:Lcom/estrongs/android/ui/dialog/ag;
 
-    const/4 v0, -0x1
-
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/am;->f:Lcom/estrongs/android/ui/dialog/ae;
-
-    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
-
-    iput v1, p0, Lcom/estrongs/android/ui/dialog/am;->b:I
-
-    iput v1, p0, Lcom/estrongs/android/ui/dialog/am;->c:I
-
-    iput v0, p0, Lcom/estrongs/android/ui/dialog/am;->d:I
-
-    iput v0, p0, Lcom/estrongs/android/ui/dialog/am;->e:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected a()Ljava/lang/String;
-    .locals 2
+.method public run()V
+    .locals 6
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/am;->a:Ljava/util/List;
+    const/4 v2, 0x0
 
-    iget v1, p0, Lcom/estrongs/android/ui/dialog/am;->b:I
+    const/4 v1, 0x0
 
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/android/ui/dialog/an;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/an;->d:Ljava/lang/String;
-
-    goto :goto_0
-.end method
-
-.method protected a(I)V
-    .locals 0
-
-    iput p1, p0, Lcom/estrongs/android/ui/dialog/am;->b:I
-
-    invoke-virtual {p0}, Lcom/estrongs/android/ui/dialog/am;->notifyDataSetChanged()V
-
-    return-void
-.end method
-
-.method protected a(Ljava/util/List;III)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/estrongs/android/ui/dialog/an;",
-            ">;III)V"
-        }
-    .end annotation
-
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/am;->a:Ljava/util/List;
-
-    iput p2, p0, Lcom/estrongs/android/ui/dialog/am;->d:I
-
-    iput p3, p0, Lcom/estrongs/android/ui/dialog/am;->e:I
-
-    iput p4, p0, Lcom/estrongs/android/ui/dialog/am;->b:I
-
-    iput p4, p0, Lcom/estrongs/android/ui/dialog/am;->c:I
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/am;->f:Lcom/estrongs/android/ui/dialog/ae;
-
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/ae;->d:Landroid/content/Context;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+    invoke-static {}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->d()Lcom/estrongs/android/appinfo/AppFolderInfoManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->aF()Z
+    iget-object v3, p0, Lcom/estrongs/android/ui/dialog/am;->a:Lcom/estrongs/android/ui/dialog/ag;
 
-    move-result v0
+    iget-object v3, v3, Lcom/estrongs/android/ui/dialog/ag;->f:Lcom/estrongs/fs/h;
 
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/am;->f:Lcom/estrongs/android/ui/dialog/ae;
-
-    iget-object v1, v0, Lcom/estrongs/android/ui/dialog/ae;->e:Landroid/widget/CheckBox;
-
-    if-eqz p4, :cond_1
-
-    const/4 v0, 0x1
-
-    :goto_0
-    invoke-virtual {v1, v0}, Landroid/widget/CheckBox;->setEnabled(Z)V
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/am;->f:Lcom/estrongs/android/ui/dialog/ae;
-
-    invoke-virtual {v0, p4}, Lcom/estrongs/android/ui/dialog/ae;->a(I)V
-
-    invoke-virtual {p0}, Lcom/estrongs/android/ui/dialog/am;->notifyDataSetChanged()V
-
-    return-void
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method protected b()Z
-    .locals 2
-
-    iget v0, p0, Lcom/estrongs/android/ui/dialog/am;->c:I
-
-    iget v1, p0, Lcom/estrongs/android/ui/dialog/am;->b:I
-
-    if-eq v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public getCount()I
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/am;->a:Ljava/util/List;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/am;->a:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    goto :goto_0
-.end method
-
-.method public getItem(I)Ljava/lang/Object;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public getItemId(I)J
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public getItemViewType(I)I
-    .locals 1
-
-    iget v0, p0, Lcom/estrongs/android/ui/dialog/am;->d:I
-
-    if-ne p1, v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 7
-
-    const/4 v6, 0x0
-
-    const/4 v3, 0x0
-
-    if-nez p2, :cond_2
-
-    iget v0, p0, Lcom/estrongs/android/ui/dialog/am;->d:I
-
-    if-ne p1, v0, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/am;->f:Lcom/estrongs/android/ui/dialog/ae;
-
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/ae;->d:Landroid/content/Context;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-virtual {v0, v3}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->a(Lcom/estrongs/fs/h;)Lcom/estrongs/android/appinfo/m;
 
     move-result-object v0
 
-    const v1, 0x7f03000d
+    if-eqz v0, :cond_4
 
-    invoke-virtual {v0, v1, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v0
-
-    move-object v1, v0
+    iget-object v0, v0, Lcom/estrongs/android/appinfo/m;->a:Ljava/lang/String;
 
     :goto_0
-    new-instance v2, Lcom/estrongs/android/ui/dialog/ao;
-
-    invoke-direct {v2, v3}, Lcom/estrongs/android/ui/dialog/ao;-><init>(Lcom/estrongs/android/ui/dialog/af;)V
-
-    const v0, 0x7f0a0067
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, v2, Lcom/estrongs/android/ui/dialog/ao;->a:Landroid/widget/ImageView;
-
-    const v0, 0x7f0a0063
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, v2, Lcom/estrongs/android/ui/dialog/ao;->b:Landroid/widget/TextView;
-
-    iget-object v0, v2, Lcom/estrongs/android/ui/dialog/ao;->b:Landroid/widget/TextView;
-
-    iget-object v3, p0, Lcom/estrongs/android/ui/dialog/am;->f:Lcom/estrongs/android/ui/dialog/ae;
-
-    iget-object v3, v3, Lcom/estrongs/android/ui/dialog/ae;->d:Landroid/content/Context;
-
-    invoke-static {v3}, Lcom/estrongs/android/ui/theme/al;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
+    invoke-static {}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->d()Lcom/estrongs/android/appinfo/AppFolderInfoManager;
 
     move-result-object v3
 
-    const v4, 0x7f080012
+    iget-object v4, p0, Lcom/estrongs/android/ui/dialog/am;->a:Lcom/estrongs/android/ui/dialog/ag;
 
-    invoke-virtual {v3, v4}, Lcom/estrongs/android/ui/theme/al;->d(I)I
+    iget-object v4, v4, Lcom/estrongs/android/ui/dialog/ag;->f:Lcom/estrongs/fs/h;
 
-    move-result v3
+    invoke-virtual {v3, v4}, Lcom/estrongs/android/appinfo/AppFolderInfoManager;->b(Lcom/estrongs/fs/h;)Lcom/estrongs/android/appinfo/s;
 
-    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setTextColor(I)V
+    move-result-object v3
 
-    const v0, 0x7f0a0068
+    new-instance v4, Ljava/util/ArrayList;
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    move-result-object v0
+    sput-object v0, Lcom/estrongs/android/ui/dialog/ap;->a:Ljava/lang/String;
 
-    check-cast v0, Landroid/widget/ImageView;
+    if-nez v3, :cond_0
 
-    iput-object v0, v2, Lcom/estrongs/android/ui/dialog/ao;->d:Landroid/widget/ImageView;
-
-    const v0, 0x7f0a0069
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, v2, Lcom/estrongs/android/ui/dialog/ao;->c:Landroid/widget/TextView;
-
-    new-instance v0, Landroid/widget/AbsListView$LayoutParams;
-
-    const/4 v3, -0x1
-
-    iget-object v4, p0, Lcom/estrongs/android/ui/dialog/am;->f:Lcom/estrongs/android/ui/dialog/ae;
-
-    iget-object v4, v4, Lcom/estrongs/android/ui/dialog/ae;->d:Landroid/content/Context;
-
-    const/high16 v5, 0x42700000    # 60.0f
-
-    invoke-static {v4, v5}, Lcom/estrongs/android/ui/d/a;->a(Landroid/content/Context;F)I
-
-    move-result v4
-
-    invoke-direct {v0, v3, v4}, Landroid/widget/AbsListView$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
-
-    move-object p2, v1
+    move-object v0, v1
 
     :goto_1
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/am;->a:Ljava/util/List;
+    sput-object v0, Lcom/estrongs/android/ui/dialog/ap;->b:Ljava/lang/String;
 
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v4, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/am;->a:Lcom/estrongs/android/ui/dialog/ag;
+
+    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/ag;->d:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v1
+
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/android/ui/dialog/an;
+    const/16 v5, 0x2000
 
-    if-nez v0, :cond_3
+    invoke-virtual {v0, v5}, Lcom/estrongs/android/pop/FexApplication;->a(I)Ljava/util/List;
 
-    iget-object v0, v2, Lcom/estrongs/android/ui/dialog/ao;->a:Landroid/widget/ImageView;
+    move-result-object v0
 
-    const/16 v1, 0x8
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+    move-result-object v5
 
-    iget-object v0, v2, Lcom/estrongs/android/ui/dialog/ao;->b:Landroid/widget/TextView;
+    :goto_2
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
-    const v1, 0x7f0b046b
+    move-result v0
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+    if-eqz v0, :cond_1
+
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/pm/ApplicationInfo;
+
+    invoke-static {v1, v0}, Lcom/estrongs/android/ui/dialog/ap;->a(Landroid/content/pm/PackageManager;Landroid/content/pm/ApplicationInfo;)Lcom/estrongs/android/ui/dialog/ap;
+
+    move-result-object v0
+
+    invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_2
 
     :cond_0
-    :goto_2
-    iget-object v1, v2, Lcom/estrongs/android/ui/dialog/ao;->d:Landroid/widget/ImageView;
-
-    iget v0, p0, Lcom/estrongs/android/ui/dialog/am;->b:I
-
-    if-ne v0, p1, :cond_5
-
-    const v0, 0x7f0201d7
-
-    :goto_3
-    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    return-object p2
-
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/am;->f:Lcom/estrongs/android/ui/dialog/ae;
-
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/ae;->d:Landroid/content/Context;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v0
-
-    const v1, 0x7f03000c
-
-    invoke-virtual {v0, v1, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    goto/16 :goto_0
-
-    :cond_2
-    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/android/ui/dialog/ao;
-
-    move-object v2, v0
+    iget-object v0, v3, Lcom/estrongs/android/appinfo/s;->a:Ljava/lang/String;
 
     goto :goto_1
 
-    :cond_3
-    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/am;->f:Lcom/estrongs/android/ui/dialog/ae;
+    :cond_1
+    invoke-static {v4}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    invoke-static {v1}, Lcom/estrongs/android/ui/dialog/ae;->a(Lcom/estrongs/android/ui/dialog/ae;)Ljava/util/HashMap;
+    invoke-interface {v4}, Ljava/util/List;->size()I
 
-    move-result-object v1
+    move-result v5
 
-    iget-object v3, v0, Lcom/estrongs/android/ui/dialog/an;->d:Ljava/lang/String;
+    move v1, v2
 
-    invoke-virtual {v1, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    :goto_3
+    if-ge v1, v5, :cond_3
 
-    move-result-object v1
+    invoke-interface {v4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    check-cast v1, Landroid/graphics/drawable/Drawable;
+    move-result-object v0
 
-    if-nez v1, :cond_4
+    check-cast v0, Lcom/estrongs/android/ui/dialog/ap;
 
-    :try_start_0
-    iget-object v3, p0, Lcom/estrongs/android/ui/dialog/am;->f:Lcom/estrongs/android/ui/dialog/ae;
+    if-eqz v0, :cond_2
 
-    iget-object v3, v3, Lcom/estrongs/android/ui/dialog/ae;->c:Landroid/content/pm/PackageManager;
+    iget-boolean v0, v0, Lcom/estrongs/android/ui/dialog/ap;->e:Z
 
-    iget-object v4, v0, Lcom/estrongs/android/ui/dialog/an;->d:Ljava/lang/String;
+    if-eqz v0, :cond_2
 
-    invoke-virtual {v3, v4}, Landroid/content/pm/PackageManager;->getApplicationIcon(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+    move v0, v1
 
-    move-result-object v1
-
-    iget-object v3, p0, Lcom/estrongs/android/ui/dialog/am;->f:Lcom/estrongs/android/ui/dialog/ae;
-
-    invoke-static {v3}, Lcom/estrongs/android/ui/dialog/ae;->a(Lcom/estrongs/android/ui/dialog/ae;)Ljava/util/HashMap;
-
-    move-result-object v3
-
-    iget-object v4, v0, Lcom/estrongs/android/ui/dialog/an;->d:Ljava/lang/String;
-
-    invoke-virtual {v3, v4, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :cond_4
     :goto_4
-    iget-object v3, v2, Lcom/estrongs/android/ui/dialog/ao;->a:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/am;->a:Lcom/estrongs/android/ui/dialog/ag;
 
-    invoke-virtual {v3, v6}, Landroid/widget/ImageView;->setVisibility(I)V
+    iget-object v1, v1, Lcom/estrongs/android/ui/dialog/ag;->a:Landroid/os/Handler;
 
-    iget-object v3, v2, Lcom/estrongs/android/ui/dialog/ao;->a:Landroid/widget/ImageView;
+    new-instance v2, Lcom/estrongs/android/ui/dialog/an;
 
-    invoke-virtual {v3, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {v2, p0, v4, v3, v0}, Lcom/estrongs/android/ui/dialog/an;-><init>(Lcom/estrongs/android/ui/dialog/am;Ljava/util/List;Lcom/estrongs/android/appinfo/s;I)V
 
-    iget-object v1, v2, Lcom/estrongs/android/ui/dialog/ao;->b:Landroid/widget/TextView;
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/an;->c:Ljava/lang/String;
+    return-void
 
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget v0, p0, Lcom/estrongs/android/ui/dialog/am;->d:I
-
-    if-ne p1, v0, :cond_0
-
-    iget-object v0, v2, Lcom/estrongs/android/ui/dialog/ao;->c:Landroid/widget/TextView;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, v2, Lcom/estrongs/android/ui/dialog/ao;->c:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/am;->f:Lcom/estrongs/android/ui/dialog/ae;
-
-    iget-object v1, v1, Lcom/estrongs/android/ui/dialog/ae;->d:Landroid/content/Context;
-
-    const v3, 0x7f0b046e
-
-    invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v3, 0x1
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    iget v4, p0, Lcom/estrongs/android/ui/dialog/am;->e:I
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v3, v6
-
-    invoke-static {v1, v3}, Ljava/text/MessageFormat;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    goto/16 :goto_2
-
-    :cond_5
-    const v0, 0x7f0201d9
+    :cond_2
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_3
 
-    :catch_0
-    move-exception v3
+    :cond_3
+    move v0, v2
 
     goto :goto_4
-.end method
 
-.method public getViewTypeCount()I
-    .locals 1
+    :cond_4
+    move-object v0, v1
 
-    const/4 v0, 0x2
-
-    return v0
+    goto :goto_0
 .end method

@@ -1,13 +1,21 @@
 package com.estrongs.android.ui.dialog;
 
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.widget.f;
+import com.estrongs.fs.h;
+
 class jc
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  jc(ja paramja) {}
+  jc(ja paramja, f paramf) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    new ct(a.a.mContext).a(2131428703).b(2131428704).b(2131427341, new jd(this)).c(2131427342, null).c();
+    String str = a.e().getAbsolutePath();
+    iy.a(b.a, "open_folder" + str);
+    paramDialogInterface.dismiss();
+    b.a.c();
   }
 }
 

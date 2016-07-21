@@ -1,161 +1,124 @@
 package com.estrongs.fs.impl.g;
 
-import android.net.Uri;
-import com.estrongs.android.pop.utils.cd;
-import com.estrongs.android.util.TypedMap;
 import com.estrongs.fs.h;
-import com.estrongs.fs.i;
-import com.estrongs.fs.l;
-import com.estrongs.fs.n;
-import java.util.HashMap;
-import java.util.List;
+import com.estrongs.fs.w;
+import com.estrongs.io.model.ArchiveEntryFile;
+import java.io.File;
 
 public class a
-  extends l
+  implements h
 {
-  private HashMap<String, a> a = new HashMap();
+  protected int a = -2;
+  protected boolean b = true;
+  private File c;
+  private String d;
   
-  public static String[] a(Uri paramUri)
+  public a(File paramFile)
   {
-    String str = paramUri.getPath();
-    paramUri = str;
-    if (str.startsWith("/")) {
-      paramUri = str.substring(1);
+    c = paramFile;
+    if ((!paramFile.isDirectory()) && ((paramFile instanceof ArchiveEntryFile)) && (((ArchiveEntryFile)paramFile).isEncrypted()))
+    {
+      d = (paramFile.getName() + " * ");
+      return;
     }
-    return paramUri.split("/");
+    d = paramFile.getName();
   }
   
-  public h a(String paramString)
+  public File a()
   {
-    return new n(paramString);
+    return c;
   }
   
-  protected List<h> a()
+  public long createdTime()
+  {
+    return lastModified();
+  }
+  
+  public boolean exists()
+  {
+    return false;
+  }
+  
+  public String getAbsolutePath()
+  {
+    return c.getAbsolutePath();
+  }
+  
+  public int getESFileType()
+  {
+    return a;
+  }
+  
+  public Object getExtra(String paramString)
   {
     return null;
   }
   
-  public List<h> a(h paramh, TypedMap paramTypedMap)
+  public w getFileType()
   {
-    if (paramh == null) {
-      return null;
+    if (c.isDirectory()) {
+      return w.a;
     }
-    if (!cd.a(paramTypedMap)) {
-      return null;
-    }
-    Object localObject = Uri.parse(paramh.getPath());
-    a locala = (a)a.get(((Uri)localObject).getAuthority());
-    if (locala == null) {
-      return null;
-    }
-    localObject = a((Uri)localObject);
-    int i;
-    int j;
-    if (localObject != null)
-    {
-      i = localObject.length;
-      if (i == 1) {
-        return locala.a();
-      }
-      if (i == 2)
-      {
-        i = -1;
-        if (paramTypedMap == null) {
-          break label128;
-        }
-        j = paramTypedMap.getInt("from", 1);
-        i = paramTypedMap.getInt("to", -1);
-      }
-    }
-    for (;;)
-    {
-      return locala.a(localObject[1], j, i, paramh.getAbsolutePath());
-      return null;
-      label128:
-      j = 1;
-    }
+    return w.b;
   }
   
-  public List<h> a(h paramh, i parami, TypedMap paramTypedMap)
+  public String getName()
   {
-    if (paramh == null) {
-      return null;
-    }
-    return a(paramh, (TypedMap)null);
+    return d;
   }
   
-  protected List<h> a(String paramString1, int paramInt1, int paramInt2, String paramString2)
+  public String getPath()
+  {
+    return c.getPath();
+  }
+  
+  public boolean hasPermission(int paramInt)
+  {
+    return false;
+  }
+  
+  public boolean isLink()
+  {
+    return false;
+  }
+  
+  public long lastAccessed()
+  {
+    return 0L;
+  }
+  
+  public long lastModified()
+  {
+    return c.lastModified();
+  }
+  
+  public long length()
+  {
+    return c.length();
+  }
+  
+  public Object putExtra(String paramString, Object paramObject)
   {
     return null;
   }
   
-  public void a(String paramString, a parama)
+  public void setESFileType(int paramInt)
   {
-    a.put(paramString, parama);
+    a = paramInt;
   }
   
-  public boolean a(h paramh, String paramString)
+  public void setFileType(w paramw) {}
+  
+  public void setName(String paramString) {}
+  
+  public void setShouldTryLoadThumbnail(boolean paramBoolean)
   {
-    Object localObject = Uri.parse(paramh.getPath());
-    paramh = a((Uri)localObject);
-    if (paramh != null)
-    {
-      int i = paramh.length;
-      localObject = (a)a.get(((Uri)localObject).getAuthority());
-      if (i == 2) {
-        return ((a)localObject).c(paramh[1], paramString);
-      }
-      if (i == 3) {
-        return ((a)localObject).d(paramh[2], paramString);
-      }
-    }
-    return false;
+    b = false;
   }
   
-  public boolean a(String paramString1, String paramString2)
+  public boolean shouldTryLoadThumbnail()
   {
-    Object localObject = Uri.parse(paramString1);
-    paramString1 = (a)a.get(((Uri)localObject).getAuthority());
-    if (paramString1 == null) {
-      return false;
-    }
-    localObject = a((Uri)localObject);
-    if (localObject != null)
-    {
-      int i = localObject.length;
-      if (i == 2) {
-        return paramString1.b(localObject[1], paramString2);
-      }
-      if (i == 3) {
-        return paramString1.e(localObject[2]);
-      }
-    }
-    return false;
-  }
-  
-  protected boolean b(String paramString1, String paramString2)
-  {
-    return false;
-  }
-  
-  public boolean c(String paramString)
-  {
-    return false;
-  }
-  
-  protected boolean c(String paramString1, String paramString2)
-  {
-    return false;
-  }
-  
-  protected boolean d(String paramString1, String paramString2)
-  {
-    return false;
-  }
-  
-  protected boolean e(String paramString)
-  {
-    return false;
+    return b;
   }
 }
 

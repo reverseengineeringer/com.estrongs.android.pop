@@ -1,7 +1,7 @@
 package com.estrongs.fs.b;
 
 import android.app.Activity;
-import com.estrongs.android.ui.dialog.ct;
+import com.estrongs.android.ui.dialog.cv;
 
 class m
   implements Runnable
@@ -10,12 +10,12 @@ class m
   
   public void run()
   {
-    ct localct = new ct(c.a);
-    localct.a(2131427404);
-    localct.b(c.a.getString(2131428679));
-    localct.b(c.a.getString(2131427378), new n(this));
-    localct.c(c.a.getString(2131427340), new o(this));
-    localct.c();
+    cv localcv = new cv(c.a);
+    localcv.a(2131231718);
+    localcv.b(c.a.getString(2131231605));
+    localcv.b(c.a.getString(2131230898), new n(this));
+    localcv.c(c.a.getString(2131231265), new o(this));
+    localcv.c();
   }
 }
 

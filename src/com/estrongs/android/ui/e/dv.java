@@ -2,29 +2,46 @@ package com.estrongs.android.ui.e;
 
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.j.c;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.fs.h;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.view.y;
 import java.util.List;
 
 class dv
   implements MenuItem.OnMenuItemClickListener
 {
-  dv(cp paramcp) {}
+  dv(cr paramcr) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = cp.b(a);
-    if (paramMenuItem.size() == 0) {
-      ag.a(cp.a(a).getBaseContext(), 2131427774, 0);
-    }
-    while (paramMenuItem.size() < 1) {
+    paramMenuItem = cr.a(a);
+    if (paramMenuItem.size() == 0)
+    {
+      ak.a(cr.b(a).getBaseContext(), 2131231551, 0);
       return true;
     }
-    paramMenuItem = (h)paramMenuItem.get(0);
-    ie.a(a.b, paramMenuItem.getAbsolutePath(), paramMenuItem.getName(), paramMenuItem);
-    cp.a(a).s();
-    return true;
+    try
+    {
+      cr.b(a).at().a("Longpress_copy");
+      ba).n = true;
+      ba).o = true;
+      ba).x.clear();
+      ba).x.addAll(paramMenuItem);
+      y.a(cr.b(a)).a(paramMenuItem, ba).n);
+      cr.b(a).aq();
+      cr.b(a).B();
+      cr.b(a).h();
+      ba).q = "paste_mode";
+      return true;
+    }
+    catch (Exception localException)
+    {
+      for (;;)
+      {
+        localException.printStackTrace();
+      }
+    }
   }
 }
 

@@ -1,52 +1,77 @@
 .class Landroid/support/v4/app/e;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/support/v4/app/k;
-
-
-# instance fields
-.field final synthetic a:Landroid/support/v4/app/Fragment;
-
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/app/Fragment;)V
+.method private static a(Landroid/support/v4/app/f;)Landroid/app/SharedElementCallback;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    if-eqz p0, :cond_0
+
+    new-instance v0, Landroid/support/v4/app/g;
+
+    invoke-direct {v0, p0}, Landroid/support/v4/app/g;-><init>(Landroid/support/v4/app/f;)V
+
+    :cond_0
+    return-object v0
+.end method
+
+.method public static a(Landroid/app/Activity;)V
     .locals 0
 
-    iput-object p1, p0, Landroid/support/v4/app/e;->a:Landroid/support/v4/app/Fragment;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finishAfterTransition()V
 
     return-void
 .end method
 
+.method public static a(Landroid/app/Activity;Landroid/support/v4/app/f;)V
+    .locals 1
 
-# virtual methods
-.method public a(I)Landroid/view/View;
-    .locals 2
-
-    iget-object v0, p0, Landroid/support/v4/app/e;->a:Landroid/support/v4/app/Fragment;
-
-    iget-object v0, v0, Landroid/support/v4/app/Fragment;->I:Landroid/view/View;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Fragment does not have a view"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    iget-object v0, p0, Landroid/support/v4/app/e;->a:Landroid/support/v4/app/Fragment;
-
-    iget-object v0, v0, Landroid/support/v4/app/Fragment;->I:Landroid/view/View;
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-static {p1}, Landroid/support/v4/app/e;->a(Landroid/support/v4/app/f;)Landroid/app/SharedElementCallback;
 
     move-result-object v0
 
-    return-object v0
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->setEnterSharedElementCallback(Landroid/app/SharedElementCallback;)V
+
+    return-void
+.end method
+
+.method public static a(Landroid/app/Activity;Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p1, Landroid/media/session/MediaController;
+
+    invoke-virtual {p0, p1}, Landroid/app/Activity;->setMediaController(Landroid/media/session/MediaController;)V
+
+    return-void
+.end method
+
+.method public static b(Landroid/app/Activity;)V
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/Activity;->postponeEnterTransition()V
+
+    return-void
+.end method
+
+.method public static b(Landroid/app/Activity;Landroid/support/v4/app/f;)V
+    .locals 1
+
+    invoke-static {p1}, Landroid/support/v4/app/e;->a(Landroid/support/v4/app/f;)Landroid/app/SharedElementCallback;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->setExitSharedElementCallback(Landroid/app/SharedElementCallback;)V
+
+    return-void
+.end method
+
+.method public static c(Landroid/app/Activity;)V
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/Activity;->startPostponedEnterTransition()V
+
+    return-void
 .end method

@@ -1,19 +1,18 @@
 package com.estrongs.fs.impl.a;
 
-import com.estrongs.fs.h;
-import com.estrongs.fs.impl.d.d;
+import java.io.File;
+import java.io.FileFilter;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-public class a
-  extends d
+class a
+  implements FileFilter
 {
-  public a(h paramh)
-  {
-    super(paramh);
-  }
+  Pattern a = Pattern.compile(".+\\.apk$", 2);
   
-  protected String a()
+  public boolean accept(File paramFile)
   {
-    return "apk://";
+    return a.matcher(paramFile.getAbsolutePath()).matches();
   }
 }
 

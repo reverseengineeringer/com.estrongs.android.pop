@@ -172,13 +172,13 @@
 
     if-ne v1, v0, :cond_1
 
-    new-instance v0, Lcom/estrongs/fs/b/ap;
+    new-instance v0, Lcom/estrongs/fs/b/ar;
 
     invoke-static {}, Lcom/estrongs/fs/d;->a()Lcom/estrongs/fs/d;
 
     move-result-object v1
 
-    invoke-direct {v0, v1, p1}, Lcom/estrongs/fs/b/ap;-><init>(Lcom/estrongs/fs/d;Lorg/json/JSONObject;)V
+    invoke-direct {v0, v1, p1}, Lcom/estrongs/fs/b/ar;-><init>(Lcom/estrongs/fs/d;Lorg/json/JSONObject;)V
 
     goto :goto_0
 
@@ -515,7 +515,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v1
 

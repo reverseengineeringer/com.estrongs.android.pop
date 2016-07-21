@@ -1,5 +1,8 @@
 .class Lcom/estrongs/android/pop/app/ju;
-.super Landroid/content/BroadcastReceiver;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # instance fields
@@ -12,32 +15,29 @@
 
     iput-object p1, p0, Lcom/estrongs/android/pop/app/ju;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+.method public onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 1
 
-    :try_start_0
     iget-object v0, p0, Lcom/estrongs/android/pop/app/ju;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->m(Lcom/estrongs/android/pop/app/PopVideoPlayer;)V
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->w(Lcom/estrongs/android/pop/app/PopVideoPlayer;)V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/ju;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->finish()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->A(Lcom/estrongs/android/pop/app/PopVideoPlayer;)Lcom/estrongs/android/ui/e/ju;
 
-    :goto_0
-    return-void
+    move-result-object v0
 
-    :catch_0
-    move-exception v0
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/e/ju;->d()V
 
-    goto :goto_0
+    const/4 v0, 0x1
+
+    return v0
 .end method

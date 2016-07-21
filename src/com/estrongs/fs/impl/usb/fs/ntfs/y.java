@@ -38,7 +38,7 @@ public class y
   {
     try
     {
-      Object localObject = (w)d().a().d("$Volume");
+      Object localObject = (w)e().a().d("$Volume");
       if (localObject == null) {
         return "UsbStorage";
       }
@@ -94,7 +94,7 @@ public class y
     }
     l1 = i;
     l2 = a.b();
-    l3 = e();
+    l3 = d();
     return l3 - l1 * l2;
     while (j < i1)
     {
@@ -114,12 +114,7 @@ public class y
     }
   }
   
-  public i d()
-  {
-    return c;
-  }
-  
-  public long e()
+  public long d()
   {
     try
     {
@@ -132,6 +127,11 @@ public class y
       localException.printStackTrace();
     }
     return -1L;
+  }
+  
+  public i e()
+  {
+    return c;
   }
 }
 

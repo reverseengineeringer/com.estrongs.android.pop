@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/edit_text_bg" android:left="-2.0dip" android:top="-2.0dip" android:right="-2.0dip">
+        <shape>
+            <solid android:color="@color/transparent" />
+            <stroke android:width="@dimen/dp_0.5" android:color="@color/c_d9d9d9" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,5 +1,5 @@
 .class public Lcom/estrongs/android/pop/app/ShowDialogActivity;
-.super Lcom/estrongs/android/pop/esclasses/ESActivity;
+.super Lcom/estrongs/android/pop/esclasses/ESResourceActivity;
 
 
 # instance fields
@@ -7,12 +7,14 @@
 
 .field private b:Z
 
+.field private d:Lcom/estrongs/android/j/c;
+
 
 # direct methods
 .method public constructor <init>()V
     .locals 2
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;-><init>()V
 
     const-wide/16 v0, -0x1
 
@@ -21,6 +23,10 @@
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/estrongs/android/pop/app/ShowDialogActivity;->b:Z
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/ShowDialogActivity;->d:Lcom/estrongs/android/j/c;
 
     return-void
 .end method
@@ -36,57 +42,57 @@
 .method private a()V
     .locals 3
 
-    new-instance v0, Lcom/estrongs/android/ui/dialog/ct;
+    new-instance v0, Lcom/estrongs/android/ui/dialog/cv;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/dialog/ct;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0b00a2
+    const v1, 0x7f080115
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->a(I)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    const v1, 0x7f0b0148
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->b(I)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->a(I)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    const v1, 0x7f0b001e
+    const v1, 0x7f08047d
 
-    new-instance v2, Lcom/estrongs/android/pop/app/ld;
-
-    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/ld;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;)V
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->b(I)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    const v1, 0x7f0b000c
+    const v1, 0x7f0800b1
 
-    new-instance v2, Lcom/estrongs/android/pop/app/lc;
+    new-instance v2, Lcom/estrongs/android/pop/app/lu;
 
-    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/lc;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;)V
+    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/lu;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/estrongs/android/pop/app/lb;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/lb;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;)V
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ct;->c()Lcom/estrongs/android/ui/dialog/cg;
+    const v1, 0x7f080221
+
+    new-instance v2, Lcom/estrongs/android/pop/app/lt;
+
+    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/lt;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;)V
+
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/estrongs/android/pop/app/ls;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ls;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;)V
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/estrongs/android/ui/dialog/cv;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cv;->c()Lcom/estrongs/android/ui/dialog/ci;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cg;->setCanceledOnTouchOutside(Z)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ci;->setCanceledOnTouchOutside(Z)V
 
     return-void
 .end method
@@ -104,9 +110,9 @@
 
     move-result-object v2
 
-    new-instance v3, Lcom/estrongs/android/ui/dialog/cg;
+    new-instance v3, Lcom/estrongs/android/ui/dialog/ci;
 
-    invoke-direct {v3, p0}, Lcom/estrongs/android/ui/dialog/cg;-><init>(Landroid/content/Context;)V
+    invoke-direct {v3, p0}, Lcom/estrongs/android/ui/dialog/ci;-><init>(Landroid/content/Context;)V
 
     const-string v1, "title"
 
@@ -114,7 +120,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v3, v1}, Lcom/estrongs/android/ui/dialog/cg;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v3, v1}, Lcom/estrongs/android/ui/dialog/ci;->setTitle(Ljava/lang/CharSequence;)V
 
     const-string v1, "message"
 
@@ -122,13 +128,13 @@
 
     move-result-object v1
 
-    invoke-virtual {v3, v1}, Lcom/estrongs/android/ui/dialog/cg;->setMessage(Ljava/lang/CharSequence;)V
+    invoke-virtual {v3, v1}, Lcom/estrongs/android/ui/dialog/ci;->setMessage(Ljava/lang/CharSequence;)V
 
-    new-instance v1, Lcom/estrongs/android/pop/app/ll;
+    new-instance v1, Lcom/estrongs/android/pop/app/mc;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ll;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/mc;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;)V
 
-    invoke-virtual {v3, v1}, Lcom/estrongs/android/ui/dialog/cg;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-virtual {v3, v1}, Lcom/estrongs/android/ui/dialog/ci;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     if-nez v2, :cond_0
 
@@ -161,38 +167,38 @@
     :cond_2
     if-eqz v0, :cond_3
 
-    invoke-static {v2}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    const v0, 0x7f0b0322
+    const v0, 0x7f08048e
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/ShowDialogActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Lcom/estrongs/android/pop/app/ku;
+    new-instance v1, Lcom/estrongs/android/pop/app/ll;
 
-    invoke-direct {v1, p0, v2, v3}, Lcom/estrongs/android/pop/app/ku;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;Ljava/lang/String;Lcom/estrongs/android/ui/dialog/cg;)V
+    invoke-direct {v1, p0, v2, v3}, Lcom/estrongs/android/pop/app/ll;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;Ljava/lang/String;Lcom/estrongs/android/ui/dialog/ci;)V
 
-    invoke-virtual {v3, v0, v1}, Lcom/estrongs/android/ui/dialog/cg;->setConfirmButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/widget/Button;
+    invoke-virtual {v3, v0, v1}, Lcom/estrongs/android/ui/dialog/ci;->setConfirmButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/widget/Button;
 
-    const v0, 0x7f0b0323
+    const v0, 0x7f08048f
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/ShowDialogActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Lcom/estrongs/android/pop/app/kw;
+    new-instance v1, Lcom/estrongs/android/pop/app/ln;
 
-    invoke-direct {v1, p0, v2}, Lcom/estrongs/android/pop/app/kw;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;Ljava/lang/String;)V
+    invoke-direct {v1, p0, v2}, Lcom/estrongs/android/pop/app/ln;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;Ljava/lang/String;)V
 
-    invoke-virtual {v3, v0, v1}, Lcom/estrongs/android/ui/dialog/cg;->setCancelButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/widget/Button;
+    invoke-virtual {v3, v0, v1}, Lcom/estrongs/android/ui/dialog/ci;->setCancelButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/widget/Button;
 
     :goto_1
-    invoke-virtual {v3}, Lcom/estrongs/android/ui/dialog/cg;->show()V
+    invoke-virtual {v3}, Lcom/estrongs/android/ui/dialog/ci;->show()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -207,56 +213,56 @@
 
     :cond_3
     :try_start_1
-    new-instance v1, Lcom/estrongs/android/pop/app/kx;
+    new-instance v1, Lcom/estrongs/android/pop/app/lo;
 
-    invoke-direct {v1, p0, v2, v0}, Lcom/estrongs/android/pop/app/kx;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;Ljava/lang/String;Z)V
+    invoke-direct {v1, p0, v2, v0}, Lcom/estrongs/android/pop/app/lo;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;Ljava/lang/String;Z)V
 
-    invoke-static {v2}, Lcom/estrongs/android/util/am;->aB(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    invoke-static {}, Lcom/estrongs/android/ui/pcs/r;->a()Lcom/estrongs/android/ui/pcs/r;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/r;->c()Z
+    invoke-static {v2}, Lcom/estrongs/android/util/ap;->aL(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    const v0, 0x7f0b0323
+    invoke-static {}, Lcom/estrongs/android/ui/pcs/u;->a()Lcom/estrongs/android/ui/pcs/u;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/u;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    const v0, 0x7f08048f
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/ShowDialogActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v3, v0, v1}, Lcom/estrongs/android/ui/dialog/cg;->setConfirmButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/widget/Button;
+    invoke-virtual {v3, v0, v1}, Lcom/estrongs/android/ui/dialog/ci;->setConfirmButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/widget/Button;
 
-    const v0, 0x7f0b0505
+    const v0, 0x7f0804c4
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/ShowDialogActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Lcom/estrongs/android/pop/app/ky;
+    new-instance v1, Lcom/estrongs/android/pop/app/lp;
 
-    invoke-direct {v1, p0, v3}, Lcom/estrongs/android/pop/app/ky;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;Lcom/estrongs/android/ui/dialog/cg;)V
+    invoke-direct {v1, p0, v3}, Lcom/estrongs/android/pop/app/lp;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;Lcom/estrongs/android/ui/dialog/ci;)V
 
-    invoke-virtual {v3, v0, v1}, Lcom/estrongs/android/ui/dialog/cg;->setCancelButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/widget/Button;
+    invoke-virtual {v3, v0, v1}, Lcom/estrongs/android/ui/dialog/ci;->setCancelButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/widget/Button;
 
     goto :goto_1
 
     :cond_4
-    const v0, 0x7f0b0323
+    const v0, 0x7f08048f
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/ShowDialogActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v3, v0, v1}, Lcom/estrongs/android/ui/dialog/cg;->setSingleButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v3, v0, v1}, Lcom/estrongs/android/ui/dialog/ci;->setSingleButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -276,7 +282,7 @@
 
     const/4 v13, 0x0
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;->onCreate(Landroid/os/Bundle;)V
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/ShowDialogActivity;->getIntent()Landroid/content/Intent;
 
@@ -300,7 +306,7 @@
 
     iget-wide v2, p0, Lcom/estrongs/android/pop/app/ShowDialogActivity;->a:J
 
-    invoke-static {v2, v3}, Lcom/estrongs/android/ui/notification/e;->a(J)Lcom/estrongs/a/a;
+    invoke-static {v2, v3}, Lcom/estrongs/android/ui/notification/f;->a(J)Lcom/estrongs/a/a;
 
     move-result-object v3
 
@@ -322,7 +328,7 @@
 
     if-eqz v0, :cond_1
 
-    new-instance v0, Lcom/estrongs/android/ui/dialog/ix;
+    new-instance v0, Lcom/estrongs/android/ui/dialog/jh;
 
     const-string v2, "task_title"
 
@@ -334,24 +340,24 @@
 
     move v5, v4
 
-    invoke-direct/range {v0 .. v5}, Lcom/estrongs/android/ui/dialog/ix;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/a/a;ZZ)V
+    invoke-direct/range {v0 .. v5}, Lcom/estrongs/android/ui/dialog/jh;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/a/a;ZZ)V
 
-    invoke-virtual {v0, v13}, Lcom/estrongs/android/ui/dialog/ix;->a(Z)Lcom/estrongs/android/ui/dialog/ix;
+    invoke-virtual {v0, v13}, Lcom/estrongs/android/ui/dialog/jh;->a(Z)Lcom/estrongs/android/ui/dialog/jh;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ix;->show()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/jh;->show()V
 
-    new-instance v1, Lcom/estrongs/android/pop/app/kt;
+    new-instance v1, Lcom/estrongs/android/pop/app/lk;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/kt;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/lk;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ix;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/jh;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     :cond_0
     :goto_0
     return-void
 
     :cond_1
-    new-instance v5, Lcom/estrongs/android/ui/dialog/ix;
+    new-instance v5, Lcom/estrongs/android/ui/dialog/jh;
 
     const-string v0, "task_title"
 
@@ -387,17 +393,17 @@
 
     move v12, v4
 
-    invoke-direct/range {v5 .. v12}, Lcom/estrongs/android/ui/dialog/ix;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-direct/range {v5 .. v12}, Lcom/estrongs/android/ui/dialog/jh;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    invoke-virtual {v5, v13}, Lcom/estrongs/android/ui/dialog/ix;->a(Z)Lcom/estrongs/android/ui/dialog/ix;
+    invoke-virtual {v5, v13}, Lcom/estrongs/android/ui/dialog/jh;->a(Z)Lcom/estrongs/android/ui/dialog/jh;
 
-    invoke-virtual {v5}, Lcom/estrongs/android/ui/dialog/ix;->show()V
+    invoke-virtual {v5}, Lcom/estrongs/android/ui/dialog/jh;->show()V
 
-    new-instance v0, Lcom/estrongs/android/pop/app/le;
+    new-instance v0, Lcom/estrongs/android/pop/app/lv;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/le;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/lv;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;)V
 
-    invoke-virtual {v5, v0}, Lcom/estrongs/android/ui/dialog/ix;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-virtual {v5, v0}, Lcom/estrongs/android/ui/dialog/jh;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     goto :goto_0
 
@@ -416,7 +422,7 @@
 
     if-eqz v2, :cond_8
 
-    sget-object v0, Lcom/estrongs/android/a/a;->a:Ljava/util/Map;
+    sget-object v0, Lcom/estrongs/android/d/a;->a:Ljava/util/Map;
 
     iget-wide v6, p0, Lcom/estrongs/android/pop/app/ShowDialogActivity;->a:J
 
@@ -428,7 +434,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/android/a/a;
+    check-cast v0, Lcom/estrongs/android/d/a;
 
     const-string v3, "needAuth"
 
@@ -443,9 +449,9 @@
     :cond_3
     if-eqz v0, :cond_4
 
-    invoke-virtual {v0}, Lcom/estrongs/android/a/a;->dismiss()V
+    invoke-virtual {v0}, Lcom/estrongs/android/d/a;->dismiss()V
 
-    sget-object v0, Lcom/estrongs/android/a/a;->a:Ljava/util/Map;
+    sget-object v0, Lcom/estrongs/android/d/a;->a:Ljava/util/Map;
 
     iget-wide v4, p0, Lcom/estrongs/android/pop/app/ShowDialogActivity;->a:J
 
@@ -464,45 +470,45 @@
 
     check-cast v0, Lcom/estrongs/a/a/c;
 
-    new-instance v1, Lcom/estrongs/android/a/a;
+    new-instance v1, Lcom/estrongs/android/d/a;
 
     iget-object v3, v0, Lcom/estrongs/a/a/c;->a:Ljava/lang/String;
 
-    invoke-direct {v1, p0, v3}, Lcom/estrongs/android/a/a;-><init>(Landroid/app/Activity;Ljava/lang/String;)V
+    invoke-direct {v1, p0, v3}, Lcom/estrongs/android/d/a;-><init>(Landroid/app/Activity;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v13}, Lcom/estrongs/android/a/a;->setCancelable(Z)V
+    invoke-virtual {v1, v13}, Lcom/estrongs/android/d/a;->setCancelable(Z)V
 
     const/16 v3, 0x8
 
-    invoke-virtual {v1, v3}, Lcom/estrongs/android/a/a;->a(I)V
+    invoke-virtual {v1, v3}, Lcom/estrongs/android/d/a;->a(I)V
 
-    new-instance v3, Lcom/estrongs/android/pop/app/lf;
+    new-instance v3, Lcom/estrongs/android/pop/app/lw;
 
-    invoke-direct {v3, p0, v0, v2}, Lcom/estrongs/android/pop/app/lf;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;Lcom/estrongs/a/a/c;Lcom/estrongs/a/a;)V
+    invoke-direct {v3, p0, v0, v2}, Lcom/estrongs/android/pop/app/lw;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;Lcom/estrongs/a/a/c;Lcom/estrongs/a/a;)V
 
-    invoke-virtual {v1, v3}, Lcom/estrongs/android/a/a;->a(Lcom/estrongs/android/a/d;)V
+    invoke-virtual {v1, v3}, Lcom/estrongs/android/d/a;->a(Lcom/estrongs/android/d/d;)V
 
-    const v3, 0x7f0b000c
+    const v3, 0x7f080221
 
     invoke-virtual {p0, v3}, Lcom/estrongs/android/pop/app/ShowDialogActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    new-instance v4, Lcom/estrongs/android/pop/app/lg;
+    new-instance v4, Lcom/estrongs/android/pop/app/lx;
 
-    invoke-direct {v4, p0, v0, v2}, Lcom/estrongs/android/pop/app/lg;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;Lcom/estrongs/a/a/c;Lcom/estrongs/a/a;)V
+    invoke-direct {v4, p0, v0, v2}, Lcom/estrongs/android/pop/app/lx;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;Lcom/estrongs/a/a/c;Lcom/estrongs/a/a;)V
 
-    invoke-virtual {v1, v3, v4}, Lcom/estrongs/android/a/a;->setCancelButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/widget/Button;
+    invoke-virtual {v1, v3, v4}, Lcom/estrongs/android/d/a;->setCancelButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/widget/Button;
 
-    new-instance v0, Lcom/estrongs/android/pop/app/lh;
+    new-instance v0, Lcom/estrongs/android/pop/app/ly;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/lh;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/ly;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;)V
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/a/a;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/d/a;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    invoke-virtual {v1}, Lcom/estrongs/android/a/a;->show()V
+    invoke-virtual {v1}, Lcom/estrongs/android/d/a;->show()V
 
-    sget-object v0, Lcom/estrongs/android/a/a;->a:Ljava/util/Map;
+    sget-object v0, Lcom/estrongs/android/d/a;->a:Ljava/util/Map;
 
     iget-wide v2, p0, Lcom/estrongs/android/pop/app/ShowDialogActivity;->a:J
 
@@ -515,7 +521,7 @@
     goto/16 :goto_0
 
     :cond_5
-    sget-object v0, Lcom/estrongs/android/ui/dialog/ix;->d:Ljava/util/Map;
+    sget-object v0, Lcom/estrongs/android/ui/dialog/jh;->d:Ljava/util/Map;
 
     iget-wide v2, p0, Lcom/estrongs/android/pop/app/ShowDialogActivity;->a:J
 
@@ -529,7 +535,7 @@
 
     if-eqz v0, :cond_6
 
-    sget-object v0, Lcom/estrongs/android/ui/dialog/ix;->d:Ljava/util/Map;
+    sget-object v0, Lcom/estrongs/android/ui/dialog/jh;->d:Ljava/util/Map;
 
     iget-wide v2, p0, Lcom/estrongs/android/pop/app/ShowDialogActivity;->a:J
 
@@ -563,7 +569,7 @@
     goto/16 :goto_0
 
     :cond_7
-    new-instance v0, Lcom/estrongs/android/ui/dialog/ix;
+    new-instance v0, Lcom/estrongs/android/ui/dialog/jh;
 
     const-string v2, "task_title"
 
@@ -583,17 +589,17 @@
 
     move-result v1
 
-    invoke-direct {v0, p0, v2, v3, v1}, Lcom/estrongs/android/ui/dialog/ix;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/a/a;Z)V
+    invoke-direct {v0, p0, v2, v3, v1}, Lcom/estrongs/android/ui/dialog/jh;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/a/a;Z)V
 
-    invoke-virtual {v0, v13}, Lcom/estrongs/android/ui/dialog/ix;->a(Z)Lcom/estrongs/android/ui/dialog/ix;
+    invoke-virtual {v0, v13}, Lcom/estrongs/android/ui/dialog/jh;->a(Z)Lcom/estrongs/android/ui/dialog/jh;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/li;
+    new-instance v1, Lcom/estrongs/android/pop/app/lz;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/li;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/lz;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ix;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/jh;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ix;->show()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/jh;->show()V
 
     iput-boolean v4, p0, Lcom/estrongs/android/pop/app/ShowDialogActivity;->b:Z
 
@@ -639,6 +645,54 @@
     if-eqz v0, :cond_b
 
     invoke-direct {p0, v1}, Lcom/estrongs/android/pop/app/ShowDialogActivity;->a(Landroid/content/Intent;)V
+
+    const v0, 0x7f08007f
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/ShowDialogActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "title"
+
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p0}, Lcom/estrongs/android/j/c;->a(Landroid/content/Context;)Lcom/estrongs/android/j/c;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/ShowDialogActivity;->d:Lcom/estrongs/android/j/c;
+
+    :try_start_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ShowDialogActivity;->d:Lcom/estrongs/android/j/c;
+
+    const-string v1, "act3"
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/j/c;->d(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ShowDialogActivity;->d:Lcom/estrongs/android/j/c;
+
+    const-string v1, "act3"
+
+    const-string v2, "click_download_progress"
+
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/j/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto/16 :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto/16 :goto_0
 
@@ -732,15 +786,15 @@
 
     new-instance v1, Lcom/estrongs/android/ui/dialog/j;
 
-    invoke-static {v0}, Lcom/estrongs/fs/impl/local/h;->b(Ljava/lang/String;)Lcom/estrongs/fs/impl/local/f;
+    invoke-static {v0}, Lcom/estrongs/fs/impl/local/i;->b(Ljava/lang/String;)Lcom/estrongs/fs/impl/local/f;
 
     move-result-object v0
 
     invoke-direct {v1, p0, v0}, Lcom/estrongs/android/ui/dialog/j;-><init>(Landroid/app/Activity;Lcom/estrongs/fs/h;)V
 
-    new-instance v0, Lcom/estrongs/android/pop/app/lj;
+    new-instance v0, Lcom/estrongs/android/pop/app/ma;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/lj;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/ma;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;)V
 
     invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/dialog/j;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/estrongs/android/ui/dialog/j;
 
@@ -781,9 +835,9 @@
 
     if-eqz v2, :cond_0
 
-    new-instance v3, Lcom/estrongs/android/ui/dialog/km;
+    new-instance v3, Lcom/estrongs/android/ui/dialog/kx;
 
-    invoke-direct {v3}, Lcom/estrongs/android/ui/dialog/km;-><init>()V
+    invoke-direct {v3}, Lcom/estrongs/android/ui/dialog/kx;-><init>()V
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -803,39 +857,39 @@
 
     move-result-object v0
 
-    iput-object v0, v3, Lcom/estrongs/android/ui/dialog/km;->a:Ljava/lang/String;
+    iput-object v0, v3, Lcom/estrongs/android/ui/dialog/kx;->a:Ljava/lang/String;
 
-    iput-object v1, v3, Lcom/estrongs/android/ui/dialog/km;->b:Ljava/lang/String;
+    iput-object v1, v3, Lcom/estrongs/android/ui/dialog/kx;->b:Ljava/lang/String;
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, v4}, Ljava/util/ArrayList;-><init>(I)V
 
-    iput-object v0, v3, Lcom/estrongs/android/ui/dialog/km;->c:Ljava/util/List;
+    iput-object v0, v3, Lcom/estrongs/android/ui/dialog/kx;->c:Ljava/util/List;
 
-    iget-object v0, v3, Lcom/estrongs/android/ui/dialog/km;->c:Ljava/util/List;
+    iget-object v0, v3, Lcom/estrongs/android/ui/dialog/kx;->c:Ljava/util/List;
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    new-instance v0, Lcom/estrongs/android/ui/dialog/kf;
+    new-instance v0, Lcom/estrongs/android/ui/dialog/kq;
 
     const/4 v2, 0x2
 
-    const v5, 0x7f0b04b0
+    const v5, 0x7f0804f0
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v5}, Lcom/estrongs/android/ui/dialog/kf;-><init>(Landroid/content/Context;ILcom/estrongs/android/ui/dialog/km;II)V
+    invoke-direct/range {v0 .. v5}, Lcom/estrongs/android/ui/dialog/kq;-><init>(Landroid/content/Context;ILcom/estrongs/android/ui/dialog/kx;II)V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/kf;->a()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/kq;->a()V
 
-    new-instance v1, Lcom/estrongs/android/pop/app/lk;
+    new-instance v1, Lcom/estrongs/android/pop/app/mb;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/lk;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/mb;-><init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/kf;->a(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/kq;->a(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/kf;->b()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/kq;->b()V
 
     goto/16 :goto_0
 .end method
@@ -857,7 +911,7 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/estrongs/android/ui/dialog/ix;->d:Ljava/util/Map;
+    sget-object v0, Lcom/estrongs/android/ui/dialog/jh;->d:Ljava/util/Map;
 
     iget-wide v2, p0, Lcom/estrongs/android/pop/app/ShowDialogActivity;->a:J
 
@@ -871,7 +925,7 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/estrongs/android/ui/dialog/ix;->d:Ljava/util/Map;
+    sget-object v0, Lcom/estrongs/android/ui/dialog/jh;->d:Ljava/util/Map;
 
     iget-wide v2, p0, Lcom/estrongs/android/pop/app/ShowDialogActivity;->a:J
 
@@ -889,7 +943,7 @@
 
     invoke-virtual {v0, v1}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    sget-object v0, Lcom/estrongs/android/ui/dialog/ix;->d:Ljava/util/Map;
+    sget-object v0, Lcom/estrongs/android/ui/dialog/jh;->d:Ljava/util/Map;
 
     iget-wide v2, p0, Lcom/estrongs/android/pop/app/ShowDialogActivity;->a:J
 
@@ -905,7 +959,7 @@
 
     invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
-    sget-object v0, Lcom/estrongs/android/ui/dialog/ix;->d:Ljava/util/Map;
+    sget-object v0, Lcom/estrongs/android/ui/dialog/jh;->d:Ljava/util/Map;
 
     iget-wide v2, p0, Lcom/estrongs/android/pop/app/ShowDialogActivity;->a:J
 
@@ -916,7 +970,7 @@
     invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    sget-object v0, Lcom/estrongs/android/a/a;->a:Ljava/util/Map;
+    sget-object v0, Lcom/estrongs/android/d/a;->a:Ljava/util/Map;
 
     iget-wide v2, p0, Lcom/estrongs/android/pop/app/ShowDialogActivity;->a:J
 
@@ -928,17 +982,17 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/android/a/a;
+    check-cast v0, Lcom/estrongs/android/d/a;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/estrongs/android/a/a;->getContext()Landroid/content/Context;
+    invoke-virtual {v0}, Lcom/estrongs/android/d/a;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     if-ne v0, p0, :cond_1
 
-    sget-object v0, Lcom/estrongs/android/a/a;->a:Ljava/util/Map;
+    sget-object v0, Lcom/estrongs/android/d/a;->a:Ljava/util/Map;
 
     iget-wide v2, p0, Lcom/estrongs/android/pop/app/ShowDialogActivity;->a:J
 
@@ -977,7 +1031,7 @@
     invoke-virtual {v1, v2, v3}, Lcom/estrongs/a/a;->sendMessage(I[Ljava/lang/Object;)V
 
     :cond_1
-    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onDestroy()V
+    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;->onDestroy()V
 
     return-void
 .end method

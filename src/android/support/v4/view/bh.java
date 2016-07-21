@@ -1,14 +1,12 @@
 package android.support.v4.view;
 
-import android.view.ViewConfiguration;
+import android.view.MenuItem;
 
-class bh
-  implements bj
+abstract interface bh
 {
-  public int a(ViewConfiguration paramViewConfiguration)
-  {
-    return paramViewConfiguration.getScaledTouchSlop();
-  }
+  public abstract boolean a(MenuItem paramMenuItem);
+  
+  public abstract boolean b(MenuItem paramMenuItem);
 }
 
 /* Location:

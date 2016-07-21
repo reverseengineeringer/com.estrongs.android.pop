@@ -1,10 +1,14 @@
 package com.estrongs.android.pop.app;
 
-import com.estrongs.android.pop.app.a.al;
-
-public abstract interface fz
+class fz
+  extends Thread
 {
-  public abstract void a(al paramal);
+  fz(fw paramfw, int paramInt) {}
+  
+  public void run()
+  {
+    PopAudioPlayer.a(b.a).d(a);
+  }
 }
 
 /* Location:

@@ -10,32 +10,33 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TableRow;
-import com.estrongs.android.a.u;
+import com.estrongs.android.d.u;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bd;
-import com.estrongs.android.view.ea;
-import com.estrongs.android.view.eb;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bk;
+import com.estrongs.android.view.gf;
+import com.estrongs.android.view.gg;
 import com.estrongs.fs.FileSystemException;
 import com.estrongs.fs.d;
 import com.estrongs.old.fs.impl.sftp.OldSFtpFileSystem;
 
 public class b
-  extends ea
+  extends gf
 {
   private TableRow A = null;
   private TableRow B = null;
   private TableRow C = null;
   private View D = null;
   private View E = null;
-  private String F;
-  private CompoundButton.OnCheckedChangeListener G = new j(this);
-  private Handler H = new Handler();
-  private View.OnClickListener I = new k(this);
-  private String J = null;
+  private View F = null;
+  private String G;
+  private CompoundButton.OnCheckedChangeListener H = new j(this);
+  private Handler I = new Handler();
+  private View.OnClickListener J = new k(this);
   private String K = null;
-  private int L = 0;
+  private String L = null;
   private int M = 0;
+  private int N = 0;
   boolean a = false;
   boolean b = false;
   boolean c = false;
@@ -74,9 +75,9 @@ public class b
   public b(Activity paramActivity, String paramString1, String paramString2)
   {
     super(paramActivity);
-    F = paramString1;
+    G = paramString1;
     a(paramActivity);
-    a(am.by(paramString1));
+    a(ap.bP(paramString1));
     b(paramString2);
   }
   
@@ -96,24 +97,24 @@ public class b
   
   private void c(String paramString)
   {
-    ad.a(ad).b(paramString, m.isChecked());
-    ad.a(ad).a(paramString, L);
+    ad.a(ag).b(paramString, m.isChecked());
+    ad.a(ag).a(paramString, M);
     if (a)
     {
       if (!s.isChecked()) {
         break label101;
       }
-      if (bd.b(t)) {
-        ad.a(ad).d(paramString, t);
+      if (bk.b(t)) {
+        ad.a(ag).d(paramString, t);
       }
-      if (bd.b(u)) {
-        ad.a(ad).e(paramString, u);
+      if (bk.b(u)) {
+        ad.a(ag).e(paramString, u);
       }
     }
     return;
     label101:
-    ad.a(ad).d(paramString, "");
-    ad.a(ad).e(paramString, "");
+    ad.a(ag).d(paramString, "");
+    ad.a(ag).e(paramString, "");
   }
   
   private String d()
@@ -122,7 +123,7 @@ public class b
     Object localObject1 = f.getText().toString().trim();
     if (((String)localObject1).length() == 0)
     {
-      ag.a(ad, ad.getText(2131427777), 1);
+      ak.a(ag, ag.getText(2131231825), 1);
       return null;
     }
     if (b) {
@@ -136,9 +137,9 @@ public class b
     label728:
     for (;;)
     {
-      boolean bool = ((CheckBox)k(2131362516)).isChecked();
+      boolean bool = ((CheckBox)b(2131625253)).isChecked();
       if (c) {
-        bool = ((CheckBox)k(2131362515)).isChecked();
+        bool = ((CheckBox)b(2131625252)).isChecked();
       }
       int i2;
       String str1;
@@ -156,7 +157,7 @@ public class b
         for (;;)
         {
           localObject2 = str1 + (String)localObject1;
-          if (!am.bg((String)localObject2)) {
+          if (!ap.br((String)localObject2)) {
             break label303;
           }
           return (String)localObject2;
@@ -205,7 +206,7 @@ public class b
             i2 = i3;
             if (i1 != i2)
             {
-              i2 = ((String)localObject2).indexOf('/', am.bf((String)localObject2));
+              i2 = ((String)localObject2).indexOf('/', ap.bq((String)localObject2));
               if (i2 == -1) {
                 break label616;
               }
@@ -272,10 +273,10 @@ public class b
               }
             }
           }
-          ag.a(ad, m(2131427773), 1);
+          ak.a(ag, k(2131232533), 1);
           return null;
         }
-        localStringBuffer.insert(am.bf((String)localObject2), am.bi(str2) + ":" + am.bi(localNumberFormatException) + "@");
+        localStringBuffer.insert(ap.bq((String)localObject2), ap.bz(str2) + ":" + ap.bz(localNumberFormatException) + "@");
         return localStringBuffer.toString();
         str1 = "webdav://";
         i2 = 80;
@@ -285,17 +286,17 @@ public class b
   
   private void d(String paramString)
   {
-    if (ad.a(ad).m(paramString))
+    if (ad.a(ag).m(paramString))
     {
       m.setChecked(true);
       n.setChecked(false);
-      L = ad.a(ad).o(paramString);
-      p.setText(com.estrongs.android.util.f.a[L]);
-      if (am.I(paramString))
+      M = ad.a(ag).o(paramString);
+      p.setText(com.estrongs.android.util.e.a[M]);
+      if (ap.K(paramString))
       {
-        t = ad.a(ad).p(paramString);
-        u = ad.a(ad).r(paramString);
-        if (!bd.a(t)) {
+        t = ad.a(ag).p(paramString);
+        u = ad.a(ag).r(paramString);
+        if (!bk.a(t)) {
           break label146;
         }
         s.setChecked(false);
@@ -309,9 +310,9 @@ public class b
       n.setChecked(true);
       break;
       label146:
-      q.setText(am.d(t));
+      q.setText(ap.d(t));
       s.setChecked(true);
-      if (bd.b(u)) {
+      if (bk.b(u)) {
         r.setText(u);
       }
     }
@@ -321,22 +322,22 @@ public class b
   {
     try
     {
-      Object localObject = d.n(am.by(K));
+      Object localObject = d.n(ap.bP(L));
       if ((a) && (localObject != null) && ((localObject instanceof OldSFtpFileSystem)))
       {
-        J = ((OldSFtpFileSystem)localObject).l(K);
-        if (!J.equals("/"))
+        K = ((OldSFtpFileSystem)localObject).l(L);
+        if (!K.equals("/"))
         {
-          if (J.endsWith("/")) {
-            J = J.substring(0, J.length() - 1);
+          if (K.endsWith("/")) {
+            K = K.substring(0, K.length() - 1);
           }
-          String str = am.i(K);
+          String str = ap.j(L);
           localObject = str;
           if (str == null) {
             localObject = "";
           }
-          K = (K.substring(0, K.length() - ((String)localObject).length()) + J + (String)localObject);
-          boolean bool = e(K);
+          L = (L.substring(0, L.length() - ((String)localObject).length()) + K + (String)localObject);
+          boolean bool = e(L);
           return bool;
         }
       }
@@ -355,96 +356,96 @@ public class b
     //   0: iconst_1
     //   1: istore_2
     //   2: aload_1
-    //   3: invokestatic 299	com/estrongs/android/util/am:bg	(Ljava/lang/String;)Z
+    //   3: invokestatic 302	com/estrongs/android/util/ap:br	(Ljava/lang/String;)Z
     //   6: ifeq +5 -> 11
     //   9: iconst_0
     //   10: ireturn
     //   11: aload_0
-    //   12: getfield 115	com/estrongs/android/ui/view/b:c	Z
+    //   12: getfield 118	com/estrongs/android/ui/view/b:c	Z
     //   15: ifeq +15 -> 30
     //   18: aload_1
     //   19: aconst_null
     //   20: aconst_null
-    //   21: invokestatic 417	com/estrongs/fs/impl/r/b:a	(Ljava/lang/String;Lcom/estrongs/fs/i;Lcom/estrongs/a/b/o;)Ljava/util/List;
+    //   21: invokestatic 420	com/estrongs/fs/impl/w/b:a	(Ljava/lang/String;Lcom/estrongs/fs/i;Lcom/estrongs/a/b/o;)Ljava/util/List;
     //   24: ifnull +185 -> 209
     //   27: goto +180 -> 207
     //   30: aload_1
-    //   31: invokestatic 169	com/estrongs/android/util/am:by	(Ljava/lang/String;)Ljava/lang/String;
-    //   34: invokestatic 390	com/estrongs/fs/d:n	(Ljava/lang/String;)Lcom/estrongs/old/fs/a;
+    //   31: invokestatic 172	com/estrongs/android/util/ap:bP	(Ljava/lang/String;)Ljava/lang/String;
+    //   34: invokestatic 393	com/estrongs/fs/d:n	(Ljava/lang/String;)Lcom/estrongs/old/fs/a;
     //   37: astore_3
     //   38: aload_3
     //   39: ifnull +154 -> 193
-    //   42: new 419	com/estrongs/android/util/TypedMap
+    //   42: new 422	com/estrongs/android/util/TypedMap
     //   45: dup
-    //   46: invokespecial 420	com/estrongs/android/util/TypedMap:<init>	()V
+    //   46: invokespecial 423	com/estrongs/android/util/TypedMap:<init>	()V
     //   49: astore 4
     //   51: aload 4
-    //   53: ldc_w 422
+    //   53: ldc_w 425
     //   56: aload_1
-    //   57: invokestatic 424	com/estrongs/android/util/am:h	(Ljava/lang/String;)Ljava/lang/String;
-    //   60: invokevirtual 428	com/estrongs/android/util/TypedMap:put	(Ljava/lang/String;Ljava/lang/Object;)Lcom/estrongs/android/util/TypedMap;
+    //   57: invokestatic 427	com/estrongs/android/util/ap:i	(Ljava/lang/String;)Ljava/lang/String;
+    //   60: invokevirtual 431	com/estrongs/android/util/TypedMap:put	(Ljava/lang/String;Ljava/lang/Object;)Lcom/estrongs/android/util/TypedMap;
     //   63: pop
     //   64: aload 4
-    //   66: ldc_w 430
+    //   66: ldc_w 433
     //   69: aload_0
-    //   70: getfield 75	com/estrongs/android/ui/view/b:m	Landroid/widget/RadioButton;
-    //   73: invokevirtual 214	android/widget/RadioButton:isChecked	()Z
-    //   76: invokestatic 436	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
-    //   79: invokevirtual 428	com/estrongs/android/util/TypedMap:put	(Ljava/lang/String;Ljava/lang/Object;)Lcom/estrongs/android/util/TypedMap;
+    //   70: getfield 76	com/estrongs/android/ui/view/b:m	Landroid/widget/RadioButton;
+    //   73: invokevirtual 217	android/widget/RadioButton:isChecked	()Z
+    //   76: invokestatic 439	java/lang/Boolean:valueOf	(Z)Ljava/lang/Boolean;
+    //   79: invokevirtual 431	com/estrongs/android/util/TypedMap:put	(Ljava/lang/String;Ljava/lang/Object;)Lcom/estrongs/android/util/TypedMap;
     //   82: pop
     //   83: aload 4
-    //   85: ldc_w 438
+    //   85: ldc_w 441
     //   88: aload_0
-    //   89: getfield 150	com/estrongs/android/ui/view/b:L	I
-    //   92: invokestatic 440	com/estrongs/android/util/f:a	(I)Ljava/lang/String;
-    //   95: invokevirtual 428	com/estrongs/android/util/TypedMap:put	(Ljava/lang/String;Ljava/lang/Object;)Lcom/estrongs/android/util/TypedMap;
+    //   89: getfield 153	com/estrongs/android/ui/view/b:M	I
+    //   92: invokestatic 443	com/estrongs/android/util/e:a	(I)Ljava/lang/String;
+    //   95: invokevirtual 431	com/estrongs/android/util/TypedMap:put	(Ljava/lang/String;Ljava/lang/Object;)Lcom/estrongs/android/util/TypedMap;
     //   98: pop
     //   99: aload_0
-    //   100: getfield 111	com/estrongs/android/ui/view/b:a	Z
+    //   100: getfield 114	com/estrongs/android/ui/view/b:a	Z
     //   103: ifeq +73 -> 176
     //   106: aload_0
-    //   107: getfield 87	com/estrongs/android/ui/view/b:s	Landroid/widget/CheckBox;
-    //   110: invokevirtual 223	android/widget/CheckBox:isChecked	()Z
+    //   107: getfield 88	com/estrongs/android/ui/view/b:s	Landroid/widget/CheckBox;
+    //   110: invokevirtual 226	android/widget/CheckBox:isChecked	()Z
     //   113: ifeq +63 -> 176
     //   116: aload_0
-    //   117: getfield 89	com/estrongs/android/ui/view/b:t	Ljava/lang/String;
-    //   120: invokestatic 228	com/estrongs/android/util/bd:b	(Ljava/lang/CharSequence;)Z
+    //   117: getfield 90	com/estrongs/android/ui/view/b:t	Ljava/lang/String;
+    //   120: invokestatic 231	com/estrongs/android/util/bk:b	(Ljava/lang/CharSequence;)Z
     //   123: ifeq +16 -> 139
     //   126: aload 4
-    //   128: ldc_w 442
+    //   128: ldc_w 445
     //   131: aload_0
-    //   132: getfield 89	com/estrongs/android/ui/view/b:t	Ljava/lang/String;
-    //   135: invokevirtual 428	com/estrongs/android/util/TypedMap:put	(Ljava/lang/String;Ljava/lang/Object;)Lcom/estrongs/android/util/TypedMap;
+    //   132: getfield 90	com/estrongs/android/ui/view/b:t	Ljava/lang/String;
+    //   135: invokevirtual 431	com/estrongs/android/util/TypedMap:put	(Ljava/lang/String;Ljava/lang/Object;)Lcom/estrongs/android/util/TypedMap;
     //   138: pop
     //   139: aload_0
     //   140: aload_0
-    //   141: getfield 85	com/estrongs/android/ui/view/b:r	Landroid/widget/EditText;
-    //   144: invokevirtual 246	android/widget/EditText:getText	()Landroid/text/Editable;
-    //   147: invokevirtual 251	java/lang/Object:toString	()Ljava/lang/String;
-    //   150: putfield 91	com/estrongs/android/ui/view/b:u	Ljava/lang/String;
+    //   141: getfield 86	com/estrongs/android/ui/view/b:r	Landroid/widget/EditText;
+    //   144: invokevirtual 249	android/widget/EditText:getText	()Landroid/text/Editable;
+    //   147: invokevirtual 254	java/lang/Object:toString	()Ljava/lang/String;
+    //   150: putfield 92	com/estrongs/android/ui/view/b:u	Ljava/lang/String;
     //   153: aload_0
-    //   154: getfield 91	com/estrongs/android/ui/view/b:u	Ljava/lang/String;
-    //   157: invokestatic 228	com/estrongs/android/util/bd:b	(Ljava/lang/CharSequence;)Z
+    //   154: getfield 92	com/estrongs/android/ui/view/b:u	Ljava/lang/String;
+    //   157: invokestatic 231	com/estrongs/android/util/bk:b	(Ljava/lang/CharSequence;)Z
     //   160: ifeq +16 -> 176
     //   163: aload 4
-    //   165: ldc_w 444
+    //   165: ldc_w 447
     //   168: aload_0
-    //   169: getfield 91	com/estrongs/android/ui/view/b:u	Ljava/lang/String;
-    //   172: invokevirtual 428	com/estrongs/android/util/TypedMap:put	(Ljava/lang/String;Ljava/lang/Object;)Lcom/estrongs/android/util/TypedMap;
+    //   169: getfield 92	com/estrongs/android/ui/view/b:u	Ljava/lang/String;
+    //   172: invokevirtual 431	com/estrongs/android/util/TypedMap:put	(Ljava/lang/String;Ljava/lang/Object;)Lcom/estrongs/android/util/TypedMap;
     //   175: pop
     //   176: aload_3
     //   177: aload 4
-    //   179: invokeinterface 449 2 0
+    //   179: invokeinterface 452 2 0
     //   184: aload_3
     //   185: aload_1
     //   186: aconst_null
-    //   187: invokeinterface 452 3 0
+    //   187: invokeinterface 455 3 0
     //   192: pop
     //   193: iconst_1
     //   194: ireturn
     //   195: astore_1
     //   196: aload_1
-    //   197: invokevirtual 410	com/estrongs/fs/FileSystemException:printStackTrace	()V
+    //   197: invokevirtual 413	com/estrongs/fs/FileSystemException:printStackTrace	()V
     //   200: iconst_0
     //   201: ireturn
     //   202: astore 4
@@ -477,36 +478,37 @@ public class b
   
   protected int a()
   {
-    return 2130903200;
+    return 2130903351;
   }
   
   public void a(Activity paramActivity)
   {
-    f = ((EditText)k(2131362498));
-    g = ((EditText)k(2131362500));
-    h = ((EditText)k(2131362518));
-    i = ((EditText)k(2131362072));
-    k = ((CheckBox)k(2131362522));
-    l = ((CheckBox)k(2131362515));
-    j = ((EditText)k(2131362502));
-    m = ((RadioButton)k(2131362513));
-    n = ((RadioButton)k(2131362512));
-    p = ((Button)k(2131362540));
-    p.setOnClickListener(I);
-    k.setOnCheckedChangeListener(G);
-    x = ((TableRow)k(2131362509));
-    y = ((TableRow)k(2131362521));
-    z = ((TableRow)k(2131362523));
-    A = ((TableRow)k(2131362514));
-    B = ((TableRow)k(2131362537));
-    C = ((TableRow)k(2131362531));
-    E = k(2131362528);
-    o = ((RadioButton)k(2131362527));
-    r = ((EditText)k(2131362528).findViewById(2131362530));
-    D = k(2131362519);
-    q = ((Button)k(2131362534));
+    f = ((EditText)b(2131625235));
+    g = ((EditText)b(2131625237));
+    h = ((EditText)b(2131625255));
+    i = ((EditText)b(2131624636));
+    k = ((CheckBox)b(2131625259));
+    l = ((CheckBox)b(2131625252));
+    j = ((EditText)b(2131625239));
+    m = ((RadioButton)b(2131625250));
+    n = ((RadioButton)b(2131625249));
+    p = ((Button)b(2131625277));
+    p.setOnClickListener(J);
+    k.setOnCheckedChangeListener(H);
+    x = ((TableRow)b(2131625246));
+    y = ((TableRow)b(2131625258));
+    z = ((TableRow)b(2131625260));
+    A = ((TableRow)b(2131625251));
+    B = ((TableRow)b(2131625274));
+    C = ((TableRow)b(2131625268));
+    E = b(2131625265);
+    o = ((RadioButton)b(2131625264));
+    r = ((EditText)b(2131625265).findViewById(2131625267));
+    D = b(2131625256);
+    q = ((Button)b(2131625271));
     q.setOnClickListener(new c(this));
-    s = ((CheckBox)k(2131362536));
+    s = ((CheckBox)b(2131625273));
+    F = ((TableRow)b(2131625272));
     s.setOnCheckedChangeListener(new h(this));
     a(false);
   }
@@ -543,6 +545,7 @@ public class b
         C.setVisibility(8);
         E.setVisibility(8);
         s.setVisibility(8);
+        F.setVisibility(8);
         return;
       }
       if (w.equals("ftps"))
@@ -555,11 +558,12 @@ public class b
         C.setVisibility(8);
         E.setVisibility(8);
         s.setVisibility(8);
+        F.setVisibility(8);
         return;
       }
     } while ((!w.equals("webdav")) && (!w.equals("webdavs")));
     c = true;
-    f.setHint(2131428288);
+    f.setHint(2131232561);
     B.setVisibility(8);
     x.setVisibility(8);
     y.setVisibility(8);
@@ -567,6 +571,7 @@ public class b
     C.setVisibility(8);
     E.setVisibility(8);
     s.setVisibility(8);
+    F.setVisibility(8);
     if (w.equals("webdavs")) {
       l.setChecked(true);
     }
@@ -583,39 +588,39 @@ public class b
   
   protected void b()
   {
-    K = d();
-    if (K == null) {
+    L = d();
+    if (L == null) {
       return;
     }
-    u.a(ad, 2131427784, 2131427785);
+    u.a(ag, 2131230914, 2131230913);
     new Thread(new o(this)).start();
   }
   
   public void b(String paramString)
   {
-    String str2 = am.D(F);
-    d(F);
+    String str2 = ap.F(G);
+    d(G);
     if (str2 != null)
     {
       v = true;
-      if (am.I(str2)) {
+      if (ap.K(str2)) {
         w = "sftp";
       }
-      if ((!am.J(str2)) && (!am.I(str2)) && (!am.m(str2)))
+      if ((!ap.L(str2)) && (!ap.K(str2)) && (!ap.o(str2)))
       {
         str1 = str2;
-        if (!am.p(str2)) {}
+        if (!ap.r(str2)) {}
       }
       else
       {
-        str1 = am.a(str2);
-        str2 = am.i(str2);
+        str1 = ap.a(str2);
+        str2 = ap.j(str2);
         str1 = str1 + str2;
       }
       f.setText(str1);
-      str1 = am.w(F);
-      str2 = am.y(F);
-      str3 = am.A(F);
+      str1 = ap.y(G);
+      str2 = ap.A(G);
+      str3 = ap.C(G);
       if ((str1 != null) && (str1.length() > 0)) {
         g.setText(str1);
       }
@@ -628,7 +633,7 @@ public class b
       break label226;
       if ((str2 != null) && (str2.length() > 0))
       {
-        d(F);
+        d(G);
         h.setText(str2);
         k.setChecked(false);
       }
@@ -646,7 +651,7 @@ public class b
         }
         g.setText("22");
         break;
-        d(am.D(F));
+        d(ap.F(G));
         if (y.getVisibility() == 0) {
           k.setChecked(true);
         }
@@ -657,8 +662,8 @@ public class b
   
   protected void c()
   {
-    if (ah != null) {
-      ah.a(Boolean.FALSE);
+    if (ak != null) {
+      ak.a(Boolean.FALSE);
     }
   }
 }

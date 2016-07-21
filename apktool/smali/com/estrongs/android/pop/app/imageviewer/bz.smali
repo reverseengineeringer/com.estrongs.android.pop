@@ -6,14 +6,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/imageviewer/by;
+.field final synthetic a:I
+
+.field final synthetic b:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/imageviewer/by;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;I)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/imageviewer/bz;->a:Lcom/estrongs/android/pop/app/imageviewer/by;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/imageviewer/bz;->b:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+
+    iput p2, p0, Lcom/estrongs/android/pop/app/imageviewer/bz;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,90 +29,37 @@
 .method public run()V
     .locals 3
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bz;->a:Lcom/estrongs/android/pop/app/imageviewer/by;
+    iget v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bz;->a:I
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/by;->b:Lcom/estrongs/android/pop/app/imageviewer/bx;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/bx;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->g:Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouch;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bz;->a:Lcom/estrongs/android/pop/app/imageviewer/by;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/by;->b:Lcom/estrongs/android/pop/app/imageviewer/bx;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/bx;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->g:Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouch;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/ImageViewTouch;->e()V
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bz;->a:Lcom/estrongs/android/pop/app/imageviewer/by;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/by;->b:Lcom/estrongs/android/pop/app/imageviewer/bx;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/bx;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->e:Lcom/estrongs/android/pop/app/imageviewer/gallery/f;
-
-    invoke-interface {v0}, Lcom/estrongs/android/pop/app/imageviewer/gallery/f;->b()I
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bz;->a:Lcom/estrongs/android/pop/app/imageviewer/by;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/by;->b:Lcom/estrongs/android/pop/app/imageviewer/bx;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/bx;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->finish()V
-
-    :goto_0
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bz;->a:Lcom/estrongs/android/pop/app/imageviewer/by;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/by;->b:Lcom/estrongs/android/pop/app/imageviewer/bx;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/bx;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/bz;->a:Lcom/estrongs/android/pop/app/imageviewer/by;
-
-    iget-object v1, v1, Lcom/estrongs/android/pop/app/imageviewer/by;->b:Lcom/estrongs/android/pop/app/imageviewer/bx;
-
-    iget-object v1, v1, Lcom/estrongs/android/pop/app/imageviewer/bx;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/bz;->b:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
     iget v1, v1, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->c:I
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/imageviewer/bz;->a:Lcom/estrongs/android/pop/app/imageviewer/by;
+    if-ne v0, v1, :cond_0
 
-    iget-object v2, v2, Lcom/estrongs/android/pop/app/imageviewer/by;->b:Lcom/estrongs/android/pop/app/imageviewer/bx;
+    :try_start_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bz;->b:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
-    iget-object v2, v2, Lcom/estrongs/android/pop/app/imageviewer/bx;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+    iget v1, p0, Lcom/estrongs/android/pop/app/imageviewer/bz;->a:I
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/imageviewer/bz;->b:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
     invoke-static {v2}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->c(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)Z
 
     move-result v2
 
     invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->a(IZ)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bz;->a:Lcom/estrongs/android/pop/app/imageviewer/by;
+    :cond_0
+    :goto_0
+    return-void
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/by;->b:Lcom/estrongs/android/pop/app/imageviewer/bx;
+    :catch_0
+    move-exception v0
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/bx;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->g(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)Lcom/estrongs/android/pop/app/imageviewer/q;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/imageviewer/q;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 .end method

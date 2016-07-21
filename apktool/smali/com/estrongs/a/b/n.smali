@@ -6,20 +6,20 @@
 
 
 # instance fields
-.field b:Lcom/estrongs/fs/b/bl;
+.field b:Lcom/estrongs/fs/b/bn;
 
 .field final synthetic c:Lcom/estrongs/a/b/d;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/a/b/d;Lcom/estrongs/fs/b/bl;)V
+.method constructor <init>(Lcom/estrongs/a/b/d;Lcom/estrongs/fs/b/bn;)V
     .locals 0
 
     iput-object p1, p0, Lcom/estrongs/a/b/n;->c:Lcom/estrongs/a/b/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lcom/estrongs/a/b/n;->b:Lcom/estrongs/fs/b/bl;
+    iput-object p2, p0, Lcom/estrongs/a/b/n;->b:Lcom/estrongs/fs/b/bn;
 
     return-void
 .end method

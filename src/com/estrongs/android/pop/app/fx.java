@@ -1,19 +1,18 @@
 package com.estrongs.android.pop.app;
 
-import android.net.LocalSocket;
-import com.estrongs.android.nativetool.c;
-
 class fx
-  implements Runnable
+  extends Thread
 {
-  fx(fw paramfw) {}
+  fx(fw paramfw, int paramInt1, int paramInt2) {}
   
   public void run()
   {
-    PopAudioPlayer.f(a.a.a);
     try
     {
-      c.a().close();
+      PopAudioPlayer.a(c.a).a(a);
+      PopAudioPlayer.a(c.a).a(b);
+      PopAudioPlayer.a(c.a).w();
+      PopAudioPlayer.v(c.a).b(b);
       return;
     }
     catch (Exception localException) {}

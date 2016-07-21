@@ -1,16 +1,23 @@
 package com.estrongs.android.ui.view;
 
-import android.media.MediaPlayer;
+import android.support.v7.widget.helper.ItemTouchHelper;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnTouchListener;
 
 class ah
-  implements Runnable
+  implements View.OnTouchListener
 {
-  ah(ESVideoView paramESVideoView, MediaPlayer paramMediaPlayer) {}
+  ah(ac paramac, aj paramaj) {}
   
-  public void run()
+  public boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    a.stop();
-    a.release();
+    if (ac.b(b)) {}
+    while (paramMotionEvent.getAction() != 0) {
+      return false;
+    }
+    ac.e(b).startDrag(a);
+    return false;
   }
 }
 

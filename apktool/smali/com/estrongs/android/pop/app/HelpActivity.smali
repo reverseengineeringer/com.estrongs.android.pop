@@ -80,7 +80,7 @@
 
     invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f0b0345
+    const v0, 0x7f080345
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/HelpActivity;->setTitle(I)V
 
@@ -92,11 +92,11 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const v0, 0x7f030072
+    const v0, 0x7f0300dd
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/HelpActivity;->setContentView(I)V
 
-    const v0, 0x7f0a023d
+    const v0, 0x7f0e040c
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/HelpActivity;->findViewById(I)Landroid/view/View;
 
@@ -120,15 +120,15 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/HelpActivity;->c:Landroid/webkit/WebView;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/cs;
+    new-instance v1, Lcom/estrongs/android/pop/app/cv;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/cs;-><init>(Lcom/estrongs/android/pop/app/HelpActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/cv;-><init>(Lcom/estrongs/android/pop/app/HelpActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
     const-string v0, "http://www.estrongs.com/eshelp/en/ES_File_Explorer_User_Manual3.0.htm"
 
-    invoke-static {}, Lcom/estrongs/android/pop/utils/cc;->b()Z
+    invoke-static {}, Lcom/estrongs/android/pop/utils/cl;->b()Z
 
     move-result v1
 

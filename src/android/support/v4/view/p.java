@@ -1,12 +1,8 @@
 package android.support.v4.view;
 
-class p
-  implements o
+public abstract interface p
 {
-  public int a(int paramInt1, int paramInt2)
-  {
-    return 0xFF7FFFFF & paramInt1;
-  }
+  public abstract void a(boolean paramBoolean);
 }
 
 /* Location:

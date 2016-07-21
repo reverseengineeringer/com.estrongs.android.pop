@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/a/a/p;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Landroid/app/Activity;
-
-.field final synthetic b:Lcom/estrongs/fs/b/y;
+.field final synthetic a:Landroid/content/Context;
 
 
 # direct methods
-.method constructor <init>(Landroid/app/Activity;Lcom/estrongs/fs/b/y;)V
+.method constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/utils/ay;->a:Landroid/app/Activity;
-
-    iput-object p2, p0, Lcom/estrongs/android/pop/utils/ay;->b:Lcom/estrongs/fs/b/y;
+    iput-object p1, p0, Lcom/estrongs/android/pop/utils/ay;->a:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,29 +22,20 @@
 
 
 # virtual methods
-.method public a(Lcom/estrongs/a/a;II)V
+.method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
 
-    const/4 v0, 0x4
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    if-ne p3, v0, :cond_0
+    new-instance v0, Lcom/estrongs/android/ui/pcs/r;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/utils/ay;->a:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/estrongs/android/pop/utils/ay;->a:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/utils/ay;->b:Lcom/estrongs/fs/b/y;
+    const/4 v2, 0x0
 
-    invoke-virtual {v1}, Lcom/estrongs/fs/b/y;->b()Ljava/lang/String;
+    invoke-direct {v0, v1, v2}, Lcom/estrongs/android/ui/pcs/r;-><init>(Landroid/content/Context;Z)V
 
-    move-result-object v1
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/r;->show()V
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/utils/ay;->b:Lcom/estrongs/fs/b/y;
-
-    invoke-virtual {v2}, Lcom/estrongs/fs/b/y;->b()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/pop/view/utils/AppRunner;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
     return-void
 .end method

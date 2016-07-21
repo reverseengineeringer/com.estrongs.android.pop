@@ -64,7 +64,7 @@
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/estrongs/android/pop/app/editor/f;->a()V
+    invoke-interface {v0}, Lcom/estrongs/android/pop/app/editor/f;->g_()V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/editor/e;->a:Lcom/estrongs/android/pop/app/editor/ObservableScrollView;
 

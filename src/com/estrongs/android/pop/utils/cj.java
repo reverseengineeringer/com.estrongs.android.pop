@@ -1,9 +1,17 @@
 package com.estrongs.android.pop.utils;
 
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.fs.impl.local.m;
+
 class cj
+  implements Runnable
 {
-  String a;
-  int b;
+  cj(ch paramch, FileExplorerActivity paramFileExplorerActivity) {}
+  
+  public void run()
+  {
+    m.b(a);
+  }
 }
 
 /* Location:

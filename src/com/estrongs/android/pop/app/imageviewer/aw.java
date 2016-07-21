@@ -1,12 +1,15 @@
 package com.estrongs.android.pop.app.imageviewer;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.view.View;
 import android.view.View.OnClickListener;
+import com.estrongs.android.j.c;
 import com.estrongs.android.pop.app.imageviewer.gallery.e;
-import com.estrongs.android.ui.dialog.ks;
-import com.estrongs.android.util.am;
-import java.util.ArrayList;
-import java.util.List;
+import com.estrongs.android.pop.utils.de;
+import com.estrongs.android.pop.utils.dh;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.util.ap;
 
 class aw
   implements View.OnClickListener
@@ -16,32 +19,42 @@ class aw
   public void onClick(View paramView)
   {
     paramView = a.c();
-    ArrayList localArrayList;
-    int j;
-    int i;
-    if (paramView != null)
-    {
-      localArrayList = new ArrayList();
-      localArrayList.add(am.bB(paramView.i()));
-      if (!ImageManager.a(paramView)) {
-        break label168;
+    if (paramView != null) {
+      try
+      {
+        if (ViewImage21.k(a) != null)
+        {
+          ViewImage21.k(a).a("Search_Wan");
+          ViewImage21.k(a).c("Search_Wan_UV");
+        }
       }
-      j = paramView.m();
-      i = paramView.l();
-    }
-    for (;;)
-    {
-      if ((j > 0) && (i > 0)) {
-        localArrayList.add(String.format(a.getString(2131428712), new Object[] { Integer.valueOf(j), Integer.valueOf(i) }) + " " + a.getString(2131427421));
+      catch (Exception localException)
+      {
+        for (;;)
+        {
+          try
+          {
+            paramView = de.a(a, "image", ap.bS(paramView.i()));
+            if (paramView == null) {
+              return;
+            }
+            if (de.a(b))
+            {
+              a.finish();
+              return;
+            }
+            Intent localIntent = new Intent(a, FileExplorerActivity.class);
+            localIntent.setFlags(603979776);
+            localIntent.setData(Uri.parse(a));
+            a.startActivity(localIntent);
+            return;
+          }
+          catch (Exception paramView) {}
+          localException = localException;
+        }
       }
-      paramView = new ks(a, "image", localArrayList);
-      paramView.a(new ax(this));
-      paramView.show();
-      return;
-      label168:
-      i = 0;
-      j = 0;
     }
+    return;
   }
 }
 

@@ -1,28 +1,18 @@
 package com.estrongs.android.ui.theme;
 
-import android.content.Context;
-import android.content.res.Resources;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.View.OnTouchListener;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class ah
-  implements View.OnTouchListener
+  implements DialogInterface.OnClickListener
 {
-  ah(af paramaf, int paramInt) {}
+  ah(ThemeFolderActivity paramThemeFolderActivity) {}
   
-  public boolean onTouch(View paramView, MotionEvent paramMotionEvent)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (paramMotionEvent.getAction() == 0) {
-      paramView.setBackgroundColor(af.a(b).getResources().getColor(2131230720));
-    }
-    for (;;)
-    {
-      return false;
-      if ((paramMotionEvent.getAction() == 3) || (paramMotionEvent.getAction() == 1)) {
-        paramView.setBackgroundDrawable(b.b(a));
-      }
-    }
+    paramDialogInterface.dismiss();
+    ThemeFolderActivity.a(a);
+    a.finish();
   }
 }
 

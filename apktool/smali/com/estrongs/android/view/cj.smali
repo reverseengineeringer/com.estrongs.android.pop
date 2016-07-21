@@ -1,53 +1,62 @@
 .class Lcom/estrongs/android/view/cj;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.super Landroid/support/v7/widget/GridLayoutManager;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/fs/h;
-
-.field final synthetic b:Lcom/estrongs/android/view/ce;
+.field final synthetic a:Lcom/estrongs/android/view/cg;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/view/ce;Lcom/estrongs/fs/h;)V
+.method public constructor <init>(Lcom/estrongs/android/view/cg;Landroid/content/Context;I)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/view/cj;->b:Lcom/estrongs/android/view/ce;
+    iput-object p1, p0, Lcom/estrongs/android/view/cj;->a:Lcom/estrongs/android/view/cg;
 
-    iput-object p2, p0, Lcom/estrongs/android/view/cj;->a:Lcom/estrongs/fs/h;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p3}, Landroid/support/v7/widget/GridLayoutManager;-><init>(Landroid/content/Context;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+.method public onLayoutChildren(Landroid/support/v7/widget/RecyclerView$Recycler;Landroid/support/v7/widget/RecyclerView$State;)V
+    .locals 1
 
-    new-instance v0, Lcom/estrongs/android/ui/pcs/a;
+    :try_start_0
+    invoke-super {p0, p1, p2}, Landroid/support/v7/widget/GridLayoutManager;->onLayoutChildren(Landroid/support/v7/widget/RecyclerView$Recycler;Landroid/support/v7/widget/RecyclerView$State;)V
+    :try_end_0
+    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v1, p0, Lcom/estrongs/android/view/cj;->b:Lcom/estrongs/android/view/ce;
-
-    iget-object v1, v1, Lcom/estrongs/android/view/ce;->a:Lcom/estrongs/android/view/cd;
-
-    iget-object v1, v1, Lcom/estrongs/android/view/cd;->ad:Landroid/app/Activity;
-
-    invoke-direct {v0, v1}, Lcom/estrongs/android/ui/pcs/a;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/a;->a()V
-
-    new-instance v1, Lcom/estrongs/android/view/ck;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/view/ck;-><init>(Lcom/estrongs/android/view/cj;)V
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/pcs/a;->a(Lcom/estrongs/android/ui/pcs/n;)V
-
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
-
+    :goto_0
     return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/IndexOutOfBoundsException;->printStackTrace()V
+
+    goto :goto_0
+.end method
+
+.method public scrollVerticallyBy(ILandroid/support/v7/widget/RecyclerView$Recycler;Landroid/support/v7/widget/RecyclerView$State;)I
+    .locals 1
+
+    :try_start_0
+    invoke-super {p0, p1, p2, p3}, Landroid/support/v7/widget/GridLayoutManager;->scrollVerticallyBy(ILandroid/support/v7/widget/RecyclerView$Recycler;Landroid/support/v7/widget/RecyclerView$State;)I
+    :try_end_0
+    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/IndexOutOfBoundsException;->printStackTrace()V
+
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

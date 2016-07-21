@@ -1,15 +1,16 @@
 package android.support.v4.widget;
 
-import android.view.animation.Interpolator;
+import android.view.View;
 
-final class ab
-  implements Interpolator
+public abstract interface ab
 {
-  public float getInterpolation(float paramFloat)
-  {
-    paramFloat -= 1.0F;
-    return paramFloat * (paramFloat * paramFloat * paramFloat * paramFloat) + 1.0F;
-  }
+  public abstract void onDrawerClosed(View paramView);
+  
+  public abstract void onDrawerOpened(View paramView);
+  
+  public abstract void onDrawerSlide(View paramView, float paramFloat);
+  
+  public abstract void onDrawerStateChanged(int paramInt);
 }
 
 /* Location:

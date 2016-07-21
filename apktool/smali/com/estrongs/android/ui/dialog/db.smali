@@ -1,69 +1,75 @@
 .class Lcom/estrongs/android/ui/dialog/db;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/estrongs/fs/i;
+.super Landroid/os/Handler;
 
 
 # instance fields
-.field final synthetic a:Z
+.field final synthetic a:Lcom/estrongs/android/ui/view/NaviListView;
 
 .field final synthetic b:Lcom/estrongs/android/ui/dialog/da;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/da;Z)V
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/da;Lcom/estrongs/android/ui/view/NaviListView;)V
     .locals 0
 
     iput-object p1, p0, Lcom/estrongs/android/ui/dialog/db;->b:Lcom/estrongs/android/ui/dialog/da;
 
-    iput-boolean p2, p0, Lcom/estrongs/android/ui/dialog/db;->a:Z
+    iput-object p2, p0, Lcom/estrongs/android/ui/dialog/db;->a:Lcom/estrongs/android/ui/view/NaviListView;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/estrongs/fs/h;)Z
+.method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    invoke-interface {p1}, Lcom/estrongs/fs/h;->getName()Ljava/lang/String;
+    invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    move-result-object v0
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    const-string v1, "."
+    iget v1, p1, Landroid/os/Message;->arg1:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_1
+
+    iget v0, p1, Landroid/os/Message;->arg2:I
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/db;->a:Lcom/estrongs/android/ui/view/NaviListView;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/NaviListView;->a()V
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/db;->b:Lcom/estrongs/android/ui/dialog/da;
+
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/ui/dialog/da;->a(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/estrongs/android/ui/dialog/db;->a:Z
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/db;->b:Lcom/estrongs/android/ui/dialog/da;
 
-    if-eqz v0, :cond_1
+    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/da;->a:Lcom/estrongs/android/ui/adapter/g;
 
-    :cond_0
-    invoke-interface {p1}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/m;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/fs/m;->a()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-
-    :cond_2
-    const/4 v0, 0x1
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/adapter/g;->a()V
 
     goto :goto_0
 .end method

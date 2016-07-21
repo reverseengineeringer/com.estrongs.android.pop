@@ -4,8 +4,9 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.pop.esclasses.i;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.view.ag;
+import com.estrongs.android.ui.view.ak;
 import java.io.PrintStream;
 
 public class OBEXFtpServerService
@@ -33,7 +34,7 @@ public class OBEXFtpServerService
         a = new e(this, new a(this));
         a.start();
       }
-      ag.a(this, 2131427752, 1);
+      ak.a(this, 2131231875, 1);
       System.out.println("*************************************************");
       return;
     }
@@ -55,7 +56,7 @@ public class OBEXFtpServerService
         b = null;
       }
       System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-      ag.a(this, 2131427753, 1);
+      ak.a(this, 2131231876, 1);
       return;
     }
     finally {}
@@ -71,7 +72,7 @@ public class OBEXFtpServerService
     super.onCreate();
     try
     {
-      com.estrongs.android.pop.esclasses.e.a(this);
+      i.a(this);
       return;
     }
     catch (Exception localException)
@@ -89,7 +90,7 @@ public class OBEXFtpServerService
   public void onStart(Intent paramIntent, int paramInt)
   {
     super.onStart(paramIntent, paramInt);
-    if (FileExplorerActivity.J() == null)
+    if (FileExplorerActivity.X() == null)
     {
       FexApplication.a().stopService(new Intent().setClassName(FexApplication.a(), OBEXFtpServerService.class.getName()));
       System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");

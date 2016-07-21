@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/dialog/ap;
-
-.field final synthetic b:Lcom/estrongs/android/ui/dialog/au;
+.field final synthetic a:Lcom/estrongs/android/ui/dialog/au;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/au;Lcom/estrongs/android/ui/dialog/ap;)V
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/au;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/av;->b:Lcom/estrongs/android/ui/dialog/au;
-
-    iput-object p2, p0, Lcom/estrongs/android/ui/dialog/av;->a:Lcom/estrongs/android/ui/dialog/ap;
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/av;->a:Lcom/estrongs/android/ui/dialog/au;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,16 +22,18 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 2
+.method public run()V
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/av;->b:Lcom/estrongs/android/ui/dialog/au;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/av;->a:Lcom/estrongs/android/ui/dialog/au;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/au;->a:Landroid/widget/RadioButton;
+    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/au;->a:Lcom/estrongs/android/ui/dialog/ar;
 
-    const/4 v1, 0x1
+    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/ar;->a(Lcom/estrongs/android/ui/dialog/ar;)Landroid/app/Activity;
 
-    invoke-virtual {v0, v1}, Landroid/widget/RadioButton;->setChecked(Z)V
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/estrongs/fs/impl/local/m;->b(Landroid/content/Context;)V
 
     return-void
 .end method

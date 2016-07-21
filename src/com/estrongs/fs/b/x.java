@@ -1,6 +1,6 @@
 package com.estrongs.fs.b;
 
-import com.estrongs.android.util.am;
+import com.estrongs.android.util.ap;
 import java.text.Collator;
 import java.util.Comparator;
 
@@ -13,7 +13,7 @@ class x
   {
     try
     {
-      int i = a.b.compare(am.d(paramString1).toLowerCase(), am.d(paramString2).toLowerCase());
+      int i = a.b.compare(ap.d(paramString1).toLowerCase(), ap.d(paramString2).toLowerCase());
       return i;
     }
     catch (Throwable paramString1) {}

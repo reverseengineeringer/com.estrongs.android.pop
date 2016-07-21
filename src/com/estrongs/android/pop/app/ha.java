@@ -1,24 +1,18 @@
 package com.estrongs.android.pop.app;
 
-import com.estrongs.android.pop.view.FileExplorerActivity;
+import android.preference.Preference;
+import android.preference.Preference.OnPreferenceClickListener;
+import com.estrongs.android.pop.utils.w;
 
 class ha
-  implements Runnable
+  implements Preference.OnPreferenceClickListener
 {
-  ha(gz paramgz) {}
+  ha(PopPreferenceActivity paramPopPreferenceActivity) {}
   
-  public void run()
+  public boolean onPreferenceClick(Preference paramPreference)
   {
-    try
-    {
-      FileExplorerActivity.J().R();
-      a.a.finish();
-      return;
-    }
-    catch (Exception localException)
-    {
-      for (;;) {}
-    }
+    w.a(a, "\"ES APP Group\"", "pub");
+    return true;
   }
 }
 

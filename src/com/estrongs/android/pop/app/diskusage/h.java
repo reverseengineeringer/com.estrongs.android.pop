@@ -4,27 +4,27 @@ import android.app.Activity;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Parcelable;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
-import android.widget.AdapterView.OnItemLongClickListener;
-import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.TextView;
 import com.estrongs.android.pop.b;
-import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.pop.utils.aj;
+import com.estrongs.android.pop.utils.ao;
+import com.estrongs.android.ui.theme.at;
 import com.estrongs.android.util.TypedMap;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bd;
-import com.estrongs.android.view.av;
-import com.estrongs.android.view.aw;
-import com.estrongs.android.view.ca;
-import com.estrongs.android.view.cb;
-import com.estrongs.android.widget.HeaderGridView;
-import com.estrongs.android.widget.bg;
-import com.estrongs.android.widget.bi;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bk;
+import com.estrongs.android.view.co;
+import com.estrongs.android.view.cp;
+import com.estrongs.android.view.cq;
+import com.estrongs.android.view.cr;
+import com.estrongs.android.view.dv;
+import com.estrongs.android.view.dw;
+import com.estrongs.android.widget.bh;
+import com.estrongs.android.widget.bj;
 import com.estrongs.fs.util.g;
 import java.io.File;
 import java.util.ArrayList;
@@ -38,12 +38,12 @@ import java.util.SortedMap;
 import java.util.Stack;
 
 public class h
-  extends aw
+  extends cr
 {
-  private static final String ai = ;
+  private static final String an = ;
   public static DisplayMetrics c = new DisplayMetrics();
   protected com.estrongs.fs.util.h a = new i(this);
-  private long aA = 0L;
+  private long aA;
   private long aB = 0L;
   private long aC = 0L;
   private long aD = 0L;
@@ -51,59 +51,99 @@ public class h
   private long aF = 0L;
   private long aG = 0L;
   private long aH = 0L;
-  private boolean aI = false;
-  private Stack<g> aJ = new Stack();
-  private Stack<Parcelable> aK = new Stack();
-  private com.estrongs.android.ui.a.k aL;
-  private long aM;
-  private ListView aN;
-  private Handler aO = new j(this);
-  private Object aj = new Object();
-  private boolean ak = false;
-  private boolean al = false;
-  private long am = 0L;
-  private File an;
-  private File ao;
-  private e ap;
-  private e aq;
-  private HashMap<String, e> ar = new HashMap();
-  private bg as;
-  private long at;
-  private long au;
-  private long av;
-  private long aw = 0L;
-  private long ax = 0L;
-  private long ay = 0L;
-  private long az = 0L;
+  private long aI = 0L;
+  private long aJ = 0L;
+  private long aK = 0L;
+  private long aL = 0L;
+  private long aM = 0L;
+  private boolean aN = false;
+  private Stack<g> aO = new Stack();
+  private Stack<Parcelable> aP = new Stack();
+  private com.estrongs.android.ui.adapter.k aQ;
+  private long aR;
+  private RecyclerView aS;
+  private Handler aT = new j(this);
+  private cp al;
+  private co am;
+  private Object ao = new Object();
+  private boolean ap = false;
+  private boolean aq = false;
+  private long ar = 0L;
+  private File as;
+  private File at;
+  private e au;
+  private e av;
+  private HashMap<String, e> aw = new HashMap();
+  private bh ax;
+  private long ay;
+  private long az;
   String b;
   private boolean d = false;
+  private LinearLayoutManager e;
   
-  public h(Activity paramActivity, com.estrongs.fs.util.a.a parama, cb paramcb)
+  public h(Activity paramActivity, com.estrongs.fs.util.a.a parama, dw paramdw)
   {
-    super(paramActivity, parama, paramcb);
-    paramActivity = (ViewGroup)g.getParent();
-    paramActivity.removeAllViews();
-    paramActivity.addView(ag.inflate(2130903110, null));
-    aN = ((ListView)k(2131362141));
-    aN.setVisibility(0);
-    aN.setBackgroundColor(0);
-    aN.setDivider(null);
-    aN.setDividerHeight(0);
-    aN.setCacheColorHint(0);
-    aN.setScrollBarStyle(33554432);
-    aN.setSelector(2130837560);
-    aN.setScrollingCacheEnabled(false);
-    paramActivity = new LinearLayout(ad);
-    paramActivity.setMinimumHeight(com.estrongs.android.ui.d.a.a(ad, 16.0F));
-    aN.addHeaderView(paramActivity, null, false);
-    paramActivity = new LinearLayout(ad);
-    paramActivity.setMinimumHeight(com.estrongs.android.ui.d.a.a(ad, 16.0F));
-    aN.addFooterView(paramActivity, null, false);
-    if (bd.a(null)) {}
-    for (paramActivity = ai;; paramActivity = null)
+    super(paramActivity, parama, paramdw);
+    parama = (ViewGroup)h.getParent();
+    parama.removeAllViews();
+    if (at.a(ag).o())
+    {
+      parama.addView(aj.inflate(2130903340, null));
+      parama = new v(this, false, true);
+      aS = ((RecyclerView)b(2131624709));
+      aS.setVisibility(0);
+      aS.setBackgroundColor(0);
+      e = new LinearLayoutManager(paramActivity);
+      aS.setLayoutManager(e);
+      aS.addItemDecoration(parama);
+      aS.setScrollBarStyle(33554432);
+      if (!bk.a(null)) {
+        break label331;
+      }
+    }
+    label331:
+    for (paramActivity = an;; paramActivity = null)
     {
       b = paramActivity;
-      al();
+      v();
+      return;
+      parama.addView(aj.inflate(2130903199, null));
+      parama = new v(this, true, true);
+      break;
+    }
+  }
+  
+  private void A()
+  {
+    if (ax != null)
+    {
+      ax.dismiss();
+      ax = null;
+    }
+    if (O != null) {
+      O.a(this, true);
+    }
+  }
+  
+  private boolean B()
+  {
+    if (ax != null) {
+      return ax.isShowing();
+    }
+    return false;
+  }
+  
+  private void C()
+  {
+    aq = true;
+    synchronized (ao)
+    {
+      if (av != null) {
+        av.a();
+      }
+      if (bk.a(b, at.getAbsolutePath())) {
+        aT.post(new r(this));
+      }
       return;
     }
   }
@@ -111,24 +151,24 @@ public class h
   private void a(g paramg)
   {
     int i = 0;
-    while (i < aJ.size())
+    while (i < aO.size())
     {
-      a((g)aJ.get(i), paramg);
+      a((g)aO.get(i), paramg);
       i += 1;
     }
-    au -= a;
-    aw -= d;
-    ax -= e;
-    ay -= f;
-    az -= g;
-    aA -= h;
-    aB -= i;
-    aC -= j;
-    aD -= k;
-    aE -= l;
-    aF -= m;
-    aG -= n;
-    aH -= o;
+    az -= a;
+    aB -= d;
+    aC -= e;
+    aD -= f;
+    aE -= g;
+    aF -= h;
+    aG -= i;
+    aH -= j;
+    aI -= k;
+    aJ -= l;
+    aK -= m;
+    aL -= n;
+    aM -= o;
   }
   
   private void a(g paramg1, g paramg2)
@@ -150,197 +190,27 @@ public class h
     o -= o;
   }
   
-  private void a(String paramString)
-  {
-    String str = paramString;
-    if (paramString != null)
-    {
-      str = paramString;
-      if (paramString.indexOf("du://") >= 0) {
-        str = paramString.substring("du://".length());
-      }
-    }
-    paramString = str;
-    if (bd.a(str)) {
-      paramString = ai;
-    }
-    b = paramString;
-    ao = new File(b);
-    if (am != 0L) {
-      return;
-    }
-    if (y != null) {
-      y.a("du://" + ao.getAbsolutePath(), false);
-    }
-    q();
-    aI = true;
-    aJ.clear();
-    aw = 0L;
-    ax = 0L;
-    ay = 0L;
-    az = 0L;
-    aA = 0L;
-    aB = 0L;
-    aC = 0L;
-    aD = 0L;
-    aE = 0L;
-    aF = 0L;
-    aG = 0L;
-    aH = 0L;
-    if (ar.get(b) == null)
-    {
-      ap = new e(ad);
-      ap.a(a);
-      ap.a(at);
-      ap.b(aM);
-      ar.put(b, ap);
-      if (as == null)
-      {
-        as = r();
-        if (as != null) {
-          as.a(au);
-        }
-        av = 0L;
-      }
-    }
-    for (;;)
-    {
-      g();
-      return;
-      as.a();
-      break;
-      ap = ((e)ar.get(paramString));
-      ap.a(at);
-    }
-  }
-  
-  private void al()
-  {
-    ((TextView)k(2131362145)).setText(l(2131427426) + "/" + l(2131427427));
-    aN.setOnItemClickListener(new q(this));
-  }
-  
-  private void am()
-  {
-    aL = new com.estrongs.android.ui.a.k(ad, ap);
-    aN.setAdapter(aL);
-    d(false);
-  }
-  
-  private void an()
-  {
-    if (!al)
-    {
-      if (!ak) {
-        break label108;
-      }
-      if (aJ.size() > 0) {
-        aJ.pop();
-      }
-    }
-    for (;;)
-    {
-      ap = aq;
-      an = ao;
-      ar.put(b, ap);
-      am();
-      if ((ak) && (aK.size() > 0)) {
-        aN.onRestoreInstanceState((Parcelable)aK.pop());
-      }
-      ak = false;
-      return;
-      label108:
-      g localg = ap.a(ao);
-      if (localg != null)
-      {
-        if ((aJ.size() > 0) && (aJ.peek() == localg)) {
-          aJ.pop();
-        }
-        aJ.push(localg);
-      }
-      aK.push(aN.onSaveInstanceState());
-    }
-  }
-  
-  private void ao()
-  {
-    if (as == null) {
-      as = r();
-    }
-    if ((as != null) && (am != 0L))
-    {
-      as.show();
-      am = System.currentTimeMillis();
-    }
-  }
-  
-  private void ap()
-  {
-    if (as == null) {
-      as = r();
-    }
-    am = System.currentTimeMillis();
-    if (as != null) {
-      aO.sendEmptyMessageDelayed(1, 800L);
-    }
-  }
-  
-  private void as()
-  {
-    if (as != null)
-    {
-      as.dismiss();
-      as = null;
-    }
-    if (H != null) {
-      H.a(this, true);
-    }
-  }
-  
-  private boolean at()
-  {
-    if (as != null) {
-      return as.isShowing();
-    }
-    return false;
-  }
-  
-  private void au()
-  {
-    al = true;
-    synchronized (aj)
-    {
-      if (aq != null) {
-        aq.a();
-      }
-      if (bd.a(b, ao.getAbsolutePath())) {
-        aO.post(new r(this));
-      }
-      return;
-    }
-  }
-  
   private void b(g paramg)
   {
     int i = 0;
-    while (i < aJ.size())
+    while (i < aO.size())
     {
-      b((g)aJ.get(i), paramg);
+      b((g)aO.get(i), paramg);
       i += 1;
     }
-    au += a;
-    aw += d;
-    ax += e;
-    ay += f;
-    az += g;
-    aA += h;
-    aB += i;
-    aC += j;
-    aD += k;
-    aE += l;
-    aF += m;
-    aG += n;
-    aH += o;
+    az += a;
+    aB += d;
+    aC += e;
+    aD += f;
+    aE += g;
+    aF += h;
+    aG += i;
+    aH += j;
+    aI += k;
+    aJ += l;
+    aK += m;
+    aL += n;
+    aM += o;
   }
   
   private void b(g paramg1, g paramg2)
@@ -362,73 +232,213 @@ public class h
     o += o;
   }
   
-  private void j(boolean paramBoolean)
+  private void b(String paramString)
+  {
+    String str = paramString;
+    if (paramString != null)
+    {
+      str = paramString;
+      if (paramString.indexOf("du://") >= 0) {
+        str = paramString.substring("du://".length());
+      }
+    }
+    paramString = str;
+    if (bk.a(str)) {
+      paramString = an;
+    }
+    b = paramString;
+    at = new File(b);
+    if (ar != 0L) {
+      return;
+    }
+    if (F != null) {
+      F.a("du://" + at.getAbsolutePath(), false);
+    }
+    t();
+    aN = true;
+    aO.clear();
+    aB = 0L;
+    aC = 0L;
+    aD = 0L;
+    aE = 0L;
+    aF = 0L;
+    aG = 0L;
+    aH = 0L;
+    aI = 0L;
+    aJ = 0L;
+    aK = 0L;
+    aL = 0L;
+    aM = 0L;
+    if (aw.get(b) == null)
+    {
+      au = new e(ag);
+      au.a(a);
+      au.a(ay);
+      au.b(aR);
+      aw.put(b, au);
+      if (ax == null)
+      {
+        ax = u();
+        if (ax != null) {
+          ax.a(az);
+        }
+        aA = 0L;
+      }
+    }
+    for (;;)
+    {
+      g();
+      return;
+      ax.a();
+      break;
+      au = ((e)aw.get(paramString));
+      au.a(ay);
+    }
+  }
+  
+  private void k(boolean paramBoolean)
   {
     Object localObject;
     if (paramBoolean)
     {
       localObject = com.estrongs.fs.util.j.k(b);
-      at = (localObject[0] * localObject[2]);
-      au = ((localObject[0] - localObject[1]) * localObject[2]);
-      aM = localObject[2];
+      ay = (localObject[0] * localObject[2]);
+      az = ((localObject[0] - localObject[1]) * localObject[2]);
+      aR = localObject[2];
       l = localObject[1];
     }
-    for (long l = localObject[2] * l;; l = at - au)
+    for (long l = localObject[2] * l;; l = ay - az)
     {
-      localObject = (TextView)k(2131362148);
-      TextView localTextView1 = (TextView)k(2131362150);
-      TextView localTextView2 = (TextView)k(2131362152);
-      ((TextView)localObject).setText(com.estrongs.fs.util.j.c(at));
-      localTextView1.setText(com.estrongs.fs.util.j.c(au));
+      localObject = (TextView)b(2131624712);
+      TextView localTextView1 = (TextView)b(2131624714);
+      TextView localTextView2 = (TextView)b(2131624716);
+      ((TextView)localObject).setText(com.estrongs.fs.util.j.c(ay));
+      localTextView1.setText(com.estrongs.fs.util.j.c(az));
       localTextView2.setText(com.estrongs.fs.util.j.c(l));
       return;
     }
   }
   
-  private void p()
+  private void s()
   {
-    Iterator localIterator = aq.i.entrySet().iterator();
+    Iterator localIterator = av.i.entrySet().iterator();
     while (localIterator.hasNext())
     {
       g localg = (g)((Map.Entry)localIterator.next()).getValue();
       if (localg != null)
       {
-        aw += d;
-        ax += e;
-        ay += f;
-        az += g;
-        aA += h;
-        aB += i;
-        aC += j;
-        aD += k;
-        aE += l;
-        aF += m;
-        aG += n;
-        aH += o;
+        aB += d;
+        aC += e;
+        aD += f;
+        aE += g;
+        aF += h;
+        aG += i;
+        aH += j;
+        aI += k;
+        aJ += l;
+        aK += m;
+        aL += n;
+        aM += o;
       }
     }
   }
   
-  private void q()
+  private void t()
   {
-    j(true);
+    k(true);
   }
   
-  private bg r()
+  private bh u()
   {
     try
     {
-      bg localbg = new bg(ad);
-      localbg.a(new bi());
-      localbg.setTitle(l(2131427461));
-      localbg.a(1);
-      localbg.setCancelable(false);
-      localbg.a(new o(this));
-      localbg.setOnDismissListener(new p(this));
-      return localbg;
+      bh localbh = new bh(ag);
+      localbh.a(new bj());
+      localbh.setTitle(j(2131232163));
+      localbh.a(1);
+      localbh.setCancelable(false);
+      localbh.a(new o(this));
+      localbh.setOnDismissListener(new p(this));
+      return localbh;
     }
     catch (Exception localException) {}
     return null;
+  }
+  
+  private void v()
+  {
+    ((TextView)b(2131624211)).setText(j(2131231131) + "/" + j(2131231133));
+    am = new q(this);
+    if (aQ != null) {
+      aQ.a(am);
+    }
+  }
+  
+  private void w()
+  {
+    aQ = new com.estrongs.android.ui.adapter.k(ag, au);
+    aQ.a(am);
+    aQ.a(al);
+    aS.setAdapter(aQ);
+    d(false);
+  }
+  
+  private void x()
+  {
+    if (!aq)
+    {
+      if (!ap) {
+        break label108;
+      }
+      if (aO.size() > 0) {
+        aO.pop();
+      }
+    }
+    for (;;)
+    {
+      au = av;
+      as = at;
+      aw.put(b, au);
+      w();
+      if ((ap) && (aP.size() > 0)) {
+        e.onRestoreInstanceState((Parcelable)aP.pop());
+      }
+      ap = false;
+      return;
+      label108:
+      g localg = au.a(at);
+      if (localg != null)
+      {
+        if ((aO.size() > 0) && (aO.peek() == localg)) {
+          aO.pop();
+        }
+        aO.push(localg);
+      }
+      aP.push(e.onSaveInstanceState());
+    }
+  }
+  
+  private void y()
+  {
+    if (ax == null) {
+      ax = u();
+    }
+    if ((ax != null) && (ar != 0L))
+    {
+      ax.show();
+      ar = System.currentTimeMillis();
+    }
+  }
+  
+  private void z()
+  {
+    if (ax == null) {
+      ax = u();
+    }
+    ar = System.currentTimeMillis();
+    if (ax != null) {
+      aT.sendEmptyMessageDelayed(1, 800L);
+    }
   }
   
   public void a(int paramInt) {}
@@ -436,59 +446,57 @@ public class h
   public void a(View.OnTouchListener paramOnTouchListener)
   {
     super.a(paramOnTouchListener);
-    aN.setOnTouchListener(paramOnTouchListener);
+    aS.setOnTouchListener(paramOnTouchListener);
   }
   
-  public void a(AdapterView.OnItemLongClickListener paramOnItemLongClickListener)
+  public void a(cp paramcp)
   {
-    aN.setOnItemLongClickListener(paramOnItemLongClickListener);
+    al = paramcp;
+    if (aQ != null) {
+      aQ.a(paramcp);
+    }
   }
   
   public void a(String paramString, TypedMap paramTypedMap)
   {
     if (d) {
-      a(paramString);
+      b(paramString);
     }
   }
   
   public void a(List<com.estrongs.fs.h> paramList)
   {
-    aj.a((ESActivity)ad, paramList, new s(this, paramList), new t(this));
+    ao.a((com.estrongs.android.pop.app.d.a)ag, paramList, new s(this, paramList), new t(this));
   }
   
   public void a(boolean paramBoolean)
   {
-    l = paramBoolean;
-    if (!l) {
+    q = paramBoolean;
+    if (!q) {
       c(-2);
     }
     for (;;)
     {
-      if (aL != null) {
-        aL.a(paramBoolean);
+      if (aQ != null) {
+        aQ.a(paramBoolean);
       }
       return;
       e();
     }
   }
   
-  public void a_()
+  public com.estrongs.fs.h a_(int paramInt)
   {
-    super.a_();
-  }
-  
-  public com.estrongs.fs.h b()
-  {
-    if (ao != null) {
-      return new u(ao);
+    if ((aQ != null) && (paramInt >= 0) && (paramInt < aQ.getItemCount())) {
+      return new u((File)aQ.a(paramInt));
     }
     return null;
   }
   
-  public com.estrongs.fs.h b(int paramInt)
+  public com.estrongs.fs.h b()
   {
-    if ((aL != null) && (paramInt >= 0) && (paramInt < aL.getCount())) {
-      return new u((File)aL.getItem(paramInt));
+    if (at != null) {
+      return new u(at);
     }
     return null;
   }
@@ -497,20 +505,20 @@ public class h
   {
     if (paramBoolean)
     {
-      al = false;
-      ar.remove(b);
-      a(b);
+      aq = false;
+      aw.remove(b);
+      b(b);
       return;
     }
-    al = false;
-    ap();
+    aq = false;
+    z();
     new k(this, "DiskUsage-Counter", k()).start();
   }
   
   public String c()
   {
-    if (ao != null) {
-      return "du://" + ao.getAbsolutePath();
+    if (at != null) {
+      return "du://" + at.getAbsolutePath();
     }
     return "du://" + b;
   }
@@ -523,18 +531,18 @@ public class h
       int k;
       try
       {
-        if (aL == null) {
+        if (aQ == null) {
           return;
         }
-        int j = m.size();
-        k = aL.getCount();
+        int j = r.size();
+        k = aQ.getItemCount();
         if (paramInt == -1)
         {
-          m.clear();
+          r.clear();
           paramInt = i;
           if (paramInt < k)
           {
-            m.put(Integer.valueOf(paramInt), b(paramInt));
+            r.put(Integer.valueOf(paramInt), a_(paramInt));
             paramInt += 1;
             continue;
           }
@@ -544,14 +552,14 @@ public class h
           if (paramInt != -2) {
             break label156;
           }
-          v();
+          K();
         }
-        aL.a(new ArrayList(m.keySet()));
+        aQ.a(new ArrayList(r.keySet()));
         e();
-        if ((this.i == null) || (j == m.size())) {
+        if ((l == null) || (j == r.size())) {
           break;
         }
-        this.i.a(w());
+        l.a(o());
         return;
       }
       catch (Exception localException)
@@ -562,24 +570,24 @@ public class h
       label156:
       if (paramInt == -4)
       {
-        int[] arrayOfInt = y();
+        int[] arrayOfInt = M();
         if (arrayOfInt != null)
         {
-          m.clear();
+          r.clear();
           paramInt = arrayOfInt[0];
           while (paramInt <= arrayOfInt[1])
           {
-            m.put(Integer.valueOf(paramInt), b(paramInt));
+            r.put(Integer.valueOf(paramInt), a_(paramInt));
             paramInt += 1;
           }
         }
       }
       else if ((paramInt >= 0) && (paramInt < k))
       {
-        if (!m.containsKey(Integer.valueOf(paramInt))) {
-          m.put(Integer.valueOf(paramInt), b(paramInt));
+        if (!r.containsKey(Integer.valueOf(paramInt))) {
+          r.put(Integer.valueOf(paramInt), a_(paramInt));
         } else {
-          m.remove(Integer.valueOf(paramInt));
+          r.remove(Integer.valueOf(paramInt));
         }
       }
     }
@@ -588,19 +596,19 @@ public class h
   public long[] c(boolean paramBoolean)
   {
     long[] arrayOfLong = new long[7];
-    int i = aJ.size();
+    int i = aO.size();
     if ((paramBoolean) || (i == 0))
     {
-      arrayOfLong[0] = ax;
-      arrayOfLong[1] = az;
-      arrayOfLong[2] = aB;
-      arrayOfLong[3] = aF;
-      arrayOfLong[4] = aD;
-      arrayOfLong[5] = aH;
-      arrayOfLong[6] = (ax + az + aB + aF + aD + aH);
+      arrayOfLong[0] = aC;
+      arrayOfLong[1] = aE;
+      arrayOfLong[2] = aG;
+      arrayOfLong[3] = aK;
+      arrayOfLong[4] = aI;
+      arrayOfLong[5] = aM;
+      arrayOfLong[6] = (aC + aE + aG + aK + aI + aM);
       return arrayOfLong;
     }
-    g localg = (g)aJ.peek();
+    g localg = (g)aO.peek();
     arrayOfLong[0] = e;
     arrayOfLong[1] = g;
     arrayOfLong[2] = i;
@@ -613,16 +621,16 @@ public class h
   
   public int d()
   {
-    if (aL == null) {
+    if (aQ == null) {
       return 0;
     }
-    return aL.getCount();
+    return aQ.getItemCount();
   }
   
   public void d(int paramInt)
   {
-    ap.a(paramInt);
-    aO.sendEmptyMessage(3);
+    au.a(paramInt);
+    aT.sendEmptyMessage(3);
   }
   
   public long[] d(boolean paramBoolean)
@@ -633,21 +641,21 @@ public class h
     {
       i = 8;
       arrayOfLong = new long[i];
-      i = aJ.size();
+      i = aO.size();
       if ((!paramBoolean) && (i != 0)) {
         break label134;
       }
-      arrayOfLong[0] = aw;
-      arrayOfLong[1] = ay;
-      arrayOfLong[2] = aA;
-      arrayOfLong[3] = aE;
-      arrayOfLong[4] = aC;
-      arrayOfLong[5] = aG;
+      arrayOfLong[0] = aB;
+      arrayOfLong[1] = aD;
+      arrayOfLong[2] = aF;
+      arrayOfLong[3] = aJ;
+      arrayOfLong[4] = aH;
+      arrayOfLong[5] = aL;
       if (!paramBoolean) {
         break label102;
       }
-      arrayOfLong[6] = (at - au);
-      arrayOfLong[7] = at;
+      arrayOfLong[6] = (ay - az);
+      arrayOfLong[7] = ay;
     }
     for (;;)
     {
@@ -664,7 +672,7 @@ public class h
       }
     }
     label134:
-    g localg = (g)aJ.peek();
+    g localg = (g)aO.peek();
     arrayOfLong[0] = d;
     arrayOfLong[1] = f;
     arrayOfLong[2] = h;
@@ -677,16 +685,16 @@ public class h
   
   public void e()
   {
-    if (aL != null) {
-      aL.notifyDataSetChanged();
+    if (aQ != null) {
+      aQ.notifyDataSetChanged();
     }
   }
   
   public com.estrongs.fs.h f()
   {
-    if (at())
+    if (B())
     {
-      au();
+      C();
       return b();
     }
     return j();
@@ -699,7 +707,7 @@ public class h
   
   public List<com.estrongs.fs.h> h()
   {
-    File[] arrayOfFile = ap.c();
+    File[] arrayOfFile = au.c();
     ArrayList localArrayList = new ArrayList();
     int i = 0;
     while (i < arrayOfFile.length)
@@ -712,47 +720,52 @@ public class h
   
   protected void i() {}
   
+  public void i_()
+  {
+    super.i_();
+  }
+  
   public com.estrongs.fs.h j()
   {
     for (;;)
     {
       try
       {
-        if (am != 0L) {
+        if (ar != 0L) {
           return null;
         }
-        if (am.e(b, an.getPath())) {
+        if (ap.e(b, as.getPath())) {
           break label231;
         }
-        ak = true;
-        ao = an.getParentFile();
-        if (y != null) {
-          y.a("du://" + ao.getAbsolutePath(), false);
+        ap = true;
+        at = as.getParentFile();
+        if (F != null) {
+          F.a("du://" + at.getAbsolutePath(), false);
         }
-        if (aJ.size() <= 1) {
+        if (aO.size() <= 1) {
           break label233;
         }
-        Object localObject1 = (g)aJ.get(aJ.size() - 2);
-        av = 0L;
-        if (as == null) {
-          as = r();
+        Object localObject1 = (g)aO.get(aO.size() - 2);
+        aA = 0L;
+        if (ax == null) {
+          ax = u();
         }
-        if (as != null)
+        if (ax != null)
         {
-          as.a();
-          bg localbg = as;
+          ax.a();
+          bh localbh = ax;
           if (localObject1 == null)
           {
-            l = au;
-            localbg.a(l);
-            as.setMessage(l(2131427863));
-            as.b(av);
+            l = az;
+            localbh.a(l);
+            ax.setMessage(j(2131231747));
+            ax.b(aA);
           }
         }
         else
         {
           g();
-          localObject1 = new u(ao);
+          localObject1 = new u(at);
           return (com.estrongs.fs.h)localObject1;
         }
       }
@@ -772,9 +785,9 @@ public class h
   
   protected List<String> k()
   {
-    List localList = am.a();
+    List localList = ap.a();
     if ((localList.remove(b.b())) && ("mounted".equals(Environment.getExternalStorageState()))) {
-      localList.add(0, ai);
+      localList.add(0, an);
     }
     return localList;
   }
@@ -784,7 +797,7 @@ public class h
     if (!d)
     {
       d = true;
-      g(c());
+      j(c());
     }
     super.l();
   }

@@ -1,15 +1,13 @@
 package com.estrongs.android.ui.dialog;
 
-import com.estrongs.android.view.ak;
-
 class ju
   implements Runnable
 {
-  ju(ix paramix) {}
+  ju(jh paramjh) {}
   
   public void run()
   {
-    ix.f(a).c(8);
+    a.dismiss();
   }
 }
 

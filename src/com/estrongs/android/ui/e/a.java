@@ -2,13 +2,16 @@ package com.estrongs.android.ui.e;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import com.estrongs.android.pop.utils.cl;
-import com.estrongs.android.ui.theme.al;
+import com.estrongs.android.pop.utils.cu;
+import com.estrongs.android.ui.d.g;
+import com.estrongs.android.ui.theme.at;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -19,32 +22,26 @@ public class a
   protected ViewGroup c;
   protected boolean d;
   protected boolean e;
-  protected al f;
-  private boolean g;
-  private int h;
+  protected at f;
+  protected int g = 0;
+  private boolean h;
   private int i;
-  private boolean j = false;
-  private int k;
+  private int j;
+  private boolean k = false;
+  private int l;
   
   protected a(Context paramContext, boolean paramBoolean)
   {
     b = paramContext;
     d = paramBoolean;
-    e = cl.a(paramContext);
-    f = al.a(b);
-    g = true;
-    k = (getResourcesgetDisplayMetricswidthPixels / 5);
+    e = cu.a(paramContext);
+    f = at.a(b);
+    h = true;
+    l = (getResourcesgetDisplayMetricswidthPixels / 5);
     a = new ArrayList();
     c = new b(this, b);
-    paramContext = (LinearLayout)c;
-    if (paramBoolean) {}
-    for (;;)
-    {
-      paramContext.setOrientation(m);
-      ((LinearLayout)c).setGravity(17);
-      return;
-      m = 1;
-    }
+    ((LinearLayout)c).setOrientation(0);
+    ((LinearLayout)c).setGravity(17);
   }
   
   public View a()
@@ -65,7 +62,24 @@ public class a
   
   public void a(boolean paramBoolean)
   {
-    g = paramBoolean;
+    h = paramBoolean;
+  }
+  
+  public void b(int paramInt)
+  {
+    g = paramInt;
+    if (g != 0)
+    {
+      Iterator localIterator = a.iterator();
+      while (localIterator.hasNext())
+      {
+        com.estrongs.android.view.a.a locala = (com.estrongs.android.view.a.a)localIterator.next();
+        Drawable localDrawable = locala.getIcon();
+        if (localDrawable != null) {
+          locala.a(g.a(localDrawable, g));
+        }
+      }
+    }
   }
   
   protected boolean b()

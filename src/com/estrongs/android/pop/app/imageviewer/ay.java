@@ -1,19 +1,35 @@
 package com.estrongs.android.pop.app.imageviewer;
 
-import android.graphics.Bitmap;
-import com.estrongs.android.pop.app.imageviewer.gallery.e;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.pop.app.ag;
+import com.estrongs.android.pop.app.x;
 
 class ay
-  extends t
+  implements View.OnClickListener
 {
-  ay(ViewImage21 paramViewImage21, String paramString)
-  {
-    super(paramString);
-  }
+  ay(ViewImage21 paramViewImage21) {}
   
-  public Bitmap a(e parame)
+  public void onClick(View paramView)
   {
-    return parame.a(800, 3145728, false, true);
+    if (ViewImage21.a(a, a.m)) {
+      ViewImage21.b(a, a.m);
+    }
+    if (ViewImage21.l(a).p())
+    {
+      if (ViewImage21.a(a))
+      {
+        ViewImage21.m(a);
+        return;
+      }
+      ViewImage21.n(a);
+      a.a(a.c, true);
+      return;
+    }
+    if (ViewImage21.o(a) == null) {
+      ViewImage21.p(a);
+    }
+    ViewImage21.o(a).show();
   }
 }
 

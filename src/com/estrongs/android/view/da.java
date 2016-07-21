@@ -1,19 +1,15 @@
 package com.estrongs.android.view;
 
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemLongClickListener;
-
 class da
-  implements AdapterView.OnItemLongClickListener
+  implements Runnable
 {
-  da(cq paramcq, aw paramaw, AdapterView.OnItemLongClickListener paramOnItemLongClickListener) {}
+  da(cr paramcr) {}
   
-  public boolean onItemLongClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
+  public void run()
   {
-    cq.a(c, a);
-    b.onItemLongClick(paramAdapterView, paramView, paramInt, paramLong);
-    return true;
+    if (a.O != null) {
+      a.O.a(a, true);
+    }
   }
 }
 

@@ -1,23 +1,18 @@
 package com.estrongs.android.ui.e;
 
-import android.view.View;
-import android.widget.Button;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.view.FileExplorerActivity;
 
-public class jt
+class jt
+  implements MenuItem.OnMenuItemClickListener
 {
-  private View b;
-  private Button c;
+  jt(jq paramjq) {}
   
-  public jt(jp paramjp) {}
-  
-  public void a()
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    b.setVisibility(0);
-  }
-  
-  public void b()
-  {
-    b.setVisibility(8);
+    jq.a(a).i();
+    return true;
   }
 }
 

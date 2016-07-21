@@ -1,13 +1,15 @@
 package com.estrongs.android.pop.view;
 
+import com.estrongs.android.pop.app.a.a;
+
 class m
   implements Runnable
 {
-  m(FileExplorerActivity paramFileExplorerActivity) {}
+  m(h paramh) {}
   
   public void run()
   {
-    a.e("video://");
+    a.a(a.a.a);
   }
 }
 

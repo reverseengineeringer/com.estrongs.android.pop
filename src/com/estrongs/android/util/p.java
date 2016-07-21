@@ -1,29 +1,45 @@
 package com.estrongs.android.util;
 
-import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.fs.util.j;
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.view.ak;
 
 public class p
 {
-  public static final boolean a(boolean paramBoolean, String paramString1, String paramString2)
+  public static void a(Context paramContext)
   {
-    if ((am.aw(paramString1)) && (am.d(paramString1, "mediafire"))) {
-      if (paramBoolean)
-      {
-        if (paramString2.length() < 3)
-        {
-          ag.a(FexApplication.a(), FexApplication.a().getString(2131428502), 0);
-          return false;
-        }
-      }
-      else if (!j.b(paramString1).equals(j.b(paramString2)))
-      {
-        ag.a(FexApplication.a(), FexApplication.a().getString(2131428503), 0);
-        return false;
-      }
+    a(paramContext, "kunw@estrongs.com", null, null);
+  }
+  
+  public static void a(Context paramContext, String paramString1, String paramString2, CharSequence paramCharSequence)
+  {
+    Intent localIntent = new Intent();
+    localIntent.setType("text/plain");
+    localIntent.setAction("android.intent.action.SENDTO");
+    localIntent.setData(Uri.fromParts("mailto", paramString1, null));
+    if (paramString2 != null) {
+      localIntent.putExtra("android.intent.extra.SUBJECT", paramString2);
     }
-    return true;
+    if (paramCharSequence != null) {
+      localIntent.putExtra("android.intent.extra.TEXT", paramCharSequence);
+    }
+    try
+    {
+      if ((paramContext instanceof FileExplorerActivity))
+      {
+        ((FileExplorerActivity)paramContext).a(localIntent);
+        return;
+      }
+      paramContext.startActivity(localIntent);
+      return;
+    }
+    catch (Exception paramString1)
+    {
+      paramString1.printStackTrace();
+      ak.a(paramContext, paramContext.getString(2131231103), 1);
+    }
   }
 }
 

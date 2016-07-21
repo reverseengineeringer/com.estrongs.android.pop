@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/view/ca;
+.implements Lcom/estrongs/android/view/dv;
 
 
 # instance fields
@@ -39,31 +39,35 @@
 .end method
 
 .method public a(Ljava/lang/String;ZZ)V
-    .locals 10
-
-    const/4 v5, 0x0
-
-    invoke-static {}, Lcom/estrongs/android/ui/d/e;->a()I
-
-    move-result v6
+    .locals 8
 
     iget-object v0, p0, Lcom/estrongs/android/pop/view/c;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->y()Lcom/estrongs/android/view/aw;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->au()Lcom/estrongs/android/ui/d/i;
 
-    move-result-object v7
+    move-result-object v0
 
-    if-nez p1, :cond_7
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/d/i;->a()I
 
-    if-eqz v7, :cond_6
+    move-result v5
 
-    invoke-virtual {v7}, Lcom/estrongs/android/view/aw;->c()Ljava/lang/String;
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/c;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->O()Lcom/estrongs/android/view/cr;
+
+    move-result-object v2
+
+    if-nez p1, :cond_6
+
+    if-eqz v2, :cond_5
+
+    invoke-virtual {v2}, Lcom/estrongs/android/view/cr;->c()Ljava/lang/String;
 
     move-result-object v3
 
     if-nez v3, :cond_0
 
-    iget-object v3, v7, Lcom/estrongs/android/view/aw;->u:Ljava/lang/String;
+    iget-object v3, v2, Lcom/estrongs/android/view/cr;->B:Ljava/lang/String;
 
     :cond_0
     :goto_0
@@ -73,7 +77,7 @@
 
     :cond_1
     :goto_1
-    if-eqz v7, :cond_3
+    if-eqz v2, :cond_3
 
     const-string v0, "http://win-title/"
 
@@ -83,20 +87,20 @@
 
     if-nez v0, :cond_3
 
-    invoke-virtual {v7}, Lcom/estrongs/android/view/aw;->c()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/estrongs/android/view/cr;->c()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    iget-object v0, v7, Lcom/estrongs/android/view/aw;->u:Ljava/lang/String;
+    iget-object v0, v2, Lcom/estrongs/android/view/cr;->B:Ljava/lang/String;
 
     :cond_2
-    invoke-static {v0, v3}, Lcom/estrongs/android/util/am;->e(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v0, v3}, Lcom/estrongs/android/util/ap;->e(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 
@@ -108,79 +112,70 @@
     :cond_3
     iget-object v0, p0, Lcom/estrongs/android/pop/view/c;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    iget-boolean v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->u:Z
+    invoke-static {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a(Lcom/estrongs/android/pop/view/FileExplorerActivity;)Lcom/estrongs/android/ui/controller/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Lcom/estrongs/android/ui/controller/a;->a(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/c;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a(Lcom/estrongs/android/pop/view/FileExplorerActivity;Z)Z
+
+    const/4 v0, 0x2
+
+    new-array v4, v0, [Ljava/lang/String;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/c;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/c;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->O()Lcom/estrongs/android/view/cr;
+
+    move-result-object v1
+
+    iget-object v6, p0, Lcom/estrongs/android/pop/view/c;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    invoke-virtual {v6}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->au()Lcom/estrongs/android/ui/d/i;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Lcom/estrongs/android/ui/d/i;->b()Lcom/estrongs/android/ui/d/h;
+
+    move-result-object v6
+
+    invoke-virtual {v0, v1, v6, v3, v4}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a(Lcom/estrongs/android/view/cr;Lcom/estrongs/android/ui/d/h;Ljava/lang/String;[Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/c;->a:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_4
 
     iget-object v0, p0, Lcom/estrongs/android/pop/view/c;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a(Lcom/estrongs/android/pop/view/FileExplorerActivity;)Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a(Ljava/lang/String;)V
-
-    :cond_4
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/c;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-static {v0, v5}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a(Lcom/estrongs/android/pop/view/FileExplorerActivity;Z)Z
-
-    const/4 v0, 0x2
-
-    new-array v0, v0, [Ljava/lang/String;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/view/c;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/view/c;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->y()Lcom/estrongs/android/view/aw;
-
-    move-result-object v2
-
-    invoke-static {}, Lcom/estrongs/android/ui/d/e;->b()Lcom/estrongs/android/ui/d/d;
-
-    move-result-object v4
-
-    invoke-static {v1, v2, v4, v3, v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a(Lcom/estrongs/android/pop/view/FileExplorerActivity;Lcom/estrongs/android/view/aw;Lcom/estrongs/android/ui/d/d;Ljava/lang/String;[Ljava/lang/String;)V
-
-    aget-object v2, v0, v5
-
-    const/4 v1, 0x1
-
-    aget-object v5, v0, v1
-
-    new-instance v4, Ljava/util/ArrayList;
-
-    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/c;->a:Ljava/lang/Runnable;
-
-    if-eqz v0, :cond_5
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/c;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->h:Landroid/os/Handler;
+    iget-object v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->i:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/estrongs/android/pop/view/c;->a:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    :cond_5
+    :cond_4
     new-instance v0, Lcom/estrongs/android/pop/view/d;
 
     move-object v1, p0
 
-    move v8, p2
+    move v6, p2
 
-    move v9, p3
+    move v7, p3
 
-    invoke-direct/range {v0 .. v9}, Lcom/estrongs/android/pop/view/d;-><init>(Lcom/estrongs/android/pop/view/c;Ljava/lang/String;Ljava/lang/String;Ljava/util/ArrayList;Ljava/lang/String;ILcom/estrongs/android/view/aw;ZZ)V
+    invoke-direct/range {v0 .. v7}, Lcom/estrongs/android/pop/view/d;-><init>(Lcom/estrongs/android/pop/view/c;Lcom/estrongs/android/view/cr;Ljava/lang/String;[Ljava/lang/String;IZZ)V
 
     iput-object v0, p0, Lcom/estrongs/android/pop/view/c;->a:Ljava/lang/Runnable;
 
     iget-object v0, p0, Lcom/estrongs/android/pop/view/c;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->h:Landroid/os/Handler;
+    iget-object v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->i:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/estrongs/android/pop/view/c;->a:Ljava/lang/Runnable;
 
@@ -188,12 +183,12 @@
 
     goto :goto_2
 
-    :cond_6
+    :cond_5
     move-object v3, p1
 
     goto :goto_0
 
-    :cond_7
+    :cond_6
     move-object v3, p1
 
     goto :goto_1

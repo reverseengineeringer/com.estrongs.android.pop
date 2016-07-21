@@ -1,22 +1,25 @@
 package com.estrongs.android.ui.f;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.ui.a.cx;
-import com.estrongs.android.util.be;
+import android.content.Context;
+import android.view.KeyEvent;
+import android.widget.FrameLayout;
 
 class b
-  implements View.OnClickListener
+  extends FrameLayout
 {
-  b(a parama) {}
-  
-  public void onClick(View paramView)
+  b(a parama, Context paramContext)
   {
-    be.c().f();
-    be.c().g();
-    be.c().d();
-    a.a(a).notifyDataSetChanged();
-    a.g();
+    super(paramContext);
+  }
+  
+  public boolean dispatchKeyEvent(KeyEvent paramKeyEvent)
+  {
+    if (paramKeyEvent.getKeyCode() == 4)
+    {
+      a.b();
+      return true;
+    }
+    return super.dispatchKeyEvent(paramKeyEvent);
   }
 }
 

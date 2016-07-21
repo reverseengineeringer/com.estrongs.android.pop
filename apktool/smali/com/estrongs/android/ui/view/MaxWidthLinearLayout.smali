@@ -58,12 +58,20 @@
 
 
 # virtual methods
-.method public a(I)V
-    .locals 0
+.method public getMaxHeight()I
+    .locals 1
 
-    iput p1, p0, Lcom/estrongs/android/ui/view/MaxWidthLinearLayout;->a:I
+    iget v0, p0, Lcom/estrongs/android/ui/view/MaxWidthLinearLayout;->b:I
 
-    return-void
+    return v0
+.end method
+
+.method public getMaxWidth()I
+    .locals 1
+
+    iget v0, p0, Lcom/estrongs/android/ui/view/MaxWidthLinearLayout;->a:I
+
+    return v0
 .end method
 
 .method protected onMeasure(II)V
@@ -75,7 +83,7 @@
 
     invoke-super {p0, p1, p2}, Landroid/widget/LinearLayout;->onMeasure(II)V
 
-    invoke-static {}, Lcom/estrongs/android/pop/esclasses/e;->b()Z
+    invoke-static {}, Lcom/estrongs/android/pop/esclasses/i;->b()Z
 
     move-result v0
 
@@ -147,4 +155,20 @@
     const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method public setMaxHeight(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/estrongs/android/ui/view/MaxWidthLinearLayout;->b:I
+
+    return-void
+.end method
+
+.method public setMaxWidth(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/estrongs/android/ui/view/MaxWidthLinearLayout;->a:I
+
+    return-void
 .end method

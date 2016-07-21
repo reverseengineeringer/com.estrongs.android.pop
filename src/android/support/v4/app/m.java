@@ -1,9 +1,6 @@
 package android.support.v4.app;
 
-public abstract interface m
-{
-  public abstract void a();
-}
+class m {}
 
 /* Location:
  * Qualified Name:     android.support.v4.app.m

@@ -10,14 +10,15 @@ import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.ExpandableListView;
 import android.widget.LinearLayout;
-import com.estrongs.android.ui.a.aa;
+import com.estrongs.android.ui.adapter.ListAdapter_NewNavi;
+import com.estrongs.android.util.l;
 
 public class NaviListView
   extends ExpandableListView
   implements AbsListView.OnScrollListener
 {
   private LinearLayout a;
-  private aa b;
+  private ListAdapter_NewNavi b;
   private int c = -1;
   private int d;
   private View e;
@@ -41,25 +42,27 @@ public class NaviListView
   
   private View a(int paramInt)
   {
-    return (View)e().get(paramInt);
+    return (View)getVisibleGroupViewMap().get(paramInt);
   }
   
   private void c()
   {
+    l.a("list", "requestRefreshStaticBoard start");
     if (a == null) {
       return;
     }
     if (f == null) {
-      f = new bf(this);
+      f = new bo(this);
     }
     f.removeMessages(0);
     f.sendEmptyMessage(0);
+    l.a("list", "requestRefreshStaticBoard end");
   }
   
-  private int d()
+  private int getFirstVisibleGroupPosition()
   {
     if (b == null) {
-      b = ((aa)getExpandableListAdapter());
+      b = ((ListAdapter_NewNavi)getExpandableListAdapter());
     }
     int j = getFirstVisiblePosition();
     int k = b.getGroupCount();
@@ -74,7 +77,7 @@ public class NaviListView
     return k;
   }
   
-  private SparseArray<View> e()
+  private SparseArray<View> getVisibleGroupViewMap()
   {
     SparseArray localSparseArray = new SparseArray();
     int i = 0;
@@ -97,131 +100,144 @@ public class NaviListView
   
   public void a()
   {
+    l.a("list", "RefreshStaticBoardContent start");
     if (a == null) {
       return;
     }
     if (b == null) {
-      b = ((aa)getExpandableListAdapter());
+      b = ((ListAdapter_NewNavi)getExpandableListAdapter());
     }
     d = Math.max(0, c);
     boolean bool = isGroupExpanded(d);
     a = ((LinearLayout)b.getGroupView(d, bool, a, null));
+    l.a("list", "RefreshStaticBoardContent end");
   }
   
   public void b()
   {
-    Log.w("test", "checkStaticBoard!");
-    if (a == null) {}
-    label84:
-    label287:
-    label296:
-    do
+    l.a("list", "checkStaticBoard start!");
+    if (a == null) {
+      return;
+    }
+    if (b == null) {
+      b = ((ListAdapter_NewNavi)getExpandableListAdapter());
+    }
+    int j = getFirstVisibleGroupPosition();
+    l.b("test", "firstVisible : " + j);
+    View localView1;
+    int k;
+    int i;
+    label159:
+    int m;
+    if (j == 0)
     {
-      int j;
-      int k;
-      int i;
-      int m;
-      do
+      if (c != 0)
       {
-        do
+        c = 0;
+        a();
+      }
+      View localView2 = a(j);
+      localView1 = localView2;
+      if (localView2 != null)
+      {
+        localView1 = localView2;
+        if (localView2.getTop() < 0)
         {
-          return;
-          if (b == null) {
-            b = ((aa)getExpandableListAdapter());
+          localView1 = localView2;
+          if (j + 1 < b.getGroupCount()) {
+            localView1 = a(j + 1);
           }
-          j = d();
-          Log.d("test", "firstVisible : " + j);
-          View localView1;
-          if (j == 0)
-          {
-            if (c != 0)
-            {
-              c = 0;
-              a();
-            }
-            View localView2 = a(j);
-            localView1 = localView2;
-            if (localView2 != null)
-            {
-              localView1 = localView2;
-              if (localView2.getTop() < 0)
-              {
-                localView1 = localView2;
-                if (j + 1 < b.getGroupCount()) {
-                  localView1 = a(j + 1);
-                }
-              }
-            }
-            j = a.getMeasuredHeight();
-            k = a.getMeasuredWidth();
-            if (localView1 != null) {
-              break label287;
-            }
-          }
-          for (i = j;; i = localView1.getTop())
-          {
-            m = Math.max(0, i);
-            if (i >= 0) {
-              break label296;
-            }
-            Log.d("test", "switch 1: " + i + " , " + m);
-            a.layout(0, 0, k, j);
-            if (e.getVisibility() != 0) {
-              break;
-            }
-            e.setVisibility(4);
-            return;
-            k = j - 1;
-            localView1 = a(j);
-            i = k;
-            if (localView1 != null)
-            {
-              i = k;
-              if (localView1.getTop() <= 0) {
-                i = j;
-              }
-            }
-            if (i == c) {
-              break label84;
-            }
-            c = i;
-            a();
-            break label84;
-          }
-          if (m >= j) {
-            break;
-          }
-          Log.d("test", "switch 2 : " + i + " , " + m);
-          a.layout(0, m - j, k, m);
-        } while (e.getVisibility() != 4);
-        e.setVisibility(0);
-        return;
-      } while (m < j);
-      Log.d("test", "switch 3 : " + i + " , " + m);
+        }
+      }
+      j = a.getMeasuredHeight();
+      k = a.getMeasuredWidth();
+      if (localView1 != null) {
+        break label291;
+      }
+      i = j;
+      m = Math.max(0, i);
+      if (i >= 0) {
+        break label300;
+      }
+      l.b("test", "switch 1: " + i + " , " + m);
       a.layout(0, 0, k, j);
-    } while (e.getVisibility() != 0);
-    e.setVisibility(4);
+      if (e.getVisibility() == 0) {
+        e.setVisibility(4);
+      }
+    }
+    for (;;)
+    {
+      l.a("list", "checkStaticBoard end!");
+      return;
+      k = j - 1;
+      localView1 = a(j);
+      i = k;
+      if (localView1 != null)
+      {
+        i = k;
+        if (localView1.getTop() <= 0) {
+          i = j;
+        }
+      }
+      if (i == c) {
+        break;
+      }
+      c = i;
+      a();
+      break;
+      label291:
+      i = localView1.getTop();
+      break label159;
+      label300:
+      if (m < j)
+      {
+        l.b("test", "switch 2 : " + i + " , " + m);
+        a.layout(0, m - j, k, m);
+        if (e.getVisibility() == 4) {
+          e.setVisibility(0);
+        }
+      }
+      else if (m >= j)
+      {
+        l.b("test", "switch 3 : " + i + " , " + m);
+        a.layout(0, 0, k, j);
+        if (e.getVisibility() == 0) {
+          e.setVisibility(4);
+        }
+      }
+    }
+  }
+  
+  public View getStaticBoard()
+  {
+    return a;
   }
   
   protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
+    l.a("list", "onLayout");
     super.onLayout(paramBoolean, paramInt1, paramInt2, paramInt3, paramInt4);
     c();
   }
   
   public void onScroll(AbsListView paramAbsListView, int paramInt1, int paramInt2, int paramInt3)
   {
+    l.a("list", "onScorll");
     b();
+    Log.v("test", "first group : " + getFirstVisibleGroupPosition());
   }
   
   protected void onScrollChanged(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     super.onScrollChanged(paramInt1, paramInt2, paramInt3, paramInt4);
+    l.a("list", "onScrollChanged");
+    Log.e("test", "onScrollChanged!");
   }
   
   public void onScrollStateChanged(AbsListView paramAbsListView, int paramInt)
   {
-    Log.e("test", "onScrollStateChanged!");
+    l.e("test", "onScrollStateChanged!");
+    l.a("list", "onScrollStateChanged");
     b();
   }
 }

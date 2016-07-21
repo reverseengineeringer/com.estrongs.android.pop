@@ -10,7 +10,6 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import com.estrongs.a.p;
 import com.estrongs.android.pop.ad;
 import com.estrongs.android.pop.app.BTPopNoteEditor;
@@ -19,19 +18,18 @@ import com.estrongs.android.pop.app.PopRemoteImageBrowser;
 import com.estrongs.android.pop.app.ShowDialogActivity;
 import com.estrongs.android.pop.app.StreamingMediaPlayer;
 import com.estrongs.android.pop.app.editor.PopNoteEditor;
-import com.estrongs.android.pop.utils.aj;
+import com.estrongs.android.pop.utils.ao;
 import com.estrongs.android.pop.view.FileExplorerActivity;
 import com.estrongs.android.pop.z;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.android.ui.view.ag;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.ui.view.ak;
 import com.estrongs.android.util.TypedMap;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bc;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bg;
+import com.estrongs.android.util.bk;
 import com.estrongs.fs.b.r;
 import com.estrongs.fs.b.w;
 import com.estrongs.fs.d;
-import com.estrongs.fs.impl.local.l;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -43,7 +41,56 @@ public class AppRunner
   public static Object b = new Object();
   private static HashMap<String, Intent> c = new HashMap();
   
+  public static u a(Context paramContext, Intent paramIntent)
+  {
+    t[] arrayOft = n.a(paramContext, new Intent(paramIntent));
+    t localt;
+    if (arrayOft != null)
+    {
+      int j = arrayOft.length;
+      int i = 0;
+      paramContext = null;
+      paramIntent = paramContext;
+      if (i < j)
+      {
+        localt = arrayOft[i];
+        if (c.contains("com.estrongs")) {
+          if (e.equals("android.intent.action.VIEW"))
+          {
+            if (!"com.estrongs.android.pop.app.PopChromecastPlayer".equals(d)) {
+              break label112;
+            }
+            paramIntent = localt;
+          }
+        }
+        for (;;)
+        {
+          i += 1;
+          paramContext = paramIntent;
+          break;
+          paramIntent = localt;
+          if (!e.equals("android.intent.action.EDIT")) {
+            paramIntent = paramContext;
+          }
+        }
+      }
+    }
+    label112:
+    for (paramIntent = localt;; paramIntent = null)
+    {
+      if (paramIntent != null) {
+        return new u(c, d, e);
+      }
+      return null;
+    }
+  }
+  
   public static void a(Activity paramActivity, Intent paramIntent, String paramString)
+  {
+    a(paramActivity, paramIntent, paramString, false);
+  }
+  
+  public static void a(Activity paramActivity, Intent paramIntent, String paramString, boolean paramBoolean)
   {
     boolean bool = false;
     if (paramIntent.getExtras() != null) {
@@ -52,17 +99,25 @@ public class AppRunner
     String str;
     if (!bool)
     {
-      str = am.bA(am.d(paramString));
+      str = ap.bR(ap.d(paramString));
       if ((str == null) || ("".equals(str))) {
-        break label249;
+        break label300;
       }
     }
-    Intent localIntent;
-    label249:
-    for (u localu1 = n.a(paramActivity, str);; localIntent = null)
+    label242:
+    label300:
+    for (Object localObject2 = n.a(paramActivity, str);; localObject2 = null)
     {
-      u localu2 = localu1;
-      if (localu1 != null) {}
+      Object localObject1 = localObject2;
+      if (paramBoolean)
+      {
+        localObject1 = localObject2;
+        if (localObject2 == null) {
+          localObject1 = a(paramActivity.getBaseContext(), paramIntent);
+        }
+      }
+      localObject2 = localObject1;
+      if (localObject1 != null) {}
       for (;;)
       {
         try
@@ -77,24 +132,27 @@ public class AppRunner
           if ((paramActivity instanceof FileExplorerActivity))
           {
             ((FileExplorerActivity)paramActivity).a(paramIntent);
+            com.estrongs.android.scanner.l.a().a(paramString);
             return;
           }
           paramActivity.startActivity(paramIntent);
-          return;
+          continue;
+          localObject2 = null;
         }
         catch (ActivityNotFoundException localActivityNotFoundException)
         {
           localActivityNotFoundException.printStackTrace();
           paramIntent.setComponent(null);
           n.a(paramActivity, str, null);
-          localu2 = null;
-          if (localu2 != null) {
-            return;
+          localObject2 = null;
+          if (localObject2 == null)
+          {
+            if (paramString != null) {
+              break label242;
+            }
+            paramActivity.startActivity(paramIntent);
           }
-          if (paramString != null) {
-            break;
-          }
-          paramActivity.startActivity(paramIntent);
+          com.estrongs.android.scanner.l.a().a(paramString);
           return;
         }
         catch (SecurityException localSecurityException)
@@ -102,28 +160,26 @@ public class AppRunner
           paramIntent.setComponent(null);
           n.a(paramActivity, str, null);
         }
-        localu2 = null;
-      }
-      c.put(paramString, paramIntent);
-      localIntent = new Intent(paramActivity, OpenRecomm.class);
-      localIntent.putExtra("filepath", paramString);
-      localIntent.putExtra("intent", paramIntent);
-      try
-      {
-        paramActivity.startActivity(localIntent);
-        return;
-      }
-      catch (Exception paramString)
-      {
-        paramActivity.startActivity(paramIntent);
-        return;
+        continue;
+        c.put(paramString, paramIntent);
+        Intent localIntent = new Intent(paramActivity, OpenRecomm.class);
+        localIntent.putExtra("filepath", paramString);
+        localIntent.putExtra("intent", paramIntent);
+        try
+        {
+          paramActivity.startActivity(localIntent);
+        }
+        catch (Exception localException)
+        {
+          paramActivity.startActivity(paramIntent);
+        }
       }
     }
   }
   
   public static void a(Activity paramActivity, String paramString)
   {
-    if (am.bb(paramString)) {
+    if (ap.bm(paramString)) {
       return;
     }
     Intent localIntent = new Intent("android.intent.action.VIEW");
@@ -144,27 +200,28 @@ public class AppRunner
       try
       {
         Object localObject2;
-        if (am.bb(paramString))
+        if (ap.bm(paramString))
         {
-          if (!com.estrongs.android.c.a.b())
+          if (!com.estrongs.android.g.a.b())
           {
-            ag.a(paramActivity, 2131427921, 1);
+            ak.a(paramActivity, 2131232374, 1);
             return;
           }
-          if (am.G(paramString) != 3)
+          if (ap.I(paramString) != 3)
           {
             localObject1 = new Intent("android.intent.action.VIEW");
             ((Intent)localObject1).addFlags(67108864);
             ((Intent)localObject1).putExtra("oneshot", true);
             ((Intent)localObject1).putExtra("configchange", false);
             ((Intent)localObject1).putExtra("by_open_as", paramBoolean);
-            localObject2 = am.b(paramString, com.estrongs.android.c.a.a());
+            ((Intent)localObject1).putExtra("islocalopen", true);
+            localObject2 = ap.b(paramString, com.estrongs.android.g.a.a());
             if (localObject2 != null)
             {
               localObject2 = Uri.parse((String)localObject2);
               if (!w.a(paramString))
               {
-                ((Intent)localObject1).setDataAndType((Uri)localObject2, bc.S(paramString));
+                ((Intent)localObject1).setDataAndType((Uri)localObject2, bg.U(paramString));
                 try
                 {
                   a(paramActivity, (Intent)localObject1, paramString);
@@ -176,7 +233,7 @@ public class AppRunner
                   return;
                 }
               }
-              ((Intent)localObject1).setDataAndType((Uri)localObject2, bc.i(paramInt));
+              ((Intent)localObject1).setDataAndType((Uri)localObject2, bg.i(paramInt));
               continue;
             }
           }
@@ -196,17 +253,18 @@ public class AppRunner
           localIntent.putExtra("oneshot", true);
           localIntent.putExtra("configchange", false);
           localIntent.putExtra("by_open_as", paramBoolean);
+          localIntent.putExtra("islocalopen", true);
           Uri localUri = Uri.fromFile(new File(paramString));
-          localObject2 = bc.i(paramInt);
+          localObject2 = bg.i(paramInt);
           if ((localObject2 == null) || (paramBoolean)) {
-            break label312;
+            break label332;
           }
           localObject1 = localObject2;
           if (localObject2 != null)
           {
             localObject1 = localObject2;
             if (!((String)localObject2).startsWith("audio/")) {
-              break label312;
+              break label332;
             }
           }
           localIntent.setDataAndType(localUri, (String)localObject1);
@@ -222,19 +280,19 @@ public class AppRunner
       {
         return;
       }
-      label312:
+      label332:
       Object localObject1 = "audio/*";
     }
   }
   
-  public static void a(Activity paramActivity, String paramString, com.estrongs.fs.impl.b.f paramf)
+  public static void a(Activity paramActivity, String paramString, com.estrongs.fs.impl.b.g paramg)
   {
     ArrayList localArrayList = new ArrayList();
     localArrayList.add(paramString);
-    if (paramf != null)
+    if (paramg != null)
     {
       paramString = new ArrayList();
-      paramString.add(paramf);
+      paramString.add(paramg);
       a(paramActivity, localArrayList, paramString);
       return;
     }
@@ -243,20 +301,21 @@ public class AppRunner
   
   public static void a(Activity paramActivity, String paramString, Class<?> paramClass)
   {
-    if (am.bb(paramString))
+    if (ap.bm(paramString))
     {
-      com.estrongs.android.pop.utils.a.a(paramActivity, 2131427782);
+      com.estrongs.android.pop.utils.a.a(paramActivity, 2131231030);
       return;
     }
     Intent localIntent = new Intent("android.intent.action.VIEW");
     localIntent.addFlags(268435456);
     localIntent.putExtra("archive_file_name", paramString);
+    localIntent.putExtra("islocalopen", true);
     if (paramClass != null) {
       localIntent.setClass(paramActivity, paramClass);
     }
-    paramClass = bc.E(327736);
-    if (bc.n(paramString)) {
-      paramClass = bc.E(327744);
+    paramClass = bg.H(327736);
+    if (bg.n(paramString)) {
+      paramClass = bg.H(327744);
     }
     for (;;)
     {
@@ -268,13 +327,13 @@ public class AppRunner
       }
       catch (ActivityNotFoundException paramString)
       {
-        com.estrongs.android.pop.utils.a.a(paramActivity, 2131427782);
+        com.estrongs.android.pop.utils.a.a(paramActivity, 2131231030);
         return;
       }
-      if (bc.l(paramString)) {
-        paramClass = bc.E(327745);
-      } else if (bc.m(paramString)) {
-        paramClass = bc.E(327746);
+      if (bg.l(paramString)) {
+        paramClass = bg.H(327745);
+      } else if (bg.m(paramString)) {
+        paramClass = bg.H(327746);
       }
     }
   }
@@ -285,35 +344,35 @@ public class AppRunner
       return;
     }
     String str = paramString1;
-    if (bd.a(paramString1)) {
+    if (bk.a(paramString1)) {
       str = paramString2;
     }
-    if ((bc.j(paramString2)) && (!bc.N(paramString2)))
+    if ((bg.j(paramString2)) && (!bg.N(paramString2)))
     {
       paramActivity.runOnUiThread(new f(paramActivity));
       return;
     }
     if (paramString2.endsWith(".eslock"))
     {
-      if (am.ba(paramString2))
+      if (ap.bl(paramString2))
       {
         paramString1 = new ArrayList();
         paramString1.add(new com.estrongs.fs.impl.local.f(new File(paramString2)));
-        aj.a(paramActivity, paramString1, true);
+        ao.a(paramActivity, paramString1, true);
         return;
       }
-      ag.a(paramActivity, 2131428484, 0);
+      ak.a(paramActivity, 2131231894, 0);
       return;
     }
-    if ((am.bb(paramString2)) && (!a(paramString2)))
+    if ((ap.bm(paramString2)) && (!a(paramString2)))
     {
-      paramString1 = am.d(paramString2);
-      if ((q(paramActivity, "/sdcard/" + paramString1) == null) && (u(paramActivity, paramString1) == null))
+      paramString1 = ap.d(paramString2);
+      if ((r(paramActivity, "/sdcard/" + paramString1) == null) && (v(paramActivity, paramString1) == null))
       {
         paramActivity.runOnUiThread(new g(paramActivity, paramString2));
         return;
       }
-      a(paramActivity, paramString2, com.estrongs.android.pop.a.d + "/" + b(paramString2), null, true);
+      a(paramActivity, paramString2, com.estrongs.android.pop.a.f + "/" + b(paramString2), null, true);
       return;
     }
     c(paramActivity, str, paramString2);
@@ -321,78 +380,75 @@ public class AppRunner
   
   public static void a(Activity paramActivity, String paramString1, String paramString2, TypedMap paramTypedMap)
   {
-    Object localObject1 = paramString1;
-    if (bd.a(paramString1)) {
-      localObject1 = paramString2;
+    Object localObject = paramString1;
+    if (bk.a(paramString1)) {
+      localObject = paramString2;
     }
     paramString1 = paramString2;
-    if (bd.a(paramString2)) {
-      paramString1 = (String)localObject1;
+    if (bk.a(paramString2)) {
+      paramString1 = (String)localObject;
     }
-    Object localObject2 = localObject1;
-    String str = paramString1;
-    if (bd.c())
+    paramString2 = paramString1;
+    if (bk.c())
     {
-      paramString2 = (String)localObject1;
-      if (((String)localObject1).startsWith("/sdcard/")) {
-        paramString2 = am.bE(paramString1);
+      if (((String)localObject).startsWith("/sdcard/")) {
+        ap.bV(paramString1);
       }
-      localObject2 = paramString2;
-      str = paramString1;
-      if (paramString1.startsWith("/sdcard/"))
-      {
-        str = am.bE(paramString1);
-        localObject2 = paramString2;
+      paramString2 = paramString1;
+      if (paramString1.startsWith("/sdcard/")) {
+        paramString2 = ap.bV(paramString1);
       }
     }
     try
     {
-      if (am.bb(str))
+      if (ap.bm(paramString2))
       {
         paramString1 = new Intent(paramActivity, PopRemoteImageBrowser.class);
-        paramString1.putExtra("FILE_PATH", (String)localObject2);
-        paramString1.putExtra("ABSOLUTE_FILE_PATH", str);
+        paramString1.putExtra("FILE_PATH", paramString2);
+        paramString1.putExtra("ABSOLUTE_FILE_PATH", paramString2);
         paramString1.putExtra("by_open_as", paramTypedMap.getBoolean("by_open_as"));
         paramString1.putExtra("show_hidelist_file", paramTypedMap.getBoolean("show_hidelist_file"));
+        paramString1.putExtra("islocalopen", true);
         paramActivity.startActivity(paramString1);
         return;
       }
-      localObject1 = new Intent("android.intent.action.VIEW");
-      ((Intent)localObject1).putExtra("FILE_PATH", (String)localObject2);
-      ((Intent)localObject1).setType("image/*");
-      ((Intent)localObject1).putExtra("by_open_as", paramTypedMap.getBoolean("by_open_as"));
-      ((Intent)localObject1).putExtra("show_hidelist_file", paramTypedMap.getBoolean("show_hidelist_file"));
+      localObject = new Intent("android.intent.action.VIEW");
+      ((Intent)localObject).putExtra("FILE_PATH", paramString2);
+      ((Intent)localObject).setType("image/*");
+      ((Intent)localObject).putExtra("by_open_as", paramTypedMap.getBoolean("by_open_as"));
+      ((Intent)localObject).putExtra("show_hidelist_file", paramTypedMap.getBoolean("show_hidelist_file"));
+      ((Intent)localObject).putExtra("islocalopen", true);
       paramString1 = null;
-      if ((bc.e(str)) || (bc.d(str)))
+      if ((bg.e(paramString2)) || (bg.d(paramString2)))
       {
-        if (!bd.a())
+        if (!bk.a())
         {
-          paramString2 = com.estrongs.android.util.i.a().a(paramActivity.getContentResolver(), str);
-          paramString1 = paramString2;
-          if (paramString2 == null) {
-            paramString1 = com.estrongs.android.util.i.a().a(paramActivity.getContentResolver(), new String[] { str }, str);
+          paramTypedMap = com.estrongs.android.util.h.a().a(paramActivity.getContentResolver(), paramString2);
+          paramString1 = paramTypedMap;
+          if (paramTypedMap == null) {
+            paramString1 = com.estrongs.android.util.h.a().a(paramActivity.getContentResolver(), new String[] { paramString2 }, paramString2);
           }
         }
         if (paramString1 == null) {
-          if (am.ba(str))
+          if (ap.bl(paramString2))
           {
-            paramString1 = Uri.fromFile(new File(str));
-            ((Intent)localObject1).setDataAndType(paramString1, "image/*");
+            paramString1 = Uri.fromFile(new File(paramString2));
+            ((Intent)localObject).setDataAndType(paramString1, "image/*");
           }
         }
         for (;;)
         {
-          a(paramActivity, (Intent)localObject1, str);
+          a(paramActivity, (Intent)localObject, paramString2);
           return;
-          paramString1 = Uri.parse(str);
+          paramString1 = Uri.parse(paramString2);
           break;
-          ((Intent)localObject1).setData(paramString1);
+          ((Intent)localObject).setData(paramString1);
         }
       }
-      if (am.ba(str)) {}
-      for (paramString1 = Uri.fromFile(new File(str));; paramString1 = Uri.parse(str))
+      if (ap.bl(paramString2)) {}
+      for (paramString1 = Uri.fromFile(new File(paramString2));; paramString1 = Uri.parse(paramString2))
       {
-        ((Intent)localObject1).setDataAndType(paramString1, "image/*");
+        ((Intent)localObject).setDataAndType(paramString1, "image/*");
         break;
       }
       return;
@@ -430,7 +486,7 @@ public class AppRunner
   
   public static void a(Activity paramActivity, String paramString, boolean paramBoolean1, boolean paramBoolean2)
   {
-    Object localObject2 = bc.S(paramString);
+    Object localObject2 = bg.U(paramString);
     Object localObject1;
     if (!((String)localObject2).equals("*/*"))
     {
@@ -441,13 +497,14 @@ public class AppRunner
     {
       localObject1 = "text/*";
     }
-    if (am.bb(paramString))
+    if (ap.bm(paramString))
     {
       localObject2 = new Intent("android.intent.action.VIEW");
       ((Intent)localObject2).addFlags(67108864);
       ((Intent)localObject2).setType((String)localObject1);
+      ((Intent)localObject2).putExtra("islocalopen", true);
       ((Intent)localObject2).putExtra("by_open_as", paramBoolean2);
-      if (am.aV(paramString)) {
+      if (ap.bg(paramString)) {
         ((Intent)localObject2).setClass(paramActivity, BTPopNoteEditor.class);
       }
       for (;;)
@@ -461,6 +518,7 @@ public class AppRunner
     localObject2 = new Intent("android.intent.action.VIEW");
     ((Intent)localObject2).addFlags(268435456);
     ((Intent)localObject2).putExtra("by_open_as", paramBoolean2);
+    ((Intent)localObject2).putExtra("islocalopen", true);
     if (paramBoolean1)
     {
       ((Intent)localObject2).setDataAndType(Uri.parse(paramString), (String)localObject1);
@@ -472,15 +530,15 @@ public class AppRunner
     a(paramActivity, (Intent)localObject2, paramString);
   }
   
-  public static void a(Activity paramActivity, List<String> paramList, List<com.estrongs.fs.impl.b.f> paramList1)
+  public static void a(Activity paramActivity, List<String> paramList, List<com.estrongs.fs.impl.b.g> paramList1)
   {
     int i = 0;
     if ((paramActivity instanceof FileExplorerActivity)) {}
-    for (boolean bool1 = ((FileExplorerActivity)paramActivity).C();; bool1 = false)
+    for (boolean bool1 = ((FileExplorerActivity)paramActivity).R();; bool1 = false)
     {
-      boolean bool2 = l.a(paramActivity, false);
+      boolean bool2 = com.estrongs.fs.impl.local.m.a(paramActivity, false);
       NotificationManager localNotificationManager = (NotificationManager)paramActivity.getSystemService("notification");
-      if ((bool2) && ((ad.a(paramActivity).aa()) || (bool1))) {
+      if ((bool2) && ((ad.a(paramActivity).ab()) || (bool1))) {
         new i(paramList, paramActivity, paramList1, localNotificationManager).start();
       }
       ArrayList localArrayList;
@@ -492,16 +550,16 @@ public class AppRunner
         {
           if (paramList1 != null)
           {
-            com.estrongs.fs.impl.b.f localf = (com.estrongs.fs.impl.b.f)paramList1.get(i);
-            if ((bool2) && (localf.b())) {
-              localArrayList.add(localf);
+            com.estrongs.fs.impl.b.g localg = (com.estrongs.fs.impl.b.g)paramList1.get(i);
+            if ((bool2) && (localg.b())) {
+              localArrayList.add(localg);
             }
           }
           for (;;)
           {
             i += 1;
             break;
-            v(paramActivity, (String)paramList.get(i));
+            w(paramActivity, (String)paramList.get(i));
           }
         }
       } while (localArrayList.size() <= 0);
@@ -514,9 +572,9 @@ public class AppRunner
   {
     int k = 0;
     if ((paramActivity instanceof FileExplorerActivity)) {}
-    for (boolean bool1 = ((FileExplorerActivity)paramActivity).D();; bool1 = false)
+    for (boolean bool1 = ((FileExplorerActivity)paramActivity).S();; bool1 = false)
     {
-      boolean bool2 = l.a(paramActivity, false);
+      boolean bool2 = com.estrongs.fs.impl.local.m.a(paramActivity, false);
       int i;
       int j;
       if (paramList != null)
@@ -526,7 +584,7 @@ public class AppRunner
         if (!bool2) {
           break label87;
         }
-        if ((!ad.a(paramActivity).aa()) && (!bool1))
+        if ((!ad.a(paramActivity).ab()) && (!bool1))
         {
           j = k;
           if (i == 0) {
@@ -558,9 +616,9 @@ public class AppRunner
       if (localNotificationManager != null)
       {
         Notification localNotification = new Notification();
-        tickerText = ("ES " + paramContext.getText(2131427423));
+        tickerText = ("ES " + paramContext.getText(2131231129));
         when = System.currentTimeMillis();
-        icon = 2130837516;
+        icon = 2130837625;
         if (paramBoolean) {
           flags |= 0x2;
         }
@@ -581,12 +639,12 @@ public class AppRunner
   
   public static boolean a(String paramString)
   {
-    return (bc.i(paramString)) || (bc.c(paramString)) || (bc.g(paramString)) || (bc.h(paramString));
+    return (bg.i(paramString)) || (bg.c(paramString)) || (bg.g(paramString)) || (bg.h(paramString));
   }
   
   public static String b(String paramString)
   {
-    String str2 = am.d(paramString);
+    String str2 = ap.d(paramString);
     int i = str2.lastIndexOf('.');
     if (i == -1) {
       return str2 + "_" + paramString.hashCode();
@@ -598,7 +656,7 @@ public class AppRunner
   
   public static void b(Activity paramActivity, String paramString)
   {
-    if (am.bb(paramString)) {
+    if (ap.bm(paramString)) {
       return;
     }
     Intent localIntent = new Intent("android.intent.action.VIEW");
@@ -620,22 +678,22 @@ public class AppRunner
     Object localObject3;
     Object localObject1;
     Object localObject5;
-    if (am.bb(paramString))
+    if (ap.bm(paramString))
     {
-      if (!com.estrongs.android.c.a.b()) {
-        ag.a(paramActivity, 2131427921, 1);
+      if (!com.estrongs.android.g.a.b()) {
+        ak.a(paramActivity, 2131232374, 1);
       }
       do
       {
         return;
-        if ((am.H(paramString)) && (z.Y)) {
+        if ((ap.J(paramString)) && (z.Y)) {
           try
           {
             str2 = com.estrongs.android.pop.a.b + "/.smbmount";
-            localObject6 = am.y(paramString);
-            localObject4 = am.A(paramString);
-            localObject3 = am.a(paramString);
-            localObject7 = am.j(paramString);
+            localObject6 = ap.A(paramString);
+            localObject4 = ap.C(paramString);
+            localObject3 = ap.a(paramString);
+            localObject7 = ap.l(paramString);
             String str1 = null;
             int i = ((String)localObject7).indexOf('/', 1);
             if (i != -1) {
@@ -648,17 +706,18 @@ public class AppRunner
           }
           catch (Exception localException1) {}
         }
-        if (am.aV(paramString)) {
-          break label716;
+        if (ap.bg(paramString)) {
+          break label733;
         }
         localObject1 = new Intent("android.intent.action.VIEW");
         ((Intent)localObject1).addFlags(67108864);
         ((Intent)localObject1).putExtra("oneshot", true);
         ((Intent)localObject1).putExtra("configchange", false);
         ((Intent)localObject1).putExtra("by_open_as", paramBoolean);
-        localObject3 = am.b(paramString, com.estrongs.android.c.a.a());
+        ((Intent)localObject1).putExtra("islocalopen", true);
+        localObject3 = ap.b(paramString, com.estrongs.android.g.a.a());
       } while (localObject3 == null);
-      ((Intent)localObject1).setDataAndType(Uri.parse((String)localObject3), bc.h(paramInt));
+      ((Intent)localObject1).setDataAndType(Uri.parse((String)localObject3), bg.h(paramInt));
       try
       {
         a(paramActivity, (Intent)localObject1, paramString);
@@ -673,18 +732,18 @@ public class AppRunner
       localObject5 = str2 + (String)localObject1;
       new File((String)localObject5).mkdirs();
       str2 = str2 + (String)localObject7;
-      Log.e("EEE", "Smbpath:" + (String)localObject3 + ", mountPoint:" + (String)localObject5 + ",username=" + (String)localObject6 + ",pass:" + (String)localObject4 + ",localPath" + str2);
+      com.estrongs.android.util.l.e("EEE", "Smbpath:" + (String)localObject3 + ", mountPoint:" + (String)localObject5 + ",username=" + (String)localObject6 + ",pass:" + (String)localObject4 + ",localPath" + str2);
       Object localObject7 = new StringBuilder().append("iocharset=utf8,");
       if (localObject6 == null)
       {
         localObject1 = "";
-        label406:
+        label414:
         localObject6 = ((StringBuilder)localObject7).append((String)localObject1);
         if (localObject4 != null) {
-          break label690;
+          break label707;
         }
         localObject1 = "";
-        label424:
+        label432:
         localObject1 = new ProcessBuilder(new String[] { "busybox", "mount", "-t", "cifs", "-o", (String)localObject1 + ",uid=1000,gid=1015,file_mode=0775,dir_mode=0775,rw", localObject3, localObject5 });
         ((ProcessBuilder)localObject1).redirectErrorStream(true);
       }
@@ -699,21 +758,22 @@ public class AppRunner
         ((Intent)localObject4).putExtra("oneshot", true);
         ((Intent)localObject4).putExtra("configchange", false);
         ((Intent)localObject4).putExtra("by_open_as", paramBoolean);
+        ((Intent)localObject4).putExtra("islocalopen", true);
         localObject5 = Uri.fromFile(new File(str2));
-        localObject3 = bc.S(paramString);
+        localObject3 = bg.U(paramString);
         localObject1 = localObject3;
         if ("*/*".equals(localObject3)) {
-          localObject1 = bc.h(paramInt);
+          localObject1 = bg.h(paramInt);
         }
         if (paramBoolean) {
-          break label905;
+          break label941;
         }
         localObject3 = localObject1;
         if (localObject1 != null)
         {
           localObject3 = localObject1;
           if (!((String)localObject1).startsWith("video/")) {
-            break label905;
+            break label941;
           }
         }
         ((Intent)localObject4).setDataAndType((Uri)localObject5, (String)localObject3);
@@ -730,27 +790,29 @@ public class AppRunner
       }
       catch (Exception localException2) {}
       Object localObject2 = "username=" + (String)localObject6;
-      break label406;
-      label690:
+      break label414;
+      label707:
       localObject2 = "password=" + (String)localObject4;
-      break label424;
-      label716:
+      break label432;
+      label733:
       localObject2 = new Intent(paramActivity, StreamingMediaPlayer.class);
       ((Intent)localObject2).addFlags(67108864);
       ((Intent)localObject2).setData(Uri.parse(paramString));
       ((Intent)localObject2).putExtra("by_open_as", paramBoolean);
+      ((Intent)localObject2).putExtra("islocalopen", true);
       paramActivity.startActivity((Intent)localObject2);
       return;
       localObject4 = new Intent("android.intent.action.VIEW");
       ((Intent)localObject4).addFlags(67108864);
       ((Intent)localObject4).putExtra("oneshot", true);
       ((Intent)localObject4).putExtra("configchange", false);
+      ((Intent)localObject4).putExtra("islocalopen", true);
       ((Intent)localObject4).putExtra("by_open_as", paramBoolean);
       localObject5 = Uri.fromFile(new File(paramString));
-      localObject3 = bc.S(paramString);
+      localObject3 = bg.U(paramString);
       localObject2 = localObject3;
       if ("*/*".equals(localObject3)) {
-        localObject2 = bc.h(paramInt);
+        localObject2 = bg.h(paramInt);
       }
       if (!paramBoolean)
       {
@@ -776,7 +838,7 @@ public class AppRunner
         paramActivity.printStackTrace();
         return;
       }
-      label905:
+      label941:
       localObject3 = "video/*";
     }
   }
@@ -797,7 +859,7 @@ public class AppRunner
   
   public static void c(Activity paramActivity, String paramString)
   {
-    if (am.bb(paramString)) {
+    if (ap.bm(paramString)) {
       return;
     }
     Intent localIntent = new Intent("android.intent.action.VIEW");
@@ -813,7 +875,7 @@ public class AppRunner
   
   public static void c(Activity paramActivity, String paramString, int paramInt, boolean paramBoolean)
   {
-    if (am.bb(paramString)) {
+    if (ap.bm(paramString)) {
       return;
     }
     Intent localIntent = new Intent("android.intent.action.VIEW");
@@ -828,9 +890,9 @@ public class AppRunner
     if ((paramString2 == null) || (paramString2.length() == 0)) {
       return;
     }
-    paramString1 = am.bE(paramString1);
-    paramString2 = am.bE(paramString2);
-    int i = bc.b(paramString2);
+    paramString1 = ap.bV(paramString1);
+    paramString2 = ap.bV(paramString2);
+    int i = bg.b(paramString2);
     if ((paramString2.endsWith(".3gp")) || (paramString2.endsWith(".3gpp")))
     {
       if (e(paramString2))
@@ -841,129 +903,134 @@ public class AppRunner
       a(paramActivity, paramString2, i, false);
       return;
     }
-    if (bc.a(i))
+    if (bg.a(i))
     {
       a(paramActivity, paramString1, paramString2, false);
       return;
     }
-    if (bc.e(i))
+    if (bg.e(i))
     {
       a(paramActivity, paramString2, i, false);
       return;
     }
-    if (bc.g(i))
+    if (bg.g(i))
     {
       b(paramActivity, paramString2, i, false);
       return;
     }
-    if (bc.i(paramString2))
+    if (bg.i(paramString2))
     {
       a(paramActivity, paramString2, false, false);
       return;
     }
-    if ((bc.j(paramString2)) && (bc.N(paramString2)))
+    if ((bg.j(paramString2)) && (bg.N(paramString2)))
     {
-      p(paramActivity, paramString2);
+      q(paramActivity, paramString2);
       return;
     }
-    if (bc.l(i))
+    if (bg.l(i))
     {
       c(paramActivity, paramString2);
       return;
     }
-    if (bc.m(i))
+    if (bg.m(i))
     {
       a(paramActivity, paramString2);
       return;
     }
-    if (bc.n(i))
+    if (bg.n(i))
     {
       b(paramActivity, paramString2);
       return;
     }
-    if (bc.o(i))
+    if (bg.o(i))
     {
       d(paramActivity, paramString2);
       return;
     }
-    if (bc.p(i))
+    if (bg.p(i))
     {
       e(paramActivity, paramString2);
       return;
     }
-    if (bc.u(i))
-    {
-      k(paramActivity, paramString2);
-      return;
-    }
-    if (bc.v(i))
+    if (bg.x(i))
     {
       l(paramActivity, paramString2);
       return;
     }
-    if (bc.y(i))
+    if (bg.y(i))
     {
       m(paramActivity, paramString2);
       return;
     }
-    if (bc.w(i))
+    if (bg.B(i))
     {
       n(paramActivity, paramString2);
       return;
     }
-    if (bc.x(i))
+    if (bg.z(i))
     {
       o(paramActivity, paramString2);
       return;
     }
-    if (bc.n(i))
+    if (bg.A(i))
+    {
+      p(paramActivity, paramString2);
+      return;
+    }
+    if (bg.n(i))
     {
       b(paramActivity, paramString2);
       return;
     }
-    if (bc.o(i))
+    if (bg.o(i))
     {
       d(paramActivity, paramString2);
       return;
     }
-    if (bc.p(i))
+    if (bg.p(i))
     {
       e(paramActivity, paramString2);
       return;
     }
-    if (bc.q(i))
+    if (bg.q(i))
     {
       f(paramActivity, paramString2);
       return;
     }
-    if (bc.r(i))
+    if (bg.r(i))
     {
       g(paramActivity, paramString2);
       return;
     }
-    if (bc.t(i))
+    if (bg.t(i))
     {
       j(paramActivity, paramString2);
       return;
     }
-    if (bc.s(i))
+    if (bg.s(i))
     {
       i(paramActivity, paramString2);
       return;
     }
-    if (bc.A(i))
+    if (bg.D(i))
     {
       h(paramActivity, paramString2);
       return;
     }
-    if (bc.C(i))
+    if (bg.F(i))
     {
-      t(paramActivity, paramString2);
+      u(paramActivity, paramString2);
       return;
     }
-    if (am.bb(paramString1))
+    if ((bg.u(i)) || (bg.v(i)) || (bg.w(i)))
     {
-      com.estrongs.android.pop.utils.a.a(paramActivity, 2131427782);
+      k(paramActivity, paramString2);
+      return;
+    }
+    if (ap.bm(paramString1))
+    {
+      com.estrongs.android.pop.utils.a.a(paramActivity, 2131231030);
       return;
     }
     if (paramString2 != null) {
@@ -971,11 +1038,11 @@ public class AppRunner
     }
     for (;;)
     {
-      paramString2 = q(paramActivity, paramString1);
+      paramString2 = r(paramActivity, paramString1);
       if (paramString2 != null) {
-        break label495;
+        break label523;
       }
-      if (u(paramActivity, am.d(paramString1)) == null) {
+      if (v(paramActivity, ap.d(paramString1)) == null) {
         break;
       }
       paramString2 = new Intent("android.intent.action.VIEW");
@@ -986,30 +1053,30 @@ public class AppRunner
     }
     paramActivity.runOnUiThread(new h(paramActivity, paramString1));
     return;
-    label495:
+    label523:
     a(paramActivity, paramString2, paramString1);
   }
   
-  private static boolean c(Activity paramActivity, String paramString, com.estrongs.fs.impl.b.f paramf)
+  private static boolean c(Activity paramActivity, String paramString, com.estrongs.fs.impl.b.g paramg)
   {
     paramString = new ArrayList();
-    com.estrongs.fs.h localh = d.a().j(paramf.getAbsolutePath());
+    com.estrongs.fs.h localh = d.a().j(paramg.getAbsolutePath());
     paramActivity = "/system/app/";
-    if (paramf.e() != null)
+    if (paramg.e() != null)
     {
-      paramActivity = am.bk(paramf.e());
-      localh.putExtra("item_paste_name", am.d(paramf.e()));
+      paramActivity = ap.bB(paramg.e());
+      localh.putExtra("item_paste_name", ap.d(paramg.e()));
     }
     paramString.add(localh);
-    if (paramf.d() != null)
+    if (paramg.d() != null)
     {
-      localh = d.a().j(paramf.d());
-      if (paramf.f() != null) {
-        localh.putExtra("item_paste_name", am.d(paramf.f()));
+      localh = d.a().j(paramg.d());
+      if (paramg.f() != null) {
+        localh.putExtra("item_paste_name", ap.d(paramg.f()));
       }
       paramString.add(localh);
     }
-    if (l.b("/system/", "rw") != null)
+    if (com.estrongs.fs.impl.local.m.b("/system/", "rw") != null)
     {
       paramActivity = new r(d.a(), paramString, new com.estrongs.fs.impl.local.f(new File(paramActivity)));
       getDecisionDatag = 2;
@@ -1022,7 +1089,7 @@ public class AppRunner
   
   public static void d(Activity paramActivity, String paramString)
   {
-    if (am.bb(paramString)) {
+    if (ap.bm(paramString)) {
       return;
     }
     Intent localIntent = new Intent("android.intent.action.VIEW");
@@ -1043,7 +1110,7 @@ public class AppRunner
   
   public static void e(Activity paramActivity, String paramString)
   {
-    if (am.bb(paramString)) {
+    if (ap.bm(paramString)) {
       return;
     }
     Intent localIntent = new Intent("android.intent.action.VIEW");
@@ -1062,60 +1129,60 @@ public class AppRunner
   private static boolean e(String paramString)
   {
     // Byte code:
-    //   0: invokestatic 890	com/estrongs/android/util/bd:g	()Z
+    //   0: invokestatic 944	com/estrongs/android/util/bk:g	()Z
     //   3: ifeq +60 -> 63
-    //   6: new 892	android/media/MediaMetadataRetriever
+    //   6: new 946	android/media/MediaMetadataRetriever
     //   9: dup
-    //   10: invokespecial 893	android/media/MediaMetadataRetriever:<init>	()V
+    //   10: invokespecial 947	android/media/MediaMetadataRetriever:<init>	()V
     //   13: astore_2
     //   14: aload_2
     //   15: aload_0
-    //   16: invokevirtual 896	android/media/MediaMetadataRetriever:setDataSource	(Ljava/lang/String;)V
+    //   16: invokevirtual 950	android/media/MediaMetadataRetriever:setDataSource	(Ljava/lang/String;)V
     //   19: aload_2
     //   20: bipush 17
-    //   22: invokevirtual 899	android/media/MediaMetadataRetriever:extractMetadata	(I)Ljava/lang/String;
+    //   22: invokevirtual 953	android/media/MediaMetadataRetriever:extractMetadata	(I)Ljava/lang/String;
     //   25: astore_0
     //   26: aload_0
     //   27: ifnull +9 -> 36
     //   30: aload_2
-    //   31: invokevirtual 902	android/media/MediaMetadataRetriever:release	()V
+    //   31: invokevirtual 956	android/media/MediaMetadataRetriever:release	()V
     //   34: iconst_1
     //   35: ireturn
     //   36: aload_2
-    //   37: invokevirtual 902	android/media/MediaMetadataRetriever:release	()V
+    //   37: invokevirtual 956	android/media/MediaMetadataRetriever:release	()V
     //   40: iconst_0
     //   41: ireturn
     //   42: astore_0
-    //   43: ldc_w 904
+    //   43: ldc_w 958
     //   46: aload_0
-    //   47: invokestatic 909	com/estrongs/android/util/v:a	(Ljava/lang/String;Ljava/lang/Throwable;)V
+    //   47: invokestatic 963	com/estrongs/android/util/x:a	(Ljava/lang/String;Ljava/lang/Throwable;)V
     //   50: aload_2
-    //   51: invokevirtual 902	android/media/MediaMetadataRetriever:release	()V
+    //   51: invokevirtual 956	android/media/MediaMetadataRetriever:release	()V
     //   54: iconst_0
     //   55: ireturn
     //   56: astore_0
     //   57: aload_2
-    //   58: invokevirtual 902	android/media/MediaMetadataRetriever:release	()V
+    //   58: invokevirtual 956	android/media/MediaMetadataRetriever:release	()V
     //   61: aload_0
     //   62: athrow
-    //   63: new 911	android/media/MediaPlayer
+    //   63: new 965	android/media/MediaPlayer
     //   66: dup
-    //   67: invokespecial 912	android/media/MediaPlayer:<init>	()V
+    //   67: invokespecial 966	android/media/MediaPlayer:<init>	()V
     //   70: astore_2
     //   71: aload_2
-    //   72: new 914	java/io/FileInputStream
+    //   72: new 968	java/io/FileInputStream
     //   75: dup
     //   76: aload_0
-    //   77: invokespecial 915	java/io/FileInputStream:<init>	(Ljava/lang/String;)V
-    //   80: invokevirtual 919	java/io/FileInputStream:getFD	()Ljava/io/FileDescriptor;
-    //   83: invokevirtual 922	android/media/MediaPlayer:setDataSource	(Ljava/io/FileDescriptor;)V
+    //   77: invokespecial 969	java/io/FileInputStream:<init>	(Ljava/lang/String;)V
+    //   80: invokevirtual 973	java/io/FileInputStream:getFD	()Ljava/io/FileDescriptor;
+    //   83: invokevirtual 976	android/media/MediaPlayer:setDataSource	(Ljava/io/FileDescriptor;)V
     //   86: aload_2
-    //   87: invokevirtual 925	android/media/MediaPlayer:prepare	()V
+    //   87: invokevirtual 979	android/media/MediaPlayer:prepare	()V
     //   90: aload_2
-    //   91: invokevirtual 928	android/media/MediaPlayer:getVideoHeight	()I
+    //   91: invokevirtual 982	android/media/MediaPlayer:getVideoHeight	()I
     //   94: istore_1
     //   95: aload_2
-    //   96: invokevirtual 929	android/media/MediaPlayer:release	()V
+    //   96: invokevirtual 983	android/media/MediaPlayer:release	()V
     //   99: iload_1
     //   100: ifgt -66 -> 34
     //   103: iconst_0
@@ -1123,9 +1190,9 @@ public class AppRunner
     //   105: astore_0
     //   106: iconst_0
     //   107: istore_1
-    //   108: ldc_w 904
+    //   108: ldc_w 958
     //   111: aload_0
-    //   112: invokestatic 909	com/estrongs/android/util/v:a	(Ljava/lang/String;Ljava/lang/Throwable;)V
+    //   112: invokestatic 963	com/estrongs/android/util/x:a	(Ljava/lang/String;Ljava/lang/Throwable;)V
     //   115: goto -16 -> 99
     //   118: astore_0
     //   119: iconst_1
@@ -1159,7 +1226,7 @@ public class AppRunner
   
   public static void f(Activity paramActivity, String paramString)
   {
-    if (am.bb(paramString)) {
+    if (ap.bm(paramString)) {
       return;
     }
     Intent localIntent = new Intent("android.intent.action.VIEW");
@@ -1175,7 +1242,7 @@ public class AppRunner
   
   public static void g(Activity paramActivity, String paramString)
   {
-    if (am.bb(paramString)) {
+    if (ap.bm(paramString)) {
       return;
     }
     Intent localIntent = new Intent("android.intent.action.VIEW");
@@ -1191,7 +1258,7 @@ public class AppRunner
   
   public static void h(Activity paramActivity, String paramString)
   {
-    if (am.bb(paramString)) {
+    if (ap.bm(paramString)) {
       return;
     }
     Intent localIntent = new Intent("android.intent.action.VIEW");
@@ -1207,7 +1274,7 @@ public class AppRunner
   
   public static void i(Activity paramActivity, String paramString)
   {
-    if (am.bb(paramString)) {
+    if (ap.bm(paramString)) {
       return;
     }
     Intent localIntent = new Intent("android.intent.action.VIEW");
@@ -1223,7 +1290,7 @@ public class AppRunner
   
   public static void j(Activity paramActivity, String paramString)
   {
-    if (am.bb(paramString)) {
+    if (ap.bm(paramString)) {
       return;
     }
     Intent localIntent = new Intent("android.intent.action.VIEW");
@@ -1239,7 +1306,23 @@ public class AppRunner
   
   public static void k(Activity paramActivity, String paramString)
   {
-    if (am.bb(paramString)) {
+    if (ap.bm(paramString)) {
+      return;
+    }
+    Intent localIntent = new Intent("android.intent.action.VIEW");
+    localIntent.addFlags(268435456);
+    localIntent.setDataAndType(Uri.fromFile(new File(paramString)), bg.U(paramString));
+    try
+    {
+      a(paramActivity, localIntent, paramString);
+      return;
+    }
+    catch (ActivityNotFoundException paramActivity) {}
+  }
+  
+  public static void l(Activity paramActivity, String paramString)
+  {
+    if (ap.bm(paramString)) {
       return;
     }
     Intent localIntent = new Intent("android.intent.action.VIEW");
@@ -1262,9 +1345,9 @@ public class AppRunner
     }
   }
   
-  public static void l(Activity paramActivity, String paramString)
+  public static void m(Activity paramActivity, String paramString)
   {
-    if (am.bb(paramString)) {
+    if (ap.bm(paramString)) {
       return;
     }
     Intent localIntent = new Intent("android.intent.action.VIEW");
@@ -1287,9 +1370,9 @@ public class AppRunner
     }
   }
   
-  public static void m(Activity paramActivity, String paramString)
+  public static void n(Activity paramActivity, String paramString)
   {
-    if (am.bb(paramString)) {
+    if (ap.bm(paramString)) {
       return;
     }
     Intent localIntent = new Intent("android.intent.action.VIEW");
@@ -1312,9 +1395,9 @@ public class AppRunner
     }
   }
   
-  public static void n(Activity paramActivity, String paramString)
+  public static void o(Activity paramActivity, String paramString)
   {
-    if (am.bb(paramString)) {
+    if (ap.bm(paramString)) {
       return;
     }
     Intent localIntent = new Intent("android.intent.action.VIEW");
@@ -1328,11 +1411,11 @@ public class AppRunner
     catch (ActivityNotFoundException paramActivity) {}
   }
   
-  public static void o(Activity paramActivity, String paramString)
+  public static void p(Activity paramActivity, String paramString)
   {
-    if (am.bb(paramString))
+    if (ap.bm(paramString))
     {
-      com.estrongs.android.pop.utils.a.a(paramActivity, 2131427782);
+      com.estrongs.android.pop.utils.a.a(paramActivity, 2131231030);
       return;
     }
     Uri localUri = Uri.fromFile(new File(paramString));
@@ -1346,12 +1429,12 @@ public class AppRunner
     catch (ActivityNotFoundException paramActivity) {}
   }
   
-  public static void p(Activity paramActivity, String paramString)
+  public static void q(Activity paramActivity, String paramString)
   {
     a(paramActivity, paramString, null);
   }
   
-  public static Intent q(Activity paramActivity, String paramString)
+  public static Intent r(Activity paramActivity, String paramString)
   {
     try
     {
@@ -1360,7 +1443,7 @@ public class AppRunner
       if (com.estrongs.fs.util.j.b(paramString) == null) {
         return null;
       }
-      String str = bc.S(paramString);
+      String str = bg.U(paramString);
       if ((str != null) && (!str.equals("*/*"))) {
         localIntent.setDataAndType(Uri.fromFile(new File(paramString)), str);
       }
@@ -1378,40 +1461,40 @@ public class AppRunner
     catch (Exception paramActivity) {}
   }
   
-  public static void r(Activity paramActivity, String paramString)
+  public static void s(Activity paramActivity, String paramString)
   {
     a(paramActivity, paramString, null);
   }
   
-  public static cg s(Activity paramActivity, String paramString)
+  public static ci t(Activity paramActivity, String paramString)
   {
     CharSequence[] arrayOfCharSequence = new CharSequence[5];
-    arrayOfCharSequence[0] = paramActivity.getText(2131427430);
-    arrayOfCharSequence[1] = paramActivity.getText(2131427431);
-    arrayOfCharSequence[2] = paramActivity.getText(2131427432);
-    arrayOfCharSequence[3] = paramActivity.getText(2131427433);
-    arrayOfCharSequence[4] = paramActivity.getText(2131427573);
-    if (am.bb(paramString))
+    arrayOfCharSequence[0] = paramActivity.getText(2131232490);
+    arrayOfCharSequence[1] = paramActivity.getText(2131232488);
+    arrayOfCharSequence[2] = paramActivity.getText(2131232491);
+    arrayOfCharSequence[3] = paramActivity.getText(2131232489);
+    arrayOfCharSequence[4] = paramActivity.getText(2131231993);
+    if (ap.bm(paramString))
     {
       arrayOfCharSequence = new CharSequence[4];
-      arrayOfCharSequence[0] = paramActivity.getText(2131427430);
-      arrayOfCharSequence[1] = paramActivity.getText(2131427431);
-      arrayOfCharSequence[2] = paramActivity.getText(2131427432);
-      arrayOfCharSequence[3] = paramActivity.getText(2131427433);
+      arrayOfCharSequence[0] = paramActivity.getText(2131232490);
+      arrayOfCharSequence[1] = paramActivity.getText(2131232488);
+      arrayOfCharSequence[2] = paramActivity.getText(2131232491);
+      arrayOfCharSequence[3] = paramActivity.getText(2131232489);
     }
-    u localu = u(paramActivity, am.d(paramString));
-    cg localcg = new cg(paramActivity);
-    localcg.setTitle(2131427369);
-    localcg.setItems(arrayOfCharSequence, -1, new m(localcg, paramString, paramActivity));
-    localcg.setSelectable(false);
+    u localu = v(paramActivity, ap.d(paramString));
+    ci localci = new ci(paramActivity);
+    localci.setTitle(2131230870);
+    localci.setItems(arrayOfCharSequence, -1, new m(localci, paramString, paramActivity));
+    localci.setSelectable(false);
     if (localu != null) {
-      localcg.setSingleButton(paramActivity.getString(2131427975), paramActivity.getResources().getDrawable(2130838172), new b(paramActivity, paramString));
+      localci.setSingleButton(paramActivity.getString(2131232030), paramActivity.getResources().getDrawable(2130838539), new b(paramActivity, paramString));
     }
-    localcg.show();
-    return localcg;
+    localci.show();
+    return localci;
   }
   
-  public static void t(Activity paramActivity, String paramString)
+  public static void u(Activity paramActivity, String paramString)
   {
     Intent localIntent = new Intent(paramActivity, ShowDialogActivity.class);
     localIntent.setData(Uri.parse(paramString));
@@ -1419,18 +1502,18 @@ public class AppRunner
     paramActivity.startActivity(localIntent);
   }
   
-  private static u u(Activity paramActivity, String paramString)
+  private static u v(Activity paramActivity, String paramString)
   {
-    paramString = am.bA(paramString);
+    paramString = ap.bR(paramString);
     if ((paramString != null) && (!"".equals(paramString))) {
       return n.a(paramActivity, paramString);
     }
     return null;
   }
   
-  private static void v(Activity paramActivity, String paramString)
+  private static void w(Activity paramActivity, String paramString)
   {
-    if (am.bb(paramString)) {
+    if (ap.bm(paramString)) {
       return;
     }
     Intent localIntent = new Intent("android.intent.action.VIEW");

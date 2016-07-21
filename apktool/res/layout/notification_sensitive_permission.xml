@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/notification_sensitive_permission_bg" android:paddingLeft="10.0dip" android:paddingTop="6.0dip" android:paddingRight="10.0dip" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/notification_sensitive_permission_icon_iv" android:layout_width="44.0dip" android:layout_height="44.0dip" android:src="@drawable/notification_sensitive_icon" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_weight="1.0">
+        <TextView android:textColor="@color/notification_sensitive_title_text_color" android:ellipsize="end" android:id="@id/notification_sensitive_permission_title_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/analysis_install_app_sensitive_notification_title" android:singleLine="true" style="@style/NotificationTitle" />
+        <TextView android:textColor="@color/notification_sensitive_content_text_color" android:ellipsize="end" android:id="@id/notification_sensitive_permission_content_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/analysis_install_app_sensitive_notification_content" android:singleLine="true" style="@style/NotificationContent" />
+    </LinearLayout>
+    <ImageView android:gravity="center_vertical" android:id="@id/notification_sensitive_permission_go_iv" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/notification_sensitive_permission_go_icon" />
+</LinearLayout>

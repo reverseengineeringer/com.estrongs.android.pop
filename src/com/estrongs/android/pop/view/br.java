@@ -1,42 +1,61 @@
 package com.estrongs.android.pop.view;
 
-import android.os.Handler;
-import com.estrongs.android.pop.a;
-import java.io.File;
+import android.content.Intent;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import com.estrongs.android.pop.app.ImageCommentActivity;
+import com.estrongs.android.pop.spfs.CreateSiteFileObject;
+import com.estrongs.android.pop.view.utils.AppRunner;
+import com.estrongs.android.scanner.l;
+import com.estrongs.android.ui.dialog.ft;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.view.co;
+import com.estrongs.android.view.cr;
+import com.estrongs.android.view.eb;
+import com.estrongs.fs.h;
+import com.estrongs.fs.w;
 
 class br
-  implements Runnable
+  implements co
 {
-  br(FileExplorerActivity paramFileExplorerActivity, Handler paramHandler, Runnable paramRunnable) {}
+  br(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void run()
+  public void a(RecyclerView paramRecyclerView, View paramView, int paramInt)
   {
-    int j = 0;
-    Object localObject = a.a + "/cache";
-    File[] arrayOfFile = new File((String)localObject, ".thumbnails").listFiles();
-    int i;
-    if (arrayOfFile != null)
+    paramRecyclerView = a.O();
+    if (paramRecyclerView != null) {}
+    for (paramRecyclerView = (h)paramRecyclerView.e(paramInt);; paramRecyclerView = null)
     {
-      i = 0;
-      while (i < arrayOfFile.length)
+      if (paramRecyclerView != null)
       {
-        arrayOfFile[i].delete();
-        i += 1;
+        if (!(paramRecyclerView instanceof CreateSiteFileObject)) {
+          break label47;
+        }
+        new ft(a).show();
       }
-    }
-    localObject = new File((String)localObject, ".apps").listFiles();
-    if (localObject != null)
-    {
-      i = j;
-      while (i < localObject.length)
+      label47:
+      do
       {
-        localObject[i].delete();
-        i += 1;
+        return;
+        if (!paramRecyclerView.getFileType().a()) {
+          break;
+        }
+        paramView = a.O();
+      } while ((paramView == null) || (!(paramView instanceof eb)));
+      ((eb)paramView).c(paramRecyclerView);
+      return;
+      if ((ap.aQ(paramRecyclerView.getPath())) && (!ap.aC(paramRecyclerView.getPath())))
+      {
+        paramView = new Intent(a, ImageCommentActivity.class);
+        a.a(paramView, paramRecyclerView);
+        a.startActivity(paramView);
       }
-    }
-    c.j();
-    if ((a != null) && (b != null)) {
-      c.h.post(b);
+      for (;;)
+      {
+        l.a().a(paramRecyclerView.getAbsolutePath());
+        return;
+        AppRunner.a(a, paramRecyclerView.getPath(), paramRecyclerView.getAbsolutePath(), false);
+      }
     }
   }
 }

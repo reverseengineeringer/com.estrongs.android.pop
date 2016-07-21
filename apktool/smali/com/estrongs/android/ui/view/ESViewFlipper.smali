@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private b:Lcom/estrongs/android/ui/view/at;
+.field private b:Lcom/estrongs/android/ui/view/ax;
 
 
 # direct methods
@@ -38,13 +38,13 @@
 .method protected onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ESViewFlipper;->b:Lcom/estrongs/android/ui/view/at;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ESViewFlipper;->b:Lcom/estrongs/android/ui/view/ax;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ESViewFlipper;->b:Lcom/estrongs/android/ui/view/at;
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ESViewFlipper;->b:Lcom/estrongs/android/ui/view/ax;
 
-    invoke-interface {v0, p1}, Lcom/estrongs/android/ui/view/at;->a(Landroid/content/res/Configuration;)V
+    invoke-interface {v0, p1}, Lcom/estrongs/android/ui/view/ax;->a(Landroid/content/res/Configuration;)V
 
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/ViewFlipper;->onConfigurationChanged(Landroid/content/res/Configuration;)V
@@ -69,4 +69,12 @@
     invoke-virtual {p0}, Lcom/estrongs/android/ui/view/ESViewFlipper;->stopFlipping()V
 
     goto :goto_0
+.end method
+
+.method public setConfigListener(Lcom/estrongs/android/ui/view/ax;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/ui/view/ESViewFlipper;->b:Lcom/estrongs/android/ui/view/ax;
+
+    return-void
 .end method

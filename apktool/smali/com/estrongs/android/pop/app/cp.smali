@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/GestureManageActivity;
+.field final synthetic a:Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/GestureManageActivity;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/cp;->a:Lcom/estrongs/android/pop/app/GestureManageActivity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/cp;->a:Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,20 +22,12 @@
 
 
 # virtual methods
-.method public onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 2
+.method public onClick(Landroid/view/View;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/cp;->a:Lcom/estrongs/android/pop/app/GestureManageActivity;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/cp;->a:Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;
 
-    const/4 v1, -0x1
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;->finish()V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/GestureManageActivity;->setResult(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/cp;->a:Lcom/estrongs/android/pop/app/GestureManageActivity;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/GestureManageActivity;->finish()V
-
-    const/4 v0, 0x0
-
-    return v0
+    return-void
 .end method

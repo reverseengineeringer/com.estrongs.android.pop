@@ -2,26 +2,26 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/content/DialogInterface$OnDismissListener;
 
 
 # instance fields
-.field final synthetic a:Landroid/app/Activity;
+.field final synthetic a:Lcom/estrongs/fs/b/ar;
 
-.field final synthetic b:Lcom/estrongs/android/ui/pcs/n;
+.field final synthetic b:Z
 
-.field final synthetic c:Landroid/content/DialogInterface$OnCancelListener;
+.field final synthetic c:Landroid/app/Activity;
 
 
 # direct methods
-.method constructor <init>(Landroid/app/Activity;Lcom/estrongs/android/ui/pcs/n;Landroid/content/DialogInterface$OnCancelListener;)V
+.method constructor <init>(Lcom/estrongs/fs/b/ar;ZLandroid/app/Activity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/bb;->a:Landroid/app/Activity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/bb;->a:Lcom/estrongs/fs/b/ar;
 
-    iput-object p2, p0, Lcom/estrongs/android/pop/app/bb;->b:Lcom/estrongs/android/ui/pcs/n;
+    iput-boolean p2, p0, Lcom/estrongs/android/pop/app/bb;->b:Z
 
-    iput-object p3, p0, Lcom/estrongs/android/pop/app/bb;->c:Landroid/content/DialogInterface$OnCancelListener;
+    iput-object p3, p0, Lcom/estrongs/android/pop/app/bb;->c:Landroid/app/Activity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -30,26 +30,32 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
+.method public onDismiss(Landroid/content/DialogInterface;)V
     .locals 2
 
-    new-instance v0, Lcom/estrongs/android/ui/pcs/a;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/bb;->a:Lcom/estrongs/fs/b/ar;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/bb;->a:Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/estrongs/fs/b/ar;->getTaskStatus()I
 
-    invoke-direct {v0, v1}, Lcom/estrongs/android/ui/pcs/a;-><init>(Landroid/content/Context;)V
+    move-result v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/a;->a()V
+    const/4 v1, 0x4
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/bb;->b:Lcom/estrongs/android/ui/pcs/n;
+    if-eq v0, v1, :cond_0
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/pcs/a;->a(Lcom/estrongs/android/ui/pcs/n;)V
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/bb;->a:Lcom/estrongs/fs/b/ar;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/bb;->c:Landroid/content/DialogInterface$OnCancelListener;
+    invoke-virtual {v0}, Lcom/estrongs/fs/b/ar;->requsestPause()V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/pcs/a;->a(Landroid/content/DialogInterface$OnCancelListener;)V
+    :cond_0
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/bb;->b:Z
 
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    if-eqz v0, :cond_1
 
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/bb;->c:Landroid/app/Activity;
+
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
+
+    :cond_1
     return-void
 .end method

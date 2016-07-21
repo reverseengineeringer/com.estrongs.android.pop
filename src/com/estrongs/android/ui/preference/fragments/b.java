@@ -1,16 +1,21 @@
 package com.estrongs.android.ui.preference.fragments;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.app.Activity;
+import android.content.Intent;
+import android.preference.Preference;
+import android.preference.Preference.OnPreferenceClickListener;
+import com.estrongs.android.pop.app.AppCheckUpdateList;
 
 class b
-  implements DialogInterface.OnClickListener
+  implements Preference.OnPreferenceClickListener
 {
   b(AppPreferenceFragment paramAppPreferenceFragment) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public boolean onPreferenceClick(Preference paramPreference)
   {
-    paramDialogInterface.dismiss();
+    paramPreference = new Intent(a.getActivity(), AppCheckUpdateList.class);
+    a.getActivity().startActivity(paramPreference);
+    return true;
   }
 }
 

@@ -1,14 +1,28 @@
 package com.estrongs.android.util;
 
-import com.estrongs.fs.util.j;
 import java.io.File;
+import java.util.Comparator;
 
-public class u
-  extends s
+public abstract class u
+  implements Comparator<File>
 {
-  protected String a(File paramFile)
+  private boolean a = true;
+  
+  public int a(File paramFile1, File paramFile2)
   {
-    return j.b(paramFile.getName());
+    paramFile1 = s.a(a(paramFile1), paramFile1.isDirectory());
+    paramFile2 = s.a(a(paramFile2), paramFile2.isDirectory());
+    if (a) {
+      return paramFile1.compareTo(paramFile2);
+    }
+    return paramFile2.compareTo(paramFile1);
+  }
+  
+  protected abstract String a(File paramFile);
+  
+  public void a(boolean paramBoolean)
+  {
+    a = paramBoolean;
   }
 }
 

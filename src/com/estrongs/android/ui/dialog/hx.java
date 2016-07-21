@@ -1,17 +1,20 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
-import com.estrongs.android.ui.view.au;
+import com.estrongs.a.a;
+import com.estrongs.a.a.p;
 
 class hx
-  implements DialogInterface.OnCancelListener
+  implements p
 {
-  hx(hn paramhn, au paramau) {}
+  hx(hq paramhq) {}
   
-  public void onCancel(DialogInterface paramDialogInterface)
+  public void a(a parama, int paramInt1, int paramInt2)
   {
-    a.e();
+    if ((paramInt2 == 4) || (paramInt2 == 5))
+    {
+      hq.i(a);
+      hq.j(a);
+    }
   }
 }
 

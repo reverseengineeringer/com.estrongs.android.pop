@@ -1,33 +1,18 @@
 package com.estrongs.android.pop.view;
 
-import android.content.Context;
-import android.view.View;
-import android.widget.ImageView;
-import com.estrongs.android.ui.c.a;
-import com.estrongs.android.ui.f.f;
-import com.estrongs.android.view.aw;
-import com.estrongs.fs.h;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnDismissListener;
+import com.estrongs.android.pop.FexApplication;
 
 class cx
-  extends f
+  implements DialogInterface.OnDismissListener
 {
-  cx(FileExplorerActivity paramFileExplorerActivity, Context paramContext, View paramView1, View paramView2, String paramString, ImageView paramImageView)
-  {
-    super(paramContext, paramView1, paramView2, paramString);
-  }
+  cx(FileExplorerActivity paramFileExplorerActivity) {}
   
-  protected void a()
+  public void onDismiss(DialogInterface paramDialogInterface)
   {
-    b.M();
-  }
-  
-  protected void a(String paramString)
-  {
-    FileExplorerActivity.a(b, paramString);
-    b.y().m(paramString);
-    a.setImageDrawable(b.N.c(paramString));
-    if (!(b.y() instanceof a)) {
-      FileExplorerActivity.a(b, b.B().getAbsolutePath(), paramString);
+    if (FexApplication.a().i()) {
+      a.finish();
     }
   }
 }

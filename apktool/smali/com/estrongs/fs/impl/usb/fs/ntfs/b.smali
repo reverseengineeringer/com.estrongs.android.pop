@@ -115,7 +115,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v3}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     if-nez v0, :cond_1
@@ -166,7 +166,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
     const/4 v0, 0x3
@@ -363,9 +363,19 @@
     return-void
 
     :cond_1
+    invoke-static {v2}, Lcom/estrongs/fs/impl/usb/fs/ntfs/d;->a(Lcom/estrongs/fs/impl/usb/fs/ntfs/d;)I
+
+    move-result v5
+
+    add-int/2addr v4, v5
+
     invoke-static {v2, v4}, Lcom/estrongs/fs/impl/usb/fs/ntfs/d;->a(Lcom/estrongs/fs/impl/usb/fs/ntfs/d;I)I
 
-    const/16 v4, 0x1000
+    invoke-static {v3}, Lcom/estrongs/fs/impl/usb/fs/ntfs/d;->a(Lcom/estrongs/fs/impl/usb/fs/ntfs/d;)I
+
+    move-result v4
+
+    add-int/lit16 v4, v4, 0x1000
 
     invoke-static {v3, v4}, Lcom/estrongs/fs/impl/usb/fs/ntfs/d;->a(Lcom/estrongs/fs/impl/usb/fs/ntfs/d;I)I
 
@@ -463,7 +473,7 @@
 
     move-result-object v9
 
-    invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v8, v9}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     cmp-long v8, p1, v2

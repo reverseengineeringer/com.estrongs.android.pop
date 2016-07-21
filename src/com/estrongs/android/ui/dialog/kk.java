@@ -1,34 +1,21 @@
 package com.estrongs.android.ui.dialog;
 
-import android.os.Handler;
-import android.os.Message;
-import com.estrongs.android.util.ab;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.a.a;
 
 class kk
-  implements ab
+  implements DialogInterface.OnClickListener
 {
-  kk(kf paramkf) {}
+  kk(kh paramkh, a parama) {}
   
-  public void a(Object paramObject) {}
-  
-  public void a(Object paramObject, long paramLong1, long paramLong2)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    ca).d = Long.valueOf(paramLong1);
-    ca).e = Long.valueOf(paramLong2);
-    paramObject = kf.n(a).obtainMessage(8);
-    kf.n(a).sendMessage((Message)paramObject);
-  }
-  
-  public void a(Object paramObject, Throwable paramThrowable)
-  {
-    paramObject = kf.n(a).obtainMessage(10);
-    kf.n(a).sendMessage((Message)paramObject);
-  }
-  
-  public void b(Object paramObject)
-  {
-    paramObject = kf.n(a).obtainMessage(9);
-    kf.n(a).sendMessage((Message)paramObject);
+    if (a.canPause())
+    {
+      a.requsestPause();
+      b.setMiddleButton(b.getString(2131231909), kh.a(b));
+    }
   }
 }
 

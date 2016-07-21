@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/preference/Preference$OnPreferenceChangeListener;
+.implements Landroid/preference/Preference$OnPreferenceClickListener;
 
 
 # instance fields
@@ -22,42 +22,29 @@
 
 
 # virtual methods
-.method public onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
-    .locals 5
+.method public onPreferenceClick(Landroid/preference/Preference;)Z
+    .locals 3
 
-    const/4 v4, 0x1
+    const-string v0, "com.estrongs.android.pop"
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/gy;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+    :try_start_0
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/gy;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->getPackageManager()Landroid/content/pm/PackageManager;
+    const-string v2, "pname"
 
-    move-result-object v0
-
-    new-instance v1, Landroid/content/ComponentName;
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/gy;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
-
-    const-class v3, Lcom/estrongs/android/pop/app/BrowserDownloaderActivity;
-
-    invoke-direct {v1, v2, v3}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    check-cast p2, Ljava/lang/Boolean;
-
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    const/4 v2, 0x2
-
-    invoke-virtual {v0, v1, v2, v4}, Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName;II)V
+    invoke-static {v1, v0, v2}, Lcom/estrongs/android/pop/utils/w;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_0
-    return v4
+    const/4 v0, 0x1
 
-    :cond_0
-    invoke-virtual {v0, v1, v4, v4}, Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName;II)V
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 .end method

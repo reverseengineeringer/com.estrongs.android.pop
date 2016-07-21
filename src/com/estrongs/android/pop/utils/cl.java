@@ -1,37 +1,46 @@
 package com.estrongs.android.pop.utils;
 
-import android.content.Context;
-import android.content.res.Configuration;
-import android.content.res.Resources;
-import android.util.DisplayMetrics;
+import com.estrongs.android.pop.esclasses.i;
+import java.util.Locale;
 
 public class cl
 {
-  public static boolean a(Context paramContext)
+  public static boolean a()
   {
-    paramContext = paramContext.getResources().getDisplayMetrics();
-    double d = Math.pow(widthPixels * 1.0D / densityDpi, 2.0D);
-    return Math.sqrt(Math.pow(heightPixels * 1.0D / densityDpi, 2.0D) + d) >= 6.5D;
+    return b();
   }
   
-  public static boolean b(Context paramContext)
+  public static boolean b()
   {
-    return getResourcesgetConfigurationorientation == 1;
+    if (i.a == null) {}
+    for (String str = Locale.getDefault().getCountry(); ("CN".equalsIgnoreCase(str)) || ((i.a != null) && (i.a.equalsIgnoreCase("ug"))); str = i.a) {
+      return true;
+    }
+    return false;
   }
   
-  public static boolean c(Context paramContext)
+  public static String c()
   {
-    paramContext = paramContext.getResources().getDisplayMetrics();
-    double d = Math.pow(widthPixels * 1.0D / densityDpi, 2.0D);
-    d = Math.sqrt(Math.pow(heightPixels * 1.0D / densityDpi, 2.0D) + d);
-    return (d >= 6.5D) && (d < 9.0D);
+    if (i.a == null) {
+      return Locale.getDefault().getCountry();
+    }
+    return i.a;
   }
   
-  public static boolean d(Context paramContext)
+  public static boolean d()
   {
-    paramContext = paramContext.getResources().getDisplayMetrics();
-    double d = Math.pow(widthPixels * 1.0D / densityDpi, 2.0D);
-    return Math.sqrt(Math.pow(heightPixels * 1.0D / densityDpi, 2.0D) + d) >= 20.0D;
+    if (i.a == null) {}
+    for (String str = Locale.getDefault().getCountry();; str = i.a) {
+      return "RU".equalsIgnoreCase(str);
+    }
+  }
+  
+  public static boolean e()
+  {
+    if (i.a == null) {}
+    for (String str = Locale.getDefault().getCountry();; str = i.a) {
+      return "CN".equalsIgnoreCase(str);
+    }
   }
 }
 

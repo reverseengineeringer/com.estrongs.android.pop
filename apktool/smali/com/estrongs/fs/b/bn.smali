@@ -1,63 +1,56 @@
-.class final Lcom/estrongs/fs/b/bn;
+.class public Lcom/estrongs/fs/b/bn;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Lcom/estrongs/a/a/p;
+
+# instance fields
+.field public a:Ljava/lang/String;
+
+.field public b:I
+
+.field public c:I
+
+.field public d:I
+
+.field public e:J
+
+.field public f:Ljava/lang/String;
+
+.field public g:Ljava/lang/String;
+
+.field public h:Ljava/lang/String;
+
+.field public i:Ljava/lang/String;
+
+.field public j:Ljava/net/Socket;
+
+.field public k:Z
+
+.field public l:[B
+
+.field public m:I
+
+.field public n:I
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/net/Socket;J)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/estrongs/fs/b/bn;->a:Ljava/lang/String;
+
+    iput-object p1, p0, Lcom/estrongs/fs/b/bn;->f:Ljava/lang/String;
+
+    iput-object p2, p0, Lcom/estrongs/fs/b/bn;->h:Ljava/lang/String;
+
+    iput-object p4, p0, Lcom/estrongs/fs/b/bn;->j:Ljava/net/Socket;
+
+    iput-object p3, p0, Lcom/estrongs/fs/b/bn;->i:Ljava/lang/String;
+
+    iput-wide p5, p0, Lcom/estrongs/fs/b/bn;->e:J
+
     return-void
-.end method
-
-
-# virtual methods
-.method public a(Lcom/estrongs/a/a;II)V
-    .locals 3
-
-    const/4 v2, 0x2
-
-    const/4 v1, 0x1
-
-    check-cast p1, Lcom/estrongs/fs/b/bm;
-
-    invoke-virtual {p1}, Lcom/estrongs/fs/b/bm;->a()Ljava/net/InetAddress;
-
-    move-result-object v0
-
-    if-ne p2, v1, :cond_1
-
-    if-ne p3, v2, :cond_1
-
-    if-eqz v0, :cond_1
-
-    invoke-static {v0, v1}, Lcom/estrongs/android/util/ak;->a(Ljava/net/InetAddress;Z)V
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :cond_1
-    if-ne p2, v2, :cond_0
-
-    const/4 v1, 0x4
-
-    if-eq p3, v1, :cond_2
-
-    const/4 v1, 0x5
-
-    if-ne p3, v1, :cond_0
-
-    :cond_2
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcom/estrongs/android/util/ak;->a(Ljava/net/InetAddress;Z)V
-
-    goto :goto_0
 .end method

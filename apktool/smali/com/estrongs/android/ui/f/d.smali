@@ -6,14 +6,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/f/c;
+.field final synthetic a:Lcom/estrongs/android/view/a/a;
+
+.field final synthetic b:Lcom/estrongs/android/ui/f/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/f/c;)V
+.method constructor <init>(Lcom/estrongs/android/ui/f/a;Lcom/estrongs/android/view/a/a;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/f/d;->a:Lcom/estrongs/android/ui/f/c;
+    iput-object p1, p0, Lcom/estrongs/android/ui/f/d;->b:Lcom/estrongs/android/ui/f/a;
+
+    iput-object p2, p0, Lcom/estrongs/android/ui/f/d;->a:Lcom/estrongs/android/view/a/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,37 +27,32 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .locals 1
+    .locals 2
 
-    invoke-static {}, Lcom/estrongs/android/util/be;->c()Lcom/estrongs/android/util/be;
+    :try_start_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/f/d;->a:Lcom/estrongs/android/view/a/a;
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/util/be;->f()V
-
-    invoke-static {}, Lcom/estrongs/android/util/be;->c()Lcom/estrongs/android/util/be;
+    invoke-virtual {v0}, Lcom/estrongs/android/view/a/a;->c()Landroid/view/MenuItem$OnMenuItemClickListener;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/util/be;->g()V
+    iget-object v1, p0, Lcom/estrongs/android/ui/f/d;->a:Lcom/estrongs/android/view/a/a;
 
-    invoke-static {}, Lcom/estrongs/android/util/be;->c()Lcom/estrongs/android/util/be;
+    invoke-interface {v0, v1}, Landroid/view/MenuItem$OnMenuItemClickListener;->onMenuItemClick(Landroid/view/MenuItem;)Z
 
-    move-result-object v0
+    iget-object v0, p0, Lcom/estrongs/android/ui/f/d;->b:Lcom/estrongs/android/ui/f/a;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/util/be;->d()V
+    invoke-static {v0}, Lcom/estrongs/android/ui/f/a;->a(Lcom/estrongs/android/ui/f/a;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/f/d;->a:Lcom/estrongs/android/ui/f/c;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/f/c;->a(Lcom/estrongs/android/ui/f/c;)Lcom/estrongs/android/ui/a/cx;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/a/cx;->notifyDataSetChanged()V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/f/d;->a:Lcom/estrongs/android/ui/f/c;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/f/c;->g()V
-
+    :goto_0
     return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    goto :goto_0
 .end method

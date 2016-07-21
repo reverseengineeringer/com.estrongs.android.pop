@@ -7,7 +7,7 @@ import com.estrongs.android.pop.FexApplication;
 class bc
   implements Preference.OnPreferenceChangeListener
 {
-  bc(SearchEnginePreferenceFragment paramSearchEnginePreferenceFragment) {}
+  bc(RecyclePreferenceFragment paramRecyclePreferenceFragment) {}
   
   public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
   {

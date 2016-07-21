@@ -1,6 +1,6 @@
 package com.estrongs.fs.impl.usb.fs.ntfs;
 
-import android.util.Log;
+import com.estrongs.android.util.l;
 
 public final class a
   extends aa
@@ -34,13 +34,13 @@ public final class a
     j = a(m);
     k = a(n);
     if (b) {
-      Log.d(a, "FileRecordSize  = " + j);
+      l.b(a, "FileRecordSize  = " + j);
     }
     if (b) {
-      Log.d(a, "IndexRecordSize = " + k);
+      l.b(a, "IndexRecordSize = " + k);
     }
     if (b) {
-      Log.d(a, "TotalSectors    = " + i);
+      l.b(a, "TotalSectors    = " + i);
     }
   }
   

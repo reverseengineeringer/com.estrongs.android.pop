@@ -198,13 +198,13 @@ public class a
         if (b.a(l2 & 0xFFFFFFFF) != 67324752L) {
           throw new ZipException("expected LOCSIC not found at alleged position of data for file no " + (i1 + 1));
         }
-        localObject1 = com.estrongs.android.util.f.a((byte[])localObject1, b.a(46L + l1, i3));
+        localObject1 = com.estrongs.android.util.e.a((byte[])localObject1, b.a(46L + l1, i3));
         if (localObject1.length < 1024) {
           break;
         }
         localObject2 = localObject1;
       }
-      localObject1 = com.estrongs.android.util.f.a((byte[])localObject2, localObject2.length);
+      localObject1 = com.estrongs.android.util.e.a((byte[])localObject2, localObject2.length);
       if (Charset.isSupported((String)localObject1)) {
         g = ((String)localObject1);
       }

@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/widget/aw;
+.field final synthetic a:Lcom/estrongs/android/widget/ax;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/widget/aw;)V
+.method constructor <init>(Lcom/estrongs/android/widget/ax;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/widget/ay;->a:Lcom/estrongs/android/widget/aw;
+    iput-object p1, p0, Lcom/estrongs/android/widget/ay;->a:Lcom/estrongs/android/widget/ax;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,15 +25,11 @@
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/ay;->a:Lcom/estrongs/android/widget/aw;
+    iget-object v0, p0, Lcom/estrongs/android/widget/ay;->a:Lcom/estrongs/android/widget/ax;
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/widget/aw;->a(Lcom/estrongs/android/widget/aw;Z)Z
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/ay;->a:Lcom/estrongs/android/widget/aw;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/aw;->g()V
+    invoke-static {v0, v1}, Lcom/estrongs/android/widget/ax;->a(Lcom/estrongs/android/widget/ax;Z)Z
 
     return-void
 .end method
@@ -41,11 +37,11 @@
 .method public onAnimationRepeat(Landroid/view/animation/Animation;)V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/ay;->a:Lcom/estrongs/android/widget/aw;
+    iget-object v0, p0, Lcom/estrongs/android/widget/ay;->a:Lcom/estrongs/android/widget/ax;
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/widget/aw;->a(Lcom/estrongs/android/widget/aw;Z)Z
+    invoke-static {v0, v1}, Lcom/estrongs/android/widget/ax;->a(Lcom/estrongs/android/widget/ax;Z)Z
 
     return-void
 .end method
@@ -53,11 +49,11 @@
 .method public onAnimationStart(Landroid/view/animation/Animation;)V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/ay;->a:Lcom/estrongs/android/widget/aw;
+    iget-object v0, p0, Lcom/estrongs/android/widget/ay;->a:Lcom/estrongs/android/widget/ax;
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/widget/aw;->a(Lcom/estrongs/android/widget/aw;Z)Z
+    invoke-static {v0, v1}, Lcom/estrongs/android/widget/ax;->a(Lcom/estrongs/android/widget/ax;Z)Z
 
     return-void
 .end method

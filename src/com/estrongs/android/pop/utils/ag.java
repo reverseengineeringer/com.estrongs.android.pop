@@ -1,14 +1,30 @@
 package com.estrongs.android.pop.utils;
 
-public class ag
+import java.io.File;
+import java.util.List;
+
+final class ag
+  implements Runnable
 {
-  public boolean a;
-  public int b;
+  ag(List paramList) {}
   
-  public ag(aa paramaa, boolean paramBoolean, int paramInt)
+  public void run()
   {
-    a = paramBoolean;
-    b = paramInt;
+    int i = 0;
+    while (i < a.size())
+    {
+      String str1 = (String)a.get(i);
+      if (ad.f(str1))
+      {
+        String str2 = str1.substring(0, str1.length() - 1) + "_" + System.currentTimeMillis();
+        if (new File(str1).renameTo(new File(str2)))
+        {
+          ad.e(str1);
+          new File(str2).renameTo(new File(str1));
+        }
+      }
+      i += 1;
+    }
   }
 }
 

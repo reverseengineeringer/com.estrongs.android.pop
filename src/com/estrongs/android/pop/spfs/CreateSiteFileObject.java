@@ -1,14 +1,14 @@
 package com.estrongs.android.pop.spfs;
 
-import com.estrongs.fs.impl.m.b;
-import com.estrongs.fs.m;
+import com.estrongs.fs.impl.r.b;
+import com.estrongs.fs.w;
 
 public class CreateSiteFileObject
   extends b
 {
   public CreateSiteFileObject(String paramString)
   {
-    super("SP://" + m.L.c(), m.L, paramString);
+    super("SP://" + w.K.c(), w.K, paramString);
   }
 }
 

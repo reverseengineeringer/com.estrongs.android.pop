@@ -1,13 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_select">أختار</string>
-    <string name="app_name">ES File Explorer</string>
-    <string name="app_media_player">ES Media Player</string>
-    <string name="app_note_editor">ES Note Editor</string>
-    <string name="app_image_browser">ES Image Browser</string>
-    <string name="app_zip_viewer">ES Zip Viewer</string>
     <string name="app_downloader">ES Downloader</string>
-    <string name="select_device_to_share">حدد الجهاز لإرسال</string>
+    <string name="app_image_browser">ES Image Browser</string>
+    <string name="app_media_player">ES Media Player</string>
+    <string name="app_name">ES File Explorer</string>
+    <string name="app_note_editor">ES Note Editor</string>
+    <string name="app_zip_viewer">ES Zip Viewer</string>
+    <string name="battery_info_remaining_charging_time">وقت الشحن المتبقى:</string>
+    <string name="battery_info_remaining_discharging_time">"وقت الشحن المتبقي: "</string>
+    <string name="charging_screen_ad_delete">حذف</string>
+    <string name="charging_screen_ad_enter">فتح</string>
+    <string name="charging_screen_charging_complete">اكتمال الشحن</string>
+    <string name="charging_screen_slide_to_enter">التمرير لإلغاء التأمين</string>
+    <string name="common_time_hour">س</string>
+    <string name="common_time_minute">د</string>
+    <string name="duappd_ad_item_action_btn">مجانًا</string>
+    <string name="duapps_ad_data_empty">الرجاء الرجوع لاحقًا.</string>
+    <string name="duapps_ad_empty_refresh_btn_check">تحقق</string>
+    <string name="duapps_ad_empty_title">فارغ</string>
+    <string name="duapps_ad_footer_end">لا يوجد محتوى إضافي</string>
+    <string name="duapps_ad_loading">جارٍ تحميل …</string>
+    <string name="duapps_ad_loading_switch_google_play_des">التحول إلى Google Play</string>
+    <string name="duapps_ad_no_apps_refresh_button_text">التحديث</string>
+    <string name="duapps_ad_no_browser_play">كنت بحاجة إلى تثبيت لأول مرة Google Play</string>
+    <string name="duapps_ad_nonetwork_message">لا يوجد اتصال شبكة. تحقق من الإعدادات ثم أعد المحاولة.</string>
+    <string name="duapps_ad_pull_refresh">اسحب للتحديث</string>
+    <string name="duscenerysdk_ad_no_browser_play">كنت بحاجة إلى تثبيت لأول مرة Google Play</string>
     <string name="es_share_name_activity">أرسال ب LAN</string>
+    <string name="lock_screen_setting">الإعدادات</string>
+    <string name="lock_screen_switch">تطبيق Smart Charge</string>
+    <string name="lockscreen_charge_boost_time">إجمالي تسريع الشحن لمدة %1$d دقائق</string>
     <string name="save_to_es">ES حفظ الى</string>
+    <string name="scenery_card_antivirus_button">مسح أمني</string>
+    <string name="scenery_card_antivirus_content">يحتوي هاتفك &lt;font color=#3080F0>%1$s&lt;/font> على خطر (أخطار) أمنية</string>
+    <string name="scenery_card_antivirus_title">أخطار الحماية</string>
+    <string name="scenery_card_battery_button">توفير الطاقة الآن</string>
+    <string name="scenery_card_battery_content">&lt;font color=#3080F0>%1$s&lt;/font> تم العثور على تطبيقات مستهلكة للطاقة. استخدم DU Battery Saver لحفظ طاقة هاتفك وتمديد زمن وضع الاستعداد &lt;font color=#3080F0>%2$s h %3$s m&lt;/font></string>
+    <string name="scenery_card_battery_title">استهلاك طاقة</string>
+    <string name="scenery_card_booster_button">تحسين الآن</string>
+    <string name="scenery_card_booster_content">&lt;font color=#3080F0>%1$s&lt;/font> ‏‫تطبيقات مستعصية تبطئ هاتفك</string>
+    <string name="scenery_card_booster_title">يعمل ببطء</string>
+    <string name="scenery_card_cleaner_button">إصلاح الآن</string>
+    <string name="scenery_card_cleaner_content">عُثر على ملفات غير مهمة &lt;font color=#3080F0>%1$s&lt;/font> في هاتفك</string>
+    <string name="scenery_card_cleaner_title">التنظيف السريع</string>
+    <string name="scenery_card_es_button">التنظيف الآن</string>
+    <string name="scenery_card_es_content">تم خفض المساحة الداخلية المتبقية &lt;font color=#3080F0>%1$s&lt;/font></string>
+    <string name="scenery_card_es_title">تنظيف القرص</string>
+    <string name="scenery_card_photowonder_button">تجميل الآن</string>
+    <string name="scenery_card_photowonder_content">لديك &lt;font color=#3080F0>%1$s&lt;/font> يمكن أن تصبح الصور أكثر جمالاً!</string>
+    <string name="scenery_card_photowonder_title">تجميل</string>
+    <string name="scenery_charge_dialog_button_text">احصل عليه</string>
+    <string name="scenery_charge_dialog_content">زيادة في الشحن تبلغ %1$d من الدقائق &lt;font color=#FF8132>يتلف البطارية&lt;/font>. قم بحمايتها باستخدام &lt;b>DU Battery Saver&lt;/b> .</string>
+    <string name="scenery_charge_dialog_title">نصائح الشحن السليم</string>
+    <string name="scenery_disk_usage_dialog_button_text">احصل عليه</string>
+    <string name="scenery_disk_usage_dialog_content">انخفضت سعة التخزين بهاتفك بمقدار &lt;font color=#FF8132>%1$s ميجابايت&lt;/font> في آخر &lt;font color=#FF8132>%2$s من الأيام&lt;/font> .</string>
+    <string name="scenery_disk_usage_dialog_title">تنظيف القرص</string>
+    <string name="scenery_take_photo_dialog_button_text">احصل عليه</string>
+    <string name="scenery_take_photo_dialog_content">هل الصور ليست جميلة بما فيه الكفاية؟ &lt;font color=#2274E6>المرشحات السينمائية&lt;/font> من &lt;b>PhotoWonder&lt;/b> يمكنها المساعدة!</string>
+    <string name="scenery_take_photo_dialog_title">تحرير الجمال</string>
+    <string name="scenery_uninstall_dialog_button_text">احصل عليه</string>
+    <string name="scenery_uninstall_dialog_content">القدر المتبقي %1$s &lt;font color=#FF8132>ملفات القمامة المتبقية&lt;/font>، استخدم &lt;b>DU Speed Booster&lt;/b> للتخلص منها!</string>
+    <string name="scenery_uninstall_dialog_title">تم العثور على ملفات متبقية</string>
+    <string name="screen_lock_charging_boosted_time">تم تسريع الشحن لمدة %1$d دقائق</string>
+    <string name="select_device_to_share">حدد الجهاز لإرسال</string>
+    <string name="toolbox_no_apps_refresh_button_text">التحديث</string>
+    <string name="toolbox_nonetwork_tips">انقر لتمكين الشبكة للحصول على مزيد من التطبيقات المجانية.</string>
+    <string name="toolbox_v2_btn_more">المزيد</string>
+    <string name="toolbox_v2_coin_balance">الرصيد:</string>
+    <string name="toolbox_v2_data_empty">الرجاء الرجوع لاحقًا.</string>
+    <string name="toolbox_v2_list_item_btn_free">مجانًا</string>
+    <string name="v2_toolbox_empty_title">فارغ</string>
+    <string name="toolbox_v2_network_mobile">بيانات الجوّال</string>
+    <string name="toolbox_v2_network_wifi">Wi-Fi</string>
+    <string name="toolbox_v2_nomore_content">لا يوجد محتوى إضافي</string>
+    <string name="toolbox_v2_pull_refresh">اسحب للتحديث</string>
 </resources>

@@ -1,17 +1,18 @@
 package com.estrongs.android.ui.e;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.pop.app.PopAudioPlayer;
+import android.content.Context;
 
 class k
-  implements View.OnClickListener
+  extends ka
 {
-  k(j paramj) {}
-  
-  public void onClick(View paramView)
+  k(f paramf, Context paramContext, boolean paramBoolean)
   {
-    j.a(a).j();
+    super(paramContext, paramBoolean);
+  }
+  
+  public void a()
+  {
+    f.a(a, false);
   }
 }
 

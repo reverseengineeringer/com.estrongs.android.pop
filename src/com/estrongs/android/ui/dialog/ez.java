@@ -1,17 +1,18 @@
 package com.estrongs.android.ui.dialog;
 
-import com.estrongs.android.view.eb;
+import android.content.Context;
+import android.content.res.Resources;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.ap;
 
 class ez
-  implements eb
+  implements Runnable
 {
   ez(ey paramey) {}
   
-  public void a(Object paramObject)
+  public void run()
   {
-    if ((ey.a(a) != null) && (Boolean.TRUE.equals(paramObject))) {
-      ey.a(a).dismiss();
-    }
+    ak.a(ev.b(a.b), ev.b(a.b).getResources().getString(2131230910, new Object[] { ap.a(a.a) }), 1);
   }
 }
 

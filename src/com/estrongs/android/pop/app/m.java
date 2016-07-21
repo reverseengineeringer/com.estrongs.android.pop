@@ -1,26 +1,55 @@
 package com.estrongs.android.pop.app;
 
-import android.media.MediaPlayer;
-import android.media.MediaPlayer.OnErrorListener;
-import com.estrongs.android.pop.app.a.am;
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.media.AudioManager;
+import android.media.AudioManager.OnAudioFocusChangeListener;
 
-class m
-  implements MediaPlayer.OnErrorListener
+@SuppressLint({"NewApi"})
+public class m
+  implements AudioManager.OnAudioFocusChangeListener
 {
-  m(AudioPlayerService paramAudioPlayerService) {}
+  AudioManager a;
+  AudioPlayerService b;
+  boolean c = false;
   
-  public boolean onError(MediaPlayer paramMediaPlayer, int paramInt1, int paramInt2)
+  public m(Context paramContext, AudioPlayerService paramAudioPlayerService)
   {
-    paramInt1 = AudioPlayerService.b(a).f();
-    AudioPlayerService.b(a).a(paramInt1, false);
-    a.t();
-    if (AudioPlayerService.a(a) != null) {
-      AudioPlayerService.a(a).g(paramInt1);
-    }
-    while (AudioPlayerService.a(a, paramMediaPlayer)) {
-      return true;
-    }
-    return true;
+    a = ((AudioManager)paramContext.getSystemService("audio"));
+    b = paramAudioPlayerService;
+  }
+  
+  public boolean a()
+  {
+    return 1 == a.requestAudioFocus(this, 3, 1);
+  }
+  
+  public boolean b()
+  {
+    return 1 == a.abandonAudioFocus(this);
+  }
+  
+  public void onAudioFocusChange(int paramInt)
+  {
+    if (b == null) {}
+    do
+    {
+      do
+      {
+        return;
+        switch (paramInt)
+        {
+        case 0: 
+        default: 
+          return;
+        }
+      } while ((!b.k()) || (b.m()));
+      c = true;
+      b.u();
+      return;
+    } while ((!b.k()) || (!b.m()) || (!c));
+    c = false;
+    b.F();
   }
 }
 

@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/pop/utils/cb;
+.implements Lcom/estrongs/android/pop/utils/ck;
 
 
 # instance fields

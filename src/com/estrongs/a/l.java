@@ -3,7 +3,7 @@ package com.estrongs.a;
 import android.util.SparseArray;
 import com.estrongs.a.a.p;
 import com.estrongs.fs.b.ad;
-import com.estrongs.fs.b.ap;
+import com.estrongs.fs.b.ar;
 import com.estrongs.fs.d;
 import com.estrongs.fs.util.j;
 import java.util.ArrayList;
@@ -37,7 +37,7 @@ public class l
       return new ad(d.a(), paramJSONObject);
     }
     if (23 == i) {
-      return new ap(d.a(), paramJSONObject);
+      return new ar(d.a(), paramJSONObject);
     }
     return new a(paramJSONObject);
   }
@@ -231,7 +231,7 @@ public class l
     //   6: invokevirtual 215	java/lang/StringBuffer:toString	()Ljava/lang/String;
     //   9: astore_2
     //   10: aload_2
-    //   11: invokestatic 220	com/estrongs/android/util/bd:a	(Ljava/lang/CharSequence;)Z
+    //   11: invokestatic 220	com/estrongs/android/util/bk:a	(Ljava/lang/CharSequence;)Z
     //   14: ifeq +4 -> 18
     //   17: return
     //   18: new 114	org/json/JSONArray

@@ -1,33 +1,45 @@
 package com.estrongs.android.pop.app;
 
-import android.util.SparseArray;
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnErrorListener;
 import android.view.View;
-import android.widget.ImageView;
-import com.estrongs.android.widget.bc;
+import com.estrongs.android.ui.dialog.cv;
+import com.estrongs.android.util.l;
 
 class ko
-  implements bc
+  implements MediaPlayer.OnErrorListener
 {
-  ko(RecommItemImageViewer paramRecommItemImageViewer) {}
+  ko(PopVideoPlayer paramPopVideoPlayer) {}
   
-  public void a(int paramInt)
+  public boolean onError(MediaPlayer paramMediaPlayer, int paramInt1, int paramInt2)
   {
-    a.findViewById(2131362691).setBackgroundColor(-1627389952);
+    l.b(PopVideoPlayer.d(), "onError what " + paramInt1 + " extra " + paramInt2);
+    if (PopVideoPlayer.b(a)) {}
+    do
+    {
+      return true;
+      PopVideoPlayer.b(a, true);
+    } while (!a.a());
+    if (PopVideoPlayer.s(a))
+    {
+      a.finish();
+      return true;
+    }
+    paramMediaPlayer = new cv(a).a(2131231693).b(2131231692);
+    if (ag.b())
+    {
+      paramMediaPlayer.b(2131230851, new kp(this));
+      paramMediaPlayer.c(2131231157, new kq(this));
+      paramMediaPlayer.c();
+    }
+    for (;;)
+    {
+      paramMediaPlayer.a(new ks(this));
+      a.b.setVisibility(8);
+      return true;
+      paramMediaPlayer.a(2131231270, new kr(this)).c();
+    }
   }
-  
-  public void a(int paramInt, float paramFloat) {}
-  
-  public void b(int paramInt) {}
-  
-  public void c(int paramInt)
-  {
-    ((ImageView)RecommItemImageViewer.b(a).get(RecommItemImageViewer.a(a))).setImageResource(2130837613);
-    RecommItemImageViewer.a(a, paramInt);
-    ((ImageView)RecommItemImageViewer.b(a).get(RecommItemImageViewer.a(a))).setImageResource(2130837612);
-    a.findViewById(2131362691).setBackgroundColor(0);
-  }
-  
-  public void d(int paramInt) {}
 }
 
 /* Location:

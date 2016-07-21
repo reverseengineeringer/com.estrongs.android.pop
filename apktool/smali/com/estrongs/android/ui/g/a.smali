@@ -99,7 +99,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->aI()J
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->aJ()J
 
     move-result-wide v0
 
@@ -123,14 +123,14 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    invoke-static {}, Lcom/estrongs/android/util/ak;->b()Z
+    invoke-static {}, Lcom/estrongs/android/util/an;->b()Z
 
     move-result v0
 
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lcom/estrongs/android/util/ak;->d()Z
+    invoke-static {}, Lcom/estrongs/android/util/an;->d()Z
 
     move-result v0
 
@@ -201,7 +201,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/ui/g/a;->b:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->b(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->b(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -219,7 +219,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/g/c;->b(Ljava/lang/String;)Ljava/util/List;
+    invoke-static {v0}, Lcom/estrongs/android/ui/g/c;->a(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
@@ -245,7 +245,7 @@
     return-void
 
     :cond_1
-    invoke-static {}, Lcom/estrongs/android/util/ak;->b()Z
+    invoke-static {}, Lcom/estrongs/android/util/an;->b()Z
 
     move-result v0
 
@@ -306,11 +306,11 @@
     move-result-object v0
 
     :cond_0
-    sget-object v1, Lcom/estrongs/android/pop/esclasses/e;->a:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/esclasses/i;->a:Ljava/lang/String;
 
     if-eqz v1, :cond_2
 
-    sget-object v0, Lcom/estrongs/android/pop/esclasses/e;->a:Ljava/lang/String;
+    sget-object v0, Lcom/estrongs/android/pop/esclasses/i;->a:Ljava/lang/String;
 
     const-string v1, "CN"
 
@@ -320,7 +320,7 @@
 
     if-nez v0, :cond_1
 
-    sget-object v0, Lcom/estrongs/android/pop/esclasses/e;->a:Ljava/lang/String;
+    sget-object v0, Lcom/estrongs/android/pop/esclasses/i;->a:Ljava/lang/String;
 
     const-string v1, "TW"
 
@@ -365,7 +365,7 @@
 
     iget-object v2, p0, Lcom/estrongs/android/ui/g/a;->b:Landroid/content/Context;
 
-    invoke-static {v2}, Lcom/estrongs/android/util/am;->b(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/estrongs/android/util/ap;->b(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -383,9 +383,9 @@
 
     move-result-object v1
 
-    new-instance v2, Lcom/estrongs/android/util/y;
+    new-instance v2, Lcom/estrongs/android/util/aa;
 
-    invoke-direct {v2, v0}, Lcom/estrongs/android/util/y;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v0}, Lcom/estrongs/android/util/aa;-><init>(Ljava/lang/String;)V
 
     new-instance v0, Lcom/estrongs/android/ui/g/b;
 
@@ -409,11 +409,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v2, v1}, Lcom/estrongs/android/util/y;->a(Ljava/lang/String;)V
+    invoke-virtual {v2, v1}, Lcom/estrongs/android/util/aa;->a(Ljava/lang/String;)V
 
-    invoke-virtual {v2, v0}, Lcom/estrongs/android/util/y;->a(Lcom/estrongs/android/util/ab;)V
+    invoke-virtual {v2, v0}, Lcom/estrongs/android/util/aa;->a(Lcom/estrongs/android/util/af;)V
 
-    invoke-virtual {v2}, Lcom/estrongs/android/util/y;->c()V
+    invoke-virtual {v2}, Lcom/estrongs/android/util/aa;->c()V
 
     return-void
 
@@ -432,7 +432,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->aH()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->aI()V
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -440,7 +440,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/ui/g/a;->b:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->b(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->b(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -463,7 +463,7 @@
     monitor-enter v1
 
     :try_start_0
-    invoke-static {v0}, Lcom/estrongs/android/ui/g/c;->b(Ljava/lang/String;)Ljava/util/List;
+    invoke-static {v0}, Lcom/estrongs/android/ui/g/c;->a(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
@@ -581,21 +581,21 @@
 
     if-eqz v5, :cond_4
 
-    invoke-static {}, Lcom/estrongs/android/ui/pcs/r;->a()Lcom/estrongs/android/ui/pcs/r;
+    invoke-static {}, Lcom/estrongs/android/ui/pcs/u;->a()Lcom/estrongs/android/ui/pcs/u;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/estrongs/android/ui/pcs/r;->c()Z
+    invoke-virtual {v5}, Lcom/estrongs/android/ui/pcs/u;->c()Z
 
     move-result v5
 
     if-nez v5, :cond_3
 
-    invoke-static {}, Lcom/estrongs/android/ui/pcs/r;->a()Lcom/estrongs/android/ui/pcs/r;
+    invoke-static {}, Lcom/estrongs/android/ui/pcs/u;->a()Lcom/estrongs/android/ui/pcs/u;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/estrongs/android/ui/pcs/r;->b()Z
+    invoke-virtual {v5}, Lcom/estrongs/android/ui/pcs/u;->b()Z
 
     move-result v5
 

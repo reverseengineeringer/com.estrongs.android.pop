@@ -3,11 +3,15 @@ package com.estrongs.android.view;
 class ba
   implements Runnable
 {
-  ba(ax paramax) {}
+  ba(ak paramak, String paramString) {}
   
   public void run()
   {
-    a.a.g();
+    if (ak.b(b, a)) {
+      return;
+    }
+    ak.a(b, new bg(b));
+    ak.d(b).start();
   }
 }
 

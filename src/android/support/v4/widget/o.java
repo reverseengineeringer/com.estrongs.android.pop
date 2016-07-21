@@ -1,8 +1,17 @@
 package android.support.v4.widget;
 
 class o
-  extends n
-{}
+  implements Runnable
+{
+  o(ContentLoadingProgressBar paramContentLoadingProgressBar) {}
+  
+  public void run()
+  {
+    ContentLoadingProgressBar.a(a, false);
+    ContentLoadingProgressBar.a(a, -1L);
+    a.setVisibility(8);
+  }
+}
 
 /* Location:
  * Qualified Name:     android.support.v4.widget.o

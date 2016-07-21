@@ -2,21 +2,24 @@ package com.estrongs.android.pop.utils;
 
 import android.app.Activity;
 import com.estrongs.a.a;
-import com.estrongs.a.a.p;
-import java.util.List;
+import com.estrongs.a.a.o;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.c.e;
+import com.estrongs.android.view.er;
 
-final class as
-  implements p
+class as
+  implements o
 {
-  as(Activity paramActivity, List paramList) {}
+  as(ap paramap, String paramString) {}
   
-  public void a(a parama, int paramInt1, int paramInt2)
+  public void a(a parama, boolean paramBoolean)
   {
-    if (paramInt2 == 4) {
-      aj.b(a, b);
-    }
-    while (paramInt2 != 5) {
-      return;
+    if ((paramBoolean) && (com.estrongs.android.util.ap.bl(a)) && ((b.b instanceof FileExplorerActivity)))
+    {
+      parama = ((FileExplorerActivity)b.b).O();
+      if (((parama instanceof e)) || ((parama instanceof er))) {
+        b.b.runOnUiThread(new at(this, parama));
+      }
     }
   }
 }

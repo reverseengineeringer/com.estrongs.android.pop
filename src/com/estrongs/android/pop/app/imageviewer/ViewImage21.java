@@ -29,16 +29,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.estrongs.android.pop.ac;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.app.aa;
-import com.estrongs.android.pop.app.imageviewer.gallery.c;
+import com.estrongs.android.pop.app.ag;
 import com.estrongs.android.pop.app.imageviewer.gallery.e;
 import com.estrongs.android.pop.app.imageviewer.gallery.f;
-import com.estrongs.android.pop.app.r;
+import com.estrongs.android.pop.app.x;
 import com.estrongs.android.pop.esclasses.ESScrollMenuView;
 import com.estrongs.android.pop.m;
-import com.estrongs.android.ui.dialog.ct;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bc;
+import com.estrongs.android.ui.d.g;
+import com.estrongs.android.ui.dialog.cv;
+import com.estrongs.android.ui.theme.at;
+import com.estrongs.android.util.ap;
 import com.estrongs.android.widget.RealViewSwitcher;
 import com.estrongs.fs.b;
 import java.io.File;
@@ -54,17 +54,19 @@ public class ViewImage21
   private boolean E = false;
   private String F;
   private String G = null;
-  private final Runnable H = new as(this);
-  private a I;
-  private aa J = aa.g();
-  private View K;
-  private r L = null;
-  private int M = 0;
-  private cg N = new cg(this);
-  private final Runnable O = new bu(this);
-  private final Runnable P = new bv(this);
-  private int Q = 800;
-  private q R;
+  private com.estrongs.android.j.c H = null;
+  private final Runnable I = new as(this);
+  private a J;
+  private ag K = ag.g();
+  private View L;
+  private x M = null;
+  private int N = 0;
+  private cf O = new cf(this);
+  private final Runnable P = new bt(this);
+  private final Runnable Q = new bu(this);
+  private int R = 800;
+  private q S;
+  private long T = 0L;
   boolean a = true;
   final p b = new p();
   protected int c = -1;
@@ -76,7 +78,7 @@ public class ViewImage21
   protected RealViewSwitcher i;
   protected LayoutInflater j;
   protected DisplayMetrics k;
-  protected Runnable l = new bx(this);
+  protected Runnable l = new bw(this);
   ESScrollMenuView m;
   ESScrollMenuView n;
   Animation o;
@@ -110,7 +112,7 @@ public class ViewImage21
       localObject1 = new com.estrongs.fs.util.a.d(true);
     }
     localObject2 = paramUri.toString();
-    if (am.aO(u.toString())) {
+    if (ap.aY(u.toString())) {
       localObject2 = G;
     }
     m localm = null;
@@ -136,13 +138,13 @@ public class ViewImage21
         p = new AlphaAnimation(0.1F, 1.0F);
         p.setDuration(150L);
         p.setInterpolator(new DecelerateInterpolator());
-        p.setAnimationListener(new bo(this));
+        p.setAnimationListener(new bn(this));
       }
       p.start();
       paramESScrollMenuView.setAnimation(p);
       paramESScrollMenuView.setVisibility(0);
     } while (!paramESScrollMenuView.equals(paramESScrollMenuView));
-    ((ImageView)h.findViewById(2131361853)).setImageResource(2130838204);
+    ((ImageView)h.findViewById(2131624054)).setImageResource(2130838565);
   }
   
   private boolean b(Uri paramUri)
@@ -157,7 +159,7 @@ public class ViewImage21
       o = new AlphaAnimation(1.0F, 0.1F);
       o.setDuration(150L);
       o.setInterpolator(new AccelerateInterpolator());
-      o.setAnimationListener(new bp(this));
+      o.setAnimationListener(new bo(this));
     }
     o.start();
     paramESScrollMenuView.setAnimation(o);
@@ -168,11 +170,11 @@ public class ViewImage21
   private an e(int paramInt)
   {
     e locale = e.a(paramInt);
-    an localan = I.a(locale);
+    an localan = J.a(locale);
     if ((localan != null) && (!localan.g())) {
       return localan;
     }
-    I.b(locale);
+    J.b(locale);
     return null;
   }
   
@@ -193,7 +195,7 @@ public class ViewImage21
   {
     if ((B != null) && (e != null) && (paramInt >= 0) && (paramInt < e.b()))
     {
-      B.setText(am.bL(F) + " (" + (paramInt + 1) + "/" + e.b() + ")");
+      B.setText(ap.cc(F) + " (" + (paramInt + 1) + "/" + e.b() + ")");
       C.setText(e.a(paramInt).i());
     }
   }
@@ -222,82 +224,86 @@ public class ViewImage21
   
   private void h()
   {
-    if (aa.b())
+    if (ag.b())
     {
-      K.setVisibility(0);
+      L.setVisibility(0);
       return;
     }
-    K.setVisibility(8);
+    L.setVisibility(8);
   }
   
   private void i()
   {
-    if (L != null) {
+    if (M != null) {
       return;
     }
-    L = new r(this);
-    L.a(new bd(this));
+    M = new x(this);
+    M.a(new bc(this));
   }
   
   private boolean j()
   {
-    return M == 1;
+    return N == 1;
   }
   
   private void k()
   {
-    M = 0;
-    ((ImageView)K.findViewById(2131361853)).setImageResource(2130838199);
+    N = 0;
+    ((ImageView)L.findViewById(2131624054)).setImageResource(2130838530);
   }
   
   private void l()
   {
-    M = 1;
-    ((ImageView)K.findViewById(2131361853)).setImageResource(2130838158);
+    N = 1;
+    ((ImageView)L.findViewById(2131624054)).setImageResource(2130838531);
   }
   
   private void m()
   {
-    m = ((ESScrollMenuView)findViewById(2131362218));
+    m = ((ESScrollMenuView)findViewById(2131624808));
+    m.setShowIcon(true);
     m.a();
-    int i1 = 0;
+    int i2 = 0;
     try
     {
       boolean bool = ae.a(e.a(c).f());
-      i1 = bool;
+      i2 = bool;
     }
     catch (Exception localException)
     {
+      int i1;
       for (;;) {}
     }
-    if ((!E) && (i1 != 0)) {
-      m.a(new com.estrongs.android.view.a.a(getResources().getDrawable(2130838172), getString(2131427347)), new be(this));
+    i1 = J().c(2131558714);
+    if ((!E) && (i2 != 0)) {
+      m.a(new com.estrongs.android.view.a.a(g.a(getResources().getDrawable(2130838539), i1), getString(2131230845)), new bd(this));
     }
-    m.a(new com.estrongs.android.view.a.a(getResources().getDrawable(2130838249), getString(2131428198)), new bf(this));
-    m.a(new com.estrongs.android.view.a.a(getResources().getDrawable(2130838231), getString(2131427982)), new bh(this));
+    m.a(new com.estrongs.android.view.a.a(g.a(getResources().getDrawable(2130838622), i1), getString(2131232485)), new be(this));
+    m.a(new com.estrongs.android.view.a.a(g.a(getResources().getDrawable(2130838602), i1), getString(2131231710)), new bg(this));
     if (!E)
     {
-      m.a(new com.estrongs.android.view.a.a(getResources().getDrawable(2130838235), getString(2131427934)), new bi(this));
-      if (i1 != 0) {
-        m.a(new com.estrongs.android.view.a.a(getResources().getDrawable(2130838188), getString(2131427388)), new bj(this));
+      m.a(new com.estrongs.android.view.a.a(g.a(getResources().getDrawable(2130838608), i1), getString(2131231638)), new bh(this));
+      if (i2 != 0) {
+        m.a(new com.estrongs.android.view.a.a(g.a(getResources().getDrawable(2130838604), i1), getString(2131230892)), new bi(this));
       }
     }
-    if (aa.a()) {
-      m.a(new com.estrongs.android.view.a.a(getResources().getDrawable(2130838157), getString(2131428525)), new bk(this));
+    if (ag.a()) {
+      m.a(new com.estrongs.android.view.a.a(g.a(getResources().getDrawable(2130838530), i1), getString(2131231154)), new bj(this));
     }
-    m.a(new com.estrongs.android.view.a.a(getResources().getDrawable(2130838182), getString(2131428025)), new bl(this));
+    m.a(new com.estrongs.android.view.a.a(g.a(getResources().getDrawable(2130838586), i1), getString(2131231278)), new bk(this));
   }
   
-  private void n()
+  private void o()
   {
-    n = ((ESScrollMenuView)findViewById(2131362423));
-    n.a(2131362424);
+    n = ((ESScrollMenuView)findViewById(2131625035));
+    n.setPanelViewId(2131625036);
     n.a();
-    n.a(new com.estrongs.android.view.a.a(getResources().getDrawable(2130838180), getString(2131428524)), new bm(this));
-    n.a(new com.estrongs.android.view.a.a(getResources().getDrawable(2130838157), getString(2131428523)), new bn(this));
+    int i1 = J().c(2131558714);
+    n.a(new com.estrongs.android.view.a.a(g.a(getResources().getDrawable(2130838578), i1), getString(2131231151)), new bl(this));
+    n.a(new com.estrongs.android.view.a.a(g.a(getResources().getDrawable(2130838530), i1), getString(2131231148)), new bm(this));
   }
   
-  private boolean o()
+  private boolean p()
   {
     if (a(m))
     {
@@ -311,7 +317,7 @@ public class ViewImage21
     return true;
   }
   
-  private boolean p()
+  private boolean q()
   {
     if (a(n))
     {
@@ -319,16 +325,16 @@ public class ViewImage21
       return false;
     }
     if (n == null) {
-      n();
+      o();
     }
     b(n);
     return true;
   }
   
-  private void q()
+  private void r()
   {
     int i3 = 0;
-    CharSequence[] arrayOfCharSequence = getResources().getTextArray(2131165199);
+    CharSequence[] arrayOfCharSequence = getResources().getTextArray(2131492867);
     int i2 = i3;
     int i1;
     if (arrayOfCharSequence != null) {
@@ -346,7 +352,7 @@ public class ViewImage21
       }
       try
       {
-        new ct(this).a(2131427934).a(2131165194, i2, new bt(this, arrayOfCharSequence)).b(2131427390, new bq(this)).c(2131427340, null).c();
+        new cv(this).a(2131231638).a(2131492866, i2, new bs(this, arrayOfCharSequence)).b(2131230896, new bp(this)).c(2131231265, null).c();
         return;
       }
       catch (Exception localException)
@@ -358,7 +364,7 @@ public class ViewImage21
     }
   }
   
-  private e r()
+  private e s()
   {
     if (u == null) {
       return null;
@@ -370,7 +376,7 @@ public class ViewImage21
     }
     for (;;)
     {
-      I = new a(e, 10);
+      J = new a(e, 10);
       return (e)localObject;
       e locale = e.a(u);
       localObject = locale;
@@ -401,47 +407,47 @@ public class ViewImage21
   
   protected void a()
   {
-    b.removeCallbacks(H);
+    b.removeCallbacks(I);
     if ((!a(m)) && (!a(n))) {
-      b.postDelayed(H, 3000L);
+      b.postDelayed(I, 3000L);
     }
   }
   
   protected void a(int paramInt)
   {
     if ((paramInt < 0) || (paramInt > e.b() - 1)) {}
-    ch localch;
+    cg localcg;
     Object localObject;
     do
     {
       do
       {
         return;
-        localch = (ch)i.getChildAt(paramInt % 3);
-      } while (localch == null);
-      if (localch.a() != null)
+        localcg = (cg)i.getChildAt(paramInt % 3);
+      } while (localcg == null);
+      if (localcg.a() != null)
       {
-        localch.a().stop();
-        localch.a(null);
+        localcg.a().stop();
+        localcg.a(null);
       }
       localObject = e.a(paramInt).d();
-      if ((!com.estrongs.android.util.bd.a("load-sucess::" + (String)localObject, localch.getTag())) && (!com.estrongs.android.util.bd.a("load-error::" + (String)localObject, localch.getTag()))) {}
+      if ((!com.estrongs.android.util.bk.a("load-sucess::" + (String)localObject, localcg.getTag())) && (!com.estrongs.android.util.bk.a("load-error::" + (String)localObject, localcg.getTag()))) {}
       for (int i1 = 1; i1 != 0; i1 = 0)
       {
-        a(paramInt, localch);
+        a(paramInt, localcg);
         return;
       }
-      localObject = a(localch);
+      localObject = a(localcg);
     } while ((localObject == null) || (((ImageViewTouch)localObject).getDrawable() != null));
-    a(paramInt, localch);
+    a(paramInt, localcg);
   }
   
-  protected void a(int paramInt, ch paramch)
+  protected void a(int paramInt, cg paramcg)
   {
-    a(paramInt, paramch, null);
+    a(paramInt, paramcg, null);
   }
   
-  protected void a(int paramInt, ch paramch, Runnable paramRunnable)
+  protected void a(int paramInt, cg paramcg, Runnable paramRunnable)
   {
     if ((paramInt < 0) || (paramInt > e.b() - 1)) {}
     do
@@ -454,14 +460,14 @@ public class ViewImage21
         if (localan == null) {
           break;
         }
-      } while (paramch == null);
-      paramch.a(e.a(paramInt), localan);
+      } while (paramcg == null);
+      paramcg.a(e.a(paramInt), localan);
       return;
-      if (paramch != null) {
-        paramch.a(e.a(paramInt));
+      if (paramcg != null) {
+        paramcg.a(e.a(paramInt));
       }
     } while (t == null);
-    t.a(e.a(paramInt), new cc(this, paramInt, paramch, paramRunnable), paramInt);
+    t.a(e.a(paramInt), new cb(this, paramInt, paramcg, paramRunnable), paramInt);
   }
   
   void a(int paramInt, boolean paramBoolean)
@@ -480,38 +486,38 @@ public class ViewImage21
       {
         c = i1;
         label170:
-        ch localch;
+        cg localcg;
         String str;
         label286:
         label325:
         Object localObject;
         if (!E)
         {
-          R.a(i1);
+          S.a(i1);
           if (i1 > c) {
-            R.a(i1 - 6, i1 + 10);
+            S.a(i1 - 6, i1 + 10);
           }
         }
         else
         {
-          if ((g != null) && (g.b() > 0.0F) && (g.f() - g.b() > 0.0F)) {
-            g.a(g.b());
+          if ((g != null) && (g.getDefaultScale() > 0.0F) && (g.getScale() - g.getDefaultScale() > 0.0F)) {
+            g.a(g.getDefaultScale());
           }
-          b.removeCallbacks(H);
+          b.removeCallbacks(I);
           f(i1);
           if (i2 != 1) {
             break label519;
           }
-          i.e(false);
-          i.d(false);
+          i.c(false);
+          i.b(false);
           i2 = i1 % 3;
-          localch = (ch)i.getChildAt(i2);
-          if (localch == null) {
+          localcg = (cg)i.getChildAt(i2);
+          if (localcg == null) {
             break;
           }
           g = a;
           str = e.a(i1).d();
-          if ((com.estrongs.android.util.bd.a("load-sucess::" + str, localch.getTag())) || (com.estrongs.android.util.bd.a("load-error::" + str, localch.getTag()))) {
+          if ((com.estrongs.android.util.bk.a("load-sucess::" + str, localcg.getTag())) || (com.estrongs.android.util.bk.a("load-error::" + str, localcg.getTag()))) {
             break label588;
           }
           paramInt = 1;
@@ -519,16 +525,16 @@ public class ViewImage21
             break label593;
           }
           paramInt |= g.h.b().isRecycled();
-          if (bc.b(str) != 65555) {
+          if (com.estrongs.android.util.bg.b(str) != 65555) {
             break label684;
           }
           if (!E) {
             break label612;
           }
-          if (!(e.a(i1) instanceof c)) {
+          if (!(e.a(i1) instanceof com.estrongs.android.pop.app.imageviewer.gallery.c)) {
             break label603;
           }
-          File localFile = ((c)e.a(i1)).e();
+          File localFile = ((com.estrongs.android.pop.app.imageviewer.gallery.c)e.a(i1)).e();
           localObject = localFile.getAbsolutePath();
           if (localFile.exists()) {
             break label598;
@@ -538,40 +544,40 @@ public class ViewImage21
           if (paramInt == 0) {
             break label621;
           }
-          a(i1, localch, new ca(this, i1));
+          a(i1, localcg, new bz(this, i1));
         }
         for (;;)
         {
           if (j()) {
-            aa.g().a(str, am.a(str, com.estrongs.android.c.a.a(), true, true), am.d(str), bc.S(am.d(str)), null);
+            ag.g().a(str, ap.a(str, com.estrongs.android.g.a.a(), true, true), ap.d(str), com.estrongs.android.util.bg.U(ap.d(str)), null);
           }
           if (paramBoolean) {
             g();
           }
           a();
-          if (i.h() != i2) {
-            i.a(i2);
+          if (i.getCurrentScreen() != i2) {
+            i.setCurrentScreen(i2);
           }
           a(i1 - 1);
           a(i1 + 1);
           return;
-          R.a(i1 - 10, i1 + 6);
+          S.a(i1 - 10, i1 + 6);
           break;
           label519:
           if (i1 == 0)
           {
-            i.e(false);
-            i.d(true);
+            i.c(false);
+            i.b(true);
             break label170;
           }
           if (i1 == i2 - 1)
           {
-            i.e(true);
-            i.d(false);
+            i.c(true);
+            i.b(false);
             break label170;
           }
-          i.e(true);
-          i.d(true);
+          i.c(true);
+          i.b(true);
           break label170;
           label588:
           paramInt = 0;
@@ -592,20 +598,20 @@ public class ViewImage21
           break label394;
           label621:
           g.h.a(0);
-          localObject = new cb(this, (String)localObject, localch, i1);
-          if (localch.a() != null) {}
+          localObject = new ca(this, (String)localObject, localcg, i1);
+          if (localcg.a() != null) {}
           try
           {
-            localch.a().stop();
-            localch.a(null);
-            localch.a((com.estrongs.android.b.a)localObject);
-            ((com.estrongs.android.b.a)localObject).start();
+            localcg.a().stop();
+            localcg.a(null);
+            localcg.a((com.estrongs.android.f.a)localObject);
+            ((com.estrongs.android.f.a)localObject).start();
             continue;
             label684:
             if (paramInt != 0) {
-              a(i1, localch);
+              a(i1, localcg);
             } else if ((g != null) && (g.getDrawable() == null)) {
-              a(i1, localch);
+              a(i1, localcg);
             }
           }
           catch (Exception localException)
@@ -621,8 +627,8 @@ public class ViewImage21
   
   protected void a(View paramView)
   {
-    f = new GestureDetector(this, new ci(this));
-    paramView.setOnTouchListener(new br(this, new bg(this)));
+    f = new GestureDetector(this, new ch(this));
+    paramView.setOnTouchListener(new bq(this, new bf(this)));
   }
   
   protected void a(boolean paramBoolean)
@@ -630,14 +636,14 @@ public class ViewImage21
     if ((paramBoolean) && (!a))
     {
       a();
-      b.removeCallbacks(P);
-      b.postDelayed(P, q + Q);
+      b.removeCallbacks(Q);
+      b.postDelayed(Q, q + R);
       return;
     }
     g();
-    b.removeCallbacks(H);
-    b.removeCallbacks(O);
+    b.removeCallbacks(I);
     b.removeCallbacks(P);
+    b.removeCallbacks(Q);
   }
   
   void b(int paramInt)
@@ -685,8 +691,8 @@ public class ViewImage21
     }
     AlphaAnimation localAlphaAnimation1 = new AlphaAnimation(0.1F, 1.0F);
     AlphaAnimation localAlphaAnimation2 = new AlphaAnimation(1.0F, 0.0F);
-    localAlphaAnimation1.setDuration(Q);
-    localAlphaAnimation2.setDuration(Q);
+    localAlphaAnimation1.setDuration(R);
+    localAlphaAnimation2.setDuration(R);
     i.setInAnimation(localAlphaAnimation1);
     i.setOutAnimation(localAlphaAnimation2);
     i.setAnimateFirstView(true);
@@ -749,7 +755,7 @@ public class ViewImage21
     {
     default: 
       return;
-    case 2131362421: 
+    case 2131625033: 
       g(1);
       return;
     }
@@ -771,527 +777,523 @@ public class ViewImage21
     // Byte code:
     //   0: aload_0
     //   1: aload_1
-    //   2: invokespecial 880	com/estrongs/android/pop/app/imageviewer/NoSearchActivity:onCreate	(Landroid/os/Bundle;)V
+    //   2: invokespecial 911	com/estrongs/android/pop/app/imageviewer/NoSearchActivity:onCreate	(Landroid/os/Bundle;)V
     //   5: aload_0
     //   6: iconst_1
-    //   7: putfield 800	com/estrongs/android/pop/app/imageviewer/ViewImage21:x	Z
+    //   7: putfield 831	com/estrongs/android/pop/app/imageviewer/ViewImage21:x	Z
     //   10: aload_0
     //   11: aload_0
-    //   12: invokestatic 886	android/preference/PreferenceManager:getDefaultSharedPreferences	(Landroid/content/Context;)Landroid/content/SharedPreferences;
-    //   15: putfield 602	com/estrongs/android/pop/app/imageviewer/ViewImage21:y	Landroid/content/SharedPreferences;
+    //   12: invokestatic 917	android/preference/PreferenceManager:getDefaultSharedPreferences	(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    //   15: putfield 627	com/estrongs/android/pop/app/imageviewer/ViewImage21:y	Landroid/content/SharedPreferences;
     //   18: aload_0
     //   19: aload_0
-    //   20: getfield 602	com/estrongs/android/pop/app/imageviewer/ViewImage21:y	Landroid/content/SharedPreferences;
-    //   23: ldc_w 888
-    //   26: ldc2_w 145
-    //   29: invokeinterface 894 4 0
-    //   34: putfield 148	com/estrongs/android/pop/app/imageviewer/ViewImage21:q	J
+    //   20: getfield 627	com/estrongs/android/pop/app/imageviewer/ViewImage21:y	Landroid/content/SharedPreferences;
+    //   23: ldc_w 919
+    //   26: ldc2_w 150
+    //   29: invokeinterface 925 4 0
+    //   34: putfield 153	com/estrongs/android/pop/app/imageviewer/ViewImage21:q	J
     //   37: aload_0
-    //   38: iconst_1
-    //   39: invokevirtual 898	com/estrongs/android/pop/app/imageviewer/ViewImage21:requestWindowFeature	(I)Z
-    //   42: pop
-    //   43: aload_0
-    //   44: invokevirtual 793	com/estrongs/android/pop/app/imageviewer/ViewImage21:getWindow	()Landroid/view/Window;
-    //   47: sipush 1024
-    //   50: invokevirtual 803	android/view/Window:addFlags	(I)V
-    //   53: aload_0
-    //   54: ldc_w 899
-    //   57: invokevirtual 902	com/estrongs/android/pop/app/imageviewer/ViewImage21:setContentView	(I)V
-    //   60: new 904	android/graphics/drawable/ColorDrawable
-    //   63: dup
-    //   64: ldc_w 905
-    //   67: invokespecial 907	android/graphics/drawable/ColorDrawable:<init>	(I)V
-    //   70: astore 6
-    //   72: aload 6
-    //   74: sipush 150
-    //   77: invokevirtual 910	android/graphics/drawable/ColorDrawable:setAlpha	(I)V
-    //   80: aload_0
-    //   81: invokevirtual 807	com/estrongs/android/pop/app/imageviewer/ViewImage21:getIntent	()Landroid/content/Intent;
-    //   84: invokevirtual 913	android/content/Intent:getData	()Landroid/net/Uri;
-    //   87: astore_1
-    //   88: ldc_w 915
-    //   91: aload_1
-    //   92: invokevirtual 178	android/net/Uri:getScheme	()Ljava/lang/String;
-    //   95: invokevirtual 184	java/lang/String:equalsIgnoreCase	(Ljava/lang/String;)Z
-    //   98: ifeq +625 -> 723
-    //   101: aload_0
-    //   102: aload_1
-    //   103: invokevirtual 918	android/net/Uri:getPath	()Ljava/lang/String;
-    //   106: putfield 104	com/estrongs/android/pop/app/imageviewer/ViewImage21:G	Ljava/lang/String;
-    //   109: aload_0
-    //   110: getfield 104	com/estrongs/android/pop/app/imageviewer/ViewImage21:G	Ljava/lang/String;
-    //   113: invokestatic 921	com/estrongs/android/util/bd:a	(Ljava/lang/CharSequence;)Z
-    //   116: ifeq +11 -> 127
-    //   119: aload_0
-    //   120: aload_1
-    //   121: invokevirtual 201	android/net/Uri:toString	()Ljava/lang/String;
-    //   124: putfield 104	com/estrongs/android/pop/app/imageviewer/ViewImage21:G	Ljava/lang/String;
-    //   127: aload_0
-    //   128: invokevirtual 807	com/estrongs/android/pop/app/imageviewer/ViewImage21:getIntent	()Landroid/content/Intent;
-    //   131: ldc_w 923
-    //   134: invokevirtual 926	android/content/Intent:getStringExtra	(Ljava/lang/String;)Ljava/lang/String;
-    //   137: astore 4
-    //   139: aload 4
-    //   141: astore_1
-    //   142: aload 4
-    //   144: invokestatic 921	com/estrongs/android/util/bd:a	(Ljava/lang/CharSequence;)Z
-    //   147: ifeq +14 -> 161
-    //   150: aload_0
-    //   151: invokevirtual 807	com/estrongs/android/pop/app/imageviewer/ViewImage21:getIntent	()Landroid/content/Intent;
-    //   154: ldc_w 928
-    //   157: invokevirtual 926	android/content/Intent:getStringExtra	(Ljava/lang/String;)Ljava/lang/String;
-    //   160: astore_1
-    //   161: aload_1
-    //   162: invokestatic 921	com/estrongs/android/util/bd:a	(Ljava/lang/CharSequence;)Z
-    //   165: ifne +575 -> 740
-    //   168: aload_0
-    //   169: aload_1
-    //   170: invokestatic 594	android/net/Uri:parse	(Ljava/lang/String;)Landroid/net/Uri;
-    //   173: putfield 211	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
-    //   176: aload_0
-    //   177: getfield 211	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
-    //   180: ifnonnull +13 -> 193
-    //   183: aload_0
-    //   184: ldc_w 930
-    //   187: invokestatic 594	android/net/Uri:parse	(Ljava/lang/String;)Landroid/net/Uri;
-    //   190: putfield 211	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
-    //   193: ldc_w 915
-    //   196: aload_0
-    //   197: getfield 211	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
-    //   200: invokevirtual 178	android/net/Uri:getScheme	()Ljava/lang/String;
-    //   203: invokevirtual 184	java/lang/String:equalsIgnoreCase	(Ljava/lang/String;)Z
-    //   206: ifeq +11 -> 217
-    //   209: aload_0
-    //   210: getfield 211	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
-    //   213: invokevirtual 918	android/net/Uri:getPath	()Ljava/lang/String;
-    //   216: astore_1
-    //   217: aload_1
-    //   218: invokestatic 216	com/estrongs/android/util/am:aO	(Ljava/lang/String;)Z
-    //   221: ifne +10 -> 231
-    //   224: aload_1
-    //   225: invokestatic 933	com/estrongs/android/util/am:ba	(Ljava/lang/String;)Z
-    //   228: ifeq +113 -> 341
-    //   231: aload_0
-    //   232: getfield 104	com/estrongs/android/pop/app/imageviewer/ViewImage21:G	Ljava/lang/String;
-    //   235: invokestatic 935	com/estrongs/android/util/am:e	(Ljava/lang/String;)Ljava/lang/String;
-    //   238: astore 5
-    //   240: aload 5
-    //   242: astore 4
-    //   244: aload 5
-    //   246: ldc_w 398
-    //   249: invokevirtual 938	java/lang/String:endsWith	(Ljava/lang/String;)Z
-    //   252: ifne +26 -> 278
-    //   255: new 380	java/lang/StringBuilder
-    //   258: dup
-    //   259: invokespecial 381	java/lang/StringBuilder:<init>	()V
-    //   262: aload 5
-    //   264: invokevirtual 391	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   267: ldc_w 398
-    //   270: invokevirtual 391	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   273: invokevirtual 401	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   276: astore 4
-    //   278: aload_0
-    //   279: new 940	com/estrongs/fs/b
-    //   282: dup
-    //   283: aconst_null
-    //   284: invokespecial 943	com/estrongs/fs/b:<init>	(Lcom/estrongs/fs/i;)V
-    //   287: putfield 100	com/estrongs/android/pop/app/imageviewer/ViewImage21:z	Lcom/estrongs/fs/b;
-    //   290: ldc_w 944
-    //   293: istore_2
-    //   294: invokestatic 949	com/estrongs/android/pop/view/FileExplorerActivity:J	()Lcom/estrongs/android/pop/view/FileExplorerActivity;
-    //   297: invokevirtual 952	com/estrongs/android/pop/view/FileExplorerActivity:y	()Lcom/estrongs/android/view/aw;
-    //   300: invokevirtual 955	java/lang/Object:hashCode	()I
-    //   303: istore_3
-    //   304: iload_3
-    //   305: istore_2
-    //   306: aload_0
-    //   307: invokevirtual 807	com/estrongs/android/pop/app/imageviewer/ViewImage21:getIntent	()Landroid/content/Intent;
-    //   310: ldc_w 957
-    //   313: iconst_0
-    //   314: invokevirtual 961	android/content/Intent:getBooleanExtra	(Ljava/lang/String;Z)Z
-    //   317: ifne +24 -> 341
-    //   320: new 963	com/estrongs/android/view/aj
-    //   323: dup
-    //   324: aload 4
-    //   326: iload_2
-    //   327: invokespecial 966	com/estrongs/android/view/aj:<init>	(Ljava/lang/String;I)V
-    //   330: astore 4
-    //   332: aload_0
-    //   333: getfield 100	com/estrongs/android/pop/app/imageviewer/ViewImage21:z	Lcom/estrongs/fs/b;
-    //   336: aload 4
-    //   338: invokevirtual 968	com/estrongs/fs/b:a	(Lcom/estrongs/fs/i;)V
-    //   341: aload_1
-    //   342: invokestatic 970	com/estrongs/android/util/bc:c	(Ljava/lang/String;)Z
-    //   345: ifne +23 -> 368
-    //   348: aload_0
-    //   349: invokestatic 230	com/estrongs/fs/d:a	(Landroid/content/Context;)Lcom/estrongs/fs/d;
-    //   352: astore 5
-    //   354: aload_1
-    //   355: invokestatic 973	com/estrongs/android/util/am:T	(Ljava/lang/String;)Z
-    //   358: ifeq +396 -> 754
-    //   361: aload_0
-    //   362: getstatic 329	android/provider/MediaStore$Images$Media:EXTERNAL_CONTENT_URI	Landroid/net/Uri;
-    //   365: putfield 211	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
-    //   368: aload_0
-    //   369: aload_0
-    //   370: ldc_w 974
-    //   373: invokevirtual 443	com/estrongs/android/pop/app/imageviewer/ViewImage21:findViewById	(I)Landroid/view/View;
-    //   376: checkcast 370	com/estrongs/android/pop/app/imageviewer/ESGallery
-    //   379: putfield 368	com/estrongs/android/pop/app/imageviewer/ViewImage21:A	Lcom/estrongs/android/pop/app/imageviewer/ESGallery;
-    //   382: aload_0
-    //   383: getfield 211	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
-    //   386: invokestatic 977	com/estrongs/android/util/bd:a	(Landroid/net/Uri;)Ljava/lang/String;
-    //   389: invokestatic 980	com/estrongs/android/util/am:bb	(Ljava/lang/String;)Z
-    //   392: ifeq +525 -> 917
-    //   395: aload_0
-    //   396: aload_0
+    //   38: aload_0
+    //   39: invokestatic 930	com/estrongs/android/j/c:a	(Landroid/content/Context;)Lcom/estrongs/android/j/c;
+    //   42: putfield 109	com/estrongs/android/pop/app/imageviewer/ViewImage21:H	Lcom/estrongs/android/j/c;
+    //   45: aload_0
+    //   46: invokevirtual 824	com/estrongs/android/pop/app/imageviewer/ViewImage21:getWindow	()Landroid/view/Window;
+    //   49: sipush 1024
+    //   52: invokevirtual 834	android/view/Window:addFlags	(I)V
+    //   55: aload_0
+    //   56: ldc_w 931
+    //   59: invokevirtual 934	com/estrongs/android/pop/app/imageviewer/ViewImage21:setContentView	(I)V
+    //   62: new 936	android/graphics/drawable/ColorDrawable
+    //   65: dup
+    //   66: ldc_w 937
+    //   69: invokespecial 939	android/graphics/drawable/ColorDrawable:<init>	(I)V
+    //   72: astore 6
+    //   74: aload 6
+    //   76: sipush 150
+    //   79: invokevirtual 942	android/graphics/drawable/ColorDrawable:setAlpha	(I)V
+    //   82: aload_0
+    //   83: invokevirtual 838	com/estrongs/android/pop/app/imageviewer/ViewImage21:getIntent	()Landroid/content/Intent;
+    //   86: invokevirtual 945	android/content/Intent:getData	()Landroid/net/Uri;
+    //   89: astore_1
+    //   90: ldc_w 947
+    //   93: aload_1
+    //   94: invokevirtual 185	android/net/Uri:getScheme	()Ljava/lang/String;
+    //   97: invokevirtual 191	java/lang/String:equalsIgnoreCase	(Ljava/lang/String;)Z
+    //   100: ifeq +616 -> 716
+    //   103: aload_0
+    //   104: aload_1
+    //   105: invokevirtual 950	android/net/Uri:getPath	()Ljava/lang/String;
+    //   108: putfield 107	com/estrongs/android/pop/app/imageviewer/ViewImage21:G	Ljava/lang/String;
+    //   111: aload_0
+    //   112: getfield 107	com/estrongs/android/pop/app/imageviewer/ViewImage21:G	Ljava/lang/String;
+    //   115: invokestatic 953	com/estrongs/android/util/bk:a	(Ljava/lang/CharSequence;)Z
+    //   118: ifeq +11 -> 129
+    //   121: aload_0
+    //   122: aload_1
+    //   123: invokevirtual 208	android/net/Uri:toString	()Ljava/lang/String;
+    //   126: putfield 107	com/estrongs/android/pop/app/imageviewer/ViewImage21:G	Ljava/lang/String;
+    //   129: aload_0
+    //   130: invokevirtual 838	com/estrongs/android/pop/app/imageviewer/ViewImage21:getIntent	()Landroid/content/Intent;
+    //   133: ldc_w 955
+    //   136: invokevirtual 958	android/content/Intent:getStringExtra	(Ljava/lang/String;)Ljava/lang/String;
+    //   139: astore 4
+    //   141: aload 4
+    //   143: astore_1
+    //   144: aload 4
+    //   146: invokestatic 953	com/estrongs/android/util/bk:a	(Ljava/lang/CharSequence;)Z
+    //   149: ifeq +14 -> 163
+    //   152: aload_0
+    //   153: invokevirtual 838	com/estrongs/android/pop/app/imageviewer/ViewImage21:getIntent	()Landroid/content/Intent;
+    //   156: ldc_w 960
+    //   159: invokevirtual 958	android/content/Intent:getStringExtra	(Ljava/lang/String;)Ljava/lang/String;
+    //   162: astore_1
+    //   163: aload_1
+    //   164: invokestatic 953	com/estrongs/android/util/bk:a	(Ljava/lang/CharSequence;)Z
+    //   167: ifne +566 -> 733
+    //   170: aload_0
+    //   171: aload_1
+    //   172: invokestatic 620	android/net/Uri:parse	(Ljava/lang/String;)Landroid/net/Uri;
+    //   175: putfield 218	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
+    //   178: aload_0
+    //   179: getfield 218	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
+    //   182: ifnonnull +13 -> 195
+    //   185: aload_0
+    //   186: ldc_w 962
+    //   189: invokestatic 620	android/net/Uri:parse	(Ljava/lang/String;)Landroid/net/Uri;
+    //   192: putfield 218	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
+    //   195: ldc_w 947
+    //   198: aload_0
+    //   199: getfield 218	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
+    //   202: invokevirtual 185	android/net/Uri:getScheme	()Ljava/lang/String;
+    //   205: invokevirtual 191	java/lang/String:equalsIgnoreCase	(Ljava/lang/String;)Z
+    //   208: ifeq +11 -> 219
+    //   211: aload_0
+    //   212: getfield 218	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
+    //   215: invokevirtual 950	android/net/Uri:getPath	()Ljava/lang/String;
+    //   218: astore_1
+    //   219: aload_1
+    //   220: invokestatic 223	com/estrongs/android/util/ap:aY	(Ljava/lang/String;)Z
+    //   223: ifne +10 -> 233
+    //   226: aload_1
+    //   227: invokestatic 965	com/estrongs/android/util/ap:bl	(Ljava/lang/String;)Z
+    //   230: ifeq +113 -> 343
+    //   233: aload_0
+    //   234: getfield 107	com/estrongs/android/pop/app/imageviewer/ViewImage21:G	Ljava/lang/String;
+    //   237: invokestatic 967	com/estrongs/android/util/ap:e	(Ljava/lang/String;)Ljava/lang/String;
+    //   240: astore 5
+    //   242: aload 5
+    //   244: astore 4
+    //   246: aload 5
+    //   248: ldc_w 405
+    //   251: invokevirtual 970	java/lang/String:endsWith	(Ljava/lang/String;)Z
+    //   254: ifne +26 -> 280
+    //   257: new 387	java/lang/StringBuilder
+    //   260: dup
+    //   261: invokespecial 388	java/lang/StringBuilder:<init>	()V
+    //   264: aload 5
+    //   266: invokevirtual 398	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   269: ldc_w 405
+    //   272: invokevirtual 398	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   275: invokevirtual 408	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   278: astore 4
+    //   280: aload_0
+    //   281: new 972	com/estrongs/fs/b
+    //   284: dup
+    //   285: aconst_null
+    //   286: invokespecial 975	com/estrongs/fs/b:<init>	(Lcom/estrongs/fs/i;)V
+    //   289: putfield 103	com/estrongs/android/pop/app/imageviewer/ViewImage21:z	Lcom/estrongs/fs/b;
+    //   292: ldc_w 976
+    //   295: istore_2
+    //   296: invokestatic 982	com/estrongs/android/pop/view/FileExplorerActivity:X	()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    //   299: invokevirtual 985	com/estrongs/android/pop/view/FileExplorerActivity:O	()Lcom/estrongs/android/view/cr;
+    //   302: invokevirtual 988	java/lang/Object:hashCode	()I
+    //   305: istore_3
+    //   306: iload_3
+    //   307: istore_2
+    //   308: aload_0
+    //   309: invokevirtual 838	com/estrongs/android/pop/app/imageviewer/ViewImage21:getIntent	()Landroid/content/Intent;
+    //   312: ldc_w 990
+    //   315: iconst_0
+    //   316: invokevirtual 994	android/content/Intent:getBooleanExtra	(Ljava/lang/String;Z)Z
+    //   319: ifne +24 -> 343
+    //   322: new 996	com/estrongs/android/view/bn
+    //   325: dup
+    //   326: aload 4
+    //   328: iload_2
+    //   329: invokespecial 999	com/estrongs/android/view/bn:<init>	(Ljava/lang/String;I)V
+    //   332: astore 4
+    //   334: aload_0
+    //   335: getfield 103	com/estrongs/android/pop/app/imageviewer/ViewImage21:z	Lcom/estrongs/fs/b;
+    //   338: aload 4
+    //   340: invokevirtual 1001	com/estrongs/fs/b:a	(Lcom/estrongs/fs/i;)V
+    //   343: aload_1
+    //   344: invokestatic 1003	com/estrongs/android/util/bg:c	(Ljava/lang/String;)Z
+    //   347: ifne +23 -> 370
+    //   350: aload_0
+    //   351: invokestatic 237	com/estrongs/fs/d:a	(Landroid/content/Context;)Lcom/estrongs/fs/d;
+    //   354: astore 5
+    //   356: aload_1
+    //   357: invokestatic 1005	com/estrongs/android/util/ap:X	(Ljava/lang/String;)Z
+    //   360: ifeq +387 -> 747
+    //   363: aload_0
+    //   364: getstatic 336	android/provider/MediaStore$Images$Media:EXTERNAL_CONTENT_URI	Landroid/net/Uri;
+    //   367: putfield 218	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
+    //   370: aload_0
+    //   371: aload_0
+    //   372: ldc_w 1006
+    //   375: invokevirtual 449	com/estrongs/android/pop/app/imageviewer/ViewImage21:findViewById	(I)Landroid/view/View;
+    //   378: checkcast 377	com/estrongs/android/pop/app/imageviewer/ESGallery
+    //   381: putfield 375	com/estrongs/android/pop/app/imageviewer/ViewImage21:A	Lcom/estrongs/android/pop/app/imageviewer/ESGallery;
+    //   384: aload_0
+    //   385: getfield 218	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
+    //   388: invokestatic 1009	com/estrongs/android/util/bk:a	(Landroid/net/Uri;)Ljava/lang/String;
+    //   391: invokestatic 1012	com/estrongs/android/util/ap:bm	(Ljava/lang/String;)Z
+    //   394: ifeq +516 -> 910
     //   397: aload_0
-    //   398: getfield 211	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
-    //   401: invokestatic 977	com/estrongs/android/util/bd:a	(Landroid/net/Uri;)Ljava/lang/String;
-    //   404: invokestatic 387	com/estrongs/android/util/am:bL	(Ljava/lang/String;)Ljava/lang/String;
-    //   407: invokevirtual 982	com/estrongs/android/pop/app/imageviewer/ViewImage21:a	(Ljava/lang/String;)Ljava/lang/String;
-    //   410: putfield 383	com/estrongs/android/pop/app/imageviewer/ViewImage21:F	Ljava/lang/String;
-    //   413: aload_0
-    //   414: iconst_1
-    //   415: putfield 102	com/estrongs/android/pop/app/imageviewer/ViewImage21:E	Z
-    //   418: aload_0
-    //   419: getfield 368	com/estrongs/android/pop/app/imageviewer/ViewImage21:A	Lcom/estrongs/android/pop/app/imageviewer/ESGallery;
-    //   422: new 984	com/estrongs/android/pop/app/imageviewer/ce
-    //   425: dup
-    //   426: aload_0
-    //   427: invokespecial 985	com/estrongs/android/pop/app/imageviewer/ce:<init>	(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)V
-    //   430: invokevirtual 988	com/estrongs/android/pop/app/imageviewer/ESGallery:a	(Lcom/estrongs/android/pop/app/imageviewer/o;)V
-    //   433: aload_0
-    //   434: getfield 368	com/estrongs/android/pop/app/imageviewer/ViewImage21:A	Lcom/estrongs/android/pop/app/imageviewer/ESGallery;
-    //   437: aload 6
-    //   439: invokevirtual 992	com/estrongs/android/pop/app/imageviewer/ESGallery:setBackgroundDrawable	(Landroid/graphics/drawable/Drawable;)V
-    //   442: aload_0
-    //   443: getfield 368	com/estrongs/android/pop/app/imageviewer/ViewImage21:A	Lcom/estrongs/android/pop/app/imageviewer/ESGallery;
-    //   446: iconst_0
-    //   447: invokevirtual 995	com/estrongs/android/pop/app/imageviewer/ESGallery:setCallbackDuringFling	(Z)V
-    //   450: aload_0
-    //   451: getfield 368	com/estrongs/android/pop/app/imageviewer/ViewImage21:A	Lcom/estrongs/android/pop/app/imageviewer/ESGallery;
-    //   454: ldc_w 996
-    //   457: invokevirtual 999	com/estrongs/android/pop/app/imageviewer/ESGallery:setUnselectedAlpha	(F)V
-    //   460: aload_0
-    //   461: getfield 368	com/estrongs/android/pop/app/imageviewer/ViewImage21:A	Lcom/estrongs/android/pop/app/imageviewer/ESGallery;
-    //   464: new 1001	com/estrongs/android/pop/app/imageviewer/cf
-    //   467: dup
-    //   468: aload_0
-    //   469: invokespecial 1002	com/estrongs/android/pop/app/imageviewer/cf:<init>	(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)V
-    //   472: invokevirtual 1006	com/estrongs/android/pop/app/imageviewer/ESGallery:setOnItemSelectedListener	(Landroid/widget/AdapterView$OnItemSelectedListener;)V
-    //   475: aload_0
-    //   476: getfield 368	com/estrongs/android/pop/app/imageviewer/ViewImage21:A	Lcom/estrongs/android/pop/app/imageviewer/ESGallery;
-    //   479: new 1008	com/estrongs/android/pop/app/imageviewer/at
-    //   482: dup
-    //   483: aload_0
-    //   484: invokespecial 1009	com/estrongs/android/pop/app/imageviewer/at:<init>	(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)V
-    //   487: invokevirtual 1010	com/estrongs/android/pop/app/imageviewer/ESGallery:setOnTouchListener	(Landroid/view/View$OnTouchListener;)V
-    //   490: aload_0
-    //   491: aload_0
-    //   492: ldc_w 1011
-    //   495: invokevirtual 443	com/estrongs/android/pop/app/imageviewer/ViewImage21:findViewById	(I)Landroid/view/View;
-    //   498: checkcast 624	com/estrongs/android/widget/RealViewSwitcher
-    //   501: putfield 622	com/estrongs/android/pop/app/imageviewer/ViewImage21:i	Lcom/estrongs/android/widget/RealViewSwitcher;
-    //   504: aload_0
-    //   505: getfield 622	com/estrongs/android/pop/app/imageviewer/ViewImage21:i	Lcom/estrongs/android/widget/RealViewSwitcher;
-    //   508: iconst_1
-    //   509: invokevirtual 1013	com/estrongs/android/widget/RealViewSwitcher:c	(Z)V
-    //   512: aload_0
-    //   513: getfield 622	com/estrongs/android/pop/app/imageviewer/ViewImage21:i	Lcom/estrongs/android/widget/RealViewSwitcher;
-    //   516: iconst_0
-    //   517: invokevirtual 1015	com/estrongs/android/widget/RealViewSwitcher:b	(Z)V
-    //   520: new 1017	com/estrongs/android/pop/app/imageviewer/au
-    //   523: dup
-    //   524: aload_0
-    //   525: invokespecial 1018	com/estrongs/android/pop/app/imageviewer/au:<init>	(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)V
-    //   528: astore_1
-    //   529: aload_0
-    //   530: getfield 622	com/estrongs/android/pop/app/imageviewer/ViewImage21:i	Lcom/estrongs/android/widget/RealViewSwitcher;
-    //   533: aload_1
-    //   534: invokevirtual 1021	com/estrongs/android/widget/RealViewSwitcher:a	(Lcom/estrongs/android/widget/bc;)V
-    //   537: aload_0
-    //   538: aload_0
-    //   539: getfield 622	com/estrongs/android/pop/app/imageviewer/ViewImage21:i	Lcom/estrongs/android/widget/RealViewSwitcher;
-    //   542: invokevirtual 1023	com/estrongs/android/pop/app/imageviewer/ViewImage21:a	(Landroid/view/View;)V
-    //   545: aload_0
-    //   546: aload_0
-    //   547: ldc_w 1024
-    //   550: invokevirtual 443	com/estrongs/android/pop/app/imageviewer/ViewImage21:findViewById	(I)Landroid/view/View;
-    //   553: checkcast 403	android/widget/TextView
-    //   556: putfield 376	com/estrongs/android/pop/app/imageviewer/ViewImage21:B	Landroid/widget/TextView;
-    //   559: aload_0
-    //   560: aload_0
-    //   561: ldc_w 1025
-    //   564: invokevirtual 443	com/estrongs/android/pop/app/imageviewer/ViewImage21:findViewById	(I)Landroid/view/View;
-    //   567: putfield 373	com/estrongs/android/pop/app/imageviewer/ViewImage21:D	Landroid/view/View;
-    //   570: aload_0
-    //   571: getfield 373	com/estrongs/android/pop/app/imageviewer/ViewImage21:D	Landroid/view/View;
-    //   574: aload 6
-    //   576: invokevirtual 1026	android/view/View:setBackgroundDrawable	(Landroid/graphics/drawable/Drawable;)V
-    //   579: aload_0
-    //   580: aload_0
-    //   581: ldc_w 1027
-    //   584: invokevirtual 443	com/estrongs/android/pop/app/imageviewer/ViewImage21:findViewById	(I)Landroid/view/View;
-    //   587: checkcast 403	android/widget/TextView
-    //   590: putfield 409	com/estrongs/android/pop/app/imageviewer/ViewImage21:C	Landroid/widget/TextView;
-    //   593: aload_0
-    //   594: aload_0
-    //   595: ldc_w 1028
-    //   598: invokevirtual 443	com/estrongs/android/pop/app/imageviewer/ViewImage21:findViewById	(I)Landroid/view/View;
-    //   601: putfield 312	com/estrongs/android/pop/app/imageviewer/ViewImage21:h	Landroid/view/View;
-    //   604: aload_0
-    //   605: getfield 312	com/estrongs/android/pop/app/imageviewer/ViewImage21:h	Landroid/view/View;
-    //   608: iconst_1
-    //   609: invokevirtual 1031	android/view/View:setFocusable	(Z)V
-    //   612: aload_0
-    //   613: getfield 312	com/estrongs/android/pop/app/imageviewer/ViewImage21:h	Landroid/view/View;
-    //   616: new 1033	com/estrongs/android/pop/app/imageviewer/av
-    //   619: dup
+    //   398: aload_0
+    //   399: aload_0
+    //   400: getfield 218	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
+    //   403: invokestatic 1009	com/estrongs/android/util/bk:a	(Landroid/net/Uri;)Ljava/lang/String;
+    //   406: invokestatic 394	com/estrongs/android/util/ap:cc	(Ljava/lang/String;)Ljava/lang/String;
+    //   409: invokevirtual 1014	com/estrongs/android/pop/app/imageviewer/ViewImage21:a	(Ljava/lang/String;)Ljava/lang/String;
+    //   412: putfield 390	com/estrongs/android/pop/app/imageviewer/ViewImage21:F	Ljava/lang/String;
+    //   415: aload_0
+    //   416: iconst_1
+    //   417: putfield 105	com/estrongs/android/pop/app/imageviewer/ViewImage21:E	Z
+    //   420: aload_0
+    //   421: getfield 375	com/estrongs/android/pop/app/imageviewer/ViewImage21:A	Lcom/estrongs/android/pop/app/imageviewer/ESGallery;
+    //   424: new 1016	com/estrongs/android/pop/app/imageviewer/cd
+    //   427: dup
+    //   428: aload_0
+    //   429: invokespecial 1017	com/estrongs/android/pop/app/imageviewer/cd:<init>	(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)V
+    //   432: invokevirtual 1021	com/estrongs/android/pop/app/imageviewer/ESGallery:setOnScrollListener	(Lcom/estrongs/android/pop/app/imageviewer/o;)V
+    //   435: aload_0
+    //   436: getfield 375	com/estrongs/android/pop/app/imageviewer/ViewImage21:A	Lcom/estrongs/android/pop/app/imageviewer/ESGallery;
+    //   439: aload 6
+    //   441: invokevirtual 1025	com/estrongs/android/pop/app/imageviewer/ESGallery:setBackgroundDrawable	(Landroid/graphics/drawable/Drawable;)V
+    //   444: aload_0
+    //   445: getfield 375	com/estrongs/android/pop/app/imageviewer/ViewImage21:A	Lcom/estrongs/android/pop/app/imageviewer/ESGallery;
+    //   448: iconst_0
+    //   449: invokevirtual 1028	com/estrongs/android/pop/app/imageviewer/ESGallery:setCallbackDuringFling	(Z)V
+    //   452: aload_0
+    //   453: getfield 375	com/estrongs/android/pop/app/imageviewer/ViewImage21:A	Lcom/estrongs/android/pop/app/imageviewer/ESGallery;
+    //   456: ldc_w 1029
+    //   459: invokevirtual 1032	com/estrongs/android/pop/app/imageviewer/ESGallery:setUnselectedAlpha	(F)V
+    //   462: aload_0
+    //   463: getfield 375	com/estrongs/android/pop/app/imageviewer/ViewImage21:A	Lcom/estrongs/android/pop/app/imageviewer/ESGallery;
+    //   466: new 1034	com/estrongs/android/pop/app/imageviewer/ce
+    //   469: dup
+    //   470: aload_0
+    //   471: invokespecial 1035	com/estrongs/android/pop/app/imageviewer/ce:<init>	(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)V
+    //   474: invokevirtual 1039	com/estrongs/android/pop/app/imageviewer/ESGallery:setOnItemSelectedListener	(Landroid/widget/AdapterView$OnItemSelectedListener;)V
+    //   477: aload_0
+    //   478: getfield 375	com/estrongs/android/pop/app/imageviewer/ViewImage21:A	Lcom/estrongs/android/pop/app/imageviewer/ESGallery;
+    //   481: new 1041	com/estrongs/android/pop/app/imageviewer/at
+    //   484: dup
+    //   485: aload_0
+    //   486: invokespecial 1042	com/estrongs/android/pop/app/imageviewer/at:<init>	(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)V
+    //   489: invokevirtual 1043	com/estrongs/android/pop/app/imageviewer/ESGallery:setOnTouchListener	(Landroid/view/View$OnTouchListener;)V
+    //   492: aload_0
+    //   493: aload_0
+    //   494: ldc_w 1044
+    //   497: invokevirtual 449	com/estrongs/android/pop/app/imageviewer/ViewImage21:findViewById	(I)Landroid/view/View;
+    //   500: checkcast 649	com/estrongs/android/widget/RealViewSwitcher
+    //   503: putfield 647	com/estrongs/android/pop/app/imageviewer/ViewImage21:i	Lcom/estrongs/android/widget/RealViewSwitcher;
+    //   506: aload_0
+    //   507: getfield 647	com/estrongs/android/pop/app/imageviewer/ViewImage21:i	Lcom/estrongs/android/widget/RealViewSwitcher;
+    //   510: iconst_1
+    //   511: invokevirtual 1045	com/estrongs/android/widget/RealViewSwitcher:a	(Z)V
+    //   514: aload_0
+    //   515: getfield 647	com/estrongs/android/pop/app/imageviewer/ViewImage21:i	Lcom/estrongs/android/widget/RealViewSwitcher;
+    //   518: iconst_0
+    //   519: invokevirtual 1048	com/estrongs/android/widget/RealViewSwitcher:setSwitchControlable	(Z)V
+    //   522: new 1050	com/estrongs/android/pop/app/imageviewer/au
+    //   525: dup
+    //   526: aload_0
+    //   527: invokespecial 1051	com/estrongs/android/pop/app/imageviewer/au:<init>	(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)V
+    //   530: astore_1
+    //   531: aload_0
+    //   532: getfield 647	com/estrongs/android/pop/app/imageviewer/ViewImage21:i	Lcom/estrongs/android/widget/RealViewSwitcher;
+    //   535: aload_1
+    //   536: invokevirtual 1055	com/estrongs/android/widget/RealViewSwitcher:setOnScreenSwitchListener	(Lcom/estrongs/android/widget/bd;)V
+    //   539: aload_0
+    //   540: aload_0
+    //   541: getfield 647	com/estrongs/android/pop/app/imageviewer/ViewImage21:i	Lcom/estrongs/android/widget/RealViewSwitcher;
+    //   544: invokevirtual 1057	com/estrongs/android/pop/app/imageviewer/ViewImage21:a	(Landroid/view/View;)V
+    //   547: aload_0
+    //   548: aload_0
+    //   549: ldc_w 1058
+    //   552: invokevirtual 449	com/estrongs/android/pop/app/imageviewer/ViewImage21:findViewById	(I)Landroid/view/View;
+    //   555: checkcast 410	android/widget/TextView
+    //   558: putfield 383	com/estrongs/android/pop/app/imageviewer/ViewImage21:B	Landroid/widget/TextView;
+    //   561: aload_0
+    //   562: aload_0
+    //   563: ldc_w 1059
+    //   566: invokevirtual 449	com/estrongs/android/pop/app/imageviewer/ViewImage21:findViewById	(I)Landroid/view/View;
+    //   569: putfield 380	com/estrongs/android/pop/app/imageviewer/ViewImage21:D	Landroid/view/View;
+    //   572: aload_0
+    //   573: aload_0
+    //   574: ldc_w 1060
+    //   577: invokevirtual 449	com/estrongs/android/pop/app/imageviewer/ViewImage21:findViewById	(I)Landroid/view/View;
+    //   580: checkcast 410	android/widget/TextView
+    //   583: putfield 416	com/estrongs/android/pop/app/imageviewer/ViewImage21:C	Landroid/widget/TextView;
+    //   586: aload_0
+    //   587: aload_0
+    //   588: ldc_w 1061
+    //   591: invokevirtual 449	com/estrongs/android/pop/app/imageviewer/ViewImage21:findViewById	(I)Landroid/view/View;
+    //   594: putfield 319	com/estrongs/android/pop/app/imageviewer/ViewImage21:h	Landroid/view/View;
+    //   597: aload_0
+    //   598: getfield 319	com/estrongs/android/pop/app/imageviewer/ViewImage21:h	Landroid/view/View;
+    //   601: iconst_1
+    //   602: invokevirtual 1064	android/view/View:setFocusable	(Z)V
+    //   605: aload_0
+    //   606: getfield 319	com/estrongs/android/pop/app/imageviewer/ViewImage21:h	Landroid/view/View;
+    //   609: new 1066	com/estrongs/android/pop/app/imageviewer/av
+    //   612: dup
+    //   613: aload_0
+    //   614: invokespecial 1067	com/estrongs/android/pop/app/imageviewer/av:<init>	(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)V
+    //   617: invokevirtual 1071	android/view/View:setOnClickListener	(Landroid/view/View$OnClickListener;)V
     //   620: aload_0
-    //   621: invokespecial 1034	com/estrongs/android/pop/app/imageviewer/av:<init>	(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)V
-    //   624: invokevirtual 1038	android/view/View:setOnClickListener	(Landroid/view/View$OnClickListener;)V
-    //   627: aload_0
-    //   628: ldc_w 1039
-    //   631: invokevirtual 443	com/estrongs/android/pop/app/imageviewer/ViewImage21:findViewById	(I)Landroid/view/View;
-    //   634: new 1041	com/estrongs/android/pop/app/imageviewer/aw
-    //   637: dup
+    //   621: ldc_w 1072
+    //   624: invokevirtual 449	com/estrongs/android/pop/app/imageviewer/ViewImage21:findViewById	(I)Landroid/view/View;
+    //   627: new 1074	com/estrongs/android/pop/app/imageviewer/aw
+    //   630: dup
+    //   631: aload_0
+    //   632: invokespecial 1075	com/estrongs/android/pop/app/imageviewer/aw:<init>	(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)V
+    //   635: invokevirtual 1071	android/view/View:setOnClickListener	(Landroid/view/View$OnClickListener;)V
     //   638: aload_0
-    //   639: invokespecial 1042	com/estrongs/android/pop/app/imageviewer/aw:<init>	(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)V
-    //   642: invokevirtual 1038	android/view/View:setOnClickListener	(Landroid/view/View$OnClickListener;)V
-    //   645: aload_0
+    //   639: aload_0
+    //   640: invokestatic 1080	com/estrongs/android/pop/esclasses/k:a	(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    //   643: putfield 1082	com/estrongs/android/pop/app/imageviewer/ViewImage21:j	Landroid/view/LayoutInflater;
     //   646: aload_0
-    //   647: invokestatic 1047	com/estrongs/android/pop/esclasses/g:a	(Landroid/content/Context;)Landroid/view/LayoutInflater;
-    //   650: putfield 1049	com/estrongs/android/pop/app/imageviewer/ViewImage21:j	Landroid/view/LayoutInflater;
+    //   647: getfield 105	com/estrongs/android/pop/app/imageviewer/ViewImage21:E	Z
+    //   650: ifeq +11 -> 661
     //   653: aload_0
-    //   654: getfield 102	com/estrongs/android/pop/app/imageviewer/ViewImage21:E	Z
-    //   657: ifeq +11 -> 668
-    //   660: aload_0
-    //   661: getfield 368	com/estrongs/android/pop/app/imageviewer/ViewImage21:A	Lcom/estrongs/android/pop/app/imageviewer/ESGallery;
-    //   664: iconst_4
-    //   665: invokevirtual 371	com/estrongs/android/pop/app/imageviewer/ESGallery:setVisibility	(I)V
-    //   668: iconst_0
-    //   669: istore_2
-    //   670: iload_2
-    //   671: iconst_3
-    //   672: if_icmpge +339 -> 1011
-    //   675: new 627	com/estrongs/android/pop/app/imageviewer/ch
-    //   678: dup
+    //   654: getfield 375	com/estrongs/android/pop/app/imageviewer/ViewImage21:A	Lcom/estrongs/android/pop/app/imageviewer/ESGallery;
+    //   657: iconst_4
+    //   658: invokevirtual 378	com/estrongs/android/pop/app/imageviewer/ESGallery:setVisibility	(I)V
+    //   661: iconst_0
+    //   662: istore_2
+    //   663: iload_2
+    //   664: iconst_3
+    //   665: if_icmpge +339 -> 1004
+    //   668: new 652	com/estrongs/android/pop/app/imageviewer/cg
+    //   671: dup
+    //   672: aload_0
+    //   673: aload_0
+    //   674: invokespecial 1085	com/estrongs/android/pop/app/imageviewer/cg:<init>	(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;Landroid/content/Context;)V
+    //   677: astore_1
+    //   678: aload_1
     //   679: aload_0
-    //   680: aload_0
-    //   681: invokespecial 1052	com/estrongs/android/pop/app/imageviewer/ch:<init>	(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;Landroid/content/Context;)V
-    //   684: astore_1
-    //   685: aload_1
+    //   680: getfield 160	com/estrongs/android/pop/app/imageviewer/ViewImage21:r	Landroid/view/ViewGroup$LayoutParams;
+    //   683: invokevirtual 1089	com/estrongs/android/pop/app/imageviewer/cg:setLayoutParams	(Landroid/view/ViewGroup$LayoutParams;)V
     //   686: aload_0
-    //   687: getfield 155	com/estrongs/android/pop/app/imageviewer/ViewImage21:r	Landroid/view/ViewGroup$LayoutParams;
-    //   690: invokevirtual 1056	com/estrongs/android/pop/app/imageviewer/ch:setLayoutParams	(Landroid/view/ViewGroup$LayoutParams;)V
-    //   693: aload_0
-    //   694: getfield 622	com/estrongs/android/pop/app/imageviewer/ViewImage21:i	Lcom/estrongs/android/widget/RealViewSwitcher;
-    //   697: aload_1
-    //   698: invokevirtual 1059	com/estrongs/android/widget/RealViewSwitcher:addView	(Landroid/view/View;)V
-    //   701: iload_2
-    //   702: iconst_1
-    //   703: iadd
-    //   704: istore_2
-    //   705: goto -35 -> 670
-    //   708: astore_1
-    //   709: aload_0
-    //   710: ldc2_w 145
-    //   713: putfield 148	com/estrongs/android/pop/app/imageviewer/ViewImage21:q	J
-    //   716: aload_1
-    //   717: invokevirtual 582	java/lang/Exception:printStackTrace	()V
-    //   720: goto -683 -> 37
-    //   723: aload_0
-    //   724: aload_0
-    //   725: invokevirtual 807	com/estrongs/android/pop/app/imageviewer/ViewImage21:getIntent	()Landroid/content/Intent;
-    //   728: ldc_w 928
-    //   731: invokevirtual 926	android/content/Intent:getStringExtra	(Ljava/lang/String;)Ljava/lang/String;
-    //   734: putfield 104	com/estrongs/android/pop/app/imageviewer/ViewImage21:G	Ljava/lang/String;
-    //   737: goto -628 -> 109
-    //   740: aload_0
-    //   741: aload_0
-    //   742: getfield 104	com/estrongs/android/pop/app/imageviewer/ViewImage21:G	Ljava/lang/String;
-    //   745: invokestatic 594	android/net/Uri:parse	(Ljava/lang/String;)Landroid/net/Uri;
-    //   748: putfield 211	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
-    //   751: goto -575 -> 176
-    //   754: new 1061	com/estrongs/android/pop/utils/cf
-    //   757: dup
-    //   758: invokespecial 1062	com/estrongs/android/pop/utils/cf:<init>	()V
-    //   761: astore 4
-    //   763: aload 4
-    //   765: invokevirtual 1063	com/estrongs/android/pop/utils/cf:a	()V
-    //   768: aload 5
-    //   770: aload_1
-    //   771: invokevirtual 1065	com/estrongs/fs/d:h	(Ljava/lang/String;)Z
-    //   774: ifeq +127 -> 901
-    //   777: aload 5
-    //   779: aload_1
-    //   780: invokevirtual 1068	com/estrongs/fs/d:a	(Ljava/lang/String;)Ljava/util/List;
-    //   783: invokeinterface 1074 1 0
-    //   788: astore_1
-    //   789: aload_1
-    //   790: invokeinterface 1079 1 0
-    //   795: ifeq +321 -> 1116
-    //   798: aload_1
-    //   799: invokeinterface 1082 1 0
-    //   804: checkcast 1084	com/estrongs/fs/h
-    //   807: astore 5
-    //   809: aload 5
-    //   811: invokeinterface 1088 1 0
-    //   816: invokevirtual 1091	com/estrongs/fs/m:a	()Z
-    //   819: ifne -30 -> 789
-    //   822: aload 5
-    //   824: invokeinterface 1092 1 0
-    //   829: invokestatic 970	com/estrongs/android/util/bc:c	(Ljava/lang/String;)Z
-    //   832: ifeq -43 -> 789
-    //   835: aload_0
-    //   836: aload 5
-    //   838: invokeinterface 1092 1 0
-    //   843: invokestatic 594	android/net/Uri:parse	(Ljava/lang/String;)Landroid/net/Uri;
-    //   846: putfield 211	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
-    //   849: iconst_1
-    //   850: istore_2
-    //   851: iload_2
-    //   852: ifne +49 -> 901
-    //   855: aload_0
-    //   856: new 380	java/lang/StringBuilder
-    //   859: dup
-    //   860: invokespecial 381	java/lang/StringBuilder:<init>	()V
-    //   863: aload_0
-    //   864: ldc_w 1093
-    //   867: invokevirtual 469	com/estrongs/android/pop/app/imageviewer/ViewImage21:getString	(I)Ljava/lang/String;
-    //   870: invokevirtual 391	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   873: ldc_w 1095
-    //   876: invokevirtual 391	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   879: aload_0
-    //   880: getfield 211	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
-    //   883: invokevirtual 918	android/net/Uri:getPath	()Ljava/lang/String;
-    //   886: invokevirtual 391	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   889: invokevirtual 401	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   892: iconst_1
-    //   893: invokestatic 1100	com/estrongs/android/ui/view/ag:a	(Landroid/content/Context;Ljava/lang/CharSequence;I)V
-    //   896: aload_0
-    //   897: invokevirtual 840	com/estrongs/android/pop/app/imageviewer/ViewImage21:finish	()V
-    //   900: return
-    //   901: aload 4
-    //   903: invokevirtual 1102	com/estrongs/android/pop/utils/cf:b	()V
-    //   906: goto -538 -> 368
-    //   909: astore_1
-    //   910: aload_1
-    //   911: invokevirtual 1103	com/estrongs/fs/FileSystemException:printStackTrace	()V
-    //   914: goto -546 -> 368
-    //   917: aload_0
-    //   918: getfield 211	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
-    //   921: invokestatic 977	com/estrongs/android/util/bd:a	(Landroid/net/Uri;)Ljava/lang/String;
-    //   924: invokestatic 1106	com/estrongs/android/util/am:aW	(Ljava/lang/String;)Z
-    //   927: ifeq +28 -> 955
-    //   930: aload_0
-    //   931: aload_0
-    //   932: ldc_w 1107
-    //   935: invokevirtual 469	com/estrongs/android/pop/app/imageviewer/ViewImage21:getString	(I)Ljava/lang/String;
-    //   938: putfield 383	com/estrongs/android/pop/app/imageviewer/ViewImage21:F	Ljava/lang/String;
-    //   941: aload_0
-    //   942: aload_0
-    //   943: getfield 104	com/estrongs/android/pop/app/imageviewer/ViewImage21:G	Ljava/lang/String;
-    //   946: invokestatic 980	com/estrongs/android/util/am:bb	(Ljava/lang/String;)Z
-    //   949: putfield 102	com/estrongs/android/pop/app/imageviewer/ViewImage21:E	Z
-    //   952: goto -534 -> 418
-    //   955: aload_0
-    //   956: getfield 211	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
-    //   959: invokestatic 977	com/estrongs/android/util/bd:a	(Landroid/net/Uri;)Ljava/lang/String;
-    //   962: invokestatic 216	com/estrongs/android/util/am:aO	(Ljava/lang/String;)Z
-    //   965: ifeq +23 -> 988
-    //   968: aload_0
-    //   969: aload_0
-    //   970: aload_0
-    //   971: getfield 104	com/estrongs/android/pop/app/imageviewer/ViewImage21:G	Ljava/lang/String;
-    //   974: invokevirtual 982	com/estrongs/android/pop/app/imageviewer/ViewImage21:a	(Ljava/lang/String;)Ljava/lang/String;
-    //   977: putfield 383	com/estrongs/android/pop/app/imageviewer/ViewImage21:F	Ljava/lang/String;
-    //   980: aload_0
-    //   981: iconst_0
-    //   982: putfield 102	com/estrongs/android/pop/app/imageviewer/ViewImage21:E	Z
-    //   985: goto -567 -> 418
-    //   988: aload_0
-    //   989: aload_0
-    //   990: aload_0
-    //   991: getfield 211	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
-    //   994: invokestatic 977	com/estrongs/android/util/bd:a	(Landroid/net/Uri;)Ljava/lang/String;
-    //   997: invokevirtual 982	com/estrongs/android/pop/app/imageviewer/ViewImage21:a	(Ljava/lang/String;)Ljava/lang/String;
-    //   1000: putfield 383	com/estrongs/android/pop/app/imageviewer/ViewImage21:F	Ljava/lang/String;
-    //   1003: aload_0
-    //   1004: iconst_0
-    //   1005: putfield 102	com/estrongs/android/pop/app/imageviewer/ViewImage21:E	Z
-    //   1008: goto -590 -> 418
+    //   687: getfield 647	com/estrongs/android/pop/app/imageviewer/ViewImage21:i	Lcom/estrongs/android/widget/RealViewSwitcher;
+    //   690: aload_1
+    //   691: invokevirtual 1092	com/estrongs/android/widget/RealViewSwitcher:addView	(Landroid/view/View;)V
+    //   694: iload_2
+    //   695: iconst_1
+    //   696: iadd
+    //   697: istore_2
+    //   698: goto -35 -> 663
+    //   701: astore_1
+    //   702: aload_0
+    //   703: ldc2_w 150
+    //   706: putfield 153	com/estrongs/android/pop/app/imageviewer/ViewImage21:q	J
+    //   709: aload_1
+    //   710: invokevirtual 608	java/lang/Exception:printStackTrace	()V
+    //   713: goto -676 -> 37
+    //   716: aload_0
+    //   717: aload_0
+    //   718: invokevirtual 838	com/estrongs/android/pop/app/imageviewer/ViewImage21:getIntent	()Landroid/content/Intent;
+    //   721: ldc_w 960
+    //   724: invokevirtual 958	android/content/Intent:getStringExtra	(Ljava/lang/String;)Ljava/lang/String;
+    //   727: putfield 107	com/estrongs/android/pop/app/imageviewer/ViewImage21:G	Ljava/lang/String;
+    //   730: goto -619 -> 111
+    //   733: aload_0
+    //   734: aload_0
+    //   735: getfield 107	com/estrongs/android/pop/app/imageviewer/ViewImage21:G	Ljava/lang/String;
+    //   738: invokestatic 620	android/net/Uri:parse	(Ljava/lang/String;)Landroid/net/Uri;
+    //   741: putfield 218	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
+    //   744: goto -566 -> 178
+    //   747: new 1094	com/estrongs/android/pop/utils/co
+    //   750: dup
+    //   751: invokespecial 1095	com/estrongs/android/pop/utils/co:<init>	()V
+    //   754: astore 4
+    //   756: aload 4
+    //   758: invokevirtual 1096	com/estrongs/android/pop/utils/co:a	()V
+    //   761: aload 5
+    //   763: aload_1
+    //   764: invokevirtual 1098	com/estrongs/fs/d:h	(Ljava/lang/String;)Z
+    //   767: ifeq +127 -> 894
+    //   770: aload 5
+    //   772: aload_1
+    //   773: invokevirtual 1101	com/estrongs/fs/d:a	(Ljava/lang/String;)Ljava/util/List;
+    //   776: invokeinterface 1107 1 0
+    //   781: astore_1
+    //   782: aload_1
+    //   783: invokeinterface 1112 1 0
+    //   788: ifeq +321 -> 1109
+    //   791: aload_1
+    //   792: invokeinterface 1115 1 0
+    //   797: checkcast 1117	com/estrongs/fs/h
+    //   800: astore 5
+    //   802: aload 5
+    //   804: invokeinterface 1121 1 0
+    //   809: invokevirtual 1124	com/estrongs/fs/w:a	()Z
+    //   812: ifne -30 -> 782
+    //   815: aload 5
+    //   817: invokeinterface 1125 1 0
+    //   822: invokestatic 1003	com/estrongs/android/util/bg:c	(Ljava/lang/String;)Z
+    //   825: ifeq -43 -> 782
+    //   828: aload_0
+    //   829: aload 5
+    //   831: invokeinterface 1125 1 0
+    //   836: invokestatic 620	android/net/Uri:parse	(Ljava/lang/String;)Landroid/net/Uri;
+    //   839: putfield 218	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
+    //   842: iconst_1
+    //   843: istore_2
+    //   844: iload_2
+    //   845: ifne +49 -> 894
+    //   848: aload_0
+    //   849: new 387	java/lang/StringBuilder
+    //   852: dup
+    //   853: invokespecial 388	java/lang/StringBuilder:<init>	()V
+    //   856: aload_0
+    //   857: ldc_w 1126
+    //   860: invokevirtual 492	com/estrongs/android/pop/app/imageviewer/ViewImage21:getString	(I)Ljava/lang/String;
+    //   863: invokevirtual 398	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   866: ldc_w 1128
+    //   869: invokevirtual 398	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   872: aload_0
+    //   873: getfield 218	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
+    //   876: invokevirtual 950	android/net/Uri:getPath	()Ljava/lang/String;
+    //   879: invokevirtual 398	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   882: invokevirtual 408	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   885: iconst_1
+    //   886: invokestatic 1133	com/estrongs/android/ui/view/ak:a	(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    //   889: aload_0
+    //   890: invokevirtual 871	com/estrongs/android/pop/app/imageviewer/ViewImage21:finish	()V
+    //   893: return
+    //   894: aload 4
+    //   896: invokevirtual 1135	com/estrongs/android/pop/utils/co:b	()V
+    //   899: goto -529 -> 370
+    //   902: astore_1
+    //   903: aload_1
+    //   904: invokevirtual 1136	com/estrongs/fs/FileSystemException:printStackTrace	()V
+    //   907: goto -537 -> 370
+    //   910: aload_0
+    //   911: getfield 218	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
+    //   914: invokestatic 1009	com/estrongs/android/util/bk:a	(Landroid/net/Uri;)Ljava/lang/String;
+    //   917: invokestatic 1139	com/estrongs/android/util/ap:bh	(Ljava/lang/String;)Z
+    //   920: ifeq +28 -> 948
+    //   923: aload_0
+    //   924: aload_0
+    //   925: ldc_w 1140
+    //   928: invokevirtual 492	com/estrongs/android/pop/app/imageviewer/ViewImage21:getString	(I)Ljava/lang/String;
+    //   931: putfield 390	com/estrongs/android/pop/app/imageviewer/ViewImage21:F	Ljava/lang/String;
+    //   934: aload_0
+    //   935: aload_0
+    //   936: getfield 107	com/estrongs/android/pop/app/imageviewer/ViewImage21:G	Ljava/lang/String;
+    //   939: invokestatic 1012	com/estrongs/android/util/ap:bm	(Ljava/lang/String;)Z
+    //   942: putfield 105	com/estrongs/android/pop/app/imageviewer/ViewImage21:E	Z
+    //   945: goto -525 -> 420
+    //   948: aload_0
+    //   949: getfield 218	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
+    //   952: invokestatic 1009	com/estrongs/android/util/bk:a	(Landroid/net/Uri;)Ljava/lang/String;
+    //   955: invokestatic 223	com/estrongs/android/util/ap:aY	(Ljava/lang/String;)Z
+    //   958: ifeq +23 -> 981
+    //   961: aload_0
+    //   962: aload_0
+    //   963: aload_0
+    //   964: getfield 107	com/estrongs/android/pop/app/imageviewer/ViewImage21:G	Ljava/lang/String;
+    //   967: invokevirtual 1014	com/estrongs/android/pop/app/imageviewer/ViewImage21:a	(Ljava/lang/String;)Ljava/lang/String;
+    //   970: putfield 390	com/estrongs/android/pop/app/imageviewer/ViewImage21:F	Ljava/lang/String;
+    //   973: aload_0
+    //   974: iconst_0
+    //   975: putfield 105	com/estrongs/android/pop/app/imageviewer/ViewImage21:E	Z
+    //   978: goto -558 -> 420
+    //   981: aload_0
+    //   982: aload_0
+    //   983: aload_0
+    //   984: getfield 218	com/estrongs/android/pop/app/imageviewer/ViewImage21:u	Landroid/net/Uri;
+    //   987: invokestatic 1009	com/estrongs/android/util/bk:a	(Landroid/net/Uri;)Ljava/lang/String;
+    //   990: invokevirtual 1014	com/estrongs/android/pop/app/imageviewer/ViewImage21:a	(Ljava/lang/String;)Ljava/lang/String;
+    //   993: putfield 390	com/estrongs/android/pop/app/imageviewer/ViewImage21:F	Ljava/lang/String;
+    //   996: aload_0
+    //   997: iconst_0
+    //   998: putfield 105	com/estrongs/android/pop/app/imageviewer/ViewImage21:E	Z
+    //   1001: goto -581 -> 420
+    //   1004: aload_0
+    //   1005: getfield 698	com/estrongs/android/pop/app/imageviewer/ViewImage21:t	Lcom/estrongs/android/pop/app/imageviewer/t;
+    //   1008: ifnonnull +18 -> 1026
     //   1011: aload_0
-    //   1012: getfield 673	com/estrongs/android/pop/app/imageviewer/ViewImage21:t	Lcom/estrongs/android/pop/app/imageviewer/t;
-    //   1015: ifnonnull +18 -> 1033
-    //   1018: aload_0
-    //   1019: new 1109	com/estrongs/android/pop/app/imageviewer/ay
-    //   1022: dup
-    //   1023: aload_0
-    //   1024: ldc_w 1111
-    //   1027: invokespecial 1114	com/estrongs/android/pop/app/imageviewer/ay:<init>	(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;Ljava/lang/String;)V
-    //   1030: putfield 673	com/estrongs/android/pop/app/imageviewer/ViewImage21:t	Lcom/estrongs/android/pop/app/imageviewer/t;
-    //   1033: aload_0
-    //   1034: aload_0
-    //   1035: ldc_w 1115
-    //   1038: invokevirtual 443	com/estrongs/android/pop/app/imageviewer/ViewImage21:findViewById	(I)Landroid/view/View;
-    //   1041: putfield 422	com/estrongs/android/pop/app/imageviewer/ViewImage21:K	Landroid/view/View;
-    //   1044: aload_0
-    //   1045: getfield 422	com/estrongs/android/pop/app/imageviewer/ViewImage21:K	Landroid/view/View;
-    //   1048: new 1117	com/estrongs/android/pop/app/imageviewer/az
-    //   1051: dup
+    //   1012: new 1142	com/estrongs/android/pop/app/imageviewer/ax
+    //   1015: dup
+    //   1016: aload_0
+    //   1017: ldc_w 1144
+    //   1020: invokespecial 1147	com/estrongs/android/pop/app/imageviewer/ax:<init>	(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;Ljava/lang/String;)V
+    //   1023: putfield 698	com/estrongs/android/pop/app/imageviewer/ViewImage21:t	Lcom/estrongs/android/pop/app/imageviewer/t;
+    //   1026: aload_0
+    //   1027: aload_0
+    //   1028: ldc_w 1148
+    //   1031: invokevirtual 449	com/estrongs/android/pop/app/imageviewer/ViewImage21:findViewById	(I)Landroid/view/View;
+    //   1034: putfield 429	com/estrongs/android/pop/app/imageviewer/ViewImage21:L	Landroid/view/View;
+    //   1037: aload_0
+    //   1038: getfield 429	com/estrongs/android/pop/app/imageviewer/ViewImage21:L	Landroid/view/View;
+    //   1041: new 1150	com/estrongs/android/pop/app/imageviewer/ay
+    //   1044: dup
+    //   1045: aload_0
+    //   1046: invokespecial 1151	com/estrongs/android/pop/app/imageviewer/ay:<init>	(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)V
+    //   1049: invokevirtual 1071	android/view/View:setOnClickListener	(Landroid/view/View$OnClickListener;)V
     //   1052: aload_0
-    //   1053: invokespecial 1118	com/estrongs/android/pop/app/imageviewer/az:<init>	(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)V
-    //   1056: invokevirtual 1038	android/view/View:setOnClickListener	(Landroid/view/View$OnClickListener;)V
-    //   1059: aload_0
-    //   1060: getfield 118	com/estrongs/android/pop/app/imageviewer/ViewImage21:J	Lcom/estrongs/android/pop/app/aa;
+    //   1053: getfield 123	com/estrongs/android/pop/app/imageviewer/ViewImage21:K	Lcom/estrongs/android/pop/app/ag;
+    //   1056: aload_0
+    //   1057: getfield 132	com/estrongs/android/pop/app/imageviewer/ViewImage21:O	Lcom/estrongs/android/pop/app/imageviewer/cf;
+    //   1060: invokevirtual 1154	com/estrongs/android/pop/app/ag:a	(Lcom/estrongs/chromecast/ChromeCastConnectionListener;)V
     //   1063: aload_0
-    //   1064: getfield 127	com/estrongs/android/pop/app/imageviewer/ViewImage21:N	Lcom/estrongs/android/pop/app/imageviewer/cg;
-    //   1067: invokevirtual 1121	com/estrongs/android/pop/app/aa:a	(Lcom/estrongs/chromecast/ChromeCastConnectionListener;)V
-    //   1070: aload_0
-    //   1071: getfield 118	com/estrongs/android/pop/app/imageviewer/ViewImage21:J	Lcom/estrongs/android/pop/app/aa;
+    //   1064: getfield 123	com/estrongs/android/pop/app/imageviewer/ViewImage21:K	Lcom/estrongs/android/pop/app/ag;
+    //   1067: aload_0
+    //   1068: getfield 132	com/estrongs/android/pop/app/imageviewer/ViewImage21:O	Lcom/estrongs/android/pop/app/imageviewer/cf;
+    //   1071: invokevirtual 1157	com/estrongs/android/pop/app/ag:a	(Lcom/estrongs/chromecast/CastDeviceListener;)V
     //   1074: aload_0
-    //   1075: getfield 127	com/estrongs/android/pop/app/imageviewer/ViewImage21:N	Lcom/estrongs/android/pop/app/imageviewer/cg;
-    //   1078: invokevirtual 1124	com/estrongs/android/pop/app/aa:a	(Lcom/estrongs/chromecast/CastDeviceListener;)V
-    //   1081: aload_0
-    //   1082: getfield 118	com/estrongs/android/pop/app/imageviewer/ViewImage21:J	Lcom/estrongs/android/pop/app/aa;
+    //   1075: getfield 123	com/estrongs/android/pop/app/imageviewer/ViewImage21:K	Lcom/estrongs/android/pop/app/ag;
+    //   1078: aload_0
+    //   1079: getfield 132	com/estrongs/android/pop/app/imageviewer/ViewImage21:O	Lcom/estrongs/android/pop/app/imageviewer/cf;
+    //   1082: invokevirtual 1160	com/estrongs/android/pop/app/ag:a	(Lcom/estrongs/chromecast/RemoteMediaPlayerListener;)V
     //   1085: aload_0
-    //   1086: getfield 127	com/estrongs/android/pop/app/imageviewer/ViewImage21:N	Lcom/estrongs/android/pop/app/imageviewer/cg;
-    //   1089: invokevirtual 1127	com/estrongs/android/pop/app/aa:a	(Lcom/estrongs/chromecast/RemoteMediaPlayerListener;)V
-    //   1092: aload_0
-    //   1093: invokespecial 255	com/estrongs/android/pop/app/imageviewer/ViewImage21:f	()V
-    //   1096: new 1129	com/estrongs/android/pop/app/imageviewer/ba
-    //   1099: dup
-    //   1100: aload_0
-    //   1101: ldc_w 1131
-    //   1104: invokespecial 1132	com/estrongs/android/pop/app/imageviewer/ba:<init>	(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;Ljava/lang/String;)V
-    //   1107: invokevirtual 1133	com/estrongs/android/pop/app/imageviewer/ba:start	()V
-    //   1110: return
-    //   1111: astore 5
-    //   1113: goto -807 -> 306
-    //   1116: iconst_0
-    //   1117: istore_2
-    //   1118: goto -267 -> 851
+    //   1086: invokespecial 262	com/estrongs/android/pop/app/imageviewer/ViewImage21:f	()V
+    //   1089: new 1162	com/estrongs/android/pop/app/imageviewer/az
+    //   1092: dup
+    //   1093: aload_0
+    //   1094: ldc_w 1164
+    //   1097: invokespecial 1165	com/estrongs/android/pop/app/imageviewer/az:<init>	(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;Ljava/lang/String;)V
+    //   1100: invokevirtual 1166	com/estrongs/android/pop/app/imageviewer/az:start	()V
+    //   1103: return
+    //   1104: astore 5
+    //   1106: goto -798 -> 308
+    //   1109: iconst_0
+    //   1110: istore_2
+    //   1111: goto -267 -> 844
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	1121	0	this	ViewImage21
-    //   0	1121	1	paramBundle	Bundle
-    //   293	825	2	i1	int
-    //   303	2	3	i2	int
-    //   137	765	4	localObject1	Object
-    //   238	599	5	localObject2	Object
-    //   1111	1	5	localException	Exception
-    //   70	505	6	localColorDrawable	android.graphics.drawable.ColorDrawable
+    //   0	1114	0	this	ViewImage21
+    //   0	1114	1	paramBundle	Bundle
+    //   295	816	2	i1	int
+    //   305	2	3	i2	int
+    //   139	756	4	localObject1	Object
+    //   240	590	5	localObject2	Object
+    //   1104	1	5	localException	Exception
+    //   72	368	6	localColorDrawable	android.graphics.drawable.ColorDrawable
     // Exception table:
     //   from	to	target	type
-    //   18	37	708	java/lang/Exception
-    //   354	368	909	com/estrongs/fs/FileSystemException
-    //   754	789	909	com/estrongs/fs/FileSystemException
-    //   789	849	909	com/estrongs/fs/FileSystemException
-    //   855	900	909	com/estrongs/fs/FileSystemException
-    //   901	906	909	com/estrongs/fs/FileSystemException
-    //   294	304	1111	java/lang/Exception
+    //   18	37	701	java/lang/Exception
+    //   356	370	902	com/estrongs/fs/FileSystemException
+    //   747	782	902	com/estrongs/fs/FileSystemException
+    //   782	842	902	com/estrongs/fs/FileSystemException
+    //   848	893	902	com/estrongs/fs/FileSystemException
+    //   894	899	902	com/estrongs/fs/FileSystemException
+    //   296	306	1104	java/lang/Exception
   }
   
   protected void onDestroy()
@@ -1303,23 +1305,23 @@ public class ViewImage21
     }
     for (;;)
     {
-      ch localch;
+      cg localcg;
       if (i1 < i.getChildCount())
       {
-        localch = (ch)i.getChildAt(i1);
-        if ((localch == null) || (localch.a() == null)) {}
+        localcg = (cg)i.getChildAt(i1);
+        if ((localcg == null) || (localcg.a() == null)) {}
       }
       try
       {
-        localch.a().stop();
-        localch.a(null);
+        localcg.a().stop();
+        localcg.a(null);
         i1 += 1;
         continue;
         if (e != null) {
           e.a();
         }
-        if (R != null) {
-          R.a();
+        if (S != null) {
+          S.a();
         }
         if (t != null)
         {
@@ -1328,16 +1330,16 @@ public class ViewImage21
           t = null;
         }
         if (g != null) {
-          g.e();
+          g.a();
         }
-        if (I != null) {
-          I.a();
+        if (J != null) {
+          J.a();
         }
-        J.b(N);
-        J.b(N);
-        J.b(N);
-        if (L != null) {
-          L.a();
+        K.b(O);
+        K.b(O);
+        K.b(O);
+        if (M != null) {
+          M.a();
         }
         super.onDestroy();
         return;
@@ -1351,37 +1353,45 @@ public class ViewImage21
   
   public boolean onKeyDown(int paramInt, KeyEvent paramKeyEvent)
   {
-    boolean bool = true;
+    boolean bool2 = true;
     switch (paramInt)
     {
     }
     for (;;)
     {
-      bool = super.onKeyDown(paramInt, paramKeyEvent);
+      boolean bool1 = super.onKeyDown(paramInt, paramKeyEvent);
       do
       {
-        return bool;
-        if (a(m))
+        long l1;
+        do
         {
-          c(m);
+          return bool1;
+          if (a(m))
+          {
+            c(m);
+            return true;
+          }
+          if (!a(n)) {
+            break;
+          }
+          c(n);
           return true;
-        }
-        if (!a(n)) {
-          break;
-        }
-        c(n);
-        return true;
+          l1 = System.currentTimeMillis();
+          bool1 = bool2;
+        } while (l1 - T < 500L);
+        T = l1;
+        bool1 = bool2;
       } while (w == 2);
       if (!v) {
         g();
       }
-      o();
+      p();
       continue;
       if (!v)
       {
         int i1 = c - 1;
         int i2 = e.b();
-        if ((i1 >= 0) && (i1 < i2))
+        if ((i1 >= 0) && (i1 < i2) && (S != null))
         {
           a(i1, false);
           continue;
@@ -1389,7 +1399,7 @@ public class ViewImage21
           {
             i1 = c + 1;
             i2 = e.b();
-            if ((i1 >= 0) && (i1 < i2)) {
+            if ((i1 >= 0) && (i1 < i2) && (S != null)) {
               a(i1, false);
             }
           }
@@ -1402,9 +1412,9 @@ public class ViewImage21
   {
     super.onPause();
     int i1 = c;
-    ch localch = (ch)i.getChildAt(i1 % 3);
-    if ((localch != null) && (localch.a() != null)) {
-      localch.a().stop();
+    cg localcg = (cg)i.getChildAt(i1 % 3);
+    if ((localcg != null) && (localcg.a() != null)) {
+      localcg.a().stop();
     }
     a = true;
     if (w == 2) {
@@ -1416,16 +1426,16 @@ public class ViewImage21
   {
     super.onResume();
     if (getIntent().getBooleanExtra("slide_mode", false)) {
-      new Handler().postDelayed(new bw(this), 500L);
+      new Handler().postDelayed(new bv(this), 500L);
     }
     a = false;
     if (w == 2) {
       a(true);
     }
     int i1 = c;
-    ch localch = (ch)i.getChildAt(i1 % 3);
-    if ((localch != null) && (localch.a() != null)) {
-      localch.a().start();
+    cg localcg = (cg)i.getChildAt(i1 % 3);
+    if ((localcg != null) && (localcg.a() != null)) {
+      localcg.a().start();
     }
     h();
   }

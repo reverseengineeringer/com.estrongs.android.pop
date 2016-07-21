@@ -1,8 +1,22 @@
 package com.estrongs.android.ui.pcs;
 
-public abstract interface n
+import com.baidu.sapi2.SapiWebView;
+import com.baidu.sapi2.SapiWebView.OnBackCallback;
+
+class n
+  implements SapiWebView.OnBackCallback
 {
-  public abstract void a(boolean paramBoolean, String paramString1, String paramString2);
+  n(l paraml) {}
+  
+  public void onBack()
+  {
+    if (l.g(a).canGoBack())
+    {
+      l.g(a).goBack();
+      return;
+    }
+    a.dismiss();
+  }
 }
 
 /* Location:

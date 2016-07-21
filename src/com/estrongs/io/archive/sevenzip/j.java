@@ -22,12 +22,12 @@ class j
       b.e.delete();
     }
     paramDialogInterface.dismiss();
-    paramDialogInterface = new ad(d.a(FexApplication.a()), b.f, a.p, false);
+    paramDialogInterface = new ad(d.a(FexApplication.a()), b.f, a.s, false);
     f = false;
-    if (!new File(a.p).exists()) {
-      new File(a.p).mkdirs();
+    if (!new File(a.s).exists()) {
+      new File(a.s).mkdirs();
     }
-    b.b.getString(2131427726, new Object[] { b.c });
+    b.b.getString(2131231393, new Object[] { b.c });
     paramDialogInterface.setDescription(a[0]);
     b.b.runOnUiThread(new k(this, paramDialogInterface));
     paramDialogInterface.addTaskStatusChangeListener(new m(this));

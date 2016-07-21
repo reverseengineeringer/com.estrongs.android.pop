@@ -1,82 +1,53 @@
 package com.estrongs.android.ui.b;
 
-import android.app.Activity;
-import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
+import android.view.ViewGroup;
+import android.widget.ImageView;
 import com.estrongs.a.a;
-import com.estrongs.android.pop.view.utils.AppRunner;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.am;
-import com.estrongs.fs.FileSystemException;
-import com.estrongs.fs.b.ad;
-import com.estrongs.fs.d;
+import com.estrongs.android.view.cg;
+import com.estrongs.android.view.ci;
+import com.estrongs.android.view.ck;
 import com.estrongs.fs.h;
-import org.json.JSONObject;
+import java.util.List;
 
 class v
-  implements AdapterView.OnItemClickListener
+  extends cg<h>.ck<h>
 {
-  v(u paramu) {}
-  
-  public void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
+  v(u paramu)
   {
-    paramView = (f)paramView.getTag();
-    if (u.a(a))
+    super(paramu);
+  }
+  
+  public ci a(ViewGroup paramViewGroup, int paramInt)
+  {
+    paramViewGroup = (a)((h)a.e(0)).getExtra("task");
+    paramViewGroup = new f(u.a(a), paramViewGroup);
+    paramViewGroup.b().setTag(paramViewGroup);
+    u.b(a).add(paramViewGroup);
+    return new ci(paramViewGroup.b());
+  }
+  
+  public void a(ci paramci, int paramInt)
+  {
+    a locala = (a)((h)a.e(paramInt)).getExtra("task");
+    f localf = (f)itemView.getTag();
+    localf.c();
+    localf.a(locala);
+    localf.b(u.c(a));
+    localf.a(a.h(paramInt));
+    itemView.setFocusable(true);
+    itemView.setOnClickListener(new w(this, localf, paramInt));
+    if (u.e(a) != null)
     {
-      paramView.a(false);
-      a.c(paramInt);
-      paramView.a(a.h(paramInt));
+      itemView.setOnLongClickListener(new x(this, paramInt));
+      b.setOnClickListener(new y(this, paramci, paramInt));
     }
     for (;;)
     {
+      a.setOnClickListener(new z(this, localf, paramInt));
       return;
-      paramAdapterView = paramView.a();
-      int i = paramAdapterView.getTaskStatus();
-      if ((paramAdapterView instanceof ad))
-      {
-        if (i != 1) {
-          break label158;
-        }
-        paramView.a().execute();
-      }
-      while (i == 4)
-      {
-        try
-        {
-          paramView = paramAdapterView.summary().optString("target");
-          if ((!am.ba(paramView)) || (d.a().b(paramView))) {
-            break label249;
-          }
-          ag.a(u.c(a), u.d(a).getString(2131428087, new Object[] { paramAdapterView.summary().optString("title") }), 0);
-          return;
-        }
-        catch (FileSystemException paramAdapterView)
-        {
-          Log.w("TaskGridViewWarpper", "Ignore error when open file in download manager");
-          return;
-        }
-        label158:
-        if (i == 3)
-        {
-          paramView.a().resume();
-        }
-        else if (i == 5)
-        {
-          u.b(a).a((h)a.e(paramInt));
-          paramView.a().addPostListener(u.b(a));
-          paramView.a(paramView.a());
-          paramView.a().execute();
-        }
-        else if (i == 2)
-        {
-          paramView.a().requsestPause();
-        }
-      }
+      itemView.setOnLongClickListener(null);
     }
-    label249:
-    AppRunner.a(u.e(a), paramView, paramView);
   }
 }
 

@@ -1,19 +1,16 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.Context;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.CheckBox;
-import com.estrongs.android.pop.ad;
+import com.estrongs.android.pop.view.FileExplorerActivity;
 
 class aj
-  implements View.OnClickListener
+  implements Runnable
 {
-  aj(ae paramae, Context paramContext) {}
+  aj(ai paramai, FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void onClick(View paramView)
+  public void run()
   {
-    ad.a(a).v(b.e.isChecked());
+    a.f(false);
+    a.B();
   }
 }
 

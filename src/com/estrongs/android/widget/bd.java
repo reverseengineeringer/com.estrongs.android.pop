@@ -1,28 +1,16 @@
 package com.estrongs.android.widget;
 
-import android.os.Handler;
-import android.os.Message;
-
-class bd
-  extends Handler
+public abstract interface bd
 {
-  bd(ScaledImageView paramScaledImageView) {}
+  public abstract void a(int paramInt);
   
-  public void handleMessage(Message paramMessage)
-  {
-    int i = (int)(System.currentTimeMillis() - ScaledImageView.a(a));
-    if (i < ScaledImageView.b(a))
-    {
-      float f1 = i / ScaledImageView.b(a);
-      ScaledImageView.a(a, (int)(ScaledImageView.c(a) + (ScaledImageView.d(a) - ScaledImageView.c(a)) * f1));
-      paramMessage = a;
-      float f2 = ScaledImageView.e(a);
-      ScaledImageView.b(paramMessage, (int)(f1 * (ScaledImageView.f(a) - ScaledImageView.e(a)) + f2));
-      ScaledImageView.g(a);
-      return;
-    }
-    a.a();
-  }
+  public abstract void a(int paramInt, float paramFloat);
+  
+  public abstract void b(int paramInt);
+  
+  public abstract void c(int paramInt);
+  
+  public abstract void d(int paramInt);
 }
 
 /* Location:

@@ -1,16 +1,25 @@
 package com.estrongs.android.pop.app;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import com.gmail.yuyang226.flickr.a.a.a;
+import java.util.Comparator;
+import java.util.Date;
 
 class da
-  implements View.OnClickListener
+  implements Comparator<a>
 {
   da(ImageCommentActivity paramImageCommentActivity) {}
   
-  public void onClick(View paramView)
+  public int a(a parama1, a parama2)
   {
-    a.finish();
+    long l1 = parama1.b().getTime();
+    long l2 = parama2.b().getTime();
+    if (l1 == l2) {
+      return 0;
+    }
+    if (l1 > l2) {
+      return -1;
+    }
+    return 1;
   }
 }
 

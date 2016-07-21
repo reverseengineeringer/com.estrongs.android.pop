@@ -1,6 +1,5 @@
 package com.estrongs.android.pop.spfs.flickr;
 
-import android.util.Log;
 import com.estrongs.android.pop.netfs.INetRefreshCallback;
 import com.estrongs.android.pop.netfs.NetFsException;
 import com.estrongs.android.pop.netfs.utils.FastPipedInputStream;
@@ -15,6 +14,8 @@ import com.estrongs.android.pop.spfs.SPFileInfo;
 import com.estrongs.android.pop.spfs.UploadPipedInputStream;
 import com.estrongs.android.pop.spfs.note.IPhotoInfo;
 import com.estrongs.android.util.TypedMap;
+import com.estrongs.android.util.l;
+import com.estrongs.android.util.n;
 import com.gmail.yuyang226.flickr.FlickrException;
 import com.gmail.yuyang226.flickr.d.d;
 import com.gmail.yuyang226.flickr.oauth.OAuthException;
@@ -497,7 +498,7 @@ public class FlickrFileSystem
     {
       if (getTokenString(paramString1, paramString2) == null)
       {
-        Log.e("Flickr", "delete, can't get the token");
+        l.e("Flickr", "delete, can't get the token");
         return null;
       }
       paramString2 = getTokentokenSecret;
@@ -568,7 +569,7 @@ public class FlickrFileSystem
     paramString = postJSON("be578355f122df0a", localArrayList, paramString);
     if (paramString.b())
     {
-      Log.e("Flickr", "Error code: " + paramString.c() + "," + "Error message: " + paramString.d());
+      l.e("Flickr", "Error code: " + paramString.c() + "," + "Error message: " + paramString.d());
       return null;
     }
     return paramString.a();
@@ -842,12 +843,12 @@ public class FlickrFileSystem
       paramString3 = getCacheEntry(paramString1, paramString3);
       if (paramString3 == null)
       {
-        Log.e("Flickr", "can't get cache entry for add comment");
+        l.e("Flickr", "can't get cache entry for add comment");
         return null;
       }
       if (getTokenString(paramString1, paramString2) == null)
       {
-        Log.e("Flickr", "delete, can't get the token");
+        l.e("Flickr", "delete, can't get the token");
         return null;
       }
     }
@@ -861,7 +862,7 @@ public class FlickrFileSystem
       paramString2.add(new com.gmail.yuyang226.flickr.a("method", "flickr.photosets.comments.addComment"));
       paramString2.add(new com.gmail.yuyang226.flickr.a("oauth_consumer_key", "09cfe7214aec69fbda2b044b64305055"));
       if (isDir != 1) {
-        break label217;
+        break label215;
       }
       paramString2.add(new com.gmail.yuyang226.flickr.a("photoset_id", url_id));
     }
@@ -871,15 +872,15 @@ public class FlickrFileSystem
       addOAuthToken(paramString2, paramString1);
       paramString1 = postJSON("be578355f122df0a", paramString2, paramString1);
       if (!paramString1.b()) {
-        break label241;
+        break label239;
       }
       throw new FlickrException(paramString1.c(), paramString1.d());
       paramString2.add(new com.gmail.yuyang226.flickr.a("method", "flickr.photos.comments.addComment"));
       break;
-      label217:
+      label215:
       paramString2.add(new com.gmail.yuyang226.flickr.a("photo_id", url_id));
     }
-    label241:
+    label239:
     paramString1 = paramString1.a().getJSONObject("comment").getString("id");
     return paramString1;
   }
@@ -891,12 +892,12 @@ public class FlickrFileSystem
       paramString3 = getCacheEntry(paramString1, paramString3);
       if (paramString3 == null)
       {
-        Log.e("Flickr", "can't get cache entry for add note");
+        l.e("Flickr", "can't get cache entry for add note");
         return null;
       }
       if (getTokenString(paramString1, paramString2) == null)
       {
-        Log.e("Flickr", "delete, can't get the token");
+        l.e("Flickr", "delete, can't get the token");
         return null;
       }
       paramString2 = new ArrayList();
@@ -935,7 +936,7 @@ public class FlickrFileSystem
     {
       if (getTokenString(paramString1, paramString2) == null)
       {
-        Log.e("Flickr", "delete, can't get the token");
+        l.e("Flickr", "delete, can't get the token");
         return;
       }
       addPhoto(paramString1, com.estrongs.fs.a.a.b(paramString3), paramString4);
@@ -1068,12 +1069,12 @@ public class FlickrFileSystem
       paramString3 = getCacheEntry(paramString1, paramString3);
       if (paramString3 == null)
       {
-        Log.e("Flickr", "can't get cache entry for delete comment");
+        l.e("Flickr", "can't get cache entry for delete comment");
         return;
       }
       if (getTokenString(paramString1, paramString2) == null)
       {
-        Log.e("Flickr", "delete, can't get the token");
+        l.e("Flickr", "delete, can't get the token");
         return;
       }
     }
@@ -1124,12 +1125,12 @@ public class FlickrFileSystem
       localFlickrFileCacheEntry = getCacheEntry(paramString1, paramString3);
       if (localFlickrFileCacheEntry == null)
       {
-        Log.e("Flickr", "can't get cache entry for delete");
+        l.e("Flickr", "can't get cache entry for delete");
         return false;
       }
       if (getTokenString(paramString1, paramString2) == null)
       {
-        Log.e("Flickr", "delete, can't get the token");
+        l.e("Flickr", "delete, can't get the token");
         return false;
       }
     }
@@ -1331,12 +1332,12 @@ public class FlickrFileSystem
       paramString3 = getCacheEntry(paramString1, paramString3);
       if (paramString3 == null)
       {
-        Log.e("Flickr", "can't get cache entry for get albums");
+        l.e("Flickr", "can't get cache entry for get albums");
         return null;
       }
       if (getTokenString(paramString1, paramString2) == null)
       {
-        Log.e("Flickr", "delete, can't get the token");
+        l.e("Flickr", "delete, can't get the token");
         return null;
       }
     }
@@ -1403,12 +1404,12 @@ public class FlickrFileSystem
         paramString3 = getCacheEntry(paramString1, paramString3);
         if (paramString3 == null)
         {
-          Log.e("Flickr", "can't get cache entry for get comments");
+          l.e("Flickr", "can't get cache entry for get comments");
           return null;
         }
         if (getTokenString(paramString1, paramString2) == null)
         {
-          Log.e("Flickr", "delete, can't get the token");
+          l.e("Flickr", "delete, can't get the token");
           return null;
         }
         paramString2 = new ArrayList();
@@ -1492,30 +1493,30 @@ public class FlickrFileSystem
     //   20: ifnull -10 -> 10
     //   23: aload_0
     //   24: aload_2
-    //   25: invokevirtual 1153	com/estrongs/android/pop/spfs/flickr/FlickrFileSystem:convertToFileInfo	(Lcom/estrongs/android/pop/spfs/flickr/FlickrFileSystemCache$FlickrFileCacheEntry;)Lcom/estrongs/android/pop/spfs/SPFileInfo;
+    //   25: invokevirtual 1152	com/estrongs/android/pop/spfs/flickr/FlickrFileSystem:convertToFileInfo	(Lcom/estrongs/android/pop/spfs/flickr/FlickrFileSystemCache$FlickrFileCacheEntry;)Lcom/estrongs/android/pop/spfs/SPFileInfo;
     //   28: astore_1
     //   29: aload_1
-    //   30: getfield 973	com/estrongs/android/pop/spfs/SPFileInfo:size	J
+    //   30: getfield 972	com/estrongs/android/pop/spfs/SPFileInfo:size	J
     //   33: lstore 4
     //   35: lload 4
-    //   37: ldc2_w 1154
+    //   37: ldc2_w 1153
     //   40: lcmp
     //   41: ifne +15 -> 56
     //   44: aload_1
     //   45: aload_2
     //   46: getfield 404	com/estrongs/android/pop/spfs/flickr/FlickrFileSystemCache$FlickrFileCacheEntry:url	Ljava/lang/String;
-    //   49: invokestatic 1160	com/estrongs/android/pop/spfs/ESURLUtil:getLength	(Ljava/lang/String;)I
+    //   49: invokestatic 1159	com/estrongs/android/pop/spfs/ESURLUtil:getLength	(Ljava/lang/String;)I
     //   52: i2l
-    //   53: putfield 973	com/estrongs/android/pop/spfs/SPFileInfo:size	J
+    //   53: putfield 972	com/estrongs/android/pop/spfs/SPFileInfo:size	J
     //   56: aload_1
     //   57: areturn
     //   58: astore_2
     //   59: aload_2
-    //   60: invokevirtual 1074	java/net/MalformedURLException:printStackTrace	()V
-    //   63: new 1031	com/estrongs/android/pop/netfs/NetFsException
+    //   60: invokevirtual 1073	java/net/MalformedURLException:printStackTrace	()V
+    //   63: new 1030	com/estrongs/android/pop/netfs/NetFsException
     //   66: dup
     //   67: aload_2
-    //   68: invokespecial 1161	com/estrongs/android/pop/netfs/NetFsException:<init>	(Ljava/lang/Throwable;)V
+    //   68: invokespecial 1160	com/estrongs/android/pop/netfs/NetFsException:<init>	(Ljava/lang/Throwable;)V
     //   71: pop
     //   72: goto -16 -> 56
     //   75: astore_1
@@ -1525,11 +1526,11 @@ public class FlickrFileSystem
     //   81: areturn
     //   82: astore_2
     //   83: aload_2
-    //   84: invokevirtual 1162	java/io/IOException:printStackTrace	()V
-    //   87: new 1031	com/estrongs/android/pop/netfs/NetFsException
+    //   84: invokevirtual 1161	java/io/IOException:printStackTrace	()V
+    //   87: new 1030	com/estrongs/android/pop/netfs/NetFsException
     //   90: dup
     //   91: aload_2
-    //   92: invokespecial 1161	com/estrongs/android/pop/netfs/NetFsException:<init>	(Ljava/lang/Throwable;)V
+    //   92: invokespecial 1160	com/estrongs/android/pop/netfs/NetFsException:<init>	(Ljava/lang/Throwable;)V
     //   95: pop
     //   96: goto -40 -> 56
     // Local variable table:
@@ -1560,7 +1561,7 @@ public class FlickrFileSystem
         paramString3 = getCacheEntry(paramString1, paramString3);
         if ((paramString3 == null) || (url == null))
         {
-          Log.e("Flickr", "can't get cache entry for InputStream");
+          l.e("Flickr", "can't get cache entry for InputStream");
           return null;
         }
         if (isDir == 1)
@@ -1574,7 +1575,7 @@ public class FlickrFileSystem
           if ((paramString1.getStatusLine().getStatusCode() == 200) || (paramString1.getStatusLine().getStatusCode() == 206) || (paramString1.getStatusLine().getStatusCode() == 203)) {
             break;
           }
-          Log.e("Flickr", "getInputStream ret:" + paramString1.getStatusLine().getStatusCode());
+          l.e("Flickr", "getInputStream ret:" + paramString1.getStatusLine().getStatusCode());
           return null;
         }
       }
@@ -1620,7 +1621,7 @@ public class FlickrFileSystem
         else
         {
           if (str.indexOf('.') < 0) {
-            break label425;
+            break label424;
           }
           paramString3 = str.substring(0, str.indexOf('.'));
         }
@@ -1635,17 +1636,17 @@ public class FlickrFileSystem
           localArrayList.add(new com.gmail.yuyang226.flickr.a("tags", paramTypedMap.getString("tags")));
         }
         if (!paramTypedMap.getBoolean("is_public", true)) {
-          break label431;
+          break label430;
         }
         paramString3 = "1";
         localArrayList.add(new com.gmail.yuyang226.flickr.a("is_public", paramString3));
         if (!paramTypedMap.getBoolean("is_family", false)) {
-          break label438;
+          break label437;
         }
         paramString3 = "1";
         localArrayList.add(new com.gmail.yuyang226.flickr.a("is_family", paramString3));
         if (!paramTypedMap.getBoolean("is_friend", false)) {
-          break label445;
+          break label444;
         }
         paramString3 = "1";
         localArrayList.add(new com.gmail.yuyang226.flickr.a("is_friend", paramString3));
@@ -1664,7 +1665,7 @@ public class FlickrFileSystem
         }
         catch (IOException paramString1)
         {
-          Log.e("Flickr", "Can't create pipe stream");
+          l.e("Flickr", "Can't create pipe stream");
           return null;
         }
         paramString3 = str;
@@ -1673,15 +1674,15 @@ public class FlickrFileSystem
       {
         return null;
       }
-      label425:
+      label424:
       continue;
-      label431:
+      label430:
       paramString3 = "0";
       continue;
-      label438:
+      label437:
       paramString3 = "0";
       continue;
-      label445:
+      label444:
       paramString3 = "0";
     }
   }
@@ -1697,7 +1698,7 @@ public class FlickrFileSystem
     {
       Object localObject1 = KeyStore.getInstance(KeyStore.getDefaultType());
       ((KeyStore)localObject1).load(null, null);
-      Object localObject2 = new FlickrFileSystem.MySSLSocketFactory(this, (KeyStore)localObject1);
+      Object localObject2 = new n((KeyStore)localObject1);
       ((SSLSocketFactory)localObject2).setHostnameVerifier(SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
       localObject1 = new BasicHttpParams();
       HttpProtocolParams.setVersion((HttpParams)localObject1, HttpVersion.HTTP_1_1);
@@ -1744,7 +1745,7 @@ public class FlickrFileSystem
       paramString1 = getCacheEntry(paramString1, paramString3);
       if ((paramString1 == null) || (isDir != 0) || (url == null))
       {
-        Log.e("Flickr", "can't get cache entry for get photo extension");
+        l.e("Flickr", "can't get cache entry for get photo extension");
         return null;
       }
       paramString1 = url.substring(url.lastIndexOf('.'));
@@ -1764,12 +1765,12 @@ public class FlickrFileSystem
       localFlickrFileCacheEntry = getCacheEntry(paramString1, paramString3);
       if (localFlickrFileCacheEntry == null)
       {
-        Log.e("Flickr", "can't get cache entry for get photo info");
+        l.e("Flickr", "can't get cache entry for get photo info");
         return null;
       }
       if (getTokenString(paramString1, paramString2) == null)
       {
-        Log.e("Flickr", "delete, can't get the token");
+        l.e("Flickr", "delete, can't get the token");
         return null;
       }
     }
@@ -1832,7 +1833,7 @@ public class FlickrFileSystem
       localObject2 = getCacheEntry(paramString1, paramString3);
       if ((localObject2 == null) || (isDir != 0) || (url == null))
       {
-        Log.e("Flickr", "can't get cache entry for InputStream");
+        l.e("Flickr", "can't get cache entry for InputStream");
         return null;
       }
       paramString3 = (String)localObject1;
@@ -1844,7 +1845,7 @@ public class FlickrFileSystem
       paramString1 = getTokenString(paramString1, paramString2);
       if (paramString1 == null)
       {
-        Log.e("Flickr", "can't get token download");
+        l.e("Flickr", "can't get token download");
         return null;
       }
     }
@@ -1857,7 +1858,7 @@ public class FlickrFileSystem
     paramString1 = ((HttpClient)localObject2).execute(paramString3);
     if ((paramString1.getStatusLine().getStatusCode() != 200) && (paramString1.getStatusLine().getStatusCode() != 203))
     {
-      Log.e("Flickr", "getInputStream ret:" + paramString1.getStatusLine().getStatusCode());
+      l.e("Flickr", "getInputStream ret:" + paramString1.getStatusLine().getStatusCode());
       return null;
     }
     paramString1 = paramString1.getEntity();
@@ -2119,7 +2120,7 @@ public class FlickrFileSystem
     {
       if (getTokenString(paramString1, paramString2) == null)
       {
-        Log.e("Flickr", "delete, can't get the token");
+        l.e("Flickr", "delete, can't get the token");
         return;
       }
       removePhoto(paramString1, com.estrongs.fs.a.a.b(paramString3), paramString4);
@@ -2140,7 +2141,7 @@ public class FlickrFileSystem
         FlickrFileSystemCache.FlickrFileCacheEntry localFlickrFileCacheEntry = getCacheEntry(paramString1, paramString3);
         if (localFlickrFileCacheEntry == null)
         {
-          Log.e("Flickr", "can't get cache entry for rename");
+          l.e("Flickr", "can't get cache entry for rename");
           return false;
         }
         paramString3 = getPathName(paramString4);
@@ -2155,7 +2156,7 @@ public class FlickrFileSystem
           addOAuthToken(paramString4, paramString1);
           if (postJSON("be578355f122df0a", paramString4, paramString1).b())
           {
-            Log.e("Flickr", "rename failed");
+            l.e("Flickr", "rename failed");
             return false;
           }
           paramString1 = FlickrFileSystemCache.instance();
@@ -2193,75 +2194,75 @@ public class FlickrFileSystem
     //   0: aconst_null
     //   1: astore 4
     //   3: aload_1
-    //   4: invokevirtual 1530	java/net/URL:openConnection	()Ljava/net/URLConnection;
-    //   7: checkcast 1532	java/net/HttpURLConnection
+    //   4: invokevirtual 1529	java/net/URL:openConnection	()Ljava/net/URLConnection;
+    //   7: checkcast 1531	java/net/HttpURLConnection
     //   10: astore_1
     //   11: aload_1
-    //   12: ldc_w 844
-    //   15: invokevirtual 1535	java/net/HttpURLConnection:setRequestMethod	(Ljava/lang/String;)V
+    //   12: ldc_w 843
+    //   15: invokevirtual 1534	java/net/HttpURLConnection:setRequestMethod	(Ljava/lang/String;)V
     //   18: aload_1
-    //   19: ldc_w 1537
+    //   19: ldc_w 1536
     //   22: new 440	java/lang/StringBuilder
     //   25: dup
     //   26: invokespecial 441	java/lang/StringBuilder:<init>	()V
-    //   29: ldc_w 1539
+    //   29: ldc_w 1538
     //   32: invokevirtual 445	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   35: ldc_w 1541
+    //   35: ldc_w 1540
     //   38: invokevirtual 445	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   41: invokevirtual 448	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   44: invokevirtual 1544	java/net/HttpURLConnection:setRequestProperty	(Ljava/lang/String;Ljava/lang/String;)V
+    //   44: invokevirtual 1543	java/net/HttpURLConnection:setRequestProperty	(Ljava/lang/String;Ljava/lang/String;)V
     //   47: aload_1
-    //   48: ldc_w 1546
+    //   48: ldc_w 1545
     //   51: ldc 21
-    //   53: invokevirtual 1544	java/net/HttpURLConnection:setRequestProperty	(Ljava/lang/String;Ljava/lang/String;)V
+    //   53: invokevirtual 1543	java/net/HttpURLConnection:setRequestProperty	(Ljava/lang/String;Ljava/lang/String;)V
     //   56: aload_1
     //   57: iconst_1
-    //   58: invokevirtual 1550	java/net/HttpURLConnection:setDoInput	(Z)V
+    //   58: invokevirtual 1549	java/net/HttpURLConnection:setDoInput	(Z)V
     //   61: aload_1
     //   62: iconst_1
-    //   63: invokevirtual 1553	java/net/HttpURLConnection:setDoOutput	(Z)V
+    //   63: invokevirtual 1552	java/net/HttpURLConnection:setDoOutput	(Z)V
     //   66: aload_1
     //   67: sipush 1024
-    //   70: invokevirtual 1557	java/net/HttpURLConnection:setChunkedStreamingMode	(I)V
+    //   70: invokevirtual 1556	java/net/HttpURLConnection:setChunkedStreamingMode	(I)V
     //   73: aload_1
     //   74: sipush 30000
-    //   77: invokevirtual 1560	java/net/HttpURLConnection:setConnectTimeout	(I)V
+    //   77: invokevirtual 1559	java/net/HttpURLConnection:setConnectTimeout	(I)V
     //   80: aload_1
     //   81: sipush 30000
-    //   84: invokevirtual 1563	java/net/HttpURLConnection:setReadTimeout	(I)V
+    //   84: invokevirtual 1562	java/net/HttpURLConnection:setReadTimeout	(I)V
     //   87: aload_1
-    //   88: invokevirtual 1565	java/net/HttpURLConnection:connect	()V
-    //   91: new 857	java/io/DataOutputStream
+    //   88: invokevirtual 1564	java/net/HttpURLConnection:connect	()V
+    //   91: new 856	java/io/DataOutputStream
     //   94: dup
     //   95: aload_1
-    //   96: invokevirtual 1569	java/net/HttpURLConnection:getOutputStream	()Ljava/io/OutputStream;
-    //   99: invokespecial 1572	java/io/DataOutputStream:<init>	(Ljava/io/OutputStream;)V
+    //   96: invokevirtual 1568	java/net/HttpURLConnection:getOutputStream	()Ljava/io/OutputStream;
+    //   99: invokespecial 1571	java/io/DataOutputStream:<init>	(Ljava/io/OutputStream;)V
     //   102: astore 5
     //   104: new 440	java/lang/StringBuilder
     //   107: dup
     //   108: invokespecial 441	java/lang/StringBuilder:<init>	()V
-    //   111: ldc_w 1574
+    //   111: ldc_w 1573
     //   114: invokevirtual 445	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   117: ldc_w 1541
+    //   117: ldc_w 1540
     //   120: invokevirtual 445	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   123: invokevirtual 448	java/lang/StringBuilder:toString	()Ljava/lang/String;
     //   126: astore 4
     //   128: aload 5
     //   130: aload 4
-    //   132: invokevirtual 860	java/io/DataOutputStream:writeBytes	(Ljava/lang/String;)V
+    //   132: invokevirtual 859	java/io/DataOutputStream:writeBytes	(Ljava/lang/String;)V
     //   135: aload_2
-    //   136: invokeinterface 1575 1 0
+    //   136: invokeinterface 1574 1 0
     //   141: astore_2
     //   142: aload_2
-    //   143: invokeinterface 813 1 0
+    //   143: invokeinterface 812 1 0
     //   148: ifeq +48 -> 196
     //   151: aload_0
     //   152: aload_2
-    //   153: invokeinterface 816 1 0
+    //   153: invokeinterface 815 1 0
     //   158: checkcast 275	com/gmail/yuyang226/flickr/a
     //   161: aload 5
     //   163: aload 4
-    //   165: invokespecial 1577	com/estrongs/android/pop/spfs/flickr/FlickrFileSystem:writeParam	(Lcom/gmail/yuyang226/flickr/a;Ljava/io/DataOutputStream;Ljava/lang/String;)V
+    //   165: invokespecial 1576	com/estrongs/android/pop/spfs/flickr/FlickrFileSystem:writeParam	(Lcom/gmail/yuyang226/flickr/a;Ljava/io/DataOutputStream;Ljava/lang/String;)V
     //   168: goto -26 -> 142
     //   171: astore_2
     //   172: aload_1
@@ -2271,95 +2272,95 @@ public class FlickrFileSystem
     //   177: aload 5
     //   179: astore_2
     //   180: aload_2
-    //   181: invokestatic 1581	com/gmail/yuyang226/flickr/d/b:a	(Ljava/io/OutputStream;)V
+    //   181: invokestatic 1580	com/gmail/yuyang226/flickr/d/b:a	(Ljava/io/OutputStream;)V
     //   184: aload 4
     //   186: ifnull +8 -> 194
     //   189: aload 4
-    //   191: invokevirtual 1584	java/net/HttpURLConnection:disconnect	()V
+    //   191: invokevirtual 1583	java/net/HttpURLConnection:disconnect	()V
     //   194: aload_1
     //   195: athrow
     //   196: aload 5
-    //   198: ldc_w 1586
-    //   201: invokevirtual 860	java/io/DataOutputStream:writeBytes	(Ljava/lang/String;)V
+    //   198: ldc_w 1585
+    //   201: invokevirtual 859	java/io/DataOutputStream:writeBytes	(Ljava/lang/String;)V
     //   204: aload 5
-    //   206: invokevirtual 1587	java/io/DataOutputStream:flush	()V
+    //   206: invokevirtual 1586	java/io/DataOutputStream:flush	()V
     //   209: aload 5
-    //   211: invokevirtual 1588	java/io/DataOutputStream:close	()V
+    //   211: invokevirtual 1587	java/io/DataOutputStream:close	()V
     //   214: aload_1
-    //   215: invokevirtual 1591	java/net/HttpURLConnection:getResponseCode	()I
+    //   215: invokevirtual 1590	java/net/HttpURLConnection:getResponseCode	()I
     //   218: istore_3
     //   219: iload_3
     //   220: sipush 200
     //   223: if_icmpeq +78 -> 301
     //   226: aload_1
-    //   227: invokevirtual 1594	java/net/HttpURLConnection:getErrorStream	()Ljava/io/InputStream;
-    //   230: invokestatic 1598	com/estrongs/android/pop/spfs/OAuthUtil:readFromStream	(Ljava/io/InputStream;)Ljava/lang/String;
+    //   227: invokevirtual 1593	java/net/HttpURLConnection:getErrorStream	()Ljava/io/InputStream;
+    //   230: invokestatic 1597	com/estrongs/android/pop/spfs/OAuthUtil:readFromStream	(Ljava/io/InputStream;)Ljava/lang/String;
     //   233: astore_2
-    //   234: new 1027	java/io/IOException
+    //   234: new 1026	java/io/IOException
     //   237: dup
     //   238: new 440	java/lang/StringBuilder
     //   241: dup
     //   242: invokespecial 441	java/lang/StringBuilder:<init>	()V
-    //   245: ldc_w 1600
+    //   245: ldc_w 1599
     //   248: invokevirtual 445	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   251: iload_3
-    //   252: invokevirtual 670	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   255: ldc_w 1602
+    //   252: invokevirtual 669	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
+    //   255: ldc_w 1601
     //   258: invokevirtual 445	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   261: aload_1
-    //   262: invokevirtual 1605	java/net/HttpURLConnection:getResponseMessage	()Ljava/lang/String;
+    //   262: invokevirtual 1604	java/net/HttpURLConnection:getResponseMessage	()Ljava/lang/String;
     //   265: invokevirtual 445	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   268: ldc_w 1607
+    //   268: ldc_w 1606
     //   271: invokevirtual 445	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   274: aload_2
     //   275: invokevirtual 445	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   278: invokevirtual 448	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   281: invokespecial 1608	java/io/IOException:<init>	(Ljava/lang/String;)V
+    //   281: invokespecial 1607	java/io/IOException:<init>	(Ljava/lang/String;)V
     //   284: athrow
     //   285: astore_2
     //   286: aload_1
-    //   287: invokevirtual 1594	java/net/HttpURLConnection:getErrorStream	()Ljava/io/InputStream;
+    //   287: invokevirtual 1593	java/net/HttpURLConnection:getErrorStream	()Ljava/io/InputStream;
     //   290: ifnull +110 -> 400
     //   293: aload_1
-    //   294: invokevirtual 1591	java/net/HttpURLConnection:getResponseCode	()I
+    //   294: invokevirtual 1590	java/net/HttpURLConnection:getResponseCode	()I
     //   297: istore_3
     //   298: goto -79 -> 219
-    //   301: new 1610	com/gmail/yuyang226/flickr/c/b
+    //   301: new 1609	com/gmail/yuyang226/flickr/c/b
     //   304: dup
-    //   305: invokespecial 1611	com/gmail/yuyang226/flickr/c/b:<init>	()V
+    //   305: invokespecial 1610	com/gmail/yuyang226/flickr/c/b:<init>	()V
     //   308: astore_2
-    //   309: invokestatic 1617	javax/xml/parsers/DocumentBuilderFactory:newInstance	()Ljavax/xml/parsers/DocumentBuilderFactory;
-    //   312: invokevirtual 1621	javax/xml/parsers/DocumentBuilderFactory:newDocumentBuilder	()Ljavax/xml/parsers/DocumentBuilder;
+    //   309: invokestatic 1616	javax/xml/parsers/DocumentBuilderFactory:newInstance	()Ljavax/xml/parsers/DocumentBuilderFactory;
+    //   312: invokevirtual 1620	javax/xml/parsers/DocumentBuilderFactory:newDocumentBuilder	()Ljavax/xml/parsers/DocumentBuilder;
     //   315: astore 4
     //   317: aload 4
     //   319: aload_1
-    //   320: invokevirtual 1624	java/net/HttpURLConnection:getInputStream	()Ljava/io/InputStream;
-    //   323: invokevirtual 1629	javax/xml/parsers/DocumentBuilder:parse	(Ljava/io/InputStream;)Lorg/w3c/dom/Document;
+    //   320: invokevirtual 1623	java/net/HttpURLConnection:getInputStream	()Ljava/io/InputStream;
+    //   323: invokevirtual 1628	javax/xml/parsers/DocumentBuilder:parse	(Ljava/io/InputStream;)Lorg/w3c/dom/Document;
     //   326: astore 4
     //   328: aload_2
     //   329: aload 4
-    //   331: invokevirtual 1632	com/gmail/yuyang226/flickr/c/b:a	(Lorg/w3c/dom/Document;)V
+    //   331: invokevirtual 1631	com/gmail/yuyang226/flickr/c/b:a	(Lorg/w3c/dom/Document;)V
     //   334: aload 5
-    //   336: invokestatic 1581	com/gmail/yuyang226/flickr/d/b:a	(Ljava/io/OutputStream;)V
+    //   336: invokestatic 1580	com/gmail/yuyang226/flickr/d/b:a	(Ljava/io/OutputStream;)V
     //   339: aload_1
     //   340: ifnull +7 -> 347
     //   343: aload_1
-    //   344: invokevirtual 1584	java/net/HttpURLConnection:disconnect	()V
+    //   344: invokevirtual 1583	java/net/HttpURLConnection:disconnect	()V
     //   347: aload_2
     //   348: areturn
     //   349: astore_2
-    //   350: new 1027	java/io/IOException
+    //   350: new 1026	java/io/IOException
     //   353: dup
     //   354: new 440	java/lang/StringBuilder
     //   357: dup
     //   358: invokespecial 441	java/lang/StringBuilder:<init>	()V
-    //   361: ldc_w 1634
+    //   361: ldc_w 1633
     //   364: invokevirtual 445	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   367: aload_2
-    //   368: invokevirtual 1637	java/io/IOException:getMessage	()Ljava/lang/String;
+    //   368: invokevirtual 1636	java/io/IOException:getMessage	()Ljava/lang/String;
     //   371: invokevirtual 445	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   374: invokevirtual 448	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   377: invokespecial 1608	java/io/IOException:<init>	(Ljava/lang/String;)V
+    //   377: invokespecial 1607	java/io/IOException:<init>	(Ljava/lang/String;)V
     //   380: athrow
     //   381: astore_1
     //   382: aconst_null
@@ -2417,12 +2418,12 @@ public class FlickrFileSystem
       paramString3 = getCacheEntry(paramString1, paramString3);
       if (paramString3 == null)
       {
-        Log.e("Flickr", "can't get cache entry for set meta");
+        l.e("Flickr", "can't get cache entry for set meta");
         return;
       }
       if (getTokenString(paramString1, paramString2) == null)
       {
-        Log.e("Flickr", "delete, can't get the token");
+        l.e("Flickr", "delete, can't get the token");
         return;
       }
     }
@@ -2436,7 +2437,7 @@ public class FlickrFileSystem
       paramString2.add(new com.gmail.yuyang226.flickr.a("method", "flickr.photosets.editMeta"));
       paramString2.add(new com.gmail.yuyang226.flickr.a("oauth_consumer_key", "09cfe7214aec69fbda2b044b64305055"));
       if (isDir != 1) {
-        break label239;
+        break label237;
       }
       paramString2.add(new com.gmail.yuyang226.flickr.a("photoset_id", url_id));
     }
@@ -2454,7 +2455,7 @@ public class FlickrFileSystem
       throw new FlickrException(paramString1.c(), paramString1.d());
       paramString2.add(new com.gmail.yuyang226.flickr.a("method", "flickr.photos.setMeta"));
       break;
-      label239:
+      label237:
       paramString2.add(new com.gmail.yuyang226.flickr.a("photo_id", url_id));
     }
   }
@@ -2467,12 +2468,12 @@ public class FlickrFileSystem
       localFlickrFileCacheEntry = getCacheEntry(paramString1, paramString3);
       if (localFlickrFileCacheEntry == null)
       {
-        Log.e("Flickr", "can't get cache entry for set permissions");
+        l.e("Flickr", "can't get cache entry for set permissions");
         return;
       }
       if (getTokenString(paramString1, paramString2) == null)
       {
-        Log.e("Flickr", "delete, can't get the token");
+        l.e("Flickr", "delete, can't get the token");
         return;
       }
     }
@@ -2489,10 +2490,10 @@ public class FlickrFileSystem
       paramString2 = "1";
       paramString3.add(new com.gmail.yuyang226.flickr.a("is_public", paramString2));
       if (!paramTypedMap.getBoolean("is_friend")) {
-        break label276;
+        break label274;
       }
     }
-    label276:
+    label274:
     for (paramString2 = "1";; paramString2 = "0")
     {
       paramString3.add(new com.gmail.yuyang226.flickr.a("is_friend", paramString2));
@@ -2525,12 +2526,12 @@ public class FlickrFileSystem
       paramString3 = getCacheEntry(paramString1, paramString3);
       if (paramString3 == null)
       {
-        Log.e("Flickr", "can't get cache entry for set tags");
+        l.e("Flickr", "can't get cache entry for set tags");
         return;
       }
       if (getTokenString(paramString1, paramString2) == null)
       {
-        Log.e("Flickr", "delete, can't get the token");
+        l.e("Flickr", "delete, can't get the token");
         return;
       }
     }

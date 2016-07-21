@@ -174,11 +174,11 @@
 
     invoke-virtual {p0, v0, v1, v2, v3}, Landroid/support/v4/view/PagerTabStrip;->setPadding(IIII)V
 
-    invoke-virtual {p0}, Landroid/support/v4/view/PagerTabStrip;->b()I
+    invoke-virtual {p0}, Landroid/support/v4/view/PagerTabStrip;->getTextSpacing()I
 
     move-result v0
 
-    invoke-virtual {p0, v0}, Landroid/support/v4/view/PagerTabStrip;->a(I)V
+    invoke-virtual {p0, v0}, Landroid/support/v4/view/PagerTabStrip;->setTextSpacing(I)V
 
     invoke-virtual {p0, v4}, Landroid/support/v4/view/PagerTabStrip;->setWillNotDraw(Z)V
 
@@ -188,9 +188,9 @@
 
     iget-object v0, p0, Landroid/support/v4/view/PagerTabStrip;->b:Landroid/widget/TextView;
 
-    new-instance v1, Landroid/support/v4/view/af;
+    new-instance v1, Landroid/support/v4/view/bx;
 
-    invoke-direct {v1, p0}, Landroid/support/v4/view/af;-><init>(Landroid/support/v4/view/PagerTabStrip;)V
+    invoke-direct {v1, p0}, Landroid/support/v4/view/bx;-><init>(Landroid/support/v4/view/PagerTabStrip;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -200,9 +200,9 @@
 
     iget-object v0, p0, Landroid/support/v4/view/PagerTabStrip;->d:Landroid/widget/TextView;
 
-    new-instance v1, Landroid/support/v4/view/ag;
+    new-instance v1, Landroid/support/v4/view/by;
 
-    invoke-direct {v1, p0}, Landroid/support/v4/view/ag;-><init>(Landroid/support/v4/view/PagerTabStrip;)V
+    invoke-direct {v1, p0}, Landroid/support/v4/view/by;-><init>(Landroid/support/v4/view/PagerTabStrip;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -220,37 +220,6 @@
 
 
 # virtual methods
-.method a()I
-    .locals 2
-
-    invoke-super {p0}, Landroid/support/v4/view/PagerTitleStrip;->a()I
-
-    move-result v0
-
-    iget v1, p0, Landroid/support/v4/view/PagerTabStrip;->j:I
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public a(I)V
-    .locals 1
-
-    iget v0, p0, Landroid/support/v4/view/PagerTabStrip;->i:I
-
-    if-ge p1, v0, :cond_0
-
-    iget p1, p0, Landroid/support/v4/view/PagerTabStrip;->i:I
-
-    :cond_0
-    invoke-super {p0, p1}, Landroid/support/v4/view/PagerTitleStrip;->a(I)V
-
-    return-void
-.end method
-
 .method a(IFZ)V
     .locals 6
 
@@ -333,6 +302,38 @@
     invoke-virtual {p0, v0}, Landroid/support/v4/view/PagerTabStrip;->invalidate(Landroid/graphics/Rect;)V
 
     return-void
+.end method
+
+.method public getDrawFullUnderline()Z
+    .locals 1
+
+    iget-boolean v0, p0, Landroid/support/v4/view/PagerTabStrip;->o:Z
+
+    return v0
+.end method
+
+.method getMinHeight()I
+    .locals 2
+
+    invoke-super {p0}, Landroid/support/v4/view/PagerTitleStrip;->getMinHeight()I
+
+    move-result v0
+
+    iget v1, p0, Landroid/support/v4/view/PagerTabStrip;->j:I
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getTabIndicatorColor()I
+    .locals 1
+
+    iget v0, p0, Landroid/support/v4/view/PagerTabStrip;->f:I
+
+    return v0
 .end method
 
 .method protected onDraw(Landroid/graphics/Canvas;)V
@@ -555,13 +556,13 @@
 
     iget-object v2, p0, Landroid/support/v4/view/PagerTabStrip;->a:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v2}, Landroid/support/v4/view/ViewPager;->c()I
+    invoke-virtual {v2}, Landroid/support/v4/view/ViewPager;->getCurrentItem()I
 
     move-result v2
 
     add-int/lit8 v2, v2, -0x1
 
-    invoke-virtual {v0, v2}, Landroid/support/v4/view/ViewPager;->a(I)V
+    invoke-virtual {v0, v2}, Landroid/support/v4/view/ViewPager;->setCurrentItem(I)V
 
     goto :goto_1
 
@@ -586,13 +587,13 @@
 
     iget-object v2, p0, Landroid/support/v4/view/PagerTabStrip;->a:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v2}, Landroid/support/v4/view/ViewPager;->c()I
+    invoke-virtual {v2}, Landroid/support/v4/view/ViewPager;->getCurrentItem()I
 
     move-result v2
 
     add-int/lit8 v2, v2, 0x1
 
-    invoke-virtual {v0, v2}, Landroid/support/v4/view/ViewPager;->a(I)V
+    invoke-virtual {v0, v2}, Landroid/support/v4/view/ViewPager;->setCurrentItem(I)V
 
     goto :goto_1
 
@@ -683,6 +684,20 @@
     goto :goto_0
 .end method
 
+.method public setDrawFullUnderline(Z)V
+    .locals 1
+
+    iput-boolean p1, p0, Landroid/support/v4/view/PagerTabStrip;->o:Z
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Landroid/support/v4/view/PagerTabStrip;->p:Z
+
+    invoke-virtual {p0}, Landroid/support/v4/view/PagerTabStrip;->invalidate()V
+
+    return-void
+.end method
+
 .method public setPadding(IIII)V
     .locals 1
 
@@ -694,6 +709,57 @@
 
     :cond_0
     invoke-super {p0, p1, p2, p3, p4}, Landroid/support/v4/view/PagerTitleStrip;->setPadding(IIII)V
+
+    return-void
+.end method
+
+.method public setTabIndicatorColor(I)V
+    .locals 2
+
+    iput p1, p0, Landroid/support/v4/view/PagerTabStrip;->f:I
+
+    iget-object v0, p0, Landroid/support/v4/view/PagerTabStrip;->l:Landroid/graphics/Paint;
+
+    iget v1, p0, Landroid/support/v4/view/PagerTabStrip;->f:I
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+
+    invoke-virtual {p0}, Landroid/support/v4/view/PagerTabStrip;->invalidate()V
+
+    return-void
+.end method
+
+.method public setTabIndicatorColorResource(I)V
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/support/v4/view/PagerTabStrip;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Landroid/support/v4/view/PagerTabStrip;->setTabIndicatorColor(I)V
+
+    return-void
+.end method
+
+.method public setTextSpacing(I)V
+    .locals 1
+
+    iget v0, p0, Landroid/support/v4/view/PagerTabStrip;->i:I
+
+    if-ge p1, v0, :cond_0
+
+    iget p1, p0, Landroid/support/v4/view/PagerTabStrip;->i:I
+
+    :cond_0
+    invoke-super {p0, p1}, Landroid/support/v4/view/PagerTitleStrip;->setTextSpacing(I)V
 
     return-void
 .end method

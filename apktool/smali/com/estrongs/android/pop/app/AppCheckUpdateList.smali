@@ -7,7 +7,7 @@
 
 .field b:Landroid/widget/TextView;
 
-.field c:Lcom/estrongs/android/ui/dialog/y;
+.field c:Lcom/estrongs/android/ui/dialog/aa;
 
 .field private d:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
@@ -44,7 +44,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/AppCheckUpdateList;->c:Lcom/estrongs/android/ui/dialog/y;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/AppCheckUpdateList;->c:Lcom/estrongs/android/ui/dialog/aa;
 
     return-void
 .end method
@@ -62,7 +62,7 @@
 
     const/4 v3, 0x0
 
-    const v0, 0x7f0a0024
+    const v0, 0x7f0e0187
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/AppCheckUpdateList;->findViewById(I)Landroid/view/View;
 
@@ -197,37 +197,37 @@
 .method public a(Landroid/content/Context;)V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AppCheckUpdateList;->c:Lcom/estrongs/android/ui/dialog/y;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AppCheckUpdateList;->c:Lcom/estrongs/android/ui/dialog/aa;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcom/estrongs/android/ui/dialog/y;
+    new-instance v0, Lcom/estrongs/android/ui/dialog/aa;
 
-    invoke-direct {v0, p1}, Lcom/estrongs/android/ui/dialog/y;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/estrongs/android/ui/dialog/aa;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/AppCheckUpdateList;->c:Lcom/estrongs/android/ui/dialog/y;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/AppCheckUpdateList;->c:Lcom/estrongs/android/ui/dialog/aa;
 
     :goto_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AppCheckUpdateList;->c:Lcom/estrongs/android/ui/dialog/y;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AppCheckUpdateList;->c:Lcom/estrongs/android/ui/dialog/aa;
 
     new-instance v1, Lcom/estrongs/android/pop/app/e;
 
     invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/e;-><init>(Lcom/estrongs/android/pop/app/AppCheckUpdateList;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/y;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/aa;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AppCheckUpdateList;->c:Lcom/estrongs/android/ui/dialog/y;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AppCheckUpdateList;->c:Lcom/estrongs/android/ui/dialog/aa;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/y;->show()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/aa;->show()V
 
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/AppCheckUpdateList;->c:Lcom/estrongs/android/ui/dialog/y;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/AppCheckUpdateList;->c:Lcom/estrongs/android/ui/dialog/aa;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/y;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/aa;->a(Z)V
 
     goto :goto_0
 .end method
@@ -239,11 +239,11 @@
 
     invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030003
+    const v0, 0x7f030041
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/AppCheckUpdateList;->setContentView(I)V
 
-    const v0, 0x7f0a0021
+    const v0, 0x7f0e0077
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/AppCheckUpdateList;->findViewById(I)Landroid/view/View;
 
@@ -255,11 +255,11 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/AppCheckUpdateList;->a:Landroid/widget/TextView;
 
-    const v1, 0x7f0b053d
+    const v1, 0x7f080107
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    const v0, 0x7f0a0022
+    const v0, 0x7f0e0185
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/AppCheckUpdateList;->findViewById(I)Landroid/view/View;
 
@@ -271,15 +271,15 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/AppCheckUpdateList;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0b053e
+    const v1, 0x7f080110
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    const v0, 0x7f0b053b
+    const v0, 0x7f08013a
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/AppCheckUpdateList;->setTitle(I)V
 
-    const v0, 0x7f0a0023
+    const v0, 0x7f0e0186
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/AppCheckUpdateList;->findViewById(I)Landroid/view/View;
 
@@ -295,7 +295,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a0020
+    const v0, 0x7f0e0184
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/AppCheckUpdateList;->findViewById(I)Landroid/view/View;
 

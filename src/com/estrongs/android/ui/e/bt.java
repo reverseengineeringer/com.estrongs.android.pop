@@ -1,19 +1,17 @@
 package com.estrongs.android.ui.e;
 
-import android.app.Activity;
-import android.widget.LinearLayout;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.app.f.a;
 
 class bt
-  extends cp
+  implements MenuItem.OnMenuItemClickListener
 {
-  bt(w paramw, Activity paramActivity, boolean paramBoolean, LinearLayout paramLinearLayout)
-  {
-    super(paramActivity, paramBoolean, paramLinearLayout);
-  }
+  bt(m paramm) {}
   
-  public boolean e()
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    j.m();
+    a.a().f();
     return true;
   }
 }

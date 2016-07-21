@@ -288,7 +288,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->d:I
+    sget v1, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->e:I
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
@@ -329,7 +329,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->d:I
+    sget v1, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->e:I
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
@@ -360,7 +360,7 @@
     :cond_1
     iget-object v1, p0, Lcom/estrongs/android/ui/view/ab;->a:Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;
 
-    const v2, 0x7f0b024c
+    const v2, 0x7f080453
 
     invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->getString(I)Ljava/lang/String;
 
@@ -381,7 +381,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/view/ab;->a:Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;
 
-    invoke-static {v0, p1, p2, p3}, Lcom/estrongs/android/util/ac;->a(Landroid/content/Context;Landroid/webkit/WebView;Landroid/webkit/SslErrorHandler;Landroid/net/http/SslError;)V
+    invoke-static {v0, p1, p2, p3}, Lcom/estrongs/android/util/ah;->a(Landroid/content/Context;Landroid/webkit/WebView;Landroid/webkit/SslErrorHandler;Landroid/net/http/SslError;)V
 
     return-void
 .end method
@@ -452,7 +452,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->d:I
+    sget v1, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;->e:I
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 

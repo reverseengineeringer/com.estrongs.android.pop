@@ -1,94 +1,136 @@
-.class public Lcom/estrongs/android/widget/bi;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/estrongs/android/widget/bk;
+.class Lcom/estrongs/android/widget/bi;
+.super Landroid/os/Handler;
 
 
 # instance fields
-.field private a:I
-
-.field private b:I
+.field final synthetic a:Lcom/estrongs/android/widget/bh;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method constructor <init>(Lcom/estrongs/android/widget/bh;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcom/estrongs/android/widget/bi;->a:Lcom/estrongs/android/widget/bh;
 
-    const/4 v0, 0x1
-
-    iput v0, p0, Lcom/estrongs/android/widget/bi;->b:I
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/widget/ProgressBar;Landroid/widget/TextView;J)V
-    .locals 3
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 6
 
-    invoke-static {p3, p4}, Lcom/estrongs/fs/util/j;->c(J)Ljava/lang/String;
+    invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    move-result-object v0
+    iget-object v0, p0, Lcom/estrongs/android/widget/bi;->a:Lcom/estrongs/android/widget/bh;
 
-    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/widget/bh;->a(Lcom/estrongs/android/widget/bh;)J
 
-    move-result-object v0
+    const/4 v0, 0x1
 
-    invoke-virtual {p2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    iget v1, p1, Landroid/os/Message;->what:I
 
-    const-wide/32 v0, 0x7fffffff
+    if-ne v0, v1, :cond_1
 
-    cmp-long v0, p3, v0
+    iget-object v0, p0, Lcom/estrongs/android/widget/bi;->a:Lcom/estrongs/android/widget/bh;
 
-    if-lez v0, :cond_0
+    iget-object v0, v0, Lcom/estrongs/android/widget/bh;->c:Landroid/widget/TextView;
 
-    const/16 v0, 0x3e8
+    iget-object v1, p0, Lcom/estrongs/android/widget/bi;->a:Lcom/estrongs/android/widget/bh;
 
-    iput v0, p0, Lcom/estrongs/android/widget/bi;->b:I
+    iget-object v1, v1, Lcom/estrongs/android/widget/bh;->j:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :cond_0
-    iget v0, p0, Lcom/estrongs/android/widget/bi;->b:I
-
-    int-to-long v0, v0
-
-    div-long v0, p3, v0
-
-    long-to-int v0, v0
-
-    iput v0, p0, Lcom/estrongs/android/widget/bi;->a:I
-
-    iget v0, p0, Lcom/estrongs/android/widget/bi;->a:I
-
-    invoke-virtual {p1, v0}, Landroid/widget/ProgressBar;->setMax(I)V
-
+    :goto_0
     return-void
-.end method
 
-.method public b(Landroid/widget/ProgressBar;Landroid/widget/TextView;J)V
-    .locals 3
+    :cond_1
+    const/4 v0, 0x3
 
-    iget v0, p0, Lcom/estrongs/android/widget/bi;->b:I
+    iget v1, p1, Landroid/os/Message;->what:I
 
-    int-to-long v0, v0
+    if-ne v0, v1, :cond_2
 
-    div-long v0, p3, v0
+    iget-object v0, p0, Lcom/estrongs/android/widget/bi;->a:Lcom/estrongs/android/widget/bh;
 
-    long-to-int v0, v0
-
-    invoke-virtual {p1, v0}, Landroid/widget/ProgressBar;->setProgress(I)V
-
-    invoke-static {p3, p4}, Lcom/estrongs/fs/util/j;->c(J)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/widget/bh;->b(Lcom/estrongs/android/widget/bh;)Lcom/estrongs/android/widget/bl;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
+    iget-object v1, p0, Lcom/estrongs/android/widget/bi;->a:Lcom/estrongs/android/widget/bh;
+
+    iget-object v1, v1, Lcom/estrongs/android/widget/bh;->b:Landroid/widget/ProgressBar;
+
+    iget-object v2, p0, Lcom/estrongs/android/widget/bi;->a:Lcom/estrongs/android/widget/bh;
+
+    iget-object v2, v2, Lcom/estrongs/android/widget/bh;->g:Landroid/widget/TextView;
+
+    iget-object v3, p0, Lcom/estrongs/android/widget/bi;->a:Lcom/estrongs/android/widget/bh;
+
+    iget-wide v4, v3, Lcom/estrongs/android/widget/bh;->h:J
+
+    invoke-interface {v0, v1, v2, v4, v5}, Lcom/estrongs/android/widget/bl;->a(Landroid/widget/ProgressBar;Landroid/widget/TextView;J)V
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v0, 0x2
+
+    iget v1, p1, Landroid/os/Message;->what:I
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/bi;->a:Lcom/estrongs/android/widget/bh;
+
+    invoke-static {v0}, Lcom/estrongs/android/widget/bh;->b(Lcom/estrongs/android/widget/bh;)Lcom/estrongs/android/widget/bl;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    iget-object v1, p0, Lcom/estrongs/android/widget/bi;->a:Lcom/estrongs/android/widget/bh;
 
-    return-void
+    iget-object v1, v1, Lcom/estrongs/android/widget/bh;->b:Landroid/widget/ProgressBar;
+
+    iget-object v2, p0, Lcom/estrongs/android/widget/bi;->a:Lcom/estrongs/android/widget/bh;
+
+    iget-object v2, v2, Lcom/estrongs/android/widget/bh;->d:Landroid/widget/TextView;
+
+    iget-object v3, p0, Lcom/estrongs/android/widget/bi;->a:Lcom/estrongs/android/widget/bh;
+
+    iget-wide v4, v3, Lcom/estrongs/android/widget/bh;->i:J
+
+    invoke-interface {v0, v1, v2, v4, v5}, Lcom/estrongs/android/widget/bl;->b(Landroid/widget/ProgressBar;Landroid/widget/TextView;J)V
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/bi;->a:Lcom/estrongs/android/widget/bh;
+
+    iget-wide v0, v0, Lcom/estrongs/android/widget/bh;->i:J
+
+    long-to-double v0, v0
+
+    iget-object v2, p0, Lcom/estrongs/android/widget/bi;->a:Lcom/estrongs/android/widget/bh;
+
+    iget-wide v2, v2, Lcom/estrongs/android/widget/bh;->h:J
+
+    long-to-double v2, v2
+
+    div-double/2addr v0, v2
+
+    iget-object v2, p0, Lcom/estrongs/android/widget/bi;->a:Lcom/estrongs/android/widget/bh;
+
+    iget-object v2, v2, Lcom/estrongs/android/widget/bh;->e:Landroid/widget/TextView;
+
+    iget-object v3, p0, Lcom/estrongs/android/widget/bi;->a:Lcom/estrongs/android/widget/bh;
+
+    iget-object v3, v3, Lcom/estrongs/android/widget/bh;->f:Ljava/text/NumberFormat;
+
+    invoke-virtual {v3, v0, v1}, Ljava/text/NumberFormat;->format(D)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_0
 .end method

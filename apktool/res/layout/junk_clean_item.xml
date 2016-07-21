@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:id="@id/junk_clean_item" android:background="@drawable/cleaner_card_bg_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_10" android:layout_marginTop="@dimen/dp_5" android:layout_marginRight="@dimen/dp_10" android:layout_marginBottom="@dimen/dp_5"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/junk_clean_item_image" android:layout_width="@dimen/dp_36" android:layout_height="@dimen/dp_36" android:layout_margin="@dimen/dp_10" android:src="@drawable/ic_launcher" android:scaleType="centerInside" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/dp_15" android:textColor="@color/c_cc000000" android:ellipsize="end" android:gravity="bottom" android:id="@id/junk_clean_item_name" android:layout_width="fill_parent" android:layout_height="0.0dip" android:text="ItemName" android:singleLine="true" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="top" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="@dimen/dp_5" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/dp_10" android:textColor="@color/c_66000000" android:id="@id/junk_clean_item_advance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cleaner_advice_prefix" />
+            <TextView android:textSize="@dimen/dp_10" android:textColor="@color/c_66000000" android:id="@id/junk_clean_item_advance_result" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Clean" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="@dimen/dp_13" android:textColor="@color/c_66000000" android:id="@id/junk_clean_item_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_10" android:text="59MB" />
+    <LinearLayout android:gravity="center_vertical" android:id="@id/junk_clean_item_checkbox_wrap" android:paddingLeft="@dimen/dp_15" android:paddingRight="@dimen/dp_15" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <com.estrongs.android.ui.view.TripleStateCheckBox android:id="@id/junk_clean_item_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_checkbox_other" />
+    </LinearLayout>
+</LinearLayout>

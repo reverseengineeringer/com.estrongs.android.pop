@@ -1,40 +1,22 @@
 package com.estrongs.fs.impl.local;
 
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.pop.ad;
 import java.io.File;
-import java.io.OutputStream;
-import java.io.RandomAccessFile;
+import java.io.FilenameFilter;
 
-public class g
-  extends OutputStream
+class g
+  implements FilenameFilter
 {
-  private RandomAccessFile a;
+  g(f paramf) {}
   
-  public g(File paramFile, long paramLong)
+  public boolean accept(File paramFile, String paramString)
   {
-    a = new RandomAccessFile(paramFile, "rw");
-    a.seek(paramLong);
-  }
-  
-  public void close()
-  {
-    a.close();
-  }
-  
-  public void flush() {}
-  
-  public void write(int paramInt)
-  {
-    a.write(paramInt);
-  }
-  
-  public void write(byte[] paramArrayOfByte)
-  {
-    a.write(paramArrayOfByte);
-  }
-  
-  public void write(byte[] paramArrayOfByte, int paramInt1, int paramInt2)
-  {
-    a.write(paramArrayOfByte, paramInt1, paramInt2);
+    if (ad.a(FexApplication.a()).q()) {}
+    while (!paramString.startsWith(".")) {
+      return true;
+    }
+    return false;
   }
 }
 

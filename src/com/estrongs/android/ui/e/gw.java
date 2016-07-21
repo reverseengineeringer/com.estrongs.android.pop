@@ -1,19 +1,15 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.a.a;
-import com.estrongs.a.a.p;
-import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.view.a.b;
 
 class gw
-  implements p
+  implements b
 {
-  gw(gv paramgv) {}
+  gw(cr paramcr) {}
   
-  public void a(a parama, int paramInt1, int paramInt2)
+  public boolean a(cp paramcp)
   {
-    if ((paramInt2 == 4) || (paramInt2 == 5)) {
-      cp.a(a.a).a(new gx(this));
-    }
+    return r;
   }
 }
 

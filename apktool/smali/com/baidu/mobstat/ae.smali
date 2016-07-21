@@ -1,915 +1,179 @@
 .class Lcom/baidu/mobstat/ae;
-.super Ljava/lang/Object;
-
-
-# static fields
-.field static a:Ljava/lang/String;
+.super Landroid/database/sqlite/SQLiteOpenHelper;
 
 
 # instance fields
-.field b:Ljava/lang/String;
+.field private a:Ljava/lang/String;
 
-.field c:Ljava/lang/String;
-
-.field d:Ljava/lang/String;
-
-.field e:Ljava/lang/String;
-
-.field f:Ljava/lang/String;
-
-.field g:I
-
-.field h:Ljava/lang/String;
-
-.field i:Ljava/lang/String;
-
-.field j:I
-
-.field k:I
-
-.field l:Ljava/lang/String;
-
-.field m:Ljava/lang/String;
-
-.field n:Ljava/lang/String;
-
-.field o:Ljava/lang/String;
-
-.field p:Ljava/lang/String;
-
-.field q:Ljava/lang/String;
-
-.field r:Ljava/lang/String;
-
-.field s:Ljava/lang/String;
-
-.field t:Ljava/lang/String;
+.field private b:Landroid/database/sqlite/SQLiteDatabase;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 3
 
-    const-string v0, "Android"
-
-    sput-object v0, Lcom/baidu/mobstat/ae;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method constructor <init>()V
-    .locals 2
+    const-string v0, ".confd"
 
     const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x1
 
-    iput-object v1, p0, Lcom/baidu/mobstat/ae;->d:Ljava/lang/String;
+    invoke-direct {p0, p1, v0, v1, v2}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
-    const-string v0, "0"
-
-    iput-object v0, p0, Lcom/baidu/mobstat/ae;->e:Ljava/lang/String;
-
-    iput-object v1, p0, Lcom/baidu/mobstat/ae;->f:Ljava/lang/String;
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lcom/baidu/mobstat/ae;->g:I
-
-    iput-object v1, p0, Lcom/baidu/mobstat/ae;->l:Ljava/lang/String;
+    iput-object p2, p0, Lcom/baidu/mobstat/ae;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public declared-synchronized a(Landroid/content/Context;)V
-    .locals 3
+.method public a(Ljava/lang/String;[Ljava/lang/String;)I
+    .locals 2
 
-    monitor-enter p0
+    iget-object v0, p0, Lcom/baidu/mobstat/ae;->b:Landroid/database/sqlite/SQLiteDatabase;
 
-    :try_start_0
-    const-string v0, "android.permission.READ_PHONE_STATE"
+    iget-object v1, p0, Lcom/baidu/mobstat/ae;->a:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Lcom/baidu/mobstat/util/c;->e(Landroid/content/Context;Ljava/lang/String;)V
-
-    const-string v0, "android.permission.INTERNET"
-
-    invoke-static {p1, v0}, Lcom/baidu/mobstat/util/c;->e(Landroid/content/Context;Ljava/lang/String;)V
-
-    const-string v0, "android.permission.ACCESS_NETWORK_STATE"
-
-    invoke-static {p1, v0}, Lcom/baidu/mobstat/util/c;->e(Landroid/content/Context;Ljava/lang/String;)V
-
-    const-string v0, "android.permission.WRITE_SETTINGS"
-
-    invoke-static {p1, v0}, Lcom/baidu/mobstat/util/c;->e(Landroid/content/Context;Ljava/lang/String;)V
-
-    const-string v0, "phone"
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/telephony/TelephonyManager;
-
-    invoke-static {}, Lcom/baidu/mobstat/CooperService;->a()Lcom/baidu/mobstat/CooperService;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/baidu/mobstat/CooperService;->getOSVersion()Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/baidu/mobstat/ae;->b:Ljava/lang/String;
-
-    invoke-static {}, Lcom/baidu/mobstat/CooperService;->getOSSysVersion()Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/baidu/mobstat/ae;->c:Ljava/lang/String;
-
-    invoke-static {}, Lcom/baidu/mobstat/CooperService;->a()Lcom/baidu/mobstat/CooperService;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/baidu/mobstat/CooperService;->getPhoneModel()Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/baidu/mobstat/ae;->n:Ljava/lang/String;
-
-    invoke-static {}, Lcom/baidu/mobstat/CooperService;->a()Lcom/baidu/mobstat/CooperService;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0, p1}, Lcom/baidu/mobstat/CooperService;->getDeviceId(Landroid/telephony/TelephonyManager;Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/baidu/mobstat/ae;->i:Ljava/lang/String;
-
-    invoke-static {}, Lcom/baidu/mobstat/r;->a()Lcom/baidu/mobstat/r;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Lcom/baidu/mobstat/r;->j(Landroid/content/Context;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    const-string v1, "1"
-
-    :goto_0
-    iput-object v1, p0, Lcom/baidu/mobstat/ae;->e:Ljava/lang/String;
-
-    sget-object v1, Lcom/baidu/mobstat/Build;->d:Ljava/lang/String;
-
-    const-string v2, "-1"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v2, p0, Lcom/baidu/mobstat/ae;->e:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "-"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    sget-object v2, Lcom/baidu/mobstat/Build;->d:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/baidu/mobstat/ae;->e:Ljava/lang/String;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_0
-    :try_start_1
-    invoke-static {}, Lcom/baidu/mobstat/CooperService;->a()Lcom/baidu/mobstat/CooperService;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Lcom/baidu/mobstat/CooperService;->getMacID(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/baidu/mobstat/ae;->r:Ljava/lang/String;
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :goto_1
-    :try_start_2
-    invoke-static {p1}, Lcom/baidu/mobstat/aw;->i(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/baidu/mobstat/ae;->t:Ljava/lang/String;
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :goto_2
-    :try_start_3
-    invoke-static {}, Lcom/baidu/mobstat/CooperService;->a()Lcom/baidu/mobstat/CooperService;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, p1, v2}, Lcom/baidu/mobstat/CooperService;->getCUID(Landroid/content/Context;Z)Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/baidu/mobstat/ae;->f:Ljava/lang/String;
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :try_start_4
-    invoke-static {}, Lcom/baidu/mobstat/CooperService;->a()Lcom/baidu/mobstat/CooperService;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/baidu/mobstat/CooperService;->getOperator(Landroid/telephony/TelephonyManager;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/baidu/mobstat/ae;->m:Ljava/lang/String;
-    :try_end_4
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    :goto_3
-    :try_start_5
-    invoke-static {p1}, Lcom/baidu/mobstat/aw;->a(Landroid/content/Context;)I
+    invoke-virtual {v0, v1, p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v0
 
-    iput v0, p0, Lcom/baidu/mobstat/ae;->j:I
-
-    invoke-static {p1}, Lcom/baidu/mobstat/aw;->b(Landroid/content/Context;)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/baidu/mobstat/ae;->k:I
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_1
-
-    const-string v0, "sdkstat"
-
-    const-string v1, "Configuration.ORIENTATION_LANDSCAPE"
-
-    invoke-static {v0, v1}, Lcom/baidu/mobstat/util/e;->a(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget v0, p0, Lcom/baidu/mobstat/ae;->j:I
-
-    iget v1, p0, Lcom/baidu/mobstat/ae;->k:I
-
-    xor-int/2addr v0, v1
-
-    iput v0, p0, Lcom/baidu/mobstat/ae;->j:I
-
-    iget v0, p0, Lcom/baidu/mobstat/ae;->j:I
-
-    iget v1, p0, Lcom/baidu/mobstat/ae;->k:I
-
-    xor-int/2addr v0, v1
-
-    iput v0, p0, Lcom/baidu/mobstat/ae;->k:I
-
-    iget v0, p0, Lcom/baidu/mobstat/ae;->j:I
-
-    iget v1, p0, Lcom/baidu/mobstat/ae;->k:I
-
-    xor-int/2addr v0, v1
-
-    iput v0, p0, Lcom/baidu/mobstat/ae;->j:I
-    :try_end_5
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_3
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
-
-    :cond_1
-    :goto_4
-    :try_start_6
-    invoke-static {}, Lcom/baidu/mobstat/CooperService;->a()Lcom/baidu/mobstat/CooperService;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lcom/baidu/mobstat/CooperService;->getAppChannel(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/baidu/mobstat/ae;->l:Ljava/lang/String;
-
-    invoke-static {}, Lcom/baidu/mobstat/CooperService;->a()Lcom/baidu/mobstat/CooperService;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lcom/baidu/mobstat/CooperService;->getAppKey(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/baidu/mobstat/ae;->d:Ljava/lang/String;
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_0
-
-    :try_start_7
-    invoke-static {}, Lcom/baidu/mobstat/CooperService;->a()Lcom/baidu/mobstat/CooperService;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lcom/baidu/mobstat/CooperService;->getAppVersionCode(Landroid/content/Context;)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/baidu/mobstat/ae;->g:I
-
-    invoke-static {}, Lcom/baidu/mobstat/CooperService;->a()Lcom/baidu/mobstat/CooperService;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lcom/baidu/mobstat/CooperService;->getAppVersionName(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/baidu/mobstat/ae;->h:Ljava/lang/String;
-    :try_end_7
-    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_4
-    .catchall {:try_start_7 .. :try_end_7} :catchall_0
-
-    :goto_5
-    :try_start_8
-    invoke-static {}, Lcom/baidu/mobstat/CooperService;->a()Lcom/baidu/mobstat/CooperService;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lcom/baidu/mobstat/CooperService;->checkCellLocationSetting(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-static {p1}, Lcom/baidu/mobstat/aw;->e(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/baidu/mobstat/ae;->o:Ljava/lang/String;
-    :try_end_8
-    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_5
-    .catchall {:try_start_8 .. :try_end_8} :catchall_0
-
-    :goto_6
-    :try_start_9
-    invoke-static {}, Lcom/baidu/mobstat/CooperService;->a()Lcom/baidu/mobstat/CooperService;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lcom/baidu/mobstat/CooperService;->checkGPSLocationSetting(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    invoke-static {p1}, Lcom/baidu/mobstat/aw;->f(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/baidu/mobstat/ae;->p:Ljava/lang/String;
-    :try_end_9
-    .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_6
-    .catchall {:try_start_9 .. :try_end_9} :catchall_0
-
-    :goto_7
-    :try_start_a
-    invoke-static {}, Lcom/baidu/mobstat/CooperService;->a()Lcom/baidu/mobstat/CooperService;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lcom/baidu/mobstat/CooperService;->getLinkedWay(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/baidu/mobstat/ae;->q:Ljava/lang/String;
-    :try_end_a
-    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_7
-    .catchall {:try_start_a .. :try_end_a} :catchall_0
-
-    :goto_8
-    monitor-exit p0
-
-    return-void
-
-    :cond_2
-    :try_start_b
-    const-string v1, "0"
-
-    goto/16 :goto_0
-
-    :catch_0
-    move-exception v1
-
-    invoke-static {v1}, Lcom/baidu/mobstat/util/e;->a(Ljava/lang/Throwable;)I
-    :try_end_b
-    .catchall {:try_start_b .. :try_end_b} :catchall_0
-
-    goto/16 :goto_1
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
-
-    :catch_1
-    move-exception v1
-
-    :try_start_c
-    invoke-static {v1}, Lcom/baidu/mobstat/util/e;->a(Ljava/lang/Throwable;)I
-
-    goto/16 :goto_2
-
-    :catch_2
-    move-exception v0
-
-    invoke-static {v0}, Lcom/baidu/mobstat/util/e;->a(Ljava/lang/Throwable;)I
-
-    goto/16 :goto_3
-
-    :catch_3
-    move-exception v0
-
-    invoke-static {v0}, Lcom/baidu/mobstat/util/e;->a(Ljava/lang/Throwable;)I
-
-    goto :goto_4
-
-    :catch_4
-    move-exception v0
-
-    invoke-static {v0}, Lcom/baidu/mobstat/util/e;->a(Ljava/lang/Throwable;)I
-    :try_end_c
-    .catchall {:try_start_c .. :try_end_c} :catchall_0
-
-    goto :goto_5
-
-    :cond_3
-    :try_start_d
-    const-string v0, "0_0_0"
-
-    iput-object v0, p0, Lcom/baidu/mobstat/ae;->o:Ljava/lang/String;
-    :try_end_d
-    .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_5
-    .catchall {:try_start_d .. :try_end_d} :catchall_0
-
-    goto :goto_6
-
-    :catch_5
-    move-exception v0
-
-    :try_start_e
-    invoke-static {v0}, Lcom/baidu/mobstat/util/e;->a(Ljava/lang/Throwable;)I
-    :try_end_e
-    .catchall {:try_start_e .. :try_end_e} :catchall_0
-
-    goto :goto_6
-
-    :cond_4
-    :try_start_f
-    const-string v0, ""
-
-    iput-object v0, p0, Lcom/baidu/mobstat/ae;->p:Ljava/lang/String;
-    :try_end_f
-    .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_6
-    .catchall {:try_start_f .. :try_end_f} :catchall_0
-
-    goto :goto_7
-
-    :catch_6
-    move-exception v0
-
-    :try_start_10
-    invoke-static {v0}, Lcom/baidu/mobstat/util/e;->a(Ljava/lang/Throwable;)I
-
-    goto :goto_7
-
-    :catch_7
-    move-exception v0
-
-    invoke-static {v0}, Lcom/baidu/mobstat/util/e;->a(Ljava/lang/Throwable;)I
-    :try_end_10
-    .catchall {:try_start_10 .. :try_end_10} :catchall_0
-
-    goto :goto_8
+    return v0
 .end method
 
-.method public declared-synchronized a(Landroid/content/Context;Lorg/json/JSONObject;)V
-    .locals 4
+.method public a(Ljava/lang/String;Landroid/content/ContentValues;)J
+    .locals 2
 
-    monitor-enter p0
+    iget-object v0, p0, Lcom/baidu/mobstat/ae;->b:Landroid/database/sqlite/SQLiteDatabase;
 
-    :try_start_0
-    invoke-virtual {p2}, Lorg/json/JSONObject;->length()I
+    iget-object v1, p0, Lcom/baidu/mobstat/ae;->a:Ljava/lang/String;
 
-    move-result v0
+    invoke-virtual {v0, v1, p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
-    const/16 v1, 0xa
+    move-result-wide v0
 
-    if-le v0, v1, :cond_0
+    return-wide v0
+.end method
 
-    const-string v0, "sdkstat"
+.method public a([Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    .locals 9
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lcom/baidu/mobstat/ae;->b:Landroid/database/sqlite/SQLiteDatabase;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object v1, p0, Lcom/baidu/mobstat/ae;->a:Ljava/lang/String;
 
-    const-string v2, "***** have been installHeader header="
+    move-object v2, p1
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-object v3, p2
 
-    move-result-object v1
+    move-object v4, p3
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-object v5, p4
 
-    move-result-object v1
+    move-object v6, p5
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-object v7, p6
 
-    move-result-object v1
+    move-object/from16 v8, p7
 
-    invoke-static {v0, v1}, Lcom/baidu/mobstat/util/e;->a(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual/range {v0 .. v8}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
-    :goto_0
-    monitor-exit p0
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public a(Ljava/lang/String;)V
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/baidu/mobstat/ae;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     return-void
+.end method
 
-    :cond_0
-    :try_start_1
-    const-string v0, "sdkstat"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "installHeader header="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/baidu/mobstat/util/e;->a(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-virtual {p0, p1}, Lcom/baidu/mobstat/ae;->a(Landroid/content/Context;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :try_start_2
-    const-string v1, "o"
-
-    sget-object v0, Lcom/baidu/mobstat/ae;->a:Ljava/lang/String;
-
-    if-nez v0, :cond_1
-
-    const-string v0, ""
-
-    :goto_1
-    invoke-virtual {p2, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v1, "s"
-
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->b:Ljava/lang/String;
-
-    if-nez v0, :cond_2
-
-    const-string v0, ""
-
-    :goto_2
-    invoke-virtual {p2, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v1, "sv"
-
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->c:Ljava/lang/String;
-
-    if-nez v0, :cond_3
-
-    const-string v0, ""
-
-    :goto_3
-    invoke-virtual {p2, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v1, "k"
-
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->d:Ljava/lang/String;
-
-    if-nez v0, :cond_4
-
-    const-string v0, ""
-
-    :goto_4
-    invoke-virtual {p2, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v1, "pt"
-
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->e:Ljava/lang/String;
-
-    if-nez v0, :cond_5
-
-    const-string v0, "0"
-
-    :goto_5
-    invoke-virtual {p2, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v0, "i"
-
-    const-string v1, ""
-
-    invoke-virtual {p2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v0, "v"
-
-    sget-object v1, Lcom/baidu/mobstat/t;->a:Ljava/lang/String;
-
-    invoke-virtual {p2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v0, "a"
-
-    iget v1, p0, Lcom/baidu/mobstat/ae;->g:I
-
-    invoke-virtual {p2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
-
-    const-string v1, "n"
-
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->h:Ljava/lang/String;
-
-    if-nez v0, :cond_6
-
-    const-string v0, ""
-
-    :goto_6
-    invoke-virtual {p2, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v0, "d"
-
-    const-string v1, ""
-
-    invoke-virtual {p2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v1, "mc"
-
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->r:Ljava/lang/String;
-
-    if-nez v0, :cond_7
-
-    const-string v0, ""
-
-    :goto_7
-    invoke-virtual {p2, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v1, "bm"
-
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->t:Ljava/lang/String;
-
-    if-nez v0, :cond_8
-
-    const-string v0, ""
-
-    :goto_8
-    invoke-virtual {p2, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v1, "dd"
-
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->i:Ljava/lang/String;
-
-    if-nez v0, :cond_9
-
-    const-string v0, ""
-
-    :goto_9
-    invoke-virtual {p2, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v1, "ii"
-
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->f:Ljava/lang/String;
-
-    if-nez v0, :cond_a
-
-    const-string v0, ""
-
-    :goto_a
-    invoke-virtual {p2, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v0, "tg"
-
-    sget v1, Lcom/baidu/mobstat/t;->b:I
-
-    invoke-virtual {p2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
-
-    const-string v0, "w"
-
-    iget v1, p0, Lcom/baidu/mobstat/ae;->j:I
-
-    invoke-virtual {p2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
-
-    const-string v0, "h"
-
-    iget v1, p0, Lcom/baidu/mobstat/ae;->k:I
-
-    invoke-virtual {p2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
-
-    const-string v1, "c"
-
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->l:Ljava/lang/String;
-
-    if-nez v0, :cond_b
-
-    const-string v0, ""
-
-    :goto_b
-    invoke-virtual {p2, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v1, "op"
-
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->m:Ljava/lang/String;
-
-    if-nez v0, :cond_c
-
-    const-string v0, ""
-
-    :goto_c
-    invoke-virtual {p2, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v1, "m"
-
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->n:Ljava/lang/String;
-
-    if-nez v0, :cond_d
-
-    const-string v0, ""
-
-    :goto_d
-    invoke-virtual {p2, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v0, "cl"
-
-    iget-object v1, p0, Lcom/baidu/mobstat/ae;->o:Ljava/lang/String;
-
-    invoke-virtual {p2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v1, "gl"
-
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->p:Ljava/lang/String;
-
-    if-nez v0, :cond_e
-
-    const-string v0, ""
-
-    :goto_e
-    invoke-virtual {p2, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v1, "l"
-
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->q:Ljava/lang/String;
-
-    if-nez v0, :cond_f
-
-    const-string v0, ""
-
-    :goto_f
-    invoke-virtual {p2, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v0, "t"
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    invoke-virtual {p2, v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
-
-    const-string v0, "sq"
+.method public declared-synchronized a()Z
+    .locals 3
 
     const/4 v1, 0x0
 
-    invoke-virtual {p2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+    const/4 v0, 0x1
 
-    const-string v0, "pn"
+    monitor-enter p0
 
-    invoke-static {p1}, Lcom/baidu/mobstat/aw;->m(Landroid/content/Context;)Ljava/lang/String;
+    :try_start_0
+    iget-object v2, p0, Lcom/baidu/mobstat/ae;->b:Landroid/database/sqlite/SQLiteDatabase;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object v1
+    if-nez v2, :cond_3
 
-    invoke-virtual {p2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    move v2, v0
 
-    const-string v0, "pl"
+    :goto_0
+    if-eqz v2, :cond_0
 
-    invoke-static {p1}, Lcom/baidu/mobstat/aw;->n(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v0, "sdkstat"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "*******"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {p2}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+    :try_start_1
+    invoke-virtual {p0}, Lcom/baidu/mobstat/ae;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-object v2, p0, Lcom/baidu/mobstat/ae;->b:Landroid/database/sqlite/SQLiteDatabase;
+    :try_end_1
+    .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    move-result-object v1
+    :cond_0
+    :try_start_2
+    iget-object v2, p0, Lcom/baidu/mobstat/ae;->b:Landroid/database/sqlite/SQLiteDatabase;
 
-    const-string v2, "; len: "
+    if-eqz v2, :cond_1
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Lcom/baidu/mobstat/ae;->b:Landroid/database/sqlite/SQLiteDatabase;
 
-    move-result-object v1
-
-    invoke-virtual {p2}, Lorg/json/JSONObject;->length()I
+    invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->isOpen()Z
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    if-nez v2, :cond_2
 
-    move-result-object v1
+    :cond_1
+    move v0, v1
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_2
+    monitor-exit p0
 
-    move-result-object v1
+    return v0
 
-    invoke-static {v0, v1}, Lcom/baidu/mobstat/util/e;->a(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_2
-    .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    :cond_3
+    :try_start_3
+    iget-object v2, p0, Lcom/baidu/mobstat/ae;->b:Landroid/database/sqlite/SQLiteDatabase;
 
-    goto/16 :goto_0
+    invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->isOpen()Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    move v2, v0
+
+    goto :goto_0
 
     :catch_0
     move-exception v0
 
-    :try_start_3
-    const-string v0, "header ini error"
+    new-instance v0, Ljava/lang/NullPointerException;
 
-    const-string v1, "sdkstat"
+    const-string v1, "db path is null"
 
-    invoke-static {v1, v0}, Lcom/baidu/mobstat/util/e;->a(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    new-instance v1, Ljava/lang/RuntimeException;
-
-    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v1
+    throw v0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
@@ -920,82 +184,191 @@
 
     throw v0
 
-    :cond_1
-    :try_start_4
-    sget-object v0, Lcom/baidu/mobstat/ae;->a:Ljava/lang/String;
+    :cond_4
+    move v2, v1
 
-    goto/16 :goto_1
+    goto :goto_0
+.end method
+
+.method public final b()I
+    .locals 5
+
+    const/4 v1, 0x0
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    iget-object v2, p0, Lcom/baidu/mobstat/ae;->b:Landroid/database/sqlite/SQLiteDatabase;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "SELECT COUNT(*) FROM "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/baidu/mobstat/ae;->a:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v2, v3, v4}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const/4 v0, 0x0
+
+    invoke-interface {v1, v0}, Landroid/database/Cursor;->getInt(I)I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result v0
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    if-eqz v1, :cond_0
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     :cond_2
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->b:Ljava/lang/String;
+    throw v0
+.end method
 
-    goto/16 :goto_2
+.method public declared-synchronized close()V
+    .locals 1
 
-    :cond_3
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->c:Ljava/lang/String;
+    monitor-enter p0
 
-    goto/16 :goto_3
+    :try_start_0
+    invoke-super {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->close()V
 
-    :cond_4
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->d:Ljava/lang/String;
+    iget-object v0, p0, Lcom/baidu/mobstat/ae;->b:Landroid/database/sqlite/SQLiteDatabase;
 
-    goto/16 :goto_4
+    if-eqz v0, :cond_0
 
-    :cond_5
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->e:Ljava/lang/String;
+    iget-object v0, p0, Lcom/baidu/mobstat/ae;->b:Landroid/database/sqlite/SQLiteDatabase;
 
-    goto/16 :goto_5
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
-    :cond_6
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->h:Ljava/lang/String;
+    const/4 v0, 0x0
 
-    goto/16 :goto_6
+    iput-object v0, p0, Lcom/baidu/mobstat/ae;->b:Landroid/database/sqlite/SQLiteDatabase;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :cond_7
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->r:Ljava/lang/String;
+    :cond_0
+    monitor-exit p0
 
-    goto/16 :goto_7
+    return-void
 
-    :cond_8
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->t:Ljava/lang/String;
+    :catchall_0
+    move-exception v0
 
-    goto/16 :goto_8
+    monitor-exit p0
 
-    :cond_9
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->i:Ljava/lang/String;
+    throw v0
+.end method
 
-    goto/16 :goto_9
+.method public declared-synchronized getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    .locals 1
 
-    :cond_a
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->f:Ljava/lang/String;
+    monitor-enter p0
 
-    goto/16 :goto_a
+    :try_start_0
+    invoke-super {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :cond_b
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->l:Ljava/lang/String;
+    move-result-object v0
 
-    goto/16 :goto_b
+    monitor-exit p0
 
-    :cond_c
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->m:Ljava/lang/String;
+    return-object v0
 
-    goto/16 :goto_c
+    :catchall_0
+    move-exception v0
 
-    :cond_d
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->n:Ljava/lang/String;
+    monitor-exit p0
 
-    goto/16 :goto_d
+    throw v0
+.end method
 
-    :cond_e
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->p:Ljava/lang/String;
+.method public declared-synchronized getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    .locals 1
 
-    goto/16 :goto_e
+    monitor-enter p0
 
-    :cond_f
-    iget-object v0, p0, Lcom/baidu/mobstat/ae;->q:Ljava/lang/String;
-    :try_end_4
-    .catch Lorg/json/JSONException; {:try_start_4 .. :try_end_4} :catch_0
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+    :try_start_0
+    invoke-super {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    goto/16 :goto_f
+    move-result-object v0
+
+    monitor-exit p0
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method public onCreate(Landroid/database/sqlite/SQLiteDatabase;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/baidu/mobstat/ae;->b:Landroid/database/sqlite/SQLiteDatabase;
+
+    return-void
+.end method
+
+.method public onOpen(Landroid/database/sqlite/SQLiteDatabase;)V
+    .locals 0
+
+    invoke-super {p0, p1}, Landroid/database/sqlite/SQLiteOpenHelper;->onOpen(Landroid/database/sqlite/SQLiteDatabase;)V
+
+    return-void
+.end method
+
+.method public onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V
+    .locals 0
+
+    return-void
 .end method

@@ -1,17 +1,32 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.Button;
 
 class dv
-  implements DialogInterface.OnClickListener
+  implements TextWatcher
 {
-  dv(du paramdu) {}
+  dv(dp paramdp) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void afterTextChanged(Editable paramEditable)
   {
-    paramDialogInterface.dismiss();
+    if (a.d().length() == 0)
+    {
+      a.button_ok.setEnabled(false);
+      return;
+    }
+    if (!a.c().equals(a.d()))
+    {
+      a.button_ok.setEnabled(false);
+      return;
+    }
+    a.button_ok.setEnabled(true);
   }
+  
+  public void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}
+  
+  public void onTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}
 }
 
 /* Location:

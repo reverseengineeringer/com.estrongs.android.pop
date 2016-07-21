@@ -345,7 +345,7 @@
 
     invoke-virtual {v1, v3}, Lcom/jcraft/jsch/ChannelSftp;->b(I)V
 
-    sget-object v1, Lcom/estrongs/android/util/f;->a:[Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/util/e;->a:[Ljava/lang/String;
 
     const/4 v3, 0x0
 
@@ -494,7 +494,7 @@
 
     invoke-virtual {v2, v4}, Lcom/jcraft/jsch/ChannelSftp;->j(Ljava/lang/String;)V
 
-    sget-object v2, Lcom/estrongs/android/util/f;->a:[Ljava/lang/String;
+    sget-object v2, Lcom/estrongs/android/util/e;->a:[Ljava/lang/String;
 
     const/4 v3, 0x0
 
@@ -1118,19 +1118,19 @@
     const-string v1, "22"
 
     :try_start_0
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->y(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->A(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->A(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->C(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->w(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->y(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -1149,7 +1149,7 @@
     return-object v0
 
     :cond_1
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1221,19 +1221,19 @@
 
     :cond_0
     :try_start_0
-    invoke-static/range {p1 .. p1}, Lcom/estrongs/android/util/am;->y(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {p1 .. p1}, Lcom/estrongs/android/util/ap;->A(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
-    invoke-static/range {p1 .. p1}, Lcom/estrongs/android/util/am;->A(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {p1 .. p1}, Lcom/estrongs/android/util/ap;->C(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-static/range {p1 .. p1}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {p1 .. p1}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
 
-    invoke-static/range {p1 .. p1}, Lcom/estrongs/android/util/am;->w(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {p1 .. p1}, Lcom/estrongs/android/util/ap;->y(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1264,7 +1264,7 @@
 
     :cond_2
     :try_start_1
-    invoke-static/range {p1 .. p1}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {p1 .. p1}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v12
 
@@ -1286,7 +1286,7 @@
 
     iget-object v1, v0, Lcom/estrongs/old/fs/impl/sftp/OldSFtpFileSystem;->a:Ljava/util/HashMap;
 
-    invoke-static/range {p1 .. p1}, Lcom/estrongs/android/util/am;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {p1 .. p1}, Lcom/estrongs/android/util/ap;->i(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -1305,7 +1305,7 @@
     move-result-object v4
 
     :cond_3
-    sget-object v6, Lcom/estrongs/android/util/f;->a:[Ljava/lang/String;
+    sget-object v6, Lcom/estrongs/android/util/e;->a:[Ljava/lang/String;
 
     const/4 v7, 0x0
 
@@ -1822,7 +1822,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->i(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1861,7 +1861,7 @@
 
     iget-object v0, p0, Lcom/estrongs/old/fs/impl/sftp/OldSFtpFileSystem;->a:Ljava/util/HashMap;
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->i(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1970,7 +1970,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v3}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v3}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -2029,19 +2029,19 @@
     const-string v0, "22"
 
     :try_start_0
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->y(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->A(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->A(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->C(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->w(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->y(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2067,7 +2067,7 @@
 
     :cond_2
     :try_start_1
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -2146,19 +2146,19 @@
     const-string v1, "22"
 
     :try_start_0
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->y(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->A(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->A(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->C(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->w(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->y(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2186,7 +2186,7 @@
 
     :cond_1
     :try_start_1
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2306,19 +2306,19 @@
     const-string v0, "22"
 
     :try_start_0
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->y(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->A(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->A(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->C(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->w(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->y(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2346,11 +2346,11 @@
 
     :cond_2
     :try_start_1
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-static {p2}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -2458,19 +2458,19 @@
     const-string v1, "22"
 
     :try_start_0
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->y(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->A(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->A(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->C(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->w(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->y(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2511,7 +2511,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2611,7 +2611,7 @@
     move v0, v3
 
     :goto_2
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -2692,19 +2692,19 @@
     const-string v0, "22"
 
     :try_start_0
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->y(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->A(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->A(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->C(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->w(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->y(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2732,7 +2732,7 @@
 
     :cond_2
     :try_start_1
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -2846,7 +2846,7 @@
     const-string v2, "22"
 
     :try_start_0
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->y(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->A(Ljava/lang/String;)Ljava/lang/String;
     :try_end_0
     .catch Lcom/jcraft/jsch/SftpException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2854,11 +2854,11 @@
     move-result-object v4
 
     :try_start_1
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->A(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->C(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;)Ljava/lang/String;
     :try_end_1
     .catch Lcom/jcraft/jsch/SftpException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -2866,7 +2866,7 @@
     move-result-object v3
 
     :try_start_2
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->w(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->y(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2892,7 +2892,7 @@
 
     :cond_2
     :try_start_3
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2973,7 +2973,7 @@
     :goto_2
     iput-boolean v8, v1, Lcom/estrongs/fs/c;->l:Z
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
@@ -3140,19 +3140,19 @@
     const-string v0, "22"
 
     :try_start_0
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->y(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->A(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->A(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->C(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->w(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->y(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -3173,7 +3173,7 @@
     return-object v0
 
     :cond_1
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -3217,19 +3217,19 @@
     const-string v1, "22"
 
     :try_start_0
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->y(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->A(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->A(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->C(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->w(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->y(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -3326,7 +3326,7 @@
     const/4 v2, 0x0
 
     :try_start_0
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->y(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->A(Ljava/lang/String;)Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -3334,11 +3334,11 @@
     move-result-object v5
 
     :try_start_1
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->A(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->C(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;)Ljava/lang/String;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -3346,7 +3346,7 @@
     move-result-object v4
 
     :try_start_2
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->w(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->y(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -3376,7 +3376,7 @@
 
     :cond_1
     :try_start_4
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 

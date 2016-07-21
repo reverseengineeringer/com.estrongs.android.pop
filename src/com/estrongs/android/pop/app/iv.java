@@ -1,28 +1,20 @@
 package com.estrongs.android.pop.app;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.ui.dialog.ks;
-import com.estrongs.android.util.am;
-import java.util.ArrayList;
-import java.util.List;
+import android.preference.Preference;
+import android.preference.Preference.OnPreferenceClickListener;
+import com.estrongs.android.pop.view.a;
+import com.estrongs.android.ui.dialog.kq;
+import java.util.Locale;
 
 class iv
-  implements View.OnClickListener
+  implements Preference.OnPreferenceClickListener
 {
-  iv(PopVideoPlayer paramPopVideoPlayer) {}
+  iv(PopPreferenceActivity paramPopPreferenceActivity) {}
   
-  public void onClick(View paramView)
+  public boolean onPreferenceClick(Preference paramPreference)
   {
-    paramView = am.d(PopVideoPlayer.x(a));
-    if (paramView != null)
-    {
-      ArrayList localArrayList = new ArrayList();
-      localArrayList.add(am.bB(paramView));
-      paramView = new ks(a, "video", localArrayList);
-      paramView.a(new iw(this));
-      paramView.show();
-    }
+    new kq(a, 1, "http://update.estrongs.com/up?id=1&l=" + Locale.getDefault().toString().toLowerCase() + "&channel=" + a.b).b();
+    return true;
   }
 }
 

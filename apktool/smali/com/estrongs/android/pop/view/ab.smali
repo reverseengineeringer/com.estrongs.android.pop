@@ -6,14 +6,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+.field final synthetic a:Lcom/estrongs/android/view/cr;
+
+.field final synthetic b:Lcom/estrongs/android/pop/view/aa;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
+.method constructor <init>(Lcom/estrongs/android/pop/view/aa;Lcom/estrongs/android/view/cr;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/view/ab;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/view/ab;->b:Lcom/estrongs/android/pop/view/aa;
+
+    iput-object p2, p0, Lcom/estrongs/android/pop/view/ab;->a:Lcom/estrongs/android/view/cr;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,13 +27,11 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/ab;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/ab;->a:Lcom/estrongs/android/view/cr;
 
-    const-string v1, "du://"
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->d(Ljava/lang/String;)Lcom/estrongs/android/view/aw;
+    invoke-virtual {v0}, Lcom/estrongs/android/view/cr;->g()V
 
     return-void
 .end method

@@ -1,28 +1,20 @@
 package com.estrongs.android.pop.view;
 
-import android.widget.ProgressBar;
-import com.estrongs.android.ui.addressbar.AdvancedAddressBar;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.pop.utils.ao;
+import com.estrongs.android.widget.f;
 
 class cc
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  cc(FileExplorerActivity paramFileExplorerActivity, boolean paramBoolean) {}
+  cc(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (FileExplorerActivity.a(b) != null) {
-      FileExplorerActivity.a(b).a(a);
-    }
-    while (b.A == null) {
-      return;
-    }
-    ProgressBar localProgressBar = b.A;
-    if (a) {}
-    for (int i = 0;; i = 8)
-    {
-      localProgressBar.setVisibility(i);
-      return;
-    }
+    a.B();
+    ao.a(a, a.x, a.K.e(), a.n);
+    a.K.k();
   }
 }
 

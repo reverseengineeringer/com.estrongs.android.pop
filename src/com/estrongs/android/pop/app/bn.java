@@ -1,24 +1,10 @@
 package com.estrongs.android.pop.app;
 
-import android.app.Activity;
-import com.estrongs.android.pop.utils.aj;
-import com.estrongs.android.ui.pcs.n;
-
-class bn
-  implements n
+public abstract interface bn
 {
-  bn(ESFileSharingActivity paramESFileSharingActivity, Activity paramActivity, String paramString) {}
+  public abstract void a(bm parambm);
   
-  public void a(boolean paramBoolean, String paramString1, String paramString2)
-  {
-    if ((paramBoolean) && (paramString2 != null))
-    {
-      aj.a(a, b, new bo(this));
-      ESFileSharingActivity.a(c, false);
-      return;
-    }
-    c.finish();
-  }
+  public abstract void b(bm parambm);
 }
 
 /* Location:

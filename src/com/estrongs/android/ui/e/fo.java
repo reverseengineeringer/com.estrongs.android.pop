@@ -1,15 +1,40 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.view.a.b;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.utils.ao;
+import com.estrongs.android.util.bk;
+import com.estrongs.fs.h;
+import com.estrongs.fs.w;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 class fo
-  implements b
+  implements MenuItem.OnMenuItemClickListener
 {
-  fo(cp paramcp) {}
+  fo(cr paramcr) {}
   
-  public boolean a(co paramco)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    return B;
+    Object localObject = cr.a(a);
+    paramMenuItem = new LinkedList();
+    localObject = ((List)localObject).iterator();
+    while (((Iterator)localObject).hasNext())
+    {
+      h localh = (h)((Iterator)localObject).next();
+      if (!localh.getFileType().a()) {
+        paramMenuItem.add(localh);
+      }
+    }
+    if (paramMenuItem.size() == 1) {
+      ao.a(cr.b(a), ((h)paramMenuItem.get(0)).getAbsolutePath());
+    }
+    while (paramMenuItem.size() <= 1) {
+      return false;
+    }
+    ao.b(cr.b(a), bk.a(paramMenuItem));
+    return false;
   }
 }
 

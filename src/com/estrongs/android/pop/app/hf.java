@@ -1,23 +1,17 @@
 package com.estrongs.android.pop.app;
 
 import android.preference.Preference;
-import com.estrongs.android.ui.view.ag;
+import android.preference.Preference.OnPreferenceClickListener;
 
 class hf
-  implements Runnable
+  implements Preference.OnPreferenceClickListener
 {
   hf(PopPreferenceActivity paramPopPreferenceActivity) {}
   
-  public void run()
+  public boolean onPreferenceClick(Preference paramPreference)
   {
-    a.o.setEnabled(false);
-    try
-    {
-      a.dismissDialog(102);
-      ag.a(a, 2131427830, 0);
-      return;
-    }
-    catch (IllegalArgumentException localIllegalArgumentException) {}
+    a.showDialog(107);
+    return true;
   }
 }
 

@@ -1,33 +1,15 @@
 package com.baidu.mobstat;
 
-import android.content.Context;
-import com.baidu.mobstat.util.e;
-
-class y
-  implements Runnable
+ enum y
 {
-  y(x paramx, String paramString1, String paramString2, int paramInt, long paramLong, Context paramContext) {}
-  
-  public void run()
+  y(int paramInt1)
   {
-    if (!af.a().c()) {}
-    synchronized (af.a())
-    {
-      try
-      {
-        af.a().wait();
-        DataCore.getInstance().putEvent(a, b, c, d, 0L);
-        DataCore.getInstance().flush(e);
-        return;
-      }
-      catch (InterruptedException localInterruptedException)
-      {
-        for (;;)
-        {
-          e.a("sdkstat", localInterruptedException);
-        }
-      }
-    }
+    super(paramString, paramInt, paramInt1, null);
+  }
+  
+  public w a()
+  {
+    return new af();
   }
 }
 

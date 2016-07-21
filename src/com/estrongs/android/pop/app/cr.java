@@ -1,16 +1,20 @@
 package com.estrongs.android.pop.app;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.ui.dialog.iy;
 
 class cr
-  implements View.OnClickListener
+  implements MenuItem.OnMenuItemClickListener
 {
   cr(GestureManageActivity paramGestureManageActivity) {}
   
-  public void onClick(View paramView)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    a.finish();
+    paramMenuItem = new iy(a);
+    paramMenuItem.b();
+    paramMenuItem.a(new cs(this, paramMenuItem));
+    return false;
   }
 }
 

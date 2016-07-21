@@ -2,8 +2,8 @@ package com.estrongs.android.pop.view.utils;
 
 import android.app.Activity;
 import com.estrongs.a.a;
-import com.estrongs.android.ui.dialog.ix;
-import com.estrongs.android.util.am;
+import com.estrongs.android.ui.dialog.jh;
+import com.estrongs.android.util.ap;
 import com.estrongs.fs.b.r;
 import com.estrongs.fs.impl.local.f;
 import java.io.File;
@@ -16,7 +16,7 @@ class d
   
   public void run()
   {
-    String str = am.d(c.d);
+    String str = ap.d(c.d);
     if ((c.e) && (a)) {}
     for (;;)
     {
@@ -26,11 +26,11 @@ class d
         ??? = new r(c.a, b, new f(new File(c.f.getAbsolutePath())), str);
         processData.p = false;
         processData.k = false;
-        localObject1 = new e(this, c.c, c.c.getString(2131427442), (a)???, (RemoteSynchronizer.RemoteFile)localObject1, str);
+        localObject1 = new e(this, c.c, c.c.getString(2131232182), (a)???, (RemoteSynchronizer.RemoteFile)localObject1, str);
         ((r)???).c(false);
-        ((ix)localObject1).a(c.c.getString(2131427869), c.c.getString(2131427870));
-        ((ix)localObject1).setSingleButton(c.c.getString(2131427340), f);
-        ((ix)localObject1).a(false).show();
+        ((jh)localObject1).a(c.c.getString(2131232005), c.c.getString(2131232553));
+        ((jh)localObject1).setSingleButton(c.c.getString(2131231265), f);
+        ((jh)localObject1).a(false).show();
         localObject1 = ((r)???).getDecisionData(com.estrongs.a.a.h.class);
         g = 1;
         e = true;

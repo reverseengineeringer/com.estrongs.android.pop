@@ -1,37 +1,13 @@
 package com.estrongs.android.pop.view;
 
-import android.os.Handler;
-import android.text.Editable;
-import android.view.KeyEvent;
-import android.view.View;
-import android.view.View.OnKeyListener;
-import android.widget.EditText;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.view.aw;
-
 class bd
-  implements View.OnKeyListener
+  implements Runnable
 {
   bd(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public boolean onKey(View paramView, int paramInt, KeyEvent paramKeyEvent)
+  public void run()
   {
-    if ((paramKeyEvent.getAction() == 0) && (paramInt == 66))
-    {
-      if (((FileExplorerActivity.B(a).getText() == null) || (FileExplorerActivity.B(a).getText().length() == 0)) && ("all".equals(a.y().ab())))
-      {
-        ag.a(a, 2131428425, 0);
-        a.h.post(new be(this));
-        return true;
-      }
-      paramView = a.y();
-      if ((paramView != null) && (!a.f(a.z()))) {
-        a.a("externalstorage://", paramView.ab(), FileExplorerActivity.B(a).getText().toString());
-      }
-      a.u();
-      return true;
-    }
-    return false;
+    FileExplorerActivity.a(a, false);
   }
 }
 

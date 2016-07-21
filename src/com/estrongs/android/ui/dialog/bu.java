@@ -1,38 +1,50 @@
 package com.estrongs.android.ui.dialog;
 
-import android.view.View;
-import android.view.View.OnClickListener;
 import com.estrongs.android.appinfo.AppFolderInfoManager.RemnantFolder;
+import com.estrongs.fs.b.ao;
+import com.estrongs.fs.b.ap;
+import com.estrongs.fs.util.j;
 import java.util.ArrayList;
-import java.util.Set;
+import java.util.Iterator;
 
 class bu
-  implements View.OnClickListener
 {
-  bu(bt parambt) {}
+  String a;
+  String b;
+  ArrayList<AppFolderInfoManager.RemnantFolder> c;
   
-  public void onClick(View paramView)
+  bu(String paramString1, String paramString2, ArrayList<AppFolderInfoManager.RemnantFolder> paramArrayList)
   {
-    paramView = (bx)paramView.getTag();
-    if (paramView == null) {}
-    bs localbs;
-    do
-    {
-      do
-      {
-        return;
-      } while ((e < 0) || (e >= a.a.i.size()));
-      localbs = (bs)a.a.i.get(e);
-    } while ((f < 0) || (f >= c.size()));
-    paramView = c.get(f)).a;
-    if (!a.a.b.contains(paramView)) {
-      a.a.b.add(paramView);
+    a = paramString1;
+    b = paramString2;
+    c = paramArrayList;
+  }
+  
+  String a()
+  {
+    if (a != null) {
+      return a;
     }
+    return b;
+  }
+  
+  String b()
+  {
+    Iterator localIterator = c.iterator();
+    long l = 0L;
+    if (localIterator.hasNext())
+    {
+      ao localao = (ao)((AppFolderInfoManager.RemnantFolder)localIterator.next()).a();
+      if (localao == null) {
+        break label60;
+      }
+      l = bc + l;
+    }
+    label60:
     for (;;)
     {
-      a.notifyDataSetChanged();
-      return;
-      a.a.b.remove(paramView);
+      break;
+      return j.c(l);
     }
   }
 }

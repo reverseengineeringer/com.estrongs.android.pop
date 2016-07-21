@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Lcom/estrongs/android/pop/app/ShowDialogActivity;
+.field final synthetic a:Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/ShowDialogActivity;Ljava/lang/String;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/kw;->b:Lcom/estrongs/android/pop/app/ShowDialogActivity;
-
-    iput-object p2, p0, Lcom/estrongs/android/pop/app/kw;->a:Ljava/lang/String;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/kw;->a:Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,44 +22,43 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
+.method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/kw;->b:Lcom/estrongs/android/pop/app/ShowDialogActivity;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/kw;->a:Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;
 
-    const-class v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    const-class v2, Lcom/estrongs/android/pop/app/RecommItemImageViewer;
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    const/high16 v1, 0x24000000
+    const-string v1, "position"
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/kw;->a:Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/kw;->a:Ljava/lang/String;
+    invoke-static {v2}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->b(Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;)I
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    move-result v2
 
-    move-result-object v1
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    const-string v2, "/"
+    const-string v1, "index"
 
-    invoke-static {v1, v2}, Landroid/net/Uri;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    move-result-object v1
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/kw;->a:Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;
 
-    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/kw;->b:Lcom/estrongs/android/pop/app/ShowDialogActivity;
-
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/app/ShowDialogActivity;->startActivity(Landroid/content/Intent;)V
-
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/app/RecommItemDetailAcitivity;->startActivity(Landroid/content/Intent;)V
 
     return-void
 .end method

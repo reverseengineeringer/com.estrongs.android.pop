@@ -1,20 +1,28 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.os.Handler;
+import android.os.Message;
+import java.util.List;
 
 class y
-  implements DialogInterface.OnClickListener
+  extends Handler
 {
-  y(r paramr) {}
+  y(x paramx) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void handleMessage(Message paramMessage)
   {
-    r.a(a).q();
-    a.dismiss();
-    if (r.i(a) != null) {
-      r.i(a).b();
+    switch (what)
+    {
+    default: 
+      return;
     }
+    paramMessage = x.a(a).x();
+    if ((paramMessage == null) || (paramMessage.size() == 0))
+    {
+      x.b(a);
+      return;
+    }
+    x.c(a);
   }
 }
 

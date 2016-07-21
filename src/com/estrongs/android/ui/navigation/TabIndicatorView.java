@@ -6,18 +6,22 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.View;
+import com.estrongs.android.ui.d.g;
+import com.estrongs.android.ui.theme.at;
 
 public class TabIndicatorView
   extends View
 {
   Paint a;
-  Rect b;
+  Paint b;
   Rect c;
-  int d = -1;
-  int e = -1;
-  int f;
-  int g = 0;
-  float h = 0.0F;
+  Rect d;
+  Rect e;
+  int f = -1;
+  int g = -1;
+  int h;
+  int i = 0;
+  float j = 0.0F;
   
   public TabIndicatorView(Context paramContext)
   {
@@ -40,15 +44,17 @@ public class TabIndicatorView
   private void a()
   {
     a = new Paint();
-    a.setColor(-13520930);
+    a.setColor(at.a(getContext()).c(2131558640));
+    b = new Paint();
+    b.setColor(at.a(getContext()).c(2131558641));
   }
   
   public void a(int paramInt, float paramFloat)
   {
     try
     {
-      g = paramInt;
-      h = paramFloat;
+      i = paramInt;
+      j = paramFloat;
       invalidate();
       return;
     }
@@ -58,28 +64,31 @@ public class TabIndicatorView
   protected void onDraw(Canvas paramCanvas)
   {
     super.onDraw(paramCanvas);
-    if (b == null)
+    if (c == null)
     {
-      d = getWidth();
-      e = getHeight();
-      f = (d / 2);
-      b = new Rect();
-      b.left = 0;
-      b.top = 0;
-      b.bottom = e;
-      b.right = f;
+      f = getWidth();
+      g = getHeight();
+      h = (f / 2);
       c = new Rect();
       c.left = 0;
       c.top = 0;
-      c.bottom = e;
-      c.right = 0;
+      c.bottom = g;
+      c.right = h;
+      d = new Rect();
+      d.left = 0;
+      d.top = 0;
+      d.bottom = g;
+      d.right = 0;
+      k = g.a(getContext(), 1.0F);
+      e = new Rect(0, g - k, f, g);
     }
-    int i = (int)(f * (g + h));
-    b.left = i;
-    b.right = (i + f);
-    c.right = (b.left - f);
-    paramCanvas.drawRect(b, a);
-    paramCanvas.drawRect(c, a);
+    int k = (int)(h * (i + j));
+    c.left = k;
+    c.right = (k + h);
+    d.right = (c.left - h);
+    paramCanvas.drawRect(e, a);
+    paramCanvas.drawRect(c, b);
+    paramCanvas.drawRect(d, b);
   }
 }
 

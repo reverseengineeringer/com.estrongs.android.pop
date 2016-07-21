@@ -1,9 +1,10 @@
 package com.estrongs.fs.impl.d;
 
 import com.estrongs.fs.h;
+import com.estrongs.fs.y;
 
 public class a
-  extends d
+  extends y
 {
   public a(h paramh)
   {
@@ -12,7 +13,7 @@ public class a
   
   protected String a()
   {
-    return "book://";
+    return "archive://";
   }
 }
 

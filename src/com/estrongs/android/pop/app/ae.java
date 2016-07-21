@@ -1,10 +1,21 @@
 package com.estrongs.android.pop.app;
 
-public abstract interface ae
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+
+class ae
+  implements DialogInterface.OnClickListener
 {
-  public abstract void a();
+  ae(x paramx) {}
   
-  public abstract void b();
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  {
+    x.a(a).q();
+    a.dismiss();
+    if (x.h(a) != null) {
+      x.h(a).b();
+    }
+  }
 }
 
 /* Location:

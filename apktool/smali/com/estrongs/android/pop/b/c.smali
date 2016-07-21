@@ -41,7 +41,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -51,7 +51,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/b/c;->a:Landroid/app/Activity;
 
-    const v2, 0x7f0b018f
+    const v2, 0x7f0802a0
 
     new-array v3, v6, [Ljava/lang/Object;
 
@@ -65,7 +65,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1, v6}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    invoke-static {v0, v1, v6}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
     :goto_0
     return-void

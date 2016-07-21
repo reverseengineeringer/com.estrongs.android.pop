@@ -1,31 +1,15 @@
 package com.estrongs.android.pop.app;
 
-import android.content.Intent;
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceClickListener;
-import com.estrongs.android.ui.dialog.ct;
-import com.estrongs.android.util.ak;
+import com.estrongs.android.pop.app.c.m;
 
 class gh
-  implements Preference.OnPreferenceClickListener
+  extends Thread
 {
-  gh(PopPreferenceActivity paramPopPreferenceActivity) {}
+  gh(PopAudioPlayer paramPopAudioPlayer, m paramm) {}
   
-  public boolean onPreferenceClick(Preference paramPreference)
+  public void run()
   {
-    if (ak.d())
-    {
-      paramPreference = new Intent();
-      paramPreference.setClassName(a.getPackageName(), HelpActivity.class.getName());
-      a.startActivity(paramPreference);
-    }
-    for (;;)
-    {
-      return true;
-      paramPreference = new ct(a);
-      paramPreference.a(a.getText(2131427398)).b(a.getText(2131427796)).a(2131427339, new gi(this));
-      paramPreference.c();
-    }
+    a.i();
   }
 }
 

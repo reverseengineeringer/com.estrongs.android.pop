@@ -1,17 +1,10 @@
 package com.estrongs.android.widget;
 
 import android.view.View;
-import android.widget.CheckBox;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-public class e
+public abstract interface e
 {
-  public View d;
-  public ImageView e;
-  public TextView f;
-  public CheckBox g;
-  public Object h;
+  public abstract void a(ESViewStub paramESViewStub, View paramView);
 }
 
 /* Location:

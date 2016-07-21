@@ -1,37 +1,29 @@
 .class Landroid/support/v4/view/ap;
-.super Ljava/lang/Object;
+.super Landroid/support/v4/view/an;
 
 # interfaces
-.implements Landroid/support/v4/view/ar;
+.implements Landroid/view/LayoutInflater$Factory2;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Landroid/support/v4/view/ar;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Landroid/support/v4/view/an;-><init>(Landroid/support/v4/view/ar;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/view/VelocityTracker;I)F
+.method public onCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
     .locals 1
 
-    invoke-virtual {p1}, Landroid/view/VelocityTracker;->getXVelocity()F
+    iget-object v0, p0, Landroid/support/v4/view/ap;->a:Landroid/support/v4/view/ar;
 
-    move-result v0
+    invoke-interface {v0, p1, p2, p3, p4}, Landroid/support/v4/view/ar;->onCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
 
-    return v0
-.end method
+    move-result-object v0
 
-.method public b(Landroid/view/VelocityTracker;I)F
-    .locals 1
-
-    invoke-virtual {p1}, Landroid/view/VelocityTracker;->getYVelocity()F
-
-    move-result v0
-
-    return v0
+    return-object v0
 .end method

@@ -1,7 +1,7 @@
 package com.estrongs.fs.b;
 
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.dialog.cg;
+import com.estrongs.android.ui.dialog.ci;
 
 class d
   implements Runnable
@@ -10,7 +10,7 @@ class d
   
   public void run()
   {
-    a.c(a).setTitle(FileExplorerActivity.J().getString(2131427698));
+    a.c(a).setTitle(FileExplorerActivity.X().getString(2131230974));
   }
 }
 

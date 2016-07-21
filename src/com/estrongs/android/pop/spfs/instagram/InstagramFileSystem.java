@@ -1,6 +1,5 @@
 package com.estrongs.android.pop.spfs.instagram;
 
-import android.util.Log;
 import com.estrongs.android.pop.netfs.INetRefreshCallback;
 import com.estrongs.android.pop.netfs.NetFsException;
 import com.estrongs.android.pop.netfs.utils.HttpUtils;
@@ -11,6 +10,8 @@ import com.estrongs.android.pop.spfs.PhotoInfoException;
 import com.estrongs.android.pop.spfs.SPFileInfo;
 import com.estrongs.android.pop.spfs.note.IPhotoInfo;
 import com.estrongs.android.util.TypedMap;
+import com.estrongs.android.util.l;
+import com.estrongs.android.util.n;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.DataInputStream;
@@ -618,13 +619,13 @@ public class InstagramFileSystem
       paramString3 = getCacheEntry(paramString1, paramString3);
       if (paramString3 == null)
       {
-        Log.e("Instagram", "can't get cache entry for add comment");
+        l.e("Instagram", "can't get cache entry for add comment");
         return null;
       }
       paramString1 = getTokenString(paramString1, paramString2);
       if (paramString1 == null)
       {
-        Log.e("Instagram", "delete, can't get the token");
+        l.e("Instagram", "delete, can't get the token");
         return null;
       }
     }
@@ -641,7 +642,7 @@ public class InstagramFileSystem
     {
       if ((paramString2.has("meta")) && (paramString2.getJSONObject("meta").has("error_type")))
       {
-        Log.e("Instagram", "AddComment failed, error code:" + paramString2.getJSONObject("meta").getString("error_message"));
+        l.e("Instagram", "AddComment failed, error code:" + paramString2.getJSONObject("meta").getString("error_message"));
         throw new PhotoInfoException(paramString2.getJSONObject("meta").getString("error_message"));
       }
       paramString1 = paramString2.getJSONObject("data").getString("id");
@@ -760,13 +761,13 @@ public class InstagramFileSystem
       paramString3 = getCacheEntry(paramString1, paramString3);
       if (paramString3 == null)
       {
-        Log.e("Instagram", "can't get cache entry for delete comment");
+        l.e("Instagram", "can't get cache entry for delete comment");
         return;
       }
       paramString1 = getTokenString(paramString1, paramString2);
       if (paramString1 == null)
       {
-        Log.e("Instagram", "delete, can't get the token");
+        l.e("Instagram", "delete, can't get the token");
         return;
       }
     }
@@ -778,7 +779,7 @@ public class InstagramFileSystem
       paramString1 = parseAsJSON(getNewHttpClient().execute(paramString1));
       if ((paramString1.has("meta")) && (paramString1.getJSONObject("meta").has("error_type")))
       {
-        Log.e("Instagram", "lsit failed, error code:" + paramString1.getJSONObject("meta").getString("error_message"));
+        l.e("Instagram", "lsit failed, error code:" + paramString1.getJSONObject("meta").getString("error_message"));
         return;
       }
     }
@@ -848,7 +849,7 @@ public class InstagramFileSystem
       paramString1 = getTokenString(paramString1, null);
       if (paramString1 == null)
       {
-        Log.e("Instagram", "getBuddyIcon, can't get the token");
+        l.e("Instagram", "getBuddyIcon, can't get the token");
         return null;
       }
       paramString2 = String.format("/users/%s", new Object[] { paramString2 });
@@ -856,7 +857,7 @@ public class InstagramFileSystem
       paramString1 = parseAsJSON(getNewHttpClient().execute(paramString1));
       if ((paramString1.has("meta")) && (paramString1.getJSONObject("meta").has("error_type")))
       {
-        Log.e("Instagram", "lsit failed, error code:" + paramString1.getJSONObject("meta").getString("error_message"));
+        l.e("Instagram", "lsit failed, error code:" + paramString1.getJSONObject("meta").getString("error_message"));
         return null;
       }
     }
@@ -879,13 +880,13 @@ public class InstagramFileSystem
       paramString3 = getCacheEntry(paramString1, paramString3);
       if (paramString3 == null)
       {
-        Log.e("Instagram", "can't get cache entry for get comments");
+        l.e("Instagram", "can't get cache entry for get comments");
         return null;
       }
       paramString1 = getTokenString(paramString1, paramString2);
       if (paramString1 == null)
       {
-        Log.e("Instagram", "delete, can't get the token");
+        l.e("Instagram", "delete, can't get the token");
         return null;
       }
     }
@@ -898,13 +899,13 @@ public class InstagramFileSystem
     paramString1 = parseAsJSON(getNewHttpClient().execute(paramString1));
     if ((paramString1.has("meta")) && (paramString1.getJSONObject("meta").has("error_type")))
     {
-      Log.e("Instagram", "lsit failed, error code:" + paramString1.getJSONObject("meta").getString("error_message"));
+      l.e("Instagram", "lsit failed, error code:" + paramString1.getJSONObject("meta").getString("error_message"));
       return null;
     }
     paramString3 = paramString1.getJSONArray("data");
     if (paramString3 == null)
     {
-      Log.e("Instagram", "list no data");
+      l.e("Instagram", "list no data");
       return null;
     }
     paramTypedMap = new ArrayList();
@@ -967,30 +968,30 @@ public class InstagramFileSystem
     //   19: ifnull -10 -> 9
     //   22: aload_0
     //   23: aload_2
-    //   24: invokevirtual 728	com/estrongs/android/pop/spfs/instagram/InstagramFileSystem:convertToFileInfo	(Lcom/estrongs/android/pop/spfs/instagram/InstagramFileSystemCache$InstagramFileCacheEntry;)Lcom/estrongs/android/pop/spfs/SPFileInfo;
+    //   24: invokevirtual 727	com/estrongs/android/pop/spfs/instagram/InstagramFileSystem:convertToFileInfo	(Lcom/estrongs/android/pop/spfs/instagram/InstagramFileSystemCache$InstagramFileCacheEntry;)Lcom/estrongs/android/pop/spfs/SPFileInfo;
     //   27: astore_1
     //   28: aload_1
     //   29: getfield 547	com/estrongs/android/pop/spfs/SPFileInfo:size	J
     //   32: lstore 4
     //   34: lload 4
-    //   36: ldc2_w 729
+    //   36: ldc2_w 728
     //   39: lcmp
     //   40: ifne +15 -> 55
     //   43: aload_1
     //   44: aload_2
     //   45: getfield 222	com/estrongs/android/pop/spfs/instagram/InstagramFileSystemCache$InstagramFileCacheEntry:url	Ljava/lang/String;
-    //   48: invokestatic 735	com/estrongs/android/pop/spfs/ESURLUtil:getLength	(Ljava/lang/String;)I
+    //   48: invokestatic 734	com/estrongs/android/pop/spfs/ESURLUtil:getLength	(Ljava/lang/String;)I
     //   51: i2l
     //   52: putfield 547	com/estrongs/android/pop/spfs/SPFileInfo:size	J
     //   55: aload_1
     //   56: areturn
     //   57: astore_2
     //   58: aload_2
-    //   59: invokevirtual 736	java/net/MalformedURLException:printStackTrace	()V
-    //   62: new 607	com/estrongs/android/pop/netfs/NetFsException
+    //   59: invokevirtual 735	java/net/MalformedURLException:printStackTrace	()V
+    //   62: new 606	com/estrongs/android/pop/netfs/NetFsException
     //   65: dup
     //   66: aload_2
-    //   67: invokespecial 626	com/estrongs/android/pop/netfs/NetFsException:<init>	(Ljava/lang/Throwable;)V
+    //   67: invokespecial 625	com/estrongs/android/pop/netfs/NetFsException:<init>	(Ljava/lang/Throwable;)V
     //   70: pop
     //   71: goto -16 -> 55
     //   74: astore_1
@@ -1000,11 +1001,11 @@ public class InstagramFileSystem
     //   80: areturn
     //   81: astore_2
     //   82: aload_2
-    //   83: invokevirtual 737	java/io/IOException:printStackTrace	()V
-    //   86: new 607	com/estrongs/android/pop/netfs/NetFsException
+    //   83: invokevirtual 736	java/io/IOException:printStackTrace	()V
+    //   86: new 606	com/estrongs/android/pop/netfs/NetFsException
     //   89: dup
     //   90: aload_2
-    //   91: invokespecial 626	com/estrongs/android/pop/netfs/NetFsException:<init>	(Ljava/lang/Throwable;)V
+    //   91: invokespecial 625	com/estrongs/android/pop/netfs/NetFsException:<init>	(Ljava/lang/Throwable;)V
     //   94: pop
     //   95: goto -40 -> 55
     // Local variable table:
@@ -1033,7 +1034,7 @@ public class InstagramFileSystem
       paramString1 = getCacheEntry(paramString1, paramString3);
       if ((paramString1 == null) || (isDir != 0) || (url == null))
       {
-        Log.e("Instagram", "can't get cache entry for InputStream");
+        l.e("Instagram", "can't get cache entry for InputStream");
         return null;
       }
       paramString1 = new HttpGet(url);
@@ -1043,7 +1044,7 @@ public class InstagramFileSystem
       paramString1 = getNewHttpClient().execute(paramString1);
       if ((paramString1.getStatusLine().getStatusCode() != 200) && (paramString1.getStatusLine().getStatusCode() != 206) && (paramString1.getStatusLine().getStatusCode() != 203))
       {
-        Log.e("Instagram", "getInputStream ret:" + paramString1.getStatusLine().getStatusCode());
+        l.e("Instagram", "getInputStream ret:" + paramString1.getStatusLine().getStatusCode());
         return null;
       }
     }
@@ -1085,7 +1086,7 @@ public class InstagramFileSystem
     {
       Object localObject1 = KeyStore.getInstance(KeyStore.getDefaultType());
       ((KeyStore)localObject1).load(null, null);
-      Object localObject2 = new InstagramFileSystem.MySSLSocketFactory(this, (KeyStore)localObject1);
+      Object localObject2 = new n((KeyStore)localObject1);
       ((SSLSocketFactory)localObject2).setHostnameVerifier(SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
       localObject1 = new BasicHttpParams();
       HttpProtocolParams.setVersion((HttpParams)localObject1, HttpVersion.HTTP_1_1);
@@ -1120,7 +1121,7 @@ public class InstagramFileSystem
       paramString1 = getCacheEntry(paramString1, paramString3);
       if ((paramString1 == null) || (isDir != 0) || (url == null))
       {
-        Log.e("Instagram", "can't get cache entry for get photo extension");
+        l.e("Instagram", "can't get cache entry for get photo extension");
         return null;
       }
       paramString1 = url.substring(url.lastIndexOf('.'));
@@ -1156,7 +1157,7 @@ public class InstagramFileSystem
       localObject2 = getCacheEntry(paramString1, paramString3);
       if ((localObject2 == null) || (isDir != 0) || (url == null))
       {
-        Log.e("Instagram", "can't get cache entry for InputStream");
+        l.e("Instagram", "can't get cache entry for InputStream");
         return null;
       }
       paramString3 = (String)localObject1;
@@ -1167,7 +1168,7 @@ public class InstagramFileSystem
       localObject2 = getNewHttpClient();
       if (getTokenString(paramString1, paramString2) == null)
       {
-        Log.e("Instagram", "can't get token download");
+        l.e("Instagram", "can't get token download");
         return null;
       }
     }
@@ -1179,7 +1180,7 @@ public class InstagramFileSystem
     paramString1 = ((HttpClient)localObject2).execute(paramString3);
     if ((paramString1.getStatusLine().getStatusCode() != 200) && (paramString1.getStatusLine().getStatusCode() != 203))
     {
-      Log.e("Instagram", "getInputStream ret:" + paramString1.getStatusLine().getStatusCode());
+      l.e("Instagram", "getInputStream ret:" + paramString1.getStatusLine().getStatusCode());
       return null;
     }
     paramString1 = paramString1.getEntity();
@@ -1202,13 +1203,13 @@ public class InstagramFileSystem
       }
       if (((JSONObject)localObject2).has("error_type"))
       {
-        Log.e("Instagram", "get token failed:" + ((JSONObject)localObject2).optString("error_message"));
+        l.e("Instagram", "get token failed:" + ((JSONObject)localObject2).optString("error_message"));
         return null;
       }
       paramString = (String)((JSONObject)localObject2).get("access_token");
       if (paramString == null)
       {
-        Log.e("Instagram", "get null token");
+        l.e("Instagram", "get null token");
         return null;
       }
       localObject1 = ((JSONObject)localObject2).getJSONObject("user").getString("id");
@@ -1297,7 +1298,7 @@ public class InstagramFileSystem
       String str1 = getTokenString(paramString1, paramString2);
       if (str1 == null)
       {
-        Log.e("Instagram", "can't get the token");
+        l.e("Instagram", "can't get the token");
         return null;
       }
       localLinkedHashMap = new LinkedHashMap();
@@ -1337,13 +1338,13 @@ public class InstagramFileSystem
     paramString1 = parseAsJSON(getNewHttpClient().execute(paramString1));
     if ((paramString1.has("meta")) && (paramString1.getJSONObject("meta").has("error_type")))
     {
-      Log.e("Instagram", "lsit failed, error code:" + paramString1.getJSONObject("meta").getString("error_message"));
+      l.e("Instagram", "lsit failed, error code:" + paramString1.getJSONObject("meta").getString("error_message"));
       return null;
     }
     paramString1 = paramString1.getJSONArray("data");
     if (paramString1 == null)
     {
-      Log.e("Instagram", "list no data");
+      l.e("Instagram", "list no data");
       return null;
     }
     for (;;)

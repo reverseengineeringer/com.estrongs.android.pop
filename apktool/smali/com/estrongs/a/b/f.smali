@@ -25,7 +25,7 @@
 .method public run()V
     .locals 0
 
-    invoke-static {}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->a()V
+    invoke-static {}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->d()V
 
     return-void
 .end method

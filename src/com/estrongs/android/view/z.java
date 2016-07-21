@@ -1,26 +1,24 @@
 package com.estrongs.android.view;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.pop.view.FileExplorerActivity;
+import android.widget.BaseAdapter;
+import java.util.List;
 
 class z
-  implements View.OnClickListener
+  extends af
 {
-  z(y paramy) {}
-  
-  public void onClick(View paramView)
+  z(y paramy1, y paramy2, List paramList1, boolean paramBoolean1, List paramList2, boolean paramBoolean2)
   {
-    paramView = (FileExplorerActivity)a.a.ad;
-    if (!paramView.H())
-    {
-      paramView.d(2131428090);
-      return;
-    }
-    if (!a.a.b) {
-      x.a(a.a);
-    }
-    a.a.a(a.a.d);
+    super(paramy2, paramList1, paramBoolean1);
+  }
+  
+  private void g()
+  {
+    e.b(this);
+  }
+  
+  protected BaseAdapter b()
+  {
+    return new aa(this);
   }
 }
 

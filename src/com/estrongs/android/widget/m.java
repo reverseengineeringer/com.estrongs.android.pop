@@ -1,13 +1,21 @@
 package com.estrongs.android.widget;
 
+import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.ui.dialog.er;
+
 class m
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  m(l paraml) {}
+  m(f paramf) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    com.estrongs.fs.impl.local.l.b(g.d(a.b));
+    paramDialogInterface = new er(f.d(a), f.d(a).getString(2131230867), f.d(a).getString(2131231133));
+    a.b = f.d(a).getString(2131231133);
+    paramDialogInterface.a(new n(this));
+    paramDialogInterface.show();
   }
 }
 

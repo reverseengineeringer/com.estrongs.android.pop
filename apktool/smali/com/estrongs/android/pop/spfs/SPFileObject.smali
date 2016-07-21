@@ -86,20 +86,20 @@
 
 
 # virtual methods
-.method protected doGetFileType()Lcom/estrongs/fs/m;
+.method protected doGetFileType()Lcom/estrongs/fs/w;
     .locals 1
 
     iget-boolean v0, p0, Lcom/estrongs/android/pop/spfs/SPFileObject;->isDirectory:Z
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/estrongs/fs/m;->a:Lcom/estrongs/fs/m;
+    sget-object v0, Lcom/estrongs/fs/w;->a:Lcom/estrongs/fs/w;
 
     :goto_0
     return-object v0
 
     :cond_0
-    sget-object v0, Lcom/estrongs/fs/m;->b:Lcom/estrongs/fs/m;
+    sget-object v0, Lcom/estrongs/fs/w;->b:Lcom/estrongs/fs/w;
 
     goto :goto_0
 .end method
@@ -222,7 +222,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/spfs/SPFileObject;->path:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->as(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->aC(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -234,7 +234,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/spfs/SPFileObject;->path:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->ah(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->ar(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

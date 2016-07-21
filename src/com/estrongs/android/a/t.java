@@ -1,8 +1,11 @@
 package com.estrongs.android.a;
 
-public abstract interface t
+class t
 {
-  public abstract void a(int paramInt, boolean paramBoolean);
+  public long a;
+  public int b;
+  
+  private t(q paramq) {}
 }
 
 /* Location:

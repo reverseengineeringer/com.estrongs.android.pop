@@ -1,42 +1,33 @@
-.class public Lcom/estrongs/android/pop/utils/cx;
+.class Lcom/estrongs/android/pop/utils/cx;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public a:Ljava/lang/String;
-
-.field public b:Ljava/lang/String;
-
-.field public c:Ljava/lang/String;
-
-.field public d:Ljava/lang/String;
-
-.field public e:Ljava/lang/String;
+.field final synthetic a:Lcom/estrongs/android/pop/utils/cv;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcom/estrongs/android/pop/utils/cv;)V
     .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/pop/utils/cx;->a:Lcom/estrongs/android/pop/utils/cv;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public run()V
+    .locals 1
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/utils/cx;->a:Ljava/lang/String;
+    iget-object v0, p0, Lcom/estrongs/android/pop/utils/cx;->a:Lcom/estrongs/android/pop/utils/cv;
 
-    iput-object p2, p0, Lcom/estrongs/android/pop/utils/cx;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lcom/estrongs/android/pop/utils/cx;->d:Ljava/lang/String;
-
-    iput-object p4, p0, Lcom/estrongs/android/pop/utils/cx;->c:Ljava/lang/String;
-
-    iput-object p5, p0, Lcom/estrongs/android/pop/utils/cx;->e:Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/pop/utils/cv;->a(Lcom/estrongs/android/pop/utils/cv;)V
 
     return-void
 .end method

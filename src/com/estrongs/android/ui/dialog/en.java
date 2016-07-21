@@ -1,46 +1,99 @@
 package com.estrongs.android.ui.dialog;
 
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.widget.Button;
+import android.app.Activity;
+import android.app.Dialog;
+import android.text.InputFilter;
+import android.view.View;
 import android.widget.EditText;
-import com.estrongs.android.ui.theme.al;
+import com.estrongs.android.ui.d.g;
+import com.estrongs.android.ui.theme.at;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.fs.util.j;
 
 class en
-  implements TextWatcher
 {
-  en(ek paramek) {}
+  Activity a;
+  Dialog b;
+  EditText c;
+  boolean d = false;
+  boolean e = true;
+  eu f = null;
+  String g;
   
-  public void afterTextChanged(Editable paramEditable)
+  public en(Activity paramActivity, Dialog paramDialog, String paramString)
   {
-    boolean bool;
-    if (a.b).c)
-    {
-      if (a.c.getText().toString().equals(a.h)) {
-        break label103;
-      }
-      bool = true;
-      a.b).b.setEnabled(bool);
-      paramEditable = al.a(a.a);
-      if (!bool) {
-        break label108;
-      }
-    }
-    label103:
-    label108:
-    for (int i = 2131230739;; i = 2131230740)
-    {
-      i = paramEditable.d(i);
-      a.b).b.setTextColor(i);
-      return;
-      bool = false;
-      break;
-    }
+    a = paramActivity;
+    b = paramDialog;
+    a(true);
+    g = paramString;
+    c = new EditText(paramActivity);
+    c.setTextSize(1, 15.0F);
+    c.setBackgroundResource(2130838299);
+    int i = g.a(paramActivity, 6.0F);
+    c.setPadding(0, i, i, i);
+    c.setTextColor(at.a(paramActivity).c(2131558661));
+    c.setSingleLine();
+    c.setOnKeyListener(new eo(this));
+    paramActivity = new ep(this, 255);
+    c.setFilters(new InputFilter[] { paramActivity });
+    c.addTextChangedListener(new eq(this));
   }
   
-  public void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}
+  public void a(eu parameu)
+  {
+    f = parameu;
+  }
   
-  public void onTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}
+  public void a(boolean paramBoolean)
+  {
+    d = paramBoolean;
+  }
+  
+  public boolean a()
+  {
+    String str = c.getText().toString().trim().trim();
+    if (str.getBytes().length > 255)
+    {
+      ak.a(a, a.getString(2131231766), 0);
+      return false;
+    }
+    if (str.length() < 1)
+    {
+      ak.a(a, a.getString(2131231765), 0);
+      return false;
+    }
+    if ((e) && (!j.c(str)))
+    {
+      ak.a(a, a.getString(2131231764), 0);
+      return false;
+    }
+    if ((f != null) && (!f.a(str))) {
+      return true;
+    }
+    b.dismiss();
+    return true;
+  }
+  
+  public View b()
+  {
+    return c;
+  }
+  
+  public void c()
+  {
+    if (g != null)
+    {
+      c.setText(g);
+      if ((g.contains(".")) && (d)) {
+        c.setSelection(0, g.lastIndexOf("."));
+      }
+    }
+    else
+    {
+      return;
+    }
+    c.selectAll();
+  }
 }
 
 /* Location:

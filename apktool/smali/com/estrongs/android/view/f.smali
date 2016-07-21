@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Landroid/widget/PopupWindow$OnDismissListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/view/e;
+.field final synthetic a:Lcom/estrongs/android/view/b;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/view/e;)V
+.method constructor <init>(Lcom/estrongs/android/view/b;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/view/f;->a:Lcom/estrongs/android/view/e;
+    iput-object p1, p0, Lcom/estrongs/android/view/f;->a:Lcom/estrongs/android/view/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,35 +22,18 @@
 
 
 # virtual methods
-.method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public onDismiss()V
+    .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/view/f;->a:Lcom/estrongs/android/view/e;
+    iget-object v0, p0, Lcom/estrongs/android/view/f;->a:Lcom/estrongs/android/view/b;
 
-    iget-object v1, p0, Lcom/estrongs/android/view/f;->a:Lcom/estrongs/android/view/e;
+    invoke-static {v0}, Lcom/estrongs/android/view/b;->d(Lcom/estrongs/android/view/b;)Landroid/widget/ImageView;
 
-    invoke-virtual {v1, p3}, Lcom/estrongs/android/view/e;->e(I)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object v1
+    const/high16 v1, 0x43340000    # 180.0f
 
-    check-cast v1, Lcom/estrongs/fs/h;
-
-    move-object v2, p2
-
-    move v3, p3
-
-    move-wide v4, p4
-
-    invoke-virtual/range {v0 .. v5}, Lcom/estrongs/android/view/e;->a(Lcom/estrongs/fs/h;Landroid/view/View;IJ)V
+    invoke-static {v0, v1}, Landroid/support/v4/view/cn;->e(Landroid/view/View;F)V
 
     return-void
 .end method

@@ -1,18 +1,16 @@
 package com.estrongs.android.ui.dialog;
 
-import com.estrongs.a.a;
-import com.estrongs.android.pop.esclasses.ESActivity;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class as
-  implements com.estrongs.a.a.p
+  implements DialogInterface.OnClickListener
 {
-  as(ap paramap) {}
+  as(ar paramar) {}
   
-  public void a(a parama, int paramInt1, int paramInt2)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ((paramInt2 == 5) && (getTaskResulta == 17)) {
-      ap.a(a).runOnUiThread(new at(this));
-    }
+    ar.a(a, paramDialogInterface);
   }
 }
 

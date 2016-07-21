@@ -1,15 +1,13 @@
 package com.estrongs.android.pop.app;
 
-import com.estrongs.android.pop.app.a.ao;
-
 class fr
-  extends Thread
+  implements Runnable
 {
-  fr(PopAudioPlayer paramPopAudioPlayer, ao paramao) {}
+  fr(fq paramfq) {}
   
   public void run()
   {
-    a.i();
+    a.b.k();
   }
 }
 

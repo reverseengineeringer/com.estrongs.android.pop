@@ -2,20 +2,20 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/a/a/p;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field final synthetic a:Ljava/lang/String;
 
-.field final synthetic b:Lcom/estrongs/android/pop/h;
+.field final synthetic b:Lcom/estrongs/android/pop/i;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/h;Ljava/lang/String;)V
+.method constructor <init>(Lcom/estrongs/android/pop/i;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/j;->b:Lcom/estrongs/android/pop/h;
+    iput-object p1, p0, Lcom/estrongs/android/pop/j;->b:Lcom/estrongs/android/pop/i;
 
     iput-object p2, p0, Lcom/estrongs/android/pop/j;->a:Ljava/lang/String;
 
@@ -26,23 +26,18 @@
 
 
 # virtual methods
-.method public a(Lcom/estrongs/a/a;II)V
+.method public run()V
     .locals 2
 
-    const/4 v0, 0x4
+    iget-object v0, p0, Lcom/estrongs/android/pop/j;->b:Lcom/estrongs/android/pop/i;
 
-    if-ne v0, p3, :cond_0
+    iget-object v0, v0, Lcom/estrongs/android/pop/i;->a:Landroid/app/Activity;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/j;->b:Lcom/estrongs/android/pop/h;
+    check-cast v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/h;->a:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/estrongs/android/pop/j;->a:Ljava/lang/String;
 
-    new-instance v1, Lcom/estrongs/android/pop/k;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->g(Ljava/lang/String;)Lcom/estrongs/android/view/cr;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/k;-><init>(Lcom/estrongs/android/pop/j;)V
-
-    invoke-virtual {v0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
-
-    :cond_0
     return-void
 .end method

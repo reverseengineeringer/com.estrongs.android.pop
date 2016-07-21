@@ -4,7 +4,7 @@ import android.graphics.Bitmap;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.view.View;
-import com.estrongs.android.ui.d.a;
+import com.estrongs.android.ui.d.g;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -52,7 +52,7 @@ public class j
     }
     Drawable localDrawable = paramView.getBackground();
     paramView.setBackgroundDrawable(null);
-    paramj.a(a.a(paramView));
+    paramj.a(g.a(paramView));
     paramView.setBackgroundDrawable(localDrawable);
     a.put(paramRect, new t(paramj));
   }

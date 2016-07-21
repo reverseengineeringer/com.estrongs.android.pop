@@ -1,17 +1,24 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.ui.view.au;
+import com.estrongs.a.a;
+import com.estrongs.a.a.l;
+import com.estrongs.a.a.m;
 
 class hy
-  implements DialogInterface.OnClickListener
+  implements l
 {
-  hy(hn paramhn, au paramau) {}
+  long a = 0L;
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  hy(hq paramhq) {}
+  
+  public void a(a parama, m paramm)
   {
-    a.d();
+    long l = System.currentTimeMillis();
+    if (l - a > 800L)
+    {
+      a = l;
+      hq.i(b);
+    }
   }
 }
 

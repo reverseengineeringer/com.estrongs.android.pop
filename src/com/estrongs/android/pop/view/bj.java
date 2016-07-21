@@ -1,16 +1,21 @@
 package com.estrongs.android.pop.view;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.ui.pcs.l;
+import com.estrongs.android.ui.pcs.q;
+import com.estrongs.android.ui.view.ak;
 
 class bj
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
-  bj(FileExplorerActivity paramFileExplorerActivity) {}
+  bj(bh parambh, q paramq) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void run()
   {
-    paramDialogInterface.dismiss();
+    ak.a(FexApplication.a(), bh.a(b, 2131231937), 0);
+    l locall = new l(b.a);
+    locall.a(a);
+    locall.a(true);
   }
 }
 

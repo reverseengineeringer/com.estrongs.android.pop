@@ -1,26 +1,17 @@
 package com.estrongs.android.ui.pcs;
 
-import android.content.Intent;
-import com.baidu.sapi2.shell.listener.AuthorizationListener;
+import android.view.View;
+import com.baidu.sapi2.SapiWebView;
 
 class aq
-  extends AuthorizationListener
+  implements Runnable
 {
-  aq(SocialLoginActivity paramSocialLoginActivity) {}
+  aq(ap paramap) {}
   
-  public void onFailed(int paramInt, String paramString)
+  public void run()
   {
-    Intent localIntent = new Intent();
-    localIntent.putExtra("result_code", paramInt);
-    localIntent.putExtra("result_msg", paramString);
-    a.setResult(1002, localIntent);
-    a.finish();
-  }
-  
-  public void onSuccess()
-  {
-    a.setResult(1001);
-    a.finish();
+    a.b.setVisibility(4);
+    a.a.reload();
   }
 }
 

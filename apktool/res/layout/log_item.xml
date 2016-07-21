@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="@dimen/dp_10" android:paddingRight="@dimen/dp_10" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/lin_top" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/img_ball" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/log_circle_blue" />
+        <TextView android:textSize="@dimen/dp_15" android:textStyle="bold" android:textColor="@color/c_2274e6" android:id="@id/txt_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_8" android:text="A monment ago" />
+    </LinearLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/lin_top">
+        <View android:id="@id/line" android:background="@color/c_d7d7d9" android:layout_width="@dimen/dp_2" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_2" android:layout_alignBottom="@id/rlt" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        <FrameLayout android:id="@id/rlt" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/rl_log_card" android:background="@drawable/bg_card" android:paddingLeft="@dimen/dp_15" android:paddingTop="@dimen/dp_15" android:paddingBottom="@dimen/dp_15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_15" android:layout_marginTop="@dimen/dp_10">
+                <TextView android:textSize="@dimen/dp_15" android:textColor="@color/c_cc000000" android:ellipsize="end" android:id="@id/txt_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_20" android:layout_marginBottom="@dimen/dp_10" android:text="Mobile phone took 3 photos" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_centerVertical="true" />
+                <ImageView android:id="@id/img_more" android:layout_width="@dimen/dp_12" android:layout_height="@dimen/dp_12" android:layout_marginRight="@dimen/dp_15" android:src="@drawable/icon_downarrow" android:layout_alignParentRight="true" />
+                <LinearLayout android:orientation="vertical" android:id="@id/lin_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/txt_title" />
+            </RelativeLayout>
+        </FrameLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -2,22 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/content/DialogInterface$OnCancelListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/view/au;
+.field final synthetic a:Lcom/estrongs/android/ui/view/bd;
 
-.field final synthetic b:Lcom/estrongs/android/ui/dialog/hn;
+.field final synthetic b:Lcom/estrongs/android/ui/dialog/hq;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/hn;Lcom/estrongs/android/ui/view/au;)V
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/hq;Lcom/estrongs/android/ui/view/bd;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/ia;->b:Lcom/estrongs/android/ui/dialog/hn;
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/ia;->b:Lcom/estrongs/android/ui/dialog/hq;
 
-    iput-object p2, p0, Lcom/estrongs/android/ui/dialog/ia;->a:Lcom/estrongs/android/ui/view/au;
+    iput-object p2, p0, Lcom/estrongs/android/ui/dialog/ia;->a:Lcom/estrongs/android/ui/view/bd;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,18 +26,12 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+.method public onCancel(Landroid/content/DialogInterface;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ia;->a:Lcom/estrongs/android/ui/view/au;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ia;->a:Lcom/estrongs/android/ui/view/bd;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/au;->c()V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ia;->b:Lcom/estrongs/android/ui/dialog/hn;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcom/estrongs/android/ui/dialog/hn;->a(Lcom/estrongs/android/ui/dialog/hn;Z)Z
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/bd;->e()V
 
     return-void
 .end method

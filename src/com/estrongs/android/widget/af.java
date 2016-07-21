@@ -1,18 +1,84 @@
 package com.estrongs.android.widget;
 
-import com.estrongs.android.view.cc;
-import com.estrongs.fs.h;
+import java.io.File;
 
-class af
-  implements cc
+public class af
 {
-  af(ae paramae) {}
+  private File[] a;
+  int j = 0;
   
-  public void a(h paramh)
+  protected Object a(File paramFile, String paramString)
   {
-    if (ae.a(a) != null) {
-      ae.a(a).a(paramh);
+    return null;
+  }
+  
+  public Object a(String paramString)
+  {
+    if (j >= b()) {
+      j = (b() - 1);
     }
+    return a(a[j], paramString);
+  }
+  
+  public boolean a(File[] paramArrayOfFile)
+  {
+    a = paramArrayOfFile;
+    return true;
+  }
+  
+  public int b()
+  {
+    if (a == null) {
+      return 0;
+    }
+    return a.length;
+  }
+  
+  public void b(int paramInt)
+  {
+    j = paramInt;
+  }
+  
+  public void b(String paramString)
+  {
+    int k = 0;
+    if (a == null) {
+      return;
+    }
+    int i = 0;
+    for (;;)
+    {
+      if ((i >= a.length) || (paramString.equals(a[i].getAbsolutePath())))
+      {
+        if (i == a.length) {
+          break;
+        }
+        paramString = new File[a.length - 1];
+        while (k < i)
+        {
+          paramString[k] = a[k];
+          k += 1;
+        }
+      }
+      i += 1;
+    }
+    i += 1;
+    while (i < a.length)
+    {
+      paramString[(i - 1)] = a[i];
+      i += 1;
+    }
+    a = paramString;
+  }
+  
+  public Object c(int paramInt)
+  {
+    return a[paramInt];
+  }
+  
+  public File[] c()
+  {
+    return a;
   }
 }
 

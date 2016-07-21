@@ -1,115 +1,108 @@
-.class Lcom/estrongs/android/view/bi;
-.super Ljava/lang/Object;
+.class public Lcom/estrongs/android/view/bi;
+.super Lcom/estrongs/android/view/ck;
 
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Lcom/estrongs/android/view/cg",
+        "<",
+        "Lcom/estrongs/fs/h;",
+        ">.com/estrongs/android/view/ck<TT;>;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/view/aw;
+.field final synthetic a:Lcom/estrongs/android/view/ak;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/view/aw;)V
+.method protected constructor <init>(Lcom/estrongs/android/view/ak;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/view/bi;->a:Lcom/estrongs/android/view/aw;
+    iput-object p1, p0, Lcom/estrongs/android/view/bi;->a:Lcom/estrongs/android/view/ak;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lcom/estrongs/android/view/ck;-><init>(Lcom/estrongs/android/view/cg;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+.method public a(Landroid/view/ViewGroup;I)Lcom/estrongs/android/view/ci;
     .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
 
-    const/4 v3, 0x1
+    iget-object v0, p0, Lcom/estrongs/android/view/bi;->a:Lcom/estrongs/android/view/ak;
 
-    iget-object v0, p0, Lcom/estrongs/android/view/bi;->a:Lcom/estrongs/android/view/aw;
+    iget-object v0, v0, Lcom/estrongs/android/view/ak;->aj:Landroid/view/LayoutInflater;
 
-    invoke-virtual {v0, p3}, Lcom/estrongs/android/view/aw;->e(I)Ljava/lang/Object;
+    const v1, 0x7f030070
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/fs/h;
+    iget-object v1, p0, Lcom/estrongs/android/view/bi;->c:Lcom/estrongs/android/view/cn;
 
-    instance-of v1, v0, Lcom/estrongs/fs/impl/n/a;
-
-    if-eqz v1, :cond_2
-
-    move-object v1, v0
-
-    check-cast v1, Lcom/estrongs/fs/impl/n/a;
-
-    invoke-virtual {v1}, Lcom/estrongs/fs/impl/n/a;->a()Lcom/estrongs/fs/h;
-
-    move-result-object v1
-
-    :goto_0
-    if-eqz v1, :cond_1
-
-    invoke-interface {v1}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/m;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/estrongs/fs/m;->a()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/view/bi;->a:Lcom/estrongs/android/view/aw;
-
-    invoke-static {v0, v3}, Lcom/estrongs/android/view/aw;->a(Lcom/estrongs/android/view/aw;Z)Z
-
-    iget-object v0, p0, Lcom/estrongs/android/view/bi;->a:Lcom/estrongs/android/view/aw;
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/aw;->a(Lcom/estrongs/fs/h;)V
-
-    invoke-static {}, Lcom/estrongs/android/util/be;->c()Lcom/estrongs/android/util/be;
+    invoke-interface {v1, v0}, Lcom/estrongs/android/view/cn;->b(Landroid/view/View;)Lcom/estrongs/android/view/ci;
 
     move-result-object v0
 
-    invoke-interface {v1}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
+    check-cast v0, Lcom/estrongs/android/view/bl;
 
-    move-result-object v1
+    return-object v0
+.end method
 
-    invoke-virtual {v0, v1, v3}, Lcom/estrongs/android/util/be;->a(Ljava/lang/String;Z)V
+.method public a(Lcom/estrongs/android/view/ci;I)V
+    .locals 0
 
-    :cond_0
-    :goto_1
+    invoke-super {p0, p1, p2}, Lcom/estrongs/android/view/ck;->a(Lcom/estrongs/android/view/ci;I)V
+
     return-void
+.end method
 
-    :cond_1
-    if-eqz v0, :cond_0
+.method public getItemCount()I
+    .locals 1
 
-    iget-object v1, p0, Lcom/estrongs/android/view/bi;->a:Lcom/estrongs/android/view/aw;
+    iget-object v0, p0, Lcom/estrongs/android/view/bi;->a:Lcom/estrongs/android/view/ak;
 
-    iget-object v1, v1, Lcom/estrongs/android/view/aw;->x:Lcom/estrongs/android/view/cc;
+    invoke-virtual {v0}, Lcom/estrongs/android/view/ak;->d()I
 
-    if-eqz v1, :cond_0
+    move-result v0
 
-    iget-object v1, p0, Lcom/estrongs/android/view/bi;->a:Lcom/estrongs/android/view/aw;
+    return v0
+.end method
 
-    iget-object v1, v1, Lcom/estrongs/android/view/aw;->x:Lcom/estrongs/android/view/cc;
+.method public getItemViewType(I)I
+    .locals 0
 
-    invoke-interface {v1, v0}, Lcom/estrongs/android/view/cc;->a(Lcom/estrongs/fs/h;)V
+    return p1
+.end method
 
-    goto :goto_1
+.method public synthetic onBindViewHolder(Landroid/support/v7/widget/RecyclerView$ViewHolder;I)V
+    .locals 0
 
-    :cond_2
-    move-object v1, v0
+    check-cast p1, Lcom/estrongs/android/view/ci;
 
-    goto :goto_0
+    invoke-virtual {p0, p1, p2}, Lcom/estrongs/android/view/bi;->a(Lcom/estrongs/android/view/ci;I)V
+
+    return-void
+.end method
+
+.method public synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroid/support/v7/widget/RecyclerView$ViewHolder;
+    .locals 1
+
+    invoke-virtual {p0, p1, p2}, Lcom/estrongs/android/view/bi;->a(Landroid/view/ViewGroup;I)Lcom/estrongs/android/view/ci;
+
+    move-result-object v0
+
+    return-object v0
 .end method

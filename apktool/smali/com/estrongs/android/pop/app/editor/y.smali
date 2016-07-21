@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
@@ -22,24 +22,10 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 1
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/editor/y;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/editor/PopNoteEditor;->O(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    :goto_0
     return-void
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/editor/y;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/editor/PopNoteEditor;->n(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;)V
-
-    goto :goto_0
 .end method

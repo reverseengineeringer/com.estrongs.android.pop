@@ -2,41 +2,17 @@ package com.estrongs.android.pop.app;
 
 import android.os.Handler;
 import android.os.Message;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 class km
-  extends Handler
+  implements View.OnClickListener
 {
-  km(RecommItemDetailAcitivity paramRecommItemDetailAcitivity) {}
+  km(PopVideoPlayer paramPopVideoPlayer) {}
   
-  public void handleMessage(Message paramMessage)
+  public void onClick(View paramView)
   {
-    for (;;)
-    {
-      try
-      {
-        int i = arg1;
-        switch (i)
-        {
-        case 123466: 
-        default: 
-          return;
-        }
-      }
-      finally {}
-      a.a(obj);
-      continue;
-      a.f(obj);
-      continue;
-      a.b(obj);
-      continue;
-      a.c(obj);
-      continue;
-      a.d(obj);
-      continue;
-      a.e(obj);
-      continue;
-      a.a(arg2);
-    }
+    PopVideoPlayer.f(a).obtainMessage(5).sendToTarget();
   }
 }
 

@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/fs/i;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Z
-
-.field final synthetic b:Lcom/estrongs/android/ui/preference/fragments/n;
+.field final synthetic a:Lcom/estrongs/android/ui/preference/fragments/n;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/preference/fragments/n;Z)V
+.method constructor <init>(Lcom/estrongs/android/ui/preference/fragments/n;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/preference/fragments/o;->b:Lcom/estrongs/android/ui/preference/fragments/n;
-
-    iput-boolean p2, p0, Lcom/estrongs/android/ui/preference/fragments/o;->a:Z
+    iput-object p1, p0, Lcom/estrongs/android/ui/preference/fragments/o;->a:Lcom/estrongs/android/ui/preference/fragments/n;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,56 +22,30 @@
 
 
 # virtual methods
-.method public a(Lcom/estrongs/fs/h;)Z
+.method public run()V
     .locals 3
 
-    const/4 v0, 0x0
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
 
-    invoke-interface {p1}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/m;
+    move-result-object v0
 
-    move-result-object v1
+    const-string v1, "restoresettings"
 
-    invoke-virtual {v1}, Lcom/estrongs/fs/m;->a()Z
+    const/4 v2, 0x0
 
-    move-result v1
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/pop/FexApplication;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    if-eqz v1, :cond_2
+    iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/o;->a:Lcom/estrongs/android/ui/preference/fragments/n;
 
-    invoke-interface {p1}, Lcom/estrongs/fs/h;->getName()Ljava/lang/String;
+    iget-object v0, v0, Lcom/estrongs/android/ui/preference/fragments/n;->c:Lcom/estrongs/android/ui/preference/fragments/l;
 
-    move-result-object v1
+    iget-object v0, v0, Lcom/estrongs/android/ui/preference/fragments/l;->a:Lcom/estrongs/android/ui/preference/fragments/BackupPreferenceFragment;
 
-    const-string v2, "."
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/preference/fragments/BackupPreferenceFragment;->getActivity()Landroid/app/Activity;
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    move-result-object v0
 
-    move-result v1
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    if-eqz v1, :cond_1
-
-    iget-boolean v1, p0, Lcom/estrongs/android/ui/preference/fragments/o;->a:Z
-
-    if-nez v1, :cond_1
-
-    :cond_0
-    :goto_0
-    return v0
-
-    :cond_1
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    invoke-interface {p1}, Lcom/estrongs/fs/h;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    invoke-static {v1}, Lcom/estrongs/android/util/bc;->j(Ljava/lang/String;)Z
-
-    move-result v0
-
-    goto :goto_0
+    return-void
 .end method

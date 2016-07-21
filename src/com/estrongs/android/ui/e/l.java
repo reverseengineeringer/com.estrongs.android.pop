@@ -1,17 +1,28 @@
 package com.estrongs.android.ui.e;
 
 import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.pop.app.PopAudioPlayer;
+import android.widget.Button;
 
-class l
-  implements View.OnClickListener
+public class l
 {
-  l(j paramj) {}
+  View a;
+  Button b;
   
-  public void onClick(View paramView)
+  public l(f paramf) {}
+  
+  public void a()
   {
-    j.a(a).m();
+    a.setVisibility(0);
+  }
+  
+  public void a(boolean paramBoolean)
+  {
+    a.setEnabled(paramBoolean);
+  }
+  
+  public void b()
+  {
+    a.setVisibility(8);
   }
 }
 

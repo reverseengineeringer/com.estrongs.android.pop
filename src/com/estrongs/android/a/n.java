@@ -1,17 +1,18 @@
 package com.estrongs.android.a;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.a.b.f;
+import com.estrongs.fs.h;
+import java.util.Comparator;
 
 class n
-  implements DialogInterface.OnClickListener
+  implements Comparator<h>
 {
-  n(i parami) {}
+  n(l paraml) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public int a(h paramh1, h paramh2)
   {
-    i.a(a, i.a);
-    a.dismiss();
+    paramh1 = (f)paramh1;
+    return (int)(((f)paramh2).b() - paramh1.b());
   }
 }
 

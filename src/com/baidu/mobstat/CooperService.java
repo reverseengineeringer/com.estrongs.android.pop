@@ -4,38 +4,36 @@ import android.content.Context;
 import android.os.Build;
 import android.os.Build.VERSION;
 import android.telephony.TelephonyManager;
-import com.baidu.mobstat.util.a;
-import com.baidu.mobstat.util.d;
-import com.baidu.mobstat.util.e;
-import java.util.Date;
-import java.util.HashMap;
+import android.text.TextUtils;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.json.JSONObject;
 
 public class CooperService
-  extends s
+  extends bf
   implements ICooperService
 {
-  private static ae a = new ae();
-  private static CooperService b;
-  private static JSONObject c = new JSONObject();
-  private static String d = "activehead";
-  private static HashMap<String, Object> e = new HashMap();
+  private static CooperService a;
+  private bo b = new bo();
   
   static CooperService a()
   {
-    if (b == null) {
-      b = new CooperService();
+    try
+    {
+      if (a == null) {
+        a = new CooperService();
+      }
+      CooperService localCooperService = a;
+      return localCooperService;
     }
-    return b;
+    finally {}
   }
   
   private static String a(Context paramContext)
   {
-    String str = aw.g(paramContext);
+    String str = cu.i(paramContext);
     paramContext = str;
-    if (str != null) {
+    if (!TextUtils.isEmpty(str)) {
       paramContext = str.replaceAll(":", "");
     }
     return paramContext;
@@ -52,262 +50,35 @@ public class CooperService
       return str;
       str = paramString;
     } while (!paramString.equals("000000000000000"));
-    paramString = a(paramContext);
-    e.a("sdkstat", "imei=null,mac=" + paramString);
-    return paramString;
+    return a(paramContext);
   }
   
-  static ae b()
+  private static String b(Context paramContext)
   {
-    return a;
-  }
-  
-  /* Error */
-  private String b(Context paramContext)
-  {
-    // Byte code:
-    //   0: aload_1
-    //   1: invokevirtual 102	android/content/Context:getApplicationInfo	()Landroid/content/pm/ApplicationInfo;
-    //   4: getfield 107	android/content/pm/ApplicationInfo:sourceDir	Ljava/lang/String;
-    //   7: astore_1
-    //   8: aload_1
-    //   9: invokestatic 113	android/text/TextUtils:isEmpty	(Ljava/lang/CharSequence;)Z
-    //   12: ifeq +8 -> 20
-    //   15: ldc 56
-    //   17: astore_1
-    //   18: aload_1
-    //   19: areturn
-    //   20: new 115	java/util/zip/ZipFile
-    //   23: dup
-    //   24: aload_1
-    //   25: invokespecial 118	java/util/zip/ZipFile:<init>	(Ljava/lang/String;)V
-    //   28: astore_3
-    //   29: aload_3
-    //   30: astore_1
-    //   31: aload_3
-    //   32: invokevirtual 122	java/util/zip/ZipFile:entries	()Ljava/util/Enumeration;
-    //   35: astore 5
-    //   37: aload_3
-    //   38: astore_1
-    //   39: aload 5
-    //   41: invokeinterface 128 1 0
-    //   46: ifeq +289 -> 335
-    //   49: aload_3
-    //   50: astore_1
-    //   51: aload 5
-    //   53: invokeinterface 132 1 0
-    //   58: checkcast 134	java/util/zip/ZipEntry
-    //   61: astore 4
-    //   63: aload_3
-    //   64: astore_1
-    //   65: aload 4
-    //   67: invokevirtual 137	java/util/zip/ZipEntry:getName	()Ljava/lang/String;
-    //   70: ldc -117
-    //   72: invokevirtual 143	java/lang/String:equalsIgnoreCase	(Ljava/lang/String;)Z
-    //   75: ifeq -38 -> 37
-    //   78: aload 4
-    //   80: ifnonnull +26 -> 106
-    //   83: ldc 56
-    //   85: astore_1
-    //   86: aload_3
-    //   87: ifnull -69 -> 18
-    //   90: aload_3
-    //   91: invokevirtual 146	java/util/zip/ZipFile:close	()V
-    //   94: ldc 56
-    //   96: areturn
-    //   97: astore_1
-    //   98: aload_1
-    //   99: invokestatic 149	com/baidu/mobstat/util/e:b	(Ljava/lang/Throwable;)I
-    //   102: pop
-    //   103: ldc 56
-    //   105: areturn
-    //   106: aload_3
-    //   107: astore_1
-    //   108: aload_3
-    //   109: aload 4
-    //   111: invokevirtual 153	java/util/zip/ZipFile:getInputStream	(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
-    //   114: astore 4
-    //   116: aload_3
-    //   117: astore_1
-    //   118: invokestatic 159	javax/xml/parsers/DocumentBuilderFactory:newInstance	()Ljavax/xml/parsers/DocumentBuilderFactory;
-    //   121: invokevirtual 163	javax/xml/parsers/DocumentBuilderFactory:newDocumentBuilder	()Ljavax/xml/parsers/DocumentBuilder;
-    //   124: aload 4
-    //   126: invokevirtual 169	javax/xml/parsers/DocumentBuilder:parse	(Ljava/io/InputStream;)Lorg/w3c/dom/Document;
-    //   129: ldc -85
-    //   131: invokeinterface 177 2 0
-    //   136: astore 4
-    //   138: aload_3
-    //   139: astore_1
-    //   140: aload 4
-    //   142: invokeinterface 183 1 0
-    //   147: ifle +105 -> 252
-    //   150: aload_3
-    //   151: astore_1
-    //   152: aload 4
-    //   154: iconst_0
-    //   155: invokeinterface 187 2 0
-    //   160: invokeinterface 193 1 0
-    //   165: astore 4
-    //   167: iconst_0
-    //   168: istore_2
-    //   169: aload_3
-    //   170: astore_1
-    //   171: iload_2
-    //   172: aload 4
-    //   174: invokeinterface 183 1 0
-    //   179: if_icmpge +73 -> 252
-    //   182: aload_3
-    //   183: astore_1
-    //   184: aload 4
-    //   186: iload_2
-    //   187: invokeinterface 187 2 0
-    //   192: astore 5
-    //   194: aload_3
-    //   195: astore_1
-    //   196: aload 5
-    //   198: invokeinterface 196 1 0
-    //   203: ldc -58
-    //   205: invokevirtual 143	java/lang/String:equalsIgnoreCase	(Ljava/lang/String;)Z
-    //   208: ifeq +37 -> 245
-    //   211: aload_3
-    //   212: astore_1
-    //   213: aload 5
-    //   215: invokeinterface 201 1 0
-    //   220: astore 4
-    //   222: aload 4
-    //   224: astore_1
-    //   225: aload_3
-    //   226: ifnull -208 -> 18
-    //   229: aload_3
-    //   230: invokevirtual 146	java/util/zip/ZipFile:close	()V
-    //   233: aload 4
-    //   235: areturn
-    //   236: astore_1
-    //   237: aload_1
-    //   238: invokestatic 149	com/baidu/mobstat/util/e:b	(Ljava/lang/Throwable;)I
-    //   241: pop
-    //   242: aload 4
-    //   244: areturn
-    //   245: iload_2
-    //   246: iconst_1
-    //   247: iadd
-    //   248: istore_2
-    //   249: goto -80 -> 169
-    //   252: aload_3
-    //   253: ifnull +7 -> 260
-    //   256: aload_3
-    //   257: invokevirtual 146	java/util/zip/ZipFile:close	()V
-    //   260: ldc 56
-    //   262: areturn
-    //   263: astore_1
-    //   264: aload_1
-    //   265: invokestatic 149	com/baidu/mobstat/util/e:b	(Ljava/lang/Throwable;)I
-    //   268: pop
-    //   269: goto -9 -> 260
-    //   272: astore 4
-    //   274: aconst_null
-    //   275: astore_3
-    //   276: aload_3
-    //   277: astore_1
-    //   278: aload 4
-    //   280: invokestatic 149	com/baidu/mobstat/util/e:b	(Ljava/lang/Throwable;)I
-    //   283: pop
-    //   284: aload_3
-    //   285: ifnull -25 -> 260
-    //   288: aload_3
-    //   289: invokevirtual 146	java/util/zip/ZipFile:close	()V
-    //   292: goto -32 -> 260
-    //   295: astore_1
-    //   296: aload_1
-    //   297: invokestatic 149	com/baidu/mobstat/util/e:b	(Ljava/lang/Throwable;)I
-    //   300: pop
-    //   301: goto -41 -> 260
-    //   304: astore_3
-    //   305: aconst_null
-    //   306: astore_1
-    //   307: aload_1
-    //   308: ifnull +7 -> 315
-    //   311: aload_1
-    //   312: invokevirtual 146	java/util/zip/ZipFile:close	()V
-    //   315: aload_3
-    //   316: athrow
-    //   317: astore_1
-    //   318: aload_1
-    //   319: invokestatic 149	com/baidu/mobstat/util/e:b	(Ljava/lang/Throwable;)I
-    //   322: pop
-    //   323: goto -8 -> 315
-    //   326: astore_3
-    //   327: goto -20 -> 307
-    //   330: astore 4
-    //   332: goto -56 -> 276
-    //   335: aconst_null
-    //   336: astore 4
-    //   338: goto -260 -> 78
-    // Local variable table:
-    //   start	length	slot	name	signature
-    //   0	341	0	this	CooperService
-    //   0	341	1	paramContext	Context
-    //   168	81	2	i	int
-    //   28	261	3	localZipFile	java.util.zip.ZipFile
-    //   304	12	3	localObject1	Object
-    //   326	1	3	localObject2	Object
-    //   61	182	4	localObject3	Object
-    //   272	7	4	localException1	Exception
-    //   330	1	4	localException2	Exception
-    //   336	1	4	localObject4	Object
-    //   35	179	5	localObject5	Object
-    // Exception table:
-    //   from	to	target	type
-    //   90	94	97	java/io/IOException
-    //   229	233	236	java/io/IOException
-    //   256	260	263	java/io/IOException
-    //   20	29	272	java/lang/Exception
-    //   288	292	295	java/io/IOException
-    //   20	29	304	finally
-    //   311	315	317	java/io/IOException
-    //   31	37	326	finally
-    //   39	49	326	finally
-    //   51	63	326	finally
-    //   65	78	326	finally
-    //   108	116	326	finally
-    //   118	138	326	finally
-    //   140	150	326	finally
-    //   152	167	326	finally
-    //   171	182	326	finally
-    //   184	194	326	finally
-    //   196	211	326	finally
-    //   213	222	326	finally
-    //   278	284	326	finally
-    //   31	37	330	java/lang/Exception
-    //   39	49	330	java/lang/Exception
-    //   51	63	330	java/lang/Exception
-    //   65	78	330	java/lang/Exception
-    //   108	116	330	java/lang/Exception
-    //   118	138	330	java/lang/Exception
-    //   140	150	330	java/lang/Exception
-    //   152	167	330	java/lang/Exception
-    //   171	182	330	java/lang/Exception
-    //   184	194	330	java/lang/Exception
-    //   196	211	330	java/lang/Exception
-    //   213	222	330	java/lang/Exception
+    String str = cu.j(paramContext);
+    paramContext = str;
+    if (!TextUtils.isEmpty(str)) {
+      paramContext = str.replaceAll(":", "");
+    }
+    return paramContext;
   }
   
   private String c(Context paramContext)
   {
     try
     {
-      e.a("sdkstat", "----------getAppChannel");
-      if ((al == null) || (al.equals("")))
+      cr.a("----------getAppChannel");
+      if ((b.m == null) || (b.m.equals("")))
       {
-        boolean bool = r.a().h(paramContext);
-        e.a("sdkstat", "----------setChannelWithCode=" + bool);
+        boolean bool = be.a().g(paramContext);
+        cr.a("----------setChannelWithCode=" + bool);
         if (bool)
         {
-          al = r.a().g(paramContext);
-          e.a("sdkstat", "----------mHeadObject.channel=" + al);
+          b.m = be.a().f(paramContext);
+          cr.a("----------mHeadObject.channel=" + b.m);
         }
-        if ((!bool) || (al == null) || (al.equals(""))) {
-          al = aw.a(paramContext, "BaiduMobAd_CHANNEL");
+        if ((!bool) || (b.m == null) || (b.m.equals(""))) {
+          b.m = cu.a(paramContext, "BaiduMobAd_CHANNEL");
         }
       }
     }
@@ -315,104 +86,86 @@ public class CooperService
     {
       for (;;)
       {
-        e.a(paramContext);
+        cr.a(paramContext);
       }
     }
-    return al;
-  }
-  
-  public static String getOSSysVersion()
-  {
-    if ((ac == null) || ("".equals(ac))) {
-      ac = Build.VERSION.RELEASE;
-    }
-    return ac;
+    return b.m;
   }
   
   public boolean checkCellLocationSetting(Context paramContext)
   {
-    paramContext = aw.a(paramContext, "BaiduMobAd_CELL_LOCATION");
-    return (paramContext == null) || (!paramContext.toLowerCase().equals("false"));
+    return "true".equalsIgnoreCase(cu.a(paramContext, "BaiduMobAd_CELL_LOCATION"));
   }
   
   public boolean checkGPSLocationSetting(Context paramContext)
   {
-    paramContext = aw.a(paramContext, "BaiduMobAd_GPS_LOCATION");
-    return (paramContext == null) || (!paramContext.toLowerCase().equals("false"));
+    return "true".equals(cu.a(paramContext, "BaiduMobAd_GPS_LOCATION"));
   }
   
   public boolean checkWifiLocationSetting(Context paramContext)
   {
-    paramContext = aw.a(paramContext, "BaiduMobAd_WIFI_LOCATION");
-    return (paramContext == null) || (!paramContext.toLowerCase().equals("false"));
+    return "true".equalsIgnoreCase(cu.a(paramContext, "BaiduMobAd_WIFI_LOCATION"));
   }
   
   public String getAppChannel(Context paramContext)
   {
-    if (t.c) {
-      return b(paramContext);
-    }
     return c(paramContext);
-  }
-  
-  public String getAppKey()
-  {
-    return ad;
   }
   
   public String getAppKey(Context paramContext)
   {
-    if (ad == null) {
-      ad = aw.a(paramContext, "BaiduMobAd_STAT_ID");
+    if (b.e == null) {
+      b.e = cu.a(paramContext, "BaiduMobAd_STAT_ID");
     }
-    return ad;
+    return b.e;
   }
   
   public int getAppVersionCode(Context paramContext)
   {
-    if (ag == -1) {
-      ag = aw.c(paramContext);
+    if (b.h == -1) {
+      b.h = cu.e(paramContext);
     }
-    return ag;
+    return b.h;
   }
   
   public String getAppVersionName(Context paramContext)
   {
-    if ((ah == null) || ("".equals(ah))) {
-      ah = aw.d(paramContext);
+    if (TextUtils.isEmpty(b.i)) {
+      b.i = cu.f(paramContext);
     }
-    return ah;
+    return b.i;
   }
   
   public String getCUID(Context paramContext, boolean paramBoolean)
   {
-    if (af == null)
+    if (b.g == null)
     {
-      af = r.a().f(paramContext);
-      if ((af != null) && (!"".equalsIgnoreCase(af))) {}
+      b.g = be.a().e(paramContext);
+      if ((b.g != null) && (!"".equalsIgnoreCase(b.g))) {}
     }
     try
     {
-      af = c.a(paramContext);
-      Matcher localMatcher = Pattern.compile("\\s*|\t|\r|\n").matcher(af);
-      af = localMatcher.replaceAll("");
-      af = getSecretValue(af);
-      r.a().b(paramContext, af);
+      b.g = cw.a(paramContext);
+      Matcher localMatcher = Pattern.compile("\\s*|\t|\r|\n").matcher(b.g);
+      b.g = localMatcher.replaceAll("");
+      b.g = getSecretValue(b.g);
+      be.a().b(paramContext, b.g);
       if (paramBoolean) {
-        return af;
+        return b.g;
       }
     }
     catch (Exception paramContext)
     {
       for (;;)
       {
-        e.c(new Object[] { "sdkstat", paramContext.getMessage() });
+        cr.c(paramContext.getMessage());
       }
       try
       {
-        if (af != null)
+        paramContext = b.g;
+        if (!TextUtils.isEmpty(paramContext))
         {
-          paramContext = new String(a.b(t.e, d.a(af.getBytes())));
+          paramContext = new String(ck.b(2, cm.a(paramContext.getBytes())));
           return paramContext;
         }
       }
@@ -424,80 +177,210 @@ public class CooperService
     return null;
   }
   
-  public String getChannel()
-  {
-    return al;
-  }
-  
+  /* Error */
   public String getDeviceId(TelephonyManager paramTelephonyManager, Context paramContext)
   {
-    if (paramTelephonyManager == null) {
-      return ai;
-    }
-    Object localObject = ai;
-    Pattern localPattern;
-    if ((localObject == null) || (((String)localObject).equals("")))
-    {
-      if (r.a().j(paramContext))
-      {
-        ai = getMacIDForTv(paramContext);
-        return ai;
-      }
-      localPattern = Pattern.compile("\\s*|\t|\r|\n");
-    }
-    try
-    {
-      paramTelephonyManager = localPattern.matcher(paramTelephonyManager.getDeviceId()).replaceAll("");
-      localObject = paramTelephonyManager;
-      paramTelephonyManager = a(paramTelephonyManager, paramContext);
-      localObject = paramTelephonyManager;
-    }
-    catch (Exception paramTelephonyManager)
-    {
-      try
-      {
-        paramTelephonyManager = new String(a.b(t.e, d.a(ai.getBytes())));
-        e.a("sdkstat", "deviceId=" + paramTelephonyManager);
-        return ai;
-        paramTelephonyManager = paramTelephonyManager;
-        e.a(paramTelephonyManager);
-      }
-      catch (Exception paramTelephonyManager)
-      {
-        for (;;)
-        {
-          paramTelephonyManager.printStackTrace();
-        }
-      }
-    }
-    paramTelephonyManager = (TelephonyManager)localObject;
-    if (localObject == null) {
-      paramTelephonyManager = a(paramContext);
-    }
-    if (paramTelephonyManager != null)
-    {
-      localObject = paramTelephonyManager;
-      if (!paramTelephonyManager.equals("000000000000000")) {}
-    }
-    else
-    {
-      localObject = r.a().e(paramContext);
-    }
-    if (localObject != null)
-    {
-      paramTelephonyManager = (TelephonyManager)localObject;
-      if (!((String)localObject).equals("000000000000000")) {}
-    }
-    else
-    {
-      paramTelephonyManager = new Date().getTime() + "";
-      paramTelephonyManager = "hol" + paramTelephonyManager.hashCode() + "mes";
-      r.a().a(paramContext, paramTelephonyManager);
-      e.a("sdkstat", "设备id为空，系统生成id =" + paramTelephonyManager);
-    }
-    ai = paramTelephonyManager;
-    ai = getSecretValue(ai);
-    e.a("sdkstat", "加密=mHeadObject.deviceId=" + ai);
+    // Byte code:
+    //   0: aload_0
+    //   1: getfield 19	com/baidu/mobstat/CooperService:b	Lcom/baidu/mobstat/bo;
+    //   4: getfield 211	com/baidu/mobstat/bo:j	Ljava/lang/String;
+    //   7: astore_3
+    //   8: aload_3
+    //   9: invokestatic 36	android/text/TextUtils:isEmpty	(Ljava/lang/CharSequence;)Z
+    //   12: ifne +11 -> 23
+    //   15: aload_0
+    //   16: getfield 19	com/baidu/mobstat/CooperService:b	Lcom/baidu/mobstat/bo;
+    //   19: getfield 211	com/baidu/mobstat/bo:j	Ljava/lang/String;
+    //   22: areturn
+    //   23: invokestatic 77	com/baidu/mobstat/be:a	()Lcom/baidu/mobstat/be;
+    //   26: aload_2
+    //   27: invokevirtual 213	com/baidu/mobstat/be:i	(Landroid/content/Context;)Z
+    //   30: ifeq +23 -> 53
+    //   33: aload_0
+    //   34: getfield 19	com/baidu/mobstat/CooperService:b	Lcom/baidu/mobstat/bo;
+    //   37: aload_0
+    //   38: aload_2
+    //   39: invokevirtual 216	com/baidu/mobstat/CooperService:getMacIDForTv	(Landroid/content/Context;)Ljava/lang/String;
+    //   42: putfield 211	com/baidu/mobstat/bo:j	Ljava/lang/String;
+    //   45: aload_0
+    //   46: getfield 19	com/baidu/mobstat/CooperService:b	Lcom/baidu/mobstat/bo;
+    //   49: getfield 211	com/baidu/mobstat/bo:j	Ljava/lang/String;
+    //   52: areturn
+    //   53: aload_1
+    //   54: ifnonnull +11 -> 65
+    //   57: aload_0
+    //   58: getfield 19	com/baidu/mobstat/CooperService:b	Lcom/baidu/mobstat/bo;
+    //   61: getfield 211	com/baidu/mobstat/bo:j	Ljava/lang/String;
+    //   64: areturn
+    //   65: ldc -95
+    //   67: invokestatic 167	java/util/regex/Pattern:compile	(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    //   70: astore 4
+    //   72: aload_1
+    //   73: invokevirtual 220	android/telephony/TelephonyManager:getDeviceId	()Ljava/lang/String;
+    //   76: astore 5
+    //   78: aload_3
+    //   79: astore_1
+    //   80: aload 5
+    //   82: ifnull +24 -> 106
+    //   85: aload 4
+    //   87: aload 5
+    //   89: invokevirtual 171	java/util/regex/Pattern:matcher	(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+    //   92: ldc 40
+    //   94: invokevirtual 176	java/util/regex/Matcher:replaceAll	(Ljava/lang/String;)Ljava/lang/String;
+    //   97: astore_1
+    //   98: aload_1
+    //   99: aload_2
+    //   100: invokestatic 222	com/baidu/mobstat/CooperService:a	(Ljava/lang/String;Landroid/content/Context;)Ljava/lang/String;
+    //   103: astore_3
+    //   104: aload_3
+    //   105: astore_1
+    //   106: aload_1
+    //   107: astore_3
+    //   108: aload_1
+    //   109: ifnonnull +8 -> 117
+    //   112: aload_2
+    //   113: invokestatic 55	com/baidu/mobstat/CooperService:a	(Landroid/content/Context;)Ljava/lang/String;
+    //   116: astore_3
+    //   117: aload_3
+    //   118: astore_1
+    //   119: aload_2
+    //   120: invokestatic 225	com/baidu/mobstat/cu:q	(Landroid/content/Context;)Z
+    //   123: ifeq +26 -> 149
+    //   126: aload_3
+    //   127: invokestatic 36	android/text/TextUtils:isEmpty	(Ljava/lang/CharSequence;)Z
+    //   130: ifne +14 -> 144
+    //   133: aload_3
+    //   134: astore_1
+    //   135: aload_3
+    //   136: ldc 49
+    //   138: invokevirtual 53	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   141: ifeq +8 -> 149
+    //   144: aload_2
+    //   145: invokestatic 227	com/baidu/mobstat/CooperService:b	(Landroid/content/Context;)Ljava/lang/String;
+    //   148: astore_1
+    //   149: aload_1
+    //   150: invokestatic 36	android/text/TextUtils:isEmpty	(Ljava/lang/CharSequence;)Z
+    //   153: ifne +14 -> 167
+    //   156: aload_1
+    //   157: astore_3
+    //   158: aload_1
+    //   159: ldc 49
+    //   161: invokevirtual 53	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   164: ifeq +11 -> 175
+    //   167: invokestatic 77	com/baidu/mobstat/be:a	()Lcom/baidu/mobstat/be;
+    //   170: aload_2
+    //   171: invokevirtual 230	com/baidu/mobstat/be:d	(Landroid/content/Context;)Ljava/lang/String;
+    //   174: astore_3
+    //   175: aload_3
+    //   176: invokestatic 36	android/text/TextUtils:isEmpty	(Ljava/lang/CharSequence;)Z
+    //   179: ifne +14 -> 193
+    //   182: aload_3
+    //   183: astore_1
+    //   184: aload_3
+    //   185: ldc 49
+    //   187: invokevirtual 53	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   190: ifeq +90 -> 280
+    //   193: new 83	java/lang/StringBuilder
+    //   196: dup
+    //   197: invokespecial 84	java/lang/StringBuilder:<init>	()V
+    //   200: new 232	java/util/Date
+    //   203: dup
+    //   204: invokespecial 233	java/util/Date:<init>	()V
+    //   207: invokevirtual 237	java/util/Date:getTime	()J
+    //   210: invokevirtual 240	java/lang/StringBuilder:append	(J)Ljava/lang/StringBuilder;
+    //   213: ldc 40
+    //   215: invokevirtual 90	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   218: invokevirtual 97	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   221: astore_1
+    //   222: new 83	java/lang/StringBuilder
+    //   225: dup
+    //   226: invokespecial 84	java/lang/StringBuilder:<init>	()V
+    //   229: ldc -14
+    //   231: invokevirtual 90	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   234: aload_1
+    //   235: invokevirtual 246	java/lang/String:hashCode	()I
+    //   238: invokevirtual 249	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
+    //   241: ldc -5
+    //   243: invokevirtual 90	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   246: invokevirtual 97	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   249: astore_1
+    //   250: invokestatic 77	com/baidu/mobstat/be:a	()Lcom/baidu/mobstat/be;
+    //   253: aload_2
+    //   254: aload_1
+    //   255: invokevirtual 253	com/baidu/mobstat/be:a	(Landroid/content/Context;Ljava/lang/String;)V
+    //   258: new 83	java/lang/StringBuilder
+    //   261: dup
+    //   262: invokespecial 84	java/lang/StringBuilder:<init>	()V
+    //   265: ldc -1
+    //   267: invokevirtual 90	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   270: aload_1
+    //   271: invokevirtual 90	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   274: invokevirtual 97	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   277: invokestatic 68	com/baidu/mobstat/cr:a	(Ljava/lang/String;)V
+    //   280: aload_0
+    //   281: getfield 19	com/baidu/mobstat/CooperService:b	Lcom/baidu/mobstat/bo;
+    //   284: aload_1
+    //   285: putfield 211	com/baidu/mobstat/bo:j	Ljava/lang/String;
+    //   288: aload_0
+    //   289: getfield 19	com/baidu/mobstat/CooperService:b	Lcom/baidu/mobstat/bo;
+    //   292: aload_0
+    //   293: aload_0
+    //   294: getfield 19	com/baidu/mobstat/CooperService:b	Lcom/baidu/mobstat/bo;
+    //   297: getfield 211	com/baidu/mobstat/bo:j	Ljava/lang/String;
+    //   300: invokevirtual 179	com/baidu/mobstat/CooperService:getSecretValue	(Ljava/lang/String;)Ljava/lang/String;
+    //   303: putfield 211	com/baidu/mobstat/bo:j	Ljava/lang/String;
+    //   306: new 83	java/lang/StringBuilder
+    //   309: dup
+    //   310: invokespecial 84	java/lang/StringBuilder:<init>	()V
+    //   313: ldc_w 257
+    //   316: invokevirtual 90	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   319: aload_0
+    //   320: getfield 19	com/baidu/mobstat/CooperService:b	Lcom/baidu/mobstat/bo;
+    //   323: getfield 211	com/baidu/mobstat/bo:j	Ljava/lang/String;
+    //   326: invokevirtual 90	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   329: invokevirtual 97	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   332: invokestatic 68	com/baidu/mobstat/cr:a	(Ljava/lang/String;)V
+    //   335: aload_0
+    //   336: getfield 19	com/baidu/mobstat/CooperService:b	Lcom/baidu/mobstat/bo;
+    //   339: getfield 211	com/baidu/mobstat/bo:j	Ljava/lang/String;
+    //   342: areturn
+    //   343: astore 4
+    //   345: aload_3
+    //   346: astore_1
+    //   347: aload 4
+    //   349: astore_3
+    //   350: aload_3
+    //   351: invokestatic 110	com/baidu/mobstat/cr:a	(Ljava/lang/Throwable;)V
+    //   354: goto -248 -> 106
+    //   357: astore_1
+    //   358: aload_1
+    //   359: invokestatic 110	com/baidu/mobstat/cr:a	(Ljava/lang/Throwable;)V
+    //   362: aload_3
+    //   363: astore_1
+    //   364: goto -215 -> 149
+    //   367: astore_3
+    //   368: goto -18 -> 350
+    // Local variable table:
+    //   start	length	slot	name	signature
+    //   0	371	0	this	CooperService
+    //   0	371	1	paramTelephonyManager	TelephonyManager
+    //   0	371	2	paramContext	Context
+    //   7	356	3	localObject	Object
+    //   367	1	3	localException1	Exception
+    //   70	16	4	localPattern	Pattern
+    //   343	5	4	localException2	Exception
+    //   76	12	5	str	String
+    // Exception table:
+    //   from	to	target	type
+    //   72	78	343	java/lang/Exception
+    //   85	98	343	java/lang/Exception
+    //   144	149	357	java/lang/Exception
+    //   98	104	367	java/lang/Exception
+  }
+  
+  public bo getHeadObject()
+  {
+    return b;
   }
   
   public String getHost()
@@ -507,54 +390,54 @@ public class CooperService
   
   public String getLinkedWay(Context paramContext)
   {
-    if ((aq == null) || ("".equals(aq))) {
-      aq = aw.k(paramContext);
+    if (TextUtils.isEmpty(b.s)) {
+      b.s = cu.n(paramContext);
     }
-    return aq;
+    return b.s;
   }
   
   public String getMTJSDKVersion()
   {
-    return t.a;
+    return "3.7.3.8";
   }
   
   public String getMacID(Context paramContext)
   {
     String str;
-    if ((ar == null) || ("".equals(ar)))
+    if ((b.t == null) || ("".equals(b.t)))
     {
-      str = r.a().i(paramContext);
+      str = be.a().h(paramContext);
       if (str != null) {
-        break label117;
+        break label124;
       }
       str = a(paramContext);
       if (str != null)
       {
-        ar = getSecretValue(str);
-        e.a("sdkstat", "加密=mHeadObject.mHeadObject.macAddr=" + ar);
-        if (ar != "") {
-          r.a().d(paramContext, ar);
+        b.t = getSecretValue(str);
+        cr.a("加密=mHeadObject.mHeadObject.macAddr=" + b.t);
+        if (!"".equals(b.t)) {
+          be.a().d(paramContext, b.t);
         }
       }
     }
     for (;;)
     {
-      return ar;
-      label117:
-      ar = str;
+      return b.t;
+      label124:
+      b.t = str;
     }
   }
   
   public String getMacIDForTv(Context paramContext)
   {
     Object localObject;
-    if ((as == null) || ("".equals(as)))
+    if ((b.u == null) || ("".equals(b.u)))
     {
-      localObject = r.a().k(paramContext);
+      localObject = be.a().j(paramContext);
       if (localObject != null) {
-        break label136;
+        break label144;
       }
-      String str = aw.a();
+      String str = cu.a();
       if (str != null)
       {
         localObject = str;
@@ -562,101 +445,78 @@ public class CooperService
       }
       else
       {
-        localObject = aw.h(paramContext);
+        localObject = cu.c(2, paramContext);
       }
       if (localObject != null)
       {
-        as = getSecretValue((String)localObject);
-        e.a("sdkstat", "加密=macAddr=" + as);
-        if (as != "") {
-          r.a().e(paramContext, as);
+        b.u = getSecretValue((String)localObject);
+        cr.a("加密=macAddr=" + b.u);
+        if (!"".equals(b.t)) {
+          be.a().e(paramContext, b.u);
         }
       }
     }
     for (;;)
     {
-      return as;
-      label136:
-      as = ((String)localObject);
+      return b.u;
+      label144:
+      b.u = ((String)localObject);
     }
+  }
+  
+  public String getManufacturer()
+  {
+    if (TextUtils.isEmpty(b.p)) {
+      b.p = Build.MANUFACTURER;
+    }
+    return b.p;
+  }
+  
+  public String getOSSysVersion()
+  {
+    if (TextUtils.isEmpty(b.d)) {
+      b.d = Build.VERSION.RELEASE;
+    }
+    return b.d;
   }
   
   public String getOSVersion()
   {
-    if ((ab == null) || ("".equals(ab))) {
-      ab = Build.VERSION.SDK;
+    if (TextUtils.isEmpty(b.c)) {
+      b.c = Integer.toString(Build.VERSION.SDK_INT);
     }
-    return ab;
+    return b.c;
   }
   
   public String getOperator(TelephonyManager paramTelephonyManager)
   {
-    if ((am == null) || ("".equals(am))) {
-      am = paramTelephonyManager.getNetworkOperator();
+    if (TextUtils.isEmpty(b.n)) {
+      b.n = paramTelephonyManager.getNetworkOperator();
     }
-    return am;
+    return b.n;
   }
   
   public String getPhoneModel()
   {
-    if ((an == null) || ("".equals(an))) {
-      an = Build.MODEL;
+    if (TextUtils.isEmpty(b.o)) {
+      b.o = Build.MODEL;
     }
-    return an;
-  }
-  
-  public String getPluginVersion()
-  {
-    return "1.2.0";
+    return b.o;
   }
   
   public String getSecretValue(String paramString)
   {
-    str = null;
-    try
-    {
-      paramString = d.a(a.a(t.e, paramString.getBytes()), "utf-8");
-      str = paramString;
-      e.a("sdkstat", "secretValue=" + paramString);
-    }
-    catch (Exception paramString)
-    {
-      for (;;)
-      {
-        paramString.printStackTrace();
-        paramString = str;
-      }
-    }
-    str = paramString;
-    if (paramString == null) {
-      str = "";
-    }
-    return str;
+    return ck.c(2, paramString.getBytes());
   }
   
   public int getTagValue()
   {
-    return t.b;
+    return 2;
   }
   
   public void installHeader(Context paramContext, JSONObject paramJSONObject)
   {
-    a.a(paramContext, paramJSONObject);
-  }
-  
-  public boolean isHeadObjectIsNull()
-  {
-    return a == null;
-  }
-  
-  public void setChannel(String paramString)
-  {
-    al = paramString;
-  }
-  
-  public void setappKey(String paramString)
-  {
-    ad = paramString;
+    b.a(paramContext, paramJSONObject);
   }
 }
 

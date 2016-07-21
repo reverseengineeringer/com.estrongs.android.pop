@@ -25,28 +25,33 @@
 .method public onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 3
 
+    const/4 v2, 0x1
+
     iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bj;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->e:Lcom/estrongs/android/pop/app/imageviewer/gallery/f;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->l(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)Lcom/estrongs/android/pop/app/ag;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/ag;->p()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bj;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->n(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bj;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/bj;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
     iget v1, v1, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->c:I
 
-    invoke-interface {v0, v1}, Lcom/estrongs/android/pop/app/imageviewer/gallery/f;->a(I)Lcom/estrongs/android/pop/app/imageviewer/gallery/e;
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->a(IZ)V
 
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lcom/estrongs/android/pop/app/imageviewer/gallery/e;->f()Landroid/net/Uri;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/imageviewer/bj;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
-
-    invoke-static {v2, v1, v0}, Lcom/estrongs/android/pop/app/imageviewer/ae;->b(Landroid/app/Activity;Landroid/net/Uri;Lcom/estrongs/android/pop/app/imageviewer/gallery/e;)V
-
+    :goto_0
     iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bj;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/imageviewer/bj;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
@@ -55,8 +60,29 @@
 
     invoke-static {v0, v1}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->b(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;Lcom/estrongs/android/pop/esclasses/ESScrollMenuView;)V
 
-    :cond_0
-    const/4 v0, 0x1
+    return v2
 
-    return v0
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bj;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->o(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)Lcom/estrongs/android/pop/app/x;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bj;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->p(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)V
+
+    :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/imageviewer/bj;->a:Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;->o(Lcom/estrongs/android/pop/app/imageviewer/ViewImage21;)Lcom/estrongs/android/pop/app/x;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/x;->show()V
+
+    goto :goto_0
 .end method

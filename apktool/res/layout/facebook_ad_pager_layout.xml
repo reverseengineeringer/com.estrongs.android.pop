@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/item_icon" android:layout_width="@dimen/dp_48" android:layout_height="@dimen/dp_48" android:layout_marginLeft="6.0dip" android:layout_marginRight="4.0dip" android:scaleType="fitCenter" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/item_desc_layout" android:layout_width="0.0dip" android:layout_height="@dimen/dp_60" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/dp_18" android:textColor="@color/popupbox_content_text" android:layout_gravity="center_vertical" android:id="@id/item_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:scrollHorizontally="false" android:singleLine="true" />
+            <TextView android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:layout_gravity="center_vertical" android:id="@id/item_short_desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scrollHorizontally="false" android:singleLine="true" />
+        </LinearLayout>
+        <com.estrongs.android.ui.view.ESTouchLinearLayout android:gravity="center" android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/item_install_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dip">
+            <Button android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_button_text" android:layout_gravity="center_vertical" android:id="@id/item_install" android:background="@drawable/component_child_download_expanded_selector" android:focusable="false" android:layout_width="@dimen/dp_68" android:layout_height="@dimen/dp_26" android:layout_marginRight="8.0dip" />
+        </com.estrongs.android.ui.view.ESTouchLinearLayout>
+    </LinearLayout>
+    <com.estrongs.android.pop.esclasses.ESScreenFitImageView android:id="@id/largeImageView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitCenter" android:adjustViewBounds="true" />
+</LinearLayout>

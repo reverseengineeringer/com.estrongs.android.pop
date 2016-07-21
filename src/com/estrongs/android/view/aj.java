@@ -1,37 +1,50 @@
 package com.estrongs.android.view;
 
-import com.estrongs.android.pop.utils.aa;
-import com.estrongs.android.pop.utils.ae;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.BaseAdapter;
+import com.estrongs.android.pop.view.FileExplorerActivity;
 import com.estrongs.fs.h;
-import com.estrongs.fs.i;
+import java.util.ArrayList;
+import java.util.List;
 
-public class aj
-  implements i
+class aj
+  implements View.OnClickListener
 {
-  private ae a;
-  private String b;
-  private int d;
+  aj(ai paramai, int paramInt) {}
   
-  public aj(String paramString, int paramInt)
+  public void onClick(View paramView)
   {
-    b = paramString;
-    d = paramInt;
-    a = aa.d(paramString, paramInt);
-  }
-  
-  public boolean a()
-  {
-    ae localae = aa.d(b, d);
-    return (localae == null) || ((!e) && (!b));
-  }
-  
-  public boolean a(h paramh)
-  {
-    if (a == null) {}
-    while (!aa.a(a, paramh, d)) {
-      return true;
+    try
+    {
+      Object localObject = (FileExplorerActivity)b.a.ag;
+      if (!((FileExplorerActivity)localObject).V())
+      {
+        ((FileExplorerActivity)localObject).d(2131231914);
+        return;
+      }
+      paramView = (h)b.a.d.get(a);
+      if (!af.b(b.a))
+      {
+        b.a.d.remove(paramView);
+        x.remove(paramView);
+        if (b.a.d.size() != 0) {
+          break label159;
+        }
+        b.a.e.b(b.a);
+      }
+      for (;;)
+      {
+        localObject = new ArrayList(1);
+        ((List)localObject).add(paramView);
+        b.a.a((List)localObject);
+        return;
+        label159:
+        b.a.h.notifyDataSetChanged();
+      }
+      return;
     }
-    return false;
+    catch (IndexOutOfBoundsException paramView) {}
   }
 }
 

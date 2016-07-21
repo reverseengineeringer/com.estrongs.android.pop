@@ -2,35 +2,27 @@ package com.estrongs.android.ui.e;
 
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.app.compress.CompressionActivity;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.ui.view.by;
-import com.estrongs.android.view.u;
+import com.estrongs.android.pop.view.utils.AppRunner;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.fs.h;
 import java.util.List;
 
 class ev
   implements MenuItem.OnMenuItemClickListener
 {
-  ev(cp paramcp) {}
+  ev(cr paramcr) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = cp.b(a);
-    if (paramMenuItem.size() == 0)
-    {
-      ag.a(cp.a(a).getBaseContext(), 2131427774, 0);
+    if (cr.a(a).size() == 0) {
+      ak.a(cr.b(a).getBaseContext(), 2131231551, 0);
+    }
+    while (cr.a(a).size() != 1) {
       return true;
     }
-    aa).p = true;
-    aa).r = true;
-    aa).y.clear();
-    aa).y.addAll(paramMenuItem);
-    u.a(cp.a(a)).a(paramMenuItem, aa).p);
-    cp.a(a).aa();
-    cp.a(a).s();
-    cp.a(a).h();
-    aa).i.a("paste_mode", Boolean.valueOf(true));
-    aa).j = "paste_mode";
+    AppRunner.a(cr.b(a), ((h)cr.a(a).get(0)).getAbsolutePath(), CompressionActivity.class);
     return true;
   }
 }

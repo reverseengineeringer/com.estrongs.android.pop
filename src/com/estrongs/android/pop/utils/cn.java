@@ -1,9 +1,21 @@
 package com.estrongs.android.pop.utils;
 
-class cn
-  implements cr
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import com.estrongs.a.a;
+
+final class cn
+  extends BroadcastReceiver
 {
-  cn(cm paramcm) {}
+  cn(a parama) {}
+  
+  public void onReceive(Context paramContext, Intent paramIntent)
+  {
+    if (paramIntent.getAction().equals("android.intent.action.MEDIA_SCANNER_FINISHED")) {
+      a.forceResume();
+    }
+  }
 }
 
 /* Location:

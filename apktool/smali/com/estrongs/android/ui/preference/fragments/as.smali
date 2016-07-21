@@ -49,7 +49,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->G()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->H()Ljava/lang/String;
 
     move-result-object v0
 
@@ -64,7 +64,7 @@
     :cond_0
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/as;->a:Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;
 
-    const/16 v1, 0x6f
+    const/16 v1, 0x6c
 
     invoke-static {v0, v1}, Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;->a(Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;I)V
 
@@ -92,7 +92,7 @@
 
     move-result v2
 
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/pop/FexApplication;->d(Z)V
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/pop/FexApplication;->c(Z)V
 
     move v0, v1
 
@@ -101,7 +101,7 @@
     :cond_2
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/as;->a:Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;
 
-    const/16 v1, 0x70
+    const/16 v1, 0x6d
 
     invoke-static {v0, v1}, Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;->b(Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;I)V
 

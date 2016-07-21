@@ -1,17 +1,31 @@
 package com.estrongs.android.ui.preference.fragments;
 
 import android.preference.Preference;
-import android.preference.Preference.OnPreferenceClickListener;
+import android.preference.Preference.OnPreferenceChangeListener;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.pop.ad;
 
 class au
-  implements Preference.OnPreferenceClickListener
+  implements Preference.OnPreferenceChangeListener
 {
   au(PasswordPreferenceFragment paramPasswordPreferenceFragment) {}
   
-  public boolean onPreferenceClick(Preference paramPreference)
+  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
   {
-    PasswordPreferenceFragment.b(a);
-    return true;
+    if (((Boolean)paramObject).booleanValue())
+    {
+      paramPreference = ad.a(a.getActivity()).H();
+      if ((paramPreference == null) || (paramPreference.length() == 0))
+      {
+        PasswordPreferenceFragment.a(a, 111);
+        return false;
+      }
+      PasswordPreferenceFragment.a(a).setEnabled(true);
+      FexApplication.a().d(((Boolean)paramObject).booleanValue());
+      return true;
+    }
+    PasswordPreferenceFragment.b(a, 112);
+    return false;
   }
 }
 

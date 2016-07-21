@@ -1,33 +1,18 @@
 package com.estrongs.android.ui.preference.fragments;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.preference.Preference;
-import android.preference.Preference.OnPreferenceClickListener;
-import com.estrongs.android.pop.app.HelpActivity;
-import com.estrongs.android.ui.dialog.ct;
-import com.estrongs.android.util.ak;
+import android.preference.Preference.OnPreferenceChangeListener;
+import com.estrongs.fs.d;
 
 class an
-  implements Preference.OnPreferenceClickListener
+  implements Preference.OnPreferenceChangeListener
 {
-  an(am paramam) {}
+  an(DownloadPreferenceFragment paramDownloadPreferenceFragment) {}
   
-  public boolean onPreferenceClick(Preference paramPreference)
+  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
   {
-    if (ak.d())
-    {
-      paramPreference = new Intent();
-      paramPreference.setClassName(a.getActivity().getPackageName(), HelpActivity.class.getName());
-      a.getActivity().startActivity(paramPreference);
-    }
-    for (;;)
-    {
-      return true;
-      paramPreference = new ct(a.getActivity());
-      paramPreference.a(a.getText(2131427398)).b(a.getText(2131427796)).a(2131427339, new ao(this));
-      paramPreference.c();
-    }
+    d.a().a(Boolean.valueOf(paramObject.toString()));
+    return true;
   }
 }
 

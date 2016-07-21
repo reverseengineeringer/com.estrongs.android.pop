@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # instance fields
@@ -22,49 +22,14 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 3
+.method public onMenuItemClick(Landroid/view/MenuItem;)Z
+    .locals 1
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/ep;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->i(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Lcom/estrongs/android/ui/view/ac;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/ac;->d()Ljava/util/List;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h()Z
 
     move-result v0
 
-    if-lez v0, :cond_0
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/ep;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ep;->a:Lcom/estrongs/android/pop/app/PopAudioPlayer;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->i(Lcom/estrongs/android/pop/app/PopAudioPlayer;)Lcom/estrongs/android/ui/view/ac;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/ac;->d()Ljava/util/List;
-
-    move-result-object v0
-
-    const/4 v2, 0x0
-
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/android/pop/app/a/ak;
-
-    invoke-static {v1, v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->a(Lcom/estrongs/android/pop/app/PopAudioPlayer;Lcom/estrongs/android/pop/app/a/ak;)V
-
-    :cond_0
-    return-void
+    return v0
 .end method

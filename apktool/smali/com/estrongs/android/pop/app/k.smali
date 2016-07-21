@@ -1,30 +1,25 @@
-.class Lcom/estrongs/android/pop/app/k;
-.super Ljava/lang/Thread;
+.class final Lcom/estrongs/android/pop/app/k;
+.super Ljava/lang/Object;
 
-
-# instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/AudioPlayerService;
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/AudioPlayerService;)V
+.method constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/k;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
-
-    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 1
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/k;->a:Lcom/estrongs/android/pop/app/AudioPlayerService;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/AudioPlayerService;->s()Z
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     return-void
 .end method

@@ -1,57 +1,59 @@
 package com.estrongs.android.pop.app;
 
 import android.content.Intent;
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.utils.ci;
-import com.estrongs.android.ui.dialog.ct;
-import com.estrongs.android.ui.e.iw;
-import com.estrongs.android.util.am;
-import java.text.MessageFormat;
+import android.net.Uri;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.j.c;
+import com.estrongs.android.pop.utils.de;
+import com.estrongs.android.pop.utils.dh;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.util.ap;
 
 class jl
-  implements MenuItem.OnMenuItemClickListener
+  implements View.OnClickListener
 {
   jl(PopVideoPlayer paramPopVideoPlayer) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void onClick(View paramView)
   {
-    paramMenuItem = a.getIntent().getData();
-    String str = PopVideoPlayer.a(a, paramMenuItem);
-    if (str == null) {
-      return true;
-    }
-    boolean bool = ad.a(FexApplication.a()).aD();
-    if (bool) {
-      if (ci.a(str) == ci.c) {
-        bool = true;
-      }
-    }
-    for (;;)
-    {
-      int i;
-      if (bool)
+    paramView = ap.d(PopVideoPlayer.x(a));
+    if (paramView != null) {
+      try
       {
-        i = 2131428403;
-        label62:
-        if (!bool) {
-          break label166;
+        if (PopVideoPlayer.y(a) != null)
+        {
+          PopVideoPlayer.y(a).a("Search_Wan");
+          PopVideoPlayer.y(a).c("Search_Wan_UV");
         }
       }
-      label166:
-      for (paramMenuItem = MessageFormat.format(a.getString(2131428419), new Object[] { am.d(str) });; paramMenuItem = a.getText(2131427871) + " " + am.d(str))
+      catch (Exception localException)
       {
-        new ct(a).a(i).b(paramMenuItem).b(2131427341, new jn(this, str, bool)).c(2131427342, new jm(this)).c();
-        PopVideoPlayer.D(a).d();
-        return true;
-        bool = false;
-        break;
-        i = 2131427347;
-        break label62;
+        for (;;)
+        {
+          try
+          {
+            paramView = de.a(a, "video", ap.bS(paramView));
+            if (paramView == null) {
+              return;
+            }
+            if (de.a(b))
+            {
+              a.finish();
+              return;
+            }
+            Intent localIntent = new Intent(a, FileExplorerActivity.class);
+            localIntent.setFlags(603979776);
+            localIntent.setData(Uri.parse(a));
+            a.startActivity(localIntent);
+            return;
+          }
+          catch (Exception paramView) {}
+          localException = localException;
+        }
       }
     }
+    return;
   }
 }
 

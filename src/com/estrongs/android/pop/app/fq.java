@@ -1,13 +1,26 @@
 package com.estrongs.android.pop.app;
 
+import com.estrongs.android.pop.app.c.i;
+
 class fq
   implements Runnable
 {
-  fq(fp paramfp) {}
+  fq(PopAudioPlayer paramPopAudioPlayer, i parami) {}
   
   public void run()
   {
-    PopAudioPlayer.c(a.a);
+    try
+    {
+      a.d();
+      if ((a == PopAudioPlayer.a(b).r()) && (a.c())) {
+        b.runOnUiThread(new fr(this));
+      }
+      return;
+    }
+    catch (Exception localException)
+    {
+      localException.printStackTrace();
+    }
   }
 }
 

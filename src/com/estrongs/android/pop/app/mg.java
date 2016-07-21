@@ -1,16 +1,16 @@
 package com.estrongs.android.pop.app;
 
-import com.estrongs.android.appinfo.AppFolderInfoManager;
-import com.estrongs.android.util.bd;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class mg
-  extends Thread
+  implements DialogInterface.OnClickListener
 {
-  mg(UninstallMonitorActivity paramUninstallMonitorActivity, String paramString) {}
+  mg(StreamingMediaPlayer paramStreamingMediaPlayer) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    bd.a(new mh(this, AppFolderInfoManager.d().e(a), AppFolderInfoManager.d().h(a)));
+    a.finish();
   }
 }
 

@@ -235,7 +235,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/estrongs/android/ui/drag/m;->e()I
+    invoke-virtual {v2}, Lcom/estrongs/android/ui/drag/m;->getRegistrationX()I
 
     move-result v2
 
@@ -249,7 +249,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/estrongs/android/ui/drag/m;->f()I
+    invoke-virtual {v3}, Lcom/estrongs/android/ui/drag/m;->getRegistrationY()I
 
     move-result v3
 
@@ -358,13 +358,13 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/drag/m;->d()Landroid/graphics/Bitmap;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/drag/m;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/estrongs/android/ui/drag/h;->b:Lcom/estrongs/android/ui/drag/m;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/ui/drag/m;->d()Landroid/graphics/Bitmap;
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/drag/m;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v1
 

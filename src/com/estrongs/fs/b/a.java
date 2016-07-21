@@ -1,12 +1,12 @@
 package com.estrongs.fs.b;
 
-import android.util.Log;
 import com.estrongs.a.a.m;
 import com.estrongs.a.q;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bc;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bg;
+import com.estrongs.android.util.l;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -27,7 +27,7 @@ public class a
   protected List<com.estrongs.fs.h> i = new ArrayList();
   protected List<com.estrongs.fs.h> j = new ArrayList();
   Long k = Long.valueOf(0L);
-  private cg m = null;
+  private ci m = null;
   private byte[] n = null;
   private boolean o = false;
   private boolean p = false;
@@ -49,7 +49,7 @@ public class a
       paramh = ((com.estrongs.fs.h)localLinkedList.get(i1)).getName();
       paramList = paramh;
       if (paramh == null) {
-        paramList = am.d(((com.estrongs.fs.h)localLinkedList.get(i1)).getAbsolutePath());
+        paramList = ap.d(((com.estrongs.fs.h)localLinkedList.get(i1)).getAbsolutePath());
       }
       localStringBuilder.append(paramList);
       if (i1 + 1 != i2)
@@ -100,10 +100,10 @@ public class a
     recordSummary("start_time", Long.valueOf(startTime));
     recordSummary("task_type", Integer.valueOf(task_type));
     recordSummary("restartable", Boolean.valueOf(false));
-    recordSummary("file_type", Integer.valueOf(bc.b(localh.getName())));
+    recordSummary("file_type", Integer.valueOf(bg.b(localh.getName())));
     recordSummary("items_selected_count", Integer.valueOf(j.size()));
-    recordSummary("source", am.D(am.bk(localh.getPath())));
-    recordSummary("target", am.D(g.getPath()));
+    recordSummary("source", ap.F(ap.bB(localh.getPath())));
+    recordSummary("target", ap.F(g.getPath()));
     recordSummary("status", Integer.valueOf(1));
   }
   
@@ -118,9 +118,9 @@ public class a
     }
   }
   
-  public void a(cg paramcg)
+  public void a(ci paramci)
   {
-    m = paramcg;
+    m = paramci;
   }
   
   public boolean canHide()
@@ -152,9 +152,9 @@ public class a
         return;
         processData.g = ((Long)paramVarArgs[0]).longValue();
         processData.h = ((Long)paramVarArgs[1]).longValue();
-        Log.d(l, "####TASK_MSG_SINGLE_FILE_SIZE  processData.current_file_size " + processData.g + " processData.current_file_copie " + processData.h);
+        l.b(l, "####TASK_MSG_SINGLE_FILE_SIZE  processData.current_file_size " + processData.g + " processData.current_file_copie " + processData.h);
       } while ((processData.g != processData.h) || (m == null));
-      FileExplorerActivity.J().runOnUiThread(new d(this));
+      FileExplorerActivity.X().runOnUiThread(new d(this));
       processData.o = false;
       processData.n = false;
       onProgress(processData);
@@ -196,7 +196,7 @@ public class a
         localException.printStackTrace();
         setTaskResult(10000, new q(localException.toString(), localException));
         return false;
-        setTaskResult(10000, new q(FileExplorerActivity.J().getString(2131427700), null));
+        setTaskResult(10000, new q(FileExplorerActivity.X().getString(2131230969), null));
         return false;
         String str = g.getAbsolutePath() + "/" + localException.getName();
         com.estrongs.fs.a.b.a().a(str);
@@ -210,7 +210,7 @@ public class a
         break label428;
       }
       if (m != null) {
-        FileExplorerActivity.J().runOnUiThread(new c(this));
+        FileExplorerActivity.X().runOnUiThread(new c(this));
       }
       bool = taskStopped();
       if (bool)
@@ -219,7 +219,7 @@ public class a
         return false;
       }
       localh = (com.estrongs.fs.h)j.remove(0);
-      if (!am.e(localh.getAbsolutePath(), g.getAbsolutePath()))
+      if (!ap.e(localh.getAbsolutePath(), g.getAbsolutePath()))
       {
         processData.o = true;
         processData.n = true;

@@ -2,8 +2,9 @@ package com.estrongs.android.pop.utils;
 
 import android.os.AsyncTask;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.ay;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.bc;
+import com.estrongs.fs.impl.b.d;
 import java.util.List;
 
 class r
@@ -16,8 +17,8 @@ class r
     int i = 0;
     while (i < a)
     {
-      paramVarArgs = ((com.estrongs.fs.impl.b.c)b.get(i)).c();
-      ay.a(c.a, paramVarArgs);
+      paramVarArgs = ((d)b.get(i)).h();
+      bc.a(c.a, paramVarArgs);
       i += 1;
     }
     return null;
@@ -25,7 +26,7 @@ class r
   
   protected void a(Void paramVoid)
   {
-    ag.a(c.a, c.a.getString(2131427795), 1);
+    ak.a(c.a, c.a.getString(2131231904), 1);
   }
 }
 

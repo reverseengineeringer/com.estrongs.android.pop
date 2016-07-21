@@ -4,12 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.ui.theme.al;
+import com.estrongs.android.ui.base.HomeAsBackActivity;
 import com.estrongs.android.util.m;
 
 public class ImageCommentPostActivity
-  extends ESActivity
+  extends HomeAsBackActivity
 {
   private m a;
   private EditText b = null;
@@ -18,9 +17,9 @@ public class ImageCommentPostActivity
   
   private void a(String paramString)
   {
-    findViewById(2131362614).setVisibility(0);
-    findViewById(2131362610).setVisibility(8);
-    a = new ds(this, "Comment Poster", paramString);
+    findViewById(2131625363).setVisibility(0);
+    findViewById(2131625359).setVisibility(8);
+    a = new dr(this, "Comment Poster", paramString);
     a.start();
   }
   
@@ -35,19 +34,13 @@ public class ImageCommentPostActivity
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    requestWindowFeature(1);
-    setContentView(2130903215);
+    setTitle(2131232007);
+    setContentView(2130903376);
     c = getIntent().getStringExtra("pic_path");
     d = getIntent().getBooleanExtra("from_detial_page", d);
-    b = ((EditText)findViewById(2131361822));
-    paramBundle = al.a(this);
-    findViewById(2131362002).setBackgroundDrawable(paramBundle.a(2130838154));
-    paramBundle = paramBundle.b(2130837803);
-    findViewById(2131362610).setBackgroundDrawable(paramBundle);
-    findViewById(2131362614).setBackgroundDrawable(paramBundle);
-    findViewById(2131362612).setOnClickListener(new dp(this));
-    findViewById(2131362613).setOnClickListener(new dq(this));
-    findViewById(2131362609).setOnClickListener(new dr(this));
+    b = ((EditText)findViewById(2131624200));
+    findViewById(2131625361).setOnClickListener(new dp(this));
+    findViewById(2131625362).setOnClickListener(new dq(this));
   }
 }
 

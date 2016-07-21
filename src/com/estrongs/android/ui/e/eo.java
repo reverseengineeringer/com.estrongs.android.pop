@@ -1,60 +1,19 @@
 package com.estrongs.android.ui.e;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.a;
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.pop.view.utils.AppRunner;
-import com.estrongs.android.ui.theme.ai;
-import com.estrongs.android.ui.theme.al;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.am;
-import com.estrongs.fs.h;
-import java.util.List;
+import com.estrongs.android.view.a.b;
 
 class eo
-  implements MenuItem.OnMenuItemClickListener
+  implements b
 {
-  eo(cp paramcp) {}
+  eo(cr paramcr) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public boolean a(cp paramcp)
   {
-    if (cp.b(a).size() == 0) {
-      ag.a(cp.a(a).getBaseContext(), 2131427774, 0);
-    }
-    String str;
-    do
-    {
+    if (((e) || (L) || (I) || (J) || (K) || (H) || (h) || (((f) || (y) || (g)) && (!d))) && ((Y) || (ac))) {}
+    while (i) {
       return true;
-      str = ((h)cp.b(a).get(0)).getAbsolutePath();
-    } while (str == null);
-    int i;
-    if (am.ba(str))
-    {
-      i = 1;
-      paramMenuItem = str;
     }
-    Object localObject;
-    for (;;)
-    {
-      localObject = al.a(cp.a(a)).a();
-      if (localObject == null) {
-        break;
-      }
-      localObject = new ep(this, paramMenuItem, ((ai)localObject).a() + "background.dat");
-      if (i == 0) {
-        break label189;
-      }
-      ((Runnable)localObject).run();
-      return true;
-      paramMenuItem = a.d + "/" + am.d(str);
-      i = 0;
-    }
-    ag.a(cp.a(a).getBaseContext(), "Sorry, cant set background as themedata is not available", 0);
-    return true;
-    label189:
-    AppRunner.a(cp.a(a), str, paramMenuItem, (Runnable)localObject, false);
-    return true;
+    return false;
   }
 }
 

@@ -1,16 +1,40 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.pop.app.PopAudioPlayer;
-import com.estrongs.android.ui.view.ag;
+import android.view.View;
+import com.estrongs.android.pop.esclasses.ESScrollView;
+import com.estrongs.android.pop.esclasses.t;
 
 class ia
-  implements Runnable
+  implements t
 {
   ia(hz paramhz) {}
   
-  public void run()
+  public void a()
   {
-    ag.a(hl.a(a.c), hl.a(a.c).getText(2131427942), 0);
+    if (a.a)
+    {
+      hz.a(a).setVisibility(0);
+      hz.b(a).setVisibility(4);
+    }
+  }
+  
+  public void b()
+  {
+    if (a.a)
+    {
+      hz.a(a).setVisibility(4);
+      hz.b(a).setVisibility(0);
+      hz.c(a).scrollTo(0, 1);
+    }
+  }
+  
+  public void c()
+  {
+    if (a.a)
+    {
+      hz.a(a).setVisibility(0);
+      hz.b(a).setVisibility(0);
+    }
   }
 }
 

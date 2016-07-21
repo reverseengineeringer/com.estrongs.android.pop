@@ -7,11 +7,11 @@ import com.estrongs.android.pop.view.FileExplorerActivity;
 class y
   implements MenuItem.OnMenuItemClickListener
 {
-  y(s params, FileExplorerActivity paramFileExplorerActivity) {}
+  y(r paramr, FileExplorerActivity paramFileExplorerActivity) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    a.finish();
+    b.a(new z(this));
     return true;
   }
 }

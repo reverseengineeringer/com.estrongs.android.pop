@@ -96,9 +96,9 @@
 .method public a(D)V
     .locals 7
 
-    const v5, 0x7f0201e7
+    const v5, 0x7f020335
 
-    const v4, 0x7f0201e6
+    const v4, 0x7f020334
 
     const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
 
@@ -129,11 +129,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/theme/al;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
+    invoke-static {v0}, Lcom/estrongs/android/ui/theme/at;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
 
     move-result-object v0
 
-    invoke-virtual {v0, v4}, Lcom/estrongs/android/ui/theme/al;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0, v4}, Lcom/estrongs/android/ui/theme/at;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -148,11 +148,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/theme/al;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
+    invoke-static {v0}, Lcom/estrongs/android/ui/theme/at;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
 
     move-result-object v0
 
-    invoke-virtual {v0, v5}, Lcom/estrongs/android/ui/theme/al;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0, v5}, Lcom/estrongs/android/ui/theme/at;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 

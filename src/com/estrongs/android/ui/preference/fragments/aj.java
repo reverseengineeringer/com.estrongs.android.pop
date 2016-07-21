@@ -1,22 +1,28 @@
 package com.estrongs.android.ui.preference.fragments;
 
-import android.app.Activity;
-import com.estrongs.android.pop.view.FileExplorerActivity;
+import android.content.ComponentName;
+import android.content.pm.PackageManager;
+import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.pop.app.UsbMonitorActivity;
 
 class aj
-  implements Runnable
+  implements Preference.OnPreferenceChangeListener
 {
-  aj(ai paramai) {}
+  aj(DisplayPreferenceFragment paramDisplayPreferenceFragment) {}
   
-  public void run()
+  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
   {
-    try
+    paramPreference = FexApplication.a().getPackageManager();
+    ComponentName localComponentName = new ComponentName(FexApplication.a(), UsbMonitorActivity.class);
+    if (((Boolean)paramObject).booleanValue())
     {
-      FileExplorerActivity.J().R();
-      a.a.getActivity().finish();
-      return;
+      paramPreference.setComponentEnabledSetting(localComponentName, 1, 1);
+      return true;
     }
-    catch (Exception localException) {}
+    paramPreference.setComponentEnabledSetting(localComponentName, 2, 1);
+    return true;
   }
 }
 

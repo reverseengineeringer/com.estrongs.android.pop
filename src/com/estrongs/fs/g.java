@@ -1,6 +1,6 @@
 package com.estrongs.fs;
 
-import com.estrongs.fs.impl.r.b;
+import com.estrongs.fs.impl.w.b;
 import com.estrongs.old.fs.a;
 import com.estrongs.old.fs.impl.sftp.OldSFtpFileSystem;
 

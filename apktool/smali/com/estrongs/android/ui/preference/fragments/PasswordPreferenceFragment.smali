@@ -1,5 +1,5 @@
 .class public Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;
-.super Lcom/estrongs/android/pop/esclasses/i;
+.super Lcom/estrongs/android/pop/esclasses/m;
 
 
 # annotations
@@ -24,7 +24,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/i;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/m;-><init>()V
 
     return-void
 .end method
@@ -40,41 +40,41 @@
 .method private a()V
     .locals 6
 
-    const v5, 0x7f0a02bb
+    const v5, 0x7f0e050c
 
     const/16 v4, 0x8
 
-    new-instance v0, Lcom/estrongs/android/ui/dialog/ct;
+    new-instance v0, Lcom/estrongs/android/ui/dialog/cv;
 
     invoke-virtual {p0}, Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0b029b
+    const v1, 0x7f08054b
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->a(I)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    const v1, 0x7f0b000b
-
-    new-instance v2, Lcom/estrongs/android/ui/preference/fragments/aw;
-
-    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/preference/fragments/aw;-><init>(Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;)V
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->a(I)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    const v1, 0x7f0b000c
+    const v1, 0x7f080226
 
-    new-instance v2, Lcom/estrongs/android/ui/preference/fragments/av;
+    new-instance v2, Lcom/estrongs/android/ui/preference/fragments/ay;
 
-    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/preference/fragments/av;-><init>(Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;)V
+    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/preference/fragments/ay;-><init>(Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
+
+    move-result-object v0
+
+    const v1, 0x7f080221
+
+    new-instance v2, Lcom/estrongs/android/ui/preference/fragments/ax;
+
+    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/preference/fragments/ax;-><init>(Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;)V
+
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v1
 
@@ -90,7 +90,7 @@
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    const v2, 0x7f03009d
+    const v2, 0x7f030134
 
     const/4 v3, 0x0
 
@@ -104,7 +104,7 @@
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f0a02b8
+    const v0, 0x7f0e0509
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -120,7 +120,7 @@
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f0a02be
+    const v0, 0x7f0e050f
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -132,7 +132,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a02ba
+    const v0, 0x7f0e050b
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -144,7 +144,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a02c0
+    const v0, 0x7f0e0511
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -156,7 +156,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a02b9
+    const v0, 0x7f0e050a
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -168,7 +168,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v4, 0x7f0b02a2
+    const v4, 0x7f080440
 
     invoke-virtual {p0, v4}, Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;->getText(I)Ljava/lang/CharSequence;
 
@@ -190,7 +190,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a0191
+    const v0, 0x7f0e034b
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -202,7 +202,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v4, 0x7f0b02a1
+    const v4, 0x7f08043e
 
     invoke-virtual {p0, v4}, Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;->getText(I)Ljava/lang/CharSequence;
 
@@ -224,7 +224,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a0193
+    const v0, 0x7f0e034d
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -236,7 +236,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v4, 0x7f0b02a3
+    const v4, 0x7f08043d
 
     invoke-virtual {p0, v4}, Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;->getText(I)Ljava/lang/CharSequence;
 
@@ -258,13 +258,13 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->a(Landroid/view/View;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->a(Landroid/view/View;)Lcom/estrongs/android/ui/dialog/cv;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/ui/dialog/ct;->b()Lcom/estrongs/android/ui/dialog/cg;
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/dialog/cv;->b()Lcom/estrongs/android/ui/dialog/ci;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->getWindow()Landroid/view/Window;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ci;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
@@ -272,7 +272,7 @@
 
     invoke-virtual {v1, v2}, Landroid/view/Window;->setSoftInputMode(I)V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->show()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ci;->show()V
 
     return-void
 .end method
@@ -280,41 +280,41 @@
 .method private a(I)V
     .locals 6
 
-    const v5, 0x7f0a02bb
+    const v5, 0x7f0e050c
 
     const/16 v4, 0x8
 
-    new-instance v0, Lcom/estrongs/android/ui/dialog/ct;
+    new-instance v0, Lcom/estrongs/android/ui/dialog/cv;
 
     invoke-virtual {p0}, Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0b029d
+    const v1, 0x7f080441
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->a(I)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    const v1, 0x7f0b000b
-
-    new-instance v2, Lcom/estrongs/android/ui/preference/fragments/ay;
-
-    invoke-direct {v2, p0, p1}, Lcom/estrongs/android/ui/preference/fragments/ay;-><init>(Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;I)V
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->a(I)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    const v1, 0x7f0b000c
+    const v1, 0x7f080226
 
-    new-instance v2, Lcom/estrongs/android/ui/preference/fragments/ax;
+    new-instance v2, Lcom/estrongs/android/ui/preference/fragments/ba;
 
-    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/preference/fragments/ax;-><init>(Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;)V
+    invoke-direct {v2, p0, p1}, Lcom/estrongs/android/ui/preference/fragments/ba;-><init>(Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;I)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
+
+    move-result-object v0
+
+    const v1, 0x7f080221
+
+    new-instance v2, Lcom/estrongs/android/ui/preference/fragments/az;
+
+    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/preference/fragments/az;-><init>(Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;)V
+
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v1
 
@@ -330,7 +330,7 @@
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    const v2, 0x7f03009d
+    const v2, 0x7f030134
 
     const/4 v3, 0x0
 
@@ -338,7 +338,7 @@
 
     move-result-object v2
 
-    const v0, 0x7f0a02b8
+    const v0, 0x7f0e0509
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -358,7 +358,7 @@
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f0a02be
+    const v0, 0x7f0e050f
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -370,7 +370,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a02ba
+    const v0, 0x7f0e050b
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -382,7 +382,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a02c0
+    const v0, 0x7f0e0511
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -394,7 +394,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a02b9
+    const v0, 0x7f0e050a
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -406,7 +406,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v4, 0x7f0b02a2
+    const v4, 0x7f080440
 
     invoke-virtual {p0, v4}, Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;->getText(I)Ljava/lang/CharSequence;
 
@@ -428,7 +428,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a0191
+    const v0, 0x7f0e034b
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -440,7 +440,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v4, 0x7f0b02a1
+    const v4, 0x7f08043e
 
     invoke-virtual {p0, v4}, Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;->getText(I)Ljava/lang/CharSequence;
 
@@ -462,7 +462,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a0193
+    const v0, 0x7f0e034d
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -474,7 +474,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v4, 0x7f0b02a3
+    const v4, 0x7f08043d
 
     invoke-virtual {p0, v4}, Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;->getText(I)Ljava/lang/CharSequence;
 
@@ -496,13 +496,13 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->a(Landroid/view/View;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->a(Landroid/view/View;)Lcom/estrongs/android/ui/dialog/cv;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/ui/dialog/ct;->b()Lcom/estrongs/android/ui/dialog/cg;
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/dialog/cv;->b()Lcom/estrongs/android/ui/dialog/ci;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->getWindow()Landroid/view/Window;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ci;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
@@ -510,7 +510,7 @@
 
     invoke-virtual {v1, v2}, Landroid/view/Window;->setSoftInputMode(I)V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->show()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ci;->show()V
 
     return-void
 .end method
@@ -526,41 +526,41 @@
 .method private b(I)V
     .locals 6
 
-    const v4, 0x7f0a02bb
+    const v4, 0x7f0e050c
 
     const/16 v5, 0x8
 
-    new-instance v0, Lcom/estrongs/android/ui/dialog/ct;
+    new-instance v0, Lcom/estrongs/android/ui/dialog/cv;
 
     invoke-virtual {p0}, Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0b0238
+    const v1, 0x7f080394
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->a(I)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    const v1, 0x7f0b000b
-
-    new-instance v2, Lcom/estrongs/android/ui/preference/fragments/ar;
-
-    invoke-direct {v2, p0, p1}, Lcom/estrongs/android/ui/preference/fragments/ar;-><init>(Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;I)V
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->a(I)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    const v1, 0x7f0b000c
+    const v1, 0x7f080226
 
-    new-instance v2, Lcom/estrongs/android/ui/preference/fragments/az;
+    new-instance v2, Lcom/estrongs/android/ui/preference/fragments/at;
 
-    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/preference/fragments/az;-><init>(Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;)V
+    invoke-direct {v2, p0, p1}, Lcom/estrongs/android/ui/preference/fragments/at;-><init>(Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;I)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
+
+    move-result-object v0
+
+    const v1, 0x7f080221
+
+    new-instance v2, Lcom/estrongs/android/ui/preference/fragments/bb;
+
+    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/preference/fragments/bb;-><init>(Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;)V
+
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v1
 
@@ -576,7 +576,7 @@
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    const v2, 0x7f03009d
+    const v2, 0x7f030134
 
     const/4 v3, 0x0
 
@@ -590,7 +590,7 @@
 
     invoke-virtual {v0, v5}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f0a02b8
+    const v0, 0x7f0e0509
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -598,7 +598,7 @@
 
     invoke-virtual {v0, v5}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f0a02bf
+    const v0, 0x7f0e0510
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -612,7 +612,7 @@
 
     invoke-virtual {v0, v5}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f0a02be
+    const v0, 0x7f0e050f
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -624,7 +624,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a02ba
+    const v0, 0x7f0e050b
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -636,7 +636,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a02c0
+    const v0, 0x7f0e0511
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -648,7 +648,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a02b9
+    const v0, 0x7f0e050a
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -660,7 +660,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v4, 0x7f0b02a2
+    const v4, 0x7f080440
 
     invoke-virtual {p0, v4}, Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;->getText(I)Ljava/lang/CharSequence;
 
@@ -682,7 +682,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a0191
+    const v0, 0x7f0e034b
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -692,7 +692,7 @@
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
-    const v0, 0x7f0a0193
+    const v0, 0x7f0e034d
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -704,7 +704,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v4, 0x7f0b02a3
+    const v4, 0x7f08043d
 
     invoke-virtual {p0, v4}, Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;->getText(I)Ljava/lang/CharSequence;
 
@@ -726,13 +726,13 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->a(Landroid/view/View;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->a(Landroid/view/View;)Lcom/estrongs/android/ui/dialog/cv;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/ui/dialog/ct;->b()Lcom/estrongs/android/ui/dialog/cg;
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/dialog/cv;->b()Lcom/estrongs/android/ui/dialog/ci;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->getWindow()Landroid/view/Window;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ci;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
@@ -740,7 +740,7 @@
 
     invoke-virtual {v1, v2}, Landroid/view/Window;->setSoftInputMode(I)V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->show()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ci;->show()V
 
     return-void
 .end method
@@ -792,9 +792,9 @@
 
     const/4 v2, 0x1
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/i;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/m;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f050010
+    const v0, 0x7f050011
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;->addPreferencesFromResource(I)V
 
@@ -842,9 +842,9 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;->a:Landroid/preference/CheckBoxPreference;
 
-    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/aq;
+    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/as;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/aq;-><init>(Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/as;-><init>(Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -855,9 +855,9 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;->c:Landroid/preference/CheckBoxPreference;
 
-    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/as;
+    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/au;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/as;-><init>(Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/au;-><init>(Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -868,9 +868,9 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;->d:Landroid/preference/CheckBoxPreference;
 
-    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/at;
+    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/av;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/at;-><init>(Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/av;-><init>(Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -930,9 +930,9 @@
     :cond_5
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;->b:Landroid/preference/Preference;
 
-    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/au;
+    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/aw;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/au;-><init>(Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/aw;-><init>(Lcom/estrongs/android/ui/preference/fragments/PasswordPreferenceFragment;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 

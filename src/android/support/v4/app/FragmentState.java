@@ -1,5 +1,6 @@
 package android.support.v4.app;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -9,7 +10,7 @@ import android.util.Log;
 final class FragmentState
   implements Parcelable
 {
-  public static final Parcelable.Creator<FragmentState> CREATOR = new r();
+  public static final Parcelable.Creator<FragmentState> CREATOR = new av();
   final String a;
   final int b;
   final boolean c;
@@ -61,40 +62,41 @@ final class FragmentState
   public FragmentState(Fragment paramFragment)
   {
     a = paramFragment.getClass().getName();
-    b = f;
-    c = o;
-    d = w;
-    e = x;
-    f = y;
-    g = B;
-    h = A;
-    i = h;
+    b = mIndex;
+    c = mFromLayout;
+    d = mFragmentId;
+    e = mContainerId;
+    f = mTag;
+    g = mRetainInstance;
+    h = mDetached;
+    i = mArguments;
   }
   
-  public Fragment a(FragmentActivity paramFragmentActivity, Fragment paramFragment)
+  public Fragment a(ai paramai, Fragment paramFragment)
   {
     if (k != null) {
       return k;
     }
+    Context localContext = paramai.i();
     if (i != null) {
-      i.setClassLoader(paramFragmentActivity.getClassLoader());
+      i.setClassLoader(localContext.getClassLoader());
     }
-    k = Fragment.a(paramFragmentActivity, a, i);
+    k = Fragment.instantiate(localContext, a, i);
     if (j != null)
     {
-      j.setClassLoader(paramFragmentActivity.getClassLoader());
-      k.d = j;
+      j.setClassLoader(localContext.getClassLoader());
+      k.mSavedFragmentState = j;
     }
-    k.a(b, paramFragment);
-    k.o = c;
-    k.q = true;
-    k.w = d;
-    k.x = e;
-    k.y = f;
-    k.B = g;
-    k.A = h;
-    k.s = b;
-    if (n.a) {
+    k.setIndex(b, paramFragment);
+    k.mFromLayout = c;
+    k.mRestored = true;
+    k.mFragmentId = d;
+    k.mContainerId = e;
+    k.mTag = f;
+    k.mRetainInstance = g;
+    k.mDetached = h;
+    k.mFragmentManager = d;
+    if (al.a) {
       Log.v("FragmentManager", "Instantiated fragment " + k);
     }
     return k;

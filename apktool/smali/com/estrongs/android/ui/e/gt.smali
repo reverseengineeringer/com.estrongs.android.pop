@@ -6,18 +6,18 @@
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
+.field final synthetic a:Lcom/estrongs/a/a;
 
 .field final synthetic b:Lcom/estrongs/android/ui/e/gs;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/gs;Ljava/lang/String;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/gs;Lcom/estrongs/a/a;)V
     .locals 0
 
     iput-object p1, p0, Lcom/estrongs/android/ui/e/gt;->b:Lcom/estrongs/android/ui/e/gs;
 
-    iput-object p2, p0, Lcom/estrongs/android/ui/e/gt;->a:Ljava/lang/String;
+    iput-object p2, p0, Lcom/estrongs/android/ui/e/gt;->a:Lcom/estrongs/a/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,34 +29,51 @@
 .method public run()V
     .locals 2
 
-    :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/gt;->a:Ljava/lang/String;
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/gt;->a:Lcom/estrongs/a/a;
 
-    invoke-static {v0}, Lcom/estrongs/fs/impl/j/b;->d(Ljava/lang/String;)Z
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/gt;->b:Lcom/estrongs/android/ui/e/gs;
-
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/gs;->a:Lcom/estrongs/android/ui/e/cp;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/cp;->a(Lcom/estrongs/android/ui/e/cp;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-virtual {v0}, Lcom/estrongs/a/a;->getTaskResult()Lcom/estrongs/a/p;
 
     move-result-object v0
 
-    new-instance v1, Lcom/estrongs/android/ui/e/gu;
+    iget v0, v0, Lcom/estrongs/a/p;->a:I
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/e/gu;-><init>(Lcom/estrongs/android/ui/e/gt;)V
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catch Lcom/estrongs/android/pop/netfs/NetFsException; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/gt;->b:Lcom/estrongs/android/ui/e/gs;
+
+    iget-object v0, v0, Lcom/estrongs/android/ui/e/gs;->a:Lcom/estrongs/android/ui/e/gr;
+
+    iget-object v0, v0, Lcom/estrongs/android/ui/e/gr;->b:Lcom/estrongs/android/ui/e/gp;
+
+    iget-object v0, v0, Lcom/estrongs/android/ui/e/gp;->a:Lcom/estrongs/android/ui/e/cr;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/cr;->b(Lcom/estrongs/android/ui/e/cr;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    move-result-object v0
+
+    const v1, 0x7f0802b1
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/pop/utils/a;->a(Landroid/content/Context;I)V
 
     :goto_0
     return-void
 
-    :catch_0
-    move-exception v0
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/gt;->b:Lcom/estrongs/android/ui/e/gs;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/netfs/NetFsException;->printStackTrace()V
+    iget-object v0, v0, Lcom/estrongs/android/ui/e/gs;->a:Lcom/estrongs/android/ui/e/gr;
+
+    iget-object v0, v0, Lcom/estrongs/android/ui/e/gr;->b:Lcom/estrongs/android/ui/e/gp;
+
+    iget-object v0, v0, Lcom/estrongs/android/ui/e/gp;->a:Lcom/estrongs/android/ui/e/cr;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/cr;->b(Lcom/estrongs/android/ui/e/cr;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    move-result-object v0
+
+    const v1, 0x7f0802ae
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/pop/utils/a;->a(Landroid/content/Context;I)V
 
     goto :goto_0
 .end method

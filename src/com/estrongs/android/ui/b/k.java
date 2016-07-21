@@ -1,6 +1,6 @@
 package com.estrongs.android.ui.b;
 
-import com.estrongs.android.util.bd;
+import com.estrongs.android.util.bk;
 import com.estrongs.fs.b.ad;
 import org.json.JSONObject;
 
@@ -36,7 +36,7 @@ class k
     if ((a instanceof ad))
     {
       localObject = ((ad)a).c();
-      if (!bd.b((CharSequence)localObject)) {}
+      if (!bk.b((CharSequence)localObject)) {}
     }
     String str;
     do
@@ -44,7 +44,7 @@ class k
       return (String)localObject;
       str = a.summary().optString("target");
       localObject = str;
-    } while (!bd.a(str));
+    } while (!bk.a(str));
     return "";
   }
 }

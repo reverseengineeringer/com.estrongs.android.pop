@@ -1,22 +1,17 @@
 package com.estrongs.android.ui.dialog;
 
-import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.RadioButton;
 
 class ay
-  implements CompoundButton.OnCheckedChangeListener
+  implements View.OnClickListener
 {
-  ay(au paramau, ap paramap) {}
+  ay(aw paramaw, ar paramar) {}
   
-  public void onCheckedChanged(CompoundButton paramCompoundButton, boolean paramBoolean)
+  public void onClick(View paramView)
   {
-    if (paramBoolean)
-    {
-      b.a.setChecked(false);
-      return;
-    }
-    b.a.setChecked(true);
+    b.b.setChecked(true);
   }
 }
 

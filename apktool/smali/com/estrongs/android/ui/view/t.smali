@@ -44,7 +44,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;->e:I
+    sget v2, Lcom/estrongs/android/ui/view/CreateOAuthNetDisk;->f:I
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 

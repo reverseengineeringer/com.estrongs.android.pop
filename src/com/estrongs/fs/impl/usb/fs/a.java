@@ -7,6 +7,8 @@ public abstract interface a
   public abstract String b();
   
   public abstract long c();
+  
+  public abstract long d();
 }
 
 /* Location:

@@ -10,12 +10,15 @@ import android.media.MediaPlayer.OnCompletionListener;
 import android.media.MediaPlayer.OnErrorListener;
 import android.net.Uri;
 import android.os.IBinder;
+import com.estrongs.android.g.a;
 import com.estrongs.android.pop.FexApplication;
 import com.estrongs.android.pop.ac;
-import com.estrongs.android.pop.app.a.ak;
-import com.estrongs.android.pop.app.a.al;
-import com.estrongs.android.pop.app.a.ao;
-import com.estrongs.android.ui.view.ag;
+import com.estrongs.android.pop.ai;
+import com.estrongs.android.pop.app.c.i;
+import com.estrongs.android.pop.app.c.j;
+import com.estrongs.android.ui.notification.b;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.ap;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -27,35 +30,35 @@ public class AudioPlayerService
   public static AudioPlayerService b = null;
   public static String j = "http://127.0.0.1:35864/";
   public boolean a = false;
-  public com.estrongs.android.c.a c = null;
+  public a c = null;
   public boolean d = false;
-  MediaPlayer.OnCompletionListener e = new l(this);
-  MediaPlayer.OnErrorListener f = new m(this);
-  i g = null;
+  MediaPlayer.OnCompletionListener e = new p(this);
+  MediaPlayer.OnErrorListener f = new q(this);
+  m g = null;
   public boolean h = false;
   boolean i = false;
   private Object k = new Object();
-  private final IBinder l = new q(this);
+  private final IBinder l = new u(this);
   private boolean m = false;
   private boolean n = false;
-  private com.estrongs.android.ui.notification.a o;
+  private b o;
   private MediaPlayer p = null;
   private boolean q = false;
-  private com.estrongs.android.pop.app.a.am r;
-  private final BroadcastReceiver s = new j(this);
-  private final BroadcastReceiver t = new n(this);
-  private final BroadcastReceiver u = new o(this);
-  private final BroadcastReceiver v = new p(this);
+  private com.estrongs.android.pop.app.c.k r;
+  private final BroadcastReceiver s = new n(this);
+  private final BroadcastReceiver t = new r(this);
+  private final BroadcastReceiver u = new s(this);
+  private final BroadcastReceiver v = new t(this);
   private Object w = new Object();
-  private gc x = null;
+  private gp x = null;
   
-  private int G()
+  private int H()
   {
     return r.b();
   }
   
   /* Error */
-  private void H()
+  private void I()
   {
     // Byte code:
     //   0: aload_0
@@ -69,15 +72,15 @@ public class AudioPlayerService
     //   13: monitorexit
     //   14: return
     //   15: aload_0
-    //   16: getfield 112	com/estrongs/android/pop/app/AudioPlayerService:g	Lcom/estrongs/android/pop/app/i;
+    //   16: getfield 112	com/estrongs/android/pop/app/AudioPlayerService:g	Lcom/estrongs/android/pop/app/m;
     //   19: ifnonnull +16 -> 35
     //   22: aload_0
-    //   23: new 135	com/estrongs/android/pop/app/i
+    //   23: new 135	com/estrongs/android/pop/app/m
     //   26: dup
     //   27: aload_0
     //   28: aload_0
-    //   29: invokespecial 138	com/estrongs/android/pop/app/i:<init>	(Landroid/content/Context;Lcom/estrongs/android/pop/app/AudioPlayerService;)V
-    //   32: putfield 112	com/estrongs/android/pop/app/AudioPlayerService:g	Lcom/estrongs/android/pop/app/i;
+    //   29: invokespecial 138	com/estrongs/android/pop/app/m:<init>	(Landroid/content/Context;Lcom/estrongs/android/pop/app/AudioPlayerService;)V
+    //   32: putfield 112	com/estrongs/android/pop/app/AudioPlayerService:g	Lcom/estrongs/android/pop/app/m;
     //   35: aload_0
     //   36: getfield 118	com/estrongs/android/pop/app/AudioPlayerService:w	Ljava/lang/Object;
     //   39: astore_2
@@ -88,8 +91,8 @@ public class AudioPlayerService
     //   46: ifne +14 -> 60
     //   49: aload_0
     //   50: aload_0
-    //   51: getfield 112	com/estrongs/android/pop/app/AudioPlayerService:g	Lcom/estrongs/android/pop/app/i;
-    //   54: invokevirtual 141	com/estrongs/android/pop/app/i:a	()Z
+    //   51: getfield 112	com/estrongs/android/pop/app/AudioPlayerService:g	Lcom/estrongs/android/pop/app/m;
+    //   54: invokevirtual 141	com/estrongs/android/pop/app/m:a	()Z
     //   57: putfield 116	com/estrongs/android/pop/app/AudioPlayerService:i	Z
     //   60: aload_2
     //   61: monitorexit
@@ -121,7 +124,7 @@ public class AudioPlayerService
     //   68	70	70	finally
   }
   
-  private void I()
+  private void J()
   {
     label75:
     for (;;)
@@ -154,13 +157,26 @@ public class AudioPlayerService
     }
   }
   
+  private void K()
+  {
+    ai localai = ai.b(FexApplication.a());
+    Object localObject = r.e();
+    if (localObject != null) {
+      localai.c(((j)localObject).a());
+    }
+    localObject = r.g();
+    if (localObject != null) {
+      localai.d(b);
+    }
+  }
+  
   private boolean a(MediaPlayer paramMediaPlayer)
   {
     t();
     if (!r.n()) {
       return false;
     }
-    new k(this).start();
+    new o(this).start();
     return true;
   }
   
@@ -188,7 +204,7 @@ public class AudioPlayerService
       }
       localObject = str;
     } while (!"".equals(str));
-    return com.estrongs.android.util.am.d(r.g().b);
+    return ap.d(r.g().b);
   }
   
   public String C()
@@ -205,27 +221,29 @@ public class AudioPlayerService
       str = r.g().g;
       localObject = str;
     } while (str != null);
-    return FexApplication.a().getString(2131428312);
+    return FexApplication.a().getString(2131231045);
   }
   
   public Bitmap D()
   {
-    Object localObject = null;
-    if (h() == null) {}
-    Bitmap localBitmap;
-    do
-    {
-      do
-      {
-        return (Bitmap)localObject;
-      } while (r.j() == 0);
-      localBitmap = r.g().a(this);
-      localObject = localBitmap;
-    } while (localBitmap != null);
-    return BitmapFactory.decodeResource(getResources(), 2130837518);
+    Bitmap localBitmap2 = E();
+    Bitmap localBitmap1 = localBitmap2;
+    if (localBitmap2 == null) {
+      localBitmap1 = BitmapFactory.decodeResource(getResources(), 2130838165);
+    }
+    return localBitmap1;
   }
   
-  public void E()
+  public Bitmap E()
+  {
+    if (h() == null) {}
+    while (r.j() == 0) {
+      return null;
+    }
+    return r.g().a(this);
+  }
+  
+  public void F()
   {
     if (r.i()) {}
     do
@@ -239,14 +257,14 @@ public class AudioPlayerService
       if (x != null) {
         x.e(r.f());
       }
-      H();
+      I();
       p.start();
-      com.estrongs.android.util.l.a();
+      com.estrongs.android.util.k.a();
     } while (!o.h());
     A();
   }
   
-  public com.estrongs.android.pop.app.a.am F()
+  public com.estrongs.android.pop.app.c.k G()
   {
     return r;
   }
@@ -276,22 +294,17 @@ public class AudioPlayerService
     r.a(paramInt);
   }
   
-  public void a(int paramInt1, int paramInt2)
+  public void a(com.estrongs.android.pop.app.c.k paramk)
   {
-    r.a(paramInt1, paramInt2);
+    r = paramk;
   }
   
-  public void a(com.estrongs.android.pop.app.a.am paramam)
+  public void a(gp paramgp)
   {
-    r = paramam;
+    x = paramgp;
   }
   
-  public void a(gc paramgc)
-  {
-    x = paramgc;
-  }
-  
-  public void a(List<ak> paramList)
+  public void a(List<i> paramList)
   {
     r.b(paramList);
   }
@@ -307,9 +320,9 @@ public class AudioPlayerService
     A();
   }
   
-  public boolean a(al paramal)
+  public boolean a(j paramj)
   {
-    return r.a(paramal);
+    return r.a(paramj);
   }
   
   public int b()
@@ -378,11 +391,14 @@ public class AudioPlayerService
     }
     finally {}
     Object localObject3 = b;
-    if (com.estrongs.android.util.am.bb((String)localObject3)) {
-      localObject1 = com.estrongs.android.util.am.b((String)localObject3, 35864);
+    if (ap.bm((String)localObject3)) {
+      localObject1 = ap.b((String)localObject3, 35864);
     }
     for (;;)
     {
+      if (ap.bl((String)localObject1)) {
+        K();
+      }
       paramInt = r.f();
       try
       {
@@ -480,7 +496,7 @@ public class AudioPlayerService
     return r.o();
   }
   
-  public al h()
+  public j h()
   {
     return r.e();
   }
@@ -527,7 +543,7 @@ public class AudioPlayerService
   {
     t();
     stopSelf();
-    com.estrongs.android.util.l.b();
+    com.estrongs.android.util.k.b();
   }
   
   public IBinder onBind(Intent paramIntent)
@@ -541,125 +557,125 @@ public class AudioPlayerService
   {
     // Byte code:
     //   0: aload_0
-    //   1: invokespecial 400	android/app/Service:onCreate	()V
+    //   1: invokespecial 415	android/app/Service:onCreate	()V
     //   4: aload_0
-    //   5: invokestatic 405	com/estrongs/android/pop/esclasses/e:a	(Landroid/content/Context;)V
+    //   5: invokestatic 420	com/estrongs/android/pop/esclasses/i:a	(Landroid/content/Context;)V
     //   8: aload_0
     //   9: putstatic 46	com/estrongs/android/pop/app/AudioPlayerService:b	Lcom/estrongs/android/pop/app/AudioPlayerService;
     //   12: aload_0
-    //   13: new 407	com/estrongs/android/c/a
+    //   13: new 422	com/estrongs/android/g/a
     //   16: dup
-    //   17: ldc_w 409
-    //   20: ldc_w 308
-    //   23: invokespecial 412	com/estrongs/android/c/a:<init>	(Ljava/lang/String;I)V
-    //   26: putfield 76	com/estrongs/android/pop/app/AudioPlayerService:c	Lcom/estrongs/android/c/a;
-    //   29: new 414	android/content/IntentFilter
+    //   17: ldc_w 424
+    //   20: ldc_w 319
+    //   23: invokespecial 427	com/estrongs/android/g/a:<init>	(Ljava/lang/String;I)V
+    //   26: putfield 76	com/estrongs/android/pop/app/AudioPlayerService:c	Lcom/estrongs/android/g/a;
+    //   29: new 429	android/content/IntentFilter
     //   32: dup
-    //   33: invokespecial 415	android/content/IntentFilter:<init>	()V
+    //   33: invokespecial 430	android/content/IntentFilter:<init>	()V
     //   36: astore_2
     //   37: aload_2
-    //   38: ldc_w 417
-    //   41: invokevirtual 420	android/content/IntentFilter:addAction	(Ljava/lang/String;)V
+    //   38: ldc_w 432
+    //   41: invokevirtual 435	android/content/IntentFilter:addAction	(Ljava/lang/String;)V
     //   44: aload_2
-    //   45: ldc_w 422
-    //   48: invokevirtual 420	android/content/IntentFilter:addAction	(Ljava/lang/String;)V
+    //   45: ldc_w 437
+    //   48: invokevirtual 435	android/content/IntentFilter:addAction	(Ljava/lang/String;)V
     //   51: aload_2
-    //   52: ldc_w 424
-    //   55: invokevirtual 420	android/content/IntentFilter:addAction	(Ljava/lang/String;)V
+    //   52: ldc_w 439
+    //   55: invokevirtual 435	android/content/IntentFilter:addAction	(Ljava/lang/String;)V
     //   58: aload_2
-    //   59: ldc_w 426
-    //   62: invokevirtual 420	android/content/IntentFilter:addAction	(Ljava/lang/String;)V
+    //   59: ldc_w 441
+    //   62: invokevirtual 435	android/content/IntentFilter:addAction	(Ljava/lang/String;)V
     //   65: aload_2
-    //   66: ldc_w 428
-    //   69: invokevirtual 420	android/content/IntentFilter:addAction	(Ljava/lang/String;)V
+    //   66: ldc_w 443
+    //   69: invokevirtual 435	android/content/IntentFilter:addAction	(Ljava/lang/String;)V
     //   72: aload_2
-    //   73: ldc_w 430
-    //   76: invokevirtual 420	android/content/IntentFilter:addAction	(Ljava/lang/String;)V
+    //   73: ldc_w 445
+    //   76: invokevirtual 435	android/content/IntentFilter:addAction	(Ljava/lang/String;)V
     //   79: aload_0
     //   80: aload_0
     //   81: getfield 85	com/estrongs/android/pop/app/AudioPlayerService:s	Landroid/content/BroadcastReceiver;
     //   84: aload_2
-    //   85: invokevirtual 434	com/estrongs/android/pop/app/AudioPlayerService:registerReceiver	(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    //   85: invokevirtual 449	com/estrongs/android/pop/app/AudioPlayerService:registerReceiver	(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
     //   88: pop
     //   89: aload_0
     //   90: aload_0
     //   91: getfield 100	com/estrongs/android/pop/app/AudioPlayerService:t	Landroid/content/BroadcastReceiver;
-    //   94: new 414	android/content/IntentFilter
+    //   94: new 429	android/content/IntentFilter
     //   97: dup
-    //   98: ldc_w 436
-    //   101: invokespecial 438	android/content/IntentFilter:<init>	(Ljava/lang/String;)V
-    //   104: invokevirtual 434	com/estrongs/android/pop/app/AudioPlayerService:registerReceiver	(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    //   98: ldc_w 451
+    //   101: invokespecial 453	android/content/IntentFilter:<init>	(Ljava/lang/String;)V
+    //   104: invokevirtual 449	com/estrongs/android/pop/app/AudioPlayerService:registerReceiver	(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
     //   107: pop
     //   108: aload_0
     //   109: aload_0
     //   110: getfield 110	com/estrongs/android/pop/app/AudioPlayerService:v	Landroid/content/BroadcastReceiver;
-    //   113: new 414	android/content/IntentFilter
+    //   113: new 429	android/content/IntentFilter
     //   116: dup
-    //   117: ldc_w 440
-    //   120: invokespecial 438	android/content/IntentFilter:<init>	(Ljava/lang/String;)V
-    //   123: invokevirtual 434	com/estrongs/android/pop/app/AudioPlayerService:registerReceiver	(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    //   117: ldc_w 455
+    //   120: invokespecial 453	android/content/IntentFilter:<init>	(Ljava/lang/String;)V
+    //   123: invokevirtual 449	com/estrongs/android/pop/app/AudioPlayerService:registerReceiver	(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
     //   126: pop
     //   127: invokestatic 133	com/estrongs/android/pop/ac:a	()I
     //   130: bipush 8
     //   132: if_icmplt +52 -> 184
     //   135: aload_0
-    //   136: ldc_w 442
-    //   139: invokevirtual 446	com/estrongs/android/pop/app/AudioPlayerService:getSystemService	(Ljava/lang/String;)Ljava/lang/Object;
-    //   142: checkcast 448	android/media/AudioManager
+    //   136: ldc_w 457
+    //   139: invokevirtual 461	com/estrongs/android/pop/app/AudioPlayerService:getSystemService	(Ljava/lang/String;)Ljava/lang/Object;
+    //   142: checkcast 463	android/media/AudioManager
     //   145: astore_2
-    //   146: new 450	android/content/ComponentName
+    //   146: new 465	android/content/ComponentName
     //   149: dup
     //   150: aload_0
-    //   151: invokevirtual 453	com/estrongs/android/pop/app/AudioPlayerService:getPackageName	()Ljava/lang/String;
-    //   154: ldc_w 455
-    //   157: invokevirtual 460	java/lang/Class:getName	()Ljava/lang/String;
-    //   160: invokespecial 463	android/content/ComponentName:<init>	(Ljava/lang/String;Ljava/lang/String;)V
+    //   151: invokevirtual 468	com/estrongs/android/pop/app/AudioPlayerService:getPackageName	()Ljava/lang/String;
+    //   154: ldc_w 470
+    //   157: invokevirtual 475	java/lang/Class:getName	()Ljava/lang/String;
+    //   160: invokespecial 478	android/content/ComponentName:<init>	(Ljava/lang/String;Ljava/lang/String;)V
     //   163: astore_3
     //   164: aload_2
     //   165: ifnull +19 -> 184
-    //   168: new 465	com/estrongs/android/util/al
+    //   168: new 480	com/estrongs/android/util/ao
     //   171: dup
     //   172: aload_2
-    //   173: invokespecial 468	com/estrongs/android/util/al:<init>	(Ljava/lang/Object;)V
-    //   176: ldc_w 470
+    //   173: invokespecial 483	com/estrongs/android/util/ao:<init>	(Ljava/lang/Object;)V
+    //   176: ldc_w 485
     //   179: aload_3
-    //   180: invokevirtual 473	com/estrongs/android/util/al:a	(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+    //   180: invokevirtual 488	com/estrongs/android/util/ao:a	(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
     //   183: pop
-    //   184: ldc_w 475
-    //   187: ldc_w 475
-    //   190: invokevirtual 478	java/lang/String:equalsIgnoreCase	(Ljava/lang/String;)Z
+    //   184: getstatic 492	com/estrongs/android/pop/view/a:a	Ljava/lang/String;
+    //   187: ldc_w 494
+    //   190: invokevirtual 497	java/lang/String:equalsIgnoreCase	(Ljava/lang/String;)Z
     //   193: istore_1
     //   194: iload_1
     //   195: ifne +22 -> 217
     //   198: aload_0
     //   199: aload_0
     //   200: getfield 105	com/estrongs/android/pop/app/AudioPlayerService:u	Landroid/content/BroadcastReceiver;
-    //   203: new 414	android/content/IntentFilter
+    //   203: new 429	android/content/IntentFilter
     //   206: dup
-    //   207: ldc_w 480
-    //   210: invokespecial 438	android/content/IntentFilter:<init>	(Ljava/lang/String;)V
-    //   213: invokevirtual 434	com/estrongs/android/pop/app/AudioPlayerService:registerReceiver	(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    //   207: ldc_w 499
+    //   210: invokespecial 453	android/content/IntentFilter:<init>	(Ljava/lang/String;)V
+    //   213: invokevirtual 449	com/estrongs/android/pop/app/AudioPlayerService:registerReceiver	(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
     //   216: pop
     //   217: aload_0
-    //   218: new 172	com/estrongs/android/ui/notification/a
+    //   218: new 200	com/estrongs/android/ui/notification/b
     //   221: dup
     //   222: aload_0
-    //   223: invokespecial 481	com/estrongs/android/ui/notification/a:<init>	(Lcom/estrongs/android/pop/app/AudioPlayerService;)V
-    //   226: putfield 170	com/estrongs/android/pop/app/AudioPlayerService:o	Lcom/estrongs/android/ui/notification/a;
+    //   223: invokespecial 500	com/estrongs/android/ui/notification/b:<init>	(Lcom/estrongs/android/pop/app/AudioPlayerService;)V
+    //   226: putfield 198	com/estrongs/android/pop/app/AudioPlayerService:o	Lcom/estrongs/android/ui/notification/b;
     //   229: aload_0
-    //   230: new 126	com/estrongs/android/pop/app/a/am
+    //   230: new 126	com/estrongs/android/pop/app/c/k
     //   233: dup
-    //   234: invokespecial 482	com/estrongs/android/pop/app/a/am:<init>	()V
-    //   237: putfield 124	com/estrongs/android/pop/app/AudioPlayerService:r	Lcom/estrongs/android/pop/app/a/am;
+    //   234: invokespecial 501	com/estrongs/android/pop/app/c/k:<init>	()V
+    //   237: putfield 124	com/estrongs/android/pop/app/AudioPlayerService:r	Lcom/estrongs/android/pop/app/c/k;
     //   240: return
     //   241: astore_2
     //   242: aload_2
-    //   243: invokevirtual 365	java/lang/Exception:printStackTrace	()V
+    //   243: invokevirtual 380	java/lang/Exception:printStackTrace	()V
     //   246: goto -119 -> 127
     //   249: astore_2
     //   250: aload_0
     //   251: aconst_null
-    //   252: putfield 76	com/estrongs/android/pop/app/AudioPlayerService:c	Lcom/estrongs/android/c/a;
+    //   252: putfield 76	com/estrongs/android/pop/app/AudioPlayerService:c	Lcom/estrongs/android/g/a;
     //   255: goto -38 -> 217
     //   258: astore_2
     //   259: goto -251 -> 8
@@ -696,78 +712,78 @@ public class AudioPlayerService
   {
     // Byte code:
     //   0: aload_0
-    //   1: invokevirtual 148	com/estrongs/android/pop/app/AudioPlayerService:t	()V
+    //   1: invokevirtual 179	com/estrongs/android/pop/app/AudioPlayerService:t	()V
     //   4: aload_0
-    //   5: getfield 120	com/estrongs/android/pop/app/AudioPlayerService:x	Lcom/estrongs/android/pop/app/gc;
+    //   5: getfield 120	com/estrongs/android/pop/app/AudioPlayerService:x	Lcom/estrongs/android/pop/app/gp;
     //   8: ifnull +12 -> 20
     //   11: aload_0
-    //   12: getfield 120	com/estrongs/android/pop/app/AudioPlayerService:x	Lcom/estrongs/android/pop/app/gc;
-    //   15: invokeinterface 486 1 0
+    //   12: getfield 120	com/estrongs/android/pop/app/AudioPlayerService:x	Lcom/estrongs/android/pop/app/gp;
+    //   15: invokeinterface 505 1 0
     //   20: aload_0
-    //   21: getfield 76	com/estrongs/android/pop/app/AudioPlayerService:c	Lcom/estrongs/android/c/a;
+    //   21: getfield 76	com/estrongs/android/pop/app/AudioPlayerService:c	Lcom/estrongs/android/g/a;
     //   24: ifnull +10 -> 34
     //   27: aload_0
-    //   28: getfield 76	com/estrongs/android/pop/app/AudioPlayerService:c	Lcom/estrongs/android/c/a;
-    //   31: invokevirtual 488	com/estrongs/android/c/a:h	()V
+    //   28: getfield 76	com/estrongs/android/pop/app/AudioPlayerService:c	Lcom/estrongs/android/g/a;
+    //   31: invokevirtual 507	com/estrongs/android/g/a:h	()V
     //   34: aload_0
     //   35: aload_0
     //   36: getfield 85	com/estrongs/android/pop/app/AudioPlayerService:s	Landroid/content/BroadcastReceiver;
-    //   39: invokevirtual 492	com/estrongs/android/pop/app/AudioPlayerService:unregisterReceiver	(Landroid/content/BroadcastReceiver;)V
+    //   39: invokevirtual 511	com/estrongs/android/pop/app/AudioPlayerService:unregisterReceiver	(Landroid/content/BroadcastReceiver;)V
     //   42: aload_0
     //   43: aload_0
     //   44: getfield 100	com/estrongs/android/pop/app/AudioPlayerService:t	Landroid/content/BroadcastReceiver;
-    //   47: invokevirtual 492	com/estrongs/android/pop/app/AudioPlayerService:unregisterReceiver	(Landroid/content/BroadcastReceiver;)V
+    //   47: invokevirtual 511	com/estrongs/android/pop/app/AudioPlayerService:unregisterReceiver	(Landroid/content/BroadcastReceiver;)V
     //   50: aload_0
     //   51: aload_0
     //   52: getfield 110	com/estrongs/android/pop/app/AudioPlayerService:v	Landroid/content/BroadcastReceiver;
-    //   55: invokevirtual 492	com/estrongs/android/pop/app/AudioPlayerService:unregisterReceiver	(Landroid/content/BroadcastReceiver;)V
+    //   55: invokevirtual 511	com/estrongs/android/pop/app/AudioPlayerService:unregisterReceiver	(Landroid/content/BroadcastReceiver;)V
     //   58: invokestatic 133	com/estrongs/android/pop/ac:a	()I
     //   61: bipush 8
     //   63: if_icmplt +52 -> 115
     //   66: aload_0
-    //   67: ldc_w 442
-    //   70: invokevirtual 446	com/estrongs/android/pop/app/AudioPlayerService:getSystemService	(Ljava/lang/String;)Ljava/lang/Object;
-    //   73: checkcast 448	android/media/AudioManager
+    //   67: ldc_w 457
+    //   70: invokevirtual 461	com/estrongs/android/pop/app/AudioPlayerService:getSystemService	(Ljava/lang/String;)Ljava/lang/Object;
+    //   73: checkcast 463	android/media/AudioManager
     //   76: astore_2
-    //   77: new 450	android/content/ComponentName
+    //   77: new 465	android/content/ComponentName
     //   80: dup
     //   81: aload_0
-    //   82: invokevirtual 453	com/estrongs/android/pop/app/AudioPlayerService:getPackageName	()Ljava/lang/String;
-    //   85: ldc_w 455
-    //   88: invokevirtual 460	java/lang/Class:getName	()Ljava/lang/String;
-    //   91: invokespecial 463	android/content/ComponentName:<init>	(Ljava/lang/String;Ljava/lang/String;)V
+    //   82: invokevirtual 468	com/estrongs/android/pop/app/AudioPlayerService:getPackageName	()Ljava/lang/String;
+    //   85: ldc_w 470
+    //   88: invokevirtual 475	java/lang/Class:getName	()Ljava/lang/String;
+    //   91: invokespecial 478	android/content/ComponentName:<init>	(Ljava/lang/String;Ljava/lang/String;)V
     //   94: astore_3
     //   95: aload_2
     //   96: ifnull +19 -> 115
-    //   99: new 465	com/estrongs/android/util/al
+    //   99: new 480	com/estrongs/android/util/ao
     //   102: dup
     //   103: aload_2
-    //   104: invokespecial 468	com/estrongs/android/util/al:<init>	(Ljava/lang/Object;)V
-    //   107: ldc_w 494
+    //   104: invokespecial 483	com/estrongs/android/util/ao:<init>	(Ljava/lang/Object;)V
+    //   107: ldc_w 513
     //   110: aload_3
-    //   111: invokevirtual 473	com/estrongs/android/util/al:a	(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+    //   111: invokevirtual 488	com/estrongs/android/util/ao:a	(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
     //   114: pop
-    //   115: ldc_w 475
-    //   118: ldc_w 475
-    //   121: invokevirtual 478	java/lang/String:equalsIgnoreCase	(Ljava/lang/String;)Z
+    //   115: getstatic 492	com/estrongs/android/pop/view/a:a	Ljava/lang/String;
+    //   118: ldc_w 494
+    //   121: invokevirtual 497	java/lang/String:equalsIgnoreCase	(Ljava/lang/String;)Z
     //   124: istore_1
     //   125: iload_1
     //   126: ifne +11 -> 137
     //   129: aload_0
     //   130: aload_0
     //   131: getfield 105	com/estrongs/android/pop/app/AudioPlayerService:u	Landroid/content/BroadcastReceiver;
-    //   134: invokevirtual 492	com/estrongs/android/pop/app/AudioPlayerService:unregisterReceiver	(Landroid/content/BroadcastReceiver;)V
+    //   134: invokevirtual 511	com/estrongs/android/pop/app/AudioPlayerService:unregisterReceiver	(Landroid/content/BroadcastReceiver;)V
     //   137: aconst_null
     //   138: putstatic 46	com/estrongs/android/pop/app/AudioPlayerService:b	Lcom/estrongs/android/pop/app/AudioPlayerService;
-    //   141: invokestatic 498	com/estrongs/android/pop/app/a/ao:k	()V
+    //   141: invokestatic 517	com/estrongs/android/pop/app/c/m:k	()V
     //   144: aconst_null
-    //   145: invokestatic 503	com/estrongs/android/pop/app/PopAudioPlayer:b	([Ljava/lang/String;)V
+    //   145: invokestatic 522	com/estrongs/android/pop/app/PopAudioPlayer:b	([Ljava/lang/String;)V
     //   148: aload_0
-    //   149: invokespecial 505	android/app/Service:onDestroy	()V
+    //   149: invokespecial 524	android/app/Service:onDestroy	()V
     //   152: return
     //   153: astore_2
     //   154: aload_2
-    //   155: invokevirtual 365	java/lang/Exception:printStackTrace	()V
+    //   155: invokevirtual 380	java/lang/Exception:printStackTrace	()V
     //   158: goto -100 -> 58
     //   161: astore_2
     //   162: goto -25 -> 137
@@ -816,7 +832,7 @@ public class AudioPlayerService
         boolean bool;
         if (paramIntent.getBooleanExtra("hasplaylist", false))
         {
-          paramIntent = PopAudioPlayer.z();
+          paramIntent = PopAudioPlayer.E();
           if (PopAudioPlayer.a(paramIntent))
           {
             localObject = new ArrayList();
@@ -845,7 +861,7 @@ public class AudioPlayerService
             }
             if (((List)localObject).size() == 0)
             {
-              ag.a(this, 2131428375, 1);
+              ak.a(this, 2131231107, 1);
               return 0;
             }
             paramIntent = (String[])((List)localObject).toArray(new String[0]);
@@ -854,12 +870,12 @@ public class AudioPlayerService
         for (;;)
         {
           if (r.e() == null) {
-            a(ao.a().b());
+            a(com.estrongs.android.pop.app.c.m.a().b());
           }
           localObject = r.e();
-          if (((al)localObject).f())
+          if (((j)localObject).f())
           {
-            bool = ((al)localObject).c().isEmpty();
+            bool = ((j)localObject).c().isEmpty();
             localObject = new LinkedList();
             paramInt1 = 0;
             while (paramInt1 < paramIntent.length)
@@ -871,10 +887,10 @@ public class AudioPlayerService
             if (bool) {
               d(0);
             }
-            ag.a(this, FexApplication.a().getText(2131427965), 0);
+            ak.a(this, FexApplication.a().getText(2131231046), 0);
             return 0;
           }
-          ag.a(this, FexApplication.a().getText(2131428336), 0);
+          ak.a(this, FexApplication.a().getText(2131231047), 0);
           return 0;
           continue;
           paramIntent = null;
@@ -904,7 +920,7 @@ public class AudioPlayerService
     return 0;
   }
   
-  public ak q()
+  public i q()
   {
     return r.g();
   }
@@ -932,8 +948,8 @@ public class AudioPlayerService
             synchronized (k)
             {
               r.a(i1, true);
-              H();
-              com.estrongs.android.util.l.a();
+              I();
+              com.estrongs.android.util.k.a();
               return true;
             }
             if (a(p)) {}
@@ -983,8 +999,8 @@ public class AudioPlayerService
       if (o.h()) {
         A();
       }
-      I();
-      com.estrongs.android.util.l.b();
+      J();
+      com.estrongs.android.util.k.b();
       return;
     }
     catch (Exception localException)
@@ -1003,9 +1019,9 @@ public class AudioPlayerService
     }
     try
     {
-      I();
+      J();
       p.pause();
-      com.estrongs.android.util.l.b();
+      com.estrongs.android.util.k.b();
       if (x != null) {
         x.d(r.f());
       }
@@ -1078,7 +1094,7 @@ public class AudioPlayerService
     {
       if (m())
       {
-        E();
+        F();
         return;
       }
       int i1 = d();

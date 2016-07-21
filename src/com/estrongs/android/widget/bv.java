@@ -2,9 +2,7 @@ package com.estrongs.android.widget;
 
 public abstract interface bv
 {
-  public abstract void a(int paramInt);
-  
-  public abstract void a(int paramInt, float paramFloat);
+  public abstract void a();
 }
 
 /* Location:

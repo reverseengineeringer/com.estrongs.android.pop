@@ -1,78 +1,32 @@
 package com.estrongs.android.ui.dialog;
 
-import android.app.Activity;
-import android.app.Dialog;
-import android.content.res.Resources;
-import android.text.InputFilter;
 import android.view.View;
-import android.widget.EditText;
-import com.estrongs.android.ui.d.a;
-import com.estrongs.android.ui.theme.al;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.fs.util.j;
+import android.view.View.OnClickListener;
+import com.estrongs.android.pop.ad;
+import com.estrongs.android.util.q;
+import java.util.Iterator;
+import java.util.List;
 
 class dg
+  implements View.OnClickListener
 {
-  Activity a;
-  Dialog b;
-  EditText c;
-  boolean d = true;
-  i e = null;
+  dg(df paramdf, int paramInt) {}
   
-  public dg(Activity paramActivity, Dialog paramDialog)
+  public void onClick(View paramView)
   {
-    a = paramActivity;
-    b = paramDialog;
-    c = new EditText(paramActivity);
-    c.setTextSize(1, 18.0F);
-    c.setBackgroundResource(2130837972);
-    int i = a.a(paramActivity, 6.0F);
-    c.setPadding(i, 0, i, 0);
-    c.setTextColor(al.a(paramActivity).d(2131230738));
-    c.setSingleLine();
-    c.setHint(paramActivity.getResources().getString(2131428468));
-    c.setOnKeyListener(new dh(this));
-    paramActivity = new di(this, 20);
-    c.setFilters(new InputFilter[] { paramActivity });
-  }
-  
-  public void a(i parami)
-  {
-    e = parami;
-  }
-  
-  public boolean a()
-  {
-    String str2 = c.getText().toString().trim().trim();
-    String str1 = str2;
-    if (str2.startsWith(".")) {
-      str1 = str2.substring(1);
-    }
-    if (str1.getBytes().length > 20)
+    if (df.a(b) != null)
     {
-      ag.a(a, a.getString(2131428469), 0);
-      return false;
+      paramView = df.a.iterator();
+      while (paramView.hasNext())
+      {
+        q localq = (q)paramView.next();
+        if (((Integer)a).intValue() == a)
+        {
+          ad.a(b.getContext()).d(((Integer)b).intValue());
+          df.a(b).a(((Integer)b).intValue());
+        }
+      }
     }
-    if (str1.length() < 1)
-    {
-      ag.a(a, a.getString(2131428470), 0);
-      return false;
-    }
-    if ((d) && (!j.c(str1)))
-    {
-      ag.a(a, a.getString(2131428471), 0);
-      return false;
-    }
-    if (e != null) {
-      e.a(str1);
-    }
-    b.dismiss();
-    return true;
-  }
-  
-  public View b()
-  {
-    return c;
   }
 }
 

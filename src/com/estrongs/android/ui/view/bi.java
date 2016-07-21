@@ -1,34 +1,20 @@
 package com.estrongs.android.ui.view;
 
-import android.os.Handler;
-import android.os.Message;
-import com.estrongs.fs.impl.pcs.PcsFileSystem;
+import com.estrongs.fs.util.k;
 
 class bi
-  extends Thread
+  implements k
 {
-  bi(PcsThirdPartOAuth paramPcsThirdPartOAuth) {}
+  bi(bg parambg) {}
   
-  public void run()
+  public void a(byte[] paramArrayOfByte, int paramInt1, int paramInt2)
   {
-    Object localObject2 = PcsFileSystem.b("os_type=" + PcsThirdPartOAuth.b(a));
-    Object localObject1 = localObject2;
-    if (PcsThirdPartOAuth.c(a) != null)
-    {
-      localObject1 = localObject2;
-      if (PcsThirdPartOAuth.c(a).equals("normal")) {
-        localObject1 = PcsFileSystem.b();
-      }
+    if (a.a != null) {
+      a.a.a(paramArrayOfByte, paramInt1, paramInt2);
     }
-    if (localObject1 == null)
-    {
-      localObject1 = PcsThirdPartOAuth.d(a).obtainMessage(4);
-      PcsThirdPartOAuth.d(a).sendMessage((Message)localObject1);
-      return;
+    if (a.b != null) {
+      a.b.a(paramArrayOfByte, paramInt1, paramInt2);
     }
-    localObject2 = PcsThirdPartOAuth.d(a).obtainMessage(2);
-    obj = localObject1;
-    PcsThirdPartOAuth.d(a).sendMessage((Message)localObject2);
   }
 }
 

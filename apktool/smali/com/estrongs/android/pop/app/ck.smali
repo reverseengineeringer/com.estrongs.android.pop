@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/estrongs/android/view/dx;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;
+.field final synthetic a:Lcom/estrongs/android/pop/app/FileChooserActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/FileChooserActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/ck;->a:Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/ck;->a:Lcom/estrongs/android/pop/app/FileChooserActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,24 +22,12 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 2
+.method public a(Lcom/estrongs/fs/h;)V
+    .locals 1
 
-    invoke-static {}, Lcom/estrongs/fs/b/ay;->b()V
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/ck;->a:Lcom/estrongs/android/pop/app/FileChooserActivity;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ck;->a:Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;->a(Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;)Landroid/app/NotificationManager;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/app/NotificationManager;->cancel(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ck;->a:Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/FileSharingNotificationActivity;->finish()V
+    invoke-static {v0, p1}, Lcom/estrongs/android/pop/app/FileChooserActivity;->a(Lcom/estrongs/android/pop/app/FileChooserActivity;Lcom/estrongs/fs/h;)V
 
     return-void
 .end method

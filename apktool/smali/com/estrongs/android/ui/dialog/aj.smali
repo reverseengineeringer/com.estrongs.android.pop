@@ -2,22 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Landroid/content/Context;
+.field final synthetic a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-.field final synthetic b:Lcom/estrongs/android/ui/dialog/ae;
+.field final synthetic b:Lcom/estrongs/android/ui/dialog/ai;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/ae;Landroid/content/Context;)V
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/ai;Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/aj;->b:Lcom/estrongs/android/ui/dialog/ae;
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/aj;->b:Lcom/estrongs/android/ui/dialog/ai;
 
-    iput-object p2, p0, Lcom/estrongs/android/ui/dialog/aj;->a:Landroid/content/Context;
+    iput-object p2, p0, Lcom/estrongs/android/ui/dialog/aj;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,24 +26,18 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
+.method public run()V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/aj;->a:Landroid/content/Context;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/aj;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+    const/4 v1, 0x0
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->f(Z)V
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/aj;->b:Lcom/estrongs/android/ui/dialog/ae;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/aj;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    iget-object v1, v1, Lcom/estrongs/android/ui/dialog/ae;->e:Landroid/widget/CheckBox;
-
-    invoke-virtual {v1}, Landroid/widget/CheckBox;->isChecked()Z
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/ad;->v(Z)V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->B()V
 
     return-void
 .end method

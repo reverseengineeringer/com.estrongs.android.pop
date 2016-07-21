@@ -8,7 +8,7 @@ import android.view.View.BaseSavedState;
 class SlidingPaneLayout$SavedState
   extends View.BaseSavedState
 {
-  public static final Parcelable.Creator<SavedState> CREATOR = new v();
+  public static final Parcelable.Creator<SavedState> CREATOR = new bz();
   boolean a;
   
   private SlidingPaneLayout$SavedState(Parcel paramParcel)

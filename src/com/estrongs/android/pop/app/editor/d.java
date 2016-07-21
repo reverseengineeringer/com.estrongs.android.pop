@@ -1,7 +1,7 @@
 package com.estrongs.android.pop.app.editor;
 
 import com.estrongs.android.pop.ac;
-import com.estrongs.android.util.am;
+import com.estrongs.android.util.ap;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -33,7 +33,7 @@ public class d
         paramFile.printStackTrace();
         return;
       }
-      if (((a.exists()) && (!a.canWrite())) || ((ac.a() >= 21) && (am.bs(paramFile.getAbsolutePath())))) {
+      if (((a.exists()) && (!a.canWrite())) || ((ac.a() >= 21) && (ap.bJ(paramFile.getAbsolutePath())))) {
         paramString = "r";
       } else {
         paramString = "rw";

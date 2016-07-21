@@ -11,12 +11,7 @@ class js
   
   public void onReceive(Context paramContext, Intent paramIntent)
   {
-    if ((a.a()) && (a.c))
-    {
-      PopVideoPlayer.c(a);
-      a.c = false;
-    }
-    a.j = true;
+    a.j = false;
   }
 }
 

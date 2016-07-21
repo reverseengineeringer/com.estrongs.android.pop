@@ -6,10 +6,16 @@ import com.estrongs.a.q;
 import com.estrongs.android.pop.FexApplication;
 import com.estrongs.android.pop.ad;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.util.bc;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.scanner.l;
+import com.estrongs.android.util.bg;
+import com.estrongs.android.util.bk;
 import com.estrongs.fs.FileSystemException;
-import com.estrongs.fs.impl.b.f;
+import com.estrongs.fs.a.b;
+import com.estrongs.fs.h;
+import com.estrongs.fs.impl.b.g;
+import com.estrongs.fs.impl.local.f;
+import com.estrongs.fs.impl.local.i;
+import com.estrongs.fs.impl.media.e;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -22,29 +28,30 @@ public class ab
   extends com.estrongs.a.a
 {
   protected com.estrongs.fs.d a;
-  protected List<com.estrongs.fs.h> b = new LinkedList();
-  public List<com.estrongs.fs.h> c = new LinkedList();
+  protected List<h> b = new LinkedList();
+  public List<h> c = new LinkedList();
   protected boolean d = false;
   public List<String> e = new ArrayList();
   public List<String> f = new ArrayList();
   public List<String> g = new ArrayList();
   public List<String> h = new ArrayList();
-  public int i = 1;
-  public List<String> j;
-  Set<String> k = null;
-  private List<String> l = new ArrayList();
-  private boolean m = false;
+  public List<String> i = new ArrayList();
+  public int j = 1;
+  public boolean k = false;
+  public List<String> l;
+  Set<String> m = null;
   private boolean n = false;
-  private long o = 0L;
-  private boolean p = false;
+  private boolean o = false;
+  private long p = 0L;
   private boolean q = false;
+  private boolean r = false;
   
-  public ab(com.estrongs.fs.d paramd, com.estrongs.fs.h paramh, boolean paramBoolean)
+  public ab(com.estrongs.fs.d paramd, h paramh, boolean paramBoolean)
   {
     this(paramd, paramh, paramBoolean, false);
   }
   
-  public ab(com.estrongs.fs.d paramd, com.estrongs.fs.h paramh, boolean paramBoolean1, boolean paramBoolean2)
+  public ab(com.estrongs.fs.d paramd, h paramh, boolean paramBoolean1, boolean paramBoolean2)
   {
     a = paramd;
     b = new ArrayList();
@@ -53,7 +60,7 @@ public class ab
     task_type = 4;
     processData.j = paramh.getName();
     processData.m = false;
-    boolean bool2 = com.estrongs.android.util.am.bb(paramh.getPath());
+    boolean bool2 = com.estrongs.android.util.ap.bm(paramh.getPath());
     paramd = processData;
     if (!bool2)
     {
@@ -63,14 +70,14 @@ public class ab
       processData.n = false;
       paramd = processData;
       if (bool2) {
-        break label282;
+        break label287;
       }
     }
-    label282:
+    label287:
     for (paramBoolean1 = bool1;; paramBoolean1 = false)
     {
       o = paramBoolean1;
-      recordSummary("source", com.estrongs.android.util.am.D(com.estrongs.android.util.am.bk(paramh.getPath())));
+      recordSummary("source", com.estrongs.android.util.ap.F(com.estrongs.android.util.ap.bB(paramh.getPath())));
       canPause = false;
       if (paramBoolean2) {
         d();
@@ -81,12 +88,12 @@ public class ab
     }
   }
   
-  public ab(com.estrongs.fs.d paramd, List<com.estrongs.fs.h> paramList, boolean paramBoolean)
+  public ab(com.estrongs.fs.d paramd, List<h> paramList, boolean paramBoolean)
   {
     this(paramd, paramList, paramBoolean, false);
   }
   
-  public ab(com.estrongs.fs.d paramd, List<com.estrongs.fs.h> paramList, boolean paramBoolean1, boolean paramBoolean2)
+  public ab(com.estrongs.fs.d paramd, List<h> paramList, boolean paramBoolean1, boolean paramBoolean2)
   {
     a = paramd;
     b.addAll(paramList);
@@ -95,11 +102,11 @@ public class ab
     paramd = new StringBuilder();
     int i2 = paramList.size();
     int i1 = 0;
-    label250:
+    label255:
     boolean bool1;
     if (i1 < i2)
     {
-      paramd.append(((com.estrongs.fs.h)paramList.get(i1)).getName());
+      paramd.append(((h)paramList.get(i1)).getName());
       if (i1 + 1 != i2)
       {
         paramd.append(" , ");
@@ -111,33 +118,33 @@ public class ab
     else
     {
       if (i2 <= 0) {
-        break label376;
+        break label381;
       }
-      paramBoolean1 = com.estrongs.android.util.am.bb(((com.estrongs.fs.h)paramList.get(0)).getPath());
+      paramBoolean1 = com.estrongs.android.util.ap.bm(((h)paramList.get(0)).getPath());
       processData.j = paramd.toString();
       processData.m = false;
       paramd = processData;
       if (paramBoolean1) {
-        break label381;
+        break label386;
       }
       bool1 = true;
-      label281:
+      label286:
       l = bool1;
       processData.k = false;
       processData.n = false;
       paramd = processData;
       if (paramBoolean1) {
-        break label387;
+        break label392;
       }
     }
-    label376:
     label381:
-    label387:
+    label386:
+    label392:
     for (paramBoolean1 = bool2;; paramBoolean1 = false)
     {
       o = paramBoolean1;
       if (i2 > 0) {
-        recordSummary("source", com.estrongs.android.util.am.D(com.estrongs.android.util.am.bk(((com.estrongs.fs.h)paramList.get(0)).getPath())));
+        recordSummary("source", com.estrongs.android.util.ap.F(com.estrongs.android.util.ap.bB(((h)paramList.get(0)).getPath())));
       }
       if (paramBoolean2) {
         d();
@@ -147,10 +154,32 @@ public class ab
       i1 += 1;
       break;
       paramBoolean1 = false;
-      break label250;
+      break label255;
       bool1 = false;
-      break label281;
+      break label286;
     }
+  }
+  
+  private void a(List<h> paramList)
+  {
+    if ((paramList == null) || (paramList.isEmpty()))
+    {
+      l.a().a(true);
+      return;
+    }
+    ArrayList localArrayList = new ArrayList(paramList.size());
+    paramList = paramList.iterator();
+    while (paramList.hasNext())
+    {
+      String str = ((h)paramList.next()).getAbsolutePath();
+      if (com.estrongs.android.util.ap.bl(str)) {
+        localArrayList.add(str);
+      }
+    }
+    if (localArrayList.size() > 0) {
+      l.a().a(localArrayList);
+    }
+    l.a().a(true);
   }
   
   private boolean a(String paramString1, String paramString2)
@@ -161,14 +190,14 @@ public class ab
   private void b(String paramString)
   {
     int i2 = 1;
-    if (k == null) {
-      k = new HashSet();
+    if (m == null) {
+      m = new HashSet();
     }
     int i1;
     String str;
-    if (!k.contains(paramString))
+    if (!m.contains(paramString))
     {
-      Iterator localIterator = k.iterator();
+      Iterator localIterator = m.iterator();
       i1 = 0;
       if (!localIterator.hasNext()) {
         break label137;
@@ -177,8 +206,8 @@ public class ab
       if (!a(str, paramString)) {
         break label119;
       }
-      k.remove(str);
-      k.add(paramString);
+      m.remove(str);
+      m.add(paramString);
       i1 = i2;
     }
     label119:
@@ -186,7 +215,7 @@ public class ab
     for (;;)
     {
       if (i1 == 0) {
-        k.add(paramString);
+        m.add(paramString);
       }
       return;
       if (a(paramString, str)) {
@@ -201,9 +230,9 @@ public class ab
   
   private boolean c(String paramString)
   {
-    if ((n) && (k != null))
+    if ((o) && (m != null))
     {
-      Iterator localIterator = k.iterator();
+      Iterator localIterator = m.iterator();
       while (localIterator.hasNext())
       {
         String str = (String)localIterator.next();
@@ -217,8 +246,8 @@ public class ab
   
   private String d(String paramString)
   {
-    paramString = com.estrongs.android.util.am.bE(paramString);
-    String str = com.estrongs.android.util.am.bD(paramString);
+    paramString = com.estrongs.android.util.ap.bV(paramString);
+    String str = com.estrongs.android.util.ap.bU(paramString);
     if (str == null) {}
     int i1;
     do
@@ -226,32 +255,32 @@ public class ab
       return null;
       i1 = paramString.lastIndexOf("/");
     } while (i1 == -1);
-    return str + "/.estrongs/recycle/" + o + paramString.substring(0, i1) + "/es_recycle_content" + paramString.substring(i1);
+    return str + "/.estrongs/recycle/" + p + paramString.substring(0, i1) + "/es_recycle_content" + paramString.substring(i1);
   }
   
   private void d()
   {
-    o = System.currentTimeMillis();
-    com.estrongs.fs.impl.l.a.a(o);
+    p = System.currentTimeMillis();
+    com.estrongs.fs.impl.q.a.a(p);
   }
   
   private boolean e()
   {
-    Object localObject = new am(b, a);
+    Object localObject = new ao(b, a);
     processData.k = false;
-    ((am)localObject).addProgressListeners(getProgressListeners());
-    ((am)localObject).execute(false);
-    if (((am)localObject).getTaskStatus() != 4)
+    ((ao)localObject).addProgressListeners(getProgressListeners());
+    ((ao)localObject).execute(false);
+    if (((ao)localObject).getTaskStatus() != 4)
     {
-      localObject = ((am)localObject).getTaskResult();
+      localObject = ((ao)localObject).getTaskResult();
       setTaskResult(a, b);
       return false;
     }
-    localObject = ((am)localObject).a();
+    localObject = ((ao)localObject).a();
     int i1 = 0;
     while (i1 < ((List)localObject).size())
     {
-      an localan = (an)((List)localObject).get(i1);
+      ap localap = (ap)((List)localObject).get(i1);
       m localm = processData;
       c += e + f;
       localm = processData;
@@ -264,7 +293,7 @@ public class ab
     return true;
   }
   
-  public List<com.estrongs.fs.h> a()
+  public List<h> a()
   {
     return b;
   }
@@ -273,21 +302,21 @@ public class ab
   {
     if (paramString.endsWith("/"))
     {
-      l.add(paramString);
+      i.add(paramString);
       return;
     }
-    l.add(paramString + "/");
+    i.add(paramString + "/");
   }
   
   public void a(boolean paramBoolean)
   {
-    n = paramBoolean;
+    o = paramBoolean;
   }
   
   public boolean a(File paramFile)
   {
-    if (!n) {}
-    while ((paramFile.isDirectory()) || ((!bc.c(paramFile.getAbsolutePath())) && (!bc.f(paramFile.getAbsolutePath())))) {
+    if (!o) {}
+    while ((paramFile.isDirectory()) || ((!bg.c(paramFile.getAbsolutePath())) && (!bg.f(paramFile.getAbsolutePath())))) {
       return false;
     }
     b(paramFile.getParent());
@@ -296,29 +325,29 @@ public class ab
   
   protected void b()
   {
-    if (bd.f())
+    if (bk.f())
     {
-      com.estrongs.fs.impl.media.d.b(h);
-      if (l.size() > 0) {
-        com.estrongs.fs.impl.media.d.a(l);
+      e.b(h);
+      if (i.size() > 0) {
+        e.a(i);
       }
     }
     do
     {
       return;
       if (e.size() > 0) {
-        com.estrongs.fs.impl.k.b.c().c(e);
+        com.estrongs.fs.impl.p.c.b().c(e);
       }
       if (f.size() > 0) {
-        com.estrongs.fs.impl.i.b.c().c(f);
+        com.estrongs.fs.impl.n.d.b().c(f);
       }
       if (g.size() > 0) {
-        com.estrongs.fs.impl.q.b.c().c(g);
+        com.estrongs.fs.impl.v.c.b().c(g);
       }
-    } while (l.size() <= 0);
-    com.estrongs.fs.impl.k.b.c().c(l);
-    com.estrongs.fs.impl.i.b.c().c(l);
-    com.estrongs.fs.impl.q.b.c().c(l);
+    } while (i.size() <= 0);
+    com.estrongs.fs.impl.p.c.b().c(i);
+    com.estrongs.fs.impl.n.d.b().c(i);
+    com.estrongs.fs.impl.v.c.b().c(i);
   }
   
   public boolean b(File paramFile)
@@ -331,15 +360,15 @@ public class ab
       bool1 = true;
       return bool1;
     }
-    boolean bool1 = com.estrongs.android.util.am.bl(str);
+    boolean bool1 = com.estrongs.android.util.ap.bC(str);
     Object localObject4;
     Object localObject5;
     Object localObject1;
     Object localObject2;
     if (bool1)
     {
-      localObject4 = com.estrongs.android.util.am.bE(str);
-      localObject5 = com.estrongs.android.util.am.bT(str);
+      localObject4 = com.estrongs.android.util.ap.bV(str);
+      localObject5 = com.estrongs.android.util.ap.cm(str);
       localObject1 = localObject5;
       localObject2 = localObject4;
       if (localObject5 == null)
@@ -351,11 +380,11 @@ public class ab
     }
     for (;;)
     {
-      if ((o != 0L) && (bool1) && (!((String)localObject2).startsWith((String)localObject1)))
+      if ((p != 0L) && (bool1) && (!((String)localObject2).startsWith((String)localObject1)))
       {
         localObject1 = new File((String)localObject1 + "/.nomedia");
         if (!((File)localObject1).exists()) {
-          com.estrongs.fs.impl.local.h.g(((File)localObject1).getAbsolutePath());
+          i.g(((File)localObject1).getAbsolutePath());
         }
         localObject5 = new File(d(str));
         localObject4 = ((File)localObject5).getParentFile();
@@ -368,7 +397,7 @@ public class ab
         {
           for (localObject1 = ((File)localObject4).getParentFile(); (localObject1 != null) && (!((File)localObject1).exists()); localObject1 = ((File)localObject1).getParentFile()) {}
           bool1 = bool2;
-          if (!com.estrongs.fs.impl.local.h.g(((File)localObject4).getAbsolutePath())) {
+          if (!i.g(((File)localObject4).getAbsolutePath())) {
             break;
           }
           i1 = 1;
@@ -423,8 +452,8 @@ public class ab
           break label233;
         }
       }
-      if (com.estrongs.android.util.am.bW(str)) {
-        p = true;
+      if (com.estrongs.android.util.ap.cp(str)) {
+        q = true;
       }
       return paramFile.delete();
       localObject1 = null;
@@ -434,7 +463,7 @@ public class ab
   
   public boolean c()
   {
-    return o != 0L;
+    return p != 0L;
   }
   
   public void handleMessage(int paramInt, Object... paramVarArgs)
@@ -457,26 +486,26 @@ public class ab
   
   protected void postTask()
   {
-    if (!q) {
+    if (!r) {
       b();
     }
-    if ((o != 0L) || (p))
+    if ((p != 0L) || (q))
     {
-      com.estrongs.fs.a.b.a().d("recycle://");
-      if (o == 0L) {
+      b.a().d("recycle://");
+      if (p == 0L) {
         break label74;
       }
-      com.estrongs.fs.impl.l.a.b(o);
+      com.estrongs.fs.impl.q.a.b(p);
     }
     for (;;)
     {
       int i1 = getTaskResulta;
       if ((i1 == 0) || (4 == i1)) {
-        FileExplorerActivity.h(true);
+        FileExplorerActivity.g(true);
       }
       return;
       label74:
-      com.estrongs.fs.impl.l.a.a();
+      com.estrongs.fs.impl.q.a.a();
     }
   }
   
@@ -485,7 +514,7 @@ public class ab
     if (ad.a(FexApplication.a()).aW()) {
       d = false;
     }
-    m = false;
+    n = false;
     if (!d)
     {
       processData.l = false;
@@ -510,59 +539,61 @@ public class ab
         if (hasProgressListener()) {
           new ac(this).start();
         }
-        q = com.estrongs.android.util.am.aO(((com.estrongs.fs.h)b.get(0)).getPath());
+        r = com.estrongs.android.util.ap.aY(((h)b.get(0)).getPath());
+        l.a().e();
         bool1 = a.a(b, c);
+        a(c);
       }
       catch (FileSystemException localFileSystemException)
       {
         Object localObject1;
         str1 = localFileSystemException.getMessage();
-        if (!q) {
+        if (!r) {
           continue;
         }
         b();
         if (c.size() <= 0) {
-          break label819;
+          break label882;
         }
-        com.estrongs.fs.a.b.a().c(c, i);
+        b.a().c(c, j);
         bool1 = false;
         continue;
       }
       catch (Exception localException2)
       {
         localException2.printStackTrace();
-        if (!q) {
+        if (!r) {
           continue;
         }
         b();
         if (c.size() <= 0) {
-          break label812;
+          break label875;
         }
-        com.estrongs.fs.a.b.a().c(c, i);
+        b.a().c(c, j);
         localObject2 = null;
         bool1 = false;
         continue;
       }
       finally
       {
-        if (!q) {
+        if (!r) {
           continue;
         }
         b();
         if (c.size() <= 0) {
           continue;
         }
-        com.estrongs.fs.a.b.a().c(c, i);
+        b.a().c(c, j);
       }
       try
       {
-        localObject1 = ((com.estrongs.fs.h)b.get(0)).getPath();
-        if (!com.estrongs.android.util.am.aO((String)localObject1)) {
+        localObject1 = ((h)b.get(0)).getPath();
+        if (!com.estrongs.android.util.ap.aY((String)localObject1)) {
           continue;
         }
-        localObject1 = com.estrongs.fs.a.b.a().h(com.estrongs.fs.a.a.a((String)localObject1));
-        if ((localObject1 != null) && (bd.a(((com.estrongs.fs.h)localObject1).getExtra("item_count")) == b.size()) && (!com.estrongs.android.util.am.aN(((com.estrongs.fs.h)localObject1).getPath()))) {
-          com.estrongs.fs.a.b.a().b((com.estrongs.fs.h)localObject1);
+        localObject1 = b.a().h(com.estrongs.fs.a.a.a((String)localObject1));
+        if ((localObject1 != null) && (bk.a(((h)localObject1).getExtra("item_count")) == b.size()) && (!com.estrongs.android.util.ap.aX(((h)localObject1).getPath()))) {
+          b.a().b((h)localObject1);
         }
       }
       catch (Exception localException1)
@@ -570,94 +601,105 @@ public class ab
         localException1.printStackTrace();
       }
     }
-    if (q) {
+    if (r) {
       b();
     }
     if (c.size() > 0)
     {
-      com.estrongs.fs.a.b.a().c(c, i);
+      b.a().c(c, j);
       localObject1 = null;
     }
     for (;;)
     {
-      Object localObject4;
       if (!bool1)
       {
-        localObject4 = localObject1;
+        Object localObject5 = localObject1;
         if (localObject1 == null)
         {
-          localObject4 = new StringBuilder();
+          localObject5 = new StringBuilder();
           if (b.size() <= 0) {
-            break label805;
+            break label819;
           }
+        }
+        label672:
+        String str1;
+        Object localObject2;
+        label819:
+        for (localObject1 = ((h)b.get(0)).getName();; localObject4 = "")
+        {
+          localObject5 = (String)localObject1 + " " + FexApplication.a().getString(2131231898);
+          if (b.size() >= 2) {
+            localObject5 = FexApplication.a().getString(2131231901);
+          }
+          if ((getTaskResulta == 0) || (getTaskResulta == 4)) {
+            setTaskResult(10, new q((String)localObject5, null));
+          }
+          n = true;
+          return bool1;
+          localObject1 = b.iterator();
+          for (;;)
+          {
+            if (!((Iterator)localObject1).hasNext()) {
+              break label672;
+            }
+            localObject5 = (h)((Iterator)localObject1).next();
+            bool2 = localObject5 instanceof g;
+            if (!bool2) {
+              break;
+            }
+            try
+            {
+              localObject5 = (g)localObject5;
+              String str2 = ((g)localObject5).a();
+              if (str2 != null)
+              {
+                new File(str2).delete();
+                b.a().b(str2, null);
+              }
+              if (((g)localObject5).b())
+              {
+                str2 = ((g)localObject5).c();
+                if (str2 != null)
+                {
+                  new File(str2).delete();
+                  b.a().b(str2, null);
+                }
+                localObject5 = ((g)localObject5).d();
+                if (localObject5 != null)
+                {
+                  new File((String)localObject5).delete();
+                  b.a().b((String)localObject5, null);
+                }
+              }
+            }
+            catch (Exception localException3)
+            {
+              localException3.printStackTrace();
+            }
+          }
+          break;
         }
       }
-      label658:
-      String str1;
-      Object localObject2;
-      label805:
-      for (localObject1 = ((com.estrongs.fs.h)b.get(0)).getName();; str2 = "")
+      Object localObject4 = c.iterator();
+      do
       {
-        localObject4 = (String)localObject1 + " " + FexApplication.a().getString(2131427769);
-        if (b.size() >= 2) {
-          localObject4 = FexApplication.a().getString(2131427766);
+        if (!((Iterator)localObject4).hasNext()) {
+          break;
         }
-        if ((getTaskResulta == 0) || (getTaskResulta == 4)) {
-          setTaskResult(10, new q((String)localObject4, null));
-        }
-        m = true;
-        return bool1;
-        localObject1 = b.iterator();
-        for (;;)
-        {
-          if (!((Iterator)localObject1).hasNext()) {
-            break label658;
-          }
-          localObject4 = (com.estrongs.fs.h)((Iterator)localObject1).next();
-          boolean bool2 = localObject4 instanceof f;
-          if (!bool2) {
-            break;
-          }
-          try
-          {
-            localObject4 = (f)localObject4;
-            String str3 = ((f)localObject4).a();
-            if (str3 != null)
-            {
-              new File(str3).delete();
-              com.estrongs.fs.a.b.a().b(str3, null);
-            }
-            if (((f)localObject4).b())
-            {
-              str3 = ((f)localObject4).c();
-              if (str3 != null)
-              {
-                new File(str3).delete();
-                com.estrongs.fs.a.b.a().b(str3, null);
-              }
-              localObject4 = ((f)localObject4).d();
-              if (localObject4 != null)
-              {
-                new File((String)localObject4).delete();
-                com.estrongs.fs.a.b.a().b((String)localObject4, null);
-              }
-            }
-          }
-          catch (Exception localException3)
-          {
-            localException3.printStackTrace();
-          }
-        }
+      } while (((h)((Iterator)localObject4).next() instanceof f));
+      for (boolean bool2 = false;; bool2 = true)
+      {
+        k = bool2;
         break;
       }
-      label812:
-      String str2 = null;
+      label875:
+      localObject4 = null;
       bool1 = false;
       continue;
-      label819:
+      label882:
       bool1 = false;
       continue;
-      str2 = null;
+      localObject4 = null;
     }
   }
 }

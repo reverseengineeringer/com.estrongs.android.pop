@@ -1,7 +1,7 @@
 package com.estrongs.fs.impl.pcs;
 
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bk;
 import org.json.JSONObject;
 
 public class a
@@ -39,7 +39,7 @@ public class a
   private void a()
   {
     path = (String.format("pcs://%s@pcs/files", new Object[] { e }) + c);
-    if (bd.b(a)) {
+    if (bk.b(a)) {
       path += a;
     }
     if (!path.endsWith(".pcs")) {
@@ -72,8 +72,8 @@ public class a
     if (localObject != null) {
       name = localObject.toString();
     }
-    if (bd.a(name)) {
-      name = am.d(b);
+    if (bk.a(name)) {
+      name = ap.d(b);
     }
     return name;
   }

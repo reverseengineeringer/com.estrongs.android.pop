@@ -1,20 +1,31 @@
 package com.estrongs.android.pop.view;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.content.Intent;
+import com.estrongs.android.ui.pcs.q;
+import com.estrongs.android.view.cr;
+import java.util.Iterator;
+import java.util.List;
 
 class ek
-  implements DialogInterface.OnClickListener
+  implements q
 {
-  ek(FileExplorerActivity paramFileExplorerActivity) {}
+  ek(ej paramej) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void a(boolean paramBoolean, String paramString1, String paramString2)
   {
-    Intent localIntent = new Intent("android.settings.WIFI_SETTINGS");
-    localIntent.setFlags(268435456);
-    a.startActivity(localIntent);
-    paramDialogInterface.dismiss();
+    if (paramBoolean)
+    {
+      paramString2 = a.a.a.w.iterator();
+      while (paramString2.hasNext())
+      {
+        paramString1 = (cr)paramString2.next();
+        if ((paramString1 == ei.a(a.a)) && (ei.a(a.a) != null))
+        {
+          paramString2 = paramString1.V();
+          paramString1.a(ei.b(a.a), paramString2);
+          a.a.a.T();
+        }
+      }
+    }
   }
 }
 

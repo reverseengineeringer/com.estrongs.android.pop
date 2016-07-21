@@ -1,7 +1,7 @@
 package com.estrongs.fs.util.a;
 
 import com.estrongs.fs.h;
-import com.estrongs.fs.impl.b.c;
+import com.estrongs.fs.impl.b.d;
 
 public class b
   extends f
@@ -13,14 +13,14 @@ public class b
   
   public int a(h paramh1, h paramh2)
   {
-    if ((!(paramh1 instanceof c)) || (!(paramh2 instanceof c))) {
+    if ((!(paramh1 instanceof d)) || (!(paramh2 instanceof d))) {
       return super.a(paramh1, paramh2);
     }
     if ((paramh1 == null) || (paramh2 == null) || (paramh1.equals(paramh2))) {
       return 0;
     }
-    int i = ((c)paramh1).d();
-    int j = ((c)paramh2).d();
+    int i = ((d)paramh1).i();
+    int j = ((d)paramh2).i();
     if (i - j != 0) {
       return a(i, j);
     }

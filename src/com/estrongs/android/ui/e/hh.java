@@ -1,59 +1,35 @@
 package com.estrongs.android.ui.e;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.c.a;
-import com.estrongs.android.pop.app.PopVideoPlayer;
-import com.estrongs.android.pop.app.imageviewer.ViewImage21;
+import com.estrongs.android.pop.ad;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bc;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.ui.dialog.ag;
+import com.estrongs.android.ui.dialog.cv;
+import com.estrongs.android.ui.view.ak;
 import com.estrongs.fs.h;
-import java.io.File;
 import java.util.List;
 
 class hh
   implements MenuItem.OnMenuItemClickListener
 {
-  hh(cp paramcp) {}
+  hh(cr paramcr) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    Intent localIntent;
-    if ((cp.b(a).size() == 1) && (bc.h(((h)cp.b(a).get(0)).getAbsolutePath())))
+    paramMenuItem = cr.a(a);
+    if (paramMenuItem.size() == 0)
     {
-      paramMenuItem = ((h)cp.b(a).get(0)).getAbsolutePath();
-      localIntent = new Intent(cp.a(a), PopVideoPlayer.class);
-      if (am.bb(paramMenuItem))
-      {
-        localIntent.setData(Uri.parse(am.b(paramMenuItem, a.a())));
-        localIntent.putExtra("Chromecast", true);
-        localIntent.putExtra("ChromecastUrl", am.a(paramMenuItem, a.a(), true, true));
-        cp.a(a).startActivity(localIntent);
-      }
+      ak.a(cr.b(a).getBaseContext(), 2131231551, 0);
+      return false;
     }
-    for (;;)
+    if (!ad.a(cr.b(a)).aF())
     {
-      cp.a(a).s();
-      return true;
-      localIntent.setData(Uri.fromFile(new File(paramMenuItem)));
-      break;
-      if (bc.c(((h)cp.b(a).get(0)).getAbsolutePath()))
-      {
-        paramMenuItem = ((h)cp.b(a).get(0)).getAbsolutePath();
-        localIntent = new Intent(cp.a(a), ViewImage21.class);
-        localIntent.setData(Uri.parse(paramMenuItem));
-        localIntent.putExtra("Chromecast", true);
-        cp.a(a).startActivity(localIntent);
-      }
-      else
-      {
-        cp.a(cp.a(a), false, bd.a(cp.b(a)), true);
-      }
+      new cv(cr.b(a)).a(2131232348).b(2131231897).c(2131231265, null).b(2131231270, new hi(this, paramMenuItem)).c();
+      return false;
     }
+    new ag(cr.b(a), (h)paramMenuItem.get(0));
+    return false;
   }
 }
 

@@ -1,18 +1,15 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.pop.app.PopAudioPlayer;
-import com.estrongs.android.pop.utils.cb;
-import com.estrongs.fs.h;
-import java.util.List;
+import com.estrongs.android.view.a.b;
 
 class hs
-  implements cb
+  implements b
 {
-  hs(hr paramhr, List paramList) {}
+  hs(cr paramcr) {}
   
-  public void a(List<h> paramList)
+  public boolean a(cp paramcp)
   {
-    hl.a(b.a).b(a);
+    return E;
   }
 }
 

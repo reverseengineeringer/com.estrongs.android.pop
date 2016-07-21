@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.preference.DialogPreference;
 import android.util.AttributeSet;
-import com.estrongs.android.ui.dialog.cg;
+import com.estrongs.android.ui.dialog.ci;
 
 public class ListPreference
   extends DialogPreference
@@ -119,7 +119,7 @@ public class ListPreference
       throw new IllegalStateException("ListPreference requires an entries array and an entryValues array.");
     }
     e = b();
-    paramBundle = new cg(getContext());
+    paramBundle = new ci(getContext());
     paramBundle.setTitle(getDialogTitle());
     paramBundle.setSelectable(true);
     paramBundle.setItems(b, e, new r(this));

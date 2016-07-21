@@ -1,10 +1,20 @@
 package com.estrongs.android.ui.e;
 
-import android.graphics.Rect;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.app.PopAudioPlayer;
 
-public abstract interface jb
+class jb
+  implements MenuItem.OnMenuItemClickListener
 {
-  public abstract Rect t();
+  jb(iq paramiq) {}
+  
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  {
+    iq.a(a).c(iq.a(a).A());
+    iq.a(a).z();
+    return true;
+  }
 }
 
 /* Location:

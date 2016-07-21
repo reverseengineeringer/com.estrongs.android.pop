@@ -2,24 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Lcom/estrongs/fs/i;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
-        "<",
-        "Lcom/estrongs/fs/h;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field final synthetic a:[Lcom/estrongs/android/pop/utils/aj;
+
+.field final synthetic b:[Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>([Lcom/estrongs/android/pop/utils/aj;[Ljava/lang/String;)V
     .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/fs/impl/media/f;->a:[Lcom/estrongs/android/pop/utils/aj;
+
+    iput-object p2, p0, Lcom/estrongs/fs/impl/media/f;->b:[Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,32 +26,44 @@
 
 
 # virtual methods
-.method public a(Lcom/estrongs/fs/h;Lcom/estrongs/fs/h;)I
-    .locals 2
+.method public a(Lcom/estrongs/fs/h;)Z
+    .locals 4
 
-    check-cast p2, Lcom/estrongs/fs/impl/n/a;
+    const/4 v1, 0x0
 
-    iget v0, p2, Lcom/estrongs/fs/impl/n/a;->a:I
+    move v0, v1
 
-    check-cast p1, Lcom/estrongs/fs/impl/n/a;
+    :goto_0
+    iget-object v2, p0, Lcom/estrongs/fs/impl/media/f;->a:[Lcom/estrongs/android/pop/utils/aj;
 
-    iget v1, p1, Lcom/estrongs/fs/impl/n/a;->a:I
+    array-length v2, v2
 
-    sub-int/2addr v0, v1
+    if-ge v0, v2, :cond_1
 
-    return v0
-.end method
+    invoke-interface {p1}, Lcom/estrongs/fs/h;->getPath()Ljava/lang/String;
 
-.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 1
+    move-result-object v2
 
-    check-cast p1, Lcom/estrongs/fs/h;
+    iget-object v3, p0, Lcom/estrongs/fs/impl/media/f;->b:[Ljava/lang/String;
 
-    check-cast p2, Lcom/estrongs/fs/h;
+    aget-object v3, v3, v0
 
-    invoke-virtual {p0, p1, p2}, Lcom/estrongs/fs/impl/media/f;->a(Lcom/estrongs/fs/h;Lcom/estrongs/fs/h;)I
+    invoke-virtual {v2, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result v2
 
-    return v0
+    if-eqz v2, :cond_0
+
+    :goto_1
+    return v1
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x1
+
+    goto :goto_1
 .end method

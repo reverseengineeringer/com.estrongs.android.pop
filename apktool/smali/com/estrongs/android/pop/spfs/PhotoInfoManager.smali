@@ -14,7 +14,7 @@
 .method public static addComment(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->G(Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->I(Ljava/lang/String;)I
 
     move-result v0
 
@@ -59,7 +59,7 @@
 .method public static addNote(Ljava/lang/String;Lcom/gmail/yuyang226/flickr/a/a;)Lcom/gmail/yuyang226/flickr/a/a;
     .locals 2
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->G(Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->I(Ljava/lang/String;)I
 
     move-result v0
 
@@ -104,7 +104,7 @@
 .method public static addPhoto(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->G(Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->I(Ljava/lang/String;)I
 
     move-result v0
 
@@ -127,7 +127,7 @@
 .method public static createAlbum(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/estrongs/android/pop/spfs/Album;
     .locals 1
 
-    invoke-static {p2}, Lcom/estrongs/android/util/am;->G(Ljava/lang/String;)I
+    invoke-static {p2}, Lcom/estrongs/android/util/ap;->I(Ljava/lang/String;)I
 
     move-result v0
 
@@ -154,7 +154,7 @@
 .method public static deleteComment(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->G(Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->I(Ljava/lang/String;)I
 
     move-result v0
 
@@ -195,7 +195,7 @@
 .method public static deleteNote(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->G(Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->I(Ljava/lang/String;)I
 
     move-result v0
 
@@ -236,7 +236,7 @@
 .method public static editComment(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->G(Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->I(Ljava/lang/String;)I
 
     move-result v0
 
@@ -277,7 +277,7 @@
 .method public static editNote(Ljava/lang/String;Lcom/gmail/yuyang226/flickr/a/a;)V
     .locals 2
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->G(Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->I(Ljava/lang/String;)I
 
     move-result v0
 
@@ -329,7 +329,7 @@
         }
     .end annotation
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->G(Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->I(Ljava/lang/String;)I
 
     move-result v0
 
@@ -367,7 +367,7 @@
         }
     .end annotation
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->G(Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->I(Ljava/lang/String;)I
 
     move-result v0
 
@@ -394,7 +394,7 @@
 .method public static getBuddyIcon(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->G(Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->I(Ljava/lang/String;)I
 
     move-result v0
 
@@ -451,7 +451,7 @@
         }
     .end annotation
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->G(Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->I(Ljava/lang/String;)I
 
     move-result v0
 
@@ -496,7 +496,7 @@
 .method public static getPhotoExtension(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->G(Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->I(Ljava/lang/String;)I
 
     move-result v0
 
@@ -541,7 +541,7 @@
 .method public static getPhotoInfo(Ljava/lang/String;)Lcom/estrongs/android/pop/spfs/SPFileInfo;
     .locals 2
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->G(Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->I(Ljava/lang/String;)I
 
     move-result v0
 
@@ -602,7 +602,7 @@
 .method public static removePhoto(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->G(Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->I(Ljava/lang/String;)I
 
     move-result v0
 
@@ -625,7 +625,7 @@
 .method public static setMeta(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->G(Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->I(Ljava/lang/String;)I
 
     move-result v0
 
@@ -666,7 +666,7 @@
 .method public static setPerms(Ljava/lang/String;Lcom/estrongs/android/util/TypedMap;)V
     .locals 2
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->G(Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->I(Ljava/lang/String;)I
 
     move-result v0
 
@@ -707,7 +707,7 @@
 .method public static setTags(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->G(Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->I(Ljava/lang/String;)I
 
     move-result v0
 

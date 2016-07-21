@@ -1,23 +1,33 @@
 package com.estrongs.android.pop.app.a;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.app.aa;
-import com.estrongs.android.pop.app.ae;
+import com.dianxinos.lockscreen.a.b;
+import com.dianxinos.lockscreen.a.c;
+import com.dianxinos.lockscreen.f;
+import com.dianxinos.lockscreen.v;
+import com.estrongs.android.pop.app.e.a;
+import com.estrongs.android.pop.app.e.h;
 
-class d
-  implements MenuItem.OnMenuItemClickListener
+final class d
+  implements f
 {
-  d(a parama) {}
-  
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public v a()
   {
-    a.b(a).q();
-    if (a.a(a) != null) {
-      a.a(a).b();
-    }
-    a.c();
-    return true;
+    return null;
+  }
+  
+  public int b()
+  {
+    return 10845;
+  }
+  
+  public c c()
+  {
+    return new a();
+  }
+  
+  public b d()
+  {
+    return new h();
   }
 }
 

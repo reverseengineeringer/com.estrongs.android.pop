@@ -1,19 +1,19 @@
 .class public Lcom/estrongs/android/pop/app/FileChooserActivity;
-.super Lcom/estrongs/android/pop/esclasses/ESActivity;
+.super Lcom/estrongs/android/pop/esclasses/ESResourceActivity;
 
 
 # instance fields
-.field a:Lcom/estrongs/android/widget/g;
+.field a:Lcom/estrongs/android/widget/f;
 
 .field private b:Z
 
-.field private c:Z
+.field private d:Z
 
-.field private d:Ljava/lang/Runnable;
+.field private e:Ljava/lang/Runnable;
 
-.field private e:Lcom/estrongs/android/pop/ad;
+.field private f:Lcom/estrongs/android/pop/ad;
 
-.field private final f:Lcom/estrongs/android/view/cc;
+.field private final g:Lcom/estrongs/android/view/dx;
 
 
 # direct methods
@@ -22,17 +22,17 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;-><init>()V
 
     iput-boolean v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->b:Z
 
-    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->c:Z
+    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->d:Z
 
-    new-instance v0, Lcom/estrongs/android/pop/app/cg;
+    new-instance v0, Lcom/estrongs/android/pop/app/ck;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/cg;-><init>(Lcom/estrongs/android/pop/app/FileChooserActivity;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/ck;-><init>(Lcom/estrongs/android/pop/app/FileChooserActivity;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->f:Lcom/estrongs/android/view/cc;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->g:Lcom/estrongs/android/view/dx;
 
     return-void
 .end method
@@ -131,71 +131,76 @@
 
     move-result-object v3
 
-    invoke-static {p2}, Lcom/estrongs/android/util/bc;->b(Ljava/lang/String;)I
+    invoke-static {p2}, Lcom/estrongs/android/util/bg;->b(Ljava/lang/String;)I
 
     move-result v5
 
-    invoke-static {p2}, Lcom/estrongs/android/util/bc;->g(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const v0, 0x20026
-
-    if-eq v0, v5, :cond_2
-
-    move v0, v2
-
-    :goto_0
-    if-nez v0, :cond_1
-
-    const v0, 0x3002a
-
-    if-eq v5, v0, :cond_0
-
-    invoke-virtual {p0, p2}, Lcom/estrongs/android/pop/app/FileChooserActivity;->a(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/estrongs/android/util/bg;->g(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
+    sget-boolean v0, Lcom/estrongs/android/pop/z;->av:Z
+
+    if-nez v0, :cond_0
+
+    const v0, 0x20026
+
+    if-eq v0, v5, :cond_3
+
     :cond_0
     move v0, v2
 
+    :goto_0
+    if-nez v0, :cond_2
+
+    const v0, 0x3002a
+
+    if-eq v5, v0, :cond_1
+
+    invoke-virtual {p0, p2}, Lcom/estrongs/android/pop/app/FileChooserActivity;->a(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
     :cond_1
+    move v0, v2
+
+    :cond_2
     :goto_1
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/FileChooserActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    invoke-static {v0, p2, v4}, Lcom/estrongs/android/util/aj;->a(Landroid/content/ContentResolver;Ljava/lang/String;I)Landroid/net/Uri;
+    invoke-static {v0, p2, v4}, Lcom/estrongs/android/util/am;->a(Landroid/content/ContentResolver;Ljava/lang/String;I)Landroid/net/Uri;
 
     move-result-object v0
 
     :goto_2
-    if-nez v0, :cond_4
+    if-nez v0, :cond_5
 
-    const v0, 0x7f0b03ef
+    const v0, 0x7f080643
 
-    invoke-static {p0, v0, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {p0, v0, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     :goto_3
     return v1
 
-    :cond_2
+    :cond_3
     move v0, v1
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     move v0, v1
 
     goto :goto_1
 
-    :cond_4
+    :cond_5
     const-string v1, "android.intent.extra.ringtone.TYPE"
 
     invoke-virtual {p1, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
@@ -210,7 +215,7 @@
 
     goto :goto_3
 
-    :cond_5
+    :cond_6
     move-object v0, v3
 
     goto :goto_2
@@ -237,13 +242,13 @@
 .method private b(Lcom/estrongs/fs/h;)V
     .locals 8
 
-    const v6, 0x10001019
+    const/16 v6, 0x1019
 
     const/4 v2, 0x0
 
     const/4 v7, -0x1
 
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->c:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->d:Z
 
     if-eqz v0, :cond_2
 
@@ -251,34 +256,34 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-interface {p1}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/m;
+    invoke-interface {p1}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/w;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/m;->b()Z
+    invoke-virtual {v0}, Lcom/estrongs/fs/w;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f0b04a0
+    const v0, 0x7f080612
 
     const/4 v1, 0x0
 
-    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     :cond_0
     :goto_0
     return-void
 
     :cond_1
-    invoke-static {p0, p1}, Lcom/estrongs/android/util/ay;->b(Landroid/content/Context;Lcom/estrongs/fs/h;)Landroid/content/Intent;
+    invoke-static {p0, p1}, Lcom/estrongs/android/util/bc;->b(Landroid/content/Context;Lcom/estrongs/fs/h;)Landroid/content/Intent;
 
     move-result-object v0
 
@@ -293,11 +298,11 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->e:Lcom/estrongs/android/pop/ad;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->f:Lcom/estrongs/android/pop/ad;
 
     invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/ad;->K(Ljava/lang/String;)V
 
@@ -311,13 +316,13 @@
 
     invoke-direct {v4}, Landroid/content/Intent;-><init>()V
 
-    invoke-static {v3}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    const v0, 0x7f0b0072
+    const v0, 0x7f0805b6
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/FileChooserActivity;->getString(I)Ljava/lang/String;
 
@@ -327,7 +332,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v2, 0x7f0b021d
+    const v2, 0x7f080505
 
     invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/FileChooserActivity;->getString(I)Ljava/lang/String;
 
@@ -343,7 +348,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0b021e
+    const v2, 0x7f080729
 
     invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/FileChooserActivity;->getString(I)Ljava/lang/String;
 
@@ -357,13 +362,13 @@
 
     move-result-object v1
 
-    invoke-static {p0, v0, v1}, Lcom/estrongs/android/a/u;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0, v1}, Lcom/estrongs/android/d/u;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Ljava/lang/Thread;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/ch;
+    new-instance v1, Lcom/estrongs/android/pop/app/cl;
 
-    invoke-direct {v1, p0, v3, p1, v4}, Lcom/estrongs/android/pop/app/ch;-><init>(Lcom/estrongs/android/pop/app/FileChooserActivity;Ljava/lang/String;Lcom/estrongs/fs/h;Landroid/content/Intent;)V
+    invoke-direct {v1, p0, v3, p1, v4}, Lcom/estrongs/android/pop/app/cl;-><init>(Lcom/estrongs/android/pop/app/FileChooserActivity;Ljava/lang/String;Lcom/estrongs/fs/h;Landroid/content/Intent;)V
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
@@ -372,7 +377,7 @@
     goto :goto_0
 
     :cond_3
-    invoke-static {v3}, Lcom/estrongs/android/util/am;->ba(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/estrongs/android/util/ap;->bl(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -423,7 +428,7 @@
     goto :goto_1
 
     :cond_5
-    invoke-static {v3}, Lcom/estrongs/android/util/bc;->c(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/estrongs/android/util/bg;->c(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -532,7 +537,7 @@
 
     if-eqz v0, :cond_a
 
-    invoke-static {p0}, Lcom/estrongs/android/d/h;->a(Landroid/content/Context;)Lcom/estrongs/android/d/h;
+    invoke-static {p0}, Lcom/estrongs/android/h/h;->a(Landroid/content/Context;)Lcom/estrongs/android/h/h;
 
     move-result-object v0
 
@@ -550,7 +555,7 @@
 
     const-string v5, "data"
 
-    invoke-virtual {v0, v1, v3, v2}, Lcom/estrongs/android/d/h;->a(ILjava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    invoke-virtual {v0, v1, v3, v2}, Lcom/estrongs/android/h/h;->a(ILjava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -564,7 +569,7 @@
     goto/16 :goto_0
 
     :cond_a
-    invoke-static {}, Lcom/estrongs/android/util/i;->a()Lcom/estrongs/android/util/i;
+    invoke-static {}, Lcom/estrongs/android/util/h;->a()Lcom/estrongs/android/util/h;
 
     move-result-object v0
 
@@ -572,7 +577,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1, v3}, Lcom/estrongs/android/util/i;->b(Landroid/content/ContentResolver;Ljava/lang/String;)Landroid/net/Uri;
+    invoke-virtual {v0, v1, v3}, Lcom/estrongs/android/util/h;->b(Landroid/content/ContentResolver;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
@@ -596,19 +601,31 @@
     goto :goto_3
 
     :cond_c
-    invoke-static {v3}, Lcom/estrongs/android/util/bc;->g(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/estrongs/android/util/bg;->g(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-nez v1, :cond_d
+    if-eqz v1, :cond_d
 
-    invoke-static {v3}, Lcom/estrongs/android/util/bc;->h(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/estrongs/fs/impl/media/c;->d(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    invoke-virtual {v4, v0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
+
+    invoke-virtual {p0, v7, v4}, Lcom/estrongs/android/pop/app/FileChooserActivity;->setResult(ILandroid/content/Intent;)V
+
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/FileChooserActivity;->finish()V
+
+    goto/16 :goto_0
+
+    :cond_d
+    invoke-static {v3}, Lcom/estrongs/android/util/bg;->h(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_e
 
-    :cond_d
     invoke-direct {p0, v3}, Lcom/estrongs/android/pop/app/FileChooserActivity;->b(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -639,37 +656,37 @@
     goto/16 :goto_0
 
     :cond_f
-    new-instance v1, Lcom/estrongs/android/ui/dialog/ct;
+    new-instance v1, Lcom/estrongs/android/ui/dialog/cv;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/dialog/ct;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
 
-    const v5, 0x7f0b0273
+    const v5, 0x7f080503
 
-    invoke-virtual {v1, v5}, Lcom/estrongs/android/ui/dialog/ct;->a(I)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v1, v5}, Lcom/estrongs/android/ui/dialog/cv;->a(I)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v1
 
-    const v5, 0x7f07000b
+    const v5, 0x7f0c0009
 
-    new-instance v6, Lcom/estrongs/android/pop/app/by;
+    new-instance v6, Lcom/estrongs/android/pop/app/cc;
 
-    invoke-direct {v6, p0, v4, v3, v0}, Lcom/estrongs/android/pop/app/by;-><init>(Lcom/estrongs/android/pop/app/FileChooserActivity;Landroid/content/Intent;Ljava/lang/String;Landroid/net/Uri;)V
+    invoke-direct {v6, p0, v4, v3, v0}, Lcom/estrongs/android/pop/app/cc;-><init>(Lcom/estrongs/android/pop/app/FileChooserActivity;Landroid/content/Intent;Ljava/lang/String;Landroid/net/Uri;)V
 
-    invoke-virtual {v1, v5, v7, v6}, Lcom/estrongs/android/ui/dialog/ct;->a(IILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    const v1, 0x7f0b000c
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->a(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v1, v5, v7, v6}, Lcom/estrongs/android/ui/dialog/cv;->a(IILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ct;->b()Lcom/estrongs/android/ui/dialog/cg;
+    const v1, 0x7f080221
+
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->a(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->show()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cv;->b()Lcom/estrongs/android/ui/dialog/ci;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ci;->show()V
 
     goto/16 :goto_0
 .end method
@@ -685,7 +702,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
     return-void
 .end method
@@ -751,43 +768,43 @@
 .method public finish()V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/g;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/f;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/g;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/f;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/g;->l()Lcom/estrongs/android/ui/dialog/cg;
+    invoke-virtual {v0}, Lcom/estrongs/android/widget/f;->l()Lcom/estrongs/android/ui/dialog/ci;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->isShowing()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ci;->isShowing()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/g;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/f;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/g;->k()V
+    invoke-virtual {v0}, Lcom/estrongs/android/widget/f;->k()V
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->d:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->e:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->d:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->e:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->d:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->e:Ljava/lang/Runnable;
 
     :cond_1
     invoke-static {}, Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog;->a()V
 
-    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;->finish()V
+    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;->finish()V
 
     return-void
 .end method
@@ -795,7 +812,7 @@
 .method protected onActivityResult(IILandroid/content/Intent;)V
     .locals 1
 
-    const v0, 0x10001019
+    const/16 v0, 0x1019
 
     if-ne p1, v0, :cond_0
 
@@ -808,7 +825,7 @@
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/FileChooserActivity;->finish()V
 
     :cond_0
-    invoke-super {p0, p1, p2, p3}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;->onActivityResult(IILandroid/content/Intent;)V
 
     return-void
 .end method
@@ -816,19 +833,17 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 10
 
-    const v9, 0x7f0b002a
+    const/high16 v9, 0x7f080000
 
     const/4 v4, 0x0
 
     const/4 v8, 0x0
 
-    const v7, 0x7f0b000c
+    const v7, 0x7f080221
 
     const/4 v6, 0x1
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onCreate(Landroid/os/Bundle;)V
-
-    invoke-virtual {p0, v6}, Lcom/estrongs/android/pop/app/FileChooserActivity;->requestWindowFeature(I)Z
+    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;->onCreate(Landroid/os/Bundle;)V
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/FileChooserActivity;->getIntent()Landroid/content/Intent;
 
@@ -838,7 +853,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
@@ -852,9 +867,9 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0b02fd
+    const v0, 0x7f0804a1
 
-    invoke-static {p0, v0, v4}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {p0, v0, v4}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/FileChooserActivity;->finish()V
 
@@ -866,11 +881,11 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->e:Lcom/estrongs/android/pop/ad;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->f:Lcom/estrongs/android/pop/ad;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->e:Lcom/estrongs/android/pop/ad;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->f:Lcom/estrongs/android/pop/ad;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->p()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->q()Z
 
     move-result v0
 
@@ -882,22 +897,22 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    invoke-static {v2}, Lcom/estrongs/android/util/am;->ba(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/estrongs/android/util/ap;->bl(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_8
 
     :cond_1
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->e:Lcom/estrongs/android/pop/ad;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->f:Lcom/estrongs/android/pop/ad;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->av()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->aw()Ljava/lang/String;
 
     move-result-object v2
 
@@ -946,7 +961,7 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->c:Z
+    iput-boolean v1, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->d:Z
 
     invoke-direct {p0}, Lcom/estrongs/android/pop/app/FileChooserActivity;->a()Z
 
@@ -958,29 +973,29 @@
 
     if-nez v1, :cond_4
 
-    iget-boolean v1, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->c:Z
+    iget-boolean v1, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->d:Z
 
     if-eqz v1, :cond_b
 
     :cond_4
     const-string v1, "65536"
 
-    invoke-static {v1}, Lcom/estrongs/android/d/f;->b(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/estrongs/android/h/f;->b(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_5
 
-    new-instance v1, Lcom/estrongs/android/d/d;
+    new-instance v1, Lcom/estrongs/android/h/d;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/d/d;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/h/d;-><init>(Landroid/content/Context;)V
 
-    invoke-static {v1}, Lcom/estrongs/android/d/f;->a(Lcom/estrongs/android/d/j;)V
+    invoke-static {v1}, Lcom/estrongs/android/h/f;->a(Lcom/estrongs/android/h/i;)V
 
     :cond_5
-    new-instance v3, Lcom/estrongs/android/pop/app/bx;
+    new-instance v3, Lcom/estrongs/android/pop/app/cb;
 
-    invoke-direct {v3, p0, v0}, Lcom/estrongs/android/pop/app/bx;-><init>(Lcom/estrongs/android/pop/app/FileChooserActivity;Z)V
+    invoke-direct {v3, p0, v0}, Lcom/estrongs/android/pop/app/cb;-><init>(Lcom/estrongs/android/pop/app/FileChooserActivity;Z)V
 
     instance-of v5, p0, Lcom/estrongs/android/pop/app/ESRingtoneChooserActivity;
 
@@ -991,31 +1006,31 @@
     move v5, v6
 
     :cond_6
-    new-instance v0, Lcom/estrongs/android/widget/g;
+    new-instance v0, Lcom/estrongs/android/widget/f;
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v5}, Lcom/estrongs/android/widget/g;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/i;ZZ)V
+    invoke-direct/range {v0 .. v5}, Lcom/estrongs/android/widget/f;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/i;ZZ)V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/g;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/f;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/g;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/f;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->f:Lcom/estrongs/android/view/cc;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->g:Lcom/estrongs/android/view/dx;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/g;->a(Lcom/estrongs/android/view/cc;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/f;->a(Lcom/estrongs/android/view/dx;)V
 
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->c:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->d:Z
 
     if-nez v0, :cond_9
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/g;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/f;
 
     invoke-virtual {p0, v7}, Lcom/estrongs/android/pop/app/FileChooserActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1, v8}, Lcom/estrongs/android/widget/g;->a(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v0, v1, v8}, Lcom/estrongs/android/widget/f;->a(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     :goto_2
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/FileChooserActivity;->getIntent()Landroid/content/Intent;
@@ -1030,24 +1045,24 @@
 
     if-nez v0, :cond_7
 
-    const v0, 0x7f0b0209
+    const v0, 0x7f080723
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/FileChooserActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     :cond_7
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/g;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/f;
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/widget/g;->a(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/widget/f;->a(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/g;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/f;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/cd;
+    new-instance v1, Lcom/estrongs/android/pop/app/ch;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/cd;-><init>(Lcom/estrongs/android/pop/app/FileChooserActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ch;-><init>(Lcom/estrongs/android/pop/app/FileChooserActivity;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/g;->a(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/f;->a(Landroid/content/DialogInterface$OnDismissListener;)V
 
     goto/16 :goto_0
 
@@ -1073,13 +1088,13 @@
     goto/16 :goto_1
 
     :cond_9
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/g;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/f;
 
     invoke-virtual {p0, v7}, Lcom/estrongs/android/pop/app/FileChooserActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1, v8}, Lcom/estrongs/android/widget/g;->c(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v0, v1, v8}, Lcom/estrongs/android/widget/f;->c(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/FileChooserActivity;->getIntent()Landroid/content/Intent;
 
@@ -1098,22 +1113,22 @@
     move-result-object v0
 
     :cond_a
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/g;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/f;
 
-    new-instance v2, Lcom/estrongs/android/pop/app/bz;
+    new-instance v2, Lcom/estrongs/android/pop/app/cd;
 
-    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/bz;-><init>(Lcom/estrongs/android/pop/app/FileChooserActivity;)V
+    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/cd;-><init>(Lcom/estrongs/android/pop/app/FileChooserActivity;)V
 
-    invoke-virtual {v1, v0, v2}, Lcom/estrongs/android/widget/g;->b(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v1, v0, v2}, Lcom/estrongs/android/widget/f;->b(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     goto :goto_2
 
     :cond_b
-    new-instance v3, Lcom/estrongs/android/pop/app/ca;
+    new-instance v3, Lcom/estrongs/android/pop/app/ce;
 
-    invoke-direct {v3, p0, v0}, Lcom/estrongs/android/pop/app/ca;-><init>(Lcom/estrongs/android/pop/app/FileChooserActivity;Z)V
+    invoke-direct {v3, p0, v0}, Lcom/estrongs/android/pop/app/ce;-><init>(Lcom/estrongs/android/pop/app/FileChooserActivity;Z)V
 
-    new-instance v0, Lcom/estrongs/android/widget/g;
+    new-instance v0, Lcom/estrongs/android/widget/f;
 
     move-object v1, p0
 
@@ -1121,9 +1136,9 @@
 
     move v5, v6
 
-    invoke-direct/range {v0 .. v5}, Lcom/estrongs/android/widget/g;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/i;ZZ)V
+    invoke-direct/range {v0 .. v5}, Lcom/estrongs/android/widget/f;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/i;ZZ)V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/g;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/f;
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/FileChooserActivity;->getIntent()Landroid/content/Intent;
 
@@ -1149,21 +1164,21 @@
     move-result-object v0
 
     :cond_d
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/g;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/f;
 
-    new-instance v2, Lcom/estrongs/android/pop/app/cb;
+    new-instance v2, Lcom/estrongs/android/pop/app/cf;
 
-    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/cb;-><init>(Lcom/estrongs/android/pop/app/FileChooserActivity;)V
+    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/cf;-><init>(Lcom/estrongs/android/pop/app/FileChooserActivity;)V
 
-    invoke-virtual {v1, v0, v2}, Lcom/estrongs/android/widget/g;->b(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v1, v0, v2}, Lcom/estrongs/android/widget/f;->b(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/g;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/f;
 
     invoke-virtual {p0, v7}, Lcom/estrongs/android/pop/app/FileChooserActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1, v8}, Lcom/estrongs/android/widget/g;->c(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {v0, v1, v8}, Lcom/estrongs/android/widget/f;->c(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     goto/16 :goto_2
 .end method
@@ -1171,23 +1186,23 @@
 .method protected onResume()V
     .locals 2
 
-    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onResume()V
+    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESResourceActivity;->onResume()V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/g;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/f;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/g;->l()Lcom/estrongs/android/ui/dialog/cg;
+    invoke-virtual {v0}, Lcom/estrongs/android/widget/f;->l()Lcom/estrongs/android/ui/dialog/ci;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->isShowing()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ci;->isShowing()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/g;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/f;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/g;->b()V
+    invoke-virtual {v0}, Lcom/estrongs/android/widget/f;->b()V
 
     :goto_0
     invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
@@ -1200,11 +1215,11 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lcom/estrongs/android/pop/app/ce;
+    new-instance v0, Lcom/estrongs/android/pop/app/ci;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/ce;-><init>(Lcom/estrongs/android/pop/app/FileChooserActivity;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/ci;-><init>(Lcom/estrongs/android/pop/app/FileChooserActivity;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->d:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->e:Ljava/lang/Runnable;
 
     sget-object v0, Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog$DialogType;->START:Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog$DialogType;
 
@@ -1212,9 +1227,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/estrongs/android/pop/app/cf;
+    new-instance v1, Lcom/estrongs/android/pop/app/cj;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/cf;-><init>(Lcom/estrongs/android/pop/app/FileChooserActivity;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/cj;-><init>(Lcom/estrongs/android/pop/app/FileChooserActivity;)V
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog;->a(Landroid/content/DialogInterface$OnDismissListener;)V
 
@@ -1224,9 +1239,9 @@
     return-void
 
     :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/g;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/FileChooserActivity;->a:Lcom/estrongs/android/widget/f;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/g;->j()V
+    invoke-virtual {v0}, Lcom/estrongs/android/widget/f;->j()V
 
     goto :goto_0
 .end method

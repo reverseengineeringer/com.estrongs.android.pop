@@ -1,8 +1,25 @@
 package com.estrongs.android.widget;
 
-public abstract interface bo
+import android.view.View;
+import android.view.View.OnClickListener;
+
+class bo
+  implements View.OnClickListener
 {
-  public abstract void a();
+  private bo(SlidingDrawer paramSlidingDrawer) {}
+  
+  public void onClick(View paramView)
+  {
+    if (SlidingDrawer.a(a)) {
+      return;
+    }
+    if (SlidingDrawer.b(a))
+    {
+      a.b();
+      return;
+    }
+    a.a();
+  }
 }
 
 /* Location:

@@ -1,82 +1,55 @@
 .class Lcom/estrongs/android/ui/navigation/w;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/estrongs/android/ui/navigation/r;
+.super Lcom/estrongs/android/ui/e/km;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/a/a;
-
-.field final synthetic b:Lcom/estrongs/android/ui/navigation/t;
+.field final synthetic h:Lcom/estrongs/android/ui/navigation/r;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/navigation/t;Lcom/estrongs/android/ui/a/a;)V
+.method constructor <init>(Lcom/estrongs/android/ui/navigation/r;Landroid/content/Context;Z)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/navigation/w;->b:Lcom/estrongs/android/ui/navigation/t;
+    iput-object p1, p0, Lcom/estrongs/android/ui/navigation/w;->h:Lcom/estrongs/android/ui/navigation/r;
 
-    iput-object p2, p0, Lcom/estrongs/android/ui/navigation/w;->a:Lcom/estrongs/android/ui/a/a;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p3}, Lcom/estrongs/android/ui/e/km;-><init>(Landroid/content/Context;Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/view/View;)V
-    .locals 3
+.method protected b()Z
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/navigation/w;->a:Lcom/estrongs/android/ui/a/a;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/a/a;->b()Ljava/lang/String;
+    return v0
+.end method
 
-    move-result-object v0
+.method protected c()V
+    .locals 1
 
-    const-string v1, "#home#"
+    iget-object v0, p0, Lcom/estrongs/android/ui/navigation/w;->h:Lcom/estrongs/android/ui/navigation/r;
 
-    iget-object v2, p0, Lcom/estrongs/android/ui/navigation/w;->a:Lcom/estrongs/android/ui/a/a;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/navigation/r;->a()Z
 
-    invoke-virtual {v2}, Lcom/estrongs/android/ui/a/a;->b()Ljava/lang/String;
+    move-result v0
 
-    move-result-object v2
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-object v0, p0, Lcom/estrongs/android/ui/navigation/w;->h:Lcom/estrongs/android/ui/navigation/r;
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/navigation/w;->b:Lcom/estrongs/android/ui/navigation/t;
-
-    iget-object v0, v0, Lcom/estrongs/android/ui/navigation/t;->c:Lcom/estrongs/android/ui/navigation/s;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/navigation/s;->a(Lcom/estrongs/android/ui/navigation/s;)Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
-
-    move-result-object v0
-
-    const-string v1, "Market"
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/ad;->j(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/navigation/r;->c()V
 
     :cond_0
-    iget-object v1, p0, Lcom/estrongs/android/ui/navigation/w;->b:Lcom/estrongs/android/ui/navigation/t;
+    return-void
+.end method
 
-    iget-object v1, v1, Lcom/estrongs/android/ui/navigation/t;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+.method protected d()V
+    .locals 0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->C(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->b(Ljava/lang/String;)Lcom/estrongs/android/view/aw;
+    invoke-super {p0}, Lcom/estrongs/android/ui/e/km;->d()V
 
     return-void
 .end method

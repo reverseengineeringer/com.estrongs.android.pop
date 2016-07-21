@@ -18,7 +18,7 @@
 .method public abstract getExtra(Ljava/lang/String;)Ljava/lang/Object;
 .end method
 
-.method public abstract getFileType()Lcom/estrongs/fs/m;
+.method public abstract getFileType()Lcom/estrongs/fs/w;
 .end method
 
 .method public abstract getName()Ljava/lang/String;
@@ -48,7 +48,7 @@
 .method public abstract setESFileType(I)V
 .end method
 
-.method public abstract setFileType(Lcom/estrongs/fs/m;)V
+.method public abstract setFileType(Lcom/estrongs/fs/w;)V
 .end method
 
 .method public abstract setName(Ljava/lang/String;)V

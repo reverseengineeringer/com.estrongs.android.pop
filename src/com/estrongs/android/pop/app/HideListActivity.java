@@ -2,90 +2,72 @@ package com.estrongs.android.pop.app;
 
 import android.os.Bundle;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.pop.esclasses.g;
-import com.estrongs.android.pop.utils.aa;
-import com.estrongs.android.pop.utils.af;
+import com.estrongs.android.pop.utils.ad;
+import com.estrongs.android.pop.utils.aj;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.e.jk;
-import com.estrongs.android.ui.theme.al;
-import com.estrongs.android.ui.view.by;
+import com.estrongs.android.ui.base.HomeAsBackActivity;
+import com.estrongs.android.util.bk;
+import com.estrongs.android.view.a.a;
+import java.util.List;
 
 public class HideListActivity
-  extends ESActivity
+  extends HomeAsBackActivity
 {
-  public View.OnClickListener a = new ct(this);
-  public View.OnClickListener b = new cu(this);
-  private FrameLayout c;
-  private af[] d = null;
-  private ListView e = null;
-  private af f = null;
-  private boolean g = false;
-  private cx h;
+  public View.OnClickListener a = new cw(this);
+  public View.OnClickListener b = new cx(this);
+  private aj[] c = null;
+  private ListView d = null;
+  private aj e = null;
+  private boolean f = false;
+  private cz g;
   
-  private void a()
+  private void d()
   {
-    c.removeAllViews();
-    c.addView(g.a(this).inflate(2130903136, null));
-    ((TextView)findViewById(2131361825)).setText(2131427416);
-    ((TextView)findViewById(2131361997)).setText(2131427416);
-    findViewById(2131362345).setVisibility(8);
-    ((FrameLayout)findViewById(2131362208)).setBackgroundDrawable(al.a(this).h());
-    e = ((ListView)findViewById(2131362074));
-    Object localObject = (TextView)findViewById(2131362041);
-    ((TextView)localObject).setText(2131428157);
-    e.setEmptyView((View)localObject);
-    d = aa.f();
-    if ((d == null) || (d.length == 0)) {}
-    for (;;)
-    {
-      localObject = new by(this, (RelativeLayout)findViewById(2131362207), 1);
-      jk localjk = new jk(this, true);
-      localjk.a(2131428357, 2130838224, new cv(this));
-      ((by)localObject).a("menu", localjk);
-      ((by)localObject).a("menu", Boolean.valueOf(false));
-      b();
+    findViewById(2131624953).setVisibility(8);
+    d = ((ListView)findViewById(2131624232));
+    TextView localTextView = (TextView)findViewById(2131624798);
+    localTextView.setText(2131231559);
+    d.setEmptyView(localTextView);
+    c = ad.f();
+    if ((c == null) || (c.length == 0)) {
       return;
-      h = new cx(this, this, 2130903155, d);
-      e.setAdapter(h);
     }
+    g = new cz(this, this, 2130903262, c);
+    d.setAdapter(g);
   }
   
-  private void b()
+  protected void a(List<a> paramList)
   {
-    LinearLayout localLinearLayout = (LinearLayout)((ImageView)findViewById(2131361917)).getParent();
-    localLinearLayout.setFocusable(true);
-    localLinearLayout.setOnClickListener(new cw(this));
+    paramList.add(new a(2130838591, 2131231560).a(new cy(this)));
   }
   
   public void finish()
   {
     super.finish();
-    if (g)
+    if (bk.f()) {}
+    FileExplorerActivity localFileExplorerActivity;
+    do
     {
-      FileExplorerActivity localFileExplorerActivity = FileExplorerActivity.J();
-      if (localFileExplorerActivity != null) {
-        localFileExplorerActivity.h(null);
-      }
-    }
+      do
+      {
+        return;
+      } while (!f);
+      localFileExplorerActivity = FileExplorerActivity.X();
+    } while (localFileExplorerActivity == null);
+    localFileExplorerActivity.m(null);
   }
   
   protected void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    setContentView(2130903187);
-    c = ((FrameLayout)findViewById(2131362210));
-    findViewById(2131362212).setVisibility(8);
-    a();
+    setTitle(2131231654);
+    setTitle(2131231654);
+    setContentView(2130903244);
+    d();
   }
   
   public boolean onKeyDown(int paramInt, KeyEvent paramKeyEvent)

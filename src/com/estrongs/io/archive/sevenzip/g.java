@@ -3,7 +3,7 @@ package com.estrongs.io.archive.sevenzip;
 import android.app.Activity;
 import com.estrongs.a.a;
 import com.estrongs.a.a.o;
-import com.estrongs.fs.impl.local.l;
+import com.estrongs.fs.impl.local.m;
 import java.io.File;
 
 final class g
@@ -16,7 +16,7 @@ final class g
     if (paramBoolean) {
       try
       {
-        if (!l.a(a.getPath(), "777", false))
+        if (!m.a(a.getPath(), "777", false))
         {
           b[0] = false;
           f.a(c, d);

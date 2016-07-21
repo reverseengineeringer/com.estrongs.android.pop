@@ -1,32 +1,26 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.ui.preference.q;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.dialog.hb;
+import com.estrongs.android.ui.dialog.hc;
+import com.estrongs.android.view.cr;
 
 class x
-  implements q
+  implements hb
 {
   x(w paramw) {}
   
-  public void a(String paramString, Object paramObject)
+  public void a(int paramInt)
   {
-    if ("show_select_button".equals(paramString))
-    {
-      w.a(a, Boolean.valueOf(paramObject.toString()).booleanValue());
-      a.k();
-      a.d(w.a(a));
+    if (paramInt == 0) {
+      m.a(a.a).O().j("gallery://local/buckets/");
     }
-    do
+    for (;;)
     {
+      m.i(a.a).dismiss();
       return;
-      if ("show_windows_button".equals(paramString))
-      {
-        w.b(a, Boolean.valueOf(paramObject.toString()).booleanValue());
-        a.k();
-        a.d(w.a(a));
-        return;
-      }
-    } while (!"toolbar_setting_show_name".equals(paramString));
-    a.d(w.a(a));
+      m.a(a.a).O().j("pic://");
+    }
   }
 }
 

@@ -343,7 +343,7 @@
 
     move-result-object v10
 
-    invoke-static {v5, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v5, v10}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     cmp-long v5, p1, v6
@@ -434,7 +434,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
     iget-boolean v2, p0, Lcom/estrongs/fs/impl/usb/fs/ntfs/e;->b:Z
@@ -481,7 +481,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_4
     invoke-virtual {p0}, Lcom/estrongs/fs/impl/usb/fs/ntfs/e;->a()Z

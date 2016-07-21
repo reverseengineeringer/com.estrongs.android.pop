@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_info_remaining_charging_time">"Tiempo de carga restante: "</string>
+    <string name="battery_info_remaining_discharging_time">"Tiempo restante: "</string>
+    <string name="charging_screen_ad_delete">Eliminar</string>
+    <string name="charging_screen_ad_enter">Abrir</string>
+    <string name="charging_screen_charging_complete">Carga completa</string>
+    <string name="charging_screen_slide_to_enter">Deslizar para desbloquear</string>
+    <string name="common_time_hour">h</string>
+    <string name="common_time_minute">m</string>
+    <string name="duscenerysdk_ad_no_browser_play">No está instalado Google Play ni ningún navegador</string>
+    <string name="lock_screen_setting">Ajustes</string>
+    <string name="lock_screen_switch">Carga Inteligente</string>
+    <string name="lockscreen_charge_boost_time">Carga total acelerada en %1$d minutos</string>
+    <string name="scenery_card_antivirus_button">ANÁLISIS DE SEGURIDAD</string>
+    <string name="scenery_card_antivirus_content">Tu teléfono tiene &lt;font color=#3080F0>%1$s&lt;/font> riesgo(s) de seguridad</string>
+    <string name="scenery_card_antivirus_title">Riesgo de seguridad</string>
+    <string name="scenery_card_battery_button">AHORRA ENERGÍA YA</string>
+    <string name="scenery_card_battery_content">&lt;font color=#3080F0>%1$s&lt;/font> consumo energía</string>
+    <string name="scenery_card_battery_title">Energía</string>
+    <string name="scenery_card_booster_button">ACELERAR AHORA</string>
+    <string name="scenery_card_booster_content">&lt;font color=#3080F0>%1$s&lt;/font> las aplicaciones pesadas hacen lento a tu teléfono</string>
+    <string name="scenery_card_booster_title">Móvil lento</string>
+    <string name="scenery_card_cleaner_button">SOLUCIONAR AHORA</string>
+    <string name="scenery_card_cleaner_content">Se encontró basura &lt;font color=#3080F0>%1$s&lt;/font> en tu teléfono</string>
+    <string name="scenery_card_cleaner_title">Limpieza rápida</string>
+    <string name="scenery_card_es_button">LIMPIAR AHORA</string>
+    <string name="scenery_card_es_content">El espacio interno restante se redujo &lt;font color=#3080F0>%1$s&lt;/font></string>
+    <string name="scenery_card_es_title">Limpieza de disco</string>
+    <string name="scenery_card_photowonder_button">EMBELLECER AHORA</string>
+    <string name="scenery_card_photowonder_content">¡Tus fotos &lt;font color=#3080F0>%1$s&lt;/font> pueden ser más bellas!</string>
+    <string name="scenery_card_photowonder_title">Embellecer</string>
+    <string name="scenery_charge_dialog_button_text">OBTENLO</string>
+    <string name="scenery_charge_dialog_content">Sobrecarga de %1$d minuto(s) &lt;font color=#FF8132>daña la batería&lt;/font>. Protégela con el &lt;b> DU Battery Saver&lt;/b> .</string>
+    <string name="scenery_charge_dialog_title">Consejos para la carga</string>
+    <string name="scenery_disk_usage_dialog_button_text">OBTENLO</string>
+    <string name="scenery_disk_usage_dialog_content">El almacenamiento de tu teléfono ha bajado &lt;font color=#FF8132>%1$sMB&lt;/font> en los últimos &lt;font color=#FF8132>%2$s días&lt;/font> .</string>
+    <string name="scenery_disk_usage_dialog_title">Limpieza de disco</string>
+    <string name="scenery_take_photo_dialog_button_text">OBTENLO</string>
+    <string name="scenery_take_photo_dialog_content">¿Las fotos no son lo suficientemente hermosas? &lt;font color=#2274E6>¡Los filtros cinematográficos&lt;/font> de &lt;b>PhotoWonder&lt;/b> pueden ayudarte!</string>
+    <string name="scenery_take_photo_dialog_title">Retoque</string>
+    <string name="scenery_uninstall_dialog_button_text">OBTENLO</string>
+    <string name="scenery_uninstall_dialog_content">%1$s dejó algunos &lt;font color=#FF8132>Archivos de basura residuales &lt;/font>, ¡usa el &lt;b>DU Speed Booster&lt;/b> para deshacerte de ellos!</string>
+    <string name="scenery_uninstall_dialog_title">Residuales encontrados</string>
+    <string name="screen_lock_charging_boosted_time">Carga acelerada durante %1$d minutos</string>
+</resources>

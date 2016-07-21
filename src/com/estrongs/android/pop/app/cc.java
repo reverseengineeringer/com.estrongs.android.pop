@@ -4,27 +4,27 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.net.Uri;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.android.util.am;
-import com.estrongs.android.widget.g;
-import java.io.File;
 
 class cc
   implements DialogInterface.OnClickListener
 {
-  cc(cb paramcb, cg paramcg) {}
+  cc(FileChooserActivity paramFileChooserActivity, Intent paramIntent, String paramString, Uri paramUri) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    paramDialogInterface = b.a.a.d();
-    a.dismiss();
-    if (am.ba(paramDialogInterface)) {}
-    for (paramDialogInterface = new Intent(null, Uri.fromFile(new File(paramDialogInterface)));; paramDialogInterface = new Intent(null, Uri.parse(paramDialogInterface)))
+    paramDialogInterface.dismiss();
+    if (paramInt == 0)
     {
-      b.a.setResult(-1, paramDialogInterface);
-      b.a.finish();
+      a.setData(FileChooserActivity.a(d, b));
+      d.setResult(-1, a);
+      d.finish();
+    }
+    while (paramInt != 1) {
       return;
     }
+    a.setData(c);
+    d.setResult(-1, a);
+    d.finish();
   }
 }
 

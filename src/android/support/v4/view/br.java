@@ -1,14 +1,10 @@
 package android.support.v4.view;
 
-import java.util.Comparator;
-
-final class br
-  implements Comparator<bv>
+public abstract interface br
 {
-  public int a(bv parambv1, bv parambv2)
-  {
-    return b - b;
-  }
+  public abstract boolean isNestedScrollingEnabled();
+  
+  public abstract void stopNestedScroll();
 }
 
 /* Location:

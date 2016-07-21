@@ -1,86 +1,48 @@
 package com.estrongs.android.a;
 
-import android.app.Activity;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.widget.CheckBox;
-import android.widget.EditText;
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.a.b.a;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 class c
-  implements DialogInterface.OnClickListener
+  implements j
 {
-  c(a parama) {}
+  c(b paramb) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void a(String arg1)
   {
-    if ((bd.a(a.b(a).getText().toString())) && (!a.a(a).isChecked()))
+    com.estrongs.android.util.l.e(b.h(), "DiskAnalyzer finish!!!");
+    synchronized (b.i())
     {
-      ag.a(a.d, a.d.getText(2131427773), 1);
-      return;
-    }
-    String str1 = a.b(a).getText().toString().trim();
-    paramDialogInterface = a.c(a).getText().toString();
-    if (str1 != null) {
-      str1 = am.bi(str1);
-    }
-    for (;;)
-    {
-      Object localObject1 = paramDialogInterface;
-      if (paramDialogInterface != null) {
-        localObject1 = am.bi(paramDialogInterface);
+      b.a(a, true);
+      if (b.a(a)) {
+        break label231;
       }
-      String str5 = a.c;
-      String str2 = am.D(str5);
-      if ((str1 != null) && (str1.length() != 0)) {}
-      for (paramDialogInterface = am.a(str2, str1, (String)localObject1);; paramDialogInterface = str2)
-      {
-        String str3;
-        Object localObject2;
-        if ((a.d(a).isChecked()) || (am.H(paramDialogInterface)) || (am.J(paramDialogInterface)) || (am.p(paramDialogInterface)) || (am.I(paramDialogInterface)) || (am.m(paramDialogInterface)) || (am.O(paramDialogInterface)))
-        {
-          if (!am.O(paramDialogInterface)) {
-            break label359;
-          }
-          str3 = com.estrongs.fs.impl.adb.c.j(str5);
-          localObject2 = com.estrongs.fs.impl.adb.c.j(paramDialogInterface);
-          str2 = com.estrongs.fs.impl.adb.c.j(str2);
-        }
-        for (;;)
-        {
-          ad localad = ad.a(a.d);
-          String str6 = localad.h(str3);
-          String str4 = str6;
-          if (str6 == null) {
-            str4 = am.a((String)localObject2);
-          }
-          localad.c(str3);
-          if (am.O(paramDialogInterface)) {
-            localad.a((String)localObject2, str4);
-          }
-          for (;;)
-          {
-            if (a.f != null) {
-              a.f.a(str1, (String)localObject1, str5);
-            }
-            a.dismiss();
-            return;
-            if (a.d(a).isChecked()) {
-              localad.a((String)localObject2, str4);
-            } else {
-              localad.a(str2, str4);
-            }
-          }
-          label359:
-          localObject2 = paramDialogInterface;
-          str3 = str5;
-        }
+      HashMap localHashMap = new HashMap();
+      Object localObject2 = l.k();
+      localHashMap.put("appcatalog", new a((List)localObject2, ((List)localObject2).size(), ((List)localObject2).size(), 0L));
+      localHashMap.put("newcreate", b.c(a).c(b.b(a), 2));
+      localHashMap.put("longtime", b.c(a).d(b.b(a), 2));
+      localHashMap.put("largefile", b.c(a).a(b.b(a), 2));
+      localHashMap.put("redundancy", b.c(a).e(b.b(a), 2));
+      localObject2 = b.d(a).iterator();
+      if (((Iterator)localObject2).hasNext()) {
+        ((j)((Iterator)localObject2).next()).a(b.b(a), localHashMap);
       }
     }
+    com.estrongs.android.util.l.e(b.h(), "DiskAnalyzer has validate data before DBAnalyzer!");
+    label231:
+    Iterator localIterator = b.d(a).iterator();
+    while (localIterator.hasNext()) {
+      ((j)localIterator.next()).a(b.b(a));
+    }
+    b.c(a).a();
   }
+  
+  public void a(String paramString, Map<String, a> paramMap) {}
 }
 
 /* Location:

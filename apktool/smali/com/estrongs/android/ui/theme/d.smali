@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/theme/ai;
-
-.field final synthetic b:Lcom/estrongs/android/ui/theme/b;
+.field final synthetic a:Lcom/estrongs/android/ui/theme/ModifyThemeActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/theme/b;Lcom/estrongs/android/ui/theme/ai;)V
+.method constructor <init>(Lcom/estrongs/android/ui/theme/ModifyThemeActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/theme/d;->b:Lcom/estrongs/android/ui/theme/b;
-
-    iput-object p2, p0, Lcom/estrongs/android/ui/theme/d;->a:Lcom/estrongs/android/ui/theme/ai;
+    iput-object p1, p0, Lcom/estrongs/android/ui/theme/d;->a:Lcom/estrongs/android/ui/theme/ModifyThemeActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,49 +22,38 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+.method public onClick(Landroid/view/View;)V
+    .locals 3
 
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    new-instance v0, Landroid/content/Intent;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/theme/d;->a:Lcom/estrongs/android/ui/theme/ai;
+    iget-object v1, p0, Lcom/estrongs/android/ui/theme/d;->a:Lcom/estrongs/android/ui/theme/ModifyThemeActivity;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/theme/ai;->f()Z
+    const-class v2, Lcom/estrongs/android/ui/theme/ThemeColorActivity;
 
-    move-result v0
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    if-eqz v0, :cond_0
+    const-string v1, "set_what_color"
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/theme/d;->b:Lcom/estrongs/android/ui/theme/b;
+    const/4 v2, 0x1
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/theme/b;->a:Lcom/estrongs/android/ui/theme/ModifyThemeActivity;
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/theme/ModifyThemeActivity;->b(Lcom/estrongs/android/ui/theme/ModifyThemeActivity;)I
+    const-string v1, "theme_data_index"
 
-    move-result v0
+    iget-object v2, p0, Lcom/estrongs/android/ui/theme/d;->a:Lcom/estrongs/android/ui/theme/ModifyThemeActivity;
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/theme/d;->b:Lcom/estrongs/android/ui/theme/b;
+    invoke-static {v2}, Lcom/estrongs/android/ui/theme/ModifyThemeActivity;->b(Lcom/estrongs/android/ui/theme/ModifyThemeActivity;)I
 
-    iget-object v1, v1, Lcom/estrongs/android/ui/theme/b;->a:Lcom/estrongs/android/ui/theme/ModifyThemeActivity;
+    move-result v2
 
-    invoke-static {v1}, Lcom/estrongs/android/ui/theme/ModifyThemeActivity;->a(Lcom/estrongs/android/ui/theme/ModifyThemeActivity;)Lcom/estrongs/android/ui/theme/al;
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    move-result-object v1
+    iget-object v1, p0, Lcom/estrongs/android/ui/theme/d;->a:Lcom/estrongs/android/ui/theme/ModifyThemeActivity;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/ui/theme/al;->e()I
+    const/16 v2, 0x1022
 
-    move-result v1
+    invoke-virtual {v1, v0, v2}, Lcom/estrongs/android/ui/theme/ModifyThemeActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    if-ne v0, v1, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/theme/d;->b:Lcom/estrongs/android/ui/theme/b;
-
-    iget-object v0, v0, Lcom/estrongs/android/ui/theme/b;->a:Lcom/estrongs/android/ui/theme/ModifyThemeActivity;
-
-    const/4 v1, -0x1
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/theme/ModifyThemeActivity;->setResult(I)V
-
-    :cond_0
     return-void
 .end method

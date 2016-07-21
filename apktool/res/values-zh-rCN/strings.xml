@@ -1,13 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_select">选择</string>
-    <string name="app_name">ES文件浏览器</string>
-    <string name="app_media_player">ES媒体播放器</string>
-    <string name="app_note_editor">ES文本阅读器</string>
-    <string name="app_image_browser">ES图片浏览器</string>
-    <string name="app_zip_viewer">ES压缩查看器</string>
     <string name="app_downloader">ES下载器</string>
-    <string name="select_device_to_share">选择需要发送的设备</string>
+    <string name="app_image_browser">ES图片浏览器</string>
+    <string name="app_media_player">ES媒体播放器</string>
+    <string name="app_name">ES文件浏览器</string>
+    <string name="app_note_editor">ES文本阅读器</string>
+    <string name="app_zip_viewer">ES压缩查看器</string>
+    <string name="battery_info_remaining_charging_time">"充电预估: "</string>
+    <string name="battery_info_remaining_discharging_time">"续航时间: "</string>
+    <string name="charging_screen_ad_delete">删除</string>
+    <string name="charging_screen_ad_enter">打开</string>
+    <string name="charging_screen_charging_complete">充电完成</string>
+    <string name="charging_screen_slide_to_enter">滑动来解锁</string>
+    <string name="common_time_hour">小时</string>
+    <string name="common_time_minute">分</string>
+    <string name="duappd_ad_item_action_btn">下载</string>
+    <string name="duapps_ad_data_empty">请稍后再尝试访问。</string>
+    <string name="duapps_ad_empty_refresh_btn_check">检查</string>
+    <string name="duapps_ad_empty_title">无内容</string>
+    <string name="duapps_ad_footer_end">没有更多了</string>
+    <string name="duapps_ad_loading">加载中…</string>
+    <string name="duapps_ad_loading_switch_google_play_des">跳转到Google Play, 请稍后…</string>
+    <string name="duapps_ad_no_apps_refresh_button_text">刷新</string>
+    <string name="duapps_ad_no_browser_play">无浏览器或Google Play，无法跳转</string>
+    <string name="duapps_ad_nonetwork_message">无可用网络，请检查你的网络设置</string>
+    <string name="duapps_ad_pull_refresh">上拉加载更多</string>
+    <string name="duscenerysdk_ad_no_browser_play">无浏览器或Google Play，无法跳转</string>
     <string name="es_share_name_activity">发送到ES网络</string>
+    <string name="lock_screen_setting">设置</string>
+    <string name="lock_screen_switch">智能充电</string>
+    <string name="lockscreen_charge_boost_time">本次充电共加快 %1$d 分钟</string>
     <string name="save_to_es">保存到ES</string>
+    <string name="scenery_card_antivirus_button">安全扫描</string>
+    <string name="scenery_card_antivirus_content">您的手机存在 &lt;font color=#3080F0>%1$s&lt;/font> 个安全风险</string>
+    <string name="scenery_card_antivirus_title">安全风险</string>
+    <string name="scenery_card_battery_button">立即省电</string>
+    <string name="scenery_card_battery_content">发现&lt;font color=#3080F0>%1$s&lt;/font>个耗电应用，使用省电延长待机&lt;font color=#3080F0>%2$s小时%3$s分&lt;/font></string>
+    <string name="scenery_card_battery_title">严重耗电</string>
+    <string name="scenery_card_booster_button">立即加速</string>
+    <string name="scenery_card_booster_content">&lt;font color=#3080F0>%1$s&lt;/font> 个顽固应用拖慢手机速度</string>
+    <string name="scenery_card_booster_title">手机卡顿</string>
+    <string name="scenery_card_cleaner_button">立即清理</string>
+    <string name="scenery_card_cleaner_content">手机内有 &lt;font color=#3080F0>%1$s&lt;/font> 的垃圾</string>
+    <string name="scenery_card_cleaner_title">一键清理</string>
+    <string name="scenery_card_es_button">立即清理</string>
+    <string name="scenery_card_es_content">您的手机剩余空间减少 &lt;font color=#3080F0>%1$s&lt;/font></string>
+    <string name="scenery_card_es_title">磁盘清理</string>
+    <string name="scenery_card_photowonder_button">立即变美</string>
+    <string name="scenery_card_photowonder_content">新拍了 &lt;font color=#3080F0>%1$s&lt;/font> 张照片，快使用电影滤镜变美吧!</string>
+    <string name="scenery_card_photowonder_title">图片美化</string>
+    <string name="scenery_charge_dialog_button_text">立即获取</string>
+    <string name="scenery_charge_dialog_content">过度充电%1$d分钟, &lt;font color=#FF8132>有损电池健康&lt;/font>, 下载使用 &lt;b>Du Battery Saver&lt;/b> 保护电池!</string>
+    <string name="scenery_charge_dialog_title">健康充电提示</string>
+    <string name="scenery_disk_usage_dialog_button_text">立即获取</string>
+    <string name="scenery_disk_usage_dialog_content">在过去的&lt;font color=#FF8132>%2$s天&lt;/font>, 您的手机的磁盘空间新增&lt;font color=#FF8132>%1$sMB&lt;/font>。</string>
+    <string name="scenery_disk_usage_dialog_title">磁盘清理</string>
+    <string name="scenery_take_photo_dialog_button_text">立即获取</string>
+    <string name="scenery_take_photo_dialog_content">照片拍的不够美，&lt;b>PhotoWonder&lt;/b> &lt;font color=#2274E6>电影滤镜&lt;/font> 帮你搞定~!</string>
+    <string name="scenery_take_photo_dialog_title">图片美化</string>
+    <string name="scenery_uninstall_dialog_button_text">立即获取</string>
+    <string name="scenery_uninstall_dialog_content">%1$s 残留垃圾文件, 使用 &lt;b>DU Speed Booster&lt;/b> &lt;font color=#FF8132>来彻底清理吧!&lt;/font></string>
+    <string name="scenery_uninstall_dialog_title">发现残留文件</string>
+    <string name="screen_lock_charging_boosted_time">充电加快 %1$d 分钟</string>
+    <string name="select_device_to_share">选择需要发送的设备</string>
+    <string name="toolbox_no_apps_refresh_button_text">刷新</string>
+    <string name="toolbox_nonetwork_tips">单击启用网络以获取更多免费应用。</string>
+    <string name="toolbox_v2_btn_more">更多</string>
+    <string name="toolbox_v2_coin_balance">余额:</string>
+    <string name="toolbox_v2_data_empty">请稍后再尝试访问。</string>
+    <string name="toolbox_v2_list_item_btn_free">下载</string>
+    <string name="v2_toolbox_empty_title">无内容</string>
+    <string name="toolbox_v2_network_mobile">移动数据</string>
+    <string name="toolbox_v2_network_wifi">Wi-Fi</string>
+    <string name="toolbox_v2_nomore_content">没有更多了</string>
+    <string name="toolbox_v2_pull_refresh">上拉加载更多</string>
 </resources>

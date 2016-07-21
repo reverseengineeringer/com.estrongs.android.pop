@@ -1,14 +1,12 @@
 package android.support.v4.view;
 
-import android.view.KeyEvent;
+import android.graphics.Rect;
 
 abstract interface w
 {
-  public abstract void a(KeyEvent paramKeyEvent);
+  public abstract int a(int paramInt1, int paramInt2);
   
-  public abstract boolean a(int paramInt1, int paramInt2);
-  
-  public abstract boolean b(int paramInt);
+  public abstract void a(int paramInt1, int paramInt2, int paramInt3, Rect paramRect1, Rect paramRect2, int paramInt4);
 }
 
 /* Location:

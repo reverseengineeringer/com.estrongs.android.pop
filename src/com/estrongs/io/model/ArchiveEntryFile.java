@@ -1,6 +1,6 @@
 package com.estrongs.io.model;
 
-import com.estrongs.android.util.q;
+import com.estrongs.android.util.s;
 import java.io.File;
 import java.util.Collections;
 import java.util.LinkedList;
@@ -95,7 +95,7 @@ public class ArchiveEntryFile
     {
       if (!sorted)
       {
-        Collections.sort(children, q.c);
+        Collections.sort(children, s.c);
         sorted = true;
       }
       return (File[])children.toArray(new File[0]);

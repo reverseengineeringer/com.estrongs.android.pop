@@ -1,20 +1,5 @@
 .class Lcom/estrongs/android/pop/view/bf;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/estrongs/android/view/av;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lcom/estrongs/android/view/av",
-        "<",
-        "Lcom/estrongs/fs/h;",
-        ">;"
-    }
-.end annotation
+.super Lcom/estrongs/android/ui/c/e;
 
 
 # instance fields
@@ -22,65 +7,98 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
+.method constructor <init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;Landroid/app/Activity;Lcom/estrongs/fs/util/a/a;Lcom/estrongs/android/view/dw;)V
     .locals 0
 
     iput-object p1, p0, Lcom/estrongs/android/pop/view/bf;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p3, p4}, Lcom/estrongs/android/ui/c/e;-><init>(Landroid/app/Activity;Lcom/estrongs/fs/util/a/a;Lcom/estrongs/android/view/dw;)V
+
+    return-void
+.end method
+
+.method static synthetic a(Lcom/estrongs/android/pop/view/bf;Lcom/estrongs/fs/h;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/estrongs/android/pop/view/bf;->a(Lcom/estrongs/fs/h;)V
+
+    return-void
+.end method
+
+.method private a(Lcom/estrongs/fs/h;)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/estrongs/android/ui/c/e;->c(Lcom/estrongs/fs/h;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/util/List;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/estrongs/fs/h;",
-            ">;)V"
-        }
-    .end annotation
+.method protected a(Lcom/estrongs/fs/h;Lcom/estrongs/android/util/TypedMap;)V
+    .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/bf;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->z()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/view/bf;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->y()Lcom/estrongs/android/view/aw;
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
 
     move-result-object v1
 
-    if-nez v1, :cond_0
+    invoke-interface {p1}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->br(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
 
     :goto_0
-    return-void
-
-    :cond_0
-    invoke-virtual {v1}, Lcom/estrongs/android/view/aw;->d()I
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/FexApplication;->h()Z
 
     move-result v1
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/view/bf;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    if-eqz v1, :cond_1
 
-    iget-object v2, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->k:Lcom/estrongs/android/ui/e/w;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v2, v0, p1}, Lcom/estrongs/android/ui/e/w;->a(Ljava/lang/String;Ljava/util/List;)V
+    sget-object v0, Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog$DialogType;->NETWORK:Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog$DialogType;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/bf;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/bf;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    invoke-static {v1, v0}, Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog;->a(Landroid/content/Context;Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog$DialogType;)Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog;
 
-    move-result v2
+    move-result-object v0
 
-    invoke-virtual {v0, v2, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a(II)V
+    new-instance v1, Lcom/estrongs/android/pop/view/bg;
+
+    invoke-direct {v1, p0, p1}, Lcom/estrongs/android/pop/view/bg;-><init>(Lcom/estrongs/android/pop/view/bf;Lcom/estrongs/fs/h;)V
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog;->a(Lcom/estrongs/android/ui/dialog/lc;)V
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog;->b()V
+
+    :goto_1
+    return-void
+
+    :cond_0
+    const/4 v0, 0x0
 
     goto :goto_0
+
+    :cond_1
+    invoke-super {p0, p1, p2}, Lcom/estrongs/android/ui/c/e;->a(Lcom/estrongs/fs/h;Lcom/estrongs/android/util/TypedMap;)V
+
+    goto :goto_1
 .end method

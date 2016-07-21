@@ -17,7 +17,10 @@
                 <ProgressBar android:id="@id/recomm_item_download_progress" android:layout_width="fill_parent" android:layout_height="@dimen/dp_10" android:layout_marginTop="0.0dip" style="@style/HorizontalProgressBar" />
             </LinearLayout>
         </FrameLayout>
-        <Button android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_button_text" android:gravity="center" android:layout_gravity="center" android:id="@id/recomm_item_install_stop" android:background="@drawable/component_child_download_expanded_selector" android:focusable="false" android:layout_width="@dimen/dp_64" android:layout_height="@dimen/dp_26" android:layout_marginTop="1.0dip" android:layout_marginRight="8.0dip" android:text="停止" />
+        <RelativeLayout android:layout_width="@dimen/dp_68" android:layout_height="@dimen/dp_26" android:layout_marginTop="1.0dip" android:layout_marginRight="8.0dip">
+            <Button android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_button_text" android:gravity="center" android:layout_gravity="center" android:id="@id/recomm_item_install_stop" android:background="@drawable/component_child_download_expanded_selector" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="停止" />
+            <ProgressBar android:id="@id/progressBar1" android:visibility="gone" android:layout_width="@dimen/dp_16" android:layout_height="@dimen/dp_16" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="@style/ProgressBar" />
+        </RelativeLayout>
     </LinearLayout>
     <TextView android:textSize="@dimen/dp_12" android:textColor="@color/popupbox_content_text" android:id="@id/recomm_item_long_desc" android:background="#ff333333" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="fff" android:scrollHorizontally="false" />
 </LinearLayout>

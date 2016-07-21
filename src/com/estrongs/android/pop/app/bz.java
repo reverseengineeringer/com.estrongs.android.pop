@@ -2,19 +2,15 @@ package com.estrongs.android.pop.app;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.util.ay;
-import com.estrongs.android.widget.g;
 
 class bz
   implements DialogInterface.OnClickListener
 {
-  bz(FileChooserActivity paramFileChooserActivity) {}
+  bz(ESUsePromptActivity paramESUsePromptActivity) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    paramDialogInterface = ay.b(a, a.a.e());
-    a.setResult(-1, paramDialogInterface);
-    a.finish();
+    paramDialogInterface.dismiss();
   }
 }
 

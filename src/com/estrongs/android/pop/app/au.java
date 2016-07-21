@@ -1,18 +1,20 @@
 package com.estrongs.android.pop.app;
 
-import com.estrongs.android.ui.pcs.n;
-import com.estrongs.android.util.bd;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.pop.ad;
+import java.util.List;
 
 class au
-  implements n
+  implements View.OnClickListener
 {
-  au(at paramat) {}
+  au(at paramat, String paramString) {}
   
-  public void a(boolean paramBoolean, String paramString1, String paramString2)
+  public void onClick(View paramView)
   {
-    if ((paramBoolean) && (!bd.a(paramString2))) {
-      DownloaderActivity.a(a.b, DownloaderActivity.a(a.b), true);
-    }
+    ad.a(b.a).N(a);
+    DocumentExtModifyList.a(b.a).a().remove(a);
+    DocumentExtModifyList.a(b.a).notifyDataSetChanged();
   }
 }
 

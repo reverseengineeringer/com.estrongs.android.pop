@@ -4,66 +4,58 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build.VERSION;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v7.app.ActionBar;
 import android.text.Layout;
 import android.text.Layout.Alignment;
 import android.text.StaticLayout;
 import android.text.TextUtils;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.view.View;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View.OnTouchListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.pop.esclasses.ESScrollMenuView;
-import com.estrongs.android.pop.utils.ci;
-import com.estrongs.android.ui.dialog.ct;
+import com.estrongs.android.pop.utils.cr;
+import com.estrongs.android.ui.base.HomeAsBackActivity;
+import com.estrongs.android.ui.dialog.cv;
+import com.estrongs.android.ui.theme.at;
+import com.estrongs.android.util.l;
 import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.text.MessageFormat;
 
 public class PopNoteEditor
-  extends ESActivity
-  implements SeekBar.OnSeekBarChangeListener, ap, f
+  extends HomeAsBackActivity
+  implements SeekBar.OnSeekBarChangeListener, ah, f
 {
   private static final String c = PopNoteEditor.class.getSimpleName();
-  private Object A = new Object();
-  private Object B = new Object();
-  private boolean C = false;
-  private boolean D = false;
-  private boolean E = false;
-  private int F = -1;
+  private int A = 0;
+  private File B = null;
+  private a C = null;
+  private long D = 0L;
+  private aa E = null;
+  private af F = null;
   private int G = 0;
   private int H = 0;
-  private File I = null;
-  private a J = null;
-  private long K = 0L;
-  private ai L = null;
-  private an M = null;
-  private int N = 0;
-  private int O = 0;
-  private boolean P = false;
-  private c Q = null;
-  private int R = 0;
-  private int S = R;
-  private com.estrongs.android.util.a T = null;
-  private aj U = null;
-  private final Handler V = new g(this);
-  private final Runnable W = new y(this);
+  private boolean I = false;
+  private c J = null;
+  private int K = 0;
+  private int L = K;
+  private com.estrongs.android.j.c M = null;
+  private ab N = null;
+  private final Handler O = new g(this);
+  private final Runnable P = new q(this);
   boolean a = true;
   boolean b = false;
   private String d = "UTF-8";
@@ -75,19 +67,19 @@ public class PopNoteEditor
   private ObservableScrollView j;
   private ObservableScrollView k;
   private LinearLayout l;
-  private ImageView m;
-  private LinearLayout n;
-  private LinearLayout o;
-  private LinearLayout p;
-  private LinearLayout q;
-  private TextView r;
-  private ESScrollMenuView t;
-  private LinearLayout u;
-  private SeekBar v;
-  private TextView w;
-  private int x = 0;
-  private String y = null;
-  private StringBuilder z = null;
+  private LinearLayout m;
+  private SeekBar n;
+  private TextView o;
+  private int p = 0;
+  private String q = null;
+  private StringBuilder r = null;
+  private Object t = new Object();
+  private Object u = new Object();
+  private boolean v = false;
+  private boolean w = false;
+  private boolean x = false;
+  private int y = -1;
+  private int z = 0;
   
   private int a(ReaderTextView paramReaderTextView, int paramInt1, String paramString1, String paramString2, int paramInt2)
   {
@@ -148,12 +140,12 @@ public class PopNoteEditor
   @SuppressLint({"NewApi"})
   private Layout a(ReaderTextView paramReaderTextView, String paramString)
   {
-    return new StaticLayout(paramString, paramReaderTextView.getPaint(), paramReaderTextView.getWidth() - paramReaderTextView.getPaddingLeft() - paramReaderTextView.getPaddingRight(), Layout.Alignment.ALIGN_NORMAL, paramReaderTextView.c(), paramReaderTextView.b(), paramReaderTextView.getIncludeFontPadding());
+    return new StaticLayout(paramString, paramReaderTextView.getPaint(), paramReaderTextView.getWidth() - paramReaderTextView.getPaddingLeft() - paramReaderTextView.getPaddingRight(), Layout.Alignment.ALIGN_NORMAL, paramReaderTextView.getLineSpacingMult(), paramReaderTextView.getLineSpacingAdd(), paramReaderTextView.getIncludeFontPadding());
   }
   
   private String a(ReaderTextView paramReaderTextView, int paramInt1, int paramInt2, String paramString, int paramInt3)
   {
-    if (!L.a) {
+    if (!E.a) {
       throw new IllegalStateException();
     }
     if (paramInt1 <= paramInt2)
@@ -168,35 +160,33 @@ public class PopNoteEditor
       }
       return a(paramReaderTextView, i1 + 1, paramInt2, paramString, paramInt3);
     }
-    Log.e(c, "getFixSubString error not found low " + paramInt1 + ", high " + paramInt2);
+    l.e(c, "getFixSubString error not found low " + paramInt1 + ", high " + paramInt2);
     return null;
   }
   
   private void a(boolean paramBoolean)
   {
     int i1 = 1;
-    if (N != 0) {}
+    if (G != 0) {}
     for (;;)
     {
       return;
-      if ((!P) && (paramBoolean))
+      if ((!I) && (paramBoolean))
       {
-        q.setVisibility(8);
-        n.setVisibility(8);
-        P = true;
+        l.setVisibility(8);
+        I = true;
       }
       while (i1 != 0)
       {
-        am localam = new am(this, z.toString(), 0, k.getScrollY());
-        Message localMessage = V.obtainMessage(0);
-        obj = localam;
-        V.sendMessage(localMessage);
+        ae localae = new ae(this, r.toString(), 0, k.getScrollY());
+        Message localMessage = O.obtainMessage(0);
+        obj = localae;
+        O.sendMessage(localMessage);
         return;
-        if ((P) && (!paramBoolean))
+        if ((I) && (!paramBoolean))
         {
-          q.setVisibility(0);
-          n.setVisibility(0);
-          P = false;
+          l.setVisibility(0);
+          I = false;
         }
         else
         {
@@ -223,27 +213,24 @@ public class PopNoteEditor
   
   private void b(boolean paramBoolean)
   {
-    if (N == 0) {
+    if (G == 0) {
       return;
     }
+    invalidateOptionsMenu();
     try
     {
       InputMethodManager localInputMethodManager = (InputMethodManager)getSystemService("input_method");
       if (localInputMethodManager.isActive()) {
         localInputMethodManager.hideSoftInputFromWindow(i.getWindowToken(), 0);
       }
-      if (((h.getText().toString().equals(i.getText().toString())) && (R == S)) || (paramBoolean))
+      if (((h.getText().toString().equals(i.getText().toString())) && (K == L)) || (paramBoolean))
       {
-        N = 0;
+        G = 0;
         i.setText("");
-        n.setVisibility(0);
+        l.setVisibility(0);
         k.setVisibility(0);
         j.setVisibility(8);
-        o.setVisibility(8);
-        l.setVisibility(0);
-        r.setGravity(19);
-        p.setVisibility(8);
-        b();
+        d();
         return;
       }
     }
@@ -257,94 +244,71 @@ public class PopNoteEditor
     }
   }
   
-  private View.OnTouchListener d()
-  {
-    return new ag(this);
-  }
-  
-  private void e()
-  {
-    t = ((ESScrollMenuView)findViewById(2131362572));
-    t.a();
-    if (!Q.j())
-    {
-      t.a(new com.estrongs.android.view.a.a(getResources().getDrawable(2130838164), getString(2131427373)), new j(this));
-      t.a(new com.estrongs.android.view.a.a(getResources().getDrawable(2130838172), getString(2131427347)), new k(this));
-    }
-    t.a(new com.estrongs.android.view.a.a(getResources().getDrawable(2130838156), getString(2131427836)), new l(this));
-    View localView = findViewById(2131362418);
-    localView.setFocusable(true);
-    localView.setOnClickListener(new n(this));
-  }
-  
   private void e(int paramInt)
   {
-    z = new StringBuilder();
-    new ak(this, paramInt, false).start();
+    r = new StringBuilder();
+    new ac(this, paramInt, false).start();
   }
   
-  private boolean f()
+  private void f()
   {
-    if (O != 0)
-    {
-      com.estrongs.android.pop.utils.a.a(this, 2131427783);
-      return false;
-    }
-    return true;
+    new com.estrongs.android.util.b(this, d, new w(this)).a();
   }
   
-  private void g()
+  private View.OnTouchListener h()
   {
-    Message localMessage = V.obtainMessage(6);
-    V.sendMessageDelayed(localMessage, 500L);
-  }
-  
-  private void h()
-  {
-    Message localMessage = V.obtainMessage(7);
-    V.sendMessage(localMessage);
+    return new x(this);
   }
   
   private void i()
   {
-    if (Q.i()) {
+    Message localMessage = O.obtainMessage(6);
+    O.sendMessageDelayed(localMessage, 500L);
+  }
+  
+  private void j()
+  {
+    Message localMessage = O.obtainMessage(7);
+    O.sendMessage(localMessage);
+  }
+  
+  private void k()
+  {
+    if (J.i()) {
       showDialog(5);
     }
-    while (N == 1) {
+    while (G == 1) {
       return;
     }
-    synchronized (B)
+    synchronized (u)
     {
-      if ((g != null) && (z != null))
+      if ((g != null) && (r != null))
       {
-        N = 1;
-        n.setVisibility(8);
-        k.setVisibility(8);
+        G = 1;
         l.setVisibility(8);
+        k.setVisibility(8);
         j.setVisibility(0);
-        p.setVisibility(0);
-        o.setVisibility(0);
-        r.setGravity(17);
-        Message localMessage = V.obtainMessage(3);
-        obj = new am(this, z.toString(), 0, k.getScrollY());
-        V.sendMessage(localMessage);
+        Message localMessage = O.obtainMessage(3);
+        obj = new ae(this, r.toString(), 0, k.getScrollY());
+        O.sendMessage(localMessage);
       }
+      invalidateOptionsMenu();
       return;
     }
   }
   
-  private void j()
+  private void l()
   {
     for (;;)
     {
       try
       {
-        g();
+        i();
       }
       catch (Exception localException)
       {
-        localMessage2 = V.obtainMessage(5, 2, 0);
-        V.sendMessage(localMessage2);
+        localMessage2 = O.obtainMessage(5, 2, 0);
+        O.sendMessage(localMessage2);
         try
         {
           if (g == null) {
@@ -358,57 +322,57 @@ public class PopNoteEditor
           localIOException2.printStackTrace();
           return;
         }
-        K = Q.h();
-        d = Q.g();
-        g = new b(f, I, d);
-        z = new StringBuilder();
+        D = J.h();
+        d = J.g();
+        g = new b(f, B, d);
+        r = new StringBuilder();
         arrayOfChar1 = new char['က'];
-        h();
-        if (C) {
+        j();
+        if (v) {
           break label672;
         }
       }
       finally
       {
-        synchronized (A)
+        synchronized (t)
         {
-          if (!D) {
+          if (!w) {
             break label456;
           }
           a = true;
           b = false;
-          D = false;
+          w = false;
           if (!a) {
             break label612;
           }
-          synchronized (B)
+          synchronized (u)
           {
             i2 = g.read(arrayOfChar1);
             if (i2 <= 0) {
               continue;
             }
             a = false;
-            G += 1;
+            z += 1;
             if (i2 != arrayOfChar1.length) {
               continue;
             }
-            M.a(G, g.b());
-            R = as.a(arrayOfChar1);
-            S = R;
+            F.a(z, g.b());
+            K = ak.a(arrayOfChar1);
+            L = K;
             i1 = i2;
-            if (z.length() <= 8192) {
+            if (r.length() <= 8192) {
               break label505;
             }
-            z.delete(0, 4096);
-            localMessage3 = V.obtainMessage(2);
-            obj = new am(this, z.toString(), 0, -1);
-            V.sendMessage(localMessage3);
-            y = z.append(arrayOfChar1, 0, i2).toString();
-            synchronized (A)
+            r.delete(0, 4096);
+            localMessage3 = O.obtainMessage(2);
+            obj = new ae(this, r.toString(), 0, -1);
+            O.sendMessage(localMessage3);
+            q = r.append(arrayOfChar1, 0, i2).toString();
+            synchronized (t)
             {
-              D = false;
-              E = false;
-              A.wait();
+              w = false;
+              x = false;
+              t.wait();
             }
             localObject2 = finally;
           }
@@ -416,12 +380,12 @@ public class PopNoteEditor
       }
       try
       {
-        I = Q.c();
-        if (I == null)
+        B = J.c();
+        if (B == null)
         {
-          Message localMessage1 = V.obtainMessage(5, 2, 0);
-          V.sendMessage(localMessage1);
-          h();
+          Message localMessage1 = O.obtainMessage(5, 2, 0);
+          O.sendMessage(localMessage1);
+          j();
         }
       }
       catch (IOException localIOException1)
@@ -451,33 +415,33 @@ public class PopNoteEditor
         }
         throw ((Throwable)localObject2);
         label456:
-        if ((G <= 3) || (!E)) {
+        if ((z <= 3) || (!x)) {
           continue;
         }
         a = false;
         b = true;
-        E = false;
+        x = false;
         continue;
         arrayOfChar2 = finally;
         throw arrayOfChar2;
         label505:
         do
         {
-          G += 1;
-          if (z.length() >= 8192) {
+          z += 1;
+          if (r.length() >= 8192) {
             break;
           }
-          z.append(arrayOfChar2, 0, i1);
+          r.append(arrayOfChar2, 0, i1);
           i1 = g.read(arrayOfChar2);
         } while (i1 >= 0);
         i2 = i1;
         i1 = 0;
         if (i1 != 0) {
-          z.append(arrayOfChar2, 0, i2);
+          r.append(arrayOfChar2, 0, i2);
         }
-        Message localMessage3 = V.obtainMessage(2);
-        obj = new am(this, z.toString(), 0, -1);
-        V.sendMessage(localMessage3);
+        Message localMessage3 = O.obtainMessage(2);
+        obj = new ae(this, r.toString(), 0, -1);
+        O.sendMessage(localMessage3);
         continue;
         localObject3 = finally;
         throw ((Throwable)localObject3);
@@ -485,13 +449,13 @@ public class PopNoteEditor
         if (!b) {
           continue;
         }
-        synchronized (B)
+        synchronized (u)
         {
-          if (G > 3)
+          if (z > 3)
           {
             b = false;
             g.close();
-            new ah(this, null).start();
+            new z(this, null).start();
           }
         }
         try
@@ -522,7 +486,7 @@ public class PopNoteEditor
     }
   }
   
-  private int k()
+  private int m()
   {
     for (;;)
     {
@@ -530,7 +494,7 @@ public class PopNoteEditor
       int i1;
       String str1;
       double d1;
-      synchronized (B)
+      synchronized (u)
       {
         if (g == null) {
           return -1;
@@ -556,10 +520,10 @@ public class PopNoteEditor
         if (i1 > 0)
         {
           i1 /= h.getLineHeight();
-          str1 = z.toString();
+          str1 = r.toString();
           if ((str1 == null) || (str1.length() <= 0))
           {
-            Log.e(c, "getCurrentProgress empty text");
+            l.e(c, "getCurrentProgress empty text");
             return -1;
           }
         }
@@ -570,127 +534,95 @@ public class PopNoteEditor
     }
   }
   
-  private void l()
-  {
-    if (!f()) {
-      return;
-    }
-    if (t.getVisibility() == 0)
-    {
-      m();
-      return;
-    }
-    t.setVisibility(0);
-    m.setImageResource(2130838204);
-    p();
-  }
-  
-  private void m()
-  {
-    t.setVisibility(4);
-    m.setImageResource(2130838203);
-    b();
-  }
-  
-  private boolean n()
-  {
-    return (t != null) && (t.getVisibility() == 0);
-  }
-  
   private void o()
   {
-    if (n()) {
-      m();
-    }
-    n.setVisibility(4);
+    l.setVisibility(4);
   }
   
   private void p()
   {
-    n.setVisibility(0);
-  }
-  
-  public void a()
-  {
-    if (L == null)
-    {
-      L = new ai(this);
-      L.start();
-      L.setPriority(1);
-      return;
-    }
-    L.a();
+    l.setVisibility(0);
   }
   
   public void a(int paramInt)
   {
-    F = (paramInt - k.getHeight());
-    if (!TextUtils.isEmpty(y))
+    y = (paramInt - k.getHeight());
+    if (!TextUtils.isEmpty(q))
     {
-      Message localMessage = V.obtainMessage(2);
-      obj = new am(this, y, 0, -1);
-      V.sendMessage(localMessage);
-      y = null;
+      Message localMessage = O.obtainMessage(2);
+      obj = new ae(this, q, 0, -1);
+      O.sendMessage(localMessage);
+      q = null;
     }
   }
   
   public void a(ObservableScrollView arg1, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
-    synchronized (A)
+    synchronized (t)
     {
-      if ((F == paramInt2) && (paramInt4 != paramInt2)) {
-        D = true;
+      if ((y == paramInt2) && (paramInt4 != paramInt2)) {
+        w = true;
       }
       if ((paramInt2 == 0) && (paramInt2 != paramInt4)) {
-        E = true;
+        x = true;
       }
-      A.notifyAll();
-      if (L != null) {
-        L.b();
+      t.notifyAll();
+      if (E != null) {
+        E.b();
       }
       return;
     }
   }
   
-  protected void b()
+  protected boolean c()
   {
-    V.removeCallbacks(W);
-    if (!n()) {
-      V.postDelayed(W, 3000L);
-    }
+    return false;
+  }
+  
+  protected void d()
+  {
+    O.removeCallbacks(P);
+    O.postDelayed(P, 3000L);
   }
   
   public void finish()
   {
-    C = true;
-    if (L != null) {
-      L.a();
+    v = true;
+    if (E != null) {
+      E.a();
     }
-    synchronized (A)
+    synchronized (t)
     {
-      A.notify();
+      t.notify();
       super.finish();
       return;
     }
   }
   
+  protected int g()
+  {
+    return 2130838584;
+  }
+  
+  public void g_()
+  {
+    if (E == null)
+    {
+      E = new aa(this);
+      E.start();
+      E.setPriority(1);
+      return;
+    }
+    E.a();
+  }
+  
   public void onBackPressed()
   {
-    if (t == null) {
-      super.onBackPressed();
-    }
-    do
+    if (G == 1)
     {
-      return;
-      if (N != 1) {
-        break;
+      if (N == null) {
+        b(false);
       }
-    } while (U != null);
-    b(false);
-    return;
-    if (t.getVisibility() == 0)
-    {
-      m();
       return;
     }
     super.onBackPressed();
@@ -700,54 +632,56 @@ public class PopNoteEditor
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    setContentView(2130903205);
+    setContentView(2130903356);
     paramBundle = getIntent().getData();
-    T = com.estrongs.android.util.a.a(this, false, "PopNoteEditor");
-    if ((paramBundle == null) || (paramBundle.toString() == null))
+    M = com.estrongs.android.j.c.a(this);
+    if (!getIntent().getBooleanExtra("islocalopen", false)) {}
+    try
     {
-      com.estrongs.android.ui.view.ag.a(this, 2131427399, 1);
-      return;
+      M.d("act3");
+      M.a("act3", "note_editor");
+      if ((paramBundle == null) || (paramBundle.toString() == null))
+      {
+        com.estrongs.android.ui.view.ak.a(this, 2131231719, 1);
+        return;
+      }
     }
-    f = this;
-    Q = new c(this, paramBundle);
-    k = ((ObservableScrollView)findViewById(2131362566));
-    k.a(this);
-    h = ((ReaderTextView)findViewById(2131362567));
-    h.a(this);
-    i = ((EditText)findViewById(2131362569));
-    j = ((ObservableScrollView)findViewById(2131362568));
-    j.setOnTouchListener(new w(this));
-    n = ((LinearLayout)findViewById(2131362570));
-    q = ((LinearLayout)findViewById(2131362559));
-    u = ((LinearLayout)findViewById(2131362573));
-    v = ((SeekBar)findViewById(2131362055));
-    v.setOnSeekBarChangeListener(this);
-    v.setOnTouchListener(new z(this));
-    w = ((TextView)findViewById(2131362571));
-    l = ((LinearLayout)findViewById(2131362562));
-    m = ((ImageView)findViewById(2131362563));
-    m.setFocusable(true);
-    l.setOnClickListener(new aa(this));
-    o = ((LinearLayout)findViewById(2131362560));
-    o.setFocusable(true);
-    o.setOnClickListener(new ab(this));
-    p = ((LinearLayout)findViewById(2131362564));
-    p.setFocusable(true);
-    p.setOnClickListener(new ac(this));
-    M = new an();
-    r = ((TextView)findViewById(2131362296));
-    r.setText(Q.a());
-    paramBundle = new al(this, null);
-    if (Build.VERSION.SDK_INT >= 11) {
-      paramBundle.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Object[0]);
+    catch (Exception localException)
+    {
+      for (;;)
+      {
+        localException.printStackTrace();
+      }
+      f = this;
+      J = new c(this, paramBundle);
+      k = ((ObservableScrollView)findViewById(2131625296));
+      k.setScrollViewListener(this);
+      h = ((ReaderTextView)findViewById(2131625297));
+      h.setOnPreDrawListener(this);
+      i = ((EditText)findViewById(2131625299));
+      j = ((ObservableScrollView)findViewById(2131625298));
+      j.setOnTouchListener(new r(this));
+      l = ((LinearLayout)findViewById(2131625300));
+      m = ((LinearLayout)findViewById(2131625303));
+      n = ((SeekBar)findViewById(2131624600));
+      n.setOnSeekBarChangeListener(this);
+      n.setOnTouchListener(new s(this));
+      o = ((TextView)findViewById(2131625301));
+      F = new af();
+      setTitle(J.a());
+      paramBundle = new ad(this, null);
+      if (Build.VERSION.SDK_INT < 11) {
+        break label368;
+      }
     }
+    paramBundle.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Object[0]);
     for (;;)
     {
-      k.setOnTouchListener(new ae(this, d()));
-      h.setOnClickListener(new af(this));
-      e();
-      b();
+      k.setOnTouchListener(new t(this, h()));
+      h.setOnClickListener(new u(this));
+      d();
       return;
+      label368:
       paramBundle.execute(new Object[0]);
     }
   }
@@ -762,22 +696,22 @@ public class PopNoteEditor
     default: 
       return null;
     case 1: 
-      localObject2 = new ct(this).a(2131427396);
-      StringBuilder localStringBuilder = new StringBuilder().append(getText(2131427595)).append("\n");
+      localObject2 = new cv(this).a(2131231716);
+      StringBuilder localStringBuilder = new StringBuilder().append(getText(2131231860)).append("\n");
       if (e == null) {}
       for (localObject1 = "";; localObject1 = e) {
-        return ((ct)localObject2).b((String)localObject1).a(2131427339, new p(this)).b();
+        return ((cv)localObject2).b((String)localObject1).a(2131231270, new y(this)).b();
       }
     case 3: 
-      bool = ad.a(f).aD();
+      bool = com.estrongs.android.pop.ad.a(f).aE();
       if (bool)
       {
-        localObject2 = Q.f();
+        localObject2 = J.f();
         localObject1 = localObject2;
         if (((String)localObject2).startsWith("file:///")) {
           localObject1 = Uri.decode((String)localObject2);
         }
-        if (ci.a((String)localObject1) != ci.c) {
+        if (cr.a((String)localObject1) != cr.c) {
           bool = false;
         }
       }
@@ -787,75 +721,113 @@ public class PopNoteEditor
     {
       if (bool)
       {
-        paramInt = 2131428403;
+        paramInt = 2131230878;
         if (bool) {
           break label291;
         }
       }
       label291:
-      for (localObject1 = getText(2131427596) + " " + Q.a();; localObject1 = MessageFormat.format(getString(2131428419), new Object[] { Q.a() }))
+      for (localObject1 = getText(2131231855) + " " + J.a();; localObject1 = MessageFormat.format(getString(2131232254), new Object[] { J.a() }))
       {
-        return new ct(this).a(paramInt).b((CharSequence)localObject1).b(2131427341, new r(this, bool)).c(2131427342, new q(this)).b();
-        paramInt = 2131427347;
+        return new cv(this).a(paramInt).b((CharSequence)localObject1).b(2131231273, new k(this, bool)).c(2131231269, new j(this)).b();
+        paramInt = 2131230845;
         break;
       }
-      localObject2 = getText(2131427594) + " " + Q.a();
+      localObject2 = getText(2131231859) + " " + J.a();
       localObject1 = localObject2;
       if (e != null) {
         localObject1 = (String)localObject2 + "\n" + e;
       }
-      return new ct(this).a(2131427396).b((CharSequence)localObject1).a(2131427339, new t(this)).b();
-      localObject1 = getText(2131427592) + " " + Q.a() + "?";
-      return new ct(this).a(2131427400).b((CharSequence)localObject1).b(2131427341, new v(this)).c(2131427342, new u(this)).b();
-      return new ct(this).a(2131427400).b(2131427931).a(2131427339, new x(this)).b();
+      return new cv(this).a(2131231716).b((CharSequence)localObject1).a(2131231270, new m(this)).b();
+      localObject1 = getText(2131231856) + " " + J.a() + "?";
+      return new cv(this).a(2131231715).b((CharSequence)localObject1).b(2131231273, new o(this)).c(2131231269, new n(this)).b();
+      return new cv(this).a(2131231715).b(2131231858).a(2131231270, new p(this)).b();
     }
+  }
+  
+  public boolean onCreateOptionsMenu(Menu paramMenu)
+  {
+    getMenuInflater().inflate(2131755013, paramMenu);
+    paramMenu.findItem(2131625667).setTitle(2131230848);
+    paramMenu.findItem(2131625668).setTitle(2131230845);
+    paramMenu.findItem(2131625669).setTitle(2131231514);
+    paramMenu.findItem(2131625665).setTitle(2131232469);
+    paramMenu.findItem(2131625665).setIcon(at.a(this).g(2130838548));
+    return super.onCreateOptionsMenu(paramMenu);
   }
   
   public void onDestroy()
   {
     super.onDestroy();
-    if (Q != null) {
-      Q.k();
+    if (J != null) {
+      J.j();
     }
   }
   
-  public boolean onKeyDown(int paramInt, KeyEvent paramKeyEvent)
+  public boolean onOptionsItemSelected(MenuItem paramMenuItem)
   {
-    if (paramInt == 82)
+    switch (paramMenuItem.getItemId())
     {
-      l();
-      return true;
     }
-    return super.onKeyDown(paramInt, paramKeyEvent);
+    do
+    {
+      return super.onOptionsItemSelected(paramMenuItem);
+      k();
+      return true;
+      paramMenuItem = O.obtainMessage(5, 3, 0);
+      O.sendMessage(paramMenuItem);
+      return true;
+      f();
+      return true;
+      new ak(this, L, new v(this)).a();
+      return true;
+    } while (G != 1);
+    b(false);
+    return true;
   }
   
   protected void onPause()
   {
     super.onPause();
-    if (T != null) {
-      T.c();
+  }
+  
+  public boolean onPrepareOptionsMenu(Menu paramMenu)
+  {
+    if (G == 1)
+    {
+      paramMenu.findItem(2131625665).setVisible(true);
+      paramMenu.findItem(2131625666).setVisible(false);
+    }
+    for (;;)
+    {
+      return super.onPrepareOptionsMenu(paramMenu);
+      paramMenu.findItem(2131625665).setVisible(false);
+      paramMenu.findItem(2131625666).setVisible(true);
     }
   }
   
   public void onProgressChanged(SeekBar paramSeekBar, int paramInt, boolean paramBoolean)
   {
-    w.setText("" + paramInt + "%");
-    H = paramInt;
+    o.setText("" + paramInt + "%");
+    A = paramInt;
   }
   
   protected void onResume()
   {
     super.onResume();
-    if (T != null) {
-      T.b();
-    }
+  }
+  
+  protected void onStart()
+  {
+    super.onStart();
+    getSupportActionBar().setHomeAsUpIndicator(at.a(this).b(g(), 2131558745));
   }
   
   public void onStartTrackingTouch(SeekBar paramSeekBar) {}
   
   public void onStopTrackingTouch(SeekBar paramSeekBar)
   {
-    e(H);
+    e(A);
   }
 }
 

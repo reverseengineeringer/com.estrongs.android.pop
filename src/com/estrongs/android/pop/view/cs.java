@@ -1,21 +1,16 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.ui.pcs.n;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.util.ap;
 
 class cs
-  implements n
+  implements Runnable
 {
-  cs(FileExplorerActivity paramFileExplorerActivity) {}
+  cs(cr paramcr) {}
   
-  public void a(boolean paramBoolean, String paramString1, String paramString2)
+  public void run()
   {
-    if ((paramBoolean) && (bd.b(paramString2)))
-    {
-      a.m.e(System.currentTimeMillis());
-      a.y();
-    }
+    ap.a(false);
+    FileExplorerActivity.z(a.b);
   }
 }
 

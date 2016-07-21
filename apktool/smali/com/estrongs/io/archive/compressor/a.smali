@@ -1,5 +1,5 @@
 .class public abstract Lcom/estrongs/io/archive/compressor/a;
-.super Lcom/estrongs/io/archive/h;
+.super Lcom/estrongs/io/archive/i;
 
 
 # instance fields
@@ -10,7 +10,7 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/estrongs/io/archive/h;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/estrongs/io/archive/i;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method

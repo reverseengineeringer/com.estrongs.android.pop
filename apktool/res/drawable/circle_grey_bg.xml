@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="oval" android:useLevel="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/transparent" />
+    <stroke android:width="@dimen/dp_1" android:color="@color/player_btn_color" />
+    <size android:height="@dimen/dp_40" android:width="@dimen/dp_40" />
+</shape>

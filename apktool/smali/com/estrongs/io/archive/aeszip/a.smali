@@ -795,7 +795,7 @@
 
     move-result-object v8
 
-    invoke-static {v0, v8}, Lcom/estrongs/android/util/f;->a([B[B)[B
+    invoke-static {v0, v8}, Lcom/estrongs/android/util/e;->a([B[B)[B
 
     move-result-object v0
 
@@ -812,7 +812,7 @@
 
     array-length v1, v0
 
-    invoke-static {v0, v1}, Lcom/estrongs/android/util/f;->a([BI)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/e;->a([BI)Ljava/lang/String;
 
     move-result-object v0
 

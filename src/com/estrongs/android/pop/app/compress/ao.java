@@ -1,33 +1,21 @@
 package com.estrongs.android.pop.app.compress;
 
-import android.view.View;
-import android.widget.RadioGroup;
-import android.widget.RadioGroup.OnCheckedChangeListener;
+import android.widget.EditText;
+import com.estrongs.android.d.h;
 
 class ao
-  implements RadioGroup.OnCheckedChangeListener
+  implements h
 {
-  ao(ai paramai) {}
+  ao(an paraman) {}
   
-  public void onCheckedChanged(RadioGroup paramRadioGroup, int paramInt)
+  public void a(boolean paramBoolean1, boolean paramBoolean2)
   {
-    if (paramRadioGroup.getCheckedRadioButtonId() == 2131361861)
+    if (paramBoolean1)
     {
-      ai.j(a).setVisibility(8);
-      ai.k(a).setVisibility(8);
-    }
-    do
-    {
+      aj.h(a.a);
       return;
-      if (paramRadioGroup.getCheckedRadioButtonId() == 2131361860)
-      {
-        ai.j(a).setVisibility(0);
-        ai.k(a).setVisibility(8);
-        return;
-      }
-    } while (paramRadioGroup.getCheckedRadioButtonId() != 2131361859);
-    ai.j(a).setVisibility(0);
-    ai.k(a).setVisibility(0);
+    }
+    aj.b(a.a).requestFocus();
   }
 }
 

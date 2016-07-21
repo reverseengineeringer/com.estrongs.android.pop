@@ -42,20 +42,6 @@
 
 
 # virtual methods
-.method public a(I)V
-    .locals 1
-
-    iget v0, p0, Lcom/estrongs/android/widget/ThumbContentViewSwitcher;->e:I
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/ThumbContentViewSwitcher;->c(I)V
-
-    invoke-virtual {p0, p1}, Lcom/estrongs/android/widget/ThumbContentViewSwitcher;->c(I)V
-
-    invoke-super {p0, p1}, Lcom/estrongs/android/widget/ContentViewSwitcher;->a(I)V
-
-    return-void
-.end method
-
 .method protected a()Z
     .locals 1
 
@@ -125,17 +111,17 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/android/ui/theme/al;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
+    invoke-static {v2}, Lcom/estrongs/android/ui/theme/at;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/estrongs/android/ui/theme/al;->h()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v2}, Lcom/estrongs/android/ui/theme/at;->h()Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/d/a;->a(Landroid/view/View;)Landroid/graphics/Bitmap;
+    invoke-static {v0}, Lcom/estrongs/android/ui/d/g;->a(Landroid/view/View;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
@@ -143,7 +129,7 @@
 
     if-eqz v2, :cond_2
 
-    invoke-static {v2, p2}, Lcom/estrongs/android/ui/d/a;->a(Landroid/graphics/Bitmap;Z)Landroid/graphics/Bitmap;
+    invoke-static {v2, p2}, Lcom/estrongs/android/ui/d/g;->a(Landroid/graphics/Bitmap;Z)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -172,7 +158,7 @@
     goto :goto_0
 .end method
 
-.method public c(I)V
+.method public b(I)V
     .locals 3
 
     :try_start_0
@@ -206,7 +192,7 @@
     goto :goto_0
 .end method
 
-.method public l()V
+.method public i()V
     .locals 2
 
     const/4 v0, 0x0
@@ -220,7 +206,7 @@
 
     if-ge v0, v1, :cond_0
 
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/ThumbContentViewSwitcher;->c(I)V
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/ThumbContentViewSwitcher;->b(I)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -256,5 +242,19 @@
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
     :cond_0
+    return-void
+.end method
+
+.method public setCurrentScreen(I)V
+    .locals 1
+
+    iget v0, p0, Lcom/estrongs/android/widget/ThumbContentViewSwitcher;->e:I
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/ThumbContentViewSwitcher;->b(I)V
+
+    invoke-virtual {p0, p1}, Lcom/estrongs/android/widget/ThumbContentViewSwitcher;->b(I)V
+
+    invoke-super {p0, p1}, Lcom/estrongs/android/widget/ContentViewSwitcher;->setCurrentScreen(I)V
+
     return-void
 .end method

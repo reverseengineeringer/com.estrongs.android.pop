@@ -1,51 +1,39 @@
 package android.support.v4.view.a;
 
-import android.os.Build.VERSION;
-import android.os.Bundle;
-import java.util.List;
-
 public class h
 {
-  private static final i a = new l();
-  private final Object b;
+  public static final h a = new h(1, null);
+  public static final h b = new h(2, null);
+  public static final h c = new h(4, null);
+  public static final h d = new h(8, null);
+  public static final h e = new h(16, null);
+  public static final h f = new h(32, null);
+  public static final h g = new h(64, null);
+  public static final h h = new h(128, null);
+  public static final h i = new h(256, null);
+  public static final h j = new h(512, null);
+  public static final h k = new h(1024, null);
+  public static final h l = new h(2048, null);
+  public static final h m = new h(4096, null);
+  public static final h n = new h(8192, null);
+  public static final h o = new h(16384, null);
+  public static final h p = new h(32768, null);
+  public static final h q = new h(65536, null);
+  public static final h r = new h(131072, null);
+  public static final h s = new h(262144, null);
+  public static final h t = new h(524288, null);
+  public static final h u = new h(1048576, null);
+  public static final h v = new h(2097152, null);
+  private final Object w;
   
-  static
+  public h(int paramInt, CharSequence paramCharSequence)
   {
-    if (Build.VERSION.SDK_INT >= 16)
-    {
-      a = new j();
-      return;
-    }
+    this(g.v().a(paramInt, paramCharSequence));
   }
   
-  public h()
+  private h(Object paramObject)
   {
-    b = a.a(this);
-  }
-  
-  public h(Object paramObject)
-  {
-    b = paramObject;
-  }
-  
-  public a a(int paramInt)
-  {
-    return null;
-  }
-  
-  public Object a()
-  {
-    return b;
-  }
-  
-  public List<a> a(String paramString, int paramInt)
-  {
-    return null;
-  }
-  
-  public boolean a(int paramInt1, int paramInt2, Bundle paramBundle)
-  {
-    return false;
+    w = paramObject;
   }
 }
 

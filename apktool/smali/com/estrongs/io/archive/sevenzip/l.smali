@@ -1,5 +1,5 @@
 .class Lcom/estrongs/io/archive/sevenzip/l;
-.super Lcom/estrongs/android/ui/dialog/ix;
+.super Lcom/estrongs/android/ui/dialog/jh;
 
 
 # instance fields
@@ -12,7 +12,7 @@
 
     iput-object p1, p0, Lcom/estrongs/io/archive/sevenzip/l;->a:Lcom/estrongs/io/archive/sevenzip/k;
 
-    invoke-direct {p0, p2, p3, p4}, Lcom/estrongs/android/ui/dialog/ix;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/a/a;)V
+    invoke-direct {p0, p2, p3, p4}, Lcom/estrongs/android/ui/dialog/jh;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/a/a;)V
 
     return-void
 .end method
@@ -44,7 +44,7 @@
 
     iget-object v0, v0, Lcom/estrongs/io/archive/sevenzip/h;->b:Landroid/app/Activity;
 
-    const v1, 0x7f0b0190
+    const v1, 0x7f08029e
 
     const/4 v2, 0x1
 

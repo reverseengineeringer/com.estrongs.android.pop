@@ -1,18 +1,19 @@
 package com.estrongs.android.pop.app;
 
-import com.estrongs.android.ui.d.d;
+import com.estrongs.android.pop.utils.ck;
+import com.estrongs.fs.h;
+import java.util.List;
 
 class es
-  extends d
+  implements ck
 {
-  es(eq parameq, String paramString)
-  {
-    super(paramString);
-  }
+  es(er paramer) {}
   
-  public int a()
+  public void a(List<h> paramList)
   {
-    return 20;
+    a.a.u();
+    paramList = a.a.B();
+    a.a.a(paramList);
   }
 }
 

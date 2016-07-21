@@ -6,15 +6,16 @@ import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
-import com.estrongs.android.ui.e.io;
+import com.estrongs.android.ui.e.im;
 import com.estrongs.android.view.a.a;
 
 public class ESScrollMenuView
   extends ESScrollView
 {
-  io a;
+  im a;
   private Context c;
-  private int d = 2131362219;
+  private boolean d;
+  private int e = 2131624809;
   
   public ESScrollMenuView(Context paramContext)
   {
@@ -42,21 +43,17 @@ public class ESScrollMenuView
     a = null;
   }
   
-  public void a(int paramInt)
-  {
-    d = paramInt;
-  }
-  
   public void a(a parama, MenuItem.OnMenuItemClickListener paramOnMenuItemClickListener)
   {
     LinearLayout.LayoutParams localLayoutParams;
     if (a == null)
     {
-      a = new io(c, true);
+      a = new im(c, true);
+      a.b(d);
       localLayoutParams = new LinearLayout.LayoutParams(-1, -2);
-      View localView = findViewById(d);
+      View localView = findViewById(e);
       if (localView == null) {
-        break label79;
+        break label90;
       }
       ((LinearLayout)localView).addView(a.a(), localLayoutParams);
     }
@@ -64,9 +61,19 @@ public class ESScrollMenuView
     {
       a.a(parama.a(paramOnMenuItemClickListener), true);
       return;
-      label79:
+      label90:
       addView(a.a(), localLayoutParams);
     }
+  }
+  
+  public void setPanelViewId(int paramInt)
+  {
+    e = paramInt;
+  }
+  
+  public void setShowIcon(boolean paramBoolean)
+  {
+    d = paramBoolean;
   }
 }
 

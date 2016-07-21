@@ -1,18 +1,17 @@
 package com.estrongs.android.ui.e;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.app.LocalFileSharingActivity;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.pop.app.PopAudioPlayer;
 
 class cg
-  implements MenuItem.OnMenuItemClickListener
+  implements View.OnClickListener
 {
-  cg(cf paramcf, LocalFileSharingActivity paramLocalFileSharingActivity) {}
+  cg(cb paramcb) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void onClick(View paramView)
   {
-    a.c();
-    return false;
+    cb.a(a).a(1);
   }
 }
 

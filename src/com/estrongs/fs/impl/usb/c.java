@@ -1,7 +1,7 @@
 package com.estrongs.fs.impl.usb;
 
 import com.estrongs.fs.a;
-import com.estrongs.fs.m;
+import com.estrongs.fs.w;
 
 public class c
   extends a
@@ -25,7 +25,7 @@ public class c
     }
     size = paramc.f();
     if (paramc.a()) {}
-    for (type = m.a;; type = m.b)
+    for (type = w.a;; type = w.b)
     {
       lastModified = paramc.i();
       setName(paramString);

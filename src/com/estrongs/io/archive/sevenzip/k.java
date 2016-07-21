@@ -1,6 +1,6 @@
 package com.estrongs.io.archive.sevenzip;
 
-import com.estrongs.android.ui.dialog.ix;
+import com.estrongs.android.ui.dialog.jh;
 import com.estrongs.fs.b.ad;
 
 class k

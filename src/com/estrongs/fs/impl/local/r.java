@@ -1,16 +1,41 @@
 package com.estrongs.fs.impl.local;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-
 public class r
 {
-  public Process a = null;
-  public BufferedWriter b = null;
-  public BufferedReader c = null;
-  public boolean d = false;
-  public boolean e = false;
-  public int f = 0;
+  public int a = -1;
+  public int b = -1;
+  public int c = -1;
+  private String d = "";
+  private boolean e = false;
+  
+  private r(String paramString)
+  {
+    d = paramString;
+  }
+  
+  private void a(int paramInt1, int paramInt2, int paramInt3)
+  {
+    a = paramInt1;
+    b = paramInt2;
+    c = paramInt3;
+    try
+    {
+      notify();
+      return;
+    }
+    finally {}
+  }
+  
+  private void a(boolean paramBoolean)
+  {
+    e = paramBoolean;
+    try
+    {
+      notify();
+      return;
+    }
+    finally {}
+  }
 }
 
 /* Location:

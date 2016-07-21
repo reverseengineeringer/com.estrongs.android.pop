@@ -30,21 +30,21 @@
 
     iget-object v0, p0, Lcom/estrongs/fs/impl/adb/g;->a:Lcom/estrongs/old/fs/impl/a/a;
 
-    invoke-virtual {v0}, Lcom/estrongs/old/fs/impl/a/a;->getFileType()Lcom/estrongs/fs/m;
+    invoke-virtual {v0}, Lcom/estrongs/old/fs/impl/a/a;->getFileType()Lcom/estrongs/fs/w;
 
     move-result-object v0
 
-    sget-object v1, Lcom/estrongs/fs/m;->a:Lcom/estrongs/fs/m;
+    sget-object v1, Lcom/estrongs/fs/w;->a:Lcom/estrongs/fs/w;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/fs/m;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Lcom/estrongs/fs/w;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/estrongs/fs/m;->P:Lcom/estrongs/fs/m;
+    sget-object v0, Lcom/estrongs/fs/w;->O:Lcom/estrongs/fs/w;
 
-    invoke-virtual {p0, v0}, Lcom/estrongs/fs/impl/adb/g;->setFileType(Lcom/estrongs/fs/m;)V
+    invoke-virtual {p0, v0}, Lcom/estrongs/fs/impl/adb/g;->setFileType(Lcom/estrongs/fs/w;)V
 
     :cond_0
     return-void
@@ -64,12 +64,12 @@
     return-wide v0
 .end method
 
-.method protected doGetFileType()Lcom/estrongs/fs/m;
+.method protected doGetFileType()Lcom/estrongs/fs/w;
     .locals 1
 
     iget-object v0, p0, Lcom/estrongs/fs/impl/adb/g;->a:Lcom/estrongs/old/fs/impl/a/a;
 
-    invoke-virtual {v0}, Lcom/estrongs/old/fs/impl/a/a;->getFileType()Lcom/estrongs/fs/m;
+    invoke-virtual {v0}, Lcom/estrongs/old/fs/impl/a/a;->getFileType()Lcom/estrongs/fs/w;
 
     move-result-object v0
 
@@ -88,10 +88,10 @@
     return v0
 .end method
 
-.method public getFileType()Lcom/estrongs/fs/m;
+.method public getFileType()Lcom/estrongs/fs/w;
     .locals 1
 
-    invoke-super {p0}, Lcom/estrongs/fs/a;->getFileType()Lcom/estrongs/fs/m;
+    invoke-super {p0}, Lcom/estrongs/fs/a;->getFileType()Lcom/estrongs/fs/w;
 
     move-result-object v0
 

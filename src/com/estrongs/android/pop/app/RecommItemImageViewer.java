@@ -15,7 +15,7 @@ import com.estrongs.android.pop.esclasses.ESActivity;
 import com.estrongs.android.pop.esclasses.ESImageView;
 import com.estrongs.android.pop.view.utils.n;
 import com.estrongs.android.pop.view.utils.v;
-import com.estrongs.android.util.y;
+import com.estrongs.android.util.aa;
 import com.estrongs.android.widget.RealViewSwitcher;
 
 public class RecommItemImageViewer
@@ -30,7 +30,7 @@ public class RecommItemImageViewer
   private SparseArray<ImageView> g = new SparseArray();
   private SparseArray<ImageView> h = new SparseArray();
   private int i;
-  private Handler j = new kp(this);
+  private Handler j = new le(this);
   
   private void a()
   {
@@ -63,14 +63,13 @@ public class RecommItemImageViewer
   {
     int m = 0;
     super.onCreate(paramBundle);
-    requestWindowFeature(1);
     d = getIntent().getIntExtra("position", -1);
     e = getIntent().getIntExtra("index", -1);
     c = n.b().d()[d];
     i = e;
-    setContentView(2130903235);
+    setContentView(2130903401);
     f = n.b().a(j);
-    paramBundle = (LinearLayout)findViewById(2131362692);
+    paramBundle = (LinearLayout)findViewById(2131625460);
     int k = 0;
     ESImageView localESImageView;
     if (k < c.n.length)
@@ -82,7 +81,7 @@ public class RecommItemImageViewer
       }
       localESImageView.setLayoutParams(localLayoutParams);
       if (k == i) {
-        localESImageView.setImageResource(2130837612);
+        localESImageView.setImageResource(2130837853);
       }
       for (;;)
       {
@@ -90,13 +89,13 @@ public class RecommItemImageViewer
         paramBundle.addView(localESImageView);
         k += 1;
         break;
-        localESImageView.setImageResource(2130837613);
+        localESImageView.setImageResource(2130837854);
       }
     }
-    a = ((RealViewSwitcher)findViewById(2131362412));
-    a.c(true);
-    paramBundle = new ko(this);
-    a.a(paramBundle);
+    a = ((RealViewSwitcher)findViewById(2131625024));
+    a.a(true);
+    paramBundle = new ld(this);
+    a.setOnScreenSwitchListener(paramBundle);
     k = m;
     if (k < c.n.length)
     {
@@ -104,7 +103,7 @@ public class RecommItemImageViewer
       localESImageView = new ESImageView(this);
       localESImageView.setLayoutParams(b);
       if (paramBundle == null) {
-        localESImageView.setImageResource(2130837998);
+        localESImageView.setImageResource(2130838335);
       }
       for (;;)
       {
@@ -115,7 +114,7 @@ public class RecommItemImageViewer
         localESImageView.setImageBitmap(paramBundle);
       }
     }
-    a.a(i);
+    a.setCurrentScreen(i);
   }
   
   public boolean onKeyDown(int paramInt, KeyEvent paramKeyEvent)
@@ -132,11 +131,11 @@ public class RecommItemImageViewer
       if (paramInt == 21)
       {
         if (i > 0) {
-          a.b(i - 1);
+          a.a(i - 1);
         }
       }
       else if ((paramInt == 22) && (i < a.getChildCount() - 1)) {
-        a.b(i + 1);
+        a.a(i + 1);
       }
     }
   }

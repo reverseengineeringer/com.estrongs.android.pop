@@ -1,29 +1,40 @@
 package com.estrongs.android.ui.e;
 
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.j.c;
+import com.estrongs.android.pop.app.analysis.a;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.view.WebViewWrapper;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.view.cr;
 
 class bm
   implements MenuItem.OnMenuItemClickListener
 {
-  bm(w paramw) {}
+  bm(m paramm) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = a.k.y();
-    if ((paramMenuItem != null) && ((paramMenuItem instanceof WebViewWrapper)))
-    {
-      paramMenuItem = ((WebViewWrapper)paramMenuItem).c();
-      Intent localIntent = new Intent("android.intent.action.VIEW");
-      localIntent.setData(Uri.parse(paramMenuItem));
-      a.b.startActivity(localIntent);
+    Object localObject = m.a(a).O();
+    paramMenuItem = "";
+    if (localObject != null) {
+      paramMenuItem = ((cr)localObject).c();
     }
-    return false;
+    a.a().a(paramMenuItem, null);
+    try
+    {
+      localObject = m.a(a).at();
+      if (ap.ai(paramMenuItem)) {
+        ((c)localObject).a("App_analysis");
+      } else if (ap.bl(paramMenuItem)) {
+        ((c)localObject).a("Sdcard_analysis");
+      }
+    }
+    catch (Exception paramMenuItem)
+    {
+      paramMenuItem.printStackTrace();
+    }
+    return true;
   }
 }
 

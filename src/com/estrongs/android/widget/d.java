@@ -1,19 +1,8 @@
 package com.estrongs.android.widget;
 
-import android.view.View;
-import com.estrongs.fs.h;
-
 public abstract interface d
 {
-  public abstract View a();
-  
-  public abstract View a(h paramh);
-  
-  public abstract void a(e parame, int paramInt);
-  
-  public abstract boolean a(e parame);
-  
-  public abstract e b(View paramView);
+  public abstract void a(ControllableAppBarLayout.State paramState);
 }
 
 /* Location:

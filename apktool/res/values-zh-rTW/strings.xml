@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_info_remaining_charging_time">"充電預估: "</string>
+    <string name="battery_info_remaining_discharging_time">"續航時間: "</string>
+    <string name="charging_screen_ad_delete">刪除</string>
+    <string name="charging_screen_ad_enter">開啟</string>
+    <string name="charging_screen_charging_complete">充電完成</string>
+    <string name="charging_screen_slide_to_enter">滑動以解鎖</string>
+    <string name="common_time_hour">時</string>
+    <string name="common_time_minute">分</string>
+    <string name="duappd_ad_item_action_btn">免費</string>
+    <string name="duapps_ad_data_empty">請稍後再查詢。</string>
+    <string name="duapps_ad_empty_refresh_btn_check">檢查</string>
+    <string name="duapps_ad_empty_title">無</string>
+    <string name="duapps_ad_footer_end">沒有更多了</string>
+    <string name="duapps_ad_loading">加載中…</string>
+    <string name="duapps_ad_loading_switch_google_play_des">跳轉到Google Play, 請稍後…</string>
+    <string name="duapps_ad_no_apps_refresh_button_text">刷新</string>
+    <string name="duapps_ad_no_browser_play">無瀏覽器或Google Play，無法跳轉</string>
+    <string name="duapps_ad_nonetwork_message">沒有網路連線。請檢查設定並再試一次。</string>
+    <string name="duapps_ad_pull_refresh">上拉加載更多</string>
+    <string name="duscenerysdk_ad_no_browser_play">無瀏覽器或Google Play，無法跳轉</string>
+    <string name="lock_screen_setting">設定</string>
+    <string name="lock_screen_switch">智慧充電</string>
+    <string name="lockscreen_charge_boost_time">充電速度總共加快 %1$d 分鐘</string>
+    <string name="scenery_card_antivirus_button">安全掃描</string>
+    <string name="scenery_card_antivirus_content">您的手機有 &lt;font color=#3080F0>%1$s&lt;/font> 個安全風險</string>
+    <string name="scenery_card_antivirus_title">安全風險</string>
+    <string name="scenery_card_battery_button">立即省電</string>
+    <string name="scenery_card_battery_content">找到 &lt;font color=#3080F0>%1$s&lt;/font> 個耗電的應用程式。使用點心省電節省電力並延長待機時間&lt;font color=#3080F0>%2$s 小時 %3$s 分&lt;/font></string>
+    <string name="scenery_card_battery_title">耗電情況</string>
+    <string name="scenery_card_booster_button">立即加速</string>
+    <string name="scenery_card_booster_content">&lt;font color=#3080F0>%1$s&lt;/font> 個執拗的應用程式正在拖慢手機的速度</string>
+    <string name="scenery_card_booster_title">裝置執行緩慢</string>
+    <string name="scenery_card_cleaner_button">立即修正</string>
+    <string name="scenery_card_cleaner_content">手機裡找到 &lt;font color=#3080F0>%1$s&lt;/font> 的垃圾檔案</string>
+    <string name="scenery_card_cleaner_title">快速清理</string>
+    <string name="scenery_card_es_button">立即清理</string>
+    <string name="scenery_card_es_content">剩餘內部儲存空間已減少 &lt;font color=#3080F0>%1$s&lt;/font></string>
+    <string name="scenery_card_es_title">磁碟清理</string>
+    <string name="scenery_card_photowonder_button">立即美化</string>
+    <string name="scenery_card_photowonder_content">您有 &lt;font color=#3080F0>%1$s&lt;/font> 張相片可以變得更精美！</string>
+    <string name="scenery_card_photowonder_title">圖片美化</string>
+    <string name="scenery_charge_dialog_button_text">取得</string>
+    <string name="scenery_charge_dialog_content">過度充電 %1$d 分鐘&lt;font color=#FF8132>傷害電池&lt;/font>。利用&lt;b>點心省電&lt;/b>來保護電池 .</string>
+    <string name="scenery_charge_dialog_title">健康充電秘訣</string>
+    <string name="scenery_disk_usage_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_disk_usage_dialog_content">您的手機儲存空間在過去 &lt;font color=#FF8132>%2$s 天&lt;/font>減少了 &lt;font color=#FF8132>%1$sMB&lt;/font>.</string>
+    <string name="scenery_disk_usage_dialog_title">清理磁碟</string>
+    <string name="scenery_take_photo_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_take_photo_dialog_content">相片不夠精美嗎？&lt;b>PhotoWonder&lt;/b> 的&lt;font color=#2274E6>電影濾鏡&lt;/font>可以助你一臂之力！</string>
+    <string name="scenery_take_photo_dialog_title">美化編輯</string>
+    <string name="scenery_uninstall_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_uninstall_dialog_content">%1$s 剩下一些&lt;font color=#FF8132>殘留的垃圾檔案&lt;/font>，使用 &lt;b>DU Speed Booster&lt;/b> 來擺脫它們！</string>
+    <string name="scenery_uninstall_dialog_title">發現殘留檔案</string>
+    <string name="screen_lock_charging_boosted_time">充電速度加快 %1$d 分鐘</string>
+    <string name="toolbox_no_apps_refresh_button_text">刷新</string>
+    <string name="toolbox_nonetwork_tips">按一下以啟用網路，取得更多免費應用程式。</string>
+    <string name="toolbox_v2_btn_more">更多</string>
+    <string name="toolbox_v2_coin_balance">餘額：</string>
+    <string name="toolbox_v2_data_empty">請稍後再查詢。</string>
+    <string name="toolbox_v2_list_item_btn_free">免費</string>
+    <string name="v2_toolbox_empty_title">無</string>
+    <string name="toolbox_v2_network_mobile">行動數據</string>
+    <string name="toolbox_v2_network_wifi">Wi-Fi</string>
+    <string name="toolbox_v2_nomore_content">沒有更多了</string>
+    <string name="toolbox_v2_pull_refresh">下拉以重新整理</string>
+</resources>

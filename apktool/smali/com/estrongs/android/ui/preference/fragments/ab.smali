@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/preference/Preference$OnPreferenceChangeListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;
+.field final synthetic a:Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)V
+.method constructor <init>(Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/preference/fragments/ab;->a:Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;
+    iput-object p1, p0, Lcom/estrongs/android/ui/preference/fragments/ab;->a:Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,26 +22,14 @@
 
 
 # virtual methods
-.method public onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
+.method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/ab;->a:Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;
+    iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/ab;->a:Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->a(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)Landroid/preference/Preference$OnPreferenceChangeListener;
+    invoke-static {v0}, Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;->f(Lcom/estrongs/android/ui/preference/fragments/DirectoryPreferenceFragment;)V
 
-    move-result-object v0
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    invoke-interface {v0, p1, p2}, Landroid/preference/Preference$OnPreferenceChangeListener;->onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/ab;->a:Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
-
-    const/4 v0, 0x1
-
-    return v0
+    return-void
 .end method

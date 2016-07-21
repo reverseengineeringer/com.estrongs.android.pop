@@ -1,42 +1,24 @@
 .class public Lcom/estrongs/android/util/v;
-.super Ljava/lang/Object;
-
-
-# static fields
-.field static a:Ljava/io/PrintWriter;
+.super Lcom/estrongs/android/util/u;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
-    const/4 v0, 0x0
-
-    sput-object v0, Lcom/estrongs/android/util/v;->a:Ljava/io/PrintWriter;
+    invoke-direct {p0}, Lcom/estrongs/android/util/u;-><init>()V
 
     return-void
 .end method
 
-.method public static declared-synchronized a(Ljava/lang/String;)V
+
+# virtual methods
+.method protected a(Ljava/io/File;)Ljava/lang/String;
     .locals 1
 
-    const-class v0, Lcom/estrongs/android/util/v;
+    invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
-    monitor-enter v0
+    move-result-object v0
 
-    monitor-exit v0
-
-    return-void
-.end method
-
-.method public static declared-synchronized a(Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 1
-
-    const-class v0, Lcom/estrongs/android/util/v;
-
-    monitor-enter v0
-
-    monitor-exit v0
-
-    return-void
+    return-object v0
 .end method

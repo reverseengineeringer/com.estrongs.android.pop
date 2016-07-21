@@ -1,15 +1,19 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.view.aw;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.view.cr;
 
 class ba
-  implements Runnable
+  implements View.OnClickListener
 {
-  ba(az paramaz, aw paramaw) {}
+  ba(FileExplorerActivity paramFileExplorerActivity, cr paramcr, ci paramci) {}
   
-  public void run()
+  public void onClick(View paramView)
   {
-    a.g();
+    a.ap();
+    b.dismiss();
   }
 }
 

@@ -35,7 +35,7 @@
 
     iget-object v0, v0, Lcom/estrongs/android/pop/app/dj;->a:Lcom/estrongs/android/pop/app/ImageCommentActivity;
 
-    const v1, 0x7f0a033b
+    const v1, 0x7f0e0595
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/ImageCommentActivity;->findViewById(I)Landroid/view/View;
 

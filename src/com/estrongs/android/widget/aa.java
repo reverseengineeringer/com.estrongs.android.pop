@@ -1,22 +1,21 @@
 package com.estrongs.android.widget;
 
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.view.utils.ac;
-import com.estrongs.android.ui.dialog.gs;
-import com.estrongs.android.ui.dialog.gx;
-import com.estrongs.fs.util.a.a;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class aa
-  implements gx
+  implements DialogInterface.OnClickListener
 {
-  aa(z paramz, gs paramgs) {}
+  aa(f paramf) {}
   
-  public void a(int paramInt)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    ad.a(g.d(b.a)).a(paramInt);
-    a locala = ac.a(paramInt % 4, paramInt / 4);
-    b.a.a(locala);
-    a.dismiss();
+    try
+    {
+      paramDialogInterface.dismiss();
+      return;
+    }
+    catch (Exception paramDialogInterface) {}
   }
 }
 

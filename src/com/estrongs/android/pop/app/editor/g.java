@@ -19,23 +19,23 @@ class g
       super.handleMessage(paramMessage);
       return;
     case 2: 
-      paramMessage = (am)obj;
+      paramMessage = (ae)obj;
       PopNoteEditor.a(a).setText(a);
       return;
     case 1: 
-      paramMessage = (am)obj;
+      paramMessage = (ae)obj;
       PopNoteEditor.a(a).setText(a);
       PopNoteEditor.b(a).scrollTo(0, b);
       return;
     case 0: 
-      paramMessage = (am)obj;
+      paramMessage = (ae)obj;
       i = b;
       PopNoteEditor.b(a).scrollTo(0, i);
       PopNoteEditor.a(a).setText(a);
       PopNoteEditor.b(a).post(new h(this, i));
       return;
     case 3: 
-      paramMessage = (am)obj;
+      paramMessage = (ae)obj;
       PopNoteEditor.c(a).setText(a);
       PopNoteEditor.c(a).requestFocus();
       if ((a == null) || (a.length() <= 10))

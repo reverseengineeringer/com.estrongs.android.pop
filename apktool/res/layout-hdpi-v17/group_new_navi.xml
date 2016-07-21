@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/transparent" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/dp_50">
+        <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/indicator_icon" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="20.0dip" android:scaleType="centerInside" />
+        <TextView android:textSize="@dimen/dp_15" android:textColor="@color/c_cc000000" android:gravity="center_vertical" android:id="@id/label" android:paddingLeft="@dimen/dp_15" android:layout_width="@dimen/dp_0" android:layout_height="@dimen/dp_40" android:layout_weight="1.0" android:textDirection="ltr" />
+        <com.estrongs.android.pop.esclasses.ESImageView android:id="@id/indicator" android:layout_width="@dimen/dp_12" android:layout_height="@dimen/dp_12" android:layout_marginRight="@dimen/dp_15" android:scaleType="centerInside" />
+        <TextView android:textSize="@dimen/dp_12" android:textColor="@color/white" android:gravity="center|right" android:id="@id/txt_unlock" android:background="@drawable/unlock_blue_bg" android:padding="@dimen/dp_5" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dp_15" android:text="@string/unlock" android:textDirection="ltr" />
+    </LinearLayout>
+</LinearLayout>

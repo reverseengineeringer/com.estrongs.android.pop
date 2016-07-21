@@ -1,47 +1,23 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.widget.EditText;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.at;
-import com.estrongs.android.util.bd;
-import com.estrongs.fs.a.b;
-import java.io.File;
+import android.content.Intent;
+import android.preference.PreferenceScreen;
 
 class hr
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
-  hr(hp paramhp, EditText paramEditText1, EditText paramEditText2) {}
+  hr(PopPreferenceActivity paramPopPreferenceActivity) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void run()
   {
-    String str1 = a.getText().toString();
-    String str2 = b.getText().toString();
-    paramInt = new at().a(c.a, str1, str2);
-    if (paramInt == 0)
+    Object localObject = a.getIntent();
+    if (localObject != null)
     {
-      str1 = new File(str1).getAbsolutePath();
-      if (bd.b(str1))
+      localObject = ((Intent)localObject).getStringExtra("category");
+      if (localObject != null)
       {
-        if (str1.endsWith("/"))
-        {
-          str1 = str1 + "*";
-          b.a().a(str1);
-        }
-      }
-      else {
-        ag.a(c.a, 2131427503, 1);
-      }
-    }
-    for (;;)
-    {
-      paramDialogInterface.dismiss();
-      return;
-      str1 = str1 + "/*";
-      break;
-      if (paramInt < 0) {
-        ag.a(c.a, 2131427504, 1);
+        localObject = (PreferenceScreen)a.findPreference((CharSequence)localObject);
+        a.setPreferenceScreen((PreferenceScreen)localObject);
       }
     }
   }

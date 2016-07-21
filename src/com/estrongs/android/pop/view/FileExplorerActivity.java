@@ -2,6 +2,7 @@ package com.estrongs.android.pop.view;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.NotificationManager;
 import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
@@ -14,7 +15,6 @@ import android.content.res.Resources;
 import android.content.res.Resources.NotFoundException;
 import android.gesture.Gesture;
 import android.graphics.Bitmap;
-import android.graphics.LightingColorFilter;
 import android.graphics.Rect;
 import android.net.LocalSocket;
 import android.net.Uri;
@@ -22,73 +22,61 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.provider.Settings.System;
-import android.text.Editable;
+import android.support.v7.view.ActionMode;
 import android.text.Html;
-import android.text.TextWatcher;
-import android.util.DisplayMetrics;
 import android.util.SparseArray;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnKeyListener;
+import android.view.ViewGroup.LayoutParams;
 import android.view.ViewParent;
-import android.view.Window;
 import android.view.WindowManager.BadTokenException;
-import android.view.WindowManager.LayoutParams;
-import android.view.animation.AccelerateInterpolator;
-import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
-import android.view.animation.DecelerateInterpolator;
+import android.view.animation.AnimationUtils;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
-import android.view.inputmethod.InputMethodManager;
 import android.webkit.WebIconDatabase;
-import android.widget.AdapterView.OnItemLongClickListener;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.FrameLayout.LayoutParams;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.LinearLayout.LayoutParams;
-import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 import com.estrongs.android.appinfo.AppFolderInfoManager;
 import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.pop.app.a.an;
+import com.estrongs.android.pop.app.SaveDataService;
 import com.estrongs.android.pop.esclasses.ESAbsToolbarActivity;
 import com.estrongs.android.pop.spfs.SPFileObject;
+import com.estrongs.android.pop.utils.cu;
 import com.estrongs.android.pop.view.utils.AppRunner;
-import com.estrongs.android.ui.addressbar.AdvancedAddressBar;
 import com.estrongs.android.ui.dialog.ProgressDialog;
 import com.estrongs.android.ui.dialog.ProgressDialog.ProgressStyle;
 import com.estrongs.android.ui.dialog.VerifyPasswordDialog;
-import com.estrongs.android.ui.dialog.VerifyPasswordDialog.DialogType;
+import com.estrongs.android.ui.dialog.ld;
 import com.estrongs.android.ui.drag.DragActionZone;
 import com.estrongs.android.ui.drag.DragLayer;
-import com.estrongs.android.ui.e.in;
-import com.estrongs.android.ui.e.jb;
+import com.estrongs.android.ui.e.ik;
+import com.estrongs.android.ui.e.jz;
 import com.estrongs.android.ui.guesture.ESGestureCtrl;
 import com.estrongs.android.ui.guesture.ESGesturePanel;
 import com.estrongs.android.ui.notification.ChromeCastPlayerNotificationHelper;
-import com.estrongs.android.ui.theme.al;
 import com.estrongs.android.util.TypedMap;
-import com.estrongs.android.util.ak;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.be;
+import com.estrongs.android.util.bg;
+import com.estrongs.android.util.bk;
 import com.estrongs.android.view.WebViewWrapper;
-import com.estrongs.android.view.dj;
+import com.estrongs.android.view.bx;
+import com.estrongs.android.view.dv;
+import com.estrongs.android.view.eu;
+import com.estrongs.android.view.fp;
 import com.estrongs.android.widget.ThumbContentViewSwitcher;
+import com.estrongs.fs.util.j;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -96,283 +84,308 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.TimeZone;
+import java.util.concurrent.CopyOnWriteArrayList;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class FileExplorerActivity
   extends ESAbsToolbarActivity
-  implements jb
+  implements jz
 {
-  public static boolean G;
-  public static GregorianCalendar H;
-  private static final String W = FileExplorerActivity.class.getSimpleName();
-  private static FileExplorerActivity bf = null;
-  private static Object bg = new Object();
-  private static LocalSocket bl = null;
-  public static String e = "";
-  public static boolean w = false;
-  protected ProgressBar A;
-  protected ProgressBar B;
-  public com.estrongs.android.ui.navigation.s C = null;
-  public View D = null;
-  public ESGesturePanel E = null;
-  public int F = 0;
-  protected com.estrongs.android.view.ca I = new c(this);
-  com.estrongs.android.view.cb J = new bp(this);
-  public com.estrongs.fs.i K = new co(this);
-  protected AdapterView.OnItemLongClickListener L = new cz(this);
-  protected com.estrongs.android.view.cc M = new ds(this);
-  com.estrongs.android.ui.f.f N = null;
-  boolean O = false;
-  public com.estrongs.android.widget.g P;
-  com.estrongs.android.widget.au Q = new ec(this);
-  public com.estrongs.android.widget.ai R;
-  DialogInterface.OnClickListener S = new ee(this);
-  ff T;
-  SparseArray<Object> U = new SparseArray();
-  Handler V = new et(this);
-  private boolean X = false;
-  private int Y = 0;
-  private al Z;
-  private TranslateAnimation aA;
-  private DragActionZone aB;
-  private com.estrongs.android.ui.drag.c aC;
-  private TranslateAnimation aD;
-  private TranslateAnimation aE;
-  private DragLayer aF;
-  private com.estrongs.android.ui.drag.p aG;
-  private com.estrongs.android.ui.navigation.n aH = null;
-  private View aI;
-  private TextView aJ;
-  private com.estrongs.android.util.a aK = null;
-  private com.estrongs.android.ui.pcs.r aL;
-  private String aM;
-  private com.estrongs.android.ui.view.bn aN = null;
-  private HashMap<String, Runnable> aO;
-  private ESGestureCtrl aP;
-  private boolean aQ = false;
-  private TextWatcher aR;
-  private TextView.OnEditorActionListener aS;
-  private View.OnKeyListener aT;
-  private int aU = 2000;
-  private Runnable aV = null;
-  private boolean aW = false;
-  private ProgressDialog aX;
-  private boolean aY;
-  private boolean aZ = true;
-  private FrameLayout aa;
-  private View ab;
-  private Rect ac;
-  private LinearLayout ad;
-  private RelativeLayout ae = null;
-  private ImageView af;
-  private com.estrongs.android.view.aw ag;
-  private String ah = null;
-  private List<com.estrongs.android.util.o<com.estrongs.android.view.aw, String>> ai = new LinkedList();
-  private ImageView aj;
-  private AdvancedAddressBar ak;
-  private EditText al;
-  private DragLayer am;
-  private DragLayer an;
-  private com.estrongs.android.ui.drag.d ao;
-  private DragActionZone ap;
-  private com.estrongs.android.ui.drag.c aq;
-  private TranslateAnimation ar;
-  private TranslateAnimation as;
-  private DragActionZone at;
-  private com.estrongs.android.ui.drag.c au;
-  private TranslateAnimation av;
-  private TranslateAnimation aw;
-  private DragActionZone ax;
-  private com.estrongs.android.ui.drag.c ay;
-  private TranslateAnimation az;
-  private ServiceConnection ba;
-  private com.estrongs.android.ui.c.b.t bb = null;
-  private boolean bc = false;
-  private com.estrongs.android.view.av<com.estrongs.fs.h> bd = new bf(this);
-  private boolean be = false;
-  private BroadcastReceiver bh;
-  private BroadcastReceiver bi = null;
-  private BroadcastReceiver bj;
-  private com.estrongs.android.pop.utils.c bk;
-  private fh bm = new fh(this);
-  public ThumbContentViewSwitcher f;
-  public RelativeLayout g;
-  public Handler h;
-  public com.estrongs.android.ui.view.by i = null;
-  public String j;
-  public com.estrongs.android.ui.e.w k = null;
-  public com.estrongs.android.c.a l = null;
-  public com.estrongs.android.pop.ad m;
-  protected com.estrongs.android.ui.d.b n;
-  public com.estrongs.android.view.ac o;
+  public static boolean C;
+  public static GregorianCalendar D;
+  private static final String R = FileExplorerActivity.class.getSimpleName();
+  private static FileExplorerActivity aT = null;
+  private static Object aU = new Object();
+  private static LocalSocket ba = null;
+  public static boolean v = false;
+  public ESGesturePanel A = null;
+  public int B = 0;
+  protected dv E = new c(this);
+  public com.estrongs.android.view.cq<com.estrongs.fs.h> F = new ae(this);
+  com.estrongs.android.view.dw G = new aq(this);
+  public com.estrongs.fs.i H = new bc(this);
+  protected com.estrongs.android.view.cp I = new bu(this);
+  protected com.estrongs.android.view.dx J = new ci(this);
+  public com.estrongs.android.widget.f K;
+  com.estrongs.android.widget.av L = new ca(this);
+  public com.estrongs.android.widget.aj M;
+  DialogInterface.OnClickListener N = new cc(this);
+  eg O;
+  SparseArray<Object> P = new SparseArray();
+  Handler Q = new cq(this);
+  private boolean S = false;
+  private com.estrongs.android.ui.theme.at T;
+  private Rect U;
+  private com.estrongs.android.view.cr V;
+  private String W = null;
+  private List<com.estrongs.android.util.q<com.estrongs.android.view.cr, String>> X = new LinkedList();
+  private DragLayer Y;
+  private DragLayer Z;
+  private boolean aA = false;
+  private TextView.OnEditorActionListener aB;
+  private int aC = 2000;
+  private Runnable aD = null;
+  private boolean aE = false;
+  private ProgressDialog aF;
+  private boolean aG;
+  private boolean aH = true;
+  private ServiceConnection aI;
+  private List<com.estrongs.android.ui.c.b.h> aJ = null;
+  private boolean aK = false;
+  private com.estrongs.android.ui.controller.a aL;
+  private com.estrongs.android.ui.d.i aM;
+  private com.estrongs.android.pop.app.analysis.view.b aN;
+  private com.estrongs.android.ui.topclassify.e aO;
+  private long aP;
+  private FrameLayout aQ;
+  private boolean aR = false;
+  private boolean aS = false;
+  private BroadcastReceiver aV;
+  private BroadcastReceiver aW = null;
+  private BroadcastReceiver aX;
+  private BroadcastReceiver aY;
+  private com.estrongs.android.pop.utils.c aZ;
+  private com.estrongs.android.ui.drag.d aa;
+  private DragActionZone ab;
+  private com.estrongs.android.ui.drag.c ac;
+  private TranslateAnimation ad;
+  private TranslateAnimation ae;
+  private DragActionZone af;
+  private com.estrongs.android.ui.drag.c ag;
+  private TranslateAnimation ah;
+  private TranslateAnimation ai;
+  private DragActionZone aj;
+  private com.estrongs.android.ui.drag.c ak;
+  private TranslateAnimation al;
+  private TranslateAnimation am;
+  private DragActionZone an;
+  private com.estrongs.android.ui.drag.c ao;
+  private TranslateAnimation ap;
+  private TranslateAnimation aq;
+  private DragLayer ar;
+  private com.estrongs.android.ui.drag.p as;
+  private com.estrongs.android.ui.navigation.m at = null;
+  private com.estrongs.android.j.c au = null;
+  private com.estrongs.android.ui.pcs.u av;
+  private String aw;
+  private com.estrongs.android.ui.view.bw ax = null;
+  private HashMap<String, Runnable> ay;
+  private ESGestureCtrl az;
+  private ei bb = new ei(this);
+  private boolean bc = true;
+  private int bd;
+  public int e = 0;
+  public FrameLayout f;
+  public View g;
+  public ThumbContentViewSwitcher h;
+  public Handler i;
+  public com.estrongs.android.g.a j = null;
+  public com.estrongs.android.pop.ad k;
+  public com.estrongs.android.pop.ai l;
+  public com.estrongs.android.view.af m;
+  public boolean n = false;
+  public boolean o = false;
   public boolean p = false;
-  public boolean q;
-  public boolean r = false;
-  public com.estrongs.fs.h t;
-  public boolean u = true;
-  public boolean v = false;
-  public List<com.estrongs.android.view.aw> x = new ArrayList();
-  public final List<com.estrongs.fs.h> y = new ArrayList();
-  protected Button z;
+  public String q;
+  public com.estrongs.fs.h r;
+  public boolean t = true;
+  public boolean u = false;
+  public List<com.estrongs.android.view.cr> w = new ArrayList();
+  public final List<com.estrongs.fs.h> x = new ArrayList();
+  public com.estrongs.android.ui.navigation.r y = null;
+  public View z = null;
   
   static
   {
-    G = false;
-    H = null;
-    H = new GregorianCalendar(TimeZone.getTimeZone("GMT"));
-    H.set(1980, 8, 30, 0, 0, 0);
+    C = false;
+    D = null;
+    D = new GregorianCalendar(TimeZone.getTimeZone("GMT"));
+    D.set(1980, 8, 30, 0, 0, 0);
   }
   
-  public static FileExplorerActivity I()
+  public static FileExplorerActivity W()
   {
-    return bf;
+    return aT;
   }
   
-  public static FileExplorerActivity J()
+  public static FileExplorerActivity X()
   {
-    return bf;
+    return aT;
   }
   
-  public static LocalSocket T()
+  private com.estrongs.android.view.cr a(Activity paramActivity, com.estrongs.fs.util.a.a parama, com.estrongs.android.view.dw paramdw, String paramString)
   {
-    for (;;)
-    {
-      Object localObject2;
-      synchronized (bg)
-      {
-        if (bl == null)
-        {
-          bl = com.estrongs.android.nativetool.c.a();
-          localObject2 = bl;
-          return (LocalSocket)localObject2;
-        }
-      }
-      try
-      {
-        localObject2 = bl.getOutputStream();
-        InputStream localInputStream = bl.getInputStream();
-        com.estrongs.fs.impl.local.l.a((OutputStream)localObject2, 80);
-        com.estrongs.fs.impl.local.l.c(localInputStream);
-        if (bl != null) {
-          continue;
-        }
-        bl = com.estrongs.android.nativetool.c.a();
-        continue;
-        localObject3 = finally;
-        throw ((Throwable)localObject3);
-      }
-      catch (Exception localException)
-      {
-        for (;;)
-        {
-          bl = null;
-        }
-      }
-    }
-  }
-  
-  private com.estrongs.android.view.aw a(Activity paramActivity, com.estrongs.fs.util.a.a parama, com.estrongs.android.view.cb paramcb, String paramString)
-  {
-    if ((am.aO(paramString)) || (am.aG(paramString)) || (am.T(paramString))) {
+    if ((com.estrongs.android.util.ap.aY(paramString)) || (com.estrongs.android.util.ap.aQ(paramString)) || (com.estrongs.android.util.ap.X(paramString))) {
       paramActivity = a(parama, paramString);
     }
     for (;;)
     {
-      paramActivity.g(com.estrongs.android.pop.ad.a(this).i());
-      u = paramString;
+      paramActivity.g(com.estrongs.android.pop.ad.a(this).j());
+      B = paramString;
       b(paramActivity, paramString);
+      aL.a(paramActivity, paramString);
       return paramActivity;
       if ("#home_page#".equals(paramString))
       {
-        paramActivity = new di(this, this, parama, paramcb);
-        paramActivity.j(Z.i());
-        paramActivity.a(I);
+        paramActivity = new bf(this, this, parama, paramdw);
+        paramActivity.i(T.i());
+        paramActivity.a(E);
         a(paramActivity);
       }
       else if ("download://".equals(paramString))
       {
-        paramActivity = new com.estrongs.android.ui.b.u(this, parama, paramcb);
-        paramActivity.a(L);
-        paramActivity.a(bd);
+        paramActivity = new com.estrongs.android.ui.b.u(this, parama, paramdw);
+        paramActivity.a(I);
+        paramActivity.a(F);
         a(paramActivity);
       }
-      else if (am.aQ(paramString))
+      else if (com.estrongs.android.util.ap.ba(paramString))
       {
-        parama = new com.estrongs.android.view.e(this, parama, paramcb);
-        parama.a(L);
-        parama.a(bd);
-        parama.a(com.estrongs.android.pop.view.utils.ac.b(paramActivity, paramString));
-        parama.j(Z.i());
+        parama = new com.estrongs.android.view.g(this, parama, paramdw);
         parama.a(I);
+        parama.a(F);
+        parama.a(com.estrongs.android.pop.view.utils.ac.b(paramActivity, paramString));
+        parama.i(T.i());
+        parama.a(E);
         a(parama);
         paramActivity = parama;
       }
-      else if (am.s(paramString))
+      else if (com.estrongs.android.util.ap.u(paramString))
       {
-        paramActivity = new com.estrongs.android.pop.app.diskusage.h(this, parama, paramcb);
-        paramActivity.a(L);
-        paramActivity.a(bd);
+        paramActivity = new com.estrongs.android.pop.app.diskusage.h(this, parama, paramdw);
         paramActivity.a(I);
+        paramActivity.a(F);
+        paramActivity.a(E);
         a(paramActivity);
+      }
+      else if (com.estrongs.android.util.ap.bu(paramString))
+      {
+        parama = new com.estrongs.android.view.a(this, parama, paramdw);
+        parama.a(I);
+        parama.a(F);
+        parama.a(E);
+        parama.a(J);
+        parama.a(com.estrongs.android.pop.view.utils.ac.b(paramActivity, paramString));
+        a(parama);
+        paramActivity = parama;
       }
       else if ("remote://".equals(paramString))
       {
-        paramActivity = new dj(this, parama, paramcb);
+        paramActivity = new fp(this, parama, paramdw);
         a(paramActivity);
       }
       else if ((paramString.startsWith("http")) || (paramString.startsWith("https")))
       {
-        paramActivity = new WebViewWrapper(this, paramcb);
-        paramActivity.a(I);
+        paramActivity = new WebViewWrapper(this, paramdw);
+        paramActivity.a(E);
         a(paramActivity);
       }
-      else if ((am.ba(paramString)) || (am.az(paramString)))
+      else if ((com.estrongs.android.util.ap.bl(paramString)) || (com.estrongs.android.util.ap.aJ(paramString)))
       {
-        parama = new dk(this, paramActivity, parama, paramcb);
+        parama = new bh(this, paramActivity, parama, paramdw);
+        parama.a(E);
         parama.a(I);
-        parama.a(L);
-        parama.a(M);
-        parama.a(bd);
+        parama.a(J);
+        parama.a(F);
         parama.a(com.estrongs.android.pop.view.utils.ac.b(paramActivity, paramString));
-        parama.b(K);
-        parama.a(ao);
-        parama.j(Z.i());
+        parama.b(H);
+        parama.a(aa);
+        parama.i(T.i());
         a(parama);
         paramActivity = parama;
       }
-      else if ((am.Y(paramString)) || (am.W(paramString)))
+      else if ((com.estrongs.android.util.ap.ai(paramString)) || (com.estrongs.android.util.ap.ag(paramString)))
       {
-        parama = new com.estrongs.android.view.a(this, parama, paramcb);
+        parama = new com.estrongs.android.view.b(this, parama, paramdw);
+        parama.a(E);
         parama.a(I);
-        parama.a(L);
-        parama.a(M);
-        parama.a(bd);
+        parama.a(J);
+        parama.a(F);
         parama.a(com.estrongs.android.pop.view.utils.ac.b(paramActivity, paramString));
-        parama.b(K);
-        parama.a(ao);
-        parama.j(Z.i());
+        parama.b(H);
+        parama.a(aa);
+        parama.i(T.i());
         a(parama);
         paramActivity = parama;
       }
-      else if (am.bR(paramString))
+      else if (com.estrongs.android.util.ap.cj(paramString))
       {
-        parama = new com.estrongs.android.view.cq(paramActivity, parama, paramcb);
+        parama = new eu(paramActivity, parama, paramdw);
         parama.a(com.estrongs.android.pop.view.utils.ac.b(paramActivity, paramString));
-        parama.a(L);
-        parama.a(bd);
+        parama.a(I);
+        parama.a(F);
+        a(parama);
+        paramActivity = parama;
+      }
+      else if ("clean://".equals(paramString))
+      {
+        paramActivity = new com.estrongs.android.view.w(this, parama, paramdw);
+        paramActivity.i(T.i());
+        paramActivity.a(E);
+      }
+      else if ("log://".equals(paramString))
+      {
+        paramActivity = new com.estrongs.android.view.er(this, parama, paramdw);
+        paramActivity.i(T.i());
+        paramActivity.a(F);
+        paramActivity.a(E);
+      }
+      else if (com.estrongs.android.util.ap.V(paramString))
+      {
+        parama = new com.estrongs.android.view.music.a(this, parama, paramdw);
+        parama.a(I);
+        parama.a(F);
+        parama.a(E);
+        parama.a(J);
+        parama.a(com.estrongs.android.pop.view.utils.ac.b(paramActivity, paramString));
+        a(parama);
+        paramActivity = parama;
+      }
+      else if (com.estrongs.android.util.ap.bx(paramString))
+      {
+        parama = new com.estrongs.android.view.dy(this, parama, paramdw);
+        parama.a(I);
+        parama.a(F);
+        parama.a(E);
+        parama.a(J);
+        parama.a(com.estrongs.android.pop.view.utils.ac.b(paramActivity, paramString));
+        a(parama);
+        paramActivity = parama;
+      }
+      else if (com.estrongs.android.util.ap.ad(paramString))
+      {
+        parama = new bx(this, parama, paramdw);
+        parama.a(I);
+        parama.a(F);
+        parama.a(E);
+        parama.a(J);
+        parama.a(com.estrongs.android.pop.view.utils.ac.b(paramActivity, paramString));
+        a(parama);
+        paramActivity = parama;
+      }
+      else if (com.estrongs.android.util.ap.ab(paramString))
+      {
+        parama = new com.estrongs.android.view.ak(this, parama, paramdw);
+        parama.a(I);
+        parama.a(F);
+        parama.a(E);
+        parama.a(J);
+        parama.a(com.estrongs.android.pop.view.utils.ac.b(paramActivity, paramString));
         a(parama);
         paramActivity = parama;
       }
       else
       {
-        parama = new dp(this, paramActivity, parama, paramcb);
+        parama = new bm(this, paramActivity, parama, paramdw);
+        parama.a(E);
         parama.a(I);
-        parama.a(L);
-        parama.a(M);
-        parama.a(bd);
+        parama.a(J);
+        parama.a(F);
         parama.a(com.estrongs.android.pop.view.utils.ac.b(paramActivity, paramString));
-        parama.b(K);
-        parama.a(ao);
-        parama.j(Z.i());
+        parama.b(H);
+        parama.a(aa);
+        parama.i(T.i());
         a(parama);
         paramActivity = parama;
       }
@@ -380,16 +393,16 @@ public class FileExplorerActivity
   }
   
   /* Error */
-  private com.estrongs.android.view.aw a(com.estrongs.android.ui.d.d arg1)
+  private com.estrongs.android.view.cr a(com.estrongs.android.ui.d.h arg1)
   {
     // Byte code:
     //   0: aload_1
-    //   1: invokevirtual 601	com/estrongs/android/ui/d/d:b	()Ljava/lang/String;
+    //   1: invokevirtual 604	com/estrongs/android/ui/d/h:a	()Ljava/lang/String;
     //   4: astore 4
     //   6: aload_1
     //   7: ifnull +16 -> 23
     //   10: aload_1
-    //   11: invokevirtual 603	com/estrongs/android/ui/d/d:a	()I
+    //   11: invokevirtual 607	com/estrongs/android/ui/d/h:c	()I
     //   14: iconst_m1
     //   15: if_icmpeq +8 -> 23
     //   18: aload 4
@@ -399,771 +412,483 @@ public class FileExplorerActivity
     //   25: aload 4
     //   27: astore_3
     //   28: aload 4
-    //   30: invokestatic 605	com/estrongs/android/util/am:aV	(Ljava/lang/String;)Z
+    //   30: invokestatic 610	com/estrongs/android/util/ap:bg	(Ljava/lang/String;)Z
     //   33: ifeq +9 -> 42
     //   36: aload 4
-    //   38: invokestatic 608	com/estrongs/android/util/am:bc	(Ljava/lang/String;)Ljava/lang/String;
+    //   38: invokestatic 614	com/estrongs/android/util/ap:bn	(Ljava/lang/String;)Ljava/lang/String;
     //   41: astore_3
     //   42: aload_3
-    //   43: invokestatic 574	com/estrongs/android/util/am:Y	(Ljava/lang/String;)Z
-    //   46: ifeq +88 -> 134
+    //   43: invokestatic 524	com/estrongs/android/util/ap:ai	(Ljava/lang/String;)Z
+    //   46: ifeq +92 -> 138
     //   49: aload_0
-    //   50: getfield 610	com/estrongs/android/pop/view/FileExplorerActivity:m	Lcom/estrongs/android/pop/ad;
+    //   50: getfield 616	com/estrongs/android/pop/view/FileExplorerActivity:k	Lcom/estrongs/android/pop/ad;
     //   53: aload_3
-    //   54: invokevirtual 613	com/estrongs/android/pop/ad:A	(Ljava/lang/String;)Lcom/estrongs/fs/util/a/a;
+    //   54: invokevirtual 619	com/estrongs/android/pop/ad:A	(Ljava/lang/String;)Lcom/estrongs/fs/util/a/a;
     //   57: astore 4
     //   59: aload_0
     //   60: aload_0
     //   61: aload 4
     //   63: aload_0
-    //   64: getfield 318	com/estrongs/android/pop/view/FileExplorerActivity:J	Lcom/estrongs/android/view/cb;
+    //   64: getfield 294	com/estrongs/android/pop/view/FileExplorerActivity:G	Lcom/estrongs/android/view/dw;
     //   67: aload_3
-    //   68: invokespecial 615	com/estrongs/android/pop/view/FileExplorerActivity:a	(Landroid/app/Activity;Lcom/estrongs/fs/util/a/a;Lcom/estrongs/android/view/cb;Ljava/lang/String;)Lcom/estrongs/android/view/aw;
+    //   68: invokespecial 621	com/estrongs/android/pop/view/FileExplorerActivity:a	(Landroid/app/Activity;Lcom/estrongs/fs/util/a/a;Lcom/estrongs/android/view/dw;Ljava/lang/String;)Lcom/estrongs/android/view/cr;
     //   71: astore 4
     //   73: aload_0
-    //   74: getfield 617	com/estrongs/android/pop/view/FileExplorerActivity:f	Lcom/estrongs/android/widget/ThumbContentViewSwitcher;
+    //   74: getfield 623	com/estrongs/android/pop/view/FileExplorerActivity:h	Lcom/estrongs/android/widget/ThumbContentViewSwitcher;
     //   77: aload 4
-    //   79: invokevirtual 620	com/estrongs/android/view/aw:aq	()Landroid/view/View;
-    //   82: invokevirtual 626	com/estrongs/android/widget/ThumbContentViewSwitcher:addView	(Landroid/view/View;)V
-    //   85: aload_1
-    //   86: invokestatic 631	com/estrongs/android/ui/d/e:b	(Lcom/estrongs/android/ui/d/d;)I
-    //   89: istore_2
-    //   90: aload_0
-    //   91: getfield 271	com/estrongs/android/pop/view/FileExplorerActivity:x	Ljava/util/List;
-    //   94: astore_1
-    //   95: aload_1
-    //   96: monitorenter
-    //   97: aload_0
-    //   98: getfield 271	com/estrongs/android/pop/view/FileExplorerActivity:x	Ljava/util/List;
-    //   101: iload_2
-    //   102: aload 4
-    //   104: invokeinterface 637 3 0
-    //   109: aload_1
-    //   110: monitorexit
-    //   111: aload_0
-    //   112: getfield 256	com/estrongs/android/pop/view/FileExplorerActivity:ai	Ljava/util/List;
-    //   115: new 639	com/estrongs/android/util/o
-    //   118: dup
-    //   119: aload 4
-    //   121: aload_3
-    //   122: invokespecial 642	com/estrongs/android/util/o:<init>	(Ljava/lang/Object;Ljava/lang/Object;)V
-    //   125: invokeinterface 644 2 0
-    //   130: pop
-    //   131: aload 4
-    //   133: areturn
-    //   134: aload_0
-    //   135: getfield 610	com/estrongs/android/pop/view/FileExplorerActivity:m	Lcom/estrongs/android/pop/ad;
-    //   138: aload_3
-    //   139: invokevirtual 646	com/estrongs/android/pop/ad:z	(Ljava/lang/String;)Lcom/estrongs/fs/util/a/a;
-    //   142: astore 4
-    //   144: goto -85 -> 59
-    //   147: astore_1
-    //   148: aload_1
-    //   149: invokevirtual 649	java/lang/Exception:printStackTrace	()V
-    //   152: aconst_null
-    //   153: areturn
-    //   154: astore_3
-    //   155: aload_1
-    //   156: monitorexit
-    //   157: aconst_null
-    //   158: areturn
-    //   159: astore_3
-    //   160: aload_1
-    //   161: monitorexit
-    //   162: aload_3
-    //   163: athrow
+    //   79: invokevirtual 626	com/estrongs/android/view/cr:aE	()Landroid/view/View;
+    //   82: invokevirtual 632	com/estrongs/android/widget/ThumbContentViewSwitcher:addView	(Landroid/view/View;)V
+    //   85: aload_0
+    //   86: invokevirtual 635	com/estrongs/android/pop/view/FileExplorerActivity:au	()Lcom/estrongs/android/ui/d/i;
+    //   89: aload_1
+    //   90: invokevirtual 640	com/estrongs/android/ui/d/i:b	(Lcom/estrongs/android/ui/d/h;)I
+    //   93: istore_2
+    //   94: aload_0
+    //   95: getfield 245	com/estrongs/android/pop/view/FileExplorerActivity:w	Ljava/util/List;
+    //   98: astore_1
+    //   99: aload_1
+    //   100: monitorenter
+    //   101: aload_0
+    //   102: getfield 245	com/estrongs/android/pop/view/FileExplorerActivity:w	Ljava/util/List;
+    //   105: iload_2
+    //   106: aload 4
+    //   108: invokeinterface 646 3 0
+    //   113: aload_1
+    //   114: monitorexit
+    //   115: aload_0
+    //   116: getfield 228	com/estrongs/android/pop/view/FileExplorerActivity:X	Ljava/util/List;
+    //   119: new 648	com/estrongs/android/util/q
+    //   122: dup
+    //   123: aload 4
+    //   125: aload_3
+    //   126: invokespecial 651	com/estrongs/android/util/q:<init>	(Ljava/lang/Object;Ljava/lang/Object;)V
+    //   129: invokeinterface 653 2 0
+    //   134: pop
+    //   135: aload 4
+    //   137: areturn
+    //   138: aload_0
+    //   139: getfield 616	com/estrongs/android/pop/view/FileExplorerActivity:k	Lcom/estrongs/android/pop/ad;
+    //   142: aload_3
+    //   143: invokevirtual 655	com/estrongs/android/pop/ad:z	(Ljava/lang/String;)Lcom/estrongs/fs/util/a/a;
+    //   146: astore 4
+    //   148: goto -89 -> 59
+    //   151: astore_1
+    //   152: aload_1
+    //   153: invokevirtual 658	java/lang/Exception:printStackTrace	()V
+    //   156: aconst_null
+    //   157: areturn
+    //   158: astore_3
+    //   159: aload_1
+    //   160: monitorexit
+    //   161: aconst_null
+    //   162: areturn
+    //   163: astore_3
+    //   164: aload_1
+    //   165: monitorexit
+    //   166: aload_3
+    //   167: athrow
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	164	0	this	FileExplorerActivity
-    //   89	13	2	i1	int
-    //   27	112	3	localObject1	Object
-    //   154	1	3	localException	Exception
-    //   159	4	3	localObject2	Object
-    //   4	139	4	localObject3	Object
+    //   0	168	0	this	FileExplorerActivity
+    //   93	13	2	i1	int
+    //   27	116	3	localObject1	Object
+    //   158	1	3	localException	Exception
+    //   163	4	3	localObject2	Object
+    //   4	143	4	localObject3	Object
     // Exception table:
     //   from	to	target	type
-    //   59	85	147	java/lang/Exception
-    //   97	109	154	java/lang/Exception
-    //   97	109	159	finally
-    //   109	111	159	finally
-    //   155	157	159	finally
-    //   160	162	159	finally
+    //   59	85	151	java/lang/Exception
+    //   101	113	158	java/lang/Exception
+    //   101	113	163	finally
+    //   113	115	163	finally
+    //   159	161	163	finally
+    //   164	166	163	finally
   }
   
-  private com.estrongs.android.view.aw a(com.estrongs.android.ui.d.d paramd, String paramString, TypedMap paramTypedMap)
+  private com.estrongs.android.view.cr a(com.estrongs.android.ui.d.h paramh, String paramString, TypedMap paramTypedMap)
   {
-    return a(paramd, paramString, paramTypedMap, false);
+    return a(paramh, paramString, paramTypedMap, false);
   }
   
   /* Error */
-  private com.estrongs.android.view.aw a(com.estrongs.android.ui.d.d paramd, String paramString, TypedMap paramTypedMap, boolean paramBoolean)
+  private com.estrongs.android.view.cr a(com.estrongs.android.ui.d.h paramh, String paramString, TypedMap paramTypedMap, boolean paramBoolean)
   {
     // Byte code:
     //   0: aload_2
-    //   1: invokestatic 574	com/estrongs/android/util/am:Y	(Ljava/lang/String;)Z
-    //   4: ifeq +148 -> 152
+    //   1: invokestatic 524	com/estrongs/android/util/ap:ai	(Ljava/lang/String;)Z
+    //   4: ifeq +152 -> 156
     //   7: aload_0
-    //   8: getfield 610	com/estrongs/android/pop/view/FileExplorerActivity:m	Lcom/estrongs/android/pop/ad;
+    //   8: getfield 616	com/estrongs/android/pop/view/FileExplorerActivity:k	Lcom/estrongs/android/pop/ad;
     //   11: aload_2
-    //   12: invokevirtual 613	com/estrongs/android/pop/ad:A	(Ljava/lang/String;)Lcom/estrongs/fs/util/a/a;
+    //   12: invokevirtual 619	com/estrongs/android/pop/ad:A	(Ljava/lang/String;)Lcom/estrongs/fs/util/a/a;
     //   15: astore 6
     //   17: aload_0
     //   18: aload_0
     //   19: aload 6
     //   21: aload_0
-    //   22: getfield 318	com/estrongs/android/pop/view/FileExplorerActivity:J	Lcom/estrongs/android/view/cb;
+    //   22: getfield 294	com/estrongs/android/pop/view/FileExplorerActivity:G	Lcom/estrongs/android/view/dw;
     //   25: aload_2
-    //   26: invokespecial 615	com/estrongs/android/pop/view/FileExplorerActivity:a	(Landroid/app/Activity;Lcom/estrongs/fs/util/a/a;Lcom/estrongs/android/view/cb;Ljava/lang/String;)Lcom/estrongs/android/view/aw;
+    //   26: invokespecial 621	com/estrongs/android/pop/view/FileExplorerActivity:a	(Landroid/app/Activity;Lcom/estrongs/fs/util/a/a;Lcom/estrongs/android/view/dw;Ljava/lang/String;)Lcom/estrongs/android/view/cr;
     //   29: astore 6
     //   31: iload 4
     //   33: ifeq +12 -> 45
     //   36: aload_2
     //   37: aload 6
-    //   39: invokevirtual 656	java/lang/Object:hashCode	()I
-    //   42: invokestatic 661	com/estrongs/android/pop/utils/aa:a	(Ljava/lang/String;I)V
+    //   39: invokevirtual 665	java/lang/Object:hashCode	()I
+    //   42: invokestatic 670	com/estrongs/android/pop/utils/ad:a	(Ljava/lang/String;I)V
     //   45: aload 6
     //   47: aload_2
     //   48: aload_3
-    //   49: invokevirtual 664	com/estrongs/android/view/aw:a	(Ljava/lang/String;Lcom/estrongs/android/util/TypedMap;)V
+    //   49: invokevirtual 673	com/estrongs/android/view/cr:a	(Ljava/lang/String;Lcom/estrongs/android/util/TypedMap;)V
     //   52: aload_1
     //   53: ifnull +8 -> 61
     //   56: aload_1
     //   57: aload_2
-    //   58: invokevirtual 667	com/estrongs/android/ui/d/d:a	(Ljava/lang/String;)V
-    //   61: aload_1
-    //   62: invokestatic 631	com/estrongs/android/ui/d/e:b	(Lcom/estrongs/android/ui/d/d;)I
-    //   65: istore 5
-    //   67: aload_0
-    //   68: getfield 271	com/estrongs/android/pop/view/FileExplorerActivity:x	Ljava/util/List;
-    //   71: astore_1
-    //   72: aload_1
-    //   73: monitorenter
-    //   74: iload 5
-    //   76: iflt +96 -> 172
-    //   79: aload_0
-    //   80: getfield 271	com/estrongs/android/pop/view/FileExplorerActivity:x	Ljava/util/List;
-    //   83: invokeinterface 670 1 0
-    //   88: iload 5
-    //   90: if_icmple +82 -> 172
-    //   93: aload_0
-    //   94: getfield 271	com/estrongs/android/pop/view/FileExplorerActivity:x	Ljava/util/List;
-    //   97: iload 5
-    //   99: invokeinterface 674 2 0
-    //   104: pop
-    //   105: aload_0
-    //   106: getfield 271	com/estrongs/android/pop/view/FileExplorerActivity:x	Ljava/util/List;
-    //   109: iload 5
-    //   111: aload 6
-    //   113: invokeinterface 637 3 0
-    //   118: aload_1
-    //   119: monitorexit
-    //   120: aload_0
-    //   121: getfield 676	com/estrongs/android/pop/view/FileExplorerActivity:n	Lcom/estrongs/android/ui/d/b;
-    //   124: iload 5
-    //   126: invokevirtual 680	com/estrongs/android/ui/d/b:f	(I)V
-    //   129: aload_0
-    //   130: getfield 617	com/estrongs/android/pop/view/FileExplorerActivity:f	Lcom/estrongs/android/widget/ThumbContentViewSwitcher;
-    //   133: aload 6
-    //   135: invokevirtual 620	com/estrongs/android/view/aw:aq	()Landroid/view/View;
-    //   138: iload 5
-    //   140: invokevirtual 683	com/estrongs/android/widget/ThumbContentViewSwitcher:addView	(Landroid/view/View;I)V
-    //   143: aload_0
-    //   144: iload 5
-    //   146: invokevirtual 684	com/estrongs/android/pop/view/FileExplorerActivity:f	(I)V
-    //   149: aload 6
-    //   151: areturn
-    //   152: aload_0
-    //   153: getfield 610	com/estrongs/android/pop/view/FileExplorerActivity:m	Lcom/estrongs/android/pop/ad;
-    //   156: aload_2
-    //   157: invokevirtual 646	com/estrongs/android/pop/ad:z	(Ljava/lang/String;)Lcom/estrongs/fs/util/a/a;
-    //   160: astore 6
-    //   162: goto -145 -> 17
-    //   165: astore_1
-    //   166: aload_1
-    //   167: invokevirtual 649	java/lang/Exception:printStackTrace	()V
-    //   170: aconst_null
-    //   171: areturn
-    //   172: iconst_0
-    //   173: istore 5
-    //   175: goto -70 -> 105
-    //   178: astore_2
-    //   179: aload_1
-    //   180: monitorexit
-    //   181: aload_2
-    //   182: athrow
+    //   58: invokevirtual 676	com/estrongs/android/ui/d/h:a	(Ljava/lang/String;)V
+    //   61: aload_0
+    //   62: invokevirtual 635	com/estrongs/android/pop/view/FileExplorerActivity:au	()Lcom/estrongs/android/ui/d/i;
+    //   65: aload_1
+    //   66: invokevirtual 640	com/estrongs/android/ui/d/i:b	(Lcom/estrongs/android/ui/d/h;)I
+    //   69: istore 5
+    //   71: aload_0
+    //   72: getfield 245	com/estrongs/android/pop/view/FileExplorerActivity:w	Ljava/util/List;
+    //   75: astore_1
+    //   76: aload_1
+    //   77: monitorenter
+    //   78: iload 5
+    //   80: iflt +96 -> 176
+    //   83: aload_0
+    //   84: getfield 245	com/estrongs/android/pop/view/FileExplorerActivity:w	Ljava/util/List;
+    //   87: invokeinterface 679 1 0
+    //   92: iload 5
+    //   94: if_icmple +82 -> 176
+    //   97: aload_0
+    //   98: getfield 245	com/estrongs/android/pop/view/FileExplorerActivity:w	Ljava/util/List;
+    //   101: iload 5
+    //   103: invokeinterface 683 2 0
+    //   108: pop
+    //   109: aload_0
+    //   110: getfield 245	com/estrongs/android/pop/view/FileExplorerActivity:w	Ljava/util/List;
+    //   113: iload 5
+    //   115: aload 6
+    //   117: invokeinterface 646 3 0
+    //   122: aload_1
+    //   123: monitorexit
+    //   124: aload_0
+    //   125: getfield 365	com/estrongs/android/pop/view/FileExplorerActivity:aL	Lcom/estrongs/android/ui/controller/a;
+    //   128: iload 5
+    //   130: invokevirtual 685	com/estrongs/android/ui/controller/a:c	(I)V
+    //   133: aload_0
+    //   134: getfield 623	com/estrongs/android/pop/view/FileExplorerActivity:h	Lcom/estrongs/android/widget/ThumbContentViewSwitcher;
+    //   137: aload 6
+    //   139: invokevirtual 626	com/estrongs/android/view/cr:aE	()Landroid/view/View;
+    //   142: iload 5
+    //   144: invokevirtual 688	com/estrongs/android/widget/ThumbContentViewSwitcher:addView	(Landroid/view/View;I)V
+    //   147: aload_0
+    //   148: iload 5
+    //   150: invokevirtual 690	com/estrongs/android/pop/view/FileExplorerActivity:f	(I)V
+    //   153: aload 6
+    //   155: areturn
+    //   156: aload_0
+    //   157: getfield 616	com/estrongs/android/pop/view/FileExplorerActivity:k	Lcom/estrongs/android/pop/ad;
+    //   160: aload_2
+    //   161: invokevirtual 655	com/estrongs/android/pop/ad:z	(Ljava/lang/String;)Lcom/estrongs/fs/util/a/a;
+    //   164: astore 6
+    //   166: goto -149 -> 17
+    //   169: astore_1
+    //   170: aload_1
+    //   171: invokevirtual 658	java/lang/Exception:printStackTrace	()V
+    //   174: aconst_null
+    //   175: areturn
+    //   176: iconst_0
+    //   177: istore 5
+    //   179: goto -70 -> 109
+    //   182: astore_2
+    //   183: aload_1
+    //   184: monitorexit
+    //   185: aload_2
+    //   186: athrow
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	183	0	this	FileExplorerActivity
-    //   0	183	1	paramd	com.estrongs.android.ui.d.d
-    //   0	183	2	paramString	String
-    //   0	183	3	paramTypedMap	TypedMap
-    //   0	183	4	paramBoolean	boolean
-    //   65	109	5	i1	int
-    //   15	146	6	localObject	Object
+    //   0	187	0	this	FileExplorerActivity
+    //   0	187	1	paramh	com.estrongs.android.ui.d.h
+    //   0	187	2	paramString	String
+    //   0	187	3	paramTypedMap	TypedMap
+    //   0	187	4	paramBoolean	boolean
+    //   69	109	5	i1	int
+    //   15	150	6	localObject	Object
     // Exception table:
     //   from	to	target	type
-    //   17	31	165	java/lang/Exception
-    //   79	105	178	finally
-    //   105	120	178	finally
-    //   179	181	178	finally
+    //   17	31	169	java/lang/Exception
+    //   83	109	182	finally
+    //   109	124	182	finally
+    //   183	185	182	finally
   }
   
-  private com.estrongs.android.view.cd a(com.estrongs.fs.util.a.a parama, String paramString)
+  private com.estrongs.android.view.eb a(com.estrongs.fs.util.a.a parama, String paramString)
   {
-    parama = new dt(this, this, parama, J);
-    parama.a(I);
-    parama.a(new du(this));
-    parama.a(new dv(this));
+    parama = new bp(this, this, parama, G);
+    parama.a(E);
+    parama.a(new bq(this));
+    parama.a(new br(this));
     parama.a(11);
-    parama.a(bd);
+    parama.a(F);
     a(parama);
     return parama;
   }
   
-  private void a(com.estrongs.android.util.o<com.estrongs.android.view.aw, String> paramo, boolean paramBoolean)
+  private void a(com.estrongs.android.util.q<com.estrongs.android.view.cr, String> paramq, boolean paramBoolean)
   {
-    com.estrongs.android.view.aw localaw = (com.estrongs.android.view.aw)a;
-    paramo = (String)b;
-    if ((localaw != null) && (paramo != null))
+    com.estrongs.android.view.cr localcr = (com.estrongs.android.view.cr)a;
+    paramq = (String)b;
+    if ((localcr != null) && (paramq != null))
     {
-      localaw.a(null);
-      localaw.g(paramo);
-      localaw.a(I);
-    }
-  }
-  
-  private void a(com.estrongs.android.view.aw paramaw, com.estrongs.android.ui.d.d paramd, String paramString, String[] paramArrayOfString)
-  {
-    Object localObject4 = null;
-    if (am.t(paramString))
-    {
-      if (paramString.startsWith("http://win-title/"))
-      {
-        paramArrayOfString[0] = paramString.substring("http://win-title/".length());
-        paramArrayOfString[1] = null;
-        return;
-      }
-      if ((paramaw != null) && ((paramaw instanceof WebViewWrapper)))
-      {
-        paramaw = ((WebViewWrapper)paramaw).at();
-        if (com.estrongs.android.util.bd.b(paramaw))
-        {
-          paramArrayOfString[0] = paramaw;
-          paramArrayOfString[1] = null;
-          return;
-        }
-      }
-      paramArrayOfString[0] = getString(2131427442);
-      paramArrayOfString[1] = null;
-      return;
-    }
-    if ((paramString != null) && (paramd != null)) {
-      paramd.a(paramString);
-    }
-    Object localObject2 = (String)getText(2131428653);
-    Object localObject3;
-    Object localObject1;
-    if ((u) && (paramd != null))
-    {
-      localObject3 = paramd.a(this);
-      if (!am.aO(paramString))
-      {
-        localObject1 = localObject3;
-        if (!am.aG(paramString)) {}
-      }
-      else
-      {
-        localObject1 = localObject3;
-        if (!am.aN(paramString))
-        {
-          localObject1 = localObject3;
-          if (!am.aF(paramString))
-          {
-            localObject1 = localObject3;
-            if (paramaw != null)
-            {
-              if (paramaw.b() == null) {
-                break label490;
-              }
-              localObject1 = paramaw.b().getName();
-            }
-          }
-        }
-      }
-      if ((am.bd(paramString)) || (am.aS(paramString))) {
-        break label1162;
-      }
-      if (paramString.contains("PCS_DRIVE_Js1a7M5e_9yAcTvFX/files"))
-      {
-        paramaw = am.bk(paramString.replace("PCS_DRIVE_Js1a7M5e_9yAcTvFX/files", "PCS_DRIVE_Js1a7M5e_9yAcTvFX"));
-        label241:
-        if (!am.be(paramaw)) {
-          break label507;
-        }
-        localObject3 = "/";
-        paramd = (com.estrongs.android.ui.d.d)localObject1;
-        localObject1 = localObject3;
-      }
-    }
-    for (;;)
-    {
-      label260:
-      localObject3 = am.aC(am.bM(paramString));
-      int i1;
-      if ((localObject3 == null) && (paramaw != null))
-      {
-        paramaw = am.aC(am.bM(paramaw));
-        i1 = 1;
-      }
-      for (;;)
-      {
-        if (paramaw != null) {
-          if (paramaw.equals("/files")) {
-            paramaw = (String)getText(2131427428);
-          }
-        }
-        for (;;)
-        {
-          label314:
-          if ((paramd != null) && ((paramd.equals(localObject2)) || ("PCS_DRIVE_Js1a7M5e_9yAcTvFX".equals(paramd)))) {
-            localObject3 = localObject1;
-          }
-          for (;;)
-          {
-            label341:
-            paramaw = (com.estrongs.android.view.aw)localObject2;
-            if (am.bn(paramString))
-            {
-              paramaw = (com.estrongs.android.view.aw)localObject2;
-              if (aY) {
-                paramaw = (String)localObject2 + "  " + com.estrongs.fs.impl.local.l.i();
-              }
-            }
-            if (paramString.contains("m.baidu.com/app")) {
-              paramaw = getString(2131427606);
-            }
-            for (paramd = (com.estrongs.android.ui.d.d)localObject4;; paramd = (com.estrongs.android.ui.d.d)localObject3)
-            {
-              localObject1 = paramd;
-              localObject2 = paramaw;
-              if ("pcs".equals(am.an(paramString)))
-              {
-                localObject1 = am.a(paramString, 4);
-                if ((!"/files".equals(localObject1)) && (!"/files/".equals(localObject1))) {
-                  break label1039;
-                }
-                localObject2 = com.estrongs.android.pop.ad.a(this).h(paramString);
-                localObject1 = getString(2131427412);
-              }
-              for (;;)
-              {
-                paramArrayOfString[0] = localObject2;
-                paramArrayOfString[1] = localObject1;
-                return;
-                label490:
-                localObject1 = am.d(paramString);
-                break;
-                paramaw = am.bk(paramString);
-                break label241;
-                label507:
-                if ("#home_page#".equals(paramaw))
-                {
-                  paramd = (com.estrongs.android.ui.d.d)localObject1;
-                  localObject1 = null;
-                  break label260;
-                }
-                if ((am.bb(paramaw)) || (am.bQ(paramaw)))
-                {
-                  localObject3 = paramd.a(this, paramaw);
-                  paramd = (com.estrongs.android.ui.d.d)localObject1;
-                  localObject1 = localObject3;
-                  break label260;
-                }
-                if (am.aN(paramaw))
-                {
-                  localObject3 = paramd.a(this, paramaw);
-                  paramd = (com.estrongs.android.ui.d.d)localObject1;
-                  localObject1 = localObject3;
-                  break label260;
-                }
-                if (am.bW(paramString))
-                {
-                  localObject3 = am.d(paramaw);
-                  if (am.d(paramString).equals("es_recycle_content"))
-                  {
-                    paramd = getString(2131428402);
-                    localObject1 = null;
-                    break label260;
-                  }
-                  paramd = (com.estrongs.android.ui.d.d)localObject3;
-                  if (!((String)localObject3).equals("es_recycle_content")) {
-                    break label1149;
-                  }
-                  localObject3 = getString(2131428402);
-                  paramd = (com.estrongs.android.ui.d.d)localObject1;
-                  localObject1 = localObject3;
-                  break label260;
-                }
-                localObject3 = am.d(paramaw);
-                paramd = (com.estrongs.android.ui.d.d)localObject3;
-                if (!am.aQ(paramaw)) {
-                  break label1149;
-                }
-                i1 = ((String)localObject3).indexOf('*');
-                paramd = (com.estrongs.android.ui.d.d)localObject3;
-                if (i1 <= 0) {
-                  break label1149;
-                }
-                localObject3 = ((String)localObject3).substring(i1 + 1);
-                paramd = (com.estrongs.android.ui.d.d)localObject1;
-                localObject1 = localObject3;
-                break label260;
-                if (paramaw.equals("/pictures"))
-                {
-                  paramaw = (String)getText(2131427421);
-                  break label314;
-                }
-                if (paramaw.equals("/music"))
-                {
-                  paramaw = (String)getText(2131427422);
-                  break label314;
-                }
-                if (paramaw.equals("/videos"))
-                {
-                  paramaw = (String)getText(2131427425);
-                  break label314;
-                }
-                if (paramaw.equals("/apps"))
-                {
-                  paramaw = (String)getText(2131427423);
-                  break label314;
-                }
-                if (paramaw.equals("/documents"))
-                {
-                  paramaw = (String)getText(2131427424);
-                  break label314;
-                }
-                if (!paramaw.equals("/others")) {
-                  break label1135;
-                }
-                paramaw = (String)getText(2131427573);
-                break label314;
-                if ((localObject1 != null) && ((((String)localObject1).equals(localObject2)) || ("PCS_DRIVE_Js1a7M5e_9yAcTvFX".equals(localObject1))))
-                {
-                  if ((paramaw == null) || (am.aC(am.bM(paramString)) == null)) {
-                    break label1125;
-                  }
-                  localObject3 = localObject2;
-                  localObject2 = paramaw;
-                  break label341;
-                }
-                if (am.bR(paramString))
-                {
-                  localObject2 = getString(2131428505);
-                  localObject3 = null;
-                  break label341;
-                }
-                if (am.v(paramString))
-                {
-                  localObject2 = getString(2131428716);
-                  localObject3 = null;
-                  break label341;
-                }
-                localObject2 = paramd;
-                localObject3 = localObject1;
-                if (paramaw == null) {
-                  break label341;
-                }
-                if (i1 != 0)
-                {
-                  localObject2 = paramd;
-                  localObject3 = paramaw;
-                  break label341;
-                }
-                localObject2 = paramaw;
-                localObject3 = localObject1;
-                break label341;
-                if ((am.bb(paramString)) && (!am.bg(paramString)))
-                {
-                  localObject2 = am.bL(paramString);
-                  localObject3 = null;
-                  break label341;
-                }
-                if (paramString.startsWith("search:"))
-                {
-                  localObject2 = "Search Result";
-                  localObject3 = null;
-                  break label341;
-                }
-                localObject2 = paramString;
-                localObject3 = null;
-                break label341;
-                label1039:
-                localObject3 = am.bk((String)localObject1);
-                if (!"/files".equals(localObject3))
-                {
-                  localObject1 = paramd;
-                  localObject2 = paramaw;
-                  if (!"/files/".equals(localObject3)) {}
-                }
-                else
-                {
-                  paramString = am.bk(paramString);
-                  paramd = paramString;
-                  if (paramString.endsWith("/")) {
-                    paramd = paramString.substring(0, paramString.length() - 1);
-                  }
-                  localObject1 = com.estrongs.android.pop.ad.a(this).h(paramd);
-                  localObject2 = paramaw;
-                }
-              }
-            }
-            label1125:
-            localObject3 = localObject2;
-            localObject2 = paramd;
-          }
-          label1135:
-          paramaw = null;
-        }
-        i1 = 0;
-        paramaw = (com.estrongs.android.view.aw)localObject3;
-      }
-      label1149:
-      localObject3 = paramd;
-      paramd = (com.estrongs.android.ui.d.d)localObject1;
-      localObject1 = localObject3;
-      continue;
-      label1162:
-      paramaw = null;
-      paramd = (com.estrongs.android.ui.d.d)localObject1;
-      localObject1 = null;
+      localcr.a(null);
+      localcr.j(paramq);
+      localcr.a(E);
     }
   }
   
   private void a(Thread paramThread)
   {
-    aj();
-    com.estrongs.android.pop.utils.aa.d();
-    Object localObject1;
-    if (com.estrongs.android.pop.utils.cc.a())
+    aI();
+    com.estrongs.android.pop.utils.ad.d();
+    Object localObject;
+    if (com.estrongs.android.pop.utils.cl.a())
     {
-      aL = com.estrongs.android.ui.pcs.r.a();
-      localObject1 = m.ae();
-      if (localObject1 != null)
+      av = com.estrongs.android.ui.pcs.u.a();
+      localObject = k.af();
+      if (localObject != null)
       {
-        if (!"pcs_temp_mode".equals(m.ad())) {
-          break label500;
+        if (!"pcs_temp_mode".equals(k.ae())) {
+          break label120;
         }
-        aL.a(2);
+        av.a(2);
       }
     }
     int i2;
-    label276:
-    boolean bool;
-    label335:
-    label372:
-    Object localObject2;
     for (;;)
     {
-      aL.a((String)localObject1);
-      E();
-      i1 = -1;
-      if (com.estrongs.android.ui.d.e.c() != 0) {
-        break;
-      }
-      ak();
-      i2 = i1;
-      if (i1 < 0)
-      {
-        if (com.estrongs.android.ui.d.e.a() <= 0) {
-          break label974;
-        }
-        i2 = com.estrongs.android.ui.d.e.a();
-      }
-      if ((i2 >= 0) && (i2 < com.estrongs.android.ui.d.e.c()))
-      {
-        f.a(i2);
-        n.d(i2);
-        localObject1 = com.estrongs.android.ui.d.e.c(i2);
-        if (localObject1 != null) {
-          I.a(((com.estrongs.android.ui.d.d)localObject1).b(), true);
-        }
-      }
-      if (am.aZ(z())) {
-        com.estrongs.android.pop.app.b.a.a().c();
-      }
-      localObject1 = y();
-      if ((localObject1 != null) && ((localObject1 instanceof com.estrongs.android.pop.app.diskusage.h))) {
-        ((com.estrongs.android.view.aw)localObject1).l();
-      }
-      aB();
-      aF();
-      if (!com.estrongs.android.pop.ad.a(this).X())
-      {
-        com.estrongs.android.pop.ad.a(this).Y();
-        com.estrongs.android.pop.ad.a(this).j(true);
-      }
-      ag();
-      af();
-      localObject1 = getIntent().getStringExtra("archive_file_name");
-      if (localObject1 == null) {
-        break label704;
-      }
-      if (!com.estrongs.android.util.bc.o((String)localObject1)) {
-        break label675;
-      }
-      com.estrongs.io.archive.sevenzip.f.a(new ac(this, (String)localObject1), com.estrongs.io.archive.sevenzip.f.a);
-      if ((!com.estrongs.android.pop.z.ai) && (!com.estrongs.android.pop.utils.cl.d(this)))
-      {
-        if ((!u) && (!v)) {
-          break label863;
-        }
-        if (m.an())
-        {
-          localObject1 = y();
-          if ((localObject1 == null) || (!(localObject1 instanceof com.estrongs.android.ui.c.a))) {
-            break label968;
-          }
-          bool = false;
-          aN = new com.estrongs.android.ui.view.bn(this, u, v, bool);
-          aN.c();
-          m.n(false);
-        }
-      }
-      if (!com.estrongs.android.pop.z.w) {
-        break label957;
-      }
-      if (!com.estrongs.android.pop.ad.a(this).ap()) {
-        break label945;
-      }
-      localObject1 = com.estrongs.android.pop.esclasses.g.a(this).inflate(2130903265, null);
-      localObject2 = (CheckBox)((View)localObject1).findViewById(2131362785);
-      com.estrongs.android.ui.dialog.cg localcg = new com.estrongs.android.ui.dialog.cg(this);
-      localcg.setCancelable(false);
-      localcg.setTitle(getString(2131427404));
-      localcg.setContentView((View)localObject1);
-      localcg.setConfirmButton(getString(2131427390), new as(this, (CheckBox)localObject2, paramThread));
-      localcg.setCancelButton(getString(2131427363), new ax(this));
-      localcg.show();
-      return;
-      label500:
-      aL.a(1);
-    }
-    if (ah != null)
-    {
+      av.a((String)localObject);
+      T();
       i2 = -1;
+      if (au().c() != 0) {
+        break label569;
+      }
+      aJ();
       i1 = 0;
-      while (i1 < com.estrongs.android.ui.d.e.c())
+      while (i1 < au().c())
       {
-        localObject1 = com.estrongs.android.ui.d.e.c(i1);
-        int i3 = i2;
-        if (localObject1 != null)
-        {
-          i3 = i2;
-          if (i2 < 0)
-          {
-            i3 = i2;
-            if (am.G(ah) == am.G(((com.estrongs.android.ui.d.d)localObject1).b()))
-            {
-              ((com.estrongs.android.ui.d.d)localObject1).a(ah);
-              i3 = i1;
-            }
-          }
-        }
+        au().c(i1).a(true);
         i1 += 1;
-        i2 = i3;
       }
-      i1 = i2;
-      if (i2 < 0)
-      {
-        i1 = i2;
-        if (com.estrongs.android.ui.d.e.c() < 12)
-        {
-          i2 = com.estrongs.android.ui.d.e.a(ah);
-          localObject1 = com.estrongs.android.ui.d.e.c(i2);
-          i1 = i2;
-          if (localObject1 != null) {
-            n.a((com.estrongs.android.ui.d.d)localObject1);
-          }
+      label120:
+      av.a(1);
+    }
+    int i1 = -1;
+    for (;;)
+    {
+      i2 = i1;
+      if (i1 < 0) {
+        if (au().a() <= 0) {
+          break label1091;
         }
       }
-    }
-    for (int i1 = i2;; i1 = -1)
-    {
-      i2 = 0;
-      for (;;)
+      label560:
+      label569:
+      label976:
+      label1079:
+      label1085:
+      label1091:
+      for (i2 = au().a();; i2 = 0)
       {
-        if (i2 < com.estrongs.android.ui.d.e.c())
+        if ((i2 >= 0) && (i2 < au().c()))
         {
-          localObject1 = com.estrongs.android.ui.d.e.c(i2);
-          if (localObject1 != null) {
-            a((com.estrongs.android.ui.d.d)localObject1);
+          h.setCurrentScreen(i2);
+          aL.f(i2);
+          localObject = au().c(i2);
+          if (localObject != null) {
+            E.a(((com.estrongs.android.ui.d.h)localObject).a(), true);
           }
-          i2 += 1;
-          continue;
-          label675:
-          d("cmpn://" + (String)localObject1);
-          break label276;
-          label704:
-          if ("com.estrongs.android.SHOW_DISK_USAGE".equals(getIntent().getAction()))
+        }
+        if (com.estrongs.android.util.ap.bk(P())) {
+          com.estrongs.android.pop.app.f.a.a().c();
+        }
+        localObject = O();
+        if ((localObject != null) && ((localObject instanceof com.estrongs.android.pop.app.diskusage.h))) {
+          ((com.estrongs.android.view.cr)localObject).l();
+        }
+        aZ();
+        if (!com.estrongs.android.pop.ad.a(this).Y())
+        {
+          com.estrongs.android.pop.ad.a(this).Z();
+          com.estrongs.android.pop.ad.a(this).i(true);
+        }
+        aF();
+        aE();
+        localObject = getIntent().getStringExtra("archive_file_name");
+        if (localObject != null) {
+          if (bg.o((String)localObject))
           {
-            localObject2 = com.estrongs.android.pop.b.b();
-            localObject1 = localObject2;
-            if (!((String)localObject2).endsWith("/")) {
-              localObject1 = (String)localObject2 + "/";
+            com.estrongs.io.archive.sevenzip.f.a(new v(this, (String)localObject), com.estrongs.io.archive.sevenzip.f.a);
+            if ((!com.estrongs.android.pop.z.ai) && (!cu.d(this)))
+            {
+              if ((!t) && (!u)) {
+                break label976;
+              }
+              if (k.ao())
+              {
+                localObject = O();
+                if ((localObject == null) || (!(localObject instanceof com.estrongs.android.ui.c.e))) {
+                  break label1085;
+                }
+              }
             }
-            d("du://" + (String)localObject1);
-            break label276;
           }
-          if ("show_app".equals(getIntent().getStringExtra("action")))
+        }
+        for (boolean bool = false;; bool = true)
+        {
+          ax = new com.estrongs.android.ui.view.bw(this, t, u, bool);
+          ax.c();
+          k.m(false);
+          for (;;)
           {
-            d("app://user");
-            break label276;
+            if (com.estrongs.android.pop.z.w) {
+              if (com.estrongs.android.pop.ad.a(this).aq())
+              {
+                localObject = com.estrongs.android.pop.esclasses.k.a(this).inflate(2130903452, null);
+                CheckBox localCheckBox = (CheckBox)((View)localObject).findViewById(2131625593);
+                com.estrongs.android.ui.dialog.ci localci = new com.estrongs.android.ui.dialog.ci(this);
+                localci.setCancelable(false);
+                localci.setTitle(getString(2131231718));
+                localci.setContentView((View)localObject);
+                localci.setConfirmButton(getString(2131230896), new x(this, localCheckBox, paramThread));
+                localci.setCancelButton(getString(2131230851), new y(this));
+                localci.show();
+                b(getIntent());
+                return;
+                i1 = i2;
+                if (W != null)
+                {
+                  i1 = 0;
+                  while (i1 < au().c())
+                  {
+                    localObject = au().c(i1);
+                    int i3 = i2;
+                    if (localObject != null)
+                    {
+                      i3 = i2;
+                      if (i2 < 0)
+                      {
+                        i3 = i2;
+                        if (com.estrongs.android.util.ap.I(W) == com.estrongs.android.util.ap.I(((com.estrongs.android.ui.d.h)localObject).a()))
+                        {
+                          ((com.estrongs.android.ui.d.h)localObject).a(W);
+                          i3 = i1;
+                        }
+                      }
+                    }
+                    i1 += 1;
+                    i2 = i3;
+                  }
+                  i1 = i2;
+                  if (i2 < 0)
+                  {
+                    i1 = i2;
+                    if (au().c() < 12)
+                    {
+                      i2 = au().a(W);
+                      localObject = au().c(i2);
+                      i1 = i2;
+                      if (localObject != null)
+                      {
+                        aL.a((com.estrongs.android.ui.d.h)localObject);
+                        i1 = i2;
+                      }
+                    }
+                  }
+                }
+                i2 = 0;
+                while (i2 < au().c())
+                {
+                  localObject = au().c(i2);
+                  if (localObject != null) {
+                    a((com.estrongs.android.ui.d.h)localObject);
+                  }
+                  i2 += 1;
+                }
+                f("archive://" + (String)localObject);
+                break;
+                if ("com.estrongs.android.SHOW_DISK_USAGE".equals(getIntent().getAction()))
+                {
+                  try
+                  {
+                    com.estrongs.android.pop.app.analysis.a.a().a(false);
+                  }
+                  catch (Exception localException)
+                  {
+                    localException.printStackTrace();
+                  }
+                  break;
+                }
+                if ("show_app".equals(getIntent().getStringExtra("action")))
+                {
+                  f("app://user");
+                  break;
+                }
+                if ("from_update_notification".equals(getIntent().getStringExtra("action")))
+                {
+                  com.estrongs.android.pop.utils.c.c(ag().b(this));
+                  f("app://update");
+                  break;
+                }
+                if (c(getIntent())) {
+                  break;
+                }
+                if ("show_file_log".equals(getIntent().getStringExtra("action")))
+                {
+                  com.estrongs.android.pop.app.a.n.a(this);
+                  f("log://");
+                  break;
+                }
+                if (!"show_local_tab".equals(getIntent().getAction())) {
+                  break;
+                }
+                f(com.estrongs.android.pop.ad.a(this).j(a.a));
+                break;
+                if ((!k.ap()) || (!k.ao())) {
+                  continue;
+                }
+                com.estrongs.android.view.cr localcr = O();
+                if ((localcr == null) || (!(localcr instanceof com.estrongs.android.ui.c.e))) {
+                  break label1079;
+                }
+              }
+            }
           }
-          if (!"from_update_notification".equals(getIntent().getStringExtra("action"))) {
-            break label276;
-          }
-          com.estrongs.android.pop.utils.c.c(Q().b(this));
-          d("app://update");
-          break label276;
-          label863:
-          if ((!m.ao()) || (!m.an())) {
-            break label372;
-          }
-          localObject1 = y();
-          if ((localObject1 != null) && ((localObject1 instanceof com.estrongs.android.ui.c.a))) {}
           for (bool = false;; bool = true)
           {
-            aN = new com.estrongs.android.ui.view.bn(this, u, v, bool);
-            aN.c();
-            m.o(false);
+            ax = new com.estrongs.android.ui.view.bw(this, t, u, bool);
+            ax.c();
+            k.n(false);
             break;
-            label945:
             FexApplication.a().a(true);
             paramThread.start();
-            return;
-            label957:
+            break label560;
             paramThread.start();
-            return;
+            break label560;
           }
-          label968:
-          bool = true;
-          break label335;
-          label974:
-          i2 = 0;
-          break;
         }
       }
-      break;
     }
   }
   
-  public static boolean a(com.estrongs.android.view.aw paramaw, String paramString)
+  public static boolean a(com.estrongs.android.view.cr paramcr, String paramString)
   {
     boolean bool2 = false;
     boolean bool3 = true;
     boolean bool1;
-    if ((paramaw == null) || (paramaw.c() == null)) {
+    if ((paramcr == null) || (paramcr.c() == null)) {
       bool1 = false;
     }
     int i1;
@@ -1174,33 +899,33 @@ public class FileExplorerActivity
         do
         {
           return bool1;
-          if (!paramaw.c().startsWith("/")) {
+          if (!paramcr.c().startsWith("/")) {
             break;
           }
           bool1 = bool3;
-        } while (am.az(paramString));
+        } while (com.estrongs.android.util.ap.aJ(paramString));
         bool1 = bool3;
-      } while (paramaw.c().equals(paramString));
+      } while (paramcr.c().equals(paramString));
       if ("#home_page#".equals(paramString)) {
-        return paramaw instanceof com.estrongs.android.ui.c.a;
+        return paramcr instanceof com.estrongs.android.ui.c.e;
       }
-      i1 = am.G(paramString);
-      int i2 = am.G(paramaw.c());
-      if ((i1 != i2) && ((!am.a(i2)) || (!am.a(i1))) && ((!am.b(i2)) || (!am.b(i1))) && ((!am.c(i2)) || (!am.c(i1)))) {
+      i1 = com.estrongs.android.util.ap.I(paramString);
+      int i2 = com.estrongs.android.util.ap.I(paramcr.c());
+      if ((i1 != i2) && ((!com.estrongs.android.util.ap.a(i2)) || (!com.estrongs.android.util.ap.a(i1))) && ((!com.estrongs.android.util.ap.b(i2)) || (!com.estrongs.android.util.ap.b(i1))) && ((!com.estrongs.android.util.ap.c(i2)) || (!com.estrongs.android.util.ap.c(i1)))) {
         break;
       }
       if (i1 == 28) {
-        return paramString.equals(am.bK(paramaw.c()));
+        return paramString.equals(com.estrongs.android.util.ap.cb(paramcr.c()));
       }
       bool1 = bool3;
     } while (i1 != 23);
-    if ((!am.aB(paramString)) || (!am.aB(paramaw.c())))
+    if ((!com.estrongs.android.util.ap.aL(paramString)) || (!com.estrongs.android.util.ap.aL(paramcr.c())))
     {
       bool1 = bool2;
-      if (am.az(paramString))
+      if (com.estrongs.android.util.ap.aJ(paramString))
       {
         bool1 = bool2;
-        if (!am.az(paramaw.c())) {}
+        if (!com.estrongs.android.util.ap.aJ(paramcr.c())) {}
       }
     }
     else
@@ -1216,7 +941,7 @@ public class FileExplorerActivity
     try
     {
       InputStream localInputStream = getResources().openRawResource(paramInt1);
-      if (!com.estrongs.android.util.bd.a(localInputStream, paramString, paramInt2)) {
+      if (!bk.a(localInputStream, paramString, paramInt2)) {
         return false;
       }
       localInputStream.close();
@@ -1238,16 +963,16 @@ public class FileExplorerActivity
     {
       try
       {
-        boolean bool = y().d(paramString1);
+        boolean bool = O().g(paramString1);
         if (!bool) {
           break;
         }
-        com.estrongs.android.ui.view.ag.a(this, getText(2131427817), 0);
+        com.estrongs.android.ui.view.ak.a(this, getText(2131231900), 0);
         return false;
       }
       catch (Exception paramString1)
       {
-        com.estrongs.android.ui.view.ag.a(this, getText(2131427766) + ":" + paramString1.getMessage(), 0);
+        com.estrongs.android.ui.view.ak.a(this, getText(2131231901) + ":" + paramString1.getMessage(), 0);
         return false;
       }
       paramString1 = paramString1 + "/" + paramString2;
@@ -1258,454 +983,269 @@ public class FileExplorerActivity
         paramString1 = paramString1 + paramString2;
       }
     }
-    if (!com.estrongs.android.util.p.a(paramBoolean, paramString1, paramString2)) {
+    if (!com.estrongs.android.util.r.a(paramBoolean, paramString1, paramString2)) {
       return false;
     }
-    new dy(this, locald, paramString1, paramBoolean, paramString2).start();
-    c(getString(2131428149, new Object[] { paramString2 }));
+    new bw(this, locald, paramString1, paramBoolean, paramString2).start();
+    c(getString(2131231877, new Object[] { paramString2 }));
     return true;
   }
   
-  private void aA()
+  private void aB()
   {
-    Object localObject;
-    if (com.estrongs.android.ui.pcs.aj.a(this))
-    {
-      localObject = new cs(this);
-      com.estrongs.android.ui.pcs.r.a().a((com.estrongs.android.ui.pcs.n)localObject);
-    }
-    ae = ((RelativeLayout)findViewById(2131362011));
-    k = new com.estrongs.android.ui.e.w(this, u);
-    i = k.l();
-    if ("edit_mode".equals(j))
-    {
-      k.d(Y);
-      k.n();
+    com.estrongs.android.view.cr localcr = O();
+    String str;
+    if (localcr == null) {
+      str = "";
     }
     for (;;)
     {
-      localObject = y();
-      if ((localObject != null) && (((com.estrongs.android.view.aw)localObject).w() != null) && (((com.estrongs.android.view.aw)localObject).z())) {
-        bd.a(((com.estrongs.android.view.aw)localObject).w());
-      }
-      return;
-      i.a(j, Boolean.valueOf(false));
-    }
-  }
-  
-  private void aB() {}
-  
-  private void aC()
-  {
-    if (aI != null)
-    {
-      aI.findViewById(2131361926).setOnClickListener(new dc(this));
-      aI.findViewById(2131362648).setOnClickListener(new dd(this));
-      aI.findViewById(2131362649).setOnClickListener(new de(this));
-      aI.findViewById(2131362647).setOnClickListener(new df(this));
-      aI.findViewById(2131362418).setOnClickListener(new dg(this));
-    }
-  }
-  
-  private void aD()
-  {
-    if ((am != null) && (f != null)) {
-      am.removeView(f);
-    }
-    if (n != null) {
-      n.c();
-    }
-  }
-  
-  private void aE()
-  {
-    if (i != null) {
-      i.c();
-    }
-    com.estrongs.android.view.u.d();
-    com.estrongs.android.ui.f.a.d();
-    com.estrongs.android.ui.f.c.d();
-    ac = null;
-    if (ao != null)
-    {
-      ao.a();
-      ao.c();
-    }
-    an = null;
-    aF = null;
-    if (aH != null) {
-      aH.g();
-    }
-    aH = null;
-    B = null;
-    aj = null;
-    if (aX != null)
-    {
-      if (aX.isShowing()) {
-        aX.dismiss();
-      }
-      aX = null;
-    }
-  }
-  
-  @TargetApi(12)
-  private void aF()
-  {
-    bh = new eu(this);
-    bi = new ey(this);
-    bj = new fa(this);
-    IntentFilter localIntentFilter = new IntentFilter();
-    localIntentFilter.addAction("android.intent.action.PACKAGE_ADDED");
-    localIntentFilter.addAction("android.intent.action.PACKAGE_REMOVED");
-    localIntentFilter.addAction("android.intent.action.PACKAGE_CHANGED");
-    localIntentFilter.addAction("android.intent.action.PACKAGE_REPLACED");
-    localIntentFilter.addDataScheme("package");
-    registerReceiver(bi, localIntentFilter);
-    localIntentFilter = new IntentFilter();
-    localIntentFilter.addAction("android.intent.action.MEDIA_MOUNTED");
-    localIntentFilter.addAction("android.intent.action.MEDIA_UNMOUNTED");
-    localIntentFilter.addAction("android.intent.action.MEDIA_REMOVED");
-    localIntentFilter.addAction("android.intent.action.MEDIA_BAD_REMOVAL");
-    localIntentFilter.addDataScheme("file");
-    registerReceiver(bh, localIntentFilter);
-    localIntentFilter = new IntentFilter();
-    localIntentFilter.addAction("android.hardware.usb.action.USB_DEVICE_ATTACHED");
-    localIntentFilter.addAction("android.hardware.usb.action.USB_DEVICE_DETACHED");
-    localIntentFilter.addAction("android.hardware.usb.action.USB_ACCESSORY_ATTACHED");
-    localIntentFilter.addAction("android.hardware.usb.action.USB_ACCESSORY_DETACHED");
-    registerReceiver(bj, localIntentFilter);
-  }
-  
-  private void aG()
-  {
-    try
-    {
-      if (bi != null) {
-        unregisterReceiver(bi);
-      }
-      if (bh != null) {
-        unregisterReceiver(bh);
-      }
-      if (bj != null) {
-        unregisterReceiver(bj);
-      }
-      return;
-    }
-    catch (Exception localException) {}
-  }
-  
-  private com.estrongs.android.ui.navigation.n aH()
-  {
-    if (aH == null)
-    {
-      aH = new com.estrongs.android.ui.navigation.n(this, findViewById(2131361998), h);
-      ai();
-    }
-    return aH;
-  }
-  
-  private void aI()
-  {
-    ImageView localImageView = (ImageView)findViewById(2131362010);
-    localImageView.setOnClickListener(new fc(this));
-    localImageView.setVisibility(0);
-  }
-  
-  private void aJ()
-  {
-    aO = new HashMap();
-    aO.put("back", new fd(this));
-    aO.put("close_current", new fe(this));
-    aO.put("refresh", new h(this));
-    aO.put("#home_page#", new i(this));
-    aO.put("#home#", new j(this));
-    aO.put("open_lib_pic", new k(this));
-    aO.put("open_lib_music", new l(this));
-    aO.put("open_lib_video", new m(this));
-    aO.put("open_lib_text", new n(this));
-    aO.put("show_navi", new o(this));
-    aO.put("exit", new p(this));
-    aO.put("open_settings", new q(this));
-    aO.put("mynetwork://", new s(this));
-    aO.put("smb://", new t(this));
-    aO.put("net://", new u(this));
-    aO.put("pcs://", new v(this));
-    aO.put("ftp://", new w(this));
-    aO.put("bt://", new x(this));
-    aO.put("app://user", new y(this));
-    aO.put("download://", new z(this));
-    aO.put("task_manager", new aa(this));
-    aO.put("du://", new ab(this));
-    aO.put("remote://", new ad(this));
-    aO.put("net_manager", new ae(this));
-    aO.put("clipboard", new af(this));
-    aO.put("hide_list", new ag(this));
-    aO.put("root_explorer", new ah(this));
-    aO.put("recycle://", new ai(this));
-  }
-  
-  private void ad()
-  {
-    com.estrongs.android.view.aw localaw = y();
-    String str;
-    ArrayList localArrayList;
-    if (localaw == null)
-    {
-      str = "";
-      localArrayList = com.estrongs.android.pop.app.b.f.a(str);
-      if ((localArrayList == null) || (localArrayList.isEmpty())) {
-        break label72;
-      }
-    }
-    label72:
-    label117:
-    label195:
-    label201:
-    label203:
-    do
-    {
-      for (;;)
-      {
+      ArrayList localArrayList = com.estrongs.android.pop.app.f.f.a(str);
+      if ((localArrayList != null) && (!localArrayList.isEmpty())) {
         try
         {
           bool = FexApplication.a().l().b(localArrayList);
           d(bool);
           return;
-          str = localaw.c();
+          str = localcr.c();
         }
         catch (Exception localException)
         {
-          localException.printStackTrace();
-          boolean bool = false;
-          continue;
-        }
-        if ("bt://".equalsIgnoreCase(localException))
-        {
-          d(com.estrongs.fs.impl.c.a.a());
-          return;
-        }
-        int i1;
-        if ((com.estrongs.fs.d.a(this).l(localException) > 0) || (am.aX(localException)) || (am.t(localException)))
-        {
-          i1 = 1;
-          if ((i1 == 0) || (localaw == null) || (!localaw.o())) {
-            break label195;
+          for (;;)
+          {
+            localException.printStackTrace();
+            boolean bool = false;
           }
-          d(true);
-        }
-        for (;;)
-        {
-          if (B == null) {
-            break label201;
-          }
-          if ((!am.aX(localException)) || (localaw == null) || (!localaw.o())) {
-            break label203;
-          }
-          B.setVisibility(0);
-          if (aj == null) {
-            break;
-          }
-          aj.setVisibility(4);
-          return;
-          i1 = 0;
-          break label117;
-          d(false);
         }
       }
-      B.setVisibility(8);
-    } while ((al == null) || (al.getEditableText().length() <= 0) || (aj == null));
-    aj.setVisibility(0);
-  }
-  
-  private void ae()
-  {
-    if ((!ChromeCastPlayerNotificationHelper.a().i()) && (com.estrongs.android.pop.app.aa.g().c())) {
-      com.estrongs.android.pop.app.aa.g().q();
     }
-  }
-  
-  private void af()
-  {
-    com.estrongs.a.l.a().a(new az(this));
-  }
-  
-  private void ag()
-  {
-    aR = new bb(this);
-    aS = new bc(this);
-    aT = new bd(this);
-  }
-  
-  private void ah()
-  {
-    h.post(new bg(this));
-  }
-  
-  private void ai()
-  {
-    if (!aW) {
-      return;
-    }
-    new Thread(new bl(this)).start();
-  }
-  
-  private void aj()
-  {
-    com.estrongs.android.d.f.a(new com.estrongs.android.d.d(this));
-    com.estrongs.fs.d.c();
-    com.estrongs.fs.d.a(am.by("flashair://"), new com.estrongs.fs.impl.f.c());
-    com.estrongs.fs.d.a(am.by("search://"), com.estrongs.fs.impl.n.b.a());
-    if (com.estrongs.android.util.bd.f())
+    if ("bt://".equalsIgnoreCase(localException))
     {
-      com.estrongs.fs.d.a(am.by("book://"), com.estrongs.fs.impl.d.c.b());
-      com.estrongs.fs.d.a(am.by("apk://"), new com.estrongs.fs.impl.a.c());
+      d(com.estrongs.fs.impl.e.a.a());
       return;
     }
-    com.estrongs.fs.d.a(am.by("book://"), com.estrongs.fs.impl.d.b.a());
-    com.estrongs.fs.d.a(am.by("apk://"), com.estrongs.fs.impl.a.b.a());
+    int i1;
+    if ((com.estrongs.fs.d.a(this).l(localException) > 0) || (com.estrongs.android.util.ap.bi(localException)) || (com.estrongs.android.util.ap.v(localException)))
+    {
+      i1 = 1;
+      if ((i1 == 0) || (localcr == null) || (!localcr.p())) {
+        break label153;
+      }
+      d(true);
+    }
+    for (;;)
+    {
+      aL.p();
+      return;
+      i1 = 0;
+      break;
+      label153:
+      d(false);
+    }
   }
   
-  private com.estrongs.android.view.aw ak()
+  private void aC()
   {
-    if (ah == null) {
-      ??? = am.bE(am.bF(m.j("Market")));
+    int i1 = l.o();
+    int i2 = com.estrongs.android.i.a.a("rating_dailog_time", 0);
+    if (i2 > i1)
+    {
+      l.r();
+      l.a(i2);
+      l.a(false);
+    }
+  }
+  
+  private void aD()
+  {
+    if ((!ChromeCastPlayerNotificationHelper.a().i()) && (com.estrongs.android.pop.app.ag.g().c())) {
+      com.estrongs.android.pop.app.ag.g().q();
+    }
+  }
+  
+  private void aE()
+  {
+    com.estrongs.a.l.a().a(new aa(this));
+  }
+  
+  private void aF()
+  {
+    aB = new ac(this);
+  }
+  
+  private void aG()
+  {
+    i.post(new ad(this));
+  }
+  
+  private void aH()
+  {
+    if (!aE) {
+      return;
+    }
+    new Thread(new aj(this)).start();
+  }
+  
+  private void aI()
+  {
+    com.estrongs.android.h.f.a(new com.estrongs.android.h.d(this));
+  }
+  
+  private com.estrongs.android.view.cr aJ()
+  {
+    if (W == null) {
+      ??? = com.estrongs.android.util.ap.bV(com.estrongs.android.util.ap.bW(k.j(a.a)));
     }
     for (;;)
     {
       Object localObject2 = ???;
-      if (com.estrongs.android.util.bd.a((CharSequence)???)) {
+      if (bk.a((CharSequence)???)) {
         localObject2 = com.estrongs.android.pop.b.b();
       }
-      com.estrongs.android.ui.d.d locald = new com.estrongs.android.ui.d.d((String)localObject2);
-      com.estrongs.android.ui.d.e.a(locald);
-      n.a(locald);
-      n.d(com.estrongs.android.ui.d.e.a());
-      n.e(n.d());
-      synchronized (x)
+      com.estrongs.android.ui.d.h localh = new com.estrongs.android.ui.d.h((String)localObject2);
+      au().a(localh);
+      aL.a(localh);
+      aL.f(au().a());
+      synchronized (w)
       {
-        x.add(null);
-        return a(locald, (String)localObject2, null);
-        ??? = ah;
+        w.add(null);
+        return a(localh, (String)localObject2, null);
+        ??? = W;
       }
     }
   }
   
-  private void al()
+  private void aK()
   {
-    ad = ((LinearLayout)ab.findViewById(2131361907));
-    if (n == null)
-    {
-      n = new bn(this, ad, this);
+    if (aA) {
       return;
     }
-    n.a(ad);
-  }
-  
-  private void am()
-  {
-    if (aQ) {
-      return;
-    }
-    ae();
-    aQ = true;
-    if ((com.estrongs.android.pop.app.b.a.a) && (com.estrongs.android.pop.ad.a(this).A())) {
-      com.estrongs.android.pop.app.b.a.a().d();
-    }
+    long l1 = System.currentTimeMillis();
+    long l2 = aP;
+    JSONObject localJSONObject = new JSONObject();
     try
     {
-      com.estrongs.a.b.d.a();
-      an();
-      com.estrongs.android.d.f.c();
-      al.m();
-      aE();
-      com.estrongs.android.view.u.f();
-      com.estrongs.android.pop.app.b.a.a().j();
-      com.estrongs.android.pop.app.b.a.a().g();
-      VerifyPasswordDialog.a();
-      com.estrongs.android.pop.view.utils.n.b().a();
-      com.estrongs.android.ui.g.a.c();
-      com.estrongs.fs.d.b();
-      com.estrongs.android.ui.pcs.r.a().k();
-      new bo(this, com.estrongs.android.pop.ad.a(this).w()).start();
-      aG();
-      com.estrongs.android.view.aw.ae();
-      if ((com.estrongs.android.pop.ad.a(this).ap()) && (com.estrongs.android.pop.z.w)) {
-        FexApplication.a().a(false);
+      localJSONObject.put(getClass().getSimpleName(), "" + (l1 - l2));
+      com.estrongs.android.j.c.a(this).b("activity_persist_time", localJSONObject);
+      aD();
+      aA = true;
+      if ((com.estrongs.android.pop.app.f.a.a) && (com.estrongs.android.pop.ad.a(this).B())) {
+        com.estrongs.android.pop.app.f.a.a().d();
       }
     }
-    catch (IOException localIOException)
+    catch (JSONException localIOException)
     {
       try
       {
-        WebIconDatabase.getInstance().removeAllIcons();
-        WebIconDatabase.getInstance().close();
-        com.estrongs.android.util.a locala = com.estrongs.android.util.a.a();
-        if (locala != null) {
-          locala.d();
+        com.estrongs.a.b.d.a();
+        aM();
+        com.estrongs.android.h.a.e.c();
+        com.estrongs.android.ui.theme.at.r();
+        aW();
+        com.estrongs.android.view.y.f();
+        com.estrongs.android.pop.app.f.a.a().j();
+        com.estrongs.android.pop.app.f.a.a().g();
+        VerifyPasswordDialog.a();
+        com.estrongs.android.pop.view.utils.n.b().a();
+        com.estrongs.android.ui.g.a.c();
+        com.estrongs.fs.d.b();
+        com.estrongs.android.recommand.c.d();
+        com.estrongs.android.ui.pcs.u.a().k();
+        new al(this, com.estrongs.android.pop.ad.a(this).x()).start();
+        ba();
+        com.estrongs.android.view.cr.at();
+        if ((com.estrongs.android.pop.ad.a(this).aq()) && (com.estrongs.android.pop.z.w)) {
+          FexApplication.a().a(false);
         }
-        if ((!be) && (!com.estrongs.android.pop.z.ap)) {
-          AppFolderInfoManager.d().c();
-        }
-        com.estrongs.fs.impl.j.b.a();
-        return;
-        localIOException = localIOException;
-        localIOException.printStackTrace();
       }
-      catch (Exception localException)
+      catch (IOException localIOException)
       {
-        for (;;)
+        try
         {
-          localException.printStackTrace();
+          for (;;)
+          {
+            WebIconDatabase.getInstance().removeAllIcons();
+            WebIconDatabase.getInstance().close();
+            if ((!aS) && (!com.estrongs.android.pop.z.ap)) {
+              AppFolderInfoManager.d().c();
+            }
+            com.estrongs.fs.impl.o.b.a();
+            com.estrongs.android.pop.ai.a();
+            aL();
+            com.estrongs.android.pop.app.analysis.a.a().e();
+            com.estrongs.android.pop.app.analysis.z.a().d();
+            com.estrongs.android.pop.app.messagebox.z.a(FexApplication.a()).c();
+            com.estrongs.android.pop.app.unlock.s.a().b();
+            return;
+            localJSONException = localJSONException;
+            localJSONException.printStackTrace();
+          }
+          localIOException = localIOException;
+          localIOException.printStackTrace();
+        }
+        catch (Exception localException)
+        {
+          for (;;)
+          {
+            localException.printStackTrace();
+          }
         }
       }
     }
   }
   
-  private void an()
+  private void aL()
+  {
+    if (com.estrongs.android.pop.app.ad.a.a().d()) {
+      startService(new Intent(this, SaveDataService.class));
+    }
+  }
+  
+  private void aM()
   {
     com.estrongs.android.ftp.a locala = com.estrongs.android.ftp.a.e();
-    if ((com.estrongs.android.pop.ad.a(this).R()) && (locala != null) && (locala.i())) {
+    if ((com.estrongs.android.pop.ad.a(this).S()) && (locala != null) && (locala.i())) {
       com.estrongs.android.ftp.k.a(this);
     }
   }
   
-  private void ao()
+  private void aN()
   {
-    h = new bs(this);
+    i = new an(this);
   }
   
-  private void ap()
+  private void aO()
   {
     int i2 = -1;
     Object localObject;
-    if (f == null)
+    if (h == null)
     {
-      f = new bt(this, this);
-      localObject = new bu(this);
-      f.a((com.estrongs.android.widget.bc)localObject);
-      f.a(x);
+      h = new ao(this, this);
+      localObject = new ap(this);
+      h.setOnScreenSwitchListener((com.estrongs.android.widget.bd)localObject);
+      h.setGridViewWrappers(w);
     }
     for (;;)
     {
-      f.a(ao);
-      am.removeAllViews();
-      am.addView(f, new FrameLayout.LayoutParams(-1, -1));
-      ao.a(f);
+      h.setDragController(aa);
+      Y.removeAllViews();
+      Y.addView(h, new FrameLayout.LayoutParams(-1, -1));
+      aa.a(h);
       if (!c) {
         break;
       }
-      f.a(aH().j(), aH().k());
+      h.a(ae().j(), ae().k());
       return;
-      f.l();
+      h.i();
     }
-    if (v)
+    if (u)
     {
-      boolean bool = com.estrongs.android.pop.esclasses.e.b();
-      localObject = f;
+      boolean bool = com.estrongs.android.pop.esclasses.i.b();
+      localObject = h;
       int i1;
       if (bool)
       {
-        i1 = aH().j();
+        i1 = ae().j();
         if (!bool) {
           break label186;
         }
@@ -1717,106 +1257,86 @@ public class FileExplorerActivity
         i1 = -1;
         break;
         label186:
-        i2 = aH().k();
+        i2 = ae().k();
       }
     }
-    f.a(-1, -1);
+    h.a(-1, -1);
   }
   
-  private void aq()
+  private void aP()
   {
-    aa.removeAllViewsInLayout();
-    Object localObject1;
-    Object localObject2;
-    if ((v) && (!c))
-    {
-      localObject1 = com.estrongs.android.pop.esclasses.g.a(this).inflate(2130903069, null);
-      aa.addView((View)localObject1);
-      ab = ((View)localObject1).findViewById(2131362013);
-      localObject2 = (LinearLayout.LayoutParams)ab.getLayoutParams();
-      weight = 1.0F;
-      width = 0;
-      D = ((View)localObject1).findViewById(2131362012);
-      localObject1 = (LinearLayout.LayoutParams)D.getLayoutParams();
-      if (w)
-      {
-        width = (getResourcesgetDisplayMetricswidthPixels * 3 / 10);
-        aH();
-        setTabletSideBar(D);
-        label136:
-        g = ((RelativeLayout)findViewById(2131361909));
-        if (u) {
-          g.setBackgroundResource(2130837792);
-        }
-        ak = ((AdvancedAddressBar)findViewById(2131362651));
-        z = ((Button)findViewById(2131362003));
-        av();
-        aA();
-        ((ImageView)ab.findViewById(2131362006)).setImageDrawable(Z.h());
-        al();
-        if (com.estrongs.android.ui.d.e.c() != 0) {
-          break label418;
-        }
-      }
+    com.estrongs.android.view.cr localcr = O();
+    if ((localcr != null) && ((localcr instanceof com.estrongs.android.view.er))) {
+      com.estrongs.android.j.c.a(this).a("log", "edit");
     }
-    label418:
-    label496:
-    label501:
+  }
+  
+  private void aQ()
+  {
+    f.removeAllViewsInLayout();
+    aL.a();
+    if (com.estrongs.android.ui.pcs.am.a(this))
+    {
+      localObject1 = new as(this);
+      com.estrongs.android.ui.pcs.u.a().a((com.estrongs.android.ui.pcs.q)localObject1);
+    }
+    Object localObject1 = O();
+    if ((localObject1 != null) && (((com.estrongs.android.view.cr)localObject1).o() != null) && (((com.estrongs.android.view.cr)localObject1).N())) {
+      F.a(((com.estrongs.android.view.cr)localObject1).o());
+    }
+    aL.e();
+    if (au().c() == 0) {}
+    label322:
+    label327:
     for (int i1 = -1;; i1 = -1)
     {
       int i2 = i1;
       if (i1 < 0) {
-        if (com.estrongs.android.ui.d.e.a() <= 0) {
-          break label496;
+        if (au().a() <= 0) {
+          break label322;
         }
       }
-      for (i2 = com.estrongs.android.ui.d.e.a();; i2 = 0)
+      for (i2 = au().a();; i2 = 0)
       {
-        if ((i2 >= 0) && (i2 < com.estrongs.android.ui.d.e.c()))
+        if ((i2 >= 0) && (i2 < au().c()))
         {
-          localObject1 = com.estrongs.android.ui.d.e.c(i2);
+          localObject1 = au().c(i2);
           if (localObject1 == null) {}
         }
-        for (localObject2 = ((com.estrongs.android.ui.d.d)localObject1).b();; localObject2 = null)
+        for (Object localObject2 = ((com.estrongs.android.ui.d.h)localObject1).a();; localObject2 = null)
         {
           localObject1 = localObject2;
           if (localObject2 == null) {
-            localObject1 = am.bE(am.bF(m.j("Market")));
+            localObject1 = com.estrongs.android.util.ap.bV(com.estrongs.android.util.ap.bW(k.j(a.a)));
           }
           localObject2 = localObject1;
-          if (com.estrongs.android.util.bd.a((CharSequence)localObject1)) {
+          if (bk.a((CharSequence)localObject1)) {
             localObject2 = com.estrongs.android.pop.b.b();
           }
           try
           {
-            I.a((String)localObject2, true);
+            E.a((String)localObject2, true);
             if (!d()) {
-              aI();
+              bb();
             }
-            if (E.getVisibility() != 0) {
-              E.setVisibility(0);
+            if (A.getVisibility() != 0) {
+              A.setVisibility(0);
             }
             return;
-            width = (getResourcesgetDisplayMetricswidthPixels * 3 / 10);
-            break;
-            ab = com.estrongs.android.pop.esclasses.g.a(this).inflate(2130903068, null);
-            aa.addView(ab);
-            aH();
-            break label136;
-            if (ah == null) {
-              break label501;
+            if (W == null) {
+              break label327;
             }
             i1 = 0;
             for (;;)
             {
-              if (i1 >= com.estrongs.android.ui.d.e.c()) {
-                break label501;
+              if (i1 >= au().c()) {
+                break label327;
               }
-              localObject1 = com.estrongs.android.ui.d.e.c(i1);
-              if ((localObject1 != null) && (am.G(ah) == am.G(((com.estrongs.android.ui.d.d)localObject1).b())))
+              localObject1 = au().c(i1);
+              if ((localObject1 != null) && (com.estrongs.android.util.ap.I(W) == com.estrongs.android.util.ap.I(((com.estrongs.android.ui.d.h)localObject1).a())))
               {
-                ((com.estrongs.android.ui.d.d)localObject1).a(ah);
-                com.estrongs.android.ui.d.e.a(i1);
+                ((com.estrongs.android.ui.d.h)localObject1).a(W);
+                au().a(i1);
                 break;
               }
               i1 += 1;
@@ -1834,310 +1354,409 @@ public class FileExplorerActivity
     }
   }
   
-  private void ar()
+  private void aR()
   {
-    A = ((ProgressBar)findViewById(2131362004));
-    am = ((DragLayer)ab.findViewById(2131362007));
-    if (ao == null) {
-      ao = new com.estrongs.android.ui.drag.d(this);
+    Y = ((DragLayer)g.findViewById(2131624519));
+    if (aa == null) {
+      aa = new com.estrongs.android.ui.drag.d(this);
     }
-    am.a(ao);
-    synchronized (x)
+    Y.setDragController(aa);
+    synchronized (w)
     {
-      Iterator localIterator = x.iterator();
+      Iterator localIterator = w.iterator();
       while (localIterator.hasNext())
       {
-        com.estrongs.android.view.aw localaw = (com.estrongs.android.view.aw)localIterator.next();
-        if (localaw != null) {
-          localaw.a(localaw.B());
+        com.estrongs.android.view.cr localcr = (com.estrongs.android.view.cr)localIterator.next();
+        if (localcr != null) {
+          localcr.a(localcr.P());
         }
       }
     }
-    ap();
-    aw();
-    if ((c) || (v))
-    {
-      az();
-      aI = findViewById(2131362646);
-      aJ = ((TextView)findViewById(2131362005));
-      aC();
-      if (!"edit_mode".equals(i.b())) {
-        break label259;
-      }
-      aI.setVisibility(0);
-      aJ.setVisibility(0);
-      ??? = y();
-      if ((??? != null) && (bd != null)) {
-        bd.a(((com.estrongs.android.view.aw)???).w());
-      }
+    aO();
+    aL.b();
+    b(a);
+    g.setBackgroundColor(0);
+  }
+  
+  private void aS()
+  {
+    aQ();
+    aR();
+  }
+  
+  private void aT()
+  {
+    if ((aa != null) || (ac == null)) {
+      ac = new at(this);
     }
+    if (ag == null) {
+      ag = new au(this);
+    }
+    if (ak == null) {
+      ak = new av(this);
+    }
+    if (ao == null) {
+      ao = new aw(this);
+    }
+    if (ad == null)
+    {
+      ad = new TranslateAnimation(1, -1.0F, 1, 0.0F, 1, -1.0F, 1, 0.0F);
+      ad.setDuration(150L);
+      ae = new TranslateAnimation(1, 0.0F, 1, -1.0F, 1, 0.0F, 1, -1.0F);
+      ae.setDuration(150L);
+    }
+    if (ah == null)
+    {
+      ah = new TranslateAnimation(1, 1.0F, 1, 0.0F, 1, -1.0F, 1, 0.0F);
+      ah.setDuration(150L);
+      ai = new TranslateAnimation(1, 0.0F, 1, 1.0F, 1, 0.0F, 1, -1.0F);
+      ai.setDuration(150L);
+    }
+    if (al == null)
+    {
+      al = new TranslateAnimation(1, -1.0F, 1, 0.0F, 1, 1.0F, 1, 0.0F);
+      al.setDuration(150L);
+      am = new TranslateAnimation(1, 0.0F, 1, -1.0F, 1, 0.0F, 1, 1.0F);
+      am.setDuration(150L);
+    }
+    if (ap == null)
+    {
+      ap = new TranslateAnimation(1, 1.0F, 1, 0.0F, 1, 1.0F, 1, 0.0F);
+      ap.setDuration(150L);
+      aq = new TranslateAnimation(1, 0.0F, 1, 1.0F, 1, 0.0F, 1, 1.0F);
+      aq.setDuration(150L);
+      aq.setAnimationListener(new ax(this));
+    }
+  }
+  
+  private void aU()
+  {
+    if (Z == null)
+    {
+      Z = ((DragLayer)com.estrongs.android.pop.esclasses.k.a(this).inflate(2130903203, null));
+      f.addView(Z);
+      ab = ((DragActionZone)Z.findViewById(2131624746));
+      ab.setPosition(0);
+      ab.setOnDropListener(ac);
+      af = ((DragActionZone)Z.findViewById(2131624748));
+      af.setPosition(1);
+      af.setOnDropListener(ag);
+      aj = ((DragActionZone)Z.findViewById(2131624749));
+      aj.setPosition(2);
+      aj.setOnDropListener(ak);
+      an = ((DragActionZone)Z.findViewById(2131624750));
+      an.setPosition(3);
+      an.setOnDropListener(ao);
+    }
+  }
+  
+  private void aV()
+  {
+    if ((Y != null) && (h != null)) {
+      Y.removeView(h);
+    }
+    aL.f();
+  }
+  
+  private void aW()
+  {
+    aL.g();
+    com.estrongs.android.view.y.d();
+    com.estrongs.android.ui.f.g.d();
+    com.estrongs.android.ui.f.i.d();
+    U = null;
+    if (aa != null)
+    {
+      aa.a();
+      aa.c();
+    }
+    Z = null;
+    ar = null;
+    if (at != null) {
+      at.h();
+    }
+    at = null;
+    if (aF != null)
+    {
+      if (aF.isShowing()) {
+        aF.dismiss();
+      }
+      aF = null;
+    }
+  }
+  
+  private void aX() {}
+  
+  private void aY()
+  {
+    if (au == null) {}
+    label134:
+    label145:
     for (;;)
     {
-      b(a);
-      ab.setBackgroundColor(0);
       return;
-      ax();
-      break;
-      label259:
-      aI.setVisibility(4);
+      String str = T.d();
+      if (getPackageName().equals(str)) {
+        if (l.d() > 1)
+        {
+          if (!T.o()) {
+            break label134;
+          }
+          au.c("using_layout_single");
+        }
+      }
+      for (;;)
+      {
+        if (!k.am()) {
+          break label145;
+        }
+        au.b("gesture_enabled", "gesture_enabled");
+        return;
+        if ("com.estrongs.android.pop.theme.ics".equals(str))
+        {
+          au.b("using_theme_holo", "using_theme_holo");
+          break;
+        }
+        if (!"com.estrongs.android.pop.classic.material".equals(str)) {
+          break;
+        }
+        au.b("using_theme_classic", "using_theme_classic");
+        break;
+        au.c("using_layout_double");
+      }
     }
   }
   
-  private void as()
+  @TargetApi(12)
+  private void aZ()
   {
-    aq();
-    ar();
+    aV = new cr(this);
+    aW = new cv(this);
+    aX = new cy(this);
+    IntentFilter localIntentFilter = new IntentFilter();
+    localIntentFilter.addAction("android.intent.action.PACKAGE_ADDED");
+    localIntentFilter.addAction("android.intent.action.PACKAGE_REMOVED");
+    localIntentFilter.addAction("android.intent.action.PACKAGE_CHANGED");
+    localIntentFilter.addAction("android.intent.action.PACKAGE_REPLACED");
+    localIntentFilter.addDataScheme("package");
+    registerReceiver(aW, localIntentFilter);
+    localIntentFilter = new IntentFilter();
+    localIntentFilter.addAction("android.intent.action.MEDIA_MOUNTED");
+    localIntentFilter.addAction("android.intent.action.MEDIA_UNMOUNTED");
+    localIntentFilter.addAction("android.intent.action.MEDIA_REMOVED");
+    localIntentFilter.addAction("android.intent.action.MEDIA_BAD_REMOVAL");
+    localIntentFilter.addDataScheme("file");
+    registerReceiver(aV, localIntentFilter);
+    localIntentFilter = new IntentFilter();
+    localIntentFilter.addAction("android.hardware.usb.action.USB_DEVICE_ATTACHED");
+    localIntentFilter.addAction("android.hardware.usb.action.USB_DEVICE_DETACHED");
+    localIntentFilter.addAction("android.hardware.usb.action.USB_ACCESSORY_ATTACHED");
+    localIntentFilter.addAction("android.hardware.usb.action.USB_ACCESSORY_DETACHED");
+    registerReceiver(aX, localIntentFilter);
   }
   
-  private void at()
+  public static LocalSocket aj()
   {
-    if ((ao != null) || (aq == null)) {
-      aq = new bw(this);
-    }
-    if (au == null) {
-      au = new bx(this);
-    }
-    if (ay == null) {
-      ay = new by(this);
-    }
-    if (aC == null) {
-      aC = new bz(this);
-    }
-    if (ar == null)
-    {
-      ar = new TranslateAnimation(1, -1.0F, 1, 0.0F, 1, -1.0F, 1, 0.0F);
-      ar.setDuration(150L);
-      as = new TranslateAnimation(1, 0.0F, 1, -1.0F, 1, 0.0F, 1, -1.0F);
-      as.setDuration(150L);
-    }
-    if (av == null)
-    {
-      av = new TranslateAnimation(1, 1.0F, 1, 0.0F, 1, -1.0F, 1, 0.0F);
-      av.setDuration(150L);
-      aw = new TranslateAnimation(1, 0.0F, 1, 1.0F, 1, 0.0F, 1, -1.0F);
-      aw.setDuration(150L);
-    }
-    if (az == null)
-    {
-      az = new TranslateAnimation(1, -1.0F, 1, 0.0F, 1, 1.0F, 1, 0.0F);
-      az.setDuration(150L);
-      aA = new TranslateAnimation(1, 0.0F, 1, -1.0F, 1, 0.0F, 1, 1.0F);
-      aA.setDuration(150L);
-    }
-    if (aD == null)
-    {
-      aD = new TranslateAnimation(1, 1.0F, 1, 0.0F, 1, 1.0F, 1, 0.0F);
-      aD.setDuration(150L);
-      aE = new TranslateAnimation(1, 0.0F, 1, 1.0F, 1, 0.0F, 1, 1.0F);
-      aE.setDuration(150L);
-      aE.setAnimationListener(new ca(this));
-    }
-  }
-  
-  private void au()
-  {
-    if (an == null)
-    {
-      an = ((DragLayer)com.estrongs.android.pop.esclasses.g.a(this).inflate(2130903114, null));
-      aa.addView(an);
-      ap = ((DragActionZone)an.findViewById(2131362181));
-      ap.a(0);
-      ap.a(aq);
-      at = ((DragActionZone)an.findViewById(2131362183));
-      at.a(1);
-      at.a(au);
-      ax = ((DragActionZone)an.findViewById(2131362184));
-      ax.a(2);
-      ax.a(ay);
-      aB = ((DragActionZone)an.findViewById(2131362185));
-      aB.a(3);
-      aB.a(aC);
-    }
-  }
-  
-  private void av()
-  {
-    if (u)
-    {
-      ak.a(new cb(this));
-      ak.a(new cd(this));
-      return;
-    }
-    View localView = findViewById(2131362464);
-    localView.setOnClickListener(new ce(this));
-    localView.setOnLongClickListener(new cf(this));
-  }
-  
-  private void aw()
-  {
-    View localView = findViewById(2131362463);
-    ImageView localImageView = (ImageView)localView.findViewById(2131361853);
-    ch localch = new ch(this);
-    ci localci = new ci(this);
-    if (u) {
-      localImageView.setImageResource(2130837785);
-    }
     for (;;)
     {
-      localView.setOnClickListener(localch);
-      localView.setOnLongClickListener(localci);
-      return;
-      localImageView.setImageResource(2130837786);
-    }
-  }
-  
-  private void ax()
-  {
-    View localView = findViewById(2131362465);
-    if (localView == null) {
-      return;
-    }
-    localView.setOnClickListener(new cj(this));
-    localView.setOnLongClickListener(new cl(this));
-  }
-  
-  private void ay()
-  {
-    Message localMessage = new Message();
-    if (com.estrongs.android.ui.d.e.c() <= 1) {
-      what = 211;
-    }
-    for (;;)
-    {
-      if (h != null) {
-        h.sendMessage(localMessage);
+      Object localObject2;
+      synchronized (aU)
+      {
+        if (ba == null)
+        {
+          ba = com.estrongs.android.nativetool.c.a();
+          localObject2 = ba;
+          return (LocalSocket)localObject2;
+        }
       }
-      if (f.f()) {
-        f.a(false);
+      try
+      {
+        localObject2 = ba.getOutputStream();
+        InputStream localInputStream = ba.getInputStream();
+        com.estrongs.fs.impl.local.m.a((OutputStream)localObject2, 80);
+        com.estrongs.fs.impl.local.m.c(localInputStream);
+        if (ba != null) {
+          continue;
+        }
+        ba = com.estrongs.android.nativetool.c.a();
+        continue;
+        localObject3 = finally;
+        throw ((Throwable)localObject3);
       }
-      return;
-      what = 2;
-      arg1 = com.estrongs.android.ui.d.e.a();
+      catch (Exception localException)
+      {
+        for (;;)
+        {
+          ba = null;
+        }
+      }
     }
   }
   
-  private void az()
+  private void b(Intent paramIntent)
   {
-    View localView = findViewById(2131362466);
-    af = ((ImageView)localView.findViewById(2131361853));
-    if (af == null) {
-      return;
-    }
-    cp localcp = new cp(this);
-    cq localcq = new cq(this);
-    if (!u) {
-      af.setImageResource(2130838160);
-    }
-    localView.setOnClickListener(localcp);
-    localView.setOnLongClickListener(localcq);
-  }
-  
-  private void b(int paramInt1, int paramInt2)
-  {
-    if (k == null) {
-      return;
-    }
-    Y = paramInt1;
-    k.d(paramInt1);
-    aB();
-  }
-  
-  private void b(View paramView)
-  {
-    paramView = com.estrongs.android.ui.f.a.a(paramView, getString(2131427415), 0, t(), false);
-    paramView.a(new cg(this, paramView));
-    try
+    if (paramIntent.getBooleanExtra("compress", false))
     {
-      paramView.c();
-      return;
-    }
-    catch (WindowManager.BadTokenException paramView)
-    {
-      paramView.printStackTrace();
+      if ((FexApplication.a().toString().equals(paramIntent.getStringExtra("application"))) && (paramIntent.getIntExtra("notification_id", -1) != -1)) {
+        ((NotificationManager)getSystemService("notification")).cancel(paramIntent.getIntExtra("notification_id", -1));
+      }
+      f("archive://");
     }
   }
   
-  private void b(com.estrongs.android.view.aw paramaw, String paramString)
+  private void b(com.estrongs.android.view.cr paramcr, String paramString)
   {
-    if (am.S(paramString)) {
-      paramaw.m("music");
+    if (com.estrongs.android.util.ap.V(paramString)) {
+      paramcr.o("music");
     }
     do
     {
       return;
-      if (am.U(paramString))
+      if (com.estrongs.android.util.ap.Z(paramString))
       {
-        paramaw.m("video");
+        paramcr.o("video");
         return;
       }
-      if ((am.T(paramString)) || (am.aO(paramString)))
+      if ((com.estrongs.android.util.ap.X(paramString)) || (com.estrongs.android.util.ap.aY(paramString)))
       {
-        paramaw.m("image");
+        paramcr.o("image");
         return;
       }
-      if (am.Y(paramString))
+      if (com.estrongs.android.util.ap.ai(paramString))
       {
-        paramaw.m("apk");
+        paramcr.o("apk");
         return;
       }
-    } while (!am.V(paramString));
-    paramaw.m("document");
+      if (com.estrongs.android.util.ap.ae(paramString))
+      {
+        paramcr.o("document");
+        return;
+      }
+    } while (!com.estrongs.android.util.ap.ad(paramString));
+    paramcr.o("encrypt");
   }
   
-  private com.estrongs.android.view.aw c(String paramString, TypedMap paramTypedMap, boolean paramBoolean)
+  private void ba()
+  {
+    try
+    {
+      if (aW != null) {
+        unregisterReceiver(aW);
+      }
+      if (aV != null) {
+        unregisterReceiver(aV);
+      }
+      if (aX != null) {
+        unregisterReceiver(aX);
+      }
+      if (aY != null) {
+        unregisterReceiver(aY);
+      }
+      return;
+    }
+    catch (Exception localException) {}
+  }
+  
+  private void bb()
+  {
+    ImageView localImageView = (ImageView)findViewById(2131624522);
+    localImageView.setOnClickListener(new da(this));
+    localImageView.setVisibility(0);
+  }
+  
+  private void bc()
+  {
+    ay = new HashMap();
+    ay.put("back", new db(this));
+    ay.put("close_current", new dc(this));
+    ay.put("refresh", new dd(this));
+    ay.put("#home_page#", new de(this));
+    ay.put("#home#", new df(this));
+    ay.put("open_lib_pic", new dg(this));
+    ay.put("open_lib_music", new dh(this));
+    ay.put("open_lib_video", new dj(this));
+    ay.put("open_lib_text", new dk(this));
+    ay.put("show_navi", new dl(this));
+    ay.put("exit", new dm(this));
+    ay.put("open_settings", new dn(this));
+    ay.put("mynetwork://", new do(this));
+    ay.put("smb://", new dp(this));
+    ay.put("net://", new dq(this));
+    ay.put("pcs://", new dr(this));
+    ay.put("ftp://", new ds(this));
+    ay.put("bt://", new dw(this));
+    ay.put("app://user", new dx(this));
+    ay.put("download://", new dy(this));
+    ay.put("task_manager", new dz(this));
+    ay.put("du://", new ea(this));
+    ay.put("remote://", new eb(this));
+    ay.put("net_manager", new ec(this));
+    ay.put("clipboard", new ed(this));
+    ay.put("hide_list", new ee(this));
+    ay.put("root_explorer", new ef(this));
+    ay.put("recycle://", new f(this));
+  }
+  
+  private com.estrongs.android.view.cr c(String paramString, TypedMap paramTypedMap, boolean paramBoolean)
   {
     Object localObject;
     if (paramString == null) {
-      localObject = new com.estrongs.android.ui.d.d("New");
+      localObject = new com.estrongs.android.ui.d.h("New");
     }
     for (;;)
     {
-      int i1 = com.estrongs.android.ui.d.e.a() + 1;
-      synchronized (x)
+      int i1 = au().a() + 1;
+      synchronized (w)
       {
-        if (i1 > x.size()) {
+        if (i1 > w.size()) {
           paramTypedMap = null;
         }
         do
         {
           return paramTypedMap;
-          localObject = new com.estrongs.android.ui.d.d(paramString);
+          localObject = new com.estrongs.android.ui.d.h(paramString);
           break;
-          if (x.size() == 0) {
+          if (w.size() == 0) {
             i1 = 0;
           }
-          com.estrongs.android.ui.d.e.a((com.estrongs.android.ui.d.d)localObject, i1);
-          n.a((com.estrongs.android.ui.d.d)localObject, i1);
-          x.add(i1, null);
+          au().a((com.estrongs.android.ui.d.h)localObject, i1);
+          aL.a((com.estrongs.android.ui.d.h)localObject, i1);
+          w.add(i1, null);
           if (paramString == null) {
-            break label176;
+            break label184;
           }
-          ag = y();
-          if (ag != null) {
-            ag.b_();
+          V = O();
+          if (V != null) {
+            V.j_();
           }
-          localObject = a((com.estrongs.android.ui.d.d)localObject, paramString, paramTypedMap, paramBoolean);
+          localObject = a((com.estrongs.android.ui.d.h)localObject, paramString, paramTypedMap, paramBoolean);
           paramTypedMap = (TypedMap)localObject;
-        } while (!am.aZ(paramString));
-        com.estrongs.android.pop.app.b.a.a().c();
-        return (com.estrongs.android.view.aw)localObject;
+        } while (!com.estrongs.android.util.ap.bk(paramString));
+        com.estrongs.android.pop.app.f.a.a().c();
+        return (com.estrongs.android.view.cr)localObject;
       }
     }
-    label176:
+    label184:
     return null;
   }
   
-  private void c(com.estrongs.android.view.aw paramaw)
+  private void c(int paramInt1, int paramInt2)
   {
-    String str = paramaw.c();
-    if (((am.J(str)) || (am.I(str)) || (am.p(str)) || (am.n(str)) || (am.H(str))) && ((am.bg(am.bk(str))) || (paramaw.P() == 1)) && (m.g(str))) {
-      m.a(str, m.h(str));
+    aL.g(paramInt1);
+    e = paramInt1;
+  }
+  
+  private void c(com.estrongs.android.view.cr paramcr)
+  {
+    String str = paramcr.c();
+    if (((com.estrongs.android.util.ap.L(str)) || (com.estrongs.android.util.ap.K(str)) || (com.estrongs.android.util.ap.r(str)) || (com.estrongs.android.util.ap.p(str)) || (com.estrongs.android.util.ap.J(str))) && ((com.estrongs.android.util.ap.br(com.estrongs.android.util.ap.bB(str))) || (paramcr.af() == 1)) && (k.g(str))) {
+      k.a(str, k.h(str));
     }
   }
   
   private void c(String paramString1, String paramString2)
   {
-    a(paramString1, paramString2, al.getText().toString());
+    a(paramString1, paramString2, aL.q());
   }
   
   private void c(String paramString, boolean paramBoolean)
@@ -2149,109 +1768,99 @@ public class FileExplorerActivity
       if (paramBoolean)
       {
         i1 = -1;
-        a(str, 2131099655, i1);
+        a(str, 2131099656, i1);
         str = paramString + "/es_sugarsync.jar";
         if (!paramBoolean) {
-          break label445;
+          break label406;
         }
         i1 = -1;
         label70:
         a(str, 2131099663, i1);
         str = paramString + "/es_boxnet.jar";
         if (!paramBoolean) {
-          break label458;
+          break label419;
         }
         i1 = -1;
         label109:
-        a(str, 2131099654, i1);
-        str = paramString + "/es_kanbox.jar";
+        a(str, 2131099655, i1);
+        str = paramString + "/es_kuaipan.jar";
+        if (!paramBoolean) {
+          break label432;
+        }
+        i1 = -1;
+        label148:
+        a(str, 2131099658, i1);
+        str = paramString + "/es_vdisk.jar";
+        if (!paramBoolean) {
+          break label445;
+        }
+        i1 = -1;
+        label187:
+        a(str, 2131099664, i1);
+        str = paramString + "/es_skydrv.jar";
+        if (!paramBoolean) {
+          break label458;
+        }
+        i1 = -1;
+        label226:
+        a(str, 2131099662, i1);
+        str = paramString + "/es_gdrive.jar";
         if (!paramBoolean) {
           break label471;
         }
         i1 = -1;
-        label148:
+        label265:
         a(str, 2131099657, i1);
-        str = paramString + "/es_kuaipan.jar";
+        str = paramString + "/es_s3.jar";
         if (!paramBoolean) {
           break label484;
         }
         i1 = -1;
-        label187:
-        a(str, 2131099658, i1);
-        str = paramString + "/es_vdisk.jar";
+        label304:
+        a(str, 2131099661, i1);
+        str = paramString + "/es_megacloud.jar";
         if (!paramBoolean) {
           break label497;
         }
         i1 = -1;
-        label226:
-        a(str, 2131099664, i1);
-        str = paramString + "/es_skydrv.jar";
-        if (!paramBoolean) {
-          break label510;
-        }
-        i1 = -1;
-        label265:
-        a(str, 2131099662, i1);
-        str = paramString + "/es_gdrive.jar";
-        if (!paramBoolean) {
-          break label523;
-        }
-        i1 = -1;
-        label304:
-        a(str, 2131099656, i1);
-        str = paramString + "/es_s3.jar";
-        if (!paramBoolean) {
-          break label536;
-        }
-        i1 = -1;
         label343:
-        a(str, 2131099661, i1);
-        str = paramString + "/es_megacloud.jar";
-        if (!paramBoolean) {
-          break label549;
-        }
-        i1 = -1;
-        label382:
         a(str, 2131099660, i1);
         paramString = paramString + "/es_mediafire.jar";
         if (!paramBoolean) {
-          break label562;
+          break label510;
         }
       }
+      label406:
+      label419:
+      label432:
       label445:
       label458:
       label471:
       label484:
       label497:
       label510:
-      label523:
-      label536:
-      label549:
-      label562:
-      for (int i1 = i2;; i1 = com.estrongs.android.util.bd.a(bf, 2131099659))
+      for (int i1 = i2;; i1 = bk.a(aT, 2131099659))
       {
         a(paramString, 2131099659, i1);
         return;
-        i1 = com.estrongs.android.util.bd.a(bf, 2131099655);
+        i1 = bk.a(aT, 2131099656);
         break;
-        i1 = com.estrongs.android.util.bd.a(bf, 2131099663);
+        i1 = bk.a(aT, 2131099663);
         break label70;
-        i1 = com.estrongs.android.util.bd.a(bf, 2131099654);
+        i1 = bk.a(aT, 2131099655);
         break label109;
-        i1 = com.estrongs.android.util.bd.a(bf, 2131099657);
+        i1 = bk.a(aT, 2131099658);
         break label148;
-        i1 = com.estrongs.android.util.bd.a(bf, 2131099658);
+        i1 = bk.a(aT, 2131099664);
         break label187;
-        i1 = com.estrongs.android.util.bd.a(bf, 2131099664);
+        i1 = bk.a(aT, 2131099662);
         break label226;
-        i1 = com.estrongs.android.util.bd.a(bf, 2131099662);
+        i1 = bk.a(aT, 2131099657);
         break label265;
-        i1 = com.estrongs.android.util.bd.a(bf, 2131099656);
+        i1 = bk.a(aT, 2131099661);
         break label304;
-        i1 = com.estrongs.android.util.bd.a(bf, 2131099661);
+        i1 = bk.a(aT, 2131099660);
         break label343;
-        i1 = com.estrongs.android.util.bd.a(bf, 2131099660);
-        break label382;
       }
       return;
     }
@@ -2261,41 +1870,54 @@ public class FileExplorerActivity
     }
   }
   
-  private void d(com.estrongs.android.view.aw paramaw)
+  private boolean c(Intent paramIntent)
   {
-    Object localObject = com.estrongs.android.pop.esclasses.g.a(this).inflate(2130903100, null);
-    View localView1 = ((View)localObject).findViewById(2131362089);
-    View localView2 = ((View)localObject).findViewById(2131362090);
-    localObject = new com.estrongs.android.ui.dialog.ct(this).a(2131427375).a((View)localObject).c();
-    localView1.setOnClickListener(new cm(this, paramaw, (com.estrongs.android.ui.dialog.cg)localObject));
-    localView2.setOnClickListener(new cn(this, paramaw, (com.estrongs.android.ui.dialog.cg)localObject));
+    if (com.estrongs.android.pop.app.analysis.p.c.equals(paramIntent.getAction()))
+    {
+      String str = paramIntent.getStringExtra(com.estrongs.android.pop.app.analysis.p.a);
+      paramIntent = paramIntent.getStringExtra(com.estrongs.android.pop.app.analysis.p.b);
+      com.estrongs.android.pop.app.analysis.p.a().b(this, paramIntent);
+      f.postDelayed(new w(this, str, paramIntent), 100L);
+      return true;
+    }
+    return false;
   }
   
-  public static void h(boolean paramBoolean)
+  private void d(com.estrongs.android.view.cr paramcr)
   {
-    if (bf == null) {
+    Object localObject = com.estrongs.android.pop.esclasses.k.a(this).inflate(2130903188, null);
+    View localView1 = ((View)localObject).findViewById(2131624654);
+    View localView2 = ((View)localObject).findViewById(2131624655);
+    localObject = new com.estrongs.android.ui.dialog.cv(this).a(2131230880).a((View)localObject).c();
+    localView1.setOnClickListener(new az(this, paramcr, (com.estrongs.android.ui.dialog.ci)localObject));
+    localView2.setOnClickListener(new ba(this, paramcr, (com.estrongs.android.ui.dialog.ci)localObject));
+  }
+  
+  public static void g(boolean paramBoolean)
+  {
+    if (aT == null) {
       return;
     }
-    List localList = bfx;
-    com.estrongs.android.ui.c.a locala = null;
+    List localList = aTw;
+    com.estrongs.android.ui.c.e locale = null;
     for (;;)
     {
       int i1;
       try
       {
-        int i2 = bfx.size();
+        int i2 = aTw.size();
         i1 = 0;
         if (i1 < i2)
         {
-          com.estrongs.android.view.aw localaw = (com.estrongs.android.view.aw)bfx.get(i1);
-          if ((locala == null) && ((localaw instanceof com.estrongs.android.ui.c.a))) {
-            locala = (com.estrongs.android.ui.c.a)localaw;
+          com.estrongs.android.view.cr localcr = (com.estrongs.android.view.cr)aTw.get(i1);
+          if ((locale == null) && ((localcr instanceof com.estrongs.android.ui.c.e))) {
+            locale = (com.estrongs.android.ui.c.e)localcr;
           }
         }
         else
         {
-          if (locala != null) {
-            locala.i(paramBoolean);
+          if (locale != null) {
+            locale.i(paramBoolean);
           }
           return;
         }
@@ -2305,61 +1927,34 @@ public class FileExplorerActivity
     }
   }
   
-  private void i(boolean paramBoolean)
+  private int q(String paramString)
   {
-    if ((aI != null) && (aI.getVisibility() == 0))
-    {
-      if (paramBoolean)
-      {
-        AlphaAnimation localAlphaAnimation = new AlphaAnimation(1.0F, 0.1F);
-        localAlphaAnimation.setDuration(200L);
-        localAlphaAnimation.setInterpolator(new AccelerateInterpolator());
-        aI.setAnimation(localAlphaAnimation);
-        localAlphaAnimation.start();
-      }
-      aI.setVisibility(8);
-      if (!u) {
-        findViewById(2131362462).setVisibility(0);
-      }
-    }
-    if (aJ != null) {
-      aJ.setVisibility(4);
-    }
+    int i1 = e;
+    return ik.a(paramString);
   }
   
-  private int l(String paramString)
+  private void r(String paramString)
   {
-    int i1 = Y;
-    return in.a(paramString);
-  }
-  
-  private void m(String paramString)
-  {
-    M();
-  }
-  
-  private void n(String paramString)
-  {
-    com.estrongs.android.view.aw localaw = y();
-    if (localaw == null) {
+    com.estrongs.android.view.cr localcr = O();
+    if (localcr == null) {
       return;
     }
-    boolean bool2 = f(localaw.c());
+    boolean bool2 = h(localcr.c());
     boolean bool1 = bool2;
-    if (am.aX(localaw.c())) {
-      bool1 = bool2 | f(am.bz(localaw.c()));
+    if (com.estrongs.android.util.ap.bi(localcr.c())) {
+      bool1 = bool2 | h(com.estrongs.android.util.ap.bQ(localcr.c()));
     }
     if (bool1)
     {
-      paramString = com.estrongs.android.pop.app.b.q.b(paramString);
-      if (T == null) {
-        T = new ff(this);
+      paramString = com.estrongs.android.pop.app.f.q.b(paramString);
+      if (O == null) {
+        O = new eg(this);
       }
-      localaw.a(T);
-      T.a((String)paramString.get("keyword"));
-      T.a(com.estrongs.android.util.bd.a((String)paramString.get("minSize"), -1L), com.estrongs.android.util.bd.a((String)paramString.get("maxSize"), -1L));
-      T.b(com.estrongs.android.util.bd.a((String)paramString.get("minDate"), -1L), com.estrongs.android.util.bd.a((String)paramString.get("maxDate"), -1L));
-      localaw.b(false);
+      localcr.a(O);
+      O.a((String)paramString.get("keyword"));
+      O.a(bk.a((String)paramString.get("minSize"), -1L), bk.a((String)paramString.get("maxSize"), -1L));
+      O.b(bk.a((String)paramString.get("minDate"), -1L), bk.a((String)paramString.get("maxDate"), -1L));
+      localcr.b(false);
       return;
     }
     String str;
@@ -2368,22 +1963,22 @@ public class FileExplorerActivity
     {
       try
       {
-        if (localaw.ac() == 0L)
+        if (localcr.ar() == 0L)
         {
           l1 = System.currentTimeMillis();
-          localaw.a(l1);
-          str = "search://" + l1 + "/" + com.estrongs.fs.a.a.d(com.estrongs.android.pop.app.b.q.a("searchPath", paramString)).replace("/", "#");
+          localcr.d(l1);
+          str = "search://" + l1 + "/" + com.estrongs.fs.a.a.d(com.estrongs.android.pop.app.f.q.a("searchPath", paramString)).replace("/", "#");
           localTypedMap = new TypedMap();
           localTypedMap.put("pattern", paramString);
           localTypedMap.put("refresh", "true");
-          if (!(localaw instanceof com.estrongs.android.ui.c.a)) {
-            break label355;
+          if ((!(localcr instanceof com.estrongs.android.ui.c.e)) && (!(localcr instanceof com.estrongs.android.view.er))) {
+            break label363;
           }
-          localaw = c(str, localTypedMap);
-          if (localaw == null) {
+          localcr = c(str, localTypedMap);
+          if (localcr == null) {
             break;
           }
-          localaw.m(com.estrongs.android.pop.app.b.q.a("category", paramString));
+          localcr.o(com.estrongs.android.pop.app.f.q.a("category", paramString));
           return;
         }
       }
@@ -2392,411 +1987,460 @@ public class FileExplorerActivity
         paramString.printStackTrace();
         return;
       }
-      long l1 = localaw.ac();
+      long l1 = localcr.ar();
     }
-    label355:
-    localaw.a(str, localTypedMap);
+    label363:
+    localcr.a(str, localTypedMap);
   }
   
-  private void o(String paramString)
+  public void A()
   {
-    if (!paramString.equalsIgnoreCase("Market")) {}
+    com.estrongs.android.view.cr localcr = O();
+    if ((localcr != null) && (!localcr.p()))
+    {
+      String str = localcr.c();
+      if ((bk.k()) || (((!com.estrongs.android.util.ap.ae(str)) || (com.estrongs.android.pop.ac.a() < 11)) && (!com.estrongs.android.util.ap.V(str)) && (!com.estrongs.android.util.ap.Z(str)) && (!com.estrongs.android.util.ap.X(str)) && (!com.estrongs.android.util.ap.aY(str)))) {
+        break label83;
+      }
+      d(localcr);
+    }
     for (;;)
     {
-      com.estrongs.android.util.a.a(paramString);
+      aL.y();
       return;
-      paramString = "Google Market";
-    }
-  }
-  
-  public com.estrongs.fs.h B()
-  {
-    if (y() == null) {
-      return null;
-    }
-    return y().b();
-  }
-  
-  public boolean C()
-  {
-    for (;;)
-    {
-      try
-      {
-        List localList = x;
-        int i1 = 0;
-        try
-        {
-          if (i1 < x.size())
-          {
-            com.estrongs.android.view.aw localaw = (com.estrongs.android.view.aw)x.get(i1);
-            if ((localaw != null) && ((am.Y(localaw.c())) || (am.W(localaw.c()))))
-            {
-              boolean bool = r;
-              return bool;
-            }
-          }
-          else
-          {
-            return false;
-          }
-        }
-        finally {}
-        i1 += 1;
-      }
-      catch (Exception localException)
-      {
-        localException.printStackTrace();
-        return false;
+      label83:
+      if ((localcr instanceof com.estrongs.android.view.eb)) {
+        ((com.estrongs.android.view.eb)localcr).z();
+      } else {
+        localcr.b(true);
       }
     }
   }
   
-  public boolean D()
+  public void B()
   {
-    for (;;)
-    {
-      try
-      {
-        List localList = x;
-        int i1 = 0;
-        try
-        {
-          if (i1 < x.size())
-          {
-            com.estrongs.android.view.aw localaw = (com.estrongs.android.view.aw)x.get(i1);
-            if ((localaw != null) && ((am.Y(localaw.c())) || (am.W(localaw.c()))))
-            {
-              boolean bool = s;
-              return bool;
-            }
-          }
-          else
-          {
-            return false;
-          }
-        }
-        finally {}
-        i1 += 1;
-      }
-      catch (Exception localException)
-      {
-        localException.printStackTrace();
-        return false;
-      }
+    l();
+    q = "normal_mode";
+    com.estrongs.android.view.cr localcr = O();
+    if (localcr != null) {
+      localcr.a(false);
+    }
+    M();
+  }
+  
+  public void C()
+  {
+    e(true);
+  }
+  
+  public void D()
+  {
+    com.estrongs.android.view.cr localcr = O();
+    if (localcr != null) {
+      localcr.c(-1);
     }
   }
   
   public void E()
   {
-    if (k != null) {
-      k.k();
+    com.estrongs.android.view.cr localcr = O();
+    if (localcr != null) {
+      localcr.c(-2);
     }
   }
   
   public void F()
   {
-    k.m();
-  }
-  
-  public void G()
-  {
-    y.clear();
-  }
-  
-  public boolean H()
-  {
-    return g(z());
+    com.estrongs.android.view.cr localcr = O();
+    if (localcr != null) {
+      localcr.c(-4);
+    }
   }
   
   public void K()
   {
-    i1 = 0;
-    h.post(new ei(this));
-    Object localObject;
-    if ((com.estrongs.android.c.a.b()) || ((com.estrongs.android.pop.ad.a(this).j()) && (com.estrongs.fs.impl.local.l.a(this, true))))
-    {
-      localObject = com.estrongs.fs.impl.local.l.a(com.estrongs.fs.impl.local.l.l());
-      String str = com.estrongs.android.pop.ad.a(this).at();
-      if ((str.length() > 0) && (!((String)localObject).equals(str)))
-      {
-        localObject = com.estrongs.fs.impl.local.l.k(str);
-        if ((localObject == null) || (localObject.length <= 0)) {}
-      }
+    com.estrongs.android.view.cr localcr = O();
+    if (localcr != null) {
+      ld.a(this, localcr);
     }
-    try
-    {
-      com.estrongs.fs.impl.local.l.b((String[])localObject);
-      if (!com.estrongs.android.pop.z.y) {}
-      try
-      {
-        boolean bool2 = com.estrongs.android.pop.ad.a(this).r();
-        boolean bool1 = bool2;
-        if (bool2)
-        {
-          bool1 = bool2;
-          if (H != null)
-          {
-            bool1 = bool2;
-            if (new GregorianCalendar(TimeZone.getTimeZone("GMT")).before(H)) {
-              bool1 = false;
-            }
-          }
-        }
-        if (bool1)
-        {
-          long l1 = com.estrongs.android.pop.ad.a(this).C();
-          if (new Date().getTime() - l1 > 1296000000L) {
-            a(11, null, 3000, 0);
-          }
-        }
-      }
-      catch (Exception localException6)
-      {
-        for (;;)
-        {
-          continue;
-          i1 = 1;
-        }
-      }
-      if ((com.estrongs.android.pop.utils.cc.a()) && (com.estrongs.android.pop.ad.a(this).aK() != com.estrongs.android.util.k.a()) && (ak.b()))
-      {
-        com.estrongs.android.pop.ad.a(this).aJ();
-        Q().a(this);
-      }
-      try
-      {
-        if (a.b(this))
-        {
-          com.estrongs.fs.impl.local.l.n();
-          c(com.estrongs.android.util.h.a(), true);
-          if (Looper.myLooper() == null) {
-            Looper.prepare();
-          }
-        }
-      }
-      catch (Exception localException2)
-      {
-        try
-        {
-          if (Settings.System.getString(getContentResolver(), "time_12_24").equals("24"))
-          {
-            G = true;
-            com.estrongs.android.util.f.c();
-          }
-        }
-        catch (Exception localException2)
-        {
-          try
-          {
-            for (;;)
-            {
-              com.estrongs.a.b.d.a(this, null);
-              new Thread(new ej(this), "Synchronize Files").start();
-              m.j(System.currentTimeMillis());
-              if ((!ak.b()) || (com.estrongs.android.pop.view.utils.n.b().a(this) <= 86400000L)) {
-                break label434;
-              }
-              com.estrongs.android.pop.view.utils.n.b().c();
-              if (i1 != 0) {
-                com.estrongs.android.pop.view.utils.n.b().d();
-              }
-              try
-              {
-                if (!be.c().a()) {
-                  be.c().b();
-                }
-                return;
-              }
-              catch (Exception localException5)
-              {
-                return;
-              }
-              c(com.estrongs.android.util.h.a(), false);
-              continue;
-              localException1 = localException1;
-              continue;
-              G = false;
-            }
-            localException2 = localException2;
-          }
-          catch (Exception localException3)
-          {
-            for (;;)
-            {
-              localException3.printStackTrace();
-            }
-          }
-        }
-      }
-    }
-    catch (Exception localException4)
-    {
-      for (;;) {}
-    }
+    B();
   }
   
-  public boolean L()
+  public void L()
   {
-    return com.estrongs.android.pop.app.b.a.a().b();
+    aL.l();
   }
   
-  public boolean M()
+  public void M()
   {
-    if (B() == null) {
-      return false;
-    }
-    Intent localIntent = new Intent();
-    String str = B().getAbsolutePath();
-    Object localObject = str;
-    if (am.aX(str)) {
-      localObject = am.bz(str);
-    }
-    localIntent.putExtra("CURRENT_WORKING_PATH", (String)localObject);
-    localObject = (EditText)findViewById(2131361988);
-    if ((localObject != null) && (((EditText)localObject).getText().toString().length() > 0)) {
-      localIntent.putExtra("keyword", ((EditText)localObject).getText().toString());
-    }
-    new com.estrongs.android.pop.app.b.y(this, localIntent).a(new es(this)).a();
-    return true;
+    aL.m();
   }
   
   public void N()
   {
-    int i2 = com.estrongs.android.ui.d.e.a();
-    List localList = x;
-    int i1 = 0;
-    for (;;)
+    aL.n();
+  }
+  
+  public com.estrongs.android.view.cr O()
+  {
+    int i1;
+    com.estrongs.android.view.cr localcr;
+    synchronized (w)
     {
-      try
-      {
-        if (i1 < x.size())
-        {
-          com.estrongs.android.view.aw localaw = (com.estrongs.android.view.aw)x.get(i1);
-          if ((localaw == null) || (!am.Y(localaw.c()))) {
-            break label90;
-          }
-          if (i2 == i1) {
-            localaw.b(true);
-          } else {
-            localaw.i(true);
-          }
-        }
+      i1 = au().a();
+      if (i1 >= w.size()) {
+        return null;
       }
-      finally {}
-      return;
-      label90:
-      i1 += 1;
     }
+    return null;
   }
   
-  public com.estrongs.android.ui.navigation.n O()
+  public String P()
   {
-    return aH;
-  }
-  
-  public boolean P()
-  {
-    return aQ;
-  }
-  
-  public com.estrongs.android.pop.utils.c Q()
-  {
-    if (bk == null) {
-      bk = new com.estrongs.android.pop.utils.c(this);
+    if (O() == null) {
+      return null;
     }
-    return bk;
+    return O().c();
   }
   
-  public void R()
+  public com.estrongs.fs.h Q()
   {
-    be = true;
-    finish();
-    startActivity(new Intent(this, FileExplorerActivity.class));
-  }
-  
-  public void S()
-  {
-    h.postDelayed(new fb(this), 200L);
-  }
-  
-  public void U()
-  {
-    if (aW) {
-      return;
+    if (O() == null) {
+      return null;
     }
-    h.post(new aj(this));
-    aW = true;
+    return O().b();
   }
   
-  public void V()
+  public boolean R()
   {
     for (;;)
     {
       try
       {
-        int i1;
-        synchronized (x)
+        List localList = w;
+        int i1 = 0;
+        try
         {
-          if (am.bP(z()))
+          if (i1 < w.size())
           {
-            a(new ap(this));
-            return;
+            com.estrongs.android.view.cr localcr = (com.estrongs.android.view.cr)w.get(i1);
+            if ((localcr != null) && ((com.estrongs.android.util.ap.ai(localcr.c())) || (com.estrongs.android.util.ap.ag(localcr.c()))))
+            {
+              boolean bool = y;
+              return bool;
+            }
           }
-          List localList2 = x;
-          i1 = 0;
-          if (i1 >= localList2.size()) {
-            continue;
-          }
-          com.estrongs.android.view.aw localaw = (com.estrongs.android.view.aw)localList2.get(i1);
-          if ((localaw != null) && (am.bP(localaw.c()))) {
-            localaw.a(true, true);
+          else
+          {
+            return false;
           }
         }
+        finally {}
         i1 += 1;
       }
       catch (Exception localException)
       {
         localException.printStackTrace();
-        return;
+        return false;
       }
     }
   }
   
-  public void W()
+  public boolean S()
   {
-    runOnUiThread(new aq(this));
+    for (;;)
+    {
+      try
+      {
+        List localList = w;
+        int i1 = 0;
+        try
+        {
+          if (i1 < w.size())
+          {
+            com.estrongs.android.view.cr localcr = (com.estrongs.android.view.cr)w.get(i1);
+            if ((localcr != null) && ((com.estrongs.android.util.ap.ai(localcr.c())) || (com.estrongs.android.util.ap.ag(localcr.c()))))
+            {
+              boolean bool = z;
+              return bool;
+            }
+          }
+          else
+          {
+            return false;
+          }
+        }
+        finally {}
+        i1 += 1;
+      }
+      catch (Exception localException)
+      {
+        localException.printStackTrace();
+        return false;
+      }
+    }
   }
   
-  public void X()
+  public void T()
   {
-    a(new ar(this));
+    aL.x();
   }
   
-  public boolean Y()
+  public void U()
   {
-    return Looper.getMainLooper().getThread() == Thread.currentThread();
+    x.clear();
+  }
+  
+  public boolean V()
+  {
+    return i(P());
+  }
+  
+  /* Error */
+  public void Y()
+  {
+    // Byte code:
+    //   0: iconst_0
+    //   1: istore_1
+    //   2: aload_0
+    //   3: getfield 1203	com/estrongs/android/pop/view/FileExplorerActivity:i	Landroid/os/Handler;
+    //   6: new 2247	com/estrongs/android/pop/view/cf
+    //   9: dup
+    //   10: aload_0
+    //   11: invokespecial 2248	com/estrongs/android/pop/view/cf:<init>	(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
+    //   14: invokevirtual 1212	android/os/Handler:post	(Ljava/lang/Runnable;)Z
+    //   17: pop
+    //   18: invokestatic 2251	com/estrongs/android/g/a:b	()Z
+    //   21: ifne +3 -> 24
+    //   24: aload_0
+    //   25: invokestatic 387	com/estrongs/android/pop/ad:a	(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+    //   28: invokevirtual 2252	com/estrongs/android/pop/ad:k	()Z
+    //   31: ifeq +70 -> 101
+    //   34: aload_0
+    //   35: iconst_1
+    //   36: invokestatic 2255	com/estrongs/fs/impl/local/m:a	(Landroid/content/Context;Z)Z
+    //   39: ifeq +62 -> 101
+    //   42: invokestatic 2258	com/estrongs/fs/impl/local/m:l	()[Ljava/lang/String;
+    //   45: invokestatic 2261	com/estrongs/fs/impl/local/m:a	([Ljava/lang/String;)Ljava/lang/String;
+    //   48: astore 6
+    //   50: aload_0
+    //   51: invokestatic 387	com/estrongs/android/pop/ad:a	(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+    //   54: invokevirtual 2263	com/estrongs/android/pop/ad:au	()Ljava/lang/String;
+    //   57: astore 7
+    //   59: aload 7
+    //   61: invokevirtual 1071	java/lang/String:length	()I
+    //   64: ifle +37 -> 101
+    //   67: aload 6
+    //   69: aload 7
+    //   71: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   74: ifne +27 -> 101
+    //   77: aload 7
+    //   79: invokestatic 2266	com/estrongs/fs/impl/local/m:k	(Ljava/lang/String;)[Ljava/lang/String;
+    //   82: astore 6
+    //   84: aload 6
+    //   86: ifnull +15 -> 101
+    //   89: aload 6
+    //   91: arraylength
+    //   92: ifle +9 -> 101
+    //   95: aload 6
+    //   97: invokestatic 2269	com/estrongs/fs/impl/local/m:b	([Ljava/lang/String;)Z
+    //   100: pop
+    //   101: getstatic 2270	com/estrongs/android/pop/z:y	Z
+    //   104: ifne +94 -> 198
+    //   107: aload_0
+    //   108: invokestatic 387	com/estrongs/android/pop/ad:a	(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+    //   111: invokevirtual 2272	com/estrongs/android/pop/ad:s	()Z
+    //   114: istore_3
+    //   115: iload_3
+    //   116: istore_2
+    //   117: iload_3
+    //   118: ifeq +36 -> 154
+    //   121: iload_3
+    //   122: istore_2
+    //   123: getstatic 187	com/estrongs/android/pop/view/FileExplorerActivity:D	Ljava/util/GregorianCalendar;
+    //   126: ifnull +28 -> 154
+    //   129: iload_3
+    //   130: istore_2
+    //   131: new 189	java/util/GregorianCalendar
+    //   134: dup
+    //   135: ldc -65
+    //   137: invokestatic 197	java/util/TimeZone:getTimeZone	(Ljava/lang/String;)Ljava/util/TimeZone;
+    //   140: invokespecial 201	java/util/GregorianCalendar:<init>	(Ljava/util/TimeZone;)V
+    //   143: getstatic 187	com/estrongs/android/pop/view/FileExplorerActivity:D	Ljava/util/GregorianCalendar;
+    //   146: invokevirtual 2275	java/util/GregorianCalendar:before	(Ljava/lang/Object;)Z
+    //   149: ifeq +5 -> 154
+    //   152: iconst_0
+    //   153: istore_2
+    //   154: iload_2
+    //   155: ifeq +43 -> 198
+    //   158: aload_0
+    //   159: invokestatic 387	com/estrongs/android/pop/ad:a	(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+    //   162: invokevirtual 2277	com/estrongs/android/pop/ad:D	()J
+    //   165: lstore 4
+    //   167: new 2279	java/util/Date
+    //   170: dup
+    //   171: invokespecial 2280	java/util/Date:<init>	()V
+    //   174: invokevirtual 2283	java/util/Date:getTime	()J
+    //   177: lload 4
+    //   179: lsub
+    //   180: ldc2_w 2284
+    //   183: lcmp
+    //   184: ifle +14 -> 198
+    //   187: aload_0
+    //   188: bipush 11
+    //   190: aconst_null
+    //   191: sipush 3000
+    //   194: iconst_0
+    //   195: invokevirtual 2288	com/estrongs/android/pop/view/FileExplorerActivity:a	(ILjava/lang/Object;II)V
+    //   198: invokestatic 752	com/estrongs/android/pop/utils/cl:a	()Z
+    //   201: ifeq +39 -> 240
+    //   204: aload_0
+    //   205: invokestatic 387	com/estrongs/android/pop/ad:a	(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+    //   208: invokevirtual 2290	com/estrongs/android/pop/ad:aL	()J
+    //   211: invokestatic 2293	com/estrongs/android/util/j:a	()I
+    //   214: i2l
+    //   215: lcmp
+    //   216: ifeq +24 -> 240
+    //   219: invokestatic 2296	com/estrongs/android/util/an:b	()Z
+    //   222: ifeq +18 -> 240
+    //   225: aload_0
+    //   226: invokestatic 387	com/estrongs/android/pop/ad:a	(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+    //   229: invokevirtual 2298	com/estrongs/android/pop/ad:aK	()V
+    //   232: aload_0
+    //   233: invokevirtual 978	com/estrongs/android/pop/view/FileExplorerActivity:ag	()Lcom/estrongs/android/pop/utils/c;
+    //   236: aload_0
+    //   237: invokevirtual 2299	com/estrongs/android/pop/utils/c:a	(Landroid/content/Context;)V
+    //   240: aload_0
+    //   241: invokestatic 2301	com/estrongs/android/pop/view/a:b	(Landroid/content/Context;)Z
+    //   244: ifeq +157 -> 401
+    //   247: invokestatic 2302	com/estrongs/fs/impl/local/m:n	()V
+    //   250: aload_0
+    //   251: invokestatic 2305	com/estrongs/android/util/g:a	()Ljava/lang/String;
+    //   254: iconst_1
+    //   255: invokespecial 2307	com/estrongs/android/pop/view/FileExplorerActivity:c	(Ljava/lang/String;Z)V
+    //   258: invokestatic 2313	android/os/Looper:myLooper	()Landroid/os/Looper;
+    //   261: ifnonnull +6 -> 267
+    //   264: invokestatic 2316	android/os/Looper:prepare	()V
+    //   267: aload_0
+    //   268: invokevirtual 2320	com/estrongs/android/pop/view/FileExplorerActivity:getContentResolver	()Landroid/content/ContentResolver;
+    //   271: ldc_w 2322
+    //   274: invokestatic 2327	android/provider/Settings$System:getString	(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+    //   277: ldc_w 2329
+    //   280: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   283: ifeq +134 -> 417
+    //   286: iconst_1
+    //   287: putstatic 185	com/estrongs/android/pop/view/FileExplorerActivity:C	Z
+    //   290: invokestatic 2332	com/estrongs/android/util/e:c	()V
+    //   293: aload_0
+    //   294: aconst_null
+    //   295: invokestatic 2335	com/estrongs/a/b/d:a	(Landroid/app/Activity;Ljava/lang/String;)Lcom/estrongs/a/b/d;
+    //   298: pop
+    //   299: new 1017	java/lang/Thread
+    //   302: dup
+    //   303: new 2337	com/estrongs/android/pop/view/cg
+    //   306: dup
+    //   307: aload_0
+    //   308: invokespecial 2338	com/estrongs/android/pop/view/cg:<init>	(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
+    //   311: ldc_w 2340
+    //   314: invokespecial 2343	java/lang/Thread:<init>	(Ljava/lang/Runnable;Ljava/lang/String;)V
+    //   317: invokevirtual 1020	java/lang/Thread:start	()V
+    //   320: aload_0
+    //   321: getfield 1154	com/estrongs/android/pop/view/FileExplorerActivity:l	Lcom/estrongs/android/pop/ai;
+    //   324: invokevirtual 2344	com/estrongs/android/pop/ai:f	()V
+    //   327: invokestatic 2296	com/estrongs/android/util/an:b	()Z
+    //   330: ifeq +134 -> 464
+    //   333: invokestatic 752	com/estrongs/android/pop/utils/cl:a	()Z
+    //   336: ifeq +128 -> 464
+    //   339: invokestatic 1315	com/estrongs/android/pop/view/utils/n:b	()Lcom/estrongs/android/pop/view/utils/n;
+    //   342: aload_0
+    //   343: invokevirtual 2347	com/estrongs/android/pop/view/utils/n:a	(Landroid/content/Context;)J
+    //   346: ldc2_w 2348
+    //   349: lcmp
+    //   350: ifle +114 -> 464
+    //   353: invokestatic 1315	com/estrongs/android/pop/view/utils/n:b	()Lcom/estrongs/android/pop/view/utils/n;
+    //   356: iconst_1
+    //   357: invokevirtual 2350	com/estrongs/android/pop/view/utils/n:a	(Z)V
+    //   360: iload_1
+    //   361: ifeq +10 -> 371
+    //   364: invokestatic 1315	com/estrongs/android/pop/view/utils/n:b	()Lcom/estrongs/android/pop/view/utils/n;
+    //   367: invokevirtual 2353	com/estrongs/android/pop/view/utils/n:d	()[Lcom/estrongs/android/pop/view/utils/v;
+    //   370: pop
+    //   371: invokestatic 2358	com/estrongs/android/util/bm:c	()Lcom/estrongs/android/util/bm;
+    //   374: invokevirtual 2359	com/estrongs/android/util/bm:a	()Z
+    //   377: ifne +9 -> 386
+    //   380: invokestatic 2358	com/estrongs/android/util/bm:c	()Lcom/estrongs/android/util/bm;
+    //   383: invokevirtual 2360	com/estrongs/android/util/bm:b	()V
+    //   386: aload_0
+    //   387: invokespecial 2362	com/estrongs/android/pop/view/FileExplorerActivity:aY	()V
+    //   390: aload_0
+    //   391: invokespecial 2364	com/estrongs/android/pop/view/FileExplorerActivity:aX	()V
+    //   394: invokestatic 2365	com/estrongs/android/recommand/c:c	()V
+    //   397: invokestatic 2366	com/estrongs/android/pop/app/analysis/z:c	()V
+    //   400: return
+    //   401: aload_0
+    //   402: invokestatic 2305	com/estrongs/android/util/g:a	()Ljava/lang/String;
+    //   405: iconst_0
+    //   406: invokespecial 2307	com/estrongs/android/pop/view/FileExplorerActivity:c	(Ljava/lang/String;Z)V
+    //   409: goto -151 -> 258
+    //   412: astore 6
+    //   414: goto -156 -> 258
+    //   417: iconst_0
+    //   418: putstatic 185	com/estrongs/android/pop/view/FileExplorerActivity:C	Z
+    //   421: goto -131 -> 290
+    //   424: astore 6
+    //   426: goto -136 -> 290
+    //   429: astore 6
+    //   431: aload 6
+    //   433: invokevirtual 658	java/lang/Exception:printStackTrace	()V
+    //   436: goto -137 -> 299
+    //   439: astore 6
+    //   441: aload 6
+    //   443: invokevirtual 658	java/lang/Exception:printStackTrace	()V
+    //   446: goto -52 -> 394
+    //   449: astore 6
+    //   451: goto -350 -> 101
+    //   454: astore 6
+    //   456: goto -70 -> 386
+    //   459: astore 6
+    //   461: goto -263 -> 198
+    //   464: iconst_1
+    //   465: istore_1
+    //   466: goto -106 -> 360
+    // Local variable table:
+    //   start	length	slot	name	signature
+    //   0	469	0	this	FileExplorerActivity
+    //   1	465	1	i1	int
+    //   116	39	2	bool1	boolean
+    //   114	16	3	bool2	boolean
+    //   165	13	4	l1	long
+    //   48	48	6	localObject	Object
+    //   412	1	6	localException1	Exception
+    //   424	1	6	localException2	Exception
+    //   429	3	6	localException3	Exception
+    //   439	3	6	localException4	Exception
+    //   449	1	6	localException5	Exception
+    //   454	1	6	localException6	Exception
+    //   459	1	6	localException7	Exception
+    //   57	21	7	str	String
+    // Exception table:
+    //   from	to	target	type
+    //   240	258	412	java/lang/Exception
+    //   401	409	412	java/lang/Exception
+    //   267	290	424	java/lang/Exception
+    //   417	421	424	java/lang/Exception
+    //   293	299	429	java/lang/Exception
+    //   386	394	439	java/lang/Exception
+    //   95	101	449	java/lang/Exception
+    //   371	386	454	java/lang/Exception
+    //   107	115	459	java/lang/Exception
+    //   123	129	459	java/lang/Exception
+    //   131	152	459	java/lang/Exception
+    //   158	198	459	java/lang/Exception
   }
   
   public boolean Z()
   {
-    com.estrongs.android.view.aw localaw = y();
-    if (localaw != null) {
-      try
-      {
-        if ((!(localaw instanceof com.estrongs.android.ui.c.a)) && (!(localaw instanceof dj)))
-        {
-          int i1 = localaw.d();
-          if (i1 <= 0) {}
-        }
-        else
-        {
-          return true;
-        }
-      }
-      catch (Exception localException) {}
-    }
-    return false;
+    return com.estrongs.android.pop.app.f.a.a().b();
   }
   
   public Intent a(Intent paramIntent, com.estrongs.fs.h paramh)
@@ -2821,22 +2465,22 @@ public class FileExplorerActivity
   
   protected View a()
   {
-    return g;
+    return aL.h();
   }
   
-  public com.estrongs.android.view.aw a(String paramString, TypedMap paramTypedMap)
+  public com.estrongs.android.view.cr a(String paramString, TypedMap paramTypedMap)
   {
-    if (am.aB(paramString)) {
+    if (com.estrongs.android.util.ap.aL(paramString)) {
       return b(paramString, paramTypedMap);
     }
     return a(paramString, paramTypedMap, false);
   }
   
-  public com.estrongs.android.view.aw a(String paramString, TypedMap paramTypedMap, boolean paramBoolean)
+  public com.estrongs.android.view.cr a(String paramString, TypedMap paramTypedMap, boolean paramBoolean)
   {
-    if (com.estrongs.android.ui.d.e.c() >= 12)
+    if (au().c() >= 12)
     {
-      com.estrongs.android.ui.view.ag.a(this, 2131428177, 0);
+      com.estrongs.android.ui.view.ak.a(this, 2131232454, 0);
       paramString = null;
     }
     do
@@ -2845,7 +2489,7 @@ public class FileExplorerActivity
       {
         return paramString;
         c(paramString, paramTypedMap, paramBoolean);
-        paramTypedMap = y();
+        paramTypedMap = O();
         paramString = paramTypedMap;
       } while (paramTypedMap == null);
       paramString = paramTypedMap;
@@ -2856,47 +2500,27 @@ public class FileExplorerActivity
   
   public void a(int paramInt)
   {
-    com.estrongs.android.ui.view.ag.a(this, getText(paramInt), 0);
+    com.estrongs.android.ui.view.ak.a(this, getText(paramInt), 0);
   }
   
   public void a(int paramInt1, int paramInt2)
   {
-    ImageView localImageView;
-    if (aI != null)
+    f(paramInt2);
+    aL.t();
+    au().b(paramInt1);
+    synchronized (w)
     {
-      if (paramInt1 != paramInt2) {
-        break label160;
+      if ((w.size() > 1) && (w.size() > paramInt1))
+      {
+        com.estrongs.android.view.cr localcr = (com.estrongs.android.view.cr)w.remove(paramInt1);
+        if (localcr != null) {
+          localcr.i_();
+        }
+        h.removeViewAt(paramInt1);
+        aL.e(paramInt1);
       }
-      aI.findViewById(2131362649).setVisibility(0);
-      aI.findViewById(2131362648).setVisibility(8);
-      aJ.setText(paramInt1 + "/" + paramInt2);
-      localImageView = (ImageView)aI.findViewById(2131362647).findViewById(2131361853);
-      boolean bool = y().x();
-      localImageView.setEnabled(bool);
-      if (!bool) {
-        break label192;
-      }
-      localImageView.setColorFilter(null);
-    }
-    for (;;)
-    {
-      localImageView = (ImageView)aI.findViewById(2131362418).findViewById(2131361853);
-      if ((paramInt1 <= 0) || (paramInt1 > 3)) {
-        break label211;
-      }
-      localImageView.setEnabled(true);
-      localImageView.setColorFilter(null);
       return;
-      label160:
-      aI.findViewById(2131362649).setVisibility(8);
-      aI.findViewById(2131362648).setVisibility(0);
-      break;
-      label192:
-      localImageView.setColorFilter(new LightingColorFilter(1, -7829368));
     }
-    label211:
-    localImageView.setEnabled(false);
-    localImageView.setColorFilter(new LightingColorFilter(1, -7829368));
   }
   
   /* Error */
@@ -2906,30 +2530,30 @@ public class FileExplorerActivity
     //   0: aload_0
     //   1: monitorenter
     //   2: aload_0
-    //   3: getfield 359	com/estrongs/android/pop/view/FileExplorerActivity:V	Landroid/os/Handler;
+    //   3: getfield 331	com/estrongs/android/pop/view/FileExplorerActivity:Q	Landroid/os/Handler;
     //   6: iload_1
     //   7: aload_2
-    //   8: invokestatic 2711	android/os/Message:obtain	(Landroid/os/Handler;ILjava/lang/Object;)Landroid/os/Message;
+    //   8: invokestatic 2458	android/os/Message:obtain	(Landroid/os/Handler;ILjava/lang/Object;)Landroid/os/Message;
     //   11: astore_2
     //   12: aload_2
     //   13: iload 4
-    //   15: putfield 2142	android/os/Message:arg1	I
+    //   15: putfield 2461	android/os/Message:arg1	I
     //   18: iload_3
     //   19: ifne +15 -> 34
     //   22: aload_0
-    //   23: getfield 359	com/estrongs/android/pop/view/FileExplorerActivity:V	Landroid/os/Handler;
+    //   23: getfield 331	com/estrongs/android/pop/view/FileExplorerActivity:Q	Landroid/os/Handler;
     //   26: aload_2
-    //   27: invokevirtual 2137	android/os/Handler:sendMessage	(Landroid/os/Message;)Z
+    //   27: invokevirtual 2465	android/os/Handler:sendMessage	(Landroid/os/Message;)Z
     //   30: pop
     //   31: aload_0
     //   32: monitorexit
     //   33: return
     //   34: aload_0
-    //   35: getfield 359	com/estrongs/android/pop/view/FileExplorerActivity:V	Landroid/os/Handler;
+    //   35: getfield 331	com/estrongs/android/pop/view/FileExplorerActivity:Q	Landroid/os/Handler;
     //   38: aload_2
     //   39: iload_3
     //   40: i2l
-    //   41: invokevirtual 2715	android/os/Handler:sendMessageDelayed	(Landroid/os/Message;J)Z
+    //   41: invokevirtual 2469	android/os/Handler:sendMessageDelayed	(Landroid/os/Message;J)Z
     //   44: pop
     //   45: goto -14 -> 31
     //   48: astore_2
@@ -2953,28 +2577,28 @@ public class FileExplorerActivity
   
   public void a(int paramInt1, String paramString1, DialogInterface.OnClickListener paramOnClickListener, int paramInt2, String paramString2)
   {
-    if (P == null)
+    if (K == null)
     {
-      P = new com.estrongs.android.widget.g(this, paramString2, new eb(this), paramInt2);
-      P.a(false);
-      P.c(getString(2131427340), (DialogInterface.OnClickListener)null);
+      K = new com.estrongs.android.widget.f(this, paramString2, new bz(this), paramInt2);
+      K.a(false);
+      K.c(getString(2131231265), (DialogInterface.OnClickListener)null);
     }
     for (;;)
     {
-      P.a(paramInt2);
-      P.a(paramString1);
-      P.b(getString(2131427339), paramOnClickListener);
-      P.j();
+      K.a(paramInt2);
+      K.a(paramString1);
+      K.b(getString(2131231270), paramOnClickListener);
+      K.j();
       return;
-      if (aZ != com.estrongs.android.pop.ad.a(this).p())
+      if (aH != com.estrongs.android.pop.ad.a(this).q())
       {
-        aZ = com.estrongs.android.pop.ad.a(this).p();
-        P.b(true);
-        P.b(paramString2);
+        aH = com.estrongs.android.pop.ad.a(this).q();
+        K.b(true);
+        K.b(paramString2);
       }
       else
       {
-        P.b(true);
+        K.b(true);
       }
     }
   }
@@ -2988,7 +2612,7 @@ public class FileExplorerActivity
   {
     Object localObject = com.estrongs.android.ui.guesture.b.c();
     if ((localObject == null) || (((List)localObject).size() == 0)) {
-      com.estrongs.android.ui.view.ag.a(bf, getString(2131428353) + "\n" + getString(2131428355), 0);
+      com.estrongs.android.ui.view.ak.a(aT, getString(2131231536) + "\n" + getString(2131231537), 0);
     }
     do
     {
@@ -3016,7 +2640,7 @@ public class FileExplorerActivity
               }
               catch (Exception paramGesture)
               {
-                com.estrongs.android.ui.view.ag.a(this, getString(2131427839), 0);
+                com.estrongs.android.ui.view.ak.a(this, getString(2131232373), 0);
                 return;
               }
             }
@@ -3031,68 +2655,414 @@ public class FileExplorerActivity
           }
           paramGesture = paramGesture.substring("open_folder".length());
         } while ((paramGesture == null) || ("".equals(paramGesture)));
-        e(paramGesture);
+        g(paramGesture);
         return;
         if (!paramGesture.startsWith("open_window")) {
           break;
         }
         paramGesture = paramGesture.substring("open_window".length());
-        paramGesture = (Runnable)aO.get(paramGesture);
+        paramGesture = (Runnable)ay.get(paramGesture);
       } while (paramGesture == null);
-      h.post(paramGesture);
+      i.post(paramGesture);
       return;
-      paramGesture = (Runnable)aO.get(paramGesture);
+      paramGesture = (Runnable)ay.get(paramGesture);
     } while (paramGesture == null);
-    h.post(paramGesture);
+    i.post(paramGesture);
   }
   
-  public void a(com.estrongs.android.ui.c.b.t paramt)
+  public void a(View paramView, boolean paramBoolean)
   {
-    bb = paramt;
-  }
-  
-  public void a(com.estrongs.android.ui.navigation.r paramr)
-  {
-    if ((aH != null) && (aH.i())) {
-      aH.a(paramr);
+    if (paramBoolean) {}
+    Object localObject;
+    for (int i1 = 2;; i1 = 0)
+    {
+      localObject = y();
+      if (localObject != null) {
+        break;
+      }
+      return;
     }
-    while (paramr == null) {
+    if (paramBoolean)
+    {
+      paramView = com.estrongs.android.ui.f.i.a(paramView, getString(2131231655), i1, (Rect)localObject, false);
+      localObject = new ay(this, paramView);
+      if (!paramBoolean) {
+        break label97;
+      }
+      ((com.estrongs.android.ui.f.i)paramView).a((eh)localObject);
+    }
+    for (;;)
+    {
+      try
+      {
+        paramView.c();
+        return;
+      }
+      catch (WindowManager.BadTokenException paramView)
+      {
+        paramView.printStackTrace();
+        return;
+      }
+      paramView = com.estrongs.android.ui.f.g.a(paramView, getString(2131231655), i1, (Rect)localObject, false);
+      break;
+      label97:
+      ((com.estrongs.android.ui.f.g)paramView).a((eh)localObject);
+    }
+  }
+  
+  public void a(com.estrongs.android.ui.c.b.h paramh)
+  {
+    if (aJ == null) {
+      aJ = new CopyOnWriteArrayList();
+    }
+    aJ.add(paramh);
+  }
+  
+  public void a(com.estrongs.android.ui.navigation.q paramq)
+  {
+    if ((at != null) && (at.i())) {
+      at.a(paramq);
+    }
+    while (paramq == null) {
       return;
     }
     try
     {
-      paramr.a(null);
+      paramq.a(null);
       return;
     }
-    catch (Exception paramr) {}
+    catch (Exception paramq) {}
   }
   
-  public void a(com.estrongs.android.util.x<com.estrongs.android.view.aw> paramx)
+  public void a(com.estrongs.android.util.z<com.estrongs.android.view.cr> paramz)
   {
-    int i2 = com.estrongs.android.ui.d.e.a();
-    List localList = x;
+    int i2 = au().a();
+    List localList = w;
     int i1 = 0;
     for (;;)
     {
       try
       {
-        if (i1 < x.size())
+        if (i1 < w.size())
         {
-          com.estrongs.android.view.aw localaw = (com.estrongs.android.view.aw)x.get(i1);
-          if ((localaw == null) || ((paramx != null) && (!paramx.a(localaw)))) {
-            break label96;
+          com.estrongs.android.view.cr localcr = (com.estrongs.android.view.cr)w.get(i1);
+          if ((localcr == null) || ((paramz != null) && (!paramz.a(localcr)))) {
+            break label100;
           }
           if (i2 == i1) {
-            localaw.b(true);
+            localcr.b(true);
           } else {
-            localaw.i(true);
+            localcr.i(true);
           }
         }
       }
       finally {}
       return;
-      label96:
+      label100:
       i1 += 1;
+    }
+  }
+  
+  public void a(com.estrongs.android.view.cr paramcr, com.estrongs.android.ui.d.h paramh, String paramString, String[] paramArrayOfString)
+  {
+    Object localObject4 = null;
+    if (com.estrongs.android.util.ap.v(paramString))
+    {
+      if (paramString.startsWith("http://win-title/"))
+      {
+        paramArrayOfString[0] = paramString.substring("http://win-title/".length());
+        paramArrayOfString[1] = null;
+        return;
+      }
+      if ((paramcr != null) && ((paramcr instanceof WebViewWrapper)))
+      {
+        paramcr = ((WebViewWrapper)paramcr).B();
+        if (bk.b(paramcr))
+        {
+          paramArrayOfString[0] = paramcr;
+          paramArrayOfString[1] = null;
+          return;
+        }
+      }
+      paramArrayOfString[0] = getString(2131232182);
+      paramArrayOfString[1] = null;
+      return;
+    }
+    if ((paramString != null) && (paramh != null)) {
+      paramh.a(paramString);
+    }
+    Object localObject2 = (String)getText(2131231943);
+    Object localObject3;
+    Object localObject1;
+    if (((t) || (T.o())) && (paramh != null))
+    {
+      localObject3 = paramh.a(this);
+      if (!com.estrongs.android.util.ap.aY(paramString))
+      {
+        localObject1 = localObject3;
+        if (!com.estrongs.android.util.ap.aQ(paramString)) {}
+      }
+      else
+      {
+        localObject1 = localObject3;
+        if (!com.estrongs.android.util.ap.aX(paramString))
+        {
+          localObject1 = localObject3;
+          if (!com.estrongs.android.util.ap.aP(paramString))
+          {
+            localObject1 = localObject3;
+            if (paramcr != null)
+            {
+              if (paramcr.b() == null) {
+                break label502;
+              }
+              localObject1 = paramcr.b().getName();
+            }
+          }
+        }
+      }
+      if ((com.estrongs.android.util.ap.bo(paramString)) || (com.estrongs.android.util.ap.bd(paramString))) {
+        break label1181;
+      }
+      if (paramString.contains("PCS_DRIVE_Js1a7M5e_9yAcTvFX/files"))
+      {
+        localObject3 = com.estrongs.android.util.ap.bB(paramString.replace("PCS_DRIVE_Js1a7M5e_9yAcTvFX/files", "PCS_DRIVE_Js1a7M5e_9yAcTvFX"));
+        label252:
+        if (!com.estrongs.android.util.ap.bp((String)localObject3)) {
+          break label520;
+        }
+        paramh = "/";
+        paramcr = (com.estrongs.android.view.cr)localObject1;
+      }
+    }
+    for (;;)
+    {
+      label267:
+      localObject1 = com.estrongs.android.util.ap.aM(com.estrongs.android.util.ap.cd(paramString));
+      if ((localObject1 == null) && (localObject3 != null)) {
+        localObject1 = com.estrongs.android.util.ap.aM(com.estrongs.android.util.ap.cd((String)localObject3));
+      }
+      for (int i1 = 1;; i1 = 0)
+      {
+        if (localObject1 != null) {
+          if (((String)localObject1).equals("/files")) {
+            localObject1 = (String)getText(2131231132);
+          }
+        }
+        for (;;)
+        {
+          label327:
+          if ((paramcr != null) && ((paramcr.equals(localObject2)) || ("PCS_DRIVE_Js1a7M5e_9yAcTvFX".equals(paramcr)))) {
+            localObject3 = paramh;
+          }
+          for (;;)
+          {
+            label353:
+            paramcr = (com.estrongs.android.view.cr)localObject2;
+            if (com.estrongs.android.util.ap.bE(paramString))
+            {
+              paramcr = (com.estrongs.android.view.cr)localObject2;
+              if (aG) {
+                paramcr = (String)localObject2 + "  " + com.estrongs.fs.impl.local.m.i();
+              }
+            }
+            if (paramString.contains("m.baidu.com/app")) {
+              paramcr = getString(2131232250);
+            }
+            for (paramh = (com.estrongs.android.ui.d.h)localObject4;; paramh = (com.estrongs.android.ui.d.h)localObject3)
+            {
+              localObject1 = paramh;
+              localObject2 = paramcr;
+              if ("pcs".equals(com.estrongs.android.util.ap.ax(paramString)))
+              {
+                localObject1 = com.estrongs.android.util.ap.a(paramString, 4);
+                if ((!"/files".equals(localObject1)) && (!"/files/".equals(localObject1))) {
+                  break label1065;
+                }
+                localObject2 = com.estrongs.android.pop.ad.a(this).h(paramString);
+                localObject1 = getString(2131231648);
+              }
+              for (;;)
+              {
+                paramArrayOfString[0] = localObject2;
+                paramArrayOfString[1] = localObject1;
+                return;
+                label502:
+                localObject1 = com.estrongs.android.util.ap.d(paramString);
+                break;
+                localObject3 = com.estrongs.android.util.ap.bB(paramString);
+                break label252;
+                label520:
+                if ("#home_page#".equals(localObject3))
+                {
+                  paramcr = (com.estrongs.android.view.cr)localObject1;
+                  paramh = null;
+                  break label267;
+                }
+                if ((com.estrongs.android.util.ap.bm((String)localObject3)) || (com.estrongs.android.util.ap.ci((String)localObject3)))
+                {
+                  paramh = paramh.a(this, (String)localObject3);
+                  paramcr = (com.estrongs.android.view.cr)localObject1;
+                  break label267;
+                }
+                if (com.estrongs.android.util.ap.bt((String)localObject3))
+                {
+                  paramh = getString(2131230995);
+                  paramcr = (com.estrongs.android.view.cr)localObject1;
+                  break label267;
+                }
+                if (com.estrongs.android.util.ap.aX((String)localObject3))
+                {
+                  paramh = paramh.a(this, (String)localObject3);
+                  paramcr = (com.estrongs.android.view.cr)localObject1;
+                  break label267;
+                }
+                if (com.estrongs.android.util.ap.cp(paramString))
+                {
+                  paramh = com.estrongs.android.util.ap.d((String)localObject3);
+                  if (com.estrongs.android.util.ap.d(paramString).equals("es_recycle_content"))
+                  {
+                    paramcr = getString(2131232258);
+                    paramh = null;
+                    break label267;
+                  }
+                  paramcr = paramh;
+                  if (!paramh.equals("es_recycle_content")) {
+                    break label1173;
+                  }
+                  paramh = getString(2131232258);
+                  paramcr = (com.estrongs.android.view.cr)localObject1;
+                  break label267;
+                }
+                paramh = com.estrongs.android.util.ap.d((String)localObject3);
+                paramcr = paramh;
+                if (!com.estrongs.android.util.ap.ba((String)localObject3)) {
+                  break label1173;
+                }
+                i1 = paramh.indexOf('*');
+                paramcr = paramh;
+                if (i1 <= 0) {
+                  break label1173;
+                }
+                paramh = paramh.substring(i1 + 1);
+                paramcr = (com.estrongs.android.view.cr)localObject1;
+                break label267;
+                if (((String)localObject1).equals("/pictures"))
+                {
+                  localObject1 = (String)getText(2131231138);
+                  break label327;
+                }
+                if (((String)localObject1).equals("/music"))
+                {
+                  localObject1 = (String)getText(2131231136);
+                  break label327;
+                }
+                if (((String)localObject1).equals("/videos"))
+                {
+                  localObject1 = (String)getText(2131231135);
+                  break label327;
+                }
+                if (((String)localObject1).equals("/apps"))
+                {
+                  localObject1 = (String)getText(2131231129);
+                  break label327;
+                }
+                if (((String)localObject1).equals("/documents"))
+                {
+                  localObject1 = (String)getText(2131231130);
+                  break label327;
+                }
+                if (!((String)localObject1).equals("/others")) {
+                  break label1161;
+                }
+                localObject1 = (String)getText(2131231993);
+                break label327;
+                if ((paramh != null) && ((paramh.equals(localObject2)) || ("PCS_DRIVE_Js1a7M5e_9yAcTvFX".equals(paramh))))
+                {
+                  if ((localObject1 == null) || (com.estrongs.android.util.ap.aM(com.estrongs.android.util.ap.cd(paramString)) == null)) {
+                    break label1151;
+                  }
+                  localObject3 = localObject2;
+                  localObject2 = localObject1;
+                  break label353;
+                }
+                if (com.estrongs.android.util.ap.cj(paramString))
+                {
+                  localObject2 = getString(2131231789);
+                  localObject3 = null;
+                  break label353;
+                }
+                if (com.estrongs.android.util.ap.x(paramString))
+                {
+                  localObject2 = getString(2131231505);
+                  localObject3 = null;
+                  break label353;
+                }
+                localObject2 = paramcr;
+                localObject3 = paramh;
+                if (localObject1 == null) {
+                  break label353;
+                }
+                if (i1 != 0)
+                {
+                  localObject2 = paramcr;
+                  localObject3 = localObject1;
+                  break label353;
+                }
+                localObject2 = localObject1;
+                localObject3 = paramh;
+                break label353;
+                if ((com.estrongs.android.util.ap.bm(paramString)) && (!com.estrongs.android.util.ap.br(paramString)))
+                {
+                  localObject2 = com.estrongs.android.util.ap.cc(paramString);
+                  localObject3 = null;
+                  break label353;
+                }
+                if (paramString.startsWith("search:"))
+                {
+                  localObject2 = "Search Result";
+                  localObject3 = null;
+                  break label353;
+                }
+                localObject2 = paramString;
+                localObject3 = null;
+                break label353;
+                label1065:
+                localObject3 = com.estrongs.android.util.ap.bB((String)localObject1);
+                if (!"/files".equals(localObject3))
+                {
+                  localObject1 = paramh;
+                  localObject2 = paramcr;
+                  if (!"/files/".equals(localObject3)) {}
+                }
+                else
+                {
+                  paramString = com.estrongs.android.util.ap.bB(paramString);
+                  paramh = paramString;
+                  if (paramString.endsWith("/")) {
+                    paramh = paramString.substring(0, paramString.length() - 1);
+                  }
+                  localObject1 = com.estrongs.android.pop.ad.a(this).h(paramh);
+                  localObject2 = paramcr;
+                }
+              }
+            }
+            label1151:
+            localObject3 = localObject2;
+            localObject2 = paramcr;
+          }
+          label1161:
+          localObject1 = null;
+        }
+      }
+      label1173:
+      paramh = paramcr;
+      paramcr = (com.estrongs.android.view.cr)localObject1;
+      continue;
+      label1181:
+      localObject3 = null;
+      paramcr = (com.estrongs.android.view.cr)localObject1;
+      paramh = null;
     }
   }
   
@@ -3103,20 +3073,20 @@ public class FileExplorerActivity
   
   public void a(com.estrongs.fs.h paramh, boolean paramBoolean)
   {
-    if (!g(paramh.getPath())) {
-      d(2131428090);
+    if (!i(paramh.getPath())) {
+      d(2131231914);
     }
     for (;;)
     {
       return;
-      com.estrongs.android.view.aw localaw = y();
-      if ((localaw != null) && (localaw.z())) {}
-      for (int i1 = 1; (i1 != 0) || (y.size() != 0); i1 = 0)
+      com.estrongs.android.view.cr localcr = O();
+      if ((localcr != null) && (localcr.N())) {}
+      for (int i1 = 1; (i1 != 0) || (x.size() != 0); i1 = 0)
       {
-        if (!p) {
-          com.estrongs.android.view.u.a(this).b(o);
+        if (!n) {
+          com.estrongs.android.view.y.a(this).b(m);
         }
-        com.estrongs.android.pop.utils.aj.a(this, y, paramh, p, paramBoolean);
+        com.estrongs.android.pop.utils.ao.a(this, x, paramh, n, paramBoolean);
         return;
       }
     }
@@ -3124,122 +3094,36 @@ public class FileExplorerActivity
   
   public void a(String paramString)
   {
-    if (paramString == null) {}
-    Object localObject1;
-    do
-    {
-      return;
-      for (;;)
-      {
-        int i1;
-        try
-        {
-          localObject1 = com.estrongs.fs.impl.usb.e.b(paramString);
-          if (!com.estrongs.a.a.isAllTaskFinished()) {
-            break label217;
-          }
-          if (localObject1 == null) {
-            break;
-          }
-          str = ((com.estrongs.fs.impl.usb.g)localObject1).k();
-          ((com.estrongs.fs.impl.usb.g)localObject1).e();
-          Object localObject2 = O();
-          if (localObject2 != null) {
-            ((com.estrongs.android.ui.navigation.n)localObject2).b(paramString);
-          }
-          localObject2 = x;
-          i1 = 0;
-          if (i1 < ((List)localObject2).size())
-          {
-            com.estrongs.android.view.aw localaw = (com.estrongs.android.view.aw)((List)localObject2).get(i1);
-            if ((localaw != null) && (localaw.c() != null) && (localaw.c().startsWith(paramString))) {
-              b(localaw);
-            }
-          }
-          else
-          {
-            ((com.estrongs.fs.impl.usb.g)localObject1).f();
-            com.estrongs.android.ui.view.ag.a(this, getString(2131428540, new Object[] { str }), 1);
-            return;
-          }
-        }
-        catch (Exception paramString)
-        {
-          paramString.printStackTrace();
-          return;
-        }
-        i1 += 1;
-      }
-      if (am.bu(paramString))
-      {
-        paramString = new Intent("android.settings.INTERNAL_STORAGE_SETTINGS");
-        paramString.setFlags(268435456);
-        startActivity(paramString);
-        return;
-      }
-      localObject1 = O();
-    } while (localObject1 == null);
-    ((com.estrongs.android.ui.navigation.n)localObject1).b(paramString);
-    com.estrongs.android.ui.view.ag.a(this, getString(2131428540, new Object[] { "" }), 1);
-    return;
-    label217:
-    String str = getString(2131428541) + "<font size='8px' color='grey'><br /><br />" + getString(2131428542) + "</font>";
-    paramString = new com.estrongs.android.ui.dialog.ct(this).a(2131427398).b(Html.fromHtml(str)).b(2131428543, new bk(this, (com.estrongs.fs.impl.usb.g)localObject1, paramString)).c(2131427340, new bj(this));
-    paramString.b(false);
-    paramString.c();
+    aL.b(paramString);
   }
   
-  public void a(String paramString, int paramInt, com.estrongs.android.view.aw paramaw)
+  public void a(String paramString, int paramInt, com.estrongs.android.view.cr paramcr)
   {
-    int i1 = l(paramString);
-    if ((paramaw instanceof WebViewWrapper)) {
+    int i1 = q(paramString);
+    if ((paramcr instanceof WebViewWrapper)) {
       i1 = 22;
     }
-    Object localObject;
     if ((i1 == 4) || (i1 == 2) || (i1 == 1) || (i1 == 3) || (i1 == 28)) {
-      if ((paramaw != null) && (paramaw.h().isEmpty()))
+      if ((paramcr != null) && (paramcr.h().isEmpty()))
       {
-        b(in.a(i1), paramInt);
-        if (!r) {
-          break label220;
+        c(ik.a(i1), paramInt);
+        if (!o) {
+          break label108;
         }
-        if (k != null)
-        {
-          localObject = i.a("paste_mode");
-          paramaw = ((com.estrongs.android.ui.e.a)localObject).a(0);
-          localObject = ((com.estrongs.android.ui.e.a)localObject).a(1);
-          if (g(paramString)) {
-            break label182;
-          }
-          if ((paramaw != null) && (paramaw.isEnabled())) {
-            paramaw.d(false);
-          }
-          if ((localObject != null) && (((com.estrongs.android.view.a.a)localObject).isEnabled())) {
-            ((com.estrongs.android.view.a.a)localObject).d(false);
-          }
-        }
+        a(paramString);
       }
     }
-    label182:
-    label220:
+    label108:
     do
     {
-      do
-      {
-        return;
-        b(i1, paramInt);
-        break;
-        b(i1, paramInt);
-        break;
-        if ((paramaw != null) && (!paramaw.isEnabled())) {
-          paramaw.d(true);
-        }
-      } while ((localObject == null) || (((com.estrongs.android.view.a.a)localObject).isEnabled()));
-      ((com.estrongs.android.view.a.a)localObject).d(true);
       return;
-      i.a(j, Boolean.valueOf(false));
-    } while ((paramaw == null) || (!paramaw.z()) || (paramaw.w() == null));
-    bd.a(paramaw.w());
+      c(i1, paramInt);
+      break;
+      c(i1, paramInt);
+      break;
+      aL.c(paramString);
+    } while ((paramcr == null) || (!paramcr.N()) || (paramcr.o() == null));
+    F.a(paramcr.o());
   }
   
   public void a(String paramString1, String paramString2)
@@ -3253,31 +3137,32 @@ public class FileExplorerActivity
         str = paramString2;
       }
       AppRunner.a(this, str, paramString2);
-    } while ((!am.ba(paramString2)) || (-1 == com.estrongs.android.util.bc.b(paramString2)));
-    be.c().a(paramString2, false);
+    } while ((!com.estrongs.android.util.ap.bl(paramString2)) || (-1 == bg.b(paramString2)));
+    com.estrongs.android.scanner.l.a().a(paramString2);
+    com.estrongs.android.util.bm.c().a(paramString2, false);
   }
   
   public void a(String paramString1, String paramString2, String paramString3)
   {
-    Object localObject = y();
+    Object localObject = O();
     if (localObject != null)
     {
-      if (f(((com.estrongs.android.view.aw)localObject).c()))
+      if (h(((com.estrongs.android.view.cr)localObject).c()))
       {
-        if (T == null) {
-          T = new ff(this);
+        if (O == null) {
+          O = new eg(this);
         }
-        ((com.estrongs.android.view.aw)localObject).a(T);
-        T.a(paramString3);
-        ((com.estrongs.android.view.aw)localObject).b(false);
+        ((com.estrongs.android.view.cr)localObject).a(O);
+        O.a(paramString3);
+        ((com.estrongs.android.view.cr)localObject).b(false);
       }
     }
     else {
       return;
     }
     localObject = paramString1;
-    if (am.aX(paramString1)) {
-      localObject = am.bz(paramString1);
+    if (com.estrongs.android.util.ap.bi(paramString1)) {
+      localObject = com.estrongs.android.util.ap.bQ(paramString1);
     }
     paramString1 = new StringBuffer();
     paramString1.append("searchPath").append("=").append((String)localObject);
@@ -3288,56 +3173,58 @@ public class FileExplorerActivity
       paramString1.append("&&").append("category").append("=").append(paramString2);
     }
     paramString1.append("&&").append("recursion").append("=").append("true");
-    n(paramString1.toString());
+    r(paramString1.toString());
   }
   
   public void a(String paramString, List<com.estrongs.fs.h> paramList, boolean paramBoolean)
   {
-    if (R == null)
+    if (M == null)
     {
-      R = new com.estrongs.android.widget.ai(this, Q, true);
-      R.setOnDismissListener(new ed(this));
+      M = new com.estrongs.android.widget.aj(this, L, true);
+      M.setOnDismissListener(new cb(this));
     }
     for (;;)
     {
-      y.clear();
-      y.addAll(paramList);
-      p = paramBoolean;
-      R.setTitle(paramString);
-      R.show();
+      x.clear();
+      x.addAll(paramList);
+      n = paramBoolean;
+      M.setTitle(paramString);
+      M.show();
       return;
-      R.a(true);
+      M.a(true);
     }
   }
   
   public void a(String paramString, boolean paramBoolean)
   {
-    Object localObject = getString(2131427361);
+    paramString = getString(2131230867);
     if (paramBoolean) {}
-    for (int i1 = 2131427427;; i1 = 2131427426)
+    for (int i1 = 2131231133;; i1 = 2131231131)
     {
-      localObject = new com.estrongs.android.ui.dialog.eo(this, (String)localObject, getString(i1));
-      if (am.d(paramString, "kanbox")) {
-        ((com.estrongs.android.ui.dialog.eo)localObject).c(true);
-      }
-      ((com.estrongs.android.ui.dialog.eo)localObject).a(new cr(this, paramBoolean));
-      ((com.estrongs.android.ui.dialog.eo)localObject).show();
+      paramString = new com.estrongs.android.ui.dialog.er(this, paramString, getString(i1));
+      paramString.a(new bb(this, paramBoolean));
+      paramString.show();
       return;
     }
   }
   
+  public void a(List<com.estrongs.fs.h> paramList, int paramInt)
+  {
+    aL.a(paramList, paramInt);
+  }
+  
   public void a(boolean paramBoolean, Handler paramHandler, Runnable paramRunnable)
   {
-    if ((com.estrongs.android.pop.ad.a(this).q()) || (paramBoolean))
+    if ((com.estrongs.android.pop.ad.a(this).r()) || (paramBoolean))
     {
-      com.estrongs.android.d.f.b();
-      new Thread(new br(this, paramHandler, paramRunnable)).start();
+      com.estrongs.android.h.a.e.e();
+      new Thread(new am(this, paramHandler, paramRunnable)).start();
     }
   }
   
   public boolean a(View paramView)
   {
-    int i2 = f.getChildCount();
+    int i2 = h.getChildCount();
     label66:
     for (paramView = paramView.getParent();; paramView = paramView.getParent())
     {
@@ -3347,12 +3234,12 @@ public class FileExplorerActivity
       }
       for (;;)
       {
-        if ((i1 >= i2) || (paramView.equals(f.getChildAt(i1))))
+        if ((i1 >= i2) || (paramView.equals(h.getChildAt(i1))))
         {
           if (i1 >= i2) {
             break label66;
           }
-          if (f.i() != i1) {
+          if (h.getCurrentChildIndex() != i1) {
             break;
           }
           return false;
@@ -3363,15 +3250,15 @@ public class FileExplorerActivity
     }
   }
   
-  public boolean a(ArrayList<com.estrongs.android.pop.app.b.f> paramArrayList)
+  public boolean a(ArrayList<com.estrongs.android.pop.app.f.f> paramArrayList)
   {
-    if (!ak.b())
+    if (!com.estrongs.android.util.an.b())
     {
-      paramArrayList = new com.estrongs.android.ui.dialog.cg(this);
-      paramArrayList.setTitle(2131427480);
-      paramArrayList.setConfirmButton(getResources().getString(2131427339), new ek(this));
-      paramArrayList.setCancelButton(getResources().getString(2131427340), new el(this));
-      paramArrayList.setMessage(getString(2131427565));
+      paramArrayList = new com.estrongs.android.ui.dialog.ci(this);
+      paramArrayList.setTitle(2131231815);
+      paramArrayList.setConfirmButton(getResources().getString(2131231270), new ch(this));
+      paramArrayList.setCancelButton(getResources().getString(2131231265), new cj(this));
+      paramArrayList.setMessage(getString(2131231626));
       paramArrayList.show();
       d(false);
       return false;
@@ -3387,25 +3274,25 @@ public class FileExplorerActivity
         if (!localb.b(paramArrayList)) {
           continue;
         }
-        runOnUiThread(new em(this));
-        if (aX != null) {
+        runOnUiThread(new ck(this));
+        if (aF != null) {
           continue;
         }
-        aX = ProgressDialog.a(this, getString(2131427442), getString(2131427446), true, true);
-        aX.setCancelButton(getString(2131427340), new en(this, localb));
-        aX.setConfirmButton(getString(2131427367), new eo(this));
-        aX.a(ProgressDialog.ProgressStyle.horizontal);
+        aF = ProgressDialog.a(this, getString(2131232182), getString(2131232190), true, true);
+        aF.setCancelButton(getString(2131231265), new cl(this, localb));
+        aF.setConfirmButton(getString(2131230857), new cm(this));
+        aF.a(ProgressDialog.ProgressStyle.horizontal);
       }
       catch (Resources.NotFoundException paramArrayList)
       {
         com.estrongs.android.pop.app.service.b localb;
         paramArrayList.printStackTrace();
         break label266;
-        aX.show();
+        aF.show();
         continue;
       }
-      runOnUiThread(new ep(this));
-      new er(this, localb).start();
+      runOnUiThread(new cn(this));
+      new co(this, localb).start();
       break label266;
       localb.a(paramArrayList);
     }
@@ -3415,20 +3302,187 @@ public class FileExplorerActivity
   
   public boolean a(List<com.estrongs.fs.h> paramList)
   {
-    return com.estrongs.android.pop.utils.aj.a(this, paramList, y());
+    return com.estrongs.android.pop.utils.ao.a(this, paramList, O());
   }
   
   public void aa()
   {
+    com.estrongs.android.view.cr localcr = O();
+    if (localcr != null)
+    {
+      localcr.f(false);
+      if ((h(localcr.c())) && (O != null) && (!eg.a(O)))
+      {
+        O.a();
+        localcr.b(false);
+      }
+    }
+  }
+  
+  public void ab()
+  {
+    aL.o();
+  }
+  
+  public void ac()
+  {
+    int i2 = au().a();
+    List localList = w;
+    int i1 = 0;
+    for (;;)
+    {
+      try
+      {
+        if (i1 < w.size())
+        {
+          com.estrongs.android.view.cr localcr = (com.estrongs.android.view.cr)w.get(i1);
+          if ((localcr == null) || ((!com.estrongs.android.util.ap.ai(localcr.c())) && (!com.estrongs.android.util.ap.bu(localcr.c())))) {
+            break label105;
+          }
+          if (i2 == i1) {
+            localcr.b(true);
+          } else {
+            localcr.i(true);
+          }
+        }
+      }
+      finally {}
+      return;
+      label105:
+      i1 += 1;
+    }
+  }
+  
+  public com.estrongs.android.ui.navigation.m ad()
+  {
+    return at;
+  }
+  
+  public com.estrongs.android.ui.navigation.m ae()
+  {
+    if (at == null)
+    {
+      at = new com.estrongs.android.ui.navigation.m(this, findViewById(2131624510), i, aL.c());
+      aH();
+    }
+    return at;
+  }
+  
+  public boolean af()
+  {
+    return aA;
+  }
+  
+  public com.estrongs.android.pop.utils.c ag()
+  {
+    if (aZ == null) {
+      aZ = new com.estrongs.android.pop.utils.c(this);
+    }
+    return aZ;
+  }
+  
+  public void ah()
+  {
+    aS = true;
+    finish();
+    startActivity(new Intent(this, FileExplorerActivity.class));
+  }
+  
+  public void ai()
+  {
+    i.postDelayed(new cz(this), 200L);
+  }
+  
+  public void ak()
+  {
+    if (aE) {
+      return;
+    }
+    i.post(new g(this));
+    aE = true;
+  }
+  
+  public void al()
+  {
+    for (;;)
+    {
+      try
+      {
+        int i1;
+        synchronized (w)
+        {
+          if (com.estrongs.android.util.ap.cg(P()))
+          {
+            a(new n(this));
+            return;
+          }
+          List localList2 = w;
+          i1 = 0;
+          if (i1 >= localList2.size()) {
+            continue;
+          }
+          com.estrongs.android.view.cr localcr = (com.estrongs.android.view.cr)localList2.get(i1);
+          if ((localcr != null) && (com.estrongs.android.util.ap.cg(localcr.c()))) {
+            localcr.a(true, true);
+          }
+        }
+        i1 += 1;
+      }
+      catch (Exception localException)
+      {
+        localException.printStackTrace();
+        return;
+      }
+    }
+  }
+  
+  public void am()
+  {
+    runOnUiThread(new o(this));
+  }
+  
+  public void an()
+  {
+    a(new p(this));
+  }
+  
+  public boolean ao()
+  {
+    return Looper.getMainLooper().getThread() == Thread.currentThread();
+  }
+  
+  public boolean ap()
+  {
+    com.estrongs.android.view.cr localcr = O();
+    if (localcr != null) {
+      try
+      {
+        if ((!(localcr instanceof com.estrongs.android.ui.c.e)) && (!(localcr instanceof fp)))
+        {
+          int i1 = localcr.d();
+          if (i1 <= 0) {}
+        }
+        else
+        {
+          return true;
+        }
+      }
+      catch (Exception localException) {}
+    }
+    return false;
+  }
+  
+  public void aq()
+  {
     try
     {
-      boolean bool = com.estrongs.android.pop.esclasses.e.b();
+      boolean bool = com.estrongs.android.pop.esclasses.i.b();
       View localView;
       label22:
       ScaleAnimation localScaleAnimation1;
       if (bool)
       {
-        localView = findViewById(2131362213);
+        localView = findViewById(2131624803);
         if (!bool) {
           break label116;
         }
@@ -3445,10 +3499,10 @@ public class FileExplorerActivity
         ScaleAnimation localScaleAnimation2 = new ScaleAnimation(2.0F, 0.0F, 1.0F, 1.0F, 1, f1, 1, 0.5F);
         localScaleAnimation1.setDuration(300L);
         localScaleAnimation2.setDuration(300L);
-        localScaleAnimation1.setAnimationListener(new aw(this, localView, localScaleAnimation2));
+        localScaleAnimation1.setAnimationListener(new t(this, localView, localScaleAnimation2));
         localView.startAnimation(localScaleAnimation1);
         return;
-        localView = findViewById(2131362214);
+        localView = findViewById(2131624804);
         break;
         f1 = 1.0F;
         break label22;
@@ -3458,76 +3512,138 @@ public class FileExplorerActivity
     catch (Exception localException) {}
   }
   
-  public fh ab()
+  public ei ar()
   {
-    return bm;
+    return bb;
+  }
+  
+  public View as()
+  {
+    return aL.d();
+  }
+  
+  public com.estrongs.android.j.c at()
+  {
+    return au;
+  }
+  
+  public com.estrongs.android.ui.d.i au()
+  {
+    try
+    {
+      if (aM == null) {
+        aM = new com.estrongs.android.ui.d.i();
+      }
+      com.estrongs.android.ui.d.i locali = aM;
+      return locali;
+    }
+    finally {}
+  }
+  
+  public void av()
+  {
+    com.estrongs.android.pop.ai localai = com.estrongs.android.pop.ai.b(this);
+    if (!localai.x())
+    {
+      View localView = LayoutInflater.from(this).inflate(2130903100, null);
+      Object localObject = new android.support.design.widget.v(-1, -2);
+      c = 80;
+      az.addView(localView, (ViewGroup.LayoutParams)localObject);
+      localObject = AnimationUtils.loadAnimation(this, 2130968602);
+      ((Animation)localObject).setDuration(500L);
+      localView.startAnimation((Animation)localObject);
+      localai.b(true);
+      i.postDelayed(new u(this, localView), 5000L);
+    }
+  }
+  
+  public com.estrongs.android.ui.topclassify.e aw()
+  {
+    return aO;
+  }
+  
+  public FrameLayout ax()
+  {
+    return aQ;
+  }
+  
+  public void ay() {}
+  
+  public boolean az()
+  {
+    return bc;
   }
   
   protected View b()
   {
-    return ae;
+    return aL.i();
   }
   
-  public com.estrongs.android.view.aw b(String paramString)
-  {
-    if (("#home_page#".equals(paramString)) || ("mynetwork://".equalsIgnoreCase(paramString))) {
-      return d(paramString);
-    }
-    return a(paramString, null);
-  }
-  
-  public com.estrongs.android.view.aw b(String paramString, TypedMap paramTypedMap)
+  public com.estrongs.android.view.cr b(String paramString, TypedMap paramTypedMap)
   {
     return b(paramString, false);
   }
   
-  public com.estrongs.android.view.aw b(String paramString, TypedMap paramTypedMap, boolean paramBoolean)
+  public com.estrongs.android.view.cr b(String paramString, TypedMap paramTypedMap, boolean paramBoolean)
   {
-    int i2 = -1;
+    if (paramString != null) {}
     for (;;)
     {
+      Object localObject;
+      int i1;
       try
       {
-        List localList = x;
-        int i1 = 0;
+        if (paramString.equals("recycle://"))
+        {
+          localObject = com.estrongs.android.pop.ad.a(this);
+          if (!((com.estrongs.android.pop.ad)localObject).aE())
+          {
+            new com.estrongs.android.ui.dialog.cv(this).a(2131232258).b(2131231417).c(2131231265, null).b(2131231270, new be(this, (com.estrongs.android.pop.ad)localObject)).c();
+            return null;
+          }
+        }
+        int i2 = -1;
+        localObject = w;
+        i1 = 0;
         try
         {
-          if (i1 < x.size())
+          if (i1 < w.size())
           {
-            if (a((com.estrongs.android.view.aw)x.get(i1), paramString)) {
-              i2 = i1;
+            if (!a((com.estrongs.android.view.cr)w.get(i1), paramString)) {
+              break label243;
             }
+            i2 = i1;
+            break label246;
           }
-          else
+          if (i2 >= 0)
           {
-            if (i2 >= 0)
-            {
-              f(i2);
-              if (paramBoolean) {
-                com.estrongs.android.pop.utils.aa.a(paramString, ((com.estrongs.android.view.aw)x.get(i2)).hashCode());
-              }
-              if (am.G(paramString) != 28) {
-                ((com.estrongs.android.view.aw)x.get(i2)).g(paramString);
-              }
-              paramString = (com.estrongs.android.view.aw)x.get(i2);
-              return paramString;
+            f(i2);
+            if (paramBoolean) {
+              com.estrongs.android.pop.utils.ad.a(paramString, ((com.estrongs.android.view.cr)w.get(i2)).hashCode());
             }
-            paramString = a(paramString, paramTypedMap, paramBoolean);
+            if (com.estrongs.android.util.ap.I(paramString) != 28) {
+              ((com.estrongs.android.view.cr)w.get(i2)).j(paramString);
+            }
+            paramString = (com.estrongs.android.view.cr)w.get(i2);
             return paramString;
           }
         }
         finally {}
-        i1 += 1;
+        paramString = a(paramString, paramTypedMap, paramBoolean);
       }
       catch (Exception paramString)
       {
         paramString.printStackTrace();
         return null;
       }
+      return paramString;
+      label243:
+      label246:
+      i1 += 1;
     }
   }
   
-  public com.estrongs.android.view.aw b(String paramString, boolean paramBoolean)
+  public com.estrongs.android.view.cr b(String paramString, boolean paramBoolean)
   {
     return b(paramString, null, paramBoolean);
   }
@@ -3537,17 +3653,17 @@ public class FileExplorerActivity
     for (;;)
     {
       int i1;
-      synchronized (x)
+      synchronized (w)
       {
-        int i2 = f.h();
+        int i2 = h.getCurrentScreen();
         i1 = 0;
-        if (i1 < x.size())
+        if (i1 < w.size())
         {
-          com.estrongs.android.view.aw localaw = (com.estrongs.android.view.aw)x.get(i1);
+          com.estrongs.android.view.cr localcr = (com.estrongs.android.view.cr)w.get(i1);
           if (i1 == i2)
           {
-            localaw.a(paramInt);
-            com.estrongs.android.pop.view.utils.ac.a(this, localaw.c(), paramInt);
+            localcr.a(paramInt);
+            com.estrongs.android.pop.view.utils.ac.a(this, localcr.c(), paramInt);
           }
         }
         else
@@ -3559,26 +3675,26 @@ public class FileExplorerActivity
     }
   }
   
-  public void b(com.estrongs.android.ui.navigation.r paramr)
+  public void b(com.estrongs.android.ui.navigation.q paramq)
   {
-    if (aH != null) {
-      aH.b(paramr);
+    if (at != null) {
+      at.b(paramq);
     }
   }
   
-  public void b(com.estrongs.android.view.aw paramaw)
+  public void b(com.estrongs.android.view.cr paramcr)
   {
     for (;;)
     {
       int i1;
-      synchronized (x)
+      synchronized (w)
       {
-        int i2 = x.size();
+        int i2 = w.size();
         i1 = 0;
         if (i1 < i2)
         {
-          com.estrongs.android.view.aw localaw = (com.estrongs.android.view.aw)x.get(i1);
-          if ((localaw != null) && (e == e)) {
+          com.estrongs.android.view.cr localcr = (com.estrongs.android.view.cr)w.get(i1);
+          if ((localcr != null) && (f == f)) {
             g(i1);
           }
         }
@@ -3591,43 +3707,145 @@ public class FileExplorerActivity
     }
   }
   
+  public void b(String paramString)
+  {
+    if (paramString == null) {}
+    Object localObject1;
+    for (;;)
+    {
+      return;
+      for (;;)
+      {
+        try
+        {
+          localObject1 = com.estrongs.fs.impl.usb.e.b(paramString);
+          if (!com.estrongs.a.a.isAllTaskFinished()) {
+            break label342;
+          }
+          if (localObject1 == null) {
+            break label210;
+          }
+          localObject2 = ((com.estrongs.fs.impl.usb.g)localObject1).k();
+          ((com.estrongs.fs.impl.usb.g)localObject1).e();
+          Object localObject3 = ad();
+          if (localObject3 != null) {
+            ((com.estrongs.android.ui.navigation.m)localObject3).b(paramString);
+          }
+          localObject3 = w;
+          int i1 = 0;
+          if (i1 < ((List)localObject3).size())
+          {
+            com.estrongs.android.view.cr localcr = (com.estrongs.android.view.cr)((List)localObject3).get(i1);
+            if ((localcr != null) && (localcr.c() != null) && (localcr.c().startsWith(paramString))) {
+              b(localcr);
+            }
+          }
+          else
+          {
+            ((com.estrongs.fs.impl.usb.g)localObject1).f();
+            if (aJ == null) {
+              break;
+            }
+            paramString = new ArrayList();
+            paramString.add(((com.estrongs.fs.impl.usb.g)localObject1).j());
+            localObject1 = aJ.iterator();
+            if (!((Iterator)localObject1).hasNext()) {
+              break;
+            }
+            ((com.estrongs.android.ui.c.b.h)((Iterator)localObject1).next()).b(paramString);
+            continue;
+          }
+          i1 += 1;
+        }
+        catch (Exception paramString)
+        {
+          paramString.printStackTrace();
+          return;
+        }
+      }
+      com.estrongs.android.ui.view.ak.a(this, getString(2131232528, new Object[] { localObject2 }), 1);
+      return;
+      label210:
+      if (com.estrongs.android.util.ap.bL(paramString))
+      {
+        paramString = new Intent("android.settings.INTERNAL_STORAGE_SETTINGS");
+        paramString.setFlags(268435456);
+        startActivity(paramString);
+        return;
+      }
+      localObject2 = ad();
+      if (localObject2 != null)
+      {
+        ((com.estrongs.android.ui.navigation.m)localObject2).b(paramString);
+        com.estrongs.android.ui.view.ak.a(this, getString(2131232528, new Object[] { "" }), 1);
+      }
+      if (aJ != null)
+      {
+        paramString = new ArrayList();
+        paramString.add(((com.estrongs.fs.impl.usb.g)localObject1).j());
+        localObject1 = aJ.iterator();
+        while (((Iterator)localObject1).hasNext()) {
+          ((com.estrongs.android.ui.c.b.h)((Iterator)localObject1).next()).b(paramString);
+        }
+      }
+    }
+    label342:
+    Object localObject2 = getString(2131232526) + "<font size='8px' color='grey'><br /><br />" + getString(2131232527) + "</font>";
+    paramString = new com.estrongs.android.ui.dialog.cv(this).a(2131231714).b(Html.fromHtml((String)localObject2)).b(2131232525, new ai(this, (com.estrongs.fs.impl.usb.g)localObject1, paramString)).c(2131231265, new ah(this));
+    paramString.b(false);
+    paramString.c();
+  }
+  
   public void b(String paramString1, String paramString2)
   {
-    paramString2 = com.estrongs.android.pop.utils.cv.a(this, paramString1, paramString2);
+    paramString2 = com.estrongs.android.pop.utils.de.a(this, paramString1, paramString2);
     if (paramString2 == null) {}
-    do
+    for (;;)
     {
-      do
+      return;
+      try
       {
+        com.estrongs.android.j.c.a(this).a("Search_Wan");
+        com.estrongs.android.j.c.a(this).c("Search_Wan_UV");
+        if ((com.estrongs.android.pop.utils.de.a(b)) || (!bk.b(a))) {
+          continue;
+        }
+        paramString2 = d(a);
+        if ((paramString2 == null) || (!(paramString2 instanceof WebViewWrapper))) {
+          continue;
+        }
+        ((WebViewWrapper)paramString2).a(com.estrongs.android.pop.ad.a(FexApplication.a()).aM(), paramString1);
         return;
-      } while ((com.estrongs.android.pop.utils.cv.a(b)) || (!com.estrongs.android.util.bd.b(a)));
-      paramString2 = b(a);
-    } while ((paramString2 == null) || (!(paramString2 instanceof WebViewWrapper)));
-    ((WebViewWrapper)paramString2).a(com.estrongs.android.pop.ad.a(FexApplication.a()).aL(), paramString1);
+      }
+      catch (Exception localException)
+      {
+        for (;;) {}
+      }
+    }
   }
   
   public void b(String paramString, List<com.estrongs.fs.h> paramList, boolean paramBoolean)
   {
     String str = com.estrongs.android.pop.b.b();
-    if (P == null)
+    if (K == null)
     {
       int i1 = -1;
-      eg localeg = new eg(this, com.estrongs.android.pop.ad.a(this).p());
+      cd localcd = new cd(this, com.estrongs.android.pop.ad.a(this).q());
       if (com.estrongs.android.pop.z.n) {
         i1 = -2;
       }
-      P = new com.estrongs.android.widget.g(this, str, localeg, i1);
-      P.a(new eh(this));
-      P.b(true);
+      K = new com.estrongs.android.widget.f(this, str, localcd, i1);
+      K.a(new ce(this));
+      K.b(true);
     }
-    y.clear();
-    y.addAll(paramList);
-    p = paramBoolean;
-    P.b(getString(2131427339), S);
-    P.c(getString(2131427340), (DialogInterface.OnClickListener)null);
-    P.b(str);
-    P.a(paramString);
-    P.j();
+    x.clear();
+    x.addAll(paramList);
+    n = paramBoolean;
+    K.b(getString(2131231270), N);
+    K.c(getString(2131231265), (DialogInterface.OnClickListener)null);
+    K.b(str);
+    K.a(paramString);
+    K.j();
   }
   
   public void b(List<String> paramList)
@@ -3637,35 +3855,35 @@ public class FileExplorerActivity
     {
       return;
       int i1 = 0;
-      while (i1 < x.size())
+      while (i1 < w.size())
       {
-        ((com.estrongs.android.view.aw)x.get(i1)).d(paramList);
+        ((com.estrongs.android.view.cr)w.get(i1)).d(paramList);
         i1 += 1;
       }
     }
   }
   
-  public com.estrongs.android.view.aw c(String paramString, TypedMap paramTypedMap)
+  public com.estrongs.android.view.cr c(String paramString, TypedMap paramTypedMap)
   {
-    com.estrongs.android.view.aw localaw = y();
-    if (localaw != null) {
-      if (a(localaw, paramString))
+    com.estrongs.android.view.cr localcr = O();
+    if (localcr != null) {
+      if (a(localcr, paramString))
       {
-        localaw.a(paramString, paramTypedMap);
-        paramTypedMap = localaw;
+        localcr.a(paramString, paramTypedMap);
+        paramTypedMap = localcr;
       }
     }
     for (;;)
     {
-      if ((!am.aG(paramString)) && (!am.aO(paramString)) && (!am.T(paramString)) && (!am.s(paramString)) && (!am.t(paramString)) && (!"#home_page#".equals(paramString))) {
-        be.c().a(paramString, true);
+      if ((!com.estrongs.android.util.ap.aQ(paramString)) && (!com.estrongs.android.util.ap.aY(paramString)) && (!com.estrongs.android.util.ap.X(paramString)) && (!com.estrongs.android.util.ap.u(paramString)) && (!com.estrongs.android.util.ap.v(paramString)) && (!"#home_page#".equals(paramString))) {
+        com.estrongs.android.util.bm.c().a(paramString, true);
       }
       return paramTypedMap;
       paramTypedMap = a(paramString, paramTypedMap);
       continue;
-      int i1 = com.estrongs.android.ui.d.e.a();
-      f.removeViewAt(i1);
-      paramTypedMap = a(com.estrongs.android.ui.d.e.b(), paramString, paramTypedMap);
+      int i1 = au().a();
+      h.removeViewAt(i1);
+      paramTypedMap = a(au().b(), paramString, paramTypedMap);
     }
   }
   
@@ -3673,187 +3891,134 @@ public class FileExplorerActivity
   {
     if (paramBoolean)
     {
-      ((ImageView)findViewById(2131362010)).setVisibility(8);
+      ((ImageView)findViewById(2131624522)).setVisibility(8);
       return;
     }
-    aI();
+    bb();
   }
   
-  public com.estrongs.android.view.aw d(String paramString)
+  public com.estrongs.android.view.cr d(String paramString)
   {
-    return b(paramString, null);
+    if (("#home_page#".equals(paramString)) || ("mynetwork://".equalsIgnoreCase(paramString)) || ("clean://".equals(paramString))) {
+      return f(paramString);
+    }
+    return a(paramString, null);
   }
   
   public void d(boolean paramBoolean)
   {
-    runOnUiThread(new cc(this, paramBoolean));
-  }
-  
-  public com.estrongs.android.view.aw e(String paramString)
-  {
-    return c(paramString, null);
+    aL.a(paramBoolean);
   }
   
   public void e(int paramInt)
   {
-    com.estrongs.android.ui.navigation.n localn = aH();
-    if (localn != null) {
-      localn.a(paramInt);
+    com.estrongs.android.ui.navigation.m localm = ae();
+    if (localm != null) {
+      localm.b(paramInt);
+    }
+  }
+  
+  public void e(String paramString)
+  {
+    com.estrongs.android.view.cr localcr = O();
+    if ((localcr != null) && (!h(localcr.c()))) {
+      if (!(localcr instanceof com.estrongs.android.ui.c.e)) {
+        break label57;
+      }
+    }
+    label57:
+    for (String str = "externalstorage://";; str = localcr.c())
+    {
+      if ((localcr instanceof com.estrongs.android.view.er)) {
+        str = "log://";
+      }
+      a(str, localcr.aq(), paramString);
+      C();
+      return;
     }
   }
   
   public void e(boolean paramBoolean)
   {
-    if (am.aG(z())) {
-      com.estrongs.android.ui.view.ag.a(this, getString(2131427605), 1);
-    }
-    View localView;
-    Object localObject;
-    do
-    {
-      do
-      {
-        return;
-      } while (q);
-      localView = findViewById(2131361984);
-      al = ((EditText)localView.findViewById(2131361988));
-      if (B == null) {
-        B = ((ProgressBar)localView.findViewById(2131361990));
-      }
-      if (aj == null)
-      {
-        aj = ((ImageView)localView.findViewById(2131361989));
-        aj.setOnClickListener(new ct(this));
-      }
-      aj.setVisibility(4);
-      localView.setClickable(true);
-      localObject = new TranslateAnimation(1, 0.0F, 1, 0.0F, 1, -1.0F, 1, 0.0F);
-      ((TranslateAnimation)localObject).setDuration(500L);
-      ((TranslateAnimation)localObject).setInterpolator(new DecelerateInterpolator());
-      ((TranslateAnimation)localObject).setAnimationListener(new cu(this, localView));
-      localView.setVisibility(0);
-      q = true;
-      localView.setAnimation((Animation)localObject);
-      ((TranslateAnimation)localObject).start();
-      localObject = y();
-    } while (localObject == null);
-    FrameLayout localFrameLayout = (FrameLayout)localView.findViewById(2131361985);
-    ImageView localImageView = (ImageView)localView.findViewById(2131361986);
-    ((com.estrongs.android.view.aw)localObject).f(true);
-    al.removeTextChangedListener(aR);
-    al.setText(null);
-    LinearLayout localLinearLayout = (LinearLayout)localView.findViewById(2131361992);
-    if ((localObject instanceof com.estrongs.android.ui.c.a)) {
-      localLinearLayout.setVisibility(0);
-    }
-    for (;;)
-    {
-      localLinearLayout.setOnClickListener(new cv(this, (com.estrongs.android.view.aw)localObject));
-      al.addTextChangedListener(aR);
-      al.setOnEditorActionListener(null);
-      ((LinearLayout)localView.findViewById(2131361995)).setOnClickListener(new cw(this));
-      al.setOnKeyListener(aT);
-      if (N == null) {
-        N = new cx(this, this, localView, localImageView, ((com.estrongs.android.view.aw)localObject).ab(), localImageView);
-      }
-      localImageView.setImageDrawable(N.c(((com.estrongs.android.view.aw)localObject).ab()));
-      localFrameLayout.setOnClickListener(new cy(this, (com.estrongs.android.view.aw)localObject, paramBoolean));
-      return;
-      localLinearLayout.setVisibility(8);
-    }
+    aL.b(paramBoolean);
   }
   
   protected boolean e()
   {
-    com.estrongs.android.view.aw localaw = y();
-    if (localaw == null) {}
-    while ((localaw.z()) && (!(localaw instanceof WebViewWrapper))) {
+    com.estrongs.android.view.cr localcr = O();
+    if (localcr == null) {}
+    while ((localcr.N()) && (!(localcr instanceof WebViewWrapper))) {
       return false;
     }
     return true;
   }
   
+  public com.estrongs.android.view.cr f(String paramString)
+  {
+    return b(paramString, null);
+  }
+  
   public void f(int paramInt)
   {
-    if (f != null) {
-      f.a(false);
+    if (h != null) {
+      h.setPageLocked(false);
     }
-    ag = y();
-    if (ag != null) {
-      ag.b_();
+    V = O();
+    if (V != null) {
+      V.j_();
     }
-    if ("edit_mode".equals(k.l().b())) {
-      k.m();
+    aL.t();
+    if (h != null) {
+      h.setCurrentScreen(paramInt);
     }
-    if (f != null) {
-      f.a(paramInt);
-    }
-    paramInt = com.estrongs.android.ui.d.e.a();
-    n.a(n.d(), paramInt);
-    Object localObject = com.estrongs.android.ui.d.e.c(paramInt);
-    I.a(((com.estrongs.android.ui.d.d)localObject).b(), false);
-    localObject = y();
+    paramInt = au().a();
+    aL.d(paramInt);
+    Object localObject = au().c(paramInt);
+    E.a(((com.estrongs.android.ui.d.h)localObject).a(), false);
+    localObject = O();
     if (localObject != null) {
-      ((com.estrongs.android.view.aw)localObject).l();
+      ((com.estrongs.android.view.cr)localObject).l();
+    }
+    if (p) {
+      B();
     }
   }
   
   public void f(boolean paramBoolean)
   {
-    try
+    if (ao())
     {
-      N.dismiss();
-      Object localObject1;
-      Object localObject2;
-      if (q)
-      {
-        q = false;
-        localObject1 = findViewById(2131361984);
-        if (!paramBoolean) {
-          break label169;
-        }
-        localObject2 = new TranslateAnimation(1, 0.0F, 1, 0.0F, 1, 0.0F, 1, -1.0F);
-        ((TranslateAnimation)localObject2).setDuration(500L);
-        ((TranslateAnimation)localObject2).setInterpolator(new AccelerateInterpolator());
-        ((TranslateAnimation)localObject2).setAnimationListener(new db(this, (View)localObject1));
-        ((View)localObject1).setAnimation((Animation)localObject2);
-        ((TranslateAnimation)localObject2).start();
-      }
       for (;;)
       {
-        ((View)localObject1).setVisibility(8);
-        al.removeTextChangedListener(aR);
-        al.setOnKeyListener(null);
-        localObject1 = y();
-        if (localObject1 != null)
+        com.estrongs.android.view.cr localcr;
+        synchronized (w)
         {
-          ((com.estrongs.android.view.aw)localObject1).f(false);
-          if ((f(((com.estrongs.android.view.aw)localObject1).c())) && (T != null) && (!ff.b(T)))
-          {
-            T.a();
-            ((com.estrongs.android.view.aw)localObject1).b(false);
+          Iterator localIterator = w.iterator();
+          if (!localIterator.hasNext()) {
+            break;
+          }
+          localcr = (com.estrongs.android.view.cr)localIterator.next();
+          if ((localcr == null) || ((!com.estrongs.android.util.ap.bl(localcr.c())) && (!com.estrongs.android.util.ap.bu(localcr.c())))) {
+            continue;
+          }
+          if (localcr == O()) {
+            localcr.b(paramBoolean);
           }
         }
-        return;
-        label169:
-        q = false;
-        localObject2 = (EditText)((View)localObject1).findViewById(2131361988);
-        ((InputMethodManager)getSystemService("input_method")).hideSoftInputFromWindow(((EditText)localObject2).getWindowToken(), 0);
+        localcr.a(true, paramBoolean);
       }
+      return;
     }
-    catch (Exception localException)
-    {
-      for (;;) {}
-    }
+    runOnUiThread(new s(this, paramBoolean));
   }
   
   protected boolean f()
   {
-    com.estrongs.android.view.aw localaw = y();
-    if (localaw != null)
+    com.estrongs.android.view.cr localcr = O();
+    if (localcr != null)
     {
-      if ((localaw instanceof com.estrongs.android.pop.app.diskusage.h)) {}
-      while (((localaw instanceof com.estrongs.android.ui.c.a)) || ((localaw instanceof com.estrongs.android.view.cq)) || (((!localaw.o()) || (!localaw.T())) && (!localaw.h().isEmpty()))) {
+      if ((localcr instanceof com.estrongs.android.pop.app.diskusage.h)) {}
+      while (((localcr instanceof com.estrongs.android.ui.c.e)) || ((localcr instanceof eu)) || (((!localcr.p()) || (!localcr.aj())) && (!localcr.h().isEmpty()))) {
         return false;
       }
       return true;
@@ -3861,51 +4026,48 @@ public class FileExplorerActivity
     return true;
   }
   
-  public boolean f(String paramString)
-  {
-    return (am.aO(paramString)) || (am.T(paramString)) || (am.aG(paramString)) || (am.Y(paramString)) || (am.W(paramString)) || (am.M(paramString)) || (am.X(paramString)) || ((am.aX(paramString)) && (am.X(am.bz(paramString))));
-  }
-  
   public void finish()
   {
-    if (!be) {
+    if (!aS) {
       a(false, null, null);
     }
     FexApplication.a().b(false);
-    synchronized (x)
+    synchronized (w)
     {
-      Iterator localIterator = x.iterator();
+      Iterator localIterator = w.iterator();
       while (localIterator.hasNext())
       {
-        com.estrongs.android.view.aw localaw = (com.estrongs.android.view.aw)localIterator.next();
-        if (localaw != null) {
-          localaw.a_();
+        com.estrongs.android.view.cr localcr = (com.estrongs.android.view.cr)localIterator.next();
+        if (localcr != null) {
+          localcr.i_();
         }
       }
     }
+    w.clear();
     x.clear();
-    y.clear();
-    ai.clear();
+    X.clear();
     com.estrongs.fs.a.b.a().e();
-    com.estrongs.android.pop.app.b.a.d = true;
+    com.estrongs.android.pop.app.f.a.d = true;
     com.estrongs.fs.util.a.a.clear();
-    if (com.estrongs.android.pop.utils.aa.e)
+    if (com.estrongs.android.pop.utils.ad.e)
     {
-      com.estrongs.android.pop.utils.aa.b();
-      com.estrongs.android.pop.utils.aa.e = false;
+      com.estrongs.android.pop.utils.ad.b();
+      com.estrongs.android.pop.utils.ad.e = false;
     }
-    com.estrongs.android.pop.utils.aa.a();
-    an.d();
-    com.estrongs.android.util.ay.a();
+    com.estrongs.android.pop.utils.ad.a();
+    com.estrongs.android.pop.app.c.l.d();
+    com.estrongs.android.util.bc.a();
     FexApplication.a().f();
     try
     {
-      if (ba != null) {
-        unbindService(ba);
+      if (aI != null) {
+        unbindService(aI);
       }
       for (;;)
       {
         FexApplication.a().k();
+        com.estrongs.android.pop.ad.a(this).a();
+        at = null;
         super.finish();
         return;
         FexApplication.a().a(null);
@@ -3920,78 +4082,46 @@ public class FileExplorerActivity
     }
   }
   
+  public com.estrongs.android.view.cr g(String paramString)
+  {
+    return c(paramString, null);
+  }
+  
   protected void g()
   {
-    n();
+    u();
   }
   
   public void g(int paramInt)
   {
-    if ("edit_mode".equals(k.l().b())) {
-      k.m();
-    }
-    com.estrongs.android.ui.d.e.b(paramInt);
-    synchronized (x)
+    aL.t();
+    au().b(paramInt);
+    synchronized (w)
     {
-      if ((x.size() > 1) && (x.size() > paramInt))
+      if ((w.size() > 1) && (w.size() > paramInt))
       {
-        com.estrongs.android.view.aw localaw = (com.estrongs.android.view.aw)x.remove(paramInt);
-        if (localaw != null) {
-          localaw.a_();
+        com.estrongs.android.view.cr localcr = (com.estrongs.android.view.cr)w.remove(paramInt);
+        if (localcr != null) {
+          localcr.i_();
         }
-        f.removeViewAt(paramInt);
-        aB();
-        n.b(paramInt);
-        I.a(z(), false);
-        localaw = y();
-        if (localaw != null) {
-          localaw.l();
+        h.removeViewAt(paramInt);
+        aL.e(paramInt);
+        E.a(P(), false);
+        localcr = O();
+        if (localcr != null) {
+          localcr.l();
         }
-      }
-      aH().h();
-      return;
-    }
-  }
-  
-  public void g(boolean paramBoolean)
-  {
-    if (Y())
-    {
-      for (;;)
-      {
-        com.estrongs.android.view.aw localaw;
-        synchronized (x)
-        {
-          Iterator localIterator = x.iterator();
-          if (!localIterator.hasNext()) {
-            break;
-          }
-          localaw = (com.estrongs.android.view.aw)localIterator.next();
-          if ((localaw == null) || (!am.ba(localaw.c()))) {
-            continue;
-          }
-          if (localaw == y()) {
-            localaw.b(paramBoolean);
-          }
-        }
-        localaw.a(true, paramBoolean);
       }
       return;
     }
-    runOnUiThread(new av(this, paramBoolean));
   }
   
-  public boolean g(String paramString)
+  public com.estrongs.android.view.cr h(int paramInt)
   {
-    return (paramString != null) && (!"apk://".equalsIgnoreCase(paramString)) && (!"book://".equalsIgnoreCase(paramString)) && (!"pic://".equalsIgnoreCase(paramString)) && (!"music://".equalsIgnoreCase(paramString)) && (!"video://".equalsIgnoreCase(paramString)) && (!"#home_page#".equals(paramString)) && (!"remote://".equals(paramString)) && (!am.r(paramString)) && (!am.bP(paramString)) && (!am.s(paramString)) && (!am.bg(paramString)) && (!am.bI(paramString)) && (!am.Y(paramString)) && (!am.aO(paramString)) && (!am.aG(paramString)) && (!am.aQ(paramString)) && (!am.aX(paramString)) && (!am.t(paramString)) && (!am.bQ(paramString)) && (!am.bR(paramString)) && (!am.L(paramString)) && (!am.M(paramString));
-  }
-  
-  public com.estrongs.android.view.aw h(int paramInt)
-  {
-    com.estrongs.android.view.aw localaw;
-    synchronized (x)
+    com.estrongs.android.view.cr localcr;
+    synchronized (w)
     {
-      if (paramInt >= x.size()) {
+      if (paramInt >= w.size()) {
         return null;
       }
     }
@@ -4000,30 +4130,137 @@ public class FileExplorerActivity
   
   public void h()
   {
-    int i1 = com.estrongs.android.ui.d.e.a();
-    com.estrongs.android.view.aw localaw = y();
-    if (localaw == null) {
+    int i1 = au().a();
+    com.estrongs.android.view.cr localcr = O();
+    if (localcr == null) {
       return;
     }
-    a(localaw.c(), i1, localaw);
+    a(localcr.c(), i1, localcr);
   }
   
-  public void h(String paramString)
+  public boolean h(String paramString)
   {
-    com.estrongs.android.pop.utils.cd.a(paramString);
+    return (com.estrongs.android.util.ap.aY(paramString)) || (com.estrongs.android.util.ap.X(paramString)) || (com.estrongs.android.util.ap.aQ(paramString)) || (com.estrongs.android.util.ap.bu(paramString)) || (com.estrongs.android.util.ap.ai(paramString)) || (com.estrongs.android.util.ap.ag(paramString)) || (com.estrongs.android.util.ap.O(paramString)) || ((com.estrongs.android.util.ap.ah(paramString)) && (!com.estrongs.android.util.ap.bw(paramString))) || ((com.estrongs.android.util.ap.bi(paramString)) && (com.estrongs.android.util.ap.ah(com.estrongs.android.util.ap.bQ(paramString))));
   }
   
-  public int i(String paramString)
+  public Bitmap i(int paramInt)
   {
-    int i2 = x.size();
-    List localList = x;
+    if ((com.estrongs.android.ui.d.g.e == 0) || (com.estrongs.android.ui.d.g.d == 0)) {
+      com.estrongs.android.ui.d.g.a(this);
+    }
+    if ((com.estrongs.android.ui.d.g.e == 0) || (com.estrongs.android.ui.d.g.d == 0)) {}
+    while (h == null) {
+      return null;
+    }
+    return h.b(paramInt, t);
+  }
+  
+  public void i()
+  {
+    aL.u();
+    o = false;
+  }
+  
+  public boolean i(String paramString)
+  {
+    return (paramString != null) && (!"apk://".equalsIgnoreCase(paramString)) && (!"book://".equalsIgnoreCase(paramString)) && (!"pic://".equalsIgnoreCase(paramString)) && (!"music://".equalsIgnoreCase(paramString)) && (!"video://".equalsIgnoreCase(paramString)) && (!"#home_page#".equals(paramString)) && (!"remote://".equals(paramString)) && (!com.estrongs.android.util.ap.t(paramString)) && (!com.estrongs.android.util.ap.cg(paramString)) && (!com.estrongs.android.util.ap.u(paramString)) && (!com.estrongs.android.util.ap.br(paramString)) && (!com.estrongs.android.util.ap.bZ(paramString)) && (!com.estrongs.android.util.ap.ai(paramString)) && (!com.estrongs.android.util.ap.aY(paramString)) && (!com.estrongs.android.util.ap.aQ(paramString)) && (!com.estrongs.android.util.ap.ba(paramString)) && (!com.estrongs.android.util.ap.bi(paramString)) && (!com.estrongs.android.util.ap.v(paramString)) && (!com.estrongs.android.util.ap.ci(paramString)) && (!com.estrongs.android.util.ap.cj(paramString)) && (!com.estrongs.android.util.ap.N(paramString)) && (!com.estrongs.android.util.ap.O(paramString)) && (!com.estrongs.android.util.ap.bv(paramString)) && (!com.estrongs.android.util.ap.bw(paramString)) && (!com.estrongs.android.util.ap.bx(paramString)) && (!com.estrongs.android.util.ap.ad(paramString)) && (!com.estrongs.android.util.ap.ae(paramString)) && (!com.estrongs.android.util.ap.V(paramString)) && (!com.estrongs.android.util.ap.X(paramString)) && (!com.estrongs.android.util.ap.Z(paramString)) && (!com.estrongs.android.util.ap.ab(paramString));
+  }
+  
+  public boolean isDestroyed()
+  {
+    return aA;
+  }
+  
+  public boolean j()
+  {
+    return o;
+  }
+  
+  public boolean j(String paramString)
+  {
+    if (Q() == null) {
+      return false;
+    }
+    Intent localIntent = new Intent();
+    String str = Q().getAbsolutePath();
+    Object localObject = str;
+    if (com.estrongs.android.util.ap.bi(str)) {
+      localObject = com.estrongs.android.util.ap.bQ(str);
+    }
+    localIntent.putExtra("CURRENT_WORKING_PATH", (String)localObject);
+    localObject = (EditText)findViewById(2131624501);
+    if ((localObject != null) && (((EditText)localObject).getText().toString().length() > 0)) {
+      localIntent.putExtra("keyword", ((EditText)localObject).getText().toString());
+    }
+    new com.estrongs.android.pop.app.f.y(this, localIntent).a(new cp(this, paramString)).a();
+    return true;
+  }
+  
+  public void k()
+  {
+    dt localdt = new dt(this);
+    e locale = new e(this, localdt);
+    FexApplication.a().a(locale);
+    locale.a(localdt);
+  }
+  
+  public void k(String paramString)
+  {
+    aw = paramString;
+    com.estrongs.android.view.cr localcr = O();
+    if (localcr == null) {}
+    do
+    {
+      return;
+      localcr.o(paramString);
+    } while ((localcr instanceof com.estrongs.android.ui.c.e));
+    c(Q().getAbsolutePath(), paramString);
+  }
+  
+  public void l()
+  {
+    p = false;
+    aL.t();
+  }
+  
+  public void l(String paramString)
+  {
+    if ((h(P())) && (O != null) && (paramString.equals(eg.b(O)))) {}
+    while ((Q() == null) || (O() == null) || ((O() instanceof com.estrongs.android.ui.c.e)) || ((O() instanceof com.estrongs.android.view.er))) {
+      return;
+    }
+    try
+    {
+      c(Q().getAbsolutePath(), O().aq());
+      return;
+    }
+    catch (Exception paramString) {}
+  }
+  
+  public void m()
+  {
+    File[] arrayOfFile = new File(com.estrongs.android.pop.a.f).listFiles();
+    if (arrayOfFile != null) {
+      j.a(arrayOfFile);
+    }
+  }
+  
+  public void m(String paramString)
+  {
+    com.estrongs.android.pop.utils.cm.a(paramString);
+  }
+  
+  public int n(String paramString)
+  {
+    int i2 = w.size();
+    List localList = w;
     int i1 = 0;
     for (;;)
     {
       if (i1 < i2) {}
       try
       {
-        if (!a((com.estrongs.android.view.aw)x.get(i1), paramString)) {
+        if (!a((com.estrongs.android.view.cr)w.get(i1), paramString)) {
           break label62;
         }
         return i1;
@@ -4035,137 +4272,48 @@ public class FileExplorerActivity
     }
   }
   
-  public Bitmap i(int paramInt)
+  public void o()
   {
-    if ((com.estrongs.android.ui.d.a.e == 0) || (com.estrongs.android.ui.d.a.d == 0)) {
-      com.estrongs.android.ui.d.a.a(this);
-    }
-    if ((com.estrongs.android.ui.d.a.e == 0) || (com.estrongs.android.ui.d.a.d == 0)) {}
-    while (f == null) {
-      return null;
-    }
-    return f.b(paramInt, u);
-  }
-  
-  public void i()
-  {
-    e locale = new e(this);
-    r localr = new r(this, locale);
-    FexApplication.a().a(localr);
-    localr.a(locale);
-  }
-  
-  public boolean isDestroyed()
-  {
-    return aQ;
-  }
-  
-  public void j()
-  {
-    File[] arrayOfFile = new File(com.estrongs.android.pop.a.d).listFiles();
-    if (arrayOfFile != null) {
-      com.estrongs.fs.util.j.a(arrayOfFile);
+    com.estrongs.android.view.cr localcr = O();
+    if ((localcr != null) && (localcr.W()) && (bk.a(aL.q()))) {
+      C();
     }
   }
   
-  public void j(String paramString)
+  public void o(String paramString)
   {
-    if (Y())
+    if (ao())
     {
       for (;;)
       {
-        com.estrongs.android.view.aw localaw;
-        synchronized (x)
+        com.estrongs.android.view.cr localcr;
+        synchronized (w)
         {
-          Iterator localIterator = x.iterator();
+          Iterator localIterator = w.iterator();
           if (!localIterator.hasNext()) {
             break;
           }
-          localaw = (com.estrongs.android.view.aw)localIterator.next();
-          if ((localaw == null) || (!am.e(paramString, localaw.c()))) {
+          localcr = (com.estrongs.android.view.cr)localIterator.next();
+          if ((localcr == null) || (!com.estrongs.android.util.ap.e(paramString, localcr.c()))) {
             continue;
           }
-          if (localaw == y()) {
-            localaw.b(true);
+          if (localcr == O()) {
+            localcr.b(true);
           }
         }
-        localaw.a(true, true);
+        localcr.a(true, true);
       }
       return;
     }
-    runOnUiThread(new at(this, paramString));
-  }
-  
-  public void k()
-  {
-    com.estrongs.android.view.aw localaw = y();
-    if ((localaw != null) && (localaw.F()) && (com.estrongs.android.util.bd.a(al.getText().toString()))) {
-      u();
-    }
-  }
-  
-  public void k(String paramString)
-  {
-    if (Y())
-    {
-      synchronized (x)
-      {
-        Iterator localIterator = x.iterator();
-        while (localIterator.hasNext())
-        {
-          com.estrongs.android.view.aw localaw = (com.estrongs.android.view.aw)localIterator.next();
-          if ((localaw != null) && (am.e(paramString, localaw.c()))) {
-            localaw.e();
-          }
-        }
-      }
-      return;
-    }
-    runOnUiThread(new au(this, paramString));
-  }
-  
-  public void l()
-  {
-    if ((v) && (!c)) {
-      if (D.getVisibility() == 8) {
-        D.setVisibility(0);
-      }
-    }
-    com.estrongs.android.ui.navigation.n localn;
-    do
-    {
-      return;
-      localn = aH();
-    } while (localn == null);
-    localn.b();
-  }
-  
-  public void m()
-  {
-    if (f != null) {
-      f.c(f.h());
-    }
-  }
-  
-  public void n()
-  {
-    com.estrongs.android.ui.navigation.n localn = aH();
-    if (localn != null) {
-      localn.c();
-    }
-  }
-  
-  public boolean o()
-  {
-    return (aH != null) && ((aH.e()) || (aH.f()));
+    runOnUiThread(new q(this, paramString));
   }
   
   public void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
   {
     super.onActivityResult(paramInt1, paramInt2, paramIntent);
-    if (paramInt1 == 268439562) {
+    if (paramInt1 == 4106) {
       if (paramInt2 != 0) {
-        com.estrongs.android.pop.app.b.a.a().i();
+        com.estrongs.android.pop.app.f.a.a().i();
       }
     }
     label24:
@@ -4186,7 +4334,7 @@ public class FileExplorerActivity
             {
               do
               {
-                while ((paramInt2 != -1) && (paramInt1 != 16781344) && (paramInt2 != 1001)) {}
+                while ((paramInt2 != -1) && (paramInt1 != 4134) && (paramInt2 != 1001)) {}
                 localObject1 = null;
                 if (paramIntent != null) {
                   localObject1 = paramIntent.getExtras();
@@ -4196,15 +4344,16 @@ public class FileExplorerActivity
                 default: 
                   return;
                 case 1001: 
-                  localObject1 = com.estrongs.android.ui.pcs.r.a().j();
+                  localObject1 = com.estrongs.android.ui.pcs.u.a().j();
                 }
               } while (localObject1 == null);
-              ((com.estrongs.android.ui.pcs.j)localObject1).a(paramInt1, paramIntent, paramInt2);
+              ((com.estrongs.android.ui.pcs.l)localObject1).a(paramInt1, paramIntent, paramInt2);
               return;
-            } while ((am == null) || (Z == null));
-            am.setBackgroundDrawable(Z.h());
+            } while ((Y == null) || (T == null));
+            Y.setBackgroundDrawable(T.h());
             return;
-            be = true;
+            aS = true;
+            com.estrongs.android.h.a.e.c();
             paramIntent = new Configuration(getResources().getConfiguration());
             paramInt1 = touchscreen;
             if (paramInt1 == 3) {}
@@ -4213,10 +4362,9 @@ public class FileExplorerActivity
               getResources().updateConfiguration(paramIntent, getResources().getDisplayMetrics());
               touchscreen = paramInt1;
               getResources().updateConfiguration(paramIntent, getResources().getDisplayMetrics());
-              Z.l();
-              com.estrongs.android.d.f.a(this).a();
-              com.estrongs.android.ui.c.a.m();
-              h.post(new dw(this));
+              T.q();
+              com.estrongs.android.h.f.a(this).a();
+              i.post(new bs(this));
               return;
             }
           } while (localObject1 == null);
@@ -4228,7 +4376,7 @@ public class FileExplorerActivity
           }
           try
           {
-            if (com.estrongs.android.util.bc.c(paramIntent))
+            if (bg.c(paramIntent))
             {
               localObject1 = new TypedMap();
               ((TypedMap)localObject1).put("show_hidelist_file", Boolean.valueOf(true));
@@ -4239,15 +4387,15 @@ public class FileExplorerActivity
             return;
           }
           catch (Exception paramIntent) {}
-          com.estrongs.android.ui.view.ag.a(this, 2131428363, 0);
-          aP.a(true);
+          com.estrongs.android.ui.view.ak.a(this, 2131231542, 0);
+          az.setMovingStart(true);
           return;
-          localObject1 = x.iterator();
+          localObject1 = w.iterator();
         } while (!((Iterator)localObject1).hasNext());
-        localObject2 = (com.estrongs.android.view.aw)((Iterator)localObject1).next();
+        localObject2 = (com.estrongs.android.view.cr)((Iterator)localObject1).next();
       } while (!(localObject2 instanceof WebViewWrapper));
       localObject2 = (WebViewWrapper)localObject2;
-    } while (!((WebViewWrapper)localObject2).au());
+    } while (!((WebViewWrapper)localObject2).C());
     ((WebViewWrapper)localObject2).b(paramIntent);
     return;
   }
@@ -4255,536 +4403,1748 @@ public class FileExplorerActivity
   public void onConfigurationChanged(Configuration paramConfiguration)
   {
     super.onConfigurationChanged(paramConfiguration);
-    com.estrongs.android.view.aw localaw = y();
-    if ((localaw != null) && (am.aX(z())) && (localaw.o())) {
-      localaw.R();
+    Object localObject = O();
+    if (localObject != null)
+    {
+      if ((com.estrongs.android.util.ap.bi(P())) && (((com.estrongs.android.view.cr)localObject).p())) {
+        ((com.estrongs.android.view.cr)localObject).ah();
+      }
+      if (aa.f()) {
+        aa.a();
+      }
     }
-    if (q) {
-      f(false);
-    }
-    if (N != null) {
-      N = null;
-    }
-    aD();
-    aE();
+    aL.a(paramConfiguration);
+    ab();
+    aV();
+    aW();
     if (orientation == 1) {}
     for (boolean bool = true;; bool = false)
     {
       c = bool;
-      if (!v) {
-        u = c;
+      if (!u) {
+        t = c;
       }
-      as();
-      h.post(new dx(this));
-      Y = -2;
-      paramConfiguration = z();
-      if (paramConfiguration != null) {
-        I.a(paramConfiguration, true, false);
+      aS();
+      i.post(new bt(this));
+      e = -2;
+      localObject = P();
+      if (localObject != null) {
+        E.a((String)localObject, true, false);
       }
-      if (R != null) {
-        R.b(u);
+      if (M != null) {
+        M.b(t);
       }
-      if ((aN != null) && (aN.a()))
+      if ((ax != null) && (ax.a()))
       {
-        aN.d();
-        aN = null;
+        ax.d();
+        ax = null;
       }
+      localObject = O();
+      if (localObject != null) {
+        ((com.estrongs.android.view.cr)localObject).a(paramConfiguration);
+      }
+      aN.a(c);
       return;
     }
   }
   
+  /* Error */
   public void onCreate(Bundle paramBundle)
   {
-    int i3 = 0;
-    super.onCreate(paramBundle);
-    F = getWindowgetAttributessoftInputMode;
-    Z = al.a(FexApplication.a());
-    try
-    {
-      if (getResourcesgetConfigurationorientation != 1) {
-        break label305;
-      }
-      bool = true;
-      u = bool;
-      c = u;
+    // Byte code:
+    //   0: iconst_0
+    //   1: istore 4
+    //   3: aload_0
+    //   4: aload_1
+    //   5: invokespecial 3458	com/estrongs/android/pop/esclasses/ESAbsToolbarActivity:onCreate	(Landroid/os/Bundle;)V
+    //   8: invokestatic 1381	com/estrongs/android/pop/app/unlock/s:a	()Lcom/estrongs/android/pop/app/unlock/s;
+    //   11: aload_0
+    //   12: invokevirtual 3459	com/estrongs/android/pop/app/unlock/s:a	(Landroid/content/Context;)V
+    //   15: aload_0
+    //   16: invokestatic 387	com/estrongs/android/pop/ad:a	(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+    //   19: invokevirtual 3461	com/estrongs/android/pop/ad:bp	()Z
+    //   22: putstatic 3462	com/estrongs/android/pop/FexApplication:a	Z
+    //   25: getstatic 3462	com/estrongs/android/pop/FexApplication:a	Z
+    //   28: ifeq +676 -> 704
+    //   31: ldc_w 3254
+    //   34: invokestatic 3465	com/estrongs/android/util/ap:bP	(Ljava/lang/String;)Ljava/lang/String;
+    //   37: invokestatic 3470	com/estrongs/fs/impl/f/b:a	()Lcom/estrongs/fs/impl/f/b;
+    //   40: invokestatic 3473	com/estrongs/fs/d:a	(Ljava/lang/String;Lcom/estrongs/fs/u;)V
+    //   43: ldc_w 3252
+    //   46: invokestatic 3465	com/estrongs/android/util/ap:bP	(Ljava/lang/String;)Ljava/lang/String;
+    //   49: invokestatic 3478	com/estrongs/fs/impl/a/c:a	()Lcom/estrongs/fs/impl/a/c;
+    //   52: invokestatic 3473	com/estrongs/fs/d:a	(Ljava/lang/String;Lcom/estrongs/fs/u;)V
+    //   55: ldc_w 3480
+    //   58: invokestatic 3465	com/estrongs/android/util/ap:bP	(Ljava/lang/String;)Ljava/lang/String;
+    //   61: invokestatic 3485	com/estrongs/fs/impl/h/b:a	()Lcom/estrongs/fs/impl/h/b;
+    //   64: invokestatic 3473	com/estrongs/fs/d:a	(Ljava/lang/String;Lcom/estrongs/fs/u;)V
+    //   67: ldc_w 946
+    //   70: invokestatic 3465	com/estrongs/android/util/ap:bP	(Ljava/lang/String;)Ljava/lang/String;
+    //   73: invokestatic 3490	com/estrongs/fs/impl/d/b:a	()Lcom/estrongs/fs/impl/d/b;
+    //   76: invokestatic 3473	com/estrongs/fs/d:a	(Ljava/lang/String;Lcom/estrongs/fs/u;)V
+    //   79: aload_0
+    //   80: invokestatic 3493	com/estrongs/android/c/a/a:a	(Landroid/content/Context;)V
+    //   83: aload_0
+    //   84: invokestatic 1254	java/lang/System:currentTimeMillis	()J
+    //   87: putfield 1256	com/estrongs/android/pop/view/FileExplorerActivity:aP	J
+    //   90: aload_0
+    //   91: invokevirtual 1047	com/estrongs/android/pop/view/FileExplorerActivity:getResources	()Landroid/content/res/Resources;
+    //   94: invokevirtual 3366	android/content/res/Resources:getConfiguration	()Landroid/content/res/Configuration;
+    //   97: getfield 3497	android/content/res/Configuration:locale	Ljava/util/Locale;
+    //   100: invokevirtual 3502	java/util/Locale:getLanguage	()Ljava/lang/String;
+    //   103: pop
+    //   104: invokestatic 1014	com/estrongs/android/pop/FexApplication:a	()Lcom/estrongs/android/pop/FexApplication;
+    //   107: invokevirtual 3503	com/estrongs/android/pop/FexApplication:o	()V
+    //   110: aload_0
+    //   111: new 3505	com/estrongs/android/ui/topclassify/e
+    //   114: dup
+    //   115: aload_0
+    //   116: invokespecial 3506	com/estrongs/android/ui/topclassify/e:<init>	(Landroid/content/Context;)V
+    //   119: putfield 3028	com/estrongs/android/pop/view/FileExplorerActivity:aO	Lcom/estrongs/android/ui/topclassify/e;
+    //   122: aload_0
+    //   123: aload_0
+    //   124: invokevirtual 3510	com/estrongs/android/pop/view/FileExplorerActivity:getWindow	()Landroid/view/Window;
+    //   127: invokevirtual 3516	android/view/Window:getAttributes	()Landroid/view/WindowManager$LayoutParams;
+    //   130: getfield 3521	android/view/WindowManager$LayoutParams:softInputMode	I
+    //   133: putfield 261	com/estrongs/android/pop/view/FileExplorerActivity:B	I
+    //   136: aload_0
+    //   137: invokestatic 1014	com/estrongs/android/pop/FexApplication:a	()Lcom/estrongs/android/pop/FexApplication;
+    //   140: invokestatic 3524	com/estrongs/android/ui/theme/at:a	(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
+    //   143: putfield 420	com/estrongs/android/pop/view/FileExplorerActivity:T	Lcom/estrongs/android/ui/theme/at;
+    //   146: aload_0
+    //   147: invokevirtual 1047	com/estrongs/android/pop/view/FileExplorerActivity:getResources	()Landroid/content/res/Resources;
+    //   150: invokevirtual 3366	android/content/res/Resources:getConfiguration	()Landroid/content/res/Configuration;
+    //   153: getfield 3435	android/content/res/Configuration:orientation	I
+    //   156: iconst_1
+    //   157: if_icmpne +659 -> 816
+    //   160: iconst_1
+    //   161: istore 5
+    //   163: aload_0
+    //   164: iload 5
+    //   166: putfield 238	com/estrongs/android/pop/view/FileExplorerActivity:t	Z
+    //   169: aload_0
+    //   170: aload_0
+    //   171: getfield 238	com/estrongs/android/pop/view/FileExplorerActivity:t	Z
+    //   174: putfield 1454	com/estrongs/android/pop/view/FileExplorerActivity:c	Z
+    //   177: aload_0
+    //   178: aload_0
+    //   179: invokestatic 3525	com/estrongs/android/pop/utils/cu:a	(Landroid/content/Context;)Z
+    //   182: putfield 240	com/estrongs/android/pop/view/FileExplorerActivity:u	Z
+    //   185: aload_0
+    //   186: invokestatic 3527	com/estrongs/android/pop/utils/cu:c	(Landroid/content/Context;)Z
+    //   189: putstatic 183	com/estrongs/android/pop/view/FileExplorerActivity:v	Z
+    //   192: aload_0
+    //   193: getfield 240	com/estrongs/android/pop/view/FileExplorerActivity:u	Z
+    //   196: ifeq +8 -> 204
+    //   199: aload_0
+    //   200: iconst_1
+    //   201: putfield 238	com/estrongs/android/pop/view/FileExplorerActivity:t	Z
+    //   204: aload_0
+    //   205: ldc_w 2212
+    //   208: putfield 2214	com/estrongs/android/pop/view/FileExplorerActivity:q	Ljava/lang/String;
+    //   211: aload_0
+    //   212: putstatic 207	com/estrongs/android/pop/view/FileExplorerActivity:aT	Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    //   215: aload_0
+    //   216: aload_0
+    //   217: invokestatic 387	com/estrongs/android/pop/ad:a	(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+    //   220: putfield 616	com/estrongs/android/pop/view/FileExplorerActivity:k	Lcom/estrongs/android/pop/ad;
+    //   223: aload_0
+    //   224: aload_0
+    //   225: invokestatic 2995	com/estrongs/android/pop/ai:b	(Landroid/content/Context;)Lcom/estrongs/android/pop/ai;
+    //   228: putfield 1154	com/estrongs/android/pop/view/FileExplorerActivity:l	Lcom/estrongs/android/pop/ai;
+    //   231: aload_0
+    //   232: getfield 420	com/estrongs/android/pop/view/FileExplorerActivity:T	Lcom/estrongs/android/ui/theme/at;
+    //   235: invokevirtual 1666	com/estrongs/android/ui/theme/at:o	()Z
+    //   238: ifeq +594 -> 832
+    //   241: aload_0
+    //   242: getfield 240	com/estrongs/android/pop/view/FileExplorerActivity:u	Z
+    //   245: ifne +587 -> 832
+    //   248: aload_0
+    //   249: new 3529	com/estrongs/android/ui/controller/h
+    //   252: dup
+    //   253: aload_0
+    //   254: invokespecial 3530	com/estrongs/android/ui/controller/h:<init>	(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
+    //   257: putfield 365	com/estrongs/android/pop/view/FileExplorerActivity:aL	Lcom/estrongs/android/ui/controller/a;
+    //   260: invokestatic 1014	com/estrongs/android/pop/FexApplication:a	()Lcom/estrongs/android/pop/FexApplication;
+    //   263: iconst_0
+    //   264: invokevirtual 3190	com/estrongs/android/pop/FexApplication:b	(Z)V
+    //   267: aload_0
+    //   268: aload_0
+    //   269: invokestatic 1275	com/estrongs/android/j/c:a	(Landroid/content/Context;)Lcom/estrongs/android/j/c;
+    //   272: putfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   275: aload_0
+    //   276: aload_0
+    //   277: invokevirtual 821	com/estrongs/android/pop/view/FileExplorerActivity:getIntent	()Landroid/content/Intent;
+    //   280: invokevirtual 3533	android/content/Intent:getDataString	()Ljava/lang/String;
+    //   283: invokestatic 3536	android/net/Uri:decode	(Ljava/lang/String;)Ljava/lang/String;
+    //   286: putfield 223	com/estrongs/android/pop/view/FileExplorerActivity:W	Ljava/lang/String;
+    //   289: ldc_w 958
+    //   292: aload_0
+    //   293: invokevirtual 821	com/estrongs/android/pop/view/FileExplorerActivity:getIntent	()Landroid/content/Intent;
+    //   296: invokevirtual 961	android/content/Intent:getAction	()Ljava/lang/String;
+    //   299: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   302: istore 5
+    //   304: ldc_w 969
+    //   307: aload_0
+    //   308: invokevirtual 821	com/estrongs/android/pop/view/FileExplorerActivity:getIntent	()Landroid/content/Intent;
+    //   311: ldc_w 971
+    //   314: invokevirtual 828	android/content/Intent:getStringExtra	(Ljava/lang/String;)Ljava/lang/String;
+    //   317: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   320: istore 6
+    //   322: iload 6
+    //   324: ifne +8 -> 332
+    //   327: iload 5
+    //   329: ifeq +31 -> 360
+    //   332: aload_0
+    //   333: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   336: ldc_w 3538
+    //   339: invokevirtual 3540	com/estrongs/android/j/c:d	(Ljava/lang/String;)V
+    //   342: iload 6
+    //   344: ifeq +503 -> 847
+    //   347: aload_0
+    //   348: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   351: ldc_w 3538
+    //   354: ldc_w 3542
+    //   357: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   360: aload_0
+    //   361: getfield 223	com/estrongs/android/pop/view/FileExplorerActivity:W	Ljava/lang/String;
+    //   364: ifnull +247 -> 611
+    //   367: aload_0
+    //   368: getfield 223	com/estrongs/android/pop/view/FileExplorerActivity:W	Ljava/lang/String;
+    //   371: invokestatic 505	com/estrongs/android/util/ap:bl	(Ljava/lang/String;)Z
+    //   374: istore 5
+    //   376: aload_0
+    //   377: getfield 223	com/estrongs/android/pop/view/FileExplorerActivity:W	Ljava/lang/String;
+    //   380: invokestatic 3545	com/estrongs/android/util/ap:bC	(Ljava/lang/String;)Z
+    //   383: istore 6
+    //   385: aload_0
+    //   386: getfield 223	com/estrongs/android/pop/view/FileExplorerActivity:W	Ljava/lang/String;
+    //   389: invokestatic 3547	com/estrongs/android/util/ap:aG	(Ljava/lang/String;)Z
+    //   392: istore 7
+    //   394: aload_0
+    //   395: getfield 223	com/estrongs/android/pop/view/FileExplorerActivity:W	Ljava/lang/String;
+    //   398: invokestatic 1987	com/estrongs/android/util/ap:L	(Ljava/lang/String;)Z
+    //   401: istore 8
+    //   403: aload_0
+    //   404: getfield 223	com/estrongs/android/pop/view/FileExplorerActivity:W	Ljava/lang/String;
+    //   407: invokestatic 1991	com/estrongs/android/util/ap:r	(Ljava/lang/String;)Z
+    //   410: istore 9
+    //   412: aload_0
+    //   413: getfield 223	com/estrongs/android/pop/view/FileExplorerActivity:W	Ljava/lang/String;
+    //   416: invokestatic 1989	com/estrongs/android/util/ap:K	(Ljava/lang/String;)Z
+    //   419: istore 10
+    //   421: aload_0
+    //   422: getfield 223	com/estrongs/android/pop/view/FileExplorerActivity:W	Ljava/lang/String;
+    //   425: invokestatic 1993	com/estrongs/android/util/ap:p	(Ljava/lang/String;)Z
+    //   428: istore 11
+    //   430: aload_0
+    //   431: getfield 223	com/estrongs/android/pop/view/FileExplorerActivity:W	Ljava/lang/String;
+    //   434: invokestatic 3549	com/estrongs/android/util/ap:M	(Ljava/lang/String;)Z
+    //   437: istore 12
+    //   439: aload_0
+    //   440: getfield 223	com/estrongs/android/pop/view/FileExplorerActivity:W	Ljava/lang/String;
+    //   443: invokestatic 1995	com/estrongs/android/util/ap:J	(Ljava/lang/String;)Z
+    //   446: istore 13
+    //   448: iload 8
+    //   450: ifne +28 -> 478
+    //   453: iload 9
+    //   455: ifne +23 -> 478
+    //   458: iload 10
+    //   460: ifne +18 -> 478
+    //   463: iload 11
+    //   465: ifne +13 -> 478
+    //   468: iload 12
+    //   470: ifne +8 -> 478
+    //   473: iload 13
+    //   475: ifeq +398 -> 873
+    //   478: iconst_1
+    //   479: istore_2
+    //   480: ldc_w 3551
+    //   483: aload_0
+    //   484: invokevirtual 821	com/estrongs/android/pop/view/FileExplorerActivity:getIntent	()Landroid/content/Intent;
+    //   487: invokevirtual 961	android/content/Intent:getAction	()Ljava/lang/String;
+    //   490: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   493: istore 8
+    //   495: ldc_w 3553
+    //   498: aload_0
+    //   499: invokevirtual 821	com/estrongs/android/pop/view/FileExplorerActivity:getIntent	()Landroid/content/Intent;
+    //   502: invokevirtual 961	android/content/Intent:getAction	()Ljava/lang/String;
+    //   505: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   508: istore 9
+    //   510: aload_0
+    //   511: invokevirtual 821	com/estrongs/android/pop/view/FileExplorerActivity:getIntent	()Landroid/content/Intent;
+    //   514: invokevirtual 3556	android/content/Intent:getType	()Ljava/lang/String;
+    //   517: astore 14
+    //   519: iload 5
+    //   521: ifne +12 -> 533
+    //   524: iload 7
+    //   526: ifne +7 -> 533
+    //   529: iload_2
+    //   530: ifeq +13 -> 543
+    //   533: aload_0
+    //   534: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   537: ldc_w 3538
+    //   540: invokevirtual 3540	com/estrongs/android/j/c:d	(Ljava/lang/String;)V
+    //   543: iload 5
+    //   545: ifeq +343 -> 888
+    //   548: ldc_w 3558
+    //   551: aload 14
+    //   553: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   556: ifeq +332 -> 888
+    //   559: aload_0
+    //   560: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   563: ldc_w 3538
+    //   566: ldc_w 3560
+    //   569: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   572: aload_0
+    //   573: getfield 223	com/estrongs/android/pop/view/FileExplorerActivity:W	Ljava/lang/String;
+    //   576: ldc_w 3562
+    //   579: invokevirtual 494	java/lang/String:startsWith	(Ljava/lang/String;)Z
+    //   582: ifne +16 -> 598
+    //   585: aload_0
+    //   586: getfield 223	com/estrongs/android/pop/view/FileExplorerActivity:W	Ljava/lang/String;
+    //   589: ldc_w 3564
+    //   592: invokevirtual 494	java/lang/String:startsWith	(Ljava/lang/String;)Z
+    //   595: ifeq +397 -> 992
+    //   598: aload_0
+    //   599: aload_0
+    //   600: getfield 223	com/estrongs/android/pop/view/FileExplorerActivity:W	Ljava/lang/String;
+    //   603: bipush 7
+    //   605: invokevirtual 2516	java/lang/String:substring	(I)Ljava/lang/String;
+    //   608: putfield 223	com/estrongs/android/pop/view/FileExplorerActivity:W	Ljava/lang/String;
+    //   611: aload_1
+    //   612: ifnull +1511 -> 2123
+    //   615: aload_1
+    //   616: ldc_w 3566
+    //   619: invokevirtual 3569	android/os/Bundle:getStringArray	(Ljava/lang/String;)[Ljava/lang/String;
+    //   622: astore 14
+    //   624: aload_1
+    //   625: ldc_w 3571
+    //   628: invokevirtual 3573	android/os/Bundle:getBoolean	(Ljava/lang/String;)Z
+    //   631: invokestatic 3574	com/estrongs/fs/impl/usb/e:a	(Z)V
+    //   634: aload 14
+    //   636: ifnull +489 -> 1125
+    //   639: aload 14
+    //   641: arraylength
+    //   642: istore_3
+    //   643: iconst_0
+    //   644: istore_2
+    //   645: iload_2
+    //   646: iload_3
+    //   647: if_icmpge +413 -> 1060
+    //   650: aload 14
+    //   652: iload_2
+    //   653: aaload
+    //   654: astore 16
+    //   656: aload 16
+    //   658: astore 15
+    //   660: aload 16
+    //   662: ifnull +357 -> 1019
+    //   665: aload 16
+    //   667: astore 15
+    //   669: getstatic 3154	com/estrongs/android/pop/z:n	Z
+    //   672: ifeq +347 -> 1019
+    //   675: aload 16
+    //   677: astore 15
+    //   679: aload 16
+    //   681: ldc_w 1030
+    //   684: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   687: ifeq +332 -> 1019
+    //   690: aload 14
+    //   692: arraylength
+    //   693: iconst_1
+    //   694: if_icmple +320 -> 1014
+    //   697: iload_2
+    //   698: iconst_1
+    //   699: iadd
+    //   700: istore_2
+    //   701: goto -56 -> 645
+    //   704: invokestatic 3575	com/estrongs/android/util/bk:f	()Z
+    //   707: ifeq +58 -> 765
+    //   710: ldc_w 3254
+    //   713: invokestatic 3465	com/estrongs/android/util/ap:bP	(Ljava/lang/String;)Ljava/lang/String;
+    //   716: invokestatic 3580	com/estrongs/fs/impl/f/d:b	()Lcom/estrongs/fs/impl/f/d;
+    //   719: invokestatic 3473	com/estrongs/fs/d:a	(Ljava/lang/String;Lcom/estrongs/fs/u;)V
+    //   722: ldc_w 3252
+    //   725: invokestatic 3465	com/estrongs/android/util/ap:bP	(Ljava/lang/String;)Ljava/lang/String;
+    //   728: new 3582	com/estrongs/fs/impl/a/e
+    //   731: dup
+    //   732: invokespecial 3583	com/estrongs/fs/impl/a/e:<init>	()V
+    //   735: invokestatic 3473	com/estrongs/fs/d:a	(Ljava/lang/String;Lcom/estrongs/fs/u;)V
+    //   738: ldc_w 946
+    //   741: invokestatic 3465	com/estrongs/android/util/ap:bP	(Ljava/lang/String;)Ljava/lang/String;
+    //   744: invokestatic 3588	com/estrongs/fs/impl/d/d:b	()Lcom/estrongs/fs/impl/d/d;
+    //   747: invokestatic 3473	com/estrongs/fs/d:a	(Ljava/lang/String;Lcom/estrongs/fs/u;)V
+    //   750: ldc_w 3480
+    //   753: invokestatic 3465	com/estrongs/android/util/ap:bP	(Ljava/lang/String;)Ljava/lang/String;
+    //   756: invokestatic 3593	com/estrongs/fs/impl/h/d:b	()Lcom/estrongs/fs/impl/h/d;
+    //   759: invokestatic 3473	com/estrongs/fs/d:a	(Ljava/lang/String;Lcom/estrongs/fs/u;)V
+    //   762: goto -683 -> 79
+    //   765: ldc_w 3254
+    //   768: invokestatic 3465	com/estrongs/android/util/ap:bP	(Ljava/lang/String;)Ljava/lang/String;
+    //   771: invokestatic 3598	com/estrongs/fs/impl/f/c:a	()Lcom/estrongs/fs/impl/f/c;
+    //   774: invokestatic 3473	com/estrongs/fs/d:a	(Ljava/lang/String;Lcom/estrongs/fs/u;)V
+    //   777: ldc_w 3252
+    //   780: invokestatic 3465	com/estrongs/android/util/ap:bP	(Ljava/lang/String;)Ljava/lang/String;
+    //   783: invokestatic 3603	com/estrongs/fs/impl/a/d:a	()Lcom/estrongs/fs/impl/a/d;
+    //   786: invokestatic 3473	com/estrongs/fs/d:a	(Ljava/lang/String;Lcom/estrongs/fs/u;)V
+    //   789: ldc_w 946
+    //   792: invokestatic 3465	com/estrongs/android/util/ap:bP	(Ljava/lang/String;)Ljava/lang/String;
+    //   795: invokestatic 3608	com/estrongs/fs/impl/d/c:a	()Lcom/estrongs/fs/impl/d/c;
+    //   798: invokestatic 3473	com/estrongs/fs/d:a	(Ljava/lang/String;Lcom/estrongs/fs/u;)V
+    //   801: ldc_w 3480
+    //   804: invokestatic 3465	com/estrongs/android/util/ap:bP	(Ljava/lang/String;)Ljava/lang/String;
+    //   807: invokestatic 3613	com/estrongs/fs/impl/h/c:a	()Lcom/estrongs/fs/impl/h/c;
+    //   810: invokestatic 3473	com/estrongs/fs/d:a	(Ljava/lang/String;Lcom/estrongs/fs/u;)V
+    //   813: goto -734 -> 79
+    //   816: iconst_0
+    //   817: istore 5
+    //   819: goto -656 -> 163
+    //   822: astore 14
+    //   824: aload 14
+    //   826: invokevirtual 658	java/lang/Exception:printStackTrace	()V
+    //   829: goto -652 -> 177
+    //   832: aload_0
+    //   833: new 3615	com/estrongs/android/ui/controller/aj
+    //   836: dup
+    //   837: aload_0
+    //   838: invokespecial 3616	com/estrongs/android/ui/controller/aj:<init>	(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
+    //   841: putfield 365	com/estrongs/android/pop/view/FileExplorerActivity:aL	Lcom/estrongs/android/ui/controller/a;
+    //   844: goto -584 -> 260
+    //   847: aload_0
+    //   848: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   851: ldc_w 3538
+    //   854: ldc_w 3618
+    //   857: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   860: goto -500 -> 360
+    //   863: astore 14
+    //   865: aload 14
+    //   867: invokevirtual 658	java/lang/Exception:printStackTrace	()V
+    //   870: goto -510 -> 360
+    //   873: iconst_0
+    //   874: istore_2
+    //   875: goto -395 -> 480
+    //   878: astore 15
+    //   880: aload 15
+    //   882: invokevirtual 658	java/lang/Exception:printStackTrace	()V
+    //   885: goto -342 -> 543
+    //   888: iload 6
+    //   890: ifeq +19 -> 909
+    //   893: aload_0
+    //   894: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   897: ldc_w 3538
+    //   900: ldc_w 3620
+    //   903: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   906: goto -334 -> 572
+    //   909: iload 7
+    //   911: ifeq +19 -> 930
+    //   914: aload_0
+    //   915: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   918: ldc_w 3538
+    //   921: ldc_w 3622
+    //   924: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   927: goto -355 -> 572
+    //   930: iload_2
+    //   931: ifeq +19 -> 950
+    //   934: aload_0
+    //   935: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   938: ldc_w 3538
+    //   941: ldc_w 3624
+    //   944: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   947: goto -375 -> 572
+    //   950: iload 8
+    //   952: ifeq +19 -> 971
+    //   955: aload_0
+    //   956: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   959: ldc_w 3538
+    //   962: ldc_w 3551
+    //   965: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   968: goto -396 -> 572
+    //   971: iload 9
+    //   973: ifeq -401 -> 572
+    //   976: aload_0
+    //   977: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   980: ldc_w 3538
+    //   983: ldc_w 3553
+    //   986: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   989: goto -417 -> 572
+    //   992: aload_0
+    //   993: getfield 223	com/estrongs/android/pop/view/FileExplorerActivity:W	Ljava/lang/String;
+    //   996: ldc_w 3626
+    //   999: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   1002: ifeq -391 -> 611
+    //   1005: aload_0
+    //   1006: invokestatic 3629	com/estrongs/android/ui/e/m:a	(Landroid/content/Context;)V
+    //   1009: aload_0
+    //   1010: invokevirtual 2924	com/estrongs/android/pop/view/FileExplorerActivity:finish	()V
+    //   1013: return
+    //   1014: ldc_w 3631
+    //   1017: astore 15
+    //   1019: invokestatic 752	com/estrongs/android/pop/utils/cl:a	()Z
+    //   1022: ifne +19 -> 1041
+    //   1025: aload 15
+    //   1027: invokestatic 1042	com/estrongs/android/util/ap:aL	(Ljava/lang/String;)Z
+    //   1030: ifne -333 -> 697
+    //   1033: aload 15
+    //   1035: invokestatic 507	com/estrongs/android/util/ap:aJ	(Ljava/lang/String;)Z
+    //   1038: ifne -341 -> 697
+    //   1041: aload_0
+    //   1042: invokevirtual 635	com/estrongs/android/pop/view/FileExplorerActivity:au	()Lcom/estrongs/android/ui/d/i;
+    //   1045: new 602	com/estrongs/android/ui/d/h
+    //   1048: dup
+    //   1049: aload 15
+    //   1051: invokespecial 1241	com/estrongs/android/ui/d/h:<init>	(Ljava/lang/String;)V
+    //   1054: invokevirtual 1242	com/estrongs/android/ui/d/i:a	(Lcom/estrongs/android/ui/d/h;)V
+    //   1057: goto -360 -> 697
+    //   1060: aload_1
+    //   1061: ldc_w 3633
+    //   1064: iconst_0
+    //   1065: invokevirtual 3636	android/os/Bundle:getInt	(Ljava/lang/String;I)I
+    //   1068: istore_3
+    //   1069: iload_3
+    //   1070: istore_2
+    //   1071: iload_3
+    //   1072: aload_0
+    //   1073: invokevirtual 635	com/estrongs/android/pop/view/FileExplorerActivity:au	()Lcom/estrongs/android/ui/d/i;
+    //   1076: invokevirtual 770	com/estrongs/android/ui/d/i:c	()I
+    //   1079: if_icmplt +5 -> 1084
+    //   1082: iconst_0
+    //   1083: istore_2
+    //   1084: aload_0
+    //   1085: invokevirtual 635	com/estrongs/android/pop/view/FileExplorerActivity:au	()Lcom/estrongs/android/ui/d/i;
+    //   1088: iload_2
+    //   1089: invokevirtual 1517	com/estrongs/android/ui/d/i:a	(I)V
+    //   1092: iload 4
+    //   1094: istore_2
+    //   1095: iload_2
+    //   1096: aload_0
+    //   1097: invokevirtual 635	com/estrongs/android/pop/view/FileExplorerActivity:au	()Lcom/estrongs/android/ui/d/i;
+    //   1100: invokevirtual 770	com/estrongs/android/ui/d/i:c	()I
+    //   1103: if_icmpge +765 -> 1868
+    //   1106: aload_0
+    //   1107: invokevirtual 635	com/estrongs/android/pop/view/FileExplorerActivity:au	()Lcom/estrongs/android/ui/d/i;
+    //   1110: iload_2
+    //   1111: invokevirtual 776	com/estrongs/android/ui/d/i:c	(I)Lcom/estrongs/android/ui/d/h;
+    //   1114: iconst_1
+    //   1115: invokevirtual 778	com/estrongs/android/ui/d/h:a	(Z)V
+    //   1118: iload_2
+    //   1119: iconst_1
+    //   1120: iadd
+    //   1121: istore_2
+    //   1122: goto -27 -> 1095
+    //   1125: aload_0
+    //   1126: invokevirtual 635	com/estrongs/android/pop/view/FileExplorerActivity:au	()Lcom/estrongs/android/ui/d/i;
+    //   1129: aload_0
+    //   1130: invokevirtual 3638	com/estrongs/android/ui/d/i:b	(Landroid/content/Context;)V
+    //   1133: aload_0
+    //   1134: invokevirtual 635	com/estrongs/android/pop/view/FileExplorerActivity:au	()Lcom/estrongs/android/ui/d/i;
+    //   1137: iconst_0
+    //   1138: invokevirtual 1517	com/estrongs/android/ui/d/i:a	(I)V
+    //   1141: aload_0
+    //   1142: getfield 616	com/estrongs/android/pop/view/FileExplorerActivity:k	Lcom/estrongs/android/pop/ad;
+    //   1145: aconst_null
+    //   1146: invokevirtual 3640	com/estrongs/android/pop/ad:k	(Ljava/lang/String;)Ljava/lang/String;
+    //   1149: astore 14
+    //   1151: ldc_w 1000
+    //   1154: aload_0
+    //   1155: invokevirtual 821	com/estrongs/android/pop/view/FileExplorerActivity:getIntent	()Landroid/content/Intent;
+    //   1158: ldc_w 971
+    //   1161: invokevirtual 828	android/content/Intent:getStringExtra	(Ljava/lang/String;)Ljava/lang/String;
+    //   1164: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   1167: istore 5
+    //   1169: ldc_w 3642
+    //   1172: aload_0
+    //   1173: invokevirtual 821	com/estrongs/android/pop/view/FileExplorerActivity:getIntent	()Landroid/content/Intent;
+    //   1176: invokevirtual 961	android/content/Intent:getAction	()Ljava/lang/String;
+    //   1179: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   1182: istore 6
+    //   1184: ldc_w 3644
+    //   1187: aload_0
+    //   1188: invokevirtual 821	com/estrongs/android/pop/view/FileExplorerActivity:getIntent	()Landroid/content/Intent;
+    //   1191: invokevirtual 961	android/content/Intent:getAction	()Ljava/lang/String;
+    //   1194: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   1197: istore 7
+    //   1199: iload 5
+    //   1201: ifne +8 -> 1209
+    //   1204: iload 6
+    //   1206: ifeq +13 -> 1219
+    //   1209: aload_0
+    //   1210: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   1213: ldc_w 3646
+    //   1216: invokevirtual 3540	com/estrongs/android/j/c:d	(Ljava/lang/String;)V
+    //   1219: aload 14
+    //   1221: astore_1
+    //   1222: aload 14
+    //   1224: ifnonnull +63 -> 1287
+    //   1227: ldc_w 3648
+    //   1230: iconst_1
+    //   1231: invokestatic 1165	com/estrongs/android/i/a:a	(Ljava/lang/String;I)I
+    //   1234: iconst_1
+    //   1235: if_icmpne +335 -> 1570
+    //   1238: ldc_w 407
+    //   1241: astore 14
+    //   1243: iload 5
+    //   1245: ifeq +243 -> 1488
+    //   1248: aload 14
+    //   1250: astore_1
+    //   1251: aload_0
+    //   1252: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   1255: ifnull +19 -> 1274
+    //   1258: aload_0
+    //   1259: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   1262: ldc_w 3646
+    //   1265: ldc_w 3650
+    //   1268: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   1271: aload 14
+    //   1273: astore_1
+    //   1274: aload_0
+    //   1275: iconst_1
+    //   1276: putfield 277	com/estrongs/android/pop/view/FileExplorerActivity:aR	Z
+    //   1279: aload_0
+    //   1280: getfield 616	com/estrongs/android/pop/view/FileExplorerActivity:k	Lcom/estrongs/android/pop/ad;
+    //   1283: aload_1
+    //   1284: invokevirtual 3652	com/estrongs/android/pop/ad:l	(Ljava/lang/String;)V
+    //   1287: aload_1
+    //   1288: astore 14
+    //   1290: ldc_w 1863
+    //   1293: aload_1
+    //   1294: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   1297: ifeq +69 -> 1366
+    //   1300: aload_0
+    //   1301: getfield 616	com/estrongs/android/pop/view/FileExplorerActivity:k	Lcom/estrongs/android/pop/ad;
+    //   1304: getstatic 1003	com/estrongs/android/pop/view/a:a	Ljava/lang/String;
+    //   1307: invokevirtual 1005	com/estrongs/android/pop/ad:j	(Ljava/lang/String;)Ljava/lang/String;
+    //   1310: astore_1
+    //   1311: aload_1
+    //   1312: astore 14
+    //   1314: aload_0
+    //   1315: getfield 277	com/estrongs/android/pop/view/FileExplorerActivity:aR	Z
+    //   1318: ifne +48 -> 1366
+    //   1321: ldc_w 1000
+    //   1324: aload_0
+    //   1325: invokevirtual 821	com/estrongs/android/pop/view/FileExplorerActivity:getIntent	()Landroid/content/Intent;
+    //   1328: ldc_w 971
+    //   1331: invokevirtual 828	android/content/Intent:getStringExtra	(Ljava/lang/String;)Ljava/lang/String;
+    //   1334: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   1337: ifeq +354 -> 1691
+    //   1340: aload_1
+    //   1341: astore 14
+    //   1343: aload_0
+    //   1344: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   1347: ifnull +19 -> 1366
+    //   1350: aload_0
+    //   1351: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   1354: ldc_w 3646
+    //   1357: ldc_w 3654
+    //   1360: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   1363: aload_1
+    //   1364: astore 14
+    //   1366: ldc_w 407
+    //   1369: aload 14
+    //   1371: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   1374: ifeq +49 -> 1423
+    //   1377: aload_0
+    //   1378: getfield 277	com/estrongs/android/pop/view/FileExplorerActivity:aR	Z
+    //   1381: ifne +42 -> 1423
+    //   1384: ldc_w 1000
+    //   1387: aload_0
+    //   1388: invokevirtual 821	com/estrongs/android/pop/view/FileExplorerActivity:getIntent	()Landroid/content/Intent;
+    //   1391: ldc_w 971
+    //   1394: invokevirtual 828	android/content/Intent:getStringExtra	(Ljava/lang/String;)Ljava/lang/String;
+    //   1397: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   1400: ifeq +386 -> 1786
+    //   1403: aload_0
+    //   1404: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   1407: ifnull +16 -> 1423
+    //   1410: aload_0
+    //   1411: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   1414: ldc_w 3646
+    //   1417: ldc_w 3650
+    //   1420: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   1423: iload 4
+    //   1425: istore_2
+    //   1426: aload 14
+    //   1428: ifnull -333 -> 1095
+    //   1431: iconst_0
+    //   1432: istore_3
+    //   1433: iload 4
+    //   1435: istore_2
+    //   1436: iload_3
+    //   1437: aload_0
+    //   1438: invokevirtual 635	com/estrongs/android/pop/view/FileExplorerActivity:au	()Lcom/estrongs/android/ui/d/i;
+    //   1441: invokevirtual 770	com/estrongs/android/ui/d/i:c	()I
+    //   1444: if_icmpge -349 -> 1095
+    //   1447: aload 14
+    //   1449: aload_0
+    //   1450: invokevirtual 635	com/estrongs/android/pop/view/FileExplorerActivity:au	()Lcom/estrongs/android/ui/d/i;
+    //   1453: iload_3
+    //   1454: invokevirtual 776	com/estrongs/android/ui/d/i:c	(I)Lcom/estrongs/android/ui/d/h;
+    //   1457: invokevirtual 604	com/estrongs/android/ui/d/h:a	()Ljava/lang/String;
+    //   1460: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   1463: ifeq +398 -> 1861
+    //   1466: aload_0
+    //   1467: invokevirtual 635	com/estrongs/android/pop/view/FileExplorerActivity:au	()Lcom/estrongs/android/ui/d/i;
+    //   1470: iload_3
+    //   1471: invokevirtual 1517	com/estrongs/android/ui/d/i:a	(I)V
+    //   1474: iload 4
+    //   1476: istore_2
+    //   1477: goto -382 -> 1095
+    //   1480: astore_1
+    //   1481: aload_1
+    //   1482: invokevirtual 658	java/lang/Exception:printStackTrace	()V
+    //   1485: goto -266 -> 1219
+    //   1488: iload 6
+    //   1490: ifeq +43 -> 1533
+    //   1493: aload 14
+    //   1495: astore_1
+    //   1496: aload_0
+    //   1497: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   1500: ifnull -226 -> 1274
+    //   1503: aload_0
+    //   1504: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   1507: ldc_w 3646
+    //   1510: ldc_w 3656
+    //   1513: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   1516: aload 14
+    //   1518: astore_1
+    //   1519: goto -245 -> 1274
+    //   1522: astore_1
+    //   1523: aload_1
+    //   1524: invokevirtual 658	java/lang/Exception:printStackTrace	()V
+    //   1527: aload 14
+    //   1529: astore_1
+    //   1530: goto -256 -> 1274
+    //   1533: aload 14
+    //   1535: astore_1
+    //   1536: iload 7
+    //   1538: ifeq -264 -> 1274
+    //   1541: aload 14
+    //   1543: astore_1
+    //   1544: aload_0
+    //   1545: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   1548: ifnull -274 -> 1274
+    //   1551: aload_0
+    //   1552: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   1555: ldc_w 3646
+    //   1558: ldc_w 3658
+    //   1561: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   1564: aload 14
+    //   1566: astore_1
+    //   1567: goto -293 -> 1274
+    //   1570: ldc_w 1863
+    //   1573: astore 14
+    //   1575: iload 5
+    //   1577: ifeq +43 -> 1620
+    //   1580: aload 14
+    //   1582: astore_1
+    //   1583: aload_0
+    //   1584: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   1587: ifnull -313 -> 1274
+    //   1590: aload_0
+    //   1591: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   1594: ldc_w 3646
+    //   1597: ldc_w 3654
+    //   1600: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   1603: aload 14
+    //   1605: astore_1
+    //   1606: goto -332 -> 1274
+    //   1609: astore_1
+    //   1610: aload_1
+    //   1611: invokevirtual 658	java/lang/Exception:printStackTrace	()V
+    //   1614: aload 14
+    //   1616: astore_1
+    //   1617: goto -343 -> 1274
+    //   1620: iload 6
+    //   1622: ifeq +32 -> 1654
+    //   1625: aload 14
+    //   1627: astore_1
+    //   1628: aload_0
+    //   1629: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   1632: ifnull -358 -> 1274
+    //   1635: aload_0
+    //   1636: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   1639: ldc_w 3646
+    //   1642: ldc_w 3660
+    //   1645: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   1648: aload 14
+    //   1650: astore_1
+    //   1651: goto -377 -> 1274
+    //   1654: aload 14
+    //   1656: astore_1
+    //   1657: iload 7
+    //   1659: ifeq -385 -> 1274
+    //   1662: aload 14
+    //   1664: astore_1
+    //   1665: aload_0
+    //   1666: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   1669: ifnull -395 -> 1274
+    //   1672: aload_0
+    //   1673: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   1676: ldc_w 3646
+    //   1679: ldc_w 3662
+    //   1682: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   1685: aload 14
+    //   1687: astore_1
+    //   1688: goto -414 -> 1274
+    //   1691: ldc_w 3642
+    //   1694: aload_0
+    //   1695: invokevirtual 821	com/estrongs/android/pop/view/FileExplorerActivity:getIntent	()Landroid/content/Intent;
+    //   1698: invokevirtual 961	android/content/Intent:getAction	()Ljava/lang/String;
+    //   1701: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   1704: ifeq +45 -> 1749
+    //   1707: aload_1
+    //   1708: astore 14
+    //   1710: aload_0
+    //   1711: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   1714: ifnull -348 -> 1366
+    //   1717: aload_0
+    //   1718: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   1721: ldc_w 3646
+    //   1724: ldc_w 3660
+    //   1727: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   1730: aload_1
+    //   1731: astore 14
+    //   1733: goto -367 -> 1366
+    //   1736: astore 14
+    //   1738: aload 14
+    //   1740: invokevirtual 658	java/lang/Exception:printStackTrace	()V
+    //   1743: aload_1
+    //   1744: astore 14
+    //   1746: goto -380 -> 1366
+    //   1749: aload_1
+    //   1750: astore 14
+    //   1752: iload 7
+    //   1754: ifeq -388 -> 1366
+    //   1757: aload_1
+    //   1758: astore 14
+    //   1760: aload_0
+    //   1761: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   1764: ifnull -398 -> 1366
+    //   1767: aload_0
+    //   1768: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   1771: ldc_w 3646
+    //   1774: ldc_w 3662
+    //   1777: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   1780: aload_1
+    //   1781: astore 14
+    //   1783: goto -417 -> 1366
+    //   1786: ldc_w 3642
+    //   1789: aload_0
+    //   1790: invokevirtual 821	com/estrongs/android/pop/view/FileExplorerActivity:getIntent	()Landroid/content/Intent;
+    //   1793: invokevirtual 961	android/content/Intent:getAction	()Ljava/lang/String;
+    //   1796: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   1799: ifeq +34 -> 1833
+    //   1802: aload_0
+    //   1803: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   1806: ifnull -383 -> 1423
+    //   1809: aload_0
+    //   1810: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   1813: ldc_w 3646
+    //   1816: ldc_w 3656
+    //   1819: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   1822: goto -399 -> 1423
+    //   1825: astore_1
+    //   1826: aload_1
+    //   1827: invokevirtual 658	java/lang/Exception:printStackTrace	()V
+    //   1830: goto -407 -> 1423
+    //   1833: iload 7
+    //   1835: ifeq -412 -> 1423
+    //   1838: aload_0
+    //   1839: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   1842: ifnull -419 -> 1423
+    //   1845: aload_0
+    //   1846: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   1849: ldc_w 3646
+    //   1852: ldc_w 3658
+    //   1855: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   1858: goto -435 -> 1423
+    //   1861: iload_3
+    //   1862: iconst_1
+    //   1863: iadd
+    //   1864: istore_3
+    //   1865: goto -432 -> 1433
+    //   1868: ldc_w 1140
+    //   1871: invokevirtual 3663	java/lang/Class:getName	()Ljava/lang/String;
+    //   1874: invokestatic 3667	java/lang/Class:forName	(Ljava/lang/String;)Ljava/lang/Class;
+    //   1877: pop
+    //   1878: aload_0
+    //   1879: invokespecial 3669	com/estrongs/android/pop/view/FileExplorerActivity:aN	()V
+    //   1882: aload_0
+    //   1883: ldc_w 3670
+    //   1886: invokevirtual 3672	com/estrongs/android/pop/view/FileExplorerActivity:setContentView	(I)V
+    //   1889: aload_0
+    //   1890: ldc_w 3673
+    //   1893: invokevirtual 1825	com/estrongs/android/pop/view/FileExplorerActivity:findViewById	(I)Landroid/view/View;
+    //   1896: checkcast 3675	com/estrongs/android/pop/view/ESRootView
+    //   1899: astore_1
+    //   1900: aload_0
+    //   1901: aload_1
+    //   1902: putfield 357	com/estrongs/android/pop/view/FileExplorerActivity:az	Lcom/estrongs/android/ui/guesture/ESGestureCtrl;
+    //   1905: aload_0
+    //   1906: aload_0
+    //   1907: ldc_w 3676
+    //   1910: invokevirtual 1825	com/estrongs/android/pop/view/FileExplorerActivity:findViewById	(I)Landroid/view/View;
+    //   1913: checkcast 1481	android/widget/FrameLayout
+    //   1916: putfield 1479	com/estrongs/android/pop/view/FileExplorerActivity:f	Landroid/widget/FrameLayout;
+    //   1919: aload_0
+    //   1920: aload_0
+    //   1921: ldc_w 3677
+    //   1924: invokevirtual 1825	com/estrongs/android/pop/view/FileExplorerActivity:findViewById	(I)Landroid/view/View;
+    //   1927: checkcast 1481	android/widget/FrameLayout
+    //   1930: putfield 3031	com/estrongs/android/pop/view/FileExplorerActivity:aQ	Landroid/widget/FrameLayout;
+    //   1933: aload_0
+    //   1934: getfield 3031	com/estrongs/android/pop/view/FileExplorerActivity:aQ	Landroid/widget/FrameLayout;
+    //   1937: iconst_1
+    //   1938: invokevirtual 3680	android/widget/FrameLayout:setFocusable	(Z)V
+    //   1941: aload_0
+    //   1942: ldc_w 3681
+    //   1945: invokevirtual 1825	com/estrongs/android/pop/view/FileExplorerActivity:findViewById	(I)Landroid/view/View;
+    //   1948: checkcast 1510	com/estrongs/android/ui/guesture/ESGesturePanel
+    //   1951: astore 14
+    //   1953: aload_1
+    //   1954: aload 14
+    //   1956: invokevirtual 3685	com/estrongs/android/pop/view/ESRootView:setGesturePanel	(Lcom/estrongs/android/ui/guesture/ESGesturePanel;)V
+    //   1959: aload_0
+    //   1960: aload 14
+    //   1962: putfield 259	com/estrongs/android/pop/view/FileExplorerActivity:A	Lcom/estrongs/android/ui/guesture/ESGesturePanel;
+    //   1965: aload_0
+    //   1966: invokespecial 1548	com/estrongs/android/pop/view/FileExplorerActivity:aQ	()V
+    //   1969: aload_0
+    //   1970: aload_0
+    //   1971: invokestatic 387	com/estrongs/android/pop/ad:a	(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+    //   1974: invokevirtual 3687	com/estrongs/android/pop/ad:w	()Z
+    //   1977: putfield 2098	com/estrongs/android/pop/view/FileExplorerActivity:aG	Z
+    //   1980: aload_0
+    //   1981: aload_0
+    //   1982: invokestatic 387	com/estrongs/android/pop/ad:a	(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+    //   1985: invokevirtual 2496	com/estrongs/android/pop/ad:q	()Z
+    //   1988: putfield 271	com/estrongs/android/pop/view/FileExplorerActivity:aH	Z
+    //   1991: invokestatic 1014	com/estrongs/android/pop/FexApplication:a	()Lcom/estrongs/android/pop/FexApplication;
+    //   1994: invokevirtual 3688	com/estrongs/android/pop/FexApplication:i	()Z
+    //   1997: ifeq +27 -> 2024
+    //   2000: aload_0
+    //   2001: getstatic 3694	com/estrongs/android/ui/dialog/VerifyPasswordDialog$DialogType:START	Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog$DialogType;
+    //   2004: invokestatic 3697	com/estrongs/android/ui/dialog/VerifyPasswordDialog:a	(Landroid/content/Context;Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog$DialogType;)Lcom/estrongs/android/ui/dialog/VerifyPasswordDialog;
+    //   2007: astore_1
+    //   2008: aload_1
+    //   2009: new 3699	com/estrongs/android/pop/view/cx
+    //   2012: dup
+    //   2013: aload_0
+    //   2014: invokespecial 3700	com/estrongs/android/pop/view/cx:<init>	(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
+    //   2017: invokevirtual 3701	com/estrongs/android/ui/dialog/VerifyPasswordDialog:a	(Landroid/content/DialogInterface$OnDismissListener;)V
+    //   2020: aload_1
+    //   2021: invokevirtual 3702	com/estrongs/android/ui/dialog/VerifyPasswordDialog:b	()V
+    //   2024: new 3704	com/estrongs/android/pop/view/di
+    //   2027: dup
+    //   2028: aload_0
+    //   2029: invokespecial 3705	com/estrongs/android/pop/view/di:<init>	(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
+    //   2032: astore_1
+    //   2033: invokestatic 1014	com/estrongs/android/pop/FexApplication:a	()Lcom/estrongs/android/pop/FexApplication;
+    //   2036: aload_1
+    //   2037: invokevirtual 3708	com/estrongs/android/pop/FexApplication:a	(Lcom/estrongs/android/ui/preference/q;)V
+    //   2040: aload_0
+    //   2041: invokevirtual 3709	com/estrongs/android/pop/view/FileExplorerActivity:k	()V
+    //   2044: aload_0
+    //   2045: getfield 1154	com/estrongs/android/pop/view/FileExplorerActivity:l	Lcom/estrongs/android/pop/ai;
+    //   2048: invokevirtual 3710	com/estrongs/android/pop/ai:e	()V
+    //   2051: aload_0
+    //   2052: getfield 1154	com/estrongs/android/pop/view/FileExplorerActivity:l	Lcom/estrongs/android/pop/ai;
+    //   2055: invokevirtual 3711	com/estrongs/android/pop/ai:p	()V
+    //   2058: aload_0
+    //   2059: invokestatic 3714	com/estrongs/android/pop/utils/an:a	(Landroid/app/Activity;)V
+    //   2062: aload_0
+    //   2063: invokespecial 3716	com/estrongs/android/pop/view/FileExplorerActivity:aC	()V
+    //   2066: aload_0
+    //   2067: new 3451	com/estrongs/android/pop/app/analysis/view/b
+    //   2070: dup
+    //   2071: aload_0
+    //   2072: aload_0
+    //   2073: getfield 1479	com/estrongs/android/pop/view/FileExplorerActivity:f	Landroid/widget/FrameLayout;
+    //   2076: invokevirtual 3719	android/widget/FrameLayout:getRootView	()Landroid/view/View;
+    //   2079: aload_0
+    //   2080: getfield 1454	com/estrongs/android/pop/view/FileExplorerActivity:c	Z
+    //   2083: invokespecial 3722	com/estrongs/android/pop/app/analysis/view/b:<init>	(Landroid/content/Context;Landroid/view/View;Z)V
+    //   2086: putfield 3449	com/estrongs/android/pop/view/FileExplorerActivity:aN	Lcom/estrongs/android/pop/app/analysis/view/b;
+    //   2089: invokestatic 966	com/estrongs/android/pop/app/analysis/a:a	()Lcom/estrongs/android/pop/app/analysis/a;
+    //   2092: aload_0
+    //   2093: aload_0
+    //   2094: getfield 3449	com/estrongs/android/pop/view/FileExplorerActivity:aN	Lcom/estrongs/android/pop/app/analysis/view/b;
+    //   2097: invokevirtual 3725	com/estrongs/android/pop/app/analysis/a:a	(Landroid/content/Context;Lcom/estrongs/android/pop/app/analysis/view/b;)V
+    //   2100: invokestatic 3730	com/estrongs/android/b/a/f:a	()Lcom/estrongs/android/b/a/f;
+    //   2103: invokevirtual 3731	com/estrongs/android/b/a/f:b	()V
+    //   2106: return
+    //   2107: astore_1
+    //   2108: aload_1
+    //   2109: invokevirtual 3732	java/lang/ClassNotFoundException:printStackTrace	()V
+    //   2112: goto -234 -> 1878
+    //   2115: astore_1
+    //   2116: aload_1
+    //   2117: invokevirtual 658	java/lang/Exception:printStackTrace	()V
+    //   2120: goto -54 -> 2066
+    //   2123: aconst_null
+    //   2124: astore 14
+    //   2126: goto -1492 -> 634
+    // Local variable table:
+    //   start	length	slot	name	signature
+    //   0	2129	0	this	FileExplorerActivity
+    //   0	2129	1	paramBundle	Bundle
+    //   479	998	2	i1	int
+    //   642	1223	3	i2	int
+    //   1	1474	4	i3	int
+    //   161	1415	5	bool1	boolean
+    //   320	1301	6	bool2	boolean
+    //   392	1442	7	bool3	boolean
+    //   401	550	8	bool4	boolean
+    //   410	562	9	bool5	boolean
+    //   419	40	10	bool6	boolean
+    //   428	36	11	bool7	boolean
+    //   437	32	12	bool8	boolean
+    //   446	28	13	bool9	boolean
+    //   517	174	14	localObject1	Object
+    //   822	3	14	localException1	Exception
+    //   863	3	14	localException2	Exception
+    //   1149	583	14	localObject2	Object
+    //   1736	3	14	localException3	Exception
+    //   1744	381	14	localObject3	Object
+    //   658	20	15	localObject4	Object
+    //   878	3	15	localException4	Exception
+    //   1017	33	15	str	String
+    //   654	26	16	localObject5	Object
+    // Exception table:
+    //   from	to	target	type
+    //   146	160	822	java/lang/Exception
+    //   163	177	822	java/lang/Exception
+    //   332	342	863	java/lang/Exception
+    //   347	360	863	java/lang/Exception
+    //   847	860	863	java/lang/Exception
+    //   533	543	878	java/lang/Exception
+    //   1209	1219	1480	java/lang/Exception
+    //   1251	1271	1522	java/lang/Exception
+    //   1496	1516	1522	java/lang/Exception
+    //   1544	1564	1522	java/lang/Exception
+    //   1583	1603	1609	java/lang/Exception
+    //   1628	1648	1609	java/lang/Exception
+    //   1665	1685	1609	java/lang/Exception
+    //   1321	1340	1736	java/lang/Exception
+    //   1343	1363	1736	java/lang/Exception
+    //   1691	1707	1736	java/lang/Exception
+    //   1710	1730	1736	java/lang/Exception
+    //   1760	1780	1736	java/lang/Exception
+    //   1384	1423	1825	java/lang/Exception
+    //   1786	1822	1825	java/lang/Exception
+    //   1838	1858	1825	java/lang/Exception
+    //   1868	1878	2107	java/lang/ClassNotFoundException
+    //   2062	2066	2115	java/lang/Exception
+  }
+  
+  public boolean onCreateOptionsMenu(Menu paramMenu)
+  {
+    if (aL.a(paramMenu)) {
+      return true;
     }
-    catch (Exception localException)
-    {
-      do
-      {
-        for (;;)
-        {
-          boolean bool;
-          String[] arrayOfString;
-          localException.printStackTrace();
-        }
-      } while (!ah.equals("#music_player#"));
-      com.estrongs.android.ui.e.w.a(this);
-      finish();
-      return;
-    }
-    q = false;
-    j = "normal_mode";
-    bf = this;
-    m = com.estrongs.android.pop.ad.a(this);
-    FexApplication.a().b(false);
-    aK = com.estrongs.android.util.a.a(this, true, "FileExplorer");
-    ah = Uri.decode(getIntent().getDataString());
-    if (ah != null)
-    {
-      if ((ah.startsWith("file:///")) || (ah.startsWith("FILE:///"))) {
-        ah = ah.substring(7);
-      }
-    }
-    else
-    {
-      if ((!"Market".equalsIgnoreCase("Market")) && (!"Market".equalsIgnoreCase("web"))) {
-        break label353;
-      }
-      if ((e == null) || (e.length() <= 0)) {
-        break label343;
-      }
-      o(e);
-      label212:
-      if (paramBundle == null) {
-        break label790;
-      }
-      arrayOfString = paramBundle.getStringArray("winPaths");
-      com.estrongs.fs.impl.usb.e.a(paramBundle.getBoolean("usbMountAble"));
-    }
-    for (;;)
-    {
-      int i2;
-      int i1;
-      if (arrayOfString != null)
-      {
-        i2 = arrayOfString.length;
-        i1 = 0;
-        label246:
-        if (i1 < i2)
-        {
-          String str2 = arrayOfString[i1];
-          String str1 = str2;
-          if (str2 != null)
-          {
-            str1 = str2;
-            if (com.estrongs.android.pop.z.n)
-            {
-              str1 = str2;
-              if (str2.equals("/")) {
-                if (arrayOfString.length <= 1) {}
-              }
-            }
-          }
-          for (;;)
-          {
-            i1 += 1;
-            break label246;
-            label305:
-            bool = false;
-            break;
-            label343:
-            o("Market");
-            break label212;
-            label353:
-            if (("Market".equalsIgnoreCase("oem")) && (com.estrongs.android.pop.z.b != null))
-            {
-              o(com.estrongs.android.pop.z.b);
-              break label212;
-            }
-            o("Market");
-            break label212;
-            str1 = "/sdcard";
-            if ((com.estrongs.android.pop.utils.cc.a()) || ((!am.aB(str1)) && (!am.az(str1)))) {
-              com.estrongs.android.ui.d.e.a(new com.estrongs.android.ui.d.d(str1));
-            }
-          }
-        }
-        i2 = paramBundle.getInt("currentWin", 0);
-        i1 = i2;
-        if (i2 >= com.estrongs.android.ui.d.e.c()) {
-          i1 = 0;
-        }
-        com.estrongs.android.ui.d.e.a(i1);
-        i1 = i3;
-        while (i1 < com.estrongs.android.ui.d.e.c())
-        {
-          com.estrongs.android.ui.d.e.c(i1).a(true);
-          i1 += 1;
-        }
-      }
-      com.estrongs.android.ui.d.e.b(this);
-      com.estrongs.android.ui.d.e.a(0);
-      Object localObject = m;
-      if ((com.estrongs.android.pop.utils.cc.a()) || (com.estrongs.android.pop.utils.cc.f()))
-      {
-        paramBundle = "#home_page#";
-        label512:
-        paramBundle = ((com.estrongs.android.pop.ad)localObject).k(paramBundle);
-        if (!"#home#".equals(paramBundle)) {
-          break label787;
-        }
-        paramBundle = m.j("Market");
-      }
-      label787:
-      for (;;)
-      {
-        i1 = i3;
-        if (paramBundle == null) {
-          break;
-        }
-        i2 = 0;
-        for (;;)
-        {
-          i1 = i3;
-          if (i2 >= com.estrongs.android.ui.d.e.c()) {
-            break;
-          }
-          if (paramBundle.equals(com.estrongs.android.ui.d.e.c(i2).b()))
-          {
-            com.estrongs.android.ui.d.e.a(i2);
-            i1 = i3;
-            break;
-            paramBundle = "#home#";
-            break label512;
-          }
-          i2 += 1;
-        }
-        try
-        {
-          Class.forName(com.estrongs.fs.impl.c.a.class.getName());
-          v = com.estrongs.android.pop.utils.cl.a(this);
-          w = com.estrongs.android.pop.utils.cl.c(this);
-          if (v) {
-            u = true;
-          }
-          ao();
-          setContentView(2130903119);
-          paramBundle = (ESRootView)findViewById(2131362209);
-          aP = paramBundle;
-          aa = ((FrameLayout)findViewById(2131362210));
-          localObject = (ESGesturePanel)findViewById(2131362212);
-          paramBundle.a((ESGesturePanel)localObject);
-          E = ((ESGesturePanel)localObject);
-          aq();
-          aY = com.estrongs.android.pop.ad.a(this).v();
-          aZ = com.estrongs.android.pop.ad.a(this).p();
-          if (FexApplication.a().i())
-          {
-            paramBundle = VerifyPasswordDialog.a(this, VerifyPasswordDialog.DialogType.START);
-            paramBundle.a(new ef(this));
-            paramBundle.b();
-          }
-          paramBundle = new eq(this);
-          FexApplication.a().a(paramBundle);
-          i();
-          return;
-        }
-        catch (ClassNotFoundException paramBundle)
-        {
-          for (;;)
-          {
-            paramBundle.printStackTrace();
-          }
-        }
-      }
-      label790:
-      localObject = null;
-    }
+    return super.onCreateOptionsMenu(paramMenu);
   }
   
   protected void onDestroy()
   {
     super.onDestroy();
-    if (!aQ) {
-      am();
+    if (!aA) {
+      aK();
     }
   }
   
   public boolean onKeyDown(int paramInt, KeyEvent paramKeyEvent)
   {
-    if (paramInt == 82) {
-      try
-      {
-        com.estrongs.android.view.aw localaw1 = y();
-        if ((localaw1 != null) && ((localaw1 instanceof WebViewWrapper))) {
-          ((WebViewWrapper)localaw1).as();
-        }
-        if (O) {
-          return true;
-        }
-        O = true;
-        if ((i != null) && (i.a())) {
-          return true;
-        }
-        if (aH() != null) {
-          if (!o())
-          {
-            if ((i != null) && (i.e())) {
-              return true;
-            }
-            l();
-          }
-          else
-          {
-            q();
-          }
-        }
-      }
-      catch (Exception localException)
-      {
-        localException.printStackTrace();
-      }
-    }
-    do
+    Object localObject2 = null;
+    int i3 = 0;
+    if (paramInt == 82) {}
+    int i1;
+    try
     {
-      return super.onKeyDown(paramInt, paramKeyEvent);
-      if (paramInt == 84)
+      localObject1 = O();
+      if ((localObject1 == null) || (!(localObject1 instanceof WebViewWrapper))) {
+        break label786;
+      }
+      ((WebViewWrapper)localObject1).A();
+    }
+    catch (Exception localException)
+    {
+      Object localObject1;
+      String str1;
+      String str2;
+      com.estrongs.android.view.cr localcr;
+      label684:
+      localException.printStackTrace();
+    }
+    if (paramInt == 84)
+    {
+      localObject1 = P();
+      if ((com.estrongs.android.util.ap.S((String)localObject1)) || (com.estrongs.android.util.ap.aZ((String)localObject1)) || (com.estrongs.android.util.ap.v((String)localObject1)))
       {
-        localObject1 = z();
-        if ((am.Q((String)localObject1)) || (am.aP((String)localObject1)) || (am.t((String)localObject1)))
-        {
-          com.estrongs.android.ui.view.ag.a(this, getString(2131427605), 1);
-          return true;
-        }
+        com.estrongs.android.ui.view.ak.a(this, getString(2131231109), 1);
+        return true;
+      }
+      N();
+      return true;
+    }
+    if (paramInt == 4)
+    {
+      if (az.e()) {
+        return true;
+      }
+      if (v())
+      {
         x();
         return true;
       }
-    } while (paramInt != 4);
-    if (i.a()) {
-      return true;
-    }
-    if (aP.a()) {
-      return true;
-    }
-    if (o())
-    {
-      q();
-      return true;
-    }
-    if ((am.aX(z())) && (y().o()))
-    {
-      y().R();
-      if (!q) {
+      if ((com.estrongs.android.util.ap.bi(P())) && (O().p()))
+      {
+        O().ah();
+        if (!aL.r()) {
+          return true;
+        }
+      }
+      if (aL.r())
+      {
+        C();
         return true;
       }
-    }
-    if (q)
-    {
-      u();
-      return true;
-    }
-    if (((am.S(z())) || (am.U(z())) || (am.V(z())) || (am.W(z()))) && (y().o()))
-    {
-      y().R();
-      return true;
-    }
-    if (i.d()) {
-      return true;
-    }
-    am.bk(z());
-    String str1 = am.bE(am.bF(z()));
-    String str2 = am.bE(am.bF(m.j("Market")));
-    com.estrongs.android.view.aw localaw2 = y();
-    if (getIntent() == null) {}
-    Object localObject2;
-    for (Object localObject1 = null; (localObject1 != null) && ((((String)localObject1).equals("resource/folder")) || (((String)localObject1).equals("org.openintents.action.VIEW_DIRECTORY"))); localObject1 = getIntent().getType())
-    {
-      localObject1 = getIntent().getDataString();
-      if (localObject1 == null) {
-        break label789;
+      if (((com.estrongs.android.util.ap.V(P())) || (com.estrongs.android.util.ap.Z(P())) || (com.estrongs.android.util.ap.ae(P())) || (com.estrongs.android.util.ap.ag(P()))) && (O().p()))
+      {
+        O().ah();
+        return true;
       }
-      localObject2 = Uri.decode((String)localObject1);
-      localObject1 = localObject2;
-      if (localObject2 != null) {
-        if (!((String)localObject2).startsWith("file:///"))
+      if (aL.w()) {
+        return true;
+      }
+      com.estrongs.android.util.ap.bB(P());
+      str1 = com.estrongs.android.util.ap.bV(com.estrongs.android.util.ap.bW(P()));
+      str2 = com.estrongs.android.util.ap.bV(com.estrongs.android.util.ap.bW(k.j(a.a)));
+      localcr = O();
+      if (getIntent() == null) {
+        localObject1 = null;
+      }
+      while ((localObject1 != null) && ((((String)localObject1).equals("resource/folder")) || (((String)localObject1).equals("org.openintents.action.VIEW_DIRECTORY"))))
+      {
+        String str3 = getIntent().getDataString();
+        localObject1 = localObject2;
+        if (str3 != null) {
+          localObject1 = Uri.decode(str3);
+        }
+        localObject2 = localObject1;
+        if (localObject1 != null) {
+          if (!((String)localObject1).startsWith("file:///"))
+          {
+            localObject2 = localObject1;
+            if (!((String)localObject1).startsWith("FILE:///")) {}
+          }
+          else
+          {
+            localObject2 = ((String)localObject1).substring(7);
+          }
+        }
+        localObject1 = localObject2;
+        if (localObject2 != null)
         {
           localObject1 = localObject2;
-          if (!((String)localObject2).startsWith("FILE:///")) {}
+          if (!((String)localObject2).endsWith("/")) {
+            localObject1 = (String)localObject2 + "/";
+          }
         }
-        else
+        if ((localObject1 != null) && (str1 != null) && (((String)localObject1).equals(str1)) && (localcr != null) && (localcr.ae())) {
+          if (j())
+          {
+            i();
+            return true;
+            localObject1 = getIntent().getType();
+          }
+          else
+          {
+            finish();
+            return true;
+          }
+        }
+      }
+      if ((localcr != null) && (str1 != null))
+      {
+        if (!localcr.ae())
         {
-          localObject1 = ((String)localObject2).substring(7);
+          if ((com.estrongs.android.util.ap.bi(P())) && (!com.estrongs.android.util.ap.ah(com.estrongs.android.util.ap.bQ(P()))))
+          {
+            O().d(0L);
+            O().o("all");
+          }
+          localcr.f();
+          return true;
         }
+        if (!str1.equals(str2)) {}
       }
-      localObject2 = localObject1;
-      if (localObject1 != null)
+      else
       {
-        localObject2 = localObject1;
-        if (!((String)localObject1).endsWith("/")) {
-          localObject2 = (String)localObject1 + "/";
+        localObject1 = au().b();
+        if (localcr != null) {
+          break label684;
         }
-      }
-      if ((localObject2 == null) || (str1 == null) || (!((String)localObject2).equals(str1)) || (localaw2 == null) || (!localaw2.O())) {
-        break;
-      }
-      finish();
-      return true;
-    }
-    label667:
-    int i1;
-    if ((localaw2 != null) && (str1 != null))
-    {
-      if (!localaw2.O())
-      {
-        if ((am.aX(z())) && (!am.X(am.bz(z()))))
-        {
-          y().a(0L);
-          y().m("all");
-        }
-        localaw2.f();
-        return true;
-      }
-      if (!str1.equals(str2)) {}
-    }
-    else
-    {
-      localObject1 = com.estrongs.android.ui.d.e.b();
-      if (localaw2 != null) {
-        break label737;
-      }
-      i1 = 0;
-      label679:
-      if ((!am.aW(str1)) || (!"externalstorage://".equals(am.aY(str1)))) {
-        break label802;
+        i1 = 0;
       }
     }
-    label737:
-    label789:
-    label797:
-    label802:
-    for (int i2 = 1;; i2 = 0)
+    for (;;)
     {
-      if ((am.aS(str1)) || (i1 != 0) || (i2 != 0))
+      int i2 = i3;
+      if (com.estrongs.android.util.ap.bh(str1))
       {
-        ay();
+        i2 = i3;
+        if ("externalstorage://".equals(com.estrongs.android.util.ap.bj(str1))) {
+          i2 = 1;
+        }
+      }
+      if ((com.estrongs.android.util.ap.bd(str1)) && (!az()))
+      {
+        a(au().a(), bd);
         return true;
-        if (localaw2.f() == null) {
-          break label667;
+        if (localcr.f() == null) {
+          break;
         }
         return true;
-        if ((localObject1 == null) || (((com.estrongs.android.ui.d.d)localObject1).e())) {
-          break label797;
+        if ((localObject1 == null) || (((com.estrongs.android.ui.d.h)localObject1).e())) {
+          break label788;
         }
         i1 = 1;
-        break label679;
+        continue;
       }
-      if (!X)
+      if ((com.estrongs.android.util.ap.bd(str1)) || (i1 != 0) || (i2 != 0))
       {
-        X = true;
-        paramKeyEvent.startTracking();
-        break label808;
+        z();
+        return true;
       }
-      X = false;
-      com.estrongs.android.ui.view.ag.b();
+      if (j())
+      {
+        i();
+        return true;
+      }
+      if (!S)
+      {
+        S = true;
+        paramKeyEvent.startTracking();
+        break label793;
+      }
+      S = false;
+      com.estrongs.android.ui.view.ak.b();
       finish();
-      break label808;
-      localObject2 = null;
-      break;
+      break label793;
+      return super.onKeyDown(paramInt, paramKeyEvent);
+      label786:
       return true;
+      label788:
       i1 = 0;
-      break label679;
     }
-    label808:
+    label793:
     return true;
   }
   
   public boolean onKeyUp(int paramInt, KeyEvent paramKeyEvent)
   {
-    if (paramInt == 82)
+    if (82 == paramInt)
     {
-      O = false;
-      return true;
+      if (aL.v()) {
+        return true;
+      }
     }
-    if ((4 == paramInt) && (X) && (!isFinishing()))
+    else if ((4 == paramInt) && (S) && (!isFinishing()))
     {
-      com.estrongs.android.ui.view.ag.a(this, 2131427403, 1);
-      h.postDelayed(new dh(this), 3500L);
+      com.estrongs.android.ui.view.ak.a(this, 2131231717, 1);
+      i.postDelayed(new bd(this), 3500L);
       return true;
     }
     return super.onKeyUp(paramInt, paramKeyEvent);
   }
   
+  /* Error */
   public void onNewIntent(Intent paramIntent)
   {
-    super.onNewIntent(paramIntent);
-    String str = paramIntent.getStringExtra("archive_file_name");
-    if (str != null) {
-      if (com.estrongs.android.util.bc.o(str)) {
-        com.estrongs.io.archive.sevenzip.f.a(new ay(this, str), com.estrongs.io.archive.sevenzip.f.a);
-      }
+    // Byte code:
+    //   0: iconst_0
+    //   1: istore_2
+    //   2: aload_0
+    //   3: aload_1
+    //   4: invokespecial 3805	com/estrongs/android/pop/esclasses/ESAbsToolbarActivity:onNewIntent	(Landroid/content/Intent;)V
+    //   7: aload_1
+    //   8: ldc_w 823
+    //   11: invokevirtual 828	android/content/Intent:getStringExtra	(Ljava/lang/String;)Ljava/lang/String;
+    //   14: astore 12
+    //   16: ldc_w 1000
+    //   19: aload_1
+    //   20: ldc_w 971
+    //   23: invokevirtual 828	android/content/Intent:getStringExtra	(Ljava/lang/String;)Ljava/lang/String;
+    //   26: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   29: istore_3
+    //   30: ldc_w 3642
+    //   33: aload_1
+    //   34: invokevirtual 961	android/content/Intent:getAction	()Ljava/lang/String;
+    //   37: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   40: istore 4
+    //   42: ldc_w 3644
+    //   45: aload_1
+    //   46: invokevirtual 961	android/content/Intent:getAction	()Ljava/lang/String;
+    //   49: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   52: istore 5
+    //   54: iload_3
+    //   55: ifne +8 -> 63
+    //   58: iload 4
+    //   60: ifeq +20 -> 80
+    //   63: aload_0
+    //   64: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   67: ifnull +13 -> 80
+    //   70: aload_0
+    //   71: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   74: ldc_w 3646
+    //   77: invokevirtual 3540	com/estrongs/android/j/c:d	(Ljava/lang/String;)V
+    //   80: aload_0
+    //   81: getfield 616	com/estrongs/android/pop/view/FileExplorerActivity:k	Lcom/estrongs/android/pop/ad;
+    //   84: aconst_null
+    //   85: invokevirtual 3640	com/estrongs/android/pop/ad:k	(Ljava/lang/String;)Ljava/lang/String;
+    //   88: astore 13
+    //   90: ldc_w 407
+    //   93: aload 13
+    //   95: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   98: ifeq +376 -> 474
+    //   101: iload_3
+    //   102: ifeq +306 -> 408
+    //   105: aload_0
+    //   106: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   109: ifnull +16 -> 125
+    //   112: aload_0
+    //   113: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   116: ldc_w 3646
+    //   119: ldc_w 3650
+    //   122: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   125: ldc_w 958
+    //   128: aload_1
+    //   129: invokevirtual 961	android/content/Intent:getAction	()Ljava/lang/String;
+    //   132: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   135: istore_3
+    //   136: ldc_w 969
+    //   139: aload_1
+    //   140: ldc_w 971
+    //   143: invokevirtual 828	android/content/Intent:getStringExtra	(Ljava/lang/String;)Ljava/lang/String;
+    //   146: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   149: istore 4
+    //   151: iload 4
+    //   153: ifne +7 -> 160
+    //   156: iload_3
+    //   157: ifeq +31 -> 188
+    //   160: aload_0
+    //   161: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   164: ldc_w 3538
+    //   167: invokevirtual 3540	com/estrongs/android/j/c:d	(Ljava/lang/String;)V
+    //   170: iload 4
+    //   172: ifeq +406 -> 578
+    //   175: aload_0
+    //   176: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   179: ldc_w 3538
+    //   182: ldc_w 3542
+    //   185: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   188: aload_1
+    //   189: invokevirtual 3533	android/content/Intent:getDataString	()Ljava/lang/String;
+    //   192: invokestatic 3536	android/net/Uri:decode	(Ljava/lang/String;)Ljava/lang/String;
+    //   195: astore 13
+    //   197: aload 13
+    //   199: ifnull +178 -> 377
+    //   202: aload 13
+    //   204: invokestatic 505	com/estrongs/android/util/ap:bl	(Ljava/lang/String;)Z
+    //   207: istore_3
+    //   208: aload 13
+    //   210: invokestatic 3545	com/estrongs/android/util/ap:bC	(Ljava/lang/String;)Z
+    //   213: istore 4
+    //   215: aload 13
+    //   217: invokestatic 3547	com/estrongs/android/util/ap:aG	(Ljava/lang/String;)Z
+    //   220: istore 5
+    //   222: aload 13
+    //   224: invokestatic 1987	com/estrongs/android/util/ap:L	(Ljava/lang/String;)Z
+    //   227: istore 6
+    //   229: aload 13
+    //   231: invokestatic 1991	com/estrongs/android/util/ap:r	(Ljava/lang/String;)Z
+    //   234: istore 7
+    //   236: aload 13
+    //   238: invokestatic 1989	com/estrongs/android/util/ap:K	(Ljava/lang/String;)Z
+    //   241: istore 8
+    //   243: aload 13
+    //   245: invokestatic 1993	com/estrongs/android/util/ap:p	(Ljava/lang/String;)Z
+    //   248: istore 9
+    //   250: aload 13
+    //   252: invokestatic 3549	com/estrongs/android/util/ap:M	(Ljava/lang/String;)Z
+    //   255: istore 10
+    //   257: aload 13
+    //   259: invokestatic 1995	com/estrongs/android/util/ap:J	(Ljava/lang/String;)Z
+    //   262: istore 11
+    //   264: iload 6
+    //   266: ifne +28 -> 294
+    //   269: iload 7
+    //   271: ifne +23 -> 294
+    //   274: iload 8
+    //   276: ifne +18 -> 294
+    //   279: iload 9
+    //   281: ifne +13 -> 294
+    //   284: iload 10
+    //   286: ifne +8 -> 294
+    //   289: iload 11
+    //   291: ifeq +5 -> 296
+    //   294: iconst_1
+    //   295: istore_2
+    //   296: ldc_w 3551
+    //   299: aload_1
+    //   300: invokevirtual 961	android/content/Intent:getAction	()Ljava/lang/String;
+    //   303: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   306: istore 6
+    //   308: ldc_w 3553
+    //   311: aload_1
+    //   312: invokevirtual 961	android/content/Intent:getAction	()Ljava/lang/String;
+    //   315: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   318: istore 7
+    //   320: aload_1
+    //   321: invokevirtual 3556	android/content/Intent:getType	()Ljava/lang/String;
+    //   324: astore 13
+    //   326: iload_3
+    //   327: ifne +12 -> 339
+    //   330: iload 5
+    //   332: ifne +7 -> 339
+    //   335: iload_2
+    //   336: ifeq +13 -> 349
+    //   339: aload_0
+    //   340: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   343: ldc_w 3538
+    //   346: invokevirtual 3540	com/estrongs/android/j/c:d	(Ljava/lang/String;)V
+    //   349: iload_3
+    //   350: ifeq +264 -> 614
+    //   353: ldc_w 3558
+    //   356: aload 13
+    //   358: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   361: ifeq +253 -> 614
+    //   364: aload_0
+    //   365: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   368: ldc_w 3538
+    //   371: ldc_w 3560
+    //   374: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   377: aload 12
+    //   379: ifnull +366 -> 745
+    //   382: aload 12
+    //   384: invokestatic 832	com/estrongs/android/util/bg:o	(Ljava/lang/String;)Z
+    //   387: ifeq +331 -> 718
+    //   390: new 3807	com/estrongs/android/pop/view/z
+    //   393: dup
+    //   394: aload_0
+    //   395: aload 12
+    //   397: invokespecial 3808	com/estrongs/android/pop/view/z:<init>	(Lcom/estrongs/android/pop/view/FileExplorerActivity;Ljava/lang/String;)V
+    //   400: getstatic 840	com/estrongs/io/archive/sevenzip/f:a	Ljava/lang/String;
+    //   403: invokestatic 843	com/estrongs/io/archive/sevenzip/f:a	(Ljava/lang/Runnable;Ljava/lang/String;)Z
+    //   406: pop
+    //   407: return
+    //   408: iload 4
+    //   410: ifeq +36 -> 446
+    //   413: aload_0
+    //   414: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   417: ifnull -292 -> 125
+    //   420: aload_0
+    //   421: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   424: ldc_w 3646
+    //   427: ldc_w 3656
+    //   430: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   433: goto -308 -> 125
+    //   436: astore 13
+    //   438: aload 13
+    //   440: invokevirtual 658	java/lang/Exception:printStackTrace	()V
+    //   443: goto -318 -> 125
+    //   446: iload 5
+    //   448: ifeq -323 -> 125
+    //   451: aload_0
+    //   452: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   455: ifnull -330 -> 125
+    //   458: aload_0
+    //   459: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   462: ldc_w 3646
+    //   465: ldc_w 3658
+    //   468: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   471: goto -346 -> 125
+    //   474: ldc_w 1863
+    //   477: aload 13
+    //   479: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   482: ifeq -357 -> 125
+    //   485: iload_3
+    //   486: ifeq +36 -> 522
+    //   489: aload_0
+    //   490: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   493: ifnull -368 -> 125
+    //   496: aload_0
+    //   497: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   500: ldc_w 3646
+    //   503: ldc_w 3654
+    //   506: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   509: goto -384 -> 125
+    //   512: astore 13
+    //   514: aload 13
+    //   516: invokevirtual 658	java/lang/Exception:printStackTrace	()V
+    //   519: goto -394 -> 125
+    //   522: iload 4
+    //   524: ifeq +26 -> 550
+    //   527: aload_0
+    //   528: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   531: ifnull -406 -> 125
+    //   534: aload_0
+    //   535: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   538: ldc_w 3646
+    //   541: ldc_w 3660
+    //   544: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   547: goto -422 -> 125
+    //   550: iload 5
+    //   552: ifeq -427 -> 125
+    //   555: aload_0
+    //   556: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   559: ifnull -434 -> 125
+    //   562: aload_0
+    //   563: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   566: ldc_w 3646
+    //   569: ldc_w 3662
+    //   572: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   575: goto -450 -> 125
+    //   578: aload_0
+    //   579: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   582: ldc_w 3538
+    //   585: ldc_w 3618
+    //   588: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   591: goto -403 -> 188
+    //   594: astore 13
+    //   596: aload 13
+    //   598: invokevirtual 658	java/lang/Exception:printStackTrace	()V
+    //   601: goto -413 -> 188
+    //   604: astore 14
+    //   606: aload 14
+    //   608: invokevirtual 658	java/lang/Exception:printStackTrace	()V
+    //   611: goto -262 -> 349
+    //   614: iload 4
+    //   616: ifeq +19 -> 635
+    //   619: aload_0
+    //   620: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   623: ldc_w 3538
+    //   626: ldc_w 3620
+    //   629: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   632: goto -255 -> 377
+    //   635: iload 5
+    //   637: ifeq +19 -> 656
+    //   640: aload_0
+    //   641: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   644: ldc_w 3538
+    //   647: ldc_w 3622
+    //   650: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   653: goto -276 -> 377
+    //   656: iload_2
+    //   657: ifeq +19 -> 676
+    //   660: aload_0
+    //   661: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   664: ldc_w 3538
+    //   667: ldc_w 3624
+    //   670: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   673: goto -296 -> 377
+    //   676: iload 6
+    //   678: ifeq +19 -> 697
+    //   681: aload_0
+    //   682: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   685: ldc_w 3538
+    //   688: ldc_w 3551
+    //   691: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   694: goto -317 -> 377
+    //   697: iload 7
+    //   699: ifeq -322 -> 377
+    //   702: aload_0
+    //   703: getfield 255	com/estrongs/android/pop/view/FileExplorerActivity:au	Lcom/estrongs/android/j/c;
+    //   706: ldc_w 3538
+    //   709: ldc_w 3553
+    //   712: invokevirtual 1477	com/estrongs/android/j/c:a	(Ljava/lang/String;Ljava/lang/String;)V
+    //   715: goto -338 -> 377
+    //   718: aload_0
+    //   719: new 943	java/lang/StringBuilder
+    //   722: dup
+    //   723: invokespecial 944	java/lang/StringBuilder:<init>	()V
+    //   726: ldc_w 946
+    //   729: invokevirtual 950	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   732: aload 12
+    //   734: invokevirtual 950	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   737: invokevirtual 953	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   740: invokevirtual 956	com/estrongs/android/pop/view/FileExplorerActivity:f	(Ljava/lang/String;)Lcom/estrongs/android/view/cr;
+    //   743: pop
+    //   744: return
+    //   745: ldc_w 958
+    //   748: aload_1
+    //   749: invokevirtual 961	android/content/Intent:getAction	()Ljava/lang/String;
+    //   752: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   755: ifeq +17 -> 772
+    //   758: invokestatic 966	com/estrongs/android/pop/app/analysis/a:a	()Lcom/estrongs/android/pop/app/analysis/a;
+    //   761: iconst_0
+    //   762: invokevirtual 967	com/estrongs/android/pop/app/analysis/a:a	(Z)V
+    //   765: return
+    //   766: astore_1
+    //   767: aload_1
+    //   768: invokevirtual 658	java/lang/Exception:printStackTrace	()V
+    //   771: return
+    //   772: ldc_w 969
+    //   775: aload_1
+    //   776: ldc_w 971
+    //   779: invokevirtual 828	android/content/Intent:getStringExtra	(Ljava/lang/String;)Ljava/lang/String;
+    //   782: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   785: ifeq +12 -> 797
+    //   788: aload_0
+    //   789: ldc_w 973
+    //   792: invokevirtual 956	com/estrongs/android/pop/view/FileExplorerActivity:f	(Ljava/lang/String;)Lcom/estrongs/android/view/cr;
+    //   795: pop
+    //   796: return
+    //   797: ldc_w 975
+    //   800: aload_1
+    //   801: ldc_w 971
+    //   804: invokevirtual 828	android/content/Intent:getStringExtra	(Ljava/lang/String;)Ljava/lang/String;
+    //   807: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   810: ifeq +23 -> 833
+    //   813: aload_0
+    //   814: invokevirtual 978	com/estrongs/android/pop/view/FileExplorerActivity:ag	()Lcom/estrongs/android/pop/utils/c;
+    //   817: aload_0
+    //   818: invokevirtual 983	com/estrongs/android/pop/utils/c:b	(Landroid/content/Context;)Ljava/util/List;
+    //   821: invokestatic 986	com/estrongs/android/pop/utils/c:c	(Ljava/util/List;)V
+    //   824: aload_0
+    //   825: ldc_w 988
+    //   828: invokevirtual 956	com/estrongs/android/pop/view/FileExplorerActivity:f	(Ljava/lang/String;)Lcom/estrongs/android/view/cr;
+    //   831: pop
+    //   832: return
+    //   833: ldc_w 1000
+    //   836: aload_1
+    //   837: ldc_w 971
+    //   840: invokevirtual 828	android/content/Intent:getStringExtra	(Ljava/lang/String;)Ljava/lang/String;
+    //   843: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   846: ifeq +19 -> 865
+    //   849: aload_0
+    //   850: aload_0
+    //   851: invokestatic 387	com/estrongs/android/pop/ad:a	(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+    //   854: getstatic 1003	com/estrongs/android/pop/view/a:a	Ljava/lang/String;
+    //   857: invokevirtual 1005	com/estrongs/android/pop/ad:j	(Ljava/lang/String;)Ljava/lang/String;
+    //   860: invokevirtual 956	com/estrongs/android/pop/view/FileExplorerActivity:f	(Ljava/lang/String;)Lcom/estrongs/android/view/cr;
+    //   863: pop
+    //   864: return
+    //   865: ldc_w 3810
+    //   868: aload_1
+    //   869: ldc_w 971
+    //   872: invokevirtual 828	android/content/Intent:getStringExtra	(Ljava/lang/String;)Ljava/lang/String;
+    //   875: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   878: ifeq +8 -> 886
+    //   881: aload_0
+    //   882: invokestatic 3629	com/estrongs/android/ui/e/m:a	(Landroid/content/Context;)V
+    //   885: return
+    //   886: aload_0
+    //   887: aload_1
+    //   888: invokespecial 991	com/estrongs/android/pop/view/FileExplorerActivity:c	(Landroid/content/Intent;)Z
+    //   891: ifne -484 -> 407
+    //   894: ldc_w 993
+    //   897: aload_1
+    //   898: ldc_w 971
+    //   901: invokevirtual 828	android/content/Intent:getStringExtra	(Ljava/lang/String;)Ljava/lang/String;
+    //   904: invokevirtual 413	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   907: ifeq +16 -> 923
+    //   910: aload_0
+    //   911: invokestatic 998	com/estrongs/android/pop/app/a/n:a	(Landroid/app/Activity;)V
+    //   914: aload_0
+    //   915: ldc_w 550
+    //   918: invokevirtual 956	com/estrongs/android/pop/view/FileExplorerActivity:f	(Ljava/lang/String;)Lcom/estrongs/android/view/cr;
+    //   921: pop
+    //   922: return
+    //   923: aload_1
+    //   924: invokevirtual 3533	android/content/Intent:getDataString	()Ljava/lang/String;
+    //   927: astore_1
+    //   928: aload_1
+    //   929: ifnull -522 -> 407
+    //   932: aload_1
+    //   933: invokestatic 3536	android/net/Uri:decode	(Ljava/lang/String;)Ljava/lang/String;
+    //   936: astore 12
+    //   938: aload 12
+    //   940: ifnull -533 -> 407
+    //   943: aload 12
+    //   945: ldc_w 3562
+    //   948: invokevirtual 494	java/lang/String:startsWith	(Ljava/lang/String;)Z
+    //   951: ifne +17 -> 968
+    //   954: aload 12
+    //   956: astore_1
+    //   957: aload 12
+    //   959: ldc_w 3564
+    //   962: invokevirtual 494	java/lang/String:startsWith	(Ljava/lang/String;)Z
+    //   965: ifeq +11 -> 976
+    //   968: aload 12
+    //   970: bipush 7
+    //   972: invokevirtual 2516	java/lang/String:substring	(I)Ljava/lang/String;
+    //   975: astore_1
+    //   976: aload_0
+    //   977: invokevirtual 3757	com/estrongs/android/pop/view/FileExplorerActivity:v	()Z
+    //   980: ifeq +7 -> 987
+    //   983: aload_0
+    //   984: invokevirtual 3758	com/estrongs/android/pop/view/FileExplorerActivity:x	()V
+    //   987: aload_1
+    //   988: invokestatic 1148	com/estrongs/android/util/ap:v	(Ljava/lang/String;)Z
+    //   991: ifeq +10 -> 1001
+    //   994: aload_0
+    //   995: aload_1
+    //   996: invokevirtual 3147	com/estrongs/android/pop/view/FileExplorerActivity:d	(Ljava/lang/String;)Lcom/estrongs/android/view/cr;
+    //   999: pop
+    //   1000: return
+    //   1001: aload_0
+    //   1002: aload_1
+    //   1003: invokevirtual 956	com/estrongs/android/pop/view/FileExplorerActivity:f	(Ljava/lang/String;)Lcom/estrongs/android/view/cr;
+    //   1006: pop
+    //   1007: return
+    // Local variable table:
+    //   start	length	slot	name	signature
+    //   0	1008	0	this	FileExplorerActivity
+    //   0	1008	1	paramIntent	Intent
+    //   1	656	2	i1	int
+    //   29	457	3	bool1	boolean
+    //   40	575	4	bool2	boolean
+    //   52	584	5	bool3	boolean
+    //   227	450	6	bool4	boolean
+    //   234	464	7	bool5	boolean
+    //   241	34	8	bool6	boolean
+    //   248	32	9	bool7	boolean
+    //   255	30	10	bool8	boolean
+    //   262	28	11	bool9	boolean
+    //   14	955	12	str1	String
+    //   88	269	13	str2	String
+    //   436	42	13	localException1	Exception
+    //   512	3	13	localException2	Exception
+    //   594	3	13	localException3	Exception
+    //   604	3	14	localException4	Exception
+    // Exception table:
+    //   from	to	target	type
+    //   105	125	436	java/lang/Exception
+    //   413	433	436	java/lang/Exception
+    //   451	471	436	java/lang/Exception
+    //   489	509	512	java/lang/Exception
+    //   527	547	512	java/lang/Exception
+    //   555	575	512	java/lang/Exception
+    //   160	170	594	java/lang/Exception
+    //   175	188	594	java/lang/Exception
+    //   578	591	594	java/lang/Exception
+    //   339	349	604	java/lang/Exception
+    //   758	765	766	java/lang/Exception
+  }
+  
+  public boolean onOptionsItemSelected(MenuItem paramMenuItem)
+  {
+    if (aL.a(paramMenuItem)) {
+      return true;
     }
-    do
-    {
-      do
-      {
-        return;
-        d("cmpn://" + str);
-        return;
-        if ("com.estrongs.android.SHOW_DISK_USAGE".equals(paramIntent.getAction()))
-        {
-          str = com.estrongs.android.pop.b.b();
-          paramIntent = str;
-          if (!str.endsWith("/")) {
-            paramIntent = str + "/";
-          }
-          d("du://" + paramIntent);
-          return;
-        }
-        if ("show_app".equals(paramIntent.getStringExtra("action")))
-        {
-          d("app://user");
-          return;
-        }
-        if ("from_update_notification".equals(paramIntent.getStringExtra("action")))
-        {
-          com.estrongs.android.pop.utils.c.c(Q().b(this));
-          d("app://update");
-          return;
-        }
-        if ("show_local_tab".equals(paramIntent.getStringExtra("action")))
-        {
-          d(com.estrongs.android.pop.ad.a(this).j("Market"));
-          return;
-        }
-        if ("open_music_player".equals(paramIntent.getStringExtra("action")))
-        {
-          com.estrongs.android.ui.e.w.a(this);
-          return;
-        }
-        paramIntent = paramIntent.getDataString();
-      } while (paramIntent == null);
-      str = Uri.decode(paramIntent);
-    } while (str == null);
-    if (!str.startsWith("file:///"))
-    {
-      paramIntent = str;
-      if (!str.startsWith("FILE:///")) {}
-    }
-    else
-    {
-      paramIntent = str.substring(7);
-    }
-    if (o()) {
-      q();
-    }
-    if (am.t(paramIntent))
-    {
-      b(paramIntent);
-      return;
-    }
-    d(paramIntent);
+    return super.onOptionsItemSelected(paramMenuItem);
   }
   
   protected void onPause()
   {
-    aK.c();
     if (isFinishing()) {
-      am();
+      aK();
     }
-    com.estrongs.android.view.aw localaw = y();
-    if (localaw != null) {
-      localaw.b_();
+    com.estrongs.android.view.cr localcr = O();
+    if (localcr != null) {
+      localcr.j_();
     }
     super.onPause();
   }
@@ -4794,23 +6154,38 @@ public class FileExplorerActivity
     super.onPostCreate(paramBundle);
   }
   
+  public boolean onPrepareOptionsMenu(Menu paramMenu)
+  {
+    try
+    {
+      boolean bool = aL.b(paramMenu);
+      if (bool) {
+        return true;
+      }
+    }
+    catch (Exception localException)
+    {
+      localException.printStackTrace();
+    }
+    return super.onPrepareOptionsMenu(paramMenu);
+  }
+  
   protected void onResume()
   {
     super.onResume();
-    aK.b();
-    boolean bool1 = com.estrongs.fs.impl.local.l.g();
-    boolean bool2 = com.estrongs.android.pop.ad.a(this).Z();
+    boolean bool1 = com.estrongs.fs.impl.local.m.g();
+    boolean bool2 = com.estrongs.android.pop.ad.a(this).aa();
     if ((bool1) && (!bool2))
     {
-      aK.c("Root_Already", "Root_Already");
-      com.estrongs.android.pop.ad.a(this).k(true);
+      au.a("Root_Already");
+      com.estrongs.android.pop.ad.a(this).j(true);
     }
-    com.estrongs.android.view.aw localaw = y();
-    if (localaw != null) {
-      localaw.l();
+    com.estrongs.android.view.cr localcr = O();
+    if (localcr != null) {
+      localcr.l();
     }
-    h.post(new bh(this));
-    h.postDelayed(new bi(this), 1000L);
+    i.post(new af(this));
+    i.postDelayed(new ag(this), 1000L);
   }
   
   protected void onSaveInstanceState(Bundle paramBundle)
@@ -4818,16 +6193,16 @@ public class FileExplorerActivity
     super.onSaveInstanceState(paramBundle);
     try
     {
-      int i2 = com.estrongs.android.ui.d.e.c();
+      int i2 = au().c();
       String[] arrayOfString = new String[i2];
       int i1 = 0;
       while (i1 < i2)
       {
-        arrayOfString[i1] = com.estrongs.android.ui.d.e.c(i1).b();
+        arrayOfString[i1] = au().c(i1).a();
         i1 += 1;
       }
       paramBundle.putStringArray("winPaths", arrayOfString);
-      paramBundle.putInt("currentWin", com.estrongs.android.ui.d.e.a());
+      paramBundle.putInt("currentWin", au().a());
       paramBundle.putBoolean("usbMountAble", com.estrongs.fs.impl.usb.e.e());
       return;
     }
@@ -4841,63 +6216,123 @@ public class FileExplorerActivity
   
   protected void onStop()
   {
-    com.estrongs.android.view.aw localaw = y();
-    if ((localaw instanceof WebViewWrapper)) {
-      ((WebViewWrapper)localaw).as();
+    com.estrongs.android.view.cr localcr = O();
+    if ((localcr instanceof WebViewWrapper)) {
+      ((WebViewWrapper)localcr).A();
     }
     super.onStop();
   }
   
+  public void onSupportActionModeFinished(ActionMode paramActionMode)
+  {
+    super.onSupportActionModeFinished(paramActionMode);
+    if (at != null) {
+      at.a(0);
+    }
+    p = false;
+  }
+  
+  public void onSupportActionModeStarted(ActionMode paramActionMode)
+  {
+    super.onSupportActionModeStarted(paramActionMode);
+    if (at != null) {
+      at.a(1);
+    }
+    p = true;
+  }
+  
   public void p()
   {
-    a(null);
+    p = true;
+    aL.c(a);
+    aP();
+  }
+  
+  public void p(String paramString)
+  {
+    if (ao())
+    {
+      synchronized (w)
+      {
+        Iterator localIterator = w.iterator();
+        while (localIterator.hasNext())
+        {
+          com.estrongs.android.view.cr localcr = (com.estrongs.android.view.cr)localIterator.next();
+          if ((localcr != null) && (com.estrongs.android.util.ap.e(paramString, localcr.c()))) {
+            localcr.e();
+          }
+        }
+      }
+      return;
+    }
+    runOnUiThread(new r(this, paramString));
   }
   
   public void q()
   {
-    if (aH != null) {
-      aH.d();
+    if ((u) && (!c)) {
+      if (z.getVisibility() == 8) {
+        z.setVisibility(0);
+      }
     }
+    com.estrongs.android.ui.navigation.m localm;
+    do
+    {
+      return;
+      localm = ae();
+    } while (localm == null);
+    localm.b();
   }
   
   public void r()
   {
-    com.estrongs.android.view.aw localaw = y();
-    if ((localaw != null) && (!localaw.o()))
-    {
-      String str = localaw.c();
-      if ((!com.estrongs.android.util.bd.k()) && (((am.V(str)) && (com.estrongs.android.pop.ac.a() >= 11)) || (am.S(str)) || (am.U(str)) || (am.T(str)) || (am.aO(str)))) {
-        d(localaw);
-      }
+    com.estrongs.android.view.cr localcr = O();
+    if (localcr != null) {
+      localcr.j();
     }
-    else
-    {
-      return;
-    }
-    if ((localaw instanceof com.estrongs.android.view.cd))
-    {
-      ((com.estrongs.android.view.cd)localaw).ap();
-      return;
-    }
-    localaw.b(true);
   }
   
   public void s()
   {
-    i.a("normal_mode", Boolean.valueOf(true));
-    j = "normal_mode";
-    com.estrongs.android.view.aw localaw = y();
-    if (localaw != null) {
-      localaw.a(false);
+    if ((u) && (!c))
+    {
+      if (z.getVisibility() == 8)
+      {
+        z.setVisibility(0);
+        if (!(O() instanceof com.estrongs.android.ui.c.e)) {
+          break label67;
+        }
+        ((com.estrongs.android.ui.c.e)O()).l_();
+      }
+      for (;;)
+      {
+        return;
+        z.setVisibility(8);
+        break;
+        label67:
+        Iterator localIterator = w.iterator();
+        while (localIterator.hasNext())
+        {
+          com.estrongs.android.view.cr localcr = (com.estrongs.android.view.cr)localIterator.next();
+          if ((localcr instanceof com.estrongs.android.ui.c.e)) {
+            ((com.estrongs.android.ui.c.e)localcr).l_();
+          }
+        }
+      }
     }
-    w();
+    if (v())
+    {
+      x();
+      return;
+    }
+    q();
   }
   
   public void setTabletSideBar(View paramView)
   {
-    C = new com.estrongs.android.ui.navigation.s(this, paramView);
-    aH().a(C.b());
-    ai();
+    y = new com.estrongs.android.ui.navigation.r(this, paramView);
+    ae().a(y.b());
+    aH();
   }
   
   public void startActivity(Intent paramIntent)
@@ -4913,105 +6348,82 @@ public class FileExplorerActivity
     }
   }
   
-  public Rect t()
+  public void t()
   {
-    int[] arrayOfInt;
-    if (ac == null)
-    {
-      ac = new Rect();
-      arrayOfInt = new int[2];
-      if (!u) {
-        break label81;
-      }
-      f.getLocationInWindow(arrayOfInt);
-    }
-    for (;;)
-    {
-      ac = new Rect(arrayOfInt[0], arrayOfInt[1], arrayOfInt[0] + f.getMeasuredWidth(), arrayOfInt[1] + f.getMeasuredHeight());
-      return ac;
-      label81:
-      findViewById(2131362001).getLocationInWindow(arrayOfInt);
+    if (h != null) {
+      h.b(h.getCurrentScreen());
     }
   }
   
   public void u()
   {
-    f(true);
+    com.estrongs.android.ui.navigation.m localm = ae();
+    if (localm != null) {
+      localm.c();
+    }
   }
   
-  public void v()
+  public boolean v()
   {
-    if (aI != null)
-    {
-      if (a)
-      {
-        AlphaAnimation localAlphaAnimation = new AlphaAnimation(0.1F, 1.0F);
-        localAlphaAnimation.setDuration(200L);
-        localAlphaAnimation.setInterpolator(new AccelerateInterpolator());
-        aI.setAnimation(localAlphaAnimation);
-        localAlphaAnimation.start();
-      }
-      aI.setVisibility(0);
-      if (!u) {
-        findViewById(2131362462).setVisibility(4);
-      }
-    }
-    if (aJ != null) {
-      aJ.setVisibility(0);
-    }
+    return (at != null) && ((at.f()) || (at.g()));
   }
   
   public void w()
   {
-    if (!b) {}
-    for (boolean bool = true;; bool = false)
-    {
-      i(bool);
-      return;
-    }
+    a(null);
   }
   
   public void x()
   {
-    String str = z();
-    if (q)
-    {
-      u();
-      return;
-    }
-    if ((am.bh(z())) || (am.aZ(z())))
-    {
-      m(str);
-      return;
-    }
-    if (!f(str)) {}
-    for (boolean bool = true;; bool = false)
-    {
-      e(bool);
-      return;
+    if (at != null) {
+      at.e();
     }
   }
   
-  public com.estrongs.android.view.aw y()
+  public Rect y()
   {
-    int i1;
-    com.estrongs.android.view.aw localaw;
-    synchronized (x)
+    int[] arrayOfInt;
+    if (U == null)
     {
-      i1 = com.estrongs.android.ui.d.e.a();
-      if (i1 >= x.size()) {
-        return null;
+      U = new Rect();
+      arrayOfInt = new int[2];
+      if (h == null) {
+        break label102;
       }
+      if (!t) {
+        break label88;
+      }
+      h.getLocationInWindow(arrayOfInt);
     }
+    for (;;)
+    {
+      U = new Rect(arrayOfInt[0], arrayOfInt[1], arrayOfInt[0] + h.getMeasuredWidth(), arrayOfInt[1] + h.getMeasuredHeight());
+      return U;
+      label88:
+      findViewById(2131624514).getLocationInWindow(arrayOfInt);
+    }
+    label102:
     return null;
   }
   
-  public String z()
+  public void z()
   {
-    if (y() == null) {
-      return null;
+    Message localMessage = new Message();
+    if (au().c() <= 1) {
+      what = 211;
     }
-    return y().c();
+    for (;;)
+    {
+      if (i != null) {
+        i.sendMessage(localMessage);
+      }
+      if (h.e()) {
+        h.setPageLocked(false);
+      }
+      return;
+      what = 2;
+      arg1 = au().a();
+    }
   }
 }
 

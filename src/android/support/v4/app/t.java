@@ -1,19 +1,19 @@
 package android.support.v4.app;
 
-import android.os.Parcel;
-import android.os.Parcelable.Creator;
+import android.view.View;
+import android.view.ViewTreeObserver;
+import android.view.ViewTreeObserver.OnPreDrawListener;
 
-final class t
-  implements Parcelable.Creator<FragmentTabHost.SavedState>
+class t
+  implements ViewTreeObserver.OnPreDrawListener
 {
-  public FragmentTabHost.SavedState a(Parcel paramParcel)
-  {
-    return new FragmentTabHost.SavedState(paramParcel, null);
-  }
+  t(q paramq, View paramView, v paramv, int paramInt, Object paramObject) {}
   
-  public FragmentTabHost.SavedState[] a(int paramInt)
+  public boolean onPreDraw()
   {
-    return new FragmentTabHost.SavedState[paramInt];
+    a.getViewTreeObserver().removeOnPreDrawListener(this);
+    q.a(e, b, c, d);
+    return true;
   }
 }
 

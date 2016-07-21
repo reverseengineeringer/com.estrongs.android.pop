@@ -1,17 +1,17 @@
 package com.estrongs.android.ui.e;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.pop.app.PopAudioPlayer;
+import com.estrongs.android.ui.dialog.df;
+import com.estrongs.android.ui.dialog.dh;
 
 class q
-  implements View.OnClickListener
+  implements dh
 {
-  q(o paramo) {}
+  q(p paramp) {}
   
-  public void onClick(View paramView)
+  public void a(int paramInt)
   {
-    o.a(a).n();
+    m.f(a.a).dismiss();
+    new r(this, paramInt).start();
   }
 }
 

@@ -1,55 +1,28 @@
 package com.estrongs.android.ui.theme;
 
 import android.content.Context;
-import android.os.Handler;
-import android.os.Message;
-import com.estrongs.android.util.ab;
-import com.estrongs.android.widget.ProgressTextView;
+import android.content.res.Resources;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnTouchListener;
 
 class ak
-  implements ab
+  implements View.OnTouchListener
 {
-  ak(ai paramai, Handler paramHandler, Context paramContext) {}
+  ak(ai paramai) {}
   
-  public void a(Object paramObject)
+  public boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    if (a != null)
+    if (paramMotionEvent.getAction() == 0) {
+      paramView.setBackgroundColor(ai.a(a).getResources().getColor(2131558468));
+    }
+    for (;;)
     {
-      paramObject = new Message();
-      what = 13;
-      a.sendMessage((Message)paramObject);
+      return false;
+      if ((paramMotionEvent.getAction() == 3) || (paramMotionEvent.getAction() == 1)) {
+        paramView.setBackgroundDrawable(null);
+      }
     }
-  }
-  
-  public void a(Object paramObject, long paramLong1, long paramLong2)
-  {
-    if (ai.a(c) != null) {
-      ai.a(c).a((int)(100L * paramLong2 / paramLong1));
-    }
-  }
-  
-  public void a(Object paramObject, Throwable paramThrowable)
-  {
-    ai.a(c, false);
-    if (a != null)
-    {
-      paramObject = new Message();
-      what = 13;
-      a.sendMessage((Message)paramObject);
-    }
-  }
-  
-  public void b(Object paramObject)
-  {
-    ai.a(c, false);
-    if (a != null)
-    {
-      paramObject = new Message();
-      what = 12;
-      obj = c.b;
-      a.sendMessage((Message)paramObject);
-    }
-    ai.a(c, b);
   }
 }
 

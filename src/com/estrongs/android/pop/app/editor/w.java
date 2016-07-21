@@ -1,23 +1,39 @@
 package com.estrongs.android.pop.app.editor;
 
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.View.OnTouchListener;
-import android.widget.EditText;
+import android.widget.SeekBar;
+import com.estrongs.android.pop.ad;
+import com.estrongs.android.util.d;
+import com.estrongs.android.util.e;
 
 class w
-  implements View.OnTouchListener
+  implements d
 {
   w(PopNoteEditor paramPopNoteEditor) {}
   
-  public boolean onTouch(View paramView, MotionEvent paramMotionEvent)
+  public void a(String paramString1, String paramString2, int paramInt)
   {
-    if (paramMotionEvent.getY() > PopNoteEditor.c(a).getHeight())
-    {
-      paramMotionEvent.setLocation(PopNoteEditor.d(a).getWidth(), paramMotionEvent.getY());
-      PopNoteEditor.c(a).dispatchTouchEvent(paramMotionEvent);
+    if (PopNoteEditor.m(a) == null) {
+      PopNoteEditor.a(a, e.a());
     }
-    return false;
+    if (e.a[0].equalsIgnoreCase(paramString1))
+    {
+      new ac(a, 0, true).start();
+      PopNoteEditor.n(a).setProgress(0);
+    }
+    for (;;)
+    {
+      return;
+      if (!PopNoteEditor.m(a).equals(paramString1)) {}
+      while ((paramString1 != null) && (!PopNoteEditor.m(a).equals(paramString1)))
+      {
+        PopNoteEditor.a(a, paramString1);
+        ad.a(a).v(PopNoteEditor.m(a));
+        new ac(a, 0, false).start();
+        PopNoteEditor.n(a).setProgress(0);
+        return;
+        paramString1 = null;
+      }
+    }
   }
 }
 

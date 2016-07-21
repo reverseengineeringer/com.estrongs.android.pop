@@ -1,22 +1,35 @@
 package com.estrongs.android.pop.app;
 
-import android.app.Activity;
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
-import com.estrongs.fs.b.ap;
+import android.content.DialogInterface.OnCancelListener;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
+import com.estrongs.android.pop.ad;
+import com.estrongs.android.util.bk;
 
-final class ax
-  implements DialogInterface.OnDismissListener
+class ax
+  implements DialogInterface.OnClickListener
 {
-  ax(ap paramap, boolean paramBoolean, Activity paramActivity) {}
+  ax(DownloaderActivity paramDownloaderActivity, DialogInterface.OnCancelListener paramOnCancelListener) {}
   
-  public void onDismiss(DialogInterface paramDialogInterface)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (a.getTaskStatus() != 4) {
-      a.requsestPause();
+    if (paramInt == 0) {
+      DownloaderActivity.a(b, DownloaderActivity.a(b), b.getIntent().getType());
     }
-    if (b) {
-      c.finish();
+    for (;;)
+    {
+      paramDialogInterface.dismiss();
+      return;
+      if (bk.a(ad.a(b).af()))
+      {
+        ay localay = new ay(this);
+        DownloaderActivity.a(b, localay, a);
+      }
+      else
+      {
+        DownloaderActivity.a(b, DownloaderActivity.a(b), true);
+      }
     }
   }
 }

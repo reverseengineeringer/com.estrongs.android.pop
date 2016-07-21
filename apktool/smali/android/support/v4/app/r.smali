@@ -1,25 +1,23 @@
-.class final Landroid/support/v4/app/r;
+.class Landroid/support/v4/app/r;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/os/Parcelable$Creator;
+.implements Landroid/support/v4/app/bg;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/os/Parcelable$Creator",
-        "<",
-        "Landroid/support/v4/app/FragmentState;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field final synthetic a:Landroid/support/v4/app/Fragment;
+
+.field final synthetic b:Landroid/support/v4/app/q;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Landroid/support/v4/app/q;Landroid/support/v4/app/Fragment;)V
     .locals 0
+
+    iput-object p1, p0, Landroid/support/v4/app/r;->b:Landroid/support/v4/app/q;
+
+    iput-object p2, p0, Landroid/support/v4/app/r;->a:Landroid/support/v4/app/Fragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,38 +26,12 @@
 
 
 # virtual methods
-.method public a(Landroid/os/Parcel;)Landroid/support/v4/app/FragmentState;
+.method public a()Landroid/view/View;
     .locals 1
 
-    new-instance v0, Landroid/support/v4/app/FragmentState;
+    iget-object v0, p0, Landroid/support/v4/app/r;->a:Landroid/support/v4/app/Fragment;
 
-    invoke-direct {v0, p1}, Landroid/support/v4/app/FragmentState;-><init>(Landroid/os/Parcel;)V
-
-    return-object v0
-.end method
-
-.method public a(I)[Landroid/support/v4/app/FragmentState;
-    .locals 1
-
-    new-array v0, p1, [Landroid/support/v4/app/FragmentState;
-
-    return-object v0
-.end method
-
-.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0, p1}, Landroid/support/v4/app/r;->a(Landroid/os/Parcel;)Landroid/support/v4/app/FragmentState;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public synthetic newArray(I)[Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0, p1}, Landroid/support/v4/app/r;->a(I)[Landroid/support/v4/app/FragmentState;
+    invoke-virtual {v0}, Landroid/support/v4/app/Fragment;->getView()Landroid/view/View;
 
     move-result-object v0
 

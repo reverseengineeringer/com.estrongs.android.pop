@@ -3,33 +3,23 @@ package com.estrongs.android.ui.e;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.view.WebViewWrapper;
+import com.estrongs.android.ui.d.i;
+import com.estrongs.android.ui.dialog.gd;
+import com.estrongs.android.ui.view.ak;
 
 class bh
   implements MenuItem.OnMenuItemClickListener
 {
-  bh(w paramw) {}
+  bh(m paramm) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = a.k.y();
-    if ((paramMenuItem != null) && ((paramMenuItem instanceof WebViewWrapper)))
+    if (m.a(a).au().c() >= 12)
     {
-      paramMenuItem = (WebViewWrapper)paramMenuItem;
-      paramMenuItem.an();
-      if (paramMenuItem.al()) {
-        break label80;
-      }
-      a.b(new String[] { "zoom_in" });
-    }
-    while (!paramMenuItem.am())
-    {
-      a.b(new String[] { "zoom_out" });
+      ak.a(m.a(a), 2131232454, 0);
       return false;
-      label80:
-      a.a(true, new String[] { "zoom_in" });
     }
-    a.a(true, new String[] { "zoom_out" });
+    new gd(m.a(a)).a(new bi(this)).a();
     return false;
   }
 }

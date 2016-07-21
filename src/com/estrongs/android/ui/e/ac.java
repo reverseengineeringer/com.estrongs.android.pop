@@ -1,21 +1,20 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.pop.app.diskusage.h;
-import com.estrongs.android.pop.view.FileExplorerActivity;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.ui.pcs.r;
 
 class ac
-  extends Thread
+  implements MenuItem.OnMenuItemClickListener
 {
-  ac(ab paramab, int paramInt) {}
+  ac(m paramm) {}
   
-  public void run()
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    try
-    {
-      ((h)b.a.a.k.y()).d(a);
-      return;
-    }
-    catch (Exception localException) {}
+    paramMenuItem = new r(m.a(a));
+    paramMenuItem.a(new ad(this));
+    paramMenuItem.a(true);
+    return false;
   }
 }
 

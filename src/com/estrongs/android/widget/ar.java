@@ -1,17 +1,17 @@
 package com.estrongs.android.widget;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.view.cd;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnDismissListener;
+import com.estrongs.android.view.eb;
 
 class ar
-  implements View.OnClickListener
+  implements DialogInterface.OnDismissListener
 {
-  ar(ao paramao) {}
+  ar(ap paramap) {}
   
-  public void onClick(View paramView)
+  public void onDismiss(DialogInterface paramDialogInterface)
   {
-    a.b().j();
+    a.e.i_();
   }
 }
 

@@ -1,37 +1,15 @@
 package com.estrongs.android.ui.dialog;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.Window;
-import android.widget.ProgressBar;
-import com.estrongs.android.pop.app.diskusage.a;
-import com.estrongs.fs.b.am;
+import com.estrongs.android.view.gg;
 
 class ie
-  implements View.OnClickListener
+  implements gg
 {
-  ie(hn paramhn) {}
+  ie(hq paramhq, ci paramci) {}
   
-  public void onClick(View paramView)
+  public void a(Object paramObject)
   {
-    if (hn.b(a) != null)
-    {
-      paramView = hn.b(a).b();
-      if ((a.l == null) && (paramView != null)) {
-        a.l = new a(a.ar(), paramView);
-      }
-      if (paramView != null)
-      {
-        a.l.b(paramView);
-        if (a.m) {
-          a.l.getWindow().setType(2003);
-        }
-        a.l.show();
-        if (a.k.getVisibility() == 0) {
-          a.l.a();
-        }
-      }
-    }
+    a.dismiss();
   }
 }
 

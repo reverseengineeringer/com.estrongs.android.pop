@@ -1,30 +1,22 @@
 package com.estrongs.fs.impl.c;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.pop.ad;
+import java.io.File;
+import java.io.FilenameFilter;
 
-final class c
-  extends BroadcastReceiver
+class c
+  implements FilenameFilter
 {
-  public void onReceive(Context paramContext, Intent paramIntent)
+  c(b paramb) {}
+  
+  public boolean accept(File paramFile, String paramString)
   {
-    if (("android.bluetooth.adapter.action.STATE_CHANGED".equals(paramIntent.getAction())) && (paramIntent.getIntExtra("android.bluetooth.adapter.extra.STATE", 10) == 12))
-    {
-      com.estrongs.android.pop.app.b.a.a = true;
-      if (FileExplorerActivity.J() != null) {
-        com.estrongs.android.pop.app.b.a.a().e();
-      }
-      a.f();
-      if (com.estrongs.android.pop.app.b.a.c)
-      {
-        com.estrongs.android.pop.app.b.a.c = false;
-        if (FileExplorerActivity.J() != null) {
-          FileExplorerActivity.J().L();
-        }
-      }
+    if (ad.a(FexApplication.a()).q()) {}
+    while (!paramString.startsWith(".")) {
+      return true;
     }
+    return false;
   }
 }
 

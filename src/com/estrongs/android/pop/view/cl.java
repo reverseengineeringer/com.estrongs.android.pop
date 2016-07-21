@@ -1,18 +1,18 @@
 package com.estrongs.android.pop.view;
 
-import android.view.View;
-import android.view.View.OnLongClickListener;
-import com.estrongs.android.ui.view.ag;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.pop.app.service.b;
 
 class cl
-  implements View.OnLongClickListener
+  implements DialogInterface.OnClickListener
 {
-  cl(FileExplorerActivity paramFileExplorerActivity) {}
+  cl(FileExplorerActivity paramFileExplorerActivity, b paramb) {}
   
-  public boolean onLongClick(View paramView)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    ag.a(a, 2131427415, 0);
-    return true;
+    a.a();
+    paramDialogInterface.dismiss();
   }
 }
 

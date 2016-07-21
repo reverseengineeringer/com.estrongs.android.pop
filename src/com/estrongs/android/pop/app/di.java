@@ -12,20 +12,20 @@ class di
   
   public void run()
   {
-    if (ImageCommentActivity.i(b.b))
+    if (ImageCommentActivity.g(b.b))
     {
-      ImageCommentActivity.g(b.b).remove(ImageCommentActivity.j(b.b));
-      ImageCommentActivity.g(b.b).addAll(a);
-      ImageCommentActivity.g(b.b).add(ImageCommentActivity.j(b.b));
-      ImageCommentActivity.j(b.b).findViewById(2131361935).setVisibility(8);
+      ImageCommentActivity.e(b.b).remove(ImageCommentActivity.h(b.b));
+      ImageCommentActivity.e(b.b).addAll(a);
+      ImageCommentActivity.e(b.b).add(ImageCommentActivity.h(b.b));
+      ImageCommentActivity.h(b.b).findViewById(2131624429).setVisibility(8);
     }
     for (;;)
     {
-      ImageCommentActivity.k(b.b).notifyDataSetChanged();
+      ImageCommentActivity.i(b.b).notifyDataSetChanged();
       return;
-      ImageCommentActivity.g(b.b).clear();
-      ImageCommentActivity.g(b.b).add(ImageCommentActivity.h(b.b));
-      ImageCommentActivity.g(b.b).addAll(a);
+      ImageCommentActivity.e(b.b).clear();
+      ImageCommentActivity.e(b.b).add(ImageCommentActivity.f(b.b));
+      ImageCommentActivity.e(b.b).addAll(a);
     }
   }
 }

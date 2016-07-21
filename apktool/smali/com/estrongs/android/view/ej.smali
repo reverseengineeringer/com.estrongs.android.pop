@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/view/dz;
+.implements Lcom/estrongs/android/ui/pcs/q;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/view/WebViewWrapper;
+.field final synthetic a:Lcom/estrongs/android/view/ei;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/view/WebViewWrapper;)V
+.method constructor <init>(Lcom/estrongs/android/view/ei;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/view/ej;->a:Lcom/estrongs/android/view/WebViewWrapper;
+    iput-object p1, p0, Lcom/estrongs/android/view/ej;->a:Lcom/estrongs/android/view/ei;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,38 +22,76 @@
 
 
 # virtual methods
-.method public a(IIII)V
+.method public a(ZLjava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    iget-object v0, p0, Lcom/estrongs/android/view/ej;->a:Lcom/estrongs/android/view/WebViewWrapper;
+    if-eqz p3, :cond_0
 
-    iget-object v0, v0, Lcom/estrongs/android/view/WebViewWrapper;->v:Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->b(Ljava/lang/CharSequence;)Z
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result v0
+    const-string v1, "SP://"
 
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/view/ej;->a:Lcom/estrongs/android/view/WebViewWrapper;
-
-    invoke-static {v0}, Lcom/estrongs/android/view/WebViewWrapper;->a(Lcom/estrongs/android/view/WebViewWrapper;)Landroid/util/SparseArray;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/view/ej;->a:Lcom/estrongs/android/view/WebViewWrapper;
+    invoke-static {}, Lcom/estrongs/android/ui/pcs/u;->a()Lcom/estrongs/android/ui/pcs/u;
 
-    iget-object v1, v1, Lcom/estrongs/android/view/WebViewWrapper;->v:Ljava/lang/String;
+    move-result-object v1
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/pcs/u;->e()Ljava/lang/String;
 
-    move-result v1
+    move-result-object v1
 
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    const-string v1, "@"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "pcs"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v0, p0, Lcom/estrongs/android/view/ej;->a:Lcom/estrongs/android/view/ei;
+
+    iget-object v0, v0, Lcom/estrongs/android/view/ei;->a:Lcom/estrongs/fs/h;
+
+    check-cast v0, Lcom/estrongs/fs/impl/r/b;
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/fs/impl/r/b;->setPath(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/fs/impl/r/b;->setAbsolutePath(Ljava/lang/String;)V
+
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->at(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/fs/impl/r/b;->setDisplayName(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/estrongs/android/view/ej;->a:Lcom/estrongs/android/view/ei;
+
+    iget-object v1, v1, Lcom/estrongs/android/view/ei;->b:Lcom/estrongs/android/view/ef;
+
+    iget-object v1, v1, Lcom/estrongs/android/view/ef;->c:Lcom/estrongs/android/view/ee;
+
+    iget-object v1, v1, Lcom/estrongs/android/view/ee;->a:Lcom/estrongs/android/view/eb;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Lcom/estrongs/android/view/eb;->a(Lcom/estrongs/fs/h;Lcom/estrongs/android/util/TypedMap;)V
 
     :cond_0
     return-void

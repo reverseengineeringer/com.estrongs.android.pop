@@ -1,13 +1,24 @@
 package android.support.v4.view;
 
-import android.view.KeyEvent;
+import android.content.Context;
+import android.os.Handler;
+import android.view.GestureDetector;
+import android.view.GestureDetector.OnGestureListener;
+import android.view.MotionEvent;
 
 class u
-  extends t
+  implements r
 {
-  public void a(KeyEvent paramKeyEvent)
+  private final GestureDetector a;
+  
+  public u(Context paramContext, GestureDetector.OnGestureListener paramOnGestureListener, Handler paramHandler)
   {
-    x.a(paramKeyEvent);
+    a = new GestureDetector(paramContext, paramOnGestureListener, paramHandler);
+  }
+  
+  public boolean a(MotionEvent paramMotionEvent)
+  {
+    return a.onTouchEvent(paramMotionEvent);
   }
 }
 

@@ -1,38 +1,28 @@
 package android.support.v4.view;
 
+import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewParent;
 
-public class be
+class be
 {
-  public static void a(View paramView)
+  public static MenuItem a(MenuItem paramMenuItem, View paramView)
   {
-    paramView.postInvalidateOnAnimation();
+    return paramMenuItem.setActionView(paramView);
   }
   
-  public static void a(View paramView, int paramInt)
+  public static View a(MenuItem paramMenuItem)
   {
-    paramView.setImportantForAccessibility(paramInt);
+    return paramMenuItem.getActionView();
   }
   
-  public static void a(View paramView, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+  public static void a(MenuItem paramMenuItem, int paramInt)
   {
-    paramView.postInvalidate(paramInt1, paramInt2, paramInt3, paramInt4);
+    paramMenuItem.setShowAsAction(paramInt);
   }
   
-  public static void a(View paramView, Runnable paramRunnable)
+  public static MenuItem b(MenuItem paramMenuItem, int paramInt)
   {
-    paramView.postOnAnimation(paramRunnable);
-  }
-  
-  public static int b(View paramView)
-  {
-    return paramView.getImportantForAccessibility();
-  }
-  
-  public static ViewParent c(View paramView)
-  {
-    return paramView.getParentForAccessibility();
+    return paramMenuItem.setActionView(paramInt);
   }
 }
 

@@ -1,5 +1,5 @@
 .class public Lcom/estrongs/android/ui/dialog/ProgressDialog;
-.super Lcom/estrongs/android/ui/dialog/cg;
+.super Lcom/estrongs/android/ui/dialog/ci;
 
 
 # instance fields
@@ -18,7 +18,7 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    invoke-direct {p0, p1}, Lcom/estrongs/android/ui/dialog/cg;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/estrongs/android/ui/dialog/ci;-><init>(Landroid/content/Context;)V
 
     const/4 v0, 0x1
 
@@ -78,11 +78,11 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ProgressDialog;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    const v1, 0x7f030041
+    const v1, 0x7f030099
 
     const/4 v2, 0x0
 
@@ -108,9 +108,9 @@
 .method private b()V
     .locals 5
 
-    const v4, 0x7f0a0142
+    const v4, 0x7f0e02e6
 
-    const v3, 0x7f0a0141
+    const v3, 0x7f0e02e5
 
     const/4 v2, 0x4
 
@@ -141,7 +141,7 @@
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f0a001e
+    const v0, 0x7f0e0108
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -151,7 +151,7 @@
 
     iput-object v0, p0, Lcom/estrongs/android/ui/dialog/ProgressDialog;->b:Landroid/widget/TextView;
 
-    const v0, 0x7f0a008f
+    const v0, 0x7f0e01ed
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

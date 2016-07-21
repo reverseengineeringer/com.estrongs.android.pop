@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/ls_realtime_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/ls_realtime_icon" android:layout_width="@dimen/lock_screen_realtime_icon_image_width" android:layout_height="@dimen/lock_screen_realtime_icon_image_width" android:layout_marginTop="@dimen/lock_screen_realtime_icon_margin_top" android:layout_marginRight="@dimen/lock_screen_realtime_icon_margin_right" android:layout_alignParentRight="true" />
+        <TextView android:textSize="@dimen/lock_screen_realtime_text_size" android:textColor="@android:color/white" android:id="@id/ls_realtime_des" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/lock_screen_realtime_des_margin_left" android:layout_marginTop="@dimen/lock_screen_realtime_des_margin_top" android:layout_marginRight="@dimen/lock_screen_realtime_des_margin_left" android:layout_below="@id/ls_realtime_icon" />
+        <TextView android:textSize="@dimen/lock_screen_realtime_text_size" android:textColor="#66ffffff" android:id="@id/ls_realtime_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/lock_screen_realtime_time_margin_left" android:layout_marginTop="@dimen/lock_screen_realtime_time_margin_top" android:layout_marginRight="@dimen/lock_screen_realtime_time_margin_left" android:layout_below="@id/ls_realtime_des" />
+        <TextView android:textSize="@dimen/lock_screen_realtime_text_size" android:textColor="#99ffffff" android:id="@id/ls_realtime_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/lock_screen_realtime_title_margin_left" android:layout_marginBottom="@dimen/lock_screen_realtime_title_margin_bottom" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</merge>

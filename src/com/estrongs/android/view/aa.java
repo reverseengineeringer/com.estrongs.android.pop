@@ -1,37 +1,51 @@
 package com.estrongs.android.view;
 
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewGroup.LayoutParams;
+import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import com.estrongs.android.pop.esclasses.ESImageView;
-import java.util.LinkedList;
+import android.widget.TextView;
+import com.estrongs.fs.h;
+import java.util.List;
 
 class aa
-  implements Runnable
+  extends BaseAdapter
 {
-  aa(u paramu) {}
+  aa(z paramz) {}
   
-  public void run()
+  public h a(int paramInt)
   {
-    u.b(a).removeAllViews();
-    int i = 0;
-    while (i < u.g().size())
-    {
-      if ((i > 0) && (i < u.g().size()))
-      {
-        localObject = new ESImageView(u.a(a));
-        ((ImageView)localObject).setLayoutParams(new ViewGroup.LayoutParams(-1, -2));
-        ((ImageView)localObject).setBackgroundResource(2130838229);
-        u.b(a).addView((View)localObject);
-      }
-      Object localObject = ((ac)u.g().get(i)).aq();
-      if (((View)localObject).getParent() != null) {
-        ((ViewGroup)((View)localObject).getParent()).removeView((View)localObject);
-      }
-      u.b(a).addView((View)localObject);
-      i += 1;
+    return null;
+  }
+  
+  public int getCount()
+  {
+    return 1;
+  }
+  
+  public long getItemId(int paramInt)
+  {
+    return paramInt;
+  }
+  
+  public View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
+  {
+    paramViewGroup = paramView;
+    if (paramView == null) {
+      paramViewGroup = a.aj.inflate(2130903245, null);
     }
+    paramViewGroup.setBackgroundResource(2130837674);
+    ((ImageView)paramViewGroup.findViewById(2131624199)).setImageResource(2130838158);
+    ((TextView)paramViewGroup.findViewById(2131624200)).setText(a.j(2131231785) + "(" + a.a.size() + ")");
+    paramViewGroup.setOnClickListener(new ab(this));
+    return paramViewGroup;
+  }
+  
+  public void notifyDataSetChanged()
+  {
+    super.notifyDataSetChanged();
+    a.e();
   }
 }
 

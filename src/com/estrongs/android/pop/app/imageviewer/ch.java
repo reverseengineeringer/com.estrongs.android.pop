@@ -1,83 +1,114 @@
 package com.estrongs.android.pop.app.imageviewer;
 
-import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.FrameLayout;
-import android.widget.TextView;
-import com.estrongs.android.b.a;
-import com.estrongs.android.pop.app.imageviewer.gallery.e;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bd;
+import android.view.GestureDetector.SimpleOnGestureListener;
+import android.view.MotionEvent;
 
-class ch
-  extends FrameLayout
+public class ch
+  extends GestureDetector.SimpleOnGestureListener
 {
-  ImageViewTouch a;
-  View b;
-  View c;
-  private a e;
+  float a = 1.2F;
+  int b = 120;
+  int c = 200;
   
-  public ch(ViewImage21 paramViewImage21, Context paramContext)
-  {
-    super(paramContext);
-    paramViewImage21 = j.inflate(2130903166, this);
-    a = ((ImageViewTouch)paramViewImage21.findViewById(2131362425));
-    b = paramViewImage21.findViewById(2131362426);
-    c = paramViewImage21.findViewById(2131362427);
-  }
+  protected ch(ViewImage21 paramViewImage21) {}
   
-  private void a(View paramView, int paramInt)
+  public boolean onDoubleTap(MotionEvent paramMotionEvent)
   {
-    if (paramView != null) {
-      paramView.setVisibility(paramInt);
+    if (d.a) {}
+    ImageViewTouch localImageViewTouch;
+    do
+    {
+      return false;
+      if (ViewImage21.a(d, d.m))
+      {
+        ViewImage21.b(d, d.m);
+        return true;
+      }
+      if (ViewImage21.a(d, d.n))
+      {
+        ViewImage21.b(d, d.n);
+        return true;
+      }
+      localImageViewTouch = d.g;
+    } while (localImageViewTouch == null);
+    if (localImageViewTouch.getMaxZoom() < 1.0F) {
+      return true;
+    }
+    if (localImageViewTouch.getScale() > 1.0F) {
+      d.g.a(1.0F);
+    }
+    for (;;)
+    {
+      return true;
+      d.g.b(3.0F, paramMotionEvent.getX(), paramMotionEvent.getY());
     }
   }
   
-  public a a()
+  public boolean onScroll(MotionEvent paramMotionEvent1, MotionEvent paramMotionEvent2, float paramFloat1, float paramFloat2)
   {
-    return e;
-  }
-  
-  public void a(a parama)
-  {
-    e = parama;
-  }
-  
-  public void a(e parame)
-  {
-    if (bd.a("load-progress::" + parame.d(), getTag())) {
-      return;
+    boolean bool2 = true;
+    boolean bool1;
+    if (d.a) {
+      bool1 = false;
     }
-    a(a, 8);
-    a(b, 0);
-    a(c, 8);
-    TextView localTextView = (TextView)b.findViewById(2131361822);
-    if (localTextView != null) {
-      localTextView.setText(am.bL(parame.d()));
-    }
-    setTag("load-progress::" + parame.d());
+    do
+    {
+      do
+      {
+        return bool1;
+        if (ViewImage21.a(d, d.m))
+        {
+          ViewImage21.b(d, d.m);
+          return true;
+        }
+        if (ViewImage21.a(d, d.n))
+        {
+          ViewImage21.b(d, d.n);
+          return true;
+        }
+        paramMotionEvent1 = d.g;
+        bool1 = bool2;
+      } while (paramMotionEvent1 == null);
+      bool1 = bool2;
+    } while (paramMotionEvent1.getScale() <= 1.0F);
+    paramMotionEvent1.b(-paramFloat1, -paramFloat2);
+    return true;
   }
   
-  public void a(e parame, an paraman)
+  public boolean onSingleTapConfirmed(MotionEvent paramMotionEvent)
   {
-    if (bd.a("load-sucess::" + parame.d(), getTag())) {}
-    a(a, 0);
-    a(b, 8);
-    a(c, 8);
-    a.a(paraman, false);
-    setTag("load-sucess::" + parame.d());
+    if (d.a) {
+      return false;
+    }
+    if (ViewImage21.a(d, d.m))
+    {
+      ViewImage21.b(d, d.m);
+      return true;
+    }
+    if (ViewImage21.a(d, d.n))
+    {
+      ViewImage21.b(d, d.n);
+      return true;
+    }
+    if (ViewImage21.c(d))
+    {
+      ViewImage21.b(d);
+      return true;
+    }
+    if (ViewImage21.d(d) == 2) {
+      d.e();
+    }
+    for (;;)
+    {
+      d.a();
+      return true;
+      ViewImage21.e(d);
+    }
   }
   
-  public void b(e parame)
+  public boolean onSingleTapUp(MotionEvent paramMotionEvent)
   {
-    if (bd.a("load-error::" + parame.d(), getTag())) {
-      return;
-    }
-    a(a, 8);
-    a(b, 8);
-    a(c, 0);
-    setTag("load-error::" + parame.d());
+    return !d.a;
   }
 }
 

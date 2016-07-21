@@ -15,7 +15,7 @@
 
 .field f:Landroid/widget/EditText;
 
-.field private g:Lcom/estrongs/android/ui/theme/al;
+.field private g:Lcom/estrongs/android/ui/theme/at;
 
 
 # direct methods
@@ -53,7 +53,7 @@
     move-result-object v0
 
     :cond_0
-    invoke-static {}, Lcom/estrongs/android/util/bd;->f()Z
+    invoke-static {}, Lcom/estrongs/android/util/bk;->f()Z
 
     move-result v2
 
@@ -78,7 +78,7 @@
     if-nez v2, :cond_2
 
     :cond_1
-    const v2, 0x7f0c0017
+    const v2, 0x7f090181
 
     invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/ESNetSettingActivity;->setTheme(I)V
 
@@ -87,17 +87,17 @@
     :cond_2
     invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESPreferenceActivity;->onCreate(Landroid/os/Bundle;)V
 
-    invoke-static {p0}, Lcom/estrongs/android/ui/theme/al;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
+    invoke-static {p0}, Lcom/estrongs/android/ui/theme/at;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/estrongs/android/pop/app/ESNetSettingActivity;->g:Lcom/estrongs/android/ui/theme/al;
+    iput-object v2, p0, Lcom/estrongs/android/pop/app/ESNetSettingActivity;->g:Lcom/estrongs/android/ui/theme/at;
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/ESNetSettingActivity;->g:Lcom/estrongs/android/ui/theme/al;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/ESNetSettingActivity;->g:Lcom/estrongs/android/ui/theme/at;
 
-    const v3, 0x7f02021a
+    const v3, 0x7f02038d
 
-    invoke-virtual {v2, v3}, Lcom/estrongs/android/ui/theme/al;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v2, v3}, Lcom/estrongs/android/ui/theme/at;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
@@ -133,7 +133,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f020218
+    const v3, 0x7f02038b
 
     invoke-virtual {v2, v3}, Landroid/view/Window;->setBackgroundDrawableResource(I)V
 
@@ -141,7 +141,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0b006f
+    const v3, 0x7f080381
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -155,7 +155,7 @@
 
     iput-object v2, p0, Lcom/estrongs/android/pop/app/ESNetSettingActivity;->a:Lcom/estrongs/android/pop/ad;
 
-    invoke-static {p0}, Lcom/estrongs/android/pop/utils/cl;->a(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/estrongs/android/pop/utils/cu;->a(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -166,7 +166,7 @@
     invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/ESNetSettingActivity;->addPreferencesFromResource(I)V
 
     :goto_0
-    invoke-static {}, Lcom/estrongs/android/util/bd;->f()Z
+    invoke-static {}, Lcom/estrongs/android/util/bk;->f()Z
 
     move-result v2
 
@@ -195,11 +195,11 @@
 
     move-result-object v0
 
-    const v2, 0x7f0300e0
+    const v2, 0x7f030197
 
     invoke-virtual {v0, v4, v2}, Landroid/view/Window;->setFeatureInt(II)V
 
-    const v0, 0x7f0a003d
+    const v0, 0x7f0e0076
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/ESNetSettingActivity;->findViewById(I)Landroid/view/View;
 
@@ -207,17 +207,17 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/ESNetSettingActivity;->g:Lcom/estrongs/android/ui/theme/al;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/ESNetSettingActivity;->g:Lcom/estrongs/android/ui/theme/at;
 
-    const v3, 0x7f02023d
+    const v3, 0x7f0203b7
 
-    invoke-virtual {v2, v3}, Lcom/estrongs/android/ui/theme/al;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v2, v3}, Lcom/estrongs/android/ui/theme/at;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const v0, 0x7f0a0021
+    const v0, 0x7f0e0077
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/ESNetSettingActivity;->findViewById(I)Landroid/view/View;
 
@@ -225,7 +225,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v2, 0x7f0b039c
+    const v2, 0x7f0802c2
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -242,9 +242,9 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/ESNetSettingActivity;->b:Landroid/preference/CheckBoxPreference;
 
-    new-instance v2, Lcom/estrongs/android/pop/app/bp;
+    new-instance v2, Lcom/estrongs/android/pop/app/bt;
 
-    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/bp;-><init>(Lcom/estrongs/android/pop/app/ESNetSettingActivity;)V
+    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/bt;-><init>(Lcom/estrongs/android/pop/app/ESNetSettingActivity;)V
 
     invoke-virtual {v0, v2}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -260,9 +260,9 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/ESNetSettingActivity;->c:Landroid/preference/CheckBoxPreference;
 
-    new-instance v2, Lcom/estrongs/android/pop/app/bq;
+    new-instance v2, Lcom/estrongs/android/pop/app/bu;
 
-    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/bq;-><init>(Lcom/estrongs/android/pop/app/ESNetSettingActivity;)V
+    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/bu;-><init>(Lcom/estrongs/android/pop/app/ESNetSettingActivity;)V
 
     invoke-virtual {v0, v2}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -270,7 +270,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->aj()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->ak()Z
 
     move-result v2
 
@@ -345,7 +345,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f02021a
+    const v4, 0x7f02038d
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

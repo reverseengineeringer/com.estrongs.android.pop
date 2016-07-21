@@ -1,9 +1,8 @@
 package com.estrongs.android.pop.app;
 
+import android.app.Activity;
 import android.app.NotificationManager;
 import android.content.Intent;
-import android.content.res.Configuration;
-import android.content.res.Resources;
 import android.os.Handler;
 import android.os.Message;
 import android.view.LayoutInflater;
@@ -13,35 +12,30 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.estrongs.a.a.l;
 import com.estrongs.a.a.m;
 import com.estrongs.a.a.p;
 import com.estrongs.android.pop.app.network.EsNetworkActivity;
-import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.pop.esclasses.g;
+import com.estrongs.android.pop.esclasses.k;
 import com.estrongs.android.pop.view.utils.AppRunner;
 import com.estrongs.android.pop.z;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.android.ui.dialog.ct;
-import com.estrongs.android.ui.dialog.jw;
-import com.estrongs.android.ui.e.cf;
-import com.estrongs.android.ui.theme.al;
-import com.estrongs.android.ui.view.by;
-import com.estrongs.android.util.am;
-import com.estrongs.fs.b.au;
+import com.estrongs.android.ui.base.HomeAsBackActivity;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.ui.dialog.cv;
+import com.estrongs.android.ui.dialog.kh;
+import com.estrongs.android.ui.theme.at;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.b.aw;
 import com.estrongs.fs.h;
-import com.estrongs.fs.impl.b.c;
+import com.estrongs.fs.impl.b.d;
 import java.util.ArrayList;
 import java.util.List;
 
 public class LocalFileSharingActivity
-  extends ESActivity
+  extends HomeAsBackActivity
   implements AdapterView.OnItemClickListener, l, p
 {
   private static LocalFileSharingActivity j;
@@ -49,54 +43,42 @@ public class LocalFileSharingActivity
   private NotificationManager b;
   private boolean c = false;
   private ListView d;
-  private ef[] e;
+  private ee[] e;
   private List<h> f = new ArrayList();
   private BaseAdapter g;
-  private au h;
+  private aw h;
   private Handler i;
-  private al k;
-  private by l;
-  private TextView m;
-  private boolean n;
-  private cg o;
-  private cf p;
-  private ProgressBar q = null;
-  private FrameLayout r;
-  private FrameLayout t;
+  private at k;
+  private ci l;
+  private ProgressBar m = null;
+  private FrameLayout n;
+  private com.estrongs.android.view.a.a o;
+  private com.estrongs.android.view.a.a p;
   
-  public static void a()
-  {
-    if (j == null) {
-      return;
-    }
-    j.i();
-    jg.notifyDataSetChanged();
-  }
-  
-  public static void a(ESActivity paramESActivity, ArrayList<String> paramArrayList, boolean paramBoolean)
+  public static void a(com.estrongs.android.pop.app.d.a parama, ArrayList<String> paramArrayList, boolean paramBoolean)
   {
     Intent localIntent = new Intent();
     localIntent.putExtra("play", paramBoolean);
     localIntent.putStringArrayListExtra("files_selected", paramArrayList);
-    localIntent.setClass(paramESActivity, LocalFileSharingActivity.class);
-    paramESActivity.startActivity(localIntent);
+    localIntent.setClass(parama.n(), LocalFileSharingActivity.class);
+    parama.G().startActivity(localIntent);
   }
   
-  public static void a(ESActivity paramESActivity, List<h> paramList)
+  public static void a(com.estrongs.android.pop.app.d.a parama, List<h> paramList)
   {
-    a(paramESActivity, paramList, false);
+    a(parama, paramList, false);
   }
   
-  public static void a(ESActivity paramESActivity, List<h> paramList, boolean paramBoolean)
+  public static void a(com.estrongs.android.pop.app.d.a parama, List<h> paramList, boolean paramBoolean)
   {
     ArrayList localArrayList = new ArrayList();
     int i1 = 0;
     if (i1 < paramList.size())
     {
-      if ((paramList.get(i1) instanceof c))
+      if ((paramList.get(i1) instanceof d))
       {
-        c localc = (c)paramList.get(i1);
-        localArrayList.add(localc.getAbsolutePath() + "\n" + localc.getName() + ".apk");
+        d locald = (d)paramList.get(i1);
+        localArrayList.add(locald.getAbsolutePath() + "\n" + locald.getName() + ".apk");
       }
       for (;;)
       {
@@ -105,80 +87,59 @@ public class LocalFileSharingActivity
         localArrayList.add(((h)paramList.get(i1)).getAbsolutePath());
       }
     }
-    if (au.a(paramESActivity) == null)
+    if (aw.a(parama.n()) == null)
     {
-      EsNetworkActivity.a(paramESActivity, localArrayList, paramBoolean);
+      EsNetworkActivity.a(parama, localArrayList, paramBoolean);
       return;
     }
-    if ((localArrayList.size() == 1) && (am.bb((String)localArrayList.get(0))))
+    if ((localArrayList.size() == 1) && (ap.bm((String)localArrayList.get(0))))
     {
-      paramList = com.estrongs.android.pop.a.d + "/" + am.d((String)localArrayList.get(0));
-      AppRunner.a(paramESActivity, (String)localArrayList.get(0), paramList, new dx(localArrayList, paramList, paramESActivity, paramBoolean), false);
+      paramList = com.estrongs.android.pop.a.f + "/" + ap.d((String)localArrayList.get(0));
+      AppRunner.a(parama.G(), (String)localArrayList.get(0), paramList, new ea(localArrayList, paramList, parama, paramBoolean), false);
       return;
     }
-    a(paramESActivity, localArrayList, paramBoolean);
+    a(parama, localArrayList, paramBoolean);
   }
   
   private void a(boolean paramBoolean)
   {
-    r.removeAllViews();
-    r.addView(g.a(this).inflate(2130903127, null));
-    ??? = (FrameLayout)findViewById(2131362208);
-    ((FrameLayout)???).setBackgroundDrawable(k.h());
-    if (t == null)
+    if (n == null)
     {
-      t = ((FrameLayout)g.a(this).inflate(2130903079, null));
-      ((FrameLayout)???).addView(t);
-      d = ((ListView)t.findViewById(2131362040));
-      a = ((TextView)t.findViewById(2131362041));
+      n = ((FrameLayout)findViewById(2131624797));
+      d = ((ListView)n.findViewById(2131624886));
+      a = ((TextView)n.findViewById(2131624798));
       d.setEmptyView(a);
-      d.setAdapter(k());
+      d.setAdapter(l());
       d.setOnItemClickListener(this);
-      q = ((ProgressBar)r.findViewById(2131361935));
-      p = new cf(this, n);
-    }
-    for (;;)
-    {
+      m = ((ProgressBar)findViewById(2131624429));
       synchronized (e)
       {
         if (e.length == 0)
         {
           if ((h == null) && (paramBoolean)) {
-            h = au.a(this, this, this, true);
+            h = aw.a(this, this, this, true);
           }
-          q.setVisibility(0);
+          m.setVisibility(0);
           a.setText("");
-          m = ((TextView)findViewById(2131361997));
-          m.setText(2131427541);
-          l = new by(this, (RelativeLayout)findViewById(2131362207), 1);
-          if (c) {
-            p.a(2, 2131427357, 2130838219);
-          }
-          l.a("normal_mode", p);
-          l.a("normal_mode", Boolean.valueOf(false));
-          j();
+        }
+        while (h == null) {
           return;
         }
-        if (h == null) {
-          continue;
-        }
-        q.setVisibility(0);
+        m.setVisibility(0);
       }
-      ((FrameLayout)???).removeAllViews();
-      ((FrameLayout)???).addView(t);
     }
   }
   
-  private void h()
+  public static void d()
   {
-    FrameLayout localFrameLayout = (FrameLayout)findViewById(2131362208);
-    if (localFrameLayout != null) {
-      localFrameLayout.removeView(t);
+    if (j == null) {
+      return;
     }
-    t = null;
+    j.k();
+    jg.notifyDataSetChanged();
   }
   
-  private void i()
+  private void k()
   {
     for (;;)
     {
@@ -186,9 +147,9 @@ public class LocalFileSharingActivity
       int i2;
       synchronized (e)
       {
-        ef[] arrayOfef2 = ef.a(au.b(this));
+        ee[] arrayOfee2 = ee.a(aw.b(this));
         i1 = 0;
-        if (i1 < arrayOfef2.length)
+        if (i1 < arrayOfee2.length)
         {
           i2 = 0;
           if (i2 >= e.length) {
@@ -200,8 +161,8 @@ public class LocalFileSharingActivity
         }
         else
         {
-          e = arrayOfef2;
-          l();
+          e = arrayOfee2;
+          m();
           return;
         }
       }
@@ -212,38 +173,33 @@ public class LocalFileSharingActivity
     }
   }
   
-  private void j()
+  private BaseAdapter l()
   {
-    ImageView localImageView = (ImageView)findViewById(2131361917);
-    ((LinearLayout)localImageView.getParent()).setOnClickListener(new dy(this, localImageView));
-    localImageView.setOnClickListener(new dz(this));
-  }
-  
-  private BaseAdapter k()
-  {
-    g = new dw(this);
+    g = new dv(this);
     return g;
   }
   
-  private void l()
+  private void m()
   {
-    if (p == null) {
-      return;
-    }
     int i1 = 0;
+    if ((i1 >= e.length) || (!e[i1].c))
+    {
+      if (i1 != e.length) {
+        break label62;
+      }
+      o.c(false);
+      p.c(true);
+    }
     for (;;)
     {
-      if ((i1 >= e.length) || (!e[i1].c))
-      {
-        if (i1 != e.length) {
-          break;
-        }
-        p.a(1, 2131427372, 2130838186);
-        return;
-      }
+      invalidateOptionsMenu();
+      return;
       i1 += 1;
+      break;
+      label62:
+      o.c(true);
+      p.c(false);
     }
-    p.a(1, 2131427371, 2130838184);
   }
   
   public void a(com.estrongs.a.a parama, int paramInt1, int paramInt2)
@@ -266,242 +222,250 @@ public class LocalFileSharingActivity
     }
   }
   
+  protected void a(List<com.estrongs.android.view.a.a> paramList)
+  {
+    com.estrongs.android.view.a.a locala1 = new com.estrongs.android.view.a.a(2130838588, 2131230880).a(new dw(this));
+    o = new com.estrongs.android.view.a.a(2130838529, 2131230887).a(new dx(this));
+    p = new com.estrongs.android.view.a.a(2130838528, 2131230889).a(new dy(this)).c(false);
+    int i1;
+    if (c)
+    {
+      i1 = 2130838581;
+      if (!c) {
+        break label178;
+      }
+    }
+    label178:
+    for (int i2 = 2131230875;; i2 = 2131230890)
+    {
+      com.estrongs.android.view.a.a locala2 = new com.estrongs.android.view.a.a(i1, i2).a(new dz(this));
+      paramList.add(locala1);
+      paramList.add(o);
+      paramList.add(p);
+      paramList.add(locala2);
+      return;
+      i1 = 2130838601;
+      break;
+    }
+  }
+  
   /* Error */
-  public void b()
+  public void e()
   {
     // Byte code:
     //   0: aload_0
-    //   1: getfield 284	com/estrongs/android/pop/app/LocalFileSharingActivity:m	Landroid/widget/TextView;
-    //   4: ldc_w 396
-    //   7: invokevirtual 287	android/widget/TextView:setText	(I)V
-    //   10: aload_0
-    //   11: getfield 266	com/estrongs/android/pop/app/LocalFileSharingActivity:e	[Lcom/estrongs/android/pop/app/ef;
-    //   14: astore 4
-    //   16: aload 4
-    //   18: monitorenter
-    //   19: iconst_0
-    //   20: istore_2
-    //   21: iconst_0
-    //   22: istore_1
-    //   23: iload_2
-    //   24: aload_0
-    //   25: getfield 266	com/estrongs/android/pop/app/LocalFileSharingActivity:e	[Lcom/estrongs/android/pop/app/ef;
-    //   28: arraylength
-    //   29: if_icmpge +270 -> 299
-    //   32: aload_0
-    //   33: getfield 266	com/estrongs/android/pop/app/LocalFileSharingActivity:e	[Lcom/estrongs/android/pop/app/ef;
-    //   36: iload_2
-    //   37: aaload
-    //   38: getfield 341	com/estrongs/android/pop/app/ef:c	Z
-    //   41: ifeq +299 -> 340
-    //   44: aload_0
-    //   45: getfield 52	com/estrongs/android/pop/app/LocalFileSharingActivity:c	Z
-    //   48: ifeq +227 -> 275
-    //   51: new 398	android/app/Notification
-    //   54: dup
-    //   55: invokespecial 399	android/app/Notification:<init>	()V
-    //   58: astore 5
-    //   60: aload 5
-    //   62: aload_0
-    //   63: ldc_w 400
-    //   66: invokevirtual 404	com/estrongs/android/pop/app/LocalFileSharingActivity:getString	(I)Ljava/lang/String;
-    //   69: putfield 408	android/app/Notification:tickerText	Ljava/lang/CharSequence;
-    //   72: aload 5
-    //   74: invokestatic 414	java/lang/System:currentTimeMillis	()J
-    //   77: putfield 418	android/app/Notification:when	J
-    //   80: aload 5
-    //   82: ldc_w 299
-    //   85: putfield 422	android/app/Notification:icon	I
-    //   88: aload 5
-    //   90: aload 5
-    //   92: getfield 425	android/app/Notification:flags	I
-    //   95: iconst_2
-    //   96: ior
-    //   97: putfield 425	android/app/Notification:flags	I
-    //   100: aload_0
-    //   101: aload_0
-    //   102: getfield 57	com/estrongs/android/pop/app/LocalFileSharingActivity:f	Ljava/util/List;
-    //   105: iconst_0
-    //   106: invokeinterface 113 2 0
-    //   111: checkcast 142	com/estrongs/fs/h
-    //   114: aload_0
-    //   115: getfield 266	com/estrongs/android/pop/app/LocalFileSharingActivity:e	[Lcom/estrongs/android/pop/app/ef;
-    //   118: iload_2
-    //   119: aaload
-    //   120: getfield 337	com/estrongs/android/pop/app/ef:b	Ljava/lang/String;
-    //   123: invokestatic 430	com/estrongs/fs/b/ay:a	(Landroid/content/Context;Lcom/estrongs/fs/h;Ljava/lang/String;)Lcom/estrongs/fs/b/ay;
-    //   126: pop
-    //   127: new 75	android/content/Intent
-    //   130: dup
-    //   131: aload_0
-    //   132: ldc_w 432
-    //   135: invokespecial 435	android/content/Intent:<init>	(Landroid/content/Context;Ljava/lang/Class;)V
-    //   138: astore 6
-    //   140: new 117	java/lang/StringBuilder
-    //   143: dup
-    //   144: invokespecial 118	java/lang/StringBuilder:<init>	()V
-    //   147: astore 7
-    //   149: aload_0
-    //   150: getfield 57	com/estrongs/android/pop/app/LocalFileSharingActivity:f	Ljava/util/List;
-    //   153: invokeinterface 109 1 0
-    //   158: istore_3
-    //   159: iconst_0
-    //   160: istore_1
-    //   161: iload_1
-    //   162: iload_3
-    //   163: if_icmpge +46 -> 209
-    //   166: aload 7
-    //   168: aload_0
-    //   169: getfield 57	com/estrongs/android/pop/app/LocalFileSharingActivity:f	Ljava/util/List;
-    //   172: iload_1
-    //   173: invokeinterface 113 2 0
-    //   178: checkcast 142	com/estrongs/fs/h
-    //   181: invokeinterface 436 1 0
-    //   186: invokevirtual 126	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   189: pop
-    //   190: iload_1
-    //   191: iload_3
-    //   192: iconst_1
-    //   193: isub
-    //   194: if_icmpge +139 -> 333
-    //   197: aload 7
-    //   199: ldc_w 438
-    //   202: invokevirtual 126	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   205: pop
-    //   206: goto +127 -> 333
-    //   209: aload 6
-    //   211: ldc_w 439
-    //   214: invokevirtual 443	android/content/Intent:addFlags	(I)Landroid/content/Intent;
-    //   217: pop
-    //   218: aload 6
-    //   220: ldc_w 445
-    //   223: aload 7
-    //   225: invokevirtual 136	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   228: invokevirtual 448	android/content/Intent:putExtra	(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-    //   231: pop
-    //   232: aload_0
-    //   233: iconst_0
-    //   234: aload 6
-    //   236: ldc_w 449
-    //   239: invokestatic 455	android/app/PendingIntent:getActivity	(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
-    //   242: astore 6
-    //   244: aload 5
-    //   246: aload_0
-    //   247: aload_0
-    //   248: ldc_w 400
-    //   251: invokevirtual 404	com/estrongs/android/pop/app/LocalFileSharingActivity:getString	(I)Ljava/lang/String;
-    //   254: aconst_null
-    //   255: aload 6
-    //   257: invokevirtual 459	android/app/Notification:setLatestEventInfo	(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
-    //   260: aload_0
-    //   261: getfield 461	com/estrongs/android/pop/app/LocalFileSharingActivity:b	Landroid/app/NotificationManager;
-    //   264: iconst_1
-    //   265: aload 5
-    //   267: invokevirtual 467	android/app/NotificationManager:notify	(ILandroid/app/Notification;)V
-    //   270: iconst_1
-    //   271: istore_1
-    //   272: goto +68 -> 340
-    //   275: aload_0
-    //   276: aload_0
-    //   277: getfield 57	com/estrongs/android/pop/app/LocalFileSharingActivity:f	Ljava/util/List;
-    //   280: aload_0
-    //   281: getfield 266	com/estrongs/android/pop/app/LocalFileSharingActivity:e	[Lcom/estrongs/android/pop/app/ef;
-    //   284: iload_2
-    //   285: aaload
-    //   286: getfield 337	com/estrongs/android/pop/app/ef:b	Ljava/lang/String;
-    //   289: iconst_1
-    //   290: invokestatic 472	com/estrongs/fs/b/bm:a	(Landroid/app/Activity;Ljava/util/List;Ljava/lang/String;Z)Lcom/estrongs/fs/b/bm;
-    //   293: pop
-    //   294: iconst_1
-    //   295: istore_1
-    //   296: goto +44 -> 340
-    //   299: iload_1
-    //   300: ifeq +11 -> 311
-    //   303: aload_0
-    //   304: invokevirtual 475	com/estrongs/android/pop/app/LocalFileSharingActivity:finish	()V
-    //   307: aload 4
-    //   309: monitorexit
-    //   310: return
-    //   311: aload_0
-    //   312: ldc_w 476
-    //   315: iconst_1
-    //   316: invokestatic 481	com/estrongs/android/ui/view/ag:a	(Landroid/content/Context;II)V
-    //   319: goto -12 -> 307
-    //   322: astore 5
-    //   324: aload 4
-    //   326: monitorexit
-    //   327: aload 5
-    //   329: athrow
-    //   330: astore 4
-    //   332: return
-    //   333: iload_1
-    //   334: iconst_1
-    //   335: iadd
-    //   336: istore_1
-    //   337: goto -176 -> 161
-    //   340: iload_2
-    //   341: iconst_1
-    //   342: iadd
-    //   343: istore_2
-    //   344: goto -321 -> 23
+    //   1: ldc_w 340
+    //   4: invokevirtual 343	com/estrongs/android/pop/app/LocalFileSharingActivity:setTitle	(I)V
+    //   7: aload_0
+    //   8: getfield 223	com/estrongs/android/pop/app/LocalFileSharingActivity:e	[Lcom/estrongs/android/pop/app/ee;
+    //   11: astore 4
+    //   13: aload 4
+    //   15: monitorenter
+    //   16: iconst_0
+    //   17: istore_2
+    //   18: iconst_0
+    //   19: istore_1
+    //   20: iload_2
+    //   21: aload_0
+    //   22: getfield 223	com/estrongs/android/pop/app/LocalFileSharingActivity:e	[Lcom/estrongs/android/pop/app/ee;
+    //   25: arraylength
+    //   26: if_icmpge +270 -> 296
+    //   29: aload_0
+    //   30: getfield 223	com/estrongs/android/pop/app/LocalFileSharingActivity:e	[Lcom/estrongs/android/pop/app/ee;
+    //   33: iload_2
+    //   34: aaload
+    //   35: getfield 268	com/estrongs/android/pop/app/ee:c	Z
+    //   38: ifeq +299 -> 337
+    //   41: aload_0
+    //   42: getfield 48	com/estrongs/android/pop/app/LocalFileSharingActivity:c	Z
+    //   45: ifeq +227 -> 272
+    //   48: new 345	android/app/Notification
+    //   51: dup
+    //   52: invokespecial 346	android/app/Notification:<init>	()V
+    //   55: astore 5
+    //   57: aload 5
+    //   59: aload_0
+    //   60: ldc_w 347
+    //   63: invokevirtual 351	com/estrongs/android/pop/app/LocalFileSharingActivity:getString	(I)Ljava/lang/String;
+    //   66: putfield 355	android/app/Notification:tickerText	Ljava/lang/CharSequence;
+    //   69: aload 5
+    //   71: invokestatic 361	java/lang/System:currentTimeMillis	()J
+    //   74: putfield 365	android/app/Notification:when	J
+    //   77: aload 5
+    //   79: ldc_w 329
+    //   82: putfield 369	android/app/Notification:icon	I
+    //   85: aload 5
+    //   87: aload 5
+    //   89: getfield 372	android/app/Notification:flags	I
+    //   92: iconst_2
+    //   93: ior
+    //   94: putfield 372	android/app/Notification:flags	I
+    //   97: aload_0
+    //   98: aload_0
+    //   99: getfield 53	com/estrongs/android/pop/app/LocalFileSharingActivity:f	Ljava/util/List;
+    //   102: iconst_0
+    //   103: invokeinterface 111 2 0
+    //   108: checkcast 140	com/estrongs/fs/h
+    //   111: aload_0
+    //   112: getfield 223	com/estrongs/android/pop/app/LocalFileSharingActivity:e	[Lcom/estrongs/android/pop/app/ee;
+    //   115: iload_2
+    //   116: aaload
+    //   117: getfield 264	com/estrongs/android/pop/app/ee:b	Ljava/lang/String;
+    //   120: invokestatic 377	com/estrongs/fs/b/ba:a	(Landroid/content/Context;Lcom/estrongs/fs/h;Ljava/lang/String;)Lcom/estrongs/fs/b/ba;
+    //   123: pop
+    //   124: new 62	android/content/Intent
+    //   127: dup
+    //   128: aload_0
+    //   129: ldc_w 379
+    //   132: invokespecial 382	android/content/Intent:<init>	(Landroid/content/Context;Ljava/lang/Class;)V
+    //   135: astore 6
+    //   137: new 115	java/lang/StringBuilder
+    //   140: dup
+    //   141: invokespecial 116	java/lang/StringBuilder:<init>	()V
+    //   144: astore 7
+    //   146: aload_0
+    //   147: getfield 53	com/estrongs/android/pop/app/LocalFileSharingActivity:f	Ljava/util/List;
+    //   150: invokeinterface 107 1 0
+    //   155: istore_3
+    //   156: iconst_0
+    //   157: istore_1
+    //   158: iload_1
+    //   159: iload_3
+    //   160: if_icmpge +46 -> 206
+    //   163: aload 7
+    //   165: aload_0
+    //   166: getfield 53	com/estrongs/android/pop/app/LocalFileSharingActivity:f	Ljava/util/List;
+    //   169: iload_1
+    //   170: invokeinterface 111 2 0
+    //   175: checkcast 140	com/estrongs/fs/h
+    //   178: invokeinterface 383 1 0
+    //   183: invokevirtual 124	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   186: pop
+    //   187: iload_1
+    //   188: iload_3
+    //   189: iconst_1
+    //   190: isub
+    //   191: if_icmpge +139 -> 330
+    //   194: aload 7
+    //   196: ldc_w 385
+    //   199: invokevirtual 124	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   202: pop
+    //   203: goto +127 -> 330
+    //   206: aload 6
+    //   208: ldc_w 386
+    //   211: invokevirtual 390	android/content/Intent:addFlags	(I)Landroid/content/Intent;
+    //   214: pop
+    //   215: aload 6
+    //   217: ldc_w 392
+    //   220: aload 7
+    //   222: invokevirtual 134	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   225: invokevirtual 395	android/content/Intent:putExtra	(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    //   228: pop
+    //   229: aload_0
+    //   230: iconst_0
+    //   231: aload 6
+    //   233: ldc_w 396
+    //   236: invokestatic 402	android/app/PendingIntent:getActivity	(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+    //   239: astore 6
+    //   241: aload 5
+    //   243: aload_0
+    //   244: aload_0
+    //   245: ldc_w 347
+    //   248: invokevirtual 351	com/estrongs/android/pop/app/LocalFileSharingActivity:getString	(I)Ljava/lang/String;
+    //   251: aconst_null
+    //   252: aload 6
+    //   254: invokevirtual 406	android/app/Notification:setLatestEventInfo	(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
+    //   257: aload_0
+    //   258: getfield 408	com/estrongs/android/pop/app/LocalFileSharingActivity:b	Landroid/app/NotificationManager;
+    //   261: iconst_1
+    //   262: aload 5
+    //   264: invokevirtual 414	android/app/NotificationManager:notify	(ILandroid/app/Notification;)V
+    //   267: iconst_1
+    //   268: istore_1
+    //   269: goto +68 -> 337
+    //   272: aload_0
+    //   273: aload_0
+    //   274: getfield 53	com/estrongs/android/pop/app/LocalFileSharingActivity:f	Ljava/util/List;
+    //   277: aload_0
+    //   278: getfield 223	com/estrongs/android/pop/app/LocalFileSharingActivity:e	[Lcom/estrongs/android/pop/app/ee;
+    //   281: iload_2
+    //   282: aaload
+    //   283: getfield 264	com/estrongs/android/pop/app/ee:b	Ljava/lang/String;
+    //   286: iconst_1
+    //   287: invokestatic 419	com/estrongs/fs/b/bo:a	(Landroid/app/Activity;Ljava/util/List;Ljava/lang/String;Z)Lcom/estrongs/fs/b/bo;
+    //   290: pop
+    //   291: iconst_1
+    //   292: istore_1
+    //   293: goto +44 -> 337
+    //   296: iload_1
+    //   297: ifeq +11 -> 308
+    //   300: aload_0
+    //   301: invokevirtual 422	com/estrongs/android/pop/app/LocalFileSharingActivity:finish	()V
+    //   304: aload 4
+    //   306: monitorexit
+    //   307: return
+    //   308: aload_0
+    //   309: ldc_w 423
+    //   312: iconst_1
+    //   313: invokestatic 428	com/estrongs/android/ui/view/ak:a	(Landroid/content/Context;II)V
+    //   316: goto -12 -> 304
+    //   319: astore 5
+    //   321: aload 4
+    //   323: monitorexit
+    //   324: aload 5
+    //   326: athrow
+    //   327: astore 4
+    //   329: return
+    //   330: iload_1
+    //   331: iconst_1
+    //   332: iadd
+    //   333: istore_1
+    //   334: goto -176 -> 158
+    //   337: iload_2
+    //   338: iconst_1
+    //   339: iadd
+    //   340: istore_2
+    //   341: goto -321 -> 20
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	347	0	this	LocalFileSharingActivity
-    //   22	315	1	i1	int
-    //   20	324	2	i2	int
-    //   158	36	3	i3	int
-    //   14	311	4	arrayOfef	ef[]
-    //   330	1	4	localException	Exception
-    //   58	208	5	localNotification	android.app.Notification
-    //   322	6	5	localObject1	Object
-    //   138	118	6	localObject2	Object
-    //   147	77	7	localStringBuilder	StringBuilder
+    //   0	344	0	this	LocalFileSharingActivity
+    //   19	315	1	i1	int
+    //   17	324	2	i2	int
+    //   155	36	3	i3	int
+    //   11	311	4	arrayOfee	ee[]
+    //   327	1	4	localException	Exception
+    //   55	208	5	localNotification	android.app.Notification
+    //   319	6	5	localObject1	Object
+    //   135	118	6	localObject2	Object
+    //   144	77	7	localStringBuilder	StringBuilder
     // Exception table:
     //   from	to	target	type
-    //   23	32	322	finally
-    //   32	159	322	finally
-    //   166	190	322	finally
-    //   197	206	322	finally
-    //   209	270	322	finally
-    //   275	294	322	finally
-    //   303	307	322	finally
-    //   307	310	322	finally
-    //   311	319	322	finally
-    //   324	327	322	finally
-    //   0	19	330	java/lang/Exception
-    //   327	330	330	java/lang/Exception
+    //   20	29	319	finally
+    //   29	156	319	finally
+    //   163	187	319	finally
+    //   194	203	319	finally
+    //   206	267	319	finally
+    //   272	291	319	finally
+    //   300	304	319	finally
+    //   304	307	319	finally
+    //   308	316	319	finally
+    //   321	324	319	finally
+    //   0	16	327	java/lang/Exception
+    //   324	327	327	java/lang/Exception
   }
   
-  public void c()
+  public void f()
   {
     if (h != null)
     {
-      new jw(this, getString(2131427446), h).show();
+      new kh(this, getString(2131232190), h).show();
       return;
     }
-    h = au.a(this, this, this, true);
-    q.setVisibility(0);
+    h = aw.a(this, this, this, true);
+    m.setVisibility(0);
   }
   
-  public void d()
-  {
-    ef[] arrayOfef = e;
-    int i1 = 0;
-    try
-    {
-      while (i1 < e.length)
-      {
-        e[i1].c = true;
-        i1 += 1;
-      }
-      l();
-      g.notifyDataSetChanged();
-      return;
-    }
-    finally {}
-  }
-  
-  public void e()
+  public void h()
   {
     int i1 = 0;
     synchronized (e)
@@ -511,45 +475,50 @@ public class LocalFileSharingActivity
         e[i1].c = false;
         i1 += 1;
       }
-      l();
+      m();
       g.notifyDataSetChanged();
       return;
     }
   }
   
-  public void f()
+  public void h_()
   {
-    if (o == null)
+    ee[] arrayOfee = e;
+    int i1 = 0;
+    try
     {
-      Object localObject = g.a(this).inflate(2130903097, null);
-      ((Button)((View)localObject).findViewById(2131362073)).setOnClickListener(new ea(this));
-      localObject = new ct(this).a(2131427404).a((View)localObject);
-      if (!z.D) {
-        ((ct)localObject).d(2131427340, new ed(this)).e(2131427397, new ec(this)).f(2131427521, new eb(this));
-      }
-      for (;;)
+      while (i1 < e.length)
       {
-        o = ((ct)localObject).c();
-        return;
-        ((ct)localObject).b(2131427340, new dv(this)).c(2131427397, new ee(this));
+        e[i1].c = true;
+        i1 += 1;
       }
+      m();
+      g.notifyDataSetChanged();
+      return;
     }
-    o.show();
+    finally {}
   }
   
-  public void onConfigurationChanged(Configuration paramConfiguration)
+  public void i()
   {
-    boolean bool = true;
-    super.onConfigurationChanged(paramConfiguration);
-    if (getResourcesgetConfigurationorientation == 1) {}
-    for (;;)
+    if (l == null)
     {
-      n = bool;
-      h();
-      a(false);
-      return;
-      bool = false;
+      View localView = k.a(this).inflate(2130903185, null);
+      cv localcv = new cv(this).a(2131231718).a(localView);
+      ((Button)localView.findViewById(2131624536)).setOnClickListener(new eb(this));
+      ((Button)localView.findViewById(2131624637)).setOnClickListener(new ec(this, localcv));
+      Button localButton = (Button)localView.findViewById(2131624638);
+      localButton.setOnClickListener(new ed(this, localcv));
+      ((Button)localView.findViewById(2131624639)).setOnClickListener(new du(this, localcv));
+      if (!z.D) {}
+      for (;;)
+      {
+        l = localcv.c();
+        return;
+        localButton.setVisibility(8);
+      }
     }
+    l.show();
   }
   
   /* Error */
@@ -557,464 +526,446 @@ public class LocalFileSharingActivity
   {
     // Byte code:
     //   0: aconst_null
-    //   1: astore 7
+    //   1: astore 6
     //   3: aconst_null
-    //   4: astore 6
+    //   4: astore 5
     //   6: aload_0
     //   7: aload_1
-    //   8: invokespecial 582	com/estrongs/android/pop/esclasses/ESActivity:onCreate	(Landroid/os/Bundle;)V
+    //   8: invokespecial 507	com/estrongs/android/ui/base/HomeAsBackActivity:onCreate	(Landroid/os/Bundle;)V
     //   11: aload_0
-    //   12: ldc_w 583
-    //   15: invokevirtual 586	com/estrongs/android/pop/app/LocalFileSharingActivity:setContentView	(I)V
+    //   12: ldc_w 508
+    //   15: invokevirtual 511	com/estrongs/android/pop/app/LocalFileSharingActivity:setContentView	(I)V
     //   18: aload_0
-    //   19: aload_0
-    //   20: ldc_w 587
-    //   23: invokevirtual 213	com/estrongs/android/pop/app/LocalFileSharingActivity:findViewById	(I)Landroid/view/View;
-    //   26: checkcast 189	android/widget/FrameLayout
-    //   29: putfield 187	com/estrongs/android/pop/app/LocalFileSharingActivity:r	Landroid/widget/FrameLayout;
-    //   32: aload_0
-    //   33: aload_0
-    //   34: ldc_w 589
-    //   37: invokevirtual 593	com/estrongs/android/pop/app/LocalFileSharingActivity:getSystemService	(Ljava/lang/String;)Ljava/lang/Object;
-    //   40: checkcast 463	android/app/NotificationManager
-    //   43: putfield 461	com/estrongs/android/pop/app/LocalFileSharingActivity:b	Landroid/app/NotificationManager;
-    //   46: aload_0
+    //   19: ldc_w 512
+    //   22: invokevirtual 343	com/estrongs/android/pop/app/LocalFileSharingActivity:setTitle	(I)V
+    //   25: aload_0
+    //   26: aload_0
+    //   27: ldc_w 514
+    //   30: invokevirtual 518	com/estrongs/android/pop/app/LocalFileSharingActivity:getSystemService	(Ljava/lang/String;)Ljava/lang/Object;
+    //   33: checkcast 410	android/app/NotificationManager
+    //   36: putfield 408	com/estrongs/android/pop/app/LocalFileSharingActivity:b	Landroid/app/NotificationManager;
+    //   39: aload_0
+    //   40: aload_0
+    //   41: invokevirtual 521	com/estrongs/android/pop/app/LocalFileSharingActivity:J	()Lcom/estrongs/android/ui/theme/at;
+    //   44: putfield 253	com/estrongs/android/pop/app/LocalFileSharingActivity:k	Lcom/estrongs/android/ui/theme/at;
     //   47: aload_0
-    //   48: invokestatic 596	com/estrongs/android/ui/theme/al:a	(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
-    //   51: putfield 215	com/estrongs/android/pop/app/LocalFileSharingActivity:k	Lcom/estrongs/android/ui/theme/al;
-    //   54: aload_0
-    //   55: invokevirtual 563	com/estrongs/android/pop/app/LocalFileSharingActivity:getResources	()Landroid/content/res/Resources;
-    //   58: invokevirtual 569	android/content/res/Resources:getConfiguration	()Landroid/content/res/Configuration;
-    //   61: getfield 574	android/content/res/Configuration:orientation	I
-    //   64: iconst_1
-    //   65: if_icmpne +128 -> 193
-    //   68: iconst_1
-    //   69: istore_3
-    //   70: aload_0
-    //   71: iload_3
-    //   72: putfield 259	com/estrongs/android/pop/app/LocalFileSharingActivity:n	Z
-    //   75: aload_0
-    //   76: aload_0
-    //   77: invokestatic 330	com/estrongs/fs/b/au:b	(Landroid/content/Context;)[Ljava/lang/String;
-    //   80: invokestatic 335	com/estrongs/android/pop/app/ef:a	([Ljava/lang/String;)[Lcom/estrongs/android/pop/app/ef;
-    //   83: putfield 266	com/estrongs/android/pop/app/LocalFileSharingActivity:e	[Lcom/estrongs/android/pop/app/ef;
-    //   86: aload_0
-    //   87: aload_0
-    //   88: invokevirtual 600	com/estrongs/android/pop/app/LocalFileSharingActivity:getIntent	()Landroid/content/Intent;
-    //   91: ldc 78
-    //   93: iconst_0
-    //   94: invokevirtual 604	android/content/Intent:getBooleanExtra	(Ljava/lang/String;Z)Z
-    //   97: putfield 52	com/estrongs/android/pop/app/LocalFileSharingActivity:c	Z
-    //   100: aload_0
-    //   101: invokevirtual 600	com/estrongs/android/pop/app/LocalFileSharingActivity:getIntent	()Landroid/content/Intent;
-    //   104: ldc 84
-    //   106: invokevirtual 608	android/content/Intent:getStringArrayListExtra	(Ljava/lang/String;)Ljava/util/ArrayList;
-    //   109: astore_1
-    //   110: aload_1
-    //   111: ifnull +87 -> 198
-    //   114: iconst_0
-    //   115: istore_2
-    //   116: iload_2
-    //   117: aload_1
-    //   118: invokevirtual 153	java/util/ArrayList:size	()I
-    //   121: if_icmpge +721 -> 842
-    //   124: aload_1
-    //   125: iload_2
-    //   126: invokevirtual 154	java/util/ArrayList:get	(I)Ljava/lang/Object;
-    //   129: checkcast 156	java/lang/String
-    //   132: ldc -128
-    //   134: invokevirtual 612	java/lang/String:split	(Ljava/lang/String;)[Ljava/lang/String;
-    //   137: astore 4
-    //   139: aload_0
-    //   140: invokestatic 617	com/estrongs/fs/d:a	(Landroid/content/Context;)Lcom/estrongs/fs/d;
-    //   143: aload 4
-    //   145: iconst_0
-    //   146: aaload
-    //   147: invokevirtual 620	com/estrongs/fs/d:j	(Ljava/lang/String;)Lcom/estrongs/fs/h;
-    //   150: astore 5
-    //   152: aload 4
-    //   154: arraylength
+    //   48: aload_0
+    //   49: invokestatic 257	com/estrongs/fs/b/aw:b	(Landroid/content/Context;)[Ljava/lang/String;
+    //   52: invokestatic 262	com/estrongs/android/pop/app/ee:a	([Ljava/lang/String;)[Lcom/estrongs/android/pop/app/ee;
+    //   55: putfield 223	com/estrongs/android/pop/app/LocalFileSharingActivity:e	[Lcom/estrongs/android/pop/app/ee;
+    //   58: aload_0
+    //   59: aload_0
+    //   60: invokevirtual 525	com/estrongs/android/pop/app/LocalFileSharingActivity:getIntent	()Landroid/content/Intent;
+    //   63: ldc 65
+    //   65: iconst_0
+    //   66: invokevirtual 529	android/content/Intent:getBooleanExtra	(Ljava/lang/String;Z)Z
+    //   69: putfield 48	com/estrongs/android/pop/app/LocalFileSharingActivity:c	Z
+    //   72: aload_0
+    //   73: invokevirtual 525	com/estrongs/android/pop/app/LocalFileSharingActivity:getIntent	()Landroid/content/Intent;
+    //   76: ldc 71
+    //   78: invokevirtual 533	android/content/Intent:getStringArrayListExtra	(Ljava/lang/String;)Ljava/util/ArrayList;
+    //   81: astore_1
+    //   82: aload_1
+    //   83: ifnull +78 -> 161
+    //   86: iconst_0
+    //   87: istore_2
+    //   88: iload_2
+    //   89: aload_1
+    //   90: invokevirtual 151	java/util/ArrayList:size	()I
+    //   93: if_icmpge +686 -> 779
+    //   96: aload_1
+    //   97: iload_2
+    //   98: invokevirtual 152	java/util/ArrayList:get	(I)Ljava/lang/Object;
+    //   101: checkcast 154	java/lang/String
+    //   104: ldc 126
+    //   106: invokevirtual 537	java/lang/String:split	(Ljava/lang/String;)[Ljava/lang/String;
+    //   109: astore_3
+    //   110: aload_0
+    //   111: invokestatic 542	com/estrongs/fs/d:a	(Landroid/content/Context;)Lcom/estrongs/fs/d;
+    //   114: aload_3
+    //   115: iconst_0
+    //   116: aaload
+    //   117: invokevirtual 545	com/estrongs/fs/d:j	(Ljava/lang/String;)Lcom/estrongs/fs/h;
+    //   120: astore 4
+    //   122: aload_3
+    //   123: arraylength
+    //   124: iconst_1
+    //   125: if_icmple +17 -> 142
+    //   128: aload 4
+    //   130: ldc_w 547
+    //   133: aload_3
+    //   134: iconst_1
+    //   135: aaload
+    //   136: invokeinterface 550 3 0
+    //   141: pop
+    //   142: aload_0
+    //   143: getfield 53	com/estrongs/android/pop/app/LocalFileSharingActivity:f	Ljava/util/List;
+    //   146: aload 4
+    //   148: invokeinterface 334 2 0
+    //   153: pop
+    //   154: iload_2
     //   155: iconst_1
-    //   156: if_icmple +18 -> 174
-    //   159: aload 5
-    //   161: ldc_w 622
-    //   164: aload 4
-    //   166: iconst_1
-    //   167: aaload
-    //   168: invokeinterface 625 3 0
-    //   173: pop
-    //   174: aload_0
-    //   175: getfield 57	com/estrongs/android/pop/app/LocalFileSharingActivity:f	Ljava/util/List;
-    //   178: aload 5
-    //   180: invokeinterface 626 2 0
-    //   185: pop
-    //   186: iload_2
-    //   187: iconst_1
-    //   188: iadd
-    //   189: istore_2
-    //   190: goto -74 -> 116
-    //   193: iconst_0
-    //   194: istore_3
-    //   195: goto -125 -> 70
-    //   198: aload_0
-    //   199: invokevirtual 600	com/estrongs/android/pop/app/LocalFileSharingActivity:getIntent	()Landroid/content/Intent;
-    //   202: invokevirtual 629	android/content/Intent:getAction	()Ljava/lang/String;
-    //   205: astore_1
-    //   206: getstatic 633	java/lang/System:out	Ljava/io/PrintStream;
-    //   209: new 117	java/lang/StringBuilder
-    //   212: dup
-    //   213: invokespecial 118	java/lang/StringBuilder:<init>	()V
-    //   216: ldc_w 635
-    //   219: invokevirtual 126	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   222: aload_1
-    //   223: invokevirtual 126	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   226: invokevirtual 136	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   229: invokevirtual 641	java/io/PrintStream:println	(Ljava/lang/String;)V
-    //   232: aload_1
-    //   233: ifnull +293 -> 526
-    //   236: aload_1
-    //   237: ldc_w 643
-    //   240: invokevirtual 340	java/lang/String:equals	(Ljava/lang/Object;)Z
-    //   243: ifeq +283 -> 526
-    //   246: aload_0
-    //   247: invokevirtual 600	com/estrongs/android/pop/app/LocalFileSharingActivity:getIntent	()Landroid/content/Intent;
-    //   250: ldc_w 645
-    //   253: invokevirtual 649	android/content/Intent:getParcelableExtra	(Ljava/lang/String;)Landroid/os/Parcelable;
-    //   256: checkcast 651	android/net/Uri
-    //   259: astore 6
-    //   261: aload 6
-    //   263: ifnonnull +8 -> 271
-    //   266: aload_0
-    //   267: invokevirtual 475	com/estrongs/android/pop/app/LocalFileSharingActivity:finish	()V
-    //   270: return
-    //   271: aload 6
-    //   273: invokevirtual 654	android/net/Uri:getPath	()Ljava/lang/String;
-    //   276: astore_1
-    //   277: aload_0
-    //   278: invokestatic 617	com/estrongs/fs/d:a	(Landroid/content/Context;)Lcom/estrongs/fs/d;
-    //   281: astore 7
-    //   283: aload 6
-    //   285: invokevirtual 657	android/net/Uri:getScheme	()Ljava/lang/String;
-    //   288: astore 5
-    //   290: aload_1
-    //   291: astore 4
-    //   293: aload 5
-    //   295: ifnull +140 -> 435
-    //   298: aload_1
-    //   299: astore 4
-    //   301: aload 5
-    //   303: ldc_w 659
-    //   306: invokevirtual 662	java/lang/String:startsWith	(Ljava/lang/String;)Z
-    //   309: ifeq +126 -> 435
-    //   312: aload 6
-    //   314: invokevirtual 665	android/net/Uri:getHost	()Ljava/lang/String;
-    //   317: astore_1
-    //   318: aload_1
-    //   319: ldc_w 667
-    //   322: invokevirtual 340	java/lang/String:equals	(Ljava/lang/Object;)Z
-    //   325: ifne +26 -> 351
-    //   328: ldc_w 669
-    //   331: aload_1
-    //   332: invokevirtual 340	java/lang/String:equals	(Ljava/lang/Object;)Z
-    //   335: ifne +16 -> 351
-    //   338: aload_0
-    //   339: ldc_w 670
-    //   342: iconst_1
-    //   343: invokestatic 481	com/estrongs/android/ui/view/ag:a	(Landroid/content/Context;II)V
-    //   346: aload_0
-    //   347: invokevirtual 475	com/estrongs/android/pop/app/LocalFileSharingActivity:finish	()V
-    //   350: return
-    //   351: aload_0
-    //   352: invokevirtual 674	com/estrongs/android/pop/app/LocalFileSharingActivity:getContentResolver	()Landroid/content/ContentResolver;
-    //   355: aload 6
-    //   357: iconst_1
-    //   358: anewarray 156	java/lang/String
-    //   361: dup
-    //   362: iconst_0
-    //   363: ldc_w 676
-    //   366: aastore
-    //   367: aconst_null
-    //   368: aconst_null
-    //   369: aconst_null
-    //   370: invokevirtual 682	android/content/ContentResolver:query	(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-    //   373: astore_1
-    //   374: aload_1
-    //   375: ifnonnull +18 -> 393
-    //   378: aload_0
-    //   379: invokevirtual 475	com/estrongs/android/pop/app/LocalFileSharingActivity:finish	()V
-    //   382: aload_1
-    //   383: ifnull -113 -> 270
-    //   386: aload_1
-    //   387: invokeinterface 687 1 0
-    //   392: return
-    //   393: aload_1
-    //   394: invokeinterface 691 1 0
-    //   399: pop
-    //   400: aload_1
-    //   401: aload_1
-    //   402: ldc_w 676
-    //   405: invokeinterface 695 2 0
-    //   410: invokeinterface 696 2 0
-    //   415: astore 5
-    //   417: aload 5
-    //   419: astore 4
-    //   421: aload_1
-    //   422: ifnull +13 -> 435
+    //   156: iadd
+    //   157: istore_2
+    //   158: goto -70 -> 88
+    //   161: aload_0
+    //   162: invokevirtual 525	com/estrongs/android/pop/app/LocalFileSharingActivity:getIntent	()Landroid/content/Intent;
+    //   165: invokevirtual 553	android/content/Intent:getAction	()Ljava/lang/String;
+    //   168: astore_1
+    //   169: getstatic 557	java/lang/System:out	Ljava/io/PrintStream;
+    //   172: new 115	java/lang/StringBuilder
+    //   175: dup
+    //   176: invokespecial 116	java/lang/StringBuilder:<init>	()V
+    //   179: ldc_w 559
+    //   182: invokevirtual 124	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   185: aload_1
+    //   186: invokevirtual 124	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   189: invokevirtual 134	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   192: invokevirtual 565	java/io/PrintStream:println	(Ljava/lang/String;)V
+    //   195: aload_1
+    //   196: ifnull +286 -> 482
+    //   199: aload_1
+    //   200: ldc_w 567
+    //   203: invokevirtual 267	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   206: ifeq +276 -> 482
+    //   209: aload_0
+    //   210: invokevirtual 525	com/estrongs/android/pop/app/LocalFileSharingActivity:getIntent	()Landroid/content/Intent;
+    //   213: ldc_w 569
+    //   216: invokevirtual 573	android/content/Intent:getParcelableExtra	(Ljava/lang/String;)Landroid/os/Parcelable;
+    //   219: checkcast 575	android/net/Uri
+    //   222: astore 5
+    //   224: aload 5
+    //   226: ifnonnull +8 -> 234
+    //   229: aload_0
+    //   230: invokevirtual 422	com/estrongs/android/pop/app/LocalFileSharingActivity:finish	()V
+    //   233: return
+    //   234: aload 5
+    //   236: invokevirtual 578	android/net/Uri:getPath	()Ljava/lang/String;
+    //   239: astore_1
+    //   240: aload_0
+    //   241: invokestatic 542	com/estrongs/fs/d:a	(Landroid/content/Context;)Lcom/estrongs/fs/d;
+    //   244: astore 6
+    //   246: aload 5
+    //   248: invokevirtual 581	android/net/Uri:getScheme	()Ljava/lang/String;
+    //   251: astore 4
+    //   253: aload_1
+    //   254: astore_3
+    //   255: aload 4
+    //   257: ifnull +137 -> 394
+    //   260: aload_1
+    //   261: astore_3
+    //   262: aload 4
+    //   264: ldc_w 583
+    //   267: invokevirtual 586	java/lang/String:startsWith	(Ljava/lang/String;)Z
+    //   270: ifeq +124 -> 394
+    //   273: aload 5
+    //   275: invokevirtual 589	android/net/Uri:getHost	()Ljava/lang/String;
+    //   278: astore_1
+    //   279: aload_1
+    //   280: ldc_w 591
+    //   283: invokevirtual 267	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   286: ifne +26 -> 312
+    //   289: ldc_w 593
+    //   292: aload_1
+    //   293: invokevirtual 267	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   296: ifne +16 -> 312
+    //   299: aload_0
+    //   300: ldc_w 594
+    //   303: iconst_1
+    //   304: invokestatic 428	com/estrongs/android/ui/view/ak:a	(Landroid/content/Context;II)V
+    //   307: aload_0
+    //   308: invokevirtual 422	com/estrongs/android/pop/app/LocalFileSharingActivity:finish	()V
+    //   311: return
+    //   312: aload_0
+    //   313: invokevirtual 598	com/estrongs/android/pop/app/LocalFileSharingActivity:getContentResolver	()Landroid/content/ContentResolver;
+    //   316: aload 5
+    //   318: iconst_1
+    //   319: anewarray 154	java/lang/String
+    //   322: dup
+    //   323: iconst_0
+    //   324: ldc_w 600
+    //   327: aastore
+    //   328: aconst_null
+    //   329: aconst_null
+    //   330: aconst_null
+    //   331: invokevirtual 606	android/content/ContentResolver:query	(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    //   334: astore_1
+    //   335: aload_1
+    //   336: ifnonnull +18 -> 354
+    //   339: aload_0
+    //   340: invokevirtual 422	com/estrongs/android/pop/app/LocalFileSharingActivity:finish	()V
+    //   343: aload_1
+    //   344: ifnull -111 -> 233
+    //   347: aload_1
+    //   348: invokeinterface 611 1 0
+    //   353: return
+    //   354: aload_1
+    //   355: invokeinterface 615 1 0
+    //   360: pop
+    //   361: aload_1
+    //   362: aload_1
+    //   363: ldc_w 600
+    //   366: invokeinterface 619 2 0
+    //   371: invokeinterface 620 2 0
+    //   376: astore 4
+    //   378: aload 4
+    //   380: astore_3
+    //   381: aload_1
+    //   382: ifnull +12 -> 394
+    //   385: aload_1
+    //   386: invokeinterface 611 1 0
+    //   391: aload 4
+    //   393: astore_3
+    //   394: aload_0
+    //   395: getfield 53	com/estrongs/android/pop/app/LocalFileSharingActivity:f	Ljava/util/List;
+    //   398: aload 6
+    //   400: aload_3
+    //   401: invokevirtual 545	com/estrongs/fs/d:j	(Ljava/lang/String;)Lcom/estrongs/fs/h;
+    //   404: invokeinterface 334 2 0
+    //   409: pop
+    //   410: aload_0
+    //   411: invokestatic 146	com/estrongs/fs/b/aw:a	(Landroid/content/Context;)[B
+    //   414: ifnonnull +365 -> 779
+    //   417: new 50	java/util/ArrayList
+    //   420: dup
+    //   421: invokespecial 51	java/util/ArrayList:<init>	()V
+    //   424: astore_1
     //   425: aload_1
-    //   426: invokeinterface 687 1 0
-    //   431: aload 5
-    //   433: astore 4
+    //   426: aload 5
+    //   428: invokevirtual 578	android/net/Uri:getPath	()Ljava/lang/String;
+    //   431: invokevirtual 138	java/util/ArrayList:add	(Ljava/lang/Object;)Z
+    //   434: pop
     //   435: aload_0
-    //   436: getfield 57	com/estrongs/android/pop/app/LocalFileSharingActivity:f	Ljava/util/List;
-    //   439: aload 7
-    //   441: aload 4
-    //   443: invokevirtual 620	com/estrongs/fs/d:j	(Ljava/lang/String;)Lcom/estrongs/fs/h;
-    //   446: invokeinterface 626 2 0
-    //   451: pop
+    //   436: aload_1
+    //   437: aload_0
+    //   438: getfield 48	com/estrongs/android/pop/app/LocalFileSharingActivity:c	Z
+    //   441: invokestatic 150	com/estrongs/android/pop/app/network/EsNetworkActivity:a	(Lcom/estrongs/android/pop/app/d/a;Ljava/util/ArrayList;Z)V
+    //   444: aload_0
+    //   445: invokevirtual 422	com/estrongs/android/pop/app/LocalFileSharingActivity:finish	()V
+    //   448: return
+    //   449: astore_1
+    //   450: aconst_null
+    //   451: astore_1
     //   452: aload_0
-    //   453: invokestatic 148	com/estrongs/fs/b/au:a	(Landroid/content/Context;)[B
-    //   456: ifnonnull +386 -> 842
-    //   459: new 54	java/util/ArrayList
-    //   462: dup
-    //   463: invokespecial 55	java/util/ArrayList:<init>	()V
-    //   466: astore_1
-    //   467: aload_1
-    //   468: aload 6
-    //   470: invokevirtual 654	android/net/Uri:getPath	()Ljava/lang/String;
-    //   473: invokevirtual 140	java/util/ArrayList:add	(Ljava/lang/Object;)Z
-    //   476: pop
-    //   477: aload_0
-    //   478: aload_1
-    //   479: aload_0
-    //   480: getfield 52	com/estrongs/android/pop/app/LocalFileSharingActivity:c	Z
-    //   483: invokestatic 152	com/estrongs/android/pop/app/network/EsNetworkActivity:a	(Lcom/estrongs/android/pop/esclasses/ESActivity;Ljava/util/ArrayList;Z)V
-    //   486: aload_0
-    //   487: invokevirtual 475	com/estrongs/android/pop/app/LocalFileSharingActivity:finish	()V
-    //   490: return
-    //   491: astore_1
-    //   492: aconst_null
-    //   493: astore_1
-    //   494: aload_0
-    //   495: invokevirtual 475	com/estrongs/android/pop/app/LocalFileSharingActivity:finish	()V
-    //   498: aload_1
-    //   499: ifnull -229 -> 270
-    //   502: aload_1
-    //   503: invokeinterface 687 1 0
-    //   508: return
-    //   509: astore 4
-    //   511: aconst_null
-    //   512: astore_1
-    //   513: aload_1
-    //   514: ifnull +9 -> 523
-    //   517: aload_1
-    //   518: invokeinterface 687 1 0
-    //   523: aload 4
-    //   525: athrow
-    //   526: aload_1
-    //   527: ifnull +310 -> 837
-    //   530: aload_1
-    //   531: ldc_w 698
-    //   534: invokevirtual 340	java/lang/String:equals	(Ljava/lang/Object;)Z
-    //   537: ifeq +300 -> 837
-    //   540: new 54	java/util/ArrayList
-    //   543: dup
-    //   544: invokespecial 55	java/util/ArrayList:<init>	()V
-    //   547: pop
-    //   548: aload_0
-    //   549: invokevirtual 600	com/estrongs/android/pop/app/LocalFileSharingActivity:getIntent	()Landroid/content/Intent;
-    //   552: ldc_w 645
-    //   555: invokevirtual 701	android/content/Intent:getParcelableArrayListExtra	(Ljava/lang/String;)Ljava/util/ArrayList;
+    //   453: invokevirtual 422	com/estrongs/android/pop/app/LocalFileSharingActivity:finish	()V
+    //   456: aload_1
+    //   457: ifnull -224 -> 233
+    //   460: aload_1
+    //   461: invokeinterface 611 1 0
+    //   466: return
+    //   467: astore_3
+    //   468: aconst_null
+    //   469: astore_1
+    //   470: aload_1
+    //   471: ifnull +9 -> 480
+    //   474: aload_1
+    //   475: invokeinterface 611 1 0
+    //   480: aload_3
+    //   481: athrow
+    //   482: aload_1
+    //   483: ifnull +291 -> 774
+    //   486: aload_1
+    //   487: ldc_w 622
+    //   490: invokevirtual 267	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   493: ifeq +281 -> 774
+    //   496: new 50	java/util/ArrayList
+    //   499: dup
+    //   500: invokespecial 51	java/util/ArrayList:<init>	()V
+    //   503: pop
+    //   504: aload_0
+    //   505: invokevirtual 525	com/estrongs/android/pop/app/LocalFileSharingActivity:getIntent	()Landroid/content/Intent;
+    //   508: ldc_w 569
+    //   511: invokevirtual 625	android/content/Intent:getParcelableArrayListExtra	(Ljava/lang/String;)Ljava/util/ArrayList;
+    //   514: astore 7
+    //   516: aload 7
+    //   518: ifnonnull +8 -> 526
+    //   521: aload_0
+    //   522: invokevirtual 422	com/estrongs/android/pop/app/LocalFileSharingActivity:finish	()V
+    //   525: return
+    //   526: iconst_0
+    //   527: istore_2
+    //   528: iload_2
+    //   529: aload 7
+    //   531: invokevirtual 151	java/util/ArrayList:size	()I
+    //   534: if_icmpge +245 -> 779
+    //   537: aload 7
+    //   539: iload_2
+    //   540: invokevirtual 152	java/util/ArrayList:get	(I)Ljava/lang/Object;
+    //   543: checkcast 575	android/net/Uri
+    //   546: astore 4
+    //   548: aload 4
+    //   550: invokevirtual 578	android/net/Uri:getPath	()Ljava/lang/String;
+    //   553: astore_3
+    //   554: aload_0
+    //   555: invokestatic 542	com/estrongs/fs/d:a	(Landroid/content/Context;)Lcom/estrongs/fs/d;
     //   558: astore 8
-    //   560: aload 8
-    //   562: ifnonnull +8 -> 570
-    //   565: aload_0
-    //   566: invokevirtual 475	com/estrongs/android/pop/app/LocalFileSharingActivity:finish	()V
-    //   569: return
-    //   570: iconst_0
-    //   571: istore_2
-    //   572: iload_2
-    //   573: aload 8
-    //   575: invokevirtual 153	java/util/ArrayList:size	()I
-    //   578: if_icmpge +264 -> 842
-    //   581: aload 8
-    //   583: iload_2
-    //   584: invokevirtual 154	java/util/ArrayList:get	(I)Ljava/lang/Object;
-    //   587: checkcast 651	android/net/Uri
-    //   590: astore 5
-    //   592: aload 5
-    //   594: invokevirtual 654	android/net/Uri:getPath	()Ljava/lang/String;
-    //   597: astore 4
-    //   599: aload_0
-    //   600: invokestatic 617	com/estrongs/fs/d:a	(Landroid/content/Context;)Lcom/estrongs/fs/d;
-    //   603: astore 9
-    //   605: aload 5
-    //   607: invokevirtual 657	android/net/Uri:getScheme	()Ljava/lang/String;
-    //   610: astore 10
-    //   612: aload 4
-    //   614: astore_1
-    //   615: aload 10
-    //   617: ifnull +150 -> 767
-    //   620: aload 4
-    //   622: astore_1
-    //   623: aload 10
-    //   625: ldc_w 659
-    //   628: invokevirtual 662	java/lang/String:startsWith	(Ljava/lang/String;)Z
-    //   631: ifeq +136 -> 767
-    //   634: aload 5
-    //   636: invokevirtual 665	android/net/Uri:getHost	()Ljava/lang/String;
-    //   639: astore_1
-    //   640: aload_1
-    //   641: ldc_w 667
-    //   644: invokevirtual 340	java/lang/String:equals	(Ljava/lang/Object;)Z
-    //   647: ifne +26 -> 673
-    //   650: ldc_w 669
-    //   653: aload_1
-    //   654: invokevirtual 340	java/lang/String:equals	(Ljava/lang/Object;)Z
-    //   657: ifne +16 -> 673
-    //   660: aload_0
-    //   661: ldc_w 670
-    //   664: iconst_1
-    //   665: invokestatic 481	com/estrongs/android/ui/view/ag:a	(Landroid/content/Context;II)V
-    //   668: aload_0
-    //   669: invokevirtual 475	com/estrongs/android/pop/app/LocalFileSharingActivity:finish	()V
-    //   672: return
-    //   673: aload 7
-    //   675: astore_1
-    //   676: aload_0
-    //   677: invokevirtual 674	com/estrongs/android/pop/app/LocalFileSharingActivity:getContentResolver	()Landroid/content/ContentResolver;
-    //   680: aload 5
-    //   682: iconst_1
-    //   683: anewarray 156	java/lang/String
-    //   686: dup
-    //   687: iconst_0
-    //   688: ldc_w 676
-    //   691: aastore
-    //   692: aconst_null
-    //   693: aconst_null
-    //   694: aconst_null
-    //   695: invokevirtual 682	android/content/ContentResolver:query	(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-    //   698: astore 4
-    //   700: aload 4
-    //   702: ifnonnull +20 -> 722
-    //   705: aload_0
-    //   706: invokevirtual 475	com/estrongs/android/pop/app/LocalFileSharingActivity:finish	()V
-    //   709: aload 4
-    //   711: ifnull -441 -> 270
-    //   714: aload 4
-    //   716: invokeinterface 687 1 0
-    //   721: return
-    //   722: aload 4
-    //   724: invokeinterface 691 1 0
-    //   729: pop
-    //   730: aload 4
-    //   732: aload 4
-    //   734: ldc_w 676
-    //   737: invokeinterface 695 2 0
-    //   742: invokeinterface 696 2 0
-    //   747: astore 5
-    //   749: aload 5
-    //   751: astore_1
-    //   752: aload 4
-    //   754: ifnull +13 -> 767
-    //   757: aload 4
-    //   759: invokeinterface 687 1 0
-    //   764: aload 5
-    //   766: astore_1
-    //   767: aload_0
-    //   768: getfield 57	com/estrongs/android/pop/app/LocalFileSharingActivity:f	Ljava/util/List;
-    //   771: aload 9
-    //   773: aload_1
-    //   774: invokevirtual 620	com/estrongs/fs/d:j	(Ljava/lang/String;)Lcom/estrongs/fs/h;
-    //   777: invokeinterface 626 2 0
-    //   782: pop
-    //   783: iload_2
-    //   784: iconst_1
-    //   785: iadd
-    //   786: istore_2
-    //   787: goto -215 -> 572
-    //   790: astore_1
-    //   791: aload 6
-    //   793: astore 4
-    //   795: aload 4
-    //   797: astore_1
-    //   798: aload_0
-    //   799: invokevirtual 475	com/estrongs/android/pop/app/LocalFileSharingActivity:finish	()V
-    //   802: aload 4
-    //   804: ifnull -534 -> 270
-    //   807: aload 4
-    //   809: invokeinterface 687 1 0
-    //   814: return
-    //   815: astore 5
-    //   817: aload_1
-    //   818: astore 4
-    //   820: aload 5
-    //   822: astore_1
-    //   823: aload 4
-    //   825: ifnull +10 -> 835
-    //   828: aload 4
-    //   830: invokeinterface 687 1 0
-    //   835: aload_1
-    //   836: athrow
-    //   837: aload_0
-    //   838: invokevirtual 475	com/estrongs/android/pop/app/LocalFileSharingActivity:finish	()V
-    //   841: return
-    //   842: aload_0
-    //   843: iconst_1
-    //   844: invokespecial 578	com/estrongs/android/pop/app/LocalFileSharingActivity:a	(Z)V
-    //   847: aload_0
-    //   848: putstatic 62	com/estrongs/android/pop/app/LocalFileSharingActivity:j	Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
-    //   851: aload_0
-    //   852: new 703	com/estrongs/android/pop/app/du
-    //   855: dup
-    //   856: aload_0
-    //   857: invokespecial 704	com/estrongs/android/pop/app/du:<init>	(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)V
-    //   860: putfield 376	com/estrongs/android/pop/app/LocalFileSharingActivity:i	Landroid/os/Handler;
-    //   863: return
-    //   864: astore_1
-    //   865: goto -42 -> 823
-    //   868: astore_1
-    //   869: goto -74 -> 795
-    //   872: astore 4
-    //   874: goto -361 -> 513
-    //   877: astore 4
-    //   879: goto -366 -> 513
-    //   882: astore 4
-    //   884: goto -390 -> 494
+    //   560: aload 4
+    //   562: invokevirtual 581	android/net/Uri:getScheme	()Ljava/lang/String;
+    //   565: astore 9
+    //   567: aload_3
+    //   568: astore_1
+    //   569: aload 9
+    //   571: ifnull +140 -> 711
+    //   574: aload_3
+    //   575: astore_1
+    //   576: aload 9
+    //   578: ldc_w 583
+    //   581: invokevirtual 586	java/lang/String:startsWith	(Ljava/lang/String;)Z
+    //   584: ifeq +127 -> 711
+    //   587: aload 4
+    //   589: invokevirtual 589	android/net/Uri:getHost	()Ljava/lang/String;
+    //   592: astore_1
+    //   593: aload_1
+    //   594: ldc_w 591
+    //   597: invokevirtual 267	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   600: ifne +26 -> 626
+    //   603: ldc_w 593
+    //   606: aload_1
+    //   607: invokevirtual 267	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   610: ifne +16 -> 626
+    //   613: aload_0
+    //   614: ldc_w 594
+    //   617: iconst_1
+    //   618: invokestatic 428	com/estrongs/android/ui/view/ak:a	(Landroid/content/Context;II)V
+    //   621: aload_0
+    //   622: invokevirtual 422	com/estrongs/android/pop/app/LocalFileSharingActivity:finish	()V
+    //   625: return
+    //   626: aload 6
+    //   628: astore_1
+    //   629: aload_0
+    //   630: invokevirtual 598	com/estrongs/android/pop/app/LocalFileSharingActivity:getContentResolver	()Landroid/content/ContentResolver;
+    //   633: aload 4
+    //   635: iconst_1
+    //   636: anewarray 154	java/lang/String
+    //   639: dup
+    //   640: iconst_0
+    //   641: ldc_w 600
+    //   644: aastore
+    //   645: aconst_null
+    //   646: aconst_null
+    //   647: aconst_null
+    //   648: invokevirtual 606	android/content/ContentResolver:query	(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    //   651: astore_3
+    //   652: aload_3
+    //   653: ifnonnull +18 -> 671
+    //   656: aload_0
+    //   657: invokevirtual 422	com/estrongs/android/pop/app/LocalFileSharingActivity:finish	()V
+    //   660: aload_3
+    //   661: ifnull -428 -> 233
+    //   664: aload_3
+    //   665: invokeinterface 611 1 0
+    //   670: return
+    //   671: aload_3
+    //   672: invokeinterface 615 1 0
+    //   677: pop
+    //   678: aload_3
+    //   679: aload_3
+    //   680: ldc_w 600
+    //   683: invokeinterface 619 2 0
+    //   688: invokeinterface 620 2 0
+    //   693: astore 4
+    //   695: aload 4
+    //   697: astore_1
+    //   698: aload_3
+    //   699: ifnull +12 -> 711
+    //   702: aload_3
+    //   703: invokeinterface 611 1 0
+    //   708: aload 4
+    //   710: astore_1
+    //   711: aload_0
+    //   712: getfield 53	com/estrongs/android/pop/app/LocalFileSharingActivity:f	Ljava/util/List;
+    //   715: aload 8
+    //   717: aload_1
+    //   718: invokevirtual 545	com/estrongs/fs/d:j	(Ljava/lang/String;)Lcom/estrongs/fs/h;
+    //   721: invokeinterface 334 2 0
+    //   726: pop
+    //   727: iload_2
+    //   728: iconst_1
+    //   729: iadd
+    //   730: istore_2
+    //   731: goto -203 -> 528
+    //   734: astore_1
+    //   735: aload 5
+    //   737: astore_3
+    //   738: aload_3
+    //   739: astore_1
+    //   740: aload_0
+    //   741: invokevirtual 422	com/estrongs/android/pop/app/LocalFileSharingActivity:finish	()V
+    //   744: aload_3
+    //   745: ifnull -512 -> 233
+    //   748: aload_3
+    //   749: invokeinterface 611 1 0
+    //   754: return
+    //   755: astore 4
+    //   757: aload_1
+    //   758: astore_3
+    //   759: aload 4
+    //   761: astore_1
+    //   762: aload_3
+    //   763: ifnull +9 -> 772
+    //   766: aload_3
+    //   767: invokeinterface 611 1 0
+    //   772: aload_1
+    //   773: athrow
+    //   774: aload_0
+    //   775: invokevirtual 422	com/estrongs/android/pop/app/LocalFileSharingActivity:finish	()V
+    //   778: return
+    //   779: aload_0
+    //   780: iconst_1
+    //   781: invokespecial 627	com/estrongs/android/pop/app/LocalFileSharingActivity:a	(Z)V
+    //   784: aload_0
+    //   785: putstatic 245	com/estrongs/android/pop/app/LocalFileSharingActivity:j	Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
+    //   788: aload_0
+    //   789: new 629	com/estrongs/android/pop/app/dt
+    //   792: dup
+    //   793: aload_0
+    //   794: invokespecial 630	com/estrongs/android/pop/app/dt:<init>	(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)V
+    //   797: putfield 289	com/estrongs/android/pop/app/LocalFileSharingActivity:i	Landroid/os/Handler;
+    //   800: return
+    //   801: astore_1
+    //   802: goto -40 -> 762
+    //   805: astore_1
+    //   806: goto -68 -> 738
+    //   809: astore_3
+    //   810: goto -340 -> 470
+    //   813: astore_3
+    //   814: goto -344 -> 470
+    //   817: astore_3
+    //   818: goto -366 -> 452
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	887	0	this	LocalFileSharingActivity
-    //   0	887	1	paramBundle	android.os.Bundle
-    //   115	672	2	i1	int
-    //   69	126	3	bool	boolean
-    //   137	305	4	localObject1	Object
-    //   509	15	4	localObject2	Object
-    //   597	232	4	localObject3	Object
-    //   872	1	4	localObject4	Object
-    //   877	1	4	localObject5	Object
-    //   882	1	4	localException	Exception
-    //   150	615	5	localObject6	Object
-    //   815	6	5	localObject7	Object
-    //   4	788	6	localUri	android.net.Uri
-    //   1	673	7	locald1	com.estrongs.fs.d
-    //   558	24	8	localArrayList	ArrayList
-    //   603	169	9	locald2	com.estrongs.fs.d
-    //   610	14	10	str	String
+    //   0	821	0	this	LocalFileSharingActivity
+    //   0	821	1	paramBundle	android.os.Bundle
+    //   87	644	2	i1	int
+    //   109	292	3	localObject1	Object
+    //   467	14	3	localObject2	Object
+    //   553	214	3	localObject3	Object
+    //   809	1	3	localObject4	Object
+    //   813	1	3	localObject5	Object
+    //   817	1	3	localException	Exception
+    //   120	589	4	localObject6	Object
+    //   755	5	4	localObject7	Object
+    //   4	732	5	localUri	android.net.Uri
+    //   1	626	6	locald1	com.estrongs.fs.d
+    //   514	24	7	localArrayList	ArrayList
+    //   558	158	8	locald2	com.estrongs.fs.d
+    //   565	12	9	str	String
     // Exception table:
     //   from	to	target	type
-    //   351	374	491	java/lang/Exception
-    //   351	374	509	finally
-    //   676	700	790	java/lang/Exception
-    //   676	700	815	finally
-    //   798	802	815	finally
-    //   705	709	864	finally
-    //   722	749	864	finally
-    //   705	709	868	java/lang/Exception
-    //   722	749	868	java/lang/Exception
-    //   378	382	872	finally
-    //   393	417	872	finally
-    //   494	498	877	finally
-    //   378	382	882	java/lang/Exception
-    //   393	417	882	java/lang/Exception
+    //   312	335	449	java/lang/Exception
+    //   312	335	467	finally
+    //   629	652	734	java/lang/Exception
+    //   629	652	755	finally
+    //   740	744	755	finally
+    //   656	660	801	finally
+    //   671	695	801	finally
+    //   656	660	805	java/lang/Exception
+    //   671	695	805	java/lang/Exception
+    //   339	343	809	finally
+    //   354	378	809	finally
+    //   452	456	813	finally
+    //   339	343	817	java/lang/Exception
+    //   354	378	817	java/lang/Exception
   }
   
   protected void onDestroy()
@@ -1039,7 +990,7 @@ public class LocalFileSharingActivity
           {
             bool = true;
             c = bool;
-            l();
+            m();
             g.notifyDataSetChanged();
           }
         }

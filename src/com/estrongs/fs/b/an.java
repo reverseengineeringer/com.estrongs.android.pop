@@ -1,33 +1,46 @@
 package com.estrongs.fs.b;
 
-import com.estrongs.fs.h;
-import java.util.ArrayList;
+import com.estrongs.a.a;
+import com.estrongs.a.a.m;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.pop.app.f.c;
 
 public class an
+  extends a
 {
-  public String a;
-  public h b;
-  public long c = 0L;
-  public long d = 0L;
-  public int e = 0;
-  public int f = 0;
-  public long g = 0L;
-  public long h = 0L;
-  public long i = 0L;
-  public long j = 0L;
-  public long k = 0L;
-  public long l = 0L;
-  public long m = 0L;
-  public long n = 0L;
-  public long o = 0L;
-  public long p = 0L;
-  public long q = 0L;
-  public long r = 0L;
-  public boolean s = false;
-  public boolean t = false;
-  public boolean u = false;
-  public ArrayList<an> v = new ArrayList();
-  public an w = null;
+  public boolean canPause()
+  {
+    return false;
+  }
+  
+  public void handleMessage(int paramInt, Object... paramVarArgs)
+  {
+    switch (paramInt)
+    {
+    default: 
+      super.handleMessage(paramInt, paramVarArgs);
+      return;
+    case 1: 
+      localm = processData;
+      d += ((Long)paramVarArgs[0]).longValue();
+      processData.a = ((String)paramVarArgs[1]);
+      onProgress(processData);
+      return;
+    }
+    m localm = processData;
+    f += ((Long)paramVarArgs[0]).longValue();
+    processData.a = ((String)paramVarArgs[1]);
+    onProgress(processData);
+  }
+  
+  public boolean task()
+  {
+    processData.e = -1L;
+    processData.a = FexApplication.a().getString(2131231628);
+    onProgress(processData);
+    c.a().c();
+    return true;
+  }
 }
 
 /* Location:

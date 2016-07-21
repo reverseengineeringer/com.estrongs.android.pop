@@ -1,24 +1,18 @@
 package com.estrongs.android.pop.view;
 
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemLongClickListener;
-import com.estrongs.android.pop.spfs.CreateSiteFileObject;
-import com.estrongs.android.view.aw;
-import com.estrongs.fs.h;
+import com.estrongs.android.ui.dialog.ProgressDialog;
 
 class du
-  implements AdapterView.OnItemLongClickListener
+  implements Runnable
 {
-  du(FileExplorerActivity paramFileExplorerActivity) {}
+  du(dt paramdt, boolean paramBoolean) {}
   
-  public boolean onItemLongClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
+  public void run()
   {
-    aw localaw = a.y();
-    if ((localaw != null) && (((h)localaw.e(paramInt) instanceof CreateSiteFileObject))) {
-      return true;
+    FileExplorerActivity.b(b.a);
+    if ((!a) && (FileExplorerActivity.y(b.a) != null) && (FileExplorerActivity.y(b.a).isShowing())) {
+      FileExplorerActivity.y(b.a).dismiss();
     }
-    return a.L.onItemLongClick(paramAdapterView, paramView, paramInt, paramLong);
   }
 }
 

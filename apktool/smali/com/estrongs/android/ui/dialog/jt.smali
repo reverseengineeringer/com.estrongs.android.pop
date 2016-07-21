@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/dialog/ix;
+.field final synthetic a:Lcom/estrongs/android/ui/dialog/jo;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/ix;)V
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/jo;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/jt;->a:Lcom/estrongs/android/ui/dialog/ix;
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/jt;->a:Lcom/estrongs/android/ui/dialog/jo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,27 +23,15 @@
 
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/jt;->a:Lcom/estrongs/android/ui/dialog/ix;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/jt;->a:Lcom/estrongs/android/ui/dialog/jo;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/ix;->a(Lcom/estrongs/android/ui/dialog/ix;)Lcom/estrongs/a/a;
+    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/jo;->c:Lcom/estrongs/android/ui/dialog/jk;
 
-    move-result-object v0
+    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/jk;->a:Lcom/estrongs/android/ui/dialog/jh;
 
-    invoke-virtual {v0}, Lcom/estrongs/a/a;->getTaskId()J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Lcom/estrongs/android/ui/notification/e;->b(J)Lcom/estrongs/a/a;
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/jt;->a:Lcom/estrongs/android/ui/dialog/ix;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ix;->dismiss()V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/jt;->a:Lcom/estrongs/android/ui/dialog/ix;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/ix;->g(Lcom/estrongs/android/ui/dialog/ix;)V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/jh;->dismiss()V
 
     return-void
 .end method

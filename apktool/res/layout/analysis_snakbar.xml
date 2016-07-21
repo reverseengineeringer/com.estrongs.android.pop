@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/design_snackbar_background" android:padding="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0dip" android:textColor="#ffffffff" android:id="@id/textView1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/analysis_snakbar_txt" android:layout_weight="1.0" />
+    <ImageView android:id="@id/iamgeView1" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/home_analysis" />
+</LinearLayout>

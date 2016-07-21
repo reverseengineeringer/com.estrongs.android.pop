@@ -1,19 +1,23 @@
-.class Lcom/estrongs/android/ui/e/dd;
+.class final Lcom/estrongs/android/ui/e/dd;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/content/DialogInterface$OnCancelListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/e/db;
+.field final synthetic a:Lcom/estrongs/fs/b/w;
+
+.field final synthetic b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/db;)V
+.method constructor <init>(Lcom/estrongs/fs/b/w;Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/dd;->a:Lcom/estrongs/android/ui/e/db;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/dd;->a:Lcom/estrongs/fs/b/w;
+
+    iput-object p2, p0, Lcom/estrongs/android/ui/e/dd;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,10 +26,20 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 0
+.method public onCancel(Landroid/content/DialogInterface;)V
+    .locals 2
 
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/dd;->a:Lcom/estrongs/fs/b/w;
+
+    invoke-virtual {v0}, Lcom/estrongs/fs/b/w;->requestStop()V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/dd;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    new-instance v1, Lcom/estrongs/android/ui/e/de;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/e/de;-><init>(Lcom/estrongs/android/ui/e/dd;)V
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     return-void
 .end method

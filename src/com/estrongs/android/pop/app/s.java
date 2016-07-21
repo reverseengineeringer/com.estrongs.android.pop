@@ -1,28 +1,22 @@
 package com.estrongs.android.pop.app;
 
-import android.os.Handler;
-import android.os.Message;
-import java.util.List;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
 
 class s
-  extends Handler
+  extends BroadcastReceiver
 {
-  s(r paramr) {}
+  s(AudioPlayerService paramAudioPlayerService) {}
   
-  public void handleMessage(Message paramMessage)
+  public void onReceive(Context paramContext, Intent paramIntent)
   {
-    switch (what)
+    try
     {
-    default: 
+      a.o();
       return;
     }
-    paramMessage = r.a(a).x();
-    if ((paramMessage == null) || (paramMessage.size() == 0))
-    {
-      r.b(a);
-      return;
-    }
-    r.c(a);
+    catch (Exception paramContext) {}
   }
 }
 

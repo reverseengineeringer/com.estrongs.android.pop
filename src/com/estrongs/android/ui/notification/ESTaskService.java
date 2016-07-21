@@ -8,7 +8,7 @@ import android.os.IBinder;
 public class ESTaskService
   extends Service
 {
-  private b a = new b(this);
+  private c a = new c(this);
   private boolean b = false;
   private ChromeCastPlayerNotificationHelper.ChromeCastEventReceiver c = null;
   

@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/media/MediaPlayer$OnPreparedListener;
+.implements Lcom/estrongs/fs/i;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+.field final synthetic a:Z
+
+.field final synthetic b:Lcom/estrongs/android/pop/app/iq;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/PopVideoPlayer;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/iq;Z)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/ir;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/ir;->b:Lcom/estrongs/android/pop/app/iq;
+
+    iput-boolean p2, p0, Lcom/estrongs/android/pop/app/ir;->a:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,41 +26,76 @@
 
 
 # virtual methods
-.method public onPrepared(Landroid/media/MediaPlayer;)V
-    .locals 3
+.method public a(Lcom/estrongs/fs/h;)Z
+    .locals 4
 
-    const/4 v2, 0x1
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ir;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+    const/4 v1, 0x0
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/PopVideoPlayer;->b:Landroid/view/View;
+    invoke-interface {p1}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/w;
 
-    const/16 v1, 0x8
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v2}, Lcom/estrongs/fs/w;->a()Z
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ir;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+    move-result v2
 
-    invoke-static {v0, v2}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->d(Lcom/estrongs/android/pop/app/PopVideoPlayer;Z)Z
+    if-eqz v2, :cond_2
 
-    :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/ir;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+    invoke-interface {p1}, Lcom/estrongs/fs/h;->getName()Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->e(Lcom/estrongs/android/pop/app/PopVideoPlayer;)Landroid/widget/MediaController;
+    move-result-object v2
 
-    move-result-object v0
+    const-string v3, "."
 
-    const/4 v1, 0x1
+    invoke-virtual {v2, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    invoke-virtual {v0, v1}, Landroid/widget/MediaController;->setEnabled(Z)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    move-result v2
 
+    if-eqz v2, :cond_1
+
+    iget-boolean v2, p0, Lcom/estrongs/android/pop/app/ir;->a:Z
+
+    if-nez v2, :cond_1
+
+    :cond_0
     :goto_0
-    return-void
+    return v1
 
-    :catch_0
-    move-exception v0
+    :cond_1
+    move v1, v0
 
     goto :goto_0
+
+    :cond_2
+    invoke-interface {p1}, Lcom/estrongs/fs/h;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    invoke-static {v2}, Lcom/estrongs/android/util/bg;->j(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    const-string v3, "ESSettings"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    :goto_1
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_3
+    move v0, v1
+
+    goto :goto_1
 .end method

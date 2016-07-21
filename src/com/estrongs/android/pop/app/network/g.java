@@ -3,8 +3,8 @@ package com.estrongs.android.pop.app.network;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import com.estrongs.android.e.h;
-import com.estrongs.android.ui.dialog.kw;
+import com.estrongs.android.l.k;
+import com.estrongs.android.ui.dialog.le;
 
 class g
   implements AdapterView.OnItemClickListener
@@ -16,7 +16,7 @@ class g
     paramAdapterView = EsNetworkActivity.b(a).b(paramInt - 1);
     if (paramAdapterView != null)
     {
-      EsNetworkActivity.a(a, new kw(a, EsNetworkActivity.b(a), paramAdapterView));
+      EsNetworkActivity.a(a, new le(a, EsNetworkActivity.b(a), paramAdapterView));
       EsNetworkActivity.e(a).show();
     }
   }

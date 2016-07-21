@@ -1,45 +1,70 @@
 .class Lcom/estrongs/android/ui/theme/x;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
+.super Landroid/content/BroadcastReceiver;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/theme/ThemeColorActivity;
+.field final synthetic a:Lcom/estrongs/android/ui/theme/ThemeActivity;
 
-
-# direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/theme/ThemeColorActivity;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/ui/theme/x;->a:Lcom/estrongs/android/ui/theme/ThemeColorActivity;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field private b:Ljava/lang/String;
 
 
 # virtual methods
-.method public onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 3
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 2
 
-    const/4 v2, 0x0
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/theme/x;->a:Lcom/estrongs/android/ui/theme/ThemeColorActivity;
+    move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/theme/ThemeColorActivity;->d(Lcom/estrongs/android/ui/theme/ThemeColorActivity;)V
+    const-string v1, "android.intent.action.PACKAGE_ADDED"
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/theme/x;->a:Lcom/estrongs/android/ui/theme/ThemeColorActivity;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const v1, 0x7f0b01ea
+    move-result v1
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    if-nez v1, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/theme/x;->a:Lcom/estrongs/android/ui/theme/ThemeColorActivity;
+    const-string v1, "android.intent.action.INSTALL_PACKAGE"
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/theme/ThemeColorActivity;->finish()V
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    return v2
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    invoke-virtual {p2}, Landroid/content/Intent;->getDataString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "package:"
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/theme/x;->b:Ljava/lang/String;
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/theme/x;->a:Lcom/estrongs/android/ui/theme/ThemeActivity;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/theme/ThemeActivity;->c(Lcom/estrongs/android/ui/theme/ThemeActivity;)Lcom/estrongs/android/ui/adapter/dr;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/theme/x;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/adapter/dr;->a(Ljava/lang/String;)V
+
+    :cond_1
+    return-void
 .end method

@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/ui/addressbar/f;
+.implements Lcom/estrongs/fs/i;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+.field final synthetic a:Z
+
+.field final synthetic b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
+.method constructor <init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;Z)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/view/cd;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/view/cd;->b:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    iput-boolean p2, p0, Lcom/estrongs/android/pop/view/cd;->a:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,41 +26,43 @@
 
 
 # virtual methods
-.method public a(Landroid/view/View;II)V
+.method public a(Lcom/estrongs/fs/h;)Z
     .locals 3
 
-    const v1, 0x7f0b0057
+    const/4 v0, 0x0
 
-    const/4 v2, 0x0
+    invoke-interface {p1}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/w;
 
-    const/4 v0, 0x1
+    move-result-object v1
 
-    if-ne p3, v0, :cond_0
+    invoke-virtual {v1}, Lcom/estrongs/fs/w;->a()Z
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/cd;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    move-result v1
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    if-eqz v1, :cond_0
 
-    :goto_0
-    return-void
+    invoke-interface {p1}, Lcom/estrongs/fs/h;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "."
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-boolean v1, p0, Lcom/estrongs/android/pop/view/cd;->a:Z
+
+    if-nez v1, :cond_1
 
     :cond_0
-    add-int/lit8 v0, p3, -0x1
-
-    if-ne p2, v0, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/cd;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
-
-    goto :goto_0
+    :goto_0
+    return v0
 
     :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/view/cd;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    const v1, 0x7f0b030f
-
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    const/4 v0, 0x1
 
     goto :goto_0
 .end method

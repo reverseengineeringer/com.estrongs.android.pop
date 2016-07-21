@@ -1,13 +1,16 @@
 package android.support.v4.a;
 
-import android.os.Parcelable.Creator;
+import android.view.View;
 
 class e
+  implements c
 {
-  static <T> Parcelable.Creator<T> a(c<T> paramc)
+  public l a()
   {
-    return new d(paramc);
+    return new f();
   }
+  
+  public void a(View paramView) {}
 }
 
 /* Location:

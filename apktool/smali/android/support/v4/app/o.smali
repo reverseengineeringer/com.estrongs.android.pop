@@ -1,33 +1,38 @@
 .class Landroid/support/v4/app/o;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field final synthetic a:Landroid/support/v4/app/n;
-
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/app/n;)V
+.method private constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Landroid/support/v4/app/o;->a:Landroid/support/v4/app/n;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method synthetic constructor <init>(Landroid/support/v4/app/m;)V
+    .locals 0
 
-# virtual methods
-.method public run()V
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/app/o;->a:Landroid/support/v4/app/n;
-
-    invoke-virtual {v0}, Landroid/support/v4/app/n;->e()Z
+    invoke-direct {p0}, Landroid/support/v4/app/o;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public a(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
 .end method

@@ -1,19 +1,18 @@
 package com.estrongs.android.pop.app;
 
-import android.content.Intent;
-import android.view.View;
-import android.view.View.OnClickListener;
+import com.estrongs.android.pop.app.d.a;
+import java.util.ArrayList;
 
-class ea
-  implements View.OnClickListener
+final class ea
+  implements Runnable
 {
-  ea(LocalFileSharingActivity paramLocalFileSharingActivity) {}
+  ea(ArrayList paramArrayList, String paramString, a parama, boolean paramBoolean) {}
   
-  public void onClick(View paramView)
+  public void run()
   {
-    paramView = new Intent("android.settings.WIFI_SETTINGS");
-    paramView.setFlags(268435456);
-    a.startActivity(paramView);
+    a.clear();
+    a.add(b);
+    LocalFileSharingActivity.a(c, a, d);
   }
 }
 

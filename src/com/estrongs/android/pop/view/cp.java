@@ -1,16 +1,47 @@
 package com.estrongs.android.pop.view;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import com.estrongs.android.pop.app.f.an;
+import com.estrongs.android.view.cr;
 
 class cp
-  implements View.OnClickListener
+  implements an
 {
-  cp(FileExplorerActivity paramFileExplorerActivity) {}
+  cp(FileExplorerActivity paramFileExplorerActivity, String paramString) {}
   
-  public void onClick(View paramView)
+  public void a(Intent paramIntent)
   {
-    FileExplorerActivity.M(a);
+    Object localObject = null;
+    if (paramIntent != null) {}
+    for (paramIntent = paramIntent.getExtras();; paramIntent = null)
+    {
+      if (paramIntent == null) {
+        return;
+      }
+      StringBuffer localStringBuffer = new StringBuffer();
+      localStringBuffer.append(paramIntent.getString("SEARCH_PATTERN"));
+      if ((a != null) && (a.trim().length() > 0)) {
+        localStringBuffer.append("&&").append("keyword").append("=").append(Uri.encode(a));
+      }
+      try
+      {
+        paramIntent = b.O().aq();
+        if ((paramIntent != null) && (paramIntent.length() > 0)) {
+          localStringBuffer.append("&&").append("category").append("=").append(paramIntent);
+        }
+        FileExplorerActivity.a(b, localStringBuffer.toString());
+        return;
+      }
+      catch (Exception paramIntent)
+      {
+        for (;;)
+        {
+          paramIntent = (Intent)localObject;
+        }
+      }
+    }
   }
 }
 

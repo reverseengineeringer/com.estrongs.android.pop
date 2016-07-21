@@ -1,20 +1,28 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.app.Activity;
+import android.view.View;
 import com.estrongs.android.util.m;
+import com.estrongs.fs.d;
+import com.estrongs.fs.h;
 
 class hg
-  implements DialogInterface.OnClickListener
+  extends m
 {
-  hg(hc paramhc, m paramm) {}
-  
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  hg(hf paramhf, String paramString, ci paramci, View paramView)
   {
-    if (a.isAlive()) {
-      a.a();
+    super(paramString);
+  }
+  
+  public void run()
+  {
+    h localh = d.a().j(hf.a(c));
+    if (g)
+    {
+      hf.b(c).runOnUiThread(new hh(this));
+      return;
     }
-    paramDialogInterface.dismiss();
+    hf.b(c).runOnUiThread(new hi(this, localh));
   }
 }
 

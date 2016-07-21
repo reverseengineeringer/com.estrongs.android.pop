@@ -1,18 +1,17 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.ui.notification.i;
+import com.estrongs.android.ui.dialog.lc;
+import com.estrongs.fs.h;
 
 class bg
-  implements Runnable
+  implements lc
 {
-  bg(FileExplorerActivity paramFileExplorerActivity) {}
+  bg(bf parambf, h paramh) {}
   
-  public void run()
+  public void a(boolean paramBoolean)
   {
-    if (a.m.O()) {
-      i.a(FexApplication.a()).b();
+    if (paramBoolean) {
+      bf.a(b, a);
     }
   }
 }

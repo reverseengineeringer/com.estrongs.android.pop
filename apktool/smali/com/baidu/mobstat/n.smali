@@ -3,447 +3,388 @@
 
 
 # static fields
-.field public static a:Ljava/lang/String;
-
-.field public static b:Ljava/lang/String;
-
-.field private static c:Landroid/content/Context;
+.field static a:Lcom/baidu/mobstat/n;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    const-string v0, "KIRINUPDATE"
+    new-instance v0, Lcom/baidu/mobstat/n;
 
-    sput-object v0, Lcom/baidu/mobstat/n;->a:Ljava/lang/String;
+    invoke-direct {v0}, Lcom/baidu/mobstat/n;-><init>()V
 
-    const-string v0, "kirin_update.log"
-
-    sput-object v0, Lcom/baidu/mobstat/n;->b:Ljava/lang/String;
+    sput-object v0, Lcom/baidu/mobstat/n;->a:Lcom/baidu/mobstat/n;
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;)I
-    .locals 2
+.method public constructor <init>()V
+    .locals 0
 
-    sget-boolean v0, Lcom/baidu/kirin/KirinConfig;->DEBUG_MODE:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v0, :cond_0
+    return-void
+.end method
 
-    invoke-static {p0}, Lcom/baidu/mobstat/n;->d(Ljava/lang/String;)Ljava/lang/String;
+.method private a(Landroid/content/Context;Ljava/util/ArrayList;)V
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/baidu/mobstat/o;",
+            ">;)V"
+        }
+    .end annotation
 
-    move-result-object v0
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v0, v1}, Lcom/baidu/mobstat/n;->a(Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ""
+
+    :try_start_0
+    new-instance v3, Lorg/json/JSONArray;
+
+    invoke-direct {v3}, Lorg/json/JSONArray;-><init>()V
+
+    invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v4
 
     :cond_0
-    sget v0, Lcom/baidu/kirin/KirinConfig;->LOG_LEVEL:I
-
-    const/4 v1, 0x1
-
-    if-gt v0, v1, :cond_1
-
-    sget-object v0, Lcom/baidu/mobstat/n;->a:Ljava/lang/String;
-
-    invoke-static {p0}, Lcom/baidu/mobstat/n;->d(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :goto_0
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    :goto_0
-    return v0
+    if-eqz v0, :cond_2
 
-    :cond_1
-    const/4 v0, 0x0
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    goto :goto_0
-.end method
+    move-result-object v0
 
-.method public static a(Ljava/lang/String;Ljava/lang/Throwable;)I
-    .locals 5
+    check-cast v0, Lcom/baidu/mobstat/o;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Lcom/baidu/mobstat/o;->a()Lorg/json/JSONObject;
 
-    sget-object v1, Lcom/baidu/mobstat/n;->c:Landroid/content/Context;
+    move-result-object v0
 
-    if-nez v1, :cond_0
+    if-eqz v0, :cond_0
 
-    :goto_0
-    return v0
-
-    :cond_0
-    :try_start_0
-    sget-object v1, Lcom/baidu/mobstat/n;->c:Landroid/content/Context;
-
-    sget-object v2, Lcom/baidu/mobstat/n;->b:Ljava/lang/String;
-
-    const v3, 0x8000
-
-    invoke-virtual {v1, v2, v3}, Landroid/content/Context;->openFileOutput(Ljava/lang/String;I)Ljava/io/FileOutputStream;
-
-    move-result-object v2
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    new-instance v3, Ljava/text/SimpleDateFormat;
-
-    const-string v4, "MM-dd hh:mm:ss.S"
-
-    invoke-direct {v3, v4}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
-
-    new-instance v4, Ljava/util/Date;
-
-    invoke-direct {v4}, Ljava/util/Date;-><init>()V
-
-    invoke-virtual {v3, v4}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v4, "\t"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-static {p0}, Lcom/baidu/mobstat/n;->d(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v4, "\n"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-static {p1}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v3, "UTF-8"
-
-    invoke-virtual {v1, v3}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
-
-    move-result-object v3
-
-    array-length v1, v3
-
-    invoke-virtual {v2, v3}, Ljava/io/FileOutputStream;->write([B)V
-
-    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
+    invoke-virtual {v3, v0}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
     :try_end_0
-    .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move v0, v1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
     :catch_0
-    move-exception v1
+    move-exception v0
 
-    goto :goto_0
+    invoke-static {v0}, Lcom/baidu/mobstat/bb;->b(Ljava/lang/Throwable;)V
 
-    :catch_1
-    move-exception v1
-
-    goto :goto_0
-
-    :catch_2
-    move-exception v1
-
-    goto :goto_0
-.end method
-
-.method private static a()Ljava/lang/String;
-    .locals 7
-
-    const/4 v0, 0x0
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Thread;->getStackTrace()[Ljava/lang/StackTraceElement;
-
-    move-result-object v2
-
-    if-nez v2, :cond_1
-
-    :cond_0
-    :goto_0
-    return-object v0
-
-    :cond_1
-    array-length v3, v2
-
-    const/4 v1, 0x0
+    move-object v0, v1
 
     :goto_1
-    if-ge v1, v3, :cond_0
-
-    aget-object v4, v2, v1
-
-    invoke-virtual {v4}, Ljava/lang/StackTraceElement;->isNativeMethod()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_3
-
-    :cond_2
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {v4}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
-
-    move-result-object v5
-
-    const-class v6, Ljava/lang/Thread;
-
-    invoke-virtual {v6}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_2
-
-    invoke-virtual {v4}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
-
-    move-result-object v5
-
-    const-string v6, "com.baidu.kirin.util.KirinLog"
-
-    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "["
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Thread;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "("
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Thread;->getId()J
-
-    move-result-wide v2
-
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "): "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v4}, Ljava/lang/StackTraceElement;->getFileName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ":"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v4}, Ljava/lang/StackTraceElement;->getLineNumber()I
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    if-nez v1, :cond_1
+
+    sget-object v1, Lcom/baidu/mobstat/x;->e:Lcom/baidu/mobstat/x;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    invoke-virtual {v1, v2, v3, v0}, Lcom/baidu/mobstat/x;->a(JLjava/lang/String;)J
+
+    :cond_1
+    return-void
+
+    :cond_2
+    :try_start_1
+    new-instance v0, Lorg/json/JSONObject;
+
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+
+    const-string v4, "app_apk"
+
+    invoke-virtual {v0, v4, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    const-string v3, "meta-data"
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v3, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "]"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Lcom/baidu/mobstat/cj;->a([B)Ljava/lang/String;
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
     move-result-object v0
 
-    goto :goto_0
+    goto :goto_1
 .end method
 
-.method public static b(Ljava/lang/String;)I
-    .locals 2
+.method private b(Landroid/content/Context;)V
+    .locals 1
 
-    sget-boolean v0, Lcom/baidu/kirin/KirinConfig;->DEBUG_MODE:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p0}, Lcom/baidu/mobstat/n;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/baidu/mobstat/n;->c(Landroid/content/Context;)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    invoke-direct {p0, p1, v0}, Lcom/baidu/mobstat/n;->a(Landroid/content/Context;Ljava/util/ArrayList;)V
 
-    invoke-static {v0, v1}, Lcom/baidu/mobstat/n;->a(Ljava/lang/String;Ljava/lang/Throwable;)I
+    return-void
+.end method
+
+.method private c(Landroid/content/Context;)Ljava/util/ArrayList;
+    .locals 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            ")",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/baidu/mobstat/o;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-direct {p0, p1}, Lcom/baidu/mobstat/n;->d(Landroid/content/Context;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
 
     :cond_0
-    sget v0, Lcom/baidu/kirin/KirinConfig;->LOG_LEVEL:I
-
-    const/4 v1, 0x3
-
-    if-gt v0, v1, :cond_1
-
-    sget-object v0, Lcom/baidu/mobstat/n;->a:Ljava/lang/String;
-
-    invoke-static {p0}, Lcom/baidu/mobstat/n;->d(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    :goto_0
-    return v0
+    if-eqz v0, :cond_2
 
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public static c(Ljava/lang/String;)I
-    .locals 2
-
-    sget-boolean v0, Lcom/baidu/kirin/KirinConfig;->DEBUG_MODE:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p0}, Lcom/baidu/mobstat/n;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, Landroid/content/pm/PackageInfo;
+
+    iget-object v4, v0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    if-eqz v4, :cond_0
+
+    iget-object v5, v0, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
+
+    iget-object v6, v0, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
+
+    const-string v1, ""
+
+    iget-object v0, v0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+
+    if-eqz v0, :cond_3
+
+    array-length v7, v0
+
+    if-eqz v7, :cond_3
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/baidu/mobstat/n;->a(Ljava/lang/String;Ljava/lang/Throwable;)I
+    aget-object v0, v0, v1
 
-    :cond_0
-    sget v0, Lcom/baidu/kirin/KirinConfig;->LOG_LEVEL:I
+    invoke-virtual {v0}, Landroid/content/pm/Signature;->toChars()[C
 
-    const/4 v1, 0x4
+    move-result-object v0
 
-    if-gt v0, v1, :cond_1
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    sget-object v0, Lcom/baidu/mobstat/n;->a:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-static {p0}, Lcom/baidu/mobstat/n;->d(Ljava/lang/String;)Ljava/lang/String;
+    :goto_1
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/baidu/mobstat/cp;->a([B)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v0, ""
+
+    iget-object v4, v4, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
+
+    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_1
+
+    new-instance v0, Ljava/io/File;
+
+    invoke-direct {v0, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v0}, Lcom/baidu/mobstat/cp;->a(Ljava/io/File;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_1
+    new-instance v4, Lcom/baidu/mobstat/o;
+
+    invoke-direct {v4, v5, v6, v1, v0}, Lcom/baidu/mobstat/o;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_2
+    return-object v2
+
+    :cond_3
+    move-object v0, v1
+
+    goto :goto_1
+.end method
+
+.method private d(Landroid/content/Context;)Ljava/util/ArrayList;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            ")",
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/content/pm/PackageInfo;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v2
+
+    if-nez v2, :cond_0
+
+    move-object v0, v1
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/ArrayList;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v0, v3}, Ljava/util/ArrayList;-><init>(I)V
+
+    const/16 v3, 0x40
+
+    :try_start_0
+    invoke-virtual {v2, v3}, Landroid/content/pm/PackageManager;->getInstalledPackages(I)Ljava/util/List;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    :goto_1
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_1
+    :goto_2
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    :goto_0
-    return v0
+    if-eqz v0, :cond_2
 
-    :cond_1
-    const/4 v0, 0x0
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/pm/PackageInfo;
+
+    iget-object v3, v0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    if-eqz v3, :cond_1
+
+    iget v3, v3, Landroid/content/pm/ApplicationInfo;->flags:I
+
+    and-int/lit8 v3, v3, 0x1
+
+    if-nez v3, :cond_1
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_2
+
+    :catch_0
+    move-exception v2
+
+    invoke-static {v2}, Lcom/baidu/mobstat/bb;->b(Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :cond_2
+    move-object v0, v1
 
     goto :goto_0
 .end method
 
-.method private static d(Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
 
-    invoke-static {}, Lcom/baidu/mobstat/n;->a()Ljava/lang/String;
+# virtual methods
+.method public declared-synchronized a(Landroid/content/Context;)V
+    .locals 1
 
-    move-result-object v0
+    monitor-enter p0
 
-    if-nez v0, :cond_0
+    :try_start_0
+    invoke-direct {p0, p1}, Lcom/baidu/mobstat/n;->b(Landroid/content/Context;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :goto_0
-    return-object p0
+    monitor-exit p0
 
-    :cond_0
-    new-instance v1, Ljava/lang/StringBuilder;
+    return-void
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    :catchall_0
+    move-exception v0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    monitor-exit p0
 
-    move-result-object v0
-
-    const-string v1, " - "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    goto :goto_0
+    throw v0
 .end method

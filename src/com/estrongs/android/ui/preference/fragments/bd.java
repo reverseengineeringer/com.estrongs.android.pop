@@ -1,17 +1,24 @@
 package com.estrongs.android.ui.preference.fragments;
 
 import android.preference.Preference;
-import android.preference.Preference.OnPreferenceClickListener;
-import com.estrongs.android.ui.dialog.kf;
+import android.preference.Preference.OnPreferenceChangeListener;
+import com.estrongs.android.pop.FexApplication;
+import com.estrongs.android.ui.preference.CustomListPreference;
+import com.estrongs.android.util.bk;
 
 class bd
-  implements Preference.OnPreferenceClickListener
+  implements Preference.OnPreferenceChangeListener
 {
-  bd(UpgradePreferenceFragment paramUpgradePreferenceFragment) {}
+  bd(SearchEnginePreferenceFragment paramSearchEnginePreferenceFragment, CustomListPreference paramCustomListPreference) {}
   
-  public boolean onPreferenceClick(Preference paramPreference)
+  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
   {
-    new kf(a.getActivity(), 1, "http://update.estrongs.com/up?id=1").b();
+    CharSequence localCharSequence = a.a(paramObject.toString());
+    if (bk.b(localCharSequence)) {
+      a.setSummary(localCharSequence);
+    }
+    paramPreference = paramPreference.getKey();
+    FexApplication.a().a(paramPreference, paramObject);
     return true;
   }
 }

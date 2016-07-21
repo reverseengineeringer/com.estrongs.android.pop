@@ -1,11 +1,20 @@
 package com.estrongs.android.ui.view;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.content.res.Resources;
+import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
 import android.util.AttributeSet;
 import android.util.SparseArray;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -13,201 +22,274 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import com.estrongs.android.pop.app.RecommAcitivity;
 import com.estrongs.android.pop.app.b;
 import com.estrongs.android.pop.view.utils.n;
 import com.estrongs.android.pop.view.utils.v;
-import com.estrongs.android.ui.theme.al;
-import com.estrongs.android.util.y;
+import com.estrongs.android.ui.theme.at;
+import com.estrongs.android.util.aa;
 import com.estrongs.fs.util.j;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
 
 public class RecommendListView
   extends ListView
 {
-  private Context a;
-  private boolean b = false;
-  private boolean c = false;
-  private v[] d = null;
-  private bx e = null;
-  private Object f = new Object();
-  private Handler g;
-  private al h;
-  private ProgressBar i;
-  private SparseArray<View> j = new SparseArray();
-  private View.OnClickListener k = new bv(this);
+  private float a;
+  private float b;
+  private float c;
+  private float d;
+  private Context e;
+  private boolean f = false;
+  private boolean g = false;
+  private v[] h = null;
+  private ci i = null;
+  private Object j = new Object();
+  private Handler k;
+  private at l;
+  private ProgressBar m;
+  private SparseArray<View> n = new SparseArray();
+  private View o;
+  private View p;
+  private Set<String> q = new HashSet();
+  private View.OnClickListener r = new ce(this);
   
   public RecommendListView(Context paramContext)
   {
     super(paramContext);
-    a = paramContext;
-    h = al.a(a);
-    setDivider(h.a(2130837712));
+    e = paramContext;
+    l = at.a(e);
+    setDivider(new ColorDrawable(l.c(2131558585)));
+    setDividerHeight(paramContext.getResources().getDimensionPixelOffset(2131165254));
   }
   
   public RecommendListView(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    a = paramContext;
-    h = al.a(a);
-    setDivider(h.a(2130837712));
+    e = paramContext;
+    l = at.a(e);
+    setDivider(new ColorDrawable(l.c(2131558585)));
+    setDividerHeight(paramContext.getResources().getDimensionPixelOffset(2131165254));
   }
   
   public RecommendListView(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    a = paramContext;
-    h = al.a(a);
-    setDivider(h.a(2130837712));
+    e = paramContext;
+    l = at.a(e);
+    setDivider(new ColorDrawable(l.c(2131558585)));
+    setDividerHeight(paramContext.getResources().getDimensionPixelOffset(2131165254));
   }
   
-  private int a(y paramy)
+  private int a(aa paramaa)
   {
-    paramy = (v)d;
-    int n;
-    if (d == null)
+    paramaa = (v)d;
+    int i2;
+    if (h == null)
     {
-      n = -1;
-      return n;
+      i2 = -1;
+      return i2;
     }
-    int m = 0;
+    int i1 = 0;
     for (;;)
     {
-      if (m >= d.length) {
+      if (i1 >= h.length) {
         break label49;
       }
-      n = m;
-      if (paramy == d[m]) {
+      i2 = i1;
+      if (paramaa == h[i1]) {
         break;
       }
-      m += 1;
+      i1 += 1;
     }
     label49:
     return -1;
   }
   
-  private void a(View paramView, v paramv)
+  private void a(int paramInt, String paramString1, String paramString2)
   {
-    if ((paramView == null) || (paramv == null)) {}
-    TextView localTextView1;
-    TextView localTextView2;
-    ProgressBar localProgressBar;
-    Button localButton;
-    do
+    Object localObject;
+    if (!paramString1.startsWith("market://"))
     {
-      return;
-      LinearLayout localLinearLayout1 = (LinearLayout)paramView.findViewById(2131362678);
-      LinearLayout localLinearLayout2 = (LinearLayout)paramView.findViewById(2131362680);
-      localTextView1 = (TextView)paramView.findViewById(2131362681);
-      localTextView2 = (TextView)paramView.findViewById(2131362682);
-      localProgressBar = (ProgressBar)paramView.findViewById(2131362683);
-      localButton = (Button)paramView.findViewById(2131362684);
-      TextView localTextView3 = (TextView)paramView.findViewById(2131362679);
-      paramView = (TextView)paramView.findViewById(2131362693);
-      localLinearLayout2.setVisibility(0);
-      localLinearLayout1.setVisibility(8);
-      long l1;
-      long l2;
-      if (q == 1)
+      localObject = paramString2;
+      if (paramString2 != null) {}
+    }
+    else
+    {
+      localObject = paramString1;
+    }
+    paramString1 = new Intent("android.intent.action.VIEW");
+    paramString1.setData(Uri.parse((String)localObject));
+    if (((String)localObject).startsWith("market://"))
+    {
+      paramString2 = getContext().getPackageManager().queryIntentActivities(paramString1, 0).iterator();
+      while (paramString2.hasNext())
       {
-        localButton.setText(a.getText(2131427358));
-        l1 = t;
-        l2 = u;
-        localTextView1.setText(j.c(l2) + "/" + j.c(l1));
-        if (l1 == 0L) {}
-        for (m = 0;; m = (int)(l2 * 1000L / l1))
-        {
-          localProgressBar.setMax(1000);
-          localProgressBar.setProgress(m);
-          localTextView2.setText(m / 10 + "%");
-          return;
+        localObject = (ResolveInfo)paramString2.next();
+        if ("com.android.vending".equals(activityInfo.applicationInfo.packageName)) {
+          paramString1.setClassName(activityInfo.applicationInfo.packageName, activityInfo.name);
         }
       }
-      if (q == 0)
+    }
+    try
+    {
+      if ((e instanceof RecommAcitivity)) {
+        ((RecommAcitivity)e).a(paramString1);
+      }
+      for (;;)
       {
-        localTextView1.setText(a.getText(2131427447));
-        localProgressBar.setMax(1000);
-        localProgressBar.setProgress(0);
-        localTextView2.setText("0%");
-        if (v == 0) {
-          v = n.b().b(paramv);
-        }
-        if ((v == 0) || (v == 1)) {
-          if (paramv.c() != null)
-          {
-            localButton.setText(a.getText(2131427608));
-            localButton.setBackgroundResource(2130837589);
-          }
-        }
-        for (;;)
-        {
-          localLinearLayout2.setVisibility(8);
-          localLinearLayout1.setVisibility(0);
-          localTextView3.setText(c);
-          paramView.setText(g);
-          return;
-          localButton.setText(a.getText(2131427359));
+        n.d(h[paramInt]);
+        if (h[paramInt].q != 6) {
           break;
-          if (v == 2)
-          {
-            localButton.setText(a.getText(2131427609));
-            localButton.setBackgroundResource(2130837589);
-          }
-          else if (v == 3)
-          {
-            localButton.setText(a.getText(2131427610));
-            localButton.setBackgroundResource(2130837591);
-          }
         }
-      }
-      if (q == 2)
-      {
-        localTextView1.setText(a.getText(2131427613));
-        l1 = t;
-        l2 = u;
-        if (l1 == 0L) {}
-        for (m = 0;; m = (int)(l2 * 1000L / l1))
-        {
-          localProgressBar.setMax(1000);
-          localProgressBar.setProgress(m);
-          localTextView2.setText(m / 10 + "%");
-          localButton.setText(a.getText(2131427397));
-          localButton.setBackgroundResource(2130837589);
-          return;
-        }
-      }
-      if (q == 3)
-      {
-        paramView = j.c(t);
-        localTextView1.setText(paramView + "/" + paramView);
-        localProgressBar.setMax(1000);
-        localProgressBar.setProgress(1000);
-        localTextView2.setText("100%");
-        localButton.setText(a.getText(2131427612));
-        localButton.setBackgroundResource(2130837589);
+        h[paramInt].q = 7;
+        i.notifyDataSetChanged();
         return;
+        e.startActivity(paramString1);
       }
-      if (q == 5)
-      {
-        localTextView1.setText(a.getText(2131427447));
-        localButton.setText(a.getText(2131427358));
-        localButton.setBackgroundResource(2130837590);
-        return;
-      }
-    } while (q != 4);
-    localTextView1.setText(j.c(u) + "/" + j.c(t));
-    if (t == 0L) {}
-    for (int m = 0;; m = (int)(u * 1000L / t))
-    {
-      localProgressBar.setMax(1000);
-      localProgressBar.setProgress(m);
-      localTextView2.setText(m / 10 + "%");
-      localButton.setText(a.getText(2131427611));
       return;
+    }
+    catch (ActivityNotFoundException paramString1)
+    {
+      ak.a(e, e.getText(2131231690), 1);
+      if (h[paramInt].q == 6)
+      {
+        h[paramInt].q = 0;
+        i.notifyDataSetChanged();
+      }
     }
   }
   
-  private Handler b()
+  private void a(View paramView, v paramv)
   {
-    return new bw(this);
+    if ((paramView == null) || (paramv == null)) {
+      return;
+    }
+    LinearLayout localLinearLayout1 = (LinearLayout)paramView.findViewById(2131625446);
+    LinearLayout localLinearLayout2 = (LinearLayout)paramView.findViewById(2131625448);
+    TextView localTextView1 = (TextView)paramView.findViewById(2131625449);
+    TextView localTextView2 = (TextView)paramView.findViewById(2131625450);
+    ProgressBar localProgressBar = (ProgressBar)paramView.findViewById(2131625451);
+    Button localButton = (Button)paramView.findViewById(2131625452);
+    TextView localTextView3 = (TextView)paramView.findViewById(2131625447);
+    paramView = (TextView)paramView.findViewById(2131625461);
+    localLinearLayout2.setVisibility(0);
+    localLinearLayout1.setVisibility(8);
+    localTextView3.setText(c);
+    paramView.setText(g);
+    long l1;
+    long l2;
+    int i1;
+    if (q == 1)
+    {
+      localButton.setText(e.getText(2131230897));
+      l1 = t;
+      l2 = u;
+      localTextView1.setText(j.c(l2) + "/" + j.c(l1));
+      if (l1 == 0L) {}
+      for (i1 = 0;; i1 = (int)(l2 * 1000L / l1))
+      {
+        localProgressBar.setMax(1000);
+        localProgressBar.setProgress(i1);
+        localTextView2.setText(i1 / 10 + "%");
+        return;
+      }
+    }
+    if (q == 0)
+    {
+      localTextView1.setText(e.getText(2131232170));
+      localProgressBar.setMax(1000);
+      localProgressBar.setProgress(0);
+      localTextView2.setText("0%");
+      if (v == 0) {
+        v = n.b().b(paramv);
+      }
+      if ((v == 0) || (v == 1)) {
+        if (paramv.c() != null)
+        {
+          localButton.setText(e.getText(2131232247));
+          localButton.setBackgroundResource(2130837824);
+        }
+      }
+      for (;;)
+      {
+        localLinearLayout2.setVisibility(8);
+        localLinearLayout1.setVisibility(0);
+        localTextView3.setText(c);
+        paramView.setText(g);
+        return;
+        localButton.setText(e.getText(2131230847));
+        break;
+        if (v == 2)
+        {
+          localButton.setText(e.getText(2131232248));
+          localButton.setBackgroundResource(2130837824);
+        }
+        else if (v == 3)
+        {
+          localButton.setText(e.getText(2131232246));
+          localButton.setBackgroundResource(2130837826);
+        }
+      }
+    }
+    if (q == 2)
+    {
+      localTextView1.setText(e.getText(2131232245));
+      l1 = t;
+      l2 = u;
+      if (l1 == 0L) {}
+      for (i1 = 0;; i1 = (int)(l2 * 1000L / l1))
+      {
+        localProgressBar.setMax(1000);
+        localProgressBar.setProgress(i1);
+        localTextView2.setText(i1 / 10 + "%");
+        localButton.setText(e.getText(2131231723));
+        localButton.setBackgroundResource(2130837824);
+        return;
+      }
+    }
+    if (q == 3)
+    {
+      paramView = j.c(t);
+      localTextView1.setText(paramView + "/" + paramView);
+      localProgressBar.setMax(1000);
+      localProgressBar.setProgress(1000);
+      localTextView2.setText("100%");
+      localButton.setText(e.getText(2131231096));
+      localButton.setBackgroundResource(2130837824);
+      return;
+    }
+    if (q == 5)
+    {
+      localTextView1.setText(e.getText(2131232170));
+      localButton.setText(e.getText(2131230897));
+      localButton.setBackgroundResource(2130837825);
+      return;
+    }
+    if (q == 4)
+    {
+      localTextView1.setText(j.c(u) + "/" + j.c(t));
+      if (t == 0L) {}
+      for (i1 = 0;; i1 = (int)(u * 1000L / t))
+      {
+        localProgressBar.setMax(1000);
+        localProgressBar.setProgress(i1);
+        localTextView2.setText(i1 / 10 + "%");
+        localButton.setText(e.getText(2131232244));
+        return;
+      }
+    }
+    if ((q == 7) || (q == 6))
+    {
+      localLinearLayout2.setVisibility(8);
+      localLinearLayout1.setVisibility(0);
+      localButton.setText(e.getText(2131232247));
+      return;
+    }
+    localLinearLayout2.setVisibility(8);
+    localLinearLayout1.setVisibility(0);
   }
   
   private void b(int paramInt)
@@ -215,87 +297,85 @@ public class RecommendListView
     Message localMessage = new Message();
     arg1 = 123465;
     arg2 = paramInt;
-    synchronized (f)
+    synchronized (j)
     {
-      if (g != null) {
-        g.sendMessage(localMessage);
+      if (k != null) {
+        k.sendMessage(localMessage);
       }
       return;
     }
   }
   
+  private Handler getAsyncHandler()
+  {
+    return new ch(this);
+  }
+  
   public void a()
   {
     n.b().e();
-    if (e != null)
+    if (i != null)
     {
-      int m = getFirstVisiblePosition();
-      e.notifyDataSetChanged();
-      setSelection(m);
+      int i1 = getFirstVisiblePosition();
+      i.notifyDataSetChanged();
+      setSelection(i1);
     }
   }
   
   public void a(int paramInt)
   {
-    n.b().a(d[paramInt], 0);
-    if (c) {}
-    int m;
-    int n;
+    n.b().a(h[paramInt], 0);
+    if (g) {}
+    int i1;
+    int i2;
     do
     {
       return;
-      m = getFirstVisiblePosition();
-      n = getLastVisiblePosition();
-    } while ((m > paramInt) || (paramInt > n));
-    a((View)j.get(paramInt), d[paramInt]);
-  }
-  
-  public void a(ProgressBar paramProgressBar)
-  {
-    i = paramProgressBar;
+      i1 = getFirstVisiblePosition();
+      i2 = getLastVisiblePosition();
+    } while ((i1 > paramInt) || (paramInt > i2));
+    a((View)n.get(paramInt), h[paramInt]);
   }
   
   public void a(Object paramObject)
   {
-    int m = a((y)paramObject);
-    if (c) {
+    int i1 = a((aa)paramObject);
+    if (g) {
       return;
     }
-    int n = getFirstVisiblePosition();
-    int i1 = getLastVisiblePosition();
-    if ((n <= m) && (m <= i1)) {
-      a((View)j.get(m), d[m]);
+    int i2 = getFirstVisiblePosition();
+    int i3 = getLastVisiblePosition();
+    if ((i2 <= i1) && (i1 <= i3)) {
+      a((View)n.get(i1), h[i1]);
     }
     try
     {
-      paramObject = b.a(n.a(d[m].f));
-      a.startActivity((Intent)paramObject);
+      paramObject = b.a(n.a(h[i1].f));
+      e.startActivity((Intent)paramObject);
       return;
     }
     catch (NullPointerException paramObject) {}
-  }
-  
-  public void a(boolean paramBoolean)
-  {
-    b = paramBoolean;
   }
   
   public void a(v[] paramArrayOfv)
   {
     for (;;)
     {
-      synchronized (f)
+      synchronized (j)
       {
-        g = b();
-        n.b().a(g);
-        if (e == null)
+        k = getAsyncHandler();
+        n.b().a(k);
+        if (i == null)
         {
           if ((paramArrayOfv != null) && (paramArrayOfv.length > 0))
           {
-            d = paramArrayOfv;
-            e = new bx(this, a, 2130903236, d);
-            setAdapter(e);
-            e.notifyDataSetChanged();
+            h = paramArrayOfv;
+            i = new ci(this, h);
+            if (p != null) {
+              addHeaderView(p);
+            }
+            setAdapter(i);
+            i.notifyDataSetChanged();
           }
           a();
           return;
@@ -303,23 +383,89 @@ public class RecommendListView
       }
       if (getAdapter() == null)
       {
-        setAdapter(e);
-        e.notifyDataSetChanged();
+        setAdapter(i);
+        i.notifyDataSetChanged();
       }
     }
   }
   
   public void b(v[] paramArrayOfv)
   {
-    if ((c) || (paramArrayOfv == null)) {
+    if ((g) || (paramArrayOfv == null)) {
       return;
     }
-    d = paramArrayOfv;
-    e = new bx(this, a, 2130903236, d);
-    setAdapter(e);
-    int m = getFirstVisiblePosition();
-    e.notifyDataSetChanged();
-    setSelection(m);
+    h = paramArrayOfv;
+    if (i == null)
+    {
+      i = new ci(this, h);
+      setAdapter(i);
+    }
+    for (;;)
+    {
+      int i1 = getFirstVisiblePosition();
+      i.notifyDataSetChanged();
+      setSelection(i1);
+      return;
+      i.a(h);
+    }
+  }
+  
+  public int getItemsCount()
+  {
+    if (h == null) {
+      return 0;
+    }
+    return h.length;
+  }
+  
+  public Set<String> getPackages()
+  {
+    return q;
+  }
+  
+  public boolean onInterceptTouchEvent(MotionEvent paramMotionEvent)
+  {
+    switch (paramMotionEvent.getAction())
+    {
+    }
+    do
+    {
+      for (;;)
+      {
+        return super.onInterceptTouchEvent(paramMotionEvent);
+        b = 0.0F;
+        a = 0.0F;
+        c = paramMotionEvent.getX();
+        d = paramMotionEvent.getY();
+      }
+      float f1 = paramMotionEvent.getX();
+      float f2 = paramMotionEvent.getY();
+      a += Math.abs(f1 - c);
+      b += Math.abs(f2 - d);
+      c = f1;
+      d = f2;
+    } while (a <= b);
+    return false;
+  }
+  
+  public void setDialogStyle(boolean paramBoolean)
+  {
+    f = paramBoolean;
+  }
+  
+  public void setListFooter(View paramView)
+  {
+    o = paramView;
+  }
+  
+  public void setListHeaderLayout(View paramView)
+  {
+    p = paramView;
+  }
+  
+  public void setRefreshProgressBar(ProgressBar paramProgressBar)
+  {
+    m = paramProgressBar;
   }
 }
 

@@ -1,19 +1,14 @@
 package com.estrongs.android.ui.navigation;
 
-import android.content.Context;
-import android.view.View;
+import android.os.Handler;
+import com.estrongs.android.pop.view.FileExplorerActivity;
 
 class p
-  extends s
+  extends h
 {
-  p(n paramn, Context paramContext, View paramView)
+  p(m paramm, FileExplorerActivity paramFileExplorerActivity, Handler paramHandler)
   {
-    super(paramContext, paramView);
-  }
-  
-  public boolean a()
-  {
-    return a.e();
+    super(paramFileExplorerActivity, paramHandler);
   }
 }
 

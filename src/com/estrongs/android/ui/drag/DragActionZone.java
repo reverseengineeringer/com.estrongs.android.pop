@@ -36,28 +36,6 @@ public class DragActionZone
     c = ((Vibrator)paramContext.getSystemService("vibrator"));
   }
   
-  public void a(int paramInt)
-  {
-    b = paramInt;
-  }
-  
-  public void a(Drawable paramDrawable)
-  {
-    ImageView localImageView = (ImageView)findViewById(2131362182);
-    localImageView.setImageDrawable(paramDrawable);
-    if (!isEnabled())
-    {
-      localImageView.setColorFilter(new LightingColorFilter(1, -7829368));
-      return;
-    }
-    localImageView.setColorFilter(null);
-  }
-  
-  public void a(c paramc)
-  {
-    a = paramc;
-  }
-  
   public void a(l paraml, int paramInt1, int paramInt2, int paramInt3, int paramInt4, m paramm, Object paramObject)
   {
     if (!isEnabled()) {}
@@ -124,13 +102,35 @@ public class DragActionZone
   public void setEnabled(boolean paramBoolean)
   {
     super.setEnabled(paramBoolean);
-    ImageView localImageView = (ImageView)findViewById(2131362182);
+    ImageView localImageView = (ImageView)findViewById(2131624747);
     if (paramBoolean)
     {
       localImageView.setColorFilter(null);
       return;
     }
     localImageView.setColorFilter(new LightingColorFilter(1, -7829368));
+  }
+  
+  public void setImage(Drawable paramDrawable)
+  {
+    ImageView localImageView = (ImageView)findViewById(2131624747);
+    localImageView.setImageDrawable(paramDrawable);
+    if (!isEnabled())
+    {
+      localImageView.setColorFilter(new LightingColorFilter(1, -7829368));
+      return;
+    }
+    localImageView.setColorFilter(null);
+  }
+  
+  public void setOnDropListener(c paramc)
+  {
+    a = paramc;
+  }
+  
+  public void setPosition(int paramInt)
+  {
+    b = paramInt;
   }
 }
 

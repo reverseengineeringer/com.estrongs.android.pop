@@ -1,23 +1,28 @@
 package com.estrongs.android.ui.e;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import com.estrongs.android.pop.view.FileExplorerActivity;
 import com.estrongs.android.view.a.a;
+import java.util.Hashtable;
+import java.util.Map;
 
-class jq
-  implements View.OnClickListener
+public class jq
+  extends c
 {
-  jq(jp paramjp) {}
+  private FileExplorerActivity c = null;
   
-  public void onClick(View paramView)
+  public jq(FileExplorerActivity paramFileExplorerActivity)
   {
-    int i = ((Integer)paramView.getTag()).intValue();
-    paramView = a.b(i);
-    if (paramView != null)
-    {
-      paramView.f();
-      a.a(i + jp.a(a), paramView);
-    }
+    c = paramFileExplorerActivity;
+    b = new String[] { "paste", "new", "cancel" };
+    e();
+  }
+  
+  public void e()
+  {
+    a = new Hashtable();
+    a.put("paste", new a(2130838576, c.getString(2131230871)).a(new jr(this)));
+    a.put("new", new a(2130838572, c.getString(2131230867)).a(new js(this)));
+    a.put("cancel", new a(2130838525, c.getString(2131230835)).a(new jt(this)));
   }
 }
 

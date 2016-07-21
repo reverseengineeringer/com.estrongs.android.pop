@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/a/a/l;
+.implements Lcom/estrongs/a/a/p;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/view/dg;
+.field final synthetic a:Lcom/estrongs/android/view/dp;
+
+.field final synthetic b:Lcom/estrongs/android/view/cr;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/view/dg;)V
+.method constructor <init>(Lcom/estrongs/android/view/cr;Lcom/estrongs/android/view/dp;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dg;
+    iput-object p1, p0, Lcom/estrongs/android/view/di;->b:Lcom/estrongs/android/view/cr;
+
+    iput-object p2, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dp;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,240 +26,184 @@
 
 
 # virtual methods
-.method public a(Lcom/estrongs/a/a;Lcom/estrongs/a/a/m;)V
-    .locals 6
-
-    const-wide/16 v4, 0x0
-
-    iget v0, p2, Lcom/estrongs/a/a/m;->i:I
-
-    const/4 v1, 0x4
-
-    if-ne v0, v1, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dg;
-
-    iget-object v1, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dg;
-
-    iget-object v1, v1, Lcom/estrongs/android/view/dg;->ad:Landroid/app/Activity;
-
-    const v2, 0x7f0b0077
-
-    invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/dg;->a(Ljava/lang/String;)V
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :cond_1
-    iget v0, p2, Lcom/estrongs/a/a/m;->i:I
+.method public a(Lcom/estrongs/a/a;II)V
+    .locals 4
 
     const/4 v1, 0x1
 
-    if-ne v0, v1, :cond_2
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dg;
+    :try_start_0
+    iget-object v2, p0, Lcom/estrongs/android/view/di;->b:Lcom/estrongs/android/view/cr;
 
-    iget-object v1, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dg;
+    iget-object v2, v2, Lcom/estrongs/android/view/cr;->W:Landroid/os/Handler;
 
-    iget-object v1, v1, Lcom/estrongs/android/view/dg;->ad:Landroid/app/Activity;
+    invoke-virtual {v2}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
-    const v2, 0x7f0b02fb
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    move-result-object v2
 
-    move-result-object v1
+    invoke-virtual {v2}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/dg;->a(Ljava/lang/String;)V
+    move-result-object v2
 
-    goto :goto_0
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v3
+
+    if-ne v2, v3, :cond_0
+
+    move v0, v1
+
+    :cond_0
+    :goto_0
+    check-cast p1, Lcom/estrongs/fs/b/al;
+
+    if-ne p2, v1, :cond_3
+
+    const/4 v1, 0x2
+
+    if-ne p3, v1, :cond_3
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/estrongs/android/view/di;->b:Lcom/estrongs/android/view/cr;
+
+    invoke-static {v0}, Lcom/estrongs/android/view/cr;->b(Lcom/estrongs/android/view/cr;)V
+
+    :cond_1
+    :goto_1
+    return-void
 
     :cond_2
-    iget v0, p2, Lcom/estrongs/a/a/m;->i:I
+    iget-object v0, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dp;
 
-    const/4 v1, 0x3
+    new-instance v1, Lcom/estrongs/android/view/dj;
 
-    if-ne v0, v1, :cond_4
+    invoke-direct {v1, p0}, Lcom/estrongs/android/view/dj;-><init>(Lcom/estrongs/android/view/di;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dg;
+    iput-object v1, v0, Lcom/estrongs/android/view/dp;->c:Ljava/lang/Runnable;
 
-    const-string v1, "Deleting the source ..."
+    iget-object v0, p0, Lcom/estrongs/android/view/di;->b:Lcom/estrongs/android/view/cr;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/dg;->a(Ljava/lang/String;)V
+    iget-object v0, v0, Lcom/estrongs/android/view/cr;->W:Landroid/os/Handler;
 
-    iget-wide v0, p2, Lcom/estrongs/a/a/m;->e:J
+    iget-object v1, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dp;
 
-    cmp-long v0, v0, v4
+    iget-object v1, v1, Lcom/estrongs/android/view/dp;->c:Ljava/lang/Runnable;
 
-    if-lez v0, :cond_3
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    iget-object v0, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dg;
-
-    iget-wide v2, p2, Lcom/estrongs/a/a/m;->e:J
-
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/view/dg;->a(J)V
+    goto :goto_1
 
     :cond_3
-    iget-wide v0, p2, Lcom/estrongs/a/a/m;->f:J
+    const/4 v1, 0x5
 
-    cmp-long v0, v0, v4
+    if-eq p3, v1, :cond_4
 
-    if-ltz v0, :cond_0
+    const/4 v1, 0x4
 
-    iget-object v0, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dg;
-
-    iget-wide v2, p2, Lcom/estrongs/a/a/m;->f:J
-
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/view/dg;->b(J)V
-
-    goto :goto_0
+    if-ne p3, v1, :cond_1
 
     :cond_4
-    iget-boolean v0, p2, Lcom/estrongs/a/a/m;->l:Z
+    :try_start_1
+    iget-object v1, p0, Lcom/estrongs/android/view/di;->b:Lcom/estrongs/android/view/cr;
 
-    if-eqz v0, :cond_a
+    const/4 v2, 0x0
 
-    iget-wide v0, p2, Lcom/estrongs/a/a/m;->e:J
+    invoke-static {v1, v2}, Lcom/estrongs/android/view/cr;->b(Lcom/estrongs/android/view/cr;Z)Z
 
-    cmp-long v0, v0, v4
+    iget-object v1, p0, Lcom/estrongs/android/view/di;->b:Lcom/estrongs/android/view/cr;
 
-    if-lez v0, :cond_7
+    iget-object v1, v1, Lcom/estrongs/android/view/cr;->C:Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dg;
+    iget-object v2, p1, Lcom/estrongs/fs/b/al;->b:Lcom/estrongs/fs/h;
 
-    iget-wide v2, p2, Lcom/estrongs/a/a/m;->e:J
+    invoke-interface {v2}, Lcom/estrongs/fs/h;->getPath()Ljava/lang/String;
 
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/view/dg;->a(J)V
+    move-result-object v2
 
-    iget-wide v0, p2, Lcom/estrongs/a/a/m;->f:J
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    cmp-long v0, v0, v4
+    move-result v2
 
-    if-ltz v0, :cond_5
+    if-nez v2, :cond_5
 
-    iget-object v0, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dg;
+    iget-object v0, p0, Lcom/estrongs/android/view/di;->b:Lcom/estrongs/android/view/cr;
 
-    iget-wide v2, p2, Lcom/estrongs/a/a/m;->f:J
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/view/dg;->b(J)V
+    invoke-static {v0, v1}, Lcom/estrongs/android/view/cr;->a(Lcom/estrongs/android/view/cr;Ljava/lang/String;)Ljava/lang/String;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    iget-object v0, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dp;
+
+    iget-object v0, v0, Lcom/estrongs/android/view/dp;->b:Landroid/os/ConditionVariable;
+
+    invoke-virtual {v0}, Landroid/os/ConditionVariable;->open()V
+
+    goto :goto_1
 
     :cond_5
-    :goto_1
-    iget v0, p2, Lcom/estrongs/a/a/m;->b:I
+    if-eqz v0, :cond_6
 
-    if-lez v0, :cond_6
+    :try_start_2
+    iget-object v0, p0, Lcom/estrongs/android/view/di;->b:Lcom/estrongs/android/view/cr;
 
-    iget-object v0, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dg;
+    invoke-static {v0, p1, p3, v1}, Lcom/estrongs/android/view/cr;->a(Lcom/estrongs/android/view/cr;Lcom/estrongs/fs/b/al;ILjava/lang/String;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    iget v1, p2, Lcom/estrongs/a/a/m;->b:I
+    :goto_2
+    iget-object v0, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dp;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/dg;->a(I)V
+    iget-object v0, v0, Lcom/estrongs/android/view/dp;->b:Landroid/os/ConditionVariable;
+
+    invoke-virtual {v0}, Landroid/os/ConditionVariable;->open()V
+
+    goto :goto_1
 
     :cond_6
-    iget-object v0, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dg;
+    :try_start_3
+    iget-object v0, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dp;
 
-    invoke-static {v0}, Lcom/estrongs/android/view/dg;->g(Lcom/estrongs/android/view/dg;)Z
+    new-instance v2, Lcom/estrongs/android/view/dk;
 
-    move-result v0
+    invoke-direct {v2, p0, p1, p3, v1}, Lcom/estrongs/android/view/dk;-><init>(Lcom/estrongs/android/view/di;Lcom/estrongs/fs/b/al;ILjava/lang/String;)V
 
-    if-nez v0, :cond_0
+    iput-object v2, v0, Lcom/estrongs/android/view/dp;->d:Ljava/lang/Runnable;
 
-    iget-object v0, p2, Lcom/estrongs/a/a/m;->a:Ljava/lang/String;
+    iget-object v0, p0, Lcom/estrongs/android/view/di;->b:Lcom/estrongs/android/view/cr;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    iget-object v0, v0, Lcom/estrongs/android/view/cr;->W:Landroid/os/Handler;
 
-    move-result v0
+    iget-object v1, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dp;
 
-    if-nez v0, :cond_0
+    iget-object v1, v1, Lcom/estrongs/android/view/dp;->d:Ljava/lang/Runnable;
 
-    iget-object v0, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dg;
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    iget-object v1, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dg;
+    goto :goto_2
 
-    invoke-virtual {v1, p2}, Lcom/estrongs/android/view/dg;->a(Lcom/estrongs/a/a/m;)Ljava/lang/String;
+    :catchall_0
+    move-exception v0
 
-    move-result-object v1
+    iget-object v1, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dp;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/dg;->a(Ljava/lang/String;)V
+    iget-object v1, v1, Lcom/estrongs/android/view/dp;->b:Landroid/os/ConditionVariable;
 
-    goto/16 :goto_0
+    invoke-virtual {v1}, Landroid/os/ConditionVariable;->open()V
 
-    :cond_7
-    iget-wide v0, p2, Lcom/estrongs/a/a/m;->g:J
+    throw v0
 
-    cmp-long v0, v0, v4
+    :catch_0
+    move-exception v2
 
-    if-lez v0, :cond_9
-
-    iget-wide v0, p2, Lcom/estrongs/a/a/m;->g:J
-
-    cmp-long v0, v0, v4
-
-    if-lez v0, :cond_8
-
-    iget-object v0, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dg;
-
-    iget-wide v2, p2, Lcom/estrongs/a/a/m;->g:J
-
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/view/dg;->c(J)V
-
-    :cond_8
-    iget-wide v0, p2, Lcom/estrongs/a/a/m;->h:J
-
-    cmp-long v0, v0, v4
-
-    if-lez v0, :cond_5
-
-    iget-object v0, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dg;
-
-    iget-wide v2, p2, Lcom/estrongs/a/a/m;->h:J
-
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/view/dg;->d(J)V
-
-    goto :goto_1
-
-    :cond_9
-    iget-object v0, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dg;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/view/dg;->b()V
-
-    goto :goto_1
-
-    :cond_a
-    iget-wide v0, p2, Lcom/estrongs/a/a/m;->c:J
-
-    cmp-long v0, v0, v4
-
-    if-lez v0, :cond_b
-
-    iget-object v0, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dg;
-
-    iget-wide v2, p2, Lcom/estrongs/a/a/m;->c:J
-
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/view/dg;->a(J)V
-
-    iget-wide v0, p2, Lcom/estrongs/a/a/m;->d:J
-
-    cmp-long v0, v0, v4
-
-    if-ltz v0, :cond_5
-
-    iget-object v0, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dg;
-
-    iget-wide v2, p2, Lcom/estrongs/a/a/m;->d:J
-
-    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/view/dg;->b(J)V
-
-    goto :goto_1
-
-    :cond_b
-    iget-object v0, p0, Lcom/estrongs/android/view/di;->a:Lcom/estrongs/android/view/dg;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/view/dg;->b()V
-
-    goto :goto_1
+    goto :goto_0
 .end method

@@ -5,11 +5,15 @@ import com.estrongs.android.view.a.b;
 class gd
   implements b
 {
-  gd(cp paramcp) {}
+  gd(cr paramcr) {}
   
-  public boolean a(co paramco)
+  public boolean a(cp paramcp)
   {
-    return p;
+    if ((e) || (L) || (I) || (J) || (K) || (l) || (h) || (((f) || (y) || (g)) && (!d))) {}
+    while ((B) || (n) || (i) || (j) || (k) || (q)) {
+      return true;
+    }
+    return false;
   }
 }
 

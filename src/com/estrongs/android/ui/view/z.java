@@ -5,7 +5,7 @@ import android.os.Message;
 import android.webkit.WebView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.util.bk;
 
 class z
   extends Handler
@@ -16,7 +16,7 @@ class z
   {
     if (what == CreateOAuthServiceProvider.a) {
       if (paramMessage.getData() == null) {
-        ag.a(a, a.getText(2131427964), 1);
+        ak.a(a, a.getText(2131231423), 1);
       }
     }
     for (;;)
@@ -39,7 +39,7 @@ class z
         CreateOAuthServiceProvider.c(localCreateOAuthServiceProvider, paramMessage);
         return;
       }
-      if (what == CreateOAuthServiceProvider.c)
+      if (what == CreateOAuthServiceProvider.d)
       {
         CreateOAuthServiceProvider.f(a).setVisibility(8);
         CreateOAuthServiceProvider.g(a).setVisibility(8);
@@ -47,21 +47,21 @@ class z
         CreateOAuthServiceProvider.e(a).requestFocus(130);
         return;
       }
-      if (what == CreateOAuthServiceProvider.d)
+      if (what == CreateOAuthServiceProvider.e)
       {
         str = null;
         if (obj != null) {
           str = obj.toString();
         }
         paramMessage = str;
-        if (bd.a(str)) {
-          paramMessage = (String)a.getText(2131428354);
+        if (bk.a(str)) {
+          paramMessage = (String)a.getText(2131231812);
         }
-        ag.a(a, paramMessage, 1);
+        ak.a(a, paramMessage, 1);
       }
-      else if ((what == CreateOAuthServiceProvider.e) && (!((Boolean)obj).booleanValue()))
+      else if ((what == CreateOAuthServiceProvider.f) && (!((Boolean)obj).booleanValue()))
       {
-        ag.a(a, 2131428354, 1);
+        ak.a(a, 2131231812, 1);
       }
     }
   }

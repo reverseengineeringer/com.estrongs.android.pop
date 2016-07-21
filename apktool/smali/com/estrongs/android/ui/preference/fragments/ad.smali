@@ -25,13 +25,13 @@
 .method public onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
     .locals 1
 
-    check-cast p2, Ljava/lang/Boolean;
+    iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/ad;->a:Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;
 
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-static {v0}, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->a(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)Landroid/preference/Preference$OnPreferenceChangeListener;
 
-    move-result v0
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    invoke-interface {v0, p1, p2}, Landroid/preference/Preference$OnPreferenceChangeListener;->onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
 
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/ad;->a:Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;
 
@@ -39,31 +39,9 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/notification/i;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/notification/i;
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/i;->b()V
-
-    :goto_0
     const/4 v0, 0x1
 
     return v0
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/ad;->a:Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/notification/i;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/notification/i;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/notification/i;->c()V
-
-    invoke-static {}, Lcom/estrongs/android/ui/notification/i;->a()V
-
-    goto :goto_0
 .end method

@@ -1,10 +1,25 @@
 package com.estrongs.android.ui.view;
 
-public abstract interface ar
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnErrorListener;
+import android.widget.MediaController;
+import com.estrongs.android.util.l;
+
+class ar
+  implements MediaPlayer.OnErrorListener
 {
-  public abstract void a();
+  ar(ESVideoView paramESVideoView) {}
   
-  public abstract void b();
+  public boolean onError(MediaPlayer paramMediaPlayer, int paramInt1, int paramInt2)
+  {
+    l.b(ESVideoView.l(a), "Error: " + paramInt1 + "," + paramInt2);
+    ESVideoView.c(a, -1);
+    ESVideoView.d(a, -1);
+    if (ESVideoView.e(a) != null) {
+      ESVideoView.e(a).hide();
+    }
+    return (ESVideoView.m(a) != null) && (ESVideoView.m(a).onError(ESVideoView.d(a), paramInt1, paramInt2));
+  }
 }
 
 /* Location:

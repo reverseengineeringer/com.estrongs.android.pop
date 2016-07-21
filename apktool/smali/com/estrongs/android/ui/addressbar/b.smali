@@ -1,33 +1,34 @@
-.class Lcom/estrongs/android/ui/addressbar/b;
+.class public Lcom/estrongs/android/ui/addressbar/b;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;
+.field public a:Landroid/graphics/drawable/Drawable;
+
+.field public b:Landroid/graphics/drawable/Drawable;
+
+.field public c:I
+
+.field public d:Z
+
+.field public e:I
+
+.field public f:Landroid/graphics/drawable/Drawable;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/ui/addressbar/b;->a:Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    const/4 v0, 0x1
 
+    iput-boolean v0, p0, Lcom/estrongs/android/ui/addressbar/b;->d:Z
 
-# virtual methods
-.method public run()V
-    .locals 1
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/addressbar/b;->a:Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;->a(Lcom/estrongs/android/ui/addressbar/AdvancedAddressBar;)V
+    iput v0, p0, Lcom/estrongs/android/ui/addressbar/b;->e:I
 
     return-void
 .end method

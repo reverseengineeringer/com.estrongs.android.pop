@@ -1,19 +1,49 @@
 package android.support.v4.view;
 
-import android.graphics.Paint;
+import android.view.MenuItem;
 import android.view.View;
 
 class az
-  extends ay
+  implements bc
 {
-  public void a(View paramView, Paint paramPaint)
+  public MenuItem a(MenuItem paramMenuItem, bd parambd)
   {
-    bf.a(paramView, paramPaint);
+    return paramMenuItem;
   }
   
-  public int e(View paramView)
+  public MenuItem a(MenuItem paramMenuItem, View paramView)
   {
-    return bf.a(paramView);
+    return be.a(paramMenuItem, paramView);
+  }
+  
+  public View a(MenuItem paramMenuItem)
+  {
+    return be.a(paramMenuItem);
+  }
+  
+  public void a(MenuItem paramMenuItem, int paramInt)
+  {
+    be.a(paramMenuItem, paramInt);
+  }
+  
+  public MenuItem b(MenuItem paramMenuItem, int paramInt)
+  {
+    return be.b(paramMenuItem, paramInt);
+  }
+  
+  public boolean b(MenuItem paramMenuItem)
+  {
+    return false;
+  }
+  
+  public boolean c(MenuItem paramMenuItem)
+  {
+    return false;
+  }
+  
+  public boolean d(MenuItem paramMenuItem)
+  {
+    return false;
   }
 }
 

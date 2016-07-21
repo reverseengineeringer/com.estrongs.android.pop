@@ -1,24 +1,24 @@
 package com.estrongs.android.ui.dialog;
 
-import com.estrongs.fs.b.am;
-import com.estrongs.fs.d;
-import java.util.List;
+import android.widget.ProgressBar;
+import com.estrongs.android.pop.app.diskusage.a;
 
 class eh
-  extends am
+  implements Runnable
 {
-  eh(eb parameb, List paramList, d paramd, boolean paramBoolean)
-  {
-    super(paramList, paramd, paramBoolean);
-  }
+  eh(ee paramee) {}
   
-  public boolean task()
+  public void run()
   {
-    eb.d(a);
-    boolean bool = super.task();
-    eb.e(a);
-    eb.f(a);
-    return bool;
+    try
+    {
+      a.j.setVisibility(4);
+      if (a.l != null) {
+        a.l.b();
+      }
+      return;
+    }
+    catch (Exception localException) {}
   }
 }
 

@@ -1,91 +1,90 @@
 package com.estrongs.android.ui.dialog;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.GridView;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.esclasses.g;
-import com.estrongs.android.ui.a.di;
-import com.estrongs.android.ui.pcs.j;
-import com.estrongs.android.ui.view.PcsThirdPartOAuth;
-import com.estrongs.android.util.am;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.pop.b.a;
 
-public class bf
+class bf
+  implements DialogInterface.OnClickListener
 {
-  cg a;
-  private Context b;
-  private View c;
+  bf(be parambe) {}
   
-  public bf(Context paramContext)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    b = paramContext;
-    c = ((LinearLayout)g.a(b).inflate(2130903274, null));
-    paramContext = (GridView)c.findViewById(2131362817);
-    paramContext.setAdapter(new com.estrongs.android.ui.a.b(b));
-    paramContext.setOnItemClickListener(new bg(this));
-    a = new ct(b).a(2131427361).a(c).b();
-  }
-  
-  private void a(int paramInt, String paramString)
-  {
-    Object localObject = g.a(b).inflate(2130903133, null);
-    cg localcg = new ct(b).a(paramString).a((View)localObject).c();
-    localObject = (ListView)((View)localObject).findViewById(2131362074);
-    String str1 = b.getString(2131428510);
-    String str2 = b.getString(2131428511);
-    ((ListView)localObject).setAdapter(new di(b, null, new String[] { str1, str2 }, 0, false));
-    ((ListView)localObject).setOnItemClickListener(new bh(this, paramInt, paramString, localcg));
-  }
-  
-  private boolean a(String paramString1, String paramString2)
-  {
-    if (paramString2 != null)
+    String str = null;
+    int i = -1;
+    paramDialogInterface.dismiss();
+    if (paramInt == 0)
     {
-      paramString2 = com.estrongs.fs.impl.j.b.f(paramString1, paramString2);
-      if (paramString2 != null)
+      paramInt = a.a("ftp");
+      if (paramInt != -1)
       {
-        paramString1 = am.a(paramString1, paramString2, "fake", "/");
-        ad.a(b).a(paramString1, paramString2);
-        return true;
+        paramDialogInterface = null;
+        str = "ftp";
       }
     }
-    return false;
-  }
-  
-  private void b(int paramInt, String paramString)
-  {
-    bi localbi = new bi(this);
-    j localj = new j(b, true, null);
-    localj.a(localbi);
-    localj.a(paramInt, paramString);
-    localj.a(true);
-  }
-  
-  private void c()
-  {
-    Intent localIntent = new Intent(b, PcsThirdPartOAuth.class);
-    Bundle localBundle = new Bundle();
-    localBundle.putString("nettype", "pcs");
-    localBundle.putString("ostype", "qq");
-    localBundle.putBoolean("editServer", true);
-    localIntent.putExtras(localBundle);
-    ((Activity)b).startActivityForResult(localIntent, 16781341);
-  }
-  
-  public boolean a()
-  {
-    return (a != null) && (a.isShowing());
-  }
-  
-  public void b()
-  {
-    a.show();
+    for (;;)
+    {
+      if (str != null)
+      {
+        a.a((Activity)be.a(a), str, paramInt, new bg(this, str));
+        return;
+        paramDialogInterface = new fb(be.a(a), "ftp", true);
+        continue;
+        if (paramInt == 1)
+        {
+          paramInt = a.a("sftp");
+          if (paramInt != -1)
+          {
+            paramDialogInterface = null;
+            str = "sftp";
+            continue;
+          }
+          paramDialogInterface = new fb(be.a(a), "sftp", true);
+          continue;
+        }
+        if (paramInt == 2)
+        {
+          paramInt = a.a("ftp");
+          if (paramInt != -1)
+          {
+            paramDialogInterface = null;
+            str = "ftps";
+            continue;
+          }
+          paramDialogInterface = new fb(be.a(a), "ftps", true);
+          continue;
+        }
+        if (paramInt == 3)
+        {
+          paramInt = a.a("webdav");
+          if (paramInt != -1)
+          {
+            paramDialogInterface = null;
+            str = "webdav";
+            continue;
+          }
+          paramDialogInterface = new fb(be.a(a), "webdav", true);
+          continue;
+        }
+        if (paramInt == 4)
+        {
+          new fv(be.a(a)).b();
+          return;
+        }
+        if (paramInt == 5) {
+          new ev(be.a(a)).a();
+        }
+      }
+      else
+      {
+        paramDialogInterface.a();
+        return;
+      }
+      paramDialogInterface = null;
+      paramInt = i;
+    }
   }
 }
 

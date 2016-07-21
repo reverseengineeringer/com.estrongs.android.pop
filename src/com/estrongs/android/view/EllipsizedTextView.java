@@ -54,7 +54,7 @@ public class EllipsizedTextView
     try
     {
       Layout localLayout = a(str2);
-      int j = c();
+      int j = getLinesCount();
       if (j == 0) {
         return str2;
       }
@@ -112,11 +112,17 @@ public class EllipsizedTextView
     c = false;
   }
   
-  private int c()
+  private int getFullyVisibleLinesCount()
+  {
+    Layout localLayout = a("");
+    return (getHeight() - getPaddingTop() - getPaddingBottom()) / localLayout.getLineBottom(0);
+  }
+  
+  private int getLinesCount()
   {
     if (a())
     {
-      int k = d();
+      int k = getFullyVisibleLinesCount();
       int j = k;
       if (k == -1) {
         j = 1;
@@ -124,12 +130,6 @@ public class EllipsizedTextView
       return j;
     }
     return f;
-  }
-  
-  private int d()
-  {
-    Layout localLayout = a("");
-    return (getHeight() - getPaddingTop() - getPaddingBottom()) / localLayout.getLineBottom(0);
   }
   
   public boolean a()
@@ -206,6 +206,27 @@ public class EllipsizedTextView
     if ((z.ab) && (a())) {
       c = true;
     }
+  }
+  
+  public void setTextValue(CharSequence paramCharSequence)
+  {
+    CharSequence localCharSequence = paramCharSequence;
+    if (z.ab)
+    {
+      localCharSequence = paramCharSequence;
+      if (i != null)
+      {
+        localCharSequence = paramCharSequence;
+        if (paramCharSequence != null)
+        {
+          localCharSequence = paramCharSequence;
+          if (paramCharSequence.length() > 0) {
+            localCharSequence = a(paramCharSequence);
+          }
+        }
+      }
+    }
+    super.setText(localCharSequence);
   }
 }
 

@@ -52,11 +52,11 @@
 
     check-cast v0, Lcom/estrongs/fs/h;
 
-    invoke-interface {v0}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/m;
+    invoke-interface {v0}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/w;
 
     move-result-object v0
 
-    sget-object v1, Lcom/estrongs/fs/m;->a:Lcom/estrongs/fs/m;
+    sget-object v1, Lcom/estrongs/fs/w;->a:Lcom/estrongs/fs/w;
 
     if-ne v0, v1, :cond_0
 
@@ -233,11 +233,11 @@
 
     check-cast v0, Lcom/estrongs/fs/h;
 
-    invoke-interface {v0}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/m;
+    invoke-interface {v0}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/w;
 
     move-result-object v0
 
-    sget-object v3, Lcom/estrongs/fs/m;->a:Lcom/estrongs/fs/m;
+    sget-object v3, Lcom/estrongs/fs/w;->a:Lcom/estrongs/fs/w;
 
     if-ne v0, v3, :cond_3
 

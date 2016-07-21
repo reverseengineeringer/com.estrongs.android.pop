@@ -1,46 +1,45 @@
-.class public Landroid/support/v4/view/bg;
+.class Landroid/support/v4/view/bg;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Landroid/view/MenuItem$OnActionExpandListener;
 
-# static fields
-.field static final a:Landroid/support/v4/view/bj;
+
+# instance fields
+.field private a:Landroid/support/v4/view/bh;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/support/v4/view/bh;)V
+    .locals 0
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0xb
+    iput-object p1, p0, Landroid/support/v4/view/bg;->a:Landroid/support/v4/view/bh;
 
-    if-lt v0, v1, :cond_0
-
-    new-instance v0, Landroid/support/v4/view/bi;
-
-    invoke-direct {v0}, Landroid/support/v4/view/bi;-><init>()V
-
-    sput-object v0, Landroid/support/v4/view/bg;->a:Landroid/support/v4/view/bj;
-
-    :goto_0
     return-void
-
-    :cond_0
-    new-instance v0, Landroid/support/v4/view/bh;
-
-    invoke-direct {v0}, Landroid/support/v4/view/bh;-><init>()V
-
-    sput-object v0, Landroid/support/v4/view/bg;->a:Landroid/support/v4/view/bj;
-
-    goto :goto_0
 .end method
 
-.method public static a(Landroid/view/ViewConfiguration;)I
+
+# virtual methods
+.method public onMenuItemActionCollapse(Landroid/view/MenuItem;)Z
     .locals 1
 
-    sget-object v0, Landroid/support/v4/view/bg;->a:Landroid/support/v4/view/bj;
+    iget-object v0, p0, Landroid/support/v4/view/bg;->a:Landroid/support/v4/view/bh;
 
-    invoke-interface {v0, p0}, Landroid/support/v4/view/bj;->a(Landroid/view/ViewConfiguration;)I
+    invoke-interface {v0, p1}, Landroid/support/v4/view/bh;->b(Landroid/view/MenuItem;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public onMenuItemActionExpand(Landroid/view/MenuItem;)Z
+    .locals 1
+
+    iget-object v0, p0, Landroid/support/v4/view/bg;->a:Landroid/support/v4/view/bh;
+
+    invoke-interface {v0, p1}, Landroid/support/v4/view/bh;->a(Landroid/view/MenuItem;)Z
 
     move-result v0
 

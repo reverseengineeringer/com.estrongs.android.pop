@@ -1,26 +1,28 @@
 package com.estrongs.android.pop.app;
 
-import android.content.ComponentName;
-import android.content.pm.PackageManager;
 import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
+import android.preference.Preference.OnPreferenceClickListener;
+import com.estrongs.android.pop.utils.w;
 
 class gy
-  implements Preference.OnPreferenceChangeListener
+  implements Preference.OnPreferenceClickListener
 {
   gy(PopPreferenceActivity paramPopPreferenceActivity) {}
   
-  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
+  public boolean onPreferenceClick(Preference paramPreference)
   {
-    paramPreference = a.getPackageManager();
-    ComponentName localComponentName = new ComponentName(a, BrowserDownloaderActivity.class);
-    if (((Boolean)paramObject).booleanValue())
+    try
     {
-      paramPreference.setComponentEnabledSetting(localComponentName, 2, 1);
+      w.a(a, "com.estrongs.android.pop", "pname");
       return true;
     }
-    paramPreference.setComponentEnabledSetting(localComponentName, 1, 1);
-    return true;
+    catch (Exception paramPreference)
+    {
+      for (;;)
+      {
+        paramPreference.printStackTrace();
+      }
+    }
   }
 }
 

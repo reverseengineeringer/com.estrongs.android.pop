@@ -1,112 +1,61 @@
 package com.estrongs.fs.impl.j;
 
-import com.estrongs.android.pop.netfs.NetFileInfo;
-import com.estrongs.fs.FileSystemException;
-import com.estrongs.fs.m;
+import com.estrongs.android.pop.app.finder.c;
+import com.estrongs.android.util.TypedMap;
+import com.estrongs.fs.h;
+import com.estrongs.fs.i;
+import com.estrongs.fs.u;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.Iterator;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class a
-  extends com.estrongs.fs.a
+  implements u
 {
-  private NetFileInfo a = null;
-  
-  public a(NetFileInfo paramNetFileInfo)
+  public h a(String paramString)
   {
-    super(path);
-    a = paramNetFileInfo;
-    setName(name);
+    return null;
   }
   
-  public void a(String paramString)
+  public OutputStream a(String paramString, TypedMap paramTypedMap)
   {
-    path = paramString;
+    return null;
   }
   
-  public void b(String paramString)
+  public OutputStream a(String paramString, boolean paramBoolean)
   {
-    absolutePath = paramString;
+    return null;
   }
   
-  protected boolean canDelete()
+  public List<h> a(h paramh, i parami, TypedMap paramTypedMap)
   {
-    return (!a.isDirectory) || (a.folder_type == 0) || (a.folder_type == 64);
-  }
-  
-  protected boolean canRead()
-  {
-    return true;
-  }
-  
-  protected boolean canWrite()
-  {
-    return canDelete();
-  }
-  
-  public long createdTime()
-  {
-    return 0L;
-  }
-  
-  protected m doGetFileType()
-  {
-    if (a.isDirectory) {
-      return m.a;
-    }
-    return m.b;
-  }
-  
-  public boolean exists()
-  {
-    try
+    paramh = com.estrongs.android.pop.app.finder.a.a().h();
+    parami = new CopyOnWriteArrayList();
+    paramTypedMap = paramh.a().iterator();
+    while (paramTypedMap.hasNext())
     {
-      boolean bool = b.e(a.path);
-      return bool;
+      com.estrongs.android.pop.app.finder.data.d locald = new com.estrongs.android.pop.app.finder.data.d((String)paramTypedMap.next());
+      locald.a(paramh.b());
+      parami.addAll(com.estrongs.fs.d.a().a(locald, false, paramh));
     }
-    catch (Exception localException)
-    {
-      throw new FileSystemException(localException);
-    }
+    return parami;
   }
   
-  public m getFileType()
+  public boolean b(String paramString)
   {
-    if (type == m.M) {
-      type = doGetFileType();
-    }
-    return type;
+    return false;
   }
   
-  public boolean hasPermission(int paramInt)
+  public boolean c(String paramString)
   {
-    switch (paramInt)
-    {
-    default: 
-      return false;
-    case 0: 
-      return canRead();
-    case 1: 
-      return canWrite();
-    }
-    return canDelete();
+    return false;
   }
   
-  public long lastAccessed()
+  public InputStream d(String paramString)
   {
-    return 0L;
-  }
-  
-  public long lastModified()
-  {
-    return a.lastModifiedTime;
-  }
-  
-  public long length()
-  {
-    return a.size;
-  }
-  
-  public String toString()
-  {
-    return getAbsolutePath();
+    return null;
   }
 }
 

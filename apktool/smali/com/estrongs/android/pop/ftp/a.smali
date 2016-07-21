@@ -52,7 +52,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->T()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->U()Ljava/lang/String;
 
     move-result-object v0
 
@@ -62,7 +62,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->V()I
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/ad;->W()I
 
     move-result v1
 
@@ -72,7 +72,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/ad;->U()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/ad;->V()Ljava/lang/String;
 
     move-result-object v2
 
@@ -82,7 +82,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/estrongs/android/pop/ad;->S()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/estrongs/android/pop/ad;->T()Ljava/lang/String;
 
     move-result-object v3
 
@@ -104,7 +104,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/ftp/a;->d:Lcom/estrongs/android/pop/ftp/ESFtpShortcut;
 
-    const v1, 0x7f0b014e
+    const v1, 0x7f080324
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/ftp/ESFtpShortcut;->getString(I)Ljava/lang/String;
 
@@ -116,7 +116,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v1, v0, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    invoke-static {v1, v0, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
     :goto_1
     return-void
@@ -126,7 +126,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/ftp/a;->d:Lcom/estrongs/android/pop/ftp/ESFtpShortcut;
 
-    const v1, 0x7f0b014f
+    const v1, 0x7f080742
 
     invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/ftp/ESFtpShortcut;->getString(I)Ljava/lang/String;
 

@@ -2,7 +2,7 @@ package com.estrongs.android.pop.view.utils;
 
 import com.estrongs.android.pop.FexApplication;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.notification.e;
+import com.estrongs.android.ui.notification.f;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -49,7 +49,7 @@ final class w
         {
           a = false;
           b = RemoteSynchronizer.a((RemoteSynchronizer.RemoteFile)RemoteSynchronizer.d.get(str), (ab)localObject2);
-          new e(FileExplorerActivity.J(), FexApplication.a().getString(2131428399), b);
+          new f(FileExplorerActivity.X(), FexApplication.a().getString(2131232196), b);
           b.execute();
         }
       }

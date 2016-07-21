@@ -1,15 +1,16 @@
 package com.estrongs.android.pop.app;
 
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnDismissListener;
+
 class mb
-  implements Runnable
+  implements DialogInterface.OnDismissListener
 {
-  mb(lz paramlz) {}
+  mb(ShowDialogActivity paramShowDialogActivity) {}
   
-  public void run()
+  public void onDismiss(DialogInterface paramDialogInterface)
   {
-    if (!StreamingMediaPlayer.l(a.b)) {
-      a.b.a(3);
-    }
+    a.finish();
   }
 }
 

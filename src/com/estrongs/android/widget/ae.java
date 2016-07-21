@@ -1,42 +1,18 @@
 package com.estrongs.android.widget;
 
-import android.app.Activity;
-import android.content.Context;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.view.cc;
-import com.estrongs.fs.i;
+import com.estrongs.android.view.dx;
+import com.estrongs.fs.h;
 
-public class ae
-  extends g
+class ae
+  implements dx
 {
-  private Context a;
-  private cc i = null;
-  private DialogInterface.OnClickListener j = null;
+  ae(ad paramad) {}
   
-  public ae(Activity paramActivity, String paramString, i parami, int paramInt)
+  public void a(h paramh)
   {
-    super(paramActivity, paramString, parami, paramInt);
-    a = paramActivity;
-  }
-  
-  private void m()
-  {
-    a(new af(this));
-    if (j == null)
-    {
-      a(a.getString(2131427340), null);
-      return;
+    if (ad.a(a) != null) {
+      ad.a(a).a(paramh);
     }
-    c(a.getString(2131427340), null);
-    b(a.getString(2131427339), j);
-  }
-  
-  public void a(cc paramcc, DialogInterface.OnClickListener paramOnClickListener, ac paramac)
-  {
-    i = paramcc;
-    j = paramOnClickListener;
-    a(paramac);
-    m();
   }
 }
 

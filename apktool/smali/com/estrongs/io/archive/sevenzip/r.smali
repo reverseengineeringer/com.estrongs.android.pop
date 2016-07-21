@@ -1,5 +1,5 @@
 .class public Lcom/estrongs/io/archive/sevenzip/r;
-.super Lcom/estrongs/io/archive/h;
+.super Lcom/estrongs/io/archive/i;
 
 
 # static fields
@@ -39,7 +39,7 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    invoke-direct {p0, p1, p2}, Lcom/estrongs/io/archive/h;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, p1, p2}, Lcom/estrongs/io/archive/i;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Lcom/estrongs/io/archive/sevenzip/c;
 
@@ -122,9 +122,9 @@
 
     :cond_0
     :try_start_1
-    new-instance v1, Lcom/estrongs/io/archive/g;
+    new-instance v1, Lcom/estrongs/io/archive/h;
 
-    invoke-direct {v1}, Lcom/estrongs/io/archive/g;-><init>()V
+    invoke-direct {v1}, Lcom/estrongs/io/archive/h;-><init>()V
 
     invoke-virtual {p0}, Lcom/estrongs/io/archive/sevenzip/r;->b()V
 
@@ -145,7 +145,7 @@
 
     check-cast v0, Lcom/estrongs/io/model/ArchiveEntryFile;
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/io/archive/g;->a(Ljava/io/File;)V
+    invoke-virtual {v1, v0}, Lcom/estrongs/io/archive/h;->a(Ljava/io/File;)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -174,7 +174,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0b0239
+    const v3, 0x7f080428
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -214,15 +214,15 @@
 
     move-result-object v0
 
-    invoke-virtual {v1}, Lcom/estrongs/io/archive/g;->a()J
+    invoke-virtual {v1}, Lcom/estrongs/io/archive/h;->a()J
 
     move-result-wide v2
 
-    invoke-virtual {v1}, Lcom/estrongs/io/archive/g;->b()I
+    invoke-virtual {v1}, Lcom/estrongs/io/archive/h;->b()I
 
     move-result v4
 
-    invoke-virtual {v1}, Lcom/estrongs/io/archive/g;->c()I
+    invoke-virtual {v1}, Lcom/estrongs/io/archive/h;->c()I
 
     move-result v1
 
@@ -320,9 +320,9 @@
 
     iput-wide v0, p0, Lcom/estrongs/io/archive/sevenzip/r;->a:J
 
-    new-instance v1, Lcom/estrongs/io/archive/g;
+    new-instance v1, Lcom/estrongs/io/archive/h;
 
-    invoke-direct {v1}, Lcom/estrongs/io/archive/g;-><init>()V
+    invoke-direct {v1}, Lcom/estrongs/io/archive/h;-><init>()V
 
     new-instance v2, Ljava/util/LinkedList;
 
@@ -374,7 +374,7 @@
 
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v1, v0}, Lcom/estrongs/io/archive/g;->a(Ljava/io/File;)V
+    invoke-virtual {v1, v0}, Lcom/estrongs/io/archive/h;->a(Ljava/io/File;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -403,7 +403,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0b0239
+    const v3, 0x7f080428
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -443,15 +443,15 @@
 
     move-result-object v0
 
-    invoke-virtual {v1}, Lcom/estrongs/io/archive/g;->a()J
+    invoke-virtual {v1}, Lcom/estrongs/io/archive/h;->a()J
 
     move-result-wide v2
 
-    invoke-virtual {v1}, Lcom/estrongs/io/archive/g;->b()I
+    invoke-virtual {v1}, Lcom/estrongs/io/archive/h;->b()I
 
     move-result v4
 
-    invoke-virtual {v1}, Lcom/estrongs/io/archive/g;->c()I
+    invoke-virtual {v1}, Lcom/estrongs/io/archive/h;->c()I
 
     move-result v1
 
@@ -608,7 +608,7 @@
 .method public d()V
     .locals 1
 
-    invoke-super {p0}, Lcom/estrongs/io/archive/h;->d()V
+    invoke-super {p0}, Lcom/estrongs/io/archive/i;->d()V
 
     iget-object v0, p0, Lcom/estrongs/io/archive/sevenzip/r;->l:Lcom/estrongs/io/archive/sevenzip/c;
 

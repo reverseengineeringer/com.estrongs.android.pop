@@ -6,12 +6,12 @@ import android.view.View.OnClickListener;
 class gw
   implements View.OnClickListener
 {
-  gw(gu paramgu, int paramInt) {}
+  gw(gv paramgv, int paramInt) {}
   
   public void onClick(View paramView)
   {
-    if (b.c != null) {
-      b.c.a(a);
+    if (gv.a(b) != null) {
+      gv.a(b).a(a);
     }
   }
 }

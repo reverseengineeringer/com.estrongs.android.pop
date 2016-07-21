@@ -1,162 +1,218 @@
 package com.estrongs.android.ui.c;
 
-import android.app.Activity;
-import android.os.Handler;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.View.OnTouchListener;
+import android.content.Context;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.RecyclerView.Adapter;
+import android.support.v7.widget.RecyclerView.ViewHolder;
 import android.view.ViewGroup;
-import android.view.ViewGroup.LayoutParams;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.esclasses.g;
+import com.estrongs.android.pop.app.messagebox.ah;
+import com.estrongs.android.pop.app.messagebox.z;
+import com.estrongs.android.pop.app.unlock.UnLockCardView;
+import com.estrongs.android.pop.app.unlock.s;
+import com.estrongs.android.pop.app.unlock.y;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.c.b.f;
-import com.estrongs.android.ui.c.b.l;
-import com.estrongs.android.ui.c.b.u;
-import com.estrongs.android.util.TypedMap;
-import com.estrongs.android.util.ay;
-import com.estrongs.android.util.bb;
-import com.estrongs.android.view.aw;
-import com.estrongs.android.view.cb;
-import com.estrongs.android.widget.HeaderGridView;
-import com.estrongs.android.widget.c;
-import com.estrongs.fs.h;
-import com.estrongs.fs.n;
+import com.estrongs.android.ui.c.c.f;
+import com.estrongs.android.ui.c.c.g;
+import com.estrongs.android.ui.topclassify.t;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import org.json.JSONObject;
 
 public class a
-  extends aw
+  extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 {
-  private static View al = null;
-  private f a;
-  private com.estrongs.android.ui.c.b.b ai;
-  private bb aj;
-  private boolean ak = false;
-  ViewGroup b;
-  private l c;
-  private u d;
+  public static int a = 2;
+  private static int b = 50;
+  private RecyclerView.Adapter<RecyclerView.ViewHolder> c;
+  private Context d;
+  private List<h> e;
+  private Map<Integer, Integer> f;
+  private Map<com.estrongs.android.k.d, h> g;
+  private t h;
+  private com.estrongs.android.ui.c.b.a i;
+  private ah j;
+  private y k;
+  private com.estrongs.android.ui.c.c.b l;
   
-  public a(Activity paramActivity, com.estrongs.fs.util.a.a parama, cb paramcb)
+  public a(Context paramContext, RecyclerView paramRecyclerView)
   {
-    super(paramActivity, parama, paramcb);
-  }
-  
-  private void a(View paramView, String paramString1, String paramString2)
-  {
-    LinearLayout localLinearLayout = (LinearLayout)((ViewGroup)paramView.getParent()).findViewById(2131362378);
-    ImageView localImageView = (ImageView)localLinearLayout.findViewById(2131362380);
-    boolean bool = ad.a(FexApplication.a()).P(paramString2);
-    localLinearLayout.setOnClickListener(new e(this, paramView, paramString2, localImageView));
-    ((TextView)localLinearLayout.findViewById(2131362379)).setText(paramString1);
-    if (bool)
+    d = paramContext;
+    e = new ArrayList();
+    f = new HashMap();
+    g = new HashMap();
+    h = new t("home", paramContext, this);
+    a(new h(0));
+    i = new com.estrongs.android.ui.c.b.a((FileExplorerActivity)paramContext, this);
+    a(new h(1));
+    j = z.a(d).b();
+    if (j != null) {
+      a(new h(2));
+    }
+    if ((aa != null) && (aa.size() > 0))
     {
-      paramView.setVisibility(0);
-      localImageView.setImageResource(2130837512);
-      return;
-    }
-    paramView.setVisibility(8);
-    localImageView.setImageResource(2130837511);
-  }
-  
-  public static void m()
-  {
-    al = null;
-  }
-  
-  protected int a()
-  {
-    return 2130903156;
-  }
-  
-  public void a(int paramInt) {}
-  
-  public void a(View.OnTouchListener paramOnTouchListener)
-  {
-    b.setOnTouchListener(paramOnTouchListener);
-  }
-  
-  protected void a(h paramh, TypedMap paramTypedMap) {}
-  
-  public void a_()
-  {
-    super.a_();
-    ((ViewGroup)k(2131362372)).removeView(al);
-  }
-  
-  public h b()
-  {
-    if (w == null) {
-      w = new n("#home_page#");
-    }
-    return w;
-  }
-  
-  public void b(boolean paramBoolean)
-  {
-    if (a != null) {
-      a.l();
-    }
-    if (c != null) {
-      c.l();
-    }
-    if (ai != null) {
-      ai.l();
-    }
-  }
-  
-  public String c()
-  {
-    return "#home_page#";
-  }
-  
-  protected void i()
-  {
-    b = ((ViewGroup)k(2131362372));
-    if (al != null)
-    {
-      b.removeAllViews();
-      if (al.getParent() != null) {
-        ((ViewGroup)al.getParent()).removeView(al);
+      paramContext = aa.iterator();
+      while (paramContext.hasNext()) {
+        a(new h(3, (com.estrongs.android.k.d)paramContext.next()));
       }
     }
-    for (boolean bool = true;; bool = false)
+    paramContext = s.a().c();
+    if (paramContext != null) {
+      a(new h(3, paramContext));
+    }
+    try
     {
-      Object localObject = new ViewGroup.LayoutParams(-1, -2);
-      b.addView(al, (ViewGroup.LayoutParams)localObject);
-      ((LinearLayout)k(2131362373)).setVisibility(8);
-      localObject = (LinearLayout)k(2131362375);
-      a = new f((FileExplorerActivity)ad, (LinearLayout)localObject, bool);
-      a.a(bool);
-      localObject = (LinearLayout)k(2131362376);
-      c = new l((FileExplorerActivity)ad, (LinearLayout)localObject, bool);
-      c.a(bool);
-      localObject = (LinearLayout)k(2131362381);
-      d = new u((FileExplorerActivity)ad, (LinearLayout)localObject, bool);
-      d.a(bool);
-      LinearLayout localLinearLayout = (LinearLayout)k(2131362383);
-      ai = new com.estrongs.android.ui.c.b.b((FileExplorerActivity)ad, localLinearLayout, bool);
-      ai.a(bool);
-      aj = new b(this);
-      ay.a(aj);
-      a.a();
-      c.a();
-      d.a();
-      ai.a();
-      a((View)localObject, ad.getString(2131428507), "tookkit_block");
-      a(localLinearLayout, ad.getString(2131428038), "collection_block");
-      T.post(new d(this));
+      paramRecyclerView = new JSONObject();
+      paramRecyclerView.put("positon", "home");
+      paramRecyclerView.put("feature", paramContext.g());
+      paramRecyclerView.put("action", "show");
+      com.estrongs.android.j.c.a(d).a("unlockc", paramRecyclerView);
+      k = new b(this);
+      s.a().a(k);
+      if (com.estrongs.android.pop.app.a.a.a(com.estrongs.android.pop.app.a.a.b)) {
+        a(new h(4));
+      }
       return;
-      al = g.a(FexApplication.a()).inflate(2130903157, null);
+    }
+    catch (Exception paramContext)
+    {
+      for (;;)
+      {
+        paramContext.printStackTrace();
+      }
     }
   }
   
-  protected void n()
+  public void a()
   {
-    g = new HeaderGridView(ad);
-    f = new c();
+    if (i != null) {
+      i.c();
+    }
+  }
+  
+  public void a(RecyclerView.Adapter<RecyclerView.ViewHolder> paramAdapter)
+  {
+    c = paramAdapter;
+  }
+  
+  public void a(ah paramah)
+  {
+    if (paramah != null)
+    {
+      j = paramah;
+      paramah = new h(2);
+      if (!e.contains(paramah)) {
+        a(paramah);
+      }
+    }
+  }
+  
+  public void a(h paramh)
+  {
+    a(paramh, e.size());
+  }
+  
+  public void a(h paramh, int paramInt)
+  {
+    e.add(paramInt, paramh);
+    f.put(Integer.valueOf(a), Integer.valueOf(paramInt));
+    if ((b instanceof com.estrongs.android.k.d)) {
+      g.put((com.estrongs.android.k.d)b, paramh);
+    }
+    a = e.size();
+  }
+  
+  public void b()
+  {
+    if (h != null) {
+      h.h();
+    }
+    s.a().b(k);
+  }
+  
+  public void c()
+  {
+    if (h != null) {
+      h.c();
+    }
+  }
+  
+  public int getItemCount()
+  {
+    if (c == null) {
+      return e.size();
+    }
+    return c.getItemCount() + e.size();
+  }
+  
+  public int getItemViewType(int paramInt)
+  {
+    if (paramInt < e.size()) {
+      return e.get(paramInt)).a;
+    }
+    return b + c.getItemViewType(paramInt - e.size());
+  }
+  
+  public void onBindViewHolder(RecyclerView.ViewHolder paramViewHolder, int paramInt)
+  {
+    if (getItemViewType(paramInt) == 0)
+    {
+      ((f)paramViewHolder).a(null);
+      return;
+    }
+    if (getItemViewType(paramInt) == 1)
+    {
+      ((com.estrongs.android.ui.c.c.b)paramViewHolder).a(h.f());
+      return;
+    }
+    if (getItemViewType(paramInt) == 2)
+    {
+      ((com.estrongs.android.ui.c.c.d)paramViewHolder).a(j);
+      return;
+    }
+    if (getItemViewType(paramInt) == 3)
+    {
+      paramViewHolder = (g)paramViewHolder;
+      paramViewHolder.a(new c(this));
+      paramViewHolder.a((com.estrongs.android.k.d)e.get(paramInt)).b);
+      return;
+    }
+    if (getItemViewType(paramInt) == 4)
+    {
+      ((com.estrongs.android.pop.app.a.a.a)paramViewHolder).a(new d(this, paramInt));
+      return;
+    }
+    int m = e.size();
+    c.onBindViewHolder(paramViewHolder, paramInt - m);
+  }
+  
+  public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup paramViewGroup, int paramInt)
+  {
+    if (paramInt == 0)
+    {
+      paramViewGroup = new f(d);
+      paramViewGroup.a(i);
+      return paramViewGroup;
+    }
+    if (paramInt == 1)
+    {
+      if (l == null) {
+        l = new com.estrongs.android.ui.c.c.b(d);
+      }
+      return l;
+    }
+    if (paramInt == 2) {
+      return new com.estrongs.android.ui.c.c.d(d);
+    }
+    if (paramInt == 3) {
+      return new g(new UnLockCardView(d, "home"));
+    }
+    if (paramInt == 4) {
+      return new com.estrongs.android.pop.app.a.a.a(d);
+    }
+    return c.onCreateViewHolder(paramViewGroup, paramInt - b);
   }
 }
 

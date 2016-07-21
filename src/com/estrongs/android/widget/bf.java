@@ -1,8 +1,26 @@
 package com.estrongs.android.widget;
 
-public abstract interface bf
+import android.os.Handler;
+import android.os.Message;
+
+class bf
+  extends Handler
 {
-  public abstract void a();
+  bf(ScaledImageView paramScaledImageView) {}
+  
+  public void handleMessage(Message paramMessage)
+  {
+    int i = (int)(System.currentTimeMillis() - ScaledImageView.a(a));
+    if (i < ScaledImageView.b(a))
+    {
+      float f = i / ScaledImageView.b(a);
+      ScaledImageView.a(a, (int)(ScaledImageView.d(a) - (ScaledImageView.d(a) - ScaledImageView.c(a)) * f));
+      ScaledImageView.b(a, (int)(ScaledImageView.f(a) - f * (ScaledImageView.f(a) - ScaledImageView.e(a))));
+      ScaledImageView.g(a);
+      return;
+    }
+    a.b();
+  }
 }
 
 /* Location:

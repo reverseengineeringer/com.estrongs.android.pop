@@ -33,7 +33,7 @@
     const/4 v1, 0x0
 
     :try_start_0
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v2
 
@@ -51,7 +51,7 @@
 
     if-ne p2, v0, :cond_1
 
-    iget-boolean v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->v:Z
+    iget-boolean v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->u:Z
 
     if-eqz v0, :cond_a
 
@@ -59,11 +59,11 @@
 
     if-nez v0, :cond_a
 
-    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->C:Lcom/estrongs/android/ui/navigation/s;
+    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->y:Lcom/estrongs/android/ui/navigation/r;
 
     if-eqz v0, :cond_a
 
-    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->D:Landroid/view/View;
+    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->z:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
@@ -71,9 +71,9 @@
 
     if-nez v0, :cond_a
 
-    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->C:Lcom/estrongs/android/ui/navigation/s;
+    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->y:Lcom/estrongs/android/ui/navigation/r;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/navigation/s;->d()Landroid/view/View;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/navigation/r;->d()Landroid/view/View;
 
     move-result-object v0
 
@@ -97,23 +97,23 @@
 
     if-ne p2, v0, :cond_3
 
-    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->f:Lcom/estrongs/android/widget/ThumbContentViewSwitcher;
+    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->h:Lcom/estrongs/android/widget/ThumbContentViewSwitcher;
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->Z()Z
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->ap()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->f:Lcom/estrongs/android/widget/ThumbContentViewSwitcher;
+    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->h:Lcom/estrongs/android/widget/ThumbContentViewSwitcher;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/ThumbContentViewSwitcher;->i()I
+    invoke-virtual {v0}, Lcom/estrongs/android/widget/ThumbContentViewSwitcher;->getCurrentChildIndex()I
 
     move-result v0
 
-    iget-object v3, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->f:Lcom/estrongs/android/widget/ThumbContentViewSwitcher;
+    iget-object v3, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->h:Lcom/estrongs/android/widget/ThumbContentViewSwitcher;
 
     invoke-virtual {v3, v0}, Lcom/estrongs/android/widget/ThumbContentViewSwitcher;->getChildAt(I)Landroid/view/View;
 
@@ -122,11 +122,15 @@
     goto :goto_0
 
     :cond_2
-    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->g:Landroid/widget/RelativeLayout;
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a()Landroid/view/View;
+
+    move-result-object v0
 
     if-eqz v0, :cond_a
 
-    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->g:Landroid/widget/RelativeLayout;
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a()Landroid/view/View;
+
+    move-result-object v0
 
     goto :goto_0
 
@@ -135,23 +139,23 @@
 
     if-ne p2, v0, :cond_5
 
-    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->f:Lcom/estrongs/android/widget/ThumbContentViewSwitcher;
+    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->h:Lcom/estrongs/android/widget/ThumbContentViewSwitcher;
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {v2}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->Z()Z
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->ap()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->f:Lcom/estrongs/android/widget/ThumbContentViewSwitcher;
+    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->h:Lcom/estrongs/android/widget/ThumbContentViewSwitcher;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/ThumbContentViewSwitcher;->i()I
+    invoke-virtual {v0}, Lcom/estrongs/android/widget/ThumbContentViewSwitcher;->getCurrentChildIndex()I
 
     move-result v0
 
-    iget-object v3, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->f:Lcom/estrongs/android/widget/ThumbContentViewSwitcher;
+    iget-object v3, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->h:Lcom/estrongs/android/widget/ThumbContentViewSwitcher;
 
     invoke-virtual {v3, v0}, Lcom/estrongs/android/widget/ThumbContentViewSwitcher;->getChildAt(I)Landroid/view/View;
 
@@ -160,13 +164,13 @@
     goto :goto_0
 
     :cond_4
-    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->i:Lcom/estrongs/android/ui/view/by;
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->b()Landroid/view/View;
+
+    move-result-object v0
 
     if-eqz v0, :cond_a
 
-    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->i:Lcom/estrongs/android/ui/view/by;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/by;->f()Landroid/view/View;
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->b()Landroid/view/View;
 
     move-result-object v0
 
@@ -177,17 +181,17 @@
 
     if-ne p2, v0, :cond_a
 
-    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->f:Lcom/estrongs/android/widget/ThumbContentViewSwitcher;
+    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->h:Lcom/estrongs/android/widget/ThumbContentViewSwitcher;
 
     if-eqz v0, :cond_a
 
-    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->f:Lcom/estrongs/android/widget/ThumbContentViewSwitcher;
+    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->h:Lcom/estrongs/android/widget/ThumbContentViewSwitcher;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/ThumbContentViewSwitcher;->i()I
+    invoke-virtual {v0}, Lcom/estrongs/android/widget/ThumbContentViewSwitcher;->getCurrentChildIndex()I
 
     move-result v0
 
-    iget-object v3, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->f:Lcom/estrongs/android/widget/ThumbContentViewSwitcher;
+    iget-object v3, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->h:Lcom/estrongs/android/widget/ThumbContentViewSwitcher;
 
     invoke-virtual {v3, v0}, Lcom/estrongs/android/widget/ThumbContentViewSwitcher;->getChildAt(I)Landroid/view/View;
 
@@ -205,7 +209,7 @@
     goto :goto_1
 
     :cond_7
-    iget-boolean v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->v:Z
+    iget-boolean v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->u:Z
 
     if-eqz v0, :cond_8
 
@@ -213,11 +217,11 @@
 
     if-nez v0, :cond_8
 
-    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->C:Lcom/estrongs/android/ui/navigation/s;
+    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->y:Lcom/estrongs/android/ui/navigation/r;
 
     if-eqz v0, :cond_9
 
-    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->D:Landroid/view/View;
+    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->z:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
@@ -225,22 +229,26 @@
 
     if-nez v0, :cond_9
 
-    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->C:Lcom/estrongs/android/ui/navigation/s;
+    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->y:Lcom/estrongs/android/ui/navigation/r;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/navigation/s;->d()Landroid/view/View;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/navigation/r;->d()Landroid/view/View;
 
     move-result-object p3
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :cond_8
-    iget-object v0, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->g:Landroid/widget/RelativeLayout;
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a()Landroid/view/View;
+
+    move-result-object v0
 
     if-eqz v0, :cond_9
 
-    iget-object p3, v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->g:Landroid/widget/RelativeLayout;
+    invoke-virtual {v2}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a()Landroid/view/View;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object p3
 
     goto/16 :goto_1
 
@@ -263,13 +271,13 @@
 .method public a(Landroid/gesture/Gesture;)V
     .locals 1
 
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
@@ -309,17 +317,17 @@
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_0
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->J()Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->U()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->ak()V
 
     :cond_0
     const/4 v0, 0x0
@@ -357,7 +365,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Lcom/estrongs/android/util/l;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

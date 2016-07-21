@@ -1,31 +1,21 @@
 package com.estrongs.android.ui.e;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.ay;
-import com.estrongs.fs.h;
-import java.util.List;
+import com.estrongs.android.ui.dialog.ci;
 
 class dr
-  implements MenuItem.OnMenuItemClickListener
+  implements Runnable
 {
-  dr(cp paramcp) {}
+  dr(dq paramdq) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void run()
   {
-    paramMenuItem = cp.b(a);
-    if (paramMenuItem.size() == 0) {
-      ag.a(cp.a(a).getBaseContext(), 2131427774, 0);
-    }
-    while (paramMenuItem.size() != 1) {
-      return true;
-    }
-    paramMenuItem = (h)paramMenuItem.get(0);
-    ay.a(cp.a(a).getBaseContext(), paramMenuItem);
-    cp.a(a).s();
-    return true;
+    ci localci = new ci(cr.b(a.a.a));
+    localci.setTitle(cr.b(a.a.a).getString(2131231504));
+    localci.setMessage(cr.b(a.a.a).getString(2131231503));
+    localci.setCancelButton(cr.b(a.a.a).getString(2131231265), new ds(this));
+    localci.setConfirmButton(cr.b(a.a.a).getString(2131231502), new dt(this));
+    localci.show();
   }
 }
 

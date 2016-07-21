@@ -2,20 +2,15 @@ package com.estrongs.android.ui.dialog;
 
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import com.estrongs.a.a;
 
 class jz
   implements DialogInterface.OnClickListener
 {
-  jz(jw paramjw, a parama) {}
+  jz(jh paramjh) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (a.canPause())
-    {
-      a.requsestPause();
-      b.setMiddleButton(b.getString(2131428010), jw.a(b));
-    }
+    a.a(jh.a(a));
   }
 }
 

@@ -1,18 +1,34 @@
 package com.estrongs.android.ui.theme;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.ui.view.ColorPickerView;
 
 class aa
-  implements DialogInterface.OnClickListener
+  implements View.OnClickListener
 {
   aa(ThemeColorActivity paramThemeColorActivity) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void onClick(View paramView)
   {
-    paramDialogInterface.dismiss();
-    ThemeColorActivity.d(a);
-    a.finish();
+    int i = 0;
+    if (ThemeColorActivity.b(a) == 1) {
+      i = ThemeColorActivity.a(a, 2131558462);
+    }
+    for (;;)
+    {
+      ThemeColorActivity.a(a).setColor(i);
+      return;
+      if (ThemeColorActivity.b(a) == 2) {
+        i = ThemeColorActivity.a(a, 2131558623);
+      } else if (ThemeColorActivity.b(a) == 3) {
+        i = ThemeColorActivity.a(a, 2131558409);
+      } else if (ThemeColorActivity.b(a) == 4) {
+        i = ThemeColorActivity.a(a, 2131558407);
+      } else if (ThemeColorActivity.b(a) == 5) {
+        i = ThemeColorActivity.a(a, 2131558411);
+      }
+    }
   }
 }
 

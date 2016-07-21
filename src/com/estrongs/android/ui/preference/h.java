@@ -6,7 +6,7 @@ import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import com.estrongs.android.pop.ad;
 import com.estrongs.android.pop.ftp.ESFtpShortcut;
-import com.estrongs.android.ui.view.ag;
+import com.estrongs.android.ui.view.ak;
 
 class h
   implements Preference.OnPreferenceChangeListener
@@ -15,11 +15,11 @@ class h
   
   public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
   {
-    int i = ad.a(a).V();
+    int i = ad.a(a).W();
     paramPreference = paramObject.toString();
     if (paramPreference.trim().equals(""))
     {
-      ag.a(a, "Port can't be null", 0);
+      ak.a(a, "Port can't be null", 0);
       return false;
     }
     int j;
@@ -32,7 +32,7 @@ class h
     }
     catch (Exception paramPreference)
     {
-      ag.a(a, 2131427654, 0);
+      ak.a(a, 2131232060, 0);
       return false;
     }
     if (j == i) {
@@ -42,8 +42,8 @@ class h
     try
     {
       new Intent(a, ESFtpShortcut.class).putExtra("mode", 2);
-      ag.a(a, 2131427653, 0);
-      a.b.setSummary(a.getText(2131427651) + "" + j);
+      ak.a(a, 2131232059, 0);
+      a.b.setSummary(a.getText(2131232057) + "" + j);
       return true;
     }
     catch (Exception paramPreference)

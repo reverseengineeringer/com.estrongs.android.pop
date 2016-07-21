@@ -4,7 +4,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import com.estrongs.android.ui.view.ag;
+import com.estrongs.android.ui.view.ak;
 import com.estrongs.fs.util.j;
 
 class i
@@ -47,7 +47,7 @@ class i
       return;
     }
     h.d(a);
-    ag.a(h.e(a), 2131428580, 0);
+    ak.a(h.e(a), 2131231819, 0);
   }
 }
 

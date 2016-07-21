@@ -1,18 +1,19 @@
 package com.estrongs.android.ui.navigation;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.ui.dialog.ct;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.os.Handler;
 
 class k
-  implements MenuItem.OnMenuItemClickListener
+  implements DialogInterface.OnClickListener
 {
-  k(a parama) {}
+  k(i parami) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    new ct(a.b(a)).a(2131428116).b(2131428178).c(2131427340, null).b(2131427339, new l(this)).c();
-    return false;
+    paramDialogInterface.dismiss();
+    h.b(a.a);
+    h.a(a.a).post(new l(this));
   }
 }
 

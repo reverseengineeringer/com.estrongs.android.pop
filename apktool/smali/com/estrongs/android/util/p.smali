@@ -3,89 +3,94 @@
 
 
 # direct methods
-.method public static final a(ZLjava/lang/String;Ljava/lang/String;)Z
+.method public static a(Landroid/content/Context;)V
+    .locals 2
+
+    const/4 v1, 0x0
+
+    const-string v0, "kunw@estrongs.com"
+
+    invoke-static {p0, v0, v1, v1}, Lcom/estrongs/android/util/p;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/CharSequence;)V
     .locals 4
 
-    const/4 v0, 0x0
+    new-instance v2, Landroid/content/Intent;
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->aw(Ljava/lang/String;)Z
+    invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    move-result v1
+    const-string v1, "text/plain"
 
-    if-eqz v1, :cond_1
+    invoke-virtual {v2, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    const-string v1, "mediafire"
+    const-string v1, "android.intent.action.SENDTO"
 
-    invoke-static {p1, v1}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-virtual {v2, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    move-result v1
+    const-string v1, "mailto"
 
-    if-eqz v1, :cond_1
+    const/4 v3, 0x0
 
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    if-ge v1, v2, :cond_1
-
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+    invoke-static {v1, p1, v3}, Landroid/net/Uri;->fromParts(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+    invoke-virtual {v2, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    move-result-object v2
+    if-eqz p2, :cond_0
 
-    const v3, 0x7f0b0496
+    const-string v1, "android.intent.extra.SUBJECT"
 
-    invoke-virtual {v2, v3}, Lcom/estrongs/android/pop/FexApplication;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2, v0}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
-
-    :goto_0
-    return v0
+    invoke-virtual {v2, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     :cond_0
-    invoke-static {p1}, Lcom/estrongs/fs/util/j;->b(Ljava/lang/String;)Ljava/lang/String;
+    if-eqz p3, :cond_1
 
-    move-result-object v1
+    const-string v1, "android.intent.extra.TEXT"
 
-    invoke-static {p2}, Lcom/estrongs/fs/util/j;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/content/Intent;
 
-    move-result-object v2
+    :cond_1
+    :try_start_0
+    instance-of v1, p0, Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eqz v1, :cond_2
 
-    move-result v1
+    move-object v0, p0
 
-    if-nez v1, :cond_1
+    check-cast v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+    move-object v1, v0
 
-    move-result-object v1
+    invoke-virtual {v1, v2}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a(Landroid/content/Intent;)V
 
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+    :goto_0
+    return-void
 
-    move-result-object v2
-
-    const v3, 0x7f0b0497
-
-    invoke-virtual {v2, v3}, Lcom/estrongs/android/pop/FexApplication;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2, v0}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    :cond_2
+    invoke-virtual {p0, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_1
-    const/4 v0, 0x1
+    :catch_0
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
+
+    const v1, 0x7f08017f
+
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    invoke-static {p0, v1, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
 
     goto :goto_0
 .end method

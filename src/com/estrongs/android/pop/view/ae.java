@@ -1,16 +1,23 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.pop.app.network.EsNetworkActivity;
+import com.estrongs.android.view.cq;
+import com.estrongs.android.view.cr;
+import com.estrongs.fs.h;
+import java.util.List;
 
 class ae
-  implements Runnable
+  implements cq<h>
 {
   ae(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void run()
+  public void a(List<h> paramList)
   {
-    a.k();
-    EsNetworkActivity.a(a, null, false);
+    cr localcr = a.O();
+    if (localcr == null) {
+      return;
+    }
+    int i = localcr.d();
+    a.a(paramList, i);
   }
 }
 

@@ -555,11 +555,11 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->i(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -604,13 +604,13 @@
 
     invoke-virtual {v2, p2, p3}, Lorg/apache/commons/net/ftp/FTPClient;->setRestartOffset(J)V
 
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v2, v1}, Lorg/apache/commons/net/ftp/FTPClient;->changeWorkingDirectory(Ljava/lang/String;)Z
 
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -658,13 +658,13 @@
     :try_start_3
     invoke-virtual {v1, p2, p3}, Lorg/apache/commons/net/ftp/FTPClient;->setRestartOffset(J)V
 
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Lorg/apache/commons/net/ftp/FTPClient;->changeWorkingDirectory(Ljava/lang/String;)Z
 
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -718,13 +718,13 @@
 
     invoke-virtual {v2, p2, p3}, Lorg/apache/commons/net/ftp/FTPClient;->setRestartOffset(J)V
 
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v2, v1}, Lorg/apache/commons/net/ftp/FTPClient;->changeWorkingDirectory(Ljava/lang/String;)Z
 
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -791,13 +791,13 @@
 
     invoke-virtual {v2, p2, p3}, Lorg/apache/commons/net/ftp/FTPClient;->setRestartOffset(J)V
 
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v2, v1}, Lorg/apache/commons/net/ftp/FTPClient;->changeWorkingDirectory(Ljava/lang/String;)Z
 
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -877,13 +877,13 @@
 
     invoke-virtual {v2, p2, p3}, Lorg/apache/commons/net/ftp/FTPClient;->setRestartOffset(J)V
 
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v2, v1}, Lorg/apache/commons/net/ftp/FTPClient;->changeWorkingDirectory(Ljava/lang/String;)Z
 
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1035,7 +1035,7 @@
     move-result-object v8
 
     :try_start_0
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->i(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1115,7 +1115,7 @@
 
     :cond_3
     :try_start_4
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1193,7 +1193,7 @@
 
     iget-object v0, p0, Lcom/estrongs/old/fs/impl/a/c;->d:Ljava/util/HashMap;
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->i(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1212,7 +1212,7 @@
     move-result-object v3
 
     :cond_6
-    sget-object v4, Lcom/estrongs/android/util/f;->a:[Ljava/lang/String;
+    sget-object v4, Lcom/estrongs/android/util/e;->a:[Ljava/lang/String;
 
     const/4 v5, 0x0
 
@@ -1469,7 +1469,7 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1515,23 +1515,23 @@
 .method public a(Ljava/lang/String;Z)Lorg/apache/commons/net/ftp/FTPClient;
     .locals 17
 
-    invoke-static/range {p1 .. p1}, Lcom/estrongs/android/util/am;->y(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {p1 .. p1}, Lcom/estrongs/android/util/ap;->A(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
-    invoke-static/range {p1 .. p1}, Lcom/estrongs/android/util/am;->A(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {p1 .. p1}, Lcom/estrongs/android/util/ap;->C(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
-    invoke-static/range {p1 .. p1}, Lcom/estrongs/android/util/am;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {p1 .. p1}, Lcom/estrongs/android/util/ap;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
 
-    invoke-static/range {p1 .. p1}, Lcom/estrongs/android/util/am;->w(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {p1 .. p1}, Lcom/estrongs/android/util/ap;->y(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    invoke-static/range {p1 .. p1}, Lcom/estrongs/android/util/am;->k(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {p1 .. p1}, Lcom/estrongs/android/util/ap;->m(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v12
 
@@ -1543,7 +1543,7 @@
 
     iget-object v2, v0, Lcom/estrongs/old/fs/impl/a/c;->d:Ljava/util/HashMap;
 
-    invoke-static/range {p1 .. p1}, Lcom/estrongs/android/util/am;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {p1 .. p1}, Lcom/estrongs/android/util/ap;->i(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -1574,7 +1574,7 @@
     move v6, v4
 
     :goto_0
-    invoke-static/range {p1 .. p1}, Lcom/estrongs/android/util/am;->l(Ljava/lang/String;)Z
+    invoke-static/range {p1 .. p1}, Lcom/estrongs/android/util/ap;->n(Ljava/lang/String;)Z
 
     move-result v13
 
@@ -1769,7 +1769,7 @@
 
     iput-object v5, v8, Lcom/estrongs/old/fs/impl/a/g;->b:Ljava/lang/String;
 
-    sget-object v4, Lcom/estrongs/android/util/f;->a:[Ljava/lang/String;
+    sget-object v4, Lcom/estrongs/android/util/e;->a:[Ljava/lang/String;
 
     const/4 v14, 0x0
 
@@ -1975,7 +1975,7 @@
 
     invoke-virtual {v4, v12}, Lorg/apache/commons/net/ftp/FTPClient;->changeWorkingDirectory(Ljava/lang/String;)Z
 
-    sget-object v4, Lcom/estrongs/android/util/f;->a:[Ljava/lang/String;
+    sget-object v4, Lcom/estrongs/android/util/e;->a:[Ljava/lang/String;
 
     const/4 v14, 0x0
 
@@ -2640,7 +2640,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->i(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2679,7 +2679,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->i(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2694,7 +2694,7 @@
     const/4 v0, 0x0
 
     :try_start_0
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->i(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2720,7 +2720,7 @@
 
     :cond_1
     :try_start_1
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2845,7 +2845,7 @@
     const/4 v2, 0x0
 
     :try_start_0
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->i(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -2871,7 +2871,7 @@
 
     :cond_1
     :try_start_1
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -2889,13 +2889,13 @@
 
     if-nez v1, :cond_2
 
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v2, v3}, Lorg/apache/commons/net/ftp/FTPClient;->changeWorkingDirectory(Ljava/lang/String;)Z
 
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -3063,7 +3063,7 @@
     const/4 v1, 0x0
 
     :try_start_0
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->i(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -3089,11 +3089,11 @@
 
     :cond_1
     :try_start_1
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {p2}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -3103,17 +3103,17 @@
 
     if-nez v0, :cond_2
 
-    invoke-static {v2}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v1, v3}, Lorg/apache/commons/net/ftp/FTPClient;->changeWorkingDirectory(Ljava/lang/String;)Z
 
-    invoke-static {v2}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {p2}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -3174,7 +3174,7 @@
     const/4 v2, 0x0
 
     :try_start_0
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->i(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -3200,7 +3200,7 @@
 
     :cond_1
     :try_start_1
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -3427,7 +3427,7 @@
     const/4 v2, 0x0
 
     :try_start_0
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->i(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -3457,7 +3457,7 @@
 
     move-result v4
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -3482,7 +3482,7 @@
     move-result-object v3
 
     :goto_1
-    invoke-static {v3}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -3500,7 +3500,7 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {p2}, Lcom/estrongs/android/util/am;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2}, Lcom/estrongs/android/util/ap;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -3516,7 +3516,7 @@
 
     move-result-object v0
 
-    invoke-static {p2}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -3547,7 +3547,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -3683,7 +3683,7 @@
     const/4 v1, 0x0
 
     :try_start_0
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->i(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -3718,7 +3718,7 @@
     if-nez v3, :cond_0
 
     :cond_3
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -3734,7 +3734,7 @@
 
     if-nez v0, :cond_6
 
-    invoke-static {v3}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -3783,7 +3783,7 @@
 
     :cond_5
     :try_start_3
-    invoke-static {v3}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -3859,7 +3859,7 @@
     const/4 v1, 0x0
 
     :try_start_0
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->i(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -3888,7 +3888,7 @@
 
     :cond_2
     :try_start_1
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -3898,13 +3898,13 @@
 
     if-nez v0, :cond_3
 
-    invoke-static {v2}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v1, v0}, Lorg/apache/commons/net/ftp/FTPClient;->changeWorkingDirectory(Ljava/lang/String;)Z
 
-    invoke-static {v2}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -3970,7 +3970,7 @@
     const/4 v0, 0x0
 
     :try_start_0
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->i(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -3999,7 +3999,7 @@
 
     :cond_2
     :try_start_1
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -4018,13 +4018,13 @@
 
     :cond_3
     :try_start_2
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v4, v1}, Lorg/apache/commons/net/ftp/FTPClient;->changeWorkingDirectory(Ljava/lang/String;)Z
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_4
     .catch Lorg/apache/commons/net/ftp/FTPConnectionClosedException; {:try_start_2 .. :try_end_2} :catch_3
@@ -4279,7 +4279,7 @@
     const/4 v3, 0x0
 
     :try_start_0
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->i(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -4305,7 +4305,7 @@
 
     :cond_1
     :try_start_1
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
     :try_end_1
     .catch Lorg/apache/commons/net/ftp/FTPConnectionClosedException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
@@ -4322,13 +4322,13 @@
 
     :cond_2
     :try_start_2
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     invoke-virtual {v2, v5}, Lorg/apache/commons/net/ftp/FTPClient;->changeWorkingDirectory(Ljava/lang/String;)Z
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
     .catch Lorg/apache/commons/net/ftp/FTPConnectionClosedException; {:try_start_2 .. :try_end_2} :catch_0
@@ -4793,7 +4793,7 @@
     const/4 v4, 0x0
 
     :try_start_0
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->i(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -4822,7 +4822,7 @@
 
     :cond_2
     :try_start_1
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -4841,13 +4841,13 @@
 
     :cond_3
     :try_start_2
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v2, v3}, Lorg/apache/commons/net/ftp/FTPClient;->changeWorkingDirectory(Ljava/lang/String;)Z
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_4
     .catch Lorg/apache/commons/net/ftp/FTPConnectionClosedException; {:try_start_2 .. :try_end_2} :catch_3
@@ -5103,11 +5103,11 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->i(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -5148,13 +5148,13 @@
 
     if-nez v2, :cond_1
 
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Lorg/apache/commons/net/ftp/FTPClient;->changeWorkingDirectory(Ljava/lang/String;)Z
 
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -5179,13 +5179,13 @@
     if-nez v2, :cond_3
 
     :try_start_3
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     invoke-virtual {v1, v5}, Lorg/apache/commons/net/ftp/FTPClient;->changeWorkingDirectory(Ljava/lang/String;)Z
 
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -5222,13 +5222,13 @@
 
     if-nez v2, :cond_5
 
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v1, v3}, Lorg/apache/commons/net/ftp/FTPClient;->changeWorkingDirectory(Ljava/lang/String;)Z
 
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -5280,13 +5280,13 @@
 
     if-nez v2, :cond_5
 
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v1, v3}, Lorg/apache/commons/net/ftp/FTPClient;->changeWorkingDirectory(Ljava/lang/String;)Z
 
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -5347,13 +5347,13 @@
 
     if-nez v2, :cond_8
 
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Lorg/apache/commons/net/ftp/FTPClient;->changeWorkingDirectory(Ljava/lang/String;)Z
 
-    invoke-static {v4}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 

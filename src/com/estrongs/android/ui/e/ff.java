@@ -5,11 +5,11 @@ import com.estrongs.android.view.a.b;
 class ff
   implements b
 {
-  ff(cp paramcp) {}
+  ff(cr paramcr) {}
   
-  public boolean a(co paramco)
+  public boolean a(cp paramcp)
   {
-    return l;
+    return d;
   }
 }
 

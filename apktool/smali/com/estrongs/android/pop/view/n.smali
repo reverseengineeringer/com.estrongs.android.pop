@@ -23,13 +23,29 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lcom/estrongs/android/pop/view/n;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    const-string v1, "book://"
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->A()V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e(Ljava/lang/String;)Lcom/estrongs/android/view/aw;
+    iget-object v0, p0, Lcom/estrongs/android/pop/view/n;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/n;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->P()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->b(Lcom/estrongs/android/pop/view/FileExplorerActivity;Ljava/lang/String;)I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/view/n;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    const/4 v2, 0x0
+
+    invoke-static {v1, v0, v2}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->a(Lcom/estrongs/android/pop/view/FileExplorerActivity;II)V
 
     return-void
 .end method

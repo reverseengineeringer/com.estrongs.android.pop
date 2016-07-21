@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/ui/view/ar;
+.implements Lcom/estrongs/android/view/dx;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+.field final synthetic a:Lcom/estrongs/android/widget/f;
+
+.field final synthetic b:Lcom/estrongs/android/pop/app/iq;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/PopVideoPlayer;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/iq;Lcom/estrongs/android/widget/f;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/is;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/is;->b:Lcom/estrongs/android/pop/app/iq;
+
+    iput-object p2, p0, Lcom/estrongs/android/pop/app/is;->a:Lcom/estrongs/android/widget/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,74 +26,22 @@
 
 
 # virtual methods
-.method public a()V
-    .locals 4
-
-    const/4 v2, 0x7
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/is;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->f(Lcom/estrongs/android/pop/app/PopVideoPlayer;)Landroid/os/Handler;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/os/Handler;->removeMessages(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/is;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->f(Lcom/estrongs/android/pop/app/PopVideoPlayer;)Landroid/os/Handler;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/is;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
-
-    invoke-static {v1}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->f(Lcom/estrongs/android/pop/app/PopVideoPlayer;)Landroid/os/Handler;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
-
-    move-result-object v1
-
-    const-wide/16 v2, 0x7d0
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/is;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->d(Lcom/estrongs/android/pop/app/PopVideoPlayer;Z)Z
-
-    return-void
-.end method
-
-.method public b()V
+.method public a(Lcom/estrongs/fs/h;)V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/is;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->d(Lcom/estrongs/android/pop/app/PopVideoPlayer;Z)Z
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/is;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
-
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->f(Lcom/estrongs/android/pop/app/PopVideoPlayer;)Landroid/os/Handler;
+    invoke-interface {p1}, Lcom/estrongs/fs/h;->getPath()Ljava/lang/String;
 
     move-result-object v0
 
-    const/4 v1, 0x7
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/is;->b:Lcom/estrongs/android/pop/app/iq;
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
+    iget-object v1, v1, Lcom/estrongs/android/pop/app/iq;->a:Landroid/widget/EditText;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/is;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+    invoke-virtual {v1, v0}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/PopVideoPlayer;->b:Landroid/view/View;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/is;->a:Lcom/estrongs/android/widget/f;
 
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0}, Lcom/estrongs/android/widget/f;->k()V
 
     return-void
 .end method

@@ -2,16 +2,16 @@ package com.estrongs.io.archive.sevenzip;
 
 import com.estrongs.a.b.s;
 import com.estrongs.fs.FileSystemException;
-import com.estrongs.fs.impl.local.h;
-import com.estrongs.io.archive.g;
-import com.estrongs.io.archive.i;
+import com.estrongs.fs.impl.local.i;
+import com.estrongs.io.archive.h;
+import com.estrongs.io.archive.j;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
 public class x
-  extends i
+  extends j
 {
   private String a;
   private b b;
@@ -26,7 +26,7 @@ public class x
   {
     e = 0L;
     Object localObject1 = new File(a());
-    if (!h.a(((File)localObject1).getParentFile().getAbsolutePath()))
+    if (!i.a(((File)localObject1).getParentFile().getAbsolutePath()))
     {
       if (com.estrongs.fs.d.a() == null) {
         break label101;
@@ -36,19 +36,19 @@ public class x
     Object localObject2;
     for (;;)
     {
-      localObject1 = new g(d);
+      localObject1 = new h(d);
       localObject2 = paramList.iterator();
       while (((Iterator)localObject2).hasNext()) {
-        ((g)localObject1).a(new File((String)((Iterator)localObject2).next()));
+        ((h)localObject1).a(new File((String)((Iterator)localObject2).next()));
       }
       label101:
-      h.g(((File)localObject1).getParentFile().getAbsolutePath());
+      i.g(((File)localObject1).getParentFile().getAbsolutePath());
     }
     if (d.b()) {}
     for (;;)
     {
       return;
-      d.a(new File(c).getName(), ((g)localObject1).a(), ((g)localObject1).b());
+      d.a(new File(c).getName(), ((h)localObject1).a(), ((h)localObject1).b());
       localObject2 = c + ".tmp";
       localObject1 = new File((String)localObject2);
       try
@@ -56,7 +56,7 @@ public class x
         b = new b(paramList, new y(this));
         if (b.a(((File)localObject1).getParent(), (String)localObject2, a))
         {
-          if (h.a(c)) {
+          if (i.a(c)) {
             com.estrongs.fs.d.a().a(c, s.b);
           }
           if ((localObject1 != null) && (((File)localObject1).exists())) {

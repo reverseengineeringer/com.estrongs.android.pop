@@ -1,54 +1,37 @@
-.class public Lcom/estrongs/android/ui/e/cf;
-.super Lcom/estrongs/android/ui/e/jk;
+.class Lcom/estrongs/android/ui/e/cf;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field final synthetic a:Lcom/estrongs/android/ui/e/cb;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Z)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/cb;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/estrongs/android/ui/e/jk;-><init>(Landroid/content/Context;Z)V
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/cf;->a:Lcom/estrongs/android/ui/e/cb;
 
-    invoke-direct {p0}, Lcom/estrongs/android/ui/e/cf;->h()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method private h()V
-    .locals 4
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/cf;->b:Landroid/content/Context;
+# virtual methods
+.method public onClick(Landroid/view/View;)V
+    .locals 1
 
-    check-cast v0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/cf;->a:Lcom/estrongs/android/ui/e/cb;
 
-    const v1, 0x7f0b002f
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/cb;->a(Lcom/estrongs/android/ui/e/cb;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
 
-    const v2, 0x7f0202cf
+    move-result-object v0
 
-    new-instance v3, Lcom/estrongs/android/ui/e/cg;
-
-    invoke-direct {v3, p0, v0}, Lcom/estrongs/android/ui/e/cg;-><init>(Lcom/estrongs/android/ui/e/cf;Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)V
-
-    invoke-virtual {p0, v1, v2, v3}, Lcom/estrongs/android/ui/e/cf;->a(IILandroid/view/MenuItem$OnMenuItemClickListener;)Lcom/estrongs/android/view/a/a;
-
-    const v1, 0x7f0b002b
-
-    const v2, 0x7f0202a8
-
-    new-instance v3, Lcom/estrongs/android/ui/e/ch;
-
-    invoke-direct {v3, p0, v0}, Lcom/estrongs/android/ui/e/ch;-><init>(Lcom/estrongs/android/ui/e/cf;Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)V
-
-    invoke-virtual {p0, v1, v2, v3}, Lcom/estrongs/android/ui/e/cf;->a(IILandroid/view/MenuItem$OnMenuItemClickListener;)Lcom/estrongs/android/view/a/a;
-
-    const v1, 0x7f0b0022
-
-    const v2, 0x7f0202ab
-
-    new-instance v3, Lcom/estrongs/android/ui/e/ci;
-
-    invoke-direct {v3, p0, v0}, Lcom/estrongs/android/ui/e/ci;-><init>(Lcom/estrongs/android/ui/e/cf;Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)V
-
-    invoke-virtual {p0, v1, v2, v3}, Lcom/estrongs/android/ui/e/cf;->a(IILandroid/view/MenuItem$OnMenuItemClickListener;)Lcom/estrongs/android/view/a/a;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->h()Z
 
     return-void
 .end method

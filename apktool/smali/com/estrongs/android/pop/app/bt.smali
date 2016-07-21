@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnDismissListener;
+.implements Landroid/preference/Preference$OnPreferenceChangeListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/bq;
+.field final synthetic a:Lcom/estrongs/android/pop/app/ESNetSettingActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/bq;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/ESNetSettingActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/bt;->a:Lcom/estrongs/android/pop/app/bq;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/bt;->a:Lcom/estrongs/android/pop/app/ESNetSettingActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,46 +22,32 @@
 
 
 # virtual methods
-.method public onDismiss(Landroid/content/DialogInterface;)V
+.method public onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
     .locals 3
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/bt;->a:Lcom/estrongs/android/pop/app/bq;
+    const/4 v2, 0x0
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/bq;->a:Lcom/estrongs/android/pop/app/ESNetSettingActivity;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/bt;->a:Lcom/estrongs/android/pop/app/ESNetSettingActivity;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/ESNetSettingActivity;->b:Landroid/preference/CheckBoxPreference;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/bt;->a:Lcom/estrongs/android/pop/app/ESNetSettingActivity;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/ESNetSettingActivity;->c:Landroid/preference/CheckBoxPreference;
+
+    invoke-virtual {v0, v2}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/bt;->a:Lcom/estrongs/android/pop/app/ESNetSettingActivity;
 
     invoke-static {v0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->aj()Z
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/pop/ad;->k(Z)V
 
-    move-result v1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/bt;->a:Lcom/estrongs/android/pop/app/bq;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/bq;->a:Lcom/estrongs/android/pop/app/ESNetSettingActivity;
-
-    iget-object v2, v0, Lcom/estrongs/android/pop/app/ESNetSettingActivity;->b:Landroid/preference/CheckBoxPreference;
-
-    if-nez v1, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    invoke-virtual {v2, v0}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/bt;->a:Lcom/estrongs/android/pop/app/bq;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/bq;->a:Lcom/estrongs/android/pop/app/ESNetSettingActivity;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/ESNetSettingActivity;->c:Landroid/preference/CheckBoxPreference;
-
-    invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return v2
 .end method

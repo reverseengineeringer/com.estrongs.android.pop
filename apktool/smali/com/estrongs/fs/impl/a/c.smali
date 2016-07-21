@@ -1,14 +1,39 @@
 .class public Lcom/estrongs/fs/impl/a/c;
-.super Lcom/estrongs/fs/impl/media/d;
+.super Lcom/estrongs/fs/impl/i/a;
+
+
+# static fields
+.field private static a:Lcom/estrongs/fs/impl/a/c;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method private constructor <init>()V
+    .locals 1
 
-    invoke-direct {p0}, Lcom/estrongs/fs/impl/media/d;-><init>()V
+    const/4 v0, 0x6
+
+    invoke-direct {p0, v0}, Lcom/estrongs/fs/impl/i/a;-><init>(I)V
 
     return-void
+.end method
+
+.method public static a()Lcom/estrongs/fs/impl/a/c;
+    .locals 1
+
+    sget-object v0, Lcom/estrongs/fs/impl/a/c;->a:Lcom/estrongs/fs/impl/a/c;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcom/estrongs/fs/impl/a/c;
+
+    invoke-direct {v0}, Lcom/estrongs/fs/impl/a/c;-><init>()V
+
+    sput-object v0, Lcom/estrongs/fs/impl/a/c;->a:Lcom/estrongs/fs/impl/a/c;
+
+    :cond_0
+    sget-object v0, Lcom/estrongs/fs/impl/a/c;->a:Lcom/estrongs/fs/impl/a/c;
+
+    return-object v0
 .end method
 
 
@@ -16,39 +41,9 @@
 .method protected a(Lcom/estrongs/fs/impl/local/f;)Lcom/estrongs/fs/h;
     .locals 1
 
-    new-instance v0, Lcom/estrongs/fs/impl/a/a;
+    new-instance v0, Lcom/estrongs/fs/impl/a/b;
 
-    invoke-direct {v0, p1}, Lcom/estrongs/fs/impl/a/a;-><init>(Lcom/estrongs/fs/h;)V
-
-    return-object v0
-.end method
-
-.method protected a()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "_data like "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "%.apk"
-
-    invoke-static {v1}, Landroid/database/DatabaseUtils;->sqlEscapeString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct {v0, p1}, Lcom/estrongs/fs/impl/a/b;-><init>(Lcom/estrongs/fs/h;)V
 
     return-object v0
 .end method

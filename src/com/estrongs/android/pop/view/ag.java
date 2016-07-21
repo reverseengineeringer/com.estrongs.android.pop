@@ -1,7 +1,5 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.ui.a.aa;
-
 class ag
   implements Runnable
 {
@@ -9,15 +7,7 @@ class ag
   
   public void run()
   {
-    try
-    {
-      aa.a(a);
-      return;
-    }
-    catch (Exception localException)
-    {
-      localException.printStackTrace();
-    }
+    FileExplorerActivity.z(a);
   }
 }
 

@@ -1,40 +1,21 @@
 package com.estrongs.android.ui.e;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.utils.aj;
+import com.estrongs.a.a;
+import com.estrongs.a.a.p;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.view.aw;
-import com.estrongs.fs.h;
-import java.util.List;
+import com.estrongs.android.ui.dialog.ProgressDialog;
+import com.estrongs.fs.b.w;
 
-class df
-  implements MenuItem.OnMenuItemClickListener
+final class df
+  implements p
 {
-  df(cp paramcp) {}
+  df(FileExplorerActivity paramFileExplorerActivity, ProgressDialog paramProgressDialog, w paramw, boolean paramBoolean1, boolean paramBoolean2) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void a(a parama, int paramInt1, int paramInt2)
   {
-    paramMenuItem = cp.b(a);
-    if (paramMenuItem.size() == 0)
-    {
-      ag.a(cp.a(a).getBaseContext(), 2131427774, 0);
-      return true;
+    if (paramInt2 == 4) {
+      a.runOnUiThread(new dg(this));
     }
-    if (paramMenuItem.size() == 1)
-    {
-      paramMenuItem = (h)paramMenuItem.get(0);
-      aj.a(cp.a(a), paramMenuItem);
-      cp.a(a).s();
-      return true;
-    }
-    paramMenuItem = cp.a(a).y();
-    if (paramMenuItem != null) {
-      aj.a(cp.a(a), paramMenuItem.w());
-    }
-    cp.a(a).s();
-    return true;
   }
 }
 

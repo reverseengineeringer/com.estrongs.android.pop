@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/util/ab;
+.implements Lcom/estrongs/android/util/af;
 
 
 # instance fields
@@ -30,57 +30,7 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public a(Ljava/lang/Object;JJ)V
-    .locals 2
-
-    new-instance v0, Landroid/os/Message;
-
-    invoke-direct {v0}, Landroid/os/Message;-><init>()V
-
-    const/4 v1, 0x1
-
-    iput v1, v0, Landroid/os/Message;->what:I
-
-    long-to-int v1, p4
-
-    iput v1, v0, Landroid/os/Message;->arg1:I
-
-    long-to-int v1, p2
-
-    iput v1, v0, Landroid/os/Message;->arg2:I
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/g/e;->a:Landroid/os/Handler;
-
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    return-void
-.end method
-
-.method public a(Ljava/lang/Object;Ljava/lang/Throwable;)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/g/e;->c:Lcom/estrongs/android/ui/g/c;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcom/estrongs/android/ui/g/c;->b(Lcom/estrongs/android/ui/g/c;Z)Z
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/g/e;->a:Landroid/os/Handler;
-
-    const/4 v1, 0x3
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
-
-    return-void
-.end method
-
-.method public b(Ljava/lang/Object;)V
+.method public downloadCompleted(Ljava/lang/Object;)V
     .locals 3
 
     iget-object v0, p0, Lcom/estrongs/android/ui/g/e;->c:Lcom/estrongs/android/ui/g/c;
@@ -128,11 +78,11 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/estrongs/android/util/y;
+    new-instance v1, Lcom/estrongs/android/util/aa;
 
-    invoke-direct {v1, v0}, Lcom/estrongs/android/util/y;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v0}, Lcom/estrongs/android/util/aa;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Lcom/estrongs/android/util/y;->c()V
+    invoke-virtual {v1}, Lcom/estrongs/android/util/aa;->c()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -191,4 +141,54 @@
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_0
+.end method
+
+.method public downloadError(Ljava/lang/Object;Ljava/lang/Throwable;)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/g/e;->c:Lcom/estrongs/android/ui/g/c;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/ui/g/c;->b(Lcom/estrongs/android/ui/g/c;Z)Z
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/g/e;->a:Landroid/os/Handler;
+
+    const/4 v1, 0x3
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    return-void
+.end method
+
+.method public downloadProgress(Ljava/lang/Object;JJ)V
+    .locals 2
+
+    new-instance v0, Landroid/os/Message;
+
+    invoke-direct {v0}, Landroid/os/Message;-><init>()V
+
+    const/4 v1, 0x1
+
+    iput v1, v0, Landroid/os/Message;->what:I
+
+    long-to-int v1, p4
+
+    iput v1, v0, Landroid/os/Message;->arg1:I
+
+    long-to-int v1, p2
+
+    iput v1, v0, Landroid/os/Message;->arg2:I
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/g/e;->a:Landroid/os/Handler;
+
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    return-void
+.end method
+
+.method public downloadStarted(Ljava/lang/Object;)V
+    .locals 0
+
+    return-void
 .end method

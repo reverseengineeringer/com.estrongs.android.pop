@@ -1,5 +1,5 @@
 .class public Lcom/estrongs/io/archive/aeszip/h;
-.super Lcom/estrongs/io/archive/h;
+.super Lcom/estrongs/io/archive/i;
 
 
 # instance fields
@@ -14,7 +14,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {p0, p1, p2}, Lcom/estrongs/io/archive/h;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, p1, p2}, Lcom/estrongs/io/archive/i;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -22,7 +22,7 @@
 
     iput-boolean v1, p0, Lcom/estrongs/io/archive/aeszip/h;->i:Z
 
-    sget-object v0, Lcom/estrongs/android/util/f;->a:[Ljava/lang/String;
+    sget-object v0, Lcom/estrongs/android/util/e;->a:[Ljava/lang/String;
 
     aget-object v0, v0, v1
 
@@ -36,11 +36,11 @@
 
     iput-boolean v0, p0, Lcom/estrongs/io/archive/aeszip/h;->i:Z
 
-    invoke-static {}, Lcom/estrongs/android/util/f;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/estrongs/android/util/e;->a()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/io/archive/h;->c:Ljava/lang/String;
+    iput-object v0, p0, Lcom/estrongs/io/archive/i;->c:Ljava/lang/String;
 
     :cond_0
     return-void
@@ -247,7 +247,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/fs/impl/local/h;->f(Ljava/lang/String;)Ljava/io/OutputStream;
+    invoke-static {v2}, Lcom/estrongs/fs/impl/local/i;->f(Ljava/lang/String;)Ljava/io/OutputStream;
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
     .catchall {:try_start_3 .. :try_end_3} :catchall_2

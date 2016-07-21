@@ -1,52 +1,35 @@
 .class Lcom/estrongs/android/view/cu;
-.super Lcom/estrongs/fs/util/a/a;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/view/cq;
+.field final synthetic a:Lcom/estrongs/android/view/cs;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/view/cq;Z)V
+.method constructor <init>(Lcom/estrongs/android/view/cs;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/view/cu;->a:Lcom/estrongs/android/view/cq;
+    iput-object p1, p0, Lcom/estrongs/android/view/cu;->a:Lcom/estrongs/android/view/cs;
 
-    invoke-direct {p0, p2}, Lcom/estrongs/fs/util/a/a;-><init>(Z)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/estrongs/fs/h;Lcom/estrongs/fs/h;)I
-    .locals 2
-
-    invoke-interface {p1}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {p2}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v0, v1}, Lcom/estrongs/android/view/cu;->a(Ljava/lang/String;Ljava/lang/String;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+.method public run()V
     .locals 1
 
-    check-cast p1, Lcom/estrongs/fs/h;
+    iget-object v0, p0, Lcom/estrongs/android/view/cu;->a:Lcom/estrongs/android/view/cs;
 
-    check-cast p2, Lcom/estrongs/fs/h;
+    iget-object v0, v0, Lcom/estrongs/android/view/cs;->a:Lcom/estrongs/android/view/cr;
 
-    invoke-virtual {p0, p1, p2}, Lcom/estrongs/android/view/cu;->a(Lcom/estrongs/fs/h;Lcom/estrongs/fs/h;)I
+    invoke-virtual {v0}, Lcom/estrongs/android/view/cr;->g()V
 
-    move-result v0
-
-    return v0
+    return-void
 .end method

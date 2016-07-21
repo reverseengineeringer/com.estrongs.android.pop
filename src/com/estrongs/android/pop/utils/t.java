@@ -9,7 +9,7 @@ class t
   
   public void run()
   {
-    a.a.N();
+    a.a.ac();
   }
 }
 

@@ -1,35 +1,17 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.ui.drag.l;
-import com.estrongs.android.util.am;
-import java.util.ArrayList;
-import java.util.List;
+import com.estrongs.fs.h;
+import com.estrongs.fs.i;
 
 class bz
-  implements com.estrongs.android.ui.drag.c
+  implements i
 {
   bz(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void a(l paraml, Object paramObject)
+  public boolean a(h paramh)
   {
-    paraml = (List)paramObject;
-    if ((am.Y(a.z())) && (!am.af(a.z())))
-    {
-      paramObject = new ArrayList(paraml.size());
-      int i = 0;
-      while (i < paraml.size())
-      {
-        ((List)paramObject).add((com.estrongs.fs.impl.b.c)paraml.get(i));
-        i += 1;
-      }
-      a.Q().a((List)paramObject);
-      a.s();
-      return;
-    }
-    a.a(paraml);
+    return (!paramh.getName().startsWith(".")) || (FileExplorerActivity.e(a));
   }
-  
-  public void b(l paraml, Object paramObject) {}
 }
 
 /* Location:

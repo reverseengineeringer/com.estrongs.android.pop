@@ -1,31 +1,66 @@
 package com.baidu.mobstat;
 
-class an
+import android.app.ActivityManager;
+import android.app.ActivityManager.RunningServiceInfo;
+import android.content.ComponentName;
+import android.content.Context;
+import java.util.List;
+
+public enum an
 {
-  private String b;
-  private long c;
-  private long d;
+  private int d;
   
-  public an(am paramam, String paramString, long paramLong1, long paramLong2)
+  private an(int paramInt)
   {
-    b = paramString;
-    c = paramLong1;
-    d = paramLong2;
+    d = paramInt;
   }
   
-  public String a()
+  public static an a(int paramInt)
   {
+    an[] arrayOfan = values();
+    int j = arrayOfan.length;
+    int i = 0;
+    while (i < j)
+    {
+      an localan = arrayOfan[i];
+      if (d == paramInt) {
+        return localan;
+      }
+      i += 1;
+    }
     return b;
   }
   
-  public long b()
+  public static boolean b(Context paramContext)
   {
-    return c;
+    paramContext = (ActivityManager)paramContext.getSystemService("activity");
+    if (paramContext != null) {
+      try
+      {
+        paramContext = paramContext.getRunningServices(Integer.MAX_VALUE);
+        int i = 0;
+        while ((paramContext != null) && (i < paramContext.size()))
+        {
+          boolean bool = "com.baidu.bottom.service.BottomService".equals(getservice.getClassName());
+          if (bool) {
+            return true;
+          }
+          i += 1;
+        }
+        return false;
+      }
+      catch (Exception paramContext)
+      {
+        cr.a(paramContext);
+      }
+    }
   }
   
-  public long c()
+  public abstract void a(Context paramContext);
+  
+  public String toString()
   {
-    return d;
+    return String.valueOf(d);
   }
 }
 

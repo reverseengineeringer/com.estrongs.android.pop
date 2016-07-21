@@ -1,12 +1,26 @@
 package android.support.v4.view;
 
-import android.widget.TextView;
+import android.view.LayoutInflater;
 
 class am
 {
-  public static void a(TextView paramTextView)
+  static ar a(LayoutInflater paramLayoutInflater)
   {
-    paramTextView.setTransformationMethod(new an(paramTextView.getContext()));
+    paramLayoutInflater = paramLayoutInflater.getFactory();
+    if ((paramLayoutInflater instanceof an)) {
+      return a;
+    }
+    return null;
+  }
+  
+  static void a(LayoutInflater paramLayoutInflater, ar paramar)
+  {
+    if (paramar != null) {}
+    for (paramar = new an(paramar);; paramar = null)
+    {
+      paramLayoutInflater.setFactory(paramar);
+      return;
+    }
   }
 }
 

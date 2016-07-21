@@ -1,20 +1,17 @@
 package com.estrongs.android.ui.e;
 
-import android.view.MenuItem.OnMenuItemClickListener;
-import android.view.View;
-import android.view.View.OnClickListener;
+import com.estrongs.android.ui.view.ak;
 import com.estrongs.android.view.a.a;
+import com.estrongs.android.view.a.e;
 
 class ip
-  implements View.OnClickListener
+  implements e
 {
-  ip(io paramio, View paramView, a parama) {}
+  ip(im paramim) {}
   
-  public void onClick(View paramView)
+  public void a(a parama)
   {
-    if ((a.isEnabled()) && (b.c() != null)) {
-      b.c().onMenuItemClick(b);
-    }
+    ak.a(a.b, parama.getTitle(), 0);
   }
 }
 

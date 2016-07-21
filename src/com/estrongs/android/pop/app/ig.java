@@ -1,20 +1,16 @@
 package com.estrongs.android.pop.app;
 
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceClickListener;
-import com.estrongs.android.pop.view.utils.n;
-import com.estrongs.android.ui.view.ag;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class ig
-  implements Preference.OnPreferenceClickListener
+  implements DialogInterface.OnClickListener
 {
-  ig(PopPreferenceActivity paramPopPreferenceActivity) {}
+  ig(if paramif) {}
   
-  public boolean onPreferenceClick(Preference paramPreference)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    n.a(a);
-    ag.a(a, 2131427976, 0);
-    return true;
+    paramDialogInterface.dismiss();
   }
 }
 

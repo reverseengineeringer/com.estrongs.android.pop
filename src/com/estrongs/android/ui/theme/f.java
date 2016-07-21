@@ -1,24 +1,27 @@
 package com.estrongs.android.ui.theme;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.b;
+import com.estrongs.android.util.bg;
+import com.estrongs.fs.h;
+import com.estrongs.fs.i;
+import com.estrongs.fs.w;
 
 class f
-  implements View.OnClickListener
+  implements i
 {
-  f(ModifyThemeActivity paramModifyThemeActivity) {}
+  f(e parame, boolean paramBoolean) {}
   
-  public void onClick(View paramView)
+  public boolean a(h paramh)
   {
-    paramView = new g(this, ad.a(a).p());
-    paramView = new com.estrongs.android.widget.g(a, b.b(), paramView);
-    paramView.a(a.getText(2131427370));
-    paramView.a(a.getString(2131427340), new h(this));
-    paramView.a(new i(this));
-    paramView.j();
-    ModifyThemeActivity.a(a, paramView);
+    if (paramh.getFileType().a()) {
+      if ((!paramh.getName().startsWith(".")) || (a)) {}
+    }
+    do
+    {
+      return false;
+      return true;
+      paramh = paramh.getName();
+    } while (paramh == null);
+    return bg.c(paramh);
   }
 }
 

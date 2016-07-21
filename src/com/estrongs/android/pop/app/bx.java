@@ -1,16 +1,26 @@
 package com.estrongs.android.pop.app;
 
-import com.estrongs.fs.h;
-import com.estrongs.fs.i;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnDismissListener;
+import android.preference.CheckBoxPreference;
+import com.estrongs.android.pop.ad;
 
 class bx
-  implements i
+  implements DialogInterface.OnDismissListener
 {
-  bx(FileChooserActivity paramFileChooserActivity, boolean paramBoolean) {}
+  bx(bu parambu) {}
   
-  public boolean a(h paramh)
+  public void onDismiss(DialogInterface paramDialogInterface)
   {
-    return (!paramh.getName().startsWith(".")) || (a);
+    boolean bool2 = ad.a(a.a).ak();
+    paramDialogInterface = a.a.b;
+    if (!bool2) {}
+    for (boolean bool1 = true;; bool1 = false)
+    {
+      paramDialogInterface.setChecked(bool1);
+      a.a.c.setChecked(bool2);
+      return;
+    }
   }
 }
 

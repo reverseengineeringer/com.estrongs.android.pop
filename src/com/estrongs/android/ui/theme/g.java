@@ -1,27 +1,16 @@
 package com.estrongs.android.ui.theme;
 
-import com.estrongs.android.util.bc;
-import com.estrongs.fs.h;
-import com.estrongs.fs.i;
-import com.estrongs.fs.m;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class g
-  implements i
+  implements DialogInterface.OnClickListener
 {
-  g(f paramf, boolean paramBoolean) {}
+  g(e parame) {}
   
-  public boolean a(h paramh)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (paramh.getFileType().a()) {
-      if ((!paramh.getName().startsWith(".")) || (a)) {}
-    }
-    do
-    {
-      return false;
-      return true;
-      paramh = paramh.getName();
-    } while (paramh == null);
-    return bc.c(paramh);
+    paramDialogInterface.dismiss();
   }
 }
 

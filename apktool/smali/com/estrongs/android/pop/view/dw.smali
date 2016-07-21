@@ -23,20 +23,13 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 2
 
-    :try_start_0
     iget-object v0, p0, Lcom/estrongs/android/pop/view/dw;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->R()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    const-string v1, "bt://"
 
-    :goto_0
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->g(Ljava/lang/String;)Lcom/estrongs/android/view/cr;
+
     return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_0
 .end method

@@ -2,23 +2,22 @@ package com.estrongs.android.pop.app;
 
 import android.app.Activity;
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.ui.pcs.a;
-import com.estrongs.android.ui.pcs.n;
+import android.content.DialogInterface.OnDismissListener;
+import com.estrongs.fs.b.ar;
 
 final class bb
-  implements DialogInterface.OnClickListener
+  implements DialogInterface.OnDismissListener
 {
-  bb(Activity paramActivity, n paramn, DialogInterface.OnCancelListener paramOnCancelListener) {}
+  bb(ar paramar, boolean paramBoolean, Activity paramActivity) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void onDismiss(DialogInterface paramDialogInterface)
   {
-    a locala = new a(a);
-    locala.a();
-    locala.a(b);
-    locala.a(c);
-    paramDialogInterface.dismiss();
+    if (a.getTaskStatus() != 4) {
+      a.requsestPause();
+    }
+    if (b) {
+      c.finish();
+    }
   }
 }
 

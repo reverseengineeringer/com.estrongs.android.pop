@@ -3,8 +3,8 @@ package com.estrongs.io.archive.sevenzip;
 import android.content.res.Resources;
 import com.estrongs.android.pop.FexApplication;
 import com.estrongs.io.a.b;
-import com.estrongs.io.archive.g;
 import com.estrongs.io.archive.h;
+import com.estrongs.io.archive.i;
 import com.estrongs.io.model.ArchiveEntryFile;
 import java.io.File;
 import java.io.IOException;
@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 public class r
-  extends h
+  extends i
 {
   private static String i = "SevenZipInArchive";
   List<d> h;
@@ -49,17 +49,17 @@ public class r
           return;
         }
       }
-      localObject1 = new g();
+      localObject1 = new h();
       b();
       localObject2 = i();
       while (((Iterator)localObject2).hasNext()) {
-        ((g)localObject1).a((ArchiveEntryFile)((Iterator)localObject2).next());
+        ((h)localObject1).a((ArchiveEntryFile)((Iterator)localObject2).next());
       }
       localObject2 = new File(b).getName();
     }
     catch (IOException paramb)
     {
-      if ((paramb.getMessage() != null) && (paramb.getMessage().contains(FexApplication.a().getResources().getString(2131427897)))) {
+      if ((paramb.getMessage() != null) && (paramb.getMessage().contains(FexApplication.a().getResources().getString(2131231784)))) {
         k = null;
       }
       throw paramb;
@@ -68,9 +68,9 @@ public class r
     {
       c();
     }
-    long l1 = ((g)localObject1).a();
-    int m = ((g)localObject1).b();
-    paramb.a((String)localObject2, l1, ((g)localObject1).c() + m);
+    long l1 = ((h)localObject1).a();
+    int m = ((h)localObject1).b();
+    paramb.a((String)localObject2, l1, ((h)localObject1).c() + m);
     l = new c(b, c, new t(this, paramb));
     l.a(paramb.c(), k);
     c();
@@ -93,7 +93,7 @@ public class r
       }
     }
     a = 0L;
-    g localg = new g();
+    h localh = new h();
     LinkedList localLinkedList = new LinkedList();
     Object localObject1 = paramList;
     if (paramList == null) {
@@ -110,13 +110,13 @@ public class r
         Object localObject2 = (String)paramList.next();
         localObject2 = (ArchiveEntryFile)e.get(localObject2);
         localLinkedList.add(localObject2);
-        localg.a((File)localObject2);
+        localh.a((File)localObject2);
       }
       paramList = new File(b).getName();
     }
     catch (IOException paramList)
     {
-      if ((paramList.getMessage() != null) && (paramList.getMessage().contains(FexApplication.a().getResources().getString(2131427897)))) {
+      if ((paramList.getMessage() != null) && (paramList.getMessage().contains(FexApplication.a().getResources().getString(2131231784)))) {
         k = null;
       }
       throw paramList;
@@ -125,9 +125,9 @@ public class r
     {
       c();
     }
-    long l1 = localg.a();
-    int m = localg.b();
-    paramb.a(paramList, l1, localg.c() + m);
+    long l1 = localh.a();
+    int m = localh.b();
+    paramb.a(paramList, l1, localh.c() + m);
     l = new c(b, c, new v(this, paramb));
     l.a(paramb.c(), (List)localObject1, k);
     c();

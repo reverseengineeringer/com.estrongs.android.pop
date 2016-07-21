@@ -1,49 +1,19 @@
 package com.estrongs.android.ui.addressbar;
 
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.View.OnKeyListener;
+import android.view.View.OnLongClickListener;
 
 class d
-  implements View.OnKeyListener
+  implements View.OnLongClickListener
 {
   d(AdvancedAddressBar paramAdvancedAddressBar) {}
   
-  public boolean onKey(View paramView, int paramInt, KeyEvent paramKeyEvent)
+  public boolean onLongClick(View paramView)
   {
-    if ((a.isFocused()) && (paramKeyEvent.getAction() == 0))
+    if ((AdvancedAddressBar.b(a) != -1) && (AdvancedAddressBar.c(a) != null))
     {
-      if (paramInt == 21)
-      {
-        paramInt = AdvancedAddressBar.b(a) - 1;
-        if ((paramInt >= 0) && (paramInt < AdvancedAddressBar.d(a)))
-        {
-          AdvancedAddressBar.a(a, paramInt);
-          a.invalidate();
-          return true;
-        }
-        return false;
-      }
-      if (paramInt == 22)
-      {
-        paramInt = AdvancedAddressBar.b(a) + 1;
-        if ((paramInt >= 0) && (paramInt < AdvancedAddressBar.d(a)))
-        {
-          AdvancedAddressBar.a(a, paramInt);
-          a.invalidate();
-          return true;
-        }
-        return false;
-      }
-      if (paramInt == 23)
-      {
-        if ((AdvancedAddressBar.b(a) >= 0) && (AdvancedAddressBar.b(a) < AdvancedAddressBar.d(a)) && (AdvancedAddressBar.f(a) != null)) {
-          AdvancedAddressBar.f(a).a(a, AdvancedAddressBar.b(a), AdvancedAddressBar.d(a));
-        }
-        AdvancedAddressBar.e(a);
-        a.invalidate();
-        return true;
-      }
+      AdvancedAddressBar.c(a).a(a, AdvancedAddressBar.b(a), AdvancedAddressBar.d(a));
+      AdvancedAddressBar.e(a);
     }
     return false;
   }

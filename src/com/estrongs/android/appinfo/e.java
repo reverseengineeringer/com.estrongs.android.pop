@@ -5,22 +5,22 @@ import android.graphics.BitmapFactory;
 import android.graphics.BitmapFactory.Options;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.ConditionVariable;
-import android.support.v4.b.c;
-import com.estrongs.android.pop.utils.cq;
-import com.estrongs.android.pop.utils.cr;
+import android.support.v4.e.g;
+import com.estrongs.android.pop.utils.cz;
+import com.estrongs.android.pop.utils.da;
 import com.estrongs.android.pop.z;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.util.bk;
 import com.estrongs.fs.h;
 import java.io.File;
 import java.util.HashMap;
 import java.util.List;
 
 class e
-  extends cq
+  extends cz
 {
   e(AppFolderInfoManager paramAppFolderInfoManager, h paramh, ConditionVariable paramConditionVariable) {}
   
-  public void a(cr paramcr)
+  public void a(da paramda)
   {
     boolean bool = true;
     ??? = null;
@@ -28,10 +28,10 @@ class e
     {
       try
       {
-        paramcr = new BitmapFactory.Options();
+        paramda = new BitmapFactory.Options();
         inJustDecodeBounds = true;
-        BitmapFactory.decodeFile(a.getAbsolutePath(), paramcr);
-        inSampleSize = AppFolderInfoManager.a(paramcr, 48);
+        BitmapFactory.decodeFile(a.getAbsolutePath(), paramda);
+        inSampleSize = AppFolderInfoManager.a(paramda, 48);
         inInputShareable = true;
         if (!z.x)
         {
@@ -40,19 +40,19 @@ class e
           inDither = false;
           inTempStorage = new byte['䀀'];
           inPreferredConfig = Bitmap.Config.RGB_565;
-          paramcr = BitmapFactory.decodeFile(a.getAbsolutePath(), paramcr);
-          if (paramcr == null) {
+          paramda = BitmapFactory.decodeFile(a.getAbsolutePath(), paramda);
+          if (paramda == null) {
             break label256;
           }
-          paramcr = new BitmapDrawable(paramcr);
+          paramda = new BitmapDrawable(paramda);
         }
       }
       catch (Exception localException2)
       {
         try
         {
-          c.f.a(a.getAbsolutePath(), paramcr);
-          if (paramcr == null) {
+          c.f.put(a.getAbsolutePath(), paramda);
+          if (paramda == null) {
             new File(a.getAbsolutePath()).delete();
           }
         }
@@ -61,11 +61,11 @@ class e
           List localList;
           continue;
         }
-        synchronized (c.p)
+        synchronized (c.q)
         {
-          localList = (List)c.p.remove(a.getAbsolutePath());
-          if ((localList != null) && (paramcr != null)) {
-            bd.a(new f(this, localList));
+          localList = (List)c.q.remove(a.getAbsolutePath());
+          if ((localList != null) && (paramda != null)) {
+            bk.a(new f(this, localList));
           }
           if (b != null) {
             b.open();
@@ -74,13 +74,13 @@ class e
           bool = false;
           continue;
           localException2 = localException2;
-          paramcr = (cr)???;
+          paramda = (da)???;
           ??? = localException2;
           ((Exception)???).printStackTrace();
         }
       }
       label256:
-      paramcr = null;
+      paramda = null;
     }
   }
 }

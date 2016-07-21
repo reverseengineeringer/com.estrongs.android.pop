@@ -1,40 +1,189 @@
 package android.support.v4.view.a;
 
-import android.os.Bundle;
-import java.util.ArrayList;
-import java.util.List;
+import android.graphics.Rect;
+import android.view.View;
 
 class k
-  implements o
+  extends q
 {
-  k(j paramj, h paramh) {}
-  
-  public Object a(int paramInt)
+  public Object a(Object paramObject)
   {
-    a locala = a.a(paramInt);
-    if (locala == null) {
-      return null;
-    }
-    return locala.a();
+    return u.a(paramObject);
   }
   
-  public List<Object> a(String paramString, int paramInt)
+  public void a(Object paramObject, int paramInt)
   {
-    paramString = a.a(paramString, paramInt);
-    ArrayList localArrayList = new ArrayList();
-    int i = paramString.size();
-    paramInt = 0;
-    while (paramInt < i)
-    {
-      localArrayList.add(((a)paramString.get(paramInt)).a());
-      paramInt += 1;
-    }
-    return localArrayList;
+    u.a(paramObject, paramInt);
   }
   
-  public boolean a(int paramInt1, int paramInt2, Bundle paramBundle)
+  public void a(Object paramObject, Rect paramRect)
   {
-    return a.a(paramInt1, paramInt2, paramBundle);
+    u.a(paramObject, paramRect);
+  }
+  
+  public void a(Object paramObject, View paramView)
+  {
+    u.a(paramObject, paramView);
+  }
+  
+  public void a(Object paramObject, boolean paramBoolean)
+  {
+    u.a(paramObject, paramBoolean);
+  }
+  
+  public int b(Object paramObject)
+  {
+    return u.b(paramObject);
+  }
+  
+  public void b(Object paramObject, Rect paramRect)
+  {
+    u.b(paramObject, paramRect);
+  }
+  
+  public void b(Object paramObject, View paramView)
+  {
+    u.b(paramObject, paramView);
+  }
+  
+  public void b(Object paramObject, CharSequence paramCharSequence)
+  {
+    u.a(paramObject, paramCharSequence);
+  }
+  
+  public void b(Object paramObject, boolean paramBoolean)
+  {
+    u.b(paramObject, paramBoolean);
+  }
+  
+  public CharSequence c(Object paramObject)
+  {
+    return u.c(paramObject);
+  }
+  
+  public void c(Object paramObject, Rect paramRect)
+  {
+    u.c(paramObject, paramRect);
+  }
+  
+  public void c(Object paramObject, View paramView)
+  {
+    u.c(paramObject, paramView);
+  }
+  
+  public void c(Object paramObject, CharSequence paramCharSequence)
+  {
+    u.b(paramObject, paramCharSequence);
+  }
+  
+  public void c(Object paramObject, boolean paramBoolean)
+  {
+    u.c(paramObject, paramBoolean);
+  }
+  
+  public CharSequence d(Object paramObject)
+  {
+    return u.d(paramObject);
+  }
+  
+  public void d(Object paramObject, Rect paramRect)
+  {
+    u.d(paramObject, paramRect);
+  }
+  
+  public void d(Object paramObject, CharSequence paramCharSequence)
+  {
+    u.c(paramObject, paramCharSequence);
+  }
+  
+  public void d(Object paramObject, boolean paramBoolean)
+  {
+    u.d(paramObject, paramBoolean);
+  }
+  
+  public CharSequence e(Object paramObject)
+  {
+    return u.e(paramObject);
+  }
+  
+  public void e(Object paramObject, CharSequence paramCharSequence)
+  {
+    u.d(paramObject, paramCharSequence);
+  }
+  
+  public void e(Object paramObject, boolean paramBoolean)
+  {
+    u.e(paramObject, paramBoolean);
+  }
+  
+  public CharSequence f(Object paramObject)
+  {
+    return u.f(paramObject);
+  }
+  
+  public void f(Object paramObject, boolean paramBoolean)
+  {
+    u.f(paramObject, paramBoolean);
+  }
+  
+  public void g(Object paramObject, boolean paramBoolean)
+  {
+    u.g(paramObject, paramBoolean);
+  }
+  
+  public boolean g(Object paramObject)
+  {
+    return u.g(paramObject);
+  }
+  
+  public boolean h(Object paramObject)
+  {
+    return u.h(paramObject);
+  }
+  
+  public boolean i(Object paramObject)
+  {
+    return u.i(paramObject);
+  }
+  
+  public boolean j(Object paramObject)
+  {
+    return u.j(paramObject);
+  }
+  
+  public boolean k(Object paramObject)
+  {
+    return u.k(paramObject);
+  }
+  
+  public boolean l(Object paramObject)
+  {
+    return u.l(paramObject);
+  }
+  
+  public boolean m(Object paramObject)
+  {
+    return u.m(paramObject);
+  }
+  
+  public boolean n(Object paramObject)
+  {
+    return u.n(paramObject);
+  }
+  
+  public boolean o(Object paramObject)
+  {
+    return u.o(paramObject);
+  }
+  
+  public boolean p(Object paramObject)
+  {
+    return u.p(paramObject);
+  }
+  
+  public void q(Object paramObject)
+  {
+    u.q(paramObject);
   }
 }
 

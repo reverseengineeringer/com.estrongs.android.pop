@@ -68,7 +68,7 @@
 
     iput v1, p0, Lcom/estrongs/android/ui/view/ColorPickerView;->l:I
 
-    invoke-direct {p0}, Lcom/estrongs/android/ui/view/ColorPickerView;->b()V
+    invoke-direct {p0}, Lcom/estrongs/android/ui/view/ColorPickerView;->a()V
 
     return-void
 
@@ -119,7 +119,7 @@
 
     invoke-virtual {v0, p3}, Landroid/graphics/Paint;->setColor(I)V
 
-    invoke-direct {p0}, Lcom/estrongs/android/ui/view/ColorPickerView;->b()V
+    invoke-direct {p0}, Lcom/estrongs/android/ui/view/ColorPickerView;->a()V
 
     return-void
 
@@ -264,7 +264,7 @@
     goto :goto_0
 .end method
 
-.method private b()V
+.method private a()V
     .locals 5
 
     const/4 v4, 0x1
@@ -312,43 +312,12 @@
 
 
 # virtual methods
-.method public a()I
+.method public getCurrentColor()I
     .locals 1
 
     iget v0, p0, Lcom/estrongs/android/ui/view/ColorPickerView;->f:I
 
     return v0
-.end method
-
-.method public a(I)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ColorPickerView;->c:Landroid/graphics/Paint;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
-
-    iput p1, p0, Lcom/estrongs/android/ui/view/ColorPickerView;->f:I
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ColorPickerView;->e:Lcom/estrongs/android/ui/view/a;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/ColorPickerView;->e:Lcom/estrongs/android/ui/view/a;
-
-    invoke-interface {v0, p1}, Lcom/estrongs/android/ui/view/a;->a(I)V
-
-    :cond_0
-    invoke-virtual {p0}, Lcom/estrongs/android/ui/view/ColorPickerView;->invalidate()V
-
-    return-void
-.end method
-
-.method public a(Lcom/estrongs/android/ui/view/a;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/ui/view/ColorPickerView;->e:Lcom/estrongs/android/ui/view/a;
-
-    return-void
 .end method
 
 .method protected onDraw(Landroid/graphics/Canvas;)V
@@ -700,4 +669,43 @@
         :pswitch_1
         :pswitch_2
     .end packed-switch
+.end method
+
+.method public setColor(I)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ColorPickerView;->c:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
+
+    iput p1, p0, Lcom/estrongs/android/ui/view/ColorPickerView;->f:I
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ColorPickerView;->e:Lcom/estrongs/android/ui/view/a;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/view/ColorPickerView;->e:Lcom/estrongs/android/ui/view/a;
+
+    invoke-interface {v0, p1}, Lcom/estrongs/android/ui/view/a;->a(I)V
+
+    :cond_0
+    invoke-virtual {p0}, Lcom/estrongs/android/ui/view/ColorPickerView;->invalidate()V
+
+    return-void
+.end method
+
+.method public setOnColorChangeListener(Lcom/estrongs/android/ui/view/a;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/ui/view/ColorPickerView;->e:Lcom/estrongs/android/ui/view/a;
+
+    return-void
+.end method
+
+.method public setScale(F)V
+    .locals 0
+
+    sput p1, Lcom/estrongs/android/ui/view/ColorPickerView;->a:F
+
+    return-void
 .end method

@@ -32,26 +32,6 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
-
-    const/4 v1, 0x0
-
-    invoke-direct {p0, p1}, Landroid/widget/GridView;-><init>(Landroid/content/Context;)V
-
-    const/16 v0, 0x1e
-
-    iput v0, p0, Lcom/estrongs/android/widget/HeaderGridView;->b:I
-
-    iput v1, p0, Lcom/estrongs/android/widget/HeaderGridView;->c:I
-
-    iput-boolean v1, p0, Lcom/estrongs/android/widget/HeaderGridView;->j:Z
-
-    iput v1, p0, Lcom/estrongs/android/widget/HeaderGridView;->k:I
-
-    return-void
-.end method
-
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
@@ -93,6 +73,64 @@
 .end method
 
 .method private a()V
+    .locals 2
+
+    invoke-virtual {p0, p0}, Lcom/estrongs/android/widget/HeaderGridView;->setOnScrollListener(Landroid/widget/AbsListView$OnScrollListener;)V
+
+    const/16 v0, -0x64
+
+    iput v0, p0, Lcom/estrongs/android/widget/HeaderGridView;->g:I
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/estrongs/android/widget/HeaderGridView;->f:Z
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/HeaderGridView;->a:Landroid/widget/LinearLayout;
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/HeaderGridView;->a:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getMeasuredHeight()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/estrongs/android/widget/HeaderGridView;->d:I
+
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/HeaderGridView;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/estrongs/android/widget/HeaderGridView;->i:I
+
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/HeaderGridView;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string v1, "vibrator"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/Vibrator;
+
+    iput-object v0, p0, Lcom/estrongs/android/widget/HeaderGridView;->l:Landroid/os/Vibrator;
+
+    return-void
+.end method
+
+.method private b()V
     .locals 5
 
     const/4 v2, 0x0
@@ -142,7 +180,7 @@
 
     iput-boolean v2, p0, Lcom/estrongs/android/widget/HeaderGridView;->f:Z
 
-    invoke-direct {p0}, Lcom/estrongs/android/widget/HeaderGridView;->e()V
+    invoke-direct {p0}, Lcom/estrongs/android/widget/HeaderGridView;->f()V
 
     :cond_2
     :goto_1
@@ -183,7 +221,7 @@
 
     iput-boolean v3, p0, Lcom/estrongs/android/widget/HeaderGridView;->f:Z
 
-    invoke-direct {p0}, Lcom/estrongs/android/widget/HeaderGridView;->e()V
+    invoke-direct {p0}, Lcom/estrongs/android/widget/HeaderGridView;->f()V
 
     goto :goto_1
 
@@ -213,12 +251,12 @@
 
     iput-boolean v3, p0, Lcom/estrongs/android/widget/HeaderGridView;->f:Z
 
-    invoke-direct {p0}, Lcom/estrongs/android/widget/HeaderGridView;->e()V
+    invoke-direct {p0}, Lcom/estrongs/android/widget/HeaderGridView;->f()V
 
     goto :goto_1
 .end method
 
-.method private b()V
+.method private c()V
     .locals 4
 
     const/4 v3, 0x1
@@ -237,7 +275,7 @@
 
     iput v0, p0, Lcom/estrongs/android/widget/HeaderGridView;->k:I
 
-    invoke-direct {p0}, Lcom/estrongs/android/widget/HeaderGridView;->c()V
+    invoke-direct {p0}, Lcom/estrongs/android/widget/HeaderGridView;->d()V
 
     :cond_0
     :goto_0
@@ -256,7 +294,7 @@
     :cond_1
     iput v2, p0, Lcom/estrongs/android/widget/HeaderGridView;->k:I
 
-    invoke-direct {p0}, Lcom/estrongs/android/widget/HeaderGridView;->d()V
+    invoke-direct {p0}, Lcom/estrongs/android/widget/HeaderGridView;->e()V
 
     goto :goto_0
 
@@ -269,12 +307,12 @@
 
     iput v2, p0, Lcom/estrongs/android/widget/HeaderGridView;->k:I
 
-    invoke-direct {p0}, Lcom/estrongs/android/widget/HeaderGridView;->d()V
+    invoke-direct {p0}, Lcom/estrongs/android/widget/HeaderGridView;->e()V
 
     goto :goto_0
 .end method
 
-.method private c()V
+.method private d()V
     .locals 5
 
     const/4 v4, 0x0
@@ -306,7 +344,7 @@
     return-void
 .end method
 
-.method private d()V
+.method private e()V
     .locals 4
 
     iget-object v0, p0, Lcom/estrongs/android/widget/HeaderGridView;->a:Landroid/widget/LinearLayout;
@@ -334,7 +372,7 @@
     return-void
 .end method
 
-.method private e()V
+.method private f()V
     .locals 4
 
     iget-object v0, p0, Lcom/estrongs/android/widget/HeaderGridView;->l:Landroid/os/Vibrator;
@@ -353,14 +391,6 @@
 
 
 # virtual methods
-.method public a(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/estrongs/android/widget/HeaderGridView;->j:Z
-
-    return-void
-.end method
-
 .method public onMeasure(II)V
     .locals 2
 
@@ -519,7 +549,7 @@
     :cond_3
     iput v3, p0, Lcom/estrongs/android/widget/HeaderGridView;->h:I
 
-    invoke-direct {p0}, Lcom/estrongs/android/widget/HeaderGridView;->a()V
+    invoke-direct {p0}, Lcom/estrongs/android/widget/HeaderGridView;->b()V
 
     if-eqz v0, :cond_0
 
@@ -555,9 +585,9 @@
     :cond_6
     iput v3, p0, Lcom/estrongs/android/widget/HeaderGridView;->h:I
 
-    invoke-direct {p0}, Lcom/estrongs/android/widget/HeaderGridView;->a()V
-
     invoke-direct {p0}, Lcom/estrongs/android/widget/HeaderGridView;->b()V
+
+    invoke-direct {p0}, Lcom/estrongs/android/widget/HeaderGridView;->c()V
 
     :cond_7
     if-eqz v0, :cond_0
@@ -570,4 +600,41 @@
         :pswitch_2
         :pswitch_1
     .end packed-switch
+.end method
+
+.method public setExpanded(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/estrongs/android/widget/HeaderGridView;->j:Z
+
+    return-void
+.end method
+
+.method public setHeader(Landroid/widget/LinearLayout;)V
+    .locals 1
+
+    iput-object p1, p0, Lcom/estrongs/android/widget/HeaderGridView;->a:Landroid/widget/LinearLayout;
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/HeaderGridView;->a:Landroid/widget/LinearLayout;
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x1
+
+    :goto_0
+    iput-boolean v0, p0, Lcom/estrongs/android/widget/HeaderGridView;->e:Z
+
+    iget-boolean v0, p0, Lcom/estrongs/android/widget/HeaderGridView;->e:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-direct {p0}, Lcom/estrongs/android/widget/HeaderGridView;->a()V
+
+    :cond_0
+    return-void
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

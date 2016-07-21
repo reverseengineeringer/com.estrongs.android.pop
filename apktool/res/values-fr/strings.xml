@@ -1,13 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_select">Sélectionner</string>
-    <string name="app_name">ES Explorateur de Fichiers</string>
-    <string name="app_media_player">ES Lecteur Multimédia</string>
-    <string name="app_note_editor">ES Editeur de Texte</string>
-    <string name="app_image_browser">ES Galerie</string>
-    <string name="app_zip_viewer">ES Explorateur ZIP</string>
     <string name="app_downloader">ES Downloader</string>
-    <string name="select_device_to_share">Sélectionnez un destinataire</string>
+    <string name="app_image_browser">ES Galerie</string>
+    <string name="app_media_player">ES Lecteur Multimédia</string>
+    <string name="app_name">ES Explorateur de Fichiers</string>
+    <string name="app_note_editor">ES Editeur de Texte</string>
+    <string name="app_zip_viewer">ES Explorateur ZIP</string>
+    <string name="battery_info_remaining_charging_time">"Charge restante: "</string>
+    <string name="battery_info_remaining_discharging_time">"Restant: "</string>
+    <string name="charging_screen_ad_delete">Supprimer</string>
+    <string name="charging_screen_ad_enter">Ouvrir</string>
+    <string name="charging_screen_charging_complete">Charge terminée</string>
+    <string name="charging_screen_slide_to_enter">Déverouiller</string>
+    <string name="common_time_hour">h</string>
+    <string name="common_time_minute">m</string>
+    <string name="duappd_ad_item_action_btn">GRATUIT</string>
+    <string name="duapps_ad_data_empty">Veuillez revenir ultérieurement.</string>
+    <string name="duapps_ad_empty_refresh_btn_check">Vérifiez</string>
+    <string name="duapps_ad_empty_title">VIDE</string>
+    <string name="duapps_ad_footer_end">Fin du contenu</string>
+    <string name="duapps_ad_loading">Chargement en cours de …</string>
+    <string name="duapps_ad_loading_switch_google_play_des">de passer à Google Lecture…</string>
+    <string name="duapps_ad_no_apps_refresh_button_text">Actualiser</string>
+    <string name="duapps_ad_no_browser_play">Aucun navigateur ou Google Lecture installé</string>
+    <string name="duapps_ad_nonetwork_message">Pas de connexion réseau. Vérifiez le paramétrage et réessayez.</string>
+    <string name="duapps_ad_pull_refresh">Tirer pour actualiser</string>
+    <string name="duscenerysdk_ad_no_browser_play">Aucun navigateur ou Google Lecture installé</string>
     <string name="es_share_name_activity">Envoyé par le réseau</string>
+    <string name="lock_screen_setting">Paramètres</string>
+    <string name="lock_screen_switch">Smart Charge</string>
+    <string name="lockscreen_charge_boost_time">Vitesse de chargement totale accélérée de %1$d minutes</string>
     <string name="save_to_es">ES Enregistrer sous</string>
+    <string name="scenery_card_antivirus_button">ANAL. SÉCURITÉ</string>
+    <string name="scenery_card_antivirus_content">Votre téléphone présente &lt;font color=#3080F0>%1$s&lt;/font> risque(s)</string>
+    <string name="scenery_card_antivirus_title">Risque pour la sécurité</string>
+    <string name="scenery_card_battery_button">"ÉCO D'ÉNERGIE"</string>
+    <string name="scenery_card_battery_content">"&lt;font color=#3080F0>%1$s&lt;/font> app(s) trouvée(s) utilisant de l'énergie. Utilisez DU Battery Saver pour économiser de la batterie et prolonger la veille&lt;font color=#3080F0>%2$s h %3$s m&lt;/font>"</string>
+    <string name="scenery_card_battery_title">Conso. énergie</string>
+    <string name="scenery_card_booster_button">BOOSTER</string>
+    <string name="scenery_card_booster_content">&lt;font color=#3080F0>%1$s&lt;/font> des apps tenaces ralentissent votre téléphone</string>
+    <string name="scenery_card_booster_title">Appareil lent</string>
+    <string name="scenery_card_cleaner_button">RÉPARER</string>
+    <string name="scenery_card_cleaner_content">Déchet trouvé &lt;font color=#3080F0>%1$s&lt;/font> sur votre téléphone</string>
+    <string name="scenery_card_cleaner_title">Nettoyage rapide</string>
+    <string name="scenery_card_es_button">NETTOYER MAINTENANT</string>
+    <string name="scenery_card_es_content">"L'espace interne restant est réduit &lt;font color=#3080F0>%1$s&lt;/font>"</string>
+    <string name="scenery_card_es_title">Nettoyage du disque</string>
+    <string name="scenery_card_photowonder_button">EMBELLIR MAINTENANT</string>
+    <string name="scenery_card_photowonder_content">Vous disposez de &lt;font color=#3080F0>%1$s&lt;/font> photos qui peuvent être encore plus belles !</string>
+    <string name="scenery_card_photowonder_title">Embellir</string>
+    <string name="scenery_charge_dialog_button_text">"FAITES-EN L'ACQUISITION"</string>
+    <string name="scenery_charge_dialog_content">Surcharge pdt %1$d min(s) &lt;font color=#FF8132>endommage la bat.&lt;/font>. Protégez-la avec &lt;b>DU Battery Saver&lt;/b> .</string>
+    <string name="scenery_charge_dialog_title">Conseils pour le chargement</string>
+    <string name="scenery_disk_usage_dialog_button_text">"FAITES-EN L'ACQUISITION"</string>
+    <string name="scenery_disk_usage_dialog_content">"L'espace de stockage de votre téléphone a diminué de &lt;font color=#FF8132>%1$sMo&lt;/font> lors des &lt;font color=#FF8132>%2$s dernier(s) jour(s)&lt;/font> ."</string>
+    <string name="scenery_disk_usage_dialog_title">Nettoyage du disque</string>
+    <string name="scenery_take_photo_dialog_button_text">"FAITES-EN L'ACQUISITION"</string>
+    <string name="scenery_take_photo_dialog_content">"Les photos ne sont pas aussi belles qu'espéré ? &lt;font color=#2274E6>Les filtres ciné.&lt;/font> de &lt;b>PhotoWonder&lt;/b> peuvent vous aider !"</string>
+    <string name="scenery_take_photo_dialog_title">Beauty Edit</string>
+    <string name="scenery_uninstall_dialog_button_text">"FAITES-EN L'ACQUISITION"</string>
+    <string name="scenery_uninstall_dialog_content">%1$s a laissé des &lt;font color=#FF8132>fichiers inutiles résiduels&lt;/font>, utilisez &lt;b>DU Speed Booster&lt;/b> pour les supprimer !</string>
+    <string name="scenery_uninstall_dialog_title">Fich. résiduels détectés</string>
+    <string name="screen_lock_charging_boosted_time">Chargement accéléré pr %1$d minutes</string>
+    <string name="select_device_to_share">Sélectionnez un destinataire</string>
+    <string name="toolbox_no_apps_refresh_button_text">Actualiser</string>
+    <string name="toolbox_nonetwork_tips">"Cliquez pour activer le réseau et obtenir plus d'applications gratuites."</string>
+    <string name="toolbox_v2_btn_more">Plus</string>
+    <string name="toolbox_v2_coin_balance">Solde :</string>
+    <string name="toolbox_v2_data_empty">Veuillez revenir ultérieurement.</string>
+    <string name="toolbox_v2_list_item_btn_free">GRATUIT</string>
+    <string name="v2_toolbox_empty_title">VIDE</string>
+    <string name="toolbox_v2_network_mobile">Données mobiles</string>
+    <string name="toolbox_v2_network_wifi">Wi-Fi</string>
+    <string name="toolbox_v2_nomore_content">Fin du contenu</string>
+    <string name="toolbox_v2_pull_refresh">Tirer pour actualiser</string>
 </resources>

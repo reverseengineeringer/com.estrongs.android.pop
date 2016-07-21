@@ -1,6 +1,13 @@
 package com.estrongs.android.widget;
 
-abstract interface ah {}
+import android.view.ViewGroup;
+
+class ah
+{
+  public ViewGroup a;
+  public Object b;
+  public boolean c;
+}
 
 /* Location:
  * Qualified Name:     com.estrongs.android.widget.ah

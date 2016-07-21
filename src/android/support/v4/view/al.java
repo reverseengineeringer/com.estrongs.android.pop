@@ -1,13 +1,13 @@
 package android.support.v4.view;
 
-import android.widget.TextView;
+import android.view.LayoutInflater;
 
 class al
-  implements aj
+  extends ak
 {
-  public void a(TextView paramTextView)
+  public void a(LayoutInflater paramLayoutInflater, ar paramar)
   {
-    am.a(paramTextView);
+    aq.a(paramLayoutInflater, paramar);
   }
 }
 

@@ -1,16 +1,24 @@
 package com.estrongs.android.ui.dialog;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.widget.ProgressBar;
+import com.estrongs.android.pop.app.diskusage.a;
 
 class ig
-  implements View.OnClickListener
+  implements Runnable
 {
-  ig(hn paramhn) {}
+  ig(hq paramhq) {}
   
-  public void onClick(View paramView)
+  public void run()
   {
-    a.c();
+    try
+    {
+      a.k.setVisibility(4);
+      if (a.l != null) {
+        a.l.b();
+      }
+      return;
+    }
+    catch (Exception localException) {}
   }
 }
 

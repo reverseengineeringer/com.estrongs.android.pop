@@ -1,13 +1,14 @@
 package com.estrongs.android.pop.app;
 
-class k
-  extends Thread
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+
+final class k
+  implements DialogInterface.OnClickListener
 {
-  k(AudioPlayerService paramAudioPlayerService) {}
-  
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    a.s();
+    paramDialogInterface.dismiss();
   }
 }
 

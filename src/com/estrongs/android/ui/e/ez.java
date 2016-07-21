@@ -1,116 +1,71 @@
 package com.estrongs.android.ui.e;
 
-import android.content.Context;
-import android.content.Intent;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
 import com.estrongs.android.pop.ad;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.a.b;
-import com.estrongs.android.ui.dialog.es;
-import com.estrongs.android.ui.dialog.ey;
-import com.estrongs.android.ui.dialog.fh;
-import com.estrongs.android.ui.dialog.fs;
-import com.estrongs.android.ui.pcs.j;
-import com.estrongs.android.ui.pcs.n;
-import com.estrongs.android.ui.view.CreateOAuthNetDisk;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.am;
+import com.estrongs.android.pop.view.utils.AppRunner;
+import com.estrongs.android.ui.dialog.cv;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.ap;
 import com.estrongs.fs.h;
+import com.estrongs.fs.impl.b.g;
+import com.estrongs.fs.impl.local.m;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 class ez
   implements MenuItem.OnMenuItemClickListener
 {
-  ez(cp paramcp) {}
+  ez(cr paramcr) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if (cp.b(a).size() == 0)
-    {
-      ag.a(cp.a(a).getBaseContext(), 2131427774, 0);
+    Object localObject = cr.a(a);
+    if (((List)localObject).size() == 0) {
+      ak.a(cr.b(a).getBaseContext(), 2131231551, 0);
+    }
+    while (((List)localObject).size() < 1) {
       return true;
     }
-    paramMenuItem = (h)cp.b(a).get(0);
-    String str2 = paramMenuItem.getAbsolutePath();
-    if ((am.J(str2)) || (am.I(str2)) || (am.p(str2)) || (am.m(str2))) {
-      new ey(cp.a(a), str2, paramMenuItem.getName(), false).a();
-    }
-    Object localObject1;
-    for (;;)
+    if ((m.a(cr.b(a), false)) && (ad.a(cr.b(a)).ab()))
     {
-      cp.a(a).s();
-      return true;
-      if (am.H(str2))
-      {
-        new fs(cp.a(a), str2, paramMenuItem.getName()).b();
-      }
-      else if (am.K(str2))
-      {
-        new es(cp.a(a), str2, paramMenuItem.getName()).a();
-      }
-      else if (am.aw(str2))
-      {
-        localObject1 = am.an(str2);
-        if ((!((String)localObject1).equals("box")) && (!((String)localObject1).equals("onedrive")) && (!((String)localObject1).equals("gdrive")) && (!((String)localObject1).equals("dropbox")) && (!((String)localObject1).equals("kanbox")) && (!((String)localObject1).equals("vdisk")) && (!((String)localObject1).equals("kuaipan"))) {
-          break;
-        }
-        paramMenuItem = new Intent(a.b, CreateOAuthNetDisk.class);
-        paramMenuItem.putExtra("nettype", (String)localObject1);
-        paramMenuItem.putExtra("editServer", true);
-        paramMenuItem.putExtra("originalPath", str2);
-        a.b.startActivity(paramMenuItem);
-      }
-    }
-    paramMenuItem = new b(cp.a(a));
-    int i = 0;
-    label359:
-    if (i < paramMenuItem.getCount()) {
-      if (!((String)localObject1).equals(paramMenuItem.c(i))) {}
+      paramMenuItem = new cv(cr.b(a));
+      paramMenuItem.a(cr.b(a).getText(2131231715)).b(cr.b(a).getText(2131230964)).b(2131231270, new fb(this, (List)localObject)).c(2131231265, new fa(this));
+      paramMenuItem.c();
     }
     for (;;)
     {
-      if (i == -1)
+      cr.b(a).B();
+      return true;
+      ArrayList localArrayList = new ArrayList();
+      paramMenuItem = null;
+      Iterator localIterator = ((List)localObject).iterator();
+      while (localIterator.hasNext())
       {
-        ag.a(a.b, "Unknown netdisk type", 0);
-        cp.a(a).s();
-        return true;
-        i += 1;
-        break label359;
-      }
-      String str1 = am.ai(str2);
-      if (((String)localObject1).equals("pcs"))
-      {
-        localObject1 = new fa(this);
-        localObject2 = new j(a.b, true, str2);
-        ((j)localObject2).a((n)localObject1);
-        ((j)localObject2).a(paramMenuItem.b(i), paramMenuItem.a(i));
-        ((j)localObject2).a(str1, ad.a(a.b).h(str2));
-        ((j)localObject2).show();
-        return true;
-      }
-      Object localObject2 = new fh(a.b).b(paramMenuItem.a(i), (String)localObject1);
-      paramMenuItem = str1;
-      if (((String)localObject1).equals("vdisk"))
-      {
-        if (!str1.startsWith("s_")) {
-          break label601;
+        h localh = (h)localIterator.next();
+        if (ap.bm(localh.getPath()))
+        {
+          cr.b(a).a(localh.getPath(), localh.getAbsolutePath());
         }
-        paramMenuItem = str1.substring(2);
-      }
-      for (;;)
-      {
-        ((fh)localObject2).a(paramMenuItem, ad.a(a.b).h(str2));
-        ((fh)localObject2).a(str2);
-        ((fh)localObject2).a();
-        break;
-        label601:
-        paramMenuItem = str1;
-        if (str1.startsWith("l_")) {
-          paramMenuItem = str1.substring(2);
+        else
+        {
+          localArrayList.add(localh.getAbsolutePath());
+          if ((localh instanceof g))
+          {
+            localObject = paramMenuItem;
+            if (paramMenuItem == null) {
+              localObject = new ArrayList();
+            }
+            ((List)localObject).add((g)localh);
+            paramMenuItem = (MenuItem)localObject;
+          }
         }
       }
-      i = -1;
+      if (localArrayList.size() > 0) {
+        AppRunner.a(cr.b(a), localArrayList, paramMenuItem);
+      }
     }
   }
 }

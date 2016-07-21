@@ -1,23 +1,20 @@
 package com.estrongs.android.pop.app.compress;
 
-import android.content.Context;
-import com.estrongs.android.ui.view.ag;
+import com.estrongs.android.d.h;
+import com.estrongs.io.a.a.a;
 
 class bd
-  implements Runnable
+  implements h
 {
-  bd(ay paramay, Exception paramException) {}
+  bd(bb parambb) {}
   
-  public void run()
+  public void a(boolean paramBoolean1, boolean paramBoolean2)
   {
-    if (a.getMessage() == null) {}
-    for (String str1 = a.getClass().getName();; str1 = a.getMessage())
+    bb.b(a).b(paramBoolean1);
+    bb.b(a).a(paramBoolean2);
+    synchronized (bb.b(a))
     {
-      String str2 = str1;
-      if (str1.trim().length() > 0) {
-        str2 = "(" + str1 + ")";
-      }
-      ag.a(b.a.getContext(), b.a.getContext().getString(2131427851) + ": " + aw.b(b.a) + str2, 1);
+      bb.b(a).notify();
       return;
     }
   }

@@ -1,22 +1,23 @@
 package com.estrongs.android.ui.dialog;
 
-import android.view.KeyEvent;
-import android.view.View;
-import android.view.View.OnKeyListener;
+import com.estrongs.a.a;
+import com.estrongs.a.a.l;
+import com.estrongs.a.a.m;
 
 class el
-  implements View.OnKeyListener
+  implements l
 {
-  el(ek paramek) {}
+  long a = -1L;
   
-  public boolean onKey(View paramView, int paramInt, KeyEvent paramKeyEvent)
+  el(ee paramee) {}
+  
+  public void a(a parama, m paramm)
   {
-    if ((paramKeyEvent.getAction() == 0) && (paramKeyEvent.getKeyCode() == 66))
+    if ((a == -1L) || (System.currentTimeMillis() - a > 200L))
     {
-      a.a();
-      return true;
+      a = System.currentTimeMillis();
+      ee.h(b);
     }
-    return false;
   }
 }
 

@@ -1,110 +1,120 @@
-.class public Lcom/estrongs/android/pop/app/b/w;
+.class Lcom/estrongs/android/pop/app/b/w;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/fs/i;
+.implements Ljava/util/Comparator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Landroid/util/Pair",
+        "<",
+        "Ljava/lang/Long;",
+        "Ljava/util/List",
+        "<",
+        "Lcom/estrongs/android/pop/app/b/b;",
+        ">;>;>;"
+    }
+.end annotation
 
 
 # instance fields
-.field private a:J
-
-.field private b:J
+.field final synthetic a:Lcom/estrongs/android/pop/app/b/k;
 
 
 # direct methods
-.method public constructor <init>(JJ)V
-    .locals 1
+.method constructor <init>(Lcom/estrongs/android/pop/app/b/k;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/b/w;->a:Lcom/estrongs/android/pop/app/b/k;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lcom/estrongs/android/pop/app/b/w;->a:J
-
-    iput-wide p3, p0, Lcom/estrongs/android/pop/app/b/w;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/estrongs/fs/h;)Z
-    .locals 10
+.method public a(Landroid/util/Pair;Landroid/util/Pair;)I
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/util/Pair",
+            "<",
+            "Ljava/lang/Long;",
+            "Ljava/util/List",
+            "<",
+            "Lcom/estrongs/android/pop/app/b/b;",
+            ">;>;",
+            "Landroid/util/Pair",
+            "<",
+            "Ljava/lang/Long;",
+            "Ljava/util/List",
+            "<",
+            "Lcom/estrongs/android/pop/app/b/b;",
+            ">;>;)I"
+        }
+    .end annotation
 
-    const-wide/16 v8, -0x1
+    const-wide/16 v4, 0x0
 
-    const/4 v1, 0x1
+    iget-object v0, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    check-cast v0, Ljava/lang/Long;
 
-    if-eqz p1, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    invoke-interface {p1}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/m;
+    move-result-wide v2
 
-    move-result-object v0
+    iget-object v0, p2, Landroid/util/Pair;->first:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/m;->a()Z
+    check-cast v0, Ljava/lang/Long;
+
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    sub-long/2addr v0, v2
+
+    cmp-long v2, v0, v4
+
+    if-nez v2, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    cmp-long v0, v0, v4
+
+    if-gez v0, :cond_1
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, -0x1
+
+    goto :goto_0
+.end method
+
+.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 1
+
+    check-cast p1, Landroid/util/Pair;
+
+    check-cast p2, Landroid/util/Pair;
+
+    invoke-virtual {p0, p1, p2}, Lcom/estrongs/android/pop/app/b/w;->a(Landroid/util/Pair;Landroid/util/Pair;)I
 
     move-result v0
 
-    if-eqz v0, :cond_2
-
-    :cond_0
-    move v1, v2
-
-    :cond_1
-    :goto_0
-    return v1
-
-    :cond_2
-    invoke-interface {p1}, Lcom/estrongs/fs/h;->length()J
-
-    move-result-wide v4
-
-    iget-wide v6, p0, Lcom/estrongs/android/pop/app/b/w;->a:J
-
-    cmp-long v0, v6, v8
-
-    if-lez v0, :cond_6
-
-    iget-wide v6, p0, Lcom/estrongs/android/pop/app/b/w;->a:J
-
-    cmp-long v0, v4, v6
-
-    if-ltz v0, :cond_4
-
-    move v0, v1
-
-    :goto_1
-    iget-wide v6, p0, Lcom/estrongs/android/pop/app/b/w;->b:J
-
-    cmp-long v3, v6, v8
-
-    if-lez v3, :cond_5
-
-    if-eqz v0, :cond_3
-
-    iget-wide v6, p0, Lcom/estrongs/android/pop/app/b/w;->b:J
-
-    cmp-long v0, v4, v6
-
-    if-lez v0, :cond_1
-
-    :cond_3
-    move v1, v2
-
-    goto :goto_0
-
-    :cond_4
-    move v0, v2
-
-    goto :goto_1
-
-    :cond_5
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_6
-    move v0, v1
-
-    goto :goto_1
+    return v0
 .end method

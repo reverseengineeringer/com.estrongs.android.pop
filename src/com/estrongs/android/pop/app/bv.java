@@ -6,7 +6,7 @@ import android.content.DialogInterface.OnClickListener;
 class bv
   implements DialogInterface.OnClickListener
 {
-  bv(ESUsePromptActivity paramESUsePromptActivity) {}
+  bv(bu parambu) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {

@@ -7,16 +7,16 @@ import android.preference.Preference;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.esclasses.i;
-import com.estrongs.android.pop.utils.cc;
+import com.estrongs.android.pop.esclasses.m;
+import com.estrongs.android.pop.utils.cl;
 import com.estrongs.android.pop.z;
-import com.estrongs.android.ui.dialog.ct;
-import com.estrongs.android.ui.view.ag;
+import com.estrongs.android.ui.dialog.cv;
+import com.estrongs.android.ui.view.ak;
 import java.io.File;
 
 @SuppressLint({"NewApi"})
 public class AppPreferenceFragment
-  extends i
+  extends m
 {
   private ad a;
   private EditTextPreference b;
@@ -27,17 +27,21 @@ public class AppPreferenceFragment
   {
     if (z.j)
     {
-      String str = a.x();
+      Object localObject = a.y();
       b = ((EditTextPreference)findPreference("app_backup_dir"));
-      b.setSummary(str);
-      b.setText(str);
+      b.setSummary((CharSequence)localObject);
+      b.setText((String)localObject);
       b.setOnPreferenceChangeListener(new a(this));
-      if (!a.j())
+      localObject = findPreference("auto_check_list");
+      if (localObject != null) {
+        ((Preference)localObject).setOnPreferenceClickListener(new b(this));
+      }
+      if (!a.k())
       {
         findPreference("backup_app_cache").setEnabled(false);
         findPreference("root_auto_install").setEnabled(false);
       }
-      if (cc.a()) {}
+      if (cl.a()) {}
     }
     PreferenceCategory localPreferenceCategory;
     PreferenceScreen localPreferenceScreen;
@@ -61,7 +65,7 @@ public class AppPreferenceFragment
   
   private void b()
   {
-    new ct(getActivity()).a(2131427399).b(2131427762).b(2131427341, new c(this)).c(2131427342, new b(this)).c();
+    new cv(getActivity()).a(2131231719).b(2131231916).b(2131231273, new d(this)).c(2131231269, new c(this)).c();
   }
   
   private void c()
@@ -78,7 +82,7 @@ public class AppPreferenceFragment
       a.s(c);
       return;
     }
-    ag.a(getActivity(), 2131427763, 1);
+    ak.a(getActivity(), 2131231915, 1);
   }
   
   public void onCreate(Bundle paramBundle)

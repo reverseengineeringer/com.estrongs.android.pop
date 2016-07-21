@@ -1,287 +1,134 @@
 .class Lcom/estrongs/android/ui/view/bm;
-.super Landroid/webkit/WebViewClient;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/view/View$OnKeyListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
+.field final synthetic a:Lcom/estrongs/android/ui/view/IndicatorView;
 
 
 # direct methods
-.method private constructor <init>(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)V
+.method constructor <init>(Lcom/estrongs/android/ui/view/IndicatorView;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/view/bm;->a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
+    iput-object p1, p0, Lcom/estrongs/android/ui/view/bm;->a:Lcom/estrongs/android/ui/view/IndicatorView;
 
-    invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;Lcom/estrongs/android/ui/view/bg;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/estrongs/android/ui/view/bm;-><init>(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
+.method public onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
     .locals 4
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bm;->a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
+    const/4 v0, 0x1
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->d(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Landroid/os/Handler;
+    const/4 v1, 0x0
 
-    move-result-object v0
+    iget-object v2, p0, Lcom/estrongs/android/ui/view/bm;->a:Lcom/estrongs/android/ui/view/IndicatorView;
 
-    const/4 v1, 0x7
+    invoke-virtual {v2}, Lcom/estrongs/android/ui/view/IndicatorView;->isFocused()Z
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+    move-result v2
 
-    move-result-object v0
+    if-eqz v2, :cond_3
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/bm;->a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
+    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
-    invoke-static {v1}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->d(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Landroid/os/Handler;
+    move-result v2
 
-    move-result-object v1
+    if-nez v2, :cond_3
 
-    const-wide/16 v2, 0xc8
+    const/16 v2, 0x15
 
-    invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+    if-ne p2, v2, :cond_1
 
-    const-string v0, "http://passport.baidu.com/phoenix/account/afterauth"
+    iget-object v2, p0, Lcom/estrongs/android/ui/view/bm;->a:Lcom/estrongs/android/ui/view/IndicatorView;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/estrongs/android/ui/view/IndicatorView;->e(Lcom/estrongs/android/ui/view/IndicatorView;)I
 
-    move-result v0
+    move-result v2
 
-    if-eqz v0, :cond_0
+    add-int/lit8 v2, v2, -0x1
 
-    invoke-virtual {p1}, Landroid/webkit/WebView;->stopLoading()V
+    if-ltz v2, :cond_0
 
-    const-string v0, "javascript:window.handler.show(document.body.innerHTML);"
+    iget-object v3, p0, Lcom/estrongs/android/ui/view/bm;->a:Lcom/estrongs/android/ui/view/IndicatorView;
 
-    invoke-virtual {p1, v0}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
+    invoke-static {v3}, Lcom/estrongs/android/ui/view/IndicatorView;->d(Lcom/estrongs/android/ui/view/IndicatorView;)Ljava/util/List;
 
-    :cond_0
-    const-string v0, "://"
+    move-result-object v3
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+    invoke-interface {v3}, Ljava/util/List;->size()I
 
-    move-result v0
+    move-result v3
 
-    if-lez v0, :cond_1
+    if-ge v2, v3, :cond_0
 
-    add-int/lit8 v0, v0, 0x3
+    iget-object v1, p0, Lcom/estrongs/android/ui/view/bm;->a:Lcom/estrongs/android/ui/view/IndicatorView;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-static {v1, v2}, Lcom/estrongs/android/ui/view/IndicatorView;->c(Lcom/estrongs/android/ui/view/IndicatorView;I)I
 
-    move-result-object p2
+    iget-object v1, p0, Lcom/estrongs/android/ui/view/bm;->a:Lcom/estrongs/android/ui/view/IndicatorView;
 
-    :cond_1
-    const-string v0, "www.estrongs.com"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    const-string v0, "localhost"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    invoke-static {}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->b()Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    invoke-static {}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->b()Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->a()V
-
-    :cond_2
-    return-void
-.end method
-
-.method public onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
-    .locals 3
-
-    invoke-virtual {p1}, Landroid/webkit/WebView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Landroid/webkit/WebView;->getHeight()I
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    const/16 v1, 0x12c
-
-    iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/view/IndicatorView;->invalidate()V
 
     :goto_0
-    invoke-virtual {p1, v0}, Landroid/webkit/WebView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const-string v0, "http://www.estrongs.com"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bm;->a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
-
-    const-string v1, "code"
-
-    invoke-static {v0, p2, v1}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->a(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/bm;->a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
-
-    invoke-static {v1}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->d(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Landroid/os/Handler;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
-
-    move-result-object v1
-
-    iput-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bm;->a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->d(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Landroid/os/Handler;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    :goto_1
-    invoke-virtual {p1}, Landroid/webkit/WebView;->stopLoading()V
+    return v0
 
     :cond_0
-    return-void
+    move v0, v1
+
+    goto :goto_0
 
     :cond_1
-    iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+    const/16 v2, 0x16
+
+    if-ne p2, v2, :cond_3
+
+    iget-object v2, p0, Lcom/estrongs/android/ui/view/bm;->a:Lcom/estrongs/android/ui/view/IndicatorView;
+
+    invoke-static {v2}, Lcom/estrongs/android/ui/view/IndicatorView;->e(Lcom/estrongs/android/ui/view/IndicatorView;)I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    if-ltz v2, :cond_2
+
+    iget-object v3, p0, Lcom/estrongs/android/ui/view/bm;->a:Lcom/estrongs/android/ui/view/IndicatorView;
+
+    invoke-static {v3}, Lcom/estrongs/android/ui/view/IndicatorView;->d(Lcom/estrongs/android/ui/view/IndicatorView;)Ljava/util/List;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Ljava/util/List;->size()I
+
+    move-result v3
+
+    if-ge v2, v3, :cond_2
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/view/bm;->a:Lcom/estrongs/android/ui/view/IndicatorView;
+
+    invoke-static {v1, v2}, Lcom/estrongs/android/ui/view/IndicatorView;->c(Lcom/estrongs/android/ui/view/IndicatorView;I)I
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/view/bm;->a:Lcom/estrongs/android/ui/view/IndicatorView;
+
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/view/IndicatorView;->invalidate()V
 
     goto :goto_0
 
     :cond_2
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bm;->a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
+    move v0, v1
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->d(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Landroid/os/Handler;
+    goto :goto_0
 
-    move-result-object v0
+    :cond_3
+    move v0, v1
 
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/bm;->a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
-
-    invoke-static {v1}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->d(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Landroid/os/Handler;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    goto :goto_1
-.end method
-
-.method public onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
-    .locals 2
-
-    const-string v0, "://"
-
-    invoke-virtual {p4, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    add-int/lit8 v0, v0, 0x3
-
-    invoke-virtual {p4, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object p4
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bm;->a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->n(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p4, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bm;->a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->d(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Landroid/os/Handler;
-
-    move-result-object v0
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/view/bm;->a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
-
-    invoke-static {v1}, Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;->d(Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;)Landroid/os/Handler;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    :cond_1
-    return-void
-.end method
-
-.method public onReceivedSslError(Landroid/webkit/WebView;Landroid/webkit/SslErrorHandler;Landroid/net/http/SslError;)V
-    .locals 1
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "NewApi"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/view/bm;->a:Lcom/estrongs/android/ui/view/PcsThirdPartOAuth;
-
-    invoke-static {v0, p1, p2, p3}, Lcom/estrongs/android/util/ac;->a(Landroid/content/Context;Landroid/webkit/WebView;Landroid/webkit/SslErrorHandler;Landroid/net/http/SslError;)V
-
-    return-void
-.end method
-
-.method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+    goto :goto_0
 .end method

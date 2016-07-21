@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnTouchListener;
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # instance fields
-.field final synthetic a:I
-
-.field final synthetic b:Lcom/estrongs/android/ui/theme/ThemeActivity;
+.field final synthetic a:Lcom/estrongs/android/ui/theme/ThemeActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/theme/ThemeActivity;I)V
+.method constructor <init>(Lcom/estrongs/android/ui/theme/ThemeActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/theme/q;->b:Lcom/estrongs/android/ui/theme/ThemeActivity;
-
-    iput p2, p0, Lcom/estrongs/android/ui/theme/q;->a:I
+    iput-object p1, p0, Lcom/estrongs/android/ui/theme/q;->a:Lcom/estrongs/android/ui/theme/ThemeActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,70 +22,38 @@
 
 
 # virtual methods
-.method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 4
+.method public onMenuItemClick(Landroid/view/MenuItem;)Z
+    .locals 3
 
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+    new-instance v0, Landroid/content/Intent;
 
-    move-result v0
+    iget-object v1, p0, Lcom/estrongs/android/ui/theme/q;->a:Lcom/estrongs/android/ui/theme/ThemeActivity;
 
-    packed-switch v0, :pswitch_data_0
+    const-class v2, Lcom/estrongs/android/ui/theme/ModifyThemeActivity;
 
-    :goto_0
-    :pswitch_0
-    const/4 v0, 0x0
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const-string v1, "theme_data_index"
+
+    iget-object v2, p0, Lcom/estrongs/android/ui/theme/q;->a:Lcom/estrongs/android/ui/theme/ThemeActivity;
+
+    invoke-static {v2}, Lcom/estrongs/android/ui/theme/ThemeActivity;->c(Lcom/estrongs/android/ui/theme/ThemeActivity;)Lcom/estrongs/android/ui/adapter/dr;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/estrongs/android/ui/adapter/dr;->a()I
+
+    move-result v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/theme/q;->a:Lcom/estrongs/android/ui/theme/ThemeActivity;
+
+    const/16 v2, 0x1024
+
+    invoke-virtual {v1, v0, v2}, Lcom/estrongs/android/ui/theme/ThemeActivity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    const/4 v0, 0x1
 
     return v0
-
-    :pswitch_1
-    const v0, 0x7f02010a
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundResource(I)V
-
-    iget v0, p0, Lcom/estrongs/android/ui/theme/q;->a:I
-
-    mul-int/lit8 v0, v0, 0x2
-
-    iget v1, p0, Lcom/estrongs/android/ui/theme/q;->a:I
-
-    iget v2, p0, Lcom/estrongs/android/ui/theme/q;->a:I
-
-    mul-int/lit8 v2, v2, 0x2
-
-    iget v3, p0, Lcom/estrongs/android/ui/theme/q;->a:I
-
-    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/view/View;->setPadding(IIII)V
-
-    goto :goto_0
-
-    :pswitch_2
-    const v0, 0x7f020282
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundResource(I)V
-
-    iget v0, p0, Lcom/estrongs/android/ui/theme/q;->a:I
-
-    mul-int/lit8 v0, v0, 0x2
-
-    iget v1, p0, Lcom/estrongs/android/ui/theme/q;->a:I
-
-    iget v2, p0, Lcom/estrongs/android/ui/theme/q;->a:I
-
-    mul-int/lit8 v2, v2, 0x2
-
-    iget v3, p0, Lcom/estrongs/android/ui/theme/q;->a:I
-
-    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/view/View;->setPadding(IIII)V
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_0
-        :pswitch_2
-    .end packed-switch
 .end method

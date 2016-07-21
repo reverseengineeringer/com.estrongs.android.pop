@@ -6,11 +6,10 @@ import android.content.pm.ApplicationInfo;
 import com.estrongs.a.p;
 import com.estrongs.android.pop.view.utils.AppRunner;
 import com.estrongs.fs.b.ab;
-import com.estrongs.fs.d;
 import com.estrongs.fs.h;
-import com.estrongs.fs.impl.local.l;
-import com.estrongs.fs.m;
-import com.estrongs.fs.n;
+import com.estrongs.fs.impl.local.m;
+import com.estrongs.fs.w;
+import com.estrongs.fs.x;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,21 +35,21 @@ class o
       if (paramInt >= a.size()) {
         break label404;
       }
-      localApplicationInfo = ((com.estrongs.fs.impl.b.c)a.get(paramInt)).c();
+      localApplicationInfo = ((com.estrongs.fs.impl.b.d)a.get(paramInt)).h();
       if (localApplicationInfo != null) {
         break;
       }
       paramInt += 1;
     }
-    String str = ((com.estrongs.fs.impl.b.c)a.get(paramInt)).getAbsolutePath();
+    String str = ((com.estrongs.fs.impl.b.d)a.get(paramInt)).getAbsolutePath();
     Object localObject2;
     Object localObject1;
     if (c.a(b, str))
     {
-      localObject2 = (com.estrongs.fs.impl.b.c)a.get(paramInt);
+      localObject2 = (com.estrongs.fs.impl.b.d)a.get(paramInt);
       if (c.a(b, localArrayList4, str))
       {
-        localObject1 = new ab(d.a(b.a), (h)localObject2, false);
+        localObject1 = new ab(com.estrongs.fs.d.a(b.a), (h)localObject2, false);
         ((ab)localObject1).execute(false);
         localObject1 = ((ab)localObject1).getTaskResult();
       }
@@ -63,19 +62,19 @@ class o
       {
         bool = true;
         localObject1 = str.substring(0, str.length() - 4) + ".odex";
-        new ab(d.a(b.a), new n((String)localObject1, m.b), false).execute(false);
+        new ab(com.estrongs.fs.d.a(b.a), new x((String)localObject1, w.b), false).execute(false);
       }
       for (;;)
       {
         localArrayList3.add(Boolean.valueOf(bool));
         localArrayList1.add(packageName);
-        localArrayList2.add(((com.estrongs.fs.impl.b.c)a.get(paramInt)).getName());
+        localArrayList2.add(((com.estrongs.fs.impl.b.d)a.get(paramInt)).getName());
         break;
-        localObject1 = l.b(str, "rw");
+        localObject1 = m.b(str, "rw");
         if (localObject1 == null) {
           break label466;
         }
-        localObject2 = new ab(d.a(b.a), (h)localObject2, false);
+        localObject2 = new ab(com.estrongs.fs.d.a(b.a), (h)localObject2, false);
         ((ab)localObject2).execute(false);
         localArrayList4.add(localObject1);
         localObject1 = ((ab)localObject2).getTaskResult();
@@ -83,7 +82,7 @@ class o
         label404:
         while (i < localArrayList4.size())
         {
-          l.b((String[])localArrayList4.get(i));
+          m.b((String[])localArrayList4.get(i));
           i += 1;
         }
         AppRunner.a(b.a, localArrayList1, localArrayList2, localArrayList3);

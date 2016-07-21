@@ -1,6 +1,15 @@
 package android.support.v4.content;
 
-public abstract interface d<D> {}
+import android.content.Context;
+import android.content.Intent;
+
+class d
+{
+  static void a(Context paramContext, Intent[] paramArrayOfIntent)
+  {
+    paramContext.startActivities(paramArrayOfIntent);
+  }
+}
 
 /* Location:
  * Qualified Name:     android.support.v4.content.d

@@ -1,16 +1,18 @@
 package com.estrongs.android.pop.app;
 
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.ui.e.iq;
+
 class fk
-  extends Thread
+  implements MenuItem.OnMenuItemClickListener
 {
-  fk(fi paramfi, int paramInt1, int paramInt2) {}
+  fk(PopAudioPlayer paramPopAudioPlayer) {}
   
-  public void run()
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    PopAudioPlayer.a(c.a).a(a);
-    if (b == 5) {
-      PopAudioPlayer.w(c.a);
-    }
+    iq.a(a);
+    return true;
   }
 }
 

@@ -9,8 +9,8 @@ public class ReaderTextView
   extends TextView
 {
   private int a = -1;
-  private aq b = null;
-  private ap c = null;
+  private ai b = null;
+  private ah c = null;
   private float d = 1.0F;
   private float e = 0.0F;
   private boolean f = true;
@@ -35,24 +35,19 @@ public class ReaderTextView
     a = 0;
   }
   
-  public void a(ap paramap)
+  public boolean getIncludeFontPadding()
   {
-    c = paramap;
+    return f;
   }
   
-  public float b()
+  public float getLineSpacingAdd()
   {
     return e;
   }
   
-  public float c()
+  public float getLineSpacingMult()
   {
     return d;
-  }
-  
-  public boolean getIncludeFontPadding()
-  {
-    return f;
   }
   
   protected void onDraw(Canvas paramCanvas)
@@ -78,6 +73,16 @@ public class ReaderTextView
     e = paramFloat1;
     d = paramFloat2;
     super.setLineSpacing(paramFloat1, paramFloat2);
+  }
+  
+  public void setOnPreDrawListener(ah paramah)
+  {
+    c = paramah;
+  }
+  
+  public void setOnTextChangedListener(ai paramai)
+  {
+    b = paramai;
   }
 }
 

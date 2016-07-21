@@ -92,6 +92,8 @@
 
 .field public inTestMode:Z
 
+.field public isAppBackupOverwriteApplyAllByUser:Z
+
 .field public notificationId:I
 
 .field private parent:Lcom/estrongs/a/a;
@@ -283,6 +285,8 @@
     iput-boolean v3, p0, Lcom/estrongs/a/a;->canCancel:Z
 
     iput-boolean v2, p0, Lcom/estrongs/a/a;->canRestart:Z
+
+    iput-boolean v2, p0, Lcom/estrongs/a/a;->isAppBackupOverwriteApplyAllByUser:Z
 
     iput-boolean v2, p0, Lcom/estrongs/a/a;->waitingDecision:Z
 
@@ -1413,7 +1417,7 @@
 
     if-eqz v2, :cond_1
 
-    invoke-static {}, Lcom/estrongs/android/util/l;->a()V
+    invoke-static {}, Lcom/estrongs/android/util/k;->a()V
 
     :cond_1
     :try_start_0
@@ -1431,7 +1435,7 @@
 
     if-eqz v2, :cond_2
 
-    invoke-static {}, Lcom/estrongs/android/util/l;->b()V
+    invoke-static {}, Lcom/estrongs/android/util/k;->b()V
 
     :cond_2
     if-eqz v0, :cond_3
@@ -1796,6 +1800,10 @@
     :cond_2
     iput-boolean v2, v0, Lcom/estrongs/a/a/d;->e:Z
 
+    iget-boolean v1, p0, Lcom/estrongs/a/a;->isAppBackupOverwriteApplyAllByUser:Z
+
+    if-nez v1, :cond_3
+
     iget-object v1, p0, Lcom/estrongs/a/a;->e:Lcom/estrongs/a/a/a;
 
     invoke-interface {v1, p0, v0}, Lcom/estrongs/a/a/a;->a(Lcom/estrongs/a/a;Lcom/estrongs/a/a/d;)V
@@ -2008,6 +2016,10 @@
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/estrongs/a/a/d;->e:Z
+
+    iget-boolean v0, v0, Lcom/estrongs/a/a/d;->f:Z
+
+    iput-boolean v0, p0, Lcom/estrongs/a/a;->isAppBackupOverwriteApplyAllByUser:Z
 
     invoke-virtual {p0}, Lcom/estrongs/a/a;->resume()V
 

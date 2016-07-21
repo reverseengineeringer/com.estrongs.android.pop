@@ -1,22 +1,16 @@
 package com.estrongs.android.pop.app;
 
-public class ef
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+
+class ef
+  implements CompoundButton.OnCheckedChangeListener
 {
-  public String a = "";
-  public String b = null;
-  public boolean c = false;
+  ef(OpenRecomm paramOpenRecomm) {}
   
-  static ef[] a(String[] paramArrayOfString)
+  public void onCheckedChanged(CompoundButton paramCompoundButton, boolean paramBoolean)
   {
-    ef[] arrayOfef = new ef[paramArrayOfString.length];
-    int i = 0;
-    while (i < paramArrayOfString.length)
-    {
-      arrayOfef[i] = new ef();
-      b = paramArrayOfString[i];
-      i += 1;
-    }
-    return arrayOfef;
+    OpenRecomm.a(a, paramBoolean);
   }
 }
 

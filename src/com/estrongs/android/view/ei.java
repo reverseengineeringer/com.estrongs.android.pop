@@ -1,24 +1,21 @@
 package com.estrongs.android.view;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.net.Uri;
-import com.estrongs.android.pop.app.imageviewer.Wallpaper;
-import java.io.File;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.ui.pcs.r;
+import com.estrongs.fs.h;
 
 class ei
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  ei(eh parameh, String paramString) {}
+  ei(ef paramef, h paramh) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    Uri localUri = Uri.fromFile(new File(a));
-    Intent localIntent = new Intent("android.intent.action.ATTACH_DATA");
-    localIntent.setDataAndType(localUri, "image/*");
-    localIntent.putExtra("mimeType", "image/*");
-    localIntent.setClass(b.b.a.ad, Wallpaper.class);
-    b.b.a.ad.startActivity(localIntent);
+    r localr = new r(b.c.a.ag);
+    localr.a(new ej(this));
+    localr.a(true);
+    paramDialogInterface.dismiss();
   }
 }
 

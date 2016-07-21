@@ -3,33 +3,28 @@ package com.estrongs.android.ui.e;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.dialog.du;
-import com.estrongs.android.ui.dialog.hc;
-import com.estrongs.android.ui.view.ag;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.bc;
 import com.estrongs.fs.h;
 import java.util.List;
 
 class dy
   implements MenuItem.OnMenuItemClickListener
 {
-  dy(cp paramcp) {}
+  dy(cr paramcr) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = cp.b(a);
+    paramMenuItem = cr.a(a);
     if (paramMenuItem.size() == 0) {
-      ag.a(cp.a(a).getBaseContext(), 2131427774, 0);
+      ak.a(cr.b(a).getBaseContext(), 2131231551, 0);
     }
-    do
-    {
+    while (paramMenuItem.size() != 1) {
       return true;
-      if (paramMenuItem.size() == 1)
-      {
-        new hc(cp.a(a), (h)paramMenuItem.get(0)).a();
-        return true;
-      }
-    } while (paramMenuItem.size() <= 1);
-    new du(cp.a(a), paramMenuItem, cp.c(a)).a();
+    }
+    paramMenuItem = (h)paramMenuItem.get(0);
+    bc.a(cr.b(a).getBaseContext(), paramMenuItem);
+    cr.b(a).B();
     return true;
   }
 }

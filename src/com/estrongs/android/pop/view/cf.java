@@ -1,18 +1,37 @@
 package com.estrongs.android.pop.view;
 
-import android.view.View;
-import android.view.View.OnLongClickListener;
-import com.estrongs.android.ui.view.ag;
+import android.webkit.WebIconDatabase;
+import com.estrongs.android.ui.d.i;
+import com.estrongs.android.util.bk;
+import com.estrongs.android.util.q;
+import java.io.File;
+import java.util.List;
 
 class cf
-  implements View.OnLongClickListener
+  implements Runnable
 {
   cf(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public boolean onLongClick(View paramView)
+  public void run()
   {
-    ag.a(a, 2131428111, 0);
-    return true;
+    FileExplorerActivity.F(a);
+    int i = a.au().a();
+    if (bk.a(FileExplorerActivity.c(a), i))
+    {
+      q localq = (q)FileExplorerActivity.c(a).remove(i);
+      if (localq != null) {
+        FileExplorerActivity.a(a, localq, true);
+      }
+    }
+    try
+    {
+      WebIconDatabase.getInstance().open(a.getDir("icons", 0).getPath());
+      return;
+    }
+    catch (Exception localException)
+    {
+      localException.printStackTrace();
+    }
   }
 }
 

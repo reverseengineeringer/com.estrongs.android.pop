@@ -6,10 +6,11 @@ import android.content.DialogInterface.OnClickListener;
 class hx
   implements DialogInterface.OnClickListener
 {
-  hx(hw paramhw) {}
+  hx(PopPreferenceActivity paramPopPreferenceActivity) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
+    PopPreferenceActivity.e(a);
     paramDialogInterface.dismiss();
   }
 }

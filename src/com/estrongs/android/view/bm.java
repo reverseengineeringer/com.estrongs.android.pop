@@ -1,40 +1,8 @@
 package com.estrongs.android.view;
 
-import android.view.View;
-import android.view.animation.AccelerateInterpolator;
-import android.view.animation.ScaleAnimation;
-import com.estrongs.android.widget.HeaderGridView;
-
-class bm
-  implements Runnable
+public abstract interface bm
 {
-  bm(aw paramaw, int paramInt) {}
-  
-  public void run()
-  {
-    int j = b.g.getChildCount();
-    int k = b.g.getFirstVisiblePosition();
-    int i = 0;
-    for (;;)
-    {
-      if (i < j)
-      {
-        View localView = b.g.getChildAt(i);
-        if ((localView != null) && (k + i == a))
-        {
-          ScaleAnimation localScaleAnimation = new ScaleAnimation(2.0F, 1.0F, 2.0F, 1.0F, 1, 0.5F, 1, 0.5F);
-          localScaleAnimation.setDuration(500L);
-          localScaleAnimation.setInterpolator(new AccelerateInterpolator());
-          localView.startAnimation(localScaleAnimation);
-        }
-      }
-      else
-      {
-        return;
-      }
-      i += 1;
-    }
-  }
+  public abstract void a(ak paramak);
 }
 
 /* Location:

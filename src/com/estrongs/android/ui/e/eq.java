@@ -1,19 +1,24 @@
 package com.estrongs.android.ui.e;
 
+import com.estrongs.android.pop.z;
 import com.estrongs.android.view.a.b;
 
 class eq
   implements b
 {
-  eq(cp paramcp) {}
+  eq(cr paramcr) {}
   
-  public boolean a(co paramco)
+  public boolean a(cp paramcp)
   {
-    if (((e) || (((f) || (x) || (g)) && (!d))) && (I)) {}
-    while ((A) || (m)) {
-      return true;
-    }
-    return false;
+    if (z.t) {}
+    do
+    {
+      return false;
+      if (((e) || (L) || (I) || (J) || (K) || (H)) && (N == 1) && ((Q) || (R))) {
+        return true;
+      }
+    } while (((!n) && (!B)) || (N != 1));
+    return true;
   }
 }
 

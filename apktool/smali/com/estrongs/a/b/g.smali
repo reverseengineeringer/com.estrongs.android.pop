@@ -7,14 +7,14 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/a/b/e;Lcom/estrongs/fs/b/bl;)V
+.method constructor <init>(Lcom/estrongs/a/b/e;Lcom/estrongs/fs/b/bn;)V
     .locals 1
 
     iput-object p1, p0, Lcom/estrongs/a/b/g;->a:Lcom/estrongs/a/b/e;
 
     iget-object v0, p1, Lcom/estrongs/a/b/e;->a:Lcom/estrongs/a/b/d;
 
-    invoke-direct {p0, v0, p2}, Lcom/estrongs/a/b/n;-><init>(Lcom/estrongs/a/b/d;Lcom/estrongs/fs/b/bl;)V
+    invoke-direct {p0, v0, p2}, Lcom/estrongs/a/b/n;-><init>(Lcom/estrongs/a/b/d;Lcom/estrongs/fs/b/bn;)V
 
     return-void
 .end method
@@ -28,7 +28,7 @@
 
     iget-object v0, v0, Lcom/estrongs/a/b/e;->a:Lcom/estrongs/a/b/d;
 
-    iget-object v1, p0, Lcom/estrongs/a/b/g;->b:Lcom/estrongs/fs/b/bl;
+    iget-object v1, p0, Lcom/estrongs/a/b/g;->b:Lcom/estrongs/fs/b/bn;
 
     invoke-static {v0, v1}, Lcom/estrongs/a/b/d;->a(Lcom/estrongs/a/b/d;Ljava/lang/Object;)V
 

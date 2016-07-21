@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout android:orientation="vertical" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/add_window_list" android:background="@drawable/preference_background" android:layout_width="fill_parent" android:layout_height="@dimen/dp_48">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/add_window_list" android:background="@drawable/tablet_preference_background" android:layout_width="fill_parent" android:layout_height="@dimen/dp_48">
         <ImageView android:enabled="false" android:layout_width="@dimen/dp_30" android:layout_height="@dimen/dp_60" android:layout_marginLeft="10.0dip" android:layout_marginRight="2.0dip" android:src="@drawable/setting_new" android:scaleType="center" />
         <TextView android:textSize="@dimen/dp_14" android:textColor="@color/color_text_preference" android:gravity="center_vertical" android:id="@id/title" android:paddingRight="6.0dip" android:layout_width="wrap_content" android:layout_height="@dimen/dp_46" android:layout_marginLeft="10.0dip" android:text="@string/default_window_title" android:layout_weight="1.0" />
     </LinearLayout>

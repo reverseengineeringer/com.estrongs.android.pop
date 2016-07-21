@@ -9,7 +9,7 @@
 
 .field private c:Landroid/view/View;
 
-.field private d:Lcom/estrongs/android/pop/esclasses/o;
+.field private d:Lcom/estrongs/android/pop/esclasses/t;
 
 
 # direct methods
@@ -18,9 +18,9 @@
 
     invoke-direct {p0, p1}, Landroid/widget/ScrollView;-><init>(Landroid/content/Context;)V
 
-    new-instance v0, Lcom/estrongs/android/pop/esclasses/m;
+    new-instance v0, Lcom/estrongs/android/pop/esclasses/r;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/esclasses/m;-><init>(Lcom/estrongs/android/pop/esclasses/ESScrollView;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/esclasses/r;-><init>(Lcom/estrongs/android/pop/esclasses/ESScrollView;)V
 
     iput-object v0, p0, Lcom/estrongs/android/pop/esclasses/ESScrollView;->b:Landroid/view/View$OnTouchListener;
 
@@ -32,9 +32,9 @@
 
     invoke-direct {p0, p1, p2}, Landroid/widget/ScrollView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    new-instance v0, Lcom/estrongs/android/pop/esclasses/m;
+    new-instance v0, Lcom/estrongs/android/pop/esclasses/r;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/esclasses/m;-><init>(Lcom/estrongs/android/pop/esclasses/ESScrollView;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/esclasses/r;-><init>(Lcom/estrongs/android/pop/esclasses/ESScrollView;)V
 
     iput-object v0, p0, Lcom/estrongs/android/pop/esclasses/ESScrollView;->b:Landroid/view/View$OnTouchListener;
 
@@ -46,9 +46,9 @@
 
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/ScrollView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    new-instance v0, Lcom/estrongs/android/pop/esclasses/m;
+    new-instance v0, Lcom/estrongs/android/pop/esclasses/r;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/esclasses/m;-><init>(Lcom/estrongs/android/pop/esclasses/ESScrollView;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/esclasses/r;-><init>(Lcom/estrongs/android/pop/esclasses/ESScrollView;)V
 
     iput-object v0, p0, Lcom/estrongs/android/pop/esclasses/ESScrollView;->b:Landroid/view/View$OnTouchListener;
 
@@ -70,9 +70,9 @@
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/esclasses/ESScrollView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    new-instance v0, Lcom/estrongs/android/pop/esclasses/l;
+    new-instance v0, Lcom/estrongs/android/pop/esclasses/q;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/esclasses/l;-><init>(Lcom/estrongs/android/pop/esclasses/ESScrollView;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/esclasses/q;-><init>(Lcom/estrongs/android/pop/esclasses/ESScrollView;)V
 
     iput-object v0, p0, Lcom/estrongs/android/pop/esclasses/ESScrollView;->a:Landroid/os/Handler;
 
@@ -86,19 +86,19 @@
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    new-instance v1, Lcom/estrongs/android/pop/esclasses/n;
+    new-instance v1, Lcom/estrongs/android/pop/esclasses/s;
 
-    invoke-direct {v1, p0, p1}, Lcom/estrongs/android/pop/esclasses/n;-><init>(Landroid/view/View;Landroid/view/View;)V
+    invoke-direct {v1, p0, p1}, Lcom/estrongs/android/pop/esclasses/s;-><init>(Landroid/view/View;Landroid/view/View;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method static synthetic b(Lcom/estrongs/android/pop/esclasses/ESScrollView;)Lcom/estrongs/android/pop/esclasses/o;
+.method static synthetic b(Lcom/estrongs/android/pop/esclasses/ESScrollView;)Lcom/estrongs/android/pop/esclasses/t;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/esclasses/ESScrollView;->d:Lcom/estrongs/android/pop/esclasses/o;
+    iget-object v0, p0, Lcom/estrongs/android/pop/esclasses/ESScrollView;->d:Lcom/estrongs/android/pop/esclasses/t;
 
     return-object v0
 .end method
@@ -113,15 +113,7 @@
 
 
 # virtual methods
-.method public a(Lcom/estrongs/android/pop/esclasses/o;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/pop/esclasses/ESScrollView;->d:Lcom/estrongs/android/pop/esclasses/o;
-
-    return-void
-.end method
-
-.method public b()V
+.method public getView()V
     .locals 1
 
     const/4 v0, 0x0
@@ -139,5 +131,13 @@
     invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/ESScrollView;->a()V
 
     :cond_0
+    return-void
+.end method
+
+.method public setOnScrollListener(Lcom/estrongs/android/pop/esclasses/t;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/pop/esclasses/ESScrollView;->d:Lcom/estrongs/android/pop/esclasses/t;
+
     return-void
 .end method

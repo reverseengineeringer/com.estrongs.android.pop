@@ -1,16 +1,24 @@
 package com.estrongs.android.ui.preference.fragments;
 
-import com.estrongs.android.util.be;
+import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
+import com.estrongs.android.pop.ad;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.fs.i;
 
 class ag
-  implements Runnable
+  implements Preference.OnPreferenceChangeListener
 {
-  ag(af paramaf) {}
+  ag(DisplayPreferenceFragment paramDisplayPreferenceFragment) {}
   
-  public void run()
+  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
   {
-    be.c().h();
-    be.c().i();
+    paramPreference = FileExplorerActivity.X();
+    if (paramPreference != null) {
+      H.a(null);
+    }
+    ad.a(a.getActivity()).a(((Boolean)paramObject).booleanValue(), false);
+    return true;
   }
 }
 

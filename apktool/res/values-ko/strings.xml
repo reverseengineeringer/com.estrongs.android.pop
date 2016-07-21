@@ -1,13 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_select">선택</string>
-    <string name="app_name">ES 파일 탐색기</string>
-    <string name="app_media_player">ES 미디어 플레이어</string>
-    <string name="app_note_editor">ES 편집 노트</string>
-    <string name="app_image_browser">ES 이미지 브라우저</string>
-    <string name="app_zip_viewer">ES Zip 뷰어</string>
     <string name="app_downloader">ES Downloader</string>
-    <string name="select_device_to_share">Select a device to send</string>
+    <string name="app_image_browser">ES 이미지 브라우저</string>
+    <string name="app_media_player">ES 미디어 플레이어</string>
+    <string name="app_name">ES 파일 탐색기</string>
+    <string name="app_note_editor">ES 편집 노트</string>
+    <string name="app_zip_viewer">ES Zip 뷰어</string>
+    <string name="battery_info_remaining_charging_time">"남은시간: "</string>
+    <string name="battery_info_remaining_discharging_time">"남은 시간: "</string>
+    <string name="charging_screen_ad_delete">삭제</string>
+    <string name="charging_screen_ad_enter">열기</string>
+    <string name="charging_screen_charging_complete">충전 완료</string>
+    <string name="charging_screen_slide_to_enter">밀어서 잠금 해제</string>
+    <string name="common_time_hour">시</string>
+    <string name="common_time_minute">분</string>
+    <string name="duappd_ad_item_action_btn">무료</string>
+    <string name="duapps_ad_data_empty">나중에 다시 시도하세요.</string>
+    <string name="duapps_ad_empty_refresh_btn_check">확인</string>
+    <string name="duapps_ad_empty_title">없음</string>
+    <string name="duapps_ad_footer_end">더 이상 콘텐츠 없음</string>
+    <string name="duapps_ad_loading">불러오는 중…</string>
+    <string name="duapps_ad_loading_switch_google_play_des">구글 플레이로 전환…</string>
+    <string name="duapps_ad_no_apps_refresh_button_text">새로 고침</string>
+    <string name="duapps_ad_no_browser_play">설치된 브라우저하거나 구글 플레이</string>
+    <string name="duapps_ad_nonetwork_message">네트워크 연결이 없습니다. 설정을 확인하고 다시 시도하세요.</string>
+    <string name="duapps_ad_pull_refresh">아래로 당겨 새로 고침</string>
+    <string name="duscenerysdk_ad_no_browser_play">설치된 브라우저하거나 구글 플레이</string>
     <string name="es_share_name_activity">Send by LAN</string>
+    <string name="lock_screen_setting">설정</string>
+    <string name="lock_screen_switch">스마트 충전</string>
+    <string name="lockscreen_charge_boost_time">총 충전 속도가 %1$d분 빨라짐</string>
     <string name="save_to_es">ES 에 저장</string>
+    <string name="scenery_card_antivirus_button">보안 검색 실행</string>
+    <string name="scenery_card_antivirus_content">휴대폰에 &lt;font color=#3080F0>%1$s&lt;/font>개의 보안 위험이 있음</string>
+    <string name="scenery_card_antivirus_title">보안 위험</string>
+    <string name="scenery_card_battery_button">지금 전력 절약하기</string>
+    <string name="scenery_card_battery_content">&lt;font color=#3080F0>%1$s&lt;/font>개의 전력 소모 앱이 발견되었습니다. DU Battery Saver를 사용하여 전력을 절약하고 대기 시간을&lt;font color=#3080F0>%2$s시간 %3$s분&lt;/font> 연장하세요.</string>
+    <string name="scenery_card_battery_title">전력 사용량</string>
+    <string name="scenery_card_booster_button">지금 부스트</string>
+    <string name="scenery_card_booster_content">&lt;font color=#3080F0>%1$s&lt;/font>개의 앱이 휴대폰의 속도를 저하시킴</string>
+    <string name="scenery_card_booster_title">기기 속도 감소</string>
+    <string name="scenery_card_cleaner_button">지금 해결하기</string>
+    <string name="scenery_card_cleaner_content">휴대폰에서 &lt;font color=#3080F0>%1$s&lt;/font>개의 쓰레기가 발견됨</string>
+    <string name="scenery_card_cleaner_title">빠른 청소</string>
+    <string name="scenery_card_es_button">지금 청소하기</string>
+    <string name="scenery_card_es_content">남은 내부 공간이&lt;font color=#3080F0>%1$s&lt;/font>(으)로 감소함</string>
+    <string name="scenery_card_es_title">디스크 청소</string>
+    <string name="scenery_card_photowonder_button">지금 꾸미기</string>
+    <string name="scenery_card_photowonder_content">더 아름답게 꾸밀 수 있는 사진이 &lt;font color=#3080F0>%1$s&lt;/font>개 있습니다!</string>
+    <string name="scenery_card_photowonder_title">꾸미기</string>
+    <string name="scenery_charge_dialog_button_text">받아 보세요!</string>
+    <string name="scenery_charge_dialog_content">%1$d분동안과다충전되어 &lt;font color=#FF8132>배터리가손상됩니다&lt;/font>. &lt;b>DU Battery Saver&lt;/b> 로보호하세요.</string>
+    <string name="scenery_charge_dialog_title">안심 충전 팁</string>
+    <string name="scenery_disk_usage_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_disk_usage_dialog_content">휴대폰의 저장 공간이 지난 &lt;font color=#FF8132>%2$s일&lt;/font> 동안 &lt;font color=#FF8132>%1$sMB&lt;/font> 감소했습니다..</string>
+    <string name="scenery_disk_usage_dialog_title">디스크 청소</string>
+    <string name="scenery_take_photo_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_take_photo_dialog_content">사진을 더 아름답게 만들고 싶으세요? &lt;b>PhotoWonder&lt;/b>의 &lt;font color=#2274E6>영화 필터&lt;/font>가 도움이 될 수 있습니다!</string>
+    <string name="scenery_take_photo_dialog_title">꾸미기 편집</string>
+    <string name="scenery_uninstall_dialog_button_text">@string/scenery_charge_dialog_button_text</string>
+    <string name="scenery_uninstall_dialog_content">%1$s에서 &lt;font color=#FF8132>잔여파일&lt;/font>이남았습니다. &lt;b>DU Speed Booster&lt;/b> 를사용하여 청소하세요!</string>
+    <string name="scenery_uninstall_dialog_title">잔여 파일 발견</string>
+    <string name="screen_lock_charging_boosted_time">%1$d분간 충전 속도 증가</string>
+    <string name="select_device_to_share">Select a device to send</string>
+    <string name="toolbox_no_apps_refresh_button_text">새로 고침</string>
+    <string name="toolbox_nonetwork_tips">네트워크를 활성화하여 더 많은 무료 앱을 보려면 클릭하십시오.</string>
+    <string name="toolbox_v2_btn_more">더 보기</string>
+    <string name="toolbox_v2_coin_balance">잔액:</string>
+    <string name="toolbox_v2_data_empty">나중에 다시 시도하세요.</string>
+    <string name="toolbox_v2_list_item_btn_free">무료</string>
+    <string name="v2_toolbox_empty_title">없음</string>
+    <string name="toolbox_v2_network_mobile">모바일 데이터</string>
+    <string name="toolbox_v2_network_wifi">Wi-Fi</string>
+    <string name="toolbox_v2_nomore_content">더 이상 콘텐츠 없음</string>
+    <string name="toolbox_v2_pull_refresh">아래로 당겨 새로 고침</string>
 </resources>

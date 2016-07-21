@@ -1,20 +1,20 @@
 package com.estrongs.android.ui.view;
 
 import android.widget.Button;
-import com.estrongs.android.util.am;
-import com.estrongs.android.view.cc;
-import com.estrongs.android.widget.g;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.view.dx;
+import com.estrongs.android.widget.f;
 import com.estrongs.fs.h;
 
 class e
-  implements cc
+  implements dx
 {
-  e(c paramc, g paramg) {}
+  e(c paramc, f paramf) {}
   
   public void a(h paramh)
   {
     b.a(b.a, paramh.getPath());
-    b.c(b.a).setText(am.d(b.b(b.a)));
+    b.c(b.a).setText(ap.d(b.b(b.a)));
     a.k();
   }
 }

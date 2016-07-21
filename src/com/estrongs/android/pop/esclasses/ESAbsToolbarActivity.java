@@ -1,9 +1,11 @@
 package com.estrongs.android.pop.esclasses;
 
+import android.os.Bundle;
 import android.view.View;
 import com.estrongs.android.pop.ac;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.view.aw;
+import com.estrongs.android.pop.app.a;
+import com.estrongs.android.view.cr;
 
 public abstract class ESAbsToolbarActivity
   extends ESActivity
@@ -11,14 +13,14 @@ public abstract class ESAbsToolbarActivity
   protected boolean a = true;
   protected boolean b = false;
   public boolean c;
-  com.estrongs.android.pop.app.a d = new a(this);
+  a d = new e(this);
   
   protected abstract View a();
   
-  protected void a(aw paramaw)
+  protected void a(cr paramcr)
   {
     if (ac.a() > 8) {
-      paramaw.a(d);
+      paramcr.a(d);
     }
   }
   
@@ -61,7 +63,7 @@ public abstract class ESAbsToolbarActivity
     return b;
   }
   
-  protected boolean d()
+  public boolean d()
   {
     return a;
   }
@@ -75,6 +77,11 @@ public abstract class ESAbsToolbarActivity
   
   protected abstract void g();
   
+  protected void onCreate(Bundle paramBundle)
+  {
+    super.onCreate(paramBundle);
+  }
+  
   protected void onPause()
   {
     super.onPause();
@@ -82,7 +89,7 @@ public abstract class ESAbsToolbarActivity
     if (!a) {}
     for (boolean bool = true;; bool = false)
     {
-      localad.e(bool);
+      localad.d(bool);
       return;
     }
   }
@@ -90,7 +97,7 @@ public abstract class ESAbsToolbarActivity
   protected void onResume()
   {
     super.onResume();
-    if (!ad.a(this).t()) {}
+    if (!ad.a(this).u()) {}
     for (boolean bool = true;; bool = false)
     {
       a = bool;

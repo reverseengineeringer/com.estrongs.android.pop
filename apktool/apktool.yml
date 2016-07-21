@@ -1,22 +1,40 @@
-version: 2.0.0
-apkFileName: com.estrongs.android.pop-1.apk
-isFrameworkApk: false
-usesFramework:
-  ids:
-  - 1
-sdkInfo:
-  minSdkVersion: '5'
-  targetSdkVersion: '19'
-packageInfo:
-  forced-package-id: '127'
-versionInfo:
-  versionCode: '227'
-  versionName: 3.2.5.3
+!!brut.androlib.meta.MetaInfo
+apkFileName: es.apk
 compressionType: false
+doNotCompress:
+- arsc
+- zip
+- txt
+- '0'
+- assets/theme/classic/image_thumb
+- res/raw/netdisk_boxnet
+- res/raw/netdisk_dropbox
+- res/raw/netdisk_gdrive
+- res/raw/netdisk_kuaipan
+- res/raw/netdisk_mediafire
+- res/raw/netdisk_megacloud
+- res/raw/netdisk_s3
+- res/raw/netdisk_skydrv
+- res/raw/netdisk_sugarsync
+- res/raw/netdisk_vdisk
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '14'
+  targetSdkVersion: '21'
 sharedLibrary: false
 unknownFiles:
-  readme.txt: '8'
-  com/estrongs/android/pop/app/imageviewer/gallery/fileoperations.html: '8'
+  baselibrary_version: '8'
   jcifs/http/ne.css: '8'
   jcifs/util/mime.map: '8'
   org/apache/http/entity/mime/version.properties: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.1.1
+versionInfo:
+  versionCode: '525'
+  versionName: 4.1.2.2

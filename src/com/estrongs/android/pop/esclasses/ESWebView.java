@@ -80,6 +80,12 @@ public class ESWebView
     return true;
   }
   
+  protected void onMeasure(int paramInt1, int paramInt2)
+  {
+    invalidate();
+    super.onMeasure(paramInt1, paramInt2);
+  }
+  
   public boolean onTouchEvent(MotionEvent paramMotionEvent)
   {
     try

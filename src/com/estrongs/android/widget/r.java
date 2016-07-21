@@ -1,50 +1,20 @@
 package com.estrongs.android.widget;
 
-import android.app.Activity;
-import android.os.Handler;
-import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.util.TypedMap;
-import com.estrongs.android.util.am;
-import com.estrongs.android.view.cb;
-import com.estrongs.android.view.dp;
+import com.estrongs.android.ui.dialog.VerifyPasswordDialog;
+import com.estrongs.android.ui.dialog.VerifyPasswordDialog.DialogType;
 import com.estrongs.fs.h;
-import com.estrongs.fs.util.a.a;
 
 class r
-  extends dp
+  implements Runnable
 {
-  r(g paramg, Activity paramActivity, a parama, cb paramcb)
-  {
-    super(paramActivity, parama, paramcb);
-  }
+  r(q paramq, h paramh) {}
   
-  private void b(h paramh)
+  public void run()
   {
-    super.a(paramh);
-  }
-  
-  public boolean H()
-  {
-    return !V();
-  }
-  
-  protected int a()
-  {
-    return 2130903125;
-  }
-  
-  protected void a(h paramh, TypedMap paramTypedMap)
-  {
-    if ((g.c(b) != null) && (g.c(b).a(paramh))) {
-      return;
-    }
-    if ((am.bb(paramh.getAbsolutePath())) && (!am.bg(paramh.getAbsolutePath()))) {}
-    for (int i = 1; (FexApplication.a().h()) && (i != 0); i = 0)
-    {
-      new Handler().postDelayed(new s(this, paramh), 50L);
-      return;
-    }
-    super.a(paramh, paramTypedMap);
+    VerifyPasswordDialog localVerifyPasswordDialog = VerifyPasswordDialog.a(f.d(b.b), VerifyPasswordDialog.DialogType.NETWORK);
+    localVerifyPasswordDialog.a(new s(this));
+    localVerifyPasswordDialog.a(new t(this));
+    localVerifyPasswordDialog.b();
   }
 }
 

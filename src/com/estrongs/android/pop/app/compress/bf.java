@@ -1,16 +1,41 @@
 package com.estrongs.android.pop.app.compress;
 
-import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
+import com.estrongs.io.a.a.a;
+import com.estrongs.io.archive.e;
 
 class bf
-  implements CompoundButton.OnCheckedChangeListener
+  extends a
 {
-  bf(be parambe) {}
-  
-  public void onCheckedChanged(CompoundButton paramCompoundButton, boolean paramBoolean)
+  bf(bb parambb, e parame, String paramString)
   {
-    be.a(a, paramBoolean);
+    super(parame, paramString);
+  }
+  
+  public String a()
+  {
+    if ((bb.c(a) != null) && (bb.d(a) != null) && (bb.d(a).b())) {
+      return bb.c(a);
+    }
+    e.post(new bg(this));
+    for (;;)
+    {
+      try {}catch (InterruptedException localInterruptedException)
+      {
+        localInterruptedException.printStackTrace();
+        continue;
+      }
+      try
+      {
+        wait();
+        return bb.c(a);
+      }
+      finally {}
+    }
+  }
+  
+  public void a(String paramString, long paramLong, int paramInt)
+  {
+    super.a(paramString, paramLong, paramInt);
   }
 }
 

@@ -1,25 +1,38 @@
 package com.estrongs.android.pop.app;
 
-import com.gmail.yuyang226.flickr.a.a.a;
-import java.util.Comparator;
-import java.util.Date;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import android.widget.ListView;
+import com.estrongs.android.pop.utils.ad;
+import com.estrongs.android.ui.view.ak;
 
 class cy
-  implements Comparator<a>
+  implements MenuItem.OnMenuItemClickListener
 {
-  cy(ImageCommentActivity paramImageCommentActivity) {}
+  cy(HideListActivity paramHideListActivity) {}
   
-  public int a(a parama1, a parama2)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    long l1 = parama1.b().getTime();
-    long l2 = parama2.b().getTime();
-    if (l1 == l2) {
-      return 0;
+    if ((HideListActivity.b(a) != null) && (HideListActivity.b(a).length > 0))
+    {
+      HideListActivity.a(a, true);
+      ad.e();
     }
-    if (l1 > l2) {
-      return -1;
+    try
+    {
+      ad.b();
+      ad.e = false;
+      HideListActivity.a(a, ad.f());
+      HideListActivity.a(a, new cz(a, a, 2130903262, HideListActivity.b(a)));
+      HideListActivity.a(a).setAdapter(HideListActivity.c(a));
+      HideListActivity.c(a).notifyDataSetChanged();
+      ak.a(a, 2131231561, 1);
+      return false;
     }
-    return 1;
+    catch (Exception paramMenuItem)
+    {
+      for (;;) {}
+    }
   }
 }
 

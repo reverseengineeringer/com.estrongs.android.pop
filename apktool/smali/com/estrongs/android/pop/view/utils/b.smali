@@ -35,11 +35,11 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/view/utils/b;->b:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/estrongs/android/util/am;->bA(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/estrongs/android/util/ap;->bR(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -49,11 +49,11 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/view/utils/b;->a:Landroid/app/Activity;
 
-    const v1, 0x7f0b0288
+    const v1, 0x7f0801dc
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     return-void
 .end method

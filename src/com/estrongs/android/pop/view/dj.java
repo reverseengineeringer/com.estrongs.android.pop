@@ -1,18 +1,13 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.ui.dialog.kr;
-import com.estrongs.fs.h;
-
 class dj
-  implements kr
+  implements Runnable
 {
-  dj(di paramdi, h paramh) {}
+  dj(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void a(boolean paramBoolean)
+  public void run()
   {
-    if (paramBoolean) {
-      di.a(b, a);
-    }
+    a.g("video://");
   }
 }
 

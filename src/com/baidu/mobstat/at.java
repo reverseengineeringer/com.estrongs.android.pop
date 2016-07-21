@@ -1,15 +1,41 @@
 package com.baidu.mobstat;
 
+import android.content.Context;
+import org.json.JSONObject;
+
 class at
+  implements k
 {
-  String a;
-  boolean b;
-  long c;
-  long d;
+  private ay a = ay.a;
   
-  public at(ao paramao, String paramString)
+  public void a(Context paramContext, long paramLong)
   {
-    a = paramString;
+    a.a(paramContext, paramLong);
+  }
+  
+  public void a(Context paramContext, String paramString)
+  {
+    a.a(paramContext, paramString);
+  }
+  
+  public void a(Context paramContext, JSONObject paramJSONObject)
+  {
+    a.a(paramContext, paramJSONObject);
+  }
+  
+  public boolean a(Context paramContext)
+  {
+    return a.a(paramContext);
+  }
+  
+  public void b(Context paramContext, String paramString)
+  {
+    a.b(paramContext, paramString);
+  }
+  
+  public boolean b(Context paramContext)
+  {
+    return a.b(paramContext);
   }
 }
 

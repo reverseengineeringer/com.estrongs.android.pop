@@ -1,17 +1,16 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.ui.preference.q;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class jl
-  implements q
+  implements DialogInterface.OnClickListener
 {
-  jl(jk paramjk) {}
+  jl(ji paramji) {}
   
-  public void a(String paramString, Object paramObject)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if ("toolbar_setting_show_name".equals(paramString)) {
-      a.i();
-    }
+    paramDialogInterface.dismiss();
   }
 }
 

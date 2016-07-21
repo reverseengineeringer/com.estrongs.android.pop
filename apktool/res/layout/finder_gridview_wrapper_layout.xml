@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/drawer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/mtd_content_grid" />
+    <com.estrongs.android.ui.controller.widget.ESFloatingActionButton android:id="@id/finder_floating_button" android:layout_marginRight="@dimen/dp_15" android:layout_marginBottom="@dimen/dp_40" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" style="@style/finder_fab_style" />
+</RelativeLayout>

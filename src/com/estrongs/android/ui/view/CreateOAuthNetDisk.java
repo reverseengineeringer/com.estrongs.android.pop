@@ -18,34 +18,34 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import com.estrongs.android.pop.ac;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.esclasses.ESActivity;
+import com.estrongs.android.pop.esclasses.ESResourceActivity;
 import com.estrongs.android.pop.z;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bd;
-import com.estrongs.fs.impl.j.b;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bk;
+import com.estrongs.fs.impl.o.b;
 import java.util.Properties;
 
 public class CreateOAuthNetDisk
-  extends ESActivity
+  extends ESResourceActivity
 {
   public static int a = 1;
   public static int b = 2;
-  public static int c = 3;
-  public static int d = 4;
-  public static int e = 5;
-  public static int f = 6;
-  public static int g = 7;
-  private static CreateOAuthNetDisk j = null;
-  boolean h = false;
+  public static int d = 3;
+  public static int e = 4;
+  public static int f = 5;
+  public static int g = 6;
+  public static int h = 7;
+  private static CreateOAuthNetDisk k = null;
   boolean i = false;
-  private String k = null;
-  private boolean l = false;
-  private String m = null;
-  private WebView n = null;
-  private v o = new v(this, null);
-  private u p = new u(this, null);
-  private ProgressBar q = null;
-  private TextView r = null;
+  boolean j = false;
+  private String l = null;
+  private boolean m = false;
+  private String n = null;
+  private WebView o = null;
+  private v p = new v(this, null);
+  private u q = new u(this, null);
+  private ProgressBar r = null;
+  private TextView s = null;
   private View t = null;
   private String u = null;
   private Handler v = new s(this);
@@ -78,21 +78,21 @@ public class CreateOAuthNetDisk
   
   private void a(int paramInt)
   {
-    if (i)
+    if (j)
     {
-      if (j != null) {
-        j.a();
+      if (k != null) {
+        k.a();
       }
-      i = false;
+      j = false;
     }
-    int i1 = n.getWidth();
-    int i2 = (int)(n.getContentHeight() * n.getScale());
+    int i1 = o.getWidth();
+    int i2 = (int)(o.getContentHeight() * o.getScale());
     if (i2 > paramInt)
     {
-      ViewGroup.LayoutParams localLayoutParams = n.getLayoutParams();
+      ViewGroup.LayoutParams localLayoutParams = o.getLayoutParams();
       height = paramInt;
       width = ((int)(i1 / i2 * paramInt));
-      n.setLayoutParams(localLayoutParams);
+      o.setLayoutParams(localLayoutParams);
     }
   }
   
@@ -101,15 +101,15 @@ public class CreateOAuthNetDisk
     boolean bool = false;
     if (paramString != null)
     {
-      paramString = b.f(k, paramString);
+      paramString = b.f(l, paramString);
       if (paramString != null)
       {
-        String str1 = am.a(k, paramString, "fake", "/");
-        if ((l) && (m != null))
+        String str1 = ap.a(l, paramString, "fake", "/");
+        if ((m) && (n != null))
         {
-          String str2 = am.ai(m);
+          String str2 = ap.as(n);
           ad localad = ad.a(this);
-          String str3 = m;
+          String str3 = n;
           if (!paramString.equalsIgnoreCase(str2)) {
             bool = true;
           }
@@ -124,7 +124,7 @@ public class CreateOAuthNetDisk
   
   public static CreateOAuthNetDisk b()
   {
-    return j;
+    return k;
   }
   
   private boolean b(String paramString)
@@ -135,7 +135,7 @@ public class CreateOAuthNetDisk
     return paramString.contains("www.dropbox.com");
   }
   
-  private void d(String paramString)
+  private void c(String paramString)
   {
     if (paramString == null) {
       return;
@@ -145,32 +145,32 @@ public class CreateOAuthNetDisk
     if (i1 > 0) {
       str = paramString.substring(i1 + 3);
     }
-    if ((!str.startsWith("www.estrongs.com")) && (!str.startsWith("localhost")) && (j != null))
+    if ((!str.startsWith("www.estrongs.com")) && (!str.startsWith("localhost")) && (k != null))
     {
-      if (!h) {
+      if (!i) {
         break label86;
       }
-      i = true;
+      j = true;
     }
     for (;;)
     {
-      paramString = v.obtainMessage(g);
+      paramString = v.obtainMessage(h);
       v.sendMessageDelayed(paramString, 200L);
       return;
       label86:
-      j.a();
+      k.a();
     }
   }
   
   public void a()
   {
-    Message localMessage = v.obtainMessage(c);
+    Message localMessage = v.obtainMessage(d);
     v.sendMessage(localMessage);
   }
   
   public void a(Properties paramProperties)
   {
-    if (k.equalsIgnoreCase("box"))
+    if (l.equalsIgnoreCase("box"))
     {
       paramProperties = paramProperties.getProperty("auth_token");
       Message localMessage = v.obtainMessage(a);
@@ -190,7 +190,7 @@ public class CreateOAuthNetDisk
   {
     super.onCreate(paramBundle);
     requestWindowFeature(1);
-    super.setContentView(2130903201);
+    super.setContentView(2130903352);
     paramBundle = getIntent().getExtras();
     if (paramBundle == null)
     {
@@ -198,25 +198,25 @@ public class CreateOAuthNetDisk
       finish();
       return;
     }
-    k = paramBundle.getString("nettype");
-    l = paramBundle.getBoolean("editServer", false);
-    m = paramBundle.getString("originalPath");
-    n = ((WebView)findViewById(2131362543));
-    paramBundle = n.getSettings();
+    l = paramBundle.getString("nettype");
+    m = paramBundle.getBoolean("editServer", false);
+    n = paramBundle.getString("originalPath");
+    o = ((WebView)findViewById(2131625280));
+    paramBundle = o.getSettings();
     paramBundle.setJavaScriptEnabled(true);
-    n.setWebViewClient(o);
-    n.setWebChromeClient(p);
-    if (("gdrive".equals(k)) && ((bd.p()) || (z.O))) {}
+    o.setWebViewClient(p);
+    o.setWebChromeClient(q);
+    if (("gdrive".equals(l)) && ((bk.p()) || (z.O))) {}
     for (boolean bool = true;; bool = false)
     {
-      h = bool;
-      if (h)
+      i = bool;
+      if (i)
       {
         paramBundle.setUseWideViewPort(true);
         if (ac.a() >= 7) {
           paramBundle.setLoadWithOverviewMode(true);
         }
-        n.setInitialScale(20);
+        o.setInitialScale(20);
       }
       paramBundle.setSavePassword(false);
       paramBundle.setSaveFormData(false);
@@ -224,19 +224,19 @@ public class CreateOAuthNetDisk
       CookieSyncManager.getInstance().startSync();
       CookieManager localCookieManager = CookieManager.getInstance();
       paramBundle.setDefaultTextEncodingName("utf-8");
-      r = ((TextView)findViewById(2131362545));
-      q = ((ProgressBar)findViewById(2131362544));
-      t = findViewById(2131362542);
+      s = ((TextView)findViewById(2131625282));
+      r = ((ProgressBar)findViewById(2131625281));
+      t = findViewById(2131625279);
       new r(this).start();
       localCookieManager.removeAllCookie();
-      j = this;
+      k = this;
       return;
     }
   }
   
   protected void onDestroy()
   {
-    j = null;
+    k = null;
     super.onDestroy();
   }
 }

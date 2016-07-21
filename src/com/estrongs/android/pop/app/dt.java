@@ -1,33 +1,38 @@
 package com.estrongs.android.pop.app;
 
-import android.content.Intent;
-import android.view.View;
-import com.estrongs.android.ui.view.ag;
+import android.os.Handler;
+import android.os.Message;
+import android.widget.BaseAdapter;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 class dt
-  implements Runnable
+  extends Handler
 {
-  dt(ds paramds, boolean paramBoolean, String paramString) {}
+  dt(LocalFileSharingActivity paramLocalFileSharingActivity) {}
   
-  public void run()
+  public void handleMessage(Message arg1)
   {
-    if (a) {
-      if (ImageCommentPostActivity.c(c.b))
-      {
-        c.b.setResult(-1);
-        c.b.finish();
-      }
-    }
-    for (;;)
+    switch (what)
     {
-      ag.a(c.b, b, 1);
+    default: 
       return;
-      Intent localIntent = c.b.getIntent();
-      localIntent.setClass(c.b, ImageCommentActivity.class);
-      c.b.startActivity(localIntent);
-      break;
-      c.b.findViewById(2131362614).setVisibility(8);
-      c.b.findViewById(2131362610).setVisibility(0);
+    case 0: 
+      LocalFileSharingActivity.a(a);
+      LocalFileSharingActivity.b(a).notifyDataSetChanged();
+      ??? = (String)obj;
+      return;
+    }
+    LocalFileSharingActivity.a(a);
+    LocalFileSharingActivity.b(a).notifyDataSetChanged();
+    synchronized (LocalFileSharingActivity.c(a))
+    {
+      if ((LocalFileSharingActivity.c(a).length == 0) && (LocalFileSharingActivity.j() != null)) {
+        a.i();
+      }
+      LocalFileSharingActivity.d(a).setVisibility(8);
+      a.a.setText(2131231437);
+      return;
     }
   }
 }

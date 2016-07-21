@@ -1,30 +1,33 @@
 package com.estrongs.android.pop.app;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.pop.app.c.i;
+import com.estrongs.android.ui.e.iq;
 
 class ez
-  implements View.OnClickListener
+  implements DialogInterface.OnClickListener
 {
-  ez(PopAudioPlayer paramPopAudioPlayer) {}
+  ez(ey paramey) {}
   
-  public void onClick(View paramView)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (PopAudioPlayer.l(a).p())
+    int i = 1;
+    i locali = a.a.B();
+    if (paramInt == 0) {
+      paramInt = i;
+    }
+    for (;;)
     {
-      if (PopAudioPlayer.m(a) == 1)
-      {
-        a.f();
-        return;
-      }
-      PopAudioPlayer.n(a);
-      PopAudioPlayer.a(a).a();
+      iq.a(a.a, b, paramInt);
+      paramDialogInterface.dismiss();
       return;
+      if (paramInt == 1) {
+        paramInt = 2;
+      } else {
+        paramInt = 4;
+      }
     }
-    if (PopAudioPlayer.o(a) == null) {
-      PopAudioPlayer.p(a);
-    }
-    PopAudioPlayer.o(a).show();
   }
 }
 

@@ -1,97 +1,90 @@
-.class Lcom/estrongs/android/ui/dialog/ft;
-.super Ljava/lang/Object;
+.class public Lcom/estrongs/android/ui/dialog/ft;
+.super Lcom/estrongs/android/ui/dialog/ci;
 
-# interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+
+# static fields
+.field private static a:Lcom/estrongs/android/ui/dialog/ft;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/dialog/fs;
+.field private b:Landroid/widget/LinearLayout;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/fs;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/ft;->a:Lcom/estrongs/android/ui/dialog/fs;
+    const/4 v0, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lcom/estrongs/android/ui/dialog/ft;->a:Lcom/estrongs/android/ui/dialog/ft;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
-    const/4 v2, 0x1
+    invoke-direct {p0, p1}, Lcom/estrongs/android/ui/dialog/ci;-><init>(Landroid/content/Context;)V
 
-    const/4 v1, 0x0
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ft;->mContext:Landroid/content/Context;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ft;->a:Lcom/estrongs/android/ui/dialog/fs;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/fs;->a(Lcom/estrongs/android/ui/dialog/fs;)Landroid/widget/CheckBox;
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/CheckBox;->isChecked()Z
+    const v1, 0x7f080093
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ft;->a:Lcom/estrongs/android/ui/dialog/fs;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/fs;->b(Lcom/estrongs/android/ui/dialog/fs;)Landroid/widget/EditText;
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setEnabled(Z)V
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/dialog/ft;->setTitle(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ft;->a:Lcom/estrongs/android/ui/dialog/fs;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ft;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/fs;->c(Lcom/estrongs/android/ui/dialog/fs;)Landroid/widget/EditText;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setEnabled(Z)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ft;->a:Lcom/estrongs/android/ui/dialog/fs;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/fs;->d(Lcom/estrongs/android/ui/dialog/fs;)Landroid/widget/EditText;
+    invoke-static {v0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setEnabled(Z)V
+    const v1, 0x7f0301ab
 
-    :goto_0
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/dialog/ft;->b:Landroid/widget/LinearLayout;
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ft;->b:Landroid/widget/LinearLayout;
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/dialog/ft;->setContentView(Landroid/view/View;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ft;->b:Landroid/widget/LinearLayout;
+
+    const v1, 0x7f0e06b7
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/GridView;
+
+    new-instance v1, Lcom/estrongs/android/ui/adapter/d;
+
+    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/ft;->mContext:Landroid/content/Context;
+
+    invoke-direct {v1, v2}, Lcom/estrongs/android/ui/adapter/d;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
+
+    new-instance v1, Lcom/estrongs/android/ui/dialog/fu;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/dialog/fu;-><init>(Lcom/estrongs/android/ui/dialog/ft;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/GridView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+
     return-void
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ft;->a:Lcom/estrongs/android/ui/dialog/fs;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/fs;->b(Lcom/estrongs/android/ui/dialog/fs;)Landroid/widget/EditText;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/widget/EditText;->setEnabled(Z)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ft;->a:Lcom/estrongs/android/ui/dialog/fs;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/fs;->c(Lcom/estrongs/android/ui/dialog/fs;)Landroid/widget/EditText;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/widget/EditText;->setEnabled(Z)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/ft;->a:Lcom/estrongs/android/ui/dialog/fs;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/fs;->d(Lcom/estrongs/android/ui/dialog/fs;)Landroid/widget/EditText;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/widget/EditText;->setEnabled(Z)V
-
-    goto :goto_0
 .end method

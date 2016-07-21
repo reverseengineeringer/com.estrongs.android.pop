@@ -1,7 +1,7 @@
 package com.estrongs.a;
 
 import com.estrongs.a.a.p;
-import com.estrongs.fs.b.ap;
+import com.estrongs.fs.b.ar;
 
 class m
   implements p
@@ -12,7 +12,7 @@ class m
   {
     if ((paramInt2 == 4) || (paramInt2 == 5))
     {
-      if (!(parama instanceof ap)) {
+      if (!(parama instanceof ar)) {
         parama.recordSummary("end_time", Long.valueOf(System.currentTimeMillis()));
       }
       a.b(parama);

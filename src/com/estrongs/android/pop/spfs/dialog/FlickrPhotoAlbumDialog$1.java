@@ -65,7 +65,7 @@ class FlickrPhotoAlbumDialog$1
       val$adapter.notifyDataSetChanged();
       return;
     }
-    a.a(FlickrPhotoAlbumDialog.access$000(this$0), 2131428080);
+    a.a(FlickrPhotoAlbumDialog.access$000(this$0), 2131231507);
     this$0.dismiss();
   }
 }

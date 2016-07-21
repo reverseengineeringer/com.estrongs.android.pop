@@ -1,27 +1,23 @@
 package com.estrongs.android.pop.view;
 
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.ui.pcs.a;
-import com.estrongs.android.ui.pcs.j;
-import com.estrongs.android.ui.pcs.n;
+import com.estrongs.android.ui.navigation.r;
 
 class dn
   implements Runnable
 {
-  dn(dk paramdk, n paramn) {}
+  dn(FileExplorerActivity paramFileExplorerActivity) {}
   
   public void run()
   {
-    if (b.a.m.a(0L) != null)
+    try
     {
-      localObject = new a(dk.a(b));
-      ((a)localObject).a(a);
-      ((a)localObject).a();
+      r.a(a);
       return;
     }
-    Object localObject = new j(b.a);
-    ((j)localObject).a(a);
-    ((j)localObject).a(true);
+    catch (Exception localException)
+    {
+      localException.printStackTrace();
+    }
   }
 }
 

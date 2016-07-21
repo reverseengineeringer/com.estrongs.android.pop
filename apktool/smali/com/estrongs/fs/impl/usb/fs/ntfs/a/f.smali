@@ -131,7 +131,7 @@
 
     const-string v2, "Invalid attribute length, preventing infinite loop. Data on disk may be corrupt."
 
-    invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/estrongs/android/util/l;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -166,7 +166,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v3}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
     iget v1, p0, Lcom/estrongs/fs/impl/usb/fs/ntfs/a/f;->c:I

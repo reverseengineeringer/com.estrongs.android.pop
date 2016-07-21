@@ -1,16 +1,14 @@
 package android.support.v4.content;
 
-import java.util.concurrent.ThreadFactory;
-import java.util.concurrent.atomic.AtomicInteger;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 
-final class e
-  implements ThreadFactory
+class e
 {
-  private final AtomicInteger a = new AtomicInteger(1);
-  
-  public Thread newThread(Runnable paramRunnable)
+  public static void a(Context paramContext, Intent[] paramArrayOfIntent, Bundle paramBundle)
   {
-    return new Thread(paramRunnable, "ModernAsyncTask #" + a.getAndIncrement());
+    paramContext.startActivities(paramArrayOfIntent, paramBundle);
   }
 }
 

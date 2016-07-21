@@ -1,8 +1,23 @@
 package android.support.v4.view;
 
-class bn
-  extends bm
-{}
+import android.view.MotionEvent;
+
+abstract interface bn
+{
+  public abstract int a(MotionEvent paramMotionEvent);
+  
+  public abstract int a(MotionEvent paramMotionEvent, int paramInt);
+  
+  public abstract int b(MotionEvent paramMotionEvent);
+  
+  public abstract int b(MotionEvent paramMotionEvent, int paramInt);
+  
+  public abstract float c(MotionEvent paramMotionEvent, int paramInt);
+  
+  public abstract float d(MotionEvent paramMotionEvent, int paramInt);
+  
+  public abstract float e(MotionEvent paramMotionEvent, int paramInt);
+}
 
 /* Location:
  * Qualified Name:     android.support.v4.view.bn

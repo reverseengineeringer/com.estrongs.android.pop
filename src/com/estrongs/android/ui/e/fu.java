@@ -1,15 +1,16 @@
 package com.estrongs.android.ui.e;
 
+import com.estrongs.android.pop.utils.cl;
 import com.estrongs.android.view.a.b;
 
 class fu
   implements b
 {
-  fu(cp paramcp) {}
+  fu(cr paramcr) {}
   
-  public boolean a(co paramco)
+  public boolean a(cp paramcp)
   {
-    return (n) && (F == 1);
+    return (m) && (cl.a()) && (!ag);
   }
 }
 

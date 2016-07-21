@@ -1,14 +1,46 @@
 package android.support.v4.widget;
 
-import android.view.View;
+import android.database.Cursor;
+import android.widget.Filter;
+import android.widget.Filter.FilterResults;
 
-public abstract interface u
+class u
+  extends Filter
 {
-  public abstract void a(View paramView);
+  v a;
   
-  public abstract void a(View paramView, float paramFloat);
+  u(v paramv)
+  {
+    a = paramv;
+  }
   
-  public abstract void b(View paramView);
+  public CharSequence convertResultToString(Object paramObject)
+  {
+    return a.convertToString((Cursor)paramObject);
+  }
+  
+  protected Filter.FilterResults performFiltering(CharSequence paramCharSequence)
+  {
+    paramCharSequence = a.runQueryOnBackgroundThread(paramCharSequence);
+    Filter.FilterResults localFilterResults = new Filter.FilterResults();
+    if (paramCharSequence != null)
+    {
+      count = paramCharSequence.getCount();
+      values = paramCharSequence;
+      return localFilterResults;
+    }
+    count = 0;
+    values = null;
+    return localFilterResults;
+  }
+  
+  protected void publishResults(CharSequence paramCharSequence, Filter.FilterResults paramFilterResults)
+  {
+    paramCharSequence = a.getCursor();
+    if ((values != null) && (values != paramCharSequence)) {
+      a.changeCursor((Cursor)values);
+    }
+  }
 }
 
 /* Location:

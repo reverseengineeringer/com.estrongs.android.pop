@@ -1,46 +1,16 @@
 package com.estrongs.android.view;
 
-import android.widget.AbsListView;
-import android.widget.AbsListView.OnScrollListener;
-import com.estrongs.android.d.k;
-import java.util.HashMap;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 class by
-  implements AbsListView.OnScrollListener
+  implements View.OnClickListener
 {
-  by(aw paramaw) {}
+  by(bx parambx) {}
   
-  public void onScroll(AbsListView paramAbsListView, int paramInt1, int paramInt2, int paramInt3)
+  public void onClick(View paramView)
   {
-    a.Q = paramInt1;
-    a.R = (a.Q + paramInt2);
-    a.S = paramInt2;
-    a.F.put(a.v, paramAbsListView.onSaveInstanceState());
-  }
-  
-  public void onScrollStateChanged(AbsListView paramAbsListView, int paramInt)
-  {
-    switch (paramInt)
-    {
-    }
-    for (;;)
-    {
-      a.Z();
-      return;
-      if (a.I != null) {
-        a.I.b();
-      }
-      a.F.put(a.v, paramAbsListView.onSaveInstanceState());
-      continue;
-      if (a.I != null)
-      {
-        a.I.a();
-        continue;
-        if (a.I != null) {
-          a.I.a();
-        }
-      }
-    }
+    a.s();
   }
 }
 

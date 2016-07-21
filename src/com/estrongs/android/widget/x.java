@@ -1,21 +1,16 @@
 package com.estrongs.android.widget;
 
-import android.app.Activity;
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.ui.dialog.eo;
+import com.estrongs.android.ui.dialog.eu;
 
 class x
-  implements View.OnClickListener
+  implements eu
 {
-  x(g paramg) {}
+  x(w paramw) {}
   
-  public void onClick(View paramView)
+  public boolean a(String paramString)
   {
-    paramView = new eo(g.d(a), g.d(a).getString(2131427361), g.d(a).getString(2131427427));
-    a.b = g.d(a).getString(2131427427);
-    paramView.a(new y(this));
-    paramView.show();
+    f.b(a.a, paramString);
+    return true;
   }
 }
 

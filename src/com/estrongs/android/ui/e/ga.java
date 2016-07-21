@@ -5,11 +5,11 @@ import com.estrongs.android.view.a.b;
 class ga
   implements b
 {
-  ga(cp paramcp) {}
+  ga(cr paramcr) {}
   
-  public boolean a(co paramco)
+  public boolean a(cp paramcp)
   {
-    return (n) && (F == 1);
+    return (o) && (N == 1);
   }
 }
 

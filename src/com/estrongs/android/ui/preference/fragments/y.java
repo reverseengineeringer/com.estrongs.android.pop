@@ -1,16 +1,39 @@
 package com.estrongs.android.ui.preference.fragments;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.preference.EditTextPreference;
+import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
+import com.estrongs.android.pop.ad;
 
 class y
-  implements DialogInterface.OnClickListener
+  implements Preference.OnPreferenceChangeListener
 {
   y(DirectoryPreferenceFragment paramDirectoryPreferenceFragment) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
   {
-    paramDialogInterface.dismiss();
+    paramObject = paramObject.toString();
+    if (((String)paramObject).trim().equals(""))
+    {
+      DirectoryPreferenceFragment.a(a);
+      return false;
+    }
+    boolean bool = DirectoryPreferenceFragment.a(a, (String)paramObject);
+    paramPreference = (Preference)paramObject;
+    if (((String)paramObject).charAt(((String)paramObject).length() - 1) != '/') {
+      paramPreference = (String)paramObject + "/";
+    }
+    DirectoryPreferenceFragment.b(a, paramPreference);
+    DirectoryPreferenceFragment.a(a, 2);
+    if (bool)
+    {
+      DirectoryPreferenceFragment.d(a).setSummary(paramPreference);
+      DirectoryPreferenceFragment.c(a).t(paramPreference);
+      DirectoryPreferenceFragment.d(a).setText(paramPreference);
+      return true;
+    }
+    DirectoryPreferenceFragment.a(a);
+    return false;
   }
 }
 

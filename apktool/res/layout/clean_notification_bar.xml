@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/clean_notification_bg" android:layout_width="fill_parent" android:layout_height="52.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/imageView1" android:layout_width="46.0dip" android:layout_height="46.0dip" android:layout_marginLeft="10.0dip" android:src="@drawable/library_clean" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <Button android:textSize="16.0dip" android:id="@id/button1" android:background="@drawable/button_highlight_bg" android:layout_width="wrap_content" android:layout_height="32.0dip" android:layout_marginRight="10.0dip" android:text="@string/clean_policy_clean" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <TextView android:textSize="14.0dip" android:textColor="#ffff0000" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="-4.0dip" android:text="TextView" android:layout_toRightOf="@id/imageView1" android:layout_alignTop="@id/button1" />
+    <TextView android:textSize="14.0dip" android:textColor="@color/black" android:id="@id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="-4.0dip" android:text="TextView" android:layout_toLeftOf="@id/button1" android:layout_toRightOf="@id/textView1" android:layout_alignTop="@id/button1" />
+    <TextView android:textSize="14.0dip" android:textColor="@color/black" android:id="@id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/clean_notification_recommend" android:layout_below="@id/textView1" android:layout_alignLeft="@id/textView1" android:layout_alignRight="@id/textView2" />
+</RelativeLayout>

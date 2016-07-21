@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/preference/Preference$OnPreferenceClickListener;
 
 
 # instance fields
@@ -22,39 +22,16 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 3
-
-    const/4 v1, 0x0
+.method public onPreferenceClick(Landroid/preference/Preference;)Z
+    .locals 2
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/hf;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->o:Landroid/preference/Preference;
+    const/16 v1, 0x6b
 
-    invoke-virtual {v0, v1}, Landroid/preference/Preference;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->showDialog(I)V
 
-    :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/hf;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+    const/4 v0, 0x1
 
-    const/16 v1, 0x66
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/app/PopPreferenceActivity;->dismissDialog(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/hf;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
-
-    const v1, 0x7f0b01f6
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_0
+    return v0
 .end method

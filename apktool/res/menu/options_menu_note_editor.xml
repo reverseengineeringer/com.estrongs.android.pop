@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/toolbar_enter" android:id="@id/menu_enter" app:showAsAction="always" />
+    <item android:icon="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha" android:id="@id/menu_more" android:title="@string/edit_button_more" app:showAsAction="always">
+        <menu>
+            <item android:icon="@drawable/toolbar_edit" android:id="@id/menu_edit" app:showAsAction="always" />
+            <item android:icon="@drawable/toolbar_delete" android:id="@id/menu_delete" app:showAsAction="always" />
+            <item android:icon="@drawable/toolbar_charset" android:id="@id/menu_charset" app:showAsAction="always" />
+        </menu>
+    </item>
+</menu>

@@ -34,9 +34,9 @@ public class q
   public boolean task()
   {
     processData.e = -1L;
-    processData.a = FexApplication.a().getString(2131427740);
+    processData.a = FexApplication.a().getString(2131232554);
     onProgress(processData);
-    com.estrongs.fs.impl.c.a.a(FexApplication.a());
+    com.estrongs.fs.impl.e.a.a(FexApplication.a());
     return true;
   }
 }

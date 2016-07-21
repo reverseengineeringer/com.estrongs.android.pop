@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/estrongs/android/pop/a/j;
 
 
 # instance fields
-.field final synthetic a:I
-
-.field final synthetic b:Lcom/estrongs/android/ui/dialog/gs;
+.field final synthetic a:Lcom/estrongs/android/ui/dialog/gn;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/gs;I)V
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/gn;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/gt;->b:Lcom/estrongs/android/ui/dialog/gs;
-
-    iput p2, p0, Lcom/estrongs/android/ui/dialog/gt;->a:I
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/gt;->a:Lcom/estrongs/android/ui/dialog/gn;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,27 +22,29 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 2
+.method public a(Z)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/gt;->b:Lcom/estrongs/android/ui/dialog/gs;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/gt;->a:Lcom/estrongs/android/ui/dialog/gn;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/gs;->a(Lcom/estrongs/android/ui/dialog/gs;)Lcom/estrongs/android/ui/dialog/gx;
-
-    move-result-object v0
+    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/gn;->a:Lcom/estrongs/android/ui/dialog/ProgressDialog;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/gt;->b:Lcom/estrongs/android/ui/dialog/gs;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/gt;->a:Lcom/estrongs/android/ui/dialog/gn;
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/gs;->a(Lcom/estrongs/android/ui/dialog/gs;)Lcom/estrongs/android/ui/dialog/gx;
+    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/gn;->a:Lcom/estrongs/android/ui/dialog/ProgressDialog;
 
-    move-result-object v0
-
-    iget v1, p0, Lcom/estrongs/android/ui/dialog/gt;->a:I
-
-    invoke-interface {v0, v1}, Lcom/estrongs/android/ui/dialog/gx;->a(I)V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ProgressDialog;->dismiss()V
 
     :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/gt;->a:Lcom/estrongs/android/ui/dialog/gn;
+
+    invoke-static {v0, p1}, Lcom/estrongs/android/ui/dialog/gn;->a(Lcom/estrongs/android/ui/dialog/gn;Z)Z
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/gt;->a:Lcom/estrongs/android/ui/dialog/gn;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/gn;->h(Lcom/estrongs/android/ui/dialog/gn;)V
+
     return-void
 .end method

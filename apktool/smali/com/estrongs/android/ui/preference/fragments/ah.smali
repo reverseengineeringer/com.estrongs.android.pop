@@ -23,45 +23,21 @@
 
 # virtual methods
 .method public onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
-    .locals 5
+    .locals 2
 
-    const/4 v4, 0x1
+    iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/ah;->a:Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;
 
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/FexApplication;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-static {v0}, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->c(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)Landroid/os/Handler;
 
     move-result-object v0
 
-    new-instance v1, Landroid/content/ComponentName;
+    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/ai;
 
-    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/ai;-><init>(Lcom/estrongs/android/ui/preference/fragments/ah;)V
 
-    move-result-object v2
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    const-class v3, Lcom/estrongs/android/pop/app/UsbMonitorActivity;
+    const/4 v0, 0x1
 
-    invoke-direct {v1, v2, v3}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    check-cast p2, Ljava/lang/Boolean;
-
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v0, v1, v4, v4}, Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName;II)V
-
-    :goto_0
-    return v4
-
-    :cond_0
-    const/4 v2, 0x2
-
-    invoke-virtual {v0, v1, v2, v4}, Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName;II)V
-
-    goto :goto_0
+    return v0
 .end method

@@ -15,7 +15,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import com.estrongs.android.pop.esclasses.ESActivity;
 import com.estrongs.android.pop.view.utils.n;
-import com.estrongs.android.ui.theme.al;
+import com.estrongs.android.ui.theme.at;
 import com.estrongs.android.ui.view.MaxWidthLinearLayout;
 import com.estrongs.android.ui.view.RecommendListView;
 
@@ -41,12 +41,12 @@ public class OpenRecomm
   private int q = 0;
   private int r = 0;
   private int t = 0;
-  private al u;
+  private at u;
   private MaxWidthLinearLayout v;
   
   private void a()
   {
-    f = ((LinearLayout)findViewById(2131362575));
+    f = ((LinearLayout)findViewById(2131625326));
     Object localObject1 = getWindowManager().getDefaultDisplay();
     Object localObject2 = new DisplayMetrics();
     ((Display)localObject1).getMetrics((DisplayMetrics)localObject2);
@@ -59,8 +59,8 @@ public class OpenRecomm
     int i5;
     if (q == 0)
     {
-      i3 = findViewById2131362576getLayoutParamsheight;
-      i4 = findViewById2131362584getLayoutParamsheight;
+      i3 = findViewById2131625327getLayoutParamsheight;
+      i4 = findViewById2131625335getLayoutParamsheight;
       i5 = (int)(60.0F * f1 + 0.5F);
       if (n <= o) {
         break label229;
@@ -71,7 +71,7 @@ public class OpenRecomm
     {
       localObject2 = v.getChildAt(0);
       q = ((int)(i1 * f1 + 0.5F) + (i3 + i4 + i1 * i5) + ((View)localObject2).getPaddingTop() + ((View)localObject2).getPaddingBottom());
-      r = ((int)(28.0F * f1 + 0.5F));
+      r = ((int)(100.0F * f1 + 0.5F));
       t = ((int)(24.0F * f1 + 0.5F));
       if (i2 <= q + r) {
         break;
@@ -97,7 +97,7 @@ public class OpenRecomm
     //   2: invokespecial 154	com/estrongs/android/pop/esclasses/ESActivity:onCreate	(Landroid/os/Bundle;)V
     //   5: aload_0
     //   6: iconst_1
-    //   7: invokevirtual 158	com/estrongs/android/pop/app/OpenRecomm:requestWindowFeature	(I)Z
+    //   7: invokevirtual 158	com/estrongs/android/pop/app/OpenRecomm:supportRequestWindowFeature	(I)Z
     //   10: pop
     //   11: aload_0
     //   12: invokevirtual 162	com/estrongs/android/pop/app/OpenRecomm:getWindow	()Landroid/view/Window;
@@ -105,11 +105,11 @@ public class OpenRecomm
     //   17: invokevirtual 169	android/view/Window:setBackgroundDrawableResource	(I)V
     //   20: aload_0
     //   21: aload_0
-    //   22: invokestatic 174	com/estrongs/android/ui/theme/al:a	(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
-    //   25: putfield 176	com/estrongs/android/pop/app/OpenRecomm:u	Lcom/estrongs/android/ui/theme/al;
+    //   22: invokestatic 174	com/estrongs/android/ui/theme/at:a	(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
+    //   25: putfield 176	com/estrongs/android/pop/app/OpenRecomm:u	Lcom/estrongs/android/ui/theme/at;
     //   28: aload_0
     //   29: aload_0
-    //   30: invokestatic 181	com/estrongs/android/pop/esclasses/g:a	(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    //   30: invokestatic 181	com/estrongs/android/pop/esclasses/k:a	(Landroid/content/Context;)Landroid/view/LayoutInflater;
     //   33: ldc -74
     //   35: aconst_null
     //   36: invokevirtual 188	android/view/LayoutInflater:inflate	(ILandroid/view/ViewGroup;)Landroid/view/View;
@@ -120,307 +120,339 @@ public class OpenRecomm
     //   49: invokevirtual 198	android/content/res/Resources:getDisplayMetrics	()Landroid/util/DisplayMetrics;
     //   52: astore_1
     //   53: aload_0
-    //   54: invokestatic 203	com/estrongs/android/pop/utils/cl:a	(Landroid/content/Context;)Z
+    //   54: invokestatic 203	com/estrongs/android/pop/utils/cu:a	(Landroid/content/Context;)Z
     //   57: istore_3
     //   58: aload_0
     //   59: invokevirtual 192	com/estrongs/android/pop/app/OpenRecomm:getResources	()Landroid/content/res/Resources;
     //   62: invokevirtual 207	android/content/res/Resources:getConfiguration	()Landroid/content/res/Configuration;
     //   65: getfield 212	android/content/res/Configuration:orientation	I
     //   68: iconst_1
-    //   69: if_icmpne +177 -> 246
+    //   69: if_icmpne +178 -> 247
     //   72: iconst_1
     //   73: istore_2
     //   74: invokestatic 216	com/estrongs/android/pop/ac:a	()I
     //   77: bipush 14
     //   79: if_icmplt +28 -> 107
     //   82: iload_3
-    //   83: ifne +168 -> 251
+    //   83: ifne +169 -> 252
     //   86: iload_2
-    //   87: ifne +164 -> 251
+    //   87: ifne +165 -> 252
     //   90: aload_0
     //   91: getfield 126	com/estrongs/android/pop/app/OpenRecomm:v	Lcom/estrongs/android/ui/view/MaxWidthLinearLayout;
     //   94: aload_0
     //   95: invokevirtual 192	com/estrongs/android/pop/app/OpenRecomm:getResources	()Landroid/content/res/Resources;
     //   98: invokevirtual 198	android/content/res/Resources:getDisplayMetrics	()Landroid/util/DisplayMetrics;
     //   101: getfield 219	android/util/DisplayMetrics:heightPixels	I
-    //   104: invokevirtual 221	com/estrongs/android/ui/view/MaxWidthLinearLayout:a	(I)V
+    //   104: invokevirtual 222	com/estrongs/android/ui/view/MaxWidthLinearLayout:setMaxWidth	(I)V
     //   107: aload_0
     //   108: aload_0
     //   109: getfield 126	com/estrongs/android/pop/app/OpenRecomm:v	Lcom/estrongs/android/ui/view/MaxWidthLinearLayout;
-    //   112: invokevirtual 225	com/estrongs/android/pop/app/OpenRecomm:setContentView	(Landroid/view/View;)V
+    //   112: invokevirtual 226	com/estrongs/android/pop/app/OpenRecomm:setContentView	(Landroid/view/View;)V
     //   115: aload_0
     //   116: aload_0
-    //   117: ldc -30
+    //   117: ldc -29
     //   119: invokevirtual 73	com/estrongs/android/pop/app/OpenRecomm:findViewById	(I)Landroid/view/View;
-    //   122: checkcast 228	android/widget/TextView
-    //   125: putfield 230	com/estrongs/android/pop/app/OpenRecomm:a	Landroid/widget/TextView;
+    //   122: checkcast 229	android/widget/TextView
+    //   125: putfield 231	com/estrongs/android/pop/app/OpenRecomm:a	Landroid/widget/TextView;
     //   128: aload_0
     //   129: aload_0
-    //   130: ldc -25
+    //   130: ldc -24
     //   132: invokevirtual 73	com/estrongs/android/pop/app/OpenRecomm:findViewById	(I)Landroid/view/View;
     //   135: checkcast 75	android/widget/LinearLayout
-    //   138: putfield 233	com/estrongs/android/pop/app/OpenRecomm:g	Landroid/widget/LinearLayout;
+    //   138: putfield 234	com/estrongs/android/pop/app/OpenRecomm:g	Landroid/widget/LinearLayout;
     //   141: aload_0
     //   142: aload_0
-    //   143: ldc -22
+    //   143: ldc -21
     //   145: invokevirtual 73	com/estrongs/android/pop/app/OpenRecomm:findViewById	(I)Landroid/view/View;
-    //   148: checkcast 236	android/widget/ImageView
-    //   151: putfield 238	com/estrongs/android/pop/app/OpenRecomm:d	Landroid/widget/ImageView;
+    //   148: checkcast 237	android/widget/ImageView
+    //   151: putfield 239	com/estrongs/android/pop/app/OpenRecomm:d	Landroid/widget/ImageView;
     //   154: aload_0
     //   155: aload_0
-    //   156: ldc -17
+    //   156: ldc -16
     //   158: invokevirtual 73	com/estrongs/android/pop/app/OpenRecomm:findViewById	(I)Landroid/view/View;
-    //   161: checkcast 236	android/widget/ImageView
-    //   164: putfield 241	com/estrongs/android/pop/app/OpenRecomm:e	Landroid/widget/ImageView;
+    //   161: checkcast 237	android/widget/ImageView
+    //   164: putfield 242	com/estrongs/android/pop/app/OpenRecomm:e	Landroid/widget/ImageView;
     //   167: aload_0
     //   168: aload_0
-    //   169: ldc -14
+    //   169: ldc -13
     //   171: invokevirtual 73	com/estrongs/android/pop/app/OpenRecomm:findViewById	(I)Landroid/view/View;
-    //   174: checkcast 244	android/widget/ListView
-    //   177: putfield 246	com/estrongs/android/pop/app/OpenRecomm:b	Landroid/widget/ListView;
+    //   174: checkcast 245	android/widget/ListView
+    //   177: putfield 247	com/estrongs/android/pop/app/OpenRecomm:b	Landroid/widget/ListView;
     //   180: aload_0
     //   181: aload_0
-    //   182: ldc -9
+    //   182: ldc -8
     //   184: invokevirtual 73	com/estrongs/android/pop/app/OpenRecomm:findViewById	(I)Landroid/view/View;
-    //   187: checkcast 249	com/estrongs/android/ui/view/RecommendListView
-    //   190: putfield 251	com/estrongs/android/pop/app/OpenRecomm:c	Lcom/estrongs/android/ui/view/RecommendListView;
+    //   187: checkcast 250	com/estrongs/android/ui/view/RecommendListView
+    //   190: putfield 252	com/estrongs/android/pop/app/OpenRecomm:c	Lcom/estrongs/android/ui/view/RecommendListView;
     //   193: aload_0
-    //   194: getfield 251	com/estrongs/android/pop/app/OpenRecomm:c	Lcom/estrongs/android/ui/view/RecommendListView;
+    //   194: getfield 252	com/estrongs/android/pop/app/OpenRecomm:c	Lcom/estrongs/android/ui/view/RecommendListView;
     //   197: iconst_1
-    //   198: invokevirtual 254	com/estrongs/android/ui/view/RecommendListView:a	(Z)V
+    //   198: invokevirtual 256	com/estrongs/android/ui/view/RecommendListView:setDialogStyle	(Z)V
     //   201: aload_0
     //   202: aload_0
-    //   203: ldc -1
-    //   205: invokevirtual 73	com/estrongs/android/pop/app/OpenRecomm:findViewById	(I)Landroid/view/View;
-    //   208: checkcast 257	android/widget/CheckBox
-    //   211: putfield 259	com/estrongs/android/pop/app/OpenRecomm:h	Landroid/widget/CheckBox;
-    //   214: aload_0
-    //   215: getfield 259	com/estrongs/android/pop/app/OpenRecomm:h	Landroid/widget/CheckBox;
-    //   218: new 261	com/estrongs/android/pop/app/eg
-    //   221: dup
-    //   222: aload_0
-    //   223: invokespecial 264	com/estrongs/android/pop/app/eg:<init>	(Lcom/estrongs/android/pop/app/OpenRecomm;)V
-    //   226: invokevirtual 268	android/widget/CheckBox:setOnCheckedChangeListener	(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
-    //   229: aload_0
-    //   230: invokevirtual 272	com/estrongs/android/pop/app/OpenRecomm:getIntent	()Landroid/content/Intent;
-    //   233: invokevirtual 278	android/content/Intent:getExtras	()Landroid/os/Bundle;
-    //   236: astore_1
-    //   237: aload_1
-    //   238: ifnonnull +51 -> 289
-    //   241: aload_0
-    //   242: invokevirtual 281	com/estrongs/android/pop/app/OpenRecomm:finish	()V
-    //   245: return
-    //   246: iconst_0
-    //   247: istore_2
-    //   248: goto -174 -> 74
-    //   251: iload_3
-    //   252: ifeq +23 -> 275
-    //   255: aload_0
-    //   256: getfield 126	com/estrongs/android/pop/app/OpenRecomm:v	Lcom/estrongs/android/ui/view/MaxWidthLinearLayout;
-    //   259: aload_0
-    //   260: invokevirtual 192	com/estrongs/android/pop/app/OpenRecomm:getResources	()Landroid/content/res/Resources;
-    //   263: invokevirtual 198	android/content/res/Resources:getDisplayMetrics	()Landroid/util/DisplayMetrics;
-    //   266: getfield 284	android/util/DisplayMetrics:widthPixels	I
-    //   269: invokevirtual 221	com/estrongs/android/ui/view/MaxWidthLinearLayout:a	(I)V
-    //   272: goto -165 -> 107
-    //   275: aload_0
-    //   276: getfield 126	com/estrongs/android/pop/app/OpenRecomm:v	Lcom/estrongs/android/ui/view/MaxWidthLinearLayout;
-    //   279: aload_1
-    //   280: getfield 284	android/util/DisplayMetrics:widthPixels	I
-    //   283: invokevirtual 221	com/estrongs/android/ui/view/MaxWidthLinearLayout:a	(I)V
-    //   286: goto -179 -> 107
-    //   289: aload_0
-    //   290: aload_1
-    //   291: ldc_w 286
-    //   294: invokevirtual 292	android/os/Bundle:getString	(Ljava/lang/String;)Ljava/lang/String;
-    //   297: putfield 48	com/estrongs/android/pop/app/OpenRecomm:k	Ljava/lang/String;
-    //   300: aload_0
-    //   301: aload_0
-    //   302: getfield 48	com/estrongs/android/pop/app/OpenRecomm:k	Ljava/lang/String;
-    //   305: invokestatic 297	com/estrongs/android/pop/view/utils/AppRunner:c	(Ljava/lang/String;)Landroid/content/Intent;
-    //   308: putfield 50	com/estrongs/android/pop/app/OpenRecomm:l	Landroid/content/Intent;
-    //   311: aload_0
-    //   312: getfield 50	com/estrongs/android/pop/app/OpenRecomm:l	Landroid/content/Intent;
-    //   315: ifnonnull +20 -> 335
-    //   318: aload_0
-    //   319: aload_0
-    //   320: invokevirtual 272	com/estrongs/android/pop/app/OpenRecomm:getIntent	()Landroid/content/Intent;
-    //   323: ldc_w 299
-    //   326: invokevirtual 303	android/content/Intent:getParcelableExtra	(Ljava/lang/String;)Landroid/os/Parcelable;
-    //   329: checkcast 274	android/content/Intent
-    //   332: putfield 50	com/estrongs/android/pop/app/OpenRecomm:l	Landroid/content/Intent;
-    //   335: aload_0
-    //   336: aload_0
-    //   337: getfield 50	com/estrongs/android/pop/app/OpenRecomm:l	Landroid/content/Intent;
-    //   340: invokevirtual 307	android/content/Intent:getType	()Ljava/lang/String;
-    //   343: putfield 46	com/estrongs/android/pop/app/OpenRecomm:j	Ljava/lang/String;
-    //   346: aload_0
-    //   347: aload_0
-    //   348: getfield 50	com/estrongs/android/pop/app/OpenRecomm:l	Landroid/content/Intent;
-    //   351: invokestatic 312	com/estrongs/android/pop/view/utils/n:a	(Landroid/content/Context;Landroid/content/Intent;)[Lcom/estrongs/android/pop/view/utils/t;
-    //   354: astore_1
-    //   355: aload_0
-    //   356: iconst_0
-    //   357: putfield 52	com/estrongs/android/pop/app/OpenRecomm:m	Z
-    //   360: aload_1
-    //   361: ifnull +39 -> 400
-    //   364: aload_1
-    //   365: arraylength
-    //   366: ifle +34 -> 400
+    //   203: ldc_w 257
+    //   206: invokevirtual 73	com/estrongs/android/pop/app/OpenRecomm:findViewById	(I)Landroid/view/View;
+    //   209: checkcast 259	android/widget/CheckBox
+    //   212: putfield 261	com/estrongs/android/pop/app/OpenRecomm:h	Landroid/widget/CheckBox;
+    //   215: aload_0
+    //   216: getfield 261	com/estrongs/android/pop/app/OpenRecomm:h	Landroid/widget/CheckBox;
+    //   219: new 263	com/estrongs/android/pop/app/ef
+    //   222: dup
+    //   223: aload_0
+    //   224: invokespecial 266	com/estrongs/android/pop/app/ef:<init>	(Lcom/estrongs/android/pop/app/OpenRecomm;)V
+    //   227: invokevirtual 270	android/widget/CheckBox:setOnCheckedChangeListener	(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+    //   230: aload_0
+    //   231: invokevirtual 274	com/estrongs/android/pop/app/OpenRecomm:getIntent	()Landroid/content/Intent;
+    //   234: invokevirtual 280	android/content/Intent:getExtras	()Landroid/os/Bundle;
+    //   237: astore_1
+    //   238: aload_1
+    //   239: ifnonnull +83 -> 322
+    //   242: aload_0
+    //   243: invokevirtual 283	com/estrongs/android/pop/app/OpenRecomm:finish	()V
+    //   246: return
+    //   247: iconst_0
+    //   248: istore_2
+    //   249: goto -175 -> 74
+    //   252: iload_3
+    //   253: ifeq +27 -> 280
+    //   256: iload_2
+    //   257: ifne +23 -> 280
+    //   260: aload_0
+    //   261: getfield 126	com/estrongs/android/pop/app/OpenRecomm:v	Lcom/estrongs/android/ui/view/MaxWidthLinearLayout;
+    //   264: aload_0
+    //   265: invokevirtual 192	com/estrongs/android/pop/app/OpenRecomm:getResources	()Landroid/content/res/Resources;
+    //   268: invokevirtual 198	android/content/res/Resources:getDisplayMetrics	()Landroid/util/DisplayMetrics;
+    //   271: getfield 219	android/util/DisplayMetrics:heightPixels	I
+    //   274: invokevirtual 222	com/estrongs/android/ui/view/MaxWidthLinearLayout:setMaxWidth	(I)V
+    //   277: goto -170 -> 107
+    //   280: iload_3
+    //   281: ifeq +27 -> 308
+    //   284: iload_2
+    //   285: ifeq +23 -> 308
+    //   288: aload_0
+    //   289: getfield 126	com/estrongs/android/pop/app/OpenRecomm:v	Lcom/estrongs/android/ui/view/MaxWidthLinearLayout;
+    //   292: aload_0
+    //   293: invokevirtual 192	com/estrongs/android/pop/app/OpenRecomm:getResources	()Landroid/content/res/Resources;
+    //   296: invokevirtual 198	android/content/res/Resources:getDisplayMetrics	()Landroid/util/DisplayMetrics;
+    //   299: getfield 286	android/util/DisplayMetrics:widthPixels	I
+    //   302: invokevirtual 222	com/estrongs/android/ui/view/MaxWidthLinearLayout:setMaxWidth	(I)V
+    //   305: goto -198 -> 107
+    //   308: aload_0
+    //   309: getfield 126	com/estrongs/android/pop/app/OpenRecomm:v	Lcom/estrongs/android/ui/view/MaxWidthLinearLayout;
+    //   312: aload_1
+    //   313: getfield 286	android/util/DisplayMetrics:widthPixels	I
+    //   316: invokevirtual 222	com/estrongs/android/ui/view/MaxWidthLinearLayout:setMaxWidth	(I)V
+    //   319: goto -212 -> 107
+    //   322: aload_0
+    //   323: aload_1
+    //   324: ldc_w 288
+    //   327: invokevirtual 294	android/os/Bundle:getString	(Ljava/lang/String;)Ljava/lang/String;
+    //   330: putfield 48	com/estrongs/android/pop/app/OpenRecomm:k	Ljava/lang/String;
+    //   333: aload_0
+    //   334: aload_0
+    //   335: getfield 48	com/estrongs/android/pop/app/OpenRecomm:k	Ljava/lang/String;
+    //   338: invokestatic 299	com/estrongs/android/pop/view/utils/AppRunner:c	(Ljava/lang/String;)Landroid/content/Intent;
+    //   341: putfield 50	com/estrongs/android/pop/app/OpenRecomm:l	Landroid/content/Intent;
+    //   344: aload_0
+    //   345: getfield 50	com/estrongs/android/pop/app/OpenRecomm:l	Landroid/content/Intent;
+    //   348: ifnonnull +20 -> 368
+    //   351: aload_0
+    //   352: aload_0
+    //   353: invokevirtual 274	com/estrongs/android/pop/app/OpenRecomm:getIntent	()Landroid/content/Intent;
+    //   356: ldc_w 301
+    //   359: invokevirtual 305	android/content/Intent:getParcelableExtra	(Ljava/lang/String;)Landroid/os/Parcelable;
+    //   362: checkcast 276	android/content/Intent
+    //   365: putfield 50	com/estrongs/android/pop/app/OpenRecomm:l	Landroid/content/Intent;
+    //   368: aload_0
     //   369: aload_0
-    //   370: aload_1
-    //   371: arraylength
-    //   372: putfield 56	com/estrongs/android/pop/app/OpenRecomm:o	I
-    //   375: aload_0
-    //   376: getfield 246	com/estrongs/android/pop/app/OpenRecomm:b	Landroid/widget/ListView;
-    //   379: new 314	com/estrongs/android/pop/app/ei
-    //   382: dup
-    //   383: aload_0
-    //   384: aload_0
-    //   385: ldc_w 315
-    //   388: aload_1
-    //   389: invokespecial 318	com/estrongs/android/pop/app/ei:<init>	(Lcom/estrongs/android/pop/app/OpenRecomm;Landroid/content/Context;I[Lcom/estrongs/android/pop/view/utils/t;)V
-    //   392: invokevirtual 322	android/widget/ListView:setAdapter	(Landroid/widget/ListAdapter;)V
-    //   395: aload_0
-    //   396: iconst_1
-    //   397: putfield 52	com/estrongs/android/pop/app/OpenRecomm:m	Z
-    //   400: invokestatic 325	com/estrongs/android/pop/view/utils/n:b	()Lcom/estrongs/android/pop/view/utils/n;
-    //   403: aload_0
-    //   404: invokevirtual 328	com/estrongs/android/pop/view/utils/n:a	(Landroid/content/Context;)J
-    //   407: ldc2_w 329
-    //   410: ldiv
-    //   411: aload_0
-    //   412: getfield 60	com/estrongs/android/pop/app/OpenRecomm:p	J
-    //   415: lcmp
-    //   416: ifle +10 -> 426
-    //   419: invokestatic 325	com/estrongs/android/pop/view/utils/n:b	()Lcom/estrongs/android/pop/view/utils/n;
-    //   422: iconst_1
-    //   423: invokevirtual 331	com/estrongs/android/pop/view/utils/n:a	(Z)V
-    //   426: aload_0
-    //   427: getfield 52	com/estrongs/android/pop/app/OpenRecomm:m	Z
-    //   430: ifeq +156 -> 586
-    //   433: aload_1
-    //   434: arraylength
-    //   435: iconst_1
-    //   436: if_icmpne +80 -> 516
-    //   439: aload_0
-    //   440: getfield 50	com/estrongs/android/pop/app/OpenRecomm:l	Landroid/content/Intent;
-    //   443: aload_1
-    //   444: iconst_0
-    //   445: aaload
-    //   446: getfield 335	com/estrongs/android/pop/view/utils/t:c	Ljava/lang/String;
-    //   449: aload_1
-    //   450: iconst_0
-    //   451: aaload
-    //   452: getfield 337	com/estrongs/android/pop/view/utils/t:d	Ljava/lang/String;
-    //   455: invokevirtual 341	android/content/Intent:setClassName	(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-    //   458: pop
-    //   459: aload_1
-    //   460: iconst_0
-    //   461: aaload
-    //   462: getfield 343	com/estrongs/android/pop/view/utils/t:e	Ljava/lang/String;
-    //   465: ifnull +17 -> 482
-    //   468: aload_0
-    //   469: getfield 50	com/estrongs/android/pop/app/OpenRecomm:l	Landroid/content/Intent;
-    //   472: aload_1
-    //   473: iconst_0
-    //   474: aaload
-    //   475: getfield 343	com/estrongs/android/pop/view/utils/t:e	Ljava/lang/String;
-    //   478: invokevirtual 346	android/content/Intent:setAction	(Ljava/lang/String;)Landroid/content/Intent;
-    //   481: pop
-    //   482: aload_1
-    //   483: iconst_0
-    //   484: aaload
-    //   485: getfield 335	com/estrongs/android/pop/view/utils/t:c	Ljava/lang/String;
-    //   488: invokestatic 349	com/estrongs/android/pop/view/utils/AppRunner:d	(Ljava/lang/String;)Z
-    //   491: ifeq +13 -> 504
-    //   494: aload_0
-    //   495: getfield 50	com/estrongs/android/pop/app/OpenRecomm:l	Landroid/content/Intent;
-    //   498: ldc_w 350
-    //   501: invokestatic 353	com/estrongs/android/pop/view/utils/AppRunner:a	(Landroid/content/Intent;I)V
-    //   504: aload_0
-    //   505: aload_0
-    //   506: getfield 50	com/estrongs/android/pop/app/OpenRecomm:l	Landroid/content/Intent;
-    //   509: invokevirtual 357	com/estrongs/android/pop/app/OpenRecomm:startActivity	(Landroid/content/Intent;)V
-    //   512: aload_0
-    //   513: invokevirtual 281	com/estrongs/android/pop/app/OpenRecomm:finish	()V
+    //   370: getfield 50	com/estrongs/android/pop/app/OpenRecomm:l	Landroid/content/Intent;
+    //   373: invokevirtual 309	android/content/Intent:getType	()Ljava/lang/String;
+    //   376: putfield 46	com/estrongs/android/pop/app/OpenRecomm:j	Ljava/lang/String;
+    //   379: aload_0
+    //   380: aload_0
+    //   381: getfield 50	com/estrongs/android/pop/app/OpenRecomm:l	Landroid/content/Intent;
+    //   384: invokestatic 314	com/estrongs/android/pop/view/utils/n:a	(Landroid/content/Context;Landroid/content/Intent;)[Lcom/estrongs/android/pop/view/utils/t;
+    //   387: astore_1
+    //   388: aload_0
+    //   389: iconst_0
+    //   390: putfield 52	com/estrongs/android/pop/app/OpenRecomm:m	Z
+    //   393: aload_1
+    //   394: ifnull +39 -> 433
+    //   397: aload_1
+    //   398: arraylength
+    //   399: ifle +34 -> 433
+    //   402: aload_0
+    //   403: aload_1
+    //   404: arraylength
+    //   405: putfield 56	com/estrongs/android/pop/app/OpenRecomm:o	I
+    //   408: aload_0
+    //   409: getfield 247	com/estrongs/android/pop/app/OpenRecomm:b	Landroid/widget/ListView;
+    //   412: new 316	com/estrongs/android/pop/app/eh
+    //   415: dup
+    //   416: aload_0
+    //   417: aload_0
+    //   418: ldc_w 317
+    //   421: aload_1
+    //   422: invokespecial 320	com/estrongs/android/pop/app/eh:<init>	(Lcom/estrongs/android/pop/app/OpenRecomm;Landroid/content/Context;I[Lcom/estrongs/android/pop/view/utils/t;)V
+    //   425: invokevirtual 324	android/widget/ListView:setAdapter	(Landroid/widget/ListAdapter;)V
+    //   428: aload_0
+    //   429: iconst_1
+    //   430: putfield 52	com/estrongs/android/pop/app/OpenRecomm:m	Z
+    //   433: invokestatic 327	com/estrongs/android/pop/view/utils/n:b	()Lcom/estrongs/android/pop/view/utils/n;
+    //   436: aload_0
+    //   437: invokevirtual 330	com/estrongs/android/pop/view/utils/n:a	(Landroid/content/Context;)J
+    //   440: pop2
+    //   441: invokestatic 327	com/estrongs/android/pop/view/utils/n:b	()Lcom/estrongs/android/pop/view/utils/n;
+    //   444: iconst_1
+    //   445: invokevirtual 332	com/estrongs/android/pop/view/utils/n:a	(Z)V
+    //   448: aload_0
+    //   449: getfield 52	com/estrongs/android/pop/app/OpenRecomm:m	Z
+    //   452: ifeq +157 -> 609
+    //   455: aload_1
+    //   456: arraylength
+    //   457: iconst_1
+    //   458: if_icmpne +80 -> 538
+    //   461: aload_0
+    //   462: getfield 50	com/estrongs/android/pop/app/OpenRecomm:l	Landroid/content/Intent;
+    //   465: aload_1
+    //   466: iconst_0
+    //   467: aaload
+    //   468: getfield 336	com/estrongs/android/pop/view/utils/t:c	Ljava/lang/String;
+    //   471: aload_1
+    //   472: iconst_0
+    //   473: aaload
+    //   474: getfield 338	com/estrongs/android/pop/view/utils/t:d	Ljava/lang/String;
+    //   477: invokevirtual 342	android/content/Intent:setClassName	(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    //   480: pop
+    //   481: aload_1
+    //   482: iconst_0
+    //   483: aaload
+    //   484: getfield 344	com/estrongs/android/pop/view/utils/t:e	Ljava/lang/String;
+    //   487: ifnull +17 -> 504
+    //   490: aload_0
+    //   491: getfield 50	com/estrongs/android/pop/app/OpenRecomm:l	Landroid/content/Intent;
+    //   494: aload_1
+    //   495: iconst_0
+    //   496: aaload
+    //   497: getfield 344	com/estrongs/android/pop/view/utils/t:e	Ljava/lang/String;
+    //   500: invokevirtual 347	android/content/Intent:setAction	(Ljava/lang/String;)Landroid/content/Intent;
+    //   503: pop
+    //   504: aload_1
+    //   505: iconst_0
+    //   506: aaload
+    //   507: getfield 336	com/estrongs/android/pop/view/utils/t:c	Ljava/lang/String;
+    //   510: invokestatic 350	com/estrongs/android/pop/view/utils/AppRunner:d	(Ljava/lang/String;)Z
+    //   513: ifeq +13 -> 526
     //   516: aload_0
-    //   517: getfield 230	com/estrongs/android/pop/app/OpenRecomm:a	Landroid/widget/TextView;
-    //   520: aload_0
-    //   521: ldc_w 358
-    //   524: invokevirtual 361	com/estrongs/android/pop/app/OpenRecomm:getString	(I)Ljava/lang/String;
-    //   527: invokevirtual 365	android/widget/TextView:setText	(Ljava/lang/CharSequence;)V
-    //   530: aload_0
-    //   531: getfield 251	com/estrongs/android/pop/app/OpenRecomm:c	Lcom/estrongs/android/ui/view/RecommendListView;
-    //   534: bipush 8
-    //   536: invokevirtual 368	com/estrongs/android/ui/view/RecommendListView:setVisibility	(I)V
-    //   539: new 370	com/estrongs/android/pop/app/eh
-    //   542: dup
-    //   543: aload_0
-    //   544: invokespecial 371	com/estrongs/android/pop/app/eh:<init>	(Lcom/estrongs/android/pop/app/OpenRecomm;)V
-    //   547: astore_1
-    //   548: aload_0
-    //   549: getfield 246	com/estrongs/android/pop/app/OpenRecomm:b	Landroid/widget/ListView;
-    //   552: aload_1
-    //   553: invokevirtual 375	android/widget/ListView:setOnItemClickListener	(Landroid/widget/AdapterView$OnItemClickListener;)V
-    //   556: aload_0
-    //   557: invokespecial 148	com/estrongs/android/pop/app/OpenRecomm:a	()V
-    //   560: return
-    //   561: astore_1
-    //   562: aload_1
-    //   563: invokevirtual 378	java/lang/Exception:printStackTrace	()V
-    //   566: aload_0
-    //   567: getfield 50	com/estrongs/android/pop/app/OpenRecomm:l	Landroid/content/Intent;
-    //   570: ifnull +11 -> 581
-    //   573: aload_0
-    //   574: aload_0
-    //   575: getfield 50	com/estrongs/android/pop/app/OpenRecomm:l	Landroid/content/Intent;
-    //   578: invokevirtual 357	com/estrongs/android/pop/app/OpenRecomm:startActivity	(Landroid/content/Intent;)V
-    //   581: aload_0
-    //   582: invokevirtual 281	com/estrongs/android/pop/app/OpenRecomm:finish	()V
-    //   585: return
-    //   586: aload_0
-    //   587: aload_0
-    //   588: ldc_w 379
-    //   591: invokevirtual 361	com/estrongs/android/pop/app/OpenRecomm:getString	(I)Ljava/lang/String;
-    //   594: iconst_1
-    //   595: invokestatic 384	com/estrongs/android/ui/view/ag:a	(Landroid/content/Context;Ljava/lang/CharSequence;I)V
-    //   598: aload_0
-    //   599: invokevirtual 281	com/estrongs/android/pop/app/OpenRecomm:finish	()V
+    //   517: getfield 50	com/estrongs/android/pop/app/OpenRecomm:l	Landroid/content/Intent;
+    //   520: ldc_w 351
+    //   523: invokestatic 354	com/estrongs/android/pop/view/utils/AppRunner:a	(Landroid/content/Intent;I)V
+    //   526: aload_0
+    //   527: aload_0
+    //   528: getfield 50	com/estrongs/android/pop/app/OpenRecomm:l	Landroid/content/Intent;
+    //   531: invokevirtual 358	com/estrongs/android/pop/app/OpenRecomm:startActivity	(Landroid/content/Intent;)V
+    //   534: aload_0
+    //   535: invokevirtual 283	com/estrongs/android/pop/app/OpenRecomm:finish	()V
+    //   538: aload_0
+    //   539: getfield 231	com/estrongs/android/pop/app/OpenRecomm:a	Landroid/widget/TextView;
+    //   542: aload_0
+    //   543: ldc_w 359
+    //   546: invokevirtual 362	com/estrongs/android/pop/app/OpenRecomm:getString	(I)Ljava/lang/String;
+    //   549: invokevirtual 366	android/widget/TextView:setText	(Ljava/lang/CharSequence;)V
+    //   552: aload_0
+    //   553: getfield 252	com/estrongs/android/pop/app/OpenRecomm:c	Lcom/estrongs/android/ui/view/RecommendListView;
+    //   556: bipush 8
+    //   558: invokevirtual 369	com/estrongs/android/ui/view/RecommendListView:setVisibility	(I)V
+    //   561: new 371	com/estrongs/android/pop/app/eg
+    //   564: dup
+    //   565: aload_0
+    //   566: invokespecial 372	com/estrongs/android/pop/app/eg:<init>	(Lcom/estrongs/android/pop/app/OpenRecomm;)V
+    //   569: astore_1
+    //   570: aload_0
+    //   571: getfield 247	com/estrongs/android/pop/app/OpenRecomm:b	Landroid/widget/ListView;
+    //   574: aload_1
+    //   575: invokevirtual 376	android/widget/ListView:setOnItemClickListener	(Landroid/widget/AdapterView$OnItemClickListener;)V
+    //   578: aload_0
+    //   579: invokespecial 148	com/estrongs/android/pop/app/OpenRecomm:a	()V
+    //   582: aload_0
+    //   583: getfield 46	com/estrongs/android/pop/app/OpenRecomm:j	Ljava/lang/String;
+    //   586: ifnonnull +90 -> 676
+    //   589: aload_0
+    //   590: invokestatic 381	com/estrongs/android/j/c:a	(Landroid/content/Context;)Lcom/estrongs/android/j/c;
+    //   593: ldc_w 383
+    //   596: ldc_w 385
+    //   599: invokevirtual 388	com/estrongs/android/j/c:c	(Ljava/lang/String;Ljava/lang/String;)V
     //   602: return
     //   603: astore_1
-    //   604: aload_0
-    //   605: invokevirtual 281	com/estrongs/android/pop/app/OpenRecomm:finish	()V
+    //   604: aload_1
+    //   605: invokevirtual 391	java/lang/Exception:printStackTrace	()V
     //   608: return
-    //   609: astore_1
+    //   609: aload_0
     //   610: aload_0
-    //   611: invokevirtual 281	com/estrongs/android/pop/app/OpenRecomm:finish	()V
-    //   614: aload_1
-    //   615: athrow
-    //   616: astore_1
-    //   617: goto -19 -> 598
+    //   611: ldc_w 392
+    //   614: invokevirtual 362	com/estrongs/android/pop/app/OpenRecomm:getString	(I)Ljava/lang/String;
+    //   617: iconst_1
+    //   618: invokestatic 397	com/estrongs/android/ui/view/ak:a	(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    //   621: aload_0
+    //   622: invokevirtual 283	com/estrongs/android/pop/app/OpenRecomm:finish	()V
+    //   625: return
+    //   626: astore_1
+    //   627: aload_1
+    //   628: invokevirtual 391	java/lang/Exception:printStackTrace	()V
+    //   631: aload_0
+    //   632: getfield 50	com/estrongs/android/pop/app/OpenRecomm:l	Landroid/content/Intent;
+    //   635: ifnull +11 -> 646
+    //   638: aload_0
+    //   639: aload_0
+    //   640: getfield 50	com/estrongs/android/pop/app/OpenRecomm:l	Landroid/content/Intent;
+    //   643: invokevirtual 358	com/estrongs/android/pop/app/OpenRecomm:startActivity	(Landroid/content/Intent;)V
+    //   646: aload_0
+    //   647: invokevirtual 283	com/estrongs/android/pop/app/OpenRecomm:finish	()V
+    //   650: goto -68 -> 582
+    //   653: astore_1
+    //   654: aload_1
+    //   655: invokevirtual 391	java/lang/Exception:printStackTrace	()V
+    //   658: goto -37 -> 621
+    //   661: astore_1
+    //   662: aload_0
+    //   663: invokevirtual 283	com/estrongs/android/pop/app/OpenRecomm:finish	()V
+    //   666: goto -84 -> 582
+    //   669: astore_1
+    //   670: aload_0
+    //   671: invokevirtual 283	com/estrongs/android/pop/app/OpenRecomm:finish	()V
+    //   674: aload_1
+    //   675: athrow
+    //   676: aload_0
+    //   677: invokestatic 381	com/estrongs/android/j/c:a	(Landroid/content/Context;)Lcom/estrongs/android/j/c;
+    //   680: ldc_w 383
+    //   683: aload_0
+    //   684: getfield 46	com/estrongs/android/pop/app/OpenRecomm:j	Ljava/lang/String;
+    //   687: invokevirtual 388	com/estrongs/android/j/c:c	(Ljava/lang/String;Ljava/lang/String;)V
+    //   690: return
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	620	0	this	OpenRecomm
-    //   0	620	1	paramBundle	android.os.Bundle
-    //   73	175	2	i1	int
-    //   57	195	3	bool	boolean
+    //   0	691	0	this	OpenRecomm
+    //   0	691	1	paramBundle	android.os.Bundle
+    //   73	212	2	i1	int
+    //   57	224	3	bool	boolean
     // Exception table:
     //   from	to	target	type
-    //   115	237	561	java/lang/Exception
-    //   241	245	561	java/lang/Exception
-    //   289	335	561	java/lang/Exception
-    //   335	360	561	java/lang/Exception
-    //   364	400	561	java/lang/Exception
-    //   400	426	561	java/lang/Exception
-    //   426	482	561	java/lang/Exception
-    //   482	504	561	java/lang/Exception
-    //   504	516	561	java/lang/Exception
-    //   516	560	561	java/lang/Exception
-    //   598	602	561	java/lang/Exception
-    //   566	581	603	java/lang/Exception
-    //   566	581	609	finally
-    //   586	598	616	java/lang/Exception
+    //   582	602	603	java/lang/Exception
+    //   676	690	603	java/lang/Exception
+    //   115	238	626	java/lang/Exception
+    //   242	246	626	java/lang/Exception
+    //   322	368	626	java/lang/Exception
+    //   368	393	626	java/lang/Exception
+    //   397	433	626	java/lang/Exception
+    //   433	504	626	java/lang/Exception
+    //   504	526	626	java/lang/Exception
+    //   526	538	626	java/lang/Exception
+    //   538	582	626	java/lang/Exception
+    //   621	625	626	java/lang/Exception
+    //   654	658	626	java/lang/Exception
+    //   609	621	653	java/lang/Exception
+    //   631	646	661	java/lang/Exception
+    //   631	646	669	finally
   }
   
   public void onDestroy()

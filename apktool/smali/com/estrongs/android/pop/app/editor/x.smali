@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
@@ -22,10 +22,34 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 0
+.method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 2
 
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
-    return-void
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_0
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/editor/x;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
+
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/editor/PopNoteEditor;->b(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;)Lcom/estrongs/android/pop/app/editor/ObservableScrollView;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/editor/ObservableScrollView;->a()V
+
+    :cond_1
+    const/4 v0, 0x0
+
+    return v0
 .end method

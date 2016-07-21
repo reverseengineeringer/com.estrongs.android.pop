@@ -1,18 +1,10 @@
-.class public Lcom/estrongs/android/pop/app/b/x;
+.class public interface abstract Lcom/estrongs/android/pop/app/b/x;
 .super Ljava/lang/Object;
 
 
-# instance fields
-.field public a:J
+# virtual methods
+.method public abstract a()V
+.end method
 
-.field public b:J
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+.method public abstract a(I)V
 .end method

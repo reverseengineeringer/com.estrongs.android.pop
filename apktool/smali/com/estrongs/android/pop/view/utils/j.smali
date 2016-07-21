@@ -79,13 +79,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/fs/impl/b/f;
+    check-cast v0, Lcom/estrongs/fs/impl/b/g;
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/f;->getAbsolutePath()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/g;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -97,7 +97,7 @@
 
     iget-object v6, p0, Lcom/estrongs/android/pop/view/utils/j;->b:Landroid/app/Activity;
 
-    const v7, 0x7f0b0172
+    const v7, 0x7f0800fe
 
     invoke-virtual {v6, v7}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
 
@@ -123,11 +123,11 @@
 
     iget-object v4, p0, Lcom/estrongs/android/pop/view/utils/j;->b:Landroid/app/Activity;
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/f;->getAbsolutePath()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/g;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-static {v4, v5, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->b(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/impl/b/f;)Z
+    invoke-static {v4, v5, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->b(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/impl/b/g;)Z
 
     move-result v0
 
@@ -149,7 +149,7 @@
 
     iget-object v3, p0, Lcom/estrongs/android/pop/view/utils/j;->b:Landroid/app/Activity;
 
-    const v4, 0x7f0b0173
+    const v4, 0x7f0800fd
 
     invoke-virtual {v3, v4}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
 
@@ -182,7 +182,7 @@
 
     const/4 v4, 0x1
 
-    invoke-static {v3, v0, v4}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    invoke-static {v3, v0, v4}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
@@ -232,7 +232,7 @@
 
     iget-object v3, p0, Lcom/estrongs/android/pop/view/utils/j;->b:Landroid/app/Activity;
 
-    const v4, 0x7f0b0174
+    const v4, 0x7f0800f9
 
     invoke-virtual {v3, v4}, Landroid/app/Activity;->getText(I)Ljava/lang/CharSequence;
 

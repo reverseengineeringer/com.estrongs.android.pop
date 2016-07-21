@@ -16,11 +16,11 @@
 .method public a(Lcom/estrongs/fs/h;Lcom/estrongs/fs/h;)I
     .locals 3
 
-    instance-of v0, p1, Lcom/estrongs/fs/impl/b/c;
+    instance-of v0, p1, Lcom/estrongs/fs/impl/b/d;
 
     if-eqz v0, :cond_0
 
-    instance-of v0, p2, Lcom/estrongs/fs/impl/b/c;
+    instance-of v0, p2, Lcom/estrongs/fs/impl/b/d;
 
     if-nez v0, :cond_1
 
@@ -51,17 +51,17 @@
     :cond_3
     move-object v0, p1
 
-    check-cast v0, Lcom/estrongs/fs/impl/b/c;
+    check-cast v0, Lcom/estrongs/fs/impl/b/d;
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/c;->d()I
+    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/d;->i()I
 
     move-result v1
 
     move-object v0, p2
 
-    check-cast v0, Lcom/estrongs/fs/impl/b/c;
+    check-cast v0, Lcom/estrongs/fs/impl/b/d;
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/c;->d()I
+    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/d;->i()I
 
     move-result v0
 

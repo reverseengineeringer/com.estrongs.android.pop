@@ -5,9 +5,11 @@
 # instance fields
 .field private A:I
 
-.field private B:Z
+.field private B:I
 
 .field private C:Z
+
+.field private D:Z
 
 .field private a:Landroid/view/VelocityTracker;
 
@@ -23,7 +25,7 @@
 
 .field protected g:Z
 
-.field protected h:Lcom/estrongs/android/widget/bc;
+.field protected h:Lcom/estrongs/android/widget/bd;
 
 .field i:F
 
@@ -43,7 +45,7 @@
 
 .field private q:I
 
-.field private r:Z
+.field private r:Landroid/content/Context;
 
 .field private s:Z
 
@@ -59,12 +61,14 @@
 
 .field private y:Z
 
-.field private z:I
+.field private z:Z
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 4
+    .locals 5
+
+    const/4 v4, 0x0
 
     const/4 v3, -0x2
 
@@ -94,39 +98,41 @@
 
     iput v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->q:I
 
-    iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->r:Z
+    iput-object v4, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->r:Landroid/content/Context;
 
     iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->s:Z
 
     iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->t:Z
 
-    iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->g:Z
+    iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->u:Z
 
-    iput-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->u:Z
+    iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->g:Z
 
     iput-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->v:Z
 
-    iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->w:Z
+    iput-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->w:Z
 
-    iput-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->x:Z
+    iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->x:Z
 
     iput-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->y:Z
 
-    const/4 v0, 0x0
+    iput-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->z:Z
 
-    iput-object v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bc;
-
-    iput v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->z:I
+    iput-object v4, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bd;
 
     iput v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->A:I
+
+    iput v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->B:I
 
     const/high16 v0, -0x40800000    # -1.0f
 
     iput v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->i:F
 
-    iput-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->B:Z
-
     iput-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->C:Z
+
+    iput-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->D:Z
+
+    iput-object p1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->r:Landroid/content/Context;
 
     invoke-direct {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->a()V
 
@@ -134,7 +140,9 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 4
+    .locals 5
+
+    const/4 v4, 0x0
 
     const/4 v3, -0x2
 
@@ -164,39 +172,41 @@
 
     iput v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->q:I
 
-    iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->r:Z
+    iput-object v4, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->r:Landroid/content/Context;
 
     iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->s:Z
 
     iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->t:Z
 
-    iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->g:Z
+    iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->u:Z
 
-    iput-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->u:Z
+    iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->g:Z
 
     iput-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->v:Z
 
-    iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->w:Z
+    iput-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->w:Z
 
-    iput-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->x:Z
+    iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->x:Z
 
     iput-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->y:Z
 
-    const/4 v0, 0x0
+    iput-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->z:Z
 
-    iput-object v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bc;
-
-    iput v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->z:I
+    iput-object v4, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bd;
 
     iput v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->A:I
+
+    iput v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->B:I
 
     const/high16 v0, -0x40800000    # -1.0f
 
     iput v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->i:F
 
-    iput-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->B:Z
-
     iput-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->C:Z
+
+    iput-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->D:Z
+
+    iput-object p1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->r:Landroid/content/Context;
 
     invoke-direct {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->a()V
 
@@ -253,69 +263,7 @@
     return-void
 .end method
 
-.method private b()V
-    .locals 5
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/RealViewSwitcher;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    :goto_0
-    return-void
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
-
-    move-result v1
-
-    iget v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->p:I
-
-    add-int/lit8 v2, v2, -0x1
-
-    invoke-direct {p0, v2}, Lcom/estrongs/android/widget/RealViewSwitcher;->c(I)I
-
-    move-result v2
-
-    add-int/2addr v1, v2
-
-    invoke-virtual {v0}, Landroid/view/View;->getTop()I
-
-    move-result v2
-
-    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
-
-    move-result v3
-
-    mul-int/lit8 v3, v3, 0x2
-
-    iget v4, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->p:I
-
-    add-int/lit8 v4, v4, -0x1
-
-    invoke-direct {p0, v4}, Lcom/estrongs/android/widget/RealViewSwitcher;->c(I)I
-
-    move-result v4
-
-    add-int/2addr v3, v4
-
-    invoke-virtual {v0}, Landroid/view/View;->getBottom()I
-
-    move-result v4
-
-    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/view/View;->layout(IIII)V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->v:Z
-
-    goto :goto_0
-.end method
-
-.method private c(I)I
+.method private b(I)I
     .locals 3
 
     const/4 v0, 0x0
@@ -355,6 +303,74 @@
     goto :goto_0
 .end method
 
+.method private b()V
+    .locals 5
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/RealViewSwitcher;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+
+    move-result v1
+
+    iget v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->p:I
+
+    add-int/lit8 v2, v2, -0x1
+
+    invoke-direct {p0, v2}, Lcom/estrongs/android/widget/RealViewSwitcher;->b(I)I
+
+    move-result v2
+
+    add-int/2addr v1, v2
+
+    invoke-virtual {v0}, Landroid/view/View;->getTop()I
+
+    move-result v2
+
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+
+    move-result v3
+
+    mul-int/lit8 v3, v3, 0x2
+
+    iget v4, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->p:I
+
+    add-int/lit8 v4, v4, -0x1
+
+    invoke-direct {p0, v4}, Lcom/estrongs/android/widget/RealViewSwitcher;->b(I)I
+
+    move-result v4
+
+    add-int/2addr v3, v4
+
+    invoke-virtual {v0}, Landroid/view/View;->getBottom()I
+
+    move-result v4
+
+    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/view/View;->layout(IIII)V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->w:Z
+
+    goto :goto_0
+.end method
+
+.method private c(I)I
+    .locals 0
+
+    return p1
+.end method
+
 .method private c()V
     .locals 6
 
@@ -390,15 +406,9 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/view/View;->layout(IIII)V
 
-    iput-boolean v5, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->v:Z
+    iput-boolean v5, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->w:Z
 
     goto :goto_0
-.end method
-
-.method private d(I)I
-    .locals 0
-
-    return p1
 .end method
 
 .method private d()V
@@ -436,7 +446,7 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->u:Z
+    iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->v:Z
 
     goto :goto_0
 .end method
@@ -462,7 +472,7 @@
 
     add-int/lit8 v1, v1, -0x1
 
-    invoke-direct {p0, v1}, Lcom/estrongs/android/widget/RealViewSwitcher;->c(I)I
+    invoke-direct {p0, v1}, Lcom/estrongs/android/widget/RealViewSwitcher;->b(I)I
 
     move-result v1
 
@@ -478,7 +488,7 @@
 
     add-int/lit8 v4, v4, -0x1
 
-    invoke-direct {p0, v4}, Lcom/estrongs/android/widget/RealViewSwitcher;->c(I)I
+    invoke-direct {p0, v4}, Lcom/estrongs/android/widget/RealViewSwitcher;->b(I)I
 
     move-result v4
 
@@ -492,12 +502,12 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->u:Z
+    iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->v:Z
 
     goto :goto_0
 .end method
 
-.method private f()V
+.method private i()V
     .locals 2
 
     invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->getChildCount()I
@@ -521,7 +531,7 @@
     return-void
 
     :cond_1
-    iget-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->r:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->s:Z
 
     if-eqz v0, :cond_0
 
@@ -535,121 +545,6 @@
 
 # virtual methods
 .method public a(I)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, p1, v0}, Lcom/estrongs/android/widget/RealViewSwitcher;->a(IZ)V
-
-    return-void
-.end method
-
-.method public a(II)V
-    .locals 0
-
-    iput p1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->z:I
-
-    iput p2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->A:I
-
-    return-void
-.end method
-
-.method public a(IZ)V
-    .locals 2
-
-    invoke-super {p0}, Landroid/widget/ViewAnimator;->getInAnimation()Landroid/view/animation/Animation;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    invoke-super {p0}, Landroid/widget/ViewAnimator;->getOutAnimation()Landroid/view/animation/Animation;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    invoke-super {p0, p1}, Landroid/widget/ViewAnimator;->setDisplayedChild(I)V
-
-    :cond_1
-    invoke-direct {p0, p1}, Lcom/estrongs/android/widget/RealViewSwitcher;->d(I)I
-
-    move-result v0
-
-    const/4 v1, -0x1
-
-    if-ne v0, v1, :cond_2
-
-    :goto_0
-    return-void
-
-    :cond_2
-    if-eqz p2, :cond_3
-
-    iput v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->m:I
-
-    :cond_3
-    iput v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->e:I
-
-    iget v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->e:I
-
-    invoke-direct {p0, v0}, Lcom/estrongs/android/widget/RealViewSwitcher;->c(I)I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Lcom/estrongs/android/widget/RealViewSwitcher;->scrollTo(II)V
-
-    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->invalidate()V
-
-    goto :goto_0
-.end method
-
-.method public a(Lcom/estrongs/android/widget/bc;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bc;
-
-    return-void
-.end method
-
-.method public addView(Landroid/view/View;)V
-    .locals 1
-
-    const/4 v0, -0x1
-
-    invoke-virtual {p0, p1, v0}, Lcom/estrongs/android/widget/RealViewSwitcher;->addView(Landroid/view/View;I)V
-
-    return-void
-.end method
-
-.method public addView(Landroid/view/View;I)V
-    .locals 1
-
-    const/4 v0, -0x2
-
-    iput v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->m:I
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->w:Z
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-super {p0, p1, p2}, Landroid/widget/ViewAnimator;->addView(Landroid/view/View;I)V
-
-    invoke-direct {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->f()V
-
-    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->requestLayout()V
-
-    return-void
-.end method
-
-.method public b(I)V
     .locals 6
 
     const/4 v2, 0x0
@@ -677,16 +572,16 @@
     add-int/lit8 v0, v0, -0x1
 
     :goto_1
-    iget-object v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bc;
+    iget-object v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bd;
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bc;
+    iget-object v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bd;
 
-    invoke-interface {v1, v0}, Lcom/estrongs/android/widget/bc;->d(I)V
+    invoke-interface {v1, v0}, Lcom/estrongs/android/widget/bd;->d(I)V
 
     :cond_1
-    invoke-direct {p0, p1}, Lcom/estrongs/android/widget/RealViewSwitcher;->c(I)I
+    invoke-direct {p0, p1}, Lcom/estrongs/android/widget/RealViewSwitcher;->b(I)I
 
     move-result v0
 
@@ -743,10 +638,117 @@
     goto :goto_1
 .end method
 
+.method public a(II)V
+    .locals 0
+
+    iput p1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->A:I
+
+    iput p2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->B:I
+
+    return-void
+.end method
+
+.method public a(IZ)V
+    .locals 2
+
+    invoke-super {p0}, Landroid/widget/ViewAnimator;->getInAnimation()Landroid/view/animation/Animation;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    invoke-super {p0}, Landroid/widget/ViewAnimator;->getOutAnimation()Landroid/view/animation/Animation;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    invoke-super {p0, p1}, Landroid/widget/ViewAnimator;->setDisplayedChild(I)V
+
+    :cond_1
+    invoke-direct {p0, p1}, Lcom/estrongs/android/widget/RealViewSwitcher;->c(I)I
+
+    move-result v0
+
+    const/4 v1, -0x1
+
+    if-ne v0, v1, :cond_2
+
+    :goto_0
+    return-void
+
+    :cond_2
+    if-eqz p2, :cond_3
+
+    iput v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->m:I
+
+    :cond_3
+    iput v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->e:I
+
+    iget v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->e:I
+
+    invoke-direct {p0, v0}, Lcom/estrongs/android/widget/RealViewSwitcher;->b(I)I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Lcom/estrongs/android/widget/RealViewSwitcher;->scrollTo(II)V
+
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->invalidate()V
+
+    goto :goto_0
+.end method
+
+.method public a(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->s:Z
+
+    iput-boolean p1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->g:Z
+
+    return-void
+.end method
+
+.method public addView(Landroid/view/View;)V
+    .locals 1
+
+    const/4 v0, -0x1
+
+    invoke-virtual {p0, p1, v0}, Lcom/estrongs/android/widget/RealViewSwitcher;->addView(Landroid/view/View;I)V
+
+    return-void
+.end method
+
+.method public addView(Landroid/view/View;I)V
+    .locals 1
+
+    const/4 v0, -0x2
+
+    iput v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->m:I
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->x:Z
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-super {p0, p1, p2}, Landroid/widget/ViewAnimator;->addView(Landroid/view/View;I)V
+
+    invoke-direct {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->i()V
+
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->requestLayout()V
+
+    return-void
+.end method
+
 .method public b(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->x:Z
+    iput-boolean p1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->u:Z
 
     return-void
 .end method
@@ -754,9 +756,7 @@
 .method public c(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->r:Z
-
-    iput-boolean p1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->g:Z
+    iput-boolean p1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->t:Z
 
     return-void
 .end method
@@ -818,14 +818,14 @@
     add-int/lit8 v0, v0, -0x1
 
     :goto_1
-    iget-boolean v3, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->v:Z
+    iget-boolean v3, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->w:Z
 
     if-eqz v3, :cond_2
 
     invoke-direct {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->c()V
 
     :cond_2
-    iget-boolean v3, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->u:Z
+    iget-boolean v3, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->v:Z
 
     if-eqz v3, :cond_3
 
@@ -837,15 +837,15 @@
     invoke-virtual {p0, v0, v1}, Lcom/estrongs/android/widget/RealViewSwitcher;->a(IZ)V
 
     :cond_4
-    iget-object v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bc;
+    iget-object v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bd;
 
     if-eqz v0, :cond_5
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bc;
+    iget-object v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bd;
 
     iget v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->e:I
 
-    invoke-interface {v0, v2}, Lcom/estrongs/android/widget/bc;->b(I)V
+    invoke-interface {v0, v2}, Lcom/estrongs/android/widget/bd;->b(I)V
 
     iget v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->m:I
 
@@ -857,16 +857,16 @@
 
     iput v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->m:I
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bc;
+    iget-object v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bd;
 
     iget v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->e:I
 
-    invoke-interface {v0, v2}, Lcom/estrongs/android/widget/bc;->c(I)V
+    invoke-interface {v0, v2}, Lcom/estrongs/android/widget/bd;->c(I)V
 
     :cond_5
     iput v5, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->f:I
 
-    iput-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->y:Z
+    iput-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->z:Z
 
     goto :goto_0
 
@@ -887,31 +887,7 @@
     goto :goto_1
 .end method
 
-.method public d(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->t:Z
-
-    return-void
-.end method
-
-.method public e(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->s:Z
-
-    return-void
-.end method
-
-.method public f(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->B:Z
-
-    return-void
-.end method
-
-.method public g()V
+.method public f()V
     .locals 3
 
     invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->getWidth()I
@@ -935,12 +911,30 @@
     add-int/lit8 v0, v0, -0x1
 
     :cond_0
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/RealViewSwitcher;->b(I)V
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/RealViewSwitcher;->a(I)V
 
     return-void
 .end method
 
-.method public h()I
+.method public g()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->C:Z
+
+    return v0
+.end method
+
+.method public getCurrentChildIndex()I
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->getCurrentScreen()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getCurrentScreen()I
     .locals 1
 
     iget v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->e:I
@@ -948,28 +942,38 @@
     return v0
 .end method
 
-.method public i()I
+.method public getWindowListManager()Lcom/estrongs/android/ui/d/i;
     .locals 1
 
-    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->h()I
+    iget-object v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->r:Landroid/content/Context;
 
-    move-result v0
+    instance-of v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    return v0
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->r:Landroid/content/Context;
+
+    check-cast v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->au()Lcom/estrongs/android/ui/d/i;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    new-instance v0, Lcom/estrongs/android/ui/d/i;
+
+    invoke-direct {v0}, Lcom/estrongs/android/ui/d/i;-><init>()V
+
+    goto :goto_0
 .end method
 
-.method public j()Z
+.method public h()Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->B:Z
-
-    return v0
-.end method
-
-.method public k()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->C:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->D:Z
 
     return v0
 .end method
@@ -1028,7 +1032,7 @@
     :cond_3
     iget v3, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->i:F
 
-    iget v4, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->z:I
+    iget v4, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->A:I
 
     int-to-float v4, v4
 
@@ -1042,7 +1046,7 @@
 
     move-result v4
 
-    iget v5, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->A:I
+    iget v5, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->B:I
 
     sub-int/2addr v4, v5
 
@@ -1090,7 +1094,7 @@
 
     float-to-int v4, v4
 
-    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->j()Z
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->g()Z
 
     move-result v5
 
@@ -1103,7 +1107,7 @@
     if-gtz v5, :cond_0
 
     :cond_5
-    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->k()Z
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->h()Z
 
     move-result v5
 
@@ -1149,18 +1153,18 @@
 
     iput v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->j:I
 
-    iget-object v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bc;
+    iget-object v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bd;
 
     if-eqz v2, :cond_7
 
-    iget-object v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bc;
+    iget-object v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bd;
 
     iget v3, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->e:I
 
-    invoke-interface {v2, v3}, Lcom/estrongs/android/widget/bc;->a(I)V
+    invoke-interface {v2, v3}, Lcom/estrongs/android/widget/bd;->a(I)V
 
     :cond_7
-    iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->y:Z
+    iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->z:Z
 
     goto :goto_1
 
@@ -1182,16 +1186,16 @@
 
     if-eqz v2, :cond_4
 
-    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->g()V
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->f()V
 
     goto :goto_1
 
     :pswitch_1
-    iget-boolean v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->x:Z
+    iget-boolean v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->y:Z
 
     if-eqz v2, :cond_a
 
-    iget-boolean v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->y:Z
+    iget-boolean v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->z:Z
 
     if-eqz v2, :cond_a
 
@@ -1230,7 +1234,7 @@
 
     invoke-virtual {v2}, Landroid/widget/Scroller;->abortAnimation()V
 
-    iput-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->y:Z
+    iput-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->z:Z
 
     :cond_b
     iput v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->j:I
@@ -1238,11 +1242,11 @@
     goto/16 :goto_1
 
     :pswitch_2
-    iget-boolean v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->x:Z
+    iget-boolean v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->y:Z
 
     if-eqz v2, :cond_c
 
-    iget-boolean v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->y:Z
+    iget-boolean v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->z:Z
 
     if-eqz v2, :cond_c
 
@@ -1367,7 +1371,7 @@
 
     if-lt v1, v2, :cond_0
 
-    iget-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->w:Z
+    iget-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->x:Z
 
     if-nez v1, :cond_1
 
@@ -1381,15 +1385,15 @@
     iput-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->g:Z
 
     :cond_1
-    iget-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->w:Z
+    iget-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->x:Z
 
     if-eqz v1, :cond_2
 
     const/4 v1, 0x0
 
-    iput-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->w:Z
+    iput-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->x:Z
 
-    invoke-direct {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->f()V
+    invoke-direct {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->i()V
 
     :cond_2
     iget-boolean v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->n:Z
@@ -1403,7 +1407,7 @@
     :cond_3
     iget v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->e:I
 
-    invoke-direct {p0, v0}, Lcom/estrongs/android/widget/RealViewSwitcher;->c(I)I
+    invoke-direct {p0, v0}, Lcom/estrongs/android/widget/RealViewSwitcher;->b(I)I
 
     move-result v0
 
@@ -1463,7 +1467,7 @@
     const/4 v0, 0x1
 
     :cond_2
-    iget-object v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bc;
+    iget-object v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bd;
 
     if-eqz v1, :cond_3
 
@@ -1471,7 +1475,7 @@
 
     iget v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->e:I
 
-    invoke-direct {p0, v0}, Lcom/estrongs/android/widget/RealViewSwitcher;->c(I)I
+    invoke-direct {p0, v0}, Lcom/estrongs/android/widget/RealViewSwitcher;->b(I)I
 
     move-result v0
 
@@ -1500,11 +1504,11 @@
 
     if-nez v1, :cond_3
 
-    iget-object v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bc;
+    iget-object v1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bd;
 
     iget v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->e:I
 
-    invoke-interface {v1, v2, v0}, Lcom/estrongs/android/widget/bc;->a(IF)V
+    invoke-interface {v1, v2, v0}, Lcom/estrongs/android/widget/bd;->a(IF)V
 
     goto :goto_0
 .end method
@@ -1548,7 +1552,7 @@
     :cond_1
     iget v4, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->i:F
 
-    iget v5, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->z:I
+    iget v5, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->A:I
 
     int-to-float v5, v5
 
@@ -1567,7 +1571,7 @@
 
     move-result v5
 
-    iget v6, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->A:I
+    iget v6, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->B:I
 
     sub-int/2addr v5, v6
 
@@ -1586,11 +1590,11 @@
     goto :goto_0
 
     :pswitch_0
-    iget-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->x:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->y:Z
 
     if-eqz v0, :cond_5
 
-    iget-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->y:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->z:Z
 
     if-eqz v0, :cond_5
 
@@ -1624,7 +1628,7 @@
 
     float-to-int v0, v0
 
-    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->j()Z
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->g()Z
 
     move-result v4
 
@@ -1637,7 +1641,7 @@
     if-gtz v4, :cond_2
 
     :cond_6
-    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->k()Z
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->h()Z
 
     move-result v4
 
@@ -1659,18 +1663,18 @@
     :goto_2
     if-eqz v0, :cond_9
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bc;
+    iget-object v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bd;
 
     if-eqz v0, :cond_8
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bc;
+    iget-object v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bd;
 
     iget v4, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->e:I
 
-    invoke-interface {v0, v4}, Lcom/estrongs/android/widget/bc;->a(I)V
+    invoke-interface {v0, v4}, Lcom/estrongs/android/widget/bd;->a(I)V
 
     :cond_8
-    iput-boolean v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->y:Z
+    iput-boolean v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->z:Z
 
     iput v2, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->j:I
 
@@ -1695,13 +1699,13 @@
 
     iget v5, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->e:I
 
-    invoke-direct {p0, v5}, Lcom/estrongs/android/widget/RealViewSwitcher;->c(I)I
+    invoke-direct {p0, v5}, Lcom/estrongs/android/widget/RealViewSwitcher;->b(I)I
 
     move-result v5
 
     if-ge v0, v5, :cond_b
 
-    iget-boolean v6, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->s:Z
+    iget-boolean v6, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->t:Z
 
     if-nez v6, :cond_b
 
@@ -1717,7 +1721,7 @@
     :cond_b
     if-le v0, v5, :cond_c
 
-    iget-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->t:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->u:Z
 
     if-nez v0, :cond_c
 
@@ -1736,13 +1740,13 @@
 
     add-int v0, v3, v4
 
-    invoke-direct {p0, v1}, Lcom/estrongs/android/widget/RealViewSwitcher;->c(I)I
+    invoke-direct {p0, v1}, Lcom/estrongs/android/widget/RealViewSwitcher;->b(I)I
 
     move-result v5
 
     if-ge v0, v5, :cond_10
 
-    iget-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->u:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->v:Z
 
     if-nez v0, :cond_d
 
@@ -1760,7 +1764,7 @@
 
     :cond_e
     :goto_4
-    iget-object v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bc;
+    iget-object v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bd;
 
     if-eqz v0, :cond_4
 
@@ -1805,13 +1809,13 @@
     goto/16 :goto_1
 
     :cond_10
-    invoke-direct {p0, v2}, Lcom/estrongs/android/widget/RealViewSwitcher;->c(I)I
+    invoke-direct {p0, v2}, Lcom/estrongs/android/widget/RealViewSwitcher;->b(I)I
 
     move-result v5
 
     if-ge v0, v5, :cond_d
 
-    iget-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->v:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->w:Z
 
     if-eqz v0, :cond_d
 
@@ -1832,13 +1836,13 @@
 
     add-int/lit8 v5, v5, -0x1
 
-    invoke-direct {p0, v5}, Lcom/estrongs/android/widget/RealViewSwitcher;->c(I)I
+    invoke-direct {p0, v5}, Lcom/estrongs/android/widget/RealViewSwitcher;->b(I)I
 
     move-result v5
 
     if-le v0, v5, :cond_13
 
-    iget-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->v:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->w:Z
 
     if-nez v0, :cond_12
 
@@ -1851,7 +1855,7 @@
 
     if-lez v0, :cond_16
 
-    iget-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->v:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->w:Z
 
     if-eqz v0, :cond_14
 
@@ -1891,7 +1895,7 @@
 
     add-int/lit8 v5, v5, -0x1
 
-    invoke-direct {p0, v5}, Lcom/estrongs/android/widget/RealViewSwitcher;->c(I)I
+    invoke-direct {p0, v5}, Lcom/estrongs/android/widget/RealViewSwitcher;->b(I)I
 
     move-result v5
 
@@ -1901,7 +1905,7 @@
 
     if-le v0, v5, :cond_12
 
-    iget-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->u:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->v:Z
 
     if-eqz v0, :cond_12
 
@@ -1911,7 +1915,7 @@
 
     :cond_14
     :try_start_1
-    iget-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->u:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->v:Z
 
     if-eqz v0, :cond_15
 
@@ -1919,7 +1923,7 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    invoke-direct {p0, v0}, Lcom/estrongs/android/widget/RealViewSwitcher;->c(I)I
+    invoke-direct {p0, v0}, Lcom/estrongs/android/widget/RealViewSwitcher;->b(I)I
 
     move-result v0
 
@@ -2019,7 +2023,7 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/RealViewSwitcher;->b(I)V
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/RealViewSwitcher;->a(I)V
 
     :goto_8
     iget-object v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->a:Landroid/view/VelocityTracker;
@@ -2081,7 +2085,7 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/RealViewSwitcher;->b(I)V
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/RealViewSwitcher;->a(I)V
 
     goto :goto_8
 
@@ -2090,14 +2094,14 @@
 
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->g()V
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->f()V
 
     move v1, v2
 
     goto/16 :goto_0
 
     :cond_1e
-    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->g()V
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->f()V
 
     goto :goto_8
 
@@ -2111,7 +2115,7 @@
     if-lt v0, v3, :cond_1d
 
     :cond_20
-    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->g()V
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->f()V
 
     goto :goto_8
 
@@ -2120,19 +2124,19 @@
 
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->g()V
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->f()V
 
     move v1, v2
 
     goto/16 :goto_0
 
     :cond_21
-    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->g()V
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->f()V
 
     goto :goto_8
 
     :pswitch_3
-    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->g()V
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->f()V
 
     iget-object v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->a:Landroid/view/VelocityTracker;
 
@@ -2169,13 +2173,55 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->w:Z
+    iput-boolean v0, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->x:Z
 
     invoke-super {p0, p1}, Landroid/widget/ViewAnimator;->removeViewAt(I)V
 
-    invoke-direct {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->f()V
+    invoke-direct {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->i()V
 
     invoke-virtual {p0}, Lcom/estrongs/android/widget/RealViewSwitcher;->requestLayout()V
+
+    return-void
+.end method
+
+.method public setCurrentScreen(I)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, p1, v0}, Lcom/estrongs/android/widget/RealViewSwitcher;->a(IZ)V
+
+    return-void
+.end method
+
+.method public setLeftSlideLock(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->D:Z
+
+    return-void
+.end method
+
+.method public setOnScreenSwitchListener(Lcom/estrongs/android/widget/bd;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->h:Lcom/estrongs/android/widget/bd;
+
+    return-void
+.end method
+
+.method public setRightSlideLock(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->C:Z
+
+    return-void
+.end method
+
+.method public setSwitchControlable(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/estrongs/android/widget/RealViewSwitcher;->y:Z
 
     return-void
 .end method

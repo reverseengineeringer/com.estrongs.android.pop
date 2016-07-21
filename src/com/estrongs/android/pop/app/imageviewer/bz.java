@@ -1,24 +1,22 @@
 package com.estrongs.android.pop.app.imageviewer;
 
-import com.estrongs.android.pop.app.imageviewer.gallery.f;
-
 class bz
   implements Runnable
 {
-  bz(by paramby) {}
+  bz(ViewImage21 paramViewImage21, int paramInt) {}
   
   public void run()
   {
-    if (a.b.a.g != null) {
-      a.b.a.g.e();
-    }
-    if (a.b.a.e.b() == 0)
+    if (a == b.c) {}
+    try
     {
-      a.b.a.finish();
+      b.a(a, ViewImage21.c(b));
       return;
     }
-    a.b.a.a(a.b.a.c, ViewImage21.c(a.b.a));
-    ViewImage21.g(a.b.a).notifyDataSetChanged();
+    catch (Exception localException)
+    {
+      localException.printStackTrace();
+    }
   }
 }
 

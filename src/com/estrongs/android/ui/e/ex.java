@@ -1,27 +1,30 @@
 package com.estrongs.android.ui.e;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
+import android.content.Intent;
+import android.net.Uri;
+import com.estrongs.android.pop.app.imageviewer.CropImage;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.view.ac;
-import com.estrongs.android.view.u;
+import com.estrongs.android.ui.d.g;
+import java.io.File;
 
 class ex
-  implements MenuItem.OnMenuItemClickListener
+  implements Runnable
 {
-  ex(cp paramcp) {}
+  ex(ew paramew, String paramString1, String paramString2) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void run()
   {
-    if (!cp.a(a).H()) {
-      cp.a(a).d(2131428090);
-    }
-    for (;;)
-    {
-      cp.a(a).s();
-      return true;
-      u.a(cp.a(a)).e().c();
-    }
+    Intent localIntent = new Intent(cr.b(c.a), CropImage.class);
+    localIntent.setData(Uri.fromFile(new File(a)));
+    int i = Math.max(g.d, g.e);
+    localIntent.putExtra("outputX", i);
+    localIntent.putExtra("outputY", i);
+    localIntent.putExtra("aspectX", i);
+    localIntent.putExtra("aspectY", i);
+    localIntent.putExtra("scale", true);
+    localIntent.putExtra("noFaceDetection", true);
+    localIntent.putExtra("customSave", b);
+    cr.b(c.a).startActivityForResult(localIntent, 4121);
   }
 }
 

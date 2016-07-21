@@ -27,11 +27,11 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/dialog/bq;->a:Lcom/estrongs/android/ui/dialog/bp;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/bp;->c:Lcom/estrongs/android/ui/dialog/bj;
+    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/bp;->b:Lcom/estrongs/android/ui/dialog/bl;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/bj;->c:Lcom/estrongs/android/ui/dialog/bt;
+    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/bl;->c:Lcom/estrongs/android/ui/dialog/bv;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/bt;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/bv;->notifyDataSetChanged()V
 
     return-void
 .end method

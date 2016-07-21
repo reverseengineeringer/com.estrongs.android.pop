@@ -3,10 +3,12 @@
 
 
 # direct methods
-.method public static a(Landroid/view/ViewGroup;Z)V
-    .locals 0
+.method static a(Landroid/view/MotionEvent;I)F
+    .locals 1
 
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setMotionEventSplittingEnabled(Z)V
+    invoke-virtual {p0, p1}, Landroid/view/MotionEvent;->getAxisValue(I)F
 
-    return-void
+    move-result v0
+
+    return v0
 .end method

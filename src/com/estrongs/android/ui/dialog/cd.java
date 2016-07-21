@@ -1,18 +1,15 @@
 package com.estrongs.android.ui.dialog;
 
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.view.aw;
-
 class cd
   implements Runnable
 {
-  cd(cc paramcc, FileExplorerActivity paramFileExplorerActivity) {}
+  cd(ca paramca, String paramString, boolean paramBoolean) {}
   
   public void run()
   {
-    aw localaw = a.y();
-    if ((localaw != null) && (!localaw.o())) {
-      localaw.b(true);
+    ca.f(c).setMessage(a);
+    if (b) {
+      ca.f(c).setItemsEnable(true);
     }
   }
 }

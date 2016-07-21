@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/ui/dialog/gx;
+.implements Lcom/estrongs/android/ui/pcs/q;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/e/aa;
+.field final synthetic a:Lcom/estrongs/android/ui/e/ac;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/aa;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/ac;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/ad;->a:Lcom/estrongs/android/ui/e/aa;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/ad;->a:Lcom/estrongs/android/ui/e/ac;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,105 +22,69 @@
 
 
 # virtual methods
-.method public a(I)V
-    .locals 5
+.method public a(ZLjava/lang/String;Ljava/lang/String;)V
+    .locals 4
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/ad;->a:Lcom/estrongs/android/ui/e/aa;
+    const/4 v2, 0x0
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/aa;->a:Lcom/estrongs/android/ui/e/w;
+    invoke-static {}, Lcom/estrongs/android/ui/pcs/u;->a()Lcom/estrongs/android/ui/pcs/u;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/w;->k:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->y()Lcom/estrongs/android/view/aw;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/u;->i()Lcom/estrongs/android/ui/pcs/q;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/ad;->a:Lcom/estrongs/android/ui/e/aa;
+    if-eqz p3, :cond_1
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/aa;->a:Lcom/estrongs/android/ui/e/w;
-
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/w;->b:Landroid/content/Context;
-
-    invoke-virtual {v1}, Lcom/estrongs/android/view/aw;->c()Ljava/lang/String;
-
-    move-result-object v2
-
-    rem-int/lit8 v3, p1, 0x4
-
-    div-int/lit8 v4, p1, 0x4
-
-    invoke-static {v0, v2, v3, v4}, Lcom/estrongs/android/pop/view/utils/ac;->a(Landroid/content/Context;Ljava/lang/String;II)V
-
-    invoke-virtual {v1}, Lcom/estrongs/android/view/aw;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/u;->i()Lcom/estrongs/android/ui/pcs/q;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->Y(Ljava/lang/String;)Z
+    const/4 v1, 0x1
 
-    move-result v0
+    invoke-interface {v0, v1, v2, p3}, Lcom/estrongs/android/ui/pcs/q;->a(ZLjava/lang/String;Ljava/lang/String;)V
 
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v1}, Lcom/estrongs/android/view/aw;->c()Ljava/lang/String;
+    invoke-static {}, Lcom/estrongs/fs/impl/pcs/b;->a()Lcom/estrongs/fs/impl/pcs/b;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->af(Ljava/lang/String;)Z
+    sget-object v1, Lcom/estrongs/fs/w;->P:Lcom/estrongs/fs/w;
 
-    move-result v0
+    invoke-virtual {v0, v1}, Lcom/estrongs/fs/impl/pcs/b;->setFileType(Lcom/estrongs/fs/w;)V
 
-    if-nez v0, :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/ad;->a:Lcom/estrongs/android/ui/e/ac;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/ad;->a:Lcom/estrongs/android/ui/e/aa;
+    iget-object v0, v0, Lcom/estrongs/android/ui/e/ac;->a:Lcom/estrongs/android/ui/e/m;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/aa;->a:Lcom/estrongs/android/ui/e/w;
-
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/w;->k:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->m:Lcom/estrongs/android/pop/ad;
-
-    invoke-virtual {v1}, Lcom/estrongs/android/view/aw;->c()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/pop/ad;->A(Ljava/lang/String;)Lcom/estrongs/fs/util/a/a;
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/m;->a(Lcom/estrongs/android/ui/e/m;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
-    :goto_0
-    invoke-virtual {v1, v0}, Lcom/estrongs/android/view/aw;->b(Lcom/estrongs/fs/util/a/a;)V
+    invoke-static {v0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+
+    move-result-object v0
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/pop/ad;->e(J)V
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/ad;->a:Lcom/estrongs/android/ui/e/aa;
-
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/aa;->a:Lcom/estrongs/android/ui/e/w;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/w;->h(Lcom/estrongs/android/ui/e/w;)Lcom/estrongs/android/ui/dialog/gs;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/gs;->dismiss()V
-
+    :goto_0
     return-void
 
     :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/ad;->a:Lcom/estrongs/android/ui/e/aa;
-
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/aa;->a:Lcom/estrongs/android/ui/e/w;
-
-    iget-object v0, v0, Lcom/estrongs/android/ui/e/w;->k:Lcom/estrongs/android/pop/view/FileExplorerActivity;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/view/FileExplorerActivity;->m:Lcom/estrongs/android/pop/ad;
-
-    invoke-virtual {v1}, Lcom/estrongs/android/view/aw;->c()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/pop/ad;->z(Ljava/lang/String;)Lcom/estrongs/fs/util/a/a;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/u;->i()Lcom/estrongs/android/ui/pcs/q;
 
     move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, v1, v2, v2}, Lcom/estrongs/android/ui/pcs/q;->a(ZLjava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

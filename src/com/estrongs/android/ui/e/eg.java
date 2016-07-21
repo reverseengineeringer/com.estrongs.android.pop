@@ -1,20 +1,19 @@
 package com.estrongs.android.ui.e;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.view.a.b;
 
 class eg
-  implements MenuItem.OnMenuItemClickListener
+  implements b
 {
-  eg(cp paramcp) {}
+  eg(cr paramcr) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public boolean a(cp paramcp)
   {
-    cp.a(cp.a(a), false, bd.a(cp.b(a)));
-    cp.a(a).s();
-    return true;
+    if ((e) || (L) || (I) || (J) || (K) || (l) || (h) || (((f) || (y) || (g)) && (!d))) {}
+    while ((B) || (n) || (i) || (j) || (k) || (q)) {
+      return true;
+    }
+    return false;
   }
 }
 

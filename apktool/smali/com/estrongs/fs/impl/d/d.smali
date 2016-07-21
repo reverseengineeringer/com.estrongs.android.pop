@@ -1,175 +1,136 @@
-.class public abstract Lcom/estrongs/fs/impl/d/d;
-.super Lcom/estrongs/fs/a;
+.class public Lcom/estrongs/fs/impl/d/d;
+.super Lcom/estrongs/fs/impl/media/e;
 
 
-# instance fields
-.field private a:Lcom/estrongs/fs/h;
+# static fields
+.field private static a:Lcom/estrongs/fs/impl/d/d;
 
 
 # direct methods
-.method public constructor <init>(Lcom/estrongs/fs/h;)V
-    .locals 1
+.method private constructor <init>()V
+    .locals 0
 
-    invoke-direct {p0}, Lcom/estrongs/fs/a;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/estrongs/fs/impl/d/d;->a:Lcom/estrongs/fs/h;
-
-    invoke-interface {p1}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/fs/impl/d/d;->absolutePath:Ljava/lang/String;
-
-    iput-object p1, p0, Lcom/estrongs/fs/impl/d/d;->a:Lcom/estrongs/fs/h;
-
-    invoke-interface {p1}, Lcom/estrongs/fs/h;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/fs/impl/d/d;->name:Ljava/lang/String;
+    invoke-direct {p0}, Lcom/estrongs/fs/impl/media/e;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method protected abstract a()Ljava/lang/String;
-.end method
-
-.method protected doGetFileType()Lcom/estrongs/fs/m;
+.method public static b()Lcom/estrongs/fs/impl/d/d;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/fs/impl/d/d;->a:Lcom/estrongs/fs/h;
+    sget-object v0, Lcom/estrongs/fs/impl/d/d;->a:Lcom/estrongs/fs/impl/d/d;
 
-    invoke-interface {v0}, Lcom/estrongs/fs/h;->getFileType()Lcom/estrongs/fs/m;
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcom/estrongs/fs/impl/d/d;
+
+    invoke-direct {v0}, Lcom/estrongs/fs/impl/d/d;-><init>()V
+
+    sput-object v0, Lcom/estrongs/fs/impl/d/d;->a:Lcom/estrongs/fs/impl/d/d;
+
+    :cond_0
+    sget-object v0, Lcom/estrongs/fs/impl/d/d;->a:Lcom/estrongs/fs/impl/d/d;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method protected a(Lcom/estrongs/fs/impl/local/f;)Lcom/estrongs/fs/h;
+    .locals 1
+
+    new-instance v0, Lcom/estrongs/fs/impl/f/a;
+
+    invoke-direct {v0, p1}, Lcom/estrongs/fs/impl/f/a;-><init>(Lcom/estrongs/fs/h;)V
+
+    return-object v0
+.end method
+
+.method protected a()Ljava/lang/String;
+    .locals 6
+
+    invoke-static {}, Lcom/estrongs/android/util/bg;->e()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/m;->a()Z
+    if-nez v0, :cond_0
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lcom/estrongs/fs/m;->a:Lcom/estrongs/fs/m;
+    const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
     :cond_0
-    sget-object v0, Lcom/estrongs/fs/m;->b:Lcom/estrongs/fs/m;
+    const-string v1, ";"
 
-    goto :goto_0
-.end method
-
-.method public exists()Z
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/fs/impl/d/d;->a:Lcom/estrongs/fs/h;
-
-    invoke-interface {v0}, Lcom/estrongs/fs/h;->exists()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public getPath()Ljava/lang/String;
-    .locals 4
-
-    iget-object v0, p0, Lcom/estrongs/fs/impl/d/d;->path:Ljava/lang/String;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p0}, Lcom/estrongs/fs/impl/d/d;->a()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuffer;
 
-    move-result-object v0
+    invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
 
-    iget-object v1, p0, Lcom/estrongs/fs/impl/d/d;->a:Lcom/estrongs/fs/h;
+    const/4 v0, 0x0
 
-    invoke-interface {v1}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
+    :goto_1
+    array-length v3, v1
 
-    move-result-object v1
+    if-ge v0, v3, :cond_2
 
-    const/4 v2, 0x1
+    if-lez v0, :cond_1
 
-    iget-object v3, p0, Lcom/estrongs/fs/impl/d/d;->a:Lcom/estrongs/fs/h;
+    const-string v3, " or "
 
-    invoke-interface {v3}, Lcom/estrongs/fs/h;->getAbsolutePath()Ljava/lang/String;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    :cond_1
+    const-string v3, "_data"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
+    const-string v4, " like "
 
-    move-result v3
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-virtual {v1, v2, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    move-result-object v3
 
-    move-result-object v1
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "%"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    aget-object v5, v1, v0
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Landroid/database/DatabaseUtils;->sqlEscapeString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {v2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/fs/impl/d/d;->path:Ljava/lang/String;
-
-    :cond_0
-    invoke-super {p0}, Lcom/estrongs/fs/a;->getPath()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public lastModified()J
-    .locals 2
-
-    iget-object v0, p0, Lcom/estrongs/fs/impl/d/d;->a:Lcom/estrongs/fs/h;
-
-    invoke-interface {v0}, Lcom/estrongs/fs/h;->lastModified()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public length()J
-    .locals 2
-
-    iget-object v0, p0, Lcom/estrongs/fs/impl/d/d;->a:Lcom/estrongs/fs/h;
-
-    invoke-interface {v0}, Lcom/estrongs/fs/h;->length()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public setName(Ljava/lang/String;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/fs/impl/d/d;->path:Ljava/lang/String;
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Lcom/estrongs/fs/impl/d/d;->getPath()Ljava/lang/String;
-
-    :cond_0
-    invoke-super {p0, p1}, Lcom/estrongs/fs/a;->setName(Ljava/lang/String;)V
-
-    return-void
+    goto :goto_0
 .end method

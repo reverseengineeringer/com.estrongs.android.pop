@@ -1,19 +1,27 @@
-.class Lcom/estrongs/android/pop/app/a/j;
+.class final Lcom/estrongs/android/pop/app/a/j;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/a/e;
+.field final synthetic a:Landroid/app/Dialog;
+
+.field final synthetic b:I
+
+.field final synthetic c:Landroid/support/v7/widget/SwitchCompat;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/a/e;)V
+.method constructor <init>(Landroid/app/Dialog;ILandroid/support/v7/widget/SwitchCompat;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/a/j;->a:Lcom/estrongs/android/pop/app/a/e;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/a/j;->a:Landroid/app/Dialog;
+
+    iput p2, p0, Lcom/estrongs/android/pop/app/a/j;->b:I
+
+    iput-object p3, p0, Lcom/estrongs/android/pop/app/a/j;->c:Landroid/support/v7/widget/SwitchCompat;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,34 +30,69 @@
 
 
 # virtual methods
-.method public onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 1
+.method public onClick(Landroid/view/View;)V
+    .locals 4
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/a/j;->a:Lcom/estrongs/android/pop/app/a/e;
+    const/4 v1, 0x1
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/a/e;->a(Lcom/estrongs/android/pop/app/a/e;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/a/j;->a:Landroid/app/Dialog;
 
-    move-result-object v0
+    invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->p()V
+    iget v0, p0, Lcom/estrongs/android/pop/app/a/j;->b:I
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/a/j;->a:Lcom/estrongs/android/pop/app/a/e;
+    if-ne v0, v1, :cond_0
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/a/e;->b(Lcom/estrongs/android/pop/app/a/e;)Lcom/estrongs/android/ui/e/iw;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/a/j;->c:Landroid/support/v7/widget/SwitchCompat;
 
-    move-result-object v0
+    invoke-virtual {v0}, Landroid/support/v7/widget/SwitchCompat;->isChecked()Z
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/e/iw;->d()V
+    move-result v0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/a/j;->a:Lcom/estrongs/android/pop/app/a/e;
+    if-eqz v0, :cond_1
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/a/e;->a(Lcom/estrongs/android/pop/app/a/e;)Lcom/estrongs/android/pop/app/PopAudioPlayer;
+    const-string v0, "newuser_1"
 
-    move-result-object v0
+    invoke-static {v1, v0}, Lcom/estrongs/android/pop/app/a/a;->a(ZLjava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopAudioPlayer;->finish()V
+    :cond_0
+    :goto_0
+    return-void
 
-    const/4 v0, 0x1
+    :cond_1
+    :try_start_0
+    const-string v0, "charge_new_user"
 
-    return v0
+    new-instance v1, Lorg/json/JSONObject;
+
+    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+
+    const-string v2, "event"
+
+    const-string v3, "user_closed"
+
+    invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/estrongs/android/j/c;->a(Landroid/content/Context;)Lcom/estrongs/android/j/c;
+
+    move-result-object v2
+
+    const-string v3, "charge"
+
+    invoke-virtual {v2, v3, v0, v1}, Lcom/estrongs/android/j/c;->a(Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    goto :goto_0
 .end method

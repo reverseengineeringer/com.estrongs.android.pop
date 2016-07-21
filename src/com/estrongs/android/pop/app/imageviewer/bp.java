@@ -1,23 +1,18 @@
 package com.estrongs.android.pop.app.imageviewer;
 
-import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
-import android.widget.ImageView;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class bp
-  implements Animation.AnimationListener
+  implements DialogInterface.OnClickListener
 {
   bp(ViewImage21 paramViewImage21) {}
   
-  public void onAnimationEnd(Animation paramAnimation)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    ((ImageView)a.h.findViewById(2131361853)).setImageResource(2130838203);
+    a.d();
+    paramDialogInterface.dismiss();
   }
-  
-  public void onAnimationRepeat(Animation paramAnimation) {}
-  
-  public void onAnimationStart(Animation paramAnimation) {}
 }
 
 /* Location:

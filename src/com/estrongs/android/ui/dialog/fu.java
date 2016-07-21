@@ -1,16 +1,28 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.content.Context;
+import android.content.Intent;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import com.estrongs.android.ui.adapter.d;
+import com.estrongs.android.ui.view.CreateOAuthServiceProvider;
 
 class fu
-  implements DialogInterface.OnClickListener
+  implements AdapterView.OnItemClickListener
 {
-  fu(fs paramfs) {}
+  fu(ft paramft) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    paramDialogInterface.dismiss();
+    paramAdapterView = (d)paramAdapterView.getAdapter();
+    paramAdapterView.a(paramInt);
+    paramAdapterView.b(paramInt);
+    paramAdapterView = paramAdapterView.c(paramInt);
+    paramView = new Intent(a.mContext, CreateOAuthServiceProvider.class);
+    paramView.putExtra("nettype", paramAdapterView);
+    a.mContext.startActivity(paramView);
+    a.dismiss();
   }
 }
 

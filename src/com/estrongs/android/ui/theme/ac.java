@@ -1,20 +1,15 @@
 package com.estrongs.android.ui.theme;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.ui.view.ag;
+import com.estrongs.android.ui.view.a;
 
 class ac
-  implements MenuItem.OnMenuItemClickListener
+  implements a
 {
-  ac(ThemeFolderActivity paramThemeFolderActivity) {}
+  ac(ThemeColorActivity paramThemeColorActivity) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void a(int paramInt)
   {
-    ThemeFolderActivity.b(a);
-    ag.a(a, 2131427818, 0);
-    a.finish();
-    return false;
+    ThemeColorActivity.a(a, true);
   }
 }
 

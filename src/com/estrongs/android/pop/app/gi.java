@@ -1,16 +1,15 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.pop.app.c.m;
 
 class gi
-  implements DialogInterface.OnClickListener
+  extends Thread
 {
-  gi(gh paramgh) {}
+  gi(PopAudioPlayer paramPopAudioPlayer, m paramm) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void run()
   {
-    paramDialogInterface.dismiss();
+    a.e();
   }
 }
 

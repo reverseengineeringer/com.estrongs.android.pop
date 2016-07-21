@@ -1,16 +1,24 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.pop.view.FileExplorerActivity;
 
 class hn
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
-  hn(PopPreferenceActivity paramPopPreferenceActivity) {}
+  hn(hm paramhm) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void run()
   {
-    paramDialogInterface.dismiss();
+    try
+    {
+      FileExplorerActivity.X().ah();
+      a.a.finish();
+      return;
+    }
+    catch (Exception localException)
+    {
+      for (;;) {}
+    }
   }
 }
 

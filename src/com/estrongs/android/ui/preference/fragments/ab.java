@@ -1,19 +1,17 @@
 package com.estrongs.android.ui.preference.fragments;
 
-import android.app.Activity;
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class ab
-  implements Preference.OnPreferenceChangeListener
+  implements DialogInterface.OnClickListener
 {
-  ab(DisplayPreferenceFragment paramDisplayPreferenceFragment) {}
+  ab(DirectoryPreferenceFragment paramDirectoryPreferenceFragment) {}
   
-  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    DisplayPreferenceFragment.a(a).onPreferenceChange(paramPreference, paramObject);
-    a.getActivity().finish();
-    return true;
+    DirectoryPreferenceFragment.f(a);
+    paramDialogInterface.dismiss();
   }
 }
 

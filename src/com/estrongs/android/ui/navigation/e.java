@@ -1,36 +1,19 @@
 package com.estrongs.android.ui.navigation;
 
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.os.Handler;
-import android.os.Message;
 
 class e
-  extends Handler
+  implements DialogInterface.OnClickListener
 {
-  e(a parama) {}
+  e(c paramc) {}
   
-  public void handleMessage(Message paramMessage)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    super.handleMessage(paramMessage);
-    Message localMessage = new Message();
-    what = what;
-    arg1 = arg1;
-    if ((what == 1) && (arg1 == com.estrongs.android.ui.d.e.a())) {}
-    for (int i = 0;; i = 1)
-    {
-      if (what == 1) {
-        if (i != 0) {
-          a.a(new f(this, localMessage));
-        }
-      }
-      while (i == 0)
-      {
-        return;
-        a.a(null);
-        return;
-      }
-      a.d(a).sendMessage(localMessage);
-      return;
-    }
+    paramDialogInterface.dismiss();
+    a.a.finish();
+    MultiWindowActivity.b(a.a).post(new f(this));
   }
 }
 

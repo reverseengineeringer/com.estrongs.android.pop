@@ -19,7 +19,7 @@
 .method public run()V
     .locals 1
 
-    invoke-static {}, Lcom/estrongs/fs/impl/r/b;->b()V
+    invoke-static {}, Lcom/estrongs/fs/impl/w/b;->b()V
 
     invoke-static {}, Lcom/estrongs/old/fs/impl/a/c;->b()Lcom/estrongs/old/fs/a;
 

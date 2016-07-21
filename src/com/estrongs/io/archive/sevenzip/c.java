@@ -2,10 +2,10 @@ package com.estrongs.io.archive.sevenzip;
 
 import android.content.res.Resources;
 import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bc;
-import com.estrongs.fs.impl.local.l;
-import com.estrongs.fs.impl.local.r;
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.bg;
+import com.estrongs.fs.impl.local.m;
+import com.estrongs.fs.impl.local.s;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -56,7 +56,7 @@ public class c
     if (paramString != null)
     {
       paramString = " -p" + a(paramString) + " ";
-      paramString = am.j() + "/p7za l -detect " + paramString + a(g);
+      paramString = ap.j() + "/p7za l -detect " + paramString + a(g);
       paramString = paramString + "\n";
       c.b.write(paramString);
       c.b.flush();
@@ -77,7 +77,7 @@ public class c
             break;
           }
           if (paramString.contains("Wrong password?")) {
-            throw new IOException(FexApplication.a().getResources().getString(2131427897));
+            throw new IOException(FexApplication.a().getResources().getString(2131231784));
           }
         }
       }
@@ -111,7 +111,7 @@ public class c
             if ((d == null) || (d.length() == 0)) {
               break label317;
             }
-            paramString = am.j() + "/p7za l " + (String)localObject + " -charset " + d + paramString + a(g);
+            paramString = ap.j() + "/p7za l " + (String)localObject + " -charset " + d + paramString + a(g);
             paramString = paramString + "\n";
             c.b.write(paramString);
             c.b.flush();
@@ -147,15 +147,15 @@ public class c
         localObject = " -zipf ";
         continue;
         label317:
-        paramString = am.j() + "/p7za l " + (String)localObject + paramString + a(g);
+        paramString = ap.j() + "/p7za l " + (String)localObject + paramString + a(g);
         continue;
         label360:
         if (paramString.contains("Wrong password?")) {
-          throw new IOException(FexApplication.a().getResources().getString(2131427897));
+          throw new IOException(FexApplication.a().getResources().getString(2131231784));
         }
         if (i1 == 1)
         {
-          if (bc.p(g))
+          if (bg.p(g))
           {
             localObject = new d();
             d = paramString.substring(53).trim();
@@ -175,7 +175,7 @@ public class c
         if (i1 != 2) {
           continue;
         }
-        if (!bc.p(g)) {
+        if (!bg.p(g)) {
           f = Long.parseLong(paramString.substring(26, 39).trim());
         }
       }
@@ -234,7 +234,7 @@ public class c
           paramString1 = " -7za ";
           if (d != null)
           {
-            paramString1 = am.j() + "/p7za x " + paramString1 + " -charset " + d + " ";
+            paramString1 = ap.j() + "/p7za x " + paramString1 + " -charset " + d + " ";
             if (paramString2 == null) {
               continue;
             }
@@ -257,7 +257,7 @@ public class c
           paramString1 = " -zipf ";
           continue;
         }
-        paramString1 = am.j() + "/p7za x " + paramString1;
+        paramString1 = ap.j() + "/p7za x " + paramString1;
         continue;
         paramString1 = paramString1 + "-o" + a(str1) + " -y " + a(str3);
         break label742;
@@ -312,7 +312,7 @@ public class c
             if (!paramList.contains("Wrong password?")) {
               break label739;
             }
-            paramString1 = FexApplication.a().getResources().getString(2131427897);
+            paramString1 = FexApplication.a().getResources().getString(2131231784);
             break label754;
           }
           if (paramList.startsWith("&&&&&&"))
@@ -373,13 +373,13 @@ public class c
     {
       try
       {
-        localr = l.e();
+        locals = m.e();
         String str = g;
         if (paramString == null) {
           continue;
         }
         paramString = " -p" + a(paramString) + " ";
-        paramString = am.j() + "/p7za l -y " + paramString + a(str);
+        paramString = ap.j() + "/p7za l -y " + paramString + a(str);
         paramString = paramString + "\n";
         b.write(paramString);
         b.flush();
@@ -397,7 +397,7 @@ public class c
       }
       catch (Exception paramString)
       {
-        r localr;
+        s locals;
         int i1;
         bool1 = true;
         continue;
@@ -431,9 +431,9 @@ public class c
     {
       try
       {
-        r localr = l.e();
+        s locals = m.e();
         String str = g;
-        str = am.j() + "/p7za t " + a(str);
+        str = ap.j() + "/p7za t " + a(str);
         str = str + "\n";
         b.write(str);
         b.flush();
@@ -476,9 +476,9 @@ public class c
     {
       try
       {
-        r localr = l.e();
+        s locals = m.e();
         String str = g;
-        str = am.j() + "/p7za l " + a(str);
+        str = ap.j() + "/p7za l " + a(str);
         str = str + "\n";
         b.write(str);
         b.flush();

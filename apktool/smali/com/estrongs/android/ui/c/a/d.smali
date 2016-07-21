@@ -2,65 +2,45 @@
 .super Lcom/estrongs/android/ui/c/a/a;
 
 
-# static fields
-.field public static c:I
-
-
 # instance fields
-.field private d:Landroid/widget/ImageView;
+.field private c:Landroid/widget/TextView;
+
+.field private d:Lcom/estrongs/android/ui/view/HomeSdcardProgressView;
 
 .field private e:Landroid/widget/TextView;
 
 .field private f:Landroid/widget/TextView;
 
-.field private g:Landroid/view/View;
+.field private g:Landroid/widget/TextView;
 
 .field private h:Ljava/lang/String;
 
-.field private i:I
+.field private i:Ljava/lang/String;
 
-.field private j:Ljava/lang/String;
+.field private j:J
 
-.field private k:I
+.field private k:J
 
 .field private l:Landroid/view/View$OnClickListener;
 
 .field private m:Z
 
+.field private n:I
+
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    sput v0, Lcom/estrongs/android/ui/c/a/d;->c:I
-
-    return-void
-.end method
-
 .method public constructor <init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
     .locals 1
 
-    invoke-direct {p0, p1}, Lcom/estrongs/android/ui/c/a/a;-><init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lcom/estrongs/android/ui/c/a/d;->k:I
-
     const/4 v0, 0x0
+
+    invoke-direct {p0, p1}, Lcom/estrongs/android/ui/c/a/a;-><init>(Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
 
     iput-boolean v0, p0, Lcom/estrongs/android/ui/c/a/d;->m:Z
 
+    iput v0, p0, Lcom/estrongs/android/ui/c/a/d;->n:I
+
     return-void
-.end method
-
-.method static synthetic a(Lcom/estrongs/android/ui/c/a/d;)Landroid/widget/ImageView;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->d:Landroid/widget/ImageView;
-
-    return-object v0
 .end method
 
 
@@ -73,12 +53,130 @@
     return-object v0
 .end method
 
-.method public a(I)V
-    .locals 0
+.method public a(JJ)V
+    .locals 5
 
-    iput p1, p0, Lcom/estrongs/android/ui/c/a/d;->i:I
+    const-wide/16 v2, 0x0
 
+    iput-wide p1, p0, Lcom/estrongs/android/ui/c/a/d;->j:J
+
+    iput-wide p3, p0, Lcom/estrongs/android/ui/c/a/d;->k:J
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->e:Landroid/widget/TextView;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->f:Landroid/widget/TextView;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->h:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->aH(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    cmp-long v0, p3, v2
+
+    if-gtz v0, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->e:Landroid/widget/TextView;
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->f:Landroid/widget/TextView;
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->g:Landroid/widget/TextView;
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    :cond_0
+    :goto_0
     return-void
+
+    :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->g:Landroid/widget/TextView;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    cmp-long v0, p1, v2
+
+    if-ltz v0, :cond_2
+
+    cmp-long v0, p3, v2
+
+    if-gez v0, :cond_3
+
+    :cond_2
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->e:Landroid/widget/TextView;
+
+    const-string v1, "0"
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->f:Landroid/widget/TextView;
+
+    const-string v1, "0"
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_0
+
+    :cond_3
+    const-wide/32 v0, 0x7fffffff
+
+    cmp-long v0, p3, v0
+
+    if-lez v0, :cond_4
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->e:Landroid/widget/TextView;
+
+    invoke-static {p1, p2}, Lcom/estrongs/fs/util/j;->c(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->f:Landroid/widget/TextView;
+
+    invoke-static {p3, p4}, Lcom/estrongs/fs/util/j;->c(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->e:Landroid/widget/TextView;
+
+    invoke-static {p1, p2}, Lcom/estrongs/fs/util/j;->c(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->f:Landroid/widget/TextView;
+
+    invoke-static {p3, p4}, Lcom/estrongs/fs/util/j;->c(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_0
 .end method
 
 .method public a(Landroid/view/View$OnClickListener;)V
@@ -92,78 +190,134 @@
 .method public a(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/c/a/d;->j:Ljava/lang/String;
+    iput-object p1, p0, Lcom/estrongs/android/ui/c/a/d;->i:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public b(I)V
-    .locals 3
+.method public b(JJ)V
+    .locals 1
 
-    iput p1, p0, Lcom/estrongs/android/ui/c/a/d;->k:I
+    iput-wide p1, p0, Lcom/estrongs/android/ui/c/a/d;->j:J
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->f:Landroid/widget/TextView;
+    iput-wide p3, p0, Lcom/estrongs/android/ui/c/a/d;->k:J
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->d:Lcom/estrongs/android/ui/view/HomeSdcardProgressView;
 
     if-eqz v0, :cond_0
 
-    const/4 v0, -0x1
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->d:Lcom/estrongs/android/ui/view/HomeSdcardProgressView;
 
-    if-ne p1, v0, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->f:Landroid/widget/TextView;
-
-    const-string v1, "0"
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/estrongs/android/ui/view/HomeSdcardProgressView;->a(JJ)V
 
     :cond_0
-    :goto_0
     return-void
-
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->f:Landroid/widget/TextView;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, ""
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    goto :goto_0
 .end method
 
 .method protected b(Landroid/view/View;)V
-    .locals 3
+    .locals 6
+
+    const-wide/16 v4, 0x0
 
     iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->b:Landroid/view/View;
 
-    const v1, 0x7f0a003d
+    const v1, 0x7f0e00c7
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/ImageView;
+    check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->d:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->c:Landroid/widget/TextView;
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->c:Landroid/widget/TextView;
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/c/a/d;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    invoke-static {v1}, Lcom/estrongs/android/ui/theme/at;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/at;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/estrongs/android/ui/theme/at;->i()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
     iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->b:Landroid/view/View;
 
-    const v1, 0x7f0a0010
+    const v1, 0x7f0e022d
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/android/ui/view/HomeSdcardProgressView;
+
+    iput-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->d:Lcom/estrongs/android/ui/view/HomeSdcardProgressView;
+
+    invoke-static {}, Lcom/estrongs/android/pop/b;->b()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/c/a/d;->h:Ljava/lang/String;
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->d:Lcom/estrongs/android/ui/view/HomeSdcardProgressView;
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/c/a/d;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f0d00d3
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/HomeSdcardProgressView;->setProgressColor(I)V
+
+    :goto_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->h:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bl(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->h:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bL(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->b:Landroid/view/View;
+
+    const v1, 0x7f0201d9
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
+
+    :goto_1
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->b:Landroid/view/View;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setFocusable(Z)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->b:Landroid/view/View;
+
+    const v1, 0x7f0e022e
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -175,7 +329,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->b:Landroid/view/View;
 
-    const v1, 0x7f0a00bf
+    const v1, 0x7f0e0230
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -187,109 +341,168 @@
 
     iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->b:Landroid/view/View;
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->g:Landroid/view/View;
+    const v1, 0x7f0e022f
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->g:Landroid/view/View;
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    const v1, 0x7f020038
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
+    check-cast v0, Landroid/widget/TextView;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->d:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->g:Landroid/widget/TextView;
 
-    iget v1, p0, Lcom/estrongs/android/ui/c/a/d;->i:I
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->c:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->e:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/c/a/d;->j:Ljava/lang/String;
+    iget-object v1, p0, Lcom/estrongs/android/ui/c/a/d;->i:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    iget-wide v0, p0, Lcom/estrongs/android/ui/c/a/d;->j:J
+
+    cmp-long v0, v0, v4
+
+    if-ltz v0, :cond_0
+
+    iget-wide v0, p0, Lcom/estrongs/android/ui/c/a/d;->k:J
+
+    cmp-long v0, v0, v4
+
+    if-gez v0, :cond_4
+
+    :cond_0
     iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->e:Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/c/a/d;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    const-string v1, "0"
 
-    invoke-static {v1}, Lcom/estrongs/android/ui/theme/al;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    move-result-object v1
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->f:Landroid/widget/TextView;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/ui/theme/al;->i()I
+    const-string v1, "0"
 
-    move-result v1
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+    :goto_2
+    iget-wide v0, p0, Lcom/estrongs/android/ui/c/a/d;->j:J
 
-    iget v0, p0, Lcom/estrongs/android/ui/c/a/d;->k:I
+    cmp-long v0, v0, v4
 
-    const/4 v1, -0x1
+    if-ltz v0, :cond_1
 
-    if-ne v0, v1, :cond_2
+    iget-wide v0, p0, Lcom/estrongs/android/ui/c/a/d;->k:J
 
-    :goto_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->g:Landroid/view/View;
+    cmp-long v0, v0, v4
+
+    if-gez v0, :cond_6
+
+    :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->d:Lcom/estrongs/android/ui/view/HomeSdcardProgressView;
+
+    const-wide/16 v2, 0x64
+
+    invoke-virtual {v0, v4, v5, v2, v3}, Lcom/estrongs/android/ui/view/HomeSdcardProgressView;->a(JJ)V
+
+    :goto_3
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->b:Landroid/view/View;
 
     iget-object v1, p0, Lcom/estrongs/android/ui/c/a/d;->l:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-boolean v0, p0, Lcom/estrongs/android/ui/c/a/d;->m:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->e:Landroid/widget/TextView;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->d:Landroid/widget/ImageView;
-
-    instance-of v0, v0, Lcom/estrongs/android/pop/esclasses/ESImageView;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->d:Landroid/widget/ImageView;
-
-    check-cast v0, Lcom/estrongs/android/pop/esclasses/ESImageView;
-
-    new-instance v1, Lcom/estrongs/android/ui/c/a/e;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/c/a/e;-><init>(Lcom/estrongs/android/ui/c/a/d;)V
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/esclasses/ESImageView;->a(Lcom/estrongs/android/pop/esclasses/d;)V
-
-    :cond_1
     return-void
 
     :cond_2
-    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->f:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->d:Lcom/estrongs/android/ui/view/HomeSdcardProgressView;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lcom/estrongs/android/ui/c/a/d;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, ""
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    iget v2, p0, Lcom/estrongs/android/ui/c/a/d;->k:I
+    const v2, 0x7f0d00d2
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
-    move-result-object v1
+    move-result v1
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/HomeSdcardProgressView;->setProgressColor(I)V
+
+    goto/16 :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->b:Landroid/view/View;
+
+    const v1, 0x7f0200b9
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
+
+    goto/16 :goto_1
+
+    :cond_4
+    iget-wide v0, p0, Lcom/estrongs/android/ui/c/a/d;->k:J
+
+    const-wide/32 v2, 0x7fffffff
+
+    cmp-long v0, v0, v2
+
+    if-lez v0, :cond_5
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->e:Landroid/widget/TextView;
+
+    iget-wide v2, p0, Lcom/estrongs/android/ui/c/a/d;->j:J
+
+    invoke-static {v2, v3}, Lcom/estrongs/fs/util/j;->c(J)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->f:Landroid/widget/TextView;
+
+    iget-wide v2, p0, Lcom/estrongs/android/ui/c/a/d;->k:J
+
+    invoke-static {v2, v3}, Lcom/estrongs/fs/util/j;->c(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_2
+
+    :cond_5
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->e:Landroid/widget/TextView;
+
+    iget-wide v2, p0, Lcom/estrongs/android/ui/c/a/d;->j:J
+
+    invoke-static {v2, v3}, Lcom/estrongs/fs/util/j;->c(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->f:Landroid/widget/TextView;
+
+    iget-wide v2, p0, Lcom/estrongs/android/ui/c/a/d;->k:J
+
+    invoke-static {v2, v3}, Lcom/estrongs/fs/util/j;->c(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_2
+
+    :cond_6
+    iget-object v0, p0, Lcom/estrongs/android/ui/c/a/d;->d:Lcom/estrongs/android/ui/view/HomeSdcardProgressView;
+
+    iget-wide v2, p0, Lcom/estrongs/android/ui/c/a/d;->j:J
+
+    iget-wide v4, p0, Lcom/estrongs/android/ui/c/a/d;->k:J
+
+    invoke-virtual {v0, v2, v3, v4, v5}, Lcom/estrongs/android/ui/view/HomeSdcardProgressView;->a(JJ)V
+
+    goto :goto_3
 .end method
 
 .method public b(Ljava/lang/String;)V

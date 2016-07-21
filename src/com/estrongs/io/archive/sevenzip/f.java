@@ -5,11 +5,11 @@ import android.os.Build.VERSION;
 import android.os.ConditionVariable;
 import com.estrongs.android.pop.FexApplication;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.am;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.ap;
 import com.estrongs.fs.b.r;
 import com.estrongs.fs.d;
-import com.estrongs.fs.impl.local.l;
+import com.estrongs.fs.impl.local.m;
 import java.io.File;
 
 public class f
@@ -23,7 +23,7 @@ public class f
     if (Build.VERSION.SDK_INT >= 21) {
       str = "_pie";
     }
-    int i = l.b();
+    int i = m.b();
     if (i == 1) {
       str = "p7za_arm" + str;
     }
@@ -67,7 +67,7 @@ public class f
       boolean[] arrayOfBoolean;
       try
       {
-        localFileExplorerActivity = FileExplorerActivity.J();
+        localFileExplorerActivity = FileExplorerActivity.X();
         if (localFileExplorerActivity == null)
         {
           bool = false;
@@ -88,7 +88,7 @@ public class f
           bool = false;
           continue;
         }
-        File localFile2 = new File(com.estrongs.android.pop.a.p + File.separator + am.d(str2));
+        File localFile2 = new File(com.estrongs.android.pop.a.s + File.separator + ap.d(str2));
         arrayOfBoolean = new boolean[1];
         arrayOfBoolean[0] = true;
         if (paramRunnable != null) {
@@ -146,7 +146,7 @@ public class f
   
   private static void b(Activity paramActivity, String paramString)
   {
-    ag.a(paramActivity, paramActivity.getString(2131427728, new Object[] { paramString }), 1);
+    ak.a(paramActivity, paramActivity.getString(2131231390, new Object[] { paramString }), 1);
   }
   
   private static void b(Activity paramActivity, String paramString1, File paramFile1, File paramFile2, ConditionVariable paramConditionVariable, boolean[] paramArrayOfBoolean, Runnable paramRunnable, boolean paramBoolean, String paramString2)

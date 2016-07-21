@@ -1,19 +1,19 @@
-.class final Lcom/estrongs/android/pop/utils/aq;
+.class Lcom/estrongs/android/pop/utils/aq;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Lcom/estrongs/a/a/p;
 
 
 # instance fields
-.field final synthetic a:Landroid/content/Context;
+.field final synthetic a:Lcom/estrongs/android/pop/utils/ap;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;)V
+.method constructor <init>(Lcom/estrongs/android/pop/utils/ap;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/utils/aq;->a:Landroid/content/Context;
+    iput-object p1, p0, Lcom/estrongs/android/pop/utils/aq;->a:Lcom/estrongs/android/pop/utils/ap;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,20 +22,33 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 3
+.method public a(Lcom/estrongs/a/a;II)V
+    .locals 2
 
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    const/4 v0, 0x5
 
-    new-instance v0, Lcom/estrongs/android/ui/pcs/o;
+    if-ne p3, v0, :cond_0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/utils/aq;->a:Landroid/content/Context;
+    invoke-virtual {p1}, Lcom/estrongs/a/a;->getTaskResult()Lcom/estrongs/a/p;
 
-    const/4 v2, 0x0
+    move-result-object v0
 
-    invoke-direct {v0, v1, v2}, Lcom/estrongs/android/ui/pcs/o;-><init>(Landroid/content/Context;Z)V
+    iget v0, v0, Lcom/estrongs/a/p;->a:I
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/o;->show()V
+    const/16 v1, 0x11
 
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/utils/aq;->a:Lcom/estrongs/android/pop/utils/ap;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/utils/ap;->b:Landroid/app/Activity;
+
+    new-instance v1, Lcom/estrongs/android/pop/utils/ar;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/utils/ar;-><init>(Lcom/estrongs/android/pop/utils/aq;)V
+
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
+
+    :cond_0
     return-void
 .end method

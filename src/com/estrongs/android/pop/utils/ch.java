@@ -1,67 +1,27 @@
 package com.estrongs.android.pop.utils;
 
-import android.content.Context;
-import android.telephony.TelephonyManager;
-import com.estrongs.android.pop.FexApplication;
+import com.estrongs.a.a;
+import com.estrongs.a.a.o;
+import com.estrongs.a.p;
+import com.estrongs.android.pop.view.FileExplorerActivity;
 
-public class ch
+class ch
+  implements o
 {
-  public static int a = -1;
-  public static int b = 1000;
-  private static String c = null;
+  ch(bv parambv, boolean paramBoolean) {}
   
-  public static String a(Context paramContext)
+  public void a(a parama, boolean paramBoolean)
   {
-    String str = ((TelephonyManager)paramContext.getSystemService("phone")).getLine1Number();
-    paramContext = str;
-    if (str != null)
-    {
-      paramContext = str;
-      if (str.startsWith("+86")) {
-        paramContext = str.substring(3);
-      }
+    FileExplorerActivity localFileExplorerActivity = FileExplorerActivity.X();
+    if (localFileExplorerActivity != null) {
+      localFileExplorerActivity.am();
     }
-    return paramContext;
-  }
-  
-  public static boolean a()
-  {
-    try
-    {
-      String str = b();
-      if (str != null) {
-        if ((!"cn".equalsIgnoreCase(str)) && (!"hk".equalsIgnoreCase(str)) && (!"mo".equalsIgnoreCase(str)))
-        {
-          boolean bool = "tw".equalsIgnoreCase(str);
-          if (!bool) {}
-        }
-        else
-        {
-          return true;
-        }
-      }
+    if (a) {
+      localFileExplorerActivity.a(new ci(this));
     }
-    catch (Exception localException) {}
-    return false;
-  }
-  
-  private static String b()
-  {
-    if (c != null) {
-      return c;
+    if (getTaskResulta == 17) {
+      localFileExplorerActivity.runOnUiThread(new cj(this, localFileExplorerActivity));
     }
-    try
-    {
-      TelephonyManager localTelephonyManager = (TelephonyManager)FexApplication.a().getSystemService("phone");
-      if (localTelephonyManager != null) {
-        c = localTelephonyManager.getSimCountryIso();
-      }
-    }
-    catch (Exception localException)
-    {
-      for (;;) {}
-    }
-    return c;
   }
 }
 

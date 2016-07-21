@@ -1,27 +1,29 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.pop.utils.cc;
-import com.estrongs.android.view.a.b;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.fs.impl.q.a;
+import java.util.List;
 
 class hd
-  implements b
+  implements MenuItem.OnMenuItemClickListener
 {
-  hd(cp paramcp) {}
+  hd(cr paramcr) {}
   
-  public boolean a(co paramco)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if (!cc.a()) {}
-    do
+    paramMenuItem = cr.a(a);
+    if (paramMenuItem.size() == 0) {
+      ak.a(cr.b(a).getBaseContext(), 2131231551, 0);
+    }
+    for (;;)
     {
+      cr.b(a).B();
       return false;
-      if ((e) || (((f) || (x) || (g)) && (!d))) {
-        return true;
-      }
-      if ((m) || (A)) {
-        return true;
-      }
-    } while ((!i) && (!j) && (!k));
-    return true;
+      a.a(cr.b(a), paramMenuItem, new he(this));
+    }
   }
 }
 

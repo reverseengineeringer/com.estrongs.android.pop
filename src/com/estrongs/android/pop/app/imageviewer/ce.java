@@ -1,16 +1,22 @@
 package com.estrongs.android.pop.app.imageviewer;
 
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+
 class ce
-  implements o
+  implements AdapterView.OnItemSelectedListener
 {
   ce(ViewImage21 paramViewImage21) {}
   
-  public void a(int paramInt)
+  public void onItemSelected(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    if (paramInt == 2) {
-      a.b.removeCallbacks(ViewImage21.h(a));
+    if (a.c != paramInt) {
+      a.a(paramInt, ViewImage21.c(a));
     }
   }
+  
+  public void onNothingSelected(AdapterView<?> paramAdapterView) {}
 }
 
 /* Location:

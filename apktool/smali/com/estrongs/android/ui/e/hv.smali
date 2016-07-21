@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/a/ak;
-
-.field final synthetic b:Lcom/estrongs/android/ui/e/hu;
+.field final synthetic a:Lcom/estrongs/android/ui/e/cr;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/hu;Lcom/estrongs/android/pop/app/a/ak;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/cr;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/hv;->b:Lcom/estrongs/android/ui/e/hu;
-
-    iput-object p2, p0, Lcom/estrongs/android/ui/e/hv;->a:Lcom/estrongs/android/pop/app/a/ak;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/hv;->a:Lcom/estrongs/android/ui/e/cr;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,37 +22,45 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 3
+.method public onMenuItemClick(Landroid/view/MenuItem;)Z
+    .locals 6
 
-    const/4 v0, 0x1
+    const/4 v5, 0x1
 
-    if-nez p2, :cond_0
+    const/4 v4, 0x0
 
-    :goto_0
-    iget-object v1, p0, Lcom/estrongs/android/ui/e/hv;->b:Lcom/estrongs/android/ui/e/hu;
+    const/4 v0, -0x1
 
-    iget-object v1, v1, Lcom/estrongs/android/ui/e/hu;->a:Lcom/estrongs/android/ui/e/hl;
+    sget-boolean v1, Lcom/estrongs/android/pop/z;->n:Z
 
-    iget-object v2, p0, Lcom/estrongs/android/ui/e/hv;->a:Lcom/estrongs/android/pop/app/a/ak;
+    if-eqz v1, :cond_0
 
-    iget-object v2, v2, Lcom/estrongs/android/pop/app/a/ak;->b:Ljava/lang/String;
-
-    invoke-static {v1, v2, v0}, Lcom/estrongs/android/ui/e/hl;->a(Lcom/estrongs/android/ui/e/hl;Ljava/lang/String;I)V
-
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
-
-    return-void
+    const/4 v0, -0x2
 
     :cond_0
-    if-ne p2, v0, :cond_1
+    const-string v1, "adb://"
 
-    const/4 v0, 0x2
+    new-instance v2, Lcom/estrongs/android/widget/ad;
 
-    goto :goto_0
+    invoke-static {}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->X()Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
-    :cond_1
-    const/4 v0, 0x4
+    move-result-object v3
 
-    goto :goto_0
+    invoke-direct {v2, v3, v1, v4, v0}, Lcom/estrongs/android/widget/ad;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/i;I)V
+
+    new-instance v0, Lcom/estrongs/android/ui/e/hw;
+
+    invoke-direct {v0, p0, v2}, Lcom/estrongs/android/ui/e/hw;-><init>(Lcom/estrongs/android/ui/e/hv;Lcom/estrongs/android/widget/ad;)V
+
+    new-instance v0, Lcom/estrongs/android/ui/e/hx;
+
+    invoke-direct {v0, p0, v2}, Lcom/estrongs/android/ui/e/hx;-><init>(Lcom/estrongs/android/ui/e/hv;Lcom/estrongs/android/widget/ad;)V
+
+    invoke-virtual {v2, v4, v4, v0}, Lcom/estrongs/android/widget/ad;->a(Lcom/estrongs/android/view/dx;Landroid/content/DialogInterface$OnClickListener;Lcom/estrongs/android/widget/ab;)V
+
+    invoke-virtual {v2, v5}, Lcom/estrongs/android/widget/ad;->b(Z)V
+
+    invoke-virtual {v2}, Lcom/estrongs/android/widget/ad;->j()V
+
+    return v5
 .end method

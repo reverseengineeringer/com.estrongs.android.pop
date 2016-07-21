@@ -1,22 +1,30 @@
 package com.estrongs.android.ui.dialog;
 
-import android.widget.RadioGroup;
-import android.widget.RadioGroup.OnCheckedChangeListener;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.j.c;
+import com.estrongs.android.pop.utils.w;
 
 class in
-  implements RadioGroup.OnCheckedChangeListener
+  implements DialogInterface.OnClickListener
 {
   in(im paramim) {}
   
-  public void onCheckedChanged(RadioGroup paramRadioGroup, int paramInt)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    int i = ((Integer)paramRadioGroup.getTag()).intValue();
-    if (paramInt == 2131362698)
+    paramDialogInterface.dismiss();
+    try
     {
-      aa)[i].c = "ro";
+      paramDialogInterface = im.a(a).getPackageName();
+      w.a(im.a(a), paramDialogInterface, "pname");
+      paramDialogInterface = c.a(im.a(a));
+      if (paramDialogInterface != null) {
+        paramDialogInterface.a("Go_Rating");
+      }
       return;
     }
-    aa)[i].c = "rw";
+    catch (Exception paramDialogInterface) {}
   }
 }
 

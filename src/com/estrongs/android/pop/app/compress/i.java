@@ -10,7 +10,7 @@ class i
   
   public void onDismiss(DialogInterface paramDialogInterface)
   {
-    a.l(a).a(a, a.f(a));
+    a.n(a).a(a, a.f(a));
   }
 }
 

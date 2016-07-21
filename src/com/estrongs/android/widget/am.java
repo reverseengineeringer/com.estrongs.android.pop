@@ -1,33 +1,24 @@
 package com.estrongs.android.widget;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.animation.TranslateAnimation;
-import com.estrongs.android.ui.theme.al;
+import com.estrongs.android.ui.navigation.TabIndicatorView;
 
 class am
-  implements View.OnClickListener
+  implements bd
 {
-  am(ai paramai) {}
+  am(aj paramaj) {}
   
-  public void onClick(View paramView)
+  public void a(int paramInt) {}
+  
+  public void a(int paramInt, float paramFloat)
   {
-    if (ai.e(a).h() == 1)
-    {
-      if (a.e == null)
-      {
-        a.e = new TranslateAnimation(1, -1.0F, 1, 0.0F, 1, 0.0F, 1, 0.0F);
-        a.e.setDuration(500L);
-        a.f = new TranslateAnimation(1, -1.0F, 1, 0.0F, 1, 0.0F, 1, 0.0F);
-        a.f.setDuration(500L);
-      }
-      ai.e(a).setOutAnimation(a.e);
-      ai.e(a).setInAnimation(a.f);
-      a.d.setBackgroundDrawable(ai.f(a).a(2130837561));
-      a.c.setBackgroundDrawable(ai.g(a).a(2130837514));
-      ai.e(a).a(0);
-    }
+    aj.a(a).a(paramInt, paramFloat);
   }
+  
+  public void b(int paramInt) {}
+  
+  public void c(int paramInt) {}
+  
+  public void d(int paramInt) {}
 }
 
 /* Location:

@@ -1,5 +1,5 @@
 .class public Lcom/estrongs/io/archive/rar/a;
-.super Lcom/estrongs/io/archive/h;
+.super Lcom/estrongs/io/archive/i;
 
 
 # static fields
@@ -28,7 +28,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {p0, p1, p2}, Lcom/estrongs/io/archive/h;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, p1, p2}, Lcom/estrongs/io/archive/i;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -36,7 +36,7 @@
 
     iput-boolean v1, p0, Lcom/estrongs/io/archive/rar/a;->i:Z
 
-    sget-object v0, Lcom/estrongs/android/util/f;->a:[Ljava/lang/String;
+    sget-object v0, Lcom/estrongs/android/util/e;->a:[Ljava/lang/String;
 
     aget-object v0, v0, v1
 
@@ -50,11 +50,11 @@
 
     iput-boolean v0, p0, Lcom/estrongs/io/archive/rar/a;->i:Z
 
-    invoke-static {}, Lcom/estrongs/android/util/f;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/estrongs/android/util/e;->a()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/io/archive/h;->c:Ljava/lang/String;
+    iput-object v0, p0, Lcom/estrongs/io/archive/i;->c:Ljava/lang/String;
 
     :cond_0
     return-void
@@ -120,7 +120,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/estrongs/fs/impl/local/h;->f(Ljava/lang/String;)Ljava/io/OutputStream;
+    invoke-static {v2}, Lcom/estrongs/fs/impl/local/i;->f(Ljava/lang/String;)Ljava/io/OutputStream;
     :try_end_1
     .catch Lde/innosystec/unrar/exception/RarException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -268,9 +268,9 @@
 
     const/4 v1, 0x0
 
-    new-instance v3, Lcom/estrongs/io/archive/g;
+    new-instance v3, Lcom/estrongs/io/archive/h;
 
-    invoke-direct {v3}, Lcom/estrongs/io/archive/g;-><init>()V
+    invoke-direct {v3}, Lcom/estrongs/io/archive/h;-><init>()V
 
     :try_start_0
     invoke-virtual {p0}, Lcom/estrongs/io/archive/rar/a;->b()V
@@ -329,7 +329,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v4
 
@@ -378,7 +378,7 @@
 
     const-string v1, "Extraction is done."
 
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_1
     invoke-virtual {p0}, Lcom/estrongs/io/archive/rar/a;->c()V
@@ -408,7 +408,7 @@
 
     check-cast v0, Lcom/estrongs/io/model/ArchiveEntryFile;
 
-    invoke-virtual {v3, v0}, Lcom/estrongs/io/archive/g;->a(Ljava/io/File;)V
+    invoke-virtual {v3, v0}, Lcom/estrongs/io/archive/h;->a(Ljava/io/File;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -444,7 +444,7 @@
 
     const-string v2, "Extraction is done."
 
-    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_4
     invoke-virtual {p0}, Lcom/estrongs/io/archive/rar/a;->c()V
@@ -501,7 +501,7 @@
     move-result-object v0
 
     :goto_4
-    invoke-static {v0}, Lcom/estrongs/android/util/bd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/bk;->a(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
@@ -532,7 +532,7 @@
 
     const-string v1, "Extraction is done."
 
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_6
     invoke-virtual {p0}, Lcom/estrongs/io/archive/rar/a;->c()V
@@ -582,7 +582,7 @@
 
     const-string v1, "Extraction is done."
 
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_8
     invoke-virtual {p0}, Lcom/estrongs/io/archive/rar/a;->c()V
@@ -606,7 +606,7 @@
 
     check-cast v0, Lcom/estrongs/io/model/ArchiveEntryFile;
 
-    invoke-virtual {v3, v0}, Lcom/estrongs/io/archive/g;->a(Ljava/io/File;)V
+    invoke-virtual {v3, v0}, Lcom/estrongs/io/archive/h;->a(Ljava/io/File;)V
 
     goto :goto_5
 
@@ -637,15 +637,15 @@
 
     move-result-object v0
 
-    invoke-virtual {v3}, Lcom/estrongs/io/archive/g;->a()J
+    invoke-virtual {v3}, Lcom/estrongs/io/archive/h;->a()J
 
     move-result-wide v4
 
-    invoke-virtual {v3}, Lcom/estrongs/io/archive/g;->b()I
+    invoke-virtual {v3}, Lcom/estrongs/io/archive/h;->b()I
 
     move-result v1
 
-    invoke-virtual {v3}, Lcom/estrongs/io/archive/g;->c()I
+    invoke-virtual {v3}, Lcom/estrongs/io/archive/h;->c()I
 
     move-result v2
 
@@ -669,7 +669,7 @@
 
     new-instance v2, Lcom/estrongs/io/archive/rar/b;
 
-    invoke-direct {v2, p0, p1, p1, v3}, Lcom/estrongs/io/archive/rar/b;-><init>(Lcom/estrongs/io/archive/rar/a;Lcom/estrongs/io/a/d;Lcom/estrongs/io/a/b;Lcom/estrongs/io/archive/g;)V
+    invoke-direct {v2, p0, p1, p1, v3}, Lcom/estrongs/io/archive/rar/b;-><init>(Lcom/estrongs/io/archive/rar/a;Lcom/estrongs/io/a/d;Lcom/estrongs/io/a/b;Lcom/estrongs/io/archive/h;)V
 
     invoke-virtual {v0, v2}, Lde/innosystec/unrar/a;->a(Lde/innosystec/unrar/d;)V
 
@@ -696,7 +696,7 @@
 
     const-string v1, "Extraction is done."
 
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_a
     invoke-virtual {p0}, Lcom/estrongs/io/archive/rar/a;->c()V
@@ -744,7 +744,7 @@
 
     const-string v1, "Extraction is done."
 
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_c
     invoke-virtual {p0}, Lcom/estrongs/io/archive/rar/a;->c()V
@@ -765,7 +765,7 @@
 
     const-string v1, "Extraction is done."
 
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_d
     invoke-virtual {p0}, Lcom/estrongs/io/archive/rar/a;->c()V
@@ -807,7 +807,7 @@
 
     invoke-virtual {v0}, Lde/innosystec/unrar/a;->h()V
 
-    invoke-super {p0, p1, p2}, Lcom/estrongs/io/archive/h;->a(Ljava/util/List;Lcom/estrongs/io/a/b;)V
+    invoke-super {p0, p1, p2}, Lcom/estrongs/io/archive/i;->a(Ljava/util/List;Lcom/estrongs/io/a/b;)V
 
     return-void
 .end method

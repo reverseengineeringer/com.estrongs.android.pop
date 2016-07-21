@@ -1,19 +1,13 @@
 package com.estrongs.android.pop.app;
 
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
-import com.estrongs.android.pop.FexApplication;
-
 class gg
-  implements Preference.OnPreferenceChangeListener
+  implements Runnable
 {
-  gg(PopPreferenceActivity paramPopPreferenceActivity) {}
+  gg(gf paramgf) {}
   
-  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
+  public void run()
   {
-    paramPreference = paramPreference.getKey();
-    FexApplication.a().a(paramPreference, paramObject);
-    return true;
+    PopAudioPlayer.i(a.a);
   }
 }
 

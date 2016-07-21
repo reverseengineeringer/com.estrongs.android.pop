@@ -1,142 +1,313 @@
 package com.estrongs.android.widget;
 
-import android.app.Activity;
-import android.content.Context;
+import android.database.DataSetObservable;
+import android.database.DataSetObserver;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.TranslateAnimation;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.LinearLayout;
-import com.estrongs.android.view.cd;
-import com.estrongs.fs.h;
-import java.util.LinkedList;
-import java.util.List;
+import android.widget.Filter;
+import android.widget.Filterable;
+import android.widget.ListAdapter;
+import android.widget.WrapperListAdapter;
+import java.util.ArrayList;
+import java.util.Iterator;
 
-public class ai
-  extends ao
+class ai
+  implements Filterable, WrapperListAdapter
 {
-  protected List<h> a = new LinkedList();
-  protected boolean b;
-  View c;
-  View d;
-  TranslateAnimation e;
-  TranslateAnimation f;
-  TranslateAnimation g;
-  TranslateAnimation h;
-  private cd p;
-  private View q;
-  private RealViewSwitcher r;
-  private LinearLayout s;
-  private boolean t = true;
-  private AdapterView.OnItemClickListener u = new ak(this);
+  ArrayList<ah> a;
+  ArrayList<ah> b;
+  boolean c;
+  private final DataSetObservable d = new DataSetObservable();
+  private final ListAdapter e;
+  private int f = 1;
+  private final boolean g;
   
-  public ai(Activity paramActivity, au paramau, boolean paramBoolean)
+  public ai(ArrayList<ah> paramArrayList1, ArrayList<ah> paramArrayList2, ListAdapter paramListAdapter)
   {
-    super(paramActivity, paramau);
-    t = paramBoolean;
-    s = ((LinearLayout)findViewById(2131362406));
-    s.setBackgroundDrawable(themeManager.a(2130837605));
-    if (paramBoolean) {
-      d();
+    e = paramListAdapter;
+    g = (paramListAdapter instanceof Filterable);
+    if (paramArrayList1 == null) {
+      throw new IllegalArgumentException("headerViewInfos cannot be null");
     }
+    if (paramArrayList2 == null) {
+      throw new IllegalArgumentException("footerViewInfos cannot be null");
+    }
+    a = paramArrayList1;
+    b = paramArrayList2;
+    if ((a(a)) && (a(b))) {}
     for (;;)
     {
-      i.a(u);
-      setSingleButton(getString(2131427340), null);
+      c = bool;
       return;
-      s.setVisibility(8);
-      r.removeViewAt(1);
+      bool = false;
     }
   }
   
-  private void d()
+  private boolean a(ArrayList<ah> paramArrayList)
   {
-    if (p == null)
+    if (paramArrayList != null)
     {
-      p = new aj(this, j, null, null);
-      ((ViewGroup)q).addView(p.aq());
-      p.j(com.estrongs.android.ui.theme.al.a(mContext).d(2131230738));
-      p.a(11);
-      p.a(u);
-      p.a(o);
-      p.g("SP://");
-    }
-  }
-  
-  private void e()
-  {
-    c = findViewById(2131362407);
-    c.setBackgroundDrawable(themeManager.a(2130837514));
-    c.setOnClickListener(new am(this));
-  }
-  
-  private void f()
-  {
-    d = findViewById(2131362408);
-    d.setBackgroundDrawable(themeManager.a(2130837561));
-    d.setOnClickListener(new an(this));
-  }
-  
-  protected int a()
-  {
-    return 2130903162;
-  }
-  
-  protected void a(Context paramContext)
-  {
-    super.a(paramContext);
-    q = ((ViewGroup)findViewById(2131362410));
-    r = ((RealViewSwitcher)findViewById(2131362409));
-    r.c(false);
-    r.a(new al(this));
-    e();
-    f();
-  }
-  
-  public void a(boolean paramBoolean)
-  {
-    b = paramBoolean;
-  }
-  
-  protected cd b()
-  {
-    if (r.h() == 0) {
-      return i;
-    }
-    return p;
-  }
-  
-  public void b(boolean paramBoolean)
-  {
-    super.b(paramBoolean);
-    if (t)
-    {
-      p.a(11);
-      p.b(false);
-    }
-  }
-  
-  public void dismiss()
-  {
-    super.dismiss();
-    if (p != null) {
-      p.a_();
-    }
-  }
-  
-  public void show()
-  {
-    super.show();
-    if (b)
-    {
-      if (i.Y() == null) {
-        i.K();
+      paramArrayList = paramArrayList.iterator();
+      while (paramArrayList.hasNext()) {
+        if (!nextc) {
+          return false;
+        }
       }
-      i.g();
-      if (t) {
-        p.g();
+    }
+    return true;
+  }
+  
+  public int a()
+  {
+    return a.size();
+  }
+  
+  public void a(int paramInt)
+  {
+    if (paramInt < 1) {
+      throw new IllegalArgumentException("Number of columns must be 1 or more");
+    }
+    if (f != paramInt)
+    {
+      f = paramInt;
+      c();
+    }
+  }
+  
+  public boolean areAllItemsEnabled()
+  {
+    return (e == null) || ((c) && (e.areAllItemsEnabled()));
+  }
+  
+  public int b()
+  {
+    return b.size();
+  }
+  
+  public void c()
+  {
+    d.notifyChanged();
+  }
+  
+  public int getCount()
+  {
+    if (e != null)
+    {
+      int i = e.getCount() % f;
+      if (i == 0) {}
+      for (i = 0;; i = f - i) {
+        return i + (a() * f + e.getCount()) + b() * f;
       }
-      b = false;
+    }
+    return a() * f + b() * f;
+  }
+  
+  public Filter getFilter()
+  {
+    if (g) {
+      return ((Filterable)e).getFilter();
+    }
+    return null;
+  }
+  
+  public Object getItem(int paramInt)
+  {
+    int i = a();
+    int j = f * i;
+    if (paramInt < j)
+    {
+      if (paramInt % f == 0) {
+        return a.get(paramInt / f)).b;
+      }
+      return null;
+    }
+    if (paramInt < e.getCount() + j)
+    {
+      i = paramInt - j;
+      if ((e != null) && (i < e.getCount())) {
+        return e.getItem(i);
+      }
+    }
+    i = e.getCount() % f;
+    if (i == 0) {}
+    for (i = 0; paramInt < e.getCount() + j + i; i = f - i) {
+      return null;
+    }
+    if ((paramInt < b() * f + (e.getCount() + j + i)) && (paramInt % f == 0)) {
+      return b.get((paramInt - j - e.getCount() - i) / f)).b;
+    }
+    throw new ArrayIndexOutOfBoundsException(paramInt);
+  }
+  
+  public long getItemId(int paramInt)
+  {
+    int i = a() * f;
+    if ((e != null) && (paramInt >= i) && (paramInt < e.getCount() + i))
+    {
+      paramInt -= i;
+      if (paramInt < e.getCount()) {
+        return e.getItemId(paramInt);
+      }
+    }
+    return -1L;
+  }
+  
+  public int getItemViewType(int paramInt)
+  {
+    int i = 1;
+    int j = a() * f;
+    if ((paramInt < j) && (paramInt % f != 0))
+    {
+      paramInt = i;
+      if (e != null) {
+        paramInt = e.getViewTypeCount();
+      }
+    }
+    do
+    {
+      return paramInt;
+      if ((e != null) && (paramInt >= j) && (paramInt < e.getCount() + j + (f - e.getCount() % f)))
+      {
+        k = paramInt - j;
+        m = e.getCount();
+        if (k < m) {
+          return e.getItemViewType(k);
+        }
+        if ((m != 0) && (f != 1)) {
+          return e.getItemViewType(m - 1);
+        }
+      }
+      int k = b();
+      int m = f;
+      if ((e == null) || (paramInt >= j + e.getCount() + k * m)) {
+        break;
+      }
+      paramInt = i;
+    } while (e == null);
+    return e.getViewTypeCount();
+    return -2;
+  }
+  
+  public View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
+  {
+    int i = 0;
+    int j = a() * f;
+    if (paramInt < j)
+    {
+      paramView = a.get(paramInt / f)).a;
+      if (paramInt % f != 0) {}
+    }
+    ViewGroup localViewGroup;
+    do
+    {
+      return paramView;
+      paramViewGroup = new View(paramViewGroup.getContext());
+      paramViewGroup.setVisibility(4);
+      paramViewGroup.setMinimumHeight(paramView.getHeight());
+      return paramViewGroup;
+      if (paramInt < e.getCount() + j)
+      {
+        k = paramInt - j;
+        if ((e != null) && (k < e.getCount()))
+        {
+          paramView = e.getView(k, paramView, paramViewGroup);
+          paramView.setVisibility(0);
+          return paramView;
+        }
+      }
+      int k = e.getCount() % f;
+      if (k == 0) {}
+      while (paramInt < e.getCount() + j + i)
+      {
+        paramView = e.getView(e.getCount() - 1, paramView, paramViewGroup);
+        paramView.setVisibility(4);
+        return paramView;
+        i = f - k;
+      }
+      if (paramInt >= b() * f + (e.getCount() + j + i)) {
+        break;
+      }
+      localViewGroup = b.get((paramInt - j - e.getCount() - i) / f)).a;
+      paramView = localViewGroup;
+    } while (paramInt % f == 0);
+    paramView = new View(paramViewGroup.getContext());
+    paramView.setVisibility(4);
+    paramView.setMinimumHeight(localViewGroup.getHeight());
+    return paramView;
+    throw new ArrayIndexOutOfBoundsException(paramInt);
+  }
+  
+  public int getViewTypeCount()
+  {
+    if (e != null) {
+      return e.getViewTypeCount() + 1;
+    }
+    return 2;
+  }
+  
+  public ListAdapter getWrappedAdapter()
+  {
+    return e;
+  }
+  
+  public boolean hasStableIds()
+  {
+    if (e != null) {
+      return e.hasStableIds();
+    }
+    return false;
+  }
+  
+  public boolean isEmpty()
+  {
+    return ((e == null) || (e.isEmpty())) && (a() == 0) && (b() == 0);
+  }
+  
+  public boolean isEnabled(int paramInt)
+  {
+    boolean bool = true;
+    int i = a();
+    int j = f * i;
+    if (paramInt < j) {
+      return (paramInt % f == 0) && (a.get(paramInt / f)).c);
+    }
+    if (paramInt < e.getCount() + j)
+    {
+      i = paramInt - j;
+      if ((e != null) && (i < e.getCount())) {
+        return e.isEnabled(i);
+      }
+    }
+    i = e.getCount() % f;
+    if (i == 0) {}
+    for (i = 0; paramInt < e.getCount() + j + i; i = f - i) {
+      return false;
+    }
+    if (paramInt < b() * f + (e.getCount() + j + i))
+    {
+      if ((paramInt % f == 0) && (b.get((paramInt - j - e.getCount() - i) / f)).c)) {}
+      for (;;)
+      {
+        return bool;
+        bool = false;
+      }
+    }
+    throw new ArrayIndexOutOfBoundsException(paramInt);
+  }
+  
+  public void registerDataSetObserver(DataSetObserver paramDataSetObserver)
+  {
+    d.registerObserver(paramDataSetObserver);
+    if (e != null) {
+      e.registerDataSetObserver(paramDataSetObserver);
+    }
+  }
+  
+  public void unregisterDataSetObserver(DataSetObserver paramDataSetObserver)
+  {
+    d.unregisterObserver(paramDataSetObserver);
+    if (e != null) {
+      e.unregisterDataSetObserver(paramDataSetObserver);
     }
   }
 }

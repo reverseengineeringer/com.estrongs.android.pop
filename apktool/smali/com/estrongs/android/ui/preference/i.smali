@@ -50,7 +50,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->V()I
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->W()I
 
     :cond_0
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/i;->a:Lcom/estrongs/android/ftp/k;

@@ -1,5 +1,5 @@
 .class Lcom/estrongs/android/pop/view/utils/e;
-.super Lcom/estrongs/android/ui/dialog/ix;
+.super Lcom/estrongs/android/ui/dialog/jh;
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
     iput-object p6, p0, Lcom/estrongs/android/pop/view/utils/e;->b:Ljava/lang/String;
 
-    invoke-direct {p0, p2, p3, p4}, Lcom/estrongs/android/ui/dialog/ix;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/a/a;)V
+    invoke-direct {p0, p2, p3, p4}, Lcom/estrongs/android/ui/dialog/jh;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/a/a;)V
 
     return-void
 .end method
@@ -44,7 +44,7 @@
 
     iget-object v0, v0, Lcom/estrongs/android/pop/view/utils/c;->c:Landroid/app/Activity;
 
-    const v1, 0x7f0b020c
+    const v1, 0x7f080181
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -98,7 +98,7 @@
 
     iget-object v0, v0, Lcom/estrongs/android/pop/view/utils/c;->d:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bk(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bB(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -258,7 +258,7 @@
 
     iget-object v1, v1, Lcom/estrongs/android/pop/view/utils/c;->c:Landroid/app/Activity;
 
-    const v2, 0x7f0b020d
+    const v2, 0x7f0802e7
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 

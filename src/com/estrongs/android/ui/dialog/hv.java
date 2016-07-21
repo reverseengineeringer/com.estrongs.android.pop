@@ -1,24 +1,30 @@
 package com.estrongs.android.ui.dialog;
 
-import com.estrongs.a.a;
-import com.estrongs.a.a.l;
-import com.estrongs.a.a.m;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.widget.TextView;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.fs.impl.local.m;
+import com.estrongs.fs.impl.local.r;
 
 class hv
-  implements l
+  implements DialogInterface.OnClickListener
 {
-  long a = 0L;
+  hv(hq paramhq, String[] paramArrayOfString) {}
   
-  hv(hn paramhn) {}
-  
-  public void a(a parama, m paramm)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    long l = System.currentTimeMillis();
-    if (l - a > 800L)
-    {
-      a = l;
-      hn.f(b);
+    paramDialogInterface.dismiss();
+    b.h.a = -1;
+    b.h.c = m.g(a[paramInt]);
+    if (!m.a(hq.g(b), b.h)) {
+      ak.a(b.aF(), 2131231901, 0);
     }
+    b.h = m.f(hq.g(b));
+    b.a.setText(m.a(b.h.c));
+    b.b.setText(m.b(b.h.b));
+    b.g = hq.a(b, b.h);
+    hq.h(b).setText(b.g.substring(0, 3) + " " + b.g.substring(3, 6) + " " + b.g.substring(6, 9));
   }
 }
 

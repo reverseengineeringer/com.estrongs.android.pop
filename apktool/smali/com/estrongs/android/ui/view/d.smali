@@ -1,5 +1,5 @@
 .class Lcom/estrongs/android/ui/view/d;
-.super Lcom/estrongs/android/widget/g;
+.super Lcom/estrongs/android/widget/f;
 
 
 # instance fields
@@ -12,7 +12,7 @@
 
     iput-object p1, p0, Lcom/estrongs/android/ui/view/d;->a:Lcom/estrongs/android/ui/view/c;
 
-    invoke-direct {p0, p2, p3, p4, p5}, Lcom/estrongs/android/widget/g;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/i;Z)V
+    invoke-direct {p0, p2, p3, p4, p5}, Lcom/estrongs/android/widget/f;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/fs/i;Z)V
 
     return-void
 .end method

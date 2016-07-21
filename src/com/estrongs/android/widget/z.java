@@ -1,20 +1,22 @@
 package com.estrongs.android.widget;
 
-import android.view.View;
-import android.view.View.OnClickListener;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.ui.dialog.gs;
+import com.estrongs.android.pop.view.utils.ac;
+import com.estrongs.android.ui.dialog.gv;
+import com.estrongs.android.ui.dialog.ha;
+import com.estrongs.fs.util.a.a;
 
 class z
-  implements View.OnClickListener
+  implements ha
 {
-  z(g paramg) {}
+  z(y paramy, gv paramgv) {}
   
-  public void onClick(View paramView)
+  public void a(int paramInt)
   {
-    paramView = new gs(g.d(a), ad.a(g.d(a)).L());
-    paramView.a(new aa(this, paramView));
-    paramView.show();
+    ad.a(f.d(b.a)).a(paramInt);
+    a locala = ac.a(paramInt % 4, paramInt / 4);
+    b.a.a(locala);
+    a.dismiss();
   }
 }
 

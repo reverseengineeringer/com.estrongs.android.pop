@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Lcom/estrongs/android/ui/dialog/kb;
+.field final synthetic a:Lcom/estrongs/android/ui/dialog/jh;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/kb;Ljava/lang/String;)V
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/jh;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/kc;->b:Lcom/estrongs/android/ui/dialog/kb;
-
-    iput-object p2, p0, Lcom/estrongs/android/ui/dialog/kc;->a:Ljava/lang/String;
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/kc;->a:Lcom/estrongs/android/ui/dialog/jh;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,22 +22,18 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/kc;->b:Lcom/estrongs/android/ui/dialog/kb;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/kc;->a:Lcom/estrongs/android/ui/dialog/jh;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/kb;->a:Lcom/estrongs/android/ui/dialog/jw;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/jh;->dismiss()V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/jw;->getContext()Landroid/content/Context;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/kc;->a:Lcom/estrongs/android/ui/dialog/jh;
 
-    move-result-object v0
+    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/jh;->mContext:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/kc;->a:Ljava/lang/String;
-
-    const/4 v2, 0x1
-
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+    invoke-static {v0}, Lcom/estrongs/fs/impl/local/m;->b(Landroid/content/Context;)V
 
     return-void
 .end method

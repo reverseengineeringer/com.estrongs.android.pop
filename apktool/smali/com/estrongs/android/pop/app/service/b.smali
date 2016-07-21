@@ -15,7 +15,7 @@
             "(",
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/estrongs/android/pop/app/b/f;",
+            "Lcom/estrongs/android/pop/app/f/f;",
             ">;)V"
         }
     .end annotation
@@ -27,7 +27,7 @@
             "(",
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/estrongs/android/pop/app/b/f;",
+            "Lcom/estrongs/android/pop/app/f/f;",
             ">;)Z"
         }
     .end annotation

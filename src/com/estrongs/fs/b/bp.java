@@ -1,15 +1,22 @@
 package com.estrongs.fs.b;
 
-import com.estrongs.android.ui.view.ag;
+import com.estrongs.a.a;
+import com.estrongs.a.a.p;
+import com.estrongs.android.util.an;
 
-class bp
-  implements Runnable
+final class bp
+  implements p
 {
-  bp(bo parambo, String paramString) {}
-  
-  public void run()
+  public void a(a parama, int paramInt1, int paramInt2)
   {
-    ag.a(b.a.a, a, 1);
+    parama = ((bo)parama).a();
+    if ((paramInt1 == 1) && (paramInt2 == 2) && (parama != null)) {
+      an.a(parama, true);
+    }
+    while ((paramInt1 != 2) || ((paramInt2 != 4) && (paramInt2 != 5)) || (parama == null)) {
+      return;
+    }
+    an.a(parama, false);
   }
 }
 

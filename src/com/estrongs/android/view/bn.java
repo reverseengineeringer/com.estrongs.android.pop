@@ -1,15 +1,37 @@
 package com.estrongs.android.view;
 
-import com.estrongs.fs.impl.adb.c;
+import com.estrongs.android.pop.utils.ad;
+import com.estrongs.android.pop.utils.ai;
+import com.estrongs.fs.h;
+import com.estrongs.fs.i;
 
-class bn
-  implements Runnable
+public class bn
+  implements i
 {
-  bn(aw paramaw) {}
+  private ai a;
+  private String b;
+  private int d;
   
-  public void run()
+  public bn(String paramString, int paramInt)
   {
-    c.i(a.v);
+    b = paramString;
+    d = paramInt;
+    a = ad.d(paramString, paramInt);
+  }
+  
+  public boolean a()
+  {
+    ai localai = ad.d(b, d);
+    return (localai == null) || ((!e) && (!b));
+  }
+  
+  public boolean a(h paramh)
+  {
+    if (a == null) {}
+    while (!ad.a(a, paramh, d)) {
+      return true;
+    }
+    return false;
   }
 }
 

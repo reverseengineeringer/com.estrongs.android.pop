@@ -6,22 +6,11 @@ import android.content.DialogInterface.OnClickListener;
 class kb
   implements DialogInterface.OnClickListener
 {
-  kb(jz paramjz) {}
+  kb(ka paramka) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    if (PopVideoPlayer.r(a.a).p()) {
-      PopVideoPlayer.c(a.a, true);
-    }
-    for (;;)
-    {
-      paramDialogInterface.dismiss();
-      return;
-      if (PopVideoPlayer.t(a.a) == null) {
-        PopVideoPlayer.u(a.a);
-      }
-      PopVideoPlayer.t(a.a).show();
-    }
+    paramDialogInterface.dismiss();
   }
 }
 

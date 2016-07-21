@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/util/e;
+.implements Lcom/estrongs/android/util/d;
 
 
 # instance fields
@@ -82,7 +82,7 @@
 
     iget-object v2, v2, Lcom/estrongs/android/ui/preference/k;->a:Lcom/estrongs/android/ui/preference/FtpServerPreference;
 
-    const v3, 0x7f0b0152
+    const v3, 0x7f080534
 
     invoke-virtual {v2, v3}, Lcom/estrongs/android/ui/preference/FtpServerPreference;->getText(I)Ljava/lang/CharSequence;
 
@@ -118,9 +118,9 @@
 
     iget-object v0, v0, Lcom/estrongs/android/ui/preference/k;->a:Lcom/estrongs/android/ui/preference/FtpServerPreference;
 
-    const v2, 0x7f0b0154
+    const v2, 0x7f080536
 
-    invoke-static {v0, v2, v1}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {v0, v2, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     goto :goto_1
 .end method

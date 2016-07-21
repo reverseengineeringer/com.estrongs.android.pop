@@ -1,15 +1,31 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.view.a.b;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.pop.ad;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.ui.dialog.ag;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.h;
+import java.util.Iterator;
+import java.util.List;
 
 class hi
-  implements b
+  implements DialogInterface.OnClickListener
 {
-  hi(cp paramcp) {}
+  hi(hh paramhh, List paramList) {}
   
-  public boolean a(co paramco)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    return D;
+    paramDialogInterface.dismiss();
+    ad.a(cr.b(b.a)).t(true);
+    paramDialogInterface = ap.a().iterator();
+    while (paramDialogInterface.hasNext())
+    {
+      String str = (String)paramDialogInterface.next();
+      cr.b(b.a).o(str);
+    }
+    new ag(cr.b(b.a), (h)a.get(0));
   }
 }
 

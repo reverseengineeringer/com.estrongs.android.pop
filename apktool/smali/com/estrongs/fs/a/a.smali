@@ -204,7 +204,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bE(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bV(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -390,15 +390,22 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
+    :cond_0
     :goto_0
     return-object p0
 
-    :cond_0
+    :cond_1
     invoke-static {p0}, Lcom/estrongs/fs/a/a;->c(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-eqz v1, :cond_0
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -698,7 +705,7 @@
 
     const/4 v0, 0x1
 
-    invoke-static {p0}, Lcom/estrongs/android/util/am;->bl(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/estrongs/android/util/ap;->bC(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -709,7 +716,7 @@
     return v0
 
     :cond_1
-    invoke-static {p0}, Lcom/estrongs/fs/impl/media/a;->a(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/estrongs/fs/impl/media/b;->a(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -720,7 +727,7 @@
     goto :goto_0
 
     :cond_2
-    invoke-static {p0}, Lcom/estrongs/fs/impl/media/a;->b(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/estrongs/fs/impl/media/b;->b(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -731,7 +738,7 @@
     goto :goto_0
 
     :cond_3
-    invoke-static {p0}, Lcom/estrongs/fs/impl/media/a;->c(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/estrongs/fs/impl/media/b;->c(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -742,28 +749,35 @@
     goto :goto_0
 
     :cond_4
-    invoke-static {p0}, Lcom/estrongs/android/util/bc;->P(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/estrongs/android/util/bg;->P(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_5
+    if-nez v1, :cond_5
 
-    const/16 v0, 0x10
-
-    goto :goto_0
-
-    :cond_5
-    invoke-static {p0}, Lcom/estrongs/android/util/bc;->K(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/estrongs/android/util/bg;->i(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_6
 
-    const/16 v0, 0x20
+    :cond_5
+    const/16 v0, 0x10
 
     goto :goto_0
 
     :cond_6
+    invoke-static {p0}, Lcom/estrongs/android/util/bg;->K(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    const/16 v0, 0x20
+
+    goto :goto_0
+
+    :cond_7
     const-string v1, "/"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z

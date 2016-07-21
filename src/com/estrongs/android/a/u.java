@@ -1,57 +1,17 @@
 package com.estrongs.android.a;
 
-import android.content.Context;
-import android.os.Handler;
-import com.estrongs.android.ui.dialog.ProgressDialog;
+import java.util.concurrent.ThreadFactory;
 
-public class u
+class u
+  implements ThreadFactory
 {
-  private static Handler a = new Handler();
-  private static ProgressDialog b = null;
-  private static boolean c = false;
-  private static Object d = new Object();
+  private u(q paramq) {}
   
-  public static final void a()
+  public Thread newThread(Runnable paramRunnable)
   {
-    synchronized (d)
-    {
-      if (!c) {
-        return;
-      }
-      a.post(new w());
-      return;
-    }
-  }
-  
-  public static final void a(Context paramContext, int paramInt1, int paramInt2)
-  {
-    a(paramContext, paramContext.getString(paramInt1), paramContext.getString(paramInt2));
-  }
-  
-  public static final void a(Context paramContext, String paramString1, String paramString2)
-  {
-    synchronized (d)
-    {
-      if (c)
-      {
-        ProgressDialog localProgressDialog = b;
-        if (localProgressDialog == null) {}
-      }
-    }
-    try
-    {
-      b.dismiss();
-      c = true;
-      b = ProgressDialog.a(paramContext, paramString1, paramString2, true, true, new v(paramContext));
-      b.show();
-      return;
-      paramContext = finally;
-      throw paramContext;
-    }
-    catch (Exception localException)
-    {
-      for (;;) {}
-    }
+    paramRunnable = new Thread(paramRunnable);
+    paramRunnable.setName("DB Analyzer");
+    return paramRunnable;
   }
 }
 

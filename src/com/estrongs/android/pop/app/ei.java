@@ -1,46 +1,75 @@
 package com.estrongs.android.pop.app;
 
-import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
-import com.estrongs.android.pop.esclasses.g;
-import com.estrongs.android.pop.view.utils.t;
+import com.estrongs.android.pop.view.a;
 
 class ei
-  extends ArrayAdapter<t>
+  implements gp
 {
-  private t[] b;
+  ei(PopAudioPlayer paramPopAudioPlayer) {}
   
-  public ei(OpenRecomm paramOpenRecomm, Context paramContext, int paramInt, t[] paramArrayOft)
+  public void a()
   {
-    super(paramContext, paramInt, paramArrayOft);
-    b = paramArrayOft;
+    if ((a.a.startsWith("Spreadtrum")) || (a.a.equalsIgnoreCase("Huawei")))
+    {
+      PopAudioPlayer.b(a);
+      PopAudioPlayer.a(a, null);
+    }
   }
   
-  public View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
+  public void a(int paramInt)
   {
-    paramViewGroup = paramView;
-    if (paramView == null) {
-      paramViewGroup = g.a(a).inflate(2130903207, null);
-    }
-    paramView = b[paramInt];
-    if (paramView != null)
+    PopAudioPlayer.a(a, 3, paramInt);
+  }
+  
+  public void b(int paramInt)
+  {
+    PopAudioPlayer.a(a, 0, paramInt);
+  }
+  
+  public void c(int paramInt)
+  {
+    PopAudioPlayer.a(a, 4, paramInt);
+  }
+  
+  public void d(int paramInt)
+  {
+    PopAudioPlayer.a(a, 2, paramInt);
+  }
+  
+  public void e(int paramInt)
+  {
+    PopAudioPlayer.a(a, 1, paramInt);
+  }
+  
+  public void f(int paramInt)
+  {
+    PopAudioPlayer.a(a, 0, paramInt);
+  }
+  
+  public void g(int paramInt)
+  {
+    try
     {
-      ImageView localImageView = (ImageView)paramViewGroup.findViewById(2131362586);
-      TextView localTextView = (TextView)paramViewGroup.findViewById(2131362587);
-      if (localImageView != null) {
-        localImageView.setImageDrawable(a);
-      }
-      if (localTextView != null) {
-        localTextView.setText(b);
-      }
+      Thread.sleep(1000L);
+      if ((PopAudioPlayer.a(a).d()) || (PopAudioPlayer.a(a).e())) {}
+      int i;
+      do
+      {
+        return;
+        i = PopAudioPlayer.a(a).i();
+        if (i == -1)
+        {
+          PopAudioPlayer.a(a).q();
+          return;
+        }
+      } while (i == paramInt);
+      PopAudioPlayer.a(a, i);
+      return;
     }
-    paramViewGroup.setTag(paramView);
-    return paramViewGroup;
+    catch (Exception localException)
+    {
+      for (;;) {}
+    }
   }
 }
 

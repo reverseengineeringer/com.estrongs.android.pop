@@ -1,25 +1,39 @@
 package com.estrongs.android.pop.app;
 
+import android.preference.EditTextPreference;
+import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
+import com.estrongs.android.pop.ad;
+
 class ix
-  extends Thread
+  implements Preference.OnPreferenceChangeListener
 {
-  ix(PopVideoPlayer paramPopVideoPlayer) {}
+  ix(PopPreferenceActivity paramPopPreferenceActivity) {}
   
-  public void run()
+  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
   {
-    try
+    paramObject = paramObject.toString();
+    if (((String)paramObject).trim().equals(""))
     {
-      Thread.sleep(3000L);
-      a.runOnUiThread(new iy(this));
-      return;
+      a.showDialog(105);
+      return false;
     }
-    catch (InterruptedException localInterruptedException)
+    boolean bool = PopPreferenceActivity.a(a, (String)paramObject);
+    paramPreference = (Preference)paramObject;
+    if (((String)paramObject).charAt(((String)paramObject).length() - 1) != '/') {
+      paramPreference = (String)paramObject + "/";
+    }
+    PopPreferenceActivity.b(a, paramPreference);
+    PopPreferenceActivity.a(a, 2);
+    if (bool)
     {
-      for (;;)
-      {
-        localInterruptedException.printStackTrace();
-      }
+      a.d.setSummary(paramPreference);
+      a.b.t(paramPreference);
+      a.d.setText(paramPreference);
+      return true;
     }
+    a.showDialog(105);
+    return false;
   }
 }
 

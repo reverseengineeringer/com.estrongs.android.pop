@@ -1,27 +1,17 @@
 package com.estrongs.android.ui.e;
 
-import android.content.Intent;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.app.RecommAcitivity;
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.util.a;
+import com.estrongs.android.pop.app.messagebox.MessageBoxActivity;
 
 class bn
   implements MenuItem.OnMenuItemClickListener
 {
-  bn(w paramw) {}
+  bn(m paramm) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = new Intent(a.b, RecommAcitivity.class);
-    paramMenuItem.setFlags(268435456);
-    paramMenuItem.putExtra("com.estrongs.intent.extra.TITLE", 2131428487);
-    ((FileExplorerActivity)a.b).a(paramMenuItem);
-    paramMenuItem = a.a();
-    if (paramMenuItem != null) {
-      paramMenuItem.c("Recommend_Show", "Recommend_Show");
-    }
+    MessageBoxActivity.a(m.a(a));
     return true;
   }
 }

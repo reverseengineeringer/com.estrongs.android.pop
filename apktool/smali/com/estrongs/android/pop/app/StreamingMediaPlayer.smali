@@ -92,7 +92,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/estrongs/android/pop/a;->d:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/a;->f:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -192,9 +192,9 @@
 .method private a(Ljava/lang/String;J)V
     .locals 2
 
-    new-instance v0, Lcom/estrongs/android/pop/app/lz;
+    new-instance v0, Lcom/estrongs/android/pop/app/mq;
 
-    invoke-direct {v0, p0, p1}, Lcom/estrongs/android/pop/app/lz;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1}, Lcom/estrongs/android/pop/app/mq;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;Ljava/lang/String;)V
 
     new-instance v1, Ljava/lang/Thread;
 
@@ -214,9 +214,9 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->i:Landroid/os/Handler;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/ls;
+    new-instance v1, Lcom/estrongs/android/pop/app/mj;
 
-    invoke-direct {v1, p0, p1}, Lcom/estrongs/android/pop/app/ls;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;Z)V
+    invoke-direct {v1, p0, p1}, Lcom/estrongs/android/pop/app/mj;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;Z)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -393,9 +393,9 @@
 .method private e()V
     .locals 2
 
-    new-instance v0, Lcom/estrongs/android/pop/app/lr;
+    new-instance v0, Lcom/estrongs/android/pop/app/mi;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/lr;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/mi;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->i:Landroid/os/Handler;
 
@@ -676,9 +676,9 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->i:Landroid/os/Handler;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/mc;
+    new-instance v1, Lcom/estrongs/android/pop/app/mt;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/mc;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/mt;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -780,9 +780,9 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->i:Landroid/os/Handler;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/md;
+    new-instance v1, Lcom/estrongs/android/pop/app/mu;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/md;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/mu;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -843,8 +843,6 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 3
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onCreate(Landroid/os/Bundle;)V
-
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->setDefaultKeyMode(I)V
@@ -852,6 +850,8 @@
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->requestWindowFeature(I)Z
+
+    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onCreate(Landroid/os/Bundle;)V
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->getWindow()Landroid/view/Window;
 
@@ -863,7 +863,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/Window;->setFlags(II)V
 
-    const v0, 0x7f0300b3
+    const v0, 0x7f030154
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->setContentView(I)V
 
@@ -887,7 +887,7 @@
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->d:Landroid/widget/MediaController;
 
-    const v0, 0x7f0a0345
+    const v0, 0x7f0e05a0
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->findViewById(I)Landroid/view/View;
 
@@ -901,7 +901,7 @@
 
     iget-object v1, p0, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->d:Landroid/widget/MediaController;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/ESVideoView;->a(Landroid/widget/MediaController;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/ESVideoView;->setMediaController(Landroid/widget/MediaController;)V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->d:Landroid/widget/MediaController;
 
@@ -909,35 +909,35 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->b:Lcom/estrongs/android/ui/view/ESVideoView;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/ln;
+    new-instance v1, Lcom/estrongs/android/pop/app/me;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ln;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/me;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/ESVideoView;->a(Landroid/media/MediaPlayer$OnPreparedListener;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->b:Lcom/estrongs/android/ui/view/ESVideoView;
-
-    new-instance v1, Lcom/estrongs/android/pop/app/lt;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/lt;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/ESVideoView;->a(Landroid/media/MediaPlayer$OnCompletionListener;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/ESVideoView;->setOnPreparedListener(Landroid/media/MediaPlayer$OnPreparedListener;)V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->b:Lcom/estrongs/android/ui/view/ESVideoView;
 
-    new-instance v1, Lcom/estrongs/android/pop/app/lv;
+    new-instance v1, Lcom/estrongs/android/pop/app/mk;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/lv;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/mk;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/ESVideoView;->a(Landroid/media/MediaPlayer$OnErrorListener;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/ESVideoView;->setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->b:Lcom/estrongs/android/ui/view/ESVideoView;
+
+    new-instance v1, Lcom/estrongs/android/pop/app/mm;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/mm;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/view/ESVideoView;->setOnErrorListener(Landroid/media/MediaPlayer$OnErrorListener;)V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->m:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/bc;->Q(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/bg;->R(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -951,9 +951,9 @@
     return-void
 
     :cond_0
-    new-instance v0, Lcom/estrongs/android/pop/app/lx;
+    new-instance v0, Lcom/estrongs/android/pop/app/mo;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/lx;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/mo;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
@@ -965,9 +965,9 @@
 
     const/4 v5, 0x1
 
-    const v4, 0x7f0b0044
+    const v4, 0x7f0803e4
 
-    const v3, 0x7f0b000b
+    const v3, 0x7f080226
 
     const v1, 0x1080027
 
@@ -997,15 +997,15 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b01d4
+    const v1, 0x7f08067e
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    new-instance v1, Lcom/estrongs/android/pop/app/me;
+    new-instance v1, Lcom/estrongs/android/pop/app/mv;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/me;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/mv;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
 
     invoke-virtual {v0, v3, v1}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1034,15 +1034,15 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b025c
+    const v1, 0x7f08046a
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    new-instance v1, Lcom/estrongs/android/pop/app/mf;
+    new-instance v1, Lcom/estrongs/android/pop/app/mw;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/mf;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/mw;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
 
     invoke-virtual {v0, v3, v1}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1067,7 +1067,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b01d5
+    const v1, 0x7f080680
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
@@ -1077,9 +1077,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/estrongs/android/pop/app/lo;
+    new-instance v1, Lcom/estrongs/android/pop/app/mf;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/lo;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/mf;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
 
     invoke-virtual {v0, v3, v1}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1108,15 +1108,15 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b01d6
+    const v1, 0x7f08067f
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    new-instance v1, Lcom/estrongs/android/pop/app/lp;
+    new-instance v1, Lcom/estrongs/android/pop/app/mg;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/lp;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/mg;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
 
     invoke-virtual {v0, v3, v1}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1141,7 +1141,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->x:Landroid/app/ProgressDialog;
 
-    const v1, 0x7f0b01db
+    const v1, 0x7f08067d
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setTitle(I)V
 
@@ -1155,7 +1155,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->x:Landroid/app/ProgressDialog;
 
-    const v1, 0x7f0b01dc
+    const v1, 0x7f08067c
 
     invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->getText(I)Ljava/lang/CharSequence;
 
@@ -1165,15 +1165,15 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->x:Landroid/app/ProgressDialog;
 
-    const v1, 0x7f0b000c
+    const v1, 0x7f080221
 
     invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    new-instance v2, Lcom/estrongs/android/pop/app/lq;
+    new-instance v2, Lcom/estrongs/android/pop/app/mh;
 
-    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/lq;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
+    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/mh;-><init>(Lcom/estrongs/android/pop/app/StreamingMediaPlayer;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/ProgressDialog;->setButton2(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
@@ -1190,7 +1190,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->y:Landroid/app/ProgressDialog;
 
-    const v1, 0x7f0b0072
+    const v1, 0x7f0805b6
 
     invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/StreamingMediaPlayer;->getText(I)Ljava/lang/CharSequence;
 

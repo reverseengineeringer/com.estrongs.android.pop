@@ -1,11 +1,13 @@
 package android.support.v4.view;
 
-import android.view.ViewGroup;
+import android.view.MotionEvent;
 
 class bp
-  implements bo
 {
-  public void a(ViewGroup paramViewGroup, boolean paramBoolean) {}
+  public static int a(MotionEvent paramMotionEvent)
+  {
+    return paramMotionEvent.getSource();
+  }
 }
 
 /* Location:

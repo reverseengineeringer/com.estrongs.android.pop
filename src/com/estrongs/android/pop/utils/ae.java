@@ -1,20 +1,33 @@
 package com.estrongs.android.pop.utils;
 
+import com.estrongs.a.a;
+import com.estrongs.fs.impl.media.MediaStoreInsertException;
+import com.estrongs.fs.impl.media.e;
+import java.io.File;
 import java.util.ArrayList;
 
-public class ae
+class ae
+  extends a
 {
-  public String a;
-  public boolean b;
-  public boolean c;
-  public ArrayList<ae> d;
-  public boolean e;
+  ae(ad paramad, String paramString) {}
   
-  public ae(String paramString, boolean paramBoolean1, boolean paramBoolean2)
+  public boolean task()
   {
-    a = paramString;
-    b = paramBoolean1;
-    c = paramBoolean2;
+    try
+    {
+      e.e(a);
+      ArrayList localArrayList = new ArrayList();
+      ad.a(b, new File(a), localArrayList);
+      e.a(localArrayList, null);
+      return true;
+    }
+    catch (MediaStoreInsertException localMediaStoreInsertException)
+    {
+      for (;;)
+      {
+        localMediaStoreInsertException.printStackTrace();
+      }
+    }
   }
 }
 

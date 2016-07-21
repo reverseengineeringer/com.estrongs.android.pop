@@ -58,11 +58,11 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/n;->a:Lcom/estrongs/android/pop/app/compress/l;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/l;->g(Lcom/estrongs/android/pop/app/compress/l;)Lcom/estrongs/android/pop/app/compress/be;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/l;->g(Lcom/estrongs/android/pop/app/compress/l;)Lcom/estrongs/android/pop/app/compress/cb;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/compress/be;->dismiss()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/compress/cb;->dismiss()V
 
     monitor-exit v1
 

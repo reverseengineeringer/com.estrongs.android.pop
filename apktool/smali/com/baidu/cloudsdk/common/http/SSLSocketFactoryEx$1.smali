@@ -29,9 +29,28 @@
 .end method
 
 .method public checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
-    .locals 0
+    .locals 3
 
+    if-eqz p1, :cond_0
+
+    array-length v1, p1
+
+    const/4 v0, 0x0
+
+    :goto_0
+    if-lt v0, v1, :cond_1
+
+    :cond_0
     return-void
+
+    :cond_1
+    aget-object v2, p1, v0
+
+    invoke-virtual {v2}, Ljava/security/cert/X509Certificate;->checkValidity()V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
 .end method
 
 .method public getAcceptedIssuers()[Ljava/security/cert/X509Certificate;

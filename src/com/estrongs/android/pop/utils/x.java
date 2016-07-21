@@ -11,7 +11,7 @@ import com.estrongs.android.pop.a;
 import com.estrongs.android.pop.app.DownloaderActivity;
 import com.estrongs.android.pop.app.b;
 import com.estrongs.android.pop.view.utils.v;
-import com.estrongs.android.ui.view.ag;
+import com.estrongs.android.ui.view.ak;
 import java.io.File;
 
 final class x
@@ -22,7 +22,7 @@ final class x
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
     paramDialogInterface.dismiss();
-    paramDialogInterface = a.d + "/" + a.e.hashCode() + ".apk";
+    paramDialogInterface = a.f + "/" + a.e.hashCode() + ".apk";
     if (new File(paramDialogInterface).exists())
     {
       paramDialogInterface = b.a(paramDialogInterface);
@@ -40,12 +40,12 @@ final class x
       }
       catch (ActivityNotFoundException paramDialogInterface)
       {
-        ag.a(b, b.getText(2131427842), 1);
+        ak.a(b, b.getText(2131231690), 1);
         return;
       }
     }
     paramDialogInterface = new y(this);
-    DownloaderActivity.a((Activity)b, a.d, a.e, paramDialogInterface, false, "*/*", false);
+    DownloaderActivity.a((Activity)b, a.f, a.e, paramDialogInterface, false, "*/*", false);
   }
 }
 

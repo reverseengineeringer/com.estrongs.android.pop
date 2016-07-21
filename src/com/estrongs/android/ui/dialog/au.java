@@ -1,34 +1,18 @@
 package com.estrongs.android.ui.dialog;
 
-import android.view.View;
-import android.widget.EditText;
-import android.widget.RadioButton;
-import com.estrongs.android.pop.esclasses.ESActivity;
-import com.estrongs.android.view.ea;
+import android.app.Activity;
+import com.estrongs.a.a;
 
 class au
-  extends ea
+  implements com.estrongs.a.a.p
 {
-  RadioButton a = (RadioButton)k(2131361968);
-  RadioButton b = (RadioButton)k(2131361976);
-  EditText c = (EditText)k(2131361965);
-  EditText d = (EditText)k(2131361971);
-  EditText e = (EditText)k(2131361973);
-  EditText f = (EditText)k(2131361978);
+  au(ar paramar) {}
   
-  public au(ap paramap, ESActivity paramESActivity)
+  public void a(a parama, int paramInt1, int paramInt2)
   {
-    super(paramESActivity);
-    k(2131361964).setOnClickListener(new av(this, paramap));
-    k(2131361972).setOnClickListener(new aw(this, paramap));
-    a.setOnCheckedChangeListener(new ax(this, paramap));
-    b.setOnCheckedChangeListener(new ay(this, paramap));
-    a.setChecked(true);
-  }
-  
-  protected int a()
-  {
-    return 2130903062;
+    if ((paramInt2 == 5) && (getTaskResulta == 17)) {
+      ar.a(a).runOnUiThread(new av(this));
+    }
   }
 }
 

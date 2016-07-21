@@ -1,22 +1,26 @@
 package com.estrongs.android.pop.app;
 
-import android.content.Context;
-import android.view.WindowManager.LayoutParams;
-import com.estrongs.android.ui.e.iw;
+import android.os.Handler;
+import android.view.View;
+import com.estrongs.android.ui.view.av;
 
 class ji
-  extends iw
+  implements av
 {
-  ji(PopVideoPlayer paramPopVideoPlayer, Context paramContext, boolean paramBoolean1, boolean paramBoolean2)
+  ji(PopVideoPlayer paramPopVideoPlayer) {}
+  
+  public void a()
   {
-    super(paramContext, paramBoolean1, paramBoolean2);
+    PopVideoPlayer.f(a).removeMessages(7);
+    PopVideoPlayer.f(a).sendMessageDelayed(PopVideoPlayer.f(a).obtainMessage(7), 2000L);
+    PopVideoPlayer.d(a, false);
   }
   
-  protected void a()
+  public void b()
   {
-    super.a();
-    WindowManager.LayoutParams localLayoutParams = b;
-    flags |= 0x400;
+    PopVideoPlayer.d(a, true);
+    PopVideoPlayer.f(a).removeMessages(7);
+    a.b.setVisibility(8);
   }
 }
 

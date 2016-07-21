@@ -1,5 +1,8 @@
 package com.estrongs.a;
 
+import android.content.res.Resources;
+import com.estrongs.android.pop.FexApplication;
+
 public class q
 {
   public String a;
@@ -8,7 +11,24 @@ public class q
   
   public q(String paramString, Exception paramException)
   {
-    a = paramString;
+    String str;
+    if (!paramString.contains("storage"))
+    {
+      str = paramString;
+      if (!paramString.contains("sdcard")) {}
+    }
+    else
+    {
+      str = paramString;
+      if (paramString.contains("Permission"))
+      {
+        str = paramString;
+        if (paramString.contains("denied")) {
+          str = (String)FexApplication.a().getResources().getText(2131232294);
+        }
+      }
+    }
+    a = str;
     c = paramException;
   }
   

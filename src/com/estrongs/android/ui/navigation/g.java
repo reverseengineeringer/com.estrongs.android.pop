@@ -1,25 +1,14 @@
 package com.estrongs.android.ui.navigation;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.ui.d.e;
-import com.estrongs.android.ui.dialog.ga;
-import com.estrongs.android.ui.view.ag;
-
 class g
-  implements MenuItem.OnMenuItemClickListener
+  implements Runnable
 {
-  g(a parama) {}
+  g(MultiWindowActivity paramMultiWindowActivity) {}
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void run()
   {
-    if (e.c() >= 12)
-    {
-      ag.a(a.b(a), 2131428177, 0);
-      return false;
-    }
-    new ga(a.b(a)).a(new h(this)).a();
-    return false;
+    MultiWindowActivity.a(a);
+    a.d();
   }
 }
 

@@ -1,35 +1,68 @@
 .class Lcom/estrongs/android/pop/app/editor/ad;
-.super Ljava/lang/Object;
+.super Landroid/os/AsyncTask;
 
-# interfaces
-.implements Lcom/estrongs/android/pop/app/editor/aw;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroid/os/AsyncTask",
+        "<",
+        "Ljava/lang/Object;",
+        "Ljava/lang/Object;",
+        "Ljava/lang/Object;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/editor/ac;
+.field final synthetic a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/editor/ac;)V
+.method private constructor <init>(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/editor/ad;->a:Lcom/estrongs/android/pop/app/editor/ac;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/editor/ad;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;Lcom/estrongs/android/pop/app/editor/g;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/estrongs/android/pop/app/editor/ad;-><init>(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(I)V
+.method protected varargs doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/editor/ad;->a:Lcom/estrongs/android/pop/app/editor/ac;
+    :try_start_0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/editor/ad;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
 
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/editor/ac;->a:Lcom/estrongs/android/pop/app/editor/PopNoteEditor;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/editor/PopNoteEditor;->s(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-static {v0, p1}, Lcom/estrongs/android/pop/app/editor/PopNoteEditor;->c(Lcom/estrongs/android/pop/app/editor/PopNoteEditor;I)I
+    :goto_0
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+.end method
+
+.method protected onPostExecute(Ljava/lang/Object;)V
+    .locals 0
 
     return-void
 .end method

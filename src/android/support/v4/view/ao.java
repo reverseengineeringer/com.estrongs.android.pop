@@ -1,29 +1,59 @@
 package android.support.v4.view;
 
-import android.os.Build.VERSION;
-import android.view.VelocityTracker;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.LayoutInflater.Factory;
+import android.view.LayoutInflater.Factory2;
+import java.lang.reflect.Field;
 
-public class ao
+class ao
 {
-  static final ar a = new ap();
+  private static Field a;
+  private static boolean b;
   
-  static
+  static void a(LayoutInflater paramLayoutInflater, ar paramar)
   {
-    if (Build.VERSION.SDK_INT >= 11)
+    if (paramar != null) {}
+    for (paramar = new ap(paramar);; paramar = null)
     {
-      a = new aq();
+      paramLayoutInflater.setFactory2(paramar);
+      LayoutInflater.Factory localFactory = paramLayoutInflater.getFactory();
+      if (!(localFactory instanceof LayoutInflater.Factory2)) {
+        break;
+      }
+      a(paramLayoutInflater, (LayoutInflater.Factory2)localFactory);
       return;
     }
+    a(paramLayoutInflater, paramar);
   }
   
-  public static float a(VelocityTracker paramVelocityTracker, int paramInt)
+  static void a(LayoutInflater paramLayoutInflater, LayoutInflater.Factory2 paramFactory2)
   {
-    return a.a(paramVelocityTracker, paramInt);
-  }
-  
-  public static float b(VelocityTracker paramVelocityTracker, int paramInt)
-  {
-    return a.b(paramVelocityTracker, paramInt);
+    if (!b) {}
+    try
+    {
+      a = LayoutInflater.class.getDeclaredField("mFactory2");
+      a.setAccessible(true);
+      b = true;
+      if (a == null) {}
+    }
+    catch (NoSuchFieldException localNoSuchFieldException)
+    {
+      for (;;)
+      {
+        try
+        {
+          a.set(paramLayoutInflater, paramFactory2);
+          return;
+        }
+        catch (IllegalAccessException paramFactory2)
+        {
+          Log.e("LayoutInflaterCompatHC", "forceSetFactory2 could not set the Factory2 on LayoutInflater " + paramLayoutInflater + "; inflation may have unexpected results.", paramFactory2);
+        }
+        localNoSuchFieldException = localNoSuchFieldException;
+        Log.e("LayoutInflaterCompatHC", "forceSetFactory2 Could not find field 'mFactory2' on class " + LayoutInflater.class.getName() + "; inflation may have unexpected results.", localNoSuchFieldException);
+      }
+    }
   }
 }
 

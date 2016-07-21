@@ -8,7 +8,7 @@ import android.view.View.BaseSavedState;
 class FragmentTabHost$SavedState
   extends View.BaseSavedState
 {
-  public static final Parcelable.Creator<SavedState> CREATOR = new t();
+  public static final Parcelable.Creator<SavedState> CREATOR = new ax();
   String a;
   
   private FragmentTabHost$SavedState(Parcel paramParcel)

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/bottom_menu_playing" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:id="@id/repeat_container" android:background="@drawable/background_globle_buttons" android:focusable="true" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:id="@id/tool_repeat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/toolbar_loop" android:scaleType="centerInside" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/shuffle_container" android:background="@drawable/background_globle_buttons" android:focusable="true" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:id="@id/tool_shuffle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/toolbar_randomplay" android:scaleType="centerInside" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/search_container" android:background="@drawable/background_globle_buttons" android:focusable="true" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:id="@id/btn_search" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/toolbar_web_search" android:scaleType="centerInside" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/playlist_add" android:background="@drawable/background_globle_buttons" android:focusable="true" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:id="@id/btn_playlist_add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/toolbar_playlist_add" android:scaleType="centerInside" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/ll_playlist" android:background="@drawable/background_globle_buttons" android:focusable="true" android:layout_width="@dimen/dp_0" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:id="@id/btn_playlist" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/toolbar_playlist" android:scaleType="centerInside" />
+    </LinearLayout>
+</LinearLayout>

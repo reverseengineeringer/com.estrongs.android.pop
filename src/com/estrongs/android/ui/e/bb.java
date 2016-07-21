@@ -3,19 +3,17 @@ package com.estrongs.android.ui.e;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.view.WebViewWrapper;
+import com.estrongs.fs.impl.q.a;
 
 class bb
   implements MenuItem.OnMenuItemClickListener
 {
-  bb(w paramw) {}
+  bb(m paramm) {}
   
   public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    paramMenuItem = a.k.y();
-    if ((paramMenuItem instanceof WebViewWrapper)) {
-      ((WebViewWrapper)paramMenuItem).r();
-    }
+    a.a(m.a(a), m.a(a).O());
+    m.a(a).A();
     return false;
   }
 }

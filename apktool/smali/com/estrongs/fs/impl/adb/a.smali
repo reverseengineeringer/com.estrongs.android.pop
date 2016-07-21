@@ -91,10 +91,10 @@
     return-wide v0
 .end method
 
-.method protected doGetFileType()Lcom/estrongs/fs/m;
+.method protected doGetFileType()Lcom/estrongs/fs/w;
     .locals 1
 
-    sget-object v0, Lcom/estrongs/fs/m;->b:Lcom/estrongs/fs/m;
+    sget-object v0, Lcom/estrongs/fs/w;->b:Lcom/estrongs/fs/w;
 
     return-object v0
 .end method
@@ -129,10 +129,10 @@
     throw v1
 .end method
 
-.method public getFileType()Lcom/estrongs/fs/m;
+.method public getFileType()Lcom/estrongs/fs/w;
     .locals 1
 
-    sget-object v0, Lcom/estrongs/fs/m;->b:Lcom/estrongs/fs/m;
+    sget-object v0, Lcom/estrongs/fs/w;->b:Lcom/estrongs/fs/w;
 
     return-object v0
 .end method

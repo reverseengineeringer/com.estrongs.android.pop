@@ -1,19 +1,22 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.os.Handler;
 
 class z
-  implements DialogInterface.OnClickListener
+  implements Runnable
 {
-  z(r paramr) {}
+  z(x paramx) {}
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public void run()
   {
-    a.dismiss();
-    if (r.i(a) != null) {
-      r.i(a).b();
+    x.a(a, true);
+    if (!x.a(a).e())
+    {
+      x.a(a, false);
+      return;
     }
+    x.f(a).post(new aa(this));
+    x.a(a, false);
   }
 }
 

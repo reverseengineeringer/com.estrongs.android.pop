@@ -1,20 +1,19 @@
 package com.estrongs.android.pop.app;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.pop.ad;
-import java.util.List;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 
 class af
-  implements View.OnClickListener
+  implements DialogInterface.OnClickListener
 {
-  af(DefaultWindowSetting paramDefaultWindowSetting) {}
+  af(x paramx) {}
   
-  public void onClick(View paramView)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    DefaultWindowSetting.a(a).a().clear();
-    ad.a(a).f(DefaultWindowSetting.a(a).a());
-    DefaultWindowSetting.a(a).notifyDataSetChanged();
+    a.dismiss();
+    if (x.h(a) != null) {
+      x.h(a).b();
+    }
   }
 }
 

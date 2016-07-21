@@ -8,7 +8,7 @@ final class f
 {
   public void a()
   {
-    if ((FileExplorerActivity.J() == null) || (FileExplorerActivity.J().isDestroyed())) {
+    if ((FileExplorerActivity.X() == null) || (FileExplorerActivity.X().isDestroyed())) {
       e.d();
     }
   }

@@ -1,20 +1,30 @@
 package com.estrongs.android.ui.e;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.view.WindowCallbackWrapper;
+import android.view.KeyEvent;
+import android.view.Window.Callback;
+import java.lang.ref.WeakReference;
 
 class e
-  implements MenuItem.OnMenuItemClickListener
+  extends WindowCallbackWrapper
 {
-  e(c paramc) {}
+  private WeakReference<AppCompatActivity> b;
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public e(d paramd, Window.Callback paramCallback, AppCompatActivity paramAppCompatActivity)
   {
-    if (c.a(a).c()) {
-      c.a(a).d();
+    super(paramCallback);
+    b = new WeakReference(paramAppCompatActivity);
+  }
+  
+  public boolean dispatchKeyEvent(KeyEvent paramKeyEvent)
+  {
+    int i = paramKeyEvent.getKeyCode();
+    AppCompatActivity localAppCompatActivity = (AppCompatActivity)b.get();
+    if ((localAppCompatActivity != null) && (i == 82) && (localAppCompatActivity.dispatchKeyEvent(paramKeyEvent))) {
+      return true;
     }
-    c.a(a, false);
-    return true;
+    return super.dispatchKeyEvent(paramKeyEvent);
   }
 }
 

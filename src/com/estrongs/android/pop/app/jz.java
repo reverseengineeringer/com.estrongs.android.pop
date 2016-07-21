@@ -1,44 +1,27 @@
 package com.estrongs.android.pop.app;
 
-import android.media.MediaPlayer;
-import android.media.MediaPlayer.OnErrorListener;
-import android.util.Log;
-import android.view.View;
-import com.estrongs.android.ui.dialog.ct;
+import android.content.Intent;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.ui.e.ju;
+import com.estrongs.android.ui.view.ESVideoView;
 
 class jz
-  implements MediaPlayer.OnErrorListener
+  implements MenuItem.OnMenuItemClickListener
 {
   jz(PopVideoPlayer paramPopVideoPlayer) {}
   
-  public boolean onError(MediaPlayer paramMediaPlayer, int paramInt1, int paramInt2)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    Log.d(PopVideoPlayer.d(), "onError what " + paramInt1 + " extra " + paramInt2);
-    if (PopVideoPlayer.b(a)) {}
-    do
+    if (PopVideoPlayer.d(a))
     {
-      return true;
-      PopVideoPlayer.b(a, true);
-    } while (!a.a());
-    if (PopVideoPlayer.s(a))
-    {
-      a.finish();
-      return true;
+      PopVideoPlayer.d(a, false);
+      PopVideoPlayer.a(a).setVideoURI(a.getIntent().getData());
+      PopVideoPlayer.c(a);
+      PopVideoPlayer.a(a).seekTo(0);
     }
-    paramMediaPlayer = new ct(a).a(2131427805).b(2131427806);
-    if (aa.b())
-    {
-      paramMediaPlayer.b(2131427363, new ka(this));
-      paramMediaPlayer.c(2131428522, new kb(this));
-      paramMediaPlayer.c();
-    }
-    for (;;)
-    {
-      paramMediaPlayer.a(new kd(this));
-      a.b.setVisibility(8);
-      return true;
-      paramMediaPlayer.a(2131427339, new kc(this)).c();
-    }
+    PopVideoPlayer.E(a).d();
+    return true;
   }
 }
 

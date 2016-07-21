@@ -1,76 +1,67 @@
 .class Lcom/estrongs/android/ui/dialog/io;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
+
 
 # instance fields
-.field a:Ljava/lang/String;
-
-.field b:Ljava/lang/String;
-
-.field c:Ljava/lang/String;
-
-.field final synthetic d:Lcom/estrongs/android/ui/dialog/ij;
-
-.field private e:Ljava/lang/String;
+.field final synthetic a:Lcom/estrongs/android/ui/dialog/im;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/ij;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/im;)V
+    .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/io;->d:Lcom/estrongs/android/ui/dialog/ij;
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/io;->a:Lcom/estrongs/android/ui/dialog/im;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-string v0, ""
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/dialog/io;->a:Ljava/lang/String;
-
-    const-string v0, ""
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/dialog/io;->b:Ljava/lang/String;
-
-    const-string v0, ""
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/dialog/io;->c:Ljava/lang/String;
-
-    const-string v0, ""
-
-    iput-object v0, p0, Lcom/estrongs/android/ui/dialog/io;->e:Ljava/lang/String;
-
-    iput-object p2, p0, Lcom/estrongs/android/ui/dialog/io;->a:Ljava/lang/String;
-
-    iput-object p3, p0, Lcom/estrongs/android/ui/dialog/io;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Lcom/estrongs/android/ui/dialog/io;->c:Ljava/lang/String;
-
-    iput-object p4, p0, Lcom/estrongs/android/ui/dialog/io;->e:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method a()Z
+.method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/io;->e:Ljava/lang/String;
+    :try_start_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/io;->a:Lcom/estrongs/android/ui/dialog/im;
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/io;->c:Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/im;->a(Lcom/estrongs/android/ui/dialog/im;)Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v0
 
-    move-result v0
+    invoke-static {v0}, Lcom/estrongs/android/util/p;->a(Landroid/content/Context;)V
 
-    if-nez v0, :cond_0
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/io;->a:Lcom/estrongs/android/ui/dialog/im;
 
-    const/4 v0, 0x1
+    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/im;->a(Lcom/estrongs/android/ui/dialog/im;)Landroid/content/Context;
 
-    :goto_0
-    return v0
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/estrongs/android/j/c;->a(Landroid/content/Context;)Lcom/estrongs/android/j/c;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const-string v1, "Go_feedback"
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/j/c;->a(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :cond_0
-    const/4 v0, 0x0
+    :goto_0
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 .end method

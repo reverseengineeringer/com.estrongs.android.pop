@@ -1,23 +1,15 @@
 package com.estrongs.android.pop.utils;
 
-import android.app.Activity;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.ui.pcs.j;
-import com.estrongs.android.ui.pcs.n;
+import com.estrongs.android.util.bg;
+import java.io.File;
+import java.io.FilenameFilter;
 
 final class az
-  implements DialogInterface.OnClickListener
+  implements FilenameFilter
 {
-  az(Activity paramActivity, n paramn, Boolean[] paramArrayOfBoolean) {}
-  
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public boolean accept(File paramFile, String paramString)
   {
-    j localj = new j(a);
-    localj.a(b);
-    localj.a(true);
-    c[0] = Boolean.valueOf(false);
-    paramDialogInterface.dismiss();
+    return bg.c(paramString);
   }
 }
 

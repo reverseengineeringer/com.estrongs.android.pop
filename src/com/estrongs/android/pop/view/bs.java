@@ -1,33 +1,18 @@
 package com.estrongs.android.pop.view;
 
-import android.os.Handler;
-import android.os.Message;
-
 class bs
-  extends Handler
+  implements Runnable
 {
   bs(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void handleMessage(Message paramMessage)
+  public void run()
   {
-    int i;
-    switch (what)
+    try
     {
-    default: 
-      return;
-    case 0: 
-      a.b(null);
-      return;
-    case 1: 
-      i = arg1;
-      a.f(i);
-      return;
-    case 2: 
-      i = arg1;
-      a.g(i);
+      a.ah();
       return;
     }
-    a.finish();
+    catch (Exception localException) {}
   }
 }
 

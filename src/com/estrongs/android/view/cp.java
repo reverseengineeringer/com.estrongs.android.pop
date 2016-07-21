@@ -1,14 +1,11 @@
 package com.estrongs.android.view;
 
-import android.widget.ImageView;
-import com.estrongs.android.widget.e;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
-public class cp
-  extends e
+public abstract interface cp
 {
-  public int a;
-  public boolean b = false;
-  public ImageView c;
+  public abstract boolean a(RecyclerView paramRecyclerView, View paramView, int paramInt, boolean paramBoolean);
 }
 
 /* Location:

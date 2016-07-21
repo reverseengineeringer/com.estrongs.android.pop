@@ -1,32 +1,18 @@
 package com.estrongs.android.ui.b;
 
-import android.os.Handler;
-import com.estrongs.a.a;
-import com.estrongs.a.a.o;
-import com.estrongs.fs.h;
-import java.util.ArrayList;
-import org.json.JSONObject;
+import android.view.View;
+import android.view.View.OnLongClickListener;
+import com.estrongs.android.view.cp;
 
 class x
-  implements o
+  implements View.OnLongClickListener
 {
-  ArrayList<h> a = new ArrayList();
+  x(v paramv, int paramInt) {}
   
-  x(u paramu) {}
-  
-  public void a(a parama, boolean paramBoolean)
+  public boolean onLongClick(View paramView)
   {
-    if (parama.summary().optBoolean("need_reload")) {
-      u.j(b).post(new y(this));
-    }
-  }
-  
-  public void a(h paramh)
-  {
-    a.clear();
-    if (paramh != null) {
-      a.add(paramh);
-    }
+    u.g(b.a).a(u.f(b.a), paramView, a, false);
+    return true;
   }
 }
 

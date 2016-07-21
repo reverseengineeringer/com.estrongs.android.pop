@@ -1,27 +1,26 @@
 package com.estrongs.android.pop.app;
 
-import com.estrongs.android.pop.FexApplication;
-import com.estrongs.android.pop.ad;
-import com.estrongs.fs.impl.adb.c;
-import java.net.Inet4Address;
+import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.ui.pcs.l;
+import com.estrongs.android.ui.pcs.q;
+import com.estrongs.android.ui.pcs.u;
 
-public class bd
-  implements Runnable
+final class bd
+  implements DialogInterface.OnClickListener
 {
-  private bi b = null;
+  bd(Activity paramActivity, q paramq, DialogInterface.OnCancelListener paramOnCancelListener) {}
   
-  public bd(bc parambc, bi parambi)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    b = parambi;
-  }
-  
-  public void run()
-  {
-    if (c.b(b.a.getHostAddress(), 5555))
-    {
-      String str = "adb://" + b.a.getHostAddress() + "/";
-      ad.a(FexApplication.a()).b(str, b.b, false);
-    }
+    l locall = new l(a);
+    locall.a(b);
+    locall.setOnCancelListener(c);
+    locall.a(true);
+    u.a().a(locall);
+    paramDialogInterface.dismiss();
   }
 }
 

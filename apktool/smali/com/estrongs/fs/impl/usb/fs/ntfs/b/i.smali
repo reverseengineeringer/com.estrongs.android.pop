@@ -71,7 +71,7 @@
 
     const-string v1, "FullIndexEntryIterator"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     invoke-virtual {p1}, Lcom/estrongs/fs/impl/usb/fs/ntfs/b/h;->a()Lcom/estrongs/fs/impl/usb/fs/ntfs/b/g;
@@ -114,7 +114,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     invoke-direct {p0}, Lcom/estrongs/fs/impl/usb/fs/ntfs/b/i;->b()V
@@ -166,7 +166,7 @@
 
     const-string v1, "next has subnode"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     iget-object v0, p0, Lcom/estrongs/fs/impl/usb/fs/ntfs/b/i;->b:Lcom/estrongs/fs/impl/usb/fs/ntfs/utils/f;
@@ -215,7 +215,7 @@
 
     const-string v1, "end of list"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -234,7 +234,7 @@
 
     const-string v1, "hasNext: read next indexblock"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/estrongs/android/util/l;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_5
     iget-object v0, p0, Lcom/estrongs/fs/impl/usb/fs/ntfs/b/i;->b:Lcom/estrongs/fs/impl/usb/fs/ntfs/utils/f;
@@ -297,7 +297,7 @@
 
     const-string v2, "Cannot read next index block"
 
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v1, v2, v0}, Lcom/estrongs/android/util/l;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_1
 .end method

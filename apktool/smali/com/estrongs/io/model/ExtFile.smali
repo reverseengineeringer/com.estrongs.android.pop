@@ -122,7 +122,7 @@
     goto :goto_1
 
     :cond_3
-    sget-object v0, Lcom/estrongs/android/util/q;->c:Ljava/util/Comparator;
+    sget-object v0, Lcom/estrongs/android/util/s;->c:Ljava/util/Comparator;
 
     invoke-static {v3, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 

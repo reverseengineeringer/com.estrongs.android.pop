@@ -4,7 +4,8 @@ import android.app.Activity;
 import android.app.NotificationManager;
 import com.estrongs.fs.b.ab;
 import com.estrongs.fs.d;
-import com.estrongs.fs.impl.local.h;
+import com.estrongs.fs.impl.local.i;
+import com.estrongs.fs.impl.local.m;
 import java.util.List;
 
 final class k
@@ -37,19 +38,19 @@ final class k
         if (k < b.size())
         {
           localObject2 = (String)b.get(k);
-          AppRunner.a(a, a.getText(2131427704) + "...", (String)c.get(k), n, true);
+          AppRunner.a(a, a.getText(2131230980) + "...", (String)c.get(k), n, true);
           if (localObject2 == null) {
             break label642;
           }
           localObject2 = ((String)localObject2).replace(" ", "\\ ").replace("&", "\\&");
-          boolean bool = com.estrongs.fs.impl.local.l.l((String)localObject2);
+          boolean bool = m.l((String)localObject2);
           if ((d == null) || (!((Boolean)d.get(k)).booleanValue())) {
             break label639;
           }
           bool = ((Boolean)d.get(k)).booleanValue();
           localObject2 = "/data/data/" + (String)localObject2;
-          if (h.a((String)localObject2)) {
-            new ab(d.a(a), h.b((String)localObject2), false).execute(false);
+          if (i.a((String)localObject2)) {
+            new ab(d.a(a), i.b((String)localObject2), false).execute(false);
           }
           if (bool)
           {
@@ -85,24 +86,24 @@ final class k
       {
         if (i == 1)
         {
-          ??? = (String)c.get(0) + " " + a.getText(2131427705);
+          ??? = (String)c.get(0) + " " + a.getText(2131230979);
           a.runOnUiThread(new l(this, (String)???));
           return;
         }
-        ??? = (String)c.get(0) + " " + a.getText(2131427706);
+        ??? = (String)c.get(0) + " " + a.getText(2131230975);
         continue;
       }
       if (i > 0)
       {
         if (j == 0) {
-          ??? = "" + i + " " + a.getText(2131427708);
+          ??? = "" + i + " " + a.getText(2131230978);
         } else {
-          ??? = "" + i + " " + a.getText(2131427708) + ", " + j + " " + a.getText(2131427709);
+          ??? = "" + i + " " + a.getText(2131230978) + ", " + j + " " + a.getText(2131230977);
         }
       }
       else
       {
-        ??? = "" + j + " " + a.getText(2131427709);
+        ??? = "" + j + " " + a.getText(2131230977);
         continue;
         label639:
         continue;

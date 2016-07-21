@@ -1,11 +1,55 @@
 package com.estrongs.android.pop.app.b;
 
-public class g
-  extends f
+import com.estrongs.android.util.ap;
+import com.estrongs.android.util.l;
+import com.estrongs.fs.util.j;
+
+class g
 {
-  public g()
+  String[] a;
+  
+  g() {}
+  
+  g(String[] paramArrayOfString)
   {
-    super(5, new int[] { 5555 });
+    a = paramArrayOfString;
+  }
+  
+  boolean a(String paramString)
+  {
+    if (!b(paramString)) {}
+    for (;;)
+    {
+      return false;
+      if (a == null) {
+        return true;
+      }
+      paramString = j.b(paramString);
+      if (paramString != null)
+      {
+        String[] arrayOfString = a;
+        int j = arrayOfString.length;
+        int i = 0;
+        while (i < j)
+        {
+          if (paramString.equals(arrayOfString[i])) {
+            return true;
+          }
+          i += 1;
+        }
+      }
+    }
+  }
+  
+  boolean b(String paramString)
+  {
+    if (d.a(paramString)) {
+      l.e("eee", paramString);
+    }
+    while (ap.cp(paramString)) {
+      return false;
+    }
+    return true;
   }
 }
 

@@ -1,92 +1,86 @@
 .class Lcom/estrongs/android/ui/e/dw;
-.super Ljava/lang/Thread;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Ljava/util/LinkedList;
-
-.field final synthetic b:Ljava/util/LinkedList;
-
-.field final synthetic c:Lcom/estrongs/android/ui/e/cp;
+.field final synthetic a:Lcom/estrongs/android/ui/e/cr;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/e/cp;Ljava/lang/String;Ljava/util/LinkedList;Ljava/util/LinkedList;)V
+.method constructor <init>(Lcom/estrongs/android/ui/e/cr;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/e/dw;->c:Lcom/estrongs/android/ui/e/cp;
+    iput-object p1, p0, Lcom/estrongs/android/ui/e/dw;->a:Lcom/estrongs/android/ui/e/cr;
 
-    iput-object p3, p0, Lcom/estrongs/android/ui/e/dw;->a:Ljava/util/LinkedList;
-
-    iput-object p4, p0, Lcom/estrongs/android/ui/e/dw;->b:Ljava/util/LinkedList;
-
-    invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public onMenuItemClick(Landroid/view/MenuItem;)Z
+    .locals 4
 
-    :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/dw;->c:Lcom/estrongs/android/ui/e/cp;
+    const/4 v3, 0x1
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/cp;->a(Lcom/estrongs/android/ui/e/cp;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    const/4 v2, 0x0
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/dw;->a:Lcom/estrongs/android/ui/e/cr;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/cr;->a(Lcom/estrongs/android/ui/e/cr;)Ljava/util/List;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/fs/d;->a(Landroid/content/Context;)Lcom/estrongs/fs/d;
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/dw;->a:Lcom/estrongs/android/ui/e/cr;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/cr;->b(Lcom/estrongs/android/ui/e/cr;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/e/dw;->a:Ljava/util/LinkedList;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->getBaseContext()Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/fs/d;->a(Ljava/util/List;)Z
-    :try_end_0
-    .catch Lcom/estrongs/fs/FileSystemException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object v0
 
+    const v1, 0x7f08033f
+
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
+
+    :cond_0
     :goto_0
-    :try_start_1
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/dw;->c:Lcom/estrongs/android/ui/e/cp;
+    return v3
 
-    invoke-static {v0}, Lcom/estrongs/android/ui/e/cp;->a(Lcom/estrongs/android/ui/e/cp;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    :cond_1
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-lt v1, v3, :cond_0
+
+    iget-object v1, p0, Lcom/estrongs/android/ui/e/dw;->a:Lcom/estrongs/android/ui/e/cr;
+
+    invoke-static {v1}, Lcom/estrongs/android/ui/e/cr;->b(Lcom/estrongs/android/ui/e/cr;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
+
+    move-result-object v1
+
+    invoke-static {v1, v0, v2}, Lcom/estrongs/android/pop/utils/ao;->a(Landroid/app/Activity;Ljava/util/List;Z)V
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/e/dw;->a:Lcom/estrongs/android/ui/e/cr;
+
+    invoke-static {v0}, Lcom/estrongs/android/ui/e/cr;->b(Lcom/estrongs/android/ui/e/cr;)Lcom/estrongs/android/pop/view/FileExplorerActivity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/fs/d;->a(Landroid/content/Context;)Lcom/estrongs/fs/d;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/estrongs/android/ui/e/dw;->b:Ljava/util/LinkedList;
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/fs/d;->a(Ljava/util/List;)Z
-    :try_end_1
-    .catch Lcom/estrongs/fs/FileSystemException; {:try_start_1 .. :try_end_1} :catch_1
-
-    :goto_1
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/dw;->a:Ljava/util/LinkedList;
-
-    invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/e/dw;->b:Ljava/util/LinkedList;
-
-    invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Lcom/estrongs/fs/FileSystemException;->printStackTrace()V
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->B()V
 
     goto :goto_0
-
-    :catch_1
-    move-exception v0
-
-    invoke-virtual {v0}, Lcom/estrongs/fs/FileSystemException;->printStackTrace()V
-
-    goto :goto_1
 .end method

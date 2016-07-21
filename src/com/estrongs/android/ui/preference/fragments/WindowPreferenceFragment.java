@@ -3,10 +3,10 @@ package com.estrongs.android.ui.preference.fragments;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.preference.Preference;
-import com.estrongs.android.pop.esclasses.i;
+import com.estrongs.android.pop.esclasses.m;
 
 public class WindowPreferenceFragment
-  extends i
+  extends m
 {
   private Preference a;
   
@@ -14,9 +14,9 @@ public class WindowPreferenceFragment
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    addPreferencesFromResource(2131034131);
+    addPreferencesFromResource(2131034132);
     a = findPreference("default_window");
-    a.setOnPreferenceClickListener(new be(this));
+    a.setOnPreferenceClickListener(new bg(this));
   }
 }
 

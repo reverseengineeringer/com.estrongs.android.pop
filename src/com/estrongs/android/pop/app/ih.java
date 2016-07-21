@@ -1,39 +1,49 @@
 package com.estrongs.android.pop.app;
 
-import android.preference.EditTextPreference;
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
-import com.estrongs.android.pop.ad;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.widget.EditText;
+import com.estrongs.android.ui.view.ak;
+import com.estrongs.android.util.ax;
+import com.estrongs.android.util.bk;
+import com.estrongs.fs.a.b;
+import java.io.File;
 
 class ih
-  implements Preference.OnPreferenceChangeListener
+  implements DialogInterface.OnClickListener
 {
-  ih(PopPreferenceActivity paramPopPreferenceActivity) {}
+  ih(if paramif, EditText paramEditText1, EditText paramEditText2) {}
   
-  public boolean onPreferenceChange(Preference paramPreference, Object paramObject)
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    paramObject = paramObject.toString();
-    if (((String)paramObject).trim().equals(""))
+    String str1 = a.getText().toString();
+    String str2 = b.getText().toString();
+    paramInt = new ax().a(c.a, str1, str2);
+    if (paramInt == 0)
     {
-      a.showDialog(105);
-      return false;
+      str1 = new File(str1).getAbsolutePath();
+      if (bk.b(str1))
+      {
+        if (str1.endsWith("/"))
+        {
+          str1 = str1 + "*";
+          b.a().a(str1);
+        }
+      }
+      else {
+        ak.a(c.a, 2131232110, 1);
+      }
     }
-    boolean bool = PopPreferenceActivity.a(a, (String)paramObject);
-    paramPreference = (Preference)paramObject;
-    if (((String)paramObject).charAt(((String)paramObject).length() - 1) != '/') {
-      paramPreference = (String)paramObject + "/";
-    }
-    PopPreferenceActivity.b(a, paramPreference);
-    PopPreferenceActivity.a(a, 2);
-    if (bool)
+    for (;;)
     {
-      a.d.setSummary(paramPreference);
-      a.b.t(paramPreference);
-      a.d.setText(paramPreference);
-      return true;
+      paramDialogInterface.dismiss();
+      return;
+      str1 = str1 + "/*";
+      break;
+      if (paramInt < 0) {
+        ak.a(c.a, 2131232107, 1);
+      }
     }
-    a.showDialog(105);
-    return false;
   }
 }
 

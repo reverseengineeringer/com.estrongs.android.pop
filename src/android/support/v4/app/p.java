@@ -1,25 +1,19 @@
 package android.support.v4.app;
 
-import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
+import android.app.AppOpsManager;
+import android.content.Context;
 
 class p
-  implements Animation.AnimationListener
 {
-  p(n paramn, Fragment paramFragment) {}
-  
-  public void onAnimationEnd(Animation paramAnimation)
+  public static int a(Context paramContext, String paramString1, String paramString2)
   {
-    if (a.b != null)
-    {
-      a.b = null;
-      b.a(a, a.c, 0, 0, false);
-    }
+    return ((AppOpsManager)paramContext.getSystemService(AppOpsManager.class)).noteProxyOp(paramString1, paramString2);
   }
   
-  public void onAnimationRepeat(Animation paramAnimation) {}
-  
-  public void onAnimationStart(Animation paramAnimation) {}
+  public static String a(String paramString)
+  {
+    return AppOpsManager.permissionToOp(paramString);
+  }
 }
 
 /* Location:

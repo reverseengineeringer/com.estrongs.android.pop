@@ -1,27 +1,13 @@
 package com.estrongs.android.ui.dialog;
 
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.estrongs.android.appinfo.AppFolderInfoManager;
-import com.estrongs.fs.h;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 class af
-  implements DialogInterface.OnClickListener
 {
-  af(ae paramae, Context paramContext, h paramh) {}
-  
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
-  {
-    if (!c.b.b())
-    {
-      paramDialogInterface.dismiss();
-      return;
-    }
-    String str = c.b.a();
-    AppFolderInfoManager.d().a(a, b, str, true, new ag(this));
-    paramDialogInterface.dismiss();
-  }
+  ImageView a;
+  TextView b;
+  ImageView c;
 }
 
 /* Location:

@@ -1,21 +1,29 @@
 package com.estrongs.android.pop.app.imageviewer;
 
+import android.graphics.Bitmap;
+import com.estrongs.android.f.a;
+import com.estrongs.android.pop.app.imageviewer.gallery.f;
+
 class ca
-  implements Runnable
+  extends a
 {
-  ca(ViewImage21 paramViewImage21, int paramInt) {}
-  
-  public void run()
+  ca(ViewImage21 paramViewImage21, String paramString, cg paramcg, int paramInt)
   {
-    if (a == b.c) {}
+    super(paramString);
+  }
+  
+  public void a(a parama, Bitmap paramBitmap)
+  {
     try
     {
-      b.a(a, ViewImage21.c(b));
+      int i = c.g.h.a();
+      a.a(c.e.a(b), new an(paramBitmap, i));
       return;
     }
-    catch (Exception localException)
+    catch (Exception paramBitmap)
     {
-      localException.printStackTrace();
+      paramBitmap.printStackTrace();
+      parama.stop();
     }
   }
 }

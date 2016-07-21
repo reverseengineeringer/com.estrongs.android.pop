@@ -49,11 +49,11 @@
 
     invoke-direct {v0, p0, v1, v2, v3}, Lcom/estrongs/io/archive/sevenzip/l;-><init>(Lcom/estrongs/io/archive/sevenzip/k;Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/a/a;)V
 
-    invoke-virtual {v0, v4}, Lcom/estrongs/android/ui/dialog/ix;->a(Z)Lcom/estrongs/android/ui/dialog/ix;
+    invoke-virtual {v0, v4}, Lcom/estrongs/android/ui/dialog/jh;->a(Z)Lcom/estrongs/android/ui/dialog/jh;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ix;->show()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/jh;->show()V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ix;->c()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/jh;->c()V
 
     return-void
 .end method

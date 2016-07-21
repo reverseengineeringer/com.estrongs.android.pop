@@ -44,6 +44,7 @@ public class a
   private boolean hasNotifyStop = false;
   private long id = System.currentTimeMillis();
   public boolean inTestMode = false;
+  public boolean isAppBackupOverwriteApplyAllByUser = false;
   public int notificationId = -1;
   private a parent;
   private List<o> postListeners = new ArrayList();
@@ -361,129 +362,129 @@ public class a
     //   2: iconst_0
     //   3: istore_2
     //   4: aload_0
-    //   5: invokevirtual 440	com/estrongs/a/a:reset	()V
+    //   5: invokevirtual 443	com/estrongs/a/a:reset	()V
     //   8: aload_0
-    //   9: invokestatic 442	com/estrongs/a/a:saveTask	(Lcom/estrongs/a/a;)V
-    //   12: getstatic 86	com/estrongs/a/a:id2task	Ljava/util/Map;
+    //   9: invokestatic 445	com/estrongs/a/a:saveTask	(Lcom/estrongs/a/a;)V
+    //   12: getstatic 87	com/estrongs/a/a:id2task	Ljava/util/Map;
     //   15: aload_0
-    //   16: getfield 103	com/estrongs/a/a:id	J
-    //   19: invokestatic 173	java/lang/Long:valueOf	(J)Ljava/lang/Long;
-    //   22: invokeinterface 443 2 0
+    //   16: getfield 104	com/estrongs/a/a:id	J
+    //   19: invokestatic 176	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+    //   22: invokeinterface 446 2 0
     //   27: ifne +20 -> 47
-    //   30: getstatic 86	com/estrongs/a/a:id2task	Ljava/util/Map;
+    //   30: getstatic 87	com/estrongs/a/a:id2task	Ljava/util/Map;
     //   33: aload_0
-    //   34: getfield 103	com/estrongs/a/a:id	J
-    //   37: invokestatic 173	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+    //   34: getfield 104	com/estrongs/a/a:id	J
+    //   37: invokestatic 176	java/lang/Long:valueOf	(J)Ljava/lang/Long;
     //   40: aload_0
-    //   41: invokeinterface 179 3 0
+    //   41: invokeinterface 182 3 0
     //   46: pop
     //   47: aload_0
     //   48: iconst_2
-    //   49: invokevirtual 215	com/estrongs/a/a:setTaskStatus	(I)V
+    //   49: invokevirtual 218	com/estrongs/a/a:setTaskStatus	(I)V
     //   52: aload_0
-    //   53: invokevirtual 446	com/estrongs/a/a:needSystemLock	()Z
+    //   53: invokevirtual 449	com/estrongs/a/a:needSystemLock	()Z
     //   56: ifeq +6 -> 62
-    //   59: invokestatic 449	com/estrongs/android/util/l:a	()V
+    //   59: invokestatic 452	com/estrongs/android/util/k:a	()V
     //   62: aload_0
-    //   63: invokevirtual 452	com/estrongs/a/a:task	()Z
+    //   63: invokevirtual 455	com/estrongs/a/a:task	()Z
     //   66: istore_3
     //   67: iload_3
     //   68: istore_2
     //   69: aload_0
-    //   70: invokevirtual 446	com/estrongs/a/a:needSystemLock	()Z
+    //   70: invokevirtual 449	com/estrongs/a/a:needSystemLock	()Z
     //   73: ifeq +6 -> 79
-    //   76: invokestatic 455	com/estrongs/android/util/l:b	()V
+    //   76: invokestatic 458	com/estrongs/android/util/k:b	()V
     //   79: iload_2
     //   80: ifeq +5 -> 85
     //   83: iconst_4
     //   84: istore_1
     //   85: aload_0
     //   86: iload_1
-    //   87: invokevirtual 215	com/estrongs/a/a:setTaskStatus	(I)V
+    //   87: invokevirtual 218	com/estrongs/a/a:setTaskStatus	(I)V
     //   90: iload_2
     //   91: ifne +21 -> 112
     //   94: aload_0
-    //   95: getfield 151	com/estrongs/a/a:task_result	Lcom/estrongs/a/p;
-    //   98: getfield 457	com/estrongs/a/p:a	I
+    //   95: getfield 152	com/estrongs/a/a:task_result	Lcom/estrongs/a/p;
+    //   98: getfield 460	com/estrongs/a/p:a	I
     //   101: ifne +11 -> 112
     //   104: aload_0
     //   105: sipush 10000
     //   108: aconst_null
-    //   109: invokevirtual 461	com/estrongs/a/a:setTaskResult	(ILjava/lang/Object;)V
-    //   112: getstatic 86	com/estrongs/a/a:id2task	Ljava/util/Map;
+    //   109: invokevirtual 464	com/estrongs/a/a:setTaskResult	(ILjava/lang/Object;)V
+    //   112: getstatic 87	com/estrongs/a/a:id2task	Ljava/util/Map;
     //   115: aload_0
-    //   116: getfield 103	com/estrongs/a/a:id	J
-    //   119: invokestatic 173	java/lang/Long:valueOf	(J)Ljava/lang/Long;
-    //   122: invokeinterface 462 2 0
+    //   116: getfield 104	com/estrongs/a/a:id	J
+    //   119: invokestatic 176	java/lang/Long:valueOf	(J)Ljava/lang/Long;
+    //   122: invokeinterface 465 2 0
     //   127: pop
-    //   128: invokestatic 464	com/estrongs/a/a:removeTask	()Lcom/estrongs/a/a;
+    //   128: invokestatic 467	com/estrongs/a/a:removeTask	()Lcom/estrongs/a/a;
     //   131: pop
     //   132: aload_0
-    //   133: getfield 123	com/estrongs/a/a:progessListeners	Ljava/util/List;
-    //   136: invokeinterface 367 1 0
+    //   133: getfield 124	com/estrongs/a/a:progessListeners	Ljava/util/List;
+    //   136: invokeinterface 370 1 0
     //   141: aload_0
-    //   142: getfield 119	com/estrongs/a/a:statusListeners	Ljava/util/List;
+    //   142: getfield 120	com/estrongs/a/a:statusListeners	Ljava/util/List;
     //   145: astore 4
     //   147: aload 4
     //   149: monitorenter
     //   150: aload_0
-    //   151: getfield 119	com/estrongs/a/a:statusListeners	Ljava/util/List;
-    //   154: invokeinterface 367 1 0
+    //   151: getfield 120	com/estrongs/a/a:statusListeners	Ljava/util/List;
+    //   154: invokeinterface 370 1 0
     //   159: aload 4
     //   161: monitorexit
     //   162: aload_0
     //   163: aconst_null
-    //   164: putfield 125	com/estrongs/a/a:e	Lcom/estrongs/a/a/a;
+    //   164: putfield 126	com/estrongs/a/a:e	Lcom/estrongs/a/a/a;
     //   167: aload_0
-    //   168: invokevirtual 467	com/estrongs/a/a:postTask	()V
+    //   168: invokevirtual 470	com/estrongs/a/a:postTask	()V
     //   171: aload_0
-    //   172: getfield 121	com/estrongs/a/a:postListeners	Ljava/util/List;
+    //   172: getfield 122	com/estrongs/a/a:postListeners	Ljava/util/List;
     //   175: astore 4
     //   177: aload 4
     //   179: monitorenter
     //   180: aload_0
-    //   181: getfield 121	com/estrongs/a/a:postListeners	Ljava/util/List;
-    //   184: invokeinterface 468 1 0
+    //   181: getfield 122	com/estrongs/a/a:postListeners	Ljava/util/List;
+    //   184: invokeinterface 471 1 0
     //   189: astore 5
     //   191: aload 5
-    //   193: invokeinterface 248 1 0
+    //   193: invokeinterface 251 1 0
     //   198: ifeq +100 -> 298
     //   201: aload 5
-    //   203: invokeinterface 252 1 0
-    //   208: checkcast 470	com/estrongs/a/a/o
+    //   203: invokeinterface 255 1 0
+    //   208: checkcast 473	com/estrongs/a/a/o
     //   211: astore 6
     //   213: aload 6
     //   215: aload_0
     //   216: iconst_1
-    //   217: invokeinterface 473 3 0
+    //   217: invokeinterface 476 3 0
     //   222: goto -31 -> 191
     //   225: astore 6
     //   227: goto -36 -> 191
     //   230: astore 4
     //   232: aload 4
-    //   234: invokevirtual 476	java/lang/Exception:printStackTrace	()V
+    //   234: invokevirtual 479	java/lang/Exception:printStackTrace	()V
     //   237: aload_0
     //   238: sipush 10000
-    //   241: new 478	com/estrongs/a/q
+    //   241: new 481	com/estrongs/a/q
     //   244: dup
     //   245: aload 4
-    //   247: invokevirtual 482	java/lang/Exception:toString	()Ljava/lang/String;
+    //   247: invokevirtual 485	java/lang/Exception:toString	()Ljava/lang/String;
     //   250: aload 4
-    //   252: invokespecial 485	com/estrongs/a/q:<init>	(Ljava/lang/String;Ljava/lang/Exception;)V
-    //   255: invokevirtual 461	com/estrongs/a/a:setTaskResult	(ILjava/lang/Object;)V
+    //   252: invokespecial 488	com/estrongs/a/q:<init>	(Ljava/lang/String;Ljava/lang/Exception;)V
+    //   255: invokevirtual 464	com/estrongs/a/a:setTaskResult	(ILjava/lang/Object;)V
     //   258: goto -189 -> 69
     //   261: astore 4
     //   263: aload 4
-    //   265: invokevirtual 486	java/lang/OutOfMemoryError:printStackTrace	()V
+    //   265: invokevirtual 489	java/lang/OutOfMemoryError:printStackTrace	()V
     //   268: aload_0
     //   269: iconst_5
-    //   270: new 478	com/estrongs/a/q
+    //   270: new 481	com/estrongs/a/q
     //   273: dup
     //   274: aload 4
-    //   276: invokevirtual 487	java/lang/OutOfMemoryError:toString	()Ljava/lang/String;
+    //   276: invokevirtual 490	java/lang/OutOfMemoryError:toString	()Ljava/lang/String;
     //   279: aload 4
-    //   281: invokespecial 489	com/estrongs/a/q:<init>	(Ljava/lang/String;Ljava/lang/Object;)V
-    //   284: invokevirtual 461	com/estrongs/a/a:setTaskResult	(ILjava/lang/Object;)V
+    //   281: invokespecial 492	com/estrongs/a/q:<init>	(Ljava/lang/String;Ljava/lang/Object;)V
+    //   284: invokevirtual 464	com/estrongs/a/a:setTaskResult	(ILjava/lang/Object;)V
     //   287: goto -218 -> 69
     //   290: astore 5
     //   292: aload 4
@@ -491,8 +492,8 @@ public class a
     //   295: aload 5
     //   297: athrow
     //   298: aload_0
-    //   299: getfield 121	com/estrongs/a/a:postListeners	Ljava/util/List;
-    //   302: invokeinterface 367 1 0
+    //   299: getfield 122	com/estrongs/a/a:postListeners	Ljava/util/List;
+    //   302: invokeinterface 370 1 0
     //   307: aload 4
     //   309: monitorexit
     //   310: return
@@ -503,31 +504,31 @@ public class a
     //   318: athrow
     //   319: astore 4
     //   321: aload_0
-    //   322: getfield 121	com/estrongs/a/a:postListeners	Ljava/util/List;
+    //   322: getfield 122	com/estrongs/a/a:postListeners	Ljava/util/List;
     //   325: astore 4
     //   327: aload 4
     //   329: monitorenter
     //   330: aload_0
-    //   331: getfield 121	com/estrongs/a/a:postListeners	Ljava/util/List;
-    //   334: invokeinterface 468 1 0
+    //   331: getfield 122	com/estrongs/a/a:postListeners	Ljava/util/List;
+    //   334: invokeinterface 471 1 0
     //   339: astore 5
     //   341: aload 5
-    //   343: invokeinterface 248 1 0
+    //   343: invokeinterface 251 1 0
     //   348: ifeq +32 -> 380
     //   351: aload 5
-    //   353: invokeinterface 252 1 0
-    //   358: checkcast 470	com/estrongs/a/a/o
+    //   353: invokeinterface 255 1 0
+    //   358: checkcast 473	com/estrongs/a/a/o
     //   361: astore 6
     //   363: aload 6
     //   365: aload_0
     //   366: iconst_0
-    //   367: invokeinterface 473 3 0
+    //   367: invokeinterface 476 3 0
     //   372: goto -31 -> 341
     //   375: astore 6
     //   377: goto -36 -> 341
     //   380: aload_0
-    //   381: getfield 121	com/estrongs/a/a:postListeners	Ljava/util/List;
-    //   384: invokeinterface 367 1 0
+    //   381: getfield 122	com/estrongs/a/a:postListeners	Ljava/util/List;
+    //   384: invokeinterface 370 1 0
     //   389: aload 4
     //   391: monitorexit
     //   392: return
@@ -538,31 +539,31 @@ public class a
     //   400: athrow
     //   401: astore 5
     //   403: aload_0
-    //   404: getfield 121	com/estrongs/a/a:postListeners	Ljava/util/List;
+    //   404: getfield 122	com/estrongs/a/a:postListeners	Ljava/util/List;
     //   407: astore 4
     //   409: aload 4
     //   411: monitorenter
     //   412: aload_0
-    //   413: getfield 121	com/estrongs/a/a:postListeners	Ljava/util/List;
-    //   416: invokeinterface 468 1 0
+    //   413: getfield 122	com/estrongs/a/a:postListeners	Ljava/util/List;
+    //   416: invokeinterface 471 1 0
     //   421: astore 6
     //   423: aload 6
-    //   425: invokeinterface 248 1 0
+    //   425: invokeinterface 251 1 0
     //   430: ifeq +32 -> 462
     //   433: aload 6
-    //   435: invokeinterface 252 1 0
-    //   440: checkcast 470	com/estrongs/a/a/o
+    //   435: invokeinterface 255 1 0
+    //   440: checkcast 473	com/estrongs/a/a/o
     //   443: astore 7
     //   445: aload 7
     //   447: aload_0
     //   448: iconst_1
-    //   449: invokeinterface 473 3 0
+    //   449: invokeinterface 476 3 0
     //   454: goto -31 -> 423
     //   457: astore 7
     //   459: goto -36 -> 423
     //   462: aload_0
-    //   463: getfield 121	com/estrongs/a/a:postListeners	Ljava/util/List;
-    //   466: invokeinterface 367 1 0
+    //   463: getfield 122	com/estrongs/a/a:postListeners	Ljava/util/List;
+    //   466: invokeinterface 370 1 0
     //   471: aload 4
     //   473: monitorexit
     //   474: aload 5
@@ -644,9 +645,12 @@ public class a
       if ((!e) || ((!f) && (!hasNotifyStop)))
       {
         e = false;
-        e.a(this, paramClass);
-        if (!e) {
-          suspend();
+        if (!isAppBackupOverwriteApplyAllByUser)
+        {
+          e.a(this, paramClass);
+          if (!e) {
+            suspend();
+          }
         }
       }
     }
@@ -727,7 +731,9 @@ public class a
   {
     if (paramInt == 5)
     {
-      0e = true;
+      paramVarArgs = (com.estrongs.a.a.d)paramVarArgs[0];
+      e = true;
+      isAppBackupOverwriteApplyAllByUser = f;
       resume();
     }
   }

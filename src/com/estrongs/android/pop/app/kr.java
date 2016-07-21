@@ -1,14 +1,17 @@
 package com.estrongs.android.pop.app;
 
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
+import android.content.DialogInterface.OnClickListener;
 
 class kr
-  implements DialogInterface.OnDismissListener
+  implements DialogInterface.OnClickListener
 {
-  kr(kq paramkq) {}
+  kr(ko paramko) {}
   
-  public void onDismiss(DialogInterface paramDialogInterface) {}
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  {
+    a.a.finish();
+  }
 }
 
 /* Location:

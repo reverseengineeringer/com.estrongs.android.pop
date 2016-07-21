@@ -1,22 +1,45 @@
 package com.estrongs.android.pop.app;
 
-public abstract interface gc
+import android.view.View;
+import android.widget.Adapter;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.PopupWindow;
+import android.widget.TextView;
+import com.estrongs.android.pop.app.c.j;
+import com.estrongs.android.ui.view.ac;
+
+class gc
+  implements AdapterView.OnItemClickListener
 {
-  public abstract void a();
+  gc(PopAudioPlayer paramPopAudioPlayer) {}
   
-  public abstract void a(int paramInt);
-  
-  public abstract void b(int paramInt);
-  
-  public abstract void c(int paramInt);
-  
-  public abstract void d(int paramInt);
-  
-  public abstract void e(int paramInt);
-  
-  public abstract void f(int paramInt);
-  
-  public abstract void g(int paramInt);
+  public void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
+  {
+    paramAdapterView = (j)paramAdapterView.getAdapter().getItem(paramInt);
+    PopAudioPlayer.E(a).dismiss();
+    for (;;)
+    {
+      try
+      {
+        paramView = paramAdapterView.a();
+        if (paramView != null) {
+          continue;
+        }
+        PopAudioPlayer.F(a).setText(a.getString(paramAdapterView.b()));
+        PopAudioPlayer.h(a).a(paramAdapterView);
+        a.l();
+      }
+      catch (Exception paramAdapterView)
+      {
+        paramAdapterView.printStackTrace();
+        continue;
+      }
+      a.supportInvalidateOptionsMenu();
+      return;
+      PopAudioPlayer.F(a).setText(paramView);
+    }
+  }
 }
 
 /* Location:

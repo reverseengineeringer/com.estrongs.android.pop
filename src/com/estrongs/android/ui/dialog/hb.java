@@ -1,19 +1,8 @@
 package com.estrongs.android.ui.dialog;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-
-class hb
-  implements View.OnClickListener
+public abstract interface hb
 {
-  hb(gz paramgz, int paramInt) {}
-  
-  public void onClick(View paramView)
-  {
-    if (b.b != null) {
-      b.b.a(a);
-    }
-  }
+  public abstract void a(int paramInt);
 }
 
 /* Location:

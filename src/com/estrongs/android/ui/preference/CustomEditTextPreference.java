@@ -12,17 +12,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.widget.EditText;
-import com.estrongs.android.pop.esclasses.g;
-import com.estrongs.android.ui.dialog.cg;
-import com.estrongs.android.ui.dialog.ct;
-import com.estrongs.android.ui.theme.al;
+import com.estrongs.android.pop.esclasses.k;
+import com.estrongs.android.ui.dialog.ci;
+import com.estrongs.android.ui.dialog.cv;
+import com.estrongs.android.ui.theme.at;
 
 public class CustomEditTextPreference
   extends EditTextPreference
 {
-  private cg a;
+  private ci a;
   private EditText b;
-  private al c;
+  private at c;
   
   public CustomEditTextPreference(Context paramContext)
   {
@@ -37,14 +37,14 @@ public class CustomEditTextPreference
   public CustomEditTextPreference(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    c = al.a(paramContext);
+    c = at.a(paramContext);
     b = new EditText(paramContext, paramAttributeSet);
     b.setId(16908291);
     b.setEnabled(true);
-    b.setBackgroundResource(2130837972);
-    b.setTextColor(c.d(2131230738));
+    b.setBackgroundResource(2130838299);
+    b.setTextColor(c.c(2131558661));
     b.setSelectAllOnFocus(true);
-    paramInt = (int)paramContext.getResources().getDimension(2131296256);
+    paramInt = (int)paramContext.getResources().getDimension(2131165559);
     b.setPadding(paramInt, 0, paramInt, 0);
   }
   
@@ -65,7 +65,7 @@ public class CustomEditTextPreference
   
   protected void onAddEditTextToDialogView(View paramView, EditText paramEditText)
   {
-    paramView = (ViewGroup)paramView.findViewById(2131362064);
+    paramView = (ViewGroup)paramView.findViewById(2131624609);
     if (paramView != null) {
       paramView.addView(paramEditText, -1, -2);
     }
@@ -93,7 +93,7 @@ public class CustomEditTextPreference
   
   protected View onCreateDialogView()
   {
-    return g.a(getContext()).inflate(2130903086, null);
+    return k.a(getContext()).inflate(2130903161, null);
   }
   
   protected void onDialogClosed(boolean paramBoolean)
@@ -109,28 +109,28 @@ public class CustomEditTextPreference
   
   protected void showDialog(Bundle paramBundle)
   {
-    Object localObject = new ct(getContext()).a(getDialogTitle()).b(getPositiveButtonText(), this).c(getNegativeButtonText(), this);
+    Object localObject = new cv(getContext()).a(getDialogTitle()).b(getPositiveButtonText(), this).c(getNegativeButtonText(), this);
     View localView = onCreateDialogView();
     if (localView != null)
     {
       onBindDialogView(localView);
-      ((ct)localObject).a(localView);
+      ((cv)localObject).a(localView);
     }
     for (;;)
     {
-      localObject = ((ct)localObject).b();
-      a = ((cg)localObject);
+      localObject = ((cv)localObject).b();
+      a = ((ci)localObject);
       if (paramBundle != null) {
-        ((cg)localObject).onRestoreInstanceState(paramBundle);
+        ((ci)localObject).onRestoreInstanceState(paramBundle);
       }
       if (a()) {
-        ((cg)localObject).requestInputMethod();
+        ((ci)localObject).requestInputMethod();
       }
-      ((cg)localObject).setOnDismissListener(this);
+      ((ci)localObject).setOnDismissListener(this);
       b.requestFocus();
-      ((cg)localObject).show();
+      ((ci)localObject).show();
       return;
-      ((ct)localObject).b(getDialogMessage());
+      ((cv)localObject).b(getDialogMessage());
     }
   }
 }

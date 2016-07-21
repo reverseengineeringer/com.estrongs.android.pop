@@ -21,7 +21,7 @@
         value = {
             "Ljava/util/List",
             "<",
-            "Lcom/estrongs/fs/impl/b/c;",
+            "Lcom/estrongs/fs/impl/b/d;",
             ">;"
         }
     .end annotation
@@ -38,7 +38,7 @@
             "Lcom/estrongs/fs/d;",
             "Ljava/util/List",
             "<",
-            "Lcom/estrongs/fs/impl/b/c;",
+            "Lcom/estrongs/fs/impl/b/d;",
             ">;",
             "Ljava/lang/String;",
             ")V"
@@ -77,7 +77,7 @@
             "(",
             "Ljava/util/List",
             "<",
-            "Lcom/estrongs/fs/impl/b/c;",
+            "Lcom/estrongs/fs/impl/b/d;",
             ">;)",
             "Ljava/util/List",
             "<",
@@ -105,23 +105,23 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/fs/impl/b/c;
+    check-cast v0, Lcom/estrongs/fs/impl/b/d;
 
     new-instance v3, Lcom/estrongs/fs/b/l;
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/c;->f()Lcom/estrongs/fs/impl/b/g;
+    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/d;->k()Lcom/estrongs/fs/impl/b/h;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/estrongs/fs/impl/b/g;->d()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/estrongs/fs/impl/b/h;->d()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-direct {v3, v4, v0}, Lcom/estrongs/fs/b/l;-><init>(Ljava/lang/String;Lcom/estrongs/fs/impl/b/c;)V
+    invoke-direct {v3, v4, v0}, Lcom/estrongs/fs/b/l;-><init>(Ljava/lang/String;Lcom/estrongs/fs/impl/b/d;)V
 
     const-string v4, "item_paste_name"
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/c;->g()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/d;->l()Ljava/lang/String;
 
     move-result-object v0
 
@@ -230,13 +230,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/fs/impl/b/c;
+    check-cast v0, Lcom/estrongs/fs/impl/b/d;
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/c;->f()Lcom/estrongs/fs/impl/b/g;
+    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/d;->k()Lcom/estrongs/fs/impl/b/h;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/g;->h()Z
+    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/h;->h()Z
 
     move-result v0
 
@@ -250,9 +250,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/fs/impl/b/c;
+    check-cast v0, Lcom/estrongs/fs/impl/b/d;
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/c;->c()Landroid/content/pm/ApplicationInfo;
+    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/d;->h()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
 
@@ -301,7 +301,7 @@
     :cond_1
     iget-object v2, p0, Lcom/estrongs/fs/b/k;->a:Landroid/app/Activity;
 
-    invoke-static {v2, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->r(Landroid/app/Activity;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/estrongs/android/pop/view/utils/AppRunner;->s(Landroid/app/Activity;Ljava/lang/String;)V
     :try_end_0
     .catch Lcom/estrongs/fs/FileSystemException; {:try_start_0 .. :try_end_0} :catch_0
 

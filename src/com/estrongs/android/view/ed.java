@@ -1,14 +1,21 @@
 package com.estrongs.android.view;
 
+import android.view.View;
+import java.util.List;
+
 class ed
   implements Runnable
 {
-  ed(ec paramec, Integer paramInteger) {}
+  ed(eb parameb, List paramList) {}
   
   public void run()
   {
-    if (b.a.a != null) {
-      b.a.a.scrollTo(0, a.intValue());
+    if ((!eb.c(b)) && (a.size() == 0)) {
+      b.f(2131231510);
+    }
+    View localView = b.b(2131624592);
+    if (localView != null) {
+      localView.setVisibility(8);
     }
   }
 }

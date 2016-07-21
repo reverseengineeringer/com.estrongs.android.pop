@@ -2,83 +2,185 @@ package com.estrongs.android.ui.view;
 
 import android.content.Context;
 import android.os.Handler;
+import android.support.v7.widget.RecyclerView.Adapter;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import com.estrongs.android.pop.app.a.ag;
-import com.estrongs.android.pop.app.a.ai;
-import com.estrongs.android.pop.app.a.ak;
-import com.estrongs.android.pop.esclasses.g;
-import com.estrongs.android.util.am;
+import com.estrongs.android.pop.app.c.e;
+import com.estrongs.android.pop.app.c.g;
+import com.estrongs.android.pop.app.c.i;
+import com.estrongs.android.pop.app.c.j;
+import com.estrongs.android.pop.esclasses.k;
+import com.estrongs.android.ui.theme.at;
+import com.estrongs.android.util.ap;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
 public class ac
-  extends BaseAdapter
-  implements AdapterView.OnItemClickListener
+  extends RecyclerView.Adapter<aj>
 {
-  ag a = null;
-  com.estrongs.android.ui.theme.al b;
+  e a = null;
+  at b;
   private boolean c = false;
   private List<Integer> d;
   private Handler e;
-  private com.estrongs.android.pop.app.a.al f;
+  private j f;
   private Context g;
   private int h = -1;
-  private boolean i = false;
+  private i i = null;
   private boolean j = false;
-  private int k = -1;
+  private boolean k = false;
+  private ItemTouchHelper l;
   
   public ac(Context paramContext, Handler paramHandler)
   {
     g = paramContext;
     e = paramHandler;
-    b = com.estrongs.android.ui.theme.al.a(g);
-    i();
+    b = at.a(g);
+    h();
   }
   
-  private String a(ak paramak)
+  private String a(i parami)
   {
     if (f != null) {}
     for (String str1 = f;; str1 = "")
     {
       String str2 = str1;
       if (g == null) {
-        str2 = str1 + g.getString(2131428312);
+        str2 = str1 + g.getString(2131231045);
       }
       return str2;
     }
   }
   
-  private void i()
+  private void h()
   {
     a = new ad(this);
   }
   
-  public com.estrongs.android.pop.app.a.al a()
+  public j a()
   {
     return f;
+  }
+  
+  public aj a(ViewGroup paramViewGroup, int paramInt)
+  {
+    paramViewGroup = k.a(g).inflate(2130903123, paramViewGroup, false);
+    aj localaj = new aj(paramViewGroup);
+    a = ((TextView)paramViewGroup.findViewById(2131624055));
+    b = ((TextView)paramViewGroup.findViewById(2131624455));
+    c = ((TextView)paramViewGroup.findViewById(2131624457));
+    d = ((ProgressBar)paramViewGroup.findViewById(2131624456));
+    e = ((CheckBox)paramViewGroup.findViewById(2131624070));
+    f = ((ImageView)paramViewGroup.findViewById(2131624458));
+    paramViewGroup.setTag(2130903123, localaj);
+    return localaj;
   }
   
   public void a(int paramInt, boolean paramBoolean1, boolean paramBoolean2)
   {
     h = paramInt;
-    i = paramBoolean1;
-    j = paramBoolean2;
+    List localList = f.c();
+    if ((paramInt != -1) && (localList.size() > paramInt)) {}
+    for (i = ((i)localList.get(paramInt));; i = null)
+    {
+      j = paramBoolean1;
+      k = paramBoolean2;
+      return;
+    }
   }
   
-  public void a(com.estrongs.android.pop.app.a.al paramal)
+  public void a(ItemTouchHelper paramItemTouchHelper)
   {
-    f = paramal;
+    l = paramItemTouchHelper;
+  }
+  
+  public void a(j paramj)
+  {
+    f = paramj;
+    notifyDataSetChanged();
+  }
+  
+  public void a(aj paramaj, int paramInt)
+  {
+    i locali = (i)b(paramInt);
+    itemView.setTag(locali);
+    itemView.setVisibility(0);
+    TextView localTextView1 = (TextView)itemView.findViewById(2131624453);
+    localTextView1.setText(String.valueOf(d + 1L));
+    String str;
+    if (locali.c())
+    {
+      TextView localTextView2 = a;
+      if ((e == null) || ("".equals(e)))
+      {
+        str = ap.d(b);
+        localTextView2.setText(str);
+        b.setText(a(locali));
+        c.setText(locali.a());
+        label131:
+        if (!c) {
+          break label405;
+        }
+        e.setVisibility(0);
+        f.setVisibility(8);
+        if (!a(paramInt)) {
+          break label394;
+        }
+        e.setChecked(true);
+        label171:
+        if (i != locali) {
+          break label437;
+        }
+        a.setTextColor(b.c(2131558648));
+        localTextView1.setTextColor(b.c(2131558648));
+        b.setTextColor(b.c(2131558649));
+        c.setTextColor(b.c(2131558745));
+        if (!k) {
+          break label425;
+        }
+        d.setVisibility(0);
+      }
+    }
+    for (;;)
+    {
+      itemView.setFocusable(true);
+      itemView.setOnClickListener(new af(this, paramInt));
+      itemView.setOnLongClickListener(new ag(this));
+      itemView.findViewById(2131624452).setOnTouchListener(new ah(this, paramaj));
+      f.setOnClickListener(new ai(this, paramaj));
+      return;
+      str = e;
+      break;
+      a.setText(ap.d(b));
+      b.setText("");
+      c.setText("");
+      a.a(paramInt, locali, itemView);
+      break label131;
+      label394:
+      e.setChecked(false);
+      break label171;
+      label405:
+      e.setVisibility(8);
+      f.setVisibility(0);
+      break label171;
+      label425:
+      d.setVisibility(8);
+      continue;
+      label437:
+      a.setTextColor(b.c(2131558745));
+      localTextView1.setTextColor(b.c(2131558745));
+      b.setTextColor(b.c(2131558502));
+      c.setTextColor(b.c(2131558745));
+      d.setVisibility(8);
+    }
   }
   
   public void a(boolean paramBoolean)
@@ -87,10 +189,10 @@ public class ac
     {
       c = paramBoolean;
       if (!paramBoolean) {
-        break label62;
+        break label63;
       }
       if (d != null) {
-        break label50;
+        break label51;
       }
       d = new LinkedList();
     }
@@ -99,10 +201,10 @@ public class ac
       e.sendEmptyMessage(1200001);
       notifyDataSetChanged();
       return;
-      label50:
+      label51:
       d.clear();
       continue;
-      label62:
+      label63:
       d.clear();
     }
   }
@@ -112,14 +214,17 @@ public class ac
     return d.contains(Integer.valueOf(paramInt));
   }
   
-  protected boolean a(ai paramai)
+  protected boolean a(g paramg)
   {
     return (d) && ((c.getTag() == null) || (b == c.getTag()));
   }
   
-  public void b(int paramInt)
+  public Object b(int paramInt)
   {
-    k = paramInt;
+    if (f != null) {
+      return (i)f.c().get(paramInt);
+    }
+    return null;
   }
   
   public boolean b()
@@ -127,27 +232,21 @@ public class ac
     return c;
   }
   
-  public boolean c()
-  {
-    int[] arrayOfInt = h();
-    return (arrayOfInt != null) && (arrayOfInt[1] - arrayOfInt[0] >= d.size());
-  }
-  
-  public List<ak> d()
+  public List<i> c()
   {
     LinkedList localLinkedList = new LinkedList();
     Collections.sort(d);
     Iterator localIterator = d.iterator();
     while (localIterator.hasNext()) {
-      localLinkedList.add((ak)getItem(((Integer)localIterator.next()).intValue()));
+      localLinkedList.add((i)b(((Integer)localIterator.next()).intValue()));
     }
     return localLinkedList;
   }
   
-  public void e()
+  public void d()
   {
     d.clear();
-    int n = getCount();
+    int n = getItemCount();
     int m = 0;
     while (m < n)
     {
@@ -158,16 +257,16 @@ public class ac
     notifyDataSetChanged();
   }
   
-  public void f()
+  public void e()
   {
     d.clear();
     e.sendEmptyMessage(1200002);
     notifyDataSetChanged();
   }
   
-  public void g()
+  public void f()
   {
-    int[] arrayOfInt = h();
+    int[] arrayOfInt = g();
     if (arrayOfInt != null)
     {
       d.clear();
@@ -182,116 +281,7 @@ public class ac
     }
   }
   
-  public int getCount()
-  {
-    if (f != null) {
-      return f.c().size();
-    }
-    return 0;
-  }
-  
-  public Object getItem(int paramInt)
-  {
-    if (f != null) {
-      return (ak)f.c().get(paramInt);
-    }
-    return null;
-  }
-  
-  public long getItemId(int paramInt)
-  {
-    return paramInt;
-  }
-  
-  public View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
-  {
-    if (paramView == null)
-    {
-      paramView = g.a(g).inflate(2130903059, null);
-      paramViewGroup = new af();
-      a = ((TextView)paramView.findViewById(2131361825));
-      b = ((TextView)paramView.findViewById(2131361951));
-      c = ((TextView)paramView.findViewById(2131361950));
-      d = ((ProgressBar)paramView.findViewById(2131361953));
-      e = ((ImageView)paramView.findViewById(2131361952));
-      f = ((CheckBox)paramView.findViewById(2131361954));
-      paramView.setTag(2130903059, paramViewGroup);
-    }
-    ak localak;
-    for (;;)
-    {
-      localak = (ak)getItem(paramInt);
-      paramView.setTag(localak);
-      if (paramInt != k) {
-        break;
-      }
-      paramView.setVisibility(4);
-      return paramView;
-      paramViewGroup = (af)paramView.getTag(2130903059);
-    }
-    paramView.setVisibility(0);
-    TextView localTextView1 = (TextView)paramView.findViewById(2131361949);
-    localTextView1.setText(String.valueOf(paramInt + 1));
-    String str;
-    if (localak.c())
-    {
-      TextView localTextView2 = a;
-      if ((e == null) || ("".equals(e)))
-      {
-        str = am.d(b);
-        localTextView2.setText(str);
-        b.setText(a(localak));
-        c.setText(localak.a());
-        label260:
-        if (!c) {
-          break label422;
-        }
-        f.setVisibility(0);
-        if (!a(paramInt)) {
-          break label411;
-        }
-        f.setChecked(true);
-      }
-    }
-    for (;;)
-    {
-      if (h == paramInt)
-      {
-        a.setTextColor(-11751937);
-        localTextView1.setTextColor(-11751937);
-        b.setTextColor(-11751937);
-        c.setTextColor(-11751937);
-        if (j)
-        {
-          d.setVisibility(0);
-          return paramView;
-          str = e;
-          break;
-          a.setText(am.d(b));
-          b.setText("");
-          c.setText("");
-          a.a(paramInt, localak, paramView);
-          break label260;
-          label411:
-          f.setChecked(false);
-          continue;
-          label422:
-          f.setVisibility(8);
-          continue;
-        }
-        d.setVisibility(8);
-        return paramView;
-      }
-    }
-    a.setTextColor(b.d(2131230778));
-    localTextView1.setTextColor(b.d(2131230778));
-    b.setTextColor(b.d(2131230779));
-    c.setTextColor(b.d(2131230779));
-    d.setVisibility(8);
-    return paramView;
-  }
-  
-  protected int[] h()
+  protected int[] g()
   {
     int n;
     int m;
@@ -322,30 +312,17 @@ public class ac
     }
   }
   
-  public void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
+  public int getItemCount()
   {
-    if (c)
-    {
-      if (d.contains(Integer.valueOf(paramInt))) {
-        d.remove(Integer.valueOf(paramInt));
-      }
-      for (;;)
-      {
-        e.sendEmptyMessage(1200002);
-        notifyDataSetChanged();
-        return;
-        d.add(Integer.valueOf(paramInt));
-      }
+    if (f != null) {
+      return f.c().size();
     }
-    paramAdapterView = e.obtainMessage(1200003);
-    arg1 = paramInt;
-    if (h == paramInt) {}
-    for (paramInt = 1;; paramInt = 0)
-    {
-      arg2 = paramInt;
-      e.sendMessage(paramAdapterView);
-      return;
-    }
+    return 0;
+  }
+  
+  public long getItemId(int paramInt)
+  {
+    return paramInt;
   }
 }
 

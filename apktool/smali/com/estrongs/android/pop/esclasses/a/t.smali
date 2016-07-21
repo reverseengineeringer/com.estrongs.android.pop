@@ -27,11 +27,11 @@
 
     new-instance v0, Landroid/util/SparseArray;
 
-    const/16 v1, 0x4b1
+    const/16 v1, 0x4c8
 
     invoke-direct {v0, v1}, Landroid/util/SparseArray;-><init>(I)V
 
-    const v1, 0x7f0b0020
+    const v1, 0x7f080280
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -39,7 +39,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b034b
+    const v1, 0x7f08032f
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -47,7 +47,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b016b
+    const v1, 0x7f08029e
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -55,7 +55,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0094
+    const v1, 0x7f0803e1
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -63,7 +63,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0374
+    const v1, 0x7f08049c
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -71,7 +71,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b049f
+    const v1, 0x7f080411
 
     const/4 v2, 0x5
 
@@ -81,7 +81,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0449
+    const v1, 0x7f08042e
 
     const/4 v2, 0x6
 
@@ -91,7 +91,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00b5
+    const v1, 0x7f08054c
 
     const/4 v2, 0x7
 
@@ -101,7 +101,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0034
+    const v1, 0x7f080587
 
     const/16 v2, 0x8
 
@@ -111,7 +111,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b025e
+    const v1, 0x7f080634
 
     const/16 v2, 0x9
 
@@ -121,7 +121,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01e6
+    const v1, 0x7f080449
 
     const/16 v2, 0xa
 
@@ -131,7 +131,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0264
+    const v1, 0x7f080742
 
     const/16 v2, 0xb
 
@@ -141,7 +141,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0340
+    const v1, 0x7f08066c
 
     const/16 v2, 0xc
 
@@ -151,7 +151,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b025c
+    const v1, 0x7f08042c
 
     const/16 v2, 0xd
 
@@ -161,7 +161,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b04a8
+    const v1, 0x7f0801f9
 
     const/16 v2, 0xe
 
@@ -171,7 +171,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03ee
+    const v1, 0x7f08033c
 
     const/16 v2, 0xf
 
@@ -181,7 +181,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0427
+    const v1, 0x7f0805c9
 
     const/16 v2, 0x10
 
@@ -191,7 +191,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b04ab
+    const v1, 0x7f080285
 
     const/16 v2, 0x11
 
@@ -201,7 +201,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00d8
+    const v1, 0x7f0804f0
 
     const/16 v2, 0x12
 
@@ -211,7 +211,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b036b
+    const v1, 0x7f080180
 
     const/16 v2, 0x13
 
@@ -221,7 +221,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0243
+    const v1, 0x7f08019d
 
     const/16 v2, 0x14
 
@@ -231,7 +231,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b023f
+    const v1, 0x7f080703
 
     const/16 v2, 0x15
 
@@ -241,7 +241,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00c2
+    const v1, 0x7f080519
 
     const/16 v2, 0x16
 
@@ -251,7 +251,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0323
+    const v1, 0x7f08071e
 
     const/16 v2, 0x17
 
@@ -261,7 +261,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0402
+    const v1, 0x7f0802ad
 
     const/16 v2, 0x18
 
@@ -271,7 +271,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b029b
+    const v1, 0x7f0805b6
 
     const/16 v2, 0x19
 
@@ -281,7 +281,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0455
+    const v1, 0x7f0802e2
 
     const/16 v2, 0x1a
 
@@ -291,6499 +291,13 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0193
-
-    const/16 v2, 0x1b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0490
-
-    const/16 v2, 0x1c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b002d
-
-    const/16 v2, 0x1d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03bf
-
-    const/16 v2, 0x1e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0194
-
-    const/16 v2, 0x1f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01f0
-
-    const/16 v2, 0x20
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0300
-
-    const/16 v2, 0x21
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b033f
-
-    const/16 v2, 0x22
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0429
-
-    const/16 v2, 0x23
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0414
-
-    const/16 v2, 0x24
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0229
-
-    const/16 v2, 0x25
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01cc
-
-    const/16 v2, 0x26
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b001a
-
-    const/16 v2, 0x27
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b010c
-
-    const/16 v2, 0x28
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b006c
-
-    const/16 v2, 0x29
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b045f
-
-    const/16 v2, 0x2a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02f6
-
-    const/16 v2, 0x2b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00d2
-
-    const/16 v2, 0x2c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b005f
-
-    const/16 v2, 0x2d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b016f
-
-    const/16 v2, 0x2e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b008b
-
-    const/16 v2, 0x2f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b006f
-
-    const/16 v2, 0x30
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b020b
-
-    const/16 v2, 0x31
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0216
-
-    const/16 v2, 0x32
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0174
-
-    const/16 v2, 0x33
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0069
-
-    const/16 v2, 0x34
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b031d
-
-    const/16 v2, 0x35
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01a2
-
-    const/16 v2, 0x36
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03ab
-
-    const/16 v2, 0x37
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0237
-
-    const/16 v2, 0x38
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b037a
-
-    const/16 v2, 0x39
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b035d
-
-    const/16 v2, 0x3a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02e3
-
-    const/16 v2, 0x3b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02ad
-
-    const/16 v2, 0x3c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b048f
-
-    const/16 v2, 0x3d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b04a9
-
-    const/16 v2, 0x3e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b026c
-
-    const/16 v2, 0x3f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0377
-
-    const/16 v2, 0x40
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02e4
-
-    const/16 v2, 0x41
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b008d
-
-    const/16 v2, 0x42
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00c8
-
-    const/16 v2, 0x43
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0298
-
-    const/16 v2, 0x44
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03a9
-
-    const/16 v2, 0x45
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03f5
-
-    const/16 v2, 0x46
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b023d
-
-    const/16 v2, 0x47
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b017e
-
-    const/16 v2, 0x48
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0057
-
-    const/16 v2, 0x49
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01cf
-
-    const/16 v2, 0x4a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b007e
-
-    const/16 v2, 0x4b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b010b
-
-    const/16 v2, 0x4c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b041a
-
-    const/16 v2, 0x4d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02ef
-
-    const/16 v2, 0x4e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0038
-
-    const/16 v2, 0x4f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0253
-
-    const/16 v2, 0x50
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b035e
-
-    const/16 v2, 0x51
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b031c
-
-    const/16 v2, 0x52
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02f0
-
-    const/16 v2, 0x53
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b035c
-
-    const/16 v2, 0x54
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0255
-
-    const/16 v2, 0x55
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b015e
-
-    const/16 v2, 0x56
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02a4
-
-    const/16 v2, 0x57
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0383
-
-    const/16 v2, 0x58
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b005b
-
-    const/16 v2, 0x59
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0233
-
-    const/16 v2, 0x5a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02fa
-
-    const/16 v2, 0x5b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0441
-
-    const/16 v2, 0x5c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0097
-
-    const/16 v2, 0x5d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0248
-
-    const/16 v2, 0x5e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01e3
-
-    const/16 v2, 0x5f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03e1
-
-    const/16 v2, 0x60
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0153
-
-    const/16 v2, 0x61
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0208
-
-    const/16 v2, 0x62
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02d4
-
-    const/16 v2, 0x63
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0123
-
-    const/16 v2, 0x64
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0190
-
-    const/16 v2, 0x65
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0077
-
-    const/16 v2, 0x66
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0492
-
-    const/16 v2, 0x67
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03e4
-
-    const/16 v2, 0x68
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0205
-
-    const/16 v2, 0x69
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03f7
-
-    const/16 v2, 0x6a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02ee
-
-    const/16 v2, 0x6b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03d3
-
-    const/16 v2, 0x6c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03a3
-
-    const/16 v2, 0x6d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b012f
-
-    const/16 v2, 0x6e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00db
-
-    const/16 v2, 0x6f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0284
-
-    const/16 v2, 0x70
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0333
-
-    const/16 v2, 0x71
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0310
-
-    const/16 v2, 0x72
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0378
-
-    const/16 v2, 0x73
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00bf
-
-    const/16 v2, 0x74
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b046d
-
-    const/16 v2, 0x75
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00f7
-
-    const/16 v2, 0x76
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0023
-
-    const/16 v2, 0x77
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0428
-
-    const/16 v2, 0x78
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01d6
-
-    const/16 v2, 0x79
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0241
-
-    const/16 v2, 0x7a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03e6
-
-    const/16 v2, 0x7b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b023b
-
-    const/16 v2, 0x7c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0130
-
-    const/16 v2, 0x7d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0046
-
-    const/16 v2, 0x7e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b002b
-
-    const/16 v2, 0x7f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b006d
-
-    const/16 v2, 0x80
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03f2
-
-    const/16 v2, 0x81
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0136
-
-    const/16 v2, 0x82
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b024d
-
-    const/16 v2, 0x83
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03fc
-
-    const/16 v2, 0x84
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0453
-
-    const/16 v2, 0x85
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00c3
-
-    const/16 v2, 0x86
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b035b
-
-    const/16 v2, 0x87
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0162
-
-    const/16 v2, 0x88
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02ff
-
-    const/16 v2, 0x89
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03dc
-
-    const/16 v2, 0x8a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0096
-
-    const/16 v2, 0x8b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02e9
-
-    const/16 v2, 0x8c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b021c
-
-    const/16 v2, 0x8d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01d9
-
-    const/16 v2, 0x8e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02c2
-
-    const/16 v2, 0x8f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b019c
-
-    const/16 v2, 0x90
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03a1
-
-    const/16 v2, 0x91
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0198
-
-    const/16 v2, 0x92
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0450
-
-    const/16 v2, 0x93
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b004d
-
-    const/16 v2, 0x94
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b023c
-
-    const/16 v2, 0x95
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0345
-
-    const/16 v2, 0x96
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0022
-
-    const/16 v2, 0x97
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02de
-
-    const/16 v2, 0x98
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0059
-
-    const/16 v2, 0x99
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0324
-
-    const/16 v2, 0x9a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0335
-
-    const/16 v2, 0x9b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0164
-
-    const/16 v2, 0x9c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0479
-
-    const/16 v2, 0x9d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00fb
-
-    const/16 v2, 0x9e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00a8
-
-    const/16 v2, 0x9f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0177
-
-    const/16 v2, 0xa0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b034e
-
-    const/16 v2, 0xa1
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b018c
-
-    const/16 v2, 0xa2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01fd
-
-    const/16 v2, 0xa3
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0124
-
-    const/16 v2, 0xa4
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0108
-
-    const/16 v2, 0xa5
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02e6
-
-    const/16 v2, 0xa6
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b022b
-
-    const/16 v2, 0xa7
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03d4
-
-    const/16 v2, 0xa8
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0147
-
-    const/16 v2, 0xa9
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03cf
-
-    const/16 v2, 0xaa
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02f5
-
-    const/16 v2, 0xab
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03af
-
-    const/16 v2, 0xac
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0165
-
-    const/16 v2, 0xad
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00de
-
-    const/16 v2, 0xae
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0120
-
-    const/16 v2, 0xaf
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b009d
-
-    const/16 v2, 0xb0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b04a1
-
-    const/16 v2, 0xb1
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b026d
-
-    const/16 v2, 0xb2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00a2
-
-    const/16 v2, 0xb3
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01f2
-
-    const/16 v2, 0xb4
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0238
-
-    const/16 v2, 0xb5
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03a7
-
-    const/16 v2, 0xb6
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0353
-
-    const/16 v2, 0xb7
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02e0
-
-    const/16 v2, 0xb8
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b043e
-
-    const/16 v2, 0xb9
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03f9
-
-    const/16 v2, 0xba
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0128
-
-    const/16 v2, 0xbb
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0234
-
-    const/16 v2, 0xbc
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0387
-
-    const/16 v2, 0xbd
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0312
-
-    const/16 v2, 0xbe
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0121
-
-    const/16 v2, 0xbf
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0347
-
-    const/16 v2, 0xc0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0266
-
-    const/16 v2, 0xc1
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b044c
-
-    const/16 v2, 0xc2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01c7
-
-    const/16 v2, 0xc3
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0278
-
-    const/16 v2, 0xc4
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0107
-
-    const/16 v2, 0xc5
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0487
-
-    const/16 v2, 0xc6
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0385
-
-    const/16 v2, 0xc7
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0161
-
-    const/16 v2, 0xc8
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b025a
-
-    const/16 v2, 0xc9
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0210
-
-    const/16 v2, 0xca
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f070002
-
-    const/16 v2, 0xa
-
-    new-array v2, v2, [Ljava/lang/String;
-
-    const-string v3, ""
-
-    aput-object v3, v2, v5
-
-    const-string v3, "\uc2a4\uce94\u2026"
-
-    aput-object v3, v2, v6
-
-    const-string v3, "\uc5f0\uacb0\uc911\u2026"
-
-    aput-object v3, v2, v7
-
-    const-string v3, "\uc778\uc99d\u2026"
-
-    aput-object v3, v2, v8
-
-    const-string v3, "IP\uc8fc\uc18c \uc5f0\uacb0\u2026"
-
-    aput-object v3, v2, v9
-
-    const/4 v3, 0x5
-
-    const-string v4, "\uc5f0\uacb0"
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x6
-
-    const-string v4, "\uc911\ub2e8"
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x7
-
-    const-string v4, "\ud574\uc81c\u2026"
-
-    aput-object v4, v2, v3
-
-    const/16 v3, 0x8
-
-    const-string v4, "\uc5f0\uacb0 \uc2e4\ud328"
-
-    aput-object v4, v2, v3
-
-    const/16 v3, 0x9
-
-    const-string v4, "\uc2e4\ud328"
-
-    aput-object v4, v2, v3
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0182
-
-    const/16 v2, 0xcc
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b020a
-
-    const/16 v2, 0xcd
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0413
-
-    const/16 v2, 0xce
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0111
-
-    const/16 v2, 0xcf
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0119
-
-    const/16 v2, 0xd0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0036
-
-    const/16 v2, 0xd1
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03ed
-
-    const/16 v2, 0xd2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02a1
-
-    const/16 v2, 0xd3
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0489
-
-    const/16 v2, 0xd4
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03ef
-
-    const/16 v2, 0xd5
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b047c
-
-    const/16 v2, 0xd6
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00af
-
-    const/16 v2, 0xd7
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0473
-
-    const/16 v2, 0xd8
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0150
-
-    const/16 v2, 0xd9
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00b9
-
-    const/16 v2, 0xda
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0488
-
-    const/16 v2, 0xdb
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0463
-
-    const/16 v2, 0xdc
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02d2
-
-    const/16 v2, 0xdd
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02b9
-
-    const/16 v2, 0xde
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0214
-
-    const/16 v2, 0xdf
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0445
-
-    const/16 v2, 0xe0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00ef
-
-    const/16 v2, 0xe1
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b032d
-
-    const/16 v2, 0xe2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01bb
-
-    const/16 v2, 0xe3
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b04ac
-
-    const/16 v2, 0xe4
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01ab
-
-    const/16 v2, 0xe5
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0073
-
-    const/16 v2, 0xe6
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03a4
-
-    const/16 v2, 0xe7
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0118
-
-    const/16 v2, 0xe8
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0267
-
-    const/16 v2, 0xe9
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02a8
-
-    const/16 v2, 0xea
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b048a
-
-    const/16 v2, 0xeb
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b033a
-
-    const/16 v2, 0xec
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0406
-
-    const/16 v2, 0xed
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00b2
-
-    const/16 v2, 0xee
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03ad
-
-    const/16 v2, 0xef
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0087
-
-    const/16 v2, 0xf0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0405
-
-    const/16 v2, 0xf1
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0242
-
-    const/16 v2, 0xf2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0330
-
-    const/16 v2, 0xf3
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02c4
-
-    const/16 v2, 0xf4
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0173
-
-    const/16 v2, 0xf5
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00ad
-
-    const/16 v2, 0xf6
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01c4
-
-    const/16 v2, 0xf7
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b005e
-
-    const/16 v2, 0xf8
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0322
-
-    const/16 v2, 0xf9
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0030
-
-    const/16 v2, 0xfa
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b032c
-
-    const/16 v2, 0xfb
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0438
-
-    const/16 v2, 0xfc
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02dd
-
-    const/16 v2, 0xfd
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0113
-
-    const/16 v2, 0xfe
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01ee
-
-    const/16 v2, 0xff
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b046b
-
-    const/16 v2, 0x100
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0127
-
-    const/16 v2, 0x101
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01a1
-
-    const/16 v2, 0x102
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0482
-
-    const/16 v2, 0x103
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0249
-
-    const/16 v2, 0x104
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0105
-
-    const/16 v2, 0x105
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02bf
-
-    const/16 v2, 0x106
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03f4
-
-    const/16 v2, 0x107
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0437
-
-    const/16 v2, 0x108
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0134
-
-    const/16 v2, 0x109
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0102
-
-    const/16 v2, 0x10a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01b4
-
-    const/16 v2, 0x10b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0363
-
-    const/16 v2, 0x10c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0308
-
-    const/16 v2, 0x10d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0131
-
-    const/16 v2, 0x10e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0375
-
-    const/16 v2, 0x10f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0273
-
-    const/16 v2, 0x110
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0049
-
-    const/16 v2, 0x111
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0302
-
-    const/16 v2, 0x112
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0477
-
-    const/16 v2, 0x113
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b034c
-
-    const/16 v2, 0x114
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01fb
-
-    const/16 v2, 0x115
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0163
-
-    const/16 v2, 0x116
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02ed
-
-    const/16 v2, 0x117
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0188
-
-    const/16 v2, 0x118
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03be
-
-    const/16 v2, 0x119
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0276
-
-    const/16 v2, 0x11a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0418
-
-    const/16 v2, 0x11b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00a5
-
-    const/16 v2, 0x11c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b020e
-
-    const/16 v2, 0x11d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0348
-
-    const/16 v2, 0x11e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b012b
-
-    const/16 v2, 0x11f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0271
-
-    const/16 v2, 0x120
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01e5
-
-    const/16 v2, 0x121
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0314
-
-    const/16 v2, 0x122
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0042
-
-    const/16 v2, 0x123
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0155
-
-    const/16 v2, 0x124
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b048d
-
-    const/16 v2, 0x125
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0470
-
-    const/16 v2, 0x126
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b008f
-
-    const/16 v2, 0x127
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00fd
-
-    const/16 v2, 0x128
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0409
-
-    const/16 v2, 0x129
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0054
-
-    const/16 v2, 0x12a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0148
-
-    const/16 v2, 0x12b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b031b
-
-    const/16 v2, 0x12c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0166
-
-    const/16 v2, 0x12d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b041f
-
-    const/16 v2, 0x12e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b024c
-
-    const/16 v2, 0x12f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03b8
-
-    const/16 v2, 0x130
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b039b
-
-    const/16 v2, 0x131
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0469
-
-    const/16 v2, 0x132
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02d6
-
-    const/16 v2, 0x133
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0384
-
-    const/16 v2, 0x134
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0179
-
-    const/16 v2, 0x135
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0018
-
-    const/16 v2, 0x136
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0497
-
-    const/16 v2, 0x137
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02ce
-
-    const/16 v2, 0x138
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b009c
-
-    const/16 v2, 0x139
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02b7
-
-    const/16 v2, 0x13a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02d9
-
-    const/16 v2, 0x13b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01c9
-
-    const/16 v2, 0x13c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0013
-
-    const/16 v2, 0x13d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0056
-
-    const/16 v2, 0x13e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0112
-
-    const/16 v2, 0x13f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01b0
-
-    const/16 v2, 0x140
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0289
-
-    const/16 v2, 0x141
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0376
-
-    const/16 v2, 0x142
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b001e
-
-    const/16 v2, 0x143
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b032a
-
-    const/16 v2, 0x144
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0222
-
-    const/16 v2, 0x145
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0316
-
-    const/16 v2, 0x146
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0204
-
-    const/16 v2, 0x147
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0421
-
-    const/16 v2, 0x148
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0338
-
-    const/16 v2, 0x149
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b019f
-
-    const/16 v2, 0x14a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0292
-
-    const/16 v2, 0x14b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0329
-
-    const/16 v2, 0x14c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0493
-
-    const/16 v2, 0x14d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01da
-
-    const/16 v2, 0x14e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0362
-
-    const/16 v2, 0x14f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b027d
-
-    const/16 v2, 0x150
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0440
-
-    const/16 v2, 0x151
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00d3
-
-    const/16 v2, 0x152
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01dc
-
-    const/16 v2, 0x153
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b043d
-
-    const/16 v2, 0x154
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b042c
-
-    const/16 v2, 0x155
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b026f
-
-    const/16 v2, 0x156
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b042d
-
-    const/16 v2, 0x157
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0343
-
-    const/16 v2, 0x158
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b036e
-
-    const/16 v2, 0x159
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00a9
-
-    const/16 v2, 0x15a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b007f
-
-    const/16 v2, 0x15b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b021a
-
-    const/16 v2, 0x15c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b005d
-
-    const/16 v2, 0x15d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0334
-
-    const/16 v2, 0x15e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02d8
-
-    const/16 v2, 0x15f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b047b
-
-    const/16 v2, 0x160
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00cf
-
-    const/16 v2, 0x161
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01b3
-
-    const/16 v2, 0x162
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b020d
-
-    const/16 v2, 0x163
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02b2
-
-    const/16 v2, 0x164
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00b4
-
-    const/16 v2, 0x165
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0361
-
-    const/16 v2, 0x166
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f07000b
-
-    new-array v2, v7, [Ljava/lang/String;
-
-    const-string v3, "\uc77c\ubc18\uc801 \uc548\ub4dc\ub85c\uc774\ub4dc \ubc29\ubc95\n(MMS, Gmail...)"
-
-    aput-object v3, v2, v5
-
-    const-string v3, "\ud30c\uc77c \ubc29\uc2dd\n(\uc704\uc758 \ubc29\ubc95\uc73c\ub85c \uc2e4\ud328\ud588\uc744 \ub54c)"
-
-    aput-object v3, v2, v6
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0091
-
-    const/16 v2, 0x168
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02d1
-
-    const/16 v2, 0x169
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b036f
-
-    const/16 v2, 0x16a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02cf
-
-    const/16 v2, 0x16b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00ff
-
-    const/16 v2, 0x16c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b023e
-
-    const/16 v2, 0x16d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03c9
-
-    const/16 v2, 0x16e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0279
-
-    const/16 v2, 0x16f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0070
-
-    const/16 v2, 0x170
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03fb
-
-    const/16 v2, 0x171
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0168
-
-    const/16 v2, 0x172
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b027b
-
-    const/16 v2, 0x173
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b026e
-
-    const/16 v2, 0x174
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0355
-
-    const/16 v2, 0x175
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b045a
-
-    const/16 v2, 0x176
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03b3
-
-    const/16 v2, 0x177
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0495
-
-    const/16 v2, 0x178
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0213
-
-    const/16 v2, 0x179
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03ff
-
-    const/16 v2, 0x17a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0380
-
-    const/16 v2, 0x17b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00d7
-
-    const/16 v2, 0x17c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b048c
-
-    const/16 v2, 0x17d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b039a
-
-    const/16 v2, 0x17e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03ba
-
-    const/16 v2, 0x17f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03b4
-
-    const/16 v2, 0x180
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0209
-
-    const/16 v2, 0x181
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02e2
-
-    const/16 v2, 0x182
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01aa
-
-    const/16 v2, 0x183
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0212
-
-    const/16 v2, 0x184
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0448
-
-    const/16 v2, 0x185
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0351
-
-    const/16 v2, 0x186
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0090
-
-    const/16 v2, 0x187
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0158
-
-    const/16 v2, 0x188
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b04a4
-
-    const/16 v2, 0x189
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03db
-
-    const/16 v2, 0x18a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0115
-
-    const/16 v2, 0x18b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03e0
-
-    const/16 v2, 0x18c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03de
-
-    const/16 v2, 0x18d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0315
-
-    const/16 v2, 0x18e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0156
-
-    const/16 v2, 0x18f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0311
-
-    const/16 v2, 0x190
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b019a
-
-    const/16 v2, 0x191
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0313
-
-    const/16 v2, 0x192
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01a4
-
-    const/16 v2, 0x193
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0401
-
-    const/16 v2, 0x194
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0317
-
-    const/16 v2, 0x195
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02b6
-
-    const/16 v2, 0x196
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0451
-
-    const/16 v2, 0x197
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0029
-
-    const/16 v2, 0x198
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03f6
-
-    const/16 v2, 0x199
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0080
-
-    const/16 v2, 0x19a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b000b
-
-    const/16 v2, 0x19b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00c1
-
-    const/16 v2, 0x19c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00c6
-
-    const/16 v2, 0x19d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0199
-
-    const/16 v2, 0x19e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02fd
-
-    const/16 v2, 0x19f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0203
-
-    const/16 v2, 0x1a0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0048
-
-    const/16 v2, 0x1a1
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b004b
-
-    const/16 v2, 0x1a2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b019b
-
-    const/16 v2, 0x1a3
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01ed
-
-    const/16 v2, 0x1a4
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0224
-
-    const/16 v2, 0x1a5
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b000e
-
-    const/16 v2, 0x1a6
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b044a
-
-    const/16 v2, 0x1a7
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0442
-
-    const/16 v2, 0x1a8
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0396
-
-    const/16 v2, 0x1a9
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0227
-
-    const/16 v2, 0x1aa
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00cb
-
-    const/16 v2, 0x1ab
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0244
-
-    const/16 v2, 0x1ac
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01ae
-
-    const/16 v2, 0x1ad
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f070009
-
-    new-array v2, v9, [Ljava/lang/String;
-
-    const-string v3, "\uc555\ucd95 \uc548\ud568"
-
-    aput-object v3, v2, v5
-
-    const-string v3, "\uace0\uc18d \uc800\uc555\ucd95"
-
-    aput-object v3, v2, v6
-
-    const-string v3, "\ud45c\uc900"
-
-    aput-object v3, v2, v7
-
-    const-string v3, "\uc800\uc18d \uace0\uc555\ucd95"
-
-    aput-object v3, v2, v8
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0024
-
-    const/16 v2, 0x1af
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0261
-
-    const/16 v2, 0x1b0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b026a
-
-    const/16 v2, 0x1b1
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b016d
-
-    const/16 v2, 0x1b2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00a0
-
-    const/16 v2, 0x1b3
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b010a
-
-    const/16 v2, 0x1b4
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0372
-
-    const/16 v2, 0x1b5
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b020c
-
-    const/16 v2, 0x1b6
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0485
-
-    const/16 v2, 0x1b7
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b001b
-
-    const/16 v2, 0x1b8
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01d7
-
-    const/16 v2, 0x1b9
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b001c
-
-    const/16 v2, 0x1ba
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0454
-
-    const/16 v2, 0x1bb
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b038b
-
-    const/16 v2, 0x1bc
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b040d
-
-    const/16 v2, 0x1bd
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0369
-
-    const/16 v2, 0x1be
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0403
-
-    const/16 v2, 0x1bf
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0269
-
-    const/16 v2, 0x1c0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02bc
-
-    const/16 v2, 0x1c1
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02ac
-
-    const/16 v2, 0x1c2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0459
-
-    const/16 v2, 0x1c3
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0055
-
-    const/16 v2, 0x1c4
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02c0
-
-    const/16 v2, 0x1c5
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0039
-
-    const/16 v2, 0x1c6
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03c8
-
-    const/16 v2, 0x1c7
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b038a
-
-    const/16 v2, 0x1c8
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f070003
-
-    const/16 v2, 0xa
-
-    new-array v2, v2, [Ljava/lang/String;
-
-    const-string v3, ""
-
-    aput-object v3, v2, v5
-
-    const-string v3, "\uc2a4\uce94\u2026"
-
-    aput-object v3, v2, v6
-
-    const-string v3, "\uc5d0 \uc5f0\uacb0\uc911 %1$s\u2026"
-
-    aput-object v3, v2, v7
-
-    const-string v3, "\uc758 \uc778\uc99d %1$s\u2026"
-
-    aput-object v3, v2, v8
-
-    const-string v3, "\uc5d0\uc11c IP\uc8fc\uc18c \uc5bb\uae30 %1$s\u2026"
-
-    aput-object v3, v2, v9
-
-    const/4 v3, 0x5
-
-    const-string v4, "\uc5d0 \uc5f0\uacb0 %1$s"
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x6
-
-    const-string v4, "\uc2e4\ud328"
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x7
-
-    const-string v4, "\uc5d0\uc11c \ubd84\ub9ac %1$s\u2026"
-
-    aput-object v4, v2, v3
-
-    const/16 v3, 0x8
-
-    const-string v4, "\uc5f0\uacb0 \uc2e4\ud328"
-
-    aput-object v4, v2, v3
-
-    const/16 v3, 0x9
-
-    const-string v4, "\uc2e4\ud328"
-
-    aput-object v4, v2, v3
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b033d
-
-    const/16 v2, 0x1ca
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b036c
-
-    const/16 v2, 0x1cb
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00a1
-
-    const/16 v2, 0x1cc
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b003b
-
-    const/16 v2, 0x1cd
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00ce
-
-    const/16 v2, 0x1ce
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f070004
-
-    const/4 v2, 0x5
-
-    new-array v2, v2, [Ljava/lang/String;
-
-    const-string v3, "\uc990\uaca8\ucc3e\uae30"
-
-    aput-object v3, v2, v5
-
-    const-string v3, "\ub85c\uceec"
-
-    aput-object v3, v2, v6
-
-    const-string v3, "\ub77c\uc774\ube0c\ub7ec\ub9ac"
-
-    aput-object v3, v2, v7
-
-    const-string v3, "\ub124\ud2b8\uc6cc\ud06c"
-
-    aput-object v3, v2, v8
-
-    const-string v3, "\ub3c4\uad6c"
-
-    aput-object v3, v2, v9
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03bc
-
-    const/16 v2, 0x1d0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01fc
-
-    const/16 v2, 0x1d1
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b015b
-
-    const/16 v2, 0x1d2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0425
-
-    const/16 v2, 0x1d3
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b002e
-
-    const/16 v2, 0x1d4
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03a0
-
-    const/16 v2, 0x1d5
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01a6
-
-    const/16 v2, 0x1d6
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00f4
-
-    const/16 v2, 0x1d7
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01c3
-
-    const/16 v2, 0x1d8
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b047a
-
-    const/16 v2, 0x1d9
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b017c
-
-    const/16 v2, 0x1da
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03da
-
-    const/16 v2, 0x1db
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0035
-
-    const/16 v2, 0x1dc
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0464
-
-    const/16 v2, 0x1dd
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b017f
-
-    const/16 v2, 0x1de
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0465
-
-    const/16 v2, 0x1df
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b036d
-
-    const/16 v2, 0x1e0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0460
-
-    const/16 v2, 0x1e1
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b022f
-
-    const/16 v2, 0x1e2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b046e
-
-    const/16 v2, 0x1e3
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03d0
-
-    const/16 v2, 0x1e4
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00fe
-
-    const/16 v2, 0x1e5
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0326
-
-    const/16 v2, 0x1e6
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0263
-
-    const/16 v2, 0x1e7
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b013f
-
-    const/16 v2, 0x1e8
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b04ad
-
-    const/16 v2, 0x1e9
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0444
-
-    const/16 v2, 0x1ea
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b027e
-
-    const/16 v2, 0x1eb
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02fe
-
-    const/16 v2, 0x1ec
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b043f
-
-    const/16 v2, 0x1ed
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0346
-
-    const/16 v2, 0x1ee
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b031a
-
-    const/16 v2, 0x1ef
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b028f
-
-    const/16 v2, 0x1f0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b028a
-
-    const/16 v2, 0x1f1
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0417
-
-    const/16 v2, 0x1f2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0287
-
-    const/16 v2, 0x1f3
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0411
-
-    const/16 v2, 0x1f4
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00e6
-
-    const/16 v2, 0x1f5
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b036a
-
-    const/16 v2, 0x1f6
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01c6
-
-    const/16 v2, 0x1f7
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b014a
-
-    const/16 v2, 0x1f8
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03f3
-
-    const/16 v2, 0x1f9
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0186
-
-    const/16 v2, 0x1fa
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0416
-
-    const/16 v2, 0x1fb
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0171
-
-    const/16 v2, 0x1fc
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b047f
-
-    const/16 v2, 0x1fd
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0446
-
-    const/16 v2, 0x1fe
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02bd
-
-    const/16 v2, 0x1ff
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0137
-
-    const/16 v2, 0x200
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03d9
-
-    const/16 v2, 0x201
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02ca
-
-    const/16 v2, 0x202
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b013b
-
-    const/16 v2, 0x203
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01a8
-
-    const/16 v2, 0x204
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b044e
-
-    const/16 v2, 0x205
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b037f
-
-    const/16 v2, 0x206
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02a9
-
-    const/16 v2, 0x207
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0064
-
-    const/16 v2, 0x208
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0086
-
-    const/16 v2, 0x209
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00c7
-
-    const/16 v2, 0x20a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b04a2
-
-    const/16 v2, 0x20b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00f9
-
-    const/16 v2, 0x20c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00a3
-
-    const/16 v2, 0x20d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0285
-
-    const/16 v2, 0x20e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0397
-
-    const/16 v2, 0x20f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b028e
-
-    const/16 v2, 0x210
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0484
-
-    const/16 v2, 0x211
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b040b
-
-    const/16 v2, 0x212
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02bb
-
-    const/16 v2, 0x213
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b039c
-
-    const/16 v2, 0x214
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02d3
-
-    const/16 v2, 0x215
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02be
-
-    const/16 v2, 0x216
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0262
-
-    const/16 v2, 0x217
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0296
-
-    const/16 v2, 0x218
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0135
-
-    const/16 v2, 0x219
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b031e
-
-    const/16 v2, 0x21a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01b9
-
-    const/16 v2, 0x21b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0458
-
-    const/16 v2, 0x21c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b019d
-
-    const/16 v2, 0x21d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b021f
-
-    const/16 v2, 0x21e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0327
-
-    const/16 v2, 0x21f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b018e
-
-    const/16 v2, 0x220
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b037e
-
-    const/16 v2, 0x221
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02b4
-
-    const/16 v2, 0x222
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b044b
-
-    const/16 v2, 0x223
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0081
-
-    const/16 v2, 0x224
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b007c
-
-    const/16 v2, 0x225
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0246
-
-    const/16 v2, 0x226
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02e5
-
-    const/16 v2, 0x227
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b038d
-
-    const/16 v2, 0x228
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03e8
-
-    const/16 v2, 0x229
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b027a
-
-    const/16 v2, 0x22a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02b1
-
-    const/16 v2, 0x22b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0277
-
-    const/16 v2, 0x22c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b011f
-
-    const/16 v2, 0x22d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b029d
-
-    const/16 v2, 0x22e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02fc
-
-    const/16 v2, 0x22f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0109
-
-    const/16 v2, 0x230
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0318
-
-    const/16 v2, 0x231
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0223
-
-    const/16 v2, 0x232
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0494
-
-    const/16 v2, 0x233
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0344
-
-    const/16 v2, 0x234
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0356
-
-    const/16 v2, 0x235
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0399
-
-    const/16 v2, 0x236
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0117
-
-    const/16 v2, 0x237
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00b7
-
-    const/16 v2, 0x238
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b038e
-
-    const/16 v2, 0x239
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03a2
-
-    const/16 v2, 0x23a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03eb
-
-    const/16 v2, 0x23b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b041e
-
-    const/16 v2, 0x23c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b017d
-
-    const/16 v2, 0x23d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00b6
-
-    const/16 v2, 0x23e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01eb
-
-    const/16 v2, 0x23f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03c2
-
-    const/16 v2, 0x240
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02b0
-
-    const/16 v2, 0x241
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01d0
-
-    const/16 v2, 0x242
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03ce
-
-    const/16 v2, 0x243
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0062
-
-    const/16 v2, 0x244
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b012e
-
-    const/16 v2, 0x245
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00b3
-
-    const/16 v2, 0x246
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0142
-
-    const/16 v2, 0x247
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b009a
-
-    const/16 v2, 0x248
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b046f
-
-    const/16 v2, 0x249
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01ca
-
-    const/16 v2, 0x24a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0257
-
-    const/16 v2, 0x24b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0138
-
-    const/16 v2, 0x24c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0368
-
-    const/16 v2, 0x24d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b04aa
-
-    const/16 v2, 0x24e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0258
-
-    const/16 v2, 0x24f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0187
-
-    const/16 v2, 0x250
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01de
-
-    const/16 v2, 0x251
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02a5
-
-    const/16 v2, 0x252
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01af
-
-    const/16 v2, 0x253
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0236
-
-    const/16 v2, 0x254
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0309
-
-    const/16 v2, 0x255
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b047e
-
-    const/16 v2, 0x256
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b013e
-
-    const/16 v2, 0x257
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02da
-
-    const/16 v2, 0x258
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b009b
-
-    const/16 v2, 0x259
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0106
-
-    const/16 v2, 0x25a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00d4
-
-    const/16 v2, 0x25b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03c7
-
-    const/16 v2, 0x25c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01e2
-
-    const/16 v2, 0x25d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0072
-
-    const/16 v2, 0x25e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01f3
-
-    const/16 v2, 0x25f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0159
-
-    const/16 v2, 0x260
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0364
-
-    const/16 v2, 0x261
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b042b
-
-    const/16 v2, 0x262
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b017b
-
-    const/16 v2, 0x263
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0104
-
-    const/16 v2, 0x264
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b007d
-
-    const/16 v2, 0x265
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0432
-
-    const/16 v2, 0x266
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0218
-
-    const/16 v2, 0x267
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0206
-
-    const/16 v2, 0x268
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0420
-
-    const/16 v2, 0x269
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0157
-
-    const/16 v2, 0x26a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f070005
-
-    const/4 v2, 0x6
-
-    new-array v2, v2, [Ljava/lang/String;
-
-    const-string v3, "\uae30\ubcf8"
-
-    aput-object v3, v2, v5
-
-    const-string v3, "\ub178\ub780\uc0c9"
-
-    aput-object v3, v2, v6
-
-    const-string v3, "\ucd08\ub85d\uc0c9"
-
-    aput-object v3, v2, v7
-
-    const-string v3, "\ube68\uac04\uc0c9"
-
-    aput-object v3, v2, v8
-
-    const-string v3, "\ud551\ud06c\uc0c9"
-
-    aput-object v3, v2, v9
-
-    const/4 v3, 0x5
-
-    const-string v4, "\uac80\uc815\uc0c9"
-
-    aput-object v4, v2, v3
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b043b
-
-    const/16 v2, 0x26c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03b0
-
-    const/16 v2, 0x26d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00b8
-
-    const/16 v2, 0x26e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0116
-
-    const/16 v2, 0x26f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01fe
-
-    const/16 v2, 0x270
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b041c
-
-    const/16 v2, 0x271
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b028c
-
-    const/16 v2, 0x272
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03c6
-
-    const/16 v2, 0x273
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00bb
-
-    const/16 v2, 0x274
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0032
-
-    const/16 v2, 0x275
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02df
-
-    const/16 v2, 0x276
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0053
-
-    const/16 v2, 0x277
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0272
-
-    const/16 v2, 0x278
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03ea
-
-    const/16 v2, 0x279
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01db
-
-    const/16 v2, 0x27a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b022e
-
-    const/16 v2, 0x27b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0366
-
-    const/16 v2, 0x27c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0217
-
-    const/16 v2, 0x27d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b024a
-
-    const/16 v2, 0x27e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0149
-
-    const/16 v2, 0x27f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0140
-
-    const/16 v2, 0x280
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b02a0
-
-    const/16 v2, 0x281
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b00d9
-
-    const/16 v2, 0x282
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b002a
-
-    const/16 v2, 0x283
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b03aa
-
-    const/16 v2, 0x284
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b015f
-
-    const/16 v2, 0x285
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b026b
-
-    const/16 v2, 0x286
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b003c
-
-    const/16 v2, 0x287
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const/high16 v1, 0x7f070000
-
-    const/16 v2, 0x9
-
-    new-array v2, v2, [Ljava/lang/String;
-
-    const-string v3, "\ud070 \uc544\uc774\ucf58"
-
-    aput-object v3, v2, v5
-
-    const-string v3, "\uc911\uac04 \uc544\uc774\ucf58"
-
-    aput-object v3, v2, v6
-
-    const-string v3, "\uc791\uc740 \uc544\uc774\ucf58"
-
-    aput-object v3, v2, v7
-
-    const-string v3, "\ud070 \ubaa9\ub85d"
-
-    aput-object v3, v2, v8
-
-    const-string v3, "\uc911\uac04 \ubaa9\ub85d"
-
-    aput-object v3, v2, v9
-
-    const/4 v3, 0x5
-
-    const-string v4, "\uc791\uc740 \ubaa9\ub85d"
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x6
-
-    const-string v4, "\ud070 \uc815\ubcf4"
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x7
-
-    const-string v4, "\uc911\uac04 \uc815\ubcf4"
-
-    aput-object v4, v2, v3
-
-    const/16 v3, 0x8
-
-    const-string v4, "\uc791\uc740 \uc815\ubcf4"
-
-    aput-object v4, v2, v3
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0435
-
-    const/16 v2, 0x289
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b033c
-
-    const/16 v2, 0x28a
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0231
-
-    const/16 v2, 0x28b
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0067
-
-    const/16 v2, 0x28c
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b0426
-
-    const/16 v2, 0x28d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b01b8
-
-    const/16 v2, 0x28e
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f0b012c
-
-    const/16 v2, 0x28f
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const v1, 0x7f070007
+    const v1, 0x7f0c000d
 
     const/4 v2, 0x7
 
     new-array v2, v2, [Ljava/lang/String;
 
-    const-string v3, "\ubaa8\ub450"
+    const-string v3, "\u0c8e\u0cb2\u0ccd\u0cb2\u0cbe"
 
     aput-object v3, v2, v5
 
@@ -6811,13 +325,6533 @@
 
     const/4 v3, 0x6
 
-    const-string v4, "\uc785\ub825"
+    const-string v4, "\u0cac\u0cb0\u0cc6"
 
     aput-object v4, v2, v3
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0012
+    const v1, 0x7f08045f
+
+    const/16 v2, 0x1c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805b0
+
+    const/16 v2, 0x1d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802d0
+
+    const/16 v2, 0x1e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080594
+
+    const/16 v2, 0x1f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0801ac
+
+    const/16 v2, 0x20
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805c0
+
+    const/16 v2, 0x21
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080513
+
+    const/16 v2, 0x22
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080566
+
+    const/16 v2, 0x23
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080722
+
+    const/16 v2, 0x24
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08055d
+
+    const/16 v2, 0x25
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0804f4
+
+    const/16 v2, 0x26
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080728
+
+    const/16 v2, 0x27
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08058d
+
+    const/16 v2, 0x28
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080320
+
+    const/16 v2, 0x29
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080607
+
+    const/16 v2, 0x2a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080398
+
+    const/16 v2, 0x2b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080440
+
+    const/16 v2, 0x2c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080452
+
+    const/16 v2, 0x2d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08051c
+
+    const/16 v2, 0x2e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080297
+
+    const/16 v2, 0x2f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08050b
+
+    const/16 v2, 0x30
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080427
+
+    const/16 v2, 0x31
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0801ae
+
+    const/16 v2, 0x32
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080260
+
+    const/16 v2, 0x33
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802c3
+
+    const/16 v2, 0x34
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080605
+
+    const/16 v2, 0x35
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080348
+
+    const/16 v2, 0x36
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08063b
+
+    const/16 v2, 0x37
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080558
+
+    const/16 v2, 0x38
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08062e
+
+    const/16 v2, 0x39
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08022f
+
+    const/16 v2, 0x3a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08043a
+
+    const/16 v2, 0x3b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080004
+
+    const/16 v2, 0x3c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0c0009
+
+    new-array v2, v7, [Ljava/lang/String;
+
+    const-string v3, "\u0cb8\u0cb9\u0c9c \u0c86\u0c82\u0ca1\u0ccd\u0cb0\u0cbe\u0caf\u0ccd\u0ca1\u0ccd \u0cae\u0cbe\u0cb0\u0ccd\u0c97\n(MMS,Gmail,\u2026 \u0c97\u0cbe\u0c97\u0cbf)"
+
+    aput-object v3, v2, v5
+
+    const-string v3, "\u0c95\u0ca1\u0ca4\u0ca6 \u0ca6\u0cbe\u0cb0\u0cbf\n(\u0cae\u0cc7\u0cb2\u0cbf\u0ca8\u0ca6\u0ccd\u0ca6\u0cc1 \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0ca6\u0cb0\u0cc6 \u0c87\u0ca6\u0ca8\u0ccd\u0ca8\u0cc1 \u0caa\u0ccd\u0cb0\u0caf\u0ca4\u0ccd\u0ca8\u0cbf\u0cb8\u0cbf)"
+
+    aput-object v3, v2, v6
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802bb
+
+    const/16 v2, 0x3e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08028f
+
+    const/16 v2, 0x3f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080256
+
+    const/16 v2, 0x40
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08059b
+
+    const/16 v2, 0x41
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803f2
+
+    const/16 v2, 0x42
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08060b
+
+    const/16 v2, 0x43
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0801c4
+
+    const/16 v2, 0x44
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800b2
+
+    const/16 v2, 0x45
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080487
+
+    const/16 v2, 0x46
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080714
+
+    const/16 v2, 0x47
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080694
+
+    const/16 v2, 0x48
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080318
+
+    const/16 v2, 0x49
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08042d
+
+    const/16 v2, 0x4a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080750
+
+    const/16 v2, 0x4b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806ff
+
+    const/16 v2, 0x4c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08038e
+
+    const/16 v2, 0x4d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803db
+
+    const/16 v2, 0x4e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080344
+
+    const/16 v2, 0x4f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0804a2
+
+    const/16 v2, 0x50
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803a1
+
+    const/16 v2, 0x51
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08009f
+
+    const/16 v2, 0x52
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080541
+
+    const/16 v2, 0x53
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800c0
+
+    const/16 v2, 0x54
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806b0
+
+    const/16 v2, 0x55
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080667
+
+    const/16 v2, 0x56
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080597
+
+    const/16 v2, 0x57
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800c2
+
+    const/16 v2, 0x58
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080560
+
+    const/16 v2, 0x59
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080678
+
+    const/16 v2, 0x5a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0c0004
+
+    new-array v2, v8, [Ljava/lang/String;
+
+    const-string v3, "DOS Terminators - CR/LF"
+
+    aput-object v3, v2, v5
+
+    const-string v3, "UNIX Terminators - LF"
+
+    aput-object v3, v2, v6
+
+    const-string v3, "MAC Terminators - CR"
+
+    aput-object v3, v2, v7
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805c5
+
+    const/16 v2, 0x5c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0801de
+
+    const/16 v2, 0x5d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080099
+
+    const/16 v2, 0x5e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803d4
+
+    const/16 v2, 0x5f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08072c
+
+    const/16 v2, 0x60
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805fd
+
+    const/16 v2, 0x61
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080464
+
+    const/16 v2, 0x62
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803c5
+
+    const/16 v2, 0x63
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08064a
+
+    const/16 v2, 0x64
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0801f4
+
+    const/16 v2, 0x65
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805a7
+
+    const/16 v2, 0x66
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806df
+
+    const/16 v2, 0x67
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0801b2
+
+    const/16 v2, 0x68
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0804a3
+
+    const/16 v2, 0x69
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const/high16 v1, 0x7f0c0000
+
+    new-array v2, v8, [Ljava/lang/String;
+
+    const-string v3, "\u0cb9\u0cc6\u0cb8\u0cb0\u0cc1"
+
+    aput-object v3, v2, v5
+
+    const-string v3, "\u0cb5\u0cbf\u0ca7"
+
+    aput-object v3, v2, v6
+
+    const-string v3, "\u0c97\u0cbe\u0ca4\u0ccd\u0cb0"
+
+    aput-object v3, v2, v7
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080234
+
+    const/16 v2, 0x6b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080556
+
+    const/16 v2, 0x6c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08042a
+
+    const/16 v2, 0x6d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08036f
+
+    const/16 v2, 0x6e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08039c
+
+    const/16 v2, 0x6f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802c7
+
+    const/16 v2, 0x70
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08014f
+
+    const/16 v2, 0x71
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080145
+
+    const/16 v2, 0x72
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805f5
+
+    const/16 v2, 0x73
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08040c
+
+    const/16 v2, 0x74
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805a9
+
+    const/16 v2, 0x75
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080539
+
+    const/16 v2, 0x76
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080326
+
+    const/16 v2, 0x77
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08015c
+
+    const/16 v2, 0x78
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806c5
+
+    const/16 v2, 0x79
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08017d
+
+    const/16 v2, 0x7a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805b2
+
+    const/16 v2, 0x7b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08063c
+
+    const/16 v2, 0x7c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08062b
+
+    const/16 v2, 0x7d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080588
+
+    const/16 v2, 0x7e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080291
+
+    const/16 v2, 0x7f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803ae
+
+    const/16 v2, 0x80
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080349
+
+    const/16 v2, 0x81
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803e6
+
+    const/16 v2, 0x82
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080635
+
+    const/16 v2, 0x83
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805e7
+
+    const/16 v2, 0x84
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08057d
+
+    const/16 v2, 0x85
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805a2
+
+    const/16 v2, 0x86
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803f0
+
+    const/16 v2, 0x87
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08015e
+
+    const/16 v2, 0x88
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080643
+
+    const/16 v2, 0x89
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802ec
+
+    const/16 v2, 0x8a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080284
+
+    const/16 v2, 0x8b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080743
+
+    const/16 v2, 0x8c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080506
+
+    const/16 v2, 0x8d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080295
+
+    const/16 v2, 0x8e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08047c
+
+    const/16 v2, 0x8f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08014b
+
+    const/16 v2, 0x90
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803e9
+
+    const/16 v2, 0x91
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080481
+
+    const/16 v2, 0x92
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0804f1
+
+    const/16 v2, 0x93
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800f4
+
+    const/16 v2, 0x94
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080632
+
+    const/16 v2, 0x95
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806b6
+
+    const/16 v2, 0x96
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806c1
+
+    const/16 v2, 0x97
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08049a
+
+    const/16 v2, 0x98
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080704
+
+    const/16 v2, 0x99
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802d7
+
+    const/16 v2, 0x9a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080222
+
+    const/16 v2, 0x9b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800a6
+
+    const/16 v2, 0x9c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806a1
+
+    const/16 v2, 0x9d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806fe
+
+    const/16 v2, 0x9e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08058f
+
+    const/16 v2, 0x9f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080568
+
+    const/16 v2, 0xa0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806b5
+
+    const/16 v2, 0xa1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08043f
+
+    const/16 v2, 0xa2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803d8
+
+    const/16 v2, 0xa3
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08007f
+
+    const/16 v2, 0xa4
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802d3
+
+    const/16 v2, 0xa5
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805d0
+
+    const/16 v2, 0xa6
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080402
+
+    const/16 v2, 0xa7
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08054a
+
+    const/16 v2, 0xa8
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08025e
+
+    const/16 v2, 0xa9
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080589
+
+    const/16 v2, 0xaa
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0801c5
+
+    const/16 v2, 0xab
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080609
+
+    const/16 v2, 0xac
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080120
+
+    const/16 v2, 0xad
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080429
+
+    const/16 v2, 0xae
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800ad
+
+    const/16 v2, 0xaf
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080619
+
+    const/16 v2, 0xb0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08007b
+
+    const/16 v2, 0xb1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080651
+
+    const/16 v2, 0xb2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08015d
+
+    const/16 v2, 0xb3
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080179
+
+    const/16 v2, 0xb4
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080747
+
+    const/16 v2, 0xb5
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08056f
+
+    const/16 v2, 0xb6
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080514
+
+    const/16 v2, 0xb7
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800c7
+
+    const/16 v2, 0xb8
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080097
+
+    const/16 v2, 0xb9
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08032a
+
+    const/16 v2, 0xba
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080085
+
+    const/16 v2, 0xbb
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080103
+
+    const/16 v2, 0xbc
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0c0017
+
+    new-array v2, v9, [Ljava/lang/String;
+
+    const-string v3, "\u0cb8\u0ccd\u0c9f\u0ccb\u0cb0\u0ccd"
+
+    aput-object v3, v2, v5
+
+    const-string v3, "\u0cb5\u0cc7\u0c97"
+
+    aput-object v3, v2, v6
+
+    const-string v3, "\u0cb8\u0ccd\u0c9f\u0cbe\u0c82\u0ca1\u0cb0\u0ccd\u0ca1\u0ccd"
+
+    aput-object v3, v2, v7
+
+    const-string v3, "\u0c89\u0ca4\u0ccd\u0ca4\u0cae"
+
+    aput-object v3, v2, v8
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0804fa
+
+    const/16 v2, 0xbe
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800fa
+
+    const/16 v2, 0xbf
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080532
+
+    const/16 v2, 0xc0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080075
+
+    const/16 v2, 0xc1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805ac
+
+    const/16 v2, 0xc2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806bd
+
+    const/16 v2, 0xc3
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800b6
+
+    const/16 v2, 0xc4
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080540
+
+    const/16 v2, 0xc5
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08019f
+
+    const/16 v2, 0xc6
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08047d
+
+    const/16 v2, 0xc7
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080343
+
+    const/16 v2, 0xc8
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08047b
+
+    const/16 v2, 0xc9
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0804a9
+
+    const/16 v2, 0xca
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08006d
+
+    const/16 v2, 0xcb
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08012b
+
+    const/16 v2, 0xcc
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08055a
+
+    const/16 v2, 0xcd
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080365
+
+    const/16 v2, 0xce
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08016c
+
+    const/16 v2, 0xcf
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08046b
+
+    const/16 v2, 0xd0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080596
+
+    const/16 v2, 0xd1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080555
+
+    const/16 v2, 0xd2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080515
+
+    const/16 v2, 0xd3
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08044d
+
+    const/16 v2, 0xd4
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803ab
+
+    const/16 v2, 0xd5
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080333
+
+    const/16 v2, 0xd6
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08060f
+
+    const/16 v2, 0xd7
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0801b3
+
+    const/16 v2, 0xd8
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080226
+
+    const/16 v2, 0xd9
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806e5
+
+    const/16 v2, 0xda
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802d5
+
+    const/16 v2, 0xdb
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805bf
+
+    const/16 v2, 0xdc
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08069e
+
+    const/16 v2, 0xdd
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080225
+
+    const/16 v2, 0xde
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08062a
+
+    const/16 v2, 0xdf
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803e0
+
+    const/16 v2, 0xe0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080731
+
+    const/16 v2, 0xe1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800f9
+
+    const/16 v2, 0xe2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080505
+
+    const/16 v2, 0xe3
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08019a
+
+    const/16 v2, 0xe4
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080674
+
+    const/16 v2, 0xe5
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0c0014
+
+    new-array v2, v9, [Ljava/lang/String;
+
+    const-string v3, "\u0c95\u0cb3\u0caa\u0cc6"
+
+    aput-object v3, v2, v5
+
+    const-string v3, "\u0cab\u0cc7\u0cb0\u0ccd"
+
+    aput-object v3, v2, v6
+
+    const-string v3, "\u0c89\u0ca4\u0ccd\u0ca4\u0cae\u0cc6"
+
+    aput-object v3, v2, v7
+
+    const-string v3, "\u0c85\u0ca4\u0ccd\u0caf\u0cc1\u0ca4\u0ccd\u0ca4\u0cae"
+
+    aput-object v3, v2, v8
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080319
+
+    const/16 v2, 0xe7
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08052e
+
+    const/16 v2, 0xe8
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080675
+
+    const/16 v2, 0xe9
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806cc
+
+    const/16 v2, 0xea
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805be
+
+    const/16 v2, 0xeb
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080453
+
+    const/16 v2, 0xec
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805c4
+
+    const/16 v2, 0xed
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080428
+
+    const/16 v2, 0xee
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08051e
+
+    const/16 v2, 0xef
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080406
+
+    const/16 v2, 0xf0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803fe
+
+    const/16 v2, 0xf1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08031a
+
+    const/16 v2, 0xf2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080536
+
+    const/16 v2, 0xf3
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08058a
+
+    const/16 v2, 0xf4
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806f0
+
+    const/16 v2, 0xf5
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080483
+
+    const/16 v2, 0xf6
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08054b
+
+    const/16 v2, 0xf7
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08048a
+
+    const/16 v2, 0xf8
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803f5
+
+    const/16 v2, 0xf9
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080611
+
+    const/16 v2, 0xfa
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0c000e
+
+    const/16 v2, 0x8
+
+    new-array v2, v2, [Ljava/lang/String;
+
+    const-string v3, "\u0cb8\u0ccd\u0cb5\u0caf\u0c82"
+
+    aput-object v3, v2, v5
+
+    const-string v3, "Baidu"
+
+    aput-object v3, v2, v6
+
+    const-string v3, "\u0c97\u0cc2\u0c97\u0cb2\u0ccd"
+
+    aput-object v3, v2, v7
+
+    const-string v3, "\u0caf\u0cbe\u0cb9\u0cc2"
+
+    aput-object v3, v2, v8
+
+    const-string v3, "Yandex"
+
+    aput-object v3, v2, v9
+
+    const/4 v3, 0x5
+
+    const-string v4, "Naver"
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x6
+
+    const-string v4, "\u0c85\u0cae\u0cc7\u0c9c\u0cbe\u0ca8\u0ccd"
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x7
+
+    const-string v4, "MySearch"
+
+    aput-object v4, v2, v3
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080691
+
+    const/16 v2, 0xfc
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080744
+
+    const/16 v2, 0xfd
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080633
+
+    const/16 v2, 0xfe
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080476
+
+    const/16 v2, 0xff
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08050c
+
+    const/16 v2, 0x100
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08048d
+
+    const/16 v2, 0x101
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080726
+
+    const/16 v2, 0x102
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806ab
+
+    const/16 v2, 0x103
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08057e
+
+    const/16 v2, 0x104
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080573
+
+    const/16 v2, 0x105
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const/high16 v1, 0x7f080000
+
+    const/16 v2, 0x106
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803e8
+
+    const/16 v2, 0x107
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08052d
+
+    const/16 v2, 0x108
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08052f
+
+    const/16 v2, 0x109
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08010c
+
+    const/16 v2, 0x10a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803ea
+
+    const/16 v2, 0x10b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080316
+
+    const/16 v2, 0x10c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803ef
+
+    const/16 v2, 0x10d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080736
+
+    const/16 v2, 0x10e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080564
+
+    const/16 v2, 0x10f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080148
+
+    const/16 v2, 0x110
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080160
+
+    const/16 v2, 0x111
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08074b
+
+    const/16 v2, 0x112
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08026d
+
+    const/16 v2, 0x113
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080127
+
+    const/16 v2, 0x114
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080510
+
+    const/16 v2, 0x115
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08037b
+
+    const/16 v2, 0x116
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080431
+
+    const/16 v2, 0x117
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080697
+
+    const/16 v2, 0x118
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08069d
+
+    const/16 v2, 0x119
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080572
+
+    const/16 v2, 0x11a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08026e
+
+    const/16 v2, 0x11b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080735
+
+    const/16 v2, 0x11c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080370
+
+    const/16 v2, 0x11d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080689
+
+    const/16 v2, 0x11e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080312
+
+    const/16 v2, 0x11f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08009a
+
+    const/16 v2, 0x120
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803d5
+
+    const/16 v2, 0x121
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080125
+
+    const/16 v2, 0x122
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080270
+
+    const/16 v2, 0x123
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080727
+
+    const/16 v2, 0x124
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080157
+
+    const/16 v2, 0x125
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080490
+
+    const/16 v2, 0x126
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0801b1
+
+    const/16 v2, 0x127
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080637
+
+    const/16 v2, 0x128
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080433
+
+    const/16 v2, 0x129
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0c0016
+
+    const/16 v2, 0xa
+
+    new-array v2, v2, [Ljava/lang/String;
+
+    const-string v3, ""
+
+    aput-object v3, v2, v5
+
+    const-string v3, "\u0cb8\u0ccd\u0c95\u0ccd\u0caf\u0cbe\u0ca8\u0ccd\u200d\u0cae\u0cbe\u0ca1\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026"
+
+    aput-object v3, v2, v6
+
+    const-string v3, "\u0cb8\u0c82\u0caa\u0cb0\u0ccd\u0c95\u0c97\u0cca\u0cb3\u0ccd\u0cb3\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026"
+
+    aput-object v3, v2, v7
+
+    const-string v3, "\u0ca6\u0cc3\u0ca2\u0cc0\u0c95\u0cb0\u0cbf\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026"
+
+    aput-object v3, v2, v8
+
+    const-string v3, "IP \u0cb5\u0cbf\u0cb3\u0cbe\u0cb8\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0caa\u0ca1\u0cc6\u0ca6\u0cc1\u0c95\u0cca\u0cb3\u0ccd\u0cb3\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6"
+
+    aput-object v3, v2, v9
+
+    const/4 v3, 0x5
+
+    const-string v4, "\u0cb8\u0c82\u0caa\u0cb0\u0ccd\u0c95\u0c97\u0cca\u0c82\u0ca1\u0cbf\u0ca6\u0cc6"
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x6
+
+    const-string v4, "\u0c85\u0cae\u0cbe\u0ca8\u0ca4\u0cc1\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6"
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x7
+
+    const-string v4, "\u0cb8\u0c82\u0caa\u0cb0\u0ccd\u0c95 \u0c95\u0ca1\u0cbf\u0ca4\u0c97\u0cc6\u0cc2\u0cb3\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026"
+
+    aput-object v4, v2, v3
+
+    const/16 v3, 0x8
+
+    const-string v4, "\u0cb8\u0c82\u0caa\u0cb0\u0ccd\u0c95 \u0c95\u0ca1\u0cbf\u0ca4\u0c97\u0ccb\u0c82\u0ca1\u0cbf\u0ca6\u0cc6"
+
+    aput-object v4, v2, v3
+
+    const/16 v3, 0x9
+
+    const-string v4, "\u0cb5\u0cbf\u0cab\u0cb2"
+
+    aput-object v4, v2, v3
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080460
+
+    const/16 v2, 0x12b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0c0002
+
+    const/4 v2, 0x5
+
+    new-array v2, v2, [Ljava/lang/String;
+
+    const-string v3, "1 \u0cb8\u0cc6"
+
+    aput-object v3, v2, v5
+
+    const-string v3, "3 \u0cb8\u0cc6"
+
+    aput-object v3, v2, v6
+
+    const-string v3, "5 \u0cb8\u0cc6"
+
+    aput-object v3, v2, v7
+
+    const-string v3, "10 \u0cb8\u0cc6"
+
+    aput-object v3, v2, v8
+
+    const-string v3, "15 \u0cb8\u0cc6"
+
+    aput-object v3, v2, v9
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080636
+
+    const/16 v2, 0x12d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800b1
+
+    const/16 v2, 0x12e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080480
+
+    const/16 v2, 0x12f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806c9
+
+    const/16 v2, 0x130
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08074d
+
+    const/16 v2, 0x131
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08037a
+
+    const/16 v2, 0x132
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080095
+
+    const/16 v2, 0x133
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080325
+
+    const/16 v2, 0x134
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080149
+
+    const/16 v2, 0x135
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806c8
+
+    const/16 v2, 0x136
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080124
+
+    const/16 v2, 0x137
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08037d
+
+    const/16 v2, 0x138
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0804a4
+
+    const/16 v2, 0x139
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0801f7
+
+    const/16 v2, 0x13a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080601
+
+    const/16 v2, 0x13b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080475
+
+    const/16 v2, 0x13c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080412
+
+    const/16 v2, 0x13d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0801a2
+
+    const/16 v2, 0x13e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080170
+
+    const/16 v2, 0x13f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803d0
+
+    const/16 v2, 0x140
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08015b
+
+    const/16 v2, 0x141
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08009b
+
+    const/16 v2, 0x142
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080002
+
+    const/16 v2, 0x143
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080741
+
+    const/16 v2, 0x144
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08016f
+
+    const/16 v2, 0x145
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080562
+
+    const/16 v2, 0x146
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806c4
+
+    const/16 v2, 0x147
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802ca
+
+    const/16 v2, 0x148
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080570
+
+    const/16 v2, 0x149
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08026c
+
+    const/16 v2, 0x14a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802e9
+
+    const/16 v2, 0x14b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806cb
+
+    const/16 v2, 0x14c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08031e
+
+    const/16 v2, 0x14d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080253
+
+    const/16 v2, 0x14e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802cb
+
+    const/16 v2, 0x14f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080183
+
+    const/16 v2, 0x150
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802fb
+
+    const/16 v2, 0x151
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080158
+
+    const/16 v2, 0x152
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080673
+
+    const/16 v2, 0x153
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08056a
+
+    const/16 v2, 0x154
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080265
+
+    const/16 v2, 0x155
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08032d
+
+    const/16 v2, 0x156
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803a0
+
+    const/16 v2, 0x157
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805c3
+
+    const/16 v2, 0x158
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803cd
+
+    const/16 v2, 0x159
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080231
+
+    const/16 v2, 0x15a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080645
+
+    const/16 v2, 0x15b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806db
+
+    const/16 v2, 0x15c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080630
+
+    const/16 v2, 0x15d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08073d
+
+    const/16 v2, 0x15e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080494
+
+    const/16 v2, 0x15f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080254
+
+    const/16 v2, 0x160
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080290
+
+    const/16 v2, 0x161
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803a6
+
+    const/16 v2, 0x162
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805ff
+
+    const/16 v2, 0x163
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080706
+
+    const/16 v2, 0x164
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806d8
+
+    const/16 v2, 0x165
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080141
+
+    const/16 v2, 0x166
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08053e
+
+    const/16 v2, 0x167
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080586
+
+    const/16 v2, 0x168
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806bb
+
+    const/16 v2, 0x169
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08055b
+
+    const/16 v2, 0x16a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080071
+
+    const/16 v2, 0x16b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080093
+
+    const/16 v2, 0x16c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08022b
+
+    const/16 v2, 0x16d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080146
+
+    const/16 v2, 0x16e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080700
+
+    const/16 v2, 0x16f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080486
+
+    const/16 v2, 0x170
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08023e
+
+    const/16 v2, 0x171
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806ca
+
+    const/16 v2, 0x172
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080116
+
+    const/16 v2, 0x173
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802b0
+
+    const/16 v2, 0x174
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080250
+
+    const/16 v2, 0x175
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080371
+
+    const/16 v2, 0x176
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080474
+
+    const/16 v2, 0x177
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0801d0
+
+    const/16 v2, 0x178
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806d2
+
+    const/16 v2, 0x179
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08068d
+
+    const/16 v2, 0x17a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080565
+
+    const/16 v2, 0x17b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803aa
+
+    const/16 v2, 0x17c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08007d
+
+    const/16 v2, 0x17d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08041c
+
+    const/16 v2, 0x17e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806a0
+
+    const/16 v2, 0x17f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080396
+
+    const/16 v2, 0x180
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08047a
+
+    const/16 v2, 0x181
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08057b
+
+    const/16 v2, 0x182
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0c0010
+
+    const/4 v2, 0x6
+
+    new-array v2, v2, [Ljava/lang/String;
+
+    const-string v3, "\u0ca1\u0cc0\u0cab\u0cbe\u0cb2\u0ccd\u0c9f\u0ccd"
+
+    aput-object v3, v2, v5
+
+    const-string v3, "\u0cb9\u0cb3\u0ca6\u0cbf"
+
+    aput-object v3, v2, v6
+
+    const-string v3, "\u0cb9\u0cb8\u0cbf\u0cb0\u0cc1"
+
+    aput-object v3, v2, v7
+
+    const-string v3, "\u0c95\u0cc6\u0c82\u0caa\u0cc1"
+
+    aput-object v3, v2, v8
+
+    const-string v3, "\u0c97\u0cc1\u0cb2\u0cbe\u0cac\u0cbf"
+
+    aput-object v3, v2, v9
+
+    const/4 v3, 0x5
+
+    const-string v4, "\u0c95\u0caa\u0ccd\u0caa\u0cc1"
+
+    aput-object v4, v2, v3
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080684
+
+    const/16 v2, 0x184
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803cb
+
+    const/16 v2, 0x185
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08003f
+
+    const/16 v2, 0x186
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805d2
+
+    const/16 v2, 0x187
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080590
+
+    const/16 v2, 0x188
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08013f
+
+    const/16 v2, 0x189
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806d7
+
+    const/16 v2, 0x18a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0801b0
+
+    const/16 v2, 0x18b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080324
+
+    const/16 v2, 0x18c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08012c
+
+    const/16 v2, 0x18d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080529
+
+    const/16 v2, 0x18e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08029f
+
+    const/16 v2, 0x18f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080096
+
+    const/16 v2, 0x190
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080228
+
+    const/16 v2, 0x191
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080450
+
+    const/16 v2, 0x192
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802c9
+
+    const/16 v2, 0x193
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806e0
+
+    const/16 v2, 0x194
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0801fa
+
+    const/16 v2, 0x195
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08039f
+
+    const/16 v2, 0x196
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080386
+
+    const/16 v2, 0x197
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08019c
+
+    const/16 v2, 0x198
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080713
+
+    const/16 v2, 0x199
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080167
+
+    const/16 v2, 0x19a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802af
+
+    const/16 v2, 0x19b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080321
+
+    const/16 v2, 0x19c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08048f
+
+    const/16 v2, 0x19d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800c3
+
+    const/16 v2, 0x19e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080680
+
+    const/16 v2, 0x19f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080639
+
+    const/16 v2, 0x1a0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802c6
+
+    const/16 v2, 0x1a1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080655
+
+    const/16 v2, 0x1a2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080604
+
+    const/16 v2, 0x1a3
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800fe
+
+    const/16 v2, 0x1a4
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080670
+
+    const/16 v2, 0x1a5
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080740
+
+    const/16 v2, 0x1a6
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080322
+
+    const/16 v2, 0x1a7
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080395
+
+    const/16 v2, 0x1a8
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080133
+
+    const/16 v2, 0x1a9
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803a2
+
+    const/16 v2, 0x1aa
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080552
+
+    const/16 v2, 0x1ab
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0804a7
+
+    const/16 v2, 0x1ac
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080340
+
+    const/16 v2, 0x1ad
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802fe
+
+    const/16 v2, 0x1ae
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080287
+
+    const/16 v2, 0x1af
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080100
+
+    const/16 v2, 0x1b0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080574
+
+    const/16 v2, 0x1b1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08022a
+
+    const/16 v2, 0x1b2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080243
+
+    const/16 v2, 0x1b3
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080549
+
+    const/16 v2, 0x1b4
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802ab
+
+    const/16 v2, 0x1b5
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080329
+
+    const/16 v2, 0x1b6
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08007a
+
+    const/16 v2, 0x1b7
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08016b
+
+    const/16 v2, 0x1b8
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08037f
+
+    const/16 v2, 0x1b9
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080345
+
+    const/16 v2, 0x1ba
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080509
+
+    const/16 v2, 0x1bb
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806a6
+
+    const/16 v2, 0x1bc
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802b9
+
+    const/16 v2, 0x1bd
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08034a
+
+    const/16 v2, 0x1be
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080174
+
+    const/16 v2, 0x1bf
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080397
+
+    const/16 v2, 0x1c0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08031c
+
+    const/16 v2, 0x1c1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080366
+
+    const/16 v2, 0x1c2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080455
+
+    const/16 v2, 0x1c3
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805c6
+
+    const/16 v2, 0x1c4
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080693
+
+    const/16 v2, 0x1c5
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802da
+
+    const/16 v2, 0x1c6
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080470
+
+    const/16 v2, 0x1c7
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800fc
+
+    const/16 v2, 0x1c8
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08039a
+
+    const/16 v2, 0x1c9
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08041f
+
+    const/16 v2, 0x1ca
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080618
+
+    const/16 v2, 0x1cb
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805af
+
+    const/16 v2, 0x1cc
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806dd
+
+    const/16 v2, 0x1cd
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806bc
+
+    const/16 v2, 0x1ce
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805da
+
+    const/16 v2, 0x1cf
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08065a
+
+    const/16 v2, 0x1d0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802f1
+
+    const/16 v2, 0x1d1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806a2
+
+    const/16 v2, 0x1d2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080155
+
+    const/16 v2, 0x1d3
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805db
+
+    const/16 v2, 0x1d4
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0804a6
+
+    const/16 v2, 0x1d5
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805b8
+
+    const/16 v2, 0x1d6
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080438
+
+    const/16 v2, 0x1d7
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080293
+
+    const/16 v2, 0x1d8
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805cb
+
+    const/16 v2, 0x1d9
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0c0007
+
+    const/4 v2, 0x5
+
+    new-array v2, v2, [Ljava/lang/String;
+
+    const-string v3, "\u0cab\u0cc7\u0cb5\u0cb0\u0cbf\u0c9f\u0ccd"
+
+    aput-object v3, v2, v5
+
+    const-string v3, "\u0cb8\u0ccd\u0ca5\u0cb3\u0cc0\u0caf"
+
+    aput-object v3, v2, v6
+
+    const-string v3, "\u0cb2\u0cc8\u0cac\u0ccd\u0cb0\u0cc6\u0cb0\u0cbf"
+
+    aput-object v3, v2, v7
+
+    const-string v3, "\u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd"
+
+    aput-object v3, v2, v8
+
+    const-string v3, "\u0c9f\u0cc2\u0cb2\u0ccd\u0cb8\u0ccd"
+
+    aput-object v3, v2, v9
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0804f8
+
+    const/16 v2, 0x1db
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08049b
+
+    const/16 v2, 0x1dc
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08072a
+
+    const/16 v2, 0x1dd
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080528
+
+    const/16 v2, 0x1de
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0804f9
+
+    const/16 v2, 0x1df
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080478
+
+    const/16 v2, 0x1e0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080129
+
+    const/16 v2, 0x1e1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080641
+
+    const/16 v2, 0x1e2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0804a8
+
+    const/16 v2, 0x1e3
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080647
+
+    const/16 v2, 0x1e4
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805a8
+
+    const/16 v2, 0x1e5
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080409
+
+    const/16 v2, 0x1e6
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080491
+
+    const/16 v2, 0x1e7
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08028c
+
+    const/16 v2, 0x1e8
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080258
+
+    const/16 v2, 0x1e9
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800c8
+
+    const/16 v2, 0x1ea
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080690
+
+    const/16 v2, 0x1eb
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800b0
+
+    const/16 v2, 0x1ec
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080257
+
+    const/16 v2, 0x1ed
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080271
+
+    const/16 v2, 0x1ee
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080328
+
+    const/16 v2, 0x1ef
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08040d
+
+    const/16 v2, 0x1f0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08025f
+
+    const/16 v2, 0x1f1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08031d
+
+    const/16 v2, 0x1f2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080696
+
+    const/16 v2, 0x1f3
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08016e
+
+    const/16 v2, 0x1f4
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080394
+
+    const/16 v2, 0x1f5
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080469
+
+    const/16 v2, 0x1f6
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08070f
+
+    const/16 v2, 0x1f7
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080525
+
+    const/16 v2, 0x1f8
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802f2
+
+    const/16 v2, 0x1f9
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08024c
+
+    const/16 v2, 0x1fa
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080458
+
+    const/16 v2, 0x1fb
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080669
+
+    const/16 v2, 0x1fc
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800f3
+
+    const/16 v2, 0x1fd
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802ed
+
+    const/16 v2, 0x1fe
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080338
+
+    const/16 v2, 0x1ff
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08009c
+
+    const/16 v2, 0x200
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806ef
+
+    const/16 v2, 0x201
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080584
+
+    const/16 v2, 0x202
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080147
+
+    const/16 v2, 0x203
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080521
+
+    const/16 v2, 0x204
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080658
+
+    const/16 v2, 0x205
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0801af
+
+    const/16 v2, 0x206
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080248
+
+    const/16 v2, 0x207
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080069
+
+    const/16 v2, 0x208
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080084
+
+    const/16 v2, 0x209
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08032e
+
+    const/16 v2, 0x20a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08067f
+
+    const/16 v2, 0x20b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806ac
+
+    const/16 v2, 0x20c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800a3
+
+    const/16 v2, 0x20d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802c8
+
+    const/16 v2, 0x20e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08026b
+
+    const/16 v2, 0x20f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08025d
+
+    const/16 v2, 0x210
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08031b
+
+    const/16 v2, 0x211
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080445
+
+    const/16 v2, 0x212
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805f6
+
+    const/16 v2, 0x213
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08001f
+
+    const/16 v2, 0x214
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080186
+
+    const/16 v2, 0x215
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080172
+
+    const/16 v2, 0x216
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080629
+
+    const/16 v2, 0x217
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08046d
+
+    const/16 v2, 0x218
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08074a
+
+    const/16 v2, 0x219
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08023b
+
+    const/16 v2, 0x21a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802d6
+
+    const/16 v2, 0x21b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080646
+
+    const/16 v2, 0x21c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806ed
+
+    const/16 v2, 0x21d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08021f
+
+    const/16 v2, 0x21e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080390
+
+    const/16 v2, 0x21f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08024f
+
+    const/16 v2, 0x220
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080223
+
+    const/16 v2, 0x221
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806da
+
+    const/16 v2, 0x222
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08069c
+
+    const/16 v2, 0x223
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080288
+
+    const/16 v2, 0x224
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080425
+
+    const/16 v2, 0x225
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806ee
+
+    const/16 v2, 0x226
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802fd
+
+    const/16 v2, 0x227
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080074
+
+    const/16 v2, 0x228
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805b4
+
+    const/16 v2, 0x229
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080073
+
+    const/16 v2, 0x22a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08045d
+
+    const/16 v2, 0x22b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080339
+
+    const/16 v2, 0x22c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080430
+
+    const/16 v2, 0x22d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080150
+
+    const/16 v2, 0x22e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080559
+
+    const/16 v2, 0x22f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080482
+
+    const/16 v2, 0x230
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08022d
+
+    const/16 v2, 0x231
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0804f7
+
+    const/16 v2, 0x232
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08063a
+
+    const/16 v2, 0x233
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803a8
+
+    const/16 v2, 0x234
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806d9
+
+    const/16 v2, 0x235
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802f4
+
+    const/16 v2, 0x236
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080101
+
+    const/16 v2, 0x237
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08004b
+
+    const/16 v2, 0x238
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080066
+
+    const/16 v2, 0x239
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080083
+
+    const/16 v2, 0x23a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803ca
+
+    const/16 v2, 0x23b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08025c
+
+    const/16 v2, 0x23c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080733
+
+    const/16 v2, 0x23d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08041d
+
+    const/16 v2, 0x23e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080385
+
+    const/16 v2, 0x23f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080534
+
+    const/16 v2, 0x240
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08072b
+
+    const/16 v2, 0x241
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802a3
+
+    const/16 v2, 0x242
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08012f
+
+    const/16 v2, 0x243
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080327
+
+    const/16 v2, 0x244
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0804a5
+
+    const/16 v2, 0x245
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08038c
+
+    const/16 v2, 0x246
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08070e
+
+    const/16 v2, 0x247
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080569
+
+    const/16 v2, 0x248
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0804a0
+
+    const/16 v2, 0x249
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080459
+
+    const/16 v2, 0x24a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803eb
+
+    const/16 v2, 0x24b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08011f
+
+    const/16 v2, 0x24c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080414
+
+    const/16 v2, 0x24d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08001b
+
+    const/16 v2, 0x24e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802d1
+
+    const/16 v2, 0x24f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805a4
+
+    const/16 v2, 0x250
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806b2
+
+    const/16 v2, 0x251
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805bd
+
+    const/16 v2, 0x252
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08051d
+
+    const/16 v2, 0x253
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805fe
+
+    const/16 v2, 0x254
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080640
+
+    const/16 v2, 0x255
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080467
+
+    const/16 v2, 0x256
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805cf
+
+    const/16 v2, 0x257
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08063f
+
+    const/16 v2, 0x258
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802ac
+
+    const/16 v2, 0x259
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080401
+
+    const/16 v2, 0x25a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805fb
+
+    const/16 v2, 0x25b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080524
+
+    const/16 v2, 0x25c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08069b
+
+    const/16 v2, 0x25d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800a1
+
+    const/16 v2, 0x25e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802a4
+
+    const/16 v2, 0x25f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08059d
+
+    const/16 v2, 0x260
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080679
+
+    const/16 v2, 0x261
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806e7
+
+    const/16 v2, 0x262
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806ec
+
+    const/16 v2, 0x263
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080707
+
+    const/16 v2, 0x264
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080142
+
+    const/16 v2, 0x265
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080080
+
+    const/16 v2, 0x266
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080413
+
+    const/16 v2, 0x267
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080687
+
+    const/16 v2, 0x268
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080154
+
+    const/16 v2, 0x269
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08019b
+
+    const/16 v2, 0x26a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806aa
+
+    const/16 v2, 0x26b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803d7
+
+    const/16 v2, 0x26c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806e8
+
+    const/16 v2, 0x26d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08072f
+
+    const/16 v2, 0x26e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080523
+
+    const/16 v2, 0x26f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806cf
+
+    const/16 v2, 0x270
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08027e
+
+    const/16 v2, 0x271
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080723
+
+    const/16 v2, 0x272
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080173
+
+    const/16 v2, 0x273
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805a5
+
+    const/16 v2, 0x274
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802ba
+
+    const/16 v2, 0x275
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803f6
+
+    const/16 v2, 0x276
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08065d
+
+    const/16 v2, 0x277
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805d6
+
+    const/16 v2, 0x278
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0804f5
+
+    const/16 v2, 0x279
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0803ff
+
+    const/16 v2, 0x27a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080159
+
+    const/16 v2, 0x27b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080600
+
+    const/16 v2, 0x27c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08038a
+
+    const/16 v2, 0x27d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080548
+
+    const/16 v2, 0x27e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080420
+
+    const/16 v2, 0x27f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805fc
+
+    const/16 v2, 0x280
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805dc
+
+    const/16 v2, 0x281
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080709
+
+    const/16 v2, 0x282
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08041e
+
+    const/16 v2, 0x283
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08070c
+
+    const/16 v2, 0x284
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0c0011
+
+    const/16 v2, 0x9
+
+    new-array v2, v2, [Ljava/lang/String;
+
+    const-string v3, "\u0ca6\u0cca\u0ca1\u0ccd\u0ca1 \u0c90\u0c95\u0cbe\u0ca8\u0ccd"
+
+    aput-object v3, v2, v5
+
+    const-string v3, "\u0cae\u0ca7\u0ccd\u0caf\u0cae \u0c90\u0c95\u0cbe\u0ca8\u0ccd"
+
+    aput-object v3, v2, v6
+
+    const-string v3, "\u0cb8\u0ca3\u0ccd\u0ca3 \u0c90\u0c95\u0cbe\u0ca8\u0ccd"
+
+    aput-object v3, v2, v7
+
+    const-string v3, "\u0ca6\u0cca\u0ca1\u0ccd\u0ca1 \u0caa\u0c9f\u0ccd\u0c9f\u0cbf"
+
+    aput-object v3, v2, v8
+
+    const-string v3, "\u0cae\u0ca7\u0ccd\u0caf\u0cae \u0caa\u0c9f\u0ccd\u0c9f\u0cbf"
+
+    aput-object v3, v2, v9
+
+    const/4 v3, 0x5
+
+    const-string v4, "\u0cb8\u0ca3\u0ccd\u0ca3 \u0caa\u0c9f\u0ccd\u0c9f\u0cbf"
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x6
+
+    const-string v4, "\u0cb5\u0cbf\u0cb6\u0cbe\u0cb2\u0cb5\u0cbe\u0ca6  \u0cb5\u0cbf\u0cb5\u0cb0"
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x7
+
+    const-string v4, "\u0cae\u0ca7\u0ccd\u0caf\u0cae \u0cb5\u0cbf\u0cb5\u0cb0"
+
+    aput-object v4, v2, v3
+
+    const/16 v3, 0x8
+
+    const-string v4, "\u0cb8\u0ca3\u0ccd\u0ca3 \u0cb5\u0cbf\u0cb5\u0cb0"
+
+    aput-object v4, v2, v3
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805ce
+
+    const/16 v2, 0x286
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800af
+
+    const/16 v2, 0x287
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802f8
+
+    const/16 v2, 0x288
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080229
+
+    const/16 v2, 0x289
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802f6
+
+    const/16 v2, 0x28a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0802f7
+
+    const/16 v2, 0x28b
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080517
+
+    const/16 v2, 0x28c
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080003
+
+    const/16 v2, 0x28d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080725
+
+    const/16 v2, 0x28e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806d0
+
+    const/16 v2, 0x28f
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805b1
+
+    const/16 v2, 0x290
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080242
 
     const/16 v2, 0x291
 
@@ -6827,7 +6861,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0040
+    const v1, 0x7f0803ac
 
     const/16 v2, 0x292
 
@@ -6837,7 +6871,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b004a
+    const v1, 0x7f08066e
 
     const/16 v2, 0x293
 
@@ -6847,7 +6881,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00c9
+    const v1, 0x7f0806dc
 
     const/16 v2, 0x294
 
@@ -6857,7 +6891,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02b8
+    const v1, 0x7f0800a5
 
     const/16 v2, 0x295
 
@@ -6867,7 +6901,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0496
+    const v1, 0x7f08044e
 
     const/16 v2, 0x296
 
@@ -6877,7 +6911,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0395
+    const v1, 0x7f08045a
 
     const/16 v2, 0x297
 
@@ -6887,7 +6921,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0252
+    const v1, 0x7f0800fd
 
     const/16 v2, 0x298
 
@@ -6897,7 +6931,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01d4
+    const v1, 0x7f08049d
 
     const/16 v2, 0x299
 
@@ -6907,7 +6941,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02c1
+    const v1, 0x7f08068b
 
     const/16 v2, 0x29a
 
@@ -6917,7 +6951,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03d6
+    const v1, 0x7f0803df
 
     const/16 v2, 0x29b
 
@@ -6927,7 +6961,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0178
+    const v1, 0x7f080230
 
     const/16 v2, 0x29c
 
@@ -6937,7 +6971,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0499
+    const v1, 0x7f08057a
 
     const/16 v2, 0x29d
 
@@ -6947,7 +6981,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b049a
+    const v1, 0x7f080451
 
     const/16 v2, 0x29e
 
@@ -6957,7 +6991,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b018b
+    const v1, 0x7f0806b1
 
     const/16 v2, 0x29f
 
@@ -6967,7 +7001,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01bd
+    const v1, 0x7f080232
 
     const/16 v2, 0x2a0
 
@@ -6977,7 +7011,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02ab
+    const v1, 0x7f0803f8
 
     const/16 v2, 0x2a1
 
@@ -6987,7 +7021,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00e9
+    const v1, 0x7f0803a3
 
     const/16 v2, 0x2a2
 
@@ -6997,7 +7031,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03a8
+    const v1, 0x7f080683
 
     const/16 v2, 0x2a3
 
@@ -7007,7 +7041,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b010e
+    const v1, 0x7f0800ab
 
     const/16 v2, 0x2a4
 
@@ -7017,7 +7051,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01a3
+    const v1, 0x7f0805f4
 
     const/16 v2, 0x2a5
 
@@ -7027,7 +7061,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b027f
+    const v1, 0x7f08064f
 
     const/16 v2, 0x2a6
 
@@ -7037,7 +7071,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0412
+    const v1, 0x7f080117
 
     const/16 v2, 0x2a7
 
@@ -7047,7 +7081,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0268
+    const v1, 0x7f080221
 
     const/16 v2, 0x2a8
 
@@ -7057,7 +7091,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02d5
+    const v1, 0x7f080575
 
     const/16 v2, 0x2a9
 
@@ -7067,7 +7101,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0467
+    const v1, 0x7f0806f3
 
     const/16 v2, 0x2aa
 
@@ -7077,7 +7111,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0099
+    const v1, 0x7f0805b5
 
     const/16 v2, 0x2ab
 
@@ -7087,7 +7121,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b045e
+    const v1, 0x7f08011d
 
     const/16 v2, 0x2ac
 
@@ -7097,7 +7131,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0160
+    const v1, 0x7f0805bb
 
     const/16 v2, 0x2ad
 
@@ -7107,7 +7141,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b040a
+    const v1, 0x7f08029a
 
     const/16 v2, 0x2ae
 
@@ -7117,7 +7151,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03b7
+    const v1, 0x7f0805ab
 
     const/16 v2, 0x2af
 
@@ -7127,7 +7161,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03cd
+    const v1, 0x7f0805bc
 
     const/16 v2, 0x2b0
 
@@ -7137,7 +7171,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b029e
+    const v1, 0x7f080488
 
     const/16 v2, 0x2b1
 
@@ -7147,7 +7181,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b018f
+    const v1, 0x7f080175
 
     const/16 v2, 0x2b2
 
@@ -7157,7 +7191,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0185
+    const v1, 0x7f08068c
 
     const/16 v2, 0x2b3
 
@@ -7167,7 +7201,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02ae
+    const v1, 0x7f0806c6
 
     const/16 v2, 0x2b4
 
@@ -7177,7 +7211,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b030e
+    const v1, 0x7f080087
 
     const/16 v2, 0x2b5
 
@@ -7187,7 +7221,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0152
+    const v1, 0x7f08064d
 
     const/16 v2, 0x2b6
 
@@ -7197,7 +7231,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b004e
+    const v1, 0x7f08066d
 
     const/16 v2, 0x2b7
 
@@ -7207,7 +7241,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b008c
+    const v1, 0x7f08023c
 
     const/16 v2, 0x2b8
 
@@ -7217,7 +7251,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02b3
+    const v1, 0x7f080666
 
     const/16 v2, 0x2b9
 
@@ -7227,7 +7261,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00ba
+    const v1, 0x7f080169
 
     const/16 v2, 0x2ba
 
@@ -7237,7 +7271,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03f8
+    const v1, 0x7f0801f5
 
     const/16 v2, 0x2bb
 
@@ -7247,7 +7281,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02a7
+    const v1, 0x7f080094
 
     const/16 v2, 0x2bc
 
@@ -7257,7 +7291,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02eb
+    const v1, 0x7f080434
 
     const/16 v2, 0x2bd
 
@@ -7267,7 +7301,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0250
+    const v1, 0x7f08042f
 
     const/16 v2, 0x2be
 
@@ -7277,7 +7311,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01b7
+    const v1, 0x7f0806e1
 
     const/16 v2, 0x2bf
 
@@ -7287,7 +7321,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02e7
+    const v1, 0x7f080712
 
     const/16 v2, 0x2c0
 
@@ -7297,7 +7331,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01d3
+    const v1, 0x7f080391
 
     const/16 v2, 0x2c1
 
@@ -7307,7 +7341,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0388
+    const v1, 0x7f080730
 
     const/16 v2, 0x2c2
 
@@ -7317,7 +7351,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03f0
+    const v1, 0x7f0802c2
 
     const/16 v2, 0x2c3
 
@@ -7327,7 +7361,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02f7
+    const v1, 0x7f0805e8
 
     const/16 v2, 0x2c4
 
@@ -7337,7 +7371,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0139
+    const v1, 0x7f08024d
 
     const/16 v2, 0x2c5
 
@@ -7347,7 +7381,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02a3
+    const v1, 0x7f080612
 
     const/16 v2, 0x2c6
 
@@ -7357,7 +7391,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02e1
+    const v1, 0x7f080078
 
     const/16 v2, 0x2c7
 
@@ -7367,7 +7401,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02f9
+    const v1, 0x7f080410
 
     const/16 v2, 0x2c8
 
@@ -7377,53 +7411,17 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f070008
+    const v1, 0x7f080296
 
-    const/16 v2, 0x8
+    const/16 v2, 0x2c9
 
-    new-array v2, v2, [Ljava/lang/String;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-string v3, "\ubaa8\ub450"
-
-    aput-object v3, v2, v5
-
-    const-string v3, "\uc624\ub298"
-
-    aput-object v3, v2, v6
-
-    const-string v3, "\uc5b4\uc81c"
-
-    aput-object v3, v2, v7
-
-    const-string v3, "\uae08\uc8fc"
-
-    aput-object v3, v2, v8
-
-    const-string v3, "\uae08\uc6d4"
-
-    aput-object v3, v2, v9
-
-    const/4 v3, 0x5
-
-    const-string v4, "\uae08\ub144"
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x6
-
-    const-string v4, "> 1 \ub144"
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x7
-
-    const-string v4, "\uc785\ub825"
-
-    aput-object v4, v2, v3
+    move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0075
+    const v1, 0x7f0805d8
 
     const/16 v2, 0x2ca
 
@@ -7433,7 +7431,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b020f
+    const v1, 0x7f08007c
 
     const/16 v2, 0x2cb
 
@@ -7443,7 +7441,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00e8
+    const v1, 0x7f08043e
 
     const/16 v2, 0x2cc
 
@@ -7453,7 +7451,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0400
+    const v1, 0x7f08051f
 
     const/16 v2, 0x2cd
 
@@ -7463,7 +7461,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0061
+    const v1, 0x7f080104
 
     const/16 v2, 0x2ce
 
@@ -7473,7 +7471,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b031f
+    const v1, 0x7f080005
 
     const/16 v2, 0x2cf
 
@@ -7483,7 +7481,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0215
+    const v1, 0x7f0805c1
 
     const/16 v2, 0x2d0
 
@@ -7493,7 +7491,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0015
+    const v1, 0x7f0803cc
 
     const/16 v2, 0x2d1
 
@@ -7503,7 +7501,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03a6
+    const v1, 0x7f080415
 
     const/16 v2, 0x2d2
 
@@ -7513,7 +7511,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b042a
+    const v1, 0x7f08028a
 
     const/16 v2, 0x2d3
 
@@ -7523,7 +7521,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0085
+    const v1, 0x7f0806b8
 
     const/16 v2, 0x2d4
 
@@ -7533,7 +7531,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01b2
+    const v1, 0x7f08053d
 
     const/16 v2, 0x2d5
 
@@ -7543,7 +7541,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b041b
+    const v1, 0x7f080542
 
     const/16 v2, 0x2d6
 
@@ -7553,7 +7551,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0299
+    const v1, 0x7f0805a0
 
     const/16 v2, 0x2d7
 
@@ -7563,7 +7561,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00e7
+    const v1, 0x7f08053c
 
     const/16 v2, 0x2d8
 
@@ -7573,7 +7571,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b014c
+    const v1, 0x7f0806eb
 
     const/16 v2, 0x2d9
 
@@ -7583,7 +7581,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b021e
+    const v1, 0x7f080382
 
     const/16 v2, 0x2da
 
@@ -7593,7 +7591,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b001d
+    const v1, 0x7f080403
 
     const/16 v2, 0x2db
 
@@ -7603,7 +7601,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02f3
+    const v1, 0x7f080456
 
     const/16 v2, 0x2dc
 
@@ -7613,7 +7611,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0491
+    const v1, 0x7f0802c4
 
     const/16 v2, 0x2dd
 
@@ -7623,7 +7621,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0089
+    const v1, 0x7f080466
 
     const/16 v2, 0x2de
 
@@ -7633,7 +7631,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01c0
+    const v1, 0x7f08045c
 
     const/16 v2, 0x2df
 
@@ -7643,7 +7641,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0083
+    const v1, 0x7f08066f
 
     const/16 v2, 0x2e0
 
@@ -7653,7 +7651,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0026
+    const v1, 0x7f0802c5
 
     const/16 v2, 0x2e1
 
@@ -7663,7 +7661,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0371
+    const v1, 0x7f0805ca
 
     const/16 v2, 0x2e2
 
@@ -7673,7 +7671,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b04ae
+    const v1, 0x7f08064c
 
     const/16 v2, 0x2e3
 
@@ -7683,7 +7681,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03d1
+    const v1, 0x7f080377
 
     const/16 v2, 0x2e4
 
@@ -7693,7 +7691,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00cc
+    const v1, 0x7f0805d9
 
     const/16 v2, 0x2e5
 
@@ -7703,7 +7701,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0352
+    const v1, 0x7f0805c2
 
     const/16 v2, 0x2e6
 
@@ -7713,7 +7711,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b014f
+    const v1, 0x7f080115
 
     const/16 v2, 0x2e7
 
@@ -7723,7 +7721,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b013d
+    const v1, 0x7f080665
 
     const/16 v2, 0x2e8
 
@@ -7733,7 +7731,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b045c
+    const v1, 0x7f08048e
 
     const/16 v2, 0x2e9
 
@@ -7743,7 +7741,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b037c
+    const v1, 0x7f0803d6
 
     const/16 v2, 0x2ea
 
@@ -7753,7 +7751,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01b5
+    const v1, 0x7f080134
 
     const/16 v2, 0x2eb
 
@@ -7763,7 +7761,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b039e
+    const v1, 0x7f0803e4
 
     const/16 v2, 0x2ec
 
@@ -7773,7 +7771,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b014d
+    const v1, 0x7f0803e5
 
     const/16 v2, 0x2ed
 
@@ -7783,7 +7781,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0391
+    const v1, 0x7f08067d
 
     const/16 v2, 0x2ee
 
@@ -7793,7 +7791,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b030a
+    const v1, 0x7f080598
 
     const/16 v2, 0x2ef
 
@@ -7803,7 +7801,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0447
+    const v1, 0x7f080668
 
     const/16 v2, 0x2f0
 
@@ -7813,7 +7811,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b033e
+    const v1, 0x7f080337
 
     const/16 v2, 0x2f1
 
@@ -7823,7 +7821,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00fa
+    const v1, 0x7f08059c
 
     const/16 v2, 0x2f2
 
@@ -7833,7 +7831,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02b5
+    const v1, 0x7f08061b
 
     const/16 v2, 0x2f3
 
@@ -7843,7 +7841,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01f6
+    const v1, 0x7f080282
 
     const/16 v2, 0x2f4
 
@@ -7853,7 +7851,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0288
+    const v1, 0x7f0804f2
 
     const/16 v2, 0x2f5
 
@@ -7863,7 +7861,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b046a
+    const v1, 0x7f080165
 
     const/16 v2, 0x2f6
 
@@ -7873,7 +7871,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03df
+    const v1, 0x7f08053a
 
     const/16 v2, 0x2f7
 
@@ -7883,7 +7881,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03c1
+    const v1, 0x7f080591
 
     const/16 v2, 0x2f8
 
@@ -7893,7 +7891,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b004c
+    const v1, 0x7f080531
 
     const/16 v2, 0x2f9
 
@@ -7903,7 +7901,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0357
+    const v1, 0x7f08043c
 
     const/16 v2, 0x2fa
 
@@ -7913,7 +7911,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0303
+    const v1, 0x7f080426
 
     const/16 v2, 0x2fb
 
@@ -7923,17 +7921,65 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00d1
+    const v1, 0x7f0c0015
 
-    const/16 v2, 0x2fc
+    const/16 v2, 0xa
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-array v2, v2, [Ljava/lang/String;
 
-    move-result-object v2
+    const-string v3, ""
+
+    aput-object v3, v2, v5
+
+    const-string v3, "\u0cb8\u0ccd\u0c95\u0ccd\u0caf\u0cbe\u0ca8\u0ccd\u200d\u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026"
+
+    aput-object v3, v2, v6
+
+    const-string v3, "\u0c87\u0ca6\u0c95\u0ccd\u0c95\u0cc6 \u0cb8\u0c82\u0caa\u0cb0\u0ccd\u0c95 \u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6%1$s\u2026"
+
+    aput-object v3, v2, v7
+
+    const-string v3, "\u0c87\u0ca6\u0cb0 \u0c9c\u0cca\u0ca4\u0cc6\u0c97\u0cc6 \u0ca6\u0cc3\u0ca2\u0cc0\u0c95\u0cb0\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6 %1$s\u2026"
+
+    aput-object v3, v2, v8
+
+    const-string v3, "IP \u0cb5\u0cbf\u0cb3\u0cbe\u0cb8\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0c87\u0cb2\u0ccd\u0cb2\u0cbf\u0c82\u0ca6 \u0ca4\u0cc6\u0c97\u0cc6\u0ca6\u0cc1\u0c95\u0cca\u0cb3\u0ccd\u0cb3\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6 %1$s\u2026"
+
+    aput-object v3, v2, v9
+
+    const/4 v3, 0x5
+
+    const-string v4, "\u0c87\u0ca6\u0c95\u0ccd\u0c95\u0cc6 \u0cb8\u0c82\u0caa\u0cb0\u0ccd\u0c95\u0c97\u0cca\u0c82\u0ca1\u0cbf\u0ca6\u0cc6 %1$s"
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x6
+
+    const-string v4, "\u0c85\u0cae\u0cbe\u0ca8\u0ca4\u0cc1\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6"
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x7
+
+    const-string v4, "\u0c87\u0cb2\u0ccd\u0cb2\u0cbf\u0c82\u0ca6 \u0cb8\u0c82\u0caa\u0cb0\u0ccd\u0c95 \u0c95\u0ca1\u0cbf\u0ca4\u0c97\u0cca\u0cb3\u0cbe\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6 %1$s\u2026"
+
+    aput-object v4, v2, v3
+
+    const/16 v3, 0x8
+
+    const-string v4, "\u0cb8\u0c82\u0caa\u0cb0\u0ccd\u0c95 \u0c95\u0ca1\u0cbf\u0ca4\u0c97\u0cca\u0c82\u0ca1\u0cbf\u0ca6\u0cc6"
+
+    aput-object v4, v2, v3
+
+    const/16 v3, 0x9
+
+    const-string v4, "\u0cb5\u0cbf\u0cab\u0cb2"
+
+    aput-object v4, v2, v3
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02c3
+    const v1, 0x7f0803a9
 
     const/16 v2, 0x2fd
 
@@ -7943,7 +7989,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01e9
+    const v1, 0x7f0802c1
 
     const/16 v2, 0x2fe
 
@@ -7953,7 +7999,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00df
+    const v1, 0x7f0805b7
 
     const/16 v2, 0x2ff
 
@@ -7963,7 +8009,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0201
+    const v1, 0x7f080502
 
     const/16 v2, 0x300
 
@@ -7973,7 +8019,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0145
+    const v1, 0x7f080454
 
     const/16 v2, 0x301
 
@@ -7983,7 +8029,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0430
+    const v1, 0x7f080439
 
     const/16 v2, 0x302
 
@@ -7993,7 +8039,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01c5
+    const v1, 0x7f0805d5
 
     const/16 v2, 0x303
 
@@ -8003,7 +8049,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0439
+    const v1, 0x7f08028e
 
     const/16 v2, 0x304
 
@@ -8013,7 +8059,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b037b
+    const v1, 0x7f0801b5
 
     const/16 v2, 0x305
 
@@ -8023,7 +8069,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0341
+    const v1, 0x7f08074c
 
     const/16 v2, 0x306
 
@@ -8033,7 +8079,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b006b
+    const v1, 0x7f0802ef
 
     const/16 v2, 0x307
 
@@ -8043,7 +8089,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b003f
+    const v1, 0x7f080498
 
     const/16 v2, 0x308
 
@@ -8053,7 +8099,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b030c
+    const v1, 0x7f08014e
 
     const/16 v2, 0x309
 
@@ -8063,7 +8109,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0331
+    const v1, 0x7f0801f1
 
     const/16 v2, 0x30a
 
@@ -8073,7 +8119,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0098
+    const v1, 0x7f080392
 
     const/16 v2, 0x30b
 
@@ -8083,7 +8129,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0100
+    const v1, 0x7f0803f3
 
     const/16 v2, 0x30c
 
@@ -8093,7 +8139,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0126
+    const v1, 0x7f080330
 
     const/16 v2, 0x30d
 
@@ -8103,7 +8149,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0476
+    const v1, 0x7f080255
 
     const/16 v2, 0x30e
 
@@ -8113,7 +8159,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03d2
+    const v1, 0x7f080504
 
     const/16 v2, 0x30f
 
@@ -8123,7 +8169,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0286
+    const v1, 0x7f08032b
 
     const/16 v2, 0x310
 
@@ -8133,7 +8179,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02a2
+    const v1, 0x7f080554
 
     const/16 v2, 0x311
 
@@ -8143,7 +8189,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0332
+    const v1, 0x7f0802f9
 
     const/16 v2, 0x312
 
@@ -8153,7 +8199,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b015c
+    const v1, 0x7f0802fa
 
     const/16 v2, 0x313
 
@@ -8163,7 +8209,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01b6
+    const v1, 0x7f080263
 
     const/16 v2, 0x314
 
@@ -8173,7 +8219,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0295
+    const v1, 0x7f080261
 
     const/16 v2, 0x315
 
@@ -8183,7 +8229,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02cd
+    const v1, 0x7f080746
 
     const/16 v2, 0x316
 
@@ -8193,7 +8239,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b043a
+    const v1, 0x7f080236
 
     const/16 v2, 0x317
 
@@ -8203,7 +8249,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b040c
+    const v1, 0x7f0803a4
 
     const/16 v2, 0x318
 
@@ -8213,7 +8259,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01d1
+    const v1, 0x7f0800a9
 
     const/16 v2, 0x319
 
@@ -8223,7 +8269,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0240
+    const v1, 0x7f08056b
 
     const/16 v2, 0x31a
 
@@ -8233,7 +8279,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01a7
+    const v1, 0x7f0800c1
 
     const/16 v2, 0x31b
 
@@ -8243,7 +8289,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b021b
+    const v1, 0x7f08022c
 
     const/16 v2, 0x31c
 
@@ -8253,7 +8299,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0393
+    const v1, 0x7f0806cd
 
     const/16 v2, 0x31d
 
@@ -8263,7 +8309,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0434
+    const v1, 0x7f080698
 
     const/16 v2, 0x31e
 
@@ -8273,7 +8319,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01f4
+    const v1, 0x7f080269
 
     const/16 v2, 0x31f
 
@@ -8283,7 +8329,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b030b
+    const v1, 0x7f080323
 
     const/16 v2, 0x320
 
@@ -8293,7 +8339,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0154
+    const v1, 0x7f080522
 
     const/16 v2, 0x321
 
@@ -8303,7 +8349,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0394
+    const v1, 0x7f0802cd
 
     const/16 v2, 0x322
 
@@ -8313,7 +8359,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0068
+    const v1, 0x7f08014a
 
     const/16 v2, 0x323
 
@@ -8323,7 +8369,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0016
+    const v1, 0x7f080738
 
     const/16 v2, 0x324
 
@@ -8333,7 +8379,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b048b
+    const v1, 0x7f080465
 
     const/16 v2, 0x325
 
@@ -8343,7 +8389,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02f4
+    const v1, 0x7f08068a
 
     const/16 v2, 0x326
 
@@ -8353,7 +8399,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01ac
+    const v1, 0x7f08065c
 
     const/16 v2, 0x327
 
@@ -8363,25 +8409,17 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f07000d
+    const v1, 0x7f08069f
 
-    new-array v2, v8, [Ljava/lang/String;
+    const/16 v2, 0x328
 
-    const-string v3, "DOS - CR/LF"
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    aput-object v3, v2, v5
-
-    const-string v3, "UNIX - LF"
-
-    aput-object v3, v2, v6
-
-    const-string v3, "MAC - CR"
-
-    aput-object v3, v2, v7
+    move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00e5
+    const v1, 0x7f080122
 
     const/16 v2, 0x329
 
@@ -8391,7 +8429,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00e4
+    const v1, 0x7f0804fc
 
     const/16 v2, 0x32a
 
@@ -8401,7 +8439,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01ec
+    const v1, 0x7f08028d
 
     const/16 v2, 0x32b
 
@@ -8411,7 +8449,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03b1
+    const v1, 0x7f080444
 
     const/16 v2, 0x32c
 
@@ -8421,7 +8459,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00ea
+    const v1, 0x7f080156
 
     const/16 v2, 0x32d
 
@@ -8431,7 +8469,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02d7
+    const v1, 0x7f0803a5
 
     const/16 v2, 0x32e
 
@@ -8441,7 +8479,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03c3
+    const v1, 0x7f08062c
 
     const/16 v2, 0x32f
 
@@ -8451,7 +8489,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03e9
+    const v1, 0x7f0802e7
 
     const/16 v2, 0x330
 
@@ -8461,7 +8499,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01fa
+    const v1, 0x7f08016d
 
     const/16 v2, 0x331
 
@@ -8471,7 +8509,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b032f
+    const v1, 0x7f080642
 
     const/16 v2, 0x332
 
@@ -8481,7 +8519,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0202
+    const v1, 0x7f0801b4
 
     const/16 v2, 0x333
 
@@ -8491,7 +8529,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01ce
+    const v1, 0x7f08070d
 
     const/16 v2, 0x334
 
@@ -8501,7 +8539,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0047
+    const v1, 0x7f0803a7
 
     const/16 v2, 0x335
 
@@ -8511,7 +8549,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0275
+    const v1, 0x7f080493
 
     const/16 v2, 0x336
 
@@ -8521,7 +8559,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0389
+    const v1, 0x7f080422
 
     const/16 v2, 0x337
 
@@ -8531,7 +8569,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0052
+    const v1, 0x7f0803da
 
     const/16 v2, 0x338
 
@@ -8541,7 +8579,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00a4
+    const v1, 0x7f080752
 
     const/16 v2, 0x339
 
@@ -8551,7 +8589,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b011e
+    const v1, 0x7f08064b
 
     const/16 v2, 0x33a
 
@@ -8561,7 +8599,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b037d
+    const v1, 0x7f0806e4
 
     const/16 v2, 0x33b
 
@@ -8571,7 +8609,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0328
+    const v1, 0x7f080068
 
     const/16 v2, 0x33c
 
@@ -8581,7 +8619,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01cd
+    const v1, 0x7f08012e
 
     const/16 v2, 0x33d
 
@@ -8591,7 +8629,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b045d
+    const v1, 0x7f080076
 
     const/16 v2, 0x33e
 
@@ -8601,7 +8639,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03fe
+    const v1, 0x7f08073e
 
     const/16 v2, 0x33f
 
@@ -8611,7 +8649,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b024f
+    const v1, 0x7f080583
 
     const/16 v2, 0x340
 
@@ -8621,7 +8659,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b012a
+    const v1, 0x7f080446
 
     const/16 v2, 0x341
 
@@ -8631,7 +8669,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0176
+    const v1, 0x7f080547
 
     const/16 v2, 0x342
 
@@ -8641,7 +8679,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0239
+    const v1, 0x7f0806b7
 
     const/16 v2, 0x343
 
@@ -8651,7 +8689,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00ab
+    const v1, 0x7f08040a
 
     const/16 v2, 0x344
 
@@ -8661,7 +8699,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03e7
+    const v1, 0x7f080061
 
     const/16 v2, 0x345
 
@@ -8671,7 +8709,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0051
+    const v1, 0x7f08062d
 
     const/16 v2, 0x346
 
@@ -8681,7 +8719,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b045b
+    const v1, 0x7f080711
 
     const/16 v2, 0x347
 
@@ -8691,7 +8729,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00da
+    const v1, 0x7f080535
 
     const/16 v2, 0x348
 
@@ -8701,7 +8739,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0245
+    const v1, 0x7f080399
 
     const/16 v2, 0x349
 
@@ -8711,7 +8749,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03cc
+    const v1, 0x7f08073b
 
     const/16 v2, 0x34a
 
@@ -8721,7 +8759,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0065
+    const v1, 0x7f0806ba
 
     const/16 v2, 0x34b
 
@@ -8731,7 +8769,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b018a
+    const v1, 0x7f0803f4
 
     const/16 v2, 0x34c
 
@@ -8741,7 +8779,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01b1
+    const v1, 0x7f08059f
 
     const/16 v2, 0x34d
 
@@ -8751,7 +8789,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0408
+    const v1, 0x7f080715
 
     const/16 v2, 0x34e
 
@@ -8761,7 +8799,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b014e
+    const v1, 0x7f0800aa
 
     const/16 v2, 0x34f
 
@@ -8771,7 +8809,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01d8
+    const v1, 0x7f0804a1
 
     const/16 v2, 0x350
 
@@ -8781,7 +8819,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0058
+    const v1, 0x7f0802fc
 
     const/16 v2, 0x351
 
@@ -8791,7 +8829,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b044f
+    const v1, 0x7f0803dd
 
     const/16 v2, 0x352
 
@@ -8801,7 +8839,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b007a
+    const v1, 0x7f080608
 
     const/16 v2, 0x353
 
@@ -8811,7 +8849,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0270
+    const v1, 0x7f08053f
 
     const/16 v2, 0x354
 
@@ -8821,7 +8859,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b009f
+    const v1, 0x7f0805ed
 
     const/16 v2, 0x355
 
@@ -8831,7 +8869,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0478
+    const v1, 0x7f080378
 
     const/16 v2, 0x356
 
@@ -8841,7 +8879,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01bf
+    const v1, 0x7f080623
 
     const/16 v2, 0x357
 
@@ -8851,7 +8889,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0410
+    const v1, 0x7f080416
 
     const/16 v2, 0x358
 
@@ -8861,7 +8899,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0247
+    const v1, 0x7f080461
 
     const/16 v2, 0x359
 
@@ -8871,7 +8909,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b042e
+    const v1, 0x7f0801f0
 
     const/16 v2, 0x35a
 
@@ -8881,7 +8919,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0443
+    const v1, 0x7f080745
 
     const/16 v2, 0x35b
 
@@ -8891,7 +8929,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b004f
+    const v1, 0x7f080660
 
     const/16 v2, 0x35c
 
@@ -8901,7 +8939,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02c7
+    const v1, 0x7f0803e2
 
     const/16 v2, 0x35d
 
@@ -8911,7 +8949,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b014b
+    const v1, 0x7f0802db
 
     const/16 v2, 0x35e
 
@@ -8921,7 +8959,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b040f
+    const v1, 0x7f0806d1
 
     const/16 v2, 0x35f
 
@@ -8931,29 +8969,17 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f070001
+    const v1, 0x7f08017b
 
-    new-array v2, v9, [Ljava/lang/String;
+    const/16 v2, 0x360
 
-    const-string v3, "\ub9e4\uc6b0\uc57d\ud568"
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    aput-object v3, v2, v5
-
-    const-string v3, "\uc57d\ud568"
-
-    aput-object v3, v2, v6
-
-    const-string v3, "\uc88b\uc74c"
-
-    aput-object v3, v2, v7
-
-    const-string v3, "\uc544\uc8fc \uc88b\uc74c"
-
-    aput-object v3, v2, v8
+    move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0456
+    const v1, 0x7f080533
 
     const/16 v2, 0x361
 
@@ -8963,7 +8989,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00b0
+    const v1, 0x7f0804f6
 
     const/16 v2, 0x362
 
@@ -8973,7 +8999,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03d5
+    const v1, 0x7f080447
 
     const/16 v2, 0x363
 
@@ -8983,7 +9009,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01f1
+    const v1, 0x7f0802a2
 
     const/16 v2, 0x364
 
@@ -8993,7 +9019,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b029c
+    const v1, 0x7f0806c3
 
     const/16 v2, 0x365
 
@@ -9003,7 +9029,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b008e
+    const v1, 0x7f08019e
 
     const/16 v2, 0x366
 
@@ -9013,7 +9039,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0486
+    const v1, 0x7f08056e
 
     const/16 v2, 0x367
 
@@ -9023,7 +9049,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0468
+    const v1, 0x7f0805ee
 
     const/16 v2, 0x368
 
@@ -9033,7 +9059,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b005a
+    const v1, 0x7f080072
 
     const/16 v2, 0x369
 
@@ -9043,7 +9069,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02c5
+    const v1, 0x7f08008f
 
     const/16 v2, 0x36a
 
@@ -9053,7 +9079,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00ae
+    const v1, 0x7f08017e
 
     const/16 v2, 0x36b
 
@@ -9063,7 +9089,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b015d
+    const v1, 0x7f08024e
 
     const/16 v2, 0x36c
 
@@ -9073,7 +9099,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00b1
+    const v1, 0x7f080571
 
     const/16 v2, 0x36d
 
@@ -9083,7 +9109,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b046c
+    const v1, 0x7f0801ec
 
     const/16 v2, 0x36e
 
@@ -9093,7 +9119,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0151
+    const v1, 0x7f080606
 
     const/16 v2, 0x36f
 
@@ -9103,7 +9129,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0386
+    const v1, 0x7f080233
 
     const/16 v2, 0x370
 
@@ -9113,7 +9139,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b030f
+    const v1, 0x7f080106
 
     const/16 v2, 0x371
 
@@ -9123,7 +9149,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0093
+    const v1, 0x7f080224
 
     const/16 v2, 0x372
 
@@ -9133,7 +9159,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b039d
+    const v1, 0x7f080516
 
     const/16 v2, 0x373
 
@@ -9143,7 +9169,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0424
+    const v1, 0x7f0805ae
 
     const/16 v2, 0x374
 
@@ -9153,7 +9179,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0381
+    const v1, 0x7f0805f0
 
     const/16 v2, 0x375
 
@@ -9163,7 +9189,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b001f
+    const v1, 0x7f0806e2
 
     const/16 v2, 0x376
 
@@ -9173,7 +9199,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0462
+    const v1, 0x7f080702
 
     const/16 v2, 0x377
 
@@ -9183,7 +9209,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b034f
+    const v1, 0x7f0803f7
 
     const/16 v2, 0x378
 
@@ -9193,7 +9219,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0337
+    const v1, 0x7f0805ad
 
     const/16 v2, 0x379
 
@@ -9203,7 +9229,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0360
+    const v1, 0x7f0806ea
 
     const/16 v2, 0x37a
 
@@ -9213,7 +9239,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0092
+    const v1, 0x7f080376
 
     const/16 v2, 0x37b
 
@@ -9223,7 +9249,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03f1
+    const v1, 0x7f080692
 
     const/16 v2, 0x37c
 
@@ -9233,7 +9259,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00d5
+    const v1, 0x7f08033f
 
     const/16 v2, 0x37d
 
@@ -9243,7 +9269,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0079
+    const v1, 0x7f080463
 
     const/16 v2, 0x37e
 
@@ -9253,7 +9279,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00ac
+    const v1, 0x7f080599
 
     const/16 v2, 0x37f
 
@@ -9263,7 +9289,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b04a0
+    const v1, 0x7f0806ad
 
     const/16 v2, 0x380
 
@@ -9273,7 +9299,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0132
+    const v1, 0x7f080484
 
     const/16 v2, 0x381
 
@@ -9283,7 +9309,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0349
+    const v1, 0x7f080567
 
     const/16 v2, 0x382
 
@@ -9293,7 +9319,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0063
+    const v1, 0x7f0802f3
 
     const/16 v2, 0x383
 
@@ -9303,7 +9329,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00f0
+    const v1, 0x7f0806b3
 
     const/16 v2, 0x384
 
@@ -9313,25 +9339,17 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f07000c
+    const v1, 0x7f0803f1
 
-    new-array v2, v8, [Ljava/lang/String;
+    const/16 v2, 0x385
 
-    const-string v3, "\uc774\ub984"
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    aput-object v3, v2, v5
-
-    const-string v3, "\uc720\ud615"
-
-    aput-object v3, v2, v6
-
-    const-string v3, "\ud06c\uae30"
-
-    aput-object v3, v2, v7
+    move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03bb
+    const v1, 0x7f080379
 
     const/16 v2, 0x386
 
@@ -9341,7 +9359,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00f6
+    const v1, 0x7f08063d
 
     const/16 v2, 0x387
 
@@ -9351,7 +9369,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00be
+    const v1, 0x7f0802ee
 
     const/16 v2, 0x388
 
@@ -9361,7 +9379,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00dc
+    const v1, 0x7f080335
 
     const/16 v2, 0x389
 
@@ -9371,7 +9389,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00d0
+    const v1, 0x7f080437
 
     const/16 v2, 0x38a
 
@@ -9381,7 +9399,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01ba
+    const v1, 0x7f0800a4
 
     const/16 v2, 0x38b
 
@@ -9391,7 +9409,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0071
+    const v1, 0x7f080400
 
     const/16 v2, 0x38c
 
@@ -9401,7 +9419,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b003e
+    const v1, 0x7f08057c
 
     const/16 v2, 0x38d
 
@@ -9411,7 +9429,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0483
+    const v1, 0x7f080062
 
     const/16 v2, 0x38e
 
@@ -9421,7 +9439,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0144
+    const v1, 0x7f08005f
 
     const/16 v2, 0x38f
 
@@ -9431,7 +9449,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0415
+    const v1, 0x7f080477
 
     const/16 v2, 0x390
 
@@ -9441,7 +9459,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00cd
+    const v1, 0x7f080383
 
     const/16 v2, 0x391
 
@@ -9451,7 +9469,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b034a
+    const v1, 0x7f080109
 
     const/16 v2, 0x392
 
@@ -9461,7 +9479,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0028
+    const v1, 0x7f0804aa
 
     const/16 v2, 0x393
 
@@ -9471,7 +9489,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01f5
+    const v1, 0x7f08040b
 
     const/16 v2, 0x394
 
@@ -9481,7 +9499,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01ff
+    const v1, 0x7f08023a
 
     const/16 v2, 0x395
 
@@ -9491,7 +9509,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0350
+    const v1, 0x7f080654
 
     const/16 v2, 0x396
 
@@ -9501,7 +9519,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0359
+    const v1, 0x7f080681
 
     const/16 v2, 0x397
 
@@ -9511,7 +9529,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0407
+    const v1, 0x7f08041a
 
     const/16 v2, 0x398
 
@@ -9521,7 +9539,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03b9
+    const v1, 0x7f080121
 
     const/16 v2, 0x399
 
@@ -9531,7 +9549,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b019e
+    const v1, 0x7f08037c
 
     const/16 v2, 0x39a
 
@@ -9541,7 +9559,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0221
+    const v1, 0x7f080317
 
     const/16 v2, 0x39b
 
@@ -9551,7 +9569,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b025d
+    const v1, 0x7f0802ae
 
     const/16 v2, 0x39c
 
@@ -9561,7 +9579,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03dd
+    const v1, 0x7f080582
 
     const/16 v2, 0x39d
 
@@ -9571,7 +9589,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0339
+    const v1, 0x7f08017c
 
     const/16 v2, 0x39e
 
@@ -9581,7 +9599,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03b5
+    const v1, 0x7f08052a
 
     const/16 v2, 0x39f
 
@@ -9591,7 +9609,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b048e
+    const v1, 0x7f080563
 
     const/16 v2, 0x3a0
 
@@ -9601,7 +9619,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b028b
+    const v1, 0x7f080423
 
     const/16 v2, 0x3a1
 
@@ -9611,7 +9629,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0325
+    const v1, 0x7f0805a3
 
     const/16 v2, 0x3a2
 
@@ -9621,7 +9639,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0027
+    const v1, 0x7f0805dd
 
     const/16 v2, 0x3a3
 
@@ -9631,7 +9649,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0431
+    const v1, 0x7f0802d4
 
     const/16 v2, 0x3a4
 
@@ -9641,7 +9659,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00f2
+    const v1, 0x7f080380
 
     const/16 v2, 0x3a5
 
@@ -9651,7 +9669,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0422
+    const v1, 0x7f080652
 
     const/16 v2, 0x3a6
 
@@ -9661,7 +9679,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b007b
+    const v1, 0x7f080441
 
     const/16 v2, 0x3a7
 
@@ -9671,7 +9689,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0082
+    const v1, 0x7f080622
 
     const/16 v2, 0x3a8
 
@@ -9681,7 +9699,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b003a
+    const v1, 0x7f080419
 
     const/16 v2, 0x3a9
 
@@ -9691,7 +9709,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b035f
+    const v1, 0x7f080347
 
     const/16 v2, 0x3aa
 
@@ -9701,7 +9719,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b041d
+    const v1, 0x7f08044f
 
     const/16 v2, 0x3ab
 
@@ -9711,7 +9729,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0354
+    const v1, 0x7f08059e
 
     const/16 v2, 0x3ac
 
@@ -9721,7 +9739,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0172
+    const v1, 0x7f0806b9
 
     const/16 v2, 0x3ad
 
@@ -9731,7 +9749,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0452
+    const v1, 0x7f080161
 
     const/16 v2, 0x3ae
 
@@ -9741,7 +9759,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0280
+    const v1, 0x7f08067e
 
     const/16 v2, 0x3af
 
@@ -9751,7 +9769,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0306
+    const v1, 0x7f0803d3
 
     const/16 v2, 0x3b0
 
@@ -9761,7 +9779,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0045
+    const v1, 0x7f080199
 
     const/16 v2, 0x3b1
 
@@ -9771,7 +9789,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0336
+    const v1, 0x7f080592
 
     const/16 v2, 0x3b2
 
@@ -9781,7 +9799,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b016a
+    const v1, 0x7f080405
 
     const/16 v2, 0x3b3
 
@@ -9791,7 +9809,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02f8
+    const v1, 0x7f08028b
 
     const/16 v2, 0x3b4
 
@@ -9801,7 +9819,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b049b
+    const v1, 0x7f080267
 
     const/16 v2, 0x3b5
 
@@ -9811,7 +9829,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03c5
+    const v1, 0x7f080710
 
     const/16 v2, 0x3b6
 
@@ -9821,7 +9839,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0232
+    const v1, 0x7f080171
 
     const/16 v2, 0x3b7
 
@@ -9831,7 +9849,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0283
+    const v1, 0x7f08023d
 
     const/16 v2, 0x3b8
 
@@ -9841,7 +9859,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0297
+    const v1, 0x7f0802d2
 
     const/16 v2, 0x3b9
 
@@ -9851,7 +9869,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01e1
+    const v1, 0x7f080602
 
     const/16 v2, 0x3ba
 
@@ -9861,7 +9879,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00e3
+    const v1, 0x7f0800ae
 
     const/16 v2, 0x3bb
 
@@ -9871,7 +9889,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0379
+    const v1, 0x7f08058b
 
     const/16 v2, 0x3bc
 
@@ -9881,7 +9899,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b010f
+    const v1, 0x7f0805f9
 
     const/16 v2, 0x3bd
 
@@ -9891,7 +9909,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03fa
+    const v1, 0x7f0806fd
 
     const/16 v2, 0x3be
 
@@ -9901,7 +9919,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0319
+    const v1, 0x7f080315
 
     const/16 v2, 0x3bf
 
@@ -9911,7 +9929,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02f2
+    const v1, 0x7f08038f
 
     const/16 v2, 0x3c0
 
@@ -9921,7 +9939,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01a9
+    const v1, 0x7f080526
 
     const/16 v2, 0x3c1
 
@@ -9931,7 +9949,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0480
+    const v1, 0x7f08031f
 
     const/16 v2, 0x3c2
 
@@ -9941,7 +9959,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03ec
+    const v1, 0x7f080695
 
     const/16 v2, 0x3c3
 
@@ -9951,7 +9969,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00c0
+    const v1, 0x7f0805b3
 
     const/16 v2, 0x3c4
 
@@ -9961,7 +9979,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0143
+    const v1, 0x7f08026a
 
     const/16 v2, 0x3c5
 
@@ -9971,7 +9989,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b006a
+    const v1, 0x7f080331
 
     const/16 v2, 0x3c6
 
@@ -9981,7 +9999,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b013c
+    const v1, 0x7f080580
 
     const/16 v2, 0x3c7
 
@@ -9991,7 +10009,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03c4
+    const v1, 0x7f080518
 
     const/16 v2, 0x3c8
 
@@ -10001,7 +10019,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0043
+    const v1, 0x7f080091
 
     const/16 v2, 0x3c9
 
@@ -10011,7 +10029,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b042f
+    const v1, 0x7f080220
 
     const/16 v2, 0x3ca
 
@@ -10021,7 +10039,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b016e
+    const v1, 0x7f0800fb
 
     const/16 v2, 0x3cb
 
@@ -10031,7 +10049,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00c5
+    const v1, 0x7f08006c
 
     const/16 v2, 0x3cc
 
@@ -10041,7 +10059,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0211
+    const v1, 0x7f0805d7
 
     const/16 v2, 0x3cd
 
@@ -10051,7 +10069,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0321
+    const v1, 0x7f0805b9
 
     const/16 v2, 0x3ce
 
@@ -10061,7 +10079,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00f3
+    const v1, 0x7f0801a0
 
     const/16 v2, 0x3cf
 
@@ -10071,7 +10089,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0220
+    const v1, 0x7f080436
 
     const/16 v2, 0x3d0
 
@@ -10081,7 +10099,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0281
+    const v1, 0x7f080098
 
     const/16 v2, 0x3d1
 
@@ -10091,7 +10109,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0390
+    const v1, 0x7f080448
 
     const/16 v2, 0x3d2
 
@@ -10101,7 +10119,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0370
+    const v1, 0x7f080136
 
     const/16 v2, 0x3d3
 
@@ -10111,7 +10129,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00ed
+    const v1, 0x7f080001
 
     const/16 v2, 0x3d4
 
@@ -10121,7 +10139,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b022d
+    const v1, 0x7f080367
 
     const/16 v2, 0x3d5
 
@@ -10131,7 +10149,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b024e
+    const v1, 0x7f080294
 
     const/16 v2, 0x3d6
 
@@ -10141,7 +10159,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03d8
+    const v1, 0x7f080499
 
     const/16 v2, 0x3d7
 
@@ -10151,7 +10169,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0033
+    const v1, 0x7f08046a
 
     const/16 v2, 0x3d8
 
@@ -10161,7 +10179,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0095
+    const v1, 0x7f0800ff
 
     const/16 v2, 0x3d9
 
@@ -10171,7 +10189,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0305
+    const v1, 0x7f080649
 
     const/16 v2, 0x3da
 
@@ -10181,7 +10199,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0050
+    const v1, 0x7f08015a
 
     const/16 v2, 0x3db
 
@@ -10191,7 +10209,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0141
+    const v1, 0x7f080334
 
     const/16 v2, 0x3dc
 
@@ -10201,7 +10219,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0457
+    const v1, 0x7f080006
 
     const/16 v2, 0x3dd
 
@@ -10211,7 +10229,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b002c
+    const v1, 0x7f080595
 
     const/16 v2, 0x3de
 
@@ -10221,7 +10239,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0195
+    const v1, 0x7f080663
 
     const/16 v2, 0x3df
 
@@ -10231,7 +10249,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00bc
+    const v1, 0x7f080457
 
     const/16 v2, 0x3e0
 
@@ -10241,7 +10259,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01dd
+    const v1, 0x7f08022e
 
     const/16 v2, 0x3e1
 
@@ -10251,7 +10269,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00a6
+    const v1, 0x7f080286
 
     const/16 v2, 0x3e2
 
@@ -10261,7 +10279,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0200
+    const v1, 0x7f0804ac
 
     const/16 v2, 0x3e3
 
@@ -10271,7 +10289,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b022a
+    const v1, 0x7f080128
 
     const/16 v2, 0x3e4
 
@@ -10281,7 +10299,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b049d
+    const v1, 0x7f08049f
 
     const/16 v2, 0x3e5
 
@@ -10291,7 +10309,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01d2
+    const v1, 0x7f08058c
 
     const/16 v2, 0x3e6
 
@@ -10301,7 +10319,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02aa
+    const v1, 0x7f080749
 
     const/16 v2, 0x3e7
 
@@ -10311,7 +10329,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0260
+    const v1, 0x7f08059a
 
     const/16 v2, 0x3e8
 
@@ -10321,7 +10339,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b049c
+    const v1, 0x7f080281
 
     const/16 v2, 0x3e9
 
@@ -10331,7 +10349,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0129
+    const v1, 0x7f08050f
 
     const/16 v2, 0x3ea
 
@@ -10341,7 +10359,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0110
+    const v1, 0x7f08067c
 
     const/16 v2, 0x3eb
 
@@ -10351,7 +10369,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0146
+    const v1, 0x7f08045e
 
     const/16 v2, 0x3ec
 
@@ -10361,7 +10379,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01c8
+    const v1, 0x7f080393
 
     const/16 v2, 0x3ed
 
@@ -10371,7 +10389,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0103
+    const v1, 0x7f0803e7
 
     const/16 v2, 0x3ee
 
@@ -10381,7 +10399,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b025b
+    const v1, 0x7f08038b
 
     const/16 v2, 0x3ef
 
@@ -10391,7 +10409,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0197
+    const v1, 0x7f080613
 
     const/16 v2, 0x3f0
 
@@ -10401,7 +10419,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00ec
+    const v1, 0x7f080544
 
     const/16 v2, 0x3f1
 
@@ -10411,7 +10429,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02e8
+    const v1, 0x7f080472
 
     const/16 v2, 0x3f2
 
@@ -10421,7 +10439,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b04a7
+    const v1, 0x7f0801dd
 
     const/16 v2, 0x3f3
 
@@ -10431,7 +10449,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0466
+    const v1, 0x7f0800a2
 
     const/16 v2, 0x3f4
 
@@ -10441,7 +10459,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03b6
+    const v1, 0x7f080314
 
     const/16 v2, 0x3f5
 
@@ -10451,7 +10469,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0290
+    const v1, 0x7f080163
 
     const/16 v2, 0x3f6
 
@@ -10461,7 +10479,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b032b
+    const v1, 0x7f080672
 
     const/16 v2, 0x3f7
 
@@ -10471,7 +10489,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00e2
+    const v1, 0x7f08037e
 
     const/16 v2, 0x3f8
 
@@ -10481,7 +10499,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00e1
+    const v1, 0x7f0801f2
 
     const/16 v2, 0x3f9
 
@@ -10491,7 +10509,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00e0
+    const v1, 0x7f080492
 
     const/16 v2, 0x3fa
 
@@ -10501,7 +10519,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0122
+    const v1, 0x7f080187
 
     const/16 v2, 0x3fb
 
@@ -10511,7 +10529,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b003d
+    const v1, 0x7f080686
 
     const/16 v2, 0x3fc
 
@@ -10521,7 +10539,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02c9
+    const v1, 0x7f080585
 
     const/16 v2, 0x3fd
 
@@ -10531,7 +10549,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0010
+    const v1, 0x7f0805f2
 
     const/16 v2, 0x3fe
 
@@ -10541,7 +10559,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0254
+    const v1, 0x7f0805d1
 
     const/16 v2, 0x3ff
 
@@ -10551,7 +10569,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0282
+    const v1, 0x7f0800ac
 
     const/16 v2, 0x400
 
@@ -10561,7 +10579,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b011c
+    const v1, 0x7f08064e
 
     const/16 v2, 0x401
 
@@ -10571,7 +10589,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01f8
+    const v1, 0x7f08073a
 
     const/16 v2, 0x402
 
@@ -10581,7 +10599,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02a6
+    const v1, 0x7f08027f
 
     const/16 v2, 0x403
 
@@ -10591,7 +10609,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0304
+    const v1, 0x7f08062f
 
     const/16 v2, 0x404
 
@@ -10601,7 +10619,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00ee
+    const v1, 0x7f080178
 
     const/16 v2, 0x405
 
@@ -10611,7 +10629,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01a5
+    const v1, 0x7f08029d
 
     const/16 v2, 0x406
 
@@ -10621,7 +10639,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0475
+    const v1, 0x7f080508
 
     const/16 v2, 0x407
 
@@ -10631,7 +10649,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b002f
+    const v1, 0x7f080424
 
     const/16 v2, 0x408
 
@@ -10641,7 +10659,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02d0
+    const v1, 0x7f08061c
 
     const/16 v2, 0x409
 
@@ -10651,7 +10669,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0189
+    const v1, 0x7f080537
 
     const/16 v2, 0x40a
 
@@ -10661,7 +10679,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02cc
+    const v1, 0x7f080593
 
     const/16 v2, 0x40b
 
@@ -10671,7 +10689,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b011a
+    const v1, 0x7f08046f
 
     const/16 v2, 0x40c
 
@@ -10681,7 +10699,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02cb
+    const v1, 0x7f080274
 
     const/16 v2, 0x40d
 
@@ -10691,7 +10709,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00ca
+    const v1, 0x7f08074f
 
     const/16 v2, 0x40e
 
@@ -10701,7 +10719,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02f1
+    const v1, 0x7f0805ef
 
     const/16 v2, 0x40f
 
@@ -10711,7 +10729,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0175
+    const v1, 0x7f080495
 
     const/16 v2, 0x410
 
@@ -10721,7 +10739,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0170
+    const v1, 0x7f080060
 
     const/16 v2, 0x411
 
@@ -10731,7 +10749,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03ae
+    const v1, 0x7f0802a1
 
     const/16 v2, 0x412
 
@@ -10741,7 +10759,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0184
+    const v1, 0x7f0805fa
 
     const/16 v2, 0x413
 
@@ -10751,7 +10769,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01ea
+    const v1, 0x7f080530
 
     const/16 v2, 0x414
 
@@ -10761,7 +10779,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b04a6
+    const v1, 0x7f0805cc
 
     const/16 v2, 0x415
 
@@ -10771,7 +10789,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b038f
+    const v1, 0x7f080268
 
     const/16 v2, 0x416
 
@@ -10781,7 +10799,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b024b
+    const v1, 0x7f08044c
 
     const/16 v2, 0x417
 
@@ -10791,7 +10809,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02db
+    const v1, 0x7f080614
 
     const/16 v2, 0x418
 
@@ -10801,7 +10819,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b044d
+    const v1, 0x7f08057f
 
     const/16 v2, 0x419
 
@@ -10811,7 +10829,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0181
+    const v1, 0x7f080144
 
     const/16 v2, 0x41a
 
@@ -10821,7 +10839,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01f9
+    const v1, 0x7f080140
 
     const/16 v2, 0x41b
 
@@ -10831,7 +10849,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0230
+    const v1, 0x7f080581
 
     const/16 v2, 0x41c
 
@@ -10841,7 +10859,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b010d
+    const v1, 0x7f08033b
 
     const/16 v2, 0x41d
 
@@ -10851,7 +10869,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b04a3
+    const v1, 0x7f080313
 
     const/16 v2, 0x41e
 
@@ -10861,7 +10879,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0225
+    const v1, 0x7f08068e
 
     const/16 v2, 0x41f
 
@@ -10871,7 +10889,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0342
+    const v1, 0x7f0803b0
 
     const/16 v2, 0x420
 
@@ -10881,7 +10899,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01f7
+    const v1, 0x7f080479
 
     const/16 v2, 0x421
 
@@ -10891,7 +10909,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01e8
+    const v1, 0x7f080177
 
     const/16 v2, 0x422
 
@@ -10901,7 +10919,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b000d
+    const v1, 0x7f08046c
 
     const/16 v2, 0x423
 
@@ -10911,7 +10929,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01ef
+    const v1, 0x7f08006b
 
     const/16 v2, 0x424
 
@@ -10921,7 +10939,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0404
+    const v1, 0x7f080123
 
     const/16 v2, 0x425
 
@@ -10931,7 +10949,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b029f
+    const v1, 0x7f080252
 
     const/16 v2, 0x426
 
@@ -10941,7 +10959,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0114
+    const v1, 0x7f080421
 
     const/16 v2, 0x427
 
@@ -10951,7 +10969,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0021
+    const v1, 0x7f080676
 
     const/16 v2, 0x428
 
@@ -10961,7 +10979,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b032e
+    const v1, 0x7f080615
 
     const/16 v2, 0x429
 
@@ -10971,7 +10989,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03cb
+    const v1, 0x7f08060e
 
     const/16 v2, 0x42a
 
@@ -10981,7 +10999,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0392
+    const v1, 0x7f08074e
 
     const/16 v2, 0x42b
 
@@ -10991,7 +11009,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0471
+    const v1, 0x7f0806e9
 
     const/16 v2, 0x42c
 
@@ -11001,7 +11019,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02fb
+    const v1, 0x7f080657
 
     const/16 v2, 0x42d
 
@@ -11011,7 +11029,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0014
+    const v1, 0x7f0805cd
 
     const/16 v2, 0x42e
 
@@ -11021,7 +11039,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b028d
+    const v1, 0x7f0803dc
 
     const/16 v2, 0x42f
 
@@ -11031,7 +11049,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0101
+    const v1, 0x7f080734
 
     const/16 v2, 0x430
 
@@ -11041,7 +11059,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0088
+    const v1, 0x7f08039b
 
     const/16 v2, 0x431
 
@@ -11051,7 +11069,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00eb
+    const v1, 0x7f08017f
 
     const/16 v2, 0x432
 
@@ -11061,7 +11079,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0192
+    const v1, 0x7f0803d9
 
     const/16 v2, 0x433
 
@@ -11071,7 +11089,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0301
+    const v1, 0x7f080299
 
     const/16 v2, 0x434
 
@@ -11081,7 +11099,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0474
+    const v1, 0x7f080511
 
     const/16 v2, 0x435
 
@@ -11091,7 +11109,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0133
+    const v1, 0x7f080181
 
     const/16 v2, 0x436
 
@@ -11101,7 +11119,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0436
+    const v1, 0x7f080489
 
     const/16 v2, 0x437
 
@@ -11111,7 +11129,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0037
+    const v1, 0x7f080638
 
     const/16 v2, 0x438
 
@@ -11121,7 +11139,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0398
+    const v1, 0x7f0804ab
 
     const/16 v2, 0x439
 
@@ -11131,7 +11149,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0256
+    const v1, 0x7f0802cc
 
     const/16 v2, 0x43a
 
@@ -11141,7 +11159,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03d7
+    const v1, 0x7f080527
 
     const/16 v2, 0x43b
 
@@ -11151,7 +11169,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01c1
+    const v1, 0x7f08058e
 
     const/16 v2, 0x43c
 
@@ -11161,7 +11179,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b021d
+    const v1, 0x7f0800f1
 
     const/16 v2, 0x43d
 
@@ -11171,7 +11189,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b043c
+    const v1, 0x7f080435
 
     const/16 v2, 0x43e
 
@@ -11181,7 +11199,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0382
+    const v1, 0x7f0806c2
 
     const/16 v2, 0x43f
 
@@ -11191,7 +11209,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0294
+    const v1, 0x7f080705
 
     const/16 v2, 0x440
 
@@ -11201,7 +11219,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b040e
+    const v1, 0x7f0801dc
 
     const/16 v2, 0x441
 
@@ -11211,7 +11229,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b029a
+    const v1, 0x7f080342
 
     const/16 v2, 0x442
 
@@ -11221,7 +11239,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b04a5
+    const v1, 0x7f0802c0
 
     const/16 v2, 0x443
 
@@ -11231,7 +11249,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0274
+    const v1, 0x7f080143
 
     const/16 v2, 0x444
 
@@ -11241,7 +11259,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0320
+    const v1, 0x7f08044a
 
     const/16 v2, 0x445
 
@@ -11251,7 +11269,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0498
+    const v1, 0x7f080501
 
     const/16 v2, 0x446
 
@@ -11261,7 +11279,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0367
+    const v1, 0x7f080092
 
     const/16 v2, 0x447
 
@@ -11271,7 +11289,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01a0
+    const v1, 0x7f080102
 
     const/16 v2, 0x448
 
@@ -11281,7 +11299,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b035a
+    const v1, 0x7f0805aa
 
     const/16 v2, 0x449
 
@@ -11291,7 +11309,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0307
+    const v1, 0x7f0800a0
 
     const/16 v2, 0x44a
 
@@ -11301,7 +11319,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b009e
+    const v1, 0x7f0803c9
 
     const/16 v2, 0x44b
 
@@ -11311,7 +11329,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03b2
+    const v1, 0x7f0800c9
 
     const/16 v2, 0x44c
 
@@ -11321,7 +11339,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b012d
+    const v1, 0x7f080503
 
     const/16 v2, 0x44d
 
@@ -11331,7 +11349,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03e3
+    const v1, 0x7f08071f
 
     const/16 v2, 0x44e
 
@@ -11341,7 +11359,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00d6
+    const v1, 0x7f0805f8
 
     const/16 v2, 0x44f
 
@@ -11351,7 +11369,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01df
+    const v1, 0x7f080751
 
     const/16 v2, 0x450
 
@@ -11361,7 +11379,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b000c
+    const v1, 0x7f0802f5
 
     const/16 v2, 0x451
 
@@ -11371,7 +11389,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0235
+    const v1, 0x7f08055e
 
     const/16 v2, 0x452
 
@@ -11381,7 +11399,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00a7
+    const v1, 0x7f0803af
 
     const/16 v2, 0x453
 
@@ -11391,7 +11409,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01bc
+    const v1, 0x7f080283
 
     const/16 v2, 0x454
 
@@ -11401,7 +11419,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b015a
+    const v1, 0x7f080496
 
     const/16 v2, 0x455
 
@@ -11411,7 +11429,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b022c
+    const v1, 0x7f080082
 
     const/16 v2, 0x456
 
@@ -11421,7 +11439,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b016c
+    const v1, 0x7f0805a6
 
     const/16 v2, 0x457
 
@@ -11431,7 +11449,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03fd
+    const v1, 0x7f080671
 
     const/16 v2, 0x458
 
@@ -11441,7 +11459,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0358
+    const v1, 0x7f0804fb
 
     const/16 v2, 0x459
 
@@ -11451,7 +11469,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03bd
+    const v1, 0x7f08068f
 
     const/16 v2, 0x45a
 
@@ -11461,7 +11479,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b000f
+    const v1, 0x7f0806af
 
     const/16 v2, 0x45b
 
@@ -11471,7 +11489,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0025
+    const v1, 0x7f080332
 
     const/16 v2, 0x45c
 
@@ -11481,7 +11499,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b038c
+    const v1, 0x7f08053b
 
     const/16 v2, 0x45d
 
@@ -11491,7 +11509,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0228
+    const v1, 0x7f0806c7
 
     const/16 v2, 0x45e
 
@@ -11501,7 +11519,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0419
+    const v1, 0x7f0801f8
 
     const/16 v2, 0x45f
 
@@ -11511,7 +11529,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01be
+    const v1, 0x7f0802e6
 
     const/16 v2, 0x460
 
@@ -11521,7 +11539,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b006e
+    const v1, 0x7f080384
 
     const/16 v2, 0x461
 
@@ -11531,7 +11549,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01e7
+    const v1, 0x7f08073c
 
     const/16 v2, 0x462
 
@@ -11541,7 +11559,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0041
+    const v1, 0x7f0802ce
 
     const/16 v2, 0x463
 
@@ -11551,7 +11569,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0365
+    const v1, 0x7f080653
 
     const/16 v2, 0x464
 
@@ -11561,7 +11579,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0291
+    const v1, 0x7f080112
 
     const/16 v2, 0x465
 
@@ -11571,7 +11589,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0219
+    const v1, 0x7f080247
 
     const/16 v2, 0x466
 
@@ -11581,7 +11599,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01d5
+    const v1, 0x7f080631
 
     const/16 v2, 0x467
 
@@ -11591,7 +11609,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0423
+    const v1, 0x7f080162
 
     const/16 v2, 0x468
 
@@ -11601,7 +11619,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0167
+    const v1, 0x7f080485
 
     const/16 v2, 0x469
 
@@ -11611,7 +11629,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0066
+    const v1, 0x7f0806d3
 
     const/16 v2, 0x46a
 
@@ -11621,7 +11639,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0481
+    const v1, 0x7f08046e
 
     const/16 v2, 0x46b
 
@@ -11631,7 +11649,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01ad
+    const v1, 0x7f08050a
 
     const/16 v2, 0x46c
 
@@ -11641,7 +11659,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03e2
+    const v1, 0x7f0805f1
 
     const/16 v2, 0x46d
 
@@ -11651,7 +11669,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03c0
+    const v1, 0x7f080336
 
     const/16 v2, 0x46e
 
@@ -11661,7 +11679,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0191
+    const v1, 0x7f080473
 
     const/16 v2, 0x46f
 
@@ -11671,7 +11689,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00f5
+    const v1, 0x7f08051b
 
     const/16 v2, 0x470
 
@@ -11681,7 +11699,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b039f
+    const v1, 0x7f080381
 
     const/16 v2, 0x471
 
@@ -11691,7 +11709,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0183
+    const v1, 0x7f08065b
 
     const/16 v2, 0x472
 
@@ -11701,7 +11719,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01e0
+    const v1, 0x7f0805a1
 
     const/16 v2, 0x473
 
@@ -11711,7 +11729,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b023a
+    const v1, 0x7f080079
 
     const/16 v2, 0x474
 
@@ -11721,7 +11739,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0076
+    const v1, 0x7f08055f
 
     const/16 v2, 0x475
 
@@ -11731,7 +11749,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00c4
+    const v1, 0x7f080682
 
     const/16 v2, 0x476
 
@@ -11741,7 +11759,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0074
+    const v1, 0x7f080729
 
     const/16 v2, 0x477
 
@@ -11751,7 +11769,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b005c
+    const v1, 0x7f0803e3
 
     const/16 v2, 0x478
 
@@ -11761,7 +11779,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b027c
+    const v1, 0x7f0805ba
 
     const/16 v2, 0x479
 
@@ -11771,7 +11789,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03a5
+    const v1, 0x7f080543
 
     const/16 v2, 0x47a
 
@@ -11781,7 +11799,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b033b
+    const v1, 0x7f080538
 
     const/16 v2, 0x47b
 
@@ -11791,7 +11809,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02ba
+    const v1, 0x7f080442
 
     const/16 v2, 0x47c
 
@@ -11801,7 +11819,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03ca
+    const v1, 0x7f08036e
 
     const/16 v2, 0x47d
 
@@ -11811,7 +11829,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00dd
+    const v1, 0x7f08009d
 
     const/16 v2, 0x47e
 
@@ -11821,7 +11839,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01c2
+    const v1, 0x7f080185
 
     const/16 v2, 0x47f
 
@@ -11831,7 +11849,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0078
+    const v1, 0x7f080346
 
     const/16 v2, 0x480
 
@@ -11841,7 +11859,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03e5
+    const v1, 0x7f0806ce
 
     const/16 v2, 0x481
 
@@ -11851,7 +11869,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0226
+    const v1, 0x7f080748
 
     const/16 v2, 0x482
 
@@ -11861,7 +11879,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00bd
+    const v1, 0x7f0802bf
 
     const/16 v2, 0x483
 
@@ -11871,7 +11889,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02c8
+    const v1, 0x7f08011e
 
     const/16 v2, 0x484
 
@@ -11881,7 +11899,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0017
+    const v1, 0x7f08043d
 
     const/16 v2, 0x485
 
@@ -11891,7 +11909,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b03ac
+    const v1, 0x7f0803cf
 
     const/16 v2, 0x486
 
@@ -11901,7 +11919,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01e4
+    const v1, 0x7f08054d
 
     const/16 v2, 0x487
 
@@ -11911,7 +11929,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b01cb
+    const v1, 0x7f080471
 
     const/16 v2, 0x488
 
@@ -11921,7 +11939,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b013a
+    const v1, 0x7f0805f3
 
     const/16 v2, 0x489
 
@@ -11931,7 +11949,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b025f
+    const v1, 0x7f0803de
 
     const/16 v2, 0x48a
 
@@ -11941,7 +11959,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b030d
+    const v1, 0x7f08017a
 
     const/16 v2, 0x48b
 
@@ -11951,7 +11969,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0011
+    const v1, 0x7f080545
 
     const/16 v2, 0x48c
 
@@ -11961,7 +11979,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0461
+    const v1, 0x7f0803d2
 
     const/16 v2, 0x48d
 
@@ -11971,7 +11989,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0265
+    const v1, 0x7f080176
 
     const/16 v2, 0x48e
 
@@ -11981,7 +11999,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0196
+    const v1, 0x7f08051a
 
     const/16 v2, 0x48f
 
@@ -11991,7 +12009,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0125
+    const v1, 0x7f080664
 
     const/16 v2, 0x490
 
@@ -12001,7 +12019,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b047d
+    const v1, 0x7f080512
 
     const/16 v2, 0x491
 
@@ -12011,7 +12029,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b011b
+    const v1, 0x7f0806e3
 
     const/16 v2, 0x492
 
@@ -12021,7 +12039,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02dc
+    const v1, 0x7f080497
 
     const/16 v2, 0x493
 
@@ -12031,7 +12049,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00f1
+    const v1, 0x7f08033a
 
     const/16 v2, 0x494
 
@@ -12041,7 +12059,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00aa
+    const v1, 0x7f08006a
 
     const/16 v2, 0x495
 
@@ -12051,7 +12069,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0019
+    const v1, 0x7f0805c7
 
     const/16 v2, 0x496
 
@@ -12061,7 +12079,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b049e
+    const v1, 0x7f0804f3
 
     const/16 v2, 0x497
 
@@ -12071,7 +12089,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0060
+    const v1, 0x7f0803ce
 
     const/16 v2, 0x498
 
@@ -12081,7 +12099,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02af
+    const v1, 0x7f080418
 
     const/16 v2, 0x499
 
@@ -12091,7 +12109,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0472
+    const v1, 0x7f0802cf
 
     const/16 v2, 0x49a
 
@@ -12101,7 +12119,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0084
+    const v1, 0x7f080298
 
     const/16 v2, 0x49b
 
@@ -12111,7 +12129,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b034d
+    const v1, 0x7f0802a0
 
     const/16 v2, 0x49c
 
@@ -12121,7 +12139,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0180
+    const v1, 0x7f0803d1
 
     const/16 v2, 0x49d
 
@@ -12131,7 +12149,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0169
+    const v1, 0x7f0805d3
 
     const/16 v2, 0x49e
 
@@ -12141,7 +12159,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0373
+    const v1, 0x7f080264
 
     const/16 v2, 0x49f
 
@@ -12151,7 +12169,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02c6
+    const v1, 0x7f0802a5
 
     const/16 v2, 0x4a0
 
@@ -12161,7 +12179,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0251
+    const v1, 0x7f0801ad
 
     const/16 v2, 0x4a1
 
@@ -12171,7 +12189,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00f8
+    const v1, 0x7f080553
 
     const/16 v2, 0x4a2
 
@@ -12181,35 +12199,17 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f07000a
+    const v1, 0x7f08055c
 
-    const/4 v2, 0x5
+    const/16 v2, 0x4a3
 
-    new-array v2, v2, [Ljava/lang/String;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-string v3, "1\ucd08"
-
-    aput-object v3, v2, v5
-
-    const-string v3, "3\ucd08"
-
-    aput-object v3, v2, v6
-
-    const-string v3, "5\ucd08"
-
-    aput-object v3, v2, v7
-
-    const-string v3, "10\ucd08"
-
-    aput-object v3, v2, v8
-
-    const-string v3, "15\ucd08"
-
-    aput-object v3, v2, v9
+    move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0031
+    const v1, 0x7f080557
 
     const/16 v2, 0x4a4
 
@@ -12219,7 +12219,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02ec
+    const v1, 0x7f080404
 
     const/16 v2, 0x4a5
 
@@ -12229,7 +12229,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0433
+    const v1, 0x7f08032c
 
     const/16 v2, 0x4a6
 
@@ -12239,7 +12239,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b02ea
+    const v1, 0x7f080721
 
     const/16 v2, 0x4a7
 
@@ -12249,7 +12249,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0044
+    const v1, 0x7f080417
 
     const/16 v2, 0x4a8
 
@@ -12259,7 +12259,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b008a
+    const v1, 0x7f08040e
 
     const/16 v2, 0x4a9
 
@@ -12269,7 +12269,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b00fc
+    const v1, 0x7f080089
 
     const/16 v2, 0x4aa
 
@@ -12279,7 +12279,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0207
+    const v1, 0x7f08049e
 
     const/16 v2, 0x4ab
 
@@ -12289,7 +12289,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b017a
+    const v1, 0x7f080164
 
     const/16 v2, 0x4ac
 
@@ -12299,7 +12299,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b018d
+    const v1, 0x7f080507
 
     const/16 v2, 0x4ad
 
@@ -12309,7 +12309,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0259
+    const v1, 0x7f08012a
 
     const/16 v2, 0x4ae
 
@@ -12319,7 +12319,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b0293
+    const v1, 0x7f080685
 
     const/16 v2, 0x4af
 
@@ -12329,9 +12329,335 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    const v1, 0x7f0b011d
+    const v1, 0x7f08073f
 
     const/16 v2, 0x4b0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0805f7
+
+    const/16 v2, 0x4b1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08009e
+
+    const/16 v2, 0x4b2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08040f
+
+    const/16 v2, 0x4b3
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08016a
+
+    const/16 v2, 0x4b4
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08054e
+
+    const/16 v2, 0x4b5
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800c6
+
+    const/16 v2, 0x4b6
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0806b4
+
+    const/16 v2, 0x4b7
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08039d
+
+    const/16 v2, 0x4b8
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080724
+
+    const/16 v2, 0x4b9
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080251
+
+    const/16 v2, 0x4ba
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080739
+
+    const/16 v2, 0x4bb
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08026f
+
+    const/16 v2, 0x4bc
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080561
+
+    const/16 v2, 0x4bd
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080235
+
+    const/16 v2, 0x4be
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080289
+
+    const/16 v2, 0x4bf
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0c000c
+
+    const/16 v2, 0x8
+
+    new-array v2, v2, [Ljava/lang/String;
+
+    const-string v3, "\u0c8e\u0cb2\u0ccd\u0cb2\u0cbe"
+
+    aput-object v3, v2, v5
+
+    const-string v3, "\u0c87\u0c82\u0ca6\u0cc1"
+
+    aput-object v3, v2, v6
+
+    const-string v3, "\u0ca8\u0cbf\u0ca8\u0ccd\u0ca8\u0cc6"
+
+    aput-object v3, v2, v7
+
+    const-string v3, "\u0c88 \u0cb5\u0cbe\u0cb0"
+
+    aput-object v3, v2, v8
+
+    const-string v3, "\u0c88 \u0ca4\u0cbf\u0c82\u0c97\u0cb3\u0cc1"
+
+    aput-object v3, v2, v9
+
+    const/4 v3, 0x5
+
+    const-string v4, "\u0c88 \u0cb5\u0cb0\u0ccd\u0cb7"
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x6
+
+    const-string v4, "> 1 \u0cb5\u0cb0\u0ccd\u0cb7"
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x7
+
+    const-string v4, "\u0cac\u0cb0\u0cc6"
+
+    aput-object v4, v2, v3
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080077
+
+    const/16 v2, 0x4c1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08070a
+
+    const/16 v2, 0x4c2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08041b
+
+    const/16 v2, 0x4c3
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0800a7
+
+    const/16 v2, 0x4c4
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f08043b
+
+    const/16 v2, 0x4c5
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f0c0006
+
+    const/16 v2, 0xc
+
+    new-array v2, v2, [Ljava/lang/String;
+
+    const-string v3, "Box"
+
+    aput-object v3, v2, v5
+
+    const-string v3, "SugarSync"
+
+    aput-object v3, v2, v6
+
+    const-string v3, "DropBox"
+
+    aput-object v3, v2, v7
+
+    const-string v3, "OneDrive"
+
+    aput-object v3, v2, v8
+
+    const-string v3, "Gdrive"
+
+    aput-object v3, v2, v9
+
+    const/4 v3, 0x5
+
+    const-string v4, "S3"
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x6
+
+    const-string v4, "Yandex"
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x7
+
+    const-string v4, "MegaCloud"
+
+    aput-object v4, v2, v3
+
+    const/16 v3, 0x8
+
+    const-string v4, "KuaiPan"
+
+    aput-object v4, v2, v3
+
+    const/16 v3, 0x9
+
+    const-string v4, "Sina VDisk"
+
+    aput-object v4, v2, v3
+
+    const/16 v3, 0xa
+
+    const-string v4, "Baidu NetDisk"
+
+    aput-object v4, v2, v3
+
+    const/16 v3, 0xb
+
+    const-string v4, "MediaFire"
+
+    aput-object v4, v2, v3
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const v1, 0x7f080737
+
+    const/16 v2, 0x4c7
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -12351,13 +12677,13 @@
 
     const/4 v1, 0x0
 
-    const-string v2, "\uac80\uc0c9___Root\uad8c\ud55c\uc774 \uc788\ub294 \uacbd\uc6b0 \uc2a4\uc704\uce58\ub97c \ucf1c\uc11c Root\ud0d0\uc0c9\uae30\ub97c \uc5f4\uae30___\ub2e4\uc218\uc758 \ud30c\uc77c\uc744 \uc0ad\uc81c\ud558\uc2dc\uacc4\uc2b5\ub2c8\uae4c?___\ubcf4\uc548___LAN\ub85c \ubcf4\ub0b4\uae30___Baidu \uacc4\uc815___\ud0a4\uc6cc\ub4dc\ub97c \uc785\ub825\ud558\uc138\uc694___\ub124\ud2b8\ub97c \uc124\uce58\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. \uc2dc\uc2a4\ud15c\uc124\uc815 \ud655\uc778\ud558\uc138\uc694___\ubcf5\uc6d0___\uc2ac\ub77c\uc774\ub4dc \uc1fc___Root \ud0d0\uc0c9\uae30___\uc54c\ub78c \uc18c\ub9ac\ub85c \uc124\uc815___\ube44\ubc00\ubc88\ud638 \uc124\uc815___\ub9c8\uc6b4\ud305\ub41c SD Card\uac00 \uc5c6\uc74c___\ubc1c\uacac\ub41c Chromecast\uac00 \uc5c6\uc2b4___500KB\uc774\uc0c1\uc778 \ud30c\uc77c\ub9cc \ud45c\uc2dc___\uc798\ubabb\ub41c \uc99d\uba85\uc11c\uc785\ub2c8\ub2e4___\ud574\uc81c\ud558\uae30___\ubc31\uadf8\ub77c\uc6b4\ub4dc\ub85c \uc2e4\ud589___\uc120\ud0dd\ud55c apk\ub97c \uc124\uce58\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\uc555\ucd95 \ub808\ubca8:___\ub4f1\ub85d \uc131\uacf5___\ub124\ud2b8\uc6cc\ud06c \uc120\ud0dd___\ud3f4\ub354 \uc5f4\uae30___\uc778\uc99d \uc2e4\ud328___\ube44\ubc00\ubc88\ud638 \ubcc0\uacbd___\uac80\uc0c9 \uc5d4\uc9c4 \uc124\uc815___\uc0c8\ub85c\uc6b4 \ud50c\ub7ec\uadf8\uc778%s \uc0ac\uc6a9\uac00\ub2a5\ud569\ub2c8\ub2e4. \uc5c5\ub370\uc774\ud2b8\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\uc571 \uc0ad\uc81c\uc2dc \uad00\ub828 \ud3f4\ub354 \uc9c0\uc6b0\uae30___\uc218\uc815___\uc774\uc804 \ubc84\uc804\uc774 \uc124\uce58\ub418\uc5b4\uc788\uc2b5\ub2c8\ub2e4. \uc81c\uac70\ud558\uace0 \ucd5c\uc2e0 \ubc84\uc804\uc744 \uc124\uce58 \ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\ucd08___\uc554\ud638\ud654\ub41c \uc804\uc1a1___\uc554\ud638\ud654___\ubcf4\ud638 \uc2dc\uc791___SSL \uc99d\uba85\uc11c \uc624\ub958___\uc791\uc5c5\ucc3d \ud480\uae30___- \uc798\ubabb\ub41c IP \uc8fc\uc18c___Youtube \ub3d9\uc601\uc0c1___\ubaa8\ub450 \ubd99\uc5ec\ub123\uae30___\ud30c\uc77c \uc0ad\uc81c\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\uc775\uba85___\uc568\ubc94___\ud3c9\uac00\ud558\uae30___\uc5f0\uacb0\uc911\u2026___APP___\uc124\uce58\ub428___\ubcf5\uc0ac___\uc124\uc815___\ud30c\uc77c \uc5f4\uae30 \uc2e4\ud328___\uc120\ud0dd\ud55c \ud30c\uc77c\uc744 \uc9c0\uc815\ud55c \ud3f4\ub354\uc5d0 \uc555\ucd95\ud480\uae30___\uc124\uce58 \uc2e4\ud328___\uc774\ubbf8\uc9c0___\ud604\uc7ac \uc9c4\ud589\uc0c1\ud0dc___\uae30\ud0c0___ES Downloader \ubb34\ud6a8\ud654___SD \uce74\ub4dc \uc800\uc7a5 \uacf5\uac04 \ubd80\uc871___\uc0c8 \ucc3d\uc5d0\uc11c \uc5f4\uae30___\uae30\ubcf8\uc124\uc815 \ubcf5\uc6d0___\ub77c\ubca8___\ubd84\uc11d___\uc571 \uc0ad\uc81c \ud6c4 \uad00\ub828 \ud3f4\ub354 \uc9c0\uc6b0\uae30___Chromecast\uc758 LAN \uc5f0\uacb0 \uc0c1\ud0dc \ud655\uc778\ud574 \ubcf4\uc138\uc694.___\uc7ac\uc0dd \ubaa9\ub85d \uc774\ub984\uc744 \uc785\ub825\ud558\uc138\uc694___\uc774\ubbf8\uc9c0\uac00 \uc5c6\uc2b5\ub2c8\ub2e4___\uad8c\ud55c___\uc5f0\uacb0___\ub124\ud2b8\uc6cc\ud06c \uc5f0\uacb0\uc911...___\ub124\ud2b8\uc6cc\ud06c \uc811\uadfc \ube44\ubc00\ubc88\ud638 \uc124\uc815___\ub3c4\uad6c \ubaa8\uc74c\uc5d0\uc11c \uc120\ud0dd \ub2e8\ucd94 \ud45c\uc2dc___100\uac1c\uc774\uc0c1\uc758 \ud30c\uc77c\uc740 \ud55c\uaebc\ubc88\uc5d0 \uacf5\uc720\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4___\ub4f1\ub85d___\uc120\ud0dd\ud55cAPKs \uc81c\uac70\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\uae30\ub85d___\uc571 \ubc31\uc5c5 \ub514\ub809\ud130\ub9ac:___\uc555\ucd95 \ud574\uc81c\u2026___\ud30c\uc77c \uc800\uc7a5\uc911 \uc624\ub958\ubc1c\uc0dd. \uc800\uc7a5\uc2e4\ud328.___\ubc88\uc5ed\uc790\ubd84\ub4e4\uaed8 \uc9c4\uc2ec\uc73c\ub85c \uac10\uc0ac\ub4dc\ub9bd\ub2c8\ub2e4___\ub85c\ub529 \uc2e4\ud328!___\ube44\ubc00\ubc88\ud638 \ubcf4\uae30___\ub3c4\uba54\uc778 \uc774\ub984\uc740 \ube44\uc5b4\uc788\uc744 \uc218 \uc788\uc2b5\ub2c8\ub2e4.___\ud14c\ub9c8\uc124\uc815 \ubcf5\uc6d0___\uc804\uccb4 \uc9c4\ud589 \uc0c1\ud0dc___\ub85c\ub529 \uc2e4\ud328!___\"%1$s\"\ub85c \ud30c\uc77c \ubc1b\uc74c___{0}\ubd81\ub9c8\ud06c \uc791\uc131 \uc2e4\ud328___FTP \uc11c\ubc84___\uc571 \ubc31\uc5c5\uc2dc \uc571\ub370\uc774\ud130 \ubc31\uc5c5___\uc2dc\uc2a4\ud15c \uc571 \uc81c\uac70___\uc11c\ubc84___\ud30c\uc77c \uc774\ub984___\uc5ec\uae30\uc11c \ubd99\uc5ec\ub123\uc744 \uc218 \uc5c6\uc74c___\ud734\uc9c0\ud1b5 \ud65c\uc131\ud654___\uacc4\uc815___\uc81c\uc870\uc5c5\uccb4:___\uc8fc\uc758!!! \uc2dc\uc2a4\ud15c \ud30c\uc77c\uc744 \ubcc0\uacbd\ud558\ub824\uba74 \uba3c\uc800 \uc2dc\uc2a4\ud15c \ub514\ub809\ud130\ub9ac\uc758 \uad8c\ud55c\uc774 \'\uc4f0\uae30 \uac00\ub2a5\' \uc73c\ub85c \uc124\uc815\ub418\uc5b4 \uc788\uc5b4\uc57c \ud569\ub2c8\ub2e4. \uc2dc\uc2a4\ud15c \ud30c\uc77c/\ud3f4\ub354\ub97c \ubcc0\uacbd\ud558\ub294 \uac83\uc740 \uc704\ud5d8\ud558\ub2c8 \uc2e0\uc911\ud558\uac8c \ubcc0\uacbd\ud558\uc2dc\uae30 \ubc14\ub78d\ub2c8\ub2e4!___\uc7ac\uc0dd\ubaa9\ub85d \uc0ad\uc81c___\uc778\ucf54\ub529 \uc124\uc815___\ud604\uc7ac \uacbd\ub85c___\ub124\ud2b8___\uc0c8 \uc5c5\ub370\uc774\ud2b8 \uc790\ub3d9 \ud655\uc778___\ud50c\ub7ec\uadf8\uc778%s \ub2e4\uc6b4\ub85c\ub4dc \uc2e4\ud328___\uc5f0\uacb0 \uc911\u2026___\ube44\ubc00\ud0a4\ub85c \ub85c\uadf8\uc778___\uc7ac\uc0dd\ubaa9\ub85d\uc5d0 \ucd94\uac00___\ud0d0\uc0c9 \uc911...___\uce90\uc2dc\ub41c \ub370\uc774\ud130\ub85c \uc571 \uc124\uce58___\ud3b8\uc9d1 \uc2e4\ud328!___\uc774\ub984 \ubcc0\uacbd \uc644\ub8cc %1$s___SSID,\ube44\ubc00\ubc88\ub294 \ube44\uc6cc\ub458\uc218 \uc5c6\uc2b5\ub2c8\ub2e4.___\ube44\ub514\uc624:___\uac70\ubd80___\uc791\uc5c5 \uc911... \uc7a0\uc2dc \ud6c4 \ub2e4\uc2dc \uc2dc\ub3c4\ud558\uc138\uc694___\ube44\ubc00\ubc88\ud638:___\ubd81\ub9c8\ud06c \ucd94\uac00___\uacbd\ub85c\uc5d0 \ubcf5\uc0ac\ud588\uc2b5\ub2c8\ub2e4___WI-FI \ub124\ud2b8\uc6cc\ud06c \uc811\uc18d___\ud604\uc7ac \ud3f4\ub354\uc5d0 \uad00\ub828\ub41c \uc571\uc544\uc774\ucf58 \ud45c\uc2dc\ub294 \ubb34\ud6a8\ud654\ub41c \uae30\ub2a5\uc785\ub2c8\ub2e4.\ud65c\uc131\ud654\ud558\uaca0\uc2b5\ub2c8\uae4c?___\uad8c\ud55c \ubcc0\uacbd \uc2e4\ud328___\uc885\ub8cc___\uc798\ubabb\ub41c \uc99d\uba85\uc11c\ub0a0\uc9dc\uc785\ub2c8\ub2e4___\uc9c0\uc6d0\ud558\uc9c0 \uc54a\ub294 \ubbf8\ub514\uc5b4 \uc720\ud615\uc785\ub2c8\ub2e4___\uba54\uc77c \uc8fc\uc18c\ub97c \uc815\ud655\ud558\uac8c \uc785\ub825\ud558\uc138\uc694___\uc18c\uc720\uc790:___\uc554\ud638\ud654 \uc54c\uace0\ub9ac\uc998\uc758 \uac15\ub3c4\ub294 \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4___\ubb38\uc11c:___\uacbd\uace0___\ubaa8\ub450 \uc120\ud0dd___\uba54\ub274___\ub2e4\uc2dc \ud45c\uc2dc\ud558\uc9c0 \uc54a\uae30___SD Card \ubd84\uc11d___\uc0c8\ub85c\uc6b4 \ub124\ud2b8\uc6cc\ud06c___\uc81c\uc2a4\uccd0 \uad00\ub9ac___LAN___\ub124\ud2b8\uc6cc\ud06c \uc885\ub8cc___\"%1$s\" \ubcf4\ub0c4___\uce74\ud14c\uace0\ub9ac___\ud3c9\uac00 \uc2e4\ud328___\uc7ac\uc0dd\ubaa9\ub85d \ub9cc\ub4e4\uae30___\ud3ec\ud2b8___Instagram\ub294 \uc5ec\uae30\uc11c \uc0ad\uc81c \uae30\ub2a5\uc744 \uc9c0\uc6d0\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4!___\uad00\ub9ac\uc790 \uc13c\ud130___\uc2dc\uc2a4\ud15c \ub514\ub809\ud130\ub9ac\uac00 \'\uc77d\uae30 \uc804\uc6a9\' \uc73c\ub85c \ub9c8\uc6b4\ud2b8\ub410\uc2b5\ub2c8\ub2e4___\uc791\uc5c5\ucc3d___\uadfc\ucc98\uc5d0 \uc788\ub294 \uc7a5\uce58 \uac80\uc0c9___\uc0ac\uc6a9\uc790 SSID(\uc774\ub984)___\uc8fc___\ud648 \ud398\uc774\uc9c0___ON___\uc601\ubb38\uc790\uc640 \uc22b\uc790___ES\ud30c\uc77c\ud0d0\uc0c9\uae30 \uc0ac\uc6a9\uc124\uba85\uc11c___\ubcf4\ub0b4\uae30___\ub204\uad6c\ub098(\uacf5\uac1c)___\ud074\ub9bd\ubcf4\ub4dc___\ubaa8\ub450 \ud655\ub300___%s \uc740/\ub294 \ube44\ub3d9\uae30\uc801 \uc791\uc131\ud558\uaca0\uc74c___\uc0ac\uc6a9\uc790 \uc560\ud50c\ub9ac\ucf00\uc774\uc158___\uc9c0\uae08\ubd80\ud130 Bluetooth \ubc1c\uacac\ub420 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4___\uacbd\ub85c:___\uc560\ud50c\ub9ac\ucf00\uc774\uc158 \uad00\ub9ac___APKs\uc124\ucc98 \uc2e4\ud328___\uc2dc\uc2a4\ud15c \ud30c\uc77c \uc4f0\uae30 \uac00\ub2a5___\ud50c\ub7ec\uadf8\uc778 %s \ub2e4\uc6b4\ub85c\ub4dc___\uc124\uc815\ud558\ub824\uba74 \ud074\ub9ad___\uc5c5\ub370\uc774\ud2b8 \uc790\ub3d9 \ud655\uc778___\uc800\uc7a5\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\uc124\uba85\uc744 \uc785\ub825\ud558\uc138\uc694___- \ubc29\ud654\ubcbd\uc5d0 \ub9c9\ud798___\uc7ac\uc0dd\ubaa9\ub85d\uc5d0\uc11c \uc0ad\uc81c___ES FTP \uc11c\ubc84 \uc2dc\uc791\ub428___\uacc4\uc0b0 \uc2e4\ud328___\uc790\uc138\ud788___\uc7a5\uce58___\ubc31\uc5c5 \uc885\ub958___\uc7a5\uce58\ub97c \uc120\ud0dd\ud574\uc11c \ubcf4\ub0b4\uae30___\ubaa8\ubc14\uc77c \uc0ac\uc9c4___\ubc14\ud0d5\ud654\uba74\uc5d0 \ucd94\uac00___\uc2dc\uc2a4\ud15c\uc758 \uc678\uc7a5 \uba54\ubaa8\ub9ac \uc4f0\uae30 \uae08\uc9c0 \ub54c\ubb38\uc5d0 \uc7a5\uce58\ub97c \ub8e8\ud305\ud558\uc154\uc57c \uc4f0\uae30\ub97c \ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.(http://code.google.com/p/android/issues/detail?id=67570\uc5d0\uc11c \ud655\uc778\ud560 \uc218 \uc788\uc74c)___\uc9c0\uae08 \uc7ac\uc0dd___ES FTP \uc11c\ubc84___\ub9c8\uc6b4\ud305\ub418\uc9c0 \uc54a\uc740 SDCard___\ube44\ubc00\ubc88\ud638 \uc785\ub825___\uc62c\ub9ac\ub294 \uc911...___\ub514\uc2a4\ud50c\ub808\uc774 \uc124\uc815___\uc0ac\uc6a9\uc790 \uc9c0\uc815 \uc568\ubc94 \uc124\uc815___\uc774 \uc870\uc791\uc740 \ud734\uc9c0\ud1b5 \ud3f4\ub354\ub97c \uc0ad\uc81c\ud560 \uac83\uc785\ub2c8\ub2e4.\ud734\uc9c0\ud1b5\uc744 \ube44\uc6b8 \uac83\uc774\uba70 \ubcf5\uc6d0\ud560 \uc218 \uc5c6\uc744 \uac83\uc785\ub2c8\ub2e4___\uc81c\uc2a4\uccd0 \uc124\uc815___\uc0c8 \uc5c5\ub370\uc774\ud2b8\uac00 \uc5c6\uc2b5\ub2c8\ub2e4.___\ubd84\ub958___\uacbd\ub85c___\uc6d0\uaca9 \uad00\ub9ac___\uacf5\uc720\ubc1b\uc740 \uc11c\ub958___\uc7ac\uc0dd\ubaa9\ub85d \uc791\uc131___\uc124\uc815 \uc2e4\ud328___\uc74c\uc545 \uac80\uc0c9___\ud30c\uc77c\uc744 \ubd88\ub7ec\uc624\ub294 \ub3d9\uc548 \uc7a0\uc2dc\ub9cc \uae30\ub2e4\ub9ac\uc138\uc694___\uc801\uc5b4\ub3c4 \ud558\ub098\uc758 {0} \uc744 \uc120\ud0dd\ud558\uc138\uc694___\ubc84\ub9ac\uae30___\ud234\ubc15\uc2a4___\ud638\uc2a4\ud2b8 \ud30c\uc77c \ubcc0\uacbd___PC\uc5d0\uc11c \ud578\ub4dc\ud3f0\uad00\ub9ac___\uc0ac\uc9c4 \ubc1c\uacac\ud560 \uc218 \uc5c6\uc74c___\uc555\ucd95 \uc2e4\ud328: {0}. \uc2dc\uc2a4\ud15c\uc5d0 \uc758\ud574 \uc911\ub2e8\ub418\uc5c8\uc2b5\ub2c8\ub2e4.___ ___\ud604\uc7ac \uacbd\ub85c___\ub354\uc774\uc0c1 \ubb3b\uc9c0 \uc54a\uc74c___\uc791\uc5c5\ucc3d \uc7a0\uadf8\uae30___\ud06c\uae30 \uc785\ub825___\uc5c5\ub370\uc774\ud2b8___\uc218\uc2e0___\uc2a4\uce94___\uc0c8 \ube44\ubc00\ubc88\ud638:___\uc554\ud638\ud654\ub41c \ud30c\uc77c \uc5c6\uc74c___\uc798\ubabb\ub41c \uc720\ud615\uc785\ub2c8\ub2e4. \ub2e4\uc2dc \ud655\uc778\ud558\uc138\uc694___USB\uc7a5\uce58 \uc5f0\uacb0 \uc2dc \uba54\uc2dc\uc9c0 \ud45c\uc2dc___\ubc31\uc5c5\uc744 \uc131\uacf5___\ubc84\ud2bc\uc744 \ud074\ub9ad\ud574\uc11c \uc11c\ub958\uc720\ud615\ub9ac\uc2a4\ud2b8\uc5d0\uc11c \uc9c0\uc6b0\uc138\uc694___FTP \uc11c\ubc84\ub85c \uc7a5\uce58 \uc811\uadfc___\ub124\ud2b8\uc6cc\ud06c \uc774\ub984, ID:___\uc554\ud638\ub41c \ud30c\uc77c\uc774 \ud3ec\ud568\ub418\uc5b4 \uc788\uc2b5\ub2c8\ub2e4.\uba3c\uc800 \uc554\ud638\ud654\ud574\uc57c \ubcf5\ud638\ud654\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4___\uba40\ud2f0 \uc2a4\ub808\ub4dc\uc640 \ub2e4\uc6b4\ub85c\ub4dc \uac00\ub2a5___\ud544\uc694\ud55c \uc6a9\ub7c9:___\uc18d\uc131___\ub2e4\uc74c \ubb38\uc790\ub294 \ucd9c\ub825 \uacbd\ub85c\uc5d0 \uc0ac\uc6a9\ub420 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4 * \\ \" *  : / ? | < >___{0} \u2026 ({1} items)\ub97c \uc0ad\uc81c\ud558\uaca0\uc2b5\ub2c8\uae4c?___\ubcc0\uacbd___%s \uc791\uc5c5\uc740 \uc644\ub8cc\ub418\uc5c8\uc2b5\ub2c8\ub2e4.___\ubcf5\uc0ac\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\ub85c\uceec\uc5d0\uc11c \uc7ac\uc0dd___\ube14\ub8e8\ud22c\uc2a4 \uacf5\uc720 \uacbd\ub85c:___\uc644\ub8cc___SSID \uae38\uc774\ub294 32\uc790\ub97c \ub118\uc744\uc218 \uc5c6\uc2b5\ub2c8\ub2e4.___Google Play___\uc124\uc815 \uc131\uacf5___192.168.1.100/\ub0b4 \uc11c\ub958___\uc554\ud638\ud654\ub420 \ud30c\uc77c \uc5c6\uc74c___\ud14c\ub9c8 \uc124\uc815___\ucd95\uc18c\ud310 \uadf8\ub9bc___\ubcf5\uc6d0 \ud560\uc218 \uc5c6\uc2b5\ub2c8\ub2e4.___\ubaa8\ub4e0 \uacbd\ub85c \ubcf5\uc0ac___\uc7ac\uc0dd \uc911\u2026___\ubaa8\ub450 \ubcf5\uc6d0___\uc778\uc99d \uc2e4\ud328. \uc0ac\uc6a9\uc790\uc774\ub984/\ube44\ubc00\ubc88\ud638\ub97c \uc218\uc815\ud558\uc138\uc694___\uc2dc\uc2a4\ud15c \uc124\uc815___\uc774\ub984 \uc785\ub825___\uc124\uce58 \uc131\uacf5___\ubc31\uc5c5, \ubcf5\uc6d0 \uc124\uc815___\ud30c\uc77c \uc774\ub984 \ubc14\uafb8\uae30 \uc644\ub8cc___\uc74c\uc545___\ud30c\uc77c \uc5f4\uae30___\uc9c0\uc6b0\uae30___%s \uc791\uc5c5\uc740 \uc6b4\uc601\ub418\uace0 \uc788\uc2b5\ub2c8\ub2e4.___\ud734\uc9c0\ud1b5 \uc124\uc815___\uac00\uc871___\uc2dc\uc2a4\ud15c\uc5d0\uc11c \uac80\uc0c9\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4___\uc0c8\ub85c\uc6b4 %s \uc11c\ubc84___\uc5c6\uc74c___\uc5c5\ub370\uc774\ud2b8 \ud655\uc778\uc911\u2026___\uc774\ubbf8\uc9d5___\ud30c\uc77c \uc774\ub984 \uc554\ud638\ud654___\ubaa8\ub378:___\ud30c\uc77c:___%1$s \uc5d0 \ud30c\uc77c \ubcf5\uc0ac___\uba3c\uc800 \ud14c\ub9c8\ub97c \ub2e4\uc6b4\ub85c\ub4dc\ud558\uc138\uc694___\ud734\uc9c0\ud1b5 \ube44\uc5c8\uc2b5\ub2c8\ub2e4___\ud569\uacc4:___\uc4f0\uae30\uac00\ub2a5:___\uc0ad\uc81c\ud560 \uc7a5\uce58\ub97c \ubd84\ub9ac\ud574\uc8fc\uc138\uc694___\uce74\ud14c\uace0\ub9ac \uc120\ud0dd___\ud3c9\uac00 \uc5c6\uc74c___\uc571:___\uc131\uacf5___\ud30c\uc77c\ub85c \uc9d1\uc5b4___\ub36e\uc5b4\uc4f0\uae30___\uba85\uc2dc\uc801___\ub2e4\uc74c \ubb38\uc790\ub294 \uc11c\ub958 \ud655\uc7a5\uc790 \uc774\ub984\uc5d0 \uc0ac\uc6a9\ub420 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4 * \\ \" *  : / ? | < >___Root\ud0d0\uc0c9\uae30 \ucf2c___FTP \ud638\uc2a4\ud2b8 \uc11c\ubc84___\uc2dc\uc2a4\ud15c \uc560\ud50c\ub9ac\ucf00\uc774\uc158___\ud3b8\uc9d1 \uc131\uacf5!___\uc554\ud638:___\uc8fc___\uacc4\uc0b0___\ud3c9\uac00\ud558\uae30___ES Zip \ubdf0\uc5b4___\ud30c\uc77c \uc774\ub984\uc744 \uc785\ub825\ud558\uc138\uc694___\ub178\ub798 \uac80\uc0c9\uc911\u2026___\ub2e4\uc6b4\ub85c\ub4dc \uc644\ub8cc___\uc554\ud638 \uae38\uc774\uac00 \uc798\ubabb\ub410\uc2b5\ub2c8\ub2e4. (6~34 \uae00\uc790)___\uc11c\ubc84 \ud3b8\uc9d1___\uc804\ubd80 \ub2eb\uae30___\uc5d0 \ucd94\ucd9c___FTP \uc11c\ubc84 \ubc14\ub85c \uac00\uae30 \ub9cc\ub4e4\uae30___\uc18d\uc131 \ud45c\uc2dc\ud558\uae30___\uc11c\ub958\uc720\ud615 \uc124\uc815___\uc2e0\ud638 \uac15\ub3c4___\ud56d\ubaa9\uc218:___\uc571 \uc124\uce58\ub41c \ud6c4 \uacf5\uac04 \ubd80\uc871\ud558\uba74 \uacbd\uace0 \ud45c\uc2dc___\ud074\ub77c\uc6b0\ub4dc___ES FTP \uc11c\ubc84 \uc885\ub8cc\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\uc9c4\ud589 \uc0c1\ud0dc___\ubc31\uc5c5\ub418\uc9c0 \uc54a\uc740 \uc571___\uc791\uc5c5\ucc3d \uc5f4\uae30 - %1$s___\uc624\ub958, \ub124\ud2b8\uc6cc\ud06c \ubc1c\uacac\ud560 \uc218 \uc5c6\uc74c___ %1$s\uc0ad\uc81c\ub428___\uc2dc\uac04___\uc571\uc744 \uad00\ub828\ud574\uc11c \ud3f4\ub354\uc5d0 \uc571\uc544\uc774\ucf58 \ud45c\uc2dc\ud558\uae30___\uc778\uae30___\uc791\uc5c5 \uad00\ub9ac\uc790___\uc81c\uac70 \uc131\uacf5___\uc798\ub77c\ub0b4\uae30___\ud30c\uc77c\ud655\uc7a5\uc790\ub97c \ubc14\uafc0 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4___\uc7a0\uc2dc\ub9cc \uae30\ub2e4\ub824\uc8fc\uc138\uc694.\u2026___\uc54c\uc218\uc5c6\uc74c___\uc11c\ubc84___\uae30\ud0c0___\uc7a0\uc2dc \uae30\ub2e4\ub9ac\uc138\uc694...___\uc0ad\uc81c___\ub85c\uceec___\ub0a0\uc9dc \uc785\ub825___Bluetooth \uc124\uce58___\uc120\ud0dd \uc5f4\uae30___\ucde8\uc18c___\uc911\uc9c0___\uac80\uc0c9 \uac00\ub2a5___\ud30c\uc77c \uc774\ub984\uc740 \ube44\uc6cc\ub458 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4___\ubaa8\ub450 \uc811\uc5b4\ub450\uae30___\ub354 \ub9ce\uc740 \uc5b4\ud50c___\ud3f4\ub354 \uc5f4\uae30 - %1$s___\uae30\ubcf8___\ucef4\ud4e8\ud130___\uace0 \ud6a8\uc728, \ube60\ub978 \uc2a4\ud06c\ub864___\ud14c\ub9c8___\uc774 \uc7a5\uce58\uc758 \uc2dc\uc2a4\ud15c \ub514\ub809\ud130\ub9ac\uc5d0\uc11c \uc555\ucd95/\uc555\ucd95\ud574\uc81c \ubd88\uac00___\ub9c8\uc6b4\ud2b8 \ud574\uc81c \uc2e4\ud328___\ub354 \ub9ce\uc740 \uc628\ub77c\uc778 \ud14c\ub9c8___\uc74c\uc545 \ucd94\uac00 \uc644\ub8cc___\uc0ad\uc81c\ud6c4 \ub9ac\ubaa8\ud2b8 \ud30c\uc77c\uc740 \ubcf5\uc6d0\ub420 \uc218 \uc5c6\uc744 \uac83\uc785\ub2c8\ub2e4___\uc5f0\uacb0\ub428. ID:___\uc774 \ubbf8\ub514\uc5b4\ub294 \uc2a4\ud2b8\ub9ac\ubc0d\uc744 \uc9c0\uc6d0\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc804\uc1a1 \uc644\ub8cc \ud6c4 \uc790\ub3d9\uc73c\ub85c \ud50c\ub808\uc774\uc5b4\uac00 \uc2dc\uc791\ub429\ub2c8\ub2e4___\uc54c\uc218\uc5c6\ub294 \uc7a5\uce58 \ud30c\uc77c\uc740 \ud734\uc9c0\ud1b5\uc73c\ub85c \uc62e\uae38 \uc218 \uc5c6\uc73c\uba70 \uc0ad\uc81c \ud6c4\uc5d0 \ubcf5\uc6d0\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4___\uc6b0\ub9ac\uc5d0\uac8c \uc774\uba54\uc77c \ubcf4\ub0b4\uc8fc\uae30___\uc778\uc99d \ucf54\ub4dc\uac00 \ud2c0\ub9bd\ub2c8\ub2e4___\uc774\uba54\uc77c\uc571 \uc2dc\uc791 \uc548 \ub428___\uc228\uae34 \ubaa9\ub85d\uc911\uc758 \uc790\ub8cc\ub97c \ubcf4\ud638\ud558\uae30 \uc704\ud574 \ube44\ubc00\ubc88\ud638 \ucf1c\uae30___\uae30\uae30\uc5d0 \uc124\uce58___\ud50c\ub9ac\ucee4___\uc0ad\uc81c\u2026___\uc774 \uc791\uc5c5\uc740 \uc9c0\uc6d0\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4.___\uc0ac\uc9c4___\uc124\uc815 \ud30c\uc77c:___\uc810\ud504___USB \uc5f0\uacb0 \uba54\uc2dc\uc9c0___\uc791\uc131\uc911\u2026___\uacbd\ub85c \uc0dd\uc131 \uc2e4\ud328___\ud30c\uc77c{0} \ubcf5\uc0ac \uc2e4\ud328___\ucd94\uac00___\ube44\ubc00\ubc88\ud638\ub294 8\uc790 \uc774\uc0c1\uc73c\ub85c \ud574\uc57c\ud569\ub2c8\ub2e4.___\ud754\ub4e4\uae30 \uc608\ubbfc\ub3c4___ ___\uc18d\ub3c4___\uc6a9\ub7c9\uc774 \ubd80\uc871\ud569\ub2c8\ub2e4___sdcard\uc5d0 \uc124\uce58___\"\ud558\uc704 \ub514\ub809\ud1a0\ub9ac\ub85c \ubcf5\uc0ac\ud560\uc218 \uc5c6\uc2b5\ub2c8\ub2e4.\"___\uc218\uc815:___\ubaa8\ub4e0 \ube48\uce78\uc5d0 \uac12\uc744 \uc785\ub825\ud558\uc138\uc694.___\ud655\uc7a5\uc790 \ubcc0\uacbd___\uccb4\ud06c\uc12c {0} \uc740 {1} \ud30c\uc77c\uc5d0 \uc800\uc7a5\ub418\uc5c8\uc2b5\ub2c8\ub2e4___\ube14\ub799___\uc0ac\uc6a9\ud55c \uc81c\uc2a4\uccd0\uc785\ub2c8\ub2e4.\ub2e4\ub978 \uc81c\uc2a4\uccd0\ub97c \uc2dc\ub3c4\ud558\uc138\uc694___\ubc31\uc5c5\ub41c \uc571___\uc778\uc99d\ud398\uc774\uc9c0 \ub85c\ub529\uc911\u2026___\uc7ac\uc0dd \ubaa9\ub85d___\ub514\ub809\ud1a0\ub9ac \uc124\uc815___\ub274\uc2a4___\uc90c___\ub370\uc774\ud130 \uc5c5\ub370\uc774\ud2b8 \uc2e4\ud328___\ucd9c\ub825 \uacbd\ub85c\ub294 /sdcard/ \ub85c \uc2dc\uc791\ud574\uc57c \ud569\ub2c8\ub2e4___\uc81c\uc2a4\uccd0 \uc120\ud0dd___\ud55c\ubc88\uc5d0 \uc124\uce58___\ub300\uae30\uc911___\ub370\uc774\ud130\ub97c \uc0ad\uc81c\ud558\uba74 \ubcf5\uc6d0\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4___\ud06c\uae30___\uc2dc\uc2a4\ud15c \uc0c8\ub85c\uace0\uce68___\uc2ac\ub77c\uc774\ub4dc___\uacbd\ub85c \uc120\ud0dd___\uc124\uba85___\ube14\ub8e8\ud22c\uc2a4 \uacf5\uc720 \uacbd\ub85c___\ud30c\uc77c \uc720\ud615 {0}\uc740 \uc9c0\uc6d0\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4!___\ud734\uc9c0\ud1b5\uc5d0 \ub123\ub294 \ub300\uc2e0\uc5d0 \uc601\uad6c\uc0ad\uc81c___\ucd5c\ub300 12\uac1c\uc758 \uc791\uc5c5\ucc3d\uc744 \uc5f4\uc218 \uc788\uc2b5\ub2c8\ub2e4.___\ub124\ud2b8\uc6cc\ud06c \uc0c1\ud0dc___WLAN \uc2e4\ud589___\uc0ac\uc6a9 \uacf5\uac04:___\uc7ac\uc0dd\ubaa9\ub85d\uc5d0 \uc800\uc7a5___\uc5ec\uae30\uc11c \uac80\uc0c9 \ubd88\uac00___\ud50c\ub808\uc774\ub9ac\uc2a4\ud2b8 \uc0ad\uc81c___\uc9c0\uae08 \uc7ac\uc0dd\uc911___\uc791\uc5c5 \uc2e4\ud328___\ubc14\ub85c\uac00\uae30 \ub9cc\ub4e4\uae30___\ubcf5\uc218 \uc791\uc5c5\ucc3d___\uc804___\uc791\uc5c5\ucc3d___\uc8fc\ubcc0\uc7a5\uce58___\uc815\uc758\ub41c \uc81c\uc2a4\uccd0\uac00 \uc5c6\uc74c___\uc774\ub984: %s___\uc0c8\ub85c\uc6b4 SFTP___\uc560\ud50c\ub9ac\ucf00\uc774\uc158___\uc5f4\uae30___\uce90\uc2dc\ub41c \ub370\uc774\ud130 \ubcf5\uc6d0___\uc804\uc1a1\uc911\u2026___\ud655\uc778___\ub124\ud2b8\uc6cc\ud06c \uc5f0\uacb0___\ub124\ud2b8\uc6cc\ud06c\uc5d0 \uc811\uc18d\ud560\uc218 \uc788\uc2b5\ub2c8\ub2e4.___\ub2ec___\uc774 \uc791\uc5c5\uc740 \uc9c0\uc6d0\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4.___\ub2e4\uc6b4\ub85c\ub4dc \ud398\uc774\uc9c0___\ud655\uc778___\ud55c\ubc88 \ub354 \ub204\ub974\uc2dc\uba74 \uc885\ub8cc\ub429\ub2c8\ub2e4.___\ube14\ub8e8\ud22c\uc2a4\uac00 \ud65c\uc131\ud654\ub418\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4___\ud3b8\uc9d1\ud558\ub824\uba74 \ud074\ub9ad, \ube44\uc5b4 \uc788\uc744 \uc218 \uc788\uc74c.___\uc77c\ubd80 \ubaa8\ub4c8\uc740 \ubc1c\uacac\ub420 \uc218 \uc5c6\uc5b4\uc11c \ubaa8\ub4e0 \uae30\ub2a5\uc744 \uc0ac\uc6a9\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. \uac80\uc0c9\ud574\uc11c \uc124\uce58\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\uc544\ub2c8\uc694___\uc6f9 \uac80\uc0c9___\uc0ad\uc81c\ub41c \ud30c\uc77c\uc744 \ubcf5\uc6d0\ud558\uae30 \uc704\ud574 \ud30c\uc77c\uc744 \ud734\uc9c0\ud1b5\uc5d0 \ub123\uae30___\ubaa8\ub4e0 \ub178\ub798___{0} \uc791\uc131\ub418\uc5c8\uc2b5\ub2c8\ub2e4___\ud56b\uc2a4\ud31f \ub124\ud2b8\uc6cc\ud06c___\uc0ac\uc9c4 \uc798\ub77c \ub0b4\uae30___\ube14\ub8e8\ud22c\uc2a4 \ud504\ub85c\ud1a0\ucf5c \uc81c\uc57d\ub54c\ubb38\uc5d0 \ud30c\uc77c/\ud3f4\ub354\uc758 \uc774\ub984\uc744 \ubcc0\uacbd\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4___ ___\ubcf4\uae30___\ubaa9\ub85d\uc5d0\uc11c \uc0ad\uc81c___\uc7ac\uc0dd \ubaa9\ub85d \uc800\uc7a5 \uc644\ub8cc___\uce90\uc2dc \ubcf5\uc6d0 \uc644\ub8cc___ES \ud30c\uc77c \ud0d0\uc0c9\uae30___\ud30c\uc77c\ub0b4\uc6a9 \ub85c\ub529\uc911 \uc624\ub958\ubc1c\uc0dd:___\uc560\ud50c\ub9ac\ucf00\uc774\uc158 \uad00\ub9ac___\ud30c\uc77c{0} \uc5f4\uae30 \ucde8\uc18c\ub428___\uac1c\uc778\ud0a4___\uc774\ub984\ubc14\uafb8\uae30___\uc2dc\uc2a4\ud15c \ub514\ub809\ud130\ub9ac\uac00 \'\uc4f0\uae30 \uac00\ub2a5\' \uc73c\ub85c \ub9c8\uc6b4\ud2b8\ub410\uc2b5\ub2c8\ub2e4___\uc7ac\uc0dd___\ud30c\uc77c \uc804\uc1a1___\uacbd\ub85c:___\ub0b4\ubd80 \uc800\uc7a5 \uc7a5\uce58___\ub85c\uadf8\uc778___\uac04\ud3b8 \ubcf4\uae30\uc5d0\uc11c \uc81c\uc2a4\uccd0\ub97c \ucd94\uac00\ud558\uac70\ub098 \ucde8\uc18c\ud558\uc138\uc694___\uc7ac\uc0dd \ubaa9\ub85d \uc800\uc7a5 \uc2e4\ud328___\ud754\ub4e4\uc5b4\uc11c \ub178\ub798 \uc784\uc758\uc7ac\uc0dd___\ub514\uc2a4\ud06c___\ub0a0\uc528___\ube14\ub8e8\ud22c\uc2a4___%1$s \uc5d0 \ud30c\uc77c \uc774\ub3d9___\uacbd\ub85c \uc5f4\uae30___\uc6d0\ubcf8 \ud30c\uc77c\uc774\ub984___\ub2e4\uc6b4\ub85c\ub4dc \uc7ac\uc2dc\uc791___ ___\uc5c6\uc74c___\ub85c\uadf8\uc544\uc6c3___ES \ubbf8\ub514\uc5b4 \ud50c\ub808\uc774\uc5b4___\uc774\ub984___\ud56b\uc2a4\ud31f___ ___\uacb0\ud569___\uc778\ucf54\ub529:___\uc11c\ube44\uc2a4 \uc124\uc815\uc744 \ud55c\ud6c4 \uc7a5\uce58\ub97c \ud1b5\ud574 PC\ub97c \uad00\ub9ac \ud560\uc218 \uc788\uc2b5\ub2c8\ub2e4___\ubd88\uc77c\uce58\ud55c \uc99d\uba85\uc11c ID\uc785\ub2c8\ub2e4___\ub2eb\uae30___\uc0ac\uc6a9\uc790 AP \uace0\uc815___\ubaa8\ub984___\ub2e8\uccb4___\uc5ec\uae30\uc11c \uc791\uc131 \ubd88\uac00___\uc8c4\uc1a1\ud569\ub2c8\ub2e4. \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc740 OTG USB \uc7a5\uce58 \ud3ec\ub9f7\uc785\ub2c8\ub2e4. \uc9c0\uae08 FAT32\uc640 NTFS\ub9cc \uc9c0\uc6d0\ub429\ub2c8\ub2e4.___APK \uc81c\uac70\ub428___\uc800\uc7a5\ub418\uc9c0 \uc54a\uc740 \ubaa9\ub85d___\uc555\ucd95___\uae30\ubcf8 \uc791\uc5c5\ucc3d\uc73c\ub85c \ucd94\uac00___\uc555\ucd95 \ub808\ubca8___\ubc84\ud2bc\uc744 \ud074\ub9ad\ud574\uc11c \uae30\ubcf8\uc791\uc5c5\ucc3d\uc5d0\uc11c \uc9c0\uc6b0\uae30___\uc120\ud0dd\ud55c \uacc4\uc815\uc5d0\uc11c \ub85c\uadf8 \uc544\uc6c3 \ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\ud648\ud398\uc774\uc9c0\uc5d0 \uac80\uc0c9\uc5d4\uc9c4 \ud45c\uc2dc___- SMB \uc11c\ubc84\uac00 \ub124\ud2b8\uc6cc\ud06c \ubc94\uc704 \ubc16\uc5d0 \uc788\uc74c___{0}%\uc774\uc0c1\uc758 \uc0ac\uc6a9\uc790\ub4e4\uc740 \uc774 \uc571\uc744 \uc120\ud0dd\ud568___\uc800\uc7a5 \uc2e4\ud328___\uc791\uc131\uc77c:___\uc11c\ubc84 \ud3b8\uc9d1___\ubca8 \uc18c\ub9ac\ub85c \uc124\uc815___Root \ub514\ub809\ud1a0\ub9ac \uc124\uc815___Chromecast___\ud3f4\ub354{0}\ub97c \ud734\uc9c0\ud1b5\uc73c\ub85c \uc62e\uae30\uaca0\uc2b5\ub2c8\uae4c?___\uae30\ub85d \uc815\ub9ac___\ud3c9\uac00 \uc131\uacf5___\ud30c\uc77c\uc744 \ud734\uc9c0\ud1b5\uc5d0 \ub123\uae30___%1$s\ub294 %2$s\ub85c \ube44\ub3d9\uae30\uc801 \ubcc0\uacbd\ub418\uaca0\uc2b5\ub2c8\ub2e4___\uff0c\uc804\uccb4\ud06c\uae30: %s___\uc120\ud0dd\ud55c \uc571 \uc911\uc5d0 \uc2dc\uc2a4\ud15c \uc571\uc774 \ud3ec\ud568\ub418\uace0 \uc788\uc2b5\ub2c8\ub2e4. \uc124\uc815\uc758 Root \uc775\uc2a4\ud50c\ub85c\ub7ec \uc635\uc158\uc744 \ud65c\uc131\ud654\ud558\uc138\uc694___\ucd94\ucc9c___\uc7ac\uc0dd\ud560 \uc218 \uc5c6\ub294 \ub179\uc74c\uc785\ub2c8\ub2e4___\uae30\ubcf8 \uc571 \uc124\uc815\uc774 \uc7ac\uc124\uc815\ub429\ub2c8\ub2e4___\uc55e\uc73c\ub85c ___\uc218\uc2e0\uac70\ubd80 \ub418\uc5c8\uc2b5\ub2c8\ub2e4___\uc9c0\uae08 \ub2e4\uc6b4\ub85c\ub4dc___\uc0ac\uc6a9 \uac00\ub2a5\ud55c \uc571\uc774 \uc5c6\uc2b5\ub2c8\ub2e4___\uc804\uc1a1\ud558\uae30___\uc0c8\ub85c\uc6b4 \ud14c\ub9c8\ub97c \ub2e4\uc6b4\ub85c\ub4dc\ud558\uc138\uc694___zip___\ud5c8\uac00\uac00 \ub9cc\ub8cc\ub418\uc5c8\uc2b5\ub2c8\ub2e4. \ub2e4\uc2dc \ub85c\uadf8\uc778\ud558\uc2ed\uc2dc\uc624___apk \uc790\ub3d9 \uc124\uce58/\uc81c\uac70___\ubcf5\ud638\ud654\ud558\uae30___\ud734\uc9c0\ud1b5\uc774 \ubc14\uc069\ub2c8\ub2e4___\ud754\ub4e4\uae30___\ud06c\uae30___%1$s\ub2d8\uc758 \uacf5\uc720 \ud30c\uc77c\uc744 \ub4dc\ub9ac\uaca0\uc2b5\ub2c8\ub2e4. \ub9c1\ud06c\ub97c \ud074\ub9ad\ud574\uc11c \ub2e4\uc6b4\ub85c\ub4dc\ud558\uc2ed\uc2dc\uc624: %2$s___\uc791\uc5c5___\uc0ac\uc6a9:___OBEX FTP \uc11c\ube44\uc2a4\uac00 \uc2dc\uc791\ub418\uc5c8\uc2b5\ub2c8\ub2e4. \uc774\uc81c \ub2e4\ub978 \ube14\ub8e8\ud22c\uc2a4 \uc7a5\uce58\uc640 \ud30c\uc77c\uc744 \uc804\uc1a1\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.___\ub3d9\uc601\uc0c1 \uac80\uc0c9___\ub2e4\uc6b4\ub85c\ub4dc \uad00\ub9ac \uc124\uc815___\ub9ac\ud3ec\ud2b8___\ud30c\uc77c___\uc804\uc1a1\uc911___\uc811\uc18d\ub41c \ub124\ud2b8\uc6cc\ud06c: SSID is___\ud14c\uc2a4\ud2b8___\uc18d\uc131___ES \ud3b8\uc9d1 \ub178\ud2b8___SD \uce74\ub4dc \uc120\ud0dd___\uc798\ubabb\ub41c \uc2dc\uc2a4\ud15c \uc2dc\uac04\uc785\ub2c8\ub2e4. \uc218\uc815\ud558\uc138\uc694___\ubc30\uacbd \ud654\uba74\uc73c\ub85c \uc124\uc815___\uc774 \ud30c\uc77c\uc744 sdcard\ub85c \ubcf5\uc0ac\ud574\uc11c \uc554\ud638\ud480\uc73c\uc138\uc694___\uc81c\uc2a4\uccd0\uac00 \uc2dc\uc791\ud558\ub294 \uc704\uce58\uae4c\uc9c0 \ub04c\uc73c\uc138\uc694.___\ud0dc\uc2a4\ud06c \uc13c\ud130___AP \uc124\uc815___\uc0ac\uc6a9\uac00\ub2a5\ud55c \uc6a9\ub7c9:___\ud30c\uc77c \uac80\uc0c9___\uc7ac\uc0dd \ubaa9\ub85d \uc0ad\uc81c___\uc5b8\uc5b4 \uc120\ud0dd___\ub514\ub809\ud1a0\ub9ac \ud06c\uae30:___\uc885\ub8cc \uc608\uc815___\uc0ad\uc81c\ub420 \uc218 \uc5c6\uc74c___\uc774\ub984\uc744 \ube44\uc6b0\uba74 \uc548 \ub429\ub2c8\ub2e4___\uc2a4\uce94\ud574\uc11c \uc7a5\uce58\ucc3e\uae30___\ube44\ub514\uc624\ub97c \uc0ad\uc81c\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___%s\ubaa8\ub4e0 \uc791\uc5c5\uc744 \uc0ad\uc81c\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\ud50c\ub7ec\uadf8\uc778%s \ub2e4\uc6b4\ub85c\ub4dc\uc911\u2026___\ucd08\uae30 \uc791\uc5c5\ucc3d \uc120\ud0dd___\uc11c\ubc84___\uc571 \uac80\uc0c9___\uac80\uc0c9\uc911\u2026___\ubc31\uc5c5\u2026___\uc0ac\uc9c4 \uacf5\uc720\uac00 \uac00\ub2a5\ud55c \uc571 \uc5c6\uc74c___\uc81c\ubaa9\uc744 \uc785\ub825\ud558\uc138\uc694___\ub2e4\uc6b4\ub85c\ub4dc \ub0a0\uc9dc:___UID \uc124\uc815___{0} \uc774 \ubcf5\uc0ac\ub418\uc5c8\uc2b5\ub2c8\ub2e4___\uc704\uce58___\uacc4\uc0b0\uc911\u2026___\uc6f9 \uae30\ub85d \ubcf4\uad00\uc18c___\ube44\ubc00\ubc88\ud638 \uc124\uc815___\uc874\uc7ac\ud55c \ud30c\uc77c\uc785\ub2c8\ub2e4.\ub36e\uc5b4\uc4f0\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\uc624\ub958, \ud30c\uc77c \ub108\ubb34 \ud07d\ub2c8\ub2e4___\ud06c\uae30: %s___\ub2e4\uc74c \ubb38\uc790\ub294 \ud30c\uc77c \uc774\ub984\uc5d0 \uc0ac\uc6a9\ub420 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4 * \\ \" *  : / ? | < >___\ud328\ud0a4\uc9c0 \uc774\ub984:___\ube44\ubc00\ubc88\ud638\ub294 \uc9c0\uc6cc\uc84c\uc2b5\ub2c8\ub2e4. \ubcf4\ud638\ub294 \uc911\uc9c0\ub418\uc5c8\uc2b5\ub2c8\ub2e4..___\uae30\ubcf8 \uc791\uc5c5\ucc3d \uc124\uc815___\uc720\ud615___\ub2e4\uc6b4\ubc1b\uc744\ub9cc\ud55c___\ub124\ud2b8\uc6cc\ud06c \uc5f0\uacb0___\ub2e4\uc6b4\ub85c\ub4dc \uc8fc\uc18c\uac00 \ubcf5\uc0ac\ub418\uc5c8\uc2b5\ub2c8\ub2e4.___\uc0ac\uc6a9\uc790 AP\ube44\ubc00\ubc88\ud638(8\uc790)___\uc18c\uc720\uc790:___\ubcf4\ud1b5___APK \uc81c\uc11c \uc2e4\ud328___\ub124\ud2b8\uc6cc\ud06c \uad6c\ucd95___IP \uc8fc\uc18c \ub610\ub294 IP \uc8fc\uc18c/\uacf5\uc720\ub41c \ud3f4\ub354___\uae30\ub85d\uc5d0\uc11c sd card \uce74\ub4dc \uc6a9\ub7c9 \ud45c\uc2dc___\ubb38\uc790 \ubcc0\uacbd___Remote Servers___\ud574\ub2f9 \uc790\ub8cc \uc811\uadfc \ubd88\uac00___\ud30c\uc77c___\uc624\ub514\uc624:___Wi-Fi \ud56b\uc2a4\ud31f___\ud3ec\ud2b8 \uc124\uc815(1025 \u2013 65534)___\uc218\ub3d9___\uc11c\ub958 \uc124\uc815___\ud648 \ub514\ub809\ud1a0\ub9ac \uacbd\ub85c___{0} \u2026 ({1} items)\uc0ad\uc81c\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___File/SD___\uc791\uc5c5\uc774 \uc644\ub8cc\ub418\uc5c8\uc744 \ub54c \uc54c\ub9bc\uc744 \ub2eb\uae30___Chromecast___\uc774\ubbf8 \uc874\uc7ac\ud55c \ubd81\ub9c8\ud06c\uc785\ub2c8\ub2e4.\uacb9\uccd0\uc4f0\uae30\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\uc555\ucd95 \ub808\ubca8:___\uc774 \ube44\ub514\uc624\ub97c \uc7ac\uc0dd\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4___\ub370\uc774\ud130 \ubc31\uc5c5___\uad00\ub9ac \uc124\uc815___\uc774\ub984\uc774 \uac19\uc740 \ud30c\uc77c\uc774 \uc774\ubbf8 \uc788\uc2b5\ub2c8\ub2e4___\uacc4\uc18d\u2026___\uc554\ud638\ud654\ud558\uae30___\uc885\ub8cc\uc2dc \ub2eb\uae30___\uac1c\uc778\uc124\uc815 \ubcc0\uacbd___\ud65c\uc131___\ubc14\uc774\ud2b8___\ud574\ub2f9 \ub124\ud2b8\uc6cc\ud06c \ub0b4\uc5d0\uc11c \ub2e4\ub978 \uc0ac\ub78c\uacfc \uc5f0\uacb0\ub420 \uc218 \uc788\uc2b5\ub2c8\ub2e4___\uc2dc\uc791 \ubc88\ud638___\uae30\uc874 \ud30c\uc77c\ub97c \ub36e\uc5b4\uc4f0\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\ub85c\ub529\uc911\u2026___\uc0c8\ub85c\uc6b4->\uc11c\ubc84\ub85c \uc11c\ubc84 \ucd94\uac00___\uc2e4\ud589___\ud30c\uc77c\uc744 \ucc3e\uc9c0 \ubabb\ud588\uc2b5\ub2c8\uae4c? \uae4a\uc740 \uac80\uc0c9\uc744 \uc2dc\ub3c4\ud558\uc138\uc694.___\ud53c\ub4dc\ubc31___\uc81c\uc11c \uc644\ub8cc___\uc0ac\uc9c4:___\uc555\ucd95\u2026___\ud734\uc9c0\ud1b5___ZIP \uc885\ub958\uc758 \ud30c\uc77c \uc548\uc5d0 ZIP \uc885\ub958\uc758 \ud30c\uc77c\uc774 \uc788\ub294 \uacbd\uc6b0 \uc5f4 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4___WLAN \uc5f0\uacb0 \uc0c1\ud0dc\uc744 \uac80\uc0ac\ud558\uc138\uc694!___\uc571 \uc2dc\uc791 - %1$s___ESFTP___ ___\uc2dc\uc2a4\ud15c\ud30c\uc77c\uc740 \uc0ad\uc81c \ud6c4\uc5d0 \ubcf5\uc6d0\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4___\ud30c\uc77c\uc744 \ucc3e\uc9c0 \ubabb\ud588\uc2b5\ub2c8\uae4c? \uc2dc\uc2a4\ud15c\uc744 \uc5c5\ub370\uc774\ud2b8\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c(\uc2dc\uc2a4\ud15c \ub530\ub77c \uc2dc\uac04\uac78\ub9b4 \uc218 \uc788\uc74c)?___\ud56b\uc2a4\ud31f \uc2e4\ud589\uc911...___\ucd94\ucc9c___\uc778\ucf54\ub529 \uc120\ud0dd___\uc571 \uc2dc\uc791___\uc0ac\uc6a9\uc790 \uc9c0\uc815 \ubc30\uacbd \ud654\uba74 \uc124\uc815___\ubc88\ud638___\ud604\uc7acAP\ub97c \uc0ac\uc6a9\ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4. SSID\ub294___\uc81c\uac70___\uc568\ubc94 \uc120\ud0dd___FTP___\ud5c8\uc6a9\ub418\uc9c0 \uc54a\ub294 \uc774\ub984\uc785\ub2c8\ub2e4. \ubcc0\uacbd\ud558\uc138\uc694___Sticky bit___\uce90\uc2f1___- SMB \uc11c\ubc84\uac00 \uaebc\uc9d0___\uc624\ub978\ucabd\uc73c\ub85c___\ud30c\uc77c \ud06c\uae30 \uacc4\uc0b0\ud558\uace0 \uc788\uc73c\ub2c8 \uae30\ub2e4\ub9ac\uc138\uc694___\ucd2c\uc601 \ub0a0\uc9dc:___\uc544\uc774\ub4e4___dir \uc811\uadfc \uc81c\ud55c___\ube44\ubc00\ubc88\ud638 \ud655\uc778 \uc2e4\ud328___Wi-Fi\uc5f0\uacb0 \ud655\uc778\ud558\uc138\uc694. \ud56b\uc2a4\ud31f\uc744 \ub9cc\ub4e4\uc5b4\uc11c \ub2e4\ub978 \uc0ac\ub78c\uc744 \uc694\uccad\ud558\uc154\ub3c4 \ub429\ub2c8\ub2e4.___\uc120\ud0dd___\uace0\uc815 AP\ub294 \uc0ac\uc6a9\ub420 \uc218 \uc5c6\uc74c___FTP \uc11c\ubc84\ub85c \uc7a5\uce58 \uc811\uadfc___\uac19\uc740 \uc774\ub984\uc758 \uc7ac\uc0dd \ubaa9\ub85d\uc774 \uc874\uc7ac\ud569\ub2c8\ub2e4___\uacf5\uc720___ ___\ud30c\uc77c \ubcf5\uc6d0___\uc228\uc9c4 \ubaa9\ub85d\uc740 \uc9c0\uc6cc\uc84c\uc2b5\ub2c8\ub2e4___\ubc14\ud0d5\ud654\uba74 \uc124\uc815___\uc624\ub514\uc624___\uc798\ubabb\ub41c \uc99d\uba85\uc11c\uc785\ub2c8\ub2e4___\uc0ad\uc81c \uc131\uacf5___\uc790\ub3d9 \uc5c5\ub370\uc774\ud2b8 \ubb34\ud6a8\ud654___ ___\uc5d0 \uc800\uc7a5___\ub9cc\ub4e4\uae30___\ub85c\uadf8\uc778 \uc2e4\ud328___Wi-Fi AP\ub294 \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4___\uc990\uaca8\ucc3e\uae30___\ud3f4\ub354\uc774\ub984\uc740 3\uc790 \uc774\uc0c1\uc5ec\uc57c \ud569\ub2c8\ub2e4___\ub514\ubc14\uc774\uc2a4___\ub3c4\uba54\uc778___\ub124\ud2b8\uc6cc\ud06c \uc624\ub958\uac00 \uc788\uc73c\ub2c8 \ub098\uc911\uc5d0 \ub2e4\uc2dc \uc2dc\ub3c4\ud558\uc138\uc694___\ud30c\uc77c \uc0ad\uc81c\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\uc54c\ub9bc \uc18c\ub9ac\ub85c \uc124\uc815___\uc81c\uac70\uc911___\ub124\ud2b8\uc6cc\ud06c___\uc2a4\uce94\ub41c \uc7a5\uce58___%s\ub2e4\uc6b4\ub85c\ub4dc \uc131\uacf5___\uc0ac\uc6a9\uc790 \uc774\ub984\uc744 \uc785\ub825\ud558\uc138\uc694!___\ub2e4\uc2dc \uc2dc\uc791\ud574\uc11c \ud30c\uc77c\uc744 \uc644\uc131\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\uc804\uc1a1\uc2e4\ud328: \ub124\ud2b8\uc6cc\ud06c\uc624\ub958\ub098 \uc218\uc2e0\uc790 \ucde8\uc18c___\uc120\ud0dd \ubc84\ud2bc \ud45c\uc2dc___\uace0\ucc28\uc801 \uc120\ud0dd___\ub124\ud2b8\uc6cc\ud06c___\uc885\ub8cc\uc2dc \uc0ac\uc6a9\uae30\ub85d \uc9c0\uc6b0\uae30___\ub4a4\ub85c___\uc774 \uace1\uc744 \ubca8 \uc18c\ub9ac\ub85c \uc124\uc815\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. \uba3c\uc800 \uc218\ub3d9\uc73c\ub85c \ub2e4\uc6b4\ub85c\ub4dc \ud558\uc138\uc694___\ub098\uc758 \uc0ac\uc9c4___\ud3f4\ub354\uc5d0 \uc544\uc774\ucf58 \ud45c\uc2dc___Mode___\uac00\uc218___\uc6d0\uaca9 \uad00\ub9ac___\uc704\uce58 \uc124\uc815___\uc0c8\ub85c\uc6b4___\uac1c\uc778 \uc124\uc815___\ube44\ubc00\ubc88\ud638\uac00 \ubcc0\uacbd\ub418\uc5c8\uc2b5\ub2c8\ub2e4.___\ud50c\ub7ec\uadf8\uc778%s \ub2e4\uc6b4\ub85c\ub4dc \uc2e4\ud328.\uc4f0\uae30 \ubd88\uac00\ub2a5\ud55c \ud50c\ub7ec\uadf8\uc778\uacbd\ub85c\uc785\ub2c8\ub2e4___\uc0c8 \ud328\ud0a4\uc9c0___\ud50c\ub808\uc774\uc5b4___\uc774 \uc791\uc5c5\uc744 \uc0ad\uc81c\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\ud604\uc7ac \uc778\ucf54\ub529:___OFF___\ubcf4\ub0b8___\ub3c4\uba54\uc778___\ub124\ud2b8\uc6cc\ud06c \ube44\ubc00\ubc88\ud638:___\uce90\uc2dc\ub41c \ub370\uc774\ud130\ub97c \ubcf5\uc6d0\ud558\uace0 \uc788\uc74c___\uae30\ud55c\uc744 \ub118\uae34 \uc2dc\ud5d8\ubc84\uc804\uc785\ub2c8\ub2e4. \uc0c8\ubc84\uc804\uc73c\ub85c \uc5c5\ub370\uc774\ud2b8\ud558\uc154\uc57c \ud569\ub2c8\ub2e4.___Facebook\ub294 \uc5ec\uae30\uc11c \uc0ad\uc81c \uae30\ub2a5\uc744 \uc9c0\uc6d0\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4!___\ub0a8\uc740 \uacf5\uac04:___\ub124\ud2b8\uc6cc\ud06c \uacbd\ub85c\ub97c \ucc3e\uc9c0 \ubabb\ud588\uac70\ub098 \uc2dc\uac04 \ucd08\uacfc\uc785\ub2c8\ub2e4. \ub2e4\uc2dc \uc2dc\ub3c4\ud558\uc138\uc694.___\uc568\ubc94\uc774\ub984\uc744 \ube44\uc6cc\ub458 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4___\uadf8\ub8f9 \ucc98\ub9ac \uc644\ub8cc___\ub2e4\uc6b4\ub85c\ub4dc \uc8fc\uc18c\ub97c \uc785\ub825 \ud574\uc8fc\uc2dc\uae30 \ubc14\ub78d\ub2c8\ub2e4.___\ucd94\uac00 \uc2e4\ud328. \ud3b8\uc9d1 \ubd88\uac00\ub2a5\ud55c \uc7ac\uc0dd\ubaa9\ub85d\uc785\ub2c8\ub2e4___%s\uc740/\ub294 \ubc1c\uacac\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4___\uc218\ub7c9___\ube44\ubc00\ubc88\ud638 \ud655\uc778:___\uc81c\ubaa9___\ubcf5\uc218 \uc774\ub984 \ubcc0\uacbd___ ___\uc885\ub8cc\uc911\u2026___{0}.{1} \uc555\ucd95 \uc911___\uc73c\ub85c \ud30c\uc77c \uc804\uc1a1___\uc561\uc158: %1$s___\uc601\ud654___From:___\uc608\uc678 \ubc1c\uacac!___\ubcf5\uc0ac___\uc5ec\uc2dc\uc11c \ud3c9\uac00\ub97c \uc785\ub825\ud558\uc138\uc694___\uacc4\uc18d\ud558\uaca0\uc2b5\ub2c8\uae4c?___\ubd84\uc11d___\uc9c0\uc815\ud55c \uacbd\ub85c\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. \uc0c8\ub85c \ub9cc\ub4dc\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___ ___\ub370\uc774\ud130 \ub124\ud2b8\uc6cc\ud06c \ubcf4\ud638___\uc5f0\uacb0\uc774 \ub2eb\ud614\uc2b5\ub2c8\ub2e4___U___\ud30c\uc77c\uc744 SD \uce74\ub4dc\uc5d0 \uc784\uc2dc\ub85c \uc800\uc7a5\ud55c \ud6c4\n\uc77d\uae30 \uc804\uc6a9\uc73c\ub85c \uc5fd\ub2c8\ub2e4___\uc7ac\uc0dd___\uac1c\uc778___\ud328\uc2a4\ud504\ub808\uc774\uc988___\uc77c\uc2dc\uc911\uc9c0___\uc554\ud638 \uae30\uc5b5\ud558\uae30___\uc774\ub3d9___\ub4a4\ub85c___\ub3c4\uad6c \uc124\uc815___Chromecast\ub85c \uc7ac\uc0dd\uc911___Windows \ubc84\ud2bc \ud45c\uc2dc___\ub370\uc774\ud130 \uc0ac\uc6a9\ub7c9\uc774 \ub9ce\uc544 \ubc30\ud130\ub9ac \uc18c\ubaa8\uac00 \ube60\ub985\ub2c8\ub2e4.___\uc791\uc5c5\ucc3d\uc744 \uc804\ubd80 \uc0ad\uc81c \ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___Wi-Fi\uc5f0\uacb0 \ud655\uc778\ud558\uc138\uc694!___\uc5f0\uacb0:___\uac00\uc218 \uac80\uc0c9___bluetooth \ud30c\uc77c\uc744 \uacf5\uc720\ud560 \uc218 \uc5c6\uc74c___\uc560\ud50c\ub9ac\ucf00\uc774\uc158 \ubc31\uc5c5___\uc0ac\uc6a9\uc790 AP\ub97c \ub79c\ub364___D___\uc6d0\ubcf8 \ud30c\uc77c\uc744 \uc0ad\uc81c\ud569\ub2c8\ub2e4.___\uc644\ub8cc___\ud734\uc9c0\ud1b5 \ud65c\uc131\ud654\ud558\uaca0\uc2b5\ub2c8\uae4c(\ud30c\uc77c\uc744 \uc0ad\uc81c \uc804 \ud734\uc9c0\ud1b5\uc5d0 \ub123\uae30)?___ES\ud30c\uc77c\ud0d0\uc0c9\uae30 \uc811\uadfc\ube44\ubc00\ubc88\ud638 \uc124\uc815___\uc720\ud615:___\uc0c8\ub85c\uc6b4 FTP___\uce90\uc2dc \ub370\uc774\ud130 \uc0ad\uc81c \uc644\ub8cc___\uae30\ubcf8 \uc560\ud50c\ub9ac\ucf00\uc774\uc158___\uc120\ud0c1\ud55c\ub300\ub85c \uc775\uba85\uc73c\ub85c \uc5c5\ub85c\ub4dc___\uc7ac\uc0dd\ubaa9\ub85d___sd card \uc6a9\ub7c9 \ud45c\uc2dc___\ud78c\ud2b8___\ub2e4\uc6b4\ub85c\ub4dc \uacbd\ub85c___\uc554\ud638\ud654(https)___\ube44\ubc00\ubc88\ud638 \uc785\ub825___\ubc14\ub85c \uac00\uae30___\uc2e4\ud589 \uc2e4\ud328, \ub2e4\ub978 \uc774\ub984\uc73c\ub85c \ud558\uc138\uc694.___\ubbf8\ub514\uc5b4 \ud30c\uc77c %1$s\uc744/\ub97c \uacf5\uc720\ub4dc\ub9ac\uaca0\uc2b5\ub2c8\ub2e4___ES \uc791\uc5c5 \uad00\ub9ac\uc790\uac00 \uc544\uc9c1 \uc124\uce58\ub418\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4.\n\nES \uc791\uc5c5\uad00\ub9ac\uc790\ub294 \ud504\ub85c\uc138\uc2a4 \uc885\ub8cc/\uc81c\uac70/\uc704\uc82f \uae30\ub2a5\uc744 \uc81c\uacf5\ud569\ub2c8\ub2e4.\n\n\uc124\uce58\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\uc0c8\ub85c\uc6b4 \ud3ec\ud2b8\ub97c \uc0ac\uc6a9\ud558\uc5ec \uc11c\ubc84\ub97c \ub2e4\uc2dc\uc2e4\ud589 \ud558\uc2ed\uc2dc\uc624___\ub9ac\ubaa8\ud2b8 \ub3d9\uae30\ud654___\ud604\uc7ac \uc791\uc5c5\uc744 \ucde8\uc18c\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\ud30c\uc77c\uc740 \ud734\uc9c0\ud1b5\uc73c\ub85c \uc62e\uae38 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4.\uacc4\uc18d\ud558\uaca0\uc2b5\ub2c8\uae4c?___\ubcf5\uc218 \uc6d0\uaca9 \ud30c\uc77c\uc744 \uacf5\uc720\ud560 \uc218 \uc5c6\uc74c___\uc790\ub8cc \uc811\uadfc\ud558\ub294 \ube44\ubc00\ubc88\ud638 \uc124\uc815___\uc0ac\uc6a9\uc790 \uc774\ub984___\uc815\ub82c___\uc704\uce58:___\ucd5c\uc2e0 \ubc84\uc804\uc73c\ub85c \uc5c5\ub370\uc774\ud2b8___\ub124\ud2b8\uc6cc\ud06c \uc5f0\uacb0___\ucd5c\uc885\uc811\uadfc\uc77c:___\uc5c5\ub370\uc774\ud2b8 \uc218\ub3d9 \ud655\uc778___\uc11c\ub958 \ud655\uc7a5\uc790 \uc774\ub984\uc740 \ube44\uc6cc\ub458 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4___\ub3c4\uad6c\ubaa8\uc74c\uc5d0 Windows\ubc84\ud2bc \ud45c\uc2dc___\uae30\ubcf8 \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \uc124\uc815 \ucd08\uae30\ud654___\uc774\uc804 \ube44\ubc00\ubc88\ud638:___\ubc31\uc5c5 dir:___\uc11c\ube44\uc2a4 \uc124\uc815\uc744 \ud55c\ud6c4 \uc7a5\uce58\ub97c \ud1b5\ud574 PC\ub97c \uad00\ub9ac \ud560\uc218 \uc788\uc2b5\ub2c8\ub2e4.___\uc791\uc5c5\uc774 \uc2e4\ud328\ud588\uc2b5\ub2c8\ub2e4___\uc5b8\uc5b4 \uc124\uc815___\ud3f4\ub354\"%s\"\uc740/\ub294 \uc11c\ubc84\ubaa9\ub85d\uc73c\ub85c \ucd94\uac00\ub428.___\ud30c\uc77c\uc740 \uc0ad\uc81c \ud6c4\uc5d0 \ubcf5\uc6d0\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4___\ub0a8\uc740 \uacf5\uac04:%s___\ud2b9\uc815\ud55c \uc11c\ubc84 \uacbd\ub85c \ub0b4\uc5d0\uc11c \ud30c\uc77c\uc744 \uac80\uc0c9\ud558\uc138\uc694___\ub4f1\ub85d \uc2e4\ud328___\ucc29\uc6a9\uac00\ub2a5___SD \uce74\ub4dc\uac00 \ube44\uc5c8\uac70\ub098, \ub9c8\uc6b4\ud2b8\ub418\uc9c0 \uc54a\uc558\uac70\ub098 \uc5c6\uc2b5\ub2c8\ub2e4___\uc555\ucd95___\ubcf5\uc6d0 \uc911\u2026___\uce90\uc26c \uc815\ub9ac"
+    const-string v2, "Num___\u0cb8\u0ca8\u0ccd\u0ca8\u0cc6 \u0ca8\u0cbf\u0cb7\u0ccd\u0c95\u0ccd\u0cb0\u0cbf\u0caf\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0caa\u0ccd\u0cb2\u0c97\u0ccd-\u0c87\u0ca8\u0ccd %s \u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cc1 \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0ca5\u0cc0\u0cae\u0ccd___\u0c95\u0cbe\u0cb0\u0ccd\u0caf\u0cbe\u0c9a\u0cb0\u0ca3\u0cc6 \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6! \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0cad\u0cbf\u0ca8\u0ccd\u0ca8\u0cb5\u0cbe\u0ca6 \u0cb9\u0cc6\u0cb8\u0cb0\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cb3\u0cb8\u0cbf___\u0c95\u0ca1\u0ca4\u0ca6 \u0cae\u0cbe\u0ca6\u0cb0\u0cbf {0} \u0cb8\u0ca7\u0ccd\u0caf\u0c95\u0ccd\u0c95\u0cc6 \u0cac\u0cc6\u0c82\u0cac\u0cb2\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cbf\u0cb2\u0ccd\u0cb2!___ %s \u0c95\u0cbe\u0cb0\u0ccd\u0caf\u0c97\u0cb3\u0cc1 \u0caa\u0cc2\u0cb0\u0ccd\u0ca3\u0c97\u0cca\u0c82\u0ca1\u0cbf\u0ca6\u0cc6.___\u0ca8\u0cbf\u0cae\u0ccd\u0cae \u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0cb8\u0c82\u0caa\u0ca8\u0ccd\u0cae\u0cc2\u0cb2\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb0\u0c95\u0ccd\u0cb7\u0cbf\u0cb8\u0cb2\u0cc1  \u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd \u0c86\u0ca8\u0ccd \u0cae\u0cbe\u0ca1\u0cbf___\u0c9f\u0cc2\u0cb2\u0ccd\u200d\u0cac\u0cbe\u0cb0\u0ccd\u200d \u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0c95\u0cbf\u0c9f\u0c95\u0cbf\u0c97\u0cb3 \u0cac\u0c9f\u0ca8\u0ccd\u200d\u0ca8\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___\u0cb5\u0cc0\u0ca1\u0cbf\u0caf\u0ccb\u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0cb9\u0cc1\u0ca1\u0cc1\u0c95\u0cc1___\u0ca1\u0cc6\u0cc2\u0cae\u0cc6\u0cd6\u0ca8\u0ccd \u0cb9\u0cc6\u0cb8\u0cb0\u0cc1, \u0c96\u0cbe\u0cb2\u0cbf \u0c87\u0cb0\u0cb2\u0cc2\u0cac\u0cb9\u0cc1\u0ca6\u0cc1___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0ca8\u0cbf\u0cb8\u0ccd\u0ca4\u0c82\u0ca4\u0cc1 \u0cb8\u0c82\u0caa\u0cb0\u0ccd\u0c95\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0caa\u0cb0\u0cbf\u0cb6\u0cc0\u0cb2\u0cbf\u0cb8\u0cbf!___\u0c85\u0ca8\u0cc1\u0cb5\u0cbe\u0ca6\u0c95\u0cb0\u0cbf\u0c97\u0cc6 \u0cb5\u0cbf\u0cb6\u0cc7\u0cb7 \u0ca7\u0ca8\u0ccd\u0caf\u0cb5\u0cbe\u0ca6\u0c97\u0cb3\u0cc1___\u0caa\u0ccd\u0cb2\u0c97\u0ccd-\u0c87\u0ca8\u0ccd %s \u0ca8\u0cb5\u0cc0\u0c95\u0cb0\u0cbf\u0cb8\u0cac\u0cc7\u0c95\u0cbe\u0c97\u0cbf\u0ca6\u0cc6, \u0ca8\u0cc0\u0cb5\u0cc1 \u0ca8\u0cb5\u0cc0\u0c95\u0cb0\u0cbf\u0cb8\u0cb2\u0cc1 \u0cac\u0caf\u0cb8\u0cc1\u0cb5\u0cbf\u0cb0\u0cbe?___\u0cb9\u0cc7\u0cb3\u0cbf\u0c95\u0cc6\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0caa\u0ccb\u0cb8\u0ccd\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cc1 \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0c88 \u0cb8\u0ca8\u0ccd\u0ca8\u0cc6\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cb3\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6, \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0cae\u0ca4\u0ccd\u0ca4\u0cca\u0c82\u0ca6\u0ca8\u0ccd\u0ca8\u0cc1 \u0caa\u0ccd\u0cb0\u0caf\u0ca4\u0ccd\u0ca8\u0cbf\u0cb8\u0cbf___\u0caa\u0cb0\u0cbf\u0cb6\u0cc0\u0cb2\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026___SD \u0c95\u0cbe\u0cb0\u0ccd\u0ca1\u0ccd \u0cb5\u0cbf\u0cb6\u0ccd\u0cb2\u0cc7\u0cb7\u0c95___ES \u0c85\u0ca8\u0cc1\u0cae\u0ca4\u0cbf \u0ca8\u0cbf\u0cb0\u0ccd\u0cb5\u0cbe\u0cb9\u0c95___\u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82 \u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb5\u0ccd\u0cb0\u0cc8\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cac\u0cb9\u0cc1\u0ca6\u0cc1___\u0cab\u0ccb\u0cb2\u0ccd\u0ca1\u0cb0\u0ccd___\u0caa\u0ccd\u0cb2\u0c97\u0ccd-\u0c87\u0ca8\u0ccd %s \u0ca8\u0cb5\u0cc0\u0c95\u0cb0\u0cbf\u0cb8\u0cc1___\u0c86\u0caf\u0ccd\u0c95\u0cc6\u0c97\u0cb3\u0cbf\u0c82\u0ca6 \u0cb9\u0cca\u0cb0\u0cb9\u0ccb\u0c97\u0cc1___\u0c86\u0cb5\u0cc3\u0ca4\u0ccd\u0ca4\u0cbf___\u0c87\u0ca8\u0ccd\u0ca8\u0cb7\u0ccd\u0c9f\u0cc1___\u0cb2\u0ccb\u0ca1\u0ccd\u200d \u0c86\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026___\u0cac\u0cbe\u0cb9\u0ccd\u0caf \u0cb8\u0c82\u0c97\u0ccd\u0cb0\u0cb9\u0ca3\u0cc6 \u0c95\u0ca1\u0ca4 \u0cae\u0cb0\u0cc1\u0cac\u0cb3\u0c95\u0cc6 \u0cac\u0cc1\u0c9f\u0ccd\u0c9f\u0cbf\u0c97\u0cc6 \u0cb8\u0ccd\u0ca5\u0cb3\u0cbe\u0c82\u0ca4\u0cb0\u0cbf\u0cb8\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2, \u0c95\u0ca1\u0ca4\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0c85\u0cb3\u0cbf\u0cb8\u0cbf\u0ca6 \u0ca8\u0c82\u0ca4\u0cb0 \u0cb9\u0cbf\u0c82\u0caa\u0ca1\u0cc6\u0caf\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2___ ___\u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd___\u0ca1\u0cc0\u0c95\u0ccd\u0cb0\u0cbf\u0caa\u0ccd\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026___\u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82 AP \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cb3\u0cb8\u0cc1___\u0c88\u0c97 \u0caa\u0cb0\u0cbf\u0cb6\u0cc0\u0cb2\u0cbf\u0cb8\u0cc1___\u0cb8\u0c82\u0caa\u0cb0\u0ccd\u0c95 \u0ca4\u0caa\u0ccd\u0caa\u0cbf\u0cb8\u0cc1___\u0c95\u0cb3\u0cc1\u0cb9\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026___apk\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0ccd\u0cb5\u0caf\u0c82\u0c95\u0ccd\u0cb0\u0ca4\u0cb5\u0cbe\u0c97\u0cbf (\u0c85)\u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cc1___\u0cad\u0ca6\u0ccd\u0cb0\u0ca4\u0cbe \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd___\u0cae\u0cb0\u0cc1\u0caa\u0ccd\u0cb2\u0cc7___\u0cb9\u0ccb\u0cb8\u0ccd\u0c9f\u0ccd \u0c95\u0ca1\u0ca4 \u0cae\u0cbe\u0cb0\u0ccd\u0caa\u0ca1\u0cbf\u0cb8\u0cc1___GID \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cc1___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0ca8\u0cbf\u0cb0\u0cc0\u0c95\u0ccd\u0cb7\u0cbf\u0cb8\u0cbf \u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0cc1 \u0cb2\u0ccb\u0ca1\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb5\u0cc6___\u0c9f\u0cc2\u0cb2\u0ccd\u0cb8\u0ccd \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd___FTP \u0cb9\u0ccb\u0cb8\u0ccd\u0c9f\u0ccd \u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd___\u0ca4\u0cbf\u0cb0\u0cb8\u0ccd\u0c95\u0cb0\u0cbf\u0cb8\u0cc1___\u0cb2\u0cc8\u0ca8\u0ccd \u0c9f\u0cb0\u0ccd\u0cae\u0cbf\u0ca8\u0cc7\u0c9f\u0cb0\u0ccd___\u0cb9\u0cb3\u0cc6\u0caf \u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd:___\u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd \u0ca8\u0cc6\u0ca8\u0caa\u0cbf\u0ca1\u0cc1___\u0cb9\u0cca\u0cb0\u0cb9\u0ccb\u0c97\u0cc1\u0cb5\u0cbe\u0c97 \u0c87\u0ca4\u0cbf\u0cb9\u0cbe\u0cb8 \u0cb8\u0ccd\u0cb5\u0c9a\u0ccd\u0c9a\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cc1___\u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cc1 \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6 %s___\u0c87\u0ca4\u0cbf\u0cb9\u0cbe\u0cb8\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf \u0cab\u0ccb\u0cb2\u0ccd\u0ca1\u0cb0\u0ccd \u0cae\u0cbe\u0ca4\u0ccd\u0cb0 \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___\u0c88 \u0c95\u0cbf\u0c9f\u0c95\u0cbf \u0c88\u0c97\u0cbe\u0c97\u0cb2\u0cc7 \u0c85\u0cb8\u0ccd\u0ca4\u0cbf\u0ca4\u0ccd\u0cb5\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf\u0ca6\u0cc6___\u0c97\u0cc2\u0c97\u0cb2\u0ccd \u0caa\u0ccd\u0cb2\u0cc7 \u0cb8\u0cb0\u0ccd\u0cb5\u0cc0\u0cb8\u0ccd \u0cb2\u0cad\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2 \u0c85\u0ca5\u0cb5\u0cbe \u0ca8\u0cb5\u0cc0\u0c95\u0cb0\u0ca3\u0cc6\u0caf \u0c85\u0cb5\u0cb6\u0ccd\u0caf\u0c95\u0ca4\u0cc6\u0caf\u0cbf\u0ca6\u0cc6.___\u0ca4\u0cc6\u0c97\u0cc6\u0ca6\u0cc1\u0c95\u0cca\u0cb3\u0ccd\u0cb3\u0cb2\u0cbe\u0ca6 \u0ca6\u0cbf\u0ca8\u0cbe\u0c82\u0c95:___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0c97\u0cc1\u0cb0\u0cbf\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0c86\u0caf\u0ccd\u0c95\u0cc6\u0cae\u0cbe\u0ca1\u0cbf___\u0c87\u0ca6\u0cc1 \u0cb8\u0cae\u0caf \u0ca4\u0cc6\u0c97\u0cc6\u0ca6\u0cc1\u0c95\u0cca\u0cb3\u0ccd\u0cb3\u0cc1\u0ca4\u0ccd\u0ca4\u0ca6\u0cc6, \u0ca8\u0cbf\u0cae\u0ccd\u0cae \u0cb8\u0cbe\u0ca7\u0ca8\u0ca6 \u0cae\u0cc7\u0cb2\u0cc6 \u0c85\u0cb5\u0cb2\u0c82\u0cad\u0cbf\u0cb8\u0cbf\u0cb0\u0cc1\u0ca4\u0ccd\u0ca4\u0ca6\u0cc6___\u0c8e\u0cb2\u0ccd\u0cb2\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb0\u0cc0\u0cb8\u0ccd\u0c9f\u0ccb\u0cb0\u0ccd \u0cae\u0cbe\u0ca1\u0cc1___\u0c97\u0cbe\u0ca4\u0ccd\u0cb0 \u0cac\u0cb0\u0cc6___FTP \u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd \u0c9c\u0cca\u0ca4\u0cc6 \u0cb8\u0cbe\u0ca7\u0ca8 \u0caa\u0ccd\u0cb0\u0cb5\u0cc7\u0cb6\u0cbf\u0cb8\u0cc1___\u0c86\u0caa\u0ccd \u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0cb9\u0cc1\u0ca1\u0cc1\u0c95\u0cc1 ___\u0c95\u0cbe\u0cb0\u0ccd\u0caf\u0cbe\u0c9a\u0cb0\u0ca3\u0cc6___- WLAN \u0c86\u0cab\u0ccd \u0c86\u0c97\u0cbf\u0ca6\u0cc6___ES File Explorer___ ___\u0c95\u0ca1\u0ca4\u0ca6 \u0cb9\u0cc6\u0cb8\u0cb0\u0ca8\u0ccd\u0ca8\u0cc1\u0c8e\u0ca8\u0ccd\u200d\u0cb0\u0cbf\u0caa\u0ccd\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cc1___\u0ca1\u0c95\u0ccd\u0caf\u0cc1\u0cae\u0cc6\u0c82\u0c9f\u0ccd \u0cb5\u0cbf\u0ca7 \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd___\u0c95\u0ca1\u0ca4\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cae\u0cb0\u0cc1\u0cac\u0cb3\u0c95\u0cc6 \u0cac\u0cc1\u0c9f\u0ccd\u0c9f\u0cbf\u0caf\u0cb2\u0ccd\u0cb2\u0cbf\u0ca1\u0cc1___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0cb5\u0cbf\u0cb5\u0cb0\u0ca3\u0cc6\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cb0\u0cc6\u0caf\u0cbf\u0cb0\u0cbf___\u0cb8\u0ccd\u0ca5\u0cb3\u0cbe\u0c82\u0ca4\u0cb0\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cc1 \u0c96\u0c9a\u0cbf\u0ca4\u0cb5\u0cc7?___\u0ca8\u0cca\u0c82\u0ca6\u0cbe\u0caf\u0cbf\u0cb8\u0cc1___\u0c86\u0caa\u0ca8\u0ccd\u0ca8\u0cc1 \u0c85\u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cbf\u0ca6\u0cbe\u0c97 \u0cb8\u0c82\u0cac\u0c82\u0ca7\u0caa\u0c9f\u0ccd\u0c9f \u0cab\u0ccb\u0cb2\u0ccd\u0ca1\u0cb0\u0ccd\u200d\u0cb8\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0ccd\u0cb5\u0c9a\u0ccd\u0c9a\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cc1___\u0c85\u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cc1___\u0c86\u0c95\u0ccd\u0cb0\u0cae\u0cbf\u0cb8\u0cbf\u0cb0\u0cc1\u0cb5\u0cc1\u0ca6\u0cc1:___\u0cb6\u0cc7\u0c95\u0ccd \u0cae\u0cbe\u0ca1\u0cc1\u0cb5\u0cc1\u0ca6\u0cb0\u0cbf\u0c82\u0ca6 \u0cb9\u0cbe\u0ca1\u0cc1\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb7\u0cab\u0cb2\u0ccd \u0cae\u0cbe\u0ca1\u0cc1\u0cb5\u0cc1\u0ca6\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0c95\u0ccd\u0cb0\u0cbf\u0caf\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cb2\u0cc1___, \u0c92\u0c9f\u0ccd\u0c9f\u0cc1 \u0c97\u0cbe\u0ca4\u0ccd\u0cb0: %s___\u0c87\u0c82\u0ca6:___\u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd___\u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0c97\u0cc6 \u0cb8\u0cc7\u0cb0\u0cc1\u0cb5\u0cc1\u0ca6\u0c95\u0ccd\u0c95\u0cbe\u0c97\u0cbf \u0ca8\u0cbf\u0cb0\u0cc0\u0c95\u0ccd\u0cb7\u0cc6\u0caf\u0cb2\u0ccd\u0cb2\u0cbf\u0ca6\u0cc6___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0ca8\u0cc0\u0cb5\u0cc1 \u0ca4\u0cc6\u0c97\u0cc6\u0caf\u0cac\u0cc7\u0c95\u0cc6\u0c82\u0ca6\u0cbf\u0cb0\u0cc1\u0cb5 \u0cb8\u0cbe\u0ca7\u0ca8\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1  \u0c85\u0ca8\u0ccd\u200d\u0caa\u0cc7\u0cb0\u0ccd \u0cae\u0cbe\u0ca1\u0cbf___\u0cb2\u0cc6\u0c95\u0ccd\u0c95\u0cbf\u0cb8\u0cc1___\u0c85\u0cb2\u0cbe\u0cb0\u0ccd\u0cae\u0ccd\u200c\u0c97\u0cc6 \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cc1___\u0c9d\u0cc2\u0cae\u0ccd___\u0c87\u0ca4\u0cb0\u0cc6___\u0cac\u0ccd\u0cb2\u0cc2\u0c9f\u0cc2\u0ca4\u0ccd___\u0cae\u0cb0\u0cc1\u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd___\u0cb8\u0ca8\u0ccd\u0ca8\u0cc6\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb0\u0c9a\u0cbf\u0cb8\u0cc1/\u0cb8\u0c82\u0caa\u0cbe\u0ca6\u0cbf\u0cb8\u0cc1___\u0ca1\u0cbe\u0c95\u0ccd\u0caf\u0cc1\u0cae\u0cc6\u0c82\u0c9f\u0ccd \u0cb5\u0cbf\u0ca7\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0cc7\u0cb0\u0cbf\u0cb8\u0cc1___\u0cb9\u0cbf\u0c82\u0ca6\u0cc6___\u0c85\u0cb5\u0cb0\u0cc6\u0cc2\u0cd5\u0cb9\u0ca3___\u0ca6\u0cca\u0ca1\u0ccd\u0ca1 \u0cb5\u0cbf\u0ca8\u0ccd\u0caf\u0cbe\u0cb8___\u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0cc7\u0cb0\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6___\u0c92\u0ca8\u0ccd \u0c95\u0cc0 \u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0ca8\u0cc6___\u0cac\u0cbe\u0cb9\u0ccd\u0caf \u0cb8\u0c82\u0c97\u0ccd\u0cb0\u0cb9\u0ca3\u0cc6___ ___\u0cb5\u0cb0\u0ccd\u0c97\u0cbe\u0caf\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6___\u0c85\u0cb3\u0cbf\u0cb8\u0cbf\u0ca6 \u0ca8\u0c82\u0ca4\u0cb0 \u0ca1\u0cc7\u0c9f\u0cbe\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1  \u0cae\u0cb0\u0cb3\u0cbf\u0caa\u0ca1\u0cc6\u0caf\u0cb2\u0cbe\u0c97\u0cc1\u0cb5\u0cc1\u0ca6\u0cbf\u0cb2\u0ccd\u0cb2___\u0cb5\u0cbf\u0cb0\u0cbe\u0cae___\u0cb5\u0cbf\u0cb5\u0cb0___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0ca8\u0cbf\u0cb0\u0cc0\u0c95\u0ccd\u0cb7\u0cbf\u0cb8\u0cbf\u2026___\u0cae\u0cb0\u0cc1\u0cac\u0cb3\u0c95\u0cc6 \u0cac\u0cc1\u0c9f\u0ccd\u0c9f\u0cbf \u0c95\u0cbe\u0cb0\u0ccd\u0caf\u0ca8\u0cbf\u0cb0\u0ca4\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0caf\u0cbe\u0cb5\u0cc1\u0ca6\u0cc7 \u0c8e\u0ca8\u0ccd\u200d\u0c95\u0ccd\u0cb0\u0cbf\u0caa\u0ccd\u0c9f\u0ccd \u0c86\u0ca6 \u0c95\u0ca1\u0ca4\u0cb5\u0cc1 \u0cb8\u0cbf\u0c97\u0cb2\u0cbf\u0cb2\u0ccd\u0cb2___\u0c96\u0cbe\u0cb8\u0c97\u0cbf \u0c95\u0cc0 \u0cae\u0cc2\u0cb2\u0c96 \u0cb2\u0cbe\u0c97\u0cbf\u0ca8\u0ccd \u0c86\u0c97\u0cc1___\u0cab\u0ccb\u0cb2\u0ccd\u0ca1\u0cb0\u0ccd \"%s\" \u0cb9\u0ccb\u0c82 \u0c86\u0c97\u0cbf \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6.___%1$s \u0ca8\u0cbf\u0cae\u0ccd\u0cae\u0c9c\u0cca\u0ca4\u0cc6\u0c97\u0cc6 \u0c95\u0ca1\u0ca4\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0c82\u0c9a\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0ccd\u0ca6\u0cbe\u0cb0\u0cc6, \u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cc1 \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0c88 \u0cb2\u0cbf\u0c82\u0c95\u0ca8\u0ccd\u0ca8\u0cc1 \u0c92\u0ca4\u0ccd\u0ca4\u0cbf : %2$s___\u0c95\u0c82\u0caa\u0ccd\u0cb0\u0cc6\u0cb8\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026___\u0c95\u0cb3\u0cc1\u0cb9\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6 \"%1$s\"___\u0c95\u0ccd\u0cb0\u0ccb\u0cae\u0ccd\u200d\u0c95\u0cbe\u0cb8\u0ccd\u0c9f\u0ccd___\u0cae\u0cc6\u0cae\u0cca\u0cb0\u0cbf \u0cad\u0cb0\u0ccd\u0ca4\u0cbf\u0caf\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___ ___\u0c89\u0caa-\u0ca1\u0cc8\u0cb0\u0cc6\u0c95\u0ccd\u0c9f\u0cb0\u0cbf\u0c97\u0cc6 \u0ca8\u0c95\u0cb2\u0cc1 \u0cae\u0cbe\u0ca1\u0cc1\u0cb5\u0c82\u0ca4\u0cbf\u0cb2\u0ccd\u0cb2___\u0cae\u0cb0\u0cc6\u0cae\u0cbe\u0ca1\u0cc1 \u0caa\u0c9f\u0ccd\u0c9f\u0cbf\u0caf \u0cb0\u0c95\u0ccd\u0cb7\u0ca3\u0cc6___multi-thread Copy \u0cb8\u0c95\u0ccd\u0cb0\u0cbf\u0caf\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cc1 \u0cae\u0ca4\u0ccd\u0ca4\u0cc6 \u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd \u0cae\u0cbe\u0ca1\u0cc1___\u0cb9\u0cbe\u0c9f\u0ccd___\u0c87\u0ca8\u0ccd\u0ca8\u0cb7\u0ccd\u0c9f\u0cc1 \u0cb2\u0ccb\u0ca1\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb5\u0cc6\u2026___\u0c87\u0ca4\u0cb0\u0cb0\u0cca\u0c82\u0ca6\u0cbf\u0c97\u0cc6 \u0cb8\u0c82\u0caa\u0cb0\u0ccd\u0c95\u0cbf\u0cb8\u0cb2\u0cc1, \u0caa\u0ccb\u0cb0\u0ccd\u0c9f\u0cac\u0cb2\u0ccd \u0cb9\u0cbe\u0c9f\u0ccd\u200d\u0cb8\u0ccd\u0caa\u0cbe\u0c9f\u0ccd \u0cb0\u0c9a\u0cbf\u0cb8\u0cc1___\u0cb2\u0cad\u0ccd\u0caf\u0cb5\u0cbf\u0cb0\u0cc1\u0cb5 \u0c9c\u0cbe\u0c97:___\u0c85\u0ca8\u0cbe\u0cae\u0cbf\u0c95 \u0c95\u0cb2\u0cbe\u0cb5\u0cbf\u0ca6___\u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd \u0cb5\u0cbf\u0cab\u0cb2___\u0c95\u0ca1\u0ca4\u0ca6 \u0cb9\u0cc6\u0cb8\u0cb0\u0ca8\u0ccd\u0ca8\u0cc1 \u0caa\u0ca1\u0cc6\u0caf\u0cb2\u0cc1 \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0cb8\u0c82\u0caa\u0cb0\u0ccd\u0c95\u0c97\u0cca\u0c82\u0ca1\u0cbf\u0ca6\u0cc6___\u0caa\u0ccd\u0cb0\u0cb8\u0ccd\u0ca4\u0cc1\u0ca4 \u0caa\u0ccb\u0cb0\u0ccd\u0c9f\u0ccd: ___\u0c86\u0cab\u0ccd \u0cae\u0cbe\u0ca1\u0cc1___\u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd : ___\u0ca8\u0cc0\u0cb5\u0cc1 \u0c97\u0cb0\u0cbf\u0cb7\u0ccd\u0ca0 12 \u0cb5\u0cb8\u0ccd\u0ca4\u0cc1\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0c86\u0cb0\u0cbf\u0cb8\u0cac\u0cb9\u0cc1\u0ca6\u0cc1___\u0cb2\u0cc6\u0c95\u0ccd\u0c95\u0cbf\u0cb8\u0cb2\u0cc1 \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0cae\u0cc1\u0c97\u0cbf\u0caf\u0cbf\u0ca4\u0cc1___\u0c97\u0cbe\u0ca4\u0ccd\u0cb0___\u0cb8\u0cc1\u0ca7\u0cbe\u0cb0\u0cbf\u0ca4 \u0cb9\u0cc1\u0ca1\u0cc1\u0c95\u0cbe\u0c9f___\u0cb5\u0cbf\u0c82\u0c97\u0ca1\u0cbf\u0cb8\u0cc1___\u0ca1\u0c95\u0ccd\u0caf\u0cc1\u0cae\u0cc6\u0c82\u0c9f\u0ccd \u0cb5\u0cbf\u0ca7\u0ca6 \u0caa\u0c9f\u0ccd\u0c9f\u0cbf\u0caf\u0cbf\u0c82\u0ca6 \u0ca4\u0cc6\u0c97\u0cc6\u0caf\u0cb2\u0cc1 \u0cac\u0c9f\u0ca8\u0ccd\u200d\u0ca8\u0ca8\u0ccd\u0ca8\u0cc1 \u0c92\u0ca4\u0ccd\u0ca4\u0cbf___Sd\u0c95\u0cbe\u0cb0\u0ccd\u0ca1\u0ccd___\u0cae\u0cb0\u0cc6\u0cae\u0cbe\u0ca1\u0cc1 \u0caa\u0c9f\u0ccd\u0c9f\u0cbf\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0cc6\u0cb0\u0cb5\u0cc1\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0cb8\u0cc1\u0cb3\u0cbf\u0cb5\u0cc1___\u0c89\u0caa \u0ca1\u0cc8\u0cb0\u0cc6\u0c95\u0ccd\u0c9f\u0cb0\u0cbf\u0caf\u0ca8\u0ccd\u0ca8\u0cc2 \u0c92\u0cb3\u0caa\u0ca1\u0cbf\u0cb8\u0cc1___\u0c85\u0c97\u0ca4\u0ccd\u0caf\u0cb5\u0cbf\u0cb0\u0cc1\u0cb5 \u0c85\u0caa\u0ccd\u0cb2\u0cbf\u0c95\u0cc7\u0cb6\u0ca8\u0ccd:___\u0ca7\u0cc0\u0cb0\u0ccd\u0c98\u0cb5\u0cbe\u0c97\u0cbf \u0cb8\u0ccd\u0c95\u0ccd\u0cb0\u0ccb\u0cb2\u0ccd\u200d\u0cae\u0cbe\u0ca1\u0cc1\u0cb5\u0cbe\u0c97 \u0cb8\u0ccd\u0c95\u0ccd\u0cb0\u0ccb\u0cb2\u0ccd \u0ca5\u0c82\u0cac\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___\u0c97\u0cc1\u0caa\u0ccd\u0ca4\u0cb5\u0cbe\u0c96\u0ccd\u0caf\u0cbe\u0c82\u0cb6___\u0cae\u0ccc\u0c82\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cc1 \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0cac\u0ccd\u0caf\u0cbe\u0c95\u0ccd\u0c85\u0caa\u0ccd \u0ca1\u0cc8\u0cb0\u0cc6\u0c95\u0ccd\u0c9f\u0cb0\u0cbf : ___\u0c95\u0ca1\u0ca4\u0ca6 \u0cb5\u0cbf\u0ca7 \u0ca4\u0caa\u0ccd\u0caa\u0cc1, \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0cae\u0ca4\u0ccd\u0ca4\u0cca\u0cae\u0ccd\u0cae\u0cc6 \u0c86\u0cb0\u0cbf\u0cb8\u0cbf___\u0ca8\u0cbf\u0cae\u0ccd\u0cae \u0c95\u0cc1\u0c9f\u0cc1\u0c82\u0cac___\u0c89\u0cb3\u0cbf\u0ca6\u0cbf\u0cb0\u0cc1\u0cb5 \u0c9c\u0cbe\u0c97: %s___AP\u0caf\u0cc1 \u0caa\u0ccd\u0cb0\u0cbe\u0cb0\u0c82\u0cad\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6, \u0c86\u0ca6\u0cb0\u0cc6 \u0caa\u0cb0\u0cc0\u0c95\u0ccd\u0cb7\u0cbf\u0cb8\u0cb2\u0cc1 \u0caf\u0cbe\u0cb5\u0cc1\u0ca6\u0cc7 \u0c85\u0ca8\u0cc1\u0cae\u0ca4\u0cbf \u0c87\u0cb2\u0ccd\u0cb2, \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82 \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd \u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0caa\u0cb0\u0cbf\u0cb6\u0cc0\u0cb2\u0cbf\u0cb8\u0cbf___\u0cb9\u0cc7\u0cb3\u0cbf\u0c95\u0cc6\u0caf\u0ca8\u0ccd\u0cac\u0cc1 \u0c87\u0cb2\u0ccd\u0cb2\u0cbf \u0cac\u0cb0\u0cc6\u0caf\u0cbf\u0cb0\u0cbf___\u0c95\u0cbe\u0cb0\u0ccd\u0caf\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0cc6\u0cb0\u0cb5\u0cc1\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cc7___\u0c85\u0caa\u0ccd___\u0ca6\u0cc3\u0ca2\u0cc0\u0c95\u0cb0\u0ca3 \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6 . \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0ca8\u0cbf\u0cae\u0ccd\u0cae  \u0cac\u0cb3\u0c95\u0cc6\u0ca6\u0cbe\u0cb0\u0ca8 \u0cb9\u0cc6\u0cb8\u0cb0\u0cc1/\u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd \u0cb8\u0c82\u0caa\u0cbe\u0ca6\u0cbf\u0cb8\u0cbf___\u0c93\u0cb5\u0cb0\u0ccd\u200d\u200d\u0cb5\u0ccd\u0cb0\u0cc8\u0c9f\u0ccd___\u0cb8\u0c82\u0c96\u0ccd\u0caf\u0cc6___\u0c85\u0ca8\u0cc1\u0cae\u0ca4\u0cbf\u0c97\u0cb3 \u0cac\u0ca6\u0cb2\u0cbe\u0cb5\u0ca3\u0cc6 \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0c86\u0cb0\u0cbf\u0cb8\u0cbf\u0cb0\u0cc1\u0cb5 APK\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cc7?___\u0c97\u0cbe\u0caf\u0c95\u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0cb9\u0cc1\u0ca1\u0cc1\u0c95\u0cc1___\u0c89\u0cb3\u0cbf\u0ca6\u0cbf\u0cb0\u0cc1\u0cb5 \u0cb8\u0cae\u0caf:___\u0c97\u0cc6:___\u0c85\u0cb3\u0cbf\u0cb8\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2___\u0cb8\u0ccd\u0cb5\u0caf\u0c82\u0c9a\u0cbe\u0cb2\u0cbf\u0ca4 \u0ca8\u0cb5\u0cc0\u0c95\u0cb0\u0ca3\u0cc6 \u0ca8\u0cbf\u0cb7\u0ccd\u0c95\u0ccd\u0cb0\u0cbf\u0caf___\u0cac\u0cb3\u0cb8\u0cb2\u0cc1 \u0c92\u0c82\u0ca6\u0cc1 \u0cb8\u0ccd\u0cb5\u0cc7\u0c9a\u0ccd\u0c9b\u0cc6\u0caf\u0cbe\u0ca6 AP \u0cb9\u0cc6\u0cb8\u0cb0\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb0\u0c9a\u0cbf\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0ca6\u0cc6___\u0ca8\u0cc0\u0cb5\u0cc1 \u0caa\u0ccd\u0cb0\u0cb8\u0ccd\u0ca4\u0cc1\u0ca4 \u0c95\u0cbe\u0cb0\u0ccd\u0caf\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb0\u0ca6\u0ccd\u0ca6\u0cc1\u0cae\u0cbe\u0ca1\u0cb2\u0cc1 \u0cac\u0caf\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0cc0\u0cb0\u0cbe?___\u0cb9\u0cc1\u0ca1\u0cc1\u0c95\u0cc1___\u0cb9\u0cbe\u0cb8 \u0ca5\u0cc0\u0cae\u0ccd \u0cb2\u0cad\u0ccd\u0caf\u0cb5\u0cbf\u0ca6\u0cc6, \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0ca8\u0cb5\u0cc0\u0c95\u0cb0\u0cbf\u0cb8\u0cbf___\u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82 \u0ca1\u0cc8\u0cb0\u0cc6\u0c95\u0ccd\u0c9f\u0cb0\u0cbf \u0cb0\u0cc0\u0ca1\u0ccd-\u0c93\u0ca8\u0ccd\u0cb2\u0cbf\u0caf\u0cbe\u0c97\u0cbf \u0cae\u0ccc\u0c82\u0c9f\u0ccd \u0c86\u0c97\u0cbf\u0ca6\u0cc6___\u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82 \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd___\u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd___\u0c88 \u0caa\u0ccd\u0cb0\u0cbe\u0caf\u0ccb\u0c97\u0cbf\u0c95 \u0c86\u0cb5\u0cc3\u0ca4\u0ccd\u0ca4\u0cbf\u0caf \u0c85\u0cb5\u0ca7\u0cbf\u0caf\u0cc1 \u0cae\u0cc1\u0c97\u0cbf\u0ca6\u0cbf\u0ca6\u0cc6, \u0ca8\u0cc0\u0cb5\u0cc1 \u0cb9\u0cca\u0cb8 \u0c86\u0cb5\u0cc3\u0ca4\u0ccd\u0ca4\u0cbf\u0c97\u0cc6 \u0ca8\u0cb5\u0cc0\u0c95\u0cb0\u0cbf\u0cb8\u0cac\u0cc7\u0c95\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0ca6\u0cc6.___\u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd \u0ca6\u0cc3\u0ca2\u0caa\u0ca1\u0cbf\u0cb8\u0cbf\u0cb2\u0ccd\u0cb2___\u0c97\u0ccc\u0caa\u0ccd\u0caf\u0ca4\u0cc6___\u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cb0\u0cc6\u0caf\u0cbf\u0cb0\u0cbf___\u0c95\u0ca1\u0ca4:___\u0c97\u0ca3\u0ca8\u0cc6 \u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026___\u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0ca6\u0cb2\u0cbe\u0caf\u0cbf\u0cb8\u0cc1___\u0cb5\u0cb8\u0ccd\u0ca4\u0cc1\u0c97\u0cb3\u0cc1___ES File Explorer\u0ca8\u0ccd\u0ca8\u0cc1 \u0caa\u0ccd\u0cb0\u0cb5\u0cc7\u0cb6 \u0cae\u0cbe\u0ca1\u0cb2\u0cc1 \u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd \u0cac\u0cc7\u0c95\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0ca6\u0cc6___\u0c85\u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0ca8\u0cc6 \u0caa\u0cc2\u0cb0\u0ccd\u0ca3\u0cb5\u0cbe\u0ca6 \u0ca8\u0c82\u0ca4\u0cb0 \u0cb8\u0c82\u0cac\u0c82\u0ca7\u0caa\u0c9f\u0ccd\u0c9f \u0cab\u0ccb\u0cb2\u0ccd\u0ca1\u0cb0\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0ccd\u0cb5\u0c9a\u0ccd\u0c9a\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cc1___\u0ca8\u0cca\u0c82\u0ca6\u0cbe\u0cb5\u0ca3\u0cc6 \u0caf\u0cb6\u0cb8\u0ccd\u0cb5\u0cbf\u0caf\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0caf\u0cbe\u0cb5\u0cc1\u0ca6\u0cc7 \u0cac\u0ccd\u0caf\u0cbe\u0c95\u0ccd\u200d\u0c85\u0caa\u0ccd \u0c86\u0caa\u0ccd\u200d\u0c97\u0cb3\u0cbf\u0cb2\u0ccd\u0cb2___\u0cac\u0cb9\u0cc1\u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0cc1___\u0cae\u0cc2\u0cb2\u0c95 \u0cb9\u0c82\u0c9a\u0cc1___\u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0cbf\u0c82\u0caa\u0ca1\u0cc6___\u0ca1\u0cc0\u0c95\u0ccd\u0cb0\u0cbf\u0caa\u0ccd\u0c9f\u0ccd___\u0c96\u0cbe\u0cb8\u0c97\u0cbf \u0c95\u0cc0___\u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd \u0ca8 \u0c95\u0ca1\u0ca4 :___\u0cac\u0cc1\u0c95\u0ccd\u200d\u0cae\u0cbe\u0cb0\u0ccd\u0c95\u0ccd___\u0cb8\u0cc7\u0cb0\u0cb2\u0cc1 \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0c92\u0c82\u0ca6\u0cc1 \u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0c85\u0ca8\u0ccd\u0ca8\u0cc1 \u0c86\u0cb0\u0cbf\u0cb8\u0cbf___\u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd  \u0cb0\u0cc0\u0cb8\u0ccd\u0c9f\u0ccb\u0cb0\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb2\u0ccd\u0cb2___\u0c86\u0caa\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0ccd\u0caf\u0cbe\u0c95\u0ccd\u0c85\u0caa\u0ccd \u0cae\u0cbe\u0ca1\u0cc1\u0cb5\u0cbe\u0c97 \u0c86\u0caa\u0ccd \u0ca1\u0cc7\u0c9f\u0cbe\u0cb5\u0ca8\u0ccd\u0ca8\u0cc2\t\u0cac\u0ccd\u0caf\u0cbe\u0c95\u0ccd\u0c85\u0caa\u0ccd \u0cae\u0cbe\u0ca1\u0cc1___\u0c86\u0cb2\u0ccd\u0cac\u0c82 \u0c95\u0cb8\u0ccd\u0c9f\u0cae\u0cc8\u0cb8\u0ccd___\u0c85\u0c82\u0c9f\u0cbf\u0cb8\u0cc1___ESFTP___\u0c8e\u0c95\u0ccd\u0cb8\u0ccd\u0c9f\u0ccd\u0cb0\u0cbe\u0c95\u0ccd\u0c9f\u0ccd \u0c87\u0cb2\u0ccd\u0cb2\u0cbf\u0c97\u0cc6___\u0c85\u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0ca8\u0cc6 \u0caf\u0cb6\u0cb8\u0ccd\u0cb5\u0cbf\u0caf\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___ ___\u0cb0\u0cc0\u0ca1\u0ccd___\u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0ca8\u0cc6 \u0cae\u0cc1\u0c97\u0cbf\u0ca6\u0cbf\u0ca6\u0cc6___\u0ca8\u0cbf\u0cb0\u0ccd\u0cb5\u0cb9\u0c95 \u0c96\u0cbe\u0ca4\u0cc6\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cc1___\u0cb8\u0c82\u0caa\u0cb0\u0ccd\u0c95\u0c97\u0cca\u0cb3\u0ccd\u0cb3\u0cc1___\u0ca8\u0c95\u0cb2\u0cc1 \u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0c87\u0cb2\u0ccd\u0cb2\u0cbf\u0c82\u0ca6 \u0c85\u0caa\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd \u0cb8\u0ccc\u0cb2\u0cad\u0ccd\u0caf\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 Instagram \u0cac\u0cc6\u0c82\u0cac\u0cb2\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cbf\u0cb2\u0ccd\u0cb2!___\u0ca8\u0ccb\u0c9f___\u0c87\u0cb2\u0ccd\u0cb2\u0cbf \u0cb9\u0ccb\u0c97\u0cbf: ___\u0cae\u0cc2\u0cb5\u0cbf___ES FTP \u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca8\u0cbf\u0cb2\u0ccd\u0cb2\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cc7?___\u0c9c\u0cbe\u0cb0\u0cbf\u0cb8\u0cbf___\u0c85\u0caa\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0cbf\u0c82\u0c97\u0ccd___\u0c85\u0c95\u0ccd\u0cb7\u0cb0\u0c97\u0cb3\u0cc1 \u0cae\u0ca4\u0ccd\u0ca4\u0cc1 \u0cb8\u0c82\u0c96\u0ccd\u0caf\u0cc6\u0c97\u0cb3\u0cc1___\u0cb9\u0cbf\u0c82\u0ca6\u0cc6___cache \u0cb0\u0cc0\u0cb8\u0ccd\u0c9f\u0ccb\u0cb0\u0ccd \u0caf\u0cb6\u0cb8\u0ccd\u0cb5\u0cbf\u0caf\u0cbe\u0c97\u0cbf\u0ca6\u0cc6.___\u0cb9\u0ccb\u0cae\u0ccd \u0ca1\u0cc8\u0cb0\u0cc6\u0c95\u0ccd\u0c9f\u0cb0\u0cbf___LAN___\u0cb8\u0ccd\u0cb5\u0cbe\u0cb8\u0ccd\u0ca5\u0ccd\u0caf___\u0caf\u0cbe\u0cb5\u0cc1\u0ca6\u0cc7 \u0cb9\u0cbe\u0ca1\u0cc1\u0c97\u0cb3\u0cc1 \u0cb8\u0cbf\u0c97\u0cb2\u0cbf\u0cb2\u0ccd\u0cb2___\u0c95\u0cbf\u0c9f\u0c95\u0cbf \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd___\u0ca8\u0cbf\u0cae\u0ccd\u0cae \u0cae\u0cb0\u0cc6\u0cae\u0cbe\u0ca1\u0cc1 \u0caa\u0c9f\u0ccd\u0c9f\u0cbf\u0caf \u0cb0\u0c95\u0ccd\u0cb7\u0ca3\u0cc6\u0c97\u0cbe\u0c97\u0cbf \u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ca8\u0ccd\u0ca8\u0cc1 \u0c86\u0ca8\u0ccd \u0cae\u0cbe\u0ca1\u0cbf___\u0cac\u0ccd\u0caf\u0cbe\u0c95\u0ccd\u0c85\u0caa\u0ccd \u0ca1\u0cc7\u0c9f\u0cbe___\u0cb8\u0c82\u0caa\u0cbe\u0ca6\u0cbf\u0cb8\u0cb2\u0cc1 \u0c92\u0ca4\u0ccd\u0ca4\u0cbf, \u0c96\u0cbe\u0cb2\u0cbf \u0c87\u0cb0\u0cac\u0cb9\u0cc1\u0ca6\u0cc1___\u0cb8\u0ccd\u0ca5\u0cb3\u0cbf\u0caf___\u0c95\u0cbf\u0c9f\u0c95\u0cbf \u0ca4\u0cc6\u0cb0\u0cc6 - %1$s___\u0cb0\u0cbf\u0cae\u0ccb\u0c9f\u0ccd \u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd \u0c97\u0cb3\u0cc1___\u0c95\u0ccd\u0cb0\u0ccb\u0cae\u0ccd\u200d\u0c95\u0cbe\u0cb8\u0ccd\u0c9f\u0ccd\u200d\u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0caa\u0ccd\u0cb2\u0cc7 \u0c86\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6___\u0c93\u0c95\u0cc6___\u0cac\u0cb2\u0c95\u0ccd\u0c95\u0cc6 \u0ca4\u0cbf\u0cb0\u0cc1\u0c97\u0cc1___SSID \u0caf \u0cb9\u0cc6\u0cb8\u0cb0\u0cbf\u0ca8 \u0c89\u0ca6\u0ccd\u0ca6 32  \u0c85\u0c95\u0ccd\u0cb7\u0cb0\u0c97\u0cb3 \u0c92\u0cb3\u0c97\u0cbf\u0cb0\u0cac\u0cc7\u0c95\u0cc1___\u0cb9\u0cc1\u0ca1\u0cc1\u0c95\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026___\u0ca5\u0cc0\u0cae\u0ccd \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd___\u0c85\u0cb2\u0ccd\u0cb2___\u0cb8\u0cc1\u0ca7\u0cbe\u0cb0\u0cbf\u0ca4 \u0c86\u0caf\u0ccd\u0c95\u0cc6\u0c97\u0cb3\u0cc1___\u0c8e\u0cb2\u0ccd\u0cb2\u0cb5\u0ca8\u0ccd\u0ca8\u0cc2 \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___Webdav \u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd \u0cb9\u0ccb\u0cb8\u0ccd\u0c9f\u0ccd___\u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0ca8\u0cc6 \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0ca8\u0cbf\u0cb0\u0cc0\u0c95\u0ccd\u0cb7\u0cbf\u0cb8\u0cbf\u2026___\u0ca1\u0cbe\u0c95\u0ccd\u0caf\u0cc1\u0cae\u0cc6\u0c82\u0c9f\u0ccd\u0cb8\u0ccd___\u0cb8\u0cb0\u0ccd\u0c9f\u0cbf\u0cab\u0cbf\u0c95\u0cc7\u0c9f\u0ccd \u0c85\u0cb5\u0cbf\u0cb6\u0ccd\u0cb5\u0cbe\u0cb8\u0ca8\u0cc0\u0caf ___ ___\u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cb2\u0cc1 \u0c92\u0ca4\u0ccd\u0ca4\u0cbf___FTP \u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd___\u0c95\u0ccd\u0cb7\u0cae\u0cbf\u0cb8\u0cbf, \u0c88 \u0c85\u0caa\u0ccd\u0cb2\u0cbf\u0c95\u0cc7\u0cb6\u0ca8\u0ccd \u0c86\u0cb0\u0c82\u0cad\u0cbf\u0cb8\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2___\u0ca1\u0cc8\u0cb0\u0cc6\u0c95\u0ccd\u0c9f\u0cb0\u0cbf \u0cb5\u0cbf\u0cb6\u0ccd\u0cb2\u0cc7\u0cb6\u0ca3\u0cc6___\u0cb8\u0ccd\u0c95\u0ccd\u0caf\u0cbe\u0ca8\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6 \u2026___\u0ca6\u0ccb\u0cb7, \u0ca8\u0cbf\u0cae\u0ccd\u0cae \u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0cb8\u0cbf\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb2\u0ccd\u0cb2___\u0cb8\u0cbf\u0c82\u0c95\u0ccd\u0cb0\u0cca\u0ca8\u0cc8\u0cb8\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026___\u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd \u0cb8\u0cb0\u0cbf\u0caf\u0cbe\u0c97\u0cbf\u0cb2\u0ccd\u0cb2___\u0ca1\u0cc0\u0cab\u0cbe\u0cb2\u0ccd\u0c9f\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0cc6\u0cb0\u0cb5\u0cc1\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cc1___\u0ca8\u0cc0\u0cb5\u0cc1 \u0c86\u0cb3\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cc1 \u0c96\u0c9a\u0cbf\u0ca4\u0cb5\u0cc7 {0} \u2026 ({1} \u0cb5\u0cb8\u0ccd\u0ca4\u0cc1\u0c97\u0cb3\u0cc1)?___nested ZIP-\u0cae\u0cbe\u0ca6\u0cb0\u0cbf\u0caf \u0c95\u0ca1\u0ca4\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0cc6\u0cb0\u0cc6\u0caf\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2___\u0c8e\u0ca8\u0ccd\u200d\u0c95\u0ccb\u0ca1\u0cbf\u0c82\u0c97\u0ccd___\u0c86\u0cb0\u0cbf\u0cb8\u0cbf\u0cb0\u0cc1\u0cb5 \u0c9a\u0cbe\u0cb0\u0ccd\u0cb8\u0cc6\u0c9f\u0ccd  \u0ca8\u0cbf\u0cae\u0ccd\u0cae \u0cb8\u0cbe\u0ca7\u0ca8\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf \u0cb2\u0cad\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2___\u0cb0\u0c95\u0ccd\u0cb7\u0cbf\u0cb8\u0cb2\u0cc1 \u0caa\u0ccd\u0cb0\u0cbe\u0cb0\u0c82\u0cad\u0cbf\u0cb8\u0cc1___\u0caa\u0ccd\u0cb0\u0cae\u0cbe\u0ca3___OBEX FTP \u0cb8\u0cc7\u0cb5\u0cc6 \u0caf\u0cb6\u0cb8\u0ccd\u0cb5\u0cbf\u0caf\u0cbe\u0c97\u0cbf \u0c86\u0cb0\u0c82\u0cad\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6. \u0ca8\u0cc0\u0cb5\u0cc1 \u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0c87\u0ca4\u0cb0\u0cc6 \u0cac\u0ccd\u0cb2\u0cc2\u0c9f\u0cc2\u0ca4\u0ccd \u0cb8\u0cbe\u0ca7\u0ca8\u0ca6\u0cca\u0c82\u0ca6\u0cbf\u0c97\u0cc6 \u0cb5\u0cb0\u0ccd\u0c97\u0cbe\u0caf\u0cbf\u0cb8\u0cac\u0cb9\u0cc1\u0ca6\u0cc1.___\u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd \u0cac\u0ca6\u0cb2\u0cbe\u0caf\u0cbf\u0cb8\u0cc1___\u0ca8\u0cbf\u0cae\u0c97\u0cc6 \u0cae\u0cbe\u0ca4\u0ccd\u0cb0 (\u0c96\u0cbe\u0cb8\u0c97\u0cbf)___\u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0c87\u0cb2\u0ccd\u0cb2\u0cbf\u0c97\u0cc6 \u0cb8\u0ccd\u0ca5\u0cb3\u0cbe\u0c82\u0ca4\u0cb0\u0cbf\u0cb8\u0cc1 \"%1$s\"___\u0c87\u0ca4\u0cb0\u0cc6 \u0c95\u0cbf\u0c9f\u0c95\u0cbf\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0cc6\u0c97\u0cc6\u0caf\u0cc1\u0cb5\u0cc1\u0ca6\u0cc1 \u0c96\u0c9a\u0cbf\u0ca4\u0cb5\u0cc7?___ ___\u0caa\u0ccd\u0cb0\u0cb8\u0ccd\u0ca4\u0cc1\u0ca4 \u0caa\u0ccd\u0cb0\u0c97\u0ca4\u0cbf___\u0c95\u0cb8\u0ccd\u0c9f\u0cae\u0cc8\u0cb8\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0ca6 AP \u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cb3\u0cb8\u0cb2\u0cc1 \u0c86\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb2\u0ccd\u0cb2___\u0c9a\u0cbf\u0ca4\u0ccd\u0cb0\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf \u0cb9\u0cc1\u0ca1\u0cc1\u0c95\u0cc1___\u0ca6\u0ccb\u0cb7, \u0c95\u0ca1\u0ca4\u0ca6 \u0c97\u0cbe\u0ca4\u0ccd\u0cb0 \u0cac\u0cb9\u0cb3 \u0ca6\u0cca\u0ca1\u0ccd\u0ca1\u0ca6\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0c87\u0ca4\u0cbf\u0cb9\u0cbe\u0cb8\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf  \u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cac\u0cc7\u0ca1___\u0ca1\u0cc0\u0cab\u0cbe\u0cb2\u0ccd\u0c9f\u0ccd \u0c95\u0cbf\u0c9f\u0c95\u0cbf\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cc1___\u0c85\u0ca8\u0cc1\u0cae\u0ca4\u0cbf\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb5\u0cc0\u0c95\u0ccd\u0cb7\u0cbf\u0cb8\u0cc1___\u0ca1\u0cc0\u0cab\u0cbe\u0cb2\u0ccd\u0c9f\u0ccd \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb0\u0cc0\u0cb8\u0ccd\u0c9f\u0ccb\u0cb0\u0ccd \u0cae\u0cbe\u0ca1\u0cc1___\u0cb8\u0ccd\u0c9f\u0cc7\u0c9f\u0cb8\u0ccd \u0cac\u0cbe\u0cb0\u0ccd\u200d\u200d\u0ca8\u0cb2\u0ccd\u0cb2\u0cbf SD \u0c95\u0cbe\u0cb0\u0ccd\u0ca1\u0ccd \u0cac\u0cb3\u0c95\u0cc6\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___\u0c85\u0caa\u0ccd\u0cb2\u0cbf\u0c95\u0cc7\u0cb6\u0ca8\u0ccd \u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cbf\u0ca6 \u0ca8\u0c82\u0ca4\u0cb0 \u0c9c\u0cbe\u0c97 \u0c95\u0ca1\u0cbf\u0cae\u0cc6 \u0c87\u0ca6\u0ccd\u0ca6\u0cb0\u0cc6 \u0c8e\u0c9a\u0ccd\u0c9a\u0cb0\u0cbf\u0c95\u0cc6 \u0cb8\u0c82\u0ca6\u0cc7\u0cb6\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___\u0c86\u0cb0\u0cbf\u0cb8\u0cc1___\u0cb2\u0cbe\u0c97\u0cbf\u0ca8\u0ccd \u0cb5\u0cbf\u0cab\u0cb2___\u0ca8\u0cbf\u0cae\u0c97\u0cc6 \u0c87\u0cb7\u0ccd\u0c9f\u0cb5\u0cbe\u0ca6 \u0cab\u0ccb\u0cb2\u0ccd\u0ca1\u0cb0\u0ccd \u0c86\u0caf\u0ccd\u0c95\u0cc6 \u0cae\u0cbe\u0ca1\u0cbf___\u0cb0\u0cbf\u0cae\u0ccb\u0c9f\u0ccd \u0ca8\u0cbf\u0cb0\u0ccd\u0cb5\u0cb9\u0ca3\u0cc6___\u0c86\u0caa\u0ccd \u0cac\u0ccd\u0caf\u0cbe\u0c95\u0ccd\u200d\u0c85\u0caa\u0ccd \u0ca1\u0cc8\u0cb0\u0cc6\u0c95\u0ccd\u0c9f\u0cb0\u0cbf:___ES \u0c85\u0ca8\u0cc1\u0cae\u0ca4\u0cbf \u0ca8\u0cbf\u0cb0\u0ccd\u0cb5\u0cbe\u0cb9\u0c95 \u0caa\u0ccd\u0cb2\u0c97\u0ccd-\u0c87\u0ca8\u0ccd \u0caa\u0ca4\u0ccd\u0ca4\u0cc6\u0caf\u0cbe\u0c97\u0cb2\u0cbf\u0cb2\u0ccd\u0cb2. \u0c88\u0c97 \u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd \u0cae\u0cbe\u0ca1\u0cc1\u0cb5\u0cc1\u0ca6\u0cc7?___\u0c96\u0cbe\u0cb2\u0cbf \u0cab\u0ccb\u0cb2\u0ccd\u0ca1\u0cb0\u0ccd___\u0c95\u0cc6\u0cb2\u0cb5\u0cc1 \u0cae\u0cca\u0ca1\u0ccd\u0caf\u0cc1\u0cb2\u0ccd\u200d\u0c97\u0cb3\u0cc1 \u0cb8\u0cbf\u0c97\u0cb2\u0cbf\u0cb2\u0ccd\u0cb2, \u0c8e\u0cb2\u0ccd\u0cb2\u0cbe \u0cb8\u0cb5\u0cb2\u0ca4\u0ccd\u0ca4\u0ca8\u0ccd\u0ca8\u0cc1 \u0caa\u0ca1\u0cc6\u0caf\u0cb2\u0cc1 \u0c85\u0ca6\u0cc1 \u0ca8\u0cbf\u0cae\u0c97\u0cc6 \u0cac\u0cc7\u0c95\u0cbe\u0c97\u0cbf\u0ca6\u0cc6. \u0ca8\u0cc0\u0cb5\u0cc1 \u0c85\u0ca6\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0cc1\u0ca1\u0cc1\u0c95\u0cbf \u0cae\u0ca4\u0ccd\u0ca4\u0cc1 \u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cb2\u0cc1 \u0cac\u0caf\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0cc0\u0cb0\u0cbe?___\u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0ca8\u0cc6\u0c97\u0cca\u0c82\u0ca1\u0cbf\u0ca6\u0cc6___\u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82 \u0c86\u0caa\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cc1___\u0caa\u0ccd\u0cb2\u0cc7\u0caa\u0c9f\u0ccd\u0c9f\u0cbf\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cae\u0cb0\u0cc1\u0cb9\u0cc6\u0cb8\u0cb0\u0cbf\u0cb8\u0cc1___\u0c95\u0cca\u0cb3\u0ccd\u0cb3\u0cc1\u0cb5\u0cb5 \u0c95\u0cbe\u0cb0\u0ccd\u0caf\u0cbe\u0c9a\u0cb0\u0ca3\u0cc6\u0caf\u0cb2\u0ccd\u0cb2\u0cbf\u0ca6\u0ccd\u0ca6\u0cbe\u0cb0\u0cc6, \u0ca8\u0c82\u0ca4\u0cb0 \u0caa\u0ccd\u0cb0\u0caf\u0ca4\u0ccd\u0ca8\u0cbf\u0cb8\u0cbf___\u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd SSID___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0ca8\u0cbf\u0cae\u0ccd\u0cae \u0ca8\u0cbf\u0cb8\u0ccd\u0ca4\u0c82\u0ca4\u0cc1 \u0cb8\u0c82\u0caa\u0cb0\u0ccd\u0c95 \u0caa\u0cb0\u0cc0\u0c95\u0ccd\u0cb7\u0cbf\u0cb8\u0cbf, \u0c85\u0ca5\u0cb5\u0cbe \u0ca8\u0cc0\u0cb5\u0cc1 \u0c92\u0c82\u0ca6\u0cc1 \u0cb9\u0cbe\u0c9f\u0ccd\u200d\u0cb8\u0ccd\u0caa\u0cbe\u0c9f\u0ccd \u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0cb0\u0c9a\u0cbf\u0cb8\u0cbf \u0c87\u0ca4\u0cb0\u0cb0\u0ca8\u0ccd\u0ca8\u0cc1 \u0c86\u0cb9\u0ccd\u0cb5\u0cbe\u0ca8\u0cbf\u0cb8\u0cac\u0cb9\u0cc1\u0ca6\u0cc1___\u0cac\u0cb3\u0c95\u0cc6\u0ca6\u0cbe\u0cb0\u0ca8 \u0c86\u0caa\u0ccd\u200d\u0c97\u0cb3\u0cc1___\u0ca8\u0cbf\u0cb0\u0ccd\u0cb5\u0cbe\u0cb9\u0c95 \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd \u0cb5\u0cbf\u0cb3\u0cbe\u0cb8\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cb0\u0cc6\u0caf\u0cbf\u0cb0\u0cbf___ES \u0c85\u0ca8\u0cc1\u0cae\u0ca4\u0cbf \u0c95\u0cb0\u0ccd\u0caf\u0ca8\u0cbf\u0cb0\u0ccd\u0cb5\u0cb9\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0cae\u0ccd\u0cae\u0ca4\u0cbf\u0cb8\u0cb2\u0cc1  \u0cac\u0cbe\u0cb9\u0ccd\u0caf-sd\u0c95\u0cbe\u0cb0\u0ccd\u0ca1\u0ccd \u0ca8  %1$s(%2$s) \u0cb0\u0cc2\u0c9f\u0ccd \u0ca1\u0cc8\u0cb0\u0cc6\u0c95\u0ccd\u0c9f\u0cb0\u0cbf\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0c86\u0caf\u0ccd\u0c95\u0cc6\u0cae\u0cbe\u0ca1\u0cbf ___\u0c92\u0c9f\u0ccd\u0c9f\u0cc1 \u0caa\u0ccd\u0cb0\u0c97\u0ca4\u0cbf___\u0cac\u0ccd\u0caf\u0cbe\u0c95\u0ccd\u200d\u0c97\u0ccd\u0cb0\u0ccc\u0c82\u0ca1\u0ccd \u0c9a\u0cbf\u0ca4\u0ccd\u0cb0\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cc1___\u0c95\u0ca1\u0cbf\u0cae\u0cc6 \u0c9c\u0cbe\u0c97 \u0c8e\u0c9a\u0ccd\u0c9a\u0cb0\u0cbf\u0c95\u0cc6\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___\u0c95\u0c82\u0caa\u0ccd\u0cb0\u0cc6\u0cb6\u0ca8\u0ccd \u0cae\u0c9f\u0ccd\u0c9f:___WLAN \u0cb9\u0cbe\u0c9f\u0ccd\u200d\u0cb8\u0ccd\u0caa\u0cbe\u0c9f\u0ccd \u0cb8\u0c82\u0cb0\u0c9a\u0cbf\u0cb8\u0cc1___mine___\u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0c87\u0cb2\u0ccd\u0cb2\u0cbf\u0c97\u0cc6  \"%1$s\" \u0cb8\u0cbf\u0c82\u0c95\u0ccd\u0cb0\u0cca\u0ca8\u0cc8\u0cb8\u0ccd \u0cae\u0cbe\u0ca1\u0cc1___Flicker___\u0caa\u0ccd\u0cb2\u0cc7___\u0c97\u0ccb\u0c9a\u0cb0\u0cb5\u0cbe\u0c97\u0cc1\u0cb5___\u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82 \u0c86\u0caa\u0ccd\u200d\u0c97\u0cb3\u0cc1___\u0cb9\u0cca\u0cb8 \u0caa\u0ccd\u0caf\u0cbe\u0c95\u0cc7\u0c9c\u0ccd___\u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82\u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd \u0c97\u0cb3\u0ca8\u0ccd\u0cae\u0cc1 \u0cb5\u0cc0\u0c95\u0ccd\u0cb7\u0cbf\u0cb8\u0cbf___\u0c92\u0c82\u0ca6\u0cc1 \u0cb9\u0cca\u0cb8 \u0cb9\u0cc6\u0cb8\u0cb0\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cb0\u0cc6\u0caf\u0cbf\u0cb0\u0cbf___\u0cac\u0ccd\u0cb0\u0ccc\u0cb8\u0cb0\u0ccd \u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0ca4\u0cc6\u0cb0\u0cc6___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 LAN\u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0c95\u0ccd\u0cb0\u0ccb\u0cae\u0ccd\u200d\u0c95\u0cbe\u0cb8\u0ccd\u0c9f\u0ccd \u0cb2\u0cad\u0ccd\u0caf\u0cb5\u0cbf\u0ca6\u0cc6\u0caf\u0cc7 \u0c8e\u0c82\u0ca6\u0cc1  \u0c96\u0c9a\u0cbf\u0ca4\u0caa\u0ca1\u0cbf\u0cb8\u0cbf\u0c95\u0cca\u0cb3\u0ccd\u0cb3\u0cbf___\u0c97\u0cbe\u0caf\u0c95___\u0c87\u0ca6\u0cc1 \u0c89\u0c82\u0c9f\u0cbe\u0ca6 \u0c95\u0cbe\u0cb0\u0ca3 \u0c87\u0cb0\u0cac\u0cb9\u0cc1\u0ca6\u0cc1:___ ___\u0cb9\u0cca\u0cb8 SFTP___ ___\u0c86\u0cb2\u0ccd\u0cac\u0c82___\u0ca8\u0cbf\u0cb2\u0ccd\u0cb2\u0cbf\u0cb8\u0cc1___\u0c88\u0c97 \u0caa\u0ccd\u0cb2\u0cc7 \u0c86\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb0\u0cc1\u0cb5\u0cc1\u0ca6\u0cc1___\u0caa\u0ccd\u0cb2\u0cc7 \u0caa\u0c9f\u0ccd\u0c9f\u0cbf \u0c89\u0cb3\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0cb8\u0cc7\u0cb0\u0cb2\u0cc1 \u0c86\u0cb0\u0c82\u0cad\u0cbf\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0ca1\u0c95\u0ccd\u0caf\u0cc1\u0cae\u0cc6\u0c82\u0c9f\u0ccd Extention \u0cb9\u0cc6\u0cb8\u0cb0\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cb0\u0cc6\u0caf\u0cbf\u0cb0\u0cbf___\u0cb8\u0ccd\u0ca5\u0cb3\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0cc6\u0cb0\u0cc6___WLAN \u0c86\u0ca8\u0ccd \u0cae\u0cbe\u0ca1\u0cc1___\u0caa\u0ccd\u0cb2\u0cc7\u0caa\u0c9f\u0ccd\u0c9f\u0cbf \u0c89\u0cb3\u0cbf\u0cb8\u0cc1___\u0caa\u0ccd\u0cb2\u0cc7\u0caa\u0c9f\u0ccd\u0c9f\u0cbf \u0c89\u0cb3\u0cbf\u0cb8\u0cc1\u0cb5\u0cb2\u0ccd\u0cb2\u0cbf \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___sd\u0c95\u0cbe\u0cb0\u0ccd\u0ca1\u0ccd \u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0cb0\u0cc1\u0cb5___\u0c95\u0cbe\u0cb0\u0ccd\u0caf\u0cbe\u0c9a\u0cb0\u0ca3\u0cc6\u0c97\u0cb3\u0cc1___\u0c95\u0ca1\u0ca4\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0caa\u0cc2\u0cb0\u0ccd\u0ca3\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cb2\u0cc1 \u0ca8\u0cc0\u0cb5\u0cc1 \u0cae\u0cc1\u0c82\u0ca6\u0cc1\u0cb5\u0cb0\u0cbf\u0cb8\u0cb2\u0cc1 \u0cac\u0caf\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0cc0\u0cb0\u0cbe? ___\u0ca6\u0c9f\u0ccd\u0c9f___\u0cae\u0cb0\u0cc1\u0cac\u0cb3\u0c95\u0cc6 \u0cac\u0cc1\u0c9f\u0ccd\u0c9f\u0cbf\u0c97\u0cc6 \u0cab\u0cca\u0cb2\u0ccd\u0ca1\u0cb0\u0ccd {0} \u0cb8\u0ccd\u0ca5\u0cb3\u0cbe\u0c82\u0ca4\u0cb0\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cc1 \u0c96\u0c9a\u0cbf\u0ca4\u0cb5\u0cc7?___\u0caf\u0cb6\u0cb8\u0ccd\u0cb5\u0cbf\u0caf\u0cbe\u0c97\u0cbf \u0c89\u0cb3\u0cbf\u0cb8\u0cbf\u0c95\u0cca\u0cb3\u0ccd\u0cb3\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6!___\u0c88 \u0c95\u0cbe\u0cb0\u0ccd\u0caf\u0cbe\u0c9a\u0cb0\u0ca3\u0cc6 \u0cac\u0cc6\u0c82\u0cac\u0cb2\u0cbf\u0ca4\u0cb5\u0cbe\u0c97\u0cbf\u0cb2\u0ccd\u0cb2___\u0c9a\u0cbf\u0ca4\u0ccd\u0cb0___\u0caa\u0cc6\u0cb0\u0cbf\u0cab\u0cc6\u0cb0\u0cb2\u0ccd___\u0caa\u0ccd\u0cb2\u0cc7 \u0c86\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb0\u0cc1\u0cb5\u0cb2\u0ccd\u0cb2\u0cbf \u0cb8\u0cc7\u0cb0\u0cbf\u0cb8\u0cc1___Extention \u0cb9\u0cc6\u0cb8\u0cb0\u0ca8\u0ccd\u0ca8\u0cc1 \u0cae\u0cb0\u0cc1\u0cb9\u0cc6\u0cb8\u0cb0\u0cbf\u0cb8\u0cc1___\u0caa\u0ccd\u0cb2\u0cc7 \u0c97\u0cc6___ES \u0c9a\u0cbf\u0ca4\u0ccd\u0cb0 \u0cac\u0ccd\u0cb0\u0ccc\u0cb8\u0cb0\u0ccd___\u0ca8\u0cc0\u0cb5\u0cc1 \u0c92\u0c82\u0ca6\u0cc1 \u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0c97\u0cc6 \u0cb8\u0cc7\u0cb0\u0cbf\u0ca6\u0ccd\u0ca6\u0cc0\u0cb0\u0cbf , SSID \u0caf\u0cc1___\u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd___\u0caa\u0cbe\u0ca5\u0ccd___\u0caa\u0ccd\u0cb2\u0cc7\u0caa\u0c9f\u0ccd\u0c9f\u0cbf \u0cb9\u0cc6\u0cb8\u0cb0\u0cc1 \u0cac\u0cb0\u0cc6\u0caf\u0cbf\u0cb0\u0cbf___\u0ca8\u0cc0\u0cb5\u0cc1 \u0c87\u0ca8\u0ccd\u0ca8\u0cc1 \u0c88 \u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0c87\u0ca4\u0cb0\u0cb0\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0cc7\u0cb0\u0cbf\u0cb8\u0cac\u0cb9\u0cc1\u0ca6\u0cc1___\u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd \u0cb0\u0cc0\u0cb8\u0ccd\u0c9f\u0ccb\u0cb0\u0ccd \u0caf\u0cb6\u0cb8\u0ccd\u0cb5\u0cbf\u0caf\u0cbe\u0c97\u0cbf\u0ca6\u0cc6, \u0cb0\u0cc0\u0cb8\u0ccd\u0c9f\u0cbe\u0cb0\u0ccd\u0c9f\u0ccd \u0ca8 \u0ca8\u0c82\u0ca4\u0cb0 \u0caa\u0cb0\u0cbf\u0ca3\u0cae \u0c9c\u0cbe\u0cb0\u0cbf\u0caf\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0ca6\u0cc6___\u0ca8\u0cc0\u0cb5\u0cc1 \u0c93\u0cb5\u0cb0\u0ccd \u0cb5\u0ccd\u0cb0\u0cc8\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cc1 \u0cac\u0caf\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0cc0\u0cb0\u0cbe?___\u0c95\u0ca1\u0ca4\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0cc6\u0cb0\u0cc6\u0caf\u0cc1\u0cb5\u0cb2\u0ccd\u0cb2\u0cbf \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0c95\u0cc6 \u0caf\u0cb6\u0cb8\u0ccd\u0cb5\u0cbf\u0caf\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0ca8\u0cbf\u0cb7\u0ccd\u0c95\u0ccd\u0cb0\u0cbf\u0caf___\u0cb0\u0cbf\u0cae\u0ccb\u0c9f\u0ccd \u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0cc1 \u0c85\u0cb3\u0cbf\u0cb8\u0cbf\u0ca6 \u0ca8\u0c82\u0ca4\u0cb0 \u0cb9\u0cbf\u0c82\u0caa\u0ca1\u0cc6\u0caf\u0cb2\u0cbe\u0c97\u0cc1\u0cb5\u0cc1\u0ca6\u0cbf\u0cb2\u0ccd\u0cb2___\u0ca8\u0cc0\u0cb5\u0cc1 \u0c88\u0c97 \u0c88 \u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd ID\u0caf\u0cb2\u0ccd\u0cb2\u0cbf \u0c87\u0ca6\u0ccd\u0ca6\u0cc0\u0cb0\u0cbf:___\u0c88 \u0c86\u0ca1\u0cbf\u0caf\u0ccb \u0caa\u0ccd\u0cb2\u0cc7 \u0cae\u0cbe\u0ca1\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2___\u0caf\u0cb6\u0cb8\u0ccd\u0cb5\u0cbf___\u0c86\u0cb0\u0c82\u0cad \u0cb8\u0c82\u0c96\u0ccd\u0caf\u0cc6___\u0cb8\u0cb0\u0ccd\u0c9f\u0cbf\u0cab\u0cbf\u0c95\u0cc7\u0c9f\u0ccd \u0c87\u0ca8\u0ccd\u0ca8\u0cc2 \u0cae\u0cbe\u0ca8\u0ccd\u0caf\u0cb5\u0cbe\u0c97\u0cbf\u0cb2\u0ccd\u0cb2___\u0cac\u0ccd\u0caf\u0cbe\u0c95\u0ccd\u200d\u0c97\u0ccd\u0cb0\u0ccc\u0c82\u0ca1\u0ccd \u0c95\u0cb8\u0ccd\u0c9f\u0cae\u0cc8\u0cb8\u0ccd \u0cae\u0cbe\u0ca1\u0cc1___\u0cb0\u0cc6\u0cb8\u0cb2\u0ccd\u0caf\u0cc2\u0cb7\u0ca8\u0ccd:___\u0c95\u0ccd\u0cb0\u0cbf\u0caf\u0cc6: %1$s___\u0c95\u0ccd\u0cb2\u0ccc\u0ca1\u0ccd___\u0caf\u0cb6\u0cb8\u0ccd\u0cb5\u0cbf\u0caf\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0cae\u0cbe\u0ca7\u0ccd\u0caf\u0cae \u0ca6\u0ccb\u0cb7___\u0ca8\u0c95\u0cb2\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cc1 \u0c96\u0c9a\u0cbf\u0ca4?___\u0ca8\u0cae\u0c97\u0cc6 \u0c87\u0cae\u0cc7\u0cb2\u0ccd \u0c95\u0cb3\u0cc1\u0cb9\u0cbf\u0cb8\u0cbf___\u0c95\u0cbf\u0c9f\u0c95\u0cbf \u0c85\u0ca8\u0ccd\u200d\u0cb2\u0cbe\u0c95\u0ccd \u0cae\u0cbe\u0ca1\u0cc1___\u0cb8\u0c82\u0c97\u0cc0\u0ca4\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf \u0cb9\u0cc1\u0ca1\u0cc1\u0c95\u0cc1 ___IP \u0cb5\u0cbf\u0cb3\u0cbe\u0cb8___\u0c87\u0ca6\u0cb0\u0cbf\u0c82\u0ca6 \u0ca4\u0cc6\u0cb0\u0cc6___\u0c85\u0cb3\u0cbf\u0cb8\u0cbf\u0ca6\u0cc6 \"%1$s\"___\u0ca1\u0cbe\u0c95\u0ccd\u0caf\u0cc1\u0cae\u0cc6\u0c82\u0c9f\u0ccd\u0cb8\u0ccd \u0cb2\u0cc8\u0cac\u0ccd\u0cb0\u0cc6\u0cb0\u0cbf\u0caf\u0cb2\u0ccd\u0cb2\u0cbf \u0caf\u0cbe\u0cb5 \u0cb5\u0cbf\u0ca7\u0ca6 \u0ca1\u0cbe\u0c95\u0ccd\u0caf\u0cc1\u0cae\u0cc6\u0c82\u0c9f\u0ccd\u0cb8\u0ccd \u0ca4\u0ccb\u0cb0\u0cac\u0cc7\u0c95\u0cc1 \u0c8e\u0c82\u0ca6\u0cc1 \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cbf___\u0caa\u0c9f\u0ccd\u0c9f\u0cbf \u0cae\u0cb0\u0cc6\u0cae\u0cbe\u0ca1\u0cc1___\u0cae\u0cb0\u0cc1\u0cac\u0cb3\u0c95\u0cc6 \u0cac\u0cc1\u0c9f\u0ccd\u0c9f\u0cbf \u0c96\u0cbe\u0cb2\u0cbf\u0caf\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd \u0c95\u0cca\u0ca8\u0cc6\u0c97\u0cca\u0c82\u0ca1\u0cbf\u0ca6\u0cc6___\u0ca8\u0cbf\u0cb0\u0ccd\u0cb5\u0cbe\u0cb9\u0c95\u0cb0\u0cc1___\u0caa\u0ccd\u0cb2\u0cc7\u0caa\u0c9f\u0ccd\u0c9f\u0cbf\u0c97\u0cc6 \u0cb8\u0cc7\u0cb0\u0cbf\u0cb8\u0cc1___\u0cb0\u0cc2\u0c9f\u0ccd \u0ca1\u0cc8\u0cb0\u0cc6\u0c95\u0ccd\u0c9f\u0cb0\u0cbf\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cc1___\u0c95\u0cbf\u0c9f\u0c95\u0cbf\u0c97\u0cb3 \u0cac\u0c9f\u0ca8\u0ccd\u200d\u0ca8\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___\u0c87\u0cb2\u0ccd\u0cb2\u0cbf\u0c82\u0ca6 \u0c85\u0cb3\u0cbf\u0cb8\u0cc1\u0cb5 \u0cb8\u0ccc\u0cb2\u0cad\u0ccd\u0caf\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 Instagram \u0cac\u0cc6\u0c82\u0cac\u0cb2\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cbf\u0cb2\u0ccd\u0cb2!___\u0cb0\u0cc2\u0c9f\u0ccd \u0cb5\u0cb0\u0ccd\u0ca7\u0c95\u0c97\u0cb3\u0cc1___\u0ca4\u0cc6\u0cb0\u0cb5\u0cc1\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cc1___\u0cb9\u0cca\u0cb8___\u0cb8\u0c82\u0caa\u0cb0\u0ccd\u0c95  \u0cae\u0cc1\u0c9a\u0ccd\u0c9a\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0cb9\u0cbe\u0ca1\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0cc7\u0cb0\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0c89\u0cb3\u0cbf\u0cb8\u0ca6 \u0caa\u0c9f\u0ccd\u0c9f\u0cbf___%s \u0caf\u0cc1 \u0cb8\u0cbf\u0c97\u0cb2\u0cbf\u0cb2\u0ccd\u0cb2___\u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd \u0c95\u0ca8\u0cbf\u0cb7\u0ccd\u0c9f 8 \u0c85\u0c95\u0ccd\u0cb7\u0cb0\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb0\u0cac\u0cc7\u0c95\u0cc1 ___\u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0c95\u0cc6 \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___Cache\u0c86\u0ca6 \u0ca1\u0cc7\u0c9f\u0cbe \u0c9c\u0cca\u0ca4\u0cc6 \u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cc1___\u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0cb8\u0c82\u0caa\u0cbe\u0ca6\u0cbf\u0cb8\u0cc1___\u0c85\u0cb3\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cc1 \u0c96\u0c9a\u0cbf\u0ca4\u0cb5\u0cc7 {0}?___\u0ca8\u0cc6\u0c9f\u0ccd___\u0c95\u0ca1\u0ca4\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0c89\u0cb3\u0cbf\u0cb8\u0cb2\u0cc1 \u0caa\u0ccd\u0cb0\u0caf\u0ca4\u0ccd\u0ca8\u0cbf\u0cb8\u0cc1\u0cb5\u0cbe\u0c97 \u0ca6\u0ccb\u0cb7 \u0c89\u0c82\u0c9f\u0cbe\u0c97\u0cbf\u0ca6\u0cc6. \u0c87\u0ca6\u0ca8\u0ccd\u0ca8\u0cc1 \u0c89\u0cb3\u0cbf\u0cb8\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2.___\u0c87\u0ca4\u0cbf\u0cb9\u0cbe\u0cb8 \u0cb8\u0ccd\u0cb5\u0c9a\u0ccd\u0c9a\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cc1___\u0cb5\u0cc0\u0c95\u0ccd\u0cb7\u0c95___\u0ca8\u0cc0\u0cb5\u0cc1 \u0c88 \u0c95\u0cbe\u0cb0\u0ccd\u0caf\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0c85\u0cb3\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cc1 \u0c96\u0c9a\u0cbf\u0ca4\u0cb5\u0cc7?___\u0cb9\u0cc1\u0ca1\u0cc1\u0c95\u0cc1 \u0c8e\u0c82\u0c9c\u0cbf\u0ca8\u0ccd \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd___LAN___\u0c85\u0cb3\u0cbf\u0cb8\u0cc1___\u0c97\u0cc2\u0ca2\u0cb2\u0cbf\u0caa\u0cc0\u0c95\u0cb0\u0ca3 \u0c95\u0ccd\u0cb0\u0cae\u0cbe\u0cb5\u0cb3\u0cbf\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cc6\u0c82\u0cac\u0cb2\u0cbf\u0cb8\u0cbf\u0cb2\u0ccd\u0cb2___\u0cab\u0ccb\u0cb2\u0ccd\u0ca1\u0cb0\u0ccd \u0cb6\u0cc8\u0cb2\u0cbf___\u0cb8\u0ccd\u0cb2\u0cc8\u0ca1\u0ccd\u200d\u0cb6\u0ccb___\u0cb5\u0cb0\u0ccd\u0c97\u0cbe\u0cb5\u0ca3\u0cc6___\u0cb5\u0cc7\u0c97\u0cb5\u0cbe\u0ca6 \u0cb8\u0ccd\u0c95\u0ccd\u0cb0\u0ccb\u0cb2\u0cbf\u0c82\u0c97\u0ccd___ ___\u0cb8\u0ccd\u0cb5\u0cc0\u0c95\u0cc3\u0ca4\u0c97\u0ccb\u0c82\u0ca1 \u0cb9\u0c82\u0c9a\u0cbf\u0c95\u0cc6\u0c97\u0cb3\u0cc1___\u0cb9\u0cca\u0cb8 %s \u0caa\u0ccd\u0cb2\u0c97\u0ccd-\u0c87\u0ca8\u0ccd \u0cb2\u0cad\u0ccd\u0caf\u0cb5\u0cbf\u0ca6\u0cc6, \u0ca8\u0cc0\u0cb5\u0cc1 \u0ca8\u0cb5\u0cc0\u0c95\u0cb0\u0cbf\u0cb8\u0cb2\u0cc1 \u0cac\u0caf\u0cb8\u0cc1\u0cb5\u0cbf\u0cb0\u0cbe?___\u0c95\u0cb3\u0cc1\u0cb9\u0cbf\u0cb8\u0cb2\u0cc1 \u0c92\u0c82\u0ca6\u0cc1 \u0cb8\u0cbe\u0ca7\u0ca8\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0c86\u0cb0\u0cbf\u0cb8\u0cbf___\u0caa\u0cbe\u0ca5\u0ccd:___\u0caa\u0ccd\u0cb0\u0cb8\u0ccd\u0ca4\u0cc1\u0ca4 \u0c86\u0cb5\u0cc3\u0ca4\u0ccd\u0ca4\u0cbf\u0c97\u0cc6 \u0ca8\u0cb5\u0cc0\u0c95\u0cb0\u0cbf\u0cb8\u0cc1___\u0c9c\u0ccb\u0ca1\u0cbf\u0cb8\u0cb2\u0cc1 \u0c86\u0caa\u0ca8\u0ccd\u0ca8\u0cc1 \u0c86\u0cb0\u0cbf\u0cb8\u0cbf___\u0c95\u0cbf\u0c9f\u0c95\u0cbf \u0cb2\u0cbe\u0c95\u0ccd \u0cae\u0cbe\u0ca1\u0cc1  ___\u0caf\u0cbe\u0cb5\u0cc1\u0ca6\u0cc7 \u0c95\u0ccd\u0cb0\u0ccb\u0cae\u0ccd\u200d\u0c95\u0cbe\u0cb8\u0ccd\u0c9f\u0ccd \u0caa\u0ca4\u0ccd\u0ca4\u0cc6\u0caf\u0cbe\u0c97\u0cb2\u0cbf\u0cb2\u0ccd\u0cb2___\u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd \u0c86\u0cb0\u0c82\u0cad \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6, \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0caa\u0ccb\u0cb0\u0ccd\u0c9f\u0ccd \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ca8\u0ccd\u0ca8\u0cc1 \u0caa\u0cb0\u0cbf\u0cb6\u0cc0\u0cb2\u0cbf\u0cb8\u0cbf.___\u200dcache \u0ca1\u0cc6\u0c9f\u0cbe \u0cb0\u0cc0\u0cb8\u0ccd\u0c9f\u0ccb\u0cb0\u0ccd \u0cae\u0cbe\u0ca1\u0cc1\u0cb5\u0cc1\u0ca6\u0cc6?___\u0cb0\u0cbf\u0cae\u0ccb\u0c9f\u0ccd \u0cb8\u0cbf\u0c82\u0c95\u0ccd\u0cb0\u0cca\u0ca8\u0cc8\u0cb8\u0ccd \u0cb8\u0c95\u0ccd\u0cb0\u0cbf\u0caf\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cc1___\u0caa\u0ccd\u0cb2\u0c97\u0ccd-\u0c87\u0ca8\u0ccd \u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cc1 \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6, \u0c88 \u0c95\u0cbe\u0cb0\u0ccd\u0caf\u0cbe\u0c9a\u0cb0\u0ca3\u0cc6\u0caf\u0ca8\u0ccd\u0ca8\u0cc1  \u0caa\u0cc2\u0cb0\u0cc8\u0cb8\u0cb2\u0cc1   \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb2\u0ccd\u0cb2___\u0c85\u0c82\u0ca4\u0cc6 \u0ca4\u0cc6\u0cb0\u0cc6___\u0cac\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0cae\u0cc1\u0c82\u0ca6\u0cc1\u0cb5\u0cb0\u0cbf___IP \u0cb5\u0cbf\u0cb3\u0cbe\u0cb8., \u0c85\u0ca5\u0cb5\u0cbe IP \u0cb5\u0cbf\u0cb3\u0cbe\u0cb8./SharedFolder___\u0cb0\u0c9a\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6, \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0ca8\u0cbf\u0cb0\u0cc0\u0c95\u0ccd\u0cb7\u0cbf\u0cb8\u0cbf\u2026___\u0cb5\u0cb0\u0ccd\u0c97\u0cbe\u0cb5\u0ca3\u0cc6 \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6: \u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0ca6\u0ccb\u0cb7 \u0c85\u0ca5\u0cb5\u0cbe \u0cb8\u0ccd\u0cb5\u0cc0\u0c95\u0cb0\u0cbf\u0cb8\u0cc1\u0cb5\u0cb5\u0cb0\u0cc1 \u0cb0\u0ca6\u0ccd\u0ca6\u0cc1\u0cae\u0cbe\u0ca1\u0cbf\u0ca6\u0ccd\u0ca6\u0cbe\u0cb0\u0cc6___\u0cb9\u0cc7\u0cb3\u0cbf\u0c95\u0cc6\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0caf\u0cb6\u0cb8\u0ccd\u0cb5\u0cbf\u0caf\u0cbe\u0c97\u0cbf \u0caa\u0ccb\u0cb8\u0ccd\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0ca8\u0c95\u0cb2\u0cc1 \u0cab\u0cb2\u0c95___ %s \u0cb5\u0cb8\u0ccd\u0ca4\u0cc1\u0c97\u0cb3\u0cc1___\u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0cc1___\u0cb6\u0cc7\u0c95\u0ccd___\u0cac\u0cc1\u0c95\u0ccd\u200d\u0cae\u0cbe\u0cb0\u0ccd\u0c95\u0ccd\u200d\u0c97\u0cb3\u0cc1___\u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd %s \u0cb8\u0c82\u0caa\u0cbe\u0ca6\u0cbf\u0cb8\u0cc1 ___\u0ca8\u0cbf\u0cae\u0ccd\u0cae \u0caa\u0cbf\u0cb8\u0cbf\u0caf\u0cb2\u0ccd\u0cb2\u0cbf \u0cb5\u0cbf\u0cb3\u0cbe\u0cb8\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1\u0cac\u0cb0\u0cc6\u0caf\u0cbf\u0cb0\u0cbf :\n___\u0cab\u0ccb\u0cb2\u0ccd\u0ca1\u0cb0\u0ccd \u0ca4\u0cc6\u0cb0\u0cc6___\u0cab\u0ccb\u0cb2\u0ccd\u0ca1\u0cb0\u0ccd \"%s\" \u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd \u0caa\u0c9f\u0ccd\u0c9f\u0cbf\u0c97\u0cc6 \u0cb8\u0cc7\u0cb0\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6.___\u0c95\u0ccd\u0cb7\u0cae\u0cbf\u0cb8\u0cbf, \u0cae\u0cbe\u0ca7\u0ccd\u0caf\u0cae \u0c95\u0c82\u0c9f\u0cc6\u0c82\u0c9f\u0ccd \u0caa\u0ca1\u0cc6\u0caf\u0cc1\u0cb5\u0cbe\u0c97 \u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0ca6\u0ccb\u0cb7\u0cb5\u0cbf\u0ca6\u0cc6___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb5\u0cbf\u0cb6\u0cc7\u0cb7 \u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd \u0caa\u0cbe\u0ca5\u0ccd \u0c85\u0ca1\u0cbf\u0caf\u0cb2\u0ccd\u0cb2\u0cbf \u0cb9\u0cc1\u0ca1\u0cc1\u0c95\u0cbf___\u0cb9\u0cbe\u0c9f\u0ccd\u200d\u0cb8\u0ccd\u0caa\u0cbe\u0c9f\u0ccd \u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb0\u0c9a\u0cbf\u0cb8\u0cc1___\u0cac\u0ccd\u0cb2\u0cc2\u0c9f\u0cc2\u0ca4\u0ccd \u0c95\u0ca1\u0ca4\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0c82\u0c9a\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb2\u0ccd\u0cb2___\u0cb0\u0cbf\u0cab\u0ccd\u0cb0\u0cc6\u0cb6\u0ccd \u0cae\u0cbe\u0ca4\u0ccd\u0cb0___\u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6___\u0cb8\u0cb0\u0ccd\u0c9f\u0cbf\u0cab\u0cbf\u0c95\u0cc7\u0c9f\u0ccd \u0c85\u0cb5\u0ca7\u0cbf \u0cae\u0cc1\u0c97\u0cbf\u0ca6\u0cbf\u0ca6\u0cc6___\u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0c97\u0cc6 \u0cb8\u0cc7\u0cb0\u0ccd\u0caa\u0ca1\u0cc6\u0caf\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0caf\u0cbe\u0cb5\u0cc1\u0ca6\u0cc7 \u0cb8\u0c82\u0caa\u0cb0\u0ccd\u0c95 \u0caa\u0ca4\u0ccd\u0ca4\u0cc6\u0caf\u0cbe\u0c97\u0cb2\u0cbf\u0cb2\u0ccd\u0cb2, \n\u0cae\u0cca\u0ca6\u0cb2\u0cc1 WLAN \u0c86\u0ca8\u0ccd \u0cae\u0cbe\u0ca1\u0cbf___\u0c9a\u0cc6\u0c95\u0ccd\u200d\u0cb8\u0cae\u0ccd \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___Cache\u0c86\u0ca6 \u0ca1\u0cc7\u0c9f\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cae\u0cb0\u0cb3\u0cbf\u0caa\u0ca1\u0cc6___Device___\u0c85\u0cb3\u0cbf\u0cb8\u0cb2\u0cbe\u0ca6 \u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0cbf\u0c82\u0caa\u0ca1\u0cc6\u0caf\u0cb2\u0cc1 \u0c86\u0c97\u0cc1\u0cb5\u0c82\u0ca4\u0cc6 \u0cae\u0cb0\u0cc1\u0cac\u0cb3\u0c95\u0cc6 \u0cac\u0cc1\u0c9f\u0ccd\u0c9f\u0cbf\u0caf\u0cca\u0cb3\u0c97\u0cbf\u0ca1\u0cc1___\u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0cc6\u0cb0\u0cb5\u0cc1\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6, \u0cb0\u0c95\u0ccd\u0cb7\u0ca3\u0cc6 \u0ca8\u0cbf\u0c82\u0ca4\u0cbf\u0ca6\u0cc6___\u0ca7\u0cc0\u0cb0\u0ccd\u0c98\u0cb5\u0cbe\u0c97\u0cbf \u0c92\u0ca4\u0ccd\u0ca4\u0cbf \u0cae\u0ca4\u0ccd\u0ca4\u0cc1 \u0c8e\u0cb3\u0cc6\u0caf\u0cbf\u0cb0\u0cbf___\u0cb9\u0cca\u0cb8\u0ca4\u0cc1___\u0c86\u0caa\u0ccd\u0cb8\u0ccd:___\u0c85\u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0ca8\u0cc6  \u0cae\u0cc1\u0c97\u0cbf\u0ca6\u0cbf\u0ca6\u0cc6___sd \u0c95\u0cbe\u0cb0\u0ccd\u0ca1\u0ccd \u0c97\u0cbe\u0ca4\u0ccd\u0cb0 \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___SD \u0c95\u0cbe\u0cb0\u0ccd\u0ca1\u0ccd \u0c96\u0cbe\u0cb2\u0cbf\u0caf\u0cbe\u0c97\u0cbf\u0ca6\u0cc6, \u0c85\u0ca8\u0ccd\u200d\u0cae\u0ccc\u0c82\u0c9f\u0ccd \u0c86\u0c97\u0cbf\u0ca6\u0cc6 \u0c85\u0ca5\u0cb5\u0cbe \u0caa\u0ccd\u0cb0\u0cb8\u0ccd\u0ca4\u0cc1\u0ca4\u0cb5\u0cbe\u0c97\u0cbf\u0cb2\u0ccd\u0cb2___\u0caa\u0ccd\u0cb0\u0cb8\u0ccd\u0ca4\u0cc1\u0ca4 \u0cb9\u0ccb\u0cae\u0ccd \u0ca1\u0cc8\u0cb0\u0cc6\u0c95\u0ccd\u0c9f\u0cb0\u0cbf:___\u0cad\u0cbe\u0cb7\u0cc6 \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd___\u0c87\u0ca6\u0c95\u0ccd\u0c95\u0cc6 \u0cb8\u0cc7\u0cb0\u0cbf\u0cb8\u0cc1___\u0cb8\u0cc2\u0c9a\u0ccd\u0caf___\u0c95\u0ca4\u0ccd\u0ca4\u0cb0\u0cbf\u0cb8\u0cc1___\u0c97\u0ca3\u0c95\u0caf\u0c82\u0ca4\u0ccd\u0cb0___\u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd \u0cb9\u0cbe\u0c95\u0cbf\u0cb0\u0cbf___ES File Explorer \u0c95\u0cc8\u0caa\u0cbf\u0ca1\u0cbf___\u0c87\u0ca4\u0cbf\u0cb9\u0cbe\u0cb8 \u0cb5\u0cb8\u0ccd\u0ca4\u0cc1 \u0c97\u0cb0\u0cbf\u0cb7\u0ccd\u0c9f \u0c97\u0ca3\u0ca8\u0cc6___\u0ca5\u0cc0\u0cae\u0ccd \u0cb8\u0c82\u0caa\u0cbe\u0ca6\u0cbf\u0cb8\u0cc1___\u0cae\u0cb0\u0cc1\u0cac\u0cb3\u0c95\u0cc6 \u0cac\u0cc1\u0c9f\u0ccd\u0c9f\u0cbf \u0cb8\u0ccc\u0cb2\u0cad\u0ccd\u0caf \u0cb8\u0c95\u0ccd\u0cb0\u0cbf\u0caf\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cc1   (\u0c85\u0cb3\u0cbf\u0cb8\u0cc1\u0cb5 \u0cae\u0cca\u0ca6\u0cb2\u0cc1 \u0cae\u0cb0\u0cc1\u0cac\u0cb3\u0c95\u0cc6 \u0cac\u0cc1\u0c9f\u0ccd\u0c9f\u0cbf\u0caf\u0cb2\u0ccd\u0cb2\u0cbf \u0cb9\u0cbe\u0c95\u0cc1)?___\u0cac\u0cc1\u0c95\u0ccd\u200d\u0cae\u0cbe\u0cb0\u0ccd\u0c95\u0ccd\u0cb8\u0ccd___\u0cac\u0ccd\u0cb2\u0cc2\u0c9f\u0cc2\u0ca4\u0ccd \u0cb9\u0c82\u0c9a\u0cbf\u0c95\u0cc6 \u0caa\u0cbe\u0ca5\u0ccd:___\u0c89\u0cb3\u0cbf\u0ca6\u0cbf\u0cb0\u0cc1\u0cb5\u0cc1\u0ca6\u0cc1:___\u0cae\u0ccb\u0ca1\u0ccd___\u0cb0\u0cbf\u0cae\u0ccb\u0c9f\u0ccd \u0ca8\u0cbf\u0cb0\u0ccd\u0cb5\u0cbe\u0cb9\u0c95___\u0cb9\u0cca\u0cb8 %s \u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd___\u0c86\u0cab\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026___\u0c92\u0c9f\u0ccd\u0c9f\u0cc1: %s \u0cb5\u0cb8\u0ccd\u0ca4\u0cc1\u0c97\u0cb3\u0cc1%s___\u0c8e\u0ca8\u0ccd\u200d\u0c95\u0ccd\u0cb0\u0cbf\u0caa\u0ccd\u0c9f\u0ccd \u0c86\u0ca6 \u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0c92\u0cb3\u0c97\u0cca\u0c82\u0ca1\u0cbf\u0ca6\u0cc6, \u0c8e\u0ca8\u0ccd\u200d\u0c95\u0ccd\u0cb0\u0cbf\u0caa\u0ccd\u0cb7\u0ca8\u0ccd\u200d\u0c97\u0cc2 \u0cae\u0cca\u0ca6\u0cb2\u0cc1 \u0c88 \u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca1\u0cc0\u0c95\u0ccd\u0cb0\u0cbf\u0cab\u0ccd\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cbf___\u0ca8\u0cc0\u0cb5\u0cc1 \u0c89\u0cb3\u0cbf\u0cb8\u0cb2\u0cc1 \u0cac\u0caf\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0cc0\u0cb0\u0cc7___APK\u0c97\u0cb3\u0cc1 \u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0ca8\u0cc6\u0c97\u0cca\u0c82\u0ca1\u0cbf\u0ca6\u0cc6___\u0cb9\u0cca\u0cb8->\u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd \u0cae\u0cc2\u0cb2\u0c95 \u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd \u0cb8\u0cc7\u0cb0\u0cbf\u0cb8\u0cbf___exception \u0caa\u0ca4\u0ccd\u0ca4\u0cc6\u0caf\u0cbe\u0c97\u0cbf\u0ca6\u0cc6!___\u0c85\u0c97\u0ca4\u0ccd\u0caf\u0cb5\u0cbf\u0cb0\u0cc1\u0cb5 \u0c9c\u0cbe\u0c97:___\u0ca1\u0cc0\u0c95\u0c82\u0caa\u0ccd\u0cb0\u0cc6\u0cb8\u0ccd\u200d\u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6___\u0c9d\u0cc2\u0cae\u0ccd \u0c94\u0c9f\u0ccd___\u0c87\u0cb2\u0ccd\u0cb2\u0cbf\u0c82\u0ca6 \u0cb8\u0c82\u0caa\u0cbe\u0ca6\u0cbf\u0cb8\u0cc1\u0cb5 \u0cb8\u0ccc\u0cb2\u0cad\u0ccd\u0caf\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 Instagram \u0cac\u0cc6\u0c82\u0cac\u0cb2\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cbf\u0cb2\u0ccd\u0cb2!___\u0c97\u0cbe\u0ca4\u0ccd\u0cb0:___\u0cb9\u0cc6\u0cb8\u0cb0\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cb0\u0cc6\u0caf\u0cbf\u0cb0\u0cbf___\u0cb9\u0cc6\u0cb8\u0cb0\u0cc1:___\u0c87\u0ca8\u0ccd\u0ca8\u0cb7\u0ccd\u0c9f\u0cc1 \u0c86\u0ca8\u0ccd\u200d\u0cb2\u0cc8\u0ca8\u0ccd \u0ca5\u0cc0\u0cae\u0ccd\u200d\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0caa\u0ca1\u0cc6___QQ \u0c96\u0cbe\u0ca4\u0cc6___\u0caa\u0ccd\u0cb0\u0cbe\u0caa\u0cb0\u0ccd\u0c9f\u0cc0\u0cb8\u0ccd___\u0cae\u0cbe\u0cb2\u0cc0\u0c95___\u0cb8\u0ccd\u0ca5\u0cb3\u0cbe\u0c82\u0ca4\u0cb0\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6___- SMB \u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd \u0ca8\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0cb5\u0ccd\u0caf\u0cbe\u0caa\u0ccd\u0ca4\u0cbf\u0caf\u0cbf\u0c82\u0ca6 \u0cb9\u0cca\u0cb0\u0cb9\u0ccb\u0c97\u0cbf\u0ca6\u0cc6___\u0c96\u0c9a\u0cbf\u0ca4\u0cb5\u0cc7 \u0c95\u0cbe\u0cb0\u0ccd\u0caf\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1  \u0ca4\u0cc6\u0cb0\u0cb5\u0cc1\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cc7 ?\n\u0c92\u0cb3\u0c97\u0cca\u0c82\u0ca1\u0cbf\u0ca6\u0cc6 %1$s \u0cb5\u0cb8\u0ccd\u0ca4\u0cc1(\u0c97\u0cb3\u0cc1), %2$s \u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd \u0c86\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb0\u0cc1\u0cb5 \u0c95\u0cbe\u0cb0\u0ccd\u0caf(\u0c97\u0cb3\u0cc1)___\u0caa\u0ccd\u0cb0\u0cb5\u0cc7\u0cb6\u0cbf\u0cb8\u0cbf\u0ca6\u0ccd\u0ca6\u0cc1:___ ___\u0c97\u0cc1\u0c82\u0caa\u0cc1___\u0caf\u0cb6\u0cb8\u0ccd\u0cb5\u0cbf\u0caf\u0cbe\u0c97\u0cbf \u0c85\u0cb3\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6!___\u0cb9\u0ca4\u0ccd\u0ca4\u0cbf\u0cb0\u0ca6 \u0cb8\u0cbe\u0ca7\u0ca8\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0cc1\u0ca1\u0cbf\u0c95\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026___3rd party \u0c86\u0caa\u0ccd\u200d \u0cb8\u0ccd\u0ca5\u0cb3\u0cc0\u0caf\u0cb5\u0cbe\u0c97\u0cbf \u0c95\u0ca1\u0ca4\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0c82\u0caa\u0cbe\u0ca6\u0cbf\u0cb8\u0cbf\u0ca6\u0cbe\u0c97 \u0cb0\u0cbf\u0cae\u0ccb\u0c9f\u0ccd \u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0ccd\u0cb5\u0caf\u0c82\u0c9a\u0cbe\u0cb2\u0cbf\u0ca4\u0cb5\u0cbe\u0c97\u0cbf \u0cb8\u0cbf\u0c82\u0c95\u0ccd\u0cb0\u0cca\u0ca8\u0cc8\u0cb8\u0ccd \u0cae\u0cbe\u0ca1\u0cc1___\u0c87\u0ca4\u0cb0\u0cc6___\u0ca1\u0ccc\u0ca8\u0ccd___\u0cac\u0cb9\u0cc1 \u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0c85\u0cb3\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cc1 \u0c96\u0c9a\u0cbf\u0ca4\u0cb5\u0cc7?___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0c92\u0c82\u0ca6\u0cc1 \u0cb8\u0cbe\u0ca7\u0ca8\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0c86\u0cb0\u0cbf\u0cb8\u0cbf___\u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd \u0c89\u0ca6\u0ccd\u0ca6\u0cb5\u0cc1 \u0ca4\u0caa\u0ccd\u0caa\u0cc1 (6 \u2013 34)___\u0ca6\u0ccb\u0cb7, \u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd {0} \u0caa\u0ca4\u0ccd\u0ca4\u0cc6\u0cb9\u0c9a\u0ccd\u0c9a\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb2\u0ccd\u0cb2___\u0c95\u0c82\u0caa\u0ccd\u0cb0\u0cc6\u0cb8\u0ccd\u200d\u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6___\u0ca1\u0c95\u0ccd\u0caf\u0cc1\u0cae\u0cc6\u0c82\u0c9f\u0ccd Extention \u0cb9\u0cc6\u0cb8\u0cb0\u0cc1\u0c88 \u0c9a\u0cbf\u0cb9\u0ccd\u0ca8\u0cc6\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0c92\u0cb3\u0c97\u0cca\u0c82\u0ca1\u0cbf\u0cb0\u0cac\u0cbe\u0cb0\u0ca6\u0cc1 * \\ / \" : ? | < >]___\u0caa\u0ccd\u0cb0\u0cb8\u0ccd\u0ca4\u0cc1\u0ca4 \u0c95\u0cbf\u0c9f\u0c95\u0cbf\u0caf\u0cb2\u0ccd\u0cb2\u0cbf \u0ca4\u0cc6\u0cb0\u0cc6___\u0c9a\u0cbf\u0ca4\u0ccd\u0cb0:___\u0c8e\u0cb2\u0ccd\u0cb2\u0cbe \u0cae\u0cc2\u0cb2\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0c85\u0cb3\u0cbf\u0cb8\u0cc1\u2026___\u0c86\u0cb2\u0ccd\u0cac\u0c82 \u0c86\u0caf\u0ccd\u0c95\u0cc6 \u0cae\u0cbe\u0ca1\u0cbf___\u0c95\u0cbe\u0cb0\u0ccd\u0caf \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0caa\u0ccd\u0cb0\u0cbe\u0cb0\u0c82\u0cad\u0cbf\u0cb8\u0cc1___cache \u0c86\u0ca6 \u0ca1\u0cc7\u0c9f\u0cbe\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0caf\u0cb6\u0cb8\u0ccd\u0c9a\u0cbf\u0caf\u0cbe\u0c97\u0cbf \u0c85\u0cb3\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___zip___\u0cb8\u0ccd\u0caa\u0cb7\u0ccd\u0c9f___\u0c95\u0c82\u0caa\u0ccd\u0cb0\u0cc6\u0cb8\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cc1 \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6: {0}. \u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82 \u0ca8\u0cbf\u0cb0\u0cbe\u0c95\u0cb0\u0cbf\u0cb8\u0cbf\u0ca6\u0cc6___\u0cb5\u0cbf\u0cb5\u0cb0\u0c97\u0cb3\u0cc1___\u0cb8\u0c95\u0ccd\u0cb0\u0cbf\u0caf___\u0caa\u0ccd\u0cb0\u0c97\u0ca4\u0cbf___\u0c87\u0ca4\u0cb0\u0cc6___\u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd \u0cac\u0cb0\u0cc6\u0caf\u0cbf\u0cb0\u0cbf___\u0c88 \u0cab\u0ccb\u0cb2\u0ccd\u0ca1\u0cb0\u0ccd \u0c97\u0cc6 \u0c85\u0ca8\u0cc1\u0cae\u0ca4\u0cbf \u0c87\u0cb2\u0ccd\u0cb2___\u0cac\u0cb2\u0cb5\u0c82\u0ca4\u0cb5\u0cbe\u0c97\u0cbf \u0c8e\u0c9c\u0cc6\u0c95\u0ccd\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cc1\u0cb5\u0cc1\u0ca6\u0cc1  \u0c9a\u0cbe\u0cb2\u0ccd\u0ca4\u0cbf\u0caf\u0cb2\u0ccd\u0cb2\u0cbf\u0cb0\u0cc1\u0cb5  \u0caf\u0cbe\u0cb5\u0cc1\u0ca6\u0cc7 \u0c95\u0ca1\u0ca4\u0ca6 \u0ca8\u0cb7\u0ccd\u0c9f\u0c95\u0ccd\u0c95\u0cc6 \u0c95\u0cbe\u0cb0\u0ca3\u0cb5\u0cbe\u0c97\u0cac\u0cb9\u0cc1\u0ca6\u0cc1___\u0caa\u0ccd\u0cb0\u0ca6\u0cb0\u0ccd\u0cb6\u0ca8 \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd___\u0cb5\u0cbe\u0cb0\u0ccd\u0ca4\u0cc6___\u0c95\u0ca1\u0ca4  \u0caa\u0ca4\u0ccd\u0ca4\u0cc6\u0caf\u0cbe\u0c97\u0cb2\u0cbf\u0cb2\u0ccd\u0cb2\u0cb5\u0cc7?  \u0c86\u0cb3\u0cb5\u0cbe\u0c97\u0cbf \u0cb9\u0cc1\u0ca1\u0cc1\u0c95\u0cbf \u0caa\u0ccd\u0cb0\u0caf\u0ca4\u0ccd\u0ca8\u0cbf\u0cb8\u0cbf ___\u0c8e\u0cb2\u0ccd\u0cb2\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb5\u0cbf\u0cb8\u0ccd\u0caa\u0cb0\u0cbf\u0cb8\u0cc1___\u0cae\u0cc2\u0cb2 \u0c95\u0ca1\u0ca4___\u0ca8\u0cc0\u0cb5\u0cc1 {0}\u0ca8 \u0c85\u0ca8\u0ca7\u0cc0\u0c95\u0cc3\u0ca4 \u0c86\u0cb5\u0cc3\u0ca4\u0ccd\u0ca4\u0cbf\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cb3\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0ccd\u0ca6\u0cc0\u0cb0\u0cbf. \u0cb8\u0cc1\u0cb0\u0c95\u0ccd\u0cb7\u0ca4\u0cc6\u0caf\u0cb2\u0ccd\u0cb2\u0cbf\u0cb0\u0cb2\u0cc1, \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0cad\u0cc7\u0c9f\u0cbf\u0ca8\u0cc0\u0ca1\u0cbf http://www.estrongs.com \u0cae\u0ca4\u0ccd\u0ca4\u0cc1 \u0c85\u0ca7\u0cc0\u0c95\u0cc3\u0ca4 \u0c86\u0cb5\u0cc3\u0ca4\u0ccd\u0ca4\u0cbf\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd \u0cae\u0cbe\u0ca1\u0cbf___\u0cb0\u0cc6\u0c95\u0cae\u0cc6\u0c82\u0ca1\u0cc6\u0ca1\u0ccd___\u0cb8\u0ca8\u0ccd\u0ca8\u0cc6\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0c95\u0ccd\u0cb0\u0cbf\u0caf\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cc1___\u0caa\u0ccb\u0cb8\u0ccd\u0c9f\u0ccd___\u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82 \u0c86\u0caa\u0ccd\u0cb8\u0ccd \u0c85\u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cb2\u0cc1, \u0ca8\u0cc0\u0cb5\u0cc1 \u0c96\u0c9a\u0cbf\u0ca4\u0cb5\u0cc7?___USB \u0caa\u0ccd\u0cb2\u0c97\u0ccd-\u0c87\u0ca8\u0ccd \u0cb8\u0c82\u0ca6\u0cc7\u0cb6___\u0cb9\u0cbe\u0ca1\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0cc7\u0cb0\u0cbf\u0cb8\u0cc1\u0cb5\u0cb2\u0ccd\u0cb2\u0cbf \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6, \u0caa\u0ccd\u0cb2\u0cc7\u0caa\u0c9f\u0ccd\u0c9f\u0cbf \u0cb8\u0c82\u0caa\u0cbe\u0ca6\u0cbf\u0cb8\u0cc1\u0cb5\u0c82\u0ca4\u0ca6\u0ccd\u0ca6\u0cb2\u0ccd\u0cb2___\u0ca6\u0cbf\u0ca8\u0cbe\u0c82\u0c95 \u0cb8\u0ccd\u0cb5\u0cb0\u0cc2\u0caa___100\u0c95\u0ccd\u0c95\u0cbf\u0c82\u0ca4 \u0cb9\u0cc6\u0c9a\u0ccd\u0c9a\u0cc1 \u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0c92\u0c82\u0ca6\u0cc7 \u0cb8\u0cae\u0caf\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf \u0cb9\u0c82\u0c9a\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2___\u0cb8\u0ccd\u0ca5\u0cb3\u0cc0\u0caf\u0cb5\u0cbe\u0c97\u0cbf \u0caa\u0ccd\u0cb2\u0cc7 \u0cae\u0cbe\u0ca1\u0cc1___\u0cb5\u0cbe\u0cb0\u0c97\u0cb3\u0cc1___\u0c8e\u0cb2\u0ccd\u0cb2\u0ca6\u0c95\u0ccd\u0c95\u0cc2 \u0c85\u0ca8\u0ccd\u0cb5\u0caf\u0cbf\u0cb8\u0cc1___\u0c8e\u0c95\u0ccd\u0cb8\u0ccd\u0c9f\u0ccd\u0cb0\u0cbe\u0c95\u0ccd\u0c9f\u0ccd___\u0cb8\u0ca8\u0ccd\u0ca8\u0cc6\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0cc7\u0cb0\u0cbf\u0cb8\u0cc1___\u0c95\u0ccd\u0cb7\u0cae\u0cbf\u0cb8\u0cbf, \u0cac\u0cc6\u0c82\u0cac\u0cb2\u0cbf\u0cb8\u0ca6 \u0cae\u0cbe\u0ca7\u0ccd\u0caf\u0cae \u0cb5\u0cbf\u0ca7\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0ca8\u0cc0\u0cb5\u0cc1 \u0c87\u0ca6\u0c95\u0ccd\u0c95\u0cc6 %s \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd \u0cae\u0cb0\u0cc1\u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cc1 \u0c96\u0c9a\u0cbf\u0ca4\u0cb5\u0cc7?___\u0c89\u0cb3\u0cbf\u0cb8\u0cc1___\u0cb9\u0cbe\u0c9f\u0ccd\u200d\u0cb8\u0ccd\u0caa\u0cbe\u0c9f\u0ccd \u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0cb0\u0c9a\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6___ \u0c86\u0cb0\u0cbf\u0cb8\u0cbf\u0ca6 \u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0c87\u0cb2\u0ccd\u0cb2\u0cbf\u0c97\u0cc6 \u0c8e\u0c95\u0ccd\u0cb8\u0ccd\u0c9f\u0ccd\u0cb0\u0cbe\u0c95\u0ccd\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cc1___\u0cb5\u0cb8\u0ccd\u0ca4\u0cc1___\u0c8e\u0ca8\u0ccd\u200d\u0c95\u0ccb\u0ca1\u0cbf\u0c82\u0c97\u0ccd \u0c86\u0cb0\u0cbf\u0cb8\u0cbf___\u0c96\u0cbe\u0ca4\u0cc6___\u0ca4\u0cc6\u0cb0\u0cc6___ES\u0c97\u0cc6 \u0c89\u0cb3\u0cbf\u0cb8\u0cc1...___\u0c85\u0cab\u0ccd___\u0c85\u0caa\u0cb0\u0cbf\u0c9a\u0cbf\u0ca4___SD\u0c95\u0cbe\u0cb0\u0ccd\u0ca1\u0ccd \u0c85\u0ca8\u0ccd\u200d\u0cae\u0ccc\u0c82\u0c9f\u0ccd \u0c86\u0c97\u0cbf\u0ca6\u0cc6___\u0cae\u0cbe\u0ca7\u0ccd\u0caf\u0cae \u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0c85\u0cb3\u0cbf\u0cb8\u0cac\u0cc7\u0ca1___\u0cb5\u0cc7\u0c97___\u0c95\u0cbf\u0cb0\u0cc1\u0cae\u0cbe\u0cb0\u0ccd\u0c97\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb0\u0c9a\u0cbf\u0cb8\u0cc1\u0cb5\u0cb2\u0ccd\u0cb2\u0cbf \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0cb8\u0ccd\u0cb5\u0cc7\u0c9a\u0ccd\u0c9b\u0cc6\u0caf\u0cbe\u0ca6 AP \u0cb9\u0cb8\u0cb0\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cb3\u0cb8\u0cc1___\u0c95\u0cb3\u0cbf\u0cb8\u0cc1\u0cb5\u0cb5 \u0cb8\u0c82\u0caa\u0cb0\u0ccd\u0c95 \u0c95\u0ca1\u0cbf\u0ca6\u0cc1\u0cb9\u0cbe\u0c95\u0cbf\u0ca6\u0ccd\u0ca6\u0cbe\u0cb0\u0cc6___\u0c85\u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cb2\u0cc1 \u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82 \u0cb5\u0ccd\u0cb0\u0cc8\u0c9f\u0cac\u0cb2\u0ca8\u0ccd\u0ca8\u0cc1 \u0cae\u0cb0\u0cc1\u0cae\u0ccc\u0c82\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb2\u0ccd\u0cb2___\u0c95\u0c82\u0caa\u0ccd\u0cb0\u0cc6\u0cb8\u0ccd \u0cae\u0c9f\u0ccd\u0c9f___\u0c9a\u0cbf\u0ca4\u0ccd\u0cb0\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0c95\u0ca4\u0ccd\u0ca4\u0cb0\u0cbf\u0cb8\u0cc1___\u0ca8\u0cc0\u0cb5\u0cc1 \u0c8e\u0cb2\u0ccd\u0cb2\u0cbe %s \u0c95\u0cbe\u0cb0\u0ccd\u0caf\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0c85\u0cb3\u0cbf\u0cb8\u0cb2\u0cc1 \u0cac\u0caf\u0cb8\u0cc1\u0cb5\u0cbf\u0cb0\u0cbe?___\u0ca8\u0cc0\u0cb5\u0cc1 \u0cae\u0cb0\u0cc1\u0cac\u0cb3\u0c95\u0cc6 \u0cac\u0cc1\u0c9f\u0ccd\u0c9f\u0cbf\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0c96\u0cbe\u0cb2\u0cbf \u0cae\u0cbe\u0ca1\u0cc1\u0cb5\u0cc1\u0ca6\u0cc1 \u0c96\u0c9a\u0cbf\u0ca4\u0cb5\u0cc7?___\u0c9f\u0cc2\u0cb2\u0ccd\u200d\u0cac\u0cbe\u0c95\u0ccd\u0cb8\u0ccd___\u0cac\u0ccd\u0caf\u0cbe\u0c95\u0ccd\u200d\u0c97\u0ccd\u0cb0\u0ccc\u0c82\u0ca1\u0ccd \u0cac\u0ca3\u0ccd\u0ca3\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cc1___\u0c86\u0ca1\u0cbf\u0caf\u0ccb:___\u0cb9\u0cbe\u0ca1\u0cc1\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0cc1\u0ca1\u0cc1\u0c95\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026___\u0c86\u0cb0\u0cbf\u0cb8\u0cbf\u0cb0\u0cc1\u0cb5 \u0c86\u0caa\u0ccd\u0cb8\u0ccd \u0c97\u0cb3\u0cb2\u0ccd\u0cb2\u0cbf \u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82 \u0c86\u0caa\u0ccd\u0cb8\u0ccd \u0c97\u0cb3\u0cc2 \u0cb8\u0cc7\u0cb0\u0cbf\u0cb5\u0cc6 , \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd \u0ca8\u0cbf\u0c82\u0ca6 \u0cb0\u0cc2\u0c9f\u0ccd \u0caa\u0cb0\u0cbf\u0cb6\u0ccb\u0ca7\u0c95  \u0c86\u0caf\u0ccd\u0c95\u0cc6\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0c95\u0ccd\u0cb0\u0cbf\u0caf\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cbf.___\u0c95\u0ca1\u0ca4\u0cb5\u0cc1( 2G \u0c95\u0cbf\u0c82\u0ca4 \u0ca6\u0cca\u0ca1\u0ccd\u0ca1\u0ca6\u0cc1) \u0c8e\u0ca8\u0ccd\u200d\u0c95\u0ccd\u0cb0\u0cbf\u0caa\u0ccd\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cc1  \u0cac\u0cb9\u0cb3 \u0ca6\u0cca\u0ca1\u0ccd\u0ca1\u0ca6\u0cbe\u0caf\u0cbf\u0ca4\u0cc1___\u0c95\u0c82\u0caa\u0ccd\u0cb0\u0cc6\u0cb8\u0ccd___\u0c8e\u0ca8\u0ccd\u200d\u0c95\u0ccd\u0cb0\u0cbf\u0caa\u0ccd\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026___\u0cae\u0cc1\u0c9a\u0ccd\u0c9a\u0cc1___\u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd___\u0c86\u0caa\u0ccd \u0caa\u0ccd\u0cb0\u0cbe\u0cb0\u0c82\u0cad\u0cbf\u0cb8\u0cc1___\u0cb9\u0cc6\u0cb8\u0cb0\u0cc1 \u0c96\u0cbe\u0cb2\u0cbf\u0caf\u0cbe\u0c97\u0cbf\u0cb0\u0cac\u0cbe\u0cb0\u0ca6\u0cc1___\u0c85\u0caa\u0ccd\u0cb2\u0cbf\u0c95\u0cc7\u0cb6\u0ca8\u0ccd\u200d\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0ccd\u0caf\u0cbe\u0c95\u0ccd\u200d\u0c85\u0caa\u0ccd \u0cae\u0cbe\u0ca1\u0cc1___\u0cb0\u0cbf\u0cae\u0ccb\u0c9f\u0ccd \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd___\u0ca6\u0cc3\u0ca2\u0cbf\u0cd5\u0c95\u0cb0\u0ca3 \u0caa\u0cc1\u0c9f \u0cb2\u0ccb\u0ca1\u0ccd \u0c86\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026___\u0c87\u0cb2\u0ccd\u0cb2\u0cbf\u0c97\u0cc6 \u0cb9\u0cbe\u0cb0\u0cc1___\u0c95\u0cbe\u0cb0\u0ccd\u0caf\u0c97\u0ca4\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cc1___\u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82 \u0ca1\u0cc8\u0cb0\u0cc6\u0c95\u0ccd\u0c9f\u0cb0\u0cbf\u0caf\u0cb2\u0ccd\u0cb2\u0cbf \u0cb9\u0cc1\u0ca1\u0cc1\u0c95\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2___\u0cb9\u0ccb\u0cae\u0ccd___\u0caa\u0ccd\u0cb2\u0cc7\u0caa\u0c9f\u0ccd\u0c9f\u0cbf\u0caf\u0cbf\u0c82\u0ca6 \u0ca4\u0cc6\u0c97\u0cc6___\u0c95\u0ca1\u0ca4 %s \u0c88\u0c97\u0cbe\u0c97\u0cb2\u0cc7 \u0c85\u0cb8\u0ccd\u0ca4\u0cbf\u0ca4\u0ccd\u0cb5\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf\u0ca6\u0cc6, \u0c85\u0ca6\u0ca8\u0ccd\u0ca8\u0cc1 \u0c93\u0cb5\u0cb0\u0ccd\u200d\u200d\u0cb5\u0ccd\u0cb0\u0cc8\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cc1\u0cb5\u0cc1\u0ca6\u0cc7?___ APK\u0c97\u0cb3 \u0c85\u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0ca8\u0cc6  \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___LAN\u0ca8\u0cbf\u0c82\u0ca6 \u0c95\u0cb3\u0cc1\u0cb9\u0cbf\u0cb8\u0cc1___\u0cb8\u0c82\u0caa\u0ca8\u0ccd\u0cae\u0cc2\u0cb2\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0ca6\u0ccd\u0caf\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf \u0caa\u0ccd\u0cb0\u0cb5\u0cc7\u0cb6\u0cae\u0cbe\u0ca1\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2___\u0cb9\u0cca\u0cb0\u0cb9\u0ccb\u0c97\u0cc1___\u0c86\u0c82\u0ca1\u0ccd\u0cb0\u0cbe\u0caf\u0ccd\u0ca1\u0ccd \u0cae\u0cbe\u0cb0\u0cc1\u0c95\u0c9f\u0ccd\u0c9f\u0cc6 \u0cb8\u0cbf\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb2\u0ccd\u0cb2___Dest \u0c95\u0ca1\u0ca4.___\u0c88 \u0ca8\u0cbf\u0cb8\u0ccd\u0ca4\u0c82\u0ca4\u0cc1 AP\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cc6\u0c82\u0cac\u0cb2\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cbf\u0cb2\u0ccd\u0cb2___\u0c97\u0cc2\u0ca2\u0cb2\u0cbf\u0caa\u0cc0\u0c95\u0cb0\u0ca3 \u0c95\u0ccd\u0cb0\u0cae\u0cbe\u0cb5\u0cb3\u0cbf\u0caf \u0cb8\u0cbe\u0cae\u0cb0\u0ccd\u0ca5\u0ccd\u0caf\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cc6\u0c82\u0cac\u0cb2\u0cbf\u0cb8\u0cbf\u0cb2\u0ccd\u0cb2___SSL \u0cb8\u0cb0\u0ccd\u0c9f\u0cbf\u0cab\u0cbf\u0c95\u0cc7\u0c9f\u0ccd \u0ca6\u0ccb\u0cb7___\u0caa\u0ccd\u0cb0\u0cb8\u0ccd\u0ca4\u0cc1\u0ca4 \u0c9a\u0cbe\u0cb0\u0ccd\u0cb8\u0cc6\u0c9f\u0ccd: ___\u0c9c\u0cca\u0ca4\u0cc6\u0c97\u0cc6 \u0cb8\u0c82\u0caa\u0cb0\u0ccd\u0c95\u0c95\u0ccd\u0c95\u0cbe\u0c97\u0cbf \u0c95\u0cbe\u0caf\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6___\u0cae\u0cc2\u0cb2:___\u0ca8\u0cc6\u0c9f\u0ccd \u0ca8\u0cbf\u0cb0\u0ccd\u0cb5\u0cbe\u0cb9\u0c95___\u0c97\u0cc2\u0ca2\u0cb2\u0cbf\u0caa\u0cc0\u0c95\u0cb0\u0ca3___\u0cae\u0cc1\u0c82\u0ca6\u0cc1\u0cb5\u0cb0\u0cbf\u0cb8\u0cc1___\u0cb8\u0ccd\u0c95\u0ccd\u0caf\u0cbe\u0ca8\u0ccd \u0cae\u0cbe\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026___\u0c95\u0cbe\u0cb0\u0ccd\u0caf\u0c97\u0cb3\u0cc1 \u0ca8\u0ca1\u0cc6\u0caf\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb5\u0cc6. USB \u0cb8\u0cbe\u0ca7\u0ca8\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0cc1\u0cb0\u0c95\u0ccd\u0cb7\u0cbf\u0ca4\u0cb5\u0cbe\u0c97\u0cbf \u0c85\u0ca8\u0ccd\u200d\u0cae\u0ccc\u0c82\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbe\u0c97\u0cc1\u0cb5\u0cc1\u0ca6\u0cbf\u0cb2\u0ccd\u0cb2. \n\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0ca8\u0ca1\u0cc6\u0caf\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb0\u0cc1\u0cb5 \u0c95\u0cbe\u0cb0\u0ccd\u0caf\u0cb5\u0ca8\u0ccd\u0ca8 \u0cae\u0cc1\u0c97\u0cbf\u0cb8\u0cbf \u0cae\u0ca4\u0ccd\u0ca4\u0cc6 \u0cae\u0cb0\u0cc1\u0caa\u0ccd\u0cb0\u0caf\u0ca4\u0ccd\u0ca8\u0cbf\u0cb8\u0cbf, \u0c85\u0ca5\u0cb5 \u0cac\u0cb2\u0cb5\u0c82\u0ca4\u0cb5\u0cbe\u0c97\u0cbf \u0c8e\u0c9c\u0cc6\u0c95\u0ccd\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cbf.___\u0ca8\u0cbf\u0cae\u0ccd\u0cae \u0cac\u0ccd\u0caf\u0cbe\u0c95\u0ccd\u200d\u0c97\u0ccd\u0cb0\u0ccc\u0c82\u0ca1\u0ccd  \u0c9a\u0cbf\u0ca4\u0ccd\u0cb0 \u0c95\u0cb8\u0ccd\u0c9f\u0cae\u0cc8\u0cb8\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cc1___\u0cac\u0cb9\u0cc1 \u0c95\u0ca1\u0ca4\u0c97\u0cb3 \u0c95\u0cbe\u0cb0\u0ccd\u0caf\u0cbe\u0c9a\u0cb0\u0ca3\u0cc6 \u0caa\u0cc2\u0cb0\u0ccd\u0ca3\u0cb5\u0cbe\u0caf\u0cbf\u0ca4\u0cc1___\u0c95\u0cbf\u0c9f\u0c95\u0cbf\u0c97\u0cb3\u0cc1___\u0cae\u0cb0\u0cc1\u0caa\u0ccd\u0cb0\u0caf\u0ca4\u0ccd\u0ca8\u0cbf\u0cb8\u0cc1___\u0cac\u0ccd\u0caf\u0cbe\u0c95\u0ccd\u200d\u0c85\u0caa\u0ccd \u0cb5\u0cb0\u0ccd\u0c97___\u0c95\u0ca1\u0ca4\u0ca6 \u0cb9\u0cc6\u0cb8\u0cb0\u0cc1\u0c88 \u0c9a\u0cbf\u0cb9\u0ccd\u0ca8\u0cc6\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0c92\u0cb3\u0c97\u0cca\u0c82\u0ca1\u0cbf\u0cb0\u0cac\u0cbe\u0cb0\u0ca6\u0cc1 * \\ / \" : ? | < >___LAN\u0ca8\u0cbf\u0c82\u0ca6 \u0c95\u0cb3\u0cc1\u0cb9\u0cbf\u0cb8\u0cc1___\u0cac\u0cb3\u0cb8\u0cb2\u0cc1 \u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82  AP \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ca8\u0ccd\u0ca8\u0cc1 \u0caa\u0ca1\u0cc6\u0ca6\u0cc1\u0c95\u0cca\u0cb3\u0ccd\u0cb3\u0cc1\u0ca4\u0ccd\u0ca4\u0ca6\u0cc6___\u0cac\u0ccd\u0caf\u0cbe\u0c95\u0ccd\u200d\u0c85\u0caa\u0ccd \u0c86\u0c97\u0cbf\u0ca6\u0cc6___\u0c97\u0c82\u0c9f\u0cc6\u0c97\u0cb3\u0cc1___\u0cb9\u0cbf\u0c82\u0caa\u0ca1\u0cc6\u0caf\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6___\u0ca1\u0cc0\u0cab\u0cbe\u0cb2\u0ccd\u0c9f\u0ccd \u0c86\u0caa\u0ccd \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0cc6\u0cb0\u0cb5\u0cc1\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cc1___\u0cae\u0cb0\u0cc1\u0cac\u0cb3\u0c95\u0cc6 \u0cac\u0cc1\u0c9f\u0ccd\u0c9f\u0cbf\u0c97\u0cc6 {0} \u0cb8\u0ccd\u0ca5\u0cb3\u0cbe\u0c82\u0ca4\u0cb0\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cc1 \u0c96\u0c9a\u0cbf\u0ca4\u0cb5\u0cc7?___\u0c92\u0c82\u0ca6\u0cc1 \u0cb5\u0cb0\u0ccd\u0c97\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0c86\u0cb0\u0cbf\u0cb8\u0cbf___\u0caf\u0cbe\u0cb5\u0cc1\u0ca6\u0cc7 \u0cb9\u0cc7\u0cb3\u0cbf\u0c95\u0cc6\u0c97\u0cb3\u0cbf\u0cb2\u0ccd\u0cb2___\u0cb0\u0c9a\u0cbf\u0cb8\u0cbf\u0ca6\u0ccd\u0ca6\u0cc1:___\u0cb5\u0cbf\u0cb5\u0cb0\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb5\u0cc0\u0c95\u0ccd\u0cb7\u0cbf\u0cb8\u0cbf___\u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd \u0cb8\u0c82\u0caa\u0cbe\u0ca6\u0cbf\u0cb8\u0cc1___\u0c95\u0c82\u0caa\u0ccd\u0cb0\u0cc6\u0cb8\u0ccd\u200d\u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6 {0}.{1}___\u0ca1\u0cc7\u0c9f\u0cbe \u0ca8\u0cb5\u0cc0\u0c95\u0cb0\u0cbf\u0cb8\u0cc1\u0cb5\u0cb2\u0ccd\u0cb2\u0cbf \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0caa\u0ccd\u0cb0\u0ca6\u0cb0\u0ccd\u0cb6\u0ca8 \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd___\u0cac\u0ca6\u0cb2\u0cbe\u0cb5\u0ca3\u0cc6\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0c89\u0cb3\u0cbf\u0cb8\u0cc1___\u0cae\u0cb0\u0cc1\u0cb9\u0cc6\u0cb8\u0cb0\u0cbf\u0cb8\u0cc1___\u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd \u0cae\u0cc2\u0cb2\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca8\u0c95\u0cb2\u0cc1 \u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0c85\u0ca8\u0cc1\u0cae\u0ca4\u0cbf___\u0c86\u0c82\u0ca4\u0cb0\u0cbf\u0c95 \u0cb8\u0c82\u0c97\u0ccd\u0cb0\u0cb9\u0ca3\u0cc6___\u0c85\u0caa\u0ccd\u0cb2\u0cbf\u0c95\u0cc7\u0cb6\u0ca8\u0ccd___\u0cb9\u0cb3\u0cc6\u0caf \u0c86\u0cb5\u0cc3\u0ca4\u0ccd\u0ca4\u0cbf\u0caf\u0cc1 \u0caa\u0ca4\u0ccd\u0ca4\u0cc6\u0caf\u0cbe\u0c97\u0cbf\u0ca6\u0cc6, \u0cb8\u0cbe\u0c82\u0caa\u0ccd\u0cb0\u0ca6\u0cbe\u0caf\u0cbf\u0c95 \u0c86\u0cb5\u0cc3\u0ca4\u0ccd\u0ca4\u0cbf\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cb2\u0cc1 \u0cb9\u0cb3\u0cc6\u0caf \u0c86\u0cb5\u0ccd\u0cb0\u0ca4\u0ccd\u0ca4\u0cbf\u0caf\u0ca8\u0ccd\u0ca8\u0cc1\u0c88\u0c97 \u0c85\u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cc7?___\u0cb9\u0cca\u0cb8 \u0c86\u0cb5\u0cc3\u0ca4\u0ccd\u0ca4\u0cbf \u0cb8\u0cbf\u0c95\u0ccd\u0c95\u0cbf\u0ca6\u0cc6, \u0c88\u0c97 \u0ca8\u0cb5\u0cc0\u0c95\u0cb0\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cc7?___\u0c95\u0ca1\u0ca4\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0c85\u0cb3\u0cbf\u0cb8\u0cc1___\u0cb8\u0c82\u0caa\u0cbe\u0ca6\u0cbf\u0cb8\u0cc1___ \u0c85\u0ca6\u0cc7 \u0c95\u0ca1\u0ca4\u0ca6 \u0cb9\u0cc6\u0cb8\u0cb0\u0cc1 \u0c88\u0c97\u0cbe\u0c97\u0cb2\u0cc7 \u0c85\u0cb8\u0ccd\u0ca5\u0cbf\u0ca4\u0ccd\u0cb5\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf\u0ca6\u0cc6___\u0c8e\u0c9a\u0ccd\u0c9a\u0cb0\u0cbf\u0c95\u0cc6!!! \u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82 \u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0cbf\u0c97\u0cc6 \u0c95\u0cc6\u0cb2\u0cb5\u0cc1 \u0cac\u0ca6\u0cb2\u0cbe\u0cb5\u0ca3\u0cc6 \u0cae\u0cbe\u0ca1\u0cb2\u0cc1 \u0ca8\u0cc0\u0cb5\u0cc1 \u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82 \u0ca1\u0cc8\u0cb0\u0cc6\u0c95\u0ccd\u0c9f\u0cb0\u0cbf\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb5\u0ccd\u0cb0\u0cc8\u0c9f\u0cac\u0cb2\u0ccd \u0c8e\u0c82\u0ca6\u0cc1 \u0cae\u0ccc\u0c82\u0c9f\u0ccd\u200d \u0cae\u0cbe\u0ca1\u0cac\u0cc7\u0c95\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0ca6\u0cc6. \u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82 \u0c95\u0ca1\u0ca4/\u0cab\u0ccb\u0cb2\u0ccd\u0ca1\u0cb0\u0ccd\u200d\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0ca6\u0cb2\u0cbe\u0cb5\u0ca3\u0cc6  \u0cae\u0cbe\u0ca1\u0cc1\u0cb5\u0cc1\u0ca6\u0cc1 \u0c85\u0caa\u0cbe\u0caf\u0c95\u0cbe\u0cb0\u0cbf, \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0cae\u0cbe\u0ca1\u0cc1\u0cb5\u0cbe\u0c97 \u0c9c\u0cbe\u0c97\u0ccd\u0cb0\u0ca4\u0cc6\u0caf\u0cb2\u0ccd\u0cb2\u0cbf\u0cb0\u0cbf!___Baidu \u0c96\u0cbe\u0ca4\u0cc6___\u0c95\u0ca1\u0ca4___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0cae\u0cca\u0ca6\u0cb2\u0cc1 \u0ca5\u0cc0\u0cae\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd \u0cae\u0cbe\u0ca1\u0cbf___\u0cb9\u0cca\u0cb8 \u0caa\u0ccd\u0cb2\u0cc7 \u0caa\u0c9f\u0ccd\u0c9f\u0cbf\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb0\u0c9a\u0cbf\u0cb8\u0cc1___\u0c86\u0ca1\u0cbf\u0caf\u0ccb___\u0c9c\u0cbe\u0cb2 \u0cb9\u0cc1\u0ca1\u0cc1\u0c95\u0cbe\u0c9f___\u0ca1\u0cc8\u0cb0\u0cc6\u0c95\u0ccd\u0c9f\u0cb0\u0cbf \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd___\u0cb8\u0ccd\u0ca5\u0cb3___\u0cb2\u0cad\u0ccd\u0caf:___\u0caa\u0cbe\u0ca5\u0ccd \u0c86\u0cb0\u0cbf\u0cb8\u0cbf___\u0ca7\u0cb0\u0cbf\u0cb8\u0cac\u0cb9\u0cc1\u0ca6\u0cbe\u0ca6___\u0cac\u0ccd\u0caf\u0cbe\u0c95\u0ccd\u200d\u0c85\u0caa\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026___\u0ca5\u0c82\u0cac\u0ccd\u200d\u0ca8\u0cc8\u0cb2\u0ccd\u0cb8\u0ccd___\u0cac\u0cc1\u0c95\u0ccd\u200d\u0cae\u0cbe\u0cb0\u0ccd\u0c95\u0ccd \"{0}\" \u0caf\u0cb6\u0cb8\u0ccd\u0cb5\u0cbf\u0caf\u0cbe\u0c97\u0cbf \u0cb0\u0c9a\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6.___\u0caa\u0ccd\u0cb0\u0cbe\u0caa\u0cb0\u0ccd\u0c9f\u0cbf \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___\u0cb0\u0cc0\u0ca1\u0cac\u0cb2\u0ccd:___\u0cb8\u0ccd\u0c9f\u0cbf\u0c95\u0cbf \u0cac\u0cbf\u0c9f\u0ccd___{0} \u0ca8\u0c95\u0cb2\u0cc1\u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6.___\u0c95\u0ca1\u0ca4\u0ca6 \u0cae\u0cc2\u0cb2 \u0cb9\u0cc6\u0cb8\u0cb0\u0cc1___\u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0cc1 \u0cae\u0cb0\u0cc1\u0cac\u0cb3\u0c95\u0cc6 \u0cac\u0cc1\u0c9f\u0ccd\u0c9f\u0cbf\u0c97\u0cc6 \u0cb8\u0ccd\u0ca5\u0cb3\u0cbe\u0c82\u0ca4\u0cb0\u0cbf\u0cb8\u0cb2\u0cc1\t\u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2, \u0ca8\u0cc0\u0cb5\u0cc1 \u0c95\u0cbe\u0cb0\u0ccd\u0caf\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cae\u0cc1\u0c82\u0ca6\u0cc1\u0cb5\u0cb0\u0cbf\u0cb8\u0cb2\u0cc1 \u0cac\u0caf\u0cb8\u0cc1\u0cb5\u0cbf\u0cb0\u0cbe?___WLAN \u0cb8\u0c82\u0caa\u0cb0\u0ccd\u0c95 \u0c87\u0cb2\u0ccd\u0cb2, \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0c92\u0c82\u0ca6\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cbf!___\u0ca8\u0cbf\u0cae\u0ccd\u0cae \u0cad\u0cbe\u0cb7\u0cc6\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0c86\u0cb0\u0cbf\u0cb8\u0cbf___\u0caa\u0ccd\u0caf\u0cbe\u0c95\u0cc7\u0c9c\u0ca8\u0ccd\u0ca8\u0cc1 parse \u0cae\u0cbe\u0ca1\u0cc1\u0cb5\u0cb2\u0ccd\u0cb2\u0cbf \u0ca4\u0cca\u0c82\u0ca6\u0cb0\u0cc6\u0caf\u0cbf\u0ca6\u0cc6___\u0cb8\u0ccd\u0cb5\u0cc0\u0c95\u0cb0\u0cbf\u0cb8\u0cc1\u0cb5\u0cb5\u0cb0\u0cc1 \u0cb0\u0ca6\u0ccd\u0ca6\u0cc1\u0cae\u0cbe\u0ca1\u0cbf\u0ca6\u0ccd\u0ca6\u0cbe\u0cb0\u0cc6___\u0cb5\u0cbf\u0ca7:___\u0c87\u0ca6\u0cc1 \u0c87\u0ca4\u0ccd\u0ca4\u0cc0\u0c9a\u0cbf\u0ca8 \u0c86\u0cb5\u0cc3\u0ca4\u0ccd\u0ca4\u0cbf\u0caf\u0cbe\u0c97\u0cbf\u0ca6\u0cc6.___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0c95\u0ca8\u0cbf\u0cb7\u0ccd\u0ca0 \u0c92\u0c82\u0ca6\u0ca8\u0ccd\u0ca8\u0cc1 \u0c86\u0cb0\u0cbf\u0cb8\u0cbf {0}.___Url \u0cb8\u0cb0\u0cbf\u0caf\u0cbe\u0c97\u0cbf\u0cb2\u0ccd\u0cb2___ ___\u0c92\u0cb3\u0c97\u0cca\u0c82\u0ca1\u0cbf\u0ca6\u0cc6:___\u0cb0\u0cc0\u0ca4\u0cbf___ \u0c9a\u0cbf\u0ca4\u0ccd\u0cb0 \u0c95\u0ca1\u0ca4\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca8\u0cbf\u0cae\u0c97\u0cc6 \u0c95\u0cb3\u0cc1\u0cb9\u0cbf\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0ca6\u0cc6 %1$s___\u0cb9\u0ccc\u0ca6\u0cc1___ \u0ca8\u0cbf\u0cae\u0c97\u0cc6 folderCloud\u0c97\u0cc6 \u0c95\u0cb3\u0cc1\u0cb9\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cc1\u0cb5\u0cc1\u0ca6\u0cc1, \u0ca8\u0cc7\u0cb0\u0cb5\u0cbe\u0c97\u0cbf \u0caa\u0ccd\u0cb2\u0cc7 \u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0ca6\u0cc6 %1$s___ \u0ca8\u0cbf\u0cae\u0c97\u0cc6 \u0c95\u0cb3\u0cc1\u0cb9\u0cbf\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0ca6\u0cc6 %1$s___\u0cac\u0ccd\u0caf\u0cbe\u0c95\u0ccd\u200d\u0c85\u0caa\u0ccd \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd___ES \u0cae\u0cc0\u0ca1\u0cbf\u0caf\u0cbe \u0caa\u0ccd\u0cb2\u0cc7\u0caf\u0cb0\u0ccd___\u0cae\u0ca4\u0ccd\u0ca4\u0cca\u0cae\u0ccd\u0cae\u0cc6 \u0c95\u0cc7\u0cb3\u0cac\u0cc7\u0ca1___\u0c95\u0cbf\u0c9f\u0c95\u0cbf\u0c97\u0cb3\u0cc1___\u0ca4\u0cc6\u0c97\u0cc6\u0caf\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026___\u0caa\u0ccd\u0cb0\u0cb8\u0ccd\u0ca4\u0cc1\u0ca4 \u0ca1\u0cc8\u0cb0\u0cc6\u0c95\u0ccd\u0c9f\u0cb0\u0cbf: ___\u0cab\u0ccb\u0ca8\u0ccd___\u0c85\u0caa\u0cb0\u0cbf\u0c9a\u0cbf\u0ca4___\u0c9d\u0cc2\u0cae\u0ccd \u0c87\u0ca8\u0ccd___\u0cb8\u0ccd\u0c95\u0ccd\u0caf\u0cbe\u0ca8\u0ccd___\u0c89\u0ca6\u0cbe\u0cb9\u0cb0\u0ca3\u0cc6___\u0cb9\u0cca\u0cb8 \u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd___\u0caa\u0ccd\u0cb0\u0ccb\u0c97\u0ccd\u0cb0\u0cbe\u0c82\u0c97\u0cb3\u0ca8\u0ccd\u0ca8 \u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cc1___\u0c95\u0ccd\u0cb7\u0cae\u0cbf\u0cb8\u0cbf, \u0c95\u0cbe\u0cb0\u0ccd\u0caf\u0cbe\u0c9a\u0cb0\u0ca3\u0cc6 \u0cb5\u0cbf\u0cab\u0cb2\u0c97\u0cca\u0c82\u0ca1\u0cbf\u0ca6\u0cc6___\u0ca8\u0ca1\u0cc6\u0caf\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb0\u0cc1\u0cb5___\u0ca1\u0cc6\u0cb8\u0ccd\u0c95\u0ccd \u0c9f\u0cbe\u0caa\u0ccd\u200d\u0c97\u0cc6 \u0cb8\u0cc7\u0cb0\u0cbf\u0cb8\u0cc1___\u0cab\u0cc7\u0cb5\u0cb0\u0cbf\u0c9f\u0ccd \u0c97\u0cc6 \u0cb8\u0cc7\u0cb0\u0cbf\u0cb8\u0cc1___\u0cb9\u0cc6\u0c9a\u0ccd\u0c9a\u0cbf\u0ca8 \u0ca6\u0c95\u0ccd\u0cb7\u0ca4\u0cc6, \u0cb5\u0cc7\u0c97\u0cb5\u0cbe\u0ca6 \u0cb8\u0ccd\u0c95\u0ccd\u0cb0\u0ccb\u0cb2\u0cbf\u0c82\u0c97\u0ccd___\u0ca6\u0ccb\u0cb7, \u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd \u0caa\u0cbe\u0ca5\u0ccd \u0c96\u0cbe\u0cb2\u0cbf\u0caf\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0ca6\u0cbf\u0ca8\u0c97\u0cb3\u0cc1___\u0caa\u0cbe\u0ca5\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca8\u0c95\u0cb2\u0cc1 \u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0cac\u0cc1\u0c95\u0ccd\u200d\u0cae\u0cbe\u0cb0\u0ccd\u0c95\u0ccd \"{0}\" \u0cb0\u0c9a\u0cbf\u0cb8\u0cb2\u0cc1  \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6.___\u0cb5\u0cc7\u0c97 \u0caa\u0ccd\u0cb0\u0cb5\u0cc7\u0cb6___\u0cae\u0cca\u0cac\u0cc8\u0cb2\u0ccd \u0c9a\u0cbf\u0ca4\u0ccd\u0cb0\u0c97\u0cb3\u0cc1___\u0cb9\u0cc6\u0cb8\u0cb0\u0cc1___\u0cae\u0cc1\u0c82\u0ca6\u0cc1\u0cb5\u0cb0\u0cbf\u0cb8\u0cc1___WLAN \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cbf ___\u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0cb0\u0ca6\u0ccd\u0ca6\u0cc1___sd\u0c95\u0cbe\u0cb0\u0ccd\u0ca1\u0ccd \u0c97\u0cbe\u0ca4\u0ccd\u0cb0\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0c87\u0ca4\u0cbf\u0cb9\u0cbe\u0cb8\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___\u0c85\u0ca8\u0cbe\u0cae\u0cbf\u0c95 \u0cb8\u0c82\u0c97\u0ccd\u0cb0\u0cb9\u0ca3\u0cc6\u0caf \u0c95\u0ca1\u0ca4\u0cb5\u0ca8\u0ccd\u0cae\u0cc1 \u0cae\u0cb0\u0cc1\u0cac\u0cb3\u0c95\u0cc6 \u0cac\u0cc1\u0c9f\u0ccd\u0c9f\u0cbf\u0c97\u0cc6 \u0cb8\u0ccd\u0ca5\u0cb3\u0cbe\u0c82\u0ca4\u0cb0\u0cbf\u0cb8\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2,  \u0c95\u0ca1\u0ca4\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0c85\u0cb3\u0cbf\u0cb8\u0cbf\u0ca6 \u0ca8\u0c82\u0ca4\u0cb0 \u0cb9\u0cbf\u0c82\u0caa\u0ca1\u0cc6\u0caf\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2___IP \u0cb5\u0cbf\u0cb3\u0cbe\u0cb8\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0caa\u0ca1\u0cc6\u0caf\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6___\u0cac\u0ccd\u0caf\u0cbe\u0c95\u0ccd\u200d\u0c85\u0caa\u0ccd \u0c86\u0ca6 \u0c86\u0caa\u0ccd\u200d\u0c97\u0cb3\u0cc1___\u0caa\u0ca1\u0cc6\u0caf\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026___\u0c88\u0c97 \u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd \u0cae\u0cbe\u0ca1\u0cc1___\u0c87\u0cb2\u0ccd\u0cb2\u0cbf\u0c97\u0cc6 \u0cb8\u0c82\u0caa\u0cb0\u0ccd\u0c95\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6___\u0cae\u0cb0\u0cc1\u0cb9\u0cc6\u0cb8\u0cb0\u0cbf\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026___\u0c85\u0ca7\u0cbf\u0c95\u0cc3\u0ca4 \u0c9c\u0cbe\u0cb2\u0ca4\u0cbe\u0ca3___\u0cac\u0ccd\u0cb2\u0cc2\u0c9f\u0cc2\u0ca4\u0ccd \u0c88\u0c97\u0cbe\u0c97\u0cb2\u0cc7 \u0c97\u0ccb\u0c9a\u0cb0\u0cb5\u0cbe\u0c97\u0cc1\u0cb5\u0c82\u0ca4\u0cbf\u0ca6\u0cc6___\u0c95\u0cbe\u0cb0\u0ccd\u0caf \u0c95\u0cc7\u0c82\u0ca6\u0ccd\u0cb0___\u0ca8\u0cc0\u0cb5\u0cc1 12 \u0c95\u0cbf\u0c9f\u0c95\u0cbf\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0c97\u0cb0\u0cbf\u0cb7\u0ccd\u0ca0\u0cb5\u0cbe\u0c97\u0cbf \u0cb9\u0cca\u0c82\u0ca6\u0cac\u0cb9\u0cc1\u0ca6\u0cc1___\u0cae\u0cc1\u0c82\u0ca6\u0cc6___\u0c95\u0cb0\u0cc6 \u0cb6\u0cac\u0ccd\u0ca7\u0cb5\u0cbe\u0c97\u0cbf \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cc1___\u0caf\u0cbe\u0cb5\u0cc1\u0ca6\u0cc2 \u0c87\u0cb2\u0ccd\u0cb2___\u0c95\u0cbf\u0cb0\u0cc1\u0cae\u0cbe\u0cb0\u0ccd\u0c97\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0caf\u0cb6\u0cb8\u0ccd\u0cb5\u0cbf\u0caf\u0cbe\u0c97\u0cbf \u0cb0\u0c9a\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0cb5\u0cbf\u0ca7___ES Downloader \u0ca8\u0cbf\u0cb7\u0ccd\u0c95\u0ccd\u0cb0\u0cbf\u0caf\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cc1___\u0c95\u0ccd\u0cb2\u0ccc\u0ca1\u0ccd\u200d\u0ca8\u0cbf\u0c82\u0ca6 \u0c89\u0cb3\u0cbf\u0cb8\u0cc1___\u0ca4\u0cc6\u0cb0\u0cc6___- \u0cab\u0cc8\u0cb0\u0ccd\u200d \u0cb5\u0cbe\u0cb2\u0ccd \u0ca8\u0cbf\u0cb0\u0ccd\u0cad\u0c82\u0ca7\u0cbf\u0cb8\u0cbf\u0ca6\u0cc6 ___ %s \u0c95\u0cbe\u0cb0\u0ccd\u0caf\u0c97\u0cb3\u0cc1 \u0ca8\u0ca1\u0cc6\u0caf\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6.___\u0c87\u0cb5\u0cb0\u0cbf\u0c97\u0cc6 \u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb5\u0cb0\u0ccd\u0c97\u0cbe\u0caf\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6___\u0c86\u0ca6\u0cb0\u0cc2 \u0ca8\u0cc0\u0cb5\u0cc1 \u0cae\u0cc1\u0c82\u0ca6\u0cc1\u0cb5\u0cb0\u0cbf\u0caf\u0cb2\u0cc1 \u0cac\u0caf\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0cc0\u0cb0\u0cbe?___\u0cb5\u0cb0\u0ccd\u0c97___\u0c97\u0cc2\u0ca2\u0cb2\u0cbf\u0caa\u0cc0\u0c95\u0cb0\u0ca3(https)___AP \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd___\u0cac\u0cc6\u0c82\u0cac\u0cb2\u0c95\u0ccd\u0c95\u0cbe\u0c97\u0cbf \u0cb0\u0cc7\u0c9f\u0ccd \u0ca8\u0cc0\u0ca1\u0cbf___\u0ca1\u0cc0\u0cab\u0cbe\u0cb2\u0ccd\u0c9f\u0ccd \u0c95\u0cbf\u0c9f\u0c95\u0cbf \u0caa\u0c9f\u0ccd\u0c9f\u0cbf\u0caf\u0cbf\u0c82\u0ca6 \u0ca4\u0cc6\u0c97\u0cc6\u0caf\u0cb2\u0cc1 \u0cac\u0c9f\u0ca8\u0ccd \u0c92\u0ca4\u0ccd\u0ca4\u0cbf___\u0cb0\u0cbf\u0cae\u0ccb\u0c9f\u0ccd \u0c95\u0ca1\u0ca4\u0ca6 \u0c95\u0cbf\u0cb0\u0cc1\u0cae\u0cbe\u0cb0\u0ccd\u0c97\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb0\u0c9a\u0cbf\u0cb8\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2___\u0c87\u0cb2\u0ccd\u0cb2\u0cbf\u0c97\u0cc6 \u0ca8\u0c95\u0cb2\u0cbf\u0cb8\u0cc1___\u0c94\u0c9f\u0ccd\u200d\u0caa\u0cc1\u0c9f\u0ccd \u0caa\u0cbe\u0ca5\u0ccd /sdcard/\u0ca8\u0cbf\u0c82\u0ca6 \u0caa\u0ccd\u0cb0\u0cbe\u0cb0\u0c82\u0cad\u0cb5\u0cbe\u0c97\u0cac\u0cc7\u0c95\u0cc1 ___\u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd \u0ca6\u0cbf\u0ca8\u0cbe\u0c82\u0c95:___\u0cae\u0cbe\u0cb2\u0cc0\u0c95:___\u0ca1\u0cc0\u0cab\u0cbe\u0cb2\u0ccd\u0c9f\u0ccd___\u0cb9\u0cca\u0cb8 \u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd:___\u0cb8\u0ccd\u0cb5\u0c9a\u0ccd\u0c9a\u0c97\u0cca\u0cb3\u0cbf\u0c95\u0cc6 \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd___\u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6___ES Note \u0cb8\u0c82\u0caa\u0cbe\u0ca6\u0c95___\u0c95\u0cb3\u0cc1\u0cb9\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0c95\u0ccd\u0cb6\u0cae\u0cbf\u0cb8\u0cbf, \u0c88 \u0cb5\u0cc0\u0ca1\u0cbf\u0caf\u0ccb \u0caa\u0ccd\u0cb2\u0cc7 \u0cae\u0cbe\u0ca1\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2___\u0c95\u0ca1\u0ca4\u0ca6 \u0cb9\u0cc6\u0cb8\u0cb0\u0cc1 \u0c96\u0cbe\u0cb2\u0cbf \u0c87\u0cb0\u0c95\u0cc2\u0ca1\u0ca6\u0cc1___\u0c96\u0cbe\u0cb2\u0cbf:___\u0cb5\u0cbe\u0cb0\u0c97\u0cb3\u0cc1___\u0caa\u0ccb\u0cb0\u0ccd\u0c9f\u0ccd \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cc1(1025 \u2013 65534)___\u0cb8\u0ca8\u0ccd\u0ca8\u0cc6\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca8\u0cbf\u0cb0\u0ccd\u0cb5\u0cb9\u0cbf\u0cb8\u0cc1___\u0cb2\u0cc7\u0cac\u0cb2\u0ccd___\u0caa\u0cc6\u0cc2\u0cd5\u0cb0\u0ccd\u0c9f\u0ccd \u0cb8\u0c82\u0c96\u0ccd\u0caf\u0cc6\u0caf\u0cb2\u0ccd\u0cb2\u0cbf\u0cb0\u0cac\u0cc6\u0cd5\u0c95\u0cc1 (1025 \u2013 65534)___\u0cb5\u0cc0\u0ca1\u0cbf\u0caf\u0ccb___\u0caf\u0cc1\u0cb8\u0cb0\u0ccd \u0ca8\u0cc7\u0cae\u0ccd___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0ca8\u0cbf\u0cb0\u0cc0\u0c95\u0ccd\u0cb7\u0cbf\u0cb8\u0cbf \u0c95\u0ca1\u0ca4\u0c97\u0cb3 \u0c97\u0cbe\u0ca4\u0ccd\u0cb0\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb2\u0cc6\u0c95\u0ccd\u0c95\u0cbf\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6___\u0cac\u0cc6\u0cb0\u0cc6\u0caf\u0ca6\u0ca8\u0ccd\u0ca8\u0cc1 \u0cae\u0cc1\u0c9a\u0ccd\u0c9a\u0cc1___\u0c92\u0c82\u0ca6\u0cc1 \u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0c85\u0ca8\u0ccd\u0ca8\u0cc1 \u0c86\u0caf\u0ccd\u0c95\u0cc6 \u0cae\u0cbe\u0ca1\u0cbf___\u0c8e\u0ca8\u0ccd\u200d\u0c95\u0ccd\u0cb0\u0cbf\u0caa\u0ccd\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cc1 \u0caf\u0cbe\u0cb5\u0cc1\u0ca6\u0cc7 \u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0cbf\u0cb2\u0ccd\u0cb2___\u0cb9\u0cca\u0cb8 FTP___\u0cb8\u0cb0\u0ccd\u0c9f\u0cbf\u0cab\u0cbf\u0c95\u0cc7\u0c9f\u0ccd\u200d\u0ca8 \u0ca6\u0cbf\u0ca8\u0cbe\u0c82\u0c95\u0cb5\u0cc1 \u0c85\u0cae\u0cbe\u0ca8\u0ccd\u0caf\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0cb8\u0cc7\u0cb0\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6, \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0ca8\u0cbf\u0cb0\u0cc0\u0c95\u0ccd\u0cb7\u0cbf\u0cb8\u0cbf\u2026___\u0c95\u0cc7\u0cb3\u0cc1___\u0c85\u0ca7\u0cbf\u0cb8\u0cc2\u0c9a\u0ca8\u0cc6 \u0cb6\u0cac\u0ccd\u0ca7\u0cb5\u0cbe\u0c97\u0cbf \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cc1___\u0caa\u0ccd\u0cb2\u0cc7\u0caa\u0c9f\u0ccd\u0c9f\u0cbf___\u0c85\u0ca8\u0cc1\u0cae\u0ca4\u0cbf\u0c97\u0cb3\u0cc1:___\u0ca8\u0cbf\u0c82\u0ca4\u0cbf\u0ca6\u0cc6___ES FTP \u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd___\u0c97\u0cbe\u0ca4\u0ccd\u0cb0___\u0c95\u0ca1\u0ca4 \u0ca4\u0cc6\u0cb0\u0cc6___\u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd \u0cb8\u0c82\u0caa\u0cbe\u0ca6\u0cbf\u0cb8\u0cc1___Cache\u0c86\u0ca6 \u0ca1\u0cc7\u0c9f\u0cbe\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cae\u0cb0\u0cb3\u0cbf\u0caa\u0ca1\u0cc6\u0caf\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6___\u0ca6\u0ccb\u0cb7___\u0cb9\u0cca\u0cb0\u0cb9\u0ccb\u0c97\u0cb2\u0cc1 \u0cae\u0ca4\u0ccd\u0ca4\u0cca\u0cae\u0ccd\u0cae\u0cc6 \u0c92\u0ca4\u0ccd\u0ca4\u0cbf___\u0c95\u0ccd\u0caf\u0cbe\u0cb6\u0cbf\u0c82\u0c97\u0ccd___\u0ca6\u0cca\u0ca1\u0ccd\u0cb6 \u0cb5\u0cbf\u0ca8\u0ccd\u0caf\u0cbe\u0cb8\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cb3\u0cb8\u0cc1___\u0c86\u0cb0\u0cc6\u0cc2\u0cd5\u0cb9\u0ca3___\u0cb8\u0ca8\u0ccd\u0ca8\u0cc6\u0caf \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0cb6\u0cbf\u0cd5\u0cb0\u0ccd\u0cb7\u0cbf\u0c95\u0cc6\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cb0\u0cc6\u0caf\u0cbf\u0cb0\u0cbf___\u0cb9\u0cbf\u0ca8\u0ccd\u0ca8\u0cc6\u0cb2\u0cc6\u0caf\u0cb2\u0ccd\u0cb2\u0cbf \u0c9a\u0cbe\u0cb2\u0ca8\u0cc6\u0caf\u0cb2\u0ccd\u0cb2\u0cbf\u0cb0\u0cc1___\u0ca1\u0cc8\u0cb0\u0cc6\u0c95\u0ccd\u0c9f\u0cb0\u0cbf \u0c97\u0cbe\u0ca4\u0ccd\u0cb0:___\u0c85\u0ca8\u0cc1\u0cae\u0ca4\u0cbf\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0caf\u0cb6\u0cb8\u0ccd\u0cb5\u0cbf\u0caf\u0cbe\u0c97\u0cbf \u0cac\u0ca6\u0cb2\u0cbe\u0caf\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0cac\u0ccd\u0cb2\u0cc2\u0c9f\u0cc2\u0ca4\u0ccd \u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cc1___\u0caa\u0ccd\u0cb0\u0cb8\u0ccd\u0ca4\u0cc1\u0ca4 \u0cac\u0cb3\u0c95\u0cc6\u0ca6\u0cbe\u0cb0: ___\u0cb5\u0cc7\u0cb3\u0cbe\u0caa\u0c9f\u0ccd\u0c9f\u0cbf\u0caf \u0caa\u0ccd\u0cb0\u0c95\u0cbe\u0cb0 \u0cb9\u0cca\u0cb8 \u0c86\u0cb5\u0ccd\u0cb0\u0ca4\u0ccd\u0ca4\u0cbf\u0c97\u0cbe\u0c97\u0cbf \u0caa\u0cb0\u0cbf\u0cb6\u0cc0\u0cb2\u0cbf\u0cb8\u0cc1___\u0cb8\u0cbe\u0ca7\u0ca8\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 FTP \u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd \u0c9c\u0cca\u0ca4\u0cc6 \u0caa\u0ccd\u0cb0\u0cb5\u0cc7\u0cb6\u0cbf\u0cb8\u0cc1___\u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0ca6\u0cb2\u0cbe\u0caf\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0cb5\u0cbe\u0cb2\u0ccd\u200d\u0caa\u0cc7\u0caa\u0cb0\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6, \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0ca8\u0cbf\u0cb0\u0cc0\u0c95\u0ccd\u0cb7\u0cbf\u0cb8\u0cbf\u2026___ ___Homepage___ES \u0c95\u0ccd\u0cb0\u0ccb\u0cae\u0ccd\u200d\u0c95\u0cbe\u0cb8\u0ccd\u0c9f\u0ccd \u0caa\u0ccd\u0cb2\u0cc7\u0caf\u0cb0\u0ccd___\u0cb8\u0ccd\u0ca5\u0cb3\u0cbe\u0c82\u0ca4\u0cb0\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0cb2\u0cbe\u0c97\u0ccc\u0c9f\u0ccd___\u0caa\u0ccb\u0cb0\u0ccd\u0c9f\u0ccd___- SMB \u0cb8\u0cc7\u0cb5\u0cc6\u0caf\u0cc1 \u0c86\u0cab\u0ccd \u0c86\u0c97\u0cbf\u0ca6\u0cc6___\u0c9a\u0cbf\u0ca4\u0ccd\u0cb0\u0c97\u0cb3\u0cc1:___\u0cac\u0cb3\u0cb8\u0cbf\u0ca6\u0ccd\u0ca6\u0cc1:___\u0c95\u0ccd\u0cb0\u0ccb\u0cae\u0ccd\u200d\u0c95\u0cbe\u0cb8\u0ccd\u0c9f\u0ccd___\u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0cb8\u0cc7\u0cb0\u0cb2\u0cc1 \u0c86\u0cb0\u0c82\u0cad\u0cbf\u0cb8\u0cbf___\u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82 \u0ca8\u0cbf\u0cb0\u0ccd\u0cb5\u0cbe\u0cb9\u0c95___\u0cb0\u0cc2\u0c9f\u0ccd  \u0caa\u0cb0\u0cbf\u0cb6\u0ccb\u0ca7\u0c95\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0cc6\u0cb0\u0cc6___ \u0c85\u0ca7\u0cbf\u0c95\u0cbe\u0cb0 \u0c85\u0cb5\u0ca7\u0cbf\u0caf\u0cc1 \u0cae\u0cc1\u0c97\u0cbf\u0ca6\u0cbf\u0ca6\u0cc6, \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0caa\u0cc1\u0ca8\u0c83 \u0cb2\u0cbe\u0c97\u0ccd\u0c87\u0ca8\u0ccd \u0cae\u0cbe\u0ca1\u0cbf___\u0c95\u0cbe\u0cb0\u0ccd\u0caf \u0caa\u0cc2\u0cb0\u0ccd\u0ca3\u0cb5\u0cbe\u0ca6\u0cbe\u0c97 \u0c85\u0ca7\u0cbf\u0cb8\u0cc2\u0c9a\u0ca8\u0cc6\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cae\u0cc1\u0c9a\u0ccd\u0c9a\u0cc1___\u0c95\u0ca1\u0ca4\u0ca6 \u0c9a\u0cc6\u0c95\u0ccd\u200d\u0cb8\u0cae\u0ccd___\u0c89\u0caa-\u0ca1\u0cc8\u0cb0\u0cc6\u0c95\u0ccd\u0c9f\u0cb0\u0cbf\u0c97\u0cc6 \u0cb8\u0ccd\u0ca5\u0cb3\u0cbe\u0c82\u0ca4\u0cb0\u0cbf\u0cb8\u0cc1\u0cb5\u0c82\u0ca4\u0cbf\u0cb2\u0ccd\u0cb2___\u0caf\u0cbe\u0cb5\u0cc1\u0ca6\u0cc7 \u0cb8\u0ca8\u0ccd\u0ca8\u0cc6 \u0cb5\u0ccd\u0caf\u0cbe\u0c96\u0ccd\u0caf\u0cbe\u0ca8\u0cbf\u0cb8\u0cbf\u0cb2\u0ccd\u0cb2___\u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0c85\u0cb3\u0cbf\u0cb8\u0cc1___\u0caa\u0ccd\u0cb2\u0cc7\u0caa\u0c9f\u0ccd\u0c9f\u0cbf___\u0c87\u0ca4\u0cb0\u0cc6 \u0c86\u0caa\u0ccd\u0cb8\u0ccd___\u0cb5\u0caf\u0c95\u0ccd\u0ca4\u0cc0\u0c95\u0cb0\u0ca3___\u0cb8\u0ccd\u0cb5\u0cc0\u0c95\u0cbe\u0cb0 \u0caf\u0cb6\u0cb8\u0ccd\u0cb5\u0cbf\u0caf\u0cbe\u0c97\u0cbf\u0ca6\u0cc6 %1$s,\u0c92\u0c9f\u0ccd\u0c9f\u0cc1 \u0c97\u0cbe\u0ca4\u0ccd\u0cb0 %2$s___\u0cb8\u0ccd\u0cb5\u0cc0\u0c95\u0cbe\u0cb0 \u0caf\u0cb6\u0cb8\u0ccd\u0cb5\u0cbf\u0caf\u0cbe\u0c97\u0cbf\u0ca6\u0cc6  %1$s \u0c95\u0ca1\u0ca4(\u0c97\u0cb3\u0cc1), %2$d \u0cb5\u0cb8\u0ccd\u0ca4\u0cc1(\u0c97\u0cb3\u0cc1) \u0c92\u0cb3\u0c97\u0cca\u0c82\u0ca1\u0cbf\u0ca6\u0cc6, \u0c92\u0c9f\u0ccd\u0c9f\u0cc1 \u0c97\u0cbe\u0ca4\u0ccd\u0cb0 %3$s___\u0ca4\u0caf\u0cbe\u0cb0\u0c95:___\u0c85\u0caa\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0ca6 \u0ca6\u0cbf\u0ca8\u0cbe\u0c82\u0c95:___\u0cad\u0ca6\u0ccd\u0cb0\u0ca4\u0cc6___\u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0c87\u0cb2\u0ccd\u0cb2\u0cbf\u0c97\u0cc6 \u0ca8\u0c95\u0cb2\u0cbf\u0cb8\u0cc1 \"%1$s\"___FTP___\u0caf\u0cbe\u0cb5\u0cc1\u0ca6\u0ca8\u0ccd\u0ca8\u0cc2 \u0c86\u0cb0\u0cbf\u0cb8\u0cac\u0cc7\u0ca1___\u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd \u0cac\u0ccd\u0caf\u0cbe\u0c95\u0ccd\u200d\u0c85\u0caa\u0ccd \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0c92\u0c82\u0ca6\u0cc1 \u0ca8\u0cbf\u0cae\u0cbf\u0cb7 \u0ca8\u0cbf\u0cb0\u0cc0\u0c95\u0ccd\u0cb7\u0cbf\u0cb8\u0cbf\u2026___\u0cb5\u0cbf\u0cb2\u0ccb\u0cae___\u0c9a\u0cbe\u0cb0\u0ccd\u0cb8\u0cc6\u0c9f\u0ccd___\u0cae\u0cc1\u0c96\u0ccd\u0ca4\u0cbe\u0caf\u0c97\u0cca\u0cb3\u0ccd\u0cb3\u0cb2\u0cbf\u0ca6\u0cc6___\u0caa\u0ccd\u0cb0\u0cb8\u0ccd\u0ca4\u0cc1\u0ca4 \u0caa\u0cbe\u0ca5\u0ccd"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x1
 
-    const-string v2, "\uc138\ubd80\uc0ac\ud56d \ud45c\uc2dc___\uc124\ud0dd\ud55c \uc778\ucf54\ub529\uc740 \uae30\uae30\uc5d0 \uc0ac\uc6a9\ud560\uc218 \uc5c6\uc2b5\ub2c8\ub2e4.___\uc555\ucd95 \ud574\uc81c___\ube44\ub514\uc624___\uc774\ub3d9___\ub2e4\uc74c\uc758 \uc571\uc740 \uc81c\uac70\ub418\uc5c8\uc2b5\ub2c8\ub2e4.\uad00\ub828 \ud3f4\ub354\ub97c \uc0ad\uc81c\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.___\ud3c9\uac00___\uc885\ub8cc \uc635\uc158___ ___\ud30c\uc77c%1$s\ubc1b\uc558\uc2b5\ub2c8\ub2e4.\ud56d\ubaa9%2$s\ud3ec\ud568\ub428.\ubaa8\ub4e0\ud30c\uc77c\ud06c\uae30 %3$s___%1$s \ubc1b\uc558\uc2b5\ub2c8\ub2e4.\ud30c\uc77c\ud06c\uae30 %2$s___\ud45c\uc2dc\ud560 \uc774\ub984___\ub204\ub974\uae30___\uc5f0\uacb0 \ub300\uae30\uc911___\uc568\ubc94___AP \uc0ac\uc6a9___GID \uc124\uc815___\uc624\ub798 \uc2a4\ud06c\ub864\ud558\ub294 \ub3d9\uc548 \uc2a4\ud06c\ub864 \uc378 \ud45c\uc2dc___\uc228\uae34 \ud30c\uc77c \ubaa9\ub85d \uad00\ub9ac___Android Market \ubc1c\uacac\ud560 \uc218 \uc5c6\uc74c___\ud604\uc7ac\uc758 \ud648 \ub514\ub809\ud130\ub9ac:___\uc798\ubabb\ub41c \uacbd\ub85c___\ud30c\uc77c \uac80\uc0ac___\ub2e4\uc6b4\ub85c\ub4dc \ud30c\uc77c\uc744 \ucc3e\uc744\uc218 \uc5c6\uc2b5\ub2c8\ub2e4.___LAN___ES \uc774\ubbf8\uc9c0 \ube0c\ub77c\uc6b0\uc800___Magic\uc11c\ub958\uac00\ubc29___\uc791\uc5c5\ucc3d \uc124\uc815___\uc6d0\uaca9\ud30c\uc77c \ubcf5\uc0ac\uc2e4\ud328___\ud604\uc7ac \ub514\ub809\ud130\ub9ac:___\uc568\ubc94 \uac80\uc0c9___\uc81c\uc2a4\uccd0 \ucd94\uac00___\ud30c\uc77c \uc774\ub984\uc774 \ub108\ubb34 \uae41\ub2c8\ub2e4. \uc880 \ub354 \uc9e7\uac8c \uc4f0\uc138\uc694.___\ub124\ud2b8\uc6cc\ud06c \uc5f0\uacb0 \uc624\ub958, \ub098\uc911\uc5d0 \ub2e4\uc2dc \uc2dc\ub3c4 \ud558\uc2ed\uc2dc\uc624.___APKs \uc124\ucc98\ub428___\uc554\ud638\uac00 \ud2c0\ub9bd\ub2c8\ub2e4___\ud398\uc774\uc2a4\ubd81___\uadf8\ub8f9:___Sdcard___\uc2dc\uc791 \ud398\uc774\uc9c0\ub85c \uc124\uc815___\uc2dc\uc2a4\ud15c\uc5d0\uc11c \ub124\ud2b8\uc6cc\ud06c \uc124\uc815 \ubcf4\uae30___\ubc14\ud0d5\ud654\uba74 \uc124\uc815\uc911\u2026___\ub3c4\uad6c \ubaa8\uc74c \uc774\ub984 \ud45c\uc2dc___\ud3f4\ub354___%s\ub2e4\uc6b4\ub85c\ub4dc \uc2e4\ud328___\uc774\uc804 \ubc84\uc804\uc758 \uc2dc\uc2a4\ud15c \ubc1c\uacac\ub429\ub2c8\ub2e4.Root \ud5c8\uc6a9\ud558\uc154\uc57c \ud30c\uc77c\uc744 \ubc1b\uc744 \uc218 \uc788\uc2b5\ub2c8\ub2e4.\ud5c8\uc6a9 \uc548\ud558\uc2dc\uba74 \uc608\uae30\uce58 \ubabb\ud55c \uacb0\uacfc\uac00 \ubc1c\uc0dd\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.\n\n\uc774 \uae30\ub2a5\uc744 \uc2dc\ub3c4\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\uacf5\uac04\ubd80\uc871 \uacbd\uace0 \ud45c\uc2dc___\uc5f0\uacb0 \uc2e4\ud328,\ud3ec\ud2b8\uc124\uc815 \ud655\uc778\ud558\uc138\uc694___\ub9c8\uc6b4\ud2b8 \uc2e4\ud328___\uc228\uae34 \ubaa9\ub85d___\uc11c\ub958 \uac80\uc0c9___IP\uc5f0\uacb0\uc911\u2026___\ub0a0\uc9dc \ud615\uc2dd___\ubc14\ub85c\uac00\uae30\ub97c \ub9cc\ub4e4\uc218 \uc5c6\uc2b5\ub2c8\ub2e4.___\uc2dc\uc2a4\ud15c \uc571 \uc124\uce58\ud558\uaca0\uc2b5\ub2c8\uae4c?___\uc608___\uc6f9___\ud574\uc0c1\ub3c4:___ %1$s \uc5d0 \ud30c\uc77c \ub3d9\uae30\ud654___{0}\ub97c \ud734\uc9c0\ud1b5\uc73c\ub85c \uc62e\uae30\uaca0\uc2b5\ub2c8\uae4c?___Phone___\ubc84\uc804:___\uc5c5\ub85c\ub529___\ubb34\ud6a8\ud654\ub41c \uc81c\uc2a4\uccd0___ ___\ucd94\uac00___\ubc31\uc5c5\uc744 \uc2e4\ud328___\ubca8\uc18c\ub9ac\ub85c \uc124\uc815___\ube48 \ud3f4\ub354___\ube44\ubc00\ubc88\ud638\ub97c \ubcc0\uacbd \ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.___\ubc31\uc5c5___\ube0c\ub77c\uc6b0\uc800\uc5d0\uc11c \ubcf4\uae30___\uc571 \uad00\ub828\ud558\uae30___\uac04\ud3b8 \ubcf4\uae30___\uc2dc\uc2a4\ud15c \uad00\ub9ac___\uc124\uc815 \ubcf5\uc6d0___PC\uc5d0 \uc8fc\uc18c\ub97c \uc785\ub825 :\n___\ubcf5\uc6d0\uc744 \uc801\uc6a9 \ud558\ub824\uba74 \ub2e4\uc2dc \uc2dc\uc791\ud574\uc57c \ud569\ub2c8\ub2e4.___\uc571\uc744 \uc120\ud0dd\ud574\uc11c \uad00\ub828\ud558\uae30___\uc6d0\uaca9 \uc124\uc815___\ub9c8\uc6b4\ud2b8 R/W___\uc704\ub85c___\ub124\ud2b8\uc6cc\ud06c SSID___\uc720\ub3d9 AP\uc774\ub984 \uc0ac\uc6a9___\ub9cc\ub8cc\ub41c \uc99d\uba85\uc11c\uc785\ub2c8\ub2e4___\ud55c\ubc88\uc5d0 \uc0ad\uc81c___\ub2e4\uc6b4\ub85c\ub4dc___\ucd95\uc18c\ud558\uae30___\ud328\ud0a4\uc9c0 \ubd84\uc11d\uc911 \ubb38\uc81c \ubc1c\uc0dd___\uae00\uc528 \uc0c9\uc0c1 \uc124\uc815___\ud754\ub4e4\uae30 \uc608\ubbfc\ub3c4 \uc124\uc815___IP \uc8fc\uc18c___\ube44\uacf5\uc2dd\uc801\uc778 \ubc84\uc804\uc744 \uc0ac\uc6a9\ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4.\uc548\uc804\uc744 \uc704\ud574 http://www.estrongs.com/\ubc29\ubb38\ud574\uc11c \uace1\uc2dd\uc801\uc778 \ubc84\uc804\uc744 \ub2e4\uc6b4\ub85c\ub4dc\ud558\uc138\uc694.___\ud0c0\ucf13\uc744 \uc120\ud0dd\ud558\uc138\uc694___\ud655\uc778\uc911\u2026___\uc124\uc815 \ubc31\uc5c5___\ub9ac\ubaa8\ud2b8 \ud30c\uc77c\uc758 \ubc14\ub85c\uac00\uae30\ub97c \ub9cc\ub4e4\uc218 \uc5c6\uc74c___\uae30\ud0c0:___\uc7ac\uc0dd\ubaa9\ub85d \uc0ad\uc81c\ub428___\ud3f4\ub354___\uc77d\uae30___ ___\uc7a5\uce58\uc5d0 \ub530\ub77c \uc2dc\uac04\uc774 \uac78\ub9b4 \uc218 \uc788\uc74c___\uad8c\ud55c \ubcc0\uacbd \uc644\ub8cc___\ub124\ud2b8\uc6cc\ud06c \uc885\ub8cc___\ube44\ub514\uc624 \ud30c\uc77c, \uc9c1\uc811 \uc7ac\uc0dd\ud560 \uc218 \uc788\uc74c___\ub124\ud2b8\uc6cc\ud06c \uc120\ud0dd___{0}\uc0ad\uc81c\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\ud654\uc774\ud2b8___\uc2dc\uc791___\ub2e4\uc74c\uc5d0 \uac19\uc740 \ube44\ubc00\ubc88\ud638 \uc4f0\uae30___\"\ud604\uc7ac \uc0ac\uc6a9\uc790: \"___\uc694\uad6c\ud55c \uc571:___\ub2e4\ub978  \ub124\ud2b8\uc6cc\ud06c \uc5f0\uacb0___Root\ud0d0\uc0c9\uae30 \ucf1c\uae30___\uc5f4\uae30___\ud074\ub9ad\ud558\uc5ec \uce90\uc2dc \ub370\uc774\ud130 \uc0ad\uc81c  (\uc378\ub124\uc77c \ub4f1)___\uc774 \uc571\uc744 \uc2dc\uc791\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4.___\ucd5c\ub300 12\uac1c\uc758 \uc791\uc5c5\ucc3d\uc744 \uc120\ud0dd \ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.___\"%1$s\"\uc5d0 \ud30c\uc77c \ubcf5\uc0ac\ub428___\uac1c\uc778\uc815\ubcf4\ubcf4\ud638\uc815\ucc45___\uc0c8\ub85c\uace0\uce68\ub9cc___\uc624\ub514\uc624/\ube44\ub514\uc624___Bookmarks___\ud30c\uc77c \ud06c\uae30\uac00 \ud55c\ub3c4\ubcf4\ub2e4 \ud07d\ub2c8\ub2e4___\uc774\ubbf8 \uc874\uc7ac\ud55c \uc7ac\uc0dd\ubaa9\ub85d\uc785\ub2c8\ub2e4___\ud3f4\ub354 \uc124\uc815___\uc6d0\uc2dc \ud30c\uc77c___\ubbf8\ub514\uc5b4 \ud30c\uc77c\uc744 \uc0ad\uc81c\ud558\uc9c0 \ub9c8\uc2ed\uc2dc\uc624___\uae30\ubcf8 \uc560\ud50c\ub9ac\ucf00\uc774\uc158\uc73c\ub85c \uc124\uc815___\uc9c0\ub8cc \uc0ad\uc81c\uc911\u2026___\uc228\uae30\uae30___\ub85c\uceec\uc5d0\uc11c \uc81c3\uc790 \uc571\uc73c\ub85c \ud30c\uc77c\uc744 \ud3b8\uc9d1\ud560 \ub54c \ub9ac\ubaa8\ud2b8 \ud30c\uc77c\uc744 \uc790\ub3d9\uc73c\ub85c \uc5c5\ub85c\ub4dc___\uc218\ud589___\uc81c\uc2a4\uccd0 \ubcf4\uc874 \uc2e4\ud328.sdcard \uc874\uc7ac\ud558\ub294\uc9c0 \ud655\uc778\ud558\uc2ed\uc2dc\uc624___\ubc1b\ub294\uc911\u2026___\ub2e4\uc6b4\ub85c\ub4dc \uc911\u2026___\ubaa8\ub450 \uc801\uc6a9___%\uc758 \uc124\uc815\uc744 \ubcf5\uc6d0\ud558\uc2dc\uaca0\uc2a4\uc2b5\ub2c8\uae4c?___\ub2e4\ub978 \uc571___\uc815\ub9ac \uc124\uc815___\uc124\uce58\uc911___\ub9ac\ubaa8\ud2b8\uba54\ub2c8\uc800___\ud56d\ubaa9___\ud589\ubc14\uafc8 \ucf54\ub4dc___\uc7ac\uc2dc\ub3c4___\ubc30\uacbd \uc0c9\uc0c1 \uc124\uc815___\uc0ad\uc81c\ud558\uc2dc\uacc4\uc2b5\ub2c8\uae4c?___\ub85c\ub529\uc911\u2026___\ub3c4\uad6c___\uc0c8\uc774\ub984\uc744 \uc785\ub825___\uc5ec\ub7ec \ud30c\uc77c___\uc120\ud0dd \ud45c\uc2dc___\uc2dc\uc2a4\ud15c \uc571 \ubc31\uc5c5___\uc790\uc138\ud788___\uc131\uacf5___\ud604\uc7ac \ucc3d\uc5d0\uc11c \uc5f4\uae30___\ud06c\uae30___\uc81c\uc2a4\uccd0 \ucf1c\uae30___\ud569: %s \ud56d\ubaa9\uc218%s___\ubcc0\uacbd \uc800\uc7a5___OBEX FTP \uc11c\ube44\uc2a4\uac00 \uc911\uc9c0\ub418\uc5c8\uc2b5\ub2c8\ub2e4___\uc554\ud638\ud654\uc911\u2026___\ud074\ub77c\uc6b0\ub4dc\ub85c \uacf5\uc720___\ub124\ud2b8\uc6cc\ud06c \uc811\uc18d\uc911...___\"\ud604\uc7ac \ud3ec\ud2b8: \"___\ube44\ubc00\ubc88\ud638___\uc0ac\uc6a9\uac00\ub2a5:___\uc774\ub984 \ubcc0\uacbd\uc911\u2026___\uc77c\uc2dc\uc815\uc9c0___\ub3d9\uae30\ud654\uc911\u2026___\ud504\ub86c\ud504\ud2b8___\ub124\ud2b8\uc6cc\ud06c \uc811\uc18d___\uc131\uacf5, \n {0}\uc5d0 \uc800\uc7a5\ud568___\ub0a8\uc740 \uc2dc\uac04:___\uc0ac\uc6a9\uc790___\ub2e4\uc2dc \uc7ac\uc0dd___\ud56d\ubaa9___\ubaa8\ub4e0 \uc791\uc5c5\uc744 \uc9c0\uc6b0\uaca0\uc2b5\ub2c8\uae4c? \n %1$s \ud56d\ubaa9\uc774 \ud3ec\ud568\ub428,%2$s \ub2e4\uc6b4\ub85c\ub529 \uc791\uc5c5___\ubaa8\ub4e0 apks___Wi-Fi\uc5f0\uacb0 \uc548\ub428.\uc124\uce58\ud558\uc138\uc694___- FTP \uc11c\ubc84\uac00 \uaebc\uc9d0___\ub124\ud2b8\uc6cc\ud06c \ud3b8\uc9d1___\uc54c \uc218 \uc5c6\ub294 \uac00\uc218___\ubc31\uc5c5___Wi-Fi \uc124\uce58___DOS/UNIX/MAC \ud589\ubc14\uafc8 \ucf54\ub4dc___\ud648___\uacc4\uc815 \uad00\ub9ac \uc124\uc815___\uc774\ub984:___\uc120\ud0dd \ucde8\uc18c___\ubd84___AP \ube44\ubc00\ubc88\ud638:___\ubbf8\ub514\uc5b4 \uc624\ub958___ES Downloader___\uc804\uccb4 \ubcf4\uae30___- WLAN\uaebc\uc9d0___\uc0c8\ub85c\uc6b4 \ubc84\uc804___\uc815\ub82c \ubc29\uc2dd \ubcc0\uacbd___\uc7ac\uc2dc\uc791___\uc11c\ubc84 \ubaa9\ub85d\uc5d0 \ucd94\uac00___\ubba4\uc9c1 \ud50c\ub808\uc774\uc5b4___\uc0c8 \uc5c5\ub370\uc774\ub4dc\ub97c \ud655\uc778 \ud588\uc2b5\ub2c8\ub2e4.___\ub0a0\uc9dc___\ud3ec\ud2b8\ub294 \uc22b\uc790\ub9cc \uc785\ub825\uac00\ub2a5\ud569\ub2c8\ub2e4. (1025 \u2013 65534)___\uc11c\ubc84 \ucd94\uac00___\uc228\uaca8\uc9d0:___zip \uc548\uc5d0 \uc788\ub294 \ud14d\uc2a4\ud2b8\ub77c\uc11c \ubcc0\uacbd\ub410\uc73c\ub098 \uc800\uc7a5\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4___\ud558\ub8e8___\uc811\uc18d \ud574\uc81c___Instagram\ub294 \uc5ec\uae30\uc11c \uc5c5\ub85c\ub4dc \uae30\ub2a5\uc744 \uc9c0\uc6d0\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4!___Chromecast \ud50c\ub7ec\uadf8\uc778\uc744 \ucc3e\uc744 \uc218 \uc5c6\uac70\ub098 \uc5c5\ub370\uc774\ud2b8\uac00 \ud544\uc694\ud569\ub2c8\ub2e4.\n\n\uc124\uce58\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\uc774\ubbf8 \uc874\uc7ac\ud55c \uc791\uc5c5\ucc3d\uc785\ub2c8\ub2e4___\uc218\uc2e0 \ud30c\uc77c___\uc81c\uac70\ub97c \uc704\ud574 \uc2dc\uc2a4\ud15c \ub514\ub809\ud130\ub9ac\ub97c \'\uc4f0\uae30 \uac00\ub2a5\' \uc73c\ub85c \ub2e4\uc2dc \ub9c8\uc6b4\ud2b8 \ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4___ %s \ud56d\ubaa9___\uc774\ubbf8\uc9c0 \ud30c\uc77c %1$s\uc744/\ub97c \ubcf4\ub0b4\ub4dc\ub9ac\uaca0\uc2b5\ub2c8\ub2e4___%1$s\uc744/\ub97c \ubcf4\ub0b4\ub4dc\ub9ac\uaca0\uc2b5\ub2c8\ub2e4___\ud3f4\ub354 %1$s\uc744/\ub97c \ubcf4\ub0b4\ub4dc\ub9ac\uaca0\uc2b5\ub2c8\ub2e4___\uc5c5\ub370\uc774\ud2b8___\uc774\uc6a9\ud558\uc5ec \uacf5\uc720___\ucd94\ucc9c___ES \ud30c\uc77c \ud0d0\uc0c9\uae30 \uc815\ubcf4___{0}\ubd81\ub9c8\ud06c \uc791\uc131 \uc131\uacf5___\uc6d0\ud558\ub294 \ud3f4\ub354\ub97c \uc120\ud0dd___\uc124\uce58___\ud30c\uc77c \uc124\uc815___S3 \uc704\uce58___\ud14c\ub9c8 \uc124\uc815___\uad8c\ud55c:___\uc7a5\ub09c\uac10___\ud655\uc7a5\uc790\uac00 \ub108\ubb34 \uae38\ub2c8 \ubc14\uafb8\uc2ed\uc2dc\uc624___\uc0c8\ub85c\uace0\uce68___\"\ud558\uc704 \ub514\ub809\ud1a0\ub9ac\ub85c \uc774\ub3d9\ud560\uc218 \uc5c6\uc2b5\ub2c8\ub2e4.\"___\ubb34\uc874\uc7acURL, \uc885\ub8cc\uc911___\ud3f4\ub354\"%s\"\uc740/\ub294 \ud648\uc73c\ub85c \uc124\uc815\ub428.___\uc2e4\ud589___\uc5ed\uc804___\ub124\ud2b8\uc6cc\ud06c\ub97c \uad6c\ucd95\ud558\uac70\ub098 \uc811\uc18d\ud560\uc218 \uc788\uc2b5\ub2c8\ub2e4.___\uc0c8\ub85c\uc6b4 \uacc4\uc815___\uc124\uce58 \uc644\ub8cc___\ud504\ub85c\uadf8\ub7a8 \uc790\ub3d9 \uc124\uce58/\uc81c\uac70___\ubc1c\uacac\ub41c \ub178\ub798 \uc5c6\uc74c___\ucf54\ub4dc\ud654 \uc120\ud0dd___\uc800\uc7a5 \uc131\uacf5!___Google play \uc11c\ube44\uc2a4\ub294 \uc0ac\uc6a9 \ubd88\uac00\ub2a5\ud558\uac70\ub098 \uc5c5\ub370\uc774\ud2b8\uac00 \ud544\uc694\ud569\ub2c8\ub2e4.___\uc720\ud6a8\ud558\uc9c0 \uc54a\ub294 Url \uc785\ub2c8\ub2e4. ___\uc5c5\ub85c\ub4dc\ub41c \ub0a0\uc9dc:___\ub098\ub9cc(\uac1c\uc778)___\uc0ac\uc9c4 \uac80\uc0c9___\uc5d0 \uc555\ucd95 \ud480\uae30___\uc2a4\ud06c\ub864 \uc378 \ud45c\uc2dc___\uc774\ubbf8\uc9c0\ub97c \ubd88\ub7ec\uc62c \uc218 \uc5c6\uc2b5\ub2c8\ub2e4___\uc870\uac74\uc5c6\uc74c___\ud14c\uc2a4\ud2b8 \uc131\uacf5\ud588\uc73c\ub2c8 \uc9c0\uae08\ubd80\ud130 \uc678\uc7a5 \uba54\ubaa8\ub9ac \uc4f0\uae30 \uac00\ub2a5\ud569\ub2c8\ub2e4.\n\n\uc601\uad6c \uad8c\ud55c\uc744 \uc5bb\uc73c\ub824\uba74 ES\ub97c \uc2dc\uc2a4\ud15c\uc73c\ub85c \uc124\uce58\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4. \uc124\uce58\ud558\uaca0\uc2b5\ub2c8\uae4c?___\uacf5\uac04 \ubd80\uc871___\uc228\uae34 \ubaa9\ub85d \ubcf4\ud638___\ub514\uc2a4\ud50c\ub808\uc774 \uc124\uc815___\uc774\ub984\uc774 \'.\' \uc73c\ub85c \uc2dc\uc791\ud558\ub294 \ud30c\uc77c \ubcf4\uc774\uae30___\uc608___%s \uc11c\ubc84 \ud3b8\uc9d1___\uc81c\uc2a4\uccd0___\ube44\ubc00\ubc88\ud638\ub97c \uc785\ub825\ud574\uc8fc\uc2ed\uc2dc\uc624,___\uc11c\ube0c\ub514\ub809\ud130\ub9ac \ud3ec\ud568\ub428___\uc0c8\ub85c\ub9cc\ub4e4\uae30___\ubcf4\uc548 \uc124\uc815___\ub3c4\uad6c \ubaa8\uc74c \uc774\ub984 \ud45c\uc2dc___\uc791\uc5c5 \ucde8\uc18c___\uc5b4\ub5a4 \uc720\ud615\uc758 \uc11c\ub958\uac00 \ub77c\uc774\ube0c\ub7ec\ub9ac\uc5d0 \ud45c\uc2dc\ub418\ub294\uc9c0 \uc124\uc815\ud558\uae30___\uacc4\uc0b0\uc911\u2026___\ubcf5\uc0ac___\uc0ac\uc6a9\uc790\uc758 \uc774\ubbf8\uc9c0\ub97c \ubc30\uacbd \ud654\uba74\uc73c\ub85c \uc120\ud0dd___\uc77d\uae30\uac00\ub2a5:___\uc911\uc9c0___\uc218\uc2e0 \ucde8\uc18c\ub428___\ud50c\ub7ec\uadf8\uc778%s \uc5c5\ub370\uc774\ud2b8\ud558\uc154\uc57c \ud569\ub2c8\ub2e4. \uc5c5\ub370\uc774\ud2b8\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\uc554\uc2dc\uc801___\uc11c\ub958 \ud655\uc7a5\uc790 \uc774\ub984\uc744 \uc785\ub825\ud558\uc138\uc694___Free:___\ud734\uc9c0\ud1b5\uc744 \ube44\uc6b0\uaca0\uc2b5\ub2c8\uae4c?___\uc811\uc18d___\uc774\ub984___{0} \ud3f4\ub354\ub97c \uc815\ub9d0\ub85c \uc0ad\uc81c\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\uc54c\ub78c \uc18c\ub9ac\ub85c \uc124\uc815___\uc11c\ubc84 \uacbd\ub85c\ub97c \uc785\ub825\ud558\uc138\uc694___\uc7a0\uc2dc\ub9cc \uae30\ub2e4\ub9ac\uc138\uc694\u2026___\uc678\ubd80\uc800\uc7a5\uc7a5\uce58 \ud30c\uc77c\uc740 \ud734\uc9c0\ud1b5\uc73c\ub85c \uc62e\uae38 \uc218 \uc5c6\uc73c\uba70 \uc0ad\uc81c \ud6c4\uc5d0 \ubcf5\uc6d0\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4___\uc571 \ub370\uc774\ud130 \ubc31\uc5c5___\uc790\ub3d9 \uc124\uc815___\uc678\ubd80 \uc800\uc7a5 \uc7a5\uce58___\ub370\uc774\ud130 \ub124\ud2b8\uc6cc\ud06c \ubcf4\ud638 \ube44\ubc00\ubc88\ud638 \uc124\uc815___Chromecast \ud50c\ub7ec\uadf8\uc778\uc744 \uc0ac\uc6a9\ud558\uc2dc\ub824\uba74 ES\ucd5c\uc2e0 \ubc84\uc804\uc73c\ub85c \uc5c5\ub370\uc774\ud2b8\ud558\uc154\uc57c \ud569\ub2c8\ub2e4.___\ud30c\uc77c \uac80\uc0ac___To:___\ud30c\uc77c \ud06c\uae30\uac00 2G\uc774\uc0c1\uc774\uba74 \uc554\ud638\ud654\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4___\uc54c\ub9bc \ub2eb\uae30___\uac74\uac15___\"%1$s\"\ub85c \ud30c\uc77c \uc774\ub3d9\ud568___\ud3f4\ub354\ub97c \ubcf4\ub0bc \uc218 \uc5c6\uc74c___\ubc14\ub85c\uac00\uae30\uac00 \ucd94\uac00\ub418\uc5c8\uc2b5\ub2c8\ub2e4.___\ub20c\ub7ec\uc11c \ub04c\uae30___\uc0ac\uc9c4:___\uc7ac\uc0dd\ubaa9\ub85d \uc800\uc7a5___\uc7a5\uce58\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. \uc0c8\ub85c\uace0\uce68 \ud558\uc138\uc694.___\uc624\ub984\ucc28\uc21c___\ucde8\uc18c___\uc624\ub958, {0} \uc11c\ubc84\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4___\ub124\ud2b8\uc6cc\ud06c \uad00\ub9ac___\uc774\ub3d9\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\uc885\ub8cc___- \uacc4\uc815\uc5d0 \uad8c\ud55c\uc774 \uc5c6\uc74c___\uce90\uc2dc \ub370\uc774\ud130\ub97c \ubcf5\uc6d0\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\uc81c\uc2a4\uccd0 \ud3b8\uc9d1___Root \uac15\ud654___\uc77c___\ubc84\uc804___\uae30\ubcf8___\uc8fc\uc18c:___\ub2e4\uc74c\uc758 \uc774\uc720\ub85c \ubc1c\uc0dd:___\uacf5\uc2dd\uc6f9\uc0ac\uc774\ud2b8___\uc120\ud0dd\ub41c \ud30c\uc77c/\ud3f4\ub354 \uc5c6\uc74c___\uc6b4\uc601___\uc228\uae34 \ud30c\uc77c \ud45c\uc2dc___\ucd94\ucd9c___\uac80\uc0c9 \uacb0\uacfc___\uc2dc\uc2a4\ud15c \uc571\uc744 \uc81c\uac70\ud558\uba74 \ucde8\uc18c\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. \uc81c\uac70\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\ud30c\uc77c \uc774\ub984\uc744 \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4___\ubbf8\ub514\uc5b4 \ucf58\ud150\uce20\ub97c \uac00\uc838\uc62c \ub54c \ub124\ud2b8\uc6cc\ud06c \uc624\ub958\uac00 \ubc1c\uc0dd\ud588\uc2b5\ub2c8\ub2e4___\uc2e0\ub8b0\ub418\uc9c0 \uc54a\uc740 \uc99d\uba85\uc11c\uc785\ub2c8\ub2e4___\uc774\uc804\ubc84\uc804 \ubc31\uc5c5\ub41c \uc571___\ubb38\uc11c___\ubcf5\ud638\ud654\uc911\u2026___\uc774 \ud734\ub300\ud3f0\uc740 \ube14\ub8e8\ud22c\uc2a4\ub97c \uc9c0\uc6d0\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4___\uc7ac\uc0dd\ubaa9\ub85d \uc774\ub984\ubc14\uafb8\uae30___Webdav \uc11c\ubc84 \ud638\uc2a4\ud2b8___\ud50c\ub7ec\uadf8\uc778%s \uc5c5\ub370\uc774\ud2b8___\ub2e4\ub978 \uc0ac\ub78c___\uace0\uc815 AP\uc774\ub984 \uc124\uc815___\uacbd\ub85c \uc120\ud0dd___\ub0b4\ub9bc\ucc28\uc21c___\uc554\ud638\ud654 \uc54c\uace0\ub9ac\uc998\uc774 \uc9c0\uc6d0\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4___\uc2a4\uce94\u2026___\ub124\ud2b8\uc6cc\ud06c \uc885\ub8cc___\uc2e4\ud589\uc911\u2026___\ub3c4\uc6c0\ub9d0___\ub124\ud2b8\uc6cc\ud06c \uc624\ub958, \uc778\uc99d \ud398\uc774\uc9c0\ub97c \ub85c\ub4dc\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. \uc7a0\uc2dc\ud6c4 \ub2e4\uc2dc \uc2dc\ub3c4\ud558\uc138\uc694.___\uc62c\ub9ac\uae30___\ubc30\uacbd \uc774\ubbf8\uc9c0 \uc124\uc815___\uace0\ucc28\uc801 \uac80\uc0c9___\uae30\ubcf8___\uc7a5\uce58\ub97c \uc120\ud0dd\ud558\uc138\uc694___\uc624\ub958, SMB\uc11c\ubc84/\ud30c\uc77c \uc5c6\uc74c!___\uc5d0 \uc5f0\uacb0___\uc7ac\uc0dd\ubaa9\ub85d\uc5c6\uc74c___\uc885\ub8cc\uc2dc \uce90\uc26c \uc9c0\uc6b0\uae30___AP\uc2dc\uc791\ub418\uc5c8\uc2b5\ub2c8\ub2e4.\ud655\uc778 \uad8c\ud55c\uc774 \uc5c6\uc73c\ub2c8,\uc2dc\uc2a4\ud15c \uc124\uc815\uc5d0 \ud655\uc778\ud558\uc138\uc694___\uc124\uba85:___\uc774\ub3d9___\uc2a4\ud0b5___\ud14c\uc2a4\ud2b8 \uc2e4\ud328, \uc774 \ud734\ub300\ud3f0\uc5d0\uc11c \uc0ac\uc6a9\ud560 \uc218 \uc5c6\ub294 \uae30\ub2a5\uc785\ub2c8\ub2e4.___\uc571 \ubc31\uc5c5 \ub514\ub809\ud130\ub9ac___*\uac1c\uc694___\uc7ac\uc0dd\uc911\uc5d0 \ucd94\uac00___\uc791\uc5c5 \uc138\ubd80\uc0ac\ud56d___\uc800\uc7a5___\ud655\ub300\ud558\uae30___\uc54c\ub9bc \uc18c\ub9ac\ub85c \uc124\uc815___\uc2dc\uac04___\uc0c8 \uc5c5\ub370\uc774\ud2b8 \uc218\ub3d9 \ud655\uc778___ES \uc5d0 \uc800\uc7a5...___\uacc4\uc18d___\uce5c\uad6c___\uc4f0\uae30___\uc778\uc2a4\ud0c0\uadf8\ub7a8___\ubd99\uc5ec\ub123\uae30___QQ \uacc4\uc815___\ubb38\uc11c___\ubdf0\uc5b4___\uc11c\ub958\uc720\ud615 \ucd94\uac00___\ubcf5\uc0ac___\uc2dc\uc2a4\ud15c \ud30c\uc77c \uc77d\uae30\uc804\uc6a9___\uc555\ucd95 \uad00\ub9ac___\uc124\uce58\ud558\ub824\ub294 {0} \uc774\ubbf8 \uc874\uc7ac\ud569\ub2c8\ub2e4\\\uc124\uce58\ud558\uc9c0 \uc54a\uc740 \ubc84\uc804:{1} \n\ud604\uc7ac \ubc84\uc804:{2} \n\n\uacc4\uc18d\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___LAN\ub85c \ubcf4\ub0b4\uae30___\uc990\uaca8\ucc3e\uae30___\uc2a4\ud2b8\ub9ac\ubc0d \uc11c\ubc84\ub97c \uc2dc\uc791\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4.___\ud3f4\ub354\uc758 \uad8c\ud55c \uc5c6\uc74c___ ___\uc804\ubd80 \uc9c0\uc6b0\uae30___\ud0ed___\ud734\uc9c0\ud1b5\uc73c\ub85c \uc62e\uae30\uae30___Instagram\ub294 \uc5ec\uae30\uc11c \ud3b8\uc9d1 \uae30\ub2a5\uc744 \uc9c0\uc6d0\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4!___\uc624\ub958___\uc774\ub3d9___\ud06c\uae30:___\ud30c\uc77c\uc744 \ubcf5\uc0ac\ud560 \ub54c \ud074\ub9bd\ubcf4\ub4dc \ud45c\uc2dc \uc548\ud558\uae30___\uc81c\uc11c \uc2e4\ud328___\ud50c\ub7ec\uadf8\uc778%s \ub2e4\uc6b4\ub85c\ub4dc\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?___\uc774 \ubc84\uc804\uc5d0\uc11c \uc548\ub4dc\ub85c\uc774\ub4dc 1.6 \ubc84\uc804\uc5d0\uc11c \uc81c\uacf5\ud558\ub294 \ube14\ub8e8\ud22c\uc2a4 \uae30\ub2a5\uc744 \uc0ac\uc6a9\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. Cupcake \uc6a9 ES \ud30c\uc77c \ud0d0\uc0c9\uae30\ub97c \uc0ac\uc6a9\ud558\uc138\uc694.___\ube60\ub978 \uc2a4\ud06c\ub864___\ub2e4\uc6b4\ub85c\ub4dc \uc2e4\ud328"
+    const-string v2, "\u0c86\u0ca8\u0ccd \u0cae\u0cbe\u0ca1\u0cc1___ \u0ca1\u0cc0\u0cab\u0cbe\u0cb2\u0ccd\u0c9f\u0ccd \u0c95\u0cbf\u0c9f\u0c95\u0cbf\u0c97\u0cb3\u0cc1 \u0caa\u0ccd\u0cb0\u0ca4\u0cc0 \u0caa\u0ccd\u0cb0\u0cbe\u0cb0\u0c82\u0cad\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf \u0ca4\u0cc6\u0cb0\u0cc6\u0ca6\u0cc1\u0c95\u0cca\u0cb3\u0ccd\u0cb3\u0cb2\u0ccd\u0caa\u0ca1\u0cc1\u0ca4\u0ccd\u0ca4\u0ca6\u0cc6___\u0cb8\u0cbe\u0ca7\u0ca8 \u0cb8\u0cbf\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb2\u0ccd\u0cb2, \u0ca8\u0cc0\u0cb5\u0cc1 \u0cb0\u0cbf\u0cab\u0ccd\u0cb0\u0cc6\u0cb6\u0ccd \u0cae\u0cbe\u0ca1\u0cbf\u0ca8\u0ccb\u0ca1\u0cac\u0cb9\u0cc1\u0ca6\u0cc1___\u0caa\u0ccd\u0cb2\u0cc7\u0caa\u0c9f\u0ccd\u0c9f\u0cbf\u0caf\u0cb2\u0ccd\u0cb2\u0cbf \u0c95\u0cc7\u0cb5\u0cb2 >500KB\u0c97\u0cbf\u0c82\u0ca4 \u0cb9\u0cc6\u0c9a\u0ccd\u0c9a\u0cbf\u0ca8 \u0c86\u0ca1\u0cbf\u0caf\u0ccb \u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___\u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd___\u0cb8\u0cbe\u0c95\u0cb7\u0ccd\u0c9f\u0cc1 \u0c9c\u0cbe\u0c97\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2!___\u0caa\u0cc2\u0cb0\u0ccd\u0ca3\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0cab\u0ccb\u0cb2\u0ccd\u0ca1\u0cb0\u0ccd \u0cae\u0cc7\u0cb2\u0cc6 \u0c90\u0c95\u0cbe\u0ca8\u0ccd \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___\u0ca1\u0cc0\u0cab\u0cbe\u0cb2\u0ccd\u0c9f\u0ccd \u0ca5\u0cc0\u0cae\u0ccd___\u0c8e\u0cb2\u0ccd\u0cb2\u0cbe apk\u0c97\u0cb3\u0cc1___\u0cb5\u0ccd\u0cb0\u0cc8\u0c9f\u0ccd___\u0cb5\u0cc0\u0ca1\u0cbf\u0caf\u0ccb:___\u0ca6\u0cc3\u0ca2\u0cbf\u0cd5\u0c95\u0cb0\u0ca3 \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0ca1\u0cc0\u0cab\u0cbe\u0cb2\u0ccd\u0c9f\u0ccd___\u0cb8\u0cb9\u0cbe\u0caf___\u0ca6\u0cbf\u0ca8\u0cbe\u0c82\u0c95 \u0cac\u0cb0\u0cc6___\u0c95\u0ca1\u0ca4 0} \u0ca8\u0c95\u0cb2\u0cbf\u0cb8\u0cc1\u0cb5\u0cb2\u0ccd\u0cb2\u0cbf \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0c87\u0cae\u0cc7\u0c9c\u0cbf\u0c82\u0c97\u0ccd___\u0cb8\u0c82\u0c97\u0ccd\u0cb0\u0cb9\u0ca3\u0cc6  \u0c86\u0cb0\u0cbf\u0cb8\u0cbf___\u0c95\u0ccd\u0cb0\u0ccb\u0cae\u0ccd\u200d\u0c95\u0cbe\u0cb8\u0ccd\u0c9f\u0ccd \u0caa\u0ccd\u0cb2\u0c97\u0ccd\u0c87\u0ca8\u0ccd \u0caa\u0ca4\u0ccd\u0ca4\u0cc6\u0caf\u0cbe\u0c97\u0cb2\u0cbf\u0cb2\u0ccd\u0cb2 \u0c85\u0ca5\u0cb5\u0cbe \u0ca8\u0cb5\u0cc0\u0c95\u0cb0\u0ca3\u0cc6\u0caf \u0c85\u0cb5\u0cb6\u0ccd\u0caf\u0c95\u0ca4\u0cc6\u0caf\u0cbf\u0ca6\u0cc6.\n\n\u0ca8\u0cc0\u0cb5\u0cc1 \u0c87\u0ca6\u0ca8\u0ccd\u0ca8\u0cc1 \u0caa\u0ca4\u0ccd\u0ca4\u0cc6\u0cb9\u0c9a\u0ccd\u0c9a\u0cbf \u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cb2\u0cc1 \u0cac\u0caf\u0cb8\u0cc1\u0cb5\u0cbf\u0cb0\u0cbe?___\u0cac\u0cb2\u0cb5\u0c82\u0ca4\u0cb5\u0cbe\u0c97\u0cbf \u0c8e\u0c9c\u0cc6\u0c95\u0ccd\u0c9f\u0ccd\u200d\u0cae\u0cbe\u0ca1\u0cc1___\u0c87\u0ca4\u0cbf\u0cb9\u0cbe\u0cb8___\u0ca1\u0cc0\u0cab\u0cbe\u0cb2\u0ccd\u0c9f\u0ccd \u0c86\u0caa\u0ccd \u0c86\u0c97\u0cbf \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cc1___\u0caa\u0ccd\u0cb2\u0cc7\u0caa\u0c9f\u0ccd\u0c9f\u0cbf \u0cb0\u0ca6\u0ccd\u0ca6\u0cc1\u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0caa\u0ccd\u0cb2\u0cc7 \u0caa\u0c9f\u0ccd\u0c9f\u0cbf\u0c97\u0cc6 \u0c89\u0cb3\u0cbf\u0cb8\u0cc1___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0cb8\u0cb0\u0cbf\u0caf\u0cbe\u0ca6 \u0c87\u0cae\u0cc7\u0cb2\u0ccd \u0cb5\u0cbf\u0cb3\u0cbe\u0cb8\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cb0\u0cc6\u0caf\u0cbf\u0cb0\u0cbf___\u0c85\u0cb2\u0cbe\u0cb0\u0ccd\u0cae\u0ccd  \u0cb6\u0cac\u0ccd\u0ca7\u0cb5\u0cbe\u0c97\u0cbf \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cc1___\u0caa\u0cb0\u0cc0\u0c95\u0ccd\u0cb7\u0cc6 \u0caf\u0cb6\u0cb8\u0ccd\u0cb5\u0cbf\u0caf\u0cbe\u0c97\u0cbf\u0ca6\u0cc6, \u0ca8\u0cc0\u0cb5\u0cc1  \u0cac\u0cbe\u0cb9\u0ccd\u0caf SD \u0c95\u0cbe\u0cb0\u0ccd\u0ca1\u0ca8\u0ccd\u0ca8\u0cc1 \u0c87\u0ca8\u0ccd\u0ca8\u0cc1 \u0caa\u0cb0\u0cbf\u0cb5\u0cb0\u0ccd\u0ca4\u0cbf\u0cb8\u0cac\u0cb9\u0cc1\u0ca6\u0cc1.\n\n\u0c87\u0ca6\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb6\u0cbe\u0cb6\u0ccd\u0cb5\u0ca4\u0cb5\u0cbe\u0c97\u0cbf\u0ca1\u0cb2\u0cc1, \u0ca8\u0cc0\u0cb5\u0cc1 ES\u0c85\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82\u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cac\u0cb9\u0cc1\u0ca6\u0cc1, \u0c88\u0c97 \u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cc7?___\u0cb8\u0cc7\u0cb0\u0cbf\u0cb8\u0cc1___\u0cae\u0ccd\u0caf\u0cc2\u0cb8\u0cbf\u0c95\u0ccd \u0caa\u0ccd\u0cb2\u0cc7\u0caf\u0cb0\u0ccd___\u0ca8\u0c95\u0cb2\u0cbf\u0cb8\u0cc1___\u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0c85\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0cc7\u0cb0\u0cbf___\u0c86\u0caf\u0ccd\u0c95\u0cc6\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0c8e\u0cb2\u0ccd\u0cb2\u0cbe \u0c96\u0cbe\u0cb2\u0cbf \u0c9c\u0cbe\u0c97\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cad\u0cb0\u0ccd\u0ca4\u0cbf\u0cae\u0cbe\u0ca1\u0cbf___\u0cb8\u0ccd\u0cb5\u0caf\u0c82 \u0c86\u0cb0\u0cbf\u0cb8\u0cc1___\u0cb8\u0cc6\u0c95\u0cc6\u0c82\u0ca1\u0ccd\u0cb8\u0ccd___ \u0ca1\u0c95\u0ccd\u0caf\u0cc1\u0cae\u0cc6\u0c82\u0c9f\u0ccd Extention \u0cb9\u0cc6\u0cb8\u0cb0\u0cc1 \u0c96\u0cbe\u0cb2\u0cbf\u0caf\u0cbe\u0c97\u0cbf\u0cb0\u0cac\u0cbe\u0cb0\u0ca6\u0cc1___\u0c87\u0ca8\u0ccd\u0ca8\u0cb7\u0ccd\u0c9f\u0cc1 \u0c86\u0caa\u0ccd\u0cb8\u0ccd___\u0ca6\u0cbf\u0ca8\u0cbe\u0c82\u0c95___\u0c95\u0ccd\u0cb7\u0cae\u0cbf\u0cb8\u0cbf, \u0caa\u0ccd\u0cb0\u0cb8\u0ccd\u0ca4\u0cc1\u0ca4 OTG USB \u0cb8\u0cbe\u0ca7\u0ca8\u0ca6 \u0cb6\u0cc8\u0cb2\u0cbf\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cc6\u0c82\u0cac\u0cb2\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cbf\u0cb2\u0ccd\u0cb2,, ES FAT32 \u0cae\u0ca4\u0ccd\u0ca4\u0cc1 NTFS\u0c85\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0ca6\u0ccd\u0caf\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf \u0cac\u0cc6\u0c82\u0cac\u0cb2\u0cbf\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0ca6\u0cc6___\u0c9a\u0cbe\u0cb0\u0ccd\u0cb8\u0cc6\u0c9f\u0ccd \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cc1___DOS/UNIX/MAC \u0c9f\u0cb0\u0ccd\u0cae\u0cbf\u0ca8\u0cc7\u0c9f\u0cb0\u0ccd___\u0caa\u0ccd\u0cb0\u0cb8\u0ccd\u0ca4\u0cc1\u0ca4 \u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd\u200d\u0ca8\u0cbf\u0c82\u0ca6 \u0ca8\u0cbf\u0cb0\u0ccd\u0c97\u0cae\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6___\u0c87\u0cb2\u0ccd\u0cb2\u0cbf\u0c82\u0ca6  \u0c85\u0cb3\u0cbf\u0cb8\u0cc1\u0cb5 \u0cb8\u0ccc\u0cb2\u0cad\u0ccd\u0caf\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 Facebook \u0cac\u0cc6\u0c82\u0cac\u0cb2\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cbf\u0cb2\u0ccd\u0cb2!___\u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0c87\u0cb2\u0ccd\u0cb2\u0cbf\u0c97\u0cc6  \"%1$s\" \u0cb8\u0ccd\u0ca5\u0cb3\u0cbe\u0c82\u0ca4\u0cb0\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0c96\u0cbe\u0cb8\u0c97\u0cbf \u0ca8\u0cbf\u0caf\u0cae\u0cbe\u0cb5\u0cb3\u0cbf___\u0cac\u0cb3\u0c95\u0cc6\u0ca6\u0cbe\u0cb0\u0ca8 \u0cb9\u0cc6\u0cb8\u0cb0\u0cc1 \u0c96\u0cbe\u0cb2\u0cbf \u0c87\u0cb0\u0c95\u0cc2\u0ca1\u0ca6\u0cc1!___\u0c95\u0cb3\u0cc1\u0cb9\u0cbf\u0cb8\u0cc1___\u0c88 \u0c95\u0cbe\u0cb0\u0ccd\u0caf\u0cbe\u0c9a\u0cb0\u0ca3\u0cc6\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cc6\u0c82\u0cac\u0cb2\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cbf\u0cb2\u0ccd\u0cb2___\u0c95\u0ca1\u0ca4\u0ca6 \u0c97\u0cbe\u0ca4\u0ccd\u0cb0\u0cb5\u0cc1 \u0cae\u0cbf\u0ca4\u0cbf\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cae\u0cc0\u0cb0\u0cbf\u0ca6\u0cc6___\u0cb0\u0cbf\u0c82\u0c97\u0ccd\u200d\u0c9f\u0ccb\u0ca8\u0ccd\u200d\u0c97\u0cc6 \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cc1___\u0ca8\u0cca\u0c82\u0ca6\u0cbe\u0cb5\u0ca3\u0cc6 \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0ca1\u0cc8\u0cb0\u0cc6\u0c95\u0ccd\u0c9f\u0cb0\u0cbf\u0c97\u0cc6 \u0caa\u0ccd\u0cb0\u0cb5\u0cc7\u0cb6\u0cb5\u0ca8\u0ccd\u0cae\u0cc1 \u0cae\u0cbf\u0ca4\u0cbf\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cc1___\u0cb5\u0cbf\u0ca1\u0cbf\u0caf\u0ccb \u0c95\u0ca1\u0ca4\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1, \u0ca8\u0cc7\u0cb0\u0cb5\u0cbe\u0c97\u0cbf \u0caa\u0ccd\u0cb2\u0cc7 \u0cae\u0cbe\u0ca1\u0cac\u0cb9\u0cc1\u0ca6\u0cc1___\u0cb5\u0cc6\u0cac\u0ccd___\u0cb8\u0ccd\u0c95\u0ccd\u0caf\u0cbe\u0ca8\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0ca6 \u0cb8\u0cbe\u0ca7\u0ca8\u0c97\u0cb3\u0cc1___\u0c95\u0ca1\u0ca4\u0ca6 \u0cb9\u0cc6\u0cb8\u0cb0\u0cc1 \u0cac\u0cb9\u0cb3 \u0c89\u0ca6\u0ccd\u0ca6\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6, \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0c9a\u0cbf\u0c95\u0ccd\u0c95\u0ca6\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cb3\u0cb8\u0cbf.___\u0cb9\u0cca\u0cb8 \u0c86\u0cb5\u0ccd\u0cb0\u0ca4\u0ccd\u0ca4\u0cbf___\u0c85\u0ca7\u0cbf\u0cb8\u0cc2\u0c9a\u0ca8\u0cc6 \u0cae\u0cc1\u0c9a\u0ccd\u0c9a\u0cc1___AP \u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd:___\u0ca6\u0ccb\u0cb7, \u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd \u0cb9\u0cc1\u0ca1\u0cc1\u0c95\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb2\u0ccd\u0cb2___\u0c8e\u0c9a\u0ccd\u0c9a\u0cb0\u0cbf\u0c95\u0cc6___\u0c88 \u0c95\u0cbe\u0cb0\u0ccd\u0caf\u0c9a\u0cb0\u0ca3\u0cc6\u0caf\u0cc1 \u0cae\u0cb0\u0cc1\u0cac\u0cb3\u0c95\u0cc6 \u0cac\u0cc1\u0c9f\u0ccd\u0c9f\u0cbf\u0caf\u0cb2\u0ccd\u0cb2\u0cbf\u0cb0\u0cc1\u0cb5 \u0cab\u0ccb\u0cb2\u0ccd\u0ca1\u0cb0\u0ca8\u0ccd\u0ca8\u0cc1 \u0c85\u0cb3\u0cbf\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0ca6\u0cc6, \u0cae\u0cb0\u0cc1\u0cac\u0cb3\u0c95\u0cc6 \u0cac\u0cc1\u0c9f\u0ccd\u0c9f\u0cbf\u0caf\u0cc1 \u0c96\u0cbe\u0cb2\u0cbf\u0caf\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0ca6\u0cc6  \u0cae\u0ca4\u0ccd\u0ca4\u0cc1 \u0cb9\u0cbf\u0c82\u0caa\u0ca1\u0cc6\u0caf\u0cb2\u0cbe\u0c97\u0cc1\u0cb5\u0cc1\u0ca6\u0cbf\u0cb2\u0ccd\u0cb2 ___\u0caa\u0ccd\u0cb2\u0cc7\u0caf\u0cb0\u0ccd___\u0cae\u0cc7\u0cb2\u0cc6___\u0cb9\u0cca\u0cb0\u0cb9\u0ccb\u0c97\u0cc1\u0cb5\u0cbe\u0c97 \u0cae\u0cc1\u0c9a\u0ccd\u0c9a\u0cc1___UID \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cc1___\u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0cb8\u0c82\u0caa\u0cb0\u0ccd\u0c95___\u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd %s \u0caa\u0ccd\u0cb2\u0c97\u0ccd-\u0c87\u0ca8\u0ccd___\u0cb8\u0ca8\u0ccd\u0ca8\u0cc6 \u0c89\u0cb3\u0cbf\u0cb8\u0cc1\u0cb5\u0cb2\u0ccd\u0cb2\u0cbf \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6, \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 sd\u0c95\u0cbe\u0cb0\u0ccd\u0ca1\u0ccd  \u0c85\u0cb8\u0ccd\u0ca4\u0cbf\u0ca4\u0ccd\u0cb5\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf\u0ca6\u0cc6\u0caf\u0cc7 \u0c8e\u0c82\u0ca6\u0cc1 \u0caa\u0cb0\u0cbf\u0cb6\u0cc0\u0cb2\u0cbf\u0cb8\u0cbf___\u0cab\u0ccb\u0cb2\u0ccd\u0ca1\u0cb0\u0ccd \u0c97\u0cb3\u0cc1___\u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd \u0cac\u0ccd\u0caf\u0cbe\u0c95\u0ccd\u200d\u0c85\u0caa\u0ccd  \u0caf\u0cb6\u0cb8\u0ccd\u0cb5\u0cbf\u0caf\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0c87\u0cb2\u0ccd\u0cb2\u0cbf \"%1$s\" \u0caa\u0ca1\u0cc6\u0caf\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0c8e\u0cb2\u0ccd\u0cb2\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0cc6\u0cb0\u0cb5\u0cc1\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cc1___\u0cb2\u0cbe\u0c97\u0cbf\u0ca8\u0ccd___\u0cab\u0ccb\u0cb2\u0ccd\u0ca1\u0cb0\u0ccd \u0c95\u0cb3\u0cc1\u0cb9\u0cbf\u0cb8\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2___\u0ca1\u0cc0\u0cab\u0cbe\u0cb2\u0ccd\u0c9f\u0ccd \u0c95\u0cbf\u0c9f\u0c95\u0cbf\u0c97\u0cc6 \u0cb8\u0cc7\u0cb0\u0cbf\u0cb8\u0cc1___\u0cb0\u0cc0\u0cb8\u0ccd\u0c9f\u0ccb\u0cb0\u0ccd \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd___\u0cb9\u0cca\u0cb0\u0cb9\u0ccb\u0c97\u0cc1\u0cb5\u0cbe\u0c97 cache \u0ca4\u0cc6\u0cb0\u0cb5\u0cc1\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cc1___\u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82 \u0cb0\u0cbf\u0cab\u0ccd\u0cb0\u0cc6\u0cb6\u0ccd \u0c85\u0ca7\u0cbf\u0cb8\u0cc2\u0c9a\u0cbf\u0cb8\u0cc1___\u0cb0\u0cbf\u0cae\u0ccb\u0c9f\u0ccd \u0c95\u0ca1\u0ca4 \u0ca8\u0c95\u0cb2\u0cbf\u0cb8\u0cc1\u0cb5\u0cb2\u0ccd\u0cb2\u0cbf \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0c86\u0cb0\u0cbf\u0cb8\u0cbf\u0cb0\u0cc1\u0cb5 Apk\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0c85\u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cc7?___\u0cae\u0ccb\u0ca1\u0ccd\u0caf\u0cc2\u0cb2\u0ccd \u0cb8\u0cbf\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb2\u0ccd\u0cb2: ES Task Manager.\n\nIt provide Process Kill/Uninstall/Widget Feature.\n\n\u0ca8\u0cc0\u0cb5\u0cc1 \u0c87\u0ca6\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0cc1\u0ca1\u0cc1\u0c95\u0cbf \u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cb2\u0cc1 \u0cac\u0caf\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0cc0\u0cb0\u0cbe?___\u0cac\u0ccd\u0caf\u0cbe\u0c95\u0ccd\u200d\u0c85\u0caa\u0ccd, \u0cb0\u0cc0\u0cb8\u0ccd\u0c9f\u0ccb\u0cb0\u0ccd \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd___\u0ca1\u0cc0\u0c95\u0c82\u0caa\u0ccd\u0cb0\u0cc6\u0cb8\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026___\u0cb5\u0cbf\u0cb5\u0cb0\u0ca3\u0cc6:___\u0caa\u0cb0\u0cc0\u0c95\u0ccd\u0cb7\u0cbf\u0cb8\u0cc1___\u0c95\u0ca1\u0ca4\u0cb5\u0cc1 \u0cb8\u0cbf\u0c97\u0cb2\u0cbf\u0cb2\u0ccd\u0cb2\u0cb5\u0cc7? \u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82\u0c97\u0cc6 \u0ca8\u0cb5\u0cc0\u0c95\u0cb0\u0cbf\u0cb8\u0cb2\u0cc1 \u0c85\u0ca7\u0cbf\u0cb8\u0cc2\u0c9a\u0ca8\u0cc6 \u0c95\u0cca\u0ca1\u0cc1(\u0c87\u0ca6\u0cc1 \u0ca8\u0cbf\u0cae\u0ccd\u0cae \u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82\u0ca8 \u0caa\u0ccd\u0cb0\u0c95\u0cbe\u0cb0 \u0cb8\u0cae\u0caf \u0ca4\u0c97\u0cc1\u0cb2\u0cc1\u0ca4\u0ccd\u0ca4\u0ca6\u0cc6)?___\u0cac\u0cc1\u0c95\u0ccd\u200d\u0cae\u0cbe\u0cb0\u0ccd\u0c95\u0ccd \"{0}\" \u0c88\u0c97\u0cbe\u0c97\u0cb2\u0cc7 \u0c85\u0cb8\u0ccd\u0ca4\u0cbf\u0ca4\u0ccd\u0cb5\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf\u0ca6\u0cc6,\u0c93\u0cb5\u0cb0\u0ccd\u200d\u200d\u0cb5\u0ccd\u0cb0\u0cc8\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cc1\u0cb5\u0cc1\u0ca6\u0cc7 ?___\u0ca8\u0c95\u0cb2\u0cc1 \u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6___\u0caa\u0ca0\u0ccd\u0caf___\u0caa\u0ccd\u0cb2\u0cc7 \u0c86\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6___\u0cb9\u0cc6\u0cb8\u0cb0\u0cc1: %s___\u0caf\u0cbe\u0cb5\u0cc1\u0ca6\u0cc7 \u0c95\u0ca1\u0ca4/\u0cab\u0ccb\u0cb2\u0ccd\u0ca1\u0cb0\u0ccd \u0c86\u0cb0\u0cbf\u0cb8\u0cbf\u0cb2\u0ccd\u0cb2___\u0caf\u0cbe\u0cb5\u0cc1\u0ca6\u0cc7 \u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd \u0c95\u0cbe\u0cb0\u0ccd\u0caf\u0cb5\u0cc1 \u0caa\u0ca4\u0ccd\u0ca4\u0cc6\u0caf\u0cbe\u0c97\u0cb2\u0cbf\u0cb2\u0ccd\u0cb2.___\u0c86\u0cb2\u0ccd\u0cac\u0c82 \u0cb9\u0cc6\u0cb8\u0cb0\u0cc1 \u0c96\u0cbe\u0cb2\u0cbf\u0caf\u0cbe\u0c97\u0cbf\u0cb0\u0cac\u0cbe\u0cb0\u0ca6\u0cc1!___\u0ca5\u0cc0\u0cae\u0ccd \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb0\u0cc0\u0cb8\u0ccd\u0c9f\u0ccb\u0cb0\u0ccd \u0cae\u0cbe\u0ca1\u0cc1___OBEX FTP \u0cb8\u0cc7\u0cb5\u0cc6\u0caf\u0cc1 \u0ca8\u0cbf\u0c82\u0ca4\u0cbf\u0ca6\u0cc6.___\u0cb8\u0c82\u0caa\u0ca8\u0ccd\u0cae\u0cc2\u0cb2 \u0caa\u0ccd\u0cb0\u0cb5\u0cc7\u0cb6\u0c95\u0ccd\u0c95\u0cbe\u0c97\u0cbf \u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cbf___\u0cb9\u0cb5\u0cbe\u0cae\u0cbe\u0ca8___\u0ca8\u0cbf\u0cae\u0cbf\u0cb7\u0c97\u0cb3\u0cc1___\u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82 \u0ca1\u0cc8\u0cb0\u0cc6\u0c95\u0ccd\u0c9f\u0cb0\u0cbf \u0cb5\u0ccd\u0cb0\u0cc8\u0c9f\u0cac\u0cb2\u0ccd \u0c86\u0c97\u0cbf \u0cae\u0ccc\u0c82\u0c9f\u0ccd \u0c86\u0c97\u0cbf\u0ca6\u0cc6___\u0c85\u0ca8\u0cbe\u0cae\u0cbf\u0c95___\u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0cc1\u0ca1\u0cc1\u0c95\u0cc1___\u0cb0\u0cbf\u0cae\u0ccb\u0c9f\u0ccd \u0ca8\u0cbf\u0cb0\u0ccd\u0cb5\u0cbe\u0cb9\u0c95___\u0cb8\u0ccd\u0ca5\u0cbe\u0ca8\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cbf___- \u0c96\u0cbe\u0ca4\u0cc6\u0c97\u0cc6 \u0caf\u0cbe\u0cb5\u0cc1\u0ca6\u0cc7 \u0c85\u0ca8\u0cc1\u0cae\u0ca4\u0cbf\u0c97\u0cb3\u0cbf\u0cb2\u0ccd\u0cb2___\u0c87\u0cb2\u0ccd\u0cb2\u0cbf\u0c97\u0cc6 \u0c89\u0cb3\u0cbf\u0cb8\u0cc1___\u0c9a\u0cc6\u0c95\u0ccd\u200d\u0cb8\u0cae\u0ccd {0} \u0c88 \u0c95\u0ca1\u0ca4\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf: {1} \u0c89\u0cb3\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6.___\u0cb8\u0ccd\u0c95\u0ccd\u0cb0\u0ccb\u0cb2\u0ccd \u0ca5\u0c82\u0cac\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___\u0c86\u0caa\u0ccd \u0caa\u0cc1\u0c9f___\u0cac\u0c97\u0ccd\u0c97\u0cc6___ES FTP \u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd \u0c86\u0cb0\u0c82\u0cad\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___Instagram___\u0c86\u0caa\u0ccd \u0ca8\u0cbf\u0cb0\u0ccd\u0cb5\u0cbe\u0cb9\u0c95___\u0c87\u0cb2\u0ccd\u0cb2\u0cbf \u0c85\u0c82\u0c9f\u0cbf\u0cb8\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2___ \u0ca1\u0c95\u0ccd\u0caf\u0cc1\u0cae\u0cc6\u0c82\u0c9f\u0ccd Extention \u0cb9\u0cc6\u0cb8\u0cb0\u0cc1 \u0cac\u0cb9\u0cb3 \u0c89\u0ca6\u0ccd\u0ca6\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6, \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0cac\u0ca6\u0cb2\u0cbe\u0caf\u0cbf\u0cb8\u0cbf___\u0c87\u0cb2\u0ccd\u0cb2\u0cbf \u0cb0\u0c9a\u0cbf\u0cb8\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2___\u0ca8\u0cbf\u0cae\u0ccd\u0cae \u0c86\u0caf\u0ccd\u0c95\u0cc6\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0c85\u0ca8\u0cbe\u0cae\u0ca7\u0cc7\u0caf\u0cb5\u0cbe\u0c97\u0cbf \u0c85\u0caa\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd \u0cae\u0cbe\u0ca1\u0cc1___\u0cb8\u0cbe\u0ca7\u0ca8___\u0caf\u0cbe\u0cb5\u0cc1\u0ca6\u0cc7 \u0c9a\u0cbf\u0ca4\u0ccd\u0cb0\u0c97\u0cb3\u0cbf\u0cb2\u0ccd\u0cb2___\u0cb5\u0cb0\u0ccd\u0c97___\u0cae\u0cc6\u0ca8\u0cc1___\u0ca8\u0cbf\u0cae\u0ccd\u0cae \u0cb8\u0ccd\u0ca8\u0cc7\u0cb9\u0cbf\u0ca4\u0cb0\u0cc1___\u0caf\u0cb6\u0cb8\u0ccd\u0cb5\u0cbf\u0caf\u0cbe\u0c97\u0cbf \u0cb8\u0c82\u0caa\u0cbe\u0ca6\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6!___\u0c9f\u0cc2\u0cb2\u0ccd\u200d\u0cac\u0cbe\u0cb0\u0ccd \u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0c86\u0caf\u0ccd\u0c95\u0cc6\u0cae\u0cbe\u0ca1\u0cc1\u0cb5 \u0cac\u0c9f\u0ca8\u0ccd\u200d\u0ca8\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___\u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0c97\u0ca3\u0ca8\u0cc6 \u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6___\u0c95\u0ca1\u0ca4 \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd___\u0cb8\u0ccd\u0c9f\u0cbe\u0cb0\u0ccd\u0c9f\u0ccd\u0c85\u0caa\u0ccd \u0ca8\u0cbf\u0cb0\u0ccd\u0cb5\u0cbe\u0cb9\u0c95___\u0ca8\u0cc0\u0cb5\u0cc1 \u0c85\u0cb3\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cc1 \u0c96\u0c9a\u0cbf\u0ca4\u0cb5\u0cc7 {0} \u2026 ({1} \u0cb5\u0cb8\u0ccd\u0ca4\u0cc1\u0c97\u0cb3\u0cbf\u0cb5\u0cc6)?___\u0cb5\u0cbf\u0cb6\u0ccd\u0cb2\u0cc7\u0cb6\u0cbf\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6___\u0cb5\u0ccd\u0cb0\u0cc8\u0c9f\u0cac\u0cb2\u0ccd:___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1  SSID \u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cb0\u0cc6\u0caf\u0cbf\u0cb0\u0cbf___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c98\u0cc1 \u0c85\u0c95\u0ccd\u0cb7\u0cb0\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cb0\u0cc6\u0caf\u0cbf\u0cb0\u0cbf___\u0cb6\u0cc7\u0c95\u0ccd \u0cb8\u0c82\u0cb5\u0cc7\u0ca6\u0ca8\u0cc6\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0cb0\u0cbf\u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cb2\u0cc1___\u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cc1___\u0c89\u0cb3\u0cbf\u0cb8\u0cb2\u0cc1 \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0c95\u0ca1\u0ca4\u0ca6 \u0cb9\u0cc6\u0cb8\u0cb0\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cb0\u0cc6\u0caf\u0cbf\u0cb0\u0cbf___\u0c96\u0cbe\u0cb2\u0cbf \u0caa\u0c9f\u0ccd\u0c9f\u0cbf___192.168.1.100/My Documents___\u0c97\u0ccc\u0caa\u0ccd\u0caf\u0ca4\u0cc6 \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0ca6\u0cb2\u0cbe\u0caf\u0cbf\u0cb8\u0cc1___\u0cb8\u0cbf\u0cb8\u0ccd\u0ca4\u0c82 \u0cb8\u0cae\u0caf  \u0ca4\u0caa\u0ccd\u0caa\u0cbe\u0c97\u0cbf\u0ca6\u0cc6, \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82 \u0cb8\u0cae\u0caf\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cae\u0cbe\u0cb0\u0ccd\u0caa\u0ca1\u0cbf\u0cb8\u0cbf___\u0ca8\u0cbf\u0cae\u0ccd\u0cae \u0cb8\u0cbe\u0ca7\u0ca8\u0cb5\u0cc1 \u0cac\u0ccd\u0cb2\u0cc2\u0c9f\u0cc2\u0ca4\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cc6\u0c82\u0cac\u0cb2\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cbf\u0cb2\u0ccd\u0cb2___\u0c95\u0ccd\u0cb7\u0cae\u0cbf\u0cb8\u0cbf, \u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0ca6\u0ccb\u0cb7\u0cb5\u0cbf\u0ca6\u0cc6; \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0ca8\u0c82\u0ca4\u0cb0 \u0caa\u0ccd\u0cb0\u0caf\u0ca4\u0ccd\u0ca8\u0cbf\u0cb8\u0cbf___\u0caa\u0ccd\u0cb2\u0cc7\u0caa\u0c9f\u0ccd\u0c9f\u0cbf \u0c85\u0cb3\u0cbf\u0cb8\u0cc1___\u0c86\u0caa\u0ccd___\u0cb8\u0ccd\u0cb5\u0caf\u0c82\u0c9a\u0cbe\u0cb2\u0cbf\u0ca4 \u0caa\u0cb0\u0cbf\u0cb6\u0cc0\u0cb2\u0ca8\u0cc6___\u0ca8\u0cc0\u0cb5\u0cc1 \u0cab\u0ccb\u0cb2\u0ccd\u0ca1\u0cb0\u0ccd \u0c85\u0cb3\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cc1 \u0c96\u0c9a\u0cbf\u0ca4\u0cb5\u0cc7: {0}?___\u0c87\u0ca4\u0cb0\u0cc6:___\u0c8e\u0ca8\u0ccd\u200d\u0c95\u0ccb\u0ca1\u0cbf\u0c82\u0c97\u0ccd \u0c86\u0cb0\u0cbf\u0cb8\u0cbf___\u0caf\u0cb6\u0cb8\u0ccd\u0cb5\u0cbf\u0caf\u0cbe\u0c97\u0cbf %s \u0ca4\u0cc6\u0c97\u0cc6\u0caf\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6 ___\u0c9f\u0cbe\u0caf\u0ccd___\u0cb9\u0cca\u0cb8 \u0c96\u0cbe\u0ca4\u0cc6___SSID \u0cae\u0ca4\u0ccd\u0ca4\u0cc1 \u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd \u0c96\u0cbe\u0cb2\u0cbf\u0caf\u0cbe\u0c97\u0cbf\u0cb0\u0cac\u0cbe\u0cb0\u0ca6\u0cc1___\u0cae\u0cb0\u0cc1\u0cac\u0cb3\u0c95\u0cc6 \u0cac\u0cc1\u0c9f\u0ccd\u0c9f\u0cbf___\u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___\u0c9f\u0cc2\u0cb2\u0ccd\u200d\u0cac\u0cbe\u0cb0\u0ccd \u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0cb9\u0cc6\u0cb8\u0cb0\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___\u0ca8\u0cbf\u0cae\u0c97\u0cc6 \u0c87\u0cb7\u0ccd\u0c9f\u0cb5\u0cbe\u0c97\u0cac\u0cb9\u0cc1\u0ca6\u0cc1___\u0c85\u0ca8\u0ccd\u200d\u0cae\u0ccc\u0c82\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cc1 \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0cb2\u0ccb\u0ca1\u0cbf\u0c82\u0c97\u0ccd \u0cb5\u0cbf\u0cab\u0cb2!___\u0c95\u0c82\u0caa\u0ccd\u0cb0\u0cc6\u0cb8\u0ccd \u0cae\u0c9f\u0ccd\u0c9f:___\u0ca1\u0cbe\u0c95\u0ccd\u0caf\u0cc1\u0cae\u0cc6\u0c82\u0c9f\u0ccd \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd___\u0cb8\u0cc7\u0cb5\u0cc6 \u0c86\u0ca8\u0ccd \u0cae\u0cbe\u0ca1\u0cbf\u0ca6 \u0ca8\u0c82\u0ca4\u0cb0 \u0ca8\u0cc0\u0cb5\u0cc1 \u0ca8\u0cbf\u0cae\u0ccd\u0cae \u0cb8\u0cbe\u0ca7\u0ca8\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0caa\u0cbf\u0cb8\u0cbf\u0caf \u0cae\u0cc2\u0cb2\u0c95 \u0ca8\u0cbf\u0cb0\u0ccd\u0cb5\u0cb9\u0cbf\u0cb8\u0cac\u0cb9\u0cc1\u0ca6\u0cc1___\u0c97\u0cbe\u0ca4\u0ccd\u0cb0: %s___\u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd  \u0c86\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026___\u0c8e\u0c95\u0ccd\u0cb8\u0ccd\u0c9f\u0ccd\u0cb0\u0cbe\u0c95\u0ccd\u0c9f\u0ccd \u0c87\u0cb2\u0ccd\u0cb2\u0cbf\u0c97\u0cc6___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0cb5\u0cc7\u0c97 \u0caa\u0ccd\u0cb0\u0cb5\u0cc7\u0cb6\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf \u0cb8\u0ca8\u0ccd\u0ca8\u0cc6\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0cc7\u0cb0\u0cbf\u0cb8\u0cbf \u0c85\u0ca5\u0cb5\u0cbe \u0ca8\u0cbf\u0cb7\u0ccd\u0c95\u0ccd\u0cb0\u0cbf\u0caf\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cbf___Homepage\u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0cb9\u0cc1\u0ca1\u0cc1\u0c95\u0cc1 \u0c8e\u0c82\u0c9c\u0cbf\u0ca8\u0ccd\u200d \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___\u0cac\u0ccd\u0cb2\u0cc2\u0c9f\u0cc2\u0ca4\u0ccd \u0cb9\u0c82\u0c9a\u0cbf\u0c95\u0cc6 \u0caa\u0cbe\u0ca5\u0ccd___\u0cb8\u0ccd\u0ca5\u0cb3\u0cbe\u0c82\u0ca4\u0cb0\u0cbf\u0cb8\u0cc1___\u0c95\u0c82\u0caa\u0ccd\u0cb0\u0cc6\u0cb6\u0ca8\u0ccd \u0ca8\u0cbf\u0cb0\u0ccd\u0cb5\u0cbe\u0cb9\u0c95___Apk\u0c97\u0cb3 \u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0ca8\u0cc6 \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0cac\u0ccd\u0caf\u0cbe\u0c95\u0ccd\u200d\u0c85\u0caa\u0ccd___\u0c97\u0cc1\u0c82\u0caa\u0cc1:___\u0cb5\u0cbf\u0cb0\u0cbe\u0cae\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf\u0ca6\u0cc6___\u0cae\u0ccd\u0caf\u0cc2\u0cb8\u0cbf\u0c95\u0ccd___- IP\u0caf\u0cc1  \u0cb8\u0cb0\u0cbf\u0caf\u0cbf\u0cb2\u0ccd\u0cb2___\u0c8e\u0cb2\u0ccd\u0cb2\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0c85\u0c82\u0c9f\u0cbf\u0cb8\u0cc1___\u0ca1\u0cc6\u0cc2\u0cae\u0cc6\u0cd6\u0ca8\u0ccd___\u0c95\u0ccd\u0cb7\u0cae\u0cbf\u0cb8\u0cbf, \u0caf\u0cbe\u0cb5\u0cc1\u0ca6\u0cc7 \u0c85\u0caa\u0ccd\u0cb2\u0cbf\u0c95\u0cc7\u0cb6\u0ca8\u0ccd \u0cb2\u0cad\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2___ES \u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0cb0\u0ccd___\u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0c95\u0cb3\u0cc1\u0cb9\u0cbf\u0cb8\u0cc1___\u0cae\u0cc2\u0cb2 \u0c95\u0ca1\u0ca4\u0cb5\u0ca8\u0ccd\u0ca8\u0cc2 \u0c85\u0cb3\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cc7___\u0cab\u0ccb\u0cb2\u0ccd\u0ca1\u0cb0\u0ccd \u0cae\u0cc7\u0cb2\u0cc6 \u0cb8\u0c82\u0cac\u0c82\u0ca7\u0caa\u0c9f\u0ccd\u0c9f \u0c90\u0c95\u0cbe\u0ca8\u0ccd \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1\u0cb5 \u0cb8\u0ccc\u0cb2\u0cad\u0ccd\u0caf\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0caa\u0ccd\u0cb0\u0cb8\u0ccd\u0ca4\u0cc1\u0ca4\u0cb5\u0cbe\u0c97\u0cbf  \u0ca8\u0cbf\u0cb7\u0ccd\u0c95\u0ccd\u0cb0\u0cbf\u0caf\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6, \u0ca8\u0cc0\u0cb5\u0cc1 \u0cb8\u0c95\u0ccd\u0cb0\u0cbf\u0caf\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cb2\u0cc1 \u0cac\u0caf\u0cb8\u0cc1\u0cb5\u0cbf\u0cb0\u0cbe?___\u0caf\u0cbe\u0cb5\u0cc1\u0ca6\u0cc7  \u0cae\u0ccc\u0c82\u0c9f\u0ccd \u0c86\u0ca6 SD \u0c95\u0cbe\u0cb0\u0ccd\u0ca1\u0ccd \u0c87\u0cb2\u0ccd\u0cb2 ___\u0c85\u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0ca8\u0cc6 \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0c86\u0cb0\u0c82\u0cad \u0caa\u0cc1\u0c9f\u0cb5\u0ca8\u0ccd\u0ca8\u0cbe\u0c97\u0cbf \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cc1___\u0cac\u0ccd\u0caf\u0cbe\u0c9a\u0ccd \u0cae\u0cb0\u0cc1\u0cb9\u0cc6\u0cb8\u0cb0\u0cbf\u0cb8\u0cc1___\u0c95\u0ccd\u0cb0\u0cbf\u0caf\u0cc6\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0c86\u0cb0\u0cbf\u0cb8\u0cbf___ES Zip \u0cb5\u0cc0\u0c95\u0ccd\u0cb7\u0c95___\u0ca8\u0cb5\u0cc0\u0c95\u0cb0\u0ca3\u0cc6 \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd___\u0cae\u0cbe\u0cb0\u0ccd\u0caa\u0ca1\u0cbf\u0cb8\u0cbf\u0ca6\u0ccd\u0ca6\u0cc1___\u0c8e\u0cb2\u0ccd\u0cb2\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0c82\u0c95\u0cc1\u0c9a\u0cbf\u0cb8\u0cc1___\u0caa\u0ccd\u0cb0\u0cbe\u0caa\u0cb0\u0ccd\u0c9f\u0cc0\u0cb8\u0ccd___\u0c92\u0c9f\u0ccd\u0c9f\u0cc1:___\u0cb8\u0cc0\u0cb5\u0cc1 \u0ca8\u0cbf\u0c97\u0ca6\u0cbf\u0cae\u0cbe\u0ca1\u0cbf\u0ca6 \u0caa\u0cbe\u0ca5\u0ccd \u0cb8\u0cbf\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb2\u0ccd\u0cb2, \u0ca8\u0cc0\u0cb5\u0cc1 \u0cb0\u0c9a\u0cbf\u0cb8\u0cb2\u0cc1 \u0cac\u0caf\u0cb8\u0cc1\u0cb5\u0cbf\u0cb0\u0cbe?___\u0c85\u0cb3\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cc1 \u0c96\u0c9a\u0cbf\u0ca4\u0cb5\u0cc7?___\u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0caa\u0cbe\u0ca5\u0ccd \u0cb8\u0cbf\u0c97\u0cb2\u0cbf\u0cb2\u0ccd\u0cb2 \u0c85\u0ca5\u0cb5 \u0c95\u0cbe\u0cb2\u0cbe\u0cb5\u0ca7\u0cbf \u0cae\u0cc1\u0c97\u0cbf\u0ca6\u0cbf\u0ca6\u0cc6, \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0cae\u0ca4\u0ccd\u0ca4\u0cca\u0cae\u0ccd\u0cae\u0cc6 \u0caa\u0ccd\u0cb0\u0caf\u0ca4\u0ccd\u0ca8\u0cbf\u0cb8\u0cbf___\u0c9f\u0cc2\u0cb2\u0ccd\u200d\u0cac\u0cbe\u0cb0\u0ccd \u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0cb9\u0cc6\u0cb8\u0cb0\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___\u0cb8\u0cbf\u0c97\u0ccd\u0ca8\u0cb2\u0ccd \u0c95\u0ccd\u0cb7\u0cae\u0ca4\u0cc6___\u0cb5\u0cbf\u0cb5\u0cb0\u0ca3\u0cc6___\u0c97\u0cbe\u0ca4\u0ccd\u0cb0___\u0c86\u0caa\u0ccd \u0cac\u0ccd\u0caf\u0cbe\u0c95\u0ccd\u200d\u0c85\u0caa\u0ccd \u0ca1\u0cc8\u0cb0\u0cc6\u0c95\u0ccd\u0c9f\u0cb0\u0cbf___\u0c88 \u0cae\u0cbe\u0ca7\u0ccd\u0caf\u0cae\u0cb5\u0cc1 \u0cb8\u0ccd\u0c9f\u0ccd\u0cb0\u0cc0\u0cae\u0cbf\u0c82\u0c97\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cc6\u0c82\u0cac\u0cb2\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cbf\u0cb2\u0ccd\u0cb2, \u0cb5\u0cb0\u0ccd\u0c97\u0cbe\u0cb5\u0ca3\u0cc6 \u0caa\u0cc2\u0cb0\u0ccd\u0ca3\u0cb5\u0cbe\u0ca6 \u0ca8\u0c82\u0ca4\u0cb0 \u0cb8\u0ccd\u0cb5\u0caf\u0c82\u0c9a\u0cbe\u0cb2\u0cbf\u0ca4\u0cb5\u0cbe\u0c97\u0cbf \u0caa\u0ccd\u0cb2\u0cc7\u0caf\u0cb0\u0ccd \u0c86\u0cb0\u0c82\u0cad\u0cb5\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0ca6\u0cc6___\u0ca1\u0cca\u0cae\u0cc8\u0ca8\u0ccd___\u0c95\u0ca1\u0ca4\u0ca6 \u0cb9\u0cc6\u0cb8\u0cb0\u0cc1___\u0c85\u0cae\u0cbe\u0ca8\u0ccd\u0caf\u0cb5\u0cbe\u0ca6 \u0caa\u0cbe\u0ca5\u0ccd___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0ca8\u0cbf\u0cb8\u0ccd\u0ca4\u0c82\u0ca4\u0cc1 \u0cb8\u0c82\u0caa\u0cb0\u0ccd\u0c95\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0caa\u0cb0\u0cbf\u0cb6\u0cc0\u0cb2\u0cbf\u0cb8\u0cbf!___\"%1$s\" \u0c85\u0ca8\u0cc1\u0cb0\u0cc2\u0caa\u0cb5\u0cbe\u0c97\u0cbf \"%2$s\" \u0c8e\u0c82\u0ca6\u0cc1 \u0cae\u0cb0\u0cc1\u0cb9\u0cc6\u0cb8\u0cb0\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cc1\u0cb5\u0cc1\u0ca6\u0cc1___\u0cae\u0cb0\u0cc6\u0cae\u0cbe\u0ca1\u0cbf\u0cb0\u0cc1\u0cb5 \u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___ \u0cac\u0ca6\u0cb2\u0cbe\u0caf\u0cbf\u0cb8\u0cbf\u0cb0\u0cc1\u0cb5 \u0caa\u0ca0\u0ccd\u0caf \u0c89\u0cb3\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cc1\u0cb5\u0cc1\u0ca6\u0cbf\u0cb2\u0ccd\u0cb2 \u0c8f\u0c95\u0cc6\u0c82\u0ca6\u0cb0\u0cc7  \u0c85\u0cb5\u0cc1\u0c97\u0cb3\u0cc1 zip\u0ca8\u0cb2\u0ccd\u0cb2\u0cbf\u0ca6\u0cc6.___\u0c88 \u0c95\u0cc6\u0cb3\u0c97\u0cbf\u0ca8 \u0c86\u0caa\u0ccd\u0cb8\u0ccd \u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0c85\u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6.\n\u0ca8\u0cc0\u0cb5\u0cc1 \u0c87\u0ca6\u0c95\u0ccd\u0c95\u0cc6 \u0cb8\u0c82\u0cac\u0c82\u0ca7\u0caa\u0c9f\u0ccd\u0c9f \u0cab\u0ccb\u0cb2\u0ccd\u0ca1\u0cb0\u0ca8\u0ccd\u0ca8\u0cc1 \u0c85\u0cb3\u0cbf\u0cb8\u0cac\u0cb9\u0cc1\u0ca6\u0cc1___\u0cb0\u0cbf\u0cb8\u0ccd\u0c9f\u0ccb\u0cb0\u0ccd___\u0c9f\u0ccd\u0caf\u0cbe\u0cac\u0ccd___\u0c95\u0ccd\u0cb7\u0cae\u0cbf\u0cb8\u0cbf, \u0ca8\u0cc0\u0cb5\u0cc1 \u0cab\u0cc8\u0cb2\u0ccd/\u0cab\u0ccb\u0cb2\u0ccd\u0ca1\u0cb0\u0ca8\u0ccd\u0ca8\u0cc1 \u0cae\u0cb0\u0cc1\u0cb9\u0cc6\u0cb8\u0cb0\u0cbf\u0cb8\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2, \u0c87\u0ca6\u0cc1 \u0cac\u0ccd\u0cb2\u0cc2\u0c9f\u0cc2\u0ca4\u0ccd \u0caa\u0ccd\u0cb0\u0ccb\u0c9f\u0ccb\u0c95\u0cbe\u0cb2\u0ccd \u0ca8\u0cbf\u0cb0\u0ccd\u0cad\u0c82\u0ca7\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0cb8\u0cb0\u0ccd\u0c9f\u0cbf\u0cab\u0cbf\u0c95\u0cc7\u0c9f\u0ccd \u0c85\u0cae\u0cbe\u0ca8\u0ccd\u0caf\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd___\u0cb0\u0cc2\u0c9f\u0ccd \u0caa\u0cb0\u0cbf\u0cb6\u0ccb\u0ca6\u0c95 \u0ca4\u0cc6\u0cb0\u0cc6\u0ca6\u0cbf\u0ca6\u0cc6___\u0cb9\u0cca\u0cb8 \u0c95\u0cbf\u0c9f\u0c95\u0cbf\u0caf\u0cb2\u0ccd\u0cb2\u0cbf \u0ca4\u0cc6\u0cb0\u0cc6___\u0c86\u0ca8\u0ccd___\u0c95\u0ccd\u0cb7\u0cae\u0cbf\u0cb8\u0cbf, \u0caa\u0cb0\u0cc0\u0c95\u0ccd\u0cb7\u0cc6 \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6. \u0c88 \u0cb8\u0ccc\u0cb2\u0cad\u0ccd\u0caf \u0c88 \u0cb8\u0cbe\u0ca7\u0ca8\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf \u0c9a\u0cbe\u0cb2\u0ca8\u0cc6\u0caf\u0cbe\u0c97\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2.___USB \u0cb8\u0cbe\u0ca7\u0ca8 \u0caa\u0ccd\u0cb2\u0c97\u0ccd-\u0c87\u0ca8\u0ccd\u200d\u0cae\u0cbe\u0ca1\u0cbf\u0ca6\u0cbe\u0c97  \u0cb8\u0c82\u0ca6\u0cc7\u0cb6  \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___\u0c86\u0cb5\u0cc3\u0ca4\u0ccd\u0ca4\u0cbf:___\u0cae\u0cb0\u0cc6\u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6:___\u0cb9\u0c82\u0c9a\u0cc1___\u0cb5\u0cbe\u0cb2\u0ccd\u200d\u0caa\u0cc7\u0caa\u0cb0\u0ccd \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cc1___\u0caa\u0ccd\u0cb0\u0cb8\u0ccd\u0ca4\u0cc1\u0ca4 \u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0ca8\u0cbf\u0c82\u0ca6 \u0cb9\u0cca\u0cb0\u0cb9\u0ccb\u0c97\u0cc1___\u0c95\u0ca1\u0ca4/SD___\u0ca1\u0c95\u0ccd\u0caf\u0cc1\u0cae\u0cc6\u0c82\u0c9f\u0ccd\u200d\u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0cb9\u0cc1\u0ca1\u0cc1\u0c95\u0cc1 in Document___\u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cc1___\u0ca8\u0cc0\u0cb5\u0cc1 %s \u0caa\u0ccd\u0cb2\u0c97\u0ccd-\u0c87\u0ca8\u0ccd \u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cc1 \u0cac\u0caf\u0cb8\u0cc1\u0cb5\u0cbf\u0cb0\u0cbe?___\u0cb9\u0cc7\u0cb3\u0cbf\u0c95\u0cc6 \u0caa\u0ccb\u0cb8\u0ccd\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026___sd\u0c95\u0cbe\u0cb0\u0ccd\u0ca1\u0ccd \u0c9c\u0cbe\u0c97 \u0cb8\u0cbe\u0c95\u0cb7\u0ccd\u0c9f\u0cbf\u0cb2\u0ccd\u0cb2___S3 \u0cb8\u0ccd\u0ca5\u0cb3___FTP \u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd \u0ca4\u0cc6\u0cb0\u0cc6\u0caf\u0cb2\u0cc1 \u0c92\u0c82\u0ca6\u0cc1 \u0c95\u0cbf\u0cb0\u0cc1\u0cae\u0cbe\u0cb0\u0ccd\u0c97\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb0\u0c9a\u0cbf\u0cb8\u0cc1___\u0c95\u0cc8\u0caf\u0cbe\u0cb0\u0cc6 \u0cb9\u0cca\u0cb8 \u0c86\u0cb5\u0cc3\u0ca4\u0ccd\u0ca4\u0cbf\u0c97\u0cbe\u0c97\u0cbf \u0caa\u0cb0\u0cbf\u0cb6\u0cc0\u0cb2\u0cbf\u0cb8\u0cbf___\u0c95\u0ca1\u0ca4\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0c85\u0cb3\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0c95\u0ccd\u0c95\u0cc6 \u0ca8\u0cc0\u0cb5\u0cc1 \u0c96\u0c9a\u0cbf\u0ca4\u0cb5\u0cc7?___\u0cad\u0cb5\u0cbf\u0cb7\u0ccd\u0caf\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf \u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cae\u0cb0\u0cc1\u0cac\u0cb3\u0c95\u0cc6 \u0cac\u0cc1\u0c9f\u0ccd\u0c9f\u0cbf\u0caf\u0cb2\u0ccd\u0cb2\u0cbf \u0cb9\u0cbe\u0c95\u0cc1\u0cb5 \u0cac\u0ca6\u0cb2\u0cc1 \u0cb6\u0cbe\u0cb6\u0ccd\u0cb5\u0ca4\u0cb5\u0cbe\u0c97\u0cbf \u0c86\u0cb3\u0cbf\u0cb8\u0cc1 ___\u0ca8\u0cc0\u0cb5\u0cc1 \u0c88\u0c97 AP\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cb3\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0ccd\u0ca6\u0cc0\u0cb0\u0cbf, SSID\u0caf\u0cc1___\u0cb8\u0ccd\u0cb5\u0cc0\u0c95\u0cb0\u0cbf\u0cb8\u0cc1\u0cb5\u0cb5\u0cb0\u0cc1 \u0ca4\u0cbf\u0cb0\u0cb8\u0ccd\u0c95\u0cb0\u0cbf\u0cb8\u0cbf\u0ca6\u0ccd\u0ca6\u0cbe\u0cb0\u0cc6___Recommended___\u0caa\u0ccd\u0cb0\u0ca4\u0cbf\u0c95\u0ccd\u0cb0\u0cbf\u0caf\u0cc6___\u0caa\u0ccd\u0cb2\u0c97\u0ccd-\u0c87\u0ca8\u0ccd  %s \u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026___\u0cb6\u0cbf\u0cab\u0cbe\u0cb0\u0cb8\u0ccd\u0cb8\u0cc1___\u0caa\u0cbf\u0cb8\u0cbf\u0caf\u0cbf\u0c82\u0ca6 \u0ca8\u0cbf\u0cae\u0ccd\u0cae \u0cb8\u0cbe\u0ca7\u0ca8\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca8\u0cbf\u0cb0\u0ccd\u0cb5\u0cb9\u0cbf\u0cb8\u0cbf___\u0cac\u0cc8\u0c9f\u0ccd\u0cb8\u0ccd___ \u0caa\u0cbe\u0ca5\u0ccd  \u0c86\u0cb0\u0cbf\u0cb8\u0cbf ___\u0c87\u0c82\u0ca4\u0cc6 \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___\u0c95\u0ca1\u0ca4\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0caf\u0cb6\u0cb8\u0ccd\u0cb5\u0cbf\u0caf\u0cbe\u0c97\u0cbf \u0cae\u0cb0\u0cc1\u0cb9\u0cc6\u0cb8\u0cb0\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___SD \u0c95\u0cbe\u0cb0\u0ccd\u0ca1\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0ccd\u0c9f\u0cc7\u0c9f\u0cb8\u0ccd \u0cac\u0cbe\u0cb0\u0ccd \u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___\u0caf\u0cbe\u0cb5\u0cc1\u0ca6\u0cc7 \u0caa\u0ccd\u0cb2\u0cc7\u0caa\u0c9f\u0ccd\u0c9f\u0cbf \u0c87\u0cb2\u0ccd\u0cb2___\u0cab\u0ccb\u0cb2\u0ccd\u0ca1\u0cb0\u0ccd \u0cae\u0cc7\u0cb2\u0cc6 \u0c90\u0c95\u0cbe\u0ca8\u0ccd \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cb2\u0cc1 \u0c86\u0caa\u0ccd \u0c9c\u0cca\u0ca4\u0cc6\u0c97\u0cc2\u0ca1\u0cbf\u0cb8\u0cbf___\u0c86\u0caf\u0ccd\u0c95\u0cc6\u0caf \u0cac\u0c9f\u0ca8\u0ccd\u200d\u0ca8\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___\u0cb8\u0ca8\u0ccd\u0ca8\u0cc6___\u0cb2\u0ccb\u0ca1\u0cbf\u0c82\u0c97\u0ccd \u0cb5\u0cbf\u0cab\u0cb2___\u0cb8\u0ccd\u0ca5\u0cb3:___\u0c9f\u0cc2\u0cb2\u0ccd\u0cb8\u0ccd___\u0c90\u0ca1\u0cb2\u0ccd___\u0cb5\u0cb0\u0ca6\u0cbf\u0cae\u0cbe\u0ca1\u0cc1___\u0caf\u0cbe\u0cb5\u0cc1\u0ca6\u0cc2 \u0c87\u0cb2\u0ccd\u0cb2___\u0cb9\u0cbf\u0c82\u0ca6\u0cc6___\u0cab\u0ccb\u0ca8\u0ccd\u200d\u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cbf\u0cb0\u0cc1\u0cb5___\u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82 \u0c95\u0ca1\u0ca4 \u0c85\u0cb3\u0cbf\u0cb8\u0cbf\u0ca6 \u0ca8\u0c82\u0ca4\u0cb0 \u0cb9\u0cbf\u0c82\u0caa\u0ca1\u0cc6\u0caf\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2___\u0c9a\u0cbf\u0ca4\u0ccd\u0cb0\u0c97\u0cb3\u0cc1 \u0cb8\u0cbf\u0c97\u0cb2\u0cbf\u0cb2\u0ccd\u0cb2___\u0cb8\u0ccd\u0c9f\u0ccd\u0cb0\u0cc0\u0cae\u0cbf\u0c82\u0c97\u0ccd \u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd \u0c86\u0cb0\u0c82\u0cad\u0cbf\u0cb8\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb2\u0ccd\u0cb2___\u0cae\u0cb0\u0cc1\u0cb9\u0cc6\u0cb8\u0cb0\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6 \"%1$s\"___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0ca8\u0cbf\u0cae\u0ccd\u0cae \u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0cc1\u0cb0\u0c95\u0ccd\u0cb7\u0cbf\u0ca4\u0cb5\u0cbe\u0c97\u0cbf\u0ca1\u0cbf, \u0c92\u0cae\u0ccd\u0cae\u0cc6 \u0cae\u0cb0\u0cc6\u0ca4\u0cc1\u0cb9\u0ccb\u0ca6\u0cb0\u0cc6 \u0cae\u0cb0\u0cb3\u0cbf\u0caa\u0ca1\u0cc6\u0caf\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2___\u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0cb8\u0ccd\u0ca5\u0cbf\u0ca4\u0cbf___\u0c9a\u0cbf\u0ca4\u0ccd\u0cb0___\u0cac\u0cb9\u0cc1 \u0cb0\u0cbf\u0cae\u0ccb\u0c9f\u0ccd \u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0c82\u0c9a\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb2\u0ccd\u0cb2___\u0cac\u0ca6\u0cb2\u0cbe\u0caf\u0cbf\u0cb8\u0cc1___\u0c85\u0ca7\u0cbf\u0cb8\u0cc2\u0c9a\u0ca8\u0cc6\u0c97\u0cc6 \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cc1___\u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0cb0\u0ca6\u0ccd\u0ca6\u0cc1\u0cae\u0cbe\u0ca1\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6___\u0cb8\u0ccd\u0c95\u0ccd\u0caf\u0cbe\u0ca8\u0ccd\u200d\u0ca8 \u0cae\u0cc2\u0cb2\u0c95 \u0cb8\u0cbe\u0ca7\u0ca8\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0cc1\u0ca1\u0cc1\u0c95\u0cc1___\u0c87\u0cae\u0cc7\u0cb2\u0ccd \u0c95\u0cb3\u0cc1\u0cb9\u0cbf\u0cb8\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2___\u0caa\u0c9f\u0ccd\u0c9f\u0cbf\u0caf\u0cbf\u0c82\u0ca6 \u0ca4\u0cc6\u0c97\u0cc6\u0ca6\u0cc1\u0cb9\u0cbe\u0c95\u0cc1___URL \u0cb8\u0cbf\u0c97\u0cb2\u0cbf\u0cb2\u0ccd\u0cb2, \u0cb9\u0cca\u0cb0\u0cb9\u0ccb\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6___\u0c85\u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cc1\u0cb5 \u0cae\u0cca\u0ca6\u0cb2\u0cc1 \u0cac\u0ccd\u0caf\u0cbe\u0c95\u0ccd\u0c85\u0caa\u0ccd \u0cae\u0cbe\u0ca1\u0cc1___\u0c95\u0ca1\u0ca4 {0} \u0ca4\u0cc6\u0cb0\u0caf\u0cc1\u0cb5\u0cc1\u0ca6\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb0\u0ca6\u0ccd\u0ca6\u0cc1\u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82 \u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cae\u0cbe\u0ca4\u0ccd\u0cb0 \u0cb0\u0cc0\u0ca1\u0ccd \u0cae\u0cbe\u0ca1\u0cc1___\u0caf\u0cbe\u0cb5\u0cc1\u0ca6\u0cc7 \u0cb7\u0cb0\u0ca4\u0ccd\u0ca4\u0cc1\u0c97\u0cb3\u0cbf\u0cb2\u0ccd\u0cb2___\u0caa\u0cbe\u0ca5\u0ccd \u0cb0\u0c9a\u0cbf\u0cb8\u0cc1\u0cb5\u0cb2\u0ccd\u0cb2\u0cbf \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0c87\u0ca4\u0cb0\u0cb0\u0cc1 \u0cb0\u0c9a\u0cbf\u0cb8\u0cbf\u0ca6 \u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0c9c\u0cca\u0ca4\u0cc6 \u0cb8\u0cc7\u0cb0\u0cc1___\u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd \u0caa\u0cbe\u0ca5\u0ccd___\u0c86\u0caa\u0ccd \u0ca8\u0cbf\u0cb0\u0ccd\u0cb5\u0cbe\u0cb9\u0c95___\u0caf\u0cbe\u0cb0\u0cbe\u0ca6\u0cb0\u0cc1 (\u0cb8\u0cbe\u0cb0\u0ccd\u0cb5\u0c9c\u0ca8\u0cbf\u0c95)___- FTP \u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd \u0ca1\u0ccc\u0ca8\u0ccd\u200d \u0c86\u0c97\u0cbf\u0ca6\u0cc6___\u0c88 \u0cb9\u0cbe\u0ca1\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb0\u0cbf\u0c82\u0c97\u0ccd\u200d\u0c9f\u0ccb\u0ca8\u0ccd \u0c86\u0c97\u0cbf \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cb2\u0cc1 \u0c86\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb2\u0ccd\u0cb2, \u0cae\u0cca\u0ca6\u0cb2\u0cc1 \u0ca8\u0cc0\u0cb5\u0cc1 \u0c95\u0cc8\u0caf\u0cbe\u0cb0\u0cc6 \u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd \u0cae\u0cbe\u0ca1\u0cac\u0cc7\u0c95\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0ca6\u0cc6___\u0caa\u0cb0\u0cbf\u0cb6\u0cc0\u0cb2\u0cbf\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026___\u0ca1\u0cc0\u0cab\u0cbe\u0cb2\u0ccd\u0c9f\u0ccd \u0c86\u0caa\u0ccd \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb0\u0cc0\u0cb8\u0ccd\u0c9f\u0ccb\u0cb0\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0ca7\u0cc0\u0cb0\u0ccd\u0c98\u0cb5\u0cbe\u0c97\u0cbf \u0c92\u0ca4\u0ccd\u0ca4\u0cbf___\u0caa\u0ccd\u0cb2\u0cc7\u0caa\u0c9f\u0ccd\u0c9f\u0cbf \u0c88\u0c97\u0cbe\u0c97\u0cb2\u0cc7 \u0c85\u0cb8\u0ccd\u0ca4\u0cbf\u0ca4\u0ccd\u0cb5\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf\u0ca6\u0cc6___\u0caa\u0ccd\u0cb2\u0cc7\u0caa\u0c9f\u0ccd\u0c9f\u0cbf \u0c85\u0cb3\u0cbf\u0cb8\u0cc1___\u0c8e\u0ca8\u0ccd\u200d\u0c95\u0ccd\u0cb0\u0cbf\u0caa\u0ccd\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0ca6 \u0c9f\u0ccd\u0cb0\u0cbe\u0ca8\u0ccd\u0cb8\u0ccd\u200d\u0caa\u0ccb\u0cb0\u0ccd\u0c9f\u0ccd___\u0c86\u0cb0\u0cbf\u0cb8\u0cbf\u0cb0\u0cc1\u0cb5 \u0c96\u0cbe\u0ca4\u0cc6\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb2\u0cbe\u0c97\u0ccc\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cc1\u0cb5\u0cc1\u0ca6\u0cc7?___\u0c87\u0cb2\u0ccd\u0cb2\u0cbf\u0c97\u0cc6 \u0cb8\u0ccd\u0ca5\u0cb3\u0cbe\u0c82\u0ca4\u0cb0\u0cbf\u0cb8\u0cc1___ APK\u0c97\u0cb3\u0cc1 \u0c85\u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0ca8\u0cc6\u0c97\u0cca\u0c82\u0ca1\u0cbf\u0ca6\u0cc6___\u0cb8\u0c82\u0caa\u0cb0\u0ccd\u0c95\u0c97\u0cca\u0cb3\u0ccd\u0cb3\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026___\u0cb0\u0cbf\u0cab\u0ccd\u0cb0\u0cc6\u0cb6\u0ccd___\u0c85\u0ca8\u0cc1\u0cae\u0ca4\u0cbf\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca8\u0cbf\u0cb0\u0ccd\u0cb5\u0cb9\u0cbf\u0cb8\u0cb2\u0cc1___\u0c8e\u0cb2\u0ccd\u0cb2\u0cbe \u0cb9\u0cbe\u0ca1\u0cc1\u0c97\u0cb3\u0cc1___\u0c95\u0ca1\u0ca4\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0cc0\u0c97\u0cc6 \u0c8e\u0ca4\u0ccd\u0ca4\u0cbf\u0c95\u0cca___\u0caf\u0cc2\u0c9f\u0ccd\u0caf\u0cc2\u0cac\u0ccd \u0cb5\u0cc0\u0ca1\u0cbf\u0caf\u0ccb___\u0ca8\u0cb5\u0cc0\u0c95\u0cb0\u0cbf\u0cb8\u0cc1___\u0cb9\u0ca1\u0cc1\u0c95\u0cbe\u0c9f\u0ca6  \u0cab\u0cb2\u0cbf\u0ca4\u0cbe\u0c82\u0cb6___ \u0ca8\u0cbf\u0cae\u0ccd\u0cae\u0cb2\u0ccd\u0cb2\u0cbf \u0cae\u0cbe\u0ca7\u0ccd\u0caf\u0cae\u0ca6 \u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0c82\u0c9a\u0cbf\u0c95\u0cca\u0cb3\u0ccd\u0cb3\u0cc1\u0ca4\u0ccd\u0ca4\u0ca6\u0cc6 %1$s___R/W \u0cae\u0ccc\u0c82\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cc1___\u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd___*\u0cb8\u0cbe\u0cb0\u0cbe\u0c82\u0cb6___\u0ca1\u0cc0\u0c95\u0ccd\u0cb0\u0cbf\u0caa\u0ccd\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cc1 \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0c88 \u0c95\u0ca1\u0ca4\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 sd\u0c95\u0cbe\u0cb0\u0ccd\u0ca1\u0ccd\u200d\u0c97\u0cc6 \u0ca8\u0c95\u0cb2\u0cc1 \u0cae\u0cbe\u0ca1\u0cbf___\u0c8e\u0ca8\u0ccd\u200d\u0c95\u0ccd\u0cb0\u0cbf\u0caa\u0ccd\u0c9f\u0ccd___\u0cb0\u0ca6\u0ccd\u0ca6\u0cc1\u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0cb8\u0cb0\u0ccd\u0c9f\u0cbf\u0cab\u0cbf\u0c95\u0cc7\u0c9f\u0ccd ID \u0caf\u0cc1 \u0cb9\u0cca\u0c82\u0ca6\u0cbe\u0ca3\u0cbf\u0c95\u0cc6\u0caf\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb2\u0ccd\u0cb2___\u0cac\u0cb3\u0c95\u0cc6\u0ca6\u0cbe\u0cb0___\u0c95\u0cbe\u0cb0\u0ccd\u0caf \u0cb5\u0cbf\u0cb5\u0cb0\u0c97\u0cb3\u0cc1___\u0caa\u0ca0\u0ccd\u0caf\u0ca6 \u0cac\u0ca3\u0ccd\u0ca3\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cc1___\u0cab\u0ccb\u0cb2\u0ccd\u0ca1\u0cb0\u0ccd \u0ca4\u0cc6\u0cb0\u0cc6 - %1$s___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0cb9\u0cca\u0cb8\u0caa\u0ccb\u0cb0\u0ccd\u0c9f\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cb3\u0cb8\u0cb2\u0cc1 \u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd\u200d\u0c85\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb0\u0cbf\u0cb8\u0ccd\u0c9f\u0cbe\u0cb0\u0ccd\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cbf___\u0c85\u0ca6\u0cc7 \u0cb9\u0cc6\u0cb8\u0cb0\u0cbf\u0ca8 \u0caa\u0ccd\u0cb2\u0cc7\u0caa\u0c9f\u0ccd\u0c9f\u0cbf \u0c85\u0cb8\u0ccd\u0ca4\u0cbf\u0ca4\u0ccd\u0cb5\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf\u0ca6\u0cc6___\u0cac\u0cbf\u0cb3\u0cbf___Facebook___\u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82 \u0c86\u0caa\u0ccd \u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cc1, \u0c96\u0c9a\u0cbf\u0ca4\u0cb5\u0cc7?___\u0ca8\u0cc0\u0cb5\u0cc1 \u0caa\u0ccd\u0cb0\u0cb8\u0ccd\u0ca4\u0cc1\u0ca4 \u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0cac\u0cb3\u0c95\u0cc6\u0ca6\u0cbe\u0cb0\u0cb0 \u0c9c\u0cca\u0ca4\u0cc6 \u0cb8\u0c82\u0cb5\u0cb9\u0ca8 \u0ca8\u0ca1\u0cc6\u0cb8\u0cac\u0cb9\u0cc1\u0ca6\u0cc1___\u0ca8\u0cbf\u0cb0\u0cc0\u0c95\u0ccd\u0cb7\u0cbf\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6___\u0cb6\u0cc7\u0c95\u0ccd \u0cb8\u0c82\u0cb5\u0cc7\u0ca6\u0ca8\u0cc6___\u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd \u0ca8\u0cbf\u0cb0\u0ccd\u0cb5\u0cbe\u0cb9\u0c95___\u0ca6\u0cbf\u0ca8\u0c97\u0cb3\u0cc1___\u0c86\u0cb2\u0ccd\u0cac\u0c82\u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0cb9\u0cc1\u0ca1\u0cc1\u0c95\u0cc1___\u0cac\u0ccd\u0cb2\u0cc2\u0c9f\u0cc2\u0ca4\u0ccd \u0cb8\u0ccc\u0cb2\u0cad\u0ccd\u0caf \u0c88 \u0c86\u0cb5\u0cc3\u0ca4\u0ccd\u0ca4\u0cbf\u0caf\u0cb2\u0ccd\u0cb2\u0cbf  \u0c86\u0c82\u0ca1\u0ccd\u0cb0\u0cbe\u0caf\u0ccd\u0ca1\u0ccd 1.6\u0c97\u0cc6 \u0cb2\u0cad\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2, \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1ES File Explorer (for Cupcake) \u0c86\u0cb5\u0cc3\u0ca4\u0ccd\u0ca4\u0cbf\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cb3\u0cb8\u0cbf.___\"%s\" \u0c85\u0ca8\u0cc1\u0cb0\u0cc2\u0caa\u0cb5\u0cbe\u0c97\u0cbf \u0cb0\u0c9a\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0ca6\u0cc6___\u0c9f\u0cc2\u0cb2\u0ccd\u200d\u0cac\u0cbe\u0cb0\u0ccd___\u0c88 \u0c8e\u0c9a\u0ccd\u0c9a\u0cb0\u0cbf\u0c95\u0cc6\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0cae\u0ca4\u0ccd\u0ca4\u0cca\u0cae\u0ccd\u0cae\u0cc6 \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cac\u0cc7\u0ca1___\u0caa\u0ccd\u0cb0\u0cb8\u0ccd\u0ca4\u0cc1\u0ca4 : %d___\u0caa\u0ccd\u0caf\u0cbe\u0c95\u0cc7\u0c9c\u0ccd \u0cb9\u0cc6\u0cb8\u0cb0\u0cc1:___\u0cb8\u0ca8\u0ccd\u0ca8\u0cc6 \u0caa\u0ccd\u0cb0\u0cbe\u0cb0\u0c82\u0cad\u0cb5\u0cbe\u0c97\u0cc1\u0cb5 \u0cb8\u0ccd\u0ca5\u0cbe\u0ca8\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cb2\u0cc1 \u0c8e\u0cb3\u0cc6\u0caf\u0cbf\u0cb0\u0cbf___\u0c95\u0ca1\u0ca4\u0ca6 \u0c95\u0c82\u0c9f\u0cc6\u0c82\u0c9f\u0ccd \u0caa\u0ca1\u0cc6\u0caf\u0cc1\u0cb5\u0cbe\u0c97 \u0ca6\u0ccb\u0cb7\u0cb5\u0cc1\u0c82\u0c9f\u0cbe\u0c97\u0cbf\u0ca6\u0cc6: ___cache \u0ca4\u0cc6\u0cb0\u0cb5\u0cc1\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cc1___\u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd___\u0c95\u0cbf\u0cb0\u0cc1\u0cae\u0cbe\u0cb0\u0ccd\u0c97___\u0cb6\u0cbf\u0cd5\u0cb0\u0ccd\u0cb7\u0cbf\u0c95\u0cc6___\u0cb0\u0c9a\u0cbf\u0cb8\u0cc1___\u0c86\u0caa\u0ccd \u0cae\u0ca4\u0ccd\u0ca4\u0cc1 \u0ca1\u0cc7\u0c9f\u0cbe \u0cac\u0ccd\u0caf\u0cbe\u0c95\u0ccd\u0c85\u0caa\u0ccd \u0cae\u0cbe\u0ca1\u0cc1___\u0cae\u0ccd\u0caf\u0cbe\u0c9c\u0cbf\u0c95\u0ccd \u0cac\u0ccd\u0cb0\u0cc0\u0cab\u0ccd\u200d\u0c95\u0cc7\u0cb8\u0ccd___\u0c95\u0ca1\u0ca4\u0cb5\u0cc1 SD \u0c95\u0cbe\u0cb0\u0ccd\u0ca1\u0ccd\n\u200d\u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0cb8\u0c82\u0c97\u0ccd\u0cb0\u0cb9\u0c97\u0cca\u0cb3\u0ccd\u0cb3\u0cc1\u0ca4\u0ccd\u0ca4\u0ca6\u0cc6  \u0cae\u0ca4\u0ccd\u0ca4\u0cc1 \u0cb0\u0cc0\u0ca1\u0ccd \u0c93\u0ca8\u0ccd\u0cb2\u0cc0\u0caf\u0cbe\u0c97\u0cbf \u0ca4\u0cc6\u0cb0\u0cc6\u0ca6\u0cc1\u0c95\u0cca\u0cb3\u0ccd\u0cb3\u0cc1\u0ca4\u0ccd\u0ca4\u0ca6\u0cc6___\u0c96\u0c9a\u0cbf\u0ca4___\u0caa\u0ccd\u0cb2\u0cc7 \u0c86\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6 \u2026___\'.\' \u0ca8\u0cbf\u0c82\u0ca6 \u0caa\u0ccd\u0cb0\u0cbe\u0cb0\u0c82\u0cad\u0cb5\u0cbe\u0c97\u0cc1\u0cb5 \u0cae\u0cb0\u0cc6\u0cae\u0cbe\u0ca1\u0cbf\u0cb0\u0cc1\u0cb5 \u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cc1___\u0c95\u0cbf\u0cb0\u0cc1\u0cae\u0cbe\u0cb0\u0ccd\u0c97 \u0cb0\u0c9a\u0cbf\u0cb8\u0cc1___\u0caa\u0ccd\u0cb0\u0cae\u0cbe\u0ca3\u0cc0\u0c95\u0cb0\u0ca3 \u0c95\u0ccb\u0ca1\u0ccd \u0ca4\u0caa\u0ccd\u0caa\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0c86\u0cb2\u0ccd\u0cac\u0c82___\u0cb8\u0ccd\u0cb5\u0cc0\u0c95\u0cb0\u0cbf\u0cb8\u0cc1___\u0c87\u0cb2\u0ccd\u0cb2\u0cbf \u0cb9\u0cc1\u0ca1\u0cc1\u0c95\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2___\u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca8\u0c95\u0cb2\u0cbf\u0cb8\u0cc1\u0cb5\u0cbe\u0c97 \u0ca8\u0c95\u0cb2\u0cc1 \u0cab\u0cb2\u0c95\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0ccb\u0cb0\u0cbf\u0cb8\u0cac\u0cc7\u0ca1___\u0ca1\u0cbf\u0cb8\u0ccd\u0c95\u0ccd \u0c97\u0cb3\u0cc1___ \u0ca8\u0cc6\u0c9f\u0ccd \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb2\u0ccd\u0cb2, \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82 \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd \u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0cb8\u0c82\u0cb0\u0c9a\u0cbf\u0cb8\u0cbf___\u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0cb8\u0cae\u0cb8\u0ccd\u0caf\u0cc6 , \u0ca6\u0cc3\u0ca2\u0cbf\u0cd5\u0c95\u0cb0\u0ca3 \u0caa\u0cc1\u0c9f \u0cb2\u0ccb\u0ca1\u0ccd \u0c86\u0c97\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb2\u0ccd\u0cb2 , \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0ca8\u0c82\u0ca4\u0cb0 \u0caa\u0ccd\u0cb0\u0caf\u0ca4\u0ccd\u0ca8\u0cbf\u0cb8\u0cbf___\u0cb9\u0cb3\u0cc6\u0caf \u0cac\u0ccd\u0caf\u0cbe\u0c95\u0ccd\u200d\u0c85\u0caa\u0ccd \u0c86\u0caa\u0ccd\u200d\u0c97\u0cb3\u0cc1___\u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd \u0c96\u0c9a\u0cbf\u0ca4\u0cb5\u0cc7:___\u0cab\u0ccb\u0cb2\u0ccd\u0ca1\u0cb0\u0ccd\u200d\u200d\u0ca8 \u0cb9\u0cc6\u0cb8\u0cb0\u0cc1 \u0c95\u0ca8\u0cbf\u0cb7\u0ccd\u0c9f >= 3 \u0c85\u0c95\u0ccd\u0cb7\u0cb0\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb0\u0cac\u0cc7\u0c95\u0cc1___\u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0cb8\u0cc1\u0cb0\u0c95\u0ccd\u0cb7\u0cc6\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0c86\u0ca8\u0ccd \u0cae\u0cbe\u0ca1\u0cc1___\u0ca4\u0ccd\u0caf\u0c9c\u0cbf\u0cb8\u0cc1___{0}%\u0c95\u0cbf\u0c82\u0ca4 \u0cb9\u0cc6\u0c9a\u0ccd\u0c9a\u0cc1 \u0cac\u0cb3\u0c95\u0cc6\u0ca6\u0cbe\u0cb0\u0cb0\u0cc1 \u0c88 \u0c86\u0caa\u0ca8\u0ccd\u0ca8\u0cc1  \u0cac\u0cb3\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0ccd\u0ca6\u0cbe\u0cb0\u0cc6___\u0cac\u0ccd\u0caf\u0cbe\u0c95\u0ccd\u200d\u0c97\u0ccd\u0cb0\u0ccc\u0c82\u0ca1\u0ccd \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0cb8\u0cc1___\u0cac\u0cb9\u0cc1 \u0c95\u0cbf\u0c9f\u0c95\u0cbf___\u0cae\u0cb0\u0cc6\u0cae\u0cbe\u0ca1\u0cc1\u0cb5 \u0c95\u0ca1\u0ca4 \u0caa\u0c9f\u0ccd\u0c9f\u0cbf\u0caf\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca8\u0cbf\u0cb0\u0ccd\u0cb5\u0cb9\u0cbf\u0cb8\u0cbf___\u0cb9\u0cc7\u0cb3\u0cbf\u0c95\u0cc6___\u0cac\u0ccd\u0cb2\u0cc2\u0c9f\u0cc2\u0ca4\u0ccd \u0cb8\u0c95\u0ccd\u0cb0\u0cbf\u0caf\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cbf\u0cb2\u0ccd\u0cb2___cache \u0c86\u0ca6 \u0ca1\u0cc7\u0c9f\u0cbe\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0cc6\u0cb0\u0cb5\u0cc1\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cb2\u0cc1 \u0c92\u0ca4\u0ccd\u0ca4\u0cbf (\u0ca5\u0c82\u0cac\u0ccd\u200d\u0ca8\u0cc7\u0cb2\u0ccd \u0c87\u0ca4\u0cb0\u0cc6.)___\u0cb9\u0cc6\u0cb8\u0cb0\u0cc1___\u0caa\u0ccd\u0cb0\u0ccb\u0c97\u0ccd\u0cb0\u0cbe\u0c82\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb8\u0ccd\u0cb5\u0caf\u0c82\u0c9a\u0cbe\u0cb2\u0cbf\u0ca4\u0cb5\u0cbe\u0c97\u0cbf \u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cc1/\u0c85\u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cc1___\u0ca8\u0cbf\u0cae\u0ccd\u0cae \u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82 ES \u0c97\u0cc6  \u0cac\u0cbe\u0cb9\u0ccd\u0caf SD \u0c95\u0cbe\u0cb0\u0ccd\u0ca1\u0ccd \u0ca8\u0cb2\u0ccd\u0cb2\u0cbf \u0cb5\u0ccd\u0cb0\u0cc8\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cc1\u0cb5\u0cc1\u0ca6\u0c95\u0ccd\u0c95\u0cc6 \u0ca8\u0cbf\u0cb7\u0cc7\u0ca6\u0cbf\u0cb8\u0cc1\u0ca4\u0ccd\u0ca4\u0ca6\u0cc6(\u0ca8\u0ccb\u0ca1\u0cbf https://code.google.com/p/android/issues/detail?id=67570), \u0c86\u0ca6\u0ccd\u0ca6\u0cb0\u0cbf\u0c82\u0ca6 \u0cb0\u0cc2\u0c9f\u0ccd \u0c86\u0ca6 \u0ca8\u0c82\u0ca4\u0cb0\u0cb5\u0cc6 ES \u0c97\u0cc6 \u0c87\u0ca6\u0cb0\u0cb2\u0ccd\u0cb2\u0cbf \u0cb5\u0ccd\u0cb0\u0cc8\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cc1 \u0c86\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0ca6\u0cc6 only write on it after rooted.___\u0ca8\u0cc0\u0cb5\u0cc1 \u0cb0\u0ccb\u0c9f\u0ccd \u0cb8\u0ccc\u0cb2\u0cad\u0ccd\u0caf\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0cca\u0c82\u0ca6\u0cbf\u0ca6\u0ccd\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf, \u0cb0\u0ccb\u0c9f\u0ccd \u0caa\u0cb0\u0cbf\u0cb6\u0ccb\u0ca7\u0c95\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca4\u0cc6\u0cb0\u0cc6\u0caf\u0cb2\u0cc1 \u0cb8\u0ccd\u0cb5\u0cbf\u0c9a\u0ccd\u0c9a\u0ca8\u0ccd\u0ca8\u0cc1 \u0c86\u0ca8\u0ccd \u0cae\u0cbe\u0ca1\u0cbf.___\u0c86\u0caa\u0ccd \u0caa\u0ccd\u0cb0\u0cbe\u0cb0\u0c82\u0cad\u0cbf\u0cb8\u0cc1 - %1$s___\u0c86\u0caa\u0ccd \u0c9c\u0cca\u0ca4\u0cc6\u0c97\u0cc2\u0ca1\u0cbf\u0cb8\u0cc1___\u0c86\u0ca8\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6\u2026___\u0ca8\u0cbf\u0cae\u0ccd\u0cae \u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82 \u0ca1\u0cc8\u0cb0\u0cc6\u0c95\u0ccd\u0c9f\u0cb0\u0cbf\u0caf\u0cb2\u0ccd\u0cb2\u0cbf\u0cb0\u0cc1\u0cb5 \u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0c95\u0c82\u0caa\u0ccd\u0cb0\u0cc6\u0cb8\u0ccd \u0cae\u0ca4\u0ccd\u0ca4\u0cc1 \u0ca1\u0cc0\u0c95\u0c82\u0caa\u0ccd\u0cb0\u0cc6\u0cb8\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2___\u0c95\u0ca1\u0ca4\u0ca6 \u0c8e\u0c95\u0ccd\u0cb8\u0ccd\u0c9f\u0cc6\u0ca8\u0ccd\u200d\u0cb6\u0ca8\u0ccd \u0cac\u0ca6\u0cb2\u0cbe\u0caf\u0cbf\u0cb8\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2___\u0c88 \u0cb9\u0cc6\u0cb8\u0cb0\u0ca8\u0ccd\u0ca8\u0cc1 \u0c85\u0c82\u0c97\u0cc0\u0c95\u0cb0\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cc1\u0cb5\u0cc1\u0ca6\u0cbf\u0cb2\u0ccd\u0cb2, \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0cac\u0ca6\u0cb2\u0cbe\u0caf\u0cbf\u0cb8\u0cbf___\u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0cb0\u0c9a\u0cbf\u0cb8\u0cbf \u0c85\u0ca5\u0cb5 \u0cb8\u0cc7\u0cb0\u0cbf___\u0caa\u0cbe\u0ca5\u0ccd:___\u0caa\u0ccd\u0cb2\u0c97\u0ccd-\u0c87\u0ca8\u0ccd %s \u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cc1 \u0cb5\u0cbf\u0cab\u0cb2\u0cb5\u0cbe\u0c97\u0cbf\u0ca6\u0cc6, \u0c8f\u0c95\u0cc6\u0c82\u0ca6\u0cb0\u0cc6 \u0caa\u0ccd\u0cb2\u0c97\u0ccd-\u0c87\u0ca8\u0ccd \u0caa\u0cbe\u0ca5\u0ccd \u0cb5\u0ccd\u0cb0\u0cc8\u0c9f\u0cac\u0cb2\u0ccd \u0c86\u0c97\u0cbf\u0cb2\u0ccd\u0cb2 ___\u0cb8\u0cb0\u0ccd\u0cb5\u0cb0\u0ccd \u0caa\u0c9f\u0ccd\u0c9f\u0cbf\u0c97\u0cc6 \u0cb8\u0cc7\u0cb0\u0cbf\u0cb8\u0cc1___\u0cae\u0cbe\u0cb0\u0ccd\u0caa\u0ca1\u0cbf\u0cb8\u0cbf\u0ca6\u0ccd\u0ca6\u0cc1:___\u0cae\u0cbe\u0ca6\u0cb0\u0cbf:___\u0ca1\u0ccc\u0ca8\u0ccd\u200d\u0cb2\u0ccb\u0ca1\u0ccd %s \u0caf\u0cb6\u0cb8\u0ccd\u0cb5\u0cbf\u0caf\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___ES\u0ca8 \u0c86\u0cb5\u0ccd\u0cb0\u0ca4\u0ccd\u0ca4\u0cbf\u0caf\u0cc1 \u0c95\u0ccd\u0cb0\u0ccb\u0cae\u0ccd\u200d\u0c95\u0cbe\u0cb8\u0ccd\u0c9f\u0ccd \u0caa\u0ccd\u0cb2\u0c97\u0ccd\u0c87\u0ca8\u0ccd\u200d\u0c97\u0cc6 \u0cac\u0cb9\u0cb3\u0cbe \u0cb9\u0cb3\u0cc6\u0caf\u0ca6\u0cbe\u0caf\u0cbf\u0ca4\u0cc1, \u0ca8\u0cc0\u0cb5\u0cc1 \u0c87\u0ca4\u0ccd\u0ca4\u0cc0\u0c9a\u0cbf\u0ca8 \u0c86\u0cb5\u0cc3\u0ca4\u0ccd\u0ca4\u0cbf\u0c97\u0cc6 \u0ca8\u0cb5\u0cc0\u0c95\u0cb0\u0cbf\u0cb8\u0cac\u0cc7\u0c95\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0ca6\u0cc6.___\u0cae\u0cb0\u0cc1\u0cac\u0cb3\u0c95\u0cc6 \u0cac\u0cc1\u0c9f\u0ccd\u0c9f\u0cbf  \u0cb8\u0ccc\u0cb2\u0cad\u0ccd\u0caf \u0cb8\u0c95\u0ccd\u0cb0\u0cbf\u0caf\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cc1___\u0cb0\u0cc2\u0c9f\u0ccd \u0caa\u0cb0\u0cbf\u0cb6\u0ccb\u0ca7\u0c95___\u0cae\u0cb0\u0cc1\u0cac\u0cb3\u0c95\u0cc6 \u0cac\u0cc1\u0c9f\u0ccd\u0c9f\u0cbf \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd___\u0caa\u0ccd\u0cb2\u0cc7\u0caa\u0c9f\u0ccd\u0c9f\u0cbf \u0cb0\u0c9a\u0cbf\u0cb8\u0cc1___\u0cb8\u0cbe\u0cae\u0cbe\u0ca8\u0ccd\u0caf___\u0ca8\u0cc0\u0cb5\u0cc1 \u0cb5\u0cbf\u0ca1\u0cbf\u0caf\u0ccb\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0c85\u0cb3\u0cbf\u0cb8\u0cc1\u0cb5\u0cc1\u0ca6\u0cc1 \u0c96\u0c9a\u0cbf\u0ca4\u0cb5\u0cc7___\u0caf\u0cb6\u0cb8\u0ccd\u0cb5\u0cbf, \u0c87\u0cb2\u0ccd\u0cb2\u0cbf \u0c89\u0cb3\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6 :\n {0}___\u0c9a\u0cbf\u0ca4\u0ccd\u0cb0\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb2\u0ccb\u0ca1\u0ccd \u0cae\u0cbe\u0ca1\u0cb2\u0cc1 \u0c86\u0c97\u0cb2\u0cbf\u0cb2\u0ccd\u0cb2___\u0cae\u0cb0\u0cc6\u0cae\u0cbe\u0ca1\u0cc1___\"{0}\" \u0ca8\u0ccd\u0ca8\u0cc1 \u0cb0\u0c9a\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6.___\u0ca8\u0cbf\u0cae\u0ccd\u0cae \u0cb8\u0cbe\u0ca7\u0ca8\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf \u0cb9\u0cb3\u0cc6\u0caf \u0c86\u0cb5\u0cc3\u0ca4\u0ccd\u0ca4\u0cbf\u0caf \u0cb8\u0cbf\u0cb8\u0ccd\u0c9f\u0c82 \u0caa\u0ca4\u0ccd\u0ca4\u0cc6\u0caf\u0cbe\u0c97\u0cbf\u0ca6\u0cc6, \u0ca8\u0cbf\u0cae\u0c97\u0cc6 \u0c87\u0ca4\u0cb0\u0cb0\u0cbf\u0c82\u0ca6 \u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0caa\u0ca1\u0cc6\u0caf\u0cb2\u0cc1 \"\u0cb0\u0cc2\u0c9f\u0ccd\" \u0c85\u0ca8\u0cc1\u0cae\u0ca4\u0cbf \u0ca8\u0cc0\u0ca1\u0cac\u0cc7\u0c95\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0ca6\u0cc6. \u0c87\u0cb2\u0ccd\u0cb2\u0cb5\u0cbe\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf,\u0c85\u0ca8\u0cbf\u0cb0\u0cc0\u0c95\u0ccd\u0cb7\u0cbf\u0ca4 \u0caa\u0cb0\u0cbf\u0ca3\u0cbe\u0cae\u0c97\u0cb3\u0cc1 \u0c89\u0c82\u0c9f\u0cbe\u0c97\u0cac\u0cb9\u0cc1\u0ca6\u0cc1.\n\n\u0c86\u0ca6\u0cb0\u0cc2 \u0c88 \u0cb5\u0cc8\u0cb6\u0cbf\u0cb7\u0ccd\u0c9f\u0ccd\u0caf\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0caa\u0ccd\u0cb0\u0caf\u0ca4\u0ccd\u0ca8\u0cbf\u0cb8\u0cb2\u0cc1 \u0cac\u0caf\u0cb8\u0cc1\u0cb5\u0cbf\u0cb0\u0cbe?___\u0cb9\u0cc7\u0cb3\u0cbf\u0c95\u0cc6 \u0caa\u0ccb\u0cb8\u0ccd\u0c9f\u0ccd \u0cae\u0cbe\u0ca1\u0cc1 ___\u0c87\u0ca6\u0cc1 {0} \u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0ca8\u0cc6\u0caf\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0cb0\u0cc1\u0cb5\u0cc1\u0ca6\u0cc1 \u0c88\u0c97\u0cbe\u0c97\u0cb2\u0cc7 \u0c85\u0cb8\u0ccd\u0ca4\u0cbf\u0ca4\u0ccd\u0cb5\u0ca6\u0cb2\u0ccd\u0cb2\u0cbf\u0ca6\u0cc6 \n\u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0ca8\u0cc6\u0caf\u0cbe\u0ca6 \u0c86\u0cb5\u0cc3\u0ca4\u0ccd\u0ca4\u0cbf :{1} \n\u0caa\u0ccd\u0cb0\u0cb8\u0ccd\u0ca4\u0cc1\u0ca4 \u0c86\u0cb5\u0ccd\u0cb0\u0ca4\u0ccd\u0ca4\u0cbf:{2} \n\n\u0cae\u0cc1\u0c82\u0ca6\u0cc1\u0cb5\u0cb0\u0cc6\u0caf\u0cc1\u0cb5\u0cc1\u0ca6\u0cc7?___\u0cb5\u0cc6\u0cac\u0ccd \u0c86\u0cb0\u0ccd\u0c95\u0cc8\u0cb5\u0ccd___\u0c87\u0ca4\u0cb0\u0cc6 \u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0c97\u0cc6 \u0cb8\u0cc7\u0cb0\u0cc1___\u0cae\u0cbe\u0cb0\u0cc1\u0c95\u0c9f\u0ccd\u0c9f\u0cc6___\u0cae\u0cb0\u0cc1\u0cac\u0cb3\u0c95\u0cc6 \u0cac\u0cc1\u0c9f\u0ccd\u0c9f\u0cbf\u0c97\u0cc6 \u0cb8\u0ccd\u0ca5\u0cb3\u0cbe\u0c82\u0ca4\u0cb0\u0cbf\u0cb8\u0cc1___\u0c94\u0c9f\u0ccd\u200d\u0caa\u0cc1\u0c9f\u0ccd \u0caa\u0cbe\u0ca5\u0ccd  \u0c88 \u0c9a\u0cbf\u0cb9\u0ccd\u0ca8\u0cc6\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0c92\u0cb3\u0c97\u0cca\u0c82\u0ca1\u0cbf\u0cb0\u0cac\u0cbe\u0cb0\u0ca6\u0cc1 * \\ \" : / ? | < >___\u0c86\u0ca1\u0cbf\u0caf\u0ccb/\u0cb5\u0cc0\u0ca1\u0cbf\u0caf\u0ccb___\u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0caa\u0ccd\u0cb0\u0cb5\u0cc7\u0cb6 \u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd \u0cb8\u0cc6\u0c9f\u0ccd\u0c9f\u0cbf\u0c82\u0c97\u0ccd\u0cb8\u0ccd___\u0cae\u0cc1\u0c82\u0ca6\u0cbf\u0ca8 \u0c8e\u0ca8\u0ccd\u200d\u0c95\u0ccd\u0cb0\u0cbf\u0caa\u0ccd\u0cb7\u0ca8\u0ccd\u200d\u0c97\u0cc6 \u0c87\u0ca6\u0cc7 \u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ca8\u0ccd\u0ca8\u0cc1 \u0cac\u0cb3\u0cb8\u0cc1___\u0ca4\u0cbf\u0c82\u0c97\u0cb3\u0cc1\u0c97\u0cb3\u0cc1___AP \u0cb8\u0c95\u0ccd\u0cb0\u0cbf\u0caf\u0c97\u0cca\u0cb3\u0cbf\u0cb8\u0cbf\u0ca6\u0cc6___\u0caa\u0ccd\u0cb0\u0cb8\u0ccd\u0ca4\u0cc1\u0ca4 \u0caa\u0cbe\u0ca5\u0ccd___\u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0c85\u0cb3\u0cbf\u0cb8\u0cbf\u0ca6 \u0ca8\u0c82\u0ca4\u0cb0  \u0cb9\u0cbf\u0c82\u0caa\u0ca1\u0cc6\u0caf\u0cb2\u0cc1 \u0cb8\u0cbe\u0ca7\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2___\u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0cbf\u0cb8\u0cb2\u0cbe\u0c97\u0cc1\u0ca4\u0ccd\u0ca4\u0cbf\u0ca6\u0cc6___\u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd:___\u0c92\u0ca8\u0ccd \u0c95\u0cc0 \u0c85\u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0ca8\u0cc6___\u0c95\u0ca1\u0ca4\u0c97\u0cb3\u0ca8\u0ccd\u0ca8\u0cc1 \u0c87\u0cb2\u0ccd\u0cb2\u0cbf\u0c97\u0cc6 \"%1$s\" \u0ca8\u0c95\u0cb2\u0cc1 \u0cae\u0cbe\u0ca1\u0cb2\u0cbe\u0c97\u0cbf\u0ca6\u0cc6___\u0ca1\u0cbe\u0c95\u0ccd\u0caf\u0cc1\u0cae\u0cc6\u0c82\u0c9f\u0ccd:___ ___\u0caa\u0cc2\u0cb0\u0ccd\u0ca3\u0caa\u0cbe\u0ca5\u0ca8\u0ccd\u0ca8\u0cc1 \u0ca8\u0c95\u0cb2\u0cbf\u0cb8\u0cc1___\u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0ca6\u0ccb\u0cb7, \u0ca6\u0caf\u0cb5\u0cbf\u0c9f\u0ccd\u0c9f\u0cc1 \u0ca8\u0c82\u0ca4\u0cb0 \u0caa\u0ccd\u0cb0\u0caf\u0ca4\u0ccd\u0ca8\u0cbf\u0cb8\u0cbf.___\u0c9a\u0cbf\u0ca4\u0ccd\u0cb0\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0cb9\u0c82\u0c9a\u0cb2\u0cc1 \u0caf\u0cbe\u0cb5\u0cc1\u0ca6\u0cc7 \u0c85\u0caa\u0ccd\u0cb2\u0cbf\u0c95\u0cc7\u0cb6\u0ca8\u0ccd \u0cb2\u0cad\u0ccd\u0caf\u0cb5\u0cbf\u0cb2\u0ccd\u0cb2.___\u0c8e\u0cb2\u0ccd\u0cb2\u0cb5\u0ca8\u0ccd\u0ca8\u0cc1 \u0c86\u0cb0\u0cbf\u0cb8\u0cc1___\u0caa\u0cbe\u0cb8\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0ca1\u0ccd \u0cb6\u0cc2\u0ca8\u0ccd\u0caf\u0cb5\u0cbf\u0cb0\u0c95\u0cc2\u0ca1\u0ca6\u0cc1___ ___\u0ca8\u0cc6\u0c9f\u0ccd\u200d\u0cb5\u0cb0\u0ccd\u0c95\u0ccd \u0cb8\u0ccd\u0ca5\u0cbe\u0caa\u0ca8\u0cc6\u0c97\u0cca\u0c82\u0ca1\u0cbf\u0ca6\u0cc6, ID"
 
     aput-object v2, v0, v1
 

@@ -1,5 +1,5 @@
 .class public Lcom/estrongs/android/ui/b/u;
-.super Lcom/estrongs/android/view/aw;
+.super Lcom/estrongs/android/view/cr;
 
 
 # instance fields
@@ -27,14 +27,14 @@
     .end annotation
 .end field
 
-.field private d:Lcom/estrongs/android/ui/b/x;
+.field private d:Lcom/estrongs/android/ui/b/ab;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Activity;Lcom/estrongs/fs/util/a/a;Lcom/estrongs/android/view/cb;)V
+.method public constructor <init>(Landroid/app/Activity;Lcom/estrongs/fs/util/a/a;Lcom/estrongs/android/view/dw;)V
     .locals 1
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/estrongs/android/view/aw;-><init>(Landroid/app/Activity;Lcom/estrongs/fs/util/a/a;Lcom/estrongs/android/view/cb;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/estrongs/android/view/cr;-><init>(Landroid/app/Activity;Lcom/estrongs/fs/util/a/a;Lcom/estrongs/android/view/dw;)V
 
     new-instance v0, Ljava/util/LinkedList;
 
@@ -54,64 +54,24 @@
 
     iput-object v0, p0, Lcom/estrongs/android/ui/b/u;->c:Ljava/util/List;
 
-    new-instance v0, Lcom/estrongs/android/ui/b/x;
+    new-instance v0, Lcom/estrongs/android/ui/b/ab;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/b/x;-><init>(Lcom/estrongs/android/ui/b/u;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/b/ab;-><init>(Lcom/estrongs/android/ui/b/u;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/b/u;->d:Lcom/estrongs/android/ui/b/x;
+    iput-object v0, p0, Lcom/estrongs/android/ui/b/u;->d:Lcom/estrongs/android/ui/b/ab;
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/estrongs/android/ui/b/u;)Z
+.method static synthetic a(Lcom/estrongs/android/ui/b/u;)Landroid/app/Activity;
     .locals 1
 
-    iget-boolean v0, p0, Lcom/estrongs/android/ui/b/u;->l:Z
-
-    return v0
-.end method
-
-.method static synthetic b(Lcom/estrongs/android/ui/b/u;)Lcom/estrongs/android/ui/b/x;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->d:Lcom/estrongs/android/ui/b/x;
+    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->ag:Landroid/app/Activity;
 
     return-object v0
 .end method
 
-.method static synthetic c(Lcom/estrongs/android/ui/b/u;)Landroid/app/Activity;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->ad:Landroid/app/Activity;
-
-    return-object v0
-.end method
-
-.method static synthetic d(Lcom/estrongs/android/ui/b/u;)Landroid/app/Activity;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->ad:Landroid/app/Activity;
-
-    return-object v0
-.end method
-
-.method static synthetic e(Lcom/estrongs/android/ui/b/u;)Landroid/app/Activity;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->ad:Landroid/app/Activity;
-
-    return-object v0
-.end method
-
-.method static synthetic f(Lcom/estrongs/android/ui/b/u;)Landroid/app/Activity;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->ad:Landroid/app/Activity;
-
-    return-object v0
-.end method
-
-.method static synthetic g(Lcom/estrongs/android/ui/b/u;)Ljava/util/List;
+.method static synthetic b(Lcom/estrongs/android/ui/b/u;)Ljava/util/List;
     .locals 1
 
     iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->c:Ljava/util/List;
@@ -119,31 +79,135 @@
     return-object v0
 .end method
 
-.method static synthetic h(Lcom/estrongs/android/ui/b/u;)Z
+.method static synthetic c(Lcom/estrongs/android/ui/b/u;)Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/estrongs/android/ui/b/u;->l:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/ui/b/u;->q:Z
 
     return v0
 .end method
 
-.method static synthetic i(Lcom/estrongs/android/ui/b/u;)Z
+.method static synthetic d(Lcom/estrongs/android/ui/b/u;)Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/estrongs/android/ui/b/u;->l:Z
+    iget-boolean v0, p0, Lcom/estrongs/android/ui/b/u;->q:Z
 
     return v0
 .end method
 
-.method static synthetic j(Lcom/estrongs/android/ui/b/u;)Landroid/os/Handler;
+.method static synthetic e(Lcom/estrongs/android/ui/b/u;)Lcom/estrongs/android/view/cp;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->T:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->k:Lcom/estrongs/android/view/cp;
 
     return-object v0
 .end method
 
-.method private p()V
+.method static synthetic f(Lcom/estrongs/android/ui/b/u;)Landroid/support/v7/widget/RecyclerView;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->h:Landroid/support/v7/widget/RecyclerView;
+
+    return-object v0
+.end method
+
+.method static synthetic g(Lcom/estrongs/android/ui/b/u;)Lcom/estrongs/android/view/cp;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->k:Lcom/estrongs/android/view/cp;
+
+    return-object v0
+.end method
+
+.method static synthetic h(Lcom/estrongs/android/ui/b/u;)Landroid/support/v7/widget/RecyclerView;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->h:Landroid/support/v7/widget/RecyclerView;
+
+    return-object v0
+.end method
+
+.method static synthetic i(Lcom/estrongs/android/ui/b/u;)Lcom/estrongs/android/view/cp;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->k:Lcom/estrongs/android/view/cp;
+
+    return-object v0
+.end method
+
+.method static synthetic j(Lcom/estrongs/android/ui/b/u;)Lcom/estrongs/android/ui/b/ab;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->d:Lcom/estrongs/android/ui/b/ab;
+
+    return-object v0
+.end method
+
+.method static synthetic k(Lcom/estrongs/android/ui/b/u;)Landroid/app/Activity;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->ag:Landroid/app/Activity;
+
+    return-object v0
+.end method
+
+.method static synthetic l(Lcom/estrongs/android/ui/b/u;)Landroid/app/Activity;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->ag:Landroid/app/Activity;
+
+    return-object v0
+.end method
+
+.method static synthetic m(Lcom/estrongs/android/ui/b/u;)Landroid/app/Activity;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->ag:Landroid/app/Activity;
+
+    return-object v0
+.end method
+
+.method static synthetic n(Lcom/estrongs/android/ui/b/u;)Lcom/estrongs/android/view/ck;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->i:Lcom/estrongs/android/view/ck;
+
+    return-object v0
+.end method
+
+.method static synthetic o(Lcom/estrongs/android/ui/b/u;)Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/estrongs/android/ui/b/u;->x:Z
+
+    return v0
+.end method
+
+.method static synthetic p(Lcom/estrongs/android/ui/b/u;)V
+    .locals 0
+
+    invoke-virtual {p0}, Lcom/estrongs/android/ui/b/u;->n_()V
+
+    return-void
+.end method
+
+.method static synthetic q(Lcom/estrongs/android/ui/b/u;)V
+    .locals 0
+
+    invoke-virtual {p0}, Lcom/estrongs/android/ui/b/u;->U()V
+
+    return-void
+.end method
+
+.method static synthetic r(Lcom/estrongs/android/ui/b/u;)Landroid/os/Handler;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->W:Landroid/os/Handler;
+
+    return-object v0
+.end method
+
+.method private s()V
     .locals 4
 
     iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->b:Lcom/estrongs/a/l;
@@ -170,7 +234,7 @@
 
     check-cast v0, Lcom/estrongs/a/a;
 
-    instance-of v2, v0, Lcom/estrongs/fs/b/ap;
+    instance-of v2, v0, Lcom/estrongs/fs/b/ar;
 
     if-eqz v2, :cond_0
 
@@ -212,7 +276,7 @@
     return-void
 .end method
 
-.method private q()V
+.method private t()V
     .locals 4
 
     iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->b:Lcom/estrongs/a/l;
@@ -247,7 +311,7 @@
 
     if-ne v2, v3, :cond_0
 
-    instance-of v2, v0, Lcom/estrongs/fs/b/ap;
+    instance-of v2, v0, Lcom/estrongs/fs/b/ar;
 
     if-eqz v2, :cond_0
 
@@ -259,7 +323,7 @@
     return-void
 .end method
 
-.method private r()I
+.method private u()I
     .locals 4
 
     iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->b:Lcom/estrongs/a/l;
@@ -302,7 +366,7 @@
     :cond_0
     iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->a:Ljava/util/List;
 
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/b/u;->b(Ljava/util/List;)V
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/b/u;->a_(Ljava/util/List;)V
 
     iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->a:Ljava/util/List;
 
@@ -361,13 +425,13 @@
 .method public a(Ljava/lang/String;Lcom/estrongs/android/util/TypedMap;)V
     .locals 1
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/b/u;->v:Ljava/lang/String;
+    iput-object p1, p0, Lcom/estrongs/android/ui/b/u;->C:Ljava/lang/String;
 
-    new-instance v0, Lcom/estrongs/fs/n;
+    new-instance v0, Lcom/estrongs/fs/x;
 
-    invoke-direct {v0, p1}, Lcom/estrongs/fs/n;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lcom/estrongs/fs/x;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/b/u;->w:Lcom/estrongs/fs/h;
+    iput-object v0, p0, Lcom/estrongs/android/ui/b/u;->D:Lcom/estrongs/fs/h;
 
     const/4 v0, 0x1
 
@@ -376,26 +440,20 @@
     return-void
 .end method
 
-.method public a_()V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/estrongs/android/ui/b/u;->q()V
-
-    invoke-super {p0}, Lcom/estrongs/android/view/aw;->a_()V
-
-    return-void
-.end method
-
 .method public b(Z)V
     .locals 1
 
-    invoke-direct {p0}, Lcom/estrongs/android/ui/b/u;->r()I
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/estrongs/android/ui/b/u;->x:Z
+
+    invoke-direct {p0}, Lcom/estrongs/android/ui/b/u;->u()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f0b0389
+    const v0, 0x7f080463
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/b/u;->f(I)V
 
@@ -403,18 +461,10 @@
     return-void
 .end method
 
-.method public b_()V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/estrongs/android/ui/b/u;->q()V
-
-    return-void
-.end method
-
 .method public c()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->v:Ljava/lang/String;
+    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->C:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -432,43 +482,45 @@
 .method protected i()V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->g:Lcom/estrongs/android/widget/HeaderGridView;
+    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->g:Landroid/support/v7/widget/GridLayoutManager;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/HeaderGridView;->setNumColumns(I)V
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/GridLayoutManager;->setSpanCount(I)V
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->g:Lcom/estrongs/android/widget/HeaderGridView;
+    new-instance v0, Lcom/estrongs/android/ui/b/v;
 
-    const v1, 0x7f020038
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/b/v;-><init>(Lcom/estrongs/android/ui/b/u;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/HeaderGridView;->setSelector(I)V
+    iput-object v0, p0, Lcom/estrongs/android/ui/b/u;->i:Lcom/estrongs/android/view/ck;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->g:Lcom/estrongs/android/widget/HeaderGridView;
+    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->h:Landroid/support/v7/widget/RecyclerView;
 
-    const/4 v1, 0x0
+    iget-object v1, p0, Lcom/estrongs/android/ui/b/u;->i:Lcom/estrongs/android/view/ck;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/HeaderGridView;->setCacheColorHint(I)V
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/RecyclerView;->setAdapter(Landroid/support/v7/widget/RecyclerView$Adapter;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->g:Lcom/estrongs/android/widget/HeaderGridView;
+    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->i:Lcom/estrongs/android/view/ck;
 
-    new-instance v1, Lcom/estrongs/android/ui/b/v;
+    new-instance v1, Lcom/estrongs/android/ui/b/aa;
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/b/v;-><init>(Lcom/estrongs/android/ui/b/u;)V
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/b/aa;-><init>(Lcom/estrongs/android/ui/b/u;)V
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/HeaderGridView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/ck;->registerAdapterDataObserver(Landroid/support/v7/widget/RecyclerView$AdapterDataObserver;)V
 
-    new-instance v0, Lcom/estrongs/android/ui/b/w;
+    return-void
+.end method
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/b/w;-><init>(Lcom/estrongs/android/ui/b/u;)V
+.method public i_()V
+    .locals 1
 
-    iput-object v0, p0, Lcom/estrongs/android/ui/b/u;->f:Lcom/estrongs/android/widget/c;
+    invoke-direct {p0}, Lcom/estrongs/android/ui/b/u;->t()V
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->g:Lcom/estrongs/android/widget/HeaderGridView;
+    invoke-super {p0}, Lcom/estrongs/android/view/cr;->i_()V
 
-    iget-object v1, p0, Lcom/estrongs/android/ui/b/u;->f:Lcom/estrongs/android/widget/c;
+    iget-object v0, p0, Lcom/estrongs/android/ui/b/u;->ag:Landroid/app/Activity;
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/HeaderGridView;->setAdapter(Landroid/widget/ListAdapter;)V
+    invoke-static {v0}, Lcom/estrongs/android/ui/feedback/c;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -481,12 +533,20 @@
     return-object v0
 .end method
 
+.method public j_()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/estrongs/android/ui/b/u;->t()V
+
+    return-void
+.end method
+
 .method public l()V
     .locals 0
 
-    invoke-direct {p0}, Lcom/estrongs/android/ui/b/u;->p()V
+    invoke-direct {p0}, Lcom/estrongs/android/ui/b/u;->s()V
 
-    invoke-super {p0}, Lcom/estrongs/android/view/aw;->l()V
+    invoke-super {p0}, Lcom/estrongs/android/view/cr;->l()V
 
     return-void
 .end method

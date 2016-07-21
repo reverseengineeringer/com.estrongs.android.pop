@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/estrongs/android/pop/g;
+.implements Lcom/estrongs/android/pop/h;
 
 
 # instance fields
@@ -23,11 +23,17 @@
 
 # virtual methods
 .method public a()V
-    .locals 1
+    .locals 4
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/service/c;->a:Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->d(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)V
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;->d(Lcom/estrongs/android/pop/app/service/PerformanceAccelerateService;)Lcom/estrongs/android/pop/app/service/f;
+
+    move-result-object v0
+
+    const-wide/32 v2, 0xea60
+
+    invoke-virtual {v0, v2, v3}, Lcom/estrongs/android/pop/app/service/f;->a(J)V
 
     return-void
 .end method

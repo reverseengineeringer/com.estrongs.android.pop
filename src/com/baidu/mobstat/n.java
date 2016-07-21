@@ -1,116 +1,148 @@
 package com.baidu.mobstat;
 
 import android.content.Context;
-import android.util.Log;
-import com.baidu.kirin.KirinConfig;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
+import android.text.TextUtils;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class n
 {
-  public static String a = "KIRINUPDATE";
-  public static String b = "kirin_update.log";
-  private static Context c;
+  static n a = new n();
   
-  public static int a(String paramString)
+  private void a(Context paramContext, ArrayList<o> paramArrayList)
   {
-    if (KirinConfig.DEBUG_MODE) {
-      a(d(paramString), null);
-    }
-    if (KirinConfig.LOG_LEVEL <= 1) {
-      return Log.d(a, d(paramString));
-    }
-    return 0;
-  }
-  
-  public static int a(String paramString, Throwable paramThrowable)
-  {
-    if (c == null) {
-      return 0;
-    }
+    paramContext = new StringBuilder();
+    paramContext.append(System.currentTimeMillis());
+    JSONArray localJSONArray;
     try
     {
-      FileOutputStream localFileOutputStream = c.openFileOutput(b, 32768);
-      StringBuilder localStringBuilder = new StringBuilder();
-      localStringBuilder.append(new SimpleDateFormat("MM-dd hh:mm:ss.S").format(new Date())).append("\t").append(d(paramString)).append("\n").append(Log.getStackTraceString(paramThrowable));
-      paramString = localStringBuilder.toString().getBytes("UTF-8");
-      int i = paramString.length;
-      localFileOutputStream.write(paramString);
-      localFileOutputStream.close();
-      return i;
-    }
-    catch (IOException paramString)
-    {
-      return 0;
-    }
-    catch (UnsupportedEncodingException paramString)
-    {
-      return 0;
-    }
-    catch (FileNotFoundException paramString) {}
-    return 0;
-  }
-  
-  private static String a()
-  {
-    StackTraceElement[] arrayOfStackTraceElement = Thread.currentThread().getStackTrace();
-    if (arrayOfStackTraceElement == null) {
-      return null;
-    }
-    int j = arrayOfStackTraceElement.length;
-    int i = 0;
-    label18:
-    StackTraceElement localStackTraceElement;
-    if (i < j)
-    {
-      localStackTraceElement = arrayOfStackTraceElement[i];
-      if (!localStackTraceElement.isNativeMethod()) {
-        break label41;
+      localJSONArray = new JSONArray();
+      paramArrayList = paramArrayList.iterator();
+      for (;;)
+      {
+        if (paramArrayList.hasNext())
+        {
+          JSONObject localJSONObject = ((o)paramArrayList.next()).a();
+          if (localJSONObject != null)
+          {
+            localJSONArray.put(localJSONObject);
+            continue;
+            if (TextUtils.isEmpty(paramContext)) {
+              break;
+            }
+          }
+        }
       }
     }
-    label41:
-    while ((localStackTraceElement.getClassName().equals(Thread.class.getName())) || (localStackTraceElement.getClassName().equals("com.baidu.kirin.util.KirinLog")))
+    catch (Exception paramContext)
     {
-      i += 1;
-      break label18;
+      bb.b(paramContext);
+      paramContext = "";
+    }
+    for (;;)
+    {
+      x.e.a(System.currentTimeMillis(), paramContext);
+      return;
+      paramArrayList = new JSONObject();
+      paramArrayList.put("app_apk", localJSONArray);
+      paramArrayList.put("meta-data", paramContext.toString());
+      paramContext = cj.a(paramArrayList.toString().getBytes());
+    }
+  }
+  
+  private void b(Context paramContext)
+  {
+    a(paramContext, c(paramContext));
+  }
+  
+  private ArrayList<o> c(Context paramContext)
+  {
+    ArrayList localArrayList = new ArrayList();
+    Iterator localIterator = d(paramContext).iterator();
+    Object localObject;
+    String str1;
+    String str2;
+    while (localIterator.hasNext())
+    {
+      paramContext = (PackageInfo)localIterator.next();
+      localObject = applicationInfo;
+      if (localObject != null)
+      {
+        str1 = packageName;
+        str2 = versionName;
+        paramContext = signatures;
+        if ((paramContext == null) || (paramContext.length == 0)) {
+          break label147;
+        }
+      }
+    }
+    label147:
+    for (paramContext = paramContext[0].toChars().toString();; paramContext = "")
+    {
+      String str3 = cp.a(paramContext.getBytes());
+      paramContext = "";
+      localObject = sourceDir;
+      if (!TextUtils.isEmpty((CharSequence)localObject)) {
+        paramContext = cp.a(new File((String)localObject));
+      }
+      localArrayList.add(new o(str1, str2, str3, paramContext));
       break;
+      return localArrayList;
     }
-    return "[" + Thread.currentThread().getName() + "(" + Thread.currentThread().getId() + "): " + localStackTraceElement.getFileName() + ":" + localStackTraceElement.getLineNumber() + "]";
   }
   
-  public static int b(String paramString)
+  private ArrayList<PackageInfo> d(Context paramContext)
   {
-    if (KirinConfig.DEBUG_MODE) {
-      a(d(paramString), null);
+    ArrayList localArrayList = new ArrayList();
+    Object localObject = paramContext.getPackageManager();
+    if (localObject == null) {
+      return localArrayList;
     }
-    if (KirinConfig.LOG_LEVEL <= 3) {
-      return Log.w(a, d(paramString));
+    paramContext = new ArrayList(1);
+    try
+    {
+      localObject = ((PackageManager)localObject).getInstalledPackages(64);
+      paramContext = (Context)localObject;
     }
-    return 0;
+    catch (Exception localException)
+    {
+      for (;;)
+      {
+        bb.b(localException);
+      }
+    }
+    paramContext = paramContext.iterator();
+    while (paramContext.hasNext())
+    {
+      localObject = (PackageInfo)paramContext.next();
+      ApplicationInfo localApplicationInfo = applicationInfo;
+      if ((localApplicationInfo != null) && ((flags & 0x1) == 0)) {
+        localArrayList.add(localObject);
+      }
+    }
+    return localArrayList;
   }
   
-  public static int c(String paramString)
+  public void a(Context paramContext)
   {
-    if (KirinConfig.DEBUG_MODE) {
-      a(d(paramString), null);
+    try
+    {
+      b(paramContext);
+      return;
     }
-    if (KirinConfig.LOG_LEVEL <= 4) {
-      return Log.e(a, d(paramString));
+    finally
+    {
+      paramContext = finally;
+      throw paramContext;
     }
-    return 0;
-  }
-  
-  private static String d(String paramString)
-  {
-    String str = a();
-    if (str == null) {
-      return paramString;
-    }
-    return str + " - " + paramString;
   }
 }
 

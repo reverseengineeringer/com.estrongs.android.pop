@@ -27,7 +27,7 @@ class dk
     {
       try
       {
-        f.a.a = ImageCommentActivity.a(f.a, ImageCommentActivity.c(f.a));
+        f.a.a = ImageCommentActivity.a(f.a, ImageCommentActivity.b(f.a));
         localObject1 = str;
         str = f.a.a.ownerId;
         localObject2 = str;
@@ -47,7 +47,7 @@ class dk
       }
       try
       {
-        localObject1 = new URL(PhotoInfoManager.getBuddyIcon(ImageCommentActivity.c(f.a), (String)localObject2)).openConnection();
+        localObject1 = new URL(PhotoInfoManager.getBuddyIcon(ImageCommentActivity.b(f.a), (String)localObject2)).openConnection();
         ((URLConnection)localObject1).setReadTimeout(20000);
         ((URLConnection)localObject1).setConnectTimeout(60000);
         localObject1 = BitmapFactory.decodeStream(((URLConnection)localObject1).getInputStream());

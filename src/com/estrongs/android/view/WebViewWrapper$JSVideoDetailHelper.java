@@ -1,7 +1,7 @@
 package com.estrongs.android.view;
 
 import android.webkit.JavascriptInterface;
-import com.estrongs.android.util.bd;
+import com.estrongs.android.util.bk;
 
 public class WebViewWrapper$JSVideoDetailHelper
 {
@@ -10,8 +10,8 @@ public class WebViewWrapper$JSVideoDetailHelper
   @JavascriptInterface
   public void setVideoSource(String paramString)
   {
-    if (bd.b(paramString)) {
-      bd.a(new en(this, paramString));
+    if (bk.b(paramString)) {
+      bk.a(new gs(this, paramString));
     }
   }
 }

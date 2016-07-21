@@ -2,18 +2,30 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/estrongs/android/pop/app/compress/j;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/view/r;
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Ljava/util/List;
+
+.field final synthetic c:Z
+
+.field final synthetic d:Lcom/estrongs/android/view/g;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/view/r;)V
+.method constructor <init>(Lcom/estrongs/android/view/g;Ljava/lang/String;Ljava/util/List;Z)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/view/s;->a:Lcom/estrongs/android/view/r;
+    iput-object p1, p0, Lcom/estrongs/android/view/s;->d:Lcom/estrongs/android/view/g;
+
+    iput-object p2, p0, Lcom/estrongs/android/view/s;->a:Ljava/lang/String;
+
+    iput-object p3, p0, Lcom/estrongs/android/view/s;->b:Ljava/util/List;
+
+    iput-boolean p4, p0, Lcom/estrongs/android/view/s;->c:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,56 +34,114 @@
 
 
 # virtual methods
-.method public run()V
+.method public a(Lcom/estrongs/android/pop/app/compress/a;Lcom/estrongs/android/pop/app/compress/k;)V
     .locals 3
 
-    iget-object v0, p0, Lcom/estrongs/android/view/s;->a:Lcom/estrongs/android/view/r;
+    if-eqz p2, :cond_0
 
-    iget-object v0, v0, Lcom/estrongs/android/view/r;->b:Lcom/estrongs/android/view/e;
+    new-instance v0, Ljava/io/File;
 
-    invoke-static {v0}, Lcom/estrongs/android/view/e;->h(Lcom/estrongs/android/view/e;)Lcom/estrongs/android/view/t;
+    iget-object v1, p0, Lcom/estrongs/android/view/s;->a:Ljava/lang/String;
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    if-eqz v0, :cond_0
+    iget-object v1, p0, Lcom/estrongs/android/view/s;->d:Lcom/estrongs/android/view/g;
 
-    iget-object v0, p0, Lcom/estrongs/android/view/s;->a:Lcom/estrongs/android/view/r;
+    iget-boolean v2, p2, Lcom/estrongs/android/pop/app/compress/k;->c:Z
 
-    iget-object v0, v0, Lcom/estrongs/android/view/r;->b:Lcom/estrongs/android/view/e;
+    invoke-static {v1, v2}, Lcom/estrongs/android/view/g;->a(Lcom/estrongs/android/view/g;Z)Z
 
-    invoke-static {v0}, Lcom/estrongs/android/view/e;->h(Lcom/estrongs/android/view/e;)Lcom/estrongs/android/view/t;
+    iget-object v1, p0, Lcom/estrongs/android/view/s;->d:Lcom/estrongs/android/view/g;
 
-    move-result-object v0
+    iget v2, p2, Lcom/estrongs/android/pop/app/compress/k;->a:I
 
-    iget-object v1, p0, Lcom/estrongs/android/view/s;->a:Lcom/estrongs/android/view/r;
+    invoke-static {v1, v2}, Lcom/estrongs/android/view/g;->a(Lcom/estrongs/android/view/g;I)I
 
-    iget-object v1, v1, Lcom/estrongs/android/view/r;->b:Lcom/estrongs/android/view/e;
+    const/4 v1, 0x3
 
-    invoke-interface {v0, v1}, Lcom/estrongs/android/view/t;->a(Lcom/estrongs/android/view/e;)V
+    iget-object v2, p0, Lcom/estrongs/android/view/s;->d:Lcom/estrongs/android/view/g;
+
+    invoke-static {v2}, Lcom/estrongs/android/view/g;->j(Lcom/estrongs/android/view/g;)I
+
+    move-result v2
+
+    if-ne v1, v2, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/view/s;->d:Lcom/estrongs/android/view/g;
+
+    iget-object v1, p2, Lcom/estrongs/android/pop/app/compress/k;->b:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lcom/estrongs/android/view/g;->c(Lcom/estrongs/android/view/g;Ljava/lang/String;)Ljava/lang/String;
+
+    :goto_0
+    iget-object v0, p0, Lcom/estrongs/android/view/s;->d:Lcom/estrongs/android/view/g;
+
+    iget-object v1, p0, Lcom/estrongs/android/view/s;->b:Ljava/util/List;
+
+    iget-boolean v2, p0, Lcom/estrongs/android/view/s;->c:Z
+
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/view/g;->a(Lcom/estrongs/android/view/g;Ljava/util/List;Z)V
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/view/s;->a:Lcom/estrongs/android/view/r;
-
-    iget-object v0, v0, Lcom/estrongs/android/view/r;->b:Lcom/estrongs/android/view/e;
-
-    iget-object v0, v0, Lcom/estrongs/android/view/e;->H:Lcom/estrongs/android/view/cb;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/estrongs/android/view/s;->a:Lcom/estrongs/android/view/r;
-
-    iget-object v0, v0, Lcom/estrongs/android/view/r;->b:Lcom/estrongs/android/view/e;
-
-    iget-object v0, v0, Lcom/estrongs/android/view/e;->H:Lcom/estrongs/android/view/cb;
-
-    iget-object v1, p0, Lcom/estrongs/android/view/s;->a:Lcom/estrongs/android/view/r;
-
-    iget-object v1, v1, Lcom/estrongs/android/view/r;->b:Lcom/estrongs/android/view/e;
-
-    const/4 v2, 0x1
-
-    invoke-interface {v0, v1, v2}, Lcom/estrongs/android/view/cb;->a(Lcom/estrongs/android/view/aw;Z)V
+    return-void
 
     :cond_1
-    return-void
+    const/4 v1, 0x1
+
+    iget-object v2, p0, Lcom/estrongs/android/view/s;->d:Lcom/estrongs/android/view/g;
+
+    invoke-static {v2}, Lcom/estrongs/android/view/g;->j(Lcom/estrongs/android/view/g;)I
+
+    move-result v2
+
+    if-ne v1, v2, :cond_2
+
+    iget-object v1, p0, Lcom/estrongs/android/view/s;->d:Lcom/estrongs/android/view/g;
+
+    invoke-virtual {v0}, Ljava/io/File;->getParent()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcom/estrongs/android/view/g;->c(Lcom/estrongs/android/view/g;Ljava/lang/String;)Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v1, p0, Lcom/estrongs/android/view/s;->d:Lcom/estrongs/android/view/g;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0}, Ljava/io/File;->getParent()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v2, "/"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lcom/estrongs/android/view/s;->a:Ljava/lang/String;
+
+    invoke-static {v2}, Lcom/estrongs/fs/util/j;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcom/estrongs/android/view/g;->c(Lcom/estrongs/android/view/g;Ljava/lang/String;)Ljava/lang/String;
+
+    goto :goto_0
 .end method

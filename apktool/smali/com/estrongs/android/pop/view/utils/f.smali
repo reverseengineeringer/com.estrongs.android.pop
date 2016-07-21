@@ -27,11 +27,11 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/view/utils/f;->a:Landroid/app/Activity;
 
-    const v1, 0x7f0b01c6
+    const v1, 0x7f080136
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     return-void
 .end method

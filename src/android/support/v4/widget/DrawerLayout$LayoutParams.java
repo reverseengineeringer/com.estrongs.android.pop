@@ -10,9 +10,9 @@ public class DrawerLayout$LayoutParams
   extends ViewGroup.MarginLayoutParams
 {
   public int a = 0;
-  float b;
-  boolean c;
-  boolean d;
+  private float b;
+  private boolean c;
+  private int d;
   
   public DrawerLayout$LayoutParams(int paramInt1, int paramInt2)
   {

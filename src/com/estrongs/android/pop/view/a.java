@@ -17,17 +17,20 @@ import android.widget.TextView;
 import com.estrongs.android.pop.FexApplication;
 import com.estrongs.android.pop.ac;
 import com.estrongs.android.pop.ad;
-import com.estrongs.android.pop.esclasses.g;
-import com.estrongs.android.ui.dialog.cg;
+import com.estrongs.android.pop.esclasses.k;
+import com.estrongs.android.ui.dialog.ci;
 import java.text.MessageFormat;
 
 public class a
 {
-  private static int a = 0;
+  public static String a = "Market";
+  public static String b = "";
+  private static int c = 0;
+  private static String d = null;
   
   public static int a()
   {
-    return a;
+    return c;
   }
   
   public static void a(Context paramContext)
@@ -35,8 +38,10 @@ public class a
     try
     {
       paramContext = paramContext.getPackageManager().getPackageInfo(paramContext.getPackageName(), 8192);
-      if (paramContext != null) {
-        a = versionCode;
+      if (paramContext != null)
+      {
+        c = versionCode;
+        d = versionName;
       }
       return;
     }
@@ -52,7 +57,7 @@ public class a
   
   public static boolean b()
   {
-    if ((d()) || (FileExplorerActivity.e.equals("Amazon"))) {}
+    if ((d()) || (b.equals("Amazon"))) {}
     for (;;)
     {
       return true;
@@ -81,13 +86,13 @@ public class a
     if (str != null)
     {
       bool1 = bool2;
-      if (!str.equals(a + ""))
+      if (!str.equals(c + ""))
       {
         bool1 = bool2;
-        if (a != 0)
+        if (c != 0)
         {
           bool1 = true;
-          ad.a(paramContext, a + "");
+          ad.a(paramContext, c + "");
         }
       }
     }
@@ -96,38 +101,38 @@ public class a
   
   public static void c(Context paramContext)
   {
-    View localView = g.a(paramContext).inflate(2130903042, null);
-    ((TextView)localView.findViewById(2131361822)).setText(MessageFormat.format(paramContext.getString(2131428337), new Object[] { paramContext.getString(getApplicationInfolabelRes) }));
-    CheckBox localCheckBox = (CheckBox)localView.findViewById(2131361823);
-    cg localcg = new cg(paramContext);
-    localcg.setCancelable(false);
-    localcg.setTitle(paramContext.getString(2131427398));
-    localcg.setContentView(localView);
-    localcg.setSingleButton(paramContext.getString(2131427339), new b(localCheckBox, paramContext));
-    localcg.show();
+    View localView = k.a(paramContext).inflate(2130903102, null);
+    ((TextView)localView.findViewById(2131624200)).setText(MessageFormat.format(paramContext.getString(2131230963), new Object[] { paramContext.getString(getApplicationInfolabelRes) }));
+    CheckBox localCheckBox = (CheckBox)localView.findViewById(2131624323);
+    ci localci = new ci(paramContext);
+    localci.setCancelable(false);
+    localci.setTitle(paramContext.getString(2131231714));
+    localci.setContentView(localView);
+    localci.setSingleButton(paramContext.getString(2131231270), new b(localCheckBox, paramContext));
+    localci.show();
   }
   
   /* Error */
   public static byte[] c()
   {
     // Byte code:
-    //   0: invokestatic 191	com/estrongs/android/nativetool/c:a	()Landroid/net/LocalSocket;
+    //   0: invokestatic 197	com/estrongs/android/nativetool/c:a	()Landroid/net/LocalSocket;
     //   3: astore 4
     //   5: aload 4
     //   7: ifnonnull +5 -> 12
     //   10: aconst_null
     //   11: areturn
     //   12: aload 4
-    //   14: invokevirtual 197	android/net/LocalSocket:getInputStream	()Ljava/io/InputStream;
+    //   14: invokevirtual 203	android/net/LocalSocket:getInputStream	()Ljava/io/InputStream;
     //   17: astore_0
     //   18: aload 4
-    //   20: invokevirtual 201	android/net/LocalSocket:getOutputStream	()Ljava/io/OutputStream;
+    //   20: invokevirtual 207	android/net/LocalSocket:getOutputStream	()Ljava/io/OutputStream;
     //   23: astore_1
     //   24: aload_1
     //   25: sipush 10002
-    //   28: invokestatic 206	com/estrongs/fs/impl/local/l:a	(Ljava/io/OutputStream;I)V
+    //   28: invokestatic 212	com/estrongs/fs/impl/local/m:a	(Ljava/io/OutputStream;I)V
     //   31: aload_0
-    //   32: invokestatic 209	com/estrongs/fs/impl/local/l:b	(Ljava/io/InputStream;)[B
+    //   32: invokestatic 215	com/estrongs/fs/impl/local/m:b	(Ljava/io/InputStream;)[B
     //   35: astore_2
     //   36: aload_2
     //   37: areturn
@@ -139,13 +144,13 @@ public class a
     //   43: aload_0
     //   44: ifnull +7 -> 51
     //   47: aload_0
-    //   48: invokevirtual 214	java/io/InputStream:close	()V
+    //   48: invokevirtual 220	java/io/InputStream:close	()V
     //   51: aload_1
     //   52: ifnull +7 -> 59
     //   55: aload_1
-    //   56: invokevirtual 217	java/io/OutputStream:close	()V
+    //   56: invokevirtual 223	java/io/OutputStream:close	()V
     //   59: aload 4
-    //   61: invokevirtual 218	android/net/LocalSocket:close	()V
+    //   61: invokevirtual 224	android/net/LocalSocket:close	()V
     //   64: aconst_null
     //   65: areturn
     //   66: astore_0
@@ -159,13 +164,13 @@ public class a
     //   74: aload_2
     //   75: ifnull +7 -> 82
     //   78: aload_2
-    //   79: invokevirtual 214	java/io/InputStream:close	()V
+    //   79: invokevirtual 220	java/io/InputStream:close	()V
     //   82: aload_1
     //   83: ifnull +7 -> 90
     //   86: aload_1
-    //   87: invokevirtual 217	java/io/OutputStream:close	()V
+    //   87: invokevirtual 223	java/io/OutputStream:close	()V
     //   90: aload 4
-    //   92: invokevirtual 218	android/net/LocalSocket:close	()V
+    //   92: invokevirtual 224	android/net/LocalSocket:close	()V
     //   95: aload_0
     //   96: athrow
     //   97: astore_0

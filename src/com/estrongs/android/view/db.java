@@ -1,16 +1,37 @@
 package com.estrongs.android.view;
 
-import com.estrongs.fs.h;
-import java.util.List;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.pop.app.f.f;
+import com.estrongs.android.pop.view.FileExplorerActivity;
+import com.estrongs.android.util.ap;
 
 class db
-  implements av<h>
+  implements View.OnClickListener
 {
-  db(cq paramcq, av paramav) {}
+  db(cr paramcr) {}
   
-  public void a(List<h> paramList)
+  public void onClick(View paramView)
   {
-    a.a(b.w());
+    if ((a.ag != null) && ((a.ag instanceof FileExplorerActivity)))
+    {
+      paramView = (FileExplorerActivity)a.ag;
+      if (ap.br(a.C))
+      {
+        if (!ap.bg(a.C)) {
+          break label66;
+        }
+        paramView.Z();
+      }
+    }
+    return;
+    label66:
+    if ((ap.J(a.C)) || (ap.S(a.C)) || (ap.cj(a.C)) || (ap.M(a.C)))
+    {
+      paramView.a(f.a(a.C));
+      return;
+    }
+    paramView.a(2131232313);
   }
 }
 

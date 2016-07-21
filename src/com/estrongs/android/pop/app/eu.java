@@ -1,29 +1,24 @@
 package com.estrongs.android.pop.app;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.WindowManager.BadTokenException;
-import com.estrongs.android.ui.f.e;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import com.estrongs.android.ui.dialog.er;
 
 class eu
-  implements View.OnClickListener
+  implements MenuItem.OnMenuItemClickListener
 {
   eu(PopAudioPlayer paramPopAudioPlayer) {}
   
-  public void onClick(View paramView)
+  public boolean onMenuItemClick(MenuItem paramMenuItem)
   {
-    if (PopAudioPlayer.j(a)) {}
-    paramView = e.a(paramView, a.getString(2131427950), 0, a.t(), false);
-    paramView.a(new ev(this, paramView));
-    try
+    paramMenuItem = a.v();
+    if (paramMenuItem != null)
     {
-      paramView.c();
-      return;
+      er localer = new er(a, a.getString(2131231048), "");
+      localer.a(new ev(this, paramMenuItem));
+      localer.show();
     }
-    catch (WindowManager.BadTokenException paramView)
-    {
-      paramView.printStackTrace();
-    }
+    return false;
   }
 }
 

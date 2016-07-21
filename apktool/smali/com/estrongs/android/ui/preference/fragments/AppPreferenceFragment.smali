@@ -1,5 +1,5 @@
 .class public Lcom/estrongs/android/ui/preference/fragments/AppPreferenceFragment;
-.super Lcom/estrongs/android/pop/esclasses/i;
+.super Lcom/estrongs/android/pop/esclasses/m;
 
 
 # annotations
@@ -24,7 +24,7 @@
 .method public constructor <init>()V
     .locals 1
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/i;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/m;-><init>()V
 
     const/4 v0, 0x0
 
@@ -60,11 +60,11 @@
 
     sget-boolean v0, Lcom/estrongs/android/pop/z;->j:Z
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/AppPreferenceFragment;->a:Lcom/estrongs/android/pop/ad;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->x()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->y()Ljava/lang/String;
 
     move-result-object v1
 
@@ -94,13 +94,28 @@
 
     invoke-virtual {v0, v1}, Landroid/preference/EditTextPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
+    const-string v0, "auto_check_list"
+
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/preference/fragments/AppPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/b;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/b;-><init>(Lcom/estrongs/android/ui/preference/fragments/AppPreferenceFragment;)V
+
+    invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
+
+    :cond_0
     iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/AppPreferenceFragment;->a:Lcom/estrongs/android/pop/ad;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->j()Z
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/ad;->k()Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     const-string v0, "backup_app_cache"
 
@@ -118,12 +133,12 @@
 
     invoke-virtual {v0, v2}, Landroid/preference/Preference;->setEnabled(Z)V
 
-    :cond_0
-    invoke-static {}, Lcom/estrongs/android/pop/utils/cc;->a()Z
+    :cond_1
+    invoke-static {}, Lcom/estrongs/android/pop/utils/cl;->a()Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     :try_start_0
     const-string v0, "app_pref_app"
@@ -144,7 +159,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_1
+    :cond_2
     :goto_0
     return-void
 
@@ -155,7 +170,7 @@
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     const-string v0, "preference_tools_settings"
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/preference/fragments/AppPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
@@ -172,9 +187,9 @@
 
     check-cast v1, Landroid/preference/PreferenceScreen;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
 
@@ -200,47 +215,47 @@
 .method private b()V
     .locals 3
 
-    new-instance v0, Lcom/estrongs/android/ui/dialog/ct;
+    new-instance v0, Lcom/estrongs/android/ui/dialog/cv;
 
     invoke-virtual {p0}, Lcom/estrongs/android/ui/preference/fragments/AppPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0b0047
+    const v1, 0x7f0803e7
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->a(I)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    const v1, 0x7f0b01b2
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->b(I)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->a(I)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    const v1, 0x7f0b000d
+    const v1, 0x7f0804ac
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->b(I)Lcom/estrongs/android/ui/dialog/cv;
+
+    move-result-object v0
+
+    const v1, 0x7f080229
+
+    new-instance v2, Lcom/estrongs/android/ui/preference/fragments/d;
+
+    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/preference/fragments/d;-><init>(Lcom/estrongs/android/ui/preference/fragments/AppPreferenceFragment;)V
+
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
+
+    move-result-object v0
+
+    const v1, 0x7f080225
 
     new-instance v2, Lcom/estrongs/android/ui/preference/fragments/c;
 
     invoke-direct {v2, p0}, Lcom/estrongs/android/ui/preference/fragments/c;-><init>(Lcom/estrongs/android/ui/preference/fragments/AppPreferenceFragment;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/cv;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/cv;
 
     move-result-object v0
 
-    const v1, 0x7f0b000e
-
-    new-instance v2, Lcom/estrongs/android/ui/preference/fragments/b;
-
-    invoke-direct {v2, p0}, Lcom/estrongs/android/ui/preference/fragments/b;-><init>(Lcom/estrongs/android/ui/preference/fragments/AppPreferenceFragment;)V
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/dialog/ct;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ct;->c()Lcom/estrongs/android/ui/dialog/cg;
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cv;->c()Lcom/estrongs/android/ui/dialog/ci;
 
     return-void
 .end method
@@ -320,11 +335,11 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b01b3
+    const v1, 0x7f0804ab
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     goto :goto_0
 .end method
@@ -342,7 +357,7 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 1
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/i;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/m;->onCreate(Landroid/os/Bundle;)V
 
     const v0, 0x7f050008
 

@@ -1,14 +1,23 @@
 package com.estrongs.android.view;
 
-import android.content.Context;
-import com.estrongs.android.widget.bw;
+import com.estrongs.android.pop.app.compress.az;
 
 class i
-  extends bw
+  implements az
 {
-  i(e parame, Context paramContext)
+  i(g paramg) {}
+  
+  public void a()
   {
-    super(paramContext);
+    a.c = true;
+  }
+  
+  public void b()
+  {
+    a.c = false;
+    if (a.al()) {
+      a.q();
+    }
   }
 }
 

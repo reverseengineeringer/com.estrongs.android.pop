@@ -1,63 +1,116 @@
 package android.support.v4.view;
 
-import android.os.Bundle;
+import android.database.DataSetObservable;
+import android.database.DataSetObserver;
+import android.os.Parcelable;
 import android.view.View;
-import android.view.accessibility.AccessibilityEvent;
+import android.view.ViewGroup;
 
-class bw
-  extends a
+public abstract class bw
 {
-  bw(ViewPager paramViewPager) {}
+  public static final int POSITION_NONE = -2;
+  public static final int POSITION_UNCHANGED = -1;
+  private final DataSetObservable mObservable = new DataSetObservable();
+  private DataSetObserver mViewPagerObserver;
   
-  public void a(View paramView, android.support.v4.view.a.a parama)
+  public void destroyItem(View paramView, int paramInt, Object paramObject)
   {
-    boolean bool = true;
-    super.a(paramView, parama);
-    parama.b(ViewPager.class.getName());
-    if ((ViewPager.a(b) != null) && (ViewPager.a(b).a() > 1)) {}
-    for (;;)
+    throw new UnsupportedOperationException("Required method destroyItem was not overridden");
+  }
+  
+  public void destroyItem(ViewGroup paramViewGroup, int paramInt, Object paramObject)
+  {
+    destroyItem(paramViewGroup, paramInt, paramObject);
+  }
+  
+  public void finishUpdate(View paramView) {}
+  
+  public void finishUpdate(ViewGroup paramViewGroup)
+  {
+    finishUpdate(paramViewGroup);
+  }
+  
+  public abstract int getCount();
+  
+  public int getItemPosition(Object paramObject)
+  {
+    return -1;
+  }
+  
+  public CharSequence getPageTitle(int paramInt)
+  {
+    return null;
+  }
+  
+  public float getPageWidth(int paramInt)
+  {
+    return 1.0F;
+  }
+  
+  public Object instantiateItem(View paramView, int paramInt)
+  {
+    throw new UnsupportedOperationException("Required method instantiateItem was not overridden");
+  }
+  
+  public Object instantiateItem(ViewGroup paramViewGroup, int paramInt)
+  {
+    return instantiateItem(paramViewGroup, paramInt);
+  }
+  
+  public abstract boolean isViewFromObject(View paramView, Object paramObject);
+  
+  public void notifyDataSetChanged()
+  {
+    try
     {
-      parama.i(bool);
-      if ((ViewPager.a(b) != null) && (ViewPager.b(b) >= 0) && (ViewPager.b(b) < ViewPager.a(b).a() - 1)) {
-        parama.a(4096);
+      if (mViewPagerObserver != null) {
+        mViewPagerObserver.onChanged();
       }
-      if ((ViewPager.a(b) != null) && (ViewPager.b(b) > 0) && (ViewPager.b(b) < ViewPager.a(b).a())) {
-        parama.a(8192);
-      }
+      mObservable.notifyChanged();
       return;
-      bool = false;
     }
+    finally {}
   }
   
-  public boolean a(View paramView, int paramInt, Bundle paramBundle)
+  public void registerDataSetObserver(DataSetObserver paramDataSetObserver)
   {
-    if (super.a(paramView, paramInt, paramBundle)) {
-      return true;
-    }
-    switch (paramInt)
-    {
-    default: 
-      return false;
-    case 4096: 
-      if ((ViewPager.a(b) != null) && (ViewPager.b(b) >= 0) && (ViewPager.b(b) < ViewPager.a(b).a() - 1))
-      {
-        b.a(ViewPager.b(b) + 1);
-        return true;
-      }
-      return false;
-    }
-    if ((ViewPager.a(b) != null) && (ViewPager.b(b) > 0) && (ViewPager.b(b) < ViewPager.a(b).a()))
-    {
-      b.a(ViewPager.b(b) - 1);
-      return true;
-    }
-    return false;
+    mObservable.registerObserver(paramDataSetObserver);
   }
   
-  public void d(View paramView, AccessibilityEvent paramAccessibilityEvent)
+  public void restoreState(Parcelable paramParcelable, ClassLoader paramClassLoader) {}
+  
+  public Parcelable saveState()
   {
-    super.d(paramView, paramAccessibilityEvent);
-    paramAccessibilityEvent.setClassName(ViewPager.class.getName());
+    return null;
+  }
+  
+  public void setPrimaryItem(View paramView, int paramInt, Object paramObject) {}
+  
+  public void setPrimaryItem(ViewGroup paramViewGroup, int paramInt, Object paramObject)
+  {
+    setPrimaryItem(paramViewGroup, paramInt, paramObject);
+  }
+  
+  void setViewPagerObserver(DataSetObserver paramDataSetObserver)
+  {
+    try
+    {
+      mViewPagerObserver = paramDataSetObserver;
+      return;
+    }
+    finally {}
+  }
+  
+  public void startUpdate(View paramView) {}
+  
+  public void startUpdate(ViewGroup paramViewGroup)
+  {
+    startUpdate(paramViewGroup);
+  }
+  
+  public void unregisterDataSetObserver(DataSetObserver paramDataSetObserver)
+  {
+    mObservable.unregisterObserver(paramDataSetObserver);
   }
 }
 

@@ -6,7 +6,7 @@ import android.content.DialogInterface.OnClickListener;
 class et
   implements DialogInterface.OnClickListener
 {
-  et(es parames) {}
+  et(er paramer) {}
   
   public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {

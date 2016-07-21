@@ -1,21 +1,13 @@
 package com.estrongs.android.pop.view;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.estrongs.android.ui.e.w;
-import com.estrongs.android.ui.view.by;
-
 class dc
-  implements View.OnClickListener
+  implements Runnable
 {
   dc(FileExplorerActivity paramFileExplorerActivity) {}
   
-  public void onClick(View paramView)
+  public void run()
   {
-    a.i.a(true);
-    if ("edit_mode".equals(a.j)) {
-      a.k.m();
-    }
+    a.z();
   }
 }
 

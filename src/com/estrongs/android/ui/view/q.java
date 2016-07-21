@@ -1,6 +1,6 @@
 package com.estrongs.android.ui.view;
 
-import com.estrongs.android.view.eb;
+import com.estrongs.android.view.gg;
 
 class q
   implements Runnable

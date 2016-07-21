@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -22,55 +22,36 @@
 
 
 # virtual methods
-.method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
-
-    invoke-virtual {p1}, Landroid/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/estrongs/android/ui/a/d;
-
-    invoke-virtual {v0, p3}, Lcom/estrongs/android/ui/a/d;->a(I)Ljava/lang/String;
-
-    invoke-virtual {v0, p3}, Lcom/estrongs/android/ui/a/d;->b(I)I
-
-    invoke-virtual {v0, p3}, Lcom/estrongs/android/ui/a/d;->c(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Landroid/content/Intent;
-
-    iget-object v2, p0, Lcom/estrongs/android/ui/dialog/fr;->a:Lcom/estrongs/android/ui/dialog/fq;
-
-    iget-object v2, v2, Lcom/estrongs/android/ui/dialog/fq;->mContext:Landroid/content/Context;
-
-    const-class v3, Lcom/estrongs/android/ui/view/CreateOAuthServiceProvider;
-
-    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v2, "nettype"
-
-    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+.method public run()V
+    .locals 3
 
     iget-object v0, p0, Lcom/estrongs/android/ui/dialog/fr;->a:Lcom/estrongs/android/ui/dialog/fq;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/fq;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/fq;->f:Lcom/estrongs/android/ui/dialog/fk;
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/fk;->d(Lcom/estrongs/android/ui/dialog/fk;)Landroid/content/Context;
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/fr;->a:Lcom/estrongs/android/ui/dialog/fq;
+    move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/fq;->dismiss()V
+    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/fr;->a:Lcom/estrongs/android/ui/dialog/fq;
+
+    iget-object v1, v1, Lcom/estrongs/android/ui/dialog/fq;->f:Lcom/estrongs/android/ui/dialog/fk;
+
+    invoke-static {v1}, Lcom/estrongs/android/ui/dialog/fk;->d(Lcom/estrongs/android/ui/dialog/fk;)Landroid/content/Context;
+
+    move-result-object v1
+
+    const v2, 0x7f0803e8
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    invoke-static {v0, v1, v2}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)V
+
+    invoke-static {}, Lcom/estrongs/android/d/u;->a()V
 
     return-void
 .end method

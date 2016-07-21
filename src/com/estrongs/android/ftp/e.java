@@ -2,6 +2,7 @@ package com.estrongs.android.ftp;
 
 import android.os.Handler;
 import android.os.Message;
+import com.estrongs.android.pop.esclasses.i;
 import com.estrongs.fs.util.j;
 import java.net.InetAddress;
 
@@ -38,10 +39,10 @@ class e
         paramMessage = (Message)localObject;
         if (locala != null)
         {
-          localObject = com.estrongs.android.pop.esclasses.e.b(2131427645);
+          localObject = i.b(2131232064);
           paramMessage = (Message)localObject;
           if (localObject == null) {
-            paramMessage = (String)a.getText(2131427645);
+            paramMessage = (String)a.getText(2131232064);
           }
           paramMessage = paramMessage + "ftp:/" + locala.g().toString() + ":" + locala.h() + "/";
         }
@@ -63,26 +64,26 @@ class e
         }
         i = 2;
         break label51;
-        paramMessage = ESFtpService.b(a, 2131427657) + "...";
+        paramMessage = ESFtpService.b(a, 2131231865) + "...";
         continue;
-        paramMessage = ESFtpService.b(a, 2131427658) + "...";
+        paramMessage = ESFtpService.b(a, 2131231866) + "...";
       }
       localObject = j.c(arg1) + "/s";
       paramMessage = j.c(arg2) + "/s";
       if (ESFtpService.a(a) == 1)
       {
-        a.a(ESFtpService.a(a), ESFtpService.b(a, 2131427458) + ": " + (String)localObject);
+        a.a(ESFtpService.a(a), ESFtpService.b(a, 2131232179) + ": " + (String)localObject);
         break;
       }
       if (ESFtpService.a(a) == 2)
       {
-        a.a(ESFtpService.a(a), ESFtpService.b(a, 2131427659) + ": " + paramMessage);
+        a.a(ESFtpService.a(a), ESFtpService.b(a, 2131231867) + ": " + paramMessage);
         break;
       }
       if (ESFtpService.a(a) != 3) {
         break;
       }
-      a.a(ESFtpService.a(a), ESFtpService.b(a, 2131427661) + ": " + (String)localObject + ", " + ESFtpService.b(a, 2131427660) + ": " + paramMessage);
+      a.a(ESFtpService.a(a), ESFtpService.b(a, 2131231864) + ": " + (String)localObject + ", " + ESFtpService.b(a, 2131231868) + ": " + paramMessage);
       break;
       label539:
       i = 0;

@@ -1,17 +1,20 @@
 package com.estrongs.android.pop.app.compress;
 
-import com.estrongs.android.view.e;
-import java.io.File;
+import java.util.List;
 
-class ba
-  implements Runnable
+public class ba
 {
-  ba(ay paramay) {}
+  public String a;
+  public String b = null;
+  public String c;
+  public String d;
+  public List<String> e;
+  public boolean f = false;
+  public int g;
   
-  public void run()
+  public String toString()
   {
-    File localFile = aw.e(a.a).q();
-    aw.e(a.a).a(new bb(this, localFile));
+    return "ExtractToBean{maArchiveFile='" + a + '\'' + ", mCharset='" + b + '\'' + ", mOutputPath='" + c + '\'' + ", mPassword='" + d + '\'' + ", mFilesSelected=" + e + ", isReload=" + f + ", mOutputPathType=" + g + '}';
   }
 }
 

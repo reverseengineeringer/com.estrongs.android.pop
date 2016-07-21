@@ -11,11 +11,12 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.estrongs.android.pop.esclasses.g;
+import com.estrongs.android.pop.esclasses.k;
 import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.d.a;
-import com.estrongs.android.ui.d.d;
-import com.estrongs.android.ui.d.e;
+import com.estrongs.android.ui.d.g;
+import com.estrongs.android.ui.d.h;
+import com.estrongs.android.ui.d.i;
+import com.estrongs.android.ui.theme.at;
 
 public class PopMultiWindowGrid
   extends LinearLayout
@@ -25,7 +26,8 @@ public class PopMultiWindowGrid
   private TextView c;
   private ImageView d;
   private Handler e;
-  private int f;
+  private ImageView f;
+  private int g;
   
   public PopMultiWindowGrid(Context paramContext)
   {
@@ -51,13 +53,15 @@ public class PopMultiWindowGrid
   
   private void a()
   {
-    View localView = g.a(a).inflate(2130903138, null);
+    View localView = k.a(a).inflate(2130903246, null);
     addView(localView);
-    b = ((ImageView)localView.findViewById(2131362348));
-    c = ((TextView)localView.findViewById(2131362350));
-    d = ((ImageView)localView.findViewById(2131362349));
+    b = ((ImageView)localView.findViewById(2131624955));
+    c = ((TextView)localView.findViewById(2131624958));
+    f = ((ImageView)localView.findViewById(2131624957));
+    if (at.a(a).p()) {}
+    d = ((ImageView)localView.findViewById(2131624956));
     b.setFocusable(true);
-    b.setOnFocusChangeListener(new bq(this));
+    b.setOnFocusChangeListener(new bz(this));
   }
   
   private void a(int paramInt1, int paramInt2)
@@ -72,50 +76,50 @@ public class PopMultiWindowGrid
   
   public void a(int paramInt)
   {
-    f = paramInt;
+    FileExplorerActivity localFileExplorerActivity = FileExplorerActivity.X();
+    paramInt = localFileExplorerActivity.au().c();
+    if (g >= paramInt) {
+      return;
+    }
+    h localh = localFileExplorerActivity.au().c(g);
+    if (localFileExplorerActivity != null)
+    {
+      Bitmap localBitmap = localFileExplorerActivity.i(g);
+      if (localBitmap != null) {
+        b.setImageBitmap(localBitmap);
+      }
+    }
+    c.setText(localh.b(a));
+    paramInt = g.a(a, 6.0F);
+    if (g != localFileExplorerActivity.au().a())
+    {
+      b.setPadding(paramInt, paramInt, paramInt, paramInt);
+      f.setVisibility(8);
+    }
+    for (;;)
+    {
+      b.setOnClickListener(new ca(this));
+      b.setOnTouchListener(new cb(this));
+      if ((localFileExplorerActivity.au().c() <= 1) || (localh.a().equals("#home_page#"))) {
+        break;
+      }
+      d.setVisibility(0);
+      d.setOnClickListener(new cc(this));
+      return;
+      b.setPadding(paramInt, paramInt, paramInt, paramInt);
+      f.setVisibility(0);
+    }
+    d.setVisibility(4);
   }
   
-  public void a(Handler paramHandler)
+  public void setHandler(Handler paramHandler)
   {
     e = paramHandler;
   }
   
-  public void b(int paramInt)
+  public void setPosition(int paramInt)
   {
-    Object localObject = FileExplorerActivity.J();
-    paramInt = e.c();
-    if (f >= paramInt) {
-      return;
-    }
-    d locald = e.c(f);
-    if (localObject != null)
-    {
-      localObject = ((FileExplorerActivity)localObject).i(f);
-      if (localObject != null) {
-        b.setImageBitmap((Bitmap)localObject);
-      }
-    }
-    c.setText(locald.b(a));
-    paramInt = a.a(a, 4.0F);
-    if (f != e.a())
-    {
-      b.setBackgroundResource(2130837568);
-      b.setPadding(paramInt, paramInt, paramInt, paramInt);
-    }
-    for (;;)
-    {
-      b.setOnClickListener(new br(this));
-      b.setOnTouchListener(new bs(this));
-      if (e.c() <= 1) {
-        break;
-      }
-      d.setVisibility(0);
-      d.setOnClickListener(new bt(this));
-      return;
-      b.setBackgroundResource(2130837863);
-      b.setPadding(paramInt, paramInt, paramInt, paramInt);
-    }
-    d.setVisibility(4);
+    g = paramInt;
   }
 }
 

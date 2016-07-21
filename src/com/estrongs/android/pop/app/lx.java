@@ -1,40 +1,21 @@
 package com.estrongs.android.pop.app;
 
-import android.os.Handler;
-import com.estrongs.fs.c;
-import com.estrongs.fs.d;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.a.a.c;
+import java.util.Map;
 
 class lx
-  extends Thread
+  implements DialogInterface.OnClickListener
 {
-  lx(StreamingMediaPlayer paramStreamingMediaPlayer) {}
+  lx(ShowDialogActivity paramShowDialogActivity, c paramc, com.estrongs.a.a parama) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    long l1 = -1L;
-    Object localObject = null;
-    try
-    {
-      c localc = StreamingMediaPlayer.k(a).c(StreamingMediaPlayer.j(a));
-      localObject = localc;
-      long l2 = e;
-      l1 = l2;
-      localObject = localc;
-    }
-    catch (Exception localException)
-    {
-      for (;;)
-      {
-        localException.printStackTrace();
-      }
-      StreamingMediaPlayer.a(a, l1);
-      StreamingMediaPlayer.a(a, StreamingMediaPlayer.j(a), l1);
-    }
-    if (localObject == null)
-    {
-      StreamingMediaPlayer.i(a).post(new ly(this));
-      return;
-    }
+    com.estrongs.android.d.a.a.remove(Long.valueOf(ShowDialogActivity.a(c)));
+    a.d = true;
+    b.sendMessage(5, new Object[] { a });
+    paramDialogInterface.dismiss();
   }
 }
 

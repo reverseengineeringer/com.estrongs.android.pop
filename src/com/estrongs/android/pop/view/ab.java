@@ -1,13 +1,15 @@
 package com.estrongs.android.pop.view;
 
+import com.estrongs.android.view.cr;
+
 class ab
   implements Runnable
 {
-  ab(FileExplorerActivity paramFileExplorerActivity) {}
+  ab(aa paramaa, cr paramcr) {}
   
   public void run()
   {
-    a.d("du://");
+    a.g();
   }
 }
 

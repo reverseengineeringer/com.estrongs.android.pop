@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/dialog/hd;
+.field final synthetic a:I
+
+.field final synthetic b:Lcom/estrongs/android/ui/dialog/hc;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/hd;)V
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/hc;I)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/he;->a:Lcom/estrongs/android/ui/dialog/hd;
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/he;->b:Lcom/estrongs/android/ui/dialog/hc;
+
+    iput p2, p0, Lcom/estrongs/android/ui/dialog/he;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,24 +26,22 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 1
+.method public onClick(Landroid/view/View;)V
+    .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/he;->a:Lcom/estrongs/android/ui/dialog/hd;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/he;->b:Lcom/estrongs/android/ui/dialog/hc;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/hd;->a:Lcom/estrongs/android/ui/dialog/cg;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->isShowing()Z
-
-    move-result v0
+    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/hc;->b:Lcom/estrongs/android/ui/dialog/hb;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/he;->a:Lcom/estrongs/android/ui/dialog/hd;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/he;->b:Lcom/estrongs/android/ui/dialog/hc;
 
-    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/hd;->a:Lcom/estrongs/android/ui/dialog/cg;
+    iget-object v0, v0, Lcom/estrongs/android/ui/dialog/hc;->b:Lcom/estrongs/android/ui/dialog/hb;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->dismiss()V
+    iget v1, p0, Lcom/estrongs/android/ui/dialog/he;->a:I
+
+    invoke-interface {v0, v1}, Lcom/estrongs/android/ui/dialog/hb;->a(I)V
 
     :cond_0
     return-void

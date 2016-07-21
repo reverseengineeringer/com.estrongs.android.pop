@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/u;->a:Lcom/estrongs/android/pop/app/compress/l;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/l;->b(Lcom/estrongs/android/pop/app/compress/l;)Lcom/estrongs/io/archive/h;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/l;->b(Lcom/estrongs/android/pop/app/compress/l;)Lcom/estrongs/io/archive/i;
 
     move-result-object v0
 
@@ -35,11 +35,11 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/u;->a:Lcom/estrongs/android/pop/app/compress/l;
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/l;->b(Lcom/estrongs/android/pop/app/compress/l;)Lcom/estrongs/io/archive/h;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/compress/l;->b(Lcom/estrongs/android/pop/app/compress/l;)Lcom/estrongs/io/archive/i;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/estrongs/io/archive/h;->d()V
+    invoke-virtual {v0}, Lcom/estrongs/io/archive/i;->d()V
 
     :cond_0
     iget-object v0, p0, Lcom/estrongs/android/pop/app/compress/u;->a:Lcom/estrongs/android/pop/app/compress/l;

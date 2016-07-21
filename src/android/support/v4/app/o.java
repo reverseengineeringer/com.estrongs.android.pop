@@ -1,13 +1,17 @@
 package android.support.v4.app;
 
+import android.content.Context;
+
 class o
-  implements Runnable
 {
-  o(n paramn) {}
-  
-  public void run()
+  public int a(Context paramContext, String paramString1, String paramString2)
   {
-    a.e();
+    return 1;
+  }
+  
+  public String a(String paramString)
+  {
+    return null;
   }
 }
 

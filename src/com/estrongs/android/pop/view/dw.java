@@ -7,12 +7,7 @@ class dw
   
   public void run()
   {
-    try
-    {
-      a.R();
-      return;
-    }
-    catch (Exception localException) {}
+    a.g("bt://");
   }
 }
 

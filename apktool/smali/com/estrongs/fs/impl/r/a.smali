@@ -1,350 +1,502 @@
 .class public Lcom/estrongs/fs/impl/r/a;
-.super Lcom/estrongs/fs/a;
-
-
-# instance fields
-.field protected a:Z
-
-.field protected b:Z
+.super Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;JJZ)V
+.method private static a(Landroid/content/Context;)Ljava/util/List;
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Lcom/estrongs/fs/h;",
+            ">;"
+        }
+    .end annotation
 
-    const/4 v0, 0x1
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {p0, p1}, Lcom/estrongs/fs/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-boolean v0, p0, Lcom/estrongs/fs/impl/r/a;->a:Z
+    invoke-static {p0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
 
-    iput-boolean v0, p0, Lcom/estrongs/fs/impl/r/a;->b:Z
+    move-result-object v1
 
-    iput-wide p2, p0, Lcom/estrongs/fs/impl/r/a;->size:J
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/ad;->a(Ljava/util/List;)V
 
-    iput-wide p4, p0, Lcom/estrongs/fs/impl/r/a;->lastModified:J
-
-    if-eqz p6, :cond_0
-
-    sget-object v0, Lcom/estrongs/fs/m;->a:Lcom/estrongs/fs/m;
-
-    iput-object v0, p0, Lcom/estrongs/fs/impl/r/a;->type:Lcom/estrongs/fs/m;
-
-    :goto_0
-    invoke-static {p1}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/fs/impl/r/a;->setName(Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    sget-object v0, Lcom/estrongs/fs/m;->b:Lcom/estrongs/fs/m;
-
-    iput-object v0, p0, Lcom/estrongs/fs/impl/r/a;->type:Lcom/estrongs/fs/m;
-
-    goto :goto_0
+    return-object v0
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Lde/aflx/sardine/DavResource;ZZ)V
+.method public static a(Landroid/content/Context;Ljava/lang/String;)Ljava/util/List;
     .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Lcom/estrongs/fs/h;",
+            ">;"
+        }
+    .end annotation
 
-    const/4 v0, 0x1
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->br(Ljava/lang/String;)Z
 
-    invoke-direct {p0, p1}, Lcom/estrongs/fs/a;-><init>(Ljava/lang/String;)V
+    move-result v0
 
-    iput-boolean v0, p0, Lcom/estrongs/fs/impl/r/a;->a:Z
+    if-nez v0, :cond_0
 
-    iput-boolean v0, p0, Lcom/estrongs/fs/impl/r/a;->b:Z
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    invoke-virtual {p2}, Lde/aflx/sardine/DavResource;->getName()Ljava/lang/String;
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    move-result-object v1
+    throw v0
 
-    if-eqz p4, :cond_0
+    :cond_0
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->J(Ljava/lang/String;)Z
 
-    :try_start_0
-    invoke-virtual {p2}, Lde/aflx/sardine/DavResource;->getName()Ljava/lang/String;
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-static {p0}, Lcom/estrongs/fs/impl/r/a;->a(Landroid/content/Context;)Ljava/util/List;
 
     move-result-object v0
 
-    const-string v2, "UTF-8"
-
-    invoke-static {v0, v2}, Ljava/net/URLDecoder;->decode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_3
-
-    move-result-object v1
-
-    :cond_0
     :goto_0
-    if-eqz p3, :cond_2
-
-    :try_start_1
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-lez v0, :cond_2
-
-    const-string v0, "/"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const/4 v0, 0x0
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, -0x1
-
-    invoke-virtual {v1, v0, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
-
-    move-result-object v1
-
-    move-object v0, v1
-
-    :goto_1
-    :try_start_2
-    invoke-virtual {p2}, Lde/aflx/sardine/DavResource;->getModified()Ljava/util/Date;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/util/Date;->getTime()J
-
-    move-result-wide v2
-
-    iput-wide v2, p0, Lcom/estrongs/fs/impl/r/a;->lastModified:J
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
-
-    :goto_2
-    if-eqz p3, :cond_1
-
-    :try_start_3
-    sget-object v1, Lcom/estrongs/fs/m;->a:Lcom/estrongs/fs/m;
-
-    iput-object v1, p0, Lcom/estrongs/fs/impl/r/a;->type:Lcom/estrongs/fs/m;
-
-    const-wide/16 v2, 0x0
-
-    iput-wide v2, p0, Lcom/estrongs/fs/impl/r/a;->size:J
-    :try_end_3
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
-
-    :goto_3
-    invoke-virtual {p0, v0}, Lcom/estrongs/fs/impl/r/a;->setName(Ljava/lang/String;)V
-
-    return-void
+    return-object v0
 
     :cond_1
-    :try_start_4
-    sget-object v1, Lcom/estrongs/fs/m;->b:Lcom/estrongs/fs/m;
-
-    iput-object v1, p0, Lcom/estrongs/fs/impl/r/a;->type:Lcom/estrongs/fs/m;
-
-    invoke-virtual {p2}, Lde/aflx/sardine/DavResource;->getContentLength()Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    iput-wide v2, p0, Lcom/estrongs/fs/impl/r/a;->size:J
-    :try_end_4
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
-
-    goto :goto_3
-
-    :catch_0
-    move-exception v1
-
-    :goto_4
-    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
-
-    goto :goto_3
-
-    :catch_1
-    move-exception v0
-
-    move-object v4, v0
-
-    move-object v0, v1
-
-    move-object v1, v4
-
-    goto :goto_4
-
-    :catch_2
-    move-exception v1
-
-    goto :goto_2
-
-    :catch_3
-    move-exception v0
-
-    goto :goto_0
-
-    :cond_2
-    move-object v0, v1
-
-    goto :goto_1
-.end method
-
-
-# virtual methods
-.method protected canDelete()Z
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/estrongs/fs/impl/r/a;->canWrite()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method protected canRead()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/estrongs/fs/impl/r/a;->b:Z
-
-    return v0
-.end method
-
-.method protected canWrite()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/estrongs/fs/impl/r/a;->a:Z
-
-    return v0
-.end method
-
-.method public exists()Z
-    .locals 2
-
-    :try_start_0
-    invoke-virtual {p0}, Lcom/estrongs/fs/impl/r/a;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/estrongs/fs/impl/r/b;->d(Ljava/lang/String;)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result v0
-
-    return v0
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Lcom/estrongs/fs/FileSystemException;
-
-    invoke-direct {v1, v0}, Lcom/estrongs/fs/FileSystemException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-.end method
-
-.method public setName(Ljava/lang/String;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lcom/estrongs/fs/impl/r/a;->name:Ljava/lang/String;
-
-    if-eqz v1, :cond_0
-
-    const/4 v0, 0x1
-
-    :cond_0
-    invoke-super {p0, p1}, Lcom/estrongs/fs/a;->setName(Ljava/lang/String;)V
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p0}, Lcom/estrongs/fs/impl/r/a;->getFileType()Lcom/estrongs/fs/m;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/estrongs/fs/m;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/estrongs/fs/impl/r/a;->path:Ljava/lang/String;
-
-    const-string v1, "/"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v1, p0, Lcom/estrongs/fs/impl/r/a;->path:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "/"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/fs/impl/r/a;->path:Ljava/lang/String;
-
-    :cond_1
-    iget-object v0, p0, Lcom/estrongs/fs/impl/r/a;->absolutePath:Ljava/lang/String;
-
-    const-string v1, "/"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->L(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->r(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->K(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->p(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->q(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    :cond_2
+    invoke-static {p0}, Lcom/estrongs/fs/impl/r/a;->b(Landroid/content/Context;)Ljava/util/List;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_3
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->bk(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    invoke-static {p0}, Lcom/estrongs/fs/impl/r/a;->d(Landroid/content/Context;)Ljava/util/List;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_4
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->aG(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    invoke-static {p0}, Lcom/estrongs/fs/impl/r/a;->e(Landroid/content/Context;)Ljava/util/List;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_5
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->aQ(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    invoke-static {p0}, Lcom/estrongs/fs/impl/r/a;->f(Landroid/content/Context;)Ljava/util/List;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_6
+    invoke-static {p1}, Lcom/estrongs/android/util/ap;->M(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    invoke-static {p0}, Lcom/estrongs/fs/impl/r/a;->c(Landroid/content/Context;)Ljava/util/List;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_7
+    const-string v0, "scannedserver://"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-static {}, Lcom/estrongs/fs/impl/k/c;->a()Z
+
+    move-result v1
+
+    if-nez v1, :cond_8
+
+    invoke-static {p0}, Lcom/estrongs/fs/impl/r/a;->a(Landroid/content/Context;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    invoke-static {p0}, Lcom/estrongs/fs/impl/r/a;->b(Landroid/content/Context;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    goto :goto_0
+
+    :cond_8
+    new-instance v1, Lcom/estrongs/fs/impl/r/b;
+
+    const-string v2, "flashair://flashair/"
+
+    sget-object v3, Lcom/estrongs/fs/w;->M:Lcom/estrongs/fs/w;
+
+    const-string v4, "FlashAir"
+
+    invoke-direct {v1, v2, v3, v4}, Lcom/estrongs/fs/impl/r/b;-><init>(Ljava/lang/String;Lcom/estrongs/fs/w;Ljava/lang/String;)V
+
+    const-string v2, "item_is_scanned_server"
+
+    const/4 v3, 0x1
+
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Lcom/estrongs/fs/impl/r/b;->putExtra(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-static {p0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+
+    move-result-object v1
+
+    const-string v2, "flashair://flashair/"
+
+    const-string v3, "FlashAir"
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v1, v2, v3, v4}, Lcom/estrongs/android/pop/ad;->b(Ljava/lang/String;Ljava/lang/String;Z)V
+
+    goto/16 :goto_0
+
+    :cond_9
+    const/4 v0, 0x0
+
+    goto/16 :goto_0
+.end method
+
+.method private static b(Landroid/content/Context;)Ljava/util/List;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Lcom/estrongs/fs/h;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-static {p0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/ad;->d(Ljava/util/List;)V
+
+    return-object v0
+.end method
+
+.method private static c(Landroid/content/Context;)Ljava/util/List;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Lcom/estrongs/fs/h;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-static {p0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/ad;->e(Ljava/util/List;)V
+
+    return-object v0
+.end method
+
+.method private static d(Landroid/content/Context;)Ljava/util/List;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Lcom/estrongs/fs/h;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-static {}, Lcom/estrongs/android/util/bk;->a()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    invoke-static {}, Landroid/os/Looper;->prepare()V
+
+    :cond_0
+    sget-boolean v1, Lcom/estrongs/android/pop/app/f/a;->d:Z
+
+    if-eqz v1, :cond_2
+
+    invoke-static {p0, v0}, Lcom/estrongs/fs/impl/e/a;->a(Landroid/content/Context;Ljava/util/ArrayList;)V
+
+    :cond_1
+    :goto_0
+    return-object v0
+
+    :cond_2
+    invoke-static {}, Lcom/estrongs/fs/impl/e/a;->c()Ljava/util/List;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method private static e(Landroid/content/Context;)Ljava/util/List;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Lcom/estrongs/fs/h;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-static {p0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/estrongs/android/pop/ad;->b(Ljava/util/List;)V
+
+    return-object v0
+.end method
+
+.method private static f(Landroid/content/Context;)Ljava/util/List;
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Lcom/estrongs/fs/h;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-static {p0}, Lcom/estrongs/android/pop/ad;->a(Landroid/content/Context;)Lcom/estrongs/android/pop/ad;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/pop/ad;->c(Ljava/util/List;)V
+
+    invoke-static {}, Lcom/estrongs/android/ui/pcs/u;->a()Lcom/estrongs/android/ui/pcs/u;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/pcs/u;->e()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {}, Lcom/estrongs/android/pop/utils/cl;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v3, Lcom/estrongs/fs/impl/r/b;
+
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v1, p0, Lcom/estrongs/fs/impl/r/a;->absolutePath:Ljava/lang/String;
+    const-string v4, "SP://"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    if-nez v1, :cond_1
+
+    const-string v0, ":"
+
+    :goto_0
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-string v1, "/"
+    const-string v4, "@"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v4, "pcs"
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
+    move-result-object v4
+
+    sget-object v5, Lcom/estrongs/fs/w;->J:Lcom/estrongs/fs/w;
+
+    if-nez v1, :cond_2
+
+    invoke-static {}, Lcom/estrongs/android/pop/FexApplication;->a()Lcom/estrongs/android/pop/FexApplication;
+
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/fs/impl/r/a;->absolutePath:Ljava/lang/String;
+    const v1, 0x7f0801a1
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/pop/FexApplication;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_1
+    invoke-direct {v3, v4, v5, v0}, Lcom/estrongs/fs/impl/r/b;-><init>(Ljava/lang/String;Lcom/estrongs/fs/w;Ljava/lang/String;)V
+
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    new-instance v0, Lcom/estrongs/android/pop/spfs/CreateSiteFileObject;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v3, 0x7f08023d
+
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/estrongs/android/pop/spfs/CreateSiteFileObject;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-object v2
+
+    :cond_1
+    move-object v0, v1
+
+    goto :goto_0
 
     :cond_2
-    return-void
+    const-string v0, ":"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    goto :goto_1
 .end method

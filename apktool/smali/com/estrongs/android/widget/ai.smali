@@ -1,509 +1,1316 @@
-.class public Lcom/estrongs/android/widget/ai;
-.super Lcom/estrongs/android/widget/ao;
+.class Lcom/estrongs/android/widget/ai;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/widget/Filterable;
+.implements Landroid/widget/WrapperListAdapter;
 
 
 # instance fields
-.field protected a:Ljava/util/List;
+.field a:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/List",
+            "Ljava/util/ArrayList",
             "<",
-            "Lcom/estrongs/fs/h;",
+            "Lcom/estrongs/android/widget/ah;",
             ">;"
         }
     .end annotation
 .end field
 
-.field protected b:Z
+.field b:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/estrongs/android/widget/ah;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field c:Landroid/view/View;
+.field c:Z
 
-.field d:Landroid/view/View;
+.field private final d:Landroid/database/DataSetObservable;
 
-.field e:Landroid/view/animation/TranslateAnimation;
+.field private final e:Landroid/widget/ListAdapter;
 
-.field f:Landroid/view/animation/TranslateAnimation;
+.field private f:I
 
-.field g:Landroid/view/animation/TranslateAnimation;
-
-.field h:Landroid/view/animation/TranslateAnimation;
-
-.field private p:Lcom/estrongs/android/view/cd;
-
-.field private q:Landroid/view/View;
-
-.field private r:Lcom/estrongs/android/widget/RealViewSwitcher;
-
-.field private s:Landroid/widget/LinearLayout;
-
-.field private t:Z
-
-.field private u:Landroid/widget/AdapterView$OnItemClickListener;
+.field private final g:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Activity;Lcom/estrongs/android/widget/au;Z)V
-    .locals 4
+.method public constructor <init>(Ljava/util/ArrayList;Ljava/util/ArrayList;Landroid/widget/ListAdapter;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/estrongs/android/widget/ah;",
+            ">;",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/estrongs/android/widget/ah;",
+            ">;",
+            "Landroid/widget/ListAdapter;",
+            ")V"
+        }
+    .end annotation
 
-    const/4 v3, 0x1
+    const/4 v0, 0x1
 
-    invoke-direct {p0, p1, p2}, Lcom/estrongs/android/widget/ao;-><init>(Landroid/app/Activity;Lcom/estrongs/android/widget/au;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/LinkedList;
+    new-instance v1, Landroid/database/DataSetObservable;
 
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+    invoke-direct {v1}, Landroid/database/DataSetObservable;-><init>()V
 
-    iput-object v0, p0, Lcom/estrongs/android/widget/ai;->a:Ljava/util/List;
+    iput-object v1, p0, Lcom/estrongs/android/widget/ai;->d:Landroid/database/DataSetObservable;
 
-    iput-boolean v3, p0, Lcom/estrongs/android/widget/ai;->t:Z
+    iput v0, p0, Lcom/estrongs/android/widget/ai;->f:I
 
-    new-instance v0, Lcom/estrongs/android/widget/ak;
+    iput-object p3, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/widget/ak;-><init>(Lcom/estrongs/android/widget/ai;)V
+    instance-of v1, p3, Landroid/widget/Filterable;
 
-    iput-object v0, p0, Lcom/estrongs/android/widget/ai;->u:Landroid/widget/AdapterView$OnItemClickListener;
+    iput-boolean v1, p0, Lcom/estrongs/android/widget/ai;->g:Z
 
-    iput-boolean p3, p0, Lcom/estrongs/android/widget/ai;->t:Z
+    if-nez p1, :cond_0
 
-    const v0, 0x7f0a0266
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/ai;->findViewById(I)Landroid/view/View;
+    const-string v1, "headerViewInfos cannot be null"
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    check-cast v0, Landroid/widget/LinearLayout;
+    throw v0
 
-    iput-object v0, p0, Lcom/estrongs/android/widget/ai;->s:Landroid/widget/LinearLayout;
+    :cond_0
+    if-nez p2, :cond_1
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->s:Landroid/widget/LinearLayout;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    iget-object v1, p0, Lcom/estrongs/android/widget/ai;->themeManager:Lcom/estrongs/android/ui/theme/al;
+    const-string v1, "footerViewInfos cannot be null"
 
-    const v2, 0x7f020065
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/theme/al;->a(I)Landroid/graphics/drawable/Drawable;
+    throw v0
 
-    move-result-object v1
+    :cond_1
+    iput-object p1, p0, Lcom/estrongs/android/widget/ai;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    iput-object p2, p0, Lcom/estrongs/android/widget/ai;->b:Ljava/util/ArrayList;
 
-    if-eqz p3, :cond_0
+    iget-object v1, p0, Lcom/estrongs/android/widget/ai;->a:Ljava/util/ArrayList;
 
-    invoke-direct {p0}, Lcom/estrongs/android/widget/ai;->d()V
+    invoke-direct {p0, v1}, Lcom/estrongs/android/widget/ai;->a(Ljava/util/ArrayList;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lcom/estrongs/android/widget/ai;->b:Ljava/util/ArrayList;
+
+    invoke-direct {p0, v1}, Lcom/estrongs/android/widget/ai;->a(Ljava/util/ArrayList;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
 
     :goto_0
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->i:Lcom/estrongs/android/view/cd;
-
-    iget-object v1, p0, Lcom/estrongs/android/widget/ai;->u:Landroid/widget/AdapterView$OnItemClickListener;
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/cd;->a(Landroid/widget/AdapterView$OnItemClickListener;)V
-
-    const v0, 0x7f0b000c
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/ai;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Lcom/estrongs/android/widget/ai;->setSingleButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    iput-boolean v0, p0, Lcom/estrongs/android/widget/ai;->c:Z
 
     return-void
 
-    :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->s:Landroid/widget/LinearLayout;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->r:Lcom/estrongs/android/widget/RealViewSwitcher;
-
-    invoke-virtual {v0, v3}, Lcom/estrongs/android/widget/RealViewSwitcher;->removeViewAt(I)V
+    :cond_2
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method static synthetic a(Lcom/estrongs/android/widget/ai;)Lcom/estrongs/android/ui/theme/al;
-    .locals 1
+.method private a(Ljava/util/ArrayList;)Z
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/estrongs/android/widget/ah;",
+            ">;)Z"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->themeManager:Lcom/estrongs/android/ui/theme/al;
+    if-eqz p1, :cond_1
 
-    return-object v0
-.end method
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-.method static synthetic b(Lcom/estrongs/android/widget/ai;)Lcom/estrongs/android/ui/theme/al;
-    .locals 1
+    move-result-object v1
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->themeManager:Lcom/estrongs/android/ui/theme/al;
+    :cond_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    return-object v0
-.end method
+    move-result v0
 
-.method static synthetic c(Lcom/estrongs/android/widget/ai;)Lcom/estrongs/android/ui/theme/al;
-    .locals 1
+    if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->themeManager:Lcom/estrongs/android/ui/theme/al;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    return-object v0
-.end method
+    move-result-object v0
 
-.method static synthetic d(Lcom/estrongs/android/widget/ai;)Lcom/estrongs/android/ui/theme/al;
-    .locals 1
+    check-cast v0, Lcom/estrongs/android/widget/ah;
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->themeManager:Lcom/estrongs/android/ui/theme/al;
-
-    return-object v0
-.end method
-
-.method private d()V
-    .locals 3
-
-    const/4 v2, 0x0
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->p:Lcom/estrongs/android/view/cd;
+    iget-boolean v0, v0, Lcom/estrongs/android/widget/ah;->c:Z
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcom/estrongs/android/widget/aj;
+    const/4 v0, 0x0
 
-    iget-object v1, p0, Lcom/estrongs/android/widget/ai;->j:Landroid/app/Activity;
+    :goto_0
+    return v0
 
-    invoke-direct {v0, p0, v1, v2, v2}, Lcom/estrongs/android/widget/aj;-><init>(Lcom/estrongs/android/widget/ai;Landroid/app/Activity;Lcom/estrongs/fs/util/a/a;Lcom/estrongs/android/view/cb;)V
+    :cond_1
+    const/4 v0, 0x1
 
-    iput-object v0, p0, Lcom/estrongs/android/widget/ai;->p:Lcom/estrongs/android/view/cd;
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->q:Landroid/view/View;
-
-    check-cast v0, Landroid/view/ViewGroup;
-
-    iget-object v1, p0, Lcom/estrongs/android/widget/ai;->p:Lcom/estrongs/android/view/cd;
-
-    invoke-virtual {v1}, Lcom/estrongs/android/view/cd;->aq()Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->p:Lcom/estrongs/android/view/cd;
-
-    iget-object v1, p0, Lcom/estrongs/android/widget/ai;->mContext:Landroid/content/Context;
-
-    invoke-static {v1}, Lcom/estrongs/android/ui/theme/al;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
-
-    move-result-object v1
-
-    const v2, 0x7f080012
-
-    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/theme/al;->d(I)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/cd;->j(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->p:Lcom/estrongs/android/view/cd;
-
-    const/16 v1, 0xb
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/cd;->a(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->p:Lcom/estrongs/android/view/cd;
-
-    iget-object v1, p0, Lcom/estrongs/android/widget/ai;->u:Landroid/widget/AdapterView$OnItemClickListener;
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/cd;->a(Landroid/widget/AdapterView$OnItemClickListener;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->p:Lcom/estrongs/android/view/cd;
-
-    iget-object v1, p0, Lcom/estrongs/android/widget/ai;->o:Lcom/estrongs/android/view/ca;
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/cd;->a(Lcom/estrongs/android/view/ca;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->p:Lcom/estrongs/android/view/cd;
-
-    const-string v1, "SP://"
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/cd;->g(Ljava/lang/String;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method static synthetic e(Lcom/estrongs/android/widget/ai;)Lcom/estrongs/android/widget/RealViewSwitcher;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->r:Lcom/estrongs/android/widget/RealViewSwitcher;
-
-    return-object v0
-.end method
-
-.method private e()V
-    .locals 3
-
-    const v0, 0x7f0a0267
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/ai;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/android/widget/ai;->c:Landroid/view/View;
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->c:Landroid/view/View;
-
-    iget-object v1, p0, Lcom/estrongs/android/widget/ai;->themeManager:Lcom/estrongs/android/ui/theme/al;
-
-    const v2, 0x7f02000a
-
-    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/theme/al;->a(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->c:Landroid/view/View;
-
-    new-instance v1, Lcom/estrongs/android/widget/am;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/widget/am;-><init>(Lcom/estrongs/android/widget/ai;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    return-void
-.end method
-
-.method static synthetic f(Lcom/estrongs/android/widget/ai;)Lcom/estrongs/android/ui/theme/al;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->themeManager:Lcom/estrongs/android/ui/theme/al;
-
-    return-object v0
-.end method
-
-.method private f()V
-    .locals 3
-
-    const v0, 0x7f0a0268
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/ai;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/android/widget/ai;->d:Landroid/view/View;
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->d:Landroid/view/View;
-
-    iget-object v1, p0, Lcom/estrongs/android/widget/ai;->themeManager:Lcom/estrongs/android/ui/theme/al;
-
-    const v2, 0x7f020039
-
-    invoke-virtual {v1, v2}, Lcom/estrongs/android/ui/theme/al;->a(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->d:Landroid/view/View;
-
-    new-instance v1, Lcom/estrongs/android/widget/an;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/widget/an;-><init>(Lcom/estrongs/android/widget/ai;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    return-void
-.end method
-
-.method static synthetic g(Lcom/estrongs/android/widget/ai;)Lcom/estrongs/android/ui/theme/al;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->themeManager:Lcom/estrongs/android/ui/theme/al;
-
-    return-object v0
-.end method
-
-.method static synthetic h(Lcom/estrongs/android/widget/ai;)Lcom/estrongs/android/ui/theme/al;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->themeManager:Lcom/estrongs/android/ui/theme/al;
-
-    return-object v0
-.end method
-
-.method static synthetic i(Lcom/estrongs/android/widget/ai;)Lcom/estrongs/android/ui/theme/al;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->themeManager:Lcom/estrongs/android/ui/theme/al;
-
-    return-object v0
+    goto :goto_0
 .end method
 
 
 # virtual methods
-.method protected a()I
+.method public a()I
     .locals 1
 
-    const v0, 0x7f03007a
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
 
     return v0
 .end method
 
-.method protected a(Landroid/content/Context;)V
+.method public a(I)V
     .locals 2
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/widget/ao;->a(Landroid/content/Context;)V
+    const/4 v0, 0x1
 
-    const v0, 0x7f0a026a
+    if-ge p1, v0, :cond_0
 
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/ai;->findViewById(I)Landroid/view/View;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    move-result-object v0
+    const-string v1, "Number of columns must be 1 or more"
 
-    check-cast v0, Landroid/view/ViewGroup;
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/estrongs/android/widget/ai;->q:Landroid/view/View;
+    throw v0
 
-    const v0, 0x7f0a0269
+    :cond_0
+    iget v0, p0, Lcom/estrongs/android/widget/ai;->f:I
 
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/widget/ai;->findViewById(I)Landroid/view/View;
+    if-eq v0, p1, :cond_1
 
-    move-result-object v0
+    iput p1, p0, Lcom/estrongs/android/widget/ai;->f:I
 
-    check-cast v0, Lcom/estrongs/android/widget/RealViewSwitcher;
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/ai;->c()V
 
-    iput-object v0, p0, Lcom/estrongs/android/widget/ai;->r:Lcom/estrongs/android/widget/RealViewSwitcher;
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->r:Lcom/estrongs/android/widget/RealViewSwitcher;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/RealViewSwitcher;->c(Z)V
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->r:Lcom/estrongs/android/widget/RealViewSwitcher;
-
-    new-instance v1, Lcom/estrongs/android/widget/al;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/widget/al;-><init>(Lcom/estrongs/android/widget/ai;)V
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/widget/RealViewSwitcher;->a(Lcom/estrongs/android/widget/bc;)V
-
-    invoke-direct {p0}, Lcom/estrongs/android/widget/ai;->e()V
-
-    invoke-direct {p0}, Lcom/estrongs/android/widget/ai;->f()V
-
+    :cond_1
     return-void
 .end method
 
-.method public a(Z)V
-    .locals 0
+.method public areAllItemsEnabled()Z
+    .locals 2
 
-    iput-boolean p1, p0, Lcom/estrongs/android/widget/ai;->b:Z
+    const/4 v0, 0x1
 
-    return-void
+    iget-object v1, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    if-eqz v1, :cond_0
+
+    iget-boolean v1, p0, Lcom/estrongs/android/widget/ai;->c:Z
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v1}, Landroid/widget/ListAdapter;->areAllItemsEnabled()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
-.method protected b()Lcom/estrongs/android/view/cd;
+.method public b()I
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->r:Lcom/estrongs/android/widget/RealViewSwitcher;
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->b:Ljava/util/ArrayList;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/widget/RealViewSwitcher;->h()I
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
+    return v0
+.end method
+
+.method public c()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->d:Landroid/database/DataSetObservable;
+
+    invoke-virtual {v0}, Landroid/database/DataSetObservable;->notifyChanged()V
+
+    return-void
+.end method
+
+.method public getCount()I
+    .locals 3
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v0}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v0
+
+    iget v1, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    rem-int/2addr v0, v1
+
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->i:Lcom/estrongs/android/view/cd;
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/ai;->a()I
+
+    move-result v1
+
+    iget v2, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    mul-int/2addr v1, v2
+
+    iget-object v2, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v2}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v2
+
+    add-int/2addr v1, v2
+
+    add-int/2addr v0, v1
+
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/ai;->b()I
+
+    move-result v1
+
+    iget v2, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    mul-int/2addr v1, v2
+
+    add-int/2addr v0, v1
+
+    :goto_1
+    return v0
+
+    :cond_0
+    iget v1, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    sub-int v0, v1, v0
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/ai;->a()I
+
+    move-result v0
+
+    iget v1, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    mul-int/2addr v0, v1
+
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/ai;->b()I
+
+    move-result v1
+
+    iget v2, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    mul-int/2addr v1, v2
+
+    add-int/2addr v0, v1
+
+    goto :goto_1
+.end method
+
+.method public getFilter()Landroid/widget/Filter;
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/estrongs/android/widget/ai;->g:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    check-cast v0, Landroid/widget/Filterable;
+
+    invoke-interface {v0}, Landroid/widget/Filterable;->getFilter()Landroid/widget/Filter;
+
+    move-result-object v0
 
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->p:Lcom/estrongs/android/view/cd;
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method public b(Z)V
-    .locals 2
-
-    invoke-super {p0, p1}, Lcom/estrongs/android/widget/ao;->b(Z)V
-
-    iget-boolean v0, p0, Lcom/estrongs/android/widget/ai;->t:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->p:Lcom/estrongs/android/view/cd;
-
-    const/16 v1, 0xb
-
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/cd;->a(I)V
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->p:Lcom/estrongs/android/view/cd;
+.method public getItem(I)Ljava/lang/Object;
+    .locals 4
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/cd;->b(Z)V
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/ai;->a()I
 
-    :cond_0
-    return-void
-.end method
+    move-result v0
 
-.method public dismiss()V
-    .locals 1
+    iget v2, p0, Lcom/estrongs/android/widget/ai;->f:I
 
-    invoke-super {p0}, Lcom/estrongs/android/widget/ao;->dismiss()V
+    mul-int/2addr v2, v0
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->p:Lcom/estrongs/android/view/cd;
+    if-ge p1, v2, :cond_1
 
-    if-eqz v0, :cond_0
+    iget v0, p0, Lcom/estrongs/android/widget/ai;->f:I
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->p:Lcom/estrongs/android/view/cd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/view/cd;->a_()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public show()V
-    .locals 1
-
-    invoke-super {p0}, Lcom/estrongs/android/widget/ao;->show()V
-
-    iget-boolean v0, p0, Lcom/estrongs/android/widget/ai;->b:Z
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->i:Lcom/estrongs/android/view/cd;
-
-    invoke-virtual {v0}, Lcom/estrongs/android/view/cd;->Y()Lcom/estrongs/android/d/k;
-
-    move-result-object v0
+    rem-int v0, p1, v0
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->i:Lcom/estrongs/android/view/cd;
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/view/cd;->K()V
+    iget v1, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    div-int v1, p1, v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/android/widget/ah;
+
+    iget-object v0, v0, Lcom/estrongs/android/widget/ah;->b:Ljava/lang/Object;
+
+    :goto_0
+    return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->i:Lcom/estrongs/android/view/cd;
+    move-object v0, v1
 
-    invoke-virtual {v0}, Lcom/estrongs/android/view/cd;->g()V
+    goto :goto_0
 
-    iget-boolean v0, p0, Lcom/estrongs/android/widget/ai;->t:Z
+    :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v0}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    if-ge p1, v0, :cond_2
+
+    sub-int v0, p1, v2
+
+    iget-object v3, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    if-eqz v3, :cond_2
+
+    iget-object v3, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v3}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v3
+
+    if-ge v0, v3, :cond_2
+
+    iget-object v1, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v1, v0}, Landroid/widget/ListAdapter;->getItem(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v0}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v0
+
+    iget v3, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    rem-int/2addr v0, v3
+
+    if-nez v0, :cond_3
+
+    const/4 v0, 0x0
+
+    :goto_1
+    iget-object v3, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v3}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v3
+
+    add-int/2addr v3, v2
+
+    add-int/2addr v3, v0
+
+    if-ge p1, v3, :cond_4
+
+    move-object v0, v1
+
+    goto :goto_0
+
+    :cond_3
+    iget v3, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    sub-int v0, v3, v0
+
+    goto :goto_1
+
+    :cond_4
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/ai;->b()I
+
+    move-result v1
+
+    iget v3, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    mul-int/2addr v1, v3
+
+    iget-object v3, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v3}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v3
+
+    add-int/2addr v3, v2
+
+    add-int/2addr v3, v0
+
+    add-int/2addr v1, v3
+
+    if-ge p1, v1, :cond_5
+
+    iget v1, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    rem-int v1, p1, v1
+
+    if-nez v1, :cond_5
+
+    iget-object v1, p0, Lcom/estrongs/android/widget/ai;->b:Ljava/util/ArrayList;
+
+    sub-int v2, p1, v2
+
+    iget-object v3, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v3}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v3
+
+    sub-int/2addr v2, v3
+
+    sub-int v0, v2, v0
+
+    iget v2, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    div-int/2addr v0, v2
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/android/widget/ah;
+
+    iget-object v0, v0, Lcom/estrongs/android/widget/ah;->b:Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_5
+    new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
+
+    invoke-direct {v0, p1}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(I)V
+
+    throw v0
+.end method
+
+.method public getItemId(I)J
+    .locals 2
+
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/ai;->a()I
+
+    move-result v0
+
+    iget v1, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    if-eqz v1, :cond_0
+
+    if-lt p1, v0, :cond_0
+
+    iget-object v1, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v1}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    if-ge p1, v1, :cond_0
+
+    sub-int v0, p1, v0
+
+    iget-object v1, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v1}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_0
+
+    iget-object v1, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v1, v0}, Landroid/widget/ListAdapter;->getItemId(I)J
+
+    move-result-wide v0
+
+    :goto_0
+    return-wide v0
+
+    :cond_0
+    const-wide/16 v0, -0x1
+
+    goto :goto_0
+.end method
+
+.method public getItemViewType(I)I
+    .locals 6
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/ai;->a()I
+
+    move-result v1
+
+    iget v2, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    mul-int/2addr v1, v2
+
+    if-ge p1, v1, :cond_1
+
+    iget v2, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    rem-int v2, p1, v2
+
+    if-eqz v2, :cond_1
+
+    iget-object v1, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    if-eqz v1, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v0}, Landroid/widget/ListAdapter;->getViewTypeCount()I
+
+    move-result v0
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    iget-object v2, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    if-eqz v2, :cond_3
+
+    if-lt p1, v1, :cond_3
+
+    iget-object v2, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v2}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v2
+
+    add-int/2addr v2, v1
+
+    iget v3, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    iget-object v4, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v4}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v4
+
+    iget v5, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    rem-int/2addr v4, v5
+
+    sub-int/2addr v3, v4
+
+    add-int/2addr v2, v3
+
+    if-ge p1, v2, :cond_3
+
+    sub-int v2, p1, v1
+
+    iget-object v3, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v3}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v3
+
+    if-ge v2, v3, :cond_2
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v0, v2}, Landroid/widget/ListAdapter;->getItemViewType(I)I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_2
+    if-eqz v3, :cond_3
+
+    iget v2, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    if-eq v2, v0, :cond_3
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    add-int/lit8 v1, v3, -0x1
+
+    invoke-interface {v0, v1}, Landroid/widget/ListAdapter;->getItemViewType(I)I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/ai;->b()I
+
+    move-result v2
+
+    iget v3, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    mul-int/2addr v2, v3
+
+    iget-object v3, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    if-eqz v3, :cond_4
+
+    iget-object v3, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v3}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v3
+
+    add-int/2addr v1, v3
+
+    add-int/2addr v1, v2
+
+    if-ge p1, v1, :cond_4
+
+    iget-object v1, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    if-eqz v1, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v0}, Landroid/widget/ListAdapter;->getViewTypeCount()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_4
+    const/4 v0, -0x2
+
+    goto :goto_0
+.end method
+
+.method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 5
+
+    const/4 v0, 0x0
+
+    const/4 v4, 0x4
+
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/ai;->a()I
+
+    move-result v1
+
+    iget v2, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    mul-int/2addr v1, v2
+
+    if-ge p1, v1, :cond_2
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->a:Ljava/util/ArrayList;
+
+    iget v1, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    div-int v1, p1, v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/android/widget/ah;
+
+    iget-object v0, v0, Lcom/estrongs/android/widget/ah;->a:Landroid/view/ViewGroup;
+
+    iget v1, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    rem-int v1, p1, v1
+
+    if-nez v1, :cond_1
+
+    :cond_0
+    :goto_0
+    return-object v0
+
+    :cond_1
+    new-instance v1, Landroid/view/View;
+
+    invoke-virtual {p3}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+
+    move-result v0
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setMinimumHeight(I)V
+
+    move-object v0, v1
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v2, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v2}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v2
+
+    add-int/2addr v2, v1
+
+    if-ge p1, v2, :cond_3
+
+    sub-int v2, p1, v1
+
+    iget-object v3, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    if-eqz v3, :cond_3
+
+    iget-object v3, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v3}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v3
+
+    if-ge v2, v3, :cond_3
+
+    iget-object v1, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v1, v2, p2, p3}, Landroid/widget/ListAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    move-object v0, v1
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v2, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v2}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v2
+
+    iget v3, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    rem-int/2addr v2, v3
+
+    if-nez v2, :cond_4
+
+    :goto_1
+    iget-object v2, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v2}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v2
+
+    add-int/2addr v2, v1
+
+    add-int/2addr v2, v0
+
+    if-ge p1, v2, :cond_5
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    iget-object v1, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v1}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v1
+
+    add-int/lit8 v1, v1, -0x1
+
+    invoke-interface {v0, v1, p2, p3}, Landroid/widget/ListAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
+
+    goto :goto_0
+
+    :cond_4
+    iget v0, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    sub-int/2addr v0, v2
+
+    goto :goto_1
+
+    :cond_5
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/ai;->b()I
+
+    move-result v2
+
+    iget v3, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    mul-int/2addr v2, v3
+
+    iget-object v3, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v3}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v3
+
+    add-int/2addr v3, v1
+
+    add-int/2addr v3, v0
+
+    add-int/2addr v2, v3
+
+    if-ge p1, v2, :cond_6
+
+    iget-object v2, p0, Lcom/estrongs/android/widget/ai;->b:Ljava/util/ArrayList;
+
+    sub-int v1, p1, v1
+
+    iget-object v3, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v3}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v3
+
+    sub-int/2addr v1, v3
+
+    sub-int v0, v1, v0
+
+    iget v1, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    div-int/2addr v0, v1
+
+    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/android/widget/ah;
+
+    iget-object v0, v0, Lcom/estrongs/android/widget/ah;->a:Landroid/view/ViewGroup;
+
+    iget v1, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    rem-int v1, p1, v1
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Landroid/view/View;
+
+    invoke-virtual {p3}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+
+    move-result v0
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setMinimumHeight(I)V
+
+    move-object v0, v1
+
+    goto/16 :goto_0
+
+    :cond_6
+    new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
+
+    invoke-direct {v0, p1}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(I)V
+
+    throw v0
+.end method
+
+.method public getViewTypeCount()I
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v0}, Landroid/widget/ListAdapter;->getViewTypeCount()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x2
+
+    goto :goto_0
+.end method
+
+.method public getWrappedAdapter()Landroid/widget/ListAdapter;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    return-object v0
+.end method
+
+.method public hasStableIds()Z
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v0}, Landroid/widget/ListAdapter;->hasStableIds()Z
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public isEmpty()Z
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v0}, Landroid/widget/ListAdapter;->isEmpty()Z
+
+    move-result v0
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->p:Lcom/estrongs/android/view/cd;
+    :cond_0
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/ai;->a()I
 
-    invoke-virtual {v0}, Lcom/estrongs/android/view/cd;->g()V
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/ai;->b()I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
 
     :cond_1
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/estrongs/android/widget/ai;->b:Z
+    goto :goto_0
+.end method
+
+.method public isEnabled(I)Z
+    .locals 6
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/ai;->a()I
+
+    move-result v0
+
+    iget v3, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    mul-int/2addr v3, v0
+
+    if-ge p1, v3, :cond_1
+
+    iget v0, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    rem-int v0, p1, v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->a:Ljava/util/ArrayList;
+
+    iget v3, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    div-int v3, p1, v3
+
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/android/widget/ah;
+
+    iget-boolean v0, v0, Lcom/estrongs/android/widget/ah;->c:Z
+
+    if-eqz v0, :cond_0
+
+    move v0, v1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v0}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v0
+
+    add-int/2addr v0, v3
+
+    if-ge p1, v0, :cond_2
+
+    sub-int v0, p1, v3
+
+    iget-object v4, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    if-eqz v4, :cond_2
+
+    iget-object v4, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v4}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v4
+
+    if-ge v0, v4, :cond_2
+
+    iget-object v1, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v1, v0}, Landroid/widget/ListAdapter;->isEnabled(I)Z
+
+    move-result v0
+
+    goto :goto_0
 
     :cond_2
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v0}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v0
+
+    iget v4, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    rem-int/2addr v0, v4
+
+    if-nez v0, :cond_3
+
+    move v0, v2
+
+    :goto_1
+    iget-object v4, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v4}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v4
+
+    add-int/2addr v4, v3
+
+    add-int/2addr v4, v0
+
+    if-ge p1, v4, :cond_4
+
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_3
+    iget v4, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    sub-int v0, v4, v0
+
+    goto :goto_1
+
+    :cond_4
+    invoke-virtual {p0}, Lcom/estrongs/android/widget/ai;->b()I
+
+    move-result v4
+
+    iget v5, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    mul-int/2addr v4, v5
+
+    iget-object v5, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v5}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v5
+
+    add-int/2addr v5, v3
+
+    add-int/2addr v5, v0
+
+    add-int/2addr v4, v5
+
+    if-ge p1, v4, :cond_6
+
+    iget v4, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    rem-int v4, p1, v4
+
+    if-nez v4, :cond_5
+
+    iget-object v4, p0, Lcom/estrongs/android/widget/ai;->b:Ljava/util/ArrayList;
+
+    sub-int v3, p1, v3
+
+    iget-object v5, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v5}, Landroid/widget/ListAdapter;->getCount()I
+
+    move-result v5
+
+    sub-int/2addr v3, v5
+
+    sub-int v0, v3, v0
+
+    iget v3, p0, Lcom/estrongs/android/widget/ai;->f:I
+
+    div-int/2addr v0, v3
+
+    invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/estrongs/android/widget/ah;
+
+    iget-boolean v0, v0, Lcom/estrongs/android/widget/ah;->c:Z
+
+    if-eqz v0, :cond_5
+
+    :goto_2
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_5
+    move v1, v2
+
+    goto :goto_2
+
+    :cond_6
+    new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
+
+    invoke-direct {v0, p1}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(I)V
+
+    throw v0
+.end method
+
+.method public registerDataSetObserver(Landroid/database/DataSetObserver;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->d:Landroid/database/DataSetObservable;
+
+    invoke-virtual {v0, p1}, Landroid/database/DataSetObservable;->registerObserver(Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v0, p1}, Landroid/widget/ListAdapter;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->d:Landroid/database/DataSetObservable;
+
+    invoke-virtual {v0, p1}, Landroid/database/DataSetObservable;->unregisterObserver(Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/estrongs/android/widget/ai;->e:Landroid/widget/ListAdapter;
+
+    invoke-interface {v0, p1}, Landroid/widget/ListAdapter;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
+
+    :cond_0
     return-void
 .end method

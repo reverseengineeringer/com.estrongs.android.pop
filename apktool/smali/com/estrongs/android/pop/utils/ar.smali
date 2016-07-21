@@ -1,13 +1,19 @@
-.class final Lcom/estrongs/android/pop/utils/ar;
+.class Lcom/estrongs/android/pop/utils/ar;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/io/FilenameFilter;
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field final synthetic a:Lcom/estrongs/android/pop/utils/aq;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Lcom/estrongs/android/pop/utils/aq;)V
     .locals 0
+
+    iput-object p1, p0, Lcom/estrongs/android/pop/utils/ar;->a:Lcom/estrongs/android/pop/utils/aq;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -16,12 +22,16 @@
 
 
 # virtual methods
-.method public accept(Ljava/io/File;Ljava/lang/String;)Z
+.method public run()V
     .locals 1
 
-    invoke-static {p2}, Lcom/estrongs/android/util/bc;->c(Ljava/lang/String;)Z
+    iget-object v0, p0, Lcom/estrongs/android/pop/utils/ar;->a:Lcom/estrongs/android/pop/utils/aq;
 
-    move-result v0
+    iget-object v0, v0, Lcom/estrongs/android/pop/utils/aq;->a:Lcom/estrongs/android/pop/utils/ap;
 
-    return v0
+    iget-object v0, v0, Lcom/estrongs/android/pop/utils/ap;->b:Landroid/app/Activity;
+
+    invoke-static {v0}, Lcom/estrongs/fs/impl/local/m;->b(Landroid/content/Context;)V
+
+    return-void
 .end method

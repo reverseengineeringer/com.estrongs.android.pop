@@ -1,18 +1,19 @@
 package com.estrongs.android.ui.dialog;
 
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
+import com.estrongs.android.appinfo.v;
+import com.estrongs.android.pop.view.FileExplorerActivity;
 
 class ai
-  implements AdapterView.OnItemClickListener
+  implements v
 {
-  ai(ae paramae) {}
+  ai(ah paramah) {}
   
-  public void onItemClick(AdapterView<?> paramAdapterView, View paramView, int paramInt, long paramLong)
+  public void a()
   {
-    a.b.a(paramInt);
-    a.a(paramInt);
+    FileExplorerActivity localFileExplorerActivity = FileExplorerActivity.X();
+    if (localFileExplorerActivity != null) {
+      localFileExplorerActivity.runOnUiThread(new aj(this, localFileExplorerActivity));
+    }
   }
 }
 

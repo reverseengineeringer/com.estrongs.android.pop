@@ -1,35 +1,19 @@
 package com.estrongs.android.ui.dialog;
 
-import com.estrongs.android.appinfo.r;
-import java.util.List;
+import android.content.Context;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.CheckBox;
+import com.estrongs.android.pop.ad;
 
 class al
-  implements Runnable
+  implements View.OnClickListener
 {
-  al(ak paramak, List paramList, r paramr, int paramInt) {}
+  al(ag paramag, Context paramContext) {}
   
-  public void run()
+  public void onClick(View paramView)
   {
-    int j = -1;
-    am localam = d.a.b;
-    List localList = a;
-    int i;
-    if (b == null)
-    {
-      i = -1;
-      if (b != null) {
-        break label53;
-      }
-    }
-    for (;;)
-    {
-      localam.a(localList, i, j, c);
-      return;
-      i = 1;
-      break;
-      label53:
-      j = b.b;
-    }
+    ad.a(a).u(b.e.isChecked());
   }
 }
 

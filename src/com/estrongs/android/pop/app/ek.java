@@ -1,16 +1,13 @@
 package com.estrongs.android.pop.app;
 
-import com.estrongs.android.widget.RealViewSwitcher;
-
 class ek
   implements Runnable
 {
-  ek(PopAudioPlayer paramPopAudioPlayer) {}
+  ek(ej paramej) {}
   
   public void run()
   {
-    PopAudioPlayer.g(a).a(0);
-    PopAudioPlayer.a(a, new ga(a));
+    new Thread(new el(this)).start();
   }
 }
 

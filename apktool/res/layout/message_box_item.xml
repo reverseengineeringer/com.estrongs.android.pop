@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/dp_13" android:paddingTop="10.0dip" android:paddingRight="@dimen/dp_13" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/msg_root_rlt" android:background="@drawable/msg_box_item_back_normal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/msg_icon" android:layout_width="fill_parent" android:layout_height="@dimen/dp_88" android:scaleType="fitXY" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/msg_icon" android:layout_centerVertical="true">
+            <TextView android:textSize="@dimen/dp_12" android:textColor="#ff8c8c8c" android:id="@id/msg_time" android:paddingTop="@dimen/dp_10" android:paddingRight="@dimen/dp_12" android:paddingBottom="@dimen/dp_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_alignParentRight="true" />
+            <TextView android:textSize="@dimen/dp_14" android:textColor="#ff323232" android:ellipsize="end" android:id="@id/msg_text" android:paddingLeft="@dimen/dp_12" android:paddingTop="@dimen/dp_10" android:paddingRight="@dimen/dp_23" android:paddingBottom="@dimen/dp_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:layout_toLeftOf="@id/msg_time" />
+        </RelativeLayout>
+        <ImageView android:id="@id/newmsg_tag" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/msg_box_new" android:scaleType="centerInside" />
+        <ImageView android:id="@id/has_read" android:background="@drawable/msg_box_item_back_has_read" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+</LinearLayout>

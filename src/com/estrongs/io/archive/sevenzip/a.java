@@ -1,8 +1,8 @@
 package com.estrongs.io.archive.sevenzip;
 
-import com.estrongs.android.util.am;
-import com.estrongs.fs.impl.local.l;
-import com.estrongs.fs.impl.local.r;
+import com.estrongs.android.util.ap;
+import com.estrongs.fs.impl.local.m;
+import com.estrongs.fs.impl.local.s;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -12,7 +12,7 @@ public class a
   private static int d = 7;
   protected boolean a = false;
   protected Object b = new Object();
-  protected r c;
+  protected s c;
   
   static String a(String paramString)
   {
@@ -24,8 +24,8 @@ public class a
   {
     boolean bool4 = true;
     boolean bool3 = true;
-    r localr = l.e();
-    String str = am.j() + "/p7za --version ";
+    s locals = m.e();
+    String str = ap.j() + "/p7za --version ";
     str = str + "\n";
     bool2 = bool4;
     try
@@ -93,7 +93,7 @@ public class a
     try
     {
       c.a.destroy();
-      c = l.e();
+      c = m.e();
       return;
     }
     catch (Exception localException)

@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnDismissListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/kq;
+.field final synthetic a:Lcom/estrongs/android/pop/app/ko;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/kq;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/ko;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/kr;->a:Lcom/estrongs/android/pop/app/kq;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/kr;->a:Lcom/estrongs/android/pop/app/ko;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,8 +22,14 @@
 
 
 # virtual methods
-.method public onDismiss(Landroid/content/DialogInterface;)V
-    .locals 0
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/kr;->a:Lcom/estrongs/android/pop/app/ko;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/ko;->a:Lcom/estrongs/android/pop/app/PopVideoPlayer;
+
+    invoke-virtual {v0}, Lcom/estrongs/android/pop/app/PopVideoPlayer;->finish()V
 
     return-void
 .end method

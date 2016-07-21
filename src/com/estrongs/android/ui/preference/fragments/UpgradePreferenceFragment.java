@@ -5,12 +5,12 @@ import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
-import com.estrongs.android.pop.esclasses.e;
 import com.estrongs.android.pop.esclasses.i;
+import com.estrongs.android.pop.esclasses.m;
 import com.estrongs.android.pop.z;
 
 public class UpgradePreferenceFragment
-  extends i
+  extends m
 {
   private CheckBoxPreference a;
   private Preference b;
@@ -20,9 +20,9 @@ public class UpgradePreferenceFragment
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    addPreferencesFromResource(2131034130);
+    addPreferencesFromResource(2131034131);
     b = findPreference("upgrade_check");
-    b.setOnPreferenceClickListener(new bd(this));
+    b.setOnPreferenceClickListener(new bf(this));
     if (z.y)
     {
       paramBundle = (PreferenceScreen)findPreference("update_preference");
@@ -32,7 +32,7 @@ public class UpgradePreferenceFragment
       }
     }
     a = ((CheckBoxPreference)findPreference("send_statistics"));
-    if ((a != null) && ("CN".equalsIgnoreCase(e.a)) && (z.z))
+    if ((a != null) && ("CN".equalsIgnoreCase(i.a)) && (z.z))
     {
       a.setTitle("统计");
       a.setSummary("发送统计数据");

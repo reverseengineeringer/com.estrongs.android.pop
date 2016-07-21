@@ -5,9 +5,9 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory.Options;
 import android.net.Uri;
 import android.os.ParcelFileDescriptor;
-import android.util.Log;
 import com.estrongs.android.pop.app.imageviewer.BitmapManager;
 import com.estrongs.android.pop.app.imageviewer.ao;
+import com.estrongs.android.util.l;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -101,7 +101,7 @@ public class j
     }
     catch (Exception localException)
     {
-      Log.e("UriImage", "got exception decoding bitmap ", localException);
+      l.c("UriImage", "got exception decoding bitmap ", localException);
     }
     return null;
   }

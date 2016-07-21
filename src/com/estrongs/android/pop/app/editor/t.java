@@ -1,17 +1,42 @@
 package com.estrongs.android.pop.app.editor;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.content.Context;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.view.View.OnTouchListener;
+import com.estrongs.android.pop.app.a;
 
 class t
-  implements DialogInterface.OnClickListener
+  extends a
 {
-  t(PopNoteEditor paramPopNoteEditor) {}
-  
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  t(PopNoteEditor paramPopNoteEditor, View.OnTouchListener paramOnTouchListener)
   {
-    paramDialogInterface.dismiss();
-    a.finish();
+    super(paramOnTouchListener);
+  }
+  
+  public boolean a()
+  {
+    return true;
+  }
+  
+  public void b()
+  {
+    PopNoteEditor.b(a, false);
+  }
+  
+  public void c()
+  {
+    PopNoteEditor.b(a, true);
+  }
+  
+  public boolean d()
+  {
+    return ia).getResources().getConfiguration().orientation == 1;
+  }
+  
+  public boolean e()
+  {
+    return true;
   }
 }
 

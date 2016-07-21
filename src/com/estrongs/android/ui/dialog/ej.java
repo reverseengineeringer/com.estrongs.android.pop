@@ -1,30 +1,26 @@
 package com.estrongs.android.ui.dialog;
 
-import android.widget.TextView;
-import com.estrongs.android.pop.app.diskusage.a;
-import com.estrongs.fs.b.an;
+import android.app.Dialog;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.estrongs.android.pop.view.FileExplorerActivity;
 
 class ej
-  implements Runnable
+  implements View.OnClickListener
 {
-  ej(eb parameb) {}
+  ej(ee paramee) {}
   
-  public void run()
+  public void onClick(View paramView)
   {
-    an localan = eb.a(a).b();
-    a.c.setText(e + " " + a.d + ", " + f + " " + a.e);
-    eb.a(a, a.b, c);
-    if (com.estrongs.android.util.am.ba(eb.c(a))) {
-      eb.a(a, eb.g(a), d);
-    }
     try
     {
-      if ((eb.a(a) != null) && (a.l != null)) {
-        a.l.b(eb.a(a).b());
+      if (a.h != null) {
+        a.h.dismiss();
       }
+      FileExplorerActivity.X().g(ee.f(a));
       return;
     }
-    catch (Exception localException) {}
+    catch (Exception paramView) {}
   }
 }
 

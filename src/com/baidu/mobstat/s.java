@@ -1,189 +1,53 @@
 package com.baidu.mobstat;
 
-import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
-import android.preference.PreferenceManager;
-import android.text.TextUtils;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 class s
 {
-  private final String a = "__Baidu_Stat_SDK_SendRem";
-  private SharedPreferences b;
-  private SharedPreferences c;
+  private String a;
+  private String b;
+  private String c;
   
-  private SharedPreferences a(Context paramContext)
+  public s(String paramString1, String paramString2, String paramString3)
   {
-    if (b == null) {
-      b = paramContext.getSharedPreferences("__Baidu_Stat_SDK_SendRem", 0);
+    String str = paramString1;
+    if (paramString1 == null) {
+      str = "";
     }
-    return b;
-  }
-  
-  private SharedPreferences b(Context paramContext)
-  {
-    if (c == null) {
-      c = PreferenceManager.getDefaultSharedPreferences(paramContext);
+    a = str;
+    paramString1 = paramString2;
+    if (paramString2 == null) {
+      paramString1 = "";
     }
-    return c;
+    b = paramString1;
+    paramString1 = paramString3;
+    if (paramString3 == null) {
+      paramString1 = "";
+    }
+    c = paramString1;
   }
   
-  public boolean getBoolean(Context paramContext, String paramString, boolean paramBoolean)
+  public JSONObject a()
   {
-    return a(paramContext).getBoolean(paramString, paramBoolean);
-  }
-  
-  public Float getFloatt(Context paramContext, String paramString, int paramInt)
-  {
-    return Float.valueOf(a(paramContext).getFloat(paramString, paramInt));
-  }
-  
-  public int getInt(Context paramContext, String paramString, int paramInt)
-  {
-    return a(paramContext).getInt(paramString, paramInt);
-  }
-  
-  public long getLong(Context paramContext, String paramString, long paramLong)
-  {
-    return a(paramContext).getLong(paramString, paramLong);
-  }
-  
-  public boolean getSharedBoolean(Context paramContext, String paramString, boolean paramBoolean)
-  {
-    return b(paramContext).getBoolean(paramString, paramBoolean);
-  }
-  
-  public int getSharedInt(Context paramContext, String paramString, int paramInt)
-  {
-    return b(paramContext).getInt(paramString, paramInt);
-  }
-  
-  public long getSharedLong(Context paramContext, String paramString, long paramLong)
-  {
-    return b(paramContext).getLong(paramString, paramLong);
-  }
-  
-  public String getSharedString(Context paramContext, String paramString1, String paramString2)
-  {
-    return b(paramContext).getString(paramString1, paramString2);
-  }
-  
-  public String getString(Context paramContext, String paramString1, String paramString2)
-  {
-    return a(paramContext).getString(paramString1, paramString2);
-  }
-  
-  public void putBoolean(Context paramContext, String paramString, boolean paramBoolean)
-  {
-    a(paramContext).edit().putBoolean(paramString, paramBoolean).commit();
-  }
-  
-  public void putFloat(Context paramContext, String paramString, Float paramFloat)
-  {
-    a(paramContext).edit().putFloat(paramString, paramFloat.floatValue()).commit();
-  }
-  
-  public void putInt(Context paramContext, String paramString, int paramInt)
-  {
-    a(paramContext).edit().putInt(paramString, paramInt).commit();
-  }
-  
-  public void putLong(Context paramContext, String paramString, long paramLong)
-  {
-    a(paramContext).edit().putLong(paramString, paramLong).commit();
-  }
-  
-  public void putSharedBoolean(Context paramContext, String paramString, boolean paramBoolean)
-  {
-    b(paramContext).edit().putBoolean(paramString, paramBoolean).commit();
-  }
-  
-  public void putSharedInt(Context paramContext, String paramString, int paramInt)
-  {
-    b(paramContext).edit().putInt(paramString, paramInt).commit();
-  }
-  
-  public void putSharedLong(Context paramContext, String paramString, long paramLong)
-  {
-    b(paramContext).edit().putLong(paramString, paramLong).commit();
-  }
-  
-  public void putSharedString(Context paramContext, String paramString1, String paramString2)
-  {
-    b(paramContext).edit().putString(paramString1, paramString2).commit();
-  }
-  
-  public void putString(Context paramContext, String paramString1, String paramString2)
-  {
-    a(paramContext).edit().putString(paramString1, paramString2).commit();
-  }
-  
-  public void removeShare(Context paramContext, String paramString)
-  {
-    b(paramContext).edit().remove(paramString).commit();
-  }
-  
-  public void removeString(Context paramContext, String paramString)
-  {
-    a(paramContext).edit().remove(paramString).commit();
-  }
-  
-  public boolean updateShareBoolean(Intent paramIntent, Activity paramActivity, String paramString)
-  {
-    return updateShareBoolean(paramIntent, paramActivity, paramString, true);
-  }
-  
-  public boolean updateShareBoolean(Intent paramIntent, Activity paramActivity, String paramString, boolean paramBoolean)
-  {
-    if (paramIntent != null)
+    JSONObject localJSONObject = new JSONObject();
+    try
     {
-      boolean bool = paramIntent.getBooleanExtra(paramString, paramBoolean);
-      if (bool != getSharedBoolean(paramActivity, paramString, paramBoolean))
-      {
-        putSharedBoolean(paramActivity, paramString, bool);
-        return true;
-      }
+      localJSONObject.put("n", a);
+      localJSONObject.put("v", b);
+      localJSONObject.put("w", c);
+      return localJSONObject;
     }
-    return false;
+    catch (JSONException localJSONException)
+    {
+      bb.b(localJSONException);
+    }
+    return null;
   }
   
-  public boolean updateShareInt(Intent paramIntent, Activity paramActivity, String paramString, int paramInt)
+  public String b()
   {
-    if (paramIntent != null)
-    {
-      int i = paramIntent.getIntExtra(paramString, paramInt);
-      if (i != getSharedInt(paramActivity, paramString, paramInt))
-      {
-        putSharedInt(paramActivity, paramString, i);
-        return true;
-      }
-    }
-    return false;
-  }
-  
-  public boolean updateShareString(Intent paramIntent, Activity paramActivity, String paramString)
-  {
-    if (paramIntent != null)
-    {
-      String str = paramIntent.getStringExtra(paramString);
-      paramIntent = str;
-      if (str != null)
-      {
-        str = str.trim();
-        paramIntent = str;
-        if (str.length() == 0) {
-          paramIntent = null;
-        }
-      }
-      if (!TextUtils.equals(paramIntent, getSharedString(paramActivity, paramString, null)))
-      {
-        putSharedString(paramActivity, paramString, paramIntent);
-        return true;
-      }
-    }
-    return false;
+    return a;
   }
 }
 

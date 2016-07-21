@@ -1,18 +1,13 @@
 package com.estrongs.android.util;
 
-import com.estrongs.fs.h;
-import com.estrongs.fs.i;
+import java.util.Comparator;
 
 final class aq
-  implements i
+  implements Comparator<String>
 {
-  public boolean a(h paramh)
+  public int a(String paramString1, String paramString2)
   {
-    if (paramh == null) {}
-    while (!am.bW(paramh.getAbsolutePath())) {
-      return true;
-    }
-    return false;
+    return paramString2.length() - paramString1.length();
   }
 }
 

@@ -1,36 +1,20 @@
 package com.estrongs.fs.impl.o;
 
-import java.util.List;
+import com.estrongs.android.pop.netfs.INetRefreshCallback;
 
-class d
-  implements Runnable
+public class d
+  implements INetRefreshCallback
 {
-  d(a parama, List paramList) {}
+  private String a = null;
   
-  public void run()
+  public void a(String paramString)
   {
-    for (;;)
-    {
-      int i;
-      synchronized (a.b(b))
-      {
-        List localList = b.g();
-        i = 0;
-        if (i < a.size())
-        {
-          if (!localList.contains(a.get(i))) {
-            localList.add(a.get(i));
-          }
-        }
-        else
-        {
-          b.c(localList);
-          return;
-        }
-      }
-      i += 1;
-    }
+    a = paramString;
   }
+  
+  public void operation_end(Object paramObject) {}
+  
+  public void operation_start() {}
 }
 
 /* Location:

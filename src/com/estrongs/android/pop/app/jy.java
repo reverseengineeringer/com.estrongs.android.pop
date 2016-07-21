@@ -1,20 +1,17 @@
 package com.estrongs.android.pop.app;
 
-import android.media.MediaPlayer;
-import android.media.MediaPlayer.OnCompletionListener;
+import android.view.View;
+import android.widget.ImageView;
 
 class jy
-  implements MediaPlayer.OnCompletionListener
+  implements com.estrongs.android.ui.e.jy
 {
   jy(PopVideoPlayer paramPopVideoPlayer) {}
   
-  public void onCompletion(MediaPlayer paramMediaPlayer)
+  public void a()
   {
-    if (!"Market".equals("Spreadtrum_cmcc"))
-    {
-      PopVideoPlayer.m(a);
-      a.finish();
-    }
+    ((ImageView)a.d.findViewById(2131624054)).setImageResource(2130838565);
+    PopVideoPlayer.g(a);
   }
 }
 

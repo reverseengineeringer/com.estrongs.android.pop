@@ -1,5 +1,5 @@
 .class public Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
-.super Lcom/estrongs/android/pop/esclasses/ESActivity;
+.super Lcom/estrongs/android/ui/base/HomeAsBackActivity;
 
 # interfaces
 .implements Landroid/widget/AdapterView$OnItemClickListener;
@@ -20,7 +20,7 @@
 
 .field private d:Landroid/widget/ListView;
 
-.field private e:[Lcom/estrongs/android/pop/app/ef;
+.field private e:[Lcom/estrongs/android/pop/app/ee;
 
 .field private f:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -35,34 +35,28 @@
 
 .field private g:Landroid/widget/BaseAdapter;
 
-.field private h:Lcom/estrongs/fs/b/au;
+.field private h:Lcom/estrongs/fs/b/aw;
 
 .field private i:Landroid/os/Handler;
 
-.field private k:Lcom/estrongs/android/ui/theme/al;
+.field private k:Lcom/estrongs/android/ui/theme/at;
 
-.field private l:Lcom/estrongs/android/ui/view/by;
+.field private l:Lcom/estrongs/android/ui/dialog/ci;
 
-.field private m:Landroid/widget/TextView;
+.field private m:Landroid/widget/ProgressBar;
 
-.field private n:Z
+.field private n:Landroid/widget/FrameLayout;
 
-.field private o:Lcom/estrongs/android/ui/dialog/cg;
+.field private o:Lcom/estrongs/android/view/a/a;
 
-.field private p:Lcom/estrongs/android/ui/e/cf;
-
-.field private q:Landroid/widget/ProgressBar;
-
-.field private r:Landroid/widget/FrameLayout;
-
-.field private t:Landroid/widget/FrameLayout;
+.field private p:Lcom/estrongs/android/view/a/a;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;-><init>()V
 
     const/4 v0, 0x0
 
@@ -76,49 +70,25 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->q:Landroid/widget/ProgressBar;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->m:Landroid/widget/ProgressBar;
 
     return-void
-.end method
-
-.method public static a()V
-    .locals 1
-
-    sget-object v0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->j:Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
-
-    if-nez v0, :cond_0
-
-    :goto_0
-    return-void
-
-    :cond_0
-    sget-object v0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->j:Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
-
-    invoke-direct {v0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->i()V
-
-    sget-object v0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->j:Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
-
-    iget-object v0, v0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->g:Landroid/widget/BaseAdapter;
-
-    invoke-virtual {v0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
-
-    goto :goto_0
 .end method
 
 .method static synthetic a(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->i()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->k()V
 
     return-void
 .end method
 
-.method public static a(Lcom/estrongs/android/pop/esclasses/ESActivity;Ljava/util/ArrayList;Z)V
-    .locals 2
+.method public static a(Lcom/estrongs/android/pop/app/d/a;Ljava/util/ArrayList;Z)V
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/estrongs/android/pop/esclasses/ESActivity;",
+            "Lcom/estrongs/android/pop/app/d/a;",
             "Ljava/util/ArrayList",
             "<",
             "Ljava/lang/String;",
@@ -138,21 +108,29 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putStringArrayListExtra(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;
 
-    const-class v1, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
+    invoke-interface {p0}, Lcom/estrongs/android/pop/app/d/a;->n()Landroid/content/Context;
 
-    invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+    move-result-object v1
 
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/esclasses/ESActivity;->startActivity(Landroid/content/Intent;)V
+    const-class v2, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+
+    invoke-interface {p0}, Lcom/estrongs/android/pop/app/d/a;->G()Landroid/app/Activity;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     return-void
 .end method
 
-.method public static a(Lcom/estrongs/android/pop/esclasses/ESActivity;Ljava/util/List;)V
+.method public static a(Lcom/estrongs/android/pop/app/d/a;Ljava/util/List;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/estrongs/android/pop/esclasses/ESActivity;",
+            "Lcom/estrongs/android/pop/app/d/a;",
             "Ljava/util/List",
             "<",
             "Lcom/estrongs/fs/h;",
@@ -162,17 +140,17 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p0, p1, v0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->a(Lcom/estrongs/android/pop/esclasses/ESActivity;Ljava/util/List;Z)V
+    invoke-static {p0, p1, v0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->a(Lcom/estrongs/android/pop/app/d/a;Ljava/util/List;Z)V
 
     return-void
 .end method
 
-.method public static a(Lcom/estrongs/android/pop/esclasses/ESActivity;Ljava/util/List;Z)V
+.method public static a(Lcom/estrongs/android/pop/app/d/a;Ljava/util/List;Z)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/estrongs/android/pop/esclasses/ESActivity;",
+            "Lcom/estrongs/android/pop/app/d/a;",
             "Ljava/util/List",
             "<",
             "Lcom/estrongs/fs/h;",
@@ -199,7 +177,7 @@
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/estrongs/fs/impl/b/c;
+    instance-of v0, v0, Lcom/estrongs/fs/impl/b/d;
 
     if-eqz v0, :cond_0
 
@@ -207,13 +185,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/estrongs/fs/impl/b/c;
+    check-cast v0, Lcom/estrongs/fs/impl/b/d;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/c;->getAbsolutePath()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/d;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
 
@@ -227,7 +205,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/c;->getName()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/estrongs/fs/impl/b/d;->getName()Ljava/lang/String;
 
     move-result-object v0
 
@@ -270,13 +248,17 @@
     goto :goto_1
 
     :cond_1
-    invoke-static {p0}, Lcom/estrongs/fs/b/au;->a(Landroid/content/Context;)[B
+    invoke-interface {p0}, Lcom/estrongs/android/pop/app/d/a;->n()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/estrongs/fs/b/aw;->a(Landroid/content/Context;)[B
 
     move-result-object v0
 
     if-nez v0, :cond_2
 
-    invoke-static {p0, v3, p2}, Lcom/estrongs/android/pop/app/network/EsNetworkActivity;->a(Lcom/estrongs/android/pop/esclasses/ESActivity;Ljava/util/ArrayList;Z)V
+    invoke-static {p0, v3, p2}, Lcom/estrongs/android/pop/app/network/EsNetworkActivity;->a(Lcom/estrongs/android/pop/app/d/a;Ljava/util/ArrayList;Z)V
 
     :goto_2
     return-void
@@ -296,7 +278,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->bb(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->bm(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -306,7 +288,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/estrongs/android/pop/a;->d:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/a;->f:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -324,7 +306,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/estrongs/android/util/am;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/util/ap;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -336,54 +318,38 @@
 
     move-result-object v1
 
+    invoke-interface {p0}, Lcom/estrongs/android/pop/app/d/a;->G()Landroid/app/Activity;
+
+    move-result-object v4
+
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    new-instance v4, Lcom/estrongs/android/pop/app/dx;
+    new-instance v5, Lcom/estrongs/android/pop/app/ea;
 
-    invoke-direct {v4, v3, v1, p0, p2}, Lcom/estrongs/android/pop/app/dx;-><init>(Ljava/util/ArrayList;Ljava/lang/String;Lcom/estrongs/android/pop/esclasses/ESActivity;Z)V
+    invoke-direct {v5, v3, v1, p0, p2}, Lcom/estrongs/android/pop/app/ea;-><init>(Ljava/util/ArrayList;Ljava/lang/String;Lcom/estrongs/android/pop/app/d/a;Z)V
 
-    invoke-static {p0, v0, v1, v4, v2}, Lcom/estrongs/android/pop/view/utils/AppRunner;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;Z)V
+    invoke-static {v4, v0, v1, v5, v2}, Lcom/estrongs/android/pop/view/utils/AppRunner;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;Z)V
 
     goto :goto_2
 
     :cond_3
-    invoke-static {p0, v3, p2}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->a(Lcom/estrongs/android/pop/esclasses/ESActivity;Ljava/util/ArrayList;Z)V
+    invoke-static {p0, v3, p2}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->a(Lcom/estrongs/android/pop/app/d/a;Ljava/util/ArrayList;Z)V
 
     goto :goto_2
 .end method
 
 .method private a(Z)V
-    .locals 6
+    .locals 3
 
-    const/4 v5, 0x0
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->n:Landroid/widget/FrameLayout;
 
-    const/4 v3, 0x1
+    if-nez v0, :cond_2
 
-    const/4 v4, 0x0
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->r:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->removeAllViews()V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->r:Landroid/widget/FrameLayout;
-
-    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v1
-
-    const v2, 0x7f030057
-
-    invoke-virtual {v1, v2, v5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
-
-    const v0, 0x7f0a01a0
+    const v0, 0x7f0e035d
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->findViewById(I)Landroid/view/View;
 
@@ -391,39 +357,11 @@
 
     check-cast v0, Landroid/widget/FrameLayout;
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->k:Lcom/estrongs/android/ui/theme/al;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->n:Landroid/widget/FrameLayout;
 
-    invoke-virtual {v1}, Lcom/estrongs/android/ui/theme/al;->h()Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->n:Landroid/widget/FrameLayout;
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->t:Landroid/widget/FrameLayout;
-
-    if-nez v1, :cond_4
-
-    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v1
-
-    const v2, 0x7f030027
-
-    invoke-virtual {v1, v2, v5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/FrameLayout;
-
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->t:Landroid/widget/FrameLayout;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->t:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->t:Landroid/widget/FrameLayout;
-
-    const v1, 0x7f0a00f8
+    const v1, 0x7f0e03b6
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -433,9 +371,9 @@
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->d:Landroid/widget/ListView;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->t:Landroid/widget/FrameLayout;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->n:Landroid/widget/FrameLayout;
 
-    const v1, 0x7f0a00f9
+    const v1, 0x7f0e035e
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -453,7 +391,7 @@
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->d:Landroid/widget/ListView;
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->k()Landroid/widget/BaseAdapter;
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->l()Landroid/widget/BaseAdapter;
 
     move-result-object v1
 
@@ -463,38 +401,28 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->r:Landroid/widget/FrameLayout;
+    const v0, 0x7f0e01ed
 
-    const v1, 0x7f0a008f
-
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/ProgressBar;
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->q:Landroid/widget/ProgressBar;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->m:Landroid/widget/ProgressBar;
 
-    new-instance v0, Lcom/estrongs/android/ui/e/cf;
-
-    iget-boolean v1, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->n:Z
-
-    invoke-direct {v0, p0, v1}, Lcom/estrongs/android/ui/e/cf;-><init>(Landroid/content/Context;Z)V
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->p:Lcom/estrongs/android/ui/e/cf;
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ef;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ee;
 
     monitor-enter v1
 
     :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ef;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ee;
 
     array-length v0, v0
 
     if-nez v0, :cond_3
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->h:Lcom/estrongs/fs/b/au;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->h:Lcom/estrongs/fs/b/aw;
 
     if-nez v0, :cond_0
 
@@ -502,14 +430,14 @@
 
     const/4 v0, 0x1
 
-    invoke-static {p0, p0, p0, v0}, Lcom/estrongs/fs/b/au;->a(Landroid/app/Activity;Lcom/estrongs/a/a/p;Lcom/estrongs/a/a/l;Z)Lcom/estrongs/fs/b/au;
+    invoke-static {p0, p0, p0, v0}, Lcom/estrongs/fs/b/aw;->a(Landroid/app/Activity;Lcom/estrongs/a/a/p;Lcom/estrongs/a/a/l;Z)Lcom/estrongs/fs/b/aw;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->h:Lcom/estrongs/fs/b/au;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->h:Lcom/estrongs/fs/b/aw;
 
     :cond_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->q:Landroid/widget/ProgressBar;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->m:Landroid/widget/ProgressBar;
 
     const/4 v2, 0x0
 
@@ -524,84 +452,16 @@
     :cond_1
     :goto_0
     monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_1
-    const v0, 0x7f0a00cd
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->m:Landroid/widget/TextView;
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->m:Landroid/widget/TextView;
-
-    const v1, 0x7f0b00d5
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
-
-    const v0, 0x7f0a019f
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    new-instance v1, Lcom/estrongs/android/ui/view/by;
-
-    invoke-direct {v1, p0, v0, v3}, Lcom/estrongs/android/ui/view/by;-><init>(Landroid/app/Activity;Landroid/widget/RelativeLayout;I)V
-
-    iput-object v1, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->l:Lcom/estrongs/android/ui/view/by;
-
-    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->c:Z
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->p:Lcom/estrongs/android/ui/e/cf;
-
-    const/4 v1, 0x2
-
-    const v2, 0x7f0b001d
-
-    const v3, 0x7f0202cb
-
-    invoke-virtual {v0, v1, v2, v3}, Lcom/estrongs/android/ui/e/cf;->a(III)V
 
     :cond_2
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->l:Lcom/estrongs/android/ui/view/by;
-
-    const-string v1, "normal_mode"
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->p:Lcom/estrongs/android/ui/e/cf;
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/view/by;->a(Ljava/lang/String;Lcom/estrongs/android/ui/e/a;)V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->l:Lcom/estrongs/android/ui/view/by;
-
-    const-string v1, "normal_mode"
-
-    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/estrongs/android/ui/view/by;->a(Ljava/lang/String;Ljava/lang/Boolean;)V
-
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->j()V
-
     return-void
 
     :cond_3
-    :try_start_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->h:Lcom/estrongs/fs/b/au;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->h:Lcom/estrongs/fs/b/aw;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->q:Landroid/widget/ProgressBar;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->m:Landroid/widget/ProgressBar;
 
     const/4 v2, 0x0
 
@@ -613,19 +473,10 @@
     move-exception v0
 
     monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
-
-    :cond_4
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->removeAllViews()V
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->t:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
-
-    goto :goto_1
 .end method
 
 .method static synthetic b(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)Landroid/widget/BaseAdapter;
@@ -636,39 +487,55 @@
     return-object v0
 .end method
 
-.method static synthetic c(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)[Lcom/estrongs/android/pop/app/ef;
+.method static synthetic c(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)[Lcom/estrongs/android/pop/app/ee;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ef;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ee;
 
     return-object v0
 .end method
 
-.method static synthetic d(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)Lcom/estrongs/android/ui/e/cf;
+.method static synthetic d(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)Landroid/widget/ProgressBar;
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->p:Lcom/estrongs/android/ui/e/cf;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->m:Landroid/widget/ProgressBar;
 
     return-object v0
 .end method
 
-.method static synthetic e(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)Landroid/widget/ProgressBar;
+.method public static d()V
     .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->q:Landroid/widget/ProgressBar;
+    sget-object v0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->j:Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
+
+    if-nez v0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    sget-object v0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->j:Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
+
+    invoke-direct {v0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->k()V
+
+    sget-object v0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->j:Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
+
+    iget-object v0, v0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->g:Landroid/widget/BaseAdapter;
+
+    invoke-virtual {v0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
+
+    goto :goto_0
+.end method
+
+.method static synthetic e(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)Lcom/estrongs/android/ui/theme/at;
+    .locals 1
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->k:Lcom/estrongs/android/ui/theme/at;
 
     return-object v0
 .end method
 
-.method static synthetic f(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)Lcom/estrongs/android/ui/theme/al;
-    .locals 1
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->k:Lcom/estrongs/android/ui/theme/al;
-
-    return-object v0
-.end method
-
-.method static synthetic g()Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
+.method static synthetic j()Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
     .locals 1
 
     sget-object v0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->j:Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
@@ -676,46 +543,21 @@
     return-object v0
 .end method
 
-.method private h()V
-    .locals 2
-
-    const v0, 0x7f0a01a0
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/FrameLayout;
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->t:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->t:Landroid/widget/FrameLayout;
-
-    return-void
-.end method
-
-.method private i()V
+.method private k()V
     .locals 7
 
     const/4 v1, 0x0
 
-    iget-object v3, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ef;
+    iget-object v3, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ee;
 
     monitor-enter v3
 
     :try_start_0
-    invoke-static {p0}, Lcom/estrongs/fs/b/au;->b(Landroid/content/Context;)[Ljava/lang/String;
+    invoke-static {p0}, Lcom/estrongs/fs/b/aw;->b(Landroid/content/Context;)[Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/ef;->a([Ljava/lang/String;)[Lcom/estrongs/android/pop/app/ef;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/ee;->a([Ljava/lang/String;)[Lcom/estrongs/android/pop/app/ee;
 
     move-result-object v4
 
@@ -729,21 +571,21 @@
     move v0, v1
 
     :goto_1
-    iget-object v5, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ef;
+    iget-object v5, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ee;
 
     array-length v5, v5
 
     if-ge v0, v5, :cond_1
 
-    iget-object v5, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ef;
+    iget-object v5, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ee;
 
     aget-object v5, v5, v0
 
-    iget-object v5, v5, Lcom/estrongs/android/pop/app/ef;->b:Ljava/lang/String;
+    iget-object v5, v5, Lcom/estrongs/android/pop/app/ee;->b:Ljava/lang/String;
 
     aget-object v6, v4, v2
 
-    iget-object v6, v6, Lcom/estrongs/android/pop/app/ef;->b:Ljava/lang/String;
+    iget-object v6, v6, Lcom/estrongs/android/pop/app/ee;->b:Ljava/lang/String;
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -753,13 +595,13 @@
 
     aget-object v5, v4, v2
 
-    iget-object v6, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ef;
+    iget-object v6, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ee;
 
     aget-object v6, v6, v0
 
-    iget-boolean v6, v6, Lcom/estrongs/android/pop/app/ef;->c:Z
+    iget-boolean v6, v6, Lcom/estrongs/android/pop/app/ee;->c:Z
 
-    iput-boolean v6, v5, Lcom/estrongs/android/pop/app/ef;->c:Z
+    iput-boolean v6, v5, Lcom/estrongs/android/pop/app/ee;->c:Z
 
     :cond_0
     add-int/lit8 v0, v0, 0x1
@@ -774,9 +616,9 @@
     goto :goto_0
 
     :cond_2
-    iput-object v4, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ef;
+    iput-object v4, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ee;
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->l()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->m()V
 
     monitor-exit v3
 
@@ -792,44 +634,12 @@
     throw v0
 .end method
 
-.method private j()V
-    .locals 3
-
-    const v0, 0x7f0a007d
-
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    invoke-virtual {v0}, Landroid/widget/ImageView;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/LinearLayout;
-
-    new-instance v2, Lcom/estrongs/android/pop/app/dy;
-
-    invoke-direct {v2, p0, v0}, Lcom/estrongs/android/pop/app/dy;-><init>(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;Landroid/widget/ImageView;)V
-
-    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    new-instance v1, Lcom/estrongs/android/pop/app/dz;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/dz;-><init>(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    return-void
-.end method
-
-.method private k()Landroid/widget/BaseAdapter;
+.method private l()Landroid/widget/BaseAdapter;
     .locals 1
 
-    new-instance v0, Lcom/estrongs/android/pop/app/dw;
+    new-instance v0, Lcom/estrongs/android/pop/app/dv;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/dw;-><init>(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/dv;-><init>(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)V
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->g:Landroid/widget/BaseAdapter;
 
@@ -838,68 +648,65 @@
     return-object v0
 .end method
 
-.method private l()V
+.method private m()V
     .locals 4
 
     const/4 v3, 0x1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->p:Lcom/estrongs/android/ui/e/cf;
+    const/4 v1, 0x0
 
-    if-nez v0, :cond_0
+    move v0, v1
 
     :goto_0
-    return-void
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ee;
+
+    array-length v2, v2
+
+    if-ge v0, v2, :cond_0
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ee;
+
+    aget-object v2, v2, v0
+
+    iget-boolean v2, v2, Lcom/estrongs/android/pop/app/ee;->c:Z
+
+    if-nez v2, :cond_1
 
     :cond_0
-    const/4 v0, 0x0
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ee;
+
+    array-length v2, v2
+
+    if-ne v0, v2, :cond_2
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->o:Lcom/estrongs/android/view/a/a;
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/a/a;->c(Z)Lcom/estrongs/android/view/a/a;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->p:Lcom/estrongs/android/view/a/a;
+
+    invoke-virtual {v0, v3}, Lcom/estrongs/android/view/a/a;->c(Z)Lcom/estrongs/android/view/a/a;
 
     :goto_1
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ef;
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->invalidateOptionsMenu()V
 
-    array-length v1, v1
-
-    if-ge v0, v1, :cond_1
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ef;
-
-    aget-object v1, v1, v0
-
-    iget-boolean v1, v1, Lcom/estrongs/android/pop/app/ef;->c:Z
-
-    if-nez v1, :cond_2
+    return-void
 
     :cond_1
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ef;
-
-    array-length v1, v1
-
-    if-ne v0, v1, :cond_3
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->p:Lcom/estrongs/android/ui/e/cf;
-
-    const v1, 0x7f0b002c
-
-    const v2, 0x7f0202aa
-
-    invoke-virtual {v0, v3, v1, v2}, Lcom/estrongs/android/ui/e/cf;->a(III)V
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     :cond_2
-    add-int/lit8 v0, v0, 0x1
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->o:Lcom/estrongs/android/view/a/a;
+
+    invoke-virtual {v0, v3}, Lcom/estrongs/android/view/a/a;->c(Z)Lcom/estrongs/android/view/a/a;
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->p:Lcom/estrongs/android/view/a/a;
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/a/a;->c(Z)Lcom/estrongs/android/view/a/a;
 
     goto :goto_1
-
-    :cond_3
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->p:Lcom/estrongs/android/ui/e/cf;
-
-    const v1, 0x7f0b002b
-
-    const v2, 0x7f0202a8
-
-    invoke-virtual {v0, v3, v1, v2}, Lcom/estrongs/android/ui/e/cf;->a(III)V
-
-    goto :goto_0
 .end method
 
 
@@ -937,7 +744,7 @@
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     :cond_1
-    iput-object v2, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->h:Lcom/estrongs/fs/b/au;
+    iput-object v2, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->h:Lcom/estrongs/fs/b/aw;
 
     :cond_2
     return-void
@@ -970,21 +777,140 @@
     return-void
 .end method
 
-.method public b()V
+.method protected a(Ljava/util/List;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/estrongs/android/view/a/a;",
+            ">;)V"
+        }
+    .end annotation
+
+    new-instance v0, Lcom/estrongs/android/view/a/a;
+
+    const v1, 0x7f02043c
+
+    const v2, 0x7f0800a0
+
+    invoke-direct {v0, v1, v2}, Lcom/estrongs/android/view/a/a;-><init>(II)V
+
+    new-instance v1, Lcom/estrongs/android/pop/app/dw;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/dw;-><init>(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)V
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/a/a;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)Lcom/estrongs/android/view/a/a;
+
+    move-result-object v2
+
+    new-instance v0, Lcom/estrongs/android/view/a/a;
+
+    const v1, 0x7f020401
+
+    const v3, 0x7f0800a7
+
+    invoke-direct {v0, v1, v3}, Lcom/estrongs/android/view/a/a;-><init>(II)V
+
+    new-instance v1, Lcom/estrongs/android/pop/app/dx;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/dx;-><init>(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)V
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/a/a;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)Lcom/estrongs/android/view/a/a;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->o:Lcom/estrongs/android/view/a/a;
+
+    new-instance v0, Lcom/estrongs/android/view/a/a;
+
+    const v1, 0x7f020400
+
+    const v3, 0x7f0800a9
+
+    invoke-direct {v0, v1, v3}, Lcom/estrongs/android/view/a/a;-><init>(II)V
+
+    new-instance v1, Lcom/estrongs/android/pop/app/dy;
+
+    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/dy;-><init>(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)V
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/a/a;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)Lcom/estrongs/android/view/a/a;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/a/a;->c(Z)Lcom/estrongs/android/view/a/a;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->p:Lcom/estrongs/android/view/a/a;
+
+    new-instance v3, Lcom/estrongs/android/view/a/a;
+
+    iget-boolean v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->c:Z
+
+    if-eqz v0, :cond_0
+
+    const v0, 0x7f020435
+
+    :goto_0
+    iget-boolean v1, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->c:Z
+
+    if-eqz v1, :cond_1
+
+    const v1, 0x7f08009b
+
+    :goto_1
+    invoke-direct {v3, v0, v1}, Lcom/estrongs/android/view/a/a;-><init>(II)V
+
+    new-instance v0, Lcom/estrongs/android/pop/app/dz;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/dz;-><init>(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)V
+
+    invoke-virtual {v3, v0}, Lcom/estrongs/android/view/a/a;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)Lcom/estrongs/android/view/a/a;
+
+    move-result-object v0
+
+    invoke-interface {p1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->o:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {p1, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->p:Lcom/estrongs/android/view/a/a;
+
+    invoke-interface {p1, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    return-void
+
+    :cond_0
+    const v0, 0x7f020449
+
+    goto :goto_0
+
+    :cond_1
+    const v1, 0x7f0800aa
+
+    goto :goto_1
+.end method
+
+.method public e()V
     .locals 10
 
     const/4 v1, 0x1
 
     const/4 v3, 0x0
 
+    const v0, 0x7f0805c5
+
     :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->m:Landroid/widget/TextView;
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->setTitle(I)V
 
-    const v2, 0x7f0b0086
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
-
-    iget-object v5, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ef;
+    iget-object v5, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ee;
 
     monitor-enter v5
     :try_end_0
@@ -996,17 +922,17 @@
 
     :goto_0
     :try_start_1
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ef;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ee;
 
     array-length v2, v2
 
     if-ge v4, v2, :cond_4
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ef;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ee;
 
     aget-object v2, v2, v4
 
-    iget-boolean v2, v2, Lcom/estrongs/android/pop/app/ef;->c:Z
+    iget-boolean v2, v2, Lcom/estrongs/android/pop/app/ee;->c:Z
 
     if-eqz v2, :cond_2
 
@@ -1018,7 +944,7 @@
 
     invoke-direct {v6}, Landroid/app/Notification;-><init>()V
 
-    const v0, 0x7f0b003c
+    const v0, 0x7f0800ac
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->getString(I)Ljava/lang/String;
 
@@ -1032,7 +958,7 @@
 
     iput-wide v8, v6, Landroid/app/Notification;->when:J
 
-    const v0, 0x7f0202cb
+    const v0, 0x7f020435
 
     iput v0, v6, Landroid/app/Notification;->icon:I
 
@@ -1052,13 +978,13 @@
 
     check-cast v0, Lcom/estrongs/fs/h;
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ef;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ee;
 
     aget-object v2, v2, v4
 
-    iget-object v2, v2, Lcom/estrongs/android/pop/app/ef;->b:Ljava/lang/String;
+    iget-object v2, v2, Lcom/estrongs/android/pop/app/ee;->b:Ljava/lang/String;
 
-    invoke-static {p0, v0, v2}, Lcom/estrongs/fs/b/ay;->a(Landroid/content/Context;Lcom/estrongs/fs/h;Ljava/lang/String;)Lcom/estrongs/fs/b/ay;
+    invoke-static {p0, v0, v2}, Lcom/estrongs/fs/b/ba;->a(Landroid/content/Context;Lcom/estrongs/fs/h;Ljava/lang/String;)Lcom/estrongs/fs/b/ba;
 
     new-instance v7, Landroid/content/Intent;
 
@@ -1131,7 +1057,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0b003c
+    const v2, 0x7f0800ac
 
     invoke-virtual {p0, v2}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->getString(I)Ljava/lang/String;
 
@@ -1160,15 +1086,15 @@
     :cond_3
     iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->f:Ljava/util/List;
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ef;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ee;
 
     aget-object v2, v2, v4
 
-    iget-object v2, v2, Lcom/estrongs/android/pop/app/ef;->b:Ljava/lang/String;
+    iget-object v2, v2, Lcom/estrongs/android/pop/app/ee;->b:Ljava/lang/String;
 
     const/4 v6, 0x1
 
-    invoke-static {p0, v0, v2, v6}, Lcom/estrongs/fs/b/bm;->a(Landroid/app/Activity;Ljava/util/List;Ljava/lang/String;Z)Lcom/estrongs/fs/b/bm;
+    invoke-static {p0, v0, v2, v6}, Lcom/estrongs/fs/b/bo;->a(Landroid/app/Activity;Ljava/util/List;Ljava/lang/String;Z)Lcom/estrongs/fs/b/bo;
 
     move v0, v1
 
@@ -1186,11 +1112,11 @@
     return-void
 
     :cond_5
-    const v0, 0x7f0b00dd
+    const v0, 0x7f080641
 
     const/4 v1, 0x1
 
-    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {p0, v0, v1}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     goto :goto_3
 
@@ -1212,26 +1138,26 @@
     goto :goto_4
 .end method
 
-.method public c()V
+.method public f()V
     .locals 3
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->h:Lcom/estrongs/fs/b/au;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->h:Lcom/estrongs/fs/b/aw;
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lcom/estrongs/android/ui/dialog/jw;
+    new-instance v0, Lcom/estrongs/android/ui/dialog/kh;
 
-    const v1, 0x7f0b0076
+    const v1, 0x7f0805be
 
     invoke-virtual {p0, v1}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->h:Lcom/estrongs/fs/b/au;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->h:Lcom/estrongs/fs/b/aw;
 
-    invoke-direct {v0, p0, v1, v2}, Lcom/estrongs/android/ui/dialog/jw;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/a/a;)V
+    invoke-direct {v0, p0, v1, v2}, Lcom/estrongs/android/ui/dialog/kh;-><init>(Landroid/app/Activity;Ljava/lang/String;Lcom/estrongs/a/a;)V
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/jw;->show()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/kh;->show()V
 
     :goto_0
     return-void
@@ -1239,13 +1165,13 @@
     :cond_0
     const/4 v0, 0x1
 
-    invoke-static {p0, p0, p0, v0}, Lcom/estrongs/fs/b/au;->a(Landroid/app/Activity;Lcom/estrongs/a/a/p;Lcom/estrongs/a/a/l;Z)Lcom/estrongs/fs/b/au;
+    invoke-static {p0, p0, p0, v0}, Lcom/estrongs/fs/b/aw;->a(Landroid/app/Activity;Lcom/estrongs/a/a/p;Lcom/estrongs/a/a/l;Z)Lcom/estrongs/fs/b/aw;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->h:Lcom/estrongs/fs/b/au;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->h:Lcom/estrongs/fs/b/aw;
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->q:Landroid/widget/ProgressBar;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->m:Landroid/widget/ProgressBar;
 
     const/4 v1, 0x0
 
@@ -1254,83 +1180,30 @@
     goto :goto_0
 .end method
 
-.method public d()V
-    .locals 4
-
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ef;
-
-    monitor-enter v1
-
-    const/4 v0, 0x0
-
-    :goto_0
-    :try_start_0
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ef;
-
-    array-length v2, v2
-
-    if-ge v0, v2, :cond_0
-
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ef;
-
-    aget-object v2, v2, v0
-
-    const/4 v3, 0x1
-
-    iput-boolean v3, v2, Lcom/estrongs/android/pop/app/ef;->c:Z
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->l()V
-
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->g:Landroid/widget/BaseAdapter;
-
-    invoke-virtual {v0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public e()V
+.method public h()V
     .locals 4
 
     const/4 v0, 0x0
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ef;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ee;
 
     monitor-enter v1
 
     :goto_0
     :try_start_0
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ef;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ee;
 
     array-length v2, v2
 
     if-ge v0, v2, :cond_0
 
-    iget-object v2, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ef;
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ee;
 
     aget-object v2, v2, v0
 
     const/4 v3, 0x0
 
-    iput-boolean v3, v2, Lcom/estrongs/android/pop/app/ef;->c:Z
+    iput-boolean v3, v2, Lcom/estrongs/android/pop/app/ee;->c:Z
 
     add-int/lit8 v0, v0, 0x1
 
@@ -1341,7 +1214,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->l()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->m()V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->g:Landroid/widget/BaseAdapter;
 
@@ -1360,22 +1233,71 @@
     throw v0
 .end method
 
-.method public f()V
-    .locals 5
+.method public h_()V
+    .locals 4
 
-    const v4, 0x7f0b0045
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ee;
 
-    const v3, 0x7f0b000c
+    monitor-enter v1
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->o:Lcom/estrongs/android/ui/dialog/cg;
+    const/4 v0, 0x0
+
+    :goto_0
+    :try_start_0
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ee;
+
+    array-length v2, v2
+
+    if-ge v0, v2, :cond_0
+
+    iget-object v2, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ee;
+
+    aget-object v2, v2, v0
+
+    const/4 v3, 0x1
+
+    iput-boolean v3, v2, Lcom/estrongs/android/pop/app/ee;->c:Z
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->m()V
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->g:Landroid/widget/BaseAdapter;
+
+    invoke-virtual {v0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public i()V
+    .locals 4
+
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->l:Lcom/estrongs/android/ui/dialog/ci;
 
     if-nez v0, :cond_1
 
-    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/g;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {p0}, Lcom/estrongs/android/pop/esclasses/k;->a(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    const v1, 0x7f030039
+    const v1, 0x7f030091
 
     const/4 v2, 0x0
 
@@ -1383,7 +1305,21 @@
 
     move-result-object v1
 
-    const v0, 0x7f0a0119
+    new-instance v0, Lcom/estrongs/android/ui/dialog/cv;
+
+    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/dialog/cv;-><init>(Landroid/content/Context;)V
+
+    const v2, 0x7f0803e6
+
+    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/dialog/cv;->a(I)Lcom/estrongs/android/ui/dialog/cv;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/cv;->a(Landroid/view/View;)Lcom/estrongs/android/ui/dialog/cv;
+
+    move-result-object v2
+
+    const v0, 0x7f0e0258
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1391,151 +1327,103 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    new-instance v2, Lcom/estrongs/android/pop/app/ea;
+    new-instance v3, Lcom/estrongs/android/pop/app/eb;
 
-    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/ea;-><init>(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)V
+    invoke-direct {v3, p0}, Lcom/estrongs/android/pop/app/eb;-><init>(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)V
 
-    invoke-virtual {v0, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    new-instance v0, Lcom/estrongs/android/ui/dialog/ct;
+    const v0, 0x7f0e02bd
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/ui/dialog/ct;-><init>(Landroid/content/Context;)V
-
-    const v2, 0x7f0b004c
-
-    invoke-virtual {v0, v2}, Lcom/estrongs/android/ui/dialog/ct;->a(I)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ct;->a(Landroid/view/View;)Lcom/estrongs/android/ui/dialog/ct;
+    check-cast v0, Landroid/widget/Button;
+
+    new-instance v3, Lcom/estrongs/android/pop/app/ec;
+
+    invoke-direct {v3, p0, v2}, Lcom/estrongs/android/pop/app/ec;-><init>(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;Lcom/estrongs/android/ui/dialog/cv;)V
+
+    invoke-virtual {v0, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    const v0, 0x7f0e02be
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
+
+    check-cast v0, Landroid/widget/Button;
+
+    new-instance v3, Lcom/estrongs/android/pop/app/ed;
+
+    invoke-direct {v3, p0, v2}, Lcom/estrongs/android/pop/app/ed;-><init>(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;Lcom/estrongs/android/ui/dialog/cv;)V
+
+    invoke-virtual {v0, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    const v3, 0x7f0e02bf
+
+    invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/Button;
+
+    new-instance v3, Lcom/estrongs/android/pop/app/du;
+
+    invoke-direct {v3, p0, v2}, Lcom/estrongs/android/pop/app/du;-><init>(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;Lcom/estrongs/android/ui/dialog/cv;)V
+
+    invoke-virtual {v1, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     sget-boolean v1, Lcom/estrongs/android/pop/z;->D:Z
 
     if-nez v1, :cond_0
 
-    new-instance v1, Lcom/estrongs/android/pop/app/ed;
-
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/ed;-><init>(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)V
-
-    invoke-virtual {v0, v3, v1}, Lcom/estrongs/android/ui/dialog/ct;->d(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v1
-
-    new-instance v2, Lcom/estrongs/android/pop/app/ec;
-
-    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/ec;-><init>(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)V
-
-    invoke-virtual {v1, v4, v2}, Lcom/estrongs/android/ui/dialog/ct;->e(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v1
-
-    const v2, 0x7f0b00c1
-
-    new-instance v3, Lcom/estrongs/android/pop/app/eb;
-
-    invoke-direct {v3, p0}, Lcom/estrongs/android/pop/app/eb;-><init>(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)V
-
-    invoke-virtual {v1, v2, v3}, Lcom/estrongs/android/ui/dialog/ct;->f(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
-
     :goto_0
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ct;->c()Lcom/estrongs/android/ui/dialog/cg;
+    invoke-virtual {v2}, Lcom/estrongs/android/ui/dialog/cv;->c()Lcom/estrongs/android/ui/dialog/ci;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->o:Lcom/estrongs/android/ui/dialog/cg;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->l:Lcom/estrongs/android/ui/dialog/ci;
 
     :goto_1
     return-void
 
     :cond_0
-    new-instance v1, Lcom/estrongs/android/pop/app/dv;
+    const/16 v1, 0x8
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/pop/app/dv;-><init>(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)V
-
-    invoke-virtual {v0, v3, v1}, Lcom/estrongs/android/ui/dialog/ct;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
-
-    move-result-object v1
-
-    new-instance v2, Lcom/estrongs/android/pop/app/ee;
-
-    invoke-direct {v2, p0}, Lcom/estrongs/android/pop/app/ee;-><init>(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)V
-
-    invoke-virtual {v1, v4, v2}, Lcom/estrongs/android/ui/dialog/ct;->c(ILandroid/content/DialogInterface$OnClickListener;)Lcom/estrongs/android/ui/dialog/ct;
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setVisibility(I)V
 
     goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->o:Lcom/estrongs/android/ui/dialog/cg;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->l:Lcom/estrongs/android/ui/dialog/ci;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/cg;->show()V
+    invoke-virtual {v0}, Lcom/estrongs/android/ui/dialog/ci;->show()V
 
     goto :goto_1
-.end method
-
-.method public onConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 3
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
-
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/content/res/Configuration;->orientation:I
-
-    if-ne v2, v0, :cond_0
-
-    :goto_0
-    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->n:Z
-
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->h()V
-
-    invoke-direct {p0, v1}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->a(Z)V
-
-    return-void
-
-    :cond_0
-    move v0, v1
-
-    goto :goto_0
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 12
 
-    const v11, 0x7f0b02fd
+    const v11, 0x7f0804a1
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    const/4 v8, 0x0
+    const/4 v10, 0x1
 
-    const/4 v6, 0x1
+    const/4 v7, 0x0
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030093
+    const v0, 0x7f0300ba
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->setContentView(I)V
 
-    const v0, 0x7f0a01a2
+    const v0, 0x7f0802c3
 
-    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/FrameLayout;
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->r:Landroid/widget/FrameLayout;
+    invoke-virtual {p0, v0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->setTitle(I)V
 
     const-string v0, "notification"
 
@@ -1547,46 +1435,29 @@
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->b:Landroid/app/NotificationManager;
 
-    invoke-static {p0}, Lcom/estrongs/android/ui/theme/al;->a(Landroid/content/Context;)Lcom/estrongs/android/ui/theme/al;
+    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->J()Lcom/estrongs/android/ui/theme/at;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->k:Lcom/estrongs/android/ui/theme/al;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->k:Lcom/estrongs/android/ui/theme/at;
 
-    invoke-virtual {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-static {p0}, Lcom/estrongs/fs/b/aw;->b(Landroid/content/Context;)[Ljava/lang/String;
 
     move-result-object v0
 
-    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
-
-    if-ne v0, v6, :cond_1
-
-    move v0, v6
-
-    :goto_0
-    iput-boolean v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->n:Z
-
-    invoke-static {p0}, Lcom/estrongs/fs/b/au;->b(Landroid/content/Context;)[Ljava/lang/String;
+    invoke-static {v0}, Lcom/estrongs/android/pop/app/ee;->a([Ljava/lang/String;)[Lcom/estrongs/android/pop/app/ee;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/pop/app/ef;->a([Ljava/lang/String;)[Lcom/estrongs/android/pop/app/ef;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ef;
+    iput-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ee;
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    const-string v2, "play"
+    const-string v1, "play"
 
-    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v0
 
@@ -1596,24 +1467,24 @@
 
     move-result-object v0
 
-    const-string v2, "files_selected"
+    const-string v1, "files_selected"
 
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->getStringArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v3
 
-    if-eqz v3, :cond_2
+    if-eqz v3, :cond_1
 
-    move v2, v1
+    move v1, v2
 
-    :goto_1
+    :goto_0
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    if-ge v2, v0, :cond_10
+    if-ge v1, v0, :cond_f
 
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1629,7 +1500,7 @@
 
     move-result-object v4
 
-    aget-object v5, v0, v1
+    aget-object v5, v0, v2
 
     invoke-virtual {v4, v5}, Lcom/estrongs/fs/d;->j(Ljava/lang/String;)Lcom/estrongs/fs/h;
 
@@ -1637,11 +1508,11 @@
 
     array-length v5, v0
 
-    if-le v5, v6, :cond_0
+    if-le v5, v10, :cond_0
 
     const-string v5, "displayname"
 
-    aget-object v0, v0, v6
+    aget-object v0, v0, v10
 
     invoke-interface {v4, v5, v0}, Lcom/estrongs/fs/h;->putExtra(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1650,18 +1521,13 @@
 
     invoke-interface {v0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    add-int/lit8 v0, v2, 0x1
+    add-int/lit8 v0, v1, 0x1
 
-    move v2, v0
-
-    goto :goto_1
-
-    :cond_1
-    move v0, v1
+    move v1, v0
 
     goto :goto_0
 
-    :cond_2
+    :cond_1
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -1670,7 +1536,7 @@
 
     move-result-object v0
 
-    sget-object v2, Ljava/lang/System;->out:Ljava/io/PrintStream;
+    sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1690,17 +1556,17 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+    invoke-virtual {v1, v3}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_8
 
-    const-string v2, "android.intent.action.SEND"
+    const-string v1, "android.intent.action.SEND"
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_9
+    if-eqz v1, :cond_8
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->getIntent()Landroid/content/Intent;
 
@@ -1714,28 +1580,28 @@
 
     check-cast v1, Landroid/net/Uri;
 
-    if-nez v1, :cond_4
+    if-nez v1, :cond_3
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->finish()V
 
-    :cond_3
-    :goto_2
+    :cond_2
+    :goto_1
     return-void
 
-    :cond_4
+    :cond_3
     invoke-virtual {v1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {p0}, Lcom/estrongs/fs/d;->a(Landroid/content/Context;)Lcom/estrongs/fs/d;
 
-    move-result-object v7
+    move-result-object v6
 
     invoke-virtual {v1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v2
 
-    if-eqz v2, :cond_7
+    if-eqz v2, :cond_6
 
     const-string v3, "content"
 
@@ -1743,7 +1609,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_7
+    if-eqz v2, :cond_6
 
     invoke-virtual {v1}, Landroid/net/Uri;->getHost()Ljava/lang/String;
 
@@ -1755,7 +1621,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_5
+    if-nez v2, :cond_4
 
     const-string v2, "com.estrongs.files"
 
@@ -1763,15 +1629,15 @@
 
     move-result v0
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_4
 
-    invoke-static {p0, v11, v6}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {p0, v11, v10}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->finish()V
 
-    goto :goto_2
+    goto :goto_1
 
-    :cond_5
+    :cond_4
     const/4 v0, 0x1
 
     :try_start_0
@@ -1800,7 +1666,7 @@
 
     move-result-object v2
 
-    if-nez v2, :cond_6
+    if-nez v2, :cond_5
 
     :try_start_1
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->finish()V
@@ -1808,13 +1674,13 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_3
     .catchall {:try_start_1 .. :try_end_1} :catchall_3
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_2
 
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
-    goto :goto_2
+    goto :goto_1
 
-    :cond_6
+    :cond_5
     :try_start_2
     invoke-interface {v2}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -1831,24 +1697,24 @@
 
     move-result-object v0
 
-    if-eqz v2, :cond_7
+    if-eqz v2, :cond_6
 
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
-    :cond_7
+    :cond_6
     iget-object v2, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->f:Ljava/util/List;
 
-    invoke-virtual {v7, v0}, Lcom/estrongs/fs/d;->j(Ljava/lang/String;)Lcom/estrongs/fs/h;
+    invoke-virtual {v6, v0}, Lcom/estrongs/fs/d;->j(Ljava/lang/String;)Lcom/estrongs/fs/h;
 
     move-result-object v0
 
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-static {p0}, Lcom/estrongs/fs/b/au;->a(Landroid/content/Context;)[B
+    invoke-static {p0}, Lcom/estrongs/fs/b/aw;->a(Landroid/content/Context;)[B
 
     move-result-object v0
 
-    if-nez v0, :cond_10
+    if-nez v0, :cond_f
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -1862,52 +1728,52 @@
 
     iget-boolean v1, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->c:Z
 
-    invoke-static {p0, v0, v1}, Lcom/estrongs/android/pop/app/network/EsNetworkActivity;->a(Lcom/estrongs/android/pop/esclasses/ESActivity;Ljava/util/ArrayList;Z)V
+    invoke-static {p0, v0, v1}, Lcom/estrongs/android/pop/app/network/EsNetworkActivity;->a(Lcom/estrongs/android/pop/app/d/a;Ljava/util/ArrayList;Z)V
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->finish()V
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
     :catch_0
     move-exception v0
 
-    move-object v0, v8
+    move-object v0, v7
 
-    :goto_3
+    :goto_2
     :try_start_3
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->finish()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_4
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
     :catchall_0
     move-exception v0
 
-    move-object v2, v8
+    move-object v2, v7
 
-    :goto_4
-    if-eqz v2, :cond_8
+    :goto_3
+    if-eqz v2, :cond_7
 
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
-    :cond_8
+    :cond_7
     throw v0
 
-    :cond_9
-    if-eqz v0, :cond_f
+    :cond_8
+    if-eqz v0, :cond_e
 
-    const-string v2, "android.intent.action.SEND_MULTIPLE"
+    const-string v1, "android.intent.action.SEND_MULTIPLE"
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_e
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -1917,29 +1783,29 @@
 
     move-result-object v0
 
-    const-string v2, "android.intent.extra.STREAM"
+    const-string v1, "android.intent.extra.STREAM"
 
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->getParcelableArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->getParcelableArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
 
-    move-result-object v9
+    move-result-object v8
 
-    if-nez v9, :cond_a
+    if-nez v8, :cond_9
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->finish()V
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
-    :cond_a
-    move v7, v1
+    :cond_9
+    move v6, v2
 
-    :goto_5
-    invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
+    :goto_4
+    invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    if-ge v7, v0, :cond_10
+    if-ge v6, v0, :cond_f
 
-    invoke-virtual {v9, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v8, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1951,13 +1817,13 @@
 
     invoke-static {p0}, Lcom/estrongs/fs/d;->a(Landroid/content/Context;)Lcom/estrongs/fs/d;
 
-    move-result-object v10
+    move-result-object v9
 
     invoke-virtual {v1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v2
 
-    if-eqz v2, :cond_d
+    if-eqz v2, :cond_c
 
     const-string v3, "content"
 
@@ -1965,7 +1831,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_d
+    if-eqz v2, :cond_c
 
     invoke-virtual {v1}, Landroid/net/Uri;->getHost()Ljava/lang/String;
 
@@ -1977,7 +1843,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_b
+    if-nez v2, :cond_a
 
     const-string v2, "com.estrongs.files"
 
@@ -1985,15 +1851,15 @@
 
     move-result v0
 
-    if-nez v0, :cond_b
+    if-nez v0, :cond_a
 
-    invoke-static {p0, v11, v6}, Lcom/estrongs/android/ui/view/ag;->a(Landroid/content/Context;II)V
+    invoke-static {p0, v11, v10}, Lcom/estrongs/android/ui/view/ak;->a(Landroid/content/Context;II)V
 
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->finish()V
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
-    :cond_b
+    :cond_a
     const/4 v0, 0x1
 
     :try_start_4
@@ -2022,7 +1888,7 @@
 
     move-result-object v1
 
-    if-nez v1, :cond_c
+    if-nez v1, :cond_b
 
     :try_start_5
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->finish()V
@@ -2030,13 +1896,13 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_2
 
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
-    :cond_c
+    :cond_b
     :try_start_6
     invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -2053,87 +1919,87 @@
 
     move-result-object v0
 
-    if-eqz v1, :cond_d
+    if-eqz v1, :cond_c
 
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    :cond_d
+    :cond_c
     iget-object v1, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->f:Ljava/util/List;
 
-    invoke-virtual {v10, v0}, Lcom/estrongs/fs/d;->j(Ljava/lang/String;)Lcom/estrongs/fs/h;
+    invoke-virtual {v9, v0}, Lcom/estrongs/fs/d;->j(Ljava/lang/String;)Lcom/estrongs/fs/h;
 
     move-result-object v0
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    add-int/lit8 v1, v7, 0x1
+    add-int/lit8 v2, v6, 0x1
 
-    move v7, v1
+    move v6, v2
 
-    goto :goto_5
+    goto :goto_4
 
     :catch_1
     move-exception v0
 
-    :goto_6
+    :goto_5
     :try_start_7
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->finish()V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    if-eqz v8, :cond_3
+    if-eqz v7, :cond_2
 
-    invoke-interface {v8}, Landroid/database/Cursor;->close()V
+    invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
     :catchall_1
     move-exception v0
 
-    :goto_7
-    if-eqz v8, :cond_e
+    :goto_6
+    if-eqz v7, :cond_d
 
-    invoke-interface {v8}, Landroid/database/Cursor;->close()V
+    invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    :cond_e
+    :cond_d
     throw v0
 
-    :cond_f
+    :cond_e
     invoke-virtual {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->finish()V
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
-    :cond_10
-    invoke-direct {p0, v6}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->a(Z)V
+    :cond_f
+    invoke-direct {p0, v10}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->a(Z)V
 
     sput-object p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->j:Lcom/estrongs/android/pop/app/LocalFileSharingActivity;
 
-    new-instance v0, Lcom/estrongs/android/pop/app/du;
+    new-instance v0, Lcom/estrongs/android/pop/app/dt;
 
-    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/du;-><init>(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)V
+    invoke-direct {v0, p0}, Lcom/estrongs/android/pop/app/dt;-><init>(Lcom/estrongs/android/pop/app/LocalFileSharingActivity;)V
 
     iput-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->i:Landroid/os/Handler;
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
     :catchall_2
     move-exception v0
 
-    move-object v8, v1
+    move-object v7, v1
 
-    goto :goto_7
+    goto :goto_6
 
     :catch_2
     move-exception v0
 
-    move-object v8, v1
+    move-object v7, v1
 
-    goto :goto_6
+    goto :goto_5
 
     :catchall_3
     move-exception v0
 
-    goto/16 :goto_4
+    goto/16 :goto_3
 
     :catchall_4
     move-exception v1
@@ -2142,28 +2008,28 @@
 
     move-object v0, v1
 
-    goto/16 :goto_4
+    goto/16 :goto_3
 
     :catch_3
     move-exception v0
 
     move-object v0, v2
 
-    goto/16 :goto_3
+    goto/16 :goto_2
 .end method
 
 .method protected onDestroy()V
     .locals 1
 
-    invoke-super {p0}, Lcom/estrongs/android/pop/esclasses/ESActivity;->onDestroy()V
+    invoke-super {p0}, Lcom/estrongs/android/ui/base/HomeAsBackActivity;->onDestroy()V
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->h:Lcom/estrongs/fs/b/au;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->h:Lcom/estrongs/fs/b/aw;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->h:Lcom/estrongs/fs/b/au;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->h:Lcom/estrongs/fs/b/aw;
 
-    invoke-virtual {v0, p0}, Lcom/estrongs/fs/b/au;->removeTaskStatusChangeListener(Lcom/estrongs/a/a/p;)V
+    invoke-virtual {v0, p0}, Lcom/estrongs/fs/b/aw;->removeTaskStatusChangeListener(Lcom/estrongs/a/a/p;)V
 
     :cond_0
     const/4 v0, 0x0
@@ -2185,31 +2051,31 @@
         }
     .end annotation
 
-    iget-object v1, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ef;
+    iget-object v1, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ee;
 
     monitor-enter v1
 
     :try_start_0
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ef;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ee;
 
     array-length v0, v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ef;
+    iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->e:[Lcom/estrongs/android/pop/app/ee;
 
     aget-object v2, v0, p3
 
-    iget-boolean v0, v2, Lcom/estrongs/android/pop/app/ef;->c:Z
+    iget-boolean v0, v2, Lcom/estrongs/android/pop/app/ee;->c:Z
 
     if-nez v0, :cond_1
 
     const/4 v0, 0x1
 
     :goto_0
-    iput-boolean v0, v2, Lcom/estrongs/android/pop/app/ef;->c:Z
+    iput-boolean v0, v2, Lcom/estrongs/android/pop/app/ee;->c:Z
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->l()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->m()V
 
     iget-object v0, p0, Lcom/estrongs/android/pop/app/LocalFileSharingActivity;->g:Landroid/widget/BaseAdapter;
 

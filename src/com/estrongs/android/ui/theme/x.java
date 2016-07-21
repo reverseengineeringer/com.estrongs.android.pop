@@ -1,20 +1,25 @@
 package com.estrongs.android.ui.theme;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.ui.view.ag;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import com.estrongs.android.ui.adapter.dr;
 
 class x
-  implements MenuItem.OnMenuItemClickListener
+  extends BroadcastReceiver
 {
-  x(ThemeColorActivity paramThemeColorActivity) {}
+  private String b;
   
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  public void onReceive(Context paramContext, Intent paramIntent)
   {
-    ThemeColorActivity.d(a);
-    ag.a(a, 2131427818, 0);
-    a.finish();
-    return false;
+    paramContext = paramIntent.getAction();
+    if ((paramContext.equals("android.intent.action.PACKAGE_ADDED")) || (paramContext.equals("android.intent.action.INSTALL_PACKAGE")))
+    {
+      paramContext = paramIntent.getDataString().substring("package:".length());
+      if (b.equals(paramContext)) {
+        ThemeActivity.c(a).a(b);
+      }
+    }
   }
 }
 

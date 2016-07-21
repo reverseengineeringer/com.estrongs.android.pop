@@ -6,18 +6,22 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+.field final synthetic a:Ljava/lang/String;
 
-.field final synthetic b:Lcom/estrongs/android/ui/dialog/cc;
+.field final synthetic b:Z
+
+.field final synthetic c:Lcom/estrongs/android/ui/dialog/ca;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/dialog/cc;Lcom/estrongs/android/pop/view/FileExplorerActivity;)V
+.method constructor <init>(Lcom/estrongs/android/ui/dialog/ca;Ljava/lang/String;Z)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/cd;->b:Lcom/estrongs/android/ui/dialog/cc;
+    iput-object p1, p0, Lcom/estrongs/android/ui/dialog/cd;->c:Lcom/estrongs/android/ui/dialog/ca;
 
-    iput-object p2, p0, Lcom/estrongs/android/ui/dialog/cd;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    iput-object p2, p0, Lcom/estrongs/android/ui/dialog/cd;->a:Ljava/lang/String;
+
+    iput-boolean p3, p0, Lcom/estrongs/android/ui/dialog/cd;->b:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,23 +33,29 @@
 .method public run()V
     .locals 2
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/cd;->a:Lcom/estrongs/android/pop/view/FileExplorerActivity;
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/cd;->c:Lcom/estrongs/android/ui/dialog/ca;
 
-    invoke-virtual {v0}, Lcom/estrongs/android/pop/view/FileExplorerActivity;->y()Lcom/estrongs/android/view/aw;
+    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/ca;->f(Lcom/estrongs/android/ui/dialog/ca;)Lcom/estrongs/android/ui/dialog/ci;
 
     move-result-object v0
 
+    iget-object v1, p0, Lcom/estrongs/android/ui/dialog/cd;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ci;->setMessage(Ljava/lang/CharSequence;)V
+
+    iget-boolean v0, p0, Lcom/estrongs/android/ui/dialog/cd;->b:Z
+
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/estrongs/android/view/aw;->o()Z
+    iget-object v0, p0, Lcom/estrongs/android/ui/dialog/cd;->c:Lcom/estrongs/android/ui/dialog/ca;
 
-    move-result v1
+    invoke-static {v0}, Lcom/estrongs/android/ui/dialog/ca;->f(Lcom/estrongs/android/ui/dialog/ca;)Lcom/estrongs/android/ui/dialog/ci;
 
-    if-nez v1, :cond_0
+    move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/estrongs/android/view/aw;->b(Z)V
+    invoke-virtual {v0, v1}, Lcom/estrongs/android/ui/dialog/ci;->setItemsEnable(Z)V
 
     :cond_0
     return-void

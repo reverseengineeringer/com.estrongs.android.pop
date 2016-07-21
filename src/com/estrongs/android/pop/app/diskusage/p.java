@@ -10,7 +10,7 @@ class p
   
   public void onDismiss(DialogInterface paramDialogInterface)
   {
-    if ((h.v(a)) && (h.F(a))) {
+    if ((h.x(a)) && (h.H(a))) {
       return;
     }
     h.b(a, false);

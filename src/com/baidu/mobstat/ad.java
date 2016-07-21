@@ -1,62 +1,68 @@
 package com.baidu.mobstat;
 
-import android.content.Context;
-import com.baidu.mobstat.util.e;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import android.content.ContextWrapper;
+import android.database.DatabaseErrorHandler;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteDatabase.CursorFactory;
+import android.os.Environment;
+import java.io.File;
+import java.io.IOException;
 
 class ad
+  extends ContextWrapper
 {
-  private static ad a = new ad();
-  private boolean b = false;
-  
-  public static ad a()
+  public ad()
   {
-    return a;
+    super(null);
   }
   
-  public void a(Context paramContext)
+  public File getDatabasePath(String paramString)
   {
-    e.a("sdkstat", "openExceptonAnalysis");
-    if (!b)
+    if (!"mounted".equals(cl.a())) {
+      return null;
+    }
+    String str = Environment.getExternalStorageDirectory().getAbsolutePath();
+    str = str + File.separator + "backups/system";
+    File localFile = new File(str);
+    if (!localFile.exists()) {
+      localFile.mkdirs();
+    }
+    paramString = new File(str + File.separator + paramString);
+    if (!paramString.exists()) {}
+    try
     {
-      b = true;
-      u.a().a(paramContext);
+      paramString.createNewFile();
+      if (paramString.exists()) {
+        return paramString;
+      }
+    }
+    catch (IOException localIOException)
+    {
+      for (;;)
+      {
+        bb.b(localIOException);
+        continue;
+        paramString = null;
+      }
     }
   }
   
-  public void b(Context paramContext)
+  public SQLiteDatabase openOrCreateDatabase(String paramString, int paramInt, SQLiteDatabase.CursorFactory paramCursorFactory)
   {
-    if (paramContext == null) {
-      e.a("sdkstat", "exceptonAnalysis, context=null");
+    paramString = getDatabasePath(paramString);
+    if (paramString == null) {
+      throw new NullPointerException("db path is null");
     }
-    for (;;)
-    {
-      return;
-      JSONArray localJSONArray = u.a().b(paramContext);
-      if (localJSONArray == null)
-      {
-        e.a("sdkstat", "no exception str");
-        return;
-      }
-      e.a("sdkstat", "move exception cache to stat cache");
-      int i = 0;
-      try
-      {
-        while (i < localJSONArray.length())
-        {
-          JSONObject localJSONObject = (JSONObject)localJSONArray.get(i);
-          DataCore.getInstance().putException(localJSONObject.getLong("t"), localJSONObject.getString("c"), localJSONObject.getString("y"), localJSONObject.getString("v"));
-          DataCore.getInstance().flush(paramContext);
-          i += 1;
-        }
-        return;
-      }
-      catch (Exception paramContext)
-      {
-        e.a("sdkstat", paramContext);
-      }
+    return SQLiteDatabase.openOrCreateDatabase(paramString, null);
+  }
+  
+  public SQLiteDatabase openOrCreateDatabase(String paramString, int paramInt, SQLiteDatabase.CursorFactory paramCursorFactory, DatabaseErrorHandler paramDatabaseErrorHandler)
+  {
+    paramString = getDatabasePath(paramString);
+    if (paramString == null) {
+      throw new NullPointerException("db path is null");
     }
+    return SQLiteDatabase.openOrCreateDatabase(paramString, null);
   }
 }
 

@@ -1,12 +1,12 @@
 package com.estrongs.android.pop.app.diskusage;
 
-import com.estrongs.android.pop.utils.cb;
+import com.estrongs.android.pop.utils.ck;
 import com.estrongs.fs.util.g;
 import java.io.File;
 import java.util.List;
 
 class t
-  implements cb
+  implements ck
 {
   t(h paramh) {}
   

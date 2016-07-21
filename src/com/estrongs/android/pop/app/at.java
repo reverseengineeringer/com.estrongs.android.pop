@@ -1,35 +1,71 @@
 package com.estrongs.android.pop.app;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
-import android.content.DialogInterface.OnClickListener;
-import android.content.Intent;
-import com.estrongs.android.pop.ad;
-import com.estrongs.android.util.bd;
+import android.content.Context;
+import android.content.res.Resources;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+import com.estrongs.android.pop.esclasses.k;
+import java.util.List;
 
-class at
-  implements DialogInterface.OnClickListener
+public final class at
+  extends BaseAdapter
 {
-  at(DownloaderActivity paramDownloaderActivity, DialogInterface.OnCancelListener paramOnCancelListener) {}
+  private LayoutInflater b;
+  private List<String> c;
   
-  public void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public at(Context paramContext, List<String> paramList)
   {
-    if (paramInt == 0) {
-      DownloaderActivity.a(b, DownloaderActivity.a(b), b.getIntent().getType());
+    b = k.a(paramList);
+    List localList;
+    c = localList;
+  }
+  
+  public List<String> a()
+  {
+    return c;
+  }
+  
+  public int getCount()
+  {
+    return c.size();
+  }
+  
+  public Object getItem(int paramInt)
+  {
+    return c.get(paramInt);
+  }
+  
+  public long getItemId(int paramInt)
+  {
+    return paramInt;
+  }
+  
+  public View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
+  {
+    if (paramView == null)
+    {
+      paramView = b.inflate(2130903109, null);
+      paramViewGroup = new av(null);
+      a = ((ImageView)paramView.findViewById(2131624054));
+      a.setVisibility(8);
+      b = ((TextView)paramView.findViewById(2131624352));
+      c = ((ImageView)paramView.findViewById(2131624353));
+      c.setImageDrawable(a.getResources().getDrawable(2130838410));
+      c.setFocusable(true);
+      paramView.setFocusable(false);
+      paramView.setTag(paramViewGroup);
     }
     for (;;)
     {
-      paramDialogInterface.dismiss();
-      return;
-      if (bd.a(ad.a(b).ae()))
-      {
-        au localau = new au(this);
-        DownloaderActivity.a(b, localau, a);
-      }
-      else
-      {
-        DownloaderActivity.a(b, DownloaderActivity.a(b), true);
-      }
+      String str = (String)c.get(paramInt);
+      c.setOnClickListener(new au(this, str));
+      b.setText(str);
+      return paramView;
+      paramViewGroup = (av)paramView.getTag();
     }
   }
 }

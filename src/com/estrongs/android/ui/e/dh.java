@@ -1,48 +1,43 @@
 package com.estrongs.android.ui.e;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.estrongs.android.pop.utils.aj;
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.ui.view.ag;
-import com.estrongs.android.util.bd;
-import com.estrongs.fs.h;
-import com.estrongs.fs.m;
-import java.util.Iterator;
+import com.estrongs.fs.FileSystemException;
+import com.estrongs.fs.d;
 import java.util.LinkedList;
-import java.util.List;
 
 class dh
-  implements MenuItem.OnMenuItemClickListener
+  extends Thread
 {
-  dh(cp paramcp) {}
-  
-  public boolean onMenuItemClick(MenuItem paramMenuItem)
+  dh(cr paramcr, String paramString, LinkedList paramLinkedList1, LinkedList paramLinkedList2)
   {
-    Object localObject = cp.b(a);
-    if (((List)localObject).size() == 0)
+    super(paramString);
+  }
+  
+  public void run()
+  {
+    try
     {
-      ag.a(cp.a(a).getBaseContext(), 2131427774, 0);
-      return true;
+      d.a(cr.b(c)).a(a);
     }
-    paramMenuItem = new LinkedList();
-    localObject = ((List)localObject).iterator();
-    while (((Iterator)localObject).hasNext())
+    catch (FileSystemException localFileSystemException1)
     {
-      h localh = (h)((Iterator)localObject).next();
-      if (!localh.getFileType().a()) {
-        paramMenuItem.add(localh);
+      try
+      {
+        for (;;)
+        {
+          d.a(cr.b(c)).a(b);
+          a.clear();
+          b.clear();
+          return;
+          localFileSystemException1 = localFileSystemException1;
+          localFileSystemException1.printStackTrace();
+        }
       }
-    }
-    if (paramMenuItem.size() == 1) {
-      aj.a(cp.a(a), ((h)paramMenuItem.get(0)).getAbsolutePath());
-    }
-    for (;;)
-    {
-      cp.a(a).s();
-      return true;
-      if (paramMenuItem.size() > 1) {
-        aj.b(cp.a(a), bd.a(paramMenuItem));
+      catch (FileSystemException localFileSystemException2)
+      {
+        for (;;)
+        {
+          localFileSystemException2.printStackTrace();
+        }
       }
     }
   }

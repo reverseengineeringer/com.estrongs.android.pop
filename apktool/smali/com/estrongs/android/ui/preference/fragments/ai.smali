@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/preference/Preference$OnPreferenceChangeListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;
+.field final synthetic a:Lcom/estrongs/android/ui/preference/fragments/ah;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)V
+.method constructor <init>(Lcom/estrongs/android/ui/preference/fragments/ah;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/ui/preference/fragments/ai;->a:Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;
+    iput-object p1, p0, Lcom/estrongs/android/ui/preference/fragments/ai;->a:Lcom/estrongs/android/ui/preference/fragments/ah;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,22 +22,20 @@
 
 
 # virtual methods
-.method public onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
-    .locals 2
+.method public run()V
+    .locals 1
 
-    iget-object v0, p0, Lcom/estrongs/android/ui/preference/fragments/ai;->a:Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;
-
-    invoke-static {v0}, Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;->c(Lcom/estrongs/android/ui/preference/fragments/DisplayPreferenceFragment;)Landroid/os/Handler;
+    invoke-static {}, Lcom/estrongs/android/util/bm;->c()Lcom/estrongs/android/util/bm;
 
     move-result-object v0
 
-    new-instance v1, Lcom/estrongs/android/ui/preference/fragments/aj;
+    invoke-virtual {v0}, Lcom/estrongs/android/util/bm;->h()V
 
-    invoke-direct {v1, p0}, Lcom/estrongs/android/ui/preference/fragments/aj;-><init>(Lcom/estrongs/android/ui/preference/fragments/ai;)V
+    invoke-static {}, Lcom/estrongs/android/util/bm;->c()Lcom/estrongs/android/util/bm;
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    move-result-object v0
 
-    const/4 v0, 0x1
+    invoke-virtual {v0}, Lcom/estrongs/android/util/bm;->i()V
 
-    return v0
+    return-void
 .end method

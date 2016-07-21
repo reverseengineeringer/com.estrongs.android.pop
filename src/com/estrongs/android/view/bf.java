@@ -1,13 +1,17 @@
 package com.estrongs.android.view;
 
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.estrongs.android.pop.app.compress.cb;
+
 class bf
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  bf(aw paramaw) {}
+  bf(ak paramak) {}
   
-  public void run()
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    a.Z();
+    ak.j(a).dismiss();
   }
 }
 

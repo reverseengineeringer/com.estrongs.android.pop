@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+.field final synthetic a:Lcom/estrongs/android/pop/app/hi;
 
 
 # direct methods
-.method constructor <init>(Lcom/estrongs/android/pop/app/PopPreferenceActivity;)V
+.method constructor <init>(Lcom/estrongs/android/pop/app/hi;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/estrongs/android/pop/app/hj;->a:Lcom/estrongs/android/pop/app/PopPreferenceActivity;
+    iput-object p1, p0, Lcom/estrongs/android/pop/app/hj;->a:Lcom/estrongs/android/pop/app/hi;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,10 +22,20 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 0
+.method public run()V
+    .locals 1
 
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    invoke-static {}, Lcom/estrongs/android/util/bm;->c()Lcom/estrongs/android/util/bm;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/util/bm;->h()V
+
+    invoke-static {}, Lcom/estrongs/android/util/bm;->c()Lcom/estrongs/android/util/bm;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/estrongs/android/util/bm;->i()V
 
     return-void
 .end method

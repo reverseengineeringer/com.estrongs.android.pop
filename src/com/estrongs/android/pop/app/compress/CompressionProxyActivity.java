@@ -3,11 +3,11 @@ package com.estrongs.android.pop.app.compress;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.os.Bundle;
-import com.estrongs.android.pop.esclasses.ESActivity;
+import com.estrongs.android.pop.esclasses.ESResourceActivity;
 import com.estrongs.android.pop.z;
 
 public class CompressionProxyActivity
-  extends ESActivity
+  extends ESResourceActivity
 {
   public void onCreate(Bundle paramBundle)
   {

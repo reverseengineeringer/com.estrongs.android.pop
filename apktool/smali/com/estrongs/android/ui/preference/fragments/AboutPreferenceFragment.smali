@@ -1,5 +1,5 @@
 .class public Lcom/estrongs/android/ui/preference/fragments/AboutPreferenceFragment;
-.super Lcom/estrongs/android/pop/esclasses/i;
+.super Lcom/estrongs/android/pop/esclasses/m;
 
 
 # annotations
@@ -18,7 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/i;-><init>()V
+    invoke-direct {p0}, Lcom/estrongs/android/pop/esclasses/m;-><init>()V
 
     return-void
 .end method
@@ -35,7 +35,7 @@
     const-string v0, "1.x"
 
     :cond_0
-    const-string v1, "Market"
+    sget-object v1, Lcom/estrongs/android/pop/view/a;->a:Ljava/lang/String;
 
     const-string v2, "oem"
 
@@ -55,7 +55,7 @@
     :goto_0
     const-string v2, "\u5de5\u4fe1\u90e8"
 
-    sget-object v3, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e:Ljava/lang/String;
+    sget-object v3, Lcom/estrongs/android/pop/view/a;->b:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -111,7 +111,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0b000f
+    const v5, 0x7f08071e
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -147,7 +147,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f0b041b
+    const v0, 0x7f08066d
 
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/preference/fragments/AboutPreferenceFragment;->getString(I)Ljava/lang/String;
 
@@ -218,11 +218,11 @@
 
     if-eqz v2, :cond_1
 
-    sget-object v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e:Ljava/lang/String;
+    sget-object v2, Lcom/estrongs/android/pop/view/a;->b:Ljava/lang/String;
 
     if-eqz v2, :cond_1
 
-    sget-object v2, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e:Ljava/lang/String;
+    sget-object v2, Lcom/estrongs/android/pop/view/a;->b:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
@@ -230,9 +230,9 @@
 
     if-lez v2, :cond_1
 
-    sget-object v1, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/view/a;->b:Ljava/lang/String;
 
-    const-string v2, "\u767e\u5ea6"
+    const-string v2, "Baidu"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -240,7 +240,7 @@
 
     if-nez v1, :cond_7
 
-    sget-object v1, Lcom/estrongs/android/pop/view/FileExplorerActivity;->e:Ljava/lang/String;
+    sget-object v1, Lcom/estrongs/android/pop/view/a;->b:Ljava/lang/String;
 
     goto/16 :goto_0
 
@@ -329,7 +329,7 @@
         }
     .end annotation
 
-    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/i;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/estrongs/android/pop/esclasses/m;->onCreate(Landroid/os/Bundle;)V
 
     const v0, 0x7f050007
 
@@ -353,7 +353,7 @@
 .method public onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
     .locals 4
 
-    invoke-super {p0, p1, p2}, Lcom/estrongs/android/pop/esclasses/i;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
+    invoke-super {p0, p1, p2}, Lcom/estrongs/android/pop/esclasses/m;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
 
     move-result v1
 
@@ -375,7 +375,7 @@
 
     if-nez v0, :cond_1
 
-    const v0, 0x7f0b0567
+    const v0, 0x7f08070b
 
     :try_start_0
     invoke-virtual {p0, v0}, Lcom/estrongs/android/ui/preference/fragments/AboutPreferenceFragment;->getString(I)Ljava/lang/String;
@@ -477,7 +477,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/estrongs/android/util/n;->a(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/estrongs/android/util/p;->a(Landroid/content/Context;)V
 
     goto :goto_0
 

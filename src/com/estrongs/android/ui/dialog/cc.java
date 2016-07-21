@@ -1,77 +1,82 @@
 package com.estrongs.android.ui.dialog;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
-import com.estrongs.android.pop.netfs.NetFsException;
-import com.estrongs.android.pop.utils.a;
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.android.util.am;
-import com.estrongs.android.util.bd;
-import com.estrongs.fs.d;
-import com.estrongs.fs.h;
-import com.estrongs.fs.impl.j.b;
-import com.estrongs.fs.impl.pcs.PcsFileSystem;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.pm.ResolveInfo;
+import com.estrongs.android.util.ap;
+import java.util.List;
 
 class cc
-  implements Runnable
+  implements DialogInterface.OnClickListener
 {
-  cc(by paramby, String paramString) {}
+  cc(ca paramca, List paramList, Intent paramIntent) {}
   
-  public void run()
+  @SuppressLint({"StringFormatMatches"})
+  public void onClick(DialogInterface paramDialogInterface, int paramInt)
   {
-    try
+    ActivityInfo localActivityInfo = a.get(paramInt)).activityInfo;
+    paramInt = 2131231958;
+    if (!ap.aL(ca.a(c))) {
+      paramInt = 2131231220;
+    }
+    Object localObject3 = ap.as(ca.a(c));
+    Object localObject1 = localObject3;
+    Object localObject4;
+    if (localObject3 != null)
     {
-      by.a(b, by.d(b).getString(2131428714), false);
-      String str1 = b.c(a);
-      if (str1 != null) {
-        break label81;
+      localObject4 = ((String)localObject3).split("-");
+      localObject1 = localObject3;
+      if (localObject4 != null) {
+        localObject1 = localObject4[0];
       }
-      throw new NetFsException("Network error", null);
     }
-    catch (NetFsException localNetFsException)
+    if (packageName.equalsIgnoreCase("com.sina.weibo"))
     {
-      localNetFsException.printStackTrace();
-      by.a(b, by.d(b).getString(2131427763), false);
-      a.a(by.d(b), 2131427763);
+      localObject4 = ca.b(c);
+      localObject3 = localObject4;
+      if (localObject4 == null) {
+        localObject3 = ca.c(c);
+      }
+      localObject4 = ca.d(c).getString(2131230820, new Object[] { "3.0.5" });
+      localObject4 = ca.d(c).getString(paramInt, new Object[] { localObject1, localObject4, localObject3 });
+      if (paramInt != 2131231220) {
+        break label354;
+      }
     }
-    return;
-    label81:
-    by.a(b, a);
-    String str2;
-    Object localObject;
-    if (am.aB(a))
+    Object localObject2;
+    label354:
+    for (localObject1 = ca.d(c).getString(paramInt, new Object[] { localObject1, localObject3 });; localObject2 = localObject4)
     {
-      str2 = PcsFileSystem.d(localNetFsException);
-      if (str2 != null)
+      b.putExtra("android.intent.extra.TEXT", (String)localObject1);
+      for (;;)
       {
-        str2 = bd.a(str2, false).replace(' ', '_').replace('/', '-');
-        str2 = "http://www.estrongs.com/esshare?s=" + str2;
-        by.b(b, str2);
+        b.setClassName(packageName, name);
+        try
+        {
+          ca.d(c).startActivity(b);
+          paramDialogInterface.dismiss();
+          return;
+          localObject3 = ca.d(c).getString(paramInt, new Object[] { localObject1, "", ca.e(c) });
+          if (paramInt == 2131231220)
+          {
+            localObject1 = ca.d(c).getString(paramInt, new Object[] { localObject1, ca.e(c) });
+            b.putExtra("android.intent.extra.TEXT", (String)localObject1);
+          }
+        }
+        catch (Exception localException)
+        {
+          for (;;)
+          {
+            localException.printStackTrace();
+            continue;
+            localObject2 = localObject3;
+          }
+        }
       }
-      localObject = bd.a(localNetFsException, false).replace(' ', '_').replace('/', '-');
-      localObject = "http://www.estrongs.com/esshare?s=" + (String)localObject;
-      by.c(b, (String)localObject);
-      str2 = PcsFileSystem.d((String)localObject);
-      if (str2 == null) {
-        by.d(b, (String)localObject);
-      }
-    }
-    for (;;)
-    {
-      by.a(b, by.d(b).getString(2131427389), true);
-      if (!b.o(by.g(b))) {
-        break;
-      }
-      localObject = FileExplorerActivity.J();
-      str2 = (String)d.a().j(by.g(b)).getExtra("public_share_link");
-      if ((str2 != null) && (str2.length() != 0)) {
-        break;
-      }
-      ((FileExplorerActivity)localObject).a(new cd(this, (FileExplorerActivity)localObject));
-      return;
-      by.d(b, str2);
-      continue;
-      by.c(b, (String)localObject);
-      by.d(b, (String)localObject);
     }
   }
 }

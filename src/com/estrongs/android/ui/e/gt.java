@@ -1,26 +1,20 @@
 package com.estrongs.android.ui.e;
 
-import com.estrongs.android.pop.netfs.NetFsException;
-import com.estrongs.android.pop.view.FileExplorerActivity;
-import com.estrongs.fs.impl.j.b;
+import com.estrongs.a.p;
 
 class gt
   implements Runnable
 {
-  gt(gs paramgs, String paramString) {}
+  gt(gs paramgs, com.estrongs.a.a parama) {}
   
   public void run()
   {
-    try
+    if (a.getTaskResult().a == 0)
     {
-      b.d(a);
-      cp.a(b.a).a(new gu(this));
+      com.estrongs.android.pop.utils.a.a(cr.b(b.a.b.a), 2131231409);
       return;
     }
-    catch (NetFsException localNetFsException)
-    {
-      localNetFsException.printStackTrace();
-    }
+    com.estrongs.android.pop.utils.a.a(cr.b(b.a.b.a), 2131231406);
   }
 }
 

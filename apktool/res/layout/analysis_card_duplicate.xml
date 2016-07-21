@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/cleaner_card_bg_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+        <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_weight="1.0">
+            <TextView android:textSize="15.0dip" android:textStyle="bold" android:textColor="#fff24f18" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Duplicate File: " />
+            <TextView android:textSize="15.0dip" android:textStyle="bold" android:textColor="#fff24f18" android:id="@id/tv_duplicate_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="100/560MB" />
+        </LinearLayout>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/arrow_gray" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+        <ImageView android:gravity="center_vertical" android:id="@id/iv_first" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/icon_like" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_weight="1.0">
+            <TextView android:textSize="15.0dip" android:textColor="#ff333333" android:gravity="center_vertical" android:id="@id/tv_name_first" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="I like ....." />
+            <TextView android:textSize="12.0dip" android:textColor="#ffcccccc" android:id="@id/tv_filedir_first" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="SD/sss/ddd/xxxx" />
+        </LinearLayout>
+        <TextView android:textSize="15.0dip" android:textColor="#ffcccccc" android:id="@id/tv_filesize_first" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="66MB" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="15.0dip">
+        <ImageView android:gravity="center_vertical" android:id="@id/iv_second" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/icon_like" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_weight="1.0">
+            <TextView android:textSize="15.0dip" android:textColor="#ff333333" android:gravity="center_vertical" android:id="@id/tv_name_second" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MMMMMMMMM" />
+            <TextView android:textSize="12.0dip" android:textColor="#ffcccccc" android:id="@id/tv_filedir_second" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="sd/ff/sssssss/down" />
+        </LinearLayout>
+        <TextView android:textSize="15.0dip" android:textColor="#ffcccccc" android:id="@id/tv_filesize_second" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="66MB" />
+    </LinearLayout>
+</LinearLayout>

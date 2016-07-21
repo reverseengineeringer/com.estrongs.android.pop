@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#cc000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="@dimen/dp_260" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <RelativeLayout android:id="@id/analysis_loading_popview_rlt_loading" android:background="@drawable/analysis_loading_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.estrongs.android.pop.app.analysis.view.AnalysisLoadingView android:id="@id/analysis_loading_popview_view_loading" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/dp_10" android:textColor="#ff97d2fc" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/analysis_loading_popview_txt_path" android:background="#ff2291e0" android:paddingLeft="@dimen/dp_10" android:paddingRight="@dimen/dp_10" android:layout_width="fill_parent" android:layout_height="@dimen/dp_20" android:singleLine="true" android:layout_below="@id/analysis_loading_popview_view_loading" />
+            <android.support.v7.widget.RecyclerView android:id="@id/analysis_loading_popview_lst" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/analysis_loading_popview_txt_path" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/analysis_loading_popview_rlt_tip" android:background="@drawable/analysis_loading_bg" android:paddingLeft="@dimen/dp_10" android:paddingRight="@dimen/dp_10" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/dp_55" android:layout_marginTop="@dimen/dp_5" android:layout_below="@id/analysis_loading_popview_rlt_loading">
+            <Button android:textSize="@dimen/dp_12" android:textColor="#ff35a4f2" android:gravity="center" android:id="@id/analysis_loading_popview_btn_hide" android:background="@drawable/analysis_loading_tip_btn_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/dp_60" android:text="@string/action_hide" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <LinearLayout android:gravity="left" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/analysis_loading_popview_btn_hide" android:layout_centerVertical="true">
+                <TextView android:textSize="@dimen/dp_12" android:textColor="@color/analysis_result_detail_file_name_color" android:id="@id/analysis_loading_popview_txt_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_5" android:text="@string/analysis_loading_tip_title" />
+                <TextView android:textSize="@dimen/dp_10" android:textColor="@color/analysis_result_general_txt_color" android:ellipsize="end" android:id="@id/analysis_loading_popview_txt_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/analysis_loading_tip_desc" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

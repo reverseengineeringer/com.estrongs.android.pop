@@ -1,18 +1,17 @@
 package com.estrongs.android.view;
 
-import com.estrongs.fs.a;
+import android.os.Handler;
+import com.estrongs.android.appinfo.p;
 
 class ds
-  extends a
+  extends p
 {
-  public ds(String paramString)
-  {
-    super(paramString);
-  }
+  ds(dq paramdq) {}
   
-  public void setName(String paramString)
+  public void b()
   {
-    name = paramString;
+    a.e.W.removeCallbacks(a.d);
+    a.e.W.postDelayed(a.d, 100L);
   }
 }
 
